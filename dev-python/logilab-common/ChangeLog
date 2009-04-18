@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/logilab-common
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.37 2008/05/13 12:33:49 hawking Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/ChangeLog,v 1.38 2009/04/18 18:46:07 patrick Exp $
+
+*logilab-common-0.39.0 (18 Apr 2009)
+
+  18 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/logilab-common-0.39.0-remove-broken-tests.patch,
+  +logilab-common-0.39.0.ebuild:
+  Bump to 0.39.0. Nice test fixes from idl0r. Closes #261984.
 
 *logilab-common-0.31.0 (13 May 2008)
 
