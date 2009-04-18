@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.5 2009/04/17 17:31:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.6 2009/04/18 13:49:43 ranger Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ia64 ~sh ~x86"
+KEYWORDS="~hppa ~ia64 ~ppc64 ~sh ~x86"
 IUSE="+opengl server +xorgmodule"
 
 RDEPEND="sys-libs/zlib
