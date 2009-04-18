@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r1.ebuild,v 1.1 2009/04/17 05:04:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r1.ebuild,v 1.2 2009/04/18 11:35:34 loki_val Exp $
 
 EAPI=2
 
@@ -98,7 +98,7 @@ pkg_setup() {
 src_prepare() {
 	#Fix bug 248703
 	sed -i  -e 's:VALID_EPIPHANY_VERSIONS=":VALID_EPIPHANY_VERSIONS="2.26 2.25 2.24 :' \
-		configure.in || die "epiphany sed failed"
+		configure || die "epiphany sed failed"
 
 	#Fix bugs.gnome.org/556243
 	sed -i	-e "s:libgnome-desktop-2.so.2:libgnome-desktop-2.so:" \
