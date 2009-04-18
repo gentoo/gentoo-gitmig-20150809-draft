@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.8 2009/04/14 23:30:11 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.9 2009/04/18 23:24:39 dirtyepic Exp $
+
+*ppl-0.10.2 (18 Apr 2009)
+
+  18 Apr 2009; Ryan Hill <dirtyepic@gentoo.org> metadata.xml,
+  -ppl-0.10.1.ebuild, +ppl-0.10.2.ebuild:
+  Version bump.  Fixes GMP version detection and tests not being run.
+  - make watchdog library optional
+  - build tests in parallel since they take forever
+  - pch USE flag
 
 *ppl-0.10.1 (14 Apr 2009)
 

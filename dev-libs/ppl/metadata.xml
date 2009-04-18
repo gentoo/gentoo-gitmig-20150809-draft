@@ -8,5 +8,6 @@
 </maintainer>
 <use>
   <flag name='prolog'>Build SWI Prolog interface</flag>
+  <flag name='watchdog'>Build the PPL Watchdog library - a C++ library for multiple, concurrent watchdog timers</flag>
 </use>
 </pkgmetadata>
