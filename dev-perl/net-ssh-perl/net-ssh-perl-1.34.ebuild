@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.34.ebuild,v 1.2 2009/04/06 16:41:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/net-ssh-perl-1.34.ebuild,v 1.3 2009/04/18 18:05:00 gentoofan23 Exp $
 
 MODULE_AUTHOR=TURNSTEP
 MY_PN=Net-SSH-Perl
@@ -11,7 +11,7 @@ DESCRIPTION="Perl client Interface to SSH"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc x86"
+KEYWORDS="~alpha amd64 ~mips ~ppc ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
