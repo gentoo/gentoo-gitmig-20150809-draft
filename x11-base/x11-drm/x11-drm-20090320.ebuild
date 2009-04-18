@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.4 2009/03/31 22:24:29 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.5 2009/04/18 22:47:33 battousai Exp $
 
 inherit eutils x11 linux-mod autotools
 
@@ -70,8 +70,6 @@ src_unpack() {
 	then
 		unpack ${P}-gentoo-${PATCHVER}.tar.bz2
 		cd "${S}"
-
-		patch_prepare
 
 		# Apply patches
 		EPATCH_SUFFIX="patch" epatch ${PATCHDIR}
@@ -183,19 +181,6 @@ get_drm_build_dir() {
 	then
 		SRC_BUILD="${S}/linux-core"
 	fi
-}
-
-patch_prepare() {
-	# Handle exclusions based on the following...
-	#     All trees (0**), Standard only (1**), Others (none right now)
-	#     2.4 vs. 2.6 kernels
-	if use kernel_linux
-	then
-	    kernel_is 2 6 && mv -f "${PATCHDIR}"/*kernel-2.4* "${EXCLUDED}"
-	fi
-
-	# There is only one tree being maintained now. No numeric exclusions need
-	# to be done based on DRM tree.
 }
 
 src_unpack_linux() {
