@@ -1,6 +1,9 @@
 # ChangeLog for games-board/eboard
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.22 2009/04/18 15:53:49 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.23 2009/04/18 17:46:30 armin76 Exp $
+
+  18 Apr 2009; Raúl Porcel <armin76@gentoo.org> eboard-1.1.1.ebuild:
+  sparc/x86 stable wrt #266562
 
   18 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org> eboard-1.1.1.ebuild:
   stable amd64, bug 266562
