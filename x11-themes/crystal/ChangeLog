@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.36 2009/04/19 19:41:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.37 2009/04/19 19:49:39 scarabeus Exp $
+
+  19 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> crystal-1.0.2,
+  crystal-1.0.7:
+  Set deps explicitly on kde3. Per bug #219241.
 
 *crystal-2.0.3 (19 Apr 2009)
 *crystal-1.0.7 (19 Apr 2009)
