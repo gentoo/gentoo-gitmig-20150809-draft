@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.2.ebuild,v 1.2 2009/04/19 15:11:46 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.2.ebuild,v 1.3 2009/04/19 16:37:29 mr_bones_ Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -162,8 +162,6 @@ src_unpack() {
 
 		# use sys-libs/readline instead of dev-libs/editline
 		epatch "${FILESDIR}/${P}-readline.patch"
-
-
 
 		if ! use ghcbootstrap; then
 			# Relocate from /usr to ${WORKDIR}/usr
