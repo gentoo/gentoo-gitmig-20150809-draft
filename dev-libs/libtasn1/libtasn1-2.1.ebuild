@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-1.7.ebuild,v 1.1 2008/12/26 22:55:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/libtasn1-2.1.ebuild,v 1.1 2009/04/19 22:10:58 arfrever Exp $
 
 DESCRIPTION="provides ASN.1 structures parsing capabilities for use with GNUTLS"
 HOMEPAGE="http://www.gnutls.org/"
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/perl-5.6
 RDEPEND=""
 
 src_install() {
-	emake DESTDIR="${D}" install || die "installed failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS
-	use doc && dodoc doc/asn1.ps
+	use doc && dodoc doc/libtasn1.ps
 }
