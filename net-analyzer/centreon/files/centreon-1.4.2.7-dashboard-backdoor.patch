@@ -1,0 +1,53 @@
+Index: centreon-1.4.2.8/www/include/reporting/dashboard/ajaxReporting_js.php
+===================================================================
+--- centreon-1.4.2.8/www/include/reporting/dashboard/ajaxReporting_js.php (revision 3498)
++++ centreon-1.4.2.8/www/include/reporting/dashboard/ajaxReporting_js.php (revision 7115)
+@@ -44,5 +44,5 @@
+ 
+ 
+-	var arg = 'oreonPath=<?=$oreon->optGen["oreon_path"]?>&hostID=<?=$host_id?>&color=<?=$color.$today_var?>';
++  var arg = 'hostID=<?=$host_id?>&color=<?=$color.$today_var?>';
+ 	 		  	
+   tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
+Index: centreon-1.4.2.8/www/include/reporting/dashboard/GetXmlHost.php
+===================================================================
+--- centreon-1.4.2.8/www/include/reporting/dashboard/GetXmlHost.php (revision 3498)
++++ centreon-1.4.2.8/www/include/reporting/dashboard/GetXmlHost.php (revision 7115)
+@@ -27,6 +27,5 @@
+ 
+ 
+-	if(isset($_GET["oreonPath"]) && isset($_GET["hostID"]) && isset($_GET["color"]) && isset($_GET["today_up"])&& isset($_GET["today_down"])&& isset($_GET["today_unreachable"])&& isset($_GET["today_pending"]))
+-	{
++	if (isset($_GET["hostID"]) && isset($_GET["color"]) && isset($_GET["today_up"])&& isset($_GET["today_down"])&& isset($_GET["today_unreachable"])&& isset($_GET["today_pending"])){
+ 		list($colorUP, $colorDOWN, $colorUNREACHABLE, $colorUNKNOWN)= split (":", $_GET["color"], 4);
+ 
+@@ -37,6 +36,6 @@
+ 		#$colorUNKNOWN = "red";
+ 
+-		$oreonPath = $_GET["oreonPath"];
+-		include_once($oreonPath . "/www/oreon.conf.php");
++		include_once("../../../oreon.conf.php");
++
+ 		$dsn = array(
+ 			     'phptype'  => 'mysql',
+Index: centreon-1.4.2.8/www/include/reporting/dashboard/GetXmlService.php
+===================================================================
+--- centreon-1.4.2.8/www/include/reporting/dashboard/GetXmlService.php (revision 3498)
++++ centreon-1.4.2.8/www/include/reporting/dashboard/GetXmlService.php (revision 7115)
+@@ -27,12 +27,10 @@
+ 
+ 
+-	if(isset($_GET["oreonPath"]) && isset($_GET["hostID"]) && isset($_GET["serviceID"]) &&
+-	   isset($_GET["color"]) && isset($_GET["today_ok"])&& isset($_GET["today_critical"])&& 
+-	   isset($_GET["today_unknown"])&& isset($_GET["today_pending"]))
+-	{
++	if (isset($_GET["hostID"]) && isset($_GET["serviceID"]) && isset($_GET["color"]) && isset($_GET["today_ok"])&& isset($_GET["today_critical"]) && isset($_GET["today_unknown"])&& isset($_GET["today_pending"])){
++
+ 		list($colorOK, $colorWARNING, $colorCRITICAL, $colorPENDING, $colorUNKNOWN)= split (":", $_GET["color"], 5);
+ 
+-		$oreonPath = $_GET["oreonPath"];
+-		include_once($oreonPath . "/www/oreon.conf.php");
++		include_once("../../../oreon.conf.php");
++
+ 		$dsn = array(
+ 			     'phptype'  => 'mysql',
