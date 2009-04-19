@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.3.8.ebuild,v 1.1 2009/04/18 20:58:31 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.3.8.ebuild,v 1.2 2009/04/19 01:24:24 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -50,4 +50,3 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
-
