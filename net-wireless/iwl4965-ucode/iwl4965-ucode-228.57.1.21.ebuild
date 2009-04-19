@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/iwl4965-ucode-228.57.1.21.ebuild,v 1.1 2008/08/13 22:57:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/iwl4965-ucode-228.57.1.21.ebuild,v 1.2 2009/04/19 14:43:57 maekke Exp $
 
 MY_PN="iwlwifi-4965-ucode"
 
@@ -10,7 +10,7 @@ SRC_URI="http://intellinuxwireless.org/iwlwifi/downloads/${MY_PN}-${PV}.tgz"
 
 LICENSE="Intel"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )"
