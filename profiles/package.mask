@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9696 2009/04/19 11:45:50 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9697 2009/04/19 14:30:58 kolmodin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Lennart Kolmodin <kolmodin@gentoo.org> (19 Apr 2009)
+# Mark ghc-6.10.2 and related packages for testing.
+~dev-lang/ghc-6.10.2
+~dev-haskell/parallel-1.1.0.1
+~dev-haskell/haddock-2.4.2
 
 # Torsten Veller <tove@gentoo.org> (19 Apr 2009)
 # Uses pari-2.3* now.
