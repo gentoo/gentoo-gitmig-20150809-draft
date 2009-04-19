@@ -1,6 +1,9 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.10 2009/03/02 01:25:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.11 2009/04/19 16:37:24 maekke Exp $
+
+  19 Apr 2009; Markus Meier <maekke@gentoo.org> supertuxkart-0.6.1a:
+  amd64/x86 stable, bug #266695
 
 *supertuxkart-0.6.1a (02 Mar 2009)
 
