@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.61 2009/03/18 14:59:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.62 2009/04/19 22:50:21 eva Exp $
+
+*gparted-0.4.4 (19 Apr 2009)
+
+  19 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  +gparted-0.4.4.ebuild:
+  Bump to 0.4.4. Support for dmraid, recognize luks and btrfs.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> gparted-0.4.3.ebuild:
   stable ppc, bug 262745
