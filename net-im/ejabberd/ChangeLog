@@ -1,6 +1,9 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.55 2009/04/09 05:40:39 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.56 2009/04/19 13:49:52 maekke Exp $
+
+  19 Apr 2009; Markus Meier <maekke@gentoo.org> ejabberd-2.0.5:
+  x86 stable, bug #265341
 
 *ejabberd-2.0.5 (09 Apr 2009)
 
