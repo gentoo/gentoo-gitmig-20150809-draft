@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2553 2009/04/19 14:30:58 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2554 2009/04/19 17:25:56 hollow Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Apr 2009; Benedikt Böhm <hollow@gentoo.org> package.mask:
+  mask net-analyzer/centreon-1.4.2.7 for testing
 
   19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> package.mask:
   Mask dev-lang/ghc-6.10.2 and related packages for testing.

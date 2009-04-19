@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9697 2009/04/19 14:30:58 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9698 2009/04/19 17:25:56 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Benedikt Böhm <hollow@gentoo.org> (19 Apr 2009)
+# masked for testing
+=net-analyzer/centreon-1.4.2.7
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (19 Apr 2009)
 # Mark ghc-6.10.2 and related packages for testing.
