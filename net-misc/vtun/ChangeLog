@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vtun
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.35 2008/04/21 18:07:24 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.36 2009/04/19 17:23:02 rbu Exp $
+
+*vtun-3.0.2 (19 Apr 2009)
+
+  19 Apr 2009; Robert Buchholz <rbu@gentoo.org> +vtun-3.0.2.ebuild:
+  Version bump, 3.0.2 adds compatibility to 2.x servers.
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
