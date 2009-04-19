@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/stomper
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.1 2009/04/19 12:25:52 caleb Exp $
+
+*stomper-0.2.2 (19 Apr 2009)
+
+  19 Apr 2009; Caleb Tennis <caleb@gentoo.org +metadata.xml,
+  +stomper-0.2.2.ebuild:
+  Initial import
+
