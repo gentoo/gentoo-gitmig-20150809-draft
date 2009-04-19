@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/crystal
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.35 2007/05/15 14:27:20 bangert Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.36 2009/04/19 19:41:18 scarabeus Exp $
+
+*crystal-2.0.3 (19 Apr 2009)
+*crystal-1.0.7 (19 Apr 2009)
+
+  19 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> +crystal-1.0.7.ebuild,
+  +crystal-2.0.3.ebuild:
+  Add kde4 version (per bug #266789) and bump kde3 one.
 
   15 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
