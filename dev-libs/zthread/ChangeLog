@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/zthread
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.22 2007/09/24 21:22:15 dev-zero Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zthread/ChangeLog,v 1.23 2009/04/19 20:00:34 halcy0n Exp $
+
+*zthread-2.3.2-r1 (19 Apr 2009)
+
+  19 Apr 2009; Mark Loeser <halcy0n@gentoo.org>
+  +files/zthread-2.3.2-no-fpermissive.diff, +zthread-2.3.2-r1.ebuild:
+  Patch so that -fpermissive is not needed to build. Thanks to Wilfried
+  Holzke <gentoo AT holzke DOT net>; bug #232645
 
 *zthread-2.3.2 (24 Sep 2007)
 
