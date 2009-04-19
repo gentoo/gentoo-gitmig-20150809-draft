@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-director
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-director/ChangeLog,v 1.5 2007/06/24 13:45:27 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-director/ChangeLog,v 1.6 2009/04/19 14:05:24 zzam Exp $
+
+  19 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-director-0.2.8.ebuild, vdr-director-0.2.8-r1.ebuild:
+  Marked stable on x86.
 
   24 Jun 2007; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-director-0.2.8-vdr.1.5.3.diff, vdr-director-0.2.8-r1.ebuild:
