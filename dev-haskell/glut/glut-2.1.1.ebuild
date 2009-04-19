@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.ebuild,v 1.6 2007/12/16 20:34:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/glut-2.1.1.ebuild,v 1.7 2009/04/19 11:57:43 kolmodin Exp $
 
 CABAL_FEATURES="haddock lib profile"
 inherit haskell-cabal
@@ -27,6 +27,6 @@ DEPEND=">=dev-lang/ghc-6.6
 S="${WORKDIR}/ghc-${GHC_PV}/libraries/${MY_PN}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cabal-mksetup
 }
