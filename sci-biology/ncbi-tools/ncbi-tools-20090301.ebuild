@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090301.ebuild,v 1.2 2009/04/18 18:54:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ncbi-tools-20090301.ebuild,v 1.3 2009/04/19 21:10:42 ranger Exp $
 
 EAPI="1"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.ncbi.nlm.nih.gov/"
 SRC_URI="ftp://ftp.ncbi.nlm.nih.gov/toolbox/ncbi_tools/old/${PV}/ncbi.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc64 ~x86"
 
 # IUSE=mpi deprecated, use sci-biology/mpiblast separately
 IUSE="doc X"
