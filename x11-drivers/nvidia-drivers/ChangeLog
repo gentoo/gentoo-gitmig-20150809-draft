@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.143 2009/03/30 18:42:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.144 2009/04/19 06:38:59 cardoe Exp $
+
+*nvidia-drivers-180.51 (19 Apr 2009)
+
+  19 Apr 2009; Doug Goldstein <cardoe@gentoo.org>
+  +nvidia-drivers-180.51.ebuild:
+  version bump
 
 *nvidia-drivers-180.44 (30 Mar 2009)
 
