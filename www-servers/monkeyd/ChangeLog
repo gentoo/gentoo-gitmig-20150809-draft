@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/monkeyd
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.19 2008/10/21 19:30:54 bangert Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.20 2009/04/19 18:51:36 bangert Exp $
+
+*monkeyd-0.9.2-r1 (19 Apr 2009)
+
+  19 Apr 2009; Thilo Bangert <bangert@gentoo.org>
+  +files/monkeyd-0.9.2-honor-LDFLAGS-and-support--as-needed-and-fix-jobserve
+  r.patch, +monkeyd-0.9.2-r1.ebuild:
+  misc qa fixes - fix --as-needed (bug #248483)
 
   21 Oct 2008; Thilo Bangert <bangert@gentoo.org>
   +files/monkeyd-dont-strip-configure.patch, monkeyd-0.9.1.ebuild,
