@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.72 2009/04/18 19:09:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.73 2009/04/19 12:43:43 ranger Exp $
+
+  19 Apr 2009; Brent Baude <ranger@gentoo.org> gtkspell-2.0.15.ebuild:
+  Marking gtkspell-2.0.15 ppc64 and ppc for bug 266665
 
   18 Apr 2009; Tobias Klausmann <klausman@gentoo.org>
   gtkspell-2.0.15.ebuild:
