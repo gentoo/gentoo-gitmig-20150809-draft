@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/lafilefixer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.1 2009/04/19 15:48:22 loki_val Exp $
+
+*lafilefixer-0.0.1 (19 Apr 2009)
+
+  19 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +files/lafilefixer-0.0.1, +metadata.xml, +lafilefixer-0.0.1.ebuild:
+  Initial commit. Script and ebuild by me.
+
