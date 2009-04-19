@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.26.ebuild,v 1.4 2008/02/09 19:00:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.26.ebuild,v 1.5 2009/04/19 02:50:42 calchan Exp $
 
 inherit multilib
 
@@ -18,7 +18,6 @@ DEPEND=">=sys-apps/portage-2.1.2.10
 	virtual/gnat"
 RDEPEND=""
 S="${WORKDIR}/gcc-${GCC_VERSION}"
-MAKEOPTS="-j1"
 
 src_unpack() {
 	unpack ${A}
@@ -52,8 +51,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-languages=vhdl || die "Configuration failed"
-	emake || die "Compilation failed"
+	econf --enable-languages=vhdl
+	emake -j1 || die "Compilation failed"
 }
 
 src_install() {
