@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.596 2009/04/12 06:17:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.597 2009/04/19 23:28:13 zmedico Exp $
+
+*portage-2.2_rc31 (19 Apr 2009)
+
+  19 Apr 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc31.ebuild:
+  2.2_rc31 bump. This fixes bug #259994 (new --deselect[=n] option/action),
+  bug #265206, bug #265909 (warn about duplicate repo_name), bug #266211
+  (handle ESTALE in fetch code), and bug #266493 (only return int from
+  vercmp). Bug #210077 tracks all bugs fixed in the 2.2 branch.
 
 *portage-2.2_rc30 (12 Apr 2009)
 
