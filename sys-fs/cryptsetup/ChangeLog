@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.63 2009/04/10 16:51:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.64 2009/04/19 18:41:07 cardoe Exp $
+
+  19 Apr 2009; Doug Goldstein <cardoe@gentoo.org>
+  -files/1.0.6-dm-crypt-start.sh, -cryptsetup-1.0.5.ebuild,
+  cryptsetup-1.0.5-r1.ebuild, -cryptsetup-1.0.6.ebuild,
+  -cryptsetup-1.0.6-r1.ebuild, cryptsetup-1.0.6-r2.ebuild:
+  clean up old versions. clean up depends
 
   10 Apr 2009; Caleb Tennis <caleb@gentoo.org> cryptsetup-0.1-r3.ebuild,
   cryptsetup-1.0.5.ebuild, cryptsetup-1.0.5-r1.ebuild,
