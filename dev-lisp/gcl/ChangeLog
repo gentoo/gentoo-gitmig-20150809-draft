@@ -1,6 +1,14 @@
 # ChangeLog for dev-lisp/gcl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.53 2008/09/03 21:42:59 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.54 2009/04/19 19:29:09 grozin Exp $
+
+*gcl-2.6.8_pre20090419 (20 Apr 2009)
+
+  20 Apr 2009; Andrey Grozin <grozin@gentoo.org>
+  +files/gcl-2.6.8_pre20090419-configure.patch, +files/bootstrap-gcl,
+  +gcl-2.6.8_pre20090419.ebuild:
+  Snapshot of 2.6.8_pre, fixes bug #205803, based on the ebuild from
+  the lisp overlay
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> gcl-2.6.7.ebuild,
   gcl-2.6.7-r1.ebuild, gcl-2.6.7-r2.ebuild, gcl-2.6.7-r3.ebuild:
