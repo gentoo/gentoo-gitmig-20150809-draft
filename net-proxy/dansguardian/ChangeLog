@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/dansguardian
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.45 2009/04/12 18:03:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/ChangeLog,v 1.46 2009/04/19 13:50:58 maekke Exp $
+
+  19 Apr 2009; Markus Meier <maekke@gentoo.org> dansguardian-2.10.0.3:
+  amd64/x86 stable, bug #265496
 
   12 Apr 2009; Brent Baude <ranger@gentoo.org> dansguardian-2.10.0.3.ebuild:
   stable ppc64, bug 265496
