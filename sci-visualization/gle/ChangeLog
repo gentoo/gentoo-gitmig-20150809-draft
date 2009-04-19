@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/gle
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.4 2008/10/14 11:42:37 grozin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gle/ChangeLog,v 1.5 2009/04/19 14:38:18 grozin Exp $
+
+*gle-4.2.0 (19 Apr 2009)
+
+  19 Apr 2009; Andrey Grozin <grozin@gentoo.org> +gle-4.2.0.ebuild:
+  Version bump
 
   14 Oct 2008; Andrey Grozin <grozin@gentoo.org>
   +files/gle-4.1.2b-emacs.patch, files/64gle-gentoo.el, gle-4.1.2b.ebuild:
