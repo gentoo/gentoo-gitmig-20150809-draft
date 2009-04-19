@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9695 2009/04/19 09:19:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9696 2009/04/19 11:45:50 kolmodin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1147,14 +1147,6 @@ dev-cpp/bakery
 # LessTif is unsupported since it has open issues with several packages.
 # See bug 193505 and bug 204249. You are on your own here.
 x11-libs/lesstif
-
-# Lennart Kolmodin <kolmodin@gentoo.org> (04 May 2008)
-# Some of the older 0.9x regex packages are experimental versions and does
-# not work with ghc-6.8. There are now newer versions that should be used
-# instead. This replaces the older package mask by Duncan Coutts.
-=dev-haskell/regex-compat-0.90
-=dev-haskell/regex-base-0.91
-=dev-haskell/regex-posix-0.92
 
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
 # mask beta version
