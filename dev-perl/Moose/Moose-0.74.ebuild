@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.74.ebuild,v 1.1 2009/04/10 09:36:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Moose/Moose-0.74.ebuild,v 1.2 2009/04/19 13:15:40 tove Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ IUSE="test"
 
 RDEPEND="dev-perl/Data-OptList
 	>=virtual/perl-Scalar-List-Utils-1.19
-	>=dev-perl/Class-MOP-0.78
+	>=dev-perl/Class-MOP-0.81
 	>=dev-perl/List-MoreUtils-0.12
 	>=dev-perl/Sub-Exporter-0.972
 	dev-perl/Task-Weaken"
