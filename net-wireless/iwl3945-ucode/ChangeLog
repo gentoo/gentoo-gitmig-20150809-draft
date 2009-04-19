@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/iwl3945-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.10 2009/01/26 16:48:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl3945-ucode/ChangeLog,v 1.11 2009/04/19 14:43:12 maekke Exp $
+
+  19 Apr 2009; Markus Meier <maekke@gentoo.org> iwl3945-ucode-15.28.1.8:
+  amd64/x86 stable, bug #266498
 
   26 Jan 2009; Peter Volkov <pva@gentoo.org> iwl3945-ucode-15.28.1.8.ebuild,
   iwl3945-ucode-15.28.2.8.ebuild:
