@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/awesome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.65 2009/04/16 16:45:15 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/ChangeLog,v 1.66 2009/04/19 16:08:06 matsuu Exp $
+
+*awesome-2.3.6 (19 Apr 2009)
+
+  19 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> +awesome-2.3.6.ebuild:
+  Version bumped.
 
 *awesome-3.2.1-r2 (16 Apr 2009)
 
