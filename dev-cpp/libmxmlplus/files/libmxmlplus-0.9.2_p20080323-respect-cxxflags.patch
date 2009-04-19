@@ -1,0 +1,16 @@
+diff -ur libmxmlplus-0.9.2_p20080323-orig/configure.ac libmxmlplus-0.9.2_p20080323/configure.ac
+--- libmxmlplus-0.9.2_p20080323-orig/configure.ac	2009-04-19 16:14:53.000000000 -0400
++++ libmxmlplus-0.9.2_p20080323/configure.ac	2009-04-19 16:17:12.000000000 -0400
+@@ -63,12 +63,6 @@
+ AC_ARG_ENABLE(doc,
+    AS_HELP_STRING(--enable-doc, Enable compilation of deocumentation) )
+ 
+-if test x$enable_debug = xyes; then
+-   CXXFLAGS="-g"
+-else
+-   CXXFLAGS="-O2"
+-fi
+-
+ dnl--------------------------------
+ dnl settings for makefiles
+ dnl
