@@ -1,6 +1,9 @@
 # ChangeLog for virtual/poppler
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.8 2009/04/18 13:02:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler/ChangeLog,v 1.9 2009/04/19 18:57:22 loki_val Exp $
+
+  19 Apr 2009; Peter Alfredsen <loki_val@gentoo.org> poppler-0.10.5:
+  Remove split popplers from consideration w.r.t. bug 266775.
 
   18 Apr 2009; Brent Baude <ranger@gentoo.org> poppler-0.10.5.ebuild:
   Marking poppler-0.10.5 ppc64 and ppc for bug 263028

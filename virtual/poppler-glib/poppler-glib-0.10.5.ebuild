@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-glib/poppler-glib-0.10.5.ebuild,v 1.7 2009/04/18 13:01:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-glib/poppler-glib-0.10.5.ebuild,v 1.8 2009/04/19 18:57:48 loki_val Exp $
 
 EAPI=2
 
@@ -15,5 +15,5 @@ IUSE="+cairo"
 
 PROPERTIES="virtual"
 
-RDEPEND="|| ( ~dev-libs/poppler-glib-${PV}[cairo?] ~app-text/poppler-bindings-${PV}[gtk,cairo?] )"
+RDEPEND="~app-text/poppler-bindings-${PV}[gtk,cairo?]"
 DEPEND="${RDEPEND}"

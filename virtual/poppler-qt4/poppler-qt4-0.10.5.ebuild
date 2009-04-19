@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-qt4/poppler-qt4-0.10.5.ebuild,v 1.7 2009/04/18 13:03:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-qt4/poppler-qt4-0.10.5.ebuild,v 1.8 2009/04/19 18:58:38 loki_val Exp $
 
 EAPI=2
 
@@ -15,5 +15,5 @@ IUSE=""
 
 PROPERTIES="virtual"
 
-RDEPEND="|| ( ~dev-libs/poppler-qt4-${PV} ~app-text/poppler-bindings-${PV}[qt4] )"
+RDEPEND="~app-text/poppler-bindings-${PV}[qt4]"
 DEPEND="${RDEPEND}"
