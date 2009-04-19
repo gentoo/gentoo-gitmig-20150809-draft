@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-0.6.2.ebuild,v 1.1 2009/04/19 13:57:42 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cabal-install/cabal-install-0.6.2.ebuild,v 1.2 2009/04/19 16:36:47 mr_bones_ Exp $
 
 CABAL_FEATURES="bin"
 inherit haskell-cabal bash-completion
@@ -33,4 +33,3 @@ pkg_postinst() {
 
 	bash-completion_pkg_postinst
 }
-
