@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/ghc-paths
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ghc-paths/ChangeLog,v 1.1 2009/04/19 14:26:27 kolmodin Exp $
+
+*ghc-paths-0.1.0.5 (19 Apr 2009)
+
+  19 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
+  +ghc-paths-0.1.0.5.ebuild:
+  Initial version.
+
