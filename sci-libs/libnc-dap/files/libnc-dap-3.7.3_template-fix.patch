@@ -1,0 +1,11 @@
+--- Dnc.cc.orig	2009-04-18 22:52:49.799577635 -0700
++++ Dnc.cc	2009-04-18 22:54:06.001575924 -0700
+@@ -81,6 +81,8 @@
+ 
+ int rcode;
+ 
++template NCConnect* & Connections<NCConnect *>::operator[](int i);
++
+ Connections < NCConnect * >*conns = 0;
+ 
+ static void delete_conns()

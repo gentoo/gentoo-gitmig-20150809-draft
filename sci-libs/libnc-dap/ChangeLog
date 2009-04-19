@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/libnc-dap
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.1 2009/04/19 22:38:31 nerdboy Exp $
+
+*libnc-dap-3.7.3 (19 Apr 2009)
+
+  19 Apr 2009; Steve Arnold <nerdboy@gentoo.org>
+  +files/libnc-dap-3.7.3_template-fix.patch, +metadata.xml,
+  +libnc-dap-3.7.3.ebuild:
+  New ebuild for OPeNDAP NetCDF library, a required dependency for ferret.
+
