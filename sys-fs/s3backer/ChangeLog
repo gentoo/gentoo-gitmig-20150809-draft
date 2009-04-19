@@ -1,0 +1,10 @@
+# ChangeLog for sys-fs/s3backer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/s3backer/ChangeLog,v 1.1 2009/04/19 13:11:18 caleb Exp $
+
+*s3backer-1.2.2 (19 Apr 2009)
+
+  19 Apr 2009; Caleb Tennis <caleb@gentoo.org +metadata.xml,
+  +s3backer-1.2.2.ebuild:
+  Initial import
+
