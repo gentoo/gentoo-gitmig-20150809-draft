@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.85 2009/04/18 17:18:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.86 2009/04/19 13:52:52 maekke Exp $
+
+  19 Apr 2009; Markus Meier <maekke@gentoo.org> loudmouth-1.4.3:
+  amd64/x86 stable, bug #265960
 
   18 Apr 2009; Tobias Klausmann <klausman@gentoo.org>
   loudmouth-1.4.3.ebuild:
