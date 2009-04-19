@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.9.2.ebuild,v 1.2 2009/04/19 07:07:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.8.2.ebuild,v 1.1 2009/04/19 07:07:24 nerdboy Exp $
 
-inherit autotools eutils flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="A C++ SDK which contains an implementation of DAP 2.0 and 3.2, both Client- and Server-side support."
 HOMEPAGE="http://opendap.org/index.html"
@@ -21,13 +21,6 @@ DEPEND="${RDEPEND}
 	>=dev-libs/libxml2-2.5.7
 	>=net-misc/curl-7.10.6
 	doc? ( app-doc/doxygen )"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	eaclocal
-	eautoreconf
-}
 
 src_compile() {
 	local myconf="--disable-dependency-tracking"
