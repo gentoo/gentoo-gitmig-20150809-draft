@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.61 2009/03/20 16:39:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.62 2009/04/20 15:21:15 voyageur Exp $
+
+*nxserver-freenx-0.7.3_p104 (20 Apr 2009)
+
+  20 Apr 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/nxserver-freenx-0.7.3_p104-pam_ssh.patch,
+  +nxserver-freenx-0.7.3_p104.ebuild:
+  Version bump, with some ebuild changes: dropped arts/cups/esd USE flags,
+  better to manually enable them in configuration if needed; change
+  recommanded nxsetup line, warn users without PAM that they need to unlock
+  the nx account (bug #262496); add patch to support pam_ssh (i.e pambase
+  with USE=ssh), bugs #142694 and #266572
 
   20 Mar 2009; Bernard Cafarelli <voyageur@gentoo.org>
   nxserver-freenx-0.7.3_p102.ebuild:
