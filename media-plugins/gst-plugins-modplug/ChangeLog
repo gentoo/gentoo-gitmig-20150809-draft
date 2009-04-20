@@ -1,0 +1,14 @@
+# ChangeLog for media-plugins/gst-plugins-modplug
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.1 2009/04/20 22:32:40 tester Exp $
+
+  20 Apr 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +gst-plugins-modplug-0.10.11.ebuild:
+  Add split gst-plugins-modplug, used to be part of gst-plugins-bad
+
+*gst-plugins-modplug-0.10.11 (20 Apr 2009)
+
+  20 Apr 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +gst-plugins-modplug-0.10.11.ebuild:
+  Has been split from media-libs/gst-plugins-bad
+
