@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.134 2009/04/18 17:39:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.135 2009/04/20 18:52:22 serkan Exp $
+
+*tightvnc-1.3.10-r1 (20 Apr 2009)
+*tightvnc-1.3.9-r3 (20 Apr 2009)
+
+  20 Apr 2009; Serkan Kaba <serkan@gentoo.org> +tightvnc-1.3.9-r3.ebuild,
+  +tightvnc-1.3.10-r1.ebuild:
+  Add files needed for applet hosted mode. Thanks to Richard F. Ostrow Jr.
+  <kshots@warfaresdl.com> for the report and help. Fixes bug #259490.
 
   18 Apr 2009; Raúl Porcel <armin76@gentoo.org> tightvnc-1.3.10.ebuild:
   alpha/arm/sh/sparc/x86 stable wrt #266660
