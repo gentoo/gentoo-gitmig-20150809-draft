@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mislav-will_paginate/mislav-will_paginate-2.3.7.ebuild,v 1.1 2009/04/17 12:37:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mislav-will_paginate/mislav-will_paginate-2.3.7.ebuild,v 1.2 2009/04/20 00:19:47 mr_bones_ Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://github.com/mislav/will_paginate/"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="doc examples"
+IUSE="doc examples test"
 
 SRC_URI="http://github.com/mislav/will_paginate/tarball/v${PV} -> ${P}.tgz"
 
