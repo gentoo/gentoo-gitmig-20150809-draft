@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fluidsynth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.46 2009/04/14 19:59:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/ChangeLog,v 1.47 2009/04/20 22:10:40 loki_val Exp $
+
+  20 Apr 2009; Peter Alfredsen <loki_val@gentoo.org> fluidsynth-1.0.9:
+  Fix build with libtool-1.5*, bug 266823, thanks to Polynomial-C for the
+  patch.
 
 *fluidsynth-1.0.9 (14 Apr 2009)
 

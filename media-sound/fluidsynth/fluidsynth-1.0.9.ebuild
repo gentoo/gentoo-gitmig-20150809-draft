@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.9.ebuild,v 1.1 2009/04/14 19:59:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.9.ebuild,v 1.2 2009/04/20 22:10:40 loki_val Exp $
 
 EAPI=2
 
@@ -37,6 +37,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-pkg.patch"
+	rm -f m4/lt*.m4 m4/libtool.m4
 	eautoreconf
 }
 
