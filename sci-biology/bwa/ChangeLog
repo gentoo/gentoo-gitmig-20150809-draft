@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/bwa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/ChangeLog,v 1.1 2009/02/26 22:11:27 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/ChangeLog,v 1.2 2009/04/20 17:40:44 weaver Exp $
+
+*bwa-0.4.6 (20 Apr 2009)
+
+  20 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> -bwa-0.4.5.ebuild,
+  +bwa-0.4.6.ebuild:
+  Version bump
 
 *bwa-0.4.5 (26 Feb 2009)
 
