@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-1.5.4.ebuild,v 1.2 2009/04/19 16:39:22 mr_bones_ Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-1.5.4.ebuild,v 1.3 2009/04/20 11:29:43 caleb Exp $
 
 DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang."
 HOMEPAGE="http://www.rabbitmq.com/"
@@ -28,9 +26,6 @@ src_install() {
 
 	# scripts
 	dosbin sbin/*
-
-	# docs
-	dodoc INSTALL LICENSE-MPL-RabbitMQ
 
 	newinitd "${FILESDIR}/rabbitmq-server.init" rabbitmq-server
 

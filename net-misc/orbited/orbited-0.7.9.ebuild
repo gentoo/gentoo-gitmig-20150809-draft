@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.9.ebuild,v 1.2 2009/04/19 16:39:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.9.ebuild,v 1.3 2009/04/20 11:28:24 caleb Exp $
 
 inherit distutils
 
@@ -13,16 +13,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-python/twisted
+RDEPEND="dev-python/twisted
 	>=dev-python/morbid-0.8.4
 	dev-python/demjson
 	dev-python/stomper
 	>=dev-python/uuid-1.2"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	dev-python/setuptools"
 
 src_install() {
 	distutils_src_install
-	mkdir -p "${D}/etc"
-	cp "${FILESDIR}/${PV}/orbited.cfg" "${D}/etc/orbited.cfg" || die "couldn't create config file"
+	insinto /etc
+	dosins "${FILESDIR}/${PV}/orbited.cfg" || die "installing config file failed"
 	newinitd "${FILESDIR}/${PV}/orbited.init" orbited
 }
