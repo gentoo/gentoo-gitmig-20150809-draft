@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/gtkhotkey-0.2.0.ebuild,v 1.8 2009/03/22 16:21:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/gtkhotkey-0.2.0.ebuild,v 1.9 2009/04/20 20:30:04 maekke Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="http://launchpad.net/${PN}/${MY_CRV}/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEPEND=">=dev-libs/glib-2.16

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkhotkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.7 2009/03/22 16:21:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkhotkey/ChangeLog,v 1.8 2009/04/20 20:30:04 maekke Exp $
+
+  20 Apr 2009; Markus Meier <maekke@gentoo.org> gtkhotkey-0.2.0:
+  amd64 stable, bug #259052
 
   22 Mar 2009; Markus Meier <maekke@gentoo.org> gtkhotkey-0.2.0.ebuild:
   x86 stable, bug #259052
