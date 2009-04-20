@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.2-r1.ebuild,v 1.1 2009/04/19 18:51:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-0.9.2-r1.ebuild,v 1.2 2009/04/20 08:09:58 bangert Exp $
 
 EAPI="2"
 
-inherit toolchain-funcs eutils
+inherit toolchain-funcs eutils depend.php
 
 WEBROOT=/var/www/localhost
 
@@ -18,9 +18,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="php"
 
-RDEPEND="php? ( virtual/httpd-php[cgi] )"
+RDEPEND="php? ( virtual/httpd-php )"
 
 S="${WORKDIR}/${MY_P}"
+
+pkg_setup() {
+	use php && require_php_cgi
+}
 
 src_prepare() {
 	epatch "${FILESDIR}/monkeyd-0.9.2-honor-LDFLAGS-and-support--as-needed-and-fix-jobserver.patch"

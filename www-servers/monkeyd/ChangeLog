@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/monkeyd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.20 2009/04/19 18:51:36 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/ChangeLog,v 1.21 2009/04/20 08:09:58 bangert Exp $
+
+  20 Apr 2009; Thilo Bangert <bangert@gentoo.org> monkeyd-0.9.2-r1:
+  remove use-based dep on virtual again
 
 *monkeyd-0.9.2-r1 (19 Apr 2009)
 
