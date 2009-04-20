@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.13 2009/04/20 16:54:30 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.14 2009/04/20 17:06:55 volkmar Exp $
+
+  20 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> osptoolkit-3.4.2.ebuild:
+  Use users LDFLAGS.
 
 *osptoolkit-3.5.0 (20 Apr 2009)
 

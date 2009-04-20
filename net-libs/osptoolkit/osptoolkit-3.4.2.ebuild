@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/osptoolkit-3.4.2.ebuild,v 1.1 2009/04/20 04:01:41 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/osptoolkit-3.4.2.ebuild,v 1.2 2009/04/20 17:06:55 volkmar Exp $
 
 EAPI="2"
 
@@ -24,15 +24,11 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}"/TK-${PV//./_}-${S_DATE}
 
 # TODO:
-# LDFLAGS are not used
 # generate a shared lib
-# create a main Makefile
-# => a gentoo-patch ?
 
 # NOTES:
 # debian patch is used atm but will surely not for further versions
-# osptest is not a test that can be used for src_test()
-#	install it only when test is enabled ?
+# osptest isn't a test that can be used for src_test, it's part of the toolkit
 
 src_prepare() {
 	# applying debian patches
@@ -45,6 +41,12 @@ src_prepare() {
 	# remove -O and use users CFLAGS, see bug 241034
 	sed -i -e "s/ -O//" -e "s/^CFLAGS =/CFLAGS +=/" src/Makefile test/Makefile \
 		enroll/Makefile || die "patching Makefiles failed"
+
+	# use users LDFLAGS
+	sed -i -e "s:LFLAGS:LDFLAGS:" test/Makefile \
+		|| die "patching test/Makefile failed"
+	sed -i -e "s:\(\$(LIBS\):\$(LDFLAGS) \1:" enroll/Makefile \
+		|| die "patching enroll/Makefile failed"
 
 	# change lib dir to $(get_libdir)
 	sed -i -e "s:\$(INSTALL_PATH)/lib:\$(INSTALL_PATH)/$(get_libdir):" \
@@ -66,6 +68,7 @@ src_compile() {
 
 	emake -C src CC="${my_cc}" build || die "emake libosp failed"
 	emake -C enroll CC="${my_cc}" linux || die "emake enroll failed"
+	# line above doesn't build tests but osptest (see NOTES)
 	emake -C test CC="${my_cc}" linux || die "emake test failed"
 }
 
