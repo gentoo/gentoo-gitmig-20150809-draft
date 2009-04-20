@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/libsrtp-1.4.4-r1.ebuild,v 1.3 2009/04/18 19:46:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/libsrtp-1.4.4-r1.ebuild,v 1.4 2009/04/20 05:22:34 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${MY_PN}/${MY_P}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~hppa ~ppc ~ppc64 ~x86"
 IUSE="aesicm console debug doc syslog"
 
 S=${WORKDIR}/${MY_PN}
