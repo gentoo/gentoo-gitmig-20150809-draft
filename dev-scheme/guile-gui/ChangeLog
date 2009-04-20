@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gui/ChangeLog,v 1.7 2009/03/07 05:45:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gui/ChangeLog,v 1.8 2009/04/20 20:56:15 maekke Exp $
+
+  20 Apr 2009; Markus Meier <maekke@gentoo.org> guile-gui-0.2:
+  add ~amd64, bug #259599
 
   07 Mar 2009; Jeremy Olexa <darkside@gentoo.org> guile-gui-0.2.ebuild:
   (non maintainer commit) add missing rdep on guile-gtk, bug 260100
