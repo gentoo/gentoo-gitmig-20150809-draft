@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3.ebuild,v 1.1 2009/04/19 22:38:31 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3.ebuild,v 1.2 2009/04/20 01:01:54 nerdboy Exp $
 
 inherit eutils flag-o-matic fortran
 
@@ -52,10 +52,11 @@ src_unpack() {
 
 src_compile() {
 	local test_conf="${DAP_TEST_OPTS}"
-	local myconf="--disable-dependency-tracking --enable-largefile"
-
+	local myconf="--disable-dependency-tracking --enable-largefile \
+	     --enable-64bit"
 	# debug can be set to 2 for extra verbosity
 	use debug && myconf="${myconf} --enable-debug=1"
+
 	econf ${myconf} ${test_conf} || die "econf failed"
 
 	emake -j1 || die "emake failed"
@@ -64,7 +65,7 @@ src_compile() {
 src_test() {
 	if use full-test; then
 	    cd "${S}"/nc_test
-	    # These tests should all pass, but the non-local pass can take
+	    # These tests should all pass, but the non-local tests can take
 	    # several hours to complete.
 	    make check || die "Regression tests failed!"
 	    cd "${S}"
