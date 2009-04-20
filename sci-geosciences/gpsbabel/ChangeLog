@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.18 2009/03/07 16:16:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsbabel/ChangeLog,v 1.19 2009/04/20 20:07:23 maekke Exp $
+
+  20 Apr 2009; Markus Meier <maekke@gentoo.org> gpsbabel-1.3.6:
+  amd64 stable, bug #244026
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   gpsbabel-1.3.6.ebuild:
