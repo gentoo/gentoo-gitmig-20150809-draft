@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/lafilefixer-0.0.1.ebuild,v 1.1 2009/04/19 15:48:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/lafilefixer-0.0.1.ebuild,v 1.2 2009/04/20 04:03:38 loki_val Exp $
 
 EAPI=2
 
@@ -35,10 +35,10 @@ pkg_postinst() {
 	elog "Patches are accepted."
 	elog ""
 	elog "If you want to fix all your .la files, something like this will work:"
-	elog "lafilefixer $(find /usr/lib* -name '*.la' -type f)"
+	elog 'lafilefixer $(find /usr/lib* -name '*.la' -type f)'
 	elog "NOTE: If you have kde installed, you may want to add /usr/kde/*/lib* to the"
 	elog "list of directories to search for .la files:"
-	elog "lafilefixer $(find /usr/lib* /usr/kde/*/lib* -name '*.la' -type f)"
+	elog 'lafilefixer $(find /usr/lib* /usr/kde/*/lib* -name '*.la' -type f)'
 	elog ""
 	elog "Verify that all your .la files are fixed with revdep-rebuild from"
 	elog "app-portage/gentoolkit"
