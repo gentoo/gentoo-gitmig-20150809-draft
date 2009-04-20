@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.4 2009/04/17 12:46:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.5 2009/04/20 00:20:31 flameeyes Exp $
+
+  20 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org> mime-types-1.16:
+  Make mime-types install on Ruby 1.9 (included the fake gems
+  specification); also make src_test work with both Ruby versions.
 
 *mime-types-1.16 (17 Apr 2009)
 
