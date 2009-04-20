@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.101 2009/04/18 01:39:25 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.102 2009/04/20 19:41:55 nixphoeni Exp $
+
+  20 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.35.4.ebuild,
+  gdesklets-core-0.36-r1.ebuild, gdesklets-core-0.36.1.ebuild:
+  Updated dependencies on python to be <dev-lang/python-2.6 (bug #266151).
+  This can be done since the only dev-lang/python in the tree is >2.3, so it
+  matches the existing dep.
 
   18 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.35.4.ebuild,
   gdesklets-core-0.36-r1.ebuild, gdesklets-core-0.36.1.ebuild:
