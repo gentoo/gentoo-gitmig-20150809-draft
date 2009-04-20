@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "tzinfo"
-  s.version = @VERSION@
+  s.version = "@VERSION@"
   s.author = "Philip Ross"
   s.email = "phil.ross@gmail.com"
   s.homepage = "http://tzinfo.rubyforge.org/"
