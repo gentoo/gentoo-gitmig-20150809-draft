@@ -1,0 +1,10 @@
+# ChangeLog for dev-scheme/ypsilon
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/ypsilon/ChangeLog,v 1.1 2009/04/20 23:54:37 vadimk Exp $
+
+*ypsilon-0.9.6_p3 (20 Apr 2009)
+
+  20 Apr 2009; Vadim Kuznetsov vadimk@gentoo.org +metadata.xml,
+  +ypsilon-0.9.6_p3.ebuild:
+  Initial commit. Bug 229371. Initial ebuild provided by Dmitry Dzhus.
+
