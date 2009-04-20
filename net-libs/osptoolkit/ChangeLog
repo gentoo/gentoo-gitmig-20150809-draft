@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/osptoolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.12 2009/04/20 04:01:42 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.13 2009/04/20 16:54:30 volkmar Exp $
+
+*osptoolkit-3.5.0 (20 Apr 2009)
+
+  20 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> +osptoolkit-3.5.0.ebuild:
+  Version bump to 3.5.0 with LDFLAGS fix. See bug 259311.
 
 *osptoolkit-3.4.2 (20 Apr 2009)
 
