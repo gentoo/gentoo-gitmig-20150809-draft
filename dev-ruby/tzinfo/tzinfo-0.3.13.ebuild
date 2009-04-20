@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.13.ebuild,v 1.1 2009/04/17 12:02:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/tzinfo-0.3.13.ebuild,v 1.2 2009/04/20 00:33:13 flameeyes Exp $
 
 inherit ruby
 
@@ -17,7 +17,7 @@ RDEPEND=""
 DEPEND="doc? ( dev-ruby/rake )
 	test? ( dev-ruby/rake )"
 
-USE_RUBY="ruby18"
+USE_RUBY="ruby18 ruby19"
 
 src_unpack() {
 	unpack ${A}
@@ -40,7 +40,9 @@ src_compile() {
 }
 
 src_test() {
-	rake test || die "rake test failed"
+	for ruby in $USE_RUBY; do
+		[[ -n `type -p $ruby` ]] && $ruby $(type -p rake) test || die "testsuite failed"
+	done
 }
 
 src_install() {
@@ -52,4 +54,8 @@ src_install() {
 	fi
 
 	dodoc "${S}"/CHANGES "${S}"/README || die "dodoc failed"
+
+	insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["vendorlibdir"]' | sed -e 's:vendor_ruby:gems:')/specifications
+	sed -e "s:@VERSION@:${PV}:" "${FILESDIR}"/${PN}.gemspec > "${T}"/${P}.gemspec
+	doins "${T}"/${P}.gemspec || die "Unable to install fake gemspec"
 }
