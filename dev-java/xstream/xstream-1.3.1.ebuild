@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1.ebuild,v 1.2 2009/03/20 19:57:04 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1.ebuild,v 1.3 2009/04/20 20:22:53 maekke Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc java5 source test"
@@ -13,7 +13,7 @@ SRC_URI="http://repository.codehaus.org/com/thoughtworks/${PN}/${PN}-distributio
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE=""
 
