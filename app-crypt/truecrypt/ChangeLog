@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.41 2009/04/10 16:28:05 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.42 2009/04/20 00:07:22 arfrever Exp $
+
+  20 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +files/truecrypt-4.3a-2.6.29.patch, truecrypt-4.3a:
+  Fix building with Linux 2.6.29 (bug #264450).
 
   10 Apr 2009; Caleb Tennis <caleb@gentoo.org> truecrypt-4.3a.ebuild:
   fix device-mapper dep for lvm2, see #265599
