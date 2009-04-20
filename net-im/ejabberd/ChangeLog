@@ -1,6 +1,12 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.56 2009/04/19 13:49:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.57 2009/04/20 19:39:41 pva Exp $
+
+*ejabberd-2.0.5-r1 (20 Apr 2009)
+
+  20 Apr 2009; Peter Volkov <pva@gentoo.org> +ejabberd-2.0.5-r1.ebuild:
+  Fixed permissions handling on amd64, thank Markus Meier for report in bug
+  #265341.
 
   19 Apr 2009; Markus Meier <maekke@gentoo.org> ejabberd-2.0.5:
   x86 stable, bug #265341
