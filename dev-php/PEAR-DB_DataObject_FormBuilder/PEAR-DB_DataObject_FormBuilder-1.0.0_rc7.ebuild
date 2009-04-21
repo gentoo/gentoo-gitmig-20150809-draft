@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject_FormBuilder/PEAR-DB_DataObject_FormBuilder-1.0.0_rc7.ebuild,v 1.1 2008/03/22 20:15:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB_DataObject_FormBuilder/PEAR-DB_DataObject_FormBuilder-1.0.0_rc7.ebuild,v 1.2 2009/04/21 19:40:26 hollow Exp $
 
 inherit php-pear-r1
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DESCRIPTION="Class to automatically build HTML_QuickForm objects from a DB_DataObject-derived class"
 LICENSE="|| ( LGPL-2.1 LGPL-3 )"
