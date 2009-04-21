@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/openmsx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.26 2008/05/20 16:26:08 fmccor Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/ChangeLog,v 1.27 2009/04/21 00:11:50 mr_bones_ Exp $
+
+*openmsx-0.7.0 (21 Apr 2009)
+
+  21 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +openmsx-0.7.0.ebuild:
+  version bump (bug #258662)
 
   20 May 2008; Ferris McCormick <fmccor@gentoo.org> openmsx-0.6.3.ebuild:
   Sparc stable, Bug #222133.
