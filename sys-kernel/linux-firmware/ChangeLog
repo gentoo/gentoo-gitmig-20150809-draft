@@ -1,0 +1,10 @@
+# ChangeLog for sys-kernel/linux-firmware
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-firmware/ChangeLog,v 1.1 2009/04/21 18:39:18 gregkh Exp $
+
+*linux-firmware-20090421 (21 Apr 2009)
+
+  21 Apr 2009; Greg Kroah-Hartman <gregkh@gentoo.org> +metadata.xml,
+  +linux-firmware-20090421.ebuild:
+  Initial creation of the linux-firmware tree
+
