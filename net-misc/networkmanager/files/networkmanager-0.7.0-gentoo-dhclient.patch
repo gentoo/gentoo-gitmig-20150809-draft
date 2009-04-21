@@ -1,0 +1,14 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN NetworkManager-0.7.0.orig/src/dhcp-manager/nm-dhcp-dhclient.c NetworkManager-0.7.0/src/dhcp-manager/nm-dhcp-dhclient.c
+--- NetworkManager-0.7.0.orig/src/dhcp-manager/nm-dhcp-dhclient.c	2008-11-12 16:29:43.000000000 -0500
++++ NetworkManager-0.7.0/src/dhcp-manager/nm-dhcp-dhclient.c	2009-04-21 11:38:18.000000000 -0400
+@@ -161,6 +161,8 @@ create_dhclient_config (NMDHCPDevice *de
+ 	orig = g_strdup (SYSCONFDIR "/dhclient.conf");
+ #elif defined(TARGET_DEBIAN)
+ 	orig = g_strdup (SYSCONFDIR "/dhcp3/dhclient.conf");
++#elif defined(TARGET_GENTOO)
++	orig = g_strdup (SYSCONFDIR "/dhcp/dhclient.conf");
+ #else
+ 	orig = g_strdup_printf (SYSCONFDIR "/dhclient-%s.conf", device->iface);
+ #endif
+Files NetworkManager-0.7.0.orig/src/dhcp-manager/.nm-dhcp-manager.c.swp and NetworkManager-0.7.0/src/dhcp-manager/.nm-dhcp-manager.c.swp differ
+Files NetworkManager-0.7.0.orig/src/named-manager/.nm-named-manager.c.swp and NetworkManager-0.7.0/src/named-manager/.nm-named-manager.c.swp differ

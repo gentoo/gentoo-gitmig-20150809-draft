@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.0.ebuild,v 1.2 2008/12/18 18:38:03 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.0.ebuild,v 1.3 2009/04/21 15:59:57 dang Exp $
 
 inherit eutils
 
@@ -59,6 +59,7 @@ src_unpack () {
 
 	# Fix up the dbus conf file to use plugdev group
 	epatch "${FILESDIR}/${P}-confchanges.patch"
+	epatch "${FILESDIR}/${P}-gentoo-dhclient.patch"
 }
 
 src_compile() {

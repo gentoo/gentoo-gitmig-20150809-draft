@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.37 2009/01/22 16:29:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.38 2009/04/21 15:59:57 dang Exp $
+
+  21 Apr 2009; Daniel Gryniewicz <dang@gentoo.org>
+  +files/networkmanager-0.7.0-gentoo-dhclient.patch, networkmanager-0.7.0:
+  fix nm 0.7 to look for dhclient.conf in the correct place on gentoo
 
   22 Jan 2009; Peter Volkov <pva@gentoo.org>
   networkmanager-0.6.5_p20070823.ebuild, networkmanager-0.6.6.ebuild:
