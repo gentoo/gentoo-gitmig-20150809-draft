@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.8.2.ebuild,v 1.1 2009/04/19 07:07:24 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.8.2.ebuild,v 1.2 2009/04/21 06:38:13 nerdboy Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="A C++ SDK which contains an implementation of DAP 2.0 and 3.2, both
 HOMEPAGE="http://opendap.org/index.html"
 SRC_URI="http://www.opendap.org/pub/source/${P}.tar.gz"
 
-LICENSE="LGPL-2.1"
+LICENSE="|| ( LGPL-2.1 URI )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
