@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666.ebuild,v 1.1 2009/04/17 23:13:13 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666.ebuild,v 1.2 2009/04/21 21:53:16 calchan Exp $
 
 EAPI="2"
+WX_GTK_VER="2.8"
 
 inherit versionator wxwidgets cmake-utils
 
@@ -22,7 +23,7 @@ IUSE="doc debug examples minimal python"
 
 CDEPEND=">=dev-util/cmake-2.6.0
 	dev-libs/boost
-	=x11-libs/wxGTK-2.8*
+	x11-libs/wxGTK:2.8[X,opengl]
 	sys-libs/zlib"
 DEPEND="${CDEPEND}
 	app-arch/lzma-utils"
@@ -31,15 +32,7 @@ RDEPEND="${CDEPEND}
 
 S="${WORKDIR}/${PN}"
 
-pkg_setup() {
-	WX_GTK_VER="2.8"
-	check_wxuse opengl
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	if ! use doc ; then
 		sed -i -e '/add_subdirectory(kicad-doc)/d' CMakeLists.txt || die "sed failed"
 	fi
@@ -52,6 +45,8 @@ src_unpack() {
 }
 
 src_configure() {
+	need-wxwidgets unicode
+
 	mycmakeargs="${mycmakeargs}
 		-DKICAD_CYRILLIC=ON
 		-DwxUSE_UNICODE=ON
