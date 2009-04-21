@@ -1,0 +1,12 @@
+http://bugs.gentoo.org/265616
+
+--- a/fgetln.c
++++ b/fgetln.c
+@@ -37,6 +37,7 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <string.h>
+ #include <errno.h>
+ 
