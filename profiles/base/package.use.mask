@@ -1,5 +1,11 @@
 # This file requires >=portage-2.1.1
 
+# Mounir Lamouri <volkmar@gentoo.org> (21 Apr 2009)
+# masking jingle because it's using an old ortp version
+# which is blocking stabilization of new ones, bug 206047
+=kde-base/kdenetwork-3* jingle
+=kde-base/kopete-3* jingle
+
 # Steve Arnold <nerdboy@gentoo.org> (20 Apr 2009)
 # masked until we have a ruby binding fix
 sci-libs/gdal ruby
