@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.122 2009/04/04 13:50:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.123 2009/04/21 19:16:09 caster Exp $
+
+  21 Apr 2009; Vlastimil Babka <caster@gentoo.org>
+  -ibm-jre-bin-1.6.0.3.ebuild:
+  Redigest because IBM changed distfiles silently, bug #265760. There seems
+  to be no change to the contents of the tgz, so no revbump. Also remove old
+  versions.
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> ibm-jre-bin-1.4.2.13.ebuild:
   amd64/x86 stable, bug #252416
