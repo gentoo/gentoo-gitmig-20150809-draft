@@ -1,0 +1,65 @@
+diff -NrU5 bareftp-0.2.2.orig/bareftp.in bareftp-0.2.2/bareftp.in
+--- bareftp-0.2.2.orig/bareftp.in	1970-01-01 01:00:00.000000000 +0100
++++ bareftp-0.2.2/bareftp.in	2009-04-21 15:30:53.000000000 +0200
+@@ -0,0 +1,2 @@
++#!/bin/sh
++exec @MONO@ @libdir@/bareftp/bareftp.exe $MONO_EXTRA_ARGS "$@"
+diff -NrU5 bareftp-0.2.2.orig/configure.ac bareftp-0.2.2/configure.ac
+--- bareftp-0.2.2.orig/configure.ac	2009-04-21 15:37:34.000000000 +0200
++++ bareftp-0.2.2/configure.ac	2009-04-21 16:01:52.000000000 +0200
+@@ -61,10 +61,12 @@
+ AC_SUBST(LOCALE_DIR)
+ 
+ AC_OUTPUT([
+ Makefile
+ 
++bareftp
++
+ m4/Makefile
+ 
+ data/Makefile
+ data/icon-theme/Makefile
+ po/Makefile.in
+diff -NrU5 bareftp-0.2.2.orig/Makefile.am bareftp-0.2.2/Makefile.am
+--- bareftp-0.2.2.orig/Makefile.am	2009-04-21 15:37:34.000000000 +0200
++++ bareftp-0.2.2/Makefile.am	2009-04-21 16:02:18.000000000 +0200
+@@ -1,5 +1,6 @@
++ACLOCAL_AMFLAGS = -I m4/shamrock -I m4/bareftp
+ 
+ bin_SCRIPTS = bareftp 
+ EXTRA_DIST = \
+ 	script.in \
+ 	intltool-extract.in \
+@@ -13,16 +14,10 @@
+ 	  data \
+ 	  src \
+ 	  m4 \
+ 	  po
+ 
+-REWRITE = \
+-        sed -e "s|\@prefix\@|$(prefix)|g"               \
+-            -e "s|\@pkglibdir\@|$(pkglibdir)|g"         \
+-            -e "s|\@bindir\@|$(bindir)|g"		\
+-	    -e "s|\@MONO\@|$(MONO)|g" 
+-
+ DISTCLEANFILES = \
+         *.bak \
+         *~ \
+         *.pidb \
+         intltool-extract \
+@@ -45,9 +40,5 @@
+ 	intltool-extract.in \
+ 	intltool-merge.in \
+ 	intltool-update.in \
+ 	mkinstalldirs \
+ 	$(bin_SCRIPTS)
+-                                                                                                              
+-$(bin_SCRIPTS): $(srcdir)/script.in Makefile
+-	$(REWRITE) $(srcdir)/script.in > $@.tmp
+-	mv $@.tmp $@
+diff -NrU5 bareftp-0.2.2.orig/script.in bareftp-0.2.2/script.in
+--- bareftp-0.2.2.orig/script.in	2009-04-21 15:37:34.000000000 +0200
++++ bareftp-0.2.2/script.in	1970-01-01 01:00:00.000000000 +0100
+@@ -1,2 +0,0 @@
+-#!/bin/sh
+-exec @MONO@ @prefix@/lib/bareftp/bareftp.exe $MONO_EXTRA_ARGS "$@"
