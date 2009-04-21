@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmpdclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.39 2009/04/21 16:01:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/ChangeLog,v 1.40 2009/04/21 18:09:51 hwoarang Exp $
+
+  21 Apr 2009; Markos Chandras <hwoarang@gentoo.org> qmpdclient-1.1.0-r1:
+  Drop newbin, use emake install, adapt desktop icon
 
   21 Apr 2009; Markos Chandras <hwoarang@gentoo.org> qmpdclient-1.1.0-r1:
   Fix install directory, more fixes on translations
