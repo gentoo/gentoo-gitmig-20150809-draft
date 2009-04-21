@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9702 2009/04/21 06:16:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9703 2009/04/21 06:21:20 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
+# Masked until out of beta
+=dev-libs/libevent-2*
 
 # Doug Goldstein <cardoe@gentoo.org> (19 Apr 2009)
 # developing ebuild for phoronix-test-suite
