@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r2.ebuild,v 1.1 2008/10/12 00:59:15 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r2.ebuild,v 1.2 2009/04/21 17:23:25 scarabeus Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -43,7 +43,6 @@ RDEPEND="x11-libs/libXext
 	fam? ( virtual/fam )
 	virtual/ghostscript
 	utempter? ( sys-libs/libutempter )
-	!kde-base/kde-env
 	lua? ( dev-lang/lua )
 	spell? ( >=app-text/aspell-0.60.5 >=app-dicts/aspell-en-6.0.0 )
 	>=sys-apps/portage-2.1.2.11
