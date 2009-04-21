@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.53 2009/04/18 13:14:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.54 2009/04/21 16:33:03 armin76 Exp $
+
+  21 Apr 2009; Raúl Porcel <armin76@gentoo.org> netatalk-2.0.3-r4.ebuild:
+  arm/sh/sparc stable wrt #265037
 
   18 Apr 2009; Markus Meier <maekke@gentoo.org> netatalk-2.0.3-r4:
   amd64/x86 stable, bug #265037

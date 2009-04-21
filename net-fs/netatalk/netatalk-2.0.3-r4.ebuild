@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r4.ebuild,v 1.3 2009/04/18 13:14:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-2.0.3-r4.ebuild,v 1.4 2009/04/21 16:33:03 armin76 Exp $
 
 inherit eutils pam autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="ssl pam tcpd slp cups kerberos krb4 debug cracklib xfs"
 
 RDEPEND=">=sys-libs/db-4.2.52
