@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/nmzmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.7 2009/04/11 19:51:38 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/nmzmail/ChangeLog,v 1.8 2009/04/21 17:36:18 tove Exp $
+
+*nmzmail-1.1 (21 Apr 2009)
+
+  21 Apr 2009; Torsten Veller <tove@gentoo.org> -files/1.0-header.diff,
+  -nmzmail-1.0.ebuild, +nmzmail-1.1.ebuild:
+  Version bump. Thanks to Tim Harder (#266959). Cleanup
 
 *nmzmail-1.0 (11 Apr 2009)
 
