@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Convert-Binary-C
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-Binary-C/ChangeLog,v 1.3 2009/04/08 18:49:31 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-Binary-C/ChangeLog,v 1.4 2009/04/21 17:11:26 tove Exp $
+
+*Convert-Binary-C-0.74 (21 Apr 2009)
+
+  21 Apr 2009; Torsten Veller <tove@gentoo.org>
+  +Convert-Binary-C-0.74.ebuild:
+  Version bump
 
   08 Apr 2009; Andrey Kislyuk <weaver@gentoo.org>
   Convert-Binary-C-0.73.ebuild:
