@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28-r1.ebuild,v 1.1 2009/04/20 13:27:20 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28-r1.ebuild,v 1.2 2009/04/21 17:28:54 dang Exp $
 
 WANT_AUTOMAKE=1.9
 inherit gnome2 eutils autotools
@@ -15,6 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dbus gtkhtml +gnutls libnotify lua networkmanager webkit +xulrunner"
 
+# sqlite dep needed for sparc; bug #252292
 RDEPEND="
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
 	lua? ( >=dev-lang/lua-5.1 )
@@ -26,7 +27,7 @@ RDEPEND="
 	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2.6.27
 	>=dev-libs/libxslt-1.1.19
-	>=dev-db/sqlite-3.3
+	>=dev-db/sqlite-3.6.13
 	>=dev-libs/glib-2
 	>=gnome-base/libglade-2
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
