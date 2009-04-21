@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.44 2009/04/18 18:16:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.45 2009/04/21 15:55:14 ranger Exp $
+
+  21 Apr 2009; Brent Baude <ranger@gentoo.org> openmpi-1.2.9.ebuild:
+  Marking openmpi-1.2.9 ppc64 for bug 266555
 
   18 Apr 2009; Tobias Klausmann <klausman@gentoo.org> openmpi-1.2.9.ebuild:
   Stable on alpha, bug #266555
