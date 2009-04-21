@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9701 2009/04/20 21:01:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9702 2009/04/21 06:16:17 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -74,7 +74,10 @@ virtual/perl-IO-Compress
 # Mask sys-cluster/mpich for removal. (#266565)
 # No release since 2005, multiple bugs, easily replaced with
 # openmpi, mpich2 or lam-mpi
-sys-cluster/mpich
+#
+# commented out since it still being used by sci-visualization/paraview-2.6.2
+# -- mr_bones@gentoo.org
+#sys-cluster/mpich
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (17 Apr 2009)
 # Add patched dev-lang/ghc for testing.
