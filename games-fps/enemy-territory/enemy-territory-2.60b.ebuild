@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.15 2009/04/14 06:47:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.60b.ebuild,v 1.16 2009/04/21 21:40:41 gengor Exp $
 
 inherit eutils games
 
@@ -72,7 +72,7 @@ src_install() {
 		doexe "Enemy Territory 2.60b"/linux/etded.x86 || die "doexe failed"
 		games_make_wrapper et-ded ./etded.x86 "${dir}"
 		newinitd "${S}"/et-ded.rc et-ded || die "newinitd failed"
-		sed -i
+		sed -i \
 			-e "s:GAMES_USER_DED:${GAMES_USER_DED}:" \
 			-e "s:GENTOO_DIR:${GAMES_BINDIR}:" \
 			"${D}"/etc/init.d/et-ded \
