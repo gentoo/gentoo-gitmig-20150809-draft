@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.195 2009/04/04 13:54:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.196 2009/04/21 18:59:24 caster Exp $
+
+  21 Apr 2009; Vlastimil Babka <caster@gentoo.org> Manifest:
+  Fix digest of IBMJava2-SDK-1.4.2-13.0.ppc.tgz - bug #265680.
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> ibm-jdk-bin-1.4.2.13.ebuild:
   amd64/x86 stable, bug #252416
