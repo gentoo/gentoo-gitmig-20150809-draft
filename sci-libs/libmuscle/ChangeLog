@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libmuscle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmuscle/ChangeLog,v 1.1 2009/04/03 16:38:07 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libmuscle/ChangeLog,v 1.2 2009/04/21 12:28:50 weaver Exp $
+
+  21 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> libmuscle-3.7.ebuild,
+  libmuscle-9999.ebuild:
+  Blocks sci-biology/muscle
 
   03 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
   New package sci-libs/libmuscle, ebuild written by me
