@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.9.ebuild,v 1.5 2009/04/22 12:46:56 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.5.0.9-r1.ebuild,v 1.1 2009/04/22 12:46:56 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -12,17 +12,17 @@ TGZ_PV="${JDK_RELEASE}-${SERVICE_RELEASE}.0"
 JDK_DIST_PREFIX="ibm-java2-sdk-${TGZ_PV}-linux"
 JAVACOMM_DIST_PREFIX="ibm-java2-javacomm-${TGZ_PV}-linux"
 
-X86_JDK_DIST="${JDK_DIST_PREFIX}-i386.old.tgz"
-X86_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-i386.old.tgz"
+X86_JDK_DIST="${JDK_DIST_PREFIX}-i386.tgz"
+X86_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-i386.tgz"
 
-AMD64_JDK_DIST="${JDK_DIST_PREFIX}-x86_64.old.tgz"
-AMD64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-x86_64.old.tgz"
+AMD64_JDK_DIST="${JDK_DIST_PREFIX}-x86_64.tgz"
+AMD64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-x86_64.tgz"
 
-PPC_JDK_DIST="${JDK_DIST_PREFIX}-ppc.old.tgz"
-PPC_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-ppc.old.tgz"
+PPC_JDK_DIST="${JDK_DIST_PREFIX}-ppc.tgz"
+PPC_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-ppc.tgz"
 
-PPC64_JDK_DIST="${JDK_DIST_PREFIX}-ppc64.old.tgz"
-PPC64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-ppc64.old.tgz"
+PPC64_JDK_DIST="${JDK_DIST_PREFIX}-ppc64.tgz"
+PPC64_JAVACOMM_DIST="${JAVACOMM_DIST_PREFIX}-ppc64.tgz"
 
 if use x86; then
 	JDK_DIST=${X86_JDK_DIST}
@@ -46,7 +46,8 @@ elif use ppc64; then
 	LINK_ARCH="ipseries64"
 fi
 
-DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}&S_TACT=105AGX05&S_CMP=JDK"
+#DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}&S_TACT=105AGX05&S_CMP=JDK"
+DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}-ssu&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.5"
 DESCRIPTION="IBM Java Development Kit ${SLOT}"
@@ -66,7 +67,7 @@ SRC_URI="x86? ( ${X86_JDK_DIST} )
 		ppc64? ( ${PPC64_JAVACOMM_DIST} )
 		)"
 LICENSE="IBM-J1.5"
-KEYWORDS="-* amd64 ppc ppc64 x86"
+KEYWORDS="-* ~amd64 ~ppc ~ppc64 ~x86"
 RESTRICT="fetch"
 IUSE="X alsa doc examples javacomm nsplugin odbc"
 
@@ -188,7 +189,8 @@ pkg_nofetch() {
 	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
 	einfo "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE} for your arch:"
+#	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE} for your arch:"
+	einfo "Under J2SE 5.0, download SR${SERVICE_RELEASE}-SSU for your arch:"
 	einfo "(note that we switched to tgz format because it's now versioned)"
 	einfo "${JDK_DIST}"
 	if use javacomm ; then
@@ -198,10 +200,10 @@ pkg_nofetch() {
 	einfo "You can use direct link to your arch download page:"
 	einfo "${DIRECT_DOWNLOAD}"
 	einfo "Place the file(s) in: ${DISTDIR}"
-	einfo "And rename them by replacing .tgz with .old.tgz"
 	einfo "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+#	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+	einfo "Note: if SR${SERVICE_RELEASE}-SSU is not available at ${DOWNLOADPAGE}"
 	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
 	einfo "isn't updated, but the files should still available through the"
 	einfo "direct link to arch download page. If it doesn't work, file a bug."
