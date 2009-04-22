@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.24.2-r1.ebuild,v 1.1 2009/01/04 00:20:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-desktop/gnome-desktop-2.24.3-r1.ebuild,v 1.1 2009/04/22 03:30:16 leio Exp $
 
-inherit eutils gnome2
+inherit eutils autotools gnome2
 
 DESCRIPTION="Libraries for the gnome desktop that are not part of the UI"
 HOMEPAGE="http://www.gnome.org/"
@@ -47,7 +47,11 @@ src_unpack() {
 	gnome2_src_unpack
 
 	# Do not load background if not needed, bug #251350
-	epatch "${FILESDIR}/${P}-background.patch"
+	epatch "${FILESDIR}/${PN}-2.24.2-background.patch"
+
+	# Broken intltool-0.40.6 used for 2.24.3, re-intltoolize
+	intltoolize --force --automake --copy || die "intltoolize failed"
+	eautomake
 }
 
 pkg_postinst() {
