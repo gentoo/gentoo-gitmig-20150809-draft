@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.5 2009/01/22 16:25:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.6.6.ebuild,v 1.6 2009/04/22 14:22:08 rbu Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils versionator
 
 #MY_PV=${PV/_*/}
+MYPV_MINOR=$(get_version_component_range 1-2)
 
 DESCRIPTION="Gnome applet for NetworkManager."
 HOMEPAGE="http://people.redhat.com/dcbw/NetworkManager/"
@@ -19,7 +20,7 @@ RDEPEND=">=sys-apps/dbus-0.60
 	>=sys-apps/hal-0.5
 	sys-apps/iproute2
 	>=net-misc/dhcdbd-1.4
-	>=net-misc/networkmanager-0.6.5_p20080130
+	=net-misc/networkmanager-${MYPV_MINOR}*
 	>=net-wireless/wireless-tools-28_pre9
 	>=net-wireless/wpa_supplicant-0.4.8
 	>=dev-libs/glib-2.10
@@ -27,7 +28,7 @@ RDEPEND=">=sys-apps/dbus-0.60
 	>=x11-libs/gtk+-2.10
 	>=gnome-base/libglade-2
 	>=gnome-base/gnome-keyring-0.4
-	|| ( >=gnome-base/gnome-panel-2 xfce-base/xfce4-panel )
+	|| ( >=gnome-base/gnome-panel-2 xfce-base/xfce4-panel x11-misc/trayer )
 	>=gnome-base/gconf-2
 	>=gnome-base/libgnomeui-2"
 DEPEND="${RDEPEND}

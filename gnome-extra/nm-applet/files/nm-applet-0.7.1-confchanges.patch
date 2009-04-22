@@ -1,0 +1,22 @@
+--- nm-applet-dbus-126.conf~	2009-03-31 17:10:19.000000000 +0100
++++ nm-applet-dbus-126.conf	2009-04-21 16:27:51.000000000 +0100
+@@ -23,7 +23,7 @@
+                 <allow send_destination="org.freedesktop.NetworkManagerUserSettings"
+                        send_interface="org.freedesktop.NetworkManagerSettings.Connection.Secrets"/>
+         </policy>
+-        <policy at_console="true">
++        <policy group="plugdev">
+                 <allow own="org.freedesktop.NetworkManagerUserSettings"/>
+ 
+                 <allow send_destination="org.freedesktop.NetworkManagerUserSettings"
+--- nm-applet-pre-dbus-126.conf~	2009-03-31 17:10:20.000000000 +0100
++++ nm-applet-pre-dbus-126.conf	2009-04-21 16:28:20.000000000 +0100
+@@ -11,7 +11,7 @@
+ 		<allow send_destination="org.freedesktop.NetworkManagerUserSettings"
+ 		       send_interface="org.freedesktop.NetworkManagerSettings.Connection.Secrets"/>
+         </policy>
+-        <policy at_console="true">
++        <policy group="plugdev">
+                 <allow own="org.freedesktop.NetworkManagerUserSettings"/>
+ 
+                 <allow send_destination="org.freedesktop.NetworkManagerUserSettings"/>

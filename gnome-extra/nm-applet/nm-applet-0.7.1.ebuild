@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.0.ebuild,v 1.3 2009/04/22 14:22:08 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.1.ebuild,v 1.1 2009/04/22 14:22:08 rbu Exp $
 
+EAPI=2
 inherit gnome2 eutils versionator
 
 MY_P="${P/nm-applet/network-manager-applet}"
@@ -36,7 +37,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 # USE_DESTDIR="1"
 
-S=${WORKDIR}/${P/_rc2/}
+S=${WORKDIR}/${MY_P}
 
 pkg_setup () {
 	G2CONF="${G2CONF} \
@@ -45,10 +46,8 @@ pkg_setup () {
 		--with-dbus-sys=/etc/dbus-1/system.d"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.7.0-confchanges.patch"
+src_prepare() {
+	epatch "${FILESDIR}/${P}-confchanges.patch"
 }
 
 pkg_postinst() {
