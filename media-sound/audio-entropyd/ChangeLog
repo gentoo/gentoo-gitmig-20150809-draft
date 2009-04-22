@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/audio-entropyd
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.30 2009/03/20 15:56:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/ChangeLog,v 1.31 2009/04/22 19:47:53 maekke Exp $
+
+  22 Apr 2009; Markus Meier <maekke@gentoo.org> audio-entropyd-1.0.5:
+  amd64 stable, bug #259792
 
   20 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   audio-entropyd-1.0.5.ebuild:
