@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.5.ebuild,v 1.1 2008/11/28 14:47:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/mantisbt-1.1.7.ebuild,v 1.1 2009/04/22 17:02:21 pva Exp $
 
 inherit eutils webapp depend.php
 
@@ -27,8 +27,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm -r "${S}/core/adodb/" # We use external adodb
-	epatch "${FILESDIR}/${P}-caching.patch"
-	epatch "${FILESDIR}/${P}-extensions.patch"
 }
 
 src_install() {

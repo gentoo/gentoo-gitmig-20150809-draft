@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.79 2009/01/04 17:31:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.80 2009/04/22 17:02:21 pva Exp $
+
+*mantisbt-1.1.7 (22 Apr 2009)
+
+  22 Apr 2009; Peter Volkov <pva@gentoo.org>
+  -files/mantisbt-1.1.4-r5687:5688.patch,
+  -files/mantisbt-1.1.5-caching.patch,
+  -files/mantisbt-1.1.5-extensions.patch, -mantisbt-1.1.4-r2.ebuild,
+  -mantisbt-1.1.5.ebuild, +mantisbt-1.1.7.ebuild:
+  Version bump, remove old.
 
   04 Jan 2009; Markus Meier <maekke@gentoo.org> mantisbt-1.1.6.ebuild:
   amd64/x86 stable, bug #252659
