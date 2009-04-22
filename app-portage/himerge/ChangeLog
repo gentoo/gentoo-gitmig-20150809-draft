@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/himerge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.35 2009/04/22 15:33:33 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.36 2009/04/22 15:36:14 araujo Exp $
+
+  22 Apr 2009; Luis F. Araujo <araujo@gentoo.org> -himerge-0.30.36.2.ebuild:
+  Removing old built_with_use hack version
 
 *himerge-0.30.36.2-r1 (22 Apr 2009)
 
