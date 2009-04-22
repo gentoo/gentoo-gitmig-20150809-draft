@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.5 2009/04/14 10:23:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.6 2009/04/22 21:03:46 maekke Exp $
 
 inherit autotools eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/gphoto/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ~ppc sparc x86"
 IUSE="gimp gnome nls"
 
 # FIXME: why is exif not optional ?
