@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/bug-buddy
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.159 2009/04/12 21:06:07 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bug-buddy/ChangeLog,v 1.160 2009/04/22 00:40:09 leio Exp $
+
+  22 Apr 2009; Mart Raudsepp <leio@gentoo.org> -bug-buddy-2.20.1.ebuild,
+  -bug-buddy-2.24.1.ebuild:
+  Remove old
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   bug-buddy-2.24.2.ebuild:
