@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/himerge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.34 2009/03/07 19:57:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.35 2009/04/22 15:33:33 araujo Exp $
+
+*himerge-0.30.36.2-r1 (22 Apr 2009)
+
+  22 Apr 2009; Luis F. Araujo <araujo@gentoo.org>
+  +himerge-0.30.36.2-r1.ebuild:
+  gtk2hs now depends only on xulrunner
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   -himerge-0.30.22.ebuild, -himerge-0.30.22.1.ebuild,
