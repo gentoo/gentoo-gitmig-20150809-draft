@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.6 2009/04/18 13:49:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.7 2009/04/22 18:32:29 armin76 Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~hppa ~ia64 ~ppc64 ~sh ~x86"
+KEYWORDS="~hppa ~ia64 ~ppc64 ~sh ~sparc ~x86"
 IUSE="+opengl server +xorgmodule"
 
 RDEPEND="sys-libs/zlib
@@ -129,7 +129,7 @@ src_compile() {
 			--disable-xorg --disable-xnest --disable-xvfb --disable-dmx \
 			--disable-xwin --disable-xephyr --disable-kdrive --with-pic \
 			--disable-xorgcfg --disable-xprint --disable-static \
-			--disable-composite --disable-xtrap --enable-xcsecurity \
+			--disable-composite --disable-xtrap \
 			--disable-{a,c,m}fb \
 			--with-default-font-path=/usr/share/fonts/misc,/usr/share/fonts/75dpi,/usr/share/fonts/100dpi,/usr/share/fonts/TTF,/usr/share/fonts/Type1 \
 			--enable-install-libxf86config \
