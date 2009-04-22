@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.4 2009/04/09 20:38:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.5 2009/04/22 22:15:29 eva Exp $
 
 inherit autotools eutils gnome2 virtualx
 
@@ -30,6 +30,9 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	>=gnome-base/gnome-panel-2
 	>=gnome-base/gconf-2
 	=media-libs/gstreamer-0.10*
+	policykit? (
+		>=sys-auth/policykit-0.8
+		>=gnome-extra/policykit-gnome-0.8 )
 
 	>=x11-apps/xrandr-1.2
 

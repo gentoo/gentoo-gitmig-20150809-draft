@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.20.0-r1.ebuild,v 1.10 2008/05/14 21:50:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.20.0-r1.ebuild,v 1.11 2009/04/22 22:15:29 eva Exp $
 
 inherit gnome2 eutils virtualx
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-power-manager/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.6.0
