@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/scim-canna-1.0.1.ebuild,v 1.1 2008/09/24 13:19:52 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/scim-canna-1.0.1.ebuild,v 1.2 2009/04/22 15:18:06 matsuu Exp $
 
 DESCRIPTION="Japanese input method Canna IMEngine for SCIM"
 HOMEPAGE="http://scim-imengine.sourceforge.jp/index.cgi?cmd=view;name=SCIMCanna"
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS THANKS README
+	dodoc AUTHORS ChangeLog NEWS README
 }
 
 pkg_postinst() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-canna
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.13 2008/09/24 13:19:52 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.14 2009/04/22 15:18:06 matsuu Exp $
+
+  22 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> scim-canna-1.0.1:
+  Fixed dodoc.
 
 *scim-canna-1.0.1 (24 Sep 2008)
 
