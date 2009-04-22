@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/revelation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.15 2009/03/20 03:05:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/revelation/ChangeLog,v 1.16 2009/04/22 19:48:52 maekke Exp $
+
+  22 Apr 2009; Markus Meier <maekke@gentoo.org> revelation-0.4.11-r2:
+  amd64 stable, bug #260038
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> revelation-0.4.11-r2.ebuild:
   Marked ppc stable for bug #260038.
