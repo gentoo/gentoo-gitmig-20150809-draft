@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.318 2009/04/15 14:35:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.319 2009/04/22 02:14:01 jmbsvicetto Exp $
+
+*amarok-2.0.2-r2 (22 Apr 2009)
+
+  22 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +amarok-2.0.2-r2.ebuild:
+  In order to get amarok-2.0.2 to build, I've appended --as-needed to the
+  ldflags.
 
   15 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> amarok-2.0.2-r1.ebuild:
   Fix typo.
