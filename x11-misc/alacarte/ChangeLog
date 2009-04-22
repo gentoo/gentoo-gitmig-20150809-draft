@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/alacarte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.80 2009/04/19 16:01:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alacarte/ChangeLog,v 1.81 2009/04/22 04:02:54 leio Exp $
+
+  22 Apr 2009; Mart Raudsepp <leio@gentoo.org> alacarte-0.11.10.ebuild:
+  QA: Don't neglect calling gnome2_src_prepare in src_prepare
 
   19 Apr 2009; Markus Meier <maekke@gentoo.org> alacarte-0.11.10:
   amd64/x86 stable, bug #266717
