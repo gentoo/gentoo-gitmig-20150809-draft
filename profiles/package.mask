@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9705 2009/04/22 01:45:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9706 2009/04/22 01:55:16 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,7 +34,7 @@
 # Mounir Lamouri <volkmar@gentoo.org> (22 Apr 2009)
 # Masked for removal in 60 days. See bug 248008.
 # Tapioca is unmaintained and they are officially abandoned subprojects.
-# In addition, tapioca-xmpp has been subseeded by telepathy-gabble.
+# In addition, tapioca-xmpp has been superseeded by telepathy-gabble.
 net-im/tapiocad
 net-im/tapioca-xmpp
 net-im/tapiocaui
@@ -789,12 +789,6 @@ dev-lang/rubinius
 # I gave away maintainership a while ago nobody took it on. Prepare for remove.
 app-emulation/ganeti
 app-emulation/ganeti-instance-debian-etch
-
-# Jeremy Olexa <darkside@gentoo.org> (05 Feb 2009)
-# libjingle-0.3.11 was created by the tapioca team
-# libjingle-0.3.12 was created by the farsight team
-# As a result, some things don't work with 0.3.12 (bug 248008)
-=net-libs/libjingle-0.3.12
 
 # Santiago M. Mola <coldwind@gentoo.org> (03 Feb 2009)
 # Masked for removal in 30 days,
