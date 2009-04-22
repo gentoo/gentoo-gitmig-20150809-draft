@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.6 2008/01/27 00:20:34 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/tash/tash-8.4.1a.ebuild,v 1.7 2009/04/22 14:16:31 george Exp $
 
-inherit versionator gnat
+inherit gnat
 
 DESCRIPTION="Tash provides tcl Ada bindings"
 HOMEPAGE="http://tcladashell.sourceforge.net/index.htm"
@@ -17,6 +17,8 @@ DEPEND="virtual/ada
 	=dev-lang/tcl-8.4*
 	=dev-lang/tk-8.4*"
 
+RDEPEND=${DEPEND}
+
 lib_compile() {
 	gcc -c -O2 -o obj/tclmacro.o  src/tclmacro.c && \
 	gcc -c -O2 -o obj/tkmacro.o  src/tkmacro.c && \
@@ -30,6 +32,13 @@ lib_compile() {
 lib_install() {
 	mv "${SL}"/lib/*.{ali,a,so*} "${DL}"
 	chmod a-w "${DL}"/*.ali
+
+	# tash build creates an absolute symlink. The easiest way to just
+	# relink it here
+	pushd "${DL}"
+	rm libtash.so
+	ln -s libtash.so.* libtash.so
+	popd
 }
 
 src_install() {
