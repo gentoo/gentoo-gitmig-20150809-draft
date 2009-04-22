@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/arts
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.273 2008/09/14 23:50:38 carlo Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/ChangeLog,v 1.274 2009/04/22 22:24:30 gengor Exp $
+
+  22 Apr 2009; Gordon Malm <gengor@gentoo.org> arts-3.5.9.ebuild:
+  Add FORTIFY build workaround to arts-3.5.9 too. Bug #260539.
 
   14 Sep 2008; Carsten Lohrke <carlo@gentoo.org>
   +files/arts-1.5.10-unfortify.diff:
