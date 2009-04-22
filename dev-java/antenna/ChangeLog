@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antenna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.7 2009/04/05 22:16:07 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/ChangeLog,v 1.8 2009/04/22 20:09:05 maekke Exp $
+
+  22 Apr 2009; Markus Meier <maekke@gentoo.org> antenna-0.9.14:
+  add ~amd64, bug #263665
 
 *antenna-1.0.2 (05 Apr 2009)
 

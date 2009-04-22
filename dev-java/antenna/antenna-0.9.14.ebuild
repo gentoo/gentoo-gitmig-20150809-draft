@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-0.9.14.ebuild,v 1.1 2007/05/10 11:40:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antenna/antenna-0.9.14.ebuild,v 1.2 2009/04/22 20:09:05 maekke Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/antenna/${PN}-src-${PV}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEP="
