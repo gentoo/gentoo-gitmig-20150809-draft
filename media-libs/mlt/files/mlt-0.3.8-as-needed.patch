@@ -1,0 +1,80 @@
+diff -NrU5 mlt-0.3.8.orig/src/modules/core/Makefile mlt-0.3.8/src/modules/core/Makefile
+--- mlt-0.3.8.orig/src/modules/core/Makefile	2009-04-22 12:56:59.000000000 +0200
++++ mlt-0.3.8/src/modules/core/Makefile	2009-04-22 12:59:34.000000000 +0200
+@@ -31,11 +31,11 @@
+ 
+ ASM_OBJS = 
+ 
+ CFLAGS += -I../..
+ 
+-LDFLAGS+=-L../../framework -lmlt
++LDFLAGS+=-L../../framework -lmlt -lm
+ 
+ SRCS := $(OBJS:.o=.c)
+ 
+ all: 	$(TARGET)
+ 
+diff -NrU5 mlt-0.3.8.orig/src/modules/effectv/Makefile mlt-0.3.8/src/modules/effectv/Makefile
+--- mlt-0.3.8.orig/src/modules/effectv/Makefile	2009-04-22 12:56:59.000000000 +0200
++++ mlt-0.3.8/src/modules/effectv/Makefile	2009-04-22 12:59:23.000000000 +0200
+@@ -7,11 +7,11 @@
+ 	   image.o \
+ 	   utils.o
+ 
+ CFLAGS += -I../..
+ 
+-LDFLAGS+=-L../../framework -lmlt
++LDFLAGS+=-L../../framework -lmlt -lm
+ 
+ SRCS := $(OBJS:.o=.c)
+ 
+ all: 	$(TARGET)
+ 
+diff -NrU5 mlt-0.3.8.orig/src/modules/motion_est/Makefile mlt-0.3.8/src/modules/motion_est/Makefile
+--- mlt-0.3.8.orig/src/modules/motion_est/Makefile	2009-04-22 12:56:59.000000000 +0200
++++ mlt-0.3.8/src/modules/motion_est/Makefile	2009-04-22 12:58:45.000000000 +0200
+@@ -10,11 +10,11 @@
+ 	   filter_vismv.o \
+ 	   producer_slowmotion.o
+ 
+ CFLAGS += -I../.. 
+ 
+-LDFLAGS+=-L../../framework -lmlt
++LDFLAGS+=-L../../framework -lmlt -lm
+ 
+ SRCS := $(OBJS:.o=.c)
+ 
+ all: 	$(TARGET)
+ 
+diff -NrU5 mlt-0.3.8.orig/src/modules/normalize/Makefile mlt-0.3.8/src/modules/normalize/Makefile
+--- mlt-0.3.8.orig/src/modules/normalize/Makefile	2009-04-22 12:56:59.000000000 +0200
++++ mlt-0.3.8/src/modules/normalize/Makefile	2009-04-22 12:58:00.000000000 +0200
+@@ -5,11 +5,11 @@
+ OBJS = factory.o \
+ 	   filter_volume.o 
+ 
+ CFLAGS += -I../..
+ 
+-LDFLAGS+=-L../../framework -lmlt
++LDFLAGS+=-L../../framework -lmlt -lm
+ 
+ SRCS := $(OBJS:.o=.c)
+ 
+ all: 	$(TARGET)
+ 
+diff -NrU5 mlt-0.3.8.orig/src/modules/plus/Makefile mlt-0.3.8/src/modules/plus/Makefile
+--- mlt-0.3.8.orig/src/modules/plus/Makefile	2009-04-22 12:56:59.000000000 +0200
++++ mlt-0.3.8/src/modules/plus/Makefile	2009-04-22 12:57:40.000000000 +0200
+@@ -9,11 +9,11 @@
+ 	   filter_sepia.o \
+ 	   transition_affine.o
+ 
+ CFLAGS += -I../..
+ 
+-LDFLAGS+=-L../../framework -lmlt
++LDFLAGS+=-L../../framework -lmlt -lm
+ 
+ SRCS := $(OBJS:.o=.c)
+ 
+ all: 	$(TARGET)
+ 
