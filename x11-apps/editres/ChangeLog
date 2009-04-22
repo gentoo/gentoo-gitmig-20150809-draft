@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/editres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.27 2009/04/17 18:28:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.28 2009/04/22 00:39:18 ranger Exp $
+
+  22 Apr 2009; Brent Baude <ranger@gentoo.org> editres-1.0.3-r1.ebuild:
+  Marking editres-1.0.3-r1 ppc64 stable for bug 264982
 
   17 Apr 2009; Jeroen Roovers <jer@gentoo.org> editres-1.0.3-r1.ebuild:
   Marked ~hppa too.
