@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4382 2009/04/21 21:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4383 2009/04/22 13:28:10 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2416,6 +2416,7 @@ sci-chemistry/avogadro:glsl - Enable glsl features via GLEW.
 sci-chemistry/caver:pymol - Install the PyMol plugin (sci-chemistry/pymol) 
 sci-chemistry/coot:new-interface - Build with the experimental GTK+-2 interface instead of GTK+-1
 sci-chemistry/eden:double-precision - More precise calculations at the expense of speed
+sci-chemistry/gamess:qmmm-tinker - Enable tinker qmmm code
 sci-chemistry/ghemical:gamess - Add GAMESS interface for QM/MM (sci-chemistry/gamess)
 sci-chemistry/ghemical:mopac7 - Apply compilation fix for sci-chemistry/mopac7 support
 sci-chemistry/ghemical:openbabel - Use sci-chemistry/openbabel for file conversions
