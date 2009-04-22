@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.19.ebuild,v 1.2 2009/04/18 11:28:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.19.ebuild,v 1.3 2009/04/22 22:44:07 eva Exp $
 
 EAPI="2"
 
@@ -37,10 +37,15 @@ src_install () {
 	# Must be run SETUID+SETGID, bug #250106
 	exeinto /usr/bin
 	exeopts -m 6710 -g plugdev
-	doexe src/pmount src/pumount src/pmount-hal || die "doexe failed"
+	doexe src/pmount src/pumount || die "doexe failed"
 
 	dodoc AUTHORS ChangeLog TODO || die "dodoc failed"
-	doman man/pmount.1 man/pumount.1 man/pmount-hal.1 || die "doman failed"
+	doman man/pmount.1 man/pumount.1 || die "doman failed"
+
+	if use hal; then
+		doexe src/pmount-hal || die "doexe failed"
+		doman man/pmount-hal.1  || die "doman failed"
+	fi
 
 	insinto /etc
 	doins etc/pmount.allow || die "doins failed"

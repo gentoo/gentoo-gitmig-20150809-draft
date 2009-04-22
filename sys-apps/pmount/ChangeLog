@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.64 2009/04/18 11:28:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.65 2009/04/22 22:44:07 eva Exp $
+
+  22 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org> pmount-0.9.19.ebuild:
+  Fix install with USE="-hal", bug #266827.
 
   18 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org> pmount-0.9.19.ebuild:
   Remove unneeded sysfs dependency.
