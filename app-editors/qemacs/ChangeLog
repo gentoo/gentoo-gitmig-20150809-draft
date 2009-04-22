@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.41 2009/04/14 10:15:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.42 2009/04/22 20:40:18 maekke Exp $
+
+  22 Apr 2009; Markus Meier <maekke@gentoo.org> qemacs-0.4.0_pre20080605:
+  amd64 stable, bug #265309
 
   14 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   qemacs-0.4.0_pre20080605.ebuild:
