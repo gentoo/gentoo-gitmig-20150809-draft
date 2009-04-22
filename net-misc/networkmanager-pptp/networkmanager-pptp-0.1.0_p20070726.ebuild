@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.4 2008/03/11 11:41:35 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/networkmanager-pptp-0.1.0_p20070726.ebuild,v 1.5 2009/04/22 14:22:09 rbu Exp $
 
 inherit gnome2 eutils autotools
 
 # NetworkManager likes itself with capital letters
 MY_P=${P/networkmanager/NetworkManager}
 
-DESCRIPTION="NetworkManager vpnc plugin for daemon and client configuration."
+DESCRIPTION="NetworkManager PPTP plugin."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 #SRC_URI="http://dev.gentoo.org/~rbu/distfiles/${MY_P}.tar.gz"
 SRC_URI="mirror://gentoo/${MY_P}.tar.gz
@@ -20,7 +20,7 @@ IUSE="crypt debug doc gnome"
 
 RDEPEND=">=sys-apps/dbus-0.35.2
 	>=dev-libs/glib-2.8
-	>=net-misc/networkmanager-0.6.5_p20070823
+	=net-misc/networkmanager-0.6*
 	net-dialup/ppp
 	gnome? ( >=x11-libs/gtk+-2.8
 		>=gnome-base/libglade-2
