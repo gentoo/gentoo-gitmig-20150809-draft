@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.28 2009/04/17 18:34:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xedit/ChangeLog,v 1.29 2009/04/22 00:42:56 ranger Exp $
+
+  22 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xedit-1.1.2 ppc64 stable for bug 264982
 
   17 Apr 2009; Jeroen Roovers <jer@gentoo.org> xedit-1.1.2.ebuild:
   Marked ~hppa too.
