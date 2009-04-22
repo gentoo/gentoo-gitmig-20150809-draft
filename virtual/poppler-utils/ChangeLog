@@ -1,6 +1,10 @@
 # ChangeLog for virtual/poppler-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-utils/ChangeLog,v 1.10 2009/04/21 19:19:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-utils/ChangeLog,v 1.11 2009/04/22 11:16:50 armin76 Exp $
+
+  22 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  poppler-utils-0.10.5.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #263028
 
   21 Apr 2009; Tobias Klausmann <klausman@gentoo.org> poppler-utils-0.10.5:
   Stable on alpha, bug #263028
