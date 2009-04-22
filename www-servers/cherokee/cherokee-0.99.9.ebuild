@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.9.ebuild,v 1.1 2009/04/03 08:11:23 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/cherokee-0.99.9.ebuild,v 1.2 2009/04/22 21:09:03 maekke Exp $
 
 inherit eutils pam versionator libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.cherokee-project.com/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="ipv6 ssl static pam coverpage threads kernel_linux admin debug geoip ldap mysql ffmpeg"
 
 RDEPEND="
