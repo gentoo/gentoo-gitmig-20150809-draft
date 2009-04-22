@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.4.ebuild,v 1.2 2009/03/30 15:56:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.4.ebuild,v 1.3 2009/04/22 21:37:47 serkan Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -226,13 +226,6 @@ src_install() {
 		fi
 	fi
 
-	if use amd64; then
-		# a workaround to fix the BOOTCLASSPATH in our env file
-		# this is not optimal, using -Xcompressedrefs would probably make it
-		# expect the compressedrefs version...
-		dosym /opt/${P}/jre/lib/amd64/default/jclSC160/vm.jar /opt/${P}/jre/lib/
-	fi
-
 	local desktop_in="${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop"
 	if [[ -f "${desktop_in}" ]]; then
 		local desktop_out="${T}/ibm_jdk-${SLOT}.desktop"
@@ -252,5 +245,16 @@ src_install() {
 	dodoc "${S}"/{copyright,notices.txt,readmefirst.lnx.txt} || die
 
 	set_java_env
+
+	# a workaround to fix the BOOTCLASSPATH in our env file
+	# this is not optimal, using -Xcompressedrefs would probably make it
+	# expect the compressedrefs version...
+	if use amd64; then
+		sed -i -e "s|vm.jar|amd64/default/jclSC160/vm.jar|g" "${D}${JAVA_VM_CONFIG_DIR}/${VMHANDLE}" || die "sed failed"
+	fi
+	if use ppc64; then
+		sed -i -e "s|vm.jar|ppc64/default/jclSC160/vm.jar|g" "${D}${JAVA_VM_CONFIG_DIR}/${VMHANDLE}" || die "sed failed"
+	fi
+
 	java-vm_revdep-mask
 }
