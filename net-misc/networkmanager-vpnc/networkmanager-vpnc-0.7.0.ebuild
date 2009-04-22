@@ -1,11 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.7.0.ebuild,v 1.1 2008/12/04 23:39:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.7.0.ebuild,v 1.2 2009/04/22 14:22:10 rbu Exp $
 
-inherit eutils
+inherit eutils versionator
 
 # NetworkManager likes itself with capital letters
 MY_P=${P/networkmanager/NetworkManager}
+MYPV_MINOR=$(get_version_component_range 1-2)
 
 DESCRIPTION="NetworkManager VPNC plugin."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
@@ -17,7 +18,7 @@ KEYWORDS="~arm ~amd64 ~ppc ~x86"
 IUSE="gnome"
 
 RDEPEND="
-	>=net-misc/networkmanager-0.7.0
+	=net-misc/networkmanager-${MYPV_MINOR}*
 	>=net-misc/vpnc-0.5
 	gnome? (
 		>=gnome-base/gconf-2.20

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.7.0.ebuild,v 1.2 2009/04/22 14:22:08 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/networkmanager-vpnc-0.7.1.ebuild,v 1.1 2009/04/22 14:22:10 rbu Exp $
 
 inherit eutils versionator
 
@@ -8,9 +8,9 @@ inherit eutils versionator
 MY_P=${P/networkmanager/NetworkManager}
 MYPV_MINOR=$(get_version_component_range 1-2)
 
-DESCRIPTION="NetworkManager OpenVPN plugin."
+DESCRIPTION="NetworkManager VPNC plugin."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-SRC_URI="mirror://gnome/sources/NetworkManager-openvpn/0.7/${MY_P}.tar.bz2"
+SRC_URI="mirror://gnome/sources/NetworkManager-vpnc/0.7/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +19,7 @@ IUSE="gnome"
 
 RDEPEND="
 	=net-misc/networkmanager-${MYPV_MINOR}*
-	>=net-misc/openvpn-2.1_rc9
+	>=net-misc/vpnc-0.5
 	gnome? (
 		>=gnome-base/gconf-2.20
 		>=gnome-base/gnome-keyring-2.20

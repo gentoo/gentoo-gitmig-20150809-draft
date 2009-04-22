@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.3.2_p20070621.ebuild,v 1.3 2008/09/16 17:23:17 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openvpn/networkmanager-openvpn-0.3.2_p20070621.ebuild,v 1.4 2009/04/22 14:22:08 rbu Exp $
 
 inherit gnome2 eutils autotools
 
@@ -23,7 +23,7 @@ RDEPEND=">=sys-apps/dbus-0.35.2
 	>=net-misc/dhcdbd-1.4
 	>=net-wireless/wireless-tools-28_pre9
 	>=dev-libs/glib-2.8
-	>=net-misc/networkmanager-0.6.5_p20070823
+	=net-misc/networkmanager-0.6*
 	gnome? ( >=x11-libs/gtk+-2.8
 		>=gnome-base/libglade-2
 		>=gnome-base/gnome-keyring-0.4
