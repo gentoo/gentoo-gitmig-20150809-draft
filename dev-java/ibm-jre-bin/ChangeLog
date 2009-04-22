@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.123 2009/04/21 19:16:09 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.124 2009/04/22 12:59:21 caster Exp $
+
+*ibm-jre-bin-1.5.0.9-r1 (22 Apr 2009)
+
+  22 Apr 2009; Vlastimil Babka <caster@gentoo.org> ibm-jre-bin-1.5.0.9,
+  +ibm-jre-bin-1.5.0.9-r1.ebuild:
+  Version bump, security bug #252416. This SR9-SSU release uses same
+  distfile version as the previous SR9 (1.5.0.9). To prevent the need for
+  user renaming of the new version's files, the old ebuild was updated to
+  expect distfiles with .old.tgz scheme.
 
   21 Apr 2009; Vlastimil Babka <caster@gentoo.org>
   -ibm-jre-bin-1.6.0.3.ebuild:
