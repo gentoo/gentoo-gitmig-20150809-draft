@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.39 2009/04/22 13:30:43 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.40 2009/04/22 15:20:13 rbu Exp $
+
+  22 Apr 2009; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  networkmanager-0.7.1.ebuild:
+  Add use flags for RFC 3927 link-local addresses via avahi and connection
+  sharing (bug #258842), by Robert Piasek.
 
 *networkmanager-0.7.1 (22 Apr 2009)
 

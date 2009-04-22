@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1.ebuild,v 1.1 2009/04/22 13:30:43 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1.ebuild,v 1.2 2009/04/22 15:20:13 rbu Exp $
 
 EAPI="2"
 inherit eutils
-#autotools
+# autotools
 
 # NetworkManager likes itself with capital letters
 MY_PN=${PN/networkmanager/NetworkManager}
@@ -18,7 +18,7 @@ SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~x86"
-IUSE="doc nss gnutls dhclient dhcpcd resolvconf"
+IUSE="avahi doc nss gnutls dhclient dhcpcd resolvconf connection-sharing"
 # modemmanager"
 
 RDEPEND=">=sys-apps/dbus-1.2
@@ -30,19 +30,20 @@ RDEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/libnl-1.1
 	>=net-wireless/wpa_supplicant-0.5.10[dbus]
 	|| ( sys-libs/e2fsprogs-libs <sys-fs/e2fsprogs-1.41.0 )
-
+	avahi? ( net-dns/avahi[autoipd] )
 	gnutls? (
 		nss? ( >=dev-libs/nss-3.11 )
 		!nss? ( dev-libs/libgcrypt
 			net-libs/gnutls ) )
 	!gnutls? ( >=dev-libs/nss-3.11 )
-
 	dhclient? (
 		dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 		!dhcpcd? ( >=net-misc/dhcp-3.0.0 ) )
 	!dhclient? ( >=net-misc/dhcpcd-4.0.0_rc3 )
-
-	resolvconf? ( net-dns/openresolv )"
+	resolvconf? ( net-dns/openresolv )
+	connection-sharing? (
+		net-dns/dnsmasq
+		net-firewall/iptables )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -64,11 +65,11 @@ src_prepare() {
 
 #	EPATCH_SOURCE="${WORKDIR}/modem-manager-patchset-0.7.1"
 #	EPATCH_SUFFIX="patch"
-#	use modemmanager && epatch && autoreconf
+#	use modemmanager && epatch && eautoreconf
 
 }
 
-src_compile() {
+src_configure() {
 	ECONF="--disable-more-warnings \
 		--localstatedir=/var \
 		--with-distro=gentoo \
@@ -100,7 +101,6 @@ src_compile() {
 	fi
 
 	econf ${ECONF}
-	emake || die "emake failed"
 }
 
 src_install() {
