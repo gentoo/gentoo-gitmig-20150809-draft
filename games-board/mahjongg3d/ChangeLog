@@ -1,6 +1,10 @@
 # ChangeLog for games-board/mahjongg3d
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.13 2009/02/04 19:20:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/ChangeLog,v 1.14 2009/04/22 05:53:39 mr_bones_ Exp $
+
+  22 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  mahjongg3d-0.96.ebuild:
+  add desktop entry (bug #160233) with patch from Pacho Ramos
 
   04 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   mahjongg3d-0.96.ebuild:

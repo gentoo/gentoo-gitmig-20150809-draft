@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.13 2009/02/04 19:20:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/mahjongg3d/mahjongg3d-0.96.ebuild,v 1.14 2009/04/22 05:53:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt3 kde games
@@ -50,6 +50,8 @@ src_install () {
 	dogamesbin bin/mahjongg3d || die "dogamesbin failed"
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r bin/{[a-l]*,t*} "${D}${GAMES_DATADIR}/${PN}" || die "cp failed"
+	newicon bin/layouts/chinese_wall.bmp ${PN}.bmp
+	make_desktop_entry mahjongg3d "Mahjongg 3D" /usr/share/pixmaps/${PN}.bmp
 	dodoc README Changelog
 	prepgamesdirs
 }
