@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.38 2009/04/21 15:59:57 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.39 2009/04/22 13:30:43 rbu Exp $
+
+*networkmanager-0.7.1 (22 Apr 2009)
+
+  22 Apr 2009; Robert Buchholz <rbu@gentoo.org>
+  -networkmanager-0.6.5_p20070823.ebuild, networkmanager-0.6.6.ebuild,
+  +networkmanager-0.7.1.ebuild:
+  Version bump by Robert Piasek. Fixes bug 266184.
+  Remove 0.6.5 version, remove dependency on gnome/xfce panels as they
+  are pulled in via nm-applet anyway (bug 246023).
 
   21 Apr 2009; Daniel Gryniewicz <dang@gentoo.org>
   +files/networkmanager-0.7.0-gentoo-dhclient.patch, networkmanager-0.7.0:
