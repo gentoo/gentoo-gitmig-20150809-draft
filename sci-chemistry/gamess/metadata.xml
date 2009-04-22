@@ -10,4 +10,7 @@
 		<name>Alexey Shvetsov</name>
 	</maintainer>
 	<herd>sci-chemistry</herd>
+	<use>
+		<flag name='qmmm-tinker'>Enable tinker qmmm code</flag>
+	</use>
 </pkgmetadata>
