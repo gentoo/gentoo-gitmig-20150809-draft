@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9704 2009/04/21 06:45:52 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9705 2009/04/22 01:45:53 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mounir Lamouri <volkmar@gentoo.org> (22 Apr 2009)
+# Masked for removal in 60 days. See bug 248008.
+# Tapioca is unmaintained and they are officially abandoned subprojects.
+# In addition, tapioca-xmpp has been subseeded by telepathy-gabble.
+net-im/tapiocad
+net-im/tapioca-xmpp
+net-im/tapiocaui
 
 # Jeroen Roovers <jer@gentoo.org> (21 Apr 2009)
 # Masked until out of beta
