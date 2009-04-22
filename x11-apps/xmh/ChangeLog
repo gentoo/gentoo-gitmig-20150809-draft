@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xmh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/ChangeLog,v 1.21 2009/04/17 18:43:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xmh/ChangeLog,v 1.22 2009/04/22 00:46:37 ranger Exp $
+
+  22 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xmh-1.0.1-r1 ppc64 stable for bug 264982
 
   17 Apr 2009; Jeroen Roovers <jer@gentoo.org> xmh-1.0.1-r1.ebuild:
   Marked ~hppa too.
