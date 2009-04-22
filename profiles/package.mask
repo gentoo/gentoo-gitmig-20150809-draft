@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9706 2009/04/22 01:55:16 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9707 2009/04/22 07:04:19 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -489,10 +489,6 @@ net-libs/libinfinity
 # pre-releases, mask for testing
 >=app-office/openoffice-3.1.0_beta3
 >=app-office/openoffice-bin-3.1.0_rc1
-
-# Christian Faulhammer <fauli@gentoo.org> (07 Apr 2009)
-# Mask for testing, is a beta version
-~dev-lang/erlang-13.1
 
 # Jeremy Olexa <darkside@gentoo.org> (07 Apr 2009)
 # Not supported in Gentoo anymore, use 'eselect bashcomp' now
