@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.573-r1.ebuild,v 1.3 2009/03/14 23:28:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.573-r1.ebuild,v 1.4 2009/04/23 04:54:54 je_fro Exp $
 
 IUSE="acpi debug"
 
@@ -49,6 +49,10 @@ pkg_setup() {
 	BUILD_TARGETS="kmod_build"
 	linux-mod_pkg_setup
 	BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
+
+	if kernel_is ge 2 6 29; then
+		die "${P} is not yet compatible with 2.6.29 kernels. See bug #264021."
+	fi
 
 	if ! kernel_is 2 6; then
 		eerror "Need a 2.6 kernel to compile against!"
