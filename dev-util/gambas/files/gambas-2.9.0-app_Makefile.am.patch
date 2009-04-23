@@ -1,0 +1,75 @@
+--- app/Makefile.am.orig	2008-12-15
++++ app/Makefile.am	2008-12-15
+@@ -1,36 +1,54 @@
+ EXTRA_DIST = reconf src spec mime
+ 
+ install-exec-local:
+-	@echo "Installing the development environment..."
+-	@(cd $(srcdir)/src; d=`pwd`; \
+-	  for p in `cat INSTALL`; do \
+-	    echo "Compiling $$p..."; cd $$d/$$p; \
+-	    $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix); \
+-	    $(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
+-	    rm -rf .gambas; \
+-	    $(INSTALL) $$p.gambas $(DESTDIR)$(bindir); \
+-	  done)
+-	##@if test "$(bindir)" != "$(ROOT)/usr/bin" && test "$(bindir)" != "$(ROOT)/usr/bin/"; then
+-	@ln -s gambas$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gambas$(GAMBAS_VERSION) || true
+-	
+-	@echo "Installing the scripter..."
+-	@ln -s gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION) || true
+-	@ln -s gbw$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION) || true
+-	@if test x"$(XDG_UTILS)" != x; then \
++	@echo "=== Installing the development environment ==="; \
++	echo
++
++	@(for p in `cat $(srcdir)/src/INSTALL`; do \
++		echo -n "Compiling  $$p ... "; \
++		cd $(abs_srcdir)/src/$$p; \
++		if $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix); then \
++			$(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
++			echo "Installing $$p"; \
++			rm -rf .gambas; \
++			$(INSTALL) $$p.gambas $(DESTDIR)$(bindir); \
++		fi \
++	done); \
++	echo
++
++	@if test -e $(DESTDIR)$(bindir)/gambas$(GAMBAS_VERSION).gambas; then \
++		echo "Creating IDE symbolic link"; \
++		$(LN_S) gambas$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gambas$(GAMBAS_VERSION); \
++	fi; \
++	if test -e $(DESTDIR)$(bindir)/gambas$(GAMBAS_VERSION)-database-manager.gambas; then \
++		echo "Creating Database Manager symbolic link"; \
++		$(LN_S) gambas$(GAMBAS_VERSION)-database-manager.gambas $(DESTDIR)$(bindir)/gambas$(GAMBAS_VERSION)-database-manager; \
++	fi; \
++	if test -e $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION).gambas; then \
++		echo "Creating scripter symbolic links"; \
++		$(LN_S) gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION); \
++		$(LN_S) gbs$(GAMBAS_VERSION).gambas $(DESTDIR)$(bindir)/gbw$(GAMBAS_VERSION); \
++	fi; \
++	echo
++
++	@if test -n "$(XDG_UTILS)"; then \
+ 		$(INSTALL) -d $(DESTDIR)$(gbdatadir)/icons; \
+-		cp -f $(srcdir)/mime/application-x-gambas*.png $(DESTDIR)$(gbdatadir)/icons; \
++		$(INSTALL) -c -m 644 $(srcdir)/mime/application-x-gambas*.png $(DESTDIR)$(gbdatadir)/icons; \
+ 		echo "Registering Gambas script mimetype"; \
+ 		xdg-icon-resource install --context mimetypes --size 64 $(DESTDIR)$(gbdatadir)/icons/application-x-gambasscript.png application-x-gambasscript; \
+ 		xdg-mime install $(srcdir)/mime/application-x-gambasscript.xml; \
+ 		echo "Registering Gambas server page mimetype"; \
+ 		xdg-icon-resource install --context mimetypes --size 64 $(DESTDIR)$(gbdatadir)/icons/application-x-gambasserverpage.png application-x-gambasserverpage; \
+ 		xdg-mime install $(srcdir)/mime/application-x-gambasserverpage.xml; \
++		echo; \
+ 	fi
+ 
+ uninstall-local:
+ 	@rm -f $(DESTDIR)$(bindir)/gambas$(GAMBAS_VERSION)
+ 	@rm -f $(DESTDIR)$(bindir)/gbs$(GAMBAS_VERSION)
+-	@(cd $(srcdir)/src; for p in `cat INSTALL`; do rm -f $(DESTDIR)$(bindir)/$$p.gambas; done)
++	@(for p in `cat $(srcdir)/src/INSTALL`; do \
++		rm -f $(DESTDIR)$(bindir)/$$p.gambas; \
++	done)
+ 
+ dist-hook:
+ 	@(cd $(distdir)/src; \

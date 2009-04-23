@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.53 2009/03/30 15:24:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.54 2009/04/23 19:13:39 patrick Exp $
+
+*gambas-2.11.1 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/gambas-2.9.0-app_Makefile.am.patch,
+  +files/gambas-2.9.0-comp_Makefile.am.patch,
+  +files/gambas-2.9.0-component.am.patch,
+  +files/gambas-2.9.0-examples_Makefile.am.patch,
+  +files/gambas-2.9.0-help_Makefile.am.patch,
+  +files/gambas-2.9.0-main_Makefile.am.patch,
+  +files/svn-r1636-xdg-utils.patch, +gambas-2.11.1.ebuild:
+  Bump to 2.11.1. Thanks to Lars Wendler and Boian Berberov for the ebuilds
+  and patches. Fixes #249339
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> gambas-2.7.0.ebuild,
   gambas-2.8.2.ebuild:

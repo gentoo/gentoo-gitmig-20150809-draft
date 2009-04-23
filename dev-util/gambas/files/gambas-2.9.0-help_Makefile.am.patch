@@ -1,0 +1,29 @@
+--- help/Makefile.am.orig	2008-11-01
++++ help/Makefile.am	2008-11-01
+@@ -2,12 +2,20 @@
+ EXTRA_DIST = reconf spec
+ 
+ install-exec-local:
+-	@echo
+-	@echo "Installing the gambas help files..."
+-	@rm -rf $(DESTDIR)$(gbdatadir)/help
+-	@$(INSTALL) -d $(DESTDIR)$(gbdatadir)/help
+-	@cp -R $(srcdir)/help $(DESTDIR)$(gbdatadir)
+-	@(cd $(DESTDIR)$(gbdatadir)/help; tar xfz $(DESTDIR)$(gbdatadir)/help/help.tar.gz; $(LN_S) help/img img; $(LN_S) help/image image; rm -f Makefile*)
++	@echo "=== Installing the gambas help files ==="; \
++	echo
++
++	@echo "Copying the help files"; \
++	rm -rf $(DESTDIR)$(gbdatadir)/help; \
++	$(INSTALL) -d $(DESTDIR)$(gbdatadir)/help; \
++	cp -R $(srcdir)/help $(DESTDIR)$(gbdatadir)
++	@echo "Unpacking the help files"; \
++	(cd $(DESTDIR)$(gbdatadir)/help; \
++		tar xfz $(DESTDIR)$(gbdatadir)/help/help.tar.gz; \
++		$(LN_S) help/img img; \
++		$(LN_S) help/image image; \
++	rm -f Makefile*); \
++	echo
+ 
+ uninstall-local:
+ 	@rm -rf $(DESTDIR)$(gbdatadir)/help

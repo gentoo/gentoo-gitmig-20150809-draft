@@ -1,0 +1,40 @@
+--- app/configure.ac.orig	2008-10-05
++++ app/configure.ac	2008-10-05
+@@ -7,7 +7,16 @@
+ 
+ dnl ---- Check for Portland scripts
+ 
+-AC_CHECK_PROGS(XDG_UTILS, [xdg-mime xdg-icon-resource], [])
++AC_ARG_WITH([xdg-utils],
++	[AC_HELP_STRING([--with-xdg-utils],[use xdg-utils to install icons and mimetypes (default; yes)])],
++	[],[with_xdg_utils=yes])
++
++if test "x$with_xdg_utils" = "xno"
++then
++	AC_SUBST(XDG_UTILS, [""])
++else
++	AC_CHECK_PROGS(XDG_UTILS, [xdg-mime xdg-icon-resource], [])
++fi
+ 
+ dnl ---- Create makefiles
+ 
+--- main/configure.ac.orig	2008-10-05
++++ main/configure.ac	2008-10-05
+@@ -86,7 +86,16 @@
+ 
+ dnl ---- Check for Portland scripts
+ 
+-AC_CHECK_PROGS(XDG_UTILS, [xdg-mime xdg-icon-resource], [])
++AC_ARG_WITH([xdg-utils],
++	[AC_HELP_STRING([--with-xdg-utils],[use xdg-utils to install icons and mimetypes (default; yes)])],
++	[],[with_xdg_utils=yes])
++
++if test "x$with_xdg_utils" = "xno"
++then
++	AC_SUBST(XDG_UTILS, [""])
++else
++	AC_CHECK_PROGS(XDG_UTILS, [xdg-mime xdg-icon-resource], [])
++fi
+ 
+ dnl ---- Other options
+ 

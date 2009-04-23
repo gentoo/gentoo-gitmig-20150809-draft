@@ -1,0 +1,58 @@
+--- examples/Makefile.am.orig	2008-11-01
++++ examples/Makefile.am	2008-11-01
+@@ -3,27 +3,35 @@
+ EXTRA_DIST = reconf examples spec
+ 
+ install-exec-local:
+-	@if test "x$(ROOT)" != "x"; then \
+-	 echo "Installing with ROOT=$(ROOT)"; \
+-         echo; \
+-        fi
+-
+-	@if test "x$(DESTDIR)" != "x"; then \
+-	 echo "Installing with DESTDIR=$(DESTDIR)"; \
+-         echo; \
+-	 ROOT=$DESTDIR; \
+-        fi
++	@echo "=== Installing the gambas examples ==="; \
++	echo
+ 
+-	@echo
+-	@echo "Installing the gambas examples..."
+-	@rm -rf $(DESTDIR)$(gbdatadir)/examples
+-	@$(INSTALL) -d $(DESTDIR)$(gbdatadir)/examples
+-	@cp -R $(srcdir)/examples $(DESTDIR)$(gbdatadir)
+-	@(cd $(DESTDIR)$(gbdatadir)/examples; d=`pwd`; for p in */ */*/; do cd $$d/$$p; \
+-	  if test -e .project; then \
+-	    echo "Compiling $$p..."; cd $$d/$$p; $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix); $(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
+-	  fi \
+-	done)
++	@if test -n "$(ROOT)"; then \
++		echo "Installing with ROOT=$(ROOT)"; \
++	fi; \
++	if test -n "$(DESTDIR)"; then \
++		echo "Installing with DESTDIR=$(DESTDIR)"; \
++		ROOT=$DESTDIR; \
++	fi; \
++	echo
++
++	@(cd $(srcdir)/examples; \
++	for p in */ */*/; do \
++		if test -e $(abs_srcdir)/examples/$$p/.project; then \
++			cd $(abs_srcdir)/examples/$$p; \
++			echo -n "Compiling $$p... "; \
++			if $(DESTDIR)$(bindir)/gbc$(GAMBAS_VERSION) -ag -r $(DESTDIR)$(prefix); then \
++				$(DESTDIR)$(bindir)/gba$(GAMBAS_VERSION); \
++			fi \
++		fi \
++	done); \
++	echo
++
++	@echo "Installing the gambas examples"; \
++	rm -rf $(DESTDIR)$(gbdatadir)/examples; \
++	$(INSTALL) -d $(DESTDIR)$(gbdatadir)/examples; \
++	cp -R $(srcdir)/examples $(DESTDIR)$(gbdatadir); \
++	echo
+ 
+ uninstall-local:
+ 	@rm -rf $(DESTDIR)$(gbdatadir)/examples
