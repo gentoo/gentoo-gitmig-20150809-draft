@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mysql-ruby
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.66 2009/04/07 20:04:48 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.67 2009/04/23 07:16:10 a3li Exp $
+
+  23 Apr 2009; Alex Legler <a3li@gentoo.org> mysql-ruby-2.7.5,
+  mysql-ruby-2.8:
+  Hardcoding Ruby 1.9 incompatible versions to ruby18.
 
 *mysql-ruby-2.8.1 (07 Apr 2009)
 

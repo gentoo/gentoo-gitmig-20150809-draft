@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.5.ebuild,v 1.9 2008/09/18 20:08:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/mysql-ruby-2.7.5.ebuild,v 1.10 2009/04/23 07:16:10 a3li Exp $
 
 inherit ruby
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	ruby extconf.rb || die
+	/usr/bin/ruby18 extconf.rb || die
 	emake || die
 }
 
