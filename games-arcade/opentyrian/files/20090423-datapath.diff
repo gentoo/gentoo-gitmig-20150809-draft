@@ -1,7 +1,7 @@
 diff -uNr opentyrian.ORIG/Makefile opentyrian/Makefile
---- opentyrian.ORIG/Makefile	2008-07-10 21:42:20.000000000 +0100
-+++ opentyrian/Makefile	2008-07-10 21:42:52.000000000 +0100
-@@ -46,6 +46,9 @@
+--- opentyrian.ORIG/Makefile	2009-04-23 20:15:21.000000000 +0100
++++ opentyrian/Makefile	2009-04-23 20:15:45.000000000 +0100
+@@ -51,6 +51,9 @@
  	CFLAGS += -DSVN_REV=\"$(SVN_REV)\"
  endif
  
@@ -12,9 +12,9 @@ diff -uNr opentyrian.ORIG/Makefile opentyrian/Makefile
  
  all : $(TARGET)
 diff -uNr opentyrian.ORIG/src/error.c opentyrian/src/error.c
---- opentyrian.ORIG/src/error.c	2008-07-10 21:42:20.000000000 +0100
-+++ opentyrian/src/error.c	2008-07-10 21:43:45.000000000 +0100
-@@ -38,7 +38,7 @@
+--- opentyrian.ORIG/src/error.c	2009-04-23 20:15:21.000000000 +0100
++++ opentyrian/src/error.c	2009-04-23 20:15:45.000000000 +0100
+@@ -37,7 +37,7 @@
  char err_msg[1000] = "No error!?";
  
  #ifndef TARGET_MACOSX
