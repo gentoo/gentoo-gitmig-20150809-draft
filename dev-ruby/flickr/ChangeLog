@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flickr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.1 2008/11/03 01:38:07 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.2 2009/04/23 19:43:11 maekke Exp $
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org> flickr-1.0.2:
+  amd64 stable, bug #266510
 
 *flickr-1.0.2 (03 Nov 2008)
 
