@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xxe
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.35 2008/04/21 16:39:51 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.36 2009/04/23 17:44:45 patrick Exp $
+
+*xxe-4.3.0 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> +xxe-4.3.0.ebuild:
+  Bump to 4.3.0, fixes #180270
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
