@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pygresql
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.45 2008/05/19 19:14:12 dev-zero Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/ChangeLog,v 1.46 2009/04/23 16:09:35 patrick Exp $
+
+*pygresql-4.0 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> +pygresql-4.0.ebuild:
+  Bump to 4.0. Fixes #256329
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> pygresql-3.5.ebuild,
   pygresql-3.6.2.ebuild, pygresql-3.6.2-r1.ebuild, pygresql-3.8.1.ebuild:
