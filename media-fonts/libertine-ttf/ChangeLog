@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/libertine-ttf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.21 2009/03/22 13:37:34 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/libertine-ttf/ChangeLog,v 1.22 2009/04/23 19:24:09 maekke Exp $
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org> libertine-ttf-4.4.1:
+  amd64/x86 stable, bug #267040
 
 *libertine-ttf-4.4.1 (22 Mar 2009)
 
