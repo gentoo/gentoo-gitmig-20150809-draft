@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.2.ebuild,v 1.9 2009/03/07 20:36:17 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.5-r1.ebuild,v 1.1 2009/04/23 04:38:54 tester Exp $
 
-WANT_AUTOMAKE="1.9"
-EAPI="2"
-inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2 autotools
+EAPI=2
+
+inherit flag-o-matic eutils toolchain-funcs multilib perl-app gnome2
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://pidgin.im/"
@@ -12,9 +12,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
-IUSE="bonjour dbus debug doc eds gadu gnutls gstreamer meanwhile networkmanager nls perl silc tcl tk spell qq gadu"
-IUSE="${IUSE} gtk sasl ncurses groupwise prediction zephyr" # mono"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer meanwhile"
+IUSE="${IUSE} networkmanager nls perl silc tcl tk spell qq gadu"
+IUSE="${IUSE} +gtk sasl ncurses groupwise prediction zephyr" # mono"
 
 RDEPEND="
 	bonjour? ( net-dns/avahi )
@@ -43,8 +44,8 @@ RDEPEND="
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	dev-libs/libxml2
 	networkmanager? ( net-misc/networkmanager )
-	ncurses? ( sys-libs/ncurses[unicode] )
-	prediction? ( =dev-db/sqlite-3* )"
+	prediction? ( =dev-db/sqlite-3* )
+	ncurses? ( sys-libs/ncurses[unicode] )"
 	# Mono support crashes pidgin
 	#mono? ( dev-lang/mono )"
 
@@ -82,12 +83,9 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}"/${P}-asneeded.patch
-	eautomake
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.5.4-icq.patch
+	epatch "${FILESDIR}"/${P}-msnm.patch
 }
 
 src_configure() {
@@ -165,7 +163,7 @@ src_configure() {
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		--x-includes=/usr/include/X11 \
-		${myconf}
+		${myconf} || die "Configuration failed"
 		#$(use_enable mono) \
 }
 
@@ -173,7 +171,4 @@ src_install() {
 	gnome2_src_install
 	use perl && fixlocalpod
 	dodoc AUTHORS HACKING INSTALL NEWS README ChangeLog
-
-	# Remove superfluous desktop file
-	use gtk || rm -rf "${D}/usr/share/applications"
 }
