@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.626 2009/04/23 17:05:31 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.627 2009/04/23 17:10:37 klausman Exp $
+
+  23 Apr 2009; Tobias Klausmann <klausman@gentoo.org>
+  vanilla-sources-2.6.30_rc3:
+  I meant *keywording*, of course.
 
   23 Apr 2009; Tobias Klausmann <klausman@gentoo.org>
   vanilla-sources-2.6.30_rc3:
