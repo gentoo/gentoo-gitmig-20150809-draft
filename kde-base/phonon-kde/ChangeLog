@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.12 2009/04/17 06:40:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.13 2009/04/23 18:43:44 jmbsvicetto Exp $
+
+*phonon-kde-4.2.2-r1 (23 Apr 2009)
+
+  23 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phonon-kde-4.2.2-r1.ebuild:
+  Pulled update phonon-kde from the kde-testing overlay. Original ChangeLog
+  entry: 21 Apr 2009; Maciej Mrozowski (reavertm) <reavertm@poczta.fm> Fixed
+  automagic from bug 266968 + some other
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -phonon-kde-4.2.1.ebuild,
   phonon-kde-4.2.2:
