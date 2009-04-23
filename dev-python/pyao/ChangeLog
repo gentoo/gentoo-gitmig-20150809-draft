@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyao
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.13 2007/02/22 00:34:01 peper Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyao/ChangeLog,v 1.14 2009/04/23 13:05:04 patrick Exp $
+
+*pyao-0.82-r1 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/pyao-fix-deallocation.patch, +pyao-0.82-r1.ebuild:
+  Small fix for >=python-2.5. Thanks to gilhad for the patch. Fixes #257550
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
