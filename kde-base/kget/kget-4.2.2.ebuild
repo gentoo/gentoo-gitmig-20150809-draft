@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.2.2.ebuild,v 1.3 2009/04/17 07:55:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.2.2.ebuild,v 1.4 2009/04/23 15:51:41 scarabeus Exp $
 
 EAPI="2"
 
@@ -27,21 +27,6 @@ RDEPEND="${DEPEND}
 	semantic-desktop? ( >=kde-base/nepomuk-${PV}:${SLOT}[kdeprefix=] )
 "
 
-pkg_setup() {
-	if use bittorrent && use bittorrent-external; then
-		echo
-		eerror "USE flag 'bittorrent' conflicts with these USE flag 'bittorrent-external'"
-		eerror
-		eerror "You must disable these conflicting flags before you can emerge this package."
-		eerror "You can do this by disabling one of these flags in /etc/portage/package.use:"
-		eerror "    =${CATEGORY}/${PN}-${PV} -bittorrent-external"
-		echo
-		die "Conflicting USE flags found"
-	fi
-
-	kde4-base_pkg_setup
-}
-
 src_prepare() {
 	if ! use bittorrent && ! use bittorrent-external; then
 		sed -i -e '/bittorrent/s:^:#DONOTCOMPILE :' \
@@ -56,12 +41,21 @@ src_prepare() {
 }
 
 src_configure() {
+	if use bittorent-external && use bittorent ; then
+		einfo "Using the external plugin."
+		einfo "Disable bittorent-external useflag if you want iternal one."
+	fi
+	if use bittorent-external; then
+		mycmakeargs="${mycmakeargs} -DEMBEDDED_TORRENT_SUPPORT=OFF"
+	else
+		mycmakeargs="${mycmakeargs}
+			$(cmake-utils_use_enable bittorrent EMBEDDED_TORRENT_SUPPORT)"
+	fi
 	mycmakeargs="${mycmakeargs}
-		$(cmake-utils_use_enable bittorrent EMBEDDED_TORRENT_SUPPORT)
-		$(cmake-utils_use_with plasma Plasma)
+		$(cmake-utils_use_with plasma)
 		$(cmake-utils_use_with semantic-desktop Nepomuk)
 		$(cmake-utils_use_with semantic-desktop Soprano)
-		$(cmake-utils_use_with sqlite Sqlite)"
+		$(cmake-utils_use_with sqlite)"
 
 	kde4-meta_src_configure
 }
