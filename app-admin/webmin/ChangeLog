@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webmin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.176 2008/12/23 05:21:35 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.177 2009/04/23 16:53:34 patrick Exp $
+
+*webmin-1.470 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> +webmin-1.470.ebuild:
+  Bump to 1.470, fixes half of #264086
 
   23 Dec 2008; Jeremy Olexa <darkside@gentoo.org> webmin-1.441.ebuild:
   (non maintainer commit) User suggestion for postinst() by philip howells
