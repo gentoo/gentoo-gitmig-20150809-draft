@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.100 2009/04/23 17:27:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.101 2009/04/23 18:45:45 maekke Exp $
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org> apache-2.2.11:
+  amd64/x86 stable, bug #265705
 
   23 Apr 2009; Tobias Klausmann <klausman@gentoo.org> apache-2.2.11:
   Stable on alpha, bug #265705
