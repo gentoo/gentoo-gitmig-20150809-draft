@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/httplib2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.8 2009/04/14 09:45:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.9 2009/04/23 09:10:39 patrick Exp $
+
+*httplib2-0.4.0-r1 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/compat-2.6-0.4.0.patch, +httplib2-0.4.0-r1.ebuild:
+  Py 2.6 deprecation fix. Thanks to djc for pointing it out, thanks to
+  Benoit Chesneau for the patch. Fixes #267184
 
   14 Apr 2009; Raúl Porcel <armin76@gentoo.org> httplib2-0.4.0.ebuild:
   x86 stable wrt #264496
