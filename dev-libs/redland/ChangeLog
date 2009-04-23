@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.33 2009/03/12 17:31:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.34 2009/04/23 13:29:07 patrick Exp $
+
+*redland-1.0.9 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> +redland-1.0.9.ebuild:
+  Bump to 1.0.9, fixes #266160
 
   12 Mar 2009; Jeroen Roovers <jer@gentoo.org> redland-1.0.8.ebuild:
   Marked ~hppa (bug #260777).
