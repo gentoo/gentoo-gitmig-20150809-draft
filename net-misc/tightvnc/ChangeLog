@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tightvnc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.135 2009/04/20 18:52:22 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/ChangeLog,v 1.136 2009/04/23 19:47:15 maekke Exp $
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org> tightvnc-1.3.10:
+  amd64 stable, bug #266660
 
 *tightvnc-1.3.10-r1 (20 Apr 2009)
 *tightvnc-1.3.9-r3 (20 Apr 2009)
