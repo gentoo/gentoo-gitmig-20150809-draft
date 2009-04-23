@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/scim-sayura
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-sayura/ChangeLog,v 1.1 2009/04/23 13:59:27 matsuu Exp $
+
+*scim-sayura-0.3.3 (23 Apr 2009)
+
+  23 Apr 2009; MATSUU Takuto <matsuu@gentoo.org> +metadata.xml,
+  +scim-sayura-0.3.3.ebuild:
+  Initial import. the ebuild is submitted by Buddhika Siddhisena, bug
+  #264898.
+
