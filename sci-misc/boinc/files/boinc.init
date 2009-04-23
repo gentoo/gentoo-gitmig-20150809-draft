@@ -30,9 +30,9 @@ generate_logs() {
 }
 
 cuda_check() {
-	if [[ -f /opt/cuda/lib/libcudart.so ]]; then
+	if [[ -f /opt/cuda/%LIBDIR%/libcudart.so ]]; then
 		# symlink wont harm :]
-		ln -snf /opt/cuda/lib/libcudart.so $RUNTIMEDIR/libcudart.so
+		ln -snf /opt/cuda/%LIBDIR%/libcudart.so $RUNTIMEDIR/libcudart.so
 	fi
 }
 

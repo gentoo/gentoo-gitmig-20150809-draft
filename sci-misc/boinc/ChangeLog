@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.58 2009/03/30 14:00:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.59 2009/04/23 16:00:16 scarabeus Exp $
+
+  23 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> files/boinc.init,
+  boinc-6.4.5-r1.ebuild:
+  Fix multilib support for cuda. Per bug #266637.
 
   30 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org> boinc-6.4.5-r1.ebuild:
   Add block on quickswitch since their files collide. Per bug #210877.

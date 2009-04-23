@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.4 2009/03/30 14:00:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.5 2009/04/23 16:00:16 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -8,7 +8,7 @@
 
 EAPI="2"
 
-inherit flag-o-matic depend.apache eutils wxwidgets
+inherit flag-o-matic depend.apache eutils wxwidgets multilib
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -102,7 +102,7 @@ src_configure() {
 }
 
 src_compile() {
-	# disable paralel build.
+	# disable parallel build.
 	emake -j1 || die "emake failed"
 }
 
@@ -121,12 +121,19 @@ src_install() {
 	rm "${D}"/usr/bin/ca-bundle.crt
 	rm -rf "${D}"/etc/
 
-	newinitd "${FILESDIR}"/${PN}.init ${PN}
+	# initd script needs to be multilib aware
+	cp "${FILESDIR}"/${PN}.init "${T}"
+	sed -i \
+		-e "s:%LIBDIR%:$(get_libdir):g" \
+		"${T}"/${PN}.init || die "sed for multilib in init script failed"
+	newinitd "${T}"/${PN}.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
 }
 
 pkg_setup() {
 	enewgroup ${PN}
+	# note this works only for first install so we have to
+	# elog user about the need of being in video group
 	if use cuda; then
 		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN},video"
 	else
