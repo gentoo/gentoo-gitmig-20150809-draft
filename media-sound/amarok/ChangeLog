@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.319 2009/04/22 02:14:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.320 2009/04/23 17:56:51 jmbsvicetto Exp $
+
+  23 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -amarok-2.0.1.1.ebuild, -amarok-2.0.2-r1.ebuild:
+  Removed old amarok-2 ebuilds now that 2.0.2-r2 is finally working for
+  everyone. Removing 2.0.1.1 should also prevent the phonon blocks.
 
 *amarok-2.0.2-r2 (22 Apr 2009)
 
