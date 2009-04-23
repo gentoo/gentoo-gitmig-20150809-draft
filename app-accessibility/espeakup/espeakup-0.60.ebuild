@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-0.60.ebuild,v 1.2 2009/04/17 21:26:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-0.60.ebuild,v 1.3 2009/04/23 18:56:07 maekke Exp $
 
 DESCRIPTION="espeakup is a small lightweight connector for espeak and speakup"
 HOMEPAGE="http://www.linux-speakup.org"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND="app-accessibility/espeak"
