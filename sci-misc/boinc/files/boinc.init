@@ -8,31 +8,31 @@ depend() {
 }
 
 create_work_directory() {
-	if [[ ! -d $RUNTIMEDIR ]]; then
-		einfo "Directory $RUNTIMEDIR not existing, creating now."
-		mkdir $RUNTIMEDIR
-		chown ${USER}:${GROUP} $RUNTIMEDIR
-		if [[ ! -d $RUNTIMEDIR ]]; then
-			eeror "Directory $RUNTIMEDIR could not be created!"
+	if [[ ! -d ${RUNTIMEDIR} ]]; then
+		einfo "Directory ${RUNTIMEDIR} not existing, creating now."
+		mkdir ${RUNTIMEDIR}
+		chown ${USER}:${GROUP} ${RUNTIMEDIR}
+		if [[ ! -d ${RUNTIMEDIR} ]]; then
+			eeror "Directory ${RUNTIMEDIR} could not be created!"
 			return 1
 		fi
-		ln -s /etc/ssl/certs/ca-certificates.crt $RUNTIMEDIR/ca-bundle.crt
+		ln -s /etc/ssl/certs/ca-certificates.crt ${RUNTIMEDIR}/ca-bundle.crt
 	fi
 }
 
 generate_logs() {
-	if [[ ! -f $LOGFILE ]]; then
-		einfo "No $LOGFILE around. Creating new..."
+	if [[ ! -f ${LOGFILE} ]]; then
+		einfo "No ${LOGFILE} around. Creating new..."
 		einfo "For good log rotation is great tool app-admin/logrotate"
-		touch $LOGFILE
-		chown ${USER}:${GROUP} $LOGFILE
+		touch ${LOGFILE}
+		chown ${USER}:${GROUP} ${LOGFILE}
 	fi
 }
 
 cuda_check() {
 	if [[ -f /opt/cuda/%LIBDIR%/libcudart.so ]]; then
 		# symlink wont harm :]
-		ln -snf /opt/cuda/%LIBDIR%/libcudart.so $RUNTIMEDIR/libcudart.so
+		ln -snf /opt/cuda/%LIBDIR%/libcudart.so ${RUNTIMEDIR}/libcudart.so
 	fi
 }
 
@@ -42,7 +42,7 @@ start() {
 	create_work_directory
 	cuda_check
 
-	cd $RUNTIMEDIR
+	pushd ${RUNTIMEDIR} > /dev/null
 
 	if [[ ! -f lockfile ]]; then
 		einfo "File $RUNTIMEDIR/lockfile does not exist, assuming first run."
@@ -88,7 +88,7 @@ start() {
 		fi							      
 	fi	  
 
-	eend $RESULT
+	eend ${RESULT}
 }
 
 attach() {
@@ -103,18 +103,19 @@ attach() {
 	fi
 	ebegin "Attaching to project"
 		# we have to work in runtime directory
-		cd $RUNTIMEDIR
+		pushd ${RUNTIMEDIR} > /dev/null
 		# boinc does not return 1 when it fails currently
-		$BOINCBIN --chuid ${USER}:${GROUP} --attach_project $url $key &> /dev/null
+		${BOINCBIN} --chuid ${USER}:${GROUP} --attach_project ${url} ${key} &> /dev/null
+		popd > /dev/null
 	eend $?
 
 	sleep 10
-	tail $LOGFILE
+	tail ${LOGFILE}
 }
 
 stop() {
 	ebegin "Stopping BOINC"
-	start-stop-daemon --stop --retry 3 --quiet --exec $BOINCBIN
+	start-stop-daemon --stop --retry 3 --quiet --exec ${BOINCBIN}
 	eend $?
 }
 
