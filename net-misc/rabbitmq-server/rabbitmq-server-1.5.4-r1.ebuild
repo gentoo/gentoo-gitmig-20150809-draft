@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-1.5.4-r1.ebuild,v 1.1 2009/04/22 10:48:00 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-1.5.4-r1.ebuild,v 1.2 2009/04/23 03:37:16 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ src_install() {
 	cp -dpR ebin include "${D}/${targetdir}"
 
 	einfo "Installing server scripts to /usr/sbin"
-	# Install server scripts to sbin 
+	# Install server scripts to sbin
 	dosbin scripts/rabbitmq-multi scripts/rabbitmq-server
 
 	einfo "Installing rabbitmqctl to /usr/bin"
