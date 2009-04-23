@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.10 2009/04/18 00:03:20 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/pms-99999999.ebuild,v 1.11 2009/04/23 18:43:12 volkmar Exp $
 
 inherit git
 
@@ -12,7 +12,7 @@ SRC_URI=""
 
 LICENSE="CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="all-options eapi3-draft html kdebuild"
 
 DEPEND="html? ( >=dev-tex/tex4ht-20090115_p0029 )
