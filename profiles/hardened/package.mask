@@ -1,6 +1,6 @@
 # Copyright 2007 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.55 2009/03/30 15:45:29 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/package.mask,v 1.56 2009/04/23 16:49:38 gengor Exp $
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 media-libs/libopenraw
@@ -21,11 +21,8 @@ media-gfx/gnome-raw-thumbnailer
 # Mask non-hardened+non-testing gcc-4.3.x releases
 =sys-devel/gcc-4.3.0*
 =sys-devel/gcc-4.3.1*
-=sys-devel/gcc-4.3.2
-=sys-devel/gcc-4.3.3*
-
-# Mask =sys-devel/gcc-4.3.2-r3 which is going stable until a more permanent solution is decided
-=sys-devel/gcc-4.3.2-r3
+=sys-devel/gcc-4.3.2*
+=sys-devel/gcc-4.3.3
 
 # No hardened >=sys-devel/gcc-4.4 available
 >=sys-devel/gcc-4.4
