@@ -1,10 +1,5 @@
 # This file requires >=portage-2.1.2 (see bug #61732)
 
-# 2007/05/23 - Ulrich Mueller <ulm@gentoo.org>
-# Strongly recommended, otherwise all logos, icons, etc. appear in b/w.
-app-editors/emacs xpm
-app-editors/emacs-cvs xpm
-
 # 2007/10/11 - Christian Heim <phreak@gentoo.org>
 # Nearly everything linking against dev-scheme/guile-1.8 needs USE=deprecated
 # for a sucessful build (see #163921).
