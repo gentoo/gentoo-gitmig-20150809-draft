@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.119 2009/04/22 16:58:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.120 2009/04/23 19:57:08 maekke Exp $
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org> mediawiki-1.13.5:
+  amd64/x86 stable, bug #261128
 
   22 Apr 2009; Peter Volkov <pva@gentoo.org> mediawiki-1.14.0:
   Added spl for php requirements, thank Tobias Scherbaum for report in bug
