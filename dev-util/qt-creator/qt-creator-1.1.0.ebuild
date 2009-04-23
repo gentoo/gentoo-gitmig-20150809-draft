@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.1.0.ebuild,v 1.2 2009/04/23 14:06:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.1.0.ebuild,v 1.3 2009/04/23 16:03:46 hwoarang Exp $
 
 EAPI="2"
 
@@ -46,6 +46,10 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	qt4_src_prepare
+
+	# Ensure correct library installation
+	sed -i "s/IDE_LIBRARY_BASENAME\ =\ lib$/IDE_LIBRARY_BASENAME=$(get_libdir)/" \
+		src/qworkbench.pri || die "failed to fix libraries installation"
 
 	# bug 263087
 	for plugin in ${PLUGINS};do
