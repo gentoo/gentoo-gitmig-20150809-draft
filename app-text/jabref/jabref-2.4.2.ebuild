@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.4.2.ebuild,v 1.2 2009/04/04 19:17:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.4.2.ebuild,v 1.3 2009/04/23 13:43:37 caster Exp $
 
 EAPI=2
 
@@ -28,7 +28,8 @@ CDEPEND="dev-java/spin:0
 	dev-java/pdfbox:0
 	dev-java/commons-logging:0
 	dev-java/jpf:1.5
-	dev-java/jpfcodegen:0"
+	dev-java/jpfcodegen:0
+	mysql? ( dev-java/jdbc-mysql:0 )"
 
 RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
@@ -73,6 +74,8 @@ src_install() {
 
 	java-pkg_dolauncher ${PN} \
 		--main net.sf.jabref.JabRef
+
+	java-pkg_register-optional-dependency jdbc-mysql
 
 	dodir /usr/share/${PN}/lib/plugins
 	keepdir /usr/share/${PN}/lib/plugins

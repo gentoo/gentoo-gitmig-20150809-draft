@@ -1,6 +1,14 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.71 2009/04/04 19:17:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.72 2009/04/23 13:43:37 caster Exp $
+
+*jabref-2.5_beta (23 Apr 2009)
+
+  23 Apr 2009; Vlastimil Babka <caster@gentoo.org> -jabref-2.4.1.ebuild,
+  jabref-2.4.2, +jabref-2.5_beta.ebuild:
+  Version bump. Now with plugin manager and user installation in HOME, yay.
+  Add mysql USE flag which pulls jdbc-mysql, also in 2.4.2. Fixes bug
+  #252833.
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> jabref-2.4.2.ebuild:
   amd64/x86 stable, bug #263647
