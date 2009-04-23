@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyreverse
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.12 2007/02/21 17:03:39 lucass Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.13 2009/04/23 23:12:39 arfrever Exp $
+
+*pyreverse-0.5.2 (23 Apr 2009)
+
+  23 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyreverse-0.5.2.ebuild:
+  Version bump. Fix building with Python 2.5 (bug #231384).
 
   21 Feb 2007; Lukasz Strzygowski <lucass@gentoo.org>
   files/digest-pyreverse-0.4.2-r1, files/digest-pyreverse-0.5.1, Manifest:
