@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.1 2009/04/22 13:07:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.2 2009/04/23 11:50:19 alexxy Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -51,6 +51,13 @@ pkg_setup() {
 	if [[ "${ARCH}" == "amd64" ]] && [[ "${FORTRANC}" != "gfortran" ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
+	
+	if use qmmm-tinker; then
+		einfo "By default MM subsistem is restricted to 1000 atoms"
+		einfo "if you want larger MM subsystems then you should set"
+		einfo "QMMM_GAMESS_MAXMM variable to needed value in your make.conf"
+		ebeep 5
+	fi
 }
 
 src_unpack() {
@@ -85,6 +92,17 @@ src_unpack() {
 	if use qmmm-tinker; then
 		sed -e "s:TINKER=false:TINKER=true:" -i compall lked || \
 			die "Failed to enable TINKER code"
+		if [ "x$QMMM_GAMESS_MAXMM" == "x" ]; then
+			einfo "No QMMM_GAMESS_MAXMM set. Using default value = 1000"
+		else
+			einfo "Setting QMMM_GAMESS_MAXMM to $QMMM_GAMESS_MAXMM"
+			sed -e "s:maxatm=1000:maxatm=$QMMM_GAMESS_MAXMM:g" \
+			 -i tinker/sizes.i \
+			 || die "Setting QMMM_GAMESS_MAXMM failed"
+			sed -e "s:MAXATM=1000:MAXATM=$QMMM_GAMESS_MAXMM:g" \
+			 -i source/inputb.src \
+			 || die "Setting QMMM_GAMESS_MAXMM failed"
+		fi
 	fi
 	# greate proper activate sourcefile
 	cp "./tools/actvte.code" "./tools/actvte.f" || \
