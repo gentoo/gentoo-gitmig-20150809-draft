@@ -1,6 +1,11 @@
 # ChangeLog for media-video/guvcview
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.3 2008/12/17 14:44:47 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.4 2009/04/23 05:56:27 zmedico Exp $
+
+*guvcview-1.0.5 (23 Apr 2009)
+
+  23 Apr 2009; Zac Medico <zmedico@gentoo.org> +guvcview-1.0.5.ebuild:
+  Version bump.
 
   17 Dec 2008; Steve Dibb <beandog@gentoo.org> guvcview-0.9.6.ebuild:
   Add ~amd64, bug 250621
