@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.1.1.ebuild,v 1.2 2009/03/08 00:03:15 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/zemberek-2.1.1.ebuild,v 1.3 2009/04/23 20:15:20 serkan Exp $
 
-EAPI=1
+EAPI=2
 JAVA_PKG_IUSE="source doc test"
 
 inherit eutils java-pkg-2 java-ant-2
@@ -31,10 +31,13 @@ DEPEND=">=virtual/jdk-1.5
 	)
 	app-arch/unzip"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}" || die
+java_prepare() {
 	use test && java-pkg_jarfrom --build-only --into lib/gelistirme junit-4 junit.jar
+	# Added hamcrest-core as a workaround
+	# Issue spotted by Markus Meier <maekke@gentoo.org>
+	# See http://bugs.gentoo.org/show_bug.cgi?id=253753#c3
+	use test && java-pkg_jarfrom --build-only --into lib/gelistirme hamcrest-core
+	epatch "${FILESDIR}"/${P}-classpathfix.patch
 }
 
 src_compile() {
@@ -61,8 +64,5 @@ src_install() {
 }
 
 src_test() {
-	# Added hamcrest-core as a workaround
-	# Issue spotted by Markus Meier <maekke@gentoo.org>
-	# See http://bugs.gentoo.org/show_bug.cgi?id=253753#c3
-	ANT_TASKS="ant-junit4 hamcrest-core" eant unit-test
+	ANT_TASKS="ant-junit4" eant unit-test
 }
