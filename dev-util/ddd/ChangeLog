@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ddd
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.51 2008/04/21 17:19:55 phreak Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ChangeLog,v 1.52 2009/04/23 15:01:58 patrick Exp $
+
+*ddd-3.3.12 (23 Apr 2009)
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> +ddd-3.3.12.ebuild:
+  Bump to 3.3.12. Fixes #252261
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
