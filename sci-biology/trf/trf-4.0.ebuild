@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.0.ebuild,v 1.1 2009/02/27 00:11:33 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trf/trf-4.0.ebuild,v 1.2 2009/04/23 19:04:13 maekke Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://tandem.bu.edu/trf/downloads/trf400.linux.exe"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND=""
