@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.9.ebuild,v 1.1 2008/04/01 23:54:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.11.ebuild,v 1.1 2009/04/23 14:12:38 dragonheart Exp $
 
+EAPI=2
 inherit eutils flag-o-matic
 
 DESCRIPTION="Checks and undeletes partitions + PhotoRec, signature based recovery tool"
 HOMEPAGE="http://www.cgsecurity.org/wiki/TestDisk"
 SRC_URI="http://www.cgsecurity.org/${P}.tar.bz2"
+#SRC_URI="http://www.cgsecurity.org/${P}-WIP.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -17,10 +19,17 @@ DEPEND=">=sys-libs/ncurses-5.2
 		jpeg? ( media-libs/jpeg )
 	  	ntfs? ( >=sys-fs/ntfsprogs-2.0.0 )
 	  	reiserfs? ( >=sys-fs/progsreiserfs-0.3.1_rc8 )
-	  	>=sys-fs/e2fsprogs-1.35"
+	  	>=sys-fs/e2fsprogs-1.35
+		sys-libs/zlib"
 RDEPEND="!static? ( ${DEPEND} )"
 
-src_compile() {
+#S=${WORKDIR}/${P}-WIP
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-exif_bound_checking.patch
+}
+
+src_configure() {
 	local myconf="--without-ewf --enable-sudo"
 	# --with-foo are broken, any use of --with/--without disable the
 	# functionality.
@@ -45,8 +54,6 @@ src_compile() {
 	if useq jpeg && egrep -q 'undef HAVE_LIBJPEG\>' "${S}"/config.h ; then
 		die "Failed to find jpeg library."
 	fi
-
-	emake || die
 }
 
 src_install() {
