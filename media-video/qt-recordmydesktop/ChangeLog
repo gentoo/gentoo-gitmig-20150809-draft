@@ -1,6 +1,10 @@
 # ChangeLog for media-video/qt-recordmydesktop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.16 2009/03/07 09:10:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qt-recordmydesktop/ChangeLog,v 1.17 2009/04/23 09:07:10 fauli Exp $
+
+  23 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  qt-recordmydesktop-0.3.8:
+  add x11-apps/xwininfo to RDEPEND as reported on bug 265069 by cedk
 
   07 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   -qt-recordmydesktop-0.3.7.2.ebuild:
