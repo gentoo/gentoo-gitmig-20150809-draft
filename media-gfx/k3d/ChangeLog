@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.43 2009/03/24 16:44:52 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.44 2009/04/23 20:30:22 maekke Exp $
+
+*k3d-0.7.11.0-r1 (23 Apr 2009)
+
+  23 Apr 2009; Markus Meier <maekke@gentoo.org>
+  +files/k3d-0.7.11.0-cuda.patch, +k3d-0.7.11.0-r1.ebuild:
+  revision bump to fix cuda USE-flag, bug #263811
 
   24 Mar 2009; Gordon Malm <gengor@gentoo.org> k3d-0.7.11.0.ebuild:
   Add dropped C++ stack-protector filtering.
