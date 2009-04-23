@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.2 2009/04/23 11:50:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.3 2009/04/23 11:51:57 alexxy Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -51,7 +51,7 @@ pkg_setup() {
 	if [[ "${ARCH}" == "amd64" ]] && [[ "${FORTRANC}" != "gfortran" ]];
 		then die "You will need gfortran to compile gamess on amd64"
 	fi
-	
+
 	if use qmmm-tinker; then
 		einfo "By default MM subsistem is restricted to 1000 atoms"
 		einfo "if you want larger MM subsystems then you should set"
