@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.129 2009/03/21 17:16:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.130 2009/04/23 12:57:27 gentoofan23 Exp $
+
+*paludis-0.36.1 (23 Apr 2009)
+
+  23 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  +paludis-0.36.1.ebuild:
+  Version bump, change qa&inquisitio dependency from pcre++ to libpcre[cxx]
+  for thread safety. built_with_use used to preserve upgrade path
 
   21 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
