@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/phoronix-test-suite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.1 2009/04/19 17:41:13 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/phoronix-test-suite/ChangeLog,v 1.2 2009/04/23 14:06:42 patrick Exp $
+
+  23 Apr 2009; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  phoronix-test-suite-1.8.0:
+  Adding ~x86 keyword. Adding benchmark herd to metadata.
 
 *phoronix-test-suite-1.8.0 (19 Apr 2009)
 
