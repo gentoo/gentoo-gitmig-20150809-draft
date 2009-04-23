@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.0.0.ebuild,v 1.1 2008/12/27 22:37:30 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.0.0.ebuild,v 1.2 2009/04/23 17:59:52 dertobi123 Exp $
 
 EAPI=2
 
@@ -44,6 +44,9 @@ src_configure() {
 	mkdir -p "$T"/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
+
+	# Remove files generated with qt-4.4 moc
+	rm src/{moc_*.cpp,ui_*ui.h} || die "rm failed"
 
 	local myconf
 
