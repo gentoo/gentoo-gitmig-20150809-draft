@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.1.ebuild,v 1.1 2009/04/19 16:12:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.1-r1.ebuild,v 1.1 2009/04/24 15:22:12 flameeyes Exp $
 
 inherit eutils pam confutils
 
@@ -51,6 +51,9 @@ src_unpack() {
 
 	# compatability fix.
 	epatch "${FILESDIR}"/${PN}-skeychallengeargs.diff
+
+	# Bug #266361 (upstream bug #348)
+	epatch "${FILESDIR}"/${P}-bug348.patch
 
 	# additional variables to disallow, should user disable env_reset.
 
