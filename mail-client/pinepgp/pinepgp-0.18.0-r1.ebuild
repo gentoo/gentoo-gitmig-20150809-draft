@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/pinepgp-0.18.0-r1.ebuild,v 1.9 2007/12/31 18:31:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pinepgp/pinepgp-0.18.0-r1.ebuild,v 1.10 2009/04/24 08:16:26 tove Exp $
 
 inherit eutils
 
@@ -12,15 +12,16 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND="mail-client/pine app-crypt/gnupg"
+DEPEND="|| ( mail-client/alpine mail-client/pine )
+	app-crypt/gnupg"
 
 src_unpack()	{
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile-sed-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-makefile-sed-fix.patch
 }
 
 src_install()	{
-	make DESTDIR=${D} install || die "install problem"
+	make DESTDIR="${D}" install || die "install problem"
 	dodoc ChangeLog README
 }
