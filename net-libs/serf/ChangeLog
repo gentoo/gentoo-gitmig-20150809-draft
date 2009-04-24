@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.17 2009/03/21 21:18:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.18 2009/04/24 07:02:49 jer Exp $
+
+  24 Apr 2009; Jeroen Roovers <jer@gentoo.org> serf-0.3.0:
+  Stable for HPPA (bug #267269).
 
 *serf-0.3.0 (21 Mar 2009)
 
