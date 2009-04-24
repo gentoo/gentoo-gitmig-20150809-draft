@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.0.0.ebuild,v 1.2 2009/01/02 07:21:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.0.0.ebuild,v 1.3 2009/04/24 03:48:32 volkmar Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa arts console gsm gtk ilbc ipv6 video xv"
+IUSE="alsa arts console gsm gtk ipv6 video xv"
 
 RDEPEND="dev-libs/glib
 	dev-perl/XML-Parser
@@ -26,7 +26,6 @@ RDEPEND="dev-libs/glib
 	)
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
-	ilbc? ( dev-libs/ilbc-rfc3951 )
 	video? (
 		>=media-libs/libsdl-1.2.9
 		media-video/ffmpeg
@@ -57,7 +56,6 @@ src_compile() {
 		--libexecdir=/usr/$(get_libdir)/linphone/exec \
 		$(use_enable console console_ui) \
 		$(use_enable gtk gtk_ui) \
-		$(use_with ilbc) \
 		$(use_enable ipv6) \
 		$(use_enable alsa) \
 		$(use_enable arts artsc) \

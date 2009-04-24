@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.7 2008/12/23 04:05:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-2.1.1.ebuild,v 1.8 2009/04/24 03:48:32 volkmar Exp $
 
 # Note: video support in linphone relies on swscaler being disabled
 #       in ffmpeg.  this is because the video code in linphone is old
@@ -16,7 +16,7 @@ SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="amd64 ppc x86"
-IUSE="alsa arts console gsm gtk ilbc ipv6 xv"
+IUSE="alsa arts console gsm gtk ipv6 xv"
 # video disabled for #189774
 # XXX: Should "video" be split into ffmpeg/libsdl ?  They are two distinct
 #      things: libsdl is just for video display while ffmpeg is just for
@@ -34,8 +34,7 @@ RDEPEND="dev-libs/glib
 		gnome-base/libglade
 	)
 	alsa? ( media-libs/alsa-lib )
-	arts? ( kde-base/arts )
-	ilbc? ( dev-libs/ilbc-rfc3951 )"
+	arts? ( kde-base/arts )"
 #	video? (
 #		>=media-libs/libsdl-1.2.9
 #		media-video/ffmpeg
@@ -70,7 +69,6 @@ src_compile() {
 		--libexecdir=/usr/$(get_libdir)/linphone/exec \
 		$(use_enable console console_ui) \
 		$(use_enable gtk gtk_ui) \
-		$(use_with ilbc) \
 		$(use_enable ipv6) \
 		$(use_enable alsa) \
 		$(use_enable arts artsc) \

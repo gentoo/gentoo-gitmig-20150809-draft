@@ -5,7 +5,6 @@
 	<use>
 		<flag name='console'>Build console interface</flag>
 		<flag name='gsm'>Include support for the gsm audio codec</flag>
-		<flag name='ilbc'>Build ILBC codec plugin</flag>
 		<flag name='video'>Enable video support (display/capture)</flag>
 	</use>
 </pkgmetadata>

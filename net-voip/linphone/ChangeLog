@@ -1,6 +1,11 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.22 2009/01/02 07:21:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.23 2009/04/24 03:48:32 volkmar Exp $
+
+  24 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> linphone-2.1.1.ebuild,
+  linphone-3.0.0.ebuild, metadata.xml:
+  linphone uses ilbc with a mediastreamer plugin since a long time.
+	ilbc USE flag was not dropped when needed. See bug 258407.
 
   02 Jan 2009; Mike Frysinger <vapier@gentoo.org> linphone-3.0.0.ebuild:
   Disable intltool requirements #252704.
