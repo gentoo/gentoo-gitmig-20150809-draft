@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/hashit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.10 2007/12/25 14:35:50 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/ChangeLog,v 1.11 2009/04/24 09:51:50 patrick Exp $
+
+*hashit-0.9.6 (24 Apr 2009)
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> +hashit-0.9.6.ebuild:
+  Bump to 0.9.6, now using cmake. Thanks to Chris Salch for the new ebuild,
+  fixes #265787
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing pyrania from metadata.xml as per #26352. Assigning to
