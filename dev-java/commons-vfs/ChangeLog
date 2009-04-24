@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/commons-vfs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.4 2007/07/12 22:34:52 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-vfs/ChangeLog,v 1.5 2009/04/24 01:44:35 ranger Exp $
+
+  24 Apr 2009; Brent Baude <ranger@gentoo.org> commons-vfs-1.0.ebuild:
+  Marking commons-vfs-1.0 ~ppc64 for bug 266956
 
   12 Jul 2007; Petteri Räty <betelgeuse@gentoo.org> commons-vfs-1.0.ebuild:
   Javadoc in sun-jdk-1.6 starting with u2 works fine so removing the work
