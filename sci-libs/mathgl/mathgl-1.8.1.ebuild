@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.8.1.ebuild,v 1.1 2009/04/13 13:09:29 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.8.1.ebuild,v 1.2 2009/04/24 19:08:19 grozin Exp $
 EAPI=2
 WX_GTK_VER=2.8
 inherit autotools wxwidgets python versionator toolchain-funcs
@@ -38,6 +38,23 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	# bug #267061
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+
+	# correct location of numpy/arrayobject.h
+	if use python; then
+		local numpy_h
+		numpy_h=$(python_get_sitedir)/numpy/core/include/numpy/arrayobject.h
+		einfo "fixing numpy.i"
+		sed -e "s|<numpy/arrayobject.h>|\"${numpy_h}\"|" \
+			-i lang/numpy.i \
+			|| die "sed failed"
+	fi
+
+	eautoreconf
+}
+
 src_configure() {
 	econf --docdir="${ROOT}"usr/share/doc/${PF} \
 		$(use_enable glut) \
@@ -51,20 +68,6 @@ src_configure() {
 		$(use_enable octave) \
 		$(use_enable gsl) \
 		$(use_enable doc docs)
-}
-
-src_prepare() {
-	# correct location of numpy/arrayobject.h
-	if use python; then
-		local numpy_h
-		numpy_h=$(python_get_sitedir)/numpy/core/include/numpy/arrayobject.h
-		einfo "fixing numpy.i"
-		sed -e "s|<numpy/arrayobject.h>|\"${numpy_h}\"|" \
-			-i lang/numpy.i \
-			|| die "sed failed"
-	fi
-
-	eautoreconf
 }
 
 src_compile() {
