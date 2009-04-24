@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.0.0.ebuild,v 1.3 2009/04/24 03:48:32 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.0.0.ebuild,v 1.4 2009/04/24 04:12:34 volkmar Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.linphone.org/"
 SRC_URI="http://download.savannah.nongnu.org/releases/${PN}/stable/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="1"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa arts console gsm gtk ipv6 video xv"
 

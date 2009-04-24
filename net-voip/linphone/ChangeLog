@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.23 2009/04/24 03:48:32 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.24 2009/04/24 04:12:34 volkmar Exp $
+
+  24 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> linphone-2.1.1.ebuild,
+  linphone-3.0.0.ebuild:
+  Moving back ebuilds to SLOT 0, no reason to use SLOT 1.
 
   24 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> linphone-2.1.1.ebuild,
   linphone-3.0.0.ebuild, metadata.xml:
