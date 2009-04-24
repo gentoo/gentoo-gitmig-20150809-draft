@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.24 2009/04/22 14:28:41 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.25 2009/04/24 12:28:16 rbu Exp $
+
+  24 Apr 2009; Robert Buchholz <rbu@gentoo.org> +nm-applet-0.6.5.ebuild:
+  Readd NM 0.6.5 for ppc.
 
 *nm-applet-0.7.1 (22 Apr 2009)
 
