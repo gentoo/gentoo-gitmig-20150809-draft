@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4386 2009/04/24 04:07:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4387 2009/04/24 08:07:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1119,6 +1119,11 @@ kde-misc/knetworkmanager:dialup - Enables Dialup (PPP) support
 kde-misc/knetworkmanager:openvpn - Adds support for the OpenVPN net-misc/openvpn client
 kde-misc/knetworkmanager:pptp - Adds support for the PPTP (PPP) VPN client
 kde-misc/ksensors:ibmacpi - Enable monitoring of ACPI sensor data on IBM Thinkpad notebooks
+mail-client/alpine:chappa - enhance alpine by appling Eduardo Chappa's patches
+mail-client/alpine:onlyalpine - installs only the alpine binary, so it does not collied with app-editors/pico and/or mail-client/pine
+mail-client/alpine:passfile - Adds support for caching passwords into a file between sessions
+mail-client/alpine:smime - Enable support for S/MIME
+mail-client/alpine:topal - Enable support for net-mail/topal
 mail-client/balsa:crypt - Adds support for GnuPG encryption
 mail-client/balsa:gtkspell - Use gtkspell for dictionary support
 mail-client/balsa:rubrica - Adds support for app-office/rubrica addressbook
