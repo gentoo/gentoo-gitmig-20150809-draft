@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.29 2009/02/15 12:02:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.30 2009/04/24 14:58:43 patrick Exp $
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -bsddb3-4.7.0.ebuild,
+  -bsddb3-4.7.3.ebuild, -bsddb3-4.7.4.ebuild:
+  Remove old
 
 *bsddb3-4.7.5 (15 Feb 2009)
 
