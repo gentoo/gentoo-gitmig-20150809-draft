@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.372 2009/04/24 14:33:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.373 2009/04/24 14:45:25 ranger Exp $
+
+  24 Apr 2009; Brent Baude <ranger@gentoo.org> subversion-1.5.6.ebuild:
+  stable ppc, bug 267270
 
   24 Apr 2009; Brent Baude <ranger@gentoo.org> subversion-1.5.6.ebuild:
   stable ppc64, bug 267270
