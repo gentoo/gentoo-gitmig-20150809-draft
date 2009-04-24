@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lafilefixer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.4 2009/04/24 00:56:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.5 2009/04/24 01:41:11 ranger Exp $
+
+  24 Apr 2009; Brent Baude <ranger@gentoo.org> lafilefixer-0.5.ebuild:
+  keyworded ~arch for ppc64, bug 267148
 
   24 Apr 2009; Jeroen Roovers <jer@gentoo.org> lafilefixer-0.5:
   Marked ~hppa (bug #267148).
