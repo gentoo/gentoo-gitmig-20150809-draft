@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-3.1.3-r1.ebuild,v 1.2 2009/04/11 08:26:19 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-3.1.3-r1.ebuild,v 1.3 2009/04/24 01:27:04 ranger Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="source"
@@ -14,7 +14,7 @@ SRC_URI="http://www.antlr.org/download/${P}.tar.gz
 	mirror://gentoo/${P}-generated.tar.bz2"
 LICENSE="BSD"
 SLOT="3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="gunit"
 
 COMMON_DEPEND=">=dev-java/stringtemplate-3.2
