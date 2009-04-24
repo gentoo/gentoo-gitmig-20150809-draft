@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-20090214.ebuild,v 1.1 2009/04/16 17:33:31 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.3.ebuild,v 1.1 2009/04/24 23:43:24 gurligebis Exp $
 
 EAPI="2"
 
@@ -21,9 +21,8 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	mv Makefile.linux Makefile
-	epatch "${FILESDIR}/${P}-iptables.diff"
 	epatch "${FILESDIR}/${P}-iptables_path.diff"
-	epatch "${FILESDIR}/${P}-iptables_compile.diff"
+	epatch "${FILESDIR}/${P}-Makefile_fix.diff"
 	sed -i -e "s#^CFLAGS = #CFLAGS = -I${KV_OUT_DIR}/include #" Makefile
 		# we don't use netfilter/Makefile
 	gmake config.h
