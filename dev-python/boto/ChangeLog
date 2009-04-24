@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.8 2009/04/24 14:51:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.9 2009/04/24 14:54:03 patrick Exp $
+
+*boto-1.7a (24 Apr 2009)
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> +boto-1.7a.ebuild:
+  Bump to 1.7a
 
   24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -boto-1.3a.ebuild,
   -boto-1.4a.ebuild, -boto-1.4c.ebuild:
