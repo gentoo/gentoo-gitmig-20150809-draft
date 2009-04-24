@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/hashit-0.9.6.ebuild,v 1.1 2009/04/24 09:51:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/hashit-0.9.6.ebuild,v 1.2 2009/04/24 22:28:20 mr_bones_ Exp $
 
 inherit cmake-utils
 
@@ -12,4 +12,3 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="debug"
 DEPEND=""
-
