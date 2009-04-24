@@ -1,6 +1,13 @@
 # ChangeLog for dev-embedded/arduino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.3 2009/04/18 16:50:55 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/arduino/ChangeLog,v 1.4 2009/04/24 22:55:42 nixphoeni Exp $
+
+  24 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> metadata.xml,
+  arduino-0015-r1:
+  -Forgot to remove librxtxSerial.so in src_install with the other external
+   packages I could find (not entirely necessary, but good practice I
+   think)
+  -Added nixphoeni to maintainer list
 
 *arduino-0015-r1 (18 Apr 2009)
 
