@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xxe
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.37 2009/04/24 09:05:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xxe/ChangeLog,v 1.38 2009/04/24 19:58:36 patrick Exp $
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> Manifest:
+  Upstream likes changing tarballs, eh?
 
   24 Apr 2009; Patrick Lauer <patrick@gentoo.org> Manifest:
   Manifest fix, upstream seems to have changed xfc_foprocessor-4_3_0.zip
