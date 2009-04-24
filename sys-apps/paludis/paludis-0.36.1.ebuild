@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.36.1.ebuild,v 1.1 2009/04/23 12:57:27 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.36.1.ebuild,v 1.2 2009/04/24 22:28:58 mr_bones_ Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -53,7 +53,6 @@ pkg_setup() {
 		eerror "Please build dev-libs/libpcre with USE=cxx support"
 		die "Rebuild dev-libs/libpcre with USE=cxx"
 	fi
-
 
 	create-paludis-user
 }
