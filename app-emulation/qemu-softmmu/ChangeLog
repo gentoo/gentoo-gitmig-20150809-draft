@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu-softmmu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.65 2009/03/27 21:39:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/ChangeLog,v 1.66 2009/04/24 10:59:50 lu_zero Exp $
+
+  24 Apr 2009; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-softmmu-0.10.1-nopl-fix.patch, qemu-softmmu-0.10.1.ebuild:
+  Fix in_asm debugging, thanks to Mark Karpeles <mark@hell.ne.jp>
 
   27 Mar 2009; Luca Barbato <lu_zero@gentoo.org> metadata.xml,
   qemu-softmmu-0.10.1.ebuild:

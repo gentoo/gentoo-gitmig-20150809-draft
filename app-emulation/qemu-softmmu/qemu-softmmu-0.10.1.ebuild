@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.1.ebuild,v 1.3 2009/03/27 21:39:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.10.1.ebuild,v 1.4 2009/04/24 10:59:50 lu_zero Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -55,6 +55,7 @@ src_unpack() {
 	# avoid strip
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' \
 		Makefile Makefile.target */Makefile
+	epatch "${FILESDIR}/${P}-nopl-fix.patch"
 }
 
 src_compile() {
