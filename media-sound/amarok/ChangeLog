@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.320 2009/04/23 17:56:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.321 2009/04/24 02:50:23 jmbsvicetto Exp $
+
+*amarok-2.0.2-r3 (24 Apr 2009)
+
+  24 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/amarok-2.0.2-lastfm-authentication.patch, +amarok-2.0.2-r3.ebuild:
+  Bumped amarok-2.0.2 to include a lastfm patch. Thanks to Gustavo Henrique
+  Nihei for poking me about it.
 
   23 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -amarok-2.0.1.1.ebuild, -amarok-2.0.2-r1.ebuild:
