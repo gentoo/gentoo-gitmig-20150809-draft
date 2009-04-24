@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.38 2009/04/23 20:01:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.39 2009/04/24 03:30:35 volkmar Exp $
+
+*ortp-0.15.0_p1 (24 Apr 2009)
+
+  24 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> +ortp-0.15.0_p1.ebuild:
+  Add ortp-0.15.0 with patch from linphone-3.1.0 to make it working with it.
 
   23 Apr 2009; Markus Meier <maekke@gentoo.org> ortp-0.15.0:
   add ~amd64, bug #266193
