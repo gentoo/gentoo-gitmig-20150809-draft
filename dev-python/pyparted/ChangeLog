@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyparted
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.37 2008/07/18 13:30:32 tester Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/ChangeLog,v 1.38 2009/04/24 16:08:31 arfrever Exp $
+
+  24 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pyparted-1.6.9-r1.ebuild, -pyparted-1.7.0.ebuild:
+  Remove older ebuilds.
 
   18 Jul 2008; Olivier Crête <tester@gentoo.org> pyparted-1.8.9.ebuild:
   Stable on amd64, bug #231196
