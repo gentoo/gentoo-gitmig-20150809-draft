@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.1 2009/03/18 08:06:45 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.2 2009/04/24 06:45:22 hollow Exp $
+
+*fabric-0.1.1 (24 Apr 2009)
+
+  24 Apr 2009; Benedikt Böhm <hollow@gentoo.org> +fabric-0.1.1.ebuild:
+  version bump wrt #267262
 
 *fabric-0.1.0 (18 Mar 2009)
 
