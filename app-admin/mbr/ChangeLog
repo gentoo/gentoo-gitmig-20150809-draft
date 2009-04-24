@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mbr
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.14 2008/10/14 01:52:22 darkside Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mbr/ChangeLog,v 1.15 2009/04/24 22:32:49 patrick Exp $
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> mbr-1.1.10:
+  Adding ~amd64 keyword. Closes #267007
 
   14 Oct 2008; Jeremy Olexa <darkside@gentoo.org> mbr-1.1.10.ebuild:
   (non maintainer commit) pull bin86 out of RDEPEND on app-admin/mbr, since it
