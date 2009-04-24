@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/adns-python
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.24 2009/02/04 13:21:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adns-python/ChangeLog,v 1.25 2009/04/24 14:36:41 patrick Exp $
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -adns-python-1.1.1.ebuild:
+  Remove old
 
   04 Feb 2009; Patrick Lauer <patrick@gentoo.org> adns-python-1.2.1.ebuild:
   Homepage and SRC_URI fix

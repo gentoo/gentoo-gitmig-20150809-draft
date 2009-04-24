@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/beautifulsoup
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.13 2008/06/25 09:46:05 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beautifulsoup/ChangeLog,v 1.14 2009/04/24 14:41:46 patrick Exp $
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  -beautifulsoup-3.0.5.ebuild:
+  Remove old
 
 *beautifulsoup-3.0.7 (25 Jun 2008)
 

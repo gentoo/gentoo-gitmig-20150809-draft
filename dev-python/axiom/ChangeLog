@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.23 2009/02/11 15:09:48 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.24 2009/04/24 14:40:02 patrick Exp $
+
+  24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -axiom-0.5.27.ebuild:
+  Remove old
 
   11 Feb 2009; Thomas Raschbacher <lordvan@gentoo.org> axiom-0.5.30.ebuild:
   re-generate axiom plugin cache too on postinst/rm
