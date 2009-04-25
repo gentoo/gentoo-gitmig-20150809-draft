@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.241 2009/04/22 20:19:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.242 2009/04/25 11:42:35 mrness Exp $
+
+*squid-3.0.14-r1 (25 Apr 2009)
+
+  25 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squid-3.0.14-cross-compile.patch, +files/squid-3.0.14-gcc43.patch,
+  +files/squid-3.0.14-max-forwards.patch, -squid-2.7.6.ebuild,
+  +squid-3.0.14-r1.ebuild:
+  Fix assertion failure (#267109). Fix gcc-4.3 and cross compilation issues
+  (#266581).
 
   22 Apr 2009; Markus Meier <maekke@gentoo.org> squid-2.7.6-r1:
   amd64 stable, bug #263777

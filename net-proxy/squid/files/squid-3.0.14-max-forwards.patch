@@ -1,0 +1,12 @@
+diff -Nru squid-3.0.STABLE14.orig/src/HttpHeader.cc squid-3.0.STABLE14/src/HttpHeader.cc
+--- squid-3.0.STABLE14.orig/src/HttpHeader.cc	2009-04-11 08:35:40.000000000 +0000
++++ squid-3.0.STABLE14/src/HttpHeader.cc	2009-04-25 11:34:00.000000000 +0000
+@@ -106,7 +106,7 @@
+         {"Last-Modified", HDR_LAST_MODIFIED, ftDate_1123},
+         {"Link", HDR_LINK, ftStr},
+         {"Location", HDR_LOCATION, ftStr},
+-        {"Max-Forwards", HDR_MAX_FORWARDS, ftInt},
++        {"Max-Forwards", HDR_MAX_FORWARDS, ftInt64},
+         {"Mime-Version", HDR_MIME_VERSION, ftStr},	/* for now */
+         {"Pragma", HDR_PRAGMA, ftStr},
+         {"Proxy-Authenticate", HDR_PROXY_AUTHENTICATE, ftStr},

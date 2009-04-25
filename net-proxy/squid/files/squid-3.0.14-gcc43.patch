@@ -1,0 +1,39 @@
+diff -Nru squid-3.0.STABLE14.orig/lib/util.c squid-3.0.STABLE14/lib/util.c
+--- squid-3.0.STABLE14.orig/lib/util.c	2009-04-11 08:35:38.000000000 +0000
++++ squid-3.0.STABLE14/lib/util.c	2009-04-25 11:28:40.000000000 +0000
+@@ -755,7 +755,7 @@
+ 
+     PROF_stop(xstrdup);
+ 
+-    return p;
++    return (char *)p;
+ }
+ 
+ /*
+@@ -765,7 +765,7 @@
+ xstrndup(const char *s, size_t n)
+ {
+     size_t sz;
+-    void *p;
++    char *p;
+     PROF_start(xstrndup);
+     assert(s != NULL);
+     assert(n);
+@@ -774,7 +774,7 @@
+     if (sz > n)
+         sz = n;
+ 
+-    p = xstrncpy(xmalloc(sz), s, sz);
++    p = xstrncpy((char *)xmalloc(sz), s, sz);
+ 
+     PROF_stop(xstrndup);
+ 
+@@ -923,7 +923,7 @@
+ xint64toa(int64_t num)
+ {
+     static char buf[24];	/* 2^64 = 18446744073709551616 */
+-    snprintf(buf, sizeof(buf), "%" PRId64, num);
++    snprintf(buf, sizeof(buf), "%" PRId64, (long long int)num);
+     return buf;
+ }
+ 
