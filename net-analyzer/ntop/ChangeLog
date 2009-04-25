@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.74 2009/04/22 21:13:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.75 2009/04/25 09:30:09 mrness Exp $
+
+*ntop-3.3.9-r2 (25 Apr 2009)
+
+  25 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  +files/ntop-3.3.9-accesslog-umask.patch, -ntop-3.3.9-r1.ebuild,
+  +ntop-3.3.9-r2.ebuild:
+  Fix insecure log file creation (#266947).
 
   22 Apr 2009; Markus Meier <maekke@gentoo.org> ntop-3.3.9-r1:
   x86 stable, bug #265704

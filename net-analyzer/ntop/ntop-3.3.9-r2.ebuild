@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.9-r1.ebuild,v 1.6 2009/04/22 21:13:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.9-r2.ebuild,v 1.1 2009/04/25 09:30:09 mrness Exp $
 
 EAPI="2"
 
@@ -69,6 +69,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-external-geoip.patch
+	epatch "${FILESDIR}"/${P}-accesslog-umask.patch
 	cat acinclude.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
 }
