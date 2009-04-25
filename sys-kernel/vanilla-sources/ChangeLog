@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.630 2009/04/25 15:48:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.631 2009/04/25 15:56:51 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org>
+  vanilla-sources-2.6.30_rc3.ebuild:
+  Marking 2.6.30-rc3 ~ppc64 for bug 265417
 
   25 Apr 2009; Brent Baude <ranger@gentoo.org>
   vanilla-sources-2.6.29.ebuild, vanilla-sources-2.6.29.1.ebuild:
