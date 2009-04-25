@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23.ebuild,v 1.2 2009/03/22 16:52:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23.ebuild,v 1.3 2009/04/25 10:53:48 mrness Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ RDEPEND="dev-libs/openobex
 	bluetooth? ( net-wireless/bluez )
 	perl? ( dev-lang/perl )
 	python? ( >=dev-lang/python-2.4.4 )
-	ruby? ( dev-lang/ruby )
+	ruby? ( dev-lang/ruby:1.8 )
 	tcl? ( dev-lang/tcl )"
 DEPEND="${RDEPEND}
 	swig? ( dev-lang/swig )
@@ -47,7 +47,8 @@ src_configure() {
 		$(use_enable perl) \
 		$(use_enable python) \
 		$(use_enable tcl) \
-		$(use_enable ruby) || die "econf failed"
+		$(use_enable ruby) \
+		RUBY=/usr/bin/ruby18 || die "econf failed"
 }
 
 src_install() {

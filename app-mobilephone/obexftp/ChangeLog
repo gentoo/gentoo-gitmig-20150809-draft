@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.47 2009/03/22 16:52:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.48 2009/04/25 10:53:48 mrness Exp $
+
+  25 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  -files/obexftp-0.21-as-needed.patch,
+  -files/obexftp-0.21-cobex_write.patch, -files/obexftp-0.21-no_iconv.patch,
+  -files/obexftp-0.21-sdp-detection.patch, -obexftp-0.21.ebuild,
+  obexftp-0.22.ebuild, obexftp-0.23.ebuild:
+  Restrict ruby dependency atom to slot 1.8 (#261736).
 
   22 Mar 2009; Alin Năstac <mrness@gentoo.org>
   +files/obexftp-0.23-gentoo.patch, obexftp-0.23.ebuild:
