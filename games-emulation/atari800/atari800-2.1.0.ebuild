@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-2.1.0.ebuild,v 1.1 2009/04/25 01:43:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/atari800/atari800-2.1.0.ebuild,v 1.2 2009/04/25 16:51:39 mr_bones_ Exp $
 
 EAPI=2
 inherit games
@@ -13,10 +13,12 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="sdl"
+IUSE="readline sdl"
 
 RDEPEND="sdl? ( >=media-libs/libsdl-1.2.0 )
-	!sdl? ( x11-libs/libX11 )"
+	!sdl? ( x11-libs/libX11 )
+	media-libs/libpng
+	readline? ( sys-libs/readline )"
 DEPEND="${RDEPEND}
 	!sdl? (
 		x11-libs/libXt
@@ -37,6 +39,9 @@ src_prepare() {
 		-e 's/-ltermcap//' \
 		src/configure \
 		|| die "sed failed"
+	sed "s:/usr/share/games:${GAMES_DATADIR}:" \
+		"${FILESDIR}"/atari800.cfg > "${T}"/atari800.cfg \
+		|| die "sed failed"
 }
 
 src_configure() {
@@ -45,6 +50,7 @@ src_configure() {
 
 	cd src && \
 	egamesconf \
+		$(use_enable readline) \
 		--enable-crashmenu \
 		--enable-break \
 		--enable-hints \
@@ -68,9 +74,6 @@ src_install () {
 	dodoc README.1ST DOC/*
 	insinto "${GAMES_DATADIR}/${PN}"
 	doins "${WORKDIR}/"*.ROM || die "doins failed (ROM)"
-	sed "s:/usr/share/games:${GAMES_DATADIR}:" \
-		"${FILESDIR}"/atari800.cfg > "${T}"/atari800.cfg \
-		|| die "sed failed"
 	insinto "${GAMES_SYSCONFDIR}"
 	doins "${T}"/atari800.cfg || die "doins failed (cfg)"
 	prepgamesdirs
