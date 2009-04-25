@@ -1,0 +1,11 @@
+# ChangeLog for dev-ruby/sparklines
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sparklines/ChangeLog,v 1.1 2009/04/25 12:57:15 flameeyes Exp $
+
+*sparklines-0.5.2 (25 Apr 2009)
+
+  25 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/sparklines.gemspec, +metadata.xml, +sparklines-0.5.2.ebuild:
+  Initial import of the sparklines graph generator, with fake gemspec and
+  running testsuite.
+
