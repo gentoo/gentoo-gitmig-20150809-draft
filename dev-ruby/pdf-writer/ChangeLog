@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-writer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.18 2009/04/20 20:29:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-writer/ChangeLog,v 1.19 2009/04/25 17:46:02 armin76 Exp $
+
+  25 Apr 2009; Raúl Porcel <armin76@gentoo.org> pdf-writer-1.1.8.ebuild:
+  ia64 stable wrt #265435
 
   20 Apr 2009; Markus Meier <maekke@gentoo.org> pdf-writer-1.1.8:
   x86 stable, bug #265435

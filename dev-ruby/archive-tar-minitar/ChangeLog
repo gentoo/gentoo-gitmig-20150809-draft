@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/archive-tar-minitar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.6 2009/04/20 20:24:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/archive-tar-minitar/ChangeLog,v 1.7 2009/04/25 17:43:36 armin76 Exp $
+
+  25 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  archive-tar-minitar-0.5.2.ebuild:
+  ia64 stable wrt #265435
 
   20 Apr 2009; Markus Meier <maekke@gentoo.org> archive-tar-minitar-0.5.2:
   x86 stable, bug #265435
