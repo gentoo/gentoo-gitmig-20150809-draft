@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ortp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.41 2009/04/24 14:39:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ortp/ChangeLog,v 1.42 2009/04/25 18:37:32 armin76 Exp $
+
+  25 Apr 2009; Raúl Porcel <armin76@gentoo.org> ortp-0.15.0.ebuild,
+  ortp-0.15.0_p1.ebuild:
+  Add ~ia64 wrt #266193
 
   24 Apr 2009; Brent Baude <ranger@gentoo.org> ortp-0.13.1-r1.ebuild:
   stable ppc, bug 259313
