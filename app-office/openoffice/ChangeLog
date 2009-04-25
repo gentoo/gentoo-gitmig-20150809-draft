@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.457 2009/04/25 11:52:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.458 2009/04/25 11:56:53 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org> openoffice-3.0.1.ebuild:
+  Marking openoffice-3.0.1 ~ppc64 for bug 244467
 
   25 Apr 2009; Andreas Proschofsky <suka@gentoo.org> openoffice-3.0.0,
   openoffice-3.0.1:
