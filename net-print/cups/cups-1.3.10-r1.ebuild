@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.10.ebuild,v 1.7 2009/04/21 19:31:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.10-r1.ebuild,v 1.1 2009/04/25 12:59:32 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -229,8 +229,8 @@ src_install() {
 	diropts -m 0740 -o lp -g lp
 	dodir /var/cache/cups/rss
 
-	# create /etc/cups/client.conf, bug #196967
-	echo "ServerName localhost" >> "${D}"/etc/cups/client.conf
+	# create /etc/cups/client.conf, bug #196967 and #266678
+	echo "ServerName /var/run/cups/cups.sock" >> "${D}"/etc/cups/client.conf
 }
 
 pkg_preinst() {
