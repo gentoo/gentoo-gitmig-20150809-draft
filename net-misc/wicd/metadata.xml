@@ -5,4 +5,8 @@
 <maintainer>
   <email>darkside@gentoo.org</email>
 </maintainer>
+<use>
+	<flag name='ioctl'>Installs additional python libraries to use as a backend.
+	This will improve speed but is experimental.</flag>
+</use>
 </pkgmetadata>
