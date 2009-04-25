@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.4.ebuild,v 1.1 2009/01/10 13:24:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/squidguard-1.4-r2.ebuild,v 1.1 2009/04/25 09:58:43 mrness Exp $
 
 WANT_AUTOMAKE=none
+EAPI="2"
 
 inherit eutils autotools
 
@@ -23,23 +24,20 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/squidGuard-${PV}"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-autoheader.patch"
+	epatch "${FILESDIR}/${P}-vsnprintf.patch"
+	epatch "${FILESDIR}/${P}-cross-compile.patch"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with ldap) \
 		--with-sg-config=/etc/squidGuard/squidGuard.conf \
 		--with-sg-logdir=/var/log/squidGuard \
 		|| die "configure has failed"
-
-	emake || die "make has failed"
 }
 
 src_install() {
