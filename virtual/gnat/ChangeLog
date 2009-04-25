@@ -1,6 +1,12 @@
 # ChangeLog for virtual/gnat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.8 2007/05/27 18:13:59 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnat/ChangeLog,v 1.9 2009/04/25 15:31:45 george Exp $
+
+*gnat-4.3 (25 Apr 2009)
+
+  25 Apr 2009; George Shapovalov <george@gentoo.org> gnat-4.2,
+  +gnat-4.3.ebuild:
+  added ebuild for 4.3, fixed SLOT for 4.2
 
 *gnat-4.2 (27 May 2007)
 
