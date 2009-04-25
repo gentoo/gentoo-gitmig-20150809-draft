@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/paml
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.4 2008/09/07 12:02:02 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/paml/ChangeLog,v 1.5 2009/04/25 23:08:33 weaver Exp $
+
+*paml-4.2b (25 Apr 2009)
+
+  25 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +paml-4.2b.ebuild:
+  Version bump
 
 *paml-4.1 (07 Sep 2008)
 
