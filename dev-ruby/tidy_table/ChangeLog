@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/tidy_table
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tidy_table/ChangeLog,v 1.1 2009/04/25 12:40:25 flameeyes Exp $
+
+*tidy_table-0.0.5 (25 Apr 2009)
+
+  25 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/tidy_table.gemspec, +metadata.xml, +tidy_table-0.0.5.ebuild:
+  Initial import of tidy_table, test dependency for sparklines.
+
