@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-iwscan
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/ChangeLog,v 1.1 2009/04/25 04:20:44 darkside Exp $
+
+*python-iwscan-20080402 (25 Apr 2009)
+
+  25 Apr 2009; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
+  +python-iwscan-20080402.ebuild:
+  Initial ebuild of dev-python/python-iwscan, written by myself.
+
