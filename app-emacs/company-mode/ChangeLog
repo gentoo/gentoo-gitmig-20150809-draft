@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/company-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.5 2009/04/16 23:03:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/company-mode/ChangeLog,v 1.6 2009/04/25 21:38:10 ulm Exp $
+
+*company-mode-0.4.2 (25 Apr 2009)
+
+  25 Apr 2009; Ulrich Mueller <ulm@gentoo.org>
+  +files/company-mode-0.4.2-disable-semantic.patch,
+  +company-mode-0.4.2.ebuild:
+  Version bump.
 
   16 Apr 2009; Ulrich Mueller <ulm@gentoo.org> company-mode-0.3.1.ebuild:
   Fix dependency on nxml-mode.
