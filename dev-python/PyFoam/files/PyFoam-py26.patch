@@ -1,0 +1,60 @@
+diff -Naur PyFoam-0.5.1-old/PyFoam/Basics/GnuplotTimelines.py PyFoam-0.5.1/PyFoam/Basics/GnuplotTimelines.py
+--- PyFoam-0.5.1-old/PyFoam/Basics/GnuplotTimelines.py	2009-04-25 16:42:38.000000000 +0000
++++ PyFoam-0.5.1/PyFoam/Basics/GnuplotTimelines.py	2009-04-25 16:59:05.000000000 +0000
+@@ -14,7 +14,7 @@
+                  timelines,
+                  persist=None,
+                  raiseit=True,
+-                 with="lines",
++                 style="lines",
+                  alternateAxis=[],
+                  forbidden=[],
+                  start=None,
+@@ -26,7 +26,7 @@
+         @type timelines: TimeLineCollection
+         @param persist: Gnuplot window persistst after run
+         @param raiseit: Raise the window at every plot
+-        @param with: how to plot the data (lines, points, steps)
++        @param style: how to plot the data (lines, points, steps)
+         @param alternateAxis: list with names that ought to appear on the alternate y-axis
+         @param forbidden: A list with strings. If one of those strings is found in a name, it is not plotted
+         @param start: First time that should be plotted. If undefined everything from the start is plotted
+@@ -74,7 +74,7 @@
+             self.set_string("terminal x11"+x11addition)
+             
+         self.data=timelines
+-        self.with=with
++        self.style=style
+         
+         self.redo()
+         
+@@ -97,7 +97,7 @@
+                 
+         self.itemlist=[]
+         for n in names:
+-            it=Data(times,self.data.getValues(n),title=n,with=self.with)
++            it=Data(times,self.data.getValues(n),title=n,style=self.style)
+             if n in self.alternate:
+                 it.set_option(axes="x1y2")
+                 
+diff -Naur PyFoam-0.5.1-old/PyFoam/Execution/GnuplotRunner.py PyFoam-0.5.1/PyFoam/Execution/GnuplotRunner.py
+--- PyFoam-0.5.1-old/PyFoam/Execution/GnuplotRunner.py	2009-04-25 16:42:38.000000000 +0000
++++ PyFoam-0.5.1/PyFoam/Execution/GnuplotRunner.py	2009-04-25 17:00:16.000000000 +0000
+@@ -83,7 +83,7 @@
+         if plotIterations:
+             self.plots["iter"]=GnuplotTimelines(self.getAnalyzer("Iterations").lines,
+                                                 persist=persist,
+-                                                with="steps",
++                                                style="steps",
+                                                 raiseit=raiseit,
+                                                 start=start,
+                                                 end=end)
+@@ -115,7 +115,7 @@
+         if plotExecution:
+             self.plots["execution"]=GnuplotTimelines(self.getAnalyzer("Execution").lines,
+                                                      persist=persist,
+-                                                     with="steps",
++                                                     style="steps",
+                                                      raiseit=raiseit,
+                                                      start=start,
+                                                      end=end)
