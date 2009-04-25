@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.2.ebuild,v 1.1 2008/11/19 00:04:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-1.2.ebuild,v 1.2 2009/04/25 23:13:17 patrick Exp $
 
 inherit eutils autotools
 
@@ -38,7 +38,7 @@ src_compile() {
 		--with-pidfile=/var/run/radvd/radvd.pid \
 		|| die "econf failed"
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {

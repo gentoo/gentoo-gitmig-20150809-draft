@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.51 2009/03/18 06:57:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.52 2009/04/25 23:13:17 patrick Exp $
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org> radvd-1.2:
+  Restricting emake to avoid parallel make failure. Fixes #255332
 
   18 Mar 2009; Joseph Jezak <josejx@gentoo.org> radvd-1.1.ebuild:
   Marked ppc stable for bug #245873.
