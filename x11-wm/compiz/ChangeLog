@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.38 2009/04/03 10:59:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.39 2009/04/25 15:33:24 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org> compiz-0.8.2.ebuild:
+  Marking compiz-0.8.2 ~ppc64 for bug 246804
 
 *compiz-0.8.2 (03 Apr 2009)
 
