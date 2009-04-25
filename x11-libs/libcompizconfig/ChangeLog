@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libcompizconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.15 2009/04/25 15:33:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libcompizconfig/ChangeLog,v 1.16 2009/04/25 16:05:04 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org> libcompizconfig-0.8.2.ebuild:
+  Marking libcompizconfig-0.8.2 ~ppc for bug 246804
 
   25 Apr 2009; Brent Baude <ranger@gentoo.org> libcompizconfig-0.8.2.ebuild:
   Marking libcompizconfig-0.8.2 ~ppc64 for bug 246804
