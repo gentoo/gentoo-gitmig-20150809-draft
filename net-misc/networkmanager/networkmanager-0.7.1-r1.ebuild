@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1.ebuild,v 1.3 2009/04/24 22:28:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r1.ebuild,v 1.1 2009/04/25 14:27:22 rbu Exp $
 
 EAPI="2"
 inherit eutils
@@ -13,6 +13,7 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2"
+
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -62,6 +63,9 @@ src_prepare() {
 	# bug #266982
 	epatch "${FILESDIR}/${PN}-0.7.0-gentoo-dhclient.patch"
 
+	# bug #267349
+	epatch "${FILESDIR}/${PN}-0.7.1-bad-link.patch"
+
 #	EPATCH_SOURCE="${WORKDIR}/modem-manager-patchset-0.7.1"
 #	EPATCH_SUFFIX="patch"
 #	use modemmanager && epatch && eautoreconf
@@ -69,10 +73,11 @@ src_prepare() {
 }
 
 src_configure() {
-	ECONF="--disable-more-warnings \
-		--localstatedir=/var \
-		--with-distro=gentoo \
+	ECONF="--disable-more-warnings
+		--localstatedir=/var
+		--with-distro=gentoo
 		--with-dbus-sys=/etc/dbus-1/system.d
+		--with-udev-dir=/etc/udev
 		$(use_enable doc gtk-doc)
 		$(use_with doc docs)
 		$(use_with resolvconf)"

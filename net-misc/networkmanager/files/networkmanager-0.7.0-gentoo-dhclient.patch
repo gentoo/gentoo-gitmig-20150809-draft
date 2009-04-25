@@ -1,7 +1,17 @@
-diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN NetworkManager-0.7.0.orig/src/dhcp-manager/nm-dhcp-dhclient.c NetworkManager-0.7.0/src/dhcp-manager/nm-dhcp-dhclient.c
---- NetworkManager-0.7.0.orig/src/dhcp-manager/nm-dhcp-dhclient.c	2008-11-12 16:29:43.000000000 -0500
-+++ NetworkManager-0.7.0/src/dhcp-manager/nm-dhcp-dhclient.c	2009-04-21 11:38:18.000000000 -0400
-@@ -161,6 +161,8 @@ create_dhclient_config (NMDHCPDevice *de
+From 33547b8d8b64a10187b9c452eef7325d909889a1 Mon Sep 17 00:00:00 2001
+From: Daniel Gryniewicz <dang@gentoo.org>
+Date: Thu, 23 Apr 2009 10:42:43 -0400
+Subject: [PATCH] dhcp: use correct dhclient config file location for Gentoo (bgo #579737)
+
+---
+ src/dhcp-manager/nm-dhcp-dhclient.c |    2 ++
+ 1 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/dhcp-manager/nm-dhcp-dhclient.c b/src/dhcp-manager/nm-dhcp-dhclient.c
+index 946be0c..34b36f1 100644
+--- a/src/dhcp-manager/nm-dhcp-dhclient.c
++++ b/src/dhcp-manager/nm-dhcp-dhclient.c
+@@ -167,6 +167,8 @@ create_dhclient_config (NMDHCPDevice *device, NMSettingIP4Config *s_ip4)
  	orig = g_strdup (SYSCONFDIR "/dhclient.conf");
  #elif defined(TARGET_DEBIAN)
  	orig = g_strdup (SYSCONFDIR "/dhcp3/dhclient.conf");
@@ -10,5 +20,6 @@ diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN NetworkManager-0.7.0.ori
  #else
  	orig = g_strdup_printf (SYSCONFDIR "/dhclient-%s.conf", device->iface);
  #endif
-Files NetworkManager-0.7.0.orig/src/dhcp-manager/.nm-dhcp-manager.c.swp and NetworkManager-0.7.0/src/dhcp-manager/.nm-dhcp-manager.c.swp differ
-Files NetworkManager-0.7.0.orig/src/named-manager/.nm-named-manager.c.swp and NetworkManager-0.7.0/src/named-manager/.nm-named-manager.c.swp differ
+-- 
+1.6.2
+

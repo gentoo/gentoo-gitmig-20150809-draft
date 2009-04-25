@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.41 2009/04/24 12:26:41 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.42 2009/04/25 14:27:22 rbu Exp $
+
+*networkmanager-0.7.1-r1 (25 Apr 2009)
+
+  25 Apr 2009; Robert Buchholz <rbu@gentoo.org>
+  files/networkmanager-0.7.0-gentoo-dhclient.patch,
+  +files/networkmanager-0.7.1-bad-link.patch, -networkmanager-0.7.1.ebuild,
+  +networkmanager-0.7.1-r1.ebuild:
+  Fix bug #267349 by Daniel Gryniewicz, NetworkManager-0.7 links against
+  installed version of nm-util, specify udev directory for bug #267168.
 
   24 Apr 2009; Robert Buchholz <rbu@gentoo.org>
   +networkmanager-0.6.5_p20070823.ebuild:
