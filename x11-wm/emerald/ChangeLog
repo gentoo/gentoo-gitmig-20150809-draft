@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/emerald
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.25 2009/04/11 17:30:02 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/emerald/ChangeLog,v 1.26 2009/04/25 15:33:04 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking emerald-0.8.2 ~ppc64 for bug 246804
 
   11 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -emerald-0.7.8.ebuild:
