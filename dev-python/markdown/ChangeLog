@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/markdown
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.1 2009/04/25 17:14:14 patrick Exp $
+
+*markdown-2.0 (25 Apr 2009)
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +markdown-2.0.ebuild:
+  Initial import. Fixes #156999. Thanks to Naoaki Shindo, Torsten Rehn and
+  Priit Laes for working on the ebuild.
+
