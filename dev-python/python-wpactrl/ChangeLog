@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-wpactrl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.1 2009/04/25 04:10:55 darkside Exp $
+
+*python-wpactrl-20081102 (25 Apr 2009)
+
+  25 Apr 2009; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
+  +python-wpactrl-20081102.ebuild:
+  Initial ebuild of dev-python/python-wpactrl, written by myself.
+
