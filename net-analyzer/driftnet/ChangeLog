@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/driftnet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.34 2008/05/16 18:23:23 nixnut Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.35 2009/04/25 13:25:16 rbu Exp $
+
+*driftnet-0.1.6_p20090401 (25 Apr 2009)
+
+  25 Apr 2009; Robert Buchholz <rbu@gentoo.org> metadata.xml,
+  +driftnet-0.1.6_p20090401.ebuild:
+  Bump to a forked bugfix release, fixes bug #257717 (driftnet does not display
+  any pictures). Remove bindnow-flags (bug #226985 by Diego E. 'Flameeyes'
+  Pettenò).
 
   16 May 2008; nixnut <nixnut@gentoo.org> driftnet-0.1.6-r4.ebuild:
   Stable on ppc wrt bug 222289

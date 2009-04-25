@@ -2,5 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>netmon</herd>
+<maintainer>
+  <email>rbu@gentoo.org</email>
+  <name>Robert Buchholz</name>
+</maintainer>
 <longdescription>A program which listens to network traffic and picks out images from TCP streams it observes</longdescription>
 </pkgmetadata>
