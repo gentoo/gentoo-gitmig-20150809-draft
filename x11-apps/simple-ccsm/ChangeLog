@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/simple-ccsm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/ChangeLog,v 1.6 2009/04/25 15:32:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/simple-ccsm/ChangeLog,v 1.7 2009/04/25 16:03:35 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org> simple-ccsm-0.8.2.ebuild:
+  Marking simple-ccsm-0.8.2 ~ppc for bug 246804
 
   25 Apr 2009; Brent Baude <ranger@gentoo.org> simple-ccsm-0.8.2.ebuild:
   Marking simple-ccsm-0.8.2 ~ppc64 for bug 246804
