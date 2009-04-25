@@ -1,0 +1,13 @@
+# ChangeLog for media-libs/mediastreamer
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.6 2009/04/25 00:29:08 volkmar Exp $
+
+*mediastreamer-2.2.3 (25 Apr 2009)
+
+  25 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/mediastreamer-2.2.3-arts.patch,
+  +files/mediastreamer-2.2.3-autodeps.patch, +metadata.xml,
+  +mediastreamer-2.2.3.ebuild:
+  Initial commit. Actually, new-born (and bump) for this package removed a few
+  months ago.
+

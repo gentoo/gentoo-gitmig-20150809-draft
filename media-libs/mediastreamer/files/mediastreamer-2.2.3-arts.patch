@@ -1,0 +1,32 @@
+--- configure.ac.old	2009-04-24 12:06:10.000000000 -0400
++++ configure.ac	2009-04-24 12:12:35.000000000 -0400
+@@ -210,15 +210,11 @@
+ 	],[
+ 		dnl Old detection
+ 		if test x$artsc = xtrue ; then
+-			AC_CHECK_HEADERS(kde/artsc/artsc.h,
+-				[ AC_CHECK_LIB(artsc,arts_init, 
+-					[ ARTS_LIBS="-lartsc"
+-					arts_enabled=true
+-					])
+-				]
+-			)
++			MS_CHECK_DEP([ARTS],[ARTS],[/usr/kde/3.5/include],[/usr/kde/3.5/lib],[artsc/artsc.h],[artsc],[arts_init])
++			if test "$ARTS_found" = "yes"; then
++				arts_enabled=true
++			fi
+ 		fi
+-		AC_SUBST(ARTS_LIBS)
+ 	])
+ fi
+ 
+--- src/Makefile.am.old	2009-04-22 23:09:57.000000000 -0400
++++ src/Makefile.am	2009-04-22 23:10:06.000000000 -0400
+@@ -126,6 +126,7 @@
+                 $(ORTP_CFLAGS)   \
+ 		$(SPEEX_CFLAGS)  \
+ 		$(GSM_CFLAGS)    \
++		$(ARTS_CFLAGS)   \
+ 		$(STRICT_OPTIONS)
+ 
+ if BUILD_VIDEO
