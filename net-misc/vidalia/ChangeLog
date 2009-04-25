@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vidalia
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.9 2008/08/11 23:11:29 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.10 2009/04/25 23:51:20 patrick Exp $
+
+*vidalia-0.1.12 (25 Apr 2009)
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org> +vidalia-0.1.12.ebuild:
+  Bump to 0.1.12, fixes #236974
 
 *vidalia-0.1.7 (11 Aug 2008)
 
