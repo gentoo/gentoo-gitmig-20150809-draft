@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.6 2009/01/17 14:34:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freelords/freelords-0.3.8.ebuild,v 1.7 2009/04/25 23:59:18 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -20,15 +20,13 @@ RDEPEND="dev-libs/expat
 	media-libs/sdl-image
 	>=media-libs/freetype-2
 	>=media-libs/paragui-1.1.8
-	=dev-libs/libsigc++-1.2*
+	dev-libs/libsigc++:1.2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e '/locale/s:$(datadir):/usr/share:' \
 		-e '/locale/s:$(prefix):/usr:' \
@@ -36,16 +34,15 @@ src_unpack() {
 		-e '/freelords.desktop/d' \
 		$(find -name 'Makefile.in*') \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--disable-paraguitest \
 		$(use_enable editor) \
-		$(use_enable nls) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable nls)
 }
 
 src_install() {

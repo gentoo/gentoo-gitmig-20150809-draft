@@ -1,0 +1,87 @@
+diff -ur freelords-0.3.8/work/freelords-0.3.8/src/ArmyInfo.h xlords/src/ArmyInfo.h
+--- freelords-0.3.8/work/freelords-0.3.8/src/ArmyInfo.h	2007-05-02 23:40:55.000000000 +0200
++++ xlords/src/ArmyInfo.h	2009-04-23 14:16:51.000000000 +0200
+@@ -55,6 +55,8 @@
+           */
+ 	static void setPressable(ArmyInfo* armyinfo, bool pressable = true)
+         {armyinfo->d_pressable = pressable;}
++	static void enablePressable(ArmyInfo* armyinfo)
++        {setPressable(armyinfo, true);}
+ 
+ 	private:
+ 		// EVENT HANDLER
+diff -ur freelords-0.3.8/work/freelords-0.3.8/src/Threatlist.cpp xlords/src/Threatlist.cpp
+--- freelords-0.3.8/work/freelords-0.3.8/src/Threatlist.cpp	2007-05-02 23:40:55.000000000 +0200
++++ xlords/src/Threatlist.cpp	2009-04-23 14:07:04.000000000 +0200
+@@ -12,6 +12,7 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ 
++#include <algorithm>
+ #include <iostream>
+ 
+ #include "Threatlist.h"
+@@ -226,7 +227,7 @@
+ 
+ bool Threatlist::flRemove(Threat* object)
+ {
+-    iterator threatit = find(begin(), end(), object);
++    iterator threatit = std::find(begin(), end(), object);
+     if (threatit != end())
+     {
+         delete object;
+diff -ur freelords-0.3.8/work/freelords-0.3.8/src/stackinfo.cpp xlords/src/stackinfo.cpp
+--- freelords-0.3.8/work/freelords-0.3.8/src/stackinfo.cpp	2007-05-02 23:40:56.000000000 +0200
++++ xlords/src/stackinfo.cpp	2009-04-23 14:16:53.000000000 +0200
+@@ -71,7 +71,7 @@
+         if (selected == 1) ArmyInfo::setPressable(d_armyinfovector[last_selected_army], false);
+         else
+     {
+-        for_each(d_armyinfovector.begin(), d_armyinfovector.end(), ArmyInfo::setPressable);
++        std::for_each(d_armyinfovector.begin(), d_armyinfovector.end(), ArmyInfo::enablePressable);
+     }
+ }
+ 
+diff -ur freelords-0.3.8/work/freelords-0.3.8/src/stacklist.cpp xlords/src/stacklist.cpp
+--- freelords-0.3.8/work/freelords-0.3.8/src/stacklist.cpp	2007-05-02 23:40:56.000000000 +0200
++++ xlords/src/stacklist.cpp	2009-04-23 14:06:30.000000000 +0200
+@@ -12,6 +12,8 @@
+ //  along with this program; if not, write to the Free Software
+ //  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ 
++#include <algorithm>
++
+ #include "stacklist.h"
+ #include "stack.h"
+ #include "path.h"
+@@ -333,7 +335,7 @@
+ bool Stacklist::flRemove(Stack* object)
+ {
+     debug("removing stack with id " << object->getId() << endl);
+-    iterator stackit = find(begin(), end(), object);
++    iterator stackit = std::find(begin(), end(), object);
+     if (stackit != end())
+     {
+         if (d_activestack == object)
+diff -ur freelords-0.3.8/work/freelords-0.3.8/src/stacklist.h xlords/src/stacklist.h
+--- freelords-0.3.8/work/freelords-0.3.8/src/stacklist.h	2007-05-02 23:40:56.000000000 +0200
++++ xlords/src/stacklist.h	2009-04-23 14:05:44.000000000 +0200
+@@ -15,6 +15,7 @@
+ #ifndef STACKLIST_H
+ #define STACKLIST_H
+ 
++#include <string>
+ #include <list>
+ #include <pgmessageobject.h>
+ #include <sigc++/object_slot.h>
+diff -ur freelords-0.3.8/work/freelords-0.3.8/src/utils/extractv.cpp xlords/src/utils/extractv.cpp
+--- freelords-0.3.8/work/freelords-0.3.8/src/utils/extractv.cpp	2007-05-02 23:41:02.000000000 +0200
++++ xlords/src/utils/extractv.cpp	2009-04-23 14:18:26.000000000 +0200
+@@ -15,6 +15,7 @@
+ //  Andrea Paternesi 17/02/2005
+ 
+ #include <stdio.h>
++#include <string.h>
+ #include <string>
+ #include <vector>
+ #include <iostream>
