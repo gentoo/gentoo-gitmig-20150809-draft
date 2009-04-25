@@ -1,6 +1,7 @@
---- libipt_ipp2p.c.old	2009-04-08 18:03:26.574089860 +0200
-+++ libipt_ipp2p.c	2009-04-08 18:03:42.871884390 +0200
-@@ -88,39 +88,39 @@
+diff -Nru ipp2p-0.8.2.orig/libipt_ipp2p.c ipp2p-0.8.2/libipt_ipp2p.c
+--- ipp2p-0.8.2.orig/libipt_ipp2p.c	2009-04-25 11:05:43.000000000 +0000
++++ ipp2p-0.8.2/libipt_ipp2p.c	2009-04-25 11:06:54.000000000 +0000
+@@ -85,39 +85,39 @@
      switch (c) {
  	case '1':		/*cmd: ipp2p*/
  	    if ((*flags & SHORT_HAND_IPP2P) == SHORT_HAND_IPP2P)
@@ -49,7 +50,7 @@
  	    *flags += IPP2P_EDK;
  	    info->cmd = *flags;	    
  	    break;
-@@ -128,21 +128,21 @@
+@@ -125,21 +125,21 @@
  
  	case '7':		/*cmd: dc*/
              if ((*flags & IPP2P_DC) == IPP2P_DC)
@@ -76,7 +77,7 @@
              *flags += IPP2P_DC;
  	    info->cmd = *flags;
  	    break;
-@@ -150,70 +150,70 @@
+@@ -147,70 +147,70 @@
  
  	case '9':		/*cmd: gnu*/
              if ((*flags & IPP2P_GNU) == IPP2P_GNU)
@@ -163,7 +164,7 @@
              *flags += IPP2P_APPLE;
  	    info->cmd = *flags;
  	    break;																											
-@@ -221,14 +221,14 @@
+@@ -218,14 +218,14 @@
  
  	case 'd':		/*cmd: soul*/
              if ((*flags & IPP2P_SOUL) == IPP2P_SOUL)
@@ -181,7 +182,7 @@
              *flags += IPP2P_SOUL;
  	    info->cmd = *flags;
  	    break;																											
-@@ -236,67 +236,67 @@
+@@ -233,67 +233,67 @@
  
  	case 'e':		/*cmd: winmx*/
              if ((*flags & IPP2P_WINMX) == IPP2P_WINMX)
@@ -263,7 +264,7 @@
  //	    "\nipp2p-parameter problem: for ipp2p usage type: iptables -m ipp2p --help\n");
  	    return 0;
      }
-@@ -308,7 +308,7 @@
+@@ -305,7 +305,7 @@
  final_check(unsigned int flags)
  {
      if (!flags)
@@ -272,3 +273,12 @@
  	    "\nipp2p-parameter problem: for ipp2p usage type: iptables -m ipp2p --help\n");
  }
  
+@@ -378,7 +378,7 @@
+     .next           = NULL,
+     .name           = "ipp2p",
+     .family         = PF_INET,
+-    .version        = IPTABLES_VERSION,
++    .version        = XTABLES_VERSION,
+     .size           = XT_ALIGN(sizeof(struct ipt_p2p_info)),
+     .userspacesize  = XT_ALIGN(sizeof(struct ipt_p2p_info)),
+     .help           = &help,
