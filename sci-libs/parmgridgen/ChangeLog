@@ -1,0 +1,25 @@
+# ChangeLog for sci-libs/parmgridgen
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmgridgen/ChangeLog,v 1.1 2009/04/25 16:04:22 patrick Exp $
+
+*parmgridgen-1.0 (25 Apr 2009)
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/parmgridgen-1.0-autotools.patch, +metadata.xml,
+  +parmgridgen-1.0.ebuild:
+  Initial import from sunrise overlay. Dependency of OpenFoam. Thanks to
+  Oliver Borm for the ebuild
+
+  19 Jan 2009; Christian Ruppert (idl0r) <spooky85@gmail.com>
+  parmgridgen-1.0.ebuild:
+  Add suggested RDEPEND=${DEPEND}, add die statement.
+
+  20 Jul 2008; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  parmgridgen-1.0.ebuild:
+  Use dodoc
+
+  20 Jul 2008; Oliver Borm (boroli) <oli.borm@web.de>
+  +parmgridgen-1.0.ebuild, +files/parmgridgen-1.0-autotools.patch,
+  +metadata.xml:
+  New ebuild for bug 232491.
+
