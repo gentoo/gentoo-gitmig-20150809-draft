@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.9.1-r3.ebuild,v 1.9 2009/04/25 02:25:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.9.2-r1.ebuild,v 1.1 2009/04/25 02:25:43 dirtyepic Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ BASE_P="${PN}-${BASE_PV}"
 # docs, and are released more frequently than wxGTK.
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="X doc debug gnome gstreamer odbc opengl pch sdl"
 
 RDEPEND="
@@ -57,11 +57,12 @@ LICENSE="wxWinLL-3
 S="${WORKDIR}/wxPython-src-${PV}"
 
 src_prepare() {
+	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-2.6.3-unicode-odbc.patch
 	epatch "${FILESDIR}"/${PN}-2.8.8-collision.patch
 	epatch "${FILESDIR}"/${PN}-2.8.6-wxrc_link_fix.patch
-	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch			# Bug #174874
-	epatch "${FILESDIR}"/${PN}-2.8.9-dont-touch-my-bools.patch	# Bug #245973
+	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch              # Bug #174874
+	epatch "${FILESDIR}"/${P}-nestedtables.patch               # Bug #264544
 }
 
 src_configure() {
@@ -75,11 +76,14 @@ src_configure() {
 			--enable-unicode
 			--with-regex=builtin
 			--with-zlib=sys
-			--with-expat
+			--with-expat=sys
 			$(use_enable debug)
 			$(use_enable pch precomp-headers)
-			$(use_with sdl)
-			$(use_with odbc)"
+			$(use_with sdl)"
+
+	use odbc \
+		&& myconf="${myconf} --with-odbc=sys" \
+		|| myconf="${myconf} $(use_with odbc)"
 
 	# wxGTK options
 	#   --enable-graphics_ctx - needed for webkit, editra
@@ -89,10 +93,10 @@ src_configure() {
 		myconf="${myconf}
 			--enable-graphics_ctx
 			--enable-gui
-			--with-libpng
-			--with-libxpm
-			--with-libjpeg
-			--with-libtiff
+			--with-libpng=sys
+			--with-libxpm=sys
+			--with-libjpeg=sys
+			--with-libtiff=sys
 			$(use_enable gstreamer mediactrl)
 			$(use_enable opengl)
 			$(use_with opengl)
