@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-kconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.12 2009/04/25 15:33:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/ChangeLog,v 1.13 2009/04/25 16:04:41 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org>
+  compizconfig-backend-kconfig-0.8.2.ebuild:
+  Marking compizconfig-backend-kconfig-0.8.2 ~ppc for bug 246804
 
   25 Apr 2009; Brent Baude <ranger@gentoo.org>
   compizconfig-backend-kconfig-0.8.2.ebuild:
