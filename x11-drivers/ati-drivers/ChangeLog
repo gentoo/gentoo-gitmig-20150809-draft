@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.154 2009/04/23 04:54:54 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.155 2009/04/25 07:24:52 je_fro Exp $
+
+*ati-drivers-8.552-r3 (25 Apr 2009)
+
+  25 Apr 2009; Jeff Gardner <je_fro@gentoo.org>
+  +ati-drivers-8.552-r3.ebuild:
+  Make authatieventsd.sh executable in older versions, thanks again to Uros
+  in bug #242582.
 
   23 Apr 2009; Jeff Gardner <je_fro@gentoo.org> ati-drivers-8.573-r1,
   ati-drivers-8.582:
