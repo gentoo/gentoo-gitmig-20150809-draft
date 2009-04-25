@@ -1,12 +1,12 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.4 2009/03/16 19:14:06 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.5 2009/04/25 12:35:22 iluxa Exp $
 
 EAPI=1
 
 inherit eutils flag-o-matic multilib
 
-IUSE="fltk odbc doc sqlite examples excel postgres aspell mysql"
+IUSE="fltk odbc doc sqlite excel postgres aspell mysql"
 
 DESCRIPTION="C++ user interface toolkit for X with database and Excel support"
 SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
@@ -41,7 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-	sptk_use_enable examples EXAMPLES
 	sptk_use_enable postgres POSTGRESQL
 	sptk_use_enable mysql    MYSQL
 	sptk_use_enable sqlite   SQLITE3
@@ -50,7 +49,7 @@ src_compile() {
 	sptk_use_enable fltk     FLTK
 	sptk_use_enable excel    EXCEL
 
-	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} .  || die "Configuration Failed"
+	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} -DNO_EXAMPLES:BOOLEAN=TRUE .  || die "Configuration Failed"
 
 	emake || die "Parallel Make Failed"
 
