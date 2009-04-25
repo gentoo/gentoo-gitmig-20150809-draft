@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/compizconfig-backend-gconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.11 2009/04/25 15:32:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-gconf/ChangeLog,v 1.12 2009/04/25 16:04:19 ranger Exp $
+
+  25 Apr 2009; Brent Baude <ranger@gentoo.org>
+  compizconfig-backend-gconf-0.8.2.ebuild:
+  Marking compizconfig-backend-gconf-0.8.2 ~ppc for bug 246804
 
   25 Apr 2009; Brent Baude <ranger@gentoo.org>
   compizconfig-backend-gconf-0.8.2.ebuild:
