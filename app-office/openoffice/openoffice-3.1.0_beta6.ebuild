@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.0_beta6.ebuild,v 1.1 2009/04/25 11:37:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.0_beta6.ebuild,v 1.2 2009/04/25 11:49:54 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -69,6 +69,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXaw
 	x11-libs/libXinerama
+	x11-libs/libXrandr
 	>=dev-lang/perl-5.0
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	gnome? ( >=x11-libs/gtk+-2.10
@@ -371,7 +372,7 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	bash-completion_pkg_postinst
 
-	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/${BASIS}/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/${BASIS}/program/soffice.bin
+	[[ -x /sbin/chpax ]] && [[ -e /usr/$(get_libdir)/openoffice/program/soffice.bin ]] && chpax -zm /usr/$(get_libdir)/openoffice/program/soffice.bin
 
 	# Add available & useful jars to openoffice classpath
 	use java && /usr/$(get_libdir)/openoffice/${BASIS}/program/java-set-classpath $(java-config --classpath=jdbc-mysql 2>/dev/null) >/dev/null

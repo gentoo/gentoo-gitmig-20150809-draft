@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.455 2009/04/25 11:37:21 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.456 2009/04/25 11:49:54 suka Exp $
+
+  25 Apr 2009; Andreas Proschofsky <suka@gentoo.org> openoffice-3.1.0_beta6:
+  Add missing dependency on libXrandr, bug #266331 and fix pax check, bug
+  #258051
 
 *openoffice-3.1.0_beta6 (25 Apr 2009)
 
