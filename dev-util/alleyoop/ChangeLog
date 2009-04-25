@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/alleyoop
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.13 2007/01/03 08:18:21 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/ChangeLog,v 1.14 2009/04/25 20:05:10 patrick Exp $
+
+*alleyoop-0.9.5 (25 Apr 2009)
+
+  25 Apr 2009; Patrick Lauer <patrick@gentoo.org> +alleyoop-0.9.5.ebuild:
+  Bump to 0.9.5, fixes #267462
 
   03 Jan 2007; Christian Faulhammer <opfer@gentoo.org>
   alleyoop-0.9.2.ebuild:
