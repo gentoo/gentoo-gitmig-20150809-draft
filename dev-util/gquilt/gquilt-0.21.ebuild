@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.21.ebuild,v 1.1 2009/04/25 20:57:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gquilt/gquilt-0.21.ebuild,v 1.2 2009/04/25 21:35:37 patrick Exp $
 
 inherit python
 
@@ -36,7 +36,7 @@ pkg_postinst() {
 	python_mod_optimize /usr/share/gquilt
 }
 
-pkg_prerm() {
+pkg_postrm() {
 	python_version
 	python_mod_cleanup /usr/share/gquilt
 }
