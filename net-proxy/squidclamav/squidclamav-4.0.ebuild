@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-3.5.ebuild,v 1.1 2008/05/14 22:10:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidclamav/squidclamav-4.0.ebuild,v 1.1 2009/04/25 09:44:42 mrness Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -17,12 +19,9 @@ DEPEND="net-misc/curl
 	dev-libs/openssl
 	sys-libs/zlib
 	app-arch/bzip2"
-RDEPEND="${DEPEND}
-	net-proxy/squid"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 }
 
