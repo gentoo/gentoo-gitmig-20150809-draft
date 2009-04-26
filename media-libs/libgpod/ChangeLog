@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgpod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.58 2009/04/26 16:02:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/ChangeLog,v 1.59 2009/04/26 16:12:14 tester Exp $
+
+  26 Apr 2009; Olivier Crête <tester@gentoo.org> libgpod-0.7.2.ebuild:
+  Add undocumented build-time dep on xsltproc
 
 *libgpod-0.7.2 (26 Apr 2009)
 
