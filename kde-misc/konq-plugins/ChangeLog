@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/konq-plugins
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.1 2009/04/26 11:29:44 tampakrap Exp $
+
+*konq-plugins-4.2.2 (26 Apr 2009)
+
+  26 Apr 2009; Theo Chatzimichos <tampakrap@gentoo.org> +metadata.xml,
+  +konq-plugins-4.2.2.ebuild:
+  moving konq-plugins from kde-base to kde-misc
+
