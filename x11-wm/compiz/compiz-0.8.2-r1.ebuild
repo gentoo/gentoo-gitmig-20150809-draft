@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.2-r1.ebuild,v 1.1 2009/04/26 11:46:25 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.2-r1.ebuild,v 1.2 2009/04/26 13:59:27 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -137,6 +137,10 @@ src_install() {
 
 	insinto "/usr/share/applications"
 	doins "${FILESDIR}/compiz.desktop" || die "Failed to install compiz.desktop"
+}
+
+pkg_preinst() {
+	use gnome && gnome2_gconf_savelist
 }
 
 pkg_postinst() {
