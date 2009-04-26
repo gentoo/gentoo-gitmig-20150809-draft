@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liblinebreak
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/ChangeLog,v 1.1 2009/02/02 22:22:33 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblinebreak/ChangeLog,v 1.2 2009/04/26 14:18:31 ranger Exp $
+
+  26 Apr 2009; Brent Baude <ranger@gentoo.org> liblinebreak-1.0.ebuild:
+  Marking liblinebreak-1.0 ~ppc for bug 264733
 
 *liblinebreak-1.0 (02 Feb 2009)
 
