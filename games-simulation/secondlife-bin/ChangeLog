@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.17 2009/04/16 19:42:28 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.18 2009/04/26 17:46:55 lavajoe Exp $
+
+*secondlife-bin-1.22.11 (26 Apr 2009)
+
+  26 Apr 2009; Joe Peterson <lavajoe@gentoo.org>
+  +files/secondlife-bin-1.22.11-amd64-audio-streaming-fix.patch,
+  +secondlife-bin-1.22.11.ebuild:
+  Add new official release 1.22.11
 
 *secondlife-bin-1.22_rc11-r1 (16 Apr 2009)
 

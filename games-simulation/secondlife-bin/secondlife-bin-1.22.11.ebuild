@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.21.6.ebuild,v 1.3 2009/04/26 17:46:55 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22.11.ebuild,v 1.1 2009/04/26 17:46:55 lavajoe Exp $
 
 inherit eutils multilib games
 
-SECONDLIFE_REVISION=99587
+SECONDLIFE_REVISION=113941
 MY_P="SecondLife-i686-${PV}.${SECONDLIFE_REVISION}"
 
 DESCRIPTION="The Second Life (an online, 3D virtual world) viewer"
@@ -14,29 +14,30 @@ RESTRICT="mirror strip"
 
 LICENSE="GPL-2-with-Linden-Lab-FLOSS-exception"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
+# Note, used to RDEPEND on:
+# media-fonts/kochi-substitute
 RDEPEND="sys-libs/glibc
-	media-fonts/kochi-substitute
-	x86? (
-		x11-libs/libX11
-		x11-libs/libXau
-		x11-libs/libXdmcp
-		x11-libs/libXext
-		dev-libs/libgcrypt
-		dev-libs/libgpg-error
-		dev-libs/openssl
-		media-libs/freetype
-		media-libs/libogg
-		media-libs/libsdl
-		media-libs/libvorbis
-		net-libs/gnutls
-		net-misc/curl
-		sys-libs/zlib
-		virtual/glu
-		virtual/opengl
-	)
+	sys-apps/dbus
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	dev-libs/libgcrypt
+	dev-libs/libgpg-error
+	dev-libs/openssl
+	media-libs/freetype
+	media-libs/libogg
+	media-libs/libsdl
+	media-libs/libvorbis
+	media-libs/gstreamer
+	net-libs/gnutls
+	net-misc/curl
+	sys-libs/zlib
+	virtual/glu
+	virtual/opengl
 	amd64? (
 		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-gtklibs
@@ -60,8 +61,19 @@ QA_EXECSTACK="${SECONDLIFE_HOME:1}/bin/do-not-directly-run-secondlife-bin
 	${SECONDLIFE_HOME:1}/app_settings/mozilla-runtime-linux-i686/libxul.so"
 
 pkg_setup() {
+	games_pkg_setup
+
 	# x86 binary package, ABI=x86
 	has_multilib_profile && ABI="x86"
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# On 64-bit systems, we need to uncomment LL_BAD_OPENAL_DRIVER=x
+	# to fix streaming audio.
+	use amd64 && epatch "${FILESDIR}"/${P}-amd64-audio-streaming-fix.patch
 }
 
 src_install() {
@@ -80,7 +92,7 @@ src_install() {
 	insinto "${SECONDLIFE_HOME}"
 	doins -r * || die "doins * failed"
 
-	dosym /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf "${SECONDLIFE_HOME}"/unicode.ttf
+	#dosym /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf "${SECONDLIFE_HOME}"/unicode.ttf
 
 	games_make_wrapper secondlife-bin "./secondlife --set VersionChannelName Gentoo" "${SECONDLIFE_HOME}" "${SECONDLIFE_HOME}"/lib
 	make_desktop_entry secondlife-bin "Second Life" /opt/secondlife/secondlife_icon.png
