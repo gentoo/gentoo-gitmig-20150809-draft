@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyro
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.15 2007/06/05 08:05:41 lucass Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.16 2009/04/26 14:52:33 patrick Exp $
+
+*pyro-3.9 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org> +pyro-3.9.ebuild:
+  Bump to 3.9, fixes #267550
 
 *pyro-3.7 (05 Jun 2007)
 
