@@ -2,4 +2,13 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>python</herd>
+        <herd>no-herd</herd>
+        <maintainer>
+                <email>patrick@gentoo.org</email>
+                <name>Patrick Lauer</name>
+        </maintainer>
+	<maintainer>
+		<email>oli.borm@web.de</email>
+		<name>Oliver Borm</name>
+	</maintainer>
 </pkgmetadata>
