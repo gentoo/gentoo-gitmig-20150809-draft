@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/kanyremote-5.8.2.ebuild,v 1.1 2009/04/20 11:48:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/kanyremote-5.8.2.ebuild,v 1.2 2009/04/26 11:43:22 hwoarang Exp $
 
 EAPI="2"
 
@@ -17,7 +17,8 @@ IUSE="bluetooth"
 
 DEPEND=">=net-misc/anyremote-4.4[bluetooth=]
 	 >=dev-python/PyQt-3.17
-	 >=dev-python/pykde-3.16"
+	 >=dev-python/pykde-3.16
+	 bluetooth? ( dev-python/pybluez )"
 RDEPEND="${DEPEND}"
 
 src_install() {
