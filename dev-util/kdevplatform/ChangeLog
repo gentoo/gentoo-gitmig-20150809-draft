@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevplatform
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.4 2009/03/26 20:20:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/ChangeLog,v 1.5 2009/04/26 01:51:35 zmedico Exp $
+
+  26 Apr 2009; Zac Medico <zmedico@gentoo.org> kdevplatform-0.9.91.ebuild:
+  Block dev-util/kdevelop:0 due to file collision with
+  /usr/share/apps/kdevappwizard/kdevappwizard.rc.
 
   26 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdevplatform-0.9.91.ebuild:
