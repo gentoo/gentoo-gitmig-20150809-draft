@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ignuit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.3 2009/04/18 19:11:23 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ChangeLog,v 1.4 2009/04/26 14:38:50 ranger Exp $
+
+  26 Apr 2009; Brent Baude <ranger@gentoo.org> ignuit-0.0.14.ebuild:
+  Marking ignuit-0.0.14 ~ppc for bug 267390
 
 *ignuit-0.0.14 (18 Apr 2009)
 
