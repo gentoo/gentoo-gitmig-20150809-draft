@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.47 2009/04/18 06:17:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.48 2009/04/26 18:32:54 serkan Exp $
+
+*pilot-link-0.12.3-r2 (26 Apr 2009)
+
+  26 Apr 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/pilot-link-0.12.3-respect-javacflags.patch,
+  +pilot-link-0.12.3-r2.ebuild:
+  Revbump to add patch for respecting JAVACFLAGS. Fixes bug #267445.
 
   18 Apr 2009; Jeroen Roovers <jer@gentoo.org> pilot-link-0.12.3-r1:
   Marked ~hppa (bug #260777).
