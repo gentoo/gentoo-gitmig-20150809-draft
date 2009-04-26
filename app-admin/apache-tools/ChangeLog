@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apache-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.56 2009/04/26 14:12:00 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apache-tools/ChangeLog,v 1.57 2009/04/26 16:04:44 armin76 Exp $
+
+  26 Apr 2009; Raúl Porcel <armin76@gentoo.org> apache-tools-2.2.11.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #265705
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> apache-tools-2.2.11.ebuild:
   Marking apache-tools-2.2.11 ppc for bug 265705
