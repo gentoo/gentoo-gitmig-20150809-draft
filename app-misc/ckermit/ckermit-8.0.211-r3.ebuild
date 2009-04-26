@@ -1,8 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r3.ebuild,v 1.1 2007/12/22 14:54:57 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.211-r3.ebuild,v 1.2 2009/04/26 20:00:02 dirtyepic Exp $
 
-inherit versionator multilib
+inherit versionator multilib toolchain-funcs
 
 # Columbia University only uses the third component, e.g. cku211.tar.gz for
 # what we would call 8.0.211.
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e "s:-O:${CFLAGS}:" makefile
+	sed -i -e "s:\"CC\ =\ gcc\":\"CC=$(tc-getCC)\":g" makefile
 
 	# Look for grantpt in the right place - amd64 specific, for #202840
 	stdlibdir=$(get_ml_incdir /usr/include)
@@ -43,14 +44,14 @@ src_install() {
 	dodir /usr/share/man/man1
 
 	emake \
-		DESTDIR=${D} \
+		DESTDIR="${D}" \
 		BINDIR=/usr/bin \
-		MANDIR=${D}/usr/share/man/man1 \
+		MANDIR="${D}"/usr/share/man/man1 \
 		MANEXT=1 \
 		install || die
 
 	# make the correct symlink
-	rm -f ${D}/usr/bin/kermit-sshsub
+	rm -f "${D}"/usr/bin/kermit-sshsub
 	dosym /usr/bin/kermit /usr/bin/kermit-sshsub
 
 	#the ckermit.ini script is calling the wrong kermit binary -- the one
