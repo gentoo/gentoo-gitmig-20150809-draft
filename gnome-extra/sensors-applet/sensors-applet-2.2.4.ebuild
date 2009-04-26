@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.2.ebuild,v 1.1 2009/03/08 11:32:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.4.ebuild,v 1.1 2009/04/26 21:21:27 eva Exp $
 
 EAPI="2"
 
-inherit autotools gnome2 eutils
+inherit gnome2
 
 DESCRIPTION="GNOME panel applet to display readings from hardware sensors"
 HOMEPAGE="http://sensors-applet.sourceforge.net/"
@@ -43,13 +43,4 @@ pkg_setup() {
 		$(use_with lm_sensors libsensors)
 		$(use_enable libnotify)
 		--disable-static"
-}
-
-src_prepare() {
-	# Fix nvidia library detection, bug #221817
-	if use nvidia; then
-		epatch "${FILESDIR}/${P}-nvidia-check.patch"
-		intltoolize --force --copy --automake || die "intltoolize failed"
-		eautoreconf
-	fi
 }
