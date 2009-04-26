@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.40 2009/03/10 22:03:41 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.41 2009/04/26 20:11:16 patrick Exp $
+
+*nero-3.5.2.3 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org> +nero-3.5.2.3.ebuild:
+  Bump to 3.5.3.2, fixes #262609
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> nero-3.5.1.0.ebuild,
   nero-3.5.2.0.ebuild:
