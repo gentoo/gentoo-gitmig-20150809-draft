@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/weberror
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/weberror/ChangeLog,v 1.1 2009/04/26 09:48:13 patrick Exp $
+
+*weberror-0.10.1 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org> +metadata.xml,
+  +weberror-0.10.1.ebuild:
+  Initial import. Dep of #260168, ebuild by PLL
+
