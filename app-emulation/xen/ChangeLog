@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.57 2009/02/28 10:19:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.58 2009/04/26 13:02:31 patrick Exp $
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/xen-3.3.0-warning-fix.patch, xen-3.3.0:
+  Fix gcc 4.3 compile failure, part of #259670
 
   28 Feb 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   custom-cflags is a global USE-flag
