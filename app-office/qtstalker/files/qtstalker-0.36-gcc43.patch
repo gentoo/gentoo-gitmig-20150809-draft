@@ -1,0 +1,29 @@
+--- qtstalker/lib/UpgradeMessage.cpp.orig	2008-04-14 17:59:26.000000000 +0200
++++ qtstalker/lib/UpgradeMessage.cpp	2008-04-14 17:59:59.000000000 +0200
+@@ -32,10 +32,11 @@
+ #include <qfileinfo.h>
+ #include <qdir.h>
+ #include <qfile.h>
+ #include <qpushbutton.h>
+ #include <db.h>
++#include <stdlib.h>
+ 
+ UpgradeMessage::UpgradeMessage (int type) : QTabDialog (0, "UpgradeMessage", TRUE)
+ {
+   switch (type)
+   {
+--- qtstalker/src/IndicatorPage.cpp.orig	2008-04-14 18:06:35.000000000 +0200
++++ qtstalker/src/IndicatorPage.cpp	2008-04-14 18:07:01.000000000 +0200
+@@ -41,11 +41,11 @@
+ #include <qfile.h>
+ #include <qtextstream.h>
+ #include <qinputdialog.h>
+ #include <qmessagebox.h>
+ #include <qtooltip.h>
+-
++#include <stdlib.h>
+ 
+ IndicatorPage::IndicatorPage (QWidget *w, DBIndex *i) : QWidget (w)
+ {
+   chartIndex = i;
+   updateEnableFlag = FALSE;

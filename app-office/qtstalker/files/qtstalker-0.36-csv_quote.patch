@@ -1,0 +1,215 @@
+diff -urN lib/QuotePlugin.cpp.orig lib/QuotePlugin.cpp
+--- lib/QuotePlugin.cpp.orig	2007-09-28 15:05:07.000000000 +0800
++++ lib/QuotePlugin.cpp	2008-07-04 14:57:58.000000000 +0800
+@@ -160,18 +160,26 @@
+   tabs->addTab(w, tr("Timeout"));
+ }
+ 
+-void QuotePlugin::stripJunk (QString &d, QString &s)
++QString QuotePlugin::substituteSep (const QString &str, const QChar &search_sep, const QChar &new_sep)
+ {
+-  s = d.stripWhiteSpace();
++  QString string_copy = str.copy();
+ 
+-  while (1)
++  bool isInBlock = false;
++
++  for (uint i = 0; i < string_copy.length(); i++)
+   {
+-    int p = s.find('"', 0, TRUE);
+-    if (p == -1)
+-      break;
+-    else
+-      s.remove(p, 1);
+-  }
++      if (string_copy[i] == '\"')
++      {
++        isInBlock = !isInBlock;
++        string_copy.remove(i, 1);
++      }
++
++      if ( (!isInBlock) && (string_copy[i] == search_sep) )
++      {
++        string_copy = string_copy.replace(i, 1, new_sep);
++      }
++    }
++  return string_copy;
+ }
+ 
+ bool QuotePlugin::setTFloat (QString &d, bool flag)
+diff -urN lib/QuotePlugin.h.orig lib/QuotePlugin.h
+--- lib/QuotePlugin.h.orig	2007-09-20 10:56:58.000000000 +0800
++++ lib/QuotePlugin.h	2008-07-04 14:58:04.000000000 +0800
+@@ -55,7 +55,7 @@
+     QuotePlugin ();
+     virtual ~QuotePlugin ();
+     bool setTFloat (QString &, bool);
+-    void stripJunk (QString &, QString &);
++    QString substituteSep(const QString &, const QChar &, const QChar &);
+     void createDirectory (QString &, QString &);
+     void getPluginName (QString &);
+     void getHelpFile (QString &);
+diff -urN plugins/quote/CSV/CSV.cpp.orig plugins/quote/CSV/CSV.cpp
+--- plugins/quote/CSV/CSV.cpp.orig	2008-02-19 11:34:26.000000000 +0800
++++ plugins/quote/CSV/CSV.cpp	2008-07-04 14:57:36.000000000 +0800
+@@ -41,7 +41,7 @@
+ CSV::CSV ()
+ {
+   pluginName = "CSV";
+-  delim = ",";
++  delim = ',';
+   helpFile = "csv.html";
+   cancelFlag = FALSE;
+ 
+@@ -259,10 +259,8 @@
+     while(stream.atEnd() == 0)
+     {
+       QString ts = stream.readLine();
+-      QString s;
+-      stripJunk(ts, s);
++      QStringList l = QStringList::split( '\n', substituteSep( ts, delim, '\n' ), FALSE);
+ 
+-      QStringList l = QStringList::split(delim, s, FALSE);
+       lineCount++;
+       if (l.count() != fieldList.count())
+       {
+@@ -272,7 +270,7 @@
+           QString::number(lineCount).latin1(),  l.count(), fieldList.count()
+           );
+         printStatusLogMessage(ss);
+-	continue;
++	    continue;
+       }
+       
+       int fieldLoop;
+@@ -498,25 +496,25 @@
+ {
+   if (! d.compare("Comma"))
+   {
+-    delim = ",";
++    delim = ',';
+     return;
+   }
+ 
+   if (! d.compare("Tab"))
+   {
+-    delim = "	";
++    delim = '\t';
+     return;
+   }
+ 
+   if (! d.compare("Space"))
+   {
+-    delim = " ";
++    delim = ' ';
+     return;
+   }
+ 
+   if (! d.compare("Semicolon"))
+   {
+-    delim = ";";
++    delim = ';';
+     return;
+   }
+ }
+diff -urN plugins/quote/CSV/CSV.h.orig plugins/quote/CSV/CSV.h
+--- plugins/quote/CSV/CSV.h.orig	2007-10-25 16:42:01.000000000 +0800
++++ plugins/quote/CSV/CSV.h	2008-07-04 14:51:08.000000000 +0800
+@@ -66,7 +66,7 @@
+ 
+   private:
+     Config config;
+-    QString delim;
++    QChar delim;
+     FuturesData fd;
+     DbPlugin db;
+     QString symbolOveride;
+diff -urN plugins/quote/NYBOT/NYBOT.cpp.orig plugins/quote/NYBOT/NYBOT.cpp
+--- plugins/quote/NYBOT/NYBOT.cpp.orig	2007-02-04 07:04:37.000000000 +0800
++++ plugins/quote/NYBOT/NYBOT.cpp	2008-07-04 14:56:35.000000000 +0800
+@@ -152,16 +152,12 @@
+   QTextStream stream(&f);
+     
+   QString ts = stream.readLine();
+-  QString s;
+-  stripJunk(ts, s);
+-  QStringList keys = QStringList::split(",", s, FALSE);
++  QStringList keys = QStringList::split( '\n', substituteSep( ts, ',', '\n' ), FALSE);
+ 
+   while(stream.atEnd() == 0)
+   {
+     ts = stream.readLine();
+-    stripJunk(ts, s);
+-
+-    QStringList l = QStringList::split(",", s, FALSE);
++    QStringList l = QStringList::split( '\n', substituteSep( ts, ',', '\n' ), FALSE);
+ 
+     if (l.count() != keys.count())
+       continue;
+@@ -202,6 +198,7 @@
+     }
+ 
+     ts = "dailyOpenPrice1";
++    QString s;
+     data.getData(ts, s);
+     if (s.toFloat() == 0)
+     {
+diff -urN plugins/quote/Yahoo/Yahoo.cpp.orig plugins/quote/Yahoo/Yahoo.cpp
+--- plugins/quote/Yahoo/Yahoo.cpp.orig	2008-04-03 13:54:09.000000000 +0800
++++ plugins/quote/Yahoo/Yahoo.cpp	2008-07-04 14:38:20.000000000 +0800
+@@ -294,7 +294,7 @@
+     return;
+     
+   // strip off the header
+-  QString s = "Date,Open,High,Low,Close";
++  QString s = "Date,Open,High,Low,Close,Volume,Adj Close\n";
+   int p = data.find(s, 0, TRUE);
+   if (p != -1)
+     data.remove(0, p + s.length());
+@@ -368,12 +368,15 @@
+   while(stream.atEnd() == 0)
+   {
+     ts = stream.readLine();
+-    stripJunk(ts, s);
++    QStringList l = QStringList::split( '\n', substituteSep(ts, ',', '\n'), FALSE);
+ 
+-    QStringList l = QStringList::split(",", s, FALSE);
+     if (l.count() < 5)
++    {
++      QString ss = tr("Parse: invalid number of parameters") + " " + ts2 + " " + tr("skipped");
++      printStatusLogMessage(ss);
++      errorList.append(ts2);
+       continue;
+-
++    }
+     // date
+     QString date = parseDate(l[0]);
+     Bar bar;
+@@ -523,11 +526,15 @@
+   while(stream.atEnd() == 0)
+   {
+     ts = stream.readLine();
+-    stripJunk(ts, s);
++    QStringList l = QStringList::split( '\n', substituteSep( ts, ',', '\n' ), FALSE);
+ 
+-    QStringList l = QStringList::split(",", s, FALSE);
+     if (l.count() < 9 || l.count() > 10)
++    {
++      QString ss = tr("Parse: invalid number of parameters ") + " " + ts2 + " " + tr("skipped");
++      printStatusLogMessage(ss);
++      errorList.append(ts2);
+       continue;
++    }
+ 
+     // get date
+     QStringList l2 = QStringList::split("/", l[3], FALSE);
+@@ -561,6 +568,9 @@
+     else
+       bar.setHigh(tfloat);
+ 
++    // make Low price equal to Open if Low is not available
++    if (! l[8].compare("N/A"))
++      l[8] = l[6];
+     if (setTFloat(l[8], FALSE))
+       continue;
+     else

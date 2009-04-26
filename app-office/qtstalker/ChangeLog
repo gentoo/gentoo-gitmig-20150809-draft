@@ -1,6 +1,14 @@
 # ChangeLog for app-office/qtstalker
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.10 2008/07/27 19:55:28 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/qtstalker/ChangeLog,v 1.11 2009/04/26 12:10:33 patrick Exp $
+
+*qtstalker-0.36 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/qtstalker-0.36-csv_quote.patch, +files/qtstalker-0.36-fibo.patch,
+  +files/qtstalker-0.36-gcc43.patch, +files/qtstalker-0.36-nodocs.patch,
+  +files/qtstalker-0.36-parallel-make.patch, +qtstalker-0.36.ebuild:
+  Bump to 0.36, patches and ebuild mods by Anton Bolshakov. Fixes #218904
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtstalker-0.35.ebuild:
   QA: Get rid of deprecated qt_min_version().
