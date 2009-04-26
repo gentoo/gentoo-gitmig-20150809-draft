@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pump
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.45 2009/04/10 14:44:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.46 2009/04/26 19:23:54 ranger Exp $
+
+  26 Apr 2009; Brent Baude <ranger@gentoo.org> pump-0.8.24-r3.ebuild:
+  stable ppc, bug 264688
 
   10 Apr 2009; Raúl Porcel <armin76@gentoo.org> pump-0.8.24-r3.ebuild:
   arm/ia64/sparc stable wrt #264688
