@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.17 2008/09/20 10:02:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.18 2009/04/26 15:32:25 yngwin Exp $
 
 EAPI="1"
 
@@ -16,10 +16,8 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug doc examples"
 RESTRICT="test"
 
-DEPEND="
-	!<app-crypt/qca-1.0-r3
-	|| ( x11-libs/qt-core:4
-		>=x11-libs/qt-4.2.0:4 )"
+DEPEND="!<app-crypt/qca-1.0-r3
+	x11-libs/qt-core:4"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
