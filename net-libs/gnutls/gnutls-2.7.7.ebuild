@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.7.6.ebuild,v 1.1 2009/02/28 23:16:47 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.7.7.ebuild,v 1.1 2009/04/26 18:48:50 arfrever Exp $
 
 EAPI="2"
-inherit libtool autotools
+
+inherit autotools libtool
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -45,12 +46,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local dir
 	for dir in m4 lib/m4 libextra/m4 ; do
-		rm -f ${dir}/lt* ${dir}/libtool.m4
+		rm -f "${dir}/lt"* "${dir}/libtool.m4"
 	done
 	find . -name ltmain.sh -exec rm {} \;
 	for dir in . lib libextra ; do
-		pushd ${dir} > /dev/null
+		pushd "${dir}" > /dev/null
 		eautoreconf
 		popd > /dev/null
 	done
@@ -62,10 +64,10 @@ src_configure() {
 	local myconf
 	use bindist && myconf="--without-lzo" || myconf="$(use_with lzo)"
 	econf  \
-		$(use_enable nls) \
-		$(use_enable guile) \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
+		$(use_enable guile) \
+		$(use_enable nls) \
 		$(use_with zlib) \
 		${myconf}
 }
