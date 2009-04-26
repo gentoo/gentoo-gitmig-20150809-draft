@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.63 2009/04/26 02:18:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.64 2009/04/26 02:33:36 arfrever Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -19,7 +19,11 @@ inherit eutils
 
 ESVN="${ECLASS}"
 
-EXPORT_FUNCTIONS src_unpack pkg_preinst
+if has "${EAPI}" 0 1; then
+	EXPORT_FUNCTIONS src_unpack src_prepare pkg_preinst
+else
+	EXPORT_FUNCTIONS src_unpack pkg_preinst
+fi
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -366,9 +370,18 @@ subversion_bootstrap() {
 
 # @FUNCTION: subversion_src_unpack
 # @DESCRIPTION:
-# default src_unpack. fetch and bootstrap.
+# Default src_unpack. Fetch and, in older EAPIs, bootstrap.
 subversion_src_unpack() {
 	subversion_fetch     || die "${ESVN}: unknown problem occurred in subversion_fetch."
+	if has "${EAPI}" 0 1; then
+		subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
+	fi
+}
+
+# @FUNCTION: subversion_src_prepare
+# @DESCRIPTION:
+# Default src_prepare. Bootstrap.
+subversion_src_prepare() {
 	subversion_bootstrap || die "${ESVN}: unknown problem occurred in subversion_bootstrap."
 }
 
