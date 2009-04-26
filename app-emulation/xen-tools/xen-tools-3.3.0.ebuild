@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.3.0.ebuild,v 1.1 2008/09/01 00:41:07 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.3.0.ebuild,v 1.2 2009/04/26 12:52:25 patrick Exp $
 
 inherit flag-o-matic eutils multilib python
 
@@ -144,6 +144,9 @@ src_unpack() {
 
 	# Do not strip binaries
 	epatch "${FILESDIR}/"${P}-nostrip.patch
+
+	# Fix compiler warnings
+	epatch "${FILESDIR}/"${P}-warning-fix.patch
 }
 
 src_compile() {
