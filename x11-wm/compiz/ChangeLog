@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.40 2009/04/25 16:06:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.41 2009/04/26 11:46:25 jmbsvicetto Exp $
+
+*compiz-0.8.2-r1 (26 Apr 2009)
+
+  26 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/compiz.desktop, +compiz-0.8.2-r1.ebuild:
+  Added fix for tests. Thanks to Pacho Ramos
+  <pacho@condmat1.ciencias.uniovi.es> for initial report and Brent Baude
+  <ranger@gentoo.org> for recalling me about it again - fixes bug 265226.
+  Install compiz.desktop file. Thanks to Philip Allison <sane@not.co.uk> for
+  the file and Nirbheek Chauhan <nirbheek@gentoo.org> for the check from the
+  gnome team - fixes bug 254166.
 
   25 Apr 2009; Brent Baude <ranger@gentoo.org> compiz-0.8.2.ebuild:
   Marking compiz-0.8.2 ~ppc for bug 246804
