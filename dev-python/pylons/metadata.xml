@@ -2,4 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>python</herd>
+<use>
+	<flag name="cheetah">Add optional cheetah support</flag>
+	<flag name="genshi">Add optional genshi support</flag>
+	<flag name="jinja2">Add optional jinja2 support</flag>
+	<flag name="kid">Add optional kid support</flag>
+	<flag name="mako">Add optional mako support</flag>
+	<flag name="myghty">Add optional myghty support</flag>
+</use>
 </pkgmetadata>

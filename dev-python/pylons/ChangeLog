@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/pylons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.4 2009/01/04 19:00:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/ChangeLog,v 1.5 2009/04/26 10:05:12 patrick Exp $
+
+*pylons-0.9.7 (26 Apr 2009)
+
+  26 Apr 2009; Patrick Lauer <patrick@gentoo.org> metadata.xml,
+  +pylons-0.9.7.ebuild:
+  Bump to 0.9.7. Fixes #260168. Dependency changes by PLL, also has a few
+  new useflags for optional stuff.
 
 *pylons-0.9.6.2 (04 Jan 2009)
 
