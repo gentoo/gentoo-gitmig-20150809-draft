@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.61 2009/03/22 01:56:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.62 2009/04/26 01:57:14 arfrever Exp $
 
 # @ECLASS: subversion.eclass
 # @MAINTAINER:
@@ -230,12 +230,14 @@ subversion_fetch() {
 		${ESVN_FETCH_CMD} ${options} "${repo_uri}" || die "${ESVN}: can't fetch to ${wc_path} from ${repo_uri}."
 
 	elif [[ -n ${ESVN_OFFLINE} ]]; then
+		svn cleanup "${wc_path}"
 		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
 		if [[ -n ${ESVN_REVISION} && ${ESVN_REVISION} != ${ESVN_WC_REVISION} ]]; then
 			die "${ESVN}: You requested off-line updating and revision ${ESVN_REVISION} but only revision ${ESVN_WC_REVISION} is available locally."
 		fi
 		einfo "Fetching disabled: Using existing repository copy at revision ${ESVN_WC_REVISION}."
 	else
+		svn cleanup "${wc_path}"
 		subversion_wc_info "${repo_uri}" || die "${ESVN}: unknown problem occurred while accessing working copy."
 
 		local esvn_up_freq=
