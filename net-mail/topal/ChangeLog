@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/topal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.1 2009/04/24 06:39:58 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/topal/ChangeLog,v 1.2 2009/04/26 06:40:02 tove Exp $
+
+  26 Apr 2009; Torsten Veller <tove@gentoo.org> topal-64.ebuild:
+  Use virtual/ada instead of virtual/gnat (#267299)
 
 *topal-64 (24 Apr 2009)
 
