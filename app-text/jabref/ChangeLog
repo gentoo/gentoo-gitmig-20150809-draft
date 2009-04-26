@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.72 2009/04/23 13:43:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.73 2009/04/26 11:07:15 caster Exp $
+
+  26 Apr 2009; Vlastimil Babka <caster@gentoo.org> jabref-2.5_beta:
+  Raising java dependency to 1.6, bug #267522.
 
 *jabref-2.5_beta (23 Apr 2009)
 
