@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r1.ebuild,v 1.1 2009/04/25 14:27:22 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r1.ebuild,v 1.2 2009/04/26 13:35:18 mr_bones_ Exp $
 
 EAPI="2"
 inherit eutils
@@ -13,7 +13,6 @@ MY_P=${MY_PN}-${PV}
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2"
-
 
 LICENSE="GPL-2"
 SLOT="0"
