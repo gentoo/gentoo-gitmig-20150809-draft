@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.34 2009/04/25 09:58:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.35 2009/04/26 12:47:15 mrness Exp $
+
+*squidguard-1.4-r3 (26 Apr 2009)
+
+  26 Apr 2009; Alin Năstac <mrness@gentoo.org>
+  files/squidguard-1.4-vsnprintf.patch, -squidguard-1.4-r2.ebuild,
+  +squidguard-1.4-r3.ebuild:
+  Avoid entering emergency mode by using fprintf instead sgLogFatalError
+  (#259272).
 
 *squidguard-1.4-r2 (25 Apr 2009)
 
