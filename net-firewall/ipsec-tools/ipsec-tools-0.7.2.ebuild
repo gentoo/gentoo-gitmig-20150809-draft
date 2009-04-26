@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.2.ebuild,v 1.2 2009/04/23 18:42:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ipsec-tools-0.7.2.ebuild,v 1.3 2009/04/26 11:55:45 bluebird Exp $
 
 inherit eutils flag-o-matic autotools linux-info
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="idea ipv6 pam rc5 readline selinux ldap kerberos nat hybrid iconv selinux"
 
 # FIXME: what is the correct syntax for ~sparc ???
