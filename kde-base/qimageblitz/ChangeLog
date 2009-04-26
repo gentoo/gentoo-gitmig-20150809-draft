@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qimageblitz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.7 2009/04/11 15:51:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.8 2009/04/26 13:07:01 yngwin Exp $
+
+  26 Apr 2009; Ben de Groot <yngwin@gentoo.org> qimageblitz-0.0.4:
+  Fix description, depend, whitespace
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> qimageblitz-0.0.4.ebuild:
   Add ~alpha/~ia64 wrt #260777
