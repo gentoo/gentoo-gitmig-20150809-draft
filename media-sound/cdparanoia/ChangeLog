@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.90 2008/11/28 18:27:46 ssuominen Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.91 2009/04/27 17:00:58 loki_val Exp $
+
+  27 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/cdparanoia-3.10.2-gcc43.patch, cdparanoia-3.10.2-r2.ebuild:
+  Move gcc43 patch to mirrors per bug 248992.
 
 *cdparanoia-3.10.2-r2 (28 Nov 2008)
 
