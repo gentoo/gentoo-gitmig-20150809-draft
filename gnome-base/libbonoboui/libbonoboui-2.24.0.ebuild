@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.0.ebuild,v 1.7 2009/04/12 20:44:30 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.24.0.ebuild,v 1.8 2009/04/27 12:59:06 jer Exp $
 
 inherit eutils virtualx gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://developer.gnome.org/arch/gnome/componentmodel/bonobo.html"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 # GTK+ dep due to bug #126565
