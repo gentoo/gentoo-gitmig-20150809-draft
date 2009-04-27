@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.6 2009/03/14 13:28:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.7 2009/04/27 05:23:28 vapier Exp $
 
-inherit mount-boot eutils flag-o-matic toolchain-funcs
+inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="svn://svn.sv.gnu.org/grub/trunk/grub2"
@@ -36,6 +36,10 @@ src_unpack() {
 	fi
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.96-genkernel.patch #256335
+
+	# autogen.sh does more than just run autotools
+	sed -i -e 's:^auto:eauto:' autogen.sh
+	(. ./autogen.sh) || die
 }
 
 src_compile() {
@@ -55,7 +59,6 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 	cat <<-EOF >> "${D}"/lib*/grub/grub-mkconfig_lib
 	GRUB_DISTRIBUTOR="Gentoo"
-	EOF
 	EOF
 	if use multislot ; then
 		sed -i s:grub-install:grub2-install: "${D}"/sbin/grub-install
