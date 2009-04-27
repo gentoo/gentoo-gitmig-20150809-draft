@@ -1,9 +1,9 @@
 # ChangeLog for net-libs/serf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.21 2009/04/27 19:26:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/serf/ChangeLog,v 1.22 2009/04/27 19:33:10 maekke Exp $
 
   27 Apr 2009; Markus Meier <maekke@gentoo.org> serf-0.3.0.ebuild:
-  --strict amd64/x86 stable, bug #267269
+  amd64/x86 stable, bug #267269
 
   24 Apr 2009; Brent Baude <ranger@gentoo.org> serf-0.3.0.ebuild:
   stable ppc, bug 267269
