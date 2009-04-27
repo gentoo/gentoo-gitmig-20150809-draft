@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.24.1.ebuild,v 1.6 2009/04/12 21:22:20 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python-desktop-base/gnome-python-desktop-base-2.24.1.ebuild,v 1.7 2009/04/27 13:25:16 jer Exp $
 
 inherit eutils gnome2 versionator
 
@@ -12,7 +12,7 @@ DESCRIPTION="Provides python the base files for the Gnome Python Desktop binding
 HOMEPAGE="http://pygtk.org/"
 SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP}/${MY_PN}-${PV}.tar.bz2"
 
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 
 IUSE=""
 LICENSE="LGPL-2.1"
