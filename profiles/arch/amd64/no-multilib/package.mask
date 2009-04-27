@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.28 2009/04/10 13:26:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.29 2009/04/27 15:00:28 mr_bones_ Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -48,6 +48,7 @@ app-emulation/ies4linux
 app-emulation/transgaming-fontinstaller
 app-emulation/transgaming-mozctlinstaller
 app-emulation/wine
+app-emulation/wine-doors
 app-emulation/winesetuptk
 app-emulation/winex
 app-emulation/winex-cvs
