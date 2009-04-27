@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.239 2009/04/12 21:00:33 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.240 2009/04/27 10:15:46 armin76 Exp $
+
+  27 Apr 2009; Raúl Porcel <armin76@gentoo.org> eog-2.24.3.1.ebuild:
+  arm stable
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> eog-2.24.3.1.ebuild:
   Stable on sparc, bug #260063
