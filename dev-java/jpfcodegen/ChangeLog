@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jpfcodegen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/ChangeLog,v 1.2 2009/04/04 19:15:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jpfcodegen/ChangeLog,v 1.3 2009/04/27 00:15:13 ranger Exp $
+
+  27 Apr 2009; Brent Baude <ranger@gentoo.org> jpfcodegen-0.4.ebuild:
+  Marking jpfcodegen-0.4 ~ppc for bug 236505
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> jpfcodegen-0.4.ebuild:
   amd64/x86 stable, bug #263647
