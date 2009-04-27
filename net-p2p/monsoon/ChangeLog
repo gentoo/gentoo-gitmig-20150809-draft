@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/monsoon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/monsoon/ChangeLog,v 1.2 2009/04/07 09:46:22 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/monsoon/ChangeLog,v 1.3 2009/04/27 09:02:04 loki_val Exp $
+
+*monsoon-0.21 (27 Apr 2009)
+
+  27 Apr 2009; Peter Alfredsen <loki_val@gentoo.org> monsoon-0.20,
+  +monsoon-0.21.ebuild:
+  Bump
 
   07 Apr 2009; Peter Alfredsen <loki_val@gentoo.org> monsoon-0.20.ebuild:
   Fix description: s/Monosoon/Monsoon/, thanks to sebasmagri for noticing.
