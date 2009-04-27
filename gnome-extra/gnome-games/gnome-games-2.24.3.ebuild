@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.10 2009/04/27 10:05:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.24.3.ebuild,v 1.11 2009/04/27 13:12:18 armin76 Exp $
 
 GCONF_DEBUG="no"
 
@@ -16,13 +16,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE="artworkextra guile opengl"
 
+# sh doesn't have bug-buddy-python because gdb is broken. 
+# When bugbuddy module is not found some games will simply not install a bugbuddy hook
 RDEPEND=">=gnome-base/libgnomeui-2.16.0
 	>=gnome-base/libgnome-2.16.0
 	>=dev-python/pygtk-2.10
 	>=x11-libs/gtk+-2.12
 
 	>=dev-python/gconf-python-2.17.3
-	>=dev-python/bug-buddy-python-2.17.3
+	!sh? ( >=dev-python/bug-buddy-python-2.17.3 )
 	>=dev-python/libgnome-python-2.17.3
 	>=dev-python/libgnomeprint-python-2.17.3
 	>=dev-python/gnome-applets-python-2.17.3
