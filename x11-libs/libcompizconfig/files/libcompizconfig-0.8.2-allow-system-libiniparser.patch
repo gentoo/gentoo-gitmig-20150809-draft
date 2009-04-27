@@ -1,0 +1,44 @@
+diff -u -r libcompizconfig-0.8.2-old/configure.ac libcompizconfig-0.8.2/configure.ac
+--- libcompizconfig-0.8.2-old/configure.ac	2009-04-26 12:15:40.000000000 +0000
++++ libcompizconfig-0.8.2/configure.ac	2009-04-26 23:02:14.000000000 +0000
+@@ -116,6 +116,16 @@
+ fi
+ AM_CONDITIONAL([USE_PROTOBUF], [test "x$use_protobuf" = "xyes"])
+ 
++AC_ARG_WITH(internal-iniparser,
++  [AS_HELP_STRING([--without-internal-iniparser],[Don't use bundled iniparser lib])],
++  [], [with_internal_iniparser=yes])
++
++if test "x$with_internal_iniparser" = "xno"; then
++  AC_CHECK_LIB([iniparser], [iniparser_getnsec], [],
++    [AC_MSG_ERROR([Error! You need to have libiniparser])])
++fi
++AM_CONDITIONAL([WITH_INTERNAL_INIPARSER], [test "x$with_internal_iniparser" = "xyes"])
++
+ AC_CHECK_HEADERS([sys/inotify.h], [have_inotify=yes], [have_inotify=no])
+ 
+ AC_ARG_ENABLE(debug,
+diff -u -r libcompizconfig-0.8.2-old/src/Makefile.am libcompizconfig-0.8.2/src/Makefile.am
+--- libcompizconfig-0.8.2-old/src/Makefile.am	2009-04-26 12:15:39.000000000 +0000
++++ libcompizconfig-0.8.2/src/Makefile.am	2009-04-26 23:00:37.000000000 +0000
+@@ -39,14 +39,17 @@
+ 	lists.c 	\
+ 	compiz.cpp 	\
+ 	config.c 	\
+-	iniparser.c 	\
+ 	ini.c 		\
+ 	bindings.c 	\
+ 	filewatch.c 	\
+-	ccs-private.h	\
+-	iniparser.h
++	ccs-private.h
+ 
+ libcompizconfig_la_LIBADD = @LIBXML2_LIBS@ @LIBX11_LIBS@ $(PROTOBUF_LIB)
+ 
+ lib_LTLIBRARIES=libcompizconfig.la
+ 
++if WITH_INTERNAL_INIPARSER
++
++  libcompizconfig_la_SOURCES += iniparser.h iniparser.c
++
++endif
