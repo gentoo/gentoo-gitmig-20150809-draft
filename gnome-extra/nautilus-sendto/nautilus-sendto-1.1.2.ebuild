@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-1.1.2.ebuild,v 1.2 2009/03/11 13:10:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-sendto/nautilus-sendto-1.1.2.ebuild,v 1.3 2009/04/27 00:46:59 ranger Exp $
 
 inherit gnome2 eutils autotools
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="balsa bluetooth claws eds gajim pidgin sylpheed thunderbird upnp"
 
 RDEPEND=">=x11-libs/gtk+-2.4
