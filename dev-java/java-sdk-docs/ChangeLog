@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.65 2009/04/24 01:41:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.66 2009/04/27 00:01:38 ranger Exp $
+
+  26 Apr 2009; Brent Baude <ranger@gentoo.org>
+  java-sdk-docs-1.6.0.10.ebuild:
+  Marking java-sdk-docs-1.6.0.10 ppc for bug 264518
 
   24 Apr 2009; Brent Baude <ranger@gentoo.org>
   java-sdk-docs-1.6.0.10.ebuild:
