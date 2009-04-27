@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mediastreamer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.6 2009/04/25 00:29:08 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/ChangeLog,v 1.7 2009/04/27 17:45:01 volkmar Exp $
+
+*mediastreamer-2.2.3_p1 (27 Apr 2009)
+
+  27 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/mediastreamer-2.2.3_p1-arts.patch,
+  +files/mediastreamer-2.2.3_p1-autodeps.patch,
+  +mediastreamer-2.2.3_p1.ebuild:
+  Add mediastreamer-2.2.3 with diff from bundled on in linphone-3.1.1 to make it
+  working with it.
 
 *mediastreamer-2.2.3 (25 Apr 2009)
 
