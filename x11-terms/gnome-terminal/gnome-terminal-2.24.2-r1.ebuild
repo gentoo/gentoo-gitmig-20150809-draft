@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.24.2-r1.ebuild,v 1.8 2009/04/12 20:45:51 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.24.2-r1.ebuild,v 1.9 2009/04/27 10:10:45 armin76 Exp $
 
 inherit eutils gnome2
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/gnome-terminal-2.24.2-restore-switch-to-tab-i18n.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="x11-libs/libXft
