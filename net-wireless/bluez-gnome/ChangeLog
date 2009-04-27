@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.41 2009/03/08 01:35:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.42 2009/04/27 00:45:35 ranger Exp $
+
+  27 Apr 2009; Brent Baude <ranger@gentoo.org> bluez-gnome-1.8.ebuild:
+  Marking bluez-gnome-1.8 ~ppc for bug 262123
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> bluez-gnome-0.28.ebuild:
   x86 stable, bug #230591
