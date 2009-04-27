@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2571 2009/04/27 05:42:56 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2572 2009/04/27 06:09:17 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Apr 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove mask for dev-tex/breqn; package has been removed, bug 262934.
 
   27 Apr 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
   masking dev-tcltk/tls-1.6 because of sandbox violations and qa issues, bug
