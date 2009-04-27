@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.599 2009/04/27 00:33:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.600 2009/04/27 00:39:25 darkside Exp $
+
+  27 Apr 2009; Jeremy Olexa <darkside@gentoo.org> portage-2.1.6.11.ebuild:
+  amd64 stable, bug 267586
 
   27 Apr 2009; Brent Baude <ranger@gentoo.org> portage-2.1.6.11.ebuild:
   Marking portage-2.1.6.11 ppc for bug 267586
