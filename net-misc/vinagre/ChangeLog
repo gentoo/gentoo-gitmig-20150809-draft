@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.37 2009/04/12 21:00:18 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.38 2009/04/27 14:29:51 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> vinagre-2.24.2-r1:
+  Stable for HPPA (bug #260063).
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   vinagre-2.24.2-r1.ebuild:
