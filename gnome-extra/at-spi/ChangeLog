@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.183 2009/04/27 10:04:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.184 2009/04/27 13:36:04 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> at-spi-1.24.1:
+  Stable for HPPA (bug #260063).
 
   27 Apr 2009; Raúl Porcel <armin76@gentoo.org> at-spi-1.24.1.ebuild:
   arm stable
