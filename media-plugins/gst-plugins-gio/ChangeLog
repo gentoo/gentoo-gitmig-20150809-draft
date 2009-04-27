@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-gio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.18 2009/04/12 21:18:52 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-gio/ChangeLog,v 1.19 2009/04/27 14:27:20 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> gst-plugins-gio-0.10.20:
+  Stable for HPPA (bug #260063).
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   gst-plugins-gio-0.10.20.ebuild:
