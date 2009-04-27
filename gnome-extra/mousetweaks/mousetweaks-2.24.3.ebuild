@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.24.3.ebuild,v 1.7 2009/04/12 21:18:23 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.24.3.ebuild,v 1.8 2009/04/27 14:17:10 jer Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://live.gnome.org/Mousetweaks/Home"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.13.1
