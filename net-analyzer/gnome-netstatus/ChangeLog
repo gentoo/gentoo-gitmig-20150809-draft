@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.78 2009/04/27 10:37:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.79 2009/04/27 14:23:36 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> gnome-netstatus-2.12.2:
+  Stable for HPPA (bug #260063).
 
   27 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   gnome-netstatus-2.12.2.ebuild:
