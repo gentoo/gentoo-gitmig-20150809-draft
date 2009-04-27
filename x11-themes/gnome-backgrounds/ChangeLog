@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.107 2009/04/27 10:11:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.108 2009/04/27 14:29:01 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> gnome-backgrounds-2.24.0:
+  Stable for HPPA (bug #260063).
 
   27 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   gnome-backgrounds-2.24.0.ebuild:
