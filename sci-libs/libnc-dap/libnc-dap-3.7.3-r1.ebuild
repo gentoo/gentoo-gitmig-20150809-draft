@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3.ebuild,v 1.2 2009/04/20 01:01:54 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.1 2009/04/27 01:54:33 nerdboy Exp $
 
 inherit eutils flag-o-matic fortran
 
@@ -20,8 +20,7 @@ DEPEND="${RDEPEND}
 	sys-libs/zlib
 	>=dev-libs/libxml2-2.5.7
 	>=net-misc/curl-7.10.6
-	<=sci-libs/libdap-3.8.2
-	!sci-libs/netcdf"
+	<=sci-libs/libdap-3.8.2"
 
 pkg_setup() {
 	if use full-test; then
@@ -82,6 +81,9 @@ src_test() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	mv "${D}"usr/bin/ncdump "${D}"usr/bin/dncdump
+	# this is just the netcdf ncdump man page...
+	#newman ncdump/ncdump.1 dncdump.1
 
 	dodoc README NEWS README.translation
 }
