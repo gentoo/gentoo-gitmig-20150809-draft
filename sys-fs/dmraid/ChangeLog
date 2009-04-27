@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.15 2009/04/27 00:50:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.16 2009/04/27 15:51:00 patrick Exp $
+
+  27 Apr 2009; Patrick Lauer <patrick@gentoo.org> dmraid-1.0.0_rc15:
+  Dep fix for #267154
 
   27 Apr 2009; Brent Baude <ranger@gentoo.org> dmraid-1.0.0_rc15.ebuild:
   Marking dmraid-1.0.0_rc15 ~ppc for bug 266811
