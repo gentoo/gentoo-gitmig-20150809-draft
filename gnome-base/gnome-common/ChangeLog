@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.59 2009/04/12 20:35:27 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.60 2009/04/27 09:54:25 armin76 Exp $
+
+  27 Apr 2009; Raúl Porcel <armin76@gentoo.org> gnome-common-2.24.0.ebuild:
+  arm stable
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   gnome-common-2.24.0.ebuild:
