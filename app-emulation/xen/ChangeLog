@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.59 2009/04/26 13:16:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/ChangeLog,v 1.60 2009/04/27 12:51:21 patrick Exp $
+
+*xen-3.3.1-r1 (27 Apr 2009)
+
+  27 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/xen-3.3.0-unexported-target-fix.patch, +xen-3.3.1-r1.ebuild:
+  Fix sandbox violation,
+  http://bugzilla.xensource.com/bugzilla/show_bug.cgi?id=1405 Closes #259670
 
 *xen-3.3.1 (26 Apr 2009)
 
