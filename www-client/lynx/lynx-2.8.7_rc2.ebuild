@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_rc2.ebuild,v 1.1 2009/04/27 11:30:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_rc2.ebuild,v 1.2 2009/04/27 17:14:14 mr_bones_ Exp $
 
 EAPI=2
 
@@ -25,7 +25,6 @@ then
 	MY_P="${PN}${PV/_pre/dev.}"
 
 fi
-
 
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.isc.org/"
