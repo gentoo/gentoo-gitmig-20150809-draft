@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3.ebuild,v 1.1 2009/02/10 16:53:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/linuxdcpp/linuxdcpp-1.0.3.ebuild,v 1.2 2009/04/27 14:48:52 armin76 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://launchpad.net/linuxdcpp"
 SRC_URI="http://launchpad.net/linuxdcpp/1.0/${PV}/+download/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=gnome-base/libglade-2.4
