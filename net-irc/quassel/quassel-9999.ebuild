@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.21 2009/03/31 16:10:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-9999.ebuild,v 1.22 2009/04/27 20:34:51 scarabeus Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS=""
 SLOT="0"
 IUSE="dbus debug kde monolithic +oxygen phonon postgres +server +ssl webkit +X"
 
-LANGS="cs da de fr hu nb_NO ru sl tr"
+LANGS="cs da de fr hu it nb_NO ru sl tr"
 for l in ${LANGS}; do
 	IUSE="${IUSE} linguas_${l}"
 done
@@ -61,9 +61,9 @@ pkg_setup() {
 }
 
 src_configure() {
-	local MY_LANGUAGES=""
+	local my_langs
 	for i in ${LINGUAS}; do
-		MY_LANGUAGES="${i},${MY_LANGUAGES}"
+		my_langs="${i},${my_langs}"
 	done
 
 	local mycmakeargs="
@@ -77,7 +77,7 @@ src_configure() {
 		$(cmake-utils_use_with ssl OPENSSL)
 		$(cmake-utils_use_with oxygen OXYGEN)
 		-DEMBED_DATA=OFF
-		-DLINGUAS=${MY_LANGUAGES}
+		-DLINGUAS=${my_langs}
 		"
 
 	cmake-utils_src_configure
