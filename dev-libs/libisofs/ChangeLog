@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.29 2009/03/19 13:15:45 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.30 2009/04/27 12:46:44 loki_val Exp $
+
+*libisofs-0.6.16-r1 (27 Apr 2009)
+
+  27 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +libisofs-0.6.16-r1.ebuild:
+  Re-enable tests. This bump was supposed to have been for 0.6.18, but that
+  version fails tests, see http://libburnia-project.org/ticket/147
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> libisofs-0.6.12.ebuild:
   Marking libisofs-0.6.12 ppc for bug 254947
