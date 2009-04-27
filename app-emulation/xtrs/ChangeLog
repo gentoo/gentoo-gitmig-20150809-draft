@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.31 2008/08/08 23:06:31 ulm Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.32 2009/04/27 13:24:48 lavajoe Exp $
+
+  27 Apr 2009; Joe Peterson <lavajoe@gentoo.org> xtrs-4.9c-r2:
+  Set RDEPEND
 
   08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> files/xtrs-4.9c-gentoo.patch,
   -files/xtrs-4.9c-r2-gentoo.patch, -xtrs-4.9c-r1.ebuild,

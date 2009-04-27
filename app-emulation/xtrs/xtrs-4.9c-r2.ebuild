@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9c-r2.ebuild,v 1.4 2008/08/08 23:06:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9c-r2.ebuild,v 1.5 2009/04/27 13:24:48 lavajoe Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,6 +17,7 @@ IUSE=""
 DEPEND="sys-libs/ncurses
 	sys-libs/readline
 	>=x11-libs/libX11-1.0.0"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz
