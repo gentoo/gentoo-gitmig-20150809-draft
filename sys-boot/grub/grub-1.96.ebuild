@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.10 2009/01/01 11:24:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-1.96.ebuild,v 1.11 2009/04/27 05:09:03 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -54,10 +54,11 @@ setup_boot_dir() {
 	local boot_dir=$1
 	local dir=${boot_dir}/grub
 
-	if [[ ! -e ${dir}/grub.cfg ]] ; then
-		einfo "Running: grub-mkconfig -o '${dir}/grub.cfg'"
-		grub-mkconfig -o "${dir}/grub.cfg"
-	fi
+# grub-1.96 doesnt have `grub-mkconfig`
+#	if [[ ! -e ${dir}/grub.cfg ]] ; then
+#		einfo "Running: grub-mkconfig -o '${dir}/grub.cfg'"
+#		grub-mkconfig -o "${dir}/grub.cfg"
+#	fi
 
 	#local install=grub-install
 	#use multislot && install="grub2-install --grub-setup=/bin/true"
