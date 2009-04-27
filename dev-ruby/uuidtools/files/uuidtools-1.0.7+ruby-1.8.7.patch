@@ -1,0 +1,16 @@
+Index: uuidtools-1.0.7/lib/uuidtools.rb
+===================================================================
+--- uuidtools-1.0.7.orig/lib/uuidtools.rb
++++ uuidtools-1.0.7/lib/uuidtools.rb
+@@ -191,10 +191,7 @@ class UUID
+           octet.to_i(16)
+         end
+       else
+-        nodes = SecureRandom.random_bytes(6).split("").map do |chr|
+-          # Ruby 1.9 / Ruby 1.8
+-          chr.respond_to?(:ord) ? chr.ord : chr.sum(8)
+-        end
++        nodes = SecureRandom.random_bytes(6).unpack("C*")
+         nodes[0] |= 0b00000001
+       end
+       for i in 0..5

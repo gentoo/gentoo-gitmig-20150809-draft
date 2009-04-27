@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/uuidtools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.10 2009/04/19 14:55:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/ChangeLog,v 1.11 2009/04/27 12:48:03 flameeyes Exp $
+
+*uuidtools-1.0.7-r1 (27 Apr 2009)
+
+  27 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/uuidtools-1.0.7+ruby-1.8.7.patch, +uuidtools-1.0.7-r1.ebuild:
+  Add a fix for uuidtools with Ruby 1.8.7's securerandom and make it install
+  for Ruby 1.9 too.
 
   19 Apr 2009; Markus Meier <maekke@gentoo.org> uuidtools-1.0.7:
   amd64/x86 stable, bug #266508
