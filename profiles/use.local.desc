@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4395 2009/04/26 21:07:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4396 2009/04/27 01:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -720,6 +720,9 @@ dev-libs/xerces-c:iconv - Use iconv (virtual/libiconv) as message loader and tra
 dev-libs/xerces-c:libwww - Use the net-libs/libwww library for fetching URLs, instead of the builtin method
 dev-libs/xerces-c:threads - Enable threading support through pthread (or other libraries on AIX, IRIX, HPUX, Solars). Highly recommended
 dev-libs/xerces-c:xqilla - Apply patches from the XQilla project and install additional header files
+dev-libs/xmlrpc-c:abyss - Build the Abyss mini web-server.
+dev-libs/xmlrpc-c:threads - Controls whether to build the Abyss web-server with pthreads or fork 'threading'.
+dev-libs/xmlrpc-c:tools - Build the xmlrpc* tools.
 dev-libs/xqilla:faxpp - Use dev-libs/faxpp instead of Xerces-C for certain tasks
 dev-libs/xqilla:htmltidy - Use app-text/htmltidy when parsing HTML
 dev-libs/yaz:ziffy - Install ziffy, a promiscuous Z39.50 APDU sniffer
