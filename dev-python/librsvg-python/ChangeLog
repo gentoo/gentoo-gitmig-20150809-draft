@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/librsvg-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.14 2009/04/12 21:24:08 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/librsvg-python/ChangeLog,v 1.15 2009/04/27 13:36:58 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> librsvg-python-2.24.1:
+  Stable for HPPA (bug #260063).
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   librsvg-python-2.24.1.ebuild:
