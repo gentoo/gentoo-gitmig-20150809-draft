@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.11 2009/03/08 11:33:51 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.12 2009/04/27 21:44:29 patrick Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ DEPEND="dev-lang/perl[gdbm]
 	dev-perl/Unix-Syslog
 	mysql? ( virtual/mysql dev-perl/DBD-mysql )
 	samba? ( net-fs/samba )"
+RDEPEND=${DEPEND}
 
 want_apache2 http
 
