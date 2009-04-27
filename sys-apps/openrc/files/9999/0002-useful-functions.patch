@@ -9,26 +9,27 @@ Subject: [PATCH] add a softlevel() function to the API so people dont have to wo
  2 files changed, 22 insertions(+), 23 deletions(-)
 
 diff --git a/sh/functions.sh.in b/sh/functions.sh.in
-index 57917ed..680f534 100644
+index 3f41f8f..be5285c 100644
 --- a/sh/functions.sh.in
 +++ b/sh/functions.sh.in
-@@ -42,6 +42,28 @@ rc_runlevel() {
+@@ -42,6 +42,29 @@ rc_runlevel() {
      rc-status --runlevel
  }
  
 +get_bootparam()
 +{
 +	local match="$1"
-+	[ -z "${match}" -o ! -r /proc/cmdline ] && return 1
++	[ -z "$match" -o ! -r /proc/cmdline ] && return 1
 +
 +	set -- $(cat /proc/cmdline)
 +	while [ -n "$1" ]; do
++		[ "$1" = "$match" ] && return 0
 +		case "$1" in
 +			gentoo=*)
 +				local params="${1##*=}"
 +				local IFS=, x=
-+				for x in ${params}; do
-+					[ "${x}" = "${match}" ] && return 0
++				for x in $params; do
++					[ "$x" = "$match" ] && return 0
 +				done
 +				;;
 +		esac
@@ -42,27 +43,27 @@ index 57917ed..680f534 100644
  {
  	local IFS=":" p= path=
 diff --git a/sh/rc-functions.sh.in b/sh/rc-functions.sh.in
-index 751d47a..c713def 100644
+index ebdb768..68cd6e7 100644
 --- a/sh/rc-functions.sh.in
 +++ b/sh/rc-functions.sh.in
-@@ -51,29 +51,6 @@ is_union_fs()
+@@ -61,29 +61,6 @@ is_union_fs()
  	unionctl "$1" --list >/dev/null 2>&1
  }
  
 -get_bootparam()
 -{
 -	local match="$1"
--	[ -z "${match}" -o ! -r /proc/cmdline ] && return 1
+-	[ -z "$match" -o ! -r /proc/cmdline ] && return 1
 -
 -	set -- $(cat /proc/cmdline)
 -	while [ -n "$1" ]; do
--		[ "$1" = "${match}" ] && return 0
+-		[ "$1" = "$match" ] && return 0
 -		case "$1" in
 -			gentoo=*)
 -				local params="${1##*=}"
 -				local IFS=, x=
--				for x in ${params}; do
--					[ "${x}" = "${match}" ] && return 0
+-				for x in $params; do
+-					[ "$x" = "$match" ] && return 0
 -				done
 -				;;
 -		esac
@@ -73,8 +74,5 @@ index 751d47a..c713def 100644
 -}
 -
  # Add our sbin to $PATH
- case "${PATH}" in
- 	"${RC_LIBDIR}"/sbin|"${RC_LIBDIR}"/sbin:*);;
--- 
-1.6.0.2
-
+ case "$PATH" in
+ 	"$RC_LIBDIR"/sbin|"$RC_LIBDIR"/sbin:*);;

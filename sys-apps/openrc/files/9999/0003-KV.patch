@@ -59,8 +59,8 @@ index d0d6a17..debcf4f 100755
 --- a/sh/runtests.sh
 +++ b/sh/runtests.sh
 @@ -3,6 +3,19 @@
- top_srcdir=${top_srcdir:-..}
- . ${top_srcdir}/test/setup_env.sh
+ : ${top_srcdir:=..}
+ . $top_srcdir/test/setup_env.sh
  
 +checkit() {
 +	local output=$($1 $3)
@@ -79,8 +79,8 @@ index d0d6a17..debcf4f 100755
  
  tret=0
 @@ -22,4 +35,36 @@ done
- eend ${tret}
- ((ret+=tret))
+ eend $tret
+ ret=$(($ret + $tret))
  
 +compare_int() {
 +	local got=$(KV_to_int $1)
@@ -112,9 +112,9 @@ index d0d6a17..debcf4f 100755
 +	compare_int 1.2.3.4 -eq ${v}
 +done
 +eend ${tret}
-+((ret+=tret))
++: $((ret+=tret))
 +
- exit ${ret}
+ exit $ret
 -- 
 1.5.4.4
 

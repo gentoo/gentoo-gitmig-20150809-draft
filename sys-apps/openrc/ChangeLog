@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.67 2009/04/18 11:17:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.68 2009/04/27 04:55:00 vapier Exp $
+
+  27 Apr 2009; Mike Frysinger <vapier@gentoo.org>
+  files/9999/0001-msg-style.patch, files/9999/0002-useful-functions.patch,
+  files/9999/0003-KV.patch:
+  Update patches against latest svn #267540 by Vivien Moreau.
 
   18 Apr 2009; Benedikt Böhm <hollow@gentoo.org>
   files/0.4.3/0002-support-custom-status.patch:
