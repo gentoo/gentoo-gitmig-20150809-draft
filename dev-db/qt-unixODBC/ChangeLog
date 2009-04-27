@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/qt-unixODBC
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.44 2009/01/17 16:39:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qt-unixODBC/ChangeLog,v 1.45 2009/04/27 20:06:56 hwoarang Exp $
+
+  27 Apr 2009; Markos Chandras <hwoarang@gentoo.org>
+  -qt-unixODBC-3.3.8.ebuild:
+  Remove masked file
 
   17 Jan 2009; nixnut <nixnut@gentoo.org> qt-unixODBC-3.3.8b.ebuild:
   ppc stable #254153
