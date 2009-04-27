@@ -1,6 +1,16 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.73 2009/03/07 19:57:16 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.74 2009/04/27 22:36:22 patrick Exp $
+
+*gajim-0.12.1 (27 Apr 2009)
+
+  27 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/0.12.1-roster_window.py_r10934.patch,
+  +files/0.12.1-sound-path-fix.patch,
+  +files/0.12.1_autotools_install_pyfiles_in_pkglibdir.patch,
+  +files/fix_autotools_and_search_dirs.patch, +gajim-0.12.1.ebuild:
+  Bump to 0.12.1, fixes #251298. Patches by Bruno Tarquini, ebuild mods by
+  Bruno Tarquini and Marcin Rybarski.
 
   07 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org> gajim-0.11.1.ebuild,
   gajim-0.11.2.ebuild, gajim-0.11.2-r1.ebuild, gajim-0.11.3.ebuild,
