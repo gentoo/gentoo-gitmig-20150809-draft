@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.139 2009/04/12 21:16:47 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.140 2009/04/27 13:00:39 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> dasher-4.9.0:
+  Stable for HPPA (bug #260063).
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> dasher-4.9.0.ebuild:
   Stable on sparc, bug #260063

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.62 2009/04/12 21:16:48 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.63 2009/04/27 13:03:13 jer Exp $
+
+  27 Apr 2009; Jeroen Roovers <jer@gentoo.org> orca-2.24.4:
+  Stable for HPPA (bug #260063).
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> orca-2.24.4.ebuild:
   Stable on sparc, bug #260063
