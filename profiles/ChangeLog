@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2570 2009/04/26 12:13:53 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2571 2009/04/27 05:42:56 mescalinum Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Apr 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
+  masking dev-tcltk/tls-1.6 because of sandbox violations and qa issues, bug
+  #267576
 
   26 Apr 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
   unmask >=dev-libs/newt-0.52.10

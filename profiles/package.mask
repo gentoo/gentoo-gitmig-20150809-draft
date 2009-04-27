@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9719 2009/04/26 21:10:40 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9720 2009/04/27 05:42:56 mescalinum Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Federico Ferri <mescalinum@gentoo.org> (27 Apr 2009)
+# Sandbox violations, QA issues.
+# Masking before it hits more people.
+~dev-tcltk/tls-1.6
 
 # Joe Sapp <nixphoeni@gentoo.org> (26 Apr 2009)
 # Doesn't seem to work any more
