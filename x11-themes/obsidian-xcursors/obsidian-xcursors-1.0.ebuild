@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/obsidian-xcursors/obsidian-xcursors-1.0.ebuild,v 1.1 2009/03/24 01:15:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/obsidian-xcursors/obsidian-xcursors-1.0.ebuild,v 1.2 2009/04/27 19:33:20 maekke Exp $
 
 MY_PN="Obsidian"
 DESCRIPTION="A shiny and clean xcursor theme"
@@ -9,7 +9,7 @@ SRC_URI="http://www.kde-look.org/CONTENT/content-files/73135-${MY_PN}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=""
