@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.19 2009/03/26 23:51:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.20 2009/04/27 04:07:08 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -32,6 +32,7 @@ RDEPEND="opengl? ( virtual/opengl )
 	app-arch/bzip2
 	app-arch/unrar
 	app-arch/unzip
+	app-arch/zip
 	app-i18n/enca
 	>=dev-lang/python-2.4
 	dev-libs/boost
