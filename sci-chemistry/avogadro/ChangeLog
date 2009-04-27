@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.18 2009/04/01 19:37:50 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.19 2009/04/27 21:55:28 patrick Exp $
+
+  27 Apr 2009; Patrick Lauer <patrick@gentoo.org> avogadro-0.9.3:
+  Fixing python deps to include numpy. Fixes #267224. Will need
+  boost[python] deps for newer versions of boost.
 
 *avogadro-0.9.3 (01 Apr 2009)
 
