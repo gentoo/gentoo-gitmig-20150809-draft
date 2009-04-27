@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libisofs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.30 2009/04/27 12:46:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/ChangeLog,v 1.31 2009/04/27 19:36:45 loki_val Exp $
+
+*libisofs-0.6.18 (27 Apr 2009)
+
+  27 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +libisofs-0.6.18.ebuild:
+  Good to bump w/out working tests per
+  http://libburnia-project.org/ticket/147#comment:4. Thanks to Daniel
+  Pielmeier for judicious use of the cattle-prod.
 
 *libisofs-0.6.16-r1 (27 Apr 2009)
 

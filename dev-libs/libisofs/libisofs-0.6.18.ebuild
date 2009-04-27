@@ -1,0 +1,44 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.18.ebuild,v 1.1 2009/04/27 19:36:45 loki_val Exp $
+
+EAPI=2
+
+DESCRIPTION="libisofs is an open-source library for reading, mastering and writing optical discs."
+HOMEPAGE="http://libburnia-project.org/"
+SRC_URI="http://files.libburnia-project.org/releases/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+IUSE=""
+#IUSE="test"
+
+# http://libburnia-project.org/ticket/147#comment:4
+# Currently the tests are outdated. The time needed to repair the problematic code
+# in test_rockridge.c would be better invested in re-arranging the test suit
+# around the official libisofs API. Everybody seems busy with other things, 
+# though.
+#
+# So it is best to disable test/test until its fate is decided. 
+RESTRICT="test"
+
+RDEPEND=""
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+#	test? ( >=dev-util/cunit-2.1 )"
+
+src_configure() {
+	econf --disable-static
+}
+
+src_test() {
+	emake check || die "building tests failed"
+	test/test || die "running tests failed"
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS README NEWS Roadmap TODO
+	find "${D}" -name '*.la' -exec rm -rf '{}' '+' || die "la removal failed"
+}
