@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/flickr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.2 2009/04/23 19:43:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/ChangeLog,v 1.3 2009/04/27 12:33:50 flameeyes Exp $
+
+*flickr-1.0.2-r1 (27 Apr 2009)
+
+  27 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +files/flickr-1.0.2-fix.patch, +flickr-1.0.2-r1.ebuild:
+  Add a new revision of flickr using a manually-forged tarball, and add a
+  fix for the URLs.
 
   23 Apr 2009; Markus Meier <maekke@gentoo.org> flickr-1.0.2:
   amd64 stable, bug #266510
