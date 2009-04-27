@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9723 2009/04/27 16:07:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9724 2009/04/27 16:12:52 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,7 +32,7 @@
 #--- END OF EXAMPLES ---
 
 # Jeroen Roovers <jer@gentoo.org> (27 Apr 2009)
-# Masked because of ChangeLog entry anomalies
+# Masked because echangelog ommits ".ebuild" in ChangeLog entries (bug #267665)
 =app-portage/gentoolkit-dev-0.2.6.9
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Apr 2009)
