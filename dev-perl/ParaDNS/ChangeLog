@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/ParaDNS
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ParaDNS/ChangeLog,v 1.1 2009/04/28 07:35:47 jokey Exp $
+
+*ParaDNS-1.8 (28 Apr 2009)
+
+  28 Apr 2009; Markus Ullmann <jokey@gentoo.org> +metadata.xml,
+  +ParaDNS-1.8.ebuild:
+  Add as dependency for qpsmtpd
+
