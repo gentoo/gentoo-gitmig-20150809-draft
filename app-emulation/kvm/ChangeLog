@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.31 2009/04/14 17:36:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.32 2009/04/28 01:47:35 dang Exp $
+
+*kvm-85 (28 Apr 2009)
+
+  28 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> +kvm-85.ebuild:
+  Bump to kvm-85
+
+  This version splits the userspace (this package) from the kernel modules
+  (kvm-kmod), aside from lots of other fixes.
 
   14 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> -kvm-75.ebuild,
   -kvm-77.ebuild, -kvm-78.ebuild, -kvm-79.ebuild, -kvm-79-r1.ebuild,
