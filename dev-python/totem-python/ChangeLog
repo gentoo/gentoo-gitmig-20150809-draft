@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/totem-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.14 2009/04/12 21:25:29 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/totem-python/ChangeLog,v 1.15 2009/04/28 11:44:05 armin76 Exp $
+
+  28 Apr 2009; Raúl Porcel <armin76@gentoo.org> totem-python-2.24.1.ebuild:
+  arm/sh stable
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   totem-python-2.24.1.ebuild:

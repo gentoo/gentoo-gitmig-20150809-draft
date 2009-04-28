@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/metacity-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.19 2009/04/27 14:07:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.20 2009/04/28 11:39:32 armin76 Exp $
+
+  28 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  metacity-python-2.24.1.ebuild:
+  arm/sh stable
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> metacity-python-2.24.1:
   Stable for HPPA (bug #260063).
