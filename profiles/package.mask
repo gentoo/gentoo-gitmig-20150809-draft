@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9728 2009/04/28 15:07:22 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9729 2009/04/28 15:19:55 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -162,11 +162,6 @@ virtual/perl-IO-Compress
 # Torsten Veller <tove@gentoo.org> (15 Apr 2009)
 # Mask net-mail/gotmail for removal (#266204)
 net-mail/gotmail
-
-# Mounir Lamouri <volkmar@gentoo.org> (15 Apr 2009)
-# According to configure.ac ortp-0.15.0 breaks compatibility with older releases
-# Needs to be tested before unmasked
->=net-libs/ortp-0.15.0
 
 # Christoph Mende <angelos@unkreativ.org> (14 Apr 2009)
 # Masked media-sound/mpd pre-releases
