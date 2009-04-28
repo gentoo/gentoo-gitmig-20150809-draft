@@ -1,6 +1,6 @@
 # ChangeLog for x11-terms/evilvte
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.8 2009/01/06 17:20:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/ChangeLog,v 1.9 2009/04/28 07:24:25 ssuominen Exp $
 
 *evilvte-0.4.4_pre9 (06 Jan 2009)
 
@@ -10,7 +10,8 @@
 
 *evilvte-0.4.4_pre8 (28 Nov 2008)
 
-  28 Nov 2008; <ssuominen@gentoo.org> +evilvte-0.4.4_pre8.ebuild:
+  28 Nov 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +evilvte-0.4.4_pre8.ebuild:
   Version bump. Upstream applied our patch.
 
   27 Nov 2008; Raúl Porcel <armin76@gentoo.org> evilvte-0.4.3.ebuild:
@@ -18,7 +19,7 @@
 
 *evilvte-0.4.4_pre6-r1 (27 Nov 2008)
 
-  27 Nov 2008; <ssuominen@gentoo.org>
+  27 Nov 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/evilvte-0.4.4_pre6-fix_ldflags_and_ldlibs_for_asneeded.patch,
   evilvte-0.4.4_pre6.ebuild, +evilvte-0.4.4_pre6-r1.ebuild:
   Fix ldflags and ldlibs ordering to respect users flags. Install target had
@@ -27,17 +28,19 @@
 
 *evilvte-0.4.4_pre6 (26 Nov 2008)
 
-  26 Nov 2008; <ssuominen@gentoo.org> +evilvte-0.4.4_pre6.ebuild:
+  26 Nov 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +evilvte-0.4.4_pre6.ebuild:
   Version bump.
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
+  24 Nov 2008; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Rename my old e-mail drac at gentoo.org to ssuominen at gentoo.org.
 
-  01 Aug 2008; Samuli Suominen <drac@gentoo.org> evilvte-0.4.3.ebuild:
+  01 Aug 2008; Samuli Suominen <ssuominen@gentoo.org>
+  evilvte-0.4.3.ebuild:
   amd64 stable (tested by me) and keyword for ~x86 (tested by bheekling)
 
 *evilvte-0.4.3 (01 Jun 2008)
 
-  01 Jun 2008; Samuli Suominen <drac@gentoo.org> +evilvte-0.4.3.ebuild:
+  01 Jun 2008; Samuli Suominen <ssuominen@gentoo.org> +evilvte-0.4.3.ebuild:
   Initial commit for bug 224077, thanks to Wen-Yen Chuang and Lloyd Huang.
 
