@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.181 2009/04/17 07:55:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.182 2009/04/28 14:17:24 scarabeus Exp $
+
+  28 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
+  -kopete-4.2.2.ebuild:
+  Update metadata.xml to reflect useflag changes.
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.2.1.ebuild,
   kopete-4.2.2, kopete-4.2.2-r1:
