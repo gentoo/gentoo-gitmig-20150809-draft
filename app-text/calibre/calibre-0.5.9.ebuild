@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9.ebuild,v 1.3 2009/04/28 10:07:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9.ebuild,v 1.4 2009/04/28 17:18:48 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -35,7 +35,8 @@ SHARED_DEPEND=">=dev-lang/python-2.6
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
-	>=sys-apps/help2man-1.36.4"
+	>=sys-apps/help2man-1.36.4
+	>=dev-python/pyPdf-1.12"
 
 RDEPEND="$SHARED_DEPEND
 	>=dev-python/reportlab-2.1"
@@ -101,7 +102,8 @@ EOF
 	# Removing junk.
 	rm -r "${D}"/usr/share/applications/{mimeinfo.cache,defaults.list} \
 		"${D}"/usr/share/mime/{subclasses,XMLnamespaces,globs{,2},mime.cache,magic,aliases,{generic-,}icons} \
-		"${D}"/usr/share/{applnk,desktop-directories}
+		"${D}"/usr/share/{applnk,desktop-directories} \
+		"${D}$(python_get_sitedir)"/pyPdf
 }
 
 pkg_postinst() {
