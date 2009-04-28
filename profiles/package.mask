@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9726 2009/04/28 13:17:34 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9727 2009/04/28 15:05:19 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -62,10 +62,6 @@ x11-plugins/desklet-wirelessmonitor
 # Alin Năstac <mrness@gentoo.org> (26 Apr 2009)
 # Beta version
 =net-proxy/squid-3.1*
-
-# Mounir Lamouri <volkmar@gentoo.org> (26 Apr 2009)
-# Masking >=linphone-3.1.0 because depending on masked ortp-0.15.0_p1
->=net-voip/linphone-3.1.0
 
 # MATSUU Takuto <matsuu@gentoo.org> (25 Apr 2009)
 # Masked for testing, bug #267365.
