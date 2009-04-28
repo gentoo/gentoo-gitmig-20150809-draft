@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.91 2009/04/27 17:00:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.92 2009/04/28 07:18:45 ssuominen Exp $
+
+  28 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
+  cdparanoia-3.10.2-r2.ebuild:
+  amd64 stable
 
   27 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
   -files/cdparanoia-3.10.2-gcc43.patch, cdparanoia-3.10.2-r2.ebuild:
@@ -8,12 +12,12 @@
 
 *cdparanoia-3.10.2-r2 (28 Nov 2008)
 
-  28 Nov 2008; <ssuominen@gentoo.org> +files/cdparanoia-3.10.2-ppc64.patch,
-  +cdparanoia-3.10.2-r2.ebuild:
+  28 Nov 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +files/cdparanoia-3.10.2-ppc64.patch, +cdparanoia-3.10.2-r2.ebuild:
   Fix a really stupid oversight that should have been tested: forcing a
   drive/host endian mismatch within the interface lib. Doesn't check for
   null buff before trying a byteswap. Should fix Gentoo bug 240960, thanks
-  to Marty Rosenberg for his incomplete bug report.
+  to Marty Rosenberg for report.
 
   19 Oct 2008; Alexis Ballier <aballier@gentoo.org>
   cdparanoia-3.10.2-r1.ebuild:
@@ -38,7 +42,8 @@
 
 *cdparanoia-3.10.0 (29 Jun 2008)
 
-  29 Jun 2008; Samuli Suominen <drac@gentoo.org> +cdparanoia-3.10.0.ebuild:
+  29 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +cdparanoia-3.10.0.ebuild:
   Version bump to final release.
 
   28 Jun 2008; Tobias Klausmann <klausman@gentoo.org>
@@ -59,7 +64,7 @@
   14 Jun 2008; nixnut <nixnut@gentoo.org> cdparanoia-3.10_pre2.ebuild:
   Stable on ppc wrt bug 223513
 
-  14 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  14 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
   cdparanoia-3.10_pre2.ebuild:
   amd64/arm stable wrt #223513, comment #3.
 
@@ -68,17 +73,17 @@
   Fix bug #223513 in a different way: let it use autoconf 2.5 series, which
   is what upstream uses now too.
 
-  02 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  02 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
   cdparanoia-3.10_pre2.ebuild:
   Force LC_ALL=C for econf wrt #223513. Thanks to Priit Laes.
 
-  26 May 2008; Samuli Suominen <drac@gentoo.org>
+  26 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   -cdparanoia-3.10_pre0.ebuild, cdparanoia-3.10_pre0-r1.ebuild:
   arm stable, remove old
 
 *cdparanoia-3.10_pre2 (23 May 2008)
 
-  23 May 2008; Samuli Suominen <drac@gentoo.org>
+  23 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   +cdparanoia-3.10_pre2.ebuild:
   Version bump.
 
@@ -101,17 +106,13 @@
   cdparanoia-3.10_pre0-r1.ebuild:
   ia64/sparc/x86 stable wrt #217627
 
-  14 Apr 2008; Samuli Suominen <drac@gentoo.org>
-  cdparanoia-3.10_pre0-r1.ebuild:
-  Call epatch only once.
-
-  16 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  16 Mar 2008; Samuli Suominen <ssuominen@gentoo.org>
   cdparanoia-3.10_pre0-r1.ebuild:
   amd64 stable
 
 *cdparanoia-3.10_pre0-r1 (20 Feb 2008)
 
-  20 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  20 Feb 2008; Samuli Suominen <ssuominen@gentoo.org>
   -files/cdparanoia-3.9.8-include-cdda_interface_h.patch,
   -files/3.9.8-gcc34.patch, -files/cdparanoia-3.9.8-asneeded.patch,
   -files/cdparanoia-3.9.8-identify_crash.patch,
@@ -154,11 +155,11 @@
   cdparanoia-3.10_pre0.ebuild:
   Stable on x86 (bug #200102)
 
-  23 Nov 2007; Samuli Suominen <drac@gentoo.org>
+  23 Nov 2007; Samuli Suominen <ssuominen@gentoo.org>
   cdparanoia-3.10_pre0.ebuild:
   amd64 stable wrt #200102
 
-  21 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  21 Oct 2007; Samuli Suominen <ssuominen@gentoo.org>
   cdparanoia-3.10_pre0.ebuild:
   Temporarily drop ~x86-fbsd keyword with permission until patches have been
   backported.
@@ -169,7 +170,7 @@
 
 *cdparanoia-3.10_pre0 (20 Oct 2007)
 
-  20 Oct 2007; Samuli Suominen <drac@gentoo.org>
+  20 Oct 2007; Samuli Suominen <ssuominen@gentoo.org>
   +files/cdparanoia-3.10_pre0-include-cdda_interface_h.patch,
   +files/cdparanoia-3.10_pre0-Makefile.in.patch,
   +files/cdparanoia-3.10_pre0-use-destdir.patch,
