@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/smbc
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.6 2007/02/22 02:47:51 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.7 2009/04/28 17:13:08 jer Exp $
+
+  28 Apr 2009; Jeroen Roovers <jer@gentoo.org>
+  +files/smbc-1.2.2-cflags.patch, +files/smbc-1.2.2-size_t.patch,
+  smbc-1.2.2.ebuild:
+  Convert to EAPI=2. Run autoreconf. Do not DEPEND on system packages. Set
+  RDEPEND. Use CFLAGS. Remove separator comments. Apply Debian patch to
+  build on amd64. Marked ~hppa too.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
