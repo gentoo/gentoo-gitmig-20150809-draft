@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/rhpl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.8 2009/01/31 07:44:21 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.9 2009/04/28 10:09:32 rbu Exp $
+
+  28 Apr 2009; Robert Buchholz <rbu@gentoo.org> rhpl-0.213.ebuild:
+  inherit distutils eclass so python mdoules get compiled and cleaned up
+  properly
 
   31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Give up maintainership; reassign to maintainer-needed.

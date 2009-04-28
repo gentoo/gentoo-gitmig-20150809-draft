@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/rhpl-0.213.ebuild,v 1.1 2008/03/20 00:15:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/rhpl-0.213.ebuild,v 1.2 2009/04/28 10:09:32 rbu Exp $
 
-inherit eutils multilib python rpm toolchain-funcs
+inherit eutils multilib python rpm toolchain-funcs distutils
 
 # Revision of the RPM. Shouldn't affect us, as we're just grabbing the source
 # tarball out of it
