@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.4.0.ebuild,v 1.2 2009/03/08 19:53:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.5.0.ebuild,v 1.1 2009/04/28 14:43:58 ssuominen Exp $
 
 EAPI=2
-
-inherit multilib eutils
+inherit multilib
 
 DESCRIPTION="Lightweight video thumbnailer that can be used by file managers"
 HOMEPAGE="http://code.google.com/p/ffmpegthumbnailer"
@@ -21,16 +20,12 @@ RDEPEND="media-libs/libpng
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-pixelformat.patch"
-}
-
 src_configure() {
 	econf --disable-dependency-tracking --disable-static
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	rm -f "${D}"/usr/$(get_libdir)/libffmpegthumbnailer.la
 }
