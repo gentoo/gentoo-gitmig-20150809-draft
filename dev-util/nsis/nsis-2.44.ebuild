@@ -1,18 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.2 2009/03/24 18:12:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.3 2009/04/28 20:52:33 vapier Exp $
 
-mingw32_variants=$(eval echo {,i{6,5,4,3}86-{,pc-}}mingw32)
+mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-}}mingw32)
 
 DESCRIPTION="Nullsoft Scriptable Install System"
 HOMEPAGE="http://nsis.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2
-	prebuilt-system? ( mirror://sourceforge/${PN}/${P}.zip )"
+SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="bzip2 config-log doc prebuilt-system zlib"
+IUSE="bzip2 config-log doc zlib"
 
 # NSIS Menu uses wxwindows but it's all broken, so disable for now
 #	wxwindows? ( x11-libs/wxGTK )
@@ -81,10 +80,6 @@ src_compile() {
 
 src_install() {
 	do_scons install || die "scons failed"
-	if use prebuilt-system ; then
-		insinto /usr/share/nsis/Plugins
-		doins "${WORKDIR}"/${P}/Plugins/System.dll || die "failed to install System.dll"
-	fi
 	use doc || rm -rf "${D}"/usr/share/doc/${PF}/{Docs,Examples}
 
 	fperms -R go-w,a-x,a+X /usr/share/${PN}/ /usr/share/doc/${PF}/ /etc/nsisconf.nsh
