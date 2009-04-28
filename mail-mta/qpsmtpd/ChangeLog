@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/qpsmtpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.4 2009/04/28 07:12:53 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.5 2009/04/28 07:50:08 jokey Exp $
+
+*qpsmtpd-0.82_pre9999 (28 Apr 2009)
+
+  28 Apr 2009; Markus Ullmann <jokey@gentoo.org>
+  -qpsmtpd-0.43_rc2_pre945.ebuild, +qpsmtpd-0.82_pre9999.ebuild:
+  Add live ebuild and drop oldest
 
   28 Apr 2009; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Keyword testing on verified arches

@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.43_rc2_pre945.ebuild,v 1.2 2008/10/27 18:51:55 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.82_pre9999.ebuild,v 1.1 2009/04/28 07:50:08 jokey Exp $
 
-inherit eutils subversion
-REVNO=${PV/0.43_rc2_pre}
+EAPI=2
+
+inherit eutils git
+
 DESCRIPTION="qpsmtpd is a flexible smtpd daemon written in Perl"
 HOMEPAGE="http://smtpd.develooper.com"
-ESVN_REPO_URI="http://svn.perl.org/qpsmtpd/trunk@${REVNO}"
-ESVN_PROJECT="qpsmtpd"
+EGIT_REPO_URI="git://git.develooper.com/qpsmtpd.git"
 
 LICENSE="as-is"
 SLOT="0"
@@ -18,11 +19,10 @@ RDEPEND=">=dev-lang/perl-5.8.0
 	dev-perl/Net-DNS
 	virtual/perl-MIME-Base64
 	dev-perl/MailTools
-	async? ( dev-perl/IPC-Shareable
-			dev-perl/Socket6
-			dev-perl/Danga-Socket
-			dev-perl/ParaDNS
-	)
+	dev-perl/IPC-Shareable
+	dev-perl/Socket6
+	dev-perl/Danga-Socket
+	dev-perl/ParaDNS
 	ipv6? ( dev-perl/IO-Socket-INET6 )
 	syslog? ( virtual/perl-Sys-Syslog )
 	virtual/inetd"
@@ -36,11 +36,9 @@ pkg_setup() {
 	enewuser smtpd -1 -1 /var/spool/qpsmtpd smtpd${additional_groups}
 }
 
-src_unpack() {
-	subversion_src_unpack
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.40-badhelo_disconnect.patch
 	epatch "${FILESDIR}"/${PN}-0.40-badrcptto_allowrelay.patch
-	epatch "${FILESDIR}"/${PN}-0.43-peer_hooks.patch
 	epatch "${FILESDIR}"/${PN}-0.40-clamd_conf.patch
 }
 
@@ -82,5 +80,5 @@ src_install() {
 	newconfd "${FILESDIR}"/qpsmtpd.confd qpsmtpd || die "Installing conf.d file"
 	newinitd "${FILESDIR}"/qpsmtpd.initd qpsmtpd || die "Installing init.d file"
 
-	dodoc CREDITS Changes README README.authentication README.logging README.plugins STATUS
+	dodoc CREDITS Changes README README.plugins STATUS
 }
