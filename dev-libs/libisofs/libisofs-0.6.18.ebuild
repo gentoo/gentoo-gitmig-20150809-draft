@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.18.ebuild,v 1.1 2009/04/27 19:36:45 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.18.ebuild,v 1.2 2009/04/28 14:24:14 mr_bones_ Exp $
 
 EAPI=2
 
@@ -17,10 +17,10 @@ IUSE=""
 # http://libburnia-project.org/ticket/147#comment:4
 # Currently the tests are outdated. The time needed to repair the problematic code
 # in test_rockridge.c would be better invested in re-arranging the test suit
-# around the official libisofs API. Everybody seems busy with other things, 
+# around the official libisofs API. Everybody seems busy with other things,
 # though.
 #
-# So it is best to disable test/test until its fate is decided. 
+# So it is best to disable test/test until its fate is decided.
 RESTRICT="test"
 
 RDEPEND=""
