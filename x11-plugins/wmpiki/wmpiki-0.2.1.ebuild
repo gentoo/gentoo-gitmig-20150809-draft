@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.8 2008/11/28 19:00:02 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpiki/wmpiki-0.2.1.ebuild,v 1.9 2009/04/28 14:50:20 s4t4n Exp $
 
 inherit eutils
 
@@ -18,7 +18,15 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm"
 DEPEND="${RDEPEND}
-	x11-proto/xextproto"
+	x11-proto/xextproto
+	>=sys-apps/sed-4.1.4-r1"
+
+src_unpack()
+{
+	unpack ${A}
+
+	sed -i 's/gcc/${CC}/' "${S}/Makefile"
+}
 
 src_compile()
 {
