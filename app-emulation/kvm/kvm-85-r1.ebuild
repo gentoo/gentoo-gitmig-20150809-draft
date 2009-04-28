@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-85-r1.ebuild,v 1.1 2009/04/28 13:35:23 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-85-r1.ebuild,v 1.2 2009/04/28 17:45:24 dang Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs linux-info
 
 MY_PN="qemu-${PN}-devel"
 MY_P="${MY_PN}-${PV}"
