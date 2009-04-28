@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9729 2009/04/28 15:19:55 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9730 2009/04/28 15:21:22 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,11 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Mounir Lamouri <volkmar@gentoo.org> (28 Apr 2009)
-# Mask mediastreamer plugins because mediastreamer is masked
-media-plugins/mediastreamer-ilbc
-media-plugins/mediastreamer-x264
 
 # Tomas Chvatal <scarabeus@gentoo.org> (27 Apr 2009)
 # Masked due to broken iniparser patch
