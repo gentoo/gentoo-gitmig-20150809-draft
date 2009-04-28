@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.3.1.ebuild,v 1.2 2009/04/27 15:44:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.3.1.ebuild,v 1.3 2009/04/28 07:57:21 patrick Exp $
 
 EAPI="2"
 
@@ -127,6 +127,8 @@ src_unpack() {
 	# Do not strip binaries
 	epatch "${FILESDIR}/${PN}-3.3.0-nostrip.patch"
 
+	# fix variable declaration to avoid sandbox issue, #253134
+	epatch "${FILESDIR}/${PN}-3.3.1-sandbox-fix.patch"
 }
 
 src_compile() {
