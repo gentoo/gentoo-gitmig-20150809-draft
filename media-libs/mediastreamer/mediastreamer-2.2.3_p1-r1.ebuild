@@ -1,29 +1,32 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.3.ebuild,v 1.1 2009/04/25 00:29:08 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.3_p1-r1.ebuild,v 1.1 2009/04/28 13:51:24 volkmar Exp $
 
 EAPI="2"
 
 inherit eutils autotools multilib
 
+MY_P=${P/_p1/}
+
 DESCRIPTION="Mediastreaming library for telephony application"
 HOMEPAGE="http://www.linphone.org/index.php/eng/code_review/mediastreamer2"
-SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/${P}.tar.gz"
+SRC_URI="http://download.savannah.nongnu.org/releases/linphone/${PN}/${MY_P}.tar.gz
+	mirror://gentoo/${P}-linphone-3.1.1.patch.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc"
-IUSE="alsa arts debug doc examples gsm ipv6 jack oss portaudio speex theora
-video X"
+IUSE="alsa arts debug doc examples gsm ilbc ipv6 jack oss portaudio +speex
+theora video X"
 
-RDEPEND=">=net-libs/ortp-0.15.0
+RDEPEND=">=net-libs/ortp-0.15.0_p1
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	gsm? ( media-sound/gsm )
 	jack? ( media-libs/libsamplerate
 		media-sound/jack-audio-connection-kit )
 	portaudio? ( media-libs/portaudio )
-	speex? ( >=media-libs/speex-1.1.12 )
+	speex? ( >=media-libs/speex-1.2_beta3 )
 	video? ( media-libs/libsdl[video,X]
 		media-video/ffmpeg
 		theora? ( media-libs/libtheora )
@@ -31,6 +34,11 @@ RDEPEND=">=net-libs/ortp-0.15.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
+
+PDEPEND="ilbc? ( media-plugins/mediastreamer-ilbc )
+	video? ( x264? ( media-plugins/mediastreamer-x264 ) )"
+
+S=${WORKDIR}/${MY_P}
 
 # TODO:
 # run-time test for arts support
@@ -54,7 +62,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# fixing oss, jack, gsm, speex, theora and X auto-magic deps
+	epatch "${WORKDIR}"/${P}-linphone-3.1.1.patch
+
+	# fixing doc, oss, jack, gsm, speex, theora and X auto-magic deps
 	epatch "${FILESDIR}"/${P}-autodeps.patch
 
 	# fix arts detection for gentoo
@@ -72,6 +82,12 @@ src_prepare() {
 		-e "s:\(prefix/share\):\1/${PN}:" configure.ac \
 		|| die "patching configure.ac failed"
 
+	# fix html doc installation dir
+#	sed -i -e "s:\$(pkgdocdir):\$(docdir):" help/Makefile.am \
+#		|| die "patching help/Makefile.am failed"
+	sed -i -e "s:\(doc_htmldir=\).*:\1\$(htmldir):" help/Makefile.am \
+		|| die "patching help/Makefile.am failed"
+
 	eautoreconf
 
 	# fix arts include
@@ -88,6 +104,7 @@ src_configure() {
 	# macsnd and macaqsnd: macosx related
 	# external-ortp: don't use bundled libs
 	econf \
+		--htmldir=/usr/share/doc/${PF}/html \
 		--datadir=/usr/share/${PN} \
 		--libdir=/usr/$(get_libdir) \
 		--disable-strict \
@@ -98,6 +115,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable arts artsc) \
 		$(use_enable debug) \
+		$(use_enable doc) \
 		$(use_enable gsm) \
 		$(use_enable ipv6) \
 		$(use_enable jack) \
@@ -109,23 +127,10 @@ src_configure() {
 		$(use_enable X x11)
 }
 
-src_compile() {
-	default_src_compile
-
-	if use doc; then
-		doxygen help/DoxyFile || die "building doc failed"
-	fi
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
-
-	if use doc; then
-		dohtml -r help/doc/html/* || die "dohtml failed"
-		newman help/doc/man/man3/${PN}2.3 ${PN}.3 || die "newman failed"
-	fi
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/examples
