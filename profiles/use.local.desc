@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4401 2009/04/28 14:07:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4402 2009/04/28 14:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1090,10 +1090,10 @@ kde-base/kopete:irc - Enable the IRC protocol handler.
 kde-base/kopete:jabber - Enable XMPP protocol handler (this is also gmail).
 kde-base/kopete:latex - Embed latex formatted text into messages.
 kde-base/kopete:meanwhile - Enable the Sametime protocol handler.
-kde-base/kopete:msn - Enable support for MSN (old microsoft protocol).
+kde-base/kopete:messenger - Enable support for MSN and Windows live protocols (old implementation).
+kde-base/kopete:msn - Enable "Windows live messenger" protocol support.
 kde-base/kopete:netmeeting - Builds netmeeting plugin (require gnomemeeting)
 kde-base/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
-kde-base/kopete:oscar - Enable support for AIM and ICQ protocols.
 kde-base/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
 kde-base/kopete:pipes - Send messages to external pipe.
 kde-base/kopete:privacy - Filter for incomming messages
@@ -1101,13 +1101,13 @@ kde-base/kopete:qq - enable support for the chinese network protocol.
 kde-base/kopete:sametime - Enables support for the Sametime protocol for instant messaging
 kde-base/kopete:sms - Enable the sms sending plugin.
 kde-base/kopete:statistics - Everybody loves statistic graphs, especialy cake ones. ;]
+kde-base/kopete:telepathy - Enable support for the realtime communication framework telepathy.
 kde-base/kopete:testbed - Enable the testbed protocol.
 kde-base/kopete:texteffect - Various fancy text effects for your messages (dont ever consider writing us with this enabled ;]).
 kde-base/kopete:translator - Translate incoming and outgoing messages.
 kde-base/kopete:urlpicpreview - Enables in conversation pictures preview.
 kde-base/kopete:webpresence - Show your status and some more informations on web.
 kde-base/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
-kde-base/kopete:wlm - Enable "Windows live messenger" protocol support (New protocol from MS).
 kde-base/kopete:yahoo - Enable yahoo protocol support.
 kde-base/kpilot:avantgo - Add support for syncing Avantgo accounts
 kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
