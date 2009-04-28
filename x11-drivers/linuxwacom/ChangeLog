@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.34 2009/04/18 17:43:52 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.35 2009/04/28 09:22:51 ikelos Exp $
+
+  28 Apr 2009; Mike Auty <ikelos@gentoo.org> linuxwacom-0.8.3_p2.ebuild:
+  Add in warning to remove existing wacom fdi files for latest linuxwacom.
 
 *linuxwacom-0.8.3_p2 (18 Apr 2009)
 
