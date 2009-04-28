@@ -1,7 +1,7 @@
 diff -urN wmdl-1.4.1/Makefile wmdl-1.4.1-modified/Makefile
---- wmdl-1.4.1/Makefile	1999-11-14 12:56:47.000000000 -0600
-+++ wmdl-1.4.1-modified/Makefile	2002-10-04 10:11:42.000000000 -0500
-@@ -1,12 +1,7 @@
+--- Makefile	2009-04-28 16:34:24.000000000 +0200
++++ Makefile.new	2009-04-28 16:33:55.000000000 +0200
+@@ -1,23 +1,14 @@
  
 -INCLUDES = -I/usr/include \
 -           -I/usr/local/include \
@@ -17,19 +17,19 @@ diff -urN wmdl-1.4.1/Makefile wmdl-1.4.1-modified/Makefile
   
  PIXMAPINC = -I./images
  
-@@ -14,10 +9,8 @@
+ LIBS = -lm -lX11 -lXpm -lXext 
  
  
- CC=gcc
+-CC=gcc
 -#CC=cc
- 
+-
 -#CFLAGS= -g --verbose
 -CFLAGS= -g
 +FLAGS=${CFLAGS}
  
  TARGET=wmdl
  SOURCE=wmdl.c
-@@ -25,10 +18,10 @@
+@@ -25,10 +16,10 @@
  all: ${TARGET}
  
  ${TARGET}: ${SOURCE}

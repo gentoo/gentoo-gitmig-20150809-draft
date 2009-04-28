@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdl
 # Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/ChangeLog,v 1.12 2008/11/28 18:49:48 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdl/ChangeLog,v 1.13 2009/04/28 14:41:17 s4t4n Exp $
+
+  28 Ape 2009; Michele Noberasco <tcunha@gentoo.org> files/makefile.diff:
+  Reworked patch so that CC is no longer hardcoded, bug #215651.
 
   28 Nov 2008; Tiago Cunha <tcunha@gentoo.org> wmdl-1.4.1.ebuild:
   stable sparc, bug 215651
