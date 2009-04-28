@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.122 2009/04/17 11:49:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.123 2009/04/28 14:30:42 armin76 Exp $
+
+  28 Apr 2009; Raúl Porcel <armin76@gentoo.org> pulseaudio-0.9.9.ebuild:
+  arm/sh stable
 
   17 Apr 2009; Diego E. Pettenò <flameeyes@gentoo.org> pulseaudio-0.9.15:
   Fix glib/glib2 parameter error (bug #266348), update alsa-lib dep (bug
