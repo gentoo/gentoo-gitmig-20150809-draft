@@ -1,12 +1,12 @@
 # ChangeLog for media-sound/asunder
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.19 2008/11/20 18:57:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/ChangeLog,v 1.20 2009/04/28 07:32:35 ssuominen Exp $
 
   20 Nov 2008; Raúl Porcel <armin76@gentoo.org> asunder-1.6.1.ebuild:
   x86 stable
 
   17 Nov 2008; Kenneth Prugh <ken69267@gentoo.org> asunder-1.6.1.ebuild:
-  amd64 stable, blame drac
+  amd64 stable, blame ssuominen
 
 *asunder-1.6.1 (21 Sep 2008)
 
@@ -30,16 +30,16 @@
 
 *asunder-1.5 (28 Apr 2008)
 
-  28 Apr 2008; Samuli Suominen <drac@gentoo.org> -asunder-1.0.2.ebuild,
+  28 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> -asunder-1.0.2.ebuild,
   +asunder-1.5.ebuild:
   Version bump wrt #219508, thanks to Andrew Smith.
 
 *asunder-1.0.2 (14 Feb 2008)
 
-  14 Feb 2008; Samuli Suominen <drac@gentoo.org> +asunder-1.0.2.ebuild:
+  14 Feb 2008; Samuli Suominen <ssuominen@gentoo.org> +asunder-1.0.2.ebuild:
   Version bump.
 
-  04 Feb 2008; Samuli Suominen <drac@gentoo.org> -asunder-0.8.1.ebuild,
+  04 Feb 2008; Samuli Suominen <ssuominen@gentoo.org> -asunder-0.8.1.ebuild,
   asunder-1.0.ebuild:
   amd64 stable wrt #208333
 
@@ -48,7 +48,7 @@
 
 *asunder-1.0 (02 Jan 2008)
 
-  02 Jan 2008; Samuli Suominen <drac@gentoo.org>
+  02 Jan 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/asunder-1.0-desktop-entry.patch, asunder-0.8.1.ebuild,
   +asunder-1.0.ebuild:
   Version bump wrt #204000, thanks to Josh Saddler for reporting. Marked 0.8.1
@@ -56,13 +56,13 @@
 
 *asunder-0.8.1 (28 Aug 2007)
 
-  28 Aug 2007; Samuli Suominen <drac@gentoo.org> -asunder-0.8.ebuild,
+  28 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> -asunder-0.8.ebuild,
   +asunder-0.8.1.ebuild:
   Version bump.
 
 *asunder-0.8 (26 Aug 2007)
 
-  26 Aug 2007; Samuli Suominen <drac@gentoo.org> +asunder-0.8.ebuild:
+  26 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> +asunder-0.8.ebuild:
   Version bump for bug 190175, thanks to Igor for reporting.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
@@ -81,8 +81,7 @@
 
 *asunder-0.1.0 (29 Mar 2005)
 
-  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
-  +asunder-0.1.0.ebuild:
+  29 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +asunder-0.1.0.ebuild:
   Initial import, ebuild contributed by Alessio DAscanio <otaku@fastwebnet.it>.
   Fixes #85889
 
