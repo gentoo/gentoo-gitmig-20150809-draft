@@ -1,6 +1,10 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.10 2009/04/28 06:54:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.11 2009/04/28 10:07:43 zmedico Exp $
+
+  28 Apr 2009; Zac Medico <zmedico@gentoo.org> calibre-0.5.9.ebuild:
+  Add missing reportlab dependency (bug #258938, comment #23) and fix
+  sandbox violation in /usr/share/gnome/apps (comment #21).
 
   28 Apr 2009; Zac Medico <zmedico@gentoo.org> calibre-0.5.9.ebuild:
   Require PyQt4[webkit] for traceback shown in bug #258938, comment #21.

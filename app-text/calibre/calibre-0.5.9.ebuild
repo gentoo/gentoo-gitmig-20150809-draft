@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9.ebuild,v 1.2 2009/04/28 06:54:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9.ebuild,v 1.3 2009/04/28 10:07:43 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -22,7 +22,7 @@ SLOT="0"
 
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.6
+SHARED_DEPEND=">=dev-lang/python-2.6
 	>=dev-python/setuptools-0.6_rc5
 	>=dev-python/imaging-1.1.6
 	>=dev-libs/libusb-0.1.12
@@ -37,7 +37,10 @@ RDEPEND=">=dev-lang/python-2.6
 	>=dev-python/dnspython-1.6.0
 	>=sys-apps/help2man-1.36.4"
 
-DEPEND="${RDEPEND}
+RDEPEND="$SHARED_DEPEND
+	>=dev-python/reportlab-2.1"
+
+DEPEND="$SHARED_DEPEND
 	dev-python/setuptools
 	>=gnome-base/librsvg-2.0.0
 	>=x11-misc/xdg-utils-1.0.2-r2
@@ -81,6 +84,8 @@ EOF
 
 	chmod +x "${T}/kde-config"
 
+	# Sandbox violation when linux.py calls xdg-desktop-menu (bug #258938).
+	addpredict /usr/share/gnome/apps
 	PATH="${T}:${PATH}" KDEDIRS="${D}/usr" XDG_DATA_DIRS="${D}/usr/share" DESTDIR="${D}" PYTHONPATH="${S}/build/lib" \
 		python "${S}"/src/${PN}/linux.py \
 		--use-destdir --do-not-reload-udev-hal \
