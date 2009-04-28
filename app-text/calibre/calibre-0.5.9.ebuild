@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9.ebuild,v 1.1 2009/04/27 07:08:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9.ebuild,v 1.2 2009/04/28 06:54:27 zmedico Exp $
 
+EAPI=2
 NEED_PYTHON=2.6
 
 inherit python distutils eutils fdo-mime bash-completion
@@ -25,7 +26,7 @@ RDEPEND=">=dev-lang/python-2.6
 	>=dev-python/setuptools-0.6_rc5
 	>=dev-python/imaging-1.1.6
 	>=dev-libs/libusb-0.1.12
-	>=dev-python/PyQt4-4.4.2
+	>=dev-python/PyQt4-4.4.2[webkit]
 	>=dev-python/mechanize-0.1.11
 	>=media-gfx/imagemagick-6.3.5
 	>=x11-misc/xdg-utils-1.0.2
