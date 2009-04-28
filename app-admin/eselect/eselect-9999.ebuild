@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.1 2009/04/18 08:27:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.2 2009/04/28 09:50:12 ulm Exp $
 
 ESVN_REPO_URI="svn://anonsvn.gentoo.org/eselect/trunk"
 ESVN_BOOTSTRAP="autogen.bash"
@@ -14,7 +14,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="doc bash-completion"
+IUSE="doc bash-completion paludis"
 
 DEPEND="sys-apps/sed
 	doc? ( dev-python/docutils )
@@ -25,14 +25,16 @@ DEPEND="sys-apps/sed
 	)"
 RDEPEND="sys-apps/sed
 	sys-apps/file
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	paludis? ( sys-apps/paludis )
+	!paludis? ( >=sys-apps/portage-2.1.6 )"
 
 # Commented out: only few users of eselect will edit its source
 #PDEPEND="emacs? ( app-emacs/gentoo-syntax )
 #	vim-syntax? ( app-vim/eselect-syntax )"
 
 src_compile() {
-	econf || die "econf failed"
+	econf --with-pm="$(usev paludis || echo portage)"
 	emake || die "emake failed"
 
 	if use doc ; then
