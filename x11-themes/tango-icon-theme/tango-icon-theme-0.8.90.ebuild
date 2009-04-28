@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.1 2009/04/28 10:53:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tango-icon-theme/tango-icon-theme-0.8.90.ebuild,v 1.2 2009/04/28 10:57:16 ssuominen Exp $
 
 EAPI=2
 inherit gnome2-utils
@@ -32,7 +32,7 @@ src_configure() {
 src_install() {
 	addwrite /root/.gnome2
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
+	dodoc AUTHORS ChangeLog README
 }
 
 pkg_preinst() {	gnome2_icon_savelist; }
