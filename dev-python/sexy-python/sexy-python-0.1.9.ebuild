@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9.ebuild,v 1.12 2008/10/28 11:52:20 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/sexy-python-0.1.9.ebuild,v 1.13 2009/04/28 14:55:58 jer Exp $
 
 inherit python
 
@@ -10,7 +10,7 @@ SRC_URI="http://releases.chipx86.com/libsexy/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~hppa ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=x11-libs/libsexy-${PV}
