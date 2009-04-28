@@ -7,7 +7,7 @@
   <name>Markus Ullmann</name>
 </maintainer>
 <use>
-        <flag name='async'>Add deps + support for asynchronous mail reception/processing</flag>
+        <flag name='async'>Add deps + support for asynchronous mail reception/processing as well as preforked daemon</flag>
         <flag name='postfix'>create user with permissions for proper postfix interaction</flag>
 </use>
 </pkgmetadata>
