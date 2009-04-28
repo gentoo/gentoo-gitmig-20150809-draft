@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-85.ebuild,v 1.1 2009/04/28 01:47:35 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-85-r1.ebuild,v 1.1 2009/04/28 13:35:23 dang Exp $
 
 EAPI="2"
 
@@ -99,7 +99,7 @@ src_prepare() {
 	epatch
 
 	# Fix docs manually
-	sed -i -e 's/QEMU/KVM/g;s/qemu/kvm/g;s/Qemu/Kvm/g;s/kvm-options.texi/qemu-options.texi' \
+	sed -i -e 's/QEMU/KVM/g;s/qemu/kvm/g;s/Qemu/Kvm/g;s/kvm-options.texi/qemu-options.texi/' \
 		qemu/qemu-doc.texi qemu/qemu-img.texi qemu/qemu-nbd.texi
 }
 
@@ -120,10 +120,10 @@ src_configure() {
 		conf_opts="$conf_opts --arch=i686"
 	fi
 
-	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
-
 	# set up asm symlink; not done now there's no kernel source
-	cd kernel/include && ln -sf asm-x86 asm
+	cd kernel/include && ln -sf asm-x86 asm && cd ../..
+
+	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
 }
 
 src_compile() {
