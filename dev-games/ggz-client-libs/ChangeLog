@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/ggz-client-libs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.32 2009/04/20 10:11:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ggz-client-libs/ChangeLog,v 1.33 2009/04/28 11:54:45 armin76 Exp $
+
+  28 Apr 2009; Raúl Porcel <armin76@gentoo.org>
+  ggz-client-libs-0.0.14.1.ebuild:
+  arm/sh stable
 
   20 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   ggz-client-libs-0.0.14.1.ebuild:

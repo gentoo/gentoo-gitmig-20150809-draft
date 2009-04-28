@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libggz
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.29 2009/04/20 10:10:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libggz/ChangeLog,v 1.30 2009/04/28 11:55:31 armin76 Exp $
+
+  28 Apr 2009; Raúl Porcel <armin76@gentoo.org> libggz-0.0.14.1.ebuild:
+  arm/sh stable
 
   20 Apr 2009; Raúl Porcel <armin76@gentoo.org> libggz-0.0.14.1.ebuild:
   Add ~sh
