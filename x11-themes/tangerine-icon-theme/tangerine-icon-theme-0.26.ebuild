@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.4 2007/11/06 17:13:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/tangerine-icon-theme/tangerine-icon-theme-0.26.ebuild,v 1.5 2009/04/28 11:05:51 ssuominen Exp $
 
-inherit autotools eutils gnome2-utils
+EAPI=2
+inherit autotools gnome2-utils
 
 DESCRIPTION="a derivative of the standard Tango theme, using a more orange approach"
 HOMEPAGE="http://packages.ubuntu.com/gutsy/x11/tangerine-icon-theme"
@@ -14,54 +15,41 @@ SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE="png"
 
-RESTRICT="binchecks strip"
-
 RDEPEND=">=x11-misc/icon-naming-utils-0.8.2
-	media-gfx/imagemagick
+	media-gfx/imagemagick[png?]
 	>=gnome-base/librsvg-2.12.3
 	>=x11-themes/gnome-icon-theme-2.18"
 DEPEND="${RDEPEND}
-	>=dev-util/pkgconfig-0.19
-	>=dev-util/intltool-0.33
+	dev-util/pkgconfig
+	dev-util/intltool
 	sys-devel/gettext"
+RESTRICT="binchecks strip"
 
-pkg_setup() {
-	if use png && ! built_with_use media-gfx/imagemagick png; then
-		die "Build media-gfx/imagemagick with USE=png."
-	fi
-}
-
-src_unpack() {
-	unpack ${PN}_${PV}.tar.gz
-	cd "${S}"
-
-	cp "${DISTDIR}"/gentoo-logo.svg scalable/places/start-here.svg
+src_unpack() { unpack ${PN}_${PV}.tar.gz; }
+src_prepare() {
+	cp "${DISTDIR}"/gentoo-logo.svg scalable/places/start-here.svg \
+		|| die "cp failed"
 
 	for res in 16 22 32; do
-		rsvg -w ${res} -h ${res} scalable/places/start-here.svg ${res}x${res}/places/start-here.png
+		rsvg -w ${res} -h ${res} scalable/places/start-here.svg \
+			${res}x${res}/places/start-here.png || die "rsvg failed"
 	done
 
-	intltoolize --force --copy --automake || die "intltoolize failed."
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable png png-creation) \
 		$(use_enable png icon-framing)
-	emake || die "emake failed."
 }
 
 src_install() {
-	addwrite "/root/.gnome2"
-
-	emake DESTDIR="${D}" install || die "emake install failed."
+	addwrite /root/.gnome2
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
 }
 
-pkg_postinst() {
-	gnome2_icon_cache_update
-}
-
-pkg_postrm() {
-	gnome2_icon_cache_update
-}
+pkg_preinst() { gnome2_icon_savelist; }
+pkg_postinst() { gnome2_icon_cache_update; }
+pkg_postrm() { gnome2_icon_cache_update; }
