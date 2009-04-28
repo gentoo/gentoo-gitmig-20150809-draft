@@ -1,0 +1,14 @@
+diff -ur kwave-0.8.2.old/po/CMakeLists.txt kwave-0.8.2/po/CMakeLists.txt
+--- kwave-0.8.2.old/po/CMakeLists.txt	2009-04-28 15:46:01.000000000 +0300
++++ kwave-0.8.2/po/CMakeLists.txt	2009-04-28 15:55:03.000000000 +0300
+@@ -25,7 +25,9 @@
+     ENDIF (NOT ${_lang_short} STREQUAL "en")
+ ENDFOREACH(_lang ${KWAVE_BUILD_LINGUAS})
+ 
+-GETTEXT_CREATE_TRANSLATIONS(kwave.pot ALL ${_po_files})
++IF(DEFINED _po_files )
++    GETTEXT_CREATE_TRANSLATIONS(kwave.pot ALL ${_po_files})
++ENDIF(DEFINED _po_files )
+ 
+ #############################################################################
+ #############################################################################

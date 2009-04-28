@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.2.ebuild,v 1.1 2009/04/27 16:43:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.2.ebuild,v 1.2 2009/04/28 19:44:45 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,6 +30,8 @@ DEPEND="${RDEPEND}
 	>=kde-base/kdesdk-misc-${KDE_MINIMAL}
 	media-gfx/imagemagick"
 
+PATCHES=( "${PV}-fix_gettext.patch" )
+	
 src_configure() {
 	use mmx && append-flags "-mmmx"
 	mycmakeargs="${mycmakeargs}
