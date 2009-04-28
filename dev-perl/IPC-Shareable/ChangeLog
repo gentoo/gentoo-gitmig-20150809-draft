@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Shareable
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Shareable/ChangeLog,v 1.1 2009/04/28 07:27:19 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Shareable/ChangeLog,v 1.2 2009/04/28 07:29:30 jokey Exp $
+
+  28 Apr 2009; Markus Ullmann <jokey@gentoo.org> IPC-Shareable-0.60.ebuild:
+  Minor cleanup and proper keywording
 
 *IPC-Shareable-0.60 (28 Apr 2009)
 

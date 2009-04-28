@@ -4,17 +4,14 @@
 
 inherit perl-module
 
-S=${WORKDIR}/IPC-Shareable-0.60
-
 DESCRIPTION="Tie a variable to shared memory"
 HOMEPAGE="http://search.cpan.org/search?query=IPC-Shareable&mode=dist"
 SRC_URI="mirror://cpan/authors/id/B/BS/BSUGARS/IPC-Shareable-0.60.tar.gz"
 
-
-IUSE=""
-
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
+IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
