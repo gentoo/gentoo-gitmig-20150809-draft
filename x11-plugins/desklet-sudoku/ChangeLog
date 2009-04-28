@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-sudoku
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sudoku/ChangeLog,v 1.4 2007/02/21 23:22:18 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-sudoku/ChangeLog,v 1.5 2009/04/28 01:35:37 nixphoeni Exp $
+
+  28 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-sudoku-0.3:
+  MY_P no longer needs to be defined since it's done in the eclass - just
+  have to define DESKLET_NAME before inheriting it. Quoted like a good dev.
 
   21 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
