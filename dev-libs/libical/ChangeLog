@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libical
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.47 2009/04/29 14:06:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libical/ChangeLog,v 1.48 2009/04/29 14:34:55 ranger Exp $
+
+  29 Apr 2009; Brent Baude <ranger@gentoo.org> libical-0.43.ebuild:
+  stable ppc64, bug 238625
 
   29 Apr 2009; Jeroen Roovers <jer@gentoo.org> libical-0.43.ebuild:
   Stable for HPPA (bug #238625).
