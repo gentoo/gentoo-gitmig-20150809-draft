@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.172 2009/04/15 21:49:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.173 2009/04/29 12:25:13 ssuominen Exp $
 
   15 Apr 2009; Markus Meier <maekke@gentoo.org> blender-2.48a-r3.ebuild:
   make sure that libsdl is built with joystick with USE=blender-game by R Stephan
@@ -27,12 +27,8 @@
   16 Dec 2008; Brent Baude <ranger@gentoo.org> blender-2.48a-r3.ebuild:
   Marking blender-2.48a-r3 ppc64 for bug 245515
 
-  15 Dec 2008; <ssuominen@gentoo.org> blender-2.48a-r3.ebuild:
+  15 Dec 2008; Samuli Suominen <ssuominen@gentoo.org> blender-2.48a-r3.ebuild:
   x86 stable wrt #245515
-
-  15 Dec 2008; <ssuominen@gentoo.org> blender-2.48a-r3.ebuild:
-  Upgrade OpenAL dep. for x86 to >=1.5.304 because of undefined 
-  references wrt #245515.
 
   16 Nov 2008; Luca Barbato <lu_zero@gentoo.org>
   -files/blender-2.44-swscale.patch,
