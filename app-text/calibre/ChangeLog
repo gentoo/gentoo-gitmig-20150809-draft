@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.15 2009/04/29 06:32:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.16 2009/04/29 07:22:48 zmedico Exp $
+
+*calibre-0.5.9-r2 (29 Apr 2009)
+
+  29 Apr 2009; Zac Medico <zmedico@gentoo.org> -calibre-0.5.9-r1.ebuild,
+  +calibre-0.5.9-r2.ebuild:
+  Revbump with blockers for bundled odfpy, cherrypy, cssutils and
+  django-tagging libraries. TODO: Unbundle these libraries.
 
   29 Apr 2009; Zac Medico <zmedico@gentoo.org> calibre-0.5.9-r1.ebuild:
   Move sed calls from src_compile to src_prepare, and call
