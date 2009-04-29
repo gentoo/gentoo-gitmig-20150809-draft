@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.1.0.ebuild,v 1.1 2009/04/26 02:48:20 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.1.0.ebuild,v 1.2 2009/04/29 17:11:43 volkmar Exp $
 
 EAPI="2"
 
@@ -25,10 +25,11 @@ RDEPEND=">=media-libs/mediastreamer-2.2.3[video?]
 	ncurses? ( sys-libs/readline
 		sys-libs/ncurses )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	sys-devel/gettext
 	doc? ( app-text/sgmltools-lite )
 	nls? ( dev-util/intltool
-		dev-util/pkgconfig )"
+		sys-devel/gettext )"
 
 IUSE_LINGUAS="fr it de ja es pl cs nl sv pt_BR hu ru"
 
