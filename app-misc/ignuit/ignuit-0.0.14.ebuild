@@ -1,6 +1,6 @@
 # Copyright 2003-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-0.0.14.ebuild,v 1.2 2009/04/26 14:38:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-0.0.14.ebuild,v 1.3 2009/04/29 15:00:52 ranger Exp $
 
 DESCRIPTION="memorization aid based on the Leitner flashcard system"
 HOMEPAGE="http://homepages.ihug.co.nz/~trmusson/programs.html#ignuit"
@@ -8,7 +8,7 @@ SRC_URI="http://homepages.ihug.co.nz/~trmusson/stuff/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~ppc64"
 IUSE="examples"
 
 RDEPEND=">=gnome-base/libgnomeui-2.22.1
