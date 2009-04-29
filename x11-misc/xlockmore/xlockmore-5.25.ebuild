@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.5 2008/05/12 18:31:14 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.6 2009/04/29 20:34:55 ssuominen Exp $
 
-inherit flag-o-matic pam
+inherit pam
 
 DESCRIPTION="Just another screensaver application for X"
 HOMEPAGE="http://www.tux.org/~bagleyd/xlockmore.html"
@@ -44,9 +44,6 @@ src_compile() {
 		$(use_with esd esound) \
 		$(use_with nas) \
 		$(use_with debug editres)
-
-	# suid-with-lazy-bindings problem
-	append-flags $(bindnow-flags)
 
 	emake || die "emake failed."
 }

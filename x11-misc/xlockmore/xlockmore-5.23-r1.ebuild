@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23-r1.ebuild,v 1.7 2007/05/06 15:04:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.23-r1.ebuild,v 1.8 2009/04/29 20:34:55 ssuominen Exp $
 
-inherit eutils pam flag-o-matic
+inherit eutils pam
 
 IUSE="crypt debug nas esd motif opengl truetype gtk pam xlockrc unicode"
 
@@ -46,9 +46,6 @@ src_compile() {
 		$(use_with esd esound) \
 		$(use_with nas) \
 		$(use_with debug editres)
-
-	# fixes suid-with-lazy-bindings problem
-	append-flags $(bindnow-flags)
 
 	emake || die "emake failed."
 }
