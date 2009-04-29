@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubymail
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.36 2009/04/26 14:46:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.37 2009/04/29 12:19:02 jer Exp $
+
+  29 Apr 2009; Jeroen Roovers <jer@gentoo.org> rubymail-1.0.0.ebuild:
+  Stable for HPPA (bug #266138).
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> rubymail-1.0.0.ebuild:
   Marking rubymail-1.0.0 ppc stable for bug 266138
