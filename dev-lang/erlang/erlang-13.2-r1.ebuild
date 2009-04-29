@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2-r1.ebuild,v 1.1 2009/04/29 05:59:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2-r1.ebuild,v 1.2 2009/04/29 12:59:55 fauli Exp $
 
 EAPI=2
+WX_GTK_VER="2.8"
 
-inherit autotools elisp-common eutils flag-o-matic multilib versionator
+inherit autotools elisp-common eutils multilib versionator wxwidgets
 
 # NOTE: If you need symlinks for binaries please tell maintainers or
 # open up a bug to let it be created.

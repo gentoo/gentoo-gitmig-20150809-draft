@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/erlang
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.161 2009/04/29 05:59:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/ChangeLog,v 1.162 2009/04/29 12:59:55 fauli Exp $
+
+  29 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  erlang-13.2-r1.ebuild:
+  properly choose the wxGTK version with the wxwidgets eclass, also remove
+  flag-o-matic, not used anymore, bug 267260 by Arvid Norlander <anmaster AT
+  tele2 DOT se>
 
 *erlang-13.2-r1 (29 Apr 2009)
 
