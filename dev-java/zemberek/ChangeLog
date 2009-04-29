@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/zemberek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.13 2009/04/26 23:10:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.14 2009/04/29 16:36:50 fauli Exp $
+
+  29 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  zemberek-2.1.1.ebuild:
+  stable x86, bug 253753
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> zemberek-2.1.1.ebuild:
   Marking zemberek-2.1.1 ppc for bug 253753
