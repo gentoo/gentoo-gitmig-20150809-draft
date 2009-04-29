@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.59 2009/04/28 11:45:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.60 2009/04/29 11:31:56 armin76 Exp $
+
+  29 Apr 2009; Raúl Porcel <armin76@gentoo.org> monotone-0.43.ebuild:
+  Readd ~ia64 wrt #267773
 
 *monotone-0.43 (28 Apr 2009)
 
