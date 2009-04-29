@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9-r1.ebuild,v 1.2 2009/04/29 04:45:10 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9-r1.ebuild,v 1.3 2009/04/29 06:32:48 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -47,14 +47,14 @@ DEPEND="$SHARED_DEPEND
 	>=x11-misc/xdg-utils-1.0.2-r2
 	sys-apps/help2man"
 
-src_compile() {
+src_prepare() {
 	# Removing the post_install call. We'll do that stuff in src_install.
 	sed -i -e "/if 'install'/,/subprocess.check_call/d" \
 		setup.py || die "couldn't remove post_install call"
 	# For help2man to succeed, we need to tell it the path to the tools.
 	sed -i -e "s:\('help2man',\) \(prog\):\1 \'PYTHONPATH=\"${D}$(python_get_sitedir)\" \' + \'${D}usr/bin/\' + \2:" \
 		src/calibre/linux.py || die "sed'ing in the IMAGE path failed"
-	distutils_src_compile
+	distutils_src_prepare
 }
 
 src_install() {
@@ -110,4 +110,5 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	distutils_pkg_postinst
+	bash-completion_pkg_postinst
 }
