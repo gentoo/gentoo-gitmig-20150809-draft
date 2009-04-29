@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/winpdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.15 2009/04/29 07:31:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/winpdb/ChangeLog,v 1.16 2009/04/29 18:33:37 maekke Exp $
+
+  29 Apr 2009; Markus Meier <maekke@gentoo.org> winpdb-1.4.4.ebuild:
+  amd64 stable, bug #236176
 
   29 Apr 2009; Christian Faulhammer <fauli@gentoo.org> winpdb-1.4.4.ebuild:
   stable x86, bug 236176
