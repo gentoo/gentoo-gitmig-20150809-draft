@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>betelgeuse@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		Sitemap Gen is a python script which will generate an xml Sitemap for

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/goog-sitemapgen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.5 2008/03/12 10:30:16 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.6 2009/04/29 00:40:04 betelgeuse Exp $
+
+  29 Apr 2009; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
+  Take maintenance.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Josh Glover (jmglov, #206782) from metadata.xml.
