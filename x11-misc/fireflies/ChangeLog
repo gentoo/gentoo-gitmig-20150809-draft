@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fireflies
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.20 2008/12/17 22:31:26 loki_val Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/ChangeLog,v 1.21 2009/04/29 18:04:38 ssuominen Exp $
+
+  29 Apr 2009; Samuli Suominen <ssuominen@gentoo.org> fireflies-2.07.ebuild:
+  Fix HOMEPAGE and SRC_URI wrt #266702.
 
   17 Dec 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/fireflies-2.07-gcc43.patch, fireflies-2.07.ebuild:
