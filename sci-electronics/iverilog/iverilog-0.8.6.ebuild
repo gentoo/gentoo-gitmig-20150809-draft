@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.6.ebuild,v 1.2 2008/05/07 01:49:12 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/iverilog-0.8.6.ebuild,v 1.3 2009/04/29 07:59:25 fauli Exp $
 
 inherit eutils multilib
 
@@ -26,17 +26,22 @@ src_unpack() {
 
 	# Fix for bug #172919
 	sed -i -e '/#  include <asm\/page.h>/d' vvp/main.cc || die "sed failed"
+
+	# Fix tests
+	mkdir -p lib/ivl
+	touch lib/ivl/ivl
+	sed -i -e 's/driver\/iverilog -B./IVERILOG_ROOT="." driver\/iverilog -B./' Makefile.in || die
 }
 
 src_install() {
-	make \
+	emake -j1 \
 		prefix="${D}"/usr \
 		mandir="${D}"/usr/share/man \
 		infodir="${D}"/usr/share/info \
 		libdir="${D}"/usr/$(get_libdir) \
 		libdir64="${D}"/usr/$(get_libdir) \
 		vpidir="${D}"/usr/$(get_libdir)/ivl \
-		install || die "Installation failed."
+		install || die
 
 	dodoc *.txt
 	insinto /usr/share/doc/${PF}

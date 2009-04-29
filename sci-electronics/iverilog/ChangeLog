@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/iverilog
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.21 2008/05/07 01:49:12 halcy0n Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.22 2009/04/29 07:59:25 fauli Exp $
+
+  29 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
+  iverilog-0.8.6.ebuild:
+  fix tests and use emake (with -j1), reported by Niko Böckerman <niko DOT
+  bockerman AT gmail DOT com> see bug 245704
 
   07 May 2008; Mark Loeser <halcy0n@gentoo.org> +files/iverilog-gcc43.patch,
   iverilog-0.8.6.ebuild:
