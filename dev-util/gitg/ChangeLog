@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/gitg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/ChangeLog,v 1.2 2009/04/05 16:47:11 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/ChangeLog,v 1.3 2009/04/29 10:06:49 ikelos Exp $
+
+*gitg-0.0.3 (29 Apr 2009)
+
+  29 Apr 2009; Mike Auty <ikelos@gentoo.org> +gitg-0.0.3.ebuild:
+  Version bump gitg, thanks to voyageur for the notice.
 
 *gitg-0.0.2 (05 Apr 2009)
 
