@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.6 2008/06/21 23:00:50 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.7 2009/04/29 17:46:23 ssuominen Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -58,7 +58,7 @@ src_compile() {
 		$(use_enable mplayer) \
 		$(use_enable esd) \
 		$(use_enable jack) \
-		--enable-static --disable-gstreamer \
+		--enable-static --disable-gstreamer-plugin \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
