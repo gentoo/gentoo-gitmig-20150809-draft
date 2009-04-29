@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.6 2009/02/09 18:38:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.7 2009/04/29 20:09:17 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils games
+inherit autotools eutils games
 
 MY_PN=UltraStar-ng
 MY_P=${MY_PN}-${PV}
@@ -44,6 +44,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-bash4.patch # bug #267316
+	touch docs/ultrastarng.6  # no, don't try to rebuild the man page
+	eautoreconf
+}
 
 src_configure() {
 	local myconf

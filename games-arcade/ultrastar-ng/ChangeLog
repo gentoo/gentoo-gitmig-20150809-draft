@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/ultrastar-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.6 2009/02/09 18:38:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.7 2009/04/29 20:09:17 mr_bones_ Exp $
+
+  09 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  ultrastar-ng-0.2.1-r1.ebuild:
+  Bash4 patch submitted by Nico R. via bug #267316
 
   09 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
   ultrastar-ng-0.2.1-r1.ebuild:
