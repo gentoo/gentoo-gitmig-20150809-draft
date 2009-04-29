@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.18.02.ebuild,v 1.3 2009/04/29 10:38:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/xmlrpc-c-1.18.02.ebuild,v 1.4 2009/04/29 12:07:42 jer Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A lightweigt RPC library based on XML and HTTP"
 SRC_URI="mirror://gentoo/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://xmlrpc-c.sourceforge.net/"
 
-KEYWORDS=" ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="+curl +cxx tools +cgi abyss threads"
 LICENSE="BSD"
 SLOT="0"
