@@ -1,6 +1,12 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.35 2009/04/29 01:31:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.36 2009/04/29 10:11:02 dragonheart Exp $
+
+*dvdstyler-1.7.3_beta2 (29 Apr 2009)
+
+  29 Apr 2009; Daniel Black <dragonheart@gentoo.org>
+  +dvdstyler-1.7.3_beta2.ebuild:
+  version bump - bug #265650 - ebuild by Fabio Correa
 
 *dvdstyler-1.7.2 (29 Apr 2009)
 
