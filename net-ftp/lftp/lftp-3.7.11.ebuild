@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.7.11.ebuild,v 1.3 2009/04/29 11:48:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.7.11.ebuild,v 1.4 2009/04/29 14:52:07 ranger Exp $
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
@@ -8,7 +8,7 @@ SRC_URI="http://ftp.yars.free.net/pub/source/lftp/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="ssl gnutls socks5 nls"
 
 RDEPEND=">=sys-libs/ncurses-5.1
