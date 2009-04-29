@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2-r1.ebuild,v 1.2 2009/04/29 12:59:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-13.2-r1.ebuild,v 1.3 2009/04/29 20:43:08 fauli Exp $
 
 EAPI=2
 WX_GTK_VER="2.8"
@@ -44,6 +44,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 SITEFILE=50${PN}-gentoo.el
+
+pkg_setup() {
+	use wxwindows && wxwidgets_pkg_setup
+}
 
 src_prepare() {
 	use odbc || sed -i 's: odbc : :' lib/Makefile
