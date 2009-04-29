@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.6 2009/01/15 12:22:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/botan-1.8.0.ebuild,v 1.7 2009/04/29 11:30:57 armin76 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ DESCRIPTION="A C++ crypto library"
 HOMEPAGE="http://botan.randombit.net/"
 SRC_URI="http://files.randombit.net/botan/${MY_P}.tgz"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
 LICENSE="BSD"
 IUSE="bzip2 gmp ssl threads zlib"
