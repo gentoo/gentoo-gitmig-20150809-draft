@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libprojectm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.25 2008/12/07 19:00:53 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/ChangeLog,v 1.26 2009/04/29 19:47:44 maekke Exp $
+
+  29 Apr 2009; Markus Meier <maekke@gentoo.org> libprojectm-1.2.0.ebuild:
+  amd64/x86 stable, bug #261851
 
   07 Dec 2008; <ssuominen@gentoo.org> libprojectm-1.2.0.ebuild:
   Fix compilation with >=ftgl-2.1.3_rc5 wrt #249176.
