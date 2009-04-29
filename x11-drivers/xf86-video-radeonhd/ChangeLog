@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-radeonhd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/ChangeLog,v 1.17 2009/04/29 04:58:13 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/ChangeLog,v 1.18 2009/04/29 05:38:25 je_fro Exp $
+
+  29 Apr 2009; Jeff Gardner <je_fro@gentoo.org>
+  xf86-video-radeonhd-1.2.5.ebuild:
+  Warn of the need for bleeding-edge dri in pkg_postinst.
 
 *xf86-video-radeonhd-1.2.5 (29 Apr 2009)
 

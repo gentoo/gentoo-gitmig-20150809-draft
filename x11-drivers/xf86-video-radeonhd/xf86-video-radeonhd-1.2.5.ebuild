@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/xf86-video-radeonhd-1.2.5.ebuild,v 1.1 2009/04/29 04:58:13 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-radeonhd/xf86-video-radeonhd-1.2.5.ebuild,v 1.2 2009/04/29 05:38:25 je_fro Exp $
 
 XDPVER=-1
 inherit x-modular
@@ -22,4 +22,10 @@ DEPEND="${RDEPEND}
 src_install() {
 	x-modular_src_install
 	dobin utils/conntest/rhd_{conntest,dump}
+}
+
+pkg_postinst() {
+	ewarn "You will need dri from either a 2.6.30 kernel or x11-drm via git."
+	ewarn "See http://wiki.x.org/wiki/radeonhd for details"
+	x-modular_pkg_postinst
 }
