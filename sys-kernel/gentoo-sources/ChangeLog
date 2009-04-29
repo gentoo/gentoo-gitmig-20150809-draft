@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.603 2009/04/23 18:40:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.604 2009/04/29 22:50:07 mpagano Exp $
+
+*gentoo-sources-2.6.29-r2 (29 Apr 2009)
+
+  29 Apr 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.29-r2.ebuild:
+  Additional ext4 fix for data integrity. Linux 2.6.29.2 patch
 
   23 Apr 2009; Markus Meier <maekke@gentoo.org> gentoo-sources-2.6.28-r5:
   amd64/x86 stable, bug #266792
