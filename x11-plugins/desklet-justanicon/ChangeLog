@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-justanicon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/ChangeLog,v 1.8 2009/04/28 01:31:58 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/ChangeLog,v 1.9 2009/04/29 01:47:54 nixphoeni Exp $
+
+  29 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-justanicon-0.2:
+  Fixed copyright header; set SRC_URI and HOMEPAGE to the unofficial archive
 
   28 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-justanicon-0.2:
   MY_P no longer needs to be defined since it's done in the eclass - just
