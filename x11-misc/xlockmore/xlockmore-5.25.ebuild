@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.6 2009/04/29 20:34:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.25.ebuild,v 1.7 2009/04/29 20:37:43 ssuominen Exp $
 
 inherit pam
 
@@ -45,12 +45,13 @@ src_compile() {
 		$(use_with nas) \
 		$(use_with debug editres)
 
-	emake || die "emake failed."
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	einstall xapploaddir="${D}/usr/share/X11/app-defaults" \
-		mandir="${D}/usr/share/man/man1" || die "einstall failed."
+		mandir="${D}/usr/share/man/man1" INSTPGMFLAGS="" \
+		|| die "einstall failed"
 
 	pamd_mimic_system xlock auth
 	use pam && fperms 755 /usr/bin/xlock
