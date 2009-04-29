@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.143 2009/04/28 15:38:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.144 2009/04/29 20:00:57 dang Exp $
+
+  29 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> rhythmbox-0.12.1.ebuild:
+  Needs totem-pl-parser-2.26; bug #267795
 
 *rhythmbox-0.12.1 (28 Apr 2009)
 

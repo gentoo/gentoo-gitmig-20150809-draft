@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.1.ebuild,v 1.1 2009/04/28 15:38:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.1.ebuild,v 1.2 2009/04/29 20:00:57 dang Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SLOT="0"
 RDEPEND=">=dev-libs/glib-2.16.0
 	>=x11-libs/gtk+-2.14
 	>=gnome-base/libglade-2
-	>=dev-libs/totem-pl-parser-2.22.0
+	>=dev-libs/totem-pl-parser-2.26.0
 	cdr? (
 		brasero? ( >=app-cdr/brasero-0.9.1 )
 		!brasero? ( >=gnome-extra/nautilus-cd-burner-2.21.6 ) )
