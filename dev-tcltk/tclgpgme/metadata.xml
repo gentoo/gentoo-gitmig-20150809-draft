@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<herd>crypto</herd>
-	<maintainer>
-		<email>dragonheart@gentoo.org</email>
-		<description>I realy don't know anything about tcltk but can cope with gpgme</description>
-	</maintainer>
-</pkgmetadata>
