@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0.ebuild,v 1.13 2009/03/11 20:29:46 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/freealut-1.1.0-r1.ebuild,v 1.1 2009/04/29 12:20:52 ssuominen Exp $
 
 inherit autotools eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/openal"
+RDEPEND=">=media-libs/openal-1.6.372"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
@@ -26,14 +26,12 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		--libdir=/usr/$(get_libdir) || die
-	emake all || die
+	econf --libdir=/usr/$(get_libdir)
+	emake all || die "emake all failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die
-
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 	dohtml doc/*
 }
