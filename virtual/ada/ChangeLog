@@ -1,6 +1,10 @@
 # ChangeLog for virtual/ada
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ChangeLog,v 1.4 2009/04/29 16:48:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/ada/ChangeLog,v 1.5 2009/04/29 21:48:53 volkmar Exp $
+
+  29 Apr 2009; Mounir Lamouri <volkmar@gentoo.org> ada-1995.ebuild,
+  ada-2005.ebuild:
+  Stable on ppc, bug 267442.
 
   29 Apr 2009; Christian Faulhammer <fauli@gentoo.org> ada-1995.ebuild,
   ada-2005.ebuild:
