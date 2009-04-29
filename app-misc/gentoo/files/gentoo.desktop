@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Gentoo
-Comment=Gentoo File Manager
-Exec=/usr/bin/gentoo
-Icon=/usr/share/pixmaps/gentoo.png
-Terminal=0
-Type=Application
-
-

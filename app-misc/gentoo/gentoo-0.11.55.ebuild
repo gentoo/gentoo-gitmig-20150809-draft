@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.55.ebuild,v 1.10 2008/06/29 12:48:06 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.55.ebuild,v 1.11 2009/04/29 23:11:01 ssuominen Exp $
 
 DESCRIPTION="A modern GTK+ based filemanager for any WM"
 HOMEPAGE="http://www.obsession.se/gentoo/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/gentoo/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
-IUSE="nls gnome fam"
+IUSE="nls fam"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 RDEPEND="nls? ( sys-devel/gettext )
@@ -25,15 +25,8 @@ src_compile() {
 }
 
 src_install() {
-	cp mkinstalldirs ${WORKDIR}
-	make DESTDIR=${D} install || die
-
-	if use gnome ; then
-		insinto /usr/share/pixmaps
-		doins icons/gentoo.png
-		insinto /usr/share/gnome/apps/Applications
-		doins ${FILESDIR}/gentoo.desktop
-	fi
+	cp mkinstalldirs "${WORKDIR}"
+	make DESTDIR="${D}" install || die
 
 	dodoc AUTHORS BUGS CONFIG-CHANGES CREDITS ChangeLog \
 		NEWS ONEWS README* TODO
