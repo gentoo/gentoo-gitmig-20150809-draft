@@ -1,6 +1,13 @@
 # ChangeLog for media-video/dvdstyler
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.34 2009/02/16 06:57:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/ChangeLog,v 1.35 2009/04/29 01:31:23 dragonheart Exp $
+
+*dvdstyler-1.7.2 (29 Apr 2009)
+
+  29 Apr 2009; Daniel Black <dragonheart@gentoo.org>
+  +files/dvdstyler-1.7.2-skipxmlvalidation.patch,
+  dvdstyler-1.7.2_beta4.ebuild, +dvdstyler-1.7.2.ebuild:
+  version bug as per bug #262454. Ebuild changes thanks to Fabio
 
   16 Feb 2009; Daniel Black <dragonheart@gentoo.org>
   -dvdstyler-1.5-r1.ebuild, -dvdstyler-1.5.1.ebuild,

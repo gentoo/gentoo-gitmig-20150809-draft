@@ -1,0 +1,11 @@
+--- docs/Makefile.am.old	2009-03-19 14:12:11.000000000 -0500
++++ docs/Makefile.am	2009-03-19 14:12:35.000000000 -0500
+@@ -371,7 +371,7 @@
+ 
+ help.zip: DVDStylerGuide.xml
+ 	mkdir temp
+-	(cd temp && $(XMLTO) htmlhelp ../DVDStylerGuide.xml && cp ../htmlhelp.hhp ../toc.hhc ../index.html . && $(ZIP) ../help.zip *.html htmlhelp.hhp toc.hhc)
++	(cd temp && $(XMLTO) --skip-validation htmlhelp ../DVDStylerGuide.xml && cp ../htmlhelp.hhp ../toc.hhc ../index.html . && $(ZIP) ../help.zip *.html htmlhelp.hhp toc.hhc)
+ 	rm -f temp/*.html temp/*.hh*
+ 	rmdir temp
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
