@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1.ebuild,v 1.1 2009/03/08 22:03:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1.ebuild,v 1.2 2009/04/29 22:33:54 vapier Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -50,8 +50,7 @@ DEPEND="${RDEPEND}
 					dev-util/gtk-doc
 					app-text/docbook-sgml-utils
 				)"
-PDEPEND="|| (
-	>=app-misc/hal-info-20081219 )
+PDEPEND=">=app-misc/hal-info-20081219
 	!gnome-extra/hal-device-manager
 	laptop? ( >=sys-power/pm-utils-0.99.3 )"
 

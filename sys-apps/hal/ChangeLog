@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.278 2009/03/08 22:03:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.279 2009/04/29 22:33:54 vapier Exp $
+
+  29 Apr 2009; Mike Frysinger <vapier@gentoo.org> hal-0.5.12_rc1:
+  Drop useless ||() construct since there is only one atom in it.
 
   08 Mar 2009; Joseph Jezak <josejx@gentoo.org> hal-0.5.11-r8.ebuild:
   Marked ppc64 for bug #259080.
