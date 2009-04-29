@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.13 2009/04/28 17:53:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.14 2009/04/29 04:45:10 zmedico Exp $
+
+  29 Apr 2009; Zac Medico <zmedico@gentoo.org> calibre-0.5.9-r1.ebuild:
+  Require python[sqlite] for traceback shown in bug #258938, comment #27.
 
 *calibre-0.5.9-r1 (28 Apr 2009)
 

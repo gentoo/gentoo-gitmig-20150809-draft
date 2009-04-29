@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9-r1.ebuild,v 1.1 2009/04/28 17:53:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9-r1.ebuild,v 1.2 2009/04/29 04:45:10 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -22,7 +22,7 @@ SLOT="0"
 
 IUSE=""
 
-SHARED_DEPEND=">=dev-lang/python-2.6
+SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/setuptools-0.6_rc5
 	>=dev-python/imaging-1.1.6
 	>=dev-libs/libusb-0.1.12
