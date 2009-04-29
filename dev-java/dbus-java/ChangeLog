@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/dbus-java
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.7 2009/01/23 17:55:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbus-java/ChangeLog,v 1.8 2009/04/29 17:53:35 serkan Exp $
+
+*dbus-java-2.6 (29 Apr 2009)
+
+  29 Apr 2009; Serkan Kaba <serkan@gentoo.org>
+  +files/dbus-java-2.6-disconnectfix.patch, +dbus-java-2.6.ebuild:
+  Version bump.
 
   23 Jan 2009; Brent Baude <ranger@gentoo.org> dbus-java-2.5.1.ebuild:
   Marking dbus-java-2.5.1 ppc64 for bug 253054
