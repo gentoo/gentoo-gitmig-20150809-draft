@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.4.1.ebuild,v 1.1 2009/04/29 13:37:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.4.1-r1.ebuild,v 1.1 2009/04/29 17:16:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-#SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
+SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
 if [[ $PV = *_rc* ]]; then
 	SRC_URI="http://www.mesa3d.org/beta/${MY_SRC_P}.tar.gz
 		${SRC_PATCHES}"
