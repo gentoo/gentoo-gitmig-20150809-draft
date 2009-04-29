@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/socat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.42 2008/11/19 09:40:29 armin76 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.43 2009/04/29 13:35:36 jer Exp $
+
+*socat-2.0.0_beta3 (29 Apr 2009)
+*socat-1.7.1.0 (29 Apr 2009)
+
+  29 Apr 2009; Jeroen Roovers <jer@gentoo.org> +socat-1.7.1.0.ebuild,
+  +socat-2.0.0_beta3.ebuild:
+  Version bumps based on contribution by Tim Harder (bug #267848).
 
   19 Nov 2008; Raúl Porcel <armin76@gentoo.org> socat-1.6.0.1.ebuild:
   alpha/ia64/x86 stable wrt #247089
