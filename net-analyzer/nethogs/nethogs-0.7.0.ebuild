@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.7.0.ebuild,v 1.1 2009/04/29 06:50:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/nethogs-0.7.0.ebuild,v 1.2 2009/04/29 06:52:33 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,8 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="net-libs/libpcap
+RDEPEND="net-libs/libpcap
 	sys-libs/ncurses"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
