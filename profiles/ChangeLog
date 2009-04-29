@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2591 2009/04/29 13:38:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2592 2009/04/29 14:42:01 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Apr 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  add latest mesa to p.mask
 
   29 Apr 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Improve masking message for net-misc/socat.
