@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.15 2009/04/27 04:07:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.16 2009/04/29 02:48:59 vapier Exp $
+
+  29 Apr 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999:
+  Dont install session anymore since upstream does it #267631 by BT and Jan
+  Vansteenkiste, and stop bothering with the xbmc.sh wrapper since it has
+  been updated as well.
 
   27 Apr 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999:
   Pull in zip as the build process likes to make zips #266414 by Robert

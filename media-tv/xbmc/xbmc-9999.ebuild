@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.20 2009/04/27 04:07:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.21 2009/04/29 02:48:59 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -103,14 +103,6 @@ src_unpack() {
 	# Do not use termcap #262822
 	sed -i 's:-ltermcap::' xbmc/lib/libPython/Python/configure
 
-	# Clean up XBMC's wrapper script
-	#  - dont muck with gnome screensaver stuff, make user do it
-	#  - if alsa has oss support, we want to fix the default
-	sed -i \
-		-e '/dbus/d' \
-		-e "2i$(use alsa && echo export SDL_AUDIODRIVER=alsa)" \
-		tools/Linux/xbmc.sh.in
-
 	# Unzip web content
 	cd web
 	unpack ./Project_Mayhem_III_webserver_*.zip
@@ -134,12 +126,11 @@ src_configure() {
 src_install() {
 	einstall || die "Install failed!"
 
-	make_session_desktop "XBMC Media Center" xbmc --standalone -fs
 	insinto /usr/share/applications
 	doins tools/Linux/xbmc.desktop
 	doicon tools/Linux/xbmc.png
 
-	dodoc README.linux copying.txt known_issues.txt
+	dodoc README.linux known_issues.txt
 	rm "${D}"/usr/share/xbmc/{README.linux,LICENSE.GPL,*.txt}
 }
 
