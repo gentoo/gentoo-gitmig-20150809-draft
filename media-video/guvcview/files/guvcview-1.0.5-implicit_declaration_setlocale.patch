@@ -1,0 +1,14 @@
+Missing locale.h for setlocale function, http://bugs.gentoo.org/267862.
+
+diff -ur guvcview-src-1.0.5.orig/src/guvcview.c guvcview-src-1.0.5/src/guvcview.c
+--- guvcview-src-1.0.5.orig/src/guvcview.c	2009-04-03 20:25:59.000000000 +0000
++++ guvcview-src-1.0.5/src/guvcview.c	2009-04-29 15:33:45.000000000 +0000
+@@ -23,7 +23,7 @@
+ #                                                                               #
+ ********************************************************************************/
+ 
+-
++#include <locale.h>
+ #include <SDL/SDL.h>
+ #include <glib.h>
+ #include <glib/gprintf.h>
