@@ -1,6 +1,6 @@
 # Copyright 2003-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-0.0.14.ebuild,v 1.3 2009/04/29 15:00:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ignuit/ignuit-0.0.14.ebuild,v 1.4 2009/04/29 20:47:47 fauli Exp $
 
 DESCRIPTION="memorization aid based on the Leitner flashcard system"
 HOMEPAGE="http://homepages.ihug.co.nz/~trmusson/programs.html#ignuit"
@@ -21,7 +21,8 @@ RDEPEND=">=gnome-base/libgnomeui-2.22.1
 	dev-libs/libxml2
 	x11-libs/pango
 	app-text/dvipng
-	virtual/latex-base"
+	virtual/latex-base
+	>=app-text/gnome-doc-utils-0.3.2"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
