@@ -1,16 +1,23 @@
 # ChangeLog for net-analyzer/nethogs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.12 2008/12/10 22:44:15 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nethogs/ChangeLog,v 1.13 2009/04/29 06:50:47 ssuominen Exp $
+
+*nethogs-0.7.0 (29 Apr 2009)
+
+  29 Apr 2009; Samuli Suominen <ssuominen@gentoo.org> -nethogs-0.6.0.ebuild,
+  -files/nethogs-0.6.0-gcc34.diff, +nethogs-0.7.0.ebuild,
+  +files/nethogs-0.7.0-Makefile.patch:
+  Version bump.
 
   10 Dec 2008; Markus Meier <maekke@gentoo.org> nethogs-0.6.1_pre2.ebuild:
   amd64/x86 stable, bug #249898
 
 *nethogs-0.6.1_pre2 (05 Dec 2008)
 
-  05 Dec 2008; <ssuominen@gentoo.org> +files/nethogs-0.6.1_pre2-gcc43.patch,
-  +nethogs-0.6.1_pre2.ebuild:
-  Version bump with GCC 4.3 and GLIBC 2.8 patch wrt #249898, partly thanks
-  to Pro <hyrurg at gmail.com>
+  05 Dec 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +files/nethogs-0.6.1_pre2-gcc43.patch, +nethogs-0.6.1_pre2.ebuild:
+  Version bump with GCC 4.3 and GLIBC 2.8 patch wrt #249898, thanks to
+  Pro <hyrurg at gmail.com>
 
   12 Apr 2007; <welp@gentoo.org> nethogs-0.6.0.ebuild:
   Stable on amd64
