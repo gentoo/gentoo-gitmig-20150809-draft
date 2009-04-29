@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.118 2009/04/29 20:56:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.119 2009/04/29 22:35:55 ranger Exp $
+
+  29 Apr 2009; Brent Baude <ranger@gentoo.org> nspr-4.7.4.ebuild:
+  Marking nspr-4.7.4 ppc64 and ppc for bug 267234
 
   29 Apr 2009; Christian Faulhammer <fauli@gentoo.org> nspr-4.6.8.ebuild,
   nspr-4.7.3.ebuild, nspr-4.7.4.ebuild:
