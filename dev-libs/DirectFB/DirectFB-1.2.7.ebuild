@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.2.7.ebuild,v 1.6 2009/04/23 09:35:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-1.2.7.ebuild,v 1.7 2009/04/30 12:28:31 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="http://directfb.org/downloads/Core/${P}.tar.gz
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 -mips ppc ppc64 sh -sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 -mips ppc ppc64 sh -sparc x86"
 IUSE="debug fbcon fusion gif jpeg mmx png sdl sse sysfs truetype v4l v4l2 X zlib"
 
 #	fusion? ( >=dev-libs/linux-fusion-8.0.0 )
