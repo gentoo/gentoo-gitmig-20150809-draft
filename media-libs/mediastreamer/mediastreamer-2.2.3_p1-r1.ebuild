@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.3_p1-r1.ebuild,v 1.1 2009/04/28 13:51:24 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mediastreamer/mediastreamer-2.2.3_p1-r1.ebuild,v 1.2 2009/04/30 07:15:42 volkmar Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc"
 IUSE="alsa arts debug doc examples gsm ilbc ipv6 jack oss portaudio +speex
-theora video X"
+theora video x264 X"
 
 RDEPEND=">=net-libs/ortp-0.15.0_p1
 	alsa? ( media-libs/alsa-lib )
