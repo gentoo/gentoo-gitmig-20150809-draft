@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-20010907.ebuild,v 1.10 2007/04/09 21:28:09 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/tuxmath-20010907.ebuild,v 1.11 2009/04/30 20:35:56 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs games
+EAPI=2
+inherit eutils games
 
 MY_P="${PN}-2001.09.07-0102"
 DESCRIPTION="Educational arcade game where you have to solve math problems"
@@ -15,19 +16,16 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer"
+	media-libs/sdl-image[jpeg,png]
+	media-libs/sdl-mixer[mikmod]"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	rm -rf $(find -name CVS -o -name .xvpics -type d)
+src_prepare() {
+	find . -name CVS -o -name .xvpics -type d -exec rm -rf '{}' +
 	rm -f docs/COPYING.txt
 	sed -i \
 		-e '/strip/d' \
-		-e "1i CC=$(tc-getCC)" \
 		-e "s/-O2/${CFLAGS}/" \
 		-e "s:\$(DATA_PREFIX):${GAMES_DATADIR}/${PN}:" \
 		Makefile \
