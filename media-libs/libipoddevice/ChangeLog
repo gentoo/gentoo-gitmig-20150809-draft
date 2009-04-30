@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libipoddevice
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.22 2008/10/05 09:44:00 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/ChangeLog,v 1.23 2009/04/30 09:05:14 ssuominen Exp $
+
+  30 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
+  libipoddevice-0.5.3.ebuild:
+  Remove -Werror wrt #260908
 
   05 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
   libipoddevice-0.5.3.ebuild:
@@ -16,7 +20,8 @@
   Fix building with >=sys-apps/sg3_utils-1.26, bug 229641. Ed Catmur
   <ed@catmur.co.uk> supplied the patch. Again.
 
-  10 Jan 2008; Samuli Suominen <drac@gentoo.org> libipoddevice-0.5.3.ebuild:
+  10 Jan 2008; Samuli Suominen <ssuominen@gentoo.org>
+  libipoddevice-0.5.3.ebuild:
   Fix depends wrt #204868
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:

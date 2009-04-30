@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.9 2008/10/05 09:44:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.10 2009/04/30 09:05:14 ssuominen Exp $
 
 inherit base autotools
 
@@ -30,11 +30,14 @@ src_unpack() {
 	cd "${S}"
 	# use correct libdir in pkgconfig file
 	sed -i -e 's:^libdir=.*:libdir=@libdir@:' \
-		ipoddevice.pc.in || die "sed failed."
+		ipoddevice.pc.in || die "sed failed"
+	# Remove -Werror wrt #260908
+	sed -i -e 's:-Werror::' src/Makefile.am \
+		|| die "sed failed"
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog NEWS README
 }
