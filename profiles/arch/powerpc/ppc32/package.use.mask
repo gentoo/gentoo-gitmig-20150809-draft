@@ -8,7 +8,3 @@
 #don't want zemberek for enchant for ppc32
 app-text/enchant zemberek
 
-#Peter Alfredsen <loki_val@gentoo.org> (14 Dec 2008)
-#Mask mono-tools[webkit] for bug 250934
-dev-util/mono-tools webkit
-
