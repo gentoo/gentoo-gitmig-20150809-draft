@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.12 2008/09/01 19:24:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.13 2009/04/30 18:22:59 aballier Exp $
 
 inherit base eutils
 
@@ -41,6 +41,7 @@ src_unpack() {
 	# 6.3.9.8).
 	sed -i -e "s/-pedantic //" configure
 	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+	epatch "${FILESDIR}/${P}-gcc-4.4.patch"
 }
 
 src_compile() {
