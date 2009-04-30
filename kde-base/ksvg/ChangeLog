@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksvg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.88 2008/09/13 23:59:54 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.89 2009/04/30 12:00:35 tampakrap Exp $
+
+  30 Apr 2009; Theo Chatzimichos <tampakrap@gentoo.org> +files/ksvg-fribidi.patch,
+  ksvg-3.5.10:
+  Applying fribidi patch, bugs 254045 and 260837, thanks to Dmitry Halturin
 
 *ksvg-3.5.10 (13 Sep 2008)
 
