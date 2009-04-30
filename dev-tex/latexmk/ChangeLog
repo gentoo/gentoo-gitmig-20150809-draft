@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/latexmk
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.11 2008/10/26 15:19:28 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.12 2009/04/30 18:15:02 aballier Exp $
+
+*latexmk-405 (30 Apr 2009)
+
+  30 Apr 2009; Alexis Ballier <aballier@gentoo.org> +latexmk-405.ebuild:
+  version bump, by Nick Pope <nick+gentoo@nickpope.me.uk>, bug #267420
 
   26 Oct 2008; Alexis Ballier <aballier@gentoo.org> latexmk-307a.ebuild:
   quote WORKDIR
