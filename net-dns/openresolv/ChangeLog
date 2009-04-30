@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.35 2009/04/22 14:33:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.36 2009/04/30 15:30:56 lack Exp $
+
+*openresolv-3.3-r1 (30 Apr 2009)
+
+  30 Apr 2009; Jim Ramsay <lack@gentoo.org> -openresolv-3.3.ebuild,
+  +openresolv-3.3-r1.ebuild, +files/openresolv-3.3-dnsmasq-dbus_pid.patch:
+  Fixed dbus detection bug for dnsmasq script
 
   22 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> openresolv-3.3:
   Fix bug #263015

@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.3.ebuild,v 1.2 2009/04/22 14:33:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.3-r1.ebuild,v 1.1 2009/04/30 15:30:56 lack Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="A framework for managing DNS information"
@@ -20,6 +21,10 @@ RDEPEND=""
 pkg_setup() {
 	export PREFIX=
 	export LIBEXECDIR="${PREFIX}/lib/resolvconf"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/openresolv-3.3-dnsmasq-dbus_pid.patch"
 }
 
 src_install() {
