@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.105 2009/04/17 12:12:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.106 2009/04/30 16:41:33 chainsaw Exp $
+
+*audacious-plugins-2.0_alpha2 (30 Apr 2009)
+
+  30 Apr 2009; <chainsaw@gentoo.org> +audacious-plugins-2.0_alpha2.ebuild:
+  Second developer alpha. This uses GIO instead of standard POSIX I/O, so
+  files on Samba shares will work now if you use GVFS. A crossfader has been
+  added.
 
 *audacious-plugins-2.0_alpha1 (17 Apr 2009)
 
