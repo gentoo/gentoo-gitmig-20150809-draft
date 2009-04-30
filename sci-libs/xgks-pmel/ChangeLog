@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/xgks-pmel
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.1 2009/04/30 06:36:23 nerdboy Exp $
+
+*xgks-pmel-2.5.5 (30 Apr 2009)
+
+  30 Apr 2009; Steve Arnold <nerdboy@gentoo.org> +files/aclocal.patch,
+  +metadata.xml, +xgks-pmel-2.5.5.ebuild:
+  New ebuild for PMEL's xgks library, another required dependency for Ferret.
+  Still needs merging with the newer (but unloved) code on sourceforge.
+
