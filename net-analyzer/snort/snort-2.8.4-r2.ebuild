@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.ebuild,v 1.2 2009/04/18 06:22:00 mr_bones_ Exp $
-
-AT_M4DIR=m4
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4-r2.ebuild,v 1.1 2009/04/30 11:26:06 patrick Exp $
 
 inherit eutils autotools multilib
 
@@ -15,8 +13,7 @@ KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
 IUSE="static debug threads prelude memory-cleanup dynamicplugin decoder-preprocessor-rules ipv6 targetbased timestats ppm perfprofiling linux-smp-stats inline inline-init-failopen flexresp flexresp2 react aruba gre mpls postgres mysql odbc selinux"
 
 #flexresp, react, and inline _ONLY_ work with net-libs/libnet-1.0.2a
-DEPEND="virtual/libc
-	virtual/libpcap
+DEPEND="virtual/libpcap
 	>=dev-libs/libpcre-6.0
 	flexresp2? ( dev-libs/libdnet )
 	flexresp? ( ~net-libs/libnet-1.0.2a )
@@ -32,8 +29,6 @@ RDEPEND="${DEPEND}
 	selinux? ( sec-policy/selinux-snort )"
 
 pkg_setup() {
-	enewgroup snort
-	enewuser snort -1 -1 /dev/null snort
 
 	if use flexresp && use flexresp2 ; then
 		ewarn
@@ -71,6 +66,24 @@ pkg_setup() {
 		ewarn
 		epause
 	fi
+
+	if use ipv6 && use prelude; then
+		ewarn
+		ewarn
+		ewarn "You have enabled 'prelude' and 'ipv6'."
+		ewarn "The Prelude output plugin does not support ipv6."
+		ewarn
+		ewarn "Disabling ipv6 support..."
+		ewarn
+		ewarn
+		epause
+	fi
+
+	# pre_inst() is a better place but we need it here for the 
+	#'fowners' statements in src_install()
+	enewgroup snort
+	enewuser snort -1 -1 /dev/null snort
+
 }
 
 src_unpack() {
@@ -89,12 +102,26 @@ src_unpack() {
 	#This will be included upstream in the next version released
 	epatch "${FILESDIR}/spo_database_fix.patch"
 
+	#Multilib fix for the sf_engine
+	sed -i -e 's:${exec_prefix}/lib:${exec_prefix}/'$(get_libdir)':g' \
+		"${WORKDIR}/${P}/src/dynamic-plugins/sf_engine/Makefile.am" \
+		|| die "sed for sf_engine failed"
+
+	#Multilib fix for the curent set of dynamic-preprocessors
+	for i in ftptelnet smtp ssh dcerpc dns ssl dcerpc2; do
+		sed -i -e 's:${exec_prefix}/lib:${exec_prefix}/'$(get_libdir)':g' \
+			"${WORKDIR}/${P}/src/dynamic-preprocessors/$i/Makefile.am" \
+			|| die "sed for $i failed."
+	done
+
+	#This sed will prevent the example dynamic code from being compiled/installed
+	sed -i -e 's:$(EXAMPLES_DIR)::g' "${WORKDIR}/${P}/src/Makefile.am"
+
 	if use prelude ; then
 		sed -i -e "s:AC_PROG_RANLIB:AC_PROG_LIBTOOL:" configure.in
 	fi
 
-	einfo "Regenerating autoconf/automake files"
-	eautoreconf
+	AT_M4DIR=m4 eautoreconf
 }
 
 src_compile() {
@@ -131,7 +158,7 @@ src_compile() {
 	#are used. Here is the error...
 	#ERROR!  --enable-react cannot be used with --enable-flexresp
 	#because it is AUTOMATICALLY enabled with --enable-flexresp
-	#Given that --enable-flexresp is enable we know that
+	#Given that --enable-flexresp is enable we know that 
 	#--disable-flexresp2 should be used
 	if use react; then
 		myconf="${myconf} --enable-react --disable-flexresp2"
@@ -144,6 +171,7 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-dynamicplugin"
 	fi
+
 
 	# USE flages 'targetbased' and 'inline-init-failopen' require threads
 	#Only 'threads' is set here. 'targetbased' and 'inline-init-failopen' are set below via econf.
@@ -165,7 +193,19 @@ src_compile() {
 		myconf="${myconf} --disable-inline"
 	fi
 
-#The --enable-<feature> options...
+	#'prelude' does not support 'ipv6'
+	if use ipv6 && use prelude; then
+		myconf="${myconf} --enable-prelude --disable-ipv6"
+	elif use ipv6 && ! use prelude; then
+		myconf="${myconf} --enable-ipv6"
+	elif use prelude && ! use ipv6; then
+		myconf="${myconf} --enable-prelude"
+	elif ! use prelude && ! use ipv6; then
+		myconf="${myconf} --disable-prelude --disable-ipv6"
+	fi
+
+
+#The --enable-<feature> options... 
 #'static' 'threads' 'react' 'flexresp' 'flexresp2' 'inline' 'dynamicplugin'
 # are configured above due to dependancy/conflict issues.
 
@@ -176,15 +216,12 @@ src_compile() {
 		$(use_with postgres postgresql) \
 		$(use_with mysql) \
 		$(use_with odbc) \
-		--with-pic \
 		--disable-ipfw \
 		--disable-profile \
 		--disable-ppm-test \
 		$(use_enable debug) \
-		$(use_enable prelude) \
 		$(use_enable memory-cleanup) \
 		$(use_enable decoder-preprocessor-rules) \
-		$(use_enable ipv6) \
 		$(use_enable targetbased) \
 		$(use_enable timestats) \
 		$(use_enable ppm) \
@@ -197,17 +234,17 @@ src_compile() {
 		${myconf} || die "econf failed"
 
 	# limit to single as reported by jforman on irc
-	emake -j1 || die "emake failed"
+	emake -j1
+
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodir /var/log/snort/
 	keepdir /var/log/snort/
 	fowners snort:snort /var/log/snort
 
-	dodir /var/run/snort/
+	keepdir /var/run/snort/
 	fowners snort:snort /var/run/snort/
 
 	dodoc doc/*
@@ -222,32 +259,23 @@ src_install() {
 		etc/reference.config \
 		etc/sid-msg.map \
 		etc/threshold.conf \
-		etc/unicode.map
+		etc/unicode.map \
+		|| die "Failed to add files in /etc/snort"
 
 	newins etc/snort.conf snort.conf.distrib
 
 	insinto /etc/snort/preproc_rules
 	doins preproc_rules/decoder.rules \
-		preproc_rules/preprocessor.rules
+		preproc_rules/preprocessor.rules \
+		|| die "Failed to add files in /etc/snort/preproc_rules"
 
-	dodir /etc/snort/rules/
 	keepdir /etc/snort/rules/
 
 	fowners -R snort:snort /etc/snort/
-	keepdir /etc/snort/
 
-	newinitd "${FILESDIR}/snort.rc9" snort
-	newconfd "${FILESDIR}/snort.confd" snort
+	newinitd "${FILESDIR}/snort.rc9" snort || die "Failed to add snort.rc9"
+	newconfd "${FILESDIR}/snort.confd" snort || die "Failed to add snort.confd"
 
-}
-
-pkg_preinst() {
-
-	#Remove the example dunamic rule
-	rm "${D}usr/"$(get_libdir)"/snort_dynamicrules/lib_sfdynamic_example_rule.la"
-	rm "${D}usr/"$(get_libdir)"/snort_dynamicrules/lib_sfdynamic_example_rule.so"
-	rm "${D}usr/"$(get_libdir)"/snort_dynamicrules/lib_sfdynamic_example_rule.so.0"
-	rm "${D}usr/"$(get_libdir)"/snort_dynamicrules/lib_sfdynamic_example_rule.so.0.0.0"
 
 	# Make some changes to snort.conf.distrib
 
