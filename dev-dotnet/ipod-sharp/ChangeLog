@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/ipod-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.23 2009/04/04 14:44:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ChangeLog,v 1.24 2009/04/30 15:39:00 ranger Exp $
+
+  30 Apr 2009; Brent Baude <ranger@gentoo.org> ipod-sharp-0.8.2.ebuild:
+  Marking ipod-sharp-0.8.2 ppc stable for bug 263984
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org> ipod-sharp-0.8.2.ebuild:
   amd64/x86 stable, bug #234305
