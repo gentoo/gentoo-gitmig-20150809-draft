@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72_rc1.ebuild,v 1.1 2009/04/30 19:16:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdisaster/dvdisaster-0.72_rc1.ebuild,v 1.2 2009/04/30 19:18:29 ssuominen Exp $
 
 EAPI=2
 inherit eutils gnome2-utils versionator
@@ -53,7 +53,7 @@ src_install() {
 	emake install || die "emake install failed"
 
 	newicon contrib/${PN}48.png ${PN}.png
-	make_desktop_entry ${PN} ${PN} ${PN}
+	make_desktop_entry ${PN} ${PN} ${PN} "System;Utility"
 
 	for res in 16 32 48 64; do
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps
