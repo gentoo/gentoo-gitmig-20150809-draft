@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usbview
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.26 2009/03/11 03:03:16 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usbview/ChangeLog,v 1.27 2009/04/30 07:49:05 ssuominen Exp $
+
+  30 Apr 2009; Samuli Suominen <ssuominen@gentoo.org> usbview-1.1.ebuild:
+  amd64 stable wrt #267955
 
 *usbview-1.1 (11 Mar 2009)
 
@@ -10,7 +13,7 @@
   11 Jan 2008; Santiago M. Mola <coldwind@gentoo.org> usbview-1.0-r3.ebuild:
   Add pkgconfig to DEPEND, #205016
 
-  28 Nov 2007; Samuli Suominen <drac@gentoo.org> usbview-1.0-r3.ebuild:
+  28 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> usbview-1.0-r3.ebuild:
   Run eautoreconf wrt #194835.
 
   24 Aug 2007; Raúl Porcel <armin76@gentoo.org> usbview-1.0-r3.ebuild:
@@ -31,15 +34,12 @@
   13 Aug 2007; Gustavo Zacarias <gustavoz@gentoo.org> usbview-1.0-r3.ebuild:
   Stable on sparc wrt #187920
 
-  30 Jul 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
-  Take over maintainership.
-
-  29 Jul 2007; Samuli Suominen <drac@gentoo.org> usbview-1.0-r3.ebuild:
+  29 Jul 2007; Samuli Suominen <ssuominen@gentoo.org> usbview-1.0-r3.ebuild:
   Fix desktop entry name.
 
 *usbview-1.0-r3 (21 Jul 2007)
 
-  21 Jul 2007; Samuli Suominen <drac@gentoo.org> +usbview-1.0-r3.ebuild:
+  21 Jul 2007; Samuli Suominen <ssuominen@gentoo.org> +usbview-1.0-r3.ebuild:
   GTK+-2 port, and more.
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
