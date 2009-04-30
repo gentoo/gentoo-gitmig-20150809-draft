@@ -15,4 +15,8 @@
 		ratpoison has a prefix map to minimize the key clobbering that cripples
 		Emacs and other quality pieces of software.
 	</longdescription>
+<use>
+	<flag name="history">Save ratpoison command history using
+	<pkg>sys-libs/readline</pkg></flag>
+</use>
 </pkgmetadata>
