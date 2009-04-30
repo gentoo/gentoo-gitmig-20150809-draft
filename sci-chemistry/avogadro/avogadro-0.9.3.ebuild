@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.3.ebuild,v 1.2 2009/04/27 21:55:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.3.ebuild,v 1.3 2009/04/30 21:27:09 patrick Exp $
 
 EAPI=2
 
@@ -23,6 +23,7 @@ RDEPEND=">=sci-chemistry/openbabel-2.2.1
 		>=dev-lang/python-2.5
 		>=dev-libs/boost-1.35
 		dev-python/numpy
+		dev-python/sip
 	)"
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:2
