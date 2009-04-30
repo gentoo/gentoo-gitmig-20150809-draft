@@ -1,15 +1,15 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-2.0.0.ebuild,v 1.3 2007/03/13 18:34:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/cwirc/cwirc-2.0.0.ebuild,v 1.4 2009/04/30 21:17:35 patrick Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="An X-chat plugin for sending and receiving raw morse code over IRC"
-HOMEPAGE="http://users.skynet.be/ppc/cwirc/"
-SRC_URI="http://users.skynet.be/ppc/cwirc/download/${P}.tar.gz"
+HOMEPAGE="http://myspace.voo.be/pcoupard/cwirc/"
+SRC_URI="http://myspace.voo.be/pcoupard/cwirc/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+
