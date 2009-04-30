@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.0_alpha2.ebuild,v 1.1 2009/04/30 16:41:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.0_alpha3.ebuild,v 1.1 2009/04/30 21:43:59 chainsaw Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 MY_P="${P/_/-}"
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/${PN}-2.0-alpha2.1"
 DESCRIPTION="Audacious Player - Your music, your way, no exceptions"
 HOMEPAGE="http://audacious-media-player.org/"
 SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
