@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.188 2009/04/30 12:23:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.189 2009/04/30 12:53:05 dragonheart Exp $
+
+*gnutls-2.6.6 (30 Apr 2009)
+
+  30 Apr 2009; Daniel Black <dragonheart@gentoo.org> +gnutls-2.6.6.ebuild:
+  official upstream release to fix CVE-2009-1415 CVE-2009-1416 CVE-2009-1417
 
 *gnutls-2.6.5-r1 (30 Apr 2009)
 
