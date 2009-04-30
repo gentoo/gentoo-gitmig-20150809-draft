@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.20 2009/04/30 21:27:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.21 2009/04/30 22:15:53 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> avogadro-0.9.3.ebuild:
+  Small fix to boost depends to be future-proof
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> avogadro-0.9.3.ebuild:
   Adding dev-python/sip to deps for #267224. Should really fix python deps
