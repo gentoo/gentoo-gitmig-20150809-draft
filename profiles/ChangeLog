@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2595 2009/04/30 16:33:16 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2596 2009/04/30 21:09:35 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Remove guarddog from p.mask, bug 182373
 
   30 Apr 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   Masking dev-java/ant-1.7.0* packages and whole dev-java/ant-tasks, bug
