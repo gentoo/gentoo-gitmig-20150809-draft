@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xlogo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/ChangeLog,v 1.16 2008/05/09 07:30:23 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xlogo/ChangeLog,v 1.17 2009/04/30 23:17:29 ssuominen Exp $
+
+  01 May 2009; Samuli Suominen <ssuominen@gentoo.org> xlogo-1.0.1.ebuild:
+  Remove USE xprint since it works now for this version.
 
   09 May 2008; Donnie Berkholz <dberkholz@gentoo.org>; xlogo-1.0.1.ebuild:
   (#204660) Fix build by passing in --with-render.
