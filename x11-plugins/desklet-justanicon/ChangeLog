@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/desklet-justanicon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/ChangeLog,v 1.9 2009/04/29 01:47:54 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-justanicon/ChangeLog,v 1.10 2009/04/30 22:32:40 nixphoeni Exp $
+
+  30 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-justanicon-0.2:
+  Keyworded ~amd64
 
   29 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> desklet-justanicon-0.2:
   Fixed copyright header; set SRC_URI and HOMEPAGE to the unofficial archive
