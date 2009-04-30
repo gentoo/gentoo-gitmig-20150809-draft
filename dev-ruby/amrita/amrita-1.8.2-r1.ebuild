@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/amrita-1.8.2-r1.ebuild,v 1.20 2008/03/26 03:34:01 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/amrita-1.8.2-r1.ebuild,v 1.21 2009/04/30 08:51:55 ssuominen Exp $
 
 inherit ruby
 
@@ -13,4 +13,6 @@ LICENSE="Ruby"
 SLOT="0"
 USE_RUBY="ruby18 ruby19"
 KEYWORDS="alpha hppa ia64 ~mips ppc ppc64 sparc x86"
-DEPEND=">=dev-lang/ruby-1.8.0"
+# File collision /usr/bin/ams wrt #247812
+DEPEND=">=dev-lang/ruby-1.8.0
+	!media-sound/ams"

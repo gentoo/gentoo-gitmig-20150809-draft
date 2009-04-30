@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amrita
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.25 2008/03/26 03:34:01 ricmm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.26 2009/04/30 08:51:55 ssuominen Exp $
+
+  30 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
+  amrita-1.8.2-r1.ebuild:
+  File collision /usr/bin/ams wrt #247812
 
   25 Mar 2008; <ricmm@gentoo.org> amrita-1.8.2-r1.ebuild:
   Drop to ~mips due to unstable deps
