@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.8.ebuild,v 1.6 2008/05/19 18:25:19 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.8.ebuild,v 1.7 2009/04/30 17:57:02 aballier Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/libxml2
 	ofx? ( >=dev-libs/libofx-0.7.0 )
 	print? (
 		virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra >=dev-tex/latex-unicode-20041017 )
+		|| ( >=dev-texlive/texlive-latexextra-2008 >=dev-tex/latex-unicode-20041017 )
 		)"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20"

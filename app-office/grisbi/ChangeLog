@@ -1,6 +1,11 @@
 # ChangeLog for app-office/grisbi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.30 2008/08/03 10:34:51 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.31 2009/04/30 17:57:02 aballier Exp $
+
+  30 Apr 2009; Alexis Ballier <aballier@gentoo.org> grisbi-0.5.8.ebuild,
+  grisbi-0.5.9.ebuild:
+  require texlive-latexextra 2008 for latex-unicode as its not present in
+  tl-latexextra-2007
 
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
