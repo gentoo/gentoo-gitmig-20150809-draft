@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20060424-r1.ebuild,v 1.16 2009/03/18 19:07:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/europecv-20060424-r1.ebuild,v 1.17 2009/04/30 17:52:32 aballier Exp $
 
 inherit latex-package
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 IUSE="examples"
 
-RDEPEND="|| ( >=dev-texlive/texlive-latexextra-2008 =dev-texlive/texlive-latexrecommended-2007* dev-tex/latex-unicode )"
+RDEPEND="|| ( >=dev-texlive/texlive-latexextra-2008 dev-tex/latex-unicode )"
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 S="${WORKDIR}/${PN}"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/europecv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.33 2009/03/27 19:20:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/europecv/ChangeLog,v 1.34 2009/04/30 17:52:32 aballier Exp $
+
+  30 Apr 2009; Alexis Ballier <aballier@gentoo.org>
+  europecv-20060424-r1.ebuild:
+  drop texlive 2007 only deps now that 2008 is stable
 
   27 Mar 2009; Alexis Ballier <aballier@gentoo.org>
   -europecv-20040603.ebuild, -europecv-20060424.ebuild:
