@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.2.ebuild,v 1.2 2009/01/09 16:29:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.4.ebuild,v 1.1 2009/04/30 00:26:13 ssuominen Exp $
 
-inherit autotools eutils
+EAPI=2
 
 DESCRIPTION="a library for mp3splt to split mp3 and ogg files without decoding."
 HOMEPAGE="http://mp3splt.sourceforge.net"
@@ -13,19 +13,19 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="media-libs/libmad
-	media-libs/libvorbis media-libs/libogg
+RDEPEND="media-libs/libmad
+	media-libs/libvorbis
+	media-libs/libogg
 	media-libs/libid3tag"
+DEPEND="${RDEPEND}
+	sys-apps/findutils"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-ceilf.patch
-	# Can't get it to link properly to libltdl without eautoreconfing it
-	eautoreconf
+src_configure() {
+	econf --disable-dependency-tracking --disable-static
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog LIMITS NEWS README TODO
+	find "${D}"/usr -name '*.la' -delete
 }
