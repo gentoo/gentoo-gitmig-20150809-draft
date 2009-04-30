@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9740 2009/04/30 13:32:30 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9741 2009/04/30 16:33:16 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,31 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vlastimil Babka <caster@gentoo.org> (30 Apr 2009)
+# masked for removal, bug #261563
+=dev-java/ant-core-1.7.0*
+=dev-java/ant-antlr-1.7.0*
+=dev-java/ant-apache-bcel-1.7.0*
+=dev-java/ant-apache-bsf-1.7.0*
+=dev-java/ant-apache-log4j-1.7.0*
+=dev-java/ant-apache-oro-1.7.0*
+=dev-java/ant-apache-regexp-1.7.0*
+=dev-java/ant-apache-resolver-1.7.0*
+=dev-java/ant-commons-logging-1.7.0*
+=dev-java/ant-commons-net-1.7.0*
+=dev-java/ant-jai-1.7.0*
+=dev-java/ant-javamail-1.7.0*
+=dev-java/ant-jdepend-1.7.0*
+=dev-java/ant-jmf-1.7.0*
+=dev-java/ant-jsch-1.7.0*
+=dev-java/ant-junit-1.7.0*
+=dev-java/ant-junit4-1.7.0*
+=dev-java/ant-nodeps-1.7.0*
+=dev-java/ant-swing-1.7.0*
+=dev-java/ant-trax-1.7.0*
+dev-java/ant-tasks
+=dev-java/ant-1.7.0*
 
 # Tomas Chvatal <scarabeus@gentoo.org> (30 Apr 2009)
 # mask the koffice2 (notetoself dont use slot blocks)
