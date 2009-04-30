@@ -1,6 +1,12 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.85 2009/02/08 17:20:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.86 2009/04/30 20:32:43 scarabeus Exp $
+
+*karbon-1.9.99.0 (30 Apr 2009)
+
+  30 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> +karbon-1.9.99.0.ebuild,
+  metadata.xml:
+  Version bump for koffice-2.
 
 *karbon-1.6.3_p20090204 (08 Feb 2009)
 
