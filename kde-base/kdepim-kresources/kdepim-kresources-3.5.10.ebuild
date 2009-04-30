@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.10.ebuild,v 1.1 2008/09/13 23:58:14 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.10.ebuild,v 1.2 2009/04/30 17:18:16 tampakrap Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -8,7 +8,7 @@ EAPI="1"
 inherit kde-meta eutils
 
 SRC_URI="${SRC_URI}
-	mirror://gentoo/kdepim-3.5-patchset-05.tar.bz2"
+	mirror://gentoo/kdepim-3.5-patchset-06.tar.bz2"
 
 DESCRIPTION="KDE PIM groupware plugin collection"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
