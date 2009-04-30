@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/csv
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.18 2009/02/15 22:09:07 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/csv/ChangeLog,v 1.19 2009/04/30 18:06:06 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -csv-0.5.0.ebuild,
+  -csv-1.0.ebuild:
+  Remove old
 
   15 Feb 2009; Patrick Lauer <patrick@gentoo.org> csv-1.0-r1.ebuild:
   Adding ~amd64 keyword

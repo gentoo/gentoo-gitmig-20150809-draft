@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/clientform
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.23 2008/12/07 10:51:32 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.24 2009/04/30 18:00:19 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -clientform-0.1.16.ebuild:
+  Remove old
 
   07 Dec 2008; Patrick Lauer <patrick@gentoo.org> +clientform-0.2.10.ebuild:
   Oops. Correcting keywords.

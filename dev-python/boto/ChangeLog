@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/boto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.12 2009/04/27 19:36:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/boto/ChangeLog,v 1.13 2009/04/30 17:59:37 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -boto-1.0a.ebuild:
+  Remove old
 
   27 Apr 2009; Markus Meier <maekke@gentoo.org> boto-1.6b.ebuild:
   amd64/x86 stable, bug #267340

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bicyclerepair
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.24 2009/04/26 19:29:26 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bicyclerepair/ChangeLog,v 1.25 2009/04/30 17:59:04 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  -bicyclerepair-0.9-r1.ebuild:
+  Remove old
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> bicyclerepair-0.9-r2.ebuild:
   stable ppc, bug 267338

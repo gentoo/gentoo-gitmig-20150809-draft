@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cryptlib_py
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/ChangeLog,v 1.6 2009/01/31 00:21:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptlib_py/ChangeLog,v 1.7 2009/04/30 18:05:11 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -cryptlib_py-3.3.1.ebuild:
+  Remove old
 
 *cryptlib_py-3.3.2 (31 Jan 2009)
 
