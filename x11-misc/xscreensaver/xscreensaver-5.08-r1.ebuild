@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.08-r1.ebuild,v 1.2 2009/04/30 14:49:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-5.08-r1.ebuild,v 1.3 2009/04/30 20:16:53 ssuominen Exp $
 
 EAPI=2
-inherit eutils flag-o-matic multilib pam
+inherit autotools eutils flag-o-matic multilib pam
 
 DESCRIPTION="A modular screen saver and locker for the X Window System"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -49,6 +49,7 @@ src_prepare() {
 		"${FILESDIR}"/${PV}/03_all_glforrestfire.patch \
 		"${FILESDIR}"/${P}-phosphor-segv.patch \
 		"${FILESDIR}"/${P}-po-recreate.patch
+	eautoconf
 }
 
 src_configure() {
