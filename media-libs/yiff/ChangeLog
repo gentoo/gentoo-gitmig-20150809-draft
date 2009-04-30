@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/yiff
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.16 2008/12/21 11:44:41 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.17 2009/04/30 19:25:39 ranger Exp $
+
+  30 Apr 2009; Brent Baude <ranger@gentoo.org> yiff-2.14.5-r1.ebuild:
+  stable ppc, bug 267924
 
 *yiff-2.14.5-r1 (21 Dec 2008)
 
