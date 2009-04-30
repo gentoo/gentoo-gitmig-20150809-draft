@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.47 2009/04/18 16:33:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.48 2009/04/30 16:24:25 patrick Exp $
+
+*virtualbox-bin-2.2.2 (30 Apr 2009)
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-bin-2.2.2.ebuild:
+  Bump to 2.2.2, thanks to Alessio Cassibba. Fixes #267838
 
 *virtualbox-bin-2.2.0 (18 Apr 2009)
 
