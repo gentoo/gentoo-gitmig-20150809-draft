@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-ubuntulooks/gtk-engines-ubuntulooks-0.9.12-r3.ebuild,v 1.1 2009/04/30 12:14:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-ubuntulooks/gtk-engines-ubuntulooks-0.9.12-r3.ebuild,v 1.2 2009/04/30 12:19:50 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -10,8 +10,8 @@ MY_PN=${PN/gtk-engines-/}
 
 DESCRIPTION="a derivative of the standard Clearlooks engine, using a more orange approach"
 HOMEPAGE="http://packages.ubuntu.com/search?keywords=gtk2-engines-ubuntulooks"
-SRC_URI="http://archive.ubuntu.com/ubuntu/pool/main/u/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz
-	http://archive.ubuntu.com/ubuntu/pool/main/u/${MY_PN}/${MY_PN}_${PV}-${PATCH_LEVEL}.diff.gz"
+SRC_URI="mirror://ubuntu/pool/main/u/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz
+	mirror://ubuntu/pool/main/u/${MY_PN}/${MY_PN}_${PV}-${PATCH_LEVEL}.diff.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
