@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gflags
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.5 2008/06/16 19:37:28 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.6 2009/04/30 08:04:15 dev-zero Exp $
+
+*gflags-1.1 (30 Apr 2009)
+
+  30 Apr 2009; Tiziano Müller <dev-zero@gentoo.org> gflags-0.8.ebuild,
+  +gflags-1.1.ebuild:
+  Version bump (including eapi-2 and python conditional-depend fix).
 
 *gflags-0.8 (16 Jun 2008)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-0.8.ebuild,v 1.2 2009/04/30 08:04:15 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/gflags-1.1.ebuild,v 1.1 2009/04/30 08:04:15 dev-zero Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	rm -r "${D}"/usr/share/doc/* || die "removing failed"
+	rm -rf "${D}"/usr/share/doc/*
 	AUTHORS ChangeLog NEWS README
 	dohtml doc/*
 
