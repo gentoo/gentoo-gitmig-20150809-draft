@@ -1,0 +1,11 @@
+diff -ur cdparanoia-III-10.2.orig/paranoia/cdda_paranoia.h cdparanoia-III-10.2/paranoia/cdda_paranoia.h
+--- cdparanoia-III-10.2.orig/paranoia/cdda_paranoia.h	2008-09-11 20:09:40.000000000 +0000
++++ cdparanoia-III-10.2/paranoia/cdda_paranoia.h	2009-04-30 11:21:26.000000000 +0000
+@@ -39,6 +39,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <cdda_interface.h>
+ 
+ extern char *paranoia_version();
+ extern cdrom_paranoia *paranoia_init(cdrom_drive *d);

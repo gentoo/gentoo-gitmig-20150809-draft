@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.93 2009/04/29 14:33:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.94 2009/04/30 08:34:08 ssuominen Exp $
+
+*cdparanoia-3.10.2-r3 (30 Apr 2009)
+
+  30 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +files/cdparanoia-3.10.2-include-cdda_interface_h.patch,
+  -cdparanoia-3.10.2-r2.ebuild, +cdparanoia-3.10.2-r3.ebuild:
+  Include cdda_interface.h for cdda_paranoia.h wrt #257607
 
   29 Apr 2009; Brent Baude <ranger@gentoo.org> cdparanoia-3.10.2-r2.ebuild:
   stable ppc64, bug 267726

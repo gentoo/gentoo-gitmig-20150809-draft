@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r2.ebuild,v 1.4 2009/04/29 14:33:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.1 2009/04/30 08:34:08 ssuominen Exp $
 
 EAPI=2
 
@@ -21,10 +21,11 @@ IUSE=""
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-use-destdir.patch" \
-		"${FILESDIR}/${P}-Makefile.in.patch" \
-		"${WORKDIR}/${P}-gcc43.patch" \
-		"${FILESDIR}/${P}-ppc64.patch"
+	epatch "${FILESDIR}"/${P}-use-destdir.patch \
+		"${FILESDIR}"/${P}-Makefile.in.patch \
+		"${WORKDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-ppc64.patch \
+		"${FILESDIR}"/${P}-include-cdda_interface_h.patch
 
 	mv configure.guess config.guess
 	mv configure.sub config.sub
