@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.26 2009/04/29 19:49:56 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.27 2009/04/30 15:51:21 dang Exp $
+
+  30 Apr 2009; Daniel Gryniewicz <dang@gentoo.org>
+  totem-pl-parser-2.26.1.ebuild:
+  Disable doc until new gtk-doc is in the tree; bug #267940
 
 *totem-pl-parser-2.26.1 (29 Apr 2009)
 
