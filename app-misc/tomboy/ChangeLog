@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.85 2009/04/17 04:15:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.86 2009/04/30 15:42:04 ranger Exp $
+
+  30 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking tomboy-0.12.2 ppc stable for bug 263984
 
 *tomboy-0.14.1 (17 Apr 2009)
 
