@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/mono-zeroconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.9 2009/04/04 14:45:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-zeroconf/ChangeLog,v 1.10 2009/04/30 15:36:07 ranger Exp $
+
+  30 Apr 2009; Brent Baude <ranger@gentoo.org>
+  mono-zeroconf-0.8.0-r1.ebuild:
+  Marking mono-zeroconf-0.8.0-r1 ppc stable for bug 263984
 
   04 Apr 2009; Markus Meier <maekke@gentoo.org>
   mono-zeroconf-0.8.0-r1.ebuild:
