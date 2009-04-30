@@ -1,13 +1,16 @@
 # ChangeLog for media-sound/ams
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.23 2008/04/11 21:03:12 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ChangeLog,v 1.24 2009/04/30 08:50:54 ssuominen Exp $
+
+  30 Apr 2009; Samuli Suominen <ssuominen@gentoo.org> ams-1.8.8_rc2.ebuild:
+  File collision /usr/bin/ams wrt #247812
 
   11 Apr 2008; Markus Meier <maekke@gentoo.org> ams-1.8.8_rc2.ebuild:
   x86 stable, bug #216891
 
 *ams-1.8.8_rc2 (10 Apr 2008)
 
-  10 Apr 2008; Samuli Suominen <drac@gentoo.org>
+  10 Apr 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/ams-1.8.8_rc2-spectrumscreen.patch, +ams-1.8.8_rc2.ebuild:
   Version bump and mark it stable for amd64 wrt #216891.
 

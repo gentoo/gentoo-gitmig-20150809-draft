@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.8_rc2.ebuild,v 1.4 2008/04/11 21:03:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ams/ams-1.8.8_rc2.ebuild,v 1.5 2009/04/30 08:50:54 ssuominen Exp $
 
 inherit eutils qt3
 
@@ -14,15 +14,17 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib
-	 media-sound/jack-audio-connection-kit
-	 =x11-libs/qt-3*
-	 =sci-libs/fftw-2*
-	 media-libs/ladspa-sdk
-	 media-libs/ladspa-cmt
-	 media-plugins/mcp-plugins
-	 media-plugins/swh-plugins
-	 media-libs/libclalsadrv"
-DEPEND="${RDEPEND}"
+	media-sound/jack-audio-connection-kit
+	=x11-libs/qt-3*
+	=sci-libs/fftw-2*
+	media-libs/ladspa-sdk
+	media-libs/ladspa-cmt
+	media-plugins/mcp-plugins
+	media-plugins/swh-plugins
+	media-libs/libclalsadrv"
+# File collision /usr/bin/ams wrt #247812
+DEPEND="${RDEPEND}
+	!dev-ruby/amrita"
 
 S=${WORKDIR}/${P/_/-}
 
