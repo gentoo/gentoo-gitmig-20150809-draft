@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tn5250
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.20 2009/01/08 20:15:19 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tn5250/ChangeLog,v 1.21 2009/04/30 19:34:01 ranger Exp $
+
+  30 Apr 2009; Brent Baude <ranger@gentoo.org> tn5250-0.17.4.ebuild:
+  stable ppc, bug 267968
 
 *tn5250-0.17.4 (08 Jan 2009)
 
