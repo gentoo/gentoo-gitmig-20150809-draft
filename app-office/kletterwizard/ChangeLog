@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kletterwizard
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.28 2009/01/12 19:31:20 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/kletterwizard/ChangeLog,v 1.29 2009/04/30 17:54:14 aballier Exp $
+
+  30 Apr 2009; Alexis Ballier <aballier@gentoo.org>
+  kletterwizard-0.9.8.ebuild:
+  drop texlive 2007 only deps now that 2008 is stable
 
   12 Jan 2009; Alexis Ballier <aballier@gentoo.org>
   kletterwizard-0.9.8.ebuild:
