@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.16 2009/04/30 16:25:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.17 2009/04/30 16:34:14 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org>
+  -virtualbox-ose-2.0.2.ebuild, -virtualbox-ose-2.0.4.ebuild,
+  -virtualbox-ose-2.0.4-r1.ebuild, -virtualbox-ose-2.0.6.ebuild:
+  Remove old 2.0
 
 *virtualbox-ose-2.2.2 (30 Apr 2009)
 
