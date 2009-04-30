@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/guarddog
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.25 2009/04/29 02:29:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.26 2009/04/30 21:08:25 darkside Exp $
+
+  30 Apr 2009; Jeremy Olexa <darkside@gentoo.org> -guarddog-2.4.0.ebuild,
+  -guarddog-2.6.0.ebuild:
+  Remove old version that don't have the init script, bug 182373
 
 *guarddog-2.6.0-r1 (29 Apr 2009)
 
