@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/PBS-Client
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PBS-Client/ChangeLog,v 1.1 2009/04/30 15:53:44 weaver Exp $
+
+*PBS-Client-0.07 (30 Apr 2009)
+
+  30 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +PBS-Client-0.07.ebuild:
+  New package, ebuild written by me
+
