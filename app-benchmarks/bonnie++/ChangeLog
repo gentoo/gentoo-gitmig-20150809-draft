@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/bonnie++
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.25 2009/04/08 17:04:16 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.26 2009/04/30 17:22:37 patrick Exp $
+
+  30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -bonnie++-1.94.ebuild:
+  Remove old
 
   08 Apr 2009; Patrick Lauer <patrick@gentoo.org>
   +files/bonnie++-1.95-homepage.patch, bonnie++-1.95.ebuild:
