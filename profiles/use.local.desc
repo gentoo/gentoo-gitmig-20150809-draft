@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4403 2009/04/30 00:47:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4404 2009/04/30 12:27:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2051,12 +2051,13 @@ net-im/jabberd2:memdebug - Enable nad and pool debug. Requires USE="debug" to be
 net-im/kadu:amarok - Enables media-sound/amarok:0 (amarok1) media player support
 net-im/kadu:amarok2 - Enables media-sound/amarok:2 (amarok2) media player support
 net-im/kadu:audacious - Enables media-sound/audacious media player support
+net-im/kadu:avatar - Display Gadu Avatars in Kadu
 net-im/kadu:bmpx - Enables media-sound/bmpx media player support
 net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:dragonplayer - Enables kde-base/dragonplayer KDE4 media player support
-net-im/kadu:extraicons - Enables extra icon set
 net-im/kadu:extramodules - Enables building of extra modules
 net-im/kadu:mail - Enables mail module
+net-im/kadu:phonon - Phonon sound support
 net-im/kadu:powerkadu - Installs extra powerkadu modules
 net-im/kadu:sms - Enables SMS sending plugin
 net-im/kadu:speech - Enables speech module
