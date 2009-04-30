@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9739 2009/04/29 15:43:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9740 2009/04/30 13:32:30 dang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -49,10 +49,6 @@
 # Rémi Cardona <remi@gentoo.org> (29 Apr 2009)
 # needs a couple patches to work properly
 =media-libs/mesa-7.4.1
-
-# Rémi Cardona <remi@gentoo.org> (29 Apr 2009)
-# needs totem-pl-parser 2.26.0
->=media-sound/rhythmbox-0.12.1
 
 # Rémi Cardona <remi@gentoo.org> (29 Apr 2009)
 # packages currently in the x11 overlay which will soon be moved to portage
