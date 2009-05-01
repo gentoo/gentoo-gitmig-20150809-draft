@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9-r2.ebuild,v 1.2 2009/05/01 06:15:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.9-r2.ebuild,v 1.3 2009/05/01 19:38:44 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -113,7 +113,7 @@ EOF
 	find "${D}"/etc -type d -empty -delete
 
 	# Removing junk.
-	rm -r "${D}"/usr/share/mime/{subclasses,XMLnamespaces,globs{,2},mime.cache,magic,aliases,{generic-,}icons} \
+	rm -r "${D}"/usr/share/mime/{subclasses,XMLnamespaces,globs{,2},mime.cache,magic,aliases,types,treemagic,{generic-,}icons} \
 		"${D}"/usr/share/{applnk,desktop-directories} \
 		"${D}$(python_get_sitedir)"/pyPdf
 }
