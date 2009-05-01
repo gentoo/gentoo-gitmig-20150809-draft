@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/dbench
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.36 2009/05/01 17:58:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/ChangeLog,v 1.37 2009/05/01 23:03:29 tcunha Exp $
+
+  01 May 2009; Tiago Cunha <tcunha@gentoo.org> dbench-4.0.ebuild:
+  stable sparc, bug 261723
 
   01 May 2009; Patrick Lauer <patrick@gentoo.org> dbench-4.0.ebuild:
   Fixing missing dev-libs/popt dep as noted in #261723

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-4.0.ebuild,v 1.8 2009/05/01 17:58:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/dbench/dbench-4.0.ebuild,v 1.9 2009/05/01 23:03:29 tcunha Exp $
 
 inherit eutils autotools
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.samba.org/pub/tridge/dbench/${P}.tar.gz"
 HOMEPAGE="http://samba.org/ftp/tridge/dbench/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="dev-libs/popt"
