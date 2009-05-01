@@ -1,12 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.0.6.ebuild,v 1.1 2008/04/05 20:45:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.0.6.ebuild,v 1.2 2009/05/01 19:34:40 gengor Exp $
+
+EAPI=2
 
 inherit mono java-pkg-opt-2
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
-SRC_URI="http://www.oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	http://www.oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -14,7 +17,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="python php tcl mono java ruby"
 
 COMMONDEPEND="=dev-libs/xapian-${PV}
-	python? ( >=dev-lang/python-2.2 )
+	python? ( >=dev-lang/python-2.2[threads] )
 	php? ( >=dev-lang/php-4 )
 	tcl? ( >=dev-lang/tcl-8.1 )
 	mono? ( >=dev-lang/mono-1.0.8 )

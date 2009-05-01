@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.8 2009/01/21 16:10:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.9 2009/05/01 19:34:40 gengor Exp $
+
+*xapian-bindings-1.0.12 (01 May 2009)
+
+  01 May 2009; Gordon Malm <gengor@gentoo.org> xapian-bindings-1.0.6.ebuild,
+  xapian-bindings-1.0.10.ebuild, +xapian-bindings-1.0.12.ebuild:
+  Version bump, add EAPI2 USE dep, add gentoo mirror to SRC_URI. Bugs #255518
+  and #256559.
 
 *xapian-bindings-1.0.10 (21 Jan 2009)
 
