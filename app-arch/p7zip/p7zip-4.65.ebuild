@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.65.ebuild,v 1.3 2009/04/27 15:57:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/p7zip/p7zip-4.65.ebuild,v 1.4 2009/05/01 13:05:58 jer Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}_src_all.tar.bz2"
 
 LICENSE="LGPL-2.1 rar? ( unRAR )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="wxwindows doc kde rar static"
 
 RDEPEND="wxwindows? ( x11-libs/wxGTK[X] )
