@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/Mail-ClamAV-0.28.ebuild,v 1.1 2009/04/27 10:28:11 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/Mail-ClamAV-0.29.ebuild,v 1.1 2009/05/01 10:29:18 tove Exp $
 
 EAPI=2
 
