@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.189 2009/04/30 12:53:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.190 2009/05/01 10:33:54 dragonheart Exp $
+
+  01 May 2009; Daniel Black <dragonheart@gentoo.org> gnutls-2.6.5-r1.ebuild,
+  gnutls-2.6.6.ebuild:
+  libtool rebuild to prevent bug #268065 which I forgot about
 
 *gnutls-2.6.6 (30 Apr 2009)
 

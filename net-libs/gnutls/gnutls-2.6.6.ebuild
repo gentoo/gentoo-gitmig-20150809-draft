@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.6.ebuild,v 1.1 2009/04/30 12:53:05 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.6.ebuild,v 1.2 2009/05/01 10:33:54 dragonheart Exp $
 
 EAPI="2"
 inherit autotools eutils libtool
@@ -45,12 +45,13 @@ pkg_setup() {
 }
 
 src_prepare() {
-#	local dir
-#	for dir in m4 lib/m4 libextra/m4 ; do
-#		rm -f ${dir}/lt* ${dir}/libtool.m4
-#	done
-#	find . -name ltmain.sh -exec rm {} \;
-#
+	# for old libtool compatibility #245544 
+	local dir
+	for dir in m4 lib/m4 libextra/m4 ; do
+		rm -f ${dir}/lt* ${dir}/libtool.m4
+	done
+	find . -name ltmain.sh -exec rm {} \;
+
 	# the below patch is in 2.7.* as per
 	# https://savannah.gnu.org/support/?106542
 	epatch "${FILESDIR}"/gnutls-2.6.0-cxx-configure.in.patch
