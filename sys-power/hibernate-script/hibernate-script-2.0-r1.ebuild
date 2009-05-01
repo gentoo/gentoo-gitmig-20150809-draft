@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-2.0.ebuild,v 1.1 2009/04/04 11:43:03 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/hibernate-script/hibernate-script-2.0-r1.ebuild,v 1.1 2009/05/01 22:07:29 nelchael Exp $
+
+inherit eutils
 
 PATCH_VERSION="1"
 
@@ -17,6 +19,13 @@ IUSE="vim-syntax"
 
 DEPEND=""
 RDEPEND="!<media-gfx/splashutils-1.5.2"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-init.d.patch"
+}
 
 src_install() {
 	BASE_DIR="${D}" \
