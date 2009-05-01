@@ -1,6 +1,12 @@
 # ChangeLog for net-im/qtwitter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.1 2009/04/30 16:49:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.2 2009/05/01 15:06:47 hwoarang Exp $
+
+*qtwitter-0.6.0-r2 (01 May 2009)
+
+  01 May 2009; Markos Chandras <hwoarang@gentoo.org>
+  +qtwitter-0.6.0-r2.ebuild:
+  Fixed bug #268089
 
 *qtwitter-0.6.0-r1 (30 Apr 2009)
 
