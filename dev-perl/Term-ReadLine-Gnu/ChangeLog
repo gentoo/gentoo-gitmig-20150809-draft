@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ReadLine-Gnu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.10 2009/03/21 20:19:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Gnu/ChangeLog,v 1.11 2009/05/01 21:10:28 tove Exp $
+
+  01 May 2009; Torsten Veller <tove@gentoo.org>
+  -Term-ReadLine-Gnu-1.17a.ebuild, -Term-ReadLine-Gnu-1.18.ebuild:
+  Cleanup
 
 *Term-ReadLine-Gnu-1.19 (21 Mar 2009)
 
