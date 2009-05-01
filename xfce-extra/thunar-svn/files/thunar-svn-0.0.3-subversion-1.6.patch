@@ -1,0 +1,10 @@
+--- tsp-svn-helper/tsh-common.c.orig	2009-04-30 23:03:34.037702354 -0500
++++ tsp-svn-helper/tsh-common.c	2009-04-30 23:03:59.114952043 -0500
+@@ -34,6 +34,7 @@
+ #include <subversion-1/svn_pools.h>
+ #include <subversion-1/svn_fs.h>
+ #include <subversion-1/svn_time.h>
++#include <subversion-1/svn_props.h>
+ 
+ #include "tsh-dialog-common.h"
+ #include "tsh-login-dialog.h"
