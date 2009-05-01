@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.32 2009/04/24 04:56:49 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.33 2009/05/01 18:17:53 patrick Exp $
+
+  01 May 2009; Patrick Lauer <patrick@gentoo.org> stress-1.0.0.ebuild:
+  Applying fixes from Tiago Cunha, #261720
 
   24 Apr 2009; Jeremy Olexa <darkside@gentoo.org> stress-1.0.0.ebuild:
   amd64 stable, remove an empty man page shipped by upstream. bug 261720

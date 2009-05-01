@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-1.0.0.ebuild,v 1.4 2009/04/24 04:56:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/stress-1.0.0.ebuild,v 1.5 2009/05/01 18:17:53 patrick Exp $
 
 inherit flag-o-matic
 
@@ -15,17 +15,22 @@ SLOT="0"
 KEYWORDS="amd64 ~mips ppc ppc64 ~sparc ~x86"
 IUSE="static"
 
-DEPEND="virtual/libc"
+DEPEND="sys-apps/help2man"
+RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	# Force rebuild of the manpage
+	rm -f "${S}"/doc/stress.1
+}
 
 src_compile() {
 	use static && append-ldflags -static
-	econf || die "econf failed"
+	econf
 	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog AUTHORS README
-	# Upstream ships an empty file...
-	rm -r ${D}/usr/share/man
 }
