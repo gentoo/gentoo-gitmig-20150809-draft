@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.9.99.0.ebuild,v 1.1 2009/04/30 20:32:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/koffice-libs-1.9.99.0.ebuild,v 1.2 2009/05/01 12:23:20 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ RDEPEND="
 	dev-libs/libxslt
 	>=kde-base/kdepimlibs-${KDE_MINIMAL}
 	>=media-libs/lcms-1.15
+	>=x11-libs/qt-gui-4.5
 	crypt? ( app-crypt/qca:2 )
 	openexr? ( media-libs/openexr )
 	opengl? ( media-libs/mesa )

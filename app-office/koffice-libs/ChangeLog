@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.86 2009/04/30 20:32:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.87 2009/05/01 12:23:20 scarabeus Exp $
+
+  01 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  koffice-libs-1.9.99.0.ebuild:
+  Depend on qt-4.5.
 
 *koffice-libs-1.9.99.0 (30 Apr 2009)
 
