@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/happy
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.39 2009/04/17 13:57:58 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.40 2009/05/01 10:26:22 kolmodin Exp $
+
+  01 May 2009; Lennart Kolmodin <kolmodin@gentoo.org> happy-1.18.2.ebuild:
+  amd64 stable, bug #268074.
 
   17 Apr 2009; Lennart Kolmodin <kolmodin@gentoo.org> happy-1.17.ebuild:
   Make happy-1.17 compile with >=cabal-1.6.
