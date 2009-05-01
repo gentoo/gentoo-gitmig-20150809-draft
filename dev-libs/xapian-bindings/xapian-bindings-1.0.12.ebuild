@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.0.12.ebuild,v 1.1 2009/05/01 19:34:40 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.0.12.ebuild,v 1.2 2009/05/01 20:51:19 tommy Exp $
 
 EAPI=2
 
@@ -8,8 +8,7 @@ inherit mono java-pkg-opt-2
 
 DESCRIPTION="SWIG and JNI bindings for Xapian"
 HOMEPAGE="http://www.xapian.org/"
-SRC_URI="mirror://gentoo/${P}.tar.gz
-	http://www.oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
+SRC_URI="http://www.oligarchy.co.uk/xapian/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"

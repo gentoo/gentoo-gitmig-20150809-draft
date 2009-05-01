@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/xapian-bindings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.9 2009/05/01 19:34:40 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/ChangeLog,v 1.10 2009/05/01 20:51:19 tommy Exp $
+
+  01 May 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -files/xapian-bindings-0.9.5-skip-csharp-test.patch,
+  xapian-bindings-1.0.6.ebuild, xapian-bindings-1.0.10.ebuild,
+  xapian-bindings-1.0.12.ebuild:
+  Drop old patch, remove not needed mirror statement
 
 *xapian-bindings-1.0.12 (01 May 2009)
 
