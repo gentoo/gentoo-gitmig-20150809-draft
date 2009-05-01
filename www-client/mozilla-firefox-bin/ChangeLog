@@ -1,6 +1,11 @@
 # ChangeLog for www-client/mozilla-firefox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.188 2009/05/01 14:07:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/ChangeLog,v 1.189 2009/05/01 23:13:22 nirbheek Exp $
+
+  01 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mozilla-firefox-bin-3.0.10, mozilla-firefox-bin-3.5_beta4:
+  Keeping the pkg_preinst is causing more problems than removing it, such as
+  bug 267363
 
   01 May 2009; Markus Meier <maekke@gentoo.org>
   mozilla-firefox-bin-3.0.10.ebuild:
