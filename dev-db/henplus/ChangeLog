@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/henplus
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.21 2008/11/17 20:54:11 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/henplus/ChangeLog,v 1.22 2009/05/01 20:51:17 betelgeuse Exp $
+
+*henplus-0.9.8 (01 May 2009)
+
+  01 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +files/0.9.8-build.xml.patch, +henplus-0.9.8.ebuild:
+  Version bump. Fixes bug #268125.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> files/henplus.patch:
   Fix patch with absolute paths.
