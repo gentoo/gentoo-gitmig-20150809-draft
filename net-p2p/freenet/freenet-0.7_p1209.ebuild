@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.3 2009/05/01 17:38:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1209.ebuild,v 1.1 2009/05/01 17:38:18 tommy Exp $
 
 EAPI="1"
 DATE=20090413
 
 EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
 EGIT_PROJECT="freenet/fred-official"
+EGIT_TREE="81cfd0f6d7b13b8aabef3cd5d1bc65c0fc9da3c7"
 
 inherit eutils git java-pkg-2 java-ant-2 multilib
 
@@ -14,9 +15,10 @@ DESCRIPTION="An encrypted network without censorship"
 HOMEPAGE="http://www.freenetproject.org/"
 SRC_URI="mirror://gentoo/seednodes-${DATE}.fref"
 
+
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="freemail"
 
 CDEPEND="dev-db/db-je:3.3
@@ -36,7 +38,6 @@ RDEPEND=">=virtual/jre-1.5
 	${CDEPEND}"
 PDEPEND="net-libs/NativeThread
 	freemail? ( dev-java/bcprov )"
-S=${WORKDIR}/${PN}
 
 EANT_BUILD_TARGET="dist"
 EANT_GENTOO_CLASSPATH="ant-core db4o-jdk5 db4o-jdk12 db4o-jdk11 db-je-3.3 fec java-service-wrapper lzma lzmajio mersennetwister"
@@ -56,7 +57,6 @@ src_unpack() {
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath
-	cp "${DISTDIR}"/seednodes-${DATE}.fref seednodes.fref || die
 }
 
 src_install() {
@@ -75,10 +75,12 @@ src_install() {
 	dosym java-service-wrapper/libwrapper.so /usr/$(get_libdir)/libwrapper.so
 }
 
-pkg_postinst() {
-	elog
+pkg_postinst () {
 	elog "1. Start freenet with /etc/init.d/freenet start."
 	elog "2. Open localhost:8888 in your browser for the web interface."
+	#workaround for previously existing freenet user
+	[[ $(stat --format="%U" /var/freenet) == "freenet" ]] || chown \
+		freenet:freenet /var/freenet
 }
 
 pkg_postrm() {
