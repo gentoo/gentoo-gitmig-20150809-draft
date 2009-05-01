@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.14_rc2.ebuild,v 1.1 2009/04/25 06:50:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.13.2.ebuild,v 1.1 2009/05/01 17:20:24 pva Exp $
 
 EAPI=1
 
@@ -105,7 +105,10 @@ src_test() {
 	export LC_ALL=C
 	# Define tests which are known to fail below.
 	local skip_tests="("
-	#skip_tests+="test1|"
+	#https://bugs.launchpad.net/bzr/+bug/306264
+	skip_tests+="test_http.TestWallServer.test_http_*|"
+	skip_tests+="blackbox.test_too_much.SFTPTestsRelative.test_*|"
+	#skip_tests+="blackbox.test_too_much.SFTPTestsRelative.test_check|"
 	#https://bugs.launchpad.net/bzr/+bug/341648
 	skip_tests+="test_osutils.TestWalkDirs.test_walkdirs_os_error"
 	skip_tests+=")"
