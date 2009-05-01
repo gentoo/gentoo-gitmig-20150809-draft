@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.3.ebuild,v 1.6 2008/12/15 04:58:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-utils/xfce-utils-4.4.3.ebuild,v 1.7 2009/05/01 04:28:50 darkside Exp $
 
 EAPI=1
 
@@ -28,7 +28,12 @@ RDEPEND="x11-apps/xrdb
 		gnome-extra/gnome-screensaver
 		x11-misc/xlockmore ) )"
 
-XFCE_CONFIG="${XFCE_CONFIG} $(use_enable dbus) --enable-gdm --with-vendor-info=Gentoo"
+DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+pkg_setup() {
+	XFCE_CONFIG="${XFCE_CONFIG} $(use_enable dbus) --enable-gdm \
+		--with-vendor-info=Gentoo"
+}
 
 src_unpack() {
 	unpack ${A}
@@ -41,5 +46,3 @@ src_install() {
 	insinto /usr/share/xfce4
 	doins "${FILESDIR}"/Gentoo
 }
-
-DOCS="AUTHORS ChangeLog NEWS README TODO"
