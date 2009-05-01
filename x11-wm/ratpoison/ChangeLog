@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.66 2009/05/01 11:23:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.67 2009/05/01 11:26:56 jer Exp $
+
+  01 May 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Make IUSE=history description more precise.
 
 *ratpoison-1.4.4-r1 (01 May 2009)
 

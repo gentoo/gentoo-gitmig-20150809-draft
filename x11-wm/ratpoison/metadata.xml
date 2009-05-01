@@ -16,7 +16,6 @@
 		Emacs and other quality pieces of software.
 	</longdescription>
 <use>
-	<flag name="history">Save ratpoison command history using
-	<pkg>sys-libs/readline</pkg></flag>
+	<flag name="history">Use <pkg>sys-libs/readline</pkg> for history handling</flag>
 </use>
 </pkgmetadata>
