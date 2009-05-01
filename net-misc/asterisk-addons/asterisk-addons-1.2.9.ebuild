@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.8.ebuild,v 1.1 2008/02/21 04:07:47 rajiv Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/asterisk-addons-1.2.9.ebuild,v 1.1 2009/05/01 15:43:59 chainsaw Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -23,7 +20,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~sparc ~x86"
 
-DEPEND=">=net-misc/asterisk-1.2.0
+RDEPEND="=net-misc/asterisk-1.2*
 	mysql? ( virtual/mysql )"
 
 pkg_setup() {
@@ -58,32 +55,32 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	#
 	# gentoo patchset
 	#
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo-base.diff
-	epatch ${FILESDIR}/${PN}-1.2.0-gentoo-res_sqlite3.diff
-	epatch ${FILESDIR}/${PN}-1.2.2-gentoo-format_mp3.diff
-	epatch ${FILESDIR}/${PN}-1.2.3-gentoo-ooh323c.diff
+	epatch "${FILESDIR}/${PN}-1.2.0-gentoo-base.diff"
+	epatch "${FILESDIR}/${PN}-1.2.0-gentoo-res_sqlite3.diff"
+	epatch "${FILESDIR}/${PN}-1.2.2-gentoo-format_mp3.diff"
+	epatch "${FILESDIR}/${PN}-1.2.3-gentoo-ooh323c.diff"
 
 	# patch from jaervosz for uclibc
 	if use elibc_uclibc; then
-		epatch ${FILESDIR}/${PN}-1.2.2-uclibc.diff
-		epatch ${FILESDIR}/${PN}-1.2.4-uclibc.diff
+		epatch "${FILESDIR}/${PN}-1.2.2-uclibc.diff"
+		epatch "${FILESDIR}/${PN}-1.2.4-uclibc.diff"
 	fi
 	# patch sqlite
 	if use sqlite; then
-		cd ${WORKDIR}/sqlite-${SQLITE_PV}
+		cd "${WORKDIR}/sqlite-${SQLITE_PV}"
 
-		epatch ${FILESDIR}/sqlite-${SQLITE_PV}-data-corruption.patch
+		epatch "${FILESDIR}/sqlite-${SQLITE_PV}-data-corruption.patch"
 		epunt_cxx
 	fi
 
 	# rebuild ooh323c configure
 	if use h323; then
-		cd ${S}/asterisk-ooh323c
+		cd "${S}/asterisk-ooh323c"
 		eautoreconf
 	fi
 }
@@ -94,53 +91,53 @@ src_compile() {
 	emake -j1 OPTIMIZE="${CFLAGS}" || die "Make failed"
 
 	if use sqlite; then
-		cd ${WORKDIR}/sqlite-${SQLITE_PV}
+		cd "${WORKDIR}/sqlite-${SQLITE_PV}"
 		econf --enable-threadsafe || die ""
 		emake || die ""
 
-		cd ${S}
+		cd "${S}"
 		emake -j1 -C res_sqlite3 \
-			SQLITEDIR=${WORKDIR}/sqlite-${SQLITE_PV} || die "Make res_sqlite failed"
+			SQLITEDIR="${WORKDIR}/sqlite-${SQLITE_PV}" || die "Make res_sqlite failed"
 	fi
 
 	if use h323; then
-		cd ${S}/asterisk-ooh323c
+		cd "${S}/asterisk-ooh323c"
 		econf || die "econf failed"
 		emake || die "emake failed"
 	fi
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "Make install failed"
+	make DESTDIR="${D}" install || die "Make install failed"
 
 	if use sqlite; then
 		make -C res_sqlite3 \
-			DESTDIR=${D} install || die "Make install res_sqlite3 failed"
+			DESTDIR="${D}" install || die "Make install res_sqlite3 failed"
 	fi
 
 	if use h323; then
 		make -C asterisk-ooh323c \
-			DESTDIR=${D} install || die "Make instal ooh323c failed"
+			DESTDIR="${D}" install || die "Make instal ooh323c failed"
 	fi
 
 	# install standard docs...
 	dodoc README
 	dodoc doc/cdr_mysql.txt
 
-	insinto /usr/share/doc/${PF}
+	insinto "/usr/share/doc/${PF}"
 	doins configs/*.sample
 
 	if use sqlite; then
-		cd ${S}/res_sqlite3
+		cd "${S}/res_sqlite3"
 		docinto res_sqlite3
 		dodoc README
-		insinto /usr/share/doc/${PF}/res_sqlite3
+		insinto "/usr/share/doc/${PF}/res_sqlite3"
 		doins res_sqlite.conf dialplan.sql
 		keepdir /var/lib/asterisk/sqlite
 	fi
 
 	if use h323; then
-		cd ${S}/asterisk-ooh323c
+		cd "${S}/asterisk-ooh323c"
 		docinto chan_ooh323c
 		dodoc AUTHORS INSTALL NEWS README ChangeLog
 		dodoc h323.conf.sample extensions.conf.sample
@@ -149,7 +146,7 @@ src_install() {
 		newins h323.conf.sample h323.conf
 	fi
 
-	cd ${S}
+	cd "${S}"
 
 	if use mysql; then
 		insinto /etc/asterisk
@@ -159,8 +156,8 @@ src_install() {
 
 	if use h323 || use mysql; then
 		einfo "Fixing permissions"
-		chown -R root:asterisk ${D}etc/asterisk
-		chmod -R u=rwX,g=rX,o= ${D}etc/asterisk
+		chown -R root:asterisk "${D}etc/asterisk"
+		chmod -R u=rwX,g=rX,o= "${D}etc/asterisk"
 	fi
 }
 
