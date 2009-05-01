@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.69 2009/04/30 19:39:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.70 2009/05/01 17:44:52 armin76 Exp $
+
+  01 May 2009; Raúl Porcel <armin76@gentoo.org> xlockmore-5.25.ebuild:
+  sparc/x86 stable wrt #267911
 
   30 Apr 2009; Brent Baude <ranger@gentoo.org> xlockmore-5.25.ebuild:
   stable ppc, bug 267911
