@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.22 2005/08/04 21:55:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.23 2009/05/01 21:50:44 nirbheek Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -20,8 +20,8 @@ src_mv_plugins() {
 	# Move plugins dir.  We use keepdir so that it might not be unmerged
 	# by mistake ...
 	keepdir /usr/$(get_libdir)/${PLUGINS_DIR}
-	cp -a ${D}/$1/* ${D}/usr/$(get_libdir)/${PLUGINS_DIR}
-	rm -rf ${D}/$1
+	cp -a "${D}"/$1/* "${D}"/usr/$(get_libdir)/${PLUGINS_DIR}
+	rm -rf "${D}"/$1
 	dosym /usr/$(get_libdir)/${PLUGINS_DIR} $1
 }
 
@@ -31,11 +31,11 @@ src_mv_plugins() {
 pkg_mv_plugins() {
 
 	# Move old plugins dir
-	if [ -d "${ROOT}/$1" -a ! -L "${ROOT}/$1" ]
+	if [[ -d "${ROOT}/$1" -a ! -L "${ROOT}/$1" ]]
 	then
-		mkdir -p ${ROOT}/usr/$(get_libdir)/${PLUGINS_DIR}
-		cp -a ${ROOT}/$1/* ${ROOT}/usr/$(get_libdir)/${PLUGINS_DIR}
-		rm -rf ${ROOT}/$1
+		mkdir -p "${ROOT}"/usr/$(get_libdir)/${PLUGINS_DIR}
+		cp -a "${ROOT}"/$1/* "${ROOT}"/usr/$(get_libdir)/${PLUGINS_DIR}
+		rm -rf "${ROOT}"/$1
 	fi
 }
 
