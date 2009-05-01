@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9744 2009/05/01 13:32:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9745 2009/05/01 17:26:51 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -265,11 +265,6 @@ dev-php5/pecl-zip
 # Discontinued by upstream, see http://www.adobe.com/svg/eol.html
 # Masked for removal in 30 days, bug 265066.
 net-www/adobesvg
-
-# Peter Volkov <pva@gentoo.org> (11 Apr 2009)
-# Mask bzr prerelease candidate and dependent bzrtools
-=dev-util/bzr-1.14*
-=dev-util/bzrtools-1.14*
 
 # Alin Năstac <mrness@gentoo.org> (10 Apr 2009)
 # Homepage no longer available (#264785)
