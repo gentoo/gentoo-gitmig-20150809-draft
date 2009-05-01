@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-notifyd/xfce4-notifyd-0.1.0.ebuild,v 1.2 2009/04/03 10:59:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-notifyd/xfce4-notifyd-0.1.0.ebuild,v 1.3 2009/05/01 04:21:49 darkside Exp $
 
 EAPI=1
 
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 	!x11-misc/notification-daemon
 	!xfce-extra/notification-daemon-xfce"
 
-XFCE_CONFIG=" $(use_enable libsexy) --enable-maintainer-mode"
-
 DOCS="AUTHORS ChangeLog NEWS README TODO"
+
+pkg_setup() {
+	XFCE_CONFIG=" $(use_enable libsexy) --enable-maintainer-mode"
+}

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfce4-notifyd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-notifyd/ChangeLog,v 1.2 2009/04/03 10:59:25 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-notifyd/ChangeLog,v 1.3 2009/05/01 04:21:49 darkside Exp $
+
+  01 May 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-notifyd-0.1.0.ebuild:
+  Move use_enable out of global scope
 
   03 Apr 2009; <chainsaw@gentoo.org> xfce4-notifyd-0.1.0.ebuild:
   Block x11-misc/notification-daemon as it provides the same D-Bus service.
