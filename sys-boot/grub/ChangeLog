@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.114 2009/04/27 05:23:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.115 2009/05/01 21:36:27 chainsaw Exp $
+
+  01 May 2009; <chainsaw@gentoo.org> grub-9999.ebuild:
+  Add dev-lang/ruby as a build-time DEPEND, as autogen.sh (line 9 in SVN rev
+  2154) calls genmk.rb and fails without.
 
   27 Apr 2009; Mike Frysinger <vapier@gentoo.org> grub-9999:
   Generate autotool files now that upstream removed things from svn #267233

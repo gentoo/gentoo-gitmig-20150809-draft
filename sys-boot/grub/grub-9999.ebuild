@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.7 2009/04/27 05:23:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.8 2009/05/01 21:36:27 chainsaw Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -22,7 +22,8 @@ KEYWORDS=""
 IUSE="custom-cflags multislot static"
 
 DEPEND=">=sys-libs/ncurses-5.2-r5
-	dev-libs/lzo"
+	dev-libs/lzo
+	dev-lang/ruby"
 PROVIDE="virtual/bootloader"
 
 export STRIP_MASK="*/grub/*/*.mod"
