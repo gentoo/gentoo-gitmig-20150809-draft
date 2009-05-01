@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/sleuthkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.42 2009/04/30 17:44:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/sleuthkit/ChangeLog,v 1.43 2009/05/01 19:08:42 armin76 Exp $
+
+  01 May 2009; Raúl Porcel <armin76@gentoo.org> sleuthkit-3.0.0-r1.ebuild,
+  sleuthkit-3.0.1.ebuild:
+  Re-add ~arm/~s390 wrt #260682
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -sleuthkit-1.73-r2.ebuild:
   Remove old
