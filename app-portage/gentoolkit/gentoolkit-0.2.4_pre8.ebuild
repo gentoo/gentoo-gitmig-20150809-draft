@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4_pre8.ebuild,v 1.4 2008/05/29 15:50:39 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4_pre8.ebuild,v 1.5 2009/05/01 03:22:55 fuzzyray Exp $
 
 inherit eutils python
 
@@ -19,6 +19,7 @@ DEPEND=">=sys-apps/portage-2.1.1_pre1
 	>=dev-lang/perl-5.6
 	>=sys-apps/grep-2.4
 	userland_GNU? ( sys-apps/debianutils )"
+RDEPEND="$DEPEND"
 
 src_install() {
 	emake DESTDIR="${D}" install-gentoolkit || die "install-gentoolkit failed"

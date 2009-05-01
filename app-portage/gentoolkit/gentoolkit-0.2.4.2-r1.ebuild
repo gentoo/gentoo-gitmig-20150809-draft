@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.2-r1.ebuild,v 1.9 2009/01/09 16:31:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.2-r1.ebuild,v 1.10 2009/05/01 03:22:55 fuzzyray Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ DEPEND=">=sys-apps/portage-2.1.1_pre1
 	>=dev-lang/perl-5.6
 	>=sys-apps/grep-2.4
 	userland_GNU? ( sys-apps/debianutils )"
+RDEPEND="$DEPEND"
 
 src_prepare() {
 	epatch "${FILESDIR}/equery-0.2.4.2_use_expanded.patch"

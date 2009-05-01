@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.151 2009/01/09 16:31:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.152 2009/05/01 03:22:55 fuzzyray Exp $
+
+*gentoolkit-0.2.4.3 (01 May 2009)
+
+  01 May 2009; Paul Varner <fuzzyray@gentoo.org>
+  -gentoolkit-0.2.3-r1.ebuild, gentoolkit-0.2.4_pre8.ebuild,
+  -gentoolkit-0.2.4.ebuild, -gentoolkit-0.2.4.1.ebuild,
+  -gentoolkit-0.2.4.2.ebuild, gentoolkit-0.2.4.2-r1.ebuild,
+  +gentoolkit-0.2.4.3.ebuild:
+  gentoolkit-0.2.4.3 version bump. This fixes bugs #239000, #243304,
+  #249652, #253968, #259526, and #267898. Removed older ebuilds and added
+  explict RDEPEND to all ebuilds.
 
   09 Jan 2009; Brent Baude <ranger@gentoo.org> gentoolkit-0.2.4.2-r1.ebuild:
   stable ppc, bug 253897
