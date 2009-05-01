@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.3.ebuild,v 1.10 2008/04/20 01:35:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.3.ebuild,v 1.11 2009/05/01 10:28:07 eva Exp $
 
 inherit autotools eutils pam gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gdm/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~mips"
 
 IUSE_LIBC="elibc_glibc"
 IUSE="accessibility afs branding dmx ipv6 pam remote selinux tcpd xinerama $IUSE_LIBC"

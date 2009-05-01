@@ -5,5 +5,7 @@
 <use>
 	<flag name='dmx'>Enables Distributed Multihead X (DMX) support</flag>
 	<flag name='remote'>Enables support for secure remote connections</flag>
+	<flag name='consolekit'>Allow proper handling of removable media according
+	to who is actually present on the machine.</flag>
 </use>
 </pkgmetadata>
