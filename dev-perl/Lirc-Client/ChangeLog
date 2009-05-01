@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Lirc-Client
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.1 2008/12/12 04:19:42 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lirc-Client/ChangeLog,v 1.2 2009/05/01 22:38:39 tove Exp $
+
+  01 May 2009; Torsten Veller <tove@gentoo.org> -Lirc-Client-1.50.ebuild:
+  Cleanup
 
 *Lirc-Client-1.51 (12 Dec 2008)
 *Lirc-Client-1.50 (12 Dec 2008)

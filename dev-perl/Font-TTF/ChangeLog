@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-TTF
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.17 2009/03/15 18:42:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.18 2009/05/01 22:11:15 tove Exp $
+
+  01 May 2009; Torsten Veller <tove@gentoo.org> -Font-TTF-0.43.ebuild:
+  Cleanup
 
   15 Mar 2009; Raúl Porcel <armin76@gentoo.org> Font-TTF-0.45.ebuild:
   arm/ia64/s390/sh stable wrt #261824
