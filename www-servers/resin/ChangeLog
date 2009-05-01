@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/resin
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.85 2009/03/07 16:22:58 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.86 2009/05/01 22:40:16 nelchael Exp $
+
+*resin-3.2.1-r1 (01 May 2009)
+
+  01 May 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  -files/3.0.26/resin.conf, -resin-3.1.6-r2.ebuild,
+  -files/3.0.26/resin.init, -resin-3.2.1.ebuild, -files/3.1.6/resin.conf,
+  +resin-3.2.1-r1.ebuild, -files/3.1.6/resin.init, files/3.2.1/resin.init,
+  -resin-3.0.26.ebuild:
+  Fix installation of resin.xml, drop old versions.
 
   07 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> resin-3.2.1.ebuild:
   Rewrite build-common.xml.

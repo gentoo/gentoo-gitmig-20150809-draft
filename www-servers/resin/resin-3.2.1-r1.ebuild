@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1.ebuild,v 1.2 2009/03/07 16:22:58 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r1.ebuild,v 1.1 2009/05/01 22:40:16 nelchael Exp $
 
 EAPI="2"
 
@@ -112,7 +112,7 @@ src_install() {
 	dosym /var/log/resin ${RESIN_HOME}/logs
 	dosym /var/log/resin ${RESIN_HOME}/log
 
-	dodoc README "${S}"/conf/*.conf
+	dodoc README "${S}"/conf/*.xml
 
 	newinitd "${FILESDIR}/${PV}/resin.init" resin
 	newconfd "${FILESDIR}/${PV}/resin.conf" resin
@@ -130,8 +130,6 @@ src_install() {
 		die "mv of webapps failed"
 	rm -rf "${D}/${RESIN_HOME}/webapps"
 	dosym /var/lib/resin/webapps ${RESIN_HOME}/webapps
-
-	dosym /etc/resin/resin.conf /etc/resin/resin.xml
 
 	use admin && {
 		cp -a "${S}/doc/admin" "${D}/var/lib/resin/webapps/" || die "cp failed"
@@ -167,13 +165,13 @@ pkg_postinst() {
 	elog
 	elog " User and group 'resin' have been added."
 	elog
-	elog " By default, Resin runs on port 8080.  You can change this"
-	elog " value by editing /etc/resin/resin.conf."
+	elog " By default, Resin runs on port 8080. You can change this"
+	elog " value by editing /etc/resin/resin.xml."
 	elog
 	elog " webapps directory was moved to /var/lib/resin/webapps"
 	elog
 	elog " Most options has been moved from /etc/conf.d/resin to"
-	elog " /etc/resin/resin.conf."
+	elog " /etc/resin/resin.xml."
 	elog
 
 }
