@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/electricsheep
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.42 2009/04/29 08:43:51 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/ChangeLog,v 1.43 2009/05/01 18:41:58 patrick Exp $
+
+*electricsheep-2.6.8-r3 (01 May 2009)
+
+  01 May 2009; Patrick Lauer <patrick@gentoo.org>
+  +electricsheep-2.6.8-r3.ebuild:
+  Fixing bits for media-gfx/flam3 addition. Ebuild fixes by David Bitseff.
+  Dropping sparc keyword until we can get flam3 keyworded there.
 
 *electricsheep-2.6.8-r2 (27 Apr 2009)
 
