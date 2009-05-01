@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.10.ebuild,v 1.6 2009/05/01 14:06:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.0.10.ebuild,v 1.7 2009/05/01 23:24:30 nirbheek Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -216,16 +216,6 @@ src_compile() {
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break
 	[ "${WANT_MP}" = "true" ] && jobs=${MAKEOPTS} || jobs="-j1"
 	emake ${jobs} || die
-}
-
-pkg_preinst() {
-	declare MOZILLA_FIVE_HOME="/usr/$(get_libdir)/${PN}"
-
-	einfo "Removing old installs with some really ugly code.  It potentially"
-	einfo "eliminates any problems during the install, however suggestions to"
-	einfo "replace this are highly welcome.  Send comments and suggestions to"
-	einfo "mozilla@gentoo.org."
-	rm -rf "${ROOT}"${MOZILLA_FIVE_HOME}
 }
 
 src_install() {
