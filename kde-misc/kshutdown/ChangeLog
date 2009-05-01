@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kshutdown
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.15 2009/04/06 11:43:04 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.16 2009/05/01 11:45:10 scarabeus Exp $
+
+*kshutdown-2.0_beta6 (01 May 2009)
+
+  01 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -kshutdown-2.0_beta4.ebuild, +kshutdown-2.0_beta6.ebuild,
+  +files/CMakeLists.txt:
+  Version bump. Add cmakelists.txt that is correctly parsing the
+  translations.
 
   06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kshutdown-2.0_beta4.ebuild:
