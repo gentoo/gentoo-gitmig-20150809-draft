@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/glew
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.39 2009/04/30 17:56:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glew/ChangeLog,v 1.40 2009/05/01 15:23:49 ranger Exp $
+
+  01 May 2009; Brent Baude <ranger@gentoo.org> glew-1.5.1.ebuild:
+  stable ppc64, bug 268020
 
   30 Apr 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -glew-1.3.5.ebuild, -glew-1.5.0.ebuild, glew-1.5.1.ebuild:
