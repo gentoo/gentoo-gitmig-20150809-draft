@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/qtpfsgui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.12 2009/02/14 22:12:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/ChangeLog,v 1.13 2009/05/01 13:12:50 maekke Exp $
+
+*qtpfsgui-1.9.3 (01 May 2009)
+
+  01 May 2009; Markus Meier <maekke@gentoo.org> +qtpfsgui-1.9.3.ebuild:
+  version bump
 
   14 Feb 2009; Markus Meier <maekke@gentoo.org> qtpfsgui-1.9.2-r1.ebuild:
   remove useless doc USE-flag, assign RDEPEND
