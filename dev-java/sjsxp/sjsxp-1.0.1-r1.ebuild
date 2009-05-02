@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1-r1.ebuild,v 1.1 2008/10/05 16:29:43 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/sjsxp-1.0.1-r1.ebuild,v 1.2 2009/05/02 14:34:11 serkan Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -39,6 +39,6 @@ EANT_DOC_TARGET="javadocs"
 src_install() {
 	java-pkg_dojar "build/${PN}.jar"
 
-	use doc && java-pkg_dojavadoc build/docs/javadocs
+	use doc && java-pkg_dojavadoc build/docs/javadocs/sjsxp
 	use source && java-pkg_dosrc src
 }

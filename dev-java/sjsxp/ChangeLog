@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sjsxp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/ChangeLog,v 1.8 2008/10/05 16:29:43 serkan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sjsxp/ChangeLog,v 1.9 2009/05/02 14:34:11 serkan Exp $
+
+  02 May 2009; Serkan Kaba <serkan@gentoo.org> sjsxp-1.0.1-r1.ebuild:
+  Fix javadoc installation.
 
 *sjsxp-1.0.1-r1 (05 Oct 2008)
 
