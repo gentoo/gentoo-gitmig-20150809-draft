@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.42 2009/04/25 14:27:22 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.43 2009/05/02 19:03:47 dang Exp $
+
+*networkmanager-0.7.1-r2 (02 May 2009)
+
+  02 May 2009; Daniel Gryniewicz <dang@gentoo.org>
+  +networkmanager-0.7.1-r2.ebuild,
+  +files/networkmanager-0.7.1-confchanges.patch:
+  Enable ck-based policy; bug #268223
 
 *networkmanager-0.7.1-r1 (25 Apr 2009)
 
