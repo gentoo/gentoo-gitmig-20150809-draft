@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.5.ebuild,v 1.9 2008/10/27 05:42:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.5.ebuild,v 1.10 2009/05/02 20:33:05 swegener Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="gtk ncurses qt3 caps"
 
-DEPEND="gtk? ( =x11-libs/gtk+-2* )
+DEPEND="gtk? ( x11-libs/gtk+:2 )
 	ncurses? ( sys-libs/ncurses )
 	qt3? ( x11-libs/qt:3 )
 	!gtk? ( !qt3? ( !ncurses? ( sys-libs/ncurses ) ) )
