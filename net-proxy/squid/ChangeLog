@@ -1,6 +1,11 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.244 2009/04/26 12:03:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.245 2009/05/02 15:11:20 mrness Exp $
+
+*squid-3.0.14-r2 (02 May 2009)
+
+  02 May 2009; Alin Năstac <mrness@gentoo.org> +squid-3.0.14-r2.ebuild:
+  Fix encoding errors reported for some misconfigured sites (#267318).
 
 *squid-3.1.0.7_beta (26 Apr 2009)
 
