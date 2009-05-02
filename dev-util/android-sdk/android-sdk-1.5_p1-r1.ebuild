@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk/android-sdk-1.5_p1.ebuild,v 1.2 2009/05/02 03:23:59 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk/android-sdk-1.5_p1-r1.ebuild,v 1.1 2009/05/02 04:07:21 zmedico Exp $
 
 EAPI="2"
 
@@ -31,11 +31,12 @@ src_install(){
 	dodoc tools/NOTICE.txt RELEASE_NOTES.html || die
 	rm -f tools/NOTICE.txt
 	cp -pPR tools "${D}/${destdir}/" || die "failed to copy"
-	if ! use examples; then
-		rm -fr platforms/android-${PV/_p*/}/samples
-	fi
 	mkdir -p "${D}/${destdir}/platforms" || die "failed to mkdir"
-	cp -pPR platforms/android-${PV/_p*/} "${D}/${destdir}/platforms" || die "failed to copy"
+	local platform
+	for platform in platforms/android-* ; do
+		! use examples && rm -fr $platform/samples
+		cp -pPR $platform "${D}/${destdir}/platforms" || die "failed to copy"
+	done
 	cp -pPR add-ons "${D}/${destdir}/" || die "failed to copy"
 	use doc && dohtml -r docs documentation.html
 
