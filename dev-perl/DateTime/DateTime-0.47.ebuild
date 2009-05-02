@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.47.ebuild,v 1.2 2009/05/02 08:17:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.47.ebuild,v 1.3 2009/05/02 15:28:35 nixnut Exp $
 
 inherit versionator
 MY_P=${PN}-$(delete_version_separator 2)
@@ -12,7 +12,7 @@ DESCRIPTION="A date and time object"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-perl/Params-Validate-0.76
