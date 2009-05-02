@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/aww
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.18 2007/02/22 01:47:46 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/aww/ChangeLog,v 1.19 2009/05/02 09:06:13 tove Exp $
+
+  02 May 2009; Torsten Veller <tove@gentoo.org> -aww-0.33.ebuild:
+  Cleanup
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
