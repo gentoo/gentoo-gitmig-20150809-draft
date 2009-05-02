@@ -1,11 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-707.ebuild,v 1.1 2007/07/18 00:56:28 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-905.ebuild,v 1.1 2009/05/02 01:17:04 je_fro Exp $
 
 DESCRIPTION="A restriction enzyme database"
 LICENSE="public-domain"
 HOMEPAGE="http://rebase.neb.com"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+#SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://dev.gentooexperimental.org/~jlec/science-dist/${P}.tar.bz2"
 
 SLOT="0"
 # Minimal build keeps only the indexed files (if applicable) and the
@@ -14,6 +15,7 @@ IUSE="emboss minimal"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="emboss? ( >=sci-biology/emboss-5.0.0 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	if use emboss; then
@@ -29,7 +31,7 @@ src_compile() {
 src_install() {
 	if ! use minimal; then
 		insinto /usr/share/${PN}
-		doins withrefm.${PV} proto.${PV} || die \
+		doins withrefm.${PV} proto.${PV} gcg.${PV} || die \
 				"Failed to install raw database."
 	fi
 	newdoc REBASE.DOC README || die "Failed to install documentation."
