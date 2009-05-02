@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.106 2009/04/22 22:15:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.107 2009/05/02 18:26:31 dang Exp $
+
+*gnome-power-manager-2.24.4-r2 (02 May 2009)
+
+  02 May 2009; Daniel Gryniewicz <dang@gentoo.org>
+  -gnome-power-manager-2.24.4-r1.ebuild,
+  +gnome-power-manager-2.24.4-r2.ebuild:
+  Bump to gnome-power-manager-2.24.4-r2
+  - Don't install hal's policy files; hal does it now bug #268243
 
   22 Apr 2009; Gilles Dartiguelongue <eva@gentoo.org>
   gnome-power-manager-2.20.0-r1.ebuild, -gnome-power-manager-2.20.2.ebuild,

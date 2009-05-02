@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r1.ebuild,v 1.5 2009/04/22 22:15:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r2.ebuild,v 1.1 2009/05/02 18:26:31 dang Exp $
 
 inherit autotools eutils gnome2 virtualx
 
@@ -32,6 +32,7 @@ RDEPEND=">=dev-libs/glib-2.6.0
 	=media-libs/gstreamer-0.10*
 	policykit? (
 		>=sys-auth/policykit-0.8
+		>=sys-apps/hal-0.5.12_rc1-r2
 		>=gnome-extra/policykit-gnome-0.8 )
 
 	>=x11-apps/xrandr-1.2
@@ -95,15 +96,6 @@ src_unpack() {
 
 src_test() {
 	Xemake check || die "Test phase failed"
-}
-
-src_install() {
-	gnome2_src_install
-
-	if use policykit; then
-		insinto /usr/share/PolicyKit/policy
-		doins "${FILESDIR}/org.freedesktop.hal.power-management.policy"
-	fi
 }
 
 pkg_postinst() {
