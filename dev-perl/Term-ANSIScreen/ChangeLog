@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-ANSIScreen
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.14 2008/11/27 20:26:23 jer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ANSIScreen/ChangeLog,v 1.15 2009/05/02 10:31:01 tove Exp $
+
+  02 May 2009; Torsten Veller <tove@gentoo.org>
+  -Term-ANSIScreen-1.40.ebuild:
+  Cleanup
 
   27 Nov 2008; Jeroen Roovers <jer@gentoo.org> Term-ANSIScreen-1.42.ebuild:
   Marked ~hppa too.
