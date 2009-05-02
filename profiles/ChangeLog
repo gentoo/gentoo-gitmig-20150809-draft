@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2600 2009/05/02 08:53:08 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2601 2009/05/02 17:55:34 hd_brummy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org> package.mask:
+  media-tv/w_scan-20090502; need >=sys-kernel/linux-headers-2.6.29 with
+  s2api header changes
 
   02 May 2009; Alin Năstac <mrness@gentoo.org> package.mask:
   Update openswan-2.6 p.mask explanation.
