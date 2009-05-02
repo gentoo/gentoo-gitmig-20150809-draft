@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/netbeans
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.103 2009/03/29 17:48:38 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.104 2009/05/02 00:54:51 fordfrog Exp $
+
+*netbeans-6.7_beta (02 May 2009)
+
+  02 May 2009; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/6.7/nbbuild_build.xml.patch, +netbeans-6.7_beta.ebuild,
+  +files/6.7/nbbuild_templates_projectized.xml.patch:
+  Added netbeans 6.7 beta ebuild
 
   29 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   netbeans-5.5.1-r1.ebuild, netbeans-6.5-r4.ebuild:
