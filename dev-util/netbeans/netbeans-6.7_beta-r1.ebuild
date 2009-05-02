@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r1.ebuild,v 1.2 2009/05/02 19:09:23 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r1.ebuild,v 1.3 2009/05/02 23:13:31 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -216,14 +216,20 @@ JAVA_PKG_BSFIX="off"
 
 pkg_setup() {
 	local need_apisupport=""
+	local need_cnd=""
 	local need_dlight=""
 	local need_enterprise=""
+	local need_ergonomics=""
 	local need_groovy=""
 	local need_harness=""
 	local need_ide=""
+	local need_identity=""
 	local need_java=""
+	local need_mobility=""
 	local need_nb=""
+	local need_php=""
 	local need_profiler=""
+	local need_ruby=""
 	local need_webcommon=""
 	local need_websvccommon=""
 
@@ -321,6 +327,28 @@ pkg_setup() {
 		need_ide="1"
 	fi
 
+	# currently we require all clusters when building javadoc, can be tested
+	# what clusters are really needed to build javadoc
+	if use doc ; then
+		need_apisupport="1"
+		need_cnd="1"
+		need_dlight="1"
+		need_enterprise="1"
+		need_ergonomics="1"
+		need_groovy="1"
+		need_harness="1"
+		need_ide="1"
+		need_identity="1"
+		need_java="1"
+		need_mobility="1"
+		need_nb="1"
+		need_php="1"
+		need_profiler="1"
+		need_ruby="1"
+		need_webcommon="1"
+		need_websvccommon="1"
+	fi
+
 	if [ -n "${need_apisupport}" ] ; then
 		need_harness="1"
 		need_ide="1"
@@ -368,14 +396,20 @@ pkg_setup() {
 
 	local missing=""
 	[ -n "${need_apisupport}" ] && ! use netbeans_modules_apisupport && missing="${missing} apisupport"
+	[ -n "${need_cnd}" ] && ! use netbeans_modules_cnd && missing="${missing} cnd"
 	[ -n "${need_dlight}" ] && ! use netbeans_modules_dlight && missing="${missing} dlight"
 	[ -n "${need_enterprise}" ] && ! use netbeans_modules_enterprise && missing="${missing} enterprise"
+	[ -n "${need_ergonomics}" ] && ! use netbeans_modules_ergonomics && missing="${missing} ergonomics"
 	[ -n "${need_groovy}" ] && ! use netbeans_modules_groovy && missing="${missing} groovy"
 	[ -n "${need_harness}" ] && ! use netbeans_modules_harness && missing="${missing} harness"
 	[ -n "${need_ide}" ] && ! use netbeans_modules_ide && missing="${missing} ide"
+	[ -n "${need_identity}" ] && ! use netbeans_modules_identity && missing="${missing} identity"
 	[ -n "${need_java}" ] && ! use netbeans_modules_java && missing="${missing} java"
+	[ -n "${need_mobility}" ] && ! use netbeans_modules_mobility && missing="${missing} mobility"
 	[ -n "${need_nb}" ] && ! use netbeans_modules_nb && missing="${missing} nb"
+	[ -n "${need_php}" ] && ! use netbeans_modules_php && missing="${missing} php"
 	[ -n "${need_profiler}" ] && ! use netbeans_modules_profiler && missing="${missing} profiler"
+	[ -n "${need_ruby}" ] && ! use netbeans_modules_ruby && missing="${missing} ruby"
 	[ -n "${need_webcommon}" ] && ! use netbeans_modules_webcommon && missing="${missing} webcommon"
 	[ -n "${need_websvccommon}" ] && ! use netbeans_modules_websvccommon && missing="${missing} websvccommon"
 
@@ -536,8 +570,8 @@ src_compile() {
 	java-pkg_filter-compiler ecj-3.2 ecj-3.3 ecj-3.4
 
 	# Build the clusters
-	ANT_TASKS="ant-nodeps ant-trax"
-	ANT_OPTS="-Xmx1g -Djava.awt.headless=true" eant ${antflags} ${clusters} -f nbbuild/build.xml ${build_target}
+	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="-Xmx1g -Djava.awt.headless=true" \
+		eant ${antflags} ${clusters} -f nbbuild/build.xml ${build_target} $(use_doc build-javadoc)
 
 	local locales=""
 	for lang in ${IUSE_LINGUAS} ; do
@@ -555,12 +589,6 @@ src_compile() {
 		einfo "Compiling support for locales: ${locales}"
 		eant ${antflags} -Dlocales=${locales} -Ddist.dir=../nbbuild/netbeans -Dnbms.dir="" -Dnbms.dist.dir="" \
 			-f l10n/build.xml build
-	fi
-
-	# Running build-javadoc from the same command line as build-nozip doesn't work
-	# so we must run it separately
-	if use doc ; then
-		ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="-Xmx1g" eant ${antflags} ${clusters} -f nbbuild/build.xml build-javadoc
 	fi
 
 	# Remove non-Linux binaries
@@ -680,7 +708,10 @@ src_install() {
 	dohtml CREDITS.html README.html netbeans.css
 	rm -f build_info CREDITS.html README.html netbeans.css
 
-	use doc && java-pkg_dojavadoc "${S}"/nbbuild/build/javadoc
+	if use doc ; then
+		rm "${S}"/nbbuild/build/javadoc/*.zip
+		java-pkg_dojavadoc "${S}"/nbbuild/build/javadoc
+	fi
 
 	# Icons and shortcuts
 	if use netbeans_modules_nb ; then
