@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.36 2009/04/18 07:41:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.37 2009/05/02 12:46:50 armin76 Exp $
+
+  02 May 2009; Raúl Porcel <armin76@gentoo.org> mpich2-1.0.8.ebuild:
+  x86 stable wrt #266409
 
   18 Apr 2009; nixnut <nixnut@gentoo.org> mpich2-1.0.8.ebuild:
   ppc stable #266409
