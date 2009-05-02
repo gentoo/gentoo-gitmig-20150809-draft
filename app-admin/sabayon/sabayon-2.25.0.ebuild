@@ -1,53 +1,48 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.22.0.ebuild,v 1.11 2008/11/13 19:40:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/sabayon-2.25.0.ebuild,v 1.1 2009/05/02 19:04:00 eva Exp $
+
+EAPI="2"
+GCONF_DEBUG="no"
 
 inherit gnome2 eutils python multilib
-#pam
 
 DESCRIPTION="Tool to maintain user profiles in a GNOME desktop"
 HOMEPAGE="http://www.gnome.org/projects/sabayon/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 # Unfortunately the configure.ac is wildly insufficient, so dependencies have
 # to be got from the RPM .spec file...
-DEPEND="dev-lang/python
+COMMON_DEPEND=">=dev-lang/python-2.4
 	>=x11-libs/gtk+-2.6.0
 	>=dev-python/pygtk-2.5.3
+	>=dev-python/pygobject-2.15
 	x11-libs/pango
 	dev-python/python-ldap
-	x11-base/xorg-server"
+	x11-base/xorg-server[-minimal]"
 
-#	virtual/pam
-RDEPEND="${DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	dev-python/pyxdg
-	dev-libs/libxml2
+	dev-libs/libxml2[python]
 	>=gnome-base/gconf-2.8.1
-	>=dev-python/gnome-python-2.6.0
+	>=dev-python/gconf-python-2.6
 	x11-libs/gksu"
+
+DEPEND="${COMMON_DEPEND}
+	>=dev-util/intltool-0.40"
 
 DOCS="AUTHORS ChangeLog ISSUES NEWS README TODO"
 
 pkg_setup() {
-	if built_with_use x11-base/xorg-server minimal; then
-		eerror "${PN} needs Xnest, which the minimal USE flag disables."
-		eerror "Please re-emerge x11-base/xorg-xserver with USE=-minimal"
-		die "need x11-base/xorg-xserver built without minimal USE flag"
-	fi
-	if ! built_with_use dev-libs/libxml2 python; then
-		eerror "${PN} needs the python bindings to libxml2."
-		eerror "Please re-emerge dev-libs/libxml2 with USE=python"
-		die "need dev-libs/libxml2 built with python USE flag"
-	fi
 	G2CONF="${G2CONF}
+		--disable-static
 		--with-distro=gentoo
 		--with-prototype-user=${PN}-admin
 		--enable-console-helper=no"
-		#--with-pam-prefix=$(getpam_mod_dir)"
 
 	einfo "Adding user '${PN}-admin' as the prototype user"
 	# I think /var/lib/sabayon is the correct directory to use here.
@@ -56,8 +51,8 @@ pkg_setup() {
 	# Should we delete the user/group on unmerge?
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# Switch gnomesu to gksu; bug #197865
 	sed -i 's/Exec=/Exec=gksu /' admin-tool/sabayon.desktop || die "gksu sed failed"
@@ -70,9 +65,7 @@ src_unpack() {
 
 pkg_postinst() {
 	gnome2_pkg_postinst
-
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/sabayon
+	python_mod_optimize $(python_get_sitedir)/sabayon
 
 	# unfortunately /etc/gconf is CONFIG_PROTECT_MASK'd
 	elog "To apply Sabayon defaults and mandatory settings to all users, put"
@@ -85,7 +78,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-
-	python_version
-	python_mod_cleanup /usr/$(get_libdir)/python${PYVER}/site-packages/sabayon
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/sabayon
 }

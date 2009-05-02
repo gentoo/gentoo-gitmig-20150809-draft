@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/sabayon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.58 2008/11/21 03:36:00 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sabayon/ChangeLog,v 1.59 2009/05/02 19:04:00 eva Exp $
+
+*sabayon-2.25.0 (02 May 2009)
+
+  02 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/sabayon-2.20.1-python24-compat.patch, -sabayon-2.20.1-r1.ebuild,
+  -sabayon-2.22.0.ebuild, +sabayon-2.25.0.ebuild:
+  New version for GNOME 2.26. Migrated to GIO, updated translations.
 
   21 Nov 2008; Jeroen Roovers <jer@gentoo.org> sabayon-2.22.1.ebuild:
   Stable for HPPA (bug #246051).
