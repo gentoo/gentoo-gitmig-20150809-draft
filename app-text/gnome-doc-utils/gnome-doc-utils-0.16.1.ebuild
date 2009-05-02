@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.16.1.ebuild,v 1.2 2009/05/02 21:04:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-doc-utils/gnome-doc-utils-0.16.1.ebuild,v 1.3 2009/05/02 21:10:35 eva Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.6.12[python]
 	 >=dev-libs/libxslt-1.1.8
-	 >=dev-lang/python-2.5"
+	 >=dev-lang/python-2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	>=dev-util/intltool-0.35
