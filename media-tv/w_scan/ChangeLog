@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/w_scan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.8 2009/02/13 14:38:57 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/ChangeLog,v 1.9 2009/05/02 13:43:32 hd_brummy Exp $
+
+  02 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  w_scan-20081106.ebuild, metadata.xml:
+  fixed HOMEPAGE; stable amd64; pickup maintainance
 
   13 Feb 2009; Santiago M. Mola <coldwind@gentoo.org>
   -files/w_scan-20060903-paths.patch,
