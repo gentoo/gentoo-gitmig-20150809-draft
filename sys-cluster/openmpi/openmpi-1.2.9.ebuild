@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.9.ebuild,v 1.5 2009/04/21 15:55:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.2.9.ebuild,v 1.6 2009/05/02 11:49:12 armin76 Exp $
 
 EAPI=1
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
@@ -14,7 +14,7 @@ SRC_URI="http://www.open-mpi.org/software/ompi/v1.2/downloads/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 RESTRICT="mpi-threads? ( test )"
-KEYWORDS="alpha ~amd64 ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
 IUSE="+cxx fortran heterogeneous ipv6 mpi-threads pbs romio threads"
 RDEPEND="pbs? ( sys-cluster/torque )
 	!sys-cluster/mpich
