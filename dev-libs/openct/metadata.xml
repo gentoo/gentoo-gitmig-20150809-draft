@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>crypto</herd>
+	<use>
+		<flag name="pcsc-lite">Enable support for <pkg>sys-apps/pcsc-lite</pkg></flag>
+	</use>
 </pkgmetadata>

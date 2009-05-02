@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.15.ebuild,v 1.6 2009/04/02 15:03:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.15.ebuild,v 1.7 2009/05/02 19:10:30 arfrever Exp $
 
 inherit eutils
 
@@ -12,9 +12,10 @@ KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="usb doc"
+IUSE="doc pcsc-lite usb"
 
-RDEPEND="usb? ( >=dev-libs/libusb-0.1.7 )
+RDEPEND="pcsc-lite? ( sys-apps/pcsc-lite )
+		usb? ( >=dev-libs/libusb-0.1.7 )
 		>=sys-fs/udev-096"
 
 DEPEND="${RDEPEND}
@@ -34,18 +35,18 @@ src_compile() {
 		--enable-non-privileged \
 		--with-daemon-user=openctd \
 		--with-daemon-groups=usb \
-		$(use_enable usb) \
 		$(use_enable doc) \
 		$(use_enable doc api-doc) \
-		|| die
-	emake || die
+		$(use_enable pcsc-lite pcsc) \
+		$(use_enable usb)
+	emake || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	insinto /etc/udev/rules.d/
-	newins etc/openct.udev 70-openct.rules || die
+	newins etc/openct.udev 70-openct.rules || die "newins 70-openct.rules failed"
 
 	diropts -m0750 -gopenct -oopenctd
 	keepdir /var/run/openct
