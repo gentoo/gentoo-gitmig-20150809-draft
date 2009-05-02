@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-UUlib
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.40 2008/11/26 21:27:37 gmsoft Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.41 2009/05/02 13:46:09 gentoofan23 Exp $
+
+  02 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  Convert-UUlib-1.12.ebuild:
+  stable amd64, bug 268280
 
   26 Nov 2008; Guy Martin <gmsoft@gentoo.org> Convert-UUlib-1.12.ebuild:
   hppa stable
