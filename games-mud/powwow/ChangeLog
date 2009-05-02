@@ -1,6 +1,12 @@
 # ChangeLog for games-mud/powwow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.12 2009/02/22 15:47:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/ChangeLog,v 1.13 2009/05/02 15:27:06 mr_bones_ Exp $
+
+*powwow-1.2.15 (02 May 2009)
+
+  02 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +powwow-1.2.15.ebuild:
+  version bump
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org> powwow-1.2.13.ebuild:
   x86 stable wrt #256727
