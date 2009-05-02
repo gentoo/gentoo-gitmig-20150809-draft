@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/elfsh
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.9 2008/10/14 02:47:36 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.10 2009/05/02 20:29:16 halcy0n Exp $
+
+  02 May 2009; Mark Loeser <halcy0n@gentoo.org> elfsh-0.51_beta3.ebuild,
+  elfsh-0.65_rc1.ebuild:
+  Update homepage, thanks to Olivier Huber <oli DOT huber AT gmail DOT com>
+  for reporting; bug #268330
 
   14 Oct 2008; Jeremy Olexa <darkside@gentoo.org> elfsh-0.65_rc1.ebuild:
   (non maintainer commit) manually place distfile on mirrors and fix up ebuild

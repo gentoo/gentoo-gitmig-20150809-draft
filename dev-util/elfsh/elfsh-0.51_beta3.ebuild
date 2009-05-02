@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.51_beta3.ebuild,v 1.5 2007/01/06 23:00:43 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.51_beta3.ebuild,v 1.6 2009/05/02 20:29:16 halcy0n Exp $
 
 inherit eutils
 
 MY_PV=${PV/_beta/b}
 S=${WORKDIR}/${PN}-${MY_PV}
 DESCRIPTION="scripting language to modify ELF binaries"
-HOMEPAGE="http://elfsh.segfault.net/"
+HOMEPAGE="http://www.eresi-project.org/"
 SRC_URI="mirror://gentoo/elfsh-${MY_PV}-portable.tgz"
 #http://elfsh.segfault.net/files/elfsh-${MY_PV}-portable.tgz
 

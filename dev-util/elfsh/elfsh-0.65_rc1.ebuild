@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.65_rc1.ebuild,v 1.3 2008/10/14 02:47:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.65_rc1.ebuild,v 1.4 2009/05/02 20:29:16 halcy0n Exp $
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="scripting language to modify ELF binaries"
-HOMEPAGE="http://elfsh.segfault.net/"
+HOMEPAGE="http://www.eresi-project.org/"
 SRC_URI="mirror://gentoo/${P}.zip"
 #http://www.eresi-project.org/browser/tags/elfsh_0_65rc1
 
