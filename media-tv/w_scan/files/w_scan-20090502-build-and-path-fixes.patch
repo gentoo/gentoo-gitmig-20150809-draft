@@ -1,0 +1,48 @@
+* Honour CC, CFLAGS, LDFLAGS and DESTDIR.
+* Use absolute paths so it doesn't assume w_scan is ran from the build dir.
+* Joerg Bornkessel <hd_brummy@gentoo.org> 2009 May 02
+diff -Naur w_scan-20090502.orig/Makefile w_scan-20090502/Makefile
+--- w_scan-20090502.orig/Makefile	2009-05-02 15:51:09.203776903 +0200
++++ w_scan-20090502/Makefile	2009-05-02 15:55:27.847392092 +0200
+@@ -1,7 +1,7 @@
+ 
+-CC = gcc
+-CFLAGS = -MD -g -Wall -O2
+-LFLAGS = -g -Wall
++CC ?= gcc
++CFLAGS ?= -MD -g -Wall -O2
++LDFLAGS ?= -g -Wall
+ 
+ OBJS = dump-vdr.o dump-xine.o dump-dvbscan.o dump-kaffeine.o scan.o section.o atsc_psip_section.o countries.o
+ OBJS += dvbscan.o parse-dvbscan.o descriptors.o satellites.o lnb.o diseqc.o
+@@ -12,6 +12,9 @@
+ OLDVERSION = $(shell sed -n '/SCRIPT_VERSION="/p' w_scan_start.sh | sed -e 's/SCRIPT_VERSION=//' | sed -e 's/;//')
+ TMPDIR = w_scan-$(VERSION)
+ 
++BINDIR = /usr/bin
++SHAREDIR = /usr/share/w_scan
++
+ $(TARGET): $(OBJS)
+ 	$(CC) $(LFLAGS) -o $(TARGET) $(OBJS)
+ 	$(RM) *.o *.d
+@@ -40,13 +44,13 @@
+ 	echo "" >> version.h
+ 
+ install:
+-	install -m 755 $(TARGET) /usr/bin
+-	install -m 755 w_scan_start.sh /usr/bin
+-	mkdir -p /usr/share/w_scan
+-	install pci.ids /usr/share/w_scan
+-	install pci.classes /usr/share/w_scan
+-	install usb.ids /usr/share/w_scan
+-	install usb.classes /usr/share/w_scan
++	@mkdir -p $(DESTDIR)$(BINDIR) $(DESTDIR)$(SHAREDIR)
++	install -m 755 $(TARGET) $(DESTDIR)$(BINDIR)
++	install -m 755 w_scan_start.sh $(DESTDIR)$(BINDIR)
++	install pci.ids $(DESTDIR)$(SHAREDIR)
++	install pci.classes $(DESTDIR)$(SHAREDIR)
++	install usb.ids $(DESTDIR)$(SHAREDIR)
++	install usb.classes $(DESTDIR)$(SHAREDIR)
+ 
+ dist: version scriptversion createpackage
+ 
