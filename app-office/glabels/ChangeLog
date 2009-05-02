@@ -1,6 +1,14 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.40 2009/03/18 22:42:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.41 2009/05/02 14:09:38 eva Exp $
+
+*glabels-2.2.5 (02 May 2009)
+
+  02 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/glabels-2.2.1-drop-gtk-doc.patch,
+  -files/glabels-2.2.1-pkg-config-macro.patch, -glabels-2.0.4.ebuild,
+  -glabels-2.2.2.ebuild, -glabels-2.2.3.ebuild, +glabels-2.2.5.ebuild:
+  Bump to 2.2.5. Fix problems with gtk+-2.16. Clean up old revisions.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> glabels-2.2.4.ebuild:
   stable ppc, bug 259936
