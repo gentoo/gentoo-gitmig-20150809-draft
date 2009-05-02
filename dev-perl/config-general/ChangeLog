@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/config-general
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.46 2008/12/19 16:27:21 tove Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/config-general/ChangeLog,v 1.47 2009/05/02 16:19:26 nixnut Exp $
+
+  02 May 2009; nixnut <nixnut@gentoo.org> config-general-2.42.ebuild:
+  ppc stable #268254
 
 *config-general-2.42 (19 Dec 2008)
 
