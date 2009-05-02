@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.77 2009/04/27 15:37:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.78 2009/05/02 08:32:46 mrness Exp $
+
+  02 May 2009; Alin Năstac <mrness@gentoo.org> -files/ntop-3.2-build.patch,
+  -files/ntop-3.2-snmp.patch, -files/ntop-3.3.6-gentoo.patch,
+  -files/ntop-3.3.8-gentoo.patch, -files/globals-core.c.diff,
+  -ntop-3.2-r3.ebuild, -ntop-3.3.6.ebuild, -ntop-3.3.8.ebuild,
+  ntop-3.3.9-r2.ebuild:
+  Remove nls USE flag and correct tcpd configure argument (#267660).
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> ntop-3.3.9-r2:
   Stable for HPPA (bug #265704).
