@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.02.ebuild,v 1.2 2008/02/03 18:12:53 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/xnee-3.02.ebuild,v 1.3 2009/05/02 09:42:00 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Program suite to record, replay and distribute user actions."
@@ -19,16 +20,15 @@ RDEPEND="x11-libs/libX11
 	gnome? ( gnome-base/gconf
 		gnome-base/gnome-panel )"
 DEPEND="${RDEPEND}
+	x11-proto/inputproto
 	dev-util/pkgconfig
 	gtk? ( sys-devel/gettext media-gfx/imagemagick )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-destdir.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use xosd; then
@@ -40,12 +40,10 @@ src_compile() {
 	econf ${myconf} --enable-cli --enable-lib \
 		$(use_enable gnome gnome-applet) \
 		$(use_enable gtk gui)
-
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README TODO
 
 	if use gtk; then

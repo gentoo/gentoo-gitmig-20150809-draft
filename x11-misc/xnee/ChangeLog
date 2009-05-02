@@ -1,22 +1,26 @@
 # ChangeLog for x11-misc/xnee
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.4 2008/02/29 20:47:44 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnee/ChangeLog,v 1.5 2009/05/02 09:42:00 ssuominen Exp $
+
+  02 May 2009; Samuli Suominen <ssuominen@gentoo.org> -xnee-3.01.ebuild,
+  -files/xnee-3.01-destdir.patch, xnee-3.02.ebuild:
+  Missing x11-proto/inputproto dep wrt #228233.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> xnee-3.01.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
 
 *xnee-3.02 (03 Feb 2008)
 
-  03 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  03 Feb 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/xnee-3.02-destdir.patch, +xnee-3.02.ebuild:
   Version bump with keyword for ~amd64.
 
-  14 Aug 2007; Samuli Suominen <drac@gentoo.org> xnee-3.01.ebuild:
+  14 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> xnee-3.01.ebuild:
   Add desktop entry with icon.
 
 *xnee-3.01 (13 Aug 2007)
 
-  13 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  13 Aug 2007; Samuli Suominen <ssuominen@gentoo.org>
   +files/xnee-3.01-destdir.patch, +xnee-3.01.ebuild:
   Initial commit for bug 87725. Thanks to Philipp Serr and Florian Steinel.
 
