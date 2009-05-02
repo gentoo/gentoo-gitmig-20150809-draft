@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-180.29.ebuild,v 1.1 2009/03/18 09:49:21 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/nvidia-settings-180.29.ebuild,v 1.2 2009/05/02 10:10:32 armin76 Exp $
 
 inherit eutils toolchain-funcs multilib flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://download.nvidia.com/XFree86/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* ~amd64 x86 ~x86-fbsd"
 IUSE=""
 
 # xorg-server is used in the depends as nvidia-settings builds against some
