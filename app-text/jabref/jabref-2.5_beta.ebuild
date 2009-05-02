@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.5_beta.ebuild,v 1.3 2009/05/02 13:29:27 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.5_beta.ebuild,v 1.4 2009/05/02 13:34:16 caster Exp $
 
 EAPI=2
 
@@ -45,6 +45,7 @@ java_prepare() {
 	# failonerror in jpfcodegen
 	epatch "${FILESDIR}/${PN}-2.4-build.xml.patch"
 
+	# bug #268252
 	java-ant_xml-rewrite -f build.xml -d -e javac -a encoding -v UTF-8
 
 	mkdir libs || die
