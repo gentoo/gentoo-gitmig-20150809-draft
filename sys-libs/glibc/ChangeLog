@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.622 2009/04/13 15:17:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.623 2009/05/02 02:38:22 halcy0n Exp $
+
+  02 May 2009; Mark Loeser <halcy0n@gentoo.org>
+  files/eblits/src_compile.eblit:
+  Disable selinux on crosscompile; bug #186780
 
   13 Apr 2009; Jeroen Roovers <jer@gentoo.org>
   glibc-2.8_p20080602-r1.ebuild:
