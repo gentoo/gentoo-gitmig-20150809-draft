@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.280 2009/04/30 19:20:44 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.281 2009/05/02 00:16:38 dang Exp $
+
+*hal-0.5.12_rc1-r2 (01 May 2009)
+
+  01 May 2009; Daniel Gryniewicz <dang@gentoo.org> files/0.5.10-hald.rc,
+  -hal-0.5.12_rc1-r1.ebuild, +hal-0.5.12_rc1-r2.ebuild:
+  - Indicate hal should start after consolekit (bug #267706)
+  - Add KillSwitch to the dbus policy (bug #267621)
 
 *hal-0.5.12_rc1-r1 (30 Apr 2009)
 
