@@ -1,0 +1,30 @@
+diff -r -N -U 3 socat-1.7.1.0/CHANGES socat-1.7.1.0+fixsetenv/CHANGES
+--- socat-1.7.1.0/CHANGES	2009-04-02 21:20:24.000000000 +0200
++++ socat-1.7.1.0+fixsetenv/CHANGES	2009-04-03 08:42:04.000000000 +0200
+@@ -1,4 +1,8 @@
+ 
++corrections:
++	socat crashed on systems without setenv() (esp. SunOS up to Solaris 9);
++	thanks to Todd Stansell for reporting this bug
++
+ ####################### V 1.7.1.0:
+ 
+ new features:
+diff -r -N -U 3 socat-1.7.1.0/VERSION socat-1.7.1.0+fixsetenv/VERSION
+--- socat-1.7.1.0/VERSION	2009-04-02 21:18:17.000000000 +0200
++++ socat-1.7.1.0+fixsetenv/VERSION	2009-04-03 08:38:34.000000000 +0200
+@@ -1 +1 @@
+-"1.7.1.0"
++"1.7.1.0+fixsetenv"
+diff -r -N -U 3 socat-1.7.1.0/utils.c socat-1.7.1.0+fixsetenv/utils.c
+--- socat-1.7.1.0/utils.c	2009-04-02 09:32:48.000000000 +0200
++++ socat-1.7.1.0+fixsetenv/utils.c	2009-04-03 08:37:21.000000000 +0200
+@@ -75,7 +75,7 @@
+    if (!overwrite) {
+       if (getenv(name))  return 0;	/* already exists */
+    }
+-   if ((env = Malloc(strlen(name)+strlen(value)+2)) != NULL) {
++   if ((env = Malloc(strlen(name)+strlen(value)+2)) == NULL) {
+       return -1;
+    }
+    sprintf(env, "%s=%s", name, value);
