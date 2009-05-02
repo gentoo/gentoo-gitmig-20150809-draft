@@ -1,21 +1,41 @@
---- nm-applet-dbus-126.conf~	2009-03-31 17:10:19.000000000 +0100
-+++ nm-applet-dbus-126.conf	2009-04-21 16:27:51.000000000 +0100
-@@ -23,7 +23,7 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN network-manager-applet-0.7.1.orig/nm-applet-dbus-126.conf network-manager-applet-0.7.1/nm-applet-dbus-126.conf
+--- network-manager-applet-0.7.1.orig/nm-applet-dbus-126.conf	2009-03-31 12:10:19.000000000 -0400
++++ network-manager-applet-0.7.1/nm-applet-dbus-126.conf	2009-05-01 19:53:29.000000000 -0400
+@@ -23,7 +23,16 @@
                  <allow send_destination="org.freedesktop.NetworkManagerUserSettings"
                         send_interface="org.freedesktop.NetworkManagerSettings.Connection.Secrets"/>
          </policy>
 -        <policy at_console="true">
++	<policy at_console="true">
++                <allow own="org.freedesktop.NetworkManagerUserSettings"/>
++
++                <allow send_destination="org.freedesktop.NetworkManagerUserSettings"
++                       send_interface="org.freedesktop.NetworkManagerSettings"/>
++
++                <allow send_destination="org.freedesktop.NetworkManagerUserSettings"
++                       send_interface="org.freedesktop.NetworkManagerSettings.Connection"/>
++        </policy>
 +        <policy group="plugdev">
                  <allow own="org.freedesktop.NetworkManagerUserSettings"/>
  
                  <allow send_destination="org.freedesktop.NetworkManagerUserSettings"
---- nm-applet-pre-dbus-126.conf~	2009-03-31 17:10:20.000000000 +0100
-+++ nm-applet-pre-dbus-126.conf	2009-04-21 16:28:20.000000000 +0100
-@@ -11,7 +11,7 @@
+diff --exclude-from=/home/dang/.scripts/diffrc -up -ruN network-manager-applet-0.7.1.orig/nm-applet-pre-dbus-126.conf network-manager-applet-0.7.1/nm-applet-pre-dbus-126.conf
+--- network-manager-applet-0.7.1.orig/nm-applet-pre-dbus-126.conf	2009-03-31 12:10:20.000000000 -0400
++++ network-manager-applet-0.7.1/nm-applet-pre-dbus-126.conf	2009-05-01 19:53:37.000000000 -0400
+@@ -11,7 +11,16 @@
  		<allow send_destination="org.freedesktop.NetworkManagerUserSettings"
  		       send_interface="org.freedesktop.NetworkManagerSettings.Connection.Secrets"/>
          </policy>
 -        <policy at_console="true">
++	<policy at_console="true">
++                <allow own="org.freedesktop.NetworkManagerUserSettings"/>
++
++                <allow send_destination="org.freedesktop.NetworkManagerUserSettings"/>
++
++                <!-- Only root can get secrets -->
++                <deny send_destination="org.freedesktop.NetworkManagerUserSettings"
++                      send_interface="org.freedesktop.NetworkManagerSettings.Connection.Secrets"/>
++        </policy>
 +        <policy group="plugdev">
                  <allow own="org.freedesktop.NetworkManagerUserSettings"/>
  

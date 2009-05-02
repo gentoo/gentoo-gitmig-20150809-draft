@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/nm-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.25 2009/04/24 12:28:16 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.26 2009/05/02 18:57:48 dang Exp $
+
+*nm-applet-0.7.1-r1 (02 May 2009)
+
+  02 May 2009; Daniel Gryniewicz <dang@gentoo.org>
+  +nm-applet-0.7.1-r1.ebuild, files/nm-applet-0.7.1-confchanges.patch:
+  Fix policy to allow ck-based policy; bug #268223
 
   24 Apr 2009; Robert Buchholz <rbu@gentoo.org> +nm-applet-0.6.5.ebuild:
   Readd NM 0.6.5 for ppc.
