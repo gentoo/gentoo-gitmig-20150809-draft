@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r1.ebuild,v 1.1 2009/05/02 10:15:36 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r1.ebuild,v 1.2 2009/05/02 19:09:23 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.netbeans.org"
 
 SLOT="6.7"
 SRC_URI="http://download.netbeans.org/netbeans/6.7/beta/zip/netbeans-6.7beta-200904242137-src.zip
-	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-6.5-l10n-20081119172200.tar.bz2"
+	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-6.7-l10n-20090427163249.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
 KEYWORDS="~amd64 ~x86"
@@ -35,11 +35,14 @@ IUSE_NETBEANS_MODULES="
 	netbeans_modules_webcommon
 	+netbeans_modules_websvccommon"
 IUSE_LINGUAS="
+	linguas_cs
 	linguas_de
 	linguas_es
 	linguas_fr
 	linguas_it
 	linguas_ja
+	linguas_ko
+	linguas_nl
 	linguas_pl
 	linguas_pt_BR
 	linguas_ru
