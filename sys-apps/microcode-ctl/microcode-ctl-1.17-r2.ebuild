@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17-r1.ebuild,v 1.1 2008/05/05 04:05:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/microcode-ctl/microcode-ctl-1.17-r2.ebuild,v 1.1 2009/05/02 12:54:14 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-RDEPEND="sys-apps/microcode-data"
+RDEPEND=">=sys-apps/microcode-data-20090330"
 
 S=${WORKDIR}/${MY_P}
 
@@ -30,7 +30,7 @@ src_install() {
 	doman microcode_ctl.8
 	dodoc Changelog README
 
-	newinitd "${FILESDIR}"/microcode_ctl.rc microcode_ctl
+	newinitd "${FILESDIR}"/microcode_ctl.rc-r1 microcode_ctl
 	newconfd "${FILESDIR}"/microcode_ctl.conf.d microcode_ctl
 }
 
