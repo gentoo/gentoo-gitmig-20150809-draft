@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta.ebuild,v 1.1 2009/05/02 00:54:51 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r1.ebuild,v 1.1 2009/05/02 10:15:36 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -470,6 +470,7 @@ src_prepare () {
 			sed -e "/maven\.embedder\/external\/maven-embedder-2\.1-20080623-patched\.jar/d" -i ${tmpfile} || die
 			sed -e "/maven\.indexer\/external\/nexus-indexer-1\.2\.2-shaded\.jar/d" -i ${tmpfile} || die
 			sed -e "/swingapp\/external\/appframework-1\.0\.3\.jar/d" -i ${tmpfile} || die
+			sed -e "/swingapp\/external\/swing-worker-1\.1\.jar/d" -i ${tmpfile} || die
 		fi
 
 		if use netbeans_modules_mobility ; then
@@ -920,6 +921,7 @@ symlink_extjars() {
 		# maven-embedder-2.1-20080623-patched.jar
 		# nexus-indexer-1.2.2-shaded.jar
 		dosyminstjar ${targetdir} junit junit.jar junit-3.8.2.jar
+		# swing-worker-1.1.jar
 		targetdir="java2/modules/ext/jaxws21"
 		dosyminstjar ${targetdir} fastinfoset fastinfoset.jar FastInfoset.jar
 		# http.jar
@@ -940,7 +942,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} asm-2.2 asm.jar asm.jar
 		dosyminstjar ${targetdir} asm-2.2 asm-attrs.jar asm-attrs.jar
 		dosyminstjar ${targetdir} cglib-2.2 cglib.jar cglib-2.1.3.jar
-		dosyminstjar ${targetdir} commons-collections commons-collections,jar commons-collections-2.1.1.jar
+		dosyminstjar ${targetdir} commons-collections commons-collections.jar commons-collections-2.1.1.jar
 		dosyminstjar ${targetdir} dom4j-1 dom4j.jar dom4j-1.6.1.jar
 		dosyminstjar ${targetdir} ehcache-1.2 ehcache.jar ehcache-1.2.3.jar
 		dosyminstjar ${targetdir} glassfish-persistence glassfish-persistence.jar ejb3-persistence.jar
