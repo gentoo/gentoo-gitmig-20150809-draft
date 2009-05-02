@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.120 2009/04/27 13:02:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.121 2009/05/02 12:33:50 eva Exp $
+
+*gok-2.26.0 (02 May 2009)
+
+  02 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -gok-1.3.7.ebuild,
+  +gok-2.26.0.ebuild:
+  New version for GNOME 2.26. Code cleanup and lots of translation
+  enhancements. Remove old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> gok-2.24.0:
   Stable for HPPA (bug #260063).
