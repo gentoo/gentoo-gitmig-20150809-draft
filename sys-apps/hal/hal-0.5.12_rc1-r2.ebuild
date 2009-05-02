@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r2.ebuild,v 1.1 2009/05/02 00:16:38 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r2.ebuild,v 1.2 2009/05/02 18:27:34 dang Exp $
 
 EAPI="2"
 
@@ -58,7 +58,8 @@ DEPEND="${RDEPEND}
 					dev-libs/libxml2
 					dev-util/gtk-doc
 					app-text/docbook-sgml-utils
-				)"
+				)
+		!<gnome-extra/gnome-power-manager-2.24.4-r2"
 PDEPEND=">=app-misc/hal-info-20081219
 	!gnome-extra/hal-device-manager
 	laptop? ( >=sys-power/pm-utils-0.99.3 )"
