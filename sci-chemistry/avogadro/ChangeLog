@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.21 2009/04/30 22:15:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.22 2009/05/02 22:24:07 cryos Exp $
+
+*avogadro-0.9.4 (02 May 2009)
+
+  02 May 2009; Marcus D. Hanwell <cryos@gentoo.org> -avogadro-0.9.2.ebuild,
+  +avogadro-0.9.4.ebuild:
+  Version bump.
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> avogadro-0.9.3.ebuild:
   Small fix to boost depends to be future-proof

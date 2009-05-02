@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.2.ebuild,v 1.1 2009/03/01 18:22:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.4.ebuild,v 1.1 2009/05/02 22:24:07 cryos Exp $
 
 EAPI=2
 
@@ -15,13 +15,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+glsl python"
 
-RDEPEND=">=sci-chemistry/openbabel-2.2.1_beta3
+# boost deps look like that because -r5 and later have a python useflag we need
+RDEPEND=">=sci-chemistry/openbabel-2.2.1
 	>=x11-libs/qt-gui-4.4.0:4
 	>=x11-libs/qt-opengl-4.4.0:4
 	glsl? ( >=media-libs/glew-1.5.0	)
 	python? (
 		>=dev-lang/python-2.5
 		>=dev-libs/boost-1.35
+		|| ( >=dev-libs/boost-1.35.0-r5[python] <dev-libs/boost-1.35.0-r5 )
+		dev-python/numpy
+		dev-python/sip
 	)"
 DEPEND="${RDEPEND}
 	dev-cpp/eigen:2
@@ -31,6 +35,7 @@ src_configure() {
 	local mycmakeargs
 	mycmakeargs="${mycmakeargs}
 		-DENABLE_THREADGL=FALSE
+		-DENABLE_RPATH=OFF
 		$(cmake-utils_use_enable glsl GLSL)
 		$(cmake-utils_use_enable python PYTHON)"
 
