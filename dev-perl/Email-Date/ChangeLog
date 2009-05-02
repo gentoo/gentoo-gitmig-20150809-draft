@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Date
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.21 2008/12/12 23:16:16 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Date/ChangeLog,v 1.22 2009/05/02 11:22:47 tove Exp $
+
+  02 May 2009; Torsten Veller <tove@gentoo.org> -Email-Date-1.101.ebuild:
+  Cleanup
 
   12 Dec 2008; Joseph Jezak <josejx@gentoo.org> Email-Date-1.103.ebuild:
   Marked ~ppc for bug #235557.
