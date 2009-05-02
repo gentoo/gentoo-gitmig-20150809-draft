@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-Array-Sorted
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/ChangeLog,v 1.17 2007/03/05 12:35:24 ticho Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-Array-Sorted/ChangeLog,v 1.18 2009/05/02 09:29:46 tove Exp $
+
+  02 May 2009; Torsten Veller <tove@gentoo.org>
+  -Tie-Array-Sorted-1.3.ebuild:
+  Cleanup
 
   05 Mar 2007; Andrej Kacian <ticho@gentoo.org>
   Tie-Array-Sorted-1.4.1.ebuild:

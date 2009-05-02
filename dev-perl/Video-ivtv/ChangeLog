@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Video-ivtv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.13 2008/03/20 17:45:57 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Video-ivtv/ChangeLog,v 1.14 2009/05/02 09:25:07 tove Exp $
+
+  02 May 2009; Torsten Veller <tove@gentoo.org> -Video-ivtv-0.12.ebuild:
+  Cleanup
 
   20 Mar 2008; Steve Dibb <beandog@gentoo.org> Video-ivtv-0.13.ebuild:
   x86 stable
