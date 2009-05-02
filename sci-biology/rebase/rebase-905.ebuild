@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-905.ebuild,v 1.1 2009/05/02 01:17:04 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/rebase-905.ebuild,v 1.2 2009/05/02 01:25:03 je_fro Exp $
 
 DESCRIPTION="A restriction enzyme database"
 LICENSE="public-domain"
 HOMEPAGE="http://rebase.neb.com"
-#SRC_URI="mirror://gentoo/${P}.tar.bz2"
-SRC_URI="http://dev.gentooexperimental.org/~jlec/science-dist/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 SLOT="0"
 # Minimal build keeps only the indexed files (if applicable) and the
