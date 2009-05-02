@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/freepv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.1 2009/02/26 13:01:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.2 2009/05/02 07:39:49 voyageur Exp $
+
+*freepv-0.3.0 (02 May 2009)
+
+  02 May 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -freepv-0.3.0_beta1.ebuild, +freepv-0.3.0.ebuild:
+  Release version bump, identical to beta1 except it can use glut instead of
+  freeglut
 
 *freepv-0.3.0_beta1 (26 Feb 2009)
 
