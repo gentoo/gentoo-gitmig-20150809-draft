@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.24 2009/03/23 05:00:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.25 2009/05/02 21:45:57 eva Exp $
+
+*gdl-2.26.0 (02 May 2009)
+
+  02 May 2009; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml,
+  +gdl-2.26.0.ebuild:
+  New version for GNOME 2.26. Bug fixes.
 
   23 Mar 2009; Jeroen Roovers <jer@gentoo.org> gdl-2.24.0.ebuild:
   Stable for HPPA (bug #258040).
