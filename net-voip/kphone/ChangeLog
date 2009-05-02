@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/kphone
+# ChangeLog for net-voip/kphone
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/kphone/ChangeLog,v 1.1 2009/04/28 15:54:37 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/kphone/ChangeLog,v 1.2 2009/05/02 21:24:41 swegener Exp $
 
   28 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
   +files/kphone-4.1.0-Makefiles.patch, +files/kphone-4.1.1-gcc34.patch,
