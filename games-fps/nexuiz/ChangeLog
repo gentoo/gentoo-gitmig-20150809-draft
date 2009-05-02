@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/nexuiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.30 2009/04/09 04:52:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/ChangeLog,v 1.31 2009/05/02 08:52:19 mr_bones_ Exp $
+
+*nexuiz-2.5.1 (02 May 2009)
+
+  02 May 2009; Michael Sterrett <mr_bones_@gentoo.org> +nexuiz-2.5.1.ebuild:
+  version bump (bug #268240)
 
 *nexuiz-2.5 (09 Apr 2009)
 
