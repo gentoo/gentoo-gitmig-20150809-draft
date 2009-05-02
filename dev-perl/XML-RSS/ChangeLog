@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.68 2009/05/02 14:22:58 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.69 2009/05/02 16:29:04 nixnut Exp $
+
+  02 May 2009; nixnut <nixnut@gentoo.org> XML-RSS-1.44.ebuild:
+  ppc stable #268263
 
   02 May 2009; Thomas Anderson <gentoofan23@gentoo.org> XML-RSS-1.44.ebuild:
   stable amd64, bug 268263
