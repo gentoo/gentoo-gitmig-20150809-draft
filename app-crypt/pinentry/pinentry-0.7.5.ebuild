@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.5.ebuild,v 1.10 2009/05/02 20:33:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.5.ebuild,v 1.11 2009/05/02 20:34:01 swegener Exp $
 
 EAPI=1
 
@@ -20,6 +20,7 @@ DEPEND="gtk? ( x11-libs/gtk+:2 )
 	qt3? ( x11-libs/qt:3 )
 	!gtk? ( !qt3? ( !ncurses? ( sys-libs/ncurses ) ) )
 	caps? ( sys-libs/libcap )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
