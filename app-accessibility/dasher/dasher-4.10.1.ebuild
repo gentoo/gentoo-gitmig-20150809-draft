@@ -1,33 +1,29 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.7.3.ebuild,v 1.9 2008/11/13 19:38:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-4.10.1.ebuild,v 1.1 2009/05/02 12:26:08 eva Exp $
 
-WANT_AUTOCONF="2.5"
-WANT_AUTOMAKE="1.8"
-
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="A text entry interface, driven by continuous pointing gestures"
 HOMEPAGE="http://www.inference.phy.cam.ac.uk/dasher/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 IUSE="accessibility cairo gnome"
 
 # The package claims to support 'qte', but it hasn't been tested.
 # Any patches from someone who can test it are welcome.
 # <leonardop@gentoo.org>
-RDEPEND=">=dev-libs/glib-2.6
+RDEPEND=">=dev-libs/glib-2.16
 	dev-libs/expat
 	>=x11-libs/gtk+-2.6
 	>=gnome-base/gconf-2
 	>=gnome-base/libglade-2
 	gnome? (
 		>=gnome-base/libgnome-2
-		>=gnome-base/libgnomeui-2
-		>=gnome-base/gnome-vfs-2 )
+		>=gnome-base/libgnomeui-2 )
 	accessibility? (
 		app-accessibility/gnome-speech
 		>=gnome-base/libbonobo-2
@@ -37,8 +33,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		dev-libs/atk )
 	cairo? ( >=x11-libs/gtk+-2.8 )
 	x11-libs/libX11
-	x11-libs/libXtst
-	x11-libs/libXt"
+	x11-libs/libXtst"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.9
@@ -56,31 +51,11 @@ pkg_setup() {
 	# --enable-chinese
 	# --enable-tilt (tilt sensor support)
 
-	G2CONF="--disable-scrollkeeper
+	G2CONF="${G2CONF}
+		--disable-scrollkeeper
+		--with-gvfs
 		$(use_enable accessibility a11y)
 		$(use_enable accessibility speech)
 		$(use_with cairo)
 		$(use_with gnome)"
-}
-
-src_unpack() {
-	gnome2_src_unpack
-
-	sed -i -e 's:gtk-update-icon-cache:true:' ./Data/Makefile.am
-
-	# Fix build with --as-needed (upstream bug #525028)
-	epatch "${FILESDIR}/${PN}-4.7.0-as-needed.patch"
-
-	# https://bugs.gentoo.org/211589
-	# https://bugzilla.gnome.org/522121
-	epatch "${FILESDIR}"/${P}-gcc-4.3.patch
-
-	# Fix compilation with -gnome, upstream bug #398103
-	epatch "${FILESDIR}/${P}-no-gnome.patch"
-
-	# Fix compilation with -cairo, from upstream bug #490876
-	epatch "${FILESDIR}/${P}-cairo.patch"
-
-	intltoolize --force || die "intltoolize failed"
-	eautoreconf
 }

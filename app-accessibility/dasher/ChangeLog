@@ -1,6 +1,18 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.140 2009/04/27 13:00:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.141 2009/05/02 12:26:08 eva Exp $
+
+*dasher-4.10.1 (02 May 2009)
+
+  02 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/dasher-4.4.0-gnome_help.patch, -files/dasher-4.5.2-as-needed.patch,
+  -files/dasher-4.5.2-gcc4-speech-fix.patch,
+  -files/dasher-4.6.1-gnome.patch, -files/dasher-4.6.1-lldiv.patch,
+  -files/dasher-4.7.0-as-needed.patch, -files/dasher-4.7.3-cairo.patch,
+  -files/dasher-4.7.3-gcc-4.3.patch, -files/dasher-4.7.3-no-gnome.patch,
+  -dasher-4.6.1.ebuild, -dasher-4.7.3.ebuild, +dasher-4.10.1.ebuild:
+  New version for GNOME 2.26. Bug fixes and translation updates.
+  Clean up old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> dasher-4.9.0:
   Stable for HPPA (bug #260063).
