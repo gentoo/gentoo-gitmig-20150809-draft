@@ -1,0 +1,110 @@
+--- src/key_mod/ecryptfs_key_mod_gpg.c
++++ src/key_mod/ecryptfs_key_mod_gpg.c
+@@ -131,7 +131,7 @@
+ 
+ int ecryptfs_gpg_encrypt(char *to, int size, char *from, unsigned char *blob)
+ {
+-	int rc;
++	int rc = 0;
+ 
+ /*	gpg_op_encrypt(...); */
+ out:
+@@ -251,7 +251,7 @@
+ 			 struct val_node **head, void **foo)
+ {
+ 	struct key_mod_gpg *key_mod_gpg = (struct key_mod_gpg *)(*foo);
+-	int i;
++	int i = 0;
+ 	gpgme_error_t err;
+ 	int rc = 0;
+ 	gpgme_key_t key;
+@@ -283,10 +283,7 @@
+ 
+ static int generate_name_val_list(struct ecryptfs_name_val_pair *head)
+ {
+-	struct stat buf;
+-	int i = 0;
+ 	uid_t id = getuid();
+-	struct passwd *pw = getpwuid(id);
+ 	int rc = 0;
+ 
+ 	head->next = NULL;
+@@ -304,6 +301,7 @@
+ 		destroy_key_mod_gpg(key_mod_gpg);
+ 		free(key_mod_gpg);
+ 	}
++	return 0;
+ }
+ 
+ 
+@@ -312,7 +310,6 @@
+ {
+ 	struct key_mod_gpg *key_mod_gpg;
+ 	gpgme_error_t err;
+-	gpgme_keylist_result_t keylist_res;
+ 	int rc = 0;
+ 
+ 	(*foo) = NULL;
+@@ -329,7 +326,7 @@
+ 	if ((err = gpgme_op_keylist_start(key_mod_gpg->ctx, "", 0))) {
+ 		printf("Error attempting to start keylist\n");
+ 		rc = -EINVAL;
+-		gpgme_release(ctx);
++		gpgme_release(key_mod_gpg->ctx);
+ 		free(key_mod_gpg);
+ 		goto out;
+ 	}
+--- src/key_mod/ecryptfs_key_mod_pkcs11_helper.c
++++ src/key_mod/ecryptfs_key_mod_pkcs11_helper.c
+@@ -592,7 +592,6 @@
+ 		char dn[1024] = {0};
+ 		char serial[1024] = {0};
+ 		char *ser = NULL;
+-		char *ssh_key = NULL;
+ 		size_t ser_len = 0;
+ 		int n;
+ 
+@@ -1538,7 +1537,6 @@
+ 	struct ecryptfs_ctx *ctx = &_ctx;
+ 	struct ecryptfs_name_val_pair nvp_head;
+ 	struct val_node *dummy_mnt_params;
+-	uid_t id;
+ 	struct passwd *pw;
+ 	char *rcfile_fullpath = NULL;
+ 	int fd;
+@@ -1649,6 +1647,7 @@
+ 	if (pkcs11h_key_param_nodes[PKCS11H_KEY_TOK_ID].suggested_val)
+ 		free(pkcs11h_key_param_nodes[PKCS11H_KEY_TOK_ID].suggested_val);
+ 	pkcs11h_terminate ();
++	return 0;
+ }
+ 
+ static struct ecryptfs_key_mod_ops ecryptfs_pkcs11h_ops = {
+--- src/libecryptfs/key_management.c
++++ src/libecryptfs/key_management.c
+@@ -18,6 +18,7 @@
+  * 02111-1307, USA.
+  */
+ 
++#include "config.h"
+ #include <errno.h>
+ #ifdef ENABLE_NSS
+ #include <nss.h>
+@@ -39,7 +40,6 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <pwd.h>
+-#include "config.h"
+ #include "../include/ecryptfs.h"
+ 
+ #ifndef ENOKEY
+--- src/utils/ecryptfs_unwrap_passphrase.c
++++ src/utils/ecryptfs_unwrap_passphrase.c
+@@ -42,7 +42,6 @@
+ 	char *wrapping_passphrase;
+ 	char salt[ECRYPTFS_SALT_SIZE];
+ 	char salt_hex[ECRYPTFS_SALT_SIZE_HEX];
+-	struct passwd *pwd;
+ 	int rc = 0;
+ 
+ 	if (argc == 1) {
