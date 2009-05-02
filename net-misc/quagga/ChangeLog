@@ -2,7 +2,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.79 2009/03/07 14:11:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.80 2009/05/02 09:37:52 mrness Exp $
+
+*quagga-0.99.11-r1 (02 May 2009)
+
+  02 May 2009; Alin Năstac <mrness@gentoo.org> +quagga-0.99.11-r1.ebuild:
+  Migrate to EAPI 2. Correct configure arguments. Include upstream fix for ASN
+  values bigger than 2^31 (#267998).
 
   07 Mar 2009; Alin Năstac <mrness@gentoo.org> -quagga-0.99.10-r1.ebuild:
   Remove obsolete test version.
