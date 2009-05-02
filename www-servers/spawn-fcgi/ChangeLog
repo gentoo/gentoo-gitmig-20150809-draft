@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.15 2009/04/26 14:29:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.16 2009/05/02 13:03:12 armin76 Exp $
+
+  02 May 2009; Raúl Porcel <armin76@gentoo.org> spawn-fcgi-1.6.1-r1.ebuild,
+  spawn-fcgi-1.6.2.ebuild:
+  Add ~arm/~ia64/~sh/~sparc wrt #264840
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> spawn-fcgi-1.6.1-r1.ebuild,
   spawn-fcgi-1.6.2.ebuild:
