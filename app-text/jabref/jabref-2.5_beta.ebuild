@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.5_beta.ebuild,v 1.2 2009/04/26 11:07:15 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.5_beta.ebuild,v 1.3 2009/05/02 13:29:27 caster Exp $
 
 EAPI=2
 
@@ -44,6 +44,8 @@ java_prepare() {
 	# don't call unjarlib, don't want to absorb deps
 	# failonerror in jpfcodegen
 	epatch "${FILESDIR}/${PN}-2.4-build.xml.patch"
+
+	java-ant_xml-rewrite -f build.xml -d -e javac -a encoding -v UTF-8
 
 	mkdir libs || die
 	mv lib/antlr-3.0b5.jar libs/ || die

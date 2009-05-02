@@ -1,6 +1,10 @@
 # ChangeLog for app-text/jabref
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.73 2009/04/26 11:07:15 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.74 2009/05/02 13:29:27 caster Exp $
+
+  02 May 2009; Vlastimil Babka <caster@gentoo.org> jabref-2.5_beta.ebuild:
+  Rewrite build.xml to pass -encoding UTF-8 to javac, bug #268252 by Matthew
+  <ufsfdyn02@sneakemail.com>
 
   26 Apr 2009; Vlastimil Babka <caster@gentoo.org> jabref-2.5_beta:
   Raising java dependency to 1.6, bug #267522.
