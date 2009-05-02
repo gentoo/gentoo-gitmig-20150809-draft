@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/pump
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.47 2009/04/29 12:32:09 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/ChangeLog,v 1.48 2009/05/02 20:45:15 nelchael Exp $
+
+  02 May 2009; Krzysiek Pawlik <nelchael@gentoo.org> -pump-0.8.24.ebuild,
+  -files/pump-0.8.24-gentoo.patch, -files/pump-0.8.24-redefinition.patch:
+  Remove old version.
 
   29 Apr 2009; Jeroen Roovers <jer@gentoo.org> pump-0.8.24-r3.ebuild:
   Stable for HPPA (bug #264688).
