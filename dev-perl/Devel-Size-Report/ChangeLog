@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Size-Report
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/ChangeLog,v 1.15 2008/07/15 18:05:25 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Size-Report/ChangeLog,v 1.16 2009/05/02 13:58:40 gentoofan23 Exp $
+
+  02 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  Devel-Size-Report-0.13.ebuild:
+  stable amd64, bug 268277
 
   15 Jul 2008; Raúl Porcel <armin76@gentoo.org>
   Devel-Size-Report-0.13.ebuild:
