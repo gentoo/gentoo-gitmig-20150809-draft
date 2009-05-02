@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.52.ebuild,v 1.1 2009/04/14 23:53:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.52.ebuild,v 1.2 2009/05/02 16:47:42 nixnut Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://download.${PN}bt.com/${PN}/files/${P}.tar.bz2"
 
 LICENSE="MIT GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
 IUSE="gtk libnotify"
 
 RDEPEND=">=dev-libs/openssl-0.9.4
