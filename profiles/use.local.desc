@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4412 2009/05/02 01:47:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4413 2009/05/02 19:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -711,6 +711,7 @@ dev-libs/libtomcrypt:tomsfastmath - Use the optimized math library (dev-libs/tom
 dev-libs/log4cxx:smtp - Offer SMTP support via net-libs/libesmtp
 dev-libs/nss:utils - Install utilities included with the library
 dev-libs/opencryptoki:tpmtok - Offer support for TPM token
+dev-libs/openct:pcsc-lite - Enable support for sys-apps/pcsc-lite
 dev-libs/openobex:irda - Enable IrDA support
 dev-libs/opensc:openct - Build using dev-libs/openct compatibility 
 dev-libs/opensc:pcsc-lite - Build with sys-apps/pcsc-lite
