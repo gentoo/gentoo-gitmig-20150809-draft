@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.10 2009/04/25 10:53:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.22.ebuild,v 1.11 2009/05/02 08:12:42 mrness Exp $
 
 EAPI="2"
 
@@ -43,6 +43,9 @@ src_configure() {
 		append-flags "-g -DOBEXFTP_DEBUG=5"
 	fi
 
+	local MYRUBY
+	use ruby && MYRUBY="RUBY=/usr/bin/ruby18"
+
 	econf \
 		$(use_enable bluetooth) \
 		$(use_enable swig) \
@@ -50,7 +53,7 @@ src_configure() {
 		$(use_enable python) \
 		$(use_enable tcl) \
 		$(use_enable ruby) \
-		RUBY=/usr/bin/ruby18 || die "econf failed"
+		${MYRUBY} || die "econf failed"
 }
 
 src_install() {

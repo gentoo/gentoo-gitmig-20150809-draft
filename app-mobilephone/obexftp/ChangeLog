@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.48 2009/04/25 10:53:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.49 2009/05/02 08:12:42 mrness Exp $
+
+  02 May 2009; Alin Năstac <mrness@gentoo.org> obexftp-0.22.ebuild,
+  obexftp-0.23.ebuild:
+  Define $RUBY only when ruby USE flag is enabled (#268105).
 
   25 Apr 2009; Alin Năstac <mrness@gentoo.org>
   -files/obexftp-0.21-as-needed.patch,
