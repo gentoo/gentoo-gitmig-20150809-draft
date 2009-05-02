@@ -1,6 +1,13 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.63 2009/04/27 13:03:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.64 2009/05/02 12:42:27 eva Exp $
+
+*orca-2.26.1 (02 May 2009)
+
+  02 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -orca-2.22.3.ebuild,
+  -orca-2.24.3.ebuild, +orca-2.26.1.ebuild:
+  New version for GNOME 2.26. Use split python bindings. Clean up old
+  revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> orca-2.24.4:
   Stable for HPPA (bug #260063).
