@@ -1,6 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.11 2006/10/27 06:39:11 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcb/xcb-2.4.ebuild,v 1.12 2009/05/02 10:10:59 ssuominen Exp $
+
+EAPI=2
+inherit toolchain-funcs
 
 DESCRIPTION="Marc Lehmann's improved X Cut Buffers"
 HOMEPAGE="http://www.goof.com/pcg/marc/xcb.html"
@@ -19,32 +22,28 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	motif? ( x11-libs/openmotif )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	mv xcb.man xcb.1
-}
-
 src_compile() {
 	local gui libs
 
 	if use motif; then
 		gui="-DMOTIF"
-		libs="-L/usr/X11R6/lib -lXm -lXt -lX11"
+		libs="-lXm -lXt -lX11"
 	else
 		gui="-DATHENA"
-		libs="-L/usr/X11R6/lib -lXaw -lXt -lXext -lX11"
+		libs="-lXaw -lXt -lXext -lX11"
 	fi
 
+	tc-export CC
 	emake -f Makefile.std xcb Xcb.ad \
-		CFLAGS="${CFLAGS} ${gui} -I/usr/X11R6/include" \
+		CFLAGS="${CFLAGS} ${gui}" \
 		GUI="${gui}" \
 		LIBS="${libs}" \
-		|| die 'emake failed'
+		|| die "emake failed"
 }
 
 src_install() {
-	dobin xcb
-	doman xcb.1
-	insinto /usr/X11R6/lib/X11/app-defaults ; newins Xcb.ad Xcb
+	dobin xcb || die "dobin failed"
+	newman xcb.man xcb.1
+	insinto /usr/share/X11/app-defaults
+	newins Xcb.ad Xcb || die "newins failed"
 }
