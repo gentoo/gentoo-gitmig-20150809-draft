@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk/android-sdk-1.5_p1.ebuild,v 1.1 2009/05/01 22:27:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk/android-sdk-1.5_p1.ebuild,v 1.2 2009/05/02 03:23:59 zmedico Exp $
 
 EAPI="2"
 
@@ -39,7 +39,7 @@ src_install(){
 	cp -pPR add-ons "${D}/${destdir}/" || die "failed to copy"
 	use doc && dohtml -r docs documentation.html
 
-	echo "PATH=\"${destdir}/tools\"" > "${T}/80android"
-	echo "PATH=\"${destdir}/platforms/android-${PV/_p*/}/tools\"" >> "${T}/80android"
+	echo -n "PATH=\"${destdir}/tools" > "${T}/80android"
+	echo ":${destdir}/platforms/android-${PV/_p*/}/tools\"" >> "${T}/80android"
 	doenvd "${T}/80android"
 }
