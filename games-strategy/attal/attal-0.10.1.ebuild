@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.5 2008/06/30 15:44:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/attal/attal-0.10.1.ebuild,v 1.6 2009/05/03 07:09:30 mr_bones_ Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils qt4 games
 
 MY_P="${PN}-src-${PV}"
@@ -16,23 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="|| (
-		( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 )
-		x11-libs/qt:4
-	)
+DEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-sql:4
+	x11-libs/qt-qt3support:4
 	media-libs/libsdl
-	media-libs/sdl-mixer"
+	media-libs/sdl-mixer[vorbis]"
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	QT4_BUILT_WITH_USE_CHECK="qt3support" qt4_pkg_setup
-	games_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv ../themes .
 	ecvs_clean
 	epatch \
@@ -46,9 +38,18 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	eqmake4 Makefile.pro
-	emake -j1 || die "emake failed"
+}
+
+src_compile() {
+	local d
+
+	for d in Common Client Fight Server
+	do
+		emake sub-lib$d || die "emake failed"
+	done
+	emake || die "emake failed"
 }
 
 src_install() {
