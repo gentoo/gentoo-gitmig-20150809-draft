@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libvformat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.8 2009/02/16 23:02:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvformat/ChangeLog,v 1.9 2009/05/03 18:40:35 klausman Exp $
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  libvformat-1.13-r1.ebuild:
+  Keyworded on alpha, bug #266830
 
 *libvformat-1.13-r1 (16 Feb 2009)
 
