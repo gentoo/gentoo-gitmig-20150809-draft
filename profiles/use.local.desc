@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4414 2009/05/03 17:27:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4415 2009/05/03 19:07:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2152,6 +2152,7 @@ net-libs/libfwbuilder:bind - Use bind's name resolving library
 net-libs/libfwbuilder:stlport - Enagle support for STLport
 net-libs/libinfinity:server -  Build and install the server binary including init.d/conf.d-scripts. Needed if you want to host an infinote server for gobby. 
 net-libs/libpri:bri - Enable ISDN BRI support (bristuff)
+net-libs/libproxy:webkit - Enable support for net-libs/webkit-gtk.
 net-libs/libsrtp:aesicm - Use AES ICM cryptographic algorithm
 net-libs/libsrtp:console -  Use /dev/console instead of stdout for error messages 
 net-libs/libsrtp:syslog - Use syslog for error messages
