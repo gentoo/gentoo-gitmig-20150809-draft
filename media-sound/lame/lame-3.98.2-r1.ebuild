@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.2-r1.ebuild,v 1.1 2009/05/03 13:38:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.98.2-r1.ebuild,v 1.2 2009/05/03 17:30:09 klausman Exp $
 
 inherit flag-o-matic toolchain-funcs eutils autotools versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="debug mmx mp3rtp sndfile"
 
 RDEPEND=">=sys-libs/ncurses-5.2
