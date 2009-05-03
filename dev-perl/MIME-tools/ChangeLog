@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.57 2009/05/02 16:17:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.58 2009/05/03 13:35:19 ranger Exp $
+
+  03 May 2009; Brent Baude <ranger@gentoo.org> MIME-tools-5.427.ebuild:
+  stable ppc64, bug 268213
 
   02 May 2009; nixnut <nixnut@gentoo.org> MIME-tools-5.427.ebuild:
   ppc stable #268213
