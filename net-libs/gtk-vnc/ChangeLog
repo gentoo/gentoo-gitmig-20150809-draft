@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.28 2009/01/31 07:45:49 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.29 2009/05/03 18:01:24 eva Exp $
+
+*gtk-vnc-0.3.8 (03 May 2009)
+
+  03 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -gtk-vnc-0.3.6.ebuild,
+  +gtk-vnc-0.3.8.ebuild:
+  Bump to 0.3.8. Rewrite scaling code around cairo and bug-fixes.
+  Clean up old revisions.
 
   31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Give up maintainership.
