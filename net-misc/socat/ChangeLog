@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.46 2009/05/02 16:27:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.47 2009/05/03 14:53:27 maekke Exp $
+
+  03 May 2009; Markus Meier <maekke@gentoo.org> socat-1.7.0.0.ebuild:
+  x86 stable, bug #267878
 
   02 May 2009; Jeroen Roovers <jer@gentoo.org> +socat-1.7.1.0-r1.ebuild,
   +files/socat-1.7.1.0-fixsetenv.patch:
