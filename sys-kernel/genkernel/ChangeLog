@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/genkernel
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.213 2009/01/05 22:31:16 agaffney Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.214 2009/05/03 16:53:51 agaffney Exp $
+
+*genkernel-3.4.10.904 (03 May 2009)
+
+  03 May 2009; Andrew Gaffney <agaffney@gentoo.org>
+  +genkernel-3.4.10.904.ebuild:
+  Add genkernel-3.4.10.904 to the tree
 
 *genkernel-3.4.10.903 (05 Jan 2009)
 
