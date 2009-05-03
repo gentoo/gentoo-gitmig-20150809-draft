@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.89 2009/04/27 00:36:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.90 2009/05/03 13:24:40 maekke Exp $
+
+  03 May 2009; Markus Meier <maekke@gentoo.org>
+  evolution-exchange-2.24.5.ebuild:
+  amd64/x86 stable, bug #267552
 
   27 Apr 2009; Brent Baude <ranger@gentoo.org>
   evolution-exchange-2.24.5.ebuild:
