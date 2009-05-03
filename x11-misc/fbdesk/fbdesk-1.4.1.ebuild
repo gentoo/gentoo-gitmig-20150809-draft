@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.8 2008/09/22 13:26:52 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbdesk/fbdesk-1.4.1.ebuild,v 1.9 2009/05/03 19:37:51 dirtyepic Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ IUSE="debug png"
 
 RDEPEND="png? ( media-libs/libpng )
 		media-libs/imlib2
+		>=media-libs/freetype-2
 		x11-libs/libXpm
 		x11-libs/libXft"
 DEPEND="${RDEPEND}
