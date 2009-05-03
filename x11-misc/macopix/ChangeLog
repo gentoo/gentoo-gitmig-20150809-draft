@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/macopix
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.15 2008/05/05 19:45:29 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/ChangeLog,v 1.16 2009/05/03 19:00:06 arfrever Exp $
+
+  03 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  macopix-1.6.4.ebuild:
+  Respect USE="gnutls".
 
   05 May 2008; Samuli Suominen <drac@gentoo.org> macopix-1.2.1.ebuild,
   -macopix-1.4.1.ebuild:

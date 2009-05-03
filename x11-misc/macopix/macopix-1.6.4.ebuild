@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.6.4.ebuild,v 1.1 2007/11/02 16:38:41 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/macopix/macopix-1.6.4.ebuild,v 1.2 2009/05/03 19:00:06 arfrever Exp $
 
 DESCRIPTION="MaCoPiX (Mascot Constructive Pilot for X) is a desktop mascot application on UNIX / X Window system."
 HOMEPAGE="http://rosegray.sakura.ne.jp/macopix/index-e.html"
@@ -43,7 +43,7 @@ DEPEND="${RDEPEND}
 src_compile() {
 	econf --with-gtk2 \
 		$(use_enable nls) \
-		$(use_enable gnutls) || die "econf failed"
+		$(use_with gnutls)
 	emake || die "emake failed"
 }
 
