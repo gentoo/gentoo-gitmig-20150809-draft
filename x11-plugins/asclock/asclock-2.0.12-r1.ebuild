@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.6 2008/06/29 13:47:54 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asclock/asclock-2.0.12-r1.ebuild,v 1.7 2009/05/03 02:13:07 arfrever Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,25 +29,25 @@ src_compile() {
 	for x in asclock parser symbols config
 	do
 		$(tc-getCC) \
-			    ${CFLAGS} \
-			    -I/usr/include \
-			    -Dlinux -D__i386__ \
-			    -D_POSIX_C_SOURCE=199309L \
-			    -D_POSIX_SOURCE \
-			    -D_XOPEN_SOURCE \
-			    -D_BSD_SOURCE \
-			    -D_SVID_SOURCE \
-			    -DFUNCPROTO=15 \
-			    -DNARROWPROTO \
-			    -c -o ${x}.o ${x}.c || die "compile failed"
+			${CPPFLAGS} ${CFLAGS} ${ASFLAGS} \
+			-I/usr/include \
+			-Dlinux -D__i386__ \
+			-D_POSIX_C_SOURCE=199309L \
+			-D_POSIX_SOURCE \
+			-D_XOPEN_SOURCE \
+			-D_BSD_SOURCE \
+			-D_SVID_SOURCE \
+			-DFUNCPROTO=15 \
+			-DNARROWPROTO \
+			-c -o ${x}.o ${x}.c || die "compile asclock failed"
 	done
 	$(tc-getCC) \
-		    ${CFLAGS} \
-		    -o asclock \
-		    asclock.o parser.o symbols.o config.o \
-		    -L/usr/lib \
-		    -L/usr/lib/X11 \
-		    -lXpm -lXext -lX11 || die "compile asclock failed"
+		${LDFLAGS} \
+		-o asclock \
+		asclock.o parser.o symbols.o config.o \
+		-L/usr/lib \
+		-L/usr/lib/X11 \
+		-lXpm -lXext -lX11 || die "link asclock failed"
 }
 
 src_install() {
