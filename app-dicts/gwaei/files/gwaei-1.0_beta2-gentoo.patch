@@ -1,0 +1,19 @@
+diff -Naur gwaei-1.0b2.orig/configure.ac gwaei-1.0b2/configure.ac
+--- gwaei-1.0b2.orig/configure.ac	2009-05-01 18:46:30.000000000 +0900
++++ gwaei-1.0b2/configure.ac	2009-05-03 14:15:34.000000000 +0900
+@@ -96,12 +96,12 @@
+ ##esac],[libsexy=false])
+ ##AM_CONDITIONAL([WITHOUT_SEXY], [test x$libsexy = xtrue])
+ 
+-AC_ARG_ENABLE([gnome],
++AC_ARG_WITH([gnome],
+ [  --without-gnome         turn off the gnome gui interface],
+-[case "${enableval}" in
++[case "${withval}" in
+ yes) gnome=false ;;
+ no)  gnome=true ;;
+-*) AC_MSG_ERROR([bad value ${enableval} for --without-gnome]) ;;
++*) AC_MSG_ERROR([bad value ${withval} for --without-gnome]) ;;
+ esac],[gnome=false])
+ AM_CONDITIONAL([WITHOUT_GNOME], [test x$gnome = xtrue])
+ 

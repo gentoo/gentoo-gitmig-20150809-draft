@@ -1,6 +1,12 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.15 2009/03/30 15:39:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.16 2009/05/03 05:30:53 matsuu Exp $
+
+*gwaei-1.0_beta2 (03 May 2009)
+
+  03 May 2009; MATSUU Takuto <matsuu@gentoo.org> +gwaei-1.0_beta2.ebuild,
+  +files/gwaei-1.0_beta2-gentoo.patch:
+  Version bumped.
 
 *gwaei-0.15.4 (30 Mar 2009)
 
