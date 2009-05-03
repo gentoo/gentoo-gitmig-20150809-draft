@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9749 2009/05/03 20:25:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9750 2009/05/03 21:24:56 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomas Chvatal <scarabeus@gentoo.org> (03 May 2009)
+# Breaks too many packages.
+# See bug #268090 for discussion.
+=app-crypt/qca-2.0.2
 
 # Ryan Hill <dirtyepic@gentoo.org> (03 May 2009)
 # mask for removal - Jun 1 09
