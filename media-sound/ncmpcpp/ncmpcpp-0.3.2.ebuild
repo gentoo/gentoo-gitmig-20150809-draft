@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.3.2.ebuild,v 1.1 2009/03/17 22:11:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ncmpcpp-0.3.2.ebuild,v 1.2 2009/05/03 15:04:59 maekke Exp $
 
 EAPI="2"
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://unkart.ovh.org/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 IUSE="clock curl taglib unicode"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND="sys-libs/ncurses[unicode?]
 	curl? ( net-misc/curl )

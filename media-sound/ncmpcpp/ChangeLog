@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpcpp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.13 2009/04/17 22:20:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpcpp/ChangeLog,v 1.14 2009/05/03 15:04:59 maekke Exp $
+
+  03 May 2009; Markus Meier <maekke@gentoo.org> ncmpcpp-0.3.2.ebuild:
+  amd64/x86 stable, bug #267986
 
 *ncmpcpp-0.3.3 (17 Apr 2009)
 
