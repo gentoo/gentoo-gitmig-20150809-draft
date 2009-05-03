@@ -1,0 +1,15 @@
+# ChangeLog for net-libs/libproxy
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.1 2009/05/03 18:50:48 eva Exp $
+
+*libproxy-0.2.3 (03 May 2009)
+
+  03 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/libproxy-0.2.3-fix-as-needed-problem.patch,
+  +files/libproxy-0.2.3-fix-dbus-includes.patch,
+  +files/libproxy-0.2.3-fix-libxul-cflags.patch,
+  +files/libproxy-0.2.3-fix-python-automagic.patch, +metadata.xml,
+  +libproxy-0.2.3.ebuild:
+  libproxy is a library for automatic proxy configuration management, initial
+  ebuild by nirbheek, closes bug #244028.
+
