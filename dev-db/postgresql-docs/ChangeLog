@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.11 2009/04/09 22:35:45 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-docs/ChangeLog,v 1.12 2009/05/03 11:52:59 armin76 Exp $
+
+  03 May 2009; Raúl Porcel <armin76@gentoo.org>
+  postgresql-docs-8.3.5.ebuild, postgresql-docs-8.3.7.ebuild:
+  Add ~s390
 
 *postgresql-docs-8.3.7 (09 Apr 2009)
 
