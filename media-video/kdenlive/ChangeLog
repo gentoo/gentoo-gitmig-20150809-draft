@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kdenlive
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.39 2009/04/15 18:42:35 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.40 2009/05/03 19:51:13 aballier Exp $
+
+  03 May 2009; Alexis Ballier <aballier@gentoo.org> kdenlive-0.7.3.ebuild:
+  bump deps on mlt, by Elias Probst <mail@eliasprobst.eu>, bug #267573
 
 *kdenlive-0.7.3 (15 Apr 2009)
 
