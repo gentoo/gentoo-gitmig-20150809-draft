@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.3.4-r1.ebuild,v 1.1 2009/03/04 14:12:22 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/powerman-2.3.4-r1.ebuild,v 1.2 2009/05/03 17:17:53 maekke Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://powerman.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="+httppower +genders"
 DEPEND="sys-devel/bison
 		httppower? ( net-misc/curl )"

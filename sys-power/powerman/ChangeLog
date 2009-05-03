@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/powerman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.7 2009/03/04 14:12:22 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/powerman/ChangeLog,v 1.8 2009/05/03 17:17:53 maekke Exp $
+
+  03 May 2009; Markus Meier <maekke@gentoo.org> powerman-2.3.4-r1.ebuild:
+  amd64/x86 stable, bug #268008
 
 *powerman-2.3.4-r1 (04 Mar 2009)
 
