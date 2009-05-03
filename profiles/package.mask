@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9747 2009/05/02 17:55:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9748 2009/05/03 19:56:52 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,12 @@
 
 #--- END OF EXAMPLES ---
 
-# Joerg Bornkessel <hd_brummy@org> (02 May 2009)
+# Ryan Hill <dirtyepic@gentoo.org> (03 May 2009)
+# mask for removal - Jun 1 09
+# bug #268507
+app-doc/afsdoc
+
+# Joerg Bornkessel <hd_brummy@gentoo.org> (02 May 2009)
 # need >=sys-kernel/linux-headers-2.6.29 with s2api header changes
 =media-tv/w_scan-20090502
 
