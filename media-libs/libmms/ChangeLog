@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.24 2008/12/12 13:58:54 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.25 2009/05/03 13:22:14 ranger Exp $
+
+  03 May 2009; Brent Baude <ranger@gentoo.org> libmms-0.4.ebuild:
+  Marking libmms-0.4 ppc64 for bug 268294
 
 *libmms-0.4 (12 Dec 2008)
 
