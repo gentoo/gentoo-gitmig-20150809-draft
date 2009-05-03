@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/commoncpp2
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.47 2009/03/22 17:45:22 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.48 2009/05/03 16:04:44 arfrever Exp $
+
+  03 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  commoncpp2-1.6.3.ebuild:
+  Respect USE="gnutls".
 
   22 Mar 2009; Markus Meier <maekke@gentoo.org> commoncpp2-1.6.2.ebuild:
   amd64 stable, bug #261567

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.3.ebuild,v 1.2 2009/03/09 04:21:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.3.ebuild,v 1.3 2009/05/03 16:04:44 arfrever Exp $
 
 inherit eutils autotools
 
@@ -35,12 +35,16 @@ src_compile() {
 		sed -i "s/^DOXYGEN=.*/DOXYGEN=no/" configure || die "sed failed"
 
 	local myconf
-	use gnutls || myconf="--with-openssl"
+	if use gnutls; then
+		myconf="--with-gnutls --without-openssl"
+	else
+		myconf="--without-gnutls --with-openssl"
+	fi
 
 	econf \
 		$(use_enable debug) \
 		$(use_with ipv6 ) \
-		${myconf} || die "econf failed"
+		${myconf}
 	emake -j1 || die "emake failed"
 }
 
