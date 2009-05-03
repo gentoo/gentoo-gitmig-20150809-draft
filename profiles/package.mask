@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9748 2009/05/03 19:56:52 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9749 2009/05/03 20:25:58 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -332,21 +332,6 @@ app-portage/udept
 # Package has open security issues in bug 264598.
 # Masked for removal in 60 days, bug 227443.
 app-text/tetex
-
-# Peter Alfredsen <loki_val@gentoo.org> (30 Mar 2009)
-# HERE BE DRAGONS!
-# WARNING: Mono-2.4 will deplete your available RAM if you
-# try to compile app-office/openoffice[mono] with it.
-# See http://bugs.gentoo.org/257313 for reference.
-=www-apache/mod_mono-2.4
-=dev-dotnet/xsp-2.4
-=dev-dotnet/libgdiplus-2.4
-=dev-dotnet/gluezilla-2.4
-=dev-lang/mono-2.4
-=dev-lang/mono-basic-2.4
-=dev-util/mono-debugger-2.4
-=dev-util/mono-tools-2.4
-=virtual/monodoc-2.4
 
 # Tony Vroon <chainsaw@gentoo.org> (30 Mar 2009)
 # The v4 branch of DHCP has a new build system and a "minimal" dhclient-only 
