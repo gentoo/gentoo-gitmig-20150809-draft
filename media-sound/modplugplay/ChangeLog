@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/modplugplay
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/ChangeLog,v 1.7 2007/10/27 13:44:49 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/modplugplay/ChangeLog,v 1.8 2009/05/03 19:49:00 aballier Exp $
+
+  03 May 2009; Alexis Ballier <aballier@gentoo.org> modplugplay-1.0.ebuild:
+  Update homepage/src_uri, by Mr. Anderson <walch.martin@web.de>, bug
+  #266365
 
   27 Oct 2007; Samuli Suominen <drac@gentoo.org> modplugplay-1.0.ebuild:
   Restrict test suite for bug 196941 because it's trying to play sounds using
