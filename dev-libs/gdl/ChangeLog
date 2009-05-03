@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.25 2009/05/02 21:45:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.26 2009/05/03 19:13:30 maekke Exp $
+
+  03 May 2009; Markus Meier <maekke@gentoo.org> gdl-2.24.0.ebuild:
+  amd64/x86 stable, bug #268359
 
 *gdl-2.26.0 (02 May 2009)
 
