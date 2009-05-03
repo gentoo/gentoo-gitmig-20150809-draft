@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.183 2009/05/03 21:18:26 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.184 2009/05/03 21:29:17 klausman Exp $
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org> lftp-3.7.11.ebuild:
+  Stable on alpha, bug #267832
 
   03 May 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
   Keyworded on alpha, bug #267832
