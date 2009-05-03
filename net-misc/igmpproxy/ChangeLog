@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/igmpproxy
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/igmpproxy/ChangeLog,v 1.1 2009/05/03 20:05:13 idl0r Exp $
+
+*igmpproxy-0.1_beta3 (03 May 2009)
+
+  03 May 2009; Christian Ruppert <idl0r@gentoo.org>
+  +igmpproxy-0.1_beta3.ebuild, +files/igmpproxy-conf.d,
+  +files/igmpproxy-init.d, +metadata.xml:
+  New ebuild for bug 233738.
+
