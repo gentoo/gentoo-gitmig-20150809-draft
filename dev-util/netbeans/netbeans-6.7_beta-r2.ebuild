@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r1.ebuild,v 1.3 2009/05/02 23:13:31 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r2.ebuild,v 1.1 2009/05/03 01:51:05 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -84,7 +84,6 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-java/commons-logging-1.1:0
 		>=dev-java/commons-net-1.4:0
 		>=dev-java/flute-1.3:0
-		>=dev-java/flyingsaucer-7:0
 		>=dev-java/freemarker-2.3.8:2.3
 		>=dev-java/jakarta-oro-2:2.0
 		>=dev-java/jaxb-2:2
@@ -167,7 +166,6 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/commons-logging-1.1:0
 		>=dev-java/commons-net-1.4.1:0
 		>=dev-java/flute-1.3:0
-		>=dev-java/flyingsaucer-7:0
 		>=dev-java/freemarker-2.3.8:2.3
 		>=dev-java/jakarta-oro-2:2.0
 		>=dev-java/javacc-3.2:0
@@ -414,8 +412,9 @@ pkg_setup() {
 	[ -n "${need_websvccommon}" ] && ! use netbeans_modules_websvccommon && missing="${missing} websvccommon"
 
 	if [ -n "${missing}" ] ; then
-		eerror "You need to add these modules to NETBEANS_MODULES because they are needed by modules you have selected"
-		eerror "   Missing NETBEANS_MODULES: ${missing}"
+		eerror "You need to add these modules to NETBEANS_MODULES because they are needed by modules you have selected."
+		use doc && eerror "With \"doc\" USE flag enabled, all modules are required."
+		eerror "   Missing NETBEANS_MODULES:${missing}"
 		die "Missing NETBEANS_MODULES"
 	fi
 
@@ -494,6 +493,8 @@ src_prepare () {
 			sed -e "/libs\.jaxb\/external\/jaxb-xjc\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.jsch\/external\/jsch-0\.1\.39\.jar/d" -i ${tmpfile} || die
 			sed -e "/o\.apache\.xml\.resolver\/external\/resolver-1\.2\.jar/d" -i ${tmpfile} || die
+			# system core-renderer.jar causes deadlocks when openning css files
+			sed -e "/web\.flyingsaucer\/external/core-renderer-R7final\.jar/d" -i ${tmpfile} || die
 		fi
 
 		if use netbeans_modules_java ; then
@@ -673,6 +674,9 @@ src_install() {
 		for file in *.sh ; do
 			fperms 755 ${file} || die
 		done
+		for file in *.so ; do
+			fperms 755 ${file} || die
+		done
 	fi
 	if use netbeans_modules_profiler ; then
 		cd "${D}"/${DESTINATION}/profiler3/remote-pack-defs || die
@@ -725,7 +729,9 @@ src_install() {
 
 pkg_postinst() {
 	if use netbeans_modules_nb ; then
-		einfo "If you want to use specific locale of netbeans, use --locale argument, for example:"
+		einfo "Netbeans automatically starts with the locale you have set in your user profile, if"
+		einfo "the locale is built for netbeans."
+		einfo "If you want to force specific locale, use --locale argument, for example:"
 		einfo "${PN}-${SLOT} --locale de"
 		einfo "${PN}-${SLOT} --locale pt:BR"
 	fi
@@ -759,7 +765,6 @@ place_unpack_symlinks() {
 		dosymcompilejar "libs.bugtracking/external" commons-lang-2.1 commons-lang.jar commons-lang-2.3.jar
 		dosymcompilejar "libs.svnClientAdapter/external" subversion svn-javahl.jar svnjavahl-1.6.0.jar
 		dosymcompilejar "libs.lucene/external" lucene-2.4 lucene-core.jar lucene-core-2.3.2.jar
-		dosymcompilejar "web.flyingsaucer/external" flyingsaucer core-renderer.jar core-renderer-R7final.jar
 		dosymcompilejar "css.visual/external" sac sac.jar sac-1.3.jar
 		dosymcompilejar "css.visual/external" flute flute.jar flute-1.3.jar
 		dosymcompilejar "db.drivers/external" jdbc-mysql jdbc-mysql.jar mysql-connector-java-5.1.6-bin.jar
@@ -903,7 +908,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} commons-logging commons-logging.jar commons-logging-1.1.jar
 		dosyminstjar ${targetdir} commons-net commons-net.jar commons-net-1.4.1.jar
 		dosyminstjar ${targetdir} flute flute.jar flute-1.3.jar
-		dosyminstjar ${targetdir} flyingsaucer core-renderer.jar core-renderer.jar
+		# core-renderer.jar - system one causes deadlock
 		dosyminstjar ${targetdir} freemarker-2.3 freemarker.jar freemarker-2.3.8.jar
 		# ini4j-0.4.1.jar
 		dosyminstjar ${targetdir} jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
