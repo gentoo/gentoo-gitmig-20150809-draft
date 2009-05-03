@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/net-ssh-perl
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.28 2009/04/18 18:05:00 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/net-ssh-perl/ChangeLog,v 1.29 2009/05/03 10:57:58 armin76 Exp $
+
+  03 May 2009; Raúl Porcel <armin76@gentoo.org> net-ssh-perl-1.34.ebuild:
+  sparc stable wrt #265085
 
   18 Apr 2009; Thomas Anderson <gentoofan23@gentoo.org>
   net-ssh-perl-1.34.ebuild:
