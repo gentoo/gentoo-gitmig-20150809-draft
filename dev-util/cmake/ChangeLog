@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.92 2009/05/02 23:34:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.93 2009/05/03 13:45:06 cryos Exp $
+
+  03 May 2009; Marcus D. Hanwell <cryos@gentoo.org> cmake-2.6.4:
+  Fixed to the bootstrap logic.
 
 *cmake-2.6.4 (02 May 2009)
 
