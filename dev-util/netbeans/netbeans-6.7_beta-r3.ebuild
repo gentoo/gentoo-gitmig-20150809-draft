@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r2.ebuild,v 1.1 2009/05/03 01:51:05 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r3.ebuild,v 1.1 2009/05/03 14:14:40 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -132,7 +132,7 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-java/proguard-4.2:0
 	)
 	netbeans_modules_php? (
-		dev-java/javacup
+		dev-java/javacup:0
 	)
 	netbeans_modules_ruby? (
 		dev-java/asm:3
@@ -141,12 +141,13 @@ RDEPEND=">=virtual/jdk-1.5
 		dev-java/joda-time:0
 		dev-java/jruby:0
 		dev-java/jvyamlb:0
+		dev-util/jay:0
 	)"
 
 DEPEND=">=virtual/jdk-1.5
 	java-virtuals/jdk-with-com-sun
 	app-arch/unzip
-	>=dev-java/ant-core-1.7.1
+	>=dev-java/ant-core-1.7.1:0
 	>=dev-java/ant-nodeps-1.7.1:0
 	dev-java/ant-trax:0
 	>=dev-java/javahelp-2:0
@@ -196,11 +197,12 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/proguard-4.2:0
 	)
 	netbeans_modules_php? (
-		dev-java/javacup
+		dev-java/javacup:0
 	)
 	netbeans_modules_ruby? (
 		dev-java/bytelist:0
 		dev-java/jvyamlb:0
+		dev-util/jay:0
 	)"
 
 S="${WORKDIR}"
@@ -461,15 +463,19 @@ src_prepare () {
 			sed -e "/j2ee\.sun\.appsrv81\/external\/appservapis-2\.0\.58\.3\.jar/d" -i ${tmpfile} || die
 			sed -e "/j2ee\.sun\.appsrv81\/external\/org-netbeans-modules-j2ee-sun-appsrv81\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.glassfish_logging\/external\/glassfish-logging-2\.0\.jar/d" -i ${tmpfile} || die
+			# http://www.netbeans.org/issues/show_bug.cgi?id=164334
 			sed -e "/servletjspapi\/external\/servlet2\.5-jsp2\.1-api\.jar/d" -i ${tmpfile} || die
 			sed -e "/spring\.webmvc\/external\/spring-webmvc-2\.5\.jar/d" -i ${tmpfile} || die
 			sed -e "/web\.jsf\/external\/shale-remoting-1\.0\.4\.jar/d" -i ${tmpfile} || die
 			sed -e "/web\.jspparser\/external\/glassfish-jspparser-2\.0\.jar/d" -i ${tmpfile} || die
+			# api documentation packaged as jar
 			sed -e "/websvc\.restlib\/external\/jersey-api-doc\.jar/d" -i ${tmpfile} || die
+			# api documentation packaged as jar
 			sed -e "/websvc\.restlib\/external\/jsr311-api-doc\.jar/d" -i ${tmpfile} || die
 		fi
 
 		if use netbeans_modules_groovy ; then
+			# heavily repackaged
 			sed -e "/groovy\.editor\/external\/groovy-all-1\.5\.7\.jar/d" -i ${tmpfile} || die
 		fi
 
@@ -479,6 +485,7 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_ide ; then
+			# very old stuff
 			sed -e "/httpserver\/external\/tomcat-webserver-3\.2\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.bugtracking\/external\/org\.eclipse\.mylyn\.commons\.core_3\.0\.5\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.bugtracking\/external\/org\.eclipse\.mylyn\.commons\.net_3\.0\.5\.jar/d" -i ${tmpfile} || die
@@ -489,35 +496,53 @@ src_prepare () {
 			sed -e "/libs\.swingx\/external\/swingx-0\.9\.5\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.smack\/external\/smack\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.smack\/external\/smackx\.jar/d" -i ${tmpfile} || die
+			# packaged in a different way than we do
 			sed -e "/libs\.jaxb\/external\/jaxb-impl\.jar/d" -i ${tmpfile} || die
+			# packaged in a different way than we do
 			sed -e "/libs\.jaxb\/external\/jaxb-xjc\.jar/d" -i ${tmpfile} || die
+			# netbeans does not work with version 0.1.37
 			sed -e "/libs\.jsch\/external\/jsch-0\.1\.39\.jar/d" -i ${tmpfile} || die
+			# patched version of apache resolver
 			sed -e "/o\.apache\.xml\.resolver\/external\/resolver-1\.2\.jar/d" -i ${tmpfile} || die
 			# system core-renderer.jar causes deadlocks when openning css files
 			sed -e "/web\.flyingsaucer\/external/core-renderer-R7final\.jar/d" -i ${tmpfile} || die
 		fi
 
 		if use netbeans_modules_java ; then
+			# netbeans bundles also toplink-essentials in the jar
 			sed -e "/j2ee\.toplinklib\/external\/glassfish-persistence-v2ur1-build-09d\.jar/d" -i ${tmpfile} || die
+			# some patch
 			sed -e "/junit\/external\/Ant-1\.7\.1-binary-patch-72080\.jar/d" -i ${tmpfile} || die
+			# junit sources
 			sed -e "/junit\/external\/junit-4\.5-src\.jar/d" -i ${tmpfile} || die
+			# some netbeans stuff
 			sed -e "/libs\.javacapi\/external\/javac-api-nb-7\.0-b07\.jar/d" -i ${tmpfile} || die
+			# some netbeans stuff
 			sed -e "/libs\.javacimpl\/external\/javac-impl-nb-7\.0-b07\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.springframework\/external\/spring-2\.5\.jar/d" -i ${tmpfile} || die
+			# maven stuff - ignoring for now
 			sed -e "/maven\.embedder\/external\/maven-dependency-tree-1\.2\.jar/d" -it ${tmpfile} || die
+			# maven stuff - ignoring for now
 			sed -e "/maven\.embedder\/external\/maven-embedder-2\.1-20080623-patched\.jar/d" -i ${tmpfile} || die
+			# maven stuff - ignoring for now
 			sed -e "/maven\.indexer\/external\/nexus-indexer-1\.2\.2-shaded\.jar/d" -i ${tmpfile} || die
 			sed -e "/swingapp\/external\/appframework-1\.0\.3\.jar/d" -i ${tmpfile} || die
 			sed -e "/swingapp\/external\/swing-worker-1\.1\.jar/d" -i ${tmpfile} || die
 		fi
 
 		if use netbeans_modules_mobility ; then
+			# if not commented, the jars are probably some netbeans jars related to mobility
+			#
+			# bd-j - i did not find the sources
 			sed -e "/j2me\.cdc\.project\.bdj\/external\/bdjo\.jar/d" -i ${tmpfile} || die
+			# bd-j - i did not find the sources
 			sed -e "/j2me\.cdc\.project\.bdj\/external\/security\.jar/d" -i ${tmpfile} || die
+			# i didn't find sources of this
 			sed -e "/j2me\.cdc\.project\.ricoh\/external\/RicohAntTasks-2\.0\.jar/d" -i ${tmpfile} || die
 			sed -e "/mobility\.databindingme\/lib\/netbeans_databindingme\.jar/d" -i ${tmpfile} || die
 			sed -e "/mobility\.databindingme\/lib\/netbeans_databindingme_pim\.jar/d" -i ${tmpfile} || die
 			sed -e "/mobility\.databindingme\/lib\/netbeans_databindingme_svg\.jar/d" -i ${tmpfile} || die
+			# retired project
 			sed -e "/mobility\.deployment\.webdav\/external\/jakarta-slide-ant-webdav-2\.1\.jar/d" -i ${tmpfile} || die
 			sed -e "/mobility\.j2meunit\/external\/jmunit4cldc10-1\.2\.1\.jar/d" -i ${tmpfile} || die
 			sed -e "/mobility\.j2meunit\/external\/jmunit4cldc11-1\.2\.1\.jar/d" -i ${tmpfile} || die
@@ -531,7 +556,6 @@ src_prepare () {
 
 		if use netbeans_modules_ruby ; then
 			sed -e "/libs\.jrubyparser\/external\/jruby-parser-0\.1\.jar/d" -i ${tmpfile} || die
-			sed -e "/libs\.yydebug\/external\/yydebug-1\.0\.2\.jar/d" -i ${tmpfile} || die
 			sed -e "\/o\.kxml2\/external\/kxml2-2\.3\.0\.jar/d" -i ${tmpfile} || die
 			sed -e "\/o\.rubyforge\.debugcommons\/external\/debug-commons-java-0\.10\.0\.jar/d" -i ${tmpfile} || die
 		fi
@@ -805,6 +829,7 @@ place_unpack_symlinks() {
 	if use netbeans_modules_ruby ; then
 		dosymcompilejar "libs.bytelist/external" bytelist bytelist.jar bytelist-0.1.jar
 		dosymcompilejar "libs.jvyamlb/external" jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
+		dosymcompilejar "libs.yydebug/external" jay yydebug.jar yydebug-1.0.2.jar
 	fi
 
 	if [ -n "${NB_DOSYMCOMPILEJARFAILED}" ] ; then
@@ -880,18 +905,18 @@ symlink_extjars() {
 		targetdir="/enterprise5/modules/ext/rest"
 		dosyminstjar ${targetdir} asm-3 asm.jar asm-3.1.jar
 		# grizzly-servlet-webserver-1.7.3.2.jar
-		# http.jar
+		# http.jar - com.sun.net.httpserver - part of JavaSE 6
 		dosyminstjar ${targetdir} jdom-1.0 jdom.jar jdom-1.0.jar
 		# jersey.jar
 		# jersey-spring.jar
 		dosyminstjar ${targetdir} jettison jettison.jar jettison-1.0-RC1.jar
 		dosyminstjar ${targetdir} jsr311-api jsr311-api.jar jsr311-api.jar
 		dosyminstjar ${targetdir} rome rome.jar rome-0.9.jar
-		# wadl2java.jar
+		# wadl2java.jar - atm do not know what to do with it
 	fi
 
 	# if use netbeans_modules_groovy ; then
-		# groovy-all.jar
+		# groovy-all.jar - heavily repackaged
 	# fi
 
 	if use netbeans_modules_harness ; then
@@ -908,7 +933,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} commons-logging commons-logging.jar commons-logging-1.1.jar
 		dosyminstjar ${targetdir} commons-net commons-net.jar commons-net-1.4.1.jar
 		dosyminstjar ${targetdir} flute flute.jar flute-1.3.jar
-		# core-renderer.jar - system one causes deadlock
+		# core-renderer.jar - flyingsaucer - system one causes deadlock
 		dosyminstjar ${targetdir} freemarker-2.3 freemarker.jar freemarker-2.3.8.jar
 		# ini4j-0.4.1.jar
 		dosyminstjar ${targetdir} jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
@@ -920,11 +945,11 @@ symlink_extjars() {
 		# org.eclipse.mylyn.commons.core_3.0.5.jar
 		# org.eclipse.mylyn.commons.net_3.0.5.jar
 		# org.eclipse.mylyn.tasks.core_3.0.5.jar
-		# org-mozilla-rhino-patched.jar
+		# org-mozilla-rhino-patched.jar - some patched stuff
 		dosyminstjar ${targetdir} sac sac.jar sac-1.3.jar
 		# smack.jar
 		# smackx.jar
-		# resolver-1.2.jar
+		# resolver-1.2.jar - probably patched apache resolver
 		# svnClientAdapter-1.6.0.jar
 		dosyminstjar ${targetdir} subversion svn-javahl.jar svnjavahl-1.6.0.jar
 		# swingx-0.9.5.jar
@@ -966,7 +991,7 @@ symlink_extjars() {
 		# http.jar
 		# jaxws-rt.jar
 		# jaxws-tools.jar
-		# mimepull.jar
+		# mimepull.jar - atm do not know what to do with it
 		dosyminstjar ${targetdir} saaj saaj.jar saaj-impl.jar
 		dosyminstjar ${targetdir} sjsxp sjsxp.jar sjsxp.jar
 		dosyminstjar ${targetdir} stax-ex stax-ex.jar stax-ex.jar
@@ -992,7 +1017,7 @@ symlink_extjars() {
 		# hibernate-entitymanager.jar
 		# hibernate-tools.jar
 		dosyminstjar ${targetdir} javassist-3 javassist.jar javassist.jar
-		# jdbc2_0-stdext.jar
+		# jdbc2_0-stdext.jar - obsolete package
 		dosyminstjar ${targetdir} jtidy Tidy.jar jtidy-r8-20060801.jar
 		targetdir="java2/modules/ext/spring"
 		# spring-2.5.jar
@@ -1006,13 +1031,13 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} ant-contrib ant-contrib.jar ant-contrib-1.0b3.jar
 		dosyminstjar ${targetdir} bcprov bcprov.jar bcprov-jdk15-139.jar
 		# bdjo.jar
-		# cdc-agui-swing-layout.jar
-		# cdc-pp-awt-layout.jar
+		# cdc-agui-swing-layout.jar - atm do not know what to do with it
+		# cdc-pp-awt-layout.jar - atm do not know what to do with it
 		dosyminstjar ${targetdir} commons-codec commons-codec.jar commons-codec-1.3.jar
 		dosyminstjar ${targetdir} commons-httpclient-3 commons-httpclient.jar commons-httpclient-3.0.jar
 		dosyminstjar ${targetdir} commons-httpclient-3 commons-httpclient.jar commons-httpclient-3.0.1.jar
 		dosyminstjar ${targetdir} jakarta-slide-webdavclient jakarta-slide-webdavlib.jar jakarta-slide-webdavlib-2.1.jar
-		# jakarta-slide-ant-webdav-2.1.jar
+		# jakarta-slide-ant-webdav-2.1.jar - retired package
 		dosyminstjar ${targetdir} jdom-1.0 jdom.jar jdom-1.0.jar
 		# jmunit4cldc10-1.2.1.jar
 		# jmunit4cldc11-1.2.1.jar
@@ -1041,11 +1066,11 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} jline jline.jar jline-0.9.93.jar
 		# jna-posix.jar
 		dosyminstjar ${targetdir} joda-time joda-time.jar joda-time-1.5.1.jar
-		# joni.jar
+		# joni.jar - i did not find this package
 		# jruby-parser-0.1.jar
 		dosyminstjar ${targetdir} jvyamlb jvyamlb jvyamlb-0.2.3.jar
 		# kxml2-2.3.0.jar
-		# yydebug-1.0.2.jar
+		dosyminstjar ${targetdir} jay yydebug.jar yydebug-1.0.2.jar
 	fi
 
 	if [ -n "${NB_DOSYMINSTJARFAILED}" ] ; then

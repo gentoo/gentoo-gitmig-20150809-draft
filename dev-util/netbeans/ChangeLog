@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.108 2009/05/03 01:51:05 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.109 2009/05/03 14:14:40 fordfrog Exp $
+
+*netbeans-6.7_beta-r3 (03 May 2009)
+
+  03 May 2009; Miroslav Šulc <fordfrog@gentoo.org>
+  -netbeans-6.7_beta-r2.ebuild, +netbeans-6.7_beta-r3.ebuild:
+  Unbundled yydebug.jar and added comments to not-yet-unbundled jars
 
 *netbeans-6.7_beta-r2 (03 May 2009)
 
