@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1209.ebuild,v 1.1 2009/05/01 17:38:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1209-r1.ebuild,v 1.1 2009/05/03 12:38:45 tommy Exp $
 
 EAPI="1"
 DATE=20090413
@@ -70,7 +70,8 @@ src_install() {
 	insinto /etc
 	doins freenet-wrapper.conf || die
 	insinto /var/freenet
-	doins seednodes.fref run.sh || die
+	doins run.sh || die
+	newins "${DISTDIR}"/seednodes-${DATE}.fref seednodes.fref || die
 	fperms +x /var/freenet/run.sh
 	dosym java-service-wrapper/libwrapper.so /usr/$(get_libdir)/libwrapper.so
 }
