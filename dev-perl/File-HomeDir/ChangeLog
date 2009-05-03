@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-HomeDir
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.53 2009/05/03 17:35:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-HomeDir/ChangeLog,v 1.54 2009/05/03 18:29:54 tcunha Exp $
+
+  03 May 2009; Tiago Cunha <tcunha@gentoo.org> File-HomeDir-0.86.ebuild:
+  stable sparc, bug 268171
 
   03 May 2009; Markus Meier <maekke@gentoo.org> File-HomeDir-0.86.ebuild:
   amd64 stable, bug #268171
