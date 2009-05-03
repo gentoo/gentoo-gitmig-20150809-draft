@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdparanoia
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.94 2009/04/30 08:34:08 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.95 2009/05/03 21:14:04 klausman Exp $
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Keyworded on alpha, bug #267726
 
 *cdparanoia-3.10.2-r3 (30 Apr 2009)
 
