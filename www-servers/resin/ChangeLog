@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/resin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.86 2009/05/01 22:40:16 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/ChangeLog,v 1.87 2009/05/03 15:11:04 nelchael Exp $
+
+*resin-3.2.1-r2 (03 May 2009)
+
+  03 May 2009; Krzysiek Pawlik <nelchael@gentoo.org> -resin-3.2.1-r1.ebuild,
+  +resin-3.2.1-r2.ebuild:
+  Revision bump, use latest set of patches including patch for boot
+  classpath.
 
 *resin-3.2.1-r1 (01 May 2009)
 
