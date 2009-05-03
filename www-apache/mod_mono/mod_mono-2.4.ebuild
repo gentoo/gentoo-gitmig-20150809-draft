@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.4.ebuild,v 1.1 2009/03/30 22:07:12 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.4.ebuild,v 1.2 2009/05/03 12:32:49 loki_val Exp $
 
 EAPI=2
 
 # DRAGONS: Watch the order of these.
 
-inherit apache-module eutils go-mono mono
+inherit apache-module multilib eutils go-mono mono
 
 KEYWORDS="~x86 ~amd64"
 
@@ -27,24 +27,31 @@ DOCFILES="AUTHORS ChangeLog COPYING INSTALL NEWS README"
 need_apache2
 
 src_prepare() {
+	sed -e "s:@LIBDIR@:$(get_libdir):" "${FILESDIR}/${APACHE2_MOD_CONF}.conf" \
+		> "${WORKDIR}/${APACHE2_MOD_CONF##*/}.conf" || die
+	go-mono_src_prepare
 	use aspnet2 && epatch "${FILESDIR}/mono_auto_application_aspnet2.patch"
 }
 
 src_configure() {
+	export LIBS="$(pkg-config --libs apr-1)"
 	go-mono_src_configure \
 		$(use_enable debug) \
+		--with-apxs="${APXS}" \
+		--with-apr-config="/usr/bin/apr-1-config" \
+		--with-apu-config="/usr/bin/apu-1-config" \
 		|| die "econf failed"
+}
+src_compile() {
+	go-mono_src_compile
 }
 
 src_install() {
 	go-mono_src_install
 	find "${D}" -name 'mod_mono.conf' -delete || die "failed to remove mod_mono.conf"
-	if [[ -n "${APACHE2_MOD_CONF}" ]] ; then
-		insinto "${APACHE_MODULES_CONFDIR}"
-		set -- ${APACHE2_MOD_CONF}
-		newins "${FILESDIR}/${1}.conf" "$(basename ${2:-$1}).conf" \
-			|| die "internal ebuild error: '${FILESDIR}/${1}.conf' not found"
-	fi
+	insinto "${APACHE_MODULES_CONFDIR}"
+	newins "${WORKDIR}/${APACHE2_MOD_CONF##*/}.conf" "${APACHE2_MOD_CONF##*/}.conf" \
+		|| die "internal ebuild error: '${FILESDIR}/${APACHE2_MOD_CONF}.conf' not found"
 }
 
 pkg_postinst() {
