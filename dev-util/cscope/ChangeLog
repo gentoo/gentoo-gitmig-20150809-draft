@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cscope
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.114 2009/05/03 12:41:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.115 2009/05/03 12:46:57 ranger Exp $
+
+  03 May 2009; Brent Baude <ranger@gentoo.org> cscope-15.7a.ebuild:
+  Marking cscope-15.7a ppc64 for bug 263023
 
   03 May 2009; Brent Baude <ranger@gentoo.org> cscope-15.7a.ebuild:
   Marking cscope-15.7a ppc for bug 263023
