@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.3.ebuild,v 1.4 2009/04/14 18:50:19 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.3.ebuild,v 1.5 2009/05/03 17:36:25 eva Exp $
 
 inherit gnome2 python eutils
 
@@ -13,22 +13,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/gstreamer-0.10.4
-	>=dev-lang/python-2.5
+RDEPEND=">=dev-lang/python-2.5
 	>=dev-python/pygtk-2.8.0
-	>=dev-python/gnome-python-2.12.0
 	dev-python/dbus-python
-	>=dev-python/gst-python-0.10.0
+	>=dev-python/gconf-python-2.12
+	dev-python/pycairo
+	dev-python/pygoocanvas
+	net-zope/zopeinterface
+
+	>=media-libs/gstreamer-0.10.13.1
+	>=dev-python/gst-python-0.10.6
 	>=media-libs/gnonlin-0.10.10
 	>=media-libs/gst-plugins-base-0.10.0
 	>=media-libs/gst-plugins-good-0.10.0
 	>=media-plugins/gst-plugins-ffmpeg-0.10.0
 	>=media-plugins/gst-plugins-xvideo-0.10.0
-	>=media-plugins/gst-plugins-libpng-0.10.0
-	net-zope/zopeinterface
-	dev-python/pygoocanvas
-	dev-python/setuptools"
+	>=media-plugins/gst-plugins-libpng-0.10.0"
 DEPEND="${RDEPEND}
+	dev-python/setuptools
 	>=dev-util/intltool-0.35.5"
 
 DOCS="AUTHORS ChangeLog NEWS RELEASE"
