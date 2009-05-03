@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.4.ebuild,v 1.4 2009/03/01 20:46:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.4.ebuild,v 1.5 2009/05/03 00:21:52 halcy0n Exp $
 
 PATCH_VER="1.1"
 UCLIBC_VER="1.0"
@@ -50,6 +50,7 @@ DEPEND="${RDEPEND}
 	test? ( sys-devel/autogen dev-util/dejagnu )
 	>=sys-apps/texinfo-4.2-r4
 	>=sys-devel/bison-1.875
+	sys-devel/flex
 	>=${CATEGORY}/binutils-2.15.94"
 PDEPEND=">=sys-devel/gcc-config-1.4"
 if [[ ${CATEGORY} != cross-* ]] ; then
