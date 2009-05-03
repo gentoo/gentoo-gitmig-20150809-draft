@@ -1,6 +1,13 @@
 # ChangeLog for media-video/x264-encoder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.18 2009/04/27 23:58:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/x264-encoder/ChangeLog,v 1.19 2009/05/03 20:09:15 aballier Exp $
+
+*x264-encoder-0.0.20090502 (03 May 2009)
+
+  03 May 2009; Alexis Ballier <aballier@gentoo.org>
+  +x264-encoder-0.0.20090502.ebuild,
+  +files/x264-encoder-nolib-20090408.patch:
+  bump a new snapshot
 
   27 Apr 2009; Patrick Lauer <patrick@gentoo.org> x264-encoder-0.0.20081218:
   Bumping yasm dep to >=0.6.1, closes #267711
