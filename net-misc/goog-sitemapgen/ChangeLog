@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/goog-sitemapgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.6 2009/04/29 00:40:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/goog-sitemapgen/ChangeLog,v 1.7 2009/05/03 13:16:28 maekke Exp $
+
+  03 May 2009; Markus Meier <maekke@gentoo.org> goog-sitemapgen-1.4.ebuild:
+  amd64/x86 stable, bug #267820
 
   29 Apr 2009; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Take maintenance.
