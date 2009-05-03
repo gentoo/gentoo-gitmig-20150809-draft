@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libdap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.3 2009/04/21 06:38:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/ChangeLog,v 1.4 2009/05/03 03:30:29 nerdboy Exp $
+
+  03 May 2009; Steve Arnold <nerdboy@gentoo.org> libdap-3.8.2.ebuild,
+  libdap-3.9.2.ebuild:
+  Updating minimum required versions of deps per newer upstream docs.
 
   21 Apr 2009; Steve Arnold <nerdboy@gentoo.org> libdap-3.8.2.ebuild,
   libdap-3.9.2.ebuild:

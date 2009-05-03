@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.9.2.ebuild,v 1.3 2009/04/21 06:38:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libdap/libdap-3.9.2.ebuild,v 1.4 2009/05/03 03:30:29 nerdboy Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -17,9 +17,9 @@ RDEPEND="dev-util/cppunit
 	dev-util/dejagnu"
 
 DEPEND="${RDEPEND}
-	sys-libs/zlib
+	>=sys-libs/zlib-1.1.4
 	>=dev-libs/libxml2-2.5.7
-	>=net-misc/curl-7.10.6
+	>=net-misc/curl-7.12.0
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
