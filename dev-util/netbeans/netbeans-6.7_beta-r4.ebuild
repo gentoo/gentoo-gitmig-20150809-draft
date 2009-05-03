@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r3.ebuild,v 1.1 2009/05/03 14:14:40 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r4.ebuild,v 1.1 2009/05/03 22:42:14 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -89,6 +89,7 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-java/jaxb-2:2
 		>=dev-java/jdbc-mysql-5.1:0
 		>=dev-java/jdbc-postgresql-8.3_p603:0
+		>=dev-java/jsch-0.1.39:0
 		dev-java/jsr173:0
 		dev-java/lucene:2.4
 		>=dev-java/sac-1.3:0
@@ -173,6 +174,7 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/jaxb-2.1:2
 		>=dev-java/jdbc-mysql-5.1:0
 		>=dev-java/jdbc-postgresql-8.3_p603:0
+		>=dev-java/jsch-0.1.39:0
 		dev-java/jsr173:0
 		dev-java/lucene:2.4
 		>=dev-java/sac-1.3:0
@@ -500,11 +502,9 @@ src_prepare () {
 			sed -e "/libs\.jaxb\/external\/jaxb-impl\.jar/d" -i ${tmpfile} || die
 			# packaged in a different way than we do
 			sed -e "/libs\.jaxb\/external\/jaxb-xjc\.jar/d" -i ${tmpfile} || die
-			# netbeans does not work with version 0.1.37
-			sed -e "/libs\.jsch\/external\/jsch-0\.1\.39\.jar/d" -i ${tmpfile} || die
 			# patched version of apache resolver
 			sed -e "/o\.apache\.xml\.resolver\/external\/resolver-1\.2\.jar/d" -i ${tmpfile} || die
-			# system core-renderer.jar causes deadlocks when openning css files
+			# system core-renderer.jar causes deadlocks (in logging) when openning css files
 			sed -e "/web\.flyingsaucer\/external/core-renderer-R7final\.jar/d" -i ${tmpfile} || die
 		fi
 
@@ -787,6 +787,7 @@ place_unpack_symlinks() {
 		dosymcompilejar "libs.commons_logging/external" commons-logging commons-logging.jar commons-logging-1.1.jar
 		dosymcompilejar "libs.bugtracking/external" commons-httpclient-3 commons-httpclient.jar commons-httpclient-3.1.jar
 		dosymcompilejar "libs.bugtracking/external" commons-lang-2.1 commons-lang.jar commons-lang-2.3.jar
+		dosymcompilejar "libs.jsch/external" jsch jsch.jar jsch-0.1.39.jar
 		dosymcompilejar "libs.svnClientAdapter/external" subversion svn-javahl.jar svnjavahl-1.6.0.jar
 		dosymcompilejar "libs.lucene/external" lucene-2.4 lucene-core.jar lucene-core-2.3.2.jar
 		dosymcompilejar "css.visual/external" sac sac.jar sac-1.3.jar
@@ -939,7 +940,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} jakarta-oro-2.0 jakarta-oro.jar jakarta-oro-2.0.8.jar
 		dosyminstjar ${targetdir} jdbc-mysql jdbc-mysql.jar mysql-connector-java-5.1.6-bin.jar
 		dosyminstjar ${targetdir} jdbc-postgresql jdbc-postgresql.jar postgresql-8.3-603.jdbc3.jar
-		# jsch-0.1.39.jar
+		dosyminstjar ${targetdir} jsch jsch.jar jsch-0.1.39.jar
 		dosyminstjar ${targetdir} lucene-2.4 lucene-core.jar lucene-core-2.3.2.jar
 		# org.eclipse.mylyn.bugzilla.core_3.0.5.jar
 		# org.eclipse.mylyn.commons.core_3.0.5.jar
@@ -1068,7 +1069,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} joda-time joda-time.jar joda-time-1.5.1.jar
 		# joni.jar - i did not find this package
 		# jruby-parser-0.1.jar
-		dosyminstjar ${targetdir} jvyamlb jvyamlb jvyamlb-0.2.3.jar
+		dosyminstjar ${targetdir} jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
 		# kxml2-2.3.0.jar
 		dosyminstjar ${targetdir} jay yydebug.jar yydebug-1.0.2.jar
 	fi
@@ -1111,6 +1112,12 @@ dosyminstjar() {
 
 		# We want to know whether the target jar exists and fail if it doesn't so we know
 		# something is wrong
+		local source="/usr/share/${package}/lib/${jar_file}"
+		if [ ! -e "${source}" ] ; then
+			ewarn "Cannot link jar, ${source} does not exist!"
+			NB_DOSYMINSTJARFAILED="1"
+		fi
+
 		local target="${DESTINATION}/${dest}/${target_file}"
 		if [ -e "${D}/${target}" ] ; then
 			dosym /usr/share/${package}/lib/${jar_file} ${target}
