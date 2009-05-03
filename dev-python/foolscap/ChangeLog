@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/foolscap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.9 2009/03/18 18:33:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/foolscap/ChangeLog,v 1.10 2009/05/03 11:31:53 armin76 Exp $
+
+  03 May 2009; Raúl Porcel <armin76@gentoo.org> foolscap-0.3.1.ebuild:
+  s390 stable
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> foolscap-0.3.1.ebuild:
   Marking foolscap-0.3.1 ppc for bug 255051
