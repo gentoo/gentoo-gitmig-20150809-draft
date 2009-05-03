@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.34 2009/04/27 22:30:11 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.35 2009/05/03 19:28:03 klausman Exp $
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  bsd-games-2.17-r3.ebuild:
+  Stable on alpha, bug #267663
 
   27 Apr 2009; Tiago Cunha <tcunha@gentoo.org> bsd-games-2.17-r3.ebuild:
   stable sparc, bug 267663
