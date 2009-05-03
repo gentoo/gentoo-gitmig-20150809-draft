@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/ck
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.5 2004/06/25 02:06:48 agriffis Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.6 2009/05/03 19:24:53 mescalinum Exp $
+
+*ck-8.0-r1 (03 May 2009)
+
+  03 May 2009; Federico Ferri <mescalinum@gentoo.org> +ck-8.0-r1.ebuild:
+  patch Makefile, fix bug #247183
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> ck-8.0.ebuild:
   Add die following econf for bug 48950
