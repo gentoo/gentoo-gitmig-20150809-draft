@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xmlsec
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.15 2008/05/11 15:37:17 alonbl Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.16 2009/05/03 18:08:54 arfrever Exp $
+
+  03 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  xmlsec-1.2.11.ebuild, +files/xmlsec-1.2.11-gnutls.patch:
+  Fix building with >=net-libs/gnutls-2.7.1.
 
   11 May 2008; Alon Bar-Lev <alonbl@gentoo.org> xmlsec-1.2.11.ebuild:
   Remove autoconf dependency, bug#221551, fixup RDEPEND
