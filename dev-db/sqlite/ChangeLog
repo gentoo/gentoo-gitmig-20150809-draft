@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.236 2009/05/03 12:48:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.237 2009/05/03 19:08:57 klausman Exp $
+
+  03 May 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Stable on alpha, bug #267528
 
   03 May 2009; Markus Meier <maekke@gentoo.org> sqlite-3.6.12.ebuild:
   amd64/x86 stable, bug #267528
