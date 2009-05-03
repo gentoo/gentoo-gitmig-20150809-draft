@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.28 2009/03/15 14:12:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.29 2009/05/03 20:21:39 aballier Exp $
+
+*libkate-0.3.2 (03 May 2009)
+
+  03 May 2009; Alexis Ballier <aballier@gentoo.org> +libkate-0.3.2.ebuild:
+  version bump
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> libkate-0.3.0.ebuild:
   Marking libkate-0.3.0 ~ppc64 for bug 254306
