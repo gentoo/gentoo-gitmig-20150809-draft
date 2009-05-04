@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.21 2009/04/15 15:50:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.22 2009/05/04 16:50:13 ssuominen Exp $
+
+  04 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-video-intel-1.6.5.ebuild, xf86-video-intel-1.7.4.ebuild,
+  xf86-video-intel-2.1.1.ebuild, xf86-video-intel-2.2.1.ebuild,
+  xf86-video-intel-2.3.2.ebuild, xf86-video-intel-2.4.3.ebuild,
+  xf86-video-intel-2.5.1-r1.ebuild, xf86-video-intel-2.6.1.ebuild,
+  xf86-video-intel-2.6.3.ebuild, xf86-video-intel-2.6.3-r1.ebuild:
+  Move use_ functions out of global scope.
 
   15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   xf86-video-intel-2.6.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-1.7.4.ebuild,v 1.4 2009/03/13 15:36:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-1.7.4.ebuild,v 1.5 2009/05/04 16:50:13 ssuominen Exp $
 
 inherit x-modular
 
@@ -25,4 +25,6 @@ DEPEND="${RDEPEND}
 			>=x11-libs/libdrm-2.2
 			x11-libs/libX11 )"
 
-CONFIGURE_OPTIONS="$(use_enable dri)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable dri)"
+}
