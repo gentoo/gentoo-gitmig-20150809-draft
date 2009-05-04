@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9753 2009/05/04 23:18:59 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9754 2009/05/04 23:28:50 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (05 May 2009)
+# Requires net-wireless/gnome-bluetooth-2.27
+>=app-mobilephone/gnome-phone-manager-0.65
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (05 May 2009)
 # Requires net-wireless/bluez-4
