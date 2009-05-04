@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/libmms-0.4.ebuild,v 1.5 2009/05/04 12:27:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/libmms-0.4.ebuild,v 1.6 2009/05/04 14:46:22 ssuominen Exp $
 
 EAPI=2
 inherit eutils
 
 DESCRIPTION="Common library for accessing Microsoft Media Server (MMS) media streaming protocol"
-HOMEPAGE="http://libmms.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+HOMEPAGE="https://launchpad.net/libmms"
+SRC_URI="http://launchpad.net/libmms/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
