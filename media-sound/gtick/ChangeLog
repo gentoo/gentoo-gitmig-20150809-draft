@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/gtick
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.32 2008/02/29 19:59:56 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.33 2009/05/04 17:26:42 ssuominen Exp $
+
+*gtick-0.4.2 (04 May 2009)
+
+  04 May 2009; Samuli Suominen <ssuominen@gentoo.org> +gtick-0.4.2.ebuild:
+  Version bump.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> gtick-0.4.1.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
@@ -11,12 +16,12 @@
   11 Nov 2007; Dawid Węgliński <cla@gentoo.org> gtick-0.4.1.ebuild:
   Stable on x86 (bug #198826)
 
-  11 Nov 2007; Samuli Suominen <drac@gentoo.org> gtick-0.4.1.ebuild:
+  11 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> gtick-0.4.1.ebuild:
   amd64 stable wrt #198826
 
 *gtick-0.4.1 (19 Aug 2007)
 
-  19 Aug 2007; Samuli Suominen <drac@gentoo.org> +gtick-0.4.1.ebuild:
+  19 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> +gtick-0.4.1.ebuild:
   Version bump, fixing segfault with libsndfile. Install also desktop entry
   with icon.
 
@@ -34,7 +39,7 @@
 
 *gtick-0.3.15 (03 Jun 2007)
 
-  03 Jun 2007; Samuli Suominen <drac@gentoo.org> +gtick-0.3.15.ebuild:
+  03 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> +gtick-0.3.15.ebuild:
   Version bump for bug 180624. Thanks to Tiziano Müller and Evgeniy.
 
   23 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> gtick-0.3.4.ebuild:
