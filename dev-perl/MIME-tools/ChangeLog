@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/MIME-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.59 2009/05/03 17:59:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-tools/ChangeLog,v 1.60 2009/05/04 16:17:06 armin76 Exp $
+
+  04 May 2009; Raúl Porcel <armin76@gentoo.org> MIME-tools-5.427.ebuild:
+  alpha/ia64/sparc stable wrt #268213
 
   03 May 2009; Markus Meier <maekke@gentoo.org> MIME-tools-5.427.ebuild:
   amd64 stable, bug #268213
