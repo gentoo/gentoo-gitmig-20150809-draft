@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_dnssd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnssd/ChangeLog,v 1.6 2009/05/03 10:48:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_dnssd/ChangeLog,v 1.7 2009/05/04 20:33:13 arfrever Exp $
+
+  04 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  files/mod_dnssd-0.6-ldflags.patch:
+  Fix mod_dnssd-0.6-ldflags.patch to properly respect LDFLAGS (bug #266433).
 
 *mod_dnssd-0.6 (03 May 2009)
 
