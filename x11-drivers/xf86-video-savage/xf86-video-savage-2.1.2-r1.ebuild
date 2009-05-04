@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.1.2-r1.ebuild,v 1.10 2009/03/13 16:00:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-savage/xf86-video-savage-2.1.2-r1.ebuild,v 1.11 2009/05/04 16:43:30 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -21,9 +21,11 @@ DEPEND="${RDEPEND}
 	dri? ( x11-proto/xf86driproto
 			>=x11-libs/libdrm-2 )"
 
-CONFIGURE_OPTIONS="$(use_enable dri)"
-
 PATCHES="${FILESDIR}/${PV}-fix-respawn-crash.patch"
+
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable dri)"
+}
 
 pkg_postinst() {
 	x-modular_pkg_postinst
