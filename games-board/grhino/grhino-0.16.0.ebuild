@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.7 2008/05/02 18:50:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/grhino/grhino-0.16.0.ebuild,v 1.8 2009/05/04 02:26:42 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Reversi game for GNOME, supporting the Go/Game Text Protocol"
@@ -18,32 +19,27 @@ RDEPEND="gnome? ( =gnome-base/libgnomeui-2* )
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	sed -i '/^(\|locale\|help\|omf\|icon\|)/s:@datadir@:/usr/share:' \
 		Makefile.in \
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	if use gnome || use gtp; then
 		egamesconf \
 			--localedir=/usr/share/locale \
 			$(use_enable gnome) \
 			$(use_enable gtp) \
-			$(use_enable nls) \
-			|| die
+			$(use_enable nls)
 	else
 		egamesconf \
+			--localedir=/usr/share/locale \
 			--enable-gtp \
 			--disable-gnome \
-			--localedir=/usr/share/locale \
-			$(use_enable nls) \
-			|| die
+			$(use_enable nls)
 	fi
-	emake || die "emake failed"
 }
 
 src_install() {
