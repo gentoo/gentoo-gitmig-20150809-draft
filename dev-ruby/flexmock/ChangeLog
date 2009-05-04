@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/flexmock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.3 2009/04/29 18:09:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flexmock/ChangeLog,v 1.4 2009/05/04 11:51:45 flameeyes Exp $
+
+  04 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  flexmock-0.8.6.ebuild:
+  Fix src_test when Ruby 1.9 is not present.
 
 *flexmock-0.8.6 (29 Apr 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.16.ebuild,v 1.2 2009/04/20 00:20:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.16.ebuild,v 1.3 2009/05/04 11:52:16 flameeyes Exp $
 
 inherit ruby
 
@@ -27,7 +27,8 @@ src_compile() {
 
 src_test() {
 	for ruby in $USE_RUBY; do
-		[[ -n `type -p $ruby` ]] && $ruby $(type -p rake) test || die "testsuite failed"
+		[[ -n `type -p $ruby` ]] || continue
+		$ruby $(type -p rake) test || die "testsuite failed"
 	done
 }
 

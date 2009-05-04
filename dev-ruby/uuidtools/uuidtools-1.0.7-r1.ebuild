@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-1.0.7-r1.ebuild,v 1.1 2009/04/27 12:48:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uuidtools/uuidtools-1.0.7-r1.ebuild,v 1.2 2009/05/04 11:53:55 flameeyes Exp $
 
 inherit ruby eutils
 
@@ -36,7 +36,8 @@ src_compile() {
 
 src_test() {
 	for ruby in $USE_RUBY; do
-		[[ -n `type -p $ruby` ]] && $ruby $(type -p rake) spec:normal || die "testsuite failed"
+		[[ -n `type -p $ruby` ]] || continue
+		$ruby $(type -p rake) spec:normal || die "testsuite failed"
 	done
 }
 
