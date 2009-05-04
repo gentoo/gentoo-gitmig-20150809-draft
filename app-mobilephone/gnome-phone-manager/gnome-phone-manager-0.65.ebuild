@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.51.ebuild,v 1.1 2008/06/05 21:50:54 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/gnome-phone-manager-0.65.ebuild,v 1.1 2009/05/04 23:34:07 eva Exp $
+
+EAPI="2"
 
 inherit gnome2
 
@@ -13,24 +15,28 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 # telepathy support is considered experimental
 
-RDEPEND=">=x11-libs/gtk+-2.10
-	>=gnome-base/gconf-2
-	>=dev-libs/glib-2
-	>=media-libs/gstreamer-0.10
+RDEPEND="dev-libs/glib:2
+	>=x11-libs/gtk+-2.10
 	>=gnome-base/orbit-2
-	>=dev-libs/openobex-1
-	>=app-mobilephone/gnokii-0.6.24
-	>=net-wireless/bluez-libs-3.12
+	>=gnome-base/gconf-2
 	>=gnome-base/libglade-2
 	>=gnome-extra/evolution-data-server-1.2.3
-	>net-wireless/gnome-bluetooth-0.8
-	>=dev-libs/dbus-glib-0.71
+	media-libs/libcanberra[gtk]
+	>=app-mobilephone/gnokii-0.6.27[bluetooth]
+	|| (
+		net-wireless/bluez
+		>=net-wireless/bluez-libs-3.12 )
+	dev-libs/dbus-glib
+	dev-libs/openobex
+	>=net-wireless/gnome-bluetooth-2.27
+	media-libs/libcanberra[gtk]
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=app-text/gtkspell-2"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.35.5
 	dev-util/pkgconfig"
+# gnome-common needed for eautoreconf
 
 DOCS="README NEWS AUTHORS ChangeLog"
 
