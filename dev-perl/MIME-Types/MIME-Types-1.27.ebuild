@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/MIME-Types-1.27.ebuild,v 1.5 2009/05/03 17:58:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Types/MIME-Types-1.27.ebuild,v 1.6 2009/05/04 16:15:51 armin76 Exp $
 
 MODULE_AUTHOR=MARKOV
 inherit perl-module
@@ -9,7 +9,7 @@ DESCRIPTION="Definition of MIME types"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="test"
 SRC_TEST="do"
 
