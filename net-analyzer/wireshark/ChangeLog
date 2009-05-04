@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.165 2009/04/11 04:57:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.166 2009/05/04 16:24:10 pva Exp $
+
+  04 May 2009; Peter Volkov <pva@gentoo.org> -wireshark-1.0.6-r1.ebuild,
+  wireshark-1.0.7, wireshark-1.1.3:
+  tshark should not be suid, bug #268324, thank Wolfgang Goetz for report.
+  Remove old.
 
   11 Apr 2009; Jeroen Roovers <jer@gentoo.org> wireshark-1.0.7.ebuild:
   Stable for HPPA (bug #264571).

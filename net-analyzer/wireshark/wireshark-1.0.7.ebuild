@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.7.ebuild,v 1.5 2009/04/11 04:57:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.7.ebuild,v 1.6 2009/05/04 16:24:10 pva Exp $
 
 EAPI=1
 WANT_AUTOMAKE="1.9"
@@ -130,8 +130,6 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	fowners 0:wireshark /usr/bin/tshark
-	fperms 6550 /usr/bin/tshark
 	use pcap && fowners 0:wireshark /usr/bin/dumpcap
 	use pcap && fperms 6550 /usr/bin/dumpcap
 
