@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.6.ebuild,v 1.6 2009/05/03 12:57:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.6.ebuild,v 1.7 2009/05/04 06:57:41 mr_bones_ Exp $
 
 EAPI="2"
 inherit autotools eutils libtool
@@ -45,7 +45,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# for old libtool compatibility #245544 
+	# for old libtool compatibility #245544
 	local dir
 	for dir in m4 lib/m4 libextra/m4 ; do
 		rm -f ${dir}/lt* ${dir}/libtool.m4
