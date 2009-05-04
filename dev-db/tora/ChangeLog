@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/tora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.67 2009/04/23 17:59:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/ChangeLog,v 1.68 2009/05/04 16:52:32 dertobi123 Exp $
+
+  04 May 2009; Tobias Scherbaum <dertobi123@gentoo.org> ChangeLog:
+  Add dep on dev-db/oracle-instantclient-sqlplus for +oci8-instant-client,
+  #258124
 
   23 Apr 2009; Tobias Scherbaum <dertobi123@gentoo.org> tora-2.0.0.ebuild:
   Remove moc files generated with qt-4.4, #259575
