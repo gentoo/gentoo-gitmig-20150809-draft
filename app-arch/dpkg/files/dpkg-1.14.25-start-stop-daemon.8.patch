@@ -1,0 +1,17 @@
+--- dpkg-1.14.25/man/Makefile.am.orig	2009-02-01 07:18:59.000000000 +0100
++++ dpkg-1.14.25/man/Makefile.am	2009-05-04 17:02:32.000000000 +0200
+@@ -100,9 +100,13 @@
+ 	dselect.1 \
+ 	dselect.cfg.5 \
+ 	install-info.8 \
+-	start-stop-daemon.8 \
+ 	update-alternatives.8
+ 
++if WITH_START_STOP_DAEMON
++dist_man_MANS = \
++	start-stop-daemon.8
++endif
++
+ EXTRA_DIST = \
+ 	po/po4a.cfg \
+ 	po/dpkg-man.pot
