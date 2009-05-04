@@ -1,0 +1,13 @@
+--- amavisd.conf-sample.orig	2009-05-04 19:14:20.000000000 +0200
++++ amavisd.conf-sample	2009-05-04 19:14:57.000000000 +0200
+@@ -102,8 +102,8 @@
+ $enable_db = 1;              # enable use of BerkeleyDB/libdb (SNMP and nanny)
+ $enable_global_cache = 1;    # enable use of libdb-based cache if $enable_db=1
+ 
+-$enable_dkim_verification = 1;  # enable DKIM signatures verification
+-$enable_dkim_signing = 1;    # load DKIM signing code, keys defined by dkim_key
++$enable_dkim_verification = 0;  # enable DKIM signatures verification
++$enable_dkim_signing = 0;    # load DKIM signing code, keys defined by dkim_key
+ 
+ # MTA SETTINGS, UNCOMMENT AS APPROPRIATE,
+ # both $forward_method and $notify_method default to 'smtp:[127.0.0.1]:10025'

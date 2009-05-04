@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.135 2009/03/07 14:06:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.136 2009/05/04 17:21:39 dertobi123 Exp $
+
+*amavisd-new-2.6.3 (04 May 2009)
+
+  04 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +files/amavisd-new-2.6.3-amavisd.conf-gentoo.patch,
+  +files/amavisd-new-2.6.3-dkimconf.patch, +amavisd-new-2.6.3.ebuild:
+  Version bump, fixes #258589 and #255077
 
   07 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> files/amavisd.rc6:
   Fix init.d for openrc. Bug 259086. Thanks to Ian Pickworth

@@ -1,0 +1,115 @@
+--- amavisd.conf-sample.orig	2009-04-22 02:23:58.000000000 +0200
++++ amavisd.conf-sample	2009-05-04 19:13:20.000000000 +0200
+@@ -74,14 +74,14 @@
+ 
+ # Set the user and group to which the daemon will change if started as root
+ # (otherwise just keeps the UID unchanged, and these settings have no effect):
+-$daemon_user  = 'vscan';   # (no default;  customary: vscan or amavis), -u
+-$daemon_group = 'vscan';   # (no default;  customary: vscan or amavis), -g
++$daemon_user  = 'amavis';   # (no default;  customary: vscan or amavis), -u
++$daemon_group = 'amavis';   # (no default;  customary: vscan or amavis), -g
+ 
+ # Runtime working directory (cwd), and a place where
+ # temporary directories for unpacking mail are created.
+ # (no trailing slash, may be a scratch file system)
+-$TEMPBASE = $MYHOME;	        # (must be set if other config vars use is), -T
+-#$TEMPBASE = "$MYHOME/tmp";     # prefer to keep home dir /var/amavis clean?
++#$TEMPBASE = $MYHOME;	        # (must be set if other config vars use is), -T
++$TEMPBASE = "$MYHOME/tmp";     # prefer to keep home dir /var/amavis clean?
+ 
+ #$db_home = "$MYHOME/db";    # DB databases directory, default "$MYHOME/db", -D
+ 
+@@ -500,22 +500,43 @@
+ # default setting of an associative array %final_destiny_by_ccat which is
+ # backwards compatible and contains references to these traditional variables:
+ #
+-$final_virus_destiny      = D_DISCARD; # (defaults to D_DISCARD)
+-$final_banned_destiny     = D_BOUNCE;  # (defaults to D_BOUNCE)
+-$final_spam_destiny       = D_BOUNCE;  # (defaults to D_BOUNCE)
+-$final_bad_header_destiny = D_PASS;    # (defaults to D_PASS)
++#$final_virus_destiny      = D_DISCARD; # (defaults to D_DISCARD)
++#$final_banned_destiny     = D_BOUNCE;  # (defaults to D_BOUNCE)
++#$final_spam_destiny       = D_BOUNCE;  # (defaults to D_BOUNCE)
++#$final_bad_header_destiny = D_PASS;    # (defaults to D_PASS)
++
++########
++#
++# Please think about what you are doing when you set these options.
++# If necessary, question your origanization's e-mail policies:
++#
++# D_BOUNCE contributes to the overall spread of virii and spam on the
++# internet. Both the envelope and header from addresses can be forged
++# accurately with no effort, causing the bounces to go to innocent parties,
++# whose addresses have been forged.
++# 
++# D_DISCARD breaks internet mail specifications. However, with a
++# properly implemented Quaratine system, the concern for breaking the
++# specification is addressed to some extent.
++#
++# D_PASS is the safest way to handle e-mails. You must implement
++# client-side filtering to handle this method.
++#
++# -Cory Visi <merlin@gentoo.org> 07/28/04
++#
++#######
+ 
+ # to explicitly list all (or most) possible contents category (ccat) keys:
+-#%final_destiny_by_ccat = (
+-#  CC_VIRUS,      D_DISCARD,
+-#  CC_BANNED,     D_BOUNCE,
+-#  CC_UNCHECKED,  D_PASS,
+-#  CC_SPAM,       D_BOUNCE,
+-#  CC_BADH,       D_PASS,
+-#  CC_OVERSIZED,  D_BOUNCE,
+-#  CC_CLEAN,      D_PASS,
+-#  CC_CATCHALL,   D_PASS,
+-#);
++%final_destiny_by_ccat = (
++  CC_VIRUS,      D_DISCARD,
++  CC_BANNED,     D_BOUNCE,
++  CC_UNCHECKED,  D_PASS,
++  CC_SPAM,       D_DISCARD,
++  CC_BADH,       D_PASS,
++  CC_OVERSIZED,  D_BOUNCE,
++  CC_CLEAN,      D_PASS,
++  CC_CATCHALL,   D_PASS,
++);
+ 
+ # to rely on a catchall ccat key and only list exceptions (alternative 1):
+ #%final_destiny_by_ccat = (
+@@ -694,7 +715,7 @@
+ #   or a directory (no trailing slash)
+ #   (the default value is undef, meaning no quarantine)
+ #
+-$QUARANTINEDIR = '/var/virusmails';  # -Q
++$QUARANTINEDIR = "$MYHOME/quarantine";
+ 
+ #$quarantine_subdir_levels = 1;  # add level of subdirs to disperse quarantine
+ 
+@@ -1674,7 +1695,7 @@
+ # NOTE: if $daemon_chroot_dir is nonempty, the directories will be
+ #       relative to the chroot directory specified;
+ 
+-$path = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin';
++$path = '/usr/local/sbin:/usr/local/bin:/usr/sbin:/sbin:/usr/bin:/bin:/opt/bin';
+ 
+ # For external programs specify one string or a search list of strings (first
+ # match wins). The string (or: each string in a list) may be an absolute path,
+@@ -2188,7 +2209,7 @@
+ 
+   ### http://www.nai.com/
+   ['NAI McAfee AntiVirus (uvscan)', 'uvscan',
+-    '--secure -rv --mime --summary --noboot - {}', [0], [13],
++    '--secure -rv --mime --summary --noboot --mailbox --program --timeout 180 - {}', [0], [13],
+     qr/(?x) Found (?:
+         \ the\ (.+)\ (?:virus|trojan)  |
+         \ (?:virus|trojan)\ or\ variant\ ([^ ]+)  |
+@@ -2333,7 +2354,7 @@
+ 
+   ### http://www.f-prot.com/   - backs up F-Prot Daemon (old)
+   ['FRISK F-Prot Antivirus', ['f-prot','f-prot.sh'],
+-    '-dumb -archive -packed {}', [0,8], [3,6],   # or: [0], [3,6,8],
++	'-dumb -ai -archive -packed -server {}', [0,8], [3,6],   # or: [0], [3,6,8],
+     qr/(?:Infection:|security risk named) (.+)|\s+contains\s+(.+)$/m ],
+ 
+   ### http://www.trendmicro.com/   - backs up Trophie
