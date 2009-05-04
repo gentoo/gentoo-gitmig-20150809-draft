@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libFS
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.30 2008/09/24 09:17:53 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/ChangeLog,v 1.31 2009/05/04 15:13:03 ssuominen Exp $
+
+  04 May 2009; Samuli Suominen <ssuominen@gentoo.org> libFS-1.0.0.ebuild,
+  libFS-1.0.1.ebuild:
+  Move use_ functions out of global scope.
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> libFS-1.0.1.ebuild:
   keyword ~x86-fbsd

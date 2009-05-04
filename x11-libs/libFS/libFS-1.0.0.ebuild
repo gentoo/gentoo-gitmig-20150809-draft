@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/libFS-1.0.0.ebuild,v 1.14 2007/02/04 18:21:39 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libFS/libFS-1.0.0.ebuild,v 1.15 2009/05/04 15:13:03 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -17,4 +17,6 @@ RDEPEND="x11-libs/xtrans
 	x11-proto/fontsproto"
 DEPEND="${RDEPEND}"
 
-CONFIGURE_OPTIONS="$(use_enable ipv6)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable ipv6)"
+}
