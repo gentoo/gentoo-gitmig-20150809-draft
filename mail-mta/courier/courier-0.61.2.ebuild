@@ -1,14 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.61.2.ebuild,v 1.1 2009/05/04 13:33:47 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.61.2.ebuild,v 1.2 2009/05/04 17:16:23 hanno Exp $
 
 inherit eutils flag-o-matic
 
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
-S="${WORKDIR}/${P}"
-
 SLOT="0"
 LICENSE="GPL-2"
 # not in keywords due to missing dependencies: ~arm ~s390 ~ppc64 ~mips
@@ -45,8 +43,6 @@ PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	pam? ( net-mail/mailbase )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )"
 
-filter-flags '-fomit-frame-pointer'
-
 src_unpack() {
 	use fam || (
 		ewarn "File Alteration Monitor (FAM) is disabled"
@@ -57,10 +53,11 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use norewrite && epatch "${FILESDIR}/norewrite.patch"
-
 }
 
 src_compile() {
+	filter-flags '-fomit-frame-pointer'
+
 	local myconf
 	myconf="`use_with ipv6` \
 		`use_with ldap ldapaliasd` `use_enable ldap maildropldap`"
