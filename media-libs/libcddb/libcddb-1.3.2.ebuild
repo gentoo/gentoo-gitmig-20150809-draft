@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-1.3.2.ebuild,v 1.1 2009/04/26 19:45:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcddb/libcddb-1.3.2.ebuild,v 1.2 2009/05/04 06:35:39 aballier Exp $
 
 EAPI="2"
+
+inherit libtool
 
 DESCRIPTION="A library for accessing a CDDB server"
 HOMEPAGE="http://libcddb.sourceforge.net"
@@ -18,6 +20,11 @@ RESTRICT="test"
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )
 	iconv? ( virtual/libiconv )"
+
+src_prepare() {
+	# needed for sane .so versionning on FreeBSD
+	elibtoolize
+}
 
 src_configure() {
 	econf --without-cdio \
