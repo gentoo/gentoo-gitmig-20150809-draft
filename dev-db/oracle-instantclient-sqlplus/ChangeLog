@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/oracle-instantclient-sqlplus
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/ChangeLog,v 1.25 2008/12/31 09:10:02 dertobi123 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/ChangeLog,v 1.26 2009/05/04 17:00:05 dertobi123 Exp $
+
+*oracle-instantclient-sqlplus-11.1.0.7.0-r1 (04 May 2009)
+*oracle-instantclient-sqlplus-10.2.0.3-r1 (04 May 2009)
+
+  04 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +oracle-instantclient-sqlplus-10.2.0.3-r1.ebuild,
+  -oracle-instantclient-sqlplus-11.1.0.7.0.ebuild,
+  +oracle-instantclient-sqlplus-11.1.0.7.0-r1.ebuild:
+  Revbump, fix install glogin.sql autoload, #255090
 
   31 Dec 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   oracle-instantclient-sqlplus-11.1.0.7.0.ebuild:
