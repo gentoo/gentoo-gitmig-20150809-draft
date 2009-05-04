@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-2.2.2.ebuild,v 1.1 2009/04/30 16:22:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-virtualbox/xf86-input-virtualbox-2.2.2.ebuild,v 1.2 2009/05/04 06:58:20 mr_bones_ Exp $
 
 EAPI=2
 
@@ -65,7 +65,7 @@ src_install() {
 		# xorg-server-1.6.x (currently on the official x11 overlay)
 		if has_version ">=x11-base/xorg-server-1.6" ; then
 				newins vboxmouse_drv_16.so vboxmouse_drv.so
-		# xorg-server-1.5.x 
+		# xorg-server-1.5.x
 		elif has_version ">=x11-base/xorg-server-1.5" \
 		&& has_version "<x11-base/xorg-server-1.6" ; then
 				newins vboxmouse_drv_15.so vboxmouse_drv.so
