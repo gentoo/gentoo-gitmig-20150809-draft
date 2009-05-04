@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunffb/xf86-video-sunffb-1.1.0.ebuild,v 1.4 2008/11/26 23:21:29 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sunffb/xf86-video-sunffb-1.1.0.ebuild,v 1.5 2009/05/04 16:18:25 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -20,4 +20,6 @@ DEPEND="${RDEPEND}
 	dri? ( x11-proto/xf86driproto
 			>=x11-libs/libdrm-2 )"
 
-CONFIGURE_OPTIONS="$(use_enable dri)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable dri)"
+}
