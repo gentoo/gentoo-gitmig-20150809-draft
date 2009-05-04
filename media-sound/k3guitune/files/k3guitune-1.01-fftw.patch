@@ -1,0 +1,19 @@
+diff -Naur k3guitune-1.01/k3guitune/osziview.cpp k3guitune-1.01_1/k3guitune/osziview.cpp
+--- k3guitune-1.01/k3guitune/osziview.cpp	2007-12-15 18:16:27.000000000 +0500
++++ k3guitune-1.01_1/k3guitune/osziview.cpp	2008-10-23 03:21:11.000000000 +0600
+@@ -254,12 +254,12 @@
+     }
+     fftw_in  = (double*)       fftw_malloc(sizeof(double) * nr);
+     fftw_out = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * nr);
+-    fftw_p   = fftw_plan_dft_r2c_1d(nr, fftw_in, fftw_out, FFTW_FORWARD);
++    fftw_p   = fftw_plan_dft_r2c_1d(nr, fftw_in, fftw_out, FFTW_MEASURE);
+ 
+     fftw_in2  = (double*)       fftw_malloc(sizeof(double) * nr * 2);
+     fftw_out2 = (fftw_complex*) fftw_malloc(sizeof(fftw_complex) * nr * 2);
+-    fftw_p2   = fftw_plan_dft_r2c_1d(nr*2, fftw_in2, fftw_out2, FFTW_FORWARD);
+-    fftw_p3   = fftw_plan_dft_c2r_1d(nr*2, fftw_out2, fftw_in2, FFTW_BACKWARD);
++    fftw_p2   = fftw_plan_dft_r2c_1d(nr*2, fftw_in2, fftw_out2, FFTW_MEASURE);
++    fftw_p3   = fftw_plan_dft_c2r_1d(nr*2, fftw_out2, fftw_in2, FFTW_MEASURE);
+ }
+ 
+    void OsziView::setNotch(bool n) 
