@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/IO-Compress-2.017.ebuild,v 1.1 2009/04/25 14:00:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Compress/IO-Compress-2.019.ebuild,v 1.1 2009/05/04 14:41:09 tove Exp $
 
 MODULE_AUTHOR=PMQS
 inherit perl-module
