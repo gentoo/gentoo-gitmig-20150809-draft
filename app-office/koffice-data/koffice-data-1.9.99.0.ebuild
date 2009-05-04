@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/koffice-data-1.9.99.0.ebuild,v 1.1 2009/04/30 20:31:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/koffice-data-1.9.99.0.ebuild,v 1.2 2009/05/04 06:55:56 mr_bones_ Exp $
 
 EAPI="2"
-
 
 KMNAME="koffice"
 KMNOMODULE="true"
