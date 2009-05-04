@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0-r1.ebuild,v 1.11 2009/03/13 15:25:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/xf86-video-ati-6.8.0-r1.ebuild,v 1.12 2009/05/04 15:54:20 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -25,7 +25,9 @@ DEPEND="${RDEPEND}
 			x11-proto/xf86driproto
 			>=x11-libs/libdrm-2 )"
 
-CONFIGURE_OPTIONS="$(use_enable dri)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable dri)"
+}
 
 PATCHES=(
 	"${FILESDIR}/${PV}/0001-Bump-CRTC-size-limits-on-AVIVO-chips-so-30-displays.patch"

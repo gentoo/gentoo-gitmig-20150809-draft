@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.2.1-r1.ebuild,v 1.9 2009/03/13 16:08:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-via/xf86-video-via-0.2.1-r1.ebuild,v 1.10 2009/05/04 15:56:17 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -24,4 +24,7 @@ DEPEND="${RDEPEND}
 		x11-libs/libX11 )"
 
 PATCHES="${FILESDIR}/missing-assert.patch"
-CONFIGURE_OPTIONS="$(use_enable dri)"
+
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable dri)"
+}
