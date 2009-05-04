@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/lbxproxy/lbxproxy-1.0.1.ebuild,v 1.6 2008/01/13 09:35:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/lbxproxy/lbxproxy-1.0.1.ebuild,v 1.7 2009/05/04 14:50:10 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -18,4 +18,6 @@ DEPEND="${RDEPEND}
 	x11-proto/xproxymanagementprotocol"
 IUSE="ipv6"
 
-CONFIGURE_OPTIONS="$(use_enable ipv6)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable ipv6)"
+}

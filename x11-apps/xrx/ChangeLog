@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xrx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrx/ChangeLog,v 1.14 2008/10/11 22:24:36 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrx/ChangeLog,v 1.15 2009/05/04 14:48:24 ssuominen Exp $
+
+  04 May 2009; Samuli Suominen <ssuominen@gentoo.org> xrx-1.0.1.ebuild:
+  Move use_ functions out of global scope.
 
   11 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> xrx-1.0.1.ebuild:
   Fix build dependencies.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.8.ebuild,v 1.8 2009/04/22 21:01:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/xdm-1.1.8.ebuild,v 1.9 2009/05/04 14:52:34 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -29,11 +29,13 @@ DEPEND="${RDEPEND}
 PATCHES="${FILESDIR}/wtmp.patch
 	${FILESDIR}/xwilling-hang.patch"
 
-CONFIGURE_OPTIONS="$(use_enable ipv6)
-	$(use_with pam)
-	--disable-xprint
-	--with-default-vt=${DEFAULTVT}
-	--with-xdmconfigdir=/etc/X11/xdm"
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable ipv6)
+		$(use_with pam)
+		--disable-xprint
+		--with-default-vt=${DEFAULTVT}
+		--with-xdmconfigdir=/etc/X11/xdm"
+}
 
 src_install() {
 	x-modular_src_install
