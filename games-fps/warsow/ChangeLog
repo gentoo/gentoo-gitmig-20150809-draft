@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.20 2009/01/19 21:48:10 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.21 2009/05/04 03:16:48 mr_bones_ Exp $
+
+  04 May 2009; Michael Sterrett <mr_bones_@gentoo.org> warsow-0.4.2.ebuild:
+  EAPI=2
 
   19 Jan 2009; Tristan Heaven <nyhm@gentoo.org> warsow-0.4.2.ebuild:
   Add warsow to LICENSE

@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.5 2009/01/19 21:48:10 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.6 2009/05/04 03:16:48 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs versionator games
 
 MY_P=${PN}_$(delete_version_separator 2)
@@ -38,10 +39,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}_src/source
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "/fs_basepath =/ s:\.:${GAMES_DATADIR}/${PN}:" \
 		qcommon/files.c \
