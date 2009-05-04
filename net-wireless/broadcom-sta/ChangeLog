@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.5 2009/05/03 01:25:18 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.6 2009/05/04 23:57:49 matsuu Exp $
+
+  04 May 2009; MATSUU Takuto <matsuu@gentoo.org>
+  broadcom-sta-5.10.79.10-r3.ebuild, broadcom-sta-5.10.91.9.ebuild:
+  Added check_license to pkg_setup.
 
 *broadcom-sta-5.10.91.9 (03 May 2009)
 
