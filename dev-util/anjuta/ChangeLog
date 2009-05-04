@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.90 2009/01/15 23:05:59 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.91 2009/05/04 20:04:20 eva Exp $
+
+  04 May 2009; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Add gnome as backing herd.
 
   15 Jan 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Compnerd retired.
