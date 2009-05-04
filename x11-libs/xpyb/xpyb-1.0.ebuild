@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.0.ebuild,v 1.1 2009/01/13 02:41:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/xpyb-1.0.ebuild,v 1.2 2009/05/04 15:41:27 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -17,5 +17,8 @@ RDEPEND=">=x11-libs/libxcb-1.1
 	>=dev-lang/python-2.5"
 DEPEND="${RDEPEND}
 	>=x11-proto/xcb-proto-1.2"
-CONFIGURE_OPTIONS="$(use_enable selinux xselinux)"
 DOCS="NEWS README"
+
+pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_enable selinux xselinux)"
+}

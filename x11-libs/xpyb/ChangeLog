@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xpyb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.4 2009/01/13 02:41:56 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpyb/ChangeLog,v 1.5 2009/05/04 15:41:27 ssuominen Exp $
+
+  04 May 2009; Samuli Suominen <ssuominen@gentoo.org> xpyb-0.9.ebuild,
+  xpyb-1.0.ebuild:
+  Move use_ functions out of global scope.
 
 *xpyb-1.0 (13 Jan 2009)
 
