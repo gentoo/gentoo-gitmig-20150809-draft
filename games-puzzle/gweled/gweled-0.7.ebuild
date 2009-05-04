@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.7.ebuild,v 1.5 2008/04/07 17:08:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gweled/gweled-0.7.ebuild,v 1.6 2009/05/04 02:21:22 mr_bones_ Exp $
 
+EAPI=2
 inherit flag-o-matic games
 
 DESCRIPTION="Bejeweled clone game"
@@ -20,27 +21,26 @@ RDEPEND=">=x11-libs/gtk+-2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i \
 		-e "209d" \
 		-e "368 s/swap_sfx/click_sfx/" \
-		"${S}/src/main.c" \
+		src/main.c \
 		|| die "sed failed"
 	sed -i \
-		-e "/free (message)/ s/free/g_free/" "${S}/src/graphic_engine.c" \
+		-e "/free (message)/ s/free/g_free/" \
+		src/graphic_engine.c \
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	filter-flags -fomit-frame-pointer
 	append-ldflags -Wl,--export-dynamic
-	econf --disable-setgid || die
-	emake || die "emake failed"
+	econf --disable-setgid
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	# FIXME: /var/lib is hard-coded.  Need to patch this.
 	touch "${D}/var/lib/games/gweled.timed.scores"
 	fperms 664 /var/lib/games/gweled.timed.scores
