@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/fbpager
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/ChangeLog,v 1.11 2008/09/22 13:02:30 omp Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpager/ChangeLog,v 1.12 2009/05/04 02:53:05 lack Exp $
+
+*fbpager-20090221 (04 May 2009)
+
+  04 May 2009; Jim Ramsay <lack@gentoo.org> +fbpager-20090221.ebuild,
+  metadata.xml:
+  Added latest upstream development snapshot (Bug #236846)
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Change herd from commonbox to desktop-wm.
