@@ -1,0 +1,125 @@
+diff -ru atanks-3.5-r1.orig/Makefile atanks-3.5-r1/Makefile
+--- atanks-3.5-r1.orig/Makefile	2009-03-25 04:39:23.000000000 -0400
++++ atanks-3.5-r1/Makefile	2009-05-03 19:40:02.000000000 -0400
+@@ -4,7 +4,7 @@
+ BINPREFIX = $(PREFIX)
+ 
+ BINDIR = ${BINPREFIX}games/bin/
+-INSTALLDIR = ${PREFIX}share/games/atanks 
++INSTALLDIR = ${PREFIX}share/games/atanks
+ 
+ export VERSION
+ export PREFIX
+diff -ru atanks-3.5-r1.orig/src/Makefile atanks-3.5-r1/src/Makefile
+--- atanks-3.5-r1.orig/src/Makefile	2009-03-23 04:58:36.000000000 -0400
++++ atanks-3.5-r1/src/Makefile	2009-05-03 19:41:56.000000000 -0400
+@@ -3,9 +3,6 @@
+ MODULES = atanks.o beam.o button.o environment.o explosion.o fade.o files.o globaldata.o \
+           missile.o perlin.o physobj.o player.o satellite.o sky.o tank.o team.o teleport.o virtobj.o
+ 
+-CPP=g++
+-CC=gcc
+-LD=g++
+ LIB=ar
+ WINDRES=
+ FLAGS += -DDATA_DIR=\"${INSTALLDIR}\"
+@@ -13,10 +10,10 @@
+ WFLAGS = 
+ OFLAGS = 
+ LFLAGS +=
+-LDFLAGS =  `allegro-config --libs`
++LDFLAGS +=  `allegro-config --libs`
+ 
+-CFLAGS += -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
+-# CFLAGS += -g	# debug vs optimize flags
++CXXFLAGS += -Wall -Iinclude # -fprofile-arcs -ftest-coverage 
++# CXXFLAGS += -g	# debug vs optimize flags
+ # No, let the user decide!
+ 
+ SRCS  = $(MODULES:.o=.cpp)
+@@ -33,65 +30,65 @@
+ $(MODULES): Makefile
+ 
+ atanks.o:
+-	$(CPP) -c atanks.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c atanks.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ button.o:
+-	$(CPP) -c button.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c button.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ environment.o:
+-	$(CPP) -c environment.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c environment.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ explosion.o:
+-	$(CPP) -c explosion.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c explosion.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ files.o:
+-	$(CPP) -c files.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c files.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ # No longer needed, as floattext is fully inline now!
+ # floattext.o:
+-# 	$(CPP) -c floattext.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++# 	$(CXX) -c floattext.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ globaldata.o:
+-	$(CPP) -c globaldata.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c globaldata.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ missile.o:
+-	$(CPP) -c missile.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c missile.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ teleport.o:
+-	$(CPP) -c teleport.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c teleport.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ physobj.o:
+-	$(CPP) -c physobj.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c physobj.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ player.o:
+-	$(CPP) -c player.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c player.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ tank.o:
+-	$(CPP) -c tank.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c tank.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ team.o:
+-	$(CPP) -c team.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c team.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ virtobj.o:
+-	$(CPP) -c virtobj.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c virtobj.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ fade.o:
+-	$(CPP) -c fade.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c fade.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ perlin.o:
+-	$(CPP) -c perlin.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c perlin.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ sky.o:
+-	$(CPP) -c sky.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c sky.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ satellite.o:
+-	$(CPP) -c satellite.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c satellite.cpp -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ %.o: %.cpp %.h
+-	$(CPP) -c $< -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CFLAGS)
++	$(CXX) -c $< -o $@ $(FLAGS) $(LFLAGS) $(OFLAGS) $(CXXFLAGS)
+ 
+ $(OUTPUT): $(OBJECTS) $(MODULES)
+-	$(CPP) $(MODULES) -o $(OUTPUT) $(FLAGS) $(LFLAGS) $(LDFLAGS) $(SFLAGS)
++	$(CXX) $(MODULES) -o $(OUTPUT) $(FLAGS) $(LFLAGS) $(LDFLAGS) $(SFLAGS)
+ 	# strip $(OUTPUT)
+ 
+ # dependencies:

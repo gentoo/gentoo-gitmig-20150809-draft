@@ -1,6 +1,12 @@
 # ChangeLog for games-action/atanks
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.37 2009/03/18 22:36:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/atanks/ChangeLog,v 1.38 2009/05/04 00:00:42 mr_bones_ Exp $
+
+*atanks-3.5 (04 May 2009)
+
+  04 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/atanks-3.5-build.patch, +atanks-3.5.ebuild:
+  version bump (bug #267097)
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> atanks-3.2.ebuild:
   stable ppc, bug 259251
