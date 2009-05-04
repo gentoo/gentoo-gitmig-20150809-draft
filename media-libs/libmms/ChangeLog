@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.27 2009/05/03 18:32:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.28 2009/05/04 12:27:08 ssuominen Exp $
 
   03 May 2009; Markus Meier <maekke@gentoo.org> libmms-0.4.ebuild:
   amd64/x86 stable, bug #268294
@@ -13,7 +13,7 @@
 
 *libmms-0.4 (12 Dec 2008)
 
-  12 Dec 2008; <ssuominen@gentoo.org>
+  12 Dec 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/libmms-0.4-nested_comments.patch,
   +files/libmms-0.4-this_keyword.patch, +libmms-0.4.ebuild:
   Version bump for bug 203647, thanks to Gordon and Hans.
