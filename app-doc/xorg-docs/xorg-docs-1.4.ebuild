@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4.ebuild,v 1.14 2008/04/25 20:29:20 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4.ebuild,v 1.15 2009/05/04 15:51:28 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -20,13 +20,15 @@ IUSE="doc"
 
 PATCHES="${FILESDIR}/1.1-allow_manpages_only.patch"
 
-CONFIGURE_OPTIONS="--with-x11docdir=/usr/share/doc/${PF}
-	$(use_enable doc non-man-docs)
-	--disable-txt
-	--disable-pdf
-	--disable-html
-	--disable-ps"
-#	$(use_enable doc txt)"
-#	$(use_enable doc pdf)
-#	$(use_enable doc html)
-#	$(use_enable doc ps)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="--with-x11docdir=/usr/share/doc/${PF}
+		$(use_enable doc non-man-docs)
+		--disable-txt
+		--disable-pdf
+		--disable-html
+		--disable-ps"
+	#	$(use_enable doc txt)"
+	#	$(use_enable doc pdf)
+	#	$(use_enable doc html)
+	#	$(use_enable doc ps)"
+}

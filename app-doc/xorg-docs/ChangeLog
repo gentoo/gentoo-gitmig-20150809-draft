@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/xorg-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.50 2009/01/05 21:43:27 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/ChangeLog,v 1.51 2009/05/04 15:51:28 ssuominen Exp $
+
+  04 May 2009; Samuli Suominen <ssuominen@gentoo.org> xorg-docs-1.4.ebuild,
+  xorg-docs-1.4-r1.ebuild:
+  Move use_ functions out of global scope.
 
   05 Jan 2009; Javier Villavicencio <the_paya@gentoo.org>
   +files/1.4-rename-security.man.patch.bz2, xorg-docs-1.4-r1.ebuild:

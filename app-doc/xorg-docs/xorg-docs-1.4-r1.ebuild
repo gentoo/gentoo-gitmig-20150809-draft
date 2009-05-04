@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4-r1.ebuild,v 1.12 2009/01/05 21:43:27 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xorg-docs/xorg-docs-1.4-r1.ebuild,v 1.13 2009/05/04 15:51:28 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -28,12 +28,15 @@ PATCHES="${FILESDIR}/1.1-allow_manpages_only.patch
 	${FILESDIR}/1.4-sgml-fixes.patch
 	${FILESDIR}/1.4-rename-security.man.patch.bz2"
 
-CONFIGURE_OPTIONS="--with-x11docdir=/usr/share/doc/${PF}
-	$(use_enable doc non-man-docs)
-	$(use_enable doc txt)
-	$(use_enable doc pdf)
-	$(use_enable doc html)
-	$(use_enable doc ps)"
+pkg_setup() {
+	CONFIGURE_OPTIONS="--with-x11docdir=/usr/share/doc/${PF}
+		$(use_enable doc non-man-docs)
+		$(use_enable doc txt)
+		$(use_enable doc pdf)
+		$(use_enable doc html)
+		$(use_enable doc ps)"
 
-# parallel build broken -- https://bugs.gentoo.org/show_bug.cgi?id=170798
+	# parallel build broken -- https://bugs.gentoo.org/show_bug.cgi?id=170798
+}
+
 MAKEOPTS="${MAKEOPTS} -j1"
