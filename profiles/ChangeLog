@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2606 2009/05/04 01:18:34 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2607 2009/05/04 23:27:46 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> ChangeLog:
+  Mask =net-wireless/gnome-bluetooth-2.27* -- requires bluez-4, KEYWORDS on
+  libunique, bug 268487 (forgot to add ChangeLog while editing package.mask)
 
   04 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Masking kde-base/ksudoku-0.4 for removal
