@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r2.ebuild,v 1.1 2008/04/09 02:08:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r2.ebuild,v 1.2 2009/05/04 15:01:36 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -28,9 +28,8 @@ PATCHES="${FILESDIR}/nolisten-tcp-and-black-background.patch
 	${FILESDIR}/gentoo-startx-customization-1.0.8.patch
 	${FILESDIR}/xinit-1.0.4-console-kit.patch"
 
-CONFIGURE_OPTIONS="$(use_with hal consolekit)"
-
 pkg_setup() {
+	CONFIGURE_OPTIONS="$(use_with hal consolekit)"
 	if use hal; then
 		if ! built_with_use sys-apps/dbus X ; then
 			eerror "You MUST build sys-apps/dbus with the X USE flag enabled."
