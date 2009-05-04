@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.61 2009/05/02 09:25:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.62 2009/05/04 12:44:56 hwoarang Exp $
+
+*qca-2.0.2-r1 (04 May 2009)
+
+  04 May 2009; Markos Chandras <hwoarang@gentoo.org> +qca-2.0.2-r1.ebuild,
+  +files/qca-2.0.2-pcfilespath.patch:
+  Apply correct pkgconfig patch. Should fix bug 268090
 
 *qca-2.0.2 (02 May 2009)
 
