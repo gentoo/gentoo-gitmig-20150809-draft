@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/clusterssh-3.18.1-r1.ebuild,v 1.4 2007/07/29 16:59:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/clusterssh/clusterssh-3.18.1-r1.ebuild,v 1.5 2009/05/05 10:44:09 ssuominen Exp $
 
 DESCRIPTION="Concurrent Multi-Server Terminal Access."
 HOMEPAGE="http://clusterssh.sourceforge.net"
@@ -11,11 +11,12 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=dev-lang/perl-5.6.1
+RDEPEND=">=dev-lang/perl-5.6.1
 	dev-perl/perl-tk
 	dev-perl/Config-Simple
 	dev-perl/X11-Protocol
 	x11-apps/xlsfonts"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	# Gentoo perl ebuilds remove podchecker
@@ -31,8 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	cd "${S}"
-	dodoc AUTHORS COPYING INSTALL NEWS README THANKS
+	dodoc AUTHORS NEWS README THANKS
 	dobin src/cssh
 	doman src/cssh.1
 }
