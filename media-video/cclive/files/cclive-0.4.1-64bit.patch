@@ -1,0 +1,23 @@
+From: legatvs <legatvs@gmail.com>
+Date: Tue, 5 May 2009 09:36:21 +0000 (+0300)
+Subject: src/singleton.h: fix precision error reported on 64bit systems.
+X-Git-Url: http://repo.or.cz/w/cclive.git?a=commitdiff_plain;h=6a58aa300a15112d6f5b794bc6cca105aace877d
+
+src/singleton.h: fix precision error reported on 64bit systems.
+---
+
+diff --git a/src/singleton.h b/src/singleton.h
+index 93646cd..6fcc0e4 100644
+--- a/src/singleton.h
++++ b/src/singleton.h
+@@ -26,8 +26,8 @@ private:
+ public:
+     Singleton() {
+         assert(!instance);
+-        int offset = (int)(T*)1 - (int)(Singleton <T>*)(T*)1;
+-        instance = (T*)((int)this+offset);
++        ptrdiff_t offset = (ptrdiff_t)(T*)1 - (ptrdiff_t)(Singleton <T>*)(T*)1;
++        instance = (T*)(this+offset);
+     }
+     virtual ~Singleton() {
+         assert(instance != 0);
