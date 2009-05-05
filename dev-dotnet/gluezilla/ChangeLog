@@ -1,6 +1,16 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.4 2009/04/17 15:42:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.5 2009/05/05 11:39:33 loki_val Exp $
+
+*gluezilla-9999 (05 May 2009)
+*gluezilla-2.4.9999 (05 May 2009)
+*gluezilla-2.2.9999 (05 May 2009)
+*gluezilla-2.0.9999 (05 May 2009)
+
+  05 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +gluezilla-2.0.9999.ebuild, +gluezilla-2.2.9999.ebuild,
+  +gluezilla-2.4.9999.ebuild, +gluezilla-9999.ebuild:
+  Add live ebuilds for trunk and >=2.0 branches
 
   17 Apr 2009; Brent Baude <ranger@gentoo.org> gluezilla-2.2.ebuild:
   Marking gluezilla-2.2 ~ppc for bug 255410
