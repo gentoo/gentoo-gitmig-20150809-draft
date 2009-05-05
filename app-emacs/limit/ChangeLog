@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/limit
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.27 2009/05/05 08:01:39 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/ChangeLog,v 1.28 2009/05/05 17:07:21 ulm Exp $
+
+  05 May 2009; Ulrich Mueller <ulm@gentoo.org>
+  limit-1.14.10_pre20070618.ebuild:
+  Fix dependencies, blocker belongs in RDEPEND only.
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   limit-1.14.10_pre20070618.ebuild:
