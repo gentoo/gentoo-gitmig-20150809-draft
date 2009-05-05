@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.8 2008/04/24 08:57:32 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/blackbox-0.70.1.ebuild,v 1.9 2009/05/05 06:04:15 fauli Exp $
 
 inherit eutils
 
@@ -50,5 +50,5 @@ src_install() {
 	doins "${FILESDIR}/${PN}.desktop"
 
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog* COMPLIANCE LICENSE README* TODO
+	dodoc AUTHORS ChangeLog* COMPLIANCE README* TODO
 }
