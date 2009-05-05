@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.93 2008/08/06 14:33:47 chutzpah Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.94 2009/05/05 19:10:27 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> gxine-0.5.903.ebuild:
+  stable x86, bug 260644
 
   06 Aug 2008; Patrick McLean <chutzpah@gentoo.org> gxine-0.5.903.ebuild:
   Fix sandbox violations without FEATURES=userpriv (bug #233847), clean up
