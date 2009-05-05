@@ -1,6 +1,13 @@
 # ChangeLog for media-video/clive
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.44 2008/12/09 08:56:05 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/clive/ChangeLog,v 1.45 2009/05/05 21:56:16 vapier Exp $
+
+*clive-2.1.11 (05 May 2009)
+
+  05 May 2009; Mike Frysinger <vapier@gentoo.org> +clive-2.1.11.ebuild,
+  metadata.xml:
+  Version bump by Maximilian Grothusmann and yoshi watanabe #254932 by
+  Patrick Hieber.
 
   09 Dec 2008; Alexis Ballier <aballier@gentoo.org> -clive-0.4.11.ebuild,
   -clive-1.0.1.ebuild:

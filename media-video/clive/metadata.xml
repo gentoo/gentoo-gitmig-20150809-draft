@@ -9,5 +9,10 @@
 		Command line tool for extracting videos from Youtube, Google Video,
 		Dailymotion, Guba (free) and Stage6  websites
 	</longdescription>
+	<use>
+		<flag name="clipboard">Support reading from X clipboard</flag>
+		<flag name="pager">Support pager!?</flag>
+		<flag name="password">Support password controlled sites</flag>
+	</use>
 </pkgmetadata>
 
