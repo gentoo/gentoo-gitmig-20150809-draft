@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r1.ebuild,v 1.9 2008/08/10 14:14:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fxscintilla/fxscintilla-1.71-r1.ebuild,v 1.10 2009/05/05 07:40:41 ssuominen Exp $
 
 inherit autotools eutils multilib
 
@@ -13,17 +13,17 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="doc"
 
-DEPEND="=x11-libs/fox-1.4*
+RDEPEND="=x11-libs/fox-1.4*
 	=x11-libs/fox-1.6*"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/1.71-shared-libs.patch || die
-	epatch ${FILESDIR}/1.71-fox-SLOT.patch || die
+	epatch "${FILESDIR}"/1.71-shared-libs.patch \
+		"${FILESDIR}"/1.71-fox-SLOT.patch
 
-	einfo "Running autoreconf..."
 	touch NEWS AUTHORS
 	eautoreconf || die "autoreconf error"
 }
@@ -32,8 +32,8 @@ src_compile () {
 	# Borrowed from wxGTK ebuild
 
 	einfo "Building ${PN} for FOX-1.4..."
-	mkdir ${S}/build_1_4
-	cd ${S}/build_1_4
+	mkdir "${S}"/build_1_4
+	cd "${S}"/build_1_4
 	../configure \
 		--prefix=/usr \
 		--includedir=/usr/include \
@@ -47,8 +47,8 @@ src_compile () {
 	emake || die "make error"
 
 	einfo "Building ${PN} for FOX-1.6..."
-	mkdir ${S}/build_1_6
-	cd ${S}/build_1_6
+	mkdir "${S}"/build_1_6
+	cd "${S}"/build_1_6
 	../configure \
 		--prefix=/usr \
 		--includedir=/usr/include \
@@ -62,13 +62,13 @@ src_compile () {
 }
 
 src_install () {
-	cd ${S}/build_1_4
+	cd "${S}"/build_1_4
 	emake DESTDIR="${D}" install || die "make install error"
 
-	cd ${S}/build_1_6
+	cd "${S}"/build_1_6
 	emake DESTDIR="${D}" install || die "make install error"
 
-	cd ${S}
+	cd "${S}"
 	dodoc README
 	if use doc ; then
 		dodoc scintilla/doc/Lexer.txt
