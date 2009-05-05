@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xprop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/ChangeLog,v 1.34 2009/05/05 06:41:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xprop/ChangeLog,v 1.35 2009/05/05 07:18:52 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> xprop-1.0.2.ebuild,
+  xprop-1.0.3.ebuild, xprop-1.0.4.ebuild:
+  add empty IUSE entry to silence repoman
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> xprop-1.0.4.ebuild:
   stable x86, bug 268581
