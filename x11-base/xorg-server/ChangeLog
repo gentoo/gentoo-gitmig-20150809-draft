@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.396 2009/05/05 15:05:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.397 2009/05/05 16:17:13 remi Exp $
+
+  05 May 2009; Rémi Cardona <remi@gentoo.org>
+  xorg-server-1.3.0.0-r6.ebuild:
+  drop x11-misc/xkbdata support (see bug #196650)
 
   05 May 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.4.2.ebuild,
   xorg-server-1.5.3-r4.ebuild, xorg-server-1.5.3-r5.ebuild:
