@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.22 2009/05/04 16:50:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.23 2009/05/05 07:44:14 remi Exp $
+
+*xf86-video-intel-2.7.0 (05 May 2009)
+
+  05 May 2009; Rémi Cardona <remi@gentoo.org>
+  +files/2.7.0-0001-KMS-hook-up-output-properties-for-randr.patch,
+  +xf86-video-intel-2.7.0.ebuild:
+  bump to 2.7.0 with a patch from the 2.7 branch
 
   04 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   xf86-video-intel-1.6.5.ebuild, xf86-video-intel-1.7.4.ebuild,
