@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_alpha2.ebuild,v 1.2 2009/04/26 15:09:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_alpha3.ebuild,v 1.1 2009/05/05 05:04:47 darkside Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc"
-IUSE="ioctl"
+IUSE="libnotify ioctl"
 
 DEPEND=""
 RDEPEND="
@@ -39,13 +39,16 @@ RDEPEND="
 		kde-base/kdesu
 	)
 	>=sys-power/pm-utils-1.1.1
+	libnotify? ( dev-python/notify-python )
 	ioctl? ( dev-python/python-iwscan dev-python/python-wpactrl )
 	"
 
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	${python} ./setup.py configure --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose
+	local myconf
+	use libnotify || myconf="--no-use-notifications"
+	${python} ./setup.py configure --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose ${myconf}
 	distutils_src_compile
 }
 
