@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.15 2008/11/17 18:36:58 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.16 2009/05/05 07:49:40 ssuominen Exp $
 
-inherit gnome2 autotools
+inherit gnome2
 
 DESCRIPTION="GL extensions for Gtk+ 2.0"
 HOMEPAGE="http://gtkglext.sourceforge.net/"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 	doc? ( >=dev-util/gtk-doc-0.10 )
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog* INSTALL NEWS README* TODO"
+DOCS="AUTHORS ChangeLog* NEWS README* TODO"
 
 pkg_setup() {
 	if ! built_with_use x11-libs/pango X; then
