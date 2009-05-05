@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.23 2008/02/06 21:56:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.24 2009/05/05 10:56:12 ssuominen Exp $
 
 IUSE=""
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i -e "s:extern char \*malloc();::" \
 		-e "s:extern char \*realloc();::" \
 		button.c charproc.c
@@ -39,12 +39,9 @@ src_install() {
 
 	einstall || die
 
-	insinto /etc/X11/app-defaults
+	insinto /usr/share/X11/app-defaults
 	newins Hanterm.ad Hanterm.orig
-	newins ${FILESDIR}/Hanterm.gentoo Hanterm
-
-	dodir /usr/X11R6/lib/X11
-	dosym ../../../../etc/X11/app-defaults /usr/X11R6/lib/X11/app-defaults
+	newins "${FILESDIR}"/Hanterm.gentoo Hanterm
 
 	newman hanterm.man hanterm.1
 
