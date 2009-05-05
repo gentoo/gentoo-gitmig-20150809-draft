@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.28 2009/05/05 13:25:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.29 2009/05/05 15:20:33 nirbheek Exp $
+
+  05 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  totem-pl-parser-2.26.1.ebuild:
+  Better fix for GTKDOC_REBASE problem (from totem ebuild in-overlay) --
+  thanks to eva for pointing it out
 
   05 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   totem-pl-parser-2.26.1.ebuild,

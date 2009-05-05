@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.26.1.ebuild,v 1.3 2009/05/05 13:25:23 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/totem-pl-parser-2.26.1.ebuild,v 1.4 2009/05/05 15:20:33 nirbheek Exp $
 
 EAPI="2"
 
@@ -29,19 +29,23 @@ G2CONF="${G2CONF} --disable-static"
 src_prepare() {
 	gnome2_src_prepare
 
+	# FIXME: tarball generated with broken gtk-doc, revisit me.
+	if use doc; then
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=/usr/bin/gtkdoc-rebase" \
+			-i gtk-doc.make || die "sed 1 failed"
+	else
+		sed "/^TARGET_DIR/i \GTKDOC_REBASE=$(type -P true)" \
+			-i gtk-doc.make || die "sed 2 failed"
+	fi
+
 	# Conditional patching is purely to avoid eautoreconf
 	if use test && ! use doc; then
+		# http://bugzilla.gnome.org/show_bug.cgi?id=577774
 		epatch "${FILESDIR}/${P}-fix-tests-without-gtk-doc.patch"
 		eautoreconf
 	fi
 }
 
 src_install() {
-	if use test && ! use doc; then
-		# Weird bug with empty GTKDOC_REBASE because of above patch
-		local gtkdoc_rebase="! which gtkdoc-rebase >/dev/null 2>&1 || gtkdoc-rebase"
-		emake DESTDIR="${D}" GTKDOC_REBASE="${gtkdoc_rebase}" install || die "install failed"
-	else
-		emake DESTDIR="${D}" install || die "install failed"
-	fi
+	emake DESTDIR="${D}" install || die "install failed"
 }
