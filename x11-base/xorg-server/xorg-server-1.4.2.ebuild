@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.10 2009/04/16 03:56:04 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.11 2009/05/05 15:05:50 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -321,6 +321,7 @@ pkg_setup() {
 		--enable-install-setuid
 		--with-fontdir=/usr/share/fonts
 		--with-xkb-output=/var/lib/xkb
+		--without-dtrace
 		${conf_opts}"
 
 	local diemsg="You must build xorg-server and mesa with the same nptl USE setting."
