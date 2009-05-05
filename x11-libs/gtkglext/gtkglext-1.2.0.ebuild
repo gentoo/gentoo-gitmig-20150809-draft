@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.16 2009/05/05 07:49:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglext/gtkglext-1.2.0.ebuild,v 1.17 2009/05/05 16:06:19 mr_bones_ Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="GL extensions for Gtk+ 2.0"
 HOMEPAGE="http://gtkglext.sourceforge.net/"
