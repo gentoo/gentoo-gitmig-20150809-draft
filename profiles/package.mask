@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9758 2009/05/05 17:02:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9759 2009/05/05 17:22:16 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Robin H. Johnson <robbat2@gentoo.org> (05 May 2009)
+# Fails parts of the testsuite.
+=dev-util/git-1.6.2.5
 
 # Robin H. Johnson <robbat2@gentoo.org> (05 May 2009)
 # Not ready for primetime, but worth testing still.
