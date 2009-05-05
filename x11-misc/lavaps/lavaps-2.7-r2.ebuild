@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r2.ebuild,v 1.4 2008/09/20 09:41:49 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lavaps/lavaps-2.7-r2.ebuild,v 1.5 2009/05/05 17:43:28 ssuominen Exp $
 
 inherit autotools eutils
 
@@ -13,13 +13,13 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~x86"
 IUSE="gtk"
 
-DEPEND=">=dev-lang/tk-8.3.3
+RDEPEND=">=dev-lang/tk-8.3.3
 	gtk? ( >=x11-libs/gtk+-2.2
 		>=gnome-base/libgnomecanvas-2.2
-		>=gnome-base/libgnomeui-2.2
-		dev-util/intltool )
+		>=gnome-base/libgnomeui-2.2 )
 	!gtk? ( dev-lang/tcl )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}
+	gtk? ( dev-util/intltool )"
 
 src_unpack() {
 	unpack ${A}
