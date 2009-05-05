@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.3_rc4.ebuild,v 1.1 2009/05/05 17:04:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.3_rc4.ebuild,v 1.2 2009/05/05 19:08:21 robbat2 Exp $
 
 EAPI=2
 
@@ -126,8 +126,14 @@ src_unpack() {
 		#cp "${FILESDIR}"/GIT-VERSION-GEN .
 	fi
 
+}
+
+src_prepare() {
 	# Noperl is being merged to upstream as of 2009/04/05
 	#epatch "${FILESDIR}"/20090305-git-1.6.2-noperl.patch
+
+	# GetOpt-Long v2.38 is strict
+	epatch "${FILESDIR}"/20090505-git-1.6.2.5-getopt-fixes.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
