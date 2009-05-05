@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/qwerty
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.10 2009/05/05 08:06:56 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/ChangeLog,v 1.11 2009/05/05 17:14:30 ulm Exp $
+
+  05 May 2009; Ulrich Mueller <ulm@gentoo.org> qwerty-1.1.ebuild:
+  Remove redundant dependency on virtual/emacs; it is already in elisp.eclass.
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> qwerty-1.1.ebuild:
   set explicit RDEPEND
