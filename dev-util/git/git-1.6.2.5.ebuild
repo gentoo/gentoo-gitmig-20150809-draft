@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.2.5.ebuild,v 1.2 2009/05/05 19:08:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.2.5.ebuild,v 1.3 2009/05/05 19:12:18 robbat2 Exp $
 
 EAPI=2
 
@@ -189,7 +189,7 @@ src_install() {
 		install || \
 		die "make install failed"
 
-	doman man?/* Documentation/*.[157]
+	doman man?/*.[157] Documentation/*.[157]
 
 	dodoc README Documentation/{SubmittingPatches,CodingGuidelines}
 	use doc && dodir /usr/share/doc/${PF}/html
