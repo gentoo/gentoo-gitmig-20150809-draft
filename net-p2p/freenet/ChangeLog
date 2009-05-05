@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.54 2009/05/03 12:38:45 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.55 2009/05/05 18:59:53 tommy Exp $
+
+*freenet-0.7_p1209-r2 (05 May 2009)
+
+  05 May 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -freenet-0.7_p1209-r1.ebuild, +freenet-0.7_p1209-r2.ebuild,
+  files/run.sh-20090501:
+  Fix the run.sh file
 
 *freenet-0.7_p1209-r1 (03 May 2009)
 
