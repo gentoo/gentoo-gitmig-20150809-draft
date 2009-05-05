@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.3-r1.ebuild,v 1.1 2009/05/04 17:00:05 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-sqlplus/oracle-instantclient-sqlplus-10.2.0.3-r1.ebuild,v 1.2 2009/05/05 23:34:59 mr_bones_ Exp $
 
 inherit eutils
 
@@ -48,7 +48,6 @@ src_install() {
 	doins libsqlplus.so libsqlplusic.so
 	insinto /usr/$(get_libdir)/oracle/${PV}/client/sqlplus/admin/
 	doins glogin.sql
-
 
 	dodir /usr/$(get_libdir)/oracle/${PV}/client/bin
 	cd "${S}"/instantclient_10_2
