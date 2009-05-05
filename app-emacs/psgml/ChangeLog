@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/psgml
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.12 2007/07/03 06:44:52 opfer Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/ChangeLog,v 1.13 2009/05/05 08:03:37 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  psgml-1.2.5-r1.ebuild:
+  set explicit RDEPEND
 
   03 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   psgml-1.2.5-r1.ebuild:

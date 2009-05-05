@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/iiimecf
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/ChangeLog,v 1.10 2007/07/04 22:54:24 opfer Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/ChangeLog,v 1.11 2009/05/05 08:00:14 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  iiimecf-12.1_p2002.ebuild:
+  set explicit RDEPEND
 
   04 Jul 2007; Christian Faulhammer <opfer@gentoo.org>
   iiimecf-12.1_p2002.ebuild:

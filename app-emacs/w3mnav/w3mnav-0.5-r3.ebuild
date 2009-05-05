@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/w3mnav-0.5-r3.ebuild,v 1.1 2007/09/21 09:15:45 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/w3mnav-0.5-r3.ebuild,v 1.2 2009/05/05 08:11:29 fauli Exp $
 
 inherit elisp
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="app-emacs/emacs-w3m"
+RDEPEND="${DEPEND}"
 
 SITEFILE=75${PN}-gentoo.el
 

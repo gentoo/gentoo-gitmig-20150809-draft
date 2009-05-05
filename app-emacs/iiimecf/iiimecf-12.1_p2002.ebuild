@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/iiimecf-12.1_p2002.ebuild,v 1.3 2007/07/04 22:54:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/iiimecf/iiimecf-12.1_p2002.ebuild,v 1.4 2009/05/05 08:00:13 fauli Exp $
 
 inherit elisp iiimf
 
@@ -14,6 +14,7 @@ IUSE=""
 DEPEND="app-emacs/mule-ucs
 	dev-libs/libiiimp
 	dev-libs/libiiimcf"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
 

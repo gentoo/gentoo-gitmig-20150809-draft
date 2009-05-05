@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/w3mnav
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.12 2007/09/21 09:15:45 ulm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.13 2009/05/05 08:11:29 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> w3mnav-0.5-r3.ebuild:
+  set explicit RDEPEND
 
 *w3mnav-0.5-r3 (21 Sep 2007)
 

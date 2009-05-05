@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/qwerty-1.1.ebuild,v 1.11 2007/12/02 14:36:25 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/qwerty/qwerty-1.1.ebuild,v 1.12 2009/05/05 08:06:56 fauli Exp $
 
 inherit elisp
 
@@ -13,5 +13,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 DEPEND="virtual/emacs"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50qwerty-gentoo.el
