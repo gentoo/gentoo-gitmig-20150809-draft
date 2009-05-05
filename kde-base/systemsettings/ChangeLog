@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.30 2009/04/17 06:48:47 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.31 2009/05/05 16:22:08 remi Exp $
+
+  05 May 2009; Rémi Cardona <remi@gentoo.org> systemsettings-4.2.2.ebuild:
+  drop x11-misc/xkbdata support (see bug #196650)
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -systemsettings-4.2.1.ebuild, -systemsettings-4.2.1-r1.ebuild,
