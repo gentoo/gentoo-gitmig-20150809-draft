@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.0.9999.ebuild,v 1.1 2009/05/05 11:11:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/libgdiplus-2.0.9999.ebuild,v 1.2 2009/05/05 23:35:21 mr_bones_ Exp $
 
 EAPI=2
 
@@ -35,7 +35,6 @@ RDEPEND=">=dev-libs/glib-2.16
 DEPEND="${RDEPEND}"
 
 RESTRICT="test"
-
 
 src_prepare() {
 	sed -i \
