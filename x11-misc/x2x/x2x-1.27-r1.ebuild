@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.10 2008/01/07 10:45:40 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r1.ebuild,v 1.11 2009/05/05 18:17:49 ssuominen Exp $
 
 inherit eutils
 
@@ -26,16 +26,16 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Patch from Debian to add -north and -south, among other fixes
-	epatch ${DISTDIR}/x2x_1.27-8.diff.gz
+	epatch "${DISTDIR}"/x2x_1.27-8.diff.gz
 
 	# Fix variable initialization in Debian patch
-	epatch ${DISTDIR}/x2x_1.27-8-initvars.patch.gz
+	epatch "${DISTDIR}"/x2x_1.27-8-initvars.patch.gz
 
 	# Patch to add LICENSE
-	epatch ${DISTDIR}/x2x-1.27-license.patch.gz
+	epatch "${DISTDIR}"/x2x-1.27-license.patch.gz
 
 	# Man-page is packaged as x2x.1 but needs to be x2x.man for building
 	mv x2x.1 x2x.man || die
@@ -47,7 +47,7 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	newman x2x.man x2x.1 || die
 	dodoc LICENSE || die
 }
