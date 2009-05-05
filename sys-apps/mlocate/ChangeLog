@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.40 2009/03/15 13:18:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.41 2009/05/05 14:47:23 fauli Exp $
+
+*mlocate-0.22 (05 May 2009)
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> +mlocate-0.22.ebuild:
+  version bump
 
   15 Mar 2009; Brent Baude <ranger@gentoo.org> mlocate-0.21.1.ebuild:
   keyworded ~arch for ppc64, bug 262026
