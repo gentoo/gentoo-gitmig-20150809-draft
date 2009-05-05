@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.84 2009/04/26 19:20:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.85 2009/05/05 05:40:19 jer Exp $
+
+  05 May 2009; Jeroen Roovers <jer@gentoo.org>
+  mail-notification-5.4-r1.ebuild:
+  Stable for HPPA (bug #266006).
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org>
   mail-notification-5.4-r1.ebuild:
