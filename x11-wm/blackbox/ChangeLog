@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/blackbox
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.61 2008/09/22 13:11:31 omp Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.62 2009/05/05 05:53:59 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  -blackbox-0.70.0.ebuild:
+  clean up
 
   22 Sep 2008; David Shakaryan <omp@gentoo.org> metadata.xml:
   Change herd from commonbox to desktop-wm.
