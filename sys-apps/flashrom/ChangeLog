@@ -1,0 +1,13 @@
+# ChangeLog for sys-apps/flashrom
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/ChangeLog,v 1.1 2009/05/05 22:46:55 leio Exp $
+
+*flashrom-0.9.0 (05 May 2009)
+
+  05 May 2009; Mart Raudsepp <leio@gentoo.org> +metadata.xml,
+  +flashrom-0.9.0.ebuild:
+  Initial import of flashrom - a utility for reading, writing, verifying and
+  erasing flash ROM chips. It's used to flash BIOS/coreboot/firmware images.
+  Roughly based on ebuilds from Peter Stuge and Christian Ruppert. Closes bug
+  196945
+
