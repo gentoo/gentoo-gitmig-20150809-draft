@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.6 2009/04/21 09:09:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.7 2009/05/05 21:13:20 gurligebis Exp $
 
 EAPI="1"
 
@@ -13,12 +13,12 @@ LICENSE="|| ( GPL-2 BSD )"
 
 SLOT="0"
 KEYWORDS="amd64 arm ppc ~ppc64 x86 ~x86-fbsd"
-IUSE="dbus debug gnutls gsm madwifi qt3 qt4 readline ssl kernel_linux
+IUSE="dbus debug gnutls eap-sim madwifi qt3 qt4 readline ssl kernel_linux
 	kernel_FreeBSD ps3"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 		kernel_linux? (
-			gsm? ( sys-apps/pcsc-lite )
+			eap-sim? ( sys-apps/pcsc-lite )
 		 	madwifi? ( ||
 				( >net-wireless/madwifi-ng-tools-0.9.3
 				net-wireless/madwifi-old )
@@ -95,7 +95,7 @@ src_unpack() {
 		echo "CONFIG_DEBUG_FILE=y" >> .config
 	fi
 
-	if use gsm ; then
+	if use eap-sim ; then
 		# smart card authentication
 		echo "CONFIG_EAP_SIM=y" >> .config
 		echo "CONFIG_EAP_AKA=y" >> .config
