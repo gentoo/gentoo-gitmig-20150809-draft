@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2611 2009/05/05 16:49:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2612 2009/05/05 17:02:57 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2009; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  dev-util/git-1.6.3 release candidates do have user-visible behavior change
+  from upstream wrt pushing.
 
   05 May 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add x11-misc/xkbdata to p.mask (see bug #196650)
