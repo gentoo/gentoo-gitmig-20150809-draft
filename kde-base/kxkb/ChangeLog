@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kxkb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.105 2008/09/14 00:00:17 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.106 2009/05/05 16:32:38 remi Exp $
+
+  05 May 2009; Rémi Cardona <remi@gentoo.org> kxkb-3.5.9.ebuild,
+  kxkb-3.5.10.ebuild:
+  drop x11-misc/xkbdata support (see bug #196650)
 
 *kxkb-3.5.10 (13 Sep 2008)
 

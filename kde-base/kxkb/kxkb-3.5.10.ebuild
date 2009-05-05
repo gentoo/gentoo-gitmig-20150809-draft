@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.10.ebuild,v 1.1 2008/09/14 00:00:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/kxkb-3.5.10.ebuild,v 1.2 2009/05/05 16:32:38 remi Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -15,7 +15,7 @@ IUSE="kdehiddenvisibility"
 
 DEPEND="x11-libs/libXtst"
 RDEPEND="x11-libs/libXtst
-	|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
+	x11-misc/xkeyboard-config
 	x11-apps/setxkbmap"
 
 KMEXTRACTONLY="${KMEXTRACTONLY}
