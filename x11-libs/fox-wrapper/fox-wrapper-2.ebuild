@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox-wrapper/fox-wrapper-2.ebuild,v 1.10 2007/04/09 22:43:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox-wrapper/fox-wrapper-2.ebuild,v 1.11 2009/05/05 07:36:36 ssuominen Exp $
 
 DESCRIPTION="wrapper for fox-config to manage multiple versions"
 HOMEPAGE="http://www.gentoo.org/"
@@ -11,13 +11,14 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
+RDEPEND=""
 DEPEND=""
 
 S=${WORKDIR}
 
 src_install() {
 	exeinto /usr/lib/misc
-	newexe ${FILESDIR}/fox-wrapper-${PV}.sh fox-wrapper.sh || die
+	newexe "${FILESDIR}"/fox-wrapper-${PV}.sh fox-wrapper.sh || die
 
 	dodir /usr/bin
 	dosym ../lib/misc/fox-wrapper.sh /usr/bin/fox-config
