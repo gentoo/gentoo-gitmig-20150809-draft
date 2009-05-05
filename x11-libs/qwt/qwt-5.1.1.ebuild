@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.1.1.ebuild,v 1.1 2008/12/23 14:01:12 caleb Exp $
-
-inherit multilib qt4
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-5.1.1.ebuild,v 1.2 2009/05/05 07:30:31 ssuominen Exp $
 
 EAPI=1
+inherit multilib qt4
 
 SRC_URI="mirror://sourceforge/qwt/${P}.tar.bz2"
 HOMEPAGE="http://qwt.sourceforge.net/"
