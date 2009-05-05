@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r3.ebuild,v 1.7 2008/05/18 21:24:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r3.ebuild,v 1.8 2009/05/05 16:44:21 remi Exp $
 
 EAPI="1"
 inherit multilib kde-dist eutils flag-o-matic
@@ -51,7 +51,7 @@ RDEPEND="${DEPEND}
 	x11-apps/mkfontdir
 	x11-apps/setxkbmap
 	x11-apps/xinit
-	|| ( x11-misc/xkeyboard-config x11-misc/xkbdata )
+	x11-misc/xkeyboard-config
 	x11-apps/xmessage
 	x11-apps/xprop
 	x11-apps/xrandr

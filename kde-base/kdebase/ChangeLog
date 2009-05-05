@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.452 2009/03/06 01:11:31 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.453 2009/05/05 16:44:21 remi Exp $
+
+  05 May 2009; Rémi Cardona <remi@gentoo.org> kdebase-3.5.9.ebuild,
+  kdebase-3.5.9-r1.ebuild, kdebase-3.5.9-r2.ebuild, kdebase-3.5.9-r3.ebuild,
+  kdebase-3.5.9-r4.ebuild:
+  drop x11-misc/xkbdata support (see bug #196650)
 
   06 Mar 2009; Jeroen Roovers <jer@gentoo.org> kdebase-3.5.9-r4.ebuild:
   Stable for HPPA (bug #258257).
