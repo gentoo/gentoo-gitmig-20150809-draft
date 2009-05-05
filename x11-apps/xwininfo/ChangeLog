@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xwininfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.28 2009/04/05 23:33:38 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.29 2009/05/05 06:37:53 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  xwininfo-1.0.4.ebuild:
+  stable x86, bug 268581
 
   05 Apr 2009; Olivier Crête <tester@gentoo.org> xwininfo-1.0.4.ebuild:
   amd64 stable

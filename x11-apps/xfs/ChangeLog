@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.54 2009/05/04 14:56:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.55 2009/05/05 06:32:37 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> xfs-1.0.8.ebuild:
+  stable x86, bug 268581
 
   04 May 2009; Samuli Suominen <ssuominen@gentoo.org> xfs-1.0.5.ebuild,
   xfs-1.0.6.ebuild, xfs-1.0.8.ebuild:
