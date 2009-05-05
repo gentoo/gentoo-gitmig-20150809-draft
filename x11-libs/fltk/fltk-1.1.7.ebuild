@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.19 2009/01/09 13:45:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.7.ebuild,v 1.20 2009/05/05 08:16:09 ssuominen Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -21,7 +21,7 @@ LIBDIR=/usr/$(get_libdir)/fltk-${SLOT}
 
 IUSE="noxft opengl debug"
 
-DEPEND="x11-libs/libXext
+RDEPEND="x11-libs/libXext
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libXt
@@ -30,6 +30,7 @@ DEPEND="x11-libs/libXext
 	media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
