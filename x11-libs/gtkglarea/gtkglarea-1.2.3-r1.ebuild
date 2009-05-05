@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.25 2008/08/25 22:11:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.2.3-r1.ebuild,v 1.26 2009/05/05 08:14:49 ssuominen Exp $
 
 inherit eutils multilib autotools
 
@@ -15,10 +15,10 @@ SLOT="1"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc sh sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	=x11-libs/gtk+-1.2*
+RDEPEND="=x11-libs/gtk+-1.2*
 	virtual/glu
 	virtual/opengl"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}

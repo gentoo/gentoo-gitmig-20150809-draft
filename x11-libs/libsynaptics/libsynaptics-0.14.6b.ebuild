@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6b.ebuild,v 1.2 2008/05/09 12:39:21 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6b.ebuild,v 1.3 2009/05/05 08:12:45 ssuominen Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ IUSE=""
 #RESTRICT=""
 
 DEPEND=""
-#RDEPEND=""
+RDEPEND=""
 #S=${WORKDIR}/${P}
 
 src_compile() {

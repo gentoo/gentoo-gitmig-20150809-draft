@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2-r1.ebuild,v 1.3 2008/07/28 21:53:18 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt-qt3/qwt-qt3-5.0.2-r1.ebuild,v 1.4 2009/05/05 08:20:53 ssuominen Exp $
 
 EAPI=1
 
@@ -16,9 +16,10 @@ KEYWORDS="~amd64 ~x86"
 SLOT="5"
 IUSE="doc"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-DEPEND="x11-libs/qt:3"
+RDEPEND="x11-libs/qt:3"
+DEPEND="${RDEPEND}"
 
 src_compile () {
 	sed -i -e "s:TARGET .* = qwt:TARGET = qwt-qt3:" src/src.pro \

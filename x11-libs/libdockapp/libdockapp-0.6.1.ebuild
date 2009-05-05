@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.10 2008/04/01 10:37:24 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/libdockapp-0.6.1.ebuild,v 1.11 2009/05/05 08:04:42 ssuominen Exp $
 
 WANT_AUTOMAKE="1.5"
-WANT_AUTOCONF="latest"
 
 inherit eutils autotools
 

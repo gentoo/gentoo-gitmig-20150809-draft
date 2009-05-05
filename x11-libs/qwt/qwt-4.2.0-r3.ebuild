@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0-r3.ebuild,v 1.7 2008/07/28 21:48:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/qwt-4.2.0-r3.ebuild,v 1.8 2009/05/05 08:20:09 ssuominen Exp $
 
 EAPI=1
 
@@ -14,7 +14,8 @@ KEYWORDS="amd64 ia64 ppc ppc64 x86"
 SLOT="0"
 IUSE="doc examples"
 
-DEPEND="x11-libs/qt:3"
+RDEPEND="x11-libs/qt:3"
+DEPEND="${RDEPEND}"
 
 src_compile () {
 	# Remove hardcoded -fno-exceptions from CXXFLAGS

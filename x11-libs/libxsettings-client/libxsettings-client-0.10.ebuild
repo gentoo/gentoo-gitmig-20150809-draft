@@ -1,9 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.13 2007/09/26 03:54:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/libxsettings-client-0.10.ebuild,v 1.14 2009/05/05 08:00:57 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 inherit autotools
 
 DESCRIPTION="provides inter toolkit configuration settings"
@@ -15,9 +13,10 @@ SLOT="0"
 KEYWORDS="~amd64 arm ~hppa ppc sh x86"
 IUSE=""
 
-DEPEND="x11-proto/xproto
+RDEPEND="x11-proto/xproto
 	x11-libs/libX11
 	x11-libs/libXt"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/Xsettings-client-${PV}
 

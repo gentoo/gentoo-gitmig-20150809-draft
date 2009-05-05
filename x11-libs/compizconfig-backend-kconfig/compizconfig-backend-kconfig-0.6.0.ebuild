@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.6.0.ebuild,v 1.5 2007/11/01 01:08:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/compizconfig-backend-kconfig/compizconfig-backend-kconfig-0.6.0.ebuild,v 1.6 2009/05/05 08:17:51 ssuominen Exp $
 
 inherit kde
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=">=x11-wm/compiz-0.6.0
+RDEPEND=">=x11-wm/compiz-0.6.0
 	>=x11-libs/libcompizconfig-0.6.0"
+DEPEND="${RDEPEND}"
 
 need-kde 3.5
