@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.7.0.ebuild,v 1.6 2009/05/05 07:35:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.7.0.ebuild,v 1.7 2009/05/05 07:37:23 ssuominen Exp $
 
 IUSE=""
 
@@ -10,7 +10,8 @@ RESTRICT="mirror"
 HOMEPAGE="http://viewklass.sourceforge.net"
 LICENSE="LGPL-2.1"
 
-DEPEND="x11-libs/openmotif"
+RDEPEND="x11-libs/openmotif"
+DEPEND="${RDEPEND}"
 
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
@@ -24,5 +25,4 @@ src_compile() {
 src_install () {
 	dodir /usr/lib
 	make prefix="${D}/usr" install || die
-	dodoc INSTALL COPYING
 }
