@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xgamma
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/ChangeLog,v 1.24 2009/05/05 05:18:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xgamma/ChangeLog,v 1.25 2009/05/05 07:55:38 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> xgamma-1.0.1.ebuild,
+  xgamma-1.0.2.ebuild:
+  fix repoman warnings
 
   05 May 2009; Jeroen Roovers <jer@gentoo.org> xgamma-1.0.2.ebuild:
   Stable for HPPA (bug #268581).

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/grandr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/grandr/ChangeLog,v 1.5 2008/11/11 15:25:22 dang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/grandr/ChangeLog,v 1.6 2009/05/05 07:31:16 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> grandr-0.1.ebuild:
+  fix repoman warnings
 
   11 Nov 2008; Daniel Gryniewicz <dang@gentoo.org> grandr-0.1.ebuild:
   Marked ~amd64 for bug #246375

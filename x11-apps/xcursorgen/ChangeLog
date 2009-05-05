@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xcursorgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.35 2009/05/05 05:16:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.36 2009/05/05 07:47:20 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  xcursorgen-1.0.1.ebuild, xcursorgen-1.0.2.ebuild:
+  fix repoman warnings
 
   05 May 2009; Jeroen Roovers <jer@gentoo.org> xcursorgen-1.0.2.ebuild:
   Stable for HPPA (bug #268581).
