@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.5 2009/03/23 18:45:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2-r2.ebuild,v 1.6 2009/05/05 19:49:10 fauli Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ done
 
 LICENSE="geant4"
 SLOT="4"
-KEYWORDS="amd64 ~hppa sparc ~x86"
+KEYWORDS="amd64 ~hppa sparc x86"
 IUSE="athena +data dawn debug examples gdml geant3 global minimal +motif
 	+opengl openinventor qt4 +raytracerx static +vrml zlib"
 
