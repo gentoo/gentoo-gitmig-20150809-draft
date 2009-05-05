@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.12 2009/01/29 01:36:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emms/ChangeLog,v 1.13 2009/05/05 07:55:53 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org> emms-3.0.ebuild:
+  set explicit RDEPEND
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org> -emms-2.1.ebuild:
   clean up

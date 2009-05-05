@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/delicious
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.9 2008/08/28 07:28:52 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/ChangeLog,v 1.10 2009/05/05 07:53:01 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  delicious-0.3-r1.ebuild:
+  set explicit RDEPEND
 
   28 Aug 2008; Ulrich Mueller <ulm@gentoo.org> delicious-0.3-r1.ebuild:
   Use elisp-compile instead of elisp-comp, bug 235442.

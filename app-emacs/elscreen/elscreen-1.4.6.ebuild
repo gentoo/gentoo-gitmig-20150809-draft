@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/elscreen-1.4.6.ebuild,v 1.3 2008/12/01 19:38:49 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/elscreen-1.4.6.ebuild,v 1.4 2009/05/05 07:54:03 fauli Exp $
 
 inherit elisp
 
@@ -14,6 +14,7 @@ KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 DEPEND="app-emacs/apel"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
 DOCS="ChangeLog README"

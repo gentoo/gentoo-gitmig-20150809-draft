@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/delicious-0.3-r1.ebuild,v 1.3 2008/08/28 07:28:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/delicious/delicious-0.3-r1.ebuild,v 1.4 2009/05/05 07:53:01 fauli Exp $
 
 NEED_EMACS=22
 
@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="planner"
 
 DEPEND="planner? ( app-emacs/planner )"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
 DOCS="README"

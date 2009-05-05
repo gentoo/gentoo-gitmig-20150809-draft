@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/elscreen
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.22 2008/12/01 19:38:49 tcunha Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/elscreen/ChangeLog,v 1.23 2009/05/05 07:54:03 fauli Exp $
+
+  05 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  elscreen-1.4.6.ebuild:
+  set explicit RDEPEND
 
   01 Dec 2008; Tiago Cunha <tcunha@gentoo.org> elscreen-1.4.6.ebuild:
   stable sparc
