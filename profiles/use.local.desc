@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4420 2009/05/05 21:27:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4421 2009/05/05 22:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1661,6 +1661,9 @@ media-video/avidemux:aften - Enable A/52 (AC-3) audio encoder support
 media-video/avidemux:amrnb - Enable Narrow Band Adaptive Multi-Rate Audio support
 media-video/chaplin:transcode - Enable DVD ripping and transcoding
 media-video/cinepaint:gutenprint - Enable support for gutenprint
+media-video/clive:clipboard - Support reading from X clipboard
+media-video/clive:pager - Support pager!?
+media-video/clive:password - Support password controlled sites
 media-video/devede:psyco - psyco python accelerator
 media-video/dv2sub:kino - install kino plugin
 media-video/dvd-slideshow:themes - Install theme pack
