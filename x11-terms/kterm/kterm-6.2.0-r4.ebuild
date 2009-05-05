@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r4.ebuild,v 1.8 2009/05/05 10:50:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r4.ebuild,v 1.9 2009/05/05 11:06:08 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -46,11 +46,11 @@ src_unpack(){
 src_compile(){
 	xmkmf -a || die
 	emake CC="$(tc-getCC)" CDEBUGFLAGS="${CFLAGS}" LOCAL_LDFLAGS="${LDFLAGS}" \
-		XAPPLOADDIR=/etc/X11/app-defaults EXTRA_LDOPTIONS="" || die "emake failed"
+		XAPPLOADDIR=/usr/share/X11/app-defaults EXTRA_LDOPTIONS="" || die "emake failed"
 }
 
 src_install(){
-	einstall DESTDIR="${D}" BINDIR=/usr/bin XAPPLOADDIR=/etc/X11/app-defaults || die
+	einstall DESTDIR="${D}" BINDIR=/usr/bin XAPPLOADDIR=/usr/share/X11/app-defaults || die
 
 	# install man pages
 	newman kterm.man kterm.1
