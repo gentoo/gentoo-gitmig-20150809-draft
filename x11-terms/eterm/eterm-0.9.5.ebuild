@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.5.ebuild,v 1.10 2009/03/08 20:08:58 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.5.ebuild,v 1.11 2009/05/05 10:54:10 ssuominen Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -27,7 +27,7 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="escreen minimal mmx sse2 unicode"
 
-DEPEND="x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libICE
@@ -37,6 +37,7 @@ DEPEND="x11-libs/libX11
 	>=x11-libs/libast-0.6.1
 	media-libs/imlib2[X]
 	escreen? ( app-misc/screen )"
+DEPEND="${RDEPEND}"
 
 if [[ ${PV} == "9999" ]] ; then
 	S=${WORKDIR}/${ECVS_MODULE}

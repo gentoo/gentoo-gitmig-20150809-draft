@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/pssh-1.2.0.ebuild,v 1.3 2009/04/17 14:54:18 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/pssh/pssh-1.2.0.ebuild,v 1.4 2009/05/05 10:48:10 ssuominen Exp $
 
 DESCRIPTION="This package provides parallel versions of the openssh tools."
 HOMEPAGE="http://www.theether.org/pssh/"
@@ -16,7 +16,7 @@ RDEPEND="net-misc/openssh
 	!net-misc/putty"
 
 src_install() {
-	dodoc AUTHORS COPYING TODO COPYING
+	dodoc AUTHORS TODO
 
 #	FIXME: how can i get current python version?
 	PY_VER=`ls /usr/lib | grep python | sort | tail -n 1`

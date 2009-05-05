@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.11 2008/09/24 13:03:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.3-r1.ebuild,v 1.12 2009/05/05 10:47:18 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,9 +31,9 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/xwindow
-	epatch ${FILESDIR}/mlterm-2.9.1-gentoo.diff
-	epatch ${FILESDIR}/${P}-asneeded.diff
+	cd "${S}"/xwindow
+	epatch "${FILESDIR}"/mlterm-2.9.1-gentoo.diff
+	epatch "${FILESDIR}"/${P}-asneeded.diff
 }
 
 src_compile() {
@@ -62,9 +62,9 @@ src_compile() {
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
-	dodoc ChangeLog LICENCE README
+	dodoc ChangeLog README
 
 	docinto ja
 	dodoc doc/ja/*

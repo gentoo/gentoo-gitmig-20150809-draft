@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/kuake-0.3-r3.ebuild,v 1.9 2008/02/19 02:05:11 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kuake/kuake-0.3-r3.ebuild,v 1.10 2009/05/05 10:46:26 ssuominen Exp $
 
 ARTS_REQUIRED="never"
 
@@ -16,9 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 IUSE="arts"
 
-DEPEND="|| ( =kde-base/konsole-3.5* =kde-base/kdebase-3.5* )"
+RDEPEND="|| ( =kde-base/konsole-3.5* =kde-base/kdebase-3.5* )"
+DEPEND="${RDEPEND}"
 
 need-kde 3.3
 
-PATCHES="${FILESDIR}/${P}-dropdown-fix.patch
-	${FILESDIR}/${P}-alignment-fix.patch"
+PATCHES=("${FILESDIR}/${P}-dropdown-fix.patch
+	${FILESDIR}/${P}-alignment-fix.patch")

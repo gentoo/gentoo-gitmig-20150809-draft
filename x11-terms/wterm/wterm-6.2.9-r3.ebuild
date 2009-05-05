@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/wterm-6.2.9-r3.ebuild,v 1.7 2008/11/27 23:15:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/wterm/wterm-6.2.9-r3.ebuild,v 1.8 2009/05/05 10:52:11 ssuominen Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ppc sparc x86"
 IUSE="cjk"
 
-DEPEND="x11-libs/libXpm
+RDEPEND="x11-libs/libXpm
 	>=x11-wm/windowmaker-0.80.1"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}

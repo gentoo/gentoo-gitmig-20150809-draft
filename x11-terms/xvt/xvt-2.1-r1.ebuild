@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r1.ebuild,v 1.7 2008/03/27 01:50:15 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/xvt-2.1-r1.ebuild,v 1.8 2009/05/05 10:51:31 ssuominen Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -33,9 +33,6 @@ src_unpack() {
 	# set CFLAGS
 	sed -i "s^\(CFLAGS=\)-O^\1${CFLAGS}^g" Makefile
 
-	# add search path for X11 libs.
-	append-ldflags -L/usr/X11R6/lib
-
 	# make gcc quiet.
 	sed -i -e 's/^void$/int/' -e 's/^void\( main\)/int\1/g' xvt.c
 
@@ -43,11 +40,11 @@ src_unpack() {
 
 src_compile() {
 	# emake -j1 config
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	dobin xvt
+	dobin xvt || die "dobin failed"
 	doman xvt.1
-	dodoc README COPYING
+	dodoc README
 }
