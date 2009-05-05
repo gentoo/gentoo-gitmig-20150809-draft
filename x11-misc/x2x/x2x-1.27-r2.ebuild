@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r2.ebuild,v 1.5 2008/02/21 14:25:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2x/x2x-1.27-r2.ebuild,v 1.6 2009/05/05 18:17:49 ssuominen Exp $
 
 inherit eutils
 
@@ -30,17 +30,17 @@ src_unpack() {
 	cd "${S}"
 
 	# Patch from Debian to add -north and -south, among other fixes
-	epatch ${DISTDIR}/x2x_1.27-8.diff.gz
+	epatch "${DISTDIR}"/x2x_1.27-8.diff.gz
 
 	# Fix variable initialization in Debian patch
-	epatch ${DISTDIR}/x2x_1.27-8-initvars.patch.gz
+	epatch "${DISTDIR}"/x2x_1.27-8-initvars.patch.gz
 
 	# Patch to add LICENSE
-	epatch ${DISTDIR}/${P}-license.patch.gz
+	epatch "${DISTDIR}"/${P}-license.patch.gz
 
 	# Patch to fix bug #126939
 	# AltGr does not work in x2x with different keymaps:
-	epatch ${DISTDIR}/${P}-keymap.diff.gz
+	epatch "${DISTDIR}"/${P}-keymap.diff.gz
 
 	# Man-page is packaged as x2x.1 but needs to be x2x.man for building
 	mv x2x.1 x2x.man

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre3.ebuild,v 1.5 2007/12/24 17:51:33 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre3.ebuild,v 1.6 2009/05/05 18:18:34 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-lang/python-2.3
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	### Replace /usr/lib/xac with libdir version

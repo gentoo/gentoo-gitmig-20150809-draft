@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1.ebuild,v 1.7 2009/04/06 18:45:17 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/driconf/driconf-0.9.1.ebuild,v 1.8 2009/05/05 18:19:48 ssuominen Exp $
 
 inherit distutils
 
@@ -13,11 +13,12 @@ IUSE=""
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 
-DEPEND=">=x11-libs/gtk+-2.4
+RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-lang/python-2.3
 	>=dev-python/pygtk-2.4
 	dev-python/pyxml
 	x11-apps/xdriinfo"
+DEPEND="${RDEPEND}"
 
 DOCS="CHANGELOG COPYING PKG-INFO README TODO"
 
