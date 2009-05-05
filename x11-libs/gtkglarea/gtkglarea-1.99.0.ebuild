@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.34 2008/08/25 22:11:09 eva Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkglarea/gtkglarea-1.99.0.ebuild,v 1.35 2009/05/05 07:40:36 ssuominen Exp $
 
 inherit gnome2 multilib autotools
 
@@ -15,19 +12,17 @@ SLOT="2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="virtual/libc
-	>=x11-libs/gtk+-2.0.3
+RDEPEND=">=x11-libs/gtk+-2.0.3
 	virtual/glu
 	virtual/opengl"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-DOCS="AUTHORS ChangeLog INSTALL NEWS README* docs/*.txt"
+DOCS="AUTHORS ChangeLog NEWS README* docs/*.txt"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	eautoreconf
 }
 
