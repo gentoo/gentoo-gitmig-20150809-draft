@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdriinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.32 2009/03/12 10:15:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdriinfo/ChangeLog,v 1.33 2009/05/05 05:21:44 jer Exp $
+
+  05 May 2009; Jeroen Roovers <jer@gentoo.org> xdriinfo-1.0.2.ebuild:
+  Stable for HPPA (bug #268581).
 
   12 Mar 2009; Raúl Porcel <armin76@gentoo.org> xdriinfo-1.0.2.ebuild:
   Add ~arm/~sh

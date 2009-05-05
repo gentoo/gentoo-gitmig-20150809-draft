@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.17 2008/09/24 10:21:26 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.18 2009/05/05 05:21:15 jer Exp $
+
+  05 May 2009; Jeroen Roovers <jer@gentoo.org> xwd-1.0.2.ebuild:
+  Stable for HPPA (bug #268581).
 
   24 Sep 2008; Alexis Ballier <aballier@gentoo.org> xwd-1.0.2.ebuild:
   keyword ~x86-fbsd
