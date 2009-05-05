@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.10 2008/10/11 23:11:45 flameeyes Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/adesklets/adesklets-0.6.1-r1.ebuild,v 1.11 2009/05/05 18:26:48 ssuominen Exp $
 
 inherit eutils perl-module autotools
 
@@ -34,22 +31,21 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
 	X? ( x11-proto/xproto )"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	#Fix for bug #123538: control context menu fix
-	epatch ${FILESDIR}/${PN}-ctrlmenu.patch
+	epatch "${FILESDIR}"/${PN}-ctrlmenu.patch
 
 	#Fix for bug #131813: linker flags ordering
-	epatch ${FILESDIR}/${P}-fix-as-needed.patch
+	epatch "${FILESDIR}"/${P}-fix-as-needed.patch
 
 	#Fix for bug #148988: fontconfig >= 2.4 support
 	use fontconfig &&
 	{
 		if has_version ">=media-libs/fontconfig-2.4"; then
-			epatch ${FILESDIR}/${P}-fontconfig.patch
+			epatch "${FILESDIR}"/${P}-fontconfig.patch
 			eautoreconf
 		fi
 	}
@@ -59,8 +55,7 @@ src_unpack()
 	touch scripting/enums scripting/prototypes
 }
 
-src_compile()
-{
+src_compile() {
 	local myconf=""
 
 	use X || myconf="--without-x"
@@ -74,8 +69,7 @@ src_compile()
 	emake || die
 }
 
-src_install()
-{
+src_install() {
 	#a bit of black magick to fix bug #157002
 	use fontconfig &&
 	{
@@ -88,7 +82,7 @@ src_install()
 
 	dodir usr/share/info
 	dodir usr/share/man/man1
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	doinfo doc/*.info || die "info page installation failed"
 	doman doc/*.1 || die "man page installation failed"
 	dodoc ChangeLog NEWS TODO AUTHORS
