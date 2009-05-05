@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8b.ebuild,v 1.2 2009/03/27 23:54:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8b.ebuild,v 1.3 2009/05/05 08:23:14 ssuominen Exp $
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.qtsoftware.com/products/platform/qt-for-embedded-linux"
@@ -24,7 +24,7 @@ DEPEND="media-libs/libpng
 RDEPEND="${DEPEND}"
 PDEPEND="odbc? ( ~dev-db/qt-unixODBC-${PV} )"
 
-S="${WORKDIR}/qt-embedded-free-${PV}"
+S=${WORKDIR}/qt-embedded-free-${PV}
 
 QTBASE=/usr/qt/3-embedded
 
@@ -112,12 +112,12 @@ src_install() {
 	doins "${S}"/lib/fonts/*
 
 	# environment variables
-	cat <<EOF > ${T}/47qt-embedded3
+	cat <<EOF > "${T}"/47qt-embedded3
 PATH=${QTBASE}/bin
 ROOTPATH=${QTBASE}/bin
 LDPATH=${QTBASE}/lib
 EOF
-	doenvd ${T}/47qt-embedded3
+	doenvd "${T}"/47qt-embedded3
 
 	# qmake cache file
 	sed -i -e "s:${S}:${QTBASE}:" .qmake.cache
