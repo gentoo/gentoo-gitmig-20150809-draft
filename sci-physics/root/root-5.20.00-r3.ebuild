@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.7 2009/04/13 11:32:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.8 2009/05/05 14:44:15 fauli Exp $
 
 EAPI=1
 inherit versionator eutils qt4 fortran elisp-common fdo-mime
@@ -61,7 +61,8 @@ CDEPEND=">=dev-lang/cfortran-4.4-r2
 			x11-libs/qt-qt3support:4
 			x11-libs/qt-xmlpatterns:4 )
 			x11-libs/qt:4 ) )
-	ruby? ( dev-lang/ruby )
+	ruby? ( dev-lang/ruby
+			dev-ruby/rubygems )
 	ssl? ( dev-libs/openssl )
 	xml? ( dev-libs/libxml2 )"
 
