@@ -1,48 +1,45 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.16.ebuild,v 1.3 2009/05/01 18:04:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/geany-0.16.ebuild,v 1.4 2009/05/05 10:19:57 ssuominen Exp $
 
-EAPI=1
-
+EAPI=2
 inherit gnome2-utils
 
-DESCRIPTION="GTK+ based fast and lightweight IDE."
+DESCRIPTION="GTK+ based fast and lightweight IDE"
 HOMEPAGE="http://geany.uvena.de"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	http://files.uvena.de/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 Scintilla"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="+vte"
 
-RDEPEND=">=x11-libs/gtk+-2.10
+RDEPEND=">=x11-libs/gtk+-2.10:2
 	vte? ( x11-libs/vte )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	# Syntax highlighting for Portage.
+src_prepare() {
+	# Syntax highlighting for Portage
 	sed -i -e "s:*.sh;:*.sh;*.ebuild;*.eclass;:" \
-		"${S}"/data/filetype_extensions.conf || die "sed failed."
+		data/filetype_extensions.conf || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	econf --disable-dependency-tracking --enable-the-force \
 		$(use_enable vte)
-	emake || die "emake failed."
-}
-
-pkg_preinst() {
-	gnome2_icon_savelist
 }
 
 src_install() {
 	emake DESTDIR="${D}" DOCDIR="${D}/usr/share/doc/${PF}" \
-		install || die "emake install failed."
+		install || die "emake install failed"
 	rm -f "${D}"/usr/share/doc/${PF}/{COPYING,GPL-2,ScintillaLicense.txt}
 	prepalldocs
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
 }
 
 pkg_postinst() {

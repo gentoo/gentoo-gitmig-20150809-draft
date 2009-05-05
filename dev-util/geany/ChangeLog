@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.24 2009/05/01 18:04:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.25 2009/05/05 10:19:57 ssuominen Exp $
+
+  05 May 2009; Samuli Suominen <ssuominen@gentoo.org> -geany-0.13.ebuild,
+  -geany-0.15.ebuild, geany-0.16.ebuild:
+  amd64 stable wrt #267981
 
   01 May 2009; Raúl Porcel <armin76@gentoo.org> geany-0.16.ebuild:
   x86 stable wrt #267981
@@ -22,17 +26,13 @@
   20 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org> geany-0.15.ebuild:
   stable amd64, bug 251582
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml, -geany-0.14.ebuild:
-  Rename my old e-mail address drac at gentoo.org to ssuominen at gentoo.org
-  and remove unused version. Try to stabilize 0.15 next.
-
   22 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> geany-0.15.ebuild:
   gnome2_icon_savelist added, per ssuom... The Finnish Guy!s orders
 
 *geany-0.15 (21 Nov 2008)
 
   21 Nov 2008; Peter Alfredsen <loki_val@gentoo.org> +geany-0.15.ebuild:
-  Bump geany to 0.15 for drac. Bug drac about bugs.
+  Bump geany to 0.15 for ssuominen. Bug ssuominen about bugs.
 
   17 Jul 2008; Alexis Ballier <aballier@gentoo.org> geany-0.14.ebuild:
   keyword ~x86-fbsd, thanks to Davide Italiano <dav_it@gentoo.org>, bug
@@ -40,14 +40,14 @@
 
 *geany-0.14 (24 Apr 2008)
 
-  24 Apr 2008; Samuli Suominen <drac@gentoo.org> +geany-0.14.ebuild:
+  24 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> +geany-0.14.ebuild:
   Version bump.
 
   23 Apr 2008; Markus Meier <maekke@gentoo.org> -geany-0.12.ebuild,
   geany-0.13.ebuild:
   x86 stable and remove old, bug #218563
 
-  20 Apr 2008; Samuli Suominen <drac@gentoo.org> geany-0.13.ebuild:
+  20 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> geany-0.13.ebuild:
   amd64 stable wrt #218563, thanks to Víctor Enríquez for testing.
 
   20 Apr 2008; nixnut <nixnut@gentoo.org> geany-0.13.ebuild:
@@ -55,7 +55,7 @@
 
 *geany-0.13 (26 Feb 2008)
 
-  26 Feb 2008; Samuli Suominen <drac@gentoo.org> -geany-0.11.ebuild,
+  26 Feb 2008; Samuli Suominen <ssuominen@gentoo.org> -geany-0.11.ebuild,
   +geany-0.13.ebuild:
   Version bump wrt #211110, thanks to Michele Beltrame for reporting. Stop
   pointing to license directory in portdir wrt #211534, thanks to Bo Ørsted
@@ -64,12 +64,12 @@
   21 Jan 2008; Markus Meier <maekke@gentoo.org> geany-0.12.ebuild:
   x86 stable, bug #206784
 
-  20 Jan 2008; Samuli Suominen <drac@gentoo.org> geany-0.12.ebuild:
+  20 Jan 2008; Samuli Suominen <ssuominen@gentoo.org> geany-0.12.ebuild:
   Fix test suite and mark amd64 stable wrt #206784.
 
 *geany-0.12 (14 Oct 2007)
 
-  14 Oct 2007; Samuli Suominen <drac@gentoo.org> +geany-0.12.ebuild:
+  14 Oct 2007; Samuli Suominen <ssuominen@gentoo.org> +geany-0.12.ebuild:
   Version bump.
 
   02 Sep 2007; nixnut <nixnut@gentoo.org> geany-0.11.ebuild:
@@ -81,12 +81,12 @@
   20 Jun 2007; Christoph Mende <angelos@gentoo.org> geany-0.11.ebuild:
   Added ~amd64 wrt bug 182682
 
-  20 Jun 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  20 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Add longdescription with french translation by Mathieu Bonnet.
 
 *geany-0.11 (19 Jun 2007)
 
-  19 Jun 2007; Samuli Suominen <drac@gentoo.org> +geany-0.11.ebuild:
+  19 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> +geany-0.11.ebuild:
   Initial commit for bug 114815. Thanks to Mathieu Bonnet, Paul Bredbury, Yura
   Semashko, Lucas Chiesa, Steev Klimaszewski, Pacho Ramos and many others.
 
