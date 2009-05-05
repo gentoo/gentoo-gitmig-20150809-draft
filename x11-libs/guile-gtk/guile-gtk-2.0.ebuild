@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.0.ebuild,v 1.5 2007/10/14 10:33:07 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-2.0.ebuild,v 1.6 2009/05/05 07:46:14 ssuominen Exp $
 
 inherit virtualx eutils
 
@@ -12,10 +12,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="dev-scheme/guile
+RDEPEND="dev-scheme/guile
 	=x11-libs/gtk+-2*
 	=gnome-base/libglade-2*
 	>=x11-libs/gtkglarea-1.90"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if has_version =dev-scheme/guile-1.8*; then
