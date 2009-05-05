@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.26.0.ebuild,v 1.1 2009/05/05 10:53:06 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/librsvg-2.26.0.ebuild,v 1.2 2009/05/05 12:59:49 nirbheek Exp $
 
 inherit eutils gnome2 multilib
 
@@ -41,6 +41,7 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
+	# gcc-4.3.2-r3 related segfault with various apps like firefox -- bug 239992
 	epatch "${FILESDIR}/${PN}-2.22.3-fix-segfault-with-firefox.patch"
 }
 
