@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ccsm-0.6.0.ebuild,v 1.4 2008/02/24 21:23:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/ccsm/ccsm-0.6.0.ebuild,v 1.5 2009/05/05 08:33:19 fauli Exp $
 
 inherit distutils
 
@@ -15,6 +15,7 @@ IUSE=""
 
 DEPEND="dev-python/compizconfig-python
 	>=dev-python/pygtk-2.10"
+RDPEND="${DEPEND}"
 
 DOCS="AUTHORS PKG-INFO"
 
