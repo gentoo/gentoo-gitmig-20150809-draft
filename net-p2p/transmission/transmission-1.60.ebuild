@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.60.ebuild,v 1.1 2009/05/05 11:51:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/transmission/transmission-1.60.ebuild,v 1.2 2009/05/05 11:52:36 ssuominen Exp $
 
 EAPI=2
 
@@ -40,7 +40,7 @@ src_configure() {
 		$(use_enable gtk) \
 		$(use_enable libnotify) \
 		${myconf}
-	
+
 	if use qt4; then
 		cd qt
 		eqmake4 qtr.pro
