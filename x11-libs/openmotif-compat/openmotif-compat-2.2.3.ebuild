@@ -1,8 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.6 2009/02/04 21:58:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif-compat/openmotif-compat-2.2.3.ebuild,v 1.7 2009/05/05 08:18:50 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.6"
 
 inherit eutils flag-o-matic multilib autotools
