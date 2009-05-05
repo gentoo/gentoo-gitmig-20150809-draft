@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.49 2009/03/26 08:42:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.50 2009/05/05 20:16:29 spock Exp $
+
+  05 May 2009; Michał Januszewski <spock@gentoo.org>
+  memtest86+-2.11.ebuild:
+  Fix bug #267592.
 
   26 Mar 2009; Michał Januszewski <spock@gentoo.org>
   +files/make-memtest86+-boot-floppy, +files/make-memtest86+-boot-floppy.1,
