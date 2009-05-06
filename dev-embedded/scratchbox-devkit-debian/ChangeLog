@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/scratchbox-devkit-debian
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-debian/ChangeLog,v 1.1 2009/05/06 19:34:21 tester Exp $
+
+*scratchbox-devkit-debian-1.0.10 (06 May 2009)
+
+  06 May 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +scratchbox-devkit-debian-1.0.10.ebuild:
+  Initial version, from sunrise and bug #94225
+

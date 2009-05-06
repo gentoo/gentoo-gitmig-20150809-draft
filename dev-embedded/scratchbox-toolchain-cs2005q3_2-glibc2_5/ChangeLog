@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/scratchbox-toolchain-cs2005q3_2-glibc2_5
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-toolchain-cs2005q3_2-glibc2_5/ChangeLog,v 1.1 2009/05/06 19:35:39 tester Exp $
+
+*scratchbox-toolchain-cs2005q3_2-glibc2_5-1.0.7 (06 May 2009)
+
+  06 May 2009; Olivier Crête <tester@gentoo.org> +metadata.xml,
+  +scratchbox-toolchain-cs2005q3_2-glibc2_5-1.0.7.ebuild:
+  Initial version, from sunrise and bug #94225
+
