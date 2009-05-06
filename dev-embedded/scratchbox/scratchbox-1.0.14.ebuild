@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.14.ebuild,v 1.2 2009/05/06 20:31:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.14.ebuild,v 1.3 2009/05/06 20:41:13 tester Exp $
 
 inherit eutils
 
@@ -77,7 +77,7 @@ pkg_config() {
 		die "not root"
 	fi
 
-	mkdir -p "${TARGET_DIR}/scratchbox/users"
+	mkdir -p "${TARGET_DIR}/users"
 
 	while true; do
 		einfo "Existing users:"

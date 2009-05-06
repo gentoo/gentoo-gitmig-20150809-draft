@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/scratchbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.3 2009/05/06 20:31:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.4 2009/05/06 20:41:13 tester Exp $
+
+  06 May 2009; Olivier Crête <tester@gentoo.org> scratchbox-1.0.14.ebuild:
+  Create right path
 
   06 May 2009; Olivier Crête <tester@gentoo.org> scratchbox-1.0.14.ebuild:
   Fix permissions in postinst
