@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.7 2009/02/25 12:50:07 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.8 2009/05/06 23:52:24 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -216,8 +216,8 @@ src_install() {
 		|| die "config file not installed properly"
 
 	insinto /etc/modprobe.d
-	newins "${FILESDIR}"/blacklist-110 blacklist
-	doins "${FILESDIR}"/pnp-aliases
+	newins "${FILESDIR}"/blacklist-110 blacklist.conf
+	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
 
 	# convert /lib/udev to real used dir
 	sed_helper_dir \
