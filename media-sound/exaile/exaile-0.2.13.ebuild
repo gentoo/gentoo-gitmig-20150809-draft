@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.13.ebuild,v 1.6 2008/05/29 17:15:05 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.13.ebuild,v 1.7 2009/05/06 17:28:19 ssuominen Exp $
 
 EAPI=1
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.exaile.org/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ~sparc x86"
-IUSE="aac alsa cdparanoia equalizer flac gnome ipod +jpeg libnotify +libsexy
+IUSE="aac alsa cdparanoia flac gnome ipod +jpeg libnotify +libsexy
 	mad musepack nls ogg oss +png vorbis"
 
 RDEPEND="dev-python/dbus-python
@@ -31,7 +31,6 @@ RDEPEND="dev-python/dbus-python
 		>=media-plugins/gst-plugins-gconf-${GVER}
 		>=media-plugins/gst-plugins-gnomevfs-${GVER} )
 	>=media-libs/gst-plugins-good-${GVER}
-	equalizer? ( >=media-libs/gst-plugins-bad-0.10.5 )
 	>=dev-python/gst-python-0.10.9
 	musepack? ( >=media-plugins/gst-plugins-musepack-${GVER} )
 	vorbis? ( >=media-plugins/gst-plugins-vorbis-${GVER} )

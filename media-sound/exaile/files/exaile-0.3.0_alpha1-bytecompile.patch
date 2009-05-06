@@ -1,0 +1,54 @@
+- Don't try to install .py[co] files if they are not available
+- Don't compile at install phase
+
+diff -ur exaile-0.3.0a1.orig/Makefile exaile-0.3.0a1/Makefile
+--- exaile-0.3.0a1.orig/Makefile	2009-01-05 17:56:16.000000000 +0000
++++ exaile-0.3.0a1/Makefile	2009-05-06 20:21:34.000000000 +0000
+@@ -42,25 +42,25 @@
+ 	cd plugins && make uninstall && cd ..
+ 
+ 
+-install: make-install-dirs compile
++install: make-install-dirs
+ 	install -m 644 exaile.py $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile	
+-	install -m 644 xl/*.py[co] $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xl
++	-install -m 644 xl/*.py[co] $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xl
+ 	install -m 644 xl/*.py $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xl
+-	install -m 644 xl/metadata/*.py[co] \
++	-install -m 644 xl/metadata/*.py[co] \
+ 		$(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xl/metadata
+ 	install -m 644 xl/metadata/*.py \
+ 		$(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xl/metadata
+-	install -m 644 xlgui/*.py[co] $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui
++	-install -m 644 xlgui/*.py[co] $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui
+ 	install -m 644 xlgui/*.py $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui
+-	install -m 644 xlgui/panel/*.py[co] \
++	-install -m 644 xlgui/panel/*.py[co] \
+ 		$(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui/panel
+ 	install -m 644 xlgui/panel/*.py \
+ 		$(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui/panel
+-	install -m 644 xlgui/prefs/*.py[co] \
++	-install -m 644 xlgui/prefs/*.py[co] \
+ 		$(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui/prefs
+ 	install -m 644 xlgui/prefs/*.py \
+ 		$(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/xlgui/prefs
+-	install -m 644 lib/*.py[co] $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/lib
++	-install -m 644 lib/*.py[co] $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/lib
+ 	install -m 644 lib/*.py $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile/lib
+ 	for f in `find po -name exaile.mo` ; do \
+ 	  install -d -m 755 \
+diff -ur exaile-0.3.0a1.orig/plugins/Makefile exaile-0.3.0a1/plugins/Makefile
+--- exaile-0.3.0a1.orig/plugins/Makefile	2009-01-05 17:56:16.000000000 +0000
++++ exaile-0.3.0a1/plugins/Makefile	2009-05-06 20:21:28.000000000 +0000
+@@ -13,9 +13,9 @@
+ 
+ compile:
+ 	python -m compileall .
+-	python -O -m compileall .
++	-python -O -m compileall .
+ 
+-install: compile
++install:
+ 	mkdir -p $(DESTDIR)$(PREFIX)$(PLUGINSDIR)
+ 	for plugin in $(INSTALL_PLUGINS); do \
+ 	    cp -r $${plugin} $(DESTDIR)$(PREFIX)$(PLUGINSDIR) ; \
