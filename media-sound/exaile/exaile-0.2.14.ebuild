@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.14.ebuild,v 1.2 2009/05/06 17:28:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.2.14.ebuild,v 1.3 2009/05/06 18:03:36 ssuominen Exp $
 
 EAPI=2
 
@@ -18,13 +18,14 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="aac alsa cdparanoia flac gnome ipod +jpeg libnotify +libsexy
-	mad musepack nls ogg oss +png vorbis"
+	mad musepack mtp nls ogg oss +png vorbis"
 
 RDEPEND="dev-python/dbus-python
 	>=media-libs/mutagen-1.12
 	>=dev-python/pygtk-2.10
 	|| ( >=dev-lang/python-2.5[sqlite] >=dev-python/pysqlite-2.3.5 )
 	|| ( >=dev-lang/python-2.5 dev-python/elementtree )
+	mtp? ( dev-python/pymtp )
 	libnotify? ( dev-python/notify-python )
 	libsexy? ( dev-python/sexy-python )
 	gnome? ( >=dev-python/gnome-python-extras-2.14
@@ -49,15 +50,16 @@ RDEPEND="dev-python/dbus-python
 DEPEND="nls? ( dev-util/intltool sys-devel/gettext )"
 
 src_compile() {
-	emake mmkeys.so || die "emake mmkeys.so failed."
+	emake mmkeys.so || die "emake mmkeys.so failed"
 
 	if use nls; then
-		emake translations || die "emake translations failed."
+		emake translations || die "emake translations failed"
 	fi
 }
 
 src_install() {
-	emake PREFIX="/usr" LIBDIR="/$(get_libdir)" DESTDIR="${D}" install || die "emake install failed."
+	emake PREFIX="/usr" LIBDIR="/$(get_libdir)" \
+		DESTDIR="${D}" install || die "emake install failed"
 	newdoc changelog ChangeLog
 }
 

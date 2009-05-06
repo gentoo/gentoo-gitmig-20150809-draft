@@ -4,5 +4,6 @@
   <herd>sound</herd>
   <use>
     <flag name="libsexy">Enable libsexy support</flag>
+	<flag name="mtp">Enable libmtp support</flag>
   </use>
 </pkgmetadata>

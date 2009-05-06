@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.47 2009/05/06 17:28:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.48 2009/05/06 18:03:36 ssuominen Exp $
+
+  06 May 2009; Samuli Suominen <ssuominen@gentoo.org> exaile-0.2.14.ebuild,
+  metadata.xml:
+  Add mtp to USE flags wrt #227193, thanks to Andrea Pinazzi
 
 *exaile-0.3.0_alpha1 (06 May 2009)
 
