@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.5.ebuild,v 1.4 2009/04/26 19:06:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.5.ebuild,v 1.5 2009/05/06 10:12:37 fauli Exp $
 
 inherit elisp-common
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="amd64 ppc sparc ~x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc vim emacs"
 
 RDEPEND="vim? ( || ( app-editors/vim app-editors/gvim ) )
