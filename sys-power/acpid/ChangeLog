@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.39 2009/05/05 08:42:08 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/ChangeLog,v 1.40 2009/05/06 19:44:21 maekke Exp $
+
+  06 May 2009; Markus Meier <maekke@gentoo.org> acpid-1.0.10_p3.ebuild:
+  amd64/x86 stable, bug #268079
 
 *acpid-1.0.10_p3 (05 May 2009)
 
