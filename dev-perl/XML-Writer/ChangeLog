@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Writer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.72 2009/05/04 16:22:51 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Writer/ChangeLog,v 1.73 2009/05/06 19:23:49 jer Exp $
+
+  06 May 2009; Jeroen Roovers <jer@gentoo.org> XML-Writer-0.606.ebuild:
+  Stable for HPPA (bug #268258).
 
   04 May 2009; Raúl Porcel <armin76@gentoo.org> XML-Writer-0.606.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #268258
