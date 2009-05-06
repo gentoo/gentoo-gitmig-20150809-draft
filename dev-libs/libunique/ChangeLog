@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.3 2009/05/05 17:51:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.4 2009/05/06 14:59:21 jer Exp $
+
+  06 May 2009; Jeroen Roovers <jer@gentoo.org> libunique-1.0.8.ebuild:
+  Marked ~hppa (bug #268487).
 
   05 May 2009; Raúl Porcel <armin76@gentoo.org> libunique-1.0.8.ebuild:
   Add ~alpha/~arm/~ia64/~sh wrt #268487
