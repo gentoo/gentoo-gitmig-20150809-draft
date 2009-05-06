@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.7 2009/05/06 01:44:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/apricots/apricots-0.2.6-r1.ebuild,v 1.8 2009/05/06 01:50:54 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="Fly a plane around bomb/shoot the enemy. Port of Planegame from Amiga."
@@ -17,9 +18,7 @@ DEPEND="media-libs/libsdl
 	media-libs/openal
 	media-libs/freealut"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-freealut.patch
 
 	cp admin/acinclude.m4.in acinclude.m4
