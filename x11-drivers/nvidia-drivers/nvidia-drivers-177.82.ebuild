@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-177.82.ebuild,v 1.7 2008/12/25 15:44:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-177.82.ebuild,v 1.8 2009/05/06 16:30:01 vapier Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -260,7 +260,7 @@ src_install() {
 			-e 's:VIDEOGID:'${VIDEOGROUP}':' "${FILESDIR}"/nvidia-169.07 > \
 			"${WORKDIR}"/nvidia
 		insinto /etc/modprobe.d
-		doins "${WORKDIR}"/nvidia || die
+		newins "${WORKDIR}"/nvidia nvidia.conf || die
 	elif use x86-fbsd; then
 		insinto /boot/modules
 		doins "${WORKDIR}/${NV_PACKAGE}/src/nvidia.kld" || die

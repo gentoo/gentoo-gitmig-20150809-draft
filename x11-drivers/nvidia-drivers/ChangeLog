@@ -1,6 +1,21 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.144 2009/04/19 06:38:59 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.145 2009/05/06 16:30:01 vapier Exp $
+
+  06 May 2009; Mike Frysinger <vapier@gentoo.org>
+  nvidia-drivers-71.86.06.ebuild, nvidia-drivers-71.86.07.ebuild,
+  nvidia-drivers-71.86.08.ebuild, nvidia-drivers-71.86.09.ebuild,
+  nvidia-drivers-96.43.07.ebuild, nvidia-drivers-96.43.09.ebuild,
+  nvidia-drivers-96.43.10.ebuild, nvidia-drivers-96.43.11.ebuild,
+  nvidia-drivers-100.14.19.ebuild, nvidia-drivers-173.14.09.ebuild,
+  nvidia-drivers-173.14.12.ebuild, nvidia-drivers-173.14.15.ebuild,
+  nvidia-drivers-173.14.16.ebuild, nvidia-drivers-173.14.17.ebuild,
+  nvidia-drivers-173.14.18.ebuild, nvidia-drivers-177.80.ebuild,
+  nvidia-drivers-177.82.ebuild, nvidia-drivers-180.22.ebuild,
+  nvidia-drivers-180.27.ebuild, nvidia-drivers-180.29.ebuild,
+  nvidia-drivers-180.37.ebuild, nvidia-drivers-180.41.ebuild,
+  nvidia-drivers-180.44.ebuild, nvidia-drivers-180.51.ebuild:
+  Install modprobe.d file as nvidia.conf.
 
 *nvidia-drivers-180.51 (19 Apr 2009)
 
