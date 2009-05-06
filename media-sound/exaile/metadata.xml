@@ -3,7 +3,6 @@
 <pkgmetadata>
   <herd>sound</herd>
   <use>
-    <flag name="equalizer">Enable equalizer support</flag>
     <flag name="libsexy">Enable libsexy support</flag>
   </use>
 </pkgmetadata>
