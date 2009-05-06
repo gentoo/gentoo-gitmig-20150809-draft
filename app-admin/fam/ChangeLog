@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.54 2009/05/06 20:45:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.55 2009/05/06 20:48:26 jer Exp $
+
+  06 May 2009; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r4.ebuild:
+  Do not redundantly set WANT_AUTO{CONF.MAKE}.
 
   06 May 2009; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r4.ebuild:
   Compress the DISTFILES patch file (bug #268650).
