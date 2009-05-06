@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.0.0-r1.ebuild,v 1.2 2009/02/05 05:44:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.0.0-r1.ebuild,v 1.3 2009/05/06 21:05:52 maekke Exp $
 
 inherit eutils fortran autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 IUSE="blas mpi python doc"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="blas? ( virtual/blas )
 		python? ( dev-lang/python )

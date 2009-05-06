@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.1-r2.ebuild,v 1.2 2009/04/16 13:42:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.1-r2.ebuild,v 1.3 2009/05/06 21:06:39 maekke Exp $
 
 NEED_PYTHON=2.4
 PYTHON_MODNAME="chempy pmg_tk pymol"
@@ -16,7 +16,7 @@ HOMEPAGE="http://pymol.sourceforge.net/"
 LICENSE="PSF-2.2"
 IUSE="apbs shaders"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 RDEPEND="dev-python/pmw
 	dev-lang/tk

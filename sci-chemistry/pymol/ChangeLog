@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.41 2009/04/16 13:42:53 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.42 2009/05/06 21:06:39 maekke Exp $
+
+  06 May 2009; Markus Meier <maekke@gentoo.org> pymol-1.1-r2.ebuild:
+  amd64/x86 stable, bug #250903
 
   16 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
   pymol-0.99_rc10.ebuild, pymol-1.1-r2.ebuild:
