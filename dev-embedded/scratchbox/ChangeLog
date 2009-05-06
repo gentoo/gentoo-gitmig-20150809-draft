@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/scratchbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.1 2009/05/06 19:33:30 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/ChangeLog,v 1.2 2009/05/06 20:23:32 tester Exp $
+
+*scratchbox-1.0.14 (06 May 2009)
+
+  06 May 2009; Olivier Crête <tester@gentoo.org> +scratchbox-1.0.14.ebuild:
+  Version bump
 
 *scratchbox-1.0.11 (06 May 2009)
 
