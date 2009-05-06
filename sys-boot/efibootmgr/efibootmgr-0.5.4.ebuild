@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4.ebuild,v 1.1 2008/02/20 02:52:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/efibootmgr/efibootmgr-0.5.4.ebuild,v 1.2 2009/05/06 18:34:52 maekke Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -10,10 +10,11 @@ SRC_URI="http://linux.dell.com/efibootmgr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ia64 ~x86"
+KEYWORDS="~amd64 ~ia64 ~x86"
 IUSE=""
 
-DEPEND="sys-apps/pciutils"
+RDEPEND="sys-apps/pciutils"
+DEPEND="${RDEPEND}"
 
 pkg_config() {
 	# should prob get moved into tc-funcs or something ...
