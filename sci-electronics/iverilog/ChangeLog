@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/iverilog
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.23 2009/05/05 05:46:58 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.24 2009/05/06 19:48:24 maekke Exp $
+
+  06 May 2009; Markus Meier <maekke@gentoo.org> iverilog-0.8.6.ebuild:
+  amd64 stable, bug #245704
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   iverilog-0.8.6.ebuild:
