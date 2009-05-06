@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.9.ebuild,v 1.4 2009/04/20 23:39:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/orbited/orbited-0.7.9.ebuild,v 1.5 2009/05/06 17:46:54 caleb Exp $
 
 inherit distutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-python/twisted
+RDEPEND="dev-python/twisted-web
+	dev-python/twisted
 	>=dev-python/morbid-0.8.4
 	dev-python/demjson
 	dev-python/stomper
