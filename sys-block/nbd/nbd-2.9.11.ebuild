@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.11.ebuild,v 1.2 2008/05/05 13:27:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/nbd-2.9.11.ebuild,v 1.3 2009/05/06 12:38:42 ranger Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/nbd/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0"
