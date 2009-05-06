@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/geany
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.25 2009/05/05 10:19:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/geany/ChangeLog,v 1.26 2009/05/06 10:16:46 ssuominen Exp $
+
+*geany-0.17 (06 May 2009)
+
+  06 May 2009; Samuli Suominen <ssuominen@gentoo.org> +geany-0.17.ebuild:
+  Version bump, thanks to few from #gentoo-bugs at Freenode.
 
   05 May 2009; Samuli Suominen <ssuominen@gentoo.org> -geany-0.13.ebuild,
   -geany-0.15.ebuild, geany-0.16.ebuild:
