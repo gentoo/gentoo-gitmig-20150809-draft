@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ding
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ChangeLog,v 1.16 2007/04/17 07:19:01 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ChangeLog,v 1.17 2009/05/06 15:11:02 tove Exp $
+
+*ding-1.6 (06 May 2009)
+
+  06 May 2009; Torsten Veller <tove@gentoo.org> +ding-1.6.ebuild:
+  Version bump. Thanks to Sebastian Mingramm and Samuli Suominen (#268813)
 
 *ding-1.5 (17 Apr 2007)
 
