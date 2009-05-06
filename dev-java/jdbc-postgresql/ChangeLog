@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.24 2009/05/06 21:52:45 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.25 2009/05/06 21:55:28 betelgeuse Exp $
+
+  06 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -jdbc-postgresql-8.2_p504.ebuild, -jdbc-postgresql-8.2_p505.ebuild,
+  -jdbc-postgresql-8.2_p506.ebuild:
+  Remove old ebuilds.
 
 *jdbc-postgresql-8.3_p604 (06 May 2009)
 
