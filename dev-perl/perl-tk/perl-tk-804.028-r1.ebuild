@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.028-r1.ebuild,v 1.4 2009/05/03 17:32:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/perl-tk-804.028-r1.ebuild,v 1.5 2009/05/06 18:58:46 jer Exp $
 
 MODULE_AUTHOR="SREZIC"
 MY_PN=Tk
@@ -11,7 +11,7 @@ DESCRIPTION="A Perl Module for Tk"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="x11-libs/libX11
