@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.0.3203.ebuild,v 1.2 2009/05/06 08:09:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.0.3203-r1.ebuild,v 1.1 2009/05/06 11:07:45 loki_val Exp $
 
 EAPI=2
 
@@ -22,19 +22,17 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	>=dev-dotnet/nant-0.86_beta1"
 
-MAKEOPTS="${MAKEOPTS} -j1"
-
 RESTRICT="test"
 
-# Irritating bug: Boo has to be uninstalled for boo to compile.
 pkg_setup() {
-	if has_version ${CATEGORY}/${PN}
+	if /usr/bin/gacutil -l|grep Boo.Lang.Extensions &> /dev/null
 	then
-		eerror "${CATEGORY}/${PN}'s install process is buggy. It requires that you remove any"
-		eerror "existing install before attempting to reinstall it."
-		eerror "Please emerge -C ${CATEGORY}/${PN} and try again."
-		eerror "See http://bugs.gentoo.org/268610 for details."
-		die "Please emerge -C ${CATEGORY}/${PN}"
+		eerror "$(best_version ${CATEGORY}/${PN}) has installed Boo.Lang.Extensions into the GAC."
+		eerror "This is a bug, that will cause compilation of ${CATEGORY}/${PF} to fail. It has"
+		eerror "been fixed in this version. For now, it requires that you uninstall"
+		eerror "${CATEGORY}/${PN} before updating."
+		eerror "Please run: emerge -C ${CATEGORY}/${PN} and try again."
+		die "Please run: emerge -C ${CATEGORY}/${PN} and try again."
 	fi
 }
 
@@ -42,6 +40,7 @@ src_prepare() {
 	sed -i -e 's: Boo.Microsoft.Build.Tasks, update-vs2005-env,::' default.build || die
 	sed -i -e 's@${libdir}/boo@${libdir}/mono/boo@g' \
 		extras/boo.pc.in || die
+	epatch "${FILESDIR}/boo-0.9.1.3287-GACproblems.patch"
 }
 
 src_compile() {
