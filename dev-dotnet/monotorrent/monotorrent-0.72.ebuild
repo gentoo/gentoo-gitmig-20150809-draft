@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/monotorrent-0.72.ebuild,v 1.1 2009/04/27 09:01:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/monotorrent/monotorrent-0.72.ebuild,v 1.2 2009/05/06 00:04:07 loki_val Exp $
 
 EAPI=2
 
 inherit mono multilib
 
 DESCRIPTION="Monotorrent is an open source C# bittorrent library"
-HOMEPAGE="http://www.monotorrent.com/"
+HOMEPAGE="http://projects.qnetp.net/projects/show/monotorrent"
 SRC_URI="http://projects.qnetp.net/attachments/download/13/${P}.tar.gz"
 
 LICENSE="MIT"
