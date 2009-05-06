@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-2.0.1.ebuild,v 1.1 2009/02/19 11:05:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-2.0.1.ebuild,v 1.2 2009/05/06 15:57:23 lack Exp $
 
 inherit eutils
 
@@ -19,6 +19,8 @@ RDEPEND=""
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Failed to install"
+	exeinto /etc/resolvconf/update.d/
+	doexe "${FILESDIR}/pdnsd"
 }
 
 pkg_config() {

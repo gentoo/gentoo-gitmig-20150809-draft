@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-3.1.1.ebuild,v 1.2 2009/05/06 15:57:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/openresolv-2.0-r1.ebuild,v 1.1 2009/05/06 15:57:23 lack Exp $
 
 inherit eutils
 
@@ -17,21 +17,10 @@ DEPEND="!net-dns/resolvconf-gentoo
 	!<net-dns/dnsmasq-2.40-r1"
 RDEPEND=""
 
-pkg_setup() {
-	export PREFIX=
-}
-
 src_install() {
-	emake DESTDIR="${D}" install
-	exeinto /libexec/resolvconf/
+	emake DESTDIR="${D}" install || die "Failed to install"
+	exeinto /etc/resolvconf/update.d/
 	doexe "${FILESDIR}/pdnsd"
-}
-
-pkg_postinst() {
-	einfo "${PN}-3.0 has a new configuration file /etc/resolvconf.conf"
-	einfo "instead of mini files in different directories."
-	einfo "You should configure /etc/resolvconf.conf if you use a resolver"
-	einfo "other than libc."
 }
 
 pkg_config() {
