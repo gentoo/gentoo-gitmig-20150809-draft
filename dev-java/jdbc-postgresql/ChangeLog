@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdbc-postgresql
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.23 2008/06/24 22:46:15 ken69267 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.24 2009/05/06 21:52:45 betelgeuse Exp $
+
+*jdbc-postgresql-8.3_p604 (06 May 2009)
+
+  06 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +jdbc-postgresql-8.3_p604.ebuild:
+  Version bump. Fixes bug #250810.
 
   24 Jun 2008; Kenneth Prugh <ken69267@gentoo.org>
   jdbc-postgresql-8.3_p603-r1.ebuild:
@@ -49,6 +55,10 @@
   15 Aug 2007; Christian Faulhammer <opfer@gentoo.org>
   jdbc-postgresql-8.2_p505.ebuild:
   stable x86, bug 187615
+
+*jdbc-postgresql-8.0_p320 (04 Aug 2007)
+*jdbc-postgresql-8.1_p410 (04 Aug 2007)
+*jdbc-postgresql-8.2_p506 (04 Aug 2007)
 
   04 Aug 2007; Miroslav Šulc <fordfrog@gentoo.org>
   -jdbc-postgresql-8.0_p319.ebuild, +jdbc-postgresql-8.0_p320.ebuild,
