@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.48 2009/05/03 17:56:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.49 2009/05/06 19:14:15 jer Exp $
+
+  06 May 2009; Jeroen Roovers <jer@gentoo.org> Locale-PO-0.21.ebuild:
+  Stable for HPPA (bug #268208).
 
   03 May 2009; Markus Meier <maekke@gentoo.org> Locale-PO-0.21.ebuild:
   amd64 stable, bug #268208
