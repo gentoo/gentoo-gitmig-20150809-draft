@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.4.ebuild,v 1.2 2008/08/30 05:52:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.4.ebuild,v 1.3 2009/05/06 12:30:24 fmccor Exp $
 
 DESCRIPTION="a lib implementing a small layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
 HOMEPAGE="http://www.opensc-project.org/libp11/"
@@ -11,7 +11,7 @@ if [[ "${PV}" = "9999" ]]; then
 	KEYWORDS=""
 else
 	SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+	KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 sparc ~x86"
 fi
 
 LICENSE="LGPL-2.1"
