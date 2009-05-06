@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4422 2009/05/06 17:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4423 2009/05/06 18:07:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1485,6 +1485,7 @@ media-sound/darkice:twolame - Build with twolame support
 media-sound/decibel-audio-player:cdaudio - Adds support for CD audio playback and lookups via CDDB
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
 media-sound/exaile:libsexy - Enable libsexy support
+media-sound/exaile:mtp - Enable libmtp support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
 media-sound/freewheeling:fluidsynth - compile with support for fluidsynth
 media-sound/gimmix:cover - Enable cover art fetching
