@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Number-Format
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/ChangeLog,v 1.22 2009/05/04 19:20:51 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Number-Format/ChangeLog,v 1.23 2009/05/06 08:11:16 tove Exp $
+
+*Number-Format-1.72a (06 May 2009)
+
+  06 May 2009; Torsten Veller <tove@gentoo.org> +Number-Format-1.72a.ebuild:
+  Version bump
 
 *Number-Format-1.71 (04 May 2009)
 
