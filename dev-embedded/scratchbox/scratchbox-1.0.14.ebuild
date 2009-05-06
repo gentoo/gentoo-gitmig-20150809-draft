@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.14.ebuild,v 1.1 2009/05/06 20:23:32 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox/scratchbox-1.0.14.ebuild,v 1.2 2009/05/06 20:31:39 tester Exp $
 
 inherit eutils
 
@@ -43,10 +43,12 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	"${TARGET_DIR}/sbin/sbox_configure" "no" ${SBOX_GROUP}
+
 	elog
-	elog "You need to run:"
+	elog "You can run:"
 	elog "\"emerge --config =${CATEGORY}/${PF}\""
-	elog "to set permissions right and setup scratchbox and users"
+	elog "to setup scratchbox users"
 	elog
 	elog "For further documentation about how to setup"
 	elog "scratchbox for your development needs have a look at"
@@ -74,18 +76,6 @@ pkg_config() {
 		ewarn "Must be root to run this"
 		die "not root"
 	fi
-
-	einfo "Do you want to configure scratchbox? [Yes/No]"
-	einfo "Note: This will set permissions and copy files from the system into the scratchbox"
-	read choice
-	echo
-	case "$choice" in
-		y*|Y*|"")
-			"${TARGET_DIR}/sbin/sbox_configure" "no" ${SBOX_GROUP} || die "sbox_configure failed"
-			;;
-		*)
-			;;
-	esac
 
 	mkdir -p "${TARGET_DIR}/scratchbox/users"
 
