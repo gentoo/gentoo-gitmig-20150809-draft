@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/pymtp-0.0.4.ebuild,v 1.1 2009/05/06 17:58:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/pymtp-0.0.4.ebuild,v 1.2 2009/05/06 17:59:53 ssuominen Exp $
 
 inherit distutils multilib python
 
@@ -17,7 +17,7 @@ RDEPEND=">=media-libs/libmtp-0.2.6"
 DEPEND="${RDEPEND}"
 
 pkg_postinst() {
-	python_version	
+	python_version
 	python_mod_compile /usr/$(get_libdir)/python${PYVER}/site-packages/pymtp.py
 }
 
