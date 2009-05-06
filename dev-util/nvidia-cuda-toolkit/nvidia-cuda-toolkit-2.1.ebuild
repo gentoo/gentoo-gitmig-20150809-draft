@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.1.ebuild,v 1.2 2009/04/13 19:18:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.1.ebuild,v 1.3 2009/05/06 17:46:42 spock Exp $
 
 inherit eutils
 
@@ -29,6 +29,9 @@ src_unpack() {
 src_install() {
 	local DEST=/opt/cuda
 	export CONF_LIBDIR_OVERRIDE="lib"
+
+	# HACK: temporary workaround until CONF_LIBDIR_OVERRIDE is respected.
+	export LIBDIR_amd64="lib"
 
 	into ${DEST}
 	dobin bin/*
