@@ -1,0 +1,65 @@
+*********************************************
+
+LSI Logic MegaRAID Linux MegaCLI Release 
+
+*********************************************
+
+Release Date: 10/01/07
+===================
+
+Supported Controllers
+==================
+
+MegaRAID SAS 84016E
+MegaRAID SAS 8704ELP
+MegaRAID SAS 8708ELP
+MegaRAID SAS 8888ELP
+MegaRAID SAS 8408E
+MegaRAID SAS 8480E
+MegaRAID SAS 8308ELP
+MegaRAID SAS 8344ELP
+MegaRAID SAS 8304ELP
+MegaRAID SAS 8300XLP
+MegaRAID SAS 8208ELP
+MegaRAID SAS 8208XLP
+MegaRAID SAS 8204ELP
+MegaRAID SAS 8204XLP
+MegaRAID SAS 8708EM2
+MegaRAID SAS 8880EM2
+
+
+Component:
+=========
+SAS MegaRAID Linux MegaCLI
+Release Date: 10/01/2007
+
+
+Version Numbers:	MegaCLI
+===============		===========			
+Current Version		1.01.40
+Previous Versoin	1.01.39
+
+Enhancements and Bug Fixes
+==========================
+LSID100071716 (DFCT) It´s impossible to see the cache size by MegaCli. 
+LSID100066440 (DFCT) LSI-MEGACLI: Commands failing On Netware 6.5 Sp6 on 9G Servers 
+LSID100071789 (DFCT) Typo in CLI adpallinfo 
+LSID100072738 (DFCT) SAS/CLI option to set connector mode to Auto is not shown in the help file. 
+LSID100072451 (DFCT) SWR5 -System fails with a General Protection Fault when clearing cfg using -A0,1 
+LSID100073111 (CO) do not want vitual enclosure when drives connected directly
+
+
+Known Restrictions
+================
+1.	NONE
+
+
+Known Bugs
+===========
+1.	NONE
+
+
+Installation Commands: 
+===================
+1.	Install the rpm file and run megacli from the terminal window.
+2.	Use -h option to see help menu.

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-4.00.11.ebuild,v 1.1 2009/05/06 15:44:03 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/megacli/megacli-4.00.11.ebuild,v 1.2 2009/05/07 13:10:49 wschlich Exp $
 
 inherit rpm
 
@@ -41,9 +41,14 @@ src_install() {
 	esac
 	doexe opt/MegaRAID/MegaCli/${MegaCli}
 	dosym /opt/MegaRAID/MegaCli/${MegaCli} /usr/sbin/MegaCli
+	dodoc "${FILESDIR}"/${PV}_Linux_MegaCLI.txt
 }
 
 pkg_postinst() {
+	einfo
+	einfo "See ${PV}_Linux_MegaCli.txt for a list of supported controllers"
+	einfo "(contains LSI model names only, not those sold by 3rd parties"
+	einfo "under custom names like Dell PERC etc)."
 	einfo
 	einfo "As there's no dedicated manual, you might want to have"
 	einfo "a look at the following cheat sheet (originally written"

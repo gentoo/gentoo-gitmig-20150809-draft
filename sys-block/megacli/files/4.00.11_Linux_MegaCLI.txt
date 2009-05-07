@@ -1,0 +1,63 @@
+*********************************************
+
+LSI Logic MegaRAID Linux MegaCLI Release 
+
+*********************************************
+
+Release Date: 02/19/2009
+========================
+
+Supported Controllers
+==================
+
+MegaRAID SAS 8704ELP
+MegaRAID SAS 8704EM2
+MegaRAID SAS 8708ELP
+MegaRAID SAS 8708EM2 
+MegaRAID SAS 8880EM2
+MegaRAID SAS 8888ELP
+
+
+Component:
+=========
+SAS MegaRAID Linux MegaCLI
+Release Date: 02/19/2009
+
+
+Version Numbers:	MegaCLI
+===============		===========			
+Current Version		4.00.11
+Previous Version	4.00.08
+
+
+Enhancements and Bug Fixes
+==========================
+LSID100106567 (CO) CR_Ref# LSID100097538: MegaCLI error messages via FW
+LSID100107491 (CO) CR_Ref# LSID100071008: Change Vivaldi drive size reporting from MB to GB.
+LSID100108945 (CO) LSIP200008587 (PR):  Show correct SATA HDD Fw versions in all Utilities  
+LSID100108959 (CO) LSIP200009557 (PR):  Add the new option in Mega CLI to schedule the Patrol Read next time. 
+LSID100107030 (DFCT) MegaCi,CmdTool2,MegaSCU gives unwanted information in commands realted Enclosure. 
+LSID100100157 (DFCT) Not Displaying Supported Raid levels 
+LSID100107389 (DFCT) Port code of Enable + Disable maintainPdFailHistory via MegaCLI from Unicoi to EF 
+LSID100107388 (DFCT) MegaCLI is expecting "noverchk" sub-option during upgrading fw pkg. 
+LSID100098542 (DFCT) Debug messages written by MegaCLI even with -nolog option 
+LSID100101003 (DFCT) Time stamp of NVRAM log shows an offset of 1 hr 
+LSID100107030 (DFCT) MegaCi,CmdTool2,MegaSCU gives unwanted information in commands realted Enclosure. 
+LSID100108055 (DFCT) MegaCli--pd info not shown for all slots.
+
+
+Known Restrictions
+================
+1.	NONE
+
+
+Known Bugs
+===========
+1.	NONE
+
+
+Installation Commands: 
+===================
+1.	Install the rpm file and run megacli from the terminal window.
+2.	Use -h option to see help menu.
+
