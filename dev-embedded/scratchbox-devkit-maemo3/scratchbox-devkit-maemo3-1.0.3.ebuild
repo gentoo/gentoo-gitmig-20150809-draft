@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-maemo3/scratchbox-devkit-maemo3-1.0.3.ebuild,v 1.1 2009/05/06 19:35:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/scratchbox-devkit-maemo3/scratchbox-devkit-maemo3-1.0.3.ebuild,v 1.2 2009/05/07 04:53:22 mr_bones_ Exp $
 
 SBOX_GROUP="sbox"
 RESTRICT="strip binchecks"
@@ -18,7 +18,6 @@ DEPEND=""
 
 QA_TEXTRELS="opt/scratchbox"
 QA_EXECSTACK="opt/scratchbox"
-
 
 TARGET_DIR="/opt/scratchbox"
 
