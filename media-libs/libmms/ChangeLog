@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.30 2009/05/07 10:11:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.31 2009/05/07 19:12:06 klausman Exp $
+
+  07 May 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Stable on alpha, bug #268294
 
   07 May 2009; Jeroen Roovers <jer@gentoo.org> libmms-0.4.ebuild:
   Stable for HPPA (bug #268294).
