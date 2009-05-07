@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdemaildir
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemaildir/ChangeLog,v 1.14 2009/04/17 06:24:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemaildir/ChangeLog,v 1.15 2009/05/06 23:11:52 scarabeus Exp $
+
+*kdemaildir-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +kdemaildir-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kdemaildir-4.2.2:
   Restore ~hppa keywords

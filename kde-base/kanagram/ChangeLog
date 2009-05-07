@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kanagram
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.85 2009/04/17 06:19:17 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kanagram/ChangeLog,v 1.86 2009/05/06 22:53:28 scarabeus Exp $
+
+*kanagram-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +kanagram-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> kanagram-4.2.2:
   Restore ~hppa keywords

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.95 2009/04/17 06:11:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.96 2009/05/07 00:03:01 scarabeus Exp $
+
+*kuiviewer-4.2.3 (07 May 2009)
+
+  07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +kuiviewer-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kuiviewer-4.2.1.ebuild,
   kuiviewer-4.2.2:

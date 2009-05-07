@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.16 2009/04/17 07:57:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.17 2009/05/07 00:20:25 scarabeus Exp $
+
+*step-4.2.3 (07 May 2009)
+
+  07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +step-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -step-4.2.1.ebuild,
   step-4.2.2:

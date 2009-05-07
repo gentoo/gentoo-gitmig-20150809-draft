@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.585 2009/04/21 17:23:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.586 2009/05/06 23:10:58 scarabeus Exp $
+
+*kdelibs-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +kdelibs-4.2.3.ebuild:
+  Version bump
 
   21 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-3.5.10-r1,
   kdelibs-3.5.10-r2:

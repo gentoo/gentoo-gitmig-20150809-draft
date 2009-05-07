@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.112 2009/04/17 06:15:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.113 2009/05/07 00:04:48 scarabeus Exp $
+
+*kweather-4.2.3 (07 May 2009)
+
+  07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +kweather-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -kweather-4.2.1.ebuild,
   kweather-4.2.2:

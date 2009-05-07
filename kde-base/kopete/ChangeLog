@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.182 2009/04/28 14:17:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.183 2009/05/06 23:45:40 scarabeus Exp $
+
+*kopete-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +kopete-4.2.3.ebuild:
+  Version bump
 
   28 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
   -kopete-4.2.2.ebuild:

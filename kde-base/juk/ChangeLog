@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.124 2009/04/27 16:22:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.125 2009/05/06 22:50:54 scarabeus Exp $
+
+*juk-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +juk-4.2.3.ebuild:
+  Version bump
 
   27 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml,
   juk-4.2.2.ebuild:

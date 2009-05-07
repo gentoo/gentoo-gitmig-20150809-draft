@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/khelpcenter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.118 2009/04/17 06:16:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khelpcenter/ChangeLog,v 1.119 2009/05/06 23:27:12 scarabeus Exp $
+
+*khelpcenter-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +khelpcenter-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> khelpcenter-4.2.2:
   Restore ~hppa keywords

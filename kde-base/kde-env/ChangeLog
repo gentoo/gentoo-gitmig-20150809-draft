@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kde-env
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.34 2009/05/06 23:09:28 scarabeus Exp $
+
+*kde-env-4.2.3 (06 May 2009)
+
+  06 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +kde-env-4.2.3.ebuild,
+  +metadata.xml:
+  Version bump
+

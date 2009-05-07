@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.81 2009/04/17 06:31:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.82 2009/05/07 00:11:53 scarabeus Exp $
+
+*libksieve-4.2.3 (07 May 2009)
+
+  07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +libksieve-4.2.3.ebuild:
+  Version bump
 
   17 Apr 2009; Alexey Shvetsov <alexxy@gentoo.org> -libksieve-4.2.1.ebuild,
   libksieve-4.2.2:
