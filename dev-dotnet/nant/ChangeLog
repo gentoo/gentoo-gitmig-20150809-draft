@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/nant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.22 2009/05/03 20:29:38 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/ChangeLog,v 1.23 2009/05/07 17:27:00 loki_val Exp $
+
+  07 May 2009; Peter Alfredsen <loki_val@gentoo.org> nant-0.86_beta1.ebuild:
+  Drop unused SRC_URI entry, thanks to mr_bones.
 
 *nant-0.86_beta1 (03 May 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.86_beta1.ebuild,v 1.1 2009/05/03 20:29:38 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.86_beta1.ebuild,v 1.2 2009/05/07 17:27:00 loki_val Exp $
 
 EAPI=2
 
@@ -8,8 +8,7 @@ inherit mono multilib eutils
 
 DESCRIPTION=".NET build tool"
 HOMEPAGE="http://nant.sourceforge.net/"
-SRC_URI="mirror://sourceforge/nant/${P/_/-}-src.tar.gz
-	build? ( mirror://sourceforge/nant/${P/_/-}-bin.tar.gz )"
+SRC_URI="mirror://sourceforge/nant/${P/_/-}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
