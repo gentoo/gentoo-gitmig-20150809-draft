@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.6 2008/12/15 22:22:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-3.0.2.ebuild,v 1.7 2009/05/07 21:34:57 loki_val Exp $
 
 inherit cmake-utils
 
@@ -24,3 +24,5 @@ S=${WORKDIR}/lib${P}
 CMAKE_IN_SOURCE_BUILD=true
 
 DOCS="README.txt NEWS.txt AUTHORS.txt"
+
+PATCHES=( "${FILESDIR}/${PN}-3.0.2-gcc44.patch" )

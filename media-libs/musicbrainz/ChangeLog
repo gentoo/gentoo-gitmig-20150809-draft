@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/musicbrainz
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.93 2008/12/15 22:22:53 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.94 2009/05/07 21:34:57 loki_val Exp $
+
+  07 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  musicbrainz-3.0.2.ebuild, +files/musicbrainz-3.0.2-gcc44.patch:
+  Add patch for GCC 4.4 compatibility, bug 268430. Thanks to Daniel J.
+  <sleeperseven@hotmail.com> for the patch.
 
   15 Dec 2008; Jeroen Roovers <jer@gentoo.org> musicbrainz-3.0.2.ebuild:
   Stable for HPPA (bug #249746).
