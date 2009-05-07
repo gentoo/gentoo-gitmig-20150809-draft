@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.3 2007/01/26 08:27:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/plextor-tool/plextor-tool-0.5.0.ebuild,v 1.4 2009/05/07 20:30:40 ssuominen Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Tool to change the parameters of a Plextor CD-ROM drive"
 HOMEPAGE="http://plextor-tool.sourceforge.net/"
@@ -10,10 +10,11 @@ SRC_URI="mirror://sourceforge/plextor-tool/${P}.src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="static gnome"
 
-DEPEND="gnome? ( gnome-base/gnome-panel )"
+RDEPEND="gnome? ( gnome-base/gnome-panel )"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${PN}
 
@@ -31,7 +32,7 @@ src_compile() {
 	use gnome && targets="${targets} plextor-tool-applet"
 #	use static && use gnome && targets="${targets} pta-static"
 	echo ${targets} > my-make-targets
-	emake ${targets} || die "make ${targets} failed"
+	emake CC="$(tc-getCC)" ${targets} || die "make ${targets} failed"
 }
 
 src_install() {
