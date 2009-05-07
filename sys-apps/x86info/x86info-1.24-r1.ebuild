@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.24-r1.ebuild,v 1.1 2009/04/12 20:39:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.24-r1.ebuild,v 1.2 2009/05/07 20:04:08 ssuominen Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Dave Jones' handy, informative x86 CPU diagnostic utility"
 HOMEPAGE="http://www.codemonkey.org.uk/projects/x86info/"
@@ -23,7 +23,8 @@ src_unpack() {
 }
 
 src_compile() {
-	emake x86info CFLAGS="${CFLAGS}" || die "emake failed"
+	emake x86info CC="$(tc-getCC)" \
+		CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 pkg_preinst() {
@@ -40,7 +41,7 @@ src_install() {
 	insinto /etc/modprobe.d
 	newins "${FILESDIR}"/x86info-modules.conf-rc x86info
 
-	dodoc TODO README ChangeLog
+	dodoc TODO README
 	doman x86info.1
 	insinto /usr/share/doc/${PF}
 	doins -r results
