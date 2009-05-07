@@ -1,10 +1,15 @@
 # ChangeLog for app-cdr/dvd95
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.5 2008/06/06 20:32:37 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/ChangeLog,v 1.6 2009/05/07 20:25:21 ssuominen Exp $
+
+*dvd95-1.5_p0 (07 May 2009)
+
+  07 May 2009; Samuli Suominen <ssuominen@gentoo.org> +dvd95-1.5_p0.ebuild:
+  Version bump. It seems LINGUAS works without a hack now.
 
 *dvd95-1.3_p2 (06 Jun 2008)
 
-  06 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  06 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/dvd95-1.3_p2-desktop-entry.patch, -dvd95-1.2_p0.ebuild,
   +dvd95-1.3_p2.ebuild:
   Version bump for bug 223927. Fix desktop entry for bug 204319. Try to
