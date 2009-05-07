@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.90 2009/03/29 18:47:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.91 2009/05/07 08:02:26 fauli Exp $
+
+  07 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  gtk-gnutella-0.96.6.ebuild:
+  stable x86, bug 268646
 
 *gtk-gnutella-0.96.6 (29 Mar 2009)
 
