@@ -1,0 +1,11 @@
+--- palo-1.16+nmu1/lib/common.h.orig	2007-09-12 18:12:03.000000000 +0200
++++ palo-1.16+nmu1/lib/common.h	2009-05-07 07:00:23.000000000 +0200
+@@ -32,7 +32,7 @@
+ #define __swab16(x)	bswap_16(x)
+ #endif /* __swab16 */
+ 
+-#define PALOVERSION "1.14"
++#define PALOVERSION "1.16"
+ 
+ /* size of I/O block used in HP firmware */
+ #define FW_BLOCKSIZE	2048
