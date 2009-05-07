@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.29 2009/05/04 14:46:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmms/ChangeLog,v 1.30 2009/05/07 10:11:53 jer Exp $
+
+  07 May 2009; Jeroen Roovers <jer@gentoo.org> libmms-0.4.ebuild:
+  Stable for HPPA (bug #268294).
 
   04 May 2009; Samuli Suominen <ssuominen@gentoo.org> libmms-0.4.ebuild:
   New HOMEPAGE and SRC_URI at launchpad.
