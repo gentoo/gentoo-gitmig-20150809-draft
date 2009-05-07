@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9762 2009/05/06 21:06:28 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9763 2009/05/07 01:40:41 halcy0n Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mark Loeser <halcy0n@gentoo.org> (6 May 2009)
+# Masked for testing
+>=sys-devel/gcc-4.4
 
 # Alexey Shvetsov <alexxy@gentoo.org> (6 May 2009)
 # Mask for adding =)
