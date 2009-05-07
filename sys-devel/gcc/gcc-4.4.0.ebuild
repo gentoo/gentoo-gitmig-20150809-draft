@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.4.0.ebuild,v 1.1 2009/05/07 01:52:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.4.0.ebuild,v 1.2 2009/05/07 23:58:32 halcy0n Exp $
 
 PATCH_VER="1.0"
 UCLIBC_VER="1.0"
@@ -33,6 +33,10 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	virtual/libiconv
 	>=dev-libs/gmp-4.2.1
 	>=dev-libs/mpfr-2.3
+	graphite? (
+		>=dev-libs/ppl-0.10
+		>=dev-libs/cloog-ppl-0.15
+	)
 	!build? (
 		gcj? (
 			gtk? (

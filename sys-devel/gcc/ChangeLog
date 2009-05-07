@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.704 2009/05/07 01:52:46 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.705 2009/05/07 23:58:32 halcy0n Exp $
+
+  07 May 2009; Mark Loeser <halcy0n@gentoo.org> gcc-4.4.0.ebuild,
+  metadata.xml:
+  Add graphite support to gcc-4.4
 
 *gcc-4.4.0 (07 May 2009)
 
