@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.238 2009/05/04 15:45:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.239 2009/05/07 15:58:09 armin76 Exp $
+
+  07 May 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.13.ebuild:
+  arm/ia64/s390/sh/sparc stable wrt #267528
 
   04 May 2009; Brent Baude <ranger@gentoo.org> sqlite-3.6.12.ebuild:
   Marking sqlite-3.6.12 ppc64 for bug 267528
