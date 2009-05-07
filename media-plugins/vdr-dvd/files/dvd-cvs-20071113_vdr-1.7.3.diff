@@ -1,0 +1,16 @@
+compile fix for >=vdr-1.7.3
+Joerg Bornkessel <hd_brummy@gentoo.org> 07 May 2009
+diff -Naur dvd-cvs-20071113.orig/player-dvd.h dvd-cvs-20071113/player-dvd.h
+--- dvd-cvs-20071113.orig/player-dvd.h	2009-05-07 21:54:38.000000000 +0200
++++ dvd-cvs-20071113/player-dvd.h	2009-05-07 21:56:05.000000000 +0200
+@@ -27,6 +27,10 @@
+ #include "dvdspu.h"
+ #include "ca52.h"
+ 
++#if VDRVERSNUM >= 10703
++#define FRAMESPERSEC 25
++#endif
++
+ class IntegerListObject : public cListObject {
+     private:
+         int value;
