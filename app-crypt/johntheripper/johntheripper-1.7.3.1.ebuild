@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.1.ebuild,v 1.7 2009/04/14 10:22:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.1.ebuild,v 1.8 2009/05/07 10:26:15 jer Exp $
 
+EAPI=1
 inherit eutils flag-o-matic toolchain-funcs pax-utils
 
 JUMBO='all-3'
@@ -20,8 +21,7 @@ SRC_URI="http://www.openwall.com/john/g/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ~mips ppc ~ppc64 sparc x86"
-EAPI=1
+KEYWORDS="alpha ~amd64 hppa ~mips ppc ~ppc64 sparc x86"
 IUSE="mmx altivec sse2 custom-cflags -minimal -mpi"
 
 # Seems a bit fussy with other MPI implementations.
