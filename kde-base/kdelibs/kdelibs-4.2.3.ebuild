@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.3.ebuild,v 1.1 2009/05/06 23:10:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.3.ebuild,v 1.2 2009/05/07 09:51:06 scarabeus Exp $
 
 EAPI="2"
 
@@ -117,6 +117,7 @@ PATCHES=(
 	"${FILESDIR}/dist/20_use_dejavu_as_default_font.patch"
 	"${FILESDIR}/dist/23_solid_no_double_build.patch"
 	"${FILESDIR}/${PN}-${SLOT}-fixx11h.h.patch"
+	"${FILESDIR}/sanbox-error.patch"
 )
 
 src_prepare() {
