@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.2.0.ebuild,v 1.3 2009/04/29 19:47:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libprojectm/libprojectm-1.2.0.ebuild,v 1.4 2009/05/07 17:08:41 ssuominen Exp $
 
+EAPI=2
 inherit cmake-utils
 
 MY_P=${P/m/M}
@@ -26,9 +27,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+
 	if has_version ">=media-libs/ftgl-2.1.3_rc5"; then
-		sed -i -e 's:FTGL.h:ftgl.h:g' "${S}"/Renderer.hpp || die "sed failed."
+		sed -i -e 's:FTGL.h:ftgl.h:g' Renderer.hpp || die "sed failed"
 	fi
 }
