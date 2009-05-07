@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.10_p3.ebuild,v 1.2 2009/05/06 19:44:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.10_p3.ebuild,v 1.3 2009/05/07 16:20:16 armin76 Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="http://tedfelix.com/linux/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ia64 -ppc x86"
+KEYWORDS="~alpha amd64 ia64 -ppc x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"
