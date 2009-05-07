@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p40220.ebuild,v 1.7 2009/03/20 23:26:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p40220.ebuild,v 1.8 2009/05/07 22:13:15 loki_val Exp $
 
-inherit autotools flag-o-matic
+inherit autotools flag-o-matic eutils
 
 MY_P="WebKit-r${PV/0\_p}"
 DESCRIPTION="Open source web browser engine"
@@ -38,7 +38,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
+	epatch "${FILESDIR}/${P}-gcc44-aliasing.patch"
 	eautoreconf
 }
 
