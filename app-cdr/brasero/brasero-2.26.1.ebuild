@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.1.ebuild,v 1.1 2009/04/16 22:30:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.1.ebuild,v 1.2 2009/05/07 20:27:27 klausman Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="beagle +libburn +totem cdrkit cdrtools +nautilus"
 
 RDEPEND=">=dev-libs/glib-2.16.5

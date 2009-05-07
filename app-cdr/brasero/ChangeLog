@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.69 2009/04/16 22:30:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.70 2009/05/07 20:27:27 klausman Exp $
+
+  07 May 2009; Tobias Klausmann <klausman@gentoo.org> brasero-2.26.1.ebuild:
+  Keyworded on alpha, bug #268294
 
 *brasero-2.26.1 (16 Apr 2009)
 
