@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.587 2009/05/07 09:51:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.588 2009/05/07 11:43:44 scarabeus Exp $
+
+  07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.3.ebuild,
+  -files/sanbox-error.patch:
+  Silly me. I forgot the patch is only for 4.3 series.
 
   07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.3.ebuild,
   +files/sanbox-error.patch:
