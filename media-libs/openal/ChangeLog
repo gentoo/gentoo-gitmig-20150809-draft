@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.113 2009/05/03 15:43:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.114 2009/05/07 18:36:59 klausman Exp $
+
+  07 May 2009; Tobias Klausmann <klausman@gentoo.org> openal-1.7.411.ebuild:
+  Stable on alpha, bug #267960
 
   03 May 2009; Markus Meier <maekke@gentoo.org> openal-1.7.411.ebuild:
   amd64/x86 stable, bug #267960
