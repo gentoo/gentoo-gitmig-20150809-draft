@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.588 2009/05/07 11:43:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.589 2009/05/07 22:15:18 alexxy Exp $
+
+  07 May 2009; Alexey Shvetsov <alexxy@gentoo.org> kdelibs-4.2.3.ebuild,
+  +files/kdelibs-4.2.3-halbattery_backport_fix.patch:
+  Add halbattary patch b.k.o bug 187600
 
   07 May 2009; Tomas Chvatal <scarabeus@gentoo.org> kdelibs-4.2.3.ebuild,
   -files/sanbox-error.patch:
