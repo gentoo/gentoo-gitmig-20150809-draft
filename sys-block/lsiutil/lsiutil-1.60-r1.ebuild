@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/lsiutil-1.60.ebuild,v 1.2 2009/01/13 12:02:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/lsiutil-1.60-r1.ebuild,v 1.1 2009/05/07 13:09:57 wschlich Exp $
 
 inherit toolchain-funcs
 
@@ -36,4 +36,11 @@ src_compile() {
 src_install() {
 	dosbin ${PN}/${PN} || die "dosbin failed."
 	dodoc "${S}"/*.txt
+}
+
+pkg_postinst() {
+	einfo
+	einfo "See LsiUtil_ReadMe.txt for a list of supported controllers"
+	einfo "and general usage information."
+	einfo
 }
