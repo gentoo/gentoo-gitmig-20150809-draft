@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.11.ebuild,v 1.1 2009/04/23 14:12:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.11-r1.ebuild,v 1.1 2009/05/07 04:53:18 dragonheart Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -26,7 +26,7 @@ RDEPEND="!static? ( ${DEPEND} )"
 #S=${WORKDIR}/${P}-WIP
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-exif_bound_checking.patch
+	epatch "${FILESDIR}"/${P}-exif_bound_checking-v2.patch
 }
 
 src_configure() {
