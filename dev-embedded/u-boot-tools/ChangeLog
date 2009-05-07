@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/u-boot-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.7 2009/03/29 18:35:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/u-boot-tools/ChangeLog,v 1.8 2009/05/07 17:28:06 armin76 Exp $
+
+  07 May 2009; Raúl Porcel <armin76@gentoo.org>
+  u-boot-tools-2009.03.ebuild:
+  amd64/arm/x86 stable
 
 *u-boot-tools-2009.03 (29 Mar 2009)
 
