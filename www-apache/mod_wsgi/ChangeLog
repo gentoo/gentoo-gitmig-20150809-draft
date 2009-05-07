@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_wsgi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.6 2008/10/25 14:49:25 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/ChangeLog,v 1.7 2009/05/07 18:01:13 bangert Exp $
+
+*mod_wsgi-2.4 (07 May 2009)
+
+  07 May 2009; Thilo Bangert <bangert@gentoo.org> +mod_wsgi-2.4.ebuild:
+  version bump (bug #265734)
 
 *mod_wsgi-2.3 (25 Oct 2008)
 
