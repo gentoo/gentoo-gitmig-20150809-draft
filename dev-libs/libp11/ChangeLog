@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.24 2009/05/06 12:30:24 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.25 2009/05/07 19:24:38 fauli Exp $
+
+  07 May 2009; Christian Faulhammer <fauli@gentoo.org> libp11-0.2.4.ebuild:
+  stable x86, bug 268671
 
   06 May 2009; Ferris McCormick <fmccor@gentoo.org> libp11-0.2.4.ebuild:
   Sparc stable, Bug #268671.
