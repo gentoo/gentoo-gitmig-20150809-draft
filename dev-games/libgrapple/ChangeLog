@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libgrapple
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.4 2008/12/21 01:37:25 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libgrapple/ChangeLog,v 1.5 2009/05/07 21:01:58 nyhm Exp $
+
+  07 May 2009; Tristan Heaven <nyhm@gentoo.org> libgrapple-0.9.7.ebuild:
+  Add src_test
 
 *libgrapple-0.9.7 (21 Dec 2008)
 
