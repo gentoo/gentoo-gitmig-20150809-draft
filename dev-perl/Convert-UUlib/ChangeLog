@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Convert-UUlib
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.44 2009/05/03 13:29:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-UUlib/ChangeLog,v 1.45 2009/05/07 15:47:17 armin76 Exp $
+
+  07 May 2009; Raúl Porcel <armin76@gentoo.org> Convert-UUlib-1.12.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #268280
 
   03 May 2009; Brent Baude <ranger@gentoo.org> Convert-UUlib-1.12.ebuild:
   stable ppc64, bug 268280
