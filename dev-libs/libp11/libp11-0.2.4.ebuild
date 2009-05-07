@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.4.ebuild,v 1.4 2009/05/07 19:24:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.4.ebuild,v 1.5 2009/05/07 19:26:18 fauli Exp $
 
 DESCRIPTION="a lib implementing a small layer on top of PKCS#11 API to make using PKCS#11 implementations easier."
 HOMEPAGE="http://www.opensc-project.org/libp11/"
@@ -32,7 +32,7 @@ src_unpack() {
 		cd "${S}"
 		eautoreconf
 	else
-		unpack "${A}"
+		unpack ${A}
 		cd "${S}"
 	fi
 }
