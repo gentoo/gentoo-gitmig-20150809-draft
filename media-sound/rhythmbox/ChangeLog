@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.145 2009/05/02 11:48:27 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.146 2009/05/07 23:20:18 eva Exp $
+
+*rhythmbox-0.12.1-r1 (07 May 2009)
+
+  07 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +rhythmbox-0.12.1-r1.ebuild, +files/rhythmbox-0.12.1-visualization.patch:
+  Bump to 0.12.1-r1. Patch for visualization plugin crash, bug #268477.
+  Reorganize dependencies, add soup and libmms and remove gnome-vfs gst
+  plugins, bug #263285. Raise gtk+ dependency so we can drop libsexy.
 
   02 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
   rhythmbox-0.12.1.ebuild:

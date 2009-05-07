@@ -1,0 +1,29 @@
+From 3357c6a834a1a006a0189d4761b92ca522df8cc7 Mon Sep 17 00:00:00 2001
+From: Jonathan Matthew <jonathan@d14n.org>
+Date: Wed, 29 Apr 2009 17:06:59 +1000
+Subject: [PATCH] visualizer: direct output to fake window while changing modes
+
+This should stop it dying with X11 BadWindow errors most of the time.
+---
+ plugins/visualizer/rb-visualizer-plugin.c |    5 +++++
+ 1 files changed, 5 insertions(+), 0 deletions(-)
+
+diff --git a/plugins/visualizer/rb-visualizer-plugin.c b/plugins/visualizer/rb-visualizer-plugin.c
+index 151a9c3..c133114 100644
+--- a/plugins/visualizer/rb-visualizer-plugin.c
++++ b/plugins/visualizer/rb-visualizer-plugin.c
+@@ -1081,6 +1081,11 @@ update_window (RBVisualizerPlugin *plugin, VisualizerMode mode, int screen, int
+ 		gtk_box_pack_start (GTK_BOX (plugin->vis_box), plugin->play_control_widget, FALSE, FALSE, 6);
+ 		gtk_box_pack_end (GTK_BOX (plugin->vis_box), plugin->control_widget, FALSE, FALSE, 6);
+ 	} else {
++		if (plugin->xoverlay != NULL) {
++			gst_x_overlay_set_xwindow_id (plugin->xoverlay,
++						      GDK_WINDOW_XWINDOW (plugin->fake_window));
++		}
++
+ 		switch (plugin->mode) {
+ 		case EMBEDDED:
+ 			gtk_container_remove (GTK_CONTAINER (plugin->vis_shell),
+-- 
+1.6.2.3
+
