@@ -1,0 +1,12 @@
+--- old/configure.in.in	2008-12-13 11:37:24.000000000 +0000
++++ new/configure.in.in	2008-12-13 11:44:08.000000000 +0000
+@@ -41,7 +41,7 @@
+ [
+   KDE_CHECK_HEADERS(gnokii.h)
+   AC_REQUIRE([AC_HAVE_XPM])
+-  AC_CHECK_LIB(gnokii, gn_cfg_read,
++  AC_CHECK_LIB(gnokii, gn_cfg_read_default,
+        [ LIB_GNOKII="-lgnokii $LIB_BLUETOOTH" ],
+        [
+     	AC_CHECK_LIB(gnokii, gn_cfg_get,
+

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.5.9.ebuild,v 1.7 2008/05/18 21:58:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-3.5.9.ebuild,v 1.8 2009/05/07 20:57:57 tampakrap Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -42,6 +42,8 @@ KMEXTRA="
 	kabc/
 	kfile-plugins/vcf
 	kontact/plugins/kaddressbook"
+
+PATCHES=( "${FILESDIR}/kaddressbook-3.5-gnokii.patch" )
 
 src_compile() {
 	myconf="$myconf $(use_with gnokii)"

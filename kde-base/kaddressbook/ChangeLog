@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.112 2009/05/06 22:51:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.113 2009/05/07 20:57:57 tampakrap Exp $
+
+  07 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> kaddressbook-3.5.9.ebuild,
+  kaddressbook-3.5.10.ebuild, +files/kaddressbook-3.5-gnokii.patch:
+  Apply gnokii patch, bug 234905
 
 *kaddressbook-4.2.3 (06 May 2009)
 
