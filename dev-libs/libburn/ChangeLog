@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.41 2009/03/19 13:14:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.42 2009/05/07 20:25:05 klausman Exp $
+
+  07 May 2009; Tobias Klausmann <klausman@gentoo.org> libburn-0.6.4.ebuild:
+  Keyworded on alpha, bug #268294
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> libburn-0.5.8.ebuild:
   Marking libburn-0.5.8 ppc for bug 254947
