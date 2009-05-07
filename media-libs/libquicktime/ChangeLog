@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libquicktime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.132 2009/05/03 16:54:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/ChangeLog,v 1.133 2009/05/07 18:42:31 klausman Exp $
+
+  07 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  libquicktime-1.1.1.ebuild:
+  Stable on alpha, bug #268018
 
   03 May 2009; Markus Meier <maekke@gentoo.org> libquicktime-1.1.1.ebuild:
   amd64/x86 stable, bug #268018
