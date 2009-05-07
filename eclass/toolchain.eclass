@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.396 2009/04/04 16:52:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.397 2009/05/07 01:45:55 halcy0n Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -355,7 +355,7 @@ get_gcc_src_uri() {
 	if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 		tc_version_is_at_least "4.3" && \
 			GCC_SRC_URI="${GCC_SRC_URI}
-			gcj? ( ftp://sourceware.org/pub/java/ecj-${GCC_BRANCH_VER}.jar )"
+			gcj? ( ftp://sourceware.org/pub/java/ecj-4.3.jar )"
 	fi
 
 	echo "${GCC_SRC_URI}"
@@ -1114,7 +1114,7 @@ gcc_src_unpack() {
 	# >= gcc-4.3 doesn't bundle ecj.jar, so copy it
 	if [[ ${GCCMAJOR}.${GCCMINOR} > 4.2 ]] &&
 		use gcj ; then
-		cp -pPR "${DISTDIR}/ecj-${GCC_BRANCH_VER}.jar" "${S}/ecj.jar" || die
+		cp -pPR "${DISTDIR}/ecj-4.3.jar" "${S}/ecj.jar" || die
 	fi
 
 	# disable --as-needed from being compiled into gcc specs
