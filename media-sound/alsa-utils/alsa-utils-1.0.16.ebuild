@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.16.ebuild,v 1.10 2009/03/31 09:34:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.16.ebuild,v 1.11 2009/05/07 00:00:27 vapier Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -70,7 +70,7 @@ src_install() {
 	newinitd "${FILESDIR}/alsasound.initd" alsasound
 	newconfd "${FILESDIR}/alsasound.confd" alsasound
 	insinto /etc/modules.d
-	newins "${FILESDIR}/alsa-modules.conf-rc" alsa
+	newins "${FILESDIR}/alsa-modules.conf-rc" alsa.conf
 
 	keepdir /var/lib/alsa
 }
