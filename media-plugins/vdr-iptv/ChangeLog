@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-iptv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.10 2009/03/22 19:41:12 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-iptv/ChangeLog,v 1.11 2009/05/07 21:33:28 hd_brummy Exp $
+
+  07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
+  -vdr-iptv-0.0.3.ebuild, -vdr-iptv-0.0.6.ebuild, vdr-iptv-0.0.7.ebuild,
+  -vdr-iptv-0.2.0.ebuild, -vdr-iptv-0.2.4.ebuild, -vdr-iptv-0.2.5.ebuild:
+  clean up
 
 *vdr-iptv-0.2.6 (22 Mar 2009)
 
