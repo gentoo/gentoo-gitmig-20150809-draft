@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/blockdpy
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/ChangeLog,v 1.1 2009/05/08 21:07:28 hncaldwell Exp $
+
+*blockdpy-1 (08 May 2009)
+
+  08 May 2009; Heath Caldwell <hncaldwell@gentoo.org> +blockdpy-1.ebuild,
+  +metadata.xml:
+  New ebuild for blockdpy. Ebuild written by me.
+
