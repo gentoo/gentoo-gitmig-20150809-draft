@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3-r12.ebuild,v 1.1 2009/03/07 22:20:53 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.0.3-r12.ebuild,v 1.2 2009/05/08 00:52:29 loki_val Exp $
 
 inherit autotools bash-completion gnome2 eutils
 
@@ -82,6 +82,11 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gmountspec-SIGSEGV.patch
 
 	eautoreconf
+
+	# Fix "Function `g_volume_monitor_adopt_orphan_mount' implicitly converted to pointer at gdaemonvolumemonitor.c:155"
+	# bug 268788
+	sed -i -e 's:-DG_DISABLE_DEPRECATED::g' $(find . -name Makefile.in) || die 
+
 }
 
 src_install() {
