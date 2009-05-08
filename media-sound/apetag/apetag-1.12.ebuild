@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/apetag-1.12.ebuild,v 1.2 2009/05/08 16:16:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/apetag/apetag-1.12.ebuild,v 1.3 2009/05/08 18:23:31 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -26,8 +26,8 @@ src_prepare() {
 
 src_compile() {
 	tc-export CXX
-	emake CXX="$(tc-getCXX)" LDFLAGS="${LDFLAGS}" \
-		CXXFLAGS="${CXXFLAGS} -pedantic" || die "emake failed"
+	emake CXXFLAGS="${CXXFLAGS} -pedantic" \
+		LDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
