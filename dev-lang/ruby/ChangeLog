@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.396 2009/05/08 16:13:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.397 2009/05/08 17:06:43 a3li Exp $
+
+  08 May 2009; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p368.ebuild:
+  amd64 stable, bug #268515.
 
   08 May 2009; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p368.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #268515
