@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/x11perf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.28 2009/05/05 06:53:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/x11perf/ChangeLog,v 1.29 2009/05/08 22:59:54 remi Exp $
+
+  08 May 2009; Rémi Cardona <remi@gentoo.org> x11perf-1.5.ebuild:
+  add missing deps (fixes bug #228201)
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> x11perf-1.4.1.ebuild,
   x11perf-1.5.ebuild:
