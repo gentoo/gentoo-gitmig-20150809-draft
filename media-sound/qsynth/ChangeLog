@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.45 2009/04/15 20:02:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.46 2009/05/08 22:06:40 gentoofan23 Exp $
+
+  08 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  -qsynth-0.3.1-r1.ebuild:
+  Punt Old.
 
 *qsynth-0.3.3-r2 (15 Apr 2009)
 
