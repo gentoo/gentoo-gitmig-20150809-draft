@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4425 2009/05/08 00:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4426 2009/05/08 04:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -429,6 +429,10 @@ app-pda/synce:serial - Enable serial port support (installs app-pda/synce-serial
 app-pda/synce:syncengine - Installs the app-pda/synce-sync-engine
 app-pda/synce-kde:avantgo - Add support for syncing Avantgo accounts
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
+app-portage/eix:doc - Create description of the eix cache file additionally in html format
+app-portage/eix:nls - Support foreign language messages (experimental; currently only de)
+app-portage/eix:sqlite - Compile in support for portage's sqlite backend; to actually use it you need additional configuration of portage and eix
+app-portage/eix:tools - Create separate binary for script helper tools (currently only: versionsort); useful if they are called extremely often
 app-portage/gatt:libpaludis - Do some dependency resolution by using a sys-apps/paludis interface
 app-portage/layman:git - Support dev-util/git based overlays
 app-portage/portato:etc-proposals - Use app-portage/etc-proposals for updating CONFIG_PROTECTed stuff
