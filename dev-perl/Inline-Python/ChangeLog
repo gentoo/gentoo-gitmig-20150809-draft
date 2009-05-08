@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Inline-Python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/ChangeLog,v 1.10 2009/05/02 22:55:45 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Inline-Python/ChangeLog,v 1.11 2009/05/08 20:09:04 tcunha Exp $
+
+  08 May 2009; Tiago Cunha <tcunha@gentoo.org> Inline-Python-0.28.ebuild:
+  stable sparc, bug 268206
 
   02 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
   Inline-Python-0.28.ebuild:
