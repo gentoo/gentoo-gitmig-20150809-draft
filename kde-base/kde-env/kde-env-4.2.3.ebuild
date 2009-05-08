@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.2.3.ebuild,v 1.2 2009/05/07 07:16:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.2.3.ebuild,v 1.3 2009/05/08 10:34:45 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,6 +15,7 @@ LICENSE="as-is"
 IUSE=""
 
 RDEPEND="
+	!<kde-base/kdelibs-3.5.10-r3
 	!kdeprefix? (
 		!kde-base/kdelibs:4.1
 		!<=kde-base/kdelibs-4.2.2-r1:4.2
