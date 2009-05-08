@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.1.ebuild,v 1.4 2008/11/09 13:31:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/sfftobmp-3.1.1.ebuild,v 1.5 2009/05/08 21:36:38 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils
 
 MY_P=${PN}${PV//./_}
@@ -23,19 +24,13 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc43-and-cerrno.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc43-and-cerrno.patch \
+		"${FILESDIR}"/${P}-gcc44-and-boost-1_37.patch
 	eautoreconf
 }
 
-src_compile() {
-	econf --disable-dependency-tracking
-	emake || die "emake failed."
-}
-
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc doc/{changes,credits,readme}
 }
