@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.41 2009/04/26 20:11:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.42 2009/05/08 08:40:32 ssuominen Exp $
+
+  08 May 2009; Samuli Suominen <ssuominen@gentoo.org> nero-3.5.2.3.ebuild:
+  Inherit linux-mod and add config check for CHR_DEV_SG wrt #242234, thanks
+  to Pacho Ramos.
 
 *nero-3.5.2.3 (26 Apr 2009)
 
@@ -18,12 +22,12 @@
 
 *nero-3.5.1.0 (06 Jun 2008)
 
-  06 Jun 2008; Samuli Suominen <drac@gentoo.org> +nero-3.5.1.0.ebuild:
+  06 Jun 2008; Samuli Suominen <ssuominen@gentoo.org> +nero-3.5.1.0.ebuild:
   Version bump for bug 224471.
 
 *nero-3.5.0.1 (13 May 2008)
 
-  13 May 2008; Samuli Suominen <drac@gentoo.org> +nero-3.5.0.1.ebuild:
+  13 May 2008; Samuli Suominen <ssuominen@gentoo.org> +nero-3.5.0.1.ebuild:
   Version bump, closing bugs 214877 and 211026.
 
 *nero-3.1.1.0 (18 Feb 2008)
@@ -33,41 +37,41 @@
 
 *nero-3.0.2.1 (16 Dec 2007)
 
-  16 Dec 2007; Samuli Suominen <drac@gentoo.org> +nero-3.0.2.1.ebuild:
+  16 Dec 2007; Samuli Suominen <ssuominen@gentoo.org> +nero-3.0.2.1.ebuild:
   Version bump wrt #198429, requested by armin76.
 
-  12 Aug 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.1.3.ebuild:
-  Re-add AMD64 hack to make burning work again.
+  12 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> nero-3.0.1.3.ebuild:
+  Readd AMD64 hack to make burning work again.
 
 *nero-3.0.1.3 (11 Aug 2007)
 
-  11 Aug 2007; Samuli Suominen <drac@gentoo.org> +nero-3.0.1.3.ebuild:
+  11 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> +nero-3.0.1.3.ebuild:
   Version bump.
 
-  06 Jul 2007; Samuli Suominen <drac@gentoo.org> metadata.xml:
+  06 Jul 2007; Samuli Suominen <ssuominen@gentoo.org> metadata.xml:
   Removed myself from metadata.xml due to lack of interest
 
   01 Jul 2007; Wolfram Schlich <wschlich@gentoo.org> metadata.xml:
   Removed myself from metadata.xml due to lack of interest
 
-  30 Jun 2007; Samuli Suominen <drac@gentoo.org> -files/nero.desktop,
+  30 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> -files/nero.desktop,
   -nero-2.1.0.3.ebuild, nero-3.0.0.0.ebuild:
   Keyword for ~amd64 after testing from AMD64 Arch Testers Jonas
   Pedersen and Kenneth Prugh. Authorized by KingTaco.
 
-  30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.0.0.ebuild:
+  30 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> nero-3.0.0.0.ebuild:
   Add more QA_ variables for x86_64.
 
-  30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-2.1.0.3.ebuild:
+  30 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> nero-2.1.0.3.ebuild:
   Removed stable x86 keyword from unfetchable nero-2.1.0.3 ebuild, authorized
   by armin76.
 
-  30 Jun 2007; Samuli Suominen <drac@gentoo.org> nero-3.0.0.0.ebuild:
+  30 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> nero-3.0.0.0.ebuild:
   Stick some QA_ variables to keep installing quiet.
 
 *nero-3.0.0.0 (29 Jun 2007)
 
-  29 Jun 2007; Samuli Suominen <drac@gentoo.org> -nero-2.1.0.1.ebuild,
+  29 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> -nero-2.1.0.1.ebuild,
   -nero-2.1.0.2.ebuild, +nero-3.0.0.0.ebuild:
   Version bump for bug 172717.
 
