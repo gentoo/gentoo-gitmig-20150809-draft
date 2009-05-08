@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ksmserver-4.2.2.ebuild,v 1.3 2009/04/17 07:03:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ksmserver-4.2.2.ebuild,v 1.4 2009/05/08 06:26:55 gengor Exp $
 
 EAPI="2"
 
@@ -27,4 +27,4 @@ KMEXTRACTONLY="
 KMLOADLIBS="libkworkspace"
 
 # Disable SSE2 in fadeeffect when compiling with <gcc-4, bug #256804
-PATCHES=( "$FILESDIR/${PN}-4.2.1-disable-sse2-for-gcc3.patch" )
+PATCHES=( "${FILESDIR}/${PN}-4.2.1-disable-sse2-for-gcc3.patch" )
