@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.7.3_beta2.ebuild,v 1.2 2009/04/29 10:13:18 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.7.3_beta2.ebuild,v 1.3 2009/05/08 12:13:23 ssuominen Exp $
 
 EAPI=2
 inherit eutils wxwidgets
@@ -31,6 +31,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=media-video/dvdauthor-0.6.14
 	>=app-cdr/dvd+rw-tools-7.1"
 DEPEND="${COMMON_DEPEND}
+	app-text/xmlto
 	dev-util/pkgconfig
 	>=sys-devel/gettext-0.17"
 PDEPEND=">=app-cdr/dvdisaster-0.71.0"
