@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/SQL-Abstract
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.22 2009/05/01 21:07:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/ChangeLog,v 1.23 2009/05/08 08:41:14 tove Exp $
+
+*SQL-Abstract-1.54 (08 May 2009)
+
+  08 May 2009; Torsten Veller <tove@gentoo.org> +SQL-Abstract-1.54.ebuild:
+  Version bump
 
   01 May 2009; Torsten Veller <tove@gentoo.org> -SQL-Abstract-1.20.ebuild,
   -SQL-Abstract-1.24.ebuild, -SQL-Abstract-1.50.ebuild,
