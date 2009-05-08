@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2623 2009/05/08 23:20:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2624 2009/05/08 23:35:15 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 May 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  add xplsprinters, libXprintAppUtil and libXprintUtil to p.mask
 
   08 May 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   pre-2.0 intel drivers are out from portage, drop p.mask entry

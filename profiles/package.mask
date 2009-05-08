@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9769 2009/05/08 23:20:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9770 2009/05/08 23:35:15 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (09 May 2009)
+# XPrint is dead, long live XPrint
+# nothing in portage uses those apps and libs anymore
+# will be removed in 30 days (see bug #264982 for rationale)
+x11-apps/xplsprinters
+x11-libs/libXprintAppUtil
+x11-libs/libXprintUtil
 
 # Markos Chandras <hwoarang@gentoo.org> (08 May 2009)
 # Pending removal in 15 days.
