@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/bplay
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bplay/ChangeLog,v 1.14 2007/02/22 00:50:24 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bplay/ChangeLog,v 1.15 2009/05/08 16:28:00 ssuominen Exp $
+
+  08 May 2009; Samuli Suominen <ssuominen@gentoo.org> bplay-0.991.ebuild:
+  Rename bplay to bplay-bin to avoid file collision with blinkentools since
+  nothing depends on this pkg.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
