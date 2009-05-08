@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.56 2009/04/25 12:35:22 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.57 2009/05/08 09:09:04 iluxa Exp $
+
+  08 May 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
+  sptk-3.5.8.10.ebuild:
+  Switch over to cmake-utils eclass
 
   25 Apr 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   sptk-3.5.8.10.ebuild:

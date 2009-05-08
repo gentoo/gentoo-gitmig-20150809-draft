@@ -1,10 +1,10 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.5 2009/04/25 12:35:22 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.6 2009/05/08 09:09:04 iluxa Exp $
 
 EAPI=1
 
-inherit eutils flag-o-matic multilib
+inherit multilib cmake-utils
 
 IUSE="fltk odbc doc sqlite excel postgres aspell mysql"
 
@@ -24,35 +24,25 @@ RDEPEND="fltk?    ( >=x11-libs/fltk-1.1.6:1.1 )
 	aspell?   ( >=app-text/aspell-0.50 )"
 
 DEPEND="${RDEPEND}
-	dev-util/cmake
 	doc?      ( app-doc/doxygen )"
 
-sptk_use_enable() {
-	if use ${1}; then
-		SPTK_OPTIONS="${SPTK_OPTIONS} -DNO_${2}:BOOLEAN=FALSE"
-	else
-		SPTK_OPTIONS="${SPTK_OPTIONS} -DNO_${2}:BOOLEAN=TRUE"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-}
+CMAKE_IN_SOURCE_BUILD=1
 
 src_compile() {
-	sptk_use_enable postgres POSTGRESQL
-	sptk_use_enable mysql    MYSQL
-	sptk_use_enable sqlite   SQLITE3
-	sptk_use_enable odbc     ODBC
-	sptk_use_enable aspell   ASPELL
-	sptk_use_enable fltk     FLTK
-	sptk_use_enable excel    EXCEL
+	local mycmakeargs="$(cmake-utils_use_no postgres POSTGRESQL)
+	$(cmake-utils_use_no mysql MYSQL)
+	$(cmake-utils_use_no sqlite SQLITE3)
+	$(cmake-utils_use_no odbc ODBC)
+	$(cmake-utils_use_no aspell ASPELL)
+	$(cmake-utils_use_no fltk FLTK)
+	$(cmake-utils_use_no excel EXCEL)"
 
-	cmake -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} -DNO_EXAMPLES:BOOLEAN=TRUE .  || die "Configuration Failed"
+	mycmakeargs="${mycmakeargs} -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} -DNO_EXAMPLES:BOOLEAN=TRUE"
+	einfo "mycmakeargs=${mycmakeargs}"
 
-	emake || die "Parallel Make Failed"
+	cmake-utils_src_configure
 
+	cmake-utils_src_compile
 	if use doc; then
 		cd "${S}"
 		einfo "Fixing sptk3.doxygen"
@@ -65,9 +55,8 @@ src_compile() {
 
 src_install () {
 
-	emake DESTDIR="${D}" install || die "Installation failed"
-
-	dodoc README AUTHORS
+	DOCS="README AUTHORS"
+	cmake-utils_src_install
 
 	dodir /usr/share/doc/${PF}
 	cp -r "${S}"/docs/* "${D}"/usr/share/doc/${PF}
