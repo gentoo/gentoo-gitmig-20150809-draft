@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.0.ebuild,v 1.1 2009/05/05 22:46:55 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-0.9.0.ebuild,v 1.2 2009/05/08 23:17:46 leio Exp $
 
 EAPI=2
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Utility for reading, writing, erasing and verifying flash ROM chips."
-HOMEPAGE="http://www.coreboot.org/Flashrom/"
+HOMEPAGE="http://www.coreboot.org/Flashrom"
 SRC_URI="http://qa.coreboot.org/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
