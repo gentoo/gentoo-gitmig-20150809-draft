@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabberd2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.27 2009/01/24 14:53:23 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd2/ChangeLog,v 1.28 2009/05/08 15:24:09 gentoofan23 Exp $
+
+*jabberd2-2.2.8 (08 May 2009)
+
+  08 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  +files/jabberd2-2.2.8.init, +files/jabberd2-2.2.8.pamd,
+  +jabberd2-2.2.8.ebuild:
+  Version bump.
 
 *jabberd2-2.2.5 (24 Jan 2009)
 
