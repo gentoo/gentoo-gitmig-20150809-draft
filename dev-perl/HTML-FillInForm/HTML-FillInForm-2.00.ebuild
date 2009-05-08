@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/HTML-FillInForm-2.00.ebuild,v 1.3 2009/05/03 17:52:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-FillInForm/HTML-FillInForm-2.00.ebuild,v 1.4 2009/05/08 18:18:54 tove Exp $
 
+MODULE_AUTHOR=TJMATHER
 inherit perl-module
 
 DESCRIPTION="Populates HTML Forms with data."
-HOMEPAGE="http://search.cpan.org/~tjmather/${P}/"
-SRC_URI="mirror://cpan/authors/id/T/TJ/TJMATHER/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
@@ -16,4 +15,4 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/HTML-Parser
-        dev-lang/perl"
+	dev-lang/perl"
