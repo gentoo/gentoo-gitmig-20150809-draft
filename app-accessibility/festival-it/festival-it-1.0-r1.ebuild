@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/festival-it-1.0-r1.ebuild,v 1.1 2009/05/08 05:16:36 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/festival-it-1.0-r1.ebuild,v 1.2 2009/05/08 21:32:51 neurogeek Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ IUSE="mbrola"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 
 pkg_postinst () {
 	einfo "Italian voices installed:"
