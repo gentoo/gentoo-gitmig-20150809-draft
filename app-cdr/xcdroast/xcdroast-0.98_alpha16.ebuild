@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16.ebuild,v 1.2 2009/03/05 16:04:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha16.ebuild,v 1.3 2009/05/08 13:43:53 ssuominen Exp $
 
-inherit eutils
+EAPI=2
+inherit gnome2-utils eutils
 
 DESCRIPTION="Lightweight cdrtools front-end for CD and DVD writing"
 HOMEPAGE="http://www.xcdroast.org/"
@@ -13,42 +14,52 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2
-	virtual/cdrtools"
+RDEPEND=">=x11-libs/gtk+-2:2
+	app-cdr/cdrtools"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P/_/}
 
-src_unpack() {
-	unpack ${P/_/}.tar.gz
-	cd "${S}"
-	epatch "${FILESDIR}/io_compile.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/io_compile.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		--enable-gtk2 \
-		--disable-dependency-tracking || die
+		--disable-dependency-tracking \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc
+}
 
-	make PREFIX=/usr || die
+src_compile() {
+	emake PREFIX=/usr || die "emake failed"
 }
 
 src_install() {
-	make PREFIX=/usr DESTDIR="${D}" install || die
+	emake PREFIX=/usr DESTDIR="${D}" install || die "emake install failed"
 
-	cd "${S}"/doc
-	dodoc DOCUMENTATION FAQ README* TRANSLATION.HOWTO
+	dodoc AUTHORS ChangeLog README doc/* doc/manual/README.txt
 
-	# move man pages to /usr/share/man to be LFH compliant
-	mv "${D}"/usr/man "${D}"/usr/share
-
-	# remove extraneous directory
-	rm "${D}"/usr/etc -rf
+	insinto /usr/share/doc/${PF}/manual
+	doins doc/manual/xcdroast-manual.pdf
 
 	insinto /usr/share/icons/hicolor/48x48/apps
-	newins "${S}"/xpms/xcdricon.xpm xcdroast.xpm
+	newins xpms/xcdricon.xpm xcdroast.xpm
 
 	make_desktop_entry xcdroast "X-CD-Roast" xcdroast "AudioVideo;DiscBurning"
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }

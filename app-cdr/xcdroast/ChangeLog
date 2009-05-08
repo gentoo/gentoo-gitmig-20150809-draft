@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/xcdroast
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.63 2009/03/01 23:48:08 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.64 2009/05/08 13:43:53 ssuominen Exp $
+
+  08 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xcdroast-0.98_alpha16.ebuild:
+  Install more documentation and replace cdrtools depend from virtual to
+  app-cdr wrt #263058
 
 *xcdroast-0.98_alpha16 (01 Mar 2009)
 
