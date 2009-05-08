@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.338 2009/05/05 19:15:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.339 2009/05/08 19:01:55 robbat2 Exp $
+
+*git-1.6.2.5-r1 (08 May 2009)
+
+  08 May 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.2.5-r1.ebuild:
+  Bug 268817: Accidently dropped the noperl patch, it's only merged in
+  upstreams 1.6.3.x series.
 
   05 May 2009; Robin H. Johnson <robbat2@gentoo.org> git-1.6.2.5.ebuild,
   git-1.6.3_rc4.ebuild, git-9999.ebuild:
