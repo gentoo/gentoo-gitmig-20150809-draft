@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/amavisd-new
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.137 2009/05/04 17:48:53 dertobi123 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.138 2009/05/08 18:41:34 dertobi123 Exp $
+
+*amavisd-new-2.6.3-r1 (08 May 2009)
+
+  08 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  -amavisd-new-2.6.3.ebuild, +amavisd-new-2.6.3-r1.ebuild:
+  Fix dep on dev-perl/Mail-DKIM, it's needed even when no dkim funtionality
+  is activated. #268928
 
   04 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   amavisd-new-2.6.3.ebuild:

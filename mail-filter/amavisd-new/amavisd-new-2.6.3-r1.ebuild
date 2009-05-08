@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.6.3.ebuild,v 1.2 2009/05/04 17:48:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.6.3-r1.ebuild,v 1.1 2009/05/08 18:41:34 dertobi123 Exp $
 
 inherit eutils
 
@@ -43,11 +43,11 @@ RDEPEND="${DEPEND}
 	>=sys-libs/db-3.2
 	dev-perl/BerkeleyDB
 	dev-perl/Convert-BinHex
+	>=dev-perl/Mail-DKIM-0.31
 	virtual/mta
 	ldap? ( >=dev-perl/perl-ldap-0.33 )
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )
-	dkim? ( >=dev-perl/Mail-DKIM-0.31 )
 	razor? ( mail-filter/razor )
 	spamassassin? ( mail-filter/spamassassin )"
 
