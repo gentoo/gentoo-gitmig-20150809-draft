@@ -1,6 +1,13 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.68 2009/03/19 14:04:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.69 2009/05/08 17:04:09 yngwin Exp $
+
+*smplayer-0.6.7_p2872-r2 (08 May 2009)
+
+  08 May 2009; Ben de Groot <yngwin@gentoo.org>
+  +smplayer-0.6.7_p2872-r2.ebuild:
+  Applying patch from Davide Pesavento in bug 265770 that fixes several
+  issues
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> smplayer-0.6.6.ebuild:
   Marking smplayer-0.6.6 ppc for bug 257852
