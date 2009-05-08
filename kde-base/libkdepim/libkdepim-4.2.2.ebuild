@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.2.2.ebuild,v 1.2 2009/04/17 06:24:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/libkdepim-4.2.2.ebuild,v 1.3 2009/05/08 10:50:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ src_install() {
 
 	# install additional generated headers that are needed by other packages that
 	# are derived from kdepim. e.g. kmail.
-	pushd "${WORKDIR}/${PN}_build/libkdepim/" 2>/dev/null || die "pushd libkdepim failed"
+	pushd "${CMAKE_BUILD_DIR}/libkdepim/" 2>/dev/null || die "pushd libkdepim failed"
 	insinto "${PREFIX}/include"
 	doins ui_addresspicker.h ui_categoryselectdialog_base.h || die "Failed to install extra header files."
 	popd 2>/dev/null

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.2.2.ebuild,v 1.2 2009/04/17 06:33:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-4.2.2.ebuild,v 1.3 2009/05/08 10:48:01 scarabeus Exp $
 
 EAPI="2"
 
@@ -49,6 +49,6 @@ src_install() {
 
 	# Install headers needed by kdepim-wizards
 	insinto "${PREFIX}"/include/${PN}
-	doins "${WORKDIR}"/${PN}_build/${KMMODULE}/{groupwise,egroupware,slox}/*.h || \
+	doins "${CMAKE_BUILD_DIR}"/${KMMODULE}/{groupwise,egroupware,slox}/*.h || \
 			die "Failed to install extra header files"
 }

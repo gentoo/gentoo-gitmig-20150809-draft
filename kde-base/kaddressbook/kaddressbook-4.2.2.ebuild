@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.2.2.ebuild,v 1.2 2009/04/17 06:15:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/kaddressbook-4.2.2.ebuild,v 1.3 2009/05/08 10:49:24 scarabeus Exp $
 
 EAPI="2"
 
@@ -37,6 +37,6 @@ src_install() {
 
 	# install additional generated header that is needed by kresources
 	insinto "${KDEDIR}"/include/${PN}
-	doins "${WORKDIR}"/${PN}_build/${PN}/common/kabprefs_base.h || \
+	doins "${CMAKE_BUILD_DIR}"/${PN}/common/kabprefs_base.h || \
 	die "Failed to install extra header files"
 }
