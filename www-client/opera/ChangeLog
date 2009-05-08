@@ -1,6 +1,12 @@
 # ChangeLog for www-client/opera
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.338 2009/04/10 13:26:17 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.339 2009/05/08 21:03:51 jer Exp $
+
+  08 May 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2009/05/08/skin-debugging-and-more>.
+  Move epatch to src_prepare(). Move opera_cd() into src_unpack() and set S
+  only when not set to a valid directory.
 
   10 Apr 2009; Ulrich Mueller <ulm@gentoo.org> opera-9.64.ebuild,
   opera-10.00_pre4205.ebuild, opera-10.00_pre4214.ebuild,
