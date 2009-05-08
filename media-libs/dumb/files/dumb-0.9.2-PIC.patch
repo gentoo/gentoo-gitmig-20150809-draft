@@ -65,8 +65,8 @@ diff -Naur dumb.orig/make/Makefile.inc dumb/make/Makefile.inc
  
  $(CORE_LIB_FILE): $(CORE_OBJECTS)
 -	$(AR) rs $@ $^
-+	$(CC) -shared -o $@ -Wl,-shared,-soname,$(shell basename $@) $^
++	$(CC) -shared -o $@ -Wl,-shared,-soname,$(shell basename $@) -lm $^
  
  $(ALLEGRO_LIB_FILE): $(ALLEGRO_OBJECTS)
 -	$(AR) rs $@ $^
-+	$(CC) -shared -o $@ -Wl,-shared,-soname,$(shell basename $@) $^
++	$(CC) -shared -o $@ -Wl,-shared,-soname,$(shell basename $@) -lm $^
