@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.0.3.ebuild,v 1.1 2009/04/30 18:53:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/wally-2.0.3.ebuild,v 1.2 2009/05/08 11:29:32 hwoarang Exp $
 
 EAPI="2"
-inherit eutils qt4
+inherit eutils cmake-utils qt4
 
 DESCRIPTION="A Qt4 wallpaper changer"
 HOMEPAGE="http://wally.sourceforge.net/"
@@ -20,24 +20,27 @@ DEPEND="media-libs/libexif
 
 RDEPEND="${DEPEND}"
 
+CMAKE_USE_DIR="${S}/wallyplugin/"
+CMAKE_IN_SOURCE_BUILD="1"
+
 src_configure() {
 	eqmake4
+	if use kde; then
+		cmake-utils_src_configure
+	fi
 }
 
 src_compile() {
 	emake || die "emake failed"
-	if use kde;then
-		cd "${S}"/wallyplugin/build
-		cmake .. || die "cmake wallyplugin failed"
-		emake || die "emake wallyplugin failed"
+	if use kde; then
+		cmake-utils_src_compile
 	fi
 }
 
 src_install() {
 	emake INSTALL_ROOT="${D}" install || die "emake install failed"
 	if use kde;then
-		cd "${S}"/wallyplugin/build
-		emake DESTDIR="${D}" install || die "emake install wallyplugin failed"
+		cmake-utils_src_install
 	fi
 	newicon "${S}"/res/images/idle.png wally.png
 	make_desktop_entry wally Wally wally "Graphics;Qt"
