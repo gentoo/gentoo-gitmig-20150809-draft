@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/festival-it-1.0.ebuild,v 1.2 2009/05/07 23:26:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/festival-it-1.0-r1.ebuild,v 1.1 2009/05/08 05:16:36 neurogeek Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -8,27 +10,14 @@ DESCRIPTION="A collection of italian voices for Festival TTS."
 HOMEPAGE="http://www.pd.istc.cnr.it/TTS/It-FESTIVAL.htm"
 SRC_URI="mirror://sourceforge/it-festival/Italian-FESTIVAL.zip"
 
-RDEPEND=">=app-accessibility/festival-1.4.3-r4
-		mbrola? ( >=app-accessibility/mbrola-3.0.1h-r4 )"
-
-DEPEND="${RDEPEND} app-arch/unzip"
+RDEPEND=">=app-accessibility/festival-1.96_beta[mbrola?]
+		mbrola? ( >=app-accessibility/mbrola-3.0.1h-r4[linguas_it] )"
+DEPEND="app-arch/unzip"
 IUSE="mbrola"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-
-pkg_setup () {
-
-	if use mbrola && ! built_with_use app-accessibility/mbrola linguas_it; then
-	  einfo "You should emerge app_accessibility/mbrola with italian support"
-	  einfo "in order to enable mbrola-based italian voices in festival."
-	  einfo
-	  einfo "Try to add \"it\" to your LINGUAS string in /etc/make.conf"
-	  einfo "and re-emerge app_accessibility/mbrola"
-	  die   "mbrola has no italian support please remerge it with LINGUAS=it"
-	fi
-}
 
 pkg_postinst () {
 	einfo "Italian voices installed:"
