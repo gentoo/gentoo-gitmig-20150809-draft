@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9767 2009/05/08 10:23:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9768 2009/05/08 10:35:29 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markos Chandras <hwoarang@gentoo.org> (08 May 2009)
+# Pending removal in 15 days.
+=x11-libs/qt-4.5.0
+=x11-libs/qt-assistant-4.5.0*
+=x11-libs/qt-core-4.5.0*
+=x11-libs/qt-dbus-4.5.0*
+=x11-libs/qt-demo-4.5.0*
+=x11-libs/qt-gui-4.5.0*
+=x11-libs/qt-opengl-4.5.0*
+=x11-libs/qt-phonon-4.5.0*
+=x11-libs/qt-qt3support-4.5.0*
+=x11-libs/qt-script-4.5.0*
+=x11-libs/qt-sql-4.5.0*
+=x11-libs/qt-svg-4.5.0*
+=x11-libs/qt-test-4.5.0*
+=x11-libs/qt-webkit-4.5.0*
+=x11-libs/qt-xmlpatterns-4.5.0*
 
 # Peter Alfredsen <loki_val@gentoo.org> (05 May 2009)
 # Masking temporarily till bug 265912 has been resolved
