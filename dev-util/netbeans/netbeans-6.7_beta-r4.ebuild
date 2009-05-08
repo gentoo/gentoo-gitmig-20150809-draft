@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r4.ebuild,v 1.1 2009/05/03 22:42:14 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r4.ebuild,v 1.2 2009/05/08 16:49:26 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -595,7 +595,13 @@ src_compile() {
 	java-pkg_filter-compiler ecj-3.2 ecj-3.3 ecj-3.4
 
 	# Build the clusters
-	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="-Xmx1g -Djava.awt.headless=true" \
+	local heap=""
+	if use doc ; then
+		heap="-Xmx1536m"
+	else
+		heap="-Xmx1g"
+	fi
+	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="${heap} -Djava.awt.headless=true" \
 		eant ${antflags} ${clusters} -f nbbuild/build.xml ${build_target} $(use_doc build-javadoc)
 
 	local locales=""
