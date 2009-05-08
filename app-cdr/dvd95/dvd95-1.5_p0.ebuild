@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.5_p0.ebuild,v 1.2 2009/05/08 22:26:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvd95/dvd95-1.5_p0.ebuild,v 1.3 2009/05/08 22:30:10 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -14,13 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="3dnow nls mmx mpeg sse sse2"
 
-COMMON_DEPEND=">=gnome-base/libgnomeui-2
+RDEPEND=">=gnome-base/libgnomeui-2
 	dev-libs/libxml2
 	media-libs/libdvdread
-	mpeg? ( media-libs/libmpeg2 )"
-RDEPEND="${COMMON_DEPEND}
+	mpeg? ( media-libs/libmpeg2 )
 	media-video/mplayer"
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
