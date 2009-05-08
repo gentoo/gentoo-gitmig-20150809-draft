@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/moserial
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/ChangeLog,v 1.1 2009/04/02 15:21:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/ChangeLog,v 1.2 2009/05/08 14:59:16 leio Exp $
+
+*moserial-2.26.0 (08 May 2009)
+
+  08 May 2009; Mart Raudsepp <leio@gentoo.org> -moserial-1.0.8.ebuild,
+  +moserial-2.26.0.ebuild:
+  Version bump. Adds Esc keybinding to return to end of scrollback and focus
+  the output entry, and choice to send escape keycode as line terminator
 
 *moserial-1.0.8 (02 Apr 2009)
 

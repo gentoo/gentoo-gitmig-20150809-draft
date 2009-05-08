@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-1.0.8.ebuild,v 1.1 2009/04/02 15:21:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-2.26.0.ebuild,v 1.1 2009/05/08 14:59:16 leio Exp $
 
 EAPI=1
 GCONF_DEBUG="no"
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.16:2
 	>=x11-libs/gtk+-2.10:2
 	gnome-base/gconf"
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/pkgconfig-0.9
