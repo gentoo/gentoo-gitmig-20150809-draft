@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.239 2009/05/07 15:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.240 2009/05/08 23:02:59 arfrever Exp $
+
+*sqlite-3.6.14 (08 May 2009)
+
+  08 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -sqlite-3.6.6.2.ebuild, -sqlite-3.6.10.ebuild,
+  -files/sqlite-3.6.10-tcl-install.patch, +sqlite-3.6.14.ebuild:
+  Version bump.
 
   07 May 2009; Raúl Porcel <armin76@gentoo.org> sqlite-3.6.13.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #267528
