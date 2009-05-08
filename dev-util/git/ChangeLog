@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.341 2009/05/08 20:20:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.342 2009/05/08 21:18:08 robbat2 Exp $
+
+  08 May 2009; Robin H. Johnson <robbat2@gentoo.org> +files/50git-gentoo.el:
+  Accidently removed a used file.
 
   08 May 2009; Robin H. Johnson <robbat2@gentoo.org> -git-1.5.1.6.ebuild,
   -git-1.5.3.7-r1.ebuild, -git-1.5.3.8.ebuild,
