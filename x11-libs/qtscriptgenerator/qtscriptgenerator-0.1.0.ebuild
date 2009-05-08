@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.1 2009/04/15 05:40:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.2 2009/05/08 01:48:35 loki_val Exp $
 
 EAPI="2"
 
@@ -50,6 +50,9 @@ src_prepare() {
 	sed -i \
 		-e "/qtscript_phonon/d" \
 		qtbindings/qtbindings.pro || die "sed failed"
+
+	# Fix for GCC-4.4, bug 268086
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 	qt4_src_prepare
 }
 
