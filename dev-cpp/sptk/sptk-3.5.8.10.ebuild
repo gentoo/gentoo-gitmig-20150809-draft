@@ -1,12 +1,12 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.6 2009/05/08 09:09:04 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.10.ebuild,v 1.7 2009/05/08 09:14:51 iluxa Exp $
 
 EAPI=1
 
 inherit multilib cmake-utils
 
-IUSE="fltk odbc doc sqlite excel postgres aspell mysql"
+IUSE="fltk odbc doc sqlite excel postgres aspell mysql gnutls"
 
 DESCRIPTION="C++ user interface toolkit for X with database and Excel support"
 SRC_URI="http://www.sptk.net/sptk-${PV}.tbz2"
@@ -21,7 +21,8 @@ RDEPEND="fltk?    ( >=x11-libs/fltk-1.1.6:1.1 )
 	sqlite?   ( >=dev-db/sqlite-3 )
 	postgres? ( >=virtual/postgresql-base-8.0 )
 	mysql?    ( virtual/mysql )
-	aspell?   ( >=app-text/aspell-0.50 )"
+	aspell?   ( >=app-text/aspell-0.50 )
+	gnutls?   ( net-libs/gnutls )"
 
 DEPEND="${RDEPEND}
 	doc?      ( app-doc/doxygen )"
@@ -35,10 +36,10 @@ src_compile() {
 	$(cmake-utils_use_no odbc ODBC)
 	$(cmake-utils_use_no aspell ASPELL)
 	$(cmake-utils_use_no fltk FLTK)
-	$(cmake-utils_use_no excel EXCEL)"
+	$(cmake-utils_use_no excel EXCEL)
+	$(cmake-utils_use_no gnutls TLS)"
 
 	mycmakeargs="${mycmakeargs} -D CMAKE_INSTALL_PREFIX:PATH=/usr -D LIBDIR=$(get_libdir) ${SPTK_OPTIONS} -DNO_EXAMPLES:BOOLEAN=TRUE"
-	einfo "mycmakeargs=${mycmakeargs}"
 
 	cmake-utils_src_configure
 
