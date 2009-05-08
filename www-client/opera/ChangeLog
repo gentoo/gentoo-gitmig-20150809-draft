@@ -1,8 +1,14 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.339 2009/05/08 21:03:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.340 2009/05/08 21:10:37 jer Exp $
 
-  08 May 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  08 May 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4340.ebuild:
+  Marked ~x86-fbsd too.
+
+*opera-10.00_pre4340 (08 May 2009)
+
+  08 May 2009; Jeroen Roovers <jer@gentoo.org> +opera-10.00_pre4340.ebuild,
+  ChangeLog:
   Version bump
   <http://my.opera.com/desktopteam/blog/2009/05/08/skin-debugging-and-more>.
   Move epatch to src_prepare(). Move opera_cd() into src_unpack() and set S
