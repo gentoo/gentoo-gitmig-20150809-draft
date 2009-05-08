@@ -1,38 +1,36 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.3.ebuild,v 1.8 2009/05/08 12:41:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.4-r1.ebuild,v 1.1 2009/05/08 12:41:49 yngwin Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit cmake-utils eutils flag-o-matic
 
 MY_P=${PN}_${PV}
 
-DESCRIPTION="Video editor designed for simple cutting, filtering and encoding tasks."
+DESCRIPTION="Video editor designed for simple cutting, filtering and encoding tasks"
 HOMEPAGE="http://fixounet.free.fr/avidemux"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="amd64 ppc x86"
-IUSE="aac aften alsa amrnb arts dts encode esd jack lame libsamplerate
-	truetype vorbis x264 xv xvid gtk qt4"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="+aac +aften +alsa amrnb arts +dts esd jack libsamplerate +mp3 +truetype
+	+vorbis +x264 +xv +xvid gtk +qt4"
 RESTRICT="test"
 
 RDEPEND="dev-libs/libxml2
 	media-libs/libpng
 	media-libs/libsdl
-	>=dev-libs/glib-2
-	aac? ( media-libs/faad2 )
+	dev-libs/glib:2
+	aac? ( media-libs/faac
+		media-libs/faad2 )
 	aften? ( media-libs/aften )
 	alsa? ( media-libs/alsa-lib )
 	amrnb? ( media-libs/amrnb )
 	arts? ( kde-base/arts )
 	dts? ( media-libs/libdca )
-	encode? (
-		aac? ( media-libs/faac )
-		lame? ( media-sound/lame )
-		)
+	mp3? ( media-sound/lame )
 	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
 	libsamplerate? ( media-libs/libsamplerate )
@@ -42,14 +40,14 @@ RDEPEND="dev-libs/libxml2
 	x264? ( media-libs/x264 )
 	xv? ( x11-libs/libXv )
 	xvid? ( media-libs/xvid )
-	gtk? ( >=x11-libs/gtk+-2
+	gtk? ( x11-libs/gtk+:2
 		x11-libs/libX11 )
-	qt4? ( x11-libs/qt-gui:4
+	qt4? ( >=x11-libs/qt-gui-4.5.1:4
 		x11-libs/libX11 )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig
-	>=dev-util/cmake-2.4.4"
+	dev-util/cmake"
 
 S=${WORKDIR}/${MY_P}
 
@@ -61,19 +59,13 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# TODO. Needs to be reported upstream.
-	epatch "${FILESDIR}"/${PN}-2.4-libdca.patch
-	epatch "${FILESDIR}"/${PN}-2.4-i18n.patch
-	# Upstream patch for newer x264
-	epatch "${FILESDIR}"/${P}-x264.patch
-	# Fix compile error triggered by -ftracer (bug 255268)
+src_prepare() {
 	epatch "${FILESDIR}"/lavcodec-mpegvideo_mmx-asm-fix.patch
+	# fix for bug 268618
+	epatch "${FILESDIR}"/${PN}-2.4-cmake264.patch
 }
 
-src_compile() {
+src_configure() {
 	# Commented out options cause compilation errors, some
 	# might need -Wl,--as-needed in LDFLAGS and all USE
 	# flags disabled for reproducing. -drac
@@ -94,15 +86,14 @@ src_compile() {
 	use jack || mycmakeargs="${mycmakeargs} -DNO_Jack=1"
 	use aften || mycmakeargs="${mycmakeargs} -DNO_Aften=1"
 	use libsamplerate || mycmakeargs="${mycmakeargs} -DNO_libsamplerate=1"
-	use encode && use aac || mycmakeargs="${mycmakeargs} -DNO_FAAC=1"
-	use encode && use lame || mycmakeargs="${mycmakeargs} -DNO_Lame=1"
+	use aac || mycmakeargs="${mycmakeargs} -DNO_FAAC=1"
+	use mp3 || mycmakeargs="${mycmakeargs} -DNO_Lame=1"
 	use xvid || mycmakeargs="${mycmakeargs} -DNO_Xvid=1"
 	use amrnb || mycmakeargs="${mycmakeargs} -DNO_AMRNB=1"
 	use dts || mycmakeargs="${mycmakeargs} -DNO_libdca=1"
 	use x264 || mycmakeargs="${mycmakeargs} -DNO_x264=1"
 	use aac || mycmakeargs="${mycmakeargs} -DNO_FAAD=1 -DNO_NeAAC=1"
 	use vorbis || mycmakeargs="${mycmakeargs} -DNO_Vorbis=1"
-	#use png || mycmakeargs="${mycmakeargs} -DNO_libPNG=1"
 
 	# ConfigureChecks.cmake -> cmake/FindArts.cmake
 	use arts || mycmakeargs="${mycmakeargs} -DNO_ARTS=1"
@@ -112,7 +103,7 @@ src_compile() {
 	use gtk || mycmakeargs="${mycmakeargs} -DNO_GTK=1"
 	use qt4 || mycmakeargs="${mycmakeargs} -DNO_QT4=1"
 
-	cmake-utils_src_compile
+	cmake-utils_src_configure
 }
 
 src_install() {

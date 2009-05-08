@@ -1,6 +1,15 @@
 # ChangeLog for media-video/avidemux
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.142 2009/02/15 23:29:51 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.143 2009/05/08 12:41:49 yngwin Exp $
+
+*avidemux-2.4.4-r1 (08 May 2009)
+
+  08 May 2009; Ben de Groot <yngwin@gentoo.org>
+  +files/avidemux-2.4-cmake264.patch, avidemux-2.4.3.ebuild,
+  +avidemux-2.4.4-r1.ebuild:
+  Re-enable qt4 useflag, which works again with qt 4.5.1 (bug 259414). Add
+  patch for cmake-2.6.4 change in behavior (bug 268618). Add test
+  restriction (bug 265218).
 
 *avidemux-2.4.4 (15 Feb 2009)
 
