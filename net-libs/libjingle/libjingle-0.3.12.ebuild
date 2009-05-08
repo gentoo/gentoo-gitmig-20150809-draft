@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.12.ebuild,v 1.4 2009/01/07 17:01:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libjingle/libjingle-0.3.12.ebuild,v 1.5 2009/05/08 01:28:47 loki_val Exp $
 
 inherit autotools eutils
 
@@ -24,6 +24,9 @@ src_unpack() {
 
 	# See bug #238262
 	epatch "${FILESDIR}/${P}-asneeded.patch"
+
+	# See bug 267816
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 
 	eautomake
 }
