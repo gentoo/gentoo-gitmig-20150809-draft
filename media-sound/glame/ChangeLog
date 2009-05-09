@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glame
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.37 2009/05/09 15:02:55 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/ChangeLog,v 1.38 2009/05/09 15:48:48 ssuominen Exp $
+
+  09 May 2009; Samuli Suominen <ssuominen@gentoo.org> glame-2.0.1.ebuild:
+  Remove USE nls wrt #165234
 
   09 May 2009; Thomas Anderson <gentoofan23@gentoo.org> glame-2.0.1.ebuild:
   Add missing dependency on libgnomeui thanks to Nathan Brink

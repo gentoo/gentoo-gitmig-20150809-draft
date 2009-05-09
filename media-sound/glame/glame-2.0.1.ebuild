@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.12 2009/05/09 15:02:55 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.13 2009/05/09 15:48:48 ssuominen Exp $
 
 WANT_AUTOCONF=2.5
-
 inherit autotools eutils
 
 DESCRIPTION="an audio file editing utility"
@@ -13,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
-IUSE="nls gnome vorbis debug alsa"
+IUSE="gnome vorbis debug alsa"
 
 RDEPEND=">=dev-scheme/guile-1.4-r3
 	>=dev-libs/libxml-1.8
@@ -29,7 +28,7 @@ RDEPEND=">=dev-scheme/guile-1.4-r3
 		>=dev-libs/glib-2.6 >=x11-libs/gtk+-2.6 >=gnome-base/libgnomeui-2.6 )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
-	nls? ( >=sys-devel/gettext-0.11.3 )"
+	sys-devel/gettext"
 
 pkg_setup() {
 	if has_version =dev-scheme/guile-1.8*; then
@@ -50,7 +49,6 @@ src_compile() {
 	econf $(use_enable alsa alsatest) \
 		$(use_enable debug swapfiledebug) $(use_enable debug) \
 		$(use_enable gnome gui) \
-		$(use_enable nls) \
 		--enable-ladspa \
 		${myconf}
 
