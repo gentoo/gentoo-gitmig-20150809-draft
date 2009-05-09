@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.16.ebuild,v 1.1 2009/04/19 06:35:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/scim-bridge-0.4.16.ebuild,v 1.2 2009/05/09 16:36:43 flameeyes Exp $
 
 EAPI="1"
 inherit autotools eutils qt3
@@ -54,6 +54,8 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-0.4.15.2-qt4.patch"
 	epatch "${FILESDIR}/${PN}-0.4.15.2-gcc43.patch"
+	epatch "${FILESDIR}/${P}+gcc-4.4.patch"
+
 	# bug #241954
 	intltoolize --force
 	eautoreconf
