@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/glassfish-deployment-api
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.1 2009/05/09 15:29:15 nelchael Exp $
+
+*glassfish-deployment-api-1.2 (09 May 2009)
+
+  09 May 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +glassfish-deployment-api-1.2.ebuild,
+  +files/glassfish-deployment-api-1.2-build.xml.patch, +metadata.xml:
+  Add J2EE deployment-api built from Glassfish sources.
+
