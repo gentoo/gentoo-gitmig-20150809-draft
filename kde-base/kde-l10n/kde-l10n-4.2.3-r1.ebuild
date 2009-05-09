@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.2.3-r1.ebuild,v 1.1 2009/05/09 12:42:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.2.3-r1.ebuild,v 1.2 2009/05/09 23:02:53 arfrever Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ DEPEND="sys-devel/gettext"
 RDEPEND=""
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="doc"
 
 MY_LANGS="ar bg bn_IN ca cs csb da de el en_GB es et eu fi fr ga gl gu he hi hu
 		is it ja kk km kn ko ku lt lv mai mk ml mr nb nds nl nn pa pl pt pt_BR
