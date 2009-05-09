@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.27.ebuild,v 1.1 2008/10/19 11:06:42 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialogblocks/dialogblocks-4.30.ebuild,v 1.1 2009/05/09 12:02:27 mrness Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="app-arch/tar"
 RDEPEND=">=x11-libs/gtk+-2
 	x11-libs/libXinerama
 	>=media-libs/libpng-1.2
@@ -31,7 +31,11 @@ src_install() {
 	fowners -R root:root /opt/dialogblocks
 	dosed 's:/usr/share/:/opt/:' /opt/dialogblocks/dialogblocks.desktop
 
+	local i
 	dosym /opt/dialogblocks/dialogblocks32x32.xpm /usr/share/pixmaps/dialogblocks.xpm
+	for i in 32x32 48x48 128x128; do
+	    dosym /opt/dialogblocks/appicons/dialogblocks${i}.png /usr/share/icons/hicolor/${i}/apps/dialogblocks.png
+	done
 	dosym /opt/dialogblocks/dialogblocks.desktop /usr/share/applications/dialogblocks.desktop
 	newbin "${FILESDIR}/dialogblocks.sh" dialogblocks
 }
