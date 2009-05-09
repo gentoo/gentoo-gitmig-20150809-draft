@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fetchlog
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.11 2008/10/23 02:02:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fetchlog/ChangeLog,v 1.12 2009/05/09 19:48:26 pvdabeel Exp $
+
+  09 May 2009; Pieter Van den Abeele <pvdabeel@gentoo.org> fetchlog-1.0.ebuild:
+  Added ppc64 testing keyword
 
   23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> fetchlog-1.0.ebuild:
   Respect CFLAGS, LDFLAGS, CC. Fixed DEPEND.
