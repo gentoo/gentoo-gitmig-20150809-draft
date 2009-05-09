@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r2.ebuild,v 1.1 2009/05/03 15:11:04 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r3.ebuild,v 1.1 2009/05/09 15:39:47 nelchael Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 	## java-virtuals/jaf"
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
-	=dev-java/sun-j2ee-deployment-bin-1.1*
+	dev-java/glassfish-deployment-api:1.2
 	java-virtuals/javamail"
 
 RDEPEND=">=virtual/jdk-1.5
@@ -44,9 +44,8 @@ pkg_setup() {
 
 }
 
-src_unpack() {
+src_prepare() {
 
-	unpack ${A}
 	for i in "${WORKDIR}"/${PV}/resin-${PV}-*; do
 		epatch "${i}"
 	done;
@@ -56,7 +55,6 @@ src_unpack() {
 
 	sed -i -e 's/256m/384m/' "${S}/build.xml"
 
-	cd "${S}"
 	eautoreconf
 
 }
@@ -82,7 +80,7 @@ src_compile() {
 	java-pkg_jar-from --virtual javamail
 	# java-pkg_jar-from iso-relax
 	# java-pkg_jar-from aopalliance-1
-	java-pkg_jar-from sun-j2ee-deployment-bin-1.1
+	java-pkg_jar-from glassfish-deployment-api-1.2
 	java-pkg_jar-from resin-servlet-api-2.5
 	ln -s $(java-config --jdk-home)/lib/tools.jar
 	cd "${S}"
