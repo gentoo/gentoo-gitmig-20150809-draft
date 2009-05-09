@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squid
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.246 2009/05/09 08:49:09 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.247 2009/05/09 14:17:13 klausman Exp $
+
+  09 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  squid-3.0.14-r2.ebuild:
+  Stable on alpha, bug #269096
 
 *squid-3.0.15 (09 May 2009)
 
