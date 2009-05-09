@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/blockdpy-1.ebuild,v 1.1 2009/05/08 21:07:28 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/blockdpy/blockdpy-1.ebuild,v 1.2 2009/05/09 16:31:10 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
@@ -55,4 +55,3 @@ pkg_postinst() {
 		ewarn
 	fi
 }
-
