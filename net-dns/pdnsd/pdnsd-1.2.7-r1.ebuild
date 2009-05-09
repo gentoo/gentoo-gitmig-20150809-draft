@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.7-r1.ebuild,v 1.2 2009/01/05 11:14:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.2.7-r1.ebuild,v 1.3 2009/05/09 13:06:11 mrness Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -18,7 +20,7 @@ pkg_setup() {
 	enewuser pdnsd -1 -1 /var/lib/pdnsd pdnsd
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
 	use debug && myconf="${myconf} --with-debug=3"
 	use nptl && myconf="${myconf} --with-thread-lib=NPTL"
@@ -33,8 +35,6 @@ src_compile() {
 		$(use_enable underscores) \
 		${myconf} \
 		|| die "bad configure"
-
-	emake all || die "compile problem"
 }
 
 src_install() {
