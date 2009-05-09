@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.7 2009/04/29 17:46:23 ssuominen Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libvisual-plugins/libvisual-plugins-0.4.0-r2.ebuild,v 1.8 2009/05/09 11:30:13 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -30,14 +27,12 @@ RDEPEND="~media-libs/libvisual-${PV}
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender"
-
 DEPEND="${RDEPEND}
 	x11-libs/libXt
 	>=dev-util/pkgconfig-0.14"
 
 src_unpack() {
 	unpack ${A}
-
 	sed -i -e "s:@MKINSTALLDIRS@:${S}/mkinstalldirs:" "${S}"/po/Makefile.*
 
 	cd "${S}"
