@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.2.3.ebuild,v 1.1 2009/05/06 23:25:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/kget-4.2.3.ebuild,v 1.2 2009/05/09 22:55:45 arfrever Exp $
 
 EAPI="2"
 
@@ -41,11 +41,11 @@ src_prepare() {
 }
 
 src_configure() {
-	if use bittorent-external && use bittorent ; then
+	if use bittorrent-external && use bittorrent ; then
 		einfo "Using the external plugin."
-		einfo "Disable bittorent-external useflag if you want iternal one."
+		einfo "Disable bittorrent-external useflag if you want iternal one."
 	fi
-	if use bittorent-external; then
+	if use bittorrent-external; then
 		mycmakeargs="${mycmakeargs} -DEMBEDDED_TORRENT_SUPPORT=OFF"
 	else
 		mycmakeargs="${mycmakeargs}

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.115 2009/05/06 23:25:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.116 2009/05/09 22:55:45 arfrever Exp $
+
+  09 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  kget-4.2.3.ebuild:
+  Fix typos in USE flag names (bug #269161).
 
 *kget-4.2.3 (06 May 2009)
 
