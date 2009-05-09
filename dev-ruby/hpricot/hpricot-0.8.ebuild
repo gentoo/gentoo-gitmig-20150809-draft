@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.ebuild,v 1.1 2009/05/08 10:31:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hpricot/hpricot-0.8.ebuild,v 1.2 2009/05/09 12:24:23 flameeyes Exp $
 
 EAPI=2
 
@@ -11,9 +11,9 @@ GITHUB_USER=why
 USE_RUBY="ruby18"
 
 DESCRIPTION="A fast and liberal HTML parser for Ruby."
-HOMEPAGE="http://code.whytheluckystiff.net/hpricot/"
+HOMEPAGE="http://wiki.github.com/why/hpricot"
 
-SRC_URI="http://github.com/${GITHUB_USER}/${PN}/tarball/${PV} -> ${P}.tgz"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
@@ -39,8 +39,6 @@ EOF
 }
 
 src_compile() {
-	cd "${WORKDIR}"/${GITHUB_USER}-${PN}-*
-
 	rake compile || die "rake failed"
 
 	if use doc; then
@@ -49,8 +47,6 @@ src_compile() {
 }
 
 src_test() {
-	cd "${WORKDIR}"/${GITHUB_USER}-${PN}-*
-
 	for ruby in $USE_RUBY; do
 		[[ -n `type -p $ruby` ]] || continue
 		$ruby $(type -p rake) test || die "testsuite failed"
@@ -58,8 +54,6 @@ src_test() {
 }
 
 src_install() {
-	cd "${WORKDIR}"/${GITHUB_USER}-${PN}-*
-
 	pushd lib
 	doruby -r *.rb hpricot || die "doruby failed"
 	exeinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitearchdir"]')
