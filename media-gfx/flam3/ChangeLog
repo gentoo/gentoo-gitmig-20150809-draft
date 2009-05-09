@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/flam3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/flam3/ChangeLog,v 1.1 2009/05/01 18:38:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/flam3/ChangeLog,v 1.2 2009/05/09 12:49:58 patrick Exp $
+
+*flam3-2.7.18 (09 May 2009)
+
+  09 May 2009; Patrick Lauer <patrick@gentoo.org> +flam3-2.7.18.ebuild:
+  Bump to 2.7.18, closes #268871
 
 *flam3-2.7.17 (01 May 2009)
 
