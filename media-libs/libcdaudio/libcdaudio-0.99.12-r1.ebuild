@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.12-r1.ebuild,v 1.6 2008/11/15 18:42:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.12-r1.ebuild,v 1.7 2009/05/09 02:08:00 gentoofan23 Exp $
 
 inherit eutils
 
@@ -21,11 +21,11 @@ src_unpack() {
 }
 
 src_compile() {
-	econf --enable-threads || die "configure failed"
+	econf --enable-threads
 	emake || die "compile problem."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
