@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.2.ebuild,v 1.1 2009/03/07 14:05:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.2.ebuild,v 1.2 2009/05/09 12:09:40 mrness Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -23,9 +25,7 @@ pkg_setup() {
 	enewuser milter -1 -1 -1 milter
 }
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	local ENVDEF=""

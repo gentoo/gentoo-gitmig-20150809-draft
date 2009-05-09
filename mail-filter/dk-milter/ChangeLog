@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dk-milter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/ChangeLog,v 1.16 2009/03/07 14:05:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/ChangeLog,v 1.17 2009/05/09 12:09:40 mrness Exp $
+
+  09 May 2009; Alin Năstac <mrness@gentoo.org>
+  -files/dk-milter-1.0.1-as-needed.patch, -dk-milter-1.0.1-r1.ebuild,
+  dk-milter-1.0.2.ebuild:
+  Migrate to EAPI 2.
 
 *dk-milter-1.0.2 (07 Mar 2009)
 
