@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/vamp-aubio-plugins-0.3.2b.ebuild,v 1.6 2008/07/11 11:58:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vamp-aubio-plugins/vamp-aubio-plugins-0.3.2b.ebuild,v 1.7 2009/05/09 18:11:19 aballier Exp $
 
 inherit flag-o-matic toolchain-funcs multilib eutils
 
@@ -16,6 +16,7 @@ IUSE=""
 DEPEND=">=media-libs/aubio-0.3.2
 	media-libs/vamp-plugin-sdk
 	=sci-libs/fftw-3*"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
