@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/eric
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.80 2009/05/03 16:39:55 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.81 2009/05/09 16:48:37 patrick Exp $
+
+*eric-4.3.3 (09 May 2009)
+
+  09 May 2009; Patrick Lauer <patrick@gentoo.org> +eric-4.3.3.ebuild:
+  Bump to 4.3.3, homepage changed again
 
   03 May 2009; Raúl Porcel <armin76@gentoo.org> eric-4.3.1.ebuild:
   sparc stable wrt #267331
