@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.7.0.ebuild,v 1.1 2009/05/09 09:02:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.7.0.ebuild,v 1.2 2009/05/09 09:10:07 mrness Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ pkg_setup() {
 src_prepare() {
 	# fix sample config file
 	sed -i -e "s:/var/ziproxy/:/var/lib/ziproxy/:g" \
+		-e "s:%j-%Y.log:/var/log/ziproxy/%j-%Y.log:g" \
 		etc/ziproxy/ziproxy.conf
 
 	# fix sample xinetd config
@@ -40,7 +41,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf="--with-cfgfile=/etc/ziproxy/ziproxy.conf"  # --enable-testprogs
+	local myconf="--with-cfgfile=/etc/ziproxy/ziproxy.conf"
 	use jpeg2k && myconf="${myconf} --with-jasper"  # use_with doesn't work
 	econf ${myconf} || die "econf failed"
 }
