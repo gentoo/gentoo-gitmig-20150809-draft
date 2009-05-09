@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libdnet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.44 2008/10/14 12:21:25 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.45 2009/05/09 14:50:51 klausman Exp $
+
+  09 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  libdnet-1.11-r1.ebuild:
+  Stable on alpha, bug #268620
 
   14 Oct 2008; Peter Volkov <pva@gentoo.org> libdnet-1.11-r1.ebuild:
   Removed redudant libtoolise, bug #241356, thank Diego Pettenò for report.
