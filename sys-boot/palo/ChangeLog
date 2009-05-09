@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/palo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.20 2009/05/07 05:06:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/palo/ChangeLog,v 1.21 2009/05/09 13:56:51 jer Exp $
+
+  09 May 2009; Jeroen Roovers <jer@gentoo.org> palo-1.16_p1.ebuild:
+  Again, install executable into /sbin, not /usr/sbin.
 
 *palo-1.16_p1 (07 May 2009)
 
