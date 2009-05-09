@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.245 2009/05/02 15:11:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.246 2009/05/09 08:49:09 mrness Exp $
+
+*squid-3.0.15 (09 May 2009)
+
+  09 May 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squid-3.0.15-adapted-zph.patch,
+  +files/squid-3.0.15-cross-compile.patch, +files/squid-3.0.15-gcc43.patch,
+  +files/squid-3.0.15-gentoo.patch, +files/squid-3.0.15-heimdal.patch,
+  -squid-3.0.14.ebuild, -squid-3.0.14-r1.ebuild, +squid-3.0.15.ebuild:
+  Version bump (#268808).
 
 *squid-3.0.14-r2 (02 May 2009)
 

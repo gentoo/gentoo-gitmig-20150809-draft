@@ -1,0 +1,13 @@
+diff -Nru squid-3.0.STABLE15.orig/lib/util.c squid-3.0.STABLE15/lib/util.c
+--- squid-3.0.STABLE15.orig/lib/util.c	2009-05-06 11:11:38.000000000 +0000
++++ squid-3.0.STABLE15/lib/util.c	2009-05-09 10:31:41.000000000 +0000
+@@ -751,7 +751,8 @@
+     /* copy string, including terminating character */
+     sz = strlen(s) + 1;
+ 
+-    p = memcpy((char *)xmalloc(sz), s, sz);
++    p = (char *)xmalloc(sz);
++    memcpy(p, s, sz);
+ 
+     PROF_stop(xstrdup);
+ 

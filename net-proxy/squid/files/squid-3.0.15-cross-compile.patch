@@ -1,0 +1,38 @@
+diff -Nru squid-3.0.STABLE15.orig/configure.in squid-3.0.STABLE15/configure.in
+--- squid-3.0.STABLE15.orig/configure.in	2009-05-09 10:02:38.000000000 +0000
++++ squid-3.0.STABLE15/configure.in	2009-05-09 10:03:20.000000000 +0000
+@@ -1820,6 +1820,10 @@
+ 	;;
+ esac
+ 
++dnl Define HOSTCXX
++HOSTCXX="$build-g++"
++AC_SUBST(HOSTCXX)
++
+ dnl Check for programs
+ AC_PROG_CPP
+ AC_PROG_INSTALL
+diff -Nru squid-3.0.STABLE15.orig/src/Makefile.am squid-3.0.STABLE15/src/Makefile.am
+--- squid-3.0.STABLE15.orig/src/Makefile.am	2009-05-09 10:02:38.000000000 +0000
++++ squid-3.0.STABLE15/src/Makefile.am	2009-05-09 10:03:20.000000000 +0000
+@@ -1007,6 +1007,8 @@
+ 
+ DEFS = @DEFS@ -DDEFAULT_CONFIG_FILE=\"$(DEFAULT_CONFIG_FILE)\"
+ 
++HOSTCXX ?= @HOSTCXX@
++
+ $(OBJS): $(top_srcdir)/include/version.h ../include/autoconf.h
+ 
+ snmp_core.o snmp_agent.o: ../snmplib/libsnmp.a $(top_srcdir)/include/cache_snmp.h
+@@ -1030,6 +1032,11 @@
+ squid.conf.default: cf_parser.h
+ 	true
+ 
++cf_gen$(EXEEXT): $(cf_gen_SOURCES) $(cf_gen_DEPENDENCIES)
++	$(HOSTCXX) -o $@ $(srcdir)/cf_gen.cc \
++		$(top_srcdir)/lib/util.c $(top_srcdir)/lib/assert.c \
++		-DNDEBUG -DBUILD_HOST_TOOL ${INCLUDES}
++
+ cf_parser.h: cf.data cf_gen$(EXEEXT)
+ 	./cf_gen cf.data $(srcdir)/cf.data.depend
+ 
