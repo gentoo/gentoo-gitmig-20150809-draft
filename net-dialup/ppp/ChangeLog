@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.235 2009/05/09 13:20:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.236 2009/05/09 16:19:45 klausman Exp $
+
+  09 May 2009; Tobias Klausmann <klausman@gentoo.org> ppp-2.4.4-r22.ebuild:
+  Stable on alpha, bug #269127
 
   09 May 2009; Alin Năstac <mrness@gentoo.org> ppp-2.4.4-r22.ebuild:
   Migrate to EAPI 2.
