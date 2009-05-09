@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn/thunar-svn-0.0.3-r1.ebuild,v 1.1 2009/05/01 04:18:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn/thunar-svn-0.0.3-r2.ebuild,v 1.1 2009/05/09 05:09:59 darkside Exp $
 
 inherit xfce4
 

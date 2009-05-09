@@ -1,6 +1,14 @@
 # ChangeLog for xfce-extra/thunar-svn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn/ChangeLog,v 1.3 2009/05/01 04:18:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn/ChangeLog,v 1.4 2009/05/09 05:09:59 darkside Exp $
+
+*thunar-svn-0.0.3-r2 (09 May 2009)
+
+  09 May 2009; Jeremy Olexa <darkside@gentoo.org>
+  files/thunar-svn-0.0.3-subversion-1.6.patch, -thunar-svn-0.0.3-r1.ebuild,
+  +thunar-svn-0.0.3-r2.ebuild:
+  New patch with new rev bump to allow compilation with >=subversion-1.6, bug
+  264451 by Philip Taffner
 
 *thunar-svn-0.0.3-r1 (01 May 2009)
 
