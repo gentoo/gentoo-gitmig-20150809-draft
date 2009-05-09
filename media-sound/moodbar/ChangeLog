@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moodbar
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.9 2008/04/22 19:55:40 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moodbar/ChangeLog,v 1.10 2009/05/09 11:20:10 ssuominen Exp $
+
+  09 May 2009; Samuli Suominen <ssuominen@gentoo.org> moodbar-0.1.2.ebuild,
+  +files/moodbar-0.1.2-gthread_init.patch:
+  Fix compability with new glib wrt #263197, thanks to Wolfgang Draxinger
 
   22 Apr 2008; Raúl Porcel <armin76@gentoo.org> moodbar-0.1.2.ebuild:
   Add ~sparc
