@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9c.ebuild,v 1.9 2008/05/15 22:10:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/wwwoffle-2.9e.ebuild,v 1.1 2009/05/09 12:59:47 mrness Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -8,7 +10,7 @@ DESCRIPTION="Web caching proxy suitable for non-permanent Internet connections"
 SRC_URI="http://www.gedanken.demon.co.uk/download-wwwoffle/${P}.tgz"
 HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
 
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gnutls ipv6 zlib"
@@ -21,18 +23,15 @@ DEPEND="dev-lang/perl
 
 # Unsure whether to depend on >=www-misc/htdig-3.1.6-r4 or not
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	sed -i -e 's#$(TAR) xpf #$(TAR) --no-same-owner -xpf #' \
 		"${S}/cache/Makefile.in"
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_with zlib) \
 		$(use_with gnutls) \
 		$(use_with ipv6) || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
