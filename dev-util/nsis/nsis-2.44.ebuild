@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.4 2009/05/09 11:45:41 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nsis/nsis-2.44.ebuild,v 1.5 2009/05/09 12:36:42 mrness Exp $
 
+EAPI="2"
 mingw32_variants=$(echo {,i{6,5,4,3}86-{,pc-}}mingw32)
 
 DESCRIPTION="Nullsoft Scriptable Install System"
@@ -43,9 +44,7 @@ pkg_setup() {
 	die "mingw32 is needed"
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# a dirty but effective way of killing generated docs
 	use doc || echo > Docs/src/SConscript
 }
