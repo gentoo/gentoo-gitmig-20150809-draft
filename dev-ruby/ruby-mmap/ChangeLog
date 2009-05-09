@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-mmap
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ChangeLog,v 1.13 2008/10/06 10:09:25 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-mmap/ChangeLog,v 1.14 2009/05/09 01:16:14 flameeyes Exp $
+
+  09 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-mmap-0.2.6.ebuild:
+  Avoid building for Ruby 1.9.
 
   06 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-mmap-0.2.6.ebuild:
   Fix building with recent ruby versions (with no cjk USE flag).
