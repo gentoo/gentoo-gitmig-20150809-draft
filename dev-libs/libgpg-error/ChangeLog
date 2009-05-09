@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgpg-error
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.62 2009/04/09 21:24:00 arfrever Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgpg-error/ChangeLog,v 1.63 2009/05/09 16:11:48 klausman Exp $
+
+  09 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  libgpg-error-1.7.ebuild:
+  Stable on alpha, bug #269090
 
 *libgpg-error-1.7 (09 Apr 2009)
 
