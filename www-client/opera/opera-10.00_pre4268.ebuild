@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4268.ebuild,v 1.3 2009/04/10 13:26:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4268.ebuild,v 1.4 2009/05/09 17:04:58 jer Exp $
 
 EAPI="2"
 
@@ -142,9 +142,6 @@ src_install() {
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
-
-	# fix plugin path
-	echo "Plugin Path=/opt/opera/lib/opera/plugins" >> "${D}"/etc/opera6rc
 
 	dodir /etc/revdep-rebuild
 	echo 'SEARCH_DIRS_MASK="/opt/opera/lib/opera/plugins"' > "${D}"/etc/revdep-rebuild/90opera
