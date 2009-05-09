@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4.9999.ebuild,v 1.2 2009/05/05 13:01:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4.9999.ebuild,v 1.3 2009/05/09 00:16:48 loki_val Exp $
 
 EAPI=2
-
-GO_MONO_SUB_BRANCH=-1
 
 inherit linux-info mono eutils flag-o-matic multilib go-mono
 
