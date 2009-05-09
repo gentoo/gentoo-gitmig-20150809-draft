@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.2.3.ebuild,v 1.3 2009/05/08 10:34:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/kde-env-4.2.3.ebuild,v 1.4 2009/05/09 13:41:20 scarabeus Exp $
 
 EAPI="2"
 
@@ -112,5 +112,9 @@ EOF
 }
 
 pkg_preinst() {
+	:
+}
+
+src_test() {
 	:
 }
