@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.79 2009/05/03 00:12:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.80 2009/05/09 20:57:33 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -71,7 +71,7 @@ add_src_uri binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2 ${UCLIBC_PA
 add_src_uri elf2flt-${ELF2FLT_VER}.tar.bz2 ${ELF2FLT_VER}
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-IUSE="nls multitarget multislot test vanilla"
+IUSE="gold nls multitarget multislot test vanilla"
 if use multislot ; then
 	SLOT="${CTARGET}-${BVER}"
 elif is_cross ; then
@@ -80,11 +80,7 @@ else
 	SLOT="0"
 fi
 
-if is_cross ; then
-	RDEPEND=">=sys-devel/binutils-config-1.9"
-else
-	RDEPEND=">=sys-devel/binutils-config-1.8-r6"
-fi
+RDEPEND=">=sys-devel/binutils-config-1.9"
 DEPEND="${RDEPEND}
 	test? ( dev-util/dejagnu )
 	nls? ( sys-devel/gettext )
@@ -229,6 +225,7 @@ toolchain-binutils_src_compile() {
 		--enable-64-bit-bfd \
 		--enable-shared \
 		--disable-werror \
+		$(use_enable gold) \
 		${myconf} ${EXTRA_ECONF}"
 	echo ./configure ${myconf}
 	"${S}"/configure ${myconf} || die "configure failed"
