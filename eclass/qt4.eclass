@@ -1,6 +1,6 @@
--e	# Copyright 2005-2009 Gentoo Foundation
+# Copyright 2005-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.53 2009/05/09 12:45:40 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.54 2009/05/09 14:59:03 hwoarang Exp $
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
