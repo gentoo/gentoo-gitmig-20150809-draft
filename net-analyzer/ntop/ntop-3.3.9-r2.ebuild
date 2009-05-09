@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.9-r2.ebuild,v 1.4 2009/05/02 08:32:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.9-r2.ebuild,v 1.5 2009/05/09 09:31:02 mrness Exp $
 
 EAPI="2"
 
 inherit eutils autotools
 
-DESCRIPTION="tool that shows network usage like top"
+DESCRIPTION="Network traffic analyzer with web interface"
 HOMEPAGE="http://www.ntop.org/ntop.html"
 SRC_URI="mirror://sourceforge/ntop/${P}.tar.gz"
 

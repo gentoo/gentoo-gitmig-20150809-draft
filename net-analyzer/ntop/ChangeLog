@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.78 2009/05/02 08:32:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.79 2009/05/09 09:31:02 mrness Exp $
+
+  09 May 2009; Alin Năstac <mrness@gentoo.org> metadata.xml,
+  ntop-3.3.9-r2.ebuild:
+  Change package description (#268400).
 
   02 May 2009; Alin Năstac <mrness@gentoo.org> -files/ntop-3.2-build.patch,
   -files/ntop-3.2-snmp.patch, -files/ntop-3.3.6-gentoo.patch,
