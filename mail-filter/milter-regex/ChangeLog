@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/milter-regex
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.3 2008/12/11 20:59:13 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.4 2009/05/09 12:32:01 mrness Exp $
+
+  09 May 2009; Alin Năstac <mrness@gentoo.org> milter-regex-1.7.ebuild:
+  Migrate to EAPI 2.
 
   11 Dec 2008; Alin Năstac <mrness@gentoo.org>
   +files/milter-regex-1.7-yacc.patch, milter-regex-1.7.ebuild:

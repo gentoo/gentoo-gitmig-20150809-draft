@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7.ebuild,v 1.3 2008/12/11 20:59:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7.ebuild,v 1.4 2009/05/09 12:32:01 mrness Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -17,10 +19,7 @@ DEPEND="|| ( sys-devel/bison dev-util/yacc )
 	|| ( mail-filter/libmilter mail-mta/sendmail )"
 RDEPEND="" # libmilter is a static library
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-rules.patch # fix a typo in upstream sample rules
 	epatch "${FILESDIR}"/${P}-yacc.patch
