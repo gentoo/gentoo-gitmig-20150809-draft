@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.154 2009/04/12 20:34:30 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.155 2009/05/09 23:11:38 robbat2 Exp $
+
+  09 May 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.45.ebuild:
+  Bug 268662: Fix more parallel build fun.
 
   12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org> lvm2-2.02.45.ebuild:
   Bug #265593: Provide better workaround for the symlink parallel make bug.
