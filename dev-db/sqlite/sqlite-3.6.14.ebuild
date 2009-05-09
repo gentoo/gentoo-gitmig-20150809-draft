@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.14.ebuild,v 1.1 2009/05/08 23:02:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.14.ebuild,v 1.2 2009/05/09 06:17:33 arfrever Exp $
 
 EAPI="1"
 
-inherit eutils flag-o-matic multilib versionator
+inherit autotools eutils flag-o-matic multilib versionator
 
 DESCRIPTION="an SQL Database Engine in a C Library"
 HOMEPAGE="http://www.sqlite.org/"
@@ -44,6 +44,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/sandbox-fix2.patch
 
 	epunt_cxx
+	eautoreconf
 }
 
 src_compile() {
