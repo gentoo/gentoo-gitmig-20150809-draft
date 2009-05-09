@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r2.ebuild,v 1.1 2009/03/08 18:31:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r2.ebuild,v 1.2 2009/05/09 12:29:01 mrness Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +12,7 @@ SRC_URI="mirror://sourceforge/sid-milter/${P}.tar.gz"
 
 LICENSE="Sendmail-Open-Source"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="ipv6"
 
 RDEPEND="dev-libs/openssl
@@ -23,10 +25,7 @@ pkg_setup() {
 	enewuser milter -1 -1 -1 milter
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}" || die "source dir not found"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-nopra_on_spf1.patch
 
 	local ENVDEF=""

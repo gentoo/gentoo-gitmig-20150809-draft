@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/sid-milter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.10 2009/03/08 18:31:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/ChangeLog,v 1.11 2009/05/09 12:29:01 mrness Exp $
+
+  09 May 2009; Alin Năstac <mrness@gentoo.org>
+  -files/sid-milter-0.2.14-auth.patch,
+  -files/sid-milter-0.2.14-postfix-queueID.patch, -files/gentoo.config.m4,
+  -sid-milter-0.2.14.ebuild, -sid-milter-1.0.0-r1.ebuild,
+  sid-milter-1.0.0-r2.ebuild:
+  Migrate to EAPI 2. Stable on x86.
 
 *sid-milter-1.0.0-r2 (08 Mar 2009)
 
