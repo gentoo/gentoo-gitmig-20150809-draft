@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/Convert-BinHex-1.119.ebuild,v 1.9 2007/01/15 15:16:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-BinHex/Convert-BinHex-1.119.ebuild,v 1.10 2009/05/09 16:35:26 klausman Exp $
 
 inherit perl-module
 
@@ -10,6 +10,6 @@ HOMEPAGE="http://search.cpan.org/~eryq/"
 
 SLOT="0"
 LICENSE="GPL-1"
-KEYWORDS="amd64 ia64 ~ppc sparc x86"
+KEYWORDS="~alpha amd64 ia64 ~ppc sparc x86"
 IUSE=""
 DEPEND="dev-lang/perl"
