@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-8.14.3.ebuild,v 1.7 2009/02/24 06:29:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-8.14.3.ebuild,v 1.8 2009/05/09 12:23:46 mrness Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -18,9 +20,7 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/sendmail-${PV}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	local ENVDEF="-DNETUNIX -DNETINET"
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
 	use poll && ENVDEF="${ENVDEF} -DSM_CONF_POLL=1"
