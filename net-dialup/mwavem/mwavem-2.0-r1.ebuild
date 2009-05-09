@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.2 2009/03/13 20:26:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mwavem/mwavem-2.0-r1.ebuild,v 1.3 2009/05/09 13:23:56 mrness Exp $
+
+EAPI="2"
 
 inherit autotools
 
@@ -13,10 +15,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	eautoreconf
 }
