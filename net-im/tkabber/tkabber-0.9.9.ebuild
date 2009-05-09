@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.7 2008/08/31 02:19:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.9.ebuild,v 1.8 2009/05/09 19:56:52 gentoofan23 Exp $
 
 inherit eutils
 
@@ -18,6 +18,8 @@ DEPEND=">=dev-lang/tcl-8.3.3
 	ssl? ( >=dev-tcltk/tls-1.4.1 )
 	>=dev-tcltk/tkXwin-1.0
 	>=dev-tcltk/tkTheme-1.0"
+RDEPEND="${DEPEND}"
+
 # Disabled because it depends on gpgme 0.3.x
 #	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 
@@ -42,7 +44,7 @@ src_compile() {
 	# dont run make, because the Makefile is broken with all=install
 	echo -n
 	if use extras; then
-		epatch ${FILESDIR}/NAT_HTTP_filetransfer.diff
+		epatch "${FILESDIR}"/NAT_HTTP_filetransfer.diff
 	fi
 }
 
@@ -50,13 +52,13 @@ src_install() {
 	dodir /usr/share/tkabber
 	cp -R *.tcl plugins pixmaps textundo aniemoteicons ifacetk \
 	emoticons-tkabber msgs mclistbox-1.02 \
-	jabberlib-tclxml sounds ${D}/usr/share/tkabber
+	jabberlib-tclxml sounds "${D}"/usr/share/tkabber
 
 	if use plugins; then
-		mkdir ${D}/usr/share/tkabber/site-plugins
-		cp -R ${WORKDIR}/tkabber-plugins-${PV}/* \
-		${D}/usr/share/tkabber/site-plugins
-		newdoc ${WORKDIR}/tkabber-plugins-${PV}/README README.plugins
+		mkdir "${D}"/usr/share/tkabber/site-plugins
+		cp -R "${WORKDIR}"/tkabber-plugins-${PV}/* \
+		"${D}"/usr/share/tkabber/site-plugins
+		newdoc "${WORKDIR}"/tkabber-plugins-${PV}/README README.plugins
 	fi
 
 	cat <<-EOF > tkabber
@@ -67,9 +69,9 @@ src_install() {
 
 	chmod +x tkabber
 	dobin tkabber
-	dodoc AUTHORS COPYING ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog INSTALL README
 	dohtml README.html
-	cp -R doc examples contrib ${D}/usr/share/doc/${PF}
+	cp -R doc examples contrib "${D}"/usr/share/doc/${PF}
 }
 
 pkg_postinst() {
