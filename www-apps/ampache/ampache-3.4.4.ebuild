@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.4.4.ebuild,v 1.1 2008/12/26 21:42:22 marineam Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ampache/ampache-3.4.4.ebuild,v 1.2 2009/05/09 16:12:55 armin76 Exp $
 
 inherit webapp depend.php
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.ampache.org/"
 SRC_URI="http://www.ampache.org/downloads/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=""
