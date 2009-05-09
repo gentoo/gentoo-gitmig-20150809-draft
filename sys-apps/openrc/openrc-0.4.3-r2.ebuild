@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r2.ebuild,v 1.1 2009/04/18 10:40:17 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r2.ebuild,v 1.2 2009/05/09 20:27:37 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -35,10 +35,9 @@ DEPEND="${RDEPEND}
 	virtual/os-headers"
 
 pkg_setup() {
-	LIBDIR="lib"
-	[ "${SYMLINK_LIB}" = "yes" ] && LIBDIR=$(get_abi_LIBDIR "${DEFAULT_ABI}")
+	unset LIBDIR #266688
 
-	MAKE_ARGS="${MAKE_ARGS} LIBNAME=${LIBDIR}"
+	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir)"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
@@ -62,6 +61,7 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd "${S}"
+	sed -i 's:0444:0644:' mk/sys.mk
 	epatch "${FILESDIR}"/0.4.2/0001-msg-style.patch
 	epatch "${FILESDIR}"/0.4.2/0002-useful-functions.patch
 	epatch "${FILESDIR}"/0.4.2/0003-KV.patch
@@ -81,17 +81,18 @@ src_compile() {
 	fi
 
 	tc-export CC AR RANLIB
-	echo emake ${MAKE_ARGS}
 	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
 }
 
 src_install() {
-	emake ${MAKE_ARGS} DESTDIR="${D}" install || die "make install failed"
-	gen_usr_ldscript libeinfo.so
-	gen_usr_ldscript librc.so
+	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
 
-	keepdir /"${LIBDIR}"/rc/init.d
-	keepdir /"${LIBDIR}"/rc/tmp
+	# move the shared libs back to /usr so ldscript can install
+	# more of a minimal set of files
+	mv "${D}"/$(get_libdir)/lib{einfo,rc}* "${D}"/usr/$(get_libdir)/ || die
+	gen_usr_ldscript -a einfo rc
+
+	keepdir /$(get_libdir)/rc/{init.d,tmp}
 
 	# Backup our default runlevels
 	dodir /usr/share/"${PN}"

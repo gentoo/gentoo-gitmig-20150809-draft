@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.68 2009/04/27 04:55:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.69 2009/05/09 20:27:37 vapier Exp $
+
+  09 May 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.4.3-r2.ebuild:
+  Remove LIBDIR from env #266688, switch to get_libdir, and install shared
+  libs better with gen_usr_ldscript. Also install files with 644 rather than
+  444.
 
   27 Apr 2009; Mike Frysinger <vapier@gentoo.org>
   files/9999/0001-msg-style.patch, files/9999/0002-useful-functions.patch,
