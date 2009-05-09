@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9770 2009/05/08 23:35:15 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9771 2009/05/09 00:29:52 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (09 May 2009)
+# Low-Bandwidth X and the X Proxy Management stuff has been declared
+# dead since last century. All of those will be gone in 30 days
+x11-apps/lbxproxy
+x11-apps/proxymngr
+x11-apps/xfindproxy
+x11-apps/xfwp
+x11-apps/xrx
+x11-proto/xproxymanagementprotocol
 
 # Rémi Cardona <remi@gentoo.org> (09 May 2009)
 # XPrint is dead, long live XPrint
