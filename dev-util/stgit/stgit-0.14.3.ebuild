@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.14.3.ebuild,v 1.2 2008/10/06 13:05:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.14.3.ebuild,v 1.3 2009/05/09 22:11:50 robbat2 Exp $
 
 inherit distutils bash-completion
 
@@ -23,4 +23,9 @@ src_install() {
 	mv "${D}/usr/share/${PN}/examples" "${D}/usr/share/doc/${PF}"
 	rmdir "${D}/usr/share/doc/${PN}"
 	dobashcompletion contrib/stgit-completion.bash ${PN}
+}
+
+src_test() {
+	export PATH=/usr/libexec/git-core/:$PATH 
+	emake -j1 test
 }

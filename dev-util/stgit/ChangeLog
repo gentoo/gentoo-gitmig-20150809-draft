@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.29 2009/03/21 16:53:14 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.30 2009/05/09 22:11:50 robbat2 Exp $
+
+  09 May 2009; Robin H. Johnson <robbat2@gentoo.org> stgit-0.14.3.ebuild:
+  The testsuite was not fully updated to the new Git libexec dir setup. Just
+  help it a bit. The app itself is fully converted.
 
   21 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
