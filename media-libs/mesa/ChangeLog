@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.210 2009/05/07 16:30:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.211 2009/05/09 00:04:10 remi Exp $
+
+  09 May 2009; Rémi Cardona <remi@gentoo.org> mesa-7.4.ebuild,
+  mesa-7.4.1-r1.ebuild, mesa-7.4.1-r2.ebuild:
+  drop printproto from DEPEND (I could not find a single reference to it
+  within the code), HPPA now has xf86driproto
 
 *mesa-7.4.1-r2 (07 May 2009)
 
