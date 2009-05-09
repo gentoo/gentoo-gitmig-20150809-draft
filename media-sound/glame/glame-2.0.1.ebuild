@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.11 2007/07/15 19:23:13 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.12 2009/05/09 15:02:55 gentoofan23 Exp $
 
 WANT_AUTOCONF=2.5
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-scheme/guile-1.4-r3
 	vorbis? ( >=media-libs/libvorbis-1 )
 	gnome? ( >=gnome-base/libglade-2 >=gnome-base/libgnome-2.6
 		>=gnome-base/libgnome-2.6 >=gnome-base/libgnomecanvas-2.6
-		>=dev-libs/glib-2.6 >=x11-libs/gtk+-2.6 )
+		>=dev-libs/glib-2.6 >=x11-libs/gtk+-2.6 >=gnome-base/libgnomeui-2.6 )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
 	nls? ( >=sys-devel/gettext-0.11.3 )"
@@ -52,7 +52,7 @@ src_compile() {
 		$(use_enable gnome gui) \
 		$(use_enable nls) \
 		--enable-ladspa \
-		${myconf} || die "econf failed."
+		${myconf}
 
 	emake || die "emake failed."
 }
