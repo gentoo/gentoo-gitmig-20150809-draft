@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/libkworkspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.29 2009/05/07 00:12:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkworkspace/ChangeLog,v 1.30 2009/05/09 15:26:00 scarabeus Exp $
+
+  09 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  libkworkspace-4.2.3.ebuild:
+  Remove unnecessary blocker. Thanks pepper for hint. Is not in 4.2.9999 so
+  it is not needed really.
 
 *libkworkspace-4.2.3 (07 May 2009)
 
