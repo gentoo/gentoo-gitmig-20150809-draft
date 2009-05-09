@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.2.ebuild,v 1.2 2009/05/09 12:04:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.2.ebuild,v 1.3 2009/05/09 12:16:28 mrness Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -24,11 +26,7 @@ pkg_setup() {
 	enewuser milter -1 -1 -1 milter
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}" || die "source dir not found"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-exit-on-error.patch
 	epatch "${FILESDIR}"/${P}-test115.patch
 	epatch "${FILESDIR}"/${P}-mkdir.patch
