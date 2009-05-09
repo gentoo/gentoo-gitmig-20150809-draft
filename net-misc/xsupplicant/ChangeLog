@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/xsupplicant
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.13 2008/03/12 14:17:26 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.14 2009/05/09 16:48:55 volkmar Exp $
+
+  09 May 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml,
+  xsupplicant-0.8b.ebuild, xsupplicant-1.0.ebuild, xsupplicant-1.0.1.ebuild,
+  xsupplicant-1.2.2.ebuild:
+  Changing use flag gsm to eap-sim, fixing bug 254677. Making repoman happy.
 
   12 Mar 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Peter Johanson (latexer, #206688) from metadata.xml.

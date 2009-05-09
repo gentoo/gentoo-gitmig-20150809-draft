@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.2.2.ebuild,v 1.3 2006/03/27 10:34:56 metalgod Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/xsupplicant-1.2.2.ebuild,v 1.4 2009/05/09 16:48:55 volkmar Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="|| ( GPL-2 BSD )"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-IUSE="gsm"
+IUSE="eap-sim"
 
 RDEPEND=">=dev-libs/openssl-0.9.7
 		net-wireless/wireless-tools
@@ -55,8 +55,8 @@ src_install() {
 	insinto /etc
 	newins etc/xsupplicant.conf xsupplicant.conf.example
 
-	newconfd ${FILESDIR}/${P}-conf.d ${PN}
-	newinitd ${FILESDIR}/${P}-init.d ${PN}
+	newconfd "${FILESDIR}"/${P}-conf.d ${PN}
+	newinitd "${FILESDIR}"/${P}-init.d ${PN}
 }
 
 pkg_postinst() {

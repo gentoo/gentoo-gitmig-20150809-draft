@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>mobile</herd>
   <use>
-    <flag name="gsm">Add support for EAP-SIM authentication algorithm</flag>
+    <flag name="eap-sim">Add support for EAP-SIM authentication algorithm</flag>
   </use>
 </pkgmetadata>
