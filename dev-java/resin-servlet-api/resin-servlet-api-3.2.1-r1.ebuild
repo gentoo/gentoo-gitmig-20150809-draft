@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/resin-servlet-api-3.2.1-r1.ebuild,v 1.1 2009/05/03 14:14:21 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/resin-servlet-api/resin-servlet-api-3.2.1-r1.ebuild,v 1.2 2009/05/09 15:25:16 nelchael Exp $
 
 JAVA_PKG_IUSE="source"
 
@@ -9,7 +9,7 @@ inherit eutils java-pkg-2 java-ant-2
 DESCRIPTION="Resin Servlet API 2.5/JSP API 2.1 implementation"
 HOMEPAGE="http://www.caucho.com/"
 SRC_URI="http://www.caucho.com/download/resin-${PV}-src.zip
-	mirror://gentoo/resin-gentoo-patches-${PV}.tar.bz2"
+	mirror://gentoo/resin-gentoo-patches-${PV}-r1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2.5"
