@@ -1,24 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1.ebuild,v 1.2 2009/04/29 22:33:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r3.ebuild,v 1.1 2009/05/09 22:11:15 dang Exp $
+
+EAPI="2"
 
 inherit eutils linux-info autotools flag-o-matic
 
-PATCH_VERSION="1"
+PATCH_VERSION="4"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
+PATCHNAME="${MY_P}-gentoo-patches-${PATCH_VERSION}"
 DESCRIPTION="Hardware Abstraction Layer"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/hal"
 SRC_URI="http://hal.freedesktop.org/releases/${MY_P}.tar.bz2
-	 http://dev.gentoo.org/~chainsaw/files/${MY_P}-gentoo-patches-${PATCH_VERSION}.tar.bz2"
+	 http://dev.gentoo.org/~dang/files/${PATCHNAME}.tar.bz2"
 
 LICENSE="|| ( GPL-2 AFL-2.0 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 
 KERNEL_IUSE="kernel_linux kernel_FreeBSD"
-IUSE="X acpi apm crypt debug dell disk-partition doc laptop selinux ${KERNEL_IUSE}"
+IUSE="X acpi apm crypt consolekit debug dell disk-partition doc laptop policykit selinux ${KERNEL_IUSE}"
 
 RDEPEND=">=dev-libs/dbus-glib-0.61
 		 >=dev-libs/glib-2.14
@@ -40,7 +43,14 @@ RDEPEND=">=dev-libs/dbus-glib-0.61
 						)
 		 kernel_FreeBSD? ( >=dev-libs/libvolume_id-0.77 )
 		 x86? ( >=sys-apps/dmidecode-2.7 )
-		 selinux? ( sys-libs/libselinux sec-policy/selinux-hal )"
+		 selinux? ( sys-libs/libselinux sec-policy/selinux-hal )
+		 consolekit?	(
+		 					sys-auth/consolekit[policykit=]
+					)
+		 policykit?	(
+		 					sys-auth/consolekit[policykit]
+							sys-auth/policykit[pam]
+		 			)"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		>=dev-util/intltool-0.35
@@ -49,7 +59,8 @@ DEPEND="${RDEPEND}
 					dev-libs/libxml2
 					dev-util/gtk-doc
 					app-text/docbook-sgml-utils
-				)"
+				)
+		!<gnome-extra/gnome-power-manager-2.24.4-r2"
 PDEPEND=">=app-misc/hal-info-20081219
 	!gnome-extra/hal-device-manager
 	laptop? ( >=sys-power/pm-utils-0.99.3 )"
@@ -118,23 +129,21 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	EPATCH_MULTI_MSG="Applying Gentoo Patchset ..." \
 	EPATCH_SUFFIX="patch" \
-	EPATCH_SOURCE="${WORKDIR}/${P}-patches/" \
+	EPATCH_SOURCE="${WORKDIR}/${PATCHNAME}/${P}-patches/" \
 	EPATCH_FORCE="yes" \
 	epatch
 
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local acpi="$(use_enable acpi)"
 	local backend=
 	local hardware=
+	local consolekit="$(use_enable consolekit console-kit)"
 
 	append-flags -rdynamic
 
@@ -184,6 +193,13 @@ src_compile() {
 		hardware="$hardware --disable-sonypic"
 	fi
 
+	# Policykit support depends on consolekit support.  Therefore, force on
+	# consolekit, even if it's USE flag is off, if policykit support is on.
+	# This enables packages to USE-depend on hal[policykit?]
+	if use policykit ; then 
+		consolekit="--enable-console-kit"
+	fi
+
 	econf --with-backend=${backend} \
 		  --with-os-type=gentoo \
 		  --with-pid-file=/var/run/hald.pid \
@@ -191,8 +207,6 @@ src_compile() {
 		  --with-socket-dir=/var/run/hald \
 		  --enable-umount-helper \
 		  --enable-man-pages \
-		  --disable-policy-kit \
-		  --disable-console-kit \
 		  --disable-acl-management \
 		  --enable-pci \
 		  $(use_enable apm) \
@@ -200,12 +214,12 @@ src_compile() {
 		  $(use_enable disk-partition parted) \
 		  $(use_enable doc docbook-docs) \
 		  $(use_enable doc gtk-doc) \
+		  $(use_enable policykit policy-kit) \
+		  ${consolekit} \
 		  --docdir=/usr/share/doc/${PF} \
 		  --localstatedir=/var \
 		  ${acpi} ${hardware} \
 	|| die "configure failed"
-
-	emake || die "make failed"
 }
 
 src_install() {
@@ -232,7 +246,7 @@ src_install() {
 
 	if use X ; then
 		# New Configuration Snippets
-		dodoc "${WORKDIR}/${PN}-config-examples/"*.fdi || \
+		dodoc "${WORKDIR}/${PATCHNAME}/${PN}-config-examples/"*.fdi || \
 			die "dodoc X examples failed"
 	fi
 
@@ -244,8 +258,8 @@ src_install() {
 	# or else hal bombs.
 	keepdir /etc/hal/fdi/{information,policy,preprobe}
 
-	# HAL stores it's fdi cache in /var/lib/cache/hald
-	keepdir /var/lib/cache/hald
+	# HAL stores it's fdi cache in /var/cache/hald
+	keepdir /var/cache/hald
 
 	# HAL keeps its unix socket here
 	keepdir /var/run/hald
