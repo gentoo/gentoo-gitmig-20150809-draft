@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/museseq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.55 2009/03/15 17:39:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/ChangeLog,v 1.56 2009/05/09 11:01:51 ssuominen Exp $
 
   15 Mar 2009; Markus Meier <maekke@gentoo.org> museseq-0.9.ebuild:
   amd64/x86 stable, bug #259383
@@ -9,14 +9,14 @@
   museseq-0.9.ebuild:
   QA: Get rid of deprecated qt_min_version().
 
-  16 Jun 2008; Samuli Suominen <drac@gentoo.org> museseq-0.9.ebuild:
+  16 Jun 2008; Samuli Suominen <ssuominen@gentoo.org> museseq-0.9.ebuild:
   Stop using Xeconf since it's causing sandbox violations wrt #222941 by
   Juergen Rose. Works here with and without DISPLAY set when X is not
   running.
 
 *museseq-0.9 (16 May 2008)
 
-  16 May 2008; Samuli Suominen <drac@gentoo.org>
+  16 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/0.9/02_all_log2f_aliasing.patch,
   +files/0.9/03_all_lash_private_api.patch,
   -files/museseq-0.9_pre2-asneeded.patch, +files/0.9/01_all_gcc43.patch,
@@ -25,7 +25,7 @@
   Version bump. Patch to stop using lash private api. Patch to build with
   GCC 4.3. Patch to fix some of the strict-aliasing rules.
 
-  13 May 2008; Samuli Suominen <drac@gentoo.org> museseq-0.8.1-r1.ebuild:
+  13 May 2008; Samuli Suominen <ssuominen@gentoo.org> museseq-0.8.1-r1.ebuild:
   Move documentation generation tools into DEPEND wrt #221679.
 
   14 Jan 2008; Tony Vroon <chainsaw@gentoo.org> museseq-0.6.2-r1.ebuild,

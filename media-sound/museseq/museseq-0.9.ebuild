@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.5 2009/03/15 17:39:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/museseq/museseq-0.9.ebuild,v 1.6 2009/05/09 11:01:51 ssuominen Exp $
 
-EAPI=1
-
+EAPI=2
 inherit kde-functions eutils
 
 MY_P=${P/museseq/muse}
@@ -33,22 +32,20 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${FILESDIR}"/${PV}
 }
 
-src_compile() {
-	econf --disable-suid-build --disable-optimize \
-		$(use_enable lash) $(use_enable debug) \
-		|| die "econf failed."
-
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		--disable-suid-build \
+		--disable-optimize \
+		$(use_enable lash) \
+		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README* SECURITY
 	mv "${D}"/usr/bin/muse "${D}"/usr/bin/museseq
 }
