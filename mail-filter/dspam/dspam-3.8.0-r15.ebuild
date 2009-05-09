@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r15.ebuild,v 1.3 2008/11/07 10:25:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.8.0-r15.ebuild,v 1.4 2009/05/09 12:45:50 mrness Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+EAPI="2"
 
 inherit eutils autotools multilib
 
@@ -60,10 +59,7 @@ pkg_setup() {
 	enewuser dspam ${euid} -1 "${DSPAM_HOMEDIR}" dspam,mail
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	EPATCH_SUFFIX="patch"
 	epatch "${WORKDIR}"/patches
 
@@ -71,7 +67,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
 
 	if use mysql || use postgres; then
@@ -126,7 +122,6 @@ src_compile() {
 			--with-dspam-mode=${DSPAM_MODE} \
 			--with-logdir="${DSPAM_LOGDIR}" \
 			${myconf} || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install () {
