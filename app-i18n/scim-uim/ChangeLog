@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-uim
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.29 2008/11/16 17:26:20 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.30 2009/05/09 16:09:19 klausman Exp $
+
+  09 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  scim-uim-0.2.0-r1.ebuild:
+  Stable on alpha, bug #268943
 
 *scim-uim-0.2.0-r1 (16 Nov 2008)
 
