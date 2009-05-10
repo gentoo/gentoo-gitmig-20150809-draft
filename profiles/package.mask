@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9777 2009/05/10 19:56:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9778 2009/05/10 20:38:57 kolmodin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
+# Mark ghc-6.10.3 for testing.
+~dev-lang/ghc-6.10.3
 
 # Gilles Dartiguelongue <eva@gentoo.org> (10 May 2009)
 # Those packages depend on gnome-desktop which breaks API again.
