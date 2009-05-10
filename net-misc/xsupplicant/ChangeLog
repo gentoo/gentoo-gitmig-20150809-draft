@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/xsupplicant
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.14 2009/05/09 16:48:55 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsupplicant/ChangeLog,v 1.15 2009/05/10 08:35:42 volkmar Exp $
+
+  10 May 2009; Mounir Lamouri <volkmar@gentoo.org> xsupplicant-1.2.2.ebuild:
+  Forgot to change gsm->eap-sim into the ebuild. Thank Mr_Bones.
 
   09 May 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml,
   xsupplicant-0.8b.ebuild, xsupplicant-1.0.ebuild, xsupplicant-1.0.1.ebuild,
