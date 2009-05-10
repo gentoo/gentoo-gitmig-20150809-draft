@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/tix
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.24 2009/04/17 20:22:49 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/ChangeLog,v 1.25 2009/05/10 15:16:37 mescalinum Exp $
+
+*tix-8.4.3 (10 May 2009)
+
+  10 May 2009; Federico Ferri <mescalinum@gentoo.org> +tix-8.4.3.ebuild:
+  bump to 8.4.3. fix #259692
 
 *tix-8.4.2-r2 (17 Apr 2009)
 
