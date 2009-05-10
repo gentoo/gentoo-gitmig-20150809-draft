@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.2.ebuild,v 1.3 2009/05/10 08:03:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.4.ebuild,v 1.1 2009/05/10 14:10:48 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils eutils font
@@ -21,21 +21,29 @@ RDEPEND="sys-libs/zlib
 	media-sound/fluidsynth
 	media-sound/jack-audio-connection-kit
 	media-libs/portaudio
+	x11-libs/qt-core:4
+	x11-libs/qt-script:4
 	x11-libs/qt-gui:4
-	x11-libs/qt-svg:4
-	x11-libs/qt-qt3support:4"
+	x11-libs/qt-svg:4"
 DEPEND="${RDEPEND}
 	|| ( dev-texlive/texlive-context app-text/tetex )
+	app-doc/doxygen
 	dev-util/pkgconfig"
 
 S=${WORKDIR}/${MY_P}/mscore
 VARTEXFONTS=${T}/fonts
-FONT_SUFFIX=otf
+FONT_SUFFIX=ttf
 FONT_S=${S}/mscore/fonts
 MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-install.patch
+	epatch "${FILESDIR}"/${P}-build.patch
+}
+
+src_compile() {
+	cmake-utils_src_make lupdate
+	cmake-utils_src_make lrelease
+	cmake-utils_src_make
 }
 
 src_install() {
