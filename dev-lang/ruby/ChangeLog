@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.399 2009/05/09 17:16:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.400 2009/05/10 18:52:51 a3li Exp $
+
+  10 May 2009; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p114.ebuild,
+  -ruby-1.8.6_p287-r5.ebuild, -ruby-1.8.6_p287-r13.ebuild,
+  ruby-1.8.6_p368.ebuild, -ruby-1.8.7_p72-r11.ebuild,
+  ruby-1.8.7_p160.ebuild:
+  Removing vulnerable versions (#268515), fixing license (#233747).
 
   09 May 2009; Jeroen Roovers <jer@gentoo.org> ruby-1.8.6_p368.ebuild:
   Stable for HPPA (bug #268515).

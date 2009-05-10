@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p368.ebuild,v 1.7 2009/05/09 17:16:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p368.ebuild,v 1.8 2009/05/10 18:52:51 a3li Exp $
 
 ONIGURUMA="onigd2_5_9"
 
@@ -16,7 +16,7 @@ DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${SLOT}/${MY_P}.tar.bz2"
 
-LICENSE="Ruby"
+LICENSE="|| ( Ruby GPL-2 )"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="berkdb debug doc emacs examples gdbm ipv6 rubytests socks5 ssl threads tk xemacs"
 

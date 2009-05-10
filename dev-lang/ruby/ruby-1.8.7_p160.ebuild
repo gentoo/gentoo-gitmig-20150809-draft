@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p160.ebuild,v 1.1 2009/05/07 17:01:59 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.7_p160.ebuild,v 1.2 2009/05/10 18:52:51 a3li Exp $
 
 #PATCHES APPLY, DOESN'T COMPILE THOUGH
 #ONIGURUMA="onigd2_5_9"
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${SLOT}/${MY_P}.tar.bz2"
 #	cjk? ( http://www.geocities.jp/kosako3/oniguruma/archive/${ONIGURUMA}.tar.gz )"
 
-LICENSE="Ruby"
+LICENSE="|| ( Ruby GPL-2 )"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="berkdb debug doc emacs examples gdbm ipv6 rubytests socks5 ssl threads tk xemacs" #cjk
 
