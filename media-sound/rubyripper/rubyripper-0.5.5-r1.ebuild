@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.1 2009/03/10 21:24:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.2 2009/05/10 18:22:10 ssuominen Exp $
 
-EAPI="1"
-
+EAPI=2
 inherit ruby virtualx
 
 DESCRIPTION="A secure audio ripper for Linux"
@@ -19,9 +18,8 @@ for lingua in $ILINGUAS; do
 	IUSE="${IUSE} linguas_${lingua}"
 done
 
-DEPEND="dev-ruby/ruby-gettext"
-RDEPEND="gtk? ( dev-ruby/ruby-gtk2 )
-	dev-ruby/ruby-gettext
+RDEPEND="gtk? ( dev-ruby/ruby-gtk2
+	>=dev-ruby/rcairo-1.8.0-r1[svg] )
 	virtual/eject
 	media-sound/cd-discid
 	media-sound/cdparanoia
@@ -32,13 +30,12 @@ RDEPEND="gtk? ( dev-ruby/ruby-gtk2 )
 		mp3? ( media-sound/mp3gain )
 		vorbis? ( media-sound/vorbisgain )
 		wav? ( media-sound/wavegain ) )"
+DEPEND="${RDEPEND}
+	dev-ruby/ruby-gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# fix for bug 203737
-	epatch "${FILESDIR}/${PN}-0.5.2-require-rubygems.patch"
+	epatch "${FILESDIR}"/${PN}-0.5.2-require-rubygems.patch
 }
 
 src_compile() {

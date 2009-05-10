@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.23 2009/03/10 21:24:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.24 2009/05/10 18:22:10 ssuominen Exp $
+
+  10 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  rubyripper-0.5.5-r1.ebuild:
+  Require rcairo with USE flag svg wrt #250226, thanks to Diego E. Pettenò
+  for reporting.
 
 *rubyripper-0.5.5-r1 (10 Mar 2009)
 
