@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.5 2009/05/07 17:34:12 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.6 2009/05/10 13:09:47 nirbheek Exp $
+
+  10 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  files/libunique-1.0.8-automagic-dbus.patch:
+  Fix POSIX issue with test in configure.ac patch
 
   07 May 2009; Ferris McCormick <fmccor@gentoo.org> libunique-1.0.8.ebuild:
   Add ~sparc for testing, bug #268487.

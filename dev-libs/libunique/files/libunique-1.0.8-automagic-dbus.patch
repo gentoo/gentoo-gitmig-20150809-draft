@@ -24,7 +24,7 @@ diff -Naur a/configure.ac b/configure.ac
 +	[have_dbus=$enableval],
 +	[have_dbus=yes])
 +
-+if test x$have_dbus == xyes; then
++if test x$have_dbus = xyes; then
 +  dnl D-Bus backend dependencies
 +  if $PKG_CONFIG --atleast-version $DBUS_GLIB_REQUIRED dbus-glib-1; then
 +    have_dbus=yes
