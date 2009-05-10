@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9772 2009/05/10 10:25:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9773 2009/05/10 10:29:35 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,7 +35,7 @@
 # Those packages depend on gnome-desktop which breaks API again.
 # They should be hold off until they are all moved to the tree.
 >=gnome-desktop/gnome-desktop-2.26
->=media/gfx/eog-2.26
+>=media-gfx/eog-2.26
 >=media-video/cheese-2.26
 >=gnome-base/nautilus-2.26
 >=gnome-base/gnome-control-center-2.26
