@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/bss
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bss/ChangeLog,v 1.1 2006/06/07 04:28:21 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bss/ChangeLog,v 1.2 2009/05/10 10:45:53 nirbheek Exp $
+
+*bss-0.8 (10 May 2009)
+
+  10 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> +bss-0.8.ebuild:
+  Bump to 0.8, add bluez-4 dep. Fixes bug 264523
 
 *bss-0.6 (07 Jun 2006)
 
