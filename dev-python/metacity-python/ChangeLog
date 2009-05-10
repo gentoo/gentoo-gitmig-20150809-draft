@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/metacity-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.20 2009/04/28 11:39:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/metacity-python/ChangeLog,v 1.21 2009/05/10 21:45:21 eva Exp $
+
+*metacity-python-2.26.0 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -metacity-python-2.22.0.ebuild, -metacity-python-2.24.0.ebuild,
+  +metacity-python-2.26.0.ebuild:
+  New version for GNOME 2.26. Clean up old revisions.
 
   28 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   metacity-python-2.24.1.ebuild:
