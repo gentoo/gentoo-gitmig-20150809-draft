@@ -1,0 +1,11 @@
+# ChangeLog for app-misc/rednotebook
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rednotebook/ChangeLog,v 1.1 2009/05/10 12:12:59 hwoarang Exp $
+
+*rednotebook-0.6.9 (10 May 2009)
+
+  10 May 2009; Markos Chandras <hwoarang@gentoo.org>
+  +rednotebook-0.6.9.ebuild, +metadata.xml:
+  Moved from sunrise. Fixes bug 253399 . Thanks to Adam Zajac
+  <strider1551@gmail.com> for the initial ebuild.
+
