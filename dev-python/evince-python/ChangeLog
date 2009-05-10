@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/evince-python
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/evince-python/ChangeLog,v 1.1 2009/05/10 21:30:00 eva Exp $
+
+*evince-python-2.26.0 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +evince-python-2.26.0.ebuild, +metadata.xml:
+  New gnome python binding.
+
