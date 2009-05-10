@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0.ebuild,v 1.1 2009/05/10 10:16:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0.ebuild,v 1.2 2009/05/10 16:31:58 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -74,4 +74,3 @@ src_test() {
 src_install() {
 	cmake-utils_src_install
 }
-
