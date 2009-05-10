@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.4.ebuild,v 1.3 2009/05/10 15:12:43 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.4.ebuild,v 1.4 2009/05/10 16:32:55 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ src_prepare() {
 	sed -e "s:\$\$libdir:\$\$temp_libdir:" \
 	-i src/tools/Makefile.am \
 	|| die "sed tools/Makefile.am failed"
-	
+
 	use fkernels && epatch "${FILESDIR}/${P}-configure-gfortran.patch"
 
 	eautoreconf
