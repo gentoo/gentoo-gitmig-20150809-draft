@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.436 2009/05/04 21:02:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.437 2009/05/10 10:23:27 aballier Exp $
+
+*vlc-1.0.0_rc1 (10 May 2009)
+
+  10 May 2009; Alexis Ballier <aballier@gentoo.org> -vlc-1.0.0_pre2.ebuild,
+  +vlc-1.0.0_rc1.ebuild:
+  bump to rc1
 
   04 May 2009; Peter Alfredsen <loki_val@gentoo.org> vlc-0.9.8a.ebuild:
   Adjust deps for x264 for bug 268654. Require <media-libs/x264-0.0.20090502
