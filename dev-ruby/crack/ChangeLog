@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/crack
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.1 2009/05/10 20:28:14 graaff Exp $
+
+*crack-0.1.2 (10 May 2009)
+
+  10 May 2009; Hans de Graaff <graaff@gentoo.org> +metadata.xml,
+  +crack-0.1.2.ebuild:
+  Initial import. New dependency for dev-ruby/httparty.
+
