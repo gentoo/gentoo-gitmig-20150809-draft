@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.3 2009/05/09 11:23:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.4 2009/05/10 09:02:41 nirbheek Exp $
 
 EAPI=2
 
@@ -39,7 +39,8 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	)
 	app-admin/eselect-esd
 	bluetooth? (
-		>=net-wireless/bluez-libs-3
+		|| ( >=net-wireless/bluez-4
+			 >=net-wireless/bluez-libs-3 )
 		>=sys-apps/dbus-1.0.0
 	)
 	policykit? ( sys-auth/policykit )
@@ -64,7 +65,9 @@ RDEPEND="${RDEPEND}
 	sys-apps/openrc
 	gnome-extra/gnome-audio
 	alsa? ( media-sound/alsa-utils )
-	bluetooth? ( >=net-wireless/bluez-utils-3 )"
+	bluetooth? (
+	|| ( >=net-wireless/bluez-4
+		 >=net-wireless/bluez-utils-3 ) )"
 
 pkg_setup() {
 	enewgroup audio 18 # Just make sure it exists
