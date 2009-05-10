@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.2 2009/05/10 18:22:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/rubyripper-0.5.5-r1.ebuild,v 1.3 2009/05/10 18:32:16 ssuominen Exp $
 
 EAPI=2
 inherit ruby virtualx
@@ -8,10 +8,12 @@ inherit ruby virtualx
 DESCRIPTION="A secure audio ripper for Linux"
 HOMEPAGE="http://code.google.com/p/rubyripper"
 SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.bz2"
+
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="cli flac +gtk +mp3 normalize +vorbis wav"
+IUSE="cli flac +gtk +mp3 normalize +vorbis wav X"
+
 ILINGUAS="de es fr hu nl ru"
 
 for lingua in $ILINGUAS; do
@@ -38,7 +40,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.5.2-require-rubygems.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--prefix=/usr"
 	local enable_linguas=""
 
@@ -51,9 +53,7 @@ src_compile() {
 	use gtk && myconf="${myconf} --enable-gtk2"
 	use cli && myconf="${myconf} --enable-cli"
 
-	Xeconf ${myconf} || die "./configure failed"
-
-	emake || die "emake failed"
+	Xeconf ${myconf}
 }
 
 src_install() {
