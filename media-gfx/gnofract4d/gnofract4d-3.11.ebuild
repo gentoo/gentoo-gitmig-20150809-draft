@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.7.ebuild,v 1.4 2008/05/29 17:13:35 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnofract4d/gnofract4d-3.11.ebuild,v 1.1 2009/05/10 17:51:55 ssuominen Exp $
 
+EAPI=1
 inherit distutils fdo-mime multilib python
 
 DESCRIPTION="a program for drawing beautiful mathematically-based images known as fractals."
@@ -13,11 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND=">=x11-libs/gtk+-2:2
 	media-libs/libpng
 	media-libs/jpeg
-	dev-python/pygtk
-	gnome-base/gconf"
+	>=dev-python/pygtk-2
+	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
