@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9778 2009/05/10 20:38:57 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9779 2009/05/10 21:05:06 tommy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -603,10 +603,6 @@ net-misc/dahdi-tools
 # Peter Volkov <pva@gentoo.org> (7 Mar 2009)
 # Masked for removal, please use app-text/ghostscript-gpl #261434
 app-text/ghostscript-esp
-
-# Thomas Sachau <tommy@gentoo.org> (2 Mar 2009)
-# Mask for removal, was merged into dev-java/fec
-net-libs/fec
 
 # Matti Bickel <mabi@gentoo.org> (1 Mar 2009)
 # Mask testing branch
