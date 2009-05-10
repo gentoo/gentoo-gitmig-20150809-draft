@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/farsight2
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.1 2009/05/10 21:06:20 ford_prefect Exp $
+
+*farsight2-0.0.9 (10 May 2009)
+
+  10 May 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +farsight2-0.0.9.ebuild, +metadata.xml:
+  Initial commit
+
