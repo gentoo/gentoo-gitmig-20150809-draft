@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9775 2009/05/10 18:28:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9776 2009/05/10 19:22:34 hd_brummy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -163,10 +163,6 @@ x11-misc/xkbdata
 # mask for removal - Jun 1 09
 # bug #268507
 app-doc/afsdoc
-
-# Joerg Bornkessel <hd_brummy@gentoo.org> (02 May 2009)
-# need >=sys-kernel/linux-headers-2.6.29 with s2api header changes
-=media-tv/w_scan-20090502
 
 # Tomas Chvatal <scarabeus@gentoo.org> (1 May 2009)
 # broke nepomuk and soprano in kde so mask for now
