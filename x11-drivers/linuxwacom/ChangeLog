@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/linuxwacom
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.35 2009/04/28 09:22:51 ikelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.36 2009/05/10 23:20:50 ikelos Exp $
+
+  10 May 2009; Mike Auty <ikelos@gentoo.org> linuxwacom-0.8.2.ebuild,
+  linuxwacom-0.8.2_p2.ebuild, linuxwacom-0.8.3_p2.ebuild:
+  Ensure kernel checks only occur when USE=module.
 
   28 Apr 2009; Mike Auty <ikelos@gentoo.org> linuxwacom-0.8.3_p2.ebuild:
   Add in warning to remove existing wacom fdi files for latest linuxwacom.

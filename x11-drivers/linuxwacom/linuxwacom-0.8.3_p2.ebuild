@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.3_p2.ebuild,v 1.2 2009/04/28 09:22:51 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/linuxwacom-0.8.3_p2.ebuild,v 1.3 2009/05/10 23:20:50 ikelos Exp $
 
 inherit eutils autotools toolchain-funcs linux-mod
 
@@ -30,35 +30,35 @@ S=${WORKDIR}/${P/_p/-}
 MODULE_NAMES="wacom(input:${S}/src:${S}/src)"
 
 wacom_check() {
-	if use module ; then
-		ebegin "Checking for wacom module"
-		linux_chkconfig_module TABLET_USB_WACOM
-		eend $?
+	ebegin "Checking for wacom module"
+	linux_chkconfig_module TABLET_USB_WACOM
+	eend $?
 
-		if [[ $? -ne 0 ]] || ! [ -f "/lib/modules/${KV}/kernel/drivers/input/tablet/wacom.ko" ]; then
-			eerror "You need to have your kernel compiled with wacom as a module"
-			eerror "to let linuxwacom overwrite it."
-			eerror "Enable it in the kernel, found at:"
-			eerror
-			eerror " Device Drivers"
-			eerror "    Input device support"
-			eerror "        Tablets"
-			eerror "            <M> Wacom Intuos/Graphire tablet support (USB)"
-			eerror
-			eerror "(in the "USB support" page it is suggested to include also:"
-			eerror "EHCI , OHCI , USB Human Interface Device+HID input layer)"
-			eerror
-			eerror "Then recompile kernel. Otherwise, remove the module USE flag."
-			die "Wacom not compiled in kernel as a module!"
-		fi
+	if [[ $? -ne 0 ]] || ! [ -f "/lib/modules/${KV}/kernel/drivers/input/tablet/wacom.ko" ]; then
+		eerror "You need to have your kernel compiled with wacom as a module"
+		eerror "to let linuxwacom overwrite it."
+		eerror "Enable it in the kernel, found at:"
+		eerror
+		eerror " Device Drivers"
+		eerror "    Input device support"
+		eerror "        Tablets"
+		eerror "            <M> Wacom Intuos/Graphire tablet support (USB)"
+		eerror
+		eerror "(in the "USB support" page it is suggested to include also:"
+		eerror "EHCI , OHCI , USB Human Interface Device+HID input layer)"
+		eerror
+		eerror "Then recompile kernel. Otherwise, remove the module USE flag."
+		die "Wacom not compiled in kernel as a module!"
 	fi
 }
 
 pkg_setup() {
-	linux-mod_pkg_setup
-	# echo "kernel version is ${KV} , name is ${KV%%-*}"
+	if use module; then
+		linux-mod_pkg_setup
+		wacom_check
+		# echo "kernel version is ${KV} , name is ${KV%%-*}"
+	fi
 	ewarn "Versions of linuxwacom >= 0.7.9 require gcc >= 4.2 to compile."
-	wacom_check
 }
 
 src_unpack() {
