@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.26.1.ebuild,v 1.1 2009/05/10 18:43:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-menus/gnome-menus-2.26.1.ebuild,v 1.2 2009/05/10 18:51:37 eva Exp $
 
 inherit eutils gnome2 python
 
@@ -55,5 +55,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-	python_mod_cleanup $(python_get_sitedir)/GMenuSimpleEditor
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/GMenuSimpleEditor
 }
