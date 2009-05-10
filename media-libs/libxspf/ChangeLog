@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libxspf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.1 2009/05/10 19:49:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libxspf/ChangeLog,v 1.2 2009/05/10 20:21:13 ssuominen Exp $
+
+  10 May 2009; Samuli Suominen <ssuominen@gentoo.org> libxspf-1.2.0.ebuild:
+  Add >=x11-libs/qt-assistant-4 to USE doc deps, thanks to Sebastian
+  Pipping.
 
 *libxspf-1.2.0 (10 May 2009)
 
