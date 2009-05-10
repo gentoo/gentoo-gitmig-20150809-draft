@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r9.ebuild,v 1.1 2009/01/02 01:51:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r9.ebuild,v 1.2 2009/05/10 04:16:51 robbat2 Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -169,7 +169,7 @@ setup_boot_dir() {
 	local boot_dir=$1
 	local dir=${boot_dir}
 
-	[[ ! -e ${dir} ]] && die "${dir} does not exist!"
+	mkdir -p "${dir}"
 	[[ ! -L ${dir}/boot ]] && ln -s . "${dir}/boot"
 	dir="${dir}/grub"
 	if [[ ! -e ${dir} ]] ; then
