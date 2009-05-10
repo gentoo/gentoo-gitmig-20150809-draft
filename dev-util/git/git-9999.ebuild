@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.7 2009/05/05 19:15:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.8 2009/05/10 02:33:58 robbat2 Exp $
 
 EAPI=2
 
@@ -133,7 +133,8 @@ src_prepare() {
 	#epatch "${FILESDIR}"/20090305-git-1.6.2-noperl.patch
 
 	# GetOpt-Long v2.38 is strict
-	epatch "${FILESDIR}"/20090505-git-1.6.2.5-getopt-fixes.patch
+	# Merged in 1.6.3 final 2009/05/07
+	#epatch "${FILESDIR}"/20090505-git-1.6.2.5-getopt-fixes.patch
 
 	sed -i \
 		-e 's:^\(CFLAGS =\).*$:\1 $(OPTCFLAGS) -Wall:' \
