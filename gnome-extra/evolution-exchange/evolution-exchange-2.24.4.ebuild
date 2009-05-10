@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.24.4.ebuild,v 1.5 2009/04/12 21:17:38 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/evolution-exchange-2.24.4.ebuild,v 1.6 2009/05/10 15:14:42 jer Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.novell.com/products/desktop/features/evolution.html"
 LICENSE="GPL-2"
 
 SLOT="2.0"
-KEYWORDS="amd64 ~hppa ppc sparc x86"
+KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="debug doc static"
 
 RDEPEND="
