@@ -1,6 +1,15 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.109 2009/04/12 20:34:14 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.110 2009/05/10 22:10:50 eva Exp $
+
+*epiphany-extensions-2.26.1 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -epiphany-extensions-2.22.2-r10.ebuild,
+  -epiphany-extensions-2.24.1.ebuild,
+  -epiphany-extensions-2.24.1-r10.ebuild,
+  +epiphany-extensions-2.26.1.ebuild:
+  New version for GNOME 2.26. Clean up old revisions.
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   epiphany-extensions-2.24.3.ebuild, epiphany-extensions-2.24.3-r10.ebuild:

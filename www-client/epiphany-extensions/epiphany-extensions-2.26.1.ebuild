@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.22.2-r10.ebuild,v 1.2 2009/01/08 16:50:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/epiphany-extensions-2.26.1.ebuild,v 1.1 2009/05/10 22:10:50 eva Exp $
 
 inherit autotools eutils gnome2 python versionator
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/projects/epiphany/extensions.html"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="dbus examples pcre python"
 
 RDEPEND=">=www-client/epiphany-${MY_MAJORV}
@@ -27,7 +27,7 @@ RDEPEND=">=www-client/epiphany-${MY_MAJORV}
 	python? ( >=dev-python/pygtk-2.11 )"
 DEPEND="${RDEPEND}
 	  gnome-base/gnome-common
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.20
 	>=app-text/gnome-doc-utils-0.3.2"
 
@@ -66,6 +66,10 @@ src_unpack() {
 	# Don't remove sessionsaver, please.  -dang
 	epatch "${FILESDIR}"/${PN}-2.21.92-sessionsaver-v4.patch.gz
 	echo "extensions/sessionsaver/ephy-sessionsaver-extension.c" >> po/POTFILES.in
+
+	# Fix building with libtool-1  bug #257337
+	rm m4/lt* m4/libtool.m4 m4/ltmain.m4
+
 	eautoreconf
 }
 
@@ -79,8 +83,5 @@ pkg_postinst() {
 
 pkg_postrm() {
 	gnome2_pkg_postrm
-
-	if use python; then
-		python_mod_cleanup /usr/$(get_libdir)/epiphany/${MY_MAJORV}/extensions
-	fi
+	python_mod_cleanup /usr/$(get_libdir)/epiphany/${MY_MAJORV}/extensions
 }

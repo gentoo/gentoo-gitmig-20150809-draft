@@ -1,6 +1,16 @@
 # ChangeLog for www-client/epiphany
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.207 2009/04/27 14:34:58 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.208 2009/05/10 22:07:57 eva Exp $
+
+*epiphany-2.26.1 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -epiphany-2.22.3-r1.ebuild, -epiphany-2.22.3-r2.ebuild,
+  -epiphany-2.22.3-r11.ebuild, -epiphany-2.22.3-r12.ebuild,
+  -epiphany-2.24.2.1.ebuild, -epiphany-2.24.2.1-r10.ebuild,
+  +files/epiphany-2.26.0-xulrunner191.patch, +epiphany-2.26.1.ebuild,
+  +files/epiphany-2.26.1-automagic-libcanberra.patch:
+  New version for GNOME 2.26. Clean up old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> epiphany-2.24.3-r10:
   Stable for HPPA (bug #260063).
