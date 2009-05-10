@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.7 2009/04/24 07:09:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.8 2009/05/10 06:23:00 graaff Exp $
+
+*ruby-openid-2.1.6 (10 May 2009)
+
+  10 May 2009; Hans de Graaff <graaff@gentoo.org> +ruby-openid-2.1.6.ebuild:
+  Version bump.
 
   24 Apr 2009; Hans de Graaff <graaff@gentoo.org> -ruby-openid-2.1.2.ebuild:
   Remove old version.
