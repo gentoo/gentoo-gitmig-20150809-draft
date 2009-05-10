@@ -1,0 +1,11 @@
+--- Modules/errors.c	2009-04-01 15:58:34.000000000 -0400
++++ Modules/errors.c	2009-04-01 15:59:25.000000000 -0400
+@@ -18,7 +18,7 @@
+ 
+ #ifdef LDAP_ASSERTION_FAILED
+ #define LDAP_ERROR_MAX          LDAP_ASSERTION_FAILED
+-#elif
++#else
+ #define LDAP_ERROR_MAX          LDAP_OTHER
+ #endif
+ 
