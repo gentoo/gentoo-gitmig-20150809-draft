@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.38 2009/04/27 14:29:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.39 2009/05/10 10:58:04 eva Exp $
+
+*vinagre-2.26.1 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -vinagre-0.5.2.ebuild,
+  -vinagre-2.24.2.ebuild, +vinagre-2.26.1.ebuild,
+  +files/vinagre-2.26.1-optional-applet.patch, metadata.xml:
+  New version for GNOME 2.26. Scaling works with composite, make avahi
+  optional. Clean up old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> vinagre-2.24.2-r1:
   Stable for HPPA (bug #260063).
