@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gnome-subtitles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.21 2009/04/30 15:36:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-subtitles/ChangeLog,v 1.22 2009/05/10 09:08:26 loki_val Exp $
+
+  10 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  gnome-subtitles-0.8-r1.ebuild:
+  Add app-text/gnome-doc-utils to DEPEND w.r.t. bug 269219. Thanks to
+  GHunter <ghunterpl@gmail.com> for reporting.
 
   30 Apr 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking gnome-subtitles-0.8-r1 ppc stable for bug 263984
