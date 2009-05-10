@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/gnome-vfsmm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.62 2008/11/17 22:55:25 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/ChangeLog,v 1.63 2009/05/10 22:20:56 eva Exp $
+
+*gnome-vfsmm-2.26.0 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-vfsmm-2.16.0.ebuild, gnome-vfsmm-2.18.0.ebuild,
+  -gnome-vfsmm-2.20.0.ebuild, +gnome-vfsmm-2.26.0.ebuild:
+  New version for GNOME 2.26. Clean up old revisions.
 
 *gnome-vfsmm-2.24.0 (17 Nov 2008)
 

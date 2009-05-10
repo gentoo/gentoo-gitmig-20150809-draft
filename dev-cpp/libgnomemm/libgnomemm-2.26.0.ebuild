@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/libgnomemm-2.20.1.ebuild,v 1.2 2008/07/10 15:22:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomemm/libgnomemm-2.26.0.ebuild,v 1.1 2009/05/10 22:23:31 eva Exp $
 
 inherit gnome2
 
