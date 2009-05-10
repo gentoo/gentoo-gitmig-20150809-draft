@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6-r1.ebuild,v 1.3 2007/11/08 17:00:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/orpheus/orpheus-1.6-r1.ebuild,v 1.4 2009/05/10 14:22:56 ssuominen Exp $
 
-WANT_AUTOCONF=2.5
+EAPI=2
 WANT_AUTOMAKE=1.8
 
 inherit eutils autotools
@@ -14,19 +14,16 @@ SRC_URI="http://konst.org.ua/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~ppc sparc x86"
-IUSE="cddb"
+IUSE=""
 
-DEPEND=">=sys-libs/ncurses-5.2
-	>=media-libs/libvorbis-1.0_beta1
+RDEPEND="sys-libs/ncurses
+	media-libs/libvorbis
 	virtual/mpg123
-	cddb? ( gnome-base/libghttp )
-	media-sound/vorbis-tools"
+	media-sound/vorbis-tools[ogg123]"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/1.5-amd64.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/1.5-amd64.patch
 
 	# Fix a stack-based buffer overflow in kkstrtext.h in ktools library.
 	# Bug 113683, CVE-2005-3863.
@@ -41,15 +38,10 @@ src_unpack() {
 
 	# force not using deprecated libghttp
 	cd "${S}"
-	use cddb || epatch "${FILESDIR}/${P}-nolibghttp.patch"
-}
-
-src_compile() {
-	econf || die "configure failed"
-	emake || die "emake failed"
+	epatch "${FILESDIR}"/${P}-nolibghttp.patch
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
