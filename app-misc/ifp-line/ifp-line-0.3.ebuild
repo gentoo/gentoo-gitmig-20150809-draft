@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.3.ebuild,v 1.3 2007/01/28 05:13:44 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ifp-line-0.3.ebuild,v 1.4 2009/05/10 16:27:22 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="iRiver iFP open-source driver"
@@ -11,25 +12,22 @@ SRC_URI="mirror://sourceforge/ifp-driver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
 IUSE=""
 
-DEPEND="dev-libs/libusb"
+RDEPEND="dev-libs/libusb"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-fix-warnings.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-warnings.patch
 }
 
 src_install() {
-	dobin ifp || die
+	dobin ifp || die "dobin failed"
 	dodoc NEWS README TIPS ChangeLog
 	doman ifp.1
 
 	exeinto /usr/share/${PN}
-	doexe nonroot.sh
+	doexe nonroot.sh || die "doexe failed"
 }
 
 pkg_postinst() {
@@ -41,8 +39,8 @@ pkg_postinst() {
 	elog "    /etc/modules.autoload.d/kernel-2.X (X being 4 or 6 depending"
 	elog "    on what kernel you use."
 	elog
-	elog " 2. Follow the instructions in"
-	elog "      /usr/share/doc/${PF}/TIPS.gz"
+	elog " 2. Follow the TIPS file in"
+	elog "      /usr/share/doc/${PF}"
 	elog
 	elog " 3. Run /usr/share/${PN}/nonroot.sh"
 	elog
