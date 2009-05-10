@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/kgrubeditor-0.8.5.ebuild,v 1.1 2009/05/10 12:28:10 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgrubeditor/kgrubeditor-0.8.5.ebuild,v 1.2 2009/05/10 16:32:16 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -25,4 +25,3 @@ pkg_postinst() {
 	ewarn "NOTE: kgrubeditor can not handle grub-2.x configuration files!"
 	ewarn
 }
-
