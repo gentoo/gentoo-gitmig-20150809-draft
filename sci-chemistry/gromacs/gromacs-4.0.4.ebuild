@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.4.ebuild,v 1.1 2009/04/20 13:39:12 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.4.ebuild,v 1.2 2009/05/10 10:17:48 alexxy Exp $
 
 EAPI="2"
 
@@ -32,6 +32,8 @@ DEPEND="app-shells/tcsh
 RDEPEND="${DEPEND}"
 
 src_prepare() {
+
+	epatch "${FILESDIR}/${P}-sparc-cyclecounter.patch"
 	# Fix typos in a couple of files.
 	sed -e "s:+0f:-f:" -i share/tutor/gmxdemo/demo \
 		|| die "Failed to fixup demo script."
@@ -52,7 +54,7 @@ src_prepare() {
 	sed -e "s:\$\$libdir:\$\$temp_libdir:" \
 	-i src/tools/Makefile.am \
 	|| die "sed tools/Makefile.am failed"
-
+	
 	use fkernels && epatch "${FILESDIR}/${P}-configure-gfortran.patch"
 
 	eautoreconf
