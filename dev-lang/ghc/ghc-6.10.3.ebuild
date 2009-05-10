@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.8.2.ebuild,v 1.11 2009/05/10 21:03:06 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.3.ebuild,v 1.1 2009/05/10 21:03:06 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -28,7 +28,7 @@
 # re-emerge ghc (or ghc-bin). People using vanilla gcc can switch between
 # gcc-3.x and 4.x with no problems.
 
-inherit base bash-completion eutils flag-o-matic toolchain-funcs ghc-package versionator
+inherit base autotools bash-completion eutils flag-o-matic toolchain-funcs ghc-package versionator
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -38,17 +38,24 @@ IS_SNAPSHOT="$(get_version_component_range 4)" # non-empty if snapshot
 EXTRA_SRC_URI="${PV}"
 [[ "${IS_SNAPSHOT}" ]] && EXTRA_SRC_URI="stable/dist"
 
+arch_binaries=""
+
+arch_binaries="$arch_binaries x86?   ( http://code.haskell.org/~ivanm/ghc-bin-${PV}-x86.tbz2 )"
+arch_binaries="$arch_binaries amd64? ( http://haskell.org/~kolmodin/ghc-bin-${PV}-amd64.tbz2 )"
+
+#arch_binaries="$arch_binaries alpha?   ( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )"
+#arch_binaries="$arch_binaries amd64?   ( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )"
+#arch_binaries="$arch_binaries hppa?    ( mirror://gentoo/ghc-bin-${PV}-hppa.tbz2 )"
+#arch_binaries="$arch_binaries ia64?    ( mirror://gentoo/ghc-bin-${PV}-ia64.tbz2 )"
+#arch_binaries="$arch_binaries sparc?   ( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )"
+#arch_binaries="$arch_binaries x86? ( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
+
 SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${P}-src.tar.bz2 )
-	alpha? ( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )
-	amd64?	( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )
-	hppa?	( mirror://gentoo/ghc-bin-${PV}-hppa.tbz2 )
-	ia64?	( mirror://gentoo/ghc-bin-${PV}-ia64.tbz2 )
-	sparc?	( mirror://gentoo/ghc-bin-${PV}-sparc.tbz2 )
-	x86?	( mirror://gentoo/ghc-bin-${PV}-x86.tbz2 )"
+		!ghcbootstrap? ( $arch_binaries )"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 sparc x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="binary doc ghcbootstrap"
 
 RDEPEND="
@@ -56,14 +63,12 @@ RDEPEND="
 	>=sys-devel/gcc-2.95.3
 	>=sys-devel/binutils-2.17
 	>=dev-lang/perl-5.6.1
-	>=dev-libs/gmp-4.1
-	=sys-libs/readline-5*"
+	>=dev-libs/gmp-4.1"
 
 DEPEND="${RDEPEND}
 	ghcbootstrap? (	doc? (	~app-text/docbook-xml-dtd-4.2
 							app-text/docbook-xsl-stylesheets
-							>=dev-libs/libxslt-1.1.2
-							>=dev-haskell/haddock-0.8 ) )"
+							>=dev-libs/libxslt-1.1.2 ) )"
 # In the ghcbootstrap case we rely on the developer having
 # >=ghc-5.04.3 on their $PATH already
 
@@ -130,12 +135,6 @@ pkg_setup() {
 			die "USE=\"ghcbootstrap binary\" is not a valid combination."
 		[[ -z $(type -P ghc) ]] && \
 			die "Could not find a ghc to bootstrap with."
-	elif use ppc || use ppc64; then
-		eerror "No binary .tbz2 package available yet for these arches:"
-		eerror "  ppc, ppc64"
-		eerror "Please try emerging with USE=ghcbootstrap and report build"
-		eerror "sucess or failure to the haskell team (haskell@gentoo.org)"
-		die "No binary available for this arch yet, USE=ghcbootstrap"
 	fi
 }
 
@@ -151,11 +150,6 @@ src_unpack() {
 		# Move unpacked files to the expected place
 		mv "${WORKDIR}/usr" "${S}"
 	else
-
-		# Modify the ghc driver script to use GHC_CFLAGS
-		sed -i -e "s|\$\$TOPDIROPT|\$\$TOPDIROPT ${GHC_CFLAGS}|" \
-			"${S}/driver/ghc/Makefile"
-
 		if ! use ghcbootstrap; then
 			# Relocate from /usr to ${WORKDIR}/usr
 			sed -i -e "s|/usr|${WORKDIR}/usr|g" \
@@ -166,6 +160,14 @@ src_unpack() {
 				"${WORKDIR}/usr/$(get_libdir)/${P}/package.conf" \
 				|| die "Relocating ghc from /usr to workdir failed"
 		fi
+
+		# Hack to prevent haddock being installed, remove when ./configure
+		# supports something better to not build docs or haddock.
+		sed -i -e 's/DO_NOT_INSTALL =/DO_NOT_INSTALL = haddock/' \
+			"${S}/utils/Makefile"
+
+		# as we have changed the build system with the readline patch
+		eautoreconf
 	fi
 }
 
@@ -183,6 +185,20 @@ src_compile() {
 		echo "SRC_HC_OPTS+=${GHC_CFLAGS}" >> mk/build.mk
 		echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
 
+		# The settings that give you the fastest complete GHC build are these:
+		if use ghcquickbuild; then
+			echo "SRC_HC_OPTS     = -H64m -Onot -fasm" >> mk/build.mk
+			echo "GhcStage1HcOpts = -O -fasm" >> mk/build.mk
+			echo "GhcStage2HcOpts = -Onot -fasm" >> mk/build.mk
+			echo "GhcLibHcOpts    = -Onot -fasm" >> mk/build.mk
+			echo "GhcLibWays      =" >> mk/build.mk
+			echo "SplitObjs       = NO" >> mk/build.mk
+		fi
+		# However, note that the libraries are built without optimisation, so
+		# this build isn't very useful. The resulting compiler will be very
+		# slow. On a 4-core x86 machine using MAKEOPTS="-j10", this build was
+		# timed at less than 8 minutes.
+
 		# We can't depend on haddock except when bootstrapping when we
 		# must build docs and include them into the binary .tbz2 package
 		if use ghcbootstrap && use doc; then
@@ -190,6 +206,7 @@ src_compile() {
 			echo HADDOCK_DOCS=YES >> mk/build.mk
 		else
 			echo XMLDocWays="" >> mk/build.mk
+			echo HADDOCK_DOCS=NO >> mk/build.mk
 		fi
 
 		# circumvent a very strange bug that seems related with ghc producing
@@ -199,7 +216,7 @@ src_compile() {
 
 		# GHC build system knows to build unregisterised on alpha and hppa,
 		# but we have to tell it to build unregisterised on some arches
-		if use alpha || use hppa || use ia64 || use ppc64 || use sparc; then
+		if use alpha || use hppa || use ppc64 || use sparc; then
 			echo "GhcUnregisterised=YES" >> mk/build.mk
 			echo "GhcWithInterpreter=NO" >> mk/build.mk
 			echo "GhcWithNativeCodeGen=NO" >> mk/build.mk
@@ -262,6 +279,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	# 'ghc-pkg check' fails in ghc 6.10.2, with the error message:
+	# There are problems in package rts-1.0:
+	#    include-dirs: PAPI_INCLUDE_DIR doesn't exist or isn't a directory
+	# Upstream suggests this solution to fix it:
+	export PATH="/usr/bin:${PATH}"
+	$(ghc-getghcpkg) describe rts | sed 's/PAPI_INCLUDE_DIR//' | $(ghc-getghcpkg) update -
+
 	ghc-reregister
 
 	ewarn "IMPORTANT:"
