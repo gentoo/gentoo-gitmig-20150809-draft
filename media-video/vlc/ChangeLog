@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.438 2009/05/10 10:26:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.439 2009/05/10 13:55:06 aballier Exp $
+
+*vlc-0.9.9a-r1 (10 May 2009)
+
+  10 May 2009; Alexis Ballier <aballier@gentoo.org> +vlc-0.9.9a-r1.ebuild:
+  Bump with a new patchset fixing bug #267790 and default acl for the old
+  http interface, refs bug #262708
 
   10 May 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   bump gnutls requirement
