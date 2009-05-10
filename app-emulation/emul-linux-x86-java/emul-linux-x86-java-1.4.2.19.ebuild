@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.19.ebuild,v 1.2 2008/12/10 22:07:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.19.ebuild,v 1.3 2009/05/10 20:12:45 arfrever Exp $
 
 inherit multilib eutils pax-utils java-vm-2
 
@@ -31,6 +31,7 @@ QA_TEXTRELS_amd64="opt/${P}/lib/i386/libawt.so
 	opt/${P}/plugin/i386/ns4/libjavaplugin.so
 	opt/${P}/plugin/i386/ns610/libjavaplugin_oji.so
 	opt/${P}/plugin/i386/ns610-gcc32/libjavaplugin_oji.so"
+QA_DT_HASH="opt/${P}/.*"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"

@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-java
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.68 2009/04/02 21:59:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/ChangeLog,v 1.69 2009/05/10 20:12:45 arfrever Exp $
+
+  10 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  emul-linux-x86-java-1.4.2.19.ebuild, emul-linux-x86-java-1.5.0.18.ebuild,
+  emul-linux-x86-java-1.6.0.13.ebuild:
+  Set QA_DT_HASH.
 
   02 Apr 2009; Markus Meier <maekke@gentoo.org>
   emul-linux-x86-java-1.5.0.18.ebuild, emul-linux-x86-java-1.6.0.13.ebuild:
