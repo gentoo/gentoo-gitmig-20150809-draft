@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.119 2009/04/27 14:31:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.120 2009/05/10 10:43:32 eva Exp $
+
+*vino-2.26.1 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -vino-2.20.1.ebuild,
+  -vino-2.22.2.ebuild, +vino-2.26.1.ebuild:
+  New version for GNOME 2.26. New capplet, UPnP support, better support for
+  local resources (avahi), install itself in autostart directory. Clean up
+  old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> vino-2.24.1:
   Stable for HPPA (bug #260063).
