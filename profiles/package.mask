@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9771 2009/05/09 00:29:52 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9772 2009/05/10 10:25:35 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (10 May 2009)
+# Those packages depend on gnome-desktop which breaks API again.
+# They should be hold off until they are all moved to the tree.
+>=gnome-desktop/gnome-desktop-2.26
+>=media/gfx/eog-2.26
+>=media-video/cheese-2.26
+>=gnome-base/nautilus-2.26
+>=gnome-base/gnome-control-center-2.26
+>=gnome-base/gnome-settings-daemon-2.26
 
 # Rémi Cardona <remi@gentoo.org> (09 May 2009)
 # Low-Bandwidth X and the X Proxy Management stuff has been declared
