@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-2.2.ebuild,v 1.1 2009/05/10 20:18:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/herrie/herrie-2.2.ebuild,v 1.2 2009/05/10 20:41:30 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -20,8 +20,7 @@ for X in ${APP_LINGUAS}; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-RDEPEND="sys-libs/ncurses
-	unicode? ( sys-libs/ncurses[unicode] )
+RDEPEND="sys-libs/ncurses[unicode?]
 	>=dev-libs/glib-2:2
 	ao? ( media-libs/libao )
 	alsa? ( media-libs/alsa-lib )
