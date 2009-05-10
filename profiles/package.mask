@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9776 2009/05/10 19:22:34 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9777 2009/05/10 19:56:23 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -863,10 +863,6 @@ app-crypt/truecrypt
 # Alexis Ballier <aballier@gentoo.org> (15 Oct 2008)
 # Breaks ocamlduce
 >=dev-lang/ocaml-3.11.0_beta1
-
-# Alexis Ballier <aballier@gentoo.org> (06 Oct 2008)
-# API changes, the only reverse dep fails to build against it.
->=media-libs/libspiff-1.0.0
 
 # Christian Parpart <trapni@gentoo.org> (04 Oct 2008)
 # for testing/experienced users only
