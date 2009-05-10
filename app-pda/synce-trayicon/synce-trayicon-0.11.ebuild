@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.11.ebuild,v 1.2 2008/11/14 17:45:28 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-trayicon/synce-trayicon-0.11.ebuild,v 1.3 2009/05/10 18:28:51 mescalinum Exp $
 
 inherit eutils subversion gnome2
 
@@ -11,7 +11,7 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-DEPEND="sys-apps/dbus
+RDEPEND="sys-apps/dbus
 		dev-libs/dbus-glib
 		>=dev-libs/glib-2.0
 		>=x11-libs/gtk+-2.0
@@ -20,10 +20,11 @@ DEPEND="sys-apps/dbus
 		gnome-base/libgtop
 		gnome-base/libglade
 		gnome-base/gnome-keyring
-		gnome-base/gnome-common
 		~app-pda/synce-libsynce-0.11.1
 		~app-pda/synce-librra-0.11.1
 		~app-pda/synce-librapi2-0.11.1"
+DEPEND="${RDEPEND}
+		gnome-base/gnome-common"
 
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
