@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/yiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.18 2009/05/02 19:29:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.19 2009/05/10 08:25:16 ssuominen Exp $
+
+  10 May 2009; Samuli Suominen <ssuominen@gentoo.org> -yiff-2.14.5.ebuild,
+  yiff-2.14.5-r1.ebuild, -files/yiff-2.14.5-build.patch:
+  amd64 stable wrt #267924
 
   02 May 2009; Raúl Porcel <armin76@gentoo.org> yiff-2.14.5-r1.ebuild:
   sparc/x86 stable wrt #267924
@@ -10,8 +14,8 @@
 
 *yiff-2.14.5-r1 (21 Dec 2008)
 
-  21 Dec 2008; <ssuominen@gentoo.org> +files/yiff-2.14.5-build-2.patch,
-  +yiff-2.14.5-r1.ebuild:
+  21 Dec 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +files/yiff-2.14.5-build-2.patch, +yiff-2.14.5-r1.ebuild:
   Don't install yiffconfig which is GTK+-1.2. Don't install support for KDE
   3, kmid. Respect CC, CXX, CFLAGS and CXXFLAGS. Remove unnecessary RESTRICT
   for strip from ebuild. Install default yiffrc so yiff server can be
