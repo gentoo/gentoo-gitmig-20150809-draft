@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.1 2009/05/07 15:43:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r6.ebuild,v 1.2 2009/05/10 22:18:05 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -121,6 +121,7 @@ RDEPEND="hal? ( sys-apps/hal )
 	media-libs/freetype
 	>=x11-misc/xbitmaps-1.0.1
 	>=x11-misc/xkeyboard-config-1.4
+	x11-apps/xkbcomp
 	>=x11-apps/iceauth-1.0.2
 	>=x11-apps/rgb-1.0.3
 	>=x11-apps/xauth-1.0.3
@@ -143,6 +144,7 @@ RDEPEND="hal? ( sys-apps/hal )
 	# Xaw is dmx- and xorgcfg-dependent
 	# Xpm is dmx- and xorgcfg-dependent, pulls in Xt
 	# Xxf86misc and Xxf86vm are xorgcfg-dependent
+	# xkbcomp is launched at startup but not checked by ./configure
 DEPEND="${RDEPEND}
 	!net-dialup/dtrace
 	sys-devel/flex
