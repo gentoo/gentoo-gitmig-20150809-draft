@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/synce-hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/ChangeLog,v 1.6 2009/01/27 02:32:21 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/ChangeLog,v 1.7 2009/05/10 15:04:18 mescalinum Exp $
+
+  10 May 2009; Federico Ferri <mescalinum@gentoo.org> synce-hal-0.13.ebuild:
+  fix bug #233416
 
   27 Jan 2009; Federico Ferri <mescalinum@gentoo.org> synce-hal-0.13.ebuild:
   fix install location of hal scripts

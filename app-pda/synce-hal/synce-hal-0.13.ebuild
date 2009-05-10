@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.13.ebuild,v 1.5 2009/01/27 02:42:04 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/synce-hal-0.13.ebuild,v 1.6 2009/05/10 15:04:18 mescalinum Exp $
 
 inherit multilib versionator
 
@@ -29,7 +29,7 @@ RDEPEND="${DEPEND}
 SRC_URI="mirror://sourceforge/synce/${P}.tar.gz"
 
 src_compile() {
-	econf --with-hal-addon-dir="/usr/$(get_libdir)/hal/scripts" || die
+	econf --with-hal-addon-dir="/usr/$(get_libdir)/hal/scripts" --localstatedir="/var" || die
 	emake || die
 }
 
