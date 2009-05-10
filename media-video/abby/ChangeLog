@@ -1,6 +1,9 @@
 # ChangeLog for media-video/abby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/abby/ChangeLog,v 1.1 2009/05/05 21:33:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/abby/ChangeLog,v 1.2 2009/05/10 12:23:35 yngwin Exp $
+
+  10 May 2009; Ben de Groot <yngwin@gentoo.org> abby-0.2.1.ebuild:
+  Fix qt dependency, bug 268945
 
 *abby-0.2.1 (05 May 2009)
 
