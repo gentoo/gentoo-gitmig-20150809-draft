@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2628 2009/05/10 10:29:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2629 2009/05/10 17:42:36 dev-zero Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 May 2009; Tiziano Müller <dev-zero@gentoo.org> package.mask:
+  Unmasking bluez-4 and deps. Good luck.
 
   10 May 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Fixing invalid atom for media-gfx/eog mask.
