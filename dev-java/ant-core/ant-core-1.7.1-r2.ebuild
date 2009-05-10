@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r2.ebuild,v 1.6 2009/01/07 15:05:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-core/ant-core-1.7.1-r2.ebuild,v 1.7 2009/05/10 15:14:37 armin76 Exp $
 
 # don't depend on itself
 JAVA_ANT_DISABLE_ANT_CORE_DEP=true
@@ -18,7 +18,7 @@ SRC_URI="mirror://apache/ant/source/${MY_P}-src.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ia64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.4
