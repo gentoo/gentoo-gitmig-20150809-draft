@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.117 2009/04/27 14:10:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.118 2009/05/10 22:47:10 eva Exp $
+
+*deskbar-applet-2.26.1 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -deskbar-applet-2.22.3.1.ebuild, +deskbar-applet-2.26.1.ebuild:
+  New version for GNOME 2.26. Drop use of glade and gnome-vfs. Clean up old
+  revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> deskbar-applet-2.24.3:
   Stable for HPPA (bug #260063).
