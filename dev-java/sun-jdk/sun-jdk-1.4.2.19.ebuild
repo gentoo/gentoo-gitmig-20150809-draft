@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.19.ebuild,v 1.2 2008/12/10 22:04:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.19.ebuild,v 1.3 2009/05/10 17:46:53 arfrever Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit pax-utils java-vm-2 eutils
@@ -51,6 +51,7 @@ QA_TEXTRELS_x86="opt/${P}/jre/lib/i386/libawt.so
 	opt/${P}/jre/plugin/i386/ns4/libjavaplugin.so
 	opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
 	opt/${P}/jre/plugin/i386/ns610-gcc32/libjavaplugin_oji.so"
+QA_DT_HASH="opt/${P}/.*"
 
 pkg_nofetch() {
 	einfo "Please download ${At} from:"
