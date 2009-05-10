@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.10 2009/04/30 09:05:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libipoddevice/libipoddevice-0.5.3.ebuild,v 1.11 2009/05/10 18:00:43 ssuominen Exp $
 
 inherit base autotools
 
@@ -18,9 +18,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.71
 	sys-apps/pmount
 	virtual/eject
 	>=gnome-base/libgtop-2.12
-	>=sys-apps/sg3_utils-1.20
-	gnome-base/gnome-common"
+	>=sys-apps/sg3_utils-1.20"
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	dev-util/pkgconfig"
 
 PATCHES=( "${FILESDIR}/${P}-libsgutils2.patch" )
