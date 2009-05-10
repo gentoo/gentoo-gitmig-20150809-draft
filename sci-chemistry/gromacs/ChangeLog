@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.36 2009/05/10 10:17:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.37 2009/05/10 15:12:43 fmccor Exp $
+
+  10 May 2009; Ferris McCormick <fmccor@gentoo.org> gromacs-4.0.4.ebuild:
+  Sparc stable, Bug #260995, which see for discussion.
 
   10 May 2009; Alexey Shvetsov <alexxy@gentoo.org> gromacs-4.0.4.ebuild,
   +files/gromacs-4.0.4-sparc-cyclecounter.patch:
