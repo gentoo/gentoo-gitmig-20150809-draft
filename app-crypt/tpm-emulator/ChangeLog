@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/tpm-emulator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.9 2008/05/02 15:47:37 alonbl Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/ChangeLog,v 1.10 2009/05/10 23:07:30 robbat2 Exp $
+
+  10 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  tpm-emulator-0.5.ebuild:
+  Working on this for ~amd64.
 
   02 May 2008; Alon Bar-Lev <alonbl@gentoo.org> tpm-emulator-0.5.ebuild:
   Fix berlios mirror, bug#218657

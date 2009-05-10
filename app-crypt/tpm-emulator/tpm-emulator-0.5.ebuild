@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.ebuild,v 1.3 2008/05/02 15:47:37 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.ebuild,v 1.4 2009/05/10 23:07:30 robbat2 Exp $
 
 inherit toolchain-funcs linux-mod eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/tpm-emulator/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="dev-libs/gmp"
 RDEPEND=""
