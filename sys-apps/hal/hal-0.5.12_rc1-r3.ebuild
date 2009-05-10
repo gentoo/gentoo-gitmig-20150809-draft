@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r3.ebuild,v 1.1 2009/05/09 22:11:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r3.ebuild,v 1.2 2009/05/10 00:04:56 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -196,7 +196,7 @@ src_configure() {
 	# Policykit support depends on consolekit support.  Therefore, force on
 	# consolekit, even if it's USE flag is off, if policykit support is on.
 	# This enables packages to USE-depend on hal[policykit?]
-	if use policykit ; then 
+	if use policykit ; then
 		consolekit="--enable-console-kit"
 	fi
 
