@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libnice
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnice/ChangeLog,v 1.1 2009/05/10 21:02:33 ford_prefect Exp $
+
+*libnice-0.0.6 (10 May 2009)
+
+  10 May 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +libnice-0.0.6.ebuild, +metadata.xml:
+  Initial commit
+
