@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.26.1.ebuild,v 1.1 2009/05/10 10:58:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/vinagre-2.26.1.ebuild,v 1.2 2009/05/10 16:32:35 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ pkg_setup() {
 src_prepare()  {
 	gnome2_src_prepare
 
-	# Make applet optional, bug #267279 
+	# Make applet optional, bug #267279
 	epatch "${FILESDIR}/${P}-optional-applet.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
