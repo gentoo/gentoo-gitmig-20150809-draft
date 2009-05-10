@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-9999.ebuild,v 1.1 2009/05/05 11:55:19 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/mono-tools-9999.ebuild,v 1.2 2009/05/10 10:40:32 loki_val Exp $
 
 EAPI=2
 
@@ -44,4 +44,10 @@ src_configure() {
 		$(use_enable xulrunner mozilla) \
 		$(use_enable webkit) \
 		|| die "configure failed"
+}
+
+src_install() {
+	go-mono_src_install
+	# Defunct .desktop file, see bug 266694
+	find "${D}" -type f -name 'mprof-heap-viewer.desktop' -exec rm -f '{}' '+' || die "removal of mprof-heap-viewer.desktop failed"
 }
