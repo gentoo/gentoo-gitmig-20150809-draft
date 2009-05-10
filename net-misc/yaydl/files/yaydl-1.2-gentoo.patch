@@ -1,0 +1,47 @@
+--- yaydl.pl.old	2009-05-10 10:18:59.000000000 +0200
++++ yaydl.pl	2009-05-10 10:30:02.000000000 +0200
+@@ -521,15 +521,15 @@
+ 	my $mencoder = which "mencoder";
+ 	my @commands;
+ 	my $return;
++	if(! $ffmpeg){
++		push (@commands, "ffmpeg -i \"$source\" \"$encode\"");
++		print "ffmpeg: found\n";
++	}
+ 	if (! $mencoder){
+ 		push(@commands, "mencoder \"$source\" -oac mp3lame -lameopts abr:br=92" .
+ 			" -ovc xvid -xvidencopts bitrate=150 -o \"$encode\"");
+ 		print "mencoder: found\n";
+ 	}
+-	if(! $ffmpeg){
+-		push (@commands, "ffmpeg -i \"$source\" \"$encode\"");
+-		print "ffmpeg: found\n";
+-	}
+ 	if($ffmpeg && $mencoder){
+ 		$options{'encode'} = 0;
+ 		$urls{$base}{'error'} = 
+@@ -561,21 +561,12 @@
+ 	my $return = 0;
+ 	my $encode = removeextension($source) . ".mp3";
+ 	$urls{$base}{'sound'} = $encode;
+-	if (which("mplayer") == 1){
++	if (which("ffmpeg") == 1){
+ 		$options{'sound'} = 0;
+-		$urls{$base}{'error'} = "mplayer not found - encoding disabled";
++		$urls{$base}{'error'} = "ffmpeg not found - extracting soundtrack disabled";
+ 		return -1;
+ 	}
+-	if(defined $urls{$base}{'ismp4'}){
+-		if (which("ffmpeg") == 1){
+-			$urls{$base}{'error'} = "ffmpeg is required to encode mp4-videos!\n";
+-			return -1
+-		}
+-		$return = system("ffmpeg -i \"$source\" -vn -acodec libmp3lame -ab 192k \"$encode\"");
+-	}
+-	else {
+-		$return = system("mplayer -dumpaudio -dumpfile \"$encode\" \"$source\"");
+-	}	
++	$return = system("ffmpeg -i \"$source\" -vn -acodec libmp3lame -ab 192k \"$encode\"");
+ 	if ($return != 0){
+ 		$options{'sound'} = 0;
+ 		$options{'tag'} = 0;

@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/yaydl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/ChangeLog,v 1.1 2009/05/10 08:47:00 volkmar Exp $
+
+*yaydl-1.2 (10 May 2009)
+
+  10 May 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/yaydl-1.2-gentoo.patch, +metadata.xml, +yaydl-1.2.ebuild:
+  Initial commit.
+
