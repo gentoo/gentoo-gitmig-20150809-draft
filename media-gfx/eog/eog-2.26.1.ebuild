@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.22.3-r1.ebuild,v 1.7 2008/11/13 19:24:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.26.1.ebuild,v 1.1 2009/05/10 19:09:34 eva Exp $
 
 inherit eutils gnome2
 
@@ -9,21 +9,18 @@ HOMEPAGE="http://www.gnome.org/projects/eog/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="dbus exif lcms python"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="dbus doc exif lcms python xmp"
 
-# FIXME: add exempi to the tree ?
-
-RDEPEND=">=x11-libs/gtk+-2.11.6
+RDEPEND=">=x11-libs/gtk+-2.13.1
 	>=dev-libs/glib-2.15.3
-	>=gnome-base/gnome-vfs-2.10
-	>=gnome-base/libgnomeui-2.10
-	>=gnome-base/libglade-2.3.6
+	>=dev-libs/libxml2-2
 	>=gnome-base/gconf-2.5.90
+	>=gnome-base/gnome-desktop-2.25.1
 	>=media-libs/libart_lgpl-2.3.16
-	>=gnome-base/gnome-desktop-2.10
 	>=x11-themes/gnome-icon-theme-2.19.1
 	>=x11-misc/shared-mime-info-0.20
+
 	dbus? ( >=dev-libs/dbus-glib-0.71 )
 	exif? (
 		>=media-libs/libexif-0.6.14
@@ -31,15 +28,16 @@ RDEPEND=">=x11-libs/gtk+-2.11.6
 	lcms? ( media-libs/lcms )
 	python? (
 		>=dev-lang/python-2.3
-		>=dev-python/pygobject-2.11.5
-		>=dev-python/pygtk-2.9.7
-		>=dev-python/gnome-python-2.18.2
-	)"
+		>=dev-python/pygobject-2.15.1
+		>=dev-python/pygtk-2.13 )
+	xmp? ( >=media-libs/exempi-2 )"
+
 DEPEND="${RDEPEND}
 	app-text/gnome-doc-utils
 	sys-devel/gettext
-	>=dev-util/intltool-0.35
-	>=dev-util/pkgconfig-0.17"
+	>=dev-util/intltool-0.40
+	>=dev-util/pkgconfig-0.17
+	doc? ( >=dev-util/gtk-doc-1.10 )"
 
 DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"
 
@@ -47,11 +45,12 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		$(use_with exif libjpeg)
 		$(use_with exif libexif)
-		$(use_with dbus dbus-glib-1)
+		$(use_with dbus)
 		$(use_with lcms cms)
 		$(use_enable python)
-		--without-xmp
-		--disable-scrollkeeper"
+		$(use_with xmp)
+		--disable-scrollkeeper
+		--disable-schemas-install"
 }
 
 pkg_postinst() {

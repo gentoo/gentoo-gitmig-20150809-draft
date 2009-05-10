@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/eog
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.241 2009/04/27 14:25:27 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.242 2009/05/10 19:09:34 eva Exp $
+
+*eog-2.26.1 (10 May 2009)
+
+  10 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -eog-2.20.2.ebuild,
+  -eog-2.22.3-r1.ebuild, -eog-2.22.3-r3.ebuild,
+  -files/eog-2.22.3-CVE-2008-5987.patch,
+  -files/eog-2.22.3-unrecognized-chunks.patch, +eog-2.26.1.ebuild:
+  New version for GNOME 2.26. Drop libgnome and libglade dependencies.
+  Clean up old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> eog-2.24.3.1:
   Stable for HPPA (bug #260063).
