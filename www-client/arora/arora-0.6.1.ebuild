@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.6.1.ebuild,v 1.1 2009/05/08 13:35:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/arora-0.6.1.ebuild,v 1.2 2009/05/10 14:40:09 yngwin Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -14,7 +14,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND="x11-libs/qt-webkit:4"
+RDEPEND="x11-libs/qt-gui
+	x11-libs/qt-sql
+	x11-libs/qt-webkit"
 DEPEND="$RDEPEND"
 
 ARORA_LANGS="es es_CR et_EE fr_CA gl ms nb_NO uk zh_CN"

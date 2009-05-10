@@ -1,6 +1,10 @@
 # ChangeLog for www-client/arora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.13 2009/05/08 13:35:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/arora/ChangeLog,v 1.14 2009/05/10 14:40:09 yngwin Exp $
+
+  10 May 2009; Ben de Groot <yngwin@gentoo.org> -arora-0.5.ebuild,
+  -arora-0.6-r1.ebuild, arora-0.6.1.ebuild:
+  Drop old versions, add qt-sql dep, fixes bug 269157
 
 *arora-0.6.1 (08 May 2009)
 
