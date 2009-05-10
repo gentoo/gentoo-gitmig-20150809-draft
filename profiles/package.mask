@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9774 2009/05/10 17:42:36 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9775 2009/05/10 18:28:38 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -147,15 +147,6 @@ x11-misc/xkbdata
 =dev-util/mono-debugger-9999
 =dev-util/mono-tools-9999
 =virtual/monodoc-9999
-
-# Gilles Dartiguelongue <eva@gentoo.org> (05 May 2009)
-# Requires net-wireless/gnome-bluetooth-2.27
->=app-mobilephone/gnome-phone-manager-0.65
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (05 May 2009)
-# Requires net-wireless/bluez-4
-# Needs KEYWORDS on dev-libs/libunique, bug 268487
-=net-wireless/gnome-bluetooth-2.27*
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (04 May 2009)
 # Masked for removal
@@ -563,11 +554,6 @@ kde-misc/kgraphspace
 # A public service for the crazy gnome-overlay people
 # in the meantime. Bug 262863.
 =dev-dotnet/gnome-desktop-sharp-2.26*
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (20 mar 2009)
-# New version with net-wireless/bluez instead of bluez-lib
-# as dependency. Good luck if you want to test.
-~app-pda/libsyncml-0.5.2
 
 # Alex Legler <a3li@gentoo.org> (20 Mar 2009)
 # Ruby 1.9.1 for preliminary testing of libraries depending on it, bug 203706.
