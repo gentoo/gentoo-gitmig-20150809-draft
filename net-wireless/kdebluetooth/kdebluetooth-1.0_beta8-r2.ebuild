@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8-r2.ebuild,v 1.1 2009/05/11 17:08:50 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8-r2.ebuild,v 1.2 2009/05/11 19:53:12 hanno Exp $
 
 inherit kde
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 need-kde 3.5
 
 PATCHES="${FILESDIR}/${P}-gcc43.patch ${FILESDIR}/${P}-bashism.patch
-         ${FILESDIR}/${P}-kbluelock.diff"
+	${FILESDIR}/${P}-kbluelock.diff"
 
 src_unpack() {
 	kde_src_unpack
