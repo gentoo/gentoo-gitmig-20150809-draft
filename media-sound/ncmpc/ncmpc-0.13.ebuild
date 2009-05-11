@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.13.ebuild,v 1.1 2009/01/11 13:21:32 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.13.ebuild,v 1.2 2009/05/11 20:31:13 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 inherit multilib
 
 DESCRIPTION="A ncurses client for the Music Player Daemon (MPD)"
@@ -12,8 +12,9 @@ SRC_URI="http://downloads.sourceforge.net/musicpd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="artist-screen colors debug +help-screen key-screen lirc lyrics-screen
+IUSE="artist-screen colors debug +help-screen key-screen lyrics-screen
 mouse nls search-screen song-screen"
+#lirc
 
 RDEPEND=">=dev-libs/glib-2.4
 	dev-libs/popt
@@ -23,14 +24,15 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_configure() {
-	##The use_with lyrics-screen is for multilib
+	# The use_with lyrics-screen is for multilib
+	# USE lirc is broken wrt #250015
+	# $(use_enable lirc) \
 	econf \
 		$(use_enable artist-screen) \
 		$(use_enable colors) \
 		$(use_enable debug) \
 		$(use_enable help-screen) \
 		$(use_enable key-screen) \
-		$(use_enable lirc) \
 		$(use_enable lyrics-screen) \
 		$(use_with   lyrics-screen lyrics-plugin-dir /usr/$(get_libdir)/ncmpc/lyrics) \
 		$(use_enable mouse) \
