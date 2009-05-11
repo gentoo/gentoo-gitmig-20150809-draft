@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.26.1.ebuild,v 1.3 2009/05/07 20:58:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.26.1.ebuild,v 1.4 2009/05/11 10:39:11 nirbheek Exp $
 
 EAPI="2"
 
@@ -37,4 +37,12 @@ pkg_setup() {
 		--disable-static
 		$(use_with gnome)
 		$(use_enable ssl)"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix test to follow POSIX (for x86-fbsd)
+	# No patch to prevent having to eautoreconf
+	sed -e 's/\(test.*\)==/\1=/g' -i configure configure.ac || die "sed failed"
 }
