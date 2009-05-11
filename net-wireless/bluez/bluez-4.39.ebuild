@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.21.ebuild,v 1.1 2008/12/04 10:04:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.39.ebuild,v 1.1 2009/05/11 04:22:25 dev-zero Exp $
+
+EAPI="2"
 
 inherit autotools multilib eutils
 
@@ -11,9 +13,9 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86"
 
-IUSE="alsa cups debug doc examples gstreamer old-daemons test-programs usb"
+IUSE="alsa cups debug doc gstreamer old-daemons test-programs usb"
 
-RDEPEND="alsa? ( media-libs/alsa-lib )
+CDEPEND="alsa? ( media-libs/alsa-lib )
 	gstreamer? (
 		>=media-libs/gstreamer-0.10
 		>=media-libs/gst-plugins-base-0.10 )
@@ -22,25 +24,31 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	sys-fs/udev
 	dev-libs/glib
 	sys-apps/dbus
+	media-libs/libsndfile
+	>=dev-libs/libnl-1.1
 	!net-wireless/bluez-libs
 	!net-wireless/bluez-utils"
-DEPEND="!<dev-libs/libnl-1.1
-	sys-devel/flex
-	dev-util/pkgconfig
+DEPEND="sys-devel/flex
+	>=dev-util/pkgconfig-0.20
 	doc? ( dev-util/gtk-doc )
-	${RDEPEND}"
+	${CDEPEND}"
+RDEPEND="${CDEPEND}
+	sys-auth/pambase[consolekit]"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	epatch \
+		"${FILESDIR}/4.31-as_needed.patch" \
+		"${FILESDIR}/4.34-conditional_libsbc.patch"
 
 	if use cups; then
 		epatch "${FILESDIR}/4.18/cups-location.patch"
-		eautoreconf
 	fi
+
+	# needed for both patches
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# the order is the same as ./configure --help
 
 	# we don't need the other daemons either with the new
@@ -72,8 +80,6 @@ src_compile() {
 		--disable-pcmciarules \
 		$(use_enable debug) \
 		--localstatedir=/var
-
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -82,11 +88,16 @@ src_install() {
 	dodoc AUTHORS ChangeLog README || die
 
 	if use test-programs ; then
-		dobin input/test-input || die
+		cd "${S}/test"
+		dobin simple-agent simple-service monitor-bluetooth
+		newbin list-devices list-bluetooth-devices
+		for b in apitest hsmicro hsplay test-* ; do
+			newbin "${b}" "bluez-${b}"
+		done
+		insinto /usr/share/doc/${PF}/test-services
+		doins service-*
 
-		# a very simple example daemon
-		dobin test/passkey-agent || die
-		dobin test/auth-agent || die
+		cd "${S}"
 	fi
 
 	newinitd "${FILESDIR}/4.18/bluetooth-init.d" bluetooth || die
