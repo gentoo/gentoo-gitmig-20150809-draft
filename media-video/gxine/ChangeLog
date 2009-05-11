@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gxine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.95 2009/05/06 21:01:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.96 2009/05/11 17:20:18 ranger Exp $
+
+  11 May 2009; Brent Baude <ranger@gentoo.org> gxine-0.5.903.ebuild:
+  stable ppc64, bug 260644
 
   06 May 2009; Markus Meier <maekke@gentoo.org> gxine-0.5.903.ebuild:
   amd64 stable, bug #260644
