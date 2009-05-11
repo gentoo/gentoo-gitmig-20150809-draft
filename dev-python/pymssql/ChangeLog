@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymssql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.14 2009/05/11 06:26:01 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymssql/ChangeLog,v 1.15 2009/05/11 08:19:49 lordvan Exp $
+
+  11 May 2009; Thomas Raschbacher <lordvan@gentoo.org> pymssql-1.0.2.ebuild:
+  using EAPI2 style dep to require freetds with mssql support
 
 *pymssql-1.0.2 (11 May 2009)
 
