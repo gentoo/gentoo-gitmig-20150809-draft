@@ -1,0 +1,17 @@
+diff -uNr asterisk-1.6.0.6.ORIG/configure.ac asterisk-1.6.0.6/configure.ac
+--- asterisk-1.6.0.6.ORIG/configure.ac	2009-03-10 23:00:03.000000000 +0000
++++ asterisk-1.6.0.6/configure.ac	2009-03-10 22:58:59.000000000 +0000
+@@ -720,8 +720,11 @@
+ 		fi
+ 		imap_libs="${IMAP_TK_DIR}/c-client/c-client.a"
+ 	  	imap_include="-I${IMAP_TK_DIR}/c-client"
+-      	CPPFLAGS="${CPPFLAGS} ${imap_include}"
+-	  	LIBS="${LIBS} ${imap_libs} "`echo ${imap_ldflags}`
++		CPPFLAGS="${CPPFLAGS} -I/usr/include/imap"
++		LIBS="${LIBS} /usr/lib/c-client.a -lssl -lpam"
++		if test -f /usr/bin/krb5-config; then
++			LIBS="${LIBS} "`/usr/bin/krb5-config --libs krb5 gssapi kadm-client kadm-server`
++		fi
+ 	  	AC_LINK_IFELSE(
+ 	    	AC_LANG_PROGRAM(
+ 				[#include "c-client.h"

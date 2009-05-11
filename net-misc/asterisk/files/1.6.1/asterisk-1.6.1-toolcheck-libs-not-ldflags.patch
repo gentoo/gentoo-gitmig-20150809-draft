@@ -1,0 +1,23 @@
+diff -uNr asterisk-1.6.0.6.ORIG/autoconf/ast_ext_tool_check.m4 asterisk-1.6.0.6/autoconf/ast_ext_tool_check.m4
+--- asterisk-1.6.0.6.ORIG/autoconf/ast_ext_tool_check.m4	2009-03-16 13:17:33.000000000 +0000
++++ asterisk-1.6.0.6/autoconf/ast_ext_tool_check.m4	2009-03-16 13:18:26.000000000 +0000
+@@ -20,8 +20,8 @@
+ 		fi
+ 		CPPFLAGS="${CPPFLAGS} ${$1_INCLUDE}"
+ 
+-		saved_ldflags="${LDFLAGS}"
+-		LDFLAGS="${$1_LIB}"
++		saved_libs="${LIBS}"
++		LIBS="${$1_LIB}"
+ 
+ 		AC_LINK_IFELSE(
+ 		    [ AC_LANG_PROGRAM( [ $5 ],
+@@ -33,7 +33,7 @@
+ 		    []
+ 		)
+ 		CPPFLAGS="${saved_cppflags}"
+-		LDFLAGS="${saved_ldflags}"
++		LIBS="${saved_libs}"
+ 	    else
+ 		PBX_$1=1
+ 		AC_DEFINE([HAVE_$1], 1, [Define if your system has the $1 libraries.])
