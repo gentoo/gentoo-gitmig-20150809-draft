@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.157 2009/04/12 17:50:42 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.158 2009/05/11 20:14:15 spock Exp $
+
+  11 May 2009; Michał Januszewski <spock@gentoo.org>
+  splashutils-1.5.4.3.ebuild,
+  +files/splashutils-1.5.4.3-splash_geninitramfs.patch:
+  Fix bug #268784 (essential libdir not respected in splash_geninitramfs).
 
   12 Apr 2009; <solar@gentoo.org> splashutils-1.5.4.2.ebuild,
   splashutils-1.5.4.3.ebuild:
