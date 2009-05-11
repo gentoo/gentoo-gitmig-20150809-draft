@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/openclipart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/ChangeLog,v 1.15 2009/01/24 13:48:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/openclipart/ChangeLog,v 1.16 2009/05/11 13:44:43 bangert Exp $
+
+*openclipart-0.19 (11 May 2009)
+
+  11 May 2009; Thilo Bangert <bangert@gentoo.org> +openclipart-0.19.ebuild:
+  version bump - bug #264732
 
   24 Jan 2009; nixnut <nixnut@gentoo.org> openclipart-0.18-r1.ebuild:
   ppc stable #254547
