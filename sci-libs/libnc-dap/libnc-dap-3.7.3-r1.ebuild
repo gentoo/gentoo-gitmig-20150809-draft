@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.1 2009/04/27 01:54:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/libnc-dap-3.7.3-r1.ebuild,v 1.2 2009/05/11 03:50:00 nerdboy Exp $
 
 inherit eutils flag-o-matic fortran
 
@@ -23,6 +23,26 @@ DEPEND="${RDEPEND}
 	<=sci-libs/libdap-3.8.2"
 
 pkg_setup() {
+	if use fortran; then
+		fortran_pkg_setup
+		case "${FORTRANC}" in
+			# probably needs more compilers here, of which I have
+			# none, so feel free to provide flags for others...
+			g77)
+				export FCLAGS+="-finit-local-zero -fno-automatic \
+				    -fno-second-underscore -std=legacy -ff2c \
+				    -fall-intrinsics -static-libgfortran"
+				;;
+			*)
+				export FCLAGS+="-finit-local-zero -fno-automatic \
+				    -fno-second-underscore -std=gnu \
+				    -fall-intrinsics -static-libgfortran"
+				;;
+		esac
+	else
+		export FC=""
+	fi
+
 	if use full-test; then
 	    if [ -n "${DAP_TEST_OPTS}" ]; then
 		elog "User-specified test URL is ${DAP_TEST_OPTS}."
@@ -45,14 +65,23 @@ src_unpack() {
 	sed -i -e "s:MAX_NC_OPEN 32:MAX_NC_OPEN 128:g" \
 	    lnetcdf/{lnetcdf.h,netcdf.h} \
 	    || die "sed headers failed"
+
 	# missing definition causes unknown symbol errors
 	epatch "${FILESDIR}"/${P}_template-fix.patch
+
+	# this is specific to GNU Fortran
+	if [[ ${FORTRANC} = gfortran ]] ; then
+	    elog "updating for gfortran..."
+	    sed -i -e "s/= -Df2cFortran/= -DgFortran/" Makefile.in \
+		|| die "sed makefile.in failed"
+	fi
 }
 
 src_compile() {
 	local test_conf="${DAP_TEST_OPTS}"
 	local myconf="--disable-dependency-tracking --enable-largefile \
 	     --enable-64bit"
+	use fortran || myconf="${myconf} --disable-f77"
 	# debug can be set to 2 for extra verbosity
 	use debug && myconf="${myconf} --enable-debug=1"
 

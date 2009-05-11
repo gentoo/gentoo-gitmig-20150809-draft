@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/libnc-dap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.3 2009/04/27 01:54:33 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnc-dap/ChangeLog,v 1.4 2009/05/11 03:50:00 nerdboy Exp $
+
+  11 May 2009; Steve Arnold <nerdboy@gentoo.org> libnc-dap-3.7.3-r1.ebuild:
+  Updated to fix exported symbols with gfortran (one less underscore).  Only
+  supports gfortran and g77 at the moment.
 
 *libnc-dap-3.7.3-r1 (27 Apr 2009)
 
