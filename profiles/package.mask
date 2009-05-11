@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9783 2009/05/11 04:50:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9784 2009/05/11 08:49:47 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 May 2009)
+# Masked for removal wrt #209500, #183928, #238620, and #247781
+# Upstream, nenolod, said i'd kill it.
+media-plugins/eq-audacious
 
 # Markos Chandras <hwoarang@gentoo.org> (11 May 2009)
 # Moved from app-misc to x11-misc
