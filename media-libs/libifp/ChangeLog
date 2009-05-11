@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libifp
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.10 2007/02/22 01:55:21 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/ChangeLog,v 1.11 2009/05/11 22:25:58 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org> libifp-1.0.0.2.ebuild:
+  Respect CFLAGS and CXXFLAGS wrt #240814, thanks to Diego E. Pettenò.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

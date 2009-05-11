@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.9 2006/07/18 17:34:31 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.10 2009/05/11 22:25:58 ssuominen Exp $
+
+EAPI=2
 
 DESCRIPTION="A general-purpose library-driver for iRiver's iFP portable audio players."
 HOMEPAGE="http://ifp-driver.sourceforge.net/libifp/"
@@ -11,15 +13,21 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
 IUSE="doc examples module"
 
-DEPEND=">=dev-libs/libusb-0.1.0
-	doc? ( >=app-doc/doxygen-1.3.7 )"
-
-RDEPEND=">=dev-libs/libusb-0.1.0
+RDEPEND=">=dev-libs/libusb-0.1
 	module? (
 		kernel_linux? ( ~media-sound/libifp-module-${PV} )
 	)"
+DEPEND="${RDEPEND}
+	doc? ( >=app-doc/doxygen-1.3.7 )
+	sys-apps/sed"
 
-src_compile() {
+src_prepare() {
+	sed -e '/CFLAGS=/s:-g -O2:${CFLAGS}:' \
+		-e '/CXXFLAGS=/s:-g -O2:${CXXFLAGS}:' \
+		-i configure || die "sed failed"
+}
+
+src_configure() {
 	# hack to prevent docs from building
 	use doc || DOCS="have_doxygen=no"
 
@@ -27,14 +35,11 @@ src_compile() {
 		--with-libusb \
 		--with-libifp \
 		--without-kmodule \
-		$(use_enable examples) \
-		|| die "configure failed"
-
-	emake || die "emake failed"
+		$(use_enable examples)
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# clean /usr/bin after installation
 	# by moving examples to examples dir
