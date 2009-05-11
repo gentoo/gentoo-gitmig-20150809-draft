@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r4.ebuild,v 1.4 2006/11/23 20:44:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r4.ebuild,v 1.5 2009/05/11 07:15:32 nerdboy Exp $
 
-inherit autotools flag-o-matic fortran
+inherit autotools eutils flag-o-matic fortran toolchain-funcs
 
 # substitute second dot by "r"
 MY_PV="${PV/./X}"
@@ -25,7 +25,9 @@ DEPEND="sys-libs/zlib
 		>=sys-apps/sed-4
 		szip? ( sci-libs/szip )"
 
-FORTRAN="g77 gfortran"
+pkg_setup() {
+	fortran_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
@@ -41,16 +43,25 @@ src_compile() {
 	# BUG #75415, the shipped config/linux-gnu settings are broken.
 	# -Wsign-compare does not work with g77, causing lack of -fPIC for shared
 	# objects.
-	sed -e 's|-Wsign-compare||g' -i "${S}"/config/linux-gnu || die
+	sed -i \
+	    -e 's|-Wsign-compare||g' \
+	    -e "s|/some/default/compiler/named/foo|$(tc-getCXX)|" \
+	    -e "s|BASENAME=foo|$(tc-getCXX)|" \
+	    -e "s|CC=gcc|CC=$(tc-getCC)|" \
+	    -e "s|CC_BASENAME=gcc|CC_BASENAME=$(tc-getCC)|" \
+	    -e "s|F77=g77|F77=${FORTRANC}|" \
+	    -e "s|F77_BASENAME=g77|F77_BASENAME=${FORTRANC}|" \
+	    -e "s|-O3 -fomit-frame-pointer|${CFLAGS}|" \
+	    "${S}"/config/linux-gnu || die
 
-	local myconf="--enable-production"
+	local myconf="--enable-production --with-fortran"
 
 	use szip && myconf="${myconf} --with-szlib=/usr"
 	use ppc && append-flags -DSUN
 
 	econf \
 		${myconf} \
-		F77="${FORTRANC}" \
+		F77="${FORTRANC} -fno-second-underscore -std=legacy -ff2c" \
 		|| die "configure failed"
 
 	make LDFLAGS="${LDFLAGS} -lm" || die "make failed"
