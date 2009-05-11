@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090311.ebuild,v 1.2 2009/04/01 14:50:37 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090508.ebuild,v 1.1 2009/05/11 14:44:59 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
@@ -12,17 +12,14 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc nls qt4"
+#IUSE="doc nls qt4"
+IUSE="doc nls"
 
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2
 	>=gnome-base/gconf-2.12
 	>=gnome-base/librsvg-2
 	sys-apps/dbus
-	qt4? (
-		>=x11-libs/qt-core-4.4:4
-		>=x11-libs/qt-dbus-4.4:4
-	)
 	app-text/iso-codes
 	x11-libs/libX11
 	>=dev-lang/python-2.5
@@ -35,8 +32,11 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
 	>=dev-python/dbus-python-0.83
-	dev-python/pyxdg
-	x11-misc/notification-daemon"
+	dev-python/pyxdg"
+#	qt4? (
+#		>=x11-libs/qt-core-4.4:4
+#		>=x11-libs/qt-dbus-4.4:4
+#	)
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -54,10 +54,12 @@ src_unpack() {
 }
 
 src_compile() {
+	# qt4-immodule won't work
+	# http://code.google.com/p/ibus/issues/detail?id=341
 	econf \
 		$(use_enable doc gtk-doc) \
-		$(use_enable nls) \
-		$(use_enable qt4 qt4-immodule) || die
+		$(use_enable nls) || die
+#		$(use_enable qt4 qt4-immodule)
 	emake || die
 }
 
@@ -69,7 +71,7 @@ src_install() {
 
 pkg_postinst() {
 	local qt_im_module="xim"
-	use qt4 && qt_im_module="ibus"
+#	use qt4 && qt_im_module="ibus"
 
 	elog "To use ibus, you should:"
 	elog "1. Get input engines from sunrise overlay."
@@ -80,8 +82,8 @@ pkg_postinst() {
 	elog
 	elog "   $ ibus-setup"
 	elog
-	elog "3. Set the following in your"
-	elog "   user startup scripts such as .xinitrc, .xsession or .xprofile"
+	elog "3. Set the following in your user startup scripts"
+	elog "   such as .xinitrc, .xsession or .xprofile:"
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
 	elog "   export GTK_IM_MODULE=\"ibus\""

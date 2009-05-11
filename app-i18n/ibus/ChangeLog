@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/ibus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.28 2009/04/23 14:02:12 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ChangeLog,v 1.29 2009/05/11 14:44:59 matsuu Exp $
+
+*ibus-1.1.0.20090508 (11 May 2009)
+
+  11 May 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-1.1.0.20090311.ebuild, -ibus-1.1.0.20090331.ebuild,
+  -ibus-1.1.0.20090407.ebuild, ibus-1.1.0.20090413.ebuild,
+  ibus-1.1.0.20090423.ebuild, +ibus-1.1.0.20090508.ebuild:
+  Version bumped. Removed old versions. Removed x11-misc/notification-daemon
+  from RDEPEND.
 
 *ibus-1.1.0.20090423 (23 Apr 2009)
 

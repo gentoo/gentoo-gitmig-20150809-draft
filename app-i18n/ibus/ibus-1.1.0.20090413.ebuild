@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090413.ebuild,v 1.1 2009/04/13 15:40:03 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090413.ebuild,v 1.2 2009/05/11 14:44:59 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
@@ -32,8 +32,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	dev-python/pygtk
 	>=dev-python/dbus-python-0.83
-	dev-python/pyxdg
-	x11-misc/notification-daemon"
+	dev-python/pyxdg"
 #	qt4? (
 #		>=x11-libs/qt-core-4.4:4
 #		>=x11-libs/qt-dbus-4.4:4
