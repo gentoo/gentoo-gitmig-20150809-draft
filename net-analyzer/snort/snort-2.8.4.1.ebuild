@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.1.ebuild,v 1.3 2009/05/09 14:56:53 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.1.ebuild,v 1.4 2009/05/11 17:23:13 ranger Exp $
 
 inherit eutils autotools multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.snort.org/"
 SRC_URI="http://www.snort.org/dl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ppc ~ppc64 -sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc ppc64 -sparc ~x86"
 IUSE="static debug threads prelude memory-cleanup dynamicplugin decoder-preprocessor-rules ipv6 targetbased timestats ppm perfprofiling linux-smp-stats inline inline-init-failopen flexresp flexresp2 react aruba gre mpls postgres mysql odbc selinux"
 
 #flexresp, react, and inline _ONLY_ work with net-libs/libnet-1.0.2a
