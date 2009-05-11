@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.0.8.ebuild,v 1.1 2009/04/03 15:16:44 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.0.ebuild,v 1.1 2009/05/11 13:56:42 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -155,36 +155,36 @@ src_unpack() {
 	#
 	# put pid file(s) into /var/run/asterisk
 	#
-	epatch "${FILESDIR}"/1.6.0/${PN}-1.6.0-var_rundir.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1-var_rundir.patch || die "patch failed"
 
 	#
 	# fix gsm codec cflags (e.g. i586 core epias) and disable
 	# assembler optimizations
 	#
-	epatch "${FILESDIR}"/1.6.0/${PN}-1.6.0-gsm-pic.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1-gsm-pic.patch || die "patch failed"
 
 	#
 	# add missing LIBS for uclibc
 	#
-	epatch "${FILESDIR}"/1.6.0/${PN}-1.6.0-uclibc.patch  || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1-uclibc.patch  || die "patch failed"
 
 	#
 	# try to tame the custom build system a little so make likes it better
 	# patch credit: Diego E. 'Flameeyes' Pettenò <flameeyes@entoo.org>
 	#
-	epatch "${FILESDIR}"/1.6.0/asterisk-1.6.0.6-parallelmake.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-parallelmake.patch || die "patch failed"
 
 	#
 	# do not try to pass libraries in ldflags but use libs properly
 	# keeps NET-SNMP configure test from failing horribly on --as-needed
 	# http://bugs.digium.com/view.php?id=14671
 	#
-	epatch "${FILESDIR}"/1.6.0/asterisk-1.6.0.6-toolcheck-libs-not-ldflags.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-toolcheck-libs-not-ldflags.patch || die "patch failed"
 
 	#
 	# link UW-IMAP with Kerberos5 if necessary
 	#
-	epatch "${FILESDIR}"/1.6.0/asterisk-1.6.0.6-imap-kerberos.patch || die "patch failed"
+	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-imap-kerberos.patch || die "patch failed"
 
 	AT_M4DIR=autoconf eautoreconf
 

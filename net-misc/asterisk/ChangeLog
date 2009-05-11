@@ -1,6 +1,20 @@
 # ChangeLog for net-misc/asterisk
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.200 2009/04/21 18:38:57 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.201 2009/05/11 13:56:42 chainsaw Exp $
+
+*asterisk-1.6.1.0 (11 May 2009)
+
+  11 May 2009; <chainsaw@gentoo.org> -asterisk-1.6.0.8.ebuild,
+  +asterisk-1.6.1.0.ebuild, +files/1.6.1/asterisk-1.6.1-gsm-pic.patch,
+  +files/1.6.1/asterisk-1.6.1-imap-kerberos.patch,
+  +files/1.6.1/asterisk-1.6.1-parallelmake.patch,
+  +files/1.6.1/asterisk-1.6.1-toolcheck-libs-not-ldflags.patch,
+  +files/1.6.1/asterisk-1.6.1-uclibc.patch,
+  +files/1.6.1/asterisk-1.6.1-var_rundir.patch:
+  Version bump, closes bug #268017 by Michael Higgins. Please note that this
+  is another branch of Asterisk development, namely the 1.6.1.0 branch.
+  Courtesy notice, chan_sccp2 is not currently compatible with this. Patches
+  ported, old ebuild removed. Masked as before.
 
   21 Apr 2009; Raúl Porcel <armin76@gentoo.org> asterisk-1.2.32.ebuild:
   alpha/sparc stable wrt #237476
