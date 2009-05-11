@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.178 2009/01/28 02:32:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.179 2009/05/11 16:22:17 fmccor Exp $
+
+  11 May 2009; Ferris McCormick <fmccor@gentoo.org> gcc-config-1.4.1.ebuild:
+  Sparc stable, required for Bug #269322.
 
   28 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/gcc-config-1.4.1,
   gcc-config-1.4.1.ebuild:
