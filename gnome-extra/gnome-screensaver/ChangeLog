@@ -1,6 +1,14 @@
 # ChangeLog for gnome-extra/gnome-screensaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.96 2009/04/27 14:25:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-screensaver/ChangeLog,v 1.97 2009/05/11 22:59:46 eva Exp $
+
+*gnome-screensaver-2.26.1 (11 May 2009)
+
+  11 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-screensaver-2.22.2.ebuild, -gnome-screensaver-2.24.1.ebuild,
+  +gnome-screensaver-2.26.1.ebuild:
+  New version for GNOME 2.26. Get idle time from xorg and idle detection
+  from gnome-session. Clean up old revisions.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> gnome-screensaver-2.24.1-r1:
   Stable for HPPA (bug #260063).
