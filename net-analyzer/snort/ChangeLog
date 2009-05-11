@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.145 2009/05/11 17:23:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.146 2009/05/11 18:05:34 pva Exp $
+
+  11 May 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
+  Added Jason Wallace to maintainers.
 
   11 May 2009; Brent Baude <ranger@gentoo.org> snort-2.8.4.1.ebuild:
   stable ppc64, bug 268620

@@ -5,6 +5,10 @@
   <email>patrick@gentoo.org</email>
   <name>Patrick Lauer</name>
 </maintainer>
+<maintainer>
+  <email>jason.r.wallace@gmail.com</email>
+  <name>Jason Wallace</name>
+</maintainer>
 
 <herd>netmon</herd>
 <longdescription>Libpcap-based packet sniffer/logger/lightweight IDS</longdescription>
