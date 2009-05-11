@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.7 2009/05/10 19:19:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.8 2009/05/11 17:12:16 ranger Exp $
+
+  11 May 2009; Brent Baude <ranger@gentoo.org> libunique-1.0.8.ebuild:
+  keyworded ~arch for ppc64, bug 269233
 
   10 May 2009; Alexis Ballier <aballier@gentoo.org> libunique-1.0.8.ebuild:
   keyword ~x86-fbsd, bug #268487
