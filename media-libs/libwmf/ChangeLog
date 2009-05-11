@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libwmf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.58 2009/05/10 23:52:40 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/ChangeLog,v 1.59 2009/05/11 21:42:57 fauli Exp $
+
+  11 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  libwmf-0.2.8.4-r3.ebuild:
+  stable x86, security bug 268161
 
 *libwmf-0.2.8.4-r3 (10 May 2009)
 
