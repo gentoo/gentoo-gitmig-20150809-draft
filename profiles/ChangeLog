@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2640 2009/05/11 17:23:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2641 2009/05/11 19:07:42 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask =media-libs/libsoundtouch-1.4.0 because pkgconfig filename changed
+  and rdeps must be checked.
 
   11 May 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Remove gnome-desktop-sharp-2.26.0 mask. Gnome 2.26 is entering the tree.
