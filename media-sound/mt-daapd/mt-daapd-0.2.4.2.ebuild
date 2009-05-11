@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.2.ebuild,v 1.6 2009/05/11 17:55:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mt-daapd/mt-daapd-0.2.4.2.ebuild,v 1.7 2009/05/11 20:38:06 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -26,7 +26,7 @@ src_prepare() {
 	cp "${FILESDIR}"/${PN}.init.2 initd
 
 	if use avahi; then
-		sed -i -e 's:#USEHOWL need mDNSResponder:need avahi-daemon:' initd
+		sed -i -e 's:#USEHOWL need mDNSResponderPosix:need avahi-daemon:' initd
 	else
 		sed -i -e 's:#USEHOWL ::' initd
 	fi
