@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2642 2009/05/11 20:54:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2643 2009/05/11 23:23:11 cardoe Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 May 2009; Doug Goldstein <cardoe@gentoo.org>
+  arch/amd64/no-multilib/use.mask, features/64bit-native/use.mask:
+  Mask 32bit USE flag on no-multilib arches since it always requires
+  multilib. Patch from bug #265313
 
   11 May 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask media-sound/wavesurfer for removal because it's broken with new tcl
