@@ -11,8 +11,6 @@ Sonata is a lightweight GTK+ music client for the Music Player Daemon (MPD). It 
 </longdescription>
   <use>
     <flag name="lyrics">Support for lyrics fetching</flag>
-  </use>
-  <use>
     <flag name="trayicon">Enable support for trayicon</flag>
   </use>
 </pkgmetadata>
