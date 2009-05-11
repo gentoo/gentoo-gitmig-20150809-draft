@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.5 2009/04/23 16:00:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.6 2009/05/11 17:33:17 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -149,7 +149,7 @@ pkg_postinst() {
 	elog "You need to attach to a project to do anything useful with ${PN}."
 	elog "You can do this by running /etc/init.d/${PN} attach"
 	elog "The howto for configuration is located at:"
-	elog "http://${PN}.berkeley.edu/anonymous_platform.php"
+	elog "http://boinc.berkeley.edu/wiki/Anonymous_platform"
 	elog
 	# Add warning about the new password for the client, bug 121896.
 	elog "If you need to use the graphical client the password is in:"
