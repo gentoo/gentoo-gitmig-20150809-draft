@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/solfege
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.28 2008/12/04 20:48:57 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/ChangeLog,v 1.29 2009/05/11 13:06:44 ssuominen Exp $
+
+*solfege-3.15.1 (11 May 2009)
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +solfege-3.15.1.ebuild:
+  Version bump wrt #250818 and #250819, thanks to Gokdeniz Karadag for
+  reporting.
 
   04 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org> solfege-3.8.2.ebuild,
   solfege-3.10.3.ebuild, solfege-3.10.4.ebuild:
@@ -14,15 +21,15 @@
 
 *solfege-3.10.3 (17 Apr 2008)
 
-  17 Apr 2008; Samuli Suominen <drac@gentoo.org> -solfege-3.10.2.ebuild,
+  17 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> -solfege-3.10.2.ebuild,
   +solfege-3.10.3.ebuild:
   Version bump wrt #215666, thanks to Tim Harder for reporting. Make sure
   python doesn't get byte-compiled at install time wrt #210305.
 
 *solfege-3.10.2 (15 Feb 2008)
 
-  15 Feb 2008; Samuli Suominen <drac@gentoo.org> +solfege-3.10.2.ebuild:
-  Version bump wrt 209788 by Tim H.
+  15 Feb 2008; Samuli Suominen <ssuominen@gentoo.org> +solfege-3.10.2.ebuild:
+  Version bump wrt 209788 by Tim Harder.
 
   24 Nov 2007; Dawid Węgliński <cla@gentoo.org> -solfege-3.6.0.ebuild,
   solfege-3.8.2.ebuild:
@@ -30,12 +37,12 @@
 
 *solfege-3.8.2 (17 Oct 2007)
 
-  17 Oct 2007; Samuli Suominen <drac@gentoo.org> +solfege-3.8.2.ebuild:
+  17 Oct 2007; Samuli Suominen <ssuominen@gentoo.org> +solfege-3.8.2.ebuild:
   Version bump for bug 196135, thanks to Tim Harder for reporting.
 
 *solfege-3.8.1 (26 Jun 2007)
 
-  26 Jun 2007; Samuli Suominen <drac@gentoo.org> +solfege-3.8.1.ebuild:
+  26 Jun 2007; Samuli Suominen <ssuominen@gentoo.org> +solfege-3.8.1.ebuild:
   Version bump for bug 183189, thanks to Tim Harder for reporting.
 
 *solfege-3.8.0 (12 Jun 2007)
@@ -45,9 +52,6 @@
 
   25 Mar 2007; Raúl Porcel <armin76@gentoo.org> solfege-3.6.0.ebuild:
   x86 stable wrt bug 147432
-
-  25 Mar 2007; Samuli Suominen <drac@gentoo.org> solfege-3.6.0.ebuild:
-  Remove redudant || die from end of econf, emptylines, TODO from dodoc.
 
   05 Feb 2007; Alexis Ballier <aballier@gentoo.org> solfege-3.6.0.ebuild:
   Update docbook-xsl-stylesheets deps, thanks to Bruno Roggeri for the patch,
