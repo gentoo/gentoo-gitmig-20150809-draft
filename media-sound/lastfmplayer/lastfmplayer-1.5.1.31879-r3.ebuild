@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.1.31879-r3.ebuild,v 1.1 2009/03/22 23:42:49 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/lastfmplayer-1.5.1.31879-r3.ebuild,v 1.2 2009/05/11 18:35:06 ssuominen Exp $
 
-EAPI="2"
-
-inherit eutils multilib qt4
+EAPI=2
+inherit eutils multilib toolchain-funcs qt4
 
 MY_P="${P/lastfmplayer/lastfm}.dfsg"
 
@@ -29,7 +28,7 @@ RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-sql:4 ) x11-libs/qt:4 )
 DEPEND="${RDEPEND}
 	app-arch/sharutils"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 PATCHES=(
 	"${FILESDIR}"/volumeslider_h-qt45.patch
@@ -49,7 +48,7 @@ src_prepare() {
 }
 
 src_compile() {
-	emake || die "emake failed"
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die "emake failed"
 	cd i18n; lrelease *.ts
 }
 

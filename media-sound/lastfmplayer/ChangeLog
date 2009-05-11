@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lastfmplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.38 2009/03/29 22:58:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfmplayer/ChangeLog,v 1.39 2009/05/11 18:35:06 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  lastfmplayer-1.5.1.31879-r3.ebuild:
+  Respect CC and CXX wrt #246621, thanks to Steve Dibb.
 
   29 Mar 2009; Markos Chandras <hwoarang@gentoo.org>
   -lastfmplayer-1.4.2.58240.ebuild, -lastfmplayer-1.4.2.58240-r1.ebuild:
