@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pictureflow/pictureflow-0.1.0.ebuild,v 1.1 2009/05/09 15:09:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pictureflow/pictureflow-0.1.0.ebuild,v 1.2 2009/05/11 14:24:54 fmccor Exp $
 
 EAPI="2"
 inherit qt4
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-gui"
