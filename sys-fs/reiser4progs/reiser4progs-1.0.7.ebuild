@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.7.ebuild,v 1.2 2009/02/09 18:28:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.7.ebuild,v 1.3 2009/05/11 05:54:29 vapier Exp $
 
-inherit multilib
+inherit multilib eutils
 
 MY_P=${PN}-${PV/_p/-}
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
@@ -22,11 +22,8 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	cat <<-EOF > run-ldconfig
-		#!/bin/sh
-		true
-	EOF
+	epatch "${FILESDIR}"/${P}-gcc-4.4.patch #269240
+	printf '#!/bin/sh\ntrue\n' > run-ldconfig
 }
 
 src_compile() {
