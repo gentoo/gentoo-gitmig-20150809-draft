@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.88 2009/03/06 18:56:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.89 2009/05/11 19:27:13 fauli Exp $
+
+  11 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  gnokii-0.6.27-r2.ebuild:
+  stable x86, bug 234787
 
   06 Mar 2009; Alin Năstac <mrness@gentoo.org> gnokii-0.6.22-r2.ebuild,
   gnokii-0.6.26-r2.ebuild, gnokii-0.6.27-r2.ebuild:
