@@ -26,3 +26,30 @@ Index: moc-2.5.0-alpha3/decoder_plugins/ffmpeg/ffmpeg.c
  
  /* FFmpeg also likes common names, without that, our common.h and log.h would
   * not be included. */
+Index: moc-2.5.0-alpha3/decoder_plugins/ffmpeg/ffmpeg.c
+===================================================================
+--- moc-2.5.0-alpha3.orig/decoder_plugins/ffmpeg/ffmpeg.c
++++ moc-2.5.0-alpha3/decoder_plugins/ffmpeg/ffmpeg.c
+@@ -228,12 +228,12 @@
+ {
+ 	struct ffmpeg_data *data = (struct ffmpeg_data *)prv_data;
+ 	int ret;
+-	int data_size;
+ 	char avbuf[AVCODEC_MAX_AUDIO_FRAME_SIZE * sizeof(int16_t)];
+ 	AVPacket pkt;
+ 	uint8_t *pkt_data;
+ 	int pkt_size = 0;
+ 	int filled = 0;
++	int data_size = sizeof(avbuf);
+ 
+ 	decoder_error_clear (&data->error);
+ 
+@@ -276,7 +276,7 @@
+ 		while (pkt_size) {
+ 			int len;
+ 		
+-			len = avcodec_decode_audio (data->enc, (int16_t *)avbuf,
++			len = avcodec_decode_audio2 (data->enc, (int16_t *)avbuf,
+ 					&data_size, pkt_data, pkt_size);
+ 			debug ("Decoded %dB", data_size);
+ 

@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r2.ebuild,v 1.7 2008/07/17 18:56:29 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r2.ebuild,v 1.8 2009/05/11 18:03:30 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils
 
 MY_P=${P/_/-}
-
 MOC_M4_VER=1
 
 DESCRIPTION="Music On Console - ncurses interface for playing audio files"
@@ -40,9 +40,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-faad2.patch \
 		"${FILESDIR}"/${P}-ffmpegheaders.patch \
 		"${FILESDIR}"/${P}-libtool22.patch \
@@ -51,8 +49,9 @@ src_unpack() {
 	AT_M4DIR="m4" eautoreconf
 }
 
-src_compile() {
-	econf --without-rcc \
+src_configure() {
+	econf \
+		--without-rcc \
 		$(use_with aac) \
 		$(use_with jack) \
 		$(use_with mad mp3) \
@@ -69,11 +68,10 @@ src_compile() {
 		$(use_with libsamplerate samplerate) \
 		$(use_with curl) \
 		$(use_enable debug)
-	emake || die "emake failed."
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO *.example
 	rm -rf "${D}"/usr/share/doc/${PN}
 }

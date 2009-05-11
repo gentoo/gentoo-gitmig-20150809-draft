@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/moc
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.63 2008/07/17 18:56:29 corsair Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/ChangeLog,v 1.64 2009/05/11 18:03:30 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  files/moc-2.5.0_alpha3-ffmpegheaders.patch:
+  Extend ffmpeg patch wrt #258890, thanks to Mateusz Baran.
 
   17 Jul 2008; Markus Rothe <corsair@gentoo.org> moc-2.5.0_alpha3-r2.ebuild:
   Stable on ppc64; bug #230826
@@ -20,7 +24,7 @@
   moc-2.5.0_alpha3-r2.ebuild:
   amd64 stable wrt bug #230826
 
-  05 Jul 2008; Samuli Suominen <drac@gentoo.org>
+  05 Jul 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/moc-2.5.0_alpha3-fix_default_configuration_layout.patch,
   moc-2.5.0_alpha3-r2.ebuild:
   Fix default configuration layout (upstream), thanks to Emil Karlson and
@@ -28,11 +32,12 @@
 
 *moc-2.5.0_alpha3-r2 (08 May 2008)
 
-  08 May 2008; Samuli Suominen <drac@gentoo.org>
+  08 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/moc-2.5.0_alpha3-libtool22.patch, +moc-2.5.0_alpha3-r2.ebuild:
   Add missing AC_PROG_CXX and use system ltdl for libtool-2.2.
 
-  10 Apr 2008; Samuli Suominen <drac@gentoo.org> moc-2.5.0_alpha3-r1.ebuild:
+  10 Apr 2008; Samuli Suominen <ssuominen@gentoo.org>
+  moc-2.5.0_alpha3-r1.ebuild:
   DEPEND dev-util/pkgconfig because eautoreconf fails without pkg.m4 wrt
   #216940, thanks to bonsaikitten and aballier.
 
@@ -52,8 +57,8 @@
   02 Apr 2008; Markus Meier <maekke@gentoo.org> moc-2.5.0_alpha3-r1.ebuild:
   x86 stable, bug #215722
 
-  21 Mar 2008; Samuli Suominen <drac@gentoo.org> -moc-2.5.0_alpha3.ebuild,
-  moc-2.5.0_alpha3-r1.ebuild:
+  21 Mar 2008; Samuli Suominen <ssuominen@gentoo.org>
+  -moc-2.5.0_alpha3.ebuild, moc-2.5.0_alpha3-r1.ebuild:
   amd64 stable
 
   09 Mar 2008; Alexis Ballier <aballier@gentoo.org>
@@ -63,13 +68,13 @@
 
 *moc-2.5.0_alpha3-r1 (05 Mar 2008)
 
-  05 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  05 Mar 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/moc-2.5.0_alpha3-faad2.patch, +moc-2.5.0_alpha3-r1.ebuild:
   aac USE for media-libs/faad2 by Hendrik Iben, bug 211805.
 
 *moc-2.5.0_alpha3 (01 Mar 2008)
 
-  01 Mar 2008; Samuli Suominen <drac@gentoo.org>
+  01 Mar 2008; Samuli Suominen <ssuominen@gentoo.org>
   -files/moc-2.4.1+flac-1.1.3.patch, -moc-2.4.1.ebuild, -moc-2.4.2.ebuild,
   +moc-2.5.0_alpha3.ebuild:
   Version bump wrt #211805, thanks to Hendrik Iben.
@@ -86,23 +91,21 @@
   24 Nov 2007; Markus Rothe <corsair@gentoo.org> moc-2.5.0_alpha2.ebuild:
   Stable on ppc64; bug #200134
 
-  24 Nov 2007; Samuli Suominen <drac@gentoo.org> moc-2.5.0_alpha2.ebuild:
+  24 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> moc-2.5.0_alpha2.ebuild:
   Timidity plug-in needs Timidity++ installed for timidity.cfg.
 
-  23 Nov 2007; Samuli Suominen <drac@gentoo.org> moc-2.5.0_alpha2.ebuild:
+  23 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> moc-2.5.0_alpha2.ebuild:
   amd64 stable wrt #200134
 
-  08 Aug 2007; Samuli Suominen <drac@gentoo.org> moc-2.5.0_alpha2.ebuild:
-  Fix timidity depends.
-
-  07 Aug 2007; Samuli Suominen <drac@gentoo.org>
+  07 Aug 2007; Samuli Suominen <ssuominen@gentoo.org>
   +files/moc-2.5.0_alpha2-endianess.patch, moc-2.5.0_alpha2.ebuild:
   Apply endianess fixes from bug 169785, by Damian Pietras, Elimar Riesebieter
   and Hendrik Iben.
 
 *moc-2.5.0_alpha2 (30 Jul 2007)
 
-  30 Jul 2007; Samuli Suominen <drac@gentoo.org> +moc-2.5.0_alpha2.ebuild:
+  30 Jul 2007; Samuli Suominen <ssuominen@gentoo.org>
+  +moc-2.5.0_alpha2.ebuild:
   Version bump for bug 169785, thanks to Hendrik Iben for reporting.
 
   13 Jun 2007; Alexis Ballier <aballier@gentoo.org> -moc-2.1.4-r1.ebuild,
