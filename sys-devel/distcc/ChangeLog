@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.199 2009/05/11 15:35:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.200 2009/05/11 16:24:35 fmccor Exp $
+
+  11 May 2009; Ferris McCormick <fmccor@gentoo.org> distcc-3.1-r4.ebuild:
+  Sparc stable, bug #269322.
 
   11 May 2009; MATSUU Takuto <matsuu@gentoo.org> -distcc-3.1-r3.ebuild:
   Removed old version.
