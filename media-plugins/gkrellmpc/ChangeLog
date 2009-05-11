@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gkrellmpc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/ChangeLog,v 1.8 2008/05/30 06:59:59 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/ChangeLog,v 1.9 2009/05/11 22:08:53 ssuominen Exp $
+
+*gkrellmpc-0.1_beta9-r1 (11 May 2009)
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gkrellmpc-0.1_beta9.ebuild, +gkrellmpc-0.1_beta9-r1.ebuild,
+  +files/gkrellmpc-0.1_beta9-mt.patch:
+  Use separate thread to init connection patch by dimonb wrt #264986.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
