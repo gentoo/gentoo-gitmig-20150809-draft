@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.61 2009/01/25 03:59:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/ChangeLog,v 1.62 2009/05/11 16:46:24 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org> vice-2.1.ebuild,
+  +files/vice-2.1-gcc44.patch:
+  Fix compile with GCC 4.4 wrt #269311, thanks to Martin Väth.
 
 *vice-2.1 (25 Jan 2009)
 
