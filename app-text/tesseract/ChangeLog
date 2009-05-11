@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tesseract
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.18 2009/04/14 20:47:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/ChangeLog,v 1.19 2009/05/11 16:59:59 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org> tesseract-2.03.ebuild,
+  +files/tesseract-2.03-gcc44.patch:
+  Fix compile with GCC 4.4 wrt #269320, thanks to Jose daLuz and Victor
+  Ostorga.
 
   14 Apr 2009; Brent Baude <ranger@gentoo.org> tesseract-2.03.ebuild:
   Marking tesseract-2.03 ppc64 for bug 245230

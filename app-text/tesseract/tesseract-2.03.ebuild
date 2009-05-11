@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.03.ebuild,v 1.6 2009/04/14 20:47:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.03.ebuild,v 1.7 2009/05/11 16:59:59 ssuominen Exp $
 
 inherit eutils
 
@@ -25,14 +25,15 @@ linguas_es linguas_pt linguas_vi"
 
 DEPEND="tiff? ( media-libs/tiff )"
 
-S="${WORKDIR}/${P}"
-
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	# Includes for gcc 4.3
-	epatch "${FILESDIR}/includes.patch" || die
+	epatch "${FILESDIR}"/includes.patch
+
+	# Includes for gcc 4.4
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 
 	# Move language files
 	mv -f "${WORKDIR}"/tessdata/* tessdata/
