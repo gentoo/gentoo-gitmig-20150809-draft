@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.120 2009/05/10 10:43:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.121 2009/05/11 17:13:12 ranger Exp $
+
+  11 May 2009; Brent Baude <ranger@gentoo.org> vino-2.26.1.ebuild:
+  keyworded ~arch for ppc64, bug 269233
 
 *vino-2.26.1 (10 May 2009)
 
