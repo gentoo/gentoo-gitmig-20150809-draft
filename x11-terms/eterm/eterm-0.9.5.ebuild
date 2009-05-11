@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.5.ebuild,v 1.11 2009/05/05 10:54:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.5.ebuild,v 1.12 2009/05/11 08:40:10 vapier Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -8,7 +8,7 @@ inherit eutils autotools
 MY_P=Eterm-${PV}
 
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/eterm"
+	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/eterm/Eterm"
 	inherit subversion
 	SRC_URI=""
 	KEYWORDS=""
@@ -47,7 +47,7 @@ fi
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		cvs_src_unpack
+		subversion_src_unpack
 		cd "${S}"
 		eautoreconf
 	else
