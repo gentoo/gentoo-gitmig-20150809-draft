@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/rednotebook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.1 2009/05/10 22:07:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/ChangeLog,v 1.2 2009/05/11 08:16:45 hwoarang Exp $
+
+  11 May 2009; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
+  Adding Josh Saddler <nightmorph@gentoo.org> as proxy maintainer
 
 *rednotebook-0.6.9 (10 May 2009)
 

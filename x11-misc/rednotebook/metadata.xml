@@ -6,6 +6,11 @@
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
 </maintainer>
+<maintainer>
+<email>nightmorph@gentoo.org</email>
+<name>Josh Saddler</name>
+<description>Proxy maintainer</description>
+</maintainer>
 <longdescription lang="en">
 </longdescription>
 </pkgmetadata>
