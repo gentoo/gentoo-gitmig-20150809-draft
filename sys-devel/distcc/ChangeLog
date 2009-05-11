@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.198 2009/04/07 15:52:16 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.199 2009/05/11 15:35:59 matsuu Exp $
+
+  11 May 2009; MATSUU Takuto <matsuu@gentoo.org> -distcc-3.1-r3.ebuild:
+  Removed old version.
 
 *distcc-3.1-r4 (07 Apr 2009)
 
