@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9785 2009/05/11 10:44:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9786 2009/05/11 17:23:25 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -551,12 +551,6 @@ kde-misc/kgraphspace
 # Masked because of the dep on =x11-libs/qt-4.3*:4. Waiting for jokey
 # feedback to determine whether to remove it or fix the dep
 =dev-util/qgit-2.0-r1
-
-# Peter Alfredsen <loki_val@gentoo.org> (21 Mar 2009)
-# Masked till Gnome-2.26 makes it into the tree.
-# A public service for the crazy gnome-overlay people
-# in the meantime. Bug 262863.
-=dev-dotnet/gnome-desktop-sharp-2.26*
 
 # Alex Legler <a3li@gentoo.org> (20 Mar 2009)
 # Ruby 1.9.1 for preliminary testing of libraries depending on it, bug 203706.
