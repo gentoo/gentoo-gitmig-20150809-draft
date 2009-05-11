@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.24.0.ebuild,v 1.3 2009/03/11 02:17:27 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-utils/gnome-utils-2.26.0.ebuild,v 1.1 2009/05/11 23:13:37 eva Exp $
+
+EAPI="2"
 
 inherit gnome2
 
@@ -9,16 +11,15 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="doc hal ipv6"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="doc hal ipv6 test"
 
 RDEPEND=">=dev-libs/glib-2.16.0
-	>=x11-libs/gtk+-2.11.6
+	>=x11-libs/gtk+-2.14
 	>=gnome-base/gnome-desktop-2.9.91
 	>=gnome-base/libgnome-2.13.2
 	>=gnome-base/libgnomeui-2.13.7
 	>=gnome-base/libglade-2.3
-	>=gnome-base/libbonoboui-2.1
 	>=gnome-base/gnome-vfs-2.8.4
 	>=gnome-base/gnome-panel-2.13.4
 	>=gnome-base/libgtop-2.12
@@ -42,7 +43,15 @@ pkg_setup() {
 		$(use_enable ipv6)
 		$(use_enable hal)
 		$(use_enable hal gfloppy)
-		--enable-console-helper=no
+		--enable-zlib
 		--disable-schemas-install
 		--disable-scrollkeeper"
+}
+
+src_prepare() {
+	gnome2_src_pre
+
+	if ! use test ; then
+		sed -e 's/ tests//' -i logview/Makefile* || die "sed failed";
+	fi
 }
