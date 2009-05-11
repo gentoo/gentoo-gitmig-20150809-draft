@@ -1,26 +1,35 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.22.3.ebuild,v 1.7 2008/11/13 19:49:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.26.1.ebuild,v 1.1 2009/05/11 22:35:02 eva Exp $
+
+EAPI="2"
+
+GCONF_DEBUG="no"
 
 # make sure games is inherited first so that the gnome2
 # functions will be called if they are not overridden
-inherit games games-ggz eutils gnome2 python autotools virtualx
+inherit games games-ggz eutils gnome2 python virtualx
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://live.gnome.org/GnomeGames/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~sh sparc x86 ~x86-fbsd"
-IUSE="artworkextra guile opengl"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+IUSE="artworkextra guile opengl test"
 
-RDEPEND=">=gnome-base/libgnomeui-2.16.0
-	>=gnome-base/libgnome-2.16.0
-	>=dev-python/pygtk-2.10
-	>=dev-python/gnome-python-desktop-2.17.3
-	>=x11-libs/gtk+-2.12
-	>=gnome-base/gconf-2
+RDEPEND=">=dev-python/pygtk-2.10
+	dev-python/pygobject
+	>=x11-libs/gtk+-2.14
+	>=dev-libs/dbus-glib-0.75
+
+	>=dev-python/gconf-python-2.17.3
+	!sh? ( >=dev-python/bug-buddy-python-2.17.3 )
+	>=dev-python/libgnomeprint-python-2.17.3
+
 	>=x11-libs/cairo-1
+	>=dev-python/pycairo-1
+	>=gnome-base/gconf-2
 	>=dev-libs/libxml2-2.4.0
 	>=gnome-base/librsvg-2.14
 	>=media-libs/gstreamer-0.10.11
@@ -28,19 +37,22 @@ RDEPEND=">=gnome-base/libgnomeui-2.16.0
 	>=dev-libs/glib-2.6.3
 	>=dev-games/libggz-0.0.14
 	>=dev-games/ggz-client-libs-0.0.14
-	guile? ( >=dev-scheme/guile-1.6.5 )
+
+	guile? ( >=dev-scheme/guile-1.6.5[deprecated,regex] )
 	artworkextra? ( gnome-extra/gnome-games-extra-data )
 	opengl? ( dev-python/pygtkglext )
-	!games-board/glchess"
+	!games-board/glchess
+	x11-libs/libSM"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.53
 	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.35
+	>=dev-util/intltool-0.40.4
 	>=sys-devel/gettext-0.10.40
 	>=gnome-base/gnome-common-2.12.0
 	>=app-text/scrollkeeper-0.3.8
-	  app-text/gnome-doc-utils"
+	>=app-text/gnome-doc-utils-0.10
+	test? ( >=dev-libs/check-0.9.4 )"
 
 # Others are installed below; multiples in this package.
 DOCS="AUTHORS HACKING MAINTAINERS TODO"
@@ -49,39 +61,49 @@ DOCS="AUTHORS HACKING MAINTAINERS TODO"
 # it can be chased down.
 RESTRICT="test"
 
+_omitgame() {
+	G2CONF="${G2CONF},${1}"
+}
+
 pkg_setup() {
 	# create the games user / group
 	games_pkg_setup
 
+	# Needs "seed", which needs gobject-introspection, libffi, etc.
+	#$(use_enable clutter)
+	#$(use_enable clutter staging)
 	G2CONF="${G2CONF}
+		--disable-card-themes-installer
 		--with-scores-group=${GAMES_GROUP}
 		--enable-noregistry=\"${GGZ_MODDIR}\"
 		--with-platform=gnome
 		--with-sound=gstreamer
-		--enable-scalable"
+		--with-card-theme-formats=all
+		--with-smclient
+		--enable-omitgames=none" # This line should be last for _omitgame
 
-	if use guile; then
-		if has_version =dev-scheme/guile-1.8*; then
-			local flags="deprecated regex"
-			built_with_use dev-scheme/guile ${flags} || die "guile must be built with \"${flags}\" use flags"
-		fi
-	else
+	# Needs clutter, always disable till we can have that
+	#if ! use clutter; then
+		_omitgame lightsoff
+	#fi
+
+	if ! use guile; then
 		ewarn "USE='-guile' implies that Aisleriot won't be installed"
-		G2CONF="${G2CONF} --enable-omitgames=aisleriot"
+		_omitgame aisleriot
+	fi
+
+	if ! use opengl; then
+		ewarn "USE=-opengl implies that glchess won't be installed"
+		_omitgame glchess
 	fi
 }
 
-src_unpack() {
-	gnome2_src_unpack
-
-	# Resolve symbols at execution time in setgid binaries
-	epatch "${FILESDIR}/${PN}-2.14.0-no_lazy_bindings.patch"
+src_prepare() {
+	gnome2_src_prepare
 
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
-
-	eautoreconf
 }
 
 src_test() {
@@ -118,12 +140,16 @@ pkg_postinst() {
 	games_pkg_postinst
 	games-ggz_update_modules
 	gnome2_pkg_postinst
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+	python_need_rebuild
+	python_mod_optimize $(python_get_sitedir)/gnome_sudoku
+	if use opengl; then
+		python_mod_optimize $(python_get_sitedir)/glchess
+	fi
 }
 
 pkg_postrm() {
 	games-ggz_update_modules
 	gnome2_pkg_postrm
-	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/{gnome_sudoku,glchess}
+	python_mod_cleanup /usr/$(get_libdir)/python*/site-packages/glchess
 }
