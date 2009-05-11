@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.39 2009/04/02 00:12:22 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.40 2009/05/11 10:13:43 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org> sonata-1.6.ebuild,
+  metadata.xml:
+  Introduce new USE flag trayicon wrt #267958 by marenz.
 
 *sonata-1.6 (02 Apr 2009)
 
