@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libmsn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.5 2009/04/18 01:28:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.6 2009/05/11 18:55:51 hwoarang Exp $
+
+*libmsn-4.0_beta5 (11 May 2009)
+
+  11 May 2009; Markos Chandras <hwoarang@gentoo.org>
+  libmsn-4.0_beta4.ebuild, +libmsn-4.0_beta5.ebuild:
+  Set $RDEPEND=$DEPEND. Version bump
 
   18 Apr 2009; Jeroen Roovers <jer@gentoo.org> libmsn-4.0_beta4:
   Marked ~hppa (bug #260777).
