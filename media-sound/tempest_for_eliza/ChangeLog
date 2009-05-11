@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tempest_for_eliza
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tempest_for_eliza/ChangeLog,v 1.8 2007/02/03 20:34:12 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tempest_for_eliza/ChangeLog,v 1.9 2009/05/11 08:31:35 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  tempest_for_eliza-1.0.5.ebuild:
+  Fix prestripping and -Werror wrt #260917
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
