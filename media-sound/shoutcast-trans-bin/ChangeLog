@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/shoutcast-trans-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.12 2007/07/02 15:17:52 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/ChangeLog,v 1.13 2009/05/11 19:56:22 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  shoutcast-trans-bin-0.4.0-r1.ebuild:
+  RESTRICT fetch since upstream doesn't like to keep the tarball in place
+  wrt #266544.
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   shoutcast-trans-bin-0.4.0-r1.ebuild:
