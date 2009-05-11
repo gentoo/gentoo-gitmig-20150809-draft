@@ -1,0 +1,22 @@
+=== modified file 'Makefile.in'
+--- Makefile.in	2009-05-11 15:55:07 +0000
++++ Makefile.in	2009-05-11 15:57:22 +0000
+@@ -78,7 +78,7 @@
+ sfcapd: $(SFCAPD_OBJ)
+ 	$(CC) $(CFLAGS) -o $@ $(SFCAPD_OBJ) $(LDFLAGS) $(LIBS)
+ 
+-nftest: nftest.o $(COMMON_OBJ) $(FILTER_OBJ)
++nftest: nftest.o grammar.h $(COMMON_OBJ) $(FILTER_OBJ)
+ 	$(CC) $(CFLAGS) $(INCS) -o $@ nftest.o $(COMMON_OBJ) $(FILTER_OBJ) $(LDFLAGS) $(LIBS)
+ 
+ nfgen: nfgen.o
+@@ -90,7 +90,7 @@
+ nfprofile: $(NFPROF_OBJ)
+ 	$(CC) $(CFLAGS) $(INCS) -o $@ $(NFPROF_OBJ) $(LDFLAGS) $(LIBS) $(RRD_LIBS)
+ 
+-nfreplay: $(NFRPLY_OBJ)
++nfreplay: $(NFRPLY_OBJ) grammar.h
+ 	$(CC) $(CFLAGS) $(INCS) -o $@ $(NFRPLY_OBJ) $(LDFLAGS) $(LIBS)
+ 
+ nfexpire: $(NFEXPR_OBJ)
+
