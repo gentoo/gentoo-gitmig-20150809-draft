@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/synaesthesia
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/ChangeLog,v 1.18 2008/03/24 13:04:02 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/ChangeLog,v 1.19 2009/05/11 19:34:01 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  synaesthesia-2.4.ebuild:
+  Replace double quotes with single quotes to fix configure differently wrt
+  #240832.
 
   24 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   synaesthesia-2.4.ebuild:

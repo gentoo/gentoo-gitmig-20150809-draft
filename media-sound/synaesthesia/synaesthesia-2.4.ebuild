@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.4.ebuild,v 1.5 2009/05/11 13:43:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/synaesthesia/synaesthesia-2.4.ebuild,v 1.6 2009/05/11 19:34:01 ssuominen Exp $
 
 EAPI=2
 
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 src_prepare() {
-	sed -e "/CFLAGS=/s:-O4:${CFLAGS}:" \
-		-e "/CXXFLAGS=/s:-O4:${CXXFLAGS}:" -i configure || die "sed failed"
+	sed -e '/CFLAGS=/s:-O4:${CFLAGS}:' \
+		-e '/CXXFLAGS=/s:-O4:${CXXFLAGS}:' -i configure || die "sed failed"
 	sed -e 's:void inline:inline void:' -i syna.h || die "sed failed"
 }
 
