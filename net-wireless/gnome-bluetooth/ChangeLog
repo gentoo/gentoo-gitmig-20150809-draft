@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.50 2009/05/04 23:32:30 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.51 2009/05/11 09:35:01 nirbheek Exp $
+
+*gnome-bluetooth-2.27.5 (11 May 2009)
+
+  11 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gnome-bluetooth-2.27.4.ebuild, +gnome-bluetooth-2.27.5.ebuild:
+  Bump to 2.27.5, various bugfixes. Main feature: fixed pairing with
+  Blackberry and Samsung phones
 
 *gnome-bluetooth-2.27.4 (04 May 2009)
 
