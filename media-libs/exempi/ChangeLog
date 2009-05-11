@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.15 2009/04/27 14:07:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.16 2009/05/11 16:02:08 ssuominen Exp $
+
+  11 May 2009; Samuli Suominen <ssuominen@gentoo.org> exempi-2.0.2.ebuild,
+  +files/exempi-2.0.2-gcc44.patch:
+  Fix compile with GCC 4.4 wrt #267466, thanks to John Keeping.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> exempi-2.0.2:
   Stable for HPPA (bug #260063).
