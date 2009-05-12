@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.12 2009/02/03 23:30:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.13 2009/05/12 17:14:05 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,7 +19,8 @@ DEPEND="esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	X? ( x11-libs/libX11
 		x11-libs/libXt )
-	!<app-accessibility/festival-1.96_beta"
+	!<app-accessibility/festival-1.96_beta
+	!sys-power/powerman"
 
 S="${WORKDIR}/speech_tools"
 
