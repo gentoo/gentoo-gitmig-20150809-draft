@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland-bindings
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.15 2008/08/05 14:56:27 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.16 2009/05/12 13:36:56 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  redland-bindings-1.0.8.1.ebuild:
+  Use fixlocalpod to remove perllocal.pod wrt #247407.
 
 *redland-bindings-1.0.8.1 (05 Aug 2008)
 
