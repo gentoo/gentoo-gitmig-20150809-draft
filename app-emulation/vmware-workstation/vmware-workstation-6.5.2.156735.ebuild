@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.2.156735.ebuild,v 1.2 2009/05/05 10:41:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.2.156735.ebuild,v 1.3 2009/05/12 07:34:20 ikelos Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -34,6 +34,7 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libXinerama
 	x11-libs/libXi
 	x11-libs/libXft
+	x11-libs/libgksu
 	>=x11-libs/libview-0.6.2
 	dev-cpp/libsexymm
 	dev-cpp/cairomm
