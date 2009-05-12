@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.10 2009/05/09 05:21:19 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.11 2009/05/12 14:54:45 jer Exp $
+
+  12 May 2009; Jeroen Roovers <jer@gentoo.org> ppl-0.10.2.ebuild:
+  Marked ~hppa (bug #269087).
 
   09 May 2009; Ryan Hill <dirtyepic@gentoo.org> -ppl-0.10-r1.ebuild:
   Remove old.
