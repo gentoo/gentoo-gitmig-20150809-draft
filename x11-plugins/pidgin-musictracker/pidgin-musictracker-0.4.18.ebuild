@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/pidgin-musictracker-0.4.16.ebuild,v 1.1 2009/03/26 17:49:56 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-musictracker/pidgin-musictracker-0.4.18.ebuild,v 1.1 2009/05/12 16:58:38 serkan Exp $
 
 EAPI="2"
 
