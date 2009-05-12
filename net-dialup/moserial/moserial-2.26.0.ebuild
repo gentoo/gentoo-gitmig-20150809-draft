@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-2.26.0.ebuild,v 1.1 2009/05/08 14:59:16 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/moserial/moserial-2.26.0.ebuild,v 1.2 2009/05/12 15:54:59 fauli Exp $
 
 EAPI=1
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://live.gnome.org/moserial"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.16:2
