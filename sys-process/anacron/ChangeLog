@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/anacron
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.7 2008/10/12 07:30:26 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/anacron/ChangeLog,v 1.8 2009/05/12 20:22:45 bangert Exp $
+
+  12 May 2009; Thilo Bangert <bangert@gentoo.org> files/anacrontab:
+  disable run-parts by default - warn about double execution
+  bug #235174
 
   12 Oct 2008; Thilo Bangert <bangert@gentoo.org> anacron-2.3-r2.ebuild:
   add dep on cronbase (fixing bug #241426) - fix quoting
