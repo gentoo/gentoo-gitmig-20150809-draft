@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.26 2009/04/23 21:05:03 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.27 2009/05/12 18:24:27 truedfx Exp $
+
+*lazarus-0.9.26-r3 (12 May 2009)
+
+  12 May 2009; Harald van Dĳk <truedfx@gentoo.org>
+  -lazarus-0.9.26-r1.ebuild, -lazarus-0.9.26-r2.ebuild,
+  +lazarus-0.9.26-r3.ebuild, +files/lazarus-0.9.26-clipboard-crash.patch:
+  Fix crashes on clipboard operations, bug #269221
 
 *lazarus-0.9.26-r2 (23 Apr 2009)
 

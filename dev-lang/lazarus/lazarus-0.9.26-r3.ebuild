@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r1.ebuild,v 1.1 2009/03/14 17:29:50 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r3.ebuild,v 1.1 2009/05/12 18:24:27 truedfx Exp $
 
 EAPI=2
 
 inherit eutils
 
-FPCVER="2.2.2"
+FPCVER="2.2.4"
 
 SLOT="0" # Note: Slotting Lazarus needs slotting fpc, see DEPEND.
 LICENSE="GPL-2 LGPL-2.1 LGPL-2.1-linking-exception"
@@ -37,10 +37,12 @@ src_unpack() {
 		die "don't set the LCL path in /etc/fpc.cfg"
 	fi
 
-	unpack ${A}
+	default
+}
 
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-fpcsrc.patch
+	epatch "${FILESDIR}"/${P}-clipboard-crash.patch #269221
 }
 
 src_compile() {
