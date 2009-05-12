@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.24 2009/03/12 17:27:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.25 2009/05/12 07:26:57 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org> -rasqal-0.9.15.ebuild,
+  rasqal-0.9.16.ebuild:
+  Remove USE debug which was bad idea to begin with wrt #263508, it needs
+  maintainer-mode.
 
   12 Mar 2009; Jeroen Roovers <jer@gentoo.org> rasqal-0.9.16.ebuild:
   Marked ~hppa (bug #260777).
