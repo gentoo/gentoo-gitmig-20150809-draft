@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.1 2009/04/23 13:29:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.2 2009/05/12 08:50:20 ssuominen Exp $
+
+EAPI=2
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
 HOMEPAGE="http://librdf.org"
@@ -23,7 +25,7 @@ RDEPEND="mysql? ( virtual/mysql )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use xml; then
@@ -41,12 +43,10 @@ src_compile() {
 		$(use_with sqlite) \
 		$(use_with postgres postgresql) \
 		${myconf}
-
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog* NEWS NOTICE README TODO
 	dohtml {FAQS,NEWS,README,RELEASE,TODO}.html
 }

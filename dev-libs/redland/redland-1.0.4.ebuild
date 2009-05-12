@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.4.ebuild,v 1.12 2007/06/14 07:52:15 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.4.ebuild,v 1.13 2009/05/12 08:50:20 ssuominen Exp $
 
 inherit eutils
 
@@ -13,13 +13,14 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc x86"
 IUSE="berkdb mysql sqlite ssl threads"
 
-DEPEND="mysql? ( virtual/mysql )
+RDEPEND="mysql? ( virtual/mysql )
 	sqlite? ( =dev-db/sqlite-3* )
 	berkdb? ( sys-libs/db )
 	dev-libs/libxml2
 	ssl? ( dev-libs/openssl )
 	>=media-libs/raptor-1.4.4
 	>=dev-libs/rasqal-0.9.6"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
