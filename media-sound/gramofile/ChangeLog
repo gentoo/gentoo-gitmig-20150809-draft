@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gramofile
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.16 2007/08/19 08:55:05 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.17 2009/05/12 20:06:01 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +gramofile-1.6-r1.ebuild, -gramofile-1.6_p3.ebuild,
+  +files/gramofile-1.6-strlen_and_exit.patch,
+  -files/gramofile-1.6_p3-64bit.patch,
+  -files/gramofile-1.6_p3-implicit-declarations.patch:
+  Apply Debian patchset wrt #137756, #131209 and #214442.
 
 *gramofile-1.6_p3 (19 Aug 2007)
 
