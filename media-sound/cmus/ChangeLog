@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/cmus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.21 2008/10/25 22:18:35 pvdabeel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/ChangeLog,v 1.22 2009/05/12 06:19:02 ssuominen Exp $
+
+*cmus-2.2.0-r1 (12 May 2009)
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org> +cmus-2.2.0-r1.ebuild,
+  +files/cmus-2.2.0-symlink_attack.patch:
+  CVE-2008-5375, symlink attack wrt #250474.
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> cmus-2.2.0.ebuild:
   Keyworded ~ppc. Closes bug #235775
