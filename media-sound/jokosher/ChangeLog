@@ -1,15 +1,12 @@
 # ChangeLog for media-sound/jokosher
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/ChangeLog,v 1.7 2009/05/12 06:59:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/ChangeLog,v 1.8 2009/05/12 07:03:38 ssuominen Exp $
 
 *jokosher-0.11.1 (12 May 2009)
 
   12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   +jokosher-0.11.1.ebuild, +files/jokosher-0.11.1-update-database.patch:
   Version bump wrt #260967, thanks to Dennis Lichtenthäler.
-
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
-  Re-assign to sound herd.
 
   30 Dec 2007; Markus Ullmann <jokey@gentoo.org> jokosher-0.9.ebuild:
   Stable on x86
