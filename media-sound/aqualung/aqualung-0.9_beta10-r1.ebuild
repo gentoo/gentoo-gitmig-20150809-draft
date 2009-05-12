@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta10-r1.ebuild,v 1.1 2009/03/23 23:43:52 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-0.9_beta10-r1.ebuild,v 1.2 2009/05/12 16:30:41 ssuominen Exp $
 
-EAPI="2"
-inherit eutils versionator
+EAPI=2
+inherit autotools eutils versionator
 
 MY_PV="$(delete_version_separator 2)"
 MY_PV="${MY_PV/_p/.}"
@@ -36,13 +36,17 @@ RDEPEND="vorbis? ( media-libs/libvorbis )
 	lua? ( dev-lang/lua )
 	libsamplerate? ( media-libs/libsamplerate )
 	x11-libs/gtk+:2"
-
-DEPEND="ladspa? ( media-libs/liblrdf )
+DEPEND="${RDEPEND}
+	ladspa? ( media-libs/liblrdf )
 	dev-util/pkgconfig
-	dev-libs/libxml2
-	${RDEPEND}"
+	dev-libs/libxml2"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S=${WORKDIR}/${PN}-${MY_PV}
+
+src_prepare() {
+	# See bug 255874
+	eautoreconf
+}
 
 src_configure() {
 	econf \
@@ -63,7 +67,6 @@ src_configure() {
 		$(use_with cddb) \
 		$(use_with systray) \
 		$(use_with ladspa) \
-		$(use_with taglib metadata) \
 		$(use_with cdda) \
 		$(use_with lua) \
 		$(use_with ifp) \
