@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2644 2009/05/12 04:54:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2645 2009/05/12 06:07:42 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask media-sound/rat for removal wrt security #208464, CVE-2008-0553.
 
   12 May 2009; Jeremy Olexa <darkside@gentoo.org> base/use.mask, use.desc:
   Define prefix USE flag in use.desc. Mask prefix USE flag in base/use.mask so
