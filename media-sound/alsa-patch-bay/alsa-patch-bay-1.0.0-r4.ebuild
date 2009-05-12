@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r4.ebuild,v 1.6 2009/05/12 16:15:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-patch-bay/alsa-patch-bay-1.0.0-r4.ebuild,v 1.7 2009/05/12 22:00:48 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -12,12 +12,14 @@ SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="alsa jack ladcca"
+IUSE="+alsa jack ladcca"
 
-DEPEND="x11-libs/fltk:1.1
-	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
+RDEPEND="x11-libs/fltk:1.1
+	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
-	ladcca? ( media-libs/ladcca )"
+	ladcca? ( media-libs/ladcca )
+	!alsa? ( !jack? ( media-libs/alsa-lib ) )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-amd64.patch \
@@ -25,12 +27,18 @@ src_prepare() {
 }
 
 src_configure() {
+	if ! use alsa && ! use jack; then
+		ewarn "You cannot disable both audio outputs, enabling alsa."
+		local myconf="--enable-alsa"
+	fi
+
 	econf \
 		--enable-fltk \
 		--disable-gtkmm \
 		$(use_enable alsa) \
 		$(use_enable jack) \
-		$(use_enable ladcca)
+		$(use_enable ladcca) \
+		${myconf}
 }
 
 src_install() {
