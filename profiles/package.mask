@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9793 2009/05/12 17:19:01 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9794 2009/05/12 20:39:42 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -123,11 +123,6 @@ x11-libs/libXprintUtil
 =x11-libs/qt-test-4.5.0*
 =x11-libs/qt-webkit-4.5.0*
 =x11-libs/qt-xmlpatterns-4.5.0*
-
-# Peter Alfredsen <loki_val@gentoo.org> (05 May 2009)
-# Masking temporarily till bug 265912 has been resolved
-# to my satisfaction.
-=dev-lang/mono-2.4-r1
 
 # Mark Loeser <halcy0n@gentoo.org> (6 May 2009)
 # Masked for testing
