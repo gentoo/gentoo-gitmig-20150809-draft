@@ -1,22 +1,26 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.8.ebuild,v 1.5 2007/07/02 15:17:45 peper Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.8.ebuild,v 1.6 2009/05/12 11:23:50 ssuominen Exp $
 
 inherit eutils
 
 SVER=${PV//./-}
-RESTRICT="fetch strip"
+
 DESCRIPTION="${PN} is a network streaming server by Nullsoft."
-HOMEPAGE="http://www.shoutcast.com/download/license.phtml"
+HOMEPAGE="http://www.shoutcast.com/download"
 SRC_URI="sc_serv_${PV}_Linux.tar.gz"
+
 LICENSE="shoutcast"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
+IUSE=""
+
+RESTRICT="fetch strip"
+
+RDEPEND=""
 DEPEND=""
 
-S="${WORKDIR}/"
+S=${WORKDIR}
 
 pkg_nofetch() {
 	elog "Please download ${A} from:"
@@ -24,9 +28,7 @@ pkg_nofetch() {
 	elog "and move it to ${DISTDIR}"
 }
 
-src_compile() {
-	elog "Nothing to compile."
-}
+src_compile() { :; }
 
 src_install() {
 	# install executable
@@ -36,7 +38,7 @@ src_install() {
 	doexe sc_serv
 
 	#install shoutcast init.d script
-	doinitd ${FILESDIR}/shoutcast
+	doinitd "${FILESDIR}"/shoutcast
 
 	# install configuration file
 	sed -e "s/LogFile=sc_serv\.log/LogFile=\/dev\/null/" -e "s/W3CLog=sc_w3c\.log/W3CLog=\/dev\/null/" -i sc_serv.conf
