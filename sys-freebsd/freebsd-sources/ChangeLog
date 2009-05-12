@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.45 2009/01/22 21:05:47 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.46 2009/05/12 09:05:50 aballier Exp $
+
+*freebsd-sources-7.1-r1 (12 May 2009)
+
+  12 May 2009; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-sources-7.1-r1.ebuild, +files/freebsd-sources-7.1-ktimer.patch:
+  Add patch for ktimer security issue, bug #263844 and
+  http://security.freebsd.org/advisories/FreeBSD-SA-09:06.ktimer.asc
 
 *freebsd-sources-7.1 (22 Jan 2009)
 
