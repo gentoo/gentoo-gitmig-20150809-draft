@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.21.06.ebuild,v 1.1 2008/12/21 12:40:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.21.06.ebuild,v 1.2 2009/05/12 22:15:08 ssuominen Exp $
 
 inherit multilib versionator
 
@@ -16,8 +16,8 @@ SLOT="1"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="doc examples"
 
+RDEPEND=""
 DEPEND=""
-RDEPEND="${DEPEND}"
 
 RESTRICT="strip test"
 
@@ -36,6 +36,9 @@ src_compile() { :; }
 
 src_install() {
 	dolib {.,fmoddesignerapi}/api/lib/*
+
+	# Bug 257419 for now, but next ebuild needs to be sorted out
+	rm -f "${D}"/usr/$(get_libdir)/*.0[2-5].so
 
 	insinto /usr/$(get_libdir)/fmodex/plugins
 	doins api/plugins/*.so
