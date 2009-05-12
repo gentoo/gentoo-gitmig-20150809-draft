@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ogmtools
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.29 2007/11/09 15:10:59 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.30 2009/05/12 09:49:32 ssuominen Exp $
+
+*ogmtools-1.5-r2 (12 May 2009)
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +ogmtools-1.5-r2.ebuild, +files/ogmtools-1.5-summary_length.patch,
+  +files/ogmtools-1.5-vorbis_verbosity.patch:
+  Fix of wrong length reporting, should close 173839. When using -v 
+  and -s together, the verbose output is removed.
 
 *ogmtools-1.5-r1 (09 Nov 2007)
 
