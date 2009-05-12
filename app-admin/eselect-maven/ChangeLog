@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect-maven
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-maven/ChangeLog,v 1.1 2009/05/12 19:08:16 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-maven/ChangeLog,v 1.2 2009/05/12 19:24:46 ali_bush Exp $
+
+  12 May 2009; Alistair Bush <ali_bush@gentoo.org> eselect-maven-0.1.ebuild:
+  Update blocker on maven-bin. We have versionbumped maven-bin in tree.
 
   12 May 2009; Alistair Bush <ali_bush@gentoo.org>
   +eselect-maven-0.1.ebuild, +files/maven.eselect, +metadata.xml:
