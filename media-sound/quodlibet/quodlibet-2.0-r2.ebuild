@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0-r2.ebuild,v 1.1 2009/05/12 16:51:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0-r2.ebuild,v 1.2 2009/05/12 16:58:02 ssuominen Exp $
 
 EAPI=2
 NEED_PYTHON=2.4.4
@@ -93,7 +93,7 @@ src_unpack() {
 		sed -i -e "s,^          \"pipeline\": \"\",          \"pipeline\": \"${sinktype}\"," quodlibet/config.py
 	fi
 	epatch "${FILESDIR}/${P}-python26.patch" #240188
-	epatch "${FILESDIR}/${P}-window.patch" #262658
+#	epatch "${FILESDIR}/${P}-window.patch" #262658
 }
 
 src_install() {
