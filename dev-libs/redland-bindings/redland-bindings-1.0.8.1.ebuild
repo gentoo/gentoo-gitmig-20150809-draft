@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.8.1.ebuild,v 1.3 2009/05/12 13:36:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/redland-bindings-1.0.8.1.ebuild,v 1.4 2009/05/12 13:59:38 ssuominen Exp $
 
 EAPI=2
-inherit multilib perl-module
+inherit multilib
 
 DESCRIPTION="Language bindings for Redland"
 HOMEPAGE="http://librdf.org/"
@@ -21,7 +21,8 @@ RDEPEND=">=dev-libs/redland-1.0.8
 	ruby? ( dev-lang/ruby dev-ruby/log4r )"
 DEPEND="${RDEPEND}
 	dev-lang/swig
-	sys-apps/sed"
+	sys-apps/sed
+	perl? ( sys-apps/findutils )"
 
 src_prepare() {
 	sed -i -e "s:lib/python:$(get_libdir)/python:" \
@@ -39,7 +40,12 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	use perl && fixlocalpod
+
+	if use perl; then
+		find "${D}" -type f -name perllocal.pod -delete
+		find "${D}" -depth -mindepth 1 -type d -empty -delete
+	fi
+
 	dodoc AUTHORS ChangeLog* NEWS README TODO
 	dohtml *.html
 }
