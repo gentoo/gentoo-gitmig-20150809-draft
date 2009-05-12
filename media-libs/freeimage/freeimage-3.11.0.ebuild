@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.11.0.ebuild,v 1.4 2009/04/02 23:07:43 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeimage/freeimage-3.11.0.ebuild,v 1.5 2009/05/12 05:43:47 mr_bones_ Exp $
 
-inherit toolchain-funcs multilib
+EAPI=2
+inherit flag-o-matic toolchain-funcs multilib
 
 MY_PN=FreeImage
 MY_P=${MY_PN}${PV//.}
@@ -21,10 +22,10 @@ RDEPEND=""
 
 S=${WORKDIR}/${MY_PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	CFLAGS="$CFLAGS -std=c99 -D_POSIX_SOURCE" # silence warnings from gcc
 	sed -i \
+		-e '/ldconfig/d' \
 		-e "/^CC =/s:gcc:$(tc-getCC) ${CFLAGS} -Wall:" \
 		-e "/^CXX =/s:g++:$(tc-getCXX) ${CXXFLAGS} -Wall:" \
 		-e "/^AR = /s:ar:$(tc-getAR):" \
