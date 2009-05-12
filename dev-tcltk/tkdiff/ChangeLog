@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkdiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdiff/ChangeLog,v 1.11 2009/05/12 15:41:56 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdiff/ChangeLog,v 1.12 2009/05/12 16:58:41 fmccor Exp $
+
+  12 May 2009; Ferris McCormick <fmccor@gentoo.org> tkdiff-4.1.4.ebuild:
+  Sparc stable, bug #259833.
 
   12 May 2009; Federico Ferri <mescalinum@gentoo.org> tkdiff-4.1.4.ebuild:
   depend on >=tk-8.4.18-r1, as suggested on bug #259833 comment #6
