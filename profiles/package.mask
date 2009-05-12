@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9789 2009/05/12 06:07:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9790 2009/05/12 11:02:04 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,29 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Alfredsen <loki_val@gentoo.org> (12 May 2009)
+# Masked because of API changes. Development version.
+#
+# Packages known to break:
+# app-text/xpdf
+# dev-tex/pdftex
+# dev-tex/luatex
+#
+# Highlights:
+# Colour management support
+# PNG support for pdftohtml
+# Annotations support got better 
+=app-text/poppler-utils-0.11*
+=dev-libs/poppler-qt3-0.11*
+=dev-libs/poppler-qt4-0.11*
+=dev-libs/poppler-0.11*
+=dev-libs/poppler-glib-0.11*
+=virtual/poppler-utils-0.11*
+=virtual/poppler-qt3-0.11*
+=virtual/poppler-qt4-0.11*
+=virtual/poppler-0.11*
+=virtual/poppler-glib-0.11*
 
 # Samuli Suominen <ssuominen@gentoo.org> (12 May 2009)
 # Masked for removal wrt security 208464, CVE-2008-0553.
