@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0-r1.ebuild,v 1.2 2009/03/10 21:40:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.0-r1.ebuild,v 1.3 2009/05/12 13:27:04 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 NEED_PYTHON=2.4.4
 
 inherit distutils python eutils
@@ -15,7 +15,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 # Enable gstreamer by default, bug 254729
-IUSE="aac alsa dbus esd ffmpeg flac gnome +gstreamer hal ipod mad musepack oss trayicon tta vorbis xine"
+IUSE="aac alsa dbus esd flac gnome +gstreamer hal ipod mad musepack oss
+trayicon tta vorbis wma xine"
 
 COMMON_DEPEND=">=dev-python/pygtk-2.12"
 
@@ -31,7 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 		flac? ( >=media-plugins/gst-plugins-flac-0.10.2 )
 		aac? ( >=media-plugins/gst-plugins-faad-0.10.1 )
 		musepack? ( >=media-plugins/gst-plugins-musepack-0.10.3 )
-		ffmpeg? ( >=media-plugins/gst-plugins-ffmpeg-0.10.1
+		wma? ( >=media-plugins/gst-plugins-ffmpeg-0.10.1
 			>=media-libs/gst-plugins-ugly-0.10.2 )
 		tta? ( >=media-libs/gst-plugins-bad-0.10.3 )
 

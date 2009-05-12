@@ -14,5 +14,6 @@
   <use>
     <flag name="trayicon">Enable support for trayicon</flag>
     <flag name="tta">Enable TTA (True-Audio Loseless) support</flag>
+	<flag name="wma">Enable support for Windows Media Audio</flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.62 2009/03/10 21:40:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.63 2009/05/12 13:27:04 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  quodlibet-2.0-r1.ebuild:
+  Rename USE ffmpeg to USE wma wrt #197231.
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> quodlibet-2.0-r1.ebuild:
   Enable gstreamer use flag by default, bug 254729
