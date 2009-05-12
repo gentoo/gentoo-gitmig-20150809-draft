@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.24.01.ebuild,v 1.3 2007/09/16 16:45:29 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.24.01.ebuild,v 1.4 2009/05/12 07:21:03 ssuominen Exp $
 
 inherit eutils
 
@@ -20,7 +20,9 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="mysql"
 
-S="${WORKDIR}/tss2_rc2"
+RESTRICT="strip test"
+
+S=${WORKDIR}/tss2_rc2
 
 RDEPEND="amd64? ( >=sys-libs/glibc-2.3.4.20041102 )"
 DEPEND=""
