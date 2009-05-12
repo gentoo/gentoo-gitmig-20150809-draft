@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/gst-plugins-ximagesrc-0.10.14.ebuild,v 1.1 2009/03/30 05:05:56 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/gst-plugins-ximagesrc-0.10.14.ebuild,v 1.2 2009/05/12 20:59:49 fauli Exp $
 
 inherit gst-plugins-good
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 x86"
 
 IUSE=""
 RDEPEND=">=media-libs/gst-plugins-base-0.10.22

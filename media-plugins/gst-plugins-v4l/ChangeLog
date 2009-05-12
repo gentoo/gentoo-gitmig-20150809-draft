@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-v4l
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.39 2009/05/11 03:24:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-v4l/ChangeLog,v 1.40 2009/05/12 20:31:12 fauli Exp $
+
+  12 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  gst-plugins-v4l-0.10.22.ebuild:
+  stable x86, bug 266986
 
 *gst-plugins-v4l-0.10.23 (11 May 2009)
 
