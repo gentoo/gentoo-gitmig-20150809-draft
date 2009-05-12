@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.4 2009/05/12 13:34:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.8.4-r3.ebuild,v 1.5 2009/05/12 17:47:52 armin76 Exp $
 
 inherit eutils autotools
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/wvware/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="X expat xml debug doc gtk"
 
 RDEPEND="virtual/ghostscript
