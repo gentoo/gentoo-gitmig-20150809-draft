@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.39 2009/05/11 20:31:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.40 2009/05/12 04:27:28 jer Exp $
+
+  12 May 2009; Jeroen Roovers <jer@gentoo.org> ncmpc-0.13.ebuild:
+  Stable for HPPA (bug #269460).
 
   11 May 2009; Samuli Suominen <ssuominen@gentoo.org> ncmpc-0.13.ebuild:
   Remove USE lirc so we can request this version for stable wrt #165839 and
