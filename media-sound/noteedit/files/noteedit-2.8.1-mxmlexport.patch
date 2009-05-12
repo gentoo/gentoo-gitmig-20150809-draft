@@ -1,0 +1,19 @@
+diff -Naur noteedit-2.8.1/noteedit/musicxmlexport.cpp noteedit-2.8.1patched/noteedit/musicxmlexport.cpp
+--- noteedit-2.8.1/noteedit/musicxmlexport.cpp	2006-05-13 09:11:13.000000000 +0200
++++ noteedit-2.8.1patched/noteedit/musicxmlexport.cpp	2008-01-10 20:02:55.000000000 +0100
+@@ -656,6 +656,7 @@
+ 					len = rest->getSubType();
+ 					calcLength(rest, duration, noteType);
+ 					out_ << "\t\t\t<forward>\n";
++					outputVoiceNr(1);
+ 					out_ << "\t\t\t\t<duration>"
+ 						<< duration
+ 						<< "</duration>\n";
+@@ -862,6 +863,7 @@
+ 					len = rest->getSubType();
+ 					calcLength(rest, duration, noteType);
+ 					out_ << "\t\t\t<forward>\n";
++					outputVoiceNr(voice_nr);
+ 					out_ << "\t\t\t\t<duration>"
+ 						<< duration
+ 						<< "</duration>\n";

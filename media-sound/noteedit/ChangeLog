@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/noteedit
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.35 2009/02/13 23:07:23 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/noteedit/ChangeLog,v 1.36 2009/05/12 15:32:20 ssuominen Exp $
+
+*noteedit-2.8.1-r3 (12 May 2009)
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +noteedit-2.8.1-r3.ebuild, +files/noteedit-2.8.1-mxmlexport.patch:
+  Revision bump to add upstream patch for MusicXML export wrt #264903,
+  thanks to Clemmitt M. Sigler for reporting.
 
 *noteedit-2.8.1-r2 (13 Feb 2009)
 
