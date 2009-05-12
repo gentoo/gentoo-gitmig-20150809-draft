@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2643 2009/05/11 23:23:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2644 2009/05/12 04:54:07 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 May 2009; Jeremy Olexa <darkside@gentoo.org> base/use.mask, use.desc:
+  Define prefix USE flag in use.desc. Mask prefix USE flag in base/use.mask so
+  it cannot be used on non-prefix profiles
 
   11 May 2009; Doug Goldstein <cardoe@gentoo.org>
   arch/amd64/no-multilib/use.mask, features/64bit-native/use.mask:
