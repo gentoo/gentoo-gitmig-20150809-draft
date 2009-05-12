@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.9 2009/01/14 00:37:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.10 2009/05/12 08:41:16 loki_val Exp $
+
+  12 May 2009; Peter Alfredsen <loki_val@gentoo.org> droid-107.ebuild,
+  droid-112.ebuild:
+  Set empty RDEPEND w.r.t. bug 269503. Thanks to James Rowe
+  <jnrowe@gmail.com> for reporting.
 
   14 Jan 2009; Joseph Jezak <josejx@gentoo.org> droid-112.ebuild:
   Marked ~ppc/~ppc64 for bug #254373.
