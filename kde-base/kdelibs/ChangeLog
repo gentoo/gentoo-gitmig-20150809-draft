@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.590 2009/05/08 10:32:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.591 2009/05/12 13:40:41 tampakrap Exp $
+
+*kdelibs-3.5.10-r4 (12 May 2009)
+
+  12 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kdelibs-3.5.10-r4.ebuild:
+  Revision bump, environment fix for kde misc apps to open correctly inside
+  kde4 session
 
 *kdelibs-3.5.10-r3 (08 May 2009)
 
