@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.171 2008/10/04 15:28:58 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.172 2009/05/12 12:55:46 tampakrap Exp $
 
 # @ECLASS: kde-functions.eclass
 # @MAINTAINER:
@@ -667,7 +667,7 @@ need-kde() {
 	if [[ -n "${KDEBASE}" ]]; then
 		SLOT="$KDEMAJORVER.$KDEMINORVER"
 	else
-		SLOT="0"
+		: ${SLOT="0"}
 	fi
 }
 
@@ -717,18 +717,11 @@ set-kdedir() {
 	if [[ -n "$KDEPREFIX" ]]; then
 		export PREFIX="$KDEPREFIX"
 	else
-		if [[ -z "$KDEBASE" ]]; then
-			case $PN in
-				libkipi|libkdcraw|libkexiv2) export PREFIX="/usr/kde/3.5";;
-				*) export PREFIX="/usr";;
-			esac
-		else
-			case $KDEMAJORVER.$KDEMINORVER in
-				3.5) export PREFIX="/usr/kde/3.5";;
-				5.0) export PREFIX="/usr/kde/svn";;
-				*) die "failed to set PREFIX";;
-			esac
-		fi
+		case $KDEMAJORVER.$KDEMINORVER in
+			3*) export PREFIX="/usr/kde/3.5";;
+			5.0) export PREFIX="/usr/kde/svn";;
+			*) die "failed to set PREFIX";;
+		esac
 	fi
 
 	# kdelibs location
@@ -748,7 +741,7 @@ set-kdedir() {
 		else
 			# kde-base ebuilds must always use the exact version of kdelibs they came with
 			case $KDEMAJORVER.$KDEMINORVER in
-				3.5) export KDEDIR="/usr/kde/3.5";;
+				3*) export KDEDIR="/usr/kde/3.5";;
 				5.0) export KDEDIR="/usr/kde/svn";;
 				*) die "failed to set KDEDIR";;
 			esac
