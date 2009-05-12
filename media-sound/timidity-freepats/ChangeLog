@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/timidity-freepats
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.2 2008/05/01 15:15:50 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-freepats/ChangeLog,v 1.3 2009/05/12 17:30:28 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  timidity-freepats-20060219.ebuild:
+  Add /usr/share/timidity/freepats to timidity.cfg for instruments to be
+  found wrt #219506.
 
   01 May 2008; Markus Meier <maekke@gentoo.org>
   timidity-freepats-20060219.ebuild:
