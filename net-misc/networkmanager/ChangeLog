@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.43 2009/05/02 19:03:47 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.44 2009/05/12 22:20:21 rbu Exp $
+
+*networkmanager-0.7.1-r3 (12 May 2009)
+
+  12 May 2009; Robert Buchholz <rbu@gentoo.org>
+  -networkmanager-0.7.0.ebuild, -networkmanager-0.7.1-r1.ebuild,
+  -networkmanager-0.7.1-r2.ebuild, +networkmanager-0.7.1-r3.ebuild:
+  fix udev rules path properly now, bug #253788
 
 *networkmanager-0.7.1-r2 (02 May 2009)
 

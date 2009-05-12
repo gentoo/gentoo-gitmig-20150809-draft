@@ -1,19 +1,24 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.0.ebuild,v 1.4 2009/04/25 14:27:22 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r3.ebuild,v 1.1 2009/05/12 22:20:21 rbu Exp $
 
+EAPI="2"
 inherit eutils
+# autotools
 
 # NetworkManager likes itself with capital letters
-MY_P=${P/networkmanager/NetworkManager}
+MY_PN=${PN/networkmanager/NetworkManager}
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
 SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~ppc ~x86"
-IUSE="doc nss gnutls dhclient dhcpcd resolvconf"
+IUSE="avahi doc nss gnutls dhclient dhcpcd resolvconf connection-sharing"
+# modemmanager"
 
 RDEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/dbus-glib-0.75
@@ -22,21 +27,22 @@ RDEPEND=">=sys-apps/dbus-1.2
 	>=dev-libs/glib-2.16
 	>=sys-auth/policykit-0.8
 	>=dev-libs/libnl-1.1
-	>=net-wireless/wpa_supplicant-0.5.10
+	>=net-wireless/wpa_supplicant-0.5.10[dbus]
 	|| ( sys-libs/e2fsprogs-libs <sys-fs/e2fsprogs-1.41.0 )
-
+	avahi? ( net-dns/avahi[autoipd] )
 	gnutls? (
 		nss? ( >=dev-libs/nss-3.11 )
 		!nss? ( dev-libs/libgcrypt
 			net-libs/gnutls ) )
 	!gnutls? ( >=dev-libs/nss-3.11 )
-
 	dhclient? (
 		dhcpcd? ( >=net-misc/dhcpcd-4.0.0_rc3 )
 		!dhcpcd? ( >=net-misc/dhcp-3.0.0 ) )
 	!dhclient? ( >=net-misc/dhcpcd-4.0.0_rc3 )
-
-	resolvconf? ( net-dns/openresolv )"
+	resolvconf? ( net-dns/openresolv )
+	connection-sharing? (
+		net-dns/dnsmasq
+		net-firewall/iptables )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -44,28 +50,31 @@ DEPEND="${RDEPEND}
 	net-dialup/ppp
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
+#PDEPEND="modemmanager? ( >=net-misc/modemmanager-0.2 )"
+
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	if ! built_with_use net-wireless/wpa_supplicant dbus ; then
-		eerror "Please rebuild net-wireless/wpa_supplicant with the dbus useflag."
-		die "Fix wpa_supplicant first."
-	fi
-}
-
-src_unpack () {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 
 	# Fix up the dbus conf file to use plugdev group
-	epatch "${FILESDIR}/${P}-confchanges.patch"
-	epatch "${FILESDIR}/${P}-gentoo-dhclient.patch"
+	epatch "${FILESDIR}/${PN}-0.7.1-confchanges.patch"
+
+	# bug #266982
+	epatch "${FILESDIR}/${PN}-0.7.0-gentoo-dhclient.patch"
+
+	# bug #267349
+	epatch "${FILESDIR}/${PN}-0.7.1-bad-link.patch"
+
+#	EPATCH_SOURCE="${WORKDIR}/modem-manager-patchset-0.7.1"
+#	EPATCH_SUFFIX="patch"
+#	use modemmanager && epatch && eautoreconf
+
 }
 
-src_compile() {
-	ECONF="--disable-more-warnings \
-		--localstatedir=/var \
-		--with-distro=gentoo \
+src_configure() {
+	ECONF="--disable-more-warnings
+		--localstatedir=/var
+		--with-distro=gentoo
 		--with-dbus-sys=/etc/dbus-1/system.d
 		$(use_enable doc gtk-doc)
 		$(use_with doc docs)
@@ -94,7 +103,6 @@ src_compile() {
 	fi
 
 	econf ${ECONF}
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -113,6 +121,9 @@ src_install() {
 	insinto /etc/NetworkManager
 	newins "${FILESDIR}/nm-system-settings.conf" nm-system-settings.conf \
 		|| die "newins failed"
+	insinto /etc/udev/rules.d
+	newins callouts/77-nm-probe-modem-capabilities.rules 77-nm-probe-modem-capabilities.rules
+	rm -rf "${D}"/lib/udev/rules.d
 }
 
 pkg_postinst() {
@@ -122,6 +133,9 @@ pkg_postinst() {
 	elog "Add the following to /etc/dhcp/dhclient.conf"
 	elog 'send host-name "YOURHOSTNAME";'
 	elog 'supersede host-name "YOURHOSTNAME";'
+	elog ""
+	elog "If you're using dhcpcd please remove"
+	elog "host_name option from /etc/dhcpcd.conf"
 	elog ""
 	elog "You will need to restart DBUS if this is your first time"
 	elog "installing NetworkManager."
