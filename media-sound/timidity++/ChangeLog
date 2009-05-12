@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.109 2009/03/08 22:11:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.110 2009/05/12 15:16:48 ssuominen Exp $
+
+*timidity++-2.13.2-r8 (12 May 2009)
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +timidity++-2.13.2-r8.ebuild, +files/init.d.timidity.3:
+  For init script, use chdir and change group to audio wrt #204727.
 
   08 Mar 2009; Mike Frysinger <vapier@gentoo.org>
   +files/timidity++-2.13.2-protos.patch, timidity++-2.13.2-r7.ebuild:
@@ -34,17 +40,13 @@
 
 *timidity++-2.13.2-r7 (21 May 2008)
 
-  21 May 2008; Samuli Suominen <drac@gentoo.org>
+  21 May 2008; Samuli Suominen <ssuominen@gentoo.org>
   +timidity++-2.13.2-r7.ebuild:
   Revision bump to remove USE portaudio wrt #222841.
 
-  15 Feb 2008; Samuli Suominen <drac@gentoo.org>
+  15 Feb 2008; Samuli Suominen <ssuominen@gentoo.org>
   timidity++-2.13.2-r5.ebuild:
-  Allow slang-2.
-
-  09 Feb 2008; Samuli Suominen <drac@gentoo.org>
-  timidity++-2.13.2-r6.ebuild:
-  Fix timidity++ to work with slang 2.1.3.
+  Make slang depend unstrict so >=2.1.3 is allowed.
 
   25 Nov 2007; Brent Baude <ranger@gentoo.org> timidity++-2.13.2-r6.ebuild:
   Marking timidity++-2.13.2-r6 ~ppc for bug 200205
