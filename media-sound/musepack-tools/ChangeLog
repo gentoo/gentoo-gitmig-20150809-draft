@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.35 2009/05/11 20:01:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.36 2009/05/12 08:13:39 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  musepack-tools-1.15v-r1.ebuild:
+  Use replace-flags for -O1 wrt #266260, thanks to Nick Malakhov.
 
   11 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   musepack-tools-1.15v-r1.ebuild:

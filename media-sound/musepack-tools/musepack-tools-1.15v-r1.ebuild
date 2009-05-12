@@ -1,29 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v-r1.ebuild,v 1.4 2009/05/11 20:01:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-1.15v-r1.ebuild,v 1.5 2009/05/12 08:13:39 ssuominen Exp $
 
-IUSE="static 16bit esd"
-
-inherit eutils flag-o-matic flag-o-matic
-
-S="${WORKDIR}/sv7"
+inherit eutils flag-o-matic
 
 DESCRIPTION="Musepack audio compression tools"
 HOMEPAGE="http://www.musepack.net"
 SRC_URI="http://files.musepack.net/source/mpcsv7-src-${PV}.tar.bz2"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+IUSE="static 16bit esd"
 
 RDEPEND="esd? ( media-sound/esound )
 	media-libs/id3lib
 	!media-sound/mppenc"
-
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	x86-fbsd? ( dev-lang/nasm )
 	amd64? ( dev-lang/nasm )"
+
+S=${WORKDIR}/sv7
 
 src_unpack() {
 	unpack ${A}
@@ -62,6 +60,7 @@ src_unpack() {
 src_compile() {
 	filter-flags "-fprefetch-loop-arrays"
 	filter-flags "-mfpmath=sse" "-mfpmath=sse,387"
+	replace-flags -O? -O1
 	use static && export BLD_STATIC=1
 
 	append-flags "-I${S}"
