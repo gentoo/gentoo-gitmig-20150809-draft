@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.16 2007/07/22 08:30:00 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.17 2009/05/12 07:18:21 ssuominen Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -9,14 +9,18 @@ SRC_URI="ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/ts2_client_${M
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/libXt
+RDEPEND="x11-libs/libXt
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0
 		>=app-emulation/emul-linux-x86-xlibs-1.0 )"
+DEPEND=""
 
-S="${WORKDIR}"/ts2_client_${MY_PV}/setup.data/image
+QA_TEXTRELS="opt/teamspeak2-client/*.so"
+RESTRICT="strip test"
+
+S=${WORKDIR}/ts2_client_${MY_PV}/setup.data/image
 
 dir="/opt/teamspeak2-client"
 

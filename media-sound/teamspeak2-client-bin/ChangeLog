@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/teamspeak2-client-bin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.26 2008/05/29 05:59:02 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/ChangeLog,v 1.27 2009/05/12 07:18:21 ssuominen Exp $
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  teamspeak2-client-bin-2.0.32.60-r3.ebuild:
+  QA_TEXTRELS and RESTRICTs wrt #251961, this is a binary package.
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Martin Jackson (mjolnir) from metadata.xml (as per #159513).
