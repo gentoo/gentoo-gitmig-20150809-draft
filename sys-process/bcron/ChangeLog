@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/bcron
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.10 2008/03/28 22:49:07 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/ChangeLog,v 1.11 2009/05/12 09:07:54 bangert Exp $
+
+  12 May 2009; Thilo Bangert <bangert@gentoo.org> files/crontab:
+  reduce chance of race condition - bug #98189
 
   28 Mar 2008; Markus Meier <maekke@gentoo.org> bcron-0.09.ebuild:
   amd64 stable, bug #207629

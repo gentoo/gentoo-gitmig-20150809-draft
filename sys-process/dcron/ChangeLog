@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/dcron
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.12 2007/06/07 00:06:22 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/ChangeLog,v 1.13 2009/05/12 09:18:28 bangert Exp $
+
+  12 May 2009; Thilo Bangert <bangert@gentoo.org> files/crontab:
+  reduce chance of race condition - bug #98189
 
   07 Jun 2007; Mike Frysinger <vapier@gentoo.org>
   +files/dcron-3.2-build.patch, dcron-3.2.ebuild:

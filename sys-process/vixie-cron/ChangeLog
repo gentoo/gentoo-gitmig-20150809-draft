@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/vixie-cron
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.56 2008/09/26 03:20:47 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/vixie-cron/ChangeLog,v 1.57 2009/05/12 09:13:46 bangert Exp $
+
+  12 May 2009; Thilo Bangert <bangert@gentoo.org> files/crontab-3.0.1-r4:
+  reduce chance of race condition - bug #98189
 
 *vixie-cron-4.1-r11 (26 Sep 2008)
 

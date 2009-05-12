@@ -1,23 +1,22 @@
+# for dcron 
+# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/files/crontab,v 1.2 2009/05/12 09:18:29 bangert Exp $
 
-# /etc/crontab
-# 20 Apr 2002; Thilo Bangert <bangert@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-process/dcron/files/crontab,v 1.1 2005/03/04 23:42:58 ciaranm Exp $
-
-# fcron || dcron:
-# This is NOT the system crontab! fcron and dcron do not support a system crontab.
-# to get /etc/cron.{hourly|daily|weekly|montly} working with fcron or dcron do
+# dcron:
+# This is NOT the system crontab! dcron does not support a system crontab.
+# to get /etc/cron.{hourly|daily|weekly|montly} working with dcron run
 # crontab /etc/crontab
 # as root.
 # NOTE: This will REPLACE root's current crontab!!
 
+# Global variables
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+HOME=/
 
 # check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
-
-*/15 * * * *     test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
-0  *  * * *      rm -f /var/spool/cron/lastrun/cron.hourly
-0  3  * * *      rm -f /var/spool/cron/lastrun/cron.daily
-15 4  * * 6      rm -f /var/spool/cron/lastrun/cron.weekly
-30 5  1 * *      rm -f /var/spool/cron/lastrun/cron.monthly
-
-
-
+59  *  * * *    root    rm -f /var/spool/cron/lastrun/cron.hourly
+9  3  * * *     root    rm -f /var/spool/cron/lastrun/cron.daily
+19 4  * * 6     root    rm -f /var/spool/cron/lastrun/cron.weekly
+29 5  1 * *     root    rm -f /var/spool/cron/lastrun/cron.monthly
+*/10  *  * * *  root    test -x /usr/sbin/run-crons && /usr/sbin/run-crons
