@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2652 2009/05/12 20:39:42 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2653 2009/05/12 22:01:04 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 May 2009; <chainsaw@gentoo.org> package.mask:
+  Expand 2.0_alpha mask to include 2.0_beta as well. Lets not unleash it on
+  unsuspecting users until its a final release.
 
   12 May 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Bug 265912 fixed. Removing mask.
