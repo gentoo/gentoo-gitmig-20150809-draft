@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/pm-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.22 2009/04/26 19:19:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/ChangeLog,v 1.23 2009/05/12 15:31:55 nirbheek Exp $
+
+  12 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> pm-utils-1.2.5.ebuild:
+  Fix bug 269339 -- app-text/xmlto isn't compulsary (but still automagic)
 
   26 Apr 2009; Brent Baude <ranger@gentoo.org> pm-utils-1.2.4.ebuild:
   stable ppc, bug 266698

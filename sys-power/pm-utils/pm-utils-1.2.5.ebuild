@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.1 2009/04/20 21:25:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.2 2009/05/12 15:31:55 nirbheek Exp $
 
 EAPI="2"
 
@@ -26,8 +26,8 @@ RDEPEND=">=sys-apps/hal-0.5.10
 		!video_cards_intel? ( sys-apps/vbetool )
 		video_cards_radeon? ( app-laptop/radeontool )
 	)"
-DEPEND="!sys-power/powermgmt-base
-	app-text/xmlto"
+DEPEND="!sys-power/powermgmt-base"
+# XXX: app-text/xmlto usage is automagic
 
 src_prepare() {
 	local ignore="01grub"
