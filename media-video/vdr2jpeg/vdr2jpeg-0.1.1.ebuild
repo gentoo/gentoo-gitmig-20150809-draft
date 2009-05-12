@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.1.ebuild,v 1.1 2008/11/14 23:57:32 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.1.ebuild,v 1.2 2009/05/12 20:00:10 fauli Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/xxv/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-video/ffmpeg-0.4.9_p20081014"
