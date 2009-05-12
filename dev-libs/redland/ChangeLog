@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.34 2009/04/23 13:29:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.35 2009/05/12 14:59:43 fmccor Exp $
+
+  12 May 2009; Ferris McCormick <fmccor@gentoo.org> redland-1.0.9.ebuild:
+  Sparc stable, Bug #269527.
 
 *redland-1.0.9 (23 Apr 2009)
 
