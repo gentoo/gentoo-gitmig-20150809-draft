@@ -1,0 +1,11 @@
+--- po/es.po~	2008-10-17 12:28:51.000000000 +0200
++++ po/es.po	2008-10-17 12:28:51.000000000 +0200
+@@ -498,7 +498,7 @@
+ 
+ #: ../src/TrayIcon.cs:208
+ msgid " by "
+-msgstr "por"
++msgstr " por "
+ 
+ #. Wait til cover is set before we notify :)
+ #: ../src/TrayIcon.cs:214
