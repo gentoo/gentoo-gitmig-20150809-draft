@@ -1,0 +1,18 @@
+--- Makefile	2009-05-10 19:23:32.000000000 +0200
++++ Makefile.new	2009-05-10 19:23:49.000000000 +0200
+@@ -21,7 +21,6 @@
+ 
+ CFLAGS += -I${KDIR}/include
+ CFLAGS += -O -Wall
+-LDFLAGS += -static -s
+ 
+ Cmd = umount.aufs auchk #aubrsync
+ Etc = etc_default_aufs
+@@ -55,6 +54,7 @@
+ install_etc: File = etc_default_aufs
+ install_etc: Tgt = ${DESTDIR}/etc/default/aufs
+ install_sbin install_ubin install_etc: ${File}
++	mkdir -p ${Tgt}
+ 	install -m 755 -o root -g root -p ${File} ${Tgt}
+ install: install_sbin install_ubin install_etc
+ 

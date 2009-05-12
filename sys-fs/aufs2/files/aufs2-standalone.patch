@@ -1,0 +1,228 @@
+aufs2 standalone patch for linux-2.6.28
+
+diff --git a/fs/Makefile b/fs/Makefile
+index d9f8afe..1f206a2 100644
+--- a/fs/Makefile
++++ b/fs/Makefile
+@@ -122,3 +122,4 @@ obj-$(CONFIG_HPPFS)		+= hppfs/
+ obj-$(CONFIG_DEBUG_FS)		+= debugfs/
+ obj-$(CONFIG_OCFS2_FS)		+= ocfs2/
+ obj-$(CONFIG_GFS2_FS)           += gfs2/
++obj-$(CONFIG_AUFS_FS)           += aufs/
+diff --git a/fs/namei.c b/fs/namei.c
+index d34e0f9..2779304 100644
+--- a/fs/namei.c
++++ b/fs/namei.c
+@@ -341,6 +341,7 @@ int deny_write_access(struct file * file)
+ 
+ 	return 0;
+ }
++EXPORT_SYMBOL(deny_write_access);
+ 
+ /**
+  * path_get - get a reference to a path
+@@ -1212,7 +1213,7 @@ out:
+  * needs parent already locked. Doesn't follow mounts.
+  * SMP-safe.
+  */
+-static struct dentry *lookup_hash(struct nameidata *nd)
++struct dentry *lookup_hash(struct nameidata *nd)
+ {
+ 	int err;
+ 
+@@ -1221,8 +1222,9 @@ static struct dentry *lookup_hash(struct nameidata *nd)
+ 		return ERR_PTR(err);
+ 	return __lookup_hash(&nd->last, nd->path.dentry, nd);
+ }
++EXPORT_SYMBOL(lookup_hash);
+ 
+-static int __lookup_one_len(const char *name, struct qstr *this,
++int __lookup_one_len(const char *name, struct qstr *this,
+ 		struct dentry *base, int len)
+ {
+ 	unsigned long hash;
+@@ -1243,6 +1245,7 @@ static int __lookup_one_len(const char *name, struct qstr *this,
+ 	this->hash = end_name_hash(hash);
+ 	return 0;
+ }
++EXPORT_SYMBOL(__lookup_one_len);
+ 
+ /**
+  * lookup_one_len - filesystem helper to lookup single pathname component
+diff --git a/fs/namespace.c b/fs/namespace.c
+index 65b3dc8..2a51243 100644
+--- a/fs/namespace.c
++++ b/fs/namespace.c
+@@ -37,6 +37,9 @@
+ 
+ /* spinlock for vfsmount related operations, inplace of dcache_lock */
+ __cacheline_aligned_in_smp DEFINE_SPINLOCK(vfsmount_lock);
++#ifdef CONFIG_AUFS_EXPORT
++EXPORT_SYMBOL(vfsmount_lock);
++#endif
+ 
+ static int event;
+ static DEFINE_IDA(mnt_id_ida);
+diff --git a/fs/open.c b/fs/open.c
+index 83cdb9d..bb43dab 100644
+--- a/fs/open.c
++++ b/fs/open.c
+@@ -222,6 +222,7 @@ int do_truncate(struct dentry *dentry, loff_t length, unsigned int time_attrs,
+ 	mutex_unlock(&dentry->d_inode->i_mutex);
+ 	return err;
+ }
++EXPORT_SYMBOL(do_truncate);
+ 
+ static long do_sys_truncate(const char __user *pathname, loff_t length)
+ {
+diff --git a/fs/splice.c b/fs/splice.c
+index 1abab5c..7b7d65e 100644
+--- a/fs/splice.c
++++ b/fs/splice.c
+@@ -887,8 +887,8 @@ EXPORT_SYMBOL(generic_splice_sendpage);
+ /*
+  * Attempt to initiate a splice from pipe to file.
+  */
+-static long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
+-			   loff_t *ppos, size_t len, unsigned int flags)
++long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
++		    loff_t *ppos, size_t len, unsigned int flags)
+ {
+ 	int ret;
+ 
+@@ -907,13 +907,14 @@ static long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
+ 
+ 	return out->f_op->splice_write(pipe, out, ppos, len, flags);
+ }
++EXPORT_SYMBOL(do_splice_from);
+ 
+ /*
+  * Attempt to initiate a splice from a file to a pipe.
+  */
+-static long do_splice_to(struct file *in, loff_t *ppos,
+-			 struct pipe_inode_info *pipe, size_t len,
+-			 unsigned int flags)
++long do_splice_to(struct file *in, loff_t *ppos,
++		  struct pipe_inode_info *pipe, size_t len,
++		  unsigned int flags)
+ {
+ 	int ret;
+ 
+@@ -929,6 +930,7 @@ static long do_splice_to(struct file *in, loff_t *ppos,
+ 
+ 	return in->f_op->splice_read(in, ppos, pipe, len, flags);
+ }
++EXPORT_SYMBOL(do_splice_to);
+ 
+ /**
+  * splice_direct_to_actor - splices data directly between two non-pipes
+diff --git a/fs/super.c b/fs/super.c
+index 400a760..a1df361 100644
+--- a/fs/super.c
++++ b/fs/super.c
+@@ -270,6 +270,7 @@ int fsync_super(struct super_block *sb)
+ 	__fsync_super(sb);
+ 	return sync_blockdev(sb->s_bdev);
+ }
++EXPORT_SYMBOL(fsync_super);
+ 
+ /**
+  *	generic_shutdown_super	-	common helper for ->kill_sb()
+diff --git a/fs/sync.c b/fs/sync.c
+index 2967562..34040d6 100644
+--- a/fs/sync.c
++++ b/fs/sync.c
+@@ -104,6 +104,7 @@ long do_fsync(struct file *file, int datasync)
+ out:
+ 	return ret;
+ }
++EXPORT_SYMBOL(do_fsync);
+ 
+ static long __do_fsync(unsigned int fd, int datasync)
+ {
+diff --git a/include/linux/Kbuild b/include/linux/Kbuild
+index e531783..14ecb7c 100644
+--- a/include/linux/Kbuild
++++ b/include/linux/Kbuild
+@@ -34,6 +34,7 @@ header-y += atmppp.h
+ header-y += atmsap.h
+ header-y += atmsvc.h
+ header-y += atm_zatm.h
++header-y += aufs_type.h
+ header-y += auto_fs4.h
+ header-y += ax25.h
+ header-y += b1lli.h
+diff --git a/include/linux/lockdep.h b/include/linux/lockdep.h
+index 29aec6e..dfcb13b 100644
+--- a/include/linux/lockdep.h
++++ b/include/linux/lockdep.h
+@@ -58,7 +58,7 @@ enum lock_usage_bit
+ #define LOCKF_USED_IN_IRQ_READ \
+ 		(LOCKF_USED_IN_HARDIRQ_READ | LOCKF_USED_IN_SOFTIRQ_READ)
+ 
+-#define MAX_LOCKDEP_SUBCLASSES		8UL
++#define MAX_LOCKDEP_SUBCLASSES		12UL
+ 
+ /*
+  * Lock-classes are keyed via unique addresses, by embedding the
+diff --git a/include/linux/namei.h b/include/linux/namei.h
+index 99eb803..f6cdf1c 100644
+--- a/include/linux/namei.h
++++ b/include/linux/namei.h
+@@ -75,6 +75,9 @@ extern struct file *lookup_instantiate_filp(struct nameidata *nd, struct dentry
+ extern struct file *nameidata_to_filp(struct nameidata *nd, int flags);
+ extern void release_open_intent(struct nameidata *);
+ 
++extern struct dentry *lookup_hash(struct nameidata *nd);
++extern int __lookup_one_len(const char *name, struct qstr *this,
++			    struct dentry *base, int len);
+ extern struct dentry *lookup_one_len(const char *, struct dentry *, int);
+ extern struct dentry *lookup_one_noperm(const char *, struct dentry *);
+ 
+diff --git a/include/linux/splice.h b/include/linux/splice.h
+index 528dcb9..5123bc6 100644
+--- a/include/linux/splice.h
++++ b/include/linux/splice.h
+@@ -71,4 +71,10 @@ extern ssize_t splice_to_pipe(struct pipe_inode_info *,
+ extern ssize_t splice_direct_to_actor(struct file *, struct splice_desc *,
+ 				      splice_direct_actor *);
+ 
++extern long do_splice_from(struct pipe_inode_info *pipe, struct file *out,
++			   loff_t *ppos, size_t len, unsigned int flags);
++extern long do_splice_to(struct file *in, loff_t *ppos,
++			 struct pipe_inode_info *pipe, size_t len,
++			 unsigned int flags);
++
+ #endif
+diff --git a/security/device_cgroup.c b/security/device_cgroup.c
+index 5ba7870..8f880c2 100644
+--- a/security/device_cgroup.c
++++ b/security/device_cgroup.c
+@@ -507,6 +507,7 @@ acc_check:
+ 
+ 	return -EPERM;
+ }
++EXPORT_SYMBOL(devcgroup_inode_permission);
+ 
+ int devcgroup_inode_mknod(int mode, dev_t dev)
+ {
+diff --git a/security/security.c b/security/security.c
+index c0acfa7..b8106c5 100644
+--- a/security/security.c
++++ b/security/security.c
+@@ -434,6 +434,7 @@ int security_inode_readlink(struct dentry *dentry)
+ 		return 0;
+ 	return security_ops->inode_readlink(dentry);
+ }
++EXPORT_SYMBOL(security_inode_readlink);
+ 
+ int security_inode_follow_link(struct dentry *dentry, struct nameidata *nd)
+ {
+@@ -448,6 +449,7 @@ int security_inode_permission(struct inode *inode, int mask)
+ 		return 0;
+ 	return security_ops->inode_permission(inode, mask);
+ }
++EXPORT_SYMBOL(security_inode_permission);
+ 
+ int security_inode_setattr(struct dentry *dentry, struct iattr *attr)
+ {
