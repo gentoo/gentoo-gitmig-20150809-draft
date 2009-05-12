@@ -1,6 +1,6 @@
 # Copyright 2005-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.55 2009/05/12 10:35:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4.eclass,v 1.56 2009/05/12 10:41:03 hwoarang Exp $
 
 # @ECLASS: qt4.eclass
 # @MAINTAINER:
@@ -15,6 +15,8 @@
 # when dealing with packages using Qt4 libraries.
 
 inherit base eutils multilib toolchain-funcs versionator
+
+export XDG_CONFIG_HOME="${T}"
 
 qt4_monolithic_to_split_flag() {
 	case ${1} in
