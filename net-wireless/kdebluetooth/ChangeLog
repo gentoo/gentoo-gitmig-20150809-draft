@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.77 2009/05/11 19:53:12 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.78 2009/05/12 10:18:04 loki_val Exp $
+
+  12 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  kdebluetooth-1.0_beta8.ebuild, kdebluetooth-1.0_beta8-r1.ebuild,
+  kdebluetooth-1.0_beta8-r2.ebuild:
+  List net-wireless/bluez first in ( a b ) dependency w.r.t. bug 269519.
 
   11 May 2009; Hanno Boeck <hanno@gentoo.org>
   kdebluetooth-1.0_beta8-r2.ebuild:

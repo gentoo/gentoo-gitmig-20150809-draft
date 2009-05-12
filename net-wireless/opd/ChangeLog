@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/opd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.10 2009/03/05 10:50:08 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.11 2009/05/12 10:19:41 loki_val Exp $
+
+  12 May 2009; Peter Alfredsen <loki_val@gentoo.org> opd-0.2-r1.ebuild:
+  List net-wireless/bluez first in ( a b ) dependency w.r.t. bug 269519.
 
   05 Mar 2009; Tiziano Müller <dev-zero@gentoo.org> opd-0.2-r1.ebuild:
   Added net-wireless/bluez as an option for dep/rdep (tested and works
