@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/aumix
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.65 2008/03/31 04:10:09 ricmm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.66 2009/05/12 11:43:57 ssuominen Exp $
+
+*aumix-2.8-r5 (12 May 2009)
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org> +aumix-2.8-r5.ebuild,
+  +files/aumix-2.8-noninter_strncpy.patch:
+  Fix buffer overflow when changing volume wrt #260985, thanks to Guillaume
+  Rosaire and Magnus Granberg.
 
   31 Mar 2008; <ricmm@gentoo.org> aumix-2.8-r4.ebuild:
   Drop to ~mips due to unstable deps

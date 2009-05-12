@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Aumix
-Comment=Aumix volume/mixer control program
-Exec=aumix
-Icon=aumix.xpm
-Terminal=0
-Type=Application
