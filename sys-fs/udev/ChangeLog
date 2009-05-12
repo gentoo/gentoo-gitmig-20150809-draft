@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.466 2009/05/06 23:52:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.467 2009/05/12 17:46:47 zzam Exp $
+
+  12 May 2009; Matthias Schwarzott <zzam@gentoo.org> udev-124-r2.ebuild,
+  udev-141.ebuild:
+  Fix config file renaming if user had changes. Bug #269392.
 
   06 May 2009; Mike Frysinger <vapier@gentoo.org> udev-114.ebuild,
   udev-115-r1.ebuild, udev-119.ebuild, udev-124-r1.ebuild,

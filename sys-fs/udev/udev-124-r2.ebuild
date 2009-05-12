@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-124-r2.ebuild,v 1.8 2009/05/06 23:52:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-124-r2.ebuild,v 1.9 2009/05/12 17:46:47 zzam Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -223,6 +223,15 @@ src_install() {
 }
 
 pkg_preinst() {
+	local f dir=${ROOT}/etc/modprobe.d/
+	for f in pnp-aliases blacklist; do
+		if [[ -f $dir/$f && ! -f $dir/$f.conf ]]
+		then
+			elog "Moving $dir/$f to $f.conf"
+			mv -f "$dir/$f" "$dir/$f.conf"
+		fi
+	done
+
 	if [[ -d ${ROOT}/lib/udev-state ]]
 	then
 		mv -f "${ROOT}"/lib/udev-state/* "${D}"/lib/udev/state/
