@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc1.ebuild,v 1.1 2009/05/11 16:05:24 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc1.ebuild,v 1.2 2009/05/12 18:57:50 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
@@ -76,7 +76,7 @@ src_unpack() {
 
 	# On 64-bit systems, we need to uncomment LL_BAD_OPENAL_DRIVER=x
 	# to fix streaming audio.
-	#use amd64 && epatch "${FILESDIR}"/${P}-amd64-audio-streaming-fix.patch
+	use amd64 && epatch "${FILESDIR}"/${P}-amd64-audio-streaming-fix.patch
 }
 
 src_install() {
