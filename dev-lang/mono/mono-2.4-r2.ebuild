@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4-r1.ebuild,v 1.1 2009/05/08 09:44:19 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4-r2.ebuild,v 1.1 2009/05/12 20:30:20 loki_val Exp $
 
 EAPI=2
 
@@ -39,6 +39,7 @@ PATCHES=(
 	"${FILESDIR}/mono-2.2-ppc-threading.patch"
 	"${FILESDIR}/mono-2.2-uselibdir.patch"
 	"${FILESDIR}/mono-2.4-ppcbuild-fix.patch"
+	"${FILESDIR}/mono-2.4-openoffice.patch"
 )
 
 pkg_setup() {
