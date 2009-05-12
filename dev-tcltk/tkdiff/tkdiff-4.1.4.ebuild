@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdiff/tkdiff-4.1.4.ebuild,v 1.1 2008/12/23 19:54:17 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdiff/tkdiff-4.1.4.ebuild,v 1.2 2009/05/12 15:41:56 mescalinum Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/tk-8.4"
+RDEPEND=">=dev-lang/tk-8.4.18-r1"
 
 S="${WORKDIR}/${MY_P}"
 
