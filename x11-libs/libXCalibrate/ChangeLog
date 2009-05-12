@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libXCalibrate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.8 2009/04/16 03:24:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXCalibrate/ChangeLog,v 1.9 2009/05/12 09:05:10 remi Exp $
+
+*libXCalibrate-0.1_pre20081207-r1 (12 May 2009)
+
+  12 May 2009; Rémi Cardona <remi@gentoo.org>
+  +libXCalibrate-0.1_pre20081207-r1.ebuild:
+  add missing deps, small clean up (fixes bug #269380)
 
   16 Apr 2009; Jeroen Roovers <jer@gentoo.org>
   libXCalibrate-0.1_pre20081207.ebuild:
