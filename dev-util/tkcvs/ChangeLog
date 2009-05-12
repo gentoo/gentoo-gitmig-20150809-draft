@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/tkcvs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.26 2009/03/07 16:19:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/ChangeLog,v 1.27 2009/05/12 19:13:26 mescalinum Exp $
+
+  12 May 2009; Federico Ferri <mescalinum@gentoo.org> tkcvs-8.0.3.ebuild,
+  tkcvs-8.0.4.ebuild, tkcvs-8.2.ebuild:
+  update tkdiff dependency (moved to category dev-util)
 
 *tkcvs-8.2 (07 Mar 2009)
 
