@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/eagle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.23 2009/04/20 17:09:30 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/ChangeLog,v 1.24 2009/05/12 02:15:23 nixphoeni Exp $
+
+*eagle-5.6.0 (12 May 2009)
+
+  12 May 2009; Joe Sapp <nixphoeni@gentoo.org> +eagle-5.6.0.ebuild:
+  Version bump; bug #269013
 
 *eagle-5.5.0 (20 Apr 2009)
 
