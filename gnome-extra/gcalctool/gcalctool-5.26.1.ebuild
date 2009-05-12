@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.26.1.ebuild,v 1.1 2009/05/11 22:04:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/gcalctool-5.26.1.ebuild,v 1.2 2009/05/12 05:56:45 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ DOCS="AUTHORS ChangeLog* MAINTAINERS NEWS README TODO"
 
 src_prepare() {
 	gnome2_src_prepare
-	
+
 	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"    
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
