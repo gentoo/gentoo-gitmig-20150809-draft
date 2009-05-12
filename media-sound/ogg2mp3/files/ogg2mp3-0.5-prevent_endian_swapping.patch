@@ -1,0 +1,12 @@
+diff -ur ogg2mp3-0.5.orig/ogg2mp3 ogg2mp3-0.5/ogg2mp3
+--- ogg2mp3-0.5.orig/ogg2mp3	2005-05-16 21:07:33.000000000 +0300
++++ ogg2mp3-0.5/ogg2mp3	2009-05-12 14:30:00.000000000 +0300
+@@ -311,7 +311,7 @@
+ 	# this took me some time to figure
+ 	# note that byte order is swapped by lame via -x option
+ 	# TODO: somebody please tell me how to supress the "Assuming bla bla" output without devnull
+-	$result = system("$OGG123 $decquiet -d raw -f - $oggfile_escaped | $MP3ENC $encquiet -r -x -q $quality -b $bitrate -s $frequency -m $channels $infostring - $mp3outputfile_escaped");
++	$result = system("$OGG123 $decquiet -d raw -f - $oggfile_escaped | $MP3ENC $encquiet -r -q $quality -b $bitrate -s $frequency -m $channels $infostring - $mp3outputfile_escaped");
+ 
+ 	# TODO: find some widely used mp3 checker
+ 	# disabled the checking due to lack of checker
