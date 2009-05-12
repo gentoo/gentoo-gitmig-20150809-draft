@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.110 2009/05/12 15:16:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.111 2009/05/12 16:00:46 ssuominen Exp $
+
+*timidity++-2.13.2-r9 (12 May 2009)
+
+  12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +timidity++-2.13.2-r9.ebuild, +files/timidity++-2.13.2-polling.patch:
+  Add polling patch by Stas Sergeev wrt #200466, thanks to Miguel Marte
+  for reporting
 
 *timidity++-2.13.2-r8 (12 May 2009)
 
