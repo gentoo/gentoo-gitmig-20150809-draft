@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4436 2009/05/11 11:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4437 2009/05/12 13:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1573,6 +1573,7 @@ media-sound/qtractor:rubberband - Enable support for in-place audio clip pitch-s
 media-sound/qtscrobbler:cli - Build commandline client
 media-sound/quodlibet:trayicon - Enable support for trayicon
 media-sound/quodlibet:tta - Enable TTA (True-Audio Loseless) support
+media-sound/quodlibet:wma - Enable support for Windows Media Audio
 media-sound/radiomixer:hwmixer - Use hardware mixer instead of internal mixer routines
 media-sound/rezound:16bittmp - Use 16bit temporary files (default 32bit float), useful for slower computers
 media-sound/rezound:soundtouch - compile with support for soundtouch
