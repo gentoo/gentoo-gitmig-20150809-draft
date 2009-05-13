@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r7.ebuild,v 1.9 2009/05/13 06:24:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/skey-1.1.5-r7.ebuild,v 1.10 2009/05/13 12:30:22 ulm Exp $
 
 inherit flag-o-matic ccc eutils toolchain-funcs
 
@@ -91,7 +91,7 @@ src_install() {
 	insinto /usr/include
 	doins skey.h
 
-	dodir /etc/skey
+	keepdir /etc/skey
 
 	# only root needs to have access to these files.
 	fperms g-rx,o-rx /etc/skey
