@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.78 2009/05/12 10:18:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.79 2009/05/13 08:28:34 scarabeus Exp $
+
+  13 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kdebluetooth-1.0_beta8.ebuild, kdebluetooth-1.0_beta8-r1.ebuild,
+  kdebluetooth-1.0_beta8-r2.ebuild:
+  Update beta8 ebuilds where the install path was changed with eclass update
+  so sed was not working.
 
   12 May 2009; Peter Alfredsen <loki_val@gentoo.org>
   kdebluetooth-1.0_beta8.ebuild, kdebluetooth-1.0_beta8-r1.ebuild,

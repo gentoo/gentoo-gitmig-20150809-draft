@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8.ebuild,v 1.9 2009/05/12 10:18:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-1.0_beta8.ebuild,v 1.10 2009/05/13 08:28:34 scarabeus Exp $
 
 inherit kde
 
@@ -49,7 +49,7 @@ src_install() {
 
 	# Fix the desktop file
 	sed -i -e 's:^\(Categories=.*\):\1;:' \
-		"${D}/usr/share/applications/kde/kbtobexsrv.desktop" || die "sed #1 failed"
+		"${D}/usr/kde/3.5/share/applications/kde/kbtobexsrv.desktop" || die "sed #1 failed"
 	sed -i -e 's:^\(MimeTypes\):X-\1:' \
-		"${D}/usr/share/applications/kde/kbtobexsrv.desktop" || die "sed #2 failed"
+		"${D}/usr/kde/3.5/share/applications/kde/kbtobexsrv.desktop" || die "sed #2 failed"
 }
