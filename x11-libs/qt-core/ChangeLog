@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.46 2009/05/01 18:47:58 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-core/ChangeLog,v 1.47 2009/05/13 17:58:02 ranger Exp $
+
+  13 May 2009; Brent Baude <ranger@gentoo.org> qt-core-4.5.1.ebuild:
+  Marking qt-core-4.5.1 ppc stable for bug 266201
 
   01 May 2009; Markos Chandras <hwoarang@gentoo.org> qt-core-4.5.0,
   qt-core-4.5.1:
