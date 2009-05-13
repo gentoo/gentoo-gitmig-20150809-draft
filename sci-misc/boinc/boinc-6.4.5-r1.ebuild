@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.6 2009/05/11 17:33:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r1.ebuild,v 1.7 2009/05/13 21:04:22 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -53,7 +53,10 @@ src_prepare() {
 	# copy icons to correct location
 	cp "${S}"/sea/*.png "${S}"/clientgui/res/
 	# RSA Security bug fix. Per bug #258011
-	epatch "${FILESDIR}"/${PV}-RSA_security.patch
+	# GCC 4.4 Compilation issue. Per bug #269618
+	epatch \
+		"${FILESDIR}"/${PV}-RSA_security.patch \
+		"${FILESDIR}"/${PV}-gcc44.patch
 	# fix stripping
 	## TODO
 }
