@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1.ebuild,v 1.10 2009/03/17 17:22:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/gdl-python-2.19.1.ebuild,v 1.11 2009/05/13 18:23:28 maekke Exp $
 
 G_PY_PN="gnome-python-extras"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
 DESCRIPTION="Python bindings for GDL"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 ~hppa ia64 ppc ppc64 sparc ~x86"
 IUSE="examples"
 
 RDEPEND=">=dev-libs/gdl-0.6.1"

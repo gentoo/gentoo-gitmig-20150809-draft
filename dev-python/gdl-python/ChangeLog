@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.12 2009/03/23 05:01:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.13 2009/05/13 18:23:28 maekke Exp $
+
+  13 May 2009; Markus Meier <maekke@gentoo.org> gdl-python-2.19.1.ebuild:
+  revert stabilization on amd64/x86, see bug #268359
 
   23 Mar 2009; Jeroen Roovers <jer@gentoo.org> gdl-python-2.19.1-r1.ebuild:
   Stable for HPPA (bug #258040).
