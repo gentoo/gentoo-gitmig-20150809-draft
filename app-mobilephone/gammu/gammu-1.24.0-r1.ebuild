@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0.ebuild,v 1.3 2009/05/13 19:51:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0-r1.ebuild,v 1.1 2009/05/13 19:59:24 mrness Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ src_configure() {
 	# debug flag is used inside cmake-utils.eclass
 	# TODO	$(cmake-utils_use_with usb USB) \
 	local mycmakeargs="$(cmake-utils_use_with bluetooth Bluez) \
-		$(cmake-utils_use_with irda IrDA) \
+		$(cmake-utils_use_with irda IRDA) \
 		$(cmake-utils_use_with curl CURL) \
 		$(cmake-utils_use_with mysql MySQL) \
 		$(cmake-utils_use_with postgres Postgres) \
