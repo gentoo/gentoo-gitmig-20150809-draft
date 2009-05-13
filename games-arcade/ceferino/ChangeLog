@@ -1,10 +1,10 @@
 # ChangeLog for games-arcade/ceferino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.13 2009/05/13 16:25:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ChangeLog,v 1.14 2009/05/13 18:28:19 mr_bones_ Exp $
 
   13 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
   +files/ceferino-0.97.8-gcc44.patch, ceferino-0.97.8.ebuild:
-  EAPI=2; add gcc44 patch submitted by Oschtan via bug #269678
+  EAPI=2; add gcc44 patch submitted by Martin Väth via bug #269678
 
 *ceferino-0.97.8 (16 Aug 2007)
 
