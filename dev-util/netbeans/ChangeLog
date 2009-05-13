@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.111 2009/05/08 16:49:26 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.112 2009/05/13 13:34:48 fordfrog Exp $
+
+*netbeans-6.7_beta-r5 (13 May 2009)
+
+  13 May 2009; Miroslav Šulc <fordfrog@gentoo.org>
+  -netbeans-6.7_beta-r4.ebuild, +netbeans-6.7_beta-r5.ebuild:
+  Added dependency on dev-java/glassfish-deployment-api and updated to
+  latest dev-util/jay USE flag change
 
   08 May 2009; Miroslav Šulc <fordfrog@gentoo.org>
   netbeans-6.7_beta-r4.ebuild:

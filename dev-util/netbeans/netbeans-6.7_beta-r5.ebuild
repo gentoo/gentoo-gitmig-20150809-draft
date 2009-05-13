@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r4.ebuild,v 1.2 2009/05/08 16:49:26 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r5.ebuild,v 1.1 2009/05/13 13:34:48 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -69,6 +69,7 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-java/commons-io-1.1:1
 		>=dev-java/commons-logging-1.1:0
 		>=dev-java/commons-validator-1.3:0
+		dev-java/glassfish-deployment-api:1.2
 		>=dev-java/httpunit-1.6:0
 		dev-java/jakarta-jstl:0
 		>=dev-java/jakarta-oro-2:2.0
@@ -142,7 +143,7 @@ RDEPEND=">=virtual/jdk-1.5
 		dev-java/joda-time:0
 		dev-java/jruby:0
 		dev-java/jvyamlb:0
-		dev-util/jay:0
+		dev-util/jay:0[java]
 	)"
 
 DEPEND=">=virtual/jdk-1.5
@@ -157,6 +158,7 @@ DEPEND=">=virtual/jdk-1.5
 	>=dev-java/swing-layout-1:1
 	netbeans_modules_enterprise? (
 		>=dev-java/commons-fileupload-1:0
+		dev-java/glassfish-deployment-api:1.2
 		>=dev-java/httpunit-1.6:0
 		dev-java/jakarta-jstl:0
 		dev-java/tomcat-servlet-api:2.3
@@ -461,7 +463,6 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_enterprise ; then
-			sed -e "/j2eeapis\/external\/jsr88javax\.jar/d" -i ${tmpfile} || die
 			sed -e "/j2ee\.sun\.appsrv81\/external\/appservapis-2\.0\.58\.3\.jar/d" -i ${tmpfile} || die
 			sed -e "/j2ee\.sun\.appsrv81\/external\/org-netbeans-modules-j2ee-sun-appsrv81\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.glassfish_logging\/external\/glassfish-logging-2\.0\.jar/d" -i ${tmpfile} || die
@@ -781,6 +782,7 @@ place_unpack_symlinks() {
 	dosymcompilejar "libs.junit4/external" junit-4 junit.jar junit-4.5.jar
 
 	if use netbeans_modules_enterprise ; then
+		dosymcompilejar "j2eeapis/external" glassfish-deployment-api-1.2 glassfish-deployment-api.jar jsr88javax.jar
 		dosymcompilejar "libs.commons_fileupload/external" commons-fileupload commons-fileupload.jar commons-fileupload-1.0.jar
 		dosymcompilejar "libs.httpunit/external" httpunit httpunit.jar httpunit-1.6.2.jar
 		dosymcompilejar "web.jstl11/external" jakarta-jstl jstl.jar jstl-1.1.2.jar
@@ -870,7 +872,7 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} httpunit httpunit.jar httpunit-1.6.2.jar
 		dosyminstjar ${targetdir} jakarta-jstl jstl.jar jstl.jar
 		dosyminstjar ${targetdir} jakarta-jstl standard.jar standard.jar
-		# jsr88javax.jar
+		dosyminstjar ${targetdir} glassfish-deployment-api-1.2 glassfish-deployment-api.jar jsr88javax.jar
 		# servlet2.5-jsp2.1-api.jar
 		# shale-remoting-1.0.4.jar
 		targetdir="enterprise5/modules/ext/spring"
