@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2654 2009/05/13 00:20:05 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2655 2009/05/13 04:08:24 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  clean up p.mask for recent removals from tree
 
   13 May 2009; <chainsaw@gentoo.org> package.mask:
   Drop the Audacious mask. 2.0.0 final is out.
