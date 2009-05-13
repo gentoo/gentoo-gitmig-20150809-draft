@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/kdevelop
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.174 2009/04/06 12:07:40 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.175 2009/05/13 13:40:48 tampakrap Exp $
+
+*kdevelop-3.5.4-r1 (13 May 2009)
+
+  13 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> +kdevelop-3.5.4-r1.ebuild,
+  +files/kdevelop-3.5-lexer.patch, +files/kdevelop-3.5-parallel.patch:
+  Revision bump, EAPI 2'ed, slotted and prefixed
+  Also it solves bug 237304, bug 259094, bug 251484
 
   06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> kdevelop-3.9.91.ebuild:
   Preparation for new eclass. Unprefixing misc apps.
