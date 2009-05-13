@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.8.ebuild,v 1.1 2007/08/16 00:51:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ceferino/ceferino-0.97.8.ebuild,v 1.2 2009/05/13 16:25:54 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Super-Pang clone (destroy bouncing balloons with your grapnel)"
@@ -20,22 +21,24 @@ RDEPEND=">=media-libs/libsdl-1.2
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	sed -i '/^\(gnu\)\?localedir /s:= .*:= /usr/share/locale:' \
-		po/Makefile.in.in || die "sed failed"
-	sed -i '/^INCLUDES/s:\$(datadir)/locale:/usr/share/locale:' \
-		src/Makefile.in || die "sed failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+	sed -i \
+		-e '/^\(gnu\)\?localedir /s:= .*:= /usr/share/locale:' \
+		po/Makefile.in.in \
+		|| die "sed failed"
+	sed -i \
+		-e '/^INCLUDES/s:\$(datadir)/locale:/usr/share/locale:' \
+		src/Makefile.in \
+		|| die "sed failed"
 }
 
-src_compile() {
-	egamesconf $(use_enable nls) || die
-	emake || die "emake failed"
+src_configure() {
+	egamesconf $(use_enable nls)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO
 	newicon data/ima/icono.png ${PN}.png
 	make_desktop_entry ceferino "Don Ceferino Hazaña"
