@@ -1,0 +1,15 @@
+Taken from debian
+--- Derivative.pm
++++ Derivative.pm
+@@ -1,8 +1,9 @@
+ # functions for calculating derivatives of data
+ # $Id: 0.01-pod.diff,v 1.1 2009/05/13 06:34:21 tove Exp $
++
+ =head1 NAME
+ 
+- Math::Derivative - Numeric 1st and 2nd order differentiation
++Math::Derivative - Numeric 1st and 2nd order differentiation
+ 
+ =head1 SYNOPSIS
+ 
+
