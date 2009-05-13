@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2-r1.ebuild,v 1.7 2009/05/13 03:49:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2-r1.ebuild,v 1.8 2009/05/13 03:51:38 darkside Exp $
 
 inherit toolchain-funcs
 
@@ -20,13 +20,13 @@ src_compile() {
 
 src_install() {
 	cd ${S}
-	dodoc README doc/cook.txt doc/cook.html
-	dodir /usr/share/doc/${P}/example
+	dodoc README doc/cook.txt doc/cook.html || die "dodoc failed"
+	dodir /usr/share/doc/${PF}/example || die "dodir failed"
 	cd ${S}/test
-	insinto /usr/share/doc/${P}/example
-	doins pcb.dbdef pcb.dg pcbprol.ps tempsens.pcb
+	insinto /usr/share/doc/${PF}/example 
+	doins pcb.dbdef pcb.dg pcbprol.ps tempsens.pcb || die "doins failed"
 	cd ${S}
-	newbin src/cook cookproc
+	newbin src/cook cookproc || die "newbin failed"
 
 	(
 		echo "NOTICE:"
@@ -34,7 +34,7 @@ src_install() {
 		echo " /usr/bin/cook has been renamed to /usr/bin/cookproc in Gentoo"
 		echo
 		echo " -- Karl Trygve Kalleberg <karltk@gentoo.org>"
-	) > ${D}/usr/share/doc/${P}/README.Gentoo
+	) > ${D}/usr/share/doc/${PF}/README.Gentoo
 }
 
 pkg_postinst() {
