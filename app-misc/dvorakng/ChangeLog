@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorakng
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.10 2007/05/14 16:47:40 bangert Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.11 2009/05/13 03:42:13 darkside Exp $
+
+  13 May 2009; Jeremy Olexa <darkside@gentoo.org> dvorakng-0.6.0.ebuild:
+  (non maintainer commit) QA fixes by Espen Hustad in bug 240071
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
