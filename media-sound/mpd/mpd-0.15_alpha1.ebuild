@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_alpha1.ebuild,v 1.2 2009/04/14 18:06:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_alpha1.ebuild,v 1.3 2009/05/13 19:55:23 ssuominen Exp $
 
 EAPI=2
 
@@ -41,7 +41,7 @@ RDEPEND="!sys-cluster/mpich2
 	musepack? ( media-libs/libmpcdec )
 	ogg? ( media-libs/libogg )
 	pulseaudio? ( media-sound/pulseaudio )
-	sid? ( media-libs/libsidplay:2 )
+	sid? ( >=media-libs/libsidplay-2.1.1-r1:2 )
 	sqlite? ( dev-db/sqlite:3 )
 	vorbis? ( media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
