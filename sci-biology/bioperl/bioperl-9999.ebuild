@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.2 2009/04/08 20:45:57 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.3 2009/05/13 15:49:09 weaver Exp $
 
 EAPI="2"
 
@@ -18,8 +18,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="-minimal graphviz ${SUBPROJECTS}"
 
-DEPEND="virtual/perl-Module-Build
-	dev-perl/Data-Stag
+CDEPEND="dev-perl/Data-Stag
 	dev-perl/libwww-perl
 	!minimal? (
 		dev-perl/Ace
@@ -49,8 +48,9 @@ DEPEND="virtual/perl-Module-Build
 		dev-perl/SVG-Graph
 	)
 	graphviz? ( dev-perl/GraphViz )"
-
-RDEPEND="${DEPEND}"
+DEPEND="virtual/perl-Module-Build
+	${CDEPEND}"
+RDEPEND="${CDEPEND}"
 PDEPEND="
 	db? ( >=sci-biology/bioperl-db-${PV} )
 	network? ( >=sci-biology/bioperl-network-${PV} )

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.6.1.ebuild,v 1.1 2009/03/16 23:29:10 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-1.6.1.ebuild,v 1.2 2009/05/13 15:49:54 weaver Exp $
 
 EAPI="2"
 
@@ -18,16 +18,16 @@ KEYWORDS="~amd64 ~x86"
 IUSE="-minimal test"
 SRC_TEST="do"
 
-DEPEND="virtual/perl-Module-Build
-	>=sci-biology/bioperl-${MY_PV}
+CDEPEND=">=sci-biology/bioperl-${MY_PV}
 	!minimal? (
 		dev-perl/Algorithm-Diff
 		dev-perl/XML-Twig
 		dev-perl/IO-String
 		dev-perl/IPC-Run
 	)"
-
-RDEPEND="${DEPEND}"
+DEPEND="virtual/perl-Module-Build
+	${CDEPEND}"
+RDEPEND="${CDEPEND}"
 
 S="${WORKDIR}/BioPerl-run-${MY_PV}"
 

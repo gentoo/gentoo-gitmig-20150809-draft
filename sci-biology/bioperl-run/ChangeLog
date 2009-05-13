@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl-run
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.15 2009/03/24 21:51:16 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.16 2009/05/13 15:49:54 weaver Exp $
+
+  13 May 2009; Andrey Kislyuk <weaver@gentoo.org> bioperl-run-1.6.1.ebuild,
+  bioperl-run-9999.ebuild:
+  Remove module-build from RDEPEND (bug 246942)
 
   24 Mar 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
   Giving up maintainership of this package.

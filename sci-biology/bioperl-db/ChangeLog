@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl-db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-db/ChangeLog,v 1.1 2009/03/16 23:24:35 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-db/ChangeLog,v 1.2 2009/05/13 15:51:12 weaver Exp $
+
+  13 May 2009; Andrey Kislyuk <weaver@gentoo.org> bioperl-db-1.6.0.ebuild,
+  bioperl-db-9999.ebuild:
+  Remove module-build from RDEPEND (bug 246942)
 
 *bioperl-db-9999 (16 Mar 2009)
 *bioperl-db-1.6.0 (16 Mar 2009)
