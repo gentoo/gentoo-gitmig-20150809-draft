@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0-r1.ebuild,v 1.2 2009/05/12 12:12:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.2.0-r1.ebuild,v 1.3 2009/05/13 18:20:20 maekke Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -11,7 +11,7 @@ SRC_URI="http://mirror.greaterscope.net/cmus/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE="aac alsa ao arts debug examples flac mad mikmod modplug mp3 mp4 musepack \
 	oss pidgin unicode vorbis wavpack wma zsh-completion"
 
