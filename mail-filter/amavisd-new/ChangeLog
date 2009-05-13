@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.139 2009/05/09 16:36:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.140 2009/05/13 15:31:17 jer Exp $
+
+  13 May 2009; Jeroen Roovers <jer@gentoo.org> amavisd-new-2.6.3-r1.ebuild:
+  Marked ~hppa (bug #268645).
 
   09 May 2009; Tobias Klausmann <klausman@gentoo.org>
   amavisd-new-2.6.3-r1.ebuild:
