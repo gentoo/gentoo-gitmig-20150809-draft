@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.172 2009/05/12 12:55:46 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.173 2009/05/13 21:00:42 scarabeus Exp $
 
 # @ECLASS: kde-functions.eclass
 # @MAINTAINER:
@@ -717,11 +717,15 @@ set-kdedir() {
 	if [[ -n "$KDEPREFIX" ]]; then
 		export PREFIX="$KDEPREFIX"
 	else
-		case $KDEMAJORVER.$KDEMINORVER in
-			3*) export PREFIX="/usr/kde/3.5";;
-			5.0) export PREFIX="/usr/kde/svn";;
-			*) die "failed to set PREFIX";;
-		esac
+		if  [[ -z "$KDEBASE" ]]; then
+			PREFIX="/usr/kde/3.5"
+		else
+			case $KDEMAJORVER.$KDEMINORVER in
+				3*) export PREFIX="/usr/kde/3.5";;
+				5.0) export PREFIX="/usr/kde/svn";;
+				*) die "failed to set PREFIX";;
+			esac
+		fi
 	fi
 
 	# kdelibs location
