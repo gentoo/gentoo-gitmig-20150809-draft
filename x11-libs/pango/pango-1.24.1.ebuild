@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.24.1.ebuild,v 1.3 2009/05/13 13:40:26 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.24.1.ebuild,v 1.4 2009/05/13 14:17:42 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="X debug doc"
 RDEPEND=">=dev-libs/glib-2.17.3
 	>=media-libs/fontconfig-2.5.0
 	>=media-libs/freetype-2
-	>=x11-libs/cairo-1.7.6[X?]
+	>=x11-libs/cairo-1.7.6[X?,svg]
 	X? (
 		x11-libs/libXrender
 		x11-libs/libX11
@@ -45,8 +45,8 @@ pkg_setup() {
 	G2CONF="${G2CONF} $(use_with X x)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# make config file location host specific so that a 32bit and 64bit pango
 	# wont fight with each other on a multilib system.  Fix building for
