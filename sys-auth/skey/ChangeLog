@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/skey
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.9 2008/12/07 12:13:05 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/skey/ChangeLog,v 1.10 2009/05/13 06:24:00 ulm Exp $
+
+  13 May 2009; Ulrich Mueller <ulm@gentoo.org> skey-1.1.5-r7.ebuild:
+  Change HOMEPAGE; old page does not exist any more.
 
   07 Dec 2008; Ulrich Mueller <ulm@gentoo.org> -skey-1.1.5-r6.ebuild:
   Remove old.
