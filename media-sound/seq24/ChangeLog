@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/seq24
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.37 2009/05/08 15:28:01 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/seq24/ChangeLog,v 1.38 2009/05/13 19:59:35 maekke Exp $
+
+  13 May 2009; Markus Meier <maekke@gentoo.org> seq24-0.9.0.ebuild:
+  amd64/x86 stable, bug #269038
 
   25 Jan 2009; Federico Ferri <mescalinum@gentoo.org> seq24-0.9.0.ebuild:
   Install desktop entry wrt #256319
