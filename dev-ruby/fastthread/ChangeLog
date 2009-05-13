@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fastthread
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.27 2009/05/13 08:17:31 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fastthread/ChangeLog,v 1.28 2009/05/13 08:20:53 graaff Exp $
+
+  13 May 2009; Hans de Graaff <graaff@gentoo.org>
+  -fastthread-0.5.3.1.ebuild, -fastthread-0.6.3.ebuild,
+  -fastthread-1.0.ebuild:
+  Remove old versions.
 
 *fastthread-1.0.7 (13 May 2009)
 
