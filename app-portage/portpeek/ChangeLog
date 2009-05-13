@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.23 2009/04/17 18:31:02 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.24 2009/05/13 21:07:26 mpagano Exp $
+
+*portpeek-1.8.0 (13 May 2009)
+
+  13 May 2009; Mike Pagano <mpagano@gentoo.org> +portpeek-1.8.0.ebuild:
+  New version that supports ~ (tilde) atom
 
 *portpeek-1.7.5 (17 Apr 2009)
 
