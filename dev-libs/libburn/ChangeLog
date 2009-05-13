@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libburn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.42 2009/05/07 20:25:05 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libburn/ChangeLog,v 1.43 2009/05/13 12:16:55 loki_val Exp $
+
+*libburn-0.6.6 (13 May 2009)
+
+  13 May 2009; Peter Alfredsen <loki_val@gentoo.org> +libburn-0.6.6.ebuild:
+  Bump. Fixes for *bsd.
 
   07 May 2009; Tobias Klausmann <klausman@gentoo.org> libburn-0.6.4.ebuild:
   Keyworded on alpha, bug #268294
