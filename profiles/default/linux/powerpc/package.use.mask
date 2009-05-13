@@ -2,3 +2,6 @@
 # Mask amarok2 useflag for net-im/kadu
 # See bug #238487 for references
 net-im/kadu amarok2
+
+# Not keyworded
+media-plugins/gst-plugins-meta mythtv
