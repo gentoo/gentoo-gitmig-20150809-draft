@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/jhead-2.86.ebuild,v 1.4 2009/05/11 17:18:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jhead/jhead-2.86.ebuild,v 1.5 2009/05/13 19:43:30 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.sentex.net/~mwandel/${PN}/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE=""
 
 src_compile() {
