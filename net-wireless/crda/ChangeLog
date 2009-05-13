@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/crda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.17 2009/04/19 00:42:28 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/crda/ChangeLog,v 1.18 2009/05/13 13:23:37 chainsaw Exp $
+
+*crda-1.1.0 (13 May 2009)
+
+  13 May 2009; <chainsaw@gentoo.org> +crda-1.1.0.ebuild:
+  Version bump, the application is now 64-bit safe for SSL keys.
 
 *crda-1.0.2 (18 Apr 2009)
 
