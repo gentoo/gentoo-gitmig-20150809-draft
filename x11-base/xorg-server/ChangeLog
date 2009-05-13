@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.399 2009/05/10 22:18:05 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.400 2009/05/13 08:53:59 remi Exp $
+
+  13 May 2009; Rémi Cardona <remi@gentoo.org>
+  xorg-server-1.3.0.0-r6.ebuild, xorg-server-1.4.2.ebuild:
+  drop XPrint support from 1.3 and 1.4, no-one missed it in 1.5 and dropping
+  it in the older servers will help with portage-wide clean-ups
 
   10 May 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.5.3-r5.ebuild,
   xorg-server-1.5.3-r6.ebuild:

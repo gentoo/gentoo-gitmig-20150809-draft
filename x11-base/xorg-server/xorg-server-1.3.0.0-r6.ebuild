@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r6.ebuild,v 1.9 2009/05/05 16:17:13 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r6.ebuild,v 1.10 2009/05/13 08:53:59 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -104,7 +104,7 @@ IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
 	${IUSE_SERVERS}
 	3dfx
-	dri ipv6 minimal nptl sdl xprint"
+	dri ipv6 minimal nptl sdl"
 RDEPEND=">=x11-libs/libXfont-1.2.5
 	x11-libs/xtrans
 	x11-libs/libXau
@@ -171,11 +171,7 @@ DEPEND="${RDEPEND}
 	>=x11-proto/glproto-1.4.8
 	dmx? ( x11-proto/dmxproto )
 	dri? ( x11-proto/xf86driproto
-		>=x11-libs/libdrm-2.3 )
-	xprint? ( =x11-proto/printproto-1.0.3
-		x11-apps/mkfontdir
-		x11-apps/mkfontscale
-		x11-apps/xplsprinters )"
+		>=x11-libs/libdrm-2.3 )"
 
 # Drivers
 PDEPEND="
@@ -325,7 +321,7 @@ pkg_setup() {
 		$(use_enable !minimal install-libxf86config)
 		$(use_enable dri)
 		$(use_enable xorg)
-		$(use_enable xprint)
+		--disable-xprint
 		$(use_enable nptl glx-tls)
 		$(use_enable !minimal xorgcfg)
 		--sysconfdir=/etc/X11
@@ -370,12 +366,6 @@ src_unpack() {
 		fi
 	fi
 	x-modular_reconf_source
-	#do not install xprint's Xsession.d files, we'll do it later
-	if use xprint; then
-		sed -e "s:install-data-am\: install-dist_xpcDATA:install-data-am\::g" \
-		    -i "${S}"/hw/xprint/etc/Xsession.d/Makefile.in \
-		    || die "sed of Xsession.d makefile failed"
-	fi
 }
 
 src_install() {
@@ -511,8 +501,6 @@ dynamic_libgl_install() {
 }
 
 server_based_install() {
-	use xprint && xprint_src_install
-
 	if ! use xorg; then
 		rm "${D}"/usr/share/man/man1/Xserver.1x \
 			"${D}"/usr/$(get_libdir)/xserver/SecurityPolicy \
@@ -528,26 +516,6 @@ switch_opengl_implem() {
 		echo
 #		eselect opengl set --use-old ${OPENGL_DIR}
 		eselect opengl set ${OLD_IMPLEM}
-}
-
-xprint_src_install() {
-	# RH-style init script, we provide a wrapper
-	exeinto /usr/$(get_libdir)/misc
-	doexe "${S}"/hw/xprint/etc/init.d/xprint
-	# Install the wrapper
-	newinitd "${FILESDIR}"/xprint.init xprint
-	# Install profile scripts
-	insinto /etc/profile.d
-	doins "${S}"/hw/xprint/etc/profile.d/xprint*
-	insinto /etc/X11/xinit/xinitrc.d
-	doins "${S}"/hw/xprint/etc/Xsession.d/92xprint-xpserverlist
-	# Patch profile scripts
-	sed -e "s:/bin/sh.*get_xpserverlist:/usr/$(get_libdir)/misc/xprint \
-		get_xpserverlist:g" -i "${D}"/etc/profile.d/xprint* \
-		"${D}"/etc/X11/xinit/xinitrc.d/92xprint-xpserverlist
-	# Move profile scripts, we can't touch /etc/profile.d/ in Gentoo
-	dodoc "${D}"/etc/profile.d/xprint*
-	rm -f "${D}"/etc/profile.d/xprint*
 }
 
 ensure_a_server_is_building() {
