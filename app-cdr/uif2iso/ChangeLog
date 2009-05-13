@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/uif2iso
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.7 2009/01/09 15:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/ChangeLog,v 1.8 2009/05/13 10:16:36 flameeyes Exp $
+
+*uif2iso-0.1.7c (13 May 2009)
+
+  13 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -uif2iso-0.1.7.ebuild, -uif2iso-0.1.7a.ebuild, +uif2iso-0.1.7c.ebuild:
+  Version bump and cleanup.
 
 *uif2iso-0.1.7a (09 Jan 2009)
 

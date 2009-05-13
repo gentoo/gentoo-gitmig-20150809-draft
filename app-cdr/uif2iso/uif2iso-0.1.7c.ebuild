@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/uif2iso-0.1.7a.ebuild,v 1.1 2009/01/09 15:41:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/uif2iso/uif2iso-0.1.7c.ebuild,v 1.1 2009/05/13 10:16:36 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
