@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.16 2009/02/03 00:28:02 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.17 2009/05/13 18:43:57 maekke Exp $
+
+  13 May 2009; Markus Meier <maekke@gentoo.org> webfs-1.21-r1.ebuild:
+  amd64 stable, bug #266692
 
 *webfs-1.21-r1 (03 Feb 2009)
 
