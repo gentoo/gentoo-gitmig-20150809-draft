@@ -1,0 +1,81 @@
+diff -ur soundkonverter-0.3.9.orig/src/metadata/audible/audibleproperties.cpp soundkonverter-0.3.9/src/metadata/audible/audibleproperties.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/audible/audibleproperties.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/audible/audibleproperties.cpp	2009-05-13 21:32:19.000000000 +0300
+@@ -23,6 +23,8 @@
+  *   MA  02110-1301  USA                                                   *
+  ***************************************************************************/
+ 
++#include <stdio.h>
++
+ #include "audibleproperties.h"
+ 
+ #include <taglib/tstring.h>
+diff -ur soundkonverter-0.3.9.orig/src/metadata/audible/audibletag.cpp soundkonverter-0.3.9/src/metadata/audible/audibletag.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/audible/audibletag.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/audible/audibletag.cpp	2009-05-13 21:31:37.000000000 +0300
+@@ -28,6 +28,7 @@
+ #include <taglib/tag.h>
+ 
+ #include <netinet/in.h> // ntohl
++#include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 
+diff -ur soundkonverter-0.3.9.orig/src/metadata/audible/taglib_audiblefile.cpp soundkonverter-0.3.9/src/metadata/audible/taglib_audiblefile.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/audible/taglib_audiblefile.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/audible/taglib_audiblefile.cpp	2009-05-13 21:36:46.000000000 +0300
+@@ -23,6 +23,8 @@
+  *   MA  02110-1301  USA                                                   *
+  ***************************************************************************/
+ 
++#include <stdio.h>
++
+ #include "taglib_audiblefile.h"
+ 
+ #include "audibletag.h"
+diff -ur soundkonverter-0.3.9.orig/src/metadata/audible/taglib_audiblefiletyperesolver.cpp soundkonverter-0.3.9/src/metadata/audible/taglib_audiblefiletyperesolver.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/audible/taglib_audiblefiletyperesolver.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/audible/taglib_audiblefiletyperesolver.cpp	2009-05-13 21:34:56.000000000 +0300
+@@ -22,6 +22,7 @@
+ #include "taglib_audiblefiletyperesolver.h"
+ #include "taglib_audiblefile.h"
+ 
++#include <stdio.h>
+ #include <string.h>
+ 
+ TagLib::File *AudibleFileTypeResolver::createFile(const char *fileName,
+diff -ur soundkonverter-0.3.9.orig/src/metadata/wav/wavfile.cpp soundkonverter-0.3.9/src/metadata/wav/wavfile.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/wav/wavfile.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/wav/wavfile.cpp	2009-05-13 21:38:31.000000000 +0300
+@@ -23,6 +23,8 @@
+  *   MA  02110-1301  USA                                                   *
+  ***************************************************************************/
+ 
++#include <stdio.h>
++
+ #include "wavfile.h"
+ 
+ #include <taglib/tfile.h>
+diff -ur soundkonverter-0.3.9.orig/src/metadata/wav/wavfiletyperesolver.cpp soundkonverter-0.3.9/src/metadata/wav/wavfiletyperesolver.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/wav/wavfiletyperesolver.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/wav/wavfiletyperesolver.cpp	2009-05-13 21:40:33.000000000 +0300
+@@ -22,6 +22,7 @@
+ #include "wavfiletyperesolver.h"
+ #include "wavfile.h"
+ 
++#include <stdio.h>
+ #include <string.h>
+ 
+ TagLib::File *WavFileTypeResolver::createFile(const char *fileName,
+diff -ur soundkonverter-0.3.9.orig/src/metadata/wav/wavproperties.cpp soundkonverter-0.3.9/src/metadata/wav/wavproperties.cpp
+--- soundkonverter-0.3.9.orig/src/metadata/wav/wavproperties.cpp	2007-12-17 17:53:19.000000000 +0200
++++ soundkonverter-0.3.9/src/metadata/wav/wavproperties.cpp	2009-05-13 21:38:49.000000000 +0300
+@@ -23,6 +23,8 @@
+  *   MA  02110-1301  USA                                                   *
+  ***************************************************************************/
+ 
++#include <stdio.h>
++
+ #include "wavproperties.h"
+ 
+ #include <taglib/tstring.h>
