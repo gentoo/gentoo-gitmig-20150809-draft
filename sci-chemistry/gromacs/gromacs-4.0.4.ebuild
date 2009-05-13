@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.4.ebuild,v 1.4 2009/05/10 16:32:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/gromacs-4.0.4.ebuild,v 1.5 2009/05/13 20:30:29 klausman Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.gromacs.org/pub/${PN}/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc64 sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ppc64 sparc ~x86"
 IUSE="X blas dmalloc doc -double-precision +fftw fkernels gsl lapack mpi +single-precision static test +xml zsh-completion"
 
 DEPEND="app-shells/tcsh
