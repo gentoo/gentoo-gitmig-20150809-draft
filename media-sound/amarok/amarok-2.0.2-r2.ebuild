@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.2-r2.ebuild,v 1.1 2009/04/22 02:14:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.0.2-r2.ebuild,v 1.2 2009/05/13 13:47:49 tampakrap Exp $
 
 EAPI="2"
 
@@ -21,7 +21,6 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 # Blocking amarok:0 until the KDE3 eclasses are updated
 # to move misc apps to /usr/kde/3.5
 DEPEND="
-	!media-sound/amarok:0
 	>=app-misc/strigi-0.5.7
 	|| (
 		>=dev-db/mysql-5.0.76-r1[embedded,-minimal]
