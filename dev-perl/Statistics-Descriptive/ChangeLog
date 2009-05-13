@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Statistics-Descriptive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.14 2009/05/11 10:38:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Statistics-Descriptive/ChangeLog,v 1.15 2009/05/13 17:29:43 weaver Exp $
+
+  13 May 2009; Andrey Kislyuk <weaver@gentoo.org>
+  Statistics-Descriptive-2.7.ebuild, Statistics-Descriptive-2.8.ebuild:
+  Add missing dependency on module-build
 
 *Statistics-Descriptive-2.8 (11 May 2009)
 
