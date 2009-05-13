@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2-r1.ebuild,v 1.6 2007/03/21 21:16:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cook/cook-1.0.2-r1.ebuild,v 1.7 2009/05/13 03:49:05 darkside Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="COOK is an embedded language which can be used as a macro preprocessor and for similar text processing."
 HOMEPAGE="http://cook.sourceforge.net/"
@@ -13,7 +15,7 @@ DEPEND="virtual/libc"
 
 src_compile() {
 	cd ${S}
-	emake
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed" 
 }
 
 src_install() {
