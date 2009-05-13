@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.0.0.ebuild,v 1.1 2009/05/13 00:16:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.0.0.ebuild,v 1.2 2009/05/13 17:30:17 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -13,13 +13,14 @@ SRC_URI="http://distfiles.atheme.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="adplug alsa cdaudio esd flac gnome icecast ipv6 jack lirc mp3 mtp musepack nls oss pulseaudio scrobbler sdl sid sndfile sse2 timidity tta vorbis wavpack wma"
+IUSE="adplug alsa cdaudio esd flac gnome icecast ipv6 jack lirc mp3 mtp musepack
+nls oss projectm pulseaudio scrobbler sdl sid sndfile sse2 timidity tta vorbis wavpack wma"
 
 RDEPEND="app-arch/unzip
 	>=dev-libs/libcdio-0.79-r1
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
-	>=media-sound/audacious-2.0.0
+	>=media-sound/audacious-2.0.1
 	>=net-misc/neon-0.26.4
 	>=x11-libs/gtk+-2.14
 	adplug? ( >=dev-cpp/libbinio-1.4 )
@@ -34,6 +35,8 @@ RDEPEND="app-arch/unzip
 	mp3? ( media-libs/libmad )
 	mtp? ( media-libs/libmtp )
 	musepack? ( media-libs/libmpcdec media-libs/taglib )
+	projectm? ( >=media-libs/libprojectm-1.2.0
+		>=media-libs/libsdl-1.2.5 )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
 	sdl? (	>=media-libs/libsdl-1.2.5 )
@@ -72,8 +75,8 @@ src_compile() {
 		--disable-coreaudio \
 		--disable-dockalbumart \
 		--disable-projectm \
-		--disable-projectm-1.0 \
 		--disable-rootvis \
+		$(use_enable projectm projectm-1.0) \
 		$(use_enable adplug) \
 		$(use_enable alsa) \
 		$(use_enable alsa bluetooth) \
