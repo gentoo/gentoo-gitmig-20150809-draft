@@ -1,0 +1,17 @@
+Crash when right clicked on headers. Fixed in upstream subversion.
+
+http://code.google.com/p/quodlibet/issues/detail?id=14
+http://bugs.gentoo.org/show_bug.cgi?id=246115
+
+diff -ur quodlibet-2.0.orig/quodlibet/qltk/songlist.py quodlibet-2.0/quodlibet/qltk/songlist.py
+--- quodlibet-2.0.orig/quodlibet/qltk/songlist.py	2008-09-14 06:19:55.000000000 +0300
++++ quodlibet-2.0/quodlibet/qltk/songlist.py	2009-05-13 10:16:23.000000000 +0300
+@@ -815,7 +815,7 @@
+             menu.append(item)
+             submenu = gtk.Menu()
+             item.set_submenu(submenu)
+-            for header in sorted(zip(map(tag, group), group)):
++            for header in sorted(zip(map(util.tag, group), group)):
+                 add_header_toggle(submenu, header, header[1] in current_set)
+ 
+         sep = gtk.SeparatorMenuItem()
