@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/squirrelmail
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.135 2009/05/13 13:31:43 rich0 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/ChangeLog,v 1.136 2009/05/13 17:23:25 klausman Exp $
+
+  13 May 2009; Tobias Klausmann <klausman@gentoo.org>
+  squirrelmail-1.4.18.ebuild:
+  Stable on alpha, bug #269567
 
   13 May 2009; Richard Freeman <rich0@gentoo.org>
   squirrelmail-1.4.18.ebuild:
