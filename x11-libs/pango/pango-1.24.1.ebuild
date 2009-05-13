@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.24.1.ebuild,v 1.2 2009/05/05 23:36:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.24.1.ebuild,v 1.3 2009/05/13 13:40:26 nirbheek Exp $
+
+EAPI="2"
 
 inherit eutils gnome2 multilib
 
@@ -16,7 +18,7 @@ IUSE="X debug doc"
 RDEPEND=">=dev-libs/glib-2.17.3
 	>=media-libs/fontconfig-2.5.0
 	>=media-libs/freetype-2
-	>=x11-libs/cairo-1.7.6
+	>=x11-libs/cairo-1.7.6[X?]
 	X? (
 		x11-libs/libXrender
 		x11-libs/libX11
