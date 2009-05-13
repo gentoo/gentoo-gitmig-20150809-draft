@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0.ebuild,v 1.2 2009/05/10 16:31:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0.ebuild,v 1.3 2009/05/13 19:51:40 mrness Exp $
 
 EAPI="2"
 
@@ -13,12 +13,14 @@ SRC_URI="http://dl.cihar.com/gammu/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="debug bluetooth irda mysql postgres nls"
+IUSE="curl debug bluetooth irda mysql postgres dbi nls"
 
 # TODO after bug 247687 gets solved: usb? ( >=dev-libs/libusb-1.0.0 )
 RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
+	curl? ( net-misc/curl )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
+	dbi? ( >=dev-db/libdbi-0.8.3 )
 	dev-util/dialog
 	dev-lang/python
 	!dev-python/python-gammu" # needs to be removed from the tree
@@ -56,8 +58,12 @@ src_configure() {
 	# TODO	$(cmake-utils_use_with usb USB) \
 	local mycmakeargs="$(cmake-utils_use_with bluetooth Bluez) \
 		$(cmake-utils_use_with irda IrDA) \
+		$(cmake-utils_use_with curl CURL) \
 		$(cmake-utils_use_with mysql MySQL) \
 		$(cmake-utils_use_with postgres Postgres) \
+		$(cmake-utils_use_with dbi LibDBI) \
+		$(cmake-utils_use_with nls GettextLibs) \
+		$(cmake-utils_use_with nls Iconv) \
 		-DBUILD_SHARED_LIBS=ON -DINSTALL_DOC_DIR=share/doc/${PF} \
 		-DBUILD_PYTHON=/usr/bin/python"
 	cmake-utils_src_configure

@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.67 2009/05/10 10:16:48 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.68 2009/05/13 19:51:40 mrness Exp $
+
+  13 May 2009; Alin Năstac <mrness@gentoo.org> metadata.xml,
+  gammu-1.24.0.ebuild:
+  Add curl and dbi USE flags (#269444).
 
 *gammu-1.24.0 (10 May 2009)
 

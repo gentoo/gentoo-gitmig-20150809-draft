@@ -3,6 +3,7 @@
 <pkgmetadata>
 <herd>mobile-phone</herd>
 <use>
-  <flag name='irda'>Enable infrared support</flag>
+  <flag name='dbi'>Enables dev-db/libdbi support</flag>
+  <flag name='irda'>Enables infrared support</flag>
 </use>
 </pkgmetadata>
