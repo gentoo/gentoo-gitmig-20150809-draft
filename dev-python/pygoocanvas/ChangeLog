@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.12 2009/05/10 18:40:26 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.13 2009/05/13 08:21:49 ssuominen Exp $
 
-  10 May 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  13 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   pygoocanvas-0.14.1.ebuild:
-  Fix pycairo version in deps
+  Raise pycairo depend to 1.8.4 wrt #269041.
+
+  13 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  pygoocanvas-0.14.1.ebuild:
+  Raise pycairo depend to 1.8.4 wrt #269041.
 
 *pygoocanvas-0.14.1 (10 May 2009)
 
