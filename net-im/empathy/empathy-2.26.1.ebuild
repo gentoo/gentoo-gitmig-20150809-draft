@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.26.1.ebuild,v 1.1 2009/05/10 21:10:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.26.1.ebuild,v 1.2 2009/05/13 16:27:57 nirbheek Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Telepathy client and library using GTK+"
 HOMEPAGE="http://live.gnome.org/Empathy"
@@ -39,6 +39,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 		>=dev-lang/python-2.4.4-r5
 		>=dev-python/pygtk-2 )"
 DEPEND="${RDEPEND}
+	app-text/scrollkeeper
 	app-text/gnome-doc-utils
 	>=dev-util/intltool-0.35.0
 	>=dev-util/pkgconfig-0.16

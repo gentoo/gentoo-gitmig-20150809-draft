@@ -1,6 +1,9 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.36 2009/05/10 21:10:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.37 2009/05/13 16:27:57 nirbheek Exp $
+
+  13 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> empathy-2.26.1.ebuild:
+  Add app-text/scrollkeeper dep, add missing inherit eutils
 
 *empathy-2.26.1 (10 May 2009)
 
