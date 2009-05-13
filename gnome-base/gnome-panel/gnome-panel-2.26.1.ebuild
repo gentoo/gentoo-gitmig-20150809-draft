@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.26.1.ebuild,v 1.2 2009/05/13 13:52:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/gnome-panel-2.26.1.ebuild,v 1.3 2009/05/13 14:22:12 dang Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ RDEPEND=">=gnome-base/gnome-desktop-2.24.0
 	>=dev-libs/dbus-glib-0.71
 	>=sys-apps/dbus-1.1.2
 	x11-libs/libXau
-	>=x11-libs/cairo-1.0.0[X]
+	>=x11-libs/cairo-1.0.0
 	eds? ( >=gnome-extra/evolution-data-server-1.6 )
 	networkmanager? ( >=net-misc/networkmanager-0.6 )
 	policykit? (
