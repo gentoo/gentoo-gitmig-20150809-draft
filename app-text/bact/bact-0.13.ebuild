@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bact/bact-0.13.ebuild,v 1.1 2005/12/24 18:58:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bact/bact-0.13.ebuild,v 1.2 2009/05/13 03:45:23 darkside Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="Boosting Algorithm for Classification of Trees"
 HOMEPAGE="http://chasen.org/~taku/software/bact/"
@@ -12,14 +14,19 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND="${DEPEND}"
+
+src_compile() {
+	emake CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" LDFLAGS="${LDFLAGS}" || die "emake failed"
+}
 
 src_test() {
 	make test || die
 }
 
 src_install() {
-	dobin bact_learn bact_mkmodel bact_classify || die
+	dobin bact_learn bact_mkmodel bact_classify || die "dobin failed"
 
-	dohtml index.html bact.css
-	dodoc README AUTHORS
+	dohtml index.html bact.css || die "dohtml failed"
+	dodoc README AUTHORS || die "dodoc failed"
 }
