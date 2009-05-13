@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.26 2009/05/03 19:13:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.27 2009/05/13 18:25:08 maekke Exp $
+
+  13 May 2009; Markus Meier <maekke@gentoo.org> gdl-2.24.0.ebuild:
+  revert stabilization on amd64/x86, see bug #268359
 
   03 May 2009; Markus Meier <maekke@gentoo.org> gdl-2.24.0.ebuild:
   amd64/x86 stable, bug #268359
