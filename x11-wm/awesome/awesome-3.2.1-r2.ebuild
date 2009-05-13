@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1-r2.ebuild,v 1.2 2009/04/21 23:23:41 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1-r2.ebuild,v 1.3 2009/05/13 20:24:23 loki_val Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
@@ -87,7 +87,7 @@ src_install() {
 
 	if use doc ; then
 		(
-			cd "${WORKDIR}"/${PN}_build/doc
+			cd "${CMAKE_BUILD_DIR}"/doc
 			mv html doxygen
 			dohtml -r doxygen || die
 		)
