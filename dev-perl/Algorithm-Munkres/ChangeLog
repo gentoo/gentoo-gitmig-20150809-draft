@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Algorithm-Munkres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Munkres/ChangeLog,v 1.4 2009/05/12 21:03:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-Munkres/ChangeLog,v 1.5 2009/05/13 16:50:22 ken69267 Exp $
+
+  13 May 2009; Kenneth Prugh <ken69267@gentoo.org>
+  Algorithm-Munkres-0.08.ebuild:
+  amd64 stable, bug #269581
 
   12 May 2009; Torsten Veller <tove@gentoo.org>
   Algorithm-Munkres-0.08.ebuild:
