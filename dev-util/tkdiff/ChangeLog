@@ -1,6 +1,9 @@
-# ChangeLog for dev-tcltk/tkdiff
+# ChangeLog for dev-util/tkdiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkdiff/ChangeLog,v 1.2 2009/05/12 19:34:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkdiff/ChangeLog,v 1.3 2009/05/13 18:33:44 maekke Exp $
+
+  13 May 2009; Markus Meier <maekke@gentoo.org> tkdiff-4.1.4.ebuild:
+  amd64/x86 stable, bug #259833
 
   12 May 2009; Ferris McCormick <fmccor@gentoo.org> tkdiff-4.1.4.ebuild:
   Sparc stable (again) --- bug #259833 lost keyword.
