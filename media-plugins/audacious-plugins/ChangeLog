@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.109 2009/05/12 22:13:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.110 2009/05/13 00:16:41 chainsaw Exp $
+
+*audacious-plugins-2.0.0 (13 May 2009)
+
+  13 May 2009; <chainsaw@gentoo.org> -audacious-plugins-2.0_alpha3.ebuild,
+  -audacious-plugins-2.0_beta1.ebuild, +audacious-plugins-2.0.0.ebuild:
+  The long-awaited second release of Audacious. Now out of mask and ready
+  for *you*.
 
 *audacious-plugins-2.0_beta1 (12 May 2009)
 
