@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_alpha3.ebuild,v 1.1 2009/05/05 05:04:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_alpha3.ebuild,v 1.2 2009/05/13 19:02:34 fauli Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="libnotify ioctl"
 
 DEPEND=""
