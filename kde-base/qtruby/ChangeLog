@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.78 2009/02/24 16:21:57 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.79 2009/05/13 03:19:46 dirtyepic Exp $
+
+  13 May 2009; Ryan Hill <dirtyepic@gentoo.org> qtruby-3.5.10.ebuild,
+  +files/qtruby-3.5.10-gcc44.patch:
+  Fix build w/ GCC 4.4. (bug #264040)
 
   24 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   qtruby-3.5.9.ebuild, qtruby-3.5.10.ebuild:
