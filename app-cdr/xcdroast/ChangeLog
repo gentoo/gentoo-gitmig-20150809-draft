@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.64 2009/05/08 13:43:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.65 2009/05/13 19:55:15 maekke Exp $
+
+  13 May 2009; Markus Meier <maekke@gentoo.org>
+  xcdroast-0.98_alpha16.ebuild:
+  amd64/x86 stable, bug #269032
 
   08 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   xcdroast-0.98_alpha16.ebuild:
