@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SVG-Graph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG-Graph/ChangeLog,v 1.1 2009/04/08 20:33:59 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SVG-Graph/ChangeLog,v 1.2 2009/05/13 07:45:35 tove Exp $
+
+  13 May 2009; Torsten Veller <tove@gentoo.org> SVG-Graph-0.02.ebuild:
+  Stable on x86 (#269589). Fix LICENSE
 
 *SVG-Graph-0.02 (08 Apr 2009)
 
