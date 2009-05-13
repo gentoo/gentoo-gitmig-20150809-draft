@@ -1,0 +1,10 @@
+# ChangeLog for app-laptop/lenovo-sl-laptop
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/lenovo-sl-laptop/ChangeLog,v 1.1 2009/05/13 23:19:02 yngwin Exp $
+
+*lenovo-sl-laptop-9999 (13 May 2009)
+
+  13 May 2009; Ben de Groot <yngwin@gentoo.org>
+  +lenovo-sl-laptop-9999.ebuild, +metadata.xml:
+  Initial import. Ebuild by Daniel Klaffenbach in bug 262051.
+
