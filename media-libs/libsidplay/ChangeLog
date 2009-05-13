@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsidplay
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.44 2009/02/06 03:11:29 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/ChangeLog,v 1.45 2009/05/13 19:53:26 ssuominen Exp $
+
+*libsidplay-2.1.1-r1 (13 May 2009)
+
+  13 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +libsidplay-2.1.1-r1.ebuild:
+  Compile libresid-builder and libhardsid-builder also as shared libraries
+  wrt #268872, thanks to Jeroen Roovers for reporting.
 
   06 Feb 2009; Jeroen Roovers <jer@gentoo.org> libsidplay-1.36.59.ebuild:
   Stable for HPPA (bug #251159).
