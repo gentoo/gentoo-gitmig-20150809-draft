@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.278 2009/05/11 21:29:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.279 2009/05/13 13:52:39 nirbheek Exp $
+
+  13 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  gnome-panel-2.26.1.ebuild:
+  Fix0r bug 269683 -- x11-libs/cairo[X]
 
 *gnome-panel-2.26.1 (11 May 2009)
 
