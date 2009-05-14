@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8.ebuild,v 1.7 2009/03/07 18:56:50 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8.ebuild,v 1.8 2009/05/14 13:31:49 scarabeus Exp $
 
 EAPI="2"
 
@@ -52,9 +52,7 @@ src_unpack() {
 	rm -f "${S}/configure"
 }
 
-src_configure() { :; }
-
-src_compile(){
+src_configure(){
 	local myconf="${myconf}
 		$(use_with avahi)
 		--enable-builtin-country-flags
@@ -63,5 +61,5 @@ src_compile(){
 		--enable-torrent-mimetype
 		--disable-geoip"
 
-	kde_src_compile
+	kde_src_configure
 }

@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.113 2009/04/18 01:01:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.114 2009/05/14 13:31:49 scarabeus Exp $
+
+  14 May 2009; Tomas Chvatal <scarabeus@gentoo.org> ktorrent-2.2.8.ebuild:
+  Fix build issue when we bumped new eclass. Per bug #269701.
 
   18 Apr 2009; Jeroen Roovers <jer@gentoo.org> ktorrent-3.2.1:
   Marked ~hppa (bug #260777).
