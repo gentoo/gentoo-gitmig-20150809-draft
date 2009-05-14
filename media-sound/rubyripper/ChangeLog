@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rubyripper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.26 2009/05/10 18:36:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rubyripper/ChangeLog,v 1.27 2009/05/14 19:33:56 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org> rubyripper-0.5.5-r1.ebuild:
+  amd64/x86 stable, bug #269294
 
   10 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   rubyripper-0.5.5-r1.ebuild:
