@@ -1,27 +1,27 @@
 # ChangeLog for media-sound/wavbreaker
 # Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.26 2008/06/14 12:32:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/ChangeLog,v 1.27 2009/05/14 08:48:32 ssuominen Exp $
 
-  14 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  14 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/wavbreaker-0.10-pkgconfig.patch, wavbreaker-0.10.ebuild:
   Need PKG_PROG_PKG_CONFIG in configure.in or ./configure dies in first
   --disable flag.
 
 *wavbreaker-0.10 (12 Jun 2008)
 
-  12 Jun 2008; Samuli Suominen <drac@gentoo.org> +wavbreaker-0.10.ebuild:
+  12 Jun 2008; Samuli Suominen <ssuominen@gentoo.org> +wavbreaker-0.10.ebuild:
   Version bump; with pulseaudio support.
 
   16 Jan 2008; Christian Faulhammer <opfer@gentoo.org>
   wavbreaker-0.9.ebuild:
   stable x86, bug 206075
 
-  16 Jan 2008; Samuli Suominen <drac@gentoo.org> wavbreaker-0.9.ebuild:
+  16 Jan 2008; Samuli Suominen <ssuominen@gentoo.org> wavbreaker-0.9.ebuild:
   amd64 stable wrt #206075
 
 *wavbreaker-0.9 (23 Nov 2007)
 
-  23 Nov 2007; Samuli Suominen <drac@gentoo.org> +wavbreaker-0.9.ebuild:
+  23 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> +wavbreaker-0.9.ebuild:
   Version bump.
 
   27 Aug 2007; Christoph Mende <angelos@gentoo.org> wavbreaker-0.8.1.ebuild:
@@ -31,9 +31,9 @@
   wavbreaker-0.8.1.ebuild:
   stable x86, bug 145105
 
-  26 Jul 2007; Samuli Suominen <drac@gentoo.org> -wavbreaker-0.7-r1.ebuild,
-  -wavbreaker-0.8.ebuild, wavbreaker-0.8.1.ebuild:
-  Add missing USE nls, fix depends, drop unused versions.
+  26 Jul 2007; Samuli Suominen <ssuominen@gentoo.org>
+  -wavbreaker-0.7-r1.ebuild, -wavbreaker-0.8.ebuild, wavbreaker-0.8.1.ebuild:
+  Add missing USE nls. Fix depends. Drop unused versions.
 
 *wavbreaker-0.8.1 (09 Jul 2007)
 
@@ -48,8 +48,8 @@
 
 *wavbreaker-0.7-r1 (15 Feb 2007)
 
-  15 Feb 2007; Samuli Suominen <drac@gentoo.org> -wavbreaker-0.6.1.ebuild,
-  -wavbreaker-0.7.ebuild, +wavbreaker-0.7-r1.ebuild:
+  15 Feb 2007; Samuli Suominen <ssuominen@gentoo.org>
+  -wavbreaker-0.6.1.ebuild, -wavbreaker-0.7.ebuild, +wavbreaker-0.7-r1.ebuild:
   Make desktop entry for bug 145500. Switch from make to emake and clean up.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
