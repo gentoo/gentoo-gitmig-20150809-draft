@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.40.ebuild,v 1.1 2009/02/17 16:27:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.40.ebuild,v 1.2 2009/05/14 19:34:49 maekke Exp $
 
 NEED_PYTHON=2.5
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="qt4"
 
 RDEPEND=">dev-python/mechanize-0.1.7b
