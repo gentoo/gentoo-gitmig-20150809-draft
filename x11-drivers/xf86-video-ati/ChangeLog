@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-ati
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.86 2009/05/04 15:54:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ati/ChangeLog,v 1.87 2009/05/14 17:18:07 scarabeus Exp $
+
+  14 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  xf86-video-ati-6.6.3.ebuild, xf86-video-ati-6.8.0-r1.ebuild,
+  xf86-video-ati-6.12.1-r1.ebuild, xf86-video-ati-6.12.2.ebuild:
+  Force enable dri unconditionaly. Per bug #216196.
 
   04 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   xf86-video-ati-6.6.3.ebuild, xf86-video-ati-6.8.0-r1.ebuild,
