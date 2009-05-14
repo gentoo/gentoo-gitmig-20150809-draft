@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.80 2009/05/13 08:35:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.81 2009/05/14 16:01:59 scarabeus Exp $
+
+  14 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  kdebluetooth-1.0_beta8-r2.ebuild:
+  Fix failed epatch (Mine fancy convertor from string-> bash array needs
+  tweaking :]). Per bug #269826.
 
   13 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kdebluetooth-1.0_beta2-r2.ebuild, -kdebluetooth-1.0_beta8.ebuild,
