@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Stream-Bulk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/ChangeLog,v 1.4 2009/05/02 11:29:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Stream-Bulk/ChangeLog,v 1.5 2009/05/14 14:49:04 tove Exp $
+
+  14 May 2009; Torsten Veller <tove@gentoo.org>
+  Data-Stream-Bulk-0.04.ebuild:
+  Run tests and add ~amd64 (#269846)
 
   02 May 2009; Torsten Veller <tove@gentoo.org>
   -Data-Stream-Bulk-0.03.ebuild:
