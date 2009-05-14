@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r1.ebuild,v 1.1 2009/04/19 14:51:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.1 2009/05/14 13:02:53 fauli Exp $
 
 inherit eutils multilib rpm
 
@@ -50,7 +50,7 @@ pkg_setup() {
 }
 
 pkg_nofetch() {
-	elog "Download the client RPM file from http://www.citrix.com/English/SS/downloads/details.asp?downloadID=3323"
+	elog "Download the client RPM file ${SRC_URI} from http://www.citrix.com/English/SS/downloads/details.asp?downloadID=3323"
 	elog "and place it in ${DISTDIR:-/usr/portage/distfiles}."
 }
 
@@ -109,6 +109,7 @@ src_install() {
 
 	# wfica has libxcb locking bugs, so provide a wrapper.  It needs to be in
 	# /opt/ICAClient to ensure it gets called, so rename wfica to wfica.bin.
+	sed -e "/^ICAROOT.*$/d" -i wfica.sh || die
 	exeinto /opt/ICAClient
 	doexe wfcmgr.bin wfica_assoc.sh wfica.sh util/wfcmgr
 	newexe wfica wfica.bin
