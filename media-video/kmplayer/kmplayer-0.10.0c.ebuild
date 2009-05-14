@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c.ebuild,v 1.7 2008/07/31 20:27:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c.ebuild,v 1.8 2009/05/14 13:23:18 scarabeus Exp $
 
 inherit kde eutils
 
@@ -94,5 +94,5 @@ src_install() {
 	kde_src_install
 
 	# Remove this, as kdelibs provides it
-	rm -f "${D}/usr/share/mimelnk/application/x-mplayer2.desktop"
+	rm -f "${D}/${KDEDIR}/share/mimelnk/application/x-mplayer2.desktop"
 }
