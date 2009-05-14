@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.2.ebuild,v 1.1 2009/01/10 12:07:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/alevt-1.6.2.ebuild,v 1.2 2009/05/14 08:35:13 jer Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -18,6 +20,11 @@ RDEPEND="x11-libs/libX11
 
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
+
+src_prepare() {
+	cp -va Makefile{,.orig}
+	epatch "${FILESDIR}"/${P}-respectflags.patch
+}
 
 src_compile() {
 	append-flags -fno-strict-aliasing

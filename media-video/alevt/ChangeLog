@@ -1,6 +1,10 @@
 # ChangeLog for media-video/alevt
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.29 2009/01/10 12:07:43 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/alevt/ChangeLog,v 1.30 2009/05/14 08:35:13 jer Exp $
+
+  14 May 2009; Jeroen Roovers <jer@gentoo.org> alevt-1.6.2.ebuild,
+  +files/alevt-1.6.2-respectflags.patch:
+  Respect CFLAGS and LDFLAGS.
 
 *alevt-1.6.2 (10 Jan 2009)
 
