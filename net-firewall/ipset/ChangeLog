@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/ipset
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.26 2009/04/04 09:11:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ChangeLog,v 1.27 2009/05/14 23:05:53 robbat2 Exp $
+
+*ipset-2.5.0-r1 (14 May 2009)
+
+  14 May 2009; Robin H. Johnson <robbat2@gentoo.org> +ipset-2.5.0-r1.ebuild:
+  Bug #269743: Some of the modules did not get installed.
 
 *ipset-2.5.0 (04 Apr 2009)
 
