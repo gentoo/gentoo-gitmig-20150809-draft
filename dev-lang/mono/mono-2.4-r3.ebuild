@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4-r2.ebuild,v 1.1 2009/05/12 20:30:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4-r3.ebuild,v 1.1 2009/05/14 16:29:43 loki_val Exp $
 
 EAPI=2
 
@@ -118,7 +118,7 @@ src_install() {
 
 	# Remove Jay to avoid colliding with dev-util/jay, the internal
 	# version is only used to build mcs.
-	rm -r "${D}"/usr/share/jay "${D}"/usr/bin/jay "${D}"/user/share/man/man1/jay.1*
+	rm -r "${D}"/usr/share/jay "${D}"/usr/bin/jay "${D}"/usr/share/man/man1/jay.1*
 }
 
 #THINK!!!! Before touching postrm and postinst
