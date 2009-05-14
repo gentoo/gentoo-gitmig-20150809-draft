@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.22-r1.ebuild,v 1.1 2009/05/14 08:42:29 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.22-r1.ebuild,v 1.2 2009/05/14 17:21:56 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -173,7 +173,7 @@ src_install() {
 	fowners lighttpd:lighttpd /var/l{ib,og}/lighttpd
 	fperms 0750 /var/l{ib,og}/lighttpd
 
-	#spawn-fcgi may optionally be installed via www-servers/spawn-fcgi 
+	#spawn-fcgi may optionally be installed via www-servers/spawn-fcgi
 	rm -f "${D}"/usr/bin/spawn-fcgi "${D}"/usr/share/man/man1/spawn-fcgi.*
 
 	use minimal && remove_non_essential
