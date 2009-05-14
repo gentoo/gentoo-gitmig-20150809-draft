@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.32 2009/03/18 18:18:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.33 2009/05/14 19:06:32 fmccor Exp $
+
+  14 May 2009; Ferris McCormick <fmccor@gentoo.org> camlp5-5.11.ebuild:
+  Sparc stable, Bug #260604.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> camlp5-5.11.ebuild:
   stable ppc, bug 260604
