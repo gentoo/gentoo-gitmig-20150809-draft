@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.9.ebuild,v 1.1 2009/05/13 18:45:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.9.ebuild,v 1.2 2009/05/14 04:58:31 ssuominen Exp $
 
 EAPI=1
 ARTS_REQUIRED=never
@@ -27,6 +27,11 @@ RDEPEND="${DEPEND}
 need-kde 3.5
 
 PATCHES=( "${FILESDIR}/${P}-desktop_entry.patch" "${FILESDIR}/${P}-gcc44.patch" )
+
+src_unpack() {
+	kde_src_unpack
+	rm -f "${S}"/configure
+}
 
 src_compile() {
 	append-flags -fno-inline
