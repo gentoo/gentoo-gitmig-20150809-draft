@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.10.ebuild,v 1.2 2008/06/14 12:32:36 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavbreaker/wavbreaker-0.10.ebuild,v 1.3 2009/05/14 08:46:26 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="wavbreaker/wavmerge GTK+ utility to break or merge WAV files"
@@ -14,30 +15,28 @@ KEYWORDS="~amd64 ~x86"
 IUSE="alsa nls oss pulseaudio"
 
 RDEPEND="dev-libs/libxml2
-	>=x11-libs/gtk+-2
+	>=x11-libs/gtk+-2:2
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-pkgconfig.patch
 	eautoreconf
 }
 
-src_compile() {
-	econf --disable-dependency-tracking \
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable alsa) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable oss)
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog CONTRIBUTORS NEWS README* TODO
 }
