@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.26.1.ebuild,v 1.1 2009/05/10 20:27:21 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.26.1-r1.ebuild,v 1.1 2009/05/14 07:39:36 nirbheek Exp $
 
 EAPI="2"
 
@@ -51,6 +51,9 @@ src_prepare() {
 	# Remove silly CFLAGS
 	sed 's:CFLAGS="$CFLAGS -Werror:CFLAGS="$CFLAGS:' \
 		-i configure.in configure || die "sed failed"
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
 
 src_test() {
