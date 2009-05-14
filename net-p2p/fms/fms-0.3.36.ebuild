@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.36.ebuild,v 1.1 2009/05/03 19:21:49 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.36.ebuild,v 1.2 2009/05/14 17:52:48 tommy Exp $
 
 EAPI="2"
 
@@ -44,7 +44,7 @@ src_configure() {
 
 src_install() {
 	insinto /var/freenet/fms
-	dobin ${PN}_build/fms || die
+	dobin "${CMAKE_BUILD_DIR}"/fms || die
 	doins {forum-,}template.htm || die "doinstall failed"
 	insinto /var/freenet/fms/fonts
 	doins fonts/*.bmp || die "doinstall of fonts failed"

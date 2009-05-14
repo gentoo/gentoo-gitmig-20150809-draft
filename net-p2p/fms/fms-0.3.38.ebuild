@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.35.ebuild,v 1.1 2009/04/08 14:07:19 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/fms/fms-0.3.38.ebuild,v 1.1 2009/05/14 17:52:48 tommy Exp $
 
 EAPI="2"
 
 inherit eutils cmake-utils
 
-DESCRIPTION="A spam-resistant #ssage board application for Freenet"
+DESCRIPTION="A spam-resistant message board application for Freenet"
 HOMEPAGE="http://freenetproject.org/tools.html"
 SRC_URI="mirror://gentoo/${PN}-src-${PV}.zip"
 
@@ -18,7 +18,7 @@ IUSE="frost"
 DEPEND="virtual/libiconv
 	frost? ( >=dev-libs/libtomcrypt-1.17-r3[libtommath] )
 	>=dev-libs/poco-1.2.9
-	|| ( =dev-db/sqlite-3.6.6.2* >=dev-db/sqlite-3.6.11 )"
+	|| ( =dev-db/sqlite-3.6.13* =dev-db/sqlite-3.6.12* =dev-db/sqlite-3.6.11* =dev-db/sqlite-3.6.6.2* )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}
@@ -44,7 +44,7 @@ src_configure() {
 
 src_install() {
 	insinto /var/freenet/fms
-	dobin ${PN}_build/fms || die
+	dobin "${CMAKE_BUILD_DIR}"/fms || die
 	doins {forum-,}template.htm || die "doinstall failed"
 	insinto /var/freenet/fms/fonts
 	doins fonts/*.bmp || die "doinstall of fonts failed"
