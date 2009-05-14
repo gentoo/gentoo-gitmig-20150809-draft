@@ -1,0 +1,16 @@
+http://cgit.freedesktop.org/poppler/poppler/commit/?id=80f415176952635a485356cf36048eee53396c25
+https://bugs.gentoo.org/show_bug.cgi?id=269545
+
+Index: pdftex-1.40.9/src/texk/web2c/pdftexdir/pdftoepdf.cc
+===================================================================
+--- pdftex-1.40.9.orig/src/texk/web2c/pdftexdir/pdftoepdf.cc
++++ pdftex-1.40.9/src/texk/web2c/pdftexdir/pdftoepdf.cc
+@@ -645,7 +645,7 @@ static void writeEncodings()
+     }
+     for (r = encodingList; r != 0; r = n) {
+         n = r->next;
+-        delete r->font;
++        r->font->decRefCnt();
+         delete r;
+     }
+ }

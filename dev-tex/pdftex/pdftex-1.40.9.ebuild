@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.9.ebuild,v 1.15 2009/03/30 01:32:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pdftex/pdftex-1.40.9.ebuild,v 1.16 2009/05/14 17:20:34 aballier Exp $
 
 inherit libtool toolchain-funcs eutils multilib
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-poppler.patch"
 	epatch "${FILESDIR}/${P}-xpdfversion.patch"
+	epatch "${FILESDIR}/${P}-poppler-0.11.patch"
 	elibtoolize
 }
 
