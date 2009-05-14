@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.2.ebuild,v 1.4 2009/04/29 15:14:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.2.ebuild,v 1.5 2009/05/14 08:18:08 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 KDE_LINGUAS="cs de en fr"
 inherit kde4-base
 
@@ -31,6 +30,10 @@ DEPEND="${RDEPEND}
 	media-gfx/imagemagick"
 
 PATCHES=( "${FILESDIR}/${PV}-fix_gettext.patch" )
+
+if [ -z "$LINGUAS" ]; then
+	LINGUAS="en"
+fi
 
 src_configure() {
 	use mmx && append-flags "-mmmx"
