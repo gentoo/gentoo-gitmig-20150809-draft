@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.15.ebuild,v 1.1 2009/05/13 15:46:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/gst-python-0.10.15-r1.ebuild,v 1.1 2009/05/14 07:17:13 ssuominen Exp $
 
+EAPI=2
 NEED_PYTHON=2.4
-
 inherit autotools eutils multilib python
 
 DESCRIPTION="A Python Interface to GStreamer"
@@ -22,16 +22,15 @@ RDEPEND="|| ( >=dev-python/pygobject-2.11.2 >=dev-python/pygtk-2.6.3 )
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.10.9-lazy.patch
-
-	eautoconf
+	rm -f py-compile
+	ln -s $(type -P true) py-compile
+	AT_M4DIR="common/m4" eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use examples; then
