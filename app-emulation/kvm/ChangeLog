@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.34 2009/04/28 17:45:24 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.35 2009/05/14 14:40:02 dang Exp $
+
+*kvm-85-r2 (14 May 2009)
+
+  14 May 2009; Daniel Gryniewicz <dang@gentoo.org> +kvm-85-r2.ebuild:
+  - Remove test use flag; tests are restricted. bug #246441
+  - Fix automagic dep on bluez. bug #261978
+  - Add dep on pciutils. bug #267799
+  - Fix disabling of stripped binaries. bug #268237
+  - Fix help string breaking libvirt. bug #269014
 
   28 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> kvm-85-r1:
   Need linux-info for the kernel version checks

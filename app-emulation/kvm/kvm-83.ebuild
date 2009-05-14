@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-83.ebuild,v 1.3 2009/04/14 17:36:03 dang Exp $
-
-inherit eutils flag-o-matic toolchain-funcs linux-mod
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-83.ebuild,v 1.4 2009/05/14 14:40:02 dang Exp $
 
 EAPI="1"
+
+inherit eutils flag-o-matic toolchain-funcs linux-mod
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
 PATCHSET="kvm-patches-20090126"

@@ -1,15 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-81.ebuild,v 1.4 2009/05/14 14:40:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-85-r2.ebuild,v 1.1 2009/05/14 14:40:02 dang Exp $
 
-EAPI="1"
+EAPI="2"
 
-inherit eutils flag-o-matic toolchain-funcs linux-mod
+inherit eutils flag-o-matic toolchain-funcs linux-info
+
+MY_PN="qemu-${PN}-devel"
+MY_P="${MY_PN}-${PV}"
 
 # Patchset git repo is at http://github.com/dang/kvm-patches/tree/master
-PATCHSET="kvm-patches-20081216"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
-	http://apollo.fprintf.net/downloads/${PATCHSET}.tar.gz"
+PATCHSET="kvm-patches-20090314"
+SRC_URI="mirror://sourceforge/kvm/${MY_P}.tar.gz
+	http://dev.gentoo.org/~dang/files/${PATCHSET}.tar.gz"
 
 DESCRIPTION="Kernel-based Virtual Machine userland tools"
 HOMEPAGE="http://www.linux-kvm.org"
@@ -18,17 +21,20 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 # Add bios back when it builds again
-IUSE="alsa esd gnutls havekernel +modules ncurses pulseaudio +sdl test vde"
+IUSE="alsa bluetooth esd gnutls havekernel +modules ncurses pulseaudio +sdl vde"
 RESTRICT="test"
 
 RDEPEND="sys-libs/zlib
+	sys-apps/pciutils
 	alsa? ( >=media-libs/alsa-lib-1.0.13 )
 	esd? ( media-sound/esound )
 	pulseaudio? ( media-sound/pulseaudio )
 	gnutls? ( net-libs/gnutls )
 	ncurses? ( sys-libs/ncurses )
-	sdl? ( >=media-libs/libsdl-1.2.11 )
-	vde? ( net-misc/vde )"
+	sdl? ( >=media-libs/libsdl-1.2.11[X] )
+	vde? ( net-misc/vde )
+	bluetooth? ( net-wireless/bluez )
+	modules? ( =app-emulation/kvm-kmod-${PV} )"
 
 #    bios? (
 #        sys-devel/dev86
@@ -41,8 +47,9 @@ DEPEND="${RDEPEND}
 
 QA_TEXTRELS="usr/bin/kvm"
 
+S="${WORKDIR}/${MY_P}"
+
 pkg_setup() {
-	linux-info_pkg_setup
 	if use havekernel && use modules ; then
 		ewarn "You have the 'havekernel' and 'modules' use flags enabled."
 		ewarn "'havekernel' trumps 'modules'; the kvm modules will not"
@@ -52,21 +59,7 @@ pkg_setup() {
 		ewarn "You have the 'havekernel' use flag set.  This means you"
 		ewarn "must ensure you have a compatible kernel on your own."
 	elif use modules ; then
-		if ! linux_chkconfig_present KVM; then
-			eerror "KVM now needs CONFIG_KVM built into your kernel, even"
-			eerror "if you're using the external modules from this package."
-			eerror "Please enable KVM support in your kernel, found at:"
-			eerror
-			eerror "  Virtualization"
-			eerror "    Kernel-based Virtual Machine (KVM) support"
-			eerror
-			die "KVM support not detected!"
-		fi
-		BUILD_TARGETS="all"
-		MODULE_NAMES="kvm(kvm:${S}/kernel:${S}/kernel/x86)"
-		MODULE_NAMES="${MODULE_NAMES} kvm-intel(kvm:${S}/kernel:${S}/kernel/x86)"
-		MODULE_NAMES="${MODULE_NAMES} kvm-amd(kvm:${S}/kernel:${S}/kernel/x86)"
-		linux-mod_pkg_setup
+		:;
 	elif kernel_is lt 2 6 25; then
 		eerror "This version of KVM requres a host kernel of 2.6.25 or higher."
 		eerror "Either upgrade your kernel, or enable the 'modules' USE flag."
@@ -81,16 +74,10 @@ pkg_setup() {
 		die "KVM support not detected!"
 	fi
 
-	if use sdl && ! built_with_use media-libs/libsdl X ; then
-		die "You need to rebuild media-libs/libsdl with the X use flag"
-	fi
-
 	enewgroup kvm
 }
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	cd "${S}"
 	# prevent docs to get automatically installed
 	sed -i '/$(DESTDIR)$(docdir)/d' qemu/Makefile
@@ -100,16 +87,23 @@ src_unpack() {
 	[[ -x /sbin/paxctl ]] && \
 		sed -i 's/^VL_LDFLAGS=$/VL_LDFLAGS=-Wl,-z,execheap/' \
 			qemu/Makefile.target
-	# avoid strip
-	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' qemu/Makefile
+
+	# Kernel patch; doesn't apply
+	rm "${WORKDIR}/${PATCHSET}"/07_all_kernel-longmode.patch
+	# evdev patch is upstream
+	rm "${WORKDIR}/${PATCHSET}"/10_all_evdev_keycode_map.patch
 
 	# apply patchset
 	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}"
 	EPATCH_SUFFIX="patch"
 	epatch
+
+	# Fix docs manually
+	sed -i -e 's/QEMU/KVM/g;s/qemu/kvm/g;s/Qemu/Kvm/g;s/kvm-options.texi/qemu-options.texi/' \
+		qemu/qemu-doc.texi qemu/qemu-img.texi qemu/qemu-nbd.texi
 }
 
-src_compile() {
+src_configure() {
 	local mycc conf_opts audio_opts
 
 	audio_opts="oss"
@@ -117,22 +111,25 @@ src_compile() {
 	use ncurses || conf_opts="$conf_opts --disable-curses"
 	use sdl || conf_opts="$conf_opts --disable-gfx-check --disable-sdl"
 	use vde || conf_opts="$conf_opts --disable-vde"
+	use bluetooth || conf_opts="$conf_opts --disable-bluez"
 	use alsa && audio_opts="alsa $audio_opts"
 	use esd && audio_opts="esd $audio_opts"
 	use pulseaudio && audio_opts="pa $audio_opts"
 	use sdl && audio_opts="sdl $audio_opts"
-	use modules && conf_opts="$conf_opts --kerneldir=$KV_DIR"
-	conf_opts="$conf_opts --disable-gcc-check"
 	conf_opts="$conf_opts --prefix=/usr"
-	#conf_opts="$conf_opts --audio-drv-list=\"$audio_opts\""
+	conf_opts="$conf_opts --disable-strip"
+	if has_multilib_profile && [[ "${DEFAULT_ABI}" == "x86" ]] ; then
+		conf_opts="$conf_opts --arch=i686"
+	fi
+
+	# set up asm symlink; not done now there's no kernel source
+	cd kernel/include && ln -sf asm-x86 asm && cd ../..
 
 	./configure ${conf_opts} --audio-drv-list="$audio_opts" || die "econf failed"
+}
 
+src_compile() {
 	emake libkvm || die "emake libkvm failed"
-
-	if use test; then
-		emake user || die "emake user failed"
-	fi
 
 	mycc=$(cat qemu/config-host.mak | egrep "^CC=" | cut -d "=" -f 2)
 
@@ -160,15 +157,10 @@ src_compile() {
 #    fi
 
 	emake qemu || die "emake qemu failed"
-
-	if use modules && ! use havekernel ; then
-		linux-mod_src_compile
-	fi
 }
 
 src_install() {
-	# kcmd so we don't install kernel modules which weren't build
-	emake DESTDIR="${D}" kcmd='#' install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	exeinto /usr/bin/
 	doexe "${S}/kvm_stat"
@@ -190,10 +182,6 @@ src_install() {
 	dodoc qemu/pc-bios/README
 	newdoc qemu/qemu-doc.html kvm-doc.html
 	newdoc qemu/qemu-tech.html kvm-tech.html
-
-	if use modules && ! use havekernel ; then
-		linux-mod_src_install
-	fi
 }
 
 pkg_postinst() {
