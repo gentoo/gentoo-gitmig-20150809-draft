@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.28 2009/05/11 17:31:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.29 2009/05/14 21:08:02 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org> libp11-0.2.4.ebuild:
+  amd64 stable, bug #268671
 
   11 May 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   stable ppc64, bug 268671
