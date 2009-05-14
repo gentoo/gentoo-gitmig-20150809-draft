@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2655 2009/05/13 04:08:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2656 2009/05/14 07:32:20 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 May 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask lastrm-ripper for removal wrt #263804 because it doesn't work with
+  current LastFM API.
 
   13 May 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   clean up p.mask for recent removals from tree
