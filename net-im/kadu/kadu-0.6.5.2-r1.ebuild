@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r1.ebuild,v 1.1 2009/05/01 21:33:40 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r1.ebuild,v 1.2 2009/05/14 23:26:54 cla Exp $
 
 inherit base cmake-utils flag-o-matic
 
@@ -17,12 +17,12 @@ IUSE="alsa amarok amarok2 ao audacious +avatar bmpx config_wizard dragonplayer
 oss phonon sms spell +ssl vlc voice"
 
 COMMON_DEPEND="
+	>=app-crypt/qca-2.0.0-r2
 	>=media-libs/libsndfile-1.0
 	>=net-libs/libgadu-1.8[threads]
 	>=x11-libs/qt-dbus-4.4:4
 	>=x11-libs/qt-gui-4.4:4
 	>=x11-libs/qt-webkit-4.4:4
-	>=app-crypt/qca-2.0.0-r2
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
 	spell? ( app-text/aspell )
@@ -36,6 +36,7 @@ RDEPEND="${COMMON_DEPEND}
 	audacious? ( media-sound/audacious )
 	bmpx? ( media-sound/bmpx )
 	dragonplayer? ( kde-base/dragonplayer )
+	ssl? ( app-crypt/qca-ossl:2 )
 	vlc? ( media-video/vlc )
 "
 

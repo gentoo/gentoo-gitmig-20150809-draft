@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kadu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.73 2009/05/01 21:33:40 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/ChangeLog,v 1.74 2009/05/14 23:26:54 cla Exp $
+
+  14 May 2009; Dawid Węgliński <cla@gentoo.org> kadu-0.6.5.2-r1.ebuild:
+  Add missing dependency
 
 *kadu-0.6.5.2-r1 (01 May 2009)
 
