@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/notify-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.14 2009/05/11 17:19:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/notify-python/ChangeLog,v 1.15 2009/05/14 21:15:06 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org>
+  notify-python-0.1.1-r1.ebuild:
+  amd64 stable, bug #268690
 
   11 May 2009; Brent Baude <ranger@gentoo.org>
   notify-python-0.1.1-r1.ebuild:
