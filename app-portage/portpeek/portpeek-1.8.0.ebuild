@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.8.0.ebuild,v 1.1 2009/05/13 21:07:26 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/portpeek-1.8.0.ebuild,v 1.2 2009/05/14 15:04:21 mr_bones_ Exp $
 
 DESCRIPTION="A helper program for maintaining the package.keyword and package.unmask files"
 HOMEPAGE="http://www.mpagano.com/blog/?page_id=3"
@@ -29,4 +29,3 @@ pkg_postinst() {
 	ewarn " affected files from /etc/portage/* and assign it too me."
 	ewarn "Your faithful Gentoo servant, mpagano@gentoo.org"
 }
-
