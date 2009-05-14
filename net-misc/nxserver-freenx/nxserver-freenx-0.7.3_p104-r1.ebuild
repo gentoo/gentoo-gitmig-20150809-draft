@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104.ebuild,v 1.1 2009/04/20 15:21:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r1.ebuild,v 1.1 2009/05/14 15:15:46 voyageur Exp $
 
 EAPI=1
 
@@ -21,6 +21,8 @@ IUSE="+nxclient rdesktop vnc"
 DEPEND="x11-misc/gccmakedep
 	x11-misc/imake"
 RDEPEND="dev-tcltk/expect
+	media-fonts/font-cursor-misc
+	media-fonts/font-misc-misc
 	net-analyzer/gnu-netcat
 	>=net-misc/nx-2.1.0
 	sys-apps/gawk

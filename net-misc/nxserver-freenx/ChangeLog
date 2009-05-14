@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.62 2009/04/20 15:21:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.63 2009/05/14 15:15:46 voyageur Exp $
+
+*nxserver-freenx-0.7.3_p104-r1 (14 May 2009)
+
+  14 May 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -nxserver-freenx-0.7.3_p104.ebuild, +nxserver-freenx-0.7.3_p104-r1.ebuild:
+  Bump to restore media-fonts/font-cursor-misc and
+  media-fonts/font-misc-misc dependency, thanks Lum
+  <gentoo-bugzilla@lum.co.uk> in bug #269769
 
 *nxserver-freenx-0.7.3_p104 (20 Apr 2009)
 
