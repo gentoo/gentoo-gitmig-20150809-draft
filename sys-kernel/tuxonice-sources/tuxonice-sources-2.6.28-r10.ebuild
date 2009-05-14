@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.28-r10.ebuild,v 1.1 2009/05/01 22:10:10 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.28-r10.ebuild,v 1.2 2009/05/14 10:33:56 fauli Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
@@ -23,7 +23,7 @@ UNIPATCH_LIST="${DISTDIR}/${TUXONICE_SRC}.bz2"
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TUXONICE_URI}"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 RDEPEND="${RDEPEND}
 		>=sys-apps/tuxonice-userui-1.0
