@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rasqal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.27 2009/05/13 13:59:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rasqal/ChangeLog,v 1.28 2009/05/14 20:19:48 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org> rasqal-0.9.16.ebuild:
+  amd64/x86 stable, bug #269523
 
   13 May 2009; Jeroen Roovers <jer@gentoo.org> rasqal-0.9.16.ebuild:
   Stable for HPPA (bug #269523).
