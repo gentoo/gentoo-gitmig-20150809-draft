@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9799 2009/05/14 07:32:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9800 2009/05/14 07:36:14 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -463,12 +463,6 @@ net-libs/libinfinity
 # Not supported in Gentoo anymore, use 'eselect bashcomp' now
 # Comments on bug 253878 - removed in 30 days.
 app-shells/bash-completion-config
-
-# Michael Sterrett <mr_bones_@gentoo.org> (06 Apr 2009)
-# Masked for removal in 30 days.
-# Doesn't work with the latest versions of dev-util/scons.
-# Last release in 2006.  Removal approved by Gentoo KDE team.
-kde-misc/kleansweep
 
 # Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
 # Dead upstream and has issues with newer portages.
