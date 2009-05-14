@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.2.2.ebuild,v 1.1 2009/05/10 18:18:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.2.2.ebuild,v 1.2 2009/05/14 10:43:52 nirbheek Exp $
 
 EAPI="2"
 
@@ -60,10 +60,10 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	if use archive; then
-		epatch "${FILESDIR}/${P}-expose-archive-backend.patch"
-		eautoreconf
-	fi
+	# Conditional patching purely to avoid eautoreconf
+	use gphoto2 && epatch "${FILESDIR}/${P}-gphoto2-stricter-checks.patch"
+	use archive && epatch "${FILESDIR}/${P}-expose-archive-backend.patch"
+	use gphoto2 || use archive && eautoreconf
 }
 
 src_install() {
