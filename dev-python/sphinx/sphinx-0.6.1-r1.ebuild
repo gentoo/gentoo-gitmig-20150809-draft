@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.1-r1.ebuild,v 1.1 2009/05/13 08:57:51 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/sphinx-0.6.1-r1.ebuild,v 1.2 2009/05/14 18:10:36 jer Exp $
 
 inherit distutils multilib
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://sphinx.pocoo.org/"
 SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ia64 ~x86"
 IUSE="doc test"
 
 RDEPEND=">=dev-python/pygments-0.8
