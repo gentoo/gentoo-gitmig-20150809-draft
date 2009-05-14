@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7-r1.ebuild,v 1.2 2009/02/22 22:07:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7-r1.ebuild,v 1.3 2009/05/14 13:03:03 scarabeus Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ src_prepare() {
 	:
 }
 
-src_compile() {
+src_configure() {
 	# see bug #143168
 	replace-flags -O3 -O2
 
@@ -63,18 +63,18 @@ src_compile() {
 		$(use_with xcb)
 		$(use_with encode lame)"
 
-	kde_src_compile
+	kde_src_configure
 }
 
 src_install() {
 	kde_src_install
 
 	# fix localization, bug #199909
-	for mofile in "${D}"/usr/share/locale/*/LC_MESSAGES/${P}.mo ; do
+	for mofile in "${D}/${KDEDIR}"/share/locale/*/LC_MESSAGES/${P}.mo ; do
 		mv -f ${mofile} ${mofile/${P}.mo/${PN}.mo} \
 			|| die "fixing mo files failed"
 	done
 
 	# remove this, as kdelibs 3.5.4 provides it
-	rm -f "${D}"/usr/share/mimelnk/application/x-mplayer2.desktop
+	rm -f "${D}/${KDEDIR}"/share/mimelnk/application/x-mplayer2.desktop
 }
