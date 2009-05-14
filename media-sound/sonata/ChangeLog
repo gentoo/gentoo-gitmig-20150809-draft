@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.40 2009/05/11 10:13:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.41 2009/05/14 08:31:12 ssuominen Exp $
+
+*sonata-1.6.2 (14 May 2009)
+
+  14 May 2009; Samuli Suominen <ssuominen@gentoo.org> +sonata-1.6.2.ebuild:
+  Version bump wrt #264402, thanks to Andreas Rammhold for reporting.
 
   11 May 2009; Samuli Suominen <ssuominen@gentoo.org> sonata-1.6.ebuild,
   metadata.xml:
