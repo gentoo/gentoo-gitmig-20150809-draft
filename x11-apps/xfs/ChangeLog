@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.56 2009/05/05 12:24:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.57 2009/05/14 20:59:36 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org> xfs-1.0.8.ebuild:
+  amd64 stable, bug #268581
 
   05 May 2009; Jeroen Roovers <jer@gentoo.org> xfs-1.0.8.ebuild:
   Stable for HPPA (bug #268581).

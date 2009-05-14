@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/fonttosfnt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fonttosfnt/ChangeLog,v 1.20 2009/05/05 07:00:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fonttosfnt/ChangeLog,v 1.21 2009/05/14 20:57:59 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org> fonttosfnt-1.0.4.ebuild:
+  amd64 stable, bug #268581
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   fonttosfnt-1.0.3.ebuild, fonttosfnt-1.0.4.ebuild:
