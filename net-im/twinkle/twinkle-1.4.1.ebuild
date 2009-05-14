@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.4.1.ebuild,v 1.4 2009/04/26 15:03:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twinkle/twinkle-1.4.1.ebuild,v 1.5 2009/05/14 22:09:25 dragonheart Exp $
 
 EAPI=2
 ARTS_REQUIRED="never"
@@ -50,7 +50,7 @@ src_configure() {
 			$(use_with zrtp) \
 			$(use_with speex)"
 	set-kdedir
-	kde_src_compile configure
+	kde_src_configure myconf configure
 }
 
 src_compile() {

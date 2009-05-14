@@ -1,7 +1,0 @@
---- twinkle.desktop.in.orig	2007-07-23 18:50:01.000000000 +1000
-+++ twinkle.desktop.in	2007-07-23 19:31:11.320146603 +1000
-@@ -8,4 +8,4 @@
- StartupNotify=true
- Terminal=false
--Categories=Qt;KDE;Network;Telephony
-+Categories=Qt;KDE;Network;Telephony;
