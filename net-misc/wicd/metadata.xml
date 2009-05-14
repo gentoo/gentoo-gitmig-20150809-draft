@@ -8,5 +8,6 @@
 <use>
 	<flag name='ioctl'>Installs additional python libraries to use as a backend.
 	This will improve speed but is experimental.</flag>
+	<flag name='ncurses'>Installs a ncurses UI</flag>
 </use>
 </pkgmetadata>

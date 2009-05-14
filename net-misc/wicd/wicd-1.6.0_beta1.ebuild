@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_alpha3.ebuild,v 1.2 2009/05/13 19:02:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_beta1.ebuild,v 1.1 2009/05/14 14:55:35 darkside Exp $
 
 EAPI="2"
 
 inherit distutils eutils
 
-MY_P=${P/_alpha/a}
+MY_P=${P/_beta/b}
 
 DESCRIPTION="A lightweight wired and wireless network manager for Linux"
 HOMEPAGE="http://wicd.sourceforge.net/"
@@ -15,13 +15,12 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="libnotify ioctl"
+IUSE="ioctl libnotify ncurses"
 
 DEPEND=""
 RDEPEND="
 	dev-python/dbus-python
 	dev-python/pygtk
-	>=dev-python/urwid-0.9.8.4
 	|| (
 		net-misc/dhcpcd
 		net-misc/dhcp
@@ -39,15 +38,17 @@ RDEPEND="
 		kde-base/kdesu
 	)
 	>=sys-power/pm-utils-1.1.1
-	libnotify? ( dev-python/notify-python )
 	ioctl? ( dev-python/python-iwscan dev-python/python-wpactrl )
+	libnotify? ( dev-python/notify-python )
+	ncurses? ( >=dev-python/urwid-0.9.8.4 )
 	"
 
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	local myconf
-	use libnotify || myconf="--no-use-notifications"
+	use ncurses || myconf="${myconf} --no-install-ncurses"
+	use libnotify || myconf="${myconf} --no-use-notifications"
 	${python} ./setup.py configure --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose ${myconf}
 	distutils_src_compile
 }
