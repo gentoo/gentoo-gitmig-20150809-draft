@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-raw1394
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.40 2009/05/12 20:48:15 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-raw1394/ChangeLog,v 1.41 2009/05/14 19:34:48 maekke Exp $
+
+  14 May 2009; Markus Meier <maekke@gentoo.org>
+  gst-plugins-raw1394-0.10.14.ebuild:
+  amd64 stable, bug #266986
 
   12 May 2009; Christian Faulhammer <fauli@gentoo.org>
   gst-plugins-raw1394-0.10.14.ebuild:
