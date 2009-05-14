@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.70 2009/05/07 20:27:27 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.71 2009/05/14 09:57:41 nirbheek Exp $
+
+  14 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -brasero-2.26.1.ebuild, +brasero-2.26.1-r1.ebuild:
+  Fix intltoolize broken file (results in broken translations), see upstream
+  #577133
 
   07 May 2009; Tobias Klausmann <klausman@gentoo.org> brasero-2.26.1.ebuild:
   Keyworded on alpha, bug #268294
