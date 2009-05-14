@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.26.1.ebuild,v 1.1 2009/05/13 16:41:37 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.26.1.ebuild,v 1.2 2009/05/14 05:39:31 nirbheek Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils gnome2
 DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
 SRC_URI="${SRC_URI}
-	${P}-gentoo-patches.tar.bz2
+	mirror://gentoo/${P}-gentoo-patches.tar.bz2
 	branding? ( mirror://gentoo/gentoo-splash.png )"
 
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
