@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/seahorse-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.1 2009/03/17 09:41:58 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse-plugins/ChangeLog,v 1.2 2009/05/14 09:18:18 nirbheek Exp $
+
+*seahorse-plugins-2.26.1 (14 May 2009)
+
+  14 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +seahorse-plugins-2.26.1.ebuild:
+  Bump to 2.26.1, major changes are replacement of deprecated libraries, and
+  translation updates.
 
 *seahorse-plugins-2.24.1 (17 Mar 2009)
 
