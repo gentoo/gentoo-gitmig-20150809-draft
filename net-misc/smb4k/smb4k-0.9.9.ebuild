@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.9.7.ebuild,v 1.2 2008/12/07 13:16:51 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smb4k/smb4k-0.9.9.ebuild,v 1.1 2009/05/14 13:28:51 scarabeus Exp $
 
 ARTS_REQUIRED="never"
 
