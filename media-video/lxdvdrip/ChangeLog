@@ -1,6 +1,13 @@
 # ChangeLog for media-video/lxdvdrip
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.26 2008/08/13 10:23:53 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.27 2009/05/14 18:00:36 aballier Exp $
+
+*lxdvdrip-1.74 (14 May 2009)
+
+  14 May 2009; Alexis Ballier <aballier@gentoo.org> +lxdvdrip-1.74.ebuild,
+  +files/lxdvdrip-1.74-lxdvdrip.conf.patch,
+  +files/lxdvdrip-1.74-makefile.patch:
+  version bump, by Jon Wilson <jon-gentoo@phuq.co.uk>, bug #268807
 
 *lxdvdrip-1.71 (13 Aug 2008)
 
