@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.2 2009/05/13 15:24:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.3 2009/05/14 01:23:39 tester Exp $
+
+  14 May 2009; Olivier Crête <tester@gentoo.org> farsight2-0.0.9.ebuild:
+  virtualx not required for tests
 
   13 May 2009; Olivier Crête <tester@gentoo.org> farsight2-0.0.9.ebuild:
   Remove gst-plugins-farsight dep, its not required
