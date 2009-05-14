@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.3-r1.ebuild,v 1.1 2009/04/15 18:19:59 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.0.3-r1.ebuild,v 1.2 2009/05/14 12:44:21 scarabeus Exp $
 
 EAPI="1"
 
@@ -52,10 +52,8 @@ src_unpack() {
 src_install() {
 	kde_src_install
 
-	if has_version '>=kde-base/kdelibs-4.1'; then
-		rm "${D}"/usr/share/apps/katepart/syntax/bibtex.xml
-		rm "${D}"/usr/share/apps/katepart/syntax/latex.xml
-	fi
+	rm "${D}/${KDEDIR}"/apps/katepart/syntax/bibtex.xml
+	rm "${D}/${KDEDIR}"/apps/katepart/syntax/latex.xml
 }
 
 pkg_postinst() {
