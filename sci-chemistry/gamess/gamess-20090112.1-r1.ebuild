@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.3 2009/04/23 11:51:57 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.4 2009/05/15 08:13:13 fauli Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="
 		qmmm-tinker? ( tinker.tar.Z )"
 
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="hardened qmmm-tinker"
 
 RESTRICT="fetch"
