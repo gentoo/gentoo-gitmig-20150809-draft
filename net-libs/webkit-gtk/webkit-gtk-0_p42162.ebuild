@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p42162.ebuild,v 1.2 2009/05/07 22:13:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p42162.ebuild,v 1.3 2009/05/15 08:43:36 aballier Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://nightly.webkit.org/files/trunk/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 -ia64 ~ppc -sparc ~x86"
+KEYWORDS="~alpha ~amd64 -ia64 ~ppc -sparc ~x86 ~x86-fbsd"
 IUSE="coverage debug gstreamer pango soup +sqlite svg xslt"
 
 RDEPEND=">=x11-libs/gtk+-2.8
