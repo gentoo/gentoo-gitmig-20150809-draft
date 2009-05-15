@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0.ebuild,v 1.2 2009/04/15 18:51:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-2.0.0-r1.ebuild,v 1.1 2009/05/15 11:28:22 scarabeus Exp $
 
 EAPI="2"
 
@@ -19,9 +19,7 @@ SLOT="2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="debug doc"
 
-RDEPEND="
-	!kde-misc/krusader:0
-"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
