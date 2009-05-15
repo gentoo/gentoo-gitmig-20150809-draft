@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.11 2009/04/14 18:06:00 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.13.2.ebuild,v 1.12 2009/05/15 03:47:30 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils
 
 DESCRIPTION="The Music Player Daemon (mpd)"
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 arm hppa ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="aac alsa ao audiofile avahi flac icecast iconv ipv6 jack libsamplerate mp3 mikmod musepack ogg oss pulseaudio unicode vorbis"
 
-DEPEND="!sys-cluster/mpich2
+RDEPEND="!sys-cluster/mpich2
 	aac? ( >=media-libs/faad2-2.0_rc2 )
 	alsa? ( media-sound/alsa-utils )
 	ao? ( >=media-libs/libao-0.8.4 )
@@ -34,21 +33,18 @@ DEPEND="!sys-cluster/mpich2
 	ogg? ( media-libs/libogg )
 	pulseaudio? ( media-sound/pulseaudio )
 	vorbis? ( media-libs/libvorbis )"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	enewuser mpd "" "" "/var/lib/mpd" audio
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-mpdconf.patch || die "epatch for config file failed"
+src_prepare() {
+	epatch "${FILESDIR}"/${PV}-mpdconf.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf
-
-	myconf=""
 
 	if use avahi; then
 		myconf="${myconf} --with-zeroconf=avahi"
@@ -87,9 +83,7 @@ src_compile() {
 		$(use_enable pulseaudio pulse) \
 		$(use_enable vorbis oggvorbis) \
 		$(use_enable vorbis vorbistest) \
-		${myconf} || die "could not configure"
-
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {
