@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4446 2009/05/15 04:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4447 2009/05/15 05:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1354,8 +1354,6 @@ media-libs/gst-plugins-bad:libmms - Enables support for accessing Microsoft Medi
 media-libs/gst-plugins-bad:mythtv - Enables support for retrieval from media-tv/mythtv backend via gmyth
 media-libs/gst-plugins-bad:neon - Enables support for HTTP and WebDAV client library via neon
 media-libs/gst-plugins-bad:twolame - Enables support for MPEG Audio Layer 2 encoder via twolame
-media-libs/gst-plugins-base:libvisual - Build libvisual plug-in
-media-libs/gst-plugins-base:pango - Build pango plug-in
 media-libs/libass:enca - Enables support for charset discovery and conversion.
 media-libs/libcanberra:alsa - Enables ALSA sound driver.
 media-libs/libcanberra:gstreamer - Enables gstreamer sound driver. Not useful when alsa or pulseaudio is available.
