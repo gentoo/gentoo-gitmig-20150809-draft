@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/fnfx
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.5 2007/04/28 17:48:39 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/fnfx/ChangeLog,v 1.6 2009/05/15 20:23:41 maekke Exp $
+
+  15 May 2009; Markus Meier <maekke@gentoo.org> fnfx-0.3.ebuild:
+  add ~amd64, bug #267710
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> fnfx-0.3.ebuild:
   Fix *initd, *confd and *envd calls (#173884, #174266)
