@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r1.ebuild,v 1.1 2009/02/09 22:28:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mount/gnome-mount-0.8-r1.ebuild,v 1.2 2009/05/15 10:06:19 aballier Exp $
 
 inherit autotools eutils gnome2
 
@@ -45,7 +45,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.6-include-locale-h.patch"
 
 	# Better defaults for vfat, bug #257745
-	epatch "${FILESDIR}/${P}-vfat-defaults.patch"
+	use kernel_FreeBSD || epatch "${FILESDIR}/${P}-vfat-defaults.patch"
 
 	# Fix HAL locking for devices in fstab, bug #257746
 	epatch "${FILESDIR}/${P}-fstablock.patch"
