@@ -101,3 +101,7 @@ dev-lang/swig octave
 # Mask it for now
 gnome-base/nautilus tracker
 media-video/totem tracker
+
+# Alexis Ballier <aballier@gentoo.org> (15 May 2009)
+# Needs xulrunner 1.9
+net-libs/libproxy xulrunner

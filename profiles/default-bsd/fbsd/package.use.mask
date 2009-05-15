@@ -96,3 +96,6 @@ sys-auth/pambase consolekit cracklib ssh sha512
 # octave needs fftw which does not work of fbsd
 dev-lang/swig octave
 
+# Alexis Ballier <aballier@gentoo.org> (15 May 2009)
+# Needs xulrunner 1.9
+net-libs/libproxy xulrunner
