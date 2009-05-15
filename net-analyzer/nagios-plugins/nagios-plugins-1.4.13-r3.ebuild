@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.12.ebuild,v 1.2 2008/05/31 08:22:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r3.ebuild,v 1.1 2009/05/15 17:32:37 dertobi123 Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+EAPI=1
 
 inherit eutils autotools
 
@@ -14,8 +13,8 @@ SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-IUSE="ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
-nagios-ssh nagios-game ups ipv6 radius"
+IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping
+nagios-ssh nagios-game ups ipv6 radius +suid"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
@@ -55,8 +54,9 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
+	epatch "${FILESDIR}"/${PN}-1.4.12-pgsqlconfigure.patch
 
-	AT_M4DIR="m4 gl/m4" eautoreconf
+	eautoreconf
 }
 
 src_compile() {
@@ -68,16 +68,18 @@ src_compile() {
 		conf="${conf} --without-openssl"
 	fi
 
+	if use postgres; then
+		conf="${conf} --with-pgsql=/usr"
+	fi
+
 	econf \
 		$(use_with mysql) \
-		$(use_with postgres pgsql) \
 		$(use_with ipv6) \
 		${conf} \
 		--host=${CHOST} \
-		--prefix=/usr/nagios \
-		--sysconfdir=/etc/nagios \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "econf failed"
+		--prefix=/usr \
+		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
+		--sysconfdir=/etc/nagios || die "econf failed"
 
 	# fix problem with additional -
 	sed -i -e 's:/bin/ps -axwo:/bin/ps axwo:g' config.h || die "sed failed"
@@ -90,6 +92,7 @@ src_install() {
 	chmod +x "${S}"/contrib/*.pl
 
 	sed -i -e '1s;#!.*;#!/usr/bin/perl -w;' "${S}"/contrib/*.pl || die "sed failed"
+	sed -i -e s#/usr/nagios/libexec#/usr/$(get_libdir)/nagios/plugins#g "${S}"/contrib/*.pl || die "sed failed"
 	sed -i -e '30s/use lib utils.pm;/use utils;/' \
 		"${S}"/plugins-scripts/check_file_age.pl || die "sed failed"
 
@@ -99,20 +102,32 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
 	if use mysql || use postgres; then
-		dodir /usr/nagios/libexec
-		exeinto /usr/nagios/libexec
+		dodir /usr/$(get_libdir)/nagios/plugins
+		exeinto /usr/$(get_libdir)/nagios/plugins
 		doexe "${S}"/contrib/check_nagios_db.pl
 	fi
 
-	dodir /usr/nagios/libexec/
-	mv "${S}"/contrib "${D}"/usr/nagios/libexec/contrib
+	if ! use snmp; then
+		rm "${D}"/usr/$(get_libdir)/nagios/plugins/check_if{operstatus,status} \
+			|| die "Failed to remove SNMP check plugins"
+	fi
 
-	chown root:nagios "${D}"/usr/nagios || die "Failed Chown of ${D}usr/nagios"
-	chown -R root:nagios "${D}"/usr/nagios/libexec || die "Failed Chown of ${D}usr/nagios/libexec"
+	mv "${S}"/contrib "${D}"/usr/$(get_libdir)/nagios/plugins/contrib
 
-	chmod -R o-rwx "${D}"/usr/nagios/libexec || die "Failed Chmod of ${D}usr/nagios/libexec"
+	chown -R root:nagios "${D}"/usr/$(get_libdir)/nagios/plugins \
+		|| die "Failed chown of ${D}usr/$(get_libdir)/nagios/plugins"
 
-	chmod 04710 "${D}"/usr/nagios/libexec/check_icmp || die "Failed Chmod of ${D}usr/nagios/libexec/check_icmp"
+	chmod -R o-rwx "${D}"/usr/$(get_libdir)/nagios/plugins \
+		|| die "Failed chmod of ${D}usr/$(get_libdir)/nagios/plugins"
+
+	if use suid ; then
+
+		chmod 04710 "${D}"/usr/$(get_libdir)/nagios/plugins/{check_icmp,check_ide_smart,check_dhcp} \
+			|| die "Failed setting the suid bit for various plugins"
+	fi
+
+	dosym /usr/$(get_libdir)/nagios/plugins/utils.sh /usr/$(get_libdir)/nagios/plugins/contrib/utils.sh
+	dosym /usr/$(get_libdir)/nagios/plugins/utils.pm /usr/$(get_libdir)/nagios/plugins/contrib/utils.pm
 }
 
 pkg_postinst() {
@@ -120,5 +135,5 @@ pkg_postinst() {
 	einfo "Depending on what you want to monitor with nagios, some or all of these USE"
 	einfo "flags need to be set for nagios to function correctly."
 	echo
-	einfo "contrib plugins are installed into /usr/nagios/libexec/contrib"
+	einfo "contrib plugins are installed into /usr/$(get_libdir)/nagios/plugins/contrib"
 }
