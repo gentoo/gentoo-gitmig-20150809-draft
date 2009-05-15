@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.184 2009/05/10 11:20:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.185 2009/05/15 02:29:11 jmbsvicetto Exp $
+
+*kopete-3.5.10-r1 (15 May 2009)
+*kopete-3.5.9-r1 (15 May 2009)
+
+  15 May 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kopete-3.5.9-r1.ebuild, +kopete-3.5.10-r1.ebuild:
+  Forcibly disabled gadu for kopete-3.5 ebuilds as they won't build against
+  system gadu and use a bundled insecure version - fixes bug 264613.
 
   10 May 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml:
   Remove unused local useflags
