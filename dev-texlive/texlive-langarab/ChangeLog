@@ -1,6 +1,10 @@
 # ChangeLog for dev-texlive/texlive-langarab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarab/ChangeLog,v 1.26 2009/03/18 21:09:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-langarab/ChangeLog,v 1.27 2009/05/15 13:33:08 aballier Exp $
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org>
+  -texlive-langarab-2007.ebuild:
+  remove old
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> texlive-langarab-2008.ebuild:
   Marking texlive-langarab-2008 ppc stable for bug 253551
