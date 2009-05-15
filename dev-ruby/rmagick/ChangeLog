@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rmagick
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.142 2009/03/18 14:58:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rmagick/ChangeLog,v 1.143 2009/05/15 05:47:40 graaff Exp $
+
+*rmagick-2.9.2 (15 May 2009)
+
+  15 May 2009; Hans de Graaff <graaff@gentoo.org> +rmagick-2.9.2.ebuild:
+  Version bump supporting functionality in newer versions of ImageMagick.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> rmagick-2.9.0.ebuild:
   stable ppc, bug 260601
