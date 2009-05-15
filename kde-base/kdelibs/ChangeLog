@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.591 2009/05/12 13:40:41 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.592 2009/05/15 11:01:34 scarabeus Exp $
+
+*kdelibs-3.5.10-r5 (15 May 2009)
+
+  15 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +kdelibs-3.5.10-r5.ebuild, +files/kdelibs-3.5.10-kde4-apps.patch:
+  Move in last kdelibs:3.5 fixes from kde-crazy overlay. Now it should help
+  kde4 and kde3 apps mixage and fix issues with libraries.
 
 *kdelibs-3.5.10-r4 (12 May 2009)
 

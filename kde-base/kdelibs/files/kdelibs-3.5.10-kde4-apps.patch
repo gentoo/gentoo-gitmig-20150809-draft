@@ -1,0 +1,66 @@
+--- kio/kio/kservice.cpp.old	2008-02-13 11:41:06.000000000 +0200
++++ kio/kio/kservice.cpp	2009-05-14 22:55:30.494205205 +0300
+@@ -97,6 +97,7 @@
+   m_bValid = true;
+
+   bool absPath = !QDir::isRelativePath(entryPath());
++  bool kde4application = config->fileName().startsWith("/usr/share/applications/kde4/");
+
+   config->setDesktopGroup();
+
+@@ -133,6 +134,8 @@
+     if (i != -1)
+        m_strName = m_strName.left(i);
+   }
++  if ( kde4application )
++    m_strName += " (KDE4)";
+
+   m_strType = config->readEntry( "Type" );
+   entryMap.remove("Type");
+@@ -196,6 +199,18 @@
+      name = name.left(pos);
+
+   m_strExec = config->readPathEntry( "Exec" );
++  if ( kde4application && !m_strExec.startsWith("/"))
++    m_strExec = "/usr/bin/"+m_strExec;
++  else if (config->readBoolEntry("X-KDE-SubstituteUID")) {
++    int space = m_strExec.find(" ");
++    if (space==-1)
++      m_strExec = KStandardDirs::findExe(m_strExec);
++    else {
++      const QString command = m_strExec.left(space);
++      m_strExec.replace(command,KStandardDirs::findExe(command));
++    }
++  }
++
+   entryMap.remove("Exec");
+
+   m_strIcon = config->readEntry( "Icon", "unknown" );
+@@ -245,11 +260,15 @@
+      m_DCOPServiceType = DCOP_None;
+
+   m_strDesktopEntryName = name.lower();
++  if ( kde4application )
++    m_strDesktopEntryName = "kde4-" + m_strDesktopEntryName;
+
+   m_bAllowAsDefault = config->readBoolEntry( "AllowDefault", true );
+   entryMap.remove("AllowDefault");
+
+   m_initialPreference = config->readNumEntry( "InitialPreference", 1 );
++  if ( kde4application )
++    m_initialPreference = 1;
+   entryMap.remove("InitialPreference");
+
+   // Store all additional entries in the property map.
+@@ -260,7 +279,10 @@
+   for( ; it != entryMap.end();++it)
+   {
+      //qDebug("   Key = %s Data = %s", it.key().latin1(), it.data().latin1());
+-     m_mapProps.insert( it.key(), QVariant( it.data()));
++     QString key = it.key();
++     if ( kde4application && key == "OnlyShownIn" && it.data() == "KDE;" )
++        key = "NotShowIn";
++     m_mapProps.insert(key, QVariant( it.data()));
+   }
+ }
+
