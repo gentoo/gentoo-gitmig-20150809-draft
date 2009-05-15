@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.73.ebuild,v 1.14 2009/01/04 16:50:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/usbutils-0.73.ebuild,v 1.15 2009/05/15 10:10:04 robbat2 Exp $
 
+EAPI=1
 inherit eutils autotools
 
 DESCRIPTION="USB enumeration utilities"
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="network-cron zlib"
 
-DEPEND="dev-libs/libusb"
+DEPEND="virtual/libusb:0"
 		# zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 
