@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.6.2-r1.ebuild,v 1.1 2008/12/09 18:25:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.7.0.ebuild,v 1.1 2009/05/15 16:14:45 dertobi123 Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ RDEPEND=">=dev-lang/python-2.4
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-sharedir.patch"
+	epatch "${FILESDIR}/${PN}-0.7.0-sharedir.patch"
 }
 
 src_install() {
