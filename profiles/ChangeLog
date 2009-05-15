@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2661 2009/05/15 15:46:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2662 2009/05/15 22:33:21 caster Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
+  Removing the treecleaned ant-1.7.0 from package mask.
 
   15 May 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask tl-langmanju for removal
