@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.11 2008/11/12 06:16:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.12 2009/05/15 21:44:09 halcy0n Exp $
 
 inherit eutils flag-o-matic linux-info linux-mod
 
@@ -80,6 +80,6 @@ pkg_postinst() {
 	elog "script located at: /usr/share/${P}/scripts/createdisk.py"
 	elog "Usage: createdisk.py <image name> <image size>"
 	elog ""
-	elog "Also, be sure to check /usr/share/doc/${P}/ppccfg.example.gz"
+	elog "Also, be sure to check ppccfg.example in /usr/share/doc/${P}/"
 	elog "for new configuration options."
 }
