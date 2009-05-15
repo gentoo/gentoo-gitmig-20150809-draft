@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.6 2009/05/14 21:29:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.7 2009/05/15 08:59:19 aballier Exp $
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org> libproxy-0.2.3.ebuild,
+  +files/libproxy-0.2.3-fbsd.patch,
+  files/libproxy-0.2.3-fix-as-needed-problem.patch:
+  Adjust dep on xulrunner as it requires 1.9, fix libdl linkage by using
+  portability eclass to link it only on linux, add a merge of various
+  upstream commits to build on BSD and be more POSIX compliant and
+  eventually keyword it ~x86-fbsd, bug #268529
 
   14 May 2009; Gilles Dartiguelongue <eva@gentoo.org> libproxy-0.2.3.ebuild,
   +files/libproxy-0.2.3-implicit-declaration.patch:

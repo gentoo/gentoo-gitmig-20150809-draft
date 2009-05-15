@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.2.3.ebuild,v 1.5 2009/05/14 21:29:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.2.3.ebuild,v 1.6 2009/05/15 08:59:19 aballier Exp $
 
 EAPI="2"
 
-inherit autotools eutils python
+inherit autotools eutils python portability
 
 DESCRIPTION="Library for automatic proxy configuration management"
 HOMEPAGE="http://code.google.com/p/libproxy/"
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~x86 ~x86-fbsd"
 IUSE="gnome kde networkmanager python webkit xulrunner"
 
 RDEPEND="
@@ -26,7 +26,7 @@ RDEPEND="
 	networkmanager? ( net-misc/networkmanager )
 	python? ( >=dev-lang/python-2.5 )
 	webkit? ( net-libs/webkit-gtk )
-	xulrunner? ( net-libs/xulrunner )
+	xulrunner? ( >=net-libs/xulrunner-1.9 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19"
@@ -47,6 +47,8 @@ src_prepare() {
 	# Fix implicit declaration QA, bug #268546
 	epatch "${FILESDIR}/${P}-implicit-declaration.patch"
 
+	epatch "${FILESDIR}/${P}-fbsd.patch" # drop at next bump
+
 	# Fix test to follow POSIX (for x86-fbsd)
 	sed -e 's/\(test.*\)==/\1=/g' -i configure.ac configure || die "sed failed"
 
@@ -65,8 +67,12 @@ src_configure() {
 		$(use_with python)
 }
 
+src_compile() {
+	emake LIBDL="$(dlopen_lib)" || die
+}
+
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed!"
+	emake DESTDIR="${D}" LIBDL="$(dlopen_lib)" install || die "emake install failed!"
 	dodoc AUTHORS NEWS README ChangeLog || die "dodoc failed"
 }
 
