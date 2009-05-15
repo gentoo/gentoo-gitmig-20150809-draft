@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.118 2009/05/15 03:42:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.119 2009/05/15 21:11:24 maekke Exp $
+
+  15 May 2009; Markus Meier <maekke@gentoo.org> grub-0.97-r9.ebuild:
+  amd64 stable, bug #269201
 
   15 May 2009; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
   Do not put ruby into RDEPEND and do not build with -Werror #269887 by
