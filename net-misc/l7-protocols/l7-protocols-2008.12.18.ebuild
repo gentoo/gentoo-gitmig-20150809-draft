@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.12.18.ebuild,v 1.1 2008/12/19 14:02:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-protocols/l7-protocols-2008.12.18.ebuild,v 1.2 2009/05/15 08:32:16 fauli Exp $
 
 inherit eutils fixheadtails toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
