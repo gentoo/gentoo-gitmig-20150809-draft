@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.68 2009/05/12 10:29:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.69 2009/05/15 10:40:42 aballier Exp $
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org> -freebsd-lib-7.1.ebuild,
+  -freebsd-lib-7.1-r1.ebuild, -freebsd-lib-7.1-r2.ebuild:
+  remove unused versions
 
 *freebsd-lib-7.1-r3 (12 May 2009)
 

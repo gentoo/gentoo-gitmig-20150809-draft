@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.46 2009/05/12 09:05:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.47 2009/05/15 10:42:20 aballier Exp $
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org>
+  -freebsd-sources-6.2-r4.ebuild, -freebsd-sources-7.1.ebuild:
+  remove unused versions
 
 *freebsd-sources-7.1-r1 (12 May 2009)
 
