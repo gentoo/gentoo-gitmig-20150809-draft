@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.24.0.ebuild,v 1.8 2009/04/27 13:02:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.24.0.ebuild,v 1.9 2009/05/15 00:11:53 robbat2 Exp $
 
+EAPI=1
 inherit virtualx gnome2
 
 DESCRIPTION="Gnome Onscreen Keyboard"
@@ -12,6 +13,7 @@ SLOT="1"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc usb"
 
+# libusb-compat untested
 RDEPEND=">=dev-libs/glib-2.11
 	>=gnome-base/libgnomeui-2
 	>=gnome-extra/at-spi-1.5.2
@@ -25,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.11
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
 	>=gnome-base/orbit-2
-	usb? ( >=dev-libs/libusb-0.1.11 )
+	usb? ( >=dev-libs/libusb-0.1.11:0 )
 	x11-libs/libXi
 	x11-libs/libX11
 	x11-libs/libXevie"

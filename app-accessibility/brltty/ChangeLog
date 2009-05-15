@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.86 2009/04/01 19:19:42 williamh Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.87 2009/05/15 00:09:04 robbat2 Exp $
+
+  15 May 2009; Robin H. Johnson <robbat2@gentoo.org> brltty-3.10.ebuild:
+  libusb-compat is untested, force dev-libs/libusb slot 0 for now.
 
   01 Apr 2009; William Hubbs <williamh@gentoo.org> -brltty-3.9.ebuild:
   Removed old version.

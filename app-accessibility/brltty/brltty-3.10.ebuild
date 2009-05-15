@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.10.ebuild,v 1.8 2009/02/06 05:11:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.10.ebuild,v 1.9 2009/05/15 00:09:04 robbat2 Exp $
 
 FINDLIB_USE="ocaml"
+EAPI=1
 
 inherit autotools findlib eutils multilib toolchain-funcs java-pkg-opt-2 flag-o-matic
 
@@ -15,6 +16,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 x86"
 IUSE="bluetooth doc gpm iconv icu java nls ocaml python usb tcl X"
 
+# libusb-compat untested
 COMMON_DEP="bluetooth? ( net-wireless/bluez-libs )
 	gpm? ( >=sys-libs/gpm-1.20 )
 	iconv? ( virtual/libiconv )
@@ -22,7 +24,7 @@ COMMON_DEP="bluetooth? ( net-wireless/bluez-libs )
 	nls? ( virtual/libintl )
 	python? ( >=dev-python/pyrex-0.9.4.1 )
 	tcl? ( >=dev-lang/tcl-8.4.15 )
-	usb? ( >=dev-libs/libusb-0.1.12-r1 )
+	usb? ( >=dev-libs/libusb-0.1.12-r1:0 )
 	X? ( x11-libs/libXaw )"
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${COMMON_DEP}"
