@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.90.0-r1.ebuild,v 1.1 2009/05/15 11:28:22 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.90.0-r1.ebuild,v 1.2 2009/05/15 16:22:19 scarabeus Exp $
 
 EAPI=1
 inherit kde
@@ -48,13 +48,11 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf="$(use_with kde konqueror) $(use_with javascript) --with-kiotar"
+	local myconf="$(use_with kde konqueror) $(use_with javascript) --without-kiotar"
 	kde_src_compile
 }
 
 src_install() {
 	kde_src_install
 	dodoc "${FILESDIR}/external-tools" || die "Installing docs failed."
-	# remove collisions
-	rm -rf "${D}/${KDEDIR}/"{$(get_libdir)/kde3/kio_tar.{so,la},share/services/{ar,tar,zip}.protocol}
 }
