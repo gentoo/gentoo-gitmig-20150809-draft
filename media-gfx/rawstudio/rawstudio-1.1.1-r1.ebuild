@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-1.1.1-r1.ebuild,v 1.1 2009/04/05 12:26:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-1.1.1-r1.ebuild,v 1.2 2009/05/15 08:30:52 fauli Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.org/files/release/${P}.tar.gz"
 
 LICENSE="GPL-2 CCPL-Attribution-NoDerivs-2.5"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/libxml2-2.4
