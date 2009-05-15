@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.8 2009/05/01 21:36:27 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.9 2009/05/15 03:42:21 vapier Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -21,8 +21,9 @@ use multislot && SLOT="2" || SLOT="0"
 KEYWORDS=""
 IUSE="custom-cflags multislot static"
 
-DEPEND=">=sys-libs/ncurses-5.2-r5
-	dev-libs/lzo
+RDEPEND=">=sys-libs/ncurses-5.2-r5
+	dev-libs/lzo"
+DEPEND="${RDEPEND}
 	dev-lang/ruby"
 PROVIDE="virtual/bootloader"
 
@@ -37,6 +38,7 @@ src_unpack() {
 	fi
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.96-genkernel.patch #256335
+	sed -i 's:-Werror::' conf/*.rmk || die #269887
 
 	# autogen.sh does more than just run autotools
 	sed -i -e 's:^auto:eauto:' autogen.sh
