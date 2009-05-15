@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.11.ebuild,v 1.4 2009/02/26 15:41:41 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.11.ebuild,v 1.5 2009/05/15 05:30:29 dirtyepic Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Library for Bible reading software."
 HOMEPAGE="http://www.crosswire.org/sword/"
@@ -20,6 +20,12 @@ RDEPEND="sys-libs/zlib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc44.patch		#269190
+}
+
 src_compile() {
 	strip-flags
 	econf --with-zlib \
@@ -32,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS CODINGSTYLE ChangeLog INSTALL README
 	if use doc ;then
 		rm -rf examples/.cvsignore
