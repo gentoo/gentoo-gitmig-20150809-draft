@@ -1,9 +1,9 @@
+# Note that this requires portage-2.1.1+ so if you need this functionality,
+# make sure your package forces a new-enough portage.
+
 # Mask until Qt 4.4 works with this package, as we need to mask 4.3
 # because of bug 248038. See also bug 243362.
 sci-visualization/paraview qt4
-
-# Note that this requires portage-2.1.1+ so if you need this functionality,
-# make sure your package forces a new-enough portage.
 
 sys-devel/gcc -hardened
 www-apps/mediawiki math
@@ -21,3 +21,5 @@ media-tv/mythtv opengl-xvmc
 # does not work with ffmpeg new headers
 <www-plugins/gnash-0.8.3 ffmpeg
 
+# No -z now support?  Bug #269288.
+sys-devel/binutils gold
