@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996b.ebuild,v 1.4 2009/01/04 15:57:44 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/rbldnsd-0.996b.ebuild,v 1.5 2009/05/15 21:46:26 halcy0n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,5 +47,5 @@ pkg_postinst() {
 	chown rbldns:rbldns /var/db/rbldnsd
 
 	elog "for testing purpose, example zone file has been installed"
-	elog "see /usr/share/doc/${PF}/example.gz"
+	elog "Look in /usr/share/doc/${PF}/"
 }
