@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_beta1.ebuild,v 1.1 2009/05/15 03:47:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_beta2.ebuild,v 1.1 2009/05/15 04:25:24 ssuominen Exp $
 
 EAPI=2
-inherit flag-o-matic eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="The Music Player Daemon (mpd)"
 HOMEPAGE="http://www.musicpd.org"
@@ -13,7 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug doc +fifo +ffmpeg flac
-fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad mikmod modplug musepack network ogg oss pipe pulseaudio sid sqlite unicode vorbis wavpack zeroconf zip"
+fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
+mikmod modplug musepack network ogg oss pipe pulseaudio sid sqlite unicode
+vorbis wavpack zeroconf zip"
 
 RDEPEND="!sys-cluster/mpich2
 	>=dev-libs/glib-2.4:2
@@ -51,7 +53,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		app-text/xmlto )"
 
-S=${WORKDIR}/${P/_/~}
+S=${WORKDIR}/${P/_/\~}
 
 pkg_setup() {
 	if ! use network; then
@@ -63,20 +65,18 @@ pkg_setup() {
 	fi
 
 	use fluidsynth && ewarn "Using fluidsynth is discouraged by upstream."
+
 	enewuser mpd "" "" "/var/lib/mpd" audio
 }
 
 src_prepare() {
-	cp -f doc/mpdconf.example doc/mpdconf.dist
+	cp -f "${S}"/doc/mpdconf.example "${S}"/doc/mpdconf.dist
 	epatch "${FILESDIR}"/${PV}-mpdconf.patch
 }
 
 src_configure() {
-	append-lfs-flags
-	# OggFLACtest is for <=flac-1.2.2
-	local mpdconf="--disable-dependency-tracking --enable-tcp
-		--enable-un --disable-wildmidi --disable-mvp
-		--disable-libOggFLACtest --disable-werror"
+	local mpdconf="--enable-tcp --enable-un --disable-wildmidi
+		--disable-libOggFLACtest"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -87,46 +87,33 @@ src_configure() {
 	fi
 
 	if use flac && use ogg; then
-		myconf+=" --enable-oggflac"
+		mpdconf+=" --enable-oggflac"
 	else
-		myconf+=" --disable-oggflag"
+		mpdconf+=" --disable-oggflag"
 	fi
 
+	append-lfs-flags
+
+	cd "${S}"
+
 	econf \
-		$(use_enable ipv6) \
-		$(use_enable cue) \
-		$(use_enable sqlite) \
-		$(use_enable curl) \
-		$(use_enable lastfmradio lastfm) \
-		$(use_enable libmms mms) \
-		$(use_enable bzip2) \
-		$(use_enable zip) \
-		$(use_enable cdio iso9660) \
-		$(use_enable id3) \
-		$(use_enable audiofile) \
-		$(use_enable ffmpeg) \
-		$(use_enable flac) \
-		$(use_enable mad) \
-		$(use_enable mikmod) \
-		$(use_enable modplug) \
-		$(use_enable musepack mpc) \
-		$(use_enable vorbis) \
-		$(use_enable sid sidplay) \
-		$(use_enable fluidsynth) \
-		$(use_enable wavpack) \
-		$(use_enable libsamplerate lsr) \
-		$(use_enable alsa) \
-		$(use_enable ao) \
-		$(use_enable fifo) \
-		$(use_enable pipe pipe-output) \
-		$(use_enable jack) \
-		$(use_enable oss) \
-		$(use_enable pulseaudio pulse) \
-		$(use_enable aac) \
-		$(use_enable doc documentation) \
-		$(use_enable debug) \
-		$(use_enable profile gprof) \
-		$(use_with zeroconf zeroconf avahi) \
+		$(use_enable ipv6) $(use_enable cue) \
+		$(use_enable sqlite sqlite) $(use_enable curl) \
+		$(use_enable lastfmradio lastfm) $(use_enable libmms mms) \
+		$(use_enable bzip2) $(use_enable zip) \
+		$(use_enable cdio iso9660) $(use_enable id3) \
+		$(use_enable audiofile) $(use_enable ffmpeg) \
+		$(use_enable flac) $(use_enable mad) \
+		$(use_enable mikmod) $(use_enable modplug) \
+		$(use_enable musepack mpc) $(use_enable vorbis) \
+		$(use_enable sid sidplay) $(use_enable fluidsynth) \
+		$(use_enable wavpack) $(use_enable libsamplerate lsr) \
+		$(use_enable alsa) $(use_enable ao) \
+		$(use_enable fifo) $(use_enable pipe pipe-output) \
+		$(use_enable jack) $(use_enable oss) \
+		$(use_enable pulseaudio pulse) $(use_enable aac) \
+		$(use_enable doc documentation) $(use_enable debug) \
+		$(use_enable profile gprof) $(use_with zeroconf zeroconf avahi) \
 		${mpdconf}
 }
 
@@ -139,7 +126,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	rm -rf "${D}"/usr/share/doc/mpd
 
-	dodoc AUTHORS NEWS README TODO UPGRADING
+	dodoc AUTHORS NEWS README UPGRADING
 	dodoc doc/mpdconf.dist
 	use doc && dohtml doc/protocol.html
 
