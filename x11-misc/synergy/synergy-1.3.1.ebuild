@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.3.1.ebuild,v 1.12 2008/04/21 13:39:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.3.1.ebuild,v 1.13 2009/05/15 08:00:10 solar Exp $
 
 inherit eutils autotools
 
@@ -8,7 +8,7 @@ DESCRIPTION="Lets you easily share a single mouse and keyboard between multiple 
 SRC_URI="mirror://sourceforge/${PN}2/${P}.tar.gz"
 HOMEPAGE="http://synergy2.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~arm alpha amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
