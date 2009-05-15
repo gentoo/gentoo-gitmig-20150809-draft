@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.19 2009/05/13 20:32:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.20 2009/05/15 16:16:08 armin76 Exp $
+
+  15 May 2009; Raúl Porcel <armin76@gentoo.org> webfs-1.21-r1.ebuild:
+  sparc stable wrt #266692
 
   13 May 2009; Tobias Klausmann <klausman@gentoo.org> webfs-1.21-r1.ebuild:
   Stable on alpha, bug #266692
