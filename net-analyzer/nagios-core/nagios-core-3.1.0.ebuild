@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.0.ebuild,v 1.3 2009/02/24 17:07:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.0.ebuild,v 1.4 2009/05/15 16:29:29 dertobi123 Exp $
 
 EAPI="2"
 
@@ -59,13 +59,13 @@ src_compile() {
 	fi
 
 	if use !apache2 && use !lighttpd ; then
-		myconf="${myconf} --with-command-grp=nagios"
+		myconf="${myconf} --with-command-group=nagios"
 	else
 		if use apache2 ; then
-			myconf="${myconf} --with-command-grp=apache"
+			myconf="${myconf} --with-command-group=apache"
 			myconf="${myconf} --with-httpd-conf=/etc/apache2/conf.d"
 		elif use lighttpd ; then
-			myconf="${myconf} --with-command-grp=lighttpd"
+			myconf="${myconf} --with-command-group=lighttpd"
 		fi
 	fi
 
