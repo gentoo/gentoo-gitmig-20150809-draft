@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-7.1-r1.ebuild,v 1.1 2009/05/12 09:05:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-7.1-r1.ebuild,v 1.2 2009/05/15 15:56:40 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic
 
@@ -49,6 +49,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-7.1-types.h-fix.patch"
 	epatch "${FILESDIR}/${PN}-7.1-subnet-route-pr40133.patch"
 	epatch "${FILESDIR}/${PN}-7.1-ktimer.patch"
+	epatch "${FILESDIR}/${PN}-7.1-includes.patch"
 
 	# Disable SSP for the kernel
 	grep -Zlr -- -ffreestanding "${S}" | xargs -0 sed -i -e \

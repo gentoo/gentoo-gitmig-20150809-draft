@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.47 2009/05/15 10:42:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.48 2009/05/15 15:56:40 aballier Exp $
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org>
+  freebsd-sources-7.1-r1.ebuild, +files/freebsd-sources-7.1-includes.patch:
+  add a patch for headers interdependencies
 
   15 May 2009; Alexis Ballier <aballier@gentoo.org>
   -freebsd-sources-6.2-r4.ebuild, -freebsd-sources-7.1.ebuild:
