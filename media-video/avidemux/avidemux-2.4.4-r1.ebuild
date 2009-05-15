@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.4-r1.ebuild,v 1.1 2009/05/08 12:41:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.4.4-r1.ebuild,v 1.2 2009/05/15 21:13:03 yngwin Exp $
 
 EAPI="2"
 
@@ -61,8 +61,8 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/lavcodec-mpegvideo_mmx-asm-fix.patch
-	# fix for bug 268618
-	epatch "${FILESDIR}"/${PN}-2.4-cmake264.patch
+	epatch "${FILESDIR}"/${PN}-2.4-cmake264.patch  # bug 268618
+	epatch "${FILESDIR}"/${P}-gcc-4.4.patch  # bug 269114
 }
 
 src_configure() {

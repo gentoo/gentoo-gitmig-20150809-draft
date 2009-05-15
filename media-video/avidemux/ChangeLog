@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.143 2009/05/08 12:41:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.144 2009/05/15 21:13:03 yngwin Exp $
+
+  15 May 2009; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.4.ebuild,
+  avidemux-2.4.4-r1.ebuild, +files/avidemux-2.4.4-gcc-4.4.patch:
+  Remove old. Add patch to fix compilation with gcc-4.4 (bug 269114).
 
 *avidemux-2.4.4-r1 (08 May 2009)
 
