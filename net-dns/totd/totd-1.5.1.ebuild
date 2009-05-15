@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.4 2007/10/06 15:23:21 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/totd/totd-1.5.1.ebuild,v 1.5 2009/05/15 21:48:46 halcy0n Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 DEPEND=""
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -31,11 +32,11 @@ src_install() {
 	doman totd.8
 	dodoc totd.conf.sample README INSTALL
 
-	doinitd ${FILESDIR}/totd
+	doinitd "${FILESDIR}"/totd
 }
 
 pkg_postinst() {
-	elog "/usr/share/doc/${P}/totd.conf.sample.gz contains"
+	elog "The totd.conf.sample file in /usr/share/doc/${P}/ contains"
 	elog "a sample config file for totd. Make sure you create"
 	elog "/etc/totd.conf with the necessary configurations"
 }
