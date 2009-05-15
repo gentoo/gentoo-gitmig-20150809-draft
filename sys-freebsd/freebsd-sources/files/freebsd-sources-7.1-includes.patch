@@ -1,4 +1,4 @@
-Make headers usable alone, include the headers they needs.
+Make headers usable alone, include the headers they need.
 There are probably much more missing.
 
 --- sys/net/if.h.old	2009-05-15 10:51:50 +0000
