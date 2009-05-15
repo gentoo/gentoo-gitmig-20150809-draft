@@ -1,6 +1,10 @@
 # ChangeLog for virtual/libusb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.1 2009/05/14 23:33:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libusb/ChangeLog,v 1.2 2009/05/15 00:03:01 robbat2 Exp $
+
+  15 May 2009; Robin H. Johnson <robbat2@gentoo.org> libusb-0.ebuild:
+  Use the keywords from the latest stable dev-libs/libusb:0 ebuild so that
+  we can change other stable packages safely.
 
 *libusb-1 (14 May 2009)
 *libusb-0 (14 May 2009)
