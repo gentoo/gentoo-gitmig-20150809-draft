@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.402 2009/05/15 14:40:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.403 2009/05/15 14:58:27 flameeyes Exp $
+
+  15 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-1.9.1_p129.ebuild:
+  Add ~x86-fbsd keyword.
 
   15 May 2009; Alexis Ballier <aballier@gentoo.org> ruby-1.8.7_p160.ebuild:
   keyword ~sparc-fbsd, bug #252315
