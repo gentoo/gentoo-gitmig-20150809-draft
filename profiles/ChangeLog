@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2660 2009/05/15 14:52:42 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2661 2009/05/15 15:46:34 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
+  mask tl-langmanju for removal
 
   15 May 2009; Alex Legler <a3li@gentoo.org> package.mask:
   Masing ruby-config and ruby-1.8.6_p114 (last version with oniguruma
