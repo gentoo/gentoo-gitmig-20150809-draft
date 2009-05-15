@@ -1,11 +1,11 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.44 2009/05/15 18:33:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.45 2009/05/15 18:38:20 jer Exp $
 
 *syslinux-3.80 (15 May 2009)
 
   15 May 2009; Jeroen Roovers <jer@gentoo.org> +syslinux-3.80.ebuild:
-  Version bump.
+  Version bump thanks to Chi-Thanh Christopher Nguyen (bug #269891).
 
 *syslinux-3.75 (29 Apr 2009)
 
