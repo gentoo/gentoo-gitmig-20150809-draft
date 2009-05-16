@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Finance-Quote
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.50 2009/05/15 21:05:13 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.51 2009/05/16 15:39:00 nixnut Exp $
+
+  16 May 2009; nixnut <nixnut@gentoo.org> Finance-Quote-1.16.ebuild:
+  ppc stable #269418
 
   15 May 2009; Tobias Klausmann <klausman@gentoo.org>
   Finance-Quote-1.16.ebuild:
