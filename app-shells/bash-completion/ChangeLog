@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.172 2009/05/16 11:12:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.173 2009/05/16 14:11:18 jer Exp $
+
+  16 May 2009; Jeroen Roovers <jer@gentoo.org>
+  bash-completion-1.0-r3.ebuild:
+  Stable for HPPA (bug #265504).
 
   16 May 2009; Tobias Klausmann <klausman@gentoo.org>
   bash-completion-1.0-r3.ebuild:
