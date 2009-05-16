@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/playonlinux
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/ChangeLog,v 1.1 2009/05/16 10:48:22 volkmar Exp $
+
+*playonlinux-3.5 (16 May 2009)
+
+  16 May 2009; Mounir Lamouri <volkmar@gentoo.org> +metadata.xml,
+  +playonlinux-3.5.ebuild:
+  Initial commit. See bug 213287
+
