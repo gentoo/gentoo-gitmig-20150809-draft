@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.2.104.ebuild,v 1.1 2009/04/15 21:32:06 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.2.104.ebuild,v 1.2 2009/05/16 13:14:17 volkmar Exp $
 
 EAPI="2"
 
@@ -16,12 +16,12 @@ SRC_URI="http://hg.mozilla.org/labs/${MY_PN}/index.cgi/archive/${PV}.tar.gz
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~x86"
 IUSE=""
 
 RDEPEND="|| (
-		>=www-client/mozilla-firefox-3
-		>=www-client/mozilla-firefox-bin-3
+		=www-client/mozilla-firefox-3.0*
+		=www-client/mozilla-firefox-bin-3.0*
 	)
 	net-libs/xulrunner:1.9
 	>=dev-libs/nss-3.12
