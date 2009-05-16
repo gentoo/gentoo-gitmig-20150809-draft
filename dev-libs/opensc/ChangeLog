@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.67 2009/05/16 14:48:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.68 2009/05/16 15:39:37 jer Exp $
+
+  16 May 2009; Jeroen Roovers <jer@gentoo.org> opensc-0.11.8.ebuild:
+  Stable for HPPA (bug #269920).
 
   16 May 2009; Tobias Klausmann <klausman@gentoo.org> opensc-0.11.8.ebuild:
   Stable on alpha, bug #269920
