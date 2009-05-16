@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.14.ebuild,v 1.1 2009/04/12 21:36:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.14-r1.ebuild,v 1.1 2009/05/16 23:13:04 halcy0n Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ src_install() {
 	dodir /etc/prewikka
 	insinto /etc/prewikka
 	doins "${FILESDIR}"/prewikka.conf-sample
+	fperms 640 /etc/prewikka/prewikka.conf-sample
 	rm "${D}"/\-dist
 }
 
@@ -36,4 +37,6 @@ pkg_postinst() {
 	elog
 	elog "The default config from the website is installed as"
 	elog "/etc/prewikka/prewikka.conf-sample"
+	elog "Remember to chgrp the conf file so it is readable by your"
+	elog "http server's group"
 }
