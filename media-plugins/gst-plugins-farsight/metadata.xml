@@ -7,8 +7,4 @@
 		<name>Olivier Crtêe</name>
 		<description>I am part of upstream</description>
 	</maintainer>
-	<use>
-		<flag name='gsm'>Support for the gsm lossy speech compression
-			library</flag>
-	</use>
 </pkgmetadata>
