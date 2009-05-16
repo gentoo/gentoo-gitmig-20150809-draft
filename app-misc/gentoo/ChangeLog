@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.77 2009/05/15 21:44:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.78 2009/05/16 12:49:57 klausman Exp $
+
+  16 May 2009; Tobias Klausmann <klausman@gentoo.org> gentoo-0.15.4.ebuild:
+  Stable on alpha, bug #269895
 
   15 May 2009; Markus Meier <maekke@gentoo.org> gentoo-0.15.4.ebuild:
   amd64 stable, bug #269895
