@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.1 2008/09/13 23:57:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.2 2009/05/16 09:03:05 robbat2 Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -22,7 +22,7 @@ DEPEND="x11-libs/libXext
 	dev-libs/openssl
 	opengl? ( virtual/opengl )
 	ieee1394? ( sys-libs/libraw1394 )
-	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
+	logitech-mouse? ( =virtual/libusb-0* )
 	>=kde-base/libkonq-${PV}:${SLOT}
 	>=kde-base/kicker-${PV}:${SLOT}"
 RDEPEND="${DEPEND}

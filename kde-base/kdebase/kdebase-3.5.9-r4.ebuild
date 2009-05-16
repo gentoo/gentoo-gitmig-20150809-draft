@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r4.ebuild,v 1.7 2009/05/05 16:44:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.5.9-r4.ebuild,v 1.8 2009/05/16 09:02:35 robbat2 Exp $
 
 EAPI="1"
 inherit multilib kde-dist eutils flag-o-matic
@@ -28,7 +28,7 @@ DEPEND=">=media-libs/freetype-2.3
 	openexr? ( >=media-libs/openexr-1.2.2-r2 )
 	samba? ( >=net-fs/samba-3.0.4 )
 	lm_sensors? ( sys-apps/lm_sensors )
-	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
+	logitech-mouse? ( =virtual/libusb-0* )
 	ieee1394? ( sys-libs/libraw1394 )
 	hal? ( dev-libs/dbus-qt3-old =sys-apps/hal-0.5* )
 	xcomposite? ( x11-libs/libXcomposite x11-libs/libXdamage )

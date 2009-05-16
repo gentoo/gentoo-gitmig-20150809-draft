@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.9.ebuild,v 1.8 2008/05/18 21:27:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.9.ebuild,v 1.9 2009/05/16 09:03:05 robbat2 Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -19,7 +19,7 @@ DEPEND=">=media-libs/freetype-2.3
 	arts? ( >=kde-base/arts-${PV}:${SLOT} )
 	opengl? ( virtual/opengl )
 	ieee1394? ( sys-libs/libraw1394 )
-	logitech-mouse? ( >=dev-libs/libusb-0.1.10a )
+	logitech-mouse? ( =virtual/libusb-0* )
 	>=kde-base/libkonq-${PV}:${SLOT}
 	>=kde-base/kicker-${PV}:${SLOT}"
 RDEPEND="${DEPEND}
