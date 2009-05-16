@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.86 2009/05/16 13:09:58 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.87 2009/05/16 15:38:13 jer Exp $
+
+  16 May 2009; Jeroen Roovers <jer@gentoo.org> libusb-0.1.12-r5.ebuild:
+  Stable for HPPA (bug #270023).
 
   16 May 2009; Tobias Klausmann <klausman@gentoo.org>
   libusb-0.1.12-r5.ebuild:
