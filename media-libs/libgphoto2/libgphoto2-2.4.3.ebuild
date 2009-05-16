@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.3.ebuild,v 1.8 2009/02/16 14:22:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.3.ebuild,v 1.9 2009/05/16 08:03:02 robbat2 Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -42,7 +42,7 @@ for camera in ${IUSE_CAMERAS}; do
 done
 
 # libgphoto2 actually links to libtool
-RDEPEND=">=dev-libs/libusb-0.1.8
+RDEPEND="=virtual/libusb-0*
 	bonjour? ( || (
 		net-dns/avahi[mdnsresponder-compat]
 		net-misc/mDNSResponder ) )
