@@ -1,22 +1,47 @@
 #!/sbin/runscript
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/files/watchdog-init.d,v 1.1 2006/07/13 17:16:49 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/files/watchdog-init.d,v 1.2 2009/05/16 16:59:26 vapier Exp $
 
 depend() {
 	need localmount
 	use logger
 }
 
+get_config() {
+	set -- ${WATCHDOG_OPTS}
+	while [ -n "$1" ] ; do
+		if [ "$1" = "-c" -o "$1" = "--config-file" ] ; then
+			echo $2
+			return
+		fi
+	done
+	echo /etc/watchdog.conf
+}
+
+get_delay() {
+	# man this is fugly
+	sed -n \
+		-e '1{x;s:.*:10:;x}' \
+		-e 's:#.*::' \
+		-e 's:^[[:space:]]*::' \
+		-e '/^interval/{s:.*=::;h}' \
+		-e '${g;p}' \
+		$(get_config)
+}
+
 start() {
 	ebegin "Starting watchdog"
-	start-stop-daemon --start --quiet --exec /usr/sbin/watchdog \
+	start-stop-daemon --start \
+		--exec /usr/sbin/watchdog --pidfile /var/run/watchdog.pid \
 		-- ${WATCHDOG_OPTS}
-	eend ${?}
+	eend $?
 }
 
 stop() {
 	ebegin "Stopping watchdog"
-	start-stop-daemon --stop --retry 5 --quiet --exec /usr/sbin/watchdog
-	eend ${?}
+	start-stop-daemon --stop \
+		--exec /usr/sbin/watchdog --pidfile /var/run/watchdog.pid \
+		--retry $(get_delay)
+	eend $?
 }

@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/watchdog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.26 2009/03/22 22:12:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/watchdog/ChangeLog,v 1.27 2009/05/16 16:59:26 vapier Exp $
+
+  16 May 2009; Mike Frysinger <vapier@gentoo.org> files/watchdog-init.d:
+  Use --pidfile with ssd, as well as a better --retry value #269697 by
+  Jerome Venturi.
 
 *watchdog-5.6 (22 Mar 2009)
 
