@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.154 2009/05/07 01:37:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.155 2009/05/16 12:52:01 aballier Exp $
+
+  16 May 2009; Alexis Ballier <aballier@gentoo.org>
+  gentoolkit-0.3.0_rc5.ebuild:
+  keyword ~sparc-fbsd, bug #236214
 
 *gentoolkit-0.3.0_rc5 (07 May 2009)
 
