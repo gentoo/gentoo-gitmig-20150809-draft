@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/totem-pl-parser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.29 2009/05/05 15:20:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/totem-pl-parser/ChangeLog,v 1.30 2009/05/16 13:21:59 eva Exp $
+
+*totem-pl-parser-2.26.2 (16 May 2009)
+
+  16 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -totem-pl-parser-2.22.3.ebuild, -totem-pl-parser-2.24.3.ebuild,
+  +totem-pl-parser-2.26.2.ebuild:
+  Bump to 2.26.2. Parsing fixes, clean up old revisions. Add missing
+  gtk-doc-am in case eautoreconf is called.
 
   05 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   totem-pl-parser-2.26.1.ebuild:
