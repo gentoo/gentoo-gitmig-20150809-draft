@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.4.ebuild,v 1.1 2009/04/10 21:40:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.4.ebuild,v 1.2 2009/05/16 07:30:46 robbat2 Exp $
 
 DESCRIPTION="ASEKey USB SIM Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -10,7 +10,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~amd64 ~x86"
 RDEPEND=">=sys-apps/pcsc-lite-1.3.0
-	>=dev-libs/libusb-0.1.10"
+	=virtual/libusb-0*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
