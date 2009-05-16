@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.22 2009/05/16 14:48:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.23 2009/05/16 15:46:57 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -79,6 +79,16 @@ src_unpack() {
 	fi
 	cd "${S}"
 
+	# Fix case sensitivity
+	mv media/Fonts/{a,A}rial.ttf
+	mv media/{S,s}plash.png
+
+	# Unzip web content
+	cd web
+	unpack ./Project_Mayhem_III_webserver_*.zip
+}
+
+src_prepare() {
 	# Avoid help2man
 	sed -i \
 		-e '/HELP2MAN.*--output/s:.*:\ttouch $@:' \
@@ -97,16 +107,8 @@ src_unpack() {
 		-e 's:/usr/bin/lsb_release -d:cat /etc/gentoo-release:' \
 		xbmc/utils/SystemInfo.cpp
 
-	# Fix case sensitivity
-	mv media/Fonts/{a,A}rial.ttf
-	mv media/{S,s}plash.png
-
 	# Do not use termcap #262822
 	sed -i 's:-ltermcap::' xbmc/lib/libPython/Python/configure
-
-	# Unzip web content
-	cd web
-	unpack ./Project_Mayhem_III_webserver_*.zip
 }
 
 src_configure() {
