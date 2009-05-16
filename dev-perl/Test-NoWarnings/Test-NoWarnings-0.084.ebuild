@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/Test-NoWarnings-0.084.ebuild,v 1.7 2009/05/06 19:06:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/Test-NoWarnings-0.084.ebuild,v 1.8 2009/05/16 08:20:31 aballier Exp $
 
 inherit perl-module
 IUSE=""
@@ -11,7 +11,7 @@ HOMEPAGE="http://search.cpan.org/~fdaly/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 SRC_TEST="do"
 
