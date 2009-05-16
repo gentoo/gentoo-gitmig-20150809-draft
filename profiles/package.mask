@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9809 2009/05/16 15:44:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9810 2009/05/16 23:10:23 serkan Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Serkan Kaba <serkan@gentoo.org> (17 May 2009)
+# Masked to allow smoother upgrade. Safe to remove after 1.0 goes stable
+=media-sound/jtagger-2008*
 
 # Michał Januszewski <spock@gentoo.org> (15 May 2009)
 # Masked until a compatible nvidia-drivers package is available in the tree.
