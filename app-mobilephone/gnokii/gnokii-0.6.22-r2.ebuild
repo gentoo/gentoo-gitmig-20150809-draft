@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.11 2009/03/06 19:08:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.22-r2.ebuild,v 1.12 2009/05/16 09:17:07 robbat2 Exp $
 
 WANT_AUTOMAKE="none"
 
@@ -26,7 +26,7 @@ RDEPEND="X? ( >=x11-libs/gtk+-2.8.19 )
 		mysql? ( >=virtual/mysql-4.1 )
 	)
 	ical? ( >=dev-libs/libical-0.26.6 )
-	usb? ( >=dev-libs/libusb-0.1.11 )"
+	usb? ( =virtual/libusb-0* )"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )
 	nls? ( >=sys-devel/gettext-0.14.5 )"
