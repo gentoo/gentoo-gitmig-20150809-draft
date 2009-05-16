@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/lcd4linux
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.35 2008/11/17 20:13:02 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.36 2009/05/16 09:00:26 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  lcd4linux-0.10.0-r1.ebuild, lcd4linux-0.10.1_rc2-r1.ebuild,
+  lcd4linux-0.10.1_rc2-r2.ebuild:
+  Migration to virtual/libusb. Verified by code inspection. Some of the lcd
+  types have some potentially questionable USB usage code (esp G15), but I
+  suspect that they may have been broken already in that case, and this
+  change does not make anything worse.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/lcd4linux-0.10.0-gcc4-compat.patch:

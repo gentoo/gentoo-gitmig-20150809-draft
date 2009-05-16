@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.5 2007/12/22 18:07:09 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.6 2009/05/16 09:00:26 robbat2 Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils multilib autotools
@@ -40,13 +40,13 @@ DEPEND="
 	iconv?  ( virtual/libiconv )
 	mpd?    ( media-libs/libmpd )
 
-	lcd_devices_bwct?     ( dev-libs/libusb )
-	lcd_devices_g15?      ( dev-libs/libusb )
-	lcd_devices_lcd2usb?  ( dev-libs/libusb )
-	lcd_devices_picolcd?  ( dev-libs/libusb )
-	lcd_devices_trefon?   ( dev-libs/libusb )
-	lcd_devices_usbhub?   ( dev-libs/libusb )
-	lcd_devices_usblcd?   ( dev-libs/libusb )
+	lcd_devices_bwct?     ( =virtual/libusb-0* )
+	lcd_devices_g15?      ( =virtual/libusb-0* )
+	lcd_devices_lcd2usb?  ( =virtual/libusb-0* )
+	lcd_devices_picolcd?  ( =virtual/libusb-0* )
+	lcd_devices_trefon?   ( =virtual/libusb-0* )
+	lcd_devices_usbhub?   ( =virtual/libusb-0* )
+	lcd_devices_usblcd?   ( =virtual/libusb-0* )
 	lcd_devices_luise?    ( dev-libs/luise-bin )
 	lcd_devices_ncurses?  ( sys-libs/ncurses )
 	lcd_devices_noritake? ( media-libs/gd )

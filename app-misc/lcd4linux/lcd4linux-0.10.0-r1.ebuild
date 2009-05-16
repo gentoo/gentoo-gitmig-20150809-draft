@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0-r1.ebuild,v 1.2 2007/04/30 19:10:56 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.0-r1.ebuild,v 1.3 2009/05/16 09:00:26 robbat2 Exp $
 
 inherit eutils
 
@@ -32,9 +32,9 @@ done
 DEPEND="
 	mysql? ( virtual/mysql )
 
-	lcd_devices_bwct?     ( dev-libs/libusb )
-	lcd_devices_trefon?   ( dev-libs/libusb )
-	lcd_devices_usblcd?   ( dev-libs/libusb )
+	lcd_devices_bwct?     ( =virtual/libusb-0* )
+	lcd_devices_trefon?   ( =virtual/libusb-0* )
+	lcd_devices_usblcd?   ( =virtual/libusb-0* )
 	lcd_devices_ncurses?  ( sys-libs/ncurses )
 	lcd_devices_noritake? ( media-libs/gd )
 	lcd_devices_t6963?    ( media-libs/gd )
