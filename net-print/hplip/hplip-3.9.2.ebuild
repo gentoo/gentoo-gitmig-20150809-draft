@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.2.ebuild,v 1.2 2009/03/29 15:43:01 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.2.ebuild,v 1.3 2009/05/16 16:03:42 calchan Exp $
 
 EAPI="2"
 
@@ -16,6 +16,8 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
 IUSE="cupsddk dbus doc fax gtk minimal parport ppds qt3 qt4 scanner snmp"
 
+# Note : libusb-compat untested (calchan 20090516)
+
 DEPEND="!net-print/hpijs
 	!net-print/hpoj
 	virtual/ghostscript
@@ -23,7 +25,7 @@ DEPEND="!net-print/hpijs
 	>=net-print/foomatic-filters-3.0.20080507[cups]
 	!minimal? (
 		net-print/cups
-		dev-libs/libusb
+		dev-libs/libusb:0
 		cupsddk? ( net-print/cupsddk )
 		dbus? ( sys-apps/dbus )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
