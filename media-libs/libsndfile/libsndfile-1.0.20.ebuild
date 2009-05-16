@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.20.ebuild,v 1.4 2009/05/15 22:01:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.20.ebuild,v 1.5 2009/05/16 19:06:01 chainsaw Exp $
 
 inherit eutils libtool autotools
 
@@ -60,5 +60,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" htmldocdir="/usr/share/doc/${PF}/html" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README
 }
