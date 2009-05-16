@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.6 2008/08/15 11:08:00 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-2.8.6b.ebuild,v 1.7 2009/05/16 15:25:32 calchan Exp $
+
+EAPI="1"
 
 inherit eutils linux-info python
 
@@ -14,6 +16,8 @@ KEYWORDS="amd64 ppc ppc64 x86"
 
 IUSE="cupsddk dbus doc fax minimal parport ppds qt3 qt4 scanner snmp"
 
+# Note : libusb-compat untested (calchan 20090516)
+
 DEPEND="!net-print/hpijs
 	!net-print/hpoj
 	virtual/ghostscript
@@ -21,7 +25,7 @@ DEPEND="!net-print/hpijs
 	>=net-print/foomatic-filters-3.0.20080507
 	!minimal? (
 		>=net-print/cups-1.2
-		dev-libs/libusb
+		dev-libs/libusb:0
 		cupsddk? ( net-print/cupsddk )
 		dbus? ( >=sys-apps/dbus-1.0.0 )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
