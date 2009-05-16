@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.343 2009/05/16 13:12:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.344 2009/05/16 13:14:55 jer Exp $
+
+  16 May 2009; Jeroen Roovers <jer@gentoo.org> opera-9.64.ebuild:
+  Always install default locale (bug #266280).
 
   16 May 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4345.ebuild:
   Always install default locale (bug #266280).

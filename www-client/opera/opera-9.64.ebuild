@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.7 2009/04/10 13:26:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.8 2009/05/16 13:14:55 jer Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 RESTRICT="mirror strip test"
 
 IUSE="elibc_FreeBSD gnome ia32 qt-static qt3-static spell"
-MY_LINGUAS="be bg cs da de el en en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id
+MY_LINGUAS="be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id
 	it ja ka ko lt mk nb nl nn pl pt pt-BR ru sv ta te tr uk zh-CN zh-TW"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
