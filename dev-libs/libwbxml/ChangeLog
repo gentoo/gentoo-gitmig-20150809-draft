@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libwbxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/ChangeLog,v 1.15 2009/04/29 18:42:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libwbxml/ChangeLog,v 1.16 2009/05/16 16:16:03 nixnut Exp $
+
+  16 May 2009; nixnut <nixnut@gentoo.org> libwbxml-0.10.1.ebuild:
+  ppc stable #261166
 
   29 Apr 2009; Markus Meier <maekke@gentoo.org> libwbxml-0.10.1.ebuild:
   amd64 stable, bug #261166
