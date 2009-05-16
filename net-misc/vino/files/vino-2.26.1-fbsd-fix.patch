@@ -1,0 +1,24 @@
+From 3d3420dac72f3721ea37eb4f38f64618ceb1341c Mon Sep 17 00:00:00 2001
+From: Alexis Ballier <aballier@gentoo.org>
+Date: Sat, 16 May 2009 08:15:58 +0200
+Subject: [PATCH] Include netinet/in.h for sockaddr_in. POSIX specifies the declaration to be there, this is not a problem on Linux because other headers already include it but on FreeBSD it is.
+
+---
+ server/vino-dbus-listener.c |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/server/vino-dbus-listener.c b/server/vino-dbus-listener.c
+index ded309e..5bfc5e6 100644
+--- a/server/vino-dbus-listener.c
++++ b/server/vino-dbus-listener.c
+@@ -37,6 +37,7 @@
+ #include <netdb.h>
+ #include <net/if.h>
+ #include <arpa/inet.h>
++#include <netinet/in.h>
+ 
+ #include <dbus/dbus-glib.h>
+ #include <dbus/dbus-glib-lowlevel.h>
+-- 
+1.6.3
+

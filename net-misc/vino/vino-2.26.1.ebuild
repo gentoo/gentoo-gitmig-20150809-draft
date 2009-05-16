@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.26.1.ebuild,v 1.2 2009/05/11 17:13:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.26.1.ebuild,v 1.3 2009/05/16 12:23:39 eva Exp $
 
 EAPI="2"
 
@@ -53,4 +53,11 @@ pkg_setup() {
 		$(use_with zlib)
 		$(use_with zlib libz)
 		--enable-libunique"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix build issue on fbsd, upstream bug #577831
+	epatch "${FILESDIR}/${P}-fbsd-fix.patch"
 }
