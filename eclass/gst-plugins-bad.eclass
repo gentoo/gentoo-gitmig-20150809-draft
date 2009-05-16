@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.16 2009/05/16 15:09:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins-bad.eclass,v 1.17 2009/05/16 22:08:09 tester Exp $
 
 #
 # Original Author: Saleem Abdulrasool <compnerd@gentoo.org>
@@ -42,6 +42,7 @@ DEPEND="${RDEPEND}
 		sys-apps/sed
 		dev-util/pkgconfig
 		sys-devel/gettext"
+RESTRICT=test
 fi
 S=${WORKDIR}/${MY_P}
 
