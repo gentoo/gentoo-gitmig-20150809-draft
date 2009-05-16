@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.1.1215.2015.ebuild,v 1.1 2009/05/16 15:40:59 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/nvidia-cuda-sdk-2.1.1215.2015.ebuild,v 1.2 2009/05/16 16:09:33 spock Exp $
 
 inherit eutils
 
@@ -39,7 +39,8 @@ src_compile() {
 	fi
 
 	cd "${S}/sdk"
-	emake cuda-install=/opt/cuda ${myopts} || die
+
+	MAKEOPTS="${MAKEOPTS} -j1" emake cuda-install=/opt/cuda ${myopts} || die
 }
 
 src_install() {

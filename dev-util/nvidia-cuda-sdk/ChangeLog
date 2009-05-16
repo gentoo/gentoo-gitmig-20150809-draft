@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.8 2009/05/16 15:50:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.9 2009/05/16 16:09:33 spock Exp $
+
+  16 May 2009; Michał Januszewski <spock@gentoo.org>
+  nvidia-cuda-sdk-2.1.1215.2015.ebuild:
+  Force serial make (bug #266069, comment #25).
 
 *nvidia-cuda-sdk-2.2 (16 May 2009)
 
