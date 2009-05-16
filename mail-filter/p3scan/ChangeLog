@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/p3scan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.13 2009/04/03 15:52:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/p3scan/ChangeLog,v 1.14 2009/05/16 00:39:52 halcy0n Exp $
+
+  16 May 2009; Mark Loeser <halcy0n@gentoo.org> p3scan-2.3.2.ebuild:
+  Fix elog statement; bug #260792
 
   03 Apr 2009; Patrick Lauer <patrick@gentoo.org>
   +files/p3scan-ocreat.patch, p3scan-2.3.2.ebuild:
