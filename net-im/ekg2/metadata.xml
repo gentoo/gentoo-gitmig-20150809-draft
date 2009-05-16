@@ -3,7 +3,6 @@
 <pkgmetadata>
 	<herd>net-im</herd>
 	<use>
-		<flag name='gsm'>Enable gsm plugin</flag>
 		<flag name='nogg'>Disable Gadu-Gadu plugin</flag>
 	</use>
 </pkgmetadata>
