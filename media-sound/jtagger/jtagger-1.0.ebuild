@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-2008.04.28.ebuild,v 1.6 2008/07/18 08:00:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0.ebuild,v 1.1 2009/05/16 23:06:11 serkan Exp $
 
-EAPI="1"
+EAPI="2"
 
 JAVA_PKG_IUSE="source test"
 
@@ -10,10 +10,10 @@ inherit eutils java-pkg-2
 
 DESCRIPTION="Powerful MP3 tag and filename editor"
 HOMEPAGE="http://dronten.googlepages.com/jtagger"
-SRC_URI="http://dronten.googlepages.com/${P}.zip"
+SRC_URI="http://dronten.googlepages.com/${PN}.zip -> ${P}.zip"
 
 LICENSE="GPL-3"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 SLOT="0"
 
@@ -25,8 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.5
-	app-arch/unzip
-	test? ( dev-java/junit:0 )"
+	app-arch/unzip"
 
 src_unpack() {
 	mkdir -p "${S}/src" || die
@@ -34,15 +33,12 @@ src_unpack() {
 
 	unpack ${A}
 	unzip -q ${PN}.jar || die
-	epatch "${FILESDIR}"/${P}-override-annotation.patch
+
+	# Fix for bug #231571 comment #2. This removes real @Override annotations but safer.
+	sed -i -e "s/@Override//g" $(find . -name "*.java") || die "failed fixing for Java 5."
 
 	rm -vr ${PN}.jar javazoom  org META-INF || die
 	find . -name '*.class' -delete || die
-
-	# Move the tests away
-	mkdir -p ../test/com/googlepages/dronten/jtagger || die
-	mv com/googlepages/dronten/jtagger/test \
-		../test/com/googlepages/dronten/jtagger/test || die
 }
 
 src_compile() {
@@ -55,20 +51,6 @@ src_compile() {
 	find . -name '*.class' -o -name '*.png' > classes.list
 	touch myManifest
 	jar cmf myManifest ${PN}.jar @classes.list || die "jar failed"
-}
-
-src_test() {
-	cd "${S}/test"
-
-	local cp=".:${S}/src/${PN}.jar:$(java-pkg_getjars jid3,jlayer)"
-	cp="${cp}:$(java-pkg_getjars --build-only junit)"
-
-	find . -name '*.java' > sources.list
-	ejavac -cp "${cp}" @sources.list
-	ejunit -cp "${cp}" \
-		com.googlepages.dronten.jtagger.test.TestRenameAlbum \
-		com.googlepages.dronten.jtagger.test.TestRenameFile \
-		com.googlepages.dronten.jtagger.test.TestRenameTitle
 }
 
 src_install() {

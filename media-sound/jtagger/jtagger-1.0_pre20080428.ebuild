@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-2008.01.ebuild,v 1.4 2008/06/10 16:49:46 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0_pre20080428.ebuild,v 1.1 2009/05/16 23:06:11 serkan Exp $
 
 EAPI="1"
 
@@ -8,20 +8,22 @@ JAVA_PKG_IUSE="source test"
 
 inherit eutils java-pkg-2
 
+MY_PV="2008.04.28"
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="Powerful MP3 tag and filename editor"
 HOMEPAGE="http://dronten.googlepages.com/jtagger"
-SRC_URI="http://dronten.googlepages.com/${P}.jar.zip"
+SRC_URI="http://dronten.googlepages.com/${MY_P}.zip"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 KEYWORDS="amd64 x86"
 IUSE=""
 SLOT="0"
 
 COMMON_DEP="
 	dev-java/jlayer
-	dev-java/jid3"
+	>=dev-java/jid3-0.46-r1"
 RDEPEND=">=virtual/jre-1.5
-	dev-java/jgoodies-looks:2.0
 	${COMMON_DEP}"
 
 DEPEND="${COMMON_DEP}
@@ -29,14 +31,17 @@ DEPEND="${COMMON_DEP}
 	app-arch/unzip
 	test? ( dev-java/junit:0 )"
 
+S="${WORKDIR}/${MY_P}"
+
 src_unpack() {
 	mkdir -p "${S}/src" || die
 	cd "${S}/src" || die
 
 	unpack ${A}
-	unzip -q ${P}.jar || die
+	unzip -q ${PN}.jar || die
+	epatch "${FILESDIR}"/${P}-override-annotation.patch
 
-	rm -vr ${P}.jar com/jgoodies javazoom  org META-INF || die
+	rm -vr ${PN}.jar javazoom  org META-INF || die
 	find . -name '*.class' -delete || die
 
 	# Move the tests away
@@ -73,7 +78,6 @@ src_test() {
 
 src_install() {
 	java-pkg_dojar src/${PN}.jar
-	java-pkg_register-dependency jgoodies-looks-2.0
 	java-pkg_dolauncher jtagger --main com.googlepages.dronten.jtagger.JTagger
 
 	use source && java-pkg_dosrc src/com
