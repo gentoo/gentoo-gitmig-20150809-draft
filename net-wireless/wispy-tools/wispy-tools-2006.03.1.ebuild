@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wispy-tools/wispy-tools-2006.03.1.ebuild,v 1.4 2006/12/02 23:53:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wispy-tools/wispy-tools-2006.03.1.ebuild,v 1.5 2009/05/16 09:11:12 robbat2 Exp $
 
 MY_P=${P/\./-}
 MY_P=${MY_P/./-R}
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="debug gtk ncurses"
 
-DEPEND="dev-libs/libusb
+DEPEND="=virtual/libusb-0*
 		ncurses? ( sys-libs/ncurses )
 		gtk? ( || ( =x11-libs/gtk+-1.2* =x11-libs/gtk+-2* ) )"
 
