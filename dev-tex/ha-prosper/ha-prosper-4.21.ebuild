@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ha-prosper-4.21.ebuild,v 1.5 2008/09/04 06:45:20 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ha-prosper-4.21.ebuild,v 1.6 2009/05/16 14:36:56 ulm Exp $
 
 inherit latex-package
 
@@ -8,13 +8,16 @@ DESCRIPTION="HA-prosper is a LaTeX class for writing transparencies"
 HOMEPAGE="http://stuwww.uvt.nl/~hendri/Downloads/haprosper.html"
 # Taken from: ftp://ftp.dante.de/tex-archive/macros/latex/contrib/${PN}.tar.gz
 SRC_URI="mirror://gentoo/${P}.tar.gz"
+
 LICENSE="LPPL-1.2"
 SLOT="0"
 KEYWORDS="x86 ~amd64 ppc"
-DEPEND=">=dev-tex/prosper-1.5
-	|| ( dev-tex/xkeyval >=app-text/tetex-3 >=app-text/ptex-3.1.8 )"
-S=${WORKDIR}/${PN}
 IUSE=""
+
+RDEPEND=">=dev-tex/prosper-1.5
+	|| ( >=app-text/tetex-3 >=app-text/ptex-3.1.8 )"
+
+S=${WORKDIR}/${PN}
 
 src_install(){
 	cd "${S}"/Run

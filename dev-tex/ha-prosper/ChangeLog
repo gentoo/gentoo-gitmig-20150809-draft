@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/ha-prosper
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.7 2008/09/04 06:45:20 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/ha-prosper/ChangeLog,v 1.8 2009/05/16 14:36:56 ulm Exp $
+
+  16 May 2009; Ulrich Mueller <ulm@gentoo.org> ha-prosper-4.21.ebuild:
+  Remove xkeyval from any-of-many dependency since the package is going
+  away, bug 262897. Properly specify dependencies as run time only.
 
   04 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   ha-prosper-4.21.ebuild:
