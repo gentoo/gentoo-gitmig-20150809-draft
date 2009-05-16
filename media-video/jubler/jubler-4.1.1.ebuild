@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.1.ebuild,v 1.1 2009/05/06 18:06:21 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/jubler/jubler-4.1.1.ebuild,v 1.1 2009/05/16 16:43:27 serkan Exp $
 
 EAPI="2"
 inherit gnome2-utils eutils java-pkg-2 java-ant-2 toolchain-funcs
@@ -24,7 +24,7 @@ RDEPEND=">=virtual/jre-1.5
 		app-text/aspell
 		>=dev-java/zemberek-2.0[linguas_tr]
 	)
-	dev-java/jupidator"
+	>=dev-java/jupidator-0.3.0"
 
 DEPEND=">=virtual/jdk-1.5
 	>=media-video/ffmpeg-0.4.9_p20080326
