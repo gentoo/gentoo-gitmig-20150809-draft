@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2663 2009/05/16 13:15:14 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2664 2009/05/16 14:09:05 volkmar Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 May 2009; Mounir Lamouri <volkmar@gentoo.org> use.desc:
+  New global USE flag: gsm
 
   16 May 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> package.mask:
   Remove mask on sys-fs/aufs2
