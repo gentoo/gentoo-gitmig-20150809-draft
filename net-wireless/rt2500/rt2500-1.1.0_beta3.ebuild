@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.12 2008/02/29 20:31:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/rt2500-1.1.0_beta3.ebuild,v 1.13 2009/05/16 00:30:31 halcy0n Exp $
 
 inherit eutils linux-mod kde-functions
 set-qtdir 3
@@ -67,7 +67,7 @@ pkg_postinst() {
 
 	einfo "to set up the card you can use:"
 	einfo "- iwconfig from wireless-tools"
-	einfo "- iwpriv, like described in \"/usr/share/doc/${PF}/iwpriv_usage.txt.gz"\"
-	einfo "- /etc/Wireless/RT2500STA/RT2500STA.dat, like described in \"/usr/share/doc/${PF}/README.gz\""
+	einfo "- iwpriv, like described in iwpriv_usage.txt in /usr/share/doc/${PF}/"
+	einfo "- /etc/Wireless/RT2500STA/RT2500STA.dat, like described in the README in /usr/share/doc/${PF}/"
 	einfo "- RT2500 provided qt API: RaConfig2500"
 }

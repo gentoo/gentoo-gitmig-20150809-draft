@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2500
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.46 2008/02/29 20:31:12 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.47 2009/05/16 00:30:31 halcy0n Exp $
+
+  16 May 2009; Mark Loeser <halcy0n@gentoo.org> rt2500-1.1.0_beta3.ebuild:
+  Fix einfo statement; bug #207786
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> rt2500-1.1.0_beta3.ebuild,
   rt2500-1.1.0_beta4.ebuild, rt2500-1.1.0_pre2007020911.ebuild:
