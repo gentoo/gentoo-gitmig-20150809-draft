@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/policyd-1.81.ebuild,v 1.2 2008/06/29 10:23:40 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/policyd/policyd-1.81.ebuild,v 1.3 2009/05/16 00:18:30 halcy0n Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="dev-db/mysql
 		dev-libs/openssl"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -50,15 +51,15 @@ src_install() {
 	exeinto /etc/cron.hourly
 	newexe "${FILESDIR}/${PN}-cleanup.cron" ${PN}-cleanup.cron
 
-	dodoc ChangeLog DATABASE.mysql LICENSE README doc/support.txt
+	dodoc ChangeLog DATABASE.mysql README doc/support.txt
 
 	newinitd "${FILESDIR}/${PN}.rc" ${PN}
 	newconfd "${FILESDIR}/${PN}.confd" ${PN}
 }
 
 pkg_postinst() {
-	einfo "You will need to create the database using the script provided in"
-	einfo "/usr/share/doc/${PF}/DATABASE.mysql.gz"
+	einfo "You will need to create the database using the script DATABASE.mysql"
+	einfo "in /usr/share/doc/${PF}/"
 	einfo "Read the mysql section of the README.txt for details."
 	einfo
 	einfo "To use policyd with postfix, update your /etc/postfix/main.cf file by adding"
