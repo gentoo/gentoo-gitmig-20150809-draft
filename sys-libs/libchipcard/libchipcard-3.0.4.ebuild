@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-3.0.4.ebuild,v 1.10 2009/03/24 15:00:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-3.0.4.ebuild,v 1.11 2009/05/16 09:23:37 robbat2 Exp $
 
 MY_P="${PN}3-${PV}"
 DESCRIPTION="Libchipcard is a library for easy access to chip cards via chip card readers (terminals)."
@@ -14,7 +14,7 @@ IUSE="debug doc ssl usb"
 
 DEPEND=">=sys-libs/gwenhywfar-2.6.1
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	usb? ( dev-libs/libusb )
+	usb? ( =virtual/libusb-0* )
 	>=sys-fs/sysfsutils-1.2.0"
 RDEPEND="${DEPEND}"
 

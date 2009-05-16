@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.7.ebuild,v 1.1 2009/04/26 21:12:46 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.7.ebuild,v 1.2 2009/05/16 09:23:37 robbat2 Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ IUSE="debug doc ssl usb"
 
 DEPEND=">=sys-libs/gwenhywfar-3.8.0
 	ssl? ( >=dev-libs/openssl-0.9.6b )
-	usb? ( dev-libs/libusb )
+	usb? ( =virtual/libusb-0* )
 	sys-apps/hal"
 RDEPEND="${DEPEND}"
 
