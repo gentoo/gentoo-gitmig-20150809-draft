@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libg15
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.23 2009/02/01 16:20:34 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libg15/ChangeLog,v 1.24 2009/05/16 09:13:21 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org> libg15-1.2.2.ebuild,
+  libg15-1.2.5.ebuild, libg15-1.2.7.ebuild:
+  Migration to virtual/libusb. Verified by testing hardware (by
+  Polynomial-C).
 
   01 Feb 2009; <jokey@gentoo.org> -libg15-1.2.1.ebuild,
   -libg15-1.2.4.ebuild, -libg15-1.2.6.ebuild, libg15-1.2.7.ebuild:
