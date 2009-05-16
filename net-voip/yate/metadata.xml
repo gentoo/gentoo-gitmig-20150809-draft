@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>voip</herd>
 <use>
-	<flag name='gsm'>Build gsm codec plugin</flag>
 	<flag name='h323'>Build H.323 Channel plugin</flag>
 	<flag name='ilbc'>Build ILBC codec plugin</flag>
 	<flag name='zaptel'>Build zaptel Channel plugin</flag>
