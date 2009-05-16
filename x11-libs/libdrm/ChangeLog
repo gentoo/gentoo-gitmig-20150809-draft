@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.76 2009/05/16 07:55:10 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm/ChangeLog,v 1.77 2009/05/16 08:05:35 remi Exp $
+
+  16 May 2009; Rémi Cardona <remi@gentoo.org>
+  -libdrm-2.3.1_pre20080528.ebuild, -libdrm-2.4.1.ebuild,
+  -libdrm-2.4.3.ebuild, -libdrm-2.4.4.ebuild, -libdrm-2.4.6.ebuild:
+  drop old ebuilds
 
 *libdrm-2.4.11 (16 May 2009)
 
