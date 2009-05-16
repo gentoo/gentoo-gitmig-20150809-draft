@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.3.0.ebuild,v 1.3 2009/05/16 14:01:31 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.3.2.ebuild,v 1.1 2009/05/16 14:01:31 volkmar Exp $
 
 EAPI="2"
 
@@ -19,7 +19,10 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND=">=www-client/mozilla-firefox-bin-3.1_beta3
+RDEPEND="|| (
+		>=www-client/mozilla-firefox-bin-3.1_beta3
+		>=www-client/seamonkey-bin-2.0_alpha3
+	)
 	net-libs/xulrunner:1.9
 	>=dev-libs/nss-3.12
 	>=dev-libs/nspr-4.7.1"
@@ -31,6 +34,7 @@ S=${WORKDIR}/${MY_P}
 # there are tests but they don't break the build if not working
 # thunderbird and fennec are listed in install.rdf
 # mozilla-firefox-3.{1,5} (not -bin) is not in the tree atm
+# seamonkey-2 (not -bin) is not in the tree atm
 
 src_prepare() {
 	# we want to use system nss and nspr
@@ -46,6 +50,9 @@ src_prepare() {
 	# upstream has been contacted w/patch, see bug 486797 in upstream bugtracker
 	sed -i -e "s/Power Macintosh/ppc/" src/Makefile \
 		|| die "patching src/Makefile failed"
+
+	# stupid mistake in a var in Makefile
+	sed -i -e "s/0.3.1/0.3.2/" Makefile || die "sed failed"
 }
 
 src_compile() {
@@ -63,12 +70,16 @@ src_install() {
 	# so, we unzip the file and intsall it with mozextension tools
 	unzip -qo "${MY_P}-rel.xpi" -d "${MY_P}"
 
-	if has_version '>=www-client/mozilla-firefox-3.1_beta'; then
+	if has_version '>=www-client/mozilla-firefox-3.1_beta3'; then
 		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
 		xpi_install "${S}/${MY_P}"
 	fi
-	if has_version '>=www-client/mozilla-firefox-bin-3.1_beta'; then
+	if has_version '>=www-client/mozilla-firefox-bin-3.1_beta3'; then
 		MOZILLA_FIVE_HOME="/opt/firefox"
+		xpi_install "${S}/${MY_P}"
+	fi
+	if has_version '>=www-client/seamonkey-bin-2.0_alpha3'; then
+		MOZILLA_FIVE_HOME="/opt/seamonkey"
 		xpi_install "${S}/${MY_P}"
 	fi
 }
