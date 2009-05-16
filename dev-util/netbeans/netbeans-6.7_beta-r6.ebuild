@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r5.ebuild,v 1.1 2009/05/13 13:34:48 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r6.ebuild,v 1.1 2009/05/16 11:20:41 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -708,6 +708,10 @@ src_install() {
 		for file in *.so ; do
 			fperms 755 ${file} || die
 		done
+	fi
+	if use netbeans_modules_dlight ; then
+		cd "${D}"/${DESTINATION}/dlight1/bin/nativeexecution || die
+		fperms 755 dorun.sh || die
 	fi
 	if use netbeans_modules_profiler ; then
 		cd "${D}"/${DESTINATION}/profiler3/remote-pack-defs || die
