@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.7 2009/04/15 12:27:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.2.2.ebuild,v 1.8 2009/05/16 08:45:32 robbat2 Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ IUSE="cgi snmp usb ssl hal xml"
 
 RDEPEND="cgi? ( >=media-libs/gd-2[png] )
 		snmp? ( net-analyzer/net-snmp )
-		usb? ( >=dev-libs/libusb-0.1.12 )
+		usb? ( =virtual/libusb-0* )
 		hal? ( >=sys-apps/hal-0.5.9.1 )
 		ssl? ( dev-libs/openssl )
 		xml? ( >=net-misc/neon-0.25.0 )

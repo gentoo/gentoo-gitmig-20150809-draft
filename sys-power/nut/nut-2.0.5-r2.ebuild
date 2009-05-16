@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.5-r2.ebuild,v 1.11 2008/06/25 02:32:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.0.5-r2.ebuild,v 1.12 2009/05/16 08:45:32 robbat2 Exp $
 
 inherit eutils fixheadtails autotools
 
@@ -21,7 +21,7 @@ IUSE="cgi snmp usb ssl"
 
 RDEPEND="cgi? ( >=media-libs/gd-2 )
 		snmp? ( net-analyzer/net-snmp )
-		usb? ( >=dev-libs/libusb-0.1.12 )
+		usb? ( =virtual/libusb-0* )
 		ssl? ( dev-libs/openssl )
 		!<sys-fs/udev-104"
 DEPEND="$RDEPEND
