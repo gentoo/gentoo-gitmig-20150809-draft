@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.99.ebuild,v 1.1 2008/01/09 13:26:54 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.4.99.ebuild,v 1.2 2009/05/16 08:51:43 robbat2 Exp $
 
 inherit multilib
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="static debug"
 
-RDEPEND="!static? ( dev-libs/libusb )"
-DEPEND="dev-libs/libusb
+RDEPEND="!static? ( =virtual/libusb-0* )"
+DEPEND="=virtual/libusb-0*
 	dev-util/pkgconfig"
 
 S="${WORKDIR}/${MY_P}"

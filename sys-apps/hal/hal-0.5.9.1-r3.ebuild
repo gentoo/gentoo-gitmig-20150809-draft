@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r3.ebuild,v 1.14 2009/03/08 22:03:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.9.1-r3.ebuild,v 1.15 2009/05/16 08:49:29 robbat2 Exp $
 
 inherit eutils linux-info autotools flag-o-matic
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-libs/glib-2.6
 		kernel_FreeBSD? ( dev-libs/libvolume_id )
 		>=dev-libs/expat-1.95.8
 		>=sys-apps/pciutils-2.2.7-r1
-		>=dev-libs/libusb-0.1.10a
+		=virtual/libusb-0*
 		sys-apps/usbutils
 		virtual/eject
 		amd64? ( >=sys-apps/dmidecode-2.7 )
