@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.28 2009/05/14 20:04:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.29 2009/05/16 06:18:20 aballier Exp $
+
+  15 May 2009; Alexis Ballier <aballier@gentoo.org>
+  gst-plugins-taglib-0.10.14.ebuild:
+  keyword ~x86-fbsd
 
   14 May 2009; Markus Meier <maekke@gentoo.org>
   gst-plugins-taglib-0.10.14.ebuild:
