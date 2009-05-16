@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.0.4.ebuild,v 1.2 2008/05/18 16:06:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyberjack/cyberjack-3.0.4.ebuild,v 1.3 2009/05/16 09:22:27 robbat2 Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="noudev pcsc-lite"
 
-RDEPEND="dev-libs/libusb
+RDEPEND="=virtual/libusb-0*
 	pcsc-lite? ( sys-apps/pcsc-lite	)"
 DEPEND="${RDEPEND}
 	pcsc-lite? ( dev-util/pkgconfig )"

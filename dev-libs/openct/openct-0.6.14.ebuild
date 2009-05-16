@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14.ebuild,v 1.11 2008/10/31 21:38:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14.ebuild,v 1.12 2009/05/16 09:19:58 robbat2 Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh ~sparc x86"
 IUSE="usb"
 
 RDEPEND="usb? (
-		>=dev-libs/libusb-0.1.7
+		=virtual/libusb-0*
 		|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040923 )
 	)"
 

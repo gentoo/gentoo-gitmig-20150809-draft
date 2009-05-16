@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14-r1.ebuild,v 1.4 2008/08/30 04:47:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.14-r1.ebuild,v 1.5 2009/05/16 09:19:58 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE="usb"
 
 RDEPEND=">=sys-fs/udev-096
-	usb? ( >=dev-libs/libusb-0.1.7 )"
+	usb? ( =virtual/libusb-0* )"
 
 pkg_setup() {
 	enewgroup openct

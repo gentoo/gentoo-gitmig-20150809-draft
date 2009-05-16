@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.15.ebuild,v 1.7 2009/05/02 19:10:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.15.ebuild,v 1.8 2009/05/16 09:19:58 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE="doc pcsc-lite usb"
 
 RDEPEND="pcsc-lite? ( sys-apps/pcsc-lite )
-		usb? ( >=dev-libs/libusb-0.1.7 )
+		usb? ( =virtual/libusb-0* )
 		>=sys-fs/udev-096"
 
 DEPEND="${RDEPEND}
