@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r4.ebuild,v 1.7 2008/09/12 23:58:55 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.1-r4.ebuild,v 1.8 2009/05/16 08:57:16 robbat2 Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -37,7 +37,7 @@ done
 
 RDEPEND="
 	ldap?     ( net-nds/openldap )
-	usb?      ( dev-libs/libusb )
+	usb?      ( =virtual/libusb-0* )
 	lirc?     ( app-misc/lirc )
 	irman?    ( media-libs/libirman )
 
@@ -45,11 +45,11 @@ RDEPEND="
 	lcd_devices_g15?      ( dev-libs/libg15  >=dev-libs/libg15render-1.1.1 )
 	lcd_devices_ncurses?   ( sys-libs/ncurses )
 	lcd_devices_svga?     ( media-libs/svgalib )
-	lcd_devices_ula200?   ( dev-embedded/libftdi  dev-libs/libusb )
+	lcd_devices_ula200?   ( dev-embedded/libftdi  =virtual/libusb-0* )
 	lcd_devices_xosd?     ( x11-libs/xosd  x11-libs/libX11  x11-libs/libXext )
-	lcd_devices_cfontzpacket? ( dev-libs/libusb )
-	lcd_devices_cwlinux?    ( dev-libs/libusb )
-	lcd_devices_pyramid?  ( dev-libs/libusb )"
+	lcd_devices_cfontzpacket? ( =virtual/libusb-0* )
+	lcd_devices_cwlinux?    ( =virtual/libusb-0* )
+	lcd_devices_pyramid?  ( =virtual/libusb-0* )"
 DEPEND="${RDEPEND}
 	doc?      ( app-text/xmlto )"
 RDEPEND="${RDEPEND}

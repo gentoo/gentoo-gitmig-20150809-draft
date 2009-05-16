@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lcdproc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.64 2008/09/12 23:58:55 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.65 2009/05/16 08:57:16 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  lcdproc-0.5.1-r4.ebuild, lcdproc-0.5.2-r1.ebuild, lcdproc-0.5.2-r2.ebuild:
+  Migration to virtual/libusb. Verified by code inspection. Some of the lcd
+  types have some potentially question USB usage code, but I suspect that
+  they may have been broken already in that case, and this change does not
+  make anything worse.
 
 *lcdproc-0.5.2-r2 (12 Sep 2008)
 
