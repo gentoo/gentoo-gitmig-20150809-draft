@@ -1,0 +1,8 @@
+# ChangeLog for Gentoo/sparc-fbsd profile directory
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/ChangeLog,v 1.1 2009/05/16 09:17:28 aballier Exp $
+
+  16 May 2009; Alexis Ballier <aballier@gentoo.org> +make.defaults,
+  +package.use.mask, +parent, +use.force, +use.mask:
+  add sparc-fbsd arch profiles
+
