@@ -8,7 +8,6 @@
   </maintainer>
   <use>
     <flag name="dcc_voice">Support voice over DCC chats</flag>
-    <flag name="gsm">enable support for media-sound/gsm</flag>
     <flag name="ipc">add support for IPC between kvirc processes</flag>
     <flag name="phonon">use phonon instead of command-based sound</flag>
     <flag name="qt-dbus">enable use of Qt's DBUS interface for IPC</flag>
