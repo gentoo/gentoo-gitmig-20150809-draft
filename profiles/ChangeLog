@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2662 2009/05/15 22:33:21 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2663 2009/05/16 13:15:14 tommy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 May 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> package.mask:
+  Remove mask on sys-fs/aufs2
 
   15 May 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   Removing the treecleaned ant-1.7.0 from package mask.
