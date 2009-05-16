@@ -1,16 +1,20 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.2-r1.ebuild,v 1.2 2009/04/15 17:29:43 ranger Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.0.2-r1.ebuild,v 1.3 2009/05/16 05:15:07 arfrever Exp $
 
-inherit bash-completion subversion distutils multilib versionator webapp
+EAPI="2"
+
+inherit bash-completion distutils multilib versionator webapp
 
 MY_P="${P/#d/D}-final"
 WEBAPP_MANUAL_SLOT="yes"
 
 DESCRIPTION="High-level python web framework"
 HOMEPAGE="http://www.djangoproject.com/"
-SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
+SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz
+	test? ( mirror://gentoo/${P}-tests.tar.bz2 )"
+# ${P}-tests.tar.bz2 is generated from http://code.djangoproject.com/svn/django/tags/releases/${PV}/tests
+
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
@@ -31,15 +35,6 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 DOCS="docs/* AUTHORS"
-
-src_unpack() {
-	distutils_src_unpack
-	if use test; then
-		local repo_uri
-		repo_uri="http://code.djangoproject.com/svn/${PN}/tags/releases/${PV}/tests/"
-		subversion_fetch ${repo_uri} tests
-	fi
-}
 
 src_compile() {
 	distutils_src_compile
