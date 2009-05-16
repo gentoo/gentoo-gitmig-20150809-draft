@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.5.ebuild,v 1.1 2009/05/16 08:59:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.5.ebuild,v 1.2 2009/05/16 10:36:14 hanno Exp $
 
-EAPI="2"
+inherit eutils
 
 DESCRIPTION="free, redistributable digital camera software application"
 HOMEPAGE="http://www.gphoto.org/"
@@ -14,9 +14,10 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aalib exif ncurses nls readline"
 
 # aalib -> needs libjpeg
-RDEPEND=">=dev-libs/libusb-0.1.8
+# raise libgphoto to get a proper .pc
+RDEPEND="=virtual/libusb-0*
 	dev-libs/popt
-	>=media-libs/libgphoto2-2.4.4[exif?]
+	>=media-libs/libgphoto2-2.4.4
 	ncurses? ( dev-libs/cdk )
 	aalib? (
 		media-libs/aalib
@@ -27,15 +28,23 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.14 )"
 
-src_configure() {
+pkg_setup() {
+	if use exif && ! built_with_use media-libs/libgphoto2 exif; then
+		eerror "exif support required but libgphoto2 does not have it."
+		die "rebuild media-libs/libgphoto2 with USE=\"exif\"."
+	fi
+}
+
+src_compile() {
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_with aalib) \
 		$(use_with aalib jpeg) \
-		$(use_with exif libexif) \
+		$(use_with exif) \
 		$(use_with ncurses cdk) \
 		$(use_enable nls) \
 		$(use_with readline)
+	emake || die "compilation failed"
 }
 
 src_install() {
