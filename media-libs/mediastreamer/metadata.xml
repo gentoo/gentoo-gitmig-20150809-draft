@@ -7,7 +7,6 @@
 		<name>Mounir Lamouri</name>
 	</maintainer>
 	<use>
-		<flag name="gsm">Enables support for the gsm lossy speech compression codec</flag>
 		<flag name="ilbc">Use of iLBC (RFC3951) codec plugin</flag>
 		<flag name="video">Enable video support</flag>
 	</use>
