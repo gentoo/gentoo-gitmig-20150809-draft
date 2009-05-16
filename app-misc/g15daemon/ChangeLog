@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/g15daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.25 2009/03/26 11:35:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/g15daemon/ChangeLog,v 1.26 2009/05/16 09:16:07 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  g15daemon-1.2.7-r1.ebuild, g15daemon-1.9.5.3-r2.ebuild:
+  Migration to virtual/libusb. Verified by testing hardware.
 
   26 Mar 2009; Tomas Chvatal <scarabeus@gentoo.org>
   g15daemon-1.9.5.3-r2.ebuild:
