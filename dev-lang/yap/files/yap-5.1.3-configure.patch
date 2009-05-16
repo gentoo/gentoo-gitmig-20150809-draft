@@ -182,12 +182,12 @@
          JAVA_TARGET=sparc
          ;;
         esac
--    LDFLAGS="$LDFLAGS -Wl,-R,$prefix/lib  -Wl,-R,$JAVA_HOME/jre/lib/$JAVA_TARGET"
+     LDFLAGS="$LDFLAGS -Wl,-R,$prefix/lib  -Wl,-R,$JAVA_HOME/jre/lib/$JAVA_TARGET"
 +    EXTEND_DYNLOADER_PATH="LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\$(DESTDIR)\$(LIBDIR): YAPSHAREDIR=\$(DESTDIR)\$(SHAREDIR)/Yap YAPBOOTDIR=\$(DESTDIR)\$(SHAREDIR)/Yap/pl YAPLIBDIR=\$(DESTDIR)\$(YAPLIBDIR)"
      DYNYAPLIB=libYap"$SHLIB_SUFFIX"
-+    LDFLAGS="$LDFLAGS -Wl,-R,$prefix/lib -Wl,-R,$JAVA_HOME/jre/lib/$JAVA_TARGET -Wl,-soname=$DYNYAPLIB"
      YAPLIB="$DYNYAPLIB"
-     DYNLIB_LD="$SHLIB_LD"
+-    DYNLIB_LD="$SHLIB_LD"
++    DYNLIB_LD="$SHLIB_LD -Wl,-soname=$DYNYAPLIB"
      ;;
    esac
  else
