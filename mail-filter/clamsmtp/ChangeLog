@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/clamsmtp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.18 2008/06/19 11:38:17 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/clamsmtp/ChangeLog,v 1.19 2009/05/16 21:00:32 dertobi123 Exp $
+
+*clamsmtp-1.10 (16 May 2009)
+
+  16 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  -clamsmtp-1.6.ebuild, +clamsmtp-1.10.ebuild:
+  Version bump, #264274
 
   19 Jun 2008; Christian Faulhammer <opfer@gentoo.org> clamsmtp-1.8.ebuild:
   quote variables
