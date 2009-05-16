@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.10.ebuild,v 1.4 2009/05/03 17:24:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccid/ccid-1.3.10.ebuild,v 1.5 2009/05/16 07:36:40 robbat2 Exp $
 
 STUPID_NUM="2924"
 DESCRIPTION="CCID free software driver"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="amd64 ~hppa ppc ppc64 x86"
 IUSE="twinserial nousb"
 
-RDEPEND="!nousb? ( >=sys-apps/pcsc-lite-1.3.3 >=dev-libs/libusb-0.1.4 )"
+RDEPEND="!nousb? ( >=sys-apps/pcsc-lite-1.3.3 =virtual/libusb-0* )"
 DEPEND="${RDEPEND}"
 
 src_compile() {
