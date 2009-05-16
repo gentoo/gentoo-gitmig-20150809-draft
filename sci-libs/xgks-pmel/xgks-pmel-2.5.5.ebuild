@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.1 2009/04/30 06:36:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.2 2009/05/16 15:34:28 nerdboy Exp $
 
 inherit eutils fortran toolchain-funcs multilib
 
@@ -43,18 +43,29 @@ src_compile() {
 }
 
 src_install() {
-	dobin progs/{defcolors,font,hanoi,mi,pline,pmark,star} || die
+	dobin progs/{defcolors,font,mi,pline,pmark} || die
 	dolib.a src/lib/libxgks.a || die
 
 	dodoc COPYRIGHT HISTORY INSTALL README || die
-	doman doc/{xgks.3,xgks_synop.3}
+	doman doc/{xgks.3,xgks_synop.3} || die
 	if use doc; then
 	    newdoc doc/binding/cbinding.me cbinding || die
 	    newdoc doc/userdoc/userdoc.me userdoc || die
+	    insinto /usr/share/doc/${P}/examples
+	    doins progs/{hanoi.c,star.c} || die
 	fi
+
+	insinto /usr/include/xgks
+	doins src/lib/gks*.h || die
+	doins src/lib/gksm/gksm*.h || die
+	doins src/fortran/f*.h || die
+	doins src/lib/w*.h || die
+	doins src/lib/{input.h,metafile.h,polylines.h,polymarkers.h,text.h} \
+	    || die
 
 	insinto /usr/include
 	doins src/lib/xgks.h || die
+	doins port/udposix.h || die
 
 	insinto /usr/share/xgksfonts
 	doins fontdb/{[1-9],*.gksfont} || die

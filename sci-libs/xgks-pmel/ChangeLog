@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/xgks-pmel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.1 2009/04/30 06:36:23 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/ChangeLog,v 1.2 2009/05/16 15:34:28 nerdboy Exp $
+
+  16 May 2009; Steve Arnold <nerdboy@gentoo.org> xgks-pmel-2.5.5.ebuild:
+  Added internal header files required by packages that don't stick to the 
+  public interface.  Sheesh...
 
 *xgks-pmel-2.5.5 (30 Apr 2009)
 
