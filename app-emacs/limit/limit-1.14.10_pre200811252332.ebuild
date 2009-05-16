@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.10_pre20070618.ebuild,v 1.7 2009/05/16 20:58:16 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/limit/limit-1.14.10_pre200811252332.ebuild,v 1.1 2009/05/16 20:58:16 ulm Exp $
 
 inherit elisp versionator
 
 MY_PV=( $(get_version_components) )
-MY_PV[4]="1057"
-MY_P="${PN}-${MY_PV[0]}_${MY_PV[1]}-${MY_PV[3]#pre}${MY_PV[4]}"
+MY_P="${PN}-${MY_PV[0]}_${MY_PV[1]}-${MY_PV[3]#pre}"
 
 DESCRIPTION="Library about Internet Message, for IT generation"
 HOMEPAGE="http://cvs.m17n.org/elisp/FLIM/"
@@ -14,7 +13,7 @@ SRC_URI="http://www.jpl.org/ftp/pub/m17n/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=app-emacs/apel-10.3"
