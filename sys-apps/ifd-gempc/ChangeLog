@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ifd-gempc
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.14 2009/04/12 20:40:52 arfrever Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ChangeLog,v 1.15 2009/05/16 09:23:13 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org> ifd-gempc-1.0.3.ebuild,
+  ifd-gempc-1.0.4.ebuild, ifd-gempc-1.0.5.ebuild:
+  Migration to virtual/libusb. Verified by code inspection.
 
 *ifd-gempc-1.0.5 (12 Apr 2009)
 

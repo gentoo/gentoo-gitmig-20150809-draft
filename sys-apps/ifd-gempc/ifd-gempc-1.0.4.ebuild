@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.4.ebuild,v 1.1 2009/04/10 00:39:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ifd-gempc/ifd-gempc-1.0.4.ebuild,v 1.2 2009/05/16 09:23:13 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,7 +12,7 @@ SLOT="0"
 SRC_URI="http://ludovic.rousseau.free.fr/softwares/ifd-GemPC/${P}.tar.gz"
 IUSE=""
 RDEPEND=">=sys-apps/pcsc-lite-1.2.9_beta7
-	>=dev-libs/libusb-0.1.10a"
+	=virtual/libusb-0*"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

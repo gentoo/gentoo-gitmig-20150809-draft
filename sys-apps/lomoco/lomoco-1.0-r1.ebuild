@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r1.ebuild,v 1.2 2006/11/29 06:21:52 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lomoco/lomoco-1.0-r1.ebuild,v 1.3 2009/05/16 09:21:59 robbat2 Exp $
 
 inherit autotools eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~alpha amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-libs/libusb"
+DEPEND="=virtual/libusb-0*"
 
 src_unpack() {
 	unpack ${A}
