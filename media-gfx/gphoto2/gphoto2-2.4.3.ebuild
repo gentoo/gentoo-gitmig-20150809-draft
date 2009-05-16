@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.3.ebuild,v 1.6 2009/02/16 14:23:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.3.ebuild,v 1.7 2009/05/16 07:57:19 robbat2 Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="aalib exif ncurses nls readline"
 
 # aalib -> needs libjpeg
 # raise libgphoto to get a proper .pc
-RDEPEND=">=dev-libs/libusb-0.1.8
+RDEPEND="=virtual/libusb-0*
 	dev-libs/popt
 	>=media-libs/libgphoto2-2.4.1
 	ncurses? ( dev-libs/cdk )
