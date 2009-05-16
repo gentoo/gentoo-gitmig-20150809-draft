@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/asedriveiiie-usb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/ChangeLog,v 1.5 2009/04/10 20:28:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/ChangeLog,v 1.6 2009/05/16 07:00:33 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  asedriveiiie-usb-3.4.ebuild, asedriveiiie-usb-3.5.ebuild:
+  Migration to virtual/libusb. Verified by code inspection.
 
 *asedriveiiie-usb-3.5 (10 Apr 2009)
 

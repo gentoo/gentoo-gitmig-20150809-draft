@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/asedriveiiie-usb-3.4.ebuild,v 1.5 2008/06/01 03:39:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/asedriveiiie-usb-3.4.ebuild,v 1.6 2009/05/16 07:00:33 robbat2 Exp $
 
 DESCRIPTION="ASEDriveIIIe USB Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -10,7 +10,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="~x86"
 RDEPEND=">=sys-apps/pcsc-lite-1.3.0
-	>=dev-libs/libusb-0.1.10"
+	=virtual/libusb-0*"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
