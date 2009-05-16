@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.21 2009/04/29 02:48:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.22 2009/05/16 14:48:16 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -49,8 +49,9 @@ RDEPEND="opengl? ( virtual/opengl )
 	media-libs/jasper
 	media-libs/libmad
 	media-libs/libogg
-	media-libs/libvorbis
+	media-libs/libsamplerate
 	media-libs/libsdl[alsa,audio,video,X]
+	media-libs/libvorbis
 	media-libs/sdl-gfx
 	media-libs/sdl-image[gif,jpeg,png]
 	media-libs/sdl-mixer
