@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ussp-push-0.5.ebuild,v 1.2 2006/01/11 21:05:38 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ussp-push/ussp-push-0.5.ebuild,v 1.3 2009/05/16 00:36:09 halcy0n Exp $
 
 inherit toolchain-funcs
 
@@ -41,6 +41,6 @@ pkg_postinst() {
 	einfo "   ussp-push /dev/rfcomm0 localfile remotefile"
 	einfo "2. ussp-push \"BTDeviceName\"@10 localfile remotefile"
 	einfo
-	einfo "See /usr/share/doc/${PF}/README.gz for more details."
+	einfo "See the README in /usr/share/doc/${PF}/ for more details."
 	einfo
 }
