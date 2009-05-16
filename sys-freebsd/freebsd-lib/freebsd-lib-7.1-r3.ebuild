@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r3.ebuild,v 1.1 2009/05/12 10:29:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r3.ebuild,v 1.2 2009/05/16 06:19:18 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
 
@@ -131,6 +131,7 @@ src_unpack() {
 	# patches "${WORKDIR}/include"
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}/${PN}-7.1-strndup_bport.patch"
+	epatch "${FILESDIR}/${PN}-includes.patch"
 
 	# Don't install the hesiod man page or header
 	rm "${WORKDIR}"/include/hesiod.h || die
