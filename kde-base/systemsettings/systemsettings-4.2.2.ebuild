@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.2.ebuild,v 1.4 2009/05/05 16:22:08 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.2.ebuild,v 1.5 2009/05/16 09:18:47 robbat2 Exp $
 
 EAPI="2"
 
@@ -24,7 +24,7 @@ COMMONDEPEND="
 	x11-libs/libXrandr
 	x11-libs/libXtst
 	opengl? ( virtual/opengl )
-	usb? ( dev-libs/libusb )
+	usb? ( =virtual/libusb-0* )
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMONDEPEND}

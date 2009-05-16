@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.32 2009/05/07 00:21:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.33 2009/05/16 09:18:47 robbat2 Exp $
+
+  16 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  systemsettings-4.2.2.ebuild, systemsettings-4.2.3.ebuild:
+  Migration to virtual/libusb. Verified by code inspection.
 
 *systemsettings-4.2.3 (07 May 2009)
 
