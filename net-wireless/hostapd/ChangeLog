@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.99 2009/04/15 22:25:11 gurligebis Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.100 2009/05/17 10:18:17 gurligebis Exp $
+
+  17 May 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  files/hostapd-0.6.8-init.d, files/hostapd-0.6.9-init.d:
+  Fixing init script, so it is POSIX compliant, fixing bug #269063
 
   16 Apr 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
   hostapd-0.6.9.ebuild:

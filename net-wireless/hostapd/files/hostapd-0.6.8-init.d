@@ -1,17 +1,17 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.6.8-init.d,v 1.1 2009/02/16 21:58:12 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/files/hostapd-0.6.8-init.d,v 1.2 2009/05/17 10:18:18 gurligebis Exp $
 
 opts="start stop reload"
 
 depend() {
-	local iface
-
+	local myneeds=
 	for iface in ${INTERFACES}; do
-		need net.${iface}
+		myneeds="${myneeds} net.${iface}"
 	done
 
+	[ -n "${myneeds}" ] && need ${myneeds}
 	use logger
 }
 
@@ -19,7 +19,7 @@ checkconfig() {
 	local file
 
 	for file in ${CONFIGS}; do
-		if [[ ! -r ${file} ]]; then
+		if [ ! -r "${file}" ]; then
 			eerror "hostapd configuration file (${CONFIG}) not found"
 			return 1
 		fi
@@ -29,22 +29,22 @@ checkconfig() {
 start() {
 	checkconfig || return 1
 
-	ebegin "Starting hostapd"
+	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --start --exec /usr/sbin/hostapd \
 		-- -B ${OPTIONS} ${CONFIGS}
-	eend ${?}
+	eend $?
 }
 
 stop() {
-	ebegin "Stopping hostapd"
+	ebegin "Stopping ${SVCNAME}"
 	start-stop-daemon --stop --exec /usr/sbin/hostapd
-	eend ${?}
+	eend $?
 }
 
 reload() {
 	checkconfig || return 1
 
-	ebegin "Reloading hostapd configuration"
+	ebegin "Reloading ${SVCNAME} configuration"
 	kill -HUP $(pidof /usr/sbin/hostapd) > /dev/null 2>&1
-	eend ${?}
+	eend $?
 }
