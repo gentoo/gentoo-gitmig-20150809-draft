@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/yaydl-1.2.ebuild,v 1.1 2009/05/10 08:47:00 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/yaydl-1.3.ebuild,v 1.1 2009/05/17 15:07:52 volkmar Exp $
 
 EAPI="2"
-
-inherit eutils
 
 DESCRIPTION="Yet Another Youtube DownLoader which is downloading more than youtube"
 HOMEPAGE="http://pdes-net.org/x-haui/yaydl.html"
@@ -23,18 +21,10 @@ RDEPEND="dev-lang/perl
 	dev-perl/URI
 	encode? ( || ( media-video/ffmpeg[encode]
 		media-video/mplayer[encode,mp3,xvid] ) )
-	soundextract? ( || ( media-video/ffmpeg[encode,mp3] ) )"
+	soundextract? ( || ( media-video/ffmpeg[encode,mp3]
+		( media-video/mplayer media-sound/lame ) ) )"
 
 S=${WORKDIR}/${PN}
-
-# TODO:
-# need from upstream to fix mencoder soundextract and choose a default encoder
-
-src_prepare() {
-	# let ffmpeg doing soundextract and remove mencoder soundextract
-	# making ffmpeg first choice for encoding
-	epatch "${FILESDIR}"/${P}-gentoo.patch
-}
 
 src_install() {
 	exeinto /usr/bin
