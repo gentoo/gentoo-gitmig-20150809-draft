@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2667 2009/05/17 07:55:38 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2668 2009/05/17 12:56:04 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask the upcoming automake 1.11 beta.
 
   17 May 2009; Andreas Proschofsky <suka@gentoo.org> package.mask:
   Remove mask for app-office/openoffice-3.1.0, finally released now
