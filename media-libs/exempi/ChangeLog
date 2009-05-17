@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.16 2009/05/11 16:02:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.17 2009/05/17 22:14:17 eva Exp $
+
+*exempi-2.1.0 (17 May 2009)
+
+  17 May 2009; Gilles Dartiguelongue <eva@gentoo.org> +exempi-2.1.0.ebuild,
+  +files/exempi-2.1.0-gcc44.patch:
+  Bump to 2.1.0. Upgrade XMPCore to Adobe XMP 4.4.2 and bug fixes,
+  bug #257089.
 
   11 May 2009; Samuli Suominen <ssuominen@gentoo.org> exempi-2.0.2.ebuild,
   +files/exempi-2.0.2-gcc44.patch:
