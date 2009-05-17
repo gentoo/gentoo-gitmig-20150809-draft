@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801-r1.ebuild,v 1.5 2007/11/14 15:16:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jtidy/jtidy-0_pre20010801-r1.ebuild,v 1.6 2009/05/17 17:11:42 nelchael Exp $
+
+JAVA_PKG_IUSE="doc source"
 
 inherit eutils base java-pkg-2 java-ant-2
 
@@ -11,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-dev.zip"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc x86 ~x86-fbsd"
-IUSE="doc source"
+IUSE=""
 DEPEND=">=virtual/jdk-1.4
 	app-arch/unzip
 	dev-java/ant-core"
