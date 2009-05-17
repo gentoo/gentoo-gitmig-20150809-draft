@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4453 2009/05/17 10:07:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4454 2009/05/17 10:47:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -230,6 +230,15 @@ app-emulation/point2play:emerald - For people who are in the Transgaming Emerald
 app-emulation/q4wine:development -  Enable developer related stuff
 app-emulation/q4wine:icotools -  Enable icotools support
 app-emulation/q4wine:winetools -  Enable winetools support
+app-emulation/qemu:alsa - Enable alsa output for sound emulation
+app-emulation/qemu:esd - Enable esound output for sound emulation
+app-emulation/qemu:gnutls - Enable TLS support for the VNC console server
+app-emulation/qemu:kqemu - Enables the kernel acceleration module on a x86/x86-64 cpu
+app-emulation/qemu:kvm - Use the KVM (Kernel Virtual Machine) infrastructure on compatible hardware
+app-emulation/qemu:ncurses - Enable the ncurses-based console
+app-emulation/qemu:pulseaudio - Enable pulseaudio output for sound emulation
+app-emulation/qemu:sdl - Enable the SDL-based console
+app-emulation/qemu:vde - Enable VDE-based networking
 app-emulation/qemu-softmmu:alsa - Enable alsa output for sound emulation
 app-emulation/qemu-softmmu:esd - Enable esound output for sound emulation
 app-emulation/qemu-softmmu:gnutls - Enable TLS support for the VNC console server
