@@ -1,0 +1,11 @@
+Index: /gtk-qt/trunk/gtk-qt-engine/src/engine.cpp
+===================================================================
+--- /gtk-qt/trunk/gtk-qt-engine/src/engine.cpp (revision 140)
++++ /gtk-qt/trunk/gtk-qt-engine/src/engine.cpp (revision 142)
+@@ -379,5 +379,5 @@
+ 	}
+ 	
+-	m_qtStyle->drawPrimitive(element, &option, &p);
++	m_qtStyle->drawPrimitive(element, &option, &p, m_dummyWidget);
+ 	
+ 	GTK_QT_FINISH

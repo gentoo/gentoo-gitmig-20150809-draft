@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-1.1-r1.ebuild,v 1.1 2009/02/03 13:49:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-1.1-r2.ebuild,v 1.1 2009/05/17 15:32:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -24,10 +24,16 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_PN}
 
+PATCHES=(
+	"${FILESDIR}/${PV}-stdlib.patch"
+	"${FILESDIR}/${PV}-fixsegfault.patch"
+	"${FILESDIR}/${PV}-scrollbar.patch"
+	"${FILESDIR}/${PV}-firefoxOpenFileDialogFix.patch"
+)
+
 CMAKE_IN_SOURCE_BUILD="1"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-stdlib.patch"
 	sed -i \
 		-e "s:\${XDG_APPS_INSTALL_DIR}:${KDEDIR}/share/kde4/services/:g" \
 		kcm_gtk/CMakeLists.txt || die "replacing correct folder failed"

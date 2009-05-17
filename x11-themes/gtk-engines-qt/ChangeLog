@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.47 2009/05/17 15:21:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.48 2009/05/17 15:32:11 scarabeus Exp $
+
+*gtk-engines-qt-1.1-r2 (17 May 2009)
+
+  17 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/1.1-firefoxOpenFileDialogFix.patch, +gtk-engines-qt-1.1-r2.ebuild,
+  +files/1.1-fixsegfault.patch, +files/1.1-scrollbar.patch,
+  -gtk-engines-qt-1.1-r1.ebuild:
+  Revision bump. Fix various issues. Per bug #257542.
 
 *gtk-engines-qt-0.8-r4 (17 May 2009)
 
