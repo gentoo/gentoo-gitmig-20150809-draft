@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.63 2009/05/17 10:40:43 lu_zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.64 2009/05/17 21:20:30 flameeyes Exp $
+
+  17 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
+  +files/qemu-ifdown, +files/qemu-ifup:
+  Add missing ifup/ifdown scripts, change install logic, make sure they are
+  not added executable to CVS.
 
 *qemu-0.10.3 (17 May 2009)
 
