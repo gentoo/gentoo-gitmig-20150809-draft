@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.31 2009/05/16 20:35:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.32 2009/05/17 13:43:11 klausman Exp $
+
+  17 May 2009; Tobias Klausmann <klausman@gentoo.org> pyserial-2.4.ebuild:
+  Stable on alpha, bug #270102
 
   16 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyserial-2.2.ebuild, pyserial-2.4.ebuild:
