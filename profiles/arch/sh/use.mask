@@ -1,6 +1,10 @@
 # Unmask the flag which corresponds to ARCH.
 -sh
 
+# Raúl Porcel <armin76@gentoo.org>
+# xulrunner doesn't work on sh yet
+xulrunner
+
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
 networkmanager
