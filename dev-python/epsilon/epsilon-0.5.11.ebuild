@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.11.ebuild,v 1.4 2009/02/11 21:25:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.5.11.ebuild,v 1.5 2009/05/17 01:18:26 arfrever Exp $
 
+EAPI="2"
 inherit twisted distutils
 
 DESCRIPTION="Epsilon is a Python utilities package, most famous for its Time class."
@@ -13,7 +14,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~ia64 ~ppc64 ~x86 ~amd64"
 IUSE=""
-EAPI="2"
 
 DEPEND=">=dev-lang/python-2.4
 	>=dev-python/twisted-2.4"
