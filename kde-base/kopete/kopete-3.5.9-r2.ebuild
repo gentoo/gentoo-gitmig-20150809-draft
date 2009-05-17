@@ -1,10 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r1.ebuild,v 1.1 2009/05/15 02:29:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.9-r2.ebuild,v 1.1 2009/05/17 17:00:49 jmbsvicetto Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
 inherit kde-meta eutils
+
+SRC_URI="${SRC_URI}
+	mirror://gentoo/kdenetwork-3.5-patchset-01.tar.bz2"
 
 DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
@@ -14,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="jingle ssl xscreensaver slp kernel_linux kdehiddenvisibility"
 PLUGINS="addbookmarks alias autoreplace connectionstatus contactnotes crypt highlight history latex netmeeting nowlistening
 	statistics texteffect translator webpresence"
-PROTOCOLS="groupwise irc sametime sms winpopup yahoo"
+PROTOCOLS="groupwise irc jabber oscar msn sametime sms winpopup yahoo"
 IUSE="${IUSE} ${PLUGINS} ${PROTOCOLS}"
 
 # Even more broken tests...
@@ -27,10 +30,12 @@ BOTH_DEPEND="
 	>=dev-libs/glib-2
 	dev-libs/libxml2
 	dev-libs/libxslt
-	net-dns/libidn
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
+	jabber? (
+		net-dns/libidn
+	)
 	jingle? (
 		dev-libs/expat
 		>=media-libs/speex-1.1.6
@@ -85,7 +90,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-0.12_alpha1-xscreensaver.patch"
 	epatch "${FILESDIR}/${PN}-3.5.5-icqfix.patch"
 	epatch "${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-icq-protocol-change.patch"
+	epatch "${FILESDIR}/${PN}-3.5.10-gcc43.patch"
 
 	use addbookmarks || kopete_disable plugin addbookmarks
 	use alias || kopete_disable plugin alias
@@ -106,7 +112,9 @@ src_unpack() {
 	kopete_disable protocol '\$(GADU)'
 	use groupwise || kopete_disable protocol groupwise
 	use irc || kopete_disable protocol irc
-	use sametime || kopete_disable protocol meanwhile
+	use jabber || kopete_disable protocol '\$(JABBER)'
+	use oscar || kopete_disable protocol oscar
+	use msn || kopete_disable protocol msn
 	use winpopup || kopete_disable protocol winpopup
 	use yahoo || kopete_disable protocol yahoo
 

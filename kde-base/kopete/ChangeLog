@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.185 2009/05/15 02:29:11 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.186 2009/05/17 17:00:49 jmbsvicetto Exp $
+
+*kopete-3.5.10-r2 (17 May 2009)
+*kopete-3.5.9-r2 (17 May 2009)
+
+  17 May 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -kopete-3.5.9-r1.ebuild, +kopete-3.5.9-r2.ebuild,
+  -kopete-3.5.10-r1.ebuild, +kopete-3.5.10-r2.ebuild:
+  Bumped kopete-3.5.10 and kopete-3.5.9 to fix the USE="-meanwhile"
+  compilation issue and improved handling of protocols.
 
 *kopete-3.5.10-r1 (15 May 2009)
 *kopete-3.5.9-r1 (15 May 2009)
