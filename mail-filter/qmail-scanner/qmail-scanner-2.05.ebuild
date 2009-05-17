@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.5 2009/04/14 09:30:09 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.05.ebuild,v 1.6 2009/05/17 16:24:31 nixnut Exp $
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -14,7 +14,7 @@ IUSE="clamav spamassassin"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 RESTRICT="userpriv"
 
 RDEPEND="dev-lang/perl
