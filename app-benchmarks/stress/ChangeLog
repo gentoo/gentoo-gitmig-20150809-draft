@@ -1,6 +1,12 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.34 2009/05/05 19:23:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.35 2009/05/17 18:33:17 tcunha Exp $
+
+  17 May 2009; Tiago Cunha <tcunha@gentoo.org> stress-1.0.0.ebuild:
+  - Use the patch from bug 261720 which:
+    - Avoids using -Werror during build (fixes bug 260868 reported by flameeyes).
+    - Respects CFLAGS (fixes bug 239949 reported by flameeyes). Thus, stable
+      sparc.
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> stress-1.0.0.ebuild:
   stable x86, bug 261720
