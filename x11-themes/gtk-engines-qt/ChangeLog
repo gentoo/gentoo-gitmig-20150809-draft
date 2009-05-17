@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.46 2009/02/19 19:28:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.47 2009/05/17 15:21:01 scarabeus Exp $
+
+*gtk-engines-qt-0.8-r4 (17 May 2009)
+
+  17 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -gtk-engines-qt-0.8-r1.ebuild, -gtk-engines-qt-0.8-r2.ebuild,
+  -gtk-engines-qt-0.8-r3.ebuild, +gtk-engines-qt-0.8-r4.ebuild,
+  metadata.xml:
+  Fix kde3 bugs, remove old.
 
   19 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -gtk-engines-qt-1.1.ebuild:
