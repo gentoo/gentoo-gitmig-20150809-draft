@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.72 2009/05/17 12:20:41 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.73 2009/05/17 14:36:18 armin76 Exp $
+
+  17 May 2009; Raúl Porcel <armin76@gentoo.org> brasero-2.26.1-r2.ebuild:
+  Add ~ia64/~sparc wrt #268363
 
 *brasero-2.26.1-r2 (17 May 2009)
 
