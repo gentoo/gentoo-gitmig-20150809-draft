@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.1-r1.ebuild,v 1.2 2009/05/14 15:04:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.1-r2.ebuild,v 1.1 2009/05/17 12:20:41 loki_val Exp $
 
-EAPI=1
+EAPI=2
 
 GCONF_DEBUG=no
 
-inherit gnome2 eutils
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Brasero (aka Bonfire) is yet another application to burn CD/DVD for the gnome desktop."
 HOMEPAGE="http://www.gnome.org/projects/brasero"
@@ -46,7 +46,7 @@ pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper
 		--disable-caches
 		--disable-dependency-tracking
-		$(use cdrtools|| printf %s --disable-cdrtools)
+		$(use_enable cdrtools)
 		$(use_enable cdrkit)
 		$(use_enable nautilus)
 		$(use_enable totem playlist)
@@ -56,8 +56,11 @@ pkg_setup() {
 	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
+
+	epatch "${FILESDIR}/${P}-configure.patch"
+	eautoreconf
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
