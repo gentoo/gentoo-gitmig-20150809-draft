@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/vmd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.19 2008/11/12 18:41:47 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.20 2009/05/17 20:15:13 je_fro Exp $
+
+  17 May 2009; Jeff Gardner <je_fro@gentoo.org> +vmd-1.8.6-r1.ebuild:
+  Fixed by alexxy to work with tcl8.5
+
+*vmd-1.8.6-r1 (17 May 2009)
+
+  17 May 2009; Jeff Gardner <je_fro@gentoo.org> +vmd-1.8.6-r1.ebuild:
+  Fixed by alexxy to work with tcl5.8
 
   12 Nov 2008; Markus Dittrich <markusle@gentoo.org> -vmd-1.8.5.ebuild,
   vmd-1.8.6.ebuild:

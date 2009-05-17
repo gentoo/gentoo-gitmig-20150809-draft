@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6.ebuild,v 1.8 2009/05/17 20:15:13 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6-r1.ebuild,v 1.1 2009/05/17 20:15:13 je_fro Exp $
 
 EAPI="1"
 
@@ -45,12 +45,13 @@ src_unpack() {
 	cd "${S}"
 
 	# apply LINUX-arch patches to vmd configure
-	epatch "${FILESDIR}"/${P}-config-gentoo.patch
-	epatch "${FILESDIR}"/${P}-python-2.5.patch
+	epatch "${FILESDIR}/${P}-config-gentoo.patch"
+	epatch "${FILESDIR}/${P}-python-2.5.patch"
 
 	TCL_LIB_PATH="/usr/$(get_libdir)/tcl8.4"
 	if has_version =dev-lang/tcl-8.5*; then
-		epatch "${FILESDIR}"/${P}-tcltk8.5.patch
+		epatch "${FILESDIR}/${P}-tcltk8.5.patch"
+		epatch "${FILESDIR}/${P}-fix-crash-on-tcl8.5.patch"
 		TCL_LIB_PATH="/usr/$(get_libdir)/tcl8.5"
 	fi
 
