@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.26.0.ebuild,v 1.2 2009/05/15 00:11:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.26.0.ebuild,v 1.3 2009/05/17 18:22:06 robbat2 Exp $
 
 EAPI=1
 inherit virtualx gnome2
@@ -13,7 +13,6 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="accessibility doc usb"
 
-# libusb-compat untested
 # accessibility will disappear with new xorg-server (1.6)
 RDEPEND=">=dev-libs/glib-2.17.4
 	>=gnome-base/libgnomeui-2
@@ -28,7 +27,7 @@ RDEPEND=">=dev-libs/glib-2.17.4
 	>=gnome-base/libglade-2
 	>=gnome-base/gconf-2
 	>=gnome-base/orbit-2
-	usb? ( >=dev-libs/libusb-0.1.11:0 )
+	usb? ( =virtual/libusb-0* )
 	x11-libs/libXi
 	x11-libs/libX11
 	accessibility? ( x11-libs/libXevie )"
