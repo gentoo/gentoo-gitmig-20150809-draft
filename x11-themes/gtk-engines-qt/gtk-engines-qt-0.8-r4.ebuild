@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8-r4.ebuild,v 1.1 2009/05/17 15:21:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/gtk-engines-qt-0.8-r4.ebuild,v 1.2 2009/05/17 22:45:20 scarabeus Exp $
 
 EAPI=1
 
@@ -53,7 +53,7 @@ src_install() {
 
 	# only install requested translations (bug #205940)
 	strip-linguas ${LANGS}
-	mv "${D}/${KDEDIR}"/share/locale "${D}/${KDEDIR}"share/temp || die
+	mv "${D}/${KDEDIR}"/share/locale "${D}/${KDEDIR}"/share/temp || die
 	dodir "${KDEDIR}"/share/locale
 	for lang in "${LINGUAS}"; do
 	    mv "${D}/${KDEDIR}"/share/temp/"${lang}" "${D}/${KDEDIR}"/share/locale || die
