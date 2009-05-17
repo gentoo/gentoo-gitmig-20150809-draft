@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.184 2009/05/15 19:15:50 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.185 2009/05/17 11:16:05 armin76 Exp $
+
+  17 May 2009; Raúl Porcel <armin76@gentoo.org> libsoup-2.26.1.ebuild:
+  Add ~arm/~ia64/~sh wrt #268529
 
   15 May 2009; Tobias Klausmann <klausman@gentoo.org> libsoup-2.26.1.ebuild:
   Stable on alpha, bug #269186
