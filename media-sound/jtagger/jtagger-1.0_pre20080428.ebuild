@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0_pre20080428.ebuild,v 1.1 2009/05/16 23:06:11 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0_pre20080428.ebuild,v 1.2 2009/05/17 20:28:01 serkan Exp $
 
 EAPI="1"
 
@@ -39,7 +39,7 @@ src_unpack() {
 
 	unpack ${A}
 	unzip -q ${PN}.jar || die
-	epatch "${FILESDIR}"/${P}-override-annotation.patch
+	epatch "${FILESDIR}"/${MY_P}-override-annotation.patch
 
 	rm -vr ${PN}.jar javazoom  org META-INF || die
 	find . -name '*.class' -delete || die
