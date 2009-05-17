@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/File-Scan-ClamAV
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Scan-ClamAV/ChangeLog,v 1.1 2009/05/17 08:44:19 dertobi123 Exp $
+
+*File-Scan-ClamAV-1.91 (17 May 2009)
+
+  17 May 2009; Tobias Scherbaum <dertobi123@gentoo.org> +metadata.xml,
+  +File-Scan-ClamAV-1.91.ebuild:
+  Initial import, #172805
+
