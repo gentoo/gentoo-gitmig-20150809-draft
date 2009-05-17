@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.8.1.ebuild,v 1.7 2008/07/08 11:36:35 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/swftools-0.8.1.ebuild,v 1.8 2009/05/17 13:57:46 loki_val Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ IUSE=""
 
 DEPEND=">=media-libs/t1lib-1.3.1
 	media-libs/freetype
-	media-libs/jpeg"
+	media-libs/jpeg
+	!<media-libs/ming-0.4.0_rc2"
 RDEPEND=""
 
 src_compile() {

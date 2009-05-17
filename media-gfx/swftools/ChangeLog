@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/swftools
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.30 2008/07/14 01:37:20 vanquirius Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/swftools/ChangeLog,v 1.31 2009/05/17 13:57:46 loki_val Exp $
+
+  17 May 2009; Peter Alfredsen <loki_val@gentoo.org> swftools-0.8.1.ebuild:
+  Add blocker w.r.t. bug 230507
 
   14 Jul 2008; Marcelo Goes <vanquirius@gentoo.org> -swftools-0.8.0.ebuild:
   Remove old ebuild.
