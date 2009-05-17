@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kiax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.16 2009/02/25 21:40:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.17 2009/05/17 11:43:11 volkmar Exp $
+
+  17 May 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/kiax-0.8.51-missing-header.patch, kiax-0.8.51-r1.ebuild:
+  Fix an 'implicit declaration' warning fixing bug 269778
 
   25 Feb 2009; Markus Meier <maekke@gentoo.org> -files/configure.patch,
   -kiax-0.8.5_p1.ebuild:

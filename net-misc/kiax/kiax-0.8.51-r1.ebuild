@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.51-r1.ebuild,v 1.2 2009/02/25 21:36:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.51-r1.ebuild,v 1.3 2009/05/17 11:43:11 volkmar Exp $
 
 EAPI="2"
 
@@ -21,9 +21,16 @@ RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-src"
 
+# TODO:
+# using a lot of internal libs (see debian patch)
+# using ilbc (license issues)
+
 src_prepare() {
 	# fix compile with glibc-2.8, see bug #246131
 	epatch "${FILESDIR}"/${P}-h_addr_list.patch
+
+	# fix install_qa_check with amd64, see bug 269778
+	epatch "${FILESDIR}"/${P}-missing-header.patch
 
 	# add prefix for make install
 	sed -i -e "s:\(\$(DEST_PATH)\):\${INSTALL_ROOT}\1:" \
