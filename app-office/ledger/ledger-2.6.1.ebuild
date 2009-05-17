@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.1.ebuild,v 1.1 2008/12/19 21:52:36 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.1.ebuild,v 1.2 2009/05/17 10:35:11 loki_val Exp $
 
 inherit eutils elisp-common
 
 DESCRIPTION="A command-line accounting tool that provides double-entry accounting with a minimum of frills, and yet with a maximum of expressiveness and flexibility."
-HOMEPAGE="http://www.newartisans.com/software.html"
+HOMEPAGE="http://wiki.github.com/jwiegley/ledger"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
