@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.14-r1.ebuild,v 1.1 2009/05/16 23:13:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/prewikka-0.9.14-r2.ebuild,v 1.1 2009/05/17 19:10:52 halcy0n Exp $
 
 EAPI="2"
 
@@ -23,11 +23,9 @@ RDEPEND="${DEPEND}"
 
 src_install() {
 	distutils_src_install
-	dodir /etc/prewikka
-	insinto /etc/prewikka
-	doins "${FILESDIR}"/prewikka.conf-sample
+	mv "${D}"/etc/prewikka/prewikka.conf \
+		"${D}"/etc/prewikka/prewikka.conf-sample
 	fperms 640 /etc/prewikka/prewikka.conf-sample
-	rm "${D}"/\-dist
 }
 
 pkg_postinst() {

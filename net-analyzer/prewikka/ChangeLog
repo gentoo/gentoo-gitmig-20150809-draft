@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/prewikka
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.33 2009/05/16 23:13:04 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prewikka/ChangeLog,v 1.34 2009/05/17 19:10:52 halcy0n Exp $
+
+*prewikka-0.9.14-r2 (17 May 2009)
+
+  17 May 2009; Mark Loeser <halcy0n@gentoo.org> -prewikka-0.9.14-r1.ebuild,
+  +prewikka-0.9.14-r2.ebuild:
+  Another bump since I messed up the one yesterday; thanks to rbu@gentoo.org
+  for pointing it out; bug #270056
 
 *prewikka-0.9.14-r1 (16 May 2009)
 
