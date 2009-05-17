@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.11_beta.ebuild,v 1.1 2009/05/17 13:04:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.11.ebuild,v 1.1 2009/05/17 20:50:21 flameeyes Exp $
 
 inherit eutils versionator
 
@@ -66,7 +66,9 @@ src_install() {
 		APIVERSION="${SLOT}" pkgvdatadir="/usr/share/${PN}-${SLOT}" || die
 	dodoc NEWS README THANKS TODO AUTHORS ChangeLog
 
-	rm "${D}"/usr/bin/{aclocal,automake}
+	rm \
+		"${D}"/usr/bin/{aclocal,automake} \
+		"${D}"/usr/share/man/man1/{aclocal,automake}.1
 
 	# remove all config.guess and config.sub files replacing them
 	# w/a symlink to a specific gnuconfig version
