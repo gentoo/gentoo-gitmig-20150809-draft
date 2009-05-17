@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.8 2009/05/14 18:04:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.9 2009/05/17 16:52:03 armin76 Exp $
+
+  17 May 2009; Raúl Porcel <armin76@gentoo.org> Babel-0.9.4.ebuild:
+  Add ~s390
 
   14 May 2009; Jeroen Roovers <jer@gentoo.org> Babel-0.9.4.ebuild:
   Marked ~hppa (bug #233554).
