@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mkvtoolnix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.105 2009/05/15 07:32:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/ChangeLog,v 1.106 2009/05/17 00:37:07 flameeyes Exp $
+
+  17 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mkvtoolnix-2.8.0.ebuild, +files/mkvtoolnix-2.8.0-noflac.patch:
+  Add patch to fix build failure without flac as per bug #270054.
 
 *mkvtoolnix-2.8.0 (15 May 2009)
 
