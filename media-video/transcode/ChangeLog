@@ -1,6 +1,12 @@
 # ChangeLog for media-video/transcode
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.256 2009/04/14 20:01:01 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.257 2009/05/17 18:54:30 je_fro Exp $
+
+*transcode-1.1.2-r1 (17 May 2009)
+
+  17 May 2009; Jeff Gardner <je_fro@gentoo.org> +transcode-1.1.2-r1.ebuild:
+  Build the deprecated but still useful tcrequant with --enable-deprecated.
+  Move sed to src_prepare to squash repoman warning.
 
 *transcode-1.1.2 (14 Apr 2009)
 
