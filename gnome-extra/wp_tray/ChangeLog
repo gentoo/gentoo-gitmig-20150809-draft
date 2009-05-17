@@ -1,0 +1,11 @@
+# ChangeLog for gnome-extra/wp_tray
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/ChangeLog,v 1.1 2009/05/17 12:58:17 dertobi123 Exp $
+
+*wp_tray-0.5.5 (17 May 2009)
+
+  17 May 2009; Tobias Scherbaum <dertobi123@gentoo.org> +metadata.xml,
+  +wp_tray-0.5.5.ebuild:
+  Initial import, based on an ebuild by me from the gentoo-de overlay. Closed
+  #108419
+
