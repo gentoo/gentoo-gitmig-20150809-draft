@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.62 2009/03/22 23:27:12 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.63 2009/05/17 10:40:43 lu_zero Exp $
+
+*qemu-0.10.3 (17 May 2009)
+
+  17 May 2009; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-0.10.3-nopl-fix.patch, +qemu-0.10.3.ebuild:
+  New ebuild, thanks to Xake <xake@rymdraket.net> for contributing it in bug
+  #190298
 
 *qemu-0.10.1 (22 Mar 2009)
 
