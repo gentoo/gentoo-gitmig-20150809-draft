@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/libgee
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.1 2009/05/17 22:33:55 eva Exp $
+
+*libgee-0.1.5 (17 May 2009)
+
+  17 May 2009; Gilles Dartiguelongue <eva@gentoo.org> +libgee-0.1.5.ebuild,
+  +metadata.xml:
+  New ebuild written by yours truly, libgee is a collection library
+  providing GObject-based interfaces and classes for commonly used data
+  structures. Closes #269775.
+
