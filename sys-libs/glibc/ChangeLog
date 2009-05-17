@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.623 2009/05/02 02:38:22 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.624 2009/05/17 22:17:56 vapier Exp $
+
+  17 May 2009; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_unpack.eblit:
+  Improve check_nptl_support output to include more info to help people
+  figure out their own mistakes.
 
   02 May 2009; Mark Loeser <halcy0n@gentoo.org>
   files/eblits/src_compile.eblit:
