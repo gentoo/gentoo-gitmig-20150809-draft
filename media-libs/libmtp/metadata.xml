@@ -6,4 +6,7 @@
 		<email>ken69267@gentoo.org</email>
 		<name>Kenneth Prugh</name>
 	</maintainer>
+	<use>
+	<flag name='static-libs'>Compile static archives</flag>
+	</use>
 </pkgmetadata>

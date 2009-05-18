@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.70 2009/05/17 14:51:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.71 2009/05/18 21:38:45 ssuominen Exp $
+
+  18 May 2009; Samuli Suominen <ssuominen@gentoo.org> libmtp-0.2.6.1.ebuild,
+  -libmtp-0.3.3.ebuild, -libmtp-0.3.4.ebuild, -libmtp-0.3.5.ebuild,
+  -libmtp-0.3.6.ebuild, libmtp-0.3.7.ebuild:
+  USE static-libs.
 
   17 May 2009; Raúl Porcel <armin76@gentoo.org> libmtp-0.3.7.ebuild:
   sparc stable wrt #267922
