@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gccxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.24 2009/05/16 23:05:35 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gccxml/ChangeLog,v 1.25 2009/05/18 15:05:34 fauli Exp $
+
+  18 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  gccxml-0.9.0_pre20090516.ebuild:
+  stable x86, security bug 245765
 
 *gccxml-0.9.0_pre20090516 (16 May 2009)
 
