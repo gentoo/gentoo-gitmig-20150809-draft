@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pyzor
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.41 2009/01/05 07:43:11 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.42 2009/05/18 13:27:44 arfrever Exp $
+
+*pyzor-0.5.0 (18 May 2009)
+
+  18 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyzor-0.5.0.ebuild:
+  Version bump (bug #269194).
 
 *pyzor-0.4.0-r4 (05 Jan 2009)
 
