@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/glassfish-jms-api
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-jms-api/ChangeLog,v 1.1 2009/05/18 19:36:13 betelgeuse Exp $
+
+*glassfish-jms-api-1.1.2.2.04 (18 May 2009)
+
+  18 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +glassfish-jms-api-1.1.2.2.04.ebuild, +metadata.xml:
+  Initial addition to replace the restricted sun-jms pkg. Ebuild written by
+  me.
+
