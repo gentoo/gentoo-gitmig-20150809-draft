@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.123 2009/05/16 13:25:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.124 2009/05/18 21:28:03 eva Exp $
+
+*vino-2.26.2 (18 May 2009)
+
+  18 May 2009; Gilles Dartiguelongue <eva@gentoo.org> +vino-2.26.2.ebuild:
+  Bump to 2.26.2. Bug fixes (include fbsd patch) and translation updates.
 
   16 May 2009; Alexis Ballier <aballier@gentoo.org> vino-2.26.1.ebuild:
   keyword ~x86-fbsd, bug #269233
