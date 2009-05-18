@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.1.ebuild,v 1.1 2009/04/08 16:52:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/neverball/neverball-1.5.1.ebuild,v 1.2 2009/05/18 02:52:44 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -38,6 +38,7 @@ src_prepare() {
 		dist/mapc.1 \
 		|| die "sed failed"
 	sed -i \
+		-e 's:scripts/get-sse-cflags.sh:true:' \
 		-e 's:-O2:$(E_CFLAGS):' \
 		-e "/^MAPC_TARG/s/mapc/${PN}-mapc/" \
 		Makefile \
