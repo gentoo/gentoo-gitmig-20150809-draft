@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Mail-ClamAV
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.37 2009/05/01 10:29:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-ClamAV/ChangeLog,v 1.38 2009/05/18 15:22:04 fauli Exp $
+
+  18 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  Mail-ClamAV-0.29.ebuild:
+  stable x86, security bug 265545
 
 *Mail-ClamAV-0.29 (01 May 2009)
 
