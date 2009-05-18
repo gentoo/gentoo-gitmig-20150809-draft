@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.1/package.mask,v 1.1 2009/01/19 22:08:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.1/package.mask,v 1.2 2009/05/18 05:28:07 aballier Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Make sure we don't get wrong versions
@@ -28,6 +28,8 @@
 >sys-freebsd/freebsd-share-7.1.99
 <sys-freebsd/freebsd-contrib-7.1_alpha
 >sys-freebsd/freebsd-contrib-7.1.99
+<sys-freebsd/freebsd-cddl-7.1_alpha
+>sys-freebsd/freebsd-cddl-7.1.99
 <sys-freebsd/boot0-7.1_alpha
 >sys-freebsd/boot0-7.1.99
 <sys-freebsd/freebsd-sources-7.1_alpha
