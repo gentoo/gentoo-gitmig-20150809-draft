@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.161 2009/05/06 23:35:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.162 2009/05/18 16:57:04 arfrever Exp $
+
+*kmail-4.2.3-r1 (18 May 2009)
+
+  18 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/4.2.0-kwallet.patch, +kmail-4.2.3-r1.ebuild,
+  +files/kmail-4.2.3-allow_replying_to_messages_in_sent_folder.patch:
+  Allow replying to e-mails in "Sent" folder (bug #270099).
 
 *kmail-4.2.3 (06 May 2009)
 
