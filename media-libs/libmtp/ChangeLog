@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmtp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.71 2009/05/18 21:38:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/ChangeLog,v 1.72 2009/05/18 22:39:18 robbat2 Exp $
+
+  18 May 2009; Robin H. Johnson <robbat2@gentoo.org> libmtp-0.2.6.1.ebuild,
+  libmtp-0.3.7.ebuild:
+  Fix libusb dependancy. Without the slot, libusb-1 get selected and that
+  does not provide libusb-compat-0 needed to build the package.
 
   18 May 2009; Samuli Suominen <ssuominen@gentoo.org> libmtp-0.2.6.1.ebuild,
   -libmtp-0.3.3.ebuild, -libmtp-0.3.4.ebuild, -libmtp-0.3.5.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.2.6.1.ebuild,v 1.9 2009/05/18 21:38:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmtp/libmtp-0.2.6.1.ebuild,v 1.10 2009/05/18 22:39:18 robbat2 Exp $
 
 EAPI=2
 inherit eutils
@@ -16,7 +16,7 @@ IUSE="doc"
 
 # Please don't delete this ebuild before I know if pympd
 # work with 0.3.x versions, thanks, ssuominen.
-RDEPEND="virtual/libusb"
+RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
