@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/dotconf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.15 2009/03/23 05:22:59 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dotconf/ChangeLog,v 1.16 2009/05/18 18:16:42 williamh Exp $
+
+*dotconf-1.1.0-r1 (18 May 2009)
+
+  18 May 2009; William Hubbs <williamh@gentoo.org> +dotconf-1.1.0-r1.ebuild,
+  +files/dotconf-1.1.0-fix-dotconf-m4.patch:
+  Fixes dotconf.m4 so that it doesn't cause error messages, closes #187125.
+  Thanks to Michael Krelin for the patch.
 
   23 Mar 2009; William Hubbs <williamh@gentoo.org> dotconf-1.1.0.ebuild:
   Fixed bug #221549 and #243510.
