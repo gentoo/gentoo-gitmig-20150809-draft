@@ -1,0 +1,11 @@
+# ChangeLog for java-virtuals/jms
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/java-virtuals/jms/ChangeLog,v 1.1 2009/05/18 19:38:05 betelgeuse Exp $
+
+*jms-1.1 (18 May 2009)
+
+  18 May 2009; Petteri Räty <betelgeuse@gentoo.org> +jms-1.1.ebuild,
+  +metadata.xml:
+  Add virtual to make it easy to migrate from sun-jms to glassfish-jms-api.
+  Could eventually be provided by other J2EE containers.
+
