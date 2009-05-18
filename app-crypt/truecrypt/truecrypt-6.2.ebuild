@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.2 2009/05/18 03:40:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.3 2009/05/18 04:39:01 robbat2 Exp $
 
 EAPI="2"
 
@@ -79,7 +79,16 @@ src_install() {
 }
 
 pkg_postinst() {
+	warn_license
+}
+pkg_preinst() {
+	warn_license
+}
+
+warn_license() {
 	ewarn "TrueCrypt has very restrictive license."
-	ewarn "Please read the ${LICENSE} license in ${PORTDIR}/licenses directory before using TrueCrypt."
-	ebeep 12
+	ewarn "Please read the ${LICENSE} license in ${PORTDIR}/licenses"
+	ewarn "directory before using TrueCrypt. Please be explicitly aware of"
+	ewarn "the limitations on redistribution of binaries or modified source."
+	ebeep 5
 }

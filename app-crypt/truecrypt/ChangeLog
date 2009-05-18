@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.44 2009/05/18 03:40:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.45 2009/05/18 04:39:01 robbat2 Exp $
+
+  18 May 2009; Robin H. Johnson <robbat2@gentoo.org> truecrypt-4.3a.ebuild,
+  truecrypt-6.2.ebuild:
+  Update all ebuilds to reflect our warnings about the license per the
+  trustees decision of 2009/May/17. Users further interested in the matter
+  should see Gentoo bug #241650.
 
   18 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   truecrypt-6.2.ebuild:
