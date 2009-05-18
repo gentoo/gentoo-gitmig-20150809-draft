@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/excalibur-logger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.5 2009/05/18 19:25:40 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.6 2009/05/18 19:39:30 betelgeuse Exp $
+
+*excalibur-logger-2.1-r2 (18 May 2009)
+
+  18 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +excalibur-logger-2.1-r2.ebuild:
+  Migrate to the jms virtual.
 
   18 May 2009; Petteri Räty <betelgeuse@gentoo.org>
   -excalibur-logger-2.1.ebuild:
