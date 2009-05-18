@@ -1,15 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.3 2009/05/18 19:59:00 ulm Exp $
-
-ESVN_REPO_URI="svn://anonsvn.gentoo.org/eselect/trunk"
-ESVN_BOOTSTRAP="autogen.bash"
-
-inherit subversion
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.1_rc1.ebuild,v 1.1 2009/05/18 19:59:00 ulm Exp $
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
-SRC_URI=""
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
