@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpeg3
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.70 2009/03/10 19:03:14 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.71 2009/05/18 05:55:02 aballier Exp $
+
+  18 May 2009; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  drop maintainership to video herd, i dont use it anymore and its low
+  maintainance anyway
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> libmpeg3-1.7.ebuild:
   Fix homepage, bug 257235
