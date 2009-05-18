@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/orca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.64 2009/05/02 12:42:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/ChangeLog,v 1.65 2009/05/18 21:34:23 eva Exp $
+
+*orca-2.26.2 (18 May 2009)
+
+  18 May 2009; Gilles Dartiguelongue <eva@gentoo.org> +orca-2.26.2.ebuild:
+  Bump to 2.26.2. Usual lot of fixes and translation updates.
 
 *orca-2.26.1 (02 May 2009)
 
