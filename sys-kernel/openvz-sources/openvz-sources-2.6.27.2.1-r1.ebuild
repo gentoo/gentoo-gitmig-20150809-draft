@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.2.1-r1.ebuild,v 1.1 2009/05/18 06:52:20 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.2.1-r1.ebuild,v 1.2 2009/05/18 15:17:19 mr_bones_ Exp $
 
 inherit versionator
 
@@ -44,4 +44,3 @@ UNIPATCH_LIST="${DISTDIR}/patch-${OVZ_KERNEL}-combined.gz"
 
 K_EXTRAEINFO="For more information about this kernel take a look at:
 http://wiki.openvz.org/Download/kernel/${CKV}/${CKV}-${OVZ_KERNEL}"
-
