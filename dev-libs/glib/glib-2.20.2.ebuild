@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.2.ebuild,v 1.1 2009/05/18 21:35:12 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.2.ebuild,v 1.2 2009/05/18 21:37:06 eva Exp $
 
 EAPI="2"
 
@@ -47,9 +47,6 @@ src_prepare() {
 
 	# Fix gmodule issues on fbsd; bug #184301
 	epatch "${FILESDIR}"/${PN}-2.12.12-fbsd.patch
-
-	# Fix GIO null unref, bug #260301
-	epatch "${FILESDIR}/${P}-gio-unref.patch"
 
 	[[ ${CHOST} == *-freebsd* ]] && elibtoolize
 }
