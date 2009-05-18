@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.9 2009/04/20 00:07:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-4.3a.ebuild,v 1.10 2009/05/18 02:30:33 arfrever Exp $
 
 #
 # NOTES:
@@ -20,9 +20,9 @@ SRC_URI="http://www.truecrypt.org/downloads/truecrypt-${PV}-source-code.tar.gz"
 
 LICENSE="truecrypt-collective-1.0"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="mirror fetch bindist"
+RESTRICT="bindist fetch mirror"
 
 RDEPEND="|| ( >=sys-fs/lvm2-2.02.45
 	sys-fs/device-mapper )"
@@ -59,7 +59,7 @@ src_compile() {
 }
 
 src_test() {
-	"${S}/Linux/Cli/truecrypt" --test
+	"${S}/Linux/Cli/truecrypt" --test || die "tests failed"
 }
 
 src_install() {
