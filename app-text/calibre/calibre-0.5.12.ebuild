@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.10.ebuild,v 1.1 2009/05/04 23:54:11 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.12.ebuild,v 1.1 2009/05/18 05:56:32 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -36,7 +36,8 @@ SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
 	>=sys-apps/help2man-1.36.4
-	>=dev-python/pyPdf-1.12"
+	>=dev-python/pyPdf-1.12
+	>=app-text/pdftk-1.12"
 
 RDEPEND="$SHARED_DEPEND
 	>=dev-python/reportlab-2.1
