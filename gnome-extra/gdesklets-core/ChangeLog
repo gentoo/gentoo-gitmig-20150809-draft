@@ -1,6 +1,20 @@
 # ChangeLog for gnome-extra/gdesklets-core
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.102 2009/04/20 19:41:55 nixphoeni Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.103 2009/05/18 21:57:15 nixphoeni Exp $
+
+*gdesklets-core-0.36.1-r1 (15 May 2009)
+
+  18 May 2009; Joe Sapp <nixphoeni@gentoo.org>
+  -files/gdesklets-core-0.35.3-alpha.patch,
+  -files/gdesklets-core-0.35.3-pyorbit_fix.patch,
+  -gdesklets-core-0.35.4.ebuild,
+  -files/gdesklets-core-0.35.4-POTFILES.in.patch,
+  -gdesklets-core-0.36-r1.ebuild,
+  +files/gdesklets-core-0.36-python-2.6-fix.patch,
+  +gdesklets-core-0.36.1-r1.ebuild, -files/gdesklets-displays.desktop:
+  Added patch for Python 2.6 (see bug #266151 or
+  https://bugs.launchpad.net/gdesklets/+bug/344079); removed old files and
+  ebuilds
 
   20 Apr 2009; Joe Sapp <nixphoeni@gentoo.org> gdesklets-core-0.35.4.ebuild,
   gdesklets-core-0.36-r1.ebuild, gdesklets-core-0.36.1.ebuild:
