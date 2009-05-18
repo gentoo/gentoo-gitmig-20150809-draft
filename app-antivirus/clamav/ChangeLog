@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.330 2009/05/18 15:18:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.331 2009/05/18 19:43:13 ranger Exp $
+
+  18 May 2009; Brent Baude <ranger@gentoo.org> clamav-0.95.1.ebuild:
+  Marking clamav-0.95.1 ppc64 and ppc for bug 265545
 
   18 May 2009; Christian Faulhammer <fauli@gentoo.org> clamav-0.95.1.ebuild:
   stable x86, security bug 265545
