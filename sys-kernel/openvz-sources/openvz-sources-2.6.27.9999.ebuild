@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.9999.ebuild,v 1.1 2009/03/17 08:36:57 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.9999.ebuild,v 1.2 2009/05/18 06:52:20 pva Exp $
 
 ETYPE="sources"
 
@@ -19,7 +19,7 @@ EGIT_BRANCH="master"
 inherit git
 
 HOMEPAGE="http://openvz.org/"
-DESCRIPTION="OpenVZ 2.6.27 git kernel sources"
+DESCRIPTION="Kernel sources with OpenVZ patchset"
 
 IUSE=""
 KEYWORDS=""
