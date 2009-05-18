@@ -1,6 +1,17 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.156 2009/05/17 08:58:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.157 2009/05/18 22:08:39 fuzzyray Exp $
+
+*gentoolkit-0.3.0_rc6 (18 May 2009)
+*gentoolkit-0.2.4.4 (18 May 2009)
+
+  18 May 2009; Paul Varner <fuzzyray@gentoo.org> +gentoolkit-0.2.4.4.ebuild,
+  +gentoolkit-0.3.0_rc6.ebuild:
+  gentoolkit-0.2.4.4 version bump. This version fixes bugs 170784, 182990,
+  218312, 256013, 266996, and 268513. Bug 268001 tracks changes to
+  gentoolkit-0.2.4.
+  gentoolkit-0.3.0_rc6 version bump. This version fixes bugs 170784, 182990,
+  218312, and 268895. Bug 237694 tracks changes to gentoolkit-0.3.0.
 
   17 May 2009; Alexis Ballier <aballier@gentoo.org>
   gentoolkit-0.3.0_rc5.ebuild:
