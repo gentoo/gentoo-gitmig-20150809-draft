@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.49 2009/02/24 17:41:32 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.50 2009/05/18 17:09:52 flameeyes Exp $
+
+*freebsd-sbin-7.1-r1 (18 May 2009)
+
+  18 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +freebsd-sbin-7.1-r1.ebuild, metadata.xml:
+  Use the current WITHOUT_ switches, update USE flags and use EAPI=2 to
+  depend on the proper features from the freebsd-lib package.
 
   24 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> files/devd.initd:
   Fix devd.initd

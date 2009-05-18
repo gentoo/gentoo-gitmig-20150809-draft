@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.70 2009/05/16 06:19:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.71 2009/05/18 17:09:03 flameeyes Exp $
+
+*freebsd-lib-7.1-r4 (18 May 2009)
+
+  18 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +freebsd-lib-7.1-r4.ebuild, metadata.xml:
+  Use the current WITHOUT_ switches, update USE flags and use EAPI=2 to
+  depend on the proper features from the freebsd-lib package.
 
   16 May 2009; Alexis Ballier <aballier@gentoo.org>
   freebsd-lib-7.1-r3.ebuild, +files/freebsd-lib-includes.patch:
