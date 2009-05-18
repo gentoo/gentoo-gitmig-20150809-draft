@@ -4,8 +4,6 @@
 <herd>sci</herd>
 <herd>ml</herd>
 <use>
-  <flag name='ide'>Build the Coq IDE, a clone of proof general using
-    <pkg>dev-ml/lablgtk</pkg></flag>
   <flag name='norealanalysis'>Do not build real analysis modules
     (faster compilation)</flag>
 </use>
