@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r3.ebuild,v 1.5 2009/05/17 17:32:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-1.0-r3.ebuild,v 1.6 2009/05/18 16:05:19 fauli Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ bash-completion-1.0.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND=""
