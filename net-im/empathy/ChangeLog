@@ -1,6 +1,12 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.38 2009/05/15 20:56:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.39 2009/05/18 20:08:09 eva Exp $
+
+*empathy-2.26.2 (18 May 2009)
+
+  18 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +empathy-2.26.2.ebuild:
+  Bump to 2.26.2. Bug fixes and translation updates.
 
   15 May 2009; Tobias Klausmann <klausman@gentoo.org> empathy-2.26.1.ebuild:
   Keyworded on alpha, bug #269314
