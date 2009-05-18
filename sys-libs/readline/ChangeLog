@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.128 2009/05/17 21:06:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.129 2009/05/18 11:48:26 flameeyes Exp $
+
+  18 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  readline-6.0_p3.ebuild:
+  Fix build on Gentoo/FreeBSD by removing references do objformat.
 
 *readline-6.0_p3 (17 May 2009)
 
