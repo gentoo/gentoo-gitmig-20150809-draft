@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.36 2009/05/18 12:52:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.37 2009/05/18 12:56:46 scarabeus Exp $
+
+  18 May 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.5.ebuild,
+  +files/strigi-0.6.5-gcc4.4-missing-headers.patch:
+  Apply gcc 4.4 fix. Per bug #270267.
 
   18 May 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.5.ebuild,
   +files/strigi-disable_java.patch:
