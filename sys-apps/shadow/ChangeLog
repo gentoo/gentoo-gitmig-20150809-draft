@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.225 2009/05/11 04:11:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.226 2009/05/18 04:35:59 vapier Exp $
+
+*shadow-4.1.4-r1 (18 May 2009)
+
+  18 May 2009; Mike Frysinger <vapier@gentoo.org> +shadow-4.1.4-r1.ebuild,
+  +files/shadow-4.1.4-login-non-pam-crash.patch:
+  Add fix from upstream for crash with non-pam/empty user #270213 by Ulrich
+  Müller.
 
 *shadow-4.1.4 (11 May 2009)
 

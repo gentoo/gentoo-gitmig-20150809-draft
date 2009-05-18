@@ -1,0 +1,20 @@
+http://bugs.gentoo.org/270213
+
+From 74c3b8df373aac8fc2a997c83f9d84790bf22a36 Mon Sep 17 00:00:00 2001
+From: nekral-guest <nekral-guest@5a98b0ae-9ef6-0310-add3-de5d479b70d7>
+Date: Sat, 16 May 2009 15:43:13 +0000
+Subject: [PATCH] 	* src/login.c: Fix failure of non PAM enabled versions when an
+ 	empty username is entered after a first prompt.
+
+diff --git a/src/login.c b/src/login.c
+index abf649e..44ef8f8 100644
+--- a/src/login.c
++++ b/src/login.c
+@@ -913,6 +913,7 @@ int main (int argc, char **argv)
+ 		 * anymore. */
+ 		if (NULL != pwd) {
+ 			pw_free (pwd);
++			pwd = NULL;
+ 		}
+ 		if (NULL != spwd) {
+ 			spw_free (spwd);
