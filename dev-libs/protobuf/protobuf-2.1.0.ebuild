@@ -1,14 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.1.0.ebuild,v 1.1 2009/05/18 19:01:49 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.1.0.ebuild,v 1.2 2009/05/18 19:28:15 nelchael Exp $
+
+EAPI="2"
+
+JAVA_PKG_IUSE="source"
 
 inherit eutils distutils python java-pkg-opt-2
 
-MY_P=${PN}-${PV//_/}
-
 DESCRIPTION="Google's Protocol Buffers -- an efficient method of encoding structured data"
 HOMEPAGE="http://code.google.com/p/protobuf/"
-SRC_URI="http://protobuf.googlecode.com/files/${MY_P}.tar.bz2"
+SRC_URI="http://protobuf.googlecode.com/files/${PF}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -19,16 +21,11 @@ DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
 	python? ( dev-python/setuptools )"
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )"
 
-S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/protobuf-2.0.3-decoder_test_64bit_fix.patch"
 }
 
 src_compile() {
-	econf || die
 	emake || die
 
 	if use python; then
@@ -38,10 +35,10 @@ src_compile() {
 	if use java; then
 		src/protoc --java_out=java/src/main/java --proto_path=src src/google/protobuf/descriptor.proto
 		mkdir java/build
-		cd java/src/main/java
+		pushd java/src/main/java
 		ejavac -d ../../../build $(find . -name '*.java') || die "java compilation failed"
-		cd ../../../..
-		jar cf ${PN}.jar -C java/build . || die "jar failed"
+		popd
+		jar cf "${PN}.jar" -C java/build . || die "jar failed"
 	fi
 }
 
@@ -65,6 +62,7 @@ src_install() {
 
 	if use java; then
 		java-pkg_dojar ${PN}.jar
+		use source && java-pkg_dosrc java/src/main/java/*
 	fi
 }
 
