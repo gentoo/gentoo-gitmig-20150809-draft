@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.1-r2.ebuild,v 1.1 2009/05/18 17:11:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.1-r2.ebuild,v 1.2 2009/05/18 17:46:39 flameeyes Exp $
 
 EAPI=2
 
@@ -105,9 +105,10 @@ src_install() {
 
 	# Most of these now come from openrc.
 	for util in nfs rpc.statd rpc.lockd; do
-		newinitd "${FILESDIR}/"${util}.initd ${util}
-		[[ -e "${FILESDIR}"/${util}.confd ]] && \
-			newconfd "${FILESDIR}"/${util}.confd ${util}
+		newinitd "${FILESDIR}/"${util}.initd ${util} || die
+		if [[ -e "${FILESDIR}"/${util}.confd ]]; then \
+			newconfd "${FILESDIR}"/${util}.confd ${util} || die
+		fi
 	done
 
 	for class in daily monthly weekly; do
@@ -121,24 +122,24 @@ EOS
 
 	# Install the pw.conf file to let pw use Gentoo's skel location
 	insinto /etc
-	doins "${FILESDIR}/pw.conf"
+	doins "${FILESDIR}/pw.conf" || die
 
 	cd "${WORKDIR}/etc"
-	doins amd.map apmd.conf syslog.conf newsyslog.conf
+	doins apmd.conf syslog.conf newsyslog.conf nscd.conf || die
 	use usb && doins usbd.conf
 
 	insinto /etc/ppp
-	doins ppp/ppp.conf
+	doins ppp/ppp.conf || die
 
 	if use isdn; then
 		insinto /etc/isdn
-		doins isdn/*
+		doins isdn/* || die
 		rm -f "${D}"/etc/isdn/Makefile
 	fi
 
 	if use bluetooth; then
 		insinto /etc/bluetooth
-		doins bluetooth/*
+		doins bluetooth/* || die
 		rm -f "${D}"/etc/bluetooth/Makefile
 	fi
 

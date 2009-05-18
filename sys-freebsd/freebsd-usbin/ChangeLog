@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-usbin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.54 2009/05/18 17:11:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/ChangeLog,v 1.55 2009/05/18 17:46:39 flameeyes Exp $
+
+  18 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  freebsd-usbin-7.1-r2.ebuild:
+  Make the installs more reliable (die on error) and install the nscd.conf
+  file.
 
 *freebsd-usbin-7.1-r2 (18 May 2009)
 
