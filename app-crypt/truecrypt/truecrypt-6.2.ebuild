@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.1 2009/05/18 02:30:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.2 2009/05/18 03:40:46 arfrever Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ RESTRICT="bindist fetch mirror"
 RDEPEND="sys-fs/fuse
 	x11-libs/wxGTK:2.8"
 DEPEND="${RDEPEND}
-	dev-libs/opensc"
+	|| ( dev-libs/pkcs11-helper dev-libs/opensc )"
 
 S="${WORKDIR}/${P}-source"
 
@@ -39,9 +39,17 @@ pkg_setup() {
 }
 
 src_compile() {
-	append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
-	local EXTRA
+	local EXTRA pkcs11_include_directory
+
 	use X || EXTRA+=" NOGUI=1"
+
+	if has_version dev-libs/pkcs11-helper; then
+		pkcs11_include_directory="/usr/include/pkcs11-helper-1.0"
+	else
+		pkcs11_include_directory="/usr/include/opensc"
+	fi
+	append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
+
 	emake \
 		${EXTRA} \
 		NOSTRIP=1 \
@@ -55,7 +63,7 @@ src_compile() {
 		TC_EXTRA_CXXFLAGS="${CXXFLAGS}" \
 		TC_EXTRA_LFLAGS="${LDFLAGS}" \
 		WX_CONFIG="${WX_CONFIG}" \
-		PKCS11_INC="/usr/include/opensc" \
+		PKCS11_INC="${pkcs11_include_directory}" \
 		|| die "emake failed"
 }
 
