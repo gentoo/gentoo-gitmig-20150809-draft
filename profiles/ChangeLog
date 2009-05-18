@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2668 2009/05/17 12:56:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2669 2009/05/18 06:32:04 robbat2 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 May 2009; Robin H. Johnson <robbat2@gentoo.org> package.mask:
+  OpenSSH HPN patch breakage has been resolved by upstream now.
 
   17 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask the upcoming automake 1.11 beta.
