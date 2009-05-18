@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2669 2009/05/18 06:32:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2670 2009/05/18 06:55:27 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 May 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Updated hardmask for openvz sources, e.g. unmasked 2.6.27 kernels.
 
   18 May 2009; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   OpenSSH HPN patch breakage has been resolved by upstream now.
