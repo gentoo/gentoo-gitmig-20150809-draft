@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.0.3.ebuild,v 1.1 2008/12/06 22:31:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.0.3.ebuild,v 1.2 2009/05/18 19:01:49 spock Exp $
 
 inherit eutils distutils python java-pkg-opt-2
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples java python vim-syntax"
 
-DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )"
+DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
+	python? ( dev-python/setuptools )"
 RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )"
 
 S="${WORKDIR}/${MY_P}"

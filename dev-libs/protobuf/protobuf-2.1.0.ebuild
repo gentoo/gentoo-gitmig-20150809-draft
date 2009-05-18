@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.0.1.ebuild,v 1.3 2009/05/18 19:01:49 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.1.0.ebuild,v 1.1 2009/05/18 19:01:49 spock Exp $
 
 inherit eutils distutils python java-pkg-opt-2
 
@@ -24,7 +24,7 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-python-unittest.patch
+	epatch "${FILESDIR}/protobuf-2.0.3-decoder_test_64bit_fix.patch"
 }
 
 src_compile() {
