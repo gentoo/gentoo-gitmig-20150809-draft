@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.12.1.ebuild,v 1.1 2009/03/11 07:20:56 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portato/portato-0.12.1.ebuild,v 1.2 2009/05/19 22:21:34 jokey Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ for X in $LANGS; do IUSE="${IUSE} linguas_${X}"; done
 
 RDEPEND="app-portage/portage-utils
 		x11-libs/vte[python]
-		dev-lang/python:2.5[sqlite?,threads]
+		>=dev-lang/python-2.5[sqlite?,threads]
 		dev-python/pygtksourceview:2
 		>=dev-python/pygtk-2.14.0
 		>=sys-apps/portage-2.1.6
