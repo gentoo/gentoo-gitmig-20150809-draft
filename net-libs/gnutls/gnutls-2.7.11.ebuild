@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.6.4.ebuild,v 1.6 2009/04/11 14:08:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.7.11.ebuild,v 1.1 2009/05/19 13:54:09 arfrever Exp $
 
 EAPI="2"
-inherit eutils libtool autotools
+
+inherit autotools libtool
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -21,7 +22,7 @@ unset MINOR_VERSION
 # GPL-3 for the gnutls-extras library and LGPL for the gnutls library.
 LICENSE="LGPL-2.1 GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="bindist +cxx doc guile lzo nls zlib"
 
 RDEPEND="dev-libs/libgpg-error
@@ -45,17 +46,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	local dir
 	for dir in m4 lib/m4 libextra/m4 ; do
-		rm -f ${dir}/lt* ${dir}/libtool.m4
+		rm -f "${dir}/lt"* "${dir}/libtool.m4"
 	done
 	find . -name ltmain.sh -exec rm {} \;
-
-	# the below patch is in 2.7.* as per
-	# https://savannah.gnu.org/support/?106542
-	epatch "${FILESDIR}"/gnutls-2.6.0-cxx-configure.in.patch
-	epatch "${FILESDIR}"/gnutls-2.6.0-openpgp-selftest.patch
-
-	eautoreconf
+	for dir in . lib libextra ; do
+		pushd "${dir}" > /dev/null
+		eautoreconf
+		popd > /dev/null
+	done
 
 	elibtoolize # for sane .so versioning on FreeBSD
 }
@@ -64,11 +64,11 @@ src_configure() {
 	local myconf
 	use bindist && myconf="--without-lzo" || myconf="$(use_with lzo)"
 	econf  \
-		$(use_with zlib) \
-		$(use_enable nls) \
-		$(use_enable guile) \
 		$(use_enable cxx) \
 		$(use_enable doc gtk-doc) \
+		$(use_enable guile) \
+		$(use_enable nls) \
+		$(use_with zlib) \
 		${myconf}
 }
 
