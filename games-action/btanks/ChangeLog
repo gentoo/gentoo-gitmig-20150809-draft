@@ -1,6 +1,10 @@
 # ChangeLog for games-action/btanks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.18 2009/04/14 09:42:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.19 2009/05/19 17:38:46 mr_bones_ Exp $
+
+  19 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  btanks-0.8.7686.ebuild:
+  add more use deps for libsdl (bug #270081)
 
   14 Apr 2009; Raúl Porcel <armin76@gentoo.org> btanks-0.8.7686.ebuild:
   x86 stable wrt #263975
