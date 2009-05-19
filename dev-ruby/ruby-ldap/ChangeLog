@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ldap
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.24 2008/10/06 10:07:39 flameeyes Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.25 2009/05/19 15:41:05 fmccor Exp $
+
+  19 May 2009; Ferris McCormick <fmccor@gentoo.org> ruby-ldap-0.9.7.ebuild:
+  Sparc stable, required for Bug #270432.
 
   06 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> ruby-ldap-0.9.7.ebuild:
   Use -j1 during install or install will fail.
