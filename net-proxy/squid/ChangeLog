@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.249 2009/05/14 19:06:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.250 2009/05/19 15:14:41 armin76 Exp $
+
+  19 May 2009; Raúl Porcel <armin76@gentoo.org> squid-3.0.14-r2.ebuild:
+  arm/ia64/sparc stable stable wrt #269096
 
   14 May 2009; Markus Meier <maekke@gentoo.org> squid-3.0.14-r2.ebuild:
   amd64/x86 stable, bug #269096
