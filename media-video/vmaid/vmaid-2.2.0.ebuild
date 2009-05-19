@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.1.7.ebuild,v 1.1 2008/02/24 16:07:47 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vmaid/vmaid-2.2.0.ebuild,v 1.1 2009/05/19 15:01:46 matsuu Exp $
 
 DESCRIPTION="Video maid is the AVI file editor"
 HOMEPAGE="http://vmaid.sourceforge.jp/"
-SRC_URI="mirror://sourceforge.jp/vmaid/28957/${P}.tar.gz"
+SRC_URI="mirror://sourceforge.jp/vmaid/33098/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa ao mime win32codecs"
