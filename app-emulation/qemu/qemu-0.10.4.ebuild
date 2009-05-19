@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.10.4.ebuild,v 1.2 2009/05/19 09:48:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.10.4.ebuild,v 1.3 2009/05/19 18:13:58 flameeyes Exp $
 
 EAPI="2"
 
@@ -133,9 +133,9 @@ src_install() {
 		"${FILESDIR}/qemu-ifdown" \
 		|| die "qemu interface scripts failed"
 
-	dodoc pc-bios/README
-	dodoc qemu-doc.html
-	dodoc qemu-tech.html
+	dodoc Changelog MAINTAINERS TODO pci-ids.txt || die
+	newdoc pc-bios/README README.pc-bios || die
+	dohtml qemu-doc.html qemu-tech.html || die
 }
 
 pkg_postinst() {

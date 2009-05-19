@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.66 2009/05/19 09:48:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.67 2009/05/19 18:13:58 flameeyes Exp $
+
+  19 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.4.ebuild:
+  Fix doc installation: install html in the html/ subdir, install more qemu
+  doc, rename the README file (it's not qemu's proper), die on error.
 
   19 May 2009; Luca Barbato <lu_zero@gentoo.org> qemu-0.10.4.ebuild:
   fix missing patch, thanks to Martin Jansa <Martin.Jansa@mk.cvut.cz> for
