@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/surf
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/surf/ChangeLog,v 1.8 2009/01/01 05:30:07 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/surf/ChangeLog,v 1.9 2009/05/19 13:59:25 matsuu Exp $
+
+  19 May 2009; MATSUU Takuto <matsuu@gentoo.org> -surf-1.0.5-r1.ebuild:
+  Removed old version.
 
 *surf-1.0.5-r2 (01 Jan 2009)
 
