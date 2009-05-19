@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.35 2009/05/17 14:01:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.36 2009/05/19 03:18:59 cardoe Exp $
+
+  19 May 2009; Doug Goldstein <cardoe@gentoo.org> buildbot-0.7.10_p1.ebuild:
+  amd64 stable. bug #270122
 
   17 May 2009; Tobias Klausmann <klausman@gentoo.org>
   buildbot-0.7.10_p1.ebuild:
