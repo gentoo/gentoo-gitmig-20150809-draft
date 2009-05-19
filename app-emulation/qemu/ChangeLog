@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.64 2009/05/17 21:20:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.65 2009/05/19 07:27:03 lu_zero Exp $
+
+*qemu-0.10.4 (19 May 2009)
+
+  19 May 2009; Luca Barbato <lu_zero@gentoo.org> +qemu-0.10.4.ebuild:
+  New version
 
   17 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> qemu-0.10.3.ebuild,
   +files/qemu-ifdown, +files/qemu-ifup:
