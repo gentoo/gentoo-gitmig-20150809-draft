@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.6 2009/05/19 14:31:48 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.7 2009/05/19 15:20:33 fmccor Exp $
+
+  19 May 2009; Ferris McCormick <fmccor@gentoo.org> augeas-0.5.0.ebuild:
+  Sparc stable, required for Bug #270432 (huge test suite runs successfully).
 
   19 May 2009; MATSUU Takuto <matsuu@gentoo.org> -augeas-0.4.0.ebuild,
   -augeas-0.4.1.ebuild:
