@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/notify-sharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.8 2009/05/19 02:37:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/notify-sharp/ChangeLog,v 1.9 2009/05/19 07:01:50 loki_val Exp $
+
+  19 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  notify-sharp-0.4.0_pre20080912-r1.ebuild:
+  Revert: >=libnotify-0.4 will trigger bug 254235
 
   19 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   notify-sharp-0.4.0_pre20080912-r1.ebuild:
