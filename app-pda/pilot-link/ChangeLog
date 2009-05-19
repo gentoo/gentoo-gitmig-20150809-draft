@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.49 2009/05/19 00:28:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.50 2009/05/19 00:43:47 robbat2 Exp $
+
+  19 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  pilot-link-0.12.3.ebuild, pilot-link-0.12.3-r1.ebuild,
+  pilot-link-0.12.3-r2.ebuild,
+  +files/pilot-link-0.12.3-libusb-compat-usb_open.patch:
+  Fix up pilot-link libusb usage for libusb-compat. Minor patch for usb_open
+  usage.
 
   19 May 2009; Robin H. Johnson <robbat2@gentoo.org>
   pilot-link-0.12.3.ebuild, pilot-link-0.12.3-r1.ebuild,
