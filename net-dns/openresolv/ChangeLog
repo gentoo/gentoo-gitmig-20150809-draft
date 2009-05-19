@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/openresolv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.39 2009/05/06 15:57:23 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/openresolv/ChangeLog,v 1.40 2009/05/19 20:12:22 ranger Exp $
+
+  19 May 2009; Brent Baude <ranger@gentoo.org> openresolv-3.1.1.ebuild:
+  stable ppc64, bug 268539
 
 *openresolv-2.0-r1 (06 May 2009)
 
