@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.40 2009/05/17 16:54:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.41 2009/05/19 20:34:43 ranger Exp $
+
+  19 May 2009; Brent Baude <ranger@gentoo.org> redland-1.0.8.ebuild:
+  stable ppc64, bug 269527
 
   17 May 2009; nixnut <nixnut@gentoo.org> redland-1.0.8.ebuild:
   back to ~ppc because of dep issues
