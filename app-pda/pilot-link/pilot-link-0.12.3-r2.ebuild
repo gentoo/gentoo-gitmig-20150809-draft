@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r2.ebuild,v 1.1 2009/04/26 18:32:54 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3-r2.ebuild,v 1.2 2009/05/19 00:28:24 robbat2 Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ BOTH_DEPEND="virtual/libiconv
 	png? ( >=media-libs/libpng-1.2.18-r1 )
 	readline? ( >=sys-libs/readline-5.2_p4 )
 	usb? ( >=dev-libs/libusb-0.1.12 )
-	bluetooth? ( >=net-wireless/bluez-libs-3.10 )"
+	bluetooth? ( || ( >=net-wireless/bluez-libs-3.10 net-wireless/bluez ) )"
 
 DEPEND="${BOTH_DEPEND}
 	java? ( >=virtual/jdk-1.4 )"

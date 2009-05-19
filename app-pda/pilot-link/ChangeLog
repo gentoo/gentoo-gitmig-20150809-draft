@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/pilot-link
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.48 2009/04/26 18:32:54 serkan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.49 2009/05/19 00:28:24 robbat2 Exp $
+
+  19 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  pilot-link-0.12.3.ebuild, pilot-link-0.12.3-r1.ebuild,
+  pilot-link-0.12.3-r2.ebuild:
+  Update bluez dependancies per bug #269440.
 
 *pilot-link-0.12.3-r2 (26 Apr 2009)
 
