@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.10.4.ebuild,v 1.1 2009/05/19 07:27:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.10.4.ebuild,v 1.2 2009/05/19 09:48:53 lu_zero Exp $
 
 EAPI="2"
 
@@ -61,7 +61,7 @@ src_prepare() {
 	# avoid strip
 	sed -i 's/$(INSTALL) -m 755 -s/$(INSTALL) -m 755/' \
 		Makefile Makefile.target */Makefile
-	epatch "${FILESDIR}/${P}-nopl-fix.patch"
+	epatch "${FILESDIR}/qemu-0.10.3-nopl-fix.patch"
 }
 
 src_configure() {
