@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibacl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.14 2008/09/06 05:00:18 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.15 2009/05/19 20:30:09 ranger Exp $
+
+  19 May 2009; Brent Baude <ranger@gentoo.org> pylibacl-0.4.0.ebuild:
+  stable ppc64, bug 267214
 
   06 Sep 2008; Jesus Rivero <neurogeek@gentoo.org> pylibacl-0.4.0.ebuild:
   Added dev-python/setuptools as a dep. Bug #236447
