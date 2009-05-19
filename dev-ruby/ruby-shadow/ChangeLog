@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-shadow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.3 2009/04/12 12:45:20 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-shadow/ChangeLog,v 1.4 2009/05/19 15:28:23 fmccor Exp $
+
+  19 May 2009; Ferris McCormick <fmccor@gentoo.org>
+  ruby-shadow-1.4.1.ebuild:
+  Sparc stable, required for Bug #270432.
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   ruby-shadow-1.4.1.ebuild:
