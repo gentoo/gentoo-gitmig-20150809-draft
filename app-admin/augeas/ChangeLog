@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.5 2009/04/12 12:50:24 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.6 2009/05/19 14:31:48 matsuu Exp $
+
+  19 May 2009; MATSUU Takuto <matsuu@gentoo.org> -augeas-0.4.0.ebuild,
+  -augeas-0.4.1.ebuild:
+  Removed old versions.
 
   12 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> augeas-0.5.0.ebuild:
   Add ~sparc keyword, bug #263622
