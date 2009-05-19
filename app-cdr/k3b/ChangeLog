@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.216 2009/03/10 20:02:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.217 2009/05/19 17:41:47 scarabeus Exp $
+
+*k3b-1.0.5-r4 (19 May 2009)
+
+  19 May 2009; Tomas Chvatal <scarabeus@gentoo.org> +k3b-1.0.5-r4.ebuild,
+  +files/k3b-1.0.5-transcode-1.1.patch:
+  Apply all various updates from kde-crazy and from lxnay. This closes bug
+  #231338.
 
   10 Mar 2009; Steve Dibb <beandog@gentoo.org> k3b-1.0.5-r3.ebuild:
   Update transcode use flag check, move dvdread use flag to dvd use flag
