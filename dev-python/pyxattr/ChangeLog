@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.16 2008/09/06 04:43:28 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.17 2009/05/19 20:22:36 ranger Exp $
+
+  19 May 2009; Brent Baude <ranger@gentoo.org> pyxattr-0.4.0.ebuild:
+  stable ppc64, bug 267212
 
   06 Sep 2008; Jesus Rivero <neurogeek@gentoo.org> pyxattr-0.4.0.ebuild:
   Added dev-python/setuptools as a dep. Bug #236447
