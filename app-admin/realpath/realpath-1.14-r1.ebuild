@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.14.ebuild,v 1.2 2009/05/11 20:29:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/realpath-1.14-r1.ebuild,v 1.1 2009/05/19 22:11:35 ulm Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -11,15 +11,14 @@ SRC_URI="mirror://debian/pool/main/r/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 RDEPEND="!sys-freebsd/freebsd-bin"
-DEPEND="${RDEPEND}
-	app-text/po4a"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-no-po4a.patch
 }
 
 src_compile() {
