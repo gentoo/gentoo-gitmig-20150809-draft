@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.3.ebuild,v 1.1 2009/05/19 12:03:35 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/optipng/optipng-0.6.3.ebuild,v 1.2 2009/05/19 12:06:24 nyhm Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -13,6 +13,8 @@ LICENSE="ZLIB"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE=""
+
+DEPEND="media-libs/libpng"
 
 src_prepare() {
 	sed -i \
