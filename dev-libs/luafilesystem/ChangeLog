@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/luafilesystem
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/ChangeLog,v 1.8 2008/12/20 15:56:36 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/luafilesystem/ChangeLog,v 1.9 2009/05/19 15:14:39 matsuu Exp $
+
+*luafilesystem-1.4.2 (19 May 2009)
+
+  19 May 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +luafilesystem-1.4.2.ebuild:
+  Version bumped.
 
   20 Dec 2008; nixnut <nixnut@gentoo.org> luafilesystem-1.4.1.ebuild:
   Stable on ppc wrt bug 250795
