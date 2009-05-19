@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyserial
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.33 2009/05/18 19:19:34 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyserial/ChangeLog,v 1.34 2009/05/19 20:19:13 ranger Exp $
+
+  19 May 2009; Brent Baude <ranger@gentoo.org> pyserial-2.4.ebuild:
+  stable ppc64, bug 270102
 
   18 May 2009; Thomas Anderson <gentoofan23@gentoo.org> pyserial-2.4.ebuild:
   stable amd64, bug 270102
