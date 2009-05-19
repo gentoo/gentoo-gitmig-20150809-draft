@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/kelbt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kelbt/ChangeLog,v 1.1 2009/05/19 19:45:20 flameeyes Exp $
+
+*kelbt-0.13 (19 May 2009)
+
+  19 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> +kelbt-0.13.ebuild,
+  +metadata.xml:
+  Initial import of the kelbt bracktracking parser. This is needed to build
+  Ragel from SVN.
+
