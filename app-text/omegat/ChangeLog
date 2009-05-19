@@ -1,6 +1,11 @@
 # ChangeLog for app-text/omegat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.10 2009/02/05 16:53:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/omegat/ChangeLog,v 1.11 2009/05/19 14:26:45 matsuu Exp $
+
+*omegat-1.8.1_p04 (19 May 2009)
+
+  19 May 2009; MATSUU Takuto <matsuu@gentoo.org> +omegat-1.8.1_p04.ebuild:
+  Version bumped. Removed libhunspell, bug #258358.
 
 *omegat-1.8.1_p02 (05 Feb 2009)
 
