@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.15.4.ebuild,v 1.6 2009/05/16 16:44:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.15.4.ebuild,v 1.7 2009/05/19 20:08:23 ranger Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ~ia64 ~ppc ppc64 sparc x86"
 IUSE="fam nls"
 
 RDEPEND=">=x11-libs/gtk+-2.2:2
