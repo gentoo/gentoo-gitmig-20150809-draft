@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.0-r2.ebuild,v 1.1 2009/05/18 18:18:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.0-r3.ebuild,v 1.1 2009/05/19 21:22:24 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="debug dbus"
 
-DEPEND="x11-libs/qt-gui:4[dbus=]"
+DEPEND="x11-libs/qt-gui:4[dbus?]"
 RDEPEND="${DEPEND}"
 
 LANGS="de_DE fr_FR it_IT nl_NL nn_NO no_NO ru_RU sv_SE tr_TR uk_UA"
@@ -49,6 +49,14 @@ src_prepare() {
 	# fix installation folder name
 	sed -i "s/share\/QMPDClient/share\/qmpdclient/" src/config.cpp \
 		|| die "failed to fix installation directory"
+
+	# check dbus
+	if ! use dbus; then
+		sed -i -e "s/message(DBus notifier:\ enabled)/message(DBus notifier:\ disabled)/" \
+			-e "s/CONFIG\ +=\ nostrip\ qdbus//" \
+			-e "s/SOURCES\ +=\ src\/notifications_dbus.cpp/SOURCES\ +=\ src\/notifications_nodbus.cpp/" \
+			${PN}.pro || die "disabling dbus failed"
+	fi
 }
 
 src_configure() {
