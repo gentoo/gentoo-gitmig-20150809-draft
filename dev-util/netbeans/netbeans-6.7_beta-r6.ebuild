@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r6.ebuild,v 1.1 2009/05/16 11:20:41 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r6.ebuild,v 1.2 2009/05/19 12:26:49 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -602,8 +602,14 @@ src_compile() {
 	else
 		heap="-Xmx1g"
 	fi
-	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="${heap} -Djava.awt.headless=true" \
-		eant ${antflags} ${clusters} -f nbbuild/build.xml ${build_target} $(use_doc build-javadoc)
+
+	ANT_TASKS="ant-nodeps ant-trax"
+	if use netbeans_modules_php ; then
+		ANT_TASKS="${ANT_TASKS} javacup"
+	fi
+
+	ANT_OPTS="${heap} -Djava.awt.headless=true" eant ${antflags} ${clusters} \
+		-f nbbuild/build.xml ${build_target} $(use_doc build-javadoc)
 
 	local locales=""
 	for lang in ${IUSE_LINGUAS} ; do

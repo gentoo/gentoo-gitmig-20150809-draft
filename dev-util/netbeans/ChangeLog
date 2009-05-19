@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.113 2009/05/16 11:20:41 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.114 2009/05/19 12:26:49 fordfrog Exp $
+
+  19 May 2009; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-6.7_beta-r6.ebuild:
+  Added javacup to ANT_TASKS when building php module
 
 *netbeans-6.7_beta-r6 (16 May 2009)
 
