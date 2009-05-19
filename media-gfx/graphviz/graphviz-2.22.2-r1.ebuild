@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.22.2-r1.ebuild,v 1.5 2009/05/12 15:48:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-2.22.2-r1.ebuild,v 1.6 2009/05/19 12:07:44 pva Exp $
 
 EAPI="2"
 
@@ -108,6 +108,9 @@ src_prepare() {
 	# This is an old version of libtool
 	rm -rf libltdl
 	sed -i -e '/libltdl/d' configure.ac || die
+	sed -i -e 's/AC_LIBLTDL_CONVENIENCE/AC_LIBLTDL_INSTALLABLE/' configure.ac || die
+	# This was reported upstream, so don't forget to check next release.
+	sed -i -e 's:$(top_builddir)/libltdl/libltdlc.la:$(LIBLTDL):' lib/gvc/Makefile.am || die
 
 	# Update this file from our local libtool which is much newer than the
 	# bundled one. This allows MAKEOPTS=-j2 to work on FreeBSD.
