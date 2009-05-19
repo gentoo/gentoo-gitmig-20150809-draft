@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.181 2009/05/15 17:16:38 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.182 2009/05/19 18:31:07 dertobi123 Exp $
+
+*postfix-2.6.0 (19 May 2009)
+
+  19 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +postfix-2.6.0.ebuild:
+  Version bump (#269679), removed mailwrapper funtionality thus fixes #266979
+  and #219455 as well.
 
 *postfix-2.5.7 (15 May 2009)
 *postfix-2.4.11 (15 May 2009)
