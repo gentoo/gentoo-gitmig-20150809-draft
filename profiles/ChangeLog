@@ -1,13 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2673 2009/05/19 11:18:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2674 2009/05/19 17:06:45 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   19 May 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
-  Mask eselect-1.1_rc1.
+  Mask eselect-1.1_rc1. Remove mask again, since the bad version was removed
+  from the tree.
 
   19 May 2009; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Remove entry about rednotebook
