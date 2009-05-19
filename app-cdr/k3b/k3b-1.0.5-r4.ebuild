@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r4.ebuild,v 1.1 2009/05/19 17:41:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r4.ebuild,v 1.2 2009/05/19 21:22:17 scarabeus Exp $
 
 EAPI="2"
 inherit kde eutils multilib
@@ -121,7 +121,18 @@ src_configure() {
 	fi
 }
 
+src_compile() {
+	KDE_S="${S}"
+	kde_src_compile
+
+	if [[ -d "${WORKDIR}/${I18N}" ]]; then
+		KDE_S="${WORKDIR}/${I18N}"
+		kde_src_compile
+	fi
+}
+
 src_install() {
+	KDE_S="${S}"
 	kde_src_install
 	dodoc FAQ KNOWNBUGS PERMISSIONS || die "dodoc failed"
 
