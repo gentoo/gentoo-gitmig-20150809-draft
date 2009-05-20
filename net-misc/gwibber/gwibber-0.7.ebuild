@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-0.7.ebuild,v 1.1 2009/03/14 22:03:54 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-0.7.ebuild,v 1.2 2009/05/20 15:19:08 arfrever Exp $
+
+NEED_PYTHON="2.5"
 
 inherit distutils
 
@@ -19,9 +21,10 @@ RDEPEND=">=dev-python/dbus-python-0.82.4
 	>=dev-python/simplejson-2.0.4
 	>=dev-python/egenix-mx-base-2.0.5
 	>=dev-python/feedparser-4.1
-	>=dev-python/gnome-python-2.2.23
+	>=dev-python/pygtk-2.10.4
+	>=dev-python/gconf-python-2.18.0
 	>=dev-python/pyxdg-0.15
 	>=gnome-base/librsvg-2.22.2"
-DEPEND="virtual/python"
+DEPEND=""
 
 S=${WORKDIR}/${PN}
