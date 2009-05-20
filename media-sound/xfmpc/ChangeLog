@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xfmpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.8 2009/03/28 16:29:09 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/ChangeLog,v 1.9 2009/05/20 18:02:00 ssuominen Exp $
+
+  20 May 2009; Samuli Suominen <ssuominen@gentoo.org> xfmpc-0.1.0.ebuild:
+  amd64/x86 stable, latest version is more likely to work with new libmpd
 
 *xfmpc-0.1.0 (28 Mar 2009)
 
