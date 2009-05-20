@@ -151,7 +151,7 @@ x86		hardened/x86					stable
 amd64		selinux/2007.0/amd64				dev
 amd64		selinux/2007.0/amd64/hardened			dev
 #mips		selinux/2007.0/mips				dev
-ppc		selinux/2007.0/ppc				dev
+#ppc		selinux/2007.0/ppc				dev
 #sparc		selinux/2007.0/sparc64				dev
 x86		selinux/2007.0/x86				dev
 x86		selinux/2007.0/x86/hardened			dev
