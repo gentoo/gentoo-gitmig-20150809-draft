@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/xfmpc-0.1.0.ebuild,v 1.2 2009/05/20 18:02:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xfmpc/xfmpc-0.1.0.ebuild,v 1.3 2009/05/20 18:05:36 armin76 Exp $
 
 EAPI=2
 inherit fdo-mime
@@ -11,7 +11,7 @@ SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~sparc x86"
+KEYWORDS="amd64 sparc x86"
 IUSE="debug"
 
 RDEPEND=">=media-libs/libmpd-0.15
