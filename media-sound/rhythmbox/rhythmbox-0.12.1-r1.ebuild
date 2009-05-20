@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.1-r1.ebuild,v 1.1 2009/05/07 23:20:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.1-r1.ebuild,v 1.2 2009/05/20 16:47:19 armin76 Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils gnome2 python multilib virtualx
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="+brasero cdr daap doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp nsplugin python test"
 
 # FIXME: double check what to do with fm-radio plugin
