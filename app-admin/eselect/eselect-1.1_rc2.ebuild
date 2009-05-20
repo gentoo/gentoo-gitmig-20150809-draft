@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.1_rc2.ebuild,v 1.2 2009/05/20 05:43:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.1_rc2.ebuild,v 1.3 2009/05/20 12:35:38 ulm Exp $
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -55,6 +55,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	# fowners in src_install doesn't work for the portage group:
+	# merging changes the group back to root
+	chgrp portage "${ROOT}/var/lib/gentoo/news" \
+		&& chmod g+w "${ROOT}/var/lib/gentoo/news"
+
 	if use bash-completion ; then
 		elog "In case you have not yet enabled command-line completion"
 		elog "for eselect, you can run:"
