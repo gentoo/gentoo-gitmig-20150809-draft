@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.5 2009/05/05 11:39:33 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.6 2009/05/20 19:52:29 ranger Exp $
+
+  20 May 2009; Brent Baude <ranger@gentoo.org> gluezilla-2.4.ebuild:
+  Marking gluezilla-2.4 ~ppc for bug 268517
 
 *gluezilla-9999 (05 May 2009)
 *gluezilla-2.4.9999 (05 May 2009)
