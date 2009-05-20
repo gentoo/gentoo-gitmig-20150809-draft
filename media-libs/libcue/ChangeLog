@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcue
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.4 2009/05/20 15:57:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.5 2009/05/20 17:26:45 armin76 Exp $
+
+  20 May 2009; Raúl Porcel <armin76@gentoo.org> libcue-1.3.0.ebuild:
+  Add ~arm/~sh/~sparc wrt #269531
 
   20 May 2009; Brent Baude <ranger@gentoo.org> libcue-1.3.0.ebuild:
   marking libcue-1.3.0 ~ppc and ~ppc64 for bug 269531
