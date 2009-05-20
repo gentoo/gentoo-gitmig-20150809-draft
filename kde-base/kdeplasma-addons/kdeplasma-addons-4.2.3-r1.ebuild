@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.2.3.ebuild,v 1.1 2009/05/06 23:16:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.2.3-r1.ebuild,v 1.1 2009/05/20 14:58:23 tampakrap Exp $
 
 EAPI="2"
 
@@ -14,18 +14,16 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2 LGPL-2"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="debug xinerama"
+IUSE="debug exif"
 
 DEPEND="
+	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,opengl?]
 	>=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=]
-	>=kde-base/krunner-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
-	opengl? ( >=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,opengl] )
-	xinerama? ( x11-proto/xineramaproto )
+	exif? ( >=kde-base/libkexiv2-${PV}:${SLOT}[kdeprefix=] )
 "
 RDEPEND="${DEPEND}
 	!kdeprefix? ( !kde-misc/lancelot-menu )
-	xinerama? ( x11-libs/libXinerama )
 "
 
 PATCHES=( "${FILESDIR}/lancelot-qt45.patch" )
@@ -47,8 +45,8 @@ src_prepare() {
 src_configure() {
 	mycmakeargs="${mycmakeargs}
 		-DDBUS_INTERFACES_INSTALL_DIR=${KDEDIR}/share/dbus-1/interfaces/
-		$(cmake-utils_use_with opengl OpenGL)
-		$(cmake-utils_use_with xinerama X11_Xinerama)"
+		$(cmake-utils_use_with exif Kexiv2)
+		$(cmake-utils_use_with opengl OpenGL)"
 
 	kde4-base_src_configure
 }
