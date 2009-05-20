@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_beta2.ebuild,v 1.2 2009/05/17 07:37:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_beta2.ebuild,v 1.3 2009/05/20 15:15:14 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -12,16 +12,16 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="aac +alsa ao audiofile bzip2 cdio cue +curl debug doc +fifo +ffmpeg flac
-fluidsynth profile icecast +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
-mikmod modplug musepack network ogg oss pipe pulseaudio sid sqlite unicode
-vorbis wavpack zeroconf zip"
+IUSE="aac +alsa ao audiofile avahi bzip2 cdio cue +curl debug doc +fifo +ffmpeg flac
+fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
+mikmod modplug musepack +network ogg oss pipe pulseaudio sid sqlite unicode
+vorbis wavpack zip"
 
 RDEPEND="!sys-cluster/mpich2
 	>=dev-libs/glib-2.4:2
 	aac? ( >=media-libs/faad2-2 )
 	alsa? ( media-sound/alsa-utils )
-	ao? ( >=media-libs/libao-0.8.4 )
+	ao? ( >=media-libs/libao-0.8.4[alsa?,pulseaudio?] )
 	audiofile? ( media-libs/audiofile )
 	bzip2? ( app-arch/bzip2 )
 	cdio? ( dev-libs/libcdio )
@@ -33,7 +33,7 @@ RDEPEND="!sys-cluster/mpich2
 	network? ( >=media-libs/libshout-2 )
 	id3? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
-	lame? ( icecast? ( media-sound/lame ) )
+	lame? ( network? ( media-sound/lame ) )
 	libmms? ( >=media-libs/libmms-0.4 )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
@@ -46,7 +46,7 @@ RDEPEND="!sys-cluster/mpich2
 	sqlite? ( dev-db/sqlite:3 )
 	vorbis? ( media-libs/libvorbis )
 	wavpack? ( media-sound/wavpack )
-	zeroconf? ( net-dns/avahi )
+	avahi? ( net-dns/avahi )
 	zip? ( dev-libs/zziplib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -56,14 +56,9 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_/\~}
 
 pkg_setup() {
-	if ! use network; then
-		ewarn "Icecast and Shoutcast HTTP streaming needs network."
-	fi
-
-	if use lastfmradio && ! use curl; then
-		eerror "Cannot enable lastfmradio without curl."
-	fi
-
+	use profile && ewarn "Profiling is only for developers, please don't
+	enable at random. Performance is poor with it."
+	use network || ewarn "Icecast and Shoutcast streaming needs networking."
 	use fluidsynth && ewarn "Using fluidsynth is discouraged by upstream."
 
 	enewuser mpd "" "" "/var/lib/mpd" audio
@@ -93,12 +88,13 @@ src_configure() {
 	fi
 
 	append-lfs-flags
+	append-ldflags "-L/usr/$(get_libdir)/sidplay/builders"
 
 	cd "${S}"
 
 	econf \
 		$(use_enable ipv6) $(use_enable cue) \
-		$(use_enable sqlite sqlite) $(use_enable curl) \
+		$(use_enable sqlite) $(use_enable curl) \
 		$(use_enable lastfmradio lastfm) $(use_enable libmms mms) \
 		$(use_enable bzip2) $(use_enable zip) \
 		$(use_enable cdio iso9660) $(use_enable id3) \
@@ -113,7 +109,7 @@ src_configure() {
 		$(use_enable jack) $(use_enable oss) \
 		$(use_enable pulseaudio pulse) $(use_enable aac) \
 		$(use_enable doc documentation) $(use_enable debug) \
-		$(use_enable profile gprof) $(use_with zeroconf zeroconf avahi) \
+		$(use_enable profile gprof) $(use_with avahi zeroconf avahi) \
 		${mpdconf}
 }
 
