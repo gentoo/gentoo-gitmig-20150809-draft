@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.7.9.ebuild,v 1.1 2009/05/16 00:45:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.7.9.ebuild,v 1.2 2009/05/20 13:10:12 flameeyes Exp $
 
 DESCRIPTION="Provides Remote-Console and System Management Software as per IPMI v1.5/2.0"
 HOMEPAGE="http://www.gnu.org/software/freeipmi/"
@@ -31,7 +31,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog* DISCLAIMER* NEWS README* TODO
 	dodoc doc/*.txt
 
-	rm /usr/share/doc/${PF}/COPYING* /usr/share/doc/${PF}/INSTALL
+	rm "${D}"/usr/share/doc/${PF}/{COPYING*,INSTALL}
 
 	keepdir \
 		/var/cache/ipmimonitoringsdrcache \
