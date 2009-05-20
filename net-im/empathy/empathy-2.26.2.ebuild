@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.26.2.ebuild,v 1.1 2009/05/18 20:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.26.2.ebuild,v 1.2 2009/05/20 18:10:08 tester Exp $
 
 EAPI="2"
 
@@ -65,9 +65,6 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
-
-	# Doc is broken
-	epatch "${FILESDIR}/${PN}-2.26.1-fix-doc.patch"
 
 	# Remove hard enabled -Werror (see AM_MAINTAINER_MODE), bug 218687
 	sed -i "s:-Werror::g" configure || die "sed 1 failed"
