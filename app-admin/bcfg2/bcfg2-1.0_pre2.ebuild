@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-0.9.6_pre2.ebuild,v 1.1 2008/09/08 18:33:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/bcfg2-1.0_pre2.ebuild,v 1.1 2009/05/20 02:42:34 darkside Exp $
 
 inherit distutils
 
@@ -17,26 +17,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="server"
 
-DEPEND="|| ( >=dev-lang/python-2.5
-		(
-		>=dev-lang/python-2.4
-			|| ( app-admin/gamin app-admin/fam )
-		)
-	)"
+DEPEND=">=dev-lang/python-2.5
+	dev-python/m2crypto"
 
 RDEPEND="app-portage/gentoolkit
 	dev-python/lxml
 	server? (
+		dev-python/lxml
 		dev-python/pyopenssl
-		|| ( app-admin/gamin app-admin/fam ) )"
-
-src_compile() {
-	distutils_src_compile
-}
+		app-admin/gam-server )"
 
 src_install() {
-	python setup.py install --root="${D}" --record=PY_SERVER_LIBS \
-	   --install-scripts /usr/sbin
+	distutils_src_install --record=PY_SERVER_LIBS --install-scripts /usr/sbin
 
 	# Remove files only necessary for a server installation
 	if ! use server; then
