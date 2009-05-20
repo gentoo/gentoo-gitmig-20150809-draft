@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.ebuild,v 1.1 2009/05/20 08:16:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.ebuild,v 1.2 2009/05/20 09:00:16 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Super-useful stream editor"
 HOMEPAGE="http://sed.sourceforge.net/"
-SRC_URI="mirror://gnu/sed/${P}.tar.gz"
+SRC_URI="mirror://gnu/sed/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
