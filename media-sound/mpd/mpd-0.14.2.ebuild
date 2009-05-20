@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.2.ebuild,v 1.11 2009/05/17 14:40:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.14.2.ebuild,v 1.12 2009/05/20 16:23:45 ssuominen Exp $
 
 EAPI=2
 
@@ -156,6 +156,21 @@ src_install() {
 pkg_postinst() {
 	elog "If you will be starting mpd via /etc/init.d/mpd, please make"
 	elog "sure that MPD's pid_file is set to /var/run/mpd/mpd.pid."
+	elog
+	elog "MPD now uses a new format for its internal database."
+	elog "To make use of this new database, stop mpd:"
+	elog "# /etc/init.d/mpd stop"
+	elog "Delete the old database, as specified in your /etc/mpd.conf's db_file
+variable"
+	elog "# rm -i /var/lib/mpd/database"
+	elog "optinally also delete the state file in the same directory"
+	elog "# rm -i /var/lib/mpd/state"
+	elog "and force mpd to re-create a new database. Using 'update' from within"
+	elog "a client is not enough, as it doesn't update the database format."
+	elog "# mpd --create-db"
+	elog "Remember to re-create a playlist and your config options, such as"
+	elog "crossfade, repeat, random etc if you deleted the state file."
+	elog "# /etc/init.d/mpd start"
 
 	# also change the homedir if the user has existed before
 	usermod -d "/var/lib/mpd" mpd
