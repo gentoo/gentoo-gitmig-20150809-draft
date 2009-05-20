@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.98 2009/05/15 17:32:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.99 2009/05/20 15:34:08 ranger Exp $
+
+  20 May 2009; Brent Baude <ranger@gentoo.org> cdparanoia-3.10.2-r3.ebuild:
+  Marking cdparanoia-3.10.2-r3 ppc for bug 267726
 
   15 May 2009; Raúl Porcel <armin76@gentoo.org>
   cdparanoia-3.10.2-r3.ebuild:
