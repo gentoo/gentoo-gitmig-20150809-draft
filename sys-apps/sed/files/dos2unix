@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-exec /usr/bin/sed -e 's/\x0D$//' ${*}
-
+#!/bin/sh
+exec sed -e 's/\x0D$//' "$@"

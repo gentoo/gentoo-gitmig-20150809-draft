@@ -1,3 +1,2 @@
-#!/usr/bin/env bash
-exec /usr/bin/sed -e 's/$//' ${*}
-
+#!/bin/sh
+exec sed -e 's/$//' "$@"
