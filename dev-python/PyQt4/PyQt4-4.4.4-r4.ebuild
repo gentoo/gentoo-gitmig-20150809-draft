@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r4.ebuild,v 1.2 2009/05/15 08:45:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r4.ebuild,v 1.3 2009/05/20 23:01:26 yngwin Exp $
 
 EAPI="2"
-
 inherit distutils qt4
 
 MY_P=PyQt-x11-gpl-${PV}
@@ -14,7 +13,7 @@ SRC_URI="http://www.riverbankcomputing.com/static/Downloads/PyQt4/${MY_P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="dbus debug doc examples opengl qt3support svg webkit X"
+IUSE="+dbus debug doc examples +opengl +qt3support +svg +webkit +X"
 
 RDEPEND=">=dev-python/sip-4.7.8
 	>=x11-libs/qt-core-4.4.2:4
@@ -36,12 +35,12 @@ PATCHES=(
 	"${FILESDIR}/PyQt4-4.4.4-qgraphicsproxywidget-avoid-event-callback-loop.patch"
 )
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i -e "s:^[ \t]*check_license():# check_license():" "${S}"/configure.py
 	sed -i -e "s:join(qt_dir, \"mkspecs\":join(\"/usr/share/qt4\",	\"mkspecs\":g" "${S}"/configure.py
 	sed -i -e "s:\"QT_INSTALL_HEADERS\"\:   os.path.join(qt_dir, \"include\":\"QT_INSTALL_HEADERS\"\:   os.path.join(qt_dir, \"include/qt4\":g" "${S}"/configure.py
 	sed -i -e "s:\"QT_INSTALL_LIBS\"\:      os.path.join(qt_dir, \"lib\":\"QT_INSTALL_LIBS\"\:      os.path.join(qt_dir, \"lib/qt4\":g" "${S}"/configure.py
+	qt4_src_prepare
 }
 
 src_configure() {

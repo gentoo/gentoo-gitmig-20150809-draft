@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.55 2009/05/15 08:45:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.56 2009/05/20 23:01:26 yngwin Exp $
+
+  20 May 2009; Ben de Groot <yngwin@gentoo.org> -PyQt4-4.4-r1.ebuild,
+  -PyQt4-4.4.4-r1.ebuild, -PyQt4-4.4.4-r3.ebuild, PyQt4-4.4.4-r4.ebuild:
+  Turn on default useflags for all Qt modules. Remove old. Move src_unpack
+  content to src_prepare, where it belongs.
 
   15 May 2009; Alexis Ballier <aballier@gentoo.org> PyQt4-4.4.4-r4.ebuild:
   keyword ~x86-fbsd, bug #269880
