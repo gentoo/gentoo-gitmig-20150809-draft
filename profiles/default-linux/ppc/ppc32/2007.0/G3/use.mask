@@ -1,2 +1,0 @@
-# Mask altivec on G3
-altivec
