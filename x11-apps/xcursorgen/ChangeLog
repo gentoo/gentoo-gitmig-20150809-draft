@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xcursorgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.36 2009/05/05 07:47:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/ChangeLog,v 1.37 2009/05/20 13:33:52 ranger Exp $
+
+  20 May 2009; Brent Baude <ranger@gentoo.org> xcursorgen-1.0.2.ebuild:
+  Marking xcursorgen-1.0.2 ppc stable for bug 268581
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   xcursorgen-1.0.1.ebuild, xcursorgen-1.0.2.ebuild:
