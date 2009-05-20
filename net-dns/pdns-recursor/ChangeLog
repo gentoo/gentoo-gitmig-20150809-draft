@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/pdns-recursor
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.25 2008/10/06 08:24:14 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/ChangeLog,v 1.26 2009/05/20 20:06:46 swegener Exp $
+
+  20 May 2009; Sven Wegener <swegener@gentoo.org>
+  pdns-recursor-3.1.7.ebuild, +files/pdns-recursor-3.1.7-boost-1.37.0.patch:
+  Add compability patch for boost-1.37.0, bug #270623.
 
   06 Oct 2008; Sven Wegener <swegener@gentoo.org>
   +files/pdns-recursor-3.1.7-error-message.patch,

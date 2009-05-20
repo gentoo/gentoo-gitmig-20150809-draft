@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.7.ebuild,v 1.3 2008/10/06 08:24:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns-recursor/pdns-recursor-3.1.7.ebuild,v 1.4 2009/05/20 20:06:46 swegener Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -24,8 +24,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-error-message.patch
+	epatch "${FILESDIR}"/${P}-boost-1.37.0.patch
 
 	sed -i -e s:/var/run/:/var/lib/powerdns: "${S}"/config.h || die
 }
