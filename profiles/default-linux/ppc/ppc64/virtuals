@@ -1,6 +1,0 @@
-# Copyright 2004 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/ppc64/virtuals,v 1.6 2007/01/09 07:47:30 corsair Exp $
-
-virtual/bootloader	sys-boot/yaboot-static
-virtual/mysql		dev-db/mysql
