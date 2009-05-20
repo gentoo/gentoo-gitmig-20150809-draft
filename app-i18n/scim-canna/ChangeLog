@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-canna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.15 2009/04/23 18:58:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-canna/ChangeLog,v 1.16 2009/05/20 16:36:58 nixnut Exp $
+
+  20 May 2009; nixnut <nixnut@gentoo.org> scim-canna-1.0.1.ebuild:
+  ppc stable #266779
 
   23 Apr 2009; Markus Meier <maekke@gentoo.org> scim-canna-1.0.1:
   amd64/x86 stable, bug #266779
