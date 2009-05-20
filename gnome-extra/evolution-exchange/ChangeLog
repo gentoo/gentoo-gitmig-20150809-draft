@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/evolution-exchange
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.91 2009/05/10 15:14:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-exchange/ChangeLog,v 1.92 2009/05/20 05:14:59 jer Exp $
+
+  20 May 2009; Jeroen Roovers <jer@gentoo.org>
+  evolution-exchange-2.24.5.ebuild:
+  Stable for HPPA (bug #267552).
 
   10 May 2009; Jeroen Roovers <jer@gentoo.org>
   evolution-exchange-2.24.4.ebuild:
