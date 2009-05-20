@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r6.ebuild,v 1.2 2009/05/19 12:26:49 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r6.ebuild,v 1.3 2009/05/20 22:16:57 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -134,7 +134,7 @@ RDEPEND=">=virtual/jdk-1.5
 		>=dev-java/proguard-4.2:0
 	)
 	netbeans_modules_php? (
-		dev-java/javacup:0
+		>=dev-java/javacup-0.11a_beta20060608:0
 	)
 	netbeans_modules_ruby? (
 		dev-java/asm:3
@@ -201,7 +201,7 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/proguard-4.2:0
 	)
 	netbeans_modules_php? (
-		dev-java/javacup:0
+		>=dev-java/javacup-0.11a_beta20060608:0
 	)
 	netbeans_modules_ruby? (
 		dev-java/bytelist:0
@@ -603,13 +603,8 @@ src_compile() {
 		heap="-Xmx1g"
 	fi
 
-	ANT_TASKS="ant-nodeps ant-trax"
-	if use netbeans_modules_php ; then
-		ANT_TASKS="${ANT_TASKS} javacup"
-	fi
-
-	ANT_OPTS="${heap} -Djava.awt.headless=true" eant ${antflags} ${clusters} \
-		-f nbbuild/build.xml ${build_target} $(use_doc build-javadoc)
+	ANT_TASKS="ant-nodeps ant-trax" ANT_OPTS="${heap} -Djava.awt.headless=true" \
+		eant ${antflags} ${clusters} -f nbbuild/build.xml ${build_target} $(use_doc build-javadoc)
 
 	local locales=""
 	for lang in ${IUSE_LINGUAS} ; do
