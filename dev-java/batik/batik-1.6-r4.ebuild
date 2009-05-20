@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r4.ebuild,v 1.1 2009/05/20 16:17:13 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.6-r4.ebuild,v 1.2 2009/05/20 20:31:34 caster Exp $
 
 JAVA_PKG_IUSE="doc"
 EAPI=2
@@ -18,8 +18,8 @@ IUSE="python tcl"
 CDEPEND="dev-java/rhino:1.5
 	dev-java/xerces:2
 	dev-java/xml-commons-external:1.3
-	python? ( dev-java/jython )
-	tcl? ( dev-java/jacl )
+	python? ( dev-java/jython:0 )
+	tcl? ( dev-java/jacl:0 )
 	dev-java/ant-core"
 DEPEND="=virtual/jdk-1.4*
 	app-arch/unzip
@@ -45,7 +45,6 @@ java_prepare() {
 	java-pkg_jar-from rhino-1.5
 	use python && java-pkg_jar-from jython
 	use tcl && java-pkg_jar-from jacl
-	java-pkg_register-ant-task
 }
 
 src_compile() {
@@ -58,8 +57,7 @@ src_compile() {
 
 	eant jars all-jar $(use_doc)
 	cd contrib/rasterizertask || die
-	echo -n "Test: "
-	eant -Dgentoo.classpath=$(java-pkg_getjar ant-core ant.jar):../../classes jar $(use_doc)
+	eant -Dgentoo.classpath="$(java-pkg_getjar ant-core ant.jar):../../classes" jar $(use_doc)
 }
 
 src_install() {
