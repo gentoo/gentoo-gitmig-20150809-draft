@@ -1,6 +1,14 @@
 # ChangeLog for net-wireless/iwl5000-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.4 2009/01/12 16:16:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl5000-ucode/ChangeLog,v 1.5 2009/05/20 12:46:19 chainsaw Exp $
+
+*iwl5000-ucode-8.24.2.12 (20 May 2009)
+
+  20 May 2009; <chainsaw@gentoo.org> +iwl5000-ucode-8.24.2.12.ebuild:
+  API 2 firmware for use with 2.6.30 and up, fixes the intermittent wrong
+  command queue error and improves overall stability. This is in a new slot
+  and will install in parallel to the API 1 firmware. This is intended
+  behaviour.
 
   12 Jan 2009; <chainsaw@gentoo.org> iwl5000-ucode-5.4.0.11.ebuild:
   Mark stable on X86 based on user testing by David Carlos Manuelda
