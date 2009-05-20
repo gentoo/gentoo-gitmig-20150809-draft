@@ -77,24 +77,24 @@ mips		default/linux/mips/2008.0/developer		dev
 mips		default/linux/mips/2008.0/server		dev
 
 # PPC32 Profiles
-ppc		default-linux/ppc/ppc32/2007.0			stable
-ppc		default-linux/ppc/ppc32/2007.0/desktop		stable
-ppc		default-linux/ppc/ppc32/2007.0/G3		stable
-ppc		default-linux/ppc/ppc32/2007.0/G3/Pegasos	stable
-ppc		default-linux/ppc/ppc32/2007.0/G4		stable
-ppc		default-linux/ppc/ppc32/2007.0/G4/Pegasos	stable
-ppc		default-linux/ppc/ppc32/2007.0/desktop/G3	stable
-ppc		default-linux/ppc/ppc32/2007.0/desktop/G3/Pegasos	stable
-ppc		default-linux/ppc/ppc32/2007.0/desktop/G4	stable
-ppc		default-linux/ppc/ppc32/2007.0/desktop/G4/Pegasos	stable
+#ppc		default-linux/ppc/ppc32/2007.0			stable
+#ppc		default-linux/ppc/ppc32/2007.0/desktop		stable
+#ppc		default-linux/ppc/ppc32/2007.0/G3		stable
+#ppc		default-linux/ppc/ppc32/2007.0/G3/Pegasos	stable
+#ppc		default-linux/ppc/ppc32/2007.0/G4		stable
+#ppc		default-linux/ppc/ppc32/2007.0/G4/Pegasos	stable
+#ppc		default-linux/ppc/ppc32/2007.0/desktop/G3	stable
+#ppc		default-linux/ppc/ppc32/2007.0/desktop/G3/Pegasos	stable
+#ppc		default-linux/ppc/ppc32/2007.0/desktop/G4	stable
+#ppc		default-linux/ppc/ppc32/2007.0/desktop/G4/Pegasos	stable
 ppc		default/linux/powerpc/ppc32/2008.0		stable
 ppc		default/linux/powerpc/ppc32/2008.0/desktop	stable
 ppc		default/linux/powerpc/ppc32/2008.0/developer	stable
 ppc		default/linux/powerpc/ppc32/2008.0/server	dev
 
 # PPC64 Profiles
-ppc		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
-ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
+#ppc		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
+#ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/desktop	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/developer	stable
