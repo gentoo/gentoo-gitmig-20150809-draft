@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.68 2009/05/19 20:36:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.69 2009/05/20 13:04:55 ssuominen Exp $
+
+  20 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ffmpegthumbnailer-1.5.0.ebuild, ffmpegthumbnailer-1.5.1.ebuild:
+  Force disable altivec support in ffmpeg wrt #252641.
 
   19 May 2009; Brent Baude <ranger@gentoo.org>
   ffmpegthumbnailer-1.5.0.ebuild:
