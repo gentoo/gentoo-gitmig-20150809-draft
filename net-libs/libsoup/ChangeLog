@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.187 2009/05/20 15:43:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.188 2009/05/20 19:27:54 ranger Exp $
+
+  20 May 2009; Brent Baude <ranger@gentoo.org> libsoup-2.26.1.ebuild:
+  Marking libsoup-2.26.1 ~ppc for bug 268529
 
   20 May 2009; Brent Baude <ranger@gentoo.org> libsoup-2.26.1.ebuild:
   Marking libsoup-2.26.1 ~ppc64 for bug 268529
