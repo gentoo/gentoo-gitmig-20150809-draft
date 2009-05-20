@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kelbt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kelbt/ChangeLog,v 1.1 2009/05/19 19:45:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kelbt/ChangeLog,v 1.2 2009/05/20 01:31:38 flameeyes Exp $
+
+  20 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> ChangeLog:
+  Fix last minute change.
 
 *kelbt-0.13 (19 May 2009)
 
