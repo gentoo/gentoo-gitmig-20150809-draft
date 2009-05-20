@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.7-r2.ebuild,v 1.1 2009/05/20 21:37:17 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.7-r2.ebuild,v 1.2 2009/05/20 21:40:40 caster Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc"
@@ -65,7 +65,7 @@ src_install() {
 	# batik.jar lib/*.jar
 	# there are hardcoded classpaths in the manifest :(
 	dodir /usr/share/${PN}-${SLOT}/lib/lib/
-	for jar in *.jar
+	for jar in batik*.jar
 	do
 		java-pkg_dojar ${jar}
 		dosym ../${jar} /usr/share/${PN}-${SLOT}/lib/lib/${jar}
