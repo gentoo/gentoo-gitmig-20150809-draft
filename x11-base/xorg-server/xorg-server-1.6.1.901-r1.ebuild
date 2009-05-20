@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.1.901-r1.ebuild,v 1.1 2009/05/17 21:53:39 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.1.901-r1.ebuild,v 1.2 2009/05/20 13:00:18 remi Exp $
 
 EAPI="2"
 
@@ -107,8 +107,7 @@ IUSE_SERVERS="dmx kdrive xorg"
 IUSE="${IUSE_VIDEO_CARDS}
 	${IUSE_INPUT_DEVICES}
 	${IUSE_SERVERS}
-	3dfx tslib
-	hal ipv6 minimal nptl sdl"
+	tslib hal ipv6 minimal nptl sdl"
 RDEPEND="hal? ( sys-apps/hal )
 	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
 	dev-libs/openssl
@@ -259,8 +258,6 @@ PDEPEND="
 		video_cards_vmware? ( >=x11-drivers/xf86-video-vmware-10.16.5 )
 		video_cards_voodoo? ( >=x11-drivers/xf86-video-voodoo-1.2.1 )
 		video_cards_xgi? ( >=x11-drivers/xf86-video-xgi-1.5.0 )
-
-		video_cards_tdfx? ( 3dfx? ( >=media-libs/glide-v3-3.10 ) )
 
 		!x11-drivers/xf86-video-impact
 		!x11-drivers/xf86-video-imstt

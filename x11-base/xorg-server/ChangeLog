@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.403 2009/05/17 21:53:39 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.404 2009/05/20 13:00:18 remi Exp $
+
+  20 May 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.6.1.901.ebuild,
+  xorg-server-1.6.1.901-r1.ebuild:
+  drop 3dfx USE flag from 1.6, there's no reason for the server to do that,
+  xf86-video-tdfx will PDEPEND on glide instead
 
 *xorg-server-1.6.1.901-r1 (17 May 2009)
 
