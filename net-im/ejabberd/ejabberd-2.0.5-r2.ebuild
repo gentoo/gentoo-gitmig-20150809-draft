@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.5-r2.ebuild,v 1.1 2009/04/27 13:33:32 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ejabberd-2.0.5-r2.ebuild,v 1.2 2009/05/20 22:39:08 caleb Exp $
 
 inherit eutils multilib
 
@@ -23,6 +23,7 @@ IUSE="debug mod_irc mod_muc mod_pubsub ldap odbc pam ssl web zlib"
 DEPEND=">=net-im/jabber-base-0.01
 	>=dev-libs/expat-1.95
 	>=dev-lang/erlang-11.2.5
+	<dev-lang/erlang-13
 	odbc? ( dev-db/unixODBC )
 	ldap? ( =net-nds/openldap-2* )
 	ssl? ( >=dev-libs/openssl-0.9.8e )
