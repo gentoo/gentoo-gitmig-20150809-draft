@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.3 2009/05/18 19:59:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.4 2009/05/20 05:43:01 ulm Exp $
 
 ESVN_REPO_URI="svn://anonsvn.gentoo.org/eselect/trunk"
 ESVN_BOOTSTRAP="autogen.bash"
@@ -46,6 +46,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/*.txt
 	use doc && dohtml *.html doc/*
+
+	# needed by news-tng module
+	keepdir /var/lib/gentoo/news
 
 	# we don't use bash-completion.eclass since eselect
 	# is listed in RDEPEND.

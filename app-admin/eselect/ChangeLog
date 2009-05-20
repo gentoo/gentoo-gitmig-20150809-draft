@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.92 2009/05/19 16:40:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.93 2009/05/20 05:43:01 ulm Exp $
+
+  20 May 2009; Ulrich Mueller <ulm@gentoo.org> eselect-1.1_rc2.ebuild,
+  eselect-9999.ebuild:
+  Create directory for news-tng module.
 
 *eselect-1.1_rc2 (19 May 2009)
 
