@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cellmodem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.7 2009/05/20 01:44:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.8 2009/05/20 02:19:26 darkside Exp $
+
+  20 May 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-cellmodem-0.0.5.ebuild:
+  thx for robbat2 for reviewing the code, the virtual should be safe
 
   20 May 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-cellmodem-0.0.5.ebuild:
