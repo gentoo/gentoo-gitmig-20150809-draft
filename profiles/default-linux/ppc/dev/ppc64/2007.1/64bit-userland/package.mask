@@ -1,7 +1,0 @@
-# Copyright 1999-2007 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ppc/dev/ppc64/2007.1/64bit-userland/package.mask,v 1.2 2007/11/08 17:57:35 corsair Exp $
-
-# <gcc-4 does not compile with >=gcc-4 on ppc64
-sys-libs/libstdc++-v3
-<sys-devel/gcc-4.1

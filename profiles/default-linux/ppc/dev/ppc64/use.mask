@@ -1,5 +1,0 @@
-# Unmask the "ibm" USE flag on ppc64
--ibm
-
-# pbbuttonsd deos not work on ppc64 - bug #183035
-pbbuttonsd
