@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r1.ebuild,v 1.1 2009/05/13 19:53:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsidplay/libsidplay-2.1.1-r2.ebuild,v 1.1 2009/05/20 19:40:41 ssuominen Exp $
 
 EAPI=2
 inherit eutils libtool
@@ -48,4 +48,6 @@ src_install() {
 	cd "${S}"/resid
 	docinto resid
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+
+	doenvd "${FILESDIR}"/65resid
 }
