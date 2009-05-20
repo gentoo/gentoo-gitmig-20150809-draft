@@ -1,5 +1,0 @@
-# Fixes bug #86787
-fusion
-
-# User Mode Linux isn't supported on ppc yet
-uml
