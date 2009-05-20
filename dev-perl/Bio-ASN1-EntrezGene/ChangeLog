@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bio-ASN1-EntrezGene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-ASN1-EntrezGene/ChangeLog,v 1.1 2009/03/16 23:11:58 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-ASN1-EntrezGene/ChangeLog,v 1.2 2009/05/20 15:32:38 weaver Exp $
+
+  20 May 2009; Andrey Kislyuk <weaver@gentoo.org>
+  Bio-ASN1-EntrezGene-1.091.ebuild:
+  Added bioperl to PDEPEND
 
 *Bio-ASN1-EntrezGene-1.091 (16 Mar 2009)
 
