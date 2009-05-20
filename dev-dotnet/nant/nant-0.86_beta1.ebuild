@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.86_beta1.ebuild,v 1.2 2009/05/07 17:27:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/nant/nant-0.86_beta1.ebuild,v 1.3 2009/05/20 19:53:59 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/nant/${P/_/-}-src.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="+bootstrap"
 
 RDEPEND="
