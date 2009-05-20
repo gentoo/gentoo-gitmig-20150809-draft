@@ -1,6 +1,12 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.7 2009/04/17 03:32:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.8 2009/05/20 01:54:44 darkside Exp $
+
+*tucnak2-2.26 (20 May 2009)
+
+  20 May 2009; Jeremy Olexa <darkside@gentoo.org> -tucnak2-2.18.ebuild,
+  -tucnak2-2.19.ebuild, -tucnak2-2.20.ebuild, +tucnak2-2.26.ebuild:
+  Version bump and remove old
 
 *tucnak2-2.25 (17 Apr 2009)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.19.ebuild,v 1.2 2008/12/31 03:36:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/tucnak2-2.26.ebuild,v 1.1 2009/05/20 01:54:44 darkside Exp $
 
 inherit eutils autotools
 
@@ -28,7 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-2.19-doc.diff" \
-		"${FILESDIR}/${PN}-2.19-appname.diff"
+		"${FILESDIR}/${PN}-2.25-appname.diff"
 	eautoreconf
 }
 
@@ -45,7 +45,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "In order to use sound with tucnak2 add yourself to the audio group"
+	elog "In order to use sound with tucnak2 add yourself to the 'audio' group"
+	elog "and to key your rig via the parport add yourself to the 'lp' group"
 	elog ""
 	elog "tucnak2 can be used with the following additional packages:"
 	elog "	   media-radio/cwdaemon  : Morse output via code cwdaemon"
