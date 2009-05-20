@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-de-alt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.10 2009/05/19 21:00:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de-alt/ChangeLog,v 1.11 2009/05/20 17:11:20 nixnut Exp $
+
+  20 May 2009; nixnut <nixnut@gentoo.org> myspell-de-alt-20060124.ebuild:
+  ppc stable #269564
 
   19 May 2009; Brent Baude <ranger@gentoo.org>
   myspell-de-alt-20060124.ebuild:
