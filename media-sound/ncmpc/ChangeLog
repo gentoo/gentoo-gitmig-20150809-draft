@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.41 2009/05/14 20:02:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.42 2009/05/20 14:59:59 armin76 Exp $
+
+  20 May 2009; Raúl Porcel <armin76@gentoo.org> ncmpc-0.13.ebuild:
+  sparc stable wrt #269460
 
   14 May 2009; Markus Meier <maekke@gentoo.org> ncmpc-0.13.ebuild:
   amd64/x86 stable, bug #269460
