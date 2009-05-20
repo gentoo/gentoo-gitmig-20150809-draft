@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.39 2009/03/20 14:52:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.40 2009/05/20 14:46:57 tupone Exp $
+
+  20 May 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/simgear-1.9.1-gcc44.patch, simgear-1.9.1.ebuild:
+  Fix build with gcc-4.4.0 Bug #270116 by Victor Ostorga
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> simgear-1.9.1.ebuild:
   Marked ~ppc for bug #252202.

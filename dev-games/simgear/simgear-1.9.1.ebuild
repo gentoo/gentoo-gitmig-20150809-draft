@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-1.9.1.ebuild,v 1.2 2009/03/20 14:52:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-1.9.1.ebuild,v 1.3 2009/05/20 14:46:57 tupone Exp $
+EAPI=2
 
 inherit eutils
 
@@ -24,6 +25,10 @@ DEPEND="${RDEPEND}"
 RESTRICT="test"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
