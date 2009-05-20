@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.12 2009/05/11 17:47:19 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.13 2009/05/20 18:12:15 hncaldwell Exp $
+
+*anki-0.9.9.7.9b (20 May 2009)
+
+  20 May 2009; Heath Caldwell <hncaldwell@gentoo.org>
+  +anki-0.9.9.7.9b.ebuild:
+  Version bump. Fixes bug #270435.
 
 *anki-0.9.9.7.9 (11 May 2009)
 
