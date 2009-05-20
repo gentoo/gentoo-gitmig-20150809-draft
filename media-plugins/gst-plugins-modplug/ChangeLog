@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-modplug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.6 2009/05/20 14:39:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/ChangeLog,v 1.7 2009/05/20 15:32:10 ranger Exp $
+
+  20 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-modplug-0.10.11.ebuild:
+  marking gst-plugins-modplug-0.10.11 ~ppc64 for bug 266927
 
   20 May 2009; Brent Baude <ranger@gentoo.org>
   gst-plugins-modplug-0.10.11.ebuild:
