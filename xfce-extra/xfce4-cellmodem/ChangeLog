@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cellmodem
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.6 2008/11/17 15:26:41 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.7 2009/05/20 01:44:32 darkside Exp $
+
+  20 May 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-cellmodem-0.0.5.ebuild:
+  Depend on SLOT=0 of dev-libs/libusb, bug 270039
 
   17 Nov 2008; Jeremy Olexa <darkside@gentoo.org>
   xfce4-cellmodem-0.0.5.ebuild:
