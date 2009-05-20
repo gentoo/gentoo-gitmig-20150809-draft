@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6-r1.ebuild,v 1.7 2009/05/20 15:02:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6-r1.ebuild,v 1.8 2009/05/20 15:24:23 ssuominen Exp $
 
 EAPI="1"
 
@@ -10,7 +10,8 @@ DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
-IUSE="cdr daap dbus doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp nsplugin python tagwriting test"
+IUSE="cdr daap dbus doc hal ipod gnome-keyring libnotify lirc musicbrainz mtp
+nsplugin python taglib test"
 
 # I want tagwriting to be on by default in the future. It is just a local flag
 # now because it is still considered experimental by upstream and doesn't work
@@ -108,7 +109,7 @@ pkg_setup() {
 		$(use_with mtp)
 		$(use_enable nsplugin browser-plugin)
 		$(use_enable python)
-		$(use_enable tagwriting tag-writing)
+		$(use_enable taglib tag-writing)
 		--with-playback=gstreamer-0-10
 		--enable-mmkeys
 		--enable-audioscrobbler
