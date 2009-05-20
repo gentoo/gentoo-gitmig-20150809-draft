@@ -1,0 +1,10 @@
+# ChangeLog for sci-electronics/geda-gattrib
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/geda-gattrib/ChangeLog,v 1.1 2009/05/20 02:08:39 calchan Exp $
+
+*geda-gattrib-1.4.3 (20 May 2009)
+
+  20 May 2009; Denis Dupeyron <calchan@gentoo.org>
+  +geda-gattrib-1.4.3.ebuild, +metadata.xml:
+  New split ebuild, thanks a lot to Stefan Salewski (bug #266358).
+
