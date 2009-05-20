@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.1.0-r1.ebuild,v 1.2 2009/05/14 20:21:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/libkarma-0.1.0-r1.ebuild,v 1.3 2009/05/20 16:00:21 ranger Exp $
 
 EAPI=2
 inherit eutils mono toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="http://www.freakysoft.de/html/libkarma/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND="virtual/libiconv
