@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.168 2009/05/20 16:23:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.169 2009/05/20 19:42:24 ssuominen Exp $
+
+  20 May 2009; Samuli Suominen <ssuominen@gentoo.org> mpd-0.15_beta2.ebuild:
+  Raise libsidplay once more to get LDPATH for resid builders.
 
   20 May 2009; Samuli Suominen <ssuominen@gentoo.org> mpd-0.14.2.ebuild:
   Database update warning by Oliver Schinagl wrt #265663.
