@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.141 2009/05/20 13:22:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.142 2009/05/20 19:31:05 jer Exp $
+
+  20 May 2009; Jeroen Roovers <jer@gentoo.org> ntp-4.2.4_p7.ebuild:
+  Stable for HPPA (bug #263033).
 
   20 May 2009; Ferris McCormick <fmccor@gentoo.org> ntp-4.2.4_p7.ebuild:
   Sparc stable, security Bug #263033 (which see).
