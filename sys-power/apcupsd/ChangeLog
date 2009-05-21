@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.45 2009/05/16 20:50:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.46 2009/05/21 19:48:25 ranger Exp $
+
+  21 May 2009; Brent Baude <ranger@gentoo.org> apcupsd-3.14.5-r2.ebuild:
+  stable ppc, bug 255048
 
 *apcupsd-3.14.6 (16 May 2009)
 
