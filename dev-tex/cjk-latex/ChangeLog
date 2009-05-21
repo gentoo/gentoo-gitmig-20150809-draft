@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cjk-latex
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.38 2009/05/19 20:40:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/ChangeLog,v 1.39 2009/05/21 21:10:07 ranger Exp $
+
+  21 May 2009; Brent Baude <ranger@gentoo.org> cjk-latex-4.8.2.ebuild:
+  stable ppc, bug 270385
 
   19 May 2009; Brent Baude <ranger@gentoo.org> cjk-latex-4.8.2.ebuild:
   stable ppc64, bug 270385
