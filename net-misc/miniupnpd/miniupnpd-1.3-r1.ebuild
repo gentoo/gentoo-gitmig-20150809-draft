@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.3.ebuild,v 1.2 2009/05/13 07:51:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.3-r1.ebuild,v 1.1 2009/05/21 19:27:25 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info toolchain-funcs
@@ -19,6 +19,8 @@ RDEPEND=">=net-firewall/iptables-1.4.3
 DEPEND="${RDEPEND}"
 
 src_prepare() {
+	epatch "${FILESDIR}/${PN}-20090516.diff"
+
 	mv Makefile.linux Makefile
 	epatch "${FILESDIR}/${P}-iptables_path.diff"
 	epatch "${FILESDIR}/${P}-Makefile_fix.diff"
