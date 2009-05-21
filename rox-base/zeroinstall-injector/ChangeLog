@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.12 2009/05/21 15:11:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.13 2009/05/21 16:51:45 lack Exp $
+
+  21 May 2009; Jim Ramsay <lack@gentoo.org>
+  zeroinstall-injector-0.40.ebuild:
+  Require dev-lang/python[xml] (Bug #256018)
 
 *zeroinstall-injector-0.40 (21 May 2009)
 
