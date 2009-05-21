@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/qt-gui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.53 2009/05/15 18:39:52 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-gui/ChangeLog,v 1.54 2009/05/21 23:44:23 hwoarang Exp $
+
+*qt-gui-4.5.1-r1 (21 May 2009)
+
+  21 May 2009; Markos Chandras <hwoarang@gentoo.org>
+  +qt-gui-4.5.1-r1.ebuild,
+  +files/qt-gui-4.5.1-ppc-pixmap-fix-backport-196152.patch:
+  Add pixmap patch for ppc machines. Fixes bug 270769
 
   15 May 2009; Tobias Klausmann <klausman@gentoo.org> qt-gui-4.5.1.ebuild:
   Stable on alpha, bug #266201
