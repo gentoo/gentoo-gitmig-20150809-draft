@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.5 2009/02/27 20:30:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmyth/gmyth-0.7.ebuild,v 1.6 2009/05/21 15:39:31 ranger Exp $
 
 inherit libtool
 
@@ -9,7 +9,7 @@ LICENSE="LGPL-2"
 DESCRIPTION="GObject based library to access mythtv backends"
 HOMEPAGE="http://gmyth.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gmyth/${PN}_${PV}-indt1.tar.gz"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 RDEPEND="net-misc/curl
 		 dev-libs/glib
