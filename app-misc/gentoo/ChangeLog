@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.81 2009/05/20 17:03:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.82 2009/05/21 18:30:48 armin76 Exp $
+
+  21 May 2009; Raúl Porcel <armin76@gentoo.org> gentoo-0.15.4.ebuild:
+  ia64 stable wrt #269895
 
   20 May 2009; nixnut <nixnut@gentoo.org> gentoo-0.15.4.ebuild:
   ppc stable #269895
