@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.188 2009/05/20 19:27:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.189 2009/05/21 18:09:01 nirbheek Exp $
+
+  21 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> libsoup-2.26.2.ebuild:
+  Fix bug 270698 (missing ChangeLog)
 
   20 May 2009; Brent Baude <ranger@gentoo.org> libsoup-2.26.1.ebuild:
   Marking libsoup-2.26.1 ~ppc for bug 268529
