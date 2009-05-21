@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.7 2009/05/21 16:01:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.8 2009/05/21 16:27:07 ssuominen Exp $
 
 EAPI=2
 ARTS_REQUIRED=never
@@ -30,10 +30,11 @@ for X in ${LANGS} ${LANGS_DOC} ; do
 	IUSE="${IUSE} linguas_${X}"
 done
 
-src_unpack() {
-	kde_src_unpack
+src_prepare() {
+	kde_src_prepare
 	epatch "${FILESDIR}"/${PN}-1.0-gcc43.patch \
-		"${FILESDIR}"/${P}-fftw.patch
+		"${FILESDIR}"/${P}-fftw.patch \
+		"${FILESDIR}"/${P}-desktop-entry.patch
 
 	for X in ${LANGS} ; do
 		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X}.po"
@@ -58,4 +59,9 @@ src_configure() {
 		--disable-arts"
 
 	kde_src_configure
+}
+
+src_install() {
+	kde_src_install
+	doicon "${FILESDIR}"/${PN}.xpm
 }

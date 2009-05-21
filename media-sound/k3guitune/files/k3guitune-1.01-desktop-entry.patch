@@ -1,0 +1,40 @@
+diff -ur k3guitune-1.01.orig/k3guitune/k3guitune.desktop k3guitune-1.01/k3guitune/k3guitune.desktop
+--- k3guitune-1.01.orig/k3guitune/k3guitune.desktop	2007-12-15 15:16:27.000000000 +0200
++++ k3guitune-1.01/k3guitune/k3guitune.desktop	2009-05-21 19:19:27.000000000 +0300
+@@ -1,12 +1,13 @@
+ # KDE Config File  
+ [Desktop Entry]
+-Encoding=UTF-8
++Version=1.0
+ Type=Application
+-Exec=k3guitune -caption "%c" %i %m  
+-Icon=
+-DocPath=k3guitune/index.html
++Exec=k3guitune -caption "%c" %i
++Icon=k3guitune
++X-KDE-DocPath=k3guitune/index.html
+ Comment=
+ Comment[de]=
+-Terminal=0
++Terminal=false
+ Name=K3GuiTune
+ Name[de]=K3GuiTune
++Categories=AudioVideo;KDE;
+diff -ur k3guitune-1.01.orig/k3guitune/Makefile.am k3guitune-1.01/k3guitune/Makefile.am
+--- k3guitune-1.01.orig/k3guitune/Makefile.am	2007-12-15 15:16:27.000000000 +0200
++++ k3guitune-1.01/k3guitune/Makefile.am	2009-05-21 19:25:00.000000000 +0300
+@@ -7,11 +7,11 @@
+ EXTRA_DIST = k3guitune.desktop k2guitune_meta_unload.cpp logview.cpp logview.h main.cpp osziview.cpp osziview.h resources.h guitune.cpp guitune.h k2guitune.cpp k2guitune.h k3guituneui.rc soundinput.h soundinput.cpp audiodlg.h audiodlg.cpp 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(kde_appsdir)/Multimedia/
+-	$(INSTALL_DATA) $(srcdir)/k3guitune.desktop $(kde_appsdir)/Multimedia/k3guitune.desktop
++	$(mkinstalldirs) $(datadir)/applications/kde
++	$(INSTALL_DATA) $(srcdir)/k3guitune.desktop $(datadir)/applications/kde/k3guitune.desktop
+ 
+ uninstall-local:
+-	-rm -f $(kde_appsdir)/Multimedia/k3guitune.desktop
++	-rm -f $(datadir)/applications/kde/k3guitune.desktop
+ 
+ # These paths are KDE specific. Use them:
+ # kde_appsdir         Where your application's menu entry (.desktop) should go to.
