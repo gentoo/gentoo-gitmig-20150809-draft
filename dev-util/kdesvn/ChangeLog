@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.61 2009/04/20 14:58:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.62 2009/05/21 09:28:21 tampakrap Exp $
+
+*kdesvn-1.0.5 (21 May 2009)
+
+  21 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -kdesvn-1.0.1.ebuild, -kdesvn-1.0.4.ebuild, +kdesvn-1.0.5.ebuild:
+  Version bump for the kde3 version, remove some old kde3 versions (bug
+  269813) 
+  1.0.5 solves compilation and linking bugs: bug 243222, bug 244714, bug
+  248875 and as-needed bug 250085
+  Also, rewritten in EAPI-2 and slotted in :3.5
 
 *kdesvn-1.3.0 (20 Apr 2009)
 
