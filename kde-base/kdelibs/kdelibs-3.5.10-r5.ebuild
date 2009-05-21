@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r5.ebuild,v 1.1 2009/05/15 11:01:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r5.ebuild,v 1.2 2009/05/21 21:56:06 loki_val Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -148,6 +148,9 @@ src_unpack() {
 
 	# patch that fixes kde4 in menus (adapted from archlinux)
 	epatch "${FILESDIR}/${P}-kde4-apps.patch"
+
+	#Fix glibc-2.10 compilation ( Bug 270404 )
+	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 }
 
 src_compile() {

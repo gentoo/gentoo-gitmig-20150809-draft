@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.592 2009/05/15 11:01:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.593 2009/05/21 21:56:06 loki_val Exp $
+
+  21 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  kdelibs-3.5.10-r5.ebuild, +files/kdelibs-3.5.10-glibc-2.10.patch:
+  Fix glibc-2.10 compilation ( Bug 270404 )
 
 *kdelibs-3.5.10-r5 (15 May 2009)
 
