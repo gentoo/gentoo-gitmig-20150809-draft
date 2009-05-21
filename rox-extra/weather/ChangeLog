@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/weather
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.14 2008/08/30 20:06:34 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/weather/ChangeLog,v 1.15 2009/05/21 18:07:21 lack Exp $
+
+  21 May 2009; Jim Ramsay <lack@gentoo.org> -weather-0.2.5.ebuild,
+  -weather-0.2.7.ebuild:
+  Version cleanup
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> weather-0.3.1.ebuild:
   x86 stable, bug #236057
