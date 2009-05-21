@@ -1,6 +1,11 @@
 # ChangeLog for app-text/noweb
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.40 2008/08/25 17:15:29 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/noweb/ChangeLog,v 1.41 2009/05/21 23:05:11 hkbst Exp $
+
+*noweb-2.11b-r1 (21 May 2009)
+
+  21 May 2009; Marijn Schouten <hkBst@gentoo.org> +noweb-2.11b-r1.ebuild:
+  glibc2.10 compat (bug 270757)
 
   25 Aug 2008; Markus Meier <maekke@gentoo.org> noweb-2.11b.ebuild:
   amd64 stable, bug #234191
