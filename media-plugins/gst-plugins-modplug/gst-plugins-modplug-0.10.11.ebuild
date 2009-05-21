@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/gst-plugins-modplug-0.10.11.ebuild,v 1.8 2009/05/21 15:36:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-modplug/gst-plugins-modplug-0.10.11.ebuild,v 1.9 2009/05/21 19:01:55 ranger Exp $
 
 inherit gst-plugins-bad
 
-KEYWORDS="~alpha amd64 ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND="media-libs/libmodplug
