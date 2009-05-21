@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.142 2009/05/20 19:31:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.143 2009/05/21 17:52:25 rich0 Exp $
+
+  21 May 2009; Richard Freeman <rich0@gentoo.org> ntp-4.2.4_p7.ebuild:
+  amd64 stable - 263033
 
   20 May 2009; Jeroen Roovers <jer@gentoo.org> ntp-4.2.4_p7.ebuild:
   Stable for HPPA (bug #263033).
