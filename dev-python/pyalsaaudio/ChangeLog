@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.8 2009/02/02 10:52:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.9 2009/05/21 17:55:53 fmccor Exp $
+
+  21 May 2009; Ferris McCormick <fmccor@gentoo.org> pyalsaaudio-0.4.ebuild:
+  Sparc stable, part of Bug #270738.
 
 *pyalsaaudio-0.4 (02 Feb 2009)
 
