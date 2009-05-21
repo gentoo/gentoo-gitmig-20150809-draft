@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.5 2009/05/21 15:41:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.6 2009/05/21 15:50:45 ssuominen Exp $
 
+EAPI=2
 ARTS_REQUIRED=never
 inherit kde eutils
 
@@ -13,7 +14,7 @@ SRC_URI="http://home.planet.nl/~lamer024/files/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="alsa oss jack"
+IUSE="+alsa oss jack"
 
 DEPEND="=sci-libs/fftw-3*
 	alsa? ( media-libs/alsa-lib )
@@ -52,7 +53,9 @@ src_unpack() {
 src_compile() {
 	local myconf="$(use_enable alsa)
 		$(use_enable oss)
-		$(use_enable jack)"
+		$(use_enable jack)
+		--without-arts
+		--disable-arts"
 
 	kde_src_compile
 }
