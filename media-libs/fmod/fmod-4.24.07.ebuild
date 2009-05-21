@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.24.07.ebuild,v 1.1 2009/05/21 21:21:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.24.07.ebuild,v 1.2 2009/05/21 21:22:19 ssuominen Exp $
 
 inherit versionator
 
@@ -34,7 +34,7 @@ src_install() {
 		dodir /opt/${MY_P}
 
 		cd "${S}"/api/lib
-		
+
 		if use amd64; then
 			cp -f libfmodex64-${PV}.so libfmodex.so.${PV}
 			cp -f libfmodexp64-${PV}.so libfmodexp.so.${PV}
