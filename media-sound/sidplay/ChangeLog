@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sidplay
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.17 2008/12/19 11:52:09 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/ChangeLog,v 1.18 2009/05/21 22:01:07 jer Exp $
+
+  21 May 2009; Jeroen Roovers <jer@gentoo.org> sidplay-2.0.9.ebuild:
+  Marked ~hppa too.
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org> sidplay-2.0.9.ebuild:
   quote D
