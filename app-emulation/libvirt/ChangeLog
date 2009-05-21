@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.22 2009/04/17 15:01:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.23 2009/05/21 14:43:36 dev-zero Exp $
+
+*libvirt-0.6.3 (21 May 2009)
+
+  21 May 2009; Tiziano Müller <dev-zero@gentoo.org> +libvirt-0.6.3.ebuild,
+  +files/libvirt-0.6.3-kvm-85-argv-detection.patch:
+  Version bump (bug #269789), using EAPI-2 now, added patch to make it work
+  with kvm >=85.
 
 *libvirt-0.6.2 (17 Apr 2009)
 
