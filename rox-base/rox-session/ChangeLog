@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/rox-session
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.38 2008/08/31 21:16:22 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-session/ChangeLog,v 1.39 2009/05/21 17:53:03 lack Exp $
+
+  21 May 2009; Jim Ramsay <lack@gentoo.org> -rox-session-0.29.ebuild,
+  -rox-session-0.30.ebuild:
+  Version cleanup
 
   31 Aug 2008; Raúl Porcel <armin76@gentoo.org> rox-session-0.30-r4.ebuild:
   sparc stable wrt #236057
