@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.62 2009/05/20 22:06:50 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.63 2009/05/21 18:00:30 betelgeuse Exp $
+
+  21 May 2009; Petteri Räty <betelgeuse@gentoo.org> fop-0.95.ebuild:
+  Fix the source use flag report in bug #270721.
 
 *fop-0.95 (20 May 2009)
 
