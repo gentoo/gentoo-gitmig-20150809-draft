@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/konversation
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.70 2008/09/28 15:51:55 keytoaster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.71 2009/05/21 11:28:33 tampakrap Exp $
+
+*konversation-1.1-r1 (21 May 2009)
+
+  21 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -konversation-1.0.1-r3.ebuild, -konversation-1.1_rc1.ebuild,
+  +konversation-1.1-r1.ebuild:
+  Remove old and revision bump, EAPI-2 and slotted to 3.5, also fixes bug
+  246728
 
   28 Sep 2008; Tobias Heinlein <keytoaster@gentoo.org>
   files/konversation-1.0.1-konsolepanel.patch:
