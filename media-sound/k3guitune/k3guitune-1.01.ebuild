@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.6 2009/05/21 15:50:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.7 2009/05/21 16:01:40 ssuominen Exp $
 
 EAPI=2
 ARTS_REQUIRED=never
@@ -50,12 +50,12 @@ src_unpack() {
 	rm -f "${S}/configure"
 }
 
-src_compile() {
+src_configure() {
 	local myconf="$(use_enable alsa)
 		$(use_enable oss)
 		$(use_enable jack)
 		--without-arts
 		--disable-arts"
 
-	kde_src_compile
+	kde_src_configure
 }
