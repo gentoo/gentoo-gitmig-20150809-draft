@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/memo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.21 2009/05/21 17:02:54 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.22 2009/05/21 17:49:16 fmccor Exp $
+
+  21 May 2009; Ferris McCormick <fmccor@gentoo.org> memo-2.1.ebuild:
+  Sparc stable, part of Bug #270738.
 
   21 May 2009; Jim Ramsay <lack@gentoo.org> memo-2.1.ebuild:
   Require dev-lang/python[xml] (Bug #259577)
