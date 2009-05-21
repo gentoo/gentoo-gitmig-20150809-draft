@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.15 2009/05/21 15:30:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.16 2009/05/21 19:01:23 ranger Exp $
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-ximagesrc-0.10.14.ebuild:
+  Marking gst-plugins-ximagesrc-0.10.14 ppc64 stable for bug 266986
 
   21 May 2009; Brent Baude <ranger@gentoo.org>
   gst-plugins-ximagesrc-0.10.14.ebuild:
