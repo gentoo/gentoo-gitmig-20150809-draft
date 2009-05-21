@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.2.3.ebuild,v 1.2 2009/05/08 08:40:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.2.3.ebuild,v 1.3 2009/05/21 19:29:47 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime rpm multilib gnome2-utils linux-mod
@@ -10,10 +10,8 @@ HOMEPAGE="http://nerolinux.nero.com"
 SRC_URI="x86? ( mirror://${PN}/${PN}linux-${PV}-x86.rpm )
 	amd64? ( mirror://${PN}/${PN}linux-${PV}-x86_64.rpm )"
 
-LICENSE="Nero"
+LICENSE="Nero-EULA-US"
 SLOT="0"
-# This package can never enter stable, it can't be mirrored and upstream
-# can remove the distfiles from their mirror anytime.
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
@@ -28,7 +26,9 @@ QA_TEXTRELS="opt/nero/$(get_libdir)/nero/*"
 QA_EXECSTACK="opt/nero/$(get_libdir)/nero/*"
 S=${WORKDIR}
 
-src_compile() { :; }
+pkg_setup() {
+	check_license
+}
 
 src_install() {
 	insinto /etc
@@ -50,11 +50,8 @@ src_install() {
 	doman usr/share/man/man1/*
 	use doc && dodoc usr/share/doc/nero/*.pdf
 
-	make_wrapper nero ./nero /opt/nero /opt/${PN}/$(get_libdir) \
-		|| die "make_wrapper for nero failed"
-
-	make_wrapper nerocmd ./nerocmd /opt/nero /opt/nero/$(get_libdir) \
-		|| die "make_wrapper for nerocmd failed"
+	make_wrapper nero ./nero /opt/nero /opt/${PN}/$(get_libdir)
+	make_wrapper nerocmd ./nerocmd /opt/nero /opt/nero/$(get_libdir)
 
 	# This is a ugly hack to fix burning in x86_64.
 	# http://club.cdfreaks.com/showthread.php?t=218041
@@ -70,14 +67,8 @@ pkg_postinst() {
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
 
-	elog "NOTE: This is demo software, it will run for a trial"
-	elog "period only until unlocked with a serial number."
-	elog "See ${HOMEPAGE} for details."
-	elog
 	elog "Technical support for NeroLINUX is provided by CDFreaks"
 	elog "Linux forum at http://club.cdfreaks.com/forumdisplay.php?f=104"
-	elog
-	elog "Please make sure that no hdX=ide-scsi option is passed to your kernel command line."
 	elog
 	elog "You also need to setup your user to cdrom group."
 }
