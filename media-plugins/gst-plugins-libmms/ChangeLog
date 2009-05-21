@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libmms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.20 2009/05/21 15:36:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libmms/ChangeLog,v 1.21 2009/05/21 19:01:56 ranger Exp $
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-libmms-0.10.11.ebuild:
+  Marking gst-plugins-libmms-0.10.11 ~ppc64 for bug 266986
 
   21 May 2009; Brent Baude <ranger@gentoo.org>
   gst-plugins-libmms-0.10.11.ebuild:
