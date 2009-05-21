@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.29 2009/05/16 14:19:03 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.30 2009/05/21 19:01:57 ranger Exp $
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-bad-0.10.11.ebuild:
+  Marking gst-plugins-bad-0.10.11 ppc64 stable for bug 266986
+
+  21 May 2009; Brent Baude <ranger@gentoo.org>
+  gst-plugins-bad-0.10.11.ebuild:
+  Marking gst-plugins-bad-0.10.11 ppc stable for bug 266986
 
   16 May 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml:
   Use global gsm USE flag instead of local one.
