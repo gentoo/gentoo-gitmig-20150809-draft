@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.71 2009/05/18 17:09:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.72 2009/05/21 10:48:51 flameeyes Exp $
+
+  21 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  freebsd-lib-7.1-r4.ebuild:
+  Add missing EAPI specification, thanks to Naohiro Aota for noticing in bug
+  #270679.
 
 *freebsd-lib-7.1-r4 (18 May 2009)
 

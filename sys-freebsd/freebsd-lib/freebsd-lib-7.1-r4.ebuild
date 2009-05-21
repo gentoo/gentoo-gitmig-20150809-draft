@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r4.ebuild,v 1.1 2009/05/18 17:09:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r4.ebuild,v 1.2 2009/05/21 10:48:51 flameeyes Exp $
+
+EAPI=2
 
 inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs
 
