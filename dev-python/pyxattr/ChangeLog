@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.17 2009/05/19 20:22:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.18 2009/05/21 21:01:16 ranger Exp $
+
+  21 May 2009; Brent Baude <ranger@gentoo.org> pyxattr-0.4.0.ebuild:
+  stable ppc, bug 267212
 
   19 May 2009; Brent Baude <ranger@gentoo.org> pyxattr-0.4.0.ebuild:
   stable ppc64, bug 267212
