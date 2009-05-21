@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.25.07.ebuild,v 1.1 2009/05/21 22:06:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.25.07.ebuild,v 1.2 2009/05/21 22:29:05 ssuominen Exp $
 
 inherit versionator
 
@@ -9,7 +9,6 @@ MY_P=fmodapi$(delete_all_version_separators)linux
 DESCRIPTION="music and sound effects library, and a sound processing system"
 HOMEPAGE="http://www.fmod.org"
 SRC_URI="x86? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )
-	multilib? ( http://www.fmod.org/index.php/release/version/${MY_P}.tar.gz )
 	amd64? ( http://www.fmod.org/index.php/release/version/${MY_P}64.tar.gz )"
 
 LICENSE="fmod"
