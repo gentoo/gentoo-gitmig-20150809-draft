@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/tasktray
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.30 2008/09/18 20:34:11 lack Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/ChangeLog,v 1.31 2009/05/21 17:38:27 fmccor Exp $
+
+  21 May 2009; Ferris McCormick <fmccor@gentoo.org> tasktray-0.7-r1.ebuild:
+  Sparc stable, part of Bug #270738.
 
 *tasktray-0.7-r1 (14 Sep 2008)
 
