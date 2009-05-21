@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.24.07.ebuild,v 1.2 2009/05/21 21:22:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.24.07.ebuild,v 1.3 2009/05/21 21:47:36 ssuominen Exp $
 
 inherit versionator
 
@@ -54,8 +54,8 @@ src_install() {
 		dosym /opt/${MY_P}/api/inc /usr/include/fmodex
 
 		insinto /usr/share/doc/${PF}
-		doins documentation/*.pdf
-		dodoc documentation/*.txt
+		doins "${S}"/documentation/*.pdf
+		dodoc "${S}"/documentation/*.txt
 
 		rm -rf "${D}"/opt/${MY_P}/documentation
 
