@@ -1,9 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20.ebuild,v 1.1 2009/05/06 17:56:41 beandog Exp $
-
-WANT_AUTOMAKE="1.9"
-WANT_AUTOCONF="2.5"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20.ebuild,v 1.2 2009/05/21 10:44:28 flameeyes Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -85,17 +82,26 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	epatch "${FILESDIR}"/${P}+glibc-2.10.patch
+	epatch "${FILESDIR}"/${P}-hdspconf-asneeded.patch
+
+	# This block only deals with the tools that still use GTK and the
+	# AM_PATH_GTK macro.
 	for dir in echomixer envy24control rmedigicontrol; do
+		has $dir ${ALSA_TOOLS} || continue
 		pushd "${dir}" &> /dev/null
 		sed -i -e '/AM_PATH_GTK/d' configure.in
-		eautomake
+		eautoreconf
 		popd &> /dev/null
 	done
 
-	pushd hdspmixer &> /dev/null
-	sed -i -e '/AM_PATH_GTK/d' configure.in
-	eautoreconf
-	popd &> /dev/null
+	# This block deals with the tools that are being patched
+	for dir in hdspconf; do
+		has $dir ${ALSA_TOOLS} || continue
+		pushd "${dir}" &> /dev/null
+		eautoreconf
+		popd &> /dev/null
+	done
 
 	elibtoolize
 }
@@ -106,9 +112,6 @@ src_compile() {
 		append-ldflags "-L/usr/$(get_libdir)/fltk-1.1"
 		append-flags "-I/usr/include/fltk-1.1"
 	fi
-
-	# hdspmixer is missing depconf - copy from the hdsploader directory
-	cp "${S}/hdsploader/depcomp" "${S}/hdspmixer/"
 
 	local f
 	for f in ${ALSA_TOOLS}

@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/alsa-tools
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.170 2009/05/06 17:56:41 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.171 2009/05/21 10:44:28 flameeyes Exp $
+
+  21 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  alsa-tools-1.0.20.ebuild, +files/alsa-tools-1.0.20+glibc-2.10.patch,
+  +files/alsa-tools-1.0.20-hdspconf-asneeded.patch:
+  Add patch to build with glibc-2.10 (bug #270692); add patch to fix linking
+  of hdspconf (bug #217652); avoid using old automake (leave to default
+  latest); only rebuild autotools for the tools that we're going to build;
+  avoid an old workaround; use eautoreconf rather than eautomake when
+  changing the configure (should solve bug #226317). Patches sent upstream.
 
 *alsa-tools-1.0.20 (06 May 2009)
 
