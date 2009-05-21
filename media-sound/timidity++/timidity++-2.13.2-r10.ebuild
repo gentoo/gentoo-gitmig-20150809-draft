@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r10.ebuild,v 1.1 2009/05/13 20:29:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r10.ebuild,v 1.2 2009/05/21 14:20:26 ssuominen Exp $
 
+EAPI=2
 inherit eutils elisp-common
 
 MY_PV=${PV/_/-}
@@ -15,7 +16,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exit
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="oss nas esd motif X gtk vorbis tk slang alsa arts jack emacs ao speex flac ncurses"
+IUSE="oss nas esd motif X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	emacs? ( virtual/emacs )
@@ -24,9 +25,8 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	motif? ( x11-libs/openmotif )
 	esd? ( >=media-sound/esound-0.2.22 )
 	nas? ( >=media-libs/nas-1.4 )
-	alsa? ( media-libs/alsa-lib )
+	alsa? ( media-libs/alsa-lib[midi] )
 	slang? ( sys-libs/slang )
-	arts? ( kde-base/arts )
 	jack? ( media-sound/jack-audio-connection-kit )
 	vorbis? ( media-libs/libvorbis )
 	flac? ( media-libs/flac )
@@ -41,33 +41,24 @@ PDEPEND="|| ( media-sound/timidity-eawpatches media-sound/timidity-shompatches m
 SITEFILE=50${PN}-gentoo.el
 
 pkg_setup() {
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build TiMidity++ with ALSA support you need"
-		eerror "to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
-
 	enewgroup audio 18 # Just make sure it exists
 	enewuser timidity -1 -1 /var/lib/timidity audio
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${DISTDIR}"/${P}-exiterror.patch
-	epatch "${FILESDIR}"/${P}-gtk26.patch
-	epatch "${FILESDIR}"/${P}-gcc4.patch
-	epatch "${FILESDIR}"/${P}-flac.patch
-	epatch "${FILESDIR}"/${P}-flac113.patch
-	epatch "${FILESDIR}"/${P}-protos.patch
-	epatch "${FILESDIR}"/${P}-polling.patch
+src_prepare() {
+	epatch "${DISTDIR}"/${P}-exiterror.patch \
+		"${FILESDIR}"/${P}-gtk26.patch \
+		"${FILESDIR}"/${P}-gcc4.patch \
+		"${FILESDIR}"/${P}-flac.patch \
+		"${FILESDIR}"/${P}-flac113.patch \
+		"${FILESDIR}"/${P}-protos.patch \
+		"${FILESDIR}"/${P}-polling.patch \
 
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" configure* timidity/speex_a.c
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 	local audios
 
@@ -77,7 +68,6 @@ src_compile() {
 
 	use oss && audios="${audios},oss"
 	use esd && audios="${audios},esd"
-	use arts && audios="${audios},arts"
 	use jack && audios="${audios},jack"
 	use ao && audios="${audios},ao"
 
@@ -119,13 +109,11 @@ src_compile() {
 		$(use_enable gtk) \
 		$(use_enable tk tcltk) \
 		--disable-motif \
-		${myconf} || die
-
-	emake || die
+		${myconf}
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc AUTHORS ChangeLog*
 	dodoc NEWS README* "${FILESDIR}/timidity.cfg-r1"
