@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/gst-plugins-resindvd-0.10.11.ebuild,v 1.5 2009/05/21 15:38:09 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-resindvd/gst-plugins-resindvd-0.10.11.ebuild,v 1.6 2009/05/21 19:01:50 ranger Exp $
 
 inherit gst-plugins-bad
 
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/libdvdnav-0.1.10
