@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.4 2009/05/21 14:56:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.5 2009/05/21 15:41:31 ssuominen Exp $
 
 ARTS_REQUIRED=never
 inherit kde eutils
@@ -51,7 +51,6 @@ src_unpack() {
 
 src_compile() {
 	local myconf="$(use_enable alsa)
-		$(use_enable arts)
 		$(use_enable oss)
 		$(use_enable jack)"
 
