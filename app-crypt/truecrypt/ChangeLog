@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.45 2009/05/18 04:39:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.46 2009/05/21 17:39:53 arfrever Exp $
+
+  21 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  truecrypt-6.2.ebuild:
+  Fix building with USE="-X" when x11-libs/wxGTK is built with USE="X" (bug
+  #270279). Fix dependencies (bug #270441). Check for appropriate kernel
+  configuration.
 
   18 May 2009; Robin H. Johnson <robbat2@gentoo.org> truecrypt-4.3a.ebuild,
   truecrypt-6.2.ebuild:

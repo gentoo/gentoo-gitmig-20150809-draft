@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.3 2009/05/18 04:39:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.4 2009/05/21 17:39:53 arfrever Exp $
 
 EAPI="2"
 
-inherit flag-o-matic multilib toolchain-funcs wxwidgets
+inherit flag-o-matic linux-info multilib toolchain-funcs wxwidgets
 
 DESCRIPTION="Free open-source disk encryption software"
 HOMEPAGE="http://www.truecrypt.org/"
@@ -16,8 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="X"
 RESTRICT="bindist fetch mirror"
 
-RDEPEND="sys-fs/fuse
-	x11-libs/wxGTK:2.8"
+RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
+	sys-fs/fuse
+	x11-libs/wxGTK:2.8[X?]"
 DEPEND="${RDEPEND}
 	|| ( dev-libs/pkcs11-helper dev-libs/opensc )"
 
@@ -30,11 +31,21 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	WX_GTK_VER="2.8"
+	local CONFIG_CHECK="BLK_DEV_DM DM_CRYPT FUSE_FS CRYPTO"
+	linux-info_pkg_setup
+
+	local WX_GTK_VER="2.8"
 	if use X; then
 		need-wxwidgets unicode
 	else
 		need-wxwidgets base-unicode
+	fi
+}
+
+src_prepare() {
+	if has_version x11-libs/wxGTK[X]; then
+		# Fix linking when NOGUI=1
+		sed -e "s/WX_CONFIG_LIBS := base/&,core/" -i Main/Main.make || die "sed Main/Main.make failed"
 	fi
 }
 
