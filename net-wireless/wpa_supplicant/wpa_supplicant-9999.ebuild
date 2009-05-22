@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-9999.ebuild,v 1.1 2009/05/18 22:27:58 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-9999.ebuild,v 1.2 2009/05/22 08:11:48 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -44,7 +44,6 @@ DEPEND="dev-libs/libnl
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}/${PN}/${PN}"
-
 
 src_unpack() {
 	einfo "src dir ${S}/"
