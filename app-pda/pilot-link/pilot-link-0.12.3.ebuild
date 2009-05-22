@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.13 2009/05/19 00:43:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.12.3.ebuild,v 1.14 2009/05/22 08:11:06 mr_bones_ Exp $
 
 inherit perl-module java-pkg-opt-2 eutils autotools distutils
 
@@ -55,7 +55,7 @@ src_unpack() {
 
 	# Upstream patch to fix 64-bit issues.
 	epatch "${FILESDIR}/${P}-int_types.patch"
-	
+
 	# libusb-compat requires you to check the return value of usb_open!
 	epatch "${FILESDIR}/${P}-libusb-compat-usb_open.patch"
 
