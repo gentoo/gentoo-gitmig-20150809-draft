@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/smbc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.10 2009/05/22 15:58:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.11 2009/05/22 15:59:50 jer Exp $
+
+  22 May 2009; Jeroen Roovers <jer@gentoo.org> -smbc-1.0.0.ebuild,
+  -smbc-1.0.0-r1.ebuild, -smbc-1.1.2.ebuild:
+  Remove old.
 
 *smbc-1.2.2-r2 (22 May 2009)
 
