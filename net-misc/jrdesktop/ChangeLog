@@ -1,0 +1,16 @@
+# ChangeLog for net-misc/jrdesktop
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/ChangeLog,v 1.1 2009/05/22 22:33:17 ali_bush Exp $
+
+*jrdesktop-0.2.0030 (22 May 2009)
+
+  22 May 2009; Alistair Bush <ali_bush@gentoo.org>
+  +jrdesktop-0.2.0030.ebuild, +metadata.xml:
+  Move jrdesktop to gentoo-x86
+
+* jrdesktop-0.2.0030 (29 Apr 2009)
+
+  29 Apr 2009; Alistair Bush <ali_bush@gentoo.org> +metadata.xml,
+  jrdesktop-0.2.0030:
+  Add Package.
+
