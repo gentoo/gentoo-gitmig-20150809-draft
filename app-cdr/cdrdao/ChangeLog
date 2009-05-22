@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.130 2009/05/22 05:07:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.131 2009/05/22 20:50:01 loki_val Exp $
+
+  22 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  cdrdao-1.2.3_rc2.ebuild, +files/cdrdao-1.2.3-autoconf-update.patch:
+  Fix bug 270807 by Duncan <1i5t5.duncan@cox.net>. autoreconf needs the
+  gconf-2 macro file even with USE=-gcdmaster. Patched into acinclude.m4.
 
 *cdrdao-1.2.3_rc2 (22 May 2009)
 

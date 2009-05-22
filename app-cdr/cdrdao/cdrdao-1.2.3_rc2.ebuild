@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3_rc2.ebuild,v 1.1 2009/05/22 05:07:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3_rc2.ebuild,v 1.2 2009/05/22 20:50:01 loki_val Exp $
 
 EAPI=2
 inherit eutils flag-o-matic eutils autotools
@@ -60,6 +60,7 @@ src_prepare() {
 
 	epatch "${FILESDIR}"/${PN}-1.2.3-gcc44.patch
 	epatch "${FILESDIR}"/${PN}-1.2.3-pkg-config.patch
+	epatch "${FILESDIR}"/${PN}-1.2.3-autoconf-update.patch
 
 	epatch "${FILESDIR}"/${PN}-1.2.3-k3b.patch
 	eautoreconf
