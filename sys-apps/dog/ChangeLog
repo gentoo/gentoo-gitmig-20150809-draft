@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dog
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.25 2009/05/22 13:08:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dog/ChangeLog,v 1.26 2009/05/22 14:09:05 fmccor Exp $
+
+  22 May 2009; Ferris McCormick <fmccor@gentoo.org> dog-1.7-r3.ebuild:
+  Sparc stable, Bug #269496.
 
   22 May 2009; Christian Faulhammer <fauli@gentoo.org> dog-1.7-r3.ebuild:
   stable x86, bug 269496
