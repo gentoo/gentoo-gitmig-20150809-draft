@@ -1,0 +1,14 @@
+Index: gwenhywfar-3.7.2/configure.ac
+===================================================================
+--- gwenhywfar-3.7.2.orig/configure.ac
++++ gwenhywfar-3.7.2/configure.ac
+@@ -204,7 +204,7 @@ AC_CHECK_LIB(rt, sem_init, 
+   [ 
+-    rt_libs="-lrt"
++    rt_libs="-lrt -pthread"
+     AC_DEFINE(HAVE_LIBRT, "1", [whether librt is available])
+-  ])
++  ], [], [-pthread])
+ AC_SUBST(rt_libs)
+ 
+ # Some systems have iconv in libc, some have it in libiconv (OSF/1 and

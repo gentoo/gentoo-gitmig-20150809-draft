@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.64 2009/04/05 16:55:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.65 2009/05/22 21:58:51 hanno Exp $
+
+*gwenhywfar-3.8.1 (22 May 2009)
+
+  22 May 2009; Hanno Boeck <hanno@gentoo.org> +gwenhywfar-3.8.1.ebuild,
+  +files/gwenhywfar-3.8.1-asneeded.diff,
+  +files/gwenhywfar-3.8.1-gcc-check.diff,
+  +files/gwenhywfar-3.8.1-gnutls-check.diff:
+  Version bump, patches for as-needed, gcc4-check in configure script and
+  gnutls 2.7.
 
 *gwenhywfar-3.8.0 (05 Apr 2009)
 
