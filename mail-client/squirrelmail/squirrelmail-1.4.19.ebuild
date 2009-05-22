@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.18-r1.ebuild,v 1.1 2009/05/15 17:09:36 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.19.ebuild,v 1.1 2009/05/22 11:56:52 dertobi123 Exp $
 
 EAPI=2
 
@@ -90,6 +90,11 @@ src_unpack() {
 	use nls &&
 		cd "${S}" &&
 		unpack all_locales-${LOCALES_VER}.tar.bz2
+}
+
+src_configure() {
+	#we need to have this empty function ... 
+	echo "Nothing to configure"
 }
 
 src_compile() {
