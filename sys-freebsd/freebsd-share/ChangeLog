@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-share
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.32 2009/05/22 13:49:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/ChangeLog,v 1.33 2009/05/22 16:42:16 aballier Exp $
+
+  22 May 2009; Alexis Ballier <aballier@gentoo.org>
+  freebsd-share-7.2.ebuild:
+  make PATCHES a bash array
 
 *freebsd-share-7.2 (22 May 2009)
 

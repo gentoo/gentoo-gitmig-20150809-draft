@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-7.2.ebuild,v 1.1 2009/05/22 13:49:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-share/freebsd-share-7.2.ebuild,v 1.2 2009/05/22 16:42:16 aballier Exp $
 
 inherit bsdmk freebsd
 
@@ -36,8 +36,8 @@ pkg_setup() {
 
 REMOVE_SUBDIRS="mk termcap zoneinfo tabset"
 
-PATCHES="${FILESDIR}/${PN}-5.3-doc-locations.patch
-	${FILESDIR}/${PN}-5.4-gentoo-skel.patch"
+PATCHES=( "${FILESDIR}/${PN}-5.3-doc-locations.patch"
+	"${FILESDIR}/${PN}-5.4-gentoo-skel.patch" )
 
 src_unpack() {
 	freebsd_src_unpack
