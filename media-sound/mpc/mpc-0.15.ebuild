@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.15.ebuild,v 1.6 2009/05/17 14:41:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.15.ebuild,v 1.7 2009/05/22 13:57:12 ssuominen Exp $
 
+EAPI=2
 inherit bash-completion
 
 DESCRIPTION="A commandline client for Music Player Daemon (media-sound/mpd)"
@@ -13,12 +14,12 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
 IUSE="iconv"
 
-DEPEND="iconv? ( virtual/libiconv )"
+RDEPEND="iconv? ( virtual/libiconv )"
+DEPEND="${RDEPEND}"
 
-src_compile() {
+src_configure() {
 	econf --disable-dependency-tracking \
 		$(use_enable iconv)
-	emake || die "emake failed"
 }
 
 src_install() {
