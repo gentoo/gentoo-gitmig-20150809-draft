@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.38 2009/03/20 14:56:45 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.39 2009/05/22 07:02:27 tupone Exp $
+
+  22 May 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/flightgear-1.9.1-gcc44.patch, flightgear-1.9.1.ebuild:
+  Fix build with gcc-4.4.0 Bug #269866 by Oschtan
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> flightgear-1.9.1.ebuild:
   Marked ~ppc for bug #252202.
