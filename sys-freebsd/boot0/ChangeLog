@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/boot0
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.22 2009/01/22 20:59:52 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/ChangeLog,v 1.23 2009/05/22 11:08:14 aballier Exp $
+
+*boot0-7.2 (22 May 2009)
+
+  22 May 2009; Alexis Ballier <aballier@gentoo.org> +boot0-7.2.ebuild:
+  bump to 7.2
 
 *boot0-7.1 (22 Jan 2009)
 
