@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-7.2.ebuild,v 1.1 2009/05/22 11:12:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-7.2.ebuild,v 1.2 2009/05/22 14:19:13 aballier Exp $
 
 inherit bsdmk freebsd
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/bin
 
-PATCHES="${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
+PATCHES=( "${FILESDIR}/${PN}-6.0-flex-2.5.31.patch" )
 
 # csh and tcsh are provided by tcsh package, rmail is sendmail stuff.
 REMOVE_SUBDIRS="csh rmail ed"
