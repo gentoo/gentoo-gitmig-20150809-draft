@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.39 2009/05/10 10:58:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.40 2009/05/22 22:45:29 eva Exp $
+
+*vinagre-2.26.2 (22 May 2009)
+
+  22 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +vinagre-2.26.2.ebuild:
+  Bump to 2.26.2. Updated docs and translations.
 
 *vinagre-2.26.1 (10 May 2009)
 
