@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9826 2009/05/20 17:39:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9827 2009/05/22 01:08:21 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -73,13 +73,6 @@ dev-ruby/ruby-config
 # unused. Removal in 30 days.
 gnome-base/libghttp
 
-# Samuli Suominen <ssuominen@gentoo.org> (14 May 2009)
-# Masked for removal wrt #263804, doesn't work with current
-# LastFM API and upstream has went missing. The package
-# needs new upstream, or we end up maintaining a huge
-# patchset for it.
-media-sound/lastfm-ripper
-
 # Mike Pagano <mpagano@gentoo.org> (13 May 2009)
 # Masked for testing of ~ (tilde) unmasked packages
 >=app-portage/portpeek-1.8
@@ -107,22 +100,9 @@ media-sound/lastfm-ripper
 =virtual/poppler-0.11*
 =virtual/poppler-glib-0.11*
 
-# Samuli Suominen <ssuominen@gentoo.org> (12 May 2009)
-# Masked for removal wrt security 208464, CVE-2008-0553.
-media-sound/rat
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 May 2009)
-# Masked for removal wrt #267622. Broken with new tcl.
-media-sound/wavesurfer
-
 # Samuli Suominen <ssuominen@gentoo.org> (11 May 2009)
 # pkgconfig filename changed, rdeps must be checked
 =media-libs/libsoundtouch-1.4.0
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 May 2009)
-# Masked for removal wrt #209500, #183928, #238620, and #247781
-# Upstream, nenolod, said i'd kill it.
-media-plugins/eq-audacious
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
 # Mark the haskell-platform, depends on other things masked for testing.
