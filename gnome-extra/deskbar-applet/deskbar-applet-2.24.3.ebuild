@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.3.ebuild,v 1.10 2009/04/27 14:10:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.24.3.ebuild,v 1.11 2009/05/22 22:40:45 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -63,6 +63,13 @@ src_unpack() {
 	rm m4/lt* m4/libtool.m4 ltmain.sh
 
 	AT_M4DIR="m4" eautoreconf
+}
+
+src_compile() {
+	# Needed for import gnomedesktop in configure, bug #270524
+	addpredict "$(unset HOME; echo ~)/.gnome2"
+
+	gnome2_src_compile
 }
 
 pkg_postinst() {

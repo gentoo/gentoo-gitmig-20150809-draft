@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.26.1.ebuild,v 1.1 2009/05/10 22:47:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/deskbar-applet-2.26.1.ebuild,v 1.2 2009/05/22 22:40:45 eva Exp $
 
 GCONF_DEBUG="no"
 
-inherit gnome2 python
+inherit eutils gnome2 python
 
 DESCRIPTION="An Omnipresent Versatile Search Interface"
 HOMEPAGE="http://raphael.slinckx.net/deskbar/"
@@ -55,6 +55,13 @@ src_unpack() {
 	# disable pyc compiling
 	mv py-compile py-compile.orig
 	ln -s $(type -P true) py-compile
+}
+
+src_compile() {
+	# Needed for import gnomedesktop in configure, bug #270524
+	addpredict "$(unset HOME; echo ~)/.gnome2"
+
+	gnome2_src_compile
 }
 
 pkg_postinst() {
