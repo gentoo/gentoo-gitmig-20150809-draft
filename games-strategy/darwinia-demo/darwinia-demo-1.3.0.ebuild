@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.8 2009/04/14 07:31:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.9 2009/05/22 21:47:48 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,9 +15,17 @@ IUSE=""
 RESTRICT="mirror strip"
 PROPERTIES="interactive"
 
-RDEPEND="sys-libs/glibc
-	virtual/opengl
-	amd64? ( app-emulation/emul-linux-x86-xlibs
+RDEPEND="
+	sys-libs/glibc
+	sys-devel/gcc
+	x86? (
+		virtual/opengl
+		virtual/glu
+		media-libs/libsdl
+		media-libs/libvorbis )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-medialibs
 		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
@@ -31,19 +39,19 @@ src_unpack() {
 
 src_install() {
 	exeinto "${dir}/lib"
-	doexe lib/lib{gcc_s.so.1,SDL-1.2.so.0,vorbis{.so.0,file.so.3},ogg.so.0} \
-		|| die "Copying libraries"
-	doexe lib/{darwinia.bin.x86,open-www.sh} || die "copying executables"
 	insinto "${dir}/lib"
+
+	doexe lib/{darwinia.bin.x86,open-www.sh} || die "copying executables"
 	doins lib/{sounds,main,language}.dat || die "copying data files"
+
 	insinto "${dir}"
 	dodoc README || die "copying docs"
 
 	exeinto "${dir}"
-	doexe bin/Linux/x86/darwinia || die "couldn't do exe"
+	doexe bin/Linux/x86/darwinia || die "doexe failed"
 
 	games_make_wrapper darwinia-demo ./darwinia "${dir}" "${dir}"
-	newicon darwinian.png darwinia-demo.png
-	make_desktop_entry darwinia-demo "Darwinia (Demo)" darwinia-demo
+	newicon darwinian.png ${PN}.png
+	make_desktop_entry darwinia-demo "Darwinia (Demo)"
 	prepgamesdirs
 }
