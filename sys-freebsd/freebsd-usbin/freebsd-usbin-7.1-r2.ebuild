@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.1-r2.ebuild,v 1.2 2009/05/18 17:46:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.1-r2.ebuild,v 1.3 2009/05/22 15:10:56 mr_bones_ Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ PROVIDE="virtual/logger"
 
 S="${WORKDIR}/usr.sbin"
 
-IUSE="acpi atm audit bluetooth ipv6 isdn netware nis pam ssl usb build"
+IUSE="acpi atm audit bluetooth ipv6 isdn netware nis pam ssl tcpd usb build"
 
 pkg_setup() {
 	# Release crunch is something like minimal. It seems to remove everything
