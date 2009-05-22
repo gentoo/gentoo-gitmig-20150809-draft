@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.19.ebuild,v 1.1 2009/05/22 11:56:52 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/squirrelmail/squirrelmail-1.4.19.ebuild,v 1.2 2009/05/22 15:32:56 mr_bones_ Exp $
 
 EAPI=2
 
@@ -93,7 +93,7 @@ src_unpack() {
 }
 
 src_configure() {
-	#we need to have this empty function ... 
+	#we need to have this empty function ...
 	echo "Nothing to configure"
 }
 
