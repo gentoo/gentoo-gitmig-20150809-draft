@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.2-r1.ebuild,v 1.2 2009/05/15 14:53:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.2-r1.ebuild,v 1.3 2009/05/22 23:42:07 flameeyes Exp $
 
 inherit ruby
 
@@ -30,11 +30,13 @@ src_compile() {
 }
 
 src_test() {
-	# the rake audit using dev-ruby/zentest currently fails, and we
-	# just need to call the testsuite directly.
-	# rake audit || die "rake audit failed"
-
-	${RUBY} test/run-test.rb || die "testsuite failed"
+	for ruby in $USE_RUBY; do
+		[[ -n `type -p $ruby` ]] || continue
+		# the rake audit using dev-ruby/zentest currently fails, and we
+		# just need to call the testsuite directly.
+		# rake audit || die "rake audit failed"
+		$ruby test/run-test.rb || die "testsuite failed"
+	done
 }
 
 src_install() {
