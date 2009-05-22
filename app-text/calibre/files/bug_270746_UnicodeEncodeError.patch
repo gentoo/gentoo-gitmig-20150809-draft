@@ -1,0 +1,10 @@
+--- src/calibre/utils/help2man.py
++++ src/calibre/utils/help2man.py
+@@ -54,6 +54,6 @@
+               'http://calibre.kovidgoyal.net/user_manual',
+               '.PP', '.B Created by '+__author__]
+     
+-    return  bz2.compress('\n'.join(lines))
++    return  bz2.compress(u'\n'.join(lines).encode('utf_8'))
+ 
+ 

@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.23 2009/05/21 19:43:44 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.24 2009/05/22 02:13:32 zmedico Exp $
+
+*calibre-0.5.13-r1 (22 May 2009)
+
+  22 May 2009; Zac Medico <zmedico@gentoo.org>
+  +files/bug_270746_UnicodeEncodeError.patch, +calibre-0.5.13-r1.ebuild:
+  Bug #270746 - Fix UnicodeEncodeError for LANG=pl_PL.UTF-8. Also, change
+  libusb dep to specify slot 0 and note that libusb-compat is untested.
 
 *calibre-0.5.13 (21 May 2009)
 
