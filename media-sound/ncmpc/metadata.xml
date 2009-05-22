@@ -16,8 +16,5 @@
 		<flag name="mouse">Enable curses getmouse support</flag>
 		<flag name="search-screen">Enable search screen</flag>
 		<flag name="song-screen">Enable song viewer screen</flag>
-		<!-- 0.11 -->
-		<flag name="clock-screen">Enable clock screen</flag>
-		<flag name="raw-mode">Raw terminal mode</flag>
 	</use>
 </pkgmetadata>
