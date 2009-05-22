@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/gnurobots
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.18 2009/03/02 15:31:29 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gnurobots/ChangeLog,v 1.19 2009/05/22 22:40:31 nyhm Exp $
+
+  22 May 2009; Tristan Heaven <nyhm@gentoo.org> gnurobots-1.2.0.ebuild:
+  Remove -pedantic-errors too, bug #254862
 
   02 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gnurobots-1.2.0.ebuild:
