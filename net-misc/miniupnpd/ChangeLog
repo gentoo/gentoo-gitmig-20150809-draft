@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/miniupnpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.9 2009/05/21 19:27:25 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/ChangeLog,v 1.10 2009/05/22 12:25:01 gurligebis Exp $
+
+  22 May 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  +files/miniupnpd-20090516.diff:
+  Fixing patch
 
 *miniupnpd-1.3-r1 (21 May 2009)
 
