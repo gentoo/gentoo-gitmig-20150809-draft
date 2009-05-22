@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.50 2009/04/27 20:34:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.51 2009/05/22 21:14:48 patrick Exp $
+
+*quassel-0.4.2 (22 May 2009)
+
+  22 May 2009; Patrick Lauer <patrick@gentoo.org> +quassel-0.4.2.ebuild:
+  Bump to 0.4.2
 
   27 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> quassel-9999:
   Introduce italian translation for live ebuild. Lovercase local var.
