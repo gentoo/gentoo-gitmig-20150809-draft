@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/ripmime
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.30 2007/02/22 01:53:16 peper Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.31 2009/05/22 20:05:13 dertobi123 Exp $
+
+*ripmime-1.4.0.9 (22 May 2009)
+
+  22 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +ripmime-1.4.0.9.ebuild:
+  Version bump (#270856) and install libripmime/headers (#197400)
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
