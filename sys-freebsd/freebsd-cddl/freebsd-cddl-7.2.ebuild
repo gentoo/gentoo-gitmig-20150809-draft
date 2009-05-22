@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-7.2.ebuild,v 1.1 2009/05/22 11:13:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-7.2.ebuild,v 1.2 2009/05/22 14:40:03 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic eutils
 
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/cddl"
 
-PATCHES="${FILESDIR}/${PN}-7.1-libpaths.patch"
+PATCHES=( "${FILESDIR}/${PN}-7.1-libpaths.patch" )
 
 pkg_setup() {
 	mymakeopts="${mymakeopts} NO_MANCOMPRESS= NO_INFOCOMPRESS= "
