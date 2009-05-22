@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-1.0.1.ebuild,v 1.1 2009/04/09 17:31:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/moonlight/moonlight-1.0.1.ebuild,v 1.2 2009/05/22 00:01:31 loki_val Exp $
 
 EAPI=2
 
@@ -28,7 +28,6 @@ RESTRICT="mirror"
 RDEPEND="
 	>=x11-libs/gtk+-2.14
 	>=dev-libs/glib-2.18
-	>=dev-libs/dbus-glib-0.60
 	>=x11-libs/cairo-1.8.0
 	>=media-video/ffmpeg-0.4.9_p20090121
 	>=net-libs/xulrunner-1.9.0.5:1.9
