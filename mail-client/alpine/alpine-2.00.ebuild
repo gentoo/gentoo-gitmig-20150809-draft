@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00.ebuild,v 1.3 2009/05/15 20:22:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/alpine-2.00.ebuild,v 1.4 2009/05/22 14:59:38 armin76 Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/alpine/${P}.tar.bz2
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE="+chappa doc ipv6 kerberos ldap nls onlyalpine passfile smime spell ssl threads topal"
 
 DEPEND="virtual/pam

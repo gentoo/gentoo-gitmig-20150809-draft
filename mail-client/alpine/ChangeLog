@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/alpine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.3 2009/05/15 20:22:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/alpine/ChangeLog,v 1.4 2009/05/22 14:59:38 armin76 Exp $
+
+  22 May 2009; Raúl Porcel <armin76@gentoo.org> alpine-2.00.ebuild:
+  Add ~ia64/~sparc wrt #267299
 
   15 May 2009; Markus Meier <maekke@gentoo.org> alpine-2.00.ebuild:
   add ~amd64, bug #267299
