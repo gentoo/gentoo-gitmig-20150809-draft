@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/mediatomb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.7 2008/10/27 05:26:01 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mediatomb/ChangeLog,v 1.8 2009/05/22 15:21:23 flameeyes Exp $
+
+  22 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mediatomb-0.11.0.ebuild, +files/mediatomb-0.11.0+glibc-2.10.patch:
+  Add patch to build with glibc-2.10, closes bug #270715.
 
   25 Oct 2008; Pieter Van den Abeele <pvdabeel@gentoo.org> mediatomb-0.11.0.ebuild:
   keyworded ~ppc. Closes bug #219420
