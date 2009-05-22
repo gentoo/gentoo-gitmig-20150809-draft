@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/ipmiutil
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.7 2008/08/07 21:57:46 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ipmiutil/ChangeLog,v 1.8 2009/05/22 16:28:57 flameeyes Exp $
+
+*ipmiutil-2.3.7 (22 May 2009)
+
+  22 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/ipmiutil-1.6.0-link-external-freeipmi.diff, +ipmiutil-2.3.7.ebuild,
+  +files/ipmiutil-2.3.7+glibc-2.10.patch:
+  Remove old file; bump to latest version (2.3.7) closing bug #264331; add
+  patch to build with glibc 2.10 closing bug #270541.
 
   07 Aug 2008; Markus Meier <maekke@gentoo.org> ipmiutil-2.1.1.ebuild:
   amd64/x86 stable, bug #233569
