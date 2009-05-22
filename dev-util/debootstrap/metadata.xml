@@ -6,7 +6,4 @@
 		<email>jer@gentoo.org</email>
 		<name>Jeroen Roovers</name>
 	</maintainer>
-	<use>
-		<flag name='nodpkg'>Disable support for <pkg>app-arch/dpkg</pkg> (useful for building a non-debian system)</flag>
-	</use>
 </pkgmetadata>
