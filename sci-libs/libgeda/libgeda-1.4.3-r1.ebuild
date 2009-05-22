@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.3-r1.ebuild,v 1.1 2009/05/20 01:51:23 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libgeda/libgeda-1.4.3-r1.ebuild,v 1.2 2009/05/22 08:14:06 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -54,4 +54,3 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_mime_database_update
 }
-
