@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.60 2009/05/15 09:03:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.61 2009/05/22 14:12:37 aballier Exp $
+
+  22 May 2009; Alexis Ballier <aballier@gentoo.org> fbsd/6.2/package.mask:
+  mask freebsd-cddl on 6.2 profiles as its fbsd 7 only
 
   15 May 2009; Alexis Ballier <aballier@gentoo.org> fbsd/package.use.mask:
   mask libproxy[xulrunner] as it requires xul 1.9
