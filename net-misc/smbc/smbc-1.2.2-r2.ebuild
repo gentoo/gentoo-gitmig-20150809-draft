@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/smbc-1.2.2-r1.ebuild,v 1.1 2009/05/22 03:20:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/smbc-1.2.2-r2.ebuild,v 1.1 2009/05/22 15:58:28 jer Exp $
 
 EAPI="2"
 
@@ -28,9 +28,14 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable nls) $(use_with debug) || die "econf failed"
+	econf \
+		$(use_enable nls) \
+		$(use_with debug) \
+		|| die "econf failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+	mkdir -p "${D}/usr/share/doc"
+	mv -v "${D}/usr/share/"{${PN},doc/${PF}}
 }
