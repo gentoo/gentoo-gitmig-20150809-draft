@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/smbc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.7 2009/04/28 17:13:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smbc/ChangeLog,v 1.8 2009/05/22 03:20:33 jer Exp $
+
+*smbc-1.2.2-r1 (22 May 2009)
+
+  22 May 2009; Jeroen Roovers <jer@gentoo.org> -smbc-1.2.2.ebuild,
+  +smbc-1.2.2-r1.ebuild:
+  Readd src_install() since install phase fails when that is implicit.
 
   28 Apr 2009; Jeroen Roovers <jer@gentoo.org>
   +files/smbc-1.2.2-cflags.patch, +files/smbc-1.2.2-size_t.patch,
