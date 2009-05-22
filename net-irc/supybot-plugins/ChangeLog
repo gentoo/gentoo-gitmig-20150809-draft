@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/supybot-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.2 2008/05/29 17:42:55 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/supybot-plugins/ChangeLog,v 1.3 2009/05/22 19:45:29 lack Exp $
+
+*supybot-plugins-20060723-r1 (22 May 2009)
+
+  22 May 2009; Jim Ramsay <lack@gentoo.org>
+  +supybot-plugins-20060723-r1.ebuild:
+  Fixed collision with supybot-0.83.4
 
   29 May 2008; Ali Polatel <hawking@gentoo.org>
   supybot-plugins-20060723.ebuild:
