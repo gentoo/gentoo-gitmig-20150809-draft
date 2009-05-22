@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_beta2.ebuild,v 1.6 2009/05/21 14:05:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15_beta2.ebuild,v 1.7 2009/05/22 11:49:36 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="aac +alsa ao audiofile avahi bzip2 cdio cue +curl debug doc +fifo +ffmpeg flac
+IUSE="aac +alsa ao audiofile avahi bzip2 cdio cue +curl debug +fifo +ffmpeg flac
 fluidsynth profile +id3 ipv6 jack lame lastfmradio libmms libsamplerate +mad
 mikmod modplug musepack +network ogg oss pipe pulseaudio sid sqlite unicode
 vorbis wavpack zip"
@@ -49,9 +49,7 @@ RDEPEND="!sys-cluster/mpich2
 	avahi? ( net-dns/avahi )
 	zip? ( dev-libs/zziplib )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	doc? ( app-doc/doxygen
-		app-text/xmlto )"
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${P/_/\~}
 
@@ -71,7 +69,7 @@ src_prepare() {
 
 src_configure() {
 	local mpdconf="--enable-tcp --enable-un --disable-wildmidi
-		--disable-libOggFLACtest"
+		--disable-libOggFLACtest --disable-documentation"
 
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
@@ -108,8 +106,8 @@ src_configure() {
 		$(use_enable fifo) $(use_enable pipe pipe-output) \
 		$(use_enable jack) $(use_enable oss) \
 		$(use_enable pulseaudio pulse) $(use_enable aac) \
-		$(use_enable doc documentation) $(use_enable debug) \
-		$(use_enable profile gprof) $(use_with avahi zeroconf avahi) \
+		$(use_enable debug) $(use_enable profile gprof) \
+		$(use_with avahi zeroconf avahi) \
 		${mpdconf}
 }
 
@@ -122,9 +120,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	rm -rf "${D}"/usr/share/doc/mpd
 
-	dodoc AUTHORS NEWS README UPGRADING
-	dodoc doc/mpdconf.dist
-	use doc && dohtml doc/protocol.html
+	dodoc AUTHORS NEWS README UPGRADING doc/mpdconf.dist
 
 	insinto /etc
 	newins doc/mpdconf.example mpd.conf
