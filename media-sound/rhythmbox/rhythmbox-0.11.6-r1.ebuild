@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6-r1.ebuild,v 1.8 2009/05/20 15:24:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.11.6-r1.ebuild,v 1.9 2009/05/22 09:14:25 ssuominen Exp $
 
 EAPI="1"
 
@@ -46,7 +46,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 		>=media-plugins/gst-plugins-cdio-0.10 )
 	>=media-plugins/gst-plugins-meta-0.10-r2:0.10
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
-	tagwriting? ( >=media-plugins/gst-plugins-taglib-0.10.6 )
+	taglib? ( >=media-plugins/gst-plugins-taglib-0.10.6 )
 	python? (
 		>=dev-lang/python-2.4.2
 		|| (
