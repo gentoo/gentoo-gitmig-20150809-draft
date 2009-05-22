@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pympd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.21 2008/05/30 07:06:49 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pympd/ChangeLog,v 1.22 2009/05/22 02:29:48 ssuominen Exp $
+
+  22 May 2009; Samuli Suominen <ssuominen@gentoo.org> -pympd-0.06.1.ebuild,
+  -pympd-0.07.ebuild, pympd-0.08.1.ebuild,
+  +files/pympd-0.08.1-desktop-entry.patch:
+  Improve desktop entry and scalable icon install and stabilize amd64.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
