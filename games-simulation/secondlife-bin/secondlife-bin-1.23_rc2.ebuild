@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc1.ebuild,v 1.2 2009/05/12 18:57:50 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc2.ebuild,v 1.1 2009/05/22 21:23:47 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
-SECONDLIFE_REVISION=119104
+SECONDLIFE_REVISION=120719
 SECONDLIFE_MAJOR_VER=$(get_version_component_range 1-2)
 SECONDLIFE_MINOR_VER=$(get_version_component_range 3)
 SECONDLIFE_MINOR_VER=${SECONDLIFE_MINOR_VER/rc/}
@@ -12,7 +12,7 @@ MY_P="SecondLife-i686-${SECONDLIFE_MAJOR_VER}.${SECONDLIFE_MINOR_VER}.${SECONDLI
 
 DESCRIPTION="The Second Life (an online, 3D virtual world) viewer"
 HOMEPAGE="http://secondlife.com/"
-SRC_URI="http://release-candidate-secondlife-com.s3.amazonaws.com/${MY_P}.tar.bz2"
+SRC_URI="http://automated-builds-secondlife-com.s3.amazonaws.com/viewer-rc-frozen/${SECONDLIFE_REVISION}/${MY_P}.tar.bz2"
 RESTRICT="mirror strip"
 
 LICENSE="GPL-2-with-Linden-Lab-FLOSS-exception"
@@ -81,8 +81,8 @@ src_unpack() {
 
 src_install() {
 	exeinto "${SECONDLIFE_HOME}"
-	doexe launch_url.sh linux-crash-logger.bin secondlife || die
-	rm -rf launch_url.sh linux-crash-logger.bin secondlife
+	doexe launch_url.sh secondlife || die
+	rm -rf launch_url.sh secondlife
 
 	exeinto "${SECONDLIFE_HOME}"/bin
 	doexe bin/* || die
