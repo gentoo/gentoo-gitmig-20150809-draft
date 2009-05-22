@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/pmd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.30 2007/11/02 10:42:27 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.31 2009/05/22 22:21:51 caster Exp $
+
+*pmd-4.2.5 (22 May 2009)
+
+  22 May 2009; Vlastimil Babka <caster@gentoo.org> +pmd-4.2.5.ebuild,
+  +files/pmd-4.2.5-build.xml.patch, +files/pmd-4.2.5-launcher-pre-commands:
+  Version bump, bug #216441. From java-overlay ebuild by serkan.
 
   02 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -pmd-3.8-r1.ebuild:
   Remove old ebuild.
