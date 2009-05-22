@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2.ebuild,v 1.1 2009/05/22 13:27:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.2.ebuild,v 1.2 2009/05/22 15:24:36 aballier Exp $
 
 EAPI=2
 
@@ -81,14 +81,14 @@ pkg_setup() {
 	fi
 }
 
-PATCHES="${FILESDIR}/${PN}-bsdxml.patch
-	${FILESDIR}/${PN}-6.0-pmc.patch
-	${FILESDIR}/${PN}-6.0-gccfloat.patch
-	${FILESDIR}/${PN}-6.0-flex-2.5.31.patch
-	${FILESDIR}/${PN}-6.1-csu.patch
-	${FILESDIR}/${PN}-6.2-bluetooth.patch
-	${FILESDIR}/${PN}-new_as.patch
-	${FILESDIR}/${PN}-7.0-CVE-2008-1391.patch"
+PATCHES=( "${FILESDIR}/${PN}-bsdxml.patch"
+	"${FILESDIR}/${PN}-6.0-pmc.patch"
+	"${FILESDIR}/${PN}-6.0-gccfloat.patch"
+	"${FILESDIR}/${PN}-6.0-flex-2.5.31.patch"
+	"${FILESDIR}/${PN}-6.1-csu.patch"
+	"${FILESDIR}/${PN}-6.2-bluetooth.patch"
+	"${FILESDIR}/${PN}-new_as.patch"
+	"${FILESDIR}/${PN}-7.0-CVE-2008-1391.patch" )
 
 # Here we disable and remove source which we don't need or want
 # In order:
