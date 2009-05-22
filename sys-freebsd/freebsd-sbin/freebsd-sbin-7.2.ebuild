@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-7.2.ebuild,v 1.1 2009/05/22 13:48:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-7.2.ebuild,v 1.2 2009/05/22 15:56:27 aballier Exp $
 
 EAPI=2
 
@@ -49,10 +49,10 @@ pkg_setup() {
 
 REMOVE_SUBDIRS="dhclient pfctl pflogd rcorder"
 
-PATCHES="${FILESDIR}/${PN}-setXid.patch
-	${FILESDIR}/${PN}-7.1-zlib.patch
-	${FILESDIR}/${PN}-6.2-ldconfig.patch
-	${FILESDIR}/${PN}-6.1-pr102701.patch"
+PATCHES=( "${FILESDIR}/${PN}-setXid.patch"
+	"${FILESDIR}/${PN}-7.1-zlib.patch"
+	"${FILESDIR}/${PN}-6.2-ldconfig.patch"
+	"${FILESDIR}/${PN}-6.1-pr102701.patch" )
 
 src_prepare() {
 	use build || ln -s "/usr/src/sys-${RV}" "${WORKDIR}/sys"
