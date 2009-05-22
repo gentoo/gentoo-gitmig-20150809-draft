@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_security
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.17 2009/01/01 14:20:13 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.18 2009/05/22 19:04:25 flameeyes Exp $
+
+*mod_security-2.5.9 (22 May 2009)
+
+  22 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +mod_security-2.5.9.ebuild,
+  +files/mod_security-2.5.9-broken-autotools.patch:
+  Update to version 2.5.9; finally respect flags (if apxs allows to..), have
+  a test function, simplify install.
 
 *mod_security-2.5.7 (01 Jan 2009)
 
