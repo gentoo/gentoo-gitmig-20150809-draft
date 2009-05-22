@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/peercast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.20 2009/05/08 15:38:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.21 2009/05/22 00:56:13 ssuominen Exp $
+
+*peercast-0.1218-r2 (22 May 2009)
+
+  22 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +peercast-0.1218-r2.ebuild, +files/peercast.initd:
+  New init.d file wrt #133595, thanks to Tomoaki Yamasaki.
 
   08 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   peercast-0.1218-r1.ebuild:
