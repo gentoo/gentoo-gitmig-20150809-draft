@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.94.ebuild,v 1.1 2009/05/21 21:47:36 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jline/jline-0.9.94.ebuild,v 1.2 2009/05/22 08:11:28 mr_bones_ Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source test"
@@ -55,4 +55,3 @@ src_install() {
 	use doc && java-pkg_dojavadoc ../apidocs
 	use source && java-pkg_dosrc src/main/java
 }
-
