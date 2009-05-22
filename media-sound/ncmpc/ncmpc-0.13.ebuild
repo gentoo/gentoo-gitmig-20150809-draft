@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.13.ebuild,v 1.6 2009/05/21 20:26:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ncmpc-0.13.ebuild,v 1.7 2009/05/22 13:42:04 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -16,10 +16,10 @@ IUSE="artist-screen colors debug +help-screen key-screen lyrics-screen
 mouse nls search-screen song-screen"
 #lirc
 
-RDEPEND=">=dev-libs/glib-2.4
+RDEPEND=">=dev-libs/glib-2.4:2
 	dev-libs/popt
-	sys-libs/ncurses
-	lirc? ( app-misc/lirc )"
+	sys-libs/ncurses"
+#	lirc? ( app-misc/lirc )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -34,7 +34,7 @@ src_configure() {
 		$(use_enable help-screen) \
 		$(use_enable key-screen) \
 		$(use_enable lyrics-screen) \
-		$(use_with   lyrics-screen lyrics-plugin-dir /usr/$(get_libdir)/ncmpc/lyrics) \
+		$(use_with lyrics-screen lyrics-plugin-dir /usr/$(get_libdir)/ncmpc/lyrics) \
 		$(use_enable mouse) \
 		$(use_enable nls) \
 		$(use_enable nls locale) \
