@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.34 2009/05/22 22:21:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.35 2009/05/23 01:08:26 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -272,13 +272,6 @@ standard_configure_options() {
 		4.5.1 | 4.5.2)
 			myconf="${myconf} -opensource"
 			;;
-	esac
-
-	# bug 270475
-	case "${MY_PV}" in
-		4.5.1 | 4.5.2)
-		myconf="${myconf} -platform $(qt_mkspecs_dir)"
-		;;
 	esac
 
 	echo "${myconf}"
