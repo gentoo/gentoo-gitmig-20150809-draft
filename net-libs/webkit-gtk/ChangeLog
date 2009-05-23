@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.25 2009/05/15 08:43:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.26 2009/05/23 17:48:45 nirbheek Exp $
+
+*webkit-gtk-1.1.7 (23 May 2009)
+
+  23 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +webkit-gtk-1.1.7.ebuild, metadata.xml:
+  Bump to 1.1.7 (from gnome overlay). Lots of new features, libsoup support,
+  gnome-keyring support, etc. Add gnome as herd.
 
   15 May 2009; Alexis Ballier <aballier@gentoo.org>
   webkit-gtk-0_p40220.ebuild, webkit-gtk-0_p42162.ebuild:
