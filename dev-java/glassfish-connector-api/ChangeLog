@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/glassfish-connector-api
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-connector-api/ChangeLog,v 1.1 2009/05/23 08:23:10 betelgeuse Exp $
+
+*glassfish-connector-api-1.1.2.2.04 (23 May 2009)
+
+  23 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  +glassfish-connector-api-1.1.2.2.04.ebuild, +metadata.xml:
+  New package. Needed for version bumping commons-transaction. Ebuild based
+  on glassfish-jms-api and done by me.
+
