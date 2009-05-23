@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r1.ebuild,v 1.3 2009/05/23 10:45:21 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r2.ebuild,v 1.1 2009/05/23 13:07:44 cla Exp $
 
 EAPI="2"
 inherit base cmake-utils flag-o-matic
@@ -99,6 +99,8 @@ src_prepare() {
 	config_enable module_word_fix m
 	config_enable module_nextinf m
 	config_enable module_idle m
+	config_enable module_tabs m
+	config_enable module_plus_pl_sms m
 
 	# Media players
 	if use amarok || use amarok2 || use audacious || use bmpx || use dragonplayer || use vlc; then
