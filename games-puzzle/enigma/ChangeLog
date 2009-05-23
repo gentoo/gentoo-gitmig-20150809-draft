@@ -1,6 +1,6 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.44 2009/05/22 08:52:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.45 2009/05/23 06:42:25 tove Exp $
 
   22 May 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/enigma-1.01-gcc44.patch, enigma-1.01.ebuild:
@@ -16,7 +16,7 @@
 
   18 Nov 2008; Michael Sterrett <mr_bones_@gentoo.org>
   +files/enigma-1.01-xerces-c.patch, enigma-1.01.ebuild:
-  add patch for building with xerces-c-3 from FrÃ©dÃ©ric COIFFIER via bug #242916
+  add patch for building with xerces-c-3 from Frédéric COIFFIER via bug #242916
 
   18 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org> enigma-1.01.ebuild:
   new tarball from upstream for 64-bit support (bug #235076)
@@ -32,7 +32,7 @@
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/enigma-1.01-gcc43.patch, enigma-1.01.ebuild:
-  Patch to fix building with gcc-4.3 from Martin VÃ¤th, bug #218941
+  Patch to fix building with gcc-4.3 from Martin Väth, bug #218941
 
 *enigma-1.01 (04 Nov 2007)
 
@@ -180,16 +180,16 @@
 
 *enigma-0.40a (21 Jun 2002)
 
-  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> enigma-0.40a.ebuild :
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> enigma-0.40a.ebuild :
   Added KEYWORDS.
 
-  21 Jun 2002; J.Alberto SuÃ¡rez L. <bass@gentoo.org> enigma-0.40a.ebuild:
+  21 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> enigma-0.40a.ebuild:
 
   Bumped version of Larry Cow,fixed problems with gcc3.
 
 *enigma-0.39a (28 Apr 2002)
 
-  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> enigma-0.39a.ebuild :
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> enigma-0.39a.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   28 Apr 2002; Ryan Phillips <rphillips@gentoo.org> enigma-0.39a.ebuild :
