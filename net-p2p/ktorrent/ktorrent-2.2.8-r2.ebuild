@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8-r2.ebuild,v 1.2 2009/05/23 17:07:31 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8-r2.ebuild,v 1.3 2009/05/23 20:11:07 mr_bones_ Exp $
 
 EAPI="2"
 
