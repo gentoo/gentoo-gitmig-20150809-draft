@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r1.ebuild,v 1.2 2009/05/14 23:26:54 cla Exp $
-
-inherit base cmake-utils flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r1.ebuild,v 1.3 2009/05/23 10:45:21 gentoofan23 Exp $
 
 EAPI="2"
+inherit base cmake-utils flag-o-matic
 
 DESCRIPTION="QT client for popular in Poland Gadu-Gadu instant messaging network"
 HOMEPAGE="http://www.kadu.net"
