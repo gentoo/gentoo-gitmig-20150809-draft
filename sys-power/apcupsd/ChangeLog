@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.47 2009/05/22 12:50:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.48 2009/05/23 12:03:34 maekke Exp $
+
+  23 May 2009; Markus Meier <maekke@gentoo.org> apcupsd-3.14.5-r2.ebuild:
+  amd64 stable, bug #255048
 
   22 May 2009; Christian Faulhammer <fauli@gentoo.org>
   apcupsd-3.14.5-r2.ebuild:
