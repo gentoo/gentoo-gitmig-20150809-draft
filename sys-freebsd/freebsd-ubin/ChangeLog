@@ -1,6 +1,9 @@
 # ChangeLog for sys-freebsd/freebsd-ubin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.60 2009/05/22 13:59:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/ChangeLog,v 1.61 2009/05/23 00:02:11 aballier Exp $
+
+  23 May 2009; Alexis Ballier <aballier@gentoo.org> freebsd-ubin-7.2.ebuild:
+  make PATCHES a bash array
 
 *freebsd-ubin-7.2 (22 May 2009)
 

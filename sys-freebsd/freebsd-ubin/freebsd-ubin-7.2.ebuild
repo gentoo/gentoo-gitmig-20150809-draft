@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-7.2.ebuild,v 1.1 2009/05/22 13:59:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-7.2.ebuild,v 1.2 2009/05/23 00:02:11 aballier Exp $
 
 EAPI=2
 
@@ -51,11 +51,11 @@ pkg_setup() {
 }
 
 # List of patches to apply
-PATCHES="${FILESDIR}/${PN}-6.0-bsdcmp.patch
-	${FILESDIR}/${PN}-6.0-fixmakefiles.patch
-	${FILESDIR}/${PN}-setXid.patch
-	${FILESDIR}/${PN}-lint-stdarg.patch
-	${FILESDIR}/${PN}-6.0-kdump-ioctl.patch"
+PATCHES=( "${FILESDIR}/${PN}-6.0-bsdcmp.patch"
+	"${FILESDIR}/${PN}-6.0-fixmakefiles.patch"
+	"${FILESDIR}/${PN}-setXid.patch"
+	"${FILESDIR}/${PN}-lint-stdarg.patch"
+	"${FILESDIR}/${PN}-6.0-kdump-ioctl.patch" )
 
 # Here we remove some sources we don't need because they are already
 # provided by portage's packages or similar. In order:
