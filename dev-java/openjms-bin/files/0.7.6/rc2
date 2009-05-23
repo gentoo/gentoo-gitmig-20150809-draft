@@ -21,7 +21,7 @@ start() {
 	check_config || return 1
 	ebegin "Starting JMS server"
 	cd ${JMSDIR}/bin
-	./startjms.sh > /var/log/openjms.log 2>&1 &
+	./startup.sh > /var/log/openjms.log 2>&1 &
 	sleep 5
 	if ps ax|grep '[o]rg\.exolab\.jms\.server\.JmsServer' > /dev/null; then
 		eend 0
