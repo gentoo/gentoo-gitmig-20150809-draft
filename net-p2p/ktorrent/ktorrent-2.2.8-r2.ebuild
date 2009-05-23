@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8-r2.ebuild,v 1.1 2009/05/23 14:29:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-2.2.8-r2.ebuild,v 1.2 2009/05/23 17:07:31 cla Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ SRC_URI="http://ktorrent.org/downloads/${MY_PV}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="3.5"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="avahi kdeenablefinal"
 
 DEPEND="!<net-p2p/ktorrent-2.2.8-r2
