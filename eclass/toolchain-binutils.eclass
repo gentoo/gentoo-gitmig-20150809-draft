@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.81 2009/05/10 01:41:33 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.82 2009/05/23 23:06:55 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 #
@@ -68,7 +68,16 @@ add_src_uri() {
 }
 add_src_uri binutils-${PV}-patches-${PATCHVER}.tar.bz2 ${PATCHVER}
 add_src_uri binutils-${PV}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2 ${UCLIBC_PATCHVER}
-add_src_uri elf2flt-${ELF2FLT_VER}.tar.bz2 ${ELF2FLT_VER}
+
+case ${ELF2FLT_VER} in
+	cvs:*)
+		inherit cvs
+		;;
+	git:*)
+		inherit git
+		;;
+	*) add_src_uri elf2flt-${ELF2FLT_VER}.tar.bz2 ${ELF2FLT_VER};;
+esac
 
 if version_is_at_least 2.18 ; then
 	LICENSE="|| ( GPL-3 LGPL-3 )"
