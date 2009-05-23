@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5.ebuild,v 1.1 2009/05/23 07:47:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5.ebuild,v 1.2 2009/05/23 07:49:56 betelgeuse Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -27,6 +27,7 @@ COMMON_DEPEND=">=dev-java/bcmail-${BCV}
 	>=dev-java/bcprov-${BCV}
 	rups? ( dev-java/dom4j:1 dev-java/pdf-renderer:0 )"
 DEPEND="|| ( =virtual/jdk-1.6* =virtual/jdk-1.5* !doc? ( !rups? ( =virtual/jdk-1.4* ) ) )
+	cjk? ( app-arch/unzip )
 	 ${COMMON_DEPEND}"
 RDEPEND="!doc? ( !rups? ( >=virtual/jre-1.4 ) )
 	doc? ( !rups? ( >=virtual/jre-1.5 ) )
