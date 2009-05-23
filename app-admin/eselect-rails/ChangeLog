@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-rails
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.33 2009/05/23 15:09:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-rails/ChangeLog,v 1.34 2009/05/23 16:51:26 gentoofan23 Exp $
+
+  23 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  eselect-rails-0.15.ebuild:
+  stable amd64, bug 270331
 
   23 May 2009; Brent Baude <ranger@gentoo.org> eselect-rails-0.15.ebuild:
   Marking eselect-rails-0.15 ppc64 stable for bug 270331
