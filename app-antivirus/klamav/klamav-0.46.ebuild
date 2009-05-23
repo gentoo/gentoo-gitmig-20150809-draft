@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.46.ebuild,v 1.4 2009/05/21 18:19:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.46.ebuild,v 1.5 2009/05/23 10:27:09 maekke Exp $
 
 ARTS_REQUIRED="never"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=app-antivirus/clamav-0.90"

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.95.1.ebuild,v 1.10 2009/05/21 18:18:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.95.1.ebuild,v 1.11 2009/05/23 10:25:21 maekke Exp $
 
 inherit autotools eutils flag-o-matic fixheadtails multilib versionator
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="bzip2 clamdtop crypt iconv milter selinux ipv6"
 
 COMMON_DEPEND="bzip2? ( app-arch/bzip2 )
