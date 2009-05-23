@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.7.ebuild,v 1.1 2009/05/23 17:48:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.7.ebuild,v 1.2 2009/05/23 20:10:57 nirbheek Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 # geoclue
-IUSE="coverage debug doc gnome-keyring +gstreamer +pango"
+IUSE="coverage debug doc gnome-keyring +gstreamer pango"
 
 # use sqlite, svg by default
 RDEPEND="
@@ -61,6 +61,8 @@ src_configure() {
 	# USE-flag controlled font backend because upstream default is freetype
 	# Remove USE-flag once font-backend becomes pango upstream
 	if use pango; then
+		ewarn "You have enabled the incomplete pango backend"
+		ewarn "Please file any and all bugs *upstream*"
 		myconf="${myconf} --with-font-backend=pango"
 	else
 		myconf="${myconf} --with-font-backend=freetype"

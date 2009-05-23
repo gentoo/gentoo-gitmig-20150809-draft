@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.26 2009/05/23 17:48:45 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.27 2009/05/23 20:10:57 nirbheek Exp $
+
+  23 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  webkit-gtk-1.1.7.ebuild:
+  Don't make pango default. It's experimental, buggy, and incomplete.
+  Upstream does not recommend it.
 
 *webkit-gtk-1.1.7 (23 May 2009)
 
