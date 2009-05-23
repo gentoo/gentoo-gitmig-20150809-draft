@@ -1,6 +1,13 @@
 # ChangeLog for media-video/totem
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.242 2009/04/28 14:34:34 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.243 2009/05/23 21:41:40 eva Exp $
+
+*totem-2.26.2 (23 May 2009)
+
+  23 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -totem-2.18.3.ebuild,
+  totem-2.20.3.ebuild, -totem-2.22.2-r1.ebuild, -totem-2.24.4.ebuild,
+  +files/totem-2.26.1-smclient-target-detection.patch, +totem-2.26.2.ebuild:
+  New version for GNOME 2.26. New plugins, UI fixes. Clean up old revisions.
 
   28 Apr 2009; Raúl Porcel <armin76@gentoo.org> totem-2.20.3.ebuild:
   arm/sh stable
