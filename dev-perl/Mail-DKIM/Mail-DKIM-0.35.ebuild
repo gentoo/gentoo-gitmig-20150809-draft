@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.34.ebuild,v 1.1 2009/05/22 07:21:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/Mail-DKIM-0.35.ebuild,v 1.1 2009/05/23 06:51:07 tove Exp $
 
 EAPI=2
 
