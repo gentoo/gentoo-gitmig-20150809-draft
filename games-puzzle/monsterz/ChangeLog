@@ -1,10 +1,6 @@
 # ChangeLog for games-puzzle/monsterz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.23 2009/05/23 20:25:42 nyhm Exp $
-
-  23 May 2009; Tristan Heaven <nyhm@gentoo.org> +monsterz-0.7.1-r2.ebuild,
-  +files/monsterz-0.7.1-blit.patch:
-  Patch from Fedora to fix blitting error with pygame-1.8, bug #263854
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/monsterz/ChangeLog,v 1.24 2009/05/23 20:28:02 nyhm Exp $
 
 *monsterz-0.7.1-r2 (23 May 2009)
 
