@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.2.0-r1.ebuild,v 1.1 2009/05/23 08:03:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/jruby-1.2.0-r1.ebuild,v 1.2 2009/05/23 23:02:21 caster Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -60,9 +60,23 @@ pkg_setup() {
 	java-pkg-2_pkg_setup
 	use java6 || EANT_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH} backport-util-concurrent"
 
+	local fail
+
 	if [[ -d "${GEMS}" && ! -L "${GEMS}" ]]; then
-		ewarn "dev-java/jruby now uses dev-lang/ruby's gems directory by creating symlinks."
-		ewarn "${GEMS} is a directory right now, which will cause problems when being merged onto the filesystem."
+		eerror "${GEMS} is a directory. Please remove this directory."
+		fail="true"
+	fi
+
+	# the symlink creates a collision with rubygems, bug #270953
+	# cannot be currently solved by removing in pkg_preinst, bug #233278
+	if [[ -L "${SITE_RUBY}" ]]; then
+		eerror "${SITE_RUBY} is a symlink. Please remove this symlink."
+		fail="true"
+	fi
+
+	if [[ -n ${fail} ]]; then
+		eerror "Unmerging the old jruby version should also fix the problem(s)."
+		die "Please address the above errors, then run emerge --resume"
 	fi
 }
 
@@ -149,12 +163,3 @@ src_install() {
 	doenvd "${FILESDIR}/10jruby" || die
 }
 
-pkg_preinst() {
-	if [[ -d "${GEMS}" && ! -L "${GEMS}" ]]; then
-		eerror "${GEMS} is a directory. Please move this directory out of the way, and then emerge --resume."
-		die "Please address the above errors, then emerge --resume."
-	fi
-
-	# Delete site_ruby if it is a symlink.
-	[[ -L "${SITE_RUBY}" ]] && rm -f "${SITE_RUBY}"
-}

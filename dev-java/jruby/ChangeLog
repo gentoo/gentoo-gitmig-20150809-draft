@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.35 2009/05/23 08:03:46 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.36 2009/05/23 23:02:21 caster Exp $
+
+  23 May 2009; Vlastimil Babka <caster@gentoo.org> jruby-1.2.0-r1.ebuild:
+  Add pkg_setup checks to workaround bug #270953.
 
 *jruby-1.2.0-r1 (23 May 2009)
 
