@@ -8,6 +8,7 @@
 		<flag name="dbus">Allow the Mail Notification plugin to notify you about
 			new messages via an icon in the tray using
 			<pkg>sys-apps/dbus</pkg></flag>
+		<flag name="exchange">Build optional Microsoft Exchange support</flag>
 		<flag name="hal">Enable support for auto-detection of inserted iPods and
 			syncing data with them using <pkg>sys-apps/hal</pkg></flag>
 		<flag name="ldap">Enable support for fetching contacts from an LDAP or
@@ -17,8 +18,7 @@
 		<flag name="networkmanager">Allows Evolution to automagically toggle
 			online/offline mode by talking to <pkg>net-misc/networkmanager</pkg>
 			and getting the current network state</flag>
-		<flag name="spell">Enable spell-checking support using
-			<pkg>app-text/gnome-spell</pkg></flag>
+		<flag name="pst">Build optional plugin for PST file format import</flag>
 		<flag name="pda">Enable support for syncing Evolution Calendar and
 			Addressbooks with PDAs using <pkg>app-pda/gnome-pilot</pkg> and
 			<pkg>app-pda/gnome-pilot-conduit</pkg></flag>
