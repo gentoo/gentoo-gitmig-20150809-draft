@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2682 2009/05/23 14:09:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2683 2009/05/23 18:01:11 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.mask:
+  GNOME + libsoup 2.26 are in-tree, so is latest webkit-gtk
 
   23 May 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   remove x11-proto/xproto from p.mask

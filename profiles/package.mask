@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9828 2009/05/23 14:09:00 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9829 2009/05/23 18:01:11 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -427,11 +427,6 @@ app-shells/bash-completion-config
 # Due to popular demand and no suitable replacement, it will stay in the tree
 # in a masked status until it completely breaks or is replaced.
 app-portage/udept
-
-# Markus Ullmann <jokey@gentoo.org> (5 Apr 2009)
-# mask until gnome 2.26 is in-tree (needs libsoup 2.26)
->=www-client/midori-0.1.5
->=net-libs/webkit-gtk-0_p42000
 
 # Ulrich Mueller <ulm@gentoo.org> (2 Apr 2009)
 # De-supported by upstream since three years, see http://tug.org/teTeX/
