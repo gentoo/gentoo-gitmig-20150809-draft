@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r6.ebuild,v 1.3 2009/05/20 22:16:57 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_beta-r7.ebuild,v 1.1 2009/05/23 23:52:29 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -55,6 +55,7 @@ IUSE="debug doc ${IUSE_NETBEANS_MODULES} ${IUSE_LINGUAS}"
 RDEPEND=">=virtual/jdk-1.5
 	java-virtuals/jdk-with-com-sun
 	>=dev-java/javahelp-2:0
+	dev-java/jna:0
 	dev-java/jsr223:0
 	>=dev-java/junit-4:4
 	>=dev-java/swing-layout-1:1
@@ -138,9 +139,10 @@ RDEPEND=">=virtual/jdk-1.5
 	)
 	netbeans_modules_ruby? (
 		dev-java/asm:3
-		dev-java/bytelist:0
 		dev-java/jline:0
+		dev-java/jna-posix:0
 		dev-java/joda-time:0
+		dev-java/joni:0
 		dev-java/jruby:0
 		dev-java/jvyamlb:0
 		dev-util/jay:0[java]
@@ -153,6 +155,7 @@ DEPEND=">=virtual/jdk-1.5
 	>=dev-java/ant-nodeps-1.7.1:0
 	dev-java/ant-trax:0
 	>=dev-java/javahelp-2:0
+	dev-java/jna:0
 	dev-java/jsr223:0
 	>=dev-java/junit-4:4
 	>=dev-java/swing-layout-1:1
@@ -204,7 +207,6 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/javacup-0.11a_beta20060608:0
 	)
 	netbeans_modules_ruby? (
-		dev-java/bytelist:0
 		dev-java/jvyamlb:0
 		dev-util/jay:0
 	)"
@@ -455,8 +457,6 @@ src_prepare () {
 		einfo "Removing rest of the bundled jars..."
 		find "${S}" -type f -name "*.jar" > ${tmpfile} || die "Cannot put jars in tmp file"
 
-		sed -e "/libs\.jna\/external\/jna-3\.0\.9\.jar/d" -i ${tmpfile} || die
-
 		if use netbeans_modules_dlight ; then
 			sed -e "/dlight\.db\.h2\/external\/h2-1\.0\.79\.jar/d" -i ${tmpfile} || die
 			sed -e "/dlight\.derby\.support\/external\/derby-10\.2\.2\.0\.jar/d" -i ${tmpfile} || die
@@ -556,6 +556,7 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_ruby ; then
+			sed -e "/libs\.bytelist\/external\/bytelist-0\.1\.jar/d" -i ${tmpfile} || die
 			sed -e "/libs\.jrubyparser\/external\/jruby-parser-0\.1\.jar/d" -i ${tmpfile} || die
 			sed -e "\/o\.kxml2\/external\/kxml2-2\.3\.0\.jar/d" -i ${tmpfile} || die
 			sed -e "\/o\.rubyforge\.debugcommons\/external\/debug-commons-java-0\.10\.0\.jar/d" -i ${tmpfile} || die
@@ -780,9 +781,10 @@ place_unpack_symlinks() {
 
 	einfo "Symlinking compilation-time jars"
 
-	dosymcompilejar "javahelp/external" javahelp jh.jar jh-2.0_05.jar
 	dosymcompilejar "apisupport.harness/external" javahelp jhall.jar jsearch-2.0_05.jar
+	dosymcompilejar "javahelp/external" javahelp jh.jar jh-2.0_05.jar
 	dosymcompilejar "o.jdesktop.layout/external" swing-layout-1 swing-layout.jar swing-layout-1.0.3.jar
+	dosymcompilejar "libs.jna/external" jna jna.jar jna-3.0.9.jar
 	dosymcompilejar "libs.jsr223/external" jsr223 script-api.jar jsr223-api.jar
 	dosymcompilejar "libs.junit4/external" junit-4 junit.jar junit-4.5.jar
 
@@ -841,7 +843,6 @@ place_unpack_symlinks() {
 	fi
 
 	if use netbeans_modules_ruby ; then
-		dosymcompilejar "libs.bytelist/external" bytelist bytelist.jar bytelist-0.1.jar
 		dosymcompilejar "libs.jvyamlb/external" jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
 		dosymcompilejar "libs.yydebug/external" jay yydebug.jar yydebug-1.0.2.jar
 	fi
@@ -858,7 +859,7 @@ symlink_extjars() {
 
 	targetdir="platform${PLATFORM}/modules/ext"
 	dosyminstjar ${targetdir} javahelp jh.jar jh-2.0_05.jar
-	# jna-3.0.2.jar
+	dosyminstjar ${targetdir} jna jna.jar jna-3.0.9.jar
 	dosyminstjar ${targetdir} jsr223 script-api.jar script-api.jar
 	dosyminstjar ${targetdir} junit-4 junit.jar junit-4.5.jar
 	dosyminstjar ${targetdir} swing-layout-1 swing-layout.jar swing-layout-1.0.3.jar
@@ -1074,13 +1075,13 @@ symlink_extjars() {
 		dosyminstjar ${targetdir} asm-3 asm-commons.jar asm-commons-3.0.jar
 		dosyminstjar ${targetdir} asm-3 asm-tree.jar asm-tree-3.0.jar
 		dosyminstjar ${targetdir} asm-3 asm-util.jar asm-util-3.0.jar
-		dosyminstjar ${targetdir} bytelist bytelist.jar bytelist-0.1.jar
+		# bytelist-0.1.jar
 		# debug-commons-java-0.10.0.jar
 		# dynalang-0.3.jar
 		dosyminstjar ${targetdir} jline jline.jar jline-0.9.93.jar
-		# jna-posix.jar
+		dosyminstjar ${targetdir} jna-posix jna-posix.jar jna-posix.jar
 		dosyminstjar ${targetdir} joda-time joda-time.jar joda-time-1.5.1.jar
-		# joni.jar - i did not find this package
+		dosyminstjar ${targetdir} joni joni.jar joni.jar
 		# jruby-parser-0.1.jar
 		dosyminstjar ${targetdir} jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
 		# kxml2-2.3.0.jar
