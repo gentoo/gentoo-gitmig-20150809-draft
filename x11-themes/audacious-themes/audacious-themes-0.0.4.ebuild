@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/audacious-themes-0.0.4.ebuild,v 1.3 2009/05/23 12:21:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/audacious-themes/audacious-themes-0.0.4.ebuild,v 1.4 2009/05/23 19:08:40 nixnut Exp $
 
 DESCRIPTION="Collection of XMMS themes for Audacious"
 HOMEPAGE="http://www.xmms.org"
@@ -103,7 +103,7 @@ SRC_URI="${THEME_URI}/AbsoluteE_Xmms.zip
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 
 IUSE=""
 
