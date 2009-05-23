@@ -1,6 +1,13 @@
 # ChangeLog for media-video/subtitleeditor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.1 2009/02/01 10:47:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.2 2009/05/23 13:10:45 eva Exp $
+
+*subtitleeditor-0.31.0 (23 May 2009)
+
+  23 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +subtitleeditor-0.31.0.ebuild:
+  Bump to 0.31. Fix build with -no-undefined, segfaults and waveform
+  creation.
 
 *subtitleeditor-0.30.0 (01 Feb 2009)
 
