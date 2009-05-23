@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.106 2009/05/23 14:51:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.107 2009/05/23 15:08:45 ranger Exp $
+
+  23 May 2009; Brent Baude <ranger@gentoo.org> actionpack-2.3.2.ebuild:
+  Marking actionpack-2.3.2 ppc64 stable for bug 270331
 
   23 May 2009; Brent Baude <ranger@gentoo.org> actionpack-2.3.2.ebuild:
   Marking actionpack-2.3.2 ppc stable for bug 270331
