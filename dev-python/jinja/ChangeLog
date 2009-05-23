@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.6 2009/04/15 20:13:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/ChangeLog,v 1.7 2009/05/23 19:18:25 nixnut Exp $
+
+  23 May 2009; nixnut <nixnut@gentoo.org> jinja-1.2.ebuild:
+  ppc stable #270089
 
   15 Apr 2009; Markus Meier <maekke@gentoo.org> jinja-1.2.ebuild:
   amd64/x86 stable, bug #261887
