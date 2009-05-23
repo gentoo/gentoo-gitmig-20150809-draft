@@ -1,6 +1,10 @@
 # ChangeLog for games-action/btanks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.19 2009/05/19 17:38:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/btanks/ChangeLog,v 1.20 2009/05/23 22:09:59 nyhm Exp $
+
+  23 May 2009; Tristan Heaven <nyhm@gentoo.org> btanks-0.8.7686.ebuild,
+  files/btanks-0.8.7686-scons-blows.patch:
+  Use system sdl-gfx instead of the bundled version, bug #252526
 
   19 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
   btanks-0.8.7686.ebuild:
