@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.8.1.ebuild,v 1.1 2009/05/22 21:58:51 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.8.1.ebuild,v 1.2 2009/05/23 13:47:32 hanno Exp $
 
 EAPI="2"
 
@@ -17,6 +17,7 @@ IUSE="debug ssl doc"
 
 RDEPEND="ssl? ( net-libs/gnutls )"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2.4
 	doc? ( app-doc/doxygen )"
 
 src_prepare() {
