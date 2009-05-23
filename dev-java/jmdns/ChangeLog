@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmdns
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.12 2007/11/15 00:36:43 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.13 2009/05/23 21:10:26 ali_bush Exp $
+
+  23 May 2009; Alistair Bush <ali_bush@gentoo.org> jmdns-1.0.ebuild:
+  Fix build failure when source use flag enabled. See #268346
 
   15 Nov 2007; Petteri Räty <betelgeuse@gentoo.org> -jmdns-0.2.ebuild:
   Delete old version.
