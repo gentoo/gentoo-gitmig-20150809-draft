@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.98 2009/05/23 09:19:56 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.99 2009/05/23 10:50:34 maekke Exp $
+
+  23 May 2009; Markus Meier <maekke@gentoo.org> pidgin-2.5.6.ebuild:
+  x86 stable, bug #270811
 
   23 May 2009; Tobias Heinlein <keytoaster@gentoo.org> pidgin-2.5.6.ebuild:
   amd64 stable wrt security bug #270811
