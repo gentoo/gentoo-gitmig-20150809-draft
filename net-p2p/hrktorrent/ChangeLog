@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/hrktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/ChangeLog,v 1.15 2009/05/08 18:07:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/hrktorrent/ChangeLog,v 1.16 2009/05/23 13:43:46 maekke Exp $
+
+  23 May 2009; Markus Meier <maekke@gentoo.org> hrktorrent-0.3.4.ebuild:
+  amd64 stable, bug #268815
 
   08 May 2009; Raúl Porcel <armin76@gentoo.org> hrktorrent-0.3.4.ebuild:
   x86 stable wrt #268815
