@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.14.2.ebuild,v 1.10 2009/05/23 21:14:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.15-r1.ebuild,v 1.1 2009/05/23 21:14:31 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils autotools
@@ -16,12 +16,12 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 else
 	SRC_URI="mirror://kernel/linux/utils/util-linux-ng/v${PV:0:4}/${MY_P}.tar.bz2
-		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-ng-2.14.2-20090214.diff.bz2 )"
+		loop-aes? ( http://loop-aes.sourceforge.net/updates/util-linux-ng-2.15-20090511.diff.bz2 )"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="crypt loop-aes nls old-linux selinux slang uclibc unicode"
 
 RDEPEND="!sys-process/schedutils
@@ -43,7 +43,9 @@ src_unpack() {
 		unpack ${A}
 		cd "${S}"
 		#epatch "${FILESDIR}"/${PN}-2.13-uclibc.patch #203711
-		epatch "${FILESDIR}"/${PN}-2.15-old-libselinux.patch #270168
+		epatch "${FILESDIR}"/${P}-cpuid-pic.patch #269001
+		epatch "${FILESDIR}"/${P}-losetup-symlinks.patch #269264
+		epatch "${FILESDIR}"/${P}-old-libselinux.patch #270168
 		use loop-aes && epatch "${WORKDIR}"/util-linux-ng-*.diff
 		eautoreconf
 	fi
