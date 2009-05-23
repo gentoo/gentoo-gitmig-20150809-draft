@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/AnyEvent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.52 2009/05/14 10:11:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/AnyEvent/ChangeLog,v 1.53 2009/05/23 17:05:42 armin76 Exp $
+
+  23 May 2009; Raúl Porcel <armin76@gentoo.org> AnyEvent-4.4.1.ebuild:
+  Add ~arm wrt #270465
 
 *AnyEvent-4.4.1 (14 May 2009)
 

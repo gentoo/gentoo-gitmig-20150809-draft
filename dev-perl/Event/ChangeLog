@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Event
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.63 2008/08/23 19:57:08 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.64 2009/05/23 17:04:56 armin76 Exp $
+
+  23 May 2009; Raúl Porcel <armin76@gentoo.org> Event-1.09.ebuild,
+  Event-1.10.ebuild, Event-1.11.ebuild:
+  Add ~arm wrt #270465
 
   23 Aug 2008; Torsten Veller <tove@gentoo.org> -Event-1.06.ebuild,
   -Event-1.07.ebuild, -Event-1.08.ebuild:
