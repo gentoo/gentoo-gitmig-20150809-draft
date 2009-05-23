@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.115 2009/05/14 08:53:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.116 2009/05/23 20:21:23 eva Exp $
+
+*seahorse-2.26.2 (23 May 2009)
+
+  23 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -seahorse-2.20.3.ebuild, +seahorse-2.26.2.ebuild:
+  Bump to 2.26.2. Translation updates. Clean up old revisions.
 
 *seahorse-2.26.1 (14 May 2009)
 
