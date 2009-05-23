@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/gmpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.57 2009/03/20 15:44:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/ChangeLog,v 1.58 2009/05/23 19:41:24 ssuominen Exp $
+
+*gmpc-0.18.0-r1 (23 May 2009)
+
+  23 May 2009; Samuli Suominen <ssuominen@gentoo.org> -gmpc-0.18.0.ebuild,
+  +gmpc-0.18.0-r1.ebuild, +files/gmpc-0.18.0-libxspf.patch, metadata.xml:
+  Thanks to amateja from PLD Linux chatroom at Freenode for helping me out
+  porting gmpc to libxspf from libspiff.
 
   20 Mar 2009; Raúl Porcel <armin76@gentoo.org> gmpc-0.17.0.ebuild:
   x86 stable wrt #259793

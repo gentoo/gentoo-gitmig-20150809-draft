@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.18.0.ebuild,v 1.2 2009/03/15 08:38:43 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmpc/gmpc-0.18.0-r1.ebuild,v 1.1 2009/05/23 19:41:24 ssuominen Exp $
 
-EAPI=1
-
-inherit gnome2-utils
+EAPI=2
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="A GTK+2 client for the Music Player Daemon"
 HOMEPAGE="http://gmpcwiki.sarine.nl/index.php/GMPC"
@@ -13,7 +12,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="nls session spiff"
+IUSE="nls session xspf"
 
 RDEPEND=">=dev-libs/glib-2.10:2
 	dev-perl/XML-Parser
@@ -24,20 +23,24 @@ RDEPEND=">=dev-libs/glib-2.10:2
 	>=x11-libs/gtk+-2.12:2
 	x11-libs/libsexy
 	session? ( x11-libs/libSM )
-	spiff? ( media-libs/libspiff )"
+	xspf? ( >=media-libs/libxspf-1.2 )"
 DEPEND="${RDEPEND}
 	dev-util/gob
 	dev-util/intltool
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-libxspf.patch
+	eautoreconf
+}
+
+src_configure() {
 	econf \
 		$(use_enable session sm) \
-		$(use_enable spiff libspiff) \
+		$(use_enable xspf libxspf) \
 		--enable-system-libsexy \
 		--disable-shave
-	emake || die "emake failed"
 }
 
 src_install() {
