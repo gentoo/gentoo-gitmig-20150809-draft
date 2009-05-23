@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.2.ebuild,v 1.2 2009/05/22 15:10:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.2.ebuild,v 1.3 2009/05/23 05:32:36 aballier Exp $
 
 EAPI=2
 
@@ -61,8 +61,8 @@ pkg_setup() {
 	mymakeopts="${mymakeopts} WITHOUT_BIND_NAMED= WITHOUT_BIND_DNSSEC= WITHOUT_PF= WITHOUT_LPR= WITHOUT_SENDMAIL= WITHOUT_AUTHPF= WITHOUT_MAILWRAPPER= "
 }
 
-PATCHES="${FILESDIR}/${PN}-7.0-nowrap.patch
-	${FILESDIR}/${PN}-adduser.patch"
+PATCHES=( "${FILESDIR}/${PN}-7.0-nowrap.patch"
+	"${FILESDIR}/${PN}-adduser.patch" )
 
 REMOVE_SUBDIRS="
 	named named-checkzone named-checkconf rndc rndc-confgen
