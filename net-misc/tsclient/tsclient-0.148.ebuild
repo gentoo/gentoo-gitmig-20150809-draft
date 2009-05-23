@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.148.ebuild,v 1.6 2007/07/27 18:04:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/tsclient-0.148.ebuild,v 1.7 2009/05/23 21:52:05 beandog Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install failed"
-	dodoc AUTHORS NEWS README VERSION
+	dodoc AUTHORS NEWS README
 }
 
 pkg_postinst() {

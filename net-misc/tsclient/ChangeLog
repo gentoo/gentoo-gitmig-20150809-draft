@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tsclient
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.28 2008/07/28 17:22:33 wolf31o2 Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.29 2009/05/23 21:52:05 beandog Exp $
+
+  23 May 2009; Steve Dibb <beandog@gentoo.org> tsclient-0.148.ebuild:
+  Remove dodoc on non-existing file
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
