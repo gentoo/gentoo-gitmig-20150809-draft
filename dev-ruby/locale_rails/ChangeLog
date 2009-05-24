@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/locale_rails
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.3 2009/05/12 06:31:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale_rails/ChangeLog,v 1.4 2009/05/24 07:43:17 graaff Exp $
+
+  24 May 2009; Hans de Graaff <graaff@gentoo.org>
+  -locale_rails-2.0.0.ebuild, -locale_rails-2.0.1.ebuild:
+  Remove old versions.
 
 *locale_rails-2.0.3 (12 May 2009)
 
