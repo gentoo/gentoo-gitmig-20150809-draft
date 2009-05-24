@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.90 2009/04/05 07:50:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.91 2009/05/24 07:25:48 grobian Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -154,6 +154,18 @@ tc-is-softfloat() {
 			;;
 	esac
 }
+
+# @FUNCTION: tc-is-static-only
+# @DESCRIPTION:
+# Return shell true if the target does not support shared libs, shell false
+# otherwise.
+tc-is-static-only() {
+	local host=${CTARGET:-${CHOST}}
+
+	# *MiNT doesn't have shared libraries, only platform so far
+	return $([[ ${host} == *-mint* ]])
+}
+
 
 # Parse information from CBUILD/CHOST/CTARGET rather than
 # use external variables from the profile.
@@ -403,6 +415,10 @@ gcc-specs-nostrict() {
 # correctly to point to the latest version of the library present.
 gen_usr_ldscript() {
 	local lib libdir=$(get_libdir) output_format="" auto=false suffix=$(get_libname)
+	[[ -z ${ED+set} ]] && local ED=${D%/}${EPREFIX}/
+
+	tc-is-static-only && return
+
 	# Just make sure it exists
 	dodir /usr/${libdir}
 
@@ -418,26 +434,96 @@ gen_usr_ldscript() {
 	[[ -n ${output_format} ]] && output_format="OUTPUT_FORMAT ( ${output_format} )"
 
 	for lib in "$@" ; do
-		if [[ ${USERLAND} == "Darwin" ]] ; then
-			ewarn "Not creating fake dynamic library for $lib on Darwin;"
-			ewarn "making a symlink instead."
-			dosym "/${libdir}/${lib}" "/usr/${libdir}/${lib}"
+		local tlib
+		if ${auto} ; then
+			lib="lib${lib}${suffix}"
 		else
-			local tlib
+			# Ensure /lib/${lib} exists to avoid dangling scripts/symlinks.
+			# This especially is for AIX where $(get_libname) can return ".a",
+			# so /lib/${lib} might be moved to /usr/lib/${lib} (by accident).
+			[[ -r ${ED}/${libdir}/${lib} ]] || continue
+			#TODO: better die here?
+		fi
+
+		case ${CTARGET:-${CHOST}} in
+		*-darwin*)
 			if ${auto} ; then
-				lib="lib${lib}${suffix}"
-				tlib=$(scanelf -qF'%S#F' "${D}"/usr/${libdir}/${lib})
-				mv "${D}"/usr/${libdir}/${lib}* "${D}"/${libdir}/ || die
-				# some SONAMEs are funky: they encode a version before the .so
-				if [[ ${tlib} != ${lib}* ]] ; then
-					mv "${D}"/usr/${libdir}/${tlib}* "${D}"/${libdir}/ || die
+				tlib=$(scanmacho -qF'%S#F' "${ED}"/usr/${libdir}/${lib})
+			else
+				tlib=$(scanmacho -qF'%S#F' "${ED}"/${libdir}/${lib})
+			fi
+			[[ -z ${tlib} ]] && die "unable to read install_name from ${lib}"
+			tlib=${tlib##*/}
+
+			if ${auto} ; then
+				mv "${ED}"/usr/${libdir}/${lib%${suffix}}.*${suffix#.} "${ED}"/${libdir}/ || die
+				rm -f "${ED}"/${libdir}/${lib}
+			fi
+
+			# Mach-O files have an id, which is like a soname, it tells how
+			# another object linking against this lib should reference it.
+			# Since we moved the lib from usr/lib into lib this reference is
+			# wrong.  Hence, we update it here.  We don't configure with
+			# libdir=/lib because that messes up libtool files.
+			# Make sure we don't lose the specific version, so just modify the
+			# existing install_name
+			install_name_tool \
+				-id "${EPREFIX}"/${libdir}/${tlib} \
+				"${ED}"/${libdir}/${tlib}
+			# Now as we don't use GNU binutils and our linker doesn't
+			# understand linker scripts, just create a symlink.
+			pushd "${ED}/usr/${libdir}" > /dev/null
+			ln -snf "../../${libdir}/${tlib}" "${lib}"
+			popd > /dev/null
+			;;
+		*-aix*|*-irix*|*-hpux*|*-interix*|*-winnt*)
+			if ${auto} ; then
+				mv "${ED}"/usr/${libdir}/${lib}* "${ED}"/${libdir}/ || die
+				# no way to retrieve soname on these platforms (?)
+				tlib=$(readlink "${ED}"/${libdir}/${lib})
+				tlib=${tlib##*/}
+				if [[ -z ${tlib} ]] ; then
+					# ok, apparently was not a symlink, don't remove it and
+					# just link to it
+					tlib=${lib}
+				else
+					rm -f "${ED}"/${libdir}/${lib}
 				fi
-				[[ -z ${tlib} ]] && die "unable to read SONAME from ${lib}"
-				rm -f "${D}"/${libdir}/${lib}
 			else
 				tlib=${lib}
 			fi
-			cat > "${D}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
+
+			# we don't have GNU binutils on these platforms, so we symlink
+			# instead, which seems to work fine.  Keep it relative, otherwise
+			# we break some QA checks in Portage
+			# on interix, the linker scripts would work fine in _most_
+			# situations. if a library links to such a linker script the
+			# absolute path to the correct library is inserted into the binary,
+			# which is wrong, since anybody linking _without_ libtool will miss
+			# some dependencies, since the stupid linker cannot find libraries
+			# hardcoded with absolute paths (as opposed to the loader, which
+			# seems to be able to do this).
+			# this has been seen while building shared-mime-info which needs
+			# libxml2, but links without libtool (and does not add libz to the
+			# command line by itself).
+			pushd "${ED}/usr/${libdir}" > /dev/null
+			ln -snf "../../${libdir}/${tlib}" "${lib}"
+			popd > /dev/null
+			;;
+		*)
+			if ${auto} ; then
+				tlib=$(scanelf -qF'%S#F' "${ED}"/usr/${libdir}/${lib})
+				[[ -z ${tlib} ]] && die "unable to read SONAME from ${lib}"
+				mv "${ED}"/usr/${libdir}/${lib}* "${ED}"/${libdir}/ || die
+				# some SONAMEs are funky: they encode a version before the .so
+				if [[ ${tlib} != ${lib}* ]] ; then
+					mv "${ED}"/usr/${libdir}/${tlib}* "${ED}"/${libdir}/ || die
+				fi
+				rm -f "${ED}"/${libdir}/${lib}
+			else
+				tlib=${lib}
+			fi
+			cat > "${ED}/usr/${libdir}/${lib}" <<-END_LDSCRIPT
 			/* GNU ld script
 			   Since Gentoo has critical dynamic libraries in /lib, and the static versions
 			   in /usr/lib, we need to have a "fake" dynamic lib in /usr/lib, otherwise we
@@ -448,9 +534,10 @@ gen_usr_ldscript() {
 			   See bug http://bugs.gentoo.org/4411 for more info.
 			 */
 			${output_format}
-			GROUP ( /${libdir}/${tlib} )
+			GROUP ( ${EPREFIX}/${libdir}/${tlib} )
 			END_LDSCRIPT
-			fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
-		fi
+			;;
+		esac
+		fperms a+x "/usr/${libdir}/${lib}" || die "could not change perms on ${lib}"
 	done
 }
