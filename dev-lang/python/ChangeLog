@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.379 2009/05/24 12:58:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.380 2009/05/24 18:43:44 klausman Exp $
+
+  24 May 2009; Tobias Klausmann <klausman@gentoo.org> python-2.4.6.ebuild:
+  Stable on alpha, bug #252317
 
   24 May 2009; Tobias Klausmann <klausman@gentoo.org> python-2.4.6.ebuild:
   Keyworded on alpha, bug #252317
