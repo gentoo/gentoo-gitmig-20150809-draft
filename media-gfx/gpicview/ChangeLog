@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gpicview
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.6 2008/09/12 20:59:31 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpicview/ChangeLog,v 1.7 2009/05/24 19:05:11 maekke Exp $
+
+*gpicview-0.1.11 (24 May 2009)
+
+  24 May 2009; Markus Meier <maekke@gentoo.org> -gpicview-0.1.10.ebuild,
+  +gpicview-0.1.11.ebuild:
+  version bump, reported by Arseny Solokha, bug #270135
 
 *gpicview-0.1.10 (12 Sep 2008)
 
