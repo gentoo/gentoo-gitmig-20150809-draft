@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-7.1-r1.ebuild,v 1.1 2009/05/18 17:09:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/freebsd-sbin-7.1-r1.ebuild,v 1.2 2009/05/24 22:44:55 flameeyes Exp $
 
 EAPI=2
 
@@ -23,7 +23,8 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[ipv6?,atm?,netware?]
 	ssl? ( dev-libs/openssl )
 	dev-libs/libedit
 	sys-libs/readline
-	sys-process/vixie-cron"
+	sys-process/vixie-cron
+	atm? ( net-analyzer/bsnmp )"
 DEPEND="${RDEPEND}
 	!build? ( =sys-freebsd/freebsd-sources-${RV}* )
 	=sys-freebsd/freebsd-mk-defs-${RV}*"

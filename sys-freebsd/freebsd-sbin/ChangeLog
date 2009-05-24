@@ -1,6 +1,10 @@
 # ChangeLog for sys-freebsd/freebsd-sbin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.52 2009/05/22 15:56:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sbin/ChangeLog,v 1.53 2009/05/24 22:44:55 flameeyes Exp $
+
+  24 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  freebsd-sbin-7.1-r1.ebuild, freebsd-sbin-7.2.ebuild:
+  Add dependencies for building atm programs. Thanks to Status.
 
   22 May 2009; Alexis Ballier <aballier@gentoo.org> freebsd-sbin-7.2.ebuild:
   make PATCHES a bash array
