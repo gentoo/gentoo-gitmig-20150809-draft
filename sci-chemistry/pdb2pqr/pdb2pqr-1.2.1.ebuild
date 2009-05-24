@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.2.1.ebuild,v 1.4 2008/02/06 15:14:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.2.1.ebuild,v 1.5 2009/05/24 07:50:41 je_fro Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils
 
@@ -14,6 +14,8 @@ IUSE=""
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="dev-lang/python"
+
+RDEPEND="${DEPEND}"
 
 FORTRAN="g77 gfortran"
 
