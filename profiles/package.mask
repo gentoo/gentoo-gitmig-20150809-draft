@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9829 2009/05/23 18:01:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9830 2009/05/24 00:18:21 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -265,10 +265,6 @@ x11-plugins/desklet-wirelessmonitor
 # Alin Năstac <mrness@gentoo.org> (26 Apr 2009)
 # Beta version
 =net-proxy/squid-3.1*
-
-# MATSUU Takuto <matsuu@gentoo.org> (25 Apr 2009)
-# Masked for testing, bug #267365.
->=x11-libs/xcb-util-0.3.4
 
 # Federico Ferri <mescalinum@gentoo.org> (24 Apr 2009)
 # Unmasking tcl/tk 8.5
