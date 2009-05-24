@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/pyreverse-0.5.2.ebuild,v 1.1 2009/04/23 23:12:39 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/pyreverse-0.5.2.ebuild,v 1.2 2009/05/24 20:06:38 arfrever Exp $
 
 EAPI="2"
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}
+	dev-python/astng
 	dev-python/optik
 	>=dev-python/logilab-common-0.10.0
 	dev-python/pyxml"
