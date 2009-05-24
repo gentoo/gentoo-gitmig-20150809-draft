@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4473 2009/05/23 22:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4474 2009/05/24 08:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2472,6 +2472,7 @@ sci-chemistry/gromacs:fkernels - Enable building of Fortran Kernels for platform
 sci-chemistry/gromacs:single-precision - Single precision version of gromacs
 sci-chemistry/gromacs:zsh-completion - Enable zsh completion support
 sci-chemistry/jmol:client-only - Install the viewer only, no applet files for httpd 
+sci-chemistry/pdb2pqr:opal - Add web interafce via opal
 sci-chemistry/pymol:apbs - Build the apbs plugin tool.
 sci-chemistry/pymol:shaders - Build with Shaders support - good for high-end 3D video cards.
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
