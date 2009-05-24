@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/blossoc/blossoc-1.4.0.ebuild,v 1.1 2009/02/07 18:16:42 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/blossoc/blossoc-1.4.0.ebuild,v 1.2 2009/05/24 19:47:25 weaver Exp $
+
+EAPI="2"
+
+inherit autotools
 
 DESCRIPTION="A linkage disequilibrium association mapping tool"
 HOMEPAGE="http://www.daimi.au.dk/~mailund/Blossoc/"
@@ -15,6 +19,11 @@ DEPEND="sci-libs/gsl
 	dev-libs/boost
 	sci-biology/snpfile"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	sed -i '/TESTS += first_test.sh/ d' "${S}/Makefile.am" || die
+	eautoreconf
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
