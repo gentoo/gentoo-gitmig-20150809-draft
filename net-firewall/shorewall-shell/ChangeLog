@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/shorewall-shell
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.28 2009/05/15 09:17:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/ChangeLog,v 1.29 2009/05/24 22:15:19 pva Exp $
+
+*shorewall-shell-4.2.9 (24 May 2009)
+
+  24 May 2009; Peter Volkov <pva@gentoo.org> -shorewall-shell-4.2.4.ebuild,
+  -shorewall-shell-4.2.6.ebuild, -shorewall-shell-4.2.7.ebuild,
+  +shorewall-shell-4.2.9.ebuild:
+  Version bump, remove old, thank Vieri for maintaining this package (bug
+  269929 and bug 270193).
 
 *shorewall-shell-4.2.8 (15 May 2009)
 

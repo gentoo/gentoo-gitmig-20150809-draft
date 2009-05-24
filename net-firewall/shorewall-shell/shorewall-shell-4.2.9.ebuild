@@ -1,30 +1,28 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-perl/shorewall-perl-4.2.7.1.ebuild,v 1.1 2009/04/03 09:40:21 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall-shell/shorewall-shell-4.2.9.ebuild,v 1.1 2009/05/24 22:15:19 pva Exp $
 
 inherit versionator
 
-# Select version (stable, RC, Beta, upstream patched):
-MY_PV_TREE=$(get_version_component_range 1-2)	# for devel versions use "development/$(get_version_component_range 1-2)"
-MY_P_BETA=""      				# stable or experimental (eg. "-RC1" or "-Beta4")
-MY_PV_BASE=$(get_version_component_range 1-3)	# which shorewall-common to use
+# Select version (stable, RC, Beta):
+MY_PV_TREE=$(get_version_component_range 1-2)   # for devel versions use "development/$(get_version_component_range 1-2)"
+MY_P_BETA=""                                    # stable or experimental (eg. "-RC1" or "-Beta4")
+MY_PV_BASE=$(get_version_component_range 1-3)   # shorewall-common version to use (ignoring upstream "compatibility matrix" for now as it is not always updated at the same time as the software is released)
 
-MY_PN="${PN/-perl/}"
+MY_PN="${PN/-shell/}"
 MY_P="${MY_PN}-${MY_PV_BASE}${MY_P_BETA}"
 
-DESCRIPTION="Shoreline Firewall Perl-based compiler that allows faster compilation and execution."
+DESCRIPTION="Shoreline Firewall shell-based compiler."
 HOMEPAGE="http://www.shorewall.net/"
 SRC_URI="http://www1.shorewall.net/pub/${MY_PN}/${MY_PV_TREE}/${MY_P}/${P}${MY_P_BETA}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
-
 IUSE=""
 
 DEPEND="net-firewall/iptables
 	sys-apps/iproute2
-	dev-lang/perl
 	!<net-firewall/shorewall-4.0"
 RDEPEND="${DEPEND}"
 
@@ -45,9 +43,9 @@ pkg_postinst() {
 	einfo
 	einfo "Documentation is available at http://www.shorewall.net"
 	einfo
-	elog "In order to use the Perl compiler you need to add"
-	elog "SHOREWALL_COMPILER=perl"
-	elog "to shorewall.conf unless you did not install the Shell compiler."
+	elog "In order to use the shell compiler you need to add"
+	elog "SHOREWALL_COMPILER=shell"
+	elog "to shorewall.conf unless you do not have the Perl compiler."
 	einfo
 	einfo "Please read the included release notes for more information."
 	einfo
