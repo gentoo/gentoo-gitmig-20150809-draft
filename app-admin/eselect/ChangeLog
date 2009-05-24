@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.98 2009/05/24 18:27:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.99 2009/05/24 19:30:15 ulm Exp $
+
+  24 May 2009; Ulrich Mueller <ulm@gentoo.org> eselect-1.0.10.ebuild,
+  eselect-1.0.11-r1.ebuild, eselect-1.0.11-r2.ebuild, eselect-1.0.12.ebuild,
+  eselect-1.1_rc2.ebuild, eselect-1.1_rc3.ebuild, eselect-9999.ebuild:
+  Fix dependencies: readlink/realpath are also needed at run time.
 
   24 May 2009; Markus Meier <maekke@gentoo.org> eselect-1.0.12.ebuild:
   amd64 stable, bug #270138

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.12.ebuild,v 1.7 2009/05/24 18:27:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.12.ebuild,v 1.8 2009/05/24 19:30:15 ulm Exp $
 
 DESCRIPTION="Modular -config replacement utility"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -11,14 +11,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ~ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="doc bash-completion"
 
-DEPEND="sys-apps/sed
-	doc? ( dev-python/docutils )
+RDEPEND="sys-apps/sed
 	|| (
 		sys-apps/coreutils
 		sys-freebsd/freebsd-bin
 		app-admin/realpath
 	)"
-RDEPEND="sys-apps/sed
+DEPEND="${RDEPEND}
+	doc? ( dev-python/docutils )"
+RDEPEND="${RDEPEND}
 	sys-apps/file
 	sys-libs/ncurses"
 

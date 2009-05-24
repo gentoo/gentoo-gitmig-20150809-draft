@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.5 2009/05/20 12:35:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-9999.ebuild,v 1.6 2009/05/24 19:30:15 ulm Exp $
 
 ESVN_REPO_URI="svn://anonsvn.gentoo.org/eselect/trunk"
 ESVN_BOOTSTRAP="autogen.bash"
@@ -16,14 +16,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="doc bash-completion paludis"
 
-DEPEND="sys-apps/sed
-	doc? ( dev-python/docutils )
+RDEPEND="sys-apps/sed
 	|| (
 		sys-apps/coreutils
 		sys-freebsd/freebsd-bin
 		app-admin/realpath
 	)"
-RDEPEND="sys-apps/sed
+DEPEND="${RDEPEND}
+	doc? ( dev-python/docutils )"
+RDEPEND="${RDEPEND}
 	sys-apps/file
 	sys-libs/ncurses
 	paludis? ( sys-apps/paludis )
