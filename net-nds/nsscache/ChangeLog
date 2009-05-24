@@ -1,6 +1,14 @@
 # ChangeLog for net-nds/nsscache
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/ChangeLog,v 1.3 2009/05/22 04:23:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/ChangeLog,v 1.4 2009/05/24 21:00:10 robbat2 Exp $
+
+*nsscache-0.8.3-r1 (24 May 2009)
+
+  24 May 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +nsscache-0.8.3-r1.ebuild, +files/nsscache-0.8.3-starttls.patch,
+  files/nsscache.conf:
+  Fix to offer new option for STARTTLS if required, as needed by Gentoo
+  infrastructure.
 
   22 May 2009; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   Taking over maintenance of this as we use it heavily in infra.
