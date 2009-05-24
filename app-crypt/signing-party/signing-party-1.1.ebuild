@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.ebuild,v 1.2 2009/05/16 18:40:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/signing-party-1.1.ebuild,v 1.3 2009/05/24 17:47:40 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/s/signing-party/signing-party_${PV}.orig.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="iconv recode"
 
 DEPEND=""
