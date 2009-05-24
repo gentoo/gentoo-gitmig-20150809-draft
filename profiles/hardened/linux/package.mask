@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.16 2009/05/09 22:18:44 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.17 2009/05/24 21:20:43 gengor Exp $
 
 # Requires gcc-4*, unmask when stable. Bug #217927.
 media-libs/libopenraw
@@ -24,6 +24,9 @@ net-im/skype
 
 # No hardened >=sys-devel/gcc-4.4 available.
 >=sys-devel/gcc-4.4
+
+# Patch fails, mask for now. Bug #270274.
+>=sys-libs/glibc-2.10
 
 # Mask off glibc-2.4 until the approach for SSP compatibilty is
 # resolved in a way that doesn't break running systems, and we
