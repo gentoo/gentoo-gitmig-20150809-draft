@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.7.ebuild,v 1.2 2009/05/23 20:10:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.7.ebuild,v 1.3 2009/05/24 13:56:31 nirbheek Exp $
 
-EAPI="1"
+EAPI="2"
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"

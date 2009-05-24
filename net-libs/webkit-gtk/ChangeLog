@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.27 2009/05/23 20:10:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.28 2009/05/24 13:56:31 nirbheek Exp $
+
+  24 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  webkit-gtk-1.1.7.ebuild:
+  Oops. src_configure isn't a default phase in EAPI=1. => EAPI=2
 
   23 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   webkit-gtk-1.1.7.ebuild:
