@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.3 2009/01/14 17:27:45 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.4 2009/05/24 21:28:02 yngwin Exp $
+
+  24 May 2009; Ben de Groot <yngwin@gentoo.org> -lxde-meta-0.3.2.1.ebuild,
+  lxde-meta-0.3.2.1-r1.ebuild:
+  Remove old revision, change dependency for lxsession-lite to renamed
+  lxsession.
 
   14 Jan 2009; Friedrich Oslage <bluebird@gentoo.org>
   lxde-meta-0.3.2.1.ebuild, lxde-meta-0.3.2.1-r1.ebuild:
