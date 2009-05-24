@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/dmg2img
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmg2img/ChangeLog,v 1.2 2009/05/15 08:29:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmg2img/ChangeLog,v 1.3 2009/05/24 10:33:28 ssuominen Exp $
+
+*dmg2img-1.6 (24 May 2009)
+
+  24 May 2009; Samuli Suominen <ssuominen@gentoo.org> -dmg2img-1.3.ebuild,
+  +dmg2img-1.6.ebuild:
+  Version bump and remove invalid ebuild.
 
   15 May 2009; Christian Faulhammer <fauli@gentoo.org> dmg2img-1.3.ebuild:
   keyworded ~arch for x86, bug 266436
