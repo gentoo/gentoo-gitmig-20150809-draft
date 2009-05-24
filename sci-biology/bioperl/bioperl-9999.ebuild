@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.4 2009/05/13 16:18:34 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999.ebuild,v 1.5 2009/05/24 15:56:55 weaver Exp $
 
 EAPI="2"
 
@@ -51,7 +51,7 @@ CDEPEND="dev-perl/Data-Stag
 DEPEND="virtual/perl-Module-Build
 	${CDEPEND}"
 RDEPEND="${CDEPEND}"
-PDEPEND="
+PDEPEND="!minimal? ( dev-perl/Bio-ASN1-EntrezGene )
 	db? ( >=sci-biology/bioperl-db-${PV} )
 	network? ( >=sci-biology/bioperl-network-${PV} )
 	run? ( >=sci-biology/bioperl-run-${PV} )"
