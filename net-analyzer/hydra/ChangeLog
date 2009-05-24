@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/hydra
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.26 2008/01/18 18:31:47 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.27 2009/05/24 23:18:32 pva Exp $
+
+*hydra-5.4-r1 (24 May 2009)
+
+  24 May 2009; Peter Volkov <pva@gentoo.org> +hydra-5.4-r1.ebuild,
+  +files/hydra-5.4-_FORTIFY_SOURCE.patch:
+  Fixed http-form module crashes when run, bug #209116, thank deanx for
+  report. Fixed build problem with _FORTIFY_SOURCE, bug #263146, thank
+  Jonathan-Christofer Demay for the patch.
 
   18 Jan 2008; Raúl Porcel <armin76@gentoo.org> -hydra-4.4.ebuild,
   -hydra-5.3.ebuild:
