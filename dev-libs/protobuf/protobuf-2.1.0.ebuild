@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.1.0.ebuild,v 1.2 2009/05/18 19:28:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/protobuf-2.1.0.ebuild,v 1.3 2009/05/24 22:32:50 nelchael Exp $
 
 EAPI="2"
 
 JAVA_PKG_IUSE="source"
 
-inherit eutils distutils python java-pkg-opt-2
+inherit eutils distutils python java-pkg-opt-2 elisp-common
 
 DESCRIPTION="Google's Protocol Buffers -- an efficient method of encoding structured data"
 HOMEPAGE="http://code.google.com/p/protobuf/"
@@ -15,14 +15,17 @@ SRC_URI="http://protobuf.googlecode.com/files/${PF}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="examples java python vim-syntax"
+IUSE="emacs examples java python vim-syntax"
 
 DEPEND="${DEPEND} java? ( >=virtual/jdk-1.5 )
-	python? ( dev-python/setuptools )"
-RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )"
+	python? ( dev-python/setuptools )
+	emacs? ( virtual/emacs )"
+RDEPEND="${RDEPEND} java? ( >=virtual/jre-1.5 )
+	emacs? ( virtual/emacs )"
 
 src_prepare() {
-	epatch "${FILESDIR}/protobuf-2.0.3-decoder_test_64bit_fix.patch"
+	epatch "${FILESDIR}/${PN}-2.0.3-decoder_test_64bit_fix.patch"
+	epatch "${FILESDIR}/${PN}-2.1.0-fix-emacs-byte-compile.patch"
 }
 
 src_compile() {
@@ -40,6 +43,10 @@ src_compile() {
 		popd
 		jar cf "${PN}.jar" -C java/build . || die "jar failed"
 	fi
+
+	if use emacs; then
+		elisp-compile "${S}/editors/protobuf-mode.el" || die "elisp-compile failed!"
+	fi
 }
 
 src_install() {
@@ -53,6 +60,11 @@ src_install() {
 	if use vim-syntax; then
 		insinto /usr/share/vim/vimfiles/syntax
 		doins editors/proto.vim
+	fi
+
+	if use emacs; then
+		elisp-install ${PN} editors/protobuf-mode.el* || die "elisp-install failed!"
+		elisp-site-file-install "${FILESDIR}/70${PN}-gentoo.el"
 	fi
 
 	if use examples; then
@@ -73,4 +85,12 @@ src_test() {
 		 cd python; ${python} setup.py test || die "python test failed"
 		 cd ..
 	fi
+}
+
+pkg_postinst() {
+	use emacs && elisp-site-regen
+}
+
+pkg_postrm() {
+	use emacs && elisp-site-regen
 }

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.6 2009/05/18 19:28:15 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.7 2009/05/24 22:32:50 nelchael Exp $
+
+  24 May 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  +files/70protobuf-gentoo.el, protobuf-2.1.0.ebuild,
+  +files/protobuf-2.1.0-fix-emacs-byte-compile.patch:
+  Add emacs USE flag, see bug #271007.
 
   18 May 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   -protobuf-2.0.0_beta.ebuild, -protobuf-2.0.1.ebuild,
