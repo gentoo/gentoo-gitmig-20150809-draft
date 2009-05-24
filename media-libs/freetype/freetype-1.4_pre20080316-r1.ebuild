@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r1.ebuild,v 1.8 2009/03/23 14:51:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.4_pre20080316-r1.ebuild,v 1.9 2009/05/24 14:39:18 loki_val Exp $
 
 inherit autotools eutils libtool multilib
 
@@ -42,6 +42,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-CVE-2008-1808.patch #225851
 	epatch "${FILESDIR}"/${P}-LDLFAGS.patch #263131
+	epatch "${FILESDIR}"/${PN}-1.4-glibc-2.10.patch #270460
 
 	# disable tests (they don't compile)
 	sed -i -e "/^all:/ s:tttest ::" Makefile.in
