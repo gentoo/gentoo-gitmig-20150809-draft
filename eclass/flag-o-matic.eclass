@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.136 2009/05/23 23:12:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.137 2009/05/24 00:33:33 mr_bones_ Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -140,7 +140,7 @@ append-cppflags() {
 # @USAGE: <flags>
 # @DESCRIPTION:
 # Add extra <flags> to the current CFLAGS.
-append-cppflags() {
+append-cflags() {
 	[[ -z $* ]] && return 0
 	export CFLAGS="${CFLAGS} $*"
 	return 0
