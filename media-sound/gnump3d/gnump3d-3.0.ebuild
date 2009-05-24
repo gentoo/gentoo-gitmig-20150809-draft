@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-3.0.ebuild,v 1.6 2008/12/19 17:06:13 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-3.0.ebuild,v 1.7 2009/05/24 19:25:14 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -16,12 +16,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="sys-apps/sed
-	dev-lang/perl"
+RDEPEND="dev-lang/perl"
+DEPEND="${RDEPEND}
+	sys-apps/sed"
 
 RESTRICT="test"
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	enewuser gnump3d '' '' '' nogroup
@@ -64,8 +65,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
 	elog "Please edit your /etc/gnump3d/gnump3d.conf before running"
 	elog "/etc/init.d/gnump3d start"
-	einfo
 }

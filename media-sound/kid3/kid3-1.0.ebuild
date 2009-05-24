@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.0.ebuild,v 1.6 2008/12/26 15:13:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.0.ebuild,v 1.7 2009/05/24 19:20:59 ssuominen Exp $
 
 EAPI=1
 ARTS_REQUIRED=never
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="+flac +musicbrainz +vorbis"
 
-DEPEND=">=media-libs/id3lib-3.8.3
+RDEPEND=">=media-libs/id3lib-3.8.3
 	>=media-libs/taglib-1.4-r1
 	media-libs/libmp4v2
 	media-libs/libvorbis
@@ -27,6 +27,7 @@ DEPEND=">=media-libs/id3lib-3.8.3
 		media-libs/musicbrainz:3
 		media-libs/tunepimp
 	)"
+DEPEND="${RDEPEND}"
 
 need-kde 3
 
