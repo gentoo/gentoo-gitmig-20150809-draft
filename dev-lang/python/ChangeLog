@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.377 2009/04/24 14:17:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.378 2009/05/24 02:51:55 arfrever Exp $
+
+*python-2.4.6 (24 May 2009)
+
+  24 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.4.6.ebuild:
+  Version bump (bug #252317).
 
   24 Apr 2009; Raúl Porcel <armin76@gentoo.org> python-2.5.4-r2.ebuild:
   arm/ia64/m68k/s390/sh/sparc stable wrt #265790
