@@ -1,6 +1,11 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.5 2009/04/29 12:38:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.6 2009/05/24 05:02:52 zmedico Exp $
+
+*guvcview-1.1.0 (24 May 2009)
+
+  24 May 2009; Zac Medico <zmedico@gentoo.org> +guvcview-1.1.0.ebuild:
+  1.1.0 bump.
 
   29 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
   -files/guvcview-0.9.6-implicit_declaration_setlocale.patch,
