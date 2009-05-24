@@ -1,6 +1,12 @@
 # ChangeLog for net-news/charm
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.1 2009/05/24 03:57:37 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/charm/ChangeLog,v 1.2 2009/05/24 04:03:09 neurogeek Exp $
+
+*charm-1.9.1 (24 May 2009)
+
+  24 May 2009; Jesus Rivero <neurogeek@gentoo.org> charm-1.4.0.ebuild,
+  +charm-1.9.1.ebuild:
+  Readd stable for sparc and x86. Version bump #255740
 
   24 May 2009; Jesus Rivero <neurogeek@gentoo.org> +metadata.xml,
   +charm-1.4.0.ebuild, +charm-1.7.0.ebuild:
