@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha-r1.ebuild,v 1.2 2007/07/29 20:46:15 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cvoicecontrol/cvoicecontrol-0.9_alpha-r1.ebuild,v 1.3 2009/05/24 19:31:09 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 MY_P=${P/_/}
@@ -15,21 +16,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-S="${WORKDIR}"/${MY_P}
+S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo-2.patch
 	sed -i -e "s/install-data-am: install-data-local/install-data-am:/" Makefile.in
-
 	# Handle documentation with dohtml instead.
 	sed -i -e "s:SUBDIRS = docs:#SUBDIRS = docs:" cvoicecontrol/Makefile.in
-
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS BUGS ChangeLog FAQ README
 	dohtml cvoicecontrol/docs/en/*.html
 }
