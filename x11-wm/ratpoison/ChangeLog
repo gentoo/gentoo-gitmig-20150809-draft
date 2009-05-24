@@ -1,6 +1,6 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.68 2009/05/01 11:35:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.69 2009/05/24 22:19:30 jer Exp $
 
   01 May 2009; Jeroen Roovers <jer@gentoo.org> ratpoison-1.4.4-r1.ebuild:
   Build against x11-libs/libXft by default.
@@ -16,7 +16,10 @@
   Revision bump to 1.4.4-r1 adding debug USE flag, as well as making libXft
   support optional (bug #267965 again). Remove old.
 
-  30 Apr 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+*ratpoison-1.4.4 (30 Apr 2009)
+
+  30 Apr 2009; Jeroen Roovers <jer@gentoo.org> +ratpoison-1.4.4-r1.ebuild,
+  metadata.xml:
   Version bump. Make building libhistory support a default option.
 
   30 Nov 2008; Raúl Porcel <armin76@gentoo.org> ratpoison-1.4.3.ebuild:
