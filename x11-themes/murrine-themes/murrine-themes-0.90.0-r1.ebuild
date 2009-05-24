@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/murrine-themes-0.90.0.ebuild,v 1.1 2009/05/21 20:09:00 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/murrine-themes/murrine-themes-0.90.0-r1.ebuild,v 1.1 2009/05/24 18:10:39 nirbheek Exp $
 
 EAPI="2"
 
@@ -8,12 +8,15 @@ DESCRIPTION="Themes for the Murrine GTK+2 Cairo Engine"
 HOMEPAGE="http://www.cimitan.com/murrine/"
 
 URI_PREFIX="http://www.cimitan.com/murrine/files"
-SRC_URI="${URI_PREFIX}/MurrinaBlu-0.32.tar.gz
+SRC_URI="${URI_PREFIX}/MurrinaAquaIsh.tar.bz2
+${URI_PREFIX}/MurrinaBlu-0.32.tar.gz
 ${URI_PREFIX}/MurrinaCandido.tar.gz
 ${URI_PREFIX}/MurrinaGilouche.tar.bz2
-${URI_PREFIX}/MurrinaVerdeOlivo.tar.bz2
 ${URI_PREFIX}/MurrinaFancyCandy.tar.bz2
 ${URI_PREFIX}/MurrinaLoveGray.tar.bz2
+${URI_PREFIX}/MurrineThemePack.tar.bz2
+${URI_PREFIX}/MurrinaVerdeOlivo.tar.bz2
+${URI_PREFIX}/MurrineXfwm.tar.bz2
 "
 
 LICENSE="GPL-2"
