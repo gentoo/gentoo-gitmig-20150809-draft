@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.20 2009/05/24 19:42:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.21 2009/05/24 22:23:46 jer Exp $
+
+  24 May 2009; Jeroen Roovers <jer@gentoo.org>
+  eselect-python-20080925.ebuild:
+  Stable for HPPA (bug #271010).
 
   24 May 2009; Markus Meier <maekke@gentoo.org>
   eselect-python-20080925.ebuild:
