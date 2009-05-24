@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.101 2009/05/21 19:52:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.102 2009/05/24 18:34:22 maekke Exp $
+
+  24 May 2009; Markus Meier <maekke@gentoo.org> hostapd-0.6.9.ebuild:
+  amd64/x86 stable, bug #270148
 
   21 May 2009; Brent Baude <ranger@gentoo.org> hostapd-0.6.9.ebuild:
   stable ppc, bug 270148
