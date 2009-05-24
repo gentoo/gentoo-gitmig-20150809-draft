@@ -19,4 +19,12 @@ PhysicsFS gives you platform-abstracted means to determine if CD-ROMs are availa
 the user's home directory, where in the real filesystem your program is running, 
 etc.
 </longdescription>
+<use>
+<flag name="grp">Enable Build Engine GRP archive support</flag>
+<flag name="hog">Enable Descent I/II HOG archive support</flag>
+<flag name="mvl">Enable Descent I/II MVL archive support</flag>
+<flag name="wad">Enable Doom WAD archive support</flag>
+<flag name="qpak">Enable Quake I/II QPAK archive support</flag>
+<flag name="zip">Enable ZIP archive support</flag>
+</use>
 </pkgmetadata>

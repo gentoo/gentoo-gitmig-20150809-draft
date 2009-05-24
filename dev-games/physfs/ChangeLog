@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.20 2009/04/12 16:33:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.21 2009/05/24 22:50:07 nyhm Exp $
+
+*physfs-2.0.0 (24 May 2009)
+
+  24 May 2009; Tristan Heaven <nyhm@gentoo.org> +physfs-2.0.0.ebuild,
+  metadata.xml:
+  Version bump
 
 *physfs-1.0.2 (12 Apr 2009)
 
