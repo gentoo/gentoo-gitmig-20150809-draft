@@ -1,6 +1,16 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.4 2009/05/10 06:17:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.5 2009/05/24 07:34:29 graaff Exp $
+
+*locale-2.0.4 (24 May 2009)
+
+  24 May 2009; Hans de Graaff <graaff@gentoo.org> -locale-2.0.0.ebuild,
+  -locale-2.0.1.ebuild, -locale-2.0.2.ebuild, +locale-2.0.4.ebuild:
+  Version bump with better support for Win32 and JRuby.
+
+  24 May 2009; Hans de Graaff <graaff@gentoo.org> -locale-2.0.0.ebuild,
+  -locale-2.0.1.ebuild, -locale-2.0.2.ebuild:
+  Remove old versions.
 
 *locale-2.0.3 (10 May 2009)
 
