@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/tcpreplay
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.31 2009/04/05 19:14:22 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.32 2009/05/24 19:06:06 pva Exp $
+
+*tcpreplay-3.4.2 (24 May 2009)
+
+  24 May 2009; Peter Volkov <pva@gentoo.org> +tcpreplay-3.4.2.ebuild:
+  Version bump. Now with ipv6 support.
 
 *tcpreplay-3.4.1 (05 Apr 2009)
 
