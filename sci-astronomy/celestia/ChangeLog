@@ -1,6 +1,17 @@
 # ChangeLog for sci-astronomy/celestia
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.49 2009/03/02 19:34:35 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.50 2009/05/24 09:40:56 ssuominen Exp $
+
+  24 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -celestia-1.4.1-r2.ebuild, -files/celestia-1.4.1-3dsmodels.patch,
+  -files/celestia-1.4.1-gcc-4.1.patch,
+  -files/celestia-1.4.1-gnome-desktop.patch,
+  -files/celestia-1.4.1-kde-datadir.patch,
+  -files/celestia-1.4.1-kde-desktop.patch,
+  -files/celestia-1.4.1-locale.patch, -files/celestia-1.4.1-lua51.patch,
+  -files/celestia-1.4.1-strictalias.patch, celestia-1.5.1.ebuild,
+  +files/celestia-1.5.1-gcc44.patch:
+  Fix compile with GCC 4.4 wrt #269728, thanks to Victor Ostorga.
 
   02 Mar 2009; Brent Baude <ranger@gentoo.org> celestia-1.5.1.ebuild:
   Marking celestia-1.5.1 ppc64 for bug 245168
