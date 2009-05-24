@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1209-r2.ebuild,v 1.1 2009/05/05 18:59:53 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1210.ebuild,v 1.1 2009/05/24 12:34:00 tommy Exp $
 
 EAPI="1"
 DATE=20090413
 
-EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
-EGIT_PROJECT="freenet/fred-official"
-EGIT_TREE="81cfd0f6d7b13b8aabef3cd5d1bc65c0fc9da3c7"
+EGIT_REPO_URI="git://github.com/freenet/fred-staging.git"
+EGIT_PROJECT="freenet/fred-staging"
+EGIT_TREE="53aec7b57a3e5b9a45a7380a79b4853c2b384bac"
 
 inherit eutils git java-pkg-2 java-ant-2 multilib
 
@@ -76,6 +76,7 @@ src_install() {
 }
 
 pkg_postinst () {
+	elog " "
 	elog "1. Start freenet with /etc/init.d/freenet start."
 	elog "2. Open localhost:8888 in your browser for the web interface."
 	#workaround for previously existing freenet user
@@ -85,6 +86,7 @@ pkg_postinst () {
 
 pkg_postrm() {
 	if [ -z has_version ]; then
+		elog " "
 		elog "If you dont want to use freenet any more"
 		elog "and dont want to keep your identity/other stuff"
 		elog "remember to do 'rm -rf /var/freenet' to remove everything"
