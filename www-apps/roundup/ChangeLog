@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/roundup
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.25 2009/01/26 19:55:38 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.26 2009/05/24 21:31:52 pva Exp $
+
+*roundup-1.4.8 (24 May 2009)
+
+  24 May 2009; Peter Volkov <pva@gentoo.org> +roundup-1.4.8.ebuild:
+  Version bump. SMTP mail with TLS now working, bug #262749, thank My Th for
+  debuging/fixing/working with upstream. Fixes privilege escalation reported
+  by Alex Legler in bug #262100.
 
 *roundup-1.4.6 (26 Jan 2009)
 
