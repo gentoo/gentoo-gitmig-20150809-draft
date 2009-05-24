@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/swt
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.97 2009/03/18 14:58:18 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.98 2009/05/24 17:48:50 serkan Exp $
+
+*swt-3.4-r3 (24 May 2009)
+*swt-3.3.1.1-r1 (24 May 2009)
+
+  24 May 2009; Serkan Kaba <serkan@gentoo.org> +swt-3.3.1.1-r1.ebuild,
+  +swt-3.4-r3.ebuild, +files/as-needed-and-flag-fixes.patch:
+  Revbump to respect LDFLAGS and work with --as-needed. Fixes bug #263115
+  and bug #255656
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> swt-3.4-r2.ebuild:
   stable ppc, bug 252875
