@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.1-r1.ebuild,v 1.4 2009/04/17 06:56:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.1-r1.ebuild,v 1.5 2009/05/24 03:25:04 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -22,7 +22,7 @@ S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/2.6.1/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-2.6-r5.tar.bz2"
+	mirror://gentoo/python-gentoo-patches-2.6-r2.tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="2.6"
