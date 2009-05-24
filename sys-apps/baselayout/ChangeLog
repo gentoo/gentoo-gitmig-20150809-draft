@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.471 2009/03/02 20:17:46 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.472 2009/05/24 19:47:02 vapier Exp $
 
 # See the rc-scripts ChangeLog in subversion for release info:
 # http://sources.gentoo.org/viewcvs.py/*checkout*/baselayout/trunk/ChangeLog
+
+*baselayout-2.0.1 (24 May 2009)
+
+  24 May 2009; Mike Frysinger <vapier@gentoo.org> +baselayout-2.0.1.ebuild:
+  Rename modprobe files and fix some comments.
 
   02 Mar 2009; Benedikt Böhm <hollow@gentoo.org> baselayout-2.0.0.ebuild:
   fix /etc/shadow permissions when building stages
