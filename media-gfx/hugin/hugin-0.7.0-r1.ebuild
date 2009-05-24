@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0-r1.ebuild,v 1.5 2009/03/19 19:11:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0-r1.ebuild,v 1.6 2009/05/24 10:07:59 maekke Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
 
-inherit cmake-utils eutils wxwidgets
+inherit cmake-utils wxwidgets
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
@@ -31,7 +31,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS README TODO"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.7.0_rc2-as-needed.patch
-}
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.7.0_rc2-as-needed.patch
+	"${FILESDIR}"/${P}-gcc44.patch
+)

@@ -1,0 +1,31 @@
+--- src/hugin_base/appbase/ProgressDisplayOld.h~	2009-05-20 17:37:43.003423691 +0200
++++ src/hugin_base/appbase/ProgressDisplayOld.h	2009-05-20 17:38:01.960420437 +0200
+@@ -26,6 +26,7 @@
+ #ifndef _APPBASE_POGRESSDISPLAYOLD_H
+ #define _APPBASE_POGRESSDISPLAYOLD_H
+ 
++#include <cstdio>
+ #include <string>
+ #include <vector>
+ #include <iostream>
+--- src/hugin_base/hugin_utils/utils.cpp~	2009-05-20 17:40:01.592423706 +0200
++++ src/hugin_base/hugin_utils/utils.cpp	2009-05-20 17:40:09.448420660 +0200
+@@ -171,7 +171,7 @@
+     if (digits < 0) {
+         strcpy(fmt,"%f");
+     } else {
+-        std::sprintf(fmt,"%%.%df",digits);
++        sprintf(fmt,"%%.%df",digits);
+     }
+     char c[1024];
+     c[1023] = 0;
+--- src/hugin_base/panodata/PTScriptParsing.h~	2009-05-20 17:45:42.491422105 +0200
++++ src/hugin_base/panodata/PTScriptParsing.h	2009-05-20 17:45:56.836420882 +0200
+@@ -25,6 +25,7 @@
+ #ifndef _PANODATA_PTSCRIPTPARSING_H
+ #define _PANODATA_PTSCRIPTPARSING_H
+ 
++#include <cstdio>
+ #include <string>
+ #include <vigra/diff2d.hxx>
+ 

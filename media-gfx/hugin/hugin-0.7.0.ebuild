@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.7 2009/03/19 19:11:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.8 2009/05/24 10:07:59 maekke Exp $
 
 EAPI="1"
 WX_GTK_VER="2.8"
@@ -46,4 +46,5 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-0.7.0_rc2-as-needed.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
