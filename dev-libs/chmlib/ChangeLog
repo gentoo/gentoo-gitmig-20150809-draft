@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/chmlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.9 2009/04/11 17:28:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.10 2009/05/24 23:29:55 dirtyepic Exp $
+
+*chmlib-0.40 (24 May 2009)
+
+  24 May 2009; Ryan Hill <dirtyepic@gentoo.org> +chmlib-0.40.ebuild,
+  +files/chmlib-0.40-headers.patch:
+  Version bump.
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> chmlib-0.39-r1.ebuild:
   Add ~alpha/~ia64 wrt #260777
