@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/absolutelayout/absolutelayout-6.7_beta.ebuild,v 1.1 2009/05/24 03:06:48 ali_bush Exp $
-
-JAVA_PKG_IUSE="doc source"
+# $Header: /var/cvsroot/gentoo-x86/dev-java/absolutelayout/absolutelayout-6.7_beta.ebuild,v 1.2 2009/05/24 03:21:34 ali_bush Exp $
 
 inherit java-pkg-2 java-ant-2
 
