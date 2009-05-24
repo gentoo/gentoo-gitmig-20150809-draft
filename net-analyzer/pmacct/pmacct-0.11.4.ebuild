@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.11.4.ebuild,v 1.4 2008/05/19 20:10:23 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.11.4.ebuild,v 1.5 2009/05/24 19:11:20 pva Exp $
 
 DESCRIPTION="A network tool to gather ip traffic informations"
 HOMEPAGE="http://www.pmacct.net/"
@@ -9,12 +9,12 @@ SRC_URI="http://www.pmacct.net/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="64bit debug ipv6 mmap mysql postgres sqlite3"
+IUSE="64bit debug ipv6 mmap mysql postgres sqlite"
 
 RDEPEND="net-libs/libpcap
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )
-	sqlite3? ( =dev-db/sqlite-3* )"
+	sqlite? ( =dev-db/sqlite-3* )"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
@@ -31,7 +31,7 @@ src_compile() {
 		$(use_enable ipv6) \
 		$(use_enable debug) \
 		$(use_enable 64bit) \
-		$(use_enable sqlite3) \
+		$(use_enable sqlite sqlite3) \
 		|| die "econf failed"
 
 	emake || die "emake failed"
