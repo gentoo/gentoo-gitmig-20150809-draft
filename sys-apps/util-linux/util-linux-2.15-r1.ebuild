@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.15-r1.ebuild,v 1.1 2009/05/23 21:14:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.15-r1.ebuild,v 1.2 2009/05/24 18:38:00 vapier Exp $
 
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux-ng/util-linux-ng.git"
 inherit eutils autotools
@@ -31,6 +31,7 @@ RDEPEND="!sys-process/schedutils
 	selinux? ( sys-libs/libselinux )
 	slang? ( sys-libs/slang )"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2
 	nls? ( sys-devel/gettext )
 	virtual/os-headers"
 
@@ -44,9 +45,12 @@ src_unpack() {
 		cd "${S}"
 		#epatch "${FILESDIR}"/${PN}-2.13-uclibc.patch #203711
 		epatch "${FILESDIR}"/${P}-cpuid-pic.patch #269001
-		epatch "${FILESDIR}"/${P}-losetup-symlinks.patch #269264
+		if use loop-aes ; then
+			epatch "${WORKDIR}"/util-linux-ng-*.diff
+		else
+			epatch "${FILESDIR}"/${P}-losetup-symlinks.patch #269264
+		fi
 		epatch "${FILESDIR}"/${P}-old-libselinux.patch #270168
-		use loop-aes && epatch "${WORKDIR}"/util-linux-ng-*.diff
 		eautoreconf
 	fi
 	use uclibc && sed -i -e s/versionsort/alphasort/g -e s/strverscmp.h/dirent.h/g mount/lomount.c
