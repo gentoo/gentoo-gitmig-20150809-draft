@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/absolutelayout/absolutelayout-6.7_beta.ebuild,v 1.2 2009/05/24 03:21:34 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/absolutelayout/absolutelayout-6.7_beta.ebuild,v 1.3 2009/05/24 03:25:29 ali_bush Exp $
 
 inherit java-pkg-2 java-ant-2
 
@@ -22,7 +22,7 @@ S="${WORKDIR}"
 src_compile() {
 	mkdir build
 	ejavac -d build $(find . -iname '*.java')
-	jar cf "${PN}.jar" build/*
+	jar cf "${PN}.jar" -C build org
 }
 
 src_install() {
