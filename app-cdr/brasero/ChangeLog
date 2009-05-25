@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.74 2009/05/21 15:17:50 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.75 2009/05/25 18:24:34 nirbheek Exp $
+
+  25 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> brasero-2.26.2.ebuild:
+  IUSE +cdrkit -- upstream default, plus dvd multi-session doesn't work for
+  me with libburn (proof that libburn is not complete yet)
 
 *brasero-2.26.2 (21 May 2009)
 
