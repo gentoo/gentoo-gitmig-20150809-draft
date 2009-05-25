@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/konq-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.1 2009/04/26 11:29:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/ChangeLog,v 1.2 2009/05/25 16:35:13 scarabeus Exp $
+
+*konq-plugins-4.2.3 (25 May 2009)
+
+  25 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -konq-plugins-4.2.2.ebuild, +konq-plugins-4.2.3.ebuild:
+  Version bump. Remove old.
 
 *konq-plugins-4.2.2 (26 Apr 2009)
 

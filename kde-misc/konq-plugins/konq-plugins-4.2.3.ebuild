@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.2.2.ebuild,v 1.1 2009/04/26 11:29:44 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/konq-plugins/konq-plugins-4.2.3.ebuild,v 1.1 2009/05/25 16:35:13 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,15 +14,16 @@ inherit kde4-base
 
 DESCRIPTION="Various plugins for konqueror"
 HOMEPAGE="http://kde.org/"
-SRC_URI="mirror://kde/stable/${PV}/extragear/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/extragear/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 SLOT="4"
-IUSE="debug doc"
+IUSE="debug doc tidy"
 
 DEPEND="
 	>=kde-base/libkonq-${KDE_MINIMAL}
+	tidy? ( app-text/htmltidy )
 "
 RDEPEND="${DEPEND}
 	!kde-base/konq-plugins:4.1[-kdeprefix]
@@ -33,14 +34,19 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	if ! use doc; then
-		sed -i \
-			-e "s:macro_optional_add_subdirectory(doc):#nada:g" \
-			CMakeLists.txt || die "sed doc failed"
-	else
-		sed -i \
-			-e "s:\${HTML_INSTALL_DIR}/en:\${HTML_INSTALL_DIR}/en SUBDIR ${PN}:g" \
-			doc/CMakeLists.txt || die "fix doc placement failed"
+		sed -e 's|add_subdirectory( doc )||' \
+			-e 's|add_subdirectory( doc-translations )||' \
+			-i CMakeLists.txt || die "failed to disable docs"
 	fi
 
 	kde4-base_src_prepare
+}
+
+src_configure() {
+	mycmakeargs="${mycmakeargs}
+		-DKdeWebKit=OFF
+		-DWebKitPart=OFF
+		$(cmake-utils_use_with tidy LibTidy)"
+
+	kde4-base_src_configure
 }
