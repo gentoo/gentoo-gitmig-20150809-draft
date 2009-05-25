@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.106.ebuild,v 1.9 2009/01/30 14:51:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.106.ebuild,v 1.10 2009/05/25 23:56:18 nyhm Exp $
 
 inherit flag-o-matic toolchain-funcs eutils games
 
@@ -13,16 +13,15 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 LICENSE="XMAME"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86"
-IUSE="alsa arts dga esd expat ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
+IUSE="alsa arts dga esd ggi joystick lirc mmx net opengl sdl svga X xinerama xv"
 
-RDEPEND="sys-libs/zlib
+RDEPEND="dev-libs/expat
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	dga? (
 		x11-libs/libXxf86dga
 		x11-libs/libXxf86vm )
 	esd? ( >=media-sound/esound-0.2.29 )
-	expat? ( dev-libs/expat )
 	ggi? ( media-libs/libggi )
 	lirc? ( app-misc/lirc )
 	opengl? (
@@ -112,8 +111,6 @@ EOF
 	toggle_feature arts SOUND_ARTS
 	toggle_feature dga X11_DGA
 	toggle_feature xv X11_XV
-	# if we don't have expat on the system, use the internal one
-	toggle_feature !expat BUILD_EXPAT
 	toggle_feature opengl X11_OPENGL
 	toggle_feature lirc LIRC
 	toggle_feature xinerama X11_XINERAMA
