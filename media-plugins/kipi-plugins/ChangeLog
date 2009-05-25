@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.49 2009/05/22 16:17:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.50 2009/05/25 14:52:05 scarabeus Exp $
+
+  25 May 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  -files/0.2.0-picasa.patch, kipi-plugins-0.1.7.ebuild,
+  -kipi-plugins-0.2.0-r1.ebuild, +files/kipi-plugins-libgpod-0.7.patch:
+  Fix build issue per bug #271057. Remove old.
 
 *kipi-plugins-0.3.0 (22 May 2009)
 

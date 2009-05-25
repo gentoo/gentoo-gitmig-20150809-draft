@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.7.ebuild,v 1.2 2009/02/12 01:51:19 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.7.ebuild,v 1.3 2009/05/25 14:52:05 scarabeus Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="calendar? ( || ( kde-base/libkcal:3.5 kde-base/kdepim:3.5 ) )
 		opengl? ( x11-libs/qt:3[opengl] )
 		tiff? ( >=media-libs/tiff-3.6 )
 		>=dev-libs/libxslt-1.1
-		ipod? ( >=media-libs/libgpod-0.6.0 )"
+		ipod? ( >=media-libs/libgpod-0.7.0[gtk] )"
 RDEPEND="${DEPEND}
 		>=media-gfx/imagemagick-6.2.4
 		>=media-video/mjpegtools-1.6.0
@@ -53,7 +53,9 @@ src_unpack() {
 	rm -f "${S}"/configure
 
 	# Set default for the -S option for images2mpeg to work correctly, bug #208133
-	epatch "${FILESDIR}/${PN}-default_chroma_opt.patch"
+	epatch \
+		"${FILESDIR}/${PN}-default_chroma_opt.patch" \
+		"${FILESDIR}/${PN}-libgpod-0.7.patch"
 
 	cd "${WORKDIR}/${P}/po"
 	for X in ${LANGS} ; do
