@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.2.ebuild,v 1.1 2007/01/07 04:17:23 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/libssh-0.2.ebuild,v 1.2 2009/05/25 21:00:09 pva Exp $
 
 inherit eutils
 
@@ -9,12 +9,13 @@ HOMEPAGE="http://0xbadc0de.be/?part=libssh"
 SRC_URI="http://www.0xbadc0de.be/libssh/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~s390 ~x86"
 IUSE="crypt examples"
 
 DEPEND="sys-libs/zlib
 	!crypt? ( dev-libs/openssl )
 	crypt? ( dev-libs/libgcrypt )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,14 +26,13 @@ src_unpack() {
 src_compile() {
 	econf \
 		$(use_with crypt) \
-		--disable-ssh1 \
-		|| die "econf failed"
+		--disable-ssh1
 
 	emake || die "emake failed"
 }
 
 src_install() {
-	chmod a-x ${D}/usr/include/libssh/*
+	chmod a-x "${D}"/usr/include/libssh/*
 	emake DESTDIR="${D}" install || die "install failed"
 	rm "${D}"/usr/include/libssh/ssh1.h
 	dodoc README CHANGELOG
