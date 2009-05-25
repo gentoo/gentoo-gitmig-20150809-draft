@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.13.1.ebuild,v 1.1 2009/04/28 18:20:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.13.1.ebuild,v 1.2 2009/05/25 13:42:31 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -39,6 +39,7 @@ src_prepare() {
 		-e 's/-s //' \
 		ports.mk \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-glibc210.patch
 }
 
 src_configure() {

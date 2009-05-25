@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.68 2009/04/28 18:20:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.69 2009/05/25 13:42:31 tupone Exp $
+
+  25 May 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/scummvm-0.13.1-glibc210.patch, scummvm-0.13.1.ebuild:
+  Fix build with USE=alsa and glibc-2.10. Bug #270700 by Francisco J. Vazquez
 
 *scummvm-0.13.1 (28 Apr 2009)
 
@@ -23,7 +27,7 @@
   25 Jan 2009; Brent Baude <ranger@gentoo.org> scummvm-0.12.0.ebuild:
   stable ppc64, bug 255573
 
-  23 Jan 2009; Raúl Porcel <armin76@gentoo.org> scummvm-0.12.0.ebuild:
+  23 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> scummvm-0.12.0.ebuild:
   x86 stable wrt #255573
 
   21 Jan 2009; Ferris McCormick <fmccor@gentoo.org> scummvm-0.12.0.ebuild:
@@ -48,10 +52,10 @@
   11 Jun 2008; nixnut <nixnut@gentoo.org> scummvm-0.11.1.ebuild:
   Stable on ppc wrt bug 225619
 
-  10 Jun 2008; Raúl Porcel <armin76@gentoo.org> scummvm-0.11.1.ebuild:
+  10 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> scummvm-0.11.1.ebuild:
   sparc/x86 stable wrt #225619
 
-  09 Jun 2008; Raúl Porcel <armin76@gentoo.org> scummvm-0.10.0.ebuild:
+  09 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> scummvm-0.10.0.ebuild:
   sparc stable
 
   24 May 2008; Joseph Jezak <josejx@gentoo.org> scummvm-0.10.0.ebuild:
@@ -77,7 +81,7 @@
   scummvm-0.10.0.ebuild:
   make the nasm call more yasm friendly
 
-  06 Jul 2007; Diego Pettenò <flameeyes@gentoo.org> scummvm-0.10.0.ebuild:
+  06 Jul 2007; Diego PettenÃ² <flameeyes@gentoo.org> scummvm-0.10.0.ebuild:
   Add a pkg_setup check for midi USE flag in alsa-lib.
 
   05 Jul 2007; Markus Rothe <corsair@gentoo.org> scummvm-0.10.0.ebuild:
@@ -123,7 +127,7 @@
   27 Oct 2006; Steve Dibb <beandog@gentoo.org> scummvm-0.9.0.ebuild:
   amd64 stable, bug 144170
 
-  19 Oct 2006; Diego Pettenò <flameeyes@gentoo.org> scummvm-0.8.1.ebuild,
+  19 Oct 2006; Diego PettenÃ² <flameeyes@gentoo.org> scummvm-0.8.1.ebuild,
   scummvm-0.9.0.ebuild:
   Depend on 1.1.2 version of flac, as the 1.1.3 version changes API.
 
@@ -239,7 +243,7 @@
 
   01 Jun 2004; Mike Frysinger <vapier@gentoo.org> +files/0.6.0-gcc34.patch,
   scummvm-0.6.0.ebuild:
-  Add gcc-3.4 patch #49304 by Robert Führicht.
+  Add gcc-3.4 patch #49304 by Robert FÃ¼hricht.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> scummvm-0.6.0.ebuild:
   Added ~sparc keyword.
@@ -309,10 +313,10 @@
   23 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
   Changed SRC_URI to use mirror: and updated LICENSE
 
-  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> scummvm-0.2.0.ebuild :
+  17 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> scummvm-0.2.0.ebuild :
   Added KEYWORDS, SLOT.
 
-  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> scummvm-0.2.0-r1.ebuild :
+  17 Jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> scummvm-0.2.0-r1.ebuild :
   Added KEYWORDS, SLOT.
 
   17 Jun 2002; Ryan Phillips <rphillips@gentoo.org> scummvm-0.2.0-r1.ebuild :
