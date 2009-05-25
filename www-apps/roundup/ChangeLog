@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.27 2009/05/25 16:10:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.28 2009/05/25 19:55:23 maekke Exp $
+
+  25 May 2009; Markus Meier <maekke@gentoo.org> roundup-1.4.8.ebuild:
+  amd64/x86 stable, bug #262100
 
   25 May 2009; Brent Baude <ranger@gentoo.org> roundup-1.4.8.ebuild:
   Marking roundup-1.4.8 ppc for bug 262100
