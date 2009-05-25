@@ -1,0 +1,31 @@
+From: Balazs Scheidler <bazsi@balabit.hu>
+Date: Mon, 25 May 2009 08:30:58 +0000 (+0200)
+Subject: [templates] fixed compilation problem if ipv6 is disabled
+X-Git-Url: http://git.balabit.hu/?p=bazsi%2Fsyslog-ng-3.0.git;a=commitdiff_plain;h=32949aaf9a241411f63953926898b5f1e33064ca
+
+[templates] fixed compilation problem if ipv6 is disabled
+
+templates.c:(.text+0x658): undefined reference to `g_sockaddr_inet6_check'
+
+Reported-By: Michael Sterrett
+---
+
+diff --git a/src/templates.c b/src/templates.c
+index a2be7ce..a413ad9 100644
+--- a/src/templates.c
++++ b/src/templates.c
+@@ -392,7 +392,13 @@ log_macro_expand(GString *result, gint id, guint32 flags, gint ts_format, TimeZo
+       {
+         gchar *ip;
+ 
+-        if (msg->saddr && (g_sockaddr_inet_check(msg->saddr) || g_sockaddr_inet6_check(msg->saddr)))
++        if (msg->saddr && (g_sockaddr_inet_check(msg->saddr) ||
++#if ENABLE_IPV6
++            g_sockaddr_inet6_check(msg->saddr)
++#else
++            0
++#endif
++           ))
+           {
+             gchar buf[MAX_SOCKADDR_STRING];
+ 
