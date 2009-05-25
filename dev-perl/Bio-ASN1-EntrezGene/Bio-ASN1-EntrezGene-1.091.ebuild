@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-ASN1-EntrezGene/Bio-ASN1-EntrezGene-1.091.ebuild,v 1.3 2009/05/24 15:59:26 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-ASN1-EntrezGene/Bio-ASN1-EntrezGene-1.091.ebuild,v 1.4 2009/05/25 11:00:34 weaver Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 SRC_TEST="do"
 
-DEPEND=""
-RDEPEND=">=sci-biology/bioperl-1.6.0"
+DEPEND=">=sci-biology/bioperl-1.6.0"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-1.09"
