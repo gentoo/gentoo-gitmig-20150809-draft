@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/kqemu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.26 2009/03/09 10:36:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kqemu/ChangeLog,v 1.27 2009/05/25 10:00:31 lu_zero Exp $
+
+  25 May 2009; Luca Barbato <lu_zero@gentoo.org> kqemu-1.4.0_pre1.ebuild:
+  fix bug #214032, thanks to Federico Fissore <federico@fsfe.org> for
+  pointing out
 
   09 Mar 2009; Luca Barbato <lu_zero@gentoo.org> kqemu-1.4.0_pre1.ebuild:
   Additional fixes
