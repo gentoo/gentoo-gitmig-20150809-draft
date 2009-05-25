@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.5 2009/04/18 22:47:33 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.6 2009/05/25 17:22:08 fauli Exp $
 
 inherit eutils x11 linux-mod autotools
 
@@ -37,7 +37,7 @@ fi
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc x86 ~x86-fbsd"
 
 DEPEND="kernel_linux? ( virtual/linux-sources )
 	kernel_FreeBSD? ( sys-freebsd/freebsd-sources
