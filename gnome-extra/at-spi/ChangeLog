@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.186 2009/05/10 07:21:04 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.187 2009/05/25 22:07:35 eva Exp $
+
+  25 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/at-spi-1.19.3-tests.patch, -at-spi-1.20.1.ebuild,
+  -files/at-spi-1.20.1-drop-gtk-doc.patch, -at-spi-1.22.1.ebuild,
+  -at-spi-1.24.0.ebuild, at-spi-1.24.1.ebuild, at-spi-1.26.0.ebuild:
+  Set WANT_AUTOMAKE as appropriate per discussion in bug #271059. Clean up
+  old revisions.
 
 *at-spi-1.26.0 (10 May 2009)
 
