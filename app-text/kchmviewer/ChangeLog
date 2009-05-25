@@ -1,6 +1,14 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.12 2009/04/06 11:36:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.13 2009/05/25 22:27:43 pva Exp $
+
+*kchmviewer-3.1_p2-r1 (25 May 2009)
+
+  25 May 2009; Peter Volkov <pva@gentoo.org> +kchmviewer-3.1_p2-r1.ebuild:
+  Lot's of changes: EAPI-2, change slot to :3.5 (all 3.5 kde applications
+  will have it), disable arts by default, use kde eclass, enable langs.
+  Thank Theo Chatzimichos for this work. As a side work fixes bug #270576,
+  thank Yar Odin for report.
 
   06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org>
   kchmviewer-4.0-r1.ebuild:
