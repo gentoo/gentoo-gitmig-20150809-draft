@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.42 2009/05/22 03:06:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.43 2009/05/25 12:26:32 ssuominen Exp $
+
+*sonata-1.6.2-r1 (25 May 2009)
+
+  25 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +sonata-1.6.2-r1.ebuild, +files/sonata-1.6.2-keep_icons_constant.patch:
+  Keep icons constant when adding a stream to a playlist. Patch from
+  upstream wrt #270564, thanks to Marc Arens for reporting.
 
   22 May 2009; Samuli Suominen <ssuominen@gentoo.org> -sonata-1.6.ebuild,
   sonata-1.6.2.ebuild:
