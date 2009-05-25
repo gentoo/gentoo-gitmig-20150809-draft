@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9833 2009/05/25 09:26:06 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9834 2009/05/25 21:45:05 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (26 May 2009)
+# Force people to downgrade and use better version
+=net-libs/libssh-0.11
 
 # Michael Sterrett <mr_bones_@gentoo.org> (25 May 2009)
 # Masked for testing.
