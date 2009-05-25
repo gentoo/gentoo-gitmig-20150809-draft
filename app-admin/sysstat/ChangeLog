@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.136 2009/05/06 04:08:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.137 2009/05/25 03:35:39 jer Exp $
+
+*sysstat-9.0.3 (25 May 2009)
+
+  25 May 2009; Jeroen Roovers <jer@gentoo.org> +sysstat-9.0.3.ebuild:
+  Version bump.
 
   06 May 2009; Jeroen Roovers <jer@gentoo.org> files/crontab:
   Change sa1 and sa2 paths in crontab example (bug #268568).
