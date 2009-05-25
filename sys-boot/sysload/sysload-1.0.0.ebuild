@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/sysload/sysload-1.0.0.ebuild,v 1.1 2009/01/02 05:44:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/sysload/sysload-1.0.0.ebuild,v 1.2 2009/05/25 21:01:14 pva Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=net-libs/libssh-0.11"
+DEPEND="=net-libs/libssh-0.1.1"
 
 src_unpack() {
 	unpack ${A}
