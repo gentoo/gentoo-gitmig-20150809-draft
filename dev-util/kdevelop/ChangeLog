@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.175 2009/05/13 13:40:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.176 2009/05/25 19:50:57 tampakrap Exp $
+
+  25 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -kdevelop-3.5.0.ebuild, -kdevelop-3.5.1.ebuild, -kdevelop-3.5.2.ebuild,
+  -kdevelop-3.5.3.ebuild, -kdevelop-3.5.4.ebuild, kdevelop-3.5.4-r1.ebuild:
+  Fix bug 233613, remove old ones
 
 *kdevelop-3.5.4-r1 (13 May 2009)
 

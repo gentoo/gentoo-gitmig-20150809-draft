@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.4-r1.ebuild,v 1.1 2009/05/13 13:40:48 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.4-r1.ebuild,v 1.2 2009/05/25 19:50:57 tampakrap Exp $
 
 EAPI="2"
 
@@ -10,7 +10,8 @@ inherit kde eutils db-use
 
 DESCRIPTION="Integrated Development Environment for Unix, supporting KDE/Qt, C/C++ and many other languages."
 HOMEPAGE="http://www.kdevelop.org"
-SRC_URI="mirror://kde/stable/3.5.10/src/${P}.tar.bz2"
+SRC_URI="mirror://kde/stable/3.5.10/src/${P}.tar.bz2
+	mirror://gentoo/kdevelop-3.5-patchset-01.tar.bz2"
 
 LICENSE="GPL-2"
 
@@ -31,7 +32,9 @@ DEPEND="${DEPEND}
 need-kde 3.5
 
 PATCHES=( "${FILESDIR}/kdevelop-3.5-lexer.patch"
-	"${FILESDIR}/kdevelop-3.5-parallel.patch" )
+	"${FILESDIR}/kdevelop-3.5-parallel.patch"
+	"${WORKDIR}/kdevelop-3.5-libtool.m4.in.patch"
+	"${WORKDIR}/kdevelop-3.5-ltmain.sh.patch" )
 
 pkg_setup() {
 	elog
