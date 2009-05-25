@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/websvn
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.27 2008/12/04 04:17:44 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/websvn/ChangeLog,v 1.28 2009/05/25 18:58:35 ranger Exp $
+
+  25 May 2009; Brent Baude <ranger@gentoo.org> websvn-2.1.0.ebuild:
+  Marking websvn-2.1.0 ppc64 and ppc for bug 270545
 
   04 Dec 2008; Gunnar Wrobel <wrobel@gentoo.org> -websvn-2.0.ebuild:
   Removed insecure www-apps/websvn-2.0 (#243852).
