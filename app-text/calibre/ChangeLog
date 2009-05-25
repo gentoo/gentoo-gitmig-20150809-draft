@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.24 2009/05/22 02:13:32 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.25 2009/05/25 23:23:36 zmedico Exp $
+
+*calibre-0.5.13-r2 (25 May 2009)
+
+  25 May 2009; Zac Medico <zmedico@gentoo.org>
+  files/bug_270746_UnicodeEncodeError.patch, -calibre-0.5.13-r1.ebuild,
+  +calibre-0.5.13-r2.ebuild:
+  Bug #270746 - Update patch to solve another UnicodeDecodeError.
 
 *calibre-0.5.13-r1 (22 May 2009)
 

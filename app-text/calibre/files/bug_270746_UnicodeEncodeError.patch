@@ -5,6 +5,6 @@
                '.PP', '.B Created by '+__author__]
      
 -    return  bz2.compress('\n'.join(lines))
-+    return  bz2.compress(u'\n'.join(lines).encode('utf_8'))
++    return  bz2.compress(u'\n'.join(isinstance(x, unicode) and x or unicode(x, 'utf_8', 'replace') for x in lines).encode('utf_8', 'replace'))
  
  
