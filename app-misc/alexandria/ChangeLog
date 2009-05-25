@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/alexandria
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.28 2009/03/25 14:37:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/alexandria/ChangeLog,v 1.29 2009/05/25 19:33:25 fauli Exp $
+
+  25 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  alexandria-0.6.4.1.ebuild:
+  stable x86, bug 253573
 
   25 Mar 2009; Christian Faulhammer <fauli@gentoo.org>
   -files/alexandria-0.6.2-rake-0.8.1.patch,
