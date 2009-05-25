@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.381 2009/05/24 22:24:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.382 2009/05/25 16:06:25 ranger Exp $
+
+  25 May 2009; Brent Baude <ranger@gentoo.org> python-2.4.6.ebuild:
+  Marking python-2.4.6 ppc64 and ppc for bug 252317
 
   24 May 2009; Jeroen Roovers <jer@gentoo.org> python-2.4.6.ebuild:
   Stable for HPPA (bug #252317).
