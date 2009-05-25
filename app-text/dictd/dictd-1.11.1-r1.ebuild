@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.11.1-r1.ebuild,v 1.1 2009/05/24 21:16:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.11.1-r1.ebuild,v 1.2 2009/05/25 13:09:26 mr_bones_ Exp $
 
 EAPI=2
 
@@ -69,7 +69,7 @@ src_install() {
 
 		dodoc doc/{dicf.ms,rfc.ms,rfc.sh,rfc2229.txt} || die "installing docs part 2 failed"
 		dodoc doc/{security.doc,toc.ms} || die "installing docs part 3 failed"
-	
+
 		# conf files. For dict.conf see below.
 		insinto /etc/dict
 		for f in dictd.conf site.info colorit.conf; do
