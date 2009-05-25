@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.307 2009/05/18 01:02:24 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.308 2009/05/25 02:31:57 gengor Exp $
+
+*hardened-sources-2.6.28-r9 (25 May 2009)
+
+  25 May 2009; Gordon Malm <gengor@gentoo.org>
+  -hardened-sources-2.6.28-r8.ebuild, +hardened-sources-2.6.28-r9.ebuild:
+  Fix x86-32 boot failure (regression vs. 2.6.28-r7).
 
 *hardened-sources-2.6.28-r8 (18 May 2009)
 
