@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.17 2007/05/08 22:53:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.0.2a-r3.ebuild,v 1.18 2009/05/25 23:41:56 jer Exp $
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="library to provide an API for commonly used low-level network functions (mainly packet injection)"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
@@ -30,7 +30,7 @@ src_unpack() {
 	cd "${S}"/doc
 	ln -s libnet.3 libnet-${SLOT}.3 || die "linking manpage"
 	cd "${S}"
-	autoconf || die
+	eautoconf || die
 }
 
 src_compile() {
