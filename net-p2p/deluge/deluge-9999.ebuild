@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.18 2009/03/07 15:08:33 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.19 2009/05/25 18:04:58 armin76 Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
@@ -31,7 +31,8 @@ RDEPEND="${DEPEND}
 		dev-python/pyxdg
 		dev-python/dbus-python
 		gnome-base/librsvg
-	)"
+	)
+	libnotify? ( dev-python/notify-python )"
 
 pkg_setup() {
 	filter-ldflags -Wl,--as-needed

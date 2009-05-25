@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.1.7.ebuild,v 1.1 2009/04/27 14:46:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.1.7.ebuild,v 1.2 2009/05/25 18:04:58 armin76 Exp $
 
 EAPI="2"
 
@@ -26,7 +26,8 @@ RDEPEND="${DEPEND}
 		dev-python/pyxdg
 		dev-python/dbus-python
 		gnome-base/librsvg
-	)"
+	)
+	libnotify? ( dev-python/notify-python )"
 
 pkg_setup() {
 	filter-ldflags -Wl,--as-needed

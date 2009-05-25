@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.123 2009/04/27 14:46:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.124 2009/05/25 18:04:58 armin76 Exp $
+
+  25 May 2009; Raúl Porcel <armin76@gentoo.org> -deluge-1.1.3.ebuild,
+  -deluge-1.1.4.ebuild, -deluge-1.1.5.ebuild, -deluge-1.1.6.ebuild,
+  deluge-1.1.7.ebuild, deluge-9999.ebuild:
+  Add libnotify USE-flag for bug #268056
 
 *deluge-1.1.7 (27 Apr 2009)
 
