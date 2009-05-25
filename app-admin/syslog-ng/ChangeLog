@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.207 2009/05/25 19:19:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.208 2009/05/25 19:29:50 ranger Exp $
+
+  25 May 2009; Brent Baude <ranger@gentoo.org> syslog-ng-2.0.10.ebuild,
+  syslog-ng-2.1.4.ebuild:
+  Marking -2.1.4 and -2.0.10 ppc64 for bugs  270863 and 270862 respectively
 
   25 May 2009; Christian Faulhammer <fauli@gentoo.org>
   syslog-ng-2.0.10.ebuild:
