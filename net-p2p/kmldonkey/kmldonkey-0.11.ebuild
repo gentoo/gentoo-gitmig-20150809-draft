@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.11.ebuild,v 1.1 2008/06/24 23:30:49 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/kmldonkey-0.11.ebuild,v 1.2 2009/05/25 16:57:17 scarabeus Exp $
 
 ARTS_REQUIRED="never"
 
@@ -16,5 +16,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="|| ( =kde-base/kcontrol-3.5* =kde-base/kdebase-3.5* )"
+
+PATCHES=(
+	"${FILESDIR}/${PN}-0.10.1-sandbox.patch"
+)
 
 need-kde 3.5
