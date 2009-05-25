@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.13.200902232204.ebuild,v 1.3 2009/03/21 21:04:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.13.200902232204.ebuild,v 1.4 2009/05/25 03:02:05 gengor Exp $
 
 inherit flag-o-matic toolchain-funcs eutils versionator
 
@@ -8,7 +8,7 @@ myPV="$(replace_version_separator 3 -)"
 
 DESCRIPTION="Administrative interface for the grsecurity Role Based Access Control system"
 HOMEPAGE="http://www.grsecurity.net/"
-SRC_URI="mirror://gentoo/gradm-${myPV}.tar.gz"
+SRC_URI="http://dev.gentoo.org/~gengor/distfiles/${CATEGORY}/${PN}/${PN}-${myPV}.tar.gz"
 #RESTRICT=primaryuri
 LICENSE="GPL-2"
 SLOT="0"
