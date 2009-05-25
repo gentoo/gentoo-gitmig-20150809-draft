@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.383 2009/05/25 17:11:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.384 2009/05/25 17:26:09 fauli Exp $
+
+  25 May 2009; Christian Faulhammer <fauli@gentoo.org> python-2.4.6.ebuild:
+  stable x86, security bug  252317
 
 *python-2.5.4-r3 (25 May 2009)
 
