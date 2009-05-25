@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.4-r1.ebuild,v 1.2 2009/05/25 21:04:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.4-r2.ebuild,v 1.1 2009/05/25 21:04:29 pva Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ IUSE="gtk ssl"
 DEPEND="gtk? ( >=x11-libs/gtk+-1.2 )
 	ssl? (
 		dev-libs/openssl
-		<net-libs/libssh-0.2
+		>=net-libs/libssh-0.2
 	)"
 
 S=${WORKDIR}/${P}-src
@@ -27,6 +27,7 @@ src_unpack() {
 	sed -i "s:-O2:${CFLAGS}:" Makefile.am || die "sed failed"
 	epatch "${FILESDIR}/${P}-_FORTIFY_SOURCE.patch"
 	epatch "${FILESDIR}/${P}-free-without-malloc.patch"
+	epatch "${FILESDIR}/${P}-libssh-0.2.patch"
 }
 
 src_compile() {

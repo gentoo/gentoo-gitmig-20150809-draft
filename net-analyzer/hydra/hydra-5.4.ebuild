@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.4.ebuild,v 1.3 2007/08/13 21:22:10 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/hydra-5.4.ebuild,v 1.4 2009/05/25 21:04:29 pva Exp $
 
 DESCRIPTION="Advanced parallized login hacker"
 HOMEPAGE="http://www.thc.org/thc-hydra/"
@@ -14,7 +14,7 @@ IUSE="gtk ssl"
 DEPEND="gtk? ( >=x11-libs/gtk+-1.2 )
 	ssl? (
 		dev-libs/openssl
-		=net-libs/libssh-0.11
+		<net-libs/libssh-0.2
 	)"
 
 S="${WORKDIR}/${P}-src"
