@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/files/tigervnc.initd,v 1.1 2009/03/08 15:34:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/files/tigervnc.initd,v 1.2 2009/05/25 16:42:17 armin76 Exp $
 
 depend() {
 	need net
@@ -28,7 +28,7 @@ checkconfig() {
 		fi
 		return 0
 	else
-		eerror 'Please define $DISPLAYS in /etc/conf.d/vnc'
+		eerror 'Please define $DISPLAYS in /etc/conf.d/tigervnc'
 		return 1
 	fi
 }
