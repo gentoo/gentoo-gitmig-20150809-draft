@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r2.ebuild,v 1.1 2009/05/13 12:27:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r2.ebuild,v 1.2 2009/05/25 19:57:18 tampakrap Exp $
 
 EAPI="2"
 
@@ -114,7 +114,7 @@ src_install() {
 		"${D}"/usr/$(get_libdir)/ruby_lib
 
 	if ! use python; then
-		rm -r "${D}"/usr/share/apps/amarok/scripts/webcontrol \
+		rm -r "${D}/${KDEDIR}"/usr/share/apps/amarok/scripts/webcontrol \
 			|| die "Unable to remove webcontrol."
 	fi
 }
