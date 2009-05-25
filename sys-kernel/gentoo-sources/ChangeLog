@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.608 2009/05/20 16:50:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.609 2009/05/25 23:58:54 mpagano Exp $
+
+*gentoo-sources-2.6.29-r5 (25 May 2009)
+
+  25 May 2009; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.29-r5.ebuild:
+  Linux patch 2.6.29.4. Alpha/PCI patch to make PCI resources available
 
   20 May 2009; nixnut <nixnut@gentoo.org> gentoo-sources-2.6.28-r5.ebuild:
   ppc stable #266792
