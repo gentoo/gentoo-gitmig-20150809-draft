@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibacl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.18 2009/05/24 17:16:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.19 2009/05/25 20:41:26 maekke Exp $
+
+  25 May 2009; Markus Meier <maekke@gentoo.org> pylibacl-0.4.0.ebuild:
+  amd64/x86 stable, bug #267214
 
   24 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pylibacl-0.4.0.ebuild:
