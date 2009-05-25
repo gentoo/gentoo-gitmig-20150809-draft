@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-1.0.1.ebuild,v 1.5 2008/01/26 18:18:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audio-entropyd/audio-entropyd-2.0.1.ebuild,v 1.1 2009/05/25 20:29:43 angelos Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.vanheusden.com/aed/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="selinux"
 
 RDEPEND="selinux? ( sec-policy/selinux-audio-entropyd )"
@@ -19,19 +19,18 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-uclibc.patch"
+	epatch "${FILESDIR}/${P}-uclibc.patch" \
+		"${FILESDIR}/${P}-ldflags.patch"
 	sed -i -e "s:^OPT_FLAGS=.*:OPT_FLAGS=${CFLAGS}:" Makefile
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) || die "emake failed"
+	emake CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
-	dosbin audio-entropyd
-
-	dodoc README README.2 TODO
-
+	dosbin audio-entropyd || die "dosbin failed"
+	dodoc README TODO
 	newinitd "${FILESDIR}/${PN}.init" ${PN}
 	newconfd "${FILESDIR}/${PN}.conf" ${PN}
 }
