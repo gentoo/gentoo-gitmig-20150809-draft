@@ -1,19 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90_p3751.ebuild,v 1.9 2009/04/29 19:55:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90.ebuild,v 1.1 2009/05/25 17:51:17 armin76 Exp $
 
 EAPI="1"
 
 inherit eutils toolchain-funcs multilib autotools
 
 XSERVER_VERSION="1.5.3"
-PATCH="${P/_p*/}-patches-0.2"
+PATCH="${P/_p*/}-patches-0.3"
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="Remote desktop viewer display system"
 HOMEPAGE="http://www.tigervnc.org"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~armin76/dist/${P}.tar.bz2
 	mirror://gentoo/${PATCH}.tar.bz2
+	http://dev.gentoo.org/~armin76/dist/${PATCH}.tar.bz2
 	server? ( ftp://ftp.freedesktop.org/pub/xorg/individual/xserver/xorg-server-${XSERVER_VERSION}.tar.bz2	)"
 
 LICENSE="GPL-2"
