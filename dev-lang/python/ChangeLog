@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.382 2009/05/25 16:06:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.383 2009/05/25 17:11:18 arfrever Exp $
+
+*python-2.5.4-r3 (25 May 2009)
+
+  25 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +python-2.5.4-r3.ebuild:
+  Install libpython2.5.a in /usr/lib instead of /usr/lib/python2.5/config
+  (bug #252372). Fix building with Subversion 1.7. Use `eselect python`
+  instead of alternatives.eclass.
 
   25 May 2009; Brent Baude <ranger@gentoo.org> python-2.4.6.ebuild:
   Marking python-2.4.6 ppc64 and ppc for bug 252317
