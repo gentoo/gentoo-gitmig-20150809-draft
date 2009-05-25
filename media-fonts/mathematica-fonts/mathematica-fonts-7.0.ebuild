@@ -1,16 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-7.0.ebuild,v 1.2 2008/12/02 14:54:11 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mathematica-fonts/mathematica-fonts-7.0.ebuild,v 1.3 2009/05/25 20:47:56 pva Exp $
 
 inherit font
 
 DESCRIPTION="Mathematica's Fonts for MathML"
-
 HOMEPAGE="http://support.wolfram.com/technotes/latestfonts.en.html"
-SRC_URI="http://download.wolfram.com/download/T6RFFB/MathematicaV7FontsLinux.tar.gz"
+SRC_URI="http://support.wolfram.com/technotes/MathematicaV7FontsLinux.tar.gz"
 
 LICENSE="WRI-EULA"
-
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
