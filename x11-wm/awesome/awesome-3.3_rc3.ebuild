@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.3_rc3.ebuild,v 1.1 2009/05/24 00:18:31 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.3_rc3.ebuild,v 1.2 2009/05/25 23:27:42 matsuu Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
 #IUSE="dbus doc bash-completion"
 IUSE="dbus doc"
 
-RDEPEND=">=dev-lang/lua-5.1
+RDEPEND=">=dev-lang/lua-5.1[deprecated]
 	dev-libs/libev
 	>=dev-libs/libxdg-basedir-1
 	dev-util/gperf
