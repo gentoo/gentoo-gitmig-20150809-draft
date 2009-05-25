@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.112 2009/05/23 16:19:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.113 2009/05/25 17:44:14 ford_prefect Exp $
+
+*glade-3.6.3 (25 May 2009)
+
+  25 May 2009; Arun Raghavan <ford_prefect@gentoo.org> +glade-3.6.3.ebuild:
+  Bump to 3.6.3. Adds GtkBuilder support, understands different GTK+
+  versions, additional plugin goodness (including Python support), and
+  access to new GTK+ objects.
 
   23 May 2009; Raúl Porcel <armin76@gentoo.org> glade-3.4.5.ebuild:
   Add ~arm/~sh wrt #268661
