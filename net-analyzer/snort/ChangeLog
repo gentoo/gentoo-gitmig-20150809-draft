@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.148 2009/05/21 20:28:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.149 2009/05/25 22:46:12 pva Exp $
+
+  25 May 2009; Peter Volkov <pva@gentoo.org> snort-2.8.4.1.ebuild:
+  emake should have die at the end.
 
   21 May 2009; Brent Baude <ranger@gentoo.org> snort-2.8.4.1.ebuild:
   stable ppc, bug 268620

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.1.ebuild,v 1.6 2009/05/21 20:28:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.1.ebuild,v 1.7 2009/05/25 22:46:12 pva Exp $
 
 inherit eutils autotools multilib
 
@@ -225,11 +225,10 @@ src_compile() {
 		$(use_enable aruba) \
 		$(use_enable gre) \
 		$(use_enable mpls) \
-		${myconf} || die "econf failed"
+		${myconf}
 
 	# limit to single as reported by jforman on irc
-	emake -j1
-
+	emake -j1 || die
 }
 
 src_install() {
