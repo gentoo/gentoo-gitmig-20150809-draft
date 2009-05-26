@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.3.0_pre20071207.ebuild,v 1.2 2008/01/31 19:57:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/gsweb/gsweb-1.3.0_pre20071207.ebuild,v 1.3 2009/05/26 17:34:30 arfrever Exp $
 
 inherit gnustep-2 apache-module
 
@@ -19,6 +19,10 @@ need_apache2
 
 APACHE2_MOD_FILE="${S}/GSWAdaptors/Apache2/.libs/mod_gsw.so"
 APACHE2_MOD_CONF="42_mod_gsweb"
+
+pkg_setup() {
+	gnustep-base_pkg_setup
+}
 
 src_compile() {
 	gnustep-base_src_compile
