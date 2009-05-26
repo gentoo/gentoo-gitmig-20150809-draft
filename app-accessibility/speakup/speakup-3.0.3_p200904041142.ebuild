@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.3_p200904041142.ebuild,v 1.3 2009/04/22 20:12:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.3_p200904041142.ebuild,v 1.4 2009/05/26 08:54:57 williamh Exp $
 
 inherit linux-mod
 
@@ -18,12 +18,12 @@ pkg_setup() {
 	linux-mod_pkg_setup
 	case ${KV_EXTRA} in
 		*gentoo)
-			if [ kernel_is lt 2 6 25 ]; then
+			if kernel_is lt 2 6 25; then
 				die "Speakup requires at least gentoo-sources-2.6.25"
 			fi
 			;;
 		*)
-			if [ kernel_is lt 2 6 26 ]; then
+			if kernel_is lt 2 6 26; then
 				die "Speakup requires at least kernel version2.6.26"
 			fi
 			;;
