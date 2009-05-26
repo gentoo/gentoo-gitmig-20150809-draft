@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.1.ebuild,v 1.5 2008/05/09 12:45:41 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/eaccelerator-0.9.5.1.ebuild,v 1.6 2009/05/26 17:00:42 arfrever Exp $
 
 PHP_EXT_NAME="eaccelerator"
 PHP_EXT_INI="yes"
@@ -30,6 +30,8 @@ need_php_by_category
 want_apache
 
 pkg_setup() {
+	depend.apache_pkg_setup
+
 	has_php
 
 	require_php_sapi_from cgi apache2
