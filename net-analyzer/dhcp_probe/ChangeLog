@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/dhcp_probe
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dhcp_probe/ChangeLog,v 1.1 2009/05/26 00:00:55 jer Exp $
+
+*dhcp_probe-1.3.0 (25 May 2009)
+
+  25 May 2009; Jeroen Roovers <jer@gentoo.org> +dhcp_probe-1.3.0.ebuild,
+  +files/dhcp_probe.confd, +files/dhcp_probe.initd, +files/dhcp_probe_mail,
+  +metadata.xml:
+  Initial commit.
+
