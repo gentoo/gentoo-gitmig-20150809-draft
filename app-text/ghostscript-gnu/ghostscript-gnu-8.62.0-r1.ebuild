@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.62.0-r1.ebuild,v 1.2 2009/04/05 20:29:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.62.0-r1.ebuild,v 1.3 2009/05/26 06:07:23 pva Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -27,7 +27,6 @@ DEP="
 	X? ( x11-libs/libXt x11-libs/libXext )
 	gtk? ( >=x11-libs/gtk+-2.0 )
 	cups? ( >=net-print/cups-1.1.20 )
-	!app-text/ghostscript-esp
 	!app-text/ghostscript-gpl"
 
 RDEPEND="${DEP}
