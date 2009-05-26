@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-3.5.10.ebuild,v 1.2 2009/03/07 17:26:56 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/superkaramba/superkaramba-3.5.10.ebuild,v 1.3 2009/05/26 13:42:21 tampakrap Exp $
 
 KMNAME=kdeutils
 EAPI="1"
@@ -15,3 +15,13 @@ RDEPEND="!x11-misc/superkaramba"
 PATCHES=( "${FILESDIR}/${PN}-3.5.2-multilib-python.diff"
 	"${FILESDIR}/${PN}-3.5.7-network_sensor.patch"
 	"${FILESDIR}/${PN}-python-2.6.patch" )
+
+pkg_setup() {
+	if ! built_with_use dev-lang/python threads ; then
+		eerror "superkarambe needs dev-lang/python built with threads USE flag."
+		eerror "Please enable this USE flag and re-install dev-lang/python."
+		die "dev-lang/python needs to be rebuilt with threads support."
+	fi
+
+	kde_pkg_setup
+}
