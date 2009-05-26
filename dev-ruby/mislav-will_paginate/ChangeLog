@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/mislav-will_paginate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mislav-will_paginate/ChangeLog,v 1.3 2009/05/20 12:04:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mislav-will_paginate/ChangeLog,v 1.4 2009/05/26 18:27:33 graaff Exp $
+
+*mislav-will_paginate-2.3.9 (26 May 2009)
+
+  26 May 2009; Hans de Graaff <graaff@gentoo.org>
+  mislav-will_paginate-2.3.7.ebuild, +mislav-will_paginate-2.3.9.ebuild:
+  dev-ruby/mocha is needed when running the tests.
+  Bump version for improved Rails 2.3.2 compatibility. This makes the test
+  suite pass when Rails 2.3.2 is installed.
 
   20 May 2009; Hans de Graaff <graaff@gentoo.org> Manifest:
   Redigest zip file now that github has fixed zip downloading.
