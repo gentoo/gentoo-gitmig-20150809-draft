@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/bilbo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/bilbo/ChangeLog,v 1.1 2009/05/26 22:10:12 dagger Exp $
+
+*bilbo-0.9 (26 May 2009)
+
+  26 May 2009; Robert Piasek <dagger@gentoo.org>
+  +bilbo-0.9.ebuild, +metadata.xml:
+  New ebuild for bilbo - KDE blog application bug #268041
+  Thanks to matija.suklje@rutka.net for ebuild.
+
