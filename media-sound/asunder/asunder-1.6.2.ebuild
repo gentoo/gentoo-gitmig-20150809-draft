@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/asunder-1.6.2.ebuild,v 1.2 2009/05/24 01:09:32 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/asunder/asunder-1.6.2.ebuild,v 1.3 2009/05/26 05:44:19 fauli Exp $
 
 DESCRIPTION="a graphical Audio CD ripper and encoder with support for WAV, MP3, OggVorbis and FLAC."
 HOMEPAGE="http://littlesvr.ca/asunder"
@@ -8,7 +8,7 @@ SRC_URI="http://littlesvr.ca/${PN}/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="flac mp3 vorbis wavpack"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.4
