@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.21.10.ebuild,v 1.1 2009/02/13 07:49:21 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/rsyslog-3.22.0.ebuild,v 1.1 2009/05/26 07:55:59 dev-zero Exp $
+
+EAPI="2"
 
 inherit versionator
 
@@ -23,9 +25,12 @@ DEPEND="kerberos? ( virtual/krb5 )
 RDEPEND="${DEPEND}"
 PROVIDE="virtual/logger"
 
-BRANCH="3-devel"
+BRANCH="3-stable"
 
-src_compile() {
+# need access to certain device nodes
+RESTRICT="test"
+
+src_configure() {
 	# Maintainer notes:
 	# * rsyslog-3 doesn't support single threading anymore
 	# * rfc3195 needs a library and development of that library
@@ -57,7 +62,6 @@ src_compile() {
 		--disable-rfc3195 \
 		--enable-imfile \
 		--disable-imtemplate
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -83,10 +87,4 @@ src_install() {
 
 	newconfd "${FILESDIR}/${BRANCH}/rsyslog.conf" rsyslog
 	newinitd "${FILESDIR}/${BRANCH}/rsyslog.init" rsyslog
-}
-
-pkg_postinst() {
-	ewarn "You installed a beta version of rsyslog, please do report bugs"
-	ewarn "with the software directly to upstream. Please read more about"
-	ewarn "stable or unstable branches at http://www.rsyslog.com"
 }
