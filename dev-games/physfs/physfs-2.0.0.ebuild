@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.0.ebuild,v 1.1 2009/05/24 22:50:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/physfs-2.0.0.ebuild,v 1.2 2009/05/26 14:59:05 tupone Exp $
 
 EAPI=2
-inherit cmake-utils
+inherit eutils cmake-utils
 
 DESCRIPTION="Abstraction layer for filesystem and archive access"
 HOMEPAGE="http://icculus.org/physfs/"
@@ -18,6 +18,7 @@ RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	# make sure these libs aren't used
 	rm -rf lzma zlib*
 }

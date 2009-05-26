@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.21 2009/05/24 22:50:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.22 2009/05/26 14:59:05 tupone Exp $
+
+  26 May 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/physfs-2.0.0-gcc44.patch, physfs-2.0.0.ebuild:
+  Remove -Werror, causing build to abort with gcc-4.4.0.
+  Bug #271251 by Robert Forster
 
 *physfs-2.0.0 (24 May 2009)
 
