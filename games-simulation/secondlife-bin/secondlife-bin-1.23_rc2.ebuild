@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc2.ebuild,v 1.1 2009/05/22 21:23:47 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc2.ebuild,v 1.2 2009/05/26 16:34:22 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
@@ -98,7 +98,7 @@ src_install() {
 	#dosym /usr/share/fonts/kochi-substitute/kochi-mincho-subst.ttf "${SECONDLIFE_HOME}"/unicode.ttf
 
 	games_make_wrapper secondlife-bin "./secondlife --set VersionChannelName Gentoo" "${SECONDLIFE_HOME}" "${SECONDLIFE_HOME}"/lib
-	make_desktop_entry secondlife-bin "Second Life" /opt/secondlife/secondlife_icon.png
+	make_desktop_entry secondlife-bin "Second Life (binary distribution)" /opt/secondlife/secondlife_icon.png
 
 	prepgamesdirs
 }
