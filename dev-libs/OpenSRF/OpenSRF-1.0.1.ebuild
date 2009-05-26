@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.1.ebuild,v 1.3 2009/01/02 23:36:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/OpenSRF-1.0.1.ebuild,v 1.4 2009/05/26 17:28:31 arfrever Exp $
 
 inherit eutils multilib flag-o-matic apache-module autotools perl-module
 
@@ -63,6 +63,10 @@ APACHE2_MOD_FILE="${APXS2_S}/osrf_json_gateway.so ${APXS2_S}/osrf_http_translato
 need_apache2_2
 
 RDEPEND="${DEPEND}"
+
+pkg_setup() {
+	perl-module_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}

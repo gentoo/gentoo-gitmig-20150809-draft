@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/OpenSRF
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/ChangeLog,v 1.4 2009/01/02 23:36:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/OpenSRF/ChangeLog,v 1.5 2009/05/26 17:28:31 arfrever Exp $
+
+  26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  OpenSRF-1.0.1.ebuild:
+  Add pkg_setup().
 
   02 Jan 2009; Robin H. Johnson <robbat2@gentoo.org>
   files/OpenSRF-1.0.1-buildfix.patch, OpenSRF-1.0.1.ebuild:
