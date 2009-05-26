@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-7.0.003.ebuild,v 1.3 2008/02/05 08:47:31 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-7.0.003.ebuild,v 1.4 2009/05/26 17:45:50 arfrever Exp $
 
 inherit eutils webapp depend.apache
 
@@ -20,6 +20,10 @@ DEPEND="dev-lang/perl"
 need_apache2
 
 S="${WORKDIR}/${MY_SRC_PN}.install"
+
+pkg_setup() {
+	webapp_pkg_setup
+}
 
 pkg_nofetch() {
 	einfo "Go to http://webmo.net/ and register for a free license."
