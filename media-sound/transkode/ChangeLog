@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/transkode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.17 2009/05/26 09:05:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.18 2009/05/26 22:20:15 scarabeus Exp $
+
+  26 May 2009; Tomas Chvatal <scarabeus@gentoo.org> transkode-0.7-r2.ebuild:
+  Fix build issues. Per bug #271325.
 
 *transkode-0.7-r2 (26 May 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7-r2.ebuild,v 1.1 2009/05/26 09:05:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7-r2.ebuild,v 1.2 2009/05/26 22:20:15 scarabeus Exp $
 
 EAPI="1"
 
@@ -38,14 +38,24 @@ need-kde 3.5
 
 PATCHES=(
 	"${FILESDIR}/${P}-gcc-4.3.patch"
-	"${FILESDIR}/transkode-0.7-desktop-file.diff"
+	"${FILESDIR}/${P}-desktop-file.diff"
 	)
 
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	kde_pkg_setup
-	confutils_require_built_with_any ffmpeg mplayer gstreamer xine
+	if ! use ffmpeg && ! use mplayer && ! use gstreamer && ! use xine ; then
+		echo
+		ewarn "TransKode should be emerged with at least one of next"
+		ewarn "use flags: mplayer, ffmpeg, gstreamer or xine!"
+		ewarn "None of them is mandatory but they install programs that"
+		ewarn "can be used for decoding of audio formats for which no "
+		ewarn "other decoder is present."
+		echo
+		ebeep
+		epause 5
+	fi
 }
 
 src_unpack() {
