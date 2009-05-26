@@ -1,0 +1,15 @@
+# ChangeLog for games-simulation/secondlife
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/ChangeLog,v 1.1 2009/05/26 22:49:36 lavajoe Exp $
+
+*secondlife-1.23.2_rc2 (26 May 2009)
+
+  26 May 2009; Joe Peterson <lavajoe@gentoo.org>
+  +secondlife-1.23.2_rc2.ebuild,
+  +files/secondlife-1.23.2_rc2-fix-memset-error.patch,
+  +files/secondlife-1.23.2_rc2-fix-printf-format-error.patch,
+  +files/secondlife-1.23.2_rc2-fix-uninitialized-gdkcolor.patch,
+  +files/secondlife-disable-ndof.patch,
+  +files/secondlife-fix-cmake-include-path.patch, +metadata.xml:
+  New package: Second Life viewer
+
