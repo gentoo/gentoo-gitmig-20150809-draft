@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/lilypond
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.96 2009/03/13 14:18:53 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.97 2009/05/26 05:56:51 pva Exp $
+
+  26 May 2009; Peter Volkov <pva@gentoo.org> lilypond-2.10.33.ebuild,
+  lilypond-2.11.50.ebuild, lilypond-2.11.51.ebuild, lilypond-2.11.52.ebuild,
+  lilypond-2.11.56.ebuild, lilypond-2.11.58.ebuild, lilypond-2.11.63.ebuild,
+  lilypond-2.11.64.ebuild, lilypond-2.11.65.ebuild, lilypond-2.12.1.ebuild,
+  lilypond-2.12.2.ebuild:
+  Removing app-text/ghostscript-esp from dependecies, it'll be removed from
+  the tree, bug #261434.
 
 *lilypond-2.12.2 (13 Mar 2009)
 
