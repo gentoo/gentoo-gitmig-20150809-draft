@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r8.ebuild,v 1.6 2008/02/25 19:24:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.8.6j-r8.ebuild,v 1.7 2009/05/26 17:04:42 arfrever Exp $
 
 inherit eutils webapp depend.apache depend.php
 
@@ -63,6 +63,7 @@ src_unpack() {
 }
 
 pkg_setup() {
+	depend.apache_pkg_setup
 	webapp_pkg_setup
 	has_php
 	if [ $PHP_VERSION = 5 ] ; then

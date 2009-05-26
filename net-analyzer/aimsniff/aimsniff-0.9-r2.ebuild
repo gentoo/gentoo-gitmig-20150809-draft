@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.12 2009/04/27 21:44:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r2.ebuild,v 1.13 2009/05/26 17:03:02 arfrever Exp $
 
 EAPI="2"
 
@@ -38,6 +38,8 @@ RESTRICT="mirror"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	depend.apache_pkg_setup http
+
 	if use http
 	then
 		webapp_pkg_setup

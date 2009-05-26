@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.149 2009/03/08 11:26:58 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/ChangeLog,v 1.150 2009/05/26 17:04:42 arfrever Exp $
+
+  26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cacti-0.8.6j-r8.ebuild:
+  Call depend.apache_pkg_setup() in pkg_setup() (bug #268371).
 
 *cacti-0.8.7d (08 Mar 2009)
 

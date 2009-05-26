@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.18 2008/10/21 06:53:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9-r1.ebuild,v 1.19 2009/05/26 17:03:02 arfrever Exp $
 
 inherit eutils webapp depend.apache
 
@@ -35,6 +35,8 @@ RESTRICT="mirror"
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
+	depend.apache_pkg_setup http
+
 	if use http
 	then
 		webapp_pkg_setup

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.146 2009/05/15 16:29:29 dertobi123 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.147 2009/05/26 17:05:27 arfrever Exp $
+
+  26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nagios-core-2.12.ebuild, nagios-core-3.0.6-r1.ebuild,
+  nagios-core-3.1.0.ebuild:
+  Call depend.apache_pkg_setup() in pkg_setup() (bug #268371).
 
   15 May 2009; Tobias Scherbaum <dertobi123@gentoo.org>
   nagios-core-2.12.ebuild, nagios-core-3.0.6-r1.ebuild,

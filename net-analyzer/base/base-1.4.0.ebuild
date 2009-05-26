@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.0.ebuild,v 1.1 2008/07/06 22:09:49 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/base/base-1.4.0.ebuild,v 1.2 2009/05/26 17:03:47 arfrever Exp $
 
 inherit webapp versionator eutils depend.apache depend.php
 
@@ -43,6 +43,7 @@ RDEPEND="${DEPEND}
 need_php5
 
 pkg_setup() {
+	depend.apache_pkg_setup
 	webapp_pkg_setup
 
 	# Set the group ownership for /etc/base/base_conf.php so it can be read by
