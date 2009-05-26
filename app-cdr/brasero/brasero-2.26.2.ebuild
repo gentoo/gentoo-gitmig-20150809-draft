@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.2.ebuild,v 1.2 2009/05/25 18:24:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.2.ebuild,v 1.3 2009/05/26 18:20:17 loki_val Exp $
 
 EAPI="2"
 
@@ -36,6 +36,7 @@ RDEPEND=">=dev-libs/glib-2.16.5
 		>=dev-libs/libisofs-0.6.12 )
 	nautilus? ( >=gnome-base/nautilus-2.24.2 )"
 DEPEND="${RDEPEND}
+	gnome-base/gnome-common
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
 	sys-devel/gettext

@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.75 2009/05/25 18:24:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.76 2009/05/26 18:20:17 loki_val Exp $
+
+  26 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  brasero-2.26.1-r2.ebuild, brasero-2.26.2.ebuild:
+  DEPEND on gnome-common to get GNOME_COMPILE_WARNINGS macro. Bug 271298.
+  Thanks to tadeboro@gmail.com for reporting.
 
   25 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org> brasero-2.26.2.ebuild:
   IUSE +cdrkit -- upstream default, plus dvd multi-session doesn't work for
