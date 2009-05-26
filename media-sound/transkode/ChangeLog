@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/transkode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.16 2009/04/30 19:32:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.17 2009/05/26 09:05:58 scarabeus Exp $
+
+*transkode-0.7-r2 (26 May 2009)
+
+  26 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -transkode-0.6-r1.ebuild, transkode-0.7-r1.ebuild,
+  +transkode-0.7-r2.ebuild:
+  Revbump. Change slot to 3.5 as is expected to all kde3 apps. Depend on
+  correct slot for amarok. Per bug #271265. Remove old.
 
   30 Apr 2009; Brent Baude <ranger@gentoo.org> transkode-0.7.ebuild:
   stable ppc, bug 252691

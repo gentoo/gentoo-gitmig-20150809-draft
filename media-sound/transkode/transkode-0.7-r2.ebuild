@@ -1,22 +1,23 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7-r1.ebuild,v 1.2 2009/05/26 09:05:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/transkode-0.7-r2.ebuild,v 1.1 2009/05/26 09:05:58 scarabeus Exp $
 
 EAPI="1"
 
 ARTS_REQUIRED="never"
-inherit kde
+inherit kde confutils
 
 DESCRIPTION="transKode is a KDE frontend for various audio transcoding tools."
 HOMEPAGE="http://kde-apps.org/content/show.php?content=37669"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="amarok ffmpeg gstreamer mplayer wavpack xine"
 
-RDEPEND="media-libs/taglib
+RDEPEND="!${CATEGORY}/${PN}:0
+	media-libs/taglib
 	amarok? ( media-sound/amarok:3.5 )
 	ffmpeg? ( media-video/ffmpeg )
 	gstreamer? (
@@ -44,18 +45,7 @@ S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	kde_pkg_setup
-
-	if ! use ffmpeg && ! use mplayer && ! use gstreamer && ! use xine; then
-		echo
-		ewarn "TransKode should be emerged with at least one of next"
-		ewarn "use flags: mplayer, ffmpeg, gstreamer or xine!"
-		ewarn "None of them is mandatory but they install programs that"
-		ewarn "can be used for decoding of audio formats for which no "
-		ewarn "other decoder is present."
-		echo
-		ebeep
-		epause 5
-	fi
+	confutils_require_built_with_any ffmpeg mplayer gstreamer xine
 }
 
 src_unpack() {
