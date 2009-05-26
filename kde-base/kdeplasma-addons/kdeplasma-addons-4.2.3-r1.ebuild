@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.2.3-r1.ebuild,v 1.1 2009/05/20 14:58:23 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeplasma-addons/kdeplasma-addons-4.2.3-r1.ebuild,v 1.2 2009/05/26 16:01:23 tampakrap Exp $
 
 EAPI="2"
 
@@ -16,9 +16,11 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug exif"
 
+# krunner is only needed to generate dbus interface for lancelot
 DEPEND="
 	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,opengl?]
 	>=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/krunner-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
 	exif? ( >=kde-base/libkexiv2-${PV}:${SLOT}[kdeprefix=] )
 "
