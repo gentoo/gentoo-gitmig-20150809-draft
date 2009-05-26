@@ -1,0 +1,22 @@
+Patch by Rusnan R. Shaimardanov to fix bug #213788.
+
+--- flow-tools-0.68/src/flow-export.c.orig	2009-05-26 02:41:15.000000000 +0200
++++ flow-tools-0.68/src/flow-export.c	2009-05-26 02:54:56.000000000 +0200
+@@ -716,7 +716,7 @@
+     db_table = strsep(&tmp, ":");
+     db_port = atoi(db_tmp);
+ 
+-    if (!db_user || !db_pwd || !db_host || !db_tmp || !db_name || !db_table) {
++    if (!db_user || !db_pwd || !db_host || !db_port || !db_name || !db_table) {
+       fterr_warnx("Missing field in dbaseURI, expecting user:pwd:host:port:name:table.");
+       return -1;
+     }
+@@ -892,7 +892,7 @@
+     db_name = strsep(&tmp, ":");
+     db_table = strsep(&tmp, ":");
+ 
+-    if (!db_user || !db_pwd || !db_host || !db_tmp || !db_name || !db_table) {
++    if (!db_user || !db_pwd || !db_host || !db_port || !db_name || !db_table) {
+       fterr_warnx("Missing field in dbaseURI, expecting user:pwd:host:port:name:table.");
+       return -1;
+     }

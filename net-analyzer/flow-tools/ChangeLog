@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/flow-tools
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.36 2008/05/21 18:49:07 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.37 2009/05/26 01:26:21 jer Exp $
+
+*flow-tools-0.68-r6 (26 May 2009)
+
+  26 May 2009; Jeroen Roovers <jer@gentoo.org> +flow-tools-0.68-r6.ebuild,
+  +files/flow-tools-0.68-db_tmp.patch:
+  Apply patch to really use the right MySQL/PostgreSQL port, thanks to
+  Rusnan R. Shaimardanov (bug #213788).
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   flow-tools-0.68-r5.ebuild:
