@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.6 2009/05/04 03:16:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.4.2.ebuild,v 1.7 2009/05/26 07:16:00 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs versionator games
@@ -20,14 +20,14 @@ IUSE="debug dedicated irc openal opengl"
 UIRDEPEND="media-libs/jpeg
 	media-libs/libvorbis
 	media-libs/libsdl
-	net-misc/curl
 	virtual/opengl
 	x11-libs/libXinerama
 	x11-libs/libXxf86dga
 	x11-libs/libXxf86vm
 	openal? ( media-libs/openal )"
 RDEPEND="opengl? ( ${UIRDEPEND} )
-	!opengl? ( !dedicated? ( ${UIRDEPEND} ) )"
+	!opengl? ( !dedicated? ( ${UIRDEPEND} ) )
+	net-misc/curl"
 UIDEPEND="x11-proto/xineramaproto
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto"

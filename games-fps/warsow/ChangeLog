@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/warsow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.21 2009/05/04 03:16:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/ChangeLog,v 1.22 2009/05/26 07:16:00 mr_bones_ Exp $
+
+  26 May 2009; Michael Sterrett <mr_bones_@gentoo.org> warsow-0.4.2.ebuild:
+  curl is also needed for USE=dedicated (bug #270048)
 
   04 May 2009; Michael Sterrett <mr_bones_@gentoo.org> warsow-0.4.2.ebuild:
   EAPI=2
