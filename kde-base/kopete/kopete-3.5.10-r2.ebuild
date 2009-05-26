@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r2.ebuild,v 1.1 2009/05/17 17:00:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r2.ebuild,v 1.2 2009/05/26 16:57:43 tampakrap Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -88,6 +88,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.5.5-icqfix.patch"
 	epatch "${FILESDIR}/kdenetwork-3.5.5-linux-headers-2.6.18.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${PN}-3.5-rolling_icon.patch"
 
 	use addbookmarks || kopete_disable plugin addbookmarks
 	use alias || kopete_disable plugin alias
