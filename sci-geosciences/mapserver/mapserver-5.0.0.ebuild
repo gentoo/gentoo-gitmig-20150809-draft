@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.8 2008/05/20 00:00:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/mapserver-5.0.0.ebuild,v 1.9 2009/05/26 17:06:14 arfrever Exp $
 
 PHP_EXT_NAME="php_mapscript php_proj"
 RUBY_OPTIONAL="yes"
@@ -59,6 +59,7 @@ cd_script() {
 }
 
 pkg_setup(){
+	depend.apache_pkg_setup
 	webapp_pkg_setup
 	java-pkg-opt-2_pkg_setup
 	if use php; then

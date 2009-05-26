@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.15 2009/03/03 18:14:29 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.16 2009/05/26 17:06:14 arfrever Exp $
+
+  26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mapserver-5.0.0.ebuild, mapserver-5.0.0-r1.ebuild:
+  Call depend.apache_pkg_setup() in pkg_setup() (bug #268371).
 
   03 Mar 2009; Serkan Kaba <serkan@gentoo.org> mapserver-5.0.0-r1.ebuild:
   java-pkg-2_pkg_preinst -> java-pkg-opt-2_pkg_preinst.
