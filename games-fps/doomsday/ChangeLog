@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/doomsday
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.24 2007/12/25 22:36:37 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.25 2009/05/26 19:49:38 nyhm Exp $
+
+*doomsday-1.9.0_beta62 (26 May 2009)
+
+  26 May 2009; Tristan Heaven <nyhm@gentoo.org>
+  +doomsday-1.9.0_beta62.ebuild:
+  Version bump
 
   25 Dec 2007; <solar@gentoo.org> doomsday-1.9.0_beta52.ebuild:
   - binary packages that are linked with libc.so.6 need to use sys-libs/glibc
