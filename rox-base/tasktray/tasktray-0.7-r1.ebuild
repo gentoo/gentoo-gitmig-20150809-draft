@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/tasktray-0.7-r1.ebuild,v 1.2 2009/05/21 17:38:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasktray/tasktray-0.7-r1.ebuild,v 1.3 2009/05/26 19:14:34 fauli Exp $
 
 ROX_LIB_VER=1.9.6
 inherit rox
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/rox4debian/apps/${MY_PN}-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 sparc ~x86"
+KEYWORDS="~amd64 sparc x86"
 IUSE=""
 
 RDEPEND="dev-python/libwnck-python
