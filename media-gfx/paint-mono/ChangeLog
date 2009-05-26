@@ -1,0 +1,11 @@
+# ChangeLog for media-gfx/paint-mono
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/paint-mono/ChangeLog,v 1.1 2009/05/26 07:23:15 loki_val Exp $
+
+*paint-mono-0.1.63 (26 May 2009)
+
+  26 May 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +paint-mono-0.1.63.ebuild, +metadata.xml:
+  Initial import, bug 269377. Ebuild by Aleksandr Yakimov <yaleks@gentoo.ru>
+  w/fixups by me.
+
