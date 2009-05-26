@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r5.ebuild,v 1.2 2009/05/21 21:56:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r5.ebuild,v 1.3 2009/05/26 15:19:40 tampakrap Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -151,6 +151,8 @@ src_unpack() {
 
 	#Fix glibc-2.10 compilation ( Bug 270404 )
 	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
+
+	epatch "${FILESDIR}/${PN}-3.5-perl.xml.patch"
 }
 
 src_compile() {

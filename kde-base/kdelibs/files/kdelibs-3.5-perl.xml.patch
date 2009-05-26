@@ -1,0 +1,11 @@
+--- kate/data/perl.xml	2005-11-09 00:38:50.000000000 +0200
++++ kate/data/perl.xml	2009-05-26 18:07:35.000000000 +0300
+@@ -363,7 +363,7 @@
+         <RegExpr attribute="Normal Text" context="#stay" String="\w+[=]" />
+ 
+         <RegExpr attribute="Operator" context="find_quoted" String="\bq(?=[qwx]?\s*[^\w\s])" />
+-        <RegExpr attribute="Operator" context="find_subst" String="\bs(?=\s*[^\w\s])" />
++        <RegExpr attribute="Operator" context="find_subst" String="\bs(?=[^\w\s\]})])" />
+         <RegExpr attribute="Operator" context="tr" String="\b(?:tr|y)\s*(?=[^\w\s\]})])" />
+ 
+         <RegExpr attribute="Operator" context="find_pattern" String="\b(?:m|qr)(?=\s*[^\w\s\]})])" />
