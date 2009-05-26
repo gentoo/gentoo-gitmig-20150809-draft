@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.40.ebuild,v 1.2 2009/01/09 17:48:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/HTML-Mason-1.40.ebuild,v 1.3 2009/05/26 17:00:02 arfrever Exp $
 
 inherit depend.apache perl-module
 
@@ -35,6 +35,11 @@ want_apache2 modperl
 
 mydoc="CREDITS UPGRADE"
 myconf="--noprompts"
+
+pkg_setup() {
+	depend.apache_pkg_setup modperl
+	perl-module_pkg_setup
+}
 
 perl-module_src_prep() {
 	# Note about new modperl use flag
