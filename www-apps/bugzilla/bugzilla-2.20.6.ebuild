@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.6.ebuild,v 1.6 2009/03/07 11:27:57 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-2.20.6.ebuild,v 1.7 2009/05/26 17:57:16 arfrever Exp $
 
 inherit webapp depend.apache versionator eutils
 
@@ -45,6 +45,10 @@ RDEPEND="
 "
 
 need_apache2
+
+pkg_setup() {
+	webapp_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
