@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.19 2009/05/25 18:04:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.20 2009/05/26 01:45:36 mr_bones_ Exp $
 
 inherit eutils distutils subversion flag-o-matic
 
@@ -14,7 +14,7 @@ SRC_URI=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="gtk"
+IUSE="gtk libnotify"
 
 DEPEND=">=dev-lang/python-2.5
 	>=dev-libs/boost-1.34
