@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.122 2009/05/25 19:03:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.123 2009/05/26 19:04:18 fmccor Exp $
+
+  26 May 2009; Ferris McCormick <fmccor@gentoo.org> whois-4.7.30.ebuild:
+  Sparc stable, Bug #271096.
 
   25 May 2009; Brent Baude <ranger@gentoo.org> whois-4.7.30.ebuild:
   Marking whois-4.7.30 ppc64 for bug 271096
