@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/oprofile
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.56 2009/03/22 07:51:19 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.57 2009/05/26 20:45:09 flameeyes Exp $
+
+  26 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  oprofile-0.9.4.ebuild, +files/oprofile-0.9.4+glibc-2.10.patch:
+  Add patch to fix building with glibc-2.10. Closes bug #270640.
 
   21 Mar 2009; Michał Januszewski <spock@gentoo.org> oprofile-0.9.4.ebuild:
   Fix the postinst messages so that they point to the correct location of

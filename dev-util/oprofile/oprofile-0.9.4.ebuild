@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.7 2009/03/22 07:51:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/oprofile-0.9.4.ebuild,v 1.8 2009/05/26 20:45:09 flameeyes Exp $
 
 EAPI=1
 
-inherit eutils qt3 linux-info
+inherit eutils qt3 linux-info autotools
 
 DESCRIPTION="A transparent low-overhead system-wide profiler"
 HOMEPAGE="http://oprofile.sourceforge.net"
@@ -32,6 +32,9 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-open.patch"
+	epatch "${FILESDIR}/${P}+glibc-2.10.patch"
+
+	eautoreconf
 }
 
 src_compile() {
