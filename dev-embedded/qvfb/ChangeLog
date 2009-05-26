@@ -1,0 +1,13 @@
+# ChangeLog for dev-embedded/qvfb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/qvfb/ChangeLog,v 1.1 2009/05/26 18:03:14 hwoarang Exp $
+
+*qvfb-4.5.1 (26 May 2009)
+
+  26 May 2009; Markos Chandras <hwoarang@gentoo.org> +qvfb-4.5.1.ebuild,
+  +metadata.xml:
+  Initial commit of qvfb tool. Fixes bug 43827. Thanks to Håvard Wall
+  <haavardw@ifi.uio.no> and Tais M. Hansen <tais.hansen@osd.dk> for the
+  initial
+  ebuilds.
+
