@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Apache-Test
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.62 2008/05/28 13:23:08 gmsoft Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.63 2009/05/26 17:31:51 arfrever Exp $
+
+  26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  Apache-Test-1.29.ebuild, Apache-Test-1.30.ebuild:
+  Add pkg_setup().
 
   28 May 2008; Guy Martin <gmsoft@gentoo.org> Apache-Test-1.29.ebuild,
   Apache-Test-1.30.ebuild:

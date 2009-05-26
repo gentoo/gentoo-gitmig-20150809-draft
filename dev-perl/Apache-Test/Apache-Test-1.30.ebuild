@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.30.ebuild,v 1.2 2008/05/28 13:23:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/Apache-Test-1.30.ebuild,v 1.3 2009/05/26 17:31:51 arfrever Exp $
 
 inherit depend.apache perl-module
 
@@ -16,6 +16,10 @@ SRC_TEST="skip"
 DEPEND="dev-lang/perl"
 
 need_apache
+
+pkg_setup() {
+	perl-module_pkg_setup
+}
 
 src_install() {
 	# This is to avoid conflicts with a deprecated Apache::Test stepping
