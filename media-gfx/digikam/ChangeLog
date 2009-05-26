@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.133 2009/05/25 20:23:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.134 2009/05/26 09:32:58 scarabeus Exp $
+
+*digikam-0.9.5 (26 May 2009)
+*digikam-0.9.4-r2 (26 May 2009)
+
+  26 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -digikam-0.9.4-r1.ebuild, +digikam-0.9.4-r2.ebuild,
+  -digikam-0.9.5_beta3.ebuild, +digikam-0.9.5.ebuild:
+  Version bump. Move slot to 3.5 to allow side by side installation with 4x
+  version. Per bug #270939.
 
   25 May 2009; Markus Meier <maekke@gentoo.org> digikam-0.9.4.ebuild:
   amd64 stable, bug #244230

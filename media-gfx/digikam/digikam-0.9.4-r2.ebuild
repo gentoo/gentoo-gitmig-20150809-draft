@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.4-r1.ebuild,v 1.2 2009/03/19 10:09:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.4-r2.ebuild,v 1.1 2009/05/26 09:32:58 scarabeus Exp $
 
 EAPI="1"
 
@@ -17,7 +17,7 @@ DESCRIPTION="A digital photo management application for KDE."
 HOMEPAGE="http://www.digikam.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	doc? ( mirror://sourceforge/${PN}/${P_DOC}.tar.bz2 )"
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE="nfs doc"
@@ -35,6 +35,7 @@ DEPEND=">=dev-db/sqlite-3.5.9:3
 	!media-plugins/digikamimageplugins"
 
 RDEPEND="${DEPEND}
+	!${CATEGORY}/${PN}:0
 	|| ( ( kde-base/kgamma:3.5 kde-base/kamera:3.5 )
 		kde-base/kdegraphics:3.5 )"
 
