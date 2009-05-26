@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nitro
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.16 2008/08/06 16:35:39 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nitro/ChangeLog,v 1.17 2009/05/26 17:01:13 arfrever Exp $
+
+  26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ChangeLog:
+  Call depend.apache_pkg_setup() in pkg_setup() (bug #268371).
 
   06 Aug 2008; Hans de Graaff <graaff@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
