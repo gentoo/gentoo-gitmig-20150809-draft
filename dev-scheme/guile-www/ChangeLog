@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-www
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.5 2008/07/12 12:24:56 hkbst Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-www/ChangeLog,v 1.6 2009/05/26 14:04:28 fmccor Exp $
+
+  26 May 2009; Ferris McCormick <fmccor@gentoo.org> guile-www-2.23.ebuild:
+  Add ~sparc, part of Bug #271285.
 
 *guile-www-2.23 (12 Jul 2008)
 
