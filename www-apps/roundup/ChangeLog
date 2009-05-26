@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.29 2009/05/25 20:02:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.30 2009/05/26 17:56:26 pva Exp $
+
+*roundup-1.4.8-r1 (26 May 2009)
+
+  26 May 2009; Peter Volkov <pva@gentoo.org> +roundup-1.4.8-r1.ebuild:
+  Fixed crash reported in bug #262100 comment 4 by Christian Faulhammer.
 
   25 May 2009; Markus Meier <maekke@gentoo.org> roundup-1.4.8.ebuild:
   revert stabilization, bug #262100 comment #4
