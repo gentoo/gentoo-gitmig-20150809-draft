@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/owfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.12 2009/05/25 16:57:08 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/ChangeLog,v 1.13 2009/05/26 15:44:19 armin76 Exp $
+
+  26 May 2009; Raúl Porcel <armin76@gentoo.org> owfs-2.7_p21.ebuild:
+  Add ~arm wrt #270463
 
 *owfs-2.7_p21 (25 May 2009)
 

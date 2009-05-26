@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.1 2009/05/25 16:57:08 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/owfs/owfs-2.7_p21.ebuild,v 1.2 2009/05/26 15:44:19 armin76 Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	perl? ( dev-lang/swig )
 	php? ( dev-lang/swig )
 	python? ( dev-lang/swig )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~arm ~x86"
 SLOT="0"
 IUSE="debug fuse ftpd httpd parport perl php python server tcl usb zeroconf"
 
