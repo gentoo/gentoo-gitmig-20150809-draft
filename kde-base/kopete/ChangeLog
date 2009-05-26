@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.187 2009/05/26 16:57:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.188 2009/05/26 17:34:34 tampakrap Exp $
+
+*kopete-3.5.10-r3 (26 May 2009)
+
+  26 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kopete-3.5.10-r3.ebuild:
+  Revbump needed for previous commit
 
   26 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kopete-3.5.10-r2.ebuild, +files/kopete-3.5-rolling_icon.patch:
