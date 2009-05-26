@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.24.2.ebuild,v 1.1 2008/11/29 19:18:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.24.2.ebuild,v 1.2 2009/05/26 10:52:53 leio Exp $
 
 inherit eutils gnome2
 
@@ -68,6 +68,13 @@ pkg_setup() {
 		$(use_enable !sourceview plugin-scintilla)
 		$(use_enable subversion plugin-subversion)
 		$(use_enable inherit-graph plugin-class-inheritance)"
+}
+
+src_unpack() {
+	gnome2_src_unpack
+
+	# Fix build with graphviz-2.22+ (bug 261674)
+	epatch "${FILESDIR}/${P}-fix-build-with-graphviz-2.22.patch"
 }
 
 src_install() {
