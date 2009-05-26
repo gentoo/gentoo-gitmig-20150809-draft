@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9837 2009/05/26 06:13:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9838 2009/05/26 13:41:54 mescalinum Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,22 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Federico Ferri <mescalinum@gentoo.org> (26 May 2008)
+# Deprecated cause depending on unmaintained dev-tcltk/otcl.
+# Everything being moved to 'abandonware' overlay.
+# Possible replacement: net-misc/gns3 (sunrise overlay)
+# Going for removal in ~30 days if no one objects.
+# removal bug #271305
+net-analyzer/ns
+net-analyzer/nam
+
+# Federico Ferri <mescalinum@gentoo.org> (26 May 2008)
+# Unmaintained upstream.
+# Going for removal in ~30 days.
+# removal bug #271307
+dev-tcltk/otcl
+dev-tcltk/tclcl
 
 # MATSUU Takuto <matsuu@gentoo.org> (26 May 2009)
 # Masked for testing, bug #267365.
