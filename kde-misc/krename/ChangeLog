@@ -1,6 +1,15 @@
 # ChangeLog for kde-misc/krename
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.47 2009/04/06 11:44:03 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.48 2009/05/26 09:42:12 scarabeus Exp $
+
+*krename-3.9.2-r2 (26 May 2009)
+*krename-3.0.14-r1 (26 May 2009)
+
+  26 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +krename-3.0.14-r1.ebuild, -krename-3.9.2-r1.ebuild,
+  +krename-3.9.2-r2.ebuild:
+  Revision bump, slot switches -> 3.5 and -> 4 from 4.1. Block only correct
+  slot versions.
 
   06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> krename-3.9.2-r1.ebuild:
   Preparation for new eclass. Unprefixing misc apps.

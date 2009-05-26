@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.9.2-r1.ebuild,v 1.3 2009/04/06 11:45:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-3.9.2-r2.ebuild,v 1.1 2009/05/26 09:42:12 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,11 +11,12 @@ HOMEPAGE="http://www.krename.net/"
 SRC_URI="mirror://sourceforge/krename/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="4.1"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-libs/taglib-1.5"
 RDEPEND="${DEPEND}
-	!kde-misc/krename:0
+	!${CATEGORY}/${PN}:0
+	!${CATEGORY}/${PN}:4.1
 "
