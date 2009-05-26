@@ -5,6 +5,5 @@
   <use>
     <flag name="legacyssl">Support for some deprecated ciphers. Don't use this flag unless you really need it</flag>
     <flag name="utempter">Records user logins. Useful on multi-user systems</flag>
-    <flag name="webkit">Enable QT-WebKit rendering support</flag>
   </use>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.594 2009/05/26 15:19:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.595 2009/05/26 19:26:22 scarabeus Exp $
+
+  26 May 2009; Tomas Chvatal <scarabeus@gentoo.org> metadata.xml:
+  Remove unused local flag. Thanks to mr_bones_
 
   26 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kdelibs-3.5.10-r5.ebuild, +files/kdelibs-3.5-perl.xml.patch:
