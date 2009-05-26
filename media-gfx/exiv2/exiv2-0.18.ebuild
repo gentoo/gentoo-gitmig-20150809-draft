@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.18.ebuild,v 1.6 2009/05/23 12:24:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.18.ebuild,v 1.7 2009/05/26 05:17:49 gengor Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="EXIF and IPTC metadata C++ library and command line utility"
 HOMEPAGE="http://www.exiv2.org/"
@@ -49,8 +49,15 @@ src_unpack() {
 src_compile() {
 	local myconf="$(use_enable nls) $(use_enable xmp)"
 	use zlib || myconf="${myconf} --without-zlib"  # plain 'use_with' fails
+
+	# Bug #78720. amd64/gcc-3.4/-fvisibility* fail.
+	if [[ $(gcc-major-version) -lt 4 ]]; then
+		use amd64 && myconf="${myconf} --disable-visibility"
+	fi
+
 	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
+
 	if use doc; then
 		emake doc || die "emake doc failed"
 	fi
