@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.27.ebuild,v 1.3 2009/04/18 11:57:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.27.ebuild,v 1.4 2009/05/26 17:50:17 arfrever Exp $
 
 inherit apache-module java-pkg-2
 
@@ -26,6 +26,10 @@ CONF_DIR="${WORKDIR}/${MY_P}/conf"
 need_apache
 
 DEPEND=">=virtual/jdk-1.4"
+
+pkg_setup() {
+	java-pkg-2_pkg_setup
+}
 
 src_compile() {
 	econf \

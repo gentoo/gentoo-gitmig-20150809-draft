@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.10 2008/11/18 16:21:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.11 2009/05/26 17:47:32 arfrever Exp $
 
 inherit apache-module perl-module multilib
 
@@ -27,6 +27,10 @@ APACHE2_MOD_DEFINE="APREQ"
 DOCFILES="docs/html/*.html CHANGES README INSTALL MANIFEST"
 
 need_apache2
+
+pkg_setup() {
+	perl-module_pkg_setup
+}
 
 src_unpack() {
 	unpack ${A}
