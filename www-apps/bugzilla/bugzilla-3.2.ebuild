@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.2.ebuild,v 1.1 2008/12/07 07:40:22 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.2.ebuild,v 1.2 2009/05/26 17:07:18 arfrever Exp $
 
 inherit webapp depend.apache versionator eutils
 
@@ -63,6 +63,7 @@ RDEPEND="
 want_apache modperl
 
 pkg_setup() {
+	depend.apache_pkg_setup modperl
 	webapp_pkg_setup
 
 	if use extras ; then

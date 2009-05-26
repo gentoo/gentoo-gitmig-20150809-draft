@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.3.3.ebuild,v 1.1 2008/10/31 06:40:42 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/otrs/otrs-2.3.3.ebuild,v 1.2 2009/05/26 17:08:02 arfrever Exp $
 
 inherit webapp eutils depend.apache
 
@@ -44,6 +44,7 @@ RDEPEND="${DEPEND}
 want_apache
 
 pkg_setup() {
+	depend.apache_pkg_setup
 	webapp_pkg_setup
 	if use apache2; then
 		enewuser otrs -1 -1 /dev/null apache
