@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9-r1.ebuild,v 1.12 2009/03/30 14:25:12 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9-r1.ebuild,v 1.13 2009/05/26 06:40:42 pva Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -258,7 +258,7 @@ pkg_postinst() {
 	echo
 
 	local good_gs=false
-	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu app-text/ghostscript-esp ; do
+	for x in app-text/ghostscript-gpl app-text/ghostscript-gnu ; do
 		if has_version ${x} && built_with_use ${x} cups ; then
 			good_gs=true
 			break
