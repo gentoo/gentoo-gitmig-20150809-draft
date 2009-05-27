@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r2.ebuild,v 1.1 2009/05/26 12:05:56 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/snack-2.2.10-r2.ebuild,v 1.2 2009/05/27 14:23:27 mescalinum Exp $
 
 inherit eutils multilib
 
@@ -27,7 +27,10 @@ S="${WORKDIR}/${PN}${PV}/unix"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	# bug 226137 - snack depends on alsa private symbol _snd_pcm_mmap_hw_ptr
 	epatch "${FILESDIR}"/alsa-undef-sym.patch
+	# bug 270839 - error from /usr/include/bits/mathcalls.h:310
+	sed -i -e 's|^\(#define roundf(.*\)|//\1|' ../generic/jkFormatMP3.c
 }
 
 src_compile() {

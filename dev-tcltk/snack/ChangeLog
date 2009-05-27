@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/snack
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.32 2009/05/26 12:05:56 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/snack/ChangeLog,v 1.33 2009/05/27 14:23:27 mescalinum Exp $
+
+  27 May 2009; Federico Ferri <mescalinum@gentoo.org>
+  snack-2.2.10-r2.ebuild:
+  fix bug 270839
 
 *snack-2.2.10-r2 (26 May 2009)
 
