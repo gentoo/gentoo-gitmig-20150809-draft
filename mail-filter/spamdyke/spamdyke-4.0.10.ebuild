@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-4.0.10.ebuild,v 1.2 2009/02/01 12:11:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamdyke/spamdyke-4.0.10.ebuild,v 1.3 2009/05/27 12:41:58 tupone Exp $
 
 EAPI="1"
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 x86"
 IUSE="+tls"
 
 DEPEND="tls? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${P}/${PN}
 
