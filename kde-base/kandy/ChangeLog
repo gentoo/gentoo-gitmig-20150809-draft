@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kandy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kandy/ChangeLog,v 1.89 2009/05/27 18:18:22 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kandy/ChangeLog,v 1.90 2009/05/27 19:21:18 tampakrap Exp $
+
+*kandy-3.5.10-r1 (27 May 2009)
+
+  27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kandy-3.5.10-r1.ebuild:
+  Again, forgot to revbump
 
   27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> kandy-3.5.10.ebuild:
   Fix kandy icon, bug 207809, thanks to Eike Hein for the guidance to track
