@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.40 2009/05/27 20:17:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.41 2009/05/27 23:11:11 matsuu Exp $
+
+  27 May 2009; MATSUU Takuto <matsuu@gentoo.org> -m17n-db-1.3.3.ebuild,
+  -m17n-db-1.3.4.ebuild:
+  Removed old versions.
 
   27 May 2009; Jeroen Roovers <jer@gentoo.org> m17n-db-1.5.2.ebuild:
   Stable for HPPA (bug #244898).
