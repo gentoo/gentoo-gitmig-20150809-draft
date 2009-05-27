@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.10 2009/04/17 16:22:29 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.11 2009/05/27 16:33:08 cardoe Exp $
+
+*virtinst-0.400.3-r1 (27 May 2009)
+
+  27 May 2009; Doug Goldstein <cardoe@gentoo.org>
+  +virtinst-0.400.3-r1.ebuild, +files/virtinst-0.400.3-kvm-img.patch:
+  add patch to use kvm-img if qemu-img isn't there
 
 *virtinst-0.400.3 (17 Apr 2009)
 
