@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.1.ebuild,v 1.1 2009/04/06 11:53:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.2.ebuild,v 1.1 2009/05/27 13:13:37 scarabeus Exp $
 
 EAPI="2"
 
-KDE_MINIMAL="4.1"
 KDE_LINGUAS="ca cs de el es es_AR et fr it nl pl pt_BR ru sr sr@Latn tr zh_TW"
 inherit kde4-base
 
@@ -14,7 +13,7 @@ HOMEPAGE="http://k9copy.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-SLOT="2"
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -24,7 +23,8 @@ DEPEND="media-libs/libdvdread
 	>=media-video/ffmpeg-0.5
 	x11-libs/qt-dbus:4"
 RDEPEND="${DEPEND}
-	!app-cdr/k9copy:0
+	!${CATEGORY}/${PN}:0
+	!${CATEGORY}/${PN}:2
 	media-video/dvdauthor
 	media-video/mplayer"
 
