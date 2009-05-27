@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/safecopy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.2 2009/05/27 12:05:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.3 2009/05/27 15:30:45 scarabeus Exp $
+
+  27 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> safecopy-1.3.ebuild:
+  Modify the test handling. Fixes QA issues. Thx to nirbheek for pointing
+  out.
 
 *safecopy-1.3 (27 May 2009)
 

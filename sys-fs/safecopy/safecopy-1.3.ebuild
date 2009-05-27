@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/safecopy-1.3.ebuild,v 1.1 2009/05/27 12:04:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/safecopy-1.3.ebuild,v 1.2 2009/05/27 15:30:45 scarabeus Exp $
 
 EAPI="2"
 inherit base eutils
@@ -13,12 +13,28 @@ http://sourceforge.net/tracker/download.php?group_id=141056&atid=748330&file_id=
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="test"
 
 PATCHES=(
 	"${FILESDIR}/${P}-sandbox.patch"
 	"${WORKDIR}/${P}-amd64.patch"
 )
+
+src_configure() {
+	base_src_configure
+	if use test ; then
+		cd "${S}"/test/libsafecopydebug
+		econf
+	fi
+}
+
+src_compile() {
+	base_src_compile
+	if use test ; then
+		cd "${S}"/test/libsafecopydebug
+		emake || die "Testsuite compilation failed"
+	fi
+}
 
 src_install() {
 	base_src_install
@@ -26,12 +42,6 @@ src_install() {
 }
 
 src_test() {
-	einfo "Starting test phase:"
-	cd "${S}"/test/libsafecopydebug
-	einfo "Compiling safecopy test suite..."
-	econf
-	emake || die "Compilation of safecopy test failed ?!"
-
 	cd "${S}"/test/
 	ebegin "Running safecopy self test..."
 	./test.sh
