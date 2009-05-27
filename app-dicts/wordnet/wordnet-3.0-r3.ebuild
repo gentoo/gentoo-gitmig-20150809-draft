@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.1 2009/03/15 11:45:29 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/wordnet/wordnet-3.0-r3.ebuild,v 1.2 2009/05/27 10:54:13 fauli Exp $
 
 inherit flag-o-matic autotools
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cogsci.princeton.edu/pub/wordnet/${PV}/WordNet-${PV}.tar.gz
 LICENSE="Princeton"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="doc"
 
 # In contrast to what the configure script seems to imply, Tcl/Tk is NOT optional.
