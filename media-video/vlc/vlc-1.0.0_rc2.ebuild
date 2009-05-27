@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc1.ebuild,v 1.1 2009/05/10 10:23:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc2.ebuild,v 1.1 2009/05/27 05:27:47 aballier Exp $
 
 EAPI="1"
 
@@ -45,7 +45,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~arm ~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd fbcon fluidsynth +ffmpeg flac fontconfig ggi gnome gnutls hal httpd
 	id3tag jack kate libass libcaca +libgcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg mtp
@@ -113,7 +113,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
-		pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
+		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
 		samba? ( net-fs/samba )
