@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyreverse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.14 2009/05/24 20:06:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/ChangeLog,v 1.15 2009/05/27 10:33:16 fauli Exp $
+
+  27 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  pyreverse-0.5.2.ebuild:
+  stable x86, bug 271014
 
   24 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyreverse-0.5.2.ebuild:
