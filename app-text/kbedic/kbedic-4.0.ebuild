@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.14 2009/03/20 02:00:50 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-4.0.ebuild,v 1.15 2009/05/27 11:52:19 tampakrap Exp $
 
 inherit kde eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="kde"
 
 DEPEND="=x11-libs/qt-3*
-	kde? ( >=kde-base/kdelibs-3 )"
+	kde? ( =kde-base/kdelibs-3* )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

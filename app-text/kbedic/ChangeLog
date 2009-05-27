@@ -1,6 +1,9 @@
 # ChangeLog for app-text/kbedic
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.21 2009/03/20 02:00:50 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.22 2009/05/27 11:52:19 tampakrap Exp $
+
+  27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> kbedic-4.0.ebuild:
+  Fix typo in deps, bug 213432
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org>
   +files/kbedic-4.0-dont-filter-cflags.patch, -files/ppc-gfxopt.patch,
