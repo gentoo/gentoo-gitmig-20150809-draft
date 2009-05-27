@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/libmaa-1.1.1.ebuild,v 1.3 2009/03/18 06:51:58 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/libmaa-1.1.1.ebuild,v 1.4 2009/05/27 10:51:08 fauli Exp $
 
 DESCRIPTION="Library with low-level data structures which are helpful for writing compilers"
 HOMEPAGE="http://www.dict.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/dict/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 src_install() {
