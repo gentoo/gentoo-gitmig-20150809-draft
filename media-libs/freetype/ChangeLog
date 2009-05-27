@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.234 2009/05/26 05:55:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.235 2009/05/27 15:47:56 ranger Exp $
+
+  27 May 2009; Brent Baude <ranger@gentoo.org>
+  freetype-1.4_pre20080316-r2.ebuild:
+  Marking freetype-1.4_pre20080316-r2 ppc64 and ppc for bug 271234
 
   26 May 2009; Christian Faulhammer <fauli@gentoo.org>
   freetype-1.4_pre20080316-r2.ebuild:
