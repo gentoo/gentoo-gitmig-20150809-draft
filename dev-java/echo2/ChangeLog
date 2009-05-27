@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/echo2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/ChangeLog,v 1.6 2009/04/22 19:43:17 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/echo2/ChangeLog,v 1.7 2009/05/27 05:28:54 fauli Exp $
+
+  27 May 2009; Christian Faulhammer <fauli@gentoo.org> echo2-2.1.1.ebuild:
+  keyworded ~arch for x86, bug 270800
 
 *echo2-2.1.1 (22 Apr 2009)
 
