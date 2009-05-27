@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.235 2009/05/27 15:47:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.236 2009/05/27 17:25:20 armin76 Exp $
+
+  27 May 2009; Raúl Porcel <armin76@gentoo.org>
+  freetype-1.4_pre20080316-r2.ebuild:
+  alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #271234
 
   27 May 2009; Brent Baude <ranger@gentoo.org>
   freetype-1.4_pre20080316-r2.ebuild:
