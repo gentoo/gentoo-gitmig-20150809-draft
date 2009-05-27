@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/secondlife
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/ChangeLog,v 1.1 2009/05/26 22:49:36 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/ChangeLog,v 1.2 2009/05/27 00:22:33 lavajoe Exp $
+
+  26 May 2009; Joe Peterson <lavajoe@gentoo.org>
+  secondlife-1.23.2_rc2.ebuild:
+  Fix icon path
 
 *secondlife-1.23.2_rc2 (26 May 2009)
 

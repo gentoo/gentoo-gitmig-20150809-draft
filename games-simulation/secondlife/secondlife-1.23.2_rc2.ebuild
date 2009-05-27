@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/secondlife-1.23.2_rc2.ebuild,v 1.1 2009/05/26 22:49:36 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/secondlife-1.23.2_rc2.ebuild,v 1.2 2009/05/27 00:22:33 lavajoe Exp $
 
 inherit eutils multilib games versionator
 
@@ -125,6 +125,10 @@ src_install() {
 
 	dodoc README-*.txt licenses.txt || die
 	rm README-*.txt licenses.txt || die
+
+	insinto /usr/share/secondlife
+	doins secondlife_icon.png || die
+	rm secondlife_icon.png || die
 
 	dodir /usr/lib/${PN} || die
 	cp -dR "${S}"/libraries/${ARCH_LIBS_DIR}/lib_release_client/libxml* "${D}"/usr/lib/${PN} || die
