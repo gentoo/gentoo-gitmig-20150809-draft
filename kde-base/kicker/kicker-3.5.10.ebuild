@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.10.ebuild,v 1.2 2008/09/14 02:27:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.10.ebuild,v 1.3 2009/05/27 23:40:20 tampakrap Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -19,6 +19,8 @@ DEPEND=">=kde-base/libkonq-${PV}:${SLOT}
 	x11-libs/libXrender
 	x11-libs/libXtst
 	xcomposite? ( x11-libs/libXcomposite )"
+RDEPEND="${DEPEND}
+	>=kde-base/kmenuedit-${PV}:${SLOT}"
 
 KMCOPYLIB="libkonq libkonq"
 KMEXTRACTONLY="libkonq
