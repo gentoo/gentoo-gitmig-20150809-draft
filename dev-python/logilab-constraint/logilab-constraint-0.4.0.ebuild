@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.2 2009/03/01 05:59:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.3 2009/05/27 15:15:28 fmccor Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/constraint/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="doc"
 
 DOCS="doc/CONTRIBUTORS"
