@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.0_beta3.ebuild,v 1.2 2009/05/26 17:00:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.0_beta3.ebuild,v 1.3 2009/05/27 16:38:06 matsuu Exp $
 
 inherit eutils gnome2-utils
 
@@ -16,7 +16,6 @@ IUSE="gtk gnome nls"
 
 RDEPEND=">=net-misc/curl-7.18
 	>=dev-libs/glib-2.8
-	>=app-text/gnome-doc-utils-0.3.2
 	gtk? (
 		>=gnome-base/gconf-2
 		>=x11-libs/gtk+-2.14
@@ -24,6 +23,8 @@ RDEPEND=">=net-misc/curl-7.18
 	)
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	>=app-text/gnome-doc-utils-0.3.2
+	gnome? ( app-text/scrollkeeper )
 	nls? ( >=sys-devel/gettext-0.17 )
 	dev-util/pkgconfig"
 
@@ -33,6 +34,7 @@ src_compile() {
 	econf \
 		$(use_with gtk gnome) \
 		$(use_enable nls) \
+		$(use_enable gnome scrollkeeper) \
 		--disable-schemas-install || die
 	emake || die
 }

@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/gwaei
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.18 2009/05/26 17:00:10 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/ChangeLog,v 1.19 2009/05/27 16:38:06 matsuu Exp $
+
+  27 May 2009; MATSUU Takuto <matsuu@gentoo.org> gwaei-1.0_beta3.ebuild:
+  Fixed dependency.
 
   26 May 2009; MATSUU Takuto <matsuu@gentoo.org> gwaei-1.0_beta3.ebuild:
   Added app-text/gnome-doc-utils to DEPEND.
