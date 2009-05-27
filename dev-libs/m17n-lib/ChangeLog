@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/m17n-lib
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.44 2009/04/05 18:51:41 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/ChangeLog,v 1.45 2009/05/27 16:55:40 matsuu Exp $
+
+*m17n-lib-1.5.4 (27 May 2009)
+
+  27 May 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -files/m17n-lib-1.0.2-typedef.diff, -files/m17n-lib-1.1.0-fpic.patch,
+  -m17n-lib-1.2.0.ebuild, -m17n-lib-1.5.1.ebuild, +m17n-lib-1.5.4.ebuild:
+  Version bumped. Removed old versions.
 
   05 Apr 2009; Raúl Porcel <armin76@gentoo.org> m17n-lib-1.5.3.ebuild:
   Add ~sh
