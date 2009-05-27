@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.1 2009/05/27 19:38:07 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.2 2009/05/27 23:20:45 tampakrap Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -11,7 +11,7 @@ HOMEPAGE="http://kopete.kde.org/"
 
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="jingle ssl xscreensaver slp kernel_linux kdehiddenvisibility"
+IUSE="emoticons-manager jingle ssl xscreensaver slp kernel_linux kdehiddenvisibility"
 PLUGINS="addbookmarks alias autoreplace connectionstatus contactnotes crypt highlight history latex netmeeting nowlistening
 	statistics texteffect translator webpresence"
 PROTOCOLS="gadu groupwise irc jabber oscar msn sametime sms v4l2 winpopup yahoo"
@@ -91,6 +91,10 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.5-rolling_icon.patch"
 	epatch "${FILESDIR}/${P}-libgadu-CVE-2008-4776.patch"
 	epatch "${FILESDIR}/${P}-icq-protocol-change2.patch"
+
+	if use emoticons-manager; then
+		epatch "${FILESDIR}/emoticon-manager.patch"
+	fi
 
 	use addbookmarks || kopete_disable plugin addbookmarks
 	use alias || kopete_disable plugin alias

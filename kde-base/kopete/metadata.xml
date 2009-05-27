@@ -2,6 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<use>
+	<flag name="emoticons-manager">Enables emoticons theme manager so that the user can edit and remove emoticons or add custom ones etc</flag>
 		<!-- PLUGINS -->
 	<flag name="addbookmarks">Automaticaly add incoming urls to bookmarks.</flag>
 	<flag name="alias">Enables creating of your own aliases for commands.</flag>

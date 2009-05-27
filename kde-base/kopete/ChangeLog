@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.189 2009/05/27 19:38:07 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.190 2009/05/27 23:20:45 tampakrap Exp $
+
+  27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  kopete-3.5.10-r4.ebuild, +files/emoticon-manager.patch, metadata.xml:
+  Add emoticons theme manager, enhancement bug 245604
 
 *kopete-3.5.10-r4 (27 May 2009)
 
