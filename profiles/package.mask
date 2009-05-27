@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9840 2009/05/27 08:10:35 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9841 2009/05/27 08:30:01 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (27 May 2009)
+# PDEPEND on more dual life modules that also install
+# into scriptdir
+# Masked until perl-5.8.8-r6 is stable for amd64 and x86
+=dev-lang/perl-5.8.8-r7
+perl-core/CPAN
+virtual/perl-CPAN
+perl-core/Encode
+virtual/perl-Encode
+perl-core/ExtUtils-MakeMaker
+virtual/perl-ExtUtils-MakeMaker
 
 # Federico Ferri <mescalinum@gentoo.org> (26 May 2008)
 # Deprecated cause depending on unmaintained dev-tcltk/otcl.

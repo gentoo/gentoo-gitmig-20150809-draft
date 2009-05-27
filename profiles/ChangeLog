@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2692 2009/05/26 14:24:01 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2693 2009/05/27 08:30:01 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 May 2009; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-lang/perl-5.8.8-r7 and modules: CPAN, Encode, ExtUtils-MakeMaker
 
   26 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   kde-base/pykde:3.5 removed
