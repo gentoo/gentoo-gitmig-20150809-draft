@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.3 2009/03/20 07:05:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/openastromenace/openastromenace-1.2.0.ebuild,v 1.4 2009/05/27 14:23:14 nyhm Exp $
 
 EAPI=2
-inherit eutils games
+inherit cmake-utils eutils games
 
 DESCRIPTION="Modern 3D space shooter with spaceship upgrade possibilities"
 HOMEPAGE="http://sourceforge.net/projects/openastromenace/"
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="linguas_de linguas_ru"
 
-RDEPEND="virtual/opengl
+DEPEND="virtual/opengl
 	virtual/glu
 	media-libs/libsdl[joystick]
 	media-libs/openal
@@ -27,8 +27,6 @@ RDEPEND="virtual/opengl
 	media-libs/libogg
 	media-libs/libvorbis
 	media-libs/jpeg"
-DEPEND="${RDEPEND}
-	dev-util/cmake"
 
 S=${WORKDIR}/OpenAstroMenaceSVN
 
@@ -36,13 +34,17 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-cmake.patch
 }
 
+src_configure() {
+	local mycmakeargs="-DDATADIR=${GAMES_DATADIR}/${PN}"
+	cmake-utils_src_configure
+}
+
 src_compile() {
-	cmake -DDATADIR="${GAMES_DATADIR}"/${PN} . || die "cmake failed"
-	emake || die "emake failed"
+	cmake-utils_src_compile
 }
 
 src_install() {
-	newgamesbin AstroMenace ${PN} || die "newgamesbin failed"
+	newgamesbin "${CMAKE_BUILD_DIR}"/AstroMenace ${PN} || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
 	doins -r ../DATA ../*.vfs || die "doins failed"
 	dosym gamelang_en.vfs "${GAMES_DATADIR}"/${PN}/gamelang.vfs
