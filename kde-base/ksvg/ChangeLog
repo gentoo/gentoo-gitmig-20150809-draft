@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksvg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.89 2009/04/30 12:00:35 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.90 2009/05/27 10:53:42 tampakrap Exp $
+
+  27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> ksvg-3.5.10.ebuild:
+  Fix typo in --as-needed filtering
 
   30 Apr 2009; Theo Chatzimichos <tampakrap@gentoo.org> +files/ksvg-fribidi.patch,
   ksvg-3.5.10:

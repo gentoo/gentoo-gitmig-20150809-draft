@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ksvg-3.5.10.ebuild,v 1.2 2009/04/30 12:00:35 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ksvg-3.5.10.ebuild,v 1.3 2009/05/27 10:53:42 tampakrap Exp $
 
 KMNAME=kdegraphics
 EAPI="1"
@@ -22,6 +22,6 @@ src_unpack() {
 
 	if has_version ">=dev-libs/fribidi-0.19.1"; then
 		epatch "${FILESDIR}/${PN}-fribidi.patch"
-		filter-ldflags -Wl, --as-needed
+		filter-ldflags -Wl,--as-needed --as-needed
 	fi
 }
