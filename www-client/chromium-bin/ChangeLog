@@ -1,0 +1,14 @@
+# ChangeLog for www-client/chromium-bin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.1 2009/05/27 11:58:52 voyageur Exp $
+
+*chromium-bin-9999 (27 May 2009)
+*chromium-bin-0_p16980 (27 May 2009)
+
+  27 May 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +chromium-bin-0_p16980.ebuild, +chromium-bin-9999.ebuild,
+  +files/chromium.png, +metadata.xml:
+  Initial commit, based on ebuild by Vladimir Dolzhenko
+  <vladimir.dolzhenko@gmail.com> in bug #271272. -9999 always fetches the
+  last build, and is package.masked as 'live' ebuild
+
