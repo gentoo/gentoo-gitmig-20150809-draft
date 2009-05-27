@@ -1,0 +1,192 @@
+diff -rU 5 safecopy-1.3.nogentoo/test/test0/test.sh safecopy-1.3/test/test0/test.sh
+--- safecopy-1.3.nogentoo/test/test0/test.sh	2009-05-09 20:39:40.000000000 +0200
++++ safecopy-1.3/test/test0/test.sh	2009-05-26 13:57:22.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing test debug library functionality: ";
+ 
+ # test if the test libray gets loaded and works. the destination file must be cropped at 2048 byte
+ # since cat - unlike safecopy - can not read beyond IO errors.
+diff -rU 5 safecopy-1.3.nogentoo/test/test1/test.sh safecopy-1.3/test/test1/test.sh
+--- safecopy-1.3.nogentoo/test/test1/test.sh	2009-05-09 20:40:32.000000000 +0200
++++ safecopy-1.3/test/test1/test.sh	2009-05-26 13:57:27.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 1: Simple plain file copy: ";
+ 
+ # test without the deug library. safecopy must duplicate the file
+ # without errors
+diff -rU 5 safecopy-1.3.nogentoo/test/test10/test.sh safecopy-1.3/test/test10/test.sh
+--- safecopy-1.3.nogentoo/test/test10/test.sh	2009-05-11 17:54:09.000000000 +0200
++++ safecopy-1.3/test/test10/test.sh	2009-05-26 13:57:37.000000000 +0200
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 10: Incremental recovery with blocksize variation and exclude blocks ";
+ 
+ # main emphasis on this test is that no data from exclude blocks are ever read nor written.
+ 
+diff -rU 5 safecopy-1.3.nogentoo/test/test11/test.sh safecopy-1.3/test/test11/test.sh
+--- safecopy-1.3.nogentoo/test/test11/test.sh	2009-05-20 15:37:06.000000000 +0200
++++ safecopy-1.3/test/test11/test.sh	2009-05-26 13:57:41.000000000 +0200
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 11: Incremental recovery with startoffset, size limit and exclude list: ";
+ 
+ # main emphasis on this test is that no data from exclude blocks are ever read nor written.
+ 
+diff -rU 5 safecopy-1.3.nogentoo/test/test2/test.sh safecopy-1.3/test/test2/test.sh
+--- safecopy-1.3.nogentoo/test/test2/test.sh	2009-05-10 12:09:25.000000000 +0200
++++ safecopy-1.3/test/test2/test.sh	2009-05-26 13:57:46.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 2: Soft recovery: ";
+ 
+ # safecopy - must succesfully read despite the first two read attempts of block 2 will fail
+ LD_PRELOAD="$safecopydebug" $safecopy -R 3 -b 1024 -f 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test3/test.sh safecopy-1.3/test/test3/test.sh
+--- safecopy-1.3.nogentoo/test/test3/test.sh	2009-05-10 12:19:59.000000000 +0200
++++ safecopy-1.3/test/test3/test.sh	2009-05-26 13:57:50.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 3: Soft recovery + hard errors: ";
+ 
+ # safecopy must succesfully recover from the soft error but write the hard error to the badblock list correctly
+ LD_PRELOAD="$safecopydebug" $safecopy -R 3 -b 1024 -f 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test4/test.sh safecopy-1.3/test/test4/test.sh
+--- safecopy-1.3.nogentoo/test/test4/test.sh	2009-05-10 12:22:12.000000000 +0200
++++ safecopy-1.3/test/test4/test.sh	2009-05-26 13:57:53.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 4: Unreadable end of file: ";
+ 
+ # safecopy writes a shortened output file since the last blocks are unreadable. The badblocks output must state these short read blocks
+ LD_PRELOAD="$safecopydebug" $safecopy -R 2 -b 1024 -f 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test5/test.sh safecopy-1.3/test/test5/test.sh
+--- safecopy-1.3.nogentoo/test/test5/test.sh	2009-05-11 16:12:12.000000000 +0200
++++ safecopy-1.3/test/test5/test.sh	2009-05-26 13:57:56.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 5: Completely unreadable file: ";
+ 
+ # safecopy: unreadable file without marking. result must be an empty file and a complete block list
+ LD_PRELOAD="$safecopydebug" $safecopy -R 2 -b 1024 -f 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test6/test.sh safecopy-1.3/test/test6/test.sh
+--- safecopy-1.3.nogentoo/test/test6/test.sh	2009-05-10 13:58:56.000000000 +0200
++++ safecopy-1.3/test/test6/test.sh	2009-05-26 13:58:00.000000000 +0200
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 6: Incremental recovery: ";
+ 
+ # safecopy regular run with badblocks output - produces some reference files
+ LD_PRELOAD="$safecopydebug" $safecopy -R 2 -b 1024 -f 4* -r 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test7/test.sh safecopy-1.3/test/test7/test.sh
+--- safecopy-1.3.nogentoo/test/test7/test.sh	2009-05-11 16:54:41.000000000 +0200
++++ safecopy-1.3/test/test7/test.sh	2009-05-26 13:58:03.000000000 +0200
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 7: Incremental recovery with blocksize variation ";
+ 
+ # safecopy regular run with badblocks output - produces some reference files with and withouzt marked badblocks
+ LD_PRELOAD="$safecopydebug" $safecopy -R 2 -b 1150 -f 4* -r 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test8/test.sh safecopy-1.3/test/test8/test.sh
+--- safecopy-1.3.nogentoo/test/test8/test.sh	2009-05-10 21:04:28.000000000 +0200
++++ safecopy-1.3/test/test8/test.sh	2009-05-26 13:58:06.000000000 +0200
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 8: Incremental recovery with startoffset and size limit: ";
+ 
+ # safecopy regular run with badblocks output - produces some reference files
+ LD_PRELOAD="$safecopydebug" $safecopy -R 2 -b 1024 -f 4* -r 4* -o "$tmpdir/test1.badblocks" debug "$tmpdir/test1.dat" -s 2 -l 16 >/dev/null 2>&1;
+diff -rU 5 safecopy-1.3.nogentoo/test/test9/test.sh safecopy-1.3/test/test9/test.sh
+--- safecopy-1.3.nogentoo/test/test9/test.sh	2009-05-11 17:53:15.000000000 +0200
++++ safecopy-1.3/test/test9/test.sh	2009-05-26 13:58:10.000000000 +0200
+@@ -1,11 +1,11 @@
+ #!/bin/sh
+ basedir="$1";
+ tmpdir="$2";
+ 
+ safecopy="$basedir/src/safecopy";
+-safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0";
++safecopydebug="../libsafecopydebug/src/libsafecopydebuglb.so.1.0: $LD_PRELOAD";
+ 
+ echo -n " - Testing safecopy 9: Incremental recovery with exclude blocks: ";
+ 
+ # main emphasis on this test is that no data from exclude blocks are ever read nor written.
+ 
