@@ -1,16 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.1 2009/05/19 03:00:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.2 2009/05/27 21:00:51 loki_val Exp $
 
 EAPI=2
 
-inherit eutils mono gnome2-utils fdo-mime
+inherit eutils mono gnome2-utils fdo-mime versionator
 
 GVER=0.10.7
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee-project.org"
-SRC_URI="http://download.banshee-project.org/${PN}/${PN}-1-${PV}.tar.bz2
+
+BANSHEE_V2=$(get_version_component_range 2)
+[[ $((${BANSHEE_V2} % 2)) -eq 0 ]] && RELTYPE=stable || RELTYPE=unstable
+SRC_URI="http://download.banshee-project.org/${PN}/${RELTYPE}/${PV}/${PN}-1-${PV}.tar.bz2
 	mirror://gentoo/banshee-1.4.2-musicbrainz-fix.patch.bz2"
 
 LICENSE="MIT"
