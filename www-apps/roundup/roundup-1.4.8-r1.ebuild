@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.8-r1.ebuild,v 1.1 2009/05/26 17:56:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.8-r1.ebuild,v 1.2 2009/05/27 19:00:29 fauli Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -10,7 +10,7 @@ HOMEPAGE="http://roundup.sourceforge.net"
 SRC_URI="http://cheeseshop.python.org/packages/source/r/${PN}/${P}.tar.gz
 	mirror://gentoo/${P}-locale-utf8.patch.bz2"
 
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""

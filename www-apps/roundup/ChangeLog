@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.30 2009/05/26 17:56:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.31 2009/05/27 19:00:29 fauli Exp $
+
+  27 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  roundup-1.4.8-r1.ebuild:
+  stable x86, security bug 262100
 
 *roundup-1.4.8-r1 (26 May 2009)
 
