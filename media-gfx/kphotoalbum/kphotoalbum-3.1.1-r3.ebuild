@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r2.ebuild,v 1.3 2009/02/14 17:50:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r3.ebuild,v 1.1 2009/05/28 19:44:22 scarabeus Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ DESCRIPTION="KDE Photo Album is a tool for indexing, searching, and viewing imag
 HOMEPAGE="http://www.kphotoalbum.org/"
 SRC_URI="http://www.kphotoalbum.org/download/${P}.tar.bz2"
 
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="exif raw"
@@ -27,6 +27,9 @@ DEPEND="exif? ( >=media-gfx/exiv2-0.15 x11-libs/qt:3[sqlite] )
 	>=media-libs/jpeg-6b-r7
 	>=media-libs/libkipi-0.1
 	|| ( kde-base/kdegraphics-kfile-plugins:3.5 kde-base/kdegraphics:3.5 )"
+RDEPEND="${DEPEND}
+	!${CATEGORY}/${PN}:0
+"
 
 need-kde 3.5
 
@@ -35,7 +38,7 @@ PATCHES=(
 	"${FILESDIR}/kphotoalbum-3.1.1-desktop-files-fixes.diff"
 	)
 
-src_compile() {
+src_configure() {
 	local myconf="$(use_enable raw kdcraw) $(use_enable exif exiv2)"
-	kde_src_compile
+	kde_src_configure
 }
