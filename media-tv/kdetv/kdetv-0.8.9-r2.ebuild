@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9-r1.ebuild,v 1.1 2009/02/14 20:02:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9-r2.ebuild,v 1.1 2009/05/28 14:22:51 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,11 +18,13 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php?content=11602"
 SRC_URI="http://dziegel.free.fr/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="lirc zvbi opengl"
 
-RDEPEND="zvbi? ( >=media-libs/zvbi-0.2.4 )
+RDEPEND="
+	!${CATEGORY}/${PN}:0
+	zvbi? ( >=media-libs/zvbi-0.2.4 )
 	lirc? ( app-misc/lirc )
 	opengl? ( virtual/opengl x11-libs/qt[opengl] )
 	media-libs/alsa-lib
@@ -48,12 +50,7 @@ PATCHES=(
 	"${FILESDIR}/kdetv-0.8.9-desktop-entry.diff"
 	)
 
-src_prepare() {
-	# ugly hack - override base_src_prepare, kde.eclass does patching
-	:
-}
-
-src_compile() {
+src_configure() {
 	local myconf="$(use_enable lirc kdetv-lirc)
 		$(use_with zvbi) $(use_with opengl gl)"
 	#Filtering the below on x86 and amd64 for bug #145754 and bug #153721
@@ -64,5 +61,5 @@ src_compile() {
 
 	rm -f "${S}"/configure
 
-	kde_src_compile
+	kde_src_configure
 }
