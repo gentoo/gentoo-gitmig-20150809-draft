@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2696 2009/05/27 20:15:40 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2697 2009/05/28 06:01:30 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 May 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
+  Remove mask for app-admin/eselect-9999; live ebuild has been removed.
 
   27 May 2009; Alistair Bush <ali_bush@gentoo.org> package.mask:
   Add jruby release candidate to pmask.

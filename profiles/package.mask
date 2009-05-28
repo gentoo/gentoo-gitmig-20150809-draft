@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9844 2009/05/27 20:15:41 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9845 2009/05/28 06:01:30 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -362,10 +362,6 @@ app-benchmark/phoronix-test-suite
 # Should fix a number of bug: 143763, 200293, 261357, 265466.
 # It "mostly works with 2.3.* too". Is "mostly" good enough?
 =dev-perl/math-pari-2.010801-r1
-
-# Ulrich Mueller <ulm@gentoo.org> (18 Apr 2009)
-# Live ebuild for testing and debugging.
-~app-admin/eselect-9999
 
 # Torsten Veller <tove@gentoo.org> (17 Apr 2009)
 # Masks for new IO-Compress which includes
