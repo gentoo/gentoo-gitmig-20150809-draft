@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.13 2009/04/06 17:35:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnuchess/gnuchess-5.07.ebuild,v 1.14 2009/05/28 09:22:39 tupone Exp $
 
 EAPI=2
 inherit flag-o-matic eutils games
@@ -15,8 +15,10 @@ SLOT="0"
 IUSE="readline"
 
 DEPEND="readline? ( sys-libs/readline )"
+RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}"/gnuchess-gcc4.patch )
+PATCHES=( "${FILESDIR}"/gnuchess-gcc4.patch
+	"${FILESDIR}"/gnuchess-glibc210.patch )
 
 src_configure() {
 	strip-flags # bug #199097
