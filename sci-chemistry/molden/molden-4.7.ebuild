@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.1 2009/01/02 19:58:25 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.7.ebuild,v 1.2 2009/05/28 17:03:10 dberkholz Exp $
 
 inherit eutils toolchain-funcs flag-o-matic fortran
 
@@ -18,7 +18,9 @@ RDEPEND="opengl? ( virtual/glut
 	virtual/opengl )
 	x11-libs/libXmu"
 DEPEND="${RDEPEND}
-	virtual/libc"
+	virtual/libc
+	app-editors/vim"
+	# vim provides ex, which the build system uses (surf/Makefile, at least)
 
 S="${WORKDIR}/${MY_P}"
 

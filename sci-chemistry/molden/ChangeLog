@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molden
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.27 2009/01/02 19:58:25 cryos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/ChangeLog,v 1.28 2009/05/28 17:03:10 dberkholz Exp $
+
+  28 May 2009; Donnie Berkholz <dberkholz@gentoo.org>; molden-4.7.ebuild:
+  The build system requires ex, which comes along with vim.
 
 *molden-4.7 (02 Jan 2009)
 
