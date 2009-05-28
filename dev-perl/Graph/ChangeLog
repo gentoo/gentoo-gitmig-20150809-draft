@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.50 2009/03/13 12:38:39 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.51 2009/05/28 15:14:16 tove Exp $
+
+  28 May 2009; Torsten Veller <tove@gentoo.org> Graph-0.91.ebuild:
+  Stable on x86 (#270589)
 
   13 Mar 2009; Torsten Veller <tove@gentoo.org> -Graph-0.86.ebuild,
   -Graph-0.90.ebuild:
