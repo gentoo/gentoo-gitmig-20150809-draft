@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9845 2009/05/28 06:01:30 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9846 2009/05/28 07:58:44 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -278,6 +278,7 @@ app-doc/afsdoc
 
 # Tomas Chvatal <scarabeus@gentoo.org> (30 Apr 2009)
 # mask the koffice2 (notetoself dont use slot blocks)
+# masked for no sources yet around
 >=app-office/kword-1.9.99.0
 >=app-office/kplato-1.9.99.0
 >=app-office/kpresenter-1.9.99.0
