@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.9.99.0.ebuild,v 1.1 2009/04/30 20:35:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-2.0.0.ebuild,v 1.1 2009/05/28 08:20:42 scarabeus Exp $
 
 EAPI="2"
 

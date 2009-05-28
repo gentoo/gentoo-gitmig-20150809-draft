@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-1.9.99.0.ebuild,v 1.1 2009/04/30 20:42:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.0.0.ebuild,v 1.1 2009/05/28 08:22:36 scarabeus Exp $
 
 EAPI="2"
 
@@ -16,8 +16,8 @@ RDEPEND=""
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="doc"
 
-MY_LANGS="ca da de el en_GB et fr fy gl hi it ja kk nb nds nl pl pt pt_BR sv tr
-	uk zh_CN zh_TW"
+MY_LANGS="ca cs da de el en_GB es et fr fy gl hi it ja kk nds nl pl pt pt_BR sv tr
+	uk wa zh_CN zh_TW"
 URI_BASE="mirror://kde/unstable/koffice-${PV}/src/${PN}/"
 SRC_URI=""
 SLOT="2"
@@ -47,7 +47,7 @@ src_unpack() {
 
 	# add all linguas to cmake
 	if [[ -n ${A} ]]; then
-		for lng in ${LINGUAS}; do
+		for lng in ${MY_LANGS}; do
 			dir="${PN}-${lng}-${PV}"
 			if [[ -d "${dir}" ]] ; then
 				echo "add_subdirectory( ${dir} )" >> "${S}"/CMakeLists.txt

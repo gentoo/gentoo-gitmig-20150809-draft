@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kpresenter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.76 2009/04/30 20:33:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kpresenter/ChangeLog,v 1.77 2009/05/28 08:21:24 scarabeus Exp $
+
+*kpresenter-2.0.0 (28 May 2009)
+
+  28 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kpresenter-1.9.99.0.ebuild, +kpresenter-2.0.0.ebuild:
+  Version bump for final koffice 2 series first release.
 
 *kpresenter-1.9.99.0 (30 Apr 2009)
 

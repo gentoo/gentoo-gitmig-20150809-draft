@@ -1,6 +1,12 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.54 2009/04/30 20:33:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.55 2009/05/28 08:22:06 scarabeus Exp $
+
+*kplato-2.0.0 (28 May 2009)
+
+  28 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kplato-1.9.99.0.ebuild, +kplato-2.0.0.ebuild:
+  Version bump for final koffice 2 series first release.
 
 *kplato-1.9.99.0 (30 Apr 2009)
 
