@@ -38,3 +38,14 @@
  
  
  namespace enigma { namespace lev {
+--- src/lua.cc.old	2009-05-28 09:43:36.000000000 +0200
++++ src/lua.cc	2009-05-28 09:44:22.000000000 +0200
+@@ -574,7 +574,7 @@
+     int         y       = round_down<int>(lua_tonumber(L, 2));
+     const char *dir     = lua_tostring(L,3);
+     const char *allowed = "wsen";
+-    char       *found   = strchr(allowed, dir[0]);
++    const char *found   = strchr(allowed, dir[0]);
+ 
+     if (found && found[0]) 
+         world::AddScramble(GridPos(x,y), enigma::Direction(found-allowed));

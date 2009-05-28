@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/enigma
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.45 2009/05/23 06:42:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/ChangeLog,v 1.46 2009/05/28 07:54:49 tupone Exp $
+
+  28 May 2009; Alfredo Tupone <tupone@gentoo.org>
+  files/enigma-1.01-gcc44.patch:
+  Fix build with gcc-4.4.0 and glibc-2.10.1 Bug #271464 by Martin Vaeth
 
   22 May 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/enigma-1.01-gcc44.patch, enigma-1.01.ebuild:
