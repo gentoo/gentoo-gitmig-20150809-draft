@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.0.0.ebuild,v 1.1 2009/05/28 08:22:36 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-l10n/koffice-l10n-2.0.0.ebuild,v 1.2 2009/05/28 15:14:51 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="doc"
 
 MY_LANGS="ca cs da de el en_GB es et fr fy gl hi it ja kk nds nl pl pt pt_BR sv tr
 	uk wa zh_CN zh_TW"
-URI_BASE="mirror://kde/unstable/koffice-${PV}/src/${PN}/"
+URI_BASE="mirror://kde/stable/koffice-${PV}/src/${PN}/"
 SRC_URI=""
 SLOT="2"
 
