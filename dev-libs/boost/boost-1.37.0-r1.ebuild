@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.37.0-r1.ebuild,v 1.6 2009/05/24 05:42:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.37.0-r1.ebuild,v 1.7 2009/05/28 17:42:51 grobian Exp $
 
 EAPI="2"
 
@@ -88,12 +88,15 @@ src_prepare() {
 
 	epatch \
 		"${FILESDIR}/remove_toolset_from_targetname.patch" \
-		"${FILESDIR}/buildid-fix.patch"
+		"${FILESDIR}/buildid-fix.patch" \
+		"${FILESDIR}"/${P}-darwin-long-double.patch
 
 	# This enables building the boost.random library with /dev/urandom support
-	if ! use userland_Darwin ; then
+	if [[ -e /dev/urandom ]] ; then
 		mkdir -p libs/random/build
 		cp "${FILESDIR}/random-Jamfile" libs/random/build/Jamfile.v2
+		# yeah, we WANT it to work on non-Linux too
+		sed -i -e 's/#ifdef __linux__/#if 1/' libs/random/random_device.cpp || die
 	fi
 }
 
@@ -103,9 +106,11 @@ src_configure() {
 	local compiler compilerVersion compilerExecutable mpi
 	if [[ ${CHOST} == *-darwin* ]] ; then
 		compiler=darwin
-		compilerVersion=$(gcc-version)
+		compilerVersion=$(gcc-fullversion)
 		compilerExecutable=$(tc-getCXX)
-		append-ldflags -ldl
+		# we need to add the prefix, and in two cases this exceeds, so prepare
+		# for the largest possible space allocation
+		append-ldflags -Wl,-headerpad_max_install_names
 	else
 		compiler=gcc
 		compilerVersion=$(gcc-version)
@@ -249,7 +254,7 @@ src_install () {
 	# Remove (unversioned) symlinks
 	# And check for what we remove to catch bugs
 	# got a better idea how to do it? tell me!
-	for f in $(ls -1 *.{a,so} | grep -v "${MAJOR_PV}") ; do
+	for f in $(ls -1 *{.a,$(get_libname)} | grep -v "${MAJOR_PV}") ; do
 		if [ ! -h "${f}" ] ; then
 			eerror "Ups, tried to remove '${f}' which is a a real file instead of a symlink"
 			die "slotting/naming of the libs broken!"
@@ -259,24 +264,24 @@ src_install () {
 
 	# The threading libs obviously always gets the "-mt" (multithreading) tag
 	# some packages seem to have a problem with it. Creating symlinks...
-	for lib in libboost_thread-mt-${MAJOR_PV}{.a,.so} ; do
+	for lib in libboost_thread-mt-${MAJOR_PV}{.a,$(get_libname)} ; do
 		dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 	done
 
 	# The same goes for the mpi libs
 	if use mpi ; then
-		for lib in libboost_mpi-mt-${MAJOR_PV}{.a,.so} ; do
+		for lib in libboost_mpi-mt-${MAJOR_PV}{.a,$(get_libname)} ; do
 			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 		done
 	fi
 
 	if use debug ; then
-		for lib in libboost_thread-mt-${MAJOR_PV}-debug{.a,.so} ; do
+		for lib in libboost_thread-mt-${MAJOR_PV}-debug{.a,$(get_libname)} ; do
 			dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 		done
 
 		if use mpi ; then
-			for lib in libboost_mpi-mt-${MAJOR_PV}-debug{.a,.so} ; do
+			for lib in libboost_mpi-mt-${MAJOR_PV}-debug{.a,$(get_libname)} ; do
 				dosym ${lib} "/usr/$(get_libdir)/$(sed -e 's/-mt//' <<< ${lib})"
 			done
 		fi
@@ -287,7 +292,7 @@ src_install () {
 	dodir /usr/$(get_libdir)/boost-${MAJOR_PV}
 
 	_add_line "libs=\"" default
-	for f in $(ls -1 *.{a,so} | grep -v debug) ; do
+	for f in $(ls -1 *{.a,$(get_libname)} | grep -v debug) ; do
 		dosym ../${f} /usr/$(get_libdir)/boost-${MAJOR_PV}/${f/-${MAJOR_PV}}
 		_add_line "/usr/$(get_libdir)/${f}" default
 	done
@@ -296,7 +301,7 @@ src_install () {
 	if use debug ; then
 		_add_line "libs=\"" debug
 		dodir /usr/$(get_libdir)/boost-${MAJOR_PV}-debug
-		for f in $(ls -1 *.{a,so} | grep debug) ; do
+		for f in $(ls -1 *{.a,$(get_libname)} | grep debug) ; do
 			dosym ../${f} /usr/$(get_libdir)/boost-${MAJOR_PV}-debug/${f/-${MAJOR_PV}-debug}
 			_add_line "/usr/$(get_libdir)/${f}" debug
 		done
@@ -334,6 +339,37 @@ src_install () {
 	fi
 
 	use python && python_need_rebuild
+
+	# boost's build system truely sucks for not having a destdir.  Because for
+	# this reason we are forced to build with a prefix that includes the
+	# DESTROOT, dynamic libraries on Darwin end messed up, referencing the
+	# DESTROOT instread of the actual EPREFIX.  There is no way out of here
+	# but to do it the dirty way of manually setting the right install_names.
+	[[ -z ${ED+set} ]] && local ED=${D%/}${EPREFIX}/
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		einfo "Working around completely broken build-system(tm)"
+		for d in "${ED}"usr/lib/*.dylib ; do
+			if [[ -f ${d} ]] ; then
+				# fix the "soname"
+				ebegin "  correcting install_name of ${d#${ED}}"
+				install_name_tool -id "/${d#${D}}" "${d}"
+				eend $?
+				# fix references to other libs
+				refs=$(otool -XL "${d}" | \
+					sed -e '1d' -e 's/^\t//' | \
+					grep "^libboost_" | \
+					cut -f1 -d' ')
+				for r in ${refs} ; do
+					ebegin "    correcting reference to ${r}"
+					install_name_tool -change \
+						"${r}" \
+						"${EPREFIX}/usr/lib/${r}" \
+						"${d}"
+					eend $?
+				done
+			fi
+		done
+	fi
 }
 
 src_test() {
