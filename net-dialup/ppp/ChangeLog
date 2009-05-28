@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.240 2009/05/20 17:04:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.241 2009/05/28 05:29:15 jer Exp $
+
+  28 May 2009; Jeroen Roovers <jer@gentoo.org> ppp-2.4.4-r22.ebuild:
+  Stable for HPPA (bug #269127). Catch cases where /sbin/update-modules does
+  not return 0 (like when /etc/modules.conf has not been automatically
+  generated).
 
   20 May 2009; nixnut <nixnut@gentoo.org> ppp-2.4.4-r22.ebuild:
   ppc stable #269127
