@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.25 2009/05/28 16:27:25 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.26 2009/05/28 21:57:26 cardoe Exp $
+
+*libvirt-0.6.3-r3 (28 May 2009)
+
+  28 May 2009; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.6.3-r3.ebuild,
+  +files/libvirt-0.6.3-print-ascii-uuid.patch:
+  upstream patch to not print out the raw uuid and print out an ascii
+  capable copy
 
 *libvirt-0.6.3-r2 (28 May 2009)
 
