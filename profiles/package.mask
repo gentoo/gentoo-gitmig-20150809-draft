@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9847 2009/05/28 11:10:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9848 2009/05/28 21:26:38 cardoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -380,13 +380,6 @@ virtual/perl-IO-Compress
 # Only x86 and amd64 supported so far. This ebuild won't be very interesting
 # once we add ghc 6.10.2.
 =dev-lang/ghc-6.8.2-r1
-
-# Doug Goldstein <cardoe@gentoo.org> (17 Apr 2009)
-# Added for testing.These ebuilds fix the following
-# bugs #256904, #256913, #257687, #249029, #260340, #254747.
-# For me however, I am unable to create new images using virt-manager
-# patches for this welcome
-=app-emulation/virt-manager-0.7.0
 
 # Mounir Lamouri <volkmar@gentoo.org> (15 Apr 2009)
 # >www-plugins/mozilla-weaver-0.2.104 needs masked versions of ff (ie. 3.1_beta)
