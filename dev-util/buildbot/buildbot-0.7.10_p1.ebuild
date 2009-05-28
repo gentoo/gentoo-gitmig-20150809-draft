@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.10_p1.ebuild,v 1.6 2009/05/24 18:42:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/buildbot-0.7.10_p1.ebuild,v 1.7 2009/05/28 16:31:22 fmccor Exp $
 
 EAPI=1
 NEED_PYTHON="2.4"
@@ -15,7 +15,7 @@ HOMEPAGE="http://buildbot.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE="doc irc mail manhole test"
 
 CDEPEND=">=dev-python/twisted-2.0.1"
