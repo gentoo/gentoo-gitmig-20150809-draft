@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.134 2009/05/26 09:32:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.135 2009/05/28 09:53:09 scarabeus Exp $
+
+*digikam-0.9.5-r1 (28 May 2009)
+
+  28 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.9.5-cam_download.patch, +digikam-0.9.5-r1.ebuild:
+  Add patch fixing downloading files from camera, when they had same
+  timestamp.
+  Thanks to Ralf Gerbig for reporting.
 
 *digikam-0.9.5 (26 May 2009)
 *digikam-0.9.4-r2 (26 May 2009)
