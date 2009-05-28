@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.0a.ebuild,v 1.5 2009/04/06 11:56:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.1.ebuild,v 1.1 2009/05/28 12:44:48 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,8 +13,8 @@ SRC_URI="http://${PN}.kde.org/pkgs/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-SLOT="4.1"
-IUSE="cairo htmlhandbook npp"
+SLOT="4"
+IUSE="cairo doc npp"
 
 DEPEND="
 	>=dev-libs/expat-2.0.1
@@ -27,25 +27,21 @@ DEPEND="
 	)
 "
 RDEPEND="${DEPEND}
-	!media-video/kmplayer:0
+	!${CATEGORY}/${PN}:0
+	!${CATEGORY}/${PN}:4.1
 	media-video/mplayer"
 
 S="${WORKDIR}/${MY_P}"
 
-PATCHES=(
-	"$FILESDIR/${PV}-fix_linking.patch"
-	"$FILESDIR/${PV}-npp.patch"
-)
-
 src_prepare() {
-	# fixup icon install
+	# remove duplicate icons (only app icon that is already in oxygen)
 	sed -i \
-		-e "s:add_subdirectory(icons):#add_subdirectory(icons):g" \
+		-e "/add_subdirectory(icons)/ s/^/#DONOTINSTALL /" \
 		CMakeLists.txt || die "removing icons failed"
-	# fixup htmlhandbook
-	if ! use htmlhandbook; then
+	# install handbook only when requested
+	if ! use doc; then
 		sed -i \
-			-e "s:add_subdirectory(doc):#add_subdirectory(doc):g" \
+			-e "/add_subdirectory(doc)/ s/^/#DONOTINSTALL /" \
 			CMakeLists.txt || die "removing docs failed"
 	else
 		# fix the install dir for docs

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c-r1.ebuild,v 1.2 2009/05/14 13:23:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c-r2.ebuild,v 1.1 2009/05/28 12:44:48 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,27 +11,28 @@ inherit kde eutils
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="KMPlayer is a Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend for KDE."
+DESCRIPTION="Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend for KDE."
 HOMEPAGE="http://kmplayer.kde.org/"
 SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="mplayer xine cairo gstreamer npp"
 
 DEPEND="x11-libs/libXv
-		>=dev-libs/expat-2.0.1
-		xine? ( >=media-libs/xine-lib-1.1.1 )
-		cairo? ( x11-libs/cairo[X] )
-		gstreamer? ( >=media-libs/gstreamer-0.10.11
-					npp? ( >=sys-apps/dbus-1.0.2-r2
-							>=dev-libs/dbus-glib-0.73
-							>=dev-libs/dbus-qt3-old-0.70 ) )
-		npp? ( >=dev-libs/nspr-4.6.7
-				>=x11-libs/gtk+-2.10.14 )"
+	>=dev-libs/expat-2.0.1
+	xine? ( >=media-libs/xine-lib-1.1.1 )
+	cairo? ( x11-libs/cairo[X] )
+	gstreamer? ( >=media-libs/gstreamer-0.10.11
+		npp? ( >=sys-apps/dbus-1.0.2-r2
+			>=dev-libs/dbus-glib-0.73
+			>=dev-libs/dbus-qt3-old-0.70 ) )
+	npp? ( >=dev-libs/nspr-4.6.7
+			>=x11-libs/gtk+-2.10.14 )"
 RDEPEND="${DEPEND}
-		mplayer? ( media-video/mplayer )"
+	!${CATEGORY}/${PN}:0
+	mplayer? ( media-video/mplayer )"
 
 LANGS="ar be br bs ca csb cs cy da de el en_GB es et fi fr ga gl he hi hu is it
 ja ka lt mt nb nl nn pa pl pt_BR pt ro ru rw sk sr@Latn sr sv ta tr uk zh_CN"
@@ -78,11 +79,7 @@ src_unpack() {
 	rm -f "${S}/configure"
 }
 
-src_prepare() {
-	:
-}
-
-src_compile() {
+src_configure() {
 	local myconf="--enable-expat
 				$(use_with gstreamer)
 				$(use_with xine)
@@ -92,7 +89,7 @@ src_compile() {
 				$(use_enable npp npplayer)"
 
 	# The configure script is a bloated mess and won't work correctly without this.
-	PKG_CONFIG="pkg-config"	kde_src_compile
+	PKG_CONFIG="pkg-config"	kde_src_configure
 }
 
 src_install() {
