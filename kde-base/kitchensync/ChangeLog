@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kitchensync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.104 2009/02/17 13:45:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.105 2009/05/28 14:26:47 tampakrap Exp $
+
+*kitchensync-3.5.10-r2 (28 May 2009)
+
+  28 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kitchensync-3.5.10-r2.ebuild:
+  Revision bump, add patch for missing xml parse libs, taken from opensuse
+  kdepim patchset, put changed due to conflicts with the libopensync patch.
+  Bug 
+  194668
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kitchensync-4.1.4.ebuild:
