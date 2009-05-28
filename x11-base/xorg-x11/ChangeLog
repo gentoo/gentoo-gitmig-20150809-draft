@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.606 2009/03/12 10:47:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.607 2009/05/28 17:23:53 armin76 Exp $
+
+  28 May 2009; Raúl Porcel <armin76@gentoo.org> xorg-x11-7.4.ebuild:
+  Add ~alpha
 
   12 Mar 2009; Raúl Porcel <armin76@gentoo.org> xorg-x11-7.4.ebuild:
   Add ~arm/~sh
