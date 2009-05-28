@@ -1,0 +1,161 @@
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1236957667 14400
+# Node ID 4331403b2e66dafdda618283dcea259a66fba423
+# Parent  89c007e38850e1283447ea4c19ff6f64ce6224b6
+Fix xml parsing for old style 'console' xml.
+
+diff -r 89c007e38850 -r 4331403b2e66 src/virtManager/details.py
+--- a/src/virtManager/details.py	Mon Mar 09 23:38:03 2009 -0400
++++ b/src/virtManager/details.py	Fri Mar 13 11:21:07 2009 -0400
+@@ -1106,7 +1106,7 @@
+                                              _("(Primary Console)") or "")
+         self.window.get_widget("char-type").set_markup(typelabel)
+         self.window.get_widget("char-dev-type").set_text(charinfo[4] or "-")
+-        self.window.get_widget("char-target-port").set_text(charinfo[3])
++        self.window.get_widget("char-target-port").set_text(charinfo[3] or "")
+         self.window.get_widget("char-source-path").set_text(charinfo[5] or "-")
+ 
+     def refresh_hostdev_page(self):
+diff -r 89c007e38850 -r 4331403b2e66 src/virtManager/domain.py
+--- a/src/virtManager/domain.py	Mon Mar 09 23:38:03 2009 -0400
++++ b/src/virtManager/domain.py	Fri Mar 13 11:21:07 2009 -0400
+@@ -806,7 +806,7 @@
+         def _parse_char_devs(ctx):
+             chars = []
+             devs  = []
+-            devs = ctx.xpathEval("/domain/devices/console")
++            devs.extend(ctx.xpathEval("/domain/devices/console"))
+             devs.extend(ctx.xpathEval("/domain/devices/parallel"))
+             devs.extend(ctx.xpathEval("/domain/devices/serial"))
+ 
+@@ -822,7 +822,7 @@
+                 target_port = None
+                 source_path = None
+ 
+-                for child in node.children:
++                for child in node.children or []:
+                     if child.name == "target":
+                         target_port = child.prop("port")
+                     if child.name == "source":
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1236964404 14400
+# Node ID 7ab8a12b3527d97bc92acca7e6e6ff3fbdd9746b
+# Parent  4331403b2e66dafdda618283dcea259a66fba423
+Check what XMLDesc flags the connection supports before using them.
+
+diff -r 4331403b2e66 -r 7ab8a12b3527 src/virtManager/connection.py
+--- a/src/virtManager/connection.py	Fri Mar 13 11:21:07 2009 -0400
++++ b/src/virtManager/connection.py	Fri Mar 13 13:13:24 2009 -0400
+@@ -104,6 +104,7 @@
+         self.state = self.STATE_DISCONNECTED
+         self.vmm = None
+         self.storage_capable = None
++        self.dom_xml_flags = None
+ 
+         # Connection Storage pools: UUID -> vmmStoragePool
+         self.pools = {}
+@@ -290,6 +291,29 @@
+     def get_capabilities(self):
+         return virtinst.CapabilitiesParser.parse(self.vmm.getCapabilities())
+ 
++    def set_dom_flags(self, vm):
++        if self.dom_xml_flags != None:
++            # Already set
++            return
++
++        self.dom_xml_flags = []
++        for flags in [libvirt.VIR_DOMAIN_XML_SECURE,
++                      libvirt.VIR_DOMAIN_XML_INACTIVE,
++                      (libvirt.VIR_DOMAIN_XML_SECURE |
++                       libvirt.VIR_DOMAIN_XML_INACTIVE )]:
++            try:
++                vm.XMLDesc(flags)
++                self.dom_xml_flags.append(flags)
++            except libvirt.libvirtError, e:
++                logging.debug("%s does not support flags=%d : %s" %
++                              (self.get_uri(), flags, str(e)))
++
++    def has_dom_flags(self, flags):
++        if self.dom_xml_flags == None:
++            return False
++
++        return bool(self.dom_xml_flags.count(flags))
++
+     def is_kvm_supported(self):
+         if self.is_qemu_session():
+             return False
+diff -r 4331403b2e66 -r 7ab8a12b3527 src/virtManager/domain.py
+--- a/src/virtManager/domain.py	Fri Mar 13 11:21:07 2009 -0400
++++ b/src/virtManager/domain.py	Fri Mar 13 13:13:24 2009 -0400
+@@ -75,6 +75,10 @@
+         self.toggle_sample_network_traffic()
+         self.toggle_sample_disk_io()
+ 
++        # Determine available XML flags (older libvirt versions will error
++        # out if passed SECURE_XML, INACTIVE_XML, etc)
++        self.connection.set_dom_flags(vm)
++
+     def get_xml(self):
+         # Get domain xml. If cached xml is invalid, update.
+         if self._xml is None or not self._valid_xml:
+@@ -85,8 +89,12 @@
+         # Force an xml update. Signal 'config-changed' if domain xml has
+         # changed since last refresh
+ 
++        flags = libvirt.VIR_DOMAIN_XML_SECURE
++        if not self.connection.has_dom_flags(flags):
++            flags = 0
++
+         origxml = self._xml
+-        self._xml = self.vm.XMLDesc(libvirt.VIR_DOMAIN_XML_SECURE)
++        self._xml = self.vm.XMLDesc(flags)
+         self._valid_xml = True
+ 
+         if origxml != self._xml:
+@@ -106,8 +114,15 @@
+         return self._orig_inactive_xml
+ 
+     def refresh_inactive_xml(self):
+-        self._orig_inactive_xml = self.vm.XMLDesc(libvirt.VIR_DOMAIN_XML_INACTIVE | libvirt.VIR_DOMAIN_XML_SECURE)
+-        print "xml refresh to: %s" % self._orig_inactive_xml
++        flags = (libvirt.VIR_DOMAIN_XML_INACTIVE |
++                 libvirt.VIR_DOMAIN_XML_SECURE)
++        if not self.connection.has_dom_flags(flags):
++            flags = libvirt.VIR_DOMAIN_XML_INACTIVE
++
++            if not self.connection.has_dom_flags:
++                flags = 0
++
++        self._orig_inactive_xml = self.vm.XMLDesc(flags)
+ 
+     def release_handle(self):
+         del(self.vm)
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1236969435 14400
+# Node ID 6374136c62476678cf965eaac2c2680602641371
+# Parent  403916479f503f79f23bb682698b38f595eb0626
+Fix default 'New VM' install options on older xen connections.
+
+diff -r 403916479f50 -r 6374136c6247 src/virtManager/create.py
+--- a/src/virtManager/create.py	Fri Mar 13 14:35:55 2009 -0400
++++ b/src/virtManager/create.py	Fri Mar 13 14:37:15 2009 -0400
+@@ -690,6 +690,16 @@
+         net_list.set_active(default)
+ 
+     def change_caps(self, gtype=None, dtype=None):
++
++        if gtype == None:
++            # If none specified, prefer HVM. This way, the default install
++            # options won't be limited because we default to PV. If hvm not
++            # supported, differ to guest_lookup
++            for g in self.caps.guests:
++                if g.os_type == "hvm":
++                    gtype = "hvm"
++                    break
++
+         (newg,
+          newdom) = virtinst.CapabilitiesParser.guest_lookup(conn=self.conn.vmm,
+                                                             caps=self.caps,

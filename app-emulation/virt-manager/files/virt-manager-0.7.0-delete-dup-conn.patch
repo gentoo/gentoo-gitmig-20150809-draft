@@ -1,0 +1,34 @@
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1238782522 14400
+# Node ID 218ecc7495319b70960c5e3685e8597700c29bfb
+# Parent  5abfbc44b41efc4fae9b154bb515044c32ffc0f4
+Use dup_conn in delete dialog.
+
+diff -r 5abfbc44b41e -r 218ecc749531 src/virtManager/delete.py
+--- a/src/virtManager/delete.py	Fri Apr 03 14:15:15 2009 -0400
++++ b/src/virtManager/delete.py	Fri Apr 03 14:15:22 2009 -0400
+@@ -25,9 +25,9 @@
+ import traceback
+ import logging
+ 
+-import libvirt
+ import virtinst
+ 
++from virtManager import util
+ from virtManager.error import vmmErrorDialog
+ from virtManager.asyncjob import vmmAsyncJob
+ from virtManager.createmeter import vmmCreateMeter
+@@ -159,11 +159,7 @@
+         try:
+             # Open a seperate connection to install on since this is async
+             logging.debug("Threading off connection to delete vol.")
+-            #newconn = vmmConnection(self.config, self.conn.get_uri(),
+-            #                        self.conn.is_read_only())
+-            #newconn.open()
+-            #newconn.connectThreadEvent.wait()
+-            newconn = libvirt.open(self.conn.get_uri())
++            newconn = util.dup_conn(self.config, self.conn)
+             meter = vmmCreateMeter(asyncjob)
+ 
+             for path in paths:

@@ -1,0 +1,64 @@
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1237844305 14400
+# Node ID c0da7f8bb4be5ca9ace313b5e94c002248088081
+# Parent  8077dae2ea80d56914648d7508e9fcbea0690563
+Pull necessary info from vm object when building migrate list.
+
+diff -r 8077dae2ea80 -r c0da7f8bb4be src/virtManager/details.py
+--- a/src/virtManager/details.py	Fri Mar 13 14:37:57 2009 -0400
++++ b/src/virtManager/details.py	Mon Mar 23 17:38:25 2009 -0400
+@@ -727,7 +727,8 @@
+ 
+     def set_migrate_menu(self):
+         menu = self.window.get_widget("details-menu-migrate_menu")
+-        self.engine.populate_migrate_menu(menu, self.control_vm_migrate)
++        self.engine.populate_migrate_menu(menu, self.control_vm_migrate,
++                                          self.vm)
+ 
+     def set_pause_widget_states(self, state):
+         try:
+diff -r 8077dae2ea80 -r c0da7f8bb4be src/virtManager/engine.py
+--- a/src/virtManager/engine.py	Fri Mar 13 14:37:57 2009 -0400
++++ b/src/virtManager/engine.py	Mon Mar 23 17:38:25 2009 -0400
+@@ -574,8 +574,8 @@
+         migrate_progress.set_title(" ")
+         return migrate_progress
+ 
+-    def populate_migrate_menu(self, menu, migrate_func):
+-        conns = self.get_available_migrate_hostnames()
++    def populate_migrate_menu(self, menu, migrate_func, vm):
++        conns = self.get_available_migrate_hostnames(vm)
+ 
+         # Clear menu
+         for item in menu:
+@@ -597,9 +597,9 @@
+             mitem.show()
+             menu.add(mitem)
+ 
+-    def get_available_migrate_hostnames(self):
+-        driver = self.windowManager.current_connection().get_driver()
+-        uri = self.windowManager.current_connection().get_uri()
++    def get_available_migrate_hostnames(self, vm):
++        driver = vm.get_connection().get_driver()
++        uri = vm.get_connection().get_uri()
+         available_migrate_hostnames = {}
+ 
+         # Returns list of lists of the form
+diff -r 8077dae2ea80 -r c0da7f8bb4be src/virtManager/manager.py
+--- a/src/virtManager/manager.py	Fri Mar 13 14:37:57 2009 -0400
++++ b/src/virtManager/manager.py	Mon Mar 23 17:38:25 2009 -0400
+@@ -1124,7 +1124,12 @@
+                       vm.get_uuid(), hostname)
+ 
+     def set_migrate_submenu(self, src):
+-        self.engine.populate_migrate_menu(self.vmmenumigrate, self.migrate)
++        vm = self.current_vm()
++        if not vm:
++            return
++
++        self.engine.populate_migrate_menu(self.vmmenumigrate, self.migrate,
++                                          vm)
+ 
+     def _add_connection(self, engine, conn):
+         conn.connect("vm-added", self.vm_added)

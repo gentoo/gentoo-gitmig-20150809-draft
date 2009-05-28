@@ -1,0 +1,305 @@
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1238787321 14400
+# Node ID 71d9208d322631118bbdc110388c333bd1f784eb
+# Parent  9b4b6eb8de8d9e7b0e906715fb503a0b1ab0f30d
+Reorder buttons in the delete dialog.
+
+diff -r 9b4b6eb8de8d -r 71d9208d3226 src/vmm-delete.glade
+--- a/src/vmm-delete.glade	Fri Apr 03 14:58:51 2009 -0400
++++ b/src/vmm-delete.glade	Fri Apr 03 15:35:21 2009 -0400
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+ <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+-<!--Generated with glade3 3.4.5 on Wed Feb 25 17:45:14 2009 -->
++<!--Generated with glade3 3.4.5 on Fri Apr  3 15:34:40 2009 -->
+ <glade-interface>
+   <widget class="GtkDialog" id="vmm-delete">
+     <property name="width_request">500</property>
+@@ -115,6 +115,17 @@
+             <property name="visible">True</property>
+             <property name="layout_style">GTK_BUTTONBOX_END</property>
+             <child>
++              <widget class="GtkButton" id="delete-cancel">
++                <property name="visible">True</property>
++                <property name="can_focus">True</property>
++                <property name="receives_default">True</property>
++                <property name="label" translatable="yes">gtk-cancel</property>
++                <property name="use_stock">True</property>
++                <property name="response_id">0</property>
++                <signal name="clicked" handler="on_delete_cancel_clicked"/>
++              </widget>
++            </child>
++            <child>
+               <widget class="GtkButton" id="delete-ok">
+                 <property name="visible">True</property>
+                 <property name="can_focus">True</property>
+@@ -124,17 +135,6 @@
+                 <property name="response_id">0</property>
+                 <signal name="clicked" handler="on_delete_ok_clicked"/>
+               </widget>
+-            </child>
+-            <child>
+-              <widget class="GtkButton" id="delete-cancel">
+-                <property name="visible">True</property>
+-                <property name="can_focus">True</property>
+-                <property name="receives_default">True</property>
+-                <property name="label" translatable="yes">gtk-cancel</property>
+-                <property name="use_stock">True</property>
+-                <property name="response_id">0</property>
+-                <signal name="clicked" handler="on_delete_cancel_clicked"/>
+-              </widget>
+               <packing>
+                 <property name="position">1</property>
+               </packing>
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1238787521 14400
+# Node ID 6f0170f9d551ff54dcedca188bbf84313c551a30
+# Parent  71d9208d322631118bbdc110388c333bd1f784eb
+Change 'choose cd' button ordering.
+
+diff -r 71d9208d3226 -r 6f0170f9d551 src/vmm-choose-cd.glade
+--- a/src/vmm-choose-cd.glade	Fri Apr 03 15:35:21 2009 -0400
++++ b/src/vmm-choose-cd.glade	Fri Apr 03 15:38:41 2009 -0400
+@@ -40,97 +40,19 @@
+                           <placeholder/>
+                         </child>
+                         <child>
+-                          <widget class="GtkHBox" id="hbox2">
+-                            <property name="visible">True</property>
+-                            <child>
+-                              <widget class="GtkLabel" id="label38">
+-                                <property name="visible">True</property>
+-                                <property name="xpad">5</property>
+-                                <property name="label" translatable="yes">_Path to install media:</property>
+-                                <property name="use_underline">True</property>
+-                                <property name="mnemonic_widget">cd-path</property>
+-                              </widget>
+-                              <packing>
+-                                <property name="expand">False</property>
+-                                <property name="fill">False</property>
+-                              </packing>
+-                            </child>
+-                            <child>
+-                              <widget class="GtkComboBox" id="cd-path">
+-                                <property name="visible">True</property>
+-                                <signal name="changed" handler="on_cd_path_changed"/>
+-                              </widget>
+-                              <packing>
+-                                <property name="position">1</property>
+-                              </packing>
+-                            </child>
+-                          </widget>
+-                          <packing>
+-                            <property name="left_attach">1</property>
+-                            <property name="right_attach">3</property>
+-                            <property name="top_attach">3</property>
+-                            <property name="bottom_attach">4</property>
+-                          </packing>
+-                        </child>
+-                        <child>
+-                          <widget class="GtkAlignment" id="alignment5">
++                          <widget class="GtkAlignment" id="alignment4">
+                             <property name="visible">True</property>
+                             <property name="yalign">0</property>
+                             <property name="yscale">0</property>
+                             <child>
+-                              <widget class="GtkRadioButton" id="iso-image">
+-                                <property name="visible">True</property>
+-                                <property name="can_focus">True</property>
+-                                <property name="label" translatable="yes">_ISO Image Location:</property>
+-                                <property name="use_underline">True</property>
+-                                <property name="response_id">0</property>
+-                                <property name="draw_indicator">True</property>
+-                                <property name="group">physical-media</property>
+-                                <signal name="toggled" handler="on_media_toggled"/>
+-                              </widget>
++                              <placeholder/>
+                             </child>
+                           </widget>
+                           <packing>
+-                            <property name="right_attach">3</property>
+-                            <property name="x_options">GTK_FILL</property>
+-                            <property name="y_options">GTK_FILL</property>
+-                          </packing>
+-                        </child>
+-                        <child>
+-                          <widget class="GtkRadioButton" id="physical-media">
+-                            <property name="visible">True</property>
+-                            <property name="can_focus">True</property>
+-                            <property name="label" translatable="yes">_CD-ROM or DVD:</property>
+-                            <property name="use_underline">True</property>
+-                            <property name="response_id">0</property>
+-                            <property name="active">True</property>
+-                            <property name="draw_indicator">True</property>
+-                            <signal name="toggled" handler="on_media_toggled"/>
+-                          </widget>
+-                          <packing>
+-                            <property name="right_attach">3</property>
+-                            <property name="top_attach">2</property>
+-                            <property name="bottom_attach">3</property>
+-                            <property name="x_options">GTK_FILL</property>
+-                            <property name="y_options">GTK_FILL</property>
+-                          </packing>
+-                        </child>
+-                        <child>
+-                          <widget class="GtkLabel" id="label36">
+-                            <property name="visible">True</property>
+-                            <property name="xalign">1</property>
+-                            <property name="label" translatable="yes">ISO _Location:</property>
+-                            <property name="use_underline">True</property>
+-                            <property name="mnemonic_widget">iso-path</property>
+-                          </widget>
+-                          <packing>
+-                            <property name="left_attach">1</property>
+-                            <property name="right_attach">2</property>
+                             <property name="top_attach">1</property>
+                             <property name="bottom_attach">2</property>
+                             <property name="x_options">GTK_FILL</property>
+-                            <property name="y_options"></property>
+-                            <property name="x_padding">3</property>
++                            <property name="y_options">GTK_FILL</property>
+                           </packing>
+                         </child>
+                         <child>
+@@ -168,21 +90,99 @@
+                           </packing>
+                         </child>
+                         <child>
+-                          <widget class="GtkAlignment" id="alignment4">
++                          <widget class="GtkLabel" id="label36">
++                            <property name="visible">True</property>
++                            <property name="xalign">1</property>
++                            <property name="label" translatable="yes">ISO _Location:</property>
++                            <property name="use_underline">True</property>
++                            <property name="mnemonic_widget">iso-path</property>
++                          </widget>
++                          <packing>
++                            <property name="left_attach">1</property>
++                            <property name="right_attach">2</property>
++                            <property name="top_attach">1</property>
++                            <property name="bottom_attach">2</property>
++                            <property name="x_options">GTK_FILL</property>
++                            <property name="y_options"></property>
++                            <property name="x_padding">3</property>
++                          </packing>
++                        </child>
++                        <child>
++                          <widget class="GtkRadioButton" id="physical-media">
++                            <property name="visible">True</property>
++                            <property name="can_focus">True</property>
++                            <property name="label" translatable="yes">_CD-ROM or DVD:</property>
++                            <property name="use_underline">True</property>
++                            <property name="response_id">0</property>
++                            <property name="active">True</property>
++                            <property name="draw_indicator">True</property>
++                            <signal name="toggled" handler="on_media_toggled"/>
++                          </widget>
++                          <packing>
++                            <property name="right_attach">3</property>
++                            <property name="top_attach">2</property>
++                            <property name="bottom_attach">3</property>
++                            <property name="x_options">GTK_FILL</property>
++                            <property name="y_options">GTK_FILL</property>
++                          </packing>
++                        </child>
++                        <child>
++                          <widget class="GtkAlignment" id="alignment5">
+                             <property name="visible">True</property>
+                             <property name="yalign">0</property>
+                             <property name="yscale">0</property>
+                             <child>
+-                              <placeholder/>
++                              <widget class="GtkRadioButton" id="iso-image">
++                                <property name="visible">True</property>
++                                <property name="can_focus">True</property>
++                                <property name="label" translatable="yes">_ISO Image Location:</property>
++                                <property name="use_underline">True</property>
++                                <property name="response_id">0</property>
++                                <property name="draw_indicator">True</property>
++                                <property name="group">physical-media</property>
++                                <signal name="toggled" handler="on_media_toggled"/>
++                              </widget>
+                             </child>
+                           </widget>
+                           <packing>
+-                            <property name="top_attach">1</property>
+-                            <property name="bottom_attach">2</property>
++                            <property name="right_attach">3</property>
+                             <property name="x_options">GTK_FILL</property>
+                             <property name="y_options">GTK_FILL</property>
+                           </packing>
+                         </child>
++                        <child>
++                          <widget class="GtkHBox" id="hbox2">
++                            <property name="visible">True</property>
++                            <child>
++                              <widget class="GtkLabel" id="label38">
++                                <property name="visible">True</property>
++                                <property name="xpad">5</property>
++                                <property name="label" translatable="yes">_Path to install media:</property>
++                                <property name="use_underline">True</property>
++                                <property name="mnemonic_widget">cd-path</property>
++                              </widget>
++                              <packing>
++                                <property name="expand">False</property>
++                                <property name="fill">False</property>
++                              </packing>
++                            </child>
++                            <child>
++                              <widget class="GtkComboBox" id="cd-path">
++                                <property name="visible">True</property>
++                                <signal name="changed" handler="on_cd_path_changed"/>
++                              </widget>
++                              <packing>
++                                <property name="position">1</property>
++                              </packing>
++                            </child>
++                          </widget>
++                          <packing>
++                            <property name="left_attach">1</property>
++                            <property name="right_attach">3</property>
++                            <property name="top_attach">3</property>
++                            <property name="bottom_attach">4</property>
++                          </packing>
++                        </child>
+                       </widget>
+                     </child>
+                   </widget>
+@@ -209,6 +209,17 @@
+             <property name="visible">True</property>
+             <property name="layout_style">GTK_BUTTONBOX_END</property>
+             <child>
++              <widget class="GtkButton" id="Cancel">
++                <property name="visible">True</property>
++                <property name="can_focus">True</property>
++                <property name="can_default">True</property>
++                <property name="label">gtk-cancel</property>
++                <property name="use_stock">True</property>
++                <property name="response_id">-6</property>
++                <signal name="clicked" handler="on_cancel_clicked"/>
++              </widget>
++            </child>
++            <child>
+               <widget class="GtkButton" id="OK">
+                 <property name="visible">True</property>
+                 <property name="can_focus">True</property>
+@@ -218,17 +229,6 @@
+                 <property name="response_id">-5</property>
+                 <signal name="clicked" handler="on_ok_clicked"/>
+               </widget>
+-            </child>
+-            <child>
+-              <widget class="GtkButton" id="Cancel">
+-                <property name="visible">True</property>
+-                <property name="can_focus">True</property>
+-                <property name="can_default">True</property>
+-                <property name="label">gtk-cancel</property>
+-                <property name="use_stock">True</property>
+-                <property name="response_id">-6</property>
+-                <signal name="clicked" handler="on_cancel_clicked"/>
+-              </widget>
+               <packing>
+                 <property name="position">1</property>
+               </packing>

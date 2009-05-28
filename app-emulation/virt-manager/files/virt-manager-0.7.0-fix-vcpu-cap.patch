@@ -1,0 +1,40 @@
+# HG changeset patch
+# User Cole Robinson <crobinso@redhat.com>
+# Date 1239034964 14400
+# Node ID c5489151e2e6bd37c41b543efb79186739fb1b3c
+# Parent  3cfb5918b1a80b9eea3282244a27f512f566eb2e
+Fix incorrect vcpu capping in create wizard.
+
+Cap was always 10 less than we intended. Apparently spinbutton page_size != 0
+is deprecated, yet is the default set by glade3? Schweet.
+
+diff -r 3cfb5918b1a8 -r c5489151e2e6 src/vmm-create.glade
+--- a/src/vmm-create.glade	Mon Apr 06 11:33:46 2009 -0400
++++ b/src/vmm-create.glade	Mon Apr 06 12:22:44 2009 -0400
+@@ -826,7 +826,7 @@
+                                             <property name="visible">True</property>
+                                             <property name="can_focus">True</property>
+                                             <property name="xalign">1</property>
+-                                            <property name="adjustment">0 0 8096 1 10 10</property>
++                                            <property name="adjustment">0 0 8096 1 10 0</property>
+                                             <property name="climb_rate">1</property>
+                                           </widget>
+                                           <packing>
+@@ -841,7 +841,7 @@
+                                             <property name="visible">True</property>
+                                             <property name="can_focus">True</property>
+                                             <property name="xalign">1</property>
+-                                            <property name="adjustment">0 0 128 1 10 10</property>
++                                            <property name="adjustment">0 0 128 1 10 0</property>
+                                             <property name="climb_rate">1</property>
+                                           </widget>
+                                           <packing>
+@@ -1025,7 +1025,7 @@
+                                                 <property name="visible">True</property>
+                                                 <property name="can_focus">True</property>
+                                                 <property name="xalign">1</property>
+-                                                <property name="adjustment">2 0 1000000 0.10000000000000001 10 10</property>
++                                                <property name="adjustment">2 0 1000000 0.10000000000000001 10 0</property>
+                                                 <property name="climb_rate">1</property>
+                                                 <property name="digits">1</property>
+                                               </widget>
