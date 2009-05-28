@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.248 2009/05/28 11:23:22 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.249 2009/05/28 11:28:29 dagger Exp $
+
+  28 May 2009; Robert Piasek <dagger@gentoo.org>
+  -dhcpcd-4.99.5.ebuild, -dhcpcd-4.99.6.ebuild, -dhcpcd-4.99.12.ebuild,
+  -dhcpcd-4.99.15.ebuild, -dhcpcd-4.99.18.ebuild:
+  Removed all dhcpcd versions
 
   28 May 2009; Robert Piasek <dagger@gentoo.org> dhcpcd-4.0.13.ebuild,
   -dhcpcd-5.0.1.ebuild, -dhcpcd-5.0.3.ebuild:
