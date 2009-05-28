@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2699 2009/05/28 11:10:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2700 2009/05/28 15:24:49 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 May 2009; Samuli Suominen <ssuominen@gentoo.org> arch/alpha/virtuals,
+  arch/arm/virtuals, arch/hppa/virtuals, arch/mips/virtuals,
+  arch/s390/virtuals, arch/sh/virtuals, base/virtuals,
+  default-linux/alpha/virtuals, default-linux/arm/virtuals,
+  default-linux/ia64/2007.0/desktop/virtuals, default-linux/mips/virtuals,
+  default-linux/s390/virtuals, default-linux/sh/virtuals,
+  default-linux/sparc/virtuals, default-linux/x86/2007.0/desktop/virtuals:
+  Remove old style virtual for cdrtools.
 
   28 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Unmask koffice-2.0.0. Released
