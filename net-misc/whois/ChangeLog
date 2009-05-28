@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.125 2009/05/28 16:27:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.126 2009/05/28 19:50:21 beandog Exp $
+
+  28 May 2009; Steve Dibb <beandog@gentoo.org> whois-4.7.30.ebuild:
+  amd64 stable, bug 271096
 
   28 May 2009; Raúl Porcel <armin76@gentoo.org> whois-4.7.30.ebuild:
   alpha/arm/ia64/s390/sh stable wrt #271096
