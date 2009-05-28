@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_beta2.ebuild,v 1.1 2009/05/26 14:51:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0_beta3.ebuild,v 1.1 2009/05/28 03:40:04 darkside Exp $
 
 EAPI="2"
 
@@ -69,4 +69,8 @@ pkg_postinst() {
 	elog "- Remove all net.* initscripts (except for net.lo) from all runlevels"
 	elog "- Add these scripts to the RC_PLUG_SERVICES line in /etc/conf.d/rc"
 	elog "(For example, RC_PLUG_SERVICES=\"!net.eth0 !net.wlan0\")"
+	elog
+	ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
+	ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf
+"
 }

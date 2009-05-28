@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.44 2009/05/26 14:51:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.45 2009/05/28 03:40:04 darkside Exp $
+
+*wicd-1.6.0_beta3 (28 May 2009)
+
+  28 May 2009; Jeremy Olexa <darkside@gentoo.org> -wicd-1.6.0_beta2.ebuild,
+  +wicd-1.6.0_beta3.ebuild:
+  Version bump, minor caching improvments, ps3 tweaks, improved libnotify
+  messages - probably last release before 1.6.0 final
 
 *wicd-1.6.0_beta2 (26 May 2009)
 
