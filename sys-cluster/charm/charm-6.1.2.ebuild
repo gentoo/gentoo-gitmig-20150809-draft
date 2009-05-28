@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.14 2009/05/28 00:07:38 je_fro Exp $
+# $
 
 inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
-SRC_URI="${P}.tar.gz"
+SRC_URI="${P}_src.tar.gz"
 
 SLOT="0"
 KEYWORDS="~x86"
@@ -33,7 +33,7 @@ CHARM_DOWNLOAD="http://charm.cs.uiuc.edu/download/"
 
 pkg_nofetch() {
 	echo
-	einfo "Please download ${P}.tar.gz from"
+	einfo "Please download ${P}_src.tar.gz from"
 	einfo "${CHARM_DOWNLOAD}"
 	einfo "and then move it to ${DISTDIR}"
 	echo
@@ -42,25 +42,25 @@ pkg_nofetch() {
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-gcc-4.2.patch
+#	epatch "${FILESDIR}"/${P}-gcc-4.2.patch
 
 	# add -fPIC to generate PIC code for charm so's
 	epatch "${FILESDIR}"/${PN}-fpic-gentoo.patch
 
 	# for pdf/html docs we need to patch the makefiles
-	if use doc; then
-		epatch "${FILESDIR}"/${PN}-doc-makefile-gentoo.patch
-	fi
+#	if use doc; then
+#		epatch "${FILESDIR}"/${PN}-doc-makefile-gentoo.patch
+#	fi
 
 	# patch the example Makefiles so they run out of
 	# the box
-	epatch "${FILESDIR}"/${PN}-examples-gentoo.patch
+#	epatch "${FILESDIR}"/${PN}-examples-gentoo.patch
 
 	# enable proper detection of python in configure
-	epatch "${FILESDIR}"/${PN}-python-configure-gentoo.patch
+#	epatch "${FILESDIR}"/${PN}-python-configure-gentoo.patch
 
 	# gcc-4.1 fixes
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+#	epatch "${FILESDIR}"/${P}-gcc4.patch
 
 	# TCP instead of default UDP for socket comunication
 	# protocol
