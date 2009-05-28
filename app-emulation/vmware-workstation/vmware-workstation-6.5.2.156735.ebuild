@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.2.156735.ebuild,v 1.4 2009/05/28 01:32:23 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.2.156735.ebuild,v 1.5 2009/05/28 20:55:16 vadimk Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -8,6 +8,7 @@ MY_PN="VMware-Workstation-$(replace_version_separator 3 - $PV)"
 
 DESCRIPTION="Emulate a complete PC on your PC without the usual performance overhead of most emulators"
 HOMEPAGE="http://www.vmware.com/products/desktop/ws_features.html"
+DOWNLOAD_URL="http://www.vmware.com/download/ws/"
 SRC_URI="
 	x86? (
 		mirror://vmware/software/wkst/${MY_PN}.i386.bundle
@@ -74,7 +75,9 @@ pkg_nofetch() {
 		MY_P="${MY_PN}.x86_64"
 	fi
 
-	einfo "Please download the ${MY_P}.bundle from ${HOMEPAGE}"
+	einfo "Please download the ${MY_P}.bundle from"
+	einfo "${DOWNLOAD_URL}"
+	einfo "and place it in ${DISTDIR}"
 }
 
 src_unpack() {
