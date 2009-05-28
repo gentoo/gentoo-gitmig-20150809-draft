@@ -1,6 +1,13 @@
 # ChangeLog for mail-client/balsa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.82 2009/05/28 21:27:33 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.83 2009/05/28 21:56:38 eva Exp $
+
+*balsa-2.4.0 (28 May 2009)
+
+  28 May 2009; Gilles Dartiguelongue <eva@gentoo.org> balsa-2.3.28.ebuild,
+  +balsa-2.4.0.ebuild:
+  Bump to 2.4.0. VCALENDAR & VEVENT handling, use gmime:2.4, libunique, drop
+  libgnomeprint usage.
 
   28 May 2009; Gilles Dartiguelongue <eva@gentoo.org> -balsa-2.3.25.ebuild,
   -balsa-2.3.26.ebuild, -balsa-2.3.27.ebuild:

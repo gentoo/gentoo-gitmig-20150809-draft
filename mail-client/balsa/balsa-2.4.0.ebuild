@@ -1,33 +1,36 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.3.28.ebuild,v 1.7 2009/05/28 21:56:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.0.ebuild,v 1.1 2009/05/28 21:56:38 eva Exp $
+
+EAPI="2"
 
 inherit gnome2
 
 DESCRIPTION="Email client for GNOME"
 HOMEPAGE="http://pawsa.fedorapeople.org/balsa/"
-SRC_URI="http://balsa.gnome.org/${P}.tar.bz2"
+SRC_URI="http://pawsa.fedorapeople.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 # Doesn't currently build with -gnome
-IUSE="crypt doc gtkhtml gtkspell kerberos ldap libnotify rubrica sqlite ssl xface"
+IUSE="crypt doc gnome gtkhtml +gtkspell kerberos ldap libnotify rubrica sqlite ssl xface"
 
 RDEPEND=">=dev-libs/glib-2.16
-	>=x11-libs/gtk+-2.10
-	=dev-libs/gmime-2.2*
+	>=x11-libs/gtk+-2.14
+	dev-libs/gmime:2.4
 	>=net-libs/libesmtp-1.0.3
-	>=gnome-base/orbit-2
-	>=gnome-base/libbonobo-2.0
 	x11-themes/hicolor-icon-theme
 	net-mail/mailbase
 	crypt? ( >=app-crypt/gpgme-1.0 )
-	>=gnome-base/libgnome-2.0
-	>=gnome-base/libgnomeui-2.0
-	>=gnome-base/gconf-2.0
-	>=gnome-base/gnome-keyring-2.20
-	>=x11-libs/gtksourceview-2
+	gnome? (
+		>=gnome-base/orbit-2
+		>=gnome-base/libbonobo-2.0
+		>=gnome-base/libgnome-2.0
+		>=gnome-base/libgnomeui-2.0
+		>=gnome-base/gconf-2.0
+		>=gnome-base/gnome-keyring-2.20
+		>=x11-libs/gtksourceview-2 )
 	gtkhtml? ( >=gnome-extra/gtkhtml-3.14 )
 	sqlite? ( >=dev-db/sqlite-2.8 )
 	libnotify? ( x11-libs/libnotify )
@@ -49,20 +52,11 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO docs/*"
 
 pkg_setup() {
-	# threads are currently broken with gpgme
-	G2CONF="${G2CONF} --disable-threads"
-
 	if use crypt ; then
 		G2CONF="${G2CONF} --with-gpgme=gpgme-config"
 	else
 		G2CONF="${G2CONF} --without-gpgme"
 	fi
-
-#	if use gnome ; then
-		G2CONF="${G2CONF} --with-gtksourceview"
-#	else
-#		G2CONF="${G2CONF} --without-gtksourceview"
-#	fi
 
 	if use gtkhtml ; then
 		G2CONF="${G2CONF} --with-gtkhtml=3"
@@ -74,6 +68,9 @@ pkg_setup() {
 		--disable-pcre
 		--enable-gregex
 		--enable-threads
+		--with-unique
+		$(use_with gnome)
+		$(use_with gnome gtksourceview)
 		$(use_with gtkspell)
 		$(use_with kerberos gss)
 		$(use_with ldap)
@@ -84,8 +81,8 @@ pkg_setup() {
 		$(use_with xface compface)"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 
 	# Remove disable deprecated statement
 	sed -i -e '/DISABLE_DEPRECATED/d' \
