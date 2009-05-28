@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libmp4v2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.42 2009/05/22 15:10:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/ChangeLog,v 1.43 2009/05/28 11:32:43 flameeyes Exp $
+
+  28 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  libmp4v2-1.5.0.1-r2.ebuild:
+  Don't try to look for the glib/gtk autoconf macros, not needed and causes
+  additional deps.
 
 *libmp4v2-1.5.0.1-r2 (22 May 2009)
 
