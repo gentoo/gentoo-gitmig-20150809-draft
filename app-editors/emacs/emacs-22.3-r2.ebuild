@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r2.ebuild,v 1.10 2009/04/14 15:36:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r2.ebuild,v 1.11 2009/05/28 14:07:03 fauli Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
 LICENSE="GPL-3 FDL-1.2 BSD as-is X11"
 SLOT="22"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png spell sound source tiff toolkit-scroll-bars X Xaw3d +xpm"
+IUSE="alsa gif gtk gzip-el hesiod jpeg kerberos motif png sound source tiff toolkit-scroll-bars X Xaw3d +xpm"
 RESTRICT="strip"
 
 RDEPEND="sys-libs/ncurses
@@ -45,8 +45,7 @@ DEPEND="${RDEPEND}
 
 RDEPEND="${RDEPEND}
 	!<app-editors/emacs-cvs-22.1
-	>=app-emacs/emacs-common-gentoo-1[X?]
-	spell? ( || ( app-text/aspell app-text/ispell ) )"
+	>=app-emacs/emacs-common-gentoo-1[X?]"
 
 # FULL_VERSION keeps the full version number, which is needed in order to
 # determine some path information correctly for copy/move operations later on
