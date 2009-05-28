@@ -31,5 +31,7 @@
 		<flag name='network'>Enable networking support for guests</flag>
 		<flag name='virtualbox'>Adds support for VirtualBox based virtual
 			machines</flag>
+		<flag name='numa'>Use NUMA for memory segmenting via
+			<pkg>sys-process/numactl</pkg></flag>
 	</use>
 </pkgmetadata>

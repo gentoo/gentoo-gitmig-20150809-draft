@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.24 2009/05/27 22:34:30 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.25 2009/05/28 16:27:25 cardoe Exp $
+
+*libvirt-0.6.3-r2 (28 May 2009)
+
+  28 May 2009; Doug Goldstein <cardoe@gentoo.org>
+  +files/libvirt-0.6.2-enable-qemu-0-10-migration.patch,
+  +files/libvirt-0.6.2-fix-nosource-label.patch,
+  +files/libvirt-0.6.2-shared-readonly-label.patch,
+  +libvirt-0.6.3-r2.ebuild, +files/libvirt-0.6.3-hostdev-managed.patch,
+  +files/libvirt-0.6.3-refresh-qemu-caps.patch, metadata.xml:
+  Support NUMA segmentation. Fix VirtualBox depend. Require QEMU 0.10.0 and
+  higher for additional QEMU feature support. Several fixes from upstream.
 
 *libvirt-0.6.3-r1 (27 May 2009)
 
