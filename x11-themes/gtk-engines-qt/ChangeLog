@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.51 2009/05/24 10:33:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.52 2009/05/28 16:24:41 armin76 Exp $
+
+  28 May 2009; Raúl Porcel <armin76@gentoo.org>
+  gtk-engines-qt-0.8-r4.ebuild:
+  sparc stable wrt #269966
 
   24 May 2009; Markus Meier <maekke@gentoo.org>
   gtk-engines-qt-0.8-r4.ebuild:
