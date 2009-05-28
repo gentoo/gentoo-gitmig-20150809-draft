@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.75.0.ebuild,v 1.1 2009/05/22 22:36:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-ns-stylesheets/docbook-xsl-ns-stylesheets-1.75.1.ebuild,v 1.1 2009/05/28 11:43:45 flameeyes Exp $
+
+inherit eutils
 
 DESCRIPTION="XSL Stylesheets for Docbook"
 HOMEPAGE="http://wiki.docbook.org/topic/DocBookXslStylesheets"
-SRC_URI="mirror://sourceforge/docbook/docbook-xsl-${PV}.tar.bz2"
+SRC_URI="mirror://sourceforge/docbook/docbook-xsl-ns-${PV}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -16,9 +18,9 @@ DEPEND="
 		dev-libs/libxml2
 		dev-libs/libxslt )"
 
-RDEPEND=">=app-text/build-docbook-catalog-1.1"
+RDEPEND=">=app-text/build-docbook-catalog-1.4"
 
-S=${WORKDIR}/docbook-xsl-${PV}
+S=${WORKDIR}/docbook-xsl-ns-${PV}
 
 # Makefile is broken in this release
 RESTRICT=test
@@ -32,7 +34,7 @@ src_test() {
 
 src_install() {
 	# Create the installation directory
-	DEST="/usr/share/sgml/docbook/xsl-stylesheets"
+	DEST="/usr/share/sgml/docbook/xsl-ns-stylesheets"
 	insinto ${DEST}
 
 	local i
