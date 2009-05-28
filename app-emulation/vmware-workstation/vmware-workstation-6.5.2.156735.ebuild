@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.2.156735.ebuild,v 1.3 2009/05/12 07:34:20 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-6.5.2.156735.ebuild,v 1.4 2009/05/28 01:32:23 vadimk Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -131,6 +131,7 @@ src_install() {
 	dodir /etc/vmware/init.d
 	cp -r "${WORKDIR}"/vmware-confdir/* "${D}/etc/vmware"
 	mv "${D}"/etc/init.d/* "${D}/etc/vmware/init.d"
+	sed -i -e "s:/sbin/lsmod:/bin/lsmod:" "${D}"/etc/vmware/init.d/vmware
 	newinitd "${FILESDIR}/${PN}"-6.5.rc vmware
 	touch "${D}"/etc/vmware/networking
 
