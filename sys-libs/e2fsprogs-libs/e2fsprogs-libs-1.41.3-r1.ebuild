@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.3-r1.ebuild,v 1.1 2008/12/30 20:45:31 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.41.3-r1.ebuild,v 1.2 2009/05/29 23:26:18 vapier Exp $
+
+EAPI="2"
 
 inherit flag-o-matic toolchain-funcs
 
-EAPI="2"
 DESCRIPTION="e2fsprogs libraries (common error, subsystem, uuid, block id)"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/e2fsprogs/${P}.tar.gz"
