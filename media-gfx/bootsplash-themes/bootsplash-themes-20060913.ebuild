@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.5 2008/08/23 13:11:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash-themes/bootsplash-themes-20060913.ebuild,v 1.6 2009/05/29 03:35:35 beandog Exp $
 
 DESCRIPTION="A collection of Bootsplash themes"
 HOMEPAGE="http://dev.gentoo.org/~spock/repos/bootsplash/"
@@ -184,7 +184,7 @@ SRC_URI="${THEME_URI}/Theme-73labAllstar.tar.bz2
 	${THEME_URI}/Theme-Warty.tar.bz2"
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=media-gfx/splashutils-1.1.9.6"

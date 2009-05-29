@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splash-themes-livecd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.20 2009/03/24 08:57:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-livecd/ChangeLog,v 1.21 2009/05/29 03:37:40 beandog Exp $
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org>
+  splash-themes-livecd-2007.0-r2.ebuild:
+  amd64 stable
 
   24 Mar 2009; Michał Januszewski <spock@gentoo.org>
   splash-themes-livecd-2007.0-r2.ebuild:
