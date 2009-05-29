@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnids
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.31 2009/03/24 14:44:14 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.32 2009/05/29 17:06:54 beandog Exp $
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org> libnids-1.18.ebuild:
+  amd64 stable
 
 *libnids-1.23-r1 (23 Mar 2009)
 
