@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.9 2008/09/18 01:42:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kstreamripper/kstreamripper-0.3.4.ebuild,v 1.10 2009/05/29 14:54:40 ssuominen Exp $
 
+ARTS_REQUIRED=never
 inherit eutils kde
 
 DESCRIPTION="KStreamripper - a nice KDE3 frontend to media-sound/streamripper"
@@ -35,7 +36,8 @@ src_compile() {
 }
 
 src_install() {
-	DESTDIR="${D}" scons install || die "scons install failed."
+	DESTDIR="${D}" scons install || die "scons install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
-	newicon src/hi32-app-kstreamripper.png ${PN}.png
+	newicon src/hi32-app-${PN}.png ${PN}.png
+	domenu src/${PN}.desktop
 }
