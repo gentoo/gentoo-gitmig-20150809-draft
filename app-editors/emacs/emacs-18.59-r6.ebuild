@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.2 2009/02/22 16:33:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.3 2009/05/29 16:14:57 ulm Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="The extensible self-documenting text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 	ftp://ftp.splode.com/pub/users/friedman/emacs/${P}-linux22x-elf-glibc21.diff.gz
-	mirror://gentoo/${P}-patches-3.tar.bz2"
+	mirror://gentoo/${P}-patches-4.tar.bz2"
 
 LICENSE="GPL-1 GPL-2 BSD as-is"
 SLOT="18"
@@ -57,7 +57,7 @@ src_configure() {
 src_compile() {
 	# Do not use the sandbox, or the dumped Emacs will be twice as large
 	SANDBOX_ON=0
-	emake -j1 CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Demacs" || die
+	emake --jobs=1 CC="$(tc-getCC)" CFLAGS="${CFLAGS} -Demacs" || die
 }
 
 src_install() {

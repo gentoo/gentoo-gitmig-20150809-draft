@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r2.ebuild,v 1.11 2009/05/28 14:07:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-22.3-r2.ebuild,v 1.12 2009/05/29 16:14:57 ulm Exp $
 
 EAPI=2
 
@@ -8,7 +8,8 @@ inherit autotools elisp-common eutils flag-o-matic
 
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
-SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
+SRC_URI="mirror://gnu/emacs/${P}.tar.gz
+	mirror://gentoo/${P}-patches-1.tar.bz2"
 
 LICENSE="GPL-3 FDL-1.2 BSD as-is X11"
 SLOT="22"
@@ -53,12 +54,7 @@ FULL_VERSION="${PV}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 src_prepare() {
-	epatch "${FILESDIR}/emacs-22.1-Xaw3d-headers.patch"
-	epatch "${FILESDIR}/emacs-22.3-freebsd-sparc.patch"
-	# SuperH support (bug 238210)
-	epatch "${FILESDIR}/emacs-22.2-sh.patch"
-	# Fix sporadic segmentation faults in unexec (bug 236579)
-	epatch "${FILESDIR}/emacs-22.3-linux-random-heap.patch"
+	EPATCH_SUFFIX=patch epatch
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
