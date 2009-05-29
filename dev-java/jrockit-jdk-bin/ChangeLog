@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.46 2008/04/21 18:00:01 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.47 2009/05/29 14:18:59 betelgeuse Exp $
+
+  29 May 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -jrockit-jdk-bin-1.5.0.11_p1.ebuild:
+  Remove security vulnerable version for bug #271735.
 
   21 Apr 2008; Raúl Porcel <armin76@gentoo.org>
   jrockit-jdk-bin-1.4.2.16.ebuild, jrockit-jdk-bin-1.5.0.14.ebuild:
