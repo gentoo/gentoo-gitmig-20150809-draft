@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.5-r1.ebuild,v 1.1 2009/05/28 09:53:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.9.5-r1.ebuild,v 1.2 2009/05/29 08:55:47 scarabeus Exp $
 
 EAPI="1"
 
@@ -61,6 +61,7 @@ src_unpack(){
 	local MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | tr ' ' '\n' | sort | uniq -d | tr '\n' ' ')
 	elog "Preparing to build translations for: en ${MAKE_PO}"
 	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = . ${MAKE_PO}:" "${S}/po/Makefile.am" || die "sed for locale failed"
+	epatch "${FILESDIR}/${PV}-cam_download.patch"
 
 	if use doc; then
 		cd "${S_DOC}/doc"
@@ -77,7 +78,6 @@ src_unpack(){
 		DIRS="$(echo ${DIRS} | tr '\n' ' ')"
 		sed -i -e "s:^SUBDIRS =.*:SUBDIRS = digikam showfoto ${DIRS}:" "${S_DOC}/doc/Makefile.am" || die "sed for locale (docs) failed"
 	fi
-	epatch "${FILESDIR}/${PV}-cam_download.patch"
 }
 
 src_compile(){
