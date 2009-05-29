@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/pam_ldap
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.39 2007/11/07 17:52:53 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_ldap/ChangeLog,v 1.40 2009/05/29 13:26:11 flameeyes Exp $
+
+  29 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pam_ldap-180.ebuild, -pam_ldap-182.ebuild:
+  Remove vulnerable ebuilds as per bug #271676. If you needed one of these,
+  then I don't care, you could have helped maintaining this.
 
   07 Nov 2007; Raúl Porcel <armin76@gentoo.org> pam_ldap-184.ebuild:
   Add ~ia64 wrt #198265
