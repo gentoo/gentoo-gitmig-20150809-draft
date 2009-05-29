@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r5.ebuild,v 1.3 2009/05/26 15:19:40 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r5.ebuild,v 1.4 2009/05/29 19:52:59 flameeyes Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -55,7 +55,7 @@ RDEPEND="
 	x11-libs/libXext
 	>=x11-libs/qt-3.3.3:3
 	acl? (
-		kernel_linux? ( sys-apps/acl )
+		virtual/acl
 	)
 	alsa? ( media-libs/alsa-lib )
 	arts? ( ~kde-base/arts-3.5.10 )

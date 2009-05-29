@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r2.ebuild,v 1.2 2009/04/21 17:23:25 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r2.ebuild,v 1.3 2009/05/29 19:52:59 flameeyes Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -32,7 +32,7 @@ RDEPEND="x11-libs/libXext
 	media-libs/libart_lgpl
 	net-dns/libidn
 	>=x11-libs/qt-3.3.3:3
-	acl? ( kernel_linux? ( sys-apps/acl ) )
+	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )
 	cups? ( >=net-print/cups-1.1.19 )
 	tiff? ( media-libs/tiff )
