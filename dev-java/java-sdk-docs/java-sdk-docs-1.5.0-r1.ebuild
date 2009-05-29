@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0-r1.ebuild,v 1.10 2008/05/20 14:36:58 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0-r1.ebuild,v 1.11 2009/05/29 20:51:48 caster Exp $
 
 SRC_URI="jdk-1_5_0-doc-${PR}.zip"
-DESCRIPTION="Javadoc for Java SDK version 1.5.0 Beta 2"
+DESCRIPTION="Sun's documentation bundle (including API) for Java SE"
 HOMEPAGE="http://java.sun.com/j2se/1.5.0/"
 LICENSE="sun-j2sl"
 SLOT="1.5.0"
