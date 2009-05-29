@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.15.4.ebuild,v 1.10 2009/05/21 23:04:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.15.4.ebuild,v 1.11 2009/05/29 15:58:01 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -47,6 +47,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "This filemanager does have nothing to do with the Gentoo Foundation"
-	elog "or Gentoo Linux in general. The name is only a fluke."
+	elog "This package doesn't have anything to do with the Gentoo Foundation"
+	elog "or Gentoo Linux in general. The name is just a coincidence."
 }
