@@ -1,13 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2704 2009/05/29 07:46:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2705 2009/05/29 09:48:26 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   29 May 2009; Peter Volkov <pva@gentoo.org> package.mask:
-  Masked developemnt version (psi-0.13*) of net-im/psi.
+  mask psimedia as it was tested with net-im/psi-0.13 only
+
+  29 May 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Masked development version (psi-0.13*) of net-im/psi
 
   28 May 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Mask app-text/nopaste pending removal, bug 271295

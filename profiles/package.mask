@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9850 2009/05/29 07:46:34 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9851 2009/05/29 09:48:26 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -33,7 +33,9 @@
 
 # Peter Volkov <pva@gentoo.org> (29 May 2009)
 # Masked development version. Play with it, it works!
+# Also mask psimedia as it was tested with net-im/psi-0.13 only.
 =net-im/psi-0.13*
+net-im/psimedia
 
 # Ben de Groot <yngwin@gentoo.org> (28 May 2009)
 # Masked pending removal, as rafb.net closed doors, bug 271295
