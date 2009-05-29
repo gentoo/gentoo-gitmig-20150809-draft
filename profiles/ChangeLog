@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2707 2009/05/29 11:45:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2708 2009/05/29 20:42:27 beandog Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org> package.mask:
+  Remove mplayer-bin from tree, bug 233394
 
   29 May 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Updated wireshark mask to mask first prerelease candidate too.

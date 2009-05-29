@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9852 2009/05/29 11:45:01 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9853 2009/05/29 20:42:27 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -854,11 +854,6 @@ dev-tcltk/tclgpgme
 # Mike Doty <kingtaco@gentoo.org> (11 Aug 2008)
 # Masked due to build failure, bug 234448
 =app-emulation/emul-linux-x86-gtklibs-20080810
-
-# Samuli Suominen <ssuominen@gentoo.org> (3 Aug 2008)
-# Unmaintained. Masked for removal wrt #233394.
-# Open security bugs  #208566, #215006 and #231836.
-media-video/mplayer-bin
 
 # Raúl Porcel <armin76@gentoo.org> (1 Aug 2008)
 # This is just for preview
