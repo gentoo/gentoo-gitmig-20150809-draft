@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.2 2009/05/08 01:48:35 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.3 2009/05/29 23:29:50 yngwin Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://qtscriptgenerator.googlecode.com/files/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="debug"
+IUSE="debug kde"
 
 DEPEND="
 	x11-libs/qt-dbus:4
@@ -26,6 +26,7 @@ DEPEND="
 		x11-libs/qt-phonon:4
 		media-sound/phonon
 	)
+	kde? ( media-sound/phonon )
 	x11-libs/qt-script:4
 	x11-libs/qt-sql:4
 	x11-libs/qt-svg:4
