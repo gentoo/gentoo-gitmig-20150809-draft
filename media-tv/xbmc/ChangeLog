@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.18 2009/05/16 14:49:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.19 2009/05/29 20:58:22 vapier Exp $
+
+  29 May 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9.04.ebuild,
+  xbmc-9999.ebuild:
+  Allow unrar-gpl for unrar needs #270728 by Mathy Vanvoorden.
 
 *xbmc-9.04 (16 May 2009)
 

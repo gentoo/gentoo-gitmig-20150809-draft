@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.24 2009/05/29 20:57:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.25 2009/05/29 20:58:22 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -30,7 +30,7 @@ IUSE="alsa debug joystick opengl profile pulseaudio vdpau"
 
 RDEPEND="opengl? ( virtual/opengl )
 	app-arch/bzip2
-	app-arch/unrar
+	|| ( app-arch/unrar app-arch/unrar-gpl )
 	app-arch/unzip
 	app-arch/zip
 	app-i18n/enca
