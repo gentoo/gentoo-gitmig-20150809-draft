@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.20 2009/05/28 09:47:52 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-meta.eclass,v 1.21 2009/05/29 10:29:10 dagger Exp $
 #
 # @ECLASS: kde4-meta.eclass
 # @MAINTAINER:
@@ -91,9 +91,14 @@ case ${KMNAME} in
 			!app-office/koffice:0
 			!app-office/koffice-meta:0
 		"
-		COMMON_DEPEND="
+		if has openexr ${IUSE//+}; then
+			COMMON_DEPEND="media-gfx/imagemagick[openexr?]"
+		else
+			COMMON_DEPEND="media-gfx/imagemagick"
+		fi
+
+		COMMON_DEPEND="${COMMON_DEPEND}
 			dev-cpp/eigen:2
-			media-gfx/imagemagick[openexr?]
 			media-libs/fontconfig
 			media-libs/freetype:2
 		"
