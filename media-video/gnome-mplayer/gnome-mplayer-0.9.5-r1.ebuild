@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.5.ebuild,v 1.1 2009/04/17 21:12:28 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.5-r1.ebuild,v 1.1 2009/05/29 21:47:21 beandog Exp $
 
 EAPI="2"
 GCONF_DEBUG=no
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="MPlayer GUI for GNOME Desktop Environment"
 HOMEPAGE="http://code.google.com/p/gnome-mplayer"
@@ -32,6 +32,8 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS="ChangeLog README DOCS/keyboard_shortcuts.txt"
+
+PATCHES=( "${FILESDIR}"/${P}-gettext.patch )
 
 src_configure() {
 	G2CONF="${G2CONF}

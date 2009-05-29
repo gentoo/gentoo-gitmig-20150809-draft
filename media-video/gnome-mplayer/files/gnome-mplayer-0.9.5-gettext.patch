@@ -1,0 +1,168 @@
+--- src/nautilus_property_page.c	(revision 1243)
++++ src/nautilus_property_page.c	(working copy)
+@@ -84,9 +84,9 @@
+     }
+ 
+     if (hour == 0) {
+-        result = g_strdup_printf(_("%2i:%02.0f"), min, seconds);
++        result = g_strdup_printf(dgettext(GETTEXT_PACKAGE,"%2i:%02.0f"), min, seconds);
+     } else {
+-        result = g_strdup_printf(_("%i:%02i:%02.0f"), hour, min, seconds);
++        result = g_strdup_printf(dgettext(GETTEXT_PACKAGE,"%i:%02i:%02.0f"), hour, min, seconds);
+     }
+     return g_strstrip(result);
+ }
+@@ -265,7 +265,7 @@
+ 
+         data = get_metadata(filename);
+ 
+-        label = gtk_label_new(_("<span weight=\"bold\">Media Details</span>"));
++        label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"<span weight=\"bold\">Media Details</span>"));
+         gtk_label_set_use_markup(GTK_LABEL(label), TRUE);
+         gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+         gtk_misc_set_padding(GTK_MISC(label), 0, 6);
+@@ -273,7 +273,7 @@
+         i++;
+ 
+         if (data->title && strlen(data->title) > 0) {
+-            label = gtk_label_new(_("Title"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Title"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -285,7 +285,7 @@
+         }
+ 
+         if (data->artist && strlen(data->artist) > 0) {
+-            label = gtk_label_new(_("Artist"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Artist"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -297,7 +297,7 @@
+         }
+ 
+         if (data->album && strlen(data->album) > 0) {
+-            label = gtk_label_new(_("Album"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Album"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -309,7 +309,7 @@
+         }
+ 
+         if (data->length) {
+-            label = gtk_label_new(_("Length"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Length"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -321,7 +321,7 @@
+         }
+ 
+         if (data->demuxer && strlen(data->demuxer) > 0) {
+-            label = gtk_label_new(_("Demuxer"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Demuxer"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -333,14 +333,14 @@
+         }
+ 
+         if (data->video_present) {
+-            label = gtk_label_new(_("<span weight=\"bold\">Video Details</span>"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"<span weight=\"bold\">Video Details</span>"));
+             gtk_label_set_use_markup(GTK_LABEL(label), TRUE);
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 0, 6);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+             i++;
+ 
+-            label = gtk_label_new(_("Video Size:"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Video Size:"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -351,7 +351,7 @@
+             g_free(buf);
+             i++;
+ 
+-            label = gtk_label_new(_("Video Codec:"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Video Codec:"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -362,7 +362,7 @@
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 1, 2, i, i + 1);
+             i++;
+ 
+-            label = gtk_label_new(_("Video Bitrate:"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Video Bitrate:"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -373,7 +373,7 @@
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 1, 2, i, i + 1);
+             i++;
+ 
+-            label = gtk_label_new(_("Video Frame Rate:"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Video Frame Rate:"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -387,14 +387,14 @@
+         }
+ 
+         if (data->audio_present) {
+-            label = gtk_label_new(_("<span weight=\"bold\">Audio Details</span>"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"<span weight=\"bold\">Audio Details</span>"));
+             gtk_label_set_use_markup(GTK_LABEL(label), TRUE);
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 0, 6);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+             i++;
+ 
+-            label = gtk_label_new(_("Audio Codec:"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Audio Codec:"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -405,7 +405,7 @@
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 1, 2, i, i + 1);
+             i++;
+ 
+-            label = gtk_label_new(_("Audio Bitrate:"));
++            label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Audio Bitrate:"));
+             gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+             gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+             gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -417,7 +417,7 @@
+             i++;
+ 
+             if (g_strtod(data->audio_nch, NULL) > 0) {
+-                label = gtk_label_new(_("Audio Channels:"));
++                label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Audio Channels:"));
+                 gtk_misc_set_alignment(GTK_MISC(label), 0.0, 0.0);
+                 gtk_misc_set_padding(GTK_MISC(label), 12, 0);
+                 gtk_table_attach_defaults(GTK_TABLE(page), label, 0, 1, i, i + 1);
+@@ -475,7 +475,7 @@
+ 
+     if (found) {
+         uri = nautilus_file_info_get_uri(file);
+-        label = gtk_label_new(_("Audio/Video"));
++        label = gtk_label_new(dgettext(GETTEXT_PACKAGE,"Audio/Video"));
+         page = gtk_table_new(20, 2, FALSE);
+         gtk_container_set_border_width(GTK_CONTAINER(page), 6);
+         if (get_properties(page, uri)) {
+@@ -528,8 +528,11 @@
+ {
+ 
+ #ifdef ENABLE_NLS
++	//printf("%s\n",GETTEXT_PACKAGE);
++	//printf("%s\n",PACKAGE_LOCALE_DIR);
+     bindtextdomain(GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
+     bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
++	//textdomain(GETTEXT_PACKAGE);
+ #endif
+ 
+     gnome_mplayer_properties_plugin_register_type(module);
