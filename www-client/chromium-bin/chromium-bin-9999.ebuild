@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.1 2009/05/27 11:58:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.2 2009/05/29 01:35:19 mr_bones_ Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -58,4 +58,3 @@ src_install() {
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
 	make_desktop_entry chromium-bin "Chromium" ${PN}.png "Network;WebBrowser"
 }
-
