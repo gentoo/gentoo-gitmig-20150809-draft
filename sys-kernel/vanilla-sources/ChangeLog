@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.642 2009/05/29 14:16:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.643 2009/05/29 14:46:51 beandog Exp $
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org>
+  vanilla-sources-2.6.29.4.ebuild:
+  amd64 stable, bug 271774
 
   29 May 2009; Jeroen Roovers <jer@gentoo.org>
   vanilla-sources-2.6.29.4.ebuild:
