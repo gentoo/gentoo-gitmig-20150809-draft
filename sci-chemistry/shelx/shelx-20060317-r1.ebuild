@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.2 2008/11/07 01:01:03 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.3 2009/05/29 00:42:09 dberkholz Exp $
 
 inherit autotools eutils flag-o-matic fortran
 
@@ -11,7 +11,7 @@ SRC_URI="${P}.tgz
 RESTRICT="fetch"
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dosformat openmp"
 RDEPEND=""
 DEPEND="${RDEPEND}"

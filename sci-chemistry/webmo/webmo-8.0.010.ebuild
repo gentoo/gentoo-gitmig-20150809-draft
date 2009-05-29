@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-8.0.010.ebuild,v 1.2 2009/05/26 17:45:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/webmo/webmo-8.0.010.ebuild,v 1.3 2009/05/29 00:44:59 dberkholz Exp $
 
 inherit eutils webapp depend.apache
 
@@ -12,7 +12,7 @@ SRC_URI="${MY_SRC_P}.tar.gz"
 
 LICENSE="WebMO"
 SLOT="${PVR}"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 RESTRICT="fetch"
 IUSE=""
 
