@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.29.1.ebuild,v 1.1 2009/05/09 22:01:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.29.1.ebuild,v 1.2 2009/05/29 22:30:26 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -33,7 +33,7 @@ RDEPEND="!net-misc/arpd
 	atm? ( net-dialup/linux-atm )"
 DEPEND="${RDEPEND}
 	elibc_glibc? ( >=sys-libs/glibc-2.7 )
-	>=virtual/os-headers-2.6.28"
+	>=virtual/os-headers-2.6.27"
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
