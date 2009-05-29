@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.45 2009/01/31 14:34:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.46 2009/05/29 22:57:52 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
-	ESVN_REPO_URI="svn://roy.marples.name/openrc/trunk"
-	inherit subversion
+	EGIT_REPO_URI="git://roy.marples.name/openrc.git"
+	inherit git
 else
 	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2
 		mirror://gentoo/${P}.tar.bz2
@@ -57,7 +57,7 @@ pkg_setup() {
 
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
-		subversion_src_unpack
+		git_src_unpack
 	else
 		unpack ${A}
 	fi
@@ -72,8 +72,8 @@ src_compile() {
 	fi
 
 	if [[ ${PV} == "9999" ]] ; then
-		local ver="-svn-$(cd "${ESVN_STORE_DIR}/${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"; LC_ALL=C svnversion)"
-		sed -i "/^SVNVER[[:space:]]*=/s:=.*:=${ver}:" src/rc/Makefile
+		local ver="git-$(echo ${EGIT_VERSION} | cut -c1-8)"
+		sed -i "/^GITVER[[:space:]]*=/s:=.*:=${ver}:" mk/git.mk
 	fi
 
 	tc-export CC AR RANLIB
