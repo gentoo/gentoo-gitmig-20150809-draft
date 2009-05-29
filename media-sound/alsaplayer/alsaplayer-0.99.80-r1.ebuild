@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.1 2009/03/01 09:39:39 redhatter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.2 2009/05/29 15:18:36 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="A heavily multi-threaded pluggable audio player."
@@ -33,16 +34,14 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}_rc3-flags.patch \
 		"${FILESDIR}"/${P}-missing_limits_h.patch \
 		"${FILESDIR}"/${P}-enable-libid3tag.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	use xosd || export ac_cv_lib_xosd_xosd_create="no"
 	use doc || export ac_cv_prog_HAVE_DOXYGEN="false"
 
@@ -64,19 +63,21 @@ src_compile() {
 		$(use_enable nas) \
 		$(use_enable opengl) \
 		$(use_enable oss) \
-		$(use_enable sparc) \
 		$(use_enable vorbis oggvorbis) \
 		$(use_enable alsa) \
 		$(use_enable nls) \
 		$(use_enable mad) \
 		--disable-dependency-tracking \
 		${myconf}
+}
 
-	emake CFLAGS="${CFLAGS}" || die "emake failed."
+src_compile() {
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" docdir="${D}/usr/share/doc/${PF}" install \
-		|| die "emake install failed."
+		|| die "emake install failed"
 	dodoc AUTHORS ChangeLog README TODO docs/*.txt
+	newicon interface/gtk2/pixmaps/logo.xpm ${PN}.xpm
 }
