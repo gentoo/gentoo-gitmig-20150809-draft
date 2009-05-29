@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4485 2009/05/29 07:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4486 2009/05/29 10:08:13 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2109,6 +2109,7 @@ net-im/pidgin:zephyr - Enable Zephyr protocol support
 net-im/psi:audacious - Enable monitoring of audio tracks that are played in (media-sound/audacious) 
 net-im/psi:extras - Enables extra non official patches
 net-im/psi:insecure-patches - Enables extra non official patches that may pose as a security risk 
+net-im/psimedia:demo -  build simple test application for the PsiMedia system. 
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface 
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface 
 net-im/sim:gpg - Enable gpg plugin to adds GnuPG encryption/decryption support for messages 
