@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pybluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.22 2009/05/26 06:04:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pybluez/ChangeLog,v 1.23 2009/05/29 01:28:41 beandog Exp $
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org> pybluez-0.16.ebuild:
+  amd64 stable, bug 223001
 
   26 May 2009; Christian Faulhammer <fauli@gentoo.org> pybluez-0.16.ebuild:
   stable x86, bug 223001
