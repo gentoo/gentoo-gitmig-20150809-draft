@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.190 2009/05/27 23:20:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.191 2009/05/29 13:52:54 scarabeus Exp $
+
+  29 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kopete-3.5.10-r4.ebuild,
+  +files/kopete-3.5.10-jabber-protocol-gtalknickfix.patch:
+  Apply google talk nickname fix. Per bug #271672. Without revbump. Thanks
+  to Yar Odin for the patch.
 
   27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kopete-3.5.10-r4.ebuild, +files/emoticon-manager.patch, metadata.xml:

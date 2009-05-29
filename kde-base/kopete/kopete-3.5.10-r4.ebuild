@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.2 2009/05/27 23:20:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.3 2009/05/29 13:52:54 scarabeus Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -91,7 +91,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-3.5-rolling_icon.patch"
 	epatch "${FILESDIR}/${P}-libgadu-CVE-2008-4776.patch"
 	epatch "${FILESDIR}/${P}-icq-protocol-change2.patch"
-
+	epatch "${FILESDIR}/${P}-jabber-protocol-gtalknickfix.patch"
+	
 	if use emoticons-manager; then
 		epatch "${FILESDIR}/emoticon-manager.patch"
 	fi
