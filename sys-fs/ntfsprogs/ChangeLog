@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.64 2009/01/19 00:02:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.65 2009/05/29 23:52:02 arfrever Exp $
+
+  29 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ntfsprogs-2.0.0-r1.ebuild, +files/ntfsprogs-2.0.0-gnutls-2.8.patch:
+  Fix building with >=net-libs/gnutls-2.7.1 (bug #268488).
 
   19 Jan 2009; Mike Frysinger <vapier@gentoo.org> ntfsprogs-2.0.0-r1.ebuild:
   Modify generated files to avoid extra autotools depends #253805.
