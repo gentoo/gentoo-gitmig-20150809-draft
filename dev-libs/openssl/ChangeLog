@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.289 2009/04/09 20:20:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.290 2009/05/29 21:33:52 flameeyes Exp $
+
+*openssl-0.9.8k-r1 (29 May 2009)
+
+  29 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +openssl-0.9.8k-r1.ebuild:
+  Revision bump with zlib linked in at build-time rather than dlopened. See
+  bug #271415.
 
   09 Apr 2009; Mike Frysinger <vapier@gentoo.org> openssl-0.9.8k.ebuild:
   Make sure we dont accidently create /etc/sandbox.d with 0700 perms #265376
