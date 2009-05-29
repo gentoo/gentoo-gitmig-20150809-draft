@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.2.2.ebuild,v 1.1 2009/05/29 16:36:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.2.2-r1.ebuild,v 1.1 2009/05/29 17:20:53 ssuominen Exp $
 
 EAPI=2
-inherit multilib
+inherit eutils multilib
 
 MY_PN=${PN}core
 MY_P=${MY_PN}-${PV}
@@ -24,6 +24,11 @@ DEPEND="x86? ( ${NASM} )
 RDEPEND=""
 
 S=${WORKDIR}/${MY_PN}/build/generic
+
+src_prepare() {
+	cd "${WORKDIR}"/${MY_PN}
+	epatch "${FILESDIR}"/${P}-no_execstacks.patch
+}
 
 src_configure() {
 	econf \
