@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jrockit-jdk-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.47 2009/05/29 14:18:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrockit-jdk-bin/ChangeLog,v 1.48 2009/05/29 20:40:58 caster Exp $
+
+  29 May 2009; Vlastimil Babka <caster@gentoo.org>
+  -jrockit-jdk-bin-1.4.2.14_p1.ebuild:
+  Remove old.
 
   29 May 2009; Petteri Räty <betelgeuse@gentoo.org>
   -jrockit-jdk-bin-1.5.0.11_p1.ebuild:
