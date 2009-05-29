@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r3.ebuild,v 1.6 2007/01/07 11:47:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.7-r3.ebuild,v 1.7 2009/05/29 13:23:35 rbu Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="amd64 arm ~ppc ppc64 sh sparc x86"
 IUSE=""
 
 DEPEND="net-ftp/ftpbase"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
