@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9849 2009/05/28 23:43:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9850 2009/05/29 07:46:34 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (29 May 2009)
+# Masked development version. Play with it, it works!
+=net-im/psi-0.13*
 
 # Ben de Groot <yngwin@gentoo.org> (28 May 2009)
 # Masked pending removal, as rafb.net closed doors, bug 271295
