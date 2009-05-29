@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.6 2008/04/21 22:07:48 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.28.ebuild,v 1.7 2009/05/29 19:55:00 flameeyes Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -19,7 +19,7 @@ IUSE="${IUSE_LINGUAS} acl ads async automount caps cups doc examples ipv6 kernel
 
 RDEPEND="dev-libs/popt
 	virtual/libiconv
-	acl?       ( kernel_linux? ( sys-apps/acl ) )
+	acl?       ( virtual/acl )
 	cups?      ( net-print/cups )
 	ipv6?      ( sys-apps/xinetd )
 	ads?       ( virtual/krb5 )

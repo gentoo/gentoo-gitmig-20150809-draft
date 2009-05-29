@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.354 2009/04/23 14:12:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.355 2009/05/29 19:55:00 flameeyes Exp $
+
+  29 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> samba-3.0.28.ebuild,
+  samba-3.0.28a-r1.ebuild, samba-3.0.30.ebuild, samba-3.0.31.ebuild,
+  samba-3.0.32.ebuild, samba-3.0.33.ebuild, samba-3.0.34.ebuild,
+  samba-3.2.0_rc2.ebuild, samba-3.2.11.ebuild:
+  Replace kernel-conditional dependency on sys-apps/acl with virtual/acl.
 
 *samba-3.2.11 (23 Apr 2009)
 
