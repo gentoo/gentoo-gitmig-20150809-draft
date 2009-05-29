@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.13.ebuild,v 1.3 2009/04/04 13:54:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.13.ebuild,v 1.4 2009/05/29 20:37:25 caster Exp $
 
 JAVA_SUPPORTS_GENERATION_1="true"
 inherit java-vm-2 eutils versionator
@@ -49,7 +49,7 @@ fi
 
 DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=lxdk&S_PKG=${LINK_ARCH}142sr${SERVICE_RELEASE}&cp=UTF-8&S_TACT=105AGX05&S_CMP=JDK"
 
-DESCRIPTION="IBM Java Development Kit"
+DESCRIPTION="IBM Java SE Development Kit"
 HOMEPAGE="http://www.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAGE}linux/download.html"
 # bug #125178

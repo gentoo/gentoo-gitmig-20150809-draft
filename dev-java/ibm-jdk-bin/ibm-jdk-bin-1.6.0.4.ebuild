@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.4.ebuild,v 1.3 2009/04/22 21:37:47 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.6.0.4.ebuild,v 1.4 2009/05/29 20:37:25 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -63,7 +63,7 @@ fi
 DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=swg-sdk6&S_PKG=${LINK_ARCH}_6sr${SERVICE_RELEASE}&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.6"
-DESCRIPTION="IBM Java Development Kit ${SLOT}"
+DESCRIPTION="IBM Java SE Development Kit"
 HOMEPAGE="http://www.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAGE}linux/download.html"
 # bug #125178

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.19.ebuild,v 1.2 2008/12/10 22:01:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.19.ebuild,v 1.3 2009/05/29 20:32:40 caster Exp $
 
 inherit eutils pax-utils java-vm-2
 
@@ -9,7 +9,7 @@ MY_PV2=${PV//./_}
 MY_PN=j2re
 At="${MY_PN}-${MY_PV2}-linux-i586.bin"
 S="${WORKDIR}/j2re${MY_PV}"
-DESCRIPTION="Sun's J2SE Platform"
+DESCRIPTION="Sun's Java SE Runtime Environment"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
 SRC_URI=${At}
 SLOT="1.4"

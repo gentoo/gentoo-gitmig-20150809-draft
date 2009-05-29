@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.9-r1.ebuild,v 1.3 2009/05/01 14:21:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.5.0.9-r1.ebuild,v 1.4 2009/05/29 20:39:13 caster Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -38,7 +38,7 @@ fi
 DIRECT_DOWNLOAD="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?source=sdk5&S_PKG=${LINK_ARCH}5sr${SERVICE_RELEASE_LINK}-ssu&S_TACT=105AGX05&S_CMP=JDK"
 
 SLOT="1.5"
-DESCRIPTION="IBM Java Runtime Environment ${SLOT}"
+DESCRIPTION="IBM Java SE Runtime Environment"
 HOMEPAGE="http://www.ibm.com/developerworks/java/jdk/"
 DOWNLOADPAGE="${HOMEPAGE}linux/download.html"
 # bug #125178
