@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/reduce
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.11 2008/07/07 06:06:01 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/reduce/ChangeLog,v 1.12 2009/05/29 00:43:56 dberkholz Exp $
+
+  29 May 2009; Donnie Berkholz <dberkholz@gentoo.org>;
+  reduce-3.13.080428.ebuild:
+  Stable on amd64.
 
 *reduce-3.13.080428 (07 Jul 2008)
 
