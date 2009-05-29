@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.164 2009/03/30 13:01:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.165 2009/05/29 15:44:30 tampakrap Exp $
+
+*kpdf-3.5.10-r1 (29 May 2009)
+
+  29 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -files/post-3.5.8-kdegraphics-kpdf.diff, +kpdf-3.5.10-r1.ebuild,
+  +files/kpdf-3.5.10-font-hiding.patch, +files/kde-CVE-2009-1188.patch:
+  Revision bump, fix security bug 264603, thanks to Robert Buchholz for the
+  patches, and font hiding, bug 241678, thanks to Alex Efros for the patch
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> kpdf-3.5.9.ebuild,
   kpdf-3.5.10.ebuild:
