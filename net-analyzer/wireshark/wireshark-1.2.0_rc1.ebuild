@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.0.7.ebuild,v 1.6 2009/05/04 16:24:10 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.0_rc1.ebuild,v 1.1 2009/05/29 11:53:15 pva Exp $
 
-EAPI=1
-WANT_AUTOMAKE="1.9"
+EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
@@ -13,28 +12,29 @@ HOMEPAGE="http://www.wireshark.org/"
 [[ -n ${PV#*_rc} && ${PV#*_rc} != ${PV} ]] && {
 SRC_URI="http://www.wireshark.org/download/prerelease/${PN}-${PV/_rc/pre}.tar.gz";
 S=${WORKDIR}/${PN}-${PV/_rc/pre} ; } || \
-SRC_URI="http://www.wireshark.org/download/src/all-versions/${P}.tar.bz2"
+SRC_URI="http://www.wireshark.org/download/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="adns gtk ipv6 lua portaudio gnutls gcrypt zlib kerberos threads profile smi +pcap pcre +caps selinux"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="adns ares +gtk ipv6 lua portaudio gnutls gcrypt geoip zlib kerberos threads profile smi +pcap pcre +caps selinux"
 
-RDEPEND="zlib? ( sys-libs/zlib )
+RDEPEND=">=dev-libs/glib-2.4.0:2
+	zlib? ( sys-libs/zlib )
 	smi? ( net-libs/libsmi )
-	gtk? ( >=dev-libs/glib-2.0.4
-		=x11-libs/gtk+-2*
+	gtk? ( >=x11-libs/gtk+-2.4.0:2
 		x11-libs/pango
 		dev-libs/atk )
-	!gtk? ( =dev-libs/glib-1.2* )
 	gnutls? ( net-libs/gnutls )
 	gcrypt? ( dev-libs/libgcrypt )
 	pcap? ( net-libs/libpcap )
 	pcre? ( dev-libs/libpcre )
 	caps? ( sys-libs/libcap )
-	adns? ( net-libs/adns )
 	kerberos? ( virtual/krb5 )
 	portaudio? ( media-libs/portaudio )
+	ares? ( >=net-dns/c-ares-1.5 )
+	!ares? ( adns? ( net-libs/adns ) )
+	geoip? ( dev-libs/geoip )
 	lua? ( >=dev-lang/lua-5.1 )
 	selinux? ( sec-policy/selinux-wireshark )"
 
@@ -46,31 +46,26 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	if ! use gtk; then
-		ewarn "USE=-gtk will mean no gui called wireshark will be created and"
+		ewarn "USE=-gtk will means no gui called wireshark will be created and"
 		ewarn "only command line utils are available"
 	fi
 
 	# Add group for users allowed to sniff.
-	enewgroup wireshark || die "Failed to create wireshark group"
+	enewgroup wireshark
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.99.7-asneeded.patch"
-	epatch "${FILESDIR}/${PN}-0.99.8-as-needed.patch"
-	epatch "${FILESDIR}/${PN}-1.0.5-text2pcap-protos.patch"
-	epatch "${FILESDIR}/wireshark-1.0-sigpipe.patch" #260457
-
-	cd "${S}/epan"
+src_prepare() {
+	cd "${S}"/epan # our hardened toolchain bug...
 	epatch "${FILESDIR}/wireshark-except-double-free.diff"
 
 	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.1.2--as-needed.patch"
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
+	local myconf
+
 	# optimization bug, see bug #165340, bug #40660
 	if [[ $(gcc-version) == 3.4 ]] ; then
 		elog "Found gcc 3.4, forcing -O3 into CFLAGS"
@@ -80,20 +75,20 @@ src_compile() {
 		replace-flags -O? -O
 	fi
 
+	if use ares && use adns; then
+		einfo "You asked for both, ares and adns, but we can use only one of them."
+		einfo "c-ares supersedes adns resolver thus using c-ares (ares USE flag)."
+		myconf="$(use_with ares c-ares) --without-adns"
+	else
+		myconf="$(use_with adns) $(use_with ares c-ares)"
+	fi
+
 	# see bug #133092; bugs.wireshark.org/bugzilla/show_bug.cgi?id=1001
 	# our hardened toolchain bug
 	filter-flags -fstack-protector
 
 	# profile and -fomit-frame-pointer are incompatible, bug #215806
 	use profile && filter-flags -fomit-frame-pointer
-
-	local myconf
-	if use gtk; then
-		einfo "Building with gtk support"
-	else
-		einfo "Building without gtk support"
-		myconf="${myconf} --disable-wireshark"
-	fi
 
 	# Workaround bug #213705. If krb5-config --libs has -lcrypto then pass
 	# --with-ssl to ./configure. (Mimics code from acinclude.m4).
@@ -104,27 +99,24 @@ src_compile() {
 	fi
 
 	# dumpcap requires libcap, setuid-install requires dumpcap
-	econf $(use_enable gtk gtk2) \
+	econf $(use_enable gtk wireshark) \
 		$(use_enable profile profile-build) \
 		$(use_with gnutls) \
 		$(use_with gcrypt) \
-		$(use_enable gtk wireshark) \
 		$(use_enable ipv6) \
 		$(use_enable threads) \
 		$(use_with lua) \
-		$(use_with adns) \
 		$(use_with kerberos krb5) \
 		$(use_with smi libsmi) \
 		$(use_with pcap) \
 		$(use_with zlib) \
 		$(use_with pcre) \
+		$(use_with geoip) \
 		$(use_with portaudio) \
 		$(use_with caps libcap) \
 		$(use_enable pcap setuid-install) \
 		--sysconfdir=/etc/wireshark \
 		${myconf}
-
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -139,13 +131,13 @@ src_install() {
 	# FAQ is not required as is installed from help/faq.txt
 	dodoc AUTHORS ChangeLog NEWS README{,.bsd,.linux,.macos,.vmware} doc/randpkt.txt
 
-	if use gtk ; then
-		insinto /usr/share/icons/hicolor/16x16/apps
-		newins image/hi16-app-wireshark.png wireshark.png
-		insinto /usr/share/icons/hicolor/32x32/apps
-		newins image/hi32-app-wireshark.png wireshark.png
-		insinto /usr/share/icons/hicolor/48x48/apps
-		newins image/hi48-app-wireshark.png wireshark.png
+	if use gtk; then
+		for c in hi lo; do
+			for d in 16 32 48; do
+				insinto /usr/share/icons/${c}color/${d}x${d}/apps
+				newins image/${c}${d}-app-wireshark.png wireshark.png
+			done
+		done
 		insinto /usr/share/applications
 		doins wireshark.desktop
 	fi
@@ -153,10 +145,6 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	ewarn "With version 0.99.7, all function calls that require elevated privileges"
-	ewarn "have been moved out of the GUI to dumpcap. WIRESHARK CONTAINS OVER ONE"
-	ewarn "POINT FIVE MILLION LINES OF SOURCE CODE. DO NOT RUN THEM AS ROOT."
-	ewarn
 	ewarn "NOTE: To run wireshark as normal user you have to add yourself into"
 	ewarn "wireshark group. This security measure ensures that only trusted"
 	ewarn "users allowed to sniff your traffic."
