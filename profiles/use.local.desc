@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4488 2009/05/29 16:48:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4489 2009/05/29 18:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2096,6 +2096,7 @@ net-im/kadu:sms - Enables SMS sending plugin
 net-im/kadu:speech - Enables speech module
 net-im/kadu:vlc - Enables media-video/vlc media player support
 net-im/kadu:voice - Enables voice chat
+net-im/kmess:konqueror - Enable integration with konqueror
 net-im/mcabber:otr -  Enable encrypted conversations using Off-The-Records messaging 
 net-im/naim:screen - Enable screen support
 net-im/pidgin:bonjour - Enable bonjour support
