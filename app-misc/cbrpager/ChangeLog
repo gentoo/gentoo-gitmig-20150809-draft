@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/cbrpager
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/ChangeLog,v 1.10 2008/05/28 16:18:34 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cbrpager/ChangeLog,v 1.11 2009/05/29 14:04:07 rbu Exp $
+
+  29 May 2009; Robert Buchholz <rbu@gentoo.org> -cbrpager-0.9.11.ebuild,
+  -cbrpager-0.9.15.ebuild:
+  Remove ebuilds that are vulnerable to GLSA 200806-05, bug #271743.
 
   28 May 2008; Peter Volkov <pva@gentoo.org> cbrpager-0.9.17.ebuild:
   amd64 stable, security bug #223657.
