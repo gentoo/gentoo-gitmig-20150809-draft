@@ -3,13 +3,15 @@
 <pkgmetadata>
 	<herd>video</herd>
 	<maintainer>
-		<email>zzam@gentoo.org</email>
-		<name>Matthias Schwarzott</name>
-		<description>Proxy maintainer</description>
-	</maintainer>
-	<maintainer>
-		<email>daniel.pielmeier@googlemail.com</email>
+		<email>billie@gentoo.org</email>
 		<name>Daniel Pielmeier</name>
-		<description>The proxied maintainer</description>
 	</maintainer>
+	<longdescription>
+	<pkg>media-video/ttcut</pkg> is a tool designed to remove commercials from
+	DVB (European standard for digital radio and television broadcast)
+	recordings. It only accepts the elementary video and audio streams. This is
+	because the MPEG transport stream is slightly different to the MPEG Program
+	stream used on DVD media. Also it may contain errors that tools like
+	<pkg>media-video/projectx</pkg> can correct while demuxing the stream.
+	</longdescription>
 </pkgmetadata>

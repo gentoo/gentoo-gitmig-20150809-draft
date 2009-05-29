@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-9999.ebuild,v 1.3 2009/01/25 16:39:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ttcut/ttcut-9999.ebuild,v 1.4 2009/05/29 18:33:30 billie Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 ) =x11-libs/qt-4.3*:4 )
+DEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-opengl:4
 	>=media-libs/libmpeg2-0.4.0
 	virtual/opengl"
 
@@ -32,8 +33,7 @@ src_compile() {
 
 src_install() {
 	dobin ttcut || die "Couldn't install ttcut"
-	make_desktop_entry ttcut TTCut "" "AudioVideo;Video;AudioVideoEditing" || \
-		die "Couldn't make ttcut desktop entry"
+	make_desktop_entry ttcut TTCut "" "AudioVideo;Video;AudioVideoEditing"
 
 	dodoc AUTHORS BUGS CHANGELOG \
 		README.DE README.EN TODO || die "Couldn't install documentation"
