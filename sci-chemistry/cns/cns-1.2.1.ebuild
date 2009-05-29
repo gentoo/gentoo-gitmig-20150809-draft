@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.2 2008/08/20 19:13:48 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/cns/cns-1.2.1.ebuild,v 1.3 2009/05/29 00:30:45 dberkholz Exp $
 
 inherit eutils fortran toolchain-funcs versionator flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="!openmp? ( ${MY_P}_all.tar.gz )
 RESTRICT="fetch"
 LICENSE="cns"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE="openmp"
 RDEPEND="app-shells/tcsh
 	!app-text/dos2unix"
