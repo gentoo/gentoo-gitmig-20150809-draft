@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.64 2009/05/20 17:02:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.65 2009/05/29 16:42:45 scarabeus Exp $
+
+  29 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  boinc-6.4.5-r2.ebuild, files/boinc.init:
+  Apply patch for cuda detection. Per bug #270292. Thanks to Poly-C for
+  patch.
 
   20 May 2009; Tomas Chvatal <scarabeus@gentoo.org> boinc-6.4.5-r2.ebuild:
   Move from Education;Science; to Math;Science; Per bug #269858.

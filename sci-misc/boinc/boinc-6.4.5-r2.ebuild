@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r2.ebuild,v 1.2 2009/05/20 17:02:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r2.ebuild,v 1.3 2009/05/29 16:42:45 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -8,7 +8,7 @@
 
 EAPI="2"
 
-inherit flag-o-matic depend.apache eutils wxwidgets multilib
+inherit flag-o-matic depend.apache eutils wxwidgets
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
@@ -124,12 +124,7 @@ src_install() {
 	rm "${D}"/usr/bin/ca-bundle.crt
 	rm -rf "${D}"/etc/
 
-	# initd script needs to be multilib aware
-	cp "${FILESDIR}"/${PN}.init "${T}"
-	sed -i \
-		-e "s:%LIBDIR%:$(get_libdir):g" \
-		"${T}"/${PN}.init || die "sed for multilib in init script failed"
-	newinitd "${T}"/${PN}.init ${PN}
+	newinitd "${FILESDIR}"/${PN}.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
 }
 
