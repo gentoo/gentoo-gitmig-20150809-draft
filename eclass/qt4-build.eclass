@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.36 2009/05/29 14:48:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.37 2009/05/29 20:58:54 hwoarang Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -11,7 +11,7 @@
 # @DESCRIPTION:
 # This eclass contains various functions that are used when building Qt4
 
-inherit eutils multilib toolchain-funcs flag-o-matic versionator
+inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
 IUSE="${IUSE} custom-cxxflags debug pch"
 RDEPEND="
@@ -164,6 +164,14 @@ qt4-build_src_unpack() {
 	fi
 }
 
+# @ECLASS-VARIABLE: PATCHES
+# @DESCRIPTION:
+# In case you have patches to apply, specify them in PATCHES variable. Make sure
+# to specify the full path. This variable is necessary for src_prepare phase.
+# example:
+# PATCHES="${FILESDIR}"/mypatch.patch
+#   ${FILESDIR}"/mypatch2.patch"
+#
 
 # @FUNCTION: qt4-build_src_prepare
 # @DESCRIPTION:
@@ -210,7 +218,8 @@ qt4-build_src_prepare() {
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
 		-i "${S}"/mkspecs/common/g++.conf || die "sed ${S}/mkspecs/common/g++.conf failed"
-
+	
+	base_src_prepare
 }
 
 # @FUNCTION: qt4-build_src_configure
