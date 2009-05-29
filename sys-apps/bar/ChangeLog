@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/bar
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.21 2009/05/27 10:46:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bar/ChangeLog,v 1.22 2009/05/29 22:57:31 tcunha Exp $
+
+  29 May 2009; Tiago Cunha <tcunha@gentoo.org> bar-1.10.9.ebuild:
+  stable sparc, bug 271110
 
   27 May 2009; Christian Faulhammer <fauli@gentoo.org> bar-1.10.9.ebuild:
   stable x86, bug 271110
