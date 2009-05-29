@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/splash-themes-gentoo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.12 2009/05/29 03:39:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splash-themes-gentoo/ChangeLog,v 1.13 2009/05/29 10:58:36 fauli Exp $
+
+  29 May 2009; Christian Faulhammer <fauli@gentoo.org>
+  splash-themes-gentoo-20090324.ebuild:
+  stable x86
 
   29 May 2009; Steve Dibb <beandog@gentoo.org>
   splash-themes-gentoo-20090324.ebuild:
