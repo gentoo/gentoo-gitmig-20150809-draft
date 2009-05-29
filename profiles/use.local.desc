@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4487 2009/05/29 14:48:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4488 2009/05/29 16:48:06 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1422,6 +1422,7 @@ media-libs/xine-lib:vidix -  Enable support for vidix video output.
 media-libs/xine-lib:vis -  Adds support for SIMD optimizations for UltraSPARC processors. 
 media-libs/xine-lib:win32codecs -  Enable support for loading and using Windows 32-bit binary codecs on x86 Linux and FreeBSD. Enabling this USE flag might make the package non-redistributable in binary form. 
 media-libs/xine-lib:xvmc -  Enable support for XVideo Motion Compensation (accelerated mpeg playback). 
+media-libs/xvid:pic - disable optimized assembly code that is not PIC friendly
 media-plugins/audacious-plugins:adplug - Build with AdPlug (Adlib sound card emulation) support
 media-plugins/audacious-plugins:cdaudio - Enable cd audio playback support
 media-plugins/audacious-plugins:chardet - Try to handle non-UTF8 chinese/japanese/korean ID3 tags
