@@ -1,0 +1,14 @@
+INDEX: khtml/xml/dom_elementimpl.cpp
+=============================================================
+--- khtml.orig/xml/dom_elementimpl.cpp	2007-07-28 04:44:15.000000000 +0200
++++ khtml/xml/dom_elementimpl.cpp	2007-07-28 12:38:08.000000000 +0200
+@@ -66,6 +66,9 @@
+     m_value = value;
+     m_value->ref();
+ 
++    if (m_attrId == ATTR_ID)
++        m_element->addId(DOMString(m_value).string());
++
+     m_prefix = prefix;
+     if (m_prefix)
+ 	m_prefix->ref();
