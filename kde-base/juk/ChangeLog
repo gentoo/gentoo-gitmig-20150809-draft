@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.125 2009/05/06 22:50:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.126 2009/05/29 18:24:59 tampakrap Exp $
+
+  29 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> juk-3.5.10.ebuild:
+  Adjust deps to make gstreamer USE flag pull gst-plugins-meta, bug 237206,
+  thanks to Samuli Suominen for the help
 
 *juk-4.2.3 (06 May 2009)
 

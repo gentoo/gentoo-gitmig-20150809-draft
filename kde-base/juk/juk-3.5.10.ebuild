@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.10.ebuild,v 1.1 2008/09/13 23:57:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/juk-3.5.10.ebuild,v 1.2 2009/05/29 18:24:59 tampakrap Exp $
 
 KMNAME=kdemultimedia
 EAPI="1"
@@ -8,19 +8,16 @@ inherit kde-meta eutils
 
 DESCRIPTION="Jukebox and music manager for KDE."
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="akode flac gstreamer mp3 vorbis"
+IUSE="akode gstreamer"
 
-DEPEND="media-libs/taglib
-	gstreamer? ( =media-libs/gstreamer-0.10*
-				=media-libs/gst-plugins-base-0.10* )
+RDEPEND="media-libs/taglib
+	gstreamer? ( media-libs/gst-plugins-base:0.10 )
 	akode? ( media-libs/akode )
 	!arts? ( !gstreamer? ( media-libs/akode ) )"
 
-RDEPEND="${DEPEND}
-	gstreamer? ( mp3? ( =media-plugins/gst-plugins-mad-0.10* )
-				vorbis? ( =media-plugins/gst-plugins-ogg-0.10*
-				=media-plugins/gst-plugins-vorbis-0.10* )
-				flac? ( =media-plugins/gst-plugins-flac-0.10* ) )"
+DEPEND="${RDEPEND}"
+
+PDEPEND="gstreamer? ( media-plugins/gst-plugins-meta:0.10 )"
 
 KMEXTRACTONLY="arts/configure.in.in"
 
