@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r3.ebuild,v 1.3 2009/05/16 08:49:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.12_rc1-r5.ebuild,v 1.1 2009/05/29 17:42:22 dang Exp $
 
 EAPI="2"
 
-inherit eutils linux-info autotools flag-o-matic
+inherit eutils linux-info autotools flag-o-matic multilib
 
-PATCH_VERSION="4"
+PATCH_VERSION="6"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -130,9 +130,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Only apply one of the policy patches.  Bug #267042
+	if use policykit ; then
+		rm "${WORKDIR}/${PATCHNAME}/patches/0001-plugdev-dbus-policy.patch"
+	else
+		rm "${WORKDIR}/${PATCHNAME}/patches/0002-policykit-dbus-policy.patch"
+	fi
+
 	EPATCH_MULTI_MSG="Applying Gentoo Patchset ..." \
 	EPATCH_SUFFIX="patch" \
-	EPATCH_SOURCE="${WORKDIR}/${PATCHNAME}/${P}-patches/" \
+	EPATCH_SOURCE="${WORKDIR}/${PATCHNAME}/patches/" \
 	EPATCH_FORCE="yes" \
 	epatch
 
@@ -227,7 +234,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README || die "docs failed"
 
 	# hal umount for unclean unmounts
-	exeinto /lib/udev/
+	exeinto /$(get_libdir)/udev/
 	newexe "${FILESDIR}/hal-unmount.dev" hal_unmount || die "udev helper failed"
 
 	# initscript
@@ -246,7 +253,7 @@ src_install() {
 
 	if use X ; then
 		# New Configuration Snippets
-		dodoc "${WORKDIR}/${PATCHNAME}/${PN}-config-examples/"*.fdi || \
+		dodoc "${WORKDIR}/${PATCHNAME}/config-examples/"*.fdi || \
 			die "dodoc X examples failed"
 	fi
 
