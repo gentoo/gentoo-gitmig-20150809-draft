@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p28450.ebuild,v 1.9 2009/03/24 21:32:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p28450.ebuild,v 1.10 2009/05/29 02:17:59 beandog Exp $
 
 EAPI="1"
 
@@ -464,100 +464,26 @@ src_compile() {
 	#echo "CFLAGS=\"${CFLAGS}\" ./configure ${myconf}"
 	CFLAGS="${CFLAGS}" ./configure ${myconf} || die "configure died"
 
-	emake || die "Failed to build MPlayer!"
-	use doc && make -C DOCS/xml html-chunked
+	#use doc && make -C DOCS/xml html-chunked
+	if use doc; then
+		if [[ -z $LINGUAS ]]; then
+			make -C DOCS/xml html-chunked
+		else
+			# select available languages from $LINGUAS
+			LINGUAS=${LINGUAS/zh/zh_CN}
+			local a1=( cs de en es fr hu it pl ru zh_CN )
+			local a2=( $LINGUAS )
+			for (( i=0; i<${#a1[*]}; i++ )); do
+				for (( j=0; j<${#a1[*]}; j++ )); do
+				[[ ${a1[i]} == ${a2[j]} ]] && make -C DOCS/xml \
+					html-chunked-${a2[j]}
+				done
+			done
+		fi
+	fi
 }
 
 src_install() {
-
-	make prefix="${D}/usr" \
-		 BINDIR="${D}/usr/bin" \
-		 LIBDIR="${D}/usr/$(get_libdir)" \
-		 CONFDIR="${D}/etc/mplayer" \
-		 DATADIR="${D}/usr/share/mplayer" \
-		 MANDIR="${D}/usr/share/man" \
-		 INSTALLSTRIP="" \
-		 install || die "Failed to install MPlayer!"
-
-	dodoc AUTHORS Changelog README etc/codecs.conf
-	# Install the documentation; DOCS is all mixed up not just html
-	if use doc ; then
-		find "${S}/DOCS" -type d | xargs -- chmod 0755
-		find "${S}/DOCS" -type f | xargs -- chmod 0644
-		cp -r "${S}/DOCS" "${D}/usr/share/doc/${PF}/" || die "cp docs died"
-	fi
-
-	# Copy misc tools to documentation path, as they're not installed directly
-	# and yes, we are nuking the +x bit.
-	find "${S}/TOOLS" -type d | xargs -- chmod 0755
-	find "${S}/TOOLS" -type f | xargs -- chmod 0644
-	cp -r "${S}/TOOLS" "${D}/usr/share/doc/${PF}/" || die "cp docs died"
-
-	# Install the default Skin and Gnome menu entry
-	if use gtk; then
-		dodir /usr/share/mplayer/skins
-		cp -r "${WORKDIR}/Blue" \
-			"${D}/usr/share/mplayer/skins/default" || die "cp skins died"
-
-		# Fix the symlink
-		rm -rf "${D}/usr/bin/gmplayer"
-		dosym mplayer /usr/bin/gmplayer
-	fi
-
-	if ! use ass && ! use truetype; then
-		dodir /usr/share/mplayer/fonts
-		local x=
-		# Do this generic, as the mplayer people like to change the structure
-		# of their zips ...
-		for x in $(find "${WORKDIR}/" -type d -name 'font-arial-*')
-		do
-			cp -pPR "${x}" "${D}/usr/share/mplayer/fonts"
-		done
-		# Fix the font symlink ...
-		rm -rf "${D}/usr/share/mplayer/font"
-		dosym fonts/font-arial-14-iso-8859-1 /usr/share/mplayer/font
-	fi
-
-	insinto /etc/mplayer
-	newins "${S}/etc/example.conf" mplayer.conf
-
-	if use ass || use truetype;	then
-		cat >> "${D}/etc/mplayer/mplayer.conf" << EOT
-fontconfig=1
-subfont-osd-scale=4
-subfont-text-scale=3
-EOT
-	fi
-
-	dosym ../../../etc/mplayer/mplayer.conf /usr/share/mplayer/mplayer.conf
-
-	newbin "${S}/TOOLS/midentify.sh" midentify
-
-	insinto /usr/share/mplayer
-	doins "${S}/etc/input.conf"
-	doins "${S}/etc/menu.conf"
+	use doc && dohtml -r "${S}"/DOCS/HTML/*
 }
 
-pkg_preinst() {
-
-	if [[ -d ${ROOT}/usr/share/mplayer/Skin/default ]]
-	then
-		rm -rf "${ROOT}/usr/share/mplayer/Skin/default"
-	fi
-}
-
-pkg_postrm() {
-
-	# Cleanup stale symlinks
-	if [ -L "${ROOT}/usr/share/mplayer/font" -a \
-		 ! -e "${ROOT}/usr/share/mplayer/font" ]
-	then
-		rm -f "${ROOT}/usr/share/mplayer/font"
-	fi
-
-	if [ -L "${ROOT}/usr/share/mplayer/subfont.ttf" -a \
-		 ! -e "${ROOT}/usr/share/mplayer/subfont.ttf" ]
-	then
-		rm -f "${ROOT}/usr/share/mplayer/subfont.ttf"
-	fi
-}

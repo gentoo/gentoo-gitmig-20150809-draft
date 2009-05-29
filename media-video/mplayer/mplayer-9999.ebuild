@@ -1,22 +1,22 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.2 2009/03/24 21:32:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.3 2009/05/29 02:17:59 beandog Exp $
 
-EAPI="1"
+EAPI="2"
 
 ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
 
 inherit eutils flag-o-matic multilib subversion
 
 IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +amrnb +amrwb arts +ass
-bidi bindist bl +cddb +cdio cdparanoia -cpudetection -custom-cflags
--custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
+bidi bindist bl +cddb +cdio cdparanoia cpudetection custom-cflags
+custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
 +enca +encode esd +faac +faad fbcon ftp gif ggi -gtk +iconv ipv6 jack
 joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
-mmxext mng +mp2 +mp3 musepack nas +nemesi +network openal +opengl oss png pnm
-pulseaudio pvr +quicktime radio +rar +real +rtc -samba
-+schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
-+truetype +unicode v4l v4l2 vdpau vidix +vorbis -win32codecs +X +x264 xanim
+mmxext mng +mp2 +mp3 musepack nas +nemesi +network nut openal +opengl +osdmenu
+oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba
++schroedinger sdl +shm +speex sse sse2 ssse3 svga teletext tga +theora +tremor
++truetype +unicode v4l v4l2 vdpau vidix +vorbis win32codecs +X +x264 xanim
 xinerama +xscreensaver +xv +xvid xvmc zoran"
 
 VIDEO_CARDS="s3virge mga tdfx nvidia vesa"
@@ -29,11 +29,11 @@ BLUV="1.7"
 SVGV="1.9.17"
 AMR_URI="http://www.3gpp.org/ftp/Specs/archive"
 SRC_URI="!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
-				 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-				 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
+		mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+		mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
 	!iconv? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
-			  mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-			  mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
+		mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+		mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )"
 
@@ -72,7 +72,7 @@ RDEPEND="sys-libs/ncurses
 		)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
-	faad? ( media-libs/faad2 )
+	faad? ( !aac? ( media-libs/faad2 ) )
 	gif? ( media-libs/giflib )
 	ggi? ( media-libs/libggi
 		media-libs/libggiwmh )
@@ -81,6 +81,7 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXext
 		x11-libs/libXi
 		x11-libs/gtk+:2 )
+	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( media-libs/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
 	libcaca? ( media-libs/libcaca )
@@ -90,12 +91,14 @@ RDEPEND="sys-libs/ncurses
 	mng? ( media-libs/libmng )
 	musepack? ( >=media-libs/libmpcdec-1.2.2 )
 	nas? ( media-libs/nas )
+	nut? ( >=media-libs/libnut-661 )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	pulseaudio? ( media-sound/pulseaudio )
 	rar? ( || ( app-arch/unrar-gpl
-		app-arch/unrar ) )
+		app-arch/unrar
+		app-arch/rar ) )
 	samba? ( net-fs/samba )
 	schroedinger? ( media-libs/schroedinger )
 	sdl? ( media-libs/libsdl )
@@ -106,7 +109,7 @@ RDEPEND="sys-libs/ncurses
 	truetype? ( media-libs/freetype:2
 		media-libs/fontconfig )
 	video_cards_nvidia? (
-		vdpau? ( >=x11-drivers/nvidia-drivers-180.37 )
+		vdpau? ( >=x11-drivers/nvidia-drivers-180.51 )
 	)
 	vidix? ( x11-libs/libXxf86vm
 			 x11-libs/libXext )
@@ -125,6 +128,7 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
+	amd64? ( dev-lang/yasm )
 	doc? ( dev-libs/libxslt )
 	dga? ( x11-proto/xf86dgaproto )
 	dxr3? ( media-video/em8300-libraries )
@@ -135,6 +139,8 @@ DEPEND="${RDEPEND}
 		   x11-proto/xf86vidmodeproto )
 	X? ( x11-proto/xextproto
 		 x11-proto/xf86vidmodeproto )
+	x86? ( dev-lang/yasm )
+	x86-fbsd? ( dev-lang/yasm )
 	xscreensaver? ( x11-proto/scrnsaverproto )
 	iconv? ( virtual/libiconv )"
 
@@ -219,8 +225,9 @@ src_unpack() {
 
 	cd "${S}"
 
-	# Fix hppa compilation
-	use hppa && sed -i -e "s/-O4/-O1/" "${S}/configure"
+	# Set SVN version manually
+	subversion_wc_info
+	sed -i s/UNKNOWN/${ESVN_WC_REVISION}/ "${S}/version.sh"
 
 	if use svga; then
 		echo
@@ -231,12 +238,9 @@ src_unpack() {
 
 		mv "${WORKDIR}/svgalib_helper" "${S}/libdha"
 	fi
-
-	# Fix polish spelling errors
-	[[ -n ${LINGUAS} ]] && sed -e 's:Zarządano:Zażądano:' -i help/help_mp-pl.h
 }
 
-src_compile() {
+src_configure() {
 
 	local myconf=""
 
@@ -253,7 +257,6 @@ src_compile() {
 	################
 	#Optional features#
 	###############
-	myconf="${myconf} --enable-menu"
 	myconf="${myconf} $(use_enable network)"
 	use ass || myconf="${myconf} --disable-ass"
 	use bidi || myconf="${myconf} --disable-fribidi"
@@ -262,8 +265,11 @@ src_compile() {
 	use encode || myconf="${myconf} --disable-mencoder"
 	use ftp || myconf="${myconf} --disable-ftp"
 	use ipv6 || myconf="${myconf} --disable-inet6"
-	use lirc || myconf="${myconf} --disable-lirc --disable-lircc"
+	use lirc || myconf="${myconf} --disable-lirc --disable-lircc \
+		--disable-apple-ir"
 	use nemesi || myconf="${myconf} --disable-nemesi"
+	use nut || myconf="${myconf} --disable-libnut"
+	use osdmenu || myconf="${myconf} --disable-menu"
 	use rar || myconf="${myconf} --disable-unrarexec"
 	use rtc || myconf="${myconf} --disable-rtc"
 	use samba || myconf="${myconf} --disable-smb"
@@ -425,6 +431,7 @@ src_compile() {
 	done
 	use aalib || myconf="${myconf} --disable-aa"
 	use dga || myconf="${myconf} --disable-dga1 --disable-dga2"
+	use dxr3 || myconf="${myconf} --disable-dxr3"
 	use fbcon || myconf="${myconf} --disable-fbdev"
 	use fbcon && use video_cards_s3virge && myconf="${myconf} --enable-s3fb"
 	use libcaca || myconf="${myconf} --disable-caca"
@@ -433,10 +440,6 @@ src_compile() {
 	use video_cards_nvidia && use vdpau || myconf="${myconf} --disable-vdpau"
 	use vidix || myconf="${myconf} --disable-vidix --disable-vidix-pcidb"
 	use zoran || myconf="${myconf} --disable-zr"
-
-	# MPlayer incorrectly looks for DXR3 support, so forcibly enable
-	# if requested. See bug 223587
-	myconf="${myconf} $(use_enable dxr3)"
 
 	# GTK gmplayer gui
 	# Unsupported by Gentoo, upstream has dropped development
@@ -487,21 +490,14 @@ src_compile() {
 	# specify which ones to use.  If disabled, mplayer will automatically
 	# enable all CPU optimizations that the host build supports.
 	if use custom-cpuopts; then
-		for x in 3dnow 3dnowext mmx mmxext sse sse2 ssse3; do
+		for x in 3dnow 3dnowext altivec mmx mmxext shm sse sse2 ssse3; do
 			myconf="${myconf} $(use_enable $x)"
 		done
 	fi
 
 	use debug && myconf="${myconf} --enable-debug=3"
 
-	myconf="${myconf} $(use_enable altivec)"
-
 	if use custom-cflags; then
-
-		# Can't remember why this was in here, commented out, please
-		# document if you are going to re-enable it, bug 260064
-		# let's play the filtration game!  MPlayer hates on all!
-		# strip-flags
 
 		# ugly optimizations cause MPlayer to cry on x86 systems!
 			if use x86 || use x86-fbsd ; then
@@ -512,7 +508,7 @@ src_compile() {
 			fi
 		append-flags -D__STDC_LIMIT_MACROS
 	else
-		unset CFLAGS CXXFLAGS
+		unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS YASMFLAGS
 	fi
 
 	myconf="--cc=$(tc-getCC) \
@@ -526,6 +522,9 @@ src_compile() {
 	#echo "CFLAGS=\"${CFLAGS}\" ./configure ${myconf}"
 	CFLAGS="${CFLAGS}" ./configure ${myconf} || die "configure died"
 
+}
+
+src_compile() {
 	emake || die "Failed to build MPlayer!"
 	use doc && make -C DOCS/xml html-chunked
 }
@@ -545,15 +544,18 @@ src_install() {
 
 	docinto tech/
 	dodoc DOCS/tech/{*.txt,MAINTAINERS,mpsub.sub,playtree,TODO,wishlist}
-	docinto tech/realcodecs/
-	dodoc DOCS/tech/realcodecs/*
+	docinto TOOLS/
+	dodoc TOOLS/*
+	if use real; then
+		docinto tech/realcodecs/
+		dodoc DOCS/tech/realcodecs/*
+		docinto TOOLS/realcodecs/
+		dodoc TOOLS/realcodecs/*
+	fi
 	docinto tech/mirrors/
 	dodoc DOCS/tech/mirrors/*
 
-	docinto TOOLS/
-	dodoc TOOLS/*
-	docinto TOOLS/realcodecs/
-	dodoc TOOLS/realcodecs/*
+	use doc && dohtml -r "${S}"/DOCS/HTML/*
 
 	# Install the default Skin and Gnome menu entry
 	if use gtk; then
@@ -604,7 +606,7 @@ EOT
 
 	insinto /usr/share/mplayer
 	doins "${S}/etc/input.conf"
-	doins "${S}/etc/menu.conf"
+	use osdmenu && doins "${S}/etc/menu.conf"
 }
 
 pkg_preinst() {
