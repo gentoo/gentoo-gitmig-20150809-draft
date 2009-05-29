@@ -21,3 +21,4 @@ move dev-tcltk/tkdiff dev-util/tkdiff
 move net-news/charm net-misc/charm
 move lxde-base/lxsession-lite lxde-base/lxsession
 move app-office/kmm_banking app-office/kmm_kbanking
+slotmove x11-misc/basket 0 3.5
