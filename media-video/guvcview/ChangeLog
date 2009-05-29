@@ -1,6 +1,10 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.6 2009/05/24 05:02:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.7 2009/05/29 21:45:42 ssuominen Exp $
+
+  29 May 2009; Samuli Suominen <ssuominen@gentoo.org> guvcview-1.1.0.ebuild:
+  USE pulseaudio for >=0.9.15 and don't allow previous versions installed
+  because of missing include wrt #271183.
 
 *guvcview-1.1.0 (24 May 2009)
 
