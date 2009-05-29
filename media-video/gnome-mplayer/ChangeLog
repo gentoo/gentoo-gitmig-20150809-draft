@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.13 2009/05/29 21:47:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.14 2009/05/29 21:50:38 beandog Exp $
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org> gnome-mplayer-0.6.3.ebuild:
+  amd64 stable
 
 *gnome-mplayer-0.9.5-r1 (29 May 2009)
 
