@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/tunepimp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.67 2009/04/27 15:25:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/ChangeLog,v 1.68 2009/05/29 12:14:54 scarabeus Exp $
+
+*tunepimp-0.5.3-r2 (29 May 2009)
+
+  29 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +tunepimp-0.5.3-r2.ebuild, +files/tunepimp-0.5.3-gcc44.patch:
+  Revision bump. Fixing gcc issues. Per bug #271615. Thx to hirakendu for
+  patch.
 
   27 Apr 2009; Jeroen Roovers <jer@gentoo.org> tunepimp-0.5.3-r1:
   Marked ~hppa (bug #260777).
