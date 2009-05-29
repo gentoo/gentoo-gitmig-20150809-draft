@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r6.ebuild,v 1.4 2009/05/08 05:46:34 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.8-r6.ebuild,v 1.5 2009/05/29 13:26:28 tove Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -158,6 +158,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-CVE-2008-1927.patch
 
 	epatch "${FILESDIR}"/${P}-CAN-2005-0448-rmtree-2.patch
+	epatch "${FILESDIR}"/${P}-fix_file_path_chdir.patch
 }
 
 myconf() {
