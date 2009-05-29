@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.26.ebuild,v 1.5 2009/04/19 02:50:42 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.26.ebuild,v 1.6 2009/05/29 16:14:59 calchan Exp $
 
 inherit multilib
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=">=sys-apps/portage-2.1.2.10
-	virtual/gnat"
+	>=dev-lang/gnat-gcc-4.2"
 RDEPEND=""
 S="${WORKDIR}/gcc-${GCC_VERSION}"
 
