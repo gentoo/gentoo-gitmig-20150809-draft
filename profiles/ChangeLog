@@ -1,10 +1,19 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2708 2009/05/29 20:42:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2709 2009/05/29 20:48:20 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2009; Samuli Suominen <ssuominen@gentoo.org>
+  arch/amd64/no-multilib/package.mask, arch/amd64/no-multilib/use.mask,
+  arch/amd64/use.mask, base/use.mask,
+  default-linux/amd64/2007.0/no-multilib/package.mask,
+  default-linux/amd64/2007.0/no-multilib/use.mask,
+  default-linux/amd64/use.mask, features/64bit-native/package.mask,
+  features/64bit-native/use.mask:
+  Remove mplayer-bin from rest of the profiles wrt 233394.
 
   29 May 2009; Steve Dibb <beandog@gentoo.org> package.mask:
   Remove mplayer-bin from tree, bug 233394
