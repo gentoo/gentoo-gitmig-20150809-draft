@@ -1,6 +1,13 @@
 # ChangeLog for media-tv/mythtv
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.271 2009/03/02 21:45:59 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.272 2009/05/29 19:56:57 beandog Exp $
+
+*mythtv-0.21_p19961-r2 (29 May 2009)
+
+  29 May 2009; Steve Dibb <beandog@gentoo.org>
+  -files/mythtv-0.20-as-needed.patch, +mythtv-0.21_p19961-r2.ebuild,
+  -files/mythtv-0.21-bttv.patch:
+  Configure support for VIA/Openchrome XVMC, bug 225025; remove old patches
 
   02 Mar 2009; Steve Dibb <beandog@gentoo.org> mythtv-0.21_p19961-r1.ebuild,
   mythtv-0.22_alpha19054.ebuild:
