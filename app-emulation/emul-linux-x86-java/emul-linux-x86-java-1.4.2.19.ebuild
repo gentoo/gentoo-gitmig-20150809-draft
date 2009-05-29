@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.19.ebuild,v 1.3 2009/05/10 20:12:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-java/emul-linux-x86-java-1.4.2.19.ebuild,v 1.4 2009/05/29 20:34:25 caster Exp $
 
 inherit multilib eutils pax-utils java-vm-2
 
@@ -9,7 +9,7 @@ MY_PV2=${PV//./_}
 MY_PN=j2re
 At="${MY_PN}-${MY_PV2}-linux-i586.bin"
 S="${WORKDIR}/j2re${MY_PV}"
-DESCRIPTION="Sun's JRE (32bit)"
+DESCRIPTION="Sun's Java SE Runtime Environment (32bit)"
 HOMEPAGE="http://java.sun.com/j2se/1.4.2/"
 SRC_URI=${At}
 SLOT="1.4"
