@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.23 2009/05/16 15:46:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.24 2009/05/29 20:57:12 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -89,19 +89,12 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Avoid help2man
-	sed -i \
-		-e '/HELP2MAN.*--output/s:.*:\ttouch $@:' \
-		xbmc/lib/libcdio/libcdio/src/Makefile.in
-
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -print0 | xargs -0 touch -r configure
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.  Also cleanup flags.
 	export SVN_REV=${ESVN_WC_REVISION:-exported}
-	sed -i -r -e '/DEBUG_FLAGS/s:-(g|O2)::' configure
-	sed -i -e 's:\<strip\>:echo:' xbmc/lib/libhdhomerun/Makefile.in
 	# Avoid lsb-release dependency
 	sed -i \
 		-e 's:/usr/bin/lsb_release -d:cat /etc/gentoo-release:' \
@@ -114,6 +107,8 @@ src_prepare() {
 src_configure() {
 	# Disable documentation generation
 	export ac_cv_path_LATEX=no
+	# Avoid help2man
+	export HELP2MAN=$(type -P help2man || echo true)
 
 	econf \
 		--disable-ccache \
