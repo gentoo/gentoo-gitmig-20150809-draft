@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/fatsort
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.2 2008/12/08 23:15:32 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/ChangeLog,v 1.3 2009/05/29 17:17:02 billie Exp $
+
+*fatsort-0.9.10.187-r1 (29 May 2009)
+
+  29 May 2009; Pielmeier Daniel <billie@gentoo.org> metadata.xml,
+  +fatsort-0.9.10.187-r1.ebuild:
+  Taking the ebuild, thanks to darkside for proxy committing. Adding a new
+  revision to make use of EAPI 2.
 
 *fatsort-0.9.10.187 (08 Dec 2008)
 
