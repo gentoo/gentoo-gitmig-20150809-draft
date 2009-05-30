@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/kio-ftps
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.1 2009/05/30 09:45:56 scarabeus Exp $
+
+*kio-ftps-0.2 (30 May 2009)
+
+  30 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> +kio-ftps-0.2.ebuild,
+  +metadata.xml:
+  Initial commit. Per bug #125314. Thanks to Krzysztof Głowiński for basic
+  ebuild.
+
