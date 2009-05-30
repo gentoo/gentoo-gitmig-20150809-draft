@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.1.0.ebuild,v 1.2 2009/05/29 21:45:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/guvcview-1.1.0.ebuild,v 1.3 2009/05/30 11:50:47 ssuominen Exp $
 
 EAPI=2
-inherit eutils
+inherit autotools eutils
 
 MY_P=${PN}-src-${PV}
 
@@ -27,13 +27,20 @@ RDEPEND=">=x11-libs/gtk+-2.10:2
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.15 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	sys-devel/gettext
-	!<media-sound/pulseaudio-0.9.15"
+	sys-devel/gettext"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	epatch "$FILESDIR"/$PN-1.0.5-implicit_declaration_setlocale.patch
+	epatch "${FILESDIR}"/${PN}-1.0.5-implicit_declaration_setlocale.patch \
+		"${FILESDIR}"/${P}-automagic_pulseaudio.patch
+	eautoreconf
+}
+
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable pulseaudio pulse)
 }
 
 src_install() {

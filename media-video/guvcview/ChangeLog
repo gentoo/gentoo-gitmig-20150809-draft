@@ -1,6 +1,11 @@
 # ChangeLog for media-video/guvcview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.7 2009/05/29 21:45:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/guvcview/ChangeLog,v 1.8 2009/05/30 11:50:47 ssuominen Exp $
+
+  30 May 2009; Samuli Suominen <ssuominen@gentoo.org> guvcview-1.1.0.ebuild,
+  +files/guvcview-1.1.0-automagic_pulseaudio.patch:
+  Patch pulseaudio to have AC_ARG_ENABLE for controlling the feature with
+  correct version checking.
 
   29 May 2009; Samuli Suominen <ssuominen@gentoo.org> guvcview-1.1.0.ebuild:
   USE pulseaudio for >=0.9.15 and don't allow previous versions installed
