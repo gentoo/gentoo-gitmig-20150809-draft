@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.4 2009/02/01 12:13:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.5 2009/05/30 21:02:07 vapier Exp $
+
+*libtirpc-0.2.0 (30 May 2009)
+
+  30 May 2009; Mike Frysinger <vapier@gentoo.org> +libtirpc-0.2.0.ebuild:
+  Version bump.
 
   01 Feb 2009; Markus Meier <maekke@gentoo.org> libtirpc-0.1.10.ebuild:
   amd64/x86 stable, bug #256691
