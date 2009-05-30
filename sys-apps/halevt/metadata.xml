@@ -12,7 +12,7 @@
 	<description>Proxy Maintainer</description>
 </maintainer>
 <use>
-	<flag name="rpath">Hardcore runtime library paths</flag>
+	<flag name="rpath">Hardcode runtime library paths</flag>
 </use>
 <longdescription lang="en">
 </longdescription>
