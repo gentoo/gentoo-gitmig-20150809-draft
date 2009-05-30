@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kiax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.17 2009/05/17 11:43:11 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/ChangeLog,v 1.18 2009/05/30 10:24:28 volkmar Exp $
+
+  30 May 2009; Mounir Lamouri <volkmar@gentoo.org> kiax-0.8.51-r1.ebuild:
+  Workaround for bug 270231. A clean fix wouldn't be easy and this app is old.
 
   17 May 2009; Mounir Lamouri <volkmar@gentoo.org>
   +files/kiax-0.8.51-missing-header.patch, kiax-0.8.51-r1.ebuild:

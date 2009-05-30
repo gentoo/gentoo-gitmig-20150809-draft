@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.51-r1.ebuild,v 1.3 2009/05/17 11:43:11 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kiax/kiax-0.8.51-r1.ebuild,v 1.4 2009/05/30 10:24:28 volkmar Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/${P}-src"
 
 # TODO:
-# using a lot of internal libs (see debian patch)
+# kiax bundles an old iaxclient version, not easy to fix that
 # using ilbc (license issues)
 
 src_prepare() {
@@ -54,6 +54,11 @@ src_configure() {
 	# lib/lib.pro doesn't exist
 	# don't use qmake for bin/ and i18n/, Makefiles already exist
 	# and generated ones are not good
+}
+
+src_compile() {
+	# -j1 for bug 270231
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
