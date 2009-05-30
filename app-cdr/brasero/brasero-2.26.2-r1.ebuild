@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.2.ebuild,v 1.3 2009/05/26 18:20:17 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.2-r1.ebuild,v 1.1 2009/05/30 14:46:45 nirbheek Exp $
 
 EAPI="2"
-
 GCONF_DEBUG="no"
 
 inherit gnome2 eutils autotools
@@ -14,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="beagle +libburn +totem +cdrkit cdrtools +nautilus"
+IUSE="beagle +cdr +libburn +totem +nautilus"
 
 RDEPEND=">=dev-libs/glib-2.16.5
 	>=x11-libs/gtk+-2.14.0
@@ -28,8 +27,7 @@ RDEPEND=">=dev-libs/glib-2.16.5
 	>=dev-libs/dbus-glib-0.7.2
 	media-libs/libdvdcss
 	>=app-cdr/dvd+rw-tools-7.1
-	cdrtools? ( >=app-cdr/cdrtools-2.01.01_alpha57 )
-	cdrkit? ( >=app-cdr/cdrkit-1.1.9 )
+	cdr? ( virtual/cdrtools )
 	totem? ( >=dev-libs/totem-pl-parser-2.20 )
 	beagle? ( >=dev-libs/libbeagle-0.3.0 )
 	libburn? ( >=dev-libs/libburn-0.6.0
@@ -47,8 +45,8 @@ pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper
 		--disable-caches
 		--disable-dependency-tracking
-		$(use_enable cdrtools)
-		$(use_enable cdrkit)
+		$(use_enable cdr cdrtools)
+		$(use_enable cdr cdrkit)
 		$(use_enable nautilus)
 		$(use_enable totem playlist)
 		$(use_enable beagle search)
@@ -78,4 +76,9 @@ src_test() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 	elog "Brasero can use all audio files handled by the local Gstreamer installation"
+	if ! use cdr && ! use libburn; then
+		elog
+		ewarn "You have disabled all burning backends for Brasero"
+		ewarn "Brasero can now do nothing at all. Probably not what you want."
+	fi
 }
