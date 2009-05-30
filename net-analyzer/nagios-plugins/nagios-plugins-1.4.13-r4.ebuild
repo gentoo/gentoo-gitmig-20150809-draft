@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r3.ebuild,v 1.1 2009/05/15 17:32:37 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.13-r4.ebuild,v 1.1 2009/05/30 07:58:25 dertobi123 Exp $
 
 EAPI=1
 
@@ -55,6 +55,13 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${PN}-1.4.10-contrib.patch
 	epatch "${FILESDIR}"/${PN}-1.4.12-pgsqlconfigure.patch
+
+	# Fix my.cnf usage, #253893, upstream fix commitid 917fcc7, will be fixed
+	# upstream in 1.4.14
+	epatch "${FILESDIR}"/${P}-mysqlpass-917fcc7.patch
+
+	# check_ups Logout, #243384 ,will be fixed upstream in 1.4.14
+	epatch "${FILESDIR}"/${P}--upslogout.patch
 
 	eautoreconf
 }
