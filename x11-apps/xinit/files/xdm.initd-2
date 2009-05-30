@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-2,v 1.1 2008/05/06 08:16:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-2,v 1.2 2009/05/30 17:34:21 miknix Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -84,6 +84,10 @@ setup_dm() {
 		wdm)
 			EXE=/usr/bin/wdm
 			PIDFILE=
+			;;
+		gpe)
+			EXE=/usr/bin/gpe-dm
+			PIDFILE=/var/run/gpe-dm.pid
 			;;
 		*)
 			EXE=
