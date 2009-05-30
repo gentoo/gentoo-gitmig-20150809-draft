@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4490 2009/05/30 09:47:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4491 2009/05/30 18:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -696,6 +696,7 @@ dev-libs/STLport:boost - Enable the usage of dev-libs/boost
 dev-libs/ace:ciao - Include Component Intergraced Ace ORB into the build of ace
 dev-libs/ace:tao - Include the ACE ORB (CORBA stuff) (called tao) into the build of ace
 dev-libs/apr:urandom - Use /dev/urandom instead of /dev/random
+dev-libs/boolstuff:static - Enable static linking
 dev-libs/boost:bcp - Install the bcp tool http://www.boost.org/tools/bcp/bcp.html
 dev-libs/boost:bjam - Install the BoostJam tool http://www.boost.org/tools/build/jam_src/index.html
 dev-libs/boost:eselect - Run "eselect boost update" even if version is already selected
@@ -2642,6 +2643,7 @@ sys-apps/hal:doc - Generates documentation that describes HAL's fdi format.
 sys-apps/hal:laptop - Adds support for power management scripts (sys-power/pm-utils)
 sys-apps/hal:pcmcia - Allows HAL to process PCMCIA/CardBus slot data which includes inserts and removals and act on these events.
 sys-apps/hal:selinux - Installs SELinux policies and links HAL to the SELinux libraries.
+sys-apps/halevt:rpath - Hardcore runtime library paths
 sys-apps/hwdata-gentoo:binary-drivers - Adds support for ATI/NVIDIA binary drivers
 sys-apps/ipmitool:openipmi - Use the system OpenIPMI implementation.
 sys-apps/kexec-tools:xen - Enable extended xen support
