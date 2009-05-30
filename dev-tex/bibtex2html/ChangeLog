@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/bibtex2html
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.15 2008/10/03 06:33:10 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.16 2009/05/30 09:24:18 ulm Exp $
+
+  30 May 2009; Ulrich Mueller <ulm@gentoo.org> bibtex2html-1.91.ebuild,
+  bibtex2html-1.92.ebuild:
+  Remove app-text/tetex from dependencies, bug 227443.
 
 *bibtex2html-1.92 (03 Oct 2008)
 

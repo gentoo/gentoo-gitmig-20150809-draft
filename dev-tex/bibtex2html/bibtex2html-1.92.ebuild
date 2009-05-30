@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.92.ebuild,v 1.1 2008/10/03 06:33:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/bibtex2html-1.92.ebuild,v 1.2 2009/05/30 09:24:18 ulm Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RESTRICT="test"
 # manual.tex needs fullpage.sty
 DEPEND=">=dev-lang/ocaml-3.09
 	doc? ( virtual/latex-base
-	|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
+	|| ( dev-texlive/texlive-latexextra app-text/ptex )
 		dev-tex/hevea )"
 # We need tex-base for bibtex but also some bibtex styles, so we use latex-base
 RDEPEND="virtual/latex-base"
