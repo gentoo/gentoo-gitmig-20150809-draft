@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/dot2texi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.3 2008/08/04 20:56:45 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dot2texi/ChangeLog,v 1.4 2009/05/30 07:54:20 ulm Exp $
+
+  30 May 2009; Ulrich Mueller <ulm@gentoo.org> dot2texi-3.0.ebuild:
+  Remove app-text/tetex from dependencies, bug 227443.
 
   04 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
