@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-importexport/quodlibet-importexport-4353.ebuild,v 1.1 2009/05/30 15:10:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-importexport/quodlibet-importexport-4353.ebuild,v 1.2 2009/05/30 15:45:18 ssuominen Exp $
 
 inherit multilib python
 
 DESCRIPTION="Quod Libet plugin that can import or export metadata information."
-HOMEPAGE="http://svn.sacredchao.net/svn/quodlibet/trunk/plugins/songsmenu/cddb.py"
+HOMEPAGE="http://svn.sacredchao.net/svn/quodlibet/trunk/plugins/songsmenu/importexport.py"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
 
