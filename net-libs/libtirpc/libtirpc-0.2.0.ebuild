@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.0.ebuild,v 1.2 2009/05/30 21:08:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.0.ebuild,v 1.3 2009/05/30 21:16:30 vapier Exp $
 
 inherit eutils
 
@@ -29,4 +29,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
+	insinto /etc
+	newins doc/etc_netconfig netconfig || die
 }
