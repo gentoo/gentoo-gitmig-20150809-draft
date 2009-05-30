@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2713 2009/05/30 21:27:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2714 2009/05/30 21:58:12 beandog Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 May 2009; Steve Dibb <beandog@gentoo.org>
+  default-linux/amd64/package.use.mask, default-linux/package.use.mask,
+  default-linux/x86/package.use.mask:
+  mask mplayer + libnut dep on all but x86/amd64
 
   30 May 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask media-sound/kguitar for removal wrt #258919.
