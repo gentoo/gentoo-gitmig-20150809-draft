@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.2.2-r1.ebuild,v 1.6 2009/05/30 16:29:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-1.2.2-r1.ebuild,v 1.7 2009/05/30 21:18:24 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib
@@ -25,11 +25,6 @@ RDEPEND=""
 
 S=${WORKDIR}/${MY_PN}/build/generic
 
-#src_prepare() {
-#	cd "${WORKDIR}"/${MY_PN}
-#	epatch "${FILESDIR}"/${P}-no_execstacks.patch
-#}
-
 src_configure() {
 	local myconf
 
@@ -42,7 +37,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
 	dodoc "${S}"/../../{AUTHORS,ChangeLog*,CodingStyle,README,TODO}
 
 	local mylib=$(basename $(ls "${D}"/usr/$(get_libdir)/libxvidcore.so*))
