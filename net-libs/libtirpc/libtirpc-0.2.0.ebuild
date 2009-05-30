@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.0.ebuild,v 1.1 2009/05/30 21:02:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/libtirpc-0.2.0.ebuild,v 1.2 2009/05/30 21:08:02 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="Transport Independent RPC library (SunRPC replacement)"
 HOMEPAGE="http://libtirpc.sourceforge.net/"
@@ -12,6 +14,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE="kerberos"
 
 DEPEND="kerberos? ( net-libs/libgssglue )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-no-gss.patch
+}
 
 src_compile() {
 	econf $(use_enable kerberos gss) || die
