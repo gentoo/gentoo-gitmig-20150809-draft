@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.2 2008/05/18 17:10:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/nusmv/nusmv-2.3.1.ebuild,v 1.3 2009/05/30 09:13:30 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -40,7 +40,6 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 		virtual/latex-base
 		|| ( ( dev-texlive/texlive-latexextra )
-			app-text/tetex
 			app-text/ptex )
 		virtual/ghostscript
 		www-client/lynx

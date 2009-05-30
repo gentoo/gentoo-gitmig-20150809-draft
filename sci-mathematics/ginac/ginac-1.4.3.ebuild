@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.3.ebuild,v 1.7 2009/03/27 22:48:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.4.3.ebuild,v 1.8 2009/05/30 09:14:11 ulm Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,7 +19,6 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		   media-gfx/transfig
 		   || ( dev-texlive/texlive-fontsrecommended
-				app-text/tetex
 				app-text/ptex ) )"
 
 src_compile() {
