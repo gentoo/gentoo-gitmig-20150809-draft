@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.4.ebuild,v 1.1 2009/05/10 14:10:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musescore/musescore-0.9.4.ebuild,v 1.2 2009/05/30 09:18:02 ulm Exp $
 
 EAPI=2
 inherit cmake-utils eutils font
@@ -26,7 +26,7 @@ RDEPEND="sys-libs/zlib
 	x11-libs/qt-gui:4
 	x11-libs/qt-svg:4"
 DEPEND="${RDEPEND}
-	|| ( dev-texlive/texlive-context app-text/tetex )
+	dev-texlive/texlive-context
 	app-doc/doxygen
 	dev-util/pkgconfig"
 
