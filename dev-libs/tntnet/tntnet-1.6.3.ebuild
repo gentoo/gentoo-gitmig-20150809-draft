@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.4 2009/03/17 08:10:51 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/tntnet-1.6.3.ebuild,v 1.5 2009/05/30 20:21:07 arfrever Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="A modular, multithreaded webapplicationserver extensible with C++."
 HOMEPAGE="http://www.tntnet.org/index.hms"
@@ -20,13 +20,17 @@ RDEPEND="dev-libs/cxxtools
 		!gnutls? ( dev-libs/openssl )
 	)"
 DEPEND="${RDEPEND}
-	app-arch/zip"
+	app-arch/zip
+	ssl? ( gnutls? ( dev-util/pkgconfig ) )"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-gnutls-2.8.patch"
+
+	eautoreconf
 }
 
 src_compile() {
