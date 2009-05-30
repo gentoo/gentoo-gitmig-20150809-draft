@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/basket
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.41 2009/05/29 17:37:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.42 2009/05/30 19:22:21 nixnut Exp $
+
+  30 May 2009; nixnut <nixnut@gentoo.org> basket-1.0.3.1.ebuild:
+  ppc stable #271793
 
   29 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   basket-1.0.3.1.ebuild:
