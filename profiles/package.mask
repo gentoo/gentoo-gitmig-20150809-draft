@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9855 2009/05/30 01:26:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9856 2009/05/30 14:58:43 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (30 May 2009)
+# Breaks X for hal users, bug 271837
+=sys-apps/hal-0.5.12_rc1-r5
 
 # Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
 # Masked for removal in 60 days, unmaintained. Binary package in /usr. bug
