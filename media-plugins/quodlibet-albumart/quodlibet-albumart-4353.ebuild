@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-albumart/quodlibet-albumart-4353.ebuild,v 1.1 2009/05/30 16:39:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-albumart/quodlibet-albumart-4353.ebuild,v 1.2 2009/05/30 16:47:59 ssuominen Exp $
 
 inherit multilib python
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND=">=media-sound/quodlibet-2
-	dev-python/pyamazon"
+RDEPEND=">=media-sound/quodlibet-2"
 DEPEND=""
 
 pkg_setup() {
@@ -25,11 +24,11 @@ pkg_setup() {
 
 src_install() {
 	insinto ${dest}
-	doins albumart.py || die "doins failed"
+	doins albumart.py _ecs.py || die "doins failed"
 }
 
 pkg_postinst() {
-	python_mod_compile ${dest}/albumart.py
+	python_mod_compile ${dest}/albumart.py ${dest}/_ecs.py
 }
 
 pkg_postrm() {
