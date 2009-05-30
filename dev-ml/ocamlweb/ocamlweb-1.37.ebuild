@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.37.ebuild,v 1.8 2008/04/20 14:06:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.37.ebuild,v 1.9 2009/05/30 08:47:59 ulm Exp $
 
 inherit latex-package eutils
 
@@ -17,7 +17,6 @@ KEYWORDS="~amd64 ppc x86"
 DEPEND=">=dev-lang/ocaml-3.09
 	virtual/latex-base
 	|| ( dev-texlive/texlive-latexextra
-		app-text/tetex
 		app-text/ptex
 	)"
 
