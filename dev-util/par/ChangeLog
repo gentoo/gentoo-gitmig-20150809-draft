@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/par
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.5 2008/11/17 19:10:17 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/par/ChangeLog,v 1.6 2009/05/30 02:04:49 darkside Exp $
+
+  30 May 2009; Jeremy Olexa <darkside@gentoo.org> par-00.05.01.ebuild:
+  (non maintainer commit) Respect flags and QA fixes, bug 244014 by Espen Hustad
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> par-00.05.01.ebuild:
   Don't try to install non-built dynamic library, and properly die on
