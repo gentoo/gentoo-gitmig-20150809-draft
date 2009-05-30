@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.1-r1.ebuild,v 1.4 2009/05/27 10:34:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.1-r1.ebuild,v 1.5 2009/05/30 18:42:44 nixnut Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://berlios/konversation/${MY_P}.tar.bz2"
 
 SLOT="3.5"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="!<net-irc/konversation-1.1-r1"
