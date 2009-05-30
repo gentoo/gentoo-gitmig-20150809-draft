@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.6-r1.ebuild,v 1.1 2009/05/30 21:47:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.6-r1.ebuild,v 1.2 2009/05/30 22:01:42 vapier Exp $
 
 EAPI="1"
 
@@ -78,8 +78,9 @@ src_install() {
 	insinto /etc
 	doins "${FILESDIR}"/exports
 
-	local f list=""
+	local f list="" opt_need=""
 	if use nfsv4 ; then
+		opt_need="rpc.idmapd"
 		list="${list} rpc.idmapd rpc.pipefs"
 		use kerberos && list="${list} rpc.gssd rpc.svcgssd"
 	fi
@@ -87,6 +88,7 @@ src_install() {
 		newinitd "${FILESDIR}"/${f}.initd ${f} || die "doinitd ${f}"
 	done
 	newconfd "${FILESDIR}"/nfs.confd nfs
+	dosed "/^NFS_NEEDED_SERVICES=/s:=.*:=\"${opt_need}\":" /etc/conf.d/nfs #234132
 
 	# uClibc doesn't provide rpcgen like glibc, so lets steal it from nfs-utils
 	if ! use elibc_glibc ; then

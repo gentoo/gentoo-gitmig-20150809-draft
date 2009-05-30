@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.157 2009/05/30 21:47:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.158 2009/05/30 22:01:42 vapier Exp $
+
+  30 May 2009; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.1.6-r1.ebuild,
+  files/nfs.confd, files/nfs.initd:
+  Have nfs init.d depend on rpc.idmapd by default when USE=nfsv4, but allow
+  people to disable it via conf.d #234132 by roger.
 
   30 May 2009; Mike Frysinger <vapier@gentoo.org>
   +nfs-utils-1.1.6-r1.ebuild, metadata.xml:
