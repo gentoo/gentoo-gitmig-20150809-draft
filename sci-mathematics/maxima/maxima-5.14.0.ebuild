@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.7 2008/04/18 21:59:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.8 2009/05/30 06:46:38 ulm Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -27,13 +27,10 @@ for lang in ${LANGS}; do
 	IUSE="${IUSE} linguas_${lang}"
 done
 
-# tetex>=3, so no use of virtual/latex-base (bug #203558)
 RDEPEND="X? ( x11-misc/xdg-utils
 			  sci-visualization/gnuplot
 			  tk? ( dev-lang/tk ) )
-	latex? ( || ( dev-texlive/texlive-latexrecommended
-				  >=app-text/tetex-3
-				  app-text/ptex ) )
+	latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs latex? ( app-emacs/auctex ) )
 	xemacs? ( virtual/xemacs latex? ( app-xemacs/auctex ) )"
 
