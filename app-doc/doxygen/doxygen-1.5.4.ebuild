@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.4.ebuild,v 1.16 2008/10/12 01:49:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.4.ebuild,v 1.17 2009/05/30 08:19:53 ulm Exp $
 
 EAPI=1
 
@@ -16,13 +16,10 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="debug doc nodot qt3 latex elibc_FreeBSD"
 
 RDEPEND="qt3? ( x11-libs/qt:3 )
-	latex? ( || (
-		( app-text/texlive-core
+	latex? ( app-text/texlive-core
 		dev-texlive/texlive-latexrecommended
 		dev-texlive/texlive-genericrecommended
 		dev-texlive/texlive-fontsrecommended )
-		( app-text/tetex ) )
-		)
 	dev-lang/python
 	virtual/libiconv
 	virtual/ghostscript
@@ -39,10 +36,10 @@ src_unpack() {
 
 	# use CFLAGS, CXXFLAGS, LDFLAGS
 	sed -i.orig -e 's:^\(TMAKE_CFLAGS_RELEASE\t*\)= .*$:\1= $(ECFLAGS):' \
-	    -e 's:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= $(ECXXFLAGS):' \
-	    -e 's:^\(TMAKE_LFLAGS_RELEASE\s*\)=.*$:\1= $(ELDFLAGS):' \
-	    tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf \
-	    || die "sed failed"
+		-e 's:^\(TMAKE_CXXFLAGS_RELEASE\t*\)= .*$:\1= $(ECXXFLAGS):' \
+		-e 's:^\(TMAKE_LFLAGS_RELEASE\s*\)=.*$:\1= $(ELDFLAGS):' \
+		tmake/lib/{{linux,freebsd,netbsd,openbsd,solaris}-g++,macosx-c++}/tmake.conf \
+		|| die "sed failed"
 
 	# Ensure we link to -liconv
 	if use elibc_FreeBSD; then
@@ -59,18 +56,18 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-1.5-system-libpng.patch"
 
 	if [ $(get_libdir) == "lib64" ] ; then
-	    epatch "${FILESDIR}/${PN}-1.5-qtlibdir.patch"
+		epatch "${FILESDIR}/${PN}-1.5-qtlibdir.patch"
 	fi
 
 	if is-flagq "-O3" ; then
-	    echo
-	    ewarn "Compiling with -O3 is known to produce incorrectly"
-	    ewarn "optimized code which breaks doxygen."
-	    echo
-	    epause 6
-	    elog "Continuing with -O2 instead ..."
-	    echo
-	    replace-flags "-O3" "-O2"
+		echo
+		ewarn "Compiling with -O3 is known to produce incorrectly"
+		ewarn "optimized code which breaks doxygen."
+		echo
+		epause 6
+		elog "Continuing with -O2 instead ..."
+		echo
+		replace-flags "-O3" "-O2"
 	fi
 }
 
@@ -79,52 +76,52 @@ src_compile() {
 	# set ./configure options (prefix, Qt based wizard, docdir)
 
 	if use debug; then
-	    local my_conf="--prefix ${D}usr --debug"
+		local my_conf="--prefix ${D}usr --debug"
 	else
-	    local my_conf="--prefix ${D}usr"
+		local my_conf="--prefix ${D}usr"
 	fi
 
 	if use qt3; then
-	    einfo "using QTDIR: '$QTDIR'."
-	    export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
-	    export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
-	    einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
-	    einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
-	    ./configure ${my_conf} $(use_with qt3 doxywizard) \
+		einfo "using QTDIR: '$QTDIR'."
+		export LD_LIBRARY_PATH=${QTDIR}/$(get_libdir):${LD_LIBRARY_PATH}
+		export LIBRARY_PATH=${QTDIR}/$(get_libdir):${LIBRARY_PATH}
+		einfo "using QT LIBRARY_PATH: '$LIBRARY_PATH'."
+		einfo "using QT LD_LIBRARY_PATH: '$LD_LIBRARY_PATH'."
+		./configure ${my_conf} $(use_with qt3 doxywizard) \
 		|| die 'configure with qt3 failed'
 	else
-	    ./configure ${my_conf} || die 'configure failed'
+		./configure ${my_conf} || die 'configure failed'
 	fi
 
 	# and compile
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" \
-	    LINK_SHLIB="$(tc-getCXX)" all || die 'emake failed'
+		LINK_SHLIB="$(tc-getCXX)" all || die 'emake failed'
 
 	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
 	# TeX's font caching in /var/cache/fonts causes sandbox warnings,
 	# so we allow it.
 	if use doc; then
-	    if use nodot; then
+		if use nodot; then
 		sed -i -e "s/HAVE_DOT               = YES/HAVE_DOT    = NO/" \
-		    {Doxyfile,doc/Doxyfile} || ewarn "disabling dot failed"
-	    fi
-	    if use latex; then
+			{Doxyfile,doc/Doxyfile} || ewarn "disabling dot failed"
+		fi
+		if use latex; then
 		addwrite /var/cache/fonts
 		addwrite /var/cache/fontconfig
 		addwrite /usr/share/texmf/fonts/pk
 		addwrite /usr/share/texmf/ls-R
 		make pdf || ewarn '"make pdf docs" failed.'
-	    else
+		else
 		cp doc/Doxyfile doc/Doxyfile.orig
 		cp doc/Makefile doc/Makefile.orig
 		sed -i.orig -e "s/GENERATE_LATEX    = YES/GENERATE_LATEX    = NO/" \
-		    doc/Doxyfile
+			doc/Doxyfile
 		sed -i.orig -e "s/@epstopdf/# @epstopdf/" \
-		    -e "s/@cp Makefile.latex/# @cp Makefile.latex/" \
-		    -e "s/@sed/# @sed/" doc/Makefile
+			-e "s/@cp Makefile.latex/# @cp Makefile.latex/" \
+			-e "s/@sed/# @sed/" doc/Makefile
 		make docs || ewarn '"make html docs" failed.'
-	    fi
+		fi
 	fi
 }
 
@@ -133,8 +130,8 @@ src_install() {
 		install || die '"make install" failed.'
 
 	if use qt3; then
-	    doicon "${FILESDIR}/doxywizard.png"
-	    make_desktop_entry doxywizard "DoxyWizard ${PV}" \
+		doicon "${FILESDIR}/doxywizard.png"
+		make_desktop_entry doxywizard "DoxyWizard ${PV}" \
 		"doxywizard.png" "Application;Development"
 	fi
 
@@ -142,11 +139,11 @@ src_install() {
 
 	# pdf and html manuals
 	if use doc; then
-	    insinto /usr/share/doc/${PF}
-	    if use latex; then
+		insinto /usr/share/doc/${PF}
+		if use latex; then
 		doins latex/doxygen_manual.pdf
-	    fi
-	    dohtml -r html/*
+		fi
+		dohtml -r html/*
 	fi
 }
 
