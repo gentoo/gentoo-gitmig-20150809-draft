@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.1.ebuild,v 1.1 2009/05/02 08:52:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.1.ebuild,v 1.2 2009/05/30 20:00:27 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -115,7 +115,7 @@ src_install() {
 	cd "${WORKDIR}"/${MY_PN}
 
 	dodoc Docs/*.txt
-	dohtml Docs/*.{htm,html}
+	dohtml -r readme.html Docs
 
 	insinto "${GAMES_DATADIR}"/${PN}
 
