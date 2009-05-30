@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unfonts-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.12 2009/05/27 10:57:33 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts-extra/ChangeLog,v 1.13 2009/05/30 17:04:58 nixnut Exp $
+
+  30 May 2009; nixnut <nixnut@gentoo.org>
+  unfonts-extra-1.0.2_pre080608.ebuild:
+  ppc stable #271132
 
   27 May 2009; Christian Faulhammer <fauli@gentoo.org>
   unfonts-extra-1.0.2_pre080608.ebuild:
