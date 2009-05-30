@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/gpe-dm-0.51-r1.ebuild,v 1.1 2009/05/30 15:19:41 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/gpe-dm-0.51-r1.ebuild,v 1.2 2009/05/30 18:40:25 mr_bones_ Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit eutils gpe autotools
@@ -46,4 +46,3 @@ pkg_postinst() {
 	einfo "If you need some X services to be started upon X initialization,"
 	einfo "add them to /etc/X11/gpe-dm/Xinit.d/ ."
 }
-
