@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.24 2008/07/09 07:54:49 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.25 2009/05/30 08:47:21 ulm Exp $
+
+  30 May 2009; Ulrich Mueller <ulm@gentoo.org> latex2rtf-1.9.19.ebuild:
+  Remove app-text/tetex from dependencies, bug 227443.
 
   09 Jul 2008; Alexis Ballier <aballier@gentoo.org> latex2rtf-1.9.19.ebuild:
   switch to virtual/texi2dvi, bug #231138

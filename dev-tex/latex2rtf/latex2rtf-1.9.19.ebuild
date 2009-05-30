@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.19.ebuild,v 1.6 2008/07/09 07:54:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/latex2rtf-1.9.19.ebuild,v 1.7 2009/05/30 08:47:21 ulm Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,7 +18,6 @@ DEPEND="virtual/latex-base
 	doc? ( virtual/texi2dvi )
 	test? ( || (
 		( dev-texlive/texlive-langgerman dev-texlive/texlive-fontsrecommended )
-		app-text/tetex
 		app-text/ptex
 		)
 		dev-tex/latex2html
