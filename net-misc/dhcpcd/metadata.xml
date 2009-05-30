@@ -10,6 +10,5 @@
   <longdescription lang="ja">DHCP クライアントです。</longdescription>
   <use>
     <flag name="compat">Enable commandline compability with dhcpcd-3.x</flag>
-    <flag name="vram">Disable DUID due to volatile media, such as a LiveCD</flag>
   </use>
 </pkgmetadata>
