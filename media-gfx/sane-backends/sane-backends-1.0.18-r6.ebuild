@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r6.ebuild,v 1.11 2009/02/07 19:56:08 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.18-r6.ebuild,v 1.12 2009/05/30 09:10:49 ulm Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/jpeg-6b
 DEPEND="${RDEPEND}
 	doc? (
 		virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex )
+		|| ( dev-texlive/texlive-latexextra app-text/ptex )
 	)
 	>=sys-apps/sed-4"
 
