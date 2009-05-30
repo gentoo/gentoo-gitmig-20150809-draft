@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/maruku
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.4 2008/09/02 06:04:27 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/maruku/ChangeLog,v 1.5 2009/05/30 08:40:57 graaff Exp $
+
+*maruku-0.6.0 (30 May 2009)
+
+  30 May 2009; Hans de Graaff <graaff@gentoo.org> -maruku-0.5.6.ebuild,
+  -maruku-0.5.7.ebuild, maruku-0.5.9.ebuild, +maruku-0.6.0.ebuild:
+  Version bump. tetex is no longer in the tree, refer to texlive instead;
+  thanks to ulm for pointing this out. Remove old versions.
 
 *maruku-0.5.9 (02 Sep 2008)
 
