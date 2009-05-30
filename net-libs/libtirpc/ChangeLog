@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.7 2009/05/30 21:16:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.8 2009/05/30 21:28:12 vapier Exp $
+
+  30 May 2009; Mike Frysinger <vapier@gentoo.org> libtirpc-0.2.0.ebuild,
+  +files/libtirpc-0.2.0-hppa-float.patch:
+  Fix build failure on hppa and add keywords for all.
 
   30 May 2009; Mike Frysinger <vapier@gentoo.org> libtirpc-0.2.0.ebuild:
   Restore /etc/netconfig file.
