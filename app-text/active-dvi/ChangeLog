@@ -1,6 +1,10 @@
 # ChangeLog for app-text/active-dvi
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.27 2009/03/07 14:09:07 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/ChangeLog,v 1.28 2009/05/30 07:08:07 ulm Exp $
+
+  30 May 2009; Ulrich Mueller <ulm@gentoo.org> active-dvi-1.7.3.ebuild:
+  Remove app-text/tetex from dependencies, bug 227443. Move epatch to
+  src_prepare to make repoman happy.
 
   07 Mar 2009; Thomas Anderson <gentoofan23@gentoo.org>
   active-dvi-1.7.3.ebuild:

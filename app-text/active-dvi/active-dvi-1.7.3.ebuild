@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.8 2009/03/07 14:09:07 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.7.3.ebuild,v 1.9 2009/05/30 07:08:07 ulm Exp $
 
 EAPI="2"
 
@@ -25,16 +25,15 @@ RDEPEND=">=dev-lang/ocaml-3.10.0[ocamlopt?,tk?]
 	virtual/ghostscript
 	x11-libs/libXinerama"
 DEPEND="${RDEPEND}
-	|| ( ( dev-texlive/texlive-pstricks dev-texlive/texlive-pictures ) app-text/tetex app-text/ptex )
+	|| ( ( dev-texlive/texlive-pstricks dev-texlive/texlive-pictures )
+		app-text/ptex )
 	x11-proto/xineramaproto
 	dev-ml/findlib
 	dev-tex/hevea"
 
 DOCS="README TODO"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-asneeded.patch"
 	AT_M4DIR="." eautoreconf
 }
