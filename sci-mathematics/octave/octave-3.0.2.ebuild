@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.2.ebuild,v 1.1 2008/08/22 22:05:44 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.0.2.ebuild,v 1.2 2009/05/30 08:41:23 ulm Exp $
 
 inherit flag-o-matic fortran xemacs-elisp-common
 
@@ -36,7 +36,6 @@ DEPEND="${RDEPEND}
 	virtual/latex-base
 	sys-apps/texinfo
 	|| ( dev-texlive/texlive-genericrecommended
-		app-text/tetex
 		app-text/ptex )
 	dev-util/dejagnu
 	dev-util/gperf
