@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-2.1-r2.ebuild,v 1.18 2008/09/04 06:29:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-2.1-r2.ebuild,v 1.19 2009/05/30 09:02:45 ulm Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86 ~sparc
 IUSE="doc latex"
 
 RDEPEND="latex? ( virtual/latex-base
-		|| ( dev-texlive/texlive-latexextra app-text/tetex app-text/ptex ) )"
+		|| ( dev-texlive/texlive-latexextra app-text/ptex ) )"
 
 src_install() {
 	distutils_src_install
