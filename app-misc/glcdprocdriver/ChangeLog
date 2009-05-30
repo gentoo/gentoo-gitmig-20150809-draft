@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/glcdprocdriver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.10 2009/02/15 21:20:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/ChangeLog,v 1.11 2009/05/30 18:49:16 rbu Exp $
+
+*glcdprocdriver-0.0.5 (30 May 2009)
+
+  30 May 2009; Robert Buchholz <rbu@gentoo.org>
+  +files/glcdprocdriver-gcc44.patch, -glcdprocdriver-0.0.4.ebuild,
+  +glcdprocdriver-0.0.5.ebuild:
+  Version bump including the gcc-4.3 patch, and adding a gcc-4.4 patch.
+  Bug #271619.
 
   15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/glcdprocdriver-gcc43.patch, glcdprocdriver-0.0.3-r2.ebuild,

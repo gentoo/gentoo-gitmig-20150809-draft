@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.4.ebuild,v 1.3 2009/02/15 21:20:46 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glcdprocdriver/glcdprocdriver-0.0.5.ebuild,v 1.1 2009/05/30 18:49:16 rbu Exp $
 
+EAPI=2
 inherit multilib toolchain-funcs eutils
 
 DESCRIPTION="Glue library for the glcdlib LCDproc driver based on GraphLCD"
@@ -17,10 +18,8 @@ RDEPEND=${DEPEND}
 
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PN}-gcc43.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-gcc44.patch
 }
 
 src_compile() {
