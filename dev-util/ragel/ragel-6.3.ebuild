@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.5 2008/12/14 16:02:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ragel/ragel-6.3.ebuild,v 1.6 2009/05/30 08:26:31 ulm Exp $
 
 EAPI=2
 
@@ -17,10 +17,8 @@ IUSE="doc vim-syntax"
 
 DEPEND="
 	doc? (
-		|| (
-			( app-text/texlive-core dev-texlive/texlive-latexextra )
-			app-text/tetex
-		)
+		app-text/texlive-core
+		dev-texlive/texlive-latexextra
 		media-gfx/transfig
 	)"
 RDEPEND=""
