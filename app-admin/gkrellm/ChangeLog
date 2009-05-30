@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.171 2009/05/29 13:05:21 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.172 2009/05/30 19:26:40 nixnut Exp $
+
+  30 May 2009; nixnut <nixnut@gentoo.org> gkrellm-2.3.2-r1.ebuild:
+  ppc stable #271674
 
 *gkrellm-2.3.2-r1 (29 May 2009)
 

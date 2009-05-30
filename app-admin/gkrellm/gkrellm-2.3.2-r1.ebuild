@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.3.2-r1.ebuild,v 1.1 2009/05/29 13:05:21 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.3.2-r1.ebuild,v 1.2 2009/05/30 19:26:40 nixnut Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://members.dslextreme.com/users/billw/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="hddtemp gnutls lm_sensors nls ssl ntlm X kernel_FreeBSD"
 
 RDEPEND=">=dev-libs/glib-2
