@@ -37,7 +37,3 @@ media-sound/amarok real
 # support for internal and external codecs.  Now only enables
 # internal support.
 <media-video/mplayer-1.0_rc2_p20090226 real
-
-# Steve Dibb <beandog@gentoo.org> (30 May 2009)
-# Mask mplayer libnut dep on all but x86/amd64
-media-video/mplayer nut
