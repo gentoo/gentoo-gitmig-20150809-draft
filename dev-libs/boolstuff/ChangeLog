@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/boolstuff
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.1 2009/05/30 18:16:18 hwoarang Exp $
+
+*boolstuff-0.1.12 (30 May 2009)
+
+  30 May 2009; Markos Chandras <hwoarang@gentoo.org>
+  +boolstuff-0.1.12.ebuild, +metadata.xml:
+  Initial commit of boolstuff library. Partially fixes bug 257933. Thanks to
+  Mike Gualtieri <mike.gualtieri@gmail.com> for the initial ebuild. Giorgos
+  Kargiotakis <kargig@void.gr> will be proxy maintainer.
+
