@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.10 2008/06/14 00:50:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.11 2009/05/30 02:07:14 darkside Exp $
 
-inherit ccc
+inherit toolchain-funcs
 
 DESCRIPTION="Console based Rhyming Dictionary"
 HOMEPAGE="http://rhyme.sourceforge.net/"
@@ -10,24 +10,25 @@ SRC_URI="mirror://sourceforge/rhyme/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="alpha x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.3
 	>=sys-libs/readline-4.3
 	>=sys-libs/gdbm-1.8.0"
+RDEPEND="${DEPEND}"
 
-src_compile() {
-	# gcc is hardcoded, switch to user specified compiler
-	replace-cc-hardcode
-
-	# CFLAGS are hardcoded, replace with user specified flags
-	sed -i "s#\(^FLAGS =\).*#\1 ${CFLAGS}#g" "${S}"/Makefile
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 
 	# termcap is used by default, switch to ncurses
 	sed -i 's/-ltermcap/-lncurses/g' "${S}"/Makefile
+}
 
-	emake -j1 || die "emake failed"
+src_compile() {
+	# Disable parallell building wrt bug #125967
+	emake -j1 CC="$(tc-getCC)" FLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {

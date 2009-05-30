@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.11 2008/06/14 00:50:18 darkside Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.12 2009/05/30 02:07:14 darkside Exp $
+
+  30 May 2009; Jeremy Olexa <darkside@gentoo.org> rhyme-0.9.ebuild:
+  (non maintainer commit) Respect CC and QA fixes, bug 243744 by Espen Hustad
 
   14 Jun 2008; Jeremy Olexa <darkside@gentoo.org> rhyme-0.9.ebuild:
   doesn't work with parallel building, bug #125967
