@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/ultrastar-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.7 2009/04/29 20:09:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ChangeLog,v 1.8 2009/05/30 16:25:54 mr_bones_ Exp $
+
+  30 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/ultrastar-ng-0.2.1-gcc43.patch, ultrastar-ng-0.2.1-r1.ebuild:
+  add patch for building with gcc43 - submitted by fox via bug #271222
 
   09 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   ultrastar-ng-0.2.1-r1.ebuild:

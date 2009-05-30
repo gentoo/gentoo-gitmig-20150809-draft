@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.7 2009/04/29 20:09:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/ultrastar-ng/ultrastar-ng-0.2.1-r1.ebuild,v 1.8 2009/05/30 16:25:54 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -47,6 +47,7 @@ S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-bash4.patch # bug #267316
+	epatch "${FILESDIR}"/${P}-gcc43.patch # bug #271222
 	touch docs/ultrastarng.6  # no, don't try to rebuild the man page
 	eautoreconf
 }
