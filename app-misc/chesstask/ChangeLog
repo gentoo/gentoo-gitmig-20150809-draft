@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/chesstask
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.14 2008/09/02 18:22:42 aballier Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.15 2009/05/30 06:58:10 ulm Exp $
+
+  30 May 2009; Ulrich Mueller <ulm@gentoo.org> chesstask-2.0.ebuild:
+  Remove app-text/tetex from dependencies, bug 227443. Add explicit RDEPEND.
 
   02 Sep 2008; Alexis Ballier <aballier@gentoo.org> chesstask-2.0.ebuild:
   adjust deps for texlive, dont depend on virtual/tetex
