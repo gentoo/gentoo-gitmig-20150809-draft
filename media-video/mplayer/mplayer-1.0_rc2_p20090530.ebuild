@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090530.ebuild,v 1.1 2009/05/30 21:53:39 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090530.ebuild,v 1.2 2009/05/30 22:11:25 beandog Exp $
 
 EAPI="2"
 
@@ -128,7 +128,7 @@ RDEPEND="sys-libs/ncurses
 	)"
 
 DEPEND="${RDEPEND}
-	amd64? ( dev-lang/yasm ) 
+	amd64? ( dev-lang/yasm )
 	doc? ( dev-libs/libxslt )
 	dga? ( x11-proto/xf86dgaproto )
 	dxr3? ( media-video/em8300-libraries )
@@ -139,14 +139,14 @@ DEPEND="${RDEPEND}
 		   x11-proto/xf86vidmodeproto )
 	X? ( x11-proto/xextproto
 		 x11-proto/xf86vidmodeproto )
-	x86? ( dev-lang/yasm ) 
+	x86? ( dev-lang/yasm )
 	x86-fbsd? ( dev-lang/yasm )
 	xscreensaver? ( x11-proto/scrnsaverproto )
 	iconv? ( virtual/libiconv )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 pkg_setup() {
 
