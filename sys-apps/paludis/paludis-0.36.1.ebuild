@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.36.1.ebuild,v 1.2 2009/04/24 22:28:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.36.1.ebuild,v 1.3 2009/05/30 09:40:56 gentoofan23 Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -84,7 +84,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	dodoc AUTHORS README ChangeLog NEWS
+	dodoc AUTHORS README NEWS
 
 	BASH_COMPLETION_NAME="adjutrix" dobashcompletion bash-completion/adjutrix
 	BASH_COMPLETION_NAME="paludis" dobashcompletion bash-completion/paludis

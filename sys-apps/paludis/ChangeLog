@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.130 2009/04/23 12:57:27 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.131 2009/05/30 09:40:56 gentoofan23 Exp $
+
+  30 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  paludis-0.36.0.ebuild, paludis-0.36.1.ebuild:
+  Remove 'dodoc ChangeLog' call, Changelog no longer exists
 
 *paludis-0.36.1 (23 Apr 2009)
 
