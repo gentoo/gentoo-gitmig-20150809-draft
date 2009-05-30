@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.3 2009/05/29 02:17:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.4 2009/05/30 21:31:18 beandog Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit eutils flag-o-matic multilib subversion
 IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +amrnb +amrwb arts +ass
 bidi bindist bl +cddb +cdio cdparanoia cpudetection custom-cflags
 custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
-+enca +encode esd +faac +faad fbcon ftp gif ggi -gtk +iconv ipv6 jack
++enca +encode esd +faac +faad fbcon ftp gif ggi -gmplayer +iconv ipv6 jack
 joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
 mmxext mng +mp2 +mp3 musepack nas +nemesi +network nut openal +opengl +osdmenu
 oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba
@@ -34,7 +34,7 @@ SRC_URI="!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.
 	!iconv? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 		mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 		mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
-	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
+	gmplayer? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )"
 
 DESCRIPTION="Media Player for Linux"
@@ -76,7 +76,7 @@ RDEPEND="sys-libs/ncurses
 	gif? ( media-libs/giflib )
 	ggi? ( media-libs/libggi
 		media-libs/libggiwmh )
-	gtk? ( media-libs/libpng
+	gmplayer? ( media-libs/libpng
 		x11-libs/libXxf86vm
 		x11-libs/libXext
 		x11-libs/libXi
@@ -135,7 +135,7 @@ DEPEND="${RDEPEND}
 	xinerama? ( x11-proto/xineramaproto )
 	xv? ( x11-proto/videoproto
 		  x11-proto/xf86vidmodeproto )
-	gtk? ( x11-proto/xextproto
+	gmplayer? ( x11-proto/xextproto
 		   x11-proto/xf86vidmodeproto )
 	X? ( x11-proto/xextproto
 		 x11-proto/xf86vidmodeproto )
@@ -164,10 +164,9 @@ pkg_setup() {
 		elog "output messages.  See bug #228799."
 	fi
 
-	if use gtk; then
+	if use gmplayer; then
 		ewarn ""
-		ewarn "You've enabled the 'gtk' use flag which will build"
-		ewarn "GMPlayer, which is no longer actively developed upstream"
+		ewarn "GMPlayer is no longer actively developed upstream"
 		ewarn "and is not supported by Gentoo.  There are alternatives"
 		ewarn "for a GUI frontend: smplayer, gnome-mplayer and kmplayer."
 	fi
@@ -219,7 +218,10 @@ src_unpack() {
 			font-arial-cp1250.tar.bz2
 	fi
 
-	use gtk && unpack "Blue-${BLUV}.tar.bz2"
+
+	cd "${WORKDIR}"
+
+	use gmplayer && unpack "Blue-${BLUV}.tar.bz2"
 
 	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.bz2"
 
@@ -367,7 +369,7 @@ src_configure() {
 		--disable-mp3lib"
 	use schroedinger || myconf="${myconf} --disable-libschroedinger-lavc"
 	use xanim && myconf="${myconf} --xanimcodecsdir=/usr/lib/xanim/mods"
-	! use png && ! use gtk && myconf="${myconf} --disable-png"
+	! use png && ! use gmplayer && myconf="${myconf} --disable-png"
 	for x in gif jpeg live mad mng musepack pnm speex tga theora xanim; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
@@ -443,7 +445,7 @@ src_configure() {
 
 	# GTK gmplayer gui
 	# Unsupported by Gentoo, upstream has dropped development
-	myconf="${myconf} $(use_enable gtk gui)"
+	myconf="${myconf} $(use_enable gmplayer gui)"
 
 	if use xv; then
 		if use xvmc; then
@@ -558,7 +560,7 @@ src_install() {
 	use doc && dohtml -r "${S}"/DOCS/HTML/*
 
 	# Install the default Skin and Gnome menu entry
-	if use gtk; then
+	if use gmplayer; then
 		dodir /usr/share/mplayer/skins
 		cp -r "${WORKDIR}/Blue" \
 			"${D}/usr/share/mplayer/skins/default" || die "cp skins died"
