@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pstplus/pstplus-1.4.ebuild,v 1.1 2009/04/04 16:03:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pstplus/pstplus-1.4.ebuild,v 1.2 2009/05/30 08:31:32 ulm Exp $
 
 EAPI=1
 
@@ -20,7 +20,6 @@ RDEPEND="${DEPEND}
 	virtual/latex-base
 	|| (
 		dev-texlive/texlive-pstricks
-		app-text/tetex
 		app-text/ptex
 	)
 	app-text/psutils
