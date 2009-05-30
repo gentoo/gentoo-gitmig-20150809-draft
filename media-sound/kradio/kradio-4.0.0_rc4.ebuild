@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.0_rc4.ebuild,v 1.1 2009/05/30 21:26:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kradio/kradio-4.0.0_rc4.ebuild,v 1.2 2009/05/30 21:41:28 scarabeus Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ DEPEND="
 	)
 	ffmpeg? (
 		>=media-libs/libmms-0.4
-		<media-video/ffmpeg-0.5
+		>=media-video/ffmpeg-0.5
 	)
 "
 RDEPEND="${DEPEND}"
