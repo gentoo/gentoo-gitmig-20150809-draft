@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/libkdcraw-0.1.9.ebuild,v 1.1 2009/05/25 14:47:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkdcraw/libkdcraw-0.1.9.ebuild,v 1.2 2009/05/30 16:21:35 nixnut Exp $
 
 EAPI=1
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/kipi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="3.5"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="media-libs/jpeg
