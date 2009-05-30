@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.1 2009/04/13 17:27:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.6.ebuild,v 1.2 2009/05/30 08:58:20 ulm Exp $
 
 EAPI=2
 inherit elisp-common bash-completion autotools
@@ -19,7 +19,6 @@ DEPEND="virtual/latex-base
 			   dev-texlive/texlive-pictures
 			   dev-texlive/texlive-latexextra
 			   dev-tex/xcolor )
-			app-text/tetex
 			app-text/ptex )
 		emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}"

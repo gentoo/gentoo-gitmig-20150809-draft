@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.5 2008/03/17 02:19:29 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/epix/epix-1.2.1.ebuild,v 1.6 2009/05/30 08:58:20 ulm Exp $
 
 inherit elisp-common flag-o-matic toolchain-funcs bash-completion
 
@@ -18,7 +18,6 @@ DEPEND="virtual/latex-base
 				dev-texlive/texlive-pictures
 				dev-texlive/texlive-latexextra
 				dev-tex/xcolor )
-			app-text/tetex
 			app-text/ptex )
 		emacs? ( virtual/emacs )"
 
