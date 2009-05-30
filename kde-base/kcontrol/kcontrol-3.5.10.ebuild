@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.2 2009/05/16 09:03:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/kcontrol-3.5.10.ebuild,v 1.3 2009/05/30 11:01:07 tampakrap Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -48,6 +48,8 @@ KMCOPYLIB="libkonq libkonq
 	libkicker kicker/libkicker
 	libtaskbar kicker/taskbar
 	libtaskmanager kicker/taskmanager"
+
+PATCHES=( "${FILESDIR}/${P}-gcc44.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack unpack

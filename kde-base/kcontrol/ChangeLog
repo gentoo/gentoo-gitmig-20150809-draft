@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.143 2009/05/16 09:03:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.144 2009/05/30 11:01:07 tampakrap Exp $
+
+  30 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  kcontrol-3.5.10.ebuild, +files/kcontrol-3.5.10-gcc44.patch:
+  Add patch for gcc-4.4, thanks to Robert Forster
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org> kcontrol-3.5.9.ebuild,
   kcontrol-3.5.10.ebuild:
