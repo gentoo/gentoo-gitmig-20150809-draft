@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.1 2008/10/24 09:19:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.2 2009/05/30 09:22:16 ulm Exp $
 
 inherit eutils autotools libtool mono
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen
 		virtual/latex-base
-		|| ( dev-texlive/texlive-fontsrecommended app-text/tetex app-text/ptex ) )"
+		|| ( dev-texlive/texlive-fontsrecommended app-text/ptex ) )"
 
 S="${WORKDIR}/${MY_P}"
 
