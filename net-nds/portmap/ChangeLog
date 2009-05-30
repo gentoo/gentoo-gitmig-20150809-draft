@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/portmap
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.46 2008/01/08 14:51:13 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.47 2009/05/30 20:50:39 vapier Exp $
+
+  30 May 2009; Mike Frysinger <vapier@gentoo.org> files/portmap.rc6:
+  Add check for SUNRPC_REGISTER_V4=y in kernel config.
 
   08 Jan 2008; Jeroen Roovers <jer@gentoo.org> portmap-6.0.ebuild:
   Stable for HPPA (bug #190182).

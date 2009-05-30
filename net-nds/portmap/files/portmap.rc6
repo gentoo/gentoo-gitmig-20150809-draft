@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/files/portmap.rc6,v 1.12 2007/06/13 07:52:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/files/portmap.rc6,v 1.13 2009/05/30 20:50:39 vapier Exp $
 
 depend() {
 	use net
@@ -9,7 +9,20 @@ depend() {
 	before xinetd
 }
 
+checkconfig() {
+	if [ -e /proc/config.gz ] ; then
+		if zcat /proc/config.gz | grep -s SUNRPC_REGISTER_V4=y ; then
+			eerror "portmap does not work with SUNRPC_REGISTER_V4=y;"
+			eerror "disable it or use the net-nds/rpcbind package."
+			return 1
+		fi
+	fi
+	return 0
+}
+
 start() {
+	checkconfig || return 1
+
 	ebegin "Starting portmap"
 	start-stop-daemon --start --quiet --exec /sbin/portmap -- ${PORTMAP_OPTS}
 	local ret=$?
