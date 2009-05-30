@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9854 2009/05/30 00:42:08 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9855 2009/05/30 01:26:38 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,27 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
+# Masked for removal in 60 days, unmaintained. Binary package in /usr. bug
+# 240029
+app-misc/cbtracker
+
+# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
+# Masked for removal in 60 days. Multiple bugs, doesn't build, version bump
+# pending, unmaintained. bug 265668
+sys-libs/libuser
+
+# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
+# Masked for removal in 60 days. Multiple bugs, upstream is dead, crashes with
+# stable gtk+ bug 271214
+app-editors/nvu
+
+# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
+# Masked for removal in 60 days. Doesn't build, version bump pending. Designed
+# for really old PDA hardware (circa '90s) - will need a maintainer that has
+# hardware. bug 227601
+app-pda/plptools
 
 # Peter Volkov <pva@gentoo.org> (29 May 2009)
 # Masked development version. Play with it, it works!
@@ -870,6 +891,8 @@ dev-cpp/bakery
 # Ulrich Mueller <ulm@gentoo.org> (10 May 2008)
 # LessTif is unsupported since it has open issues with several packages.
 # See bug 193505 and bug 204249. You are on your own here.
+# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
+# Treecleaners will remove in 30 days. bug 193505
 x11-libs/lesstif
 
 # Markus Ullmann <jokey@gentoo.org> (21 Apr 2008)
