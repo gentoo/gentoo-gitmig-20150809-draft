@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/lincity-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.17 2009/04/06 20:53:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/ChangeLog,v 1.18 2009/05/30 06:25:10 mr_bones_ Exp $
+
+  30 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  lincity-ng-2.0.ebuild:
+  only use the -j part of MAKEOPTS (bug #271826)
 
   06 Apr 2009; Markus Meier <maekke@gentoo.org> lincity-ng-2.0.ebuild:
   amd64/x86 stable, bug #264705

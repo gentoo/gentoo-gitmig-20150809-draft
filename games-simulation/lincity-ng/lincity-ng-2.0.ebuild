@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.2 2009/04/06 20:53:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/lincity-ng/lincity-ng-2.0.ebuild,v 1.3 2009/05/30 06:25:10 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	dev-util/ftjam"
 
 src_compile() {
-	local jamopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+	local jamopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[0-9]\+\).*/\1/; p }")
 	jam ${jamopts} || die "jam failed"
 }
 
