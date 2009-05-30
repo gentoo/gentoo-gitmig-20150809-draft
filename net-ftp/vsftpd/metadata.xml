@@ -9,8 +9,4 @@
 		Very Secure FTP Daemon written with speed, size and security
 		in mind
 	</longdescription>
-	<use>
-		<flag name='logrotate'>Use <pkg>app-admin/logrotate</pkg> for rotating
-			logs</flag>
-	</use>
 </pkgmetadata>
