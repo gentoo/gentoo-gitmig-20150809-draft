@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/redir
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.10 2008/04/21 18:04:50 phreak Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/redir/ChangeLog,v 1.11 2009/05/30 02:00:17 darkside Exp $
+
+  30 May 2009; Jeremy Olexa <darkside@gentoo.org> redir-2.2.1.ebuild:
+  (non maintainer commit) Respect flags and QA fixes, bug 241080 by Espen Hustad
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
