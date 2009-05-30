@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-reset/quodlibet-reset-4353.ebuild,v 1.1 2009/05/30 15:15:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-reset/quodlibet-reset-4353.ebuild,v 1.2 2009/05/30 15:48:00 ssuominen Exp $
 
 inherit multilib python
 
 DESCRIPTION="Quod Libet plugin to reset ratings, play counts, skip counts, etc."
-HOMEPAGE="http://svn.sacredchao.net/svn/quodlibet/trunk/plugins/songsmenu/cddb.py"
+HOMEPAGE="http://svn.sacredchao.net/svn/quodlibet/trunk/plugins/songsmenu/reset.py"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
 
