@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2-r2.ebuild,v 1.3 2009/05/25 19:56:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2-r2.ebuild,v 1.4 2009/05/30 17:09:09 nixnut Exp $
 
 ARTS_REQUIRED="never"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="kipi"
 
 DEPEND="kipi? ( >=media-plugins/kipi-plugins-0.1.0_beta2 )
