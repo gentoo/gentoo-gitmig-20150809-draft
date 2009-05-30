@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.6.ebuild,v 1.10 2008/11/06 02:31:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.1.0-r1.ebuild,v 1.1 2009/05/30 11:28:41 armin76 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,15 +11,14 @@ SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
-IUSE="caps logrotate pam tcpd ssl selinux xinetd"
+IUSE="caps pam tcpd ssl selinux xinetd"
 
-DEPEND="caps? ( sys-libs/libcap )
+DEPEND="caps? ( >=sys-libs/libcap-2 )
 	pam? ( virtual/pam )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )"
 RDEPEND="${DEPEND}
 	net-ftp/ftpbase
-	logrotate? ( app-admin/logrotate )
 	selinux? ( sec-policy/selinux-ftpd )
 	xinetd? ( sys-apps/xinetd )"
 
@@ -28,11 +27,10 @@ src_unpack() {
 	cd "${S}"
 
 	# Patch the source, config and the manpage to use /etc/vsftpd/
-	epatch "${FILESDIR}/${PN}-2.0.3-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-2.1.0-gentoo.patch"
 
 	# Fix building without the libcap
-	epatch "${FILESDIR}/${PN}-2.0.6-caps.patch"
-	has_version "<sys-libs/libcap-2" && epatch "${FILESDIR}"/${PN}-2.0.6-libcap1.patch
+	epatch "${FILESDIR}/${PN}-2.1.0-caps.patch"
 
 	# Configure vsftpd build defaults
 	use tcpd && echo "#define VSF_BUILD_TCPWRAPPERS" >> builddefs.h
@@ -42,7 +40,7 @@ src_unpack() {
 	# Ensure that we don't link against libcap unless asked
 	if ! use caps ; then
 		sed -i '/^#define VSF_SYSDEP_HAVE_LIBCAP$/ d' sysdeputil.c
-		sed -i '/libcap/ d' vsf_findlibs.sh
+		epatch "${FILESDIR}"/${PN}-2.1.0-dont-link-caps.patch
 	fi
 
 	# Let portage control stripping
@@ -72,10 +70,8 @@ src_install() {
 	insinto /etc/vsftpd
 	newins vsftpd.conf vsftpd.conf.example
 
-	if use logrotate ; then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/vsftpd.logrotate" vsftpd
-	fi
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/vsftpd.logrotate" vsftpd
 
 	if use xinetd ; then
 		insinto /etc/xinetd.d
@@ -88,10 +84,10 @@ src_install() {
 }
 
 pkg_preinst() {
-	# If we use xinetd, then we comment out listen=YES
+	# If we use xinetd, then we set listen=NO
 	# so that our default config works under xinetd - fixes #78347
 	if use xinetd ; then
-		sed -i '/\listen=YES/s/^/#/g' "${D}"/etc/vsftpd/vsftpd.conf.example
+		sed -i 's/listen=YES/listen=NO/g' "${D}"/etc/vsftpd/vsftpd.conf.example
 	fi
 }
 

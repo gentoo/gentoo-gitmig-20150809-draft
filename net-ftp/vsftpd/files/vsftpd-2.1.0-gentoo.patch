@@ -75,17 +75,6 @@ diff -ur vsftpd-2.1.0.orig/vsftpd.conf vsftpd-2.1.0/vsftpd.conf
  #
  # The default compiled in settings are fairly paranoid. This sample file
  # loosens things up a bit, to make the ftp daemon more usable.
-@@ -8,6 +8,10 @@
- # Please read the vsftpd.conf.5 manual page to get a full idea of vsftpd's
- # capabilities.
- #
-+# Listen on IPv4. xinet users must set NO or comment out
-+# otherwise it must be set YES
-+listen=YES
-+#
- # Allow anonymous FTP? (Beware - allowed by default if you comment this out).
- anonymous_enable=YES
- #
 @@ -87,14 +91,14 @@
  # useful for combatting certain DoS attacks.
  #deny_email_enable=YES
