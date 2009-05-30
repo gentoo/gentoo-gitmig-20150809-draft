@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9853 2009/05/29 20:42:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9854 2009/05/30 00:42:08 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -457,24 +457,11 @@ net-dialup/qlcr
 net-libs/libinfinity
 >=app-editors/gobby-0.4.91
 
-# Jeremy Olexa <darkside@gentoo.org> (07 Apr 2009)
-# Not supported in Gentoo anymore, use 'eselect bashcomp' now
-# Comments on bug 253878 - removed in 30 days.
-app-shells/bash-completion-config
-
 # Paul Varner <fuzzyray@gentoo.org> (06 Apr 2009)
 # Dead upstream and has issues with newer portages.
 # Due to popular demand and no suitable replacement, it will stay in the tree
 # in a masked status until it completely breaks or is replaced.
 app-portage/udept
-
-# Ulrich Mueller <ulm@gentoo.org> (2 Apr 2009)
-# De-supported by upstream since three years, see http://tug.org/teTeX/
-# Please use app-text/texlive as a replacement. A migration guide is at
-# http://www.gentoo.org/proj/en/tex/texlive-migration-guide.xml
-# Package has open security issues in bug 264598.
-# Masked for removal in 60 days, bug 227443.
-app-text/tetex
 
 # Tony Vroon <chainsaw@gentoo.org> (30 Mar 2009)
 # The v4 branch of DHCP has a new build system and a "minimal" dhclient-only
@@ -501,50 +488,9 @@ sys-apps/sreadahead
 # Live ebuild for testing / debugging
 ~media-video/mplayer-9999
 
-# Jeremy Olexa <darkside@gentoo.org> (23 Mar 2009)
-# Masked for removal in 60 days. Broken with gcc-4.3, other issue, unmaintained.
-# bug 227743
-x11-misc/lavaps
-
 # Marijn Schouten <hkBst@gentoo.org> (22 Mar 2009)
 # Masked for removal. Dead upstream, does not build anymore. Bug 152060.
 dev-scheme/guile-pg
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days because of security issues. Comment on
-# bug 251612 if desired.
-sci-astronomy/maestro
-sci-astronomy/maestro-data
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days. Broken with gcc-4.3, unmaintained & nothing
-# depends on it. bug 251747
-x11-libs/xclass
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days. Broken with gcc-4.3, not much interest in
-# fixing. bug 251553
-net-p2p/knapster2
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days. Broken with gcc-4.3, not much interest in
-# fixing. bug 250786
-dev-embedded/gezel
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days. Dead upstream (since 2001), file collisions,
-# ebuild needs love. bug 248305
-sys-devel/subterfugue
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days. Dead upstream (vanished), broken with gcc-4.3 &
-# wxGTK-2.8, many alternatives exist, bug 251781
-x11-misc/jaffm
-
-# Jeremy Olexa <darkside@gentoo.org> (21 Mar 2009)
-# Masked for removal in 60 days. Dead upstream, broken with gcc-4.3, maybe use
-# kde-misc/filelight instead. bug 251145
-kde-misc/kgraphspace
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (21 Mar 2009)
 # Masked because of the dep on =x11-libs/qt-4.3*:4. Waiting for jokey
@@ -731,12 +677,6 @@ dev-util/w32api
 # Masked due to being broken with portage 2.1 and 2.2.
 # Users can use either the unstable versions or switch to app-portage/eix
 =app-portage/esearch-0.7.1
-
-# Jeremy Olexa <darkside@gentoo.org> (20 Dec 2008)
-# Removed in 60 days, multiple bugs - does not compile with recent kernels.
-# bug 251795
-# Update, user is working on this in stated bug.
-sys-fs/cloop
 
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
@@ -1441,7 +1381,3 @@ games-fps/unreal-tournament-goty
 games-fps/unreal-tournament-strikeforce
 games-fps/unreal-tournament-bonuspacks
 games-fps/aaut
-
-# <lu_zero@gentoo.org> (16 Mar 2003)
-# to be tested, seems unstable
-net-dialup/hcfusbmodem
