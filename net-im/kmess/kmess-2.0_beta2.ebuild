@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0_beta2.ebuild,v 1.1 2009/05/29 18:06:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0_beta2.ebuild,v 1.2 2009/05/30 18:57:32 scarabeus Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ DEPEND="${COMMONDEPEND}
 	xscreensaver? ( x11-proto/scrnsaverproto )
 "
 RDEPEND="${COMMONDEPEND}
-	!kdeprefix? ( !net-im/kmess:0 )
 	konqueror? ( >=kde-base/konqueror-${KDE_MINIMAL} )
 "
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.44 2009/05/29 18:06:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.45 2009/05/30 18:57:32 scarabeus Exp $
+
+  30 May 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kmess-2.0_beta2.ebuild:
+  Remove not needed blocker. Thx to Mr_Bones_ for spotting.
 
 *kmess-2.0_beta2 (29 May 2009)
 
