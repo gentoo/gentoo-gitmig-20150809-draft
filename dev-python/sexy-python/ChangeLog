@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.15 2009/05/03 21:12:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.16 2009/05/31 23:23:04 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> sexy-python-0.1.9.ebuild:
+  Marking sexy-python-0.1.9 ppc64 for bug 267709
 
   03 May 2009; Tobias Klausmann <klausman@gentoo.org>
   sexy-python-0.1.9.ebuild:
