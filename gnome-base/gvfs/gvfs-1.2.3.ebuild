@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.2.3.ebuild,v 1.3 2009/05/20 17:32:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gvfs/gvfs-1.2.3.ebuild,v 1.4 2009/05/31 19:05:55 eva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="archive avahi bluetooth cdda doc fuse gnome gnome-keyring gphoto2 hal samba"
 
 RDEPEND=">=dev-libs/glib-2.19
@@ -62,7 +62,13 @@ src_prepare() {
 
 	# Conditional patching purely to avoid eautoreconf
 	use gphoto2 && epatch "${FILESDIR}/${PN}-1.2.2-gphoto2-stricter-checks.patch"
-	use archive && epatch "${FILESDIR}/${PN}-1.2.2-expose-archive-backend.patch"
+
+	if use archive; then
+		epatch "${FILESDIR}/${PN}-1.2.2-expose-archive-backend.patch"
+		echo "mount-archive.desktop.in" >> po/POTFILES.in
+		echo "mount-archive.desktop.in.in" >> po/POTFILES.in
+	fi
+
 	use gphoto2 || use archive && eautoreconf
 }
 
