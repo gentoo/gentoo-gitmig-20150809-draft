@@ -1,10 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.2 2008/11/03 16:40:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.3 2009/05/31 11:05:13 scarabeus Exp $
 
 EAPI="1"
 
-inherit eutils kde-functions multilib
+CMAKE_USE_DIR="${S}/plugins/qt4-gui"
+inherit eutils kde-functions multilib cmake-utils
 
 DESCRIPTION="ICQ Client with v8 support"
 HOMEPAGE="http://www.licq.org/"
@@ -23,12 +24,11 @@ RDEPEND="kde? (
 	qt3? ( x11-libs/qt:3 )
 	qt4? ( x11-libs/qt-gui:4 )
 	nls? ( sys-devel/gettext )
-	ncurses? ( sys-libs/ncurses =dev-libs/cdk-5* )
+	ncurses? ( sys-libs/ncurses dev-libs/cdk )
 	crypt? ( app-crypt/gpgme:1 )
 	xosd? ( x11-libs/xosd )"
 DEPEND="${RDEPEND}
-	dev-libs/boost
-	qt4? ( >=dev-util/cmake-2.6.2 )"
+	dev-libs/boost"
 
 _generate_plugins_directories() {
 	PLUGINS="auto-reply email rms"
@@ -73,19 +73,16 @@ src_compile() {
 	done
 	# we like qt4 it uses cmake
 	if use qt4; then
-		cd "${S}"/plugins/qt4-gui
 		einfo "Compiling Licq: \"qt4-gui\"."
 		# Possible error because of one tiny issue we introduce in kde
 		# it is called kdeprefix and in that case you can't be sure where it
 		# find kde stuff. This is working only for -kdeprefix so someone will
 		# need to fix this later
-		myconf2="-DCMAKE_INSTALL_PREFIX=/usr"
 		# kde not yet workie
 		# use kde && myconf2="${myconf2} -DWITH_KDE=1"
 		use kde && ewarn "Sorry but kde4 support is duped and not working so not
 		enabling for now"
-		cmake . ${myconf2} || die "cmake failed"
-		emake || die "emake failed"
+		cmake-utils_src_compile
 	fi
 }
 
@@ -102,9 +99,8 @@ src_install() {
 		dodoc README* *.conf
 	done
 	if use qt4; then
-		cd "${S}"/plugins/qt4-gui
 		einfo "Installing Licq: \"qt4-gui\"."
-		emake DESTDIR="${D}" install || die
+		cmake-utils_src_install
 		docinto plugins/qt4-gui
 		dodoc doc/README*
 	fi

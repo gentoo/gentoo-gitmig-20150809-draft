@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.5-r1.ebuild,v 1.6 2008/07/05 16:48:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.5-r1.ebuild,v 1.7 2009/05/31 11:05:13 scarabeus Exp $
 
+EAPI="1"
 WANT_AUTOMAKE=1.9
 
 inherit autotools eutils kde-functions multilib
@@ -21,8 +22,8 @@ IUSE="ssl socks5 qt3 kde ncurses crypt msn debug"
 # need-kde and their eclass friends inject things into DEPEND. But we only
 # want them enabled if the kde USE flag is set. We get around this in the
 # following dep lines:
-RDEPEND="kde? ( >=kde-base/kdelibs-3.0 )"
-DEPEND="kde? ( >=kde-base/kdelibs-3.0 )
+RDEPEND="kde? ( >=kde-base/kdelibs-3.0:3.5 )"
+DEPEND="kde? ( >=kde-base/kdelibs-3.0:3.5 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	qt3? ( =x11-libs/qt-3* )
 	ncurses? ( sys-libs/ncurses >=dev-libs/cdk-4.9.11.20031210-r1 )
