@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/xsfcave-0.5.ebuild,v 1.4 2008/03/25 13:21:22 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xsfcave/xsfcave-0.5.ebuild,v 1.5 2009/05/31 02:14:29 nyhm Exp $
 
 inherit games
 
@@ -8,7 +8,7 @@ DESCRIPTION="A X11 sfcave clone"
 HOMEPAGE="http://xsfcave.idios.org"
 SRC_URI="mirror://sourceforge/scrap/${P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="amd64 x86 ~x86-fbsd"
 IUSE=""
