@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14.ebuild,v 1.2 2009/05/31 15:26:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14.ebuild,v 1.3 2009/05/31 23:31:41 ranger Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ LIBWRAP_PATCH_VER="2.2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ppc ppc64 ~sparc x86"
 IUSE="idled kerberos nntp pam replication +sieve snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
