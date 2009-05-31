@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/zemberek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.14 2009/04/29 16:36:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/zemberek/ChangeLog,v 1.15 2009/05/31 20:57:14 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> zemberek-2.1.1.ebuild:
+  amd64 stable, bug #253753
 
   29 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
   zemberek-2.1.1.ebuild:
