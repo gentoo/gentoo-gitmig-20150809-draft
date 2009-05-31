@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lcd-stuff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.14 2009/05/26 18:49:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd-stuff/ChangeLog,v 1.15 2009/05/31 22:08:44 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> lcd-stuff-0.1.5.ebuild:
+  amd64 stable, bug #270722
 
   26 May 2009; Christian Faulhammer <fauli@gentoo.org>
   lcd-stuff-0.1.5.ebuild:
