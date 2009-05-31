@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.7 2009/03/19 17:06:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.8 2009/05/31 13:03:43 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> pyenchant-1.1.5.ebuild:
+  ppc stable #266452
 
   19 Mar 2009; Joseph Jezak <josejx@gentoo.org> pyenchant-1.1.5.ebuild:
   Marked ~ppc.
