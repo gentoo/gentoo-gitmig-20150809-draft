@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nvi
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.68 2009/05/31 15:55:41 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.69 2009/05/31 18:27:48 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> nvi-1.81.6-r2.ebuild:
+  amd64/x86 stable, bug #271937
 
   31 May 2009; Brent Baude <ranger@gentoo.org> nvi-1.81.6-r2.ebuild:
   stable ppc64, bug 271937
