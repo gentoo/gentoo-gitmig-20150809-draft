@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03b.ebuild,v 1.5 2008/06/27 13:38:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/tint-0.03b.ebuild,v 1.6 2009/05/31 02:32:13 nyhm Exp $
 
 inherit eutils games
 
@@ -9,7 +9,7 @@ DESCRIPTION="Tint Is Not Tetris, a ncurses based clone of the original Tetris(tm
 HOMEPAGE="http://oasis.frogfoot.net/code/tint/"
 SRC_URI="http://oasis.frogfoot.net/code/tint/download/${PV}/${MY_P}.tar.gz"
 
-LICENSE="as-is"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""

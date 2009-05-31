@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tint
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.14 2008/06/27 13:38:29 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.15 2009/05/31 02:32:13 nyhm Exp $
+
+  31 May 2009; Tristan Heaven <nyhm@gentoo.org> tint-0.03b.ebuild:
+  Fix LICENSE: as-is -> BSD
 
   27 Jun 2008; Brent Baude <ranger@gentoo.org> tint-0.03b.ebuild:
   stable ppc64, bug 229479
