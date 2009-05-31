@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.55 2009/05/30 21:53:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.56 2009/05/31 15:36:57 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> perl-tk-804.028-r2.ebuild:
+  stable ppc64, bug 271789
 
   30 May 2009; Torsten Veller <tove@gentoo.org> perl-tk-804.028-r2.ebuild:
   Stable on x86 (#271789)
