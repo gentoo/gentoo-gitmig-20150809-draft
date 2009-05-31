@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.9 2008/12/06 16:13:36 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/greedy/greedy-0.2.0-r1.ebuild,v 1.10 2009/05/31 23:40:39 ranger Exp $
 
 inherit toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.kotinet.com/juhamattin/linux/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
