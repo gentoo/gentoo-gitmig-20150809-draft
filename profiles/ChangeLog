@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2716 2009/05/31 05:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2717 2009/05/31 15:47:20 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2009; Markus Meier <maekke@gentoo.org>
+  hardened/amd64/package.use.mask, hardened/linux/amd64/package.use.mask,
+  hardened/linux/x86/package.use.mask, hardened/x86/package.use.mask:
+  mask media-gfx/imagemagick[openmp] on hardened amd64/x86 profiles as it
+  requires >=sys-devel/gcc-4.3
 
   31 May 2009; Mike Frysinger <vapier@gentoo.org> package.mask:
   Automake-1.11 does not belong in p.mask.
