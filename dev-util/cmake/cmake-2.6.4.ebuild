@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.4.ebuild,v 1.9 2009/05/30 16:12:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.4.ebuild,v 1.10 2009/05/31 13:40:48 ranger Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.cmake.org/"
 SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${MY_P}.tar.gz"
 
 LICENSE="CMake"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 SLOT="0"
 IUSE="emacs qt4 vim-syntax"
 

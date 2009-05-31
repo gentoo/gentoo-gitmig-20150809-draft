@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.100 2009/05/30 16:12:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.101 2009/05/31 13:40:48 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> cmake-2.6.4.ebuild:
+  Marking cmake-2.6.4 ppc64 for bug 271444
 
   30 May 2009; nixnut <nixnut@gentoo.org> cmake-2.6.4.ebuild:
   ppc stable #271444
