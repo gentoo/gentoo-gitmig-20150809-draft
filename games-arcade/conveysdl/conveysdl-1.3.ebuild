@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.5 2009/02/02 09:02:35 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/conveysdl/conveysdl-1.3.ebuild,v 1.6 2009/05/31 01:41:23 nyhm Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs games
@@ -9,7 +9,7 @@ DESCRIPTION="Guide the blob along the conveyer belt collecting the red blobs"
 HOMEPAGE="http://www.cloudsprinter.com/software/conveysdl/"
 SRC_URI="http://www.cloudsprinter.com/software/conveysdl/${P/-/.}.tar"
 
-LICENSE="as-is"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
