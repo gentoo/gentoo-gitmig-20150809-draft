@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r1.ebuild,v 1.1 2009/05/31 16:24:46 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsexy/libsexy-0.1.11-r1.ebuild,v 1.2 2009/05/31 18:52:33 serkan Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="Sexy GTK+ Widgets"
 HOMEPAGE="http://www.chipx86.com/wiki/Libsexy"
