@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/memo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.24 2009/05/26 19:27:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/memo/ChangeLog,v 1.25 2009/05/31 13:32:52 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> memo-2.1.ebuild:
+  ppc stable #270738
 
   26 May 2009; Christian Faulhammer <fauli@gentoo.org> memo-2.1.ebuild:
   stable x86, bug 270738

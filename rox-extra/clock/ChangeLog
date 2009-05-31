@@ -1,6 +1,9 @@
 # ChangeLog for rox-extra/clock
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.12 2008/08/30 15:35:44 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/clock/ChangeLog,v 1.13 2009/05/31 13:34:07 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> clock-2.1.7.ebuild:
+  ppc stable #270738
 
   30 Aug 2008; Brent Baude <ranger@gentoo.org> clock-2.1.7.ebuild:
   Marking clock-2.1.7 ~ppc for bug 236057
