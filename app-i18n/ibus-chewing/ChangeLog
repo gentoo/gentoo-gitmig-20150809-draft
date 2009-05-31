@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/ibus-chewing
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ChangeLog,v 1.13 2009/05/07 23:45:56 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-chewing/ChangeLog,v 1.14 2009/05/31 13:24:22 matsuu Exp $
+
+*ibus-chewing-1.0.10.20090523 (31 May 2009)
+
+  31 May 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -ibus-chewing-1.0.4.20090323.ebuild, -ibus-chewing-1.0.5.20090330.ebuild,
+  -ibus-chewing-1.0.6.20090403.ebuild, -ibus-chewing-1.0.7.20090414.ebuild,
+  +ibus-chewing-1.0.10.20090523.ebuild:
+  Version bumped. Removed old versions.
 
 *ibus-chewing-1.0.8.20090428 (07 May 2009)
 
