@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.4.ebuild,v 1.1 2009/05/31 17:02:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.4.ebuild,v 1.2 2009/05/31 23:36:16 williamh Exp $
 
 inherit linux-mod
 
 DESCRIPTION="The speakup linux kernel based screen reader."
 HOMEPAGE="http://linux-speakup.org"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="ftp://linux-speakup.org/pub/speakup/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
