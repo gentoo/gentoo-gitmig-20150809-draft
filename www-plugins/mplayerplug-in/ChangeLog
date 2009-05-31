@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/mplayerplug-in
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mplayerplug-in/ChangeLog,v 1.2 2009/05/29 21:04:47 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mplayerplug-in/ChangeLog,v 1.3 2009/05/31 00:47:07 dirtyepic Exp $
+
+  31 May 2009; Ryan Hill <dirtyepic@gentoo.org>
+  mplayerplug-in-3.55-r1.ebuild, +files/mplayerplug-in-3.55-glibc210.patch:
+  Add patch from en.ABCD fixing build with glibc 2.10. (bug #271843)
 
 *mplayerplug-in-3.55-r1 (29 May 2009)
 
