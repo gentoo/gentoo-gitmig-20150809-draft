@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.4.ebuild,v 1.8 2009/02/27 23:12:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-3.0.4.ebuild,v 1.9 2009/05/31 21:14:23 eva Exp $
 
 # TODO:
 # * Verify if the parallel compilation problems persist, and if so fix them.
@@ -54,9 +54,9 @@ pkg_setup() {
 
 	if use bindist; then
 		# firebird license is not GPL compatible
-		G2CONF="${G2CONR} --without-firebird"
+		G2CONF="${G2CONF} --without-firebird"
 	else
-		G2CONF="${G2CONR} $(use_with firebird firebird /usr)"
+		G2CONF="${G2CONF} $(use_with firebird firebird /usr)"
 	fi
 
 	use berkdb && append-cppflags "-I$(db_includedir)"
