@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmoon/gkrellmoon-0.6-r1.ebuild,v 1.1 2008/04/11 12:43:37 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmoon/gkrellmoon-0.6-r1.ebuild,v 1.2 2009/05/31 14:11:28 nixnut Exp $
 
 inherit gkrellm-plugin
 
@@ -13,7 +13,7 @@ DEPEND="media-libs/imlib2"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
 
 src_unpack() {
 	unpack ${A}

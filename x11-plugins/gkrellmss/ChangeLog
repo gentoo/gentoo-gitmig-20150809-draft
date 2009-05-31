@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmss
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.27 2008/07/28 14:00:10 lack Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.28 2009/05/31 14:13:44 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> gkrellmss-2.6-r1.ebuild:
+  ppc stable #271463
 
   28 Jul 2008; Jim Ramsay <lack@gentoo.org> gkrellmss-2.6.ebuild,
   gkrellmss-2.6-r1.ebuild:
