@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.252 2009/05/30 16:47:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.253 2009/05/31 13:29:47 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> dhcpcd-4.0.13.ebuild:
+  Marking dhcpcd-4.0.13 ppc64 for bug 271351
 
   30 May 2009; nixnut <nixnut@gentoo.org> dhcpcd-4.0.13.ebuild:
   ppc stable #271351
