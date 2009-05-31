@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ghex
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.54 2009/05/31 13:36:44 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ghex/ChangeLog,v 1.55 2009/05/31 18:34:57 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> ghex-2.24.0.ebuild:
+  amd64/x86 stable, bug #271961
 
   31 May 2009; nixnut <nixnut@gentoo.org> ghex-2.24.0.ebuild:
   ppc stable #271961
