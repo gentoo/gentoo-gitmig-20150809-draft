@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.4.ebuild,v 1.3 2008/12/05 17:47:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/typespeed/typespeed-0.6.4.ebuild,v 1.4 2009/05/31 18:20:51 ranger Exp $
 
 inherit autotools eutils toolchain-funcs games
 
@@ -10,7 +10,7 @@ SRC_URI="http://tobias.eyedacor.org/typespeed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc x86"
+KEYWORDS="alpha amd64 ppc ~ppc64 x86"
 IUSE="nls"
 
 RDEPEND="sys-libs/ncurses
