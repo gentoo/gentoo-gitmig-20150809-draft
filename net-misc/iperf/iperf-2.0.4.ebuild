@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-2.0.4.ebuild,v 1.8 2009/05/30 18:42:06 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-2.0.4.ebuild,v 1.9 2009/05/31 18:17:23 ranger Exp $
 
 DESCRIPTION="tool to measure IP bandwidth using UDP or TCP"
 HOMEPAGE="http://iperf.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="ipv6 threads debug"
 
 DEPEND="virtual/libc"
