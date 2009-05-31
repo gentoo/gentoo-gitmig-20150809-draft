@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4494 2009/05/30 22:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4495 2009/05/31 07:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -676,7 +676,6 @@ dev-lang/php:xmlreader - Enable XMLReader support
 dev-lang/php:xmlwriter - Enable XMLWriter support
 dev-lang/php:zip - Enable ZIP file support
 dev-lang/php:zip-external - Enable ZIP file support (external PECL extension)
-dev-lang/python:nothreads - Disable threads (DON'T USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:ucs2 - Enable byte size 2 unicode (DON'T USE THIS UNLESS YOU KNOW WHAT YOU'RE DOING)
 dev-lang/python:wininst - Install required Windows executables to create an executable installer for MS Windows.
 dev-lang/ruby:rubytests - Install ruby tests that can only be run after ruby is installed
