@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.5 2007/04/25 15:15:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/triplexinvaders/triplexinvaders-1.08.ebuild,v 1.6 2009/05/31 02:09:08 nyhm Exp $
 
 inherit eutils games
 
@@ -8,7 +8,7 @@ DESCRIPTION="An Alien Invaders style game with 3d graphics"
 HOMEPAGE="http://triplexinvaders.infogami.com"
 SRC_URI="http://acm.jhu.edu/~arthur/invaders/${P}.zip"
 
-LICENSE="as-is"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="psyco"
