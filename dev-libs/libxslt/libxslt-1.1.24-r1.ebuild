@@ -1,22 +1,22 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.24-r1.ebuild,v 1.2 2008/11/05 00:36:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.24-r1.ebuild,v 1.3 2009/05/31 23:10:10 eva Exp $
 
 inherit libtool eutils python autotools
 
 DESCRIPTION="XSLT libraries and tools"
 HOMEPAGE="http://www.xmlsoft.org/"
+SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="crypt debug examples python"
 
-DEPEND=">=dev-libs/libxml2-2.6.27
+RDEPEND=">=dev-libs/libxml2-2.6.27
 	crypt?  ( >=dev-libs/libgcrypt-1.1.92 )
 	python? ( dev-lang/python )"
-
-SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -46,25 +46,24 @@ src_unpack() {
 }
 
 src_compile() {
-	# Always pass --with-debugger. It is required by third parties (see
-	# e.g. bug #98345)
-	local myconf="--with-debugger \
-		$(use_with python)       \
+	local myconf="$(use_with python) \
 		$(use_with crypt crypto) \
 		$(use_with debug)        \
 		$(use_with debug mem-debug)"
 
-	econf ${myconf} || die "configure failed"
-
+	econf ${myconf}
 	emake || die "Compilation failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" \
+		DOCS_DIR=/usr/share/doc/${PF}/python \
+		install || die "Installation failed"
 
-	dodoc AUTHORS ChangeLog Copyright FEATURES NEWS README TODO
+	dodoc AUTHORS ChangeLog Copyright FEATURES NEWS README TODO || die "dodoc failed"
+	rm -rf "${D}/usr/share/doc/${PN}-python-${PV}"
 
 	if ! use examples; then
-		rm -rf "${D}/usr/share/doc/${PN}-python-${PV}/examples"
+		rm -rf "${D}/usr/share/doc/${PF}/python/examples"
 	fi
 }
