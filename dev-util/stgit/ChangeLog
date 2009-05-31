@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/stgit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.32 2009/05/13 20:43:27 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/ChangeLog,v 1.33 2009/05/31 23:58:30 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> stgit-0.14.3.ebuild:
+  Marking stgit-0.14.3 ppc64 for bug 268759
 
   13 May 2009; Tobias Klausmann <klausman@gentoo.org> stgit-0.14.3.ebuild:
   Stable on alpha, bug #268759
