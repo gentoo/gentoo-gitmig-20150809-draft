@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.159 2009/05/31 13:58:03 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.160 2009/05/31 16:09:44 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> doxygen-1.5.8.ebuild:
+  amd64/x86 stable, bug #271815
 
   31 May 2009; nixnut <nixnut@gentoo.org> doxygen-1.5.8.ebuild:
   ppc stable #271815
