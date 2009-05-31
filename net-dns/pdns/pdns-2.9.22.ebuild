@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.22.ebuild,v 1.2 2009/05/26 18:28:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.22.ebuild,v 1.3 2009/05/31 21:12:50 maekke Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
 HOMEPAGE="http://www.powerdns.com/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug doc ldap mysql postgres sqlite sqlite3 static tdb opendbx"
 
 DEPEND="mysql? ( virtual/mysql )
