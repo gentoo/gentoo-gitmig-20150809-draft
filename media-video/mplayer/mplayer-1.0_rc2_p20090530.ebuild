@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090530.ebuild,v 1.3 2009/05/31 16:20:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090530.ebuild,v 1.4 2009/05/31 16:28:28 ssuominen Exp $
 
 EAPI="2"
 
@@ -239,7 +239,8 @@ src_unpack() {
 		mv "${WORKDIR}/svgalib_helper" "${S}/libdha"
 	fi
 
-	epatch "${FILESDIR}"/${PN}-1.0_rc2_p20090322-fix-mp3lib-use-local-labels.patch
+# This patch breaks MP3 playing entirely, wrt #271815
+#	epatch "${FILESDIR}"/${PN}-1.0_rc2_p20090322-fix-mp3lib-use-local-labels.patch
 }
 
 src_configure() {
