@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/basket-1.0.3.1.ebuild,v 1.4 2009/05/30 19:22:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/basket-1.0.3.1.ebuild,v 1.5 2009/05/31 15:13:30 maekke Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ SRC_URI="http://basket.kde.org/downloads/${P}.tar.gz"
 
 SLOT="3.5"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 DEPEND="crypt? ( >=app-crypt/gpgme-1.0 )
 	!<x11-misc/basket-1.0.3.1"
