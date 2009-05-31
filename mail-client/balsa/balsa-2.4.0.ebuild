@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.0.ebuild,v 1.1 2009/05/28 21:56:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.0.ebuild,v 1.2 2009/05/31 18:30:28 eva Exp $
 
 EAPI="2"
 
@@ -22,6 +22,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	>=net-libs/libesmtp-1.0.3
 	x11-themes/hicolor-icon-theme
 	net-mail/mailbase
+	dev-libs/libunique
 	crypt? ( >=app-crypt/gpgme-1.0 )
 	gnome? (
 		>=gnome-base/orbit-2
