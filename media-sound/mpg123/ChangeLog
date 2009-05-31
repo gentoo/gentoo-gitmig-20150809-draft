@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.186 2009/05/31 14:15:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.187 2009/05/31 15:44:06 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> mpg123-1.7.3.ebuild:
+  stable ppc64, bug 270781
 
   31 May 2009; nixnut <nixnut@gentoo.org> mpg123-1.7.3.ebuild:
   ppc stable #270781
