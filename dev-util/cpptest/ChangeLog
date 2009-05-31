@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cpptest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.5 2009/05/31 13:59:35 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.6 2009/05/31 15:56:16 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> cpptest-1.1.0.ebuild:
+  amd64/x86 stable, bug #271815
 
   31 May 2009; nixnut <nixnut@gentoo.org> cpptest-1.1.0.ebuild:
   ppc stable #271815
