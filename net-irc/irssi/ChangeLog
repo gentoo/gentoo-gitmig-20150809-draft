@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.140 2009/05/31 16:13:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.141 2009/05/31 23:36:16 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> irssi-0.8.13-r1.ebuild:
+  Marking irssi-0.8.13-r1 ppc64 for bug 271875
 
 *irssi-0.8.13-r1 (31 May 2009)
 
