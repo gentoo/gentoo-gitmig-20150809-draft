@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kvoctrain
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.93 2008/09/14 00:00:11 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kvoctrain/ChangeLog,v 1.94 2009/05/31 20:02:50 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kvoctrain-3.5.10.ebuild:
+  ppc stable #271889
 
 *kvoctrain-3.5.10 (13 Sep 2008)
 

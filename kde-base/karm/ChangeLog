@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.90 2008/09/13 23:57:26 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.91 2009/05/31 21:08:34 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> karm-3.5.10.ebuild:
+  ppc stable #271889
 
 *karm-3.5.10 (13 Sep 2008)
 

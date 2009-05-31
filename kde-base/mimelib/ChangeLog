@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.98 2009/05/07 00:14:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.99 2009/05/31 19:19:04 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> mimelib-3.5.10.ebuild:
+  ppc stable #271889
 
 *mimelib-4.2.3 (07 May 2009)
 

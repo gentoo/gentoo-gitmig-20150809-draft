@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/lskat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.109 2009/05/07 00:14:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lskat/ChangeLog,v 1.110 2009/05/31 20:34:13 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> lskat-3.5.10.ebuild:
+  ppc stable #271889
 
 *lskat-4.2.3 (07 May 2009)
 

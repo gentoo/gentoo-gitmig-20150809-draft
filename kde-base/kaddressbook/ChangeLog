@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.113 2009/05/07 20:57:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.114 2009/05/31 21:02:57 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kaddressbook-3.5.10.ebuild:
+  ppc stable #271889
 
   07 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> kaddressbook-3.5.9.ebuild,
   kaddressbook-3.5.10.ebuild, +files/kaddressbook-3.5-gnokii.patch:

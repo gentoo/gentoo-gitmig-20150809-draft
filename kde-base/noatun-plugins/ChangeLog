@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/noatun-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.91 2008/09/14 00:00:33 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.92 2009/05/31 21:24:27 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> noatun-plugins-3.5.10.ebuild:
+  ppc stable #271889
 
 *noatun-plugins-3.5.10 (13 Sep 2008)
 

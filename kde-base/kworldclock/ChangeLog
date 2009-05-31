@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kworldclock
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kworldclock/ChangeLog,v 1.25 2008/10/21 11:28:52 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kworldclock/ChangeLog,v 1.26 2009/05/31 19:25:20 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kworldclock-3.5.10.ebuild:
+  ppc stable #271889
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -kworldclock-4.0.4.ebuild, -kworldclock-4.0.5.ebuild:

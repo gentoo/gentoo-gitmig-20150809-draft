@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.90 2009/05/06 23:55:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.91 2009/05/31 20:15:26 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kstart-3.5.10.ebuild:
+  ppc stable #271889
 
 *kstart-4.2.3 (06 May 2009)
 

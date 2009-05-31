@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.138 2009/05/06 23:43:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.139 2009/05/31 21:12:20 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> konqueror-3.5.10.ebuild:
+  ppc stable #271889
 
 *konqueror-4.2.3 (06 May 2009)
 

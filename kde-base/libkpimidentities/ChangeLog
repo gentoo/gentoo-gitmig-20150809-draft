@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkpimidentities
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.90 2008/09/14 00:00:26 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimidentities/ChangeLog,v 1.91 2009/05/31 21:00:12 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> libkpimidentities-3.5.10.ebuild:
+  ppc stable #271889
 
 *libkpimidentities-3.5.10 (13 Sep 2008)
 

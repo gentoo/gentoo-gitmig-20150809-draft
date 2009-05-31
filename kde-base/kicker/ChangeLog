@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.102 2009/05/27 23:40:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.103 2009/05/31 20:44:25 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kicker-3.5.10-r1.ebuild:
+  ppc stable #271889
 
   27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kicker-3.5.10.ebuild, kicker-3.5.10-r1.ebuild:

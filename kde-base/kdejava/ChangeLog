@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdejava
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.77 2009/02/03 04:09:14 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdejava/ChangeLog,v 1.78 2009/05/31 21:36:38 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kdejava-3.5.10.ebuild:
+  ppc stable #271889
 
   03 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdejava-3.5.9.ebuild:

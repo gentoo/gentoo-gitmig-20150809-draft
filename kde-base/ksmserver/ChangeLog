@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.111 2009/05/08 06:23:18 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.112 2009/05/31 19:29:07 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> ksmserver-3.5.10.ebuild:
+  ppc stable #271889
 
   08 May 2009; Gordon Malm <gengor@gentoo.org> ksmserver-4.2.3.ebuild:
   Add back dropped patch to fix compile with <gcc-4 (bug 256804)

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khangman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.113 2009/05/06 23:26:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khangman/ChangeLog,v 1.114 2009/05/31 20:54:31 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> khangman-3.5.10.ebuild:
+  ppc stable #271889
 
 *khangman-4.2.3 (06 May 2009)
 

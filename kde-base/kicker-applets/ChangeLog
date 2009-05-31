@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kicker-applets
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.93 2008/09/13 23:58:42 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker-applets/ChangeLog,v 1.94 2009/05/31 20:59:13 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kicker-applets-3.5.10.ebuild:
+  ppc stable #271889
 
 *kicker-applets-3.5.10 (13 Sep 2008)
 

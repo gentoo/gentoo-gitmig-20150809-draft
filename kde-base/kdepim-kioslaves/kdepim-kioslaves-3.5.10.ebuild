@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.10.ebuild,v 1.1 2008/09/13 23:58:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kioslaves/kdepim-kioslaves-3.5.10.ebuild,v 1.2 2009/05/31 20:45:26 nixnut Exp $
 
 KMNAME=kdepim
 KMMODULE=kioslaves
@@ -12,7 +12,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdepim-3.5-patchset-04.tar.bz2"
 
 DESCRIPTION="kioslaves from kdepim package"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="sasl"
 DEPEND="sasl? ( >=dev-libs/cyrus-sasl-2 )
 	>=kde-base/libkmime-${PV}:${SLOT}"

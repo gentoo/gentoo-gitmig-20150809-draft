@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-icewm-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.89 2009/02/17 13:11:37 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-icewm-themes/ChangeLog,v 1.90 2009/05/31 20:58:12 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org>
+  kdeartwork-icewm-themes-3.5.10.ebuild:
+  ppc stable #271889
 
   17 Feb 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdeartwork-icewm-themes-4.1.4.ebuild:

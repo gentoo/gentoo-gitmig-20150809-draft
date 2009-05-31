@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khexedit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khexedit/ChangeLog,v 1.88 2008/09/13 23:58:40 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khexedit/ChangeLog,v 1.89 2009/05/31 20:20:26 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> khexedit-3.5.10.ebuild:
+  ppc stable #271889
 
 *khexedit-3.5.10 (13 Sep 2008)
 

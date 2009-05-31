@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.10.ebuild,v 1.2 2008/09/14 02:27:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/konqueror-3.5.10.ebuild,v 1.3 2009/05/31 21:12:20 nixnut Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -8,7 +8,7 @@ EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE: Web browser, file manager, ..."
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="branding java kdehiddenvisibility"
 
 DEPEND=">=kde-base/libkonq-${PV}:${SLOT}"

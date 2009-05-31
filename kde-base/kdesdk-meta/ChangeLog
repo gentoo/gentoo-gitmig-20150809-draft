@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.106 2009/05/06 23:17:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-meta/ChangeLog,v 1.107 2009/05/31 21:43:44 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kdesdk-meta-3.5.10.ebuild:
+  ppc stable #271889
 
 *kdesdk-meta-4.2.3 (06 May 2009)
 

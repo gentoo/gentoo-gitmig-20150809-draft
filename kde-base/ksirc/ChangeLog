@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.95 2008/09/13 23:59:45 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirc/ChangeLog,v 1.96 2009/05/31 19:38:56 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> ksirc-3.5.10.ebuild:
+  ppc stable #271889
 
 *ksirc-3.5.10 (13 Sep 2008)
 

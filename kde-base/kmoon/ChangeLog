@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmoon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmoon/ChangeLog,v 1.86 2008/09/13 23:59:01 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmoon/ChangeLog,v 1.87 2009/05/31 19:49:37 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kmoon-3.5.10.ebuild:
+  ppc stable #271889
 
 *kmoon-3.5.10 (13 Sep 2008)
 

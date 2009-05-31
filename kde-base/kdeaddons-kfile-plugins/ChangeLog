@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaddons-kfile-plugins
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.66 2008/09/13 23:57:47 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-kfile-plugins/ChangeLog,v 1.67 2009/05/31 20:34:41 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org>
+  kdeaddons-kfile-plugins-3.5.10.ebuild:
+  ppc stable #271889
 
 *kdeaddons-kfile-plugins-3.5.10 (13 Sep 2008)
 

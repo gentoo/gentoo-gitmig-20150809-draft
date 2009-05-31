@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.91 2009/05/06 23:41:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kode/ChangeLog,v 1.92 2009/05/31 19:24:51 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kode-3.5.10.ebuild:
+  ppc stable #271889
 
 *kode-4.2.3 (06 May 2009)
 

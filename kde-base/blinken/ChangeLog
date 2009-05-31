@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.86 2009/05/06 22:47:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.87 2009/05/31 19:59:18 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> blinken-3.5.10.ebuild:
+  ppc stable #271889
 
 *blinken-4.2.3 (06 May 2009)
 

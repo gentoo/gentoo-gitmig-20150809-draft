@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.106 2009/05/07 00:01:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.107 2009/05/31 19:50:09 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> ktux-3.5.10.ebuild:
+  ppc stable #271889
 
 *ktux-4.2.3 (07 May 2009)
 

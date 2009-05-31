@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.162 2009/02/05 01:33:14 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.163 2009/05/31 20:32:40 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kde-i18n-3.5.10.ebuild:
+  ppc stable #271889
 
   05 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kde-i18n-3.5.9.ebuild:

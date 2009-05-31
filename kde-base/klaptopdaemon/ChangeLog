@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klaptopdaemon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.103 2008/09/13 23:58:49 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.104 2009/05/31 20:22:40 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> klaptopdaemon-3.5.10.ebuild:
+  ppc stable #271889
 
 *klaptopdaemon-3.5.10 (13 Sep 2008)
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact-specialdates
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.101 2009/05/06 23:45:19 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.102 2009/05/31 21:10:08 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org>
+  kontact-specialdates-3.5.10.ebuild:
+  ppc stable #271889
 
 *kontact-specialdates-4.2.3 (06 May 2009)
 

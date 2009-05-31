@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.60 2008/09/13 23:59:52 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.61 2009/05/31 21:28:47 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kspy-3.5.10.ebuild:
+  ppc stable #271889
 
 *kspy-3.5.10 (13 Sep 2008)
 

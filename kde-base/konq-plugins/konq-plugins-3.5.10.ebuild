@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-3.5.10.ebuild,v 1.1 2008/09/13 23:59:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konq-plugins/konq-plugins-3.5.10.ebuild,v 1.2 2009/05/31 21:15:02 nixnut Exp $
 
 KMNAME=kdeaddons
 KMNODOCS=true
@@ -8,7 +8,7 @@ EAPI="1"
 inherit kde-meta
 
 DESCRIPTION="Various plugins for Konqueror."
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 DEPEND="|| ( >=kde-base/konqueror-${PV}:${SLOT} >=kde-base/kdebase-${PV}:${SLOT} )
 	!kde-misc/metabar"

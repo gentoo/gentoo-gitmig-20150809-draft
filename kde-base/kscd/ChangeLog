@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kscd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.115 2009/05/06 23:51:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kscd/ChangeLog,v 1.116 2009/05/31 20:51:18 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kscd-3.5.10.ebuild:
+  ppc stable #271889
 
 *kscd-4.2.3 (06 May 2009)
 

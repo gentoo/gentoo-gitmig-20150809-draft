@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.40 2009/05/06 23:39:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.41 2009/05/31 20:42:55 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> knetwalk-3.5.10.ebuild:
+  ppc stable #271889
 
 *knetwalk-4.2.3 (06 May 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.64 2009/02/28 22:54:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.65 2009/05/31 21:34:38 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> smoke-3.5.10.ebuild:
+  ppc stable #271889
 
   28 Feb 2009; Patrick Lauer <patrick@gentoo.org> smoke-3.5.9.ebuild,
   smoke-3.5.10.ebuild:

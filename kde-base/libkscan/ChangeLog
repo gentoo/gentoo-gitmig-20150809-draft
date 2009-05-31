@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libkscan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.94 2008/10/21 11:30:53 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkscan/ChangeLog,v 1.95 2009/05/31 19:25:49 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> libkscan-3.5.10.ebuild:
+  ppc stable #271889
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -libkscan-4.0.4.ebuild, -libkscan-4.0.5.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalyptus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.63 2008/09/13 23:57:21 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.64 2009/05/31 21:35:07 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kalyptus-3.5.10.ebuild:
+  ppc stable #271889
 
 *kalyptus-3.5.10 (13 Sep 2008)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kiconedit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconedit/ChangeLog,v 1.89 2008/10/21 11:36:45 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiconedit/ChangeLog,v 1.90 2009/05/31 19:53:40 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kiconedit-3.5.10.ebuild:
+  ppc stable #271889
 
   21 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -kiconedit-4.0.4.ebuild:

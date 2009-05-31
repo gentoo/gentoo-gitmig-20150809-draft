@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.159 2009/05/06 23:21:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.160 2009/05/31 21:16:03 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kdm-3.5.10.ebuild:
+  ppc stable #271889
 
 *kdm-4.2.3 (06 May 2009)
 

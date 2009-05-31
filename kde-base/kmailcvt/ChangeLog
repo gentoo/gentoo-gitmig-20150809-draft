@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.95 2009/05/06 23:35:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.96 2009/05/31 19:23:48 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kmailcvt-3.5.10.ebuild:
+  ppc stable #271889
 
 *kmailcvt-4.2.3 (06 May 2009)
 

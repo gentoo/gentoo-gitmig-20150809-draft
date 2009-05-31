@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfouleggs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfouleggs/ChangeLog,v 1.88 2008/09/13 23:58:34 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfouleggs/ChangeLog,v 1.89 2009/05/31 20:38:14 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kfouleggs-3.5.10.ebuild:
+  ppc stable #271889
 
 *kfouleggs-3.5.10 (13 Sep 2008)
 

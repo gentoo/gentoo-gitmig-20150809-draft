@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaddons-meta
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.104 2008/09/13 23:57:48 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons-meta/ChangeLog,v 1.105 2009/05/31 21:37:09 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kdeaddons-meta-3.5.10.ebuild:
+  ppc stable #271889
 
 *kdeaddons-meta-3.5.10 (13 Sep 2008)
 

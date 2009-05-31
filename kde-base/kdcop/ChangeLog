@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdcop
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.65 2008/09/13 23:57:43 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdcop/ChangeLog,v 1.66 2009/05/31 20:14:55 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> kdcop-3.5.10.ebuild:
+  ppc stable #271889
 
 *kdcop-3.5.10 (13 Sep 2008)
 
