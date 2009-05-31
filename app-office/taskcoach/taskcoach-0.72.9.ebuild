@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.72.7.ebuild,v 1.1 2009/05/14 19:19:01 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taskcoach/taskcoach-0.72.9.ebuild,v 1.1 2009/05/31 11:37:58 caster Exp $
+
+EAPI=1
 
 inherit distutils eutils
 
@@ -15,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 DEPEND=">=dev-lang/python-2.4
-	=dev-python/wxpython-2.8*"
+	>=dev-python/wxpython-2.8.9.2:2.8"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
