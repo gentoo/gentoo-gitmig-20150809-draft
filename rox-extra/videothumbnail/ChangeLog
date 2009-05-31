@@ -1,6 +1,10 @@
 # ChangeLog for rox-extra/videothumbnail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.24 2009/05/31 13:31:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/videothumbnail/ChangeLog,v 1.25 2009/05/31 21:59:53 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org>
+  videothumbnail-0.1.14.ebuild:
+  amd64 stable, bug #270738
 
   31 May 2009; nixnut <nixnut@gentoo.org> videothumbnail-0.1.14.ebuild:
   ppc stable #270738
