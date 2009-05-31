@@ -1,6 +1,14 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/dolphin-0.8.2-r1.ebuild,v 1.1 2007/03/10 23:22:09 troll Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/dolphin-0.8.2-r1.ebuild,v 1.2 2009/05/31 14:35:08 tampakrap Exp $
+
+EAPI="2"
+
+ARTS_REQUIRED="never"
+
+USE_KEG_PACKAGING="1"
+
+LANGS="de es et fr he it ru pl"
 
 inherit kde
 
@@ -10,10 +18,10 @@ SRC_URI="http://enzosworld.gmxhome.de/download/${P}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 IUSE="kdeenablefinal"
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${P}-tarZip-handlers.patch"
+PATCHES=( "${FILESDIR}/${P}-tarZip-handlers.patch" )
