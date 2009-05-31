@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_rc1.ebuild,v 1.1 2008/12/22 19:18:00 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/freemind/freemind-0.9.0_rc4.ebuild,v 1.1 2009/05/31 18:49:34 caster Exp $
 
-EAPI=1
+EAPI=2
 
 # will handle rewriting myself
 JAVA_PKG_BSFIX="off"
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc groovy latex pdf svg"
 COMMON_DEP="dev-java/jgoodies-forms:0
 	dev-java/jibx:0
-	>=dev-java/simplyhtml-0.12.3:0
+	>=dev-java/simplyhtml-0.13.1:0
 	dev-java/commons-lang:2.1
 	dev-java/javahelp:0
 	groovy? ( dev-java/groovy:1 )
@@ -39,12 +39,9 @@ RDEPEND=">=virtual/jre-1.4
 
 S="${WORKDIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+java_prepare() {
 	# kill the jarbundler taskdef
-	epatch "${FILESDIR}/${P}-build.xml.patch"
+	epatch "${FILESDIR}/${PN}-0.9.0_rc1-build.xml.patch"
 
 	use groovy || rm plugins/build_scripting.xml || die
 	use latex || rm plugins/build_latex.xml || die
