@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4499 2009/05/31 13:48:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4500 2009/05/31 19:07:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -147,7 +147,6 @@ app-doc/doxygen:nodot - removes graphviz dependency, along with dot graphs
 app-doc/gimp-help:webinstall - optimize images for web installation (fewer colors, depends on media-gfx/imagemagick)
 app-doc/linuxfromscratch:htmlsingle - Also install all-in-one-page HTML version
 app-doc/pms:all-options - Include both sides of kdebuild conditionals, shown in different colours (PDF only)
-app-doc/pms:eapi3-draft - Include work-in-progress draft EAPI 3 specification.
 app-doc/pms:html - Generate PMS as .html as well
 app-doc/pms:kdebuild - Include specification for the kdebuild EAPI, see http://www.gentoo.org/proj/en/desktop/kde/kdebuild-1.xml
 app-editors/cssed:plugins - Install plugin development files
