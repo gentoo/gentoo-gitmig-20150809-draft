@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/tasklist
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.4 2008/08/30 20:04:07 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-base/tasklist/ChangeLog,v 1.5 2009/05/31 13:27:55 nixnut Exp $
+
+  31 May 2009; nixnut <nixnut@gentoo.org> tasklist-0.5.ebuild:
+  ppc stable #270738
 
   30 Aug 2008; Markus Meier <maekke@gentoo.org> tasklist-0.5.ebuild:
   x86 stable, bug #236057
