@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.636 2009/05/30 23:07:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.637 2009/05/31 16:20:14 flameeyes Exp $
+
+  31 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mplayer-1.0_rc2_p20090530.ebuild:
+  Diego is not an happy developer when his patches are dropped. Fix build,
+  once again.
 
   30 May 2009; Tomáš Chvátal <scarabeus@gentoo.org> mplayer-9999.ebuild:
   Update live ebuild. Reorder the DEPS to be alphabetic and more logicaly
