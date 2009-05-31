@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4497 2009/05/31 11:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4498 2009/05/31 13:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2280,7 +2280,7 @@ net-misc/networkmanager:connection-sharing - Use net-dns/dnsmasq and net-firewal
 net-misc/networkmanager:dhclient - Use dhclient from net-misc/dhcp for getting ip.
 net-misc/networkmanager:dhcpcd - Use net-misc/dhcpcd for getting ip.
 net-misc/networkmanager:nss - Use dev-libs/nss for cryptography.
-net-misc/networkmanager:resolvconf - Use net-dns/openresolv for managing DNS informations
+net-misc/networkmanager:resolvconf - Use net-dns/openresolv for managing DNS information
 net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
 net-misc/nxcl:nxclient - Use nxssh from net-misc/nxclient instead of standard ssh
