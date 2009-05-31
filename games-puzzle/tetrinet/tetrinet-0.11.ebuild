@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.12 2009/01/29 02:20:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tetrinet/tetrinet-0.11.ebuild,v 1.13 2009/05/31 02:28:23 nyhm Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -9,7 +9,7 @@ DESCRIPTION="console based tetrinet inc. standalone server"
 HOMEPAGE="http://tetrinet.or.cz/"
 SRC_URI="http://tetrinet.or.cz/download/${P}.tar.bz2"
 
-LICENSE="as-is"
+LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE="ipv6"
