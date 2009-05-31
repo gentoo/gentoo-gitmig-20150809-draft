@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-do-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.10 2009/05/31 09:34:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do-plugins/ChangeLog,v 1.11 2009/05/31 09:54:31 graaff Exp $
+
+*gnome-do-plugins-0.8.1.3-r1 (31 May 2009)
+
+  31 May 2009; Hans de Graaff <graaff@gentoo.org>
+  metadata.xml, +gnome-do-plugins-0.8.1.3-r1.ebuild,
+  +files/gnome-do-plugins-0.8.1.3-update-twitter-api.patch:
+  Fix usage of Twitter API. Remove unused amarok USE flag.
 
   31 May 2009; Hans de Graaff <graaff@gentoo.org>
   -gnome-do-plugins-0.4.0.ebuild, -gnome-do-plugins-0.8.0.ebuild:

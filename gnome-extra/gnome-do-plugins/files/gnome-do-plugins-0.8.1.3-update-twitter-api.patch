@@ -1,0 +1,121 @@
+Patch taken from upstream bug report to fix twitter by using the new API.
+
+https://code.launchpad.net/~alexlauni/do-plugins/twitter-api-fixes
+
+=== modified file 'Microblogging/src/MicroblogClient.cs'
+--- Microblogging/src/MicroblogClient.cs	2009-02-28 19:53:07 +0000
++++ Microblogging/src/MicroblogClient.cs	2009-04-13 04:10:11 +0000
+@@ -45,9 +45,9 @@
+ 		readonly string FailedPostMsg = Catalog.GetString ("Unable to post tweet. Check your login settings. If you "
+ 			+ "are behind a proxy make sure that the settings in /system/http_proxy are correct.");
+ 
+-		const int UpdateTimelineTimeout = 30 * 1000;
+-		const int UpdateContactsTimeout = 10 * 60 * 1000;
+-		const int CheckForMessagesTimeout = 5 * 60 * 1000;
++		const int UpdateTimelineTimeout = 60 * 1000; // every 60 seconds
++		const int UpdateContactsTimeout = 30 * 1000 * 60; // every 30 minutes
++		const int CheckForMessagesTimeout = 5 * 1000 * 60; // every 5 minutespr
+ 
+ 		#endregion
+ 
+@@ -61,6 +61,7 @@
+ 		
+ 		static MicroblogClient ()
+ 		{
++			Log<MicroblogClient>.Debug ("Using limited version!!!~~~~~");
+ 			PhotoDirectory = new [] { Services.Paths.UserDataDirectory, "Microblogging", "photos"}.Aggregate (Path.Combine);
+ 		}
+ 		
+@@ -121,11 +122,13 @@
+ 				newContacts = new List<FriendItem> ();
+ 				friends = blog.User.Friends ();
+ 			} catch (TwitterizerException e) {
++				Log.Error("{0} {1}", e.RequestData.ResponseException.Message, e.RequestData.ResponseException.StackTrace);
+ 				Log<MicroblogClient>.Debug (GenericErrorMsg, "UpdateContacts", e.Message);
+ 				return;
+ 			}
+ 			
+ 			foreach (TwitterUser friend in friends) {
++				Log<MicroblogClient>.Error ("we had friendzzz");
+ 				if (friend.Status != null) {
+ 					status = new MicroblogStatus (friend.Status.ID, friend.Status.Text, friend.ScreenName, friend.Status.Created);
+ 					newContact = new FriendItem (friend.ID, friend.ScreenName, status);
+
+=== modified file 'Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterStatusMethods.cs'
+--- Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterStatusMethods.cs	2009-02-28 16:16:48 +0000
++++ Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterStatusMethods.cs	2009-04-13 04:10:11 +0000
+@@ -109,7 +109,7 @@
+ 
+             string actionUri = (Parameters == null ? Twitter.Urls.FriendsTimelineUrl : Parameters.BuildActionUri(Twitter.Urls.FriendsTimelineUrl));
+             Data.ActionUri = new Uri(actionUri);
+-
++			
+             Data = Request.PerformWebRequest(Data);
+ 
+             return Data.Statuses;
+@@ -141,7 +141,7 @@
+             Data.ActionUri = new Uri(
+                 string.Format(Twitter.Urls.UpdateUrl, HttpUtility.UrlEncode(Status), InReplyToStatusID));
+ 			
+-            Data = Request.PerformWebRequest(Data);
++            Data = Request.PerformWebRequest(Data, "POST");
+ 
+             return Data.Statuses[0];
+         }
+
+=== modified file 'Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterUserMethods.cs'
+--- Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterUserMethods.cs	2008-12-11 04:16:01 +0000
++++ Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterUserMethods.cs	2009-04-13 04:10:11 +0000
+@@ -87,6 +87,7 @@
+         /// <returns></returns>
+         public TwitterUserCollection Friends(TwitterParameters Parameters)
+         {
++			Console.Error.WriteLine ("Goona get friends");
+             // page 0 == page 1 is the start
+             TwitterRequest Request = new TwitterRequest();
+             TwitterRequestData Data = new TwitterRequestData();
+@@ -95,9 +96,9 @@
+ 
+             string actionUri = (Parameters == null ? Twitter.Urls.FriendsUrl : Parameters.BuildActionUri(Twitter.Urls.FriendsUrl));
+             Data.ActionUri = new Uri(actionUri);
+-
++			Console.Error.WriteLine ("GOING TO GET EM");
+             Data = Request.PerformWebRequest(Data);
+-
++			Console.Error.WriteLine ("I have {0} frienz", Data.Users.Count);
+             return Data.Users;
+         }
+     }
+
+=== modified file 'Microblogging/src/Twitterizer/Twitterizer.Framework/TwitterRequest.cs'
+--- Microblogging/src/Twitterizer/Twitterizer.Framework/TwitterRequest.cs	2008-12-11 04:16:01 +0000
++++ Microblogging/src/Twitterizer/Twitterizer.Framework/TwitterRequest.cs	2009-04-13 04:10:11 +0000
+@@ -40,7 +40,7 @@
+     {
+         public TwitterRequestData PerformWebRequest(TwitterRequestData Data)
+         {
+-            PerformWebRequest(Data, "POST");
++            PerformWebRequest(Data, "GET");
+             
+             return (Data);
+ 
+@@ -48,7 +48,8 @@
+ 
+         public TwitterRequestData PerformWebRequest(TwitterRequestData Data, string HTTPMethod)
+         {
+-            HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Data.ActionUri);
++    	    Console.Error.WriteLine ("Posting {0} via {1}", Data.ActionUri, HTTPMethod);
++			HttpWebRequest Request = (HttpWebRequest)WebRequest.Create(Data.ActionUri);
+ 
+ 
+             Request.Method = HTTPMethod;
+@@ -99,7 +100,7 @@
+             {
+                 XmlDocument ResultXmlDocument = new XmlDocument();
+                 ResultXmlDocument.LoadXml(Data.Response);
+-
++				
+                 if (ResultXmlDocument.DocumentElement != null)
+                     switch (ResultXmlDocument.DocumentElement.Name.ToLower())
+                     {
+

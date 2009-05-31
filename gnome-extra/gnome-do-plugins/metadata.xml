@@ -8,8 +8,6 @@
 	</maintainer>
 
 	<use>
-		<flag name='amarok'>Enables the Amarok (<pkg>media-sound/amarok</pkg>)
-			plugin</flag>
 	 	<flag name="banshee">Enables the Banshee (<pkg>media-sound/banshee</pkg>) plugin</flag>
 	</use>
 
