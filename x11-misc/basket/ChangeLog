@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/basket
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.43 2009/05/31 15:13:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/basket/ChangeLog,v 1.44 2009/05/31 16:15:22 tampakrap Exp $
+
+  31 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -basket-1.0.2.ebuild, -files/basket-1.0.2-gcc43.patch:
+  Remove old
 
   31 May 2009; Markus Meier <maekke@gentoo.org> basket-1.0.3.1.ebuild:
   amd64/x86 stable, bug #271793
