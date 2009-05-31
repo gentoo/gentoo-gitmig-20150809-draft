@@ -1,6 +1,13 @@
 # ChangeLog for media-video/subtitleripper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.21 2009/01/07 15:59:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/ChangeLog,v 1.22 2009/05/31 01:15:44 dirtyepic Exp $
+
+  31 May 2009; Ryan Hill <dirtyepic@gentoo.org>
+  subtitleripper-0.3.4-r3.ebuild,
+  +files/subtitleripper-0.3.4-glibc210.patch,
+  +files/subtitleripper-0.3.4-libpng.patch:
+  Fix building against newer libpng versions (bug #269803, patch by Victor
+  Ostorga) and glibc-2.10.
 
   07 Jan 2009; Brent Baude <ranger@gentoo.org>
   subtitleripper-0.3.4-r3.ebuild:

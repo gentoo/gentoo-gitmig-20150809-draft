@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/subtitleripper-0.3.4-r3.ebuild,v 1.8 2009/01/07 15:59:14 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleripper/subtitleripper-0.3.4-r3.ebuild,v 1.9 2009/05/31 01:15:44 dirtyepic Exp $
 
 inherit versionator eutils
 
@@ -32,6 +32,8 @@ src_unpack() {
 	sed -i -e 's:~/sourceforge/subtitleripper/src/:/usr/share/subtitleripper:' pgm2txt
 
 	epatch "${FILESDIR}/${P}-linkingorder.patch"
+	epatch "${FILESDIR}"/${P}-libpng.patch
+	epatch "${FILESDIR}"/${P}-glibc210.patch
 }
 
 src_install () {
