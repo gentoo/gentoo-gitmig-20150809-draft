@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ninja
-# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.18 2007/02/19 16:59:01 nixnut Exp $
+# Copyright 2003-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.19 2009/05/31 23:42:19 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> ninja-1.5.9_pre14.ebuild:
+  Marking ninja-1.5.9_pre14 ~ppc64 for bug 269147
 
   19 Feb 2007; nixnut <nixnut@gentoo.org> ninja-1.5.9_pre14.ebuild:
   Stable on ppc wrt bug 152483
