@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/pyreverse-0.5.2.ebuild,v 1.3 2009/05/27 10:33:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyreverse/pyreverse-0.5.2.ebuild,v 1.4 2009/05/31 22:24:26 maekke Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.logilab.org/projects/pyreverse/"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
 LICENSE="GPL-2"
 DEPEND="dev-lang/python"
 RDEPEND="${DEPEND}

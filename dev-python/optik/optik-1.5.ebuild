@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/optik-1.5.ebuild,v 1.7 2007/07/04 20:37:49 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/optik/optik-1.5.ebuild,v 1.8 2009/05/31 22:23:34 maekke Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://optik.sourceforge.net/"
 DEPEND="virtual/python"
 
 SLOT="0"
-KEYWORDS="alpha ~amd64 ia64 ~ppc sparc x86"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
 LICENSE="BSD"
 
 src_install() {
