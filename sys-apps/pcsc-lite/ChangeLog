@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.65 2009/05/31 13:53:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.66 2009/05/31 15:38:43 ranger Exp $
+
+  31 May 2009; Brent Baude <ranger@gentoo.org> pcsc-lite-1.5.3.ebuild:
+  Marking pcsc-lite-1.5.3 ppc64 for bug 271911
 
   31 May 2009; nixnut <nixnut@gentoo.org> pcsc-lite-1.5.3.ebuild:
   ppc stable #271911
