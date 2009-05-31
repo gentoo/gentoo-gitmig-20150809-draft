@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/devtray
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.10 2009/05/26 19:22:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/devtray/ChangeLog,v 1.11 2009/05/31 22:01:16 maekke Exp $
+
+  31 May 2009; Markus Meier <maekke@gentoo.org> devtray-0.4.1-r1.ebuild:
+  amd64 stable, bug #270738
 
   26 May 2009; Christian Faulhammer <fauli@gentoo.org>
   devtray-0.4.1-r1.ebuild:
