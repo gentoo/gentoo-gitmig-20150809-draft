@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Filter/Filter-1.33.ebuild,v 1.7 2008/03/28 06:55:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Filter/Filter-1.33.ebuild,v 1.8 2009/05/31 08:16:35 tove Exp $
 
 inherit perl-module
 
@@ -14,5 +14,3 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc s390 sh sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
-
-mymake="/usr"
