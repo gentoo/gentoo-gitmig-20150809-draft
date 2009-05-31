@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.149 2009/05/20 16:47:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.150 2009/05/31 16:47:38 eva Exp $
+
+*rhythmbox-0.12.2 (31 May 2009)
+
+  31 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +rhythmbox-0.12.2.ebuild:
+  Bump to 0.12.2. Support for embedded cover arts, IM status plugin, support
+  latest Last.fm API, drop libglade usage, use playbin2 in non-crossfade
+  case.
 
   20 May 2009; Raúl Porcel <armin76@gentoo.org> rhythmbox-0.12.1-r1.ebuild:
   Add ~sparc wrt #263080
