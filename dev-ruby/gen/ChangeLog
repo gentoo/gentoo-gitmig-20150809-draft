@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/gen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.10 2008/01/02 19:45:41 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gen/ChangeLog,v 1.11 2009/05/31 07:55:13 graaff Exp $
+
+  31 May 2009; Hans de Graaff <graaff@gentoo.org> -gen-0.29.0.ebuild,
+  -gen-0.40.0.ebuild:
+  Remove old versions.
 
 *gen-0.41.0 (02 Jan 2008)
 
