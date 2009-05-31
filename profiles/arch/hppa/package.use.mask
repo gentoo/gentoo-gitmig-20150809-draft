@@ -1,10 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.23 2009/05/31 14:38:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.24 2009/05/31 14:39:22 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
-
-# Jeroen Roovers <jer@gentoo.org> (31 May 2009)
-# Masking until we have sys-devel/gcc[openmp] stable (bug #225917)
-media-gfx/imagemagick openmp
 
 # Jeroen Roovers <jer@gentoo.org> (06 May 2009)
 # dev-lang/swi-prolog fails some tests but would be pulled in by dev-libs/ppl
