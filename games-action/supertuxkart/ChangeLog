@@ -1,6 +1,10 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.11 2009/04/19 16:37:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.12 2009/05/31 17:08:06 mr_bones_ Exp $
+
+  31 May 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  supertuxkart-0.6.1a.ebuild:
+  libsdl needs USE=joystick (bug #271992)
 
   19 Apr 2009; Markus Meier <maekke@gentoo.org> supertuxkart-0.6.1a:
   amd64/x86 stable, bug #266695

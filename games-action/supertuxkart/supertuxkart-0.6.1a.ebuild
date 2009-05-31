@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.1a.ebuild,v 1.2 2009/04/19 16:37:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.1a.ebuild,v 1.3 2009/05/31 17:08:06 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -22,7 +22,7 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libmikmod
 	media-libs/libvorbis
 	media-libs/openal
-	media-libs/libsdl"
+	media-libs/libsdl[joystick]"
 
 src_prepare() {
 	sed -i \
