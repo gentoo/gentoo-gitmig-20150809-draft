@@ -17,8 +17,6 @@
 	<use>
 		<flag name="all-options">Include both sides of kdebuild conditionals,
 			shown in different colours (PDF only)</flag>
-		<flag name="eapi3-draft">Include work-in-progress draft EAPI 3
-		specification.</flag>
 		<flag name="html">Generate PMS as .html as well</flag>
 		<flag name="kdebuild">Include specification for the kdebuild EAPI, see
 		http://www.gentoo.org/proj/en/desktop/kde/kdebuild-1.xml</flag>
