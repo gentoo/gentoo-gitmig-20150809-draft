@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.2.ebuild,v 1.3 2008/07/25 06:41:43 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/chuck/chuck-1.2.1.2.ebuild,v 1.4 2009/06/01 18:35:47 ssuominen Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -11,11 +11,11 @@ SRC_URI="http://chuck.cs.princeton.edu/release/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="oss jack alsa examples"
 
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
-	alsa? ( >=media-libs/alsa-lib-0.9 )
+	alsa? ( media-libs/alsa-lib )
 	media-libs/libsndfile
 	app-admin/eselect"
 DEPEND="${RDEPEND}
@@ -38,7 +38,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-1.2.1.1-hid-smc.patch"
+	epatch "${FILESDIR}"/${PN}-1.2.1.1-hid-smc.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
@@ -71,17 +72,17 @@ src_install() {
 	docinto doc
 	dodoc doc/*
 	if use examples; then
-		insinto /usr/share/doc/${P}/examples
-		doins `find examples -type f`
-		for dir in `find examples/* -type d`; do
-			insinto /usr/share/doc/${P}/$dir
-			doins $dir/*
+		insinto /usr/share/doc/${PF}/examples
+		doins $(find examples -type f)
+		for dir in $(find examples/* -type d); do
+			insinto /usr/share/doc/${PF}/"${dir}"
+			doins "${dir}"/*
 		done
 	fi
 
 	dodir /usr/share/eselect/modules
 	insinto /usr/share/eselect/modules
-	newins "${FILESDIR}/chuck.eselect-0.1" chuck.eselect
+	newins "${FILESDIR}"/chuck.eselect-0.1 chuck.eselect
 }
 
 pkg_postinst() {
