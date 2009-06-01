@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.17 2009/05/26 07:28:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.18 2009/06/01 06:48:05 mr_bones_ Exp $
+
+  01 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -hedgewars-0.9.10.ebuild, hedgewars-0.9.11.ebuild:
+  needs opengl for libsdl (bug #271813)
 
 *hedgewars-0.9.11 (26 May 2009)
 
