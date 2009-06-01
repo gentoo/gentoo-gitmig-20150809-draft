@@ -6,7 +6,7 @@ diff -ur glurp-0.11.6.orig/configure.in glurp-0.11.6/configure.in
  
  #pkg_modules="gtk+-2.0 libglade-2.0 libxml-2.0 glib-2.0"
 -pkg_modules="gtk+-2.0 >= 2.4 glib-2.0 >= 2.4 libglade-2.0 >= 2.3 gmodule-2.0 >= 2.6"
-+pkg_modules="gtk+-2.0 >= 2.4 glib-2.0 >= 2.4 libglade-2.0 >= 2.3 gmodule-2.0 >= 2.6 libmpd >= 0.17.0"
++pkg_modules="gtk+-2.0 >= 2.4 glib-2.0 >= 2.4 libglade-2.0 >= 2.3 gmodule-2.0 >= 2.6 libmpd >= 0.18.0"
  PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
  AC_SUBST(PACKAGE_CFLAGS)
  AC_SUBST(PACKAGE_LIBS)
@@ -23,3 +23,15 @@ diff -ur glurp-0.11.6.orig/src/Makefile.am glurp-0.11.6/src/Makefile.am
  	main.c \
  	player.h player.c \
  	structs.h \
+diff -ur glurp-0.11.6.orig/src/structs.h glurp-0.11.6/src/structs.h
+--- glurp-0.11.6.orig/src/structs.h	2005-04-05 04:35:39.000000000 +0300
++++ glurp-0.11.6/src/structs.h	2009-06-01 22:45:09.000000000 +0300
+@@ -20,7 +20,7 @@
+ 
+ */
+ 
+-#include "libmpdclient.h"
++#include <libmpdclient.h>
+ 
+ enum {
+     PL_FILENAME,

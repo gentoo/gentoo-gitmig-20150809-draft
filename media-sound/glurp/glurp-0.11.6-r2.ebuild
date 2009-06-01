@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/glurp-0.11.6-r2.ebuild,v 1.1 2009/06/01 19:22:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/glurp-0.11.6-r2.ebuild,v 1.2 2009/06/01 19:45:44 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils
+inherit autotools eutils flag-o-matic
 
 DESCRIPTION="Glurp is a GTK2 based graphical client for the Music Player Daemon"
 HOMEPAGE="http://sourceforge.net/projects/glurp/"
@@ -22,10 +22,12 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-system_libmpd.patch
+	rm -f src/libmpdclient.*
 	eautoreconf
 }
 
 src_configure() {
+	append-flags -I/usr/include/libmpd-1.0/libmpd
 	econf \
 		$(use_enable debug)
 }
