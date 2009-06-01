@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/dolphin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.12 2009/05/31 19:50:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/dolphin/ChangeLog,v 1.13 2009/06/01 15:54:51 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> dolphin-0.8.2-r1.ebuild:
+  ppc stable #244595
 
   31 May 2009; Markus Meier <maekke@gentoo.org> dolphin-0.8.2-r1.ebuild:
   amd64/x86 stable, bug #244595
