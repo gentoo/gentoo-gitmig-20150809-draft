@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.2 2008/07/05 06:52:06 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.3 2009/06/01 13:14:01 fmccor Exp $
+
+  01 Jun 2009; Ferris McCormick <fmccor@gentoo.org> libffi-0.ebuild:
+  Add sparc for testing, part of Bug #272046.
 
 *libffi-0 (03 Jul 2008)
 
