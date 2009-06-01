@@ -1,6 +1,11 @@
 # ChangeLog for app-text/wklej
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.19 2009/05/30 09:50:15 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wklej/ChangeLog,v 1.20 2009/06/01 22:42:36 cla Exp $
+
+*wklej-0.1.7 (01 Jun 2009)
+
+  01 Jun 2009; Dawid Węgliński <cla@gentoo.org> +wklej-0.1.7.ebuild:
+  Version bump (bug #271525)
 
   30 May 2009; Thomas Anderson <gentoofan23@gentoo.org> wklej-0.1.6.ebuild:
   stable amd64, bug 260125
