@@ -1,6 +1,10 @@
 # ChangeLog for net-im/psimedia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/ChangeLog,v 1.1 2009/05/29 09:55:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/ChangeLog,v 1.2 2009/06/01 11:33:47 pva Exp $
+
+  01 Jun 2009; Peter Volkov <pva@gentoo.org> psimedia-1.0.2.ebuild:
+  Added blocker with older versions of psi, since psimedia works only with
+  >=psi-0.13_rc1.
 
 *psimedia-1.0.2 (29 May 2009)
 

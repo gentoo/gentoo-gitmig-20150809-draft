@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.2.ebuild,v 1.1 2009/05/29 09:55:31 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psimedia/psimedia-1.0.2.ebuild,v 1.2 2009/06/01 11:33:47 pva Exp $
 
 EAPI="2"
 
@@ -33,6 +33,7 @@ RDEPEND="${DEPEND}
 	>=media-plugins/gst-plugins-v4l-0.10.22
 	media-plugins/gst-plugins-v4l2
 	media-plugins/gst-plugins-jpeg
+	!<net-im/psi-0.13_rc1
 "
 
 src_prepare() {
