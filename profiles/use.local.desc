@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4506 2009/06/01 16:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4507 2009/06/01 16:47:51 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -792,8 +792,15 @@ dev-php5/php-gtk:html - Enable GtkHTML2 support
 dev-php5/php-gtk:libsexy - Enable libsexy support
 dev-php5/php-gtk:mozembed - Enable GtkMozembed support
 dev-php5/php-gtk:scintilla - Enable Scintilla support
-dev-python/PyQt4:qt3support - enable the Qt3Support libraries for Qt4
-dev-python/PyQt4:webkit - enable WebKit support
+dev-python/PyQt4:X - Build the QtGui and QtDesigner modules
+dev-python/PyQt4:assistant - Build the QtHelp and QtAssistant modules
+dev-python/PyQt4:opengl - Build the QtOpenGL module
+dev-python/PyQt4:phonon - Build the phonon module
+dev-python/PyQt4:qt3support - Enable the Qt3Support libraries for Qt4
+dev-python/PyQt4:sql - Build the QtSql module
+dev-python/PyQt4:svg - Build the QtSvg module
+dev-python/PyQt4:webkit - Build the QtWebKit module
+dev-python/PyQt4:xmlpatterns - Build the QtXmlPatterns module
 dev-python/cgkit:3ds - Enable support for importing 3D Studio models
 dev-python/dap:server - Enable OpenDAP server support
 dev-python/docutils:glep - Install support for GLEPs
@@ -1507,6 +1514,7 @@ media-sound/cmus:zsh-completion - enable zsh completion support
 media-sound/darkice:twolame - Build with twolame support
 media-sound/decibel-audio-player:cdaudio - Adds support for CD audio playback and lookups via CDDB
 media-sound/dir2ogg:wma - Add support for wma files through mplayer
+media-sound/esound:static-libs - Compile static archives
 media-sound/exaile:libsexy - Enable libsexy support
 media-sound/exaile:mtp - Enable libmtp support
 media-sound/fapg:xspf - Enable support for saving XSPF playlists.
