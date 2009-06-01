@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/basket
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.1 2009/06/01 01:08:50 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/basket/ChangeLog,v 1.2 2009/06/01 01:25:40 tampakrap Exp $
+
+  01 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  basket-1.0.3.1.ebuild:
+  Fixing blocker to kde-misc/basket
 
   01 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> +basket-1.0.3.1.ebuild, +metadata.xml:
   Moving x11-misc/basket to kde-misc/basket
