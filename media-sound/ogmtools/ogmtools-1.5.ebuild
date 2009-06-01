@@ -1,18 +1,17 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.5.ebuild,v 1.7 2006/10/28 01:33:36 flameeyes Exp $
-
-IUSE="dvd"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.5.ebuild,v 1.8 2009/06/01 16:19:39 ssuominen Exp $
 
 inherit eutils
 
-DESCRIPTION="These tools allow information about (ogminfo) or extraction from (ogmdemux) or creation of (ogmmerge) OGG media streams"
+DESCRIPTION="Information, extraction or creation for OGG media streams"
 HOMEPAGE="http://www.bunkus.org/videotools/ogmtools/"
 SRC_URI="http://www.bunkus.org/videotools/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
+IUSE="dvd"
 
 RDEPEND="dvd? ( media-libs/libdvdread )
 	media-sound/vorbis-tools"
@@ -20,13 +19,12 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-endian-fix.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-endian-fix.patch
 }
 
 src_compile() {
-	econf `use_with dvd dvdread` || die "econf failed"
+	econf $(use_with dvd dvdread)
 	emake || die "emake failed"
 }
 
