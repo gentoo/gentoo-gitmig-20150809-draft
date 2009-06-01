@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/pyusb-0.4.1-r1.ebuild,v 1.2 2009/06/01 14:49:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyusb/pyusb-0.4.1-r1.ebuild,v 1.3 2009/06/01 14:50:57 patrick Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc"
+KEYWORDS="~amd64 ~ppc"
 IUSE="debug"
 
 ### The bus enumeration does not appear to work with libusb-compat
