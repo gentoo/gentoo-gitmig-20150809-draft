@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.1 2009/05/30 20:09:33 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.2 2009/06/01 12:32:47 nirbheek Exp $
 
 EAPI="2"
 
@@ -47,7 +47,7 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	sed -ie 's/-O2//g' "${S}"/configure* || die "sed failed"
+	sed -ie 's/-O2//g' "${S}"/configure{.ac,} || die "sed failed"
 }
 
 src_configure() {
