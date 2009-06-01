@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r3.ebuild,v 1.3 2009/05/30 17:23:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-3.1.1-r3.ebuild,v 1.4 2009/06/01 12:49:39 maekke Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ SRC_URI="http://www.kphotoalbum.org/download/${P}.tar.bz2"
 
 SLOT="3.5"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="exif raw"
 
 DEPEND="exif? ( >=media-gfx/exiv2-0.15 x11-libs/qt:3[sqlite] )
