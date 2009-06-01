@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.15-r1.ebuild,v 1.9 2009/06/01 13:37:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ufraw/ufraw-0.15-r2.ebuild,v 1.1 2009/06/01 13:37:56 maekke Exp $
 
 inherit fdo-mime gnome2-utils autotools
 
@@ -10,17 +10,20 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="contrast exif gimp gnome openmp timezone"
+KEYWORDS="~x86"
+IUSE="contrast exif lensfun gimp gnome openmp timezone"
 
-RDEPEND="media-libs/jpeg
+RDEPEND="
+	media-gfx/gtkimageview
+	media-libs/jpeg
 	>=media-libs/lcms-1.13
 	media-libs/tiff
 	>=x11-libs/gtk+-2.4.0
 	exif? ( >=media-libs/libexif-0.6.13
 	        media-gfx/exiv2 )
 	gimp? ( >=media-gfx/gimp-2.0 )
-	gnome? ( gnome-base/gconf )"
+	gnome? ( gnome-base/gconf )
+	lensfun? ( media-libs/lensfun )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -35,12 +38,12 @@ src_unpack() {
 src_compile() {
 	econf \
 		--without-cinepaint \
-		--without-gtkimageview \
-		--without-lensfun \
+		--with-gtkimageview \
 		$(use_enable contrast) \
 		$(use_with exif exiv2) \
 		$(use_with gimp) \
 		$(use_enable gnome mime) \
+		$(use_with lensfun) \
 		$(use_enable openmp) \
 		$(use_enable timezone dst-correction)
 	emake || die "emake failed"
