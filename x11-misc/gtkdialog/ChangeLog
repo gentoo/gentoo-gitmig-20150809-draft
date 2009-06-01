@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtkdialog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.19 2009/06/01 11:57:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdialog/ChangeLog,v 1.20 2009/06/01 16:58:01 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> gtkdialog-0.7.20.ebuild:
+  ppc stable #272045
 
   01 Jun 2009; Markus Meier <maekke@gentoo.org> gtkdialog-0.7.20.ebuild:
   amd64/x86 stable, bug #272045
