@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4508 2009/06/01 18:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4509 2009/06/01 21:07:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -864,6 +864,7 @@ dev-util/anjuta:devhelp - Enable devhelp integration
 dev-util/anjuta:glade - Build glade plugin for anjuta
 dev-util/anjuta:inherit-graph - Build inheritance graphing plugin for anjuta
 dev-util/anjuta:sourceview - Build sourceview editing plugin for anjuta
+dev-util/anjuta:symbol-db - Enable symbol database plugin for anjuta
 dev-util/anjuta:valgrind - Build valgrind plugin for anjuta
 dev-util/astyle:libs - builds and installs both shared and static library interfaces
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
