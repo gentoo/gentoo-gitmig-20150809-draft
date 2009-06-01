@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-gnome-platform
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.5 2008/07/05 08:27:02 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-gnome-platform/ChangeLog,v 1.6 2009/06/01 13:55:40 fmccor Exp $
+
+  01 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  guile-gnome-platform-2.16.1.ebuild:
+  Add ~sparc for testing, part of Bug #272046.
 
   05 Jul 2008; Samuli Suominen <drac@gentoo.org>
   -guile-gnome-platform-2.15.95.ebuild:
