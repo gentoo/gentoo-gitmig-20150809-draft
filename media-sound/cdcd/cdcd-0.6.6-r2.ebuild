@@ -1,31 +1,30 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6-r2.ebuild,v 1.3 2008/11/06 12:05:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.6.6-r2.ebuild,v 1.4 2009/06/01 14:56:08 ssuominen Exp $
 
-IUSE=""
-
-inherit eutils autotools
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="a simple yet powerful command line cd player"
+HOMEPAGE="http://libcdaudio.sourceforge.net"
 SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
-HOMEPAGE="http://libcdaudio.sourceforge.net/"
-DEPEND=">=sys-libs/ncurses-5.0
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE=""
+
+RDEPEND="sys-libs/ncurses
 	>=sys-libs/readline-4.2
 	>=media-libs/libcdaudio-0.99.4"
+DEPEND="${RDEPEND}"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-fbsd.patch"
 	eautoconf
 }
 
 src_install () {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README
 }
