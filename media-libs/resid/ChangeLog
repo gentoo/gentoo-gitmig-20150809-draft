@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/resid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.17 2009/05/30 15:59:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.18 2009/06/01 12:56:21 maekke Exp $
+
+  01 Jun 2009; Markus Meier <maekke@gentoo.org> resid-0.16_p2.ebuild:
+  x86 stable, bug #271857
 
   30 May 2009; Samuli Suominen <ssuominen@gentoo.org> resid-0.16_p2.ebuild:
   amd64 stable wrt #271857
