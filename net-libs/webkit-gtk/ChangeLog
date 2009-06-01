@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.31 2009/06/01 12:32:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.32 2009/06/01 15:28:11 nirbheek Exp $
+
+  01 Jun 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  webkit-gtk-1.1.8.ebuild:
+  Maintainer mode still gets invoked even when configure is older than
+  configure.ac -- do an eautoreconf to update everything.
 
   01 Jun 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   webkit-gtk-1.1.8.ebuild:

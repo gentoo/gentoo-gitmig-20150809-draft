@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.2 2009/06/01 12:32:47 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.3 2009/06/01 15:28:11 nirbheek Exp $
 
 EAPI="2"
+
+inherit autotools
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -47,7 +49,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	sed -ie 's/-O2//g' "${S}"/configure{.ac,} || die "sed failed"
+	sed -i 's/-O2//g' "${S}"/configure.ac || die "sed failed"
+	AT_M4DIR=autotools eautoreconf
 }
 
 src_configure() {
