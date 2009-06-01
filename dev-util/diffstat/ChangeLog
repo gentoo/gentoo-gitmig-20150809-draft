@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/diffstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.78 2009/05/31 15:53:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffstat/ChangeLog,v 1.79 2009/06/01 16:31:08 tcunha Exp $
+
+  01 Jun 2009; Tiago Cunha <tcunha@gentoo.org>
+  -files/diffstat-1.37-hard-locale.patch, -diffstat-1.43.ebuild,
+  -diffstat-1.45.ebuild, -diffstat-1.46.ebuild, diffstat-1.47.ebuild:
+  - Beautify DESCRIPTION.
+  - Remove old.
 
   31 May 2009; Brent Baude <ranger@gentoo.org> diffstat-1.47.ebuild:
   stable ppc64, bug 269899
