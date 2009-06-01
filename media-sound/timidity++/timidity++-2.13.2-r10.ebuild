@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r10.ebuild,v 1.6 2009/05/31 15:52:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r10.ebuild,v 1.7 2009/06/01 14:25:09 ssuominen Exp $
 
 EAPI=2
 inherit eutils elisp-common
@@ -16,14 +16,12 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exit
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="oss nas esd motif X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
+IUSE="oss nas X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	emacs? ( virtual/emacs )
 	gtk? ( >=x11-libs/gtk+-2 )
 	tk? ( >=dev-lang/tk-8.1 )
-	motif? ( x11-libs/openmotif )
-	esd? ( >=media-sound/esound-0.2.22 )
 	nas? ( >=media-libs/nas-1.4 )
 	alsa? ( media-libs/alsa-lib[midi] )
 	slang? ( sys-libs/slang )
@@ -55,7 +53,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-polling.patch \
 
 	# fix header location of speex
-	sed -i -e "s:#include <speex:#include <speex/speex:g" configure* timidity/speex_a.c
+	sed -i -e "s:#include <speex:#include <speex/speex:g" \
+		configure* timidity/speex_a.c || die "sed failed"
 }
 
 src_configure() {
@@ -67,7 +66,6 @@ src_configure() {
 	use vorbis && audios="${audios},vorbis"
 
 	use oss && audios="${audios},oss"
-	use esd && audios="${audios},esd"
 	use jack && audios="${audios},jack"
 	use ao && audios="${audios},ao"
 
@@ -130,7 +128,7 @@ src_install() {
 	dodir /usr/share/timidity
 	dosym /etc/timidity.cfg /usr/share/timidity/timidity.cfg
 
-	if use emacs ; then
+	if use emacs; then
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 	fi
 
@@ -155,8 +153,7 @@ pkg_postinst() {
 	fi
 
 	if use sparc; then
-		ewarn "sparc support is experimental. oss, alsa, and esd do not work."
-		ewarn "-Ow (save to wave file) does..."
+		elog "Only saving to wave file and ALSA soundback has been tested working."
 	fi
 }
 
