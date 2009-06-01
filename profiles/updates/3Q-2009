@@ -1,1 +1,2 @@
 move x11-misc/basket kde-misc/basket
+move media-sound/libspiff media-libs/libxspf
