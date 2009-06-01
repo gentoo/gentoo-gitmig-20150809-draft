@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.7.3.ebuild,v 1.7 2009/05/31 15:44:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-1.7.3.ebuild,v 1.8 2009/06/01 14:19:12 ssuominen Exp $
 
 EAPI=2
 
@@ -11,10 +11,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
-IUSE="3dnow 3dnowext alsa altivec esd ipv6 jack mmx nas network oss portaudio pulseaudio sdl sse"
+IUSE="3dnow 3dnowext alsa altivec ipv6 jack mmx nas +network oss portaudio pulseaudio sdl sse"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
-	esd? ( media-sound/esound )
 	jack? ( media-sound/jack-audio-connection-kit )
 	nas? ( media-libs/nas )
 	portaudio? ( media-libs/portaudio )
@@ -31,7 +30,6 @@ src_configure() {
 	local myaudio
 
 	use alsa && myaudio="${myaudio} alsa"
-	use esd && myaudio="${myaudio} esd"
 	use jack && myaudio="${myaudio} jack"
 	use nas && myaudio="${myaudio} nas"
 	use oss && myaudio="${myaudio} oss"
@@ -53,7 +51,8 @@ src_configure() {
 		mycpu="--with-cpu=mmx"
 	fi
 
-	econf --disable-dependency-tracking \
+	econf \
+		--disable-dependency-tracking \
 		--with-optimization=0 ${mycpu} \
 		--with-audio="${myaudio}" \
 		$(use_enable network) \
