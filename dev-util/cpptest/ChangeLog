@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cpptest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.6 2009/05/31 15:56:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/ChangeLog,v 1.7 2009/06/01 15:16:54 fmccor Exp $
+
+  01 Jun 2009; Ferris McCormick <fmccor@gentoo.org> cpptest-1.1.0.ebuild:
+  Sparc stable, required for Bug #271815.
 
   31 May 2009; Markus Meier <maekke@gentoo.org> cpptest-1.1.0.ebuild:
   amd64/x86 stable, bug #271815

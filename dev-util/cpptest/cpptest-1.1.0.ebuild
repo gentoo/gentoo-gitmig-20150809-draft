@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/cpptest-1.1.0.ebuild,v 1.7 2009/05/31 15:56:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpptest/cpptest-1.1.0.ebuild,v 1.8 2009/06/01 15:16:54 fmccor Exp $
 
 EAPI=2
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )"
