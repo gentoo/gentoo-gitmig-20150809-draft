@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.58 2009/06/01 07:15:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.59 2009/06/01 07:19:41 ssuominen Exp $
 
   01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> -libffi-3.0.5.ebuild,
   -libffi-3.0.6.ebuild, libffi-3.0.8.ebuild, metadata.xml:
@@ -20,14 +20,14 @@
   29 Jun 2008; Marijn Schouten <hkBst@gentoo.org> libffi-3.0.5.ebuild:
   don't patch anymore, move warning to pkg_setup
 
-  13 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  13 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
   +files/libffi-3.0.5-includedir.patch, libffi-3.0.5.ebuild:
   Fix includedir. USE flag test for dejagnu which is required for make
   check.
 
 *libffi-3.0.5 (13 Jun 2008)
 
-  13 Jun 2008; Samuli Suominen <drac@gentoo.org>
+  13 Jun 2008; Samuli Suominen <ssuominen@gentoo.org>
   -files/libffi-soversion.dpatch, -files/libffi-without-libgcj.dpatch,
   +libffi-3.0.5.ebuild, -libffi-3.4.1.ebuild, -libffi-3.4.1-r1.ebuild,
   -libffi-3.4.3.ebuild:
