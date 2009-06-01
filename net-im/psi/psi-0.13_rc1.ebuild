@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1.ebuild,v 1.2 2009/06/01 11:31:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1.ebuild,v 1.3 2009/06/01 23:52:19 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-langs-${LANGPACK_VER}.tar.bz2
-	extras? ( mirror://gentoo/${PN}-extra-patches-r515.tar.bz2 
+	extras? ( mirror://gentoo/${PN}-extra-patches-r515.tar.bz2
 		mirror://gentoo/${PN}-extra-iconsets-r515.tar.bz2 )"
 
 LICENSE="GPL-2"
