@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.4.ebuild,v 1.2 2008/09/15 17:32:52 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.4.ebuild,v 1.3 2009/06/01 17:58:40 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Digital vinyl emulation software"
@@ -13,38 +14,28 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa"
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-ttf
 	media-fonts/ttf-bitstream-vera
 	alsa? ( media-libs/alsa-lib )"
+DEPEND="${RDEPEND}"
 
-DOCS="README"
-
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	# Fix fonts directory in source
 	epatch "${FILESDIR}/${P}-fonts.patch"
 	# Remove the 'CFLAGS += -Wall -03' line from Makefile
 	# Add LDFLAGS to Makefile
 	sed -i -e 's:^CFLAGS:#CFLAGS:' \
 		-e 's:\($(CC) .* $(DEVICE_LIBS)\):\1 $(LDFLAGS):' \
-		Makefile
+		Makefile || die "sed failed"
 }
 
-src_compile() {
-	econf $(use_enable alsa) || die "econf failed"
-
-	emake || die "emake failed"
+src_configure() {
+	econf \
+		$(use_enable alsa)
 }
 
 src_install() {
-	# Manually install into ${D}/usr/bin
-	exeinto "/usr/bin"
-
-	doexe xwax
-	doexe xwax_import
-	# Install documentation
-	dodoc ${DOCS}
+	dobin xwav xwav_import
+	dodoc README
 }
