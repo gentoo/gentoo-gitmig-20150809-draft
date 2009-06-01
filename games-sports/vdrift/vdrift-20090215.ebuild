@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090215.ebuild,v 1.2 2009/04/03 02:38:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/vdrift/vdrift-20090215.ebuild,v 1.3 2009/06/01 07:45:02 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,10 +18,10 @@ IUSE="nls"
 RDEPEND="virtual/opengl
 	virtual/glu
 	media-libs/glew
-	media-libs/libsdl
+	media-libs/libsdl[opengl,video]
 	media-libs/openal
 	media-libs/sdl-gfx
-	media-libs/sdl-image
+	media-libs/sdl-image[png]
 	media-libs/sdl-net
 	media-libs/libvorbis
 	nls? ( virtual/libintl )"
@@ -45,7 +45,7 @@ src_prepare() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
+	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[0-9]\+\).*/\1/; p }")
 
 	scons \
 		${sconsopts} \
