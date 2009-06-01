@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.22 2009/03/27 23:03:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.23 2009/06/01 22:10:04 yngwin Exp $
+
+  01 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  qscintilla-python-2.3.2-r1.ebuild:
+  Correct use dep, move patching to src_prepare
 
   27 Mar 2009; Ben de Groot <yngwin@gentoo.org>
   -files/qscintilla-python-2.1-nostrip.patch, -qscintilla-python-2.1.ebuild,
