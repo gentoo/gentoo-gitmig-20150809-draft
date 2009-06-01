@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.8.ebuild,v 1.1 2008/12/24 18:31:29 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.8.ebuild,v 1.2 2009/06/01 07:15:38 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="a portable, high level programming interface to various calling conventions."
@@ -11,24 +12,25 @@ SRC_URI="ftp://sourceware.org/pub/${PN}/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug test"
+IUSE="debug static-libs test"
 
-DEPEND="test? ( dev-util/dejagnu )"
 RDEPEND=""
+DEPEND="test? ( dev-util/dejagnu )"
 
-pkg_setup() {
-	ewarn "This package provides a separate libffi which may conflict with the"
-	ewarn "one provided by sys-devel/gcc when it is built with libffi use flag on."
-	ebeep
-}
-
-src_compile() {
-	econf --disable-dependency-tracking \
-		$(use_enable debug) || die "econf failed."
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
+		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog* README TODO
+}
+
+pkg_postinst() {
+	ewarn "Please unset USE flag libffi in sys-devel/gcc. There is no"
+	ewarn "file collision but your package might link to wrong library."
+	ebeep
 }
