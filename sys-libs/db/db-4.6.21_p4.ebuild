@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.6.21_p4.ebuild,v 1.6 2009/05/24 17:33:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.6.21_p4.ebuild,v 1.7 2009/06/01 12:01:16 armin76 Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -26,7 +26,7 @@ done
 
 LICENSE="OracleDB"
 SLOT="4.6"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="tcl java doc nocxx"
 
 DEPEND="tcl? ( >=dev-lang/tcl-8.4 )
