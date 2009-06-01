@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.42 2009/05/30 20:39:35 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.43 2009/06/01 16:30:01 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> aide-0.13.1-r3.ebuild:
+  ppc stable #270440
 
   30 May 2009; Tiago Cunha <tcunha@gentoo.org> aide-0.13.1-r3.ebuild:
   stable sparc, bug 270440
