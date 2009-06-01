@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/package.mask,v 1.6 2007/04/20 20:42:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2006.1/package.mask,v 1.7 2009/06/01 17:16:55 fmccor Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Totally untested on sparc32
@@ -11,9 +11,6 @@ sys-apps/hal
 sys-apps/ivman
 sys-apps/pmount
 
-# Gustavo Zacarias <gustavoz@gentoo.org>
-# To avoid odd toolchain mixups
-<dev-libs/libffi-3.4.3
 
 # Mask gcc-4.x for upgrade reasons
 >=sys-devel/gcc-4.0.0

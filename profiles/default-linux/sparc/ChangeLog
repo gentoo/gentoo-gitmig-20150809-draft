@@ -1,6 +1,11 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.130 2009/03/13 16:50:12 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.131 2009/06/01 17:16:54 fmccor Exp $
+
+  01 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  sparc32/2006.1/package.mask, sparc64/package.mask,
+  sparc32/dev/gcc-4.1.1/package.mask:
+  Remove package mask for libffi, because libffi-3.0.8 is more current than 3.4.3
 
   13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> package.use.mask:
   Fix package name
