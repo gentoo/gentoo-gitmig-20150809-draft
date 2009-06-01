@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.10.0.ebuild,v 1.1 2009/06/01 13:58:47 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.10.0.ebuild,v 1.2 2009/06/01 16:22:00 mr_bones_ Exp $
 
 EAPI=2
 
@@ -31,4 +31,3 @@ src_install() {
 	emake DESTDIR="${D}" install
 	find "${D}" -name '*.la' -type f -exec rm -f '{}' ';' || die "Removing .la files failed"
 }
-
