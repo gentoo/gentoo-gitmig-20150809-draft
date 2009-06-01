@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/zsh-completion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.36 2009/05/31 14:03:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh-completion/ChangeLog,v 1.37 2009/06/01 00:16:37 cla Exp $
+
+  01 Jun 2009; Dawid Węgliński <cla@gentoo.org>
+  zsh-completion-20080310.ebuild:
+  Stable on amd64 (bug #271468)
 
   31 May 2009; nixnut <nixnut@gentoo.org> zsh-completion-20080310.ebuild:
   ppc stable #271468
