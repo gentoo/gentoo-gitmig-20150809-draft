@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.3.2.ebuild,v 1.8 2009/05/29 23:22:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/qscintilla-2.3.2.ebuild,v 1.9 2009/06/01 22:28:49 yngwin Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils toolchain-funcs multilib
 
 MY_P="${PN/qs/QS}-gpl-${PV}"
@@ -22,11 +22,9 @@ RDEPEND="qt4? ( x11-libs/qt-gui:4 )
 DEPEND="${RDEPEND}"
 # dev-python/PyQt needs qscintilla to build and qscintilla's python bindings
 # need dev-python/PyQt, bug 199543
-PDEPEND="python? ( dev-python/qscintilla-python )"
+PDEPEND="python? ( dev-python/qscintilla-python[qt4=] )"
 
-src_unpack() {
-	unpack ${A}
-
+src_configure() {
 	local myqmake myqtdir
 	if use qt4; then
 		myqmake=/usr/bin/qmake

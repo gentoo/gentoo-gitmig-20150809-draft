@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.24 2009/05/29 23:22:53 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.25 2009/06/01 22:28:49 yngwin Exp $
+
+  01 Jun 2009; Ben de Groot <yngwin@gentoo.org> qscintilla-2.3.2.ebuild:
+  Move to EAPI=2, and add use dep
 
   29 May 2009; Ben de Groot <yngwin@gentoo.org> qscintilla-2.3.2.ebuild:
   Remove monolithic qt4 dep, as only split is in tree
