@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.4.5_pre2.ebuild,v 1.1 2009/04/28 15:42:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/evilvte/evilvte-0.4.5_pre2.ebuild,v 1.2 2009/06/01 12:06:17 maekke Exp $
 
 EAPI=2
 inherit toolchain-funcs versionator
@@ -12,7 +12,7 @@ SRC_URI="http://www.calno.com/${PN}/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 LGPL-2.1 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # It seems libXtst is only used at build time, no NEEDED entry
