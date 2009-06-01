@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/quilt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.45 2009/05/31 18:33:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/quilt/ChangeLog,v 1.46 2009/06/01 16:50:45 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> quilt-0.48.ebuild:
+  ppc stable #271892
 
   31 May 2009; Brent Baude <ranger@gentoo.org> quilt-0.48.ebuild:
   Marking quilt-0.48 ppc64 for bug 271892
