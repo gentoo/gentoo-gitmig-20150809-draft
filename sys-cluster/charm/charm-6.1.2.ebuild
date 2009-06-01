@@ -1,65 +1,41 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-5.9.ebuild,v 1.17 2009/06/01 04:32:10 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2.ebuild,v 1.3 2009/06/01 04:32:10 je_fro Exp $
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic multilib
 
 DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
-SRC_URI="${P}.tar.gz"
-
+SRC_URI="${PN}_src.tar.gz"
+S="${WORKDIR}/${PN}"
 SLOT="0"
-KEYWORDS="~x86"
-IUSE="cmkopt tcp smp doc"
+KEYWORDS="~amd64 ~x86"
+IUSE="cmkopt tcp smp doc icc"
 
-RESTRICT="fetch"
-
-DEPEND="
+DEPEND="icc? ( >=dev-lang/icc-8.1 )
 	doc? (
-		virtual/poppler-utils
+		app-text/poppler
 		dev-tex/latex2html
-		virtual/latex-base
-		|| ( ( dev-texlive/texlive-genericrecommended
-				dev-texlive/texlive-latexextra )
-			app-text/ptex )
+		virtual/tex-base
 	)"
 
 RDEPEND="${DEPEND}"
 
-CHARM_ARCH="net-linux"
-CHARM_DOWNLOAD="http://charm.cs.uiuc.edu/download/"
+case ${ARCH} in
 
-pkg_nofetch() {
-	echo
-	einfo "Please download ${P}.tar.gz from"
-	einfo "${CHARM_DOWNLOAD}"
-	einfo "and then move it to ${DISTDIR}"
-	echo
-}
+	x86)
+		CHARM_ARCH="net-linux" ;;
+
+	amd64)
+		CHARM_ARCH="net-linux-amd64" ;;
+esac
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	epatch "${FILESDIR}"/${P}-gcc-4.2.patch
-
-	# add -fPIC to generate PIC code for charm so's
-	epatch "${FILESDIR}"/${PN}-fpic-gentoo.patch
-
-	# for pdf/html docs we need to patch the makefiles
-	if use doc; then
-		epatch "${FILESDIR}"/${PN}-doc-makefile-gentoo.patch
-	fi
-
-	# patch the example Makefiles so they run out of
-	# the box
-	epatch "${FILESDIR}"/${PN}-examples-gentoo.patch
-
-	# enable proper detection of python in configure
-	epatch "${FILESDIR}"/${PN}-python-configure-gentoo.patch
-
-	# gcc-4.1 fixes
-	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}/${P}-charmrun.patch"
 
 	# TCP instead of default UDP for socket comunication
 	# protocol
@@ -68,24 +44,33 @@ src_unpack() {
 	fi
 
 	# enable direct SMP support using shared memory
+#	if use smp && [ "${ARCH}" != "amd64" ]; then
 	if use smp; then
 		CHARM_OPTS="${CHARM_OPTS} smp"
 	fi
 
-	# compile with icc if requested (icc or icpc)
-	if [ $(tc-getCC) = icc ] || [ $(tc-getCXX) = ic* ]; then
+	# compile with icc if requested
+	if use icc; then
+		if [ $(tc-getCC) != "icc" ]; then
+			die "You cannot use $(tc-getCC) with USE='icc'"
+		fi
 		CHARM_OPTS="${CHARM_OPTS} icc"
+	else
+		CHARM_OPTS="${CHARM_OPTS} gcc gfortran"
 	fi
 
 	# CMK optimization
 	if use cmkopt; then
 		append-flags -DCMK_OPTIMIZE=1
 	fi
+
+	echo "charm opts: ${CHARM_OPTS}"
 }
 
 src_compile() {
 	# build charmm++ first
-	./build charm++ net-linux ${CHARM_OPTS} ${CFLAGS} || \
+	cd "${S}"
+	./build charm++ ${CHARM_ARCH} ${CHARM_OPTS} ${CFLAGS} || \
 		die "Failed to build charm++"
 
 	# make pdf/html docs
@@ -98,11 +83,12 @@ src_compile() {
 src_install() {
 	# make charmc play well with gentoo before
 	# we move it into /usr/bin
-	einfo "Fixing paths in charmc wrapper"
-	epatch "${FILESDIR}"/${PN}-charmc-gentoo.patch
+	epatch "${FILESDIR}/${P}-charmc-gentoo.patch"
 
-	sed -e "s/gentoo-include/${P}/" -i ./src/scripts/charmc || \
-		die "failed patching charmc script"
+	sed -e "s|gentoo-include|${P}|" \
+		-e "s|gentoo-libdir|$(get_libdir)|g" \
+		-e "s|VERSION|${P}/VERSION|" \
+		-i ./src/scripts/charmc || die "failed patching charmc script"
 
 	# install binaries
 	cd "${S}"/bin
@@ -126,7 +112,7 @@ src_install() {
 	cd "${S}"
 	dodoc CHANGES README  || die "Failed to install docs"
 
-	# install examples after fixing path to charmc
+	# install examples
 	find examples/ -name 'Makefile' | xargs sed \
 		-r "s:(../)+bin/charmc:/usr/bin/charmc:" -i || \
 		die "Failed to fix examples"
