@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.77 2009/05/31 22:09:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.78 2009/06/01 16:43:17 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> libdvdcss-1.2.10.ebuild:
+  ppc stable #271791
 
   31 May 2009; Brent Baude <ranger@gentoo.org> libdvdcss-1.2.10.ebuild:
   Marking libdvdcss-1.2.10 ppc64 for bug 271791
