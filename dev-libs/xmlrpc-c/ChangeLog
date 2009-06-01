@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-c
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.90 2009/05/31 19:41:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-c/ChangeLog,v 1.91 2009/06/01 16:55:16 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> xmlrpc-c-1.18.02.ebuild:
+  ppc stable #271986
 
   31 May 2009; Markus Meier <maekke@gentoo.org> xmlrpc-c-1.18.02.ebuild:
   amd64/x86 stable, bug #271986
