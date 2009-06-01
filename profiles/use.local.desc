@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4502 2009/06/01 04:49:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4503 2009/06/01 07:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -715,6 +715,7 @@ dev-libs/ferrisloki:stlport - Include support for dev-libs/STLport
 dev-libs/geoip:perl-geoipupdate - Install pure perl version of geoipupdate, with Proxy Server support via via the "http_proxy" environment variable and easy to customize.
 dev-libs/klibc:n32 - Force klibc to 32bit if on mips64 if not n32 userland
 dev-libs/libcdio:minimal -  Only build the libcdio library and little more, just to be used to link against from multimedia players. With this USE flag enabled, none of the command-line utilities are built, nor is the CDDA library. 
+dev-libs/libffi:static-libs - Compile static archives
 dev-libs/libgcrypt:idea - Use the patented IDEA algorithm
 dev-libs/libjit:interpreter - Enable the libjit interpreter
 dev-libs/libjit:long-double - Enable the use of long double for jit_nfloat
