@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/resid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.18 2009/06/01 12:56:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/resid/ChangeLog,v 1.19 2009/06/01 16:07:43 ssuominen Exp $
+
+  01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> resid-0.16_p2.ebuild,
+  metadata.xml:
+  USE static-libs,, no need to use them so minimal installation size unless
+  requested.
 
   01 Jun 2009; Markus Meier <maekke@gentoo.org> resid-0.16_p2.ebuild:
   x86 stable, bug #271857
