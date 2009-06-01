@@ -1,13 +1,10 @@
 # ChangeLog for net-zope/zodb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.27 2008/05/27 21:31:53 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.28 2009/06/01 09:15:43 ssuominen Exp $
 
-  27 May 2008; Tupone Alfredo <tupone@gentoo.org> zodb-3.3.1.ebuild,
-  zodb-3.4.0.ebuild, zodb-3.4.1.ebuild:
-  Making repoman happy
-
-  22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
-  Redigest for Manifest2
+  01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> zodb-3.3.1.ebuild,
+  zodb-3.6.0.ebuild:
+  Block zopeinterface wrt #190882, don't remove it unless you fix it.
 
   02 Feb 2007; Steve Dibb <beandog@gentoo.org> zodb-3.6.0.ebuild:
   Add ~amd64, bug 163805
