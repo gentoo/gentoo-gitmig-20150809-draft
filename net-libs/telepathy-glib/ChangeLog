@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/telepathy-glib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.28 2009/04/09 22:46:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/ChangeLog,v 1.29 2009/06/01 21:52:50 eva Exp $
+
+*telepathy-glib-0.7.31 (01 Jun 2009)
+
+  01 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +telepathy-glib-0.7.31.ebuild:
+  Version bump. Updated to telepathy-spec 0.17.25.
 
 *telepathy-glib-0.7.29 (09 Apr 2009)
 
