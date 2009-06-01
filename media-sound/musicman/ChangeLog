@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musicman
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.18 2007/02/22 01:18:46 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.19 2009/06/01 17:52:30 ssuominen Exp $
+
+  01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> musicman-0.15.ebuild:
+  Remove arts support.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
