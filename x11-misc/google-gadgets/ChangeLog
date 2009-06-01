@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.24 2009/04/11 19:30:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.25 2009/06/01 22:50:41 voyageur Exp $
+
+*google-gadgets-0.11.0 (01 Jun 2009)
+
+  01 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +google-gadgets-0.11.0.ebuild, metadata.xml:
+  Version bump, performance improvement, reduced memory consumption, new
+  backends for webkit-gtk and libsoup, and bugfixes. ~hppa and ~ppc64
+  keywords temporarly removed pending bug #272194
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   google-gadgets-0.10.5.ebuild:
