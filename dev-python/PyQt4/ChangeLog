@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.57 2009/06/01 16:30:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.58 2009/06/01 19:33:34 hwoarang Exp $
+
+  01 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +files/fix_license_check.patch:
+  Add missing patch. Fixes bug 272126
 
 *PyQt4-4.4.4-r5 (01 Jun 2009)
 
