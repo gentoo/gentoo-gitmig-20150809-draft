@@ -1,6 +1,11 @@
 # ChangeLog for media-video/elltube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/ChangeLog,v 1.3 2009/03/20 04:26:22 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/ChangeLog,v 1.4 2009/06/01 21:36:04 hwoarang Exp $
+
+*elltube-0.3-r1 (01 Jun 2009)
+
+  01 Jun 2009; Markos Chandras <hwoarang@gentoo.org> +elltube-0.3-r1.ebuild:
+  Adjust PyQt4 use deps wrt bug 272136
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
