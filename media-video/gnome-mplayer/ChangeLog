@@ -1,6 +1,12 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.15 2009/06/01 01:52:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.16 2009/06/01 19:22:54 yngwin Exp $
+
+  01 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  gnome-mplayer-0.9.5-r1.ebuild, -files/gnome-mplayer-0.9.5-gettext.patch,
+  +files/gnome-mplayer-0.9.5-nautilus-gettext.patch:
+  Add patch that actually applies, and edit ebuild to make sure the patch
+  actually gets applied...
 
 *gnome-mplayer-0.9.5-r2 (01 Jun 2009)
 

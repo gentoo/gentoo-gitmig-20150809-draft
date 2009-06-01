@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.5-r1.ebuild,v 1.1 2009/05/29 21:47:21 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.5-r1.ebuild,v 1.2 2009/06/01 19:22:54 yngwin Exp $
 
 EAPI="2"
 GCONF_DEBUG=no
@@ -33,7 +33,10 @@ DEPEND="${RDEPEND}
 
 DOCS="ChangeLog README DOCS/keyboard_shortcuts.txt"
 
-PATCHES=( "${FILESDIR}"/${P}-gettext.patch )
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-nautilus-gettext.patch
+	gnome2_src_prepare
+}
 
 src_configure() {
 	G2CONF="${G2CONF}
