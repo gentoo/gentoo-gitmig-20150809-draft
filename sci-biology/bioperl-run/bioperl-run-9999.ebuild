@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-9999.ebuild,v 1.3 2009/06/01 16:18:08 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-9999.ebuild,v 1.4 2009/06/01 16:22:04 weaver Exp $
 
 EAPI="2"
 
@@ -15,7 +15,9 @@ LICENSE="Artistic GPL-2"
 SLOT="0"
 KEYWORDS=""
 IUSE="-minimal test"
-SRC_TEST="do"
+#SRC_TEST="do"
+
+RESTRICT="test"
 
 CDEPEND=">=sci-biology/bioperl-${PV}
 	!minimal? (
@@ -36,8 +38,4 @@ src_install() {
 	# TODO: File collision in Bio/ConfigData.pm (a Module::Build internal file)
 	# with sci-biology/bioperl. Workaround: the "nuke it from orbit" solution :D
 	find "${D}" -name '*ConfigData*' -print -delete
-}
-
-src_test() {
-	:
 }
