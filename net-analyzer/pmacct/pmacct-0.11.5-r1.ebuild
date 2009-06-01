@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.11.5-r1.ebuild,v 1.5 2009/05/30 18:20:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/pmacct-0.11.5-r1.ebuild,v 1.6 2009/06/01 09:48:36 pva Exp $
 
 DESCRIPTION="A network tool to gather ip traffic informations"
 HOMEPAGE="http://www.pmacct.net/"
@@ -46,7 +46,7 @@ src_install() {
 		dodoc ${dirname}/* || die "dodoc ${dirname} failed"
 	done
 
-	newinitd "${FILESDIR}"/pmacctd-init.d.1 pmacctd || die "newinitd failed"
+	newinitd "${FILESDIR}"/pmacctd-init.d pmacctd || die "newinitd failed"
 	newconfd "${FILESDIR}"/pmacctd-conf.d pmacctd || die "newconfd failed"
 
 	insinto /etc

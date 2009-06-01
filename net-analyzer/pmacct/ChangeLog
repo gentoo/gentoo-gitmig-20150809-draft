@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.60 2009/05/30 18:20:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.61 2009/06/01 09:48:36 pva Exp $
+
+  01 Jun 2009; Peter Volkov <pva@gentoo.org> -pmacct-0.11.3.ebuild,
+  -pmacct-0.11.4.ebuild, pmacct-0.11.5-r1.ebuild, files/pmacctd-init.d,
+  -files/pmacctd-init.d.1:
+  Remove old. Renamed pmacctd-init.d.1 into pmacctd-init.d
 
   30 May 2009; nixnut <nixnut@gentoo.org> pmacct-0.11.5-r1.ebuild:
   ppc stable #271104
