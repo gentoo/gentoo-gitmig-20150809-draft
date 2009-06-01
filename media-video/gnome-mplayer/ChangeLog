@@ -1,6 +1,14 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.14 2009/05/29 21:50:38 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.15 2009/06/01 01:52:23 yngwin Exp $
+
+*gnome-mplayer-0.9.5-r2 (01 Jun 2009)
+
+  01 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  +gnome-mplayer-0.9.5-r2.ebuild:
+  Drop nautilus useflag, see bug 266801. Don't enable gnome by default, let
+  profile or user take care of that. Leave -r1 for testing with nautilus,
+  while proceeding with -r2 as stable candidate.
 
   29 May 2009; Steve Dibb <beandog@gentoo.org> gnome-mplayer-0.6.3.ebuild:
   amd64 stable
