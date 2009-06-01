@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.41.ebuild,v 1.9 2009/06/01 16:32:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.41.ebuild,v 1.10 2009/06/01 16:41:29 ssuominen Exp $
 
 EAPI=2
 inherit libtool gnome.org eutils flag-o-matic
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.tux.org/~ricdude/EsounD.html"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
-IUSE="alsa debug doc ipv6 tcpd"
+IUSE="alsa debug doc ipv6 oss static-libs tcpd"
 
 COMMON_DEPEND=">=media-libs/audiofile-0.2.3
 	alsa? ( media-libs/alsa-lib )
@@ -33,14 +33,26 @@ src_configure() {
 	# Strict aliasing issues
 	append-flags -fno-strict-aliasing
 
+	local myconf
+
+	if ! use alsa; then
+		myconf="--enable-oss"
+	else
+		myconf="$(use_enable oss)"
+	fi
+
 	econf \
 		--sysconfdir=/etc/esd \
 		--htmldir=/usr/share/doc/${PF}/html \
 		--disable-dependency-tracking \
+		$(use_enable static-libs static) \
 		$(use_enable ipv6) \
 		$(use_enable debug debugging) \
 		$(use_enable alsa) \
-		$(use_with tcpd libwrap)
+		--disable-arts \
+		--disable-artstest \
+		$(use_with tcpd libwrap) \
+		${myconf}
 }
 
 src_install() {
