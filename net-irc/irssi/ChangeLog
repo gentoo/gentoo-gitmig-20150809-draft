@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.142 2009/06/01 00:05:03 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.143 2009/06/01 11:38:44 armin76 Exp $
+
+  01 Jun 2009; Raúl Porcel <armin76@gentoo.org> irssi-0.8.13-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #271875
 
   01 Jun 2009; Dawid Węgliński <cla@gentoo.org> irssi-0.8.13-r1.ebuild:
   Stable on amd64 (bug #271875)
