@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r1.ebuild,v 1.3 2009/05/14 20:40:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r1.ebuild,v 1.4 2009/06/01 16:24:06 nixnut Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Search tool that ransacks your personal information space to find w
 HOMEPAGE="http://www.beagle-project.org/"
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="avahi chm debug doc epiphany eds firefox +galago gtk +pdf +inotify +ole thunderbird +google  +xscreensaver"
 
 #See bug 248331 for blocker reason.
