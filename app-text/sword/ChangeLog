@@ -1,6 +1,11 @@
 # ChangeLog for app-text/sword
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.51 2009/05/15 05:30:29 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.52 2009/06/01 11:44:03 patrick Exp $
+
+*sword-1.6.0 (01 Jun 2009)
+
+  01 Jun 2009; Patrick Lauer <patrick@gentoo.org> +sword-1.6.0.ebuild:
+  Bump to 1.6.0, closes #271965
 
   15 May 2009; Ryan Hill <dirtyepic@gentoo.org> sword-1.5.11.ebuild,
   +files/sword-1.5.11-gcc44.patch:
