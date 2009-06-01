@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/q7z
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.4 2009/05/29 20:25:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/q7z/ChangeLog,v 1.5 2009/06/01 22:41:17 hwoarang Exp $
+
+*q7z-0.7.1-r1 (01 Jun 2009)
+
+  01 Jun 2009; Markos Chandras <hwoarang@gentoo.org> +q7z-0.7.1-r1.ebuild:
+  Adjust PyQt4 use deps wrt bug 272136
 
   29 May 2009; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Transfer maintainership to Qt herd
