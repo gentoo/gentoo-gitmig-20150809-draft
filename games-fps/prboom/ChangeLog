@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/prboom
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.27 2008/01/18 03:13:14 mr_bones_ Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/prboom/ChangeLog,v 1.28 2009/06/01 21:44:25 mr_bones_ Exp $
+
+*prboom-2.5.0 (01 Jun 2009)
+
+  01 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/prboom-2.5.0-nvidia.patch, +files/prboom-2.5.0-nvidia-test.c,
+  +prboom-2.5.0.ebuild:
+  version bump (bug #248362)
 
   18 Jan 2008; Michael Sterrett <mr_bones_@gentoo.org> prboom-2.4.7.ebuild:
   always use opengl (sidestep bug #206382)
