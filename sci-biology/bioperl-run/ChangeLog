@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl-run
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.16 2009/05/13 15:49:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.17 2009/06/01 16:18:08 weaver Exp $
+
+  01 Jun 2009; Andrey Kislyuk <weaver@gentoo.org> bioperl-run-1.6.1.ebuild,
+  bioperl-run-9999.ebuild:
+  Disable tests until testsuite troubleshooting is complete
 
   13 May 2009; Andrey Kislyuk <weaver@gentoo.org> bioperl-run-1.6.1.ebuild,
   bioperl-run-9999.ebuild:
