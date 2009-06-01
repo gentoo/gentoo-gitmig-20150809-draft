@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r1.ebuild,v 1.1 2009/05/18 21:57:15 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.36.1-r2.ebuild,v 1.1 2009/06/01 12:03:14 nixphoeni Exp $
 
 # desklets don't run with USE=debug
 GCONF_DEBUG="no"
 
 # We want the latest autoconf and automake (the default)
-inherit gnome2 python eutils autotools multilib
+inherit gnome2 python eutils autotools multilib bash-completion
 
 MY_PN="gDesklets"
 MY_P="${PN/-core/}-${PV/_/}"
@@ -69,8 +69,16 @@ src_install() {
 
 	gnome2_src_install
 
+	# Install bash completion script
+	BASH_COMPLETION_NAME="gDesklets"
+	dobashcompletion "${FILESDIR}/${PN}-${PV}-bash-completion"
+
+	# Install autostart script
+	insinto "/etc/xdg/autostart"
+	doins "${FILESDIR}/gdesklets.desktop"
+
 	# Install the gdesklets-control-getid script
-	insinto /usr/$(get_libdir)/gdesklets
+	insinto "/usr/$(get_libdir)/gdesklets"
 	insopts -m0555
 	doins "${FILESDIR}/gdesklets-control-getid"
 
@@ -85,7 +93,7 @@ pkg_postinst() {
 	gnome2_pkg_postinst
 
 	# Compile pyc files on target system
-	python_mod_optimize "${ROOT}"/usr/$(get_libdir)/gdesklets
+	python_mod_optimize "${ROOT}/usr/$(get_libdir)/gdesklets"
 
 	echo
 	elog "gDesklets Displays are required before the library"
@@ -99,14 +107,17 @@ pkg_postinst() {
 	elog "Next you'll need to start gDesklets using"
 	elog "           ${ROOT}usr/bin/gdesklets start"
 	elog "If you're using GNOME this can be done conveniently through"
-	elog "Applications->Accessories->gDesklets"
+	elog "Applications->Accessories->gDesklets or automatically each login"
+	elog "under System->Preferences->Sessions"
 	elog
 	elog "If you're updating from a version less than 0.35_rc1,"
 	elog "you can migrate your desklet configurations by"
 	elog "running"
 	elog "           ${ROOT}usr/$(get_libdir)/gdesklets/gdesklets-migration-tool"
 	elog "after the first time you run gDesklets"
-	echo
+	elog
+	BASH_COMPLETION_NAME="gDesklets"
+	bash-completion_pkg_postinst
 
 }
 
@@ -115,6 +126,6 @@ pkg_postrm() {
 	gnome2_pkg_postrm
 	# Cleanup after our cavalier python compilation
 	# The function takes care of ${ROOT} for us
-	python_mod_cleanup /usr/$(get_libdir)/gdesklets
+	python_mod_cleanup "/usr/$(get_libdir)/gdesklets"
 
 }
