@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.149 2009/06/01 16:36:24 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.150 2009/06/01 16:38:08 mr_bones_ Exp $
+
+  01 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/config.h.cmake, -files/no-python.patch, -wesnoth-1.4.7-r1.ebuild:
+  clean old ebuild and files
 
   01 Jun 2009; nixnut <nixnut@gentoo.org> wesnoth-1.6.2.ebuild:
   ppc stable #271175
