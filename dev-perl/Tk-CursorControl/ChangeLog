@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tk-CursorControl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-CursorControl/ChangeLog,v 1.10 2007/01/19 17:04:14 mcummings Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tk-CursorControl/ChangeLog,v 1.11 2009/06/01 18:26:04 tove Exp $
+
+  01 Jun 2009; Torsten Veller <tove@gentoo.org> +files/0.4-demo.patch,
+  Tk-CursorControl-0.4.ebuild:
+  Fix collision by renaming cursor.pl to cursor_cursor.pl(#272083)
 
   19 Jan 2007; Michael Cummings <mcummings@gentoo.org>
   Tk-CursorControl-0.4.ebuild:
