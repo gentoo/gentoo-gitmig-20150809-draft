@@ -1,6 +1,6 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.20 2009/06/01 12:09:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.21 2009/06/01 13:58:39 ssuominen Exp $
 
 *up-imapproxy-1.2.6 (01 Jun 2009)
 
@@ -82,16 +82,9 @@
   30 Sep 2004; Andrej Kacian <ticho@gentoo.org> +up-imapproxy-1.2.2.ebuild:
   Version bump. Closes #64963, reported by klavs klavsen <kl@vsen.dk>.
 
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  up-imapproxy-1.2.1.ebuild:
-  virtual/glibc -> virtual/libc
-
-  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> up-imapproxy-1.2.1.ebuild:
-  Add die following econf for bug 48950
-
 *up-imapproxy-1.2.1 (12 Nov 2003)
 
   12 Nov 2003; <max@gentoo.org> up-imapproxy-1.2.1.ebuild,
-  files/imapproxy.rc6:
+  files/imapproxy.initd:
   Initial version. Fixes bug 29768.
 
