@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-xinhua
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-xinhua/ChangeLog,v 1.1 2009/06/01 15:39:09 matsuu Exp $
+
+*ibus-table-xinhua-1.1.0.20090601 (01 Jun 2009)
+
+  01 Jun 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-xinhua-1.1.0.20090601.ebuild, +metadata.xml:
+  Initial import.
+
