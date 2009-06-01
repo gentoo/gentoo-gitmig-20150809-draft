@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.7.5.ebuild,v 1.6 2009/05/31 16:10:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uriparser/uriparser-0.7.5.ebuild,v 1.7 2009/06/01 15:30:59 fmccor Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE="doc test"
 
 RDEPEND=""
