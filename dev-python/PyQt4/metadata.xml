@@ -4,7 +4,14 @@
 <herd>python</herd>
 <herd>qt</herd>
 <use>
-	<flag name='qt3support'>enable the Qt3Support libraries for Qt4</flag>
-	<flag name='webkit'>enable WebKit support</flag>
+	<flag name='X'>Build the QtGui and QtDesigner modules</flag>
+	<flag name='assistant'>Build the QtHelp and QtAssistant modules</flag>
+	<flag name='opengl'>Build the QtOpenGL module</flag>
+	<flag name='phonon'>Build the phonon module</flag>
+	<flag name='qt3support'>Enable the Qt3Support libraries for Qt4</flag>
+	<flag name='sql'>Build the QtSql module</flag>
+	<flag name='svg'>Build the QtSvg module</flag>
+	<flag name='webkit'>Build the QtWebKit module</flag>
+	<flag name='xmlpatterns'>Build the QtXmlPatterns module</flag>
 </use>
 </pkgmetadata>

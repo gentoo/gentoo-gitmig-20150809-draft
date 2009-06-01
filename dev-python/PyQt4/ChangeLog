@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.56 2009/05/20 23:01:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.57 2009/06/01 16:30:48 hwoarang Exp $
+
+*PyQt4-4.4.4-r5 (01 Jun 2009)
+
+  01 Jun 2009; Markos Chandras <hwoarang@gentoo.org> +PyQt4-4.4.4-r5.ebuild,
+  files/configure.py.patch, metadata.xml:
+  Fixed automagic dependency issue. ( bug 236341 ). Fixed rpath issues ( bug
+  235819 , bug 271870 ). Thanks to Davide Pesavento <davidepesa@gmail.com>
+  for
+  the ebuilds and the rpath patch.
 
   20 May 2009; Ben de Groot <yngwin@gentoo.org> -PyQt4-4.4-r1.ebuild,
   -PyQt4-4.4.4-r1.ebuild, -PyQt4-4.4.4-r3.ebuild, PyQt4-4.4.4-r4.ebuild:
