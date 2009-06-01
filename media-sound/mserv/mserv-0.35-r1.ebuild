@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.11 2008/02/02 15:31:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mserv/mserv-0.35-r1.ebuild,v 1.12 2009/06/01 18:08:41 ssuominen Exp $
 
 inherit depend.apache webapp eutils toolchain-funcs
 
@@ -19,6 +19,7 @@ RDEPEND=">=dev-lang/perl-5.6.1
 	virtual/mpg123
 	media-sound/sox
 	vorbis? ( media-sound/vorbis-tools )"
+DEPEND=""
 
 need_apache
 
@@ -30,35 +31,35 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	# Adjust paths to match Gentoo
-	epatch ${FILESDIR}/${P}-paths.patch || die
+	epatch "${FILESDIR}"/${P}-paths.patch
 	# Mservplay uses stricmp - should be strcasecmp
-	epatch ${FILESDIR}/${P}-mservplay.patch || die
+	epatch "${FILESDIR}"/${P}-mservplay.patch
 }
 
 src_compile() {
-	econf || die
-	emake || die
+	econf
+	emake || die "emake failed"
 
 	# Optional suid wrapper
-	cd ${S}/support
+	cd "${S}"/support
 	$(tc-getCC) -I.. -I../mserv ${CFLAGS} ${LDFLAGS} mservplay.c -o mservplay || die
 }
 
 src_install() {
 	webapp_src_preinst
 
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dobin support/mservedit support/mservripcd support/mservplay
 	dodoc AUTHORS ChangeLog docs/quick-start.txt
 
 	# Web client
 	dodir ${MY_CGIBINDIR}/${PN}
-	cp webclient/*.cgi ${D}/${MY_CGIBINDIR}/${PN}
-	cp webclient/*.gif webclient/index.html ${D}/${MY_HTDOCSDIR}
+	cp webclient/*.cgi "${D}"/${MY_CGIBINDIR}/${PN}
+	cp webclient/*.gif webclient/index.html "${D}"/${MY_HTDOCSDIR}
 
 	webapp_src_install
 
@@ -66,22 +67,22 @@ src_install() {
 	insopts -o mserv -g mserv -m0644
 	insinto /etc/mserv
 	fowners mserv:mserv /etc/mserv
-	newins ${FILESDIR}/${P}-config config
-	newins ${FILESDIR}/${P}-webacl webacl
-	newins ${FILESDIR}/${P}-acl acl
+	newins "${FILESDIR}"/${P}-config config
+	newins "${FILESDIR}"/${P}-webacl webacl
+	newins "${FILESDIR}"/${P}-acl acl
 	insinto ${MY_HOSTROOTDIR}/${PN}
 	fowners mserv:mserv ${MY_HOSTROOTDIR}/${PN}
-	newins ${FILESDIR}/${P}-config config
-	newins ${FILESDIR}/${P}-webacl webacl
-	newins ${FILESDIR}/${P}-acl acl
+	newins "${FILESDIR}"/${P}-config config
+	newins "${FILESDIR}"/${P}-webacl webacl
+	newins "${FILESDIR}"/${P}-acl acl
 	fperms 0600 ${MY_HOSTROOTDIR}/${PN}/acl
 
-	newinitd ${FILESDIR}/${P}-initd ${PN}
-	newconfd ${FILESDIR}/${P}-confd ${PN}
+	newinitd "${FILESDIR}"/${P}-initd ${PN}
+	newconfd "${FILESDIR}"/${P}-confd ${PN}
 
 	# Log file
 	dodir /var/log
-	touch ${D}var/log/mserv.log
+	touch "${D}"var/log/mserv.log
 	fowners mserv:mserv /var/log/mserv.log
 
 	# Track and album info
@@ -90,7 +91,7 @@ src_install() {
 
 	# Current track output
 	dodir /var/spool/mserv
-	touch ${D}var/spool/mserv/player.out
+	touch "${D}"var/spool/mserv/player.out
 	fowners mserv:mserv /var/spool/mserv /var/spool/mserv/player.out
 }
 
