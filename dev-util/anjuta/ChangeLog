@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/anjuta
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.92 2009/05/26 10:52:53 leio Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.93 2009/06/01 21:03:22 eva Exp $
+
+*anjuta-2.26.2.0 (01 Jun 2009)
+
+  01 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/anjuta-2.26.0.0-symbol-db-optional.patch, +anjuta-2.26.2.0.ebuild,
+  metadata.xml:
+  New version for GNOME 2.26. Drop libgnomeprint and gnome-vfs dependency.
+  Merge gnome-build into anjuta. Still bundle scintilla at version 1.77.
 
   26 May 2009; Mart Raudsepp <leio@gentoo.org>
   +files/anjuta-2.24.2-fix-build-with-graphviz-2.22.patch,
