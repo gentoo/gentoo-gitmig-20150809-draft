@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.6.3-r2.ebuild,v 1.8 2008/05/18 01:06:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.6.3-r2.ebuild,v 1.9 2009/06/01 03:25:54 tampakrap Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=${PV}
@@ -43,9 +43,10 @@ KMEXTRA="filters/kword"
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/koffice-xpdf-CVE-2007-3387.diff
+PATCHES=( "${FILESDIR}/koffice-xpdf-CVE-2007-3387.diff
 	${FILESDIR}/koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff
-	${FILESDIR}/kword-gcc43.patch"
+	${FILESDIR}/${PN}-gcc43.patch
+	${FILESDIR}/${P}-gcc44.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack unpack

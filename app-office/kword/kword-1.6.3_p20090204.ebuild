@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.6.3_p20090204.ebuild,v 1.2 2009/02/08 22:23:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.6.3_p20090204.ebuild,v 1.3 2009/06/01 03:25:54 tampakrap Exp $
 
 ARTS_REQUIRED="never"
 
@@ -20,6 +20,7 @@ DEPEND="~app-office/koffice-libs-1.6.3_p20090204
 	>=app-text/wv2-0.1.8
 	>=media-gfx/imagemagick-5.5.2
 	>=app-text/libwpd-0.8.2"
+RDEPEND="${DEPEND}"
 
 KMCOPYLIB="libkformula lib/kformula
 	libkofficecore lib/kofficecore
@@ -40,6 +41,8 @@ KMCOMPILEONLY="filters/liboofilter"
 KMEXTRA="filters/kword"
 
 need-kde 3.5
+
+PATCHES=( "${FILESDIR}/${P}-gcc44.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack unpack
