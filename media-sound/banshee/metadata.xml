@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <maintainer>
+    <email>loki_val@gentoo.org</email>
+    <name>Peter Alfredsen</name>
+  </maintainer>
+  <herd>dotnet</herd>
   <herd>sound</herd>
   <use>
     <flag name="boo">Use external Boo instead of the bundled one</flag>
     <flag name="daap">Build with Daap support</flag>
     <flag name="mtp">Build with Media Transfer Protocol support</flag>
-	<flag name="karma">Build with karma support</flag>
+    <flag name="karma">Build with karma support</flag>
     <flag name="podcast">Build with podcasting support</flag>
   </use>
 </pkgmetadata>
