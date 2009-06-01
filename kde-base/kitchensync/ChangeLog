@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kitchensync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.106 2009/05/29 12:02:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kitchensync/ChangeLog,v 1.107 2009/06/01 16:46:09 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> kitchensync-3.5.10.ebuild:
+  ppc stable #271889
 
   29 May 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   -kitchensync-3.5.10-r2.ebuild:
