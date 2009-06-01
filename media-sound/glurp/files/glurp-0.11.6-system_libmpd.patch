@@ -1,0 +1,25 @@
+diff -ur glurp-0.11.6.orig/configure.in glurp-0.11.6/configure.in
+--- glurp-0.11.6.orig/configure.in	2005-06-05 18:23:54.000000000 +0300
++++ glurp-0.11.6/configure.in	2009-06-01 22:14:13.000000000 +0300
+@@ -35,7 +35,7 @@
+     ])
+ 
+ #pkg_modules="gtk+-2.0 libglade-2.0 libxml-2.0 glib-2.0"
+-pkg_modules="gtk+-2.0 >= 2.4 glib-2.0 >= 2.4 libglade-2.0 >= 2.3 gmodule-2.0 >= 2.6"
++pkg_modules="gtk+-2.0 >= 2.4 glib-2.0 >= 2.4 libglade-2.0 >= 2.3 gmodule-2.0 >= 2.6 libmpd >= 0.17.0"
+ PKG_CHECK_MODULES(PACKAGE, [$pkg_modules])
+ AC_SUBST(PACKAGE_CFLAGS)
+ AC_SUBST(PACKAGE_LIBS)
+Only in glurp-0.11.6.orig/src: libmpdclient.c
+Only in glurp-0.11.6.orig/src: libmpdclient.h
+diff -ur glurp-0.11.6.orig/src/Makefile.am glurp-0.11.6/src/Makefile.am
+--- glurp-0.11.6.orig/src/Makefile.am	2005-06-05 18:28:03.000000000 +0300
++++ glurp-0.11.6/src/Makefile.am	2009-06-01 22:13:07.000000000 +0300
+@@ -12,7 +12,6 @@
+ 	gui.h gui.c \
+ 	gui-callbacks.c \
+ 	keyboard.c \
+-	libmpdclient.h libmpdclient.c \
+ 	main.c \
+ 	player.h player.c \
+ 	structs.h \

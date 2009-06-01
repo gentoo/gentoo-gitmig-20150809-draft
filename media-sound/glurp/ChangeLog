@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/glurp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.24 2008/05/30 07:01:36 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glurp/ChangeLog,v 1.25 2009/06/01 19:22:17 ssuominen Exp $
+
+*glurp-0.11.6-r2 (01 Jun 2009)
+
+  01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> +glurp-0.11.6-r2.ebuild,
+  +files/glurp-0.11.6-system_libmpd.patch:
+  Use system libmpd #255771.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
