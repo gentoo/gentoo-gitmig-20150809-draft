@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-2.0.4.ebuild,v 1.9 2009/05/31 18:17:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iperf/iperf-2.0.4.ebuild,v 1.10 2009/06/01 20:03:18 pva Exp $
 
 DESCRIPTION="tool to measure IP bandwidth using UDP or TCP"
 HOMEPAGE="http://iperf.sourceforge.net/"
@@ -11,14 +11,14 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="ipv6 threads debug"
 
-DEPEND="virtual/libc"
+DEPEND=""
+RDEPEND=""
 
 src_compile() {
 	econf \
 		$(use_enable ipv6) \
 		$(use_enable threads) \
-		$(use_enable debug debuginfo) \
-		|| die "econf failed"
+		$(use_enable debug debuginfo)
 	emake || die "emake failed"
 }
 
@@ -26,8 +26,8 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 	dodoc INSTALL README
 	dohtml doc/*
-	newinitd "${FILESDIR}"/${PN}.initd ${PN}
-	newconfd "${FILESDIR}"/${PN}.confd ${PN}
+	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
+	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die
 }
 
 pkg_postinst() {
