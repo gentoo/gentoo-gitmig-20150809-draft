@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r3.ebuild,v 1.1 2009/03/01 20:20:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r3.ebuild,v 1.2 2009/06/01 20:17:17 pva Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -34,9 +34,10 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	sed -e 's:-Werror ::' -i configure.in
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 	epatch "${FILESDIR}"/${P}-open_missing_mode.patch
-	eautomake
+	eautoreconf
 }
 
 src_compile() {
@@ -53,8 +54,7 @@ src_compile() {
 	econf ${myconf} \
 		$(use_enable gtk) \
 		$(use_enable debug) \
-		$(use_with ncurses) \
-		|| die "econf failed"
+		$(use_with ncurses)
 
 	emake || die "emake failed"
 }
