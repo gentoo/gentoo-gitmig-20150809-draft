@@ -1,6 +1,12 @@
 # ChangeLog for net-im/psi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.158 2009/05/29 07:57:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.159 2009/06/01 11:31:37 pva Exp $
+
+  01 Jun 2009; Peter Volkov <pva@gentoo.org> psi-0.13_rc1.ebuild:
+  Updated qca version dependency as some psi bugs were fixed in 2.0.2 only,
+  thank Rion for report. Added notion about psimedia, thank Petr Moravek for
+  report in bug #271091. Dropped duplicate iconsets, thank Dennis Schridde
+  for report in bug #271091.
 
 *psi-0.13_rc1 (29 May 2009)
 

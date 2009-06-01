@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1.ebuild,v 1.1 2009/05/29 07:57:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1.ebuild,v 1.2 2009/06/01 11:31:38 pva Exp $
 
 EAPI="2"
 
@@ -14,12 +14,12 @@ DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-langs-${LANGPACK_VER}.tar.bz2
-	extras? ( mirror://gentoo/${PN}-extra-patches-r504.tar.bz2
-		mirror://gentoo/${PN}-extra-iconsets-r504.tar.bz2 )"
+	extras? ( mirror://gentoo/${PN}-extra-patches-r515.tar.bz2 
+		mirror://gentoo/${PN}-extra-iconsets-r515.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 IUSE="crypt dbus debug doc spell ssl xscreensaver extras"
 RESTRICT="test"
 
@@ -30,7 +30,7 @@ for LNG in ${LANGS}; do
 done
 
 COMMON_DEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
-	app-crypt/qca:2
+	>=app-crypt/qca-2.0.2:2
 	spell? ( app-text/aspell )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 
@@ -60,6 +60,8 @@ src_prepare() {
 			-e 's:\(^#define PROG_NAME "Psi\):\1+:' \
 				-i src/applicationinfo.cpp || die
 	fi
+	rm -rf third-party/qca # We use system libraries.
+
 }
 
 src_configure() {
@@ -116,9 +118,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	if use extras; then
-		ewarn "You've built Psi+ version of Psi (USE=extras)."
-		ewarn "Do not report any bugs upstream, until you manage"
-		ewarn "to reproduce them with USE=-extras. Thank you."
-	fi
+	elog "If you wish to try voice (and video) chat in psi, don't forget to"
+	elog " # emerge psimedia"
 }
