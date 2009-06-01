@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9-r2.ebuild,v 1.3 2009/05/31 20:55:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.9-r2.ebuild,v 1.4 2009/06/01 16:27:02 nixnut Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ SRC_URI="http://dziegel.free.fr/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="3.5"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="lirc zvbi opengl"
 
 RDEPEND="
