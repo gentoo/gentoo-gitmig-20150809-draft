@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9865 2009/06/01 14:40:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9866 2009/06/01 15:18:06 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -67,6 +67,22 @@ app-misc/cbtracker
 # Masked for removal in 60 days. Multiple bugs, doesn't build, version bump
 # pending, unmaintained. bug 265668
 sys-libs/libuser
+# These depend on libuser:
+app-admin/firstboot
+sys-apps/usermode
+# These depend on usermode:
+app-admin/authconfig
+app-admin/hwbrowser
+app-admin/system-config-date
+app-admin/system-config-display
+app-admin/system-config-httpd
+app-admin/system-config-keyboard
+app-admin/system-config-language
+app-admin/system-config-nfs
+app-admin/system-config-printer
+app-admin/system-config-samba
+app-admin/system-config-soundcard
+app-admin/system-config-users
 
 # Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
 # Masked for removal in 60 days. Multiple bugs, upstream is dead, crashes with
