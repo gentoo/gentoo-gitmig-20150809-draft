@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.638 2009/05/31 16:28:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.639 2009/06/01 00:14:01 yngwin Exp $
+
+  01 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  mplayer-1.0_rc2_p20090530.ebuild:
+  Fix versioning (bug 263720) and drop false message about being an
+  unsupported live ebuild
 
   31 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   mplayer-1.0_rc2_p20090530.ebuild:
