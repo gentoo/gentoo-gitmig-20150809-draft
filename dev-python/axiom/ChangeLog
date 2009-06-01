@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.24 2009/04/24 14:40:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.25 2009/06/01 14:44:28 patrick Exp $
+
+  01 Jun 2009; Patrick Lauer <patrick@gentoo.org> axiom-0.5.30.ebuild:
+  EAPI goes to the top
 
   24 Apr 2009; Patrick Lauer <patrick@gentoo.org> -axiom-0.5.27.ebuild:
   Remove old

@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.6.21.ebuild,v 1.4 2009/02/12 09:14:34 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.6.21.ebuild,v 1.5 2009/06/01 14:47:52 patrick Exp $
+
+EAPI="2"
 
 inherit twisted distutils eutils
 
@@ -14,7 +16,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-EAPI="2"
 
 DEPEND=">=dev-lang/python-2.4
 	>=dev-python/twisted-8.0.1
