@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.8.ebuild,v 1.2 2009/06/01 17:48:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.8.ebuild,v 1.3 2009/06/01 19:58:42 pva Exp $
 
 EAPI="2"
 
@@ -29,7 +29,8 @@ RDEPEND="
 			!dev-ruby/ruby-rrd )"
 
 DEPEND="${RDEPEND}
-	nls? ( >=dev-util/intltool-0.35 )
+	nls? ( >=dev-util/intltool-0.35 
+		sys-devel/gettext )
 	sys-apps/gawk"
 
 pkg_setup() {
@@ -42,6 +43,7 @@ src_configure() {
 	export RRDDOCDIR=/usr/share/doc/${PF}
 
 	econf $(use_enable rrdcgi) \
+		$(use_enable nls) \
 		$(use_enable nls libintl) \
 		$(use_enable ruby) \
 		$(use_enable ruby ruby-site-install) \
