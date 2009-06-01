@@ -1,31 +1,34 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-2.0.ebuild,v 1.1 2008/12/19 15:15:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-2.0.ebuild,v 1.2 2009/06/01 18:18:03 ssuominen Exp $
 
-inherit toolchain-funcs flag-o-matic
+inherit toolchain-funcs
 
-MY_P="AudioCompress-${PV}"
+MY_P=AudioCompress-${PV}
+
 DESCRIPTION="Very gentle 1-band dynamic range compressor"
 HOMEPAGE="http://beesbuzz.biz/code/"
 SRC_URI="http://beesbuzz.biz/code/audiocompress/${MY_P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-#-sparc: 1.5.5 - Gdk-ERROR **: BadValue (integer parameter out of range for operation) serial 7 error_code 2 request_code 1 minor_code 0
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="esd"
+IUSE=""
 
-DEPEND="esd? ( media-sound/esound )"
+RDEPEND=""
+DEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
-	echo "AudioCompress: AudioCompress.o compress.o" > Makefile
-	use esd && append-flags "-DUSE_ESD `esd-config --cflags`"
-	tc-export CC
-	emake LDLIBS="$(use esd && echo `esd-config --libs`)" || die
+	emake \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}" \
+		CC="$(tc-getCC)" \
+		CXX="$(tc-getCXX)" || die "emake failed"
 }
 
 src_install() {
-	dobin AudioCompress || die
+	dobin AudioCompress || die "dobin failed"
 	dodoc ChangeLog README TODO
 }

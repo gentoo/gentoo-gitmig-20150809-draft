@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.2-r1.ebuild,v 1.1 2007/03/09 04:23:51 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-1.5.2-r1.ebuild,v 1.2 2009/06/01 18:18:03 ssuominen Exp $
 
 inherit eutils
 
@@ -11,28 +11,28 @@ HOMEPAGE="http://beesbuzz.biz/code/"
 SRC_URI="http://beesbuzz.biz/code/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-#-sparc: 1.5.5 - Gdk-ERROR **: BadValue (integer parameter out of range for operation) serial 7 error_code 2 request_code 1 minor_code 0
-KEYWORDS="~amd64 ~ppc -sparc x86"
+KEYWORDS="~amd64 ~ppc x86"
 
-DEPEND="esd? ( media-sound/esound )"
+RDEPEND=""
+DEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
-	make clean
+	emake clean
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	use esd || epatch ${FILESDIR}/${P}-esd.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-esd.patch
 }
 
 src_compile() {
-	emake AudioCompress || die
+	emake AudioCompress || die "emake AudioCompress failed"
 }
 
 src_install() {
-	dobin AudioCompress || die
+	dobin AudioCompress || die "dobin failed"
 	dodoc ChangeLog README TODO
 }
