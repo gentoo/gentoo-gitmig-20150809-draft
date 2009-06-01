@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-3.5.9.ebuild,v 1.7 2008/05/18 21:37:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/kontact-3.5.9.ebuild,v 1.8 2009/06/01 01:17:51 tampakrap Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -43,6 +43,6 @@ src_unpack() {
 pkg_postinst() {
 	kde_pkg_postinst
 
-	elog "If you're using x11-misc/basket, please re-emerge it now to avoid crashes with ${PN}."
+	elog "If you're using kde-misc/basket, please re-emerge it now to avoid crashes with ${PN}."
 	elog "cf. https://bugs.gentoo.org/show_bug.cgi?id=174872 for details."
 }

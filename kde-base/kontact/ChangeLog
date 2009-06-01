@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.114 2009/05/31 21:01:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact/ChangeLog,v 1.115 2009/06/01 01:17:51 tampakrap Exp $
+
+  01 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  kontact-3.5.9.ebuild, kontact-3.5.10.ebuild:
+  Basket moved to kde-misc
 
   31 May 2009; nixnut <nixnut@gentoo.org> kontact-3.5.10.ebuild:
   ppc stable #271889
