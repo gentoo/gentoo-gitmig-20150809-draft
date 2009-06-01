@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2718 2009/05/31 18:40:05 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2719 2009/06/01 07:06:45 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask libffi and related pkgs wrt #163724
 
   31 May 2009; Torsten Veller <tove@gentoo.org> package.mask:
   Mask dev-perl/IniConf for removal

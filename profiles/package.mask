@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9861 2009/05/31 18:44:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9862 2009/06/01 07:06:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -866,14 +866,6 @@ net-irc/bitchx
 # User's who need to test these should unmask explicitly.
 =sys-fs/btrfs-9999
 =sys-fs/btrfs-progs-9999
-
-# Maintainer Needed <maintainer-needed@gentoo.org> (05 Jun 2008)
-# Masked for testing wrt #163724
-dev-libs/libffi
-x11-libs/gtk-server
-virtual/libffi
->=dev-libs/g-wrap-1.9.11
->=dev-scheme/guile-gnome-platform-2.16.0
 
 # Peter Alfredsen <loki_val@gentoo.org> (04 Jun 2008)
 # o Fails its own tests in horrendous ways (buuh!)
