@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.14.3.ebuild,v 1.7 2009/05/31 23:58:31 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/stgit/stgit-0.14.3.ebuild,v 1.8 2009/06/01 16:18:48 nixnut Exp $
 
 inherit distutils bash-completion
 
@@ -10,7 +10,7 @@ SRC_URI="http://homepage.ntlworld.com/cmarinas/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~ppc ppc64 x86"
+KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE=""
 
 RDEPEND=">=dev-util/git-1.5"
