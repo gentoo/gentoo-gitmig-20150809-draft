@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.66 2009/05/15 17:29:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.67 2009/06/01 16:21:33 nixnut Exp $
+
+  01 Jun 2009; nixnut <nixnut@gentoo.org> xcdroast-0.98_alpha16.ebuild:
+  ppc stable #269032
 
   15 May 2009; Raúl Porcel <armin76@gentoo.org>
   xcdroast-0.98_alpha16.ebuild:
