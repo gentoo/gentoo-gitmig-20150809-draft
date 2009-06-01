@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.8.ebuild,v 1.3 2009/06/01 19:58:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.3.8.ebuild,v 1.4 2009/06/01 23:52:00 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ RDEPEND="
 			!dev-ruby/ruby-rrd )"
 
 DEPEND="${RDEPEND}
-	nls? ( >=dev-util/intltool-0.35 
+	nls? ( >=dev-util/intltool-0.35
 		sys-devel/gettext )
 	sys-apps/gawk"
 
