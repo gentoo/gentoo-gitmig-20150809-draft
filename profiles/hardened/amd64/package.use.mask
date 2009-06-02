@@ -1,9 +1,3 @@
-# This file requires >=portage-2.1.1
-
-# Markus Meier <maekke@gentoo.org> (31 May 2009)
-# media-gfx/imagemagick[openmp] needs >=gcc-4.3
-media-gfx/imagemagick openmp
-
 # Bernard Cafarelli <voyageur@gentoo.org> (20 Mar 2009)
 # Depends on packages not yet keyworded for amd64, cf bug #22042
 app-backup/backup-manager s3

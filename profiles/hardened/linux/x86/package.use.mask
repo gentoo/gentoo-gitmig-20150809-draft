@@ -1,9 +1,3 @@
-# This file requires >=portage-2.1.1
-
-# Markus Meier <maekke@gentoo.org> (31 May 2009)
-# media-gfx/imagemagick[openmp] needs >=gcc-4.3
-media-gfx/imagemagick openmp
-
 # cuda does not work on hardended
 sci-misc/boinc cuda
 
