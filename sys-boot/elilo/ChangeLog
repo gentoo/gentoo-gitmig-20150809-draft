@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/elilo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.22 2009/05/06 18:36:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.23 2009/06/02 15:56:44 armin76 Exp $
+
+*elilo-3.10 (02 Jun 2009)
+
+  02 Jun 2009; Raúl Porcel <armin76@gentoo.org> +elilo-3.10.ebuild:
+  Version bump
 
   06 May 2009; Markus Meier <maekke@gentoo.org> elilo-3.8.ebuild:
   add ~amd64, bug #208639
