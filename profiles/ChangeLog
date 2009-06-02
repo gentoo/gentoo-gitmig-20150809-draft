@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2725 2009/06/02 16:45:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2726 2009/06/02 17:35:03 beandog Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jun 2009; Steve Dibb <beandog@gentoo.org> package.mask:
+  Remove mplayer, alsa-driver, alsa-headers live ebuilds from package.mask,
+  already removed keywords
 
   02 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
   Add new gnustep-base revision to virtual/libffi mask
