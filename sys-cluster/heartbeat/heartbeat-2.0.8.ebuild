@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.13 2008/05/15 00:59:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/heartbeat-2.0.8.ebuild,v 1.14 2009/06/02 13:55:37 flameeyes Exp $
 
 inherit flag-o-matic eutils
 
@@ -66,6 +66,7 @@ src_compile() {
 		--enable-checkpointd \
 		--enable-crm \
 		--enable-lrm \
+		--disable-fatal-warnings \
 		$(use_enable management mgmt) \
 		|| die
 	emake -j 1 || die "compile problem"
