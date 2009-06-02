@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p28058-r1.ebuild,v 1.9 2009/03/24 21:32:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p28058-r1.ebuild,v 1.10 2009/06/02 13:59:50 beandog Exp $
 
 EAPI="1"
 
@@ -34,7 +34,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 	!iconv? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 			  mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 			  mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
-	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
+	gtk? ( mirror://mplayer/skins/Blue-${BLUV}.tar.bz2 )
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )"
 
 DESCRIPTION="Media Player for Linux"

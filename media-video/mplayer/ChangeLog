@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.639 2009/06/01 00:14:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.640 2009/06/02 13:59:50 beandog Exp $
+
+  02 Jun 2009; Steve Dibb <beandog@gentoo.org>
+  mplayer-1.0_rc2_p28058-r1.ebuild, mplayer-1.0_rc2_p28288.ebuild,
+  mplayer-1.0_rc2_p28450.ebuild, mplayer-1.0_rc2_p20090226.ebuild,
+  mplayer-1.0_rc2_p20090322.ebuild, mplayer-1.0_rc2_p20090530.ebuild:
+  Update SRC_URI for Blue skin, bug 272249
 
   01 Jun 2009; Ben de Groot <yngwin@gentoo.org>
   mplayer-1.0_rc2_p20090530.ebuild:
