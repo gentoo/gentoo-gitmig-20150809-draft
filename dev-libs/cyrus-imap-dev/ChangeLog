@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.58 2009/05/31 23:32:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.59 2009/06/02 17:07:54 armin76 Exp $
+
+  02 Jun 2009; Raúl Porcel <armin76@gentoo.org>
+  cyrus-imap-dev-2.3.14.ebuild:
+  sparc stable wrt #271800
 
   31 May 2009; Brent Baude <ranger@gentoo.org> cyrus-imap-dev-2.3.14.ebuild:
   Marking cyrus-imap-dev-2.3.14 ppc64 stable for bug 271800
