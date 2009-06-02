@@ -1,24 +1,22 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2.ebuild,v 1.3 2009/06/01 04:32:10 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2.ebuild,v 1.4 2009/06/02 01:31:20 je_fro Exp $
 
 inherit eutils toolchain-funcs flag-o-matic multilib
 
 DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
-SRC_URI="${PN}_src.tar.gz"
+SRC_URI="http://charm.cs.uiuc.edu/distrib/${P}_src.tar.gz"
 S="${WORKDIR}/${PN}"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cmkopt tcp smp doc icc"
+IUSE="cmkopt tcp smp doc"
 
-DEPEND="icc? ( >=dev-lang/icc-8.1 )
-	doc? (
-		app-text/poppler
+DEPEND="doc? ( app-text/poppler
 		dev-tex/latex2html
 		virtual/tex-base
-	)"
+		)"
 
 RDEPEND="${DEPEND}"
 
@@ -47,16 +45,6 @@ src_unpack() {
 #	if use smp && [ "${ARCH}" != "amd64" ]; then
 	if use smp; then
 		CHARM_OPTS="${CHARM_OPTS} smp"
-	fi
-
-	# compile with icc if requested
-	if use icc; then
-		if [ $(tc-getCC) != "icc" ]; then
-			die "You cannot use $(tc-getCC) with USE='icc'"
-		fi
-		CHARM_OPTS="${CHARM_OPTS} icc"
-	else
-		CHARM_OPTS="${CHARM_OPTS} gcc gfortran"
 	fi
 
 	# CMK optimization
