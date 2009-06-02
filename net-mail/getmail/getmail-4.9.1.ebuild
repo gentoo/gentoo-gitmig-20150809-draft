@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.9.1.ebuild,v 1.1 2009/06/02 08:37:22 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/getmail-4.9.1.ebuild,v 1.2 2009/06/02 09:09:27 tove Exp $
 
 inherit distutils
 
@@ -16,26 +16,10 @@ IUSE=""
 DEPEND=">=dev-lang/python-2.3.3"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	# getmail.spec is missing due to upstream packaging mistake
-	sed -i -e '/getmail.spec/d' setup.py || die
-}
-
-src_compile() {
-	distutils_src_compile
-}
+PYTHON_MODNAME=getmailcore
 
 src_install() {
 	distutils_src_install
-
-	if has_version "=net-mail/getmail-3*" ; then
-		mv "${D}"/usr/bin/getmail "${D}"/usr/bin/getmail4
-		mv "${D}"/usr/bin/getmail_maildir "${D}"/usr/bin/getmail_maildir4
-		mv "${D}"/usr/bin/getmail_mbox "${D}"/usr/bin/getmail_mbox4
-	fi
 
 	# handle docs the gentoo way
 	rm "${D}"/usr/share/doc/${P}/COPYING
@@ -45,22 +29,4 @@ src_install() {
 
 	dodir /usr/share/doc/${PF}/html
 	mv "${D}"/usr/share/doc/${PF}/*.html "${D}"/usr/share/doc/${PF}/*.css "${D}"/usr/share/doc/${PF}/html
-}
-
-pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/lib/python${PYVER}/site-packages/getmailcore
-
-	if has_version "=net-mail/getmail-3*" ; then
-		echo
-		ewarn "An already installed instance of getmail v3 was detected. In order to"
-		ewarn "co-exist with it the three main scripts of getmail v4 were renamed to"
-		ewarn "getmail4, getmail_maildir4, getmail_mbox4."
-		echo
-	fi
-}
-
-pkg_postrm() {
-	python_version
-	python_mod_cleanup
 }
