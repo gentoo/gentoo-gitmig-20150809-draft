@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GraphViz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/ChangeLog,v 1.11 2009/06/02 18:26:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GraphViz/ChangeLog,v 1.12 2009/06/02 18:26:54 fauli Exp $
+
+  02 Jun 2009; Christian Faulhammer <fauli@gentoo.org> ChangeLog:
+  stable x86, bug 270585
 
   02 Jun 2009; Christian Faulhammer <fauli@gentoo.org> GraphViz-2.04.ebuild:
   stable x86, bug 270585
