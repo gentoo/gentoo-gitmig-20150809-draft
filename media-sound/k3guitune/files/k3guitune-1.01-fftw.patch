@@ -1,3 +1,5 @@
+Fix compability with current fftw.
+
 diff -Naur k3guitune-1.01/k3guitune/osziview.cpp k3guitune-1.01_1/k3guitune/osziview.cpp
 --- k3guitune-1.01/k3guitune/osziview.cpp	2007-12-15 18:16:27.000000000 +0500
 +++ k3guitune-1.01_1/k3guitune/osziview.cpp	2008-10-23 03:21:11.000000000 +0600

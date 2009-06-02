@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.8 2009/05/21 16:27:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.9 2009/06/02 22:59:48 ssuominen Exp $
 
 EAPI=2
 ARTS_REQUIRED=never
@@ -12,14 +12,14 @@ SRC_URI="http://home.planet.nl/~lamer024/files/${P}.tar.gz
 		mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="+alsa oss jack"
 
-DEPEND="=sci-libs/fftw-3*
+RDEPEND="sci-libs/fftw:3.0
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-libs/bio2jack )"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}"
 
 need-kde 3.5
 
@@ -32,7 +32,7 @@ done
 
 src_prepare() {
 	kde_src_prepare
-	epatch "${FILESDIR}"/${PN}-1.0-gcc43.patch \
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
 		"${FILESDIR}"/${P}-fftw.patch \
 		"${FILESDIR}"/${P}-desktop-entry.patch
 
@@ -48,7 +48,7 @@ src_prepare() {
 	sed -i -e "s:^SUBDIRS =.*:SUBDIRS = ${MAKE_DOC} :" \
 		"${KDE_S}/doc/Makefile.am" || die "sed for docs locale failed"
 
-	rm -f "${S}/configure"
+	rm -f "${S}"/configure
 }
 
 src_configure() {

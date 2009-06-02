@@ -1,3 +1,5 @@
+Fix compilation with GNU GCC 4.3.0 and up.
+
 Index: k3guitune-1.0/k3guitune/soundinput.h
 ===================================================================
 --- k3guitune-1.0.orig/k3guitune/soundinput.h

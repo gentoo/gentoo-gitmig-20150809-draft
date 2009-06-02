@@ -1,3 +1,5 @@
+Fix desktop-entry and it's location to respect current freedesktop spec.
+
 diff -ur k3guitune-1.01.orig/k3guitune/k3guitune.desktop k3guitune-1.01/k3guitune/k3guitune.desktop
 --- k3guitune-1.01.orig/k3guitune/k3guitune.desktop	2007-12-15 15:16:27.000000000 +0200
 +++ k3guitune-1.01/k3guitune/k3guitune.desktop	2009-05-21 19:19:27.000000000 +0300
