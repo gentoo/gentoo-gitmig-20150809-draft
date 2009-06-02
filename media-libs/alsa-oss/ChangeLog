@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-oss
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.112 2009/06/02 17:52:16 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.113 2009/06/02 22:22:59 jer Exp $
+
+  02 Jun 2009; Jeroen Roovers <jer@gentoo.org> alsa-oss-1.0.17.ebuild:
+  Stable for HPPA (bug #272285).
 
   02 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
   alsa-oss-1.0.17.ebuild:
