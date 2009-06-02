@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9871 2009/06/02 15:14:41 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9872 2009/06/02 16:45:37 voyageur Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,6 +45,7 @@ media-sound/creox
 x11-libs/gtk-server
 >=dev-libs/g-wrap-1.9.11
 >=dev-scheme/guile-gnome-platform-2.16.0
+>=gnustep-base/gnustep-base-1.18.0-r4
 
 # Torsten Veller <tove@gentoo.org> (31 May 2009)
 # IniConf.pm is going away, and will be replaced with
