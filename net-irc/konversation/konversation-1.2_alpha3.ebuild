@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.2_alpha2.ebuild,v 1.1 2009/05/31 15:48:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.2_alpha3.ebuild,v 1.1 2009/06/02 19:13:34 tampakrap Exp $
 
 EAPI="2"
 
