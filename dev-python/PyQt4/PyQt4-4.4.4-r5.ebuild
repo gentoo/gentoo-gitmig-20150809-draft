@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.1 2009/06/01 16:30:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.2 2009/06/02 21:14:33 yngwin Exp $
 
 EAPI="2"
 
@@ -85,8 +85,10 @@ src_configure() {
 	${myconf} || die "configuration failed"
 
 	# Fix insecure runpath
-	sed -i -e "/^LFLAGS/s:-Wl,-rpath,${S}/qpy/QtDesigner::" \
-		"${S}"/QtDesigner/Makefile || die
+	if use X ; then
+		sed -i -e "/^LFLAGS/s:-Wl,-rpath,${S}/qpy/QtDesigner::" \
+			"${S}"/QtDesigner/Makefile || die
+	fi
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.58 2009/06/01 19:33:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.59 2009/06/02 21:14:33 yngwin Exp $
+
+  02 Jun 2009; Ben de Groot <yngwin@gentoo.org> PyQt4-4.4.4-r5.ebuild:
+  QtDesigner is triggered by USE=X, so hide sed behind X useflag. Thanks
+  to Davide Pesavento for alerting.
 
   01 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
   +files/fix_license_check.patch:
@@ -12,8 +16,7 @@
   files/configure.py.patch, metadata.xml:
   Fixed automagic dependency issue. ( bug 236341 ). Fixed rpath issues ( bug
   235819 , bug 271870 ). Thanks to Davide Pesavento <davidepesa@gmail.com>
-  for
-  the ebuilds and the rpath patch.
+  for the ebuilds and the rpath patch.
 
   20 May 2009; Ben de Groot <yngwin@gentoo.org> -PyQt4-4.4-r1.ebuild,
   -PyQt4-4.4.4-r1.ebuild, -PyQt4-4.4.4-r3.ebuild, PyQt4-4.4.4-r4.ebuild:
