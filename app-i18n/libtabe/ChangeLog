@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/libtabe
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/ChangeLog,v 1.13 2008/05/01 14:35:10 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libtabe/ChangeLog,v 1.14 2009/06/02 09:38:54 flameeyes Exp $
+
+*libtabe-0.2.6.1.2 (02 Jun 2009)
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +libtabe-0.2.6.1.2.ebuild:
+  Bump debian patch (make it semi-automatic to bump, too) so that it does
+  not fail with --as-needed; use sequential calls to make to avoid failing
+  with parallel make.
 
   01 May 2008; Markus Meier <maekke@gentoo.org>
   -files/libtabe-0.2.5-db3.patch, -libtabe-0.2.5.ebuild:
