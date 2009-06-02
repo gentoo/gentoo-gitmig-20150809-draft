@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/libtimidity-0.1.0-r1.ebuild,v 1.1 2008/02/24 18:43:11 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtimidity/libtimidity-0.1.0-r1.ebuild,v 1.2 2009/06/02 23:14:41 ssuominen Exp $
 
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="MIDI to WAVE converter library"
@@ -19,20 +20,20 @@ DEPEND="${RDEPEND}
 
 RESTRICT="test"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-newlen-overflow.patch
-	epatch "${FILESDIR}"/${P}-automagic.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-newlen-overflow.patch \
+		"${FILESDIR}"/${P}-automagic.patch
 	eautoreconf
 }
 
 src_compile() {
-	econf --disable-aotest $(use_enable ao) $(use_enable debug)
-	emake || die "emake failed."
+	econf \
+		--disable-static \
+		$(use_enable ao) \
+		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog CHANGES NEWS TODO README*
 }
