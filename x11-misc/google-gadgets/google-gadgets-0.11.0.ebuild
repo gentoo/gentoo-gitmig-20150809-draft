@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.0.ebuild,v 1.1 2009/06/01 22:50:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/google-gadgets-0.11.0.ebuild,v 1.2 2009/06/02 08:08:16 voyageur Exp $
 
 EAPI=2
 
@@ -16,7 +16,8 @@ SRC_URI="http://${MY_PN}.googlecode.com/files/${MY_P}.tar.bz2"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~x86"
-IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification webkit"
+IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification
+webkit +xulrunner"
 
 # Weird things happen when we start mix-n-matching, so for the time being
 # I've just locked the deps to the versions I had as of Summer 2008. With any
@@ -24,7 +25,6 @@ IUSE="+dbus debug +gtk +qt4 +gstreamer networkmanager soup startup-notification 
 
 RDEPEND="
 	>=dev-libs/libxml2-2.6.32
-	net-libs/xulrunner:1.9
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXext
@@ -54,6 +54,7 @@ RDEPEND="
 	soup? ( >=net-libs/libsoup-2.26 )
 	startup-notification? ( x11-libs/startup-notification )
 	webkit? ( >=net-libs/webkit-gtk-1.0.3 )
+	xulrunner? ( net-libs/xulrunner:1.9 )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.20
@@ -88,19 +89,11 @@ src_prepare() {
 }
 
 src_configure() {
-	#For the time being, the smjs-script runtime is required for both gtk and qt
-	#versions, but the goal is to make the qt4 version depend only on qt-script.
-	has_pkg_smjs=no \
-	econf	--disable-dependency-tracking \
+	local myconf="--disable-dependency-tracking \
 		--disable-update-desktop-database \
 		--disable-update-mime-database \
 		--disable-werror \
 		--enable-libxml2-xml-parser \
-		--enable-smjs-script-runtime \
-		--with-gtkmozembed=libxul \
-		--with-smjs-cppflags=-I/usr/include/nspr \
-		--with-smjs-libdir=/usr/$(get_libdir)/xulrunner-1.9 \
-		--with-smjs-incdir=/usr/include/xulrunner-1.9/unstable \
 		--with-browser-plugins-dir=/usr/$(get_libdir)/nsbrowser/plugins \
 		--with-ssl-ca-file=/etc/ssl/certs/ca-certificates.crt \
 		--with-oem-brand=Gentoo \
@@ -113,7 +106,6 @@ src_configure() {
 		$(use_enable webkit gtkwebkit-browser-element) \
 		$(use_enable gtk gtk-host) \
 		$(use_enable gtk libggadget-gtk ) \
-		$(use_enable gtk gtkmoz-browser-element) \
 		$(use_enable gtk gtk-edit-element) \
 		$(use_enable gtk gtk-flash-element) \
 		$(use_enable gtk gtk-system-framework) \
@@ -124,7 +116,20 @@ src_configure() {
 		$(use_enable qt4 qt-system-framework) \
 		$(use_enable qt4 qtwebkit-browser-element) \
 		$(use_enable qt4 qt-xml-http-request) \
-		$(use_enable qt4 qt-script-runtime)
+		$(use_enable qt4 qt-script-runtime)"
+	if use xulrunner; then
+		myconf="${myconf} \
+			$(use_enable gtk gtkmoz-browser-element) \
+			--with-gtkmozembed=libxul \
+			--enable-smjs-script-runtime \
+			--with-smjs-cppflags=-I/usr/include/nspr \
+			--with-smjs-libdir=/usr/$(get_libdir)/xulrunner-1.9 \
+			--with-smjs-incdir=/usr/include/xulrunner-1.9/unstable"
+	else
+		myconf="${myconf} --disable-gtkmoz-browser-element"
+	fi
+
+	econf ${myconf}
 }
 
 src_test() {

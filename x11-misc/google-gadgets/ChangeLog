@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/google-gadgets
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.25 2009/06/01 22:50:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/google-gadgets/ChangeLog,v 1.26 2009/06/02 08:08:16 voyageur Exp $
+
+  02 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  google-gadgets-0.11.0.ebuild:
+  Make xulrunner optional, now that there is a webkit backend
 
 *google-gadgets-0.11.0 (01 Jun 2009)
 
