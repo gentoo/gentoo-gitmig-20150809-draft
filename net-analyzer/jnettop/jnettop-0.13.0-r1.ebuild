@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/jnettop-0.13.0-r1.ebuild,v 1.2 2007/08/20 10:31:11 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/jnettop/jnettop-0.13.0-r1.ebuild,v 1.3 2009/06/02 11:55:36 flameeyes Exp $
+
+inherit autotools eutils
 
 DESCRIPTION="A top like console network traffic visualiser"
 HOMEPAGE="http://jnettop.kubs.info/"
@@ -16,6 +18,14 @@ RDEPEND="net-libs/libpcap
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
+	eautoreconf
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die
