@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.14.ebuild,v 1.2 2009/01/14 03:59:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ezbounce-1.99.14.ebuild,v 1.3 2009/06/02 12:53:35 flameeyes Exp $
 
 inherit eutils
 
@@ -22,6 +22,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch #251445
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}+glibc-2.10.patch
 }
 
 src_compile() {

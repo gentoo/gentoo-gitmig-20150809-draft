@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/ezbounce
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.17 2009/01/14 03:59:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ezbounce/ChangeLog,v 1.18 2009/06/02 12:53:35 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ezbounce-1.99.14.ebuild, +files/ezbounce-1.99.14+glibc-2.10.patch,
+  +files/ezbounce-1.99.14-asneeded.patch:
+  Add --as-needed patch by Kevin Pyle (bug #248017); fix building with glibc
+  2.10.
 
   14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
   +files/ezbounce-1.99.14-build.patch, ezbounce-1.99.14.ebuild:
