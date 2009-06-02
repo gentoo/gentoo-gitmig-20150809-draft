@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/JSON
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.9 2009/03/13 12:47:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/JSON/ChangeLog,v 1.10 2009/06/02 16:57:31 tove Exp $
+
+*JSON-2.15 (02 Jun 2009)
+
+  02 Jun 2009; Torsten Veller <tove@gentoo.org> +JSON-2.15.ebuild:
+  Version bump
 
   13 Mar 2009; Torsten Veller <tove@gentoo.org> -JSON-2.12.ebuild,
   -JSON-2.13.ebuild:
