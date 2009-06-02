@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4512 2009/06/02 16:47:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4513 2009/06/02 22:07:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2852,6 +2852,7 @@ sys-power/suspend:crypt - Allows suspend and resume from encrypted disk
 sys-power/suspend:fbsplash - Add support for framebuffer splash
 sys-process/cronie:inotify - Enable inotify filesystem monitoring support.
 sys-process/procps:n32 - Enable n32 ABI support on mips
+virtual/libffi:static-libs - Compile static archives
 virtual/poppler-utils:abiword -  Enable support for app-office/abiword output. Requires dev-libs/libxml2. 
 www-apache/mod_ftpd:dbi - Enables dev-db/libdbi support
 www-apache/mod_log_sql:dbi - Enables dev-db/libdbi support
