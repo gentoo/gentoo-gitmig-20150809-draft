@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.3 2009/06/01 13:14:01 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.4 2009/06/02 22:30:58 jer Exp $
+
+  02 Jun 2009; Jeroen Roovers <jer@gentoo.org> libffi-0.ebuild:
+  Marked ~hppa (bug #272046).
 
   01 Jun 2009; Ferris McCormick <fmccor@gentoo.org> libffi-0.ebuild:
   Add sparc for testing, part of Bug #272046.
