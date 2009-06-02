@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2726 2009/06/02 17:35:03 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2727 2009/06/02 23:04:21 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -23,7 +23,7 @@
   Add rdeps of sys-libs/libuser to masking notice.
 
   01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask media-sound/creox because it force depends on arts.
+  Mask media-sound/creox and media-sound/knob because it force depends on arts.
 
   01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask libffi and virtual wrt #163724
