@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.4.0b-r2.ebuild,v 1.5 2007/12/26 10:33:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wavemon/wavemon-0.4.0b-r2.ebuild,v 1.6 2009/06/02 13:35:50 flameeyes Exp $
 
 inherit toolchain-funcs flag-o-matic eutils linux-info
 
@@ -21,6 +21,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/wavemon-gcc-fixes.patch
 	epatch "${FILESDIR}"/${P}-includes.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 
 	append-flags "-I${KV_DIR}/include"
 
