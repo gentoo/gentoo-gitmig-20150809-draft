@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/nabi
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.25 2008/06/22 00:06:39 wormo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nabi/ChangeLog,v 1.26 2009/06/02 10:24:00 flameeyes Exp $
+
+*nabi-0.99.3 (02 Jun 2009)
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> +nabi-0.99.3.ebuild,
+  +files/nabi-0.99.3-asneeded.patch:
+  Version bump and add a patch to fix build with --as-needed (closes bug
+  #246898).
 
   21 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   nabi-0.17.ebuild:
