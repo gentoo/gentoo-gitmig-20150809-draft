@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.7 2009/05/29 17:10:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ifstatus-1.1.0.ebuild,v 1.8 2009/06/02 11:51:00 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -27,15 +27,17 @@ src_unpack() {
 		-e 's/GCC/CXX/g' \
 		-e 's/CFLAGS/CXXFLAGS/g' \
 		Makefile || die "sed failed"
+
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 }
 
 src_compile() {
-	emake -j1 CXX=$(tc-getCXX) || die "emake failed"
+	emake CXX=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {
-	dobin ifstatus
-	dodoc AUTHORS README
+	dobin ifstatus || die
+	dodoc AUTHORS README || die
 }
 
 pkg_postinst() {

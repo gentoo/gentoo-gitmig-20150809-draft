@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ifstatus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.6 2009/05/29 17:10:42 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ifstatus/ChangeLog,v 1.7 2009/06/02 11:51:00 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ifstatus-1.1.0.ebuild, +files/ifstatus-1.1.0-asneeded.patch:
+  Add patch to fix --as-needed by Kevin Pyle, close bug #247928. Remove -j1
+  from emake (builds fine at -j12), die on failed install.
 
   29 May 2009; Steve Dibb <beandog@gentoo.org> ifstatus-1.1.0.ebuild:
   amd64 stable
