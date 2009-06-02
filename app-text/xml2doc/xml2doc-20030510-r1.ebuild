@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.2 2007/07/12 04:37:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.3 2009/06/02 10:05:48 flameeyes Exp $
 
 inherit eutils
 
@@ -28,29 +28,32 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-pointer_fix.patch"
 
 	# Don't strip symbols from binary (bug #152266)
-	sed -i -e '/^\s*strip/d' src/Makefile.in
+	sed -i -e '/^\s*strip/d' \
+		-e '/^CC=/d' \
+		-e 's/^\t$(CC) $(LFLAGS).*/\t$(LINK.o) $(L_PDF) $^ -lxml2 -o $(BIN)/' \
+		-e '/^\t$(CC) $(CFLAGS) /d' \
+		src/Makefile.in
 }
 
 src_compile() {
-	local myconf="$(use_enable pdf)"
-
-	econf $myconf || die "./configure failed"
+	econf $(use_enable pdf) || die "./configure failed"
 	emake || die "Compilation failed"
+
+	cd "${S}/doc"
+	"${S}"/src/xml2doc -oM manpage.xml xml2doc.1 || die
 }
 
 src_install() {
 	# xml2doc's make install is unfortunately broken
 
 	# binary
-	dobin ${S}/src/xml2doc
+	dobin src/xml2doc || die
 
 	# documentation
-	dodoc BUGS README TODO
+	dodoc BUGS README TODO || die
 	docinto examples
-	dodoc ${S}/examples/*.{xml,png}
+	dodoc examples/*.{xml,png} || die
 
 	# manpage
-	cd ${S}/doc
-	${S}/src/xml2doc -oM manpage.xml xml2doc.1
-	doman xml2doc.1
+	doman doc/xml2doc.1 || die
 }
