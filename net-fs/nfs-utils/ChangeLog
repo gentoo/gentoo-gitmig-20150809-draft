@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.158 2009/05/30 22:01:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.159 2009/06/02 19:03:30 vapier Exp $
+
+*nfs-utils-1.2.0 (02 Jun 2009)
+
+  02 Jun 2009; Mike Frysinger <vapier@gentoo.org> +nfs-utils-1.2.0.ebuild:
+  Version bump.
 
   30 May 2009; Mike Frysinger <vapier@gentoo.org> nfs-utils-1.1.6-r1.ebuild,
   files/nfs.confd, files/nfs.initd:
