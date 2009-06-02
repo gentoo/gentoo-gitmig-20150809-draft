@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.3 2009/05/29 12:09:00 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.4 2009/06/02 08:59:01 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -18,7 +18,8 @@ RDEPEND=">=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12
 	gnome-base/gconf
 	media-fonts/corefonts
-	>=sys-devel/gcc-4.2"
+	>=sys-devel/gcc-4.2
+	x11-libs/pango"
 
 S=${WORKDIR}
 
@@ -57,5 +58,5 @@ src_install() {
 	# Create chromium-bin wrapper
 	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/lib
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
-	make_desktop_entry chromium-bin "Chromium" ${PN}.png "Network;WebBrowser"
+	make_desktop_entrychromium-bin "Chromium" ${PN}.png "Network;WebBrowser"
 }
