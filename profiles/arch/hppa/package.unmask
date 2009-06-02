@@ -1,0 +1,8 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.unmask,v 1.1 2009/06/02 18:45:22 jer Exp $
+
+# Jeroen Roovers <jer@gentoo.org> (2 Jun 2009)
+# gcc-4.3* builds panicky kernels on HPPA (bug #225917) whereas 4.4 is good
+>sys-devel/gcc-4.4
+
