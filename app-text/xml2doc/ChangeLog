@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xml2doc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.18 2009/06/02 10:05:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.19 2009/06/02 10:06:41 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  xml2doc-20030510-r1.ebuild:
+  Fix minor issues pointed out by repoman.
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   xml2doc-20030510-r1.ebuild:

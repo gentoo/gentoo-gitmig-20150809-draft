@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.3 2009/06/02 10:05:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510-r1.ebuild,v 1.4 2009/06/02 10:06:41 flameeyes Exp $
 
 inherit eutils
 
@@ -17,11 +17,12 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=dev-libs/libxml2-2.5
 	pdf? ( >=media-libs/pdflib-4 )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 
 	# Fix pointer-related bug detected by a QA notice.
