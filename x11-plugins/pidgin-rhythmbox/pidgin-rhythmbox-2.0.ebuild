@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/pidgin-rhythmbox-2.0.ebuild,v 1.7 2009/06/02 23:28:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/pidgin-rhythmbox-2.0.ebuild,v 1.8 2009/06/02 23:30:14 ssuominen Exp $
 
 EAPI=2
 
@@ -17,6 +17,7 @@ RDEPEND="net-im/pidgin
 	media-sound/rhythmbox
 	>=x11-libs/gtk+-2.4:2
 	dev-libs/dbus-glib"
+RDEPEND="${RDEPEND}"
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
