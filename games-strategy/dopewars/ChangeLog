@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/dopewars
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.20 2008/05/12 18:45:04 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.21 2009/06/02 17:17:10 mr_bones_ Exp $
+
+  02 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  dopewars-1.5.12-r1.ebuild:
+  esound is going away
 
   12 May 2008; Markus Meier <maekke@gentoo.org> dopewars-1.5.12-r1.ebuild:
   amd64 stable, bug #221747
