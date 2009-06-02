@@ -1,0 +1,19 @@
+commit 21278511d08c42fe82db751c3749bb8ae7f5adb6
+Author: Justin Karneges <justin@affinix.com>
+Date:   Mon Jun 1 11:23:51 2009 -0700
+
+    fix bug where calldlg might not display
+
+diff --git a/src/avcall/calldlg.cpp b/src/avcall/calldlg.cpp
+index 424e627..36504f2 100644
+--- a/src/avcall/calldlg.cpp
++++ b/src/avcall/calldlg.cpp
+@@ -87,7 +87,7 @@ public:
+ 		ui.pb_accept->setDefault(true);
+ 		ui.pb_accept->setFocus();
+ 
+-		q->resize(q->minimumSize());
++		q->resize(q->minimumSizeHint());
+ 	}
+ 
+ 	~Private()

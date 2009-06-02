@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1.ebuild,v 1.3 2009/06/01 23:52:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1-r1.ebuild,v 1.1 2009/06/02 17:04:40 pva Exp $
 
 EAPI="2"
 
@@ -60,8 +60,10 @@ src_prepare() {
 			-e 's:\(^#define PROG_NAME "Psi\):\1+:' \
 				-i src/applicationinfo.cpp || die
 	fi
+
 	rm -rf third-party/qca # We use system libraries.
 
+	epatch "${FILESDIR}/${P}-dialog-show.patch"
 }
 
 src_configure() {
