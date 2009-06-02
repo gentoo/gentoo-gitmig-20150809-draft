@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.3.ebuild,v 1.4 2009/04/30 22:15:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.5.ebuild,v 1.1 2009/06/02 18:16:33 cryos Exp $
 
 EAPI=2
 
@@ -35,6 +35,8 @@ src_configure() {
 	local mycmakeargs
 	mycmakeargs="${mycmakeargs}
 		-DENABLE_THREADGL=FALSE
+		-DENABLE_RPATH=OFF
+		-DENABLE_UPDATE_CHECKER=OFF
 		$(cmake-utils_use_enable glsl GLSL)
 		$(cmake-utils_use_enable python PYTHON)"
 
