@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4510 2009/06/01 23:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4511 2009/06/02 01:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2722,7 +2722,6 @@ sys-boot/grub:multislot - Allow grub1 and grub2 to be installed simultaneously
 sys-boot/lilo:device-mapper - Enable support for sys-fs/device-mapper
 sys-boot/lilo:pxeserial - Avoid character echo on PXE serial console
 sys-cluster/charm:cmkopt - Enable CMK optimisation
-sys-cluster/charm:icc - Use Intel compiler to build package
 sys-cluster/charm:tcp - Use TCP (instead of UPD) for socket communication
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
 sys-cluster/heartbeat:management - Adds support for management GUI.
