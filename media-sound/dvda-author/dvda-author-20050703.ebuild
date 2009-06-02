@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/dvda-author-20050703.ebuild,v 1.1 2008/01/06 02:46:01 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/dvda-author-20050703.ebuild,v 1.2 2009/06/02 12:15:58 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}/${P}-flac113.diff"
+	epatch "${FILESDIR}/${P}-asneeded.patch"
 }
 
 src_compile() {

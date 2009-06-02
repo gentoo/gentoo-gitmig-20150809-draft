@@ -1,0 +1,22 @@
+Index: dvda-author-20050703/src/Makefile
+===================================================================
+--- dvda-author-20050703.orig/src/Makefile
++++ dvda-author-20050703/src/Makefile
+@@ -8,7 +8,7 @@ endif
+ CC=$(CROSS)gcc
+ AR=$(CROSS)ar
+ CFLAGS+=-Wall
+-LIBS=`pkg-config --libs flac`
++LDLIBS=`pkg-config --libs flac` -lm
+ TARGETS=dvda-author$(EXT)
+ OBJS=dvda-author.o audio.o ats.o atsi.o amg.o samg.o
+ 
+@@ -16,7 +16,7 @@ OBJS=dvda-author.o audio.o ats.o atsi.o 
+ all: $(TARGETS)
+ 
+ dvda-author$(EXT): $(OBJS)
+-	$(CC) $(LIBS) $(LDFLAGS) -o $@ $^
++	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+ 
+ dvda-author.o: dvda-author.c version.h audio.h ats.h atsi.h
+ ats.o: ats.c ats.h audio.h

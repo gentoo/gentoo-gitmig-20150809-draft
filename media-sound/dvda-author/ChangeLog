@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/dvda-author
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/ChangeLog,v 1.1 2008/01/06 02:46:01 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/ChangeLog,v 1.2 2009/06/02 12:15:58 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  dvda-author-20050703.ebuild, +files/dvda-author-20050703-asneeded.patch:
+  Add patch to build with --as-needed, closes bug #247834.
 
 *dvda-author-20050703 (06 Jan 2008)
 
