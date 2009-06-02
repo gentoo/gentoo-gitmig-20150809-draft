@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.5 2009/05/30 23:07:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.6 2009/06/02 17:43:43 beandog Exp $
 
 EAPI="2"
 
@@ -43,7 +43,7 @@ else
 fi
 SRC_URI="${RELEASE_URI}
 	!truetype? ( ${FONT_URI} )
-	gmplayer? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )
+	gmplayer? ( mirror://mplayer/skins/Blue-${BLUV}.tar.bz2 )
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 "
 
@@ -180,11 +180,13 @@ else
 fi
 
 pkg_setup() {
-	elog ""
-	elog "This is a live ebuild which installs the latest from upstream's"
-	elog "subversion repository, and is unsupported by Gentoo."
-	elog "Everything but bugs in the ebuild itself will be ignored."
-	elog ""
+	if [[ ${PV} = *9999* ]]; then
+		elog ""
+		elog "This is a live ebuild which installs the latest from upstream's"
+		elog "subversion repository, and is unsupported by Gentoo."
+		elog "Everything but bugs in the ebuild itself will be ignored."
+		elog ""
+	fi
 
 	if [[ -n ${LINGUAS} ]]; then
 		elog ""
