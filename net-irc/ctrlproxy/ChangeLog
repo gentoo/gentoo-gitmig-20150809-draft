@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ctrlproxy
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.32 2009/03/25 15:33:15 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.33 2009/06/02 12:21:08 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ctrlproxy-3.0.8.ebuild, +files/ctrlproxy-3.0.8-asneeded.patch:
+  Add patch to build with --as-needed, closes bug #248015.
 
   25 Mar 2009; Raúl Porcel <armin76@gentoo.org> -ctrlproxy-3.0.7.ebuild,
   ctrlproxy-3.0.8.ebuild:
