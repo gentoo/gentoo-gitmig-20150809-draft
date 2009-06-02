@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-zhuyin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-zhuyin/ChangeLog,v 1.1 2009/06/02 16:22:47 matsuu Exp $
+
+*ibus-table-zhuyin-1.1.0.20090602 (02 Jun 2009)
+
+  02 Jun 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-zhuyin-1.1.0.20090602.ebuild, +metadata.xml:
+  Initial import.
+
