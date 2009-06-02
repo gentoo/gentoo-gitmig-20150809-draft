@@ -1,0 +1,11 @@
+--- le-1.14.2/src/options.cc
++++ le-1.14.2/src/options.cc
+@@ -1245,7 +1245,7 @@
+                 FindColor(new_bw_pal,color_no));
+       return -1;
+    }
+-   char *l=strchr(button,'&');
++   const char *l=strchr(button,'&');
+    if(!l)
+       return -1;
+    char res=toupper(l[1]);
