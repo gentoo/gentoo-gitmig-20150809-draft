@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-oss
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.111 2008/09/01 18:01:27 betelgeuse Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.112 2009/06/02 17:52:16 gentoofan23 Exp $
+
+  02 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  alsa-oss-1.0.17.ebuild:
+  stable amd64, bug 272285
 
   01 Sep 2008; Petteri Räty <betelgeuse@gentoo.org>
   -alsa-oss-1.0.12.ebuild, -alsa-oss-1.0.14.ebuild:
