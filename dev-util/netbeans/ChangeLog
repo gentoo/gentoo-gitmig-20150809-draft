@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.117 2009/06/01 21:40:23 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.118 2009/06/02 11:44:58 fordfrog Exp $
+
+  02 Jun 2009; Miroslav Šulc <fordfrog@gentoo.org> netbeans-6.7_rc1.ebuild:
+  Fixed compilation error when jvyamlb.jar was missing
 
 *netbeans-6.7_rc1 (01 Jun 2009)
 

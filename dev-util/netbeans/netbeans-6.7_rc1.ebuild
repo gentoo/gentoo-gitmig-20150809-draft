@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_rc1.ebuild,v 1.1 2009/06/01 21:40:23 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_rc1.ebuild,v 1.2 2009/06/02 11:44:58 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -194,6 +194,7 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/jdbc-postgresql-8.3_p603:0
 		>=dev-java/jsch-0.1.39:0
 		dev-java/jsr173:0
+		dev-java/jvyamlb:0
 		dev-java/lucene:2.4
 		>=dev-java/sac-1.3:0
 		dev-java/sun-jaf:0
@@ -219,7 +220,6 @@ DEPEND=">=virtual/jdk-1.5
 		>=dev-java/javacup-0.11a_beta20060608:0
 	)
 	netbeans_modules_ruby? (
-		dev-java/jvyamlb:0
 		dev-util/jay:0
 	)"
 
@@ -506,6 +506,7 @@ src_prepare () {
 			filter_file "libs.bugtracking/external/org.eclipse.mylyn.commons.net_3.1.1.jar" ${tmpfile}
 			filter_file "libs.bugtracking/external/org.eclipse.mylyn.tasks.core_3.1.1.jar" ${tmpfile}
 			filter_file "libs.bugzilla/external/org.eclipse.mylyn.bugzilla.core_3.1.1.jar" ${tmpfile}
+			filter_file "libs.bytelist/external/bytelist-0.1.jar" ${tmpfile}
 			filter_file "libs.ini4j/external/ini4j-0.4.1.jar" ${tmpfile}
 			filter_file "libs.svnClientAdapter/external/svnClientAdapter-1.6.0.jar" ${tmpfile}
 			filter_file "libs.swingx/external/swingx-0.9.5.jar" ${tmpfile}
@@ -564,7 +565,6 @@ src_prepare () {
 		fi
 
 		if use netbeans_modules_ruby ; then
-			filter_file "libs.bytelist/external/bytelist-0.1.jar" ${tmpfile}
 			filter_file "libs.jrubyparser/external/jruby-parser-0.1.jar" ${tmpfile}
 			filter_file "o.kxml2/external/kxml2-2.3.0.jar" ${tmpfile}
 			filter_file "o.rubyforge.debugcommons/external/debug-commons-java-0.10.0.jar" ${tmpfile}
@@ -828,6 +828,7 @@ place_unpack_symlinks() {
 		dosymcompilejar "libs.bugtracking/external" commons-httpclient-3 commons-httpclient.jar commons-httpclient-3.1.jar
 		dosymcompilejar "libs.bugtracking/external" commons-lang-2.1 commons-lang.jar commons-lang-2.3.jar
 		dosymcompilejar "libs.jsch/external" jsch jsch.jar jsch-0.1.41.jar
+		dosymcompilejar "libs.jvyamlb/external" jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
 		dosymcompilejar "libs.svnClientAdapter/external" subversion svn-javahl.jar svnjavahl-1.6.0.jar
 		dosymcompilejar "libs.lucene/external" lucene-2.4 lucene-core.jar lucene-core-2.3.2.jar
 		dosymcompilejar "css.visual/external" sac sac.jar sac-1.3.jar
@@ -867,7 +868,6 @@ place_unpack_symlinks() {
 	fi
 
 	if use netbeans_modules_ruby ; then
-		dosymcompilejar "libs.jvyamlb/external" jvyamlb jvyamlb.jar jvyamlb-0.2.3.jar
 		dosymcompilejar "libs.yydebug/external" jay yydebug.jar yydebug-1.0.2.jar
 	fi
 
