@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.118 2009/05/28 20:07:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.119 2009/06/02 11:15:28 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> hplip-3.9.4b.ebuild:
+  Depend on PyQt4 with X module enabled; closes bug #272178.
 
 *hplip-3.9.4b (28 May 2009)
 
