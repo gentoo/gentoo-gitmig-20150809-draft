@@ -1,9 +1,6 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.41 2009/06/02 18:27:21 fauli Exp $
-
-  02 Jun 2009; Christian Faulhammer <fauli@gentoo.org> ChangeLog:
-  stable x86, bug 270585
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.42 2009/06/02 18:41:18 fauli Exp $
 
   02 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   bioperl-1.6.0-r2.ebuild:
