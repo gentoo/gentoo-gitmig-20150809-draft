@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4394.ebuild,v 1.1 2009/05/27 16:31:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4394.ebuild,v 1.2 2009/06/02 07:18:06 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-9.0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
 
@@ -56,6 +56,7 @@ SRC_URI="
 			!ia32? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
 		)
 	)
+	x86-fbsd? ( ${O_U}intel-freebsd/${O_P}.freebsd6-shared-qt3.i386.tar.bz2 )
 	"
 
 DEPEND=">=sys-apps/sed-4"
@@ -76,23 +77,36 @@ RDEPEND="
 	x11-libs/libICE
 	x86? (
 		qt-static? (
-			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+			!qt3? (
+				x11-libs/libXinerama
+				x11-libs/qt-core
+				x11-libs/qt-gui
+			)
 		)
 		!qt-static? (
 			qt3? ( =x11-libs/qt-3*[-immqt] )
-			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+			!qt3? (
+				x11-libs/libXinerama
+				x11-libs/qt-core
+				x11-libs/qt-gui
+			)
 		)
 	)
 	ppc? ( =x11-libs/qt-3*[-immqt] )
 	amd64? (
 		ia32? (
 			qt-static? (
-				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+				!qt3? (
+					x11-libs/libXinerama
+					x11-libs/qt-core
+					x11-libs/qt-gui
+				)
 			)
 			!qt-static? ( =x11-libs/qt-3*[-immqt] )
 		)
 		!ia32? ( =x11-libs/qt-3*[-immqt] )
 	)
+	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
 
 opera_linguas() {

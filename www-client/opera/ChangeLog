@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.346 2009/05/27 16:59:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.347 2009/06/02 07:18:06 jer Exp $
+
+  02 Jun 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4394.ebuild:
+  Add libXinerama dependency for qt4 build thanks to Piotr Szymaniak (bug
+  #271990). Readd x86-fbsd.
 
   27 May 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.00_pre4205.ebuild,
   -opera-10.00_pre4214.ebuild, -opera-10.00_pre4268.ebuild:
