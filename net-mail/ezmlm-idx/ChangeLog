@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.26 2009/05/20 16:33:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.27 2009/06/02 16:41:36 armin76 Exp $
+
+  02 Jun 2009; Raúl Porcel <armin76@gentoo.org> ezmlm-idx-6.0.0.ebuild:
+  sparc stable wrt #265121
 
   20 May 2009; nixnut <nixnut@gentoo.org> ezmlm-idx-6.0.0.ebuild:
   ppc stable #265121
