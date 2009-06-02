@@ -1,12 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.2 2009/05/27 21:00:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.3 2009/06/02 23:40:37 ssuominen Exp $
 
 EAPI=2
-
 inherit eutils mono gnome2-utils fdo-mime versionator
-
-GVER=0.10.7
 
 DESCRIPTION="Import, organize, play, and share your music using a simple and powerful interface."
 HOMEPAGE="http://banshee-project.org"
@@ -29,16 +26,16 @@ RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/gconf-sharp-2.24.0
 	>=dev-dotnet/gnome-sharp-2.24.0
 	>=dev-dotnet/notify-sharp-0.4.0_pre20080912-r1
-	>=media-libs/gstreamer-0.10.21-r3
-	>=media-libs/gst-plugins-bad-${GVER}
-	>=media-libs/gst-plugins-good-${GVER}
-	>=media-libs/gst-plugins-ugly-${GVER}
-	>=media-plugins/gst-plugins-alsa-${GVER}
-	>=media-plugins/gst-plugins-gnomevfs-${GVER}
-	>=media-plugins/gst-plugins-gconf-${GVER}
+	>=media-libs/gstreamer-0.10.21-r3:0.10
+	media-libs/gst-plugins-bad
+	media-libs/gst-plugins-good:0.10
+	media-libs/gst-plugins-ugly:0.10
+	media-plugins/gst-plugins-alsa:0.10
+	media-plugins/gst-plugins-gnomevfs:0.10
+	media-plugins/gst-plugins-gconf:0.10
 	|| (
-		>=media-plugins/gst-plugins-cdparanoia-${GVER}
-		>=media-plugins/gst-plugins-cdio-${GVER}
+		media-plugins/gst-plugins-cdparanoia:0.10
+		media-plugins/gst-plugins-cdio:0.10
 	)
 	media-libs/musicbrainz:1
 	>=dev-dotnet/dbus-glib-sharp-0.4.1
@@ -47,7 +44,7 @@ RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/taglib-sharp-2.0.3.1
 	>=dev-db/sqlite-3.4
 	aac? (
-		>=media-plugins/gst-plugins-faad-${GVER}
+		media-plugins/gst-plugins-faad:0.10
 	)
 	boo? (
 		>=dev-lang/boo-0.8.1
@@ -59,24 +56,24 @@ RDEPEND=">=dev-lang/mono-2
 		virtual/monodoc
 	)
 	encode? (
-		>=media-plugins/gst-plugins-lame-${GVER}
-		>=media-plugins/gst-plugins-taglib-${GVER}
+		media-plugins/gst-plugins-lame:0.10
+		media-plugins/gst-plugins-taglib:0.10
 	)
 	flac? (
-		>=media-plugins/gst-plugins-flac-${GVER}
+		media-plugins/gst-plugins-flac:0.10
 	)
 	ipod? (
 		>=dev-dotnet/ipod-sharp-0.8.1
 	)
 	mad? (
-		>=media-plugins/gst-plugins-mad-${GVER}
+		media-plugins/gst-plugins-mad:0.10
 	)
 	mtp? (
 		media-libs/libmtp
 	)
 	vorbis? (
-		>=media-plugins/gst-plugins-ogg-${GVER}
-		>=media-plugins/gst-plugins-vorbis-${GVER}
+		media-plugins/gst-plugins-ogg:0.10
+		media-plugins/gst-plugins-vorbis:0.10
 	)"
 
 DEPEND="${RDEPEND}
@@ -87,8 +84,6 @@ DOCS="AUTHORS ChangeLog HACKING NEWS README"
 S=${WORKDIR}/${PN}-1-${PV}
 
 src_prepare() {
-	#Upstream bug 563283
-	#Author is thansen on freenode.
 	epatch "${FILESDIR}/${PN}-1.4.2-metadata-writefail.patch"
 
 	#Upstream bug 527788, our bug 249620
@@ -118,7 +113,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install efailed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	find "${D}" -name '*.la' -delete
 }
 

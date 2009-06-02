@@ -1,3 +1,5 @@
+Upstream bug 563283 by thansen from Freenode.
+
 diff -NrU5 banshee-1-1.4.2.orig/src/Core/Banshee.Core/Banshee.Streaming/SaveTrackMetadataJob.cs banshee-1-1.4.2/src/Core/Banshee.Core/Banshee.Streaming/SaveTrackMetadataJob.cs
 --- banshee-1-1.4.2.orig/src/Core/Banshee.Core/Banshee.Streaming/SaveTrackMetadataJob.cs	2008-10-06 18:27:31.000000000 +0200
 +++ banshee-1-1.4.2/src/Core/Banshee.Core/Banshee.Streaming/SaveTrackMetadataJob.cs	2009-01-28 16:56:18.000000000 +0100
