@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9870 2009/06/01 22:17:18 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9871 2009/06/02 15:14:41 dang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -58,11 +58,6 @@ dev-perl/IniConf
 # Samuli Suominen <ssuominen@gentoo.org> (01 Jun 2009)
 # Masked for removal, bug 258919
 media-sound/kguitar
-
-# Ben de Groot <yngwin@gentoo.org> (30 May 2009)
-# Breaks X for hal users, bug 271837
-=sys-apps/hal-0.5.12_rc1-r5
-=sys-apps/hal-0.5.12_rc1-r6
 
 # Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
 # Masked for removal in 60 days, unmaintained. Binary package in /usr. bug
