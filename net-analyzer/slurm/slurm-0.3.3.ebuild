@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.3.3.ebuild,v 1.6 2006/08/15 09:15:51 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.3.3.ebuild,v 1.7 2009/06/02 11:59:40 flameeyes Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Realtime network interface monitor based on FreeBSD's pppstatus"
 HOMEPAGE="http://www.wormulon.net/projects/slurm"
@@ -14,6 +14,13 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
+}
 
 src_install() {
 	# binary

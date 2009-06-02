@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/slurm
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.16 2007/02/20 00:31:09 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.17 2009/06/02 11:59:40 flameeyes Exp $
+
+  02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> slurm-0.3.3.ebuild,
+  +files/slurm-0.3.3-asneeded.patch:
+  Add patch to fix build with --as-needed by Kevin Pyle, closes bug #247937.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
