@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/gtkpod
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.72 2009/05/31 15:34:28 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.73 2009/06/02 18:53:31 armin76 Exp $
+
+  02 Jun 2009; Raúl Porcel <armin76@gentoo.org> gtkpod-0.99.14.ebuild:
+  sparc stable wrt #271496
+
+  02 Jun 2009; Raúl Porcel <armin76@gentoo.org> gtkpod-0.99.14.ebuild:
+  sparc stable wrt #271496
 
   31 May 2009; Brent Baude <ranger@gentoo.org> gtkpod-0.99.14.ebuild:
   stable ppc64, bug 271496
