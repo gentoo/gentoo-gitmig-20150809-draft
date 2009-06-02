@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.9 2007/07/11 19:30:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.10 2009/06/02 17:31:35 beandog Exp $
 
-inherit linux-mod flag-o-matic eutils multilib autotools mercurial
+inherit linux-mod flag-o-matic eutils multilib autotools git
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -13,21 +13,25 @@ SLOT="0"
 KEYWORDS=""
 IUSE="oss debug midi"
 
-IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401 loopback
-portman2x4 pcsp ad1848-lib cs4231-lib adlib ad1816a ad1848 als100 azt2320 cmi8330
-cs4231 cs4232 cs4236 dt019x es968 es1688 es18xx gusclassic gusextreme gusmax
-interwave interwave-stb opl3sa2 opti92x-ad1848 opti92x-cs4231 opti93x miro
-sb8 sb16 sbawe sgalaxy sscape wavefront pc98-cs4232 msnd-pinnacle ad1889 als300
-als4000 ali5451 atiixp atiixp-modem au8810 au8820 au8830 azt3328 bt87x ca0106 cmipci
-cs4281 cs46xx cs5535audio darla20 gina20 layla20 darla24 gina24 layla24 mona mia
-echo3g indigo indigoio indigodj emu10k1 emu10k1x ens1370 ens1371 es1938 es1968
-fm801 fm801-tea575x hda-intel hdsp hdspm ice1712 ice1724 intel8x0 intel8x0m korg1212
-maestro3 mixart nm256 pcxhr riptide rme32 rme96 rme9652 sonicvibes trident via82xx
-via82xx-modem vx222 ymfpci pdplus asihpi powermac aoa aoa-fabric-layout aoa-onyx
-aoa-tas aoa-toonie aoa-soundbus aoa-soundbus-i2s sa11xx-uda1341 armaaci
-s3c2410 pxa2xx-i2sound au1x00 usb-audio usb-usx2y vxpocket pdaudiocf sun-amd7930
-sun-cs4231 sun-dbri harmony soc at91-soc at91-soc-eti-b1-wm8731 pxa2xx-soc
-pxa2xx-soc-corgi pxa2xx-soc-spitz pxa2xx-soc-poodle pxa2xx-soc-tosa"
+IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
+loopback portman2x4 ad1848-lib adlib ad1816a ad1848
+als100 azt2320 cmi8330 cs4231 cs4232 cs4236 dt019x es968 es1688 es18xx
+gusclassic gusextreme gusmax interwave interwave-stb opl3sa2
+opti92x-ad1848 opti92x-cs4231 opti93x miro sb8 sb16 sbawe sgalaxy
+sscape wavefront pc98-cs4232 msnd-pinnacle ad1889 als300 als4000
+ali5451 atiixp atiixp-modem au8810 au8820 au8830 azt3328 bt87x ca0106
+cmipci cs4281 cs46xx cs5535audio darla20 gina20 layla20 darla24 gina24
+layla24 mona mia echo3g indigo indigoio indigodj emu10k1 emu10k1x
+ens1370 ens1371 es1938 es1968 fm801 fm801-tea575x hda-intel hdsp hdspm
+ice1712 ice1724 intel8x0 intel8x0m korg1212 maestro3 mixart nm256
+pcxhr riptide rme32 rme96 rme9652 sonicvibes trident via82xx
+via82xx-modem vx222 ymfpci pdplus asihpi powermac aoa
+aoa-fabric-layout aoa-onyx aoa-tas aoa-toonie aoa-soundbus
+aoa-soundbus-i2s sa11xx-uda1341 armaaci s3c2410 pxa2xx-i2sound au1x00
+usb-audio usb-usx2y usb-us122l vxpocket pdaudiocf sun-amd7930 sun-cs4231 sun-dbri
+harmony soc at91-soc at91-soc-eti-b1-wm8731 pxa2xx-soc
+pxa2xx-soc-corgi pxa2xx-soc-spitz pxa2xx-soc-poodle pxa2xx-soc-tosa hifier
+ml403-ac97cr oxygen pxa2xx-soc-e800 sis7019 virtuoso"
 
 for iuse_card in ${IUSE_CARDS}; do
 	IUSE="${IUSE} alsa_cards_${iuse_card}"
@@ -95,8 +99,9 @@ pkg_setup() {
 }
 
 src_unpack() {
-	mercurial_fetch http://hg.alsa-project.org/alsa-driver
-	mercurial_fetch http://hg.alsa-project.org/alsa-kernel alsa-driver/alsa-kernel
+	EGIT_REPO_URI="git://git.alsa-project.org/alsa-driver.git" S="${WORKDIR}/alsa-driver" git_src_unpack
+	EGIT_REPO_URI="git://git.alsa-project.org/alsa-kmirror.git" EGIT_PROJECT="alsa-kmirror" S="${WORKDIR}/alsa-driver/alsa-kernel" git_src_unpack
+	S="${WORKDIR}/alsa-driver"
 
 	convert_to_m "${S}/Makefile"
 	sed -i -e 's:\(.*depmod\):#\1:' "${S}/Makefile"

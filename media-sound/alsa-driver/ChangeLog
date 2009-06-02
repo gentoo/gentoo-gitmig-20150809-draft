@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.298 2009/05/06 18:11:10 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.299 2009/06/02 17:31:35 beandog Exp $
+
+  02 Jun 2009; Steve Dibb <beandog@gentoo.org> alsa-driver-9999.ebuild:
+  Update live ebuild to use git; Thanks to Alexey Charkov for ebuild, bug
+  231490
 
 *alsa-driver-1.0.20 (06 May 2009)
 
