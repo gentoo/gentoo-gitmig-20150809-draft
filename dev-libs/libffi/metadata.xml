@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
+	<herd>toolchain</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
+		<email>ssuominen@gentoo.org</email>
+		<name>Samuli Suominen</name>
 	</maintainer>
 	<longdescription lang="en">
 		Compilers for high level languages generate code that follow certain
