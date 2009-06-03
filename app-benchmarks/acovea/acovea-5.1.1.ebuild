@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1.ebuild,v 1.6 2009/03/18 18:08:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/acovea-5.1.1.ebuild,v 1.7 2009/06/03 07:27:23 flameeyes Exp $
+
+WANT_AUTOMAKE=1.9
 
 inherit autotools
 
