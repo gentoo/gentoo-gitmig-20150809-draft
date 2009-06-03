@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpager/ChangeLog,v 1.88 2009/05/31 20:13:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpager/ChangeLog,v 1.89 2009/06/03 14:39:57 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kpager-3.5.10.ebuild:
+  Marking kpager-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kpager-3.5.10.ebuild:
   ppc stable #271889
