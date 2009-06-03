@@ -1,6 +1,9 @@
 # ChangeLog for games-action/geki2-KXL
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.8 2008/01/05 21:57:38 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.9 2009/06/03 13:20:58 nyhm Exp $
+
+  03 Jun 2009; Tristan Heaven <nyhm@gentoo.org> geki2-KXL-2.0.3-r2.ebuild:
+  RDEPEND on media-fonts/font-adobe-100dpi
 
 *geki2-KXL-2.0.3-r2 (05 Jan 2008)
 

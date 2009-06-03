@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/geki2-KXL-2.0.3-r2.ebuild,v 1.2 2008/01/07 14:13:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/geki2-KXL-2.0.3-r2.ebuild,v 1.3 2009/06/03 13:20:58 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="dev-games/KXL"
 RDEPEND="${DEPEND}
-	media-fonts/font-bitstream-75dpi"
+	media-fonts/font-adobe-100dpi"
 
 src_unpack() {
 	unpack ${A}
