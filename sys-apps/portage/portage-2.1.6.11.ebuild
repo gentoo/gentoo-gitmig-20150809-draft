@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.11.ebuild,v 1.6 2009/04/29 14:53:21 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.1.6.11.ebuild,v 1.7 2009/06/03 18:39:24 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -12,7 +12,7 @@ PROVIDE="virtual/portage"
 SLOT="0"
 IUSE="build doc epydoc selinux linguas_pl"
 
-python_dep=">=dev-lang/python-2.4"
+python_dep=">=dev-lang/python-2.5"
 
 DEPEND="${python_dep}
 	!build? ( >=sys-apps/sed-4.0.5 )
@@ -31,7 +31,6 @@ PDEPEND="
 	!build? (
 		>=net-misc/rsync-2.6.4
 		userland_GNU? ( >=sys-apps/coreutils-6.4 )
-		|| ( >=dev-lang/python-2.5 >=dev-python/pycrypto-2.0.1-r6 )
 	)"
 # coreutils-6.4 rdep is for date format in emerge-webrsync #164532
 # rsync-2.6.4 rdep is for the --filter option #167668
