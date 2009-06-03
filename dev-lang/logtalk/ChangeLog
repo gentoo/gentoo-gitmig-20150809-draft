@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/logtalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.5 2009/03/01 14:21:34 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/logtalk/ChangeLog,v 1.6 2009/06/03 21:22:01 miknix Exp $
+
+*logtalk-2.37.1 (03 Jun 2009)
+
+  03 Jun 2009; Angelo Arrifano <miknix@gentoo.org> +logtalk-2.37.1.ebuild:
+  Version bump.
 
 *logtalk-2.35.1 (01 Mar 2009)
 
