@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.5 2008/06/14 23:24:19 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/csharp-mode/csharp-mode-0.7.0.ebuild,v 1.6 2009/06/03 16:56:07 fauli Exp $
 
 inherit elisp versionator
 
 DESCRIPTION="A derived Emacs mode implementing most of the C# rules"
-HOMEPAGE="http://mfgames.com/linux/csharp-mode"
-SRC_URI="http://mfgames.com/linux/releases/${P}.tar.bz2"
+HOMEPAGE="http://mfgames.com/csharp-mode/start"
+SRC_URI="http://mfgames.com/releases/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
