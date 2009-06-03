@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/tapiir
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.19 2008/12/19 15:46:21 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapiir/ChangeLog,v 1.20 2009/06/03 20:10:27 maekke Exp $
+
+  03 Jun 2009; Markus Meier <maekke@gentoo.org> tapiir-0.7.2.ebuild:
+  amd64/x86 stable, bug #272134
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   +files/tapiir-0.7.2-ldflags.patch, tapiir-0.7.2.ebuild:
