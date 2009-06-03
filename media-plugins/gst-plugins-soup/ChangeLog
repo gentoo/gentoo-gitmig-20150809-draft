@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-soup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.8 2009/05/21 19:01:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.9 2009/06/03 18:32:17 klausman Exp $
+
+  03 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-soup-0.10.14.ebuild:
+  Keyworded on alpha, bug #270993
 
   21 May 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking gst-plugins-soup-0.10.14 ~ppc64 for bug 266986
