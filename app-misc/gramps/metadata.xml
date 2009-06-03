@@ -21,7 +21,11 @@ or sequence) to assist the user in doing research, analysis and correlation with
 the potential of filling relationship gaps.
 </longdescription>
 <use>
+  <flag name='mozembed'>Use Mozilla-based rendering for geographical
+  data view.</flag>
   <flag name='reports'>All external software that is needed for graphical
     reports will be installed</flag>
+  <flag name='webkit'>Use Webkit-based rendering for geographical
+  data view.</flag>
 </use>
 </pkgmetadata>
