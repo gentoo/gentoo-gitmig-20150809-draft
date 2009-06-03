@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/katomic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.112 2009/06/03 14:52:42 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/katomic/ChangeLog,v 1.113 2009/06/03 18:27:02 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> katomic-3.5.10.ebuild:
+  Marking katomic-3.5.10 ppc64 stable for bug 271889
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -katomic-4.2.2.ebuild:
   Drop KDE 4.2.2
