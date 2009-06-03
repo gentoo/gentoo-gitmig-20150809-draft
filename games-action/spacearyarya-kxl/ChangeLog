@@ -1,6 +1,11 @@
 # ChangeLog for games-action/spacearyarya-kxl
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.9 2007/03/14 16:23:27 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.10 2009/06/03 13:21:33 nyhm Exp $
+
+  03 Jun 2009; Tristan Heaven <nyhm@gentoo.org>
+  spacearyarya-kxl-1.0.2-r1.ebuild:
+  RDEPEND on media-fonts/font-adobe-100dpi and
+  media-fonts/font-bitstream-100dpi
 
   14 Mar 2007; Tristan Heaven <nyhm@gentoo.org>
   spacearyarya-kxl-1.0.2-r1.ebuild:
