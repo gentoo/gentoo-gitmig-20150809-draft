@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/nsplugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.137 2009/05/31 20:15:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/nsplugins/ChangeLog,v 1.138 2009/06/03 14:42:10 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> nsplugins-3.5.10.ebuild:
+  Marking nsplugins-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> nsplugins-3.5.10.ebuild:
   ppc stable #271889
