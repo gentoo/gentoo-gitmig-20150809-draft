@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/eyesapplet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.80 2009/05/31 19:47:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/ChangeLog,v 1.81 2009/06/03 14:18:09 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> eyesapplet-3.5.10.ebuild:
+  Marking eyesapplet-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> eyesapplet-3.5.10.ebuild:
   ppc stable #271889
