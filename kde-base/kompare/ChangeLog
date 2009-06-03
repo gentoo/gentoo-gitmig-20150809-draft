@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kompare
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.108 2009/05/31 21:32:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kompare/ChangeLog,v 1.109 2009/06/03 15:36:05 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kompare-3.5.10.ebuild:
+  Marking kompare-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kompare-3.5.10.ebuild:
   ppc stable #271889
