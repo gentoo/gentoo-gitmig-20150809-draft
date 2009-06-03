@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gramps
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.106 2009/06/03 06:51:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gramps/ChangeLog,v 1.107 2009/06/03 12:41:09 fmccor Exp $
+
+  03 Jun 2009; Ferris McCormick <fmccor@gentoo.org> gramps-3.1.1.ebuild:
+  Sparc stable, Bug #266452.
 
   03 Jun 2009; Christian Faulhammer <fauli@gentoo.org> metadata.xml:
   add more long descriptions in several languages
