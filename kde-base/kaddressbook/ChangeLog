@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.115 2009/06/03 14:46:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.116 2009/06/03 18:29:52 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kaddressbook-3.5.10.ebuild:
+  Marking kaddressbook-3.5.10 ppc64 stable for bug 271889
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kaddressbook-4.2.2.ebuild:
