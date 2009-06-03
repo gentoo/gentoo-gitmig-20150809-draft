@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.11.1.ebuild,v 1.2 2009/05/12 08:56:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-2.11.1.ebuild,v 1.3 2009/06/03 11:57:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -56,14 +56,14 @@ COMMON_DEPEND="
 		>=dev-libs/libxslt-1.1.22
 	)
 	zlib?	( >=sys-libs/zlib-1.2.3-r1 )
-	sys-devel/gcc[libffi]
+	virtual/libffi
 "
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 "
 RDEPEND="${COMMON_DEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	# ImageProvider implementers, see .component files for more info
@@ -261,7 +261,6 @@ src_configure() {
 		--enable-intl
 		--enable-conv
 		--enable-ffi
-		--with-ffi-libraries=/usr/$(get_libdir)/gcc/${CHOST}/$(gcc-fullversion)
 		--enable-preloading
 		--disable-profiling
 		$(use_enable debug)

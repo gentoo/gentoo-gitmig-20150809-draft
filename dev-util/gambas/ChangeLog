@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gambas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.55 2009/05/12 08:56:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.56 2009/06/03 11:57:00 ssuominen Exp $
+
+  03 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> gambas-2.11.1.ebuild:
+  Move to virtual/libffi wrt #272056.
 
   12 May 2009; Peter Alfredsen <loki_val@gentoo.org> gambas-2.11.1.ebuild:
   Fixup poppler dependencies (again) to use virtuals.
