@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2730 2009/06/03 09:04:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2731 2009/06/03 11:46:55 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Add p.mask for KDE 4.2.4
 
   03 Jun 2009; Christian Faulhammer <fauli@gentoo.org> base/virtuals,
   embedded/virtuals:
