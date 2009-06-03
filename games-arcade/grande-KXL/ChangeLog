@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/grande-KXL
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/ChangeLog,v 1.6 2007/04/08 00:25:48 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/ChangeLog,v 1.7 2009/06/03 13:20:11 nyhm Exp $
+
+  03 Jun 2009; Tristan Heaven <nyhm@gentoo.org> grande-KXL-0.6.ebuild:
+  RDEPEND on media-fonts/font-adobe-100dpi
 
   08 Apr 2007; Joseph Jezak <josejx@gentoo.org> grande-KXL-0.6.ebuild:
   Marked ~ppc for bug #173426.

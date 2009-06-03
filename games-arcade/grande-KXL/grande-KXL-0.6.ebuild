@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.9 2007/04/08 00:25:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/grande-KXL/grande-KXL-0.6.ebuild,v 1.10 2009/06/03 13:20:10 nyhm Exp $
 
 inherit autotools eutils games
 
@@ -14,6 +14,8 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND="dev-games/KXL"
+RDEPEND="${DEPEND}
+	media-fonts/font-adobe-100dpi"
 
 src_unpack() {
 	unpack ${A}
