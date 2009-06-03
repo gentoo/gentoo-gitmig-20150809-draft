@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.115 2009/05/31 21:39:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.116 2009/06/03 15:14:24 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdeedu-meta-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   31 May 2009; nixnut <nixnut@gentoo.org> kdeedu-meta-3.5.10.ebuild:
   ppc stable #271889

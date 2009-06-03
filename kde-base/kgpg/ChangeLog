@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.117 2009/06/03 14:51:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.118 2009/06/03 15:46:32 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgpg-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kgpg-3.5.10.ebuild:
   Marking kgpg-3.5.10 ppc64 stable for bug 271889

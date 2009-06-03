@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.123 2009/05/31 21:38:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.124 2009/06/03 15:11:49 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdebase-meta-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   31 May 2009; nixnut <nixnut@gentoo.org> kdebase-meta-3.5.10.ebuild:
   ppc stable #271889

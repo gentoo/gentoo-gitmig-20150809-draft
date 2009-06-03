@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.129 2009/06/03 14:41:21 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.130 2009/06/03 14:43:29 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> Manifest:
+  Drop KDE 4.2.2
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> Manifest:
   Drop KDE 4.2.2
