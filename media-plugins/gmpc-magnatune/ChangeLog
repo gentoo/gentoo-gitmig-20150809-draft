@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-magnatune
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.24 2009/03/20 17:21:22 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-magnatune/ChangeLog,v 1.25 2009/06/03 18:12:03 fmccor Exp $
+
+  03 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  gmpc-magnatune-0.18.0.ebuild:
+  Sparc stable, Bug #272342.
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org> gmpc-magnatune-0.17.0.ebuild:
   Marking gmpc-magnatune-0.17.0 ppc stable for bug 259793
