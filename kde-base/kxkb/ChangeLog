@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kxkb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.107 2009/05/31 20:11:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kxkb/ChangeLog,v 1.108 2009/06/03 14:38:13 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kxkb-3.5.10.ebuild:
+  Marking kxkb-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kxkb-3.5.10.ebuild:
   ppc stable #271889
