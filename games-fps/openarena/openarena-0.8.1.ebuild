@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1.ebuild,v 1.2 2009/05/28 05:08:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1.ebuild,v 1.3 2009/06/03 06:34:38 mr_bones_ Exp $
 
-EAPI=1
+EAPI=2
 inherit flag-o-matic versionator games
 
 MY_PV=$(delete_all_version_separators)
@@ -33,14 +33,18 @@ MY_S=${WORKDIR}/${PN}-engine-${PV}
 BUILD_DIR=${PN}-build
 DIR=${GAMES_DATADIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${WORKDIR}"
 	epatch "${FILESDIR}"/${P}-makefile.patch
 	append-cflags -fno-strict-aliasing # bug #268851
 	sed -i \
 		-e "s:%CFLAGS%:${CFLAGS}:g" \
-		"${MY_S}"/Makefile || die "seding cflags failed"
+		"${MY_S}"/Makefile \
+		|| die "sed failed"
+	sed -i \
+		-e '/ALDRIVER_DEFAULT/s/libopenal.so.0/libopenal.so/' \
+		"${MY_S}"/code/client/snd_openal.c \
+		|| die "sed failed"
 }
 
 src_compile() {
