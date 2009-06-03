@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/pptpd
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.36 2009/05/02 19:27:00 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/ChangeLog,v 1.37 2009/06/03 22:28:21 flameeyes Exp $
+
+  03 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> pptpd-1.3.4.ebuild:
+  Restrict WANT_AUTOMAKE since it uses eautomake.
 
   02 May 2009; Raúl Porcel <armin76@gentoo.org> pptpd-1.3.4.ebuild:
   Add ~sparc wrt #256071

@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4.ebuild,v 1.8 2009/05/02 19:27:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4.ebuild,v 1.9 2009/06/03 22:28:21 flameeyes Exp $
+
+WANT_AUTOMAKE="1.9"
 
 inherit eutils autotools flag-o-matic
 
