@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musicman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.19 2009/06/01 17:52:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/ChangeLog,v 1.20 2009/06/03 20:04:44 maekke Exp $
+
+  03 Jun 2009; Markus Meier <maekke@gentoo.org> musicman-0.15.ebuild:
+  amd64/x86 stable, bug #272119
 
   01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> musicman-0.15.ebuild:
   Remove arts support.
