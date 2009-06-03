@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/libffi-0.ebuild,v 1.6 2009/06/02 22:30:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/libffi-0.ebuild,v 1.7 2009/06/03 11:55:37 ssuominen Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI=""
 
 LICENSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~sparc ~x86"
 IUSE="static-libs"
 
 # When we are using this, we need to package.use.mask libffi
