@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.45 2009/06/03 14:06:15 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpd/ChangeLog,v 1.46 2009/06/03 20:15:26 gentoofan23 Exp $
+
+  03 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  libmpd-0.18.0.ebuild:
+  stable amd64, bug 272347
 
   03 Jun 2009; Ferris McCormick <fmccor@gentoo.org> libmpd-0.18.0.ebuild:
   Sparc stable, Bug #272347 (required for Bug #272331).
