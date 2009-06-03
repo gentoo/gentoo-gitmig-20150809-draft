@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc33.ebuild,v 1.1 2009/05/03 21:41:48 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc33.ebuild,v 1.2 2009/06/03 02:51:58 vapier Exp $
 
 inherit eutils multilib python
 
@@ -23,8 +23,8 @@ RDEPEND="${python_dep}
 		>=app-shells/bash-3.2_p17
 		>=app-admin/eselect-news-20071201 )
 	elibc_FreeBSD? ( sys-freebsd/freebsd-bin )
-	elibc_glibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
-	elibc_uclibc? ( >=sys-apps/sandbox-1.2.17 !mips? ( >=sys-apps/sandbox-1.2.18.1-r2 ) )
+	elibc_glibc? ( >=sys-apps/sandbox-1.6 )
+	elibc_uclibc? ( >=sys-apps/sandbox-1.6 )
 	>=app-misc/pax-utils-0.1.17
 	selinux? ( >=dev-python/python-selinux-2.16 )"
 PDEPEND="
