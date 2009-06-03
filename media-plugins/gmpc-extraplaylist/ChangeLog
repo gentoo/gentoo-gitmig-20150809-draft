@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-extraplaylist
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-extraplaylist/ChangeLog,v 1.10 2009/03/20 17:20:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-extraplaylist/ChangeLog,v 1.11 2009/06/03 20:49:53 gentoofan23 Exp $
+
+  03 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  gmpc-extraplaylist-0.18.0.ebuild:
+  stable amd64, bug 272336
 
   20 Mar 2009; Brent Baude <ranger@gentoo.org>
   gmpc-extraplaylist-0.17.0.ebuild:
