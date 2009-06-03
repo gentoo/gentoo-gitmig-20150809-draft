@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuickshow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuickshow/ChangeLog,v 1.78 2009/05/31 19:51:40 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuickshow/ChangeLog,v 1.79 2009/06/03 14:21:53 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kuickshow-3.5.10.ebuild:
+  Marking kuickshow-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kuickshow-3.5.10.ebuild:
   ppc stable #271889
