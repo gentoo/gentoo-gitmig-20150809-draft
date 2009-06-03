@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1.ebuild,v 1.3 2009/06/03 06:34:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/openarena/openarena-0.8.1.ebuild,v 1.4 2009/06/03 14:03:40 nyhm Exp $
 
 EAPI=2
-inherit flag-o-matic versionator games
+inherit eutils flag-o-matic versionator games
 
 MY_PV=$(delete_all_version_separators)
 
