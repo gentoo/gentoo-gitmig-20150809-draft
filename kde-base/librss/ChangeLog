@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/librss
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/librss/ChangeLog,v 1.68 2009/05/31 19:16:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/librss/ChangeLog,v 1.69 2009/06/03 13:54:45 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> librss-3.5.10.ebuild:
+  Marking librss-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> librss-3.5.10.ebuild:
   ppc stable #271889
