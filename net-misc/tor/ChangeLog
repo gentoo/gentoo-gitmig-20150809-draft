@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.164 2009/06/03 08:09:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.165 2009/06/03 13:02:23 fauli Exp $
+
+*tor-0.2.0.34-r2 (03 Jun 2009)
+
+  03 Jun 2009; Christian Faulhammer <fauli@gentoo.org> -files/tor.initd-r5,
+  +files/tor.initd-r6, -tor-0.2.0.34-r1.ebuild, +tor-0.2.0.34-r2.ebuild:
+  revision bump to make it compatible with Baselayout 1, as reported by
+  Stanislav Cymbalov <DummyUnit AT gmail.com> in bug 272404
 
 *tor-0.2.0.34-r1 (03 Jun 2009)
 

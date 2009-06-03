@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.34-r1.ebuild,v 1.1 2009/06/03 08:09:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.34-r2.ebuild,v 1.1 2009/06/03 13:02:23 fauli Exp $
 
 EAPI=1
 
@@ -49,7 +49,7 @@ src_compile() {
 }
 
 src_install() {
-	newinitd "${FILESDIR}"/tor.initd-r5 tor
+	newinitd "${FILESDIR}"/tor.initd-r6 tor
 	emake DESTDIR="${D}" install || die
 	keepdir /var/{lib,log,run}/tor
 
