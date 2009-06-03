@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/renamedlg-images
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-images/ChangeLog,v 1.75 2009/05/31 20:33:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/renamedlg-images/ChangeLog,v 1.76 2009/06/03 14:54:21 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org>
+  renamedlg-images-3.5.10.ebuild:
+  Marking renamedlg-images-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> renamedlg-images-3.5.10.ebuild:
   ppc stable #271889
