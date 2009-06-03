@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.5 2007/03/14 20:53:28 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/shootingstar-1.2.0.ebuild,v 1.6 2009/06/03 14:17:13 tupone Exp $
+
+EAPI=2
 
 inherit eutils games
 
@@ -18,12 +20,12 @@ DEPEND="virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-mixer
 	media-libs/sdl-image"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gcc34.patch
-}
+PATCHES=(
+	"${FILESDIR}"/${PV}-gcc34.patch
+	"${FILESDIR}"/${P}-gcc44.patch
+)
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"

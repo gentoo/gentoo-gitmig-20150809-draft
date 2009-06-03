@@ -1,6 +1,10 @@
 # ChangeLog for games-action/shootingstar
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.5 2007/03/14 20:53:28 nyhm Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shootingstar/ChangeLog,v 1.6 2009/06/03 14:17:13 tupone Exp $
+
+  03 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/shootingstar-1.2.0-gcc44.patch, shootingstar-1.2.0.ebuild:
+  Fix build with gcc-4.4.0 Bug #272374 by Diego Petteno'
 
   14 Mar 2007; Tristan Heaven <nyhm@gentoo.org> shootingstar-1.2.0.ebuild:
   Install menu entry, bug #159764
