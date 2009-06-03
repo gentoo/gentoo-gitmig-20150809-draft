@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.1.0.ebuild,v 1.3 2009/04/23 16:03:46 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.1.0.ebuild,v 1.4 2009/06/03 22:46:32 yngwin Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.qtsoftware.com/${MY_PN}/${MY_P}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="+cmake debug +debugger +designer doc fakevim git perforce subversion"
+IUSE="+cmake debug +debugger +designer doc fakevim git kde perforce subversion"
 
 DEPEND=">=x11-libs/qt-assistant-4.5.0_rc1
 	>=x11-libs/qt-core-4.5.0_rc1
@@ -34,7 +34,8 @@ DEPEND=">=x11-libs/qt-assistant-4.5.0_rc1
 	subversion? ( dev-util/subversion )"
 
 RDEPEND="${DEPEND}
-	|| ( media-sound/phonon >=x11-libs/qt-phonon-4.5.0_rc1 )"
+	|| ( >=x11-libs/qt-phonon-4.5.0_rc1 media-sound/phonon )
+	kde? ( media-sound/phonon )"
 
 PLUGINS="cmake debugger designer fakevim git perforce subversion"
 
