@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.59 2009/06/02 21:14:33 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.60 2009/06/03 22:53:24 yngwin Exp $
+
+  03 Jun 2009; Ben de Groot <yngwin@gentoo.org> PyQt4-4.4.4-r5.ebuild,
+  metadata.xml:
+  Add kde useflag, for selecting media-sound/phonon, bug 270188
 
   02 Jun 2009; Ben de Groot <yngwin@gentoo.org> PyQt4-4.4.4-r5.ebuild:
   QtDesigner is triggered by USE=X, so hide sed behind X useflag. Thanks
