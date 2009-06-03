@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.4.ebuild,v 1.2 2009/05/31 23:36:16 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-3.0.5.ebuild,v 1.1 2009/06/03 02:33:04 williamh Exp $
 
 inherit linux-mod
 
