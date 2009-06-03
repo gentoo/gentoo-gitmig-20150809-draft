@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9878 2009/06/03 16:38:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9879 2009/06/03 16:48:34 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1296,7 +1296,7 @@ net-proxy/squirm
 
 # Jeroen Roovers <jer@gentoo.org> (5 Dec 2008)
 # Snapshots and alphas of Opera may delete kittens
-<www-client/opera-10.00_pre4402
+=www-client/opera-10.00_pre43*
 
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340
