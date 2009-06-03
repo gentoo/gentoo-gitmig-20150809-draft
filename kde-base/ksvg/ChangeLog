@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksvg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.91 2009/05/31 19:56:11 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksvg/ChangeLog,v 1.92 2009/06/03 14:25:39 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> ksvg-3.5.10.ebuild:
+  Marking ksvg-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> ksvg-3.5.10.ebuild:
   ppc stable #271889
