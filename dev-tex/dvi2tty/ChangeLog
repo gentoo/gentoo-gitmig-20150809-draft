@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/dvi2tty
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.21 2009/03/18 19:30:02 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/dvi2tty/ChangeLog,v 1.22 2009/06/03 14:20:22 ulm Exp $
+
+  03 Jun 2009; Ulrich Mueller <ulm@gentoo.org> +files/dvi2tty-getline.patch,
+  dvi2tty-5.3.1.ebuild:
+  Fix compilation with glibc-2.10 headers. Thanks to <hirakendu@gmail.com>
+  in bug 271621.
 
   18 Mar 2009; Raúl Porcel <armin76@gentoo.org> dvi2tty-5.3.1.ebuild:
   arm/s390/sh stable wrt #253551
