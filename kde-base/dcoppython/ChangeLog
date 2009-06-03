@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcoppython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.76 2009/05/31 21:35:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcoppython/ChangeLog,v 1.77 2009/06/03 15:38:05 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> dcoppython-3.5.10.ebuild:
+  Marking dcoppython-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> dcoppython-3.5.10.ebuild:
   ppc stable #271889
