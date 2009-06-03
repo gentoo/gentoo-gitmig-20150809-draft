@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.118 2009/06/03 14:51:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.119 2009/06/03 18:28:59 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kappfinder-3.5.10.ebuild:
+  Marking kappfinder-3.5.10 ppc64 stable for bug 271889
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kappfinder-4.2.2.ebuild:
   Drop KDE 4.2.2
