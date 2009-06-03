@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konquest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.110 2009/05/31 20:24:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konquest/ChangeLog,v 1.111 2009/06/03 14:46:31 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> konquest-3.5.10.ebuild:
+  Marking konquest-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> konquest-3.5.10.ebuild:
   ppc stable #271889
