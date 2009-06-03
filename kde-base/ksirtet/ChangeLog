@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksirtet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.91 2009/05/31 20:38:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ChangeLog,v 1.92 2009/06/03 14:58:27 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> ksirtet-3.5.10.ebuild:
+  Marking ksirtet-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> ksirtet-3.5.10.ebuild:
   ppc stable #271889
