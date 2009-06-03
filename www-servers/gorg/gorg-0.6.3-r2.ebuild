@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3-r2.ebuild,v 1.1 2008/12/30 12:43:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gorg/gorg-0.6.3-r2.ebuild,v 1.2 2009/06/03 18:56:30 maekke Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ IUSE="apache2 fastcgi mysql"
 SLOT="0"
 USE_RUBY="ruby18"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DEPEND="virtual/ruby
 	>=dev-libs/libxml2-2.6.16
