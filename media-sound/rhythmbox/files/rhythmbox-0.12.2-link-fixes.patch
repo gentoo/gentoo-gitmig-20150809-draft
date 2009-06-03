@@ -1,0 +1,146 @@
+From 02159da160b33f0e411ec502f59213b12d445c73 Mon Sep 17 00:00:00 2001
+From: Jonathan Matthew <jonathan@d14n.org>
+Date: Mon, 1 Jun 2009 10:21:11 +1000
+Subject: [PATCH] fix a variety of plugin linking problems
+
+All C plugins need to be linked against librhythmbox-core as well as any
+other libraries they need.
+---
+ plugins/daap/Makefile.am           |    1 +
+ plugins/generic-player/Makefile.am |    3 ++-
+ plugins/iradio/Makefile.am         |    4 +++-
+ plugins/lirc/Makefile.am           |    2 ++
+ plugins/mtpdevice/Makefile.am      |    4 ++--
+ plugins/power-manager/Makefile.am  |    2 ++
+ plugins/sample/Makefile.am         |    2 ++
+ plugins/status-icon/Makefile.am    |    5 ++++-
+ plugins/visualizer/Makefile.am     |    1 +
+ 9 files changed, 19 insertions(+), 5 deletions(-)
+
+diff --git a/plugins/daap/Makefile.am b/plugins/daap/Makefile.am
+index a446f99..4c8fe7d 100644
+--- a/plugins/daap/Makefile.am
++++ b/plugins/daap/Makefile.am
+@@ -33,6 +33,7 @@ libdaap_la_SOURCES = \
+ libdaap_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libdaap_la_LIBTOOLFLAGS = --tag=disable-static
+ libdaap_la_LIBADD = 					\
++	$(top_builddir)/corelib/librhythmbox-core.la	\
+ 	$(DBUS_LIBS)					\
+ 	$(MDNS_LIBS)
+ 
+diff --git a/plugins/generic-player/Makefile.am b/plugins/generic-player/Makefile.am
+index 113240d..f7e7f45 100644
+--- a/plugins/generic-player/Makefile.am
++++ b/plugins/generic-player/Makefile.am
+@@ -18,8 +18,9 @@ endif
+ 
+ libgeneric_player_la_LIBTOOLFLAGS = --tag=disable-static
+ libgeneric_player_la_LDFLAGS = 				\
++	$(top_builddir)/corelib/librhythmbox-core.la	\
+ 	$(TOTEM_PLPARSER_LIBS)				\
+-	$(HAL_LIBS)				        \	
++	$(HAL_LIBS)				        \
+ 	$(PLUGIN_LIBTOOL_FLAGS)
+ 
+ INCLUDES = 						\
+diff --git a/plugins/iradio/Makefile.am b/plugins/iradio/Makefile.am
+index 2fc6399..3cce0a1 100644
+--- a/plugins/iradio/Makefile.am
++++ b/plugins/iradio/Makefile.am
+@@ -15,7 +15,9 @@ libiradio_la_SOURCES = 					\
+ libiradio_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libiradio_la_LIBTOOLFLAGS = --tag=disable-static
+ libiradio_la_LIBADD = 					\
+-	$(top_builddir)/corelib/librhythmbox-core.la
++	$(top_builddir)/corelib/librhythmbox-core.la	\
++	$(TOTEM_PLPARSER_LIBS)				\
++	$(NULL)
+ 
+ INCLUDES = 						\
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+diff --git a/plugins/lirc/Makefile.am b/plugins/lirc/Makefile.am
+index 2c85a4a..daea54a 100644
+--- a/plugins/lirc/Makefile.am
++++ b/plugins/lirc/Makefile.am
+@@ -7,6 +7,8 @@ librblirc_la_SOURCES = \
+ librblirc_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS) -llirc_client
+ librblirc_la_LIBTOOLFLAGS = --tag=disable-static
+ 
++librblirc_la_LIBADD = $(top_builddir)/corelib/librhythmbox-core.la
++
+ configdir = $(PLUGINDIR)/rblirc
+ config_DATA = rhythmbox_lirc_default
+ 
+diff --git a/plugins/mtpdevice/Makefile.am b/plugins/mtpdevice/Makefile.am
+index 57188a0..6e6e4de 100644
+--- a/plugins/mtpdevice/Makefile.am
++++ b/plugins/mtpdevice/Makefile.am
+@@ -10,8 +10,8 @@ libmtpdevice_la_SOURCES = \
+ 	
+ libmtpdevice_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libmtpdevice_la_LIBTOOLFLAGS = --tag=disable-static
+-libmtpdevice_la_LIBADD = 					\
+-	$(top_builddir)/lib/librb.la			\
++libmtpdevice_la_LIBADD = 				\
++	$(top_builddir)/corelib/librhythmbox-core.la	\
+ 	$(HAL_LIBS)					\
+ 	$(MTP_LIBS)
+ 
+diff --git a/plugins/power-manager/Makefile.am b/plugins/power-manager/Makefile.am
+index 8dbba4f..11c090a 100644
+--- a/plugins/power-manager/Makefile.am
++++ b/plugins/power-manager/Makefile.am
+@@ -7,6 +7,8 @@ libpower_manager_la_SOURCES = \
+ libpower_manager_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libpower_manager_la_LIBTOOLFLAGS = --tag=disable-static
+ 
++libpower_manager_la_LIBADD = $(top_builddir)/corelib/librhythmbox-core.la
++
+ INCLUDES = 						\
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+ 	-DG_LOG_DOMAIN=\"Rhythmbox\"		 	\
+diff --git a/plugins/sample/Makefile.am b/plugins/sample/Makefile.am
+index c90cc4f..9ee5d58 100644
+--- a/plugins/sample/Makefile.am
++++ b/plugins/sample/Makefile.am
+@@ -7,6 +7,8 @@ libsample_la_SOURCES = \
+ 	
+ libsample_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ 
++libsample_la_LIBADD = $(top_builddir)/corelib/librhythmbox-core.la
++
+ INCLUDES = 						\
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+ 	-DG_LOG_DOMAIN=\"Rhythmbox\"		 	\
+diff --git a/plugins/status-icon/Makefile.am b/plugins/status-icon/Makefile.am
+index a52c3ce..d52dffd 100644
+--- a/plugins/status-icon/Makefile.am
++++ b/plugins/status-icon/Makefile.am
+@@ -25,7 +25,10 @@ libstatus_icon_la_SOURCES = \
+ libstatus_icon_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libstatus_icon_la_LIBTOOLFLAGS = --tag=disable-static
+ 
+-libstatus_icon_la_LIBADD = $(RHYTHMBOX_LIBS)
++libstatus_icon_la_LIBADD = 				\
++	$(top_builddir)/corelib/librhythmbox-core.la	\
++	$(NOTIFY_LIBS)					\
++	$(NULL)
+ 
+ INCLUDES = 						\
+         -DGNOMELOCALEDIR=\""$(datadir)/locale"\"        \
+diff --git a/plugins/visualizer/Makefile.am b/plugins/visualizer/Makefile.am
+index ffd3d33..979ac0c 100644
+--- a/plugins/visualizer/Makefile.am
++++ b/plugins/visualizer/Makefile.am
+@@ -12,6 +12,7 @@ libvisualizer_la_LDFLAGS = $(PLUGIN_LIBTOOL_FLAGS)
+ libvisualizer_la_LIBTOOLFLAGS = --tag=disable-static
+ 
+ libvisualizer_la_LIBADD = 				\
++	$(top_builddir)/corelib/librhythmbox-core.la	\
+ 	-lgstinterfaces-0.10				\
+ 	$(DBUS_LIBS)					\
+ 	$(RHYTHMBOX_LIBS)
+-- 
+1.6.3.1.257.gbd13
+

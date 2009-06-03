@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.2.ebuild,v 1.1 2009/05/31 16:47:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.2-r1.ebuild,v 1.1 2009/06/03 14:28:40 dang Exp $
 
 EAPI="2"
 
-inherit eutils gnome2 python multilib virtualx
+inherit eutils gnome2 python multilib virtualx autotools
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"
@@ -125,6 +125,10 @@ src_prepare() {
 
 	# Fix intltoolize broken file, see upstream #577133
 	#sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+
+	# Fix plugin linking.  Bug #272203
+	epatch "${FILESDIR}"/${P}-link-fixes.patch
+	eautoreconf
 }
 
 src_compile() {
