@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SQL-Statement
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.16 2009/03/06 12:43:33 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Statement/ChangeLog,v 1.17 2009/06/03 15:38:36 tove Exp $
+
+  03 Jun 2009; Torsten Veller <tove@gentoo.org> -SQL-Statement-1.19.ebuild:
+  Cleanup
 
 *SQL-Statement-1.20 (06 Mar 2009)
 
