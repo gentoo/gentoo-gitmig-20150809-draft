@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kicker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.103 2009/05/31 20:44:25 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/ChangeLog,v 1.104 2009/06/03 15:03:07 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kicker-3.5.10-r1.ebuild:
+  Marking kicker-3.5.10-r1 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kicker-3.5.10-r1.ebuild:
   ppc stable #271889
