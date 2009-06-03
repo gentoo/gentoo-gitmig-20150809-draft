@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.85 2009/05/05 05:40:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.86 2009/06/03 08:19:54 fauli Exp $
+
+  03 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  mail-notification-5.4.ebuild, mail-notification-5.4-r1.ebuild:
+  depend on mail-client/sylpheed directly as the old-style virtual will leave
+  the tree soon
 
   05 May 2009; Jeroen Roovers <jer@gentoo.org>
   mail-notification-5.4-r1.ebuild:

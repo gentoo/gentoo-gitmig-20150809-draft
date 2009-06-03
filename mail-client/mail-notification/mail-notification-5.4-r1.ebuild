@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.5 2009/05/05 05:40:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.6 2009/06/03 08:19:54 fauli Exp $
 
 inherit gnome2 multilib flag-o-matic toolchain-funcs
 
@@ -36,7 +36,7 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	sasl? ( >=dev-libs/cyrus-sasl-2 )
 	evo? ( >=mail-client/evolution-2.24 )
-	sylpheed? ( virtual/sylpheed )"
+	sylpheed? ( mail-client/sylpheed )"
 
 DEPEND="${RDEPEND}
 	app-text/scrollkeeper
