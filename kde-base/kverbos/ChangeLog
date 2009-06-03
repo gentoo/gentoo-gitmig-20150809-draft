@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kverbos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.83 2009/05/31 19:59:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kverbos/ChangeLog,v 1.84 2009/06/03 14:28:41 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kverbos-3.5.10.ebuild:
+  Marking kverbos-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kverbos-3.5.10.ebuild:
   ppc stable #271889
