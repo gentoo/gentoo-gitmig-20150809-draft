@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.164 2009/06/03 15:23:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.165 2009/06/03 19:48:45 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmail-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kmail-3.5.10.ebuild:
   Marking kmail-3.5.10 ppc64 stable for bug 271889

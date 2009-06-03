@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.14 2009/05/07 00:16:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.15 2009/06/03 19:55:34 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -phonon-kde-4.2.2.ebuild,
+  -phonon-kde-4.2.2-r1.ebuild:
+  Drop KDE 4.2.2
 
 *phonon-kde-4.2.3 (07 May 2009)
 

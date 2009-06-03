@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.140 2009/06/03 15:23:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.141 2009/06/03 19:50:39 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -konqueror-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> konqueror-3.5.10.ebuild:
   Marking konqueror-3.5.10 ppc64 stable for bug 271889
