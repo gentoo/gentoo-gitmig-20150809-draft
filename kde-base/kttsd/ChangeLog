@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.117 2009/05/31 21:23:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.118 2009/06/03 15:32:22 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kttsd-3.5.10.ebuild:
+  Marking kttsd-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kttsd-3.5.10.ebuild:
   ppc stable #271889
