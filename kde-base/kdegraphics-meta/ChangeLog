@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.120 2009/06/03 15:17:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics-meta/ChangeLog,v 1.121 2009/06/03 18:38:20 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking kdegraphics-meta-3.5.10 ppc64 stable for bug 271889
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdegraphics-meta-4.2.2.ebuild:
