@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.48 2009/04/24 20:20:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.49 2009/06/03 12:27:29 fmccor Exp $
+
+  03 Jun 2009; Ferris McCormick <fmccor@gentoo.org> wv2-0.3.1.ebuild:
+  Sparc stable, Bug #271967.
 
 *wv2-0.3.1 (24 Apr 2009)
 
