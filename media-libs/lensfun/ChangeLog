@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.1 2009/06/01 13:20:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.2 2009/06/03 20:39:49 maekke Exp $
+
+  03 Jun 2009; Markus Meier <maekke@gentoo.org> lensfun-0.2.3.ebuild:
+  add ~amd64, bug #272088
 
 *lensfun-0.2.3 (01 Jun 2009)
 
