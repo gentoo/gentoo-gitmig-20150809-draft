@@ -24,7 +24,6 @@ virtual/quicktime		media-libs/libquicktime
 virtual/ruby			dev-lang/ruby
 virtual/skkserv			app-i18n/skkserv
 virtual/ssh			net-misc/dropbear
-virtual/sylpheed		mail-client/sylpheed
 virtual/tftp			sys-apps/busybox
 virtual/wine			app-emulation/wine
 virtual/xemacs			app-editors/xemacs
