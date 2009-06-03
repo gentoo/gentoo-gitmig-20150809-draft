@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/gmpc-lyrics-0.18.0.ebuild,v 1.2 2009/06/03 18:08:21 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/gmpc-lyrics-0.18.0.ebuild,v 1.3 2009/06/03 21:05:27 gentoofan23 Exp $
 
 DESCRIPTION="This plugin fetches lyrics"
 HOMEPAGE="http://gmpcwiki.sarine.nl/index.php/Lyrics"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc sparc ~x86"
+KEYWORDS="amd64 ~ppc sparc ~x86"
 IUSE=""
 
 RDEPEND=">=media-sound/gmpc-${PV}
