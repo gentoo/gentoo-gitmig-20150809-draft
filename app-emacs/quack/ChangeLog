@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/quack
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.13 2009/01/29 07:22:39 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quack/ChangeLog,v 1.14 2009/06/03 17:22:51 fauli Exp $
+
+*quack-0.36 (03 Jun 2009)
+
+  03 Jun 2009; Christian Faulhammer <fauli@gentoo.org> +quack-0.36.ebuild:
+  version bump
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -files/70quack-gentoo.el, -quack-0.29.ebuild:
