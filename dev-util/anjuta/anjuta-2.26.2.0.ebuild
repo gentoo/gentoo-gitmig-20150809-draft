@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.26.2.0.ebuild,v 1.1 2009/06/01 21:03:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.26.2.0.ebuild,v 1.2 2009/06/03 21:51:17 eva Exp $
 
 EAPI="2"
 
@@ -62,7 +62,7 @@ DEPEND="${RDEPEND}
 		~app-text/docbook-xml-dtd-4.1.2
 		~app-text/docbook-xml-dtd-4.5 )"
 
-DOCS="AUTHORS ChangeLog FUTURE MAINTAINERS README ROADMAP THANKS TODO"
+DOCS="AUTHORS ChangeLog FUTURE MAINTAINERS NEWS README ROADMAP THANKS TODO"
 
 pkg_setup() {
 	if ! use symbol-db; then
@@ -93,6 +93,12 @@ src_prepare() {
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+}
+
+src_install() {
+	# Anjuta uses a custom rule to install DOCS, get rid of it
+	gnome2_src_install
+	rm -rf "${D}"/usr/share/doc/${PN} || die "rm failed"
 }
 
 pkg_postinst() {
