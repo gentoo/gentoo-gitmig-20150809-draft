@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.3 2009/06/01 15:28:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.4 2009/06/03 17:29:12 nirbheek Exp $
 
 EAPI="2"
 
@@ -49,7 +49,11 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	# Make it libtool-1 compatible
+	rm -v autotools/lt* autotools/libtool.m4 || die "removing libtool macros failed"
+	# Don't force -O2
 	sed -i 's/-O2//g' "${S}"/configure.ac || die "sed failed"
+	# Prevent maintainer mode from being triggered during make
 	AT_M4DIR=autotools eautoreconf
 }
 

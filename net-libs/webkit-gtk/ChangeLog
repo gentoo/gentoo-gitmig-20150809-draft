@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.32 2009/06/01 15:28:11 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.33 2009/06/03 17:29:12 nirbheek Exp $
+
+  03 Jun 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  webkit-gtk-1.1.8.ebuild:
+  Fix bug 272236 -- libtool-1 problems
 
   01 Jun 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   webkit-gtk-1.1.8.ebuild:
