@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.5.ebuild,v 1.2 2008/12/21 02:54:29 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.9.ebuild,v 1.1 2009/06/03 20:05:49 ssuominen Exp $
 
-inherit autotools eutils games
+EAPI=2
+inherit eutils flag-o-matic games
 
 DESCRIPTION="a physics based 2-D racer inspired by Micro Machines"
 HOMEPAGE="http://sourceforge.net/projects/toycars"
@@ -13,23 +14,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
+RDEPEND="media-libs/libsdl
 	media-libs/sdl-image
-	>=media-libs/fmod-4
+	>=media-libs/fmod-4.25.07-r1:1
 	virtual/glu
 	virtual/opengl"
+DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch \
-		"${FILESDIR}"/${P}-asneeded.patch \
-		"${FILESDIR}"/${P}-fmod.patch \
-		"${FILESDIR}"/${P}-assert.patch \
-		"${FILESDIR}"/${P}-datadir.patch \
-		"${FILESDIR}"/${P}-64bit.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
-	AT_M4DIR=m4 eautoreconf
+src_configure() {
+	append-ldflags -L/opt/fmodex/api/lib
+	egamesconf
 }
 
 src_install() {
