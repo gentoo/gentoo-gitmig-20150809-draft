@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/madwifi-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.67 2009/06/01 16:46:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/ChangeLog,v 1.68 2009/06/03 12:17:22 pva Exp $
+
+  03 Jun 2009; Peter Volkov <pva@gentoo.org>
+  +files/madwifi-ng-injection-r3925.patch:
+  Added missed injection patch, bug #272372, thank Pierre-Yves AILLET for
+  report.
 
 *madwifi-ng-0.9.4.4030.20090529 (01 Jun 2009)
 
