@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/claws-mail-themes-20090404.ebuild,v 1.1 2009/06/03 08:56:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/claws-mail-themes-20090404.ebuild,v 1.2 2009/06/03 15:50:27 fauli Exp $
 
-DESCRIPTION="Iconsets for claws-mail"
+DESCRIPTION="Iconsets for Claws Mail"
 HOMEPAGE="http://www.claws-mail.org/"
 SRC_URI="http://www.claws-mail.org/themes/${P}.tar.gz"
 
