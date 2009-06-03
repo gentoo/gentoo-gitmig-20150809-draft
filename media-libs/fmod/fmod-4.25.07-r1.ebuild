@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.25.07.ebuild,v 1.2 2009/05/21 22:29:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.25.07-r1.ebuild,v 1.1 2009/06/03 19:17:54 ssuominen Exp $
 
 inherit versionator
 
@@ -30,7 +30,7 @@ fi
 src_compile() { :; }
 
 src_install() {
-		dodir /opt/${MY_P}
+		dodir /opt/fmodex
 
 		cd "${S}"/api/lib
 
@@ -48,16 +48,16 @@ src_install() {
 		ln -sf libfmodexp.so.${PV} libfmodexp.so
 		ln -sf libfmodexp.so.${PV} libfmodexp.so.4
 
-		cp -dpR "${S}"/* "${D}"/opt/${MY_P}
+		cp -dpR "${S}"/* "${D}"/opt/fmodex
 
-		dosym /opt/${MY_P}/api/inc /usr/include/fmodex
+		dosym /opt/fmodex/api/inc /usr/include/fmodex
 
 		insinto /usr/share/doc/${PF}
 		doins "${S}"/documentation/*.pdf
 		dodoc "${S}"/documentation/*.txt
 
-		rm -rf "${D}"/opt/${MY_P}/documentation
+		rm -rf "${D}"/opt/fmodex/documentation
 
-		echo LDPATH="/opt/${MY_P}/api/lib" > "${T}"/65${MY_P}
-		doenvd "${T}"/65${MY_P}
+		echo LDPATH="/opt/fmodex/api/lib" > "${T}"/65fmodex
+		doenvd "${T}"/65fmodex
 }

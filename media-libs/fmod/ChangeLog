@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/fmod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.29 2009/05/21 22:06:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.30 2009/06/03 19:17:54 ssuominen Exp $
+
+*fmod-4.25.07-r1 (03 Jun 2009)
+
+  03 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> -fmod-4.24.07.ebuild,
+  -fmod-4.25.07.ebuild, +fmod-4.25.07-r1.ebuild:
+  Simplify the library installation path for -L usage wrt #252400.
 
 *fmod-4.25.07 (21 May 2009)
 
