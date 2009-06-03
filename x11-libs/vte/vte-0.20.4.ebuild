@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.20.1.ebuild,v 1.1 2009/05/03 17:24:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.20.4.ebuild,v 1.1 2009/06/03 22:25:57 eva Exp $
 
 EAPI="2"
 
@@ -43,6 +43,18 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# backspace broken within screen, bug #249618
-	epatch "${FILESDIR}/${PN}-0.17.4-no-null-backspace.patch"
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+}
+
+pkg_preinst() {
+	gnome2_pkg_preinst
+	preserve_old_lib /usr/$(get_libdir)/libvte.so.9
+	preserve_old_lib /usr/$(get_libdir)/libvte.so.9.5.3
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	preserve_old_lib_notify /usr/$(get_libdir)/libvte.so.9
+	preserve_old_lib_notify /usr/$(get_libdir)/libvte.so.9.5.3
 }
