@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.126 2009/06/03 15:21:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-meta/ChangeLog,v 1.127 2009/06/03 18:42:07 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kde-meta-3.5.10.ebuild:
+  Marking kde-meta-3.5.10 ppc64 stable for bug 271889
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kde-meta-4.2.2.ebuild:
   Drop KDE 4.2.2
