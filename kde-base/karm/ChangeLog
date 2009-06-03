@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.91 2009/05/31 21:08:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.92 2009/06/03 15:20:11 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> karm-3.5.10.ebuild:
+  Marking karm-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> karm-3.5.10.ebuild:
   ppc stable #271889
