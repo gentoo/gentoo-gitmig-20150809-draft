@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kshisen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.111 2009/05/31 20:33:13 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kshisen/ChangeLog,v 1.112 2009/06/03 14:53:57 ranger Exp $
+
+  03 Jun 2009; Brent Baude <ranger@gentoo.org> kshisen-3.5.10.ebuild:
+  Marking kshisen-3.5.10 ppc64 stable for bug 271889
 
   31 May 2009; nixnut <nixnut@gentoo.org> kshisen-3.5.10.ebuild:
   ppc stable #271889
