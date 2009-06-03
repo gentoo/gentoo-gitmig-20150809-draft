@@ -1,0 +1,16 @@
+# ChangeLog for app-misc/screen-profiles
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.1 2009/06/03 15:11:55 weaver Exp $
+
+*byobu-2.8 (03 Jun 2009)
+
+  03 Jun 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +byobu-2.8.ebuild:
+  Package renamed to byobu, version bump
+
+*screen-profiles-1.42 (07 Apr 2009)
+
+  07 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +screen-profiles-1.42.ebuild:
+  New package, bug 264644. Ebuild written by me.
+
