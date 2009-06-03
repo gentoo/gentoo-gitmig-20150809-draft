@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4520 2009/06/03 22:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4521 2009/06/03 22:47:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -917,7 +917,8 @@ dev-util/qt-creator:debugger - enable debugger plugin
 dev-util/qt-creator:designer - enable designer plugin
 dev-util/qt-creator:fakevim - enable vim-like key bindings plugin
 dev-util/qt-creator:git - enable git plugin
-dev-util/qt-creator:perforce - enable perforce software configuration manager plugin
+dev-util/qt-creator:kde -  Select media-sound/phonon as phonon variant needed for kde 
+dev-util/qt-creator:perforce -  enable perforce software configuration manager plugin 
 dev-util/qt-creator:subversion - enable subersion plugin
 dev-util/radare:gui -  Enable the graphical user interface of radare (broken) 
 dev-util/strace:aio - Enable libaio support
