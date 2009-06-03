@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4521 2009/06/03 22:47:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4522 2009/06/03 23:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -796,6 +796,7 @@ dev-php5/php-gtk:mozembed - Enable GtkMozembed support
 dev-php5/php-gtk:scintilla - Enable Scintilla support
 dev-python/PyQt4:X - Build the QtGui and QtDesigner modules
 dev-python/PyQt4:assistant - Build the QtHelp and QtAssistant modules
+dev-python/PyQt4:kde -  Select media-sound/phonon as phonon variant needed for kde 
 dev-python/PyQt4:opengl - Build the QtOpenGL module
 dev-python/PyQt4:phonon - Build the phonon module
 dev-python/PyQt4:qt3support - Enable the Qt3Support libraries for Qt4
