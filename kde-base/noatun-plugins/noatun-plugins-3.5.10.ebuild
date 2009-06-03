@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.10.ebuild,v 1.2 2009/05/31 21:24:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/noatun-plugins-3.5.10.ebuild,v 1.3 2009/06/03 15:32:48 ranger Exp $
 KMNAME=kdeaddons
 EAPI="1"
 inherit db-use kde-meta
 
 DESCRIPTION="Various plugins for Noatun."
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="arts sdl berkdb"
 
 DEPEND="|| ( >=kde-base/noatun-${PV}:${SLOT} >=kde-base/kdemultimedia-${PV}:${SLOT} )
