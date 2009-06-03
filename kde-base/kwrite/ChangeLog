@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwrite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.29 2009/05/07 00:05:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrite/ChangeLog,v 1.30 2009/06/03 17:50:51 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwrite-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *kwrite-4.2.3 (07 May 2009)
 

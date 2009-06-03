@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libkmahjongg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.24 2009/05/07 00:10:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkmahjongg/ChangeLog,v 1.25 2009/06/03 18:03:18 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -libkmahjongg-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *libkmahjongg-4.2.3 (07 May 2009)
 

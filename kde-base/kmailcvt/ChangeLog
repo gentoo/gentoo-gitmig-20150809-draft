@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.97 2009/06/03 14:01:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.98 2009/06/03 16:28:13 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kmailcvt-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kmailcvt-3.5.10.ebuild:
   Marking kmailcvt-3.5.10 ppc64 stable for bug 271889

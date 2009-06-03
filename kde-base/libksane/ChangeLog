@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libksane
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.16 2009/05/07 00:11:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksane/ChangeLog,v 1.17 2009/06/03 18:06:25 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -libksane-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *libksane-4.2.3 (07 May 2009)
 

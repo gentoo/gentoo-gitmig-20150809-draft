@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksplash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.27 2009/05/06 23:54:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksplash/ChangeLog,v 1.28 2009/06/03 17:18:57 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -ksplash-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *ksplash-4.2.3 (06 May 2009)
 

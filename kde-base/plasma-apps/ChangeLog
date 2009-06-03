@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-apps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.18 2009/05/07 00:17:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-apps/ChangeLog,v 1.19 2009/06/03 18:23:30 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -plasma-apps-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *plasma-apps-4.2.3 (07 May 2009)
 

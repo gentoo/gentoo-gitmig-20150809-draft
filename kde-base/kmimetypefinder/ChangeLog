@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmimetypefinder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.26 2009/05/06 23:36:31 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmimetypefinder/ChangeLog,v 1.27 2009/06/03 16:30:10 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kmimetypefinder-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *kmimetypefinder-4.2.3 (06 May 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstyles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.25 2009/05/06 23:56:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstyles/ChangeLog,v 1.26 2009/06/03 17:25:14 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kstyles-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
 *kstyles-4.2.3 (06 May 2009)
 

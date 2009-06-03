@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krossjava
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.1 2009/05/23 07:07:47 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossjava/ChangeLog,v 1.2 2009/06/03 17:04:39 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Drop KDE 4.2.2
 
 *krossjava-4.2.3 (23 May 2009)
 

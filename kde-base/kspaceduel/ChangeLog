@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspaceduel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.111 2009/06/03 14:55:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.112 2009/06/03 17:17:59 alexxy Exp $
+
+  03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kspaceduel-4.2.2.ebuild:
+  Drop KDE 4.2.2
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kspaceduel-3.5.10.ebuild:
   Marking kspaceduel-3.5.10 ppc64 stable for bug 271889
