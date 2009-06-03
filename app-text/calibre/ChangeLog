@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.27 2009/06/02 11:20:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.28 2009/06/03 02:49:21 zmedico Exp $
+
+  03 Jun 2009; Zac Medico <zmedico@gentoo.org> calibre-0.5.14.ebuild:
+  Bug #272146 - Add deps for PyQt4[X,svg].
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
   Handing over to Zac
