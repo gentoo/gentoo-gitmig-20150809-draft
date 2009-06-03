@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2733 2009/06/03 15:17:42 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2734 2009/06/03 16:38:12 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jun 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Tweak www-client/opera mask to exclude the latest build, which is an
+  official beta release.
 
   03 Jun 2009; Andrey Kislyuk <weaver@gentoo.org> updates/2Q-2009:
   Move: app-misc/screen-profiles -> app-misc/byobu
