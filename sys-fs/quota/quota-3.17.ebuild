@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.17.ebuild,v 1.1 2009/01/05 23:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.17.ebuild,v 1.2 2009/06/04 05:52:47 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ IUSE="nls tcpd ldap rpc"
 
 RDEPEND="ldap? ( >=net-nds/openldap-2.3.35 )
 	tcpd? ( sys-apps/tcp-wrappers )
-	rpc? ( net-nds/portmap )"
+	rpc? ( || ( net-nds/portmap net-nds/rpcbind ) )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 

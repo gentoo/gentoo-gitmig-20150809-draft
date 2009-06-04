@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.40 2009/01/21 20:22:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.41 2009/06/04 05:52:47 vapier Exp $
+
+  04 Jun 2009; Mike Frysinger <vapier@gentoo.org> quota-3.17.ebuild:
+  Allow portmap or rpcbind #272422 by Kevin Bryan.
 
   21 Jan 2009; Jeroen Roovers <jer@gentoo.org> quota-3.15.ebuild:
   Stable for HPPA (bug #247651).
