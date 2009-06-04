@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gateway6
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.1 2009/06/03 15:06:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/ChangeLog,v 1.2 2009/06/04 07:40:34 voyageur Exp $
+
+*gateway6-6.0-r1 (04 Jun 2009)
+
+  04 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org> files/gw6c.rc,
+  -gateway6-6.0.ebuild, +gateway6-6.0-r1.ebuild:
+  Change root directory as daemon writes files in it, bug #267134. Also
+  revbump 6.0 to pick this change
 
 *gateway6-6.0 (03 Jun 2009)
 *gateway6-5.1 (03 Jun 2009)

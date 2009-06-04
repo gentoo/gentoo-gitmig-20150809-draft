@@ -25,8 +25,8 @@ start() {
 	checkconfig || return 1
 
 	ebegin "Starting Gateway6 IPv6 Client"
-	start-stop-daemon --start --quiet \
-		--exec $GATEWAY6_CLIENT -- -f /etc/gateway6/gw6c.conf
+	start-stop-daemon --start --quiet --exec $GATEWAY6_CLIENT \
+		--chdir /var/lib/gateway6 -- -f /etc/gateway6/gw6c.conf
 	eend $?
 }
 

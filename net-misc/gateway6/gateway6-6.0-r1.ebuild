@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/gateway6-6.0.ebuild,v 1.1 2009/06/03 15:06:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gateway6/gateway6-6.0-r1.ebuild,v 1.1 2009/06/04 07:40:34 voyageur Exp $
 
 inherit eutils versionator toolchain-funcs
 
