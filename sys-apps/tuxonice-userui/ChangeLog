@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/tuxonice-userui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.15 2009/06/03 22:06:08 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/ChangeLog,v 1.16 2009/06/04 19:08:19 nelchael Exp $
+
+  04 Jun 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  -tuxonice-userui-0.7.2.ebuild, -tuxonice-userui-0.7.3.ebuild,
+  -files/tuxonice-userui-0.7.3-Makefiles.patch:
+  Remove old/unneeded versions.
 
   03 Jun 2009; Dawid Węgliński <cla@gentoo.org>
   tuxonice-userui-1.0.ebuild:
