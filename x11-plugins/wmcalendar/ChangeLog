@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcalendar
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.18 2009/01/22 15:47:56 s4t4n Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalendar/ChangeLog,v 1.19 2009/06/04 00:09:00 tcunha Exp $
+
+  04 Jun 2009; Tiago Cunha <tcunha@gentoo.org> wmcalendar-0.5.2.ebuild:
+  stable sparc, bug 215651
 
   22 Jan 2009; Michele Noberasco <s4t4n@gentoo.org> wmcalendar-0.5.2.ebuild,
   +files/wmcalendar-0.5.2-rename_kill_func.patch:

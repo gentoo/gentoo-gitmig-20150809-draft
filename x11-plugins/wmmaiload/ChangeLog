@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmaiload
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.31 2008/01/22 14:07:19 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmaiload/ChangeLog,v 1.32 2009/06/04 00:21:21 tcunha Exp $
+
+  04 Jun 2009; Tiago Cunha <tcunha@gentoo.org> wmmaiload-2.2.1-r1.ebuild:
+  stable sparc, bug 215651
 
   22 Jan 2008; Samuli Suominen <drac@gentoo.org> -wmmaiload-1.0.2.ebuild,
   -wmmaiload-2.2.1.ebuild:

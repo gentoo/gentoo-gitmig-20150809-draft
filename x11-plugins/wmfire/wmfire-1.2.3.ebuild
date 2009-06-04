@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.3.ebuild,v 1.4 2008/06/28 06:57:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfire/wmfire-1.2.3.ebuild,v 1.5 2009/06/04 00:14:08 tcunha Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.swanson.ukfsn.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="session"
 
 RDEPEND=">=x11-libs/gtk+-2
