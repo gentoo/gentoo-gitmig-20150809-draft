@@ -1,6 +1,11 @@
 # ChangeLog for dev-scheme/bigloo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.33 2009/06/04 12:21:37 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.34 2009/06/04 12:32:22 hkbst Exp $
+
+  04 Jun 2009; Marijn Schouten <hkBst@gentoo.org> -bigloo-2.7a_p2.ebuild,
+  -bigloo-2.9a.ebuild, -bigloo-3.0a_p2.ebuild, -bigloo-3.0b.ebuild,
+  -bigloo-3.0b_p2.ebuild, -bigloo-3.0c.ebuild:
+  cleanup old versions
 
 *bigloo-3.2b_p2 (04 Jun 2009)
 
