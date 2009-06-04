@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.608 2009/06/04 04:27:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.609 2009/06/04 19:29:05 fauli Exp $
+
+  04 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  portage-2.1.6.13.ebuild:
+  stable x86, bug 272485
 
   04 Jun 2009; Jeroen Roovers <jer@gentoo.org> portage-2.1.6.13.ebuild:
   Stable for HPPA (bug #272485).
