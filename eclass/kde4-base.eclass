@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.39 2009/06/04 09:29:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.40 2009/06/04 13:50:10 scarabeus Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -426,7 +426,7 @@ kde4-base_pkg_setup() {
 			fi
 		done
 		unset slot
-		[[ -z KDEDIR ]] && die "Failed to determine KDEDIR!"
+		[[ -z ${KDEDIR} ]] && die "Failed to determine KDEDIR!"
 		PREFIX="${PREFIX:-${ROOT}usr}"
 	fi
 
