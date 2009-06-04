@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.4 2008/07/08 16:52:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.5 2009/06/04 13:31:07 ssuominen Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/freetype-2.1.9-r1
 	>=media-libs/jpeg-6b-r5
 	>=media-libs/libpng-1.2.8
 	>=sys-libs/zlib-1.2.3
-	>=media-libs/fmod-3.74
+	=media-libs/fmod-3*
 	>=media-libs/sdl-sound-1.0.1-r1
 	>=media-libs/sdl-mixer-1.2.7"
 
