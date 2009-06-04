@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4.ebuild,v 1.9 2009/06/03 22:28:21 flameeyes Exp $
-
-WANT_AUTOMAKE="1.9"
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.3.4.ebuild,v 1.10 2009/06/04 15:44:59 pva Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -17,6 +15,7 @@ IUSE="tcpd gre-extreme-debug"
 
 DEPEND="net-dialup/ppp
 	tcpd? ( sys-apps/tcp-wrappers )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +31,7 @@ src_unpack() {
 	sed -i -e "s:\\(#define[ \\t]*VERSION[ \\t]*\\)\".*\":\\1\"${PPPD_VER}\":" "plugins/patchlevel.h"
 	sed -e "/^LDFLAGS/{s:=:+=:}" -i plugins/Makefile
 
-	eautomake
+	eautoreconf
 }
 
 src_compile() {
@@ -40,7 +39,7 @@ src_compile() {
 	local myconf
 	use tcpd && myconf="--with-libwrap"
 	econf --enable-bcrelay \
-		${myconf} || die "configure failed"
+		${myconf}
 	emake COPTS="${CFLAGS}" || die "make failed"
 }
 
