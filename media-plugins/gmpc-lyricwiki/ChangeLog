@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-lyricwiki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.10 2009/06/03 21:12:37 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/ChangeLog,v 1.11 2009/06/04 13:24:03 fmccor Exp $
+
+  04 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  gmpc-lyricwiki-0.18.0.ebuild:
+  Add ~sparc keyword, Bug #272344 (sort of).
 
   03 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
   gmpc-lyricwiki-0.18.0.ebuild:
