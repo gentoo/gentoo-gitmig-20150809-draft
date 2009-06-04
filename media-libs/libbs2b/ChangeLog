@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libbs2b
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.5 2009/05/20 05:09:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.6 2009/06/04 19:06:13 chainsaw Exp $
+
+*libbs2b-3.1.0 (04 Jun 2009)
+
+  04 Jun 2009; <chainsaw@gentoo.org> +libbs2b-3.1.0.ebuild:
+  Version bump, incorporates the BSD portability patch by Flameeyes. More
+  compilation warnings have been assasinated.
 
   20 May 2009; Jeroen Roovers <jer@gentoo.org> libbs2b-3.0.0.ebuild:
   Marked ~hppa (bug #270203).
