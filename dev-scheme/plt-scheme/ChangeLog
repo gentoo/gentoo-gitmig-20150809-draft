@@ -1,6 +1,47 @@
 # ChangeLog for dev-scheme/plt-scheme
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.7 2009/03/22 13:05:35 hkbst Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.8 2009/06/04 15:35:12 hkbst Exp $
+
+*plt-scheme-4.2 (04 Jun 2009)
+
+  04 Jun 2009; Marijn Schouten <hkBst@gentoo.org> +plt-scheme-4.2.ebuild:
+  bump
+	Internally, this version includes a conversion from C++ to Scheme
+	for part of the GUI toolbox --- specifically, 25k lines of code
+	that implement the general text and pasteboard editor.  This
+	conversion is a start on a larger reimplementation of the GUI
+	toolbox.  Although we believe that this change will help make PLT
+	Scheme better in the long run, we must expect bugs in the short
+	term due to porting errors.  Users should therefore be aware of
+	the change, even though the new implementation is meant to behave
+	the same as previous versions.
+
+	* A new statistical profiler is now available; see the "profiler"
+	manual for more information.  Currently, the profiler supports
+	only textual output, but future plans include a GUI interface
+	and DrScheme integration.
+
+	* The `world' teachpack is now deprecated.  Its replacement
+	`universe' has a new interface that uses strings instead of
+	symbols and characters.
+
+	* Web-server: Native continuations in the stateless servlet
+	language support capturing continuations from untransformed
+	contexts; soft state library for stateless servlets.
+
+	* DrScheme's Stepper can now jump to a selected program
+	expression.
+
+	* New in `scheme/base': `hash-has-key?', `hash-ref!',
+	`in-sequences', `in-cycle'.  New in `scheme': `count',
+	`make-list' (from `scheme/list'), `const' (from
+	`scheme/function').
+
+	* Some performance improvements, including faster start-up for small
+	programs. The latter is a result of delaying module invocations at
+	higher phases (compile time, meta-compile time, etc.) until
+	compilation is demanded at the next lower phase; this on-demand
+	instantiation is per-phase, as opposed to per-module within a phase.
 
   22 Mar 2009; Marijn Schouten <hkBst@gentoo.org>
   -plt-scheme-0.372-r1.ebuild, -plt-scheme-4.0.1.ebuild,
