@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.0-r3.ebuild,v 1.2 2009/06/04 07:02:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/jamvm-1.5.0-r3.ebuild,v 1.3 2009/06/04 07:03:49 ssuominen Exp $
 
 EAPI=2
 
@@ -16,13 +16,12 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug libffi"
 
 CLASSPATH_SLOT=0.97
-DEPEND="
-	dev-java/gnu-classpath:${CLASSPATH_SLOT}
-	libffi? ( virtual/libffi )
-	dev-util/pkgconfig
-	"
-RDEPEND="${DEPEND}"
-PDEPEND="dev-java/ant-eclipse-ecj:3.3 dev-java/gjdoc"
+RDEPEND="dev-java/gnu-classpath:${CLASSPATH_SLOT}
+	libffi? ( virtual/libffi )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+PDEPEND="dev-java/ant-eclipse-ecj:3.3
+	dev-java/gjdoc"
 
 src_prepare() {
 	epatch "${FILESDIR}/classes-location.patch"
