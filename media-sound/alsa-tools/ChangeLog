@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.172 2009/06/04 18:24:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.173 2009/06/04 19:44:19 fmccor Exp $
+
+  04 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  alsa-tools-1.0.19.ebuild:
+  Sparc stable, part of Bug #272682.
 
 *alsa-tools-1.0.20-r1 (04 Jun 2009)
 
