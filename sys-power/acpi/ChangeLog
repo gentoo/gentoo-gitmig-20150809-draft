@@ -1,6 +1,9 @@
 # ChangeLog for sys-power/acpi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi/ChangeLog,v 1.8 2009/06/03 21:55:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpi/ChangeLog,v 1.9 2009/06/04 19:12:50 fauli Exp $
+
+  04 Jun 2009; Christian Faulhammer <fauli@gentoo.org> acpi-1.4.ebuild:
+  stable x86, bug 215870
 
   03 Jun 2009; Dawid Węgliński <cla@gentoo.org> acpi-1.4.ebuild:
   Stable on amd64 (bug #215870)
