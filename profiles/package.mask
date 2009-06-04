@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9886 2009/06/04 18:22:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9887 2009/06/04 20:52:38 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -597,11 +597,6 @@ net-misc/dahdi-tools
 # Matti Bickel <mabi@gentoo.org> (1 Mar 2009)
 # Mask testing branch
 =x11-libs/fox-1.7*
-
-# Theo Chatzimichos <tampakrap@gentoo.org> (1 Mar 2009)
-# Mask Beta versions of KDevelop 4 and KDevplatform
->=dev-util/kdevelop-3.9.91
->=dev-util/kdevplatform-0.9.91
 
 # Jeffrey Gardner <je_fro@gentoo.org> (27 Feb 2009)
 # Masked while we switch to sci-chemistry/gchemutils
