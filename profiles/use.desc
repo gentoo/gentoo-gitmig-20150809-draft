@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.415 2009/05/16 14:09:05 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.416 2009/06/04 09:49:40 ssuominen Exp $
 
 # Keep them sorted
 
@@ -228,6 +228,7 @@ mplayer - Enable mplayer support for playback or encoding
 msn - Enable MSN Messenger IM protocol support
 msql - Adds support for the MSQL database server
 mssql - Adds support for Microsoft SQL Server database
+mtp - Enable support for Media Transfer Protocol
 mule - Adds multi-language support to XEmacs
 multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 musepack - Enable support for the musepack audio codec
