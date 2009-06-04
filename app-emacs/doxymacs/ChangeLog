@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/doxymacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/ChangeLog,v 1.6 2009/03/02 21:16:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/ChangeLog,v 1.7 2009/06/04 19:20:00 fauli Exp $
+
+  04 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  doxymacs-1.8.0-r3.ebuild:
+  stable x86, bug 272462
 
 *doxymacs-1.8.0-r3 (02 Mar 2009)
 
