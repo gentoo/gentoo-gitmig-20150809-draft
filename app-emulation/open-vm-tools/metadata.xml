@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>vmware</herd>
-<use>
-	<flag name='unity'>Enable host unity support</flag>
-</use>
+	<herd>vmware</herd>
+	<maintainer>
+		<email>vadimk@g.o</email>
+	</maintainer>
+	<longdescription>
+		The Open Virtual Machine Tools (open-vm-tools) are the open source
+		implementation of VMware Tools. They are a set of guest operating system
+		virtualization components that enhance performance and user experience
+		of virtual machines.
+	</longdescription>
+	<use>
+		<flag name='unity'>Enable host unity support</flag>
+		<flag name='gtkmm'>Enable gtkmm support</flag>
+	</use>
 </pkgmetadata>
