@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.138 2009/03/03 15:55:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.139 2009/06/04 21:40:51 loki_val Exp $
+
+  04 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
+  mjpegtools-1.9.0.ebuild, +files/mjpegtools-1.9.0-glibc-2.10.patch:
+  Fix the constness of a char w.r.t. bug 270778. Thanks to hirakendu
+  <hirakendu@gmail.com> for providing the patch.
 
   03 Mar 2009; Raúl Porcel <armin76@gentoo.org> mjpegtools-1.9.0.ebuild:
   sparc stable wrt #217427

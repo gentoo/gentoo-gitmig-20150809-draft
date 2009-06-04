@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0.ebuild,v 1.6 2009/03/03 15:55:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0.ebuild,v 1.7 2009/06/04 21:40:51 loki_val Exp $
 
 EAPI="1"
 
@@ -40,6 +40,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i -e '/ARCHFLAGS=/s:=.*:=:' configure
+	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 }
 
 src_compile() {
