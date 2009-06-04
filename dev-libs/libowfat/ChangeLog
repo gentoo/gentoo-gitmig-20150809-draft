@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libowfat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.23 2009/06/04 17:14:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/ChangeLog,v 1.24 2009/06/04 17:15:59 patrick Exp $
+
+  04 Jun 2009; Patrick Lauer <patrick@gentoo.org> -libowfat-0.14.ebuild,
+  -libowfat-0.15.ebuild, -libowfat-0.16.ebuild, -libowfat-0.19.2.ebuild,
+  -libowfat-0.22.ebuild:
+  Remove old
 
   04 Jun 2009; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Taking over maintenance from embedded herd.
