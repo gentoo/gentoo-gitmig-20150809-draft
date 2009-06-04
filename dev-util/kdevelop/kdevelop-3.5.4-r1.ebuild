@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.4-r1.ebuild,v 1.2 2009/05/25 19:50:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.5.4-r1.ebuild,v 1.3 2009/06/04 16:41:27 tampakrap Exp $
 
 EAPI="2"
 
@@ -31,7 +31,8 @@ DEPEND="${DEPEND}
 
 need-kde 3.5
 
-PATCHES=( "${FILESDIR}/kdevelop-3.5-lexer.patch"
+PATCHES=( "${FILESDIR}/kdevelop-3.5-gcc4.4.patch"
+	"${FILESDIR}/kdevelop-3.5-lexer.patch"
 	"${FILESDIR}/kdevelop-3.5-parallel.patch"
 	"${WORKDIR}/kdevelop-3.5-libtool.m4.in.patch"
 	"${WORKDIR}/kdevelop-3.5-ltmain.sh.patch" )
