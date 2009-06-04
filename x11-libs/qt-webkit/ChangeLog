@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.41 2009/06/03 22:02:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.42 2009/06/04 14:14:31 hwoarang Exp $
+
+  04 Jun 2009; Markos Chandras <hwoarang@gentoo.org> qt-webkit-4.5.1.ebuild:
+  Adjust correct phonon dependencies ( bug 270188 )
 
   03 Jun 2009; Ben de Groot <yngwin@gentoo.org> qt-webkit-4.5.1.ebuild,
   metadata.xml:

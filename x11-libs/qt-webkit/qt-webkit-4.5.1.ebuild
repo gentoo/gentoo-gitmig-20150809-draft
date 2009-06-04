@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.5.1.ebuild,v 1.9 2009/06/03 22:02:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/qt-webkit-4.5.1.ebuild,v 1.10 2009/06/04 14:14:31 hwoarang Exp $
 
 EAPI="2"
 inherit qt4-build flag-o-matic
@@ -12,7 +12,7 @@ IUSE="kde"
 
 DEPEND="~x11-libs/qt-core-${PV}[debug=,ssl]
 	~x11-libs/qt-gui-${PV}[debug=]
-	|| ( ~x11-libs/qt-phonon-${PV}:${SLOT}[debug=] media-sound/phonon )
+	!kde? ( || ( ~x11-libs/qt-phonon-${PV}:${SLOT}[debug=] media-sound/phonon ) )
 	kde? ( media-sound/phonon )"
 RDEPEND="${DEPEND}"
 
