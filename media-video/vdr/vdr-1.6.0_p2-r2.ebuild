@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.2 2009/03/29 16:34:41 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.3 2009/06/04 08:46:37 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -220,7 +220,9 @@ src_unpack() {
 		-e 's/runvdr//' \
 		-e 's/ install-plugins//'
 
-	if ! use vanilla; then
+	if use vanilla; then
+		epatch "${FILESDIR}"/vdr-1.6.0-gcc-4.4.diff
+	else
 
 		cd "${S}"
 		# Now apply extensions patch
@@ -232,6 +234,8 @@ src_unpack() {
 
 		# other gentoo patches
 		# epatch "${FILESDIR}/..."
+		epatch "${FILESDIR}"/vdr-1.6.0-gcc-4.4.diff
+		epatch "${FILESDIR}"/vdr-1.6.0-extensions-gcc-4.4.diff
 
 		# This allows us to start even if some plugin does not exist
 		# or is not loadable.

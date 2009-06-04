@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdr
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.128 2009/03/29 16:34:41 hd_brummy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.129 2009/06/04 08:46:37 zzam Exp $
+
+  04 Jun 2009; Matthias Schwarzott <zzam@gentoo.org> vdr-1.6.0_p2-r2.ebuild,
+  +files/vdr-1.6.0-extensions-gcc-4.4.diff, +files/vdr-1.6.0-gcc-4.4.diff:
+  Add patch to fix compiling with gcc-4.4. Bug #271617.
 
   29 Mar 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdr-1.6.0_p2-r2.ebuild:
