@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.4 2009/05/29 22:48:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.5 2009/06/04 18:18:37 tampakrap Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -92,6 +92,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-libgadu-CVE-2008-4776.patch"
 	epatch "${FILESDIR}/${P}-icq-protocol-change2.patch"
 	epatch "${FILESDIR}/${P}-jabber-protocol-gtalknickfix.patch"
+	epatch "${FILESDIR}/${P}-glibc210.patch"
 
 	if use emoticons-manager; then
 		epatch "${FILESDIR}/emoticon-manager.patch"

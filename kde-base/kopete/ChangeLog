@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.195 2009/06/04 13:05:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.196 2009/06/04 18:18:37 tampakrap Exp $
+
+  04 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  kopete-3.5.10-r4.ebuild, +files/kopete-3.5.10-glibc210.patch:
+  Add glibc-2.10 patch, bug 270601
 
 *kopete-4.2.4 (04 Jun 2009)
 
