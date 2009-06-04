@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jamvm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.34 2009/03/07 14:37:20 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jamvm/ChangeLog,v 1.35 2009/06/04 06:43:11 ssuominen Exp $
+
+*jamvm-1.5.0-r3 (04 Jun 2009)
+
+  04 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +jamvm-1.5.0-r3.ebuild:
+  Convert to virtual/libffi wrt #272051
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> jamvm-1.5.0-r2.ebuild:
   Migrate to EAPI 2.
