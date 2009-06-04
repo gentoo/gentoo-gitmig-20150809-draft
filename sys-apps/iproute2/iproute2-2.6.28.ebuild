@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.28.ebuild,v 1.6 2009/05/31 19:59:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.28.ebuild,v 1.7 2009/06/04 19:41:04 klausman Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ else
 	fi
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="http://developer.osdl.org/dev/iproute2/download/${MY_P}.tar.bz2"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh -sparc x86"
+	KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh -sparc x86"
 	S=${WORKDIR}/${MY_P}
 fi
 
