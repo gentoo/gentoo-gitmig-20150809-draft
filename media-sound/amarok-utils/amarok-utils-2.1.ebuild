@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/amarok-utils-2.1.ebuild,v 1.1 2009/06/04 19:36:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/amarok-utils-2.1.ebuild,v 1.2 2009/06/04 19:43:32 tampakrap Exp $
 
 EAPI="2"
 
@@ -25,7 +25,8 @@ DEPEND="
 	>=x11-libs/qt-dbus-4.4:4
 "
 RDEPEND="${DEPEND}
-	!<media-sound/amarok-2.0.90
+	!<media-sound/amarok-2.0.90:2
+	!<media-sound/amarok-2.0.90:${SLOT}
 "
 
 S="${WORKDIR}/${P/-utils/}"
