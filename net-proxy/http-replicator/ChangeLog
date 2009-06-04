@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/http-replicator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.28 2009/05/31 11:54:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/http-replicator/ChangeLog,v 1.29 2009/06/04 20:54:37 klausman Exp $
+
+  04 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  http-replicator-3.0-r2.ebuild:
+  Stable on alpha, bug #=net-proxy/http-replicator-3.0-r2
 
   31 May 2009; Markus Meier <maekke@gentoo.org>
   http-replicator-3.0-r2.ebuild:
