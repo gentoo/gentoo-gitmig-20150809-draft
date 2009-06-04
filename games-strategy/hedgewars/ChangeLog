@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.18 2009/06/01 06:48:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.19 2009/06/04 23:27:18 mr_bones_ Exp $
+
+  04 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  hedgewars-0.9.11.ebuild:
+  dejavu changed their naming scheme (bug #272708)
 
   01 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -hedgewars-0.9.10.ebuild, hedgewars-0.9.11.ebuild:
