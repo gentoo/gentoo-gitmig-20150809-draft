@@ -45,6 +45,7 @@
 		<flag name="menuorg">Enables support for the menuorg-plugin</flag>
 		<flag name="noepg">Adds code to selectively disable epg-reception for specific channels</flag>
 		<flag name="osdmaxitems">Support for text2skin</flag>
+		<flag name="parentalrating">Support Parental Rating</flag>
 		<flag name="pinplugin">Support for pin plugin</flag>
 		<flag name="rotor">Enable support for plugin vdr-rotor for dish-positioner.</flag>
 		<flag name="settime">set system time per script instead of via syscal</flag>
