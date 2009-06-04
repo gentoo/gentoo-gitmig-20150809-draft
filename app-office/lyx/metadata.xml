@@ -18,6 +18,7 @@
     </flag>
   <flag name='html'>Add support for HTML import</flag>
   <flag name='monolithic-build'>This should speed up compilation significantly when you have enough RAM (>600 MB)</flag>
+  <flag name='rcs'>Add support for revision control via <pkg>app-text/rcs</pkg></flag>
   <flag name='rtf'>Add support for RTF import/export packages</flag>
 </use>
 </pkgmetadata>
