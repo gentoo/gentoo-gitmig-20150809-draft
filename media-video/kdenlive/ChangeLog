@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.41 2009/05/03 19:52:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.42 2009/06/04 13:49:33 aballier Exp $
+
+*kdenlive-0.7.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexis Ballier <aballier@gentoo.org> +kdenlive-0.7.4.ebuild:
+  version bump, bug #271860
 
   03 May 2009; Alexis Ballier <aballier@gentoo.org>
   -kdenlive-0.7.2.1.ebuild:
