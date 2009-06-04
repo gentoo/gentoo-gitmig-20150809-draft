@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.64 2009/06/03 18:42:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.65 2009/06/04 12:46:38 ssuominen Exp $
+
+  04 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> libffi-3.0.8.ebuild:
+  Keyword ~ppc/~ppc64 wrt #272046, thanks to Luca Barbato for testing.
 
   03 Jun 2009; Raúl Porcel <armin76@gentoo.org> libffi-3.0.8.ebuild:
   Add ~arm/~ia64/~s390/~sh wrt #272046
