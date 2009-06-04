@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k9copy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.48 2009/05/27 13:13:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/ChangeLog,v 1.49 2009/06/04 09:45:47 scarabeus Exp $
+
+  04 Jun 2009; Tomas Chvatal <scarabeus@gentoo.org> k9copy-2.3.2.ebuild,
+  +files/k9copy-2.3.2-gcc44.patch:
+  Add gcc44 patch. Per bug #272567. Thx to Martin Jansa for patch.
 
 *k9copy-2.3.2 (27 May 2009)
 

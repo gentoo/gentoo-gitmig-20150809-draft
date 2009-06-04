@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.2.ebuild,v 1.1 2009/05/27 13:13:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k9copy/k9copy-2.3.2.ebuild,v 1.2 2009/06/04 09:45:47 scarabeus Exp $
 
 EAPI="2"
 
@@ -29,6 +29,10 @@ RDEPEND="${DEPEND}
 	media-video/mplayer"
 
 S="${WORKDIR}/${MY_P}"
+
+PATCHES=(
+	"${FILESDIR}/${P}-gcc44.patch"
+)
 
 pkg_postinst() {
 	echo
