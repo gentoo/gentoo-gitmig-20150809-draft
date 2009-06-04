@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.15.ebuild,v 1.4 2009/01/19 16:11:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.15.ebuild,v 1.5 2009/06/04 18:24:30 beandog Exp $
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="2.5"
@@ -29,6 +29,7 @@ alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr
 ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}
+	<=media-libs/alsa-lib-1.0.20-r1
 	fltk? ( =x11-libs/fltk-1.1* )
 	gtk? ( =x11-libs/gtk+-2* )"
 DEPEND="${RDEPEND}"

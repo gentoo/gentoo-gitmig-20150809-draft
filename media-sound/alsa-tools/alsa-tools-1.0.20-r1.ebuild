@@ -1,9 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.18.ebuild,v 1.4 2009/06/04 18:24:30 beandog Exp $
-
-WANT_AUTOMAKE="1.9"
-WANT_AUTOCONF="2.5"
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20-r1.ebuild,v 1.1 2009/06/04 18:24:30 beandog Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -22,14 +19,14 @@ alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
 alsa_cards_layla24 alsa_cards_mona alsa_cards_mia alsa_cards_indigo
 alsa_cards_indigoio alsa_cards_echo3g"
 
-IUSE="fltk gtk midi alsa_cards_hdsp alsa_cards_hdspm alsa_cards_mixart
+IUSE="fltk gtk alsa_cards_hdsp alsa_cards_hdspm alsa_cards_mixart
 alsa_cards_vx222 alsa_cards_usb-usx2y alsa_cards_sb16 alsa_cards_sbawe
 alsa_cards_emu10k1 alsa_cards_emu10k1x alsa_cards_ice1712
 alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr
 ${ECHOAUDIO_CARDS}"
 
-RDEPEND=">=media-libs/alsa-lib-${PV}
-	<=media-libs/alsa-lib-1.0.20-r1
+RDEPEND=">=media-libs/alsa-lib-1.0.20-r1
+	<media-libs/alsa-lib-1.0.20-r1
 	fltk? ( =x11-libs/fltk-1.1* )
 	gtk? ( =x11-libs/gtk+-2* )"
 DEPEND="${RDEPEND}"
@@ -37,19 +34,11 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	if use midi && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build ${CATEGORY}/${PN} with midi support you"
-		eerror "need to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
 
-	ALSA_TOOLS="ac3dec"
-
-	use midi && ALSA_TOOLS="${ALSA_TOOLS} seq/sbiload us428control"
+	ALSA_TOOLS="ac3dec seq/sbiload us428control"
 
 	if use gtk; then
-		use midi && use alsa_cards_ice1712 && \
+		use alsa_cards_ice1712 && \
 			ALSA_TOOLS="${ALSA_TOOLS} envy24control"
 		use alsa_cards_rme32 && use alsa_cards_rme96 && \
 			ALSA_TOOLS="${ALSA_TOOLS} rmedigicontrol"
@@ -86,19 +75,26 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${PN}-1.0.18-asneeded.patch"
+	epatch "${FILESDIR}"/${P}+glibc-2.10.patch
+	epatch "${FILESDIR}"/${P}-hdspconf-asneeded.patch
 
+	# This block only deals with the tools that still use GTK and the
+	# AM_PATH_GTK macro.
 	for dir in echomixer envy24control rmedigicontrol; do
+		has $dir ${ALSA_TOOLS} || continue
 		pushd "${dir}" &> /dev/null
 		sed -i -e '/AM_PATH_GTK/d' configure.in
-		eautomake
+		eautoreconf
 		popd &> /dev/null
 	done
 
-	pushd hdspmixer &> /dev/null
-	sed -i -e '/AM_PATH_GTK/d' configure.in
-	eautoreconf
-	popd &> /dev/null
+	# This block deals with the tools that are being patched
+	for dir in hdspconf; do
+		has $dir ${ALSA_TOOLS} || continue
+		pushd "${dir}" &> /dev/null
+		eautoreconf
+		popd &> /dev/null
+	done
 
 	elibtoolize
 }
@@ -109,9 +105,6 @@ src_compile() {
 		append-ldflags "-L/usr/$(get_libdir)/fltk-1.1"
 		append-flags "-I/usr/include/fltk-1.1"
 	fi
-
-	# hdspmixer is missing depconf - copy from the hdsploader directory
-	cp "${S}/hdsploader/depcomp" "${S}/hdspmixer/"
 
 	local f
 	for f in ${ALSA_TOOLS}
