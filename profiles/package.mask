@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9881 2009/06/04 06:43:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9882 2009/06/04 12:50:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -579,14 +579,6 @@ dev-java/adaptx
 media-sound/creox
 media-sound/knob
 media-sound/yammi
-
-# Samuli Suominen <ssuominen@gentoo.org> (01 Jun 2009)
-# virtual/libffi needs to be keyworded before unmasking wrt #272046.
-x11-libs/gtk-server
->=dev-libs/g-wrap-1.9.11
->=dev-scheme/guile-gnome-platform-2.16.0
->=gnustep-base/gnustep-base-1.18.0-r4
->=dev-java/jamvm-1.5.0-r3
 
 # Torsten Veller <tove@gentoo.org> (31 May 2009)
 # IniConf.pm is going away, and will be replaced with
