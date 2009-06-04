@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4524 2009/06/04 12:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4525 2009/06/04 12:47:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1828,6 +1828,7 @@ media-video/vdr:mainmenuhooks - Allows to replace main menu entries by some spec
 media-video/vdr:menuorg - Enables support for the menuorg-plugin
 media-video/vdr:noepg - Adds code to selectively disable epg-reception for specific channels
 media-video/vdr:osdmaxitems - Support for text2skin
+media-video/vdr:parentalrating - Support Parental Rating
 media-video/vdr:pinplugin - Support for pin plugin
 media-video/vdr:rotor - Enable support for plugin vdr-rotor for dish-positioner.
 media-video/vdr:settime - set system time per script instead of via syscal
