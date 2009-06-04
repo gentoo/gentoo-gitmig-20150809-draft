@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.642 2009/06/03 00:06:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.643 2009/06/04 16:34:46 beandog Exp $
+
+  04 Jun 2009; Steve Dibb <beandog@gentoo.org>
+  mplayer-1.0_rc2_p28450.ebuild, mplayer-1.0_rc2_p20090226.ebuild,
+  mplayer-1.0_rc2_p20090322.ebuild, mplayer-1.0_rc2_p20090530.ebuild,
+  mplayer-9999.ebuild:
+  Install input.conf and menu.conf in the correct location
 
   03 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
   mplayer-1.0_rc2_p20090322.ebuild, mplayer-1.0_rc2_p20090530.ebuild,

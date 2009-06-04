@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.6 2009/06/02 17:43:43 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.7 2009/06/04 16:34:46 beandog Exp $
 
 EAPI="2"
 
@@ -619,6 +619,8 @@ src_install() {
 
 	insinto /etc/mplayer
 	newins "${S}/etc/example.conf" mplayer.conf
+	doins "${S}/etc/input.conf"
+	use osdmenu && doins "${S}/etc/menu.conf"
 
 	if use ass || use truetype;	then
 		cat >> "${D}/etc/mplayer/mplayer.conf" << EOT
@@ -639,9 +641,6 @@ EOT
 
 	newbin "${S}/TOOLS/midentify.sh" midentify
 
-	insinto /usr/share/mplayer
-	doins "${S}/etc/input.conf"
-	use osdmenu && doins "${S}/etc/menu.conf"
 }
 
 pkg_preinst() {
