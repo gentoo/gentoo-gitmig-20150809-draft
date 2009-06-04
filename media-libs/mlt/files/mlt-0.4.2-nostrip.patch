@@ -1,0 +1,13 @@
+Index: mlt-0.4.2/src/melt/Makefile
+===================================================================
+--- mlt-0.4.2.orig/src/melt/Makefile
++++ mlt-0.4.2/src/melt/Makefile
+@@ -27,7 +27,7 @@ clean:	
+ 
+ install:	all
+ 	install -d "$(DESTDIR)$(bindir)"
+-	install -c -s -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
++	install -c -m 755 $(TARGET) "$(DESTDIR)$(bindir)"
+ 
+ uninstall:
+ 	rm -f "$(DESTDIR)$(bindir)/$(TARGET)"
