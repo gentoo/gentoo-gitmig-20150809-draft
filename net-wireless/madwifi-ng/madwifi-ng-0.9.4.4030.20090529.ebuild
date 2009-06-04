@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.4030.20090529.ebuild,v 1.1 2009/06/01 16:46:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng/madwifi-ng-0.9.4.4030.20090529.ebuild,v 1.2 2009/06/04 10:44:56 pva Exp $
 
 EAPI="2"
 
@@ -61,6 +61,7 @@ src_prepare() {
 	for dir in ath ath_hal net80211 ath_rate ath_rate/amrr ath_rate/minstrel ath_rate/onoe ath_rate/sample; do
 		convert_to_m "${S}/${dir}/Makefile"
 	done
+	sed -e 's:-Werror ::' -i Makefile.inc || die "sed -Werror failed"
 }
 
 src_install() {
