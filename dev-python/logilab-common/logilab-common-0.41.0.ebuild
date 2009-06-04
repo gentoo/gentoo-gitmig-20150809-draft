@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.39.0.ebuild,v 1.1 2009/04/18 18:46:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.41.0.ebuild,v 1.1 2009/06/04 13:01:39 idl0r Exp $
 
 inherit distutils eutils python
 
-#DESCRIPTION="Several modules providing low level functionality shared among some python projects developed by logilab"
 DESCRIPTION="useful miscellaneous modules used by Logilab projects"
 HOMEPAGE="http://www.logilab.org/projects/common/"
 SRC_URI="ftp://ftp.logilab.org/pub/common/${P}.tar.gz"
@@ -18,8 +17,13 @@ DEPEND="test? ( dev-python/egenix-mx-base )"
 RDEPEND=""
 
 PYTHON_MODNAME="logilab"
-
 # Extra documentation (html/pdf) needs some love
+
+src_unpack() {
+	distutils_src_unpack
+
+	epatch "${FILESDIR}/${P}-remove-broken-tests.patch"
+}
 
 src_test() {
 	python_version
@@ -46,8 +50,6 @@ src_test() {
 	else
 		pushd "${lpath}/${P/-/_}-py${PYVER}.egg/${PN/-//}" >/dev/null || die
 	fi
-
-	epatch "${FILESDIR}/${P}-remove-broken-tests.patch"
 
 	# Bug 223079
 	if ! has userpriv ${FEATURES}; then
