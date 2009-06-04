@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1213.ebuild,v 1.1 2009/06/01 21:06:36 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7_p1214.ebuild,v 1.1 2009/06/04 17:41:17 tommy Exp $
 
 EAPI="1"
 DATE=20090413
 
 EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
 EGIT_PROJECT="freenet/fred-official"
-EGIT_TREE="5bc0e634a968824bf471fef53d26dd16d9c27a55"
+EGIT_TREE="22484d3ae10939f28de2aa00d6fa457c25a3e8e4"
 
 inherit eutils git java-pkg-2 java-ant-2 multilib
 
