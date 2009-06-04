@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.2.3.ebuild,v 1.1 2009/05/07 00:17:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.2.3.ebuild,v 1.2 2009/06/04 14:27:19 hwoarang Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ COMMONDEPEND="
 	x11-libs/libXrender
 	google-gadgets? ( >=x11-misc/google-gadgets-0.10.5[qt4] )
 	python? (
-		>=dev-python/PyQt4-4.4.0
+		>=dev-python/PyQt4-4.4.0[X]
 		>=dev-python/sip-4.7.1
 		>=kde-base/pykde4-${PV}:${SLOT}[kdeprefix=]
 	)
