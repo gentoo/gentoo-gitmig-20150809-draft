@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/lilo-config
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/lilo-config/ChangeLog,v 1.76 2009/06/03 18:11:35 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/lilo-config/ChangeLog,v 1.77 2009/06/04 13:44:19 alexxy Exp $
+
+*lilo-config-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +lilo-config-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -lilo-config-4.2.2.ebuild:

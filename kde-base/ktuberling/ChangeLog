@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.112 2009/06/03 17:38:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.113 2009/06/04 13:27:50 alexxy Exp $
+
+*ktuberling-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> +ktuberling-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -ktuberling-4.2.2.ebuild:
   Drop KDE 4.2.2

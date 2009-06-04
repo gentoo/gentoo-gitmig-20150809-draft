@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksysguard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.135 2009/06/03 17:28:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ChangeLog,v 1.136 2009/06/04 13:22:49 alexxy Exp $
+
+*ksysguard-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> +ksysguard-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Drop KDE 4.2.2

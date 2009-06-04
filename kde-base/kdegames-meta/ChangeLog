@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdegames-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.117 2009/06/03 18:37:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames-meta/ChangeLog,v 1.118 2009/06/04 11:53:27 alexxy Exp $
+
+*kdegames-meta-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdegames-meta-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kdegames-meta-3.5.10.ebuild:
   Marking kdegames-meta-3.5.10 ppc64 stable for bug 271889

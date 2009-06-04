@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.39 2009/06/03 15:14:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.40 2009/06/04 11:52:47 alexxy Exp $
+
+*kde-env-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> +kde-env-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Drop KDE 4.2.2

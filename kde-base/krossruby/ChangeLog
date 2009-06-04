@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/krossruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.10 2009/06/03 17:06:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krossruby/ChangeLog,v 1.11 2009/06/04 13:12:02 alexxy Exp $
+
+*krossruby-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> +krossruby-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -krossruby-4.2.2.ebuild:
   Drop KDE 4.2.2

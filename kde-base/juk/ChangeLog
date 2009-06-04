@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.131 2009/06/03 18:32:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.132 2009/06/04 11:10:06 alexxy Exp $
+
+*juk-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> +juk-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking juk-3.5.10 ppc64 stable for bug 271889

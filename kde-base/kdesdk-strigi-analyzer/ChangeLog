@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-strigi-analyzer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.16 2009/06/03 15:32:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.17 2009/06/04 12:13:48 alexxy Exp $
+
+*kdesdk-strigi-analyzer-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdesdk-strigi-analyzer-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdesdk-strigi-analyzer-4.2.2.ebuild:

@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libplasmaclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.12 2009/06/03 18:09:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libplasmaclock/ChangeLog,v 1.13 2009/06/04 13:43:18 alexxy Exp $
+
+*libplasmaclock-4.2.4 (04 Jun 2009)
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +libplasmaclock-4.2.4.ebuild:
+  Version bump
 
   03 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -libplasmaclock-4.2.2.ebuild:
