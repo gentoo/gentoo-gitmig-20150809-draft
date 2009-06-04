@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0.ebuild,v 1.1 2009/03/04 17:01:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r3.ebuild,v 1.1 2009/06/04 16:07:25 matsuu Exp $
 
 inherit eutils multilib
 
 DESCRIPTION="ATOK X3 for Linux - The most famous Japanese Input Method Engine"
 HOMEPAGE="http://www.justsystems.com/jp/products/atok_linux/"
-SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${PN}up2.tar.gz"
+SRC_URI="http://www3.justsystem.co.jp/download/atok/up/lin/${PN}up2.tar.gz
+	http://www3.justsystem.co.jp/download/atok/up/lin/${PN}gtk216.tar.gz"
 
 LICENSE="ATOK X11"
 
@@ -29,6 +30,8 @@ RDEPEND="!app-i18n/atokx2
 	dev-libs/libxml2
 	media-libs/fontconfig
 	media-libs/libpng
+	sys-apps/tcp-wrappers
+	sys-libs/pam
 	x11-libs/cairo
 	>=x11-libs/gtk+-2.4.13
 	x11-libs/libICE
@@ -72,12 +75,12 @@ src_unpack() {
 		IIIMF/iiimf-protocol-lib-trunk_r3104-js*.i386.tar.gz
 		IIIMF/iiimf-server-trunk_r3104-js*.i386.tar.gz
 		IIIMF/iiimf-x-trunk_r3104-js*.i386.tar.gz
+		IIIMF/iiimf-client-lib-devel-trunk_r3104-js*.i386.tar.gz
+		IIIMF/iiimf-protocol-lib-devel-trunk_r3104-js*.i386.tar.gz
 		ATOK/atokx-20.0-*.0.0.i386.tar.gz"
-	#	IIIMF/iiimf-client-lib-devel-trunk_r3104-js*.i386.tar.gz
 	#	IIIMF/iiimf-properties-trunk_r3104-js*.i386.tar.gz
 	#	IIIMF/iiimf-docs-trunk_r3104-js*.i386.tar.gz
 	#	IIIMF/iiimf-notuse-trunk_r3104-js*.i386.tar.gz
-	#	IIIMF/iiimf-protocol-lib-devel-trunk_r3104-js*.i386.tar.gz
 
 	if use amd64 ; then
 		targets="${targets}
@@ -92,7 +95,7 @@ src_unpack() {
 
 	targets="${targets} ATOK/atokxup-20.0-*.0.0.i386.tar.gz"
 
-	unpack ${A}
+	unpack ${PN}up2.tar.gz
 
 	for i in ${targets}
 	do
@@ -107,6 +110,7 @@ src_unpack() {
 			die "${i} not found."
 		fi
 	done
+	unpack ${PN}gtk216.tar.gz
 
 	if use amd64 ; then
 		lib32="$(ABI=x86 get_libdir)"
@@ -131,6 +135,8 @@ src_install() {
 	if use amd64 ; then
 		if [ "$(ABI=x86 get_libdir)" != "$(get_libdir)" ] ; then
 			dosym /usr/$(ABI=x86 get_libdir)/iiim /usr/$(get_libdir)/iiim || die
+			dosym /usr/$(ABI=x86 get_libdir)/libiiimcf.la /usr/$(get_libdir)/libiiimcf.la || die
+			dosym /usr/$(ABI=x86 get_libdir)/libiiimp.la /usr/$(get_libdir)/libiiimp.la || die
 		fi
 	fi
 
