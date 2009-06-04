@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2739 2009/06/04 15:03:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2740 2009/06/04 18:01:00 beandog Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jun 2009; Steve Dibb <beandog@gentoo.org> package.mask:
+  Mask newer versions of ALSA that drops support for optional MIDI, which
+  will break lots of deps. bug 272659
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Drop KDE 4.2.* mask

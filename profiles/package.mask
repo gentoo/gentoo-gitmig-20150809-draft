@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9883 2009/06/04 15:03:02 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9884 2009/06/04 18:01:00 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Steve Dibb <beandog@gentoo.org> (04 Jun 2009)
+# Drop hacked support for optional MIDI in ALSA
+# Keep masked until all reverse deps are fixed
+# See bug 272659 
+>=media-libs/alsa-lib-1.0.20-r1
+>=media-sound/alsa-utils-1.0.20-r1
 
 # Serkan Kaba <serkan@gentoo.org> (01 Jun 2009)
 # Last-rited Bug #272117
