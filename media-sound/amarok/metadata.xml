@@ -25,7 +25,6 @@
       <pkg>media-libs/libmp4v2</pkg>, distributed under a
       GPL-incompatible license.
     </flag>
-    <flag name="mtp">Enable support for libMTP (Plays4Sure) devices access through libmtp</flag>
     <flag name="njb">Enable support for NJB (Creative) devices access through libnjb</flag>
     <flag name="python">
       Install the Amarok scripts written in Python, depending on
