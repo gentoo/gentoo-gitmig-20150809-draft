@@ -6,7 +6,6 @@
   <herd>gstreamer</herd>
   <use>
     <flag name="daap">Enable support for local network music sharing via daap</flag>
-    <flag name="mtp">Enable support for MTP devices</flag>
 	<flag name="brasero">Enable CD burning via <pkg>app-cdr/brasero</pkg> rather than <pkg>gnome-extra/nautilus-cd-burner</pkg></flag>
   </use>
 </pkgmetadata>
