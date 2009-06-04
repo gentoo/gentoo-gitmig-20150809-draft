@@ -1,6 +1,11 @@
 # ChangeLog for app-text/djview4
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.12 2008/11/25 05:18:43 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.13 2009/06/04 14:14:44 aballier Exp $
+
+*djview4-4.5 (04 Jun 2009)
+
+  04 Jun 2009; Alexis Ballier <aballier@gentoo.org> +djview4-4.5.ebuild:
+  version bump, by Petr Pisar <petr.pisar@atlas.cz>, bug #271469
 
   25 Nov 2008; Alexis Ballier <aballier@gentoo.org> metadata.xml:
   remove myself from metadata.xml, tex herd will be fine and it'll show that
