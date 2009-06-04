@@ -25,7 +25,6 @@
 		from various video formats to standard ones, needed to use v4l2 devices
 		with strange formats).</flag>
     <flag name="live">Enables LIVE.com support.</flag>
-    <flag name="mtp">Enables MTP devices support.</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
     <flag name="pda">Builds a GTK+ interface suitable for PDA devices.</flag>
     <flag name="pvr">Enables PVR cards access module.</flag>
