@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.11.ebuild,v 1.3 2009/05/31 14:09:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/gkrelltop-2.2.11.ebuild,v 1.4 2009/06/04 21:21:38 klausman Exp $
 
 EAPI=2
 inherit gkrellm-plugin
@@ -11,7 +11,7 @@ HOMEPAGE="http://sourceforge.net/projects/gkrelltop"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ppc ~sparc ~x86"
 IUSE="X"
 
 PLUGIN_SERVER_SO=gkrelltopd.so

@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellmms
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.57 2009/02/02 17:08:05 drizzt Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmms/ChangeLog,v 1.58 2009/06/04 21:24:24 klausman Exp $
+
+  04 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  gkrellmms-2.1.22-r1.ebuild:
+  Stable on alpha, bug #271463
 
   02 Feb 2009; <drizzt@gentoo.org> gkrellmms-2.1.22-r1.ebuild:
   New audacious does not have dbus use flag Bug #219601
