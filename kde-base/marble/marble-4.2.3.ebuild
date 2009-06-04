@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.2.3.ebuild,v 1.1 2009/05/07 00:14:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/marble-4.2.3.ebuild,v 1.2 2009/06/04 14:19:51 hwoarang Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="debug designer-plugin doc +kde gps plasma python"
 DEPEND="
 	gps? ( sci-geosciences/gpsd )
 	python? (
-		>=dev-python/PyQt4-4.4.4-r1
+		>=dev-python/PyQt4-4.4.4-r1[X,svg]
 		kde? ( >=kde-base/pykde4-${PV}:${SLOT} )
 	)
 "
