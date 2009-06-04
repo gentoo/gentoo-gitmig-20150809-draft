@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9884 2009/06/04 18:01:00 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9885 2009/06/04 18:20:41 alexxy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexey Shvetsov <alexxy@gentoo.org> (04 Jun 2009)
+# Mask kde4 printing stuff
+>=kde-base/printer-applet-4.2.4
+>=kde-base/system-config-printer-kde-4.2.4
 
 # Steve Dibb <beandog@gentoo.org> (04 Jun 2009)
 # Drop hacked support for optional MIDI in ALSA
