@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/ypbind
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.46 2009/02/24 17:25:01 drizzt Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.47 2009/06/04 05:58:07 vapier Exp $
+
+  04 Jun 2009; Mike Frysinger <vapier@gentoo.org> ypbind-1.19.1-r1.ebuild:
+  Allow portmap or rpcbind #272363 by peteru.
 
   24 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> files/ypbind.initd:
   Remove bashism in init.d file
