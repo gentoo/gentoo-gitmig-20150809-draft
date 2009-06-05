@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/snes9express
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.12 2009/02/04 16:27:22 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9express/ChangeLog,v 1.13 2009/06/05 07:43:03 tupone Exp $
+
+  05 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
+  files/snes9express-1.42-gcc43.patch:
+  Fix bug #270299 compiling with gcc-4.3 reported by Mike Park
 
   04 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/snes9express-1.42-as-needed.patch, snes9express-1.42.ebuild:

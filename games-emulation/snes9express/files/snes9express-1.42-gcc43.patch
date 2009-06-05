@@ -43,3 +43,13 @@
  #include <dirent.h>
  #include <sys/types.h>
  #include <sys/stat.h>
+--- frend.h.old	2009-06-05 09:39:39.000000000 +0200
++++ frend.h	2009-06-05 09:40:02.000000000 +0200
+@@ -10,6 +10,7 @@
+ # include <map>
+ # include <vector>
+ # include <algorithm>
++# include <climits>
+ 
+ # include "config.h"
+ 
