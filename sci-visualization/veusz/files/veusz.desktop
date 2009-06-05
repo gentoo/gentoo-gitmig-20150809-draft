@@ -2,7 +2,7 @@
 Name=Veusz
 GenericName=Veusz scientific plotting
 Comment=For graphing and manipulation of scientific data
-MimeType=application/x-veusz
+MimeType=application/x-veusz;
 Exec=veusz %F
 Icon=veusz
 Terminal=false
