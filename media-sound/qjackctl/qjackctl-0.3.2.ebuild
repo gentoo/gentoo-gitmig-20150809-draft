@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.2.ebuild,v 1.6 2008/07/27 01:08:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.2.ebuild,v 1.7 2009/06/05 18:13:23 ssuominen Exp $
 
 EAPI=1
 
@@ -16,12 +16,13 @@ KEYWORDS="amd64 ppc sparc x86"
 
 IUSE="alsa debug"
 
-DEPEND="alsa? ( media-libs/alsa-lib )
+RDEPEND="alsa? ( media-libs/alsa-lib )
 	|| ( (
 			x11-libs/qt-core:4
 			x11-libs/qt-gui:4
 		) =x11-libs/qt-4.3*:4 )
 	media-sound/jack-audio-connection-kit"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
