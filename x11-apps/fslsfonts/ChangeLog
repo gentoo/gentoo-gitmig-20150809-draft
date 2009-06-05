@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/fslsfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/fslsfonts/ChangeLog,v 1.20 2009/05/20 13:49:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/fslsfonts/ChangeLog,v 1.21 2009/06/05 17:15:07 tcunha Exp $
+
+  05 Jun 2009; Tiago Cunha <tcunha@gentoo.org> fslsfonts-1.0.2.ebuild:
+  stable sparc, bug 268581
 
   20 May 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking fslsfonts-1.0.2 ppc64 stable for bug 268581
