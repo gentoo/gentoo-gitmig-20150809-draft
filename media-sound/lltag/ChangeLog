@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lltag
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.16 2007/12/16 13:41:17 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/ChangeLog,v 1.17 2009/06/05 16:28:15 ssuominen Exp $
+
+  05 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> lltag-0.14.2.ebuild,
+  +files/lltag-0.14.2-manpage.patch:
+  Apply a manpage patch wrt #272732, thanks to Vladimir <v_2e at ukr.net>.
 
 *lltag-0.14.2 (16 Dec 2007)
 
