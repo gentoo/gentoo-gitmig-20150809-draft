@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.7 2009/06/04 12:47:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.8 2009/06/05 15:08:07 fmccor Exp $
+
+  05 Jun 2009; Ferris McCormick <fmccor@gentoo.org> libffi-0.ebuild:
+  Sparc stable, part of Bug #272675.
 
   04 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> libffi-0.ebuild:
   Keyword ~ppc/~ppc64 wrt #272046, thanks to Luca Barbato for testing.
