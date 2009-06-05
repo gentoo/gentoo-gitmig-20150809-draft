@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.38.ebuild,v 1.1 2009/04/26 20:51:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/libopensync-0.38.ebuild,v 1.2 2009/06/05 11:42:55 scarabeus Exp $
 
 inherit cmake-utils eutils
 
@@ -25,27 +25,27 @@ RDEPEND=">=dev-db/sqlite-3
 
 DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-1.3.17 )
-	>=dev-util/cmake-2.4.7
 	>=dev-util/pkgconfig-0.9.0
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
-	unpack $A
-	cd $PN-$PV
+	unpack ${A}
+	cd "${S}"
 	epatch "$FILESDIR/libopensync-py2.6.patch"
 }
 
 src_compile() {
 	local mycmakeargs
-	mycmakeargs="${mycmakeargs} -DCMAKE_SKIP_RPATH=ON"
-	mycmakeargs="${mycmakeargs} -DOPENSYNC_TRACE=$(use debug && echo ON || echo OFF)"
-	mycmakeargs="${mycmakeargs} -DOPENSYNC_DEBUG_MODULES=$(use debug && echo ON || echo OFF)"
-	mycmakeargs="${mycmakeargs} -DOPENSYNC_PYTHONBINDINGS=$(use python && echo ON || echo OFF)"
-	mycmakeargs="${mycmakeargs} -DBUILD_DOCUMENTATION=$(use doc && echo ON || echo OFF)"
+	mycmakeargs="${mycmakeargs} -DCMAKE_SKIP_RPATH=ON
+		$(cmake-utils_use debug OPENSYNC_TRACE)
+		$(cmake-utils_use debug OPENSYNC_DEBUG_MODULES)
+		$(cmake-utils_use python OPENSYNC_PYTHONBINDINGS)
+		$(cmake-utils_use_build doc DOCUMENTATION)
+	"
 	cmake-utils_src_compile
 
 	if use doc ; then
-		cd "${WORKDIR}/${PN}_build"
+		cd "${CMAKE_BUILD_DIR}"
 		doxygen Doxyfile || die "Failed to generate docs."
 	fi
 }
@@ -53,9 +53,9 @@ src_compile() {
 src_test() {
 	echo ">>> Test phase [test]: ${CATEGORY}/${PF}"
 
-	pushd "${WORKDIR}/${PN}_build" > /dev/null
+	pushd "${CMAKE_BUILD_DIR}" > /dev/null
 
-	if ! LD_LIBRARY_PATH="${WORKDIR}/${PN}_build/opensync/" emake -j1 test ; then
+	if ! LD_LIBRARY_PATH="${CMAKE_BUILD_DIR}/opensync/" emake -j1 test ; then
 		die "Make test failed. See above for details."
 	fi
 
@@ -66,7 +66,7 @@ src_install() {
 	cmake-utils_src_install
 
 	if use doc ; then
-		cd "${WORKDIR}/${PN}_build"
+		cd "${CMAKE_BUILD_DIR}"
 		dohtml docs/html/* || die "Failed to install docs."
 	fi
 }

@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libopensync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.31 2009/05/31 20:22:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync/ChangeLog,v 1.32 2009/06/05 11:42:55 scarabeus Exp $
+
+  05 Jun 2009; Tomas Chvatal <scarabeus@gentoo.org> libopensync-0.35.ebuild,
+  libopensync-0.36.ebuild, libopensync-0.36-r1.ebuild,
+  libopensync-0.38.ebuild, libopensync-9999.ebuild:
+  Adjust cmake build system to actualy work. Per bug #269639.
 
   31 May 2009; nixnut <nixnut@gentoo.org> libopensync-0.36-r1.ebuild:
   reverting to ~ppc
