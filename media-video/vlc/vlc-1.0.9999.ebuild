@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.2 2009/05/27 05:27:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.3 2009/06/05 10:04:27 aballier Exp $
 
 EAPI="1"
 
@@ -261,7 +261,7 @@ src_compile () {
 		$(use_enable dvb) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable fbcon fb) \
-		$(use_enable ffmpeg avcodec) $(use_enable ffmpeg avformat) $(use_enable ffmpeg swscale) --disable-imgresample $(use_enable ffmpeg postproc) \
+		$(use_enable ffmpeg avcodec) $(use_enable ffmpeg avformat) $(use_enable ffmpeg swscale) $(use_enable ffmpeg postproc) \
 		$(use_enable flac) \
 		$(use_enable fluidsynth) \
 		$(use_enable fontconfig) \
