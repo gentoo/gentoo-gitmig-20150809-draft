@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r2.ebuild,v 1.1 2009/03/05 03:19:23 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r2.ebuild,v 1.2 2009/06/05 16:17:52 ssuominen Exp $
 
+EAPI=2
 inherit eutils flag-o-matic toolchain-funcs libtool
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="nls vorbis"
 
-RDEPEND=">=x11-libs/gtk+-2.2
+RDEPEND=">=x11-libs/gtk+-2.2:2
 	x11-libs/vte
 	media-sound/lame
 	media-sound/cdparanoia
@@ -27,17 +28,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	# Fix for incompatible implicit declaration of built-in function ‘strlen’.
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-implicit-declaration.patch
-
-	# Required for FreeBSD (do not remove)
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	# Bug #69536
 	[[ $(tc-arch) == "x86" ]] && append-flags "-mno-sse"
 
@@ -45,11 +41,10 @@ src_compile() {
 
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable nls) || die "./configure failed"
-	emake || die "emake failed."
+		$(use_enable nls)
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS CREDITS ChangeLog README TODO
 }
