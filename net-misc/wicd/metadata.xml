@@ -9,5 +9,7 @@
 	<flag name='ioctl'>Installs additional python libraries to use as a backend.
 	This will improve speed but is experimental.</flag>
 	<flag name='ncurses'>Installs a ncurses UI</flag>
+	<flag name='pm-utils'>Installs the pm-utils hooks for suspend/resume and
+		requires <pkg>sys-power/pm-utils</pkg></flag>
 </use>
 </pkgmetadata>
