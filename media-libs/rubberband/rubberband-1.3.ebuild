@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.3.ebuild,v 1.1 2009/03/16 21:01:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/rubberband-1.3.ebuild,v 1.2 2009/06/05 22:04:53 ssuominen Exp $
 
+EAPI=2
 inherit eutils multilib
 
 DESCRIPTION="An audio time-stretching and pitch-shifting library and utility program"
@@ -21,6 +22,10 @@ RDEPEND="media-libs/vamp-plugin-sdk
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
+
 src_install() {
 	emake INSTALL_BINDIR="${D}/usr/bin" \
 		INSTALL_INCDIR="${D}/usr/include/rubberband" \
@@ -29,6 +34,6 @@ src_install() {
 		INSTALL_LADSPADIR="${D}/usr/$(get_libdir)/ladspa" \
 		INSTALL_LRDFDIR="${D}/usr/share/ladspa/rdf" \
 		INSTALL_PKGDIR="${D}/usr/$(get_libdir)/pkgconfig" \
-		install || die "make install failed"
+		install || die "emake install failed"
 	dodoc README
 }
