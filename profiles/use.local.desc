@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4529 2009/06/05 15:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4530 2009/06/05 17:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1304,7 +1304,7 @@ media-fonts/terminus-font:bolddiag - Boldified diagonal parts of '4', 'k', 'x' a
 media-fonts/terminus-font:pcf - Intall Portable Compiled Font (PCF) (required for X11)
 media-fonts/terminus-font:psf - Install PC Screen Font (PSF) with unicode data (for linux console)
 media-fonts/terminus-font:quote - Changes view of quotes: symmetric ` and ' instead of asymmetric one (see homepage)
-media-fonts/terminus-font:raw - Install RAW font data which should be compatible with most UNIX systems (you don't need this on linux)
+media-fonts/terminus-font:raw-font-data - Install RAW font data which should be compatible with most UNIX systems (you don't need this on linux)
 media-fonts/terminus-font:ru-dv - Changes view of Russian letters 'de' and 've' (see homepage)
 media-fonts/terminus-font:ru-g - Changes view of Russian letter 'ge' (see homepage)
 media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like Latin u, but like "mirrored" N (see homepage)
