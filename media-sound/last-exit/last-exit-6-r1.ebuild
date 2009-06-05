@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-6-r1.ebuild,v 1.4 2009/05/12 07:33:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/last-exit/last-exit-6-r1.ebuild,v 1.5 2009/06/05 11:00:40 ssuominen Exp $
 
 EAPI=2
-
+GCONF_DEBUG=no
 inherit mono gnome2 eutils autotools
 
 DESCRIPTION="Gnome/GTK+ alternative to the last.fm player"
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2
-	>=x11-libs/gtk+-2.6
+	>=x11-libs/gtk+-2.6:2
 	>=media-libs/gstreamer-0.10
 	>=media-libs/gst-plugins-base-0.10
 	>=media-plugins/gst-plugins-mad-0.10
@@ -39,8 +39,8 @@ pkg_setup() {
 	G2CONF="${G2CONF} --disable-schemas-install"
 }
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 	epatch "${FILESDIR}"/${PN}-notify-sharp.patch \
 		"${FILESDIR}"/${P}-es.patch
 	eautoreconf
