@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.12 2009/06/04 13:32:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.13 2009/06/05 07:30:25 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *kwalletd-4.2.4 (04 Jun 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.34 2009/06/04 14:19:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.35 2009/06/05 07:42:52 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
   04 Jun 2009; Markos Chandras <hwoarang@gentoo.org> marble-4.2.3.ebuild,
   marble-4.2.4.ebuild:

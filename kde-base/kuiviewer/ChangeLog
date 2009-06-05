@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kuiviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.100 2009/06/04 13:30:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kuiviewer/ChangeLog,v 1.101 2009/06/05 07:28:57 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kuiviewer-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kuiviewer-4.2.4 (04 Jun 2009)
 

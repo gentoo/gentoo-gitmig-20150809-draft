@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktimezoned
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimezoned/ChangeLog,v 1.27 2009/06/04 13:25:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimezoned/ChangeLog,v 1.28 2009/06/05 07:24:28 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *ktimezoned-4.2.4 (04 Jun 2009)
 

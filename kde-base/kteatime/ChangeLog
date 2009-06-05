@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.112 2009/06/04 13:24:15 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.113 2009/06/05 07:23:13 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kteatime-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kteatime-4.2.4 (04 Jun 2009)
 

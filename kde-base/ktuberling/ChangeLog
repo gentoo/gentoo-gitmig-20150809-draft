@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.113 2009/06/04 13:27:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.114 2009/06/05 07:26:22 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ktuberling-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *ktuberling-4.2.4 (04 Jun 2009)
 

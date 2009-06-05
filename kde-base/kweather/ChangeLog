@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kweather
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.117 2009/06/04 13:32:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/ChangeLog,v 1.118 2009/06/05 07:30:51 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kweather-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kweather-4.2.4 (04 Jun 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.115 2009/06/04 13:56:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.116 2009/06/05 07:52:04 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> umbrello-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *umbrello-4.2.4 (04 Jun 2009)
 
