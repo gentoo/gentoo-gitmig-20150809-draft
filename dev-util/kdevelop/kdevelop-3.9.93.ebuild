@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.93.ebuild,v 1.1 2009/06/04 20:45:30 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.9.93.ebuild,v 1.2 2009/06/05 12:55:30 tampakrap Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ DEPEND="
 	>=dev-util/kdevplatform-${KDEVPLATFORM_PV}
 	>=kde-base/ksysguard-${KDE_MINIMAL}
 	>=x11-libs/qt-assistant-4.4:4
+	>=kde-base/libkworkspace-${KDE_MINIMAL}
 "
 RDEPEND="${DEPEND}
 	>=kde-base/kapptemplate-${KDE_MINIMAL}
