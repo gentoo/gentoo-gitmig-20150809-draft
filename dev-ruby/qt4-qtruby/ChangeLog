@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/qt4-qtruby
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.16 2008/05/26 11:20:21 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/qt4-qtruby/ChangeLog,v 1.17 2009/06/05 18:37:23 graaff Exp $
+
+  05 Jun 2009; Hans de Graaff <graaff@gentoo.org> -qt4-qtruby-1.4.7.ebuild,
+  -qt4-qtruby-1.4.8.ebuild:
+  Remove old versions.
 
   26 May 2008; Samuli Suominen <drac@gentoo.org> qt4-qtruby-1.4.8.ebuild,
   -qt4-qtruby-1.4.9.ebuild, -qt4-qtruby-1.4.9-r1.ebuild,
