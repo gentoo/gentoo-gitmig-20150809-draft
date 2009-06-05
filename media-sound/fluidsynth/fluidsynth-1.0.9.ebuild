@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.9.ebuild,v 1.2 2009/04/20 22:10:40 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.9.ebuild,v 1.3 2009/06/05 11:06:19 ssuominen Exp $
 
 EAPI=2
-
 inherit flag-o-matic eutils libtool autotools
 
 IUSE="alsa debug jack ladspa lash oss portaudio pulseaudio readline"
@@ -16,16 +15,17 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
-DEPEND="jack? ( media-sound/jack-audio-connection-kit )
+RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( >=media-libs/ladspa-sdk-1.12
-			  >=media-libs/ladspa-cmt-1.15 )
+		  >=media-libs/ladspa-cmt-1.15 )
 	alsa? ( media-libs/alsa-lib[midi]
-			lash? ( >=media-sound/lash-0.5 ) )
+		lash? ( >=media-sound/lash-0.5 ) )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
 	portaudio? ( >=media-libs/portaudio-19_pre )
 	readline? ( sys-libs/readline )"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${P/7a/7}"
+S=${WORKDIR}/${P/7a/7}
 
 # Alsa is required for lash support in this package.
 pkg_setup() {
