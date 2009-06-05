@@ -1,10 +1,11 @@
 # ChangeLog for net-im/ejabberd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.64 2009/06/05 12:56:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ejabberd/ChangeLog,v 1.65 2009/06/05 13:00:56 pva Exp $
 
   05 Jun 2009; Peter Volkov <pva@gentoo.org> +ejabberd-2.0.5.ebuild,
   +ejabberd-2.0.5-r1.ebuild:
-  Revert recent stable versions back, added <erlang-13 dependency too.
+  Revert recent stable versions back, bug #271321, thank Marat Radchenko for
+  report. Added <erlang-13 dependency too, bug #267524.
 
 *ejabberd-2.0.5-r3 (03 Jun 2009)
 
