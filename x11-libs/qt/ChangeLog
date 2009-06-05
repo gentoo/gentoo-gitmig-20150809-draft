@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.581 2009/06/03 21:46:47 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.582 2009/06/05 10:32:43 yngwin Exp $
+
+  05 Jun 2009; Ben de Groot <yngwin@gentoo.org> qt-4.5.1.ebuild:
+  Specify !kde for qt-phonon dep
 
   03 Jun 2009; Ben de Groot <yngwin@gentoo.org> qt-4.5.1.ebuild,
   metadata.xml:

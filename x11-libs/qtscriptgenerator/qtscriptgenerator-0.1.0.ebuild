@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.3 2009/05/29 23:29:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.4 2009/06/05 10:37:26 yngwin Exp $
 
 EAPI="2"
 
@@ -22,10 +22,10 @@ DEPEND="
 	x11-libs/qt-dbus:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-opengl:4
-	|| (
+	!kde? ( || (
 		x11-libs/qt-phonon:4
 		media-sound/phonon
-	)
+	) )
 	kde? ( media-sound/phonon )
 	x11-libs/qt-script:4
 	x11-libs/qt-sql:4
