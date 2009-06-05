@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/amarok-utils-2.1.ebuild,v 1.2 2009/06/04 19:43:32 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/amarok-utils-2.1.ebuild,v 1.3 2009/06/05 11:46:13 tampakrap Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ KMMODULE="amarok"
 KDE_REQUIRED="never"
 inherit kde4-base
 
-DESCRIPTION="Variuos utility programs for Amarok."
+DESCRIPTION="Various utility programs for Amarok."
 HOMEPAGE="http://amarok.kde.org/"
 SRC_URI="mirror://kde/stable/${PN/-utils/}/${PV}/src/${P/-utils/}.tar.bz2"
 

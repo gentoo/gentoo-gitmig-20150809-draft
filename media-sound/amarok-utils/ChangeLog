@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/ChangeLog,v 1.2 2009/06/04 19:43:32 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok-utils/ChangeLog,v 1.3 2009/06/05 11:46:13 tampakrap Exp $
+
+  05 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  amarok-utils-2.1.ebuild:
+  Fix typo in description
 
   04 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   amarok-utils-2.1.ebuild:
