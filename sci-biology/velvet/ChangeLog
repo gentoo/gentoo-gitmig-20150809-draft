@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/velvet
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/ChangeLog,v 1.1 2009/06/05 10:06:43 weaver Exp $
+
+*velvet-0.7.31 (05 Jun 2009)
+
+  05 Jun 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +velvet-0.7.31.ebuild:
+  New package, ebuild written by me
+
