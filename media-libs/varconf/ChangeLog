@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/varconf
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.28 2009/01/23 17:10:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.29 2009/06/05 12:59:18 tupone Exp $
+
+*varconf-0.6.6 (05 Jun 2009)
+
+  05 Jun 2009; Alfredo Tupone <tupone@gentoo.org> +varconf-0.6.6.ebuild:
+  Version bump to 0.6.6
 
   23 Jan 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   stable ppc, bug 254834
