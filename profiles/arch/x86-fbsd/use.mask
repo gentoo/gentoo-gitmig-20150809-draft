@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/use.mask,v 1.1 2009/01/19 21:55:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/use.mask,v 1.2 2009/06/05 09:44:10 aballier Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -x86-fbsd
@@ -27,3 +27,6 @@
 
 # Diablo Latte and Caffe (JRE and JDK) works here
 -java
+
+# No pulseaudio version is keyworded; unmask when it works
+pulseaudio
