@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.18 2009/03/15 18:41:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.19 2009/06/05 15:46:09 loki_val Exp $
+
+  05 Jun 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
+  Retiring, bug 220219.
 
   15 Mar 2009; Raúl Porcel <armin76@gentoo.org> unicode-data-5.1.0.ebuild:
   arm/ia64/s390/sh stable wrt #261824
