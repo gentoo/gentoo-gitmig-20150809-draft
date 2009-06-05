@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.2 2009/04/06 11:40:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.3 2009/06/05 17:50:28 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/kdiff3/${P}.tar.gz"
 SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="debug htmlhandbook"
+IUSE="debug handbook"
 
 RDEPEND=">=kde-base/libkonq-${KDE_MINIMAL}
 	sys-apps/diffutils
@@ -23,7 +23,7 @@ RDEPEND=">=kde-base/libkonq-${KDE_MINIMAL}
 
 src_prepare() {
 	# fix handbook
-	if ! use htmlhandbook; then
+	if ! use handbook; then
 		sed -i \
 			-e "/add_subdirectory(doc)*$/ s/^#DONOTWANT //" \
 			"${S}"/CMakeLists.txt || die "removing docs failed"
