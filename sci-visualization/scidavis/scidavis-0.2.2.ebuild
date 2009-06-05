@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.2.ebuild,v 1.1 2009/06/01 12:50:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.2.ebuild,v 1.2 2009/06/05 17:37:31 grozin Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime
@@ -33,7 +33,7 @@ DEPEND="${CDEPEND}
 	python? ( >=dev-python/sip-4.7 )"
 
 RDEPEND="${CDEPEND}
-	python? ( >=dev-python/PyQt4-4.4
+	python? ( >=dev-python/PyQt4-4.4[X]
 		dev-python/pygsl
 		sci-libs/scipy )"
 
