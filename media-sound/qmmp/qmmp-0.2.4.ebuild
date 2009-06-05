@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.4.ebuild,v 1.1 2009/04/07 14:29:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.2.4.ebuild,v 1.2 2009/06/05 11:02:41 yngwin Exp $
 
 EAPI="2"
 
@@ -18,13 +18,13 @@ IUSE="+alsa +dbus ffmpeg flac jack libsamplerate +mad modplug musepack oss
 
 RDEPEND="x11-libs/qt-gui:4
 	media-libs/taglib
-	media-sound/musepack-tools
 	alsa? ( media-libs/alsa-lib )
 	dbus? ( sys-apps/dbus )
 	flac? ( media-libs/flac )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
-	musepack? ( >=media-libs/libmpcdec-1.2.5 )
+	musepack? ( >=media-libs/libmpcdec-1.2.5
+		media-sound/musepack-tools )
 	modplug? ( >=media-libs/libmodplug-0.8.4 )
 	vorbis? ( media-libs/libvorbis
 		media-libs/libogg )
