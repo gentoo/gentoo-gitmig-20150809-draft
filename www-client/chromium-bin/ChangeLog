@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.5 2009/06/04 13:32:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.6 2009/06/05 09:21:03 voyageur Exp $
+
+  05 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-bin-9999.ebuild:
+  Fix permissions (as this was done by unpack() before)
 
   04 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-bin-9999.ebuild:
