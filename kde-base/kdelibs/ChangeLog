@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.603 2009/06/04 23:38:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.604 2009/06/05 17:24:44 scarabeus Exp $
+
+  05 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> kdelibs-4.2.4.ebuild:
+  Add back x11h patch for 4.2.4. Wrongly removed.
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kdelibs-4.2.4.ebuild:
   Fix accidently added keywords

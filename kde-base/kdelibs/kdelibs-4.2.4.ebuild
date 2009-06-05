@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4.ebuild,v 1.2 2009/06/04 23:38:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4.ebuild,v 1.3 2009/06/05 17:24:44 scarabeus Exp $
 
 EAPI="2"
 
@@ -109,11 +109,11 @@ PDEPEND="
 "
 
 # upstream patches / dist patches
-# systemsettings title issue
 PATCHES=(
 	"${FILESDIR}/dist/09_disable_debug_messages_if_not_explicitly_enabled.patch"
 	"${FILESDIR}/dist/20_use_dejavu_as_default_font.patch"
 	"${FILESDIR}/dist/23_solid_no_double_build.patch"
+	"${FILESDIR}/kdelibs-4.2-fixx11h.h.patch"
 )
 
 src_prepare() {
