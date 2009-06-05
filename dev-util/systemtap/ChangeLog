@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/systemtap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.78 2009/05/20 18:00:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/ChangeLog,v 1.79 2009/06/05 19:56:10 swegener Exp $
+
+  05 Jun 2009; Sven Wegener <swegener@gentoo.org> systemtap-0.7.ebuild,
+  systemtap-0.8.ebuild, systemtap-0.9.5.ebuild, systemtap-0.9.7.ebuild:
+  Lower kprobe CONFIG_CHECK to warning, we can build without it being
+  enabled, but we require it at runtime.
 
 *systemtap-0.9.7 (20 May 2009)
 

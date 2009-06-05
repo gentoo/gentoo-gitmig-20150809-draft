@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.9.5.ebuild,v 1.4 2009/03/29 09:42:32 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.9.5.ebuild,v 1.5 2009/06/05 19:56:10 swegener Exp $
 
 inherit linux-info eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=dev-libs/elfutils-0.131
 RDEPEND="${DEPEND}
 	virtual/linux-sources"
 
-CONFIG_CHECK="KPROBES ~RELAY ~DEBUG_FS"
+CONFIG_CHECK="~KPROBES ~RELAY ~DEBUG_FS"
 ERROR_KPROBES="${PN} requires support for KProbes Instrumentation (KPROBES) - this can be enabled in 'Instrumentation Support -> Kprobes'."
 ERROR_RELAY="${PN} works with support for user space relay support (RELAY) - this can be enabled in 'General setup -> Kernel->user space relay support (formerly relayfs)'."
 ERROR_DEBUG_FS="${PN} works best with support for Debug Filesystem (DEBUG_FS) - this can be enabled in 'Kernel hacking -> Debug Filesystem'."
