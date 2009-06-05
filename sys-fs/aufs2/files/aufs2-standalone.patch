@@ -1,14 +1,5 @@
 aufs2 standalone patch for linux-2.6.28
 
-diff --git a/fs/Makefile b/fs/Makefile
-index d9f8afe..1f206a2 100644
---- a/fs/Makefile
-+++ b/fs/Makefile
-@@ -122,3 +122,4 @@ obj-$(CONFIG_HPPFS)		+= hppfs/
- obj-$(CONFIG_DEBUG_FS)		+= debugfs/
- obj-$(CONFIG_OCFS2_FS)		+= ocfs2/
- obj-$(CONFIG_GFS2_FS)           += gfs2/
-+obj-$(CONFIG_AUFS_FS)           += aufs/
 diff --git a/fs/namei.c b/fs/namei.c
 index d34e0f9..2779304 100644
 --- a/fs/namei.c
@@ -140,18 +131,6 @@ index 2967562..34040d6 100644
  
  static long __do_fsync(unsigned int fd, int datasync)
  {
-diff --git a/include/linux/Kbuild b/include/linux/Kbuild
-index e531783..14ecb7c 100644
---- a/include/linux/Kbuild
-+++ b/include/linux/Kbuild
-@@ -34,6 +34,7 @@ header-y += atmppp.h
- header-y += atmsap.h
- header-y += atmsvc.h
- header-y += atm_zatm.h
-+header-y += aufs_type.h
- header-y += auto_fs4.h
- header-y += ax25.h
- header-y += b1lli.h
 diff --git a/include/linux/lockdep.h b/include/linux/lockdep.h
 index 29aec6e..dfcb13b 100644
 --- a/include/linux/lockdep.h

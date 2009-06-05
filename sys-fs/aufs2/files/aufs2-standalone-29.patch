@@ -1,14 +1,5 @@
 aufs2 standalone patch for linux-2.6.29
 
-diff --git a/fs/Makefile b/fs/Makefile
-index dc20db3..a4e9a65 100644
---- a/fs/Makefile
-+++ b/fs/Makefile
-@@ -124,3 +124,4 @@ obj-$(CONFIG_DEBUG_FS)		+= debugfs/
- obj-$(CONFIG_OCFS2_FS)		+= ocfs2/
- obj-$(CONFIG_BTRFS_FS)		+= btrfs/
- obj-$(CONFIG_GFS2_FS)           += gfs2/
-+obj-$(CONFIG_AUFS_FS)           += aufs/
 diff --git a/fs/namei.c b/fs/namei.c
 index bbc15c2..e54d1b2 100644
 --- a/fs/namei.c
@@ -128,18 +119,6 @@ index 6ce5014..af66b69 100644
  
  /**
   *	generic_shutdown_super	-	common helper for ->kill_sb()
-diff --git a/include/linux/Kbuild b/include/linux/Kbuild
-index 106c3ba..d0c7262 100644
---- a/include/linux/Kbuild
-+++ b/include/linux/Kbuild
-@@ -34,6 +34,7 @@ header-y += atmppp.h
- header-y += atmsap.h
- header-y += atmsvc.h
- header-y += atm_zatm.h
-+header-y += aufs_type.h
- header-y += auto_fs4.h
- header-y += ax25.h
- header-y += b1lli.h
 diff --git a/include/linux/lockdep.h b/include/linux/lockdep.h
 index 23bf02f..49e5b47 100644
 --- a/include/linux/lockdep.h
