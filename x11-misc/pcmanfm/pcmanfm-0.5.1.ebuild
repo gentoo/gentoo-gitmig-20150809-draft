@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.1.ebuild,v 1.1 2009/06/05 01:34:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.1.ebuild,v 1.2 2009/06/05 10:54:30 yngwin Exp $
 
 EAPI="2"
-inherit eutils fdo-mime
+inherit autotools eutils fdo-mime
 
 DESCRIPTION="Extremely fast and lightweight tabbed file manager"
 HOMEPAGE="http://pcmanfm.sourceforge.net/"

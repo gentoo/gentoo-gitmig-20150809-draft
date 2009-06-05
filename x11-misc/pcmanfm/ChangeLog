@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.3 2009/06/05 01:34:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.4 2009/06/05 10:54:30 yngwin Exp $
+
+  05 Jun 2009; Ben de Groot <yngwin@gentoo.org> pcmanfm-0.5.1.ebuild:
+  Don't forget to inherit autotools... bug 272729
 
 *pcmanfm-0.5.1 (05 Jun 2009)
 
