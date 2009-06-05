@@ -1,20 +1,23 @@
 # ChangeLog for media-libs/FusionSound
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.3 2008/04/15 14:51:43 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/FusionSound/ChangeLog,v 1.4 2009/06/05 21:27:06 ssuominen Exp $
 
-  15 Apr 2008; Samuli Suominen <drac@gentoo.org> -FusionSound-1.0.0.ebuild,
-  FusionSound-1.1.1.ebuild:
-  Remove old. QAbaddep fix for current.
+  05 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  FusionSound-1.1.1.ebuild, +files/FusionSound-1.1.1-ffmpeg.patch,
+  +files/FusionSound-1.1.1-gcc43.patch:
+  Fix automagic deps like alsa, cddb, ffmpeg, mad, timidity and vorbis. Fix
+  ffmpeg compability wrt #238718, thanks to Victor Ostorga. Fix building
+  with GCC 4.3 wrt #238718, thanks to Tupone Alfredo.
 
 *FusionSound-1.1.1 (19 Mar 2008)
 
   19 Mar 2008; Joerg Bornkessel <hd_brummy@gentoo.org>
   +FusionSound-1.1.1.ebuild:
-  version bump; bug 205833
+  Version bump wrt #205833.
 
 *FusionSound-1.0.0 (24 Aug 2007)
 
   24 Aug 2007; Joerg Bornkessel <hd_brummy@gentoo.org> +metadata.xml,
   +FusionSound-1.0.0.ebuild:
-  initial ebuild
+  Initial ebuild.
 
