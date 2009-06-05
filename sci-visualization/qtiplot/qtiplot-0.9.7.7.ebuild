@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.3 2009/05/18 21:21:43 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.4 2009/06/05 17:29:44 grozin Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -40,7 +40,7 @@ DEPEND="${CDEPEND}
 
 RDEPEND="${CDEPEND}
 	python? ( >=dev-lang/python-2.5
-		dev-python/PyQt4
+		dev-python/PyQt4[X]
 		dev-python/pygsl
 		sci-libs/scipy )"
 

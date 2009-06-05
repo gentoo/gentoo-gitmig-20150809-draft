@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.43 2009/05/18 21:21:43 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.44 2009/06/05 17:29:44 grozin Exp $
+
+  05 Jun 2009; Andrey Grozin <grozin@gentoo.org> qtiplot-0.9.7.7.ebuild:
+  USE-deps on PyQt4 fixed (bug #272182)
 
   18 May 2009; Andrey Grozin <grozin@gentoo.org> qtiplot-0.9.7.7.ebuild:
   Fixed missing dependency on qt-opengl (bug #270339)
