@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.3 2008/12/15 01:45:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-5.4.ebuild,v 1.4 2009/06/05 16:10:10 ssuominen Exp $
 
-EAPI="1"
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Program for printing music scores"
@@ -23,19 +23,17 @@ RDEPEND="x11-libs/libX11
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch
 }
 
 src_compile() {
 	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" CXXFLAGS="${CXXFLAGS}" \
-		CFLAGS="${CFLAGS}" || die "emake failed."
+		CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc docs/{*.txt,README0}
 	dohtml docs/{*.html,uguide/*}
 	docinto sample
