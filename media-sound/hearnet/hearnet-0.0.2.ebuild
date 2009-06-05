@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/hearnet-0.0.2.ebuild,v 1.9 2008/12/19 15:29:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hearnet/hearnet-0.0.2.ebuild,v 1.10 2009/06/05 10:46:00 ssuominen Exp $
 
 IUSE=""
 
@@ -21,8 +21,7 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	sed -i 's!grain.raw!/usr/share/hearnet/grain.raw!' hearnet.c
 }
 
@@ -36,5 +35,5 @@ src_install () {
 	dodir /usr/share/hearnet
 	insinto /usr/share/hearnet && doins grain.raw
 
-	dodoc ChangeLog LICENSE README TODO
+	dodoc ChangeLog README TODO
 }
