@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.144 2009/05/15 21:13:03 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.145 2009/06/05 01:03:09 yngwin Exp $
+
+*avidemux-2.4.4-r2 (05 Jun 2009)
+
+  05 Jun 2009; Ben de Groot <yngwin@gentoo.org> +avidemux-2.4.4-r2.ebuild:
+  Drop arts support (bug 270575). Always depend on libX11 (bug 257019).
+  Install translations into the right path (bug 272258). Drop die on distcc
+  (bug 261996).
 
   15 May 2009; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.4.ebuild,
   avidemux-2.4.4-r1.ebuild, +files/avidemux-2.4.4-gcc-4.4.patch:
