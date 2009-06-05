@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.82 2009/05/16 18:58:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.83 2009/06/05 20:58:42 yngwin Exp $
+
+*eric-4.3.4 (05 Jun 2009)
+
+  05 Jun 2009; Ben de Groot <yngwin@gentoo.org> -eric-3.7.2-r1.ebuild,
+  -eric-3.9.5.ebuild, -eric-4.0.4.ebuild, -eric-4.2.5.ebuild,
+  -eric-4.3.2.ebuild, +eric-4.3.4.ebuild:
+  Version bump. Remove old versions.
 
   16 May 2009; nixnut <nixnut@gentoo.org> eric-4.3.1.ebuild:
   ppc stable #267331

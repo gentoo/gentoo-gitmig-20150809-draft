@@ -3,7 +3,4 @@
 <pkgmetadata>
   <herd>qt</herd>
   <herd>python</herd>
-  <use>
-    <flag name="idl">Enable omniorb support</flag>
-  </use>
 </pkgmetadata>
