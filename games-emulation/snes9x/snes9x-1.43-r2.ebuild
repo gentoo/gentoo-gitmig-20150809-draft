@@ -1,12 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r2.ebuild,v 1.4 2007/10/09 14:40:41 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/snes9x/snes9x-1.43-r2.ebuild,v 1.5 2009/06/05 07:13:58 tupone Exp $
 
 # 3dfx support (glide) is disabled because it requires
 # glide-v2 while we only provide glide-v3 in portage
 # http://bugs.gentoo.org/show_bug.cgi?id=93097
 
-WANT_AUTOCONF=latest
 inherit autotools eutils flag-o-matic multilib games
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
@@ -47,6 +46,7 @@ src_unpack() {
 		"${FILESDIR}"/${P}-key-bindings-fix.patch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-gcc412.patch \
+		"${FILESDIR}"/${P}-gcc440.patch \
 		"${FILESDIR}"/${P}-config.patch
 
 	sed -i \
@@ -90,7 +90,6 @@ src_compile() {
 			$(use_with joystick) \
 			$(use_with debug debugger) \
 			$(use_with zlib) \
-			--with-screenshot \
 			$(use_with dga extensions) \
 			|| die
 		# Makefile doesnt quite support parallel builds
