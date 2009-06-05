@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/engauge
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/engauge/ChangeLog,v 1.1 2009/06/05 22:39:35 calchan Exp $
+
+*engauge-4.1 (05 Jun 2009)
+
+  05 Jun 2009; Denis Dupeyron <calchan@gentoo.org> +engauge-4.1.ebuild,
+  +metadata.xml:
+  Initial commit, bug #108469.
+
