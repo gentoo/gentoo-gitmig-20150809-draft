@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfourinline
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.28 2009/06/04 12:28:27 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfourinline/ChangeLog,v 1.29 2009/06/04 23:56:32 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *kfourinline-4.2.4 (04 Jun 2009)
 

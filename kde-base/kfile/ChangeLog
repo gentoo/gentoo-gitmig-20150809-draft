@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.28 2009/06/04 12:25:04 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfile/ChangeLog,v 1.29 2009/06/04 23:54:41 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *kfile-4.2.4 (04 Jun 2009)
 

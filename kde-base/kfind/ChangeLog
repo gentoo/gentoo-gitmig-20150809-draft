@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.122 2009/06/04 12:26:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.123 2009/06/04 23:55:38 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kfind-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kfind-4.2.4 (04 Jun 2009)
 

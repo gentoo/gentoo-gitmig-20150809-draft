@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.118 2009/06/04 12:35:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.119 2009/06/05 00:00:34 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> khotkeys-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *khotkeys-4.2.4 (04 Jun 2009)
 

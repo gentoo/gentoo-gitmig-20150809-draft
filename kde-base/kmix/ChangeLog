@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.118 2009/06/04 12:55:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmix/ChangeLog,v 1.119 2009/06/05 00:11:52 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kmix-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kmix-4.2.4 (04 Jun 2009)
 

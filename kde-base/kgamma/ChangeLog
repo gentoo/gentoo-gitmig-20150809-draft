@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.114 2009/06/04 12:29:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.115 2009/06/04 23:57:00 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kgamma-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kgamma-4.2.4 (04 Jun 2009)
 

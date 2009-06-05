@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.118 2009/06/04 11:41:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/ChangeLog,v 1.119 2009/06/04 23:26:24 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  kdeartwork-meta-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kdeartwork-meta-4.2.4 (04 Jun 2009)
 

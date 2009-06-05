@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.109 2009/06/04 12:19:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.110 2009/06/04 23:51:57 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kdialog-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kdialog-4.2.4 (04 Jun 2009)
 

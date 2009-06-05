@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcminit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.104 2009/06/04 11:30:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcminit/ChangeLog,v 1.105 2009/06/04 23:17:51 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kcminit-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kcminit-4.2.4 (04 Jun 2009)
 

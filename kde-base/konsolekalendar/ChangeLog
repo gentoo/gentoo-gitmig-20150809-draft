@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konsolekalendar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.98 2009/06/04 13:03:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/ChangeLog,v 1.99 2009/06/05 00:21:57 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  konsolekalendar-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *konsolekalendar-4.2.4 (04 Jun 2009)
 

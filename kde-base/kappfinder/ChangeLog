@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kappfinder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.120 2009/06/04 11:17:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kappfinder/ChangeLog,v 1.121 2009/06/04 23:04:51 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kappfinder-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kappfinder-4.2.4 (04 Jun 2009)
 

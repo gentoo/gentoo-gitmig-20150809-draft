@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpasswdserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.27 2009/06/04 13:06:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpasswdserver/ChangeLog,v 1.28 2009/06/05 00:24:38 alexxy Exp $
+
+  05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *kpasswdserver-4.2.4 (04 Jun 2009)
 

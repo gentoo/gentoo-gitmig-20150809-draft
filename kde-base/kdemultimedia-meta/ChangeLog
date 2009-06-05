@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.118 2009/06/04 12:02:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-meta/ChangeLog,v 1.119 2009/06/04 23:41:47 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  kdemultimedia-meta-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kdemultimedia-meta-4.2.4 (04 Jun 2009)
 

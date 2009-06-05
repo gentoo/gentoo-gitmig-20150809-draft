@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.30 2009/06/04 11:56:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.31 2009/06/04 23:37:08 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *kde-l10n-4.2.4 (04 Jun 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeaccounts-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccounts-plugin/ChangeLog,v 1.27 2009/06/04 11:36:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccounts-plugin/ChangeLog,v 1.28 2009/06/04 23:21:46 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *kdeaccounts-plugin-4.2.4 (04 Jun 2009)
 

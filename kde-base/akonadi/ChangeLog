@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.23 2009/06/04 10:49:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.24 2009/06/04 22:39:03 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
+  Fix accidently added keywords
 
 *akonadi-4.2.4 (04 Jun 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.105 2009/06/04 12:27:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.106 2009/06/04 23:56:07 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kfloppy-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kfloppy-4.2.4 (04 Jun 2009)
 

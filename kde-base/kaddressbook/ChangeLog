@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kaddressbook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.117 2009/06/04 11:11:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaddressbook/ChangeLog,v 1.118 2009/06/04 22:58:46 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  kaddressbook-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kaddressbook-4.2.4 (04 Jun 2009)
 

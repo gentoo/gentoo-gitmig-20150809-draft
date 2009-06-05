@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kcontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.148 2009/06/04 11:32:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcontrol/ChangeLog,v 1.149 2009/06/04 23:19:27 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kcontrol-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kcontrol-4.2.4 (04 Jun 2009)
 

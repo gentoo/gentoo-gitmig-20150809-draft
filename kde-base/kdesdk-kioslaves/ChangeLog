@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.111 2009/06/04 12:10:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.112 2009/06/04 23:46:37 alexxy Exp $
+
+  04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  kdesdk-kioslaves-4.2.4.ebuild:
+  Fix accidently added keywords
 
 *kdesdk-kioslaves-4.2.4 (04 Jun 2009)
 
