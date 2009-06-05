@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r3.ebuild,v 1.2 2009/06/01 20:17:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r3.ebuild,v 1.3 2009/06/05 14:56:06 pva Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -43,8 +43,9 @@ src_unpack() {
 src_compile() {
 	strip-flags
 
-	local myconf
+	append-flags "-DLTDL_SHLIB_EXT='\".so\"'" #272681
 
+	local myconf
 	if use ssl; then
 		myconf="${myconf} --with-openssl=/usr"
 	else

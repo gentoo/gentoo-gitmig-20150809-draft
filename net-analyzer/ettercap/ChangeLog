@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.67 2009/06/01 20:17:17 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.68 2009/06/05 14:56:06 pva Exp $
+
+  05 Jun 2009; Peter Volkov <pva@gentoo.org> ettercap-0.7.3-r3.ebuild:
+  Fixed build issue with new libtool, bug #272681, thank Diego Stamigni and
+  Diego E. 'Flameeyes' Pettenò for the fix.
 
   01 Jun 2009; Peter Volkov <pva@gentoo.org> ettercap-0.7.3-r3.ebuild:
   Fixed -Werror related build failure, bug #260840, thank Alexandre NEY for
