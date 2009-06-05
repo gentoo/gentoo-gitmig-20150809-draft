@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fmtools
-# Copyright 2003-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.9 2007/07/27 19:40:28 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.10 2009/06/05 09:05:13 ssuominen Exp $
+
+  05 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> fmtools-1.0.2.ebuild:
+  amd64 stable wrt #272680
 
 *fmtools-1.0.2 (27 Jul 2007)
 
