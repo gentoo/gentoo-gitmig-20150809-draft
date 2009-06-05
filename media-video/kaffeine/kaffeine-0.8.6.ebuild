@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.6.ebuild,v 1.7 2008/04/13 15:54:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.6.ebuild,v 1.8 2009/06/05 15:11:31 tampakrap Exp $
 
 inherit eutils kde flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kaffeine.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kaffeine/${P}.tar.bz2"
 LICENSE="GPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="dvb gstreamer xinerama vorbis encode xcb"
 # kdehiddenvisibility removed due to bug 207002.
