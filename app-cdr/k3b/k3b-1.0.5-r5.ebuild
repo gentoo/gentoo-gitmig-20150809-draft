@@ -1,57 +1,49 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r5.ebuild,v 1.2 2009/06/04 19:30:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.0.5-r5.ebuild,v 1.3 2009/06/05 09:50:01 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit kde eutils multilib
-
-MY_P="${P/_/}"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="K3b, KDE CD Writing Software"
 HOMEPAGE="http://www.k3b.org/"
-SRC_URI="mirror://sourceforge/k3b/${MY_P}.tar.bz2"
+SRC_URI="mirror://sourceforge/k3b/${P/_}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="3.5"
-KEYWORDS="~amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="alsa css dvd dvdr encode emovix ffmpeg flac hal mp3 musepack musicbrainz
 	sndfile vcd vorbis"
 
-COMMON_DEPEND="
-	!<app-cdr/k3b-1.0.5-r5
+COMMON_DEPEND="!<app-cdr/k3b-1.0.5-r5
 	media-libs/libsamplerate
 	media-libs/taglib
-	>=media-sound/cdparanoia-3.9.8
+	media-sound/cdparanoia
 	alsa? ( media-libs/alsa-lib )
 	dvd? ( media-libs/libdvdread )
 	encode? ( media-sound/lame )
-	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
+	ffmpeg? ( >=media-video/ffmpeg-0.5 )
 	flac? ( media-libs/flac[cxx] )
 	hal? ( sys-apps/hal )
 	mp3? ( media-libs/libmad )
 	musepack? ( media-libs/libmpcdec )
 	musicbrainz? ( media-libs/musicbrainz:1 )
 	sndfile? ( media-libs/libsndfile )
-	vorbis? ( media-libs/libvorbis )
-"
-
+	vorbis? ( media-libs/libvorbis )"
 RDEPEND="${COMMON_DEPEND}
-	>=app-cdr/cdrdao-1.1.7-r3
+	app-cdr/cdrdao
 	media-sound/normalize
 	virtual/cdrtools
-	dvdr? ( >=app-cdr/dvd+rw-tools-7.0 )
+	dvdr? ( >=app-cdr/dvd+rw-tools-7 )
 	css? ( media-libs/libdvdcss )
-	encode? (
-		media-sound/sox
-		media-video/transcode[dvd]
-	)
+	encode? ( media-sound/sox
+		media-video/transcode[dvd] )
 	emovix? ( media-video/emovix )
-	vcd? ( media-video/vcdimager )
-"
+	vcd? ( media-video/vcdimager )"
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
+
+S=${WORKDIR}/${P/_}
 
 need-kde 3.5
 
@@ -83,7 +75,7 @@ src_unpack() {
 		done
 		rm -f configure
 	fi
-	rm -f "${S}/configure"
+	rm -f "${S}"/configure
 }
 
 src_configure() {
