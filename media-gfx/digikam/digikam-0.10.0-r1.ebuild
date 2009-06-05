@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0.ebuild,v 1.2 2009/04/06 12:03:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0-r1.ebuild,v 1.1 2009/06/05 10:14:17 scarabeus Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ DEPEND="
 	x11-libs/qt-core[qt3support]
 	x11-libs/qt-sql[sqlite]
 	addressbook? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} )
-	geolocation? ( >=kde-base/marble-${KDE_MINIMAL}[kde] )
+	geolocation? ( >=kde-base/marble-${KDE_MINIMAL} )
 	gphoto2? ( >=media-libs/libgphoto2-2.4.1-r1 )
 "
 #liblensfun when added should be also optional dep.
