@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/alac_decoder-0.1.3.ebuild,v 1.4 2008/10/07 12:56:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alac_decoder/alac_decoder-0.1.3.ebuild,v 1.5 2009/06/05 16:04:13 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Basic decoder for Apple Lossless Audio Codec files (ALAC)"
@@ -12,23 +13,21 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
-DEPEND=""
 
-S="${WORKDIR}/${PN}"
+RDEPEND=""
+DEPEND="sys-apps/sed"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+S=${WORKDIR}/${PN}
 
-	# add $LDFLAGS to link command
-	sed -i -e "s:\(-o alac\):\$(LDFLAGS) \1:g" Makefile
+src_prepare() {
+	sed -i -e "s:\(-o alac\):\$(LDFLAGS) \1:g" Makefile || die "sed failed"
 }
 
 src_compile() {
-	emake CC=$(tc-getCC) CFLAGS="${CFLAGS}" || die "emake failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	dobin alac || die "install failed"
+	dobin alac || die "dobin failed"
 	dodoc README
 }
