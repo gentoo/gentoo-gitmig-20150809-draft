@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.66 2009/06/05 07:30:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.67 2009/06/05 15:06:54 fmccor Exp $
+
+  05 Jun 2009; Ferris McCormick <fmccor@gentoo.org> libffi-3.0.8.ebuild:
+  Sparc stable, part of Bug #272675.
 
   05 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> libffi-3.0.8.ebuild:
   Block <dev-libs/g-wrap-1.9.11 because they ship a copy of this library.
