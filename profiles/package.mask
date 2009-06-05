@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9887 2009/06/04 20:52:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9888 2009/06/05 19:06:46 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (05 Jun 2009)
+# Broken PAM setup, causes sys-libs/pam to fail install because of
+# pam_console requirements. See bug #210820.  Fix it or punt it, it's
+# not my problem.
+media-tv/zapping
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Jun 2009)
 # Mask kde4 printing stuff
