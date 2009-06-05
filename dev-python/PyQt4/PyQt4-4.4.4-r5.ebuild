@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.3 2009/06/03 22:53:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.4 2009/06/05 10:41:17 yngwin Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ DEPEND=">=dev-python/sip-4.7.8
 	)
 	opengl? ( >=x11-libs/qt-opengl-${QTVER}:4[qt3support?] )
 	phonon? (
-		|| ( >=x11-libs/qt-phonon-${QTVER}:4 media-sound/phonon )
+		!kde? ( || ( >=x11-libs/qt-phonon-${QTVER}:4 media-sound/phonon ) )
 		kde? ( media-sound/phonon )
 	)
 	qt3support? ( >=x11-libs/qt-qt3support-${QTVER}:4 )
