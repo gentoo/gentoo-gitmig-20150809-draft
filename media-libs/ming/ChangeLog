@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ming
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.50 2008/12/05 18:33:43 zmedico Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.51 2009/06/05 16:17:01 loki_val Exp $
+
+  05 Jun 2009; Peter Alfredsen <loki_val@gentoo.org> -ming-0.2a.ebuild,
+  -ming-0.2a-r3.ebuild, metadata.xml:
+  Retiring, bug 220219.
 
   05 Dec 2008; Zac Medico <zmedico@gentoo.org> ming-0.3.0-r1.ebuild:
   Bug #249762 - Add !media-gfx/swftools blocker due to file collision with
