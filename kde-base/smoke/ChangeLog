@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.66 2009/06/03 15:37:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.67 2009/06/06 13:33:38 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> smoke-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> smoke-3.5.10.ebuild:
   Marking smoke-3.5.10 ppc64 stable for bug 271889

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.121 2009/06/04 23:42:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.122 2009/06/06 12:39:33 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org>
+  kdenetwork-meta-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   kdenetwork-meta-4.2.4.ebuild:

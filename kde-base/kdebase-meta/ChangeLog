@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.127 2009/06/04 23:32:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.128 2009/06/06 13:28:27 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kdebase-meta-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   kdebase-meta-4.2.4.ebuild:

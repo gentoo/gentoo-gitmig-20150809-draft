@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.143 2009/06/05 00:20:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.144 2009/06/06 13:05:00 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> konqueror-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> konqueror-4.2.4.ebuild:
   Fix accidently added keywords
