@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-arts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.84 2009/06/03 15:27:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-arts/ChangeLog,v 1.85 2009/06/06 08:16:18 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org>
+  kdemultimedia-arts-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org>
   kdemultimedia-arts-3.5.10.ebuild:

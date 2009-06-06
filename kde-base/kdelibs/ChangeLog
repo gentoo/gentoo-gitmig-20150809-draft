@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.604 2009/06/05 17:24:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.605 2009/06/06 08:12:38 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kdelibs-3.5.10-r6.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> kdelibs-4.2.4.ebuild:
   Add back x11h patch for 4.2.4. Wrongly removed.

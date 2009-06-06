@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/libksieve
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.87 2009/06/05 07:40:00 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libksieve/ChangeLog,v 1.88 2009/06/06 08:42:23 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> libksieve-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> libksieve-4.2.4.ebuild:
   Fix accidently added keywords

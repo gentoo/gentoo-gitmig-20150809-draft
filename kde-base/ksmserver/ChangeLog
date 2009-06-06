@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksmserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.117 2009/06/05 08:01:51 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmserver/ChangeLog,v 1.118 2009/06/06 08:36:57 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> ksmserver-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ksmserver-4.2.4.ebuild:
   Fix accidently added keywords

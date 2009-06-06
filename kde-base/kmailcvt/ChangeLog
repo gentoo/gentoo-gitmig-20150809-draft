@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmailcvt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.100 2009/06/05 00:09:48 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmailcvt/ChangeLog,v 1.101 2009/06/06 08:39:55 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kmailcvt-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kmailcvt-4.2.4.ebuild:
   Fix accidently added keywords
