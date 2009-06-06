@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.122 2009/06/05 00:01:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.123 2009/06/06 09:50:42 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kig-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kig-4.2.4.ebuild:
   Fix accidently added keywords
