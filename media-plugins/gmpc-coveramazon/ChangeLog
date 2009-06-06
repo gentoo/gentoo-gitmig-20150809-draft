@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-coveramazon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/ChangeLog,v 1.27 2009/06/03 20:46:51 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-coveramazon/ChangeLog,v 1.28 2009/06/06 17:18:15 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> gmpc-coveramazon-0.18.0.ebuild:
+  ppc stable #272335
 
   03 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
   gmpc-coveramazon-0.18.0.ebuild:
