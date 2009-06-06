@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.3 2009/06/02 23:40:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.4 2009/06/06 09:33:37 maekke Exp $
 
 EAPI=2
 inherit eutils mono gnome2-utils fdo-mime versionator
@@ -15,7 +15,7 @@ SRC_URI="http://download.banshee-project.org/${PN}/${RELTYPE}/${PV}/${PN}-1-${PV
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="+aac boo daap doc +encode +flac ipod karma +mad mtp podcast test +vorbis"
 
 RDEPEND=">=dev-lang/mono-2
