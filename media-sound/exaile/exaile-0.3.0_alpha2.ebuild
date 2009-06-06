@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0_alpha2.ebuild,v 1.1 2009/06/05 17:47:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0_alpha2.ebuild,v 1.2 2009/06/06 20:15:37 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime multilib python
@@ -55,6 +55,12 @@ pkg_postinst() {
 	python_mod_optimize /usr/$(get_libdir)/${PN}
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+	elog "This version is more or less a rewrite from 0.2.x series, so"
+	elog "don't expect all the features you had before to be there yet."
+	elog "It would be a good idea to remove your old exaile configs"
+	elog "and databases out of the way before switching from 0.2.x."
+	elog "These files are in your home directory in .exaile, .config/exaile"
+	elog "and .local/share/exaile"
 }
 
 pkg_postrm() {
