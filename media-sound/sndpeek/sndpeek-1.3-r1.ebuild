@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/sndpeek-1.3-r1.ebuild,v 1.1 2008/06/28 10:45:42 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/sndpeek-1.3-r1.ebuild,v 1.2 2009/06/06 07:57:49 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="real-time audio visualization"
@@ -10,7 +11,7 @@ SRC_URI="http://soundlab.cs.princeton.edu/software/${PN}/files/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="oss jack alsa"
 
 DEPEND="virtual/glut
@@ -23,11 +24,10 @@ DEPEND="virtual/glut
 	alsa? ( media-libs/alsa-lib )"
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-makefile.patch"
-	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefile.patch \
+		"${FILESDIR}"/${P}-gcc-4.3.patch \
+		"${FILESDIR}"/${P}-gcc-4.4.patch
 }
 
 pkg_setup() {
@@ -55,11 +55,11 @@ src_compile() {
 		backend="oss"
 	fi
 	einfo "Compiling against ${backend}"
-	emake -f "makefile.${backend}" CC=$(tc-getCC) CXX=$(tc-getCXX) || die "emake failed"
+	emake -f "makefile.${backend}" CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {
-	dobin src/sndpeek/sndpeek
-
+	dobin src/sndpeek/sndpeek || die "dobin failed"
 	dodoc AUTHORS README THANKS TODO VERSIONS
 }
