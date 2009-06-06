@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.62 2009/05/04 12:44:56 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.63 2009/06/06 09:16:34 yngwin Exp $
+
+  06 Jun 2009; Ben de Groot <yngwin@gentoo.org> -qca-1.0-r2.ebuild,
+  -qca-2.0.1-r1.ebuild, -qca-2.0.2.ebuild:
+  Delete old versions
 
 *qca-2.0.2-r1 (04 May 2009)
 
