@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xml2doc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.20 2009/06/03 20:27:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/ChangeLog,v 1.21 2009/06/06 17:06:45 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> xml2doc-20030510-r1.ebuild:
+  ppc stable #272245
 
   03 Jun 2009; Markus Meier <maekke@gentoo.org> xml2doc-20030510-r1.ebuild:
   amd64/x86 stable, bug #272245
