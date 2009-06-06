@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mimd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/ChangeLog,v 1.3 2007/01/05 17:34:26 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/ChangeLog,v 1.4 2009/06/06 16:51:58 ssuominen Exp $
+
+  06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> mimd-0.30.1.ebuild,
+  +files/mimd-0.30.1-fortify_sources.patch:
+  Fix compile with _FORTIFY_SOURCE=2 wrt #272512, thanks to Diego E.
+  Pettenò.
 
   05 Jan 2007; Diego Pettenò <flameeyes@gentoo.org> mimd-0.30.1.ebuild:
   Convert to use elog.

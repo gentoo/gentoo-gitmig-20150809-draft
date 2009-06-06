@@ -1,37 +1,38 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.4 2007/01/05 17:34:26 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.5 2009/06/06 16:51:58 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Multicast streaming server for MPEG1/2 and MP3 files."
-
 HOMEPAGE="http://darkwing.uoregon.edu/~tkay/mim.html"
 SRC_URI="http://darkwing.uoregon.edu/~tkay/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE=""
 
 RDEPEND=">=media-plugins/live-2006.12.08
-		dev-libs/xerces-c"
+	dev-libs/xerces-c"
 DEPEND="${RDEPEND}
 	dev-lang/perl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}+live-2006.12.08.patch"
-	cp Makefile.in Makefile
+src_prepare() {
+	epatch "${FILESDIR}"/${P}+live-2006.12.08.patch \
+		"${FILESDIR}"/${P}-fortify_sources.patch
+	cp -f Makefile.in Makefile
 }
 
+src_configure() { :; }
+
 src_compile() {
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install() {
-	dobin mimd
+	dobin mimd || die "dobin failed"
 	dodoc doc/mimd.pod
 
 	if [ -x /usr/bin/pod2html ]; then
