@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.4 2009/05/12 16:35:38 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.5 2009/06/06 12:39:05 ssuominen Exp $
 
 EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
 HOMEPAGE="http://librdf.org"
@@ -24,6 +25,11 @@ RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-ldflags.patch
+	eautoreconf
+}
 
 src_configure() {
 	local myconf

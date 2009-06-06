@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/redland
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.43 2009/05/22 15:47:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.44 2009/06/06 12:39:05 ssuominen Exp $
+
+  06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> redland-1.0.9.ebuild,
+  +files/redland-1.0.9-ldflags.patch:
+  Respect LDFLAGS wrt #267405, thanks to Davide Pesavento for reporting.
 
   22 May 2009; Raúl Porcel <armin76@gentoo.org> redland-1.0.8.ebuild:
   ia64 stable wrt #269527
