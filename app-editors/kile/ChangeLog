@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.115 2009/06/01 19:02:49 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.116 2009/06/06 16:34:47 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> kile-2.0.3-r1.ebuild:
+  ppc stable #250349
 
   01 Jun 2009; Ferris McCormick <fmccor@gentoo.org> kile-2.0.3-r1.ebuild:
   Sparc stable, Bug #250349.
