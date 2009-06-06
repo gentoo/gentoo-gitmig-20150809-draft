@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.71 2009/05/03 19:48:11 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/ChangeLog,v 1.72 2009/06/06 17:59:50 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> jsch-0.1.41.ebuild:
+  ppc stable #272544
 
 *jsch-0.1.41 (03 May 2009)
 
