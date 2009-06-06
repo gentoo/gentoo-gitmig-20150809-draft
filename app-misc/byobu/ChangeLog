@@ -1,6 +1,6 @@
-# ChangeLog for app-misc/screen-profiles
+# ChangeLog for app-misc/byobu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.1 2009/06/03 15:11:55 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/ChangeLog,v 1.2 2009/06/06 09:18:39 swegener Exp $
 
 *byobu-2.8 (03 Jun 2009)
 
