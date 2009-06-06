@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/pycuda
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycuda/ChangeLog,v 1.1 2009/06/06 15:44:44 spock Exp $
+
+*pycuda-0.92 (06 Jun 2009)
+
+  06 Jun 2009; Michał Januszewski <spock@gentoo.org> +pycuda-0.92.ebuild,
+  +metadata.xml:
+  Initial commit.
+
