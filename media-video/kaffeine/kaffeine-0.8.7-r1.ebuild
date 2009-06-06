@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7-r1.ebuild,v 1.5 2009/06/06 10:50:01 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7-r1.ebuild,v 1.6 2009/06/06 12:15:26 tampakrap Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/xine-lib-1.1.9[xcb?]
 	xcb? ( >=x11-libs/libxcb-1.0 )
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-plugins/gst-plugins-xvideo-0.10* )
-	dev-libs/libcdio
+	media-sound/cdparanoia
 	encode? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
 	x11-libs/libXtst"
