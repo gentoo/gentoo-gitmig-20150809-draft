@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/nzbget
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.23 2008/10/04 16:40:09 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.24 2009/06/06 08:49:42 swegener Exp $
+
+*nzbget-0.6.0 (06 Jun 2009)
+
+  06 Jun 2009; Sven Wegener <swegener@gentoo.org> +nzbget-0.6.0.ebuild:
+  Version bump. Thanks to Klaus Birkelund Jensen in bug #272489.
 
 *nzbget-0.5.1 (04 Oct 2008)
 
