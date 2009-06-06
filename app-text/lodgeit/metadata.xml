@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>spatz@psybear.com</email>
+    <name>Dror Levin</name>
+    <description>proxied maintainer</description>
+  </maintainer>
+  <maintainer>
+    <email>yngwin@gentoo.org</email>
+    <name>Ben de Groot</name>
+    <description>proxy</description>
+  </maintainer>
+  <use>
+    <flag name='vim'>
+      Install a vim plugin allowing to paste and download from within vim
+    </flag>
+  </use>
+</pkgmetadata>
