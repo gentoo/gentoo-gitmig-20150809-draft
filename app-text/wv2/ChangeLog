@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.50 2009/06/03 20:48:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.51 2009/06/06 16:52:54 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> wv2-0.3.1.ebuild:
+  ppc stable #271967
 
   03 Jun 2009; Markus Meier <maekke@gentoo.org> wv2-0.3.1.ebuild:
   amd64/x86 stable, bug #271967
