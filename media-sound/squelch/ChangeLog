@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/squelch
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/ChangeLog,v 1.13 2007/02/03 20:28:33 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squelch/ChangeLog,v 1.14 2009/06/06 08:27:26 ssuominen Exp $
+
+  06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> squelch-1.0.1.ebuild:
+  Instead of using kde.eclass, use qt3.eclass to avoid unnecessary USE flags
+  like arts.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
