@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6.ebuild,v 1.2 2008/07/29 19:37:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r1.ebuild,v 1.1 2009/06/06 19:06:14 ssuominen Exp $
+
+EAPI=2
+inherit eutils fdo-mime
 
 DESCRIPTION="GTK+ utility for editing MP2, MP3, MP4, FLAC, Ogg and other media tags"
 HOMEPAGE="http://easytag.sourceforge.net"
@@ -11,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="aac flac mp3 speex vorbis wavpack"
 
-RDEPEND=">=x11-libs/gtk+-2.12
+RDEPEND=">=x11-libs/gtk+-2.12:2
 	mp3? ( >=media-libs/id3lib-3.8.3-r7
 		media-libs/libid3tag )
 	flac? ( media-libs/flac
@@ -25,6 +28,10 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-desktop_entry.patch
+}
+
 src_compile() {
 	econf \
 		$(use_enable mp3) \
@@ -34,11 +41,12 @@ src_compile() {
 		$(use_enable aac mp4) \
 		$(use_enable wavpack) \
 		$(use_enable speex)
-
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README THANKS TODO USERS-GUIDE
 }
+
+pkg_postinst() { fdo-mime_desktop_database_update; }
+pkg_postrm() { fdo-mime_desktop_database_update; }
