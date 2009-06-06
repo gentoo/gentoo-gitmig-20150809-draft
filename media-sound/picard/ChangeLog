@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/picard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.18 2009/05/14 20:32:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/ChangeLog,v 1.19 2009/06/06 14:22:40 yngwin Exp $
+
+  06 Jun 2009; Ben de Groot <yngwin@gentoo.org> -picard-0.10-r1.ebuild,
+  picard-0.11.ebuild:
+  Remove old, migrate 0.11 to eapi-2 with use deps, check for X useflag in
+  PyQt4. Fixes bug 272175.
 
   14 May 2009; Markus Meier <maekke@gentoo.org> picard-0.11.ebuild:
   amd64/x86 stable, bug #269737
