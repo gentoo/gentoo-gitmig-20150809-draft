@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/eflite
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.22 2009/03/09 11:44:30 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.23 2009/06/06 14:53:24 ssuominen Exp $
+
+  06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  eflite-0.3.8-r2.ebuild, eflite-0.3.9.ebuild:
+  Don't hardcode ecompress --suffix in postinst msg wrt #272889, thanks to
+  Victor Ostorga.
 
   09 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org> eflite-0.3.9.ebuild:
   Remove econf call from src_unpack, remove src_compile since then it

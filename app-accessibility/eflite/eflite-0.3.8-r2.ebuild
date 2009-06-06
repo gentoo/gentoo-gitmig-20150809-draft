@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.14 2007/12/26 22:13:14 phreak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r2.ebuild,v 1.15 2009/06/06 14:53:24 ssuominen Exp $
 
 IUSE=""
 
@@ -45,6 +45,4 @@ src_install() {
 
 pkg_postinst() {
 	enewgroup speech
-	elog "To test eflite, you can run:"
-	elog "gzcat /usr/share/doc/${PF}/eflite_test.txt.gz | eflite"
 }
