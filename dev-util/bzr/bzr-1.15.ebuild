@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.15.ebuild,v 1.1 2009/06/05 19:41:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.15.ebuild,v 1.2 2009/06/06 04:06:22 mr_bones_ Exp $
 
 EAPI=1
 
@@ -111,7 +111,7 @@ src_test() {
 	skip_tests+="blackbox.test_too_much.SFTPTestsRelative.test_*|"
 	# https://bugs.launchpad.net/bzr/+bug/383920
 	skip_tests+="test_transport_implementations.TransportTests.test_get*|"
-	# This tests were fixed in trunk. Drop in 1.15.x or 1.16 
+	# This tests were fixed in trunk. Drop in 1.15.x or 1.16
 	skip_tests+="bzrlib.tests.test_http.TestActivity*|"
 	skip_tests+="bzrlib.tests.tree_implementations.test_get_file_mtime*|"
 	skip_tests+="test_source.TestSource.test_no_asserts*|"
