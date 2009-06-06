@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4533 2009/06/06 12:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4534 2009/06/06 17:47:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2514,7 +2514,13 @@ sci-chemistry/pymol:shaders - Build with Shaders support - good for high-end 3D 
 sci-chemistry/shelx:dosformat - Use CR/LF to end lines; useful in mixed Linux/Windows environments
 sci-electronics/geda-gschem:stroke - enable mouse gesture support
 sci-electronics/gerbv:unit-mm - Set default unit for coordinates in status bar to mm 
-sci-electronics/pcb:xrender - Add support for xrender (x11-libs/libXrender)
+sci-electronics/pcb:gif - GIF graphics export
+sci-electronics/pcb:jpeg - JPEG graphics export
+sci-electronics/pcb:nelma - NELMA file export
+sci-electronics/pcb:png - PNG graphics export
+sci-electronics/pcb:threads - Enable (posix) threads for GTK GUI
+sci-electronics/pcb:tk - Build tcl/tk graphical QFP footprint generator
+sci-electronics/pcb:xrender - Translucent PCB display for Motif/Lesstif GUI
 sci-geosciences/gmt:gmtfull - Full resolution bathymetry database
 sci-geosciences/gmt:gmthigh - Add high resolution bathymetry database
 sci-geosciences/gmt:gmtsuppl - Supplement functions for GMT
