@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.44 2008/11/10 03:30:26 kingtaco Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.45 2009/06/06 22:18:51 darkside Exp $
+
+  06 Jun 2009; Jeremy Olexa <darkside@gentoo.org>
+  -emul-linux-x86-qtlibs-3.4.4-r5.ebuild,
+  -emul-linux-x86-qtlibs-10.0.ebuild, -emul-linux-x86-qtlibs-10.0-r1.ebuild,
+  -emul-linux-x86-qtlibs-20071114.ebuild,
+  -emul-linux-x86-qtlibs-20071114-r1.ebuild:
+  Remove vulnerable versions, bug 271704
 
 *emul-linux-x86-qtlibs-20081109 (10 Nov 2008)
 
