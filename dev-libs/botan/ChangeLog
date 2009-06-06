@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.37 2009/04/29 11:30:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.38 2009/06/06 20:04:07 arfrever Exp $
+
+*botan-1.8.2 (06 Jun 2009)
+
+  06 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +botan-1.8.2.ebuild, +files/botan-1.8.2-respect_LDFLAGS.patch:
+  Version bump. Respect LDFLAGS. Fix building with --as-needed (bug
+  #272242).
 
   29 Apr 2009; Raúl Porcel <armin76@gentoo.org> botan-1.8.0.ebuild:
   Add ~ia64 wrt #267773

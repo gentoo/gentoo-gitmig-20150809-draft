@@ -1,0 +1,20 @@
+--- src/build-data/makefile/unix_shr.in
++++ src/build-data/makefile/unix_shr.in
+@@ -88,7 +88,7 @@
+ # Link Commands                                  #
+ ##################################################
+ $(CHECK): $(LIBRARIES) $(CHECKOBJS)
+-	$(CXX) $(CHECKOBJS) -L. -lbotan-@{var:version} $(LINK_TO) -o $(CHECK)
++	$(CXX) $(LDFLAGS) $(CHECKOBJS) -o $(CHECK) -L. -lbotan-@{var:version} $(LINK_TO)
+ 
+ $(STATIC_LIB): $(LIBOBJS)
+ 	$(RM) $(STATIC_LIB)
+@@ -96,7 +96,7 @@
+ 	$(RANLIB) $(STATIC_LIB)
+ 
+ $(SHARED_LIB): $(LIBOBJS)
+-	$(SO_LINK_CMD) $(LINK_TO) $(LIBOBJS) -o $(SHARED_LIB)
++	$(SO_LINK_CMD) $(LDFLAGS) $(LIBOBJS) -o $(SHARED_LIB) $(LINK_TO)
+ 	$(LN) $(SHARED_LIB) $(SYMLINK)
+ 
+ ##################################################
