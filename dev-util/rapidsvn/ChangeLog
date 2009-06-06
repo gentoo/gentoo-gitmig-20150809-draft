@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/rapidsvn
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.64 2008/09/17 20:46:01 maekke Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.65 2009/06/06 15:54:15 nerdboy Exp $
+
+*rapidsvn-0.9.8 (06 Jun 2009)
+
+  06 Jun 2009; Steve Arnold <nerdboy@gentoo.org>
+  +files/rapidsvn-0.9.8-sar.patch, +rapidsvn-0.9.8.ebuild:
+  Added new version, updated use=doc generation (closes bug #265941).  The
+  underlying subversion neon support is dorked up (at least for me) so this
+  was tested with webdav-serf against a couple of different local repos.
 
   17 Sep 2008; Markus Meier <maekke@gentoo.org> rapidsvn-0.9.6-r1.ebuild:
   amd64/x86 stable, bug #237095
