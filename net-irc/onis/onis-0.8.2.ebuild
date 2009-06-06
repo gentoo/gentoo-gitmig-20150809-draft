@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.8.2.ebuild,v 1.2 2007/05/06 12:39:41 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/onis-0.8.2.ebuild,v 1.3 2009/06/06 21:38:09 cla Exp $
 
 inherit eutils
 
@@ -18,9 +18,9 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/0.6.0-nochdir.patch
+	epatch "${FILESDIR}"/0.6.0-nochdir.patch
 
 	sed -i -e s:lang/:/usr/share/onis/lang/: onis.conf || die "sed failed"
 }
@@ -42,6 +42,6 @@ src_install () {
 pkg_postinst() {
 	elog
 	elog "The onis themes have been installed in /usr/share/onis/*-theme"
-	elog "You can find a sample configuration at /usr/share/doc/${PF}/onis.conf.gz"
+	elog "You can find a compressed sample configuration at /usr/share/doc/${PF}/config"
 	elog
 }
