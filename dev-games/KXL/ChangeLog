@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/KXL
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.9 2009/01/28 15:53:45 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/KXL/ChangeLog,v 1.10 2009/06/06 17:34:23 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> KXL-1.1.7-r1.ebuild:
+  ppc stable #272429
 
   28 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/KXL-1.1.7-as-needed.patch, KXL-1.1.7-r1.ebuild:
