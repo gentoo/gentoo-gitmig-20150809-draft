@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/albumart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.27 2009/06/02 17:16:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.28 2009/06/06 17:03:57 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> albumart-1.6.6.ebuild:
+  ppc stable #272133
 
   02 Jun 2009; Raúl Porcel <armin76@gentoo.org> albumart-1.6.6.ebuild:
   sparc/x86 stable wrt #272133
