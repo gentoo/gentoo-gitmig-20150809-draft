@@ -1,0 +1,14 @@
+
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/package.mask,v 1.1 2009/06/06 03:55:10 solar Exp $
+
+# $Id: package.mask,v 1.1 2009/06/06 03:55:10 solar Exp $
+
+# Markus Duft <mduft@gentoo.org> (27 May 2009)
+# icu patches not yet forward ported
+>=dev-libs/icu-4.0.0
+
+# Markus Duft <mduft@gentoo.org> (27 May 2009)
+# boost not yet updated for winnt and interix interconnect.
+>=dev-libs/boost-1.35.0-r3
+

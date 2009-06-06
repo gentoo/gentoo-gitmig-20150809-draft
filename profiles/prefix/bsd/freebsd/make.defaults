@@ -1,0 +1,14 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/bsd/freebsd/make.defaults,v 1.1 2009/06/06 03:54:37 solar Exp $
+
+# System-wide defaults for all FreeBSD profiles
+# This file should rarely need to be changed
+
+# 'Sane' defaults
+ELIBC="FreeBSD"
+KERNEL="FreeBSD"
+
+# FreeBSD has sandbox support, but enabling it causes portage to
+# consider each ebuild as "masked by corruption"
+FEATURES="-sandbox"
