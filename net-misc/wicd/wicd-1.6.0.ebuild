@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0.ebuild,v 1.1 2009/06/05 15:33:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0.ebuild,v 1.2 2009/06/06 21:29:03 darkside Exp $
 
 EAPI="2"
 
@@ -35,7 +35,6 @@ RDEPEND="
 		x11-libs/gksu
 		kde-base/kdesu
 	)
-	>=sys-power/pm-utils-1.1.1
 	ioctl? ( dev-python/python-iwscan dev-python/python-wpactrl )
 	libnotify? ( dev-python/notify-python )
 	ncurses? ( >=dev-python/urwid-0.9.8.4 )

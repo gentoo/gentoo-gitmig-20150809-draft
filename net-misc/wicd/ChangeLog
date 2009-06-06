@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.46 2009/06/05 15:33:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.47 2009/06/06 21:29:03 darkside Exp $
+
+  06 Jun 2009; Jeremy Olexa <darkside@gentoo.org> wicd-1.6.0.ebuild:
+  Fix typo in RDEPEND, bug 272840
 
 *wicd-1.6.0 (05 Jun 2009)
 
