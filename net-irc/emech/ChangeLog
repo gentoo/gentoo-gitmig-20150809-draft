@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/emech
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.11 2007/05/06 12:26:53 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/emech/ChangeLog,v 1.12 2009/06/06 21:45:19 cla Exp $
+
+  06 Jun 2009; Dawid Węgliński <cla@gentoo.org> emech-3.0.2.ebuild:
+  Don't specify full path of installed doc files since PORTAGE_COMPRESS comes
+  into play (bug #272935)
 
   06 May 2007; Marius Mauch <genone@gentoo.org> emech-3.0.2.ebuild:
   Replacing einfo with elog
