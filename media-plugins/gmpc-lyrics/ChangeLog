@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gmpc-lyrics
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/ChangeLog,v 1.25 2009/06/03 21:05:27 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyrics/ChangeLog,v 1.26 2009/06/06 17:22:03 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> gmpc-lyrics-0.18.0.ebuild:
+  ppc stable #272338
 
   03 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
   gmpc-lyrics-0.18.0.ebuild:
