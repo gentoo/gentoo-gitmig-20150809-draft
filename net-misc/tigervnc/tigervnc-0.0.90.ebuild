@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90.ebuild,v 1.2 2009/05/29 15:00:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-0.0.90.ebuild,v 1.3 2009/06/06 16:28:26 armin76 Exp $
 
 EAPI="1"
 
@@ -43,6 +43,7 @@ RDEPEND="sys-libs/zlib
 		media-fonts/font-misc-misc
 		xorgmodule? ( ~x11-base/xorg-server-${XSERVER_VERSION} )
 	)
+	x86? ( dev-lang/nasm )
 	!net-misc/vnc
 	!net-misc/tightvnc
 	!net-misc/xf4vnc"
