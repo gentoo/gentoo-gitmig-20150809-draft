@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyenchant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.9 2009/06/03 12:39:48 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyenchant/ChangeLog,v 1.10 2009/06/06 10:29:34 pva Exp $
+
+*pyenchant-1.5.3 (06 Jun 2009)
+
+  06 Jun 2009; Peter Volkov <pva@gentoo.org> +pyenchant-1.5.3.ebuild:
+  Version bump, required for qbzr.
 
   03 Jun 2009; Ferris McCormick <fmccor@gentoo.org> pyenchant-1.1.5.ebuild:
   Sparc stable, needed for Bug #266452.
