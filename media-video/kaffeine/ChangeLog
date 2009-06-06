@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.98 2009/06/06 12:15:26 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.99 2009/06/06 16:03:05 tampakrap Exp $
+
+  06 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  kaffeine-0.8.8.ebuild:
+  LANGS_DOC should be empty, bug 272864
 
   06 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kaffeine-0.8.6.ebuild, kaffeine-0.8.7.ebuild, kaffeine-0.8.7-r1.ebuild:
