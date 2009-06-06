@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.55 2009/06/02 23:55:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.56 2009/06/06 17:12:34 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> a52dec-0.7.4-r6.ebuild:
+  ppc stable #272321
 
   02 Jun 2009; Steve Dibb <beandog@gentoo.org> a52dec-0.7.4-r6.ebuild:
   amd64 stable, bug 272321
