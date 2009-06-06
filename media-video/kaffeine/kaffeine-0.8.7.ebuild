@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7.ebuild,v 1.2 2009/06/05 15:11:31 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.8.7.ebuild,v 1.3 2009/06/06 10:50:01 tampakrap Exp $
 
 inherit eutils kde flag-o-matic
 
@@ -18,7 +18,7 @@ RDEPEND=">=media-libs/xine-lib-1.1.9
 	xcb? ( >=x11-libs/libxcb-1.0 )
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-plugins/gst-plugins-xvideo-0.10* )
-	media-sound/cdparanoia
+	dev-libs/libcdio
 	encode? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
 	x11-libs/libXtst"
