@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.7-r2.ebuild,v 1.4 2008/08/11 21:31:36 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.7-r2.ebuild,v 1.5 2009/06/06 21:29:01 cla Exp $
 
 inherit eutils ssl-cert versionator multilib
 
@@ -133,8 +133,8 @@ pkg_postinst() {
 	elog "UnrealIRCd will not run until you've set up /etc/unrealircd/unrealircd.conf"
 	elog
 	elog "You can find example cron scripts here:"
-	elog "   /usr/share/doc/${PF}/ircd.cron.gz"
-	elog "   /usr/share/doc/${PF}/ircdchk.gz"
+	elog "   /usr/share/doc/${PF}/"
+	elog "   /usr/share/doc/${PF}/"
 	elog
 	elog "You can also use /etc/init.d/unrealircd to start at boot"
 	elog
