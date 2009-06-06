@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6-r1.ebuild,v 1.1 2007/12/16 17:48:04 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.6-r1.ebuild,v 1.2 2009/06/06 14:58:30 ssuominen Exp $
 
 inherit eutils ssl-cert
 
@@ -80,8 +80,8 @@ pkg_postinst() {
 	elog "PTlink IRCd will run without configuration, although this is strongly"
 	elog "advised against."
 	elog
-	elog "You can find example cron scripts here:"
-	elog "   /usr/share/doc/${PF}/ircd.cron.gz"
+	elog "You can find example cron script ircd.cron here:"
+	elog "   /usr/share/doc/${PF}"
 	elog
 	elog "You can also use /etc/init.d/ptlink-ircd to start at boot"
 	elog

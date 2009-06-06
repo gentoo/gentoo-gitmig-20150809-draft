@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ptlink-ircd
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.13 2007/12/16 17:48:04 cla Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ChangeLog,v 1.14 2009/06/06 14:58:30 ssuominen Exp $
+
+  06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ptlink-ircd-6.19.6-r1.ebuild:
+  Don't hardcode ecompress --suffix in postinst msg wrt #272934, thanks to
+  Victor Ostorga.
 
 *ptlink-ircd-6.19.6-r1 (16 Dec 2007)
 
