@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/ghdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ChangeLog,v 1.6 2009/05/29 16:14:59 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ChangeLog,v 1.7 2009/06/06 17:07:53 calchan Exp $
+
+*ghdl-0.27 (06 Jun 2009)
+
+  06 Jun 2009; Denis Dupeyron <calchan@gentoo.org> +ghdl-0.27.ebuild:
+  Vesion bump, bug #233109.
 
   29 May 2009; Denis Dupeyron <calchan@gentoo.org> ghdl-0.26.ebuild:
   Locked dependency on >=dev-lang/gnat-gcc-4.2 instead of virtual/gnat,
