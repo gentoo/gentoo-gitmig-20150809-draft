@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.18.ebuild,v 1.2 2009/04/01 12:26:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.18.ebuild,v 1.3 2009/06/06 05:13:09 lavajoe Exp $
 
 inherit eutils
 
@@ -64,13 +64,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "NOTE:    This version of btrfs-progs corresponds to and should only"
+	ewarn "WARNING: This version of btrfs-progs corresponds to and should only"
 	ewarn "         be used with the version of btrfs included in the"
-	ewarn "         Linux 2.6.29-rc2 kernel."
+	ewarn "         Linux kernel (2.6.29-rc2 and above)."
 	ewarn ""
-	ewarn "WARNING: This version should NOT be used with earlier versions"
-	ewarn "         of the standaline btrfs module package!"
-	ewarn ""
-	ewarn "         If you are using standalone btrfs-0.16 or earlier,"
-	ewarn "         use a matching version of btrfs-progs."
+	ewarn "         This version should NOT be used with earlier versions"
+	ewarn "         of the standaline btrfs module!"
 }
