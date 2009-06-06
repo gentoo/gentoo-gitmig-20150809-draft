@@ -1,9 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.2.2.ebuild,v 1.3 2009/06/06 18:24:44 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/treeline-1.2.3.ebuild,v 1.1 2009/06/06 18:24:44 yngwin Exp $
 
 EAPI=2
-inherit python
+NEED_PYTHON="2.4"
+PYTHON_USE_WITH="xml"
+
+inherit eutils python
 
 DESCRIPTION="TreeLine is a structured information storage program."
 HOMEPAGE="http://treeline.bellz.org/"
@@ -21,11 +24,10 @@ for lang in ${LANGS}; do
 done
 
 DEPEND="spell? ( || ( app-text/aspell app-text/ispell ) )
-	>=dev-lang/python-2.3[xml]
 	dev-python/PyQt4[X]"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/TreeLine
+S="${WORKDIR}/TreeLine"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -38,6 +40,22 @@ src_unpack() {
 	done
 }
 
+src_prepare() {
+	# let's leave compiling to python_mod_optimize
+	epatch "${FILESDIR}"/${P}-nocompile.patch
+
+	# install into proper python site-packages dir
+	sed -i "s;prefixDir, 'lib;'$(python_get_sitedir);" install.py || die 'sed failed'
+}
+
 src_install() {
-	python install.py -x -p /usr/ -d /usr/share/${PF} -b "${D}"
+	"${python}" install.py -x -p /usr/ -d /usr/share/${PF} -b "${D}"
+}
+
+pkg_postinst() {
+	python_mod_optimize "$(python_get_sitedir)/${PN}"
+}
+
+pkg_postrm() {
+	python_mod_cleanup
 }

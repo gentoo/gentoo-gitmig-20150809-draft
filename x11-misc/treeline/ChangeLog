@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/treeline
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.36 2009/03/16 11:58:54 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/treeline/ChangeLog,v 1.37 2009/06/06 18:24:44 yngwin Exp $
+
+*treeline-1.2.3 (06 Jun 2009)
+
+  06 Jun 2009; Ben de Groot <yngwin@gentoo.org> treeline-1.2.2.ebuild,
+  +treeline-1.2.3.ebuild, +files/treeline-1.2.3-nocompile.patch:
+  Add X use dep for PyQt4, bug 272189. Version bump, with some optimizations
+  in the ebuild.
 
 *treeline-1.2.2 (16 Mar 2009)
 
