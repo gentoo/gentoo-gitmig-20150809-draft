@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2746 2009/06/05 19:29:14 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2747 2009/06/06 08:16:08 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Remove creox, knob and yammi as part of arts deprecation. Remove kguitar
+  as it doesn't compile.
 
   05 Jun 2009; Tobias Scherbaum <dertobi123@gentoo.org> package.mask:
   Unmask =dev-libs/cyrus-sasl-2.1.23
