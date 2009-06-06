@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-electronics</herd>
-<longdescription>
-  pcb is free software for designing printed circuit board layouts. It has many
-  features and is capable of professional-quality output. It is available only
-  for *NIX operating systems e.g. GNU/Linux.
-</longdescription>
-<use>
-  <flag name='xrender'>Add support for xrender
-    (<pkg>x11-libs/libXrender</pkg>)</flag>
-</use>
+	<herd>sci-electronics</herd>
+	<longdescription>
+		Printed Circuit Board layout tool. Used together with the gEDA tools for
+		Electronic Design Automation or on its own.  
+	</longdescription>
+	<use>
+		<flag name='gif'>GIF graphics export</flag>
+		<flag name='jpeg'>JPEG graphics export</flag>
+		<flag name='nelma'>NELMA file export</flag>
+		<flag name='png'>PNG graphics export</flag>
+		<flag name='threads'>Enable (posix) threads for GTK GUI</flag>
+		<flag name='tk'>Build tcl/tk graphical QFP footprint generator</flag>
+		<flag name='xrender'>Translucent PCB display for Motif/Lesstif GUI</flag>
+	</use>
 </pkgmetadata>
+
