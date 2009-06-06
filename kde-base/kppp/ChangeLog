@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.117 2009/06/05 00:26:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.118 2009/06/06 10:24:33 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kppp-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kppp-4.2.4.ebuild:
   Fix accidently added keywords

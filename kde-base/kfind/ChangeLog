@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.123 2009/06/04 23:55:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfind/ChangeLog,v 1.124 2009/06/06 11:24:48 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kfind-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> kfind-4.2.4.ebuild:
   Fix accidently added keywords

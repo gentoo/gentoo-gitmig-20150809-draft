@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksokoban
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksokoban/ChangeLog,v 1.90 2009/06/03 14:56:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksokoban/ChangeLog,v 1.91 2009/06/06 12:00:01 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> ksokoban-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> ksokoban-3.5.10.ebuild:
   Marking ksokoban-3.5.10 ppc64 stable for bug 271889

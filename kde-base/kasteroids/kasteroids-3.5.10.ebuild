@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/kasteroids-3.5.10.ebuild,v 1.3 2009/06/03 15:28:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/kasteroids-3.5.10.ebuild,v 1.4 2009/06/06 11:38:39 maekke Exp $
 
 KMNAME=kdegames
 EAPI="1"
 inherit kde-meta
 
 DESCRIPTION="KDE Space Game"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility"
 DEPEND=">=kde-base/libkdegames-${PV}:${SLOT}"
 RDEPEND="${DEPEND}"

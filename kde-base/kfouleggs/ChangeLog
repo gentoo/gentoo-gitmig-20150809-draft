@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfouleggs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfouleggs/ChangeLog,v 1.90 2009/06/03 14:58:03 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfouleggs/ChangeLog,v 1.91 2009/06/06 11:44:21 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kfouleggs-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kfouleggs-3.5.10.ebuild:
   Marking kfouleggs-3.5.10 ppc64 stable for bug 271889

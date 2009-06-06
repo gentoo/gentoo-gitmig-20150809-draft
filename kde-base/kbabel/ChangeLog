@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.81 2009/06/03 15:36:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbabel/ChangeLog,v 1.82 2009/06/06 10:33:40 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kbabel-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> kbabel-3.5.10.ebuild:
   Marking kbabel-3.5.10 ppc64 stable for bug 271889

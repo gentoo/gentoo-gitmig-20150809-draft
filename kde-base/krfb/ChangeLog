@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/krfb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.117 2009/06/05 00:28:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krfb/ChangeLog,v 1.118 2009/06/06 10:26:18 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> krfb-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> krfb-4.2.4.ebuild:
   Fix accidently added keywords

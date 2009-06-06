@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.5.10.ebuild,v 1.5 2009/06/03 18:28:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalzium/kalzium-3.5.10.ebuild,v 1.6 2009/06/06 11:34:36 maekke Exp $
 KMNAME=kdeedu
 EAPI="1"
 inherit flag-o-matic kde-meta eutils
 
 DESCRIPTION="KDE: periodic table of the elements"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="solver"
 HOMEPAGE="http://edu.kde.org/kalzium/"
 

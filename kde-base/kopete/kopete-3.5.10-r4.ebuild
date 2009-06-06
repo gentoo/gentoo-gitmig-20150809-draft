@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.5 2009/06/04 18:18:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.6 2009/06/06 10:22:52 maekke Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -9,7 +9,7 @@ inherit kde-meta eutils
 DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org/"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 
 IUSE="emoticons-manager jingle ssl xscreensaver slp kernel_linux kdehiddenvisibility"
 PLUGINS="addbookmarks alias autoreplace connectionstatus contactnotes crypt highlight history latex netmeeting nowlistening

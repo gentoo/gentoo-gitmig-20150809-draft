@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.117 2009/06/04 23:49:50 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys-meta/ChangeLog,v 1.118 2009/06/06 11:32:07 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kdetoys-meta-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   kdetoys-meta-4.2.4.ebuild:

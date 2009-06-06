@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/quanta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.94 2009/06/03 14:16:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/quanta/ChangeLog,v 1.95 2009/06/06 11:09:38 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> quanta-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> quanta-3.5.10.ebuild:
   Marking quanta-3.5.10 ppc64 stable for bug 271889

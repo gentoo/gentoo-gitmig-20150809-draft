@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.10-r1.ebuild,v 1.4 2009/06/03 15:03:07 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kicker/kicker-3.5.10-r1.ebuild,v 1.5 2009/06/06 11:20:44 maekke Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -10,7 +10,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdebase-3.5-patchset-13.tar.bz2"
 
 DESCRIPTION="Kicker is the KDE application starter panel, also capable of some useful applets and extensions."
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ppc ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="kdehiddenvisibility xcomposite"
 
 DEPEND=">=kde-base/libkonq-${PV}:${SLOT}

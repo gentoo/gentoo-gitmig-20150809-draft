@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.197 2009/06/05 00:23:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.198 2009/06/06 10:22:52 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> kopete-3.5.10-r4.ebuild:
+  amd64/x86 stable, bug #271889
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords

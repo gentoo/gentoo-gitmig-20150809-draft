@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksmiletris
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmiletris/ChangeLog,v 1.90 2009/06/03 14:50:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksmiletris/ChangeLog,v 1.91 2009/06/06 11:58:26 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> ksmiletris-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   03 Jun 2009; Brent Baude <ranger@gentoo.org> ksmiletris-3.5.10.ebuild:
   Marking ksmiletris-3.5.10 ppc64 stable for bug 271889

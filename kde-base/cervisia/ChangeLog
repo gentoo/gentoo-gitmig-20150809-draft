@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/cervisia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.114 2009/06/04 22:51:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/cervisia/ChangeLog,v 1.115 2009/06/06 10:32:04 maekke Exp $
+
+  06 Jun 2009; Markus Meier <maekke@gentoo.org> cervisia-3.5.10.ebuild:
+  amd64/x86 stable, bug #271889
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> cervisia-4.2.4.ebuild:
   Fix accidently added keywords
