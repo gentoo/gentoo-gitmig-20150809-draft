@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.7.6.ebuild,v 1.4 2008/07/05 07:04:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lingot/lingot-0.7.6.ebuild,v 1.5 2009/06/06 08:58:01 ssuominen Exp $
 
+EAPI=2
 WANT_AUTOMAKE=1.9
-
 inherit autotools eutils
 
 DESCRIPTION="LINGOT Is Not a Guitar-Only Tuner"
@@ -15,23 +15,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-clean-install.patch \
 		"${FILESDIR}"/${P}-memory_leak.patch
 	eautomake
 }
 
-src_compile() {
-	econf --disable-dependency-tracking
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		--disable-dependency-tracking
 }
 
 src_install() {
