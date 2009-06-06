@@ -2,5 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>gdesklets</herd>
-	<maintainer><email>nixphoeni@gentoo.org</email></maintainer>
+	<maintainer>
+		<email>nixphoeni@gentoo.org</email>
+	</maintainer>
+	<upstream>
+		<bugs-to>https://bugs.launchpad.net/gdesklets</bugs-to>
+	</upstream>
 </pkgmetadata>

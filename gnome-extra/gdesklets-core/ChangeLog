@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.105 2009/06/02 21:37:22 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.106 2009/06/06 17:37:27 nixphoeni Exp $
+
+  06 Jun 2009; Joe Sapp <nixphoeni@gentoo.org> metadata.xml:
+  Added bugs-to field to metadata pointing to the launchpad bug reporting
+  tool
 
   02 Jun 2009; Joe Sapp <nixphoeni@gentoo.org>
   -files/gdesklets-migration-tool:
