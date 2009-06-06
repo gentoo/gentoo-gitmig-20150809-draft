@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.27 2009/06/01 13:50:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.28 2009/06/06 16:54:26 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> pyopengl-3.0.0.ebuild:
+  ppc stable #271976
 
   01 Jun 2009; Markus Meier <maekke@gentoo.org> pyopengl-3.0.0.ebuild:
   amd64/x86 stable, bug #271976
