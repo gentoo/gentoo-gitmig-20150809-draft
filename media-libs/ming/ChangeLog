@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.51 2009/06/05 16:17:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.52 2009/06/06 21:07:44 loki_val Exp $
+
+  06 Jun 2009; Peter Alfredsen <loki_val@gentoo.org> +ming-0.2a.ebuild:
+  Reinstate. Ploticus needs this.
 
   05 Jun 2009; Peter Alfredsen <loki_val@gentoo.org> -ming-0.2a.ebuild,
   -ming-0.2a-r3.ebuild, metadata.xml:
