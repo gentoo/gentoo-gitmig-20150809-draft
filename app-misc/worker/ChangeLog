@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.74 2009/06/03 19:30:27 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.75 2009/06/06 17:54:50 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> worker-2.17.3.ebuild:
+  ppc stable #272486
 
 *worker-2.17.4 (03 Jun 2009)
 
