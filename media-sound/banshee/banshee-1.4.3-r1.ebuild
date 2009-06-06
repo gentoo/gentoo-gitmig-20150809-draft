@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.4 2009/06/06 09:33:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.4.3-r1.ebuild,v 1.5 2009/06/06 09:39:48 ssuominen Exp $
 
 EAPI=2
 inherit eutils mono gnome2-utils fdo-mime versionator
@@ -33,49 +33,27 @@ RDEPEND=">=dev-lang/mono-2
 	media-plugins/gst-plugins-alsa:0.10
 	media-plugins/gst-plugins-gnomevfs:0.10
 	media-plugins/gst-plugins-gconf:0.10
-	|| (
-		media-plugins/gst-plugins-cdparanoia:0.10
-		media-plugins/gst-plugins-cdio:0.10
-	)
+	|| ( media-plugins/gst-plugins-cdparanoia:0.10
+		media-plugins/gst-plugins-cdio:0.10 )
 	media-libs/musicbrainz:1
 	>=dev-dotnet/dbus-glib-sharp-0.4.1
 	>=dev-dotnet/dbus-sharp-0.6.1a
 	>=dev-dotnet/mono-addins-0.4[gtk]
 	>=dev-dotnet/taglib-sharp-2.0.3.1
 	>=dev-db/sqlite-3.4
-	aac? (
-		media-plugins/gst-plugins-faad:0.10
-	)
-	boo? (
-		>=dev-lang/boo-0.8.1
-	)
-	daap? (
-	 	>=dev-dotnet/mono-zeroconf-0.8.0-r1
-	)
-	doc? (
-		virtual/monodoc
-	)
-	encode? (
-		media-plugins/gst-plugins-lame:0.10
-		media-plugins/gst-plugins-taglib:0.10
-	)
-	flac? (
-		media-plugins/gst-plugins-flac:0.10
-	)
-	ipod? (
-		>=dev-dotnet/ipod-sharp-0.8.1
-	)
-	mad? (
-		media-plugins/gst-plugins-mad:0.10
-	)
-	mtp? (
-		media-libs/libmtp
-	)
-	vorbis? (
-		media-plugins/gst-plugins-ogg:0.10
-		media-plugins/gst-plugins-vorbis:0.10
-	)"
-
+	karma? ( >=media-libs/libkarma-0.1.0-r1 )
+	aac? ( media-plugins/gst-plugins-faad:0.10 )
+	boo? ( >=dev-lang/boo-0.8.1 )
+	daap? ( >=dev-dotnet/mono-zeroconf-0.8.0-r1 )
+	doc? ( virtual/monodoc )
+	encode? ( media-plugins/gst-plugins-lame:0.10
+		media-plugins/gst-plugins-taglib:0.10 )
+	flac? ( media-plugins/gst-plugins-flac:0.10 )
+	ipod? ( >=dev-dotnet/ipod-sharp-0.8.1 )
+	mad? ( media-plugins/gst-plugins-mad:0.10 )
+	mtp? ( media-libs/libmtp )
+	vorbis? ( media-plugins/gst-plugins-ogg:0.10
+		media-plugins/gst-plugins-vorbis:0.10 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
