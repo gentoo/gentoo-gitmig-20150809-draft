@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.60 2009/05/26 17:50:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.61 2009/06/06 17:32:42 nixnut Exp $
+
+  06 Jun 2009; nixnut <nixnut@gentoo.org> mod_jk-1.2.28-r1.ebuild:
+  ppc stable #272414
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mod_jk-1.2.27.ebuild, mod_jk-1.2.28.ebuild, mod_jk-1.2.28-r1.ebuild:
