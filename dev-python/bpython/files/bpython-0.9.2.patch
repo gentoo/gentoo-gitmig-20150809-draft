@@ -1,0 +1,47 @@
+Index: bpython-0.9.2/bpython/cli.py
+===================================================================
+--- bpython-0.9.2.orig/bpython/cli.py
++++ bpython-0.9.2/bpython/cli.py
+@@ -55,6 +55,7 @@ from ConfigParser import ConfigParser, N
+ from pygments import format
+ from pygments.lexers import PythonLexer
+ from pygments.token import Token
++import bpython.formatter
+ from bpython.formatter import BPythonFormatter
+ from itertools import chain
+ 
+@@ -1828,6 +1829,7 @@ def loadini(configfile):
+     OPTS.tab_length = config.safeget('general', 'tab_length', 4)
+     OPTS.auto_display_list = config.safeget('general', 'auto_display_list', True)
+     OPTS.syntax = config.safeget('general', 'syntax', True)
++    OPTS.light = config.safeget('general', 'light', False)
+     OPTS.arg_spec = config.safeget('general', 'arg_spec', True)
+     OPTS.hist_file = config.safeget('general', 'hist_file', '~/.pythonhist')
+     OPTS.hist_length = config.safeget('general', 'hist_length', 100)
+@@ -1920,8 +1922,12 @@ def main(args=None):
+     path = os.path.expanduser('~/.bpythonrc')   # migrating old configuration file
+     if os.path.isfile(path):
+         migrate_rc(path)
++
+     loadini(options.config)
+ 
++    if OPTS.light:
++        bpython.formatter.f_strings = bpython.formatter.f_strings_light
++
+     try:
+         o = curses.wrapper(main_curses)
+     except:
+Index: bpython-0.9.2/sample.ini
+===================================================================
+--- bpython-0.9.2.orig/sample.ini
++++ bpython-0.9.2/sample.ini
+@@ -14,6 +14,9 @@ auto_display_list = True
+ # Syntax highlighting as you type (default: True).
+ syntax = True
+ 
++# Light background (default: False).
++light = False
++
+ # Display the arg spec (list of arguments) for callables,
+ # when possible (default: True).
+ arg_spec = True
