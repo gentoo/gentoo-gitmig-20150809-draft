@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.6 2009/05/30 23:26:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.7 2009/06/07 15:21:32 armin76 Exp $
+
+  07 Jun 2009; Raúl Porcel <armin76@gentoo.org> cloog-ppl-0.15.3.ebuild:
+  Add ~arm/~ia64/~s390/~sh/~sparc wrt #269088
 
   30 May 2009; Brent Baude <ranger@gentoo.org> cloog-ppl-0.15.3.ebuild:
   Marking cloog-ppl-0.15.3 ~ppc64 for bug 269088
