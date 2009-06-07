@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.40-r1.ebuild,v 1.1 2009/06/01 21:30:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pysmssend/pysmssend-1.40-r1.ebuild,v 1.2 2009/06/07 16:03:36 hwoarang Exp $
 
 NEED_PYTHON=2.5
 
@@ -18,8 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="qt4"
 
 RDEPEND=">dev-python/mechanize-0.1.7b
-	qt4? ( >=dev-python/PyQt4-4.4.4-r5[X]
-		!>dev-python/PyQt4-4.5 )"
+	qt4? ( dev-python/PyQt4[X] )"
 
 src_install() {
 	distutils_src_install
