@@ -13,6 +13,7 @@ kde
 mpi
 fuse
 hal
+prolog
 
 # This file contains a list of useflags that cannot be used on s390.
 bluetooth
