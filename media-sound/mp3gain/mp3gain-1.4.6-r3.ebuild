@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.6-r3.ebuild,v 1.1 2009/04/16 16:39:07 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/mp3gain-1.4.6-r3.ebuild,v 1.2 2009/06/07 16:29:06 nixnut Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.zip"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~ppc64 ~sparc ~x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
