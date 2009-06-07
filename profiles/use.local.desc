@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4536 2009/06/07 09:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4537 2009/06/07 18:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2987,6 +2987,7 @@ x11-misc/google-gadgets:soup - Enables XML HTTP request extension based on net-l
 x11-misc/google-gadgets:webkit - Enables browser element and script runtime based on net-libs/webkit-gtk
 x11-misc/notification-daemon-xfce:xfce - Enable integration in XFCE desktop
 x11-misc/slim:screenshot - Enable screenshot support (using media-gfx/imagemagick)
+x11-misc/tint2:examples - Install tint2rc examples
 x11-misc/vnc2swf:x11vnc - Install script that depends on x11vnc
 x11-misc/x11vnc:system-libvncserver - Build x11vnc against the system libvncserver (experimental)
 x11-misc/xfce4-notifyd:libsexy - Enable support for x11-libs/libsexy
