@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.2.0.ebuild,v 1.1 2009/06/03 10:46:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/warzone2100-2.2.0.ebuild,v 1.2 2009/06/07 12:20:02 nyhm Exp $
 
 EAPI=2
 inherit versionator games
@@ -46,7 +46,7 @@ src_configure() {
 		--with-distributor="Gentoo ${PF}" \
 		--with-icondir=/usr/share/pixmaps \
 		--with-applicationdir=/usr/share/applications \
-		$(use_enable debug) \
+		$(use_enable debug debug relaxed) \
 		$(use_enable nls)
 }
 
