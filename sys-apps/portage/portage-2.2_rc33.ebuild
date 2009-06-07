@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc33.ebuild,v 1.3 2009/06/03 18:39:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc33.ebuild,v 1.4 2009/06/07 07:54:03 zmedico Exp $
 
 inherit eutils multilib python
 
@@ -80,6 +80,8 @@ src_compile() {
 	if use doc; then
 		cd "${S}"/doc
 		touch fragment/date
+		# Workaround for bug #272063, remove in next portage release.
+		sed 's:^XMLTO_FLAGS =:XMLTO_FLAGS = --skip-validation:' -i Makefile
 		make xhtml xhtml-nochunks || die "failed to make docs"
 	fi
 
