@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/shared-mime-info
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.146 2009/06/06 17:58:11 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.147 2009/06/07 12:48:24 maekke Exp $
+
+  07 Jun 2009; Markus Meier <maekke@gentoo.org>
+  shared-mime-info-0.60.ebuild:
+  amd64/x86 stable, bug #272515
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> shared-mime-info-0.60.ebuild:
   ppc stable #272515
