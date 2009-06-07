@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>amd64</herd>
-	<use>
-		<flag name='immqt-bc'>Enable binary compatible version of immodule for
-			<pkg>x11-libs/qt</pkg></flag>
-	</use>
 </pkgmetadata>
