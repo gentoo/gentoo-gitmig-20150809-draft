@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/spice
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.10 2007/04/18 07:36:35 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/spice/ChangeLog,v 1.11 2009/06/07 05:43:47 calchan Exp $
+
+*spice-3.5.5-r1 (07 Jun 2009)
+
+  07 Jun 2009; Denis Dupeyron <calchan@gentoo.org> +spice-3.5.5-r1.ebuild:
+  Fixed pre-stripped files and LDFLAGS, bug #252038. Straight to stable for
+  those arches where it is stable because it is such a minor change.
 
   18 Apr 2007; Christian Faulhammer <opfer@gentoo.org> spice-3.5.5.ebuild:
   stable amd64, bug 174791
