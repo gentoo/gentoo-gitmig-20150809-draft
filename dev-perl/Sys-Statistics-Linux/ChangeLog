@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Sys-Statistics-Linux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.37 2009/05/19 18:34:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sys-Statistics-Linux/ChangeLog,v 1.38 2009/06/07 11:27:06 tove Exp $
+
+*Sys-Statistics-Linux-0.52 (07 Jun 2009)
+
+  07 Jun 2009; Torsten Veller <tove@gentoo.org>
+  +Sys-Statistics-Linux-0.52.ebuild:
+  Version bump
 
 *Sys-Statistics-Linux-0.50 (19 May 2009)
 
