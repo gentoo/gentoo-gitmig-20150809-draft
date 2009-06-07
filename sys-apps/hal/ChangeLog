@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.287 2009/06/01 22:51:46 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.288 2009/06/07 22:59:48 dang Exp $
+
+  07 Jun 2009; Daniel Gryniewicz <dang@gentoo.org> hal-0.5.12_rc1-r6.ebuild:
+  Update plugdev message to be more explicit
 
 *hal-0.5.12_rc1-r6 (01 Jun 2009)
 
