@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.6.ebuild,v 1.1 2009/06/07 09:20:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.6.ebuild,v 1.2 2009/06/07 18:58:42 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="MPlayer GUI for GNOME Desktop Environment"
 HOMEPAGE="http://code.google.com/p/gnome-mplayer"
@@ -43,6 +43,11 @@ pkg_setup() {
 		$(use_with libnotify)
 		$(use_with ipod libgpod)
 		$(use_with musicbrainz libmusicbrainz3)"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }
 
 src_install() {

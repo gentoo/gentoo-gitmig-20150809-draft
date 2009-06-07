@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.21 2009/06/07 17:18:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.22 2009/06/07 18:58:42 ssuominen Exp $
+
+  07 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-mplayer-0.9.6.ebuild, +files/gnome-mplayer-0.9.6-asneeded.patch:
+  Fix building with asneeded wrt #273018, thanks to Sander Sweers and Kevin
+  DeKorte.
 
   07 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   gnome-mplayer-0.9.5-r2.ebuild:

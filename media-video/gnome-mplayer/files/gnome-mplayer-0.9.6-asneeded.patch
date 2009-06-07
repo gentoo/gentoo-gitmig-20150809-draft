@@ -1,0 +1,37 @@
+diff -aurN gnome-mplayer-0.9.6.orig/src/Makefile.am gnome-mplayer-0.9.6/src/Makefile.am
+--- gnome-mplayer-0.9.6.orig/src/Makefile.am	2009-06-07 10:34:12.000000000 +0200
++++ gnome-mplayer-0.9.6/src/Makefile.am	2009-06-07 10:39:18.000000000 +0200
+@@ -59,11 +59,19 @@
+ 	langlist.h
+ 
+ 
+-gnome_mplayer_LDFLAGS = 
++gnome_mplayer_LDFLAGS =
+ 
+-gnome_mplayer_LDADD = $(GTK_LIBS) $(GIO_LIBS) $(DBUS_LIBS) $(GCONF_LIBS) $(ALSA_LIBS) $(NOTIFY_LIBS) $(GPOD_LIBS) $(MUSICBRAINZ_LIBS) \
+-    libgmtk/libgmtk.la \
+-    libgmlib/libgmlib.la
++gnome_mplayer_LDADD =		\
++    libgmtk/libgmtk.la		\
++    libgmlib/libgmlib.la	\
++    $(GTK_LIBS)			\
++    $(GIO_LIBS)			\
++    $(DBUS_LIBS)		\
++    $(GCONF_LIBS)		\
++    $(ALSA_LIBS)		\
++    $(NOTIFY_LIBS)		\
++    $(GPOD_LIBS)		\
++    $(MUSICBRAINZ_LIBS)
+ 
+ if HAVE_NAUTILUS
+ 
+@@ -78,7 +86,8 @@
+ libgnome_mplayer_properties_page_la_CFLAGS = \
+     $(NAUTILUS_CFLAGS) \
+     $(AM_CFLAGS)
+-    
++
++libgnome_mplayer_properties_page_la_LDFLAGS = -module -avoid-version
+ 
+ endif #HAVE_NAUTILUS
+ 
