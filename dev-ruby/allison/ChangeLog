@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.7 2008/04/28 15:19:32 ricmm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.8 2009/06/07 17:42:15 armin76 Exp $
+
+  07 Jun 2009; Raúl Porcel <armin76@gentoo.org> allison-2.0.3.ebuild:
+  Add ~arm/~s390
 
   28 Apr 2008; <ricmm@gentoo.org> allison-2.0.3.ebuild:
   Add ~mips, bug #206031
