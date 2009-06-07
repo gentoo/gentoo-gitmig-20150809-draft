@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/gigolo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.1 2009/06/07 18:31:05 darkside Exp $
+
+*gigolo-0.3.2 (07 Jun 2009)
+
+  07 Jun 2009; Jeremy Olexa <darkside@gentoo.org> +metadata.xml,
+  +gigolo-0.3.2.ebuild:
+  Initial commit of x11-misc/gigolo, based on ebuild written by Ben Sagal (bug
+  271947) & angelos (xfce overlay)
+
