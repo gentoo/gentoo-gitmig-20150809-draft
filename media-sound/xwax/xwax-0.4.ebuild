@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.4.ebuild,v 1.4 2009/06/07 00:25:06 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.4.ebuild,v 1.5 2009/06/07 04:38:51 nixphoeni Exp $
 
 EAPI=2
 inherit eutils
@@ -20,8 +20,6 @@ RDEPEND="media-libs/libsdl
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}"
 
-DOCS="README"
-
 src_prepare() {
 	# Fix fonts directory in source
 	epatch "${FILESDIR}/${P}-fonts.patch"
@@ -38,9 +36,6 @@ src_configure() {
 }
 
 src_install() {
-	# Manually install into ${D}/usr/bin
-	exeinto "/usr/bin"
-
-	doexe xwax xwax_import
-	dodoc ${DOCS}
+	dobin xwax xwax_import || die
+	dodoc README || die
 }
