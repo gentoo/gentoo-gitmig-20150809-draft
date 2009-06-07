@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.5.ebuild,v 1.3 2009/06/02 19:34:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.5.ebuild,v 1.4 2009/06/07 09:28:41 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 GCONF_DEBUG=no
 inherit eutils gnome2 multilib
 
@@ -12,7 +12,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="gnome"
 
 RDEPEND="dev-libs/glib:2
