@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lafilefixer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.9 2009/05/16 12:13:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.10 2009/06/07 16:49:20 nixnut Exp $
+
+  07 Jun 2009; nixnut <nixnut@gentoo.org> lafilefixer-0.5.ebuild:
+  ppc stable #272977
 
   16 May 2009; Alexis Ballier <aballier@gentoo.org> lafilefixer-0.5.ebuild:
   keyword ~sparc-fbsd, bug #267148
