@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-libpng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.105 2009/06/07 14:24:25 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-libpng/ChangeLog,v 1.106 2009/06/07 16:25:53 klausman Exp $
+
+  07 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  gst-plugins-libpng-0.10.14-r1.ebuild:
+  Stable on alpha, bug #272972
 
 *gst-plugins-libpng-0.10.14-r1 (07 Jun 2009)
 
