@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.122 2009/06/06 10:25:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.123 2009/06/07 02:12:31 jmbsvicetto Exp $
+
+  07 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  krdc-4.2.4.ebuild:
+  Added a postinst message warning users they need to install
+  net-misc/rdesktop in case
+  the want to connect through RDP to remote systems.
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> krdc-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
