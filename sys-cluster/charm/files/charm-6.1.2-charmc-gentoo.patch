@@ -17,7 +17,7 @@
 -  test -z "$CHARMLIBSO" && CHARMLIBSO=`csh -c "cd $CHARMBIN/../lib_so >& /dev/null && pwd"`
 -  test -z "$CHARMLIBSO" && echo "$CHARMBIN/../lib_so: not found" && exit 1
 -fi
-+CHARMLIB="$/usr/gentoo-libdir"
++CHARMLIB="/usr/gentoo-libdir"
 +CHARMINC="/usr/include/gentoo-include"
 +CHARMLIBSO="/usr/gentoo-libdir"
  
