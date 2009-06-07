@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.113 2009/05/25 17:44:14 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.114 2009/06/07 19:21:45 ford_prefect Exp $
+
+*glade-3.6.4 (07 Jun 2009)
+
+  07 Jun 2009; Arun Raghavan <ford_prefect@gentoo.org> +glade-3.6.4.ebuild,
+  +files/glade-3.6.4-fix-linking.patch:
+  Bump to 3.6.4. Bug fix release. Also include broken linking to system
+  glade libs during make install (bug #268236).
 
 *glade-3.6.3 (25 May 2009)
 

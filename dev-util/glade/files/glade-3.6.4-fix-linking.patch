@@ -1,0 +1,12 @@
+diff -urNp glade3-3.6.3/plugins/python/Makefile.am glade3-3.6.3-new/plugins/python/Makefile.am
+--- glade3-3.6.3/plugins/python/Makefile.am	2009-06-02 01:07:45.000000000 +0530
++++ glade3-3.6.3-new/plugins/python/Makefile.am	2009-06-07 12:46:48.000000000 +0530
+@@ -19,7 +19,7 @@ libgladepython_la_CFLAGS = \
+ 	$(GTK_CFLAGS)                    \
+ 	$(PLUGINS_WARN_CFLAGS)           \
+ 	$(AM_CPPFLAGS)
+-libgladepython_la_LDFLAGS = -module -avoid-version $(PYTHON_LIBS) $(AM_LDFLAGS)
++libgladepython_la_LDFLAGS = -module -avoid-version $(AM_LDFLAGS)
+ libgladepython_la_LIBADD = $(libgladeui) $(PYTHON_LIBS)
+ 
+ if PLATFORM_WIN32
