@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.61 2009/06/06 17:32:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.62 2009/06/07 12:40:33 maekke Exp $
+
+  07 Jun 2009; Markus Meier <maekke@gentoo.org> mod_jk-1.2.28-r1.ebuild:
+  amd64/x86 stable, bug #272414
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> mod_jk-1.2.28-r1.ebuild:
   ppc stable #272414
