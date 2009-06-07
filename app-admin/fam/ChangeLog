@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/fam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.56 2009/06/05 03:13:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/ChangeLog,v 1.57 2009/06/07 15:54:05 jer Exp $
+
+  07 Jun 2009; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r4.ebuild:
+  Fix typo.
 
   05 Jun 2009; Jeroen Roovers <jer@gentoo.org> fam-2.7.0-r4.ebuild:
   Depend on either net-nds/{rpcbind,portmap} (bug #272386).

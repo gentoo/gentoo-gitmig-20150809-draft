@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.22 2009/06/05 03:13:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam/fam-2.7.0-r4.ebuild,v 1.23 2009/06/07 15:54:05 jer Exp $
 
 inherit libtool eutils autotools
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-DEPEND="|| ( net-dns/rpcbind >=net-nds/portmap-5b-r6 )
+DEPEND="|| ( net-nds/rpcbind >=net-nds/portmap-5b-r6 )
 	!app-admin/gamin"
 RDEPEND="${DEPEND}"
 PROVIDE="virtual/fam"
