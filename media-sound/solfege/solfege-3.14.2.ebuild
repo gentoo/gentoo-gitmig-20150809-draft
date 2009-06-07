@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.14.2.ebuild,v 1.1 2009/05/11 13:25:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/solfege/solfege-3.14.2.ebuild,v 1.2 2009/06/07 10:20:06 ssuominen Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ DEPEND="${RDEPEND}
 src_configure() {
 	local xslloc=$( xmlcatalog /etc/xml/catalog	http://docbook.sourceforge.net/release/xsl/current/html/chunk.xsl | sed 's@file://@@' )
 
-	econf \
+	LANGUAGE=C econf \
 		--enable-docbook-stylesheet=${xslloc} \
 		$(use_enable oss oss-sound)
 }
