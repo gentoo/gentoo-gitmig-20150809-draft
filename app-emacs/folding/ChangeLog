@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/folding
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.16 2009/06/07 12:42:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/folding/ChangeLog,v 1.17 2009/06/07 18:59:24 klausman Exp $
+
+  07 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  folding-2007.0506.ebuild:
+  Stable on alpha, bug #272464
 
   07 Jun 2009; Markus Meier <maekke@gentoo.org> folding-2007.0506.ebuild:
   amd64/x86 stable, bug #272464
