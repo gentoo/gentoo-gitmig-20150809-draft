@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rezound
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.56 2008/12/03 22:25:30 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.57 2009/06/07 21:21:56 maekke Exp $
+
+  07 Jun 2009; Markus Meier <maekke@gentoo.org>
+  rezound-0.12.3_beta-r2.ebuild:
+  amd64/x86 stable, bug #272686
 
   03 Dec 2008; Markus Meier <maekke@gentoo.org>
   rezound-0.12.3_beta-r1.ebuild:
