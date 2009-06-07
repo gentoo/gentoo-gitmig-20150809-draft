@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/BerkeleyDB
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.55 2009/03/13 12:27:40 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.56 2009/06/07 12:25:29 tove Exp $
+
+*BerkeleyDB-0.39 (07 Jun 2009)
+
+  07 Jun 2009; Torsten Veller <tove@gentoo.org> +BerkeleyDB-0.39.ebuild:
+  Version bump
 
   13 Mar 2009; Torsten Veller <tove@gentoo.org> -BerkeleyDB-0.35.ebuild,
   -BerkeleyDB-0.36.ebuild:
