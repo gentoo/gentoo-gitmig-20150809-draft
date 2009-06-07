@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9891 2009/06/06 08:48:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9892 2009/06/07 21:22:25 dberkholz Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -707,10 +707,6 @@ app-misc/sdricoh_cs
 # Newer versions of these do work with split Qt 4.4
 <media-sound/qsynth-0.3.2
 ~sci-libs/vtk-5.0.3
-
-# Donnie Berkholz <dberkholz@gentoo.org> (12 Jan 2009)
-# Masked pending unmasking of guile-gnome-platform 2.16
->=sci-chemistry/burrow-owl-1.4
 
 # mask pending removal
 # Benedikt Böhm <hollow@gentoo.org> (10 Jan 2009)
