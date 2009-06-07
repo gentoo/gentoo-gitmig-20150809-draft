@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4534 2009/06/06 17:47:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4535 2009/06/07 04:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -198,7 +198,6 @@ app-emulation/basiliskII-jit:jit - Enables the jit compiler
 app-emulation/bochs:debugger - Enable the bochs debugger
 app-emulation/e-uae:capslib - Add CAPS library support
 app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output
-app-emulation/emul-linux-x86-qtlibs:immqt-bc - Enable binary compatible version of immodule for x11-libs/qt
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library app-emulation/libdsk
 app-emulation/kvm:alsa - Enable alsa output for sound emulation
 app-emulation/kvm:esd - Enable esound output for sound emulation
@@ -1028,12 +1027,8 @@ games-strategy/ufo-ai:editor - Build map editor
 games-strategy/uqm:music - download and install music files (large)
 games-strategy/uqm:remix - download and install music remix files (large)
 games-strategy/uqm:voice - download and install voice files (large)
-games-strategy/wesnoth:editor - Enable compilation of map editor
-games-strategy/wesnoth:lite - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
-games-strategy/wesnoth:smallgui - enable GUI reductions for resolutions down to 800x480 (eeePC, Nokia 8x0)
 games-strategy/wesnoth:tinygui - enable GUI reductions for resolutions down to 320x240 (PDAs)
-games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-strategy/x2:bonusscripts - Add bonus scripts
 games-strategy/x2:dynamic - Use dynamic binaries instead of static
 games-strategy/x2:langpacks - Install additional language packs
