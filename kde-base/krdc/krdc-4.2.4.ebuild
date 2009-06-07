@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.2.4.ebuild,v 1.3 2009/06/07 02:12:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/krdc-4.2.4.ebuild,v 1.4 2009/06/07 02:52:35 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -36,6 +36,5 @@ src_compile() {
 }
 
 pkg_postinst() {
-	ewarn "If you want to use krdc to connect to remote systems through RDP,"
-	ewarn "you'll need to install the net-misc/rdesktop package."
+	elog "If you want to use the remote desktop protocol (RDP) install net-misc/rdesktop"
 }

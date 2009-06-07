@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krdc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.123 2009/06/07 02:12:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krdc/ChangeLog,v 1.124 2009/06/07 02:52:35 jmbsvicetto Exp $
+
+  07 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  krdc-4.2.4.ebuild:
+  Improved the postinst warning about rdesktop.
 
   07 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   krdc-4.2.4.ebuild:
