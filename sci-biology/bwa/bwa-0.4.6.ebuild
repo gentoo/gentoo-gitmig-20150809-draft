@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/bwa-0.4.6.ebuild,v 1.1 2009/04/20 17:40:44 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bwa/bwa-0.4.6.ebuild,v 1.2 2009/06/07 16:19:55 flameeyes Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/maq/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64"
 
 DEPEND=""
 RDEPEND=""
