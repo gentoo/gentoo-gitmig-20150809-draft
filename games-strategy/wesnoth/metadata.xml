@@ -3,11 +3,7 @@
 <pkgmetadata>
   <herd>games</herd>
   <use>
-    <flag name="editor">Enable compilation of map editor</flag>
-    <flag name="lite">Lite install</flag>
     <flag name="server">Enable compilation of server</flag>
-    <flag name="smallgui">enable GUI reductions for resolutions down to 800x480 (eeePC, Nokia 8x0)</flag>
-    <flag name="tools">Enable compilation of translation tools</flag>
     <flag name="tinygui">enable GUI reductions for resolutions down to 320x240 (PDAs)</flag>
   </use>
 </pkgmetadata>
