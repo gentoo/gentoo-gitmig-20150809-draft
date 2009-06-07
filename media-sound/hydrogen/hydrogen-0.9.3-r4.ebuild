@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.2 2009/02/27 09:01:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.3 2009/06/07 08:57:32 ssuominen Exp $
 
 EAPI=2
 
@@ -50,6 +50,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-desktop-noexec.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 	epatch "${FILESDIR}/${P}-gcc43noalsa.patch"
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 	eautoreconf
 }
 

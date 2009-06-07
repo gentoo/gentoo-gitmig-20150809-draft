@@ -1,0 +1,20 @@
+--- hydrogen-0.9.3.orig/src/lib/drivers/JackDriver.cpp   2005-10-18 02:32:04.000000000 +0400
++++ hydrogen-0.9.3/src/lib/drivers/JackDriver.cpp      2009-05-30 21:03:56.000000000 +0400
+@@ -27,6 +27,7 @@
+
+ #include <sys/types.h>
+ #include <unistd.h>
++#include <cstdio>
+ #include "lib/Hydrogen.h"
+ #include "lib/Preferences.h"
+
+--- hydrogen-0.9.3.orig/src/lib/Object.cpp       2005-10-18 02:32:04.000000000 +0400
++++ hydrogen-0.9.3/src/lib/Object.cpp  2009-05-30 21:03:56.000000000 +0400
+@@ -25,6 +25,7 @@
+ #include "Object.h"
+ #include "config.h"
+
++#include <cstdio>
+ #include <pthread.h>
+
+ #ifdef WIN32
