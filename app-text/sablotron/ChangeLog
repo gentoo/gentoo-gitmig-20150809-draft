@@ -1,6 +1,9 @@
 # ChangeLog for app-text/sablotron
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.62 2009/06/07 18:15:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/ChangeLog,v 1.63 2009/06/07 23:36:49 jer Exp $
+
+  07 Jun 2009; Jeroen Roovers <jer@gentoo.org> sablotron-1.0.3.ebuild:
+  Stable for HPPA (bug #272244).
 
   07 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   sablotron-1.0.3.ebuild:
