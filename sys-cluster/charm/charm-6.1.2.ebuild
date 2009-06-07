@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2.ebuild,v 1.4 2009/06/02 01:31:20 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/charm/charm-6.1.2.ebuild,v 1.5 2009/06/07 06:58:26 je_fro Exp $
 
 inherit eutils toolchain-funcs flag-o-matic multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="Charm++ is a message-passing parallel language and runtime system."
 LICENSE="charm"
 HOMEPAGE="http://charm.cs.uiuc.edu/"
 SRC_URI="http://charm.cs.uiuc.edu/distrib/${P}_src.tar.gz"
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${P}"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cmkopt tcp smp doc"
