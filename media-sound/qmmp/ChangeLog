@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.8 2009/06/05 11:02:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.9 2009/06/07 12:39:18 maekke Exp $
+
+  07 Jun 2009; Markus Meier <maekke@gentoo.org> qmmp-0.2.4.ebuild:
+  amd64/x86 stable, bug #272348
 
   05 Jun 2009; Ben de Groot <yngwin@gentoo.org> qmmp-0.2.4.ebuild:
   Pull musepack-tools only when USE=musepack, thanks to Alex Dedul in
