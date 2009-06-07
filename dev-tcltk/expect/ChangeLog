@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.53 2009/06/07 17:01:04 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.54 2009/06/07 17:29:26 mescalinum Exp $
+
+  07 Jun 2009; Federico Ferri <mescalinum@gentoo.org> -expect-5.44.1.ebuild:
+  version 5.44* recalled by upstream
 
   07 Jun 2009; Federico Ferri <mescalinum@gentoo.org>
   +files/expect-5.42.1-missing-includes.patch, +expect-5.42.1-r2.ebuild:
