@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.10 2008/12/08 14:08:02 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.11 2009/06/07 17:42:25 mescalinum Exp $
 
 WANT_AUTOCONF="2.1"
 inherit autotools eutils
@@ -47,6 +47,9 @@ src_unpack() {
 	#fix missing define of HAVE_UNISTD_H in Dbg.c
 	sed -i -e 's/^\(#include <stdio\.h>\)/\1\n#include "expect_cf.h"/' \
 		Dbg.c
+
+	# fix implicit missing declarations (bug 204878)
+	epatch "${FILESDIR}"/"${P}"-missing-includes.patch
 
 	eautoconf
 }
