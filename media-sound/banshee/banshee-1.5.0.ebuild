@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.5.0.ebuild,v 1.1 2009/06/01 19:54:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/banshee/banshee-1.5.0.ebuild,v 1.2 2009/06/07 08:55:11 ssuominen Exp $
 
 EAPI=2
 
@@ -43,11 +43,10 @@ RDEPEND=">=dev-lang/mono-2
 	>=dev-dotnet/dbus-glib-sharp-0.4.1
 	>=dev-dotnet/dbus-sharp-0.6.1a
 	>=dev-dotnet/mono-addins-0.4[gtk]
-	>=dev-dotnet/taglib-sharp-2.0.3.1
+	>=dev-dotnet/taglib-sharp-2.0.3.2
 	>=dev-db/sqlite-3.4
-	aac? (
-		>=media-plugins/gst-plugins-faad-${GVER}
-	)
+	karma? ( >=media-libs/libkarma-0.1.0-r1 )
+	aac? ( >=media-plugins/gst-plugins-faad-${GVER} )
 	boo? (
 		>=dev-lang/boo-0.8.1
 	)
