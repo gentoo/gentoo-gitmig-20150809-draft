@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.90.ebuild,v 1.6 2009/05/28 13:57:37 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.90.ebuild,v 1.7 2009/06/07 16:00:03 ulm Exp $
 
 EAPI=2
 
@@ -29,7 +29,7 @@ fi
 DESCRIPTION="The extensible, customizable, self-documenting real-time display editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
 
-LICENSE="GPL-3 FDL-1.3 BSD as-is X11 W3C"
+LICENSE="GPL-3 FDL-1.3 BSD as-is X11 W3C unicode"
 SLOT="23"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="alsa dbus gif gpm gtk gzip-el hesiod jpeg kerberos m17n-lib motif png sound source svg tiff toolkit-scroll-bars X Xaw3d xft +xpm"
