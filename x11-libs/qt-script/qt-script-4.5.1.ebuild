@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.5.1.ebuild,v 1.6 2009/06/06 08:32:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-script/qt-script-4.5.1.ebuild,v 1.7 2009/06/08 22:27:48 jer Exp $
 
 EAPI="2"
 inherit qt4-build
 
 DESCRIPTION="The ECMAScript module for the Qt toolkit"
 SLOT="4"
-KEYWORDS="alpha amd64 arm ~hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="+iconv"
 
 DEPEND="~x11-libs/qt-core-${PV}[debug=]"
