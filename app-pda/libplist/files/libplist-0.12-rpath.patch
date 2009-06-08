@@ -1,0 +1,11 @@
+diff -ur libplist-0.12.orig/CMakeLists.txt libplist-0.12/CMakeLists.txt
+--- libplist-0.12.orig/CMakeLists.txt	2009-05-05 00:09:22.000000000 +0300
++++ libplist-0.12/CMakeLists.txt	2009-06-09 01:47:35.000000000 +0300
+@@ -1,5 +1,7 @@
+ PROJECT( libplist )
+ 
++SET( CMAKE_SKIP_RPATH TRUE )
++
+ SET( LIBPLIST_VERSION_MAJOR "0" )
+ SET( LIBPLIST_VERSION_MINOR "12" )
+ SET( LIBPLIST_SOVERSION "0" )
