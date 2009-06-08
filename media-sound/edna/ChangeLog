@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/edna
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.29 2009/03/06 18:11:01 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.30 2009/06/08 11:28:22 jer Exp $
+
+  08 Jun 2009; Jeroen Roovers <jer@gentoo.org> edna-0.6.ebuild:
+  Marked ~hppa (bug #272746).
 
   06 Mar 2009; Patrick Lauer <patrick@gentoo.org> edna-0.6.ebuild:
   Changing oggvorbis to ogg useflag. Thanks to Mr_Bones for the hint.
