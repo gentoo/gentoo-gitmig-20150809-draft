@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.47 2009/06/08 11:45:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.48 2009/06/08 12:27:47 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -38,7 +38,7 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	unset LIBDIR #266688
 
-	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir)"
+	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir) LIBEXECDIR=$(get_libdir)/rc"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
