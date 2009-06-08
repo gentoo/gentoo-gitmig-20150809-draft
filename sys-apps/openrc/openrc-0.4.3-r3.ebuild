@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r3.ebuild,v 1.1 2009/06/08 12:29:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r3.ebuild,v 1.2 2009/06/08 19:38:42 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -128,7 +128,7 @@ add_boot_init_mit_config() {
 }
 
 pkg_preinst() {
-	local f
+	local f LIBDIR=$(get_libdir)
 
 	# default net script is just comments, so no point in biting people
 	# in the ass by accident
@@ -279,6 +279,8 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	local LIBDIR=$(get_libdir)
+
 	# Remove old baselayout links
 	rm -f "${ROOT}"/etc/runlevels/boot/{check{fs,root},rmnologin}
 
