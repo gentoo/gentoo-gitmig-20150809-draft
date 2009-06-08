@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-0.12.ebuild,v 1.1 2009/06/08 22:57:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-0.12.ebuild,v 1.2 2009/06/08 23:00:31 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib python
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-rpath.patch
 	python_version
-	sed -e 's:-Werror -Wall -modern:-Wall:g' \
+	sed -e 's:-Werror::g' \
 		-e "s:\${PYTHON_VERSION}:${PYVER}:g" \
 		-e "s:\${CMAKE_INSTALL_LIBDIR}:/usr/$(get_libdir):g" \
 		-i swig/CMakeLists.txt -i src/CMakeLists.txt || die "sed failed"
