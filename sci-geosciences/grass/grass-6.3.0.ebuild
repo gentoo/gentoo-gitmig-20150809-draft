@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.6 2009/03/23 03:51:42 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.7 2009/06/08 04:51:04 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -110,6 +110,9 @@ src_unpack() {
 	epatch rpm/fedora/grass-readline.patch
 	# fix the fortify_source and buffer issues (see bug #261283)
 	epatch "${FILESDIR}"/${P}-o_creat.patch
+	# and update for gcc 4.4 C++ changes (see bug #270916)
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+
 	sed -i -e "s:buff\[12:buff\[16:g" general/g.parser/main.c \
 	    || die "sed failed"
 
