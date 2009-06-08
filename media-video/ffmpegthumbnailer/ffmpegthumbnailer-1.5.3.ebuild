@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.5.2.ebuild,v 1.1 2009/05/24 12:08:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ffmpegthumbnailer-1.5.3.ebuild,v 1.1 2009/06/08 09:56:20 ssuominen Exp $
 
 EAPI=2
 
@@ -11,9 +11,9 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="altivec jpeg png"
+IUSE="jpeg png"
 
-RDEPEND=">=media-video/ffmpeg-0.5[altivec?]
+RDEPEND=">=media-video/ffmpeg-0.5
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )"
 DEPEND="${RDEPEND}
@@ -22,6 +22,7 @@ DEPEND="${RDEPEND}
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
+		--disable-static \
 		$(use_enable png) \
 		$(use_enable jpeg)
 }
@@ -29,10 +30,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README
-}
-
-pkg_postinst() {
-	if use altivec; then
-		ewarn "Altivec support is known to be broken wrt bug #252641."
-	fi
+	find "${D}"/usr -name '*.la' -delete
 }
