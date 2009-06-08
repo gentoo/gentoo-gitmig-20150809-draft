@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.2.1.1.ebuild,v 1.1 2008/09/10 08:31:03 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.2.1.1.ebuild,v 1.2 2009/06/08 17:21:48 dertobi123 Exp $
 
 inherit eutils webapp depend.php confutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="mysql postgres"
 
-DEPEND=">=mail-mta/postfix-2.0.0
-	>=dev-lang/perl-5.0
+DEPEND=">=dev-lang/perl-5.0
 	dev-perl/DBI
 	mysql? ( dev-perl/DBD-mysql )
 	postgres? ( dev-perl/DBD-Pg )"

@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/postfixadmin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.13 2008/09/10 08:31:03 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/ChangeLog,v 1.14 2009/06/08 17:21:48 dertobi123 Exp $
+
+  08 Jun 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  postfixadmin-2.1.0-r1.ebuild, postfixadmin-2.2.0.ebuild,
+  postfixadmin-2.2.1.1.ebuild:
+  Remove dep on mail-mta/postfix as it works with other mta too, #257624
 
 *postfixadmin-2.2.1.1 (10 Sep 2008)
 
