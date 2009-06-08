@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/blackshades-20070723.ebuild,v 1.1 2007/07/23 16:07:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/blackshades/blackshades-20070723.ebuild,v 1.2 2009/06/08 07:17:35 tupone Exp $
+EAPI=2
 
 inherit eutils games
 
@@ -21,12 +22,11 @@ DEPEND="virtual/opengl
 	media-libs/openal
 	media-libs/freealut
 	media-libs/libsdl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -rf Data/Textures
 	rm -f ../Textures/{,Blood/}._*
 	mv -f ../Textures Data || die "mv failed"
@@ -39,6 +39,11 @@ src_unpack() {
 	sed -i "s:@DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		Source/Main.cpp \
 		|| die "sed Main.cpp failed"
+}
+
+src_compile() {
+	emake bindir || die "emake bindir failed"
+	emake || die "emake failed"
 }
 
 src_install() {
