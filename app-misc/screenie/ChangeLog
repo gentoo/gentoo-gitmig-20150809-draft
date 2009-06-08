@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/screenie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.17 2009/06/08 15:27:49 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.18 2009/06/08 17:01:14 fmccor Exp $
+
+  08 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  screenie-1.30.0-r1.ebuild:
+  Sparc stable, security bug #250476.
 
 *screenie-1.30.0-r1 (08 Jun 2009)
 
