@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.0-r3.ebuild,v 1.3 2009/06/06 17:30:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.0-r3.ebuild,v 1.4 2009/06/08 12:03:23 jer Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc sparc ~x86"
+KEYWORDS="amd64 hppa ppc sparc ~x86"
 IUSE="debug dbus"
 
 DEPEND="x11-libs/qt-gui:4[dbus?]"
