@@ -1,0 +1,16 @@
+diff -ur xvideoservicethief.orig/src/options.cpp xvideoservicethief/src/options.cpp
+--- xvideoservicethief.orig/src/options.cpp	2009-05-01 22:07:32.000000000 +0300
++++ xvideoservicethief/src/options.cpp	2009-06-08 21:51:13.000000000 +0300
+@@ -312,11 +312,7 @@
+ 
+ QString ProgramOptions::getPluginsDir()
+ {
+-#ifdef Q_WS_MAC
+-	return getApplicationPath() + "/../Resources/plugins";
+-#else
+-	return getApplicationPath() + "/plugins";
+-#endif
++	return "/usr/share/xvideoservicethief/plugins";
+ }
+ 
+ QSettings::Format ProgramOptions::getOptionsFormat()
