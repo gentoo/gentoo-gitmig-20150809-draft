@@ -1,17 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.46 2009/05/29 22:57:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.47 2009/06/08 11:45:39 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://roy.marples.name/openrc.git"
 	inherit git
+	KEYWORDS=""
 else
 	SRC_URI="http://roy.marples.name/downloads/${PN}/${P}.tar.bz2
 		mirror://gentoo/${P}.tar.bz2
 		http://dev.gentoo.org/~cardoe/files/${P}.tar.bz2
 		http://dev.gentoo.org/~vapier/dist/${P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="OpenRC manages the services, startup and shutdown of a host"
@@ -19,7 +21,6 @@ HOMEPAGE="http://roy.marples.name/openrc"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS=""
 IUSE="debug elibc_glibc ncurses pam unicode kernel_linux kernel_FreeBSD"
 
 RDEPEND="virtual/init
@@ -35,10 +36,9 @@ DEPEND="${RDEPEND}
 	virtual/os-headers"
 
 pkg_setup() {
-	LIBDIR="lib"
-	[ "${SYMLINK_LIB}" = "yes" ] && LIBDIR=$(get_abi_LIBDIR "${DEFAULT_ABI}")
+	unset LIBDIR #266688
 
-	MAKE_ARGS="${MAKE_ARGS} LIBNAME=${LIBDIR}"
+	MAKE_ARGS="${MAKE_ARGS} LIBNAME=$(get_libdir)"
 
 	local brand="Unknown"
 	if use kernel_linux ; then
@@ -62,6 +62,7 @@ src_unpack() {
 		unpack ${A}
 	fi
 	cd "${S}"
+	sed -i 's:0444:0644:' mk/sys.mk
 	epatch "${FILESDIR}"/9999/*.patch
 }
 
@@ -77,17 +78,21 @@ src_compile() {
 	fi
 
 	tc-export CC AR RANLIB
-	echo emake ${MAKE_ARGS}
 	emake ${MAKE_ARGS} || die "emake ${MAKE_ARGS} failed"
 }
 
 src_install() {
-	emake ${MAKE_ARGS} DESTDIR="${D}" install || die "make install failed"
+	emake ${MAKE_ARGS} DESTDIR="${D}" install || die
+
+	# move the shared libs back to /usr so ldscript can install
+	# more of a minimal set of files
+	# disabled for now due to #270646
+	#mv "${D}"/$(get_libdir)/lib{einfo,rc}* "${D}"/usr/$(get_libdir)/ || die
+	#gen_usr_ldscript -a einfo rc
 	gen_usr_ldscript libeinfo.so
 	gen_usr_ldscript librc.so
 
-	keepdir /"${LIBDIR}"/rc/init.d
-	keepdir /"${LIBDIR}"/rc/tmp
+	keepdir /$(get_libdir)/rc/{init.d,tmp}
 
 	# Backup our default runlevels
 	dodir /usr/share/"${PN}"
