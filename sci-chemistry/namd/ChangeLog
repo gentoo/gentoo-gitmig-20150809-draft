@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/namd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.7 2008/06/03 02:12:24 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/ChangeLog,v 1.8 2009/06/08 02:39:18 je_fro Exp $
+
+*namd-2.7 (08 Jun 2009)
+
+  08 Jun 2009; Jeff Gardner <je_fro@gentoo.org> namd-2.6.ebuild,
+  +namd-2.7.ebuild, +files/namd-2.7-gentoo.patch:
+  Latest version for testing. If anyone wants to modify and test on x86
+  please feel free :)
 
   03 Jun 2008; Michael Sterrett <mr_bones_@gentoo.org> namd-2.6.ebuild:
   remove reference to app-shells/csh which has been removed

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.6.ebuild,v 1.3 2009/06/08 02:39:18 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.7.ebuild,v 1.1 2009/06/08 02:39:18 je_fro Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -9,26 +9,26 @@ LICENSE="namd"
 HOMEPAGE="http://www.ks.uiuc.edu/Research/namd/"
 
 MY_PN="NAMD"
-MY_PV="2.6"
+MY_PV="2.7b1"
 
 SRC_URI="${MY_PN}_${MY_PV}_Source.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64"
 IUSE=""
 
 RESTRICT="fetch"
 
-DEPEND="app-shells/tcsh
+DEPEND="|| ( app-shells/csh
+			app-shells/tcsh )
 	virtual/libc
-	=sys-cluster/charm-5.9
+	sys-cluster/charm
 	=sci-libs/fftw-2*
-	=dev-lang/tcl-8.4*"
+	dev-lang/tcl"
 
 RDEPEND=${DEPEND}
 
-CHARM="charm-5.9"
-NAMD_ARCH="Linux-i686-g++"
+NAMD_ARCH="Linux-x86_64-g++"
 
 NAMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageName=NAMD"
 
@@ -46,23 +46,29 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-
-	# apply a few small fixes to make NAMD compile and
+	cd "${WORKDIR}"
+# apply a few small fixes to make NAMD compile and
 	# link to the proper libraries
-	epatch "${FILESDIR}"/namd-2.6-gentoo.patch
-
+	epatch "${FILESDIR}"/namd-2.7-gentoo.patch
 	cd "${S}"
-
 	# proper compiler and cflags
 	sed -e "s/g++/$(tc-getCXX)/" \
-		-e "s/CXXOPTS = -O3 -march=pentiumpro -ffast-math -static/CXXOPTS = ${CXXFLAGS}/" \
+		-e "s/CXXOPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/CXXOPTS = ${CXXFLAGS}/" \
 		-e "s/gcc/$(tc-getCC)/" \
-		-e "s/COPTS = -O3 -march=pentiumpro -ffast-math -static/COPTS = ${CFLAGS}/" \
+		-e "s/COPTS = -O3 -m64 -fexpensive-optimizations -ffast-math/COPTS = ${CFLAGS}/" \
 		-i arch/${NAMD_ARCH}.arch || \
 		die "Failed to setup ${NAMD_ARCH}.arch"
 
+	sed -e "s/gentoo-libdir/$(get_libdir)/g" \
+		-e "s/gentoo-charm/charm-6.1.2/g" \
+		-i Makefile || die "Failed gentooizing Makefile."
+	sed -e "s/gentoo-libdir/$(get_libdir)/g" -i arch/Linux-x86_64.fftw || \
+		die "Failed gentooizing Linux-x86_64.fftw."
+	sed -e "s/gentoo-libdir/$(get_libdir)/g" -i arch/Linux-x86_64.tcl || \
+		die "Failed gentooizing Linux-x86_64.tcl."
+
 	# configure
-	./config tcl fftw ${NAMD_ARCH}
+	./config ${NAMD_ARCH}
 }
 
 src_compile() {
