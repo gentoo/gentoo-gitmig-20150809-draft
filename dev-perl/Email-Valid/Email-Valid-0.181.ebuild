@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/Email-Valid-0.181.ebuild,v 1.1 2009/03/24 16:50:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/Email-Valid-0.181.ebuild,v 1.2 2009/06/08 06:53:15 tove Exp $
 
 EAPI=2
 
@@ -20,3 +20,4 @@ DEPEND="test? ( ${RDEPEND}
 		dev-perl/Test-Pod-Coverage )"
 
 SRC_TEST="do"
+PATCHES=( "${FILESDIR}/${PV}-disable-online-test.patch" )
