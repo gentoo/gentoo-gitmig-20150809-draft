@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.0.0-r1.ebuild,v 1.2 2009/06/08 19:54:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xvideoservicethief/xvideoservicethief-2.0.0-r1.ebuild,v 1.3 2009/06/08 23:46:05 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 versionator
@@ -48,7 +48,6 @@ src_compile() {
 		lrelease ${lang}
 	done
 }
-
 
 src_install() {
 	dobin bin/xvst || die "dobin failed"
