@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.3 2009/05/24 09:10:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.4 2009/06/08 13:22:40 remi Exp $
 
 EAPI=2
 
@@ -33,7 +33,7 @@ RDEPEND="dev-libs/lzo
 		x11-libs/libXfixes
 		x11-libs/libXrandr
 		x11-libs/libXtst
-		x11-misc/xinput
+		x11-apps/xinput
 		x11-libs/qt-gui:4 )"
 DEPEND="${RDEPEND}
 	X? ( x11-proto/inputproto )"
