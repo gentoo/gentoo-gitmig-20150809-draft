@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.7.0.ebuild,v 1.1 2009/05/02 17:27:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.7.0.ebuild,v 1.2 2009/06/08 06:13:44 arfrever Exp $
 
 EAPI="2"
 
@@ -68,6 +68,7 @@ src_install() {
 	insinto /etc
 	newins etc/bc.conf bc.conf
 	newinitd "${FILESDIR}/bcrypt3" bcrypt
+	sed -e '/\(bc_rc6\|bc_serpent\)/d' -i "${D}etc/init.d/bcrypt"
 	dodoc HIDDEN_PART README
 	doman man/bctool.8
 }

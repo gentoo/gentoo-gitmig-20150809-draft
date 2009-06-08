@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.67 2009/05/02 17:27:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.68 2009/06/08 06:13:44 arfrever Exp $
+
+  08 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  bestcrypt-1.7.0.ebuild:
+  Remove loading of obsolete modules.
 
 *bestcrypt-1.7.0 (02 May 2009)
 
