@@ -1,6 +1,7 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.5 2007/10/02 03:53:18 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.6 2009/06/08 10:45:13 tupone Exp $
+EAPI=2
 
 inherit python eutils multilib games
 
@@ -30,10 +31,9 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}"-xpngcc.patch
+src_prepare() {
+	epatch "${FILESDIR}/${P}"-xpngcc.patch \
+		"${FILESDIR}"/${P}-glibc210.patch
 
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}:" \
@@ -41,15 +41,13 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable sdl sdl-client) \
 		$(use_enable sdl sdl-gameloop) \
 		$(use_enable openal sound) \
 		|| die
-
-	emake || die "emake failed"
 }
 
 src_install() {

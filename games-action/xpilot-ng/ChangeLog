@@ -1,6 +1,10 @@
 # ChangeLog for games-action/xpilot-ng
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/ChangeLog,v 1.10 2007/10/02 03:53:18 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/ChangeLog,v 1.11 2009/06/08 10:45:13 tupone Exp $
+
+  08 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/xpilot-ng-4.7.2-glibc210.patch, xpilot-ng-4.7.2-r1.ebuild:
+  Fix build with glibc-2.10. Bug #272655 by Diego Petteno'
 
   02 Oct 2007; Ryan Hill <dirtyepic@gentoo.org> xpilot-ng-4.7.2-r1.ebuild:
   Lock wxpython to 2.6.
