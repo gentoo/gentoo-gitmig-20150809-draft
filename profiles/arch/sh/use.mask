@@ -74,6 +74,7 @@ cblas
 webkit
 paludis
 prolog
+timidity
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
