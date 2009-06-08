@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090522.167859.ebuild,v 1.1 2009/06/07 20:51:57 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090522.167859.ebuild,v 1.2 2009/06/08 13:41:57 vadimk Exp $
 
 EAPI="2"
 
@@ -92,7 +92,7 @@ src_configure() {
 	econf \
 		--without-kernel-modules \
 		$(use_with icu) \
-		$(use_with X x11) \
+		$(use_with X x) \
 		$(use_with X gtkmm) \
 		$(use_enable unity) \
 		$(use_enable xinerama multimon)
