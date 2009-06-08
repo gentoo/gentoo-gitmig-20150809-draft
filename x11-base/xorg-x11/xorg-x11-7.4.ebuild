@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4.ebuild,v 1.12 2009/05/28 17:23:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4.ebuild,v 1.13 2009/06/08 13:19:58 remi Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ RDEPEND="${RDEPEND}
 	>=x11-apps/xf86dga-1.0.2
 	>=x11-apps/xgamma-1.0.2
 	>=x11-apps/xhost-1.0.2
-	>=x11-misc/xinput-1.3.0
+	>=x11-apps/xinput-1.3.0
 	>=x11-apps/xkbcomp-1.0.5
 	>=x11-apps/xkbevd-1.0.2
 	>=x11-apps/xkbutils-1.0.1
