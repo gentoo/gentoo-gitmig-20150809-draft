@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/avra-1.2.3.ebuild,v 1.1 2009/03/13 22:18:34 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avra/avra-1.2.3.ebuild,v 1.2 2009/06/08 17:21:22 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit autotools
 
-PSRC="${P}a"
+PSRC=${P}a
+
 DESCRIPTION="Atmel AVR Assembler"
-HOMEPAGE="http://avra.sourceforge.net/"
+HOMEPAGE="http://avra.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${PSRC}-src.tar.bz2"
 
 LICENSE="GPL-2"
@@ -16,14 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README
 
 	if use examples; then
