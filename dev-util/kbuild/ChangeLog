@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kbuild
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.9 2009/04/24 07:59:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/ChangeLog,v 1.10 2009/06/08 13:14:21 lack Exp $
+
+  08 Jun 2009; Jim Ramsay <lack@gentoo.org> kbuild-0.1.5-r1.ebuild,
+  +files/kbuild-glibc-2.10.patch:
+  Patch so kbuild compiles against glibc-2.10 (Bug #270607)
 
   24 Apr 2009; Patrick Lauer <patrick@gentoo.org> kbuild-0.1.5-r1:
   Adding subversion to depends, fixes #266741
