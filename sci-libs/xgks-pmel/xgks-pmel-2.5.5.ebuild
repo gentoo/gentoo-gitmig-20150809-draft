@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.2 2009/05/16 15:34:28 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xgks-pmel/xgks-pmel-2.5.5.ebuild,v 1.3 2009/06/08 02:28:16 nerdboy Exp $
 
 inherit eutils fortran toolchain-funcs multilib
 
@@ -43,7 +43,14 @@ src_compile() {
 }
 
 src_install() {
-	dobin progs/{defcolors,font,mi,pline,pmark} || die
+	cd "${S}"/progs
+
+	for tool in {defcolors,font,mi,pline,pmark}
+	do
+		newbin ${tool} xgks-${tool} || die
+	done
+
+	cd "${S}"
 	dolib.a src/lib/libxgks.a || die
 
 	dodoc COPYRIGHT HISTORY INSTALL README || die
