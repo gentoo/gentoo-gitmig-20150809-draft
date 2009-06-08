@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-0.12.ebuild,v 1.2 2009/06/08 23:00:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libplist/libplist-0.12.ebuild,v 1.3 2009/06/08 23:38:48 ssuominen Exp $
 
 EAPI=2
 inherit cmake-utils eutils multilib python
@@ -25,5 +25,17 @@ src_prepare() {
 	sed -e 's:-Werror::g' \
 		-e "s:\${PYTHON_VERSION}:${PYVER}:g" \
 		-e "s:\${CMAKE_INSTALL_LIBDIR}:/usr/$(get_libdir):g" \
-		-i swig/CMakeLists.txt -i src/CMakeLists.txt || die "sed failed"
+		-i swig/CMakeLists.txt -i src/CMakeLists.txt \
+		-i CMakeLists.txt || die "sed failed"
+	sed -i -e "s:\${CMAKE_INSTALL_LIBDIR}:$(get_libdir):" \
+		libplist.pc.in || die "sed failed"
+}
+
+pkg_postinst() {
+	python_version
+	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup
 }
