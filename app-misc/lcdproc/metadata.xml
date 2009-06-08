@@ -20,5 +20,6 @@
     (<pkg>media-libs/libirman</pkg>)</flag>
   <flag name='nfs'>Adds support for NFS file system</flag>
   <flag name='seamless-hbars'>Try to avoid gaps in horizontal bars</flag>
+  <flag name='ftdi'>Enable support for FTDI connections in some selected LCD_DEVICES (currently hd44780)</flag>
 </use>
 </pkgmetadata>
