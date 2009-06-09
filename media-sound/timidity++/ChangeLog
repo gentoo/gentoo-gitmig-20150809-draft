@@ -1,16 +1,14 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.119 2009/06/08 22:12:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.120 2009/06/09 15:37:34 ssuominen Exp $
 
   08 Jun 2009; Jeroen Roovers <jer@gentoo.org> timidity++-2.13.2-r10.ebuild:
   Stable for HPPA (bug #271780).
 
   01 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
   timidity++-2.13.2-r10.ebuild:
-  There was --disable-motif in econf but USE motif was still there to
-  collect unused depend, remove that. Remove esound support. Since
-  sparc has tested ALSA soundback, modify the ewarn to different elog
-  in pkg_postinst.
+  Remove esound support wrt #270575.. Since sparc has tested ALSA
+  soundback, modify the ewarn to different elog in pkg_postinst.
 
   31 May 2009; Brent Baude <ranger@gentoo.org> timidity++-2.13.2-r10.ebuild:
   stable ppc64, bug 271780

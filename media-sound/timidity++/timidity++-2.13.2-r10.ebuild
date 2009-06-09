@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r10.ebuild,v 1.8 2009/06/08 22:12:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r10.ebuild,v 1.9 2009/06/09 15:37:34 ssuominen Exp $
 
 EAPI=2
 inherit eutils elisp-common
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2 mirror://gentoo/${P}-exit
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~arm hppa ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="oss nas X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
+IUSE="motif oss nas X gtk vorbis tk slang alsa jack emacs ao speex flac ncurses"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	emacs? ( virtual/emacs )
@@ -29,7 +29,8 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	vorbis? ( media-libs/libvorbis )
 	flac? ( media-libs/flac )
 	speex? ( media-libs/speex )
-	ao? ( >=media-libs/libao-0.8.5 )"
+	ao? ( >=media-libs/libao-0.8.5 )
+	motif? ( x11-libs/openmotif )"
 RDEPEND="${DEPEND}
 	alsa? ( media-sound/alsa-utils )
 	app-admin/eselect-timidity"
@@ -50,7 +51,7 @@ src_prepare() {
 		"${FILESDIR}"/${P}-flac.patch \
 		"${FILESDIR}"/${P}-flac113.patch \
 		"${FILESDIR}"/${P}-protos.patch \
-		"${FILESDIR}"/${P}-polling.patch \
+		"${FILESDIR}"/${P}-polling.patch
 
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" \
