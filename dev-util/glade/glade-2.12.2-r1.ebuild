@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.2-r1.ebuild,v 1.6 2008/05/16 18:44:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.12.2-r1.ebuild,v 1.7 2009/06/09 13:22:51 flameeyes Exp $
 
 inherit gnome2
 
@@ -26,7 +26,7 @@ DEPEND="${RDEPEND}
 		>=app-text/scrollkeeper-0.1.4
 		>=dev-util/intltool-0.28"
 
-DOCS="ABOUT-NLS AUTHORS ChangeLog FAQ NEWS README TODO"
+DOCS="AUTHORS ChangeLog FAQ NEWS README TODO"
 
 pkg_setup() {
 	G2CONF="$(use_enable gnome)"
