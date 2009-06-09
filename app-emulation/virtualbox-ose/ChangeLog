@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.18 2009/06/01 00:25:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.19 2009/06/09 18:20:46 patrick Exp $
+
+  09 Jun 2009; Patrick Lauer <patrick@gentoo.org> +files/vboxwebsrv-confd,
+  +files/vboxwebsrv-initd:
+  Adding missing init scripts for vboxwebsrv
 
 *virtualbox-ose-2.2.4 (01 Jun 2009)
 
