@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/xfce4-dev-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.9 2009/03/10 13:56:42 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xfce4-dev-tools/ChangeLog,v 1.10 2009/06/09 15:00:47 darkside Exp $
+
+  09 Jun 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-dev-tools-4.6.0.ebuild:
+  amd64 stable, bug 265587
+
+  09 Jun 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-dev-tools-4.6.0.ebuild:
+  amd64 stable, bug 265587
 
 *xfce4-dev-tools-4.6.0 (10 Mar 2009)
 
