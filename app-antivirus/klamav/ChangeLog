@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/klamav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.59 2009/05/23 10:27:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/ChangeLog,v 1.60 2009/06/09 12:39:35 tampakrap Exp $
+
+  09 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -files/klamav-0.41-cl_loaddbdir.patch, -klamav-0.44.ebuild,
+  -files/klamav-clamav094.patch, -klamav-0.42.ebuild,
+  -files/klamav-0.42-clamav093.patch, -klamav-0.45.ebuild,
+  klamav-0.46.ebuild:
+  Remove old ones, change slot to 3.5
 
   23 May 2009; Markus Meier <maekke@gentoo.org> klamav-0.46.ebuild:
   amd64 stable, bug #265545
