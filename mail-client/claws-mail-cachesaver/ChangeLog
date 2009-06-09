@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-cachesaver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-cachesaver/ChangeLog,v 1.30 2009/06/09 09:08:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-cachesaver/ChangeLog,v 1.31 2009/06/09 12:35:35 fmccor Exp $
+
+  09 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  claws-mail-cachesaver-0.10.9.ebuild:
+  Sparc stable, part of Bug #273294.
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-cachesaver-0.10.9.ebuild:
