@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtinst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.11 2009/05/27 16:33:08 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtinst/ChangeLog,v 1.12 2009/06/09 13:30:07 cardoe Exp $
+
+  09 Jun 2009; Doug Goldstein <cardoe@gentoo.org> -virtinst-0.300.1.ebuild,
+  -files/virtinst-0.300.1-nfs-check.patch,
+  -files/virtinst-0.300.1-remove-usb-tablet.patch, -virtinst-0.300.3.ebuild,
+  -virtinst-0.300.3-r1.ebuild, -virtinst-0.400.0.ebuild,
+  -files/virtinst-0.400.0-virtio26.patch, -virtinst-0.400.3.ebuild:
+  clean up old versions
 
 *virtinst-0.400.3-r1 (27 May 2009)
 
