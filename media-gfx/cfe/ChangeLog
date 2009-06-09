@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/cfe
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/ChangeLog,v 1.4 2008/10/14 16:31:06 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cfe/ChangeLog,v 1.5 2009/06/09 02:17:13 flameeyes Exp $
+
+  09 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> cfe-0.12.ebuild:
+  Remove autoconf 2.1 requirement, package builds fine with 2.63.
 
   14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> cfe-0.12.ebuild:
   Fix cflags handling by avoiding resetting them (rather than modifying the
