@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.166 2009/05/10 06:54:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.167 2009/06/09 14:55:12 armin76 Exp $
+
+  09 Jun 2009; Raúl Porcel <armin76@gentoo.org> zenity-2.26.0.ebuild:
+  Add ~arm/~sh
 
 *zenity-2.26.0 (10 May 2009)
 
