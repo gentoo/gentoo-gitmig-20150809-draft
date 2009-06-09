@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9901 2009/06/09 20:47:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9902 2009/06/09 21:22:16 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -297,58 +297,6 @@ x11-libs/libXprintUtil
 # Robin H. Johnson <robbat2@gentoo.org> (05 May 2009)
 # Not ready for primetime, but worth testing still.
 =dev-util/git-1.6.3_rc*
-
-# Peter Alfredsen <loki_val@gentoo.org> (05 May 2009)
-# The mono-2.0.9999 ebuilds are live ebuilds, building
-# from the mono-2-0 branch of anonsvn.mono-project.com.
-=www-apache/mod_mono-2.0.9999
-=dev-dotnet/xsp-2.0.9999
-=dev-dotnet/libgdiplus-2.0.9999
-=dev-dotnet/gluezilla-2.0.9999
-=dev-lang/mono-2.0.9999
-=dev-lang/mono-basic-2.0.9999
-=dev-util/mono-debugger-2.0.9999
-=dev-util/mono-tools-2.0.9999
-=virtual/monodoc-2.0.9999
-
-# Peter Alfredsen <loki_val@gentoo.org> (05 May 2009)
-# The mono-2.2.9999 ebuilds are live ebuilds, building
-# from the mono-2-2 branch of anonsvn.mono-project.com.
-=www-apache/mod_mono-2.2.9999
-=dev-dotnet/xsp-2.2.9999
-=dev-dotnet/libgdiplus-2.2.9999
-=dev-dotnet/gluezilla-2.2.9999
-=dev-lang/mono-2.2.9999
-=dev-lang/mono-basic-2.2.9999
-=dev-util/mono-debugger-2.2.9999
-=dev-util/mono-tools-2.2.9999
-=virtual/monodoc-2.2.9999
-
-# Peter Alfredsen <loki_val@gentoo.org> (05 May 2009)
-# The mono-2.4.9999 ebuilds are live ebuilds, building
-# from the mono-2-4 branch of anonsvn.mono-project.com.
-=www-apache/mod_mono-2.4.9999
-=dev-dotnet/xsp-2.4.9999
-=dev-dotnet/libgdiplus-2.4.9999
-=dev-dotnet/gluezilla-2.4.9999
-=dev-lang/mono-2.4.9999
-=dev-lang/mono-basic-2.4.9999
-=dev-util/mono-debugger-2.4.9999
-=dev-util/mono-tools-2.4.9999
-=virtual/monodoc-2.4.9999
-
-# Peter Alfredsen <loki_val@gentoo.org> (05 May 2009)
-# The mono-9999 ebuilds are live ebuilds, building
-# from trunk of anonsvn.mono-project.com.
-=www-apache/mod_mono-9999
-=dev-dotnet/xsp-9999
-=dev-dotnet/libgdiplus-9999
-=dev-dotnet/gluezilla-9999
-=dev-lang/mono-9999
-=dev-lang/mono-basic-9999
-=dev-util/mono-debugger-9999
-=dev-util/mono-tools-9999
-=virtual/monodoc-9999
 
 # Tomas Chvatal <scarabeus@gentoo.org> (03 May 2009)
 # Breaks too many packages.
