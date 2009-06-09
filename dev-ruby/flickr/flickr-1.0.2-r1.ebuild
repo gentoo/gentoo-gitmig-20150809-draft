@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/flickr-1.0.2-r1.ebuild,v 1.1 2009/04/27 12:33:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickr/flickr-1.0.2-r1.ebuild,v 1.2 2009/06/09 12:31:49 flameeyes Exp $
 
 inherit ruby eutils
 
@@ -49,6 +49,6 @@ src_install() {
 
 	dohtml "${S}"/index.html || die "dohtml failed"
 
-	insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["vendorlibdir"]' | sed -e 's:vendor_ruby:gems:')/specifications
+	insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitedir"]')/../gems/1.8/specifications
 	doins "${S}"/${P}.gemspec || die "Unable to install fake gemspec"
 }
