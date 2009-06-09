@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/klogview
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.8 2008/03/28 16:17:29 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.9 2009/06/09 12:26:20 tampakrap Exp $
+
+*klogview-0.6-r1 (09 Jun 2009)
+
+  09 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> klogview-0.6.ebuild,
+  +klogview-0.6-r1.ebuild:
+  Revision bump, disable arts, slot change to 3.5
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> klogview-0.6.ebuild:
   Stable on ppc wrt bug 215007
