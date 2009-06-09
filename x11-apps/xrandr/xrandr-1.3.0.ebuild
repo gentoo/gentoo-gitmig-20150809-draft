@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/xrandr-1.3.0.ebuild,v 1.1 2009/04/29 11:24:22 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xrandr/xrandr-1.3.0.ebuild,v 1.2 2009/06/09 07:54:13 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -15,3 +15,8 @@ IUSE=""
 RDEPEND=">=x11-libs/libXrandr-1.2.99.5
 	x11-libs/libX11"
 DEPEND="${RDEPEND}"
+
+src_install() {
+	x-modular_src_install
+	rm -f "${D}"/usr/bin/xkeystone
+}
