@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2758 2009/06/09 18:31:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2759 2009/06/09 19:51:42 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jun 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  dev-libs/qof slotting seems to work, so unmask dev-libs/qof-0.8.0
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   mask dev-libs/qof-0.8.0 as it is not API stable and needs some testing for
