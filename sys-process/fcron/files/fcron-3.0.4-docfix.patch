@@ -1,0 +1,36 @@
+diff -urN fcron-3.0.4.orig/doc/en/changes.sgml fcron-3.0.4/doc/en/changes.sgml
+--- fcron-3.0.4.orig/doc/en/changes.sgml	2007-11-08 10:02:42.000000000 +0100
++++ fcron-3.0.4/doc/en/changes.sgml	2008-07-24 11:47:27.861704216 +0200
+@@ -178,6 +178,7 @@
+ 	    <para>made fcrontab behave better when there is no space left in the
+ 	       spool directory (used to truncate the fcrontab source file).
+ 	    </para>
++	 </listitem>
+ 	 <listitem>
+ 	    <para>Added a script, check_system_crontabs, to emulate Vixie cron's
+ 	       behavior about /etc/crontab and /etc/cron.d. Please have a look
+@@ -1135,4 +1136,4 @@
+ sgml-parent-document:("fcron-doc.sgml" "book" "chapter" "sect1" "")
+ End:
+ -->
+-   
+\ No newline at end of file
++   
+diff -urN fcron-3.0.4.orig/doc/fr/changes.sgml fcron-3.0.4/doc/fr/changes.sgml
+--- fcron-3.0.4.orig/doc/fr/changes.sgml	2007-11-08 10:02:42.000000000 +0100
++++ fcron-3.0.4/doc/fr/changes.sgml	2008-07-24 11:48:12.422376403 +0200
+@@ -86,6 +86,7 @@
+ 	    <para>made fcrontab behave better when there is no space left in the
+ 	       spool directory (used to truncate the fcrontab source file).
+ 	    </para>
++	 </listitem>
+ 	 <listitem>
+ 	    <para>Added a script, check_system_crontabs, to emulate Vixie cron's
+ 	       behavior about /etc/crontab and /etc/cron.d. Please have a look
+@@ -1043,4 +1044,4 @@
+ sgml-parent-document:("fcron-doc.sgml" "book" "chapter" "sect1" "")
+ End:
+ -->
+-   
+\ No newline at end of file
++   
