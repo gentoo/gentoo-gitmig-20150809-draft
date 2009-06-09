@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.32 2009/06/05 07:21:28 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.33 2009/06/09 13:35:47 tampakrap Exp $
+
+  09 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> -ksudoku-0.4.ebuild,
+  -files/ksudoku-0.4-gcc43.patch:
+  Remove ksudoku-0.4 (kde3) from tree
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ksudoku-4.2.4.ebuild:
   Fix accidently added keywords
