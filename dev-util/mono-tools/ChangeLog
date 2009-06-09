@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/mono-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.57 2009/06/09 21:19:35 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-tools/ChangeLog,v 1.58 2009/06/09 22:57:11 loki_val Exp $
+
+*mono-tools-2.4.2_pre1 (09 Jun 2009)
+
+  09 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +mono-tools-2.4.2_pre1.ebuild:
+  Add 2.4.2 preview 1
 
   09 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
   mono-tools-2.0.9999.ebuild, mono-tools-2.2.9999.ebuild,
