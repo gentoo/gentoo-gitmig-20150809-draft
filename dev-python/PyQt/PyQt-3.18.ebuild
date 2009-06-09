@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.18.ebuild,v 1.1 2009/06/09 19:06:35 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.18.ebuild,v 1.2 2009/06/09 20:12:15 hwoarang Exp $
 
 EAPI="2"
 inherit distutils
@@ -19,7 +19,7 @@ IUSE="debug doc examples"
 
 RDEPEND="x11-libs/qt:3
 	>=dev-python/sip-4.8
-	>=x11-libs/qscintilla-2.4[python,-qt4]"
+	>=x11-libs/qscintilla-2.4[python]"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
