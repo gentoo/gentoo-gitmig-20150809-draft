@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/expect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.55 2009/06/07 17:42:25 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/ChangeLog,v 1.56 2009/06/09 20:11:18 aballier Exp $
+
+  09 Jun 2009; Alexis Ballier <aballier@gentoo.org> expect-5.43.0.ebuild:
+  keyword ~x86-fbsd
 
   07 Jun 2009; Federico Ferri <mescalinum@gentoo.org>
   +files/expect-5.43.0-missing-includes.patch, expect-5.43.0.ebuild:
