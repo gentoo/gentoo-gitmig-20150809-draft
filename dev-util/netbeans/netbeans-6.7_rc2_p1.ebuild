@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_rc2.ebuild,v 1.1 2009/06/05 21:08:55 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_rc2_p1.ebuild,v 1.1 2009/06/09 10:36:03 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -450,7 +450,8 @@ pkg_setup() {
 src_prepare () {
 	# We need to disable downloading of jars
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
-		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch
+		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch \
+		"${FILESDIR}"/${SLOT}/autoupdate.ui.fix.patch
 
 	# Clean up nbbuild
 	einfo "Removing prebuilt *.class files from nbbuild"
