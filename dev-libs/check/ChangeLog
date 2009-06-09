@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.55 2009/06/09 10:54:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.56 2009/06/09 15:40:25 gentoofan23 Exp $
+
+  09 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org> metadata.xml:
+  Picking up maintainership.
 
   09 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> check-0.9.6.ebuild,
   +files/check-0.9.6-64bitsafe.patch:
