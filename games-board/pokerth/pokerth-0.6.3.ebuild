@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.6.3.ebuild,v 1.4 2009/03/25 12:23:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.6.3.ebuild,v 1.5 2009/06/09 21:23:10 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 games
@@ -15,17 +15,33 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated"
 
-DEPEND=">=dev-libs/boost-1.34.1
+DEPEND="
+	|| ( >=dev-libs/boost-1.35.0-r5:0
+		~dev-libs/boost-1.34.1
+		~dev-libs/boost-1.33.1 )
 	>=net-libs/gnutls-2.2.2
 	>=net-misc/curl-7.16
 	!dedicated? (
 		media-libs/libsdl
 		media-libs/sdl-mixer[mikmod,vorbis]
 		>=sys-libs/zlib-1.2.3
-		|| ( x11-libs/qt-gui:4 x11-libs/qt:4 )
+		x11-libs/qt-gui:4
 	)"
 
 S=${WORKDIR}/${MY_P}
+
+pkg_setup() {
+	games_pkg_setup
+	if has_version '>=dev-libs/boost-1.35.0-r5:0' ; then
+		local boost_ver=$(f=$(eselect boost show | tail -n1); echo $f)
+
+		if [[ "$boost_ver" != "boost-1_35" ]] ; then
+			ewarn "${P} requires boost to be set to version 1_35"
+			ewarn "use eselect to set boost to the required version"
+			die "Incorrect boost version currently selected (currently $boost_ver)"
+		fi
+	fi
+}
 
 src_prepare() {
 	if use dedicated ; then
@@ -34,6 +50,10 @@ src_prepare() {
 			pokerth.pro \
 			|| die "sed failed"
 	fi
+	sed -i \
+		-e '/no_dead_strip_inits_and_terms/d' \
+		*pro \
+		|| die 'sed failed'
 }
 
 src_configure() {
