@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/POE-XS-Loop-Poll
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-XS-Loop-Poll/ChangeLog,v 1.1 2009/06/09 02:57:17 robbat2 Exp $
+
+*POE-XS-Loop-Poll-0.007 (09 Jun 2009)
+
+  09 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +POE-XS-Loop-Poll-0.007.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

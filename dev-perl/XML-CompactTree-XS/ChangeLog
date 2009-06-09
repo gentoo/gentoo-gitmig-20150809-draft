@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-CompactTree-XS
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-CompactTree-XS/ChangeLog,v 1.1 2009/06/09 02:57:53 robbat2 Exp $
+
+*XML-CompactTree-XS-0.02 (09 Jun 2009)
+
+  09 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +XML-CompactTree-XS-0.02.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
