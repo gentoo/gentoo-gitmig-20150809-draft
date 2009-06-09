@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.7 2009/06/05 09:21:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.8 2009/06/09 09:01:05 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -60,4 +60,10 @@ src_install() {
 	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/lib
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
 	make_desktop_entry chromium-bin "Chromium" ${PN}.png "Network;WebBrowser"
+}
+
+pkg_postinst() {
+	ewarn "This binary requires the C++ runtime from >=sys-devel/gcc-4.2"
+	ewarn "If you get the \"version \`GLIBCXX_3.4.9' not found\" error message,"
+	ewarn "switch your active gcc to a version >=4.2 with gcc-config"
 }
