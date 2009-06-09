@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r3.ebuild,v 1.2 2009/06/09 21:04:09 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r3.ebuild,v 1.3 2009/06/09 21:08:05 truedfx Exp $
 
 EAPI=2
 
@@ -31,7 +31,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-clipboard-crash.patch #269221
 
 	# Use default configuration (minus stripping) unless specifically requested otherwise
-	if ! test ${PPC_CONFIG_PATH} ; then
+	if ! test ${PPC_CONFIG_PATH+set} ; then
 		local FPCVER=$(fpc -iV)
 		export PPC_CONFIG_PATH="${WORKDIR}"
 		/usr/lib/fpc/${FPCVER}/samplecfg /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
