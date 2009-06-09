@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.8 2009/04/03 11:05:20 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon-xfce/notification-daemon-xfce-0.3.7.ebuild,v 1.9 2009/06/09 17:45:01 darkside Exp $
 
 EAPI=1
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.6
 	x11-libs/libnotify
 	>=xfce-base/libxfcegui4-4.3.90
 	>=xfce-base/libxfce4util-4.3.90
-	xfce? ( || ( >=xfce-base/xfce-mcs-manager-4.2.2 xfce-base/xfce4-settings ) )
+	xfce? ( || ( xfce-base/xfce4-settings >=xfce-base/xfce-mcs-manager-4.2.2  ) )
 	>=x11-libs/libsexy-0.1.3
 	dev-libs/dbus-glib"
 DEPEND="${RDEPEND}
