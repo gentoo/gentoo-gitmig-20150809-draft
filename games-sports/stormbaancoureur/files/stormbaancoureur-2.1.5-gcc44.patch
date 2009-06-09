@@ -1,0 +1,10 @@
+--- src-stormbaancoureur/controllerkey.cxx
++++ src-stormbaancoureur/controllerkey.cxx
+@@ -9,6 +9,7 @@
+ #include <math.h>
+ #include <errno.h>
+ #include <fcntl.h>
++#include <cstdio>
+ 
+ #include "controller.h"
+ 
