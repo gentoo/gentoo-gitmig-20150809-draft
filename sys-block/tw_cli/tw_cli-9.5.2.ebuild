@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.2.ebuild,v 1.1 2009/06/09 01:24:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.2.ebuild,v 1.2 2009/06/09 07:01:54 robbat2 Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
 IUSE=""
 # stripping seems to break this sometimes
-RESTRICT="fetch strip mirror"
+RESTRICT="strip"
 # binary packages
 DEPEND=""
 RDEPEND="virtual/libc"
@@ -75,17 +75,20 @@ pkg_setup() {
 }
 
 pkg_nofetch() {
-	einfo "Please agree to the license at URL"
+	einfo "3ware would like you to agree to the license:"
 	einfo ""
 	einfo "\t${LICENSE_URL}"
 	einfo ""
 	einfo "And then use the following URL to download the"
-	einfo "correct tarball into ${DISTDIR}"
+	einfo "correct tarballs manually into ${DISTDIR}"
 	einfo ""
 	einfo "x86 - ${SRC_URI_x86}"
 	einfo "amd64 - ${SRC_URI_amd64}"
 	einfo "x86-fbsd - ${SRC_URI_x86_fbsd}"
 	#einfo "amd64-fbsd - ${SRC_URI_amd64_fbsd}"
+	einfo ""
+	einfo "However, they have given permission to redistribute."
+	einfo "http://bugs.gentoo.org/show_bug.cgi?id=60690#c106"
 	einfo ""
 	supportedcards
 }
