@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.4 2009/06/05 10:41:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.5 2009/06/09 20:45:17 hwoarang Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="X assistant +dbus debug doc examples kde opengl phonon +qt3support sql svg webkit xmlpatterns"
 
-DEPEND=">=dev-python/sip-4.7.8
+DEPEND="~dev-python/sip-4.7.9
 	>=x11-libs/qt-core-${QTVER}:4[qt3support?]
 	>=x11-libs/qt-script-${QTVER}:4
 	>=x11-libs/qt-test-${QTVER}:4
