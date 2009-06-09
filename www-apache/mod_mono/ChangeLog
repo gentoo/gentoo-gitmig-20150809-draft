@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.54 2009/05/20 19:51:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.55 2009/06/09 21:16:53 loki_val Exp $
+
+  09 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
+  mod_mono-2.0.9999.ebuild, mod_mono-2.2.9999.ebuild,
+  mod_mono-2.4.9999.ebuild, mod_mono-9999.ebuild:
+  Drop keywords for all *9999 ebuilds instead of maintaining a huge
+  package.mask
 
   20 May 2009; Brent Baude <ranger@gentoo.org> mod_mono-2.4.ebuild:
   Marking mod_mono-2.4 ~ppc for bug 268517
