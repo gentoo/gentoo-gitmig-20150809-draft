@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/authforce-0.9.9.ebuild,v 1.2 2007/07/12 13:03:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/authforce/authforce-0.9.9.ebuild,v 1.3 2009/06/09 15:49:40 flameeyes Exp $
 
 DESCRIPTION="An HTTP authentication brute forcer"
 HOMEPAGE="http://www.divineinvasion.net/authforce"
@@ -21,5 +21,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc ABOUT-NLS AUTHORS BUGS COPYING INSTALL NEWS README THANKS TODO
+	dodoc AUTHORS BUGS COPYING INSTALL NEWS README THANKS TODO
 }
