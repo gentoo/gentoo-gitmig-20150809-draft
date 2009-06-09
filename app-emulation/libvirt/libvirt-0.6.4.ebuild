@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.6.4.ebuild,v 1.1 2009/06/09 12:48:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.6.4.ebuild,v 1.2 2009/06/09 18:37:33 patrick Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ RDEPEND="sys-libs/readline
 	qemu? ( >=app-emulation/qemu-0.10.0 )
 	sasl? ( dev-libs/cyrus-sasl )
 	selinux? ( sys-libs/libselinux )
-	virtualbox? ( >=app-emulation/virtualbox-bin-2.2.0 )
+	virtualbox? ( || ( >=app-emulation/virtualbox-ose-2.2.0 >=app-emulation/virtualbox-bin-2.2.0 ) )
 	xen? ( app-emulation/xen-tools app-emulation/xen )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
