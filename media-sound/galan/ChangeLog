@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/galan
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.21 2008/04/13 21:51:24 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.22 2009/06/09 19:25:54 patrick Exp $
+
+*galan-0.3.0_beta7 (09 Jun 2009)
+
+  09 Jun 2009; Patrick Lauer <patrick@gentoo.org> +galan-0.3.0_beta7.ebuild:
+  Bump to beta7, fixes #273341
 
   13 Apr 2008; Alexis Ballier <aballier@gentoo.org>
   galan-0.3.0_beta6.ebuild:
