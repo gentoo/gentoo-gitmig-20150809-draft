@@ -1,7 +1,7 @@
 # Unmask the flag which corresponds to ARCH.
 -s390
 
-# Stuff we don't want
+# Stuff we don't want/not tested
 chicken
 clisp
 R
@@ -14,6 +14,7 @@ mpi
 fuse
 hal
 prolog
+jpeg2k
 
 # This file contains a list of useflags that cannot be used on s390.
 bluetooth
