@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9894 2009/06/08 17:17:41 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9895 2009/06/09 13:12:48 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (09 Jun 2009)
+# Masked for removal in 60 days. Doesn't build with glibc-2.10. Incompatible
+# with current Emacs versions. No upstream release since more than five years.
+# If you want us to keep this package, please contact <emacs@gentoo.org>, or
+# leave a comment at bug 272593.
+app-text/remem
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Jun 2009)
 # Last applications in media-sound that need arts which is being
