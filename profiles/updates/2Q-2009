@@ -40,3 +40,4 @@ slotmove media-libs/xvid 1 0
 slotmove >=net-p2p/ktorrent-3.2.2 3 4
 slotmove app-admin/kiosktool 0 3.5
 slotmove app-admin/klogview 0 3.5
+slotmove app-antivirus/klamav 0 3.5
