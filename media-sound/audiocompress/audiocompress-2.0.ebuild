@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-2.0.ebuild,v 1.2 2009/06/01 18:18:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/audiocompress-2.0.ebuild,v 1.3 2009/06/09 08:57:38 fauli Exp $
 
 inherit toolchain-funcs
 
@@ -12,7 +12,7 @@ SRC_URI="http://beesbuzz.biz/code/audiocompress/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=""

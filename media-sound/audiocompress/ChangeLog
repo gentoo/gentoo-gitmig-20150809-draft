@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audiocompress
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.20 2008/12/19 15:15:33 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audiocompress/ChangeLog,v 1.21 2009/06/09 08:57:38 fauli Exp $
+
+  09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  audiocompress-2.0.ebuild:
+  stable x86, bug 272122
 
 *audiocompress-2.0 (19 Dec 2008)
 
