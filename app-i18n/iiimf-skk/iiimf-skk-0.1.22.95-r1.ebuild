@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95-r1.ebuild,v 1.2 2007/01/05 16:18:31 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/iiimf-skk-0.1.22.95-r1.ebuild,v 1.3 2009/06/09 13:21:19 flameeyes Exp $
 
 inherit eutils
 
@@ -50,7 +50,7 @@ src_install () {
 
 	newbin ${FILESDIR}/iiimf-skk.sh iiimf-skk
 
-	dodoc ABOUT-NLS AUTHORS ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
 
 pkg_postinst() {

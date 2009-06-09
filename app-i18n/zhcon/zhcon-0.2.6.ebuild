@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.6.ebuild,v 1.3 2008/06/09 12:46:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/zhcon/zhcon-0.2.6.ebuild,v 1.4 2009/06/09 13:21:55 flameeyes Exp $
 
 WANT_AUTOMAKE="1.9"
 
@@ -33,5 +33,5 @@ src_unpack() {
 src_install() {
 	emake -j1 DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README NEWS TODO THANKS
-	dodoc ABOUT-NLS README.BSD README.gpm README.utf8
+	dodoc README.BSD README.gpm README.utf8
 }

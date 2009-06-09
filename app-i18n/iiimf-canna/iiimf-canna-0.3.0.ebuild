@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/iiimf-canna-0.3.0.ebuild,v 1.5 2007/01/05 16:17:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/iiimf-canna-0.3.0.ebuild,v 1.6 2009/06/09 13:20:47 flameeyes Exp $
 
 DESCRIPTION="Canna Language Engine input method module for IIIMF"
 HOMEPAGE="http://www.momonga-linux.org/~famao/iiimf-skk/"
@@ -29,7 +29,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	dodoc ABOUT-NLS AUTHORS ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO
 
 	newbin ${FILESDIR}/iiimf-canna.sh iiimf-canna
 }
