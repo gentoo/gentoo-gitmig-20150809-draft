@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.25 2009/06/06 17:24:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.26 2009/06/09 19:07:38 fauli Exp $
+
+  09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  gmpc-mdcover-0.18.0.ebuild:
+  stable x86, bug 272341
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> gmpc-mdcover-0.18.0.ebuild:
   ppc stable #272341
