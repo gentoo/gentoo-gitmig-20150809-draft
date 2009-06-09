@@ -1,0 +1,17 @@
+# ChangeLog for dev-perl/MooseX-Types
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/ChangeLog,v 1.1 2009/06/09 21:15:34 tove Exp $
+
+  09 Jun 2009; Torsten Veller <tove@gentoo.org> +MooseX-Types-0.11.ebuild,
+  +metadata.xml:
+  Initial import from perl-experimental. Based on ebuild by Michele
+  Beltrame
+
+*MooseX-Types-0.11 (24 May 2009)
+
+  24 May 2009; Torsten Veller <tove@gentoo.org> +MooseX-Types-0.11.ebuild:
+  Version bump
+
+  19 Apr 2009; Michele Beltrame <mb@cattlegrid.info>:
+  Initial
+
