@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.8 2008/09/07 02:25:27 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/qof-0.7.5.ebuild,v 1.9 2009/06/09 18:38:56 fauli Exp $
 
 EAPI=1
 
@@ -23,6 +23,7 @@ RDEPEND="gnome-extra/libgda:1
 	sqlite? ( =dev-db/sqlite-2* )"
 DEPEND="${DEPEND}
 	dev-util/pkgconfig
+	!dev-libs/qof:2
 	doc? ( app-doc/doxygen )"
 
 src_unpack() {
