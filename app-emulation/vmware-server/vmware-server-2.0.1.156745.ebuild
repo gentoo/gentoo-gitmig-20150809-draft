@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.1.156745.ebuild,v 1.1 2009/05/09 21:55:16 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.1.156745.ebuild,v 1.2 2009/06/09 15:35:04 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -83,6 +83,9 @@ src_install() {
 	newinitd "${FILESDIR}/vmware-server-2.rc" vmware
 	insinto /etc/vmware/hostd
 	doins "${FILESDIR}/authorization.xml"
+
+	sed -i -e "s:/sbin/lsmod:/bin/lsmod:" "${D}"/etc/vmware/init.d/vmware
+	sed -i -e "s:/sbin/lsmod:/bin/lsmod:" "${D}"/opt/vmware/server/lib/net-services.sh
 }
 
 pkg_config() {
