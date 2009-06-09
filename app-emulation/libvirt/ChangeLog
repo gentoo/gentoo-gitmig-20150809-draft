@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.26 2009/05/28 21:57:26 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.27 2009/06/09 12:48:52 cardoe Exp $
+
+*libvirt-0.6.4 (09 Jun 2009)
+
+  09 Jun 2009; Doug Goldstein <cardoe@gentoo.org> +libvirt-0.6.4.ebuild,
+  +files/libvirt-0.6.4-kvm-img.patch,
+  +files/libvirt-0.6.4-qemu-img-logic-fix.patch:
+  version bump. use v2 of my kvm-img patch
 
 *libvirt-0.6.3-r3 (28 May 2009)
 
