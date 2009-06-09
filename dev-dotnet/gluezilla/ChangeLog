@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/gluezilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.7 2009/06/09 21:18:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/ChangeLog,v 1.8 2009/06/09 22:55:30 loki_val Exp $
+
+*gluezilla-2.4.2_pre1 (09 Jun 2009)
+
+  09 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +gluezilla-2.4.2_pre1.ebuild:
+  Add 2.4.2 preview 1
 
   09 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
   gluezilla-2.0.9999.ebuild, gluezilla-2.2.9999.ebuild,
