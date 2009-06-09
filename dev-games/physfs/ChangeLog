@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.22 2009/05/26 14:59:05 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.23 2009/06/09 13:51:45 nyhm Exp $
+
+  09 Jun 2009; Tristan Heaven <nyhm@gentoo.org> physfs-2.0.0.ebuild:
+  Install into the correct libdir, bug #273308
 
   26 May 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/physfs-2.0.0-gcc44.patch, physfs-2.0.0.ebuild:
