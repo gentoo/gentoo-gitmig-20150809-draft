@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.129 2009/05/01 04:23:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.130 2009/06/09 15:03:20 darkside Exp $
+
+  09 Jun 2009; Jeremy Olexa <darkside@gentoo.org> xfwm4-4.6.1.ebuild:
+  amd64 stable, bug 265587
 
   01 May 2009; Jeremy Olexa <darkside@gentoo.org> xfwm4-4.4.3.ebuild:
   Move use_enable out of global scope
