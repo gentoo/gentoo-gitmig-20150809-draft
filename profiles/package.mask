@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9895 2009/06/09 13:12:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9896 2009/06/09 13:24:50 tampakrap Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Theo Chatzimichos <tampakrap@gentoo.org> (09 Jun 2009)
+# Masked for removal in 30 days. Old and dead by upstream.
+app-arch/karchiver
 
 # Ulrich Mueller <ulm@gentoo.org> (09 Jun 2009)
 # Masked for removal in 60 days. Doesn't build with glibc-2.10. Incompatible
