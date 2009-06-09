@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.21 2008/09/24 08:33:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.9.2.ebuild,v 1.22 2009/06/09 13:30:04 flameeyes Exp $
 
 inherit libtool eutils
 
@@ -52,5 +52,5 @@ src_compile() {
 
 src_install() {
 	einstall || die
-	dodoc ABOUT-NLS NEWS README
+	dodoc NEWS README
 }
