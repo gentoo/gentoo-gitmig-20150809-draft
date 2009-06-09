@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9900 2009/06/09 19:51:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9901 2009/06/09 20:47:20 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (09 Jun 2009)
+# masked for removal in 30 days.
+# upstream sez: Due lack of time and motivation to continue, the
+# development ended with the 0.18 release in summer 2005...
+games-arcade/moagg
 
 # Peter Volkov <pva@gentoo.org> (09 Jun 2009)
 # Masked bzr-1.15 and dependent packages, bug #273328
