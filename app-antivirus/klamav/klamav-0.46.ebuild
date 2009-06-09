@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.46.ebuild,v 1.6 2009/06/09 12:39:35 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/klamav/klamav-0.46.ebuild,v 1.7 2009/06/09 13:07:49 tampakrap Exp $
 
 ARTS_REQUIRED="never"
 
@@ -19,7 +19,8 @@ KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND=">=app-antivirus/clamav-0.90"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	>=kde-base/kdebase-kioslaves-3.5.9"
 
 need-kde 3.5
 
