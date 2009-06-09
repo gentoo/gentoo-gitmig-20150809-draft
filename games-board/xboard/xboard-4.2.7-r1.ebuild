@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7-r1.ebuild,v 1.8 2008/05/11 16:29:42 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xboard/xboard-4.2.7-r1.ebuild,v 1.9 2009/06/09 21:33:29 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="GUI for gnuchess and for internet chess servers"
@@ -27,9 +28,7 @@ RDEPEND="Xaw3d? ( x11-libs/Xaw3d )
 DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}*
 	eautoreconf
 }
@@ -37,9 +36,7 @@ src_unpack() {
 src_compile() {
 	egamesconf \
 		$(use_with Xaw3d) \
-		$(use_enable zippy) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable zippy)
 }
 
 src_install() {
