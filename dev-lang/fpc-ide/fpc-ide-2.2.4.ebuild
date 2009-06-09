@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.2.4.ebuild,v 1.1 2009/04/23 21:05:02 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.2.4.ebuild,v 1.2 2009/06/09 21:04:09 truedfx Exp $
 
 S="${WORKDIR}/fpcbuild-${PV}/fpcsrc/ide"
 
@@ -14,11 +14,20 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND="~dev-lang/fpc-${PV}"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A} || die "Unpacking ${A} failed!"
 
 	find "${WORKDIR}" -name Makefile -exec sed -i -e 's/ -Xs / /g' {} + || die
+
+	# Use default configuration (minus stripping) unless specifically requested otherwise
+	if ! test ${PPC_CONFIG_PATH+set}; then
+		local FPCVER=$(fpc -iV)
+		export PPC_CONFIG_PATH="${WORKDIR}"
+		/usr/lib/fpc/${FPCVER}/samplecfg /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
+		sed -i -e '/^-Xs/d' "${PPC_CONFIG_PATH}"/fpc.cfg || die
+	fi
 }
 
 src_compile() {
@@ -27,4 +36,9 @@ src_compile() {
 
 src_install() {
 	emake -j1 INSTALL_PREFIX="${D}"usr install || die "make install failed"
+}
+
+pkg_postinst() {
+	einfo "To read the documentation, enable the doc USE flag for dev-lang/fpc,"
+	einfo "and add /usr/share/doc/fpc-${PV}/fpctoc.htx to the Help Files list."
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r3.ebuild,v 1.1 2009/05/12 18:24:27 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r3.ebuild,v 1.2 2009/06/09 21:04:09 truedfx Exp $
 
 EAPI=2
 
@@ -26,23 +26,17 @@ DEPEND="${DEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	# check for broken fpc.cfg
-	# don't check in pkg_setup since it won't harm binpkgs
-	if grep -q '^[ 	]*-Fu.*/lcl$' /etc/fpc.cfg
-	then
-		eerror "Your /etc/fpc.cfg automatically adds a LCL directory"
-		eerror "to the list of unit directories. This will break the"
-		eerror "build of lazarus."
-		die "don't set the LCL path in /etc/fpc.cfg"
-	fi
-
-	default
-}
-
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fpcsrc.patch
 	epatch "${FILESDIR}"/${P}-clipboard-crash.patch #269221
+
+	# Use default configuration (minus stripping) unless specifically requested otherwise
+	if ! test ${PPC_CONFIG_PATH} ; then
+		local FPCVER=$(fpc -iV)
+		export PPC_CONFIG_PATH="${WORKDIR}"
+		/usr/lib/fpc/${FPCVER}/samplecfg /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
+		sed -i -e '/^-Xs/d' "${PPC_CONFIG_PATH}"/fpc.cfg || die
+	fi
 }
 
 src_compile() {

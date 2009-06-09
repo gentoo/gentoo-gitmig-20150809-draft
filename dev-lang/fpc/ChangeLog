@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.47 2009/04/23 21:05:03 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.48 2009/06/09 21:04:10 truedfx Exp $
+
+*fpc-2.2.4-r1 (09 Jun 2009)
+
+  09 Jun 2009; Harald van Dĳk <truedfx@gentoo.org> +fpc-2.2.4-r1.ebuild:
+  Install HTML documentation instead of PDF files, so that fpc-ide can
+  display it. Drop warning about -Xs.
 
 *fpc-2.2.4 (23 Apr 2009)
 
