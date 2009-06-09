@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mousepad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.10 2009/03/10 13:53:07 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/ChangeLog,v 1.11 2009/06/09 15:00:19 darkside Exp $
+
+  09 Jun 2009; Jeremy Olexa <darkside@gentoo.org> mousepad-0.2.16.ebuild:
+  amd64 stable, bug 265587
 
 *mousepad-0.2.16 (10 Mar 2009)
 
