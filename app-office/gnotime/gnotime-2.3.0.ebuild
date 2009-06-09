@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0.ebuild,v 1.6 2008/03/24 16:23:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/gnotime-2.3.0.ebuild,v 1.7 2009/06/09 18:24:42 fauli Exp $
 
 EAPI="1"
 
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	=app-text/docbook-xml-dtd-4.2*
 	>=app-text/scrollkeeper-0.3.11
-	dev-libs/qof"
+	dev-libs/qof:0"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 

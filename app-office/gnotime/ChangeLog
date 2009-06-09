@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnotime
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.43 2008/12/14 23:05:58 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnotime/ChangeLog,v 1.44 2009/06/09 18:24:42 fauli Exp $
+
+  09 Jun 2009; Christian Faulhammer <fauli@gentoo.org> gnotime-2.3.0.ebuild,
+  gnotime-2.3.0-r2.ebuild:
+  depend on dev-libs/qof SLOT 0
 
   14 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
   -gnotime-2.3.0-r1.ebuild, gnotime-2.3.0-r2.ebuild:
