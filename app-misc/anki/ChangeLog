@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.14 2009/06/09 22:07:46 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.15 2009/06/09 22:09:50 hncaldwell Exp $
+
+  09 Jun 2009; Heath Caldwell <hncaldwell@gentoo.org>
+  -anki-0.9.9.7.6b.ebuild, -anki-0.9.9.7.9.ebuild:
+  Remove old versions.
 
 *anki-0.9.9.8.1 (09 Jun 2009)
 
