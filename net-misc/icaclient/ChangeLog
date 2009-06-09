@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icaclient
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.66 2009/05/14 13:02:52 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/ChangeLog,v 1.67 2009/06/09 07:40:54 fauli Exp $
+
+  09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  icaclient-11.0-r2.ebuild:
+  stable x86, bug 273297
 
 *icaclient-11.0-r2 (14 May 2009)
 

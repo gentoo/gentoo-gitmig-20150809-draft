@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.1 2009/05/14 13:02:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.2 2009/06/09 07:40:54 fauli Exp $
 
 inherit eutils multilib rpm
 
@@ -11,7 +11,7 @@ SRC_URI="ICAClient-11.0-1.i386.rpm"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE="linguas_de linguas_ja"
 RESTRICT="mirror strip userpriv fetch"
 
