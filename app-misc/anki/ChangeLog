@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/anki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.13 2009/05/20 18:12:15 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/ChangeLog,v 1.14 2009/06/09 22:07:46 hncaldwell Exp $
+
+*anki-0.9.9.8.1 (09 Jun 2009)
+
+  09 Jun 2009; Heath Caldwell <hncaldwell@gentoo.org>
+  +anki-0.9.9.8.1.ebuild:
+  Version bump (fixes bug #273433). Add X USE flag dependency for PyQt4
+  (fixes bug #272138).
 
 *anki-0.9.9.7.9b (20 May 2009)
 
