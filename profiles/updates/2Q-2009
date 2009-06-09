@@ -37,3 +37,4 @@ slotmove dev-util/kdevplatform 1 4
 slotmove media-video/kaffeine 0 3.5
 move x11-misc/xinput x11-apps/xinput
 slotmove media-libs/xvid 1 0
+slotmove >=net-p2p/ktorrent-3.2.2 3 4
