@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/autotest-rails
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.1 2009/06/09 18:24:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.2 2009/06/09 19:24:00 fmccor Exp $
+
+  09 Jun 2009; Ferris McCormick <fmccor@gentoo.org>
+  autotest-rails-4.1.0.ebuild:
+  Add ~sparc keyword, Bug #273414.
 
 *autotest-rails-4.1.0 (09 Jun 2009)
 
