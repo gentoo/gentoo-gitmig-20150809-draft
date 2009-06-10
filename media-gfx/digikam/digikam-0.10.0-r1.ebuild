@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0-r1.ebuild,v 1.2 2009/06/10 09:45:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0-r1.ebuild,v 1.3 2009/06/10 11:21:14 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,7 +15,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-SLOT="4444dressbook debug geolocation +gphoto2"
+SLOT="4"
+IUSE="addressbook debug geolocation +gphoto2"
 
 DEPEND="
 	dev-db/sqlite:3
