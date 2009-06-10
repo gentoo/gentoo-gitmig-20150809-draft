@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screenie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.22 2009/06/10 19:03:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screenie/ChangeLog,v 1.23 2009/06/10 19:43:35 a3li Exp $
+
+  10 Jun 2009; Alex Legler <a3li@gentoo.org> -screenie-1.30.0.ebuild:
+  Removing vulnerable version, bug 250476.
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org> screenie-1.30.0-r1.ebuild:
   amd64 stable, bug #250476
