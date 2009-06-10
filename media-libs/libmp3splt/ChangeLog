@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmp3splt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.10 2009/06/06 16:57:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/ChangeLog,v 1.11 2009/06/10 15:54:57 armin76 Exp $
+
+  10 Jun 2009; Raúl Porcel <armin76@gentoo.org> libmp3splt-0.5.4.ebuild:
+  alpha/sparc stable wrt #272104
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> libmp3splt-0.5.4.ebuild:
   ppc stable #272104
