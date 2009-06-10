@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.15.ebuild,v 1.2 2009/06/06 04:06:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/bzr-1.15.1.ebuild,v 1.1 2009/06/10 19:22:26 pva Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SERIES=$(get_version_component_range 1-2)
 DESCRIPTION="Bazaar is a next generation distributed version control system."
 HOMEPAGE="http://bazaar-vcs.org/"
 #SRC_URI="http://bazaar-vcs.org/releases/src/${MY_P}.tar.gz"
-SRC_URI="http://launchpad.net/bzr/${SERIES}/${MY_PV}final/+download/${MY_P}.tar.gz"
+SRC_URI="http://launchpad.net/bzr/${SERIES}/${MY_PV}/+download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -106,15 +106,15 @@ src_test() {
 	# Define tests which are known to fail below.
 	local skip_tests="("
 	# https://bugs.launchpad.net/bzr/+bug/306264
-	skip_tests+="test_http.SmartHTTPTunnellingTest.test_bulk_data|"
+	skip_tests+="test_http.SmartHTTPTunnellingTest*|"
 	skip_tests+="test_http.TestWallServer.test_http_*|"
 	skip_tests+="blackbox.test_too_much.SFTPTestsRelative.test_*|"
 	# https://bugs.launchpad.net/bzr/+bug/383920
 	skip_tests+="test_transport_implementations.TransportTests.test_get*|"
 	# This tests were fixed in trunk. Drop in 1.15.x or 1.16
 	skip_tests+="bzrlib.tests.test_http.TestActivity*|"
-	skip_tests+="bzrlib.tests.tree_implementations.test_get_file_mtime*|"
-	skip_tests+="test_source.TestSource.test_no_asserts*|"
+	#skip_tests+="bzrlib.tests.tree_implementations.test_get_file_mtime*|"
+	#skip_tests+="test_source.TestSource.test_no_asserts*|"
 	#https://bugs.launchpad.net/bzr/+bug/341648
 	skip_tests+="test_osutils.TestWalkDirs.test_walkdirs_os_error"
 	skip_tests+=")"
