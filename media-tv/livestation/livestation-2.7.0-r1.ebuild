@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-2.7.0-r1.ebuild,v 1.1 2009/05/29 20:30:29 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-2.7.0-r1.ebuild,v 1.2 2009/06/10 15:29:50 ssuominen Exp $
 
 inherit eutils
 
@@ -43,6 +43,7 @@ src_install() {
 	dosym plugins/imageformats ${dest}/imageformats || die "dosym failed"
 	dodoc README
 
+	newicon "${FILESDIR}"/${PN}_icon.svg ${PN}.svg
 	make_wrapper ${PN} ./${MY_PN}.bin ${dest} ${dest}/lib
-	make_desktop_entry ${PN} ${MY_PN}
+	make_desktop_entry ${PN} ${MY_PN} ${PN}
 }
