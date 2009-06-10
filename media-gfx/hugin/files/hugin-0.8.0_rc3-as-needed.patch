@@ -1,0 +1,27 @@
+diff -ru hugin-0.8.0.orig/src/foreign/levmar/CMakeLists.txt hugin-0.8.0/src/foreign/levmar/CMakeLists.txt
+--- hugin-0.8.0.orig/src/foreign/levmar/CMakeLists.txt	2009-06-09 07:38:10.000000000 +0200
++++ hugin-0.8.0/src/foreign/levmar/CMakeLists.txt	2009-06-09 07:38:33.000000000 +0200
+@@ -6,3 +6,5 @@
+ IF(LAPACK_FOUND)
+   ADD_DEFINITIONS(-DHAVE_LAPACK)
+ ENDIF(LAPACK_FOUND)
++
++SET_TARGET_PROPERTIES(huginlevmar PROPERTIES COMPILE_FLAGS -fPIC)
+diff -ru hugin-0.8.0.orig/src/foreign/vigra/vigra_impex/CMakeLists.txt hugin-0.8.0/src/foreign/vigra/vigra_impex/CMakeLists.txt
+--- hugin-0.8.0.orig/src/foreign/vigra/vigra_impex/CMakeLists.txt	2009-06-09 07:38:10.000000000 +0200
++++ hugin-0.8.0/src/foreign/vigra/vigra_impex/CMakeLists.txt	2009-06-09 07:38:33.000000000 +0200
+@@ -9,3 +9,5 @@
+ ELSE (${HUGIN_SHARED_LIBS})
+   add_library(huginvigraimpex STATIC ${VIGRA_IMPEX_SRC})
+ ENDIF (${HUGIN_SHARED_LIBS})
++
++TARGET_LINK_LIBRARIES(huginvigraimpex ${JPEG_LIBRARIES} ${OPENEXR_LIBRARIES} ${PNG_LIBRARIES} ${TIFF_LIBRARIES})
+diff -ru hugin-0.8.0.orig/src/hugin_base/CMakeLists.txt hugin-0.8.0/src/hugin_base/CMakeLists.txt
+--- hugin-0.8.0.orig/src/hugin_base/CMakeLists.txt	2009-06-09 07:38:09.000000000 +0200
++++ hugin-0.8.0/src/hugin_base/CMakeLists.txt	2009-06-09 07:41:05.000000000 +0200
+@@ -65,3 +65,5 @@
+ ENDIF (${HUGIN_SHARED_LIBS})
+ 
+ add_subdirectory(test)
++
++TARGET_LINK_LIBRARIES(huginbase huginlevmar huginvigraimpex ${Boost_thread_LIBRARIES} ${EXIV2_LIBRARIES} ${PANO_LIBRARIES} ${TIFF_LIBRARIES} ${LAPACK_LIBRARIES})
