@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.3 2009/06/10 09:04:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.4 2009/06/10 09:08:34 aballier Exp $
 
 EAPI=2
 
@@ -194,10 +194,4 @@ src_test() {
 		LD_LIBRARY_PATH="${S}/libpostproc:${S}/libswscale:${S}/libavcodec:${S}/libavdevice:${S}/libavfilter:${S}/libavformat:${S}/libavutil" \
 			emake ${t} || die "Some tests in ${t} failed"
 	done
-}
-
-pkg_postinst() {
-	ewarn "ffmpeg may have had ABI changes, if ffmpeg based programs"
-	ewarn "like xine-lib or vlc stop working as expected please"
-	ewarn "rebuild them."
 }
