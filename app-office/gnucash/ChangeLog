@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.188 2009/05/26 15:27:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.189 2009/06/10 11:48:55 tove Exp $
+
+*gnucash-2.3.1 (10 Jun 2009)
+
+  10 Jun 2009; Torsten Veller <tove@gentoo.org> +gnucash-2.3.1.ebuild:
+  Add unstable version (#273393)
 
   26 May 2009; Ferris McCormick <fmccor@gentoo.org> gnucash-2.2.9-r1.ebuild:
   Re-keyword for ~sparc, Bug #271285.
