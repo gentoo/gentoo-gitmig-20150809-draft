@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/guile-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.8 2009/06/05 15:12:10 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.9 2009/06/10 21:40:51 fauli Exp $
+
+  10 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  guile-lib-0.1.3.ebuild:
+  stable x86, bug 272675
 
   05 Jun 2009; Ferris McCormick <fmccor@gentoo.org> guile-lib-0.1.3.ebuild:
   Sparc stable, part of Bug #272675.
