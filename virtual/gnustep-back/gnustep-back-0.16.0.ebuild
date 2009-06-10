@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/gnustep-back-0.16.0.ebuild,v 1.1 2008/12/22 14:05:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/gnustep-back/gnustep-back-0.16.0.ebuild,v 1.2 2009/06/10 21:54:07 fauli Exp $
 
 DESCRIPTION="Virtual for back-end component for the GNUstep GUI Library"
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI=""
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86 ~x86-fbsd"
 RDEPEND="|| (
 		~gnustep-base/gnustep-back-art-${PV}
 		~gnustep-base/gnustep-back-xlib-${PV}
