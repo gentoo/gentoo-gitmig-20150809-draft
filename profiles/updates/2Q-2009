@@ -43,3 +43,4 @@ slotmove app-admin/klogview 0 3.5
 slotmove app-antivirus/klamav 0 3.5
 slotmove app-backup/kbackup 0 3.5
 slotmove >=media-gfx/dikigam-0.10 0.10 4
+slotmove kde-misc/kdnssd-avahi 0 3.5
