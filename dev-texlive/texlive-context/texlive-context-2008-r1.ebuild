@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2008-r1.ebuild,v 1.9 2009/03/18 21:18:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-context/texlive-context-2008-r1.ebuild,v 1.10 2009/06/10 13:55:28 alexxy Exp $
 
 TEXLIVE_MODULE_CONTENTS="context jmn lmextra bin-context context-account context-bnf context-chromato context-construction-plan context-degrade context-french context-letter context-lettrine context-lilypond context-mathsets context-taspresent context-typearea context-vim collection-context
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive ConTeXt format"
 
 LICENSE="GPL-2 as-is freedist GPL-1 GPL-2 public-domain "
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-metapost-2008
 >=dev-texlive/texlive-basic-2008
