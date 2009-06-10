@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/NetAddr-IP
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetAddr-IP/ChangeLog,v 1.1 2009/06/10 01:26:08 robbat2 Exp $
+
+*NetAddr-IP-4.026 (10 Jun 2009)
+
+  10 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +NetAddr-IP-4.026.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
