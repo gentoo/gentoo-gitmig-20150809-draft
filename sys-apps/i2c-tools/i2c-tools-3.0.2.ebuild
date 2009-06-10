@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.2.ebuild,v 1.1 2009/01/14 16:19:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c-tools/i2c-tools-3.0.2.ebuild,v 1.2 2009/06/10 20:26:41 maekke Exp $
 
 inherit flag-o-matic toolchain-funcs distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.lm-sensors.org/i2c-tools/releases/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~arm"
+KEYWORDS="amd64 ~arm x86"
 IUSE="python"
 
 DEPEND="!<sys-apps/lm_sensors-3"
