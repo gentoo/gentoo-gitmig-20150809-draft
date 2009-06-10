@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r2.ebuild,v 1.2 2009/06/06 17:35:44 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.5c-r2.ebuild,v 1.3 2009/06/10 21:17:54 fauli Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="http://icculus.org/excido/${P}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ppc ~x86"
+KEYWORDS="~alpha ~amd64 ppc x86"
 IUSE=""
 
 DEPEND="dev-games/physfs
