@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-genericextra/texlive-genericextra-2008.ebuild,v 1.10 2009/03/18 20:52:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-genericextra/texlive-genericextra-2008.ebuild,v 1.11 2009/06/10 14:06:11 alexxy Exp $
 
 TEXLIVE_MODULE_CONTENTS="abbr abstyles barr borceux c-pascal colorsep dinat eijkhout encxvlna fenixpar fltpoint insbox mathdots metatex mftoeps midnight multi ofs pdf-trans vrb vtex collection-genericextra
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Extra generic packages"
 
 LICENSE="GPL-2 as-is freedist LPPL-1.3 public-domain TeX "
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2008
 "
