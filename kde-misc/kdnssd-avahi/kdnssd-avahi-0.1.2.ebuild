@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2.ebuild,v 1.18 2008/03/04 23:45:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/kdnssd-avahi-0.1.2.ebuild,v 1.19 2009/06/10 11:14:53 tampakrap Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://helios.et.put.poznan.pl/~jstachow/pub/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3.5"
 
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 
