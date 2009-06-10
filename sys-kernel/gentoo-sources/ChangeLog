@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.616 2009/06/04 21:47:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.617 2009/06/10 20:40:41 mpagano Exp $
+
+*gentoo-sources-2.6.30 (10 Jun 2009)
+
+  10 Jun 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.30.ebuild:
+  Version bump to 2.6.30. Bad block relocation support for LiveCD user.
+  Bootsplash fbcondecor patch and alpha sysctl uac patch.
 
   04 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   gentoo-sources-2.6.29-r5.ebuild:
