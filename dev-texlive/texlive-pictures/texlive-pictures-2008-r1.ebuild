@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2008-r1.ebuild,v 1.9 2009/03/18 21:18:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-texlive/texlive-pictures/texlive-pictures-2008-r1.ebuild,v 1.10 2009/06/10 14:22:13 alexxy Exp $
 
 TEXLIVE_MODULE_CONTENTS="autoarea bardiag curve curve2e curves dcpic dottex dratex eepic epspdf epspdfconversion gnuplottex miniplot pb-diagram petri-nets  pgf-soroban pgfopts pgfplots picinpar pict2e pictex pictex2 pinlabel pmgraph randbild swimgraf texdraw tikz-inet tufte-latex xypic collection-pictures
 "
@@ -11,7 +11,7 @@ DESCRIPTION="TeXLive Graphics packages"
 
 LICENSE="GPL-2 Apache-2.0 as-is freedist GPL-1 LPPL-1.3 "
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE=""
 DEPEND=">=dev-texlive/texlive-basic-2008
 "
