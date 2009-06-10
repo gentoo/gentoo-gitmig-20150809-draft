@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.138 2009/06/05 10:14:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.139 2009/06/10 09:45:23 scarabeus Exp $
+
+  10 Jun 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  digikam-0.10.0-r1.ebuild:
+  Slotmove digikam 0.10 to slot 4.
 
 *digikam-0.10.0-r1 (05 Jun 2009)
 
