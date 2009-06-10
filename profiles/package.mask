@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9905 2009/06/10 13:41:20 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9906 2009/06/10 13:42:37 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -40,7 +40,7 @@
 # * Many more...
 >=gnome-base/gdm-2.26
 
-# Rémi Cardona <remi@gentoo.org (10 Jun 2009)
+# Rémi Cardona <remi@gentoo.org> (10 Jun 2009)
 # has useless soname bump, will be gone in a few days
 =x11-libs/vte-0.20.4
 
