@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/gtick
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.35 2009/06/06 08:55:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gtick/ChangeLog,v 1.36 2009/06/10 15:05:04 armin76 Exp $
+
+  10 Jun 2009; Raúl Porcel <armin76@gentoo.org> gtick-0.4.2.ebuild:
+  sparc stable wrt #272324
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> gtick-0.4.2.ebuild:
   amd64/x86 stable, bug #272324
