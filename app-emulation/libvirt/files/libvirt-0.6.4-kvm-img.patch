@@ -1,3 +1,18 @@
+commit 414b18f7dd75537f4bd50ea6476e1b95389d7868
+Author: Doug Goldstein <cardoe@gentoo.org>
+Date:   Mon Jun 8 12:24:27 2009 -0500
+
+    Support kvm-img or qemu-img dynamically
+    
+    This patch adds a new function virFindFileInPath() and uses it to find
+    where a binary lives in the PATH environment variable. Using this, we
+    can dynamically find where utility functions exist (and if they even
+    exists). So such we remove the build-time check for qemu-img and make it
+    dynamic for kvm-img and qemu-img. Several distros uses kvm-img over
+    qemu-img when installing KVM. kvm-img also includes several patches
+    which Red Hat is trying to upstream with QEMU so this patch supports
+    those features which are commented out in libvirt when using kvm-img
+
 diff --git a/configure.in b/configure.in
 index 5c0575c..552c761 100644
 --- a/configure.in
@@ -37,7 +52,7 @@ index b39216f..0c55684 100644
  virFileHasSuffix;
  virFileLinkPointsTo;
 diff --git a/src/storage_backend_fs.c b/src/storage_backend_fs.c
-index be6d011..ea5de7f 100644
+index be6d011..0175152 100644
 --- a/src/storage_backend_fs.c
 +++ b/src/storage_backend_fs.c
 @@ -1183,11 +1183,12 @@ static int createFileDir(virConnectPtr conn,
@@ -102,7 +117,7 @@ index be6d011..ea5de7f 100644
      if (type == NULL) {
          virStorageReportError(conn, VIR_ERR_INTERNAL_ERROR,
                                _("unknown storage vol type %d"),
-@@ -1277,17 +1273,45 @@ static int createQemuImg(virConnectPtr conn,
+@@ -1277,17 +1273,47 @@ static int createQemuImg(virConnectPtr conn,
          }
      }
  
@@ -110,9 +125,11 @@ index be6d011..ea5de7f 100644
 +    	use_kvmimg = 1;
 +    else if ((create_tool = virFindFileInPath("qemu-img")) != NULL)
 +        use_kvmimg = 0;
-+    else
++    else {
 +        virStorageReportError(conn, VIR_ERR_INTERNAL_ERROR,
 +                              _("unable to find kvm-img or qemu-img"));
++        return -1;
++    }
 +
 +    if (inputvol) {
 +        convargv[0] = create_tool;
@@ -149,7 +166,7 @@ index be6d011..ea5de7f 100644
  /*
   * Xen removed the fully-functional qemu-img, and replaced it
   * with a partially functional qcow-create. Go figure ??!?
-@@ -1321,18 +1345,20 @@ static int createQemuCreate(virConnectPtr conn,
+@@ -1321,18 +1347,20 @@ static int createQemuCreate(virConnectPtr conn,
      /* Size in MB - yes different units to qemu-img :-( */
      snprintf(size, sizeof(size), "%llu", vol->capacity/1024/1024);
  
@@ -172,7 +189,7 @@ index be6d011..ea5de7f 100644
  
  static int
  _virStorageBackendFileSystemVolBuild(virConnectPtr conn,
-@@ -1341,6 +1367,7 @@ _virStorageBackendFileSystemVolBuild(virConnectPtr conn,
+@@ -1341,6 +1369,7 @@ _virStorageBackendFileSystemVolBuild(virConnectPtr conn,
  {
      int fd;
      createFile create_func;
@@ -180,7 +197,7 @@ index be6d011..ea5de7f 100644
  
      if (vol->target.format == VIR_STORAGE_VOL_FILE_RAW &&
          (!inputvol ||
-@@ -1353,17 +1380,20 @@ _virStorageBackendFileSystemVolBuild(virConnectPtr conn,
+@@ -1353,17 +1382,20 @@ _virStorageBackendFileSystemVolBuild(virConnectPtr conn,
          create_func = createRaw;
      } else if (vol->target.format == VIR_STORAGE_VOL_FILE_DIR) {
          create_func = createFileDir;
@@ -207,10 +224,10 @@ index be6d011..ea5de7f 100644
  
      if (create_func(conn, vol, inputvol) < 0)
 diff --git a/src/util.c b/src/util.c
-index 3a8c105..487349a 100644
+index 3a8c105..664fb0f 100644
 --- a/src/util.c
 +++ b/src/util.c
-@@ -1073,7 +1073,34 @@ int virFileResolveLink(const char *linkpath,
+@@ -1073,7 +1073,35 @@ int virFileResolveLink(const char *linkpath,
  #endif
  }
  
@@ -223,6 +240,7 @@ index 3a8c105..487349a 100644
 +char *virFindFileInPath(const char *file)
 +{
 +    char pathenv[PATH_MAX];
++    char *penv = &pathenv; /* this is for glibc 2.10 strsep chnages */
 +    char *pathseg;
 +    char fullpath[PATH_MAX];
 +
@@ -232,9 +250,9 @@ index 3a8c105..487349a 100644
 +
  
 +    /* for each path segment, append the file to search for and test for
-+     * it. return it if found
++     * it. return it if found.
 +     */
-+    while ((pathseg = strsep(&pathenv, ":")) != NULL) {
++    while ((pathseg = strsep(&penv, ":")) != NULL) {
 +       snprintf(fullpath, PATH_MAX, "%s/%s", pathseg, file);
 +       if (virFileExists(fullpath))
 +           return strdup(fullpath);

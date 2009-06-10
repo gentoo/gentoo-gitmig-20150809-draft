@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.29 2009/06/09 18:37:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.30 2009/06/10 15:34:16 cardoe Exp $
+
+*libvirt-0.6.4-r1 (10 Jun 2009)
+
+  10 Jun 2009; Doug Goldstein <cardoe@gentoo.org> -libvirt-0.6.4.ebuild,
+  +libvirt-0.6.4-r1.ebuild, files/libvirt-0.6.4-kvm-img.patch:
+  bug fixes for kvm-img support patch
 
   09 Jun 2009; Patrick Lauer <patrick@gentoo.org> libvirt-0.6.4.ebuild:
   Fixing virtualbox dep for #272264
