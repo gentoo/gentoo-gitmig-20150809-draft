@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.10.ebuild,v 1.1 2008/10/20 10:55:21 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.12.ebuild,v 1.1 2009/06/10 11:29:05 grozin Exp $
 
 NEED_PYTHON=2.4
 inherit distutils
@@ -11,7 +11,7 @@ SRC_URI="http://mpmath.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gmp test"
 
 DEPEND="doc? ( dev-python/sphinx )
