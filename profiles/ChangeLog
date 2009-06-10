@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2762 2009/06/10 07:24:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2763 2009/06/10 13:41:20 nirbheek Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jun 2009; Nirbheek Chauhan <nirbheek@gentoo.org> ChangeLog:
+  Mask gnome-base/gdm-2.26 for addition to tree
 
   10 Jun 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add x11-libs/vte-0.20.4 to package.mask

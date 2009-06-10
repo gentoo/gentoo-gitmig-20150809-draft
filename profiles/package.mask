@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9904 2009/06/10 07:24:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9905 2009/06/10 13:41:20 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (10 Jun 2009)
+# Several feature regressions that will make our users
+# go on a witchhunt if unmasked
+# * No XDMCP connection UI
+# * No configuration/theming support
+# * No support for auth backends other than PAM
+# * Many more...
+>=gnome-base/gdm-2.26
 
 # Rémi Cardona <remi@gentoo.org (10 Jun 2009)
 # has useless soname bump, will be gone in a few days
