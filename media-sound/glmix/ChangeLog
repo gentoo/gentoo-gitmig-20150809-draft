@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glmix
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.8 2007/07/27 19:29:46 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.9 2009/06/10 19:09:35 maekke Exp $
+
+  10 Jun 2009; Markus Meier <maekke@gentoo.org> glmix-0.3.ebuild:
+  amd64/x86 stable, bug #272806
 
 *glmix-0.3 (27 Jul 2007)
 
