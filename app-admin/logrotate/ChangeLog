@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logrotate
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.77 2009/03/10 02:01:55 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/ChangeLog,v 1.78 2009/06/10 13:15:13 fmccor Exp $
+
+  10 Jun 2009; Ferris McCormick <fmccor@gentoo.org> logrotate-3.7.8.ebuild:
+  Sparc stable, Bug #273419.
 
 *logrotate-3.7.8 (10 Mar 2009)
 
