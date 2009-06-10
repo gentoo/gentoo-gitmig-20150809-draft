@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/grip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.82 2009/06/07 23:50:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.83 2009/06/10 19:08:00 maekke Exp $
+
+  10 Jun 2009; Markus Meier <maekke@gentoo.org> grip-3.3.1-r2.ebuild:
+  amd64/x86 stable, bug #272802
 
   07 Jun 2009; Jeroen Roovers <jer@gentoo.org> grip-3.3.1-r2.ebuild:
   Stable for HPPA (bug #272802).

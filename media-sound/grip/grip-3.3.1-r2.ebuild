@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r2.ebuild,v 1.4 2009/06/07 23:50:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.3.1-r2.ebuild,v 1.5 2009/06/10 19:08:00 maekke Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs libtool
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/grip/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ia64 ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="nls vorbis"
 
 RDEPEND=">=x11-libs/gtk+-2.2:2
