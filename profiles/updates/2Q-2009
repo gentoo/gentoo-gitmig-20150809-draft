@@ -42,3 +42,4 @@ slotmove app-admin/kiosktool 0 3.5
 slotmove app-admin/klogview 0 3.5
 slotmove app-antivirus/klamav 0 3.5
 slotmove app-backup/kbackup 0 3.5
+slotmove >=media-gfx/dikigam-0.10 0.10 4
