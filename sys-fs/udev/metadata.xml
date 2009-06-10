@@ -5,4 +5,7 @@
 <maintainer>
   <email>udev-bugs@gentoo.org</email>
 </maintainer>
+<use>
+  <flag name="devfs-compat">Install rules for devfs compatible device names</flag>
+</use>
 </pkgmetadata>

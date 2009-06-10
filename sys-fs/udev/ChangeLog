@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.467 2009/05/12 17:46:47 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.468 2009/06/10 20:10:01 zzam Exp $
+
+*udev-141-r1 (10 Jun 2009)
+
+  10 Jun 2009; Matthias Schwarzott <zzam@gentoo.org> +udev-141-r1.ebuild,
+  +files/udev-141-remove-devfs-names.diff, metadata.xml:
+  Add use-flag to disable devfs-compat device names, Bug #269359.
 
   12 May 2009; Matthias Schwarzott <zzam@gentoo.org> udev-124-r2.ebuild,
   udev-141.ebuild:
