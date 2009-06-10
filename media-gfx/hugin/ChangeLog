@@ -1,12 +1,12 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.63 2009/06/10 05:41:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.64 2009/06/10 06:02:16 maekke Exp $
 
 *hugin-0.8.0_rc3 (10 Jun 2009)
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org> +hugin-0.8.0_rc3.ebuild,
   +files/hugin-0.8.0_rc3-as-needed.patch:
-  version bump to 0.8.0_rc3, witch (experimental) lapack support
+  version bump to 0.8.0_rc3, with (experimental) lapack support
 
   24 May 2009; Markus Meier <maekke@gentoo.org> hugin-0.7.0.ebuild,
   hugin-0.7.0-r1.ebuild, +files/hugin-0.7.0-gcc44.patch:
