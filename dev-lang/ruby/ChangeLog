@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.407 2009/06/10 05:45:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.408 2009/06/10 08:28:00 fauli Exp $
+
+  10 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  ruby-1.8.6_p369.ebuild:
+  stable x86, security bug 273213
 
   10 Jun 2009; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p369.ebuild:
   amd64 stable, security bug 273213.
