@@ -1,15 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.31.1.ebuild,v 1.6 2009/03/19 13:08:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.33.ebuild,v 1.1 2009/06/10 17:25:18 chainsaw Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
 
-IUSE="alsa bri curl debug doc gtk h323 hardened lowmem mmx \
-	nosamples odbc osp postgres pri sqlite ssl speex zaptel \
-	elibc_uclibc"
+IUSE="alsa curl debug doc gtk h323 hardened lowmem mmx nosamples \
+	odbc osp postgres pri sqlite ssl speex zaptel elibc_uclibc"
 
-BRI_VERSION="0.3.0-PRE-1y-w"
 AST_PATCHES="1.2.27-patches-1.0"
 
 MY_P="${P/_p/.}"
@@ -17,15 +15,13 @@ MY_P="${P/_p/.}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.digium.com/pub/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/${PN}-${AST_PATCHES}.tar.bz2
-	 bri? ( http://www.junghanns.net/downloads/bristuff-${BRI_VERSION}.tar.gz )"
+	 mirror://gentoo/${PN}-${AST_PATCHES}.tar.bz2"
 
 S="${WORKDIR}/${MY_P}"
-S_BRI="${WORKDIR}/bristuff-${BRI_VERSION}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 RDEPEND="dev-libs/newt
 	media-sound/sox
@@ -41,9 +37,7 @@ RDEPEND="dev-libs/newt
 	sqlite? ( <dev-db/sqlite-3.0.0 )
 	zaptel? ( >=net-misc/zaptel-1.2.16 )
 	postgres? ( virtual/postgresql-base )
-	osp? ( >=net-libs/osptoolkit-3.3.4 )
-	bri? (  >=net-libs/libpri-1.2.5[bri]
-		>=net-misc/zaptel-1.2.18 )"
+	osp? ( >=net-libs/osptoolkit-3.3.4 )"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex
@@ -146,10 +140,7 @@ pkg_setup() {
 
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_preparek() {
 	#
 	# gentoo patchset
 	#
@@ -180,8 +171,6 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/1.2.0/asterisk-1.2.21.1-h323-dumb-makefile.diff"
-	epatch "${FILESDIR}/1.2.0/${P}-svn89254.diff"
-	epatch "${FILESDIR}/1.2.0/${P}-comma-is-not-pipe.diff"
 
 	#
 	# uclibc patch
@@ -190,19 +179,6 @@ src_unpack() {
 		einfo "Patching asterisk for uclibc..."
 		epatch "${FILESDIR}"/1.0.0/${PN}-1.0.5-uclibc-dns.diff
 		epatch "${FILESDIR}"/1.2.0/${PN}-1.2.1-uclibc-getloadavg.diff
-	fi
-
-	#
-	# BRI patches
-	#
-	if use bri; then
-		cd "${S_BRI}"
-		einfo "Patching asterisk w/ BRI stuff"
-		epatch "${FILESDIR}"/1.2.0/${P}-bri-fixups.diff
-		cd "${S}"
-		for x in $(grep -v "^#\| \+" "${S_BRI}"/patches/asterisk/series); do
-			epatch "${S_BRI}"/patches/asterisk/${x}
-		done
 	fi
 
 	#
@@ -245,10 +221,6 @@ src_compile() {
 	# create api docs
 	use doc && \
 		make progdocs
-
-	# build bristuff's ISDNguard
-	use bri && \
-		make -C "${S_BRI}"/ISDNguard
 }
 
 src_install() {
@@ -256,10 +228,6 @@ src_install() {
 	# install asterisk
 	make DESTDIR="${D}" ASTLIBDIR="\$(INSTALL_PREFIX)/usr/$(get_libdir)/asterisk" install || die "Make install failed"
 	make DESTDIR="${D}" ASTLIBDIR="\$(INSTALL_PREFIX)/usr/$(get_libdir)/asterisk" samples || die "Failed to create sample files"
-
-	# remove bristuff capi
-	use bri && \
-		rm -f "${D}"usr/$(get_libdir)/asterisk/modules/{app,chan}_capi*.so 2>/dev/null
 
 	# remove installed sample files if nosamples flag is set
 	if use nosamples; then
@@ -320,17 +288,6 @@ src_install() {
 	if use doc; then
 		insinto /usr/share/doc/${PF}/api/html
 		doins doc/api/html/*
-	fi
-
-	# install ISDNguard
-	if use bri; then
-		cd "${S_BRI}"/ISDNguard
-		dosbin ISDNguard
-
-		docinto ISDNguard
-		dodoc INSTALL.ISDNguard
-
-		cd "${S}"
 	fi
 
 	insinto /usr/share/doc/${PF}/cgi

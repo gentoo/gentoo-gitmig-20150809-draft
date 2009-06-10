@@ -9,7 +9,6 @@
   <use>
     <flag name="pri">Enables pri support</flag>
     <flag name="zaptel">Enables deprecated zaptel support (use dahdi if available)</flag>
-    <flag name="bri">Enable ISDN BRI support (bristuff)</flag>
     <flag name="h323">Build the H.323 channel driver bundled with Asterisk</flag>
     <flag name="lowmem">Build Asterisk for environments with low amounts of memory (embedded devices)</flag>
     <flag name="nosamples">Don't install sample sound and configuration files</flag>

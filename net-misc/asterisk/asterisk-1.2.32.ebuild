@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.32.ebuild,v 1.4 2009/04/21 18:38:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.32.ebuild,v 1.5 2009/06/10 17:25:18 chainsaw Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -140,10 +140,7 @@ pkg_setup() {
 
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	#
 	# gentoo patchset
 	#
