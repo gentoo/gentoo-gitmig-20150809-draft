@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.12.ebuild,v 1.2 2009/06/09 15:01:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/terminal-0.2.12.ebuild,v 1.3 2009/06/10 07:30:26 fauli Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ xfce4_core
 
 DESCRIPTION="Terminal for Xfce desktop environment, based on vte library."
 HOMEPAGE="http://www.xfce.org/projects/terminal"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="dbus debug startup-notification doc"
 
 RDEPEND=">=dev-libs/glib-2.6:2
