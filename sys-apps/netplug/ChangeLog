@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/netplug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.17 2009/03/01 19:58:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netplug/ChangeLog,v 1.18 2009/06/10 20:34:04 maekke Exp $
+
+  10 Jun 2009; Markus Meier <maekke@gentoo.org> netplug-1.2.9-r5.ebuild:
+  amd64/x86 stable, bug #273072
 
 *netplug-1.2.9-r5 (01 Mar 2009)
 
