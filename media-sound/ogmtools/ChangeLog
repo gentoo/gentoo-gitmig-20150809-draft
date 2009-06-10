@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ogmtools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.32 2009/06/06 17:01:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ChangeLog,v 1.33 2009/06/10 15:05:57 armin76 Exp $
+
+  10 Jun 2009; Raúl Porcel <armin76@gentoo.org> ogmtools-1.5-r2.ebuild:
+  sparc stable wrt #272111
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> ogmtools-1.5-r2.ebuild:
   ppc stable #272111
