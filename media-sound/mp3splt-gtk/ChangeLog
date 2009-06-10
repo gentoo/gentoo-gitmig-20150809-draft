@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3splt-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.11 2009/06/06 17:00:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3splt-gtk/ChangeLog,v 1.12 2009/06/10 16:01:46 armin76 Exp $
+
+  10 Jun 2009; Raúl Porcel <armin76@gentoo.org> mp3splt-gtk-0.5.4.ebuild:
+  sparc stable wrt #272104
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> mp3splt-gtk-0.5.4.ebuild:
   ppc stable #272104
