@@ -1,18 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r3.ebuild,v 1.1 2009/05/12 22:20:21 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r4.ebuild,v 1.1 2009/06/10 22:03:19 dagger Exp $
 
 EAPI="2"
-inherit eutils
-# autotools
+inherit eutils autotools
+
+PATCH_VERSION="1"
 
 # NetworkManager likes itself with capital letters
 MY_PN=${PN/networkmanager/NetworkManager}
 MY_P=${MY_PN}-${PV}
+PATCHNAME="${MY_P}-gentoo-patches-${PATCH_VERSION}"
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2"
+SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~dagger/files/${PATCHNAME}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -65,9 +68,10 @@ src_prepare() {
 	# bug #267349
 	epatch "${FILESDIR}/${PN}-0.7.1-bad-link.patch"
 
-#	EPATCH_SOURCE="${WORKDIR}/modem-manager-patchset-0.7.1"
-#	EPATCH_SUFFIX="patch"
-#	use modemmanager && epatch && eautoreconf
+	# bug #262112
+	EPATCH_SOURCE="${WORKDIR}/nm_0.7.1_patchset_${PATCH_VERSION}"
+	EPATCH_SUFFIX="patch"
+	epatch && eautoreconf
 
 }
 
@@ -75,7 +79,7 @@ src_configure() {
 	ECONF="--disable-more-warnings
 		--localstatedir=/var
 		--with-distro=gentoo
-		--with-dbus-sys=/etc/dbus-1/system.d
+		--with-dbus-sys-dir=/etc/dbus-1/system.d
 		$(use_enable doc gtk-doc)
 		$(use_with doc docs)
 		$(use_with resolvconf)"
@@ -127,16 +131,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "You need to be in the plugdev group in order to use NetworkManager"
-	elog "Problems with your hostname getting changed?"
-	elog ""
-	elog "Add the following to /etc/dhcp/dhclient.conf"
-	elog 'send host-name "YOURHOSTNAME";'
-	elog 'supersede host-name "YOURHOSTNAME";'
-	elog ""
-	elog "If you're using dhcpcd please remove"
-	elog "host_name option from /etc/dhcpcd.conf"
-	elog ""
 	elog "You will need to restart DBUS if this is your first time"
 	elog "installing NetworkManager."
 	elog ""
