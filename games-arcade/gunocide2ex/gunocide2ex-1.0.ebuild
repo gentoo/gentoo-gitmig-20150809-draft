@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.11 2007/04/24 14:44:07 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/gunocide2ex-1.0.ebuild,v 1.12 2009/06/10 23:37:34 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="fast-paced 2D shoot'em'up"
@@ -13,51 +14,45 @@ SLOT="0"
 KEYWORDS="ppc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-ttf
-	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}"
+	media-libs/sdl-mixer[vorbis]"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_unpack() {
 	unpack_makeself
-	sed -i "s:-g:${CFLAGS}:" makefile \
-		|| die "sed makefile failed"
 	mkdir binary
-	epatch "${FILESDIR}"/${PV}-gcc3.patch
-	epatch "${FILESDIR}"/${PV}-gcc4.patch
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-build.patch
 	edos2unix config.cfg
 	sed -i \
 		-e "s:/usr/local/games/gunocide2ex/config\.cfg:${GAMES_SYSCONFDIR}/${PN}.cfg:" \
 		-e "s:/usr/local/games/gunocide2ex/hscore\.dat:${GAMES_STATEDIR}/${PN}-hscore.dat:" \
+		-e "s:memleaks.log:/dev/null:" \
 		src/*.{h,cpp} \
-			|| die "sed failed"
+		|| die "sed failed"
 	sed -i \
 		-e "s:/usr/local/games:${GAMES_DATADIR}:" \
-		src/*.{h,cpp} `find gfx -name '*.txt'` \
-			|| die "sed failed (2)"
+		src/*.{h,cpp} $(find gfx -name '*.txt') \
+		|| die "sed failed"
 }
 
 src_compile() {
-	local cc=$(tc-getCXX)
-
 	cd src
-	for f in *.cpp ; do
-		echo "${cc} ${CFLAGS} `sdl-config --cflags` ${f}"
-		${cc} ${cflags} `sdl-config --cflags` -c ${f} || \
-			die "couldnt compile ${f}"
-	done
-	${cc} -o ${PN} *.o -lpthread -lSDL -lSDL_ttf -lSDL_mixer || \
+	emake CXXFLAGS="$CXXFLAGS $(sdl-config --cflags)" $(echo *.cpp | sed 's/\.cpp/.o/g') \
+		|| die "emake failed"
+	$(tc-getCXX) -o ${PN} *.o -lpthread -lSDL -lSDL_ttf -lSDL_mixer || \
 		die "couldnt produce binary"
 }
 
 src_install() {
 	dogamesbin src/${PN}               || die "dogamesbin failed"
 	dosym ${PN} "${GAMES_BINDIR}/g2ex" || die "dosym failed"
-	dodir "${GAMES_DATADIR}/${PN}"
-	cp -R gfx sfx lvl credits arial.ttf "${D}/${GAMES_DATADIR}/${PN}/" \
-		|| die "cp failed"
+	insinto "${GAMES_DATADIR}/${PN}"
+	doins -r gfx sfx lvl credits arial.ttf || die "doins failed"
 	insinto "${GAMES_SYSCONFDIR}"
 	newins config.cfg ${PN}.cfg        || die "newins failed (cfg)"
 	insinto "${GAMES_STATEDIR}"
