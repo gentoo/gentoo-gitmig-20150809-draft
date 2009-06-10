@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3blaster
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.44 2009/06/07 16:26:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/ChangeLog,v 1.45 2009/06/10 19:13:16 maekke Exp $
+
+  10 Jun 2009; Markus Meier <maekke@gentoo.org> mp3blaster-3.2.5.ebuild:
+  amd64/x86 stable, bug #272816
 
   07 Jun 2009; nixnut <nixnut@gentoo.org> mp3blaster-3.2.5.ebuild:
   ppc stable #272816
