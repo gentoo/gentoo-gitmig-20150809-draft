@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/xfwm4-themes
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.13 2009/06/09 15:04:00 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.14 2009/06/10 07:38:45 fauli Exp $
+
+  10 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  xfwm4-themes-4.6.0.ebuild:
+  stable x86, bug 265587
 
   09 Jun 2009; Jeremy Olexa <darkside@gentoo.org> xfwm4-themes-4.6.0.ebuild:
   amd64 stable, bug 265587
