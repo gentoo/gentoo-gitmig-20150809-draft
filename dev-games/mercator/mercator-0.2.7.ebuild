@@ -1,7 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.7.ebuild,v 1.1 2009/06/05 13:12:25 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/mercator/mercator-0.2.7.ebuild,v 1.2 2009/06/10 08:02:38 tupone Exp $
 EAPI=2
+
+inherit eutils
 
 DESCRIPTION="WorldForge library primarily aimed at terrain."
 HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/mercator"
@@ -12,9 +14,13 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 SLOT="0"
 
-RDEPEND=">=dev-games/wfmath-0.3.2"
+RDEPEND="dev-games/wfmath"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
 
 src_compile() {
 	emake || die "make failed"
