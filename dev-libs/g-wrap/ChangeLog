@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.64 2009/06/05 15:15:42 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.65 2009/06/10 21:43:59 fauli Exp $
+
+  10 Jun 2009; Christian Faulhammer <fauli@gentoo.org> g-wrap-1.9.11.ebuild:
+  stable x86, bug 272675
 
   05 Jun 2009; Ferris McCormick <fmccor@gentoo.org> g-wrap-1.9.11.ebuild:
   Sparc stable, part of Bug #272675.
