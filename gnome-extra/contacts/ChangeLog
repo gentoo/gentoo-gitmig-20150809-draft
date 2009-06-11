@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/contacts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/ChangeLog,v 1.6 2008/11/21 21:54:35 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/contacts/ChangeLog,v 1.7 2009/06/11 21:31:43 eva Exp $
+
+*contacts-0.10 (11 Jun 2009)
+
+  11 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org> +contacts-0.10.ebuild:
+  Version bump. Removing invalid entry from ChangeLog.
 
   21 Nov 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +files/contacts-0.9-dbus.patch, contacts-0.9.ebuild:
@@ -16,11 +21,6 @@
   20 Dec 2007; Tobias Scherbaum <dertobi123@gentoo.org>
   -contacts-0.5.ebuild, -contacts-0.7.ebuild, +contacts-0.8.ebuild:
   Version bump, bug #165124
-
-*contacts-0.7-r1 (20 Dez 2007)
-
-  20 Dez 2007;  <>  contacts-0.7-r1.ebuild files/digest-contacts-0.7-r1
-  # INSERT ENTRY HERE
 
 *contacts-0.7 (15 Aug 2007)
 
