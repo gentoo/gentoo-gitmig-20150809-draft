@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6-r1.ebuild,v 1.5 2009/05/12 20:06:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/gramofile-1.6-r1.ebuild,v 1.6 2009/06/11 14:06:13 fauli Exp $
 
 EAPI=2
 PATCH_LEVEL=8
@@ -13,7 +13,7 @@ SRC_URI="mirror://debian/pool/main/g/${PN}/${PN}_${PV}.orig.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses

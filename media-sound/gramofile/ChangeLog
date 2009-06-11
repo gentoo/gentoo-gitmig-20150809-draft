@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gramofile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.18 2009/05/12 20:10:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.19 2009/06/11 14:06:13 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  gramofile-1.6-r1.ebuild:
+  stable x86, bug 273384
 
   12 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   +gramofile-1.6-r1.ebuild, -gramofile-1.6_p3.ebuild,
