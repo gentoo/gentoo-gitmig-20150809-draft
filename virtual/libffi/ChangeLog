@@ -1,6 +1,9 @@
 # ChangeLog for virtual/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.9 2009/06/10 21:37:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/libffi/ChangeLog,v 1.10 2009/06/11 20:08:30 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> libffi-0.ebuild:
+  amd64 stable, bug #272675
 
   10 Jun 2009; Christian Faulhammer <fauli@gentoo.org> libffi-0.ebuild:
   stable x86, bug 272675
