@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/coppermine
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.26 2008/09/07 17:52:15 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/ChangeLog,v 1.27 2009/06/11 18:42:09 a3li Exp $
+
+*coppermine-1.4.24 (11 Jun 2009)
+
+  11 Jun 2009; Alex Legler <a3li@gentoo.org> -coppermine-1.4.19.ebuild,
+  +coppermine-1.4.24.ebuild:
+  Non-Maintainer commit: Version bump to fix security bugs 261180, 258665,
+  268186 and 273758.
 
 *coppermine-1.4.19 (07 Sep 2008)
 

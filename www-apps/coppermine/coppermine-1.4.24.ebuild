@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.19.ebuild,v 1.1 2008/09/07 17:52:15 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/coppermine/coppermine-1.4.24.ebuild,v 1.1 2009/06/11 18:42:09 a3li Exp $
 
 inherit webapp versionator depend.php
 
@@ -15,7 +15,8 @@ IUSE="imagemagick"
 DEPEND="app-arch/unzip"
 RDEPEND="imagemagick? ( media-gfx/imagemagick )"
 
-S="${WORKDIR}"/cpg$(delete_all_version_separators)
+UPSTREAM_VER=$(get_version_component_range 1-2)
+S="${WORKDIR}"/cpg$(delete_version_separator 1 ${UPSTREAM_VER})x
 
 need_httpd_cgi
 need_php_httpd
