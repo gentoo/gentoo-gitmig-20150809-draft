@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/noia
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.26 2006/11/28 00:48:12 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/ChangeLog,v 1.27 2009/06/11 09:42:34 scarabeus Exp $
+
+  11 Jun 2009; Tomas Chvatal <scarabeus@gentoo.org> noia-1.0-r1.ebuild:
+  Update homepage and src_uri per bug #273548.
 
   28 Nov 2006; Diego Pettenò <flameeyes@gentoo.org> noia-1.0-r1.ebuild:
   Call doins with just one parameter.
