@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.1.ebuild,v 1.1 2009/05/12 06:59:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.1.ebuild,v 1.2 2009/06/11 13:49:26 fauli Exp $
 
 NEED_PYTHON=2.4
 inherit eutils gnome2 distutils
@@ -11,7 +11,7 @@ SRC_URI="http://launchpad.net/jokosher/0.11/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="gnome"
 
 # NOTE: setuptools are a runtime requirement as the app
