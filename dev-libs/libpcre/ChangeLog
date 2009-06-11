@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.155 2009/06/09 10:26:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.156 2009/06/11 19:30:47 armin76 Exp $
+
+  11 Jun 2009; Raúl Porcel <armin76@gentoo.org> libpcre-7.9-r1.ebuild:
+  alpha/arm/ia64/m68k/s390/sh stable wrt #272977
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   libpcre-7.9-r1.ebuild:
