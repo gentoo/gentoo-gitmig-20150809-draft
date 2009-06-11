@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libffi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.68 2009/06/10 21:36:32 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.69 2009/06/11 20:07:43 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> libffi-3.0.8.ebuild:
+  amd64 stable, bug #272675
 
   10 Jun 2009; Christian Faulhammer <fauli@gentoo.org> libffi-3.0.8.ebuild:
   stable x86, bug 272675
