@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/vindaloo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/vindaloo/ChangeLog,v 1.14 2009/06/11 14:25:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/vindaloo/ChangeLog,v 1.15 2009/06/11 21:45:54 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> vindaloo-0.4.1.ebuild:
+  amd64 stable, bug #273704
 
   11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   vindaloo-0.4.1.ebuild:
