@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.382 2009/06/10 18:13:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.383 2009/06/11 05:46:41 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> subversion-1.6.2.ebuild:
+  amd64 stable, bug #273304
 
   10 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   subversion-1.6.2.ebuild:
