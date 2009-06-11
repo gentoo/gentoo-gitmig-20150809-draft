@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/doxymacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/ChangeLog,v 1.8 2009/06/11 19:36:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doxymacs/ChangeLog,v 1.9 2009/06/11 19:49:05 ulm Exp $
+
+  11 Jun 2009; Ulrich Mueller <ulm@gentoo.org> -doxymacs-1.8.0-r2.ebuild:
+  Remove old.
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> doxymacs-1.8.0-r3.ebuild:
   amd64 stable, bug #272462
