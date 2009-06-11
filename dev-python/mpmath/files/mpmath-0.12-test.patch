@@ -1,0 +1,15 @@
+diff -r -U2 mpmath-0.12.orig/mpmath/tests/test_linalg.py mpmath-0.12/mpmath/tests/test_linalg.py
+--- mpmath-0.12.orig/mpmath/tests/test_linalg.py	2009-06-09 20:39:06.000000000 +0200
++++ mpmath-0.12/mpmath/tests/test_linalg.py	2009-06-11 17:42:27.000000000 +0200
+@@ -91,4 +91,5 @@
+ 
+ def test_householder():
++    mp.dps = 15
+     A, b = A8, b8
+     H, p, x, r = householder(extend(A, b))
+@@ -143,4 +144,5 @@
+ 
+ def test_singular():
++    mp.dps = 15
+     A = [[5.6, 1.2], [7./15, .1]]
+     B = repr(zeros(2))
