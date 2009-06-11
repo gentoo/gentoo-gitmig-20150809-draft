@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.409 2009/06/10 08:38:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.410 2009/06/11 14:47:47 klausman Exp $
+
+  11 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  ruby-1.8.6_p369.ebuild:
+  Stable on alpha, bug #273213
 
   10 Jun 2009; Jeroen Roovers <jer@gentoo.org> ruby-1.8.6_p369.ebuild:
   Stable for HPPA (bug #273213).
