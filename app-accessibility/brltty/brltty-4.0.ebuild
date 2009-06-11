@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.0.ebuild,v 1.1 2009/05/18 13:35:03 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-4.0.ebuild,v 1.2 2009/06/11 11:35:31 williamh Exp $
 
 EAPI="2"
 FINDLIB_USE="ocaml"
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="bluetooth doc gpm iconv icu java nls ocaml python usb tcl X"
 
-COMMON_DEP="bluetooth? ( net-wireless/bluez-libs )
+COMMON_DEP="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
 	gpm? ( >=sys-libs/gpm-1.20 )
 	iconv? ( virtual/libiconv )
 	icu? ( dev-libs/icu )
