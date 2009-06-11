@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/flamerobin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.15 2009/04/08 22:37:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/flamerobin/ChangeLog,v 1.16 2009/06/11 08:43:32 ali_bush Exp $
+
+*flamerobin-0.9.2 (11 Jun 2009)
+
+  11 Jun 2009; Alistair Bush <ali_bush@gentoo.org> +flamerobin-0.9.2.ebuild:
+  Version bump on behalf of wtljr.
 
   08 Apr 2009; Christian Faulhammer <fauli@gentoo.org>
   flamerobin-0.8.3.ebuild, flamerobin-0.8.6.ebuild:
