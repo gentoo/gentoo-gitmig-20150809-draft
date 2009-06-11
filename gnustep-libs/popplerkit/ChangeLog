@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-libs/popplerkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.19 2009/03/30 13:53:43 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/popplerkit/ChangeLog,v 1.20 2009/06/11 14:23:01 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  popplerkit-0.4.1.ebuild:
+  stable x86, bug 273704
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org> popplerkit-0.2.ebuild,
   popplerkit-0.4.0-r1.ebuild, popplerkit-0.4.1.ebuild:
