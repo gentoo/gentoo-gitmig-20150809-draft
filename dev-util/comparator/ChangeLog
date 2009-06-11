@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/comparator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.13 2009/06/09 20:25:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/ChangeLog,v 1.14 2009/06/11 14:07:15 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  comparator-2.5.ebuild:
+  stable x86, bug 273417
 
   09 Jun 2009; Ferris McCormick <fmccor@gentoo.org> comparator-2.5.ebuild:
   Sparc stable, Bug #273417.
