@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/denemo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.27 2009/05/05 20:48:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/ChangeLog,v 1.28 2009/06/11 13:50:23 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> denemo-0.8.2.ebuild:
+  stable x86, bug 272863
 
 *denemo-0.8.2 (05 May 2009)
 

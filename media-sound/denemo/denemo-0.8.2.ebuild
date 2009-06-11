@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.2.ebuild,v 1.1 2009/05/05 20:48:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/denemo/denemo-0.8.2.ebuild,v 1.2 2009/06/11 13:50:23 fauli Exp $
 
 EAPI=2
 inherit autotools
@@ -11,7 +11,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="jack nls"
 
 RDEPEND=">=x11-libs/gtk+-2:2
