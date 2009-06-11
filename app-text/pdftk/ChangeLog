@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdftk
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.27 2008/12/26 21:44:37 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.28 2009/06/11 03:47:09 serkan Exp $
+
+  11 Jun 2009; Serkan Kaba <serkan@gentoo.org> pdftk-1.41-r1.ebuild:
+  Fix lines that should have been commented. Fixes bug #273624 reported by
+  Pacho Ramos <pacho@condmat1.ciencias.uniovi.es>
 
 *pdftk-1.41-r1 (26 Dec 2008)
 
