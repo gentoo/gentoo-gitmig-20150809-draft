@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.605 2009/06/06 08:12:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.606 2009/06/11 12:14:39 scarabeus Exp $
+
+*kdelibs-4.2.4-r1 (11 Jun 2009)
+
+  11 Jun 2009; Tomas Chvatal <scarabeus@gentoo.org>
+  +files/4.2.4-fixPopupForPlasmaboard.patch, -kdelibs-4.2.4.ebuild,
+  +kdelibs-4.2.4-r1.ebuild:
+  Apply upstream patch for plasmaboard. Requested by mail.
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kdelibs-3.5.10-r6.ebuild:
   amd64/x86 stable, bug #271889
