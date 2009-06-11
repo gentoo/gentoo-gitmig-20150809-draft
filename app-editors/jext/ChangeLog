@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/jext
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.17 2009/01/10 13:20:37 ali_bush Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.18 2009/06/11 22:32:43 caster Exp $
+
+*jext-5.0 (11 Jun 2009)
+
+  11 Jun 2009; Vlastimil Babka <caster@gentoo.org> +jext-5.0.ebuild,
+  +files/jext-pre:
+  Version bump, adpated from java-experimental.
 
   10 Jan 2009; Alistair Bush <ali_bush@gentoo.org> jext-3.2_pre3-r1.ebuild:
   Fixed incorrect LICENSE. see #252951
