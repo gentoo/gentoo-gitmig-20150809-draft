@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.54.0.ebuild,v 1.2 2009/06/08 18:45:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/emact-2.54.0.ebuild,v 1.3 2009/06/11 20:25:09 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.eligis.com/emacs/${P}.tar.gz"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="X"
 
 DEPEND="sys-libs/ncurses

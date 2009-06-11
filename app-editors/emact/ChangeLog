@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emact
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.16 2009/06/08 18:45:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.17 2009/06/11 20:25:09 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> emact-2.54.0.ebuild:
+  amd64 stable, bug #272990
 
   08 Jun 2009; Christian Faulhammer <fauli@gentoo.org> emact-2.54.0.ebuild:
   stable x86, bug 272990
