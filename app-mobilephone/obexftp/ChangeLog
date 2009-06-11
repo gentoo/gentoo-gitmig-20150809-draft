@@ -1,6 +1,15 @@
 # ChangeLog for app-mobilephone/obexftp
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.49 2009/05/02 08:12:42 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.50 2009/06/11 16:06:30 flameeyes Exp $
+
+*obexftp-0.23-r1 (11 Jun 2009)
+
+  11 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> obexftp-0.23.ebuild,
+  +obexftp-0.23-r1.ebuild, +files/obexftp-0.23-fixruby.patch,
+  files/obexftp-0.23-gentoo.patch:
+  Split the broken part of the -gentoo patch out so that 0.23 is still
+  source-identical; add a 0.23-r1 that fixes the Ruby bindings to actually
+  do something useful, as per bug #273736.
 
   02 May 2009; Alin Năstac <mrness@gentoo.org> obexftp-0.22.ebuild,
   obexftp-0.23.ebuild:
