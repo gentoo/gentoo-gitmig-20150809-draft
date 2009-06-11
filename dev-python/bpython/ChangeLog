@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.4 2009/06/09 11:45:49 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.5 2009/06/11 20:39:00 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> bpython-0.9.2.ebuild:
+  amd64 stable, bug #273015
 
   09 Jun 2009; Andrey Grozin <grozin@gentoo.org> bpython-0.9.2.ebuild:
   Dependency fix (bug #273215)
