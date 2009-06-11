@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.37.ebuild,v 1.1 2009/05/31 23:12:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.37.ebuild,v 1.2 2009/06/11 18:09:38 klausman Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.five-ten-sg.com/${PN}/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="media-libs/gd[png]
