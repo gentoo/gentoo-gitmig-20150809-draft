@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/wmii
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.27 2008/04/24 08:07:50 omp Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/ChangeLog,v 1.28 2009/06/11 10:15:09 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> wmii-3.6-r1.ebuild,
+  wmii-3.6-r2.ebuild, +files/wmii-3.6-64bit-safe.patch:
+  fix abort on 64bit architectures (bug 231299 by Alex 'wired' Alexander
+  <alex DOT alexander AT gmail DOT com>); correct HOMEPAGE and add
+  media-fonts/font-misc-misc as dependency (forums by superwutze)
 
 *wmii-3.6-r2 (24 Apr 2008)
 

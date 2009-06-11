@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6-r1.ebuild,v 1.1 2007/11/19 05:40:17 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6-r1.ebuild,v 1.2 2009/06/11 10:15:09 fauli Exp $
 
 inherit multilib toolchain-funcs
 
 DESCRIPTION="A dynamic window manager for X11"
-HOMEPAGE="http://www.suckless.org/wiki/wmii"
+HOMEPAGE="http://wmii.suckless.org/"
 SRC_URI="http://www.suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"

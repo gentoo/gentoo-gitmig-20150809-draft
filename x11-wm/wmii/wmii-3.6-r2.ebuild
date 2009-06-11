@@ -1,11 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6-r2.ebuild,v 1.1 2008/04/24 08:07:50 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-3.6-r2.ebuild,v 1.2 2009/06/11 10:15:09 fauli Exp $
 
-inherit multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="A dynamic window manager for X11"
-HOMEPAGE="http://www.suckless.org/wiki/wmii"
+HOMEPAGE="http://wmii.suckless.org/"
 SRC_URI="http://www.suckless.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
@@ -18,7 +18,8 @@ DEPEND=">=sys-libs/libixp-0.4
 RDEPEND="${DEPEND}
 	x11-apps/xmessage
 	x11-apps/xsetroot
-	x11-misc/dmenu"
+	x11-misc/dmenu
+	media-fonts/font-misc-misc"
 
 src_unpack() {
 	unpack ${A}
@@ -32,6 +33,9 @@ src_unpack() {
 		-e "/^ETC/s|=.*|= ${D}/etc|" \
 		-e "/^LIBDIR/s|=.*|= /usr/$(get_libdir)|" \
 		config.mk || die "sed failed"
+
+	# bug 231299
+	epatch "${FILESDIR}"/${P}-64bit-safe.patch
 }
 
 src_compile() {
