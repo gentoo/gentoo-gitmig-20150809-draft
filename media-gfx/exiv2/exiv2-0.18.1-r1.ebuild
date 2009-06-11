@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.18.1-r1.ebuild,v 1.1 2009/06/11 12:43:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/exiv2/exiv2-0.18.1-r1.ebuild,v 1.2 2009/06/11 20:36:16 sbriesen Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="contrib doc examples nls unicode xmp zlib"
 IUSE_LINGUAS="de es fi fr pl ru sk"
-for LNG in ${IUSE_LINGUAS}; do
-	IUSE="${IUSE} linguas_${LNG}"
-done
+IUSE="${IUSE} $(printf 'linguas_%s ' ${IUSE_LINGUAS})"
 
 RDEPEND="
 	virtual/libiconv
