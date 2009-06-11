@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.60 2009/06/11 17:31:49 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.61 2009/06/11 19:38:42 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> socat-1.7.1.1.ebuild:
+  amd64 stable, bug #270855
 
   11 Jun 2009; Tobias Klausmann <klausman@gentoo.org> socat-1.7.1.0.ebuild:
   Stable on alpha, bug #270855
