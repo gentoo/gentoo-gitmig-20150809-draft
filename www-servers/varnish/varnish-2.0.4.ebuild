@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4.ebuild,v 1.1 2009/04/13 09:54:47 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4.ebuild,v 1.2 2009/06/11 09:50:42 hollow Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ RDEPEND="sys-devel/gcc"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-link-order.patch
+	epatch "${FILESDIR}"/${P}-virtual-ncsa.patch
 	eautoreconf
 }
 
