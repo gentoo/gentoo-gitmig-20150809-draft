@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r1.ebuild,v 1.2 2009/05/26 15:27:05 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r1.ebuild,v 1.3 2009/06/11 21:35:57 klausman Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.lzma"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE="+doc ofx hbci chipcard debug quotes"
 
