@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/db4o-jdk12/db4o-jdk12-7.4.ebuild,v 1.1 2009/02/01 20:44:40 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/db4o-jdk12/db4o-jdk12-7.4.ebuild,v 1.2 2009/06/11 13:52:58 fauli Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE=""
 
