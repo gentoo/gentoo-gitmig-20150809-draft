@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kpackage
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.57 2008/10/02 09:40:33 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.58 2009/06/11 15:11:40 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  kpackage-3.5.10.ebuild:
+  stable x86/amd64, bug 271889
 
   02 Oct 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   ChangeLog:

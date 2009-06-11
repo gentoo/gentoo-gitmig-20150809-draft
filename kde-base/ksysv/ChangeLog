@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksysv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.56 2008/09/13 23:59:56 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysv/ChangeLog,v 1.57 2009/06/11 15:13:07 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> ksysv-3.5.10.ebuild:
+  stable x86/amd64, bug 271889
 
 *ksysv-3.5.10 (13 Sep 2008)
 

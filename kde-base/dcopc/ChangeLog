@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.30 2009/01/27 23:38:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopc/ChangeLog,v 1.31 2009/06/11 15:05:11 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> dcopc-3.5.10.ebuild:
+  stable x86/amd64, bug 271889
 
   27 Jan 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   dcopc-3.5.9.ebuild, dcopc-3.5.10.ebuild:

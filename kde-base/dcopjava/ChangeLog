@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.35 2009/02/04 01:46:35 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.36 2009/06/11 15:07:26 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  dcopjava-3.5.10.ebuild:
+  stable x86/amd64, bug 271889
 
   04 Feb 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   dcopjava-3.5.9.ebuild, dcopjava-3.5.10.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/qtruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.79 2009/05/13 03:19:46 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qtruby/ChangeLog,v 1.80 2009/06/11 15:03:45 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> qtruby-3.5.10.ebuild:
+  stable x86/amd64, bug 271889
 
   13 May 2009; Ryan Hill <dirtyepic@gentoo.org> qtruby-3.5.10.ebuild,
   +files/qtruby-3.5.10-gcc44.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.10.ebuild,v 1.3 2009/05/27 22:00:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/korundum-3.5.10.ebuild,v 1.4 2009/06/11 15:14:27 fauli Exp $
 
 KMNAME=kdebindings
 KMCOPYLIB="libsmokeqt smoke/qt libsmokekde smoke/kde"
@@ -11,7 +11,7 @@ inherit kde-meta
 
 DESCRIPTION="KDE ruby bindings"
 HOMEPAGE="http://techbase.kde.org/Development/Languages/Ruby"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 # NOTE: qtruby isn't slotted
