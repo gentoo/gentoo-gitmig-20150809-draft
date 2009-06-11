@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/iconkit/iconkit-0.4.1.ebuild,v 1.2 2009/06/11 14:24:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/iconkit/iconkit-0.4.1.ebuild,v 1.3 2009/06/11 21:44:31 maekke Exp $
 
 inherit gnustep-2
 
@@ -10,7 +10,7 @@ DESCRIPTION="framework used to create icons using different elements"
 HOMEPAGE="http://www.etoile-project.org"
 SRC_URI="http://download.gna.org/etoile/etoile-${PV}.tar.bz2"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 IUSE=""
 
