@@ -1,0 +1,35 @@
+--- Makefile
++++ Makefile
+@@ -2,8 +2,11 @@
+ PROGRAM = picpuz
+ VERSION = 1.9.2
+ SOURCE = $(PROGRAM)-$(VERSION).cpp
+-CFLAGS = -O -Wall -c `pkg-config --cflags gtk+-2.0`
+-LFLAGS = -O -Wall -rdynamic `pkg-config --libs gtk+-2.0 gthread-2.0`
++CXX ?= @g++
++CXXFLAGS ?= -O
++CXXFLAGS += -Wall -DDATADIR=\"$(DATADIR)\" -DDOCDIR=\"$(DOCDIR)\" `pkg-config --cflags gtk+-2.0`
++LIBS = `pkg-config --libs gtk+-2.0 gthread-2.0`
++LDFLAGS += -rdynamic
+ LAUNCHER = $(HOME)/Desktop/kornelix-$(PROGRAM).desktop
+ LOWNER = `stat --format="%u:%g" $(HOME)/Desktop`
+ 
+@@ -19,15 +22,13 @@
+ 
+ 
+ $(PROGRAM): $(PROGRAM).o zfuncs.o
+-	@g++ $(LFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o
++	$(CXX) $(CXXFLAGS) $(LDFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o $(LIBS)
+ 
+ $(PROGRAM).o: $(SOURCE) zfuncs.h
+-	@g++ $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
+-	-D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\""
++	$(CXX) $(CXXFLAGS) -o $(PROGRAM).o -c $(SOURCE)
+ 
+ zfuncs.o: zfuncs.cpp zfuncs.h
+-	@g++ $(CFLAGS) zfuncs.cpp	\
+-	-D "DATADIR=\"$(DATADIR)\"" -D "DOCDIR=\"$(DOCDIR)\""
++	$(CXX) $(CXXFLAGS) -c zfuncs.cpp
+ 
+ 
+ install: $(PROGRAM)
