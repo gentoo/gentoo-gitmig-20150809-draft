@@ -3,7 +3,7 @@
 @@ -1,5 +1,4 @@
 -CFLAGS=-Os -Wall -I /usr/include/lua5.1
 -LDFLAGS=-llua5.1 -lpthread
-+LDFLAGS=-llua -lpthread
++LDFLAGS=-llua -lpthread -ldl
  SOURCES=qcontrol.c ts209.c ts409.c evdev.c
  OBJECTS=$(SOURCES:.c=.o)
  EXECUTABLE=qcontrol
