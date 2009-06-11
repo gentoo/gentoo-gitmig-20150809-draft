@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/iscsitarget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.24 2009/06/10 15:30:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/iscsitarget/ChangeLog,v 1.25 2009/06/11 14:09:25 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  iscsitarget-0.4.17.ebuild:
+  stable x86, bug 273582
 
   10 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   iscsitarget-0.4.17.ebuild, +files/iscsitarget-0.4.17+linux-2.6.30.patch:
