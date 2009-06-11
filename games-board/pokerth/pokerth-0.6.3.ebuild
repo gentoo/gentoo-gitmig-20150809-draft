@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.6.3.ebuild,v 1.5 2009/06/09 21:23:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.6.3.ebuild,v 1.6 2009/06/11 17:16:45 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt4 games
@@ -17,6 +17,7 @@ IUSE="dedicated"
 
 DEPEND="
 	|| ( >=dev-libs/boost-1.35.0-r5:0
+		~dev-libs/boost-1.35.0
 		~dev-libs/boost-1.34.1
 		~dev-libs/boost-1.33.1 )
 	>=net-libs/gnutls-2.2.2
