@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.2.0.ebuild,v 1.2 2009/06/10 21:46:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.2.0.ebuild,v 1.3 2009/06/11 21:29:42 maekke Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="GNUstep Makefile Package"
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="native-exceptions"
 SLOT="0"
 LICENSE="GPL-2"

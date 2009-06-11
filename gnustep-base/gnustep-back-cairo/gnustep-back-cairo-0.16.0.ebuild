@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.16.0.ebuild,v 1.2 2009/06/10 21:51:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-cairo/gnustep-back-cairo-0.16.0.ebuild,v 1.3 2009/06/11 21:33:00 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ DESCRIPTION="Cairo back-end component for the GNUstep GUI Library."
 
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/gnustep-back-${PV}.tar.gz"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
