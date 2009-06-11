@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/guile-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.9 2009/06/10 21:40:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/ChangeLog,v 1.10 2009/06/11 20:09:13 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> guile-lib-0.1.3.ebuild:
+  amd64 stable, bug #272675
 
   10 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   guile-lib-0.1.3.ebuild:
