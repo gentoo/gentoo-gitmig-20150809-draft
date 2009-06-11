@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/libkipi-4.2.4.ebuild,v 1.1 2009/06/04 13:39:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkipi/libkipi-4.2.4-r1.ebuild,v 1.1 2009/06/11 09:25:31 scarabeus Exp $
 
 EAPI="2"
 
@@ -15,7 +15,3 @@ HOMEPAGE="http://www.kipi-plugins.org"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
-
-RDEPEND="
-	!kdeprefix? ( !<=media-libs/libkipi-0.1.6 )
-"
