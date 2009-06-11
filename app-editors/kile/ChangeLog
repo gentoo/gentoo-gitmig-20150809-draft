@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.116 2009/06/06 16:34:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.117 2009/06/11 17:10:43 jer Exp $
+
+  11 Jun 2009; Jeroen Roovers <jer@gentoo.org> kile-2.0.3-r1.ebuild:
+  Stable for HPPA (bug #250349).
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> kile-2.0.3-r1.ebuild:
   ppc stable #250349
