@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.53 2009/05/31 16:23:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.54 2009/06/11 19:28:28 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> Graph-0.91.ebuild:
+  amd64 stable, bug #270589
 
   31 May 2009; Raúl Porcel <armin76@gentoo.org> Graph-0.91.ebuild:
   alpha/ia64/sparc stable wrt #270589
