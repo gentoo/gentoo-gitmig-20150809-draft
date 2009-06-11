@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/imp3sh
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.13 2009/05/08 18:55:50 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/ChangeLog,v 1.14 2009/06/11 13:48:23 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org> imp3sh-0.2.4.ebuild:
+  stable x86, bug 272815
 
   08 May 2009; Thomas Anderson <gentoofan23@gentoo.org> imp3sh-0.2.4.ebuild:
   QA fixes: quote $S and no need for die after econf

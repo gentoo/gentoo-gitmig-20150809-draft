@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.4.ebuild,v 1.3 2009/06/05 18:25:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/imp3sh/imp3sh-0.2.4.ebuild,v 1.4 2009/06/11 13:48:23 fauli Exp $
 
 inherit gnuconfig toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.geocities.com/kman_can/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses
