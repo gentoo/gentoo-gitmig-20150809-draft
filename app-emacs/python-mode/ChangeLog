@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.41 2009/06/09 14:42:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.42 2009/06/11 19:46:14 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> python-mode-5.1.0.ebuild:
+  amd64 stable, bug #272474
 
   09 Jun 2009; Raúl Porcel <armin76@gentoo.org> python-mode-5.1.0.ebuild:
   arm/ia64/s390/sh stable wrt #272474

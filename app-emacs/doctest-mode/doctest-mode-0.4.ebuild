@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doctest-mode/doctest-mode-0.4.ebuild,v 1.5 2009/06/09 14:46:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doctest-mode/doctest-mode-0.4.ebuild,v 1.6 2009/06/11 19:46:59 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://python-mode.svn.sourceforge.net/viewvc/*checkout*/python-mode/tr
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 arm ~hppa ia64 ppc ~ppc64 s390 sh x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ~hppa ia64 ppc ~ppc64 s390 sh x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="!<app-emacs/python-mode-5.1.0"

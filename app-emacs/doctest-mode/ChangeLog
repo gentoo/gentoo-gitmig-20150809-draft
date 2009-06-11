@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/doctest-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/doctest-mode/ChangeLog,v 1.5 2009/06/09 14:46:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/doctest-mode/ChangeLog,v 1.6 2009/06/11 19:46:59 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> doctest-mode-0.4.ebuild:
+  amd64 stable, bug #272474
 
   09 Jun 2009; Raúl Porcel <armin76@gentoo.org> doctest-mode-0.4.ebuild:
   arm/ia64/s390/sh stable wrt #272474
