@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl-run
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.18 2009/06/02 18:24:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/ChangeLog,v 1.19 2009/06/11 19:33:30 maekke Exp $
+
+  11 Jun 2009; Markus Meier <maekke@gentoo.org> bioperl-run-1.6.1.ebuild:
+  amd64 stable, bug #270582
 
   02 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   bioperl-run-1.6.1.ebuild:
