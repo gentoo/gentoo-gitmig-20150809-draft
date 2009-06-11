@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.50 2009/06/11 16:06:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.51 2009/06/11 16:12:16 flameeyes Exp $
+
+  11 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  obexftp-0.23-r1.ebuild:
+  Add missing eautomake call.
 
 *obexftp-0.23-r1 (11 Jun 2009)
 

@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.1 2009/06/11 16:06:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.2 2009/06/11 16:12:16 flameeyes Exp $
 
 EAPI="2"
 
-inherit eutils perl-module flag-o-matic python
+WANT_AUTOMAKE=1.9
+
+inherit eutils perl-module flag-o-matic python autotools
 
 DESCRIPTION="File transfer over OBEX for mobile phones"
 HOMEPAGE="http://dev.zuckschwerdt.org/openobex/wiki/ObexFtp"
@@ -27,6 +29,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-fixruby.patch
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+
+	eautomake
 }
 
 src_configure() {
