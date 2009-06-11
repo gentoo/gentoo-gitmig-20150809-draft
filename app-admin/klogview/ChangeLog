@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/klogview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.9 2009/06/09 12:26:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.10 2009/06/11 14:04:34 fauli Exp $
+
+  11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  klogview-0.6-r1.ebuild:
+  stable x86, bug 273350
 
 *klogview-0.6-r1 (09 Jun 2009)
 
