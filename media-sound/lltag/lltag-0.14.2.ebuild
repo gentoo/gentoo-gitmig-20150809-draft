@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.14.2.ebuild,v 1.3 2009/06/05 16:28:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lltag/lltag-0.14.2.ebuild,v 1.4 2009/06/11 13:42:11 fauli Exp $
 
 inherit eutils perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.gna.org/lltag/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="mp3 ogg flac readline"
 
 RDEPEND="dev-lang/perl
