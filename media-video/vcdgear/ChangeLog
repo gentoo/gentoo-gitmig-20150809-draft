@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vcdgear
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.16 2007/11/27 11:36:42 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/ChangeLog,v 1.17 2009/06/12 14:21:07 flameeyes Exp $
+
+  12 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  vcdgear-1.76-r2.ebuild:
+  Avoid reporting pre-stripped file, prebuilt binary.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org> vcdgear-1.6e.ebuild:
   Fixed quoting.
