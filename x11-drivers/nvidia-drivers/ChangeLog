@@ -1,6 +1,19 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.147 2009/06/12 19:40:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.148 2009/06/12 19:48:07 cardoe Exp $
+
+  12 Jun 2009; Doug Goldstein <cardoe@gentoo.org>
+  -files/nvidia-2.6.28.patch, -nvidia-drivers-71.86.06.ebuild,
+  -nvidia-drivers-71.86.08.ebuild, -nvidia-drivers-96.43.07.ebuild,
+  -nvidia-drivers-96.43.10.ebuild, -nvidia-drivers-100.14.19.ebuild,
+  -files/nvidia-169.07, -nvidia-drivers-173.14.09.ebuild,
+  -nvidia-drivers-173.14.12.ebuild, -nvidia-drivers-173.14.16.ebuild,
+  -nvidia-drivers-173.14.17.ebuild, -nvidia-drivers-177.80.ebuild,
+  -nvidia-drivers-177.82.ebuild, -nvidia-drivers-180.22.ebuild,
+  -nvidia-drivers-180.27.ebuild, -nvidia-drivers-180.37.ebuild,
+  -nvidia-drivers-180.41.ebuild, -nvidia-drivers-180.44.ebuild,
+  -nvidia-drivers-180.51.ebuild, -files/NVIDIA_glx-makefile.patch:
+  cull old versions
 
   12 Jun 2009; Doug Goldstein <cardoe@gentoo.org>
   nvidia-drivers-180.22.ebuild, nvidia-drivers-180.27.ebuild,
