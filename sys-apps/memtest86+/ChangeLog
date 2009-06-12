@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.50 2009/05/05 20:16:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.51 2009/06/12 14:28:51 flameeyes Exp $
+
+  12 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  memtest86+-2.11.ebuild:
+  Avoid reporting pre-stripped file, non-system binary.
 
   05 May 2009; Michał Januszewski <spock@gentoo.org>
   memtest86+-2.11.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-2.11.ebuild,v 1.5 2009/05/05 20:16:29 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-2.11.ebuild,v 1.6 2009/06/12 14:28:51 flameeyes Exp $
+
+QA_PRESTRIPPED=/boot/memtest86plus/memtest
 
 inherit mount-boot eutils
 
