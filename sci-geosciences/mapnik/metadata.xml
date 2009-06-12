@@ -10,4 +10,7 @@
     mapping applications.  The core libraries are written in C++, with
     optional Python bindings.
 </longdescription>
+<use>
+  <flag name='gdal'>Enable <pkg>sci-libs/gdal</pkg> library support</flag>
+</use>
 </pkgmetadata>
