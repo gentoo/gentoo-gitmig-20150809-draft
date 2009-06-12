@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/cpudyn-1.0.1.ebuild,v 1.7 2008/01/26 01:13:52 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/cpudyn/cpudyn-1.0.1.ebuild,v 1.8 2009/06/12 14:05:52 flameeyes Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake cpudynd || die "Compilation failed."
+	emake LDFLAGS="${LDFLAGS}" cpudynd || die "Compilation failed."
 }
 
 src_install() {
