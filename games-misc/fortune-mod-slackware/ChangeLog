@@ -1,6 +1,11 @@
 # ChangeLog for games-misc/fortune-mod-slackware
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.11 2008/08/04 15:45:00 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-slackware/ChangeLog,v 1.12 2009/06/12 21:53:34 mr_bones_ Exp $
+
+  12 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-slackware-1.15.ebuild:
+  use die to bail out instead of exit which produces confusing error messages
+  (bug #273800)
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org>
   fortune-mod-slackware-1.15.ebuild:
