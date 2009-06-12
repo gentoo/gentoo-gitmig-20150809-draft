@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.200 2009/06/12 11:45:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.201 2009/06/12 23:53:05 gengor Exp $
+
+  12 Jun 2009; Gordon Malm <gengor@gentoo.org> kopete-3.5.10-r4.ebuild:
+  Add back netmeeting USE flag, really fix bug #272678
 
   12 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kopete-3.5.10-r4.ebuild:
