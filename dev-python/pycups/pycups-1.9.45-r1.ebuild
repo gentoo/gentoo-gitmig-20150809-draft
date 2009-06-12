@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.45-r1.ebuild,v 1.1 2009/06/12 14:06:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.45-r1.ebuild,v 1.2 2009/06/12 14:07:43 scarabeus Exp $
 
 NEED_PYTHON="2.4"
 inherit distutils flag-o-matic
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	append-cflags -DVERSION=\\\"${PV}\\\"
-	distutils_src_compile 
+	distutils_src_compile
 
 	if use doc; then
 		emake doc || die "emake doc failed"
