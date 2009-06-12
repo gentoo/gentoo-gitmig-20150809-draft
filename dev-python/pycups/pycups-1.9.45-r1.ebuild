@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.45.ebuild,v 1.1 2009/04/05 18:37:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.45-r1.ebuild,v 1.1 2009/06/12 14:06:09 scarabeus Exp $
 
 NEED_PYTHON="2.4"
-inherit python
+inherit distutils flag-o-matic
 
 DESCRIPTION="Python bindings for the CUPS API"
 HOMEPAGE="http://cyberelk.net/tim/data/pycups/"
@@ -22,8 +22,8 @@ DEPEND="${RDEPEND}
 "
 
 src_compile() {
-	python_version
-	emake PYTHONVERS="python${PYVER}" || die "emake failed"
+	append-cflags -DVERSION=\\\"${PV}\\\"
+	distutils_src_compile 
 
 	if use doc; then
 		emake doc || die "emake doc failed"
@@ -31,7 +31,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc NEWS README TODO || die "dodoc failed"
+	distutils_src_install
 
 	if use doc; then
 		dohtml -r html/ || die "installing html docs failed"
@@ -42,5 +42,4 @@ src_install() {
 		doins -r examples/ || die "installing examples failed"
 	fi
 
-	emake DESTDIR="${D}" install || die "emake install failed"
 }
