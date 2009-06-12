@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090413.ebuild,v 1.2 2009/05/11 14:44:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.1.0.20090612.ebuild,v 1.1 2009/06/12 13:28:13 matsuu Exp $
 
 EAPI="1"
 inherit autotools eutils multilib python
@@ -50,7 +50,7 @@ src_unpack() {
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
 	sed -i -e '/QMAKE/s/$/ "CONFIG+=nostrip"/' client/qt4/Makefile.am || die
-	eautoreconf
+	eautomake
 }
 
 src_compile() {
