@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.7 2009/06/06 16:20:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/kopete-3.5.10-r4.ebuild,v 1.8 2009/06/12 11:45:33 tampakrap Exp $
 
 KMNAME=kdenetwork
 EAPI="1"
@@ -12,7 +12,7 @@ HOMEPAGE="http://kopete.kde.org/"
 KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 
 IUSE="emoticons-manager jingle ssl xscreensaver slp kernel_linux kdehiddenvisibility"
-PLUGINS="addbookmarks alias autoreplace connectionstatus contactnotes crypt highlight history latex netmeeting nowlistening
+PLUGINS="addbookmarks alias autoreplace connectionstatus contactnotes crypt highlight history latex nowlistening
 	statistics texteffect translator webpresence"
 PROTOCOLS="gadu groupwise irc jabber oscar msn sametime sms v4l2 winpopup yahoo"
 IUSE="${IUSE} ${PLUGINS} ${PROTOCOLS}"
@@ -107,7 +107,6 @@ src_unpack() {
 	use highlight || kopete_disable plugin highlight
 	use history || kopete_disable plugin history
 	use latex || kopete_disable plugin latex
-	use netmeeting || kopete_disable plugin netmeeting
 	use nowlistening || kopete_disable plugin nowlistening
 	use statistics || kopete_disable plugin statistics
 	use texteffect || kopete_disable plugin texteffect
