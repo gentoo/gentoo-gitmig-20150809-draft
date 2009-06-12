@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.148 2009/06/12 19:48:07 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.149 2009/06/12 19:53:35 cardoe Exp $
+
+  12 Jun 2009; Doug Goldstein <cardoe@gentoo.org>
+  -files/NVIDIA_i2c-hwmon.patch, nvidia-drivers-96.43.09.ebuild,
+  nvidia-drivers-96.43.11.ebuild, nvidia-drivers-173.14.15.ebuild,
+  nvidia-drivers-173.14.18.ebuild, nvidia-drivers-180.29.ebuild,
+  nvidia-drivers-180.60.ebuild:
+  remove NVIDIA_i2c-hwmon.patch as requested by NVIDIA as this isn't safe
+  with certain NVIDIA skus.
 
   12 Jun 2009; Doug Goldstein <cardoe@gentoo.org>
   -files/nvidia-2.6.28.patch, -nvidia-drivers-71.86.06.ebuild,
