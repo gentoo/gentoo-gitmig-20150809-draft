@@ -1,13 +1,13 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.5 2005/09/26 18:19:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/bf1942-lnxded/bf1942-lnxded-1.61.ebuild,v 1.6 2009/06/12 16:35:02 nyhm Exp $
 
 inherit eutils games
 
 DESCRIPTION="dedicated server for Battlefield 1942"
 HOMEPAGE="http://www.eagames.com/official/battlefield/1942/us/editorial/serveradminfaq.jsp"
-SRC_URI="mirror://3dgamers/battlefield1942/${PN/-/_}-1.6-rc2.run
-	mirror://3dgamers/battlefield1942/bf1942-update-${PV}.tar.gz"
+SRC_URI="http://bf1942.lightcubed.com/dist/${PN/-/_}-1.6-rc2.run
+	ftp://largedownloads.ea.com/pub/misc/bf1942-update-${PV}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
