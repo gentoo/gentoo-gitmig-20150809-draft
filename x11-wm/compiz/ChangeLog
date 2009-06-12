@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.42 2009/04/26 13:59:27 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.43 2009/06/12 03:09:39 jmbsvicetto Exp $
+
+*compiz-0.8.2-r2 (12 Jun 2009)
+
+  12 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compiz-0.8.2-r2.ebuild:
+  Dropped the "bogus" glitz dep. Fixes bug 272968 - thanks to Christophe
+  Saout <christophe@saout.de>.
 
   26 Apr 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   compiz-0.8.2-r1:
