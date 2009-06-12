@@ -1,6 +1,9 @@
 # ChangeLog for media-video/griffith
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.31 2009/06/11 13:57:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/ChangeLog,v 1.32 2009/06/12 22:57:57 hwoarang Exp $
+
+  12 Jun 2009; Markos Chandras <hwoarang@gentoo.org> -griffith-9999.ebuild:
+  Remove live ebuild. Moved to my dev overlay
 
   11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   griffith-0.9.9.ebuild:
