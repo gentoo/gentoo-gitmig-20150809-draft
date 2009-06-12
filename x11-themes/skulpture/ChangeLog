@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/skulpture
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/skulpture/ChangeLog,v 1.1 2009/06/12 11:42:12 scarabeus Exp $
+
+*skulpture-0.2.3 (12 Jun 2009)
+
+  12 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +skulpture-0.2.3.ebuild, +metadata.xml:
+  Initial commit. Moved from kde-testing. Per bug #273850.
+
