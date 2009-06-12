@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtkimageview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.3 2009/06/07 18:08:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.4 2009/06/12 19:31:54 maekke Exp $
+
+  12 Jun 2009; Markus Meier <maekke@gentoo.org> gtkimageview-1.6.4.ebuild:
+  do not use -Werror during build wrt bug #272301
+  use gnome eclass and add USE=doc wrt bug #272303
+  add USE=examples and update mirror wrt bug #272620
 
   07 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   gtkimageview-1.6.4.ebuild:

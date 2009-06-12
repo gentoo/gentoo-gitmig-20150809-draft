@@ -1,24 +1,38 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.4 2009/06/07 18:08:03 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.5 2009/06/12 19:31:54 maekke Exp $
 
 EAPI="2"
 
+inherit autotools gnome2
+
 DESCRIPTION="GtkImageView is a simple image viewer widget for GTK."
 HOMEPAGE="http://trac.bjourne.webfactional.com/wiki"
-SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar.gz?format=raw
--> ${P}.tar.gz"
+SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~x86"
-IUSE=""
+IUSE="doc examples"
 # tests do not work with userpriv
 RESTRICT="userpriv"
 
-DEPEND="gnome-base/gnome-common
+RDEPEND="gnome-base/gnome-common
 	>=x11-libs/gtk+-2.6"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}
+	doc? ( >=dev-util/gtk-doc-1.8 )"
+
+pkg_setup() {
+	DOCS="README"
+	# apparently docs are always built...
+	use doc || export GTKDOC_REBASE=/bin/true
+}
+
+src_prepare() {
+	sed -i -e '/CFLAGS/s/-Werror //g' configure.in || die
+	gnome2_src_prepare
+	eautoreconf
+}
 
 src_test() {
 	# the tests are only built, but not run by default
@@ -34,6 +48,9 @@ src_test() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc README || die
+	gnome2_src_install
+	if use examples ; then
+		docinto examples
+		dodoc tests/ex-*.c || die
+	fi
 }
