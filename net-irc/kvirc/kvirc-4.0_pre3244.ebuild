@@ -1,20 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.20 2009/06/12 14:25:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3244.ebuild,v 1.1 2009/06/12 14:25:50 arfrever Exp $
 
 EAPI="2"
 
-inherit cmake-utils multilib subversion
+inherit cmake-utils multilib
 
 DESCRIPTION="Advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
-SRC_URI=""
-ESVN_REPO_URI="https://svn.kvirc.de/svn/trunk/kvirc"
-ESVN_PROJECT="kvirc"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="kvirc"
 SLOT="4"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="audiofile +crypt +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +phonon profile +python +qt-dbus qt-webkit +ssl +transparency"
 
 RDEPEND="
@@ -44,8 +42,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	subversion_wc_info
-	local VERSIO_PRAESENS="${ESVN_WC_REVISION}"
+	local VERSIO_PRAESENS="${PV#*_pre}"
 	elog "Setting revision number to ${VERSIO_PRAESENS}"
 	sed -e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" -i src/kvirc/ui/kvi_frame.cpp || die "Failed to set revision number"
 }
