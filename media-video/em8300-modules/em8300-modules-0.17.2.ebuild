@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.17.2.ebuild,v 1.1 2009/03/03 10:49:48 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-modules/em8300-modules-0.17.2.ebuild,v 1.2 2009/06/12 19:26:56 zzam Exp $
 
 inherit eutils linux-mod
 
@@ -26,6 +26,7 @@ S="${WORKDIR}/${MY_P}/modules"
 src_unpack() {
 	unpack ${A}
 	cd "${S}/.."
+	epatch "${FILESDIR}/${P}-kernel-2.6.30.patch"
 }
 
 src_compile() {
