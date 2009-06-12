@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.0.ebuild,v 1.1 2009/06/12 08:18:37 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.0.ebuild,v 1.2 2009/06/12 12:24:13 tupone Exp $
 EAPI=2
 
 inherit eutils toolchain-funcs
@@ -8,7 +8,7 @@ inherit eutils toolchain-funcs
 DESCRIPTION="A Free Toolkit for developing mapping applications."
 HOMEPAGE="http://www.mapnik.org/"
 SRC_URI="mirror://berlios/${PN}/${P}.tar.bz2"
-LICENSE="LGPL-3"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="cairo curl debug +gdal postgres python sqlite"
@@ -80,6 +80,7 @@ src_install() {
 	    doins utils/ogcserver/*
 	fi
 
+	dodoc AUTHORS CHANGELOG README
 	dohtml -r docs/api_docs/python/*
 }
 
