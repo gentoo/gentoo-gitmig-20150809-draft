@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r1.ebuild,v 1.1 2009/06/12 20:38:50 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r1.ebuild,v 1.2 2009/06/12 22:35:16 mr_bones_ Exp $
 
 EAPI=1
 
@@ -114,7 +114,6 @@ src_unpack() {
 		# # after the patches used above
 		rm -f lib/imapopts.h lib/imapopts.c
 	fi
-
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	use tcpd && epatch "${FILESDIR}/${PN}-${LIBWRAP_PATCH_VER}-libwrap.patch"
