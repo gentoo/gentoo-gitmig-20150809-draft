@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.4 2009/06/05 10:37:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.5 2009/06/12 22:49:51 yngwin Exp $
 
 EAPI="2"
 
@@ -38,22 +38,13 @@ PLUGINS="core gui network opengl sql svg uitools webkit xml xmlpatterns"
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup(){
-	QTDIR="/usr/include/qt4"
-	QTLIBDIR="/usr/$(get_libdir)/qt4/"
-}
-
 src_prepare() {
 	# remove phonon
-	sed -i \
-		-e "/typesystem_phonon.xml/d" \
-		generator/generator.qrc || die "sed failed"
-	sed -i \
-		-e "/qtscript_phonon/d" \
-		qtbindings/qtbindings.pro || die "sed failed"
+	sed -i "/typesystem_phonon.xml/d" generator/generator.qrc || die "sed failed"
+	sed -i "/qtscript_phonon/d" qtbindings/qtbindings.pro || die "sed failed"
 
 	# Fix for GCC-4.4, bug 268086
-	epatch "${FILESDIR}/${P}-gcc44.patch"
+	epatch "${FILESDIR}/${PN}-gcc44.patch"
 	qt4_src_prepare
 }
 
@@ -66,14 +57,15 @@ src_configure() {
 
 src_compile() {
 	cd "${S}"/generator
-	emake || die "emake generator failed"
+	emake || die "make generator failed"
 	./generator --include-paths="/usr/include/qt4/" || die "running generator failed"
+
 	cd "${S}"/qtbindings
 	emake || die "make qtbindings failed"
 }
 
 src_install() {
-	insinto "${QTLIBDIR}"/plugins/script/
+	insinto /usr/$(get_libdir)/qt4/plugins/script/
 	insopts -m0755
 	doins -r "${S}"/plugins/script/*.so || die "doins failed"
 }

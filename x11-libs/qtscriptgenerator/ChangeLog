@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qtscriptgenerator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.4 2009/06/05 10:37:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/ChangeLog,v 1.5 2009/06/12 22:49:51 yngwin Exp $
+
+  12 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  qtscriptgenerator-0.1.0.ebuild,
+  -files/qtscriptgenerator-0.1.0-gcc44.patch,
+  +files/qtscriptgenerator-gcc44.patch:
+  Use a more correct gcc-4.4 patch. Minor ebuild cleanups.
 
   05 Jun 2009; Ben de Groot <yngwin@gentoo.org>
   qtscriptgenerator-0.1.0.ebuild:
