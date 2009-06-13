@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/mozilla-weave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/ChangeLog,v 1.4 2009/05/16 14:01:31 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/ChangeLog,v 1.5 2009/06/13 10:21:59 tove Exp $
+
+  13 Jun 2009; Torsten Veller <tove@gentoo.org>
+  mozilla-weave-0.2.104.ebuild, mozilla-weave-0.3.0.ebuild,
+  mozilla-weave-0.3.2.ebuild:
+  Add missing die: "..." -> die "..."
 
 *mozilla-weave-0.3.2 (16 May 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.2.104.ebuild,v 1.2 2009/05/16 13:14:17 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.2.104.ebuild,v 1.3 2009/06/13 10:21:59 tove Exp $
 
 EAPI="2"
 
@@ -55,7 +55,7 @@ src_compile() {
 	export WEAVE_BUILDID=${PV}
 	export MOZSDKDIR=/usr/$(get_libdir)/xulrunner-1.9
 
-	emake release_build=1 xpi || "emake failed"
+	emake release_build=1 xpi || die "emake failed"
 }
 
 src_install() {
