@@ -1,5 +1,5 @@
---- krview.orig	2006-03-23 21:59:47.000000000 +0100
-+++ krview.cpp	2009-01-12 19:39:07.000000000 +0100
+--- a/krusader-1.90.0/krusader/Panel/krview.cpp	2006-03-23 21:59:47.000000000 +0100
++++ b/krusader-1.90.0/krusader/Panel/krview.cpp	2009-01-12 19:39:07.000000000 +0100
 @@ -39,7 +39,7 @@
  #include <kmimetype.h>
  #include <klocale.h>
