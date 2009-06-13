@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/kkbswitch
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkbswitch/ChangeLog,v 1.7 2007/02/03 21:47:22 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkbswitch/ChangeLog,v 1.8 2009/06/13 23:40:55 scarabeus Exp $
+
+  13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.4.3-fix-ldflags.patch, kkbswitch-1.4.3.ebuild:
+  Fix compilation issue with not respecting ldflags. Per bug #243032. Fix
+  slot.
 
   03 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
