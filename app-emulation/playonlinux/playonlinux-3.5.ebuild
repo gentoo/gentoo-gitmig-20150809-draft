@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.5.ebuild,v 1.2 2009/05/24 19:36:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/playonlinux/playonlinux-3.5.ebuild,v 1.3 2009/06/13 10:16:23 tove Exp $
 
 EAPI="1"
 
@@ -58,7 +58,7 @@ src_install() {
 
 	# daemon/ install
 	exeinto "${GAMES_DATADIR}/${PN}/daemon"
-	doexe daemon/* || "doexe failed"
+	doexe daemon/* || die "doexe failed"
 
 	# main executable files
 	exeinto "${GAMES_DATADIR}/${PN}"
