@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.10 2009/02/10 10:29:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/krystaldrop-0.7.2.ebuild,v 1.11 2009/06/13 17:43:47 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,22 +26,24 @@ S=${WORKDIR}/${PN}
 
 src_prepare() {
 	mv ../art .
-	epatch "${FILESDIR}/krystaldrop-assert.patch" \
-		"${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}/${P}"-gcc43.patch \
-		"${FILESDIR}/${P}"-as-needed.patch \
-		"${FILESDIR}/${P}"-deps.patch
+	epatch \
+		"${FILESDIR}"/krystaldrop-assert.patch \
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-deps.patch \
+		"${FILESDIR}"/${P}-glibc2.10.patch
 
 	sed -i \
 		-e "/^EXEDIR:=/ s|$|/bin|" \
 		-e "/^INSTALL_PREFIX:=/ s|$|${D}|" Makefile \
-			|| die "sed Makefile failed"
+		|| die "sed Makefile failed"
 
 	# fix the high score location
 	sed -i \
 		-e "s:BINDIR:\"${GAMES_STATEDIR}/${PN}\":" \
-			Sources/KrystalDrop/Controller/HighScoresController.cpp \
-				|| die "sed HighScoresController.cpp failed"
+		Sources/KrystalDrop/Controller/HighScoresController.cpp \
+		|| die "sed HighScoresController.cpp failed"
 }
 
 src_install() {

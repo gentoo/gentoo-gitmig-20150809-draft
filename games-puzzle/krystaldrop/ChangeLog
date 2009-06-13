@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/krystaldrop
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.9 2009/02/10 10:29:56 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/krystaldrop/ChangeLog,v 1.10 2009/06/13 17:43:47 nyhm Exp $
+
+  13 Jun 2009; Tristan Heaven <nyhm@gentoo.org> krystaldrop-0.7.2.ebuild,
+  +files/krystaldrop-0.7.2-glibc2.10.patch:
+  Fix building with glibc-2.10, bug #273412
 
   10 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/krystaldrop-0.7.2-as-needed.patch, krystaldrop-0.7.2.ebuild:
