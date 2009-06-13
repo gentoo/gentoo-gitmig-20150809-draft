@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freepv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.2 2009/05/02 07:39:49 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freepv/ChangeLog,v 1.3 2009/06/13 20:54:39 voyageur Exp $
+
+  13 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org> freepv-0.3.0.ebuild,
+  +files/freepv-0.3.0-gcc44.patch:
+  GCC 4.4 love, bug #274041
 
 *freepv-0.3.0 (02 May 2009)
 
