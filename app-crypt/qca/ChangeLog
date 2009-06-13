@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.67 2009/06/12 14:18:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.68 2009/06/13 09:59:06 scarabeus Exp $
+
+  13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> qca-2.0.2-r2.ebuild:
+  Adjust the dep back, the -r3 is slottable.
 
   12 Jun 2009; Jeroen Roovers <jer@gentoo.org> qca-2.0.2-r2.ebuild:
   Stable for HPPA (bug #272865).
