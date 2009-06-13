@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.7 2009/05/02 12:46:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.8 2009/06/13 18:57:52 jsbronder Exp $
 
 EAPI=1
-inherit python eutils fortran
+inherit python eutils fortran autotools
 
 DESCRIPTION="MPICH2 - A portable MPI implementation"
 HOMEPAGE="http://www-unix.mcs.anl.gov/mpi/mpich2"
@@ -98,6 +98,14 @@ src_unpack() {
 		# These tests in errhan/ rely on MPI::File ...which is in romio
 		echo "" > test/mpi/errors/cxx/errhan/testlist
 	fi
+
+	# #269856, detect python 2.6
+	# TODO:  Send upstream
+	epatch "${FILESDIR}"/${P}-py26.patch
+	pushd "${S}"/src/pm/mpd >/dev/null || die "Missing src/pm/mpd"
+	cat aclocal_mpd.m4 "${S}"/confdb/aclocal_subcfg.m4 > aclocal.m4
+	AT_M4DIR=${S}/confdb eautoreconf
+	popd >/dev/null
 }
 
 src_compile() {
