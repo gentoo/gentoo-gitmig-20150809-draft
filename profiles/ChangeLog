@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2771 2009/06/13 09:35:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2772 2009/06/13 11:13:40 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Mask dev-ruby/freeride for bug 251935
 
   13 Jun 2009; Markus Meier <maekke@gentoo.org> package.mask:
   mask pre releases of media-gfx/inkscape-0.47
