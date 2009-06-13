@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/knetscan
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.28 2007/09/06 17:26:40 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/ChangeLog,v 1.29 2009/06/13 23:58:42 scarabeus Exp $
+
+  13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  knetscan-1.0-r1.ebuild, files/knetscan-1.0-desktop.diff:
+  Add missing trailing ; for patch. Per bug #239500. Slotmove.
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -knetscan-1.0.ebuild:
   Cleanup

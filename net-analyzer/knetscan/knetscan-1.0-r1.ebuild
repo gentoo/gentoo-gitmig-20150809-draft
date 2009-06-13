@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0-r1.ebuild,v 1.8 2007/02/01 12:14:04 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0-r1.ebuild,v 1.9 2009/06/13 23:58:42 scarabeus Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://sourceforge.net/projects/knetscan"
 SRC_URI="mirror://sourceforge/knetscan/${P}.tar.gz
 	mirror://gentoo/kde-admindir-3.5.3.tar.bz2"
 
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
