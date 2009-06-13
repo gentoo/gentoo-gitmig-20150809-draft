@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kprof
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.17 2008/03/27 23:55:09 philantrop Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.18 2009/06/13 12:15:35 scarabeus Exp $
+
+  13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kprof-1.4.3-r1.ebuild:
+  Adjust install per bug #216741. Fix slot.
 
   27 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org>
   +files/kprof-1.4.3-gcc4.3.patch, kprof-1.4.3-r1.ebuild:

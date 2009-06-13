@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.3-r1.ebuild,v 1.5 2008/03/27 23:55:09 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.3-r1.ebuild,v 1.6 2009/06/13 12:15:35 scarabeus Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kprof.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kprof/${P}.tar.bz2
 	mirror://gentoo/kde-admindir-3.5.5.tar.bz2"
 
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
@@ -28,4 +28,8 @@ src_unpack() {
 	# Fixing the desktop file to use UTF-8.
 	sed -i -e "s:r\xE9sultats:résultats:" "${S}"/kprof/kprof.desktop \
 		|| die "sed'ing the desktop file failed."
+}
+
+src_install() {
+	MAKEOPTS="-j1" kde_src_install
 }
