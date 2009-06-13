@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/koverartist
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.28 2009/02/22 21:41:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.29 2009/06/13 14:30:53 tampakrap Exp $
+
+  13 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  koverartist-0.5.ebuild, koverartist-0.5-r1.ebuild:
+  Change slot to 3.5
 
 *koverartist-0.5-r1 (22 Feb 2009)
 
