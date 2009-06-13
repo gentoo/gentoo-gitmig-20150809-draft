@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.20.ebuild,v 1.7 2009/04/26 14:46:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.20.ebuild,v 1.8 2009/06/13 08:55:30 graaff Exp $
 
 inherit elisp-common ruby
 
@@ -24,7 +24,7 @@ src_install() {
 
 	${RUBY} setup.rb config --prefix=/usr "$@" \
 		${RUBY_ECONF} || die "setup.rb config failed"
-	${RUBY} setup.rb install --prefix=${D} "$@" \
+	${RUBY} setup.rb install --prefix="${D}" "$@" \
 		${RUBY_ECONF} || die "setup.rb install failed"
 
 	if use emacs ; then
