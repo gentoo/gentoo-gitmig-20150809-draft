@@ -55,3 +55,4 @@ slotmove app-cdr/koverartist 0 3.5
 slotmove app-crypt/calcchecksum 0 3.5
 slotmove kde-misc/kkbswitch 0 3.5
 slotmove <x11-themes/polyester-2.0.0 0 3.5
+slotmove net-analyzer/knetscan 0 3.5
