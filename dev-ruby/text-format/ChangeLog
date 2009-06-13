@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/text-format
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.26 2008/11/10 10:50:27 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/ChangeLog,v 1.27 2009/06/13 07:36:54 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> -text-format-0.64.ebuild,
+  text-format-1.0.0.ebuild:
+  Add back ~x86-fbsd keyword that I seem to have dropped two years ago.
+  Remove old version.
 
   10 Nov 2008; Raúl Porcel <armin76@gentoo.org> text-format-1.0.0.ebuild:
   ia64 stable wrt #244214
