@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.5 2008/07/26 05:27:31 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.6 2009/06/13 12:16:39 tampakrap Exp $
 
 inherit kde
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://en.opensuse.org/Kerry"
 SRC_URI="http://developer.kde.org/~binner/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 

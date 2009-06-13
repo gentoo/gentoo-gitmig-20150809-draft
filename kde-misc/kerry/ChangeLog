@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kerry
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.15 2008/07/26 05:27:31 ford_prefect Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.16 2009/06/13 12:16:39 tampakrap Exp $
+
+  13 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> kerry-0.2.1.ebuild:
+  Slot move to 3.5
 
   26 Jul 2008; Arun Raghavan <ford_prefect@gentoo.org> kerry-0.2.1.ebuild:
   PATCHES should be an array
