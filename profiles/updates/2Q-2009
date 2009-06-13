@@ -49,3 +49,4 @@ slotmove app-backup/keep 0 3.5
 slotmove dev-util/kprof 0 3.5
 slotmove kde-misc/kerry 0 3.5
 slotmove app-backup/konserve 0 3.5
+slotmove app-cdr/kcdlabel 0 3.5
