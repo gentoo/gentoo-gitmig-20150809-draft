@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.5.3.ebuild,v 1.6 2009/05/31 18:22:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.5.3.ebuild,v 1.7 2009/06/13 10:13:07 armin76 Exp $
 
 inherit multilib
 
@@ -20,7 +20,7 @@ fi
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~ia64 ~m68k ppc ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="amd64 arm ~hppa ia64 m68k ppc ppc64 s390 sh sparc x86"
 IUSE="hal static usb"
 
 RDEPEND="usb? ( =virtual/libusb-0* )
