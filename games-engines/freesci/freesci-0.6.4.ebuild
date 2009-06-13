@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.4.ebuild,v 1.3 2009/02/22 16:30:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.4.ebuild,v 1.4 2009/06/13 16:42:09 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,6 +28,7 @@ src_prepare() {
 		-e "/^SUBDIRS =/s:desktop src conf debian:src:" \
 		Makefile.in \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-glibc2.10.patch
 }
 
 src_configure() {

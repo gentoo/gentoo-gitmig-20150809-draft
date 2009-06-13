@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/freesci
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/ChangeLog,v 1.22 2009/02/22 16:30:07 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/ChangeLog,v 1.23 2009/06/13 16:42:09 nyhm Exp $
+
+  13 Jun 2009; Tristan Heaven <nyhm@gentoo.org> freesci-0.6.4.ebuild,
+  +files/freesci-0.6.4-glibc2.10.patch:
+  Fix building with glibc-2.10, bug #273398
 
   22 Feb 2009; Raúl Porcel <armin76@gentoo.org> freesci-0.6.4.ebuild:
   x86 stable wrt #255555
