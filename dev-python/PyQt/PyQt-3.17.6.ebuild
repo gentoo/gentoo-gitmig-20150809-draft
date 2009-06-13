@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.6.ebuild,v 1.7 2009/02/20 17:49:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.17.6.ebuild,v 1.8 2009/06/13 21:38:22 hwoarang Exp $
 
 EAPI="1"
 inherit distutils
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug doc examples"
 
 RDEPEND="x11-libs/qt:3
-	>=dev-python/sip-4.7.3
+	~dev-python/sip-4.7.9
 	x11-libs/qscintilla"
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
