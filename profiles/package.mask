@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9917 2009/06/13 11:52:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9918 2009/06/13 12:11:41 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (13 Jun 2009)
+# Mask dev-perl/X10 (#245631 and #264664)
+# only masked www-misc/zoneminder depends on it
+dev-perl/X10
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
