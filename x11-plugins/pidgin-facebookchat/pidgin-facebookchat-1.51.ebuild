@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.51.ebuild,v 1.1 2009/06/13 08:09:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/pidgin-facebookchat-1.51.ebuild,v 1.2 2009/06/13 19:55:41 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
@@ -27,7 +27,8 @@ src_compile() {
 	FACEBOOK_SOURCES="libfacebook.c fb_blist.c fb_connection.c fb_info.c fb_managefriends.c fb_messages.c fb_notifications.c fb_search.c"
 	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} `pkg-config --cflags purple json-glib-1.0` \
 		-DPURPLE_PLUGINS -DENABLE_NLS -DHAVE_ZLIB -shared -fPIC -DPIC \
-		${FACEBOOK_SOURCES} -o libfacebook.so || die "compilation failed"
+		${FACEBOOK_SOURCES} `pkg-config --libs json-glib-1.0` \
+		-o libfacebook.so || die "compilation failed"
 }
 
 src_install() {
