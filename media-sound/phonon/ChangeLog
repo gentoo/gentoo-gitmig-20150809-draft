@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/phonon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.17 2009/06/02 21:28:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phonon/ChangeLog,v 1.18 2009/06/13 10:17:11 armin76 Exp $
+
+  13 Jun 2009; Raúl Porcel <armin76@gentoo.org> phonon-4.3.1.ebuild:
+  ia64 stable wrt #271903
 
   02 Jun 2009; Jeroen Roovers <jer@gentoo.org> phonon-4.3.1.ebuild:
   Stable for HPPA (bug #271903).
