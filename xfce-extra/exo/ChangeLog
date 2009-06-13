@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.86 2009/06/13 03:13:10 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.87 2009/06/13 13:49:14 tcunha Exp $
+
+  13 Jun 2009; Tiago Cunha <tcunha@gentoo.org> exo-0.3.101-r1.ebuild:
+  stable sparc, bug 265587
 
 *exo-0.3.101-r1 (13 Jun 2009)
 
