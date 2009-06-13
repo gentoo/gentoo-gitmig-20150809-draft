@@ -53,3 +53,4 @@ slotmove app-cdr/kcdlabel 0 3.5
 slotmove app-cdr/kiso 0 3.5
 slotmove app-cdr/koverartist 0 3.5
 slotmove app-crypt/calcchecksum 0 3.5
+slotmove kde-misc/kkbswitch 0 3.5
