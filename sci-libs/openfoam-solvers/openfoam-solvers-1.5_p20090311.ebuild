@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-solvers/openfoam-solvers-1.5_p20090311.ebuild,v 1.1 2009/04/25 16:21:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-solvers/openfoam-solvers-1.5_p20090311.ebuild,v 1.2 2009/06/13 10:20:25 tove Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ src_prepare() {
 }
 
 src_compile() {
-	cp -a ${INSDIR}/etc/{bashrc,settings.sh} etc/. || "cannot copy bashrc"
+	cp -a ${INSDIR}/etc/{bashrc,settings.sh} etc/. || die "cannot copy bashrc"
 
 	# This is a hack, due to the meta ebuild:
 	sed -i -e "s|FOAM_LIB=\$WM_PROJECT_DIR/lib|FOAM_LIB=${INSDIR}/lib|"	\
