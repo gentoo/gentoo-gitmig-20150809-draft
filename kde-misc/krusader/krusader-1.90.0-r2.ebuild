@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.90.0.ebuild,v 1.5 2008/05/24 13:48:24 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.90.0-r2.ebuild,v 1.1 2009/06/13 11:28:43 scarabeus Exp $
 
+EAPI=1
 inherit kde
 
 MY_P="${P/_/-}"
@@ -14,13 +15,15 @@ SRC_URI="mirror://sourceforge/krusader/${MY_P}.tar.gz
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="amd64 ppc ppc64 sparc x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="javascript kde"
 
-DEPEND="kde? ( || ( ( =kde-base/libkonq-3.5* =kde-base/kdebase-kioslaves-3.5* )
-			=kde-base/kdebase-3.5* ) )
-		javascript? ( =kde-base/kjsembed-3.5* )"
-
+DEPEND="
+	kde? (
+		kde-base/libkonq:3.5
+		kde-base/kdebase-kioslaves:3.5
+	)
+	javascript? ( kde-base/kjsembed:3.5 )"
 RDEPEND="${DEPEND}"
 
 need-kde 3.5
@@ -42,10 +45,11 @@ src_unpack() {
 
 	rm -rf "${S}/admin" "${S}/configure"
 	ln -s "${WORKDIR}/admin" "${S}/admin"
+	epatch "${FILESDIR}/${PV}-icon-overlay.patch"
 }
 
 src_compile() {
-	local myconf="$(use_with kde konqueror) $(use_with javascript) --with-kiotar"
+	local myconf="$(use_with kde konqueror) $(use_with javascript) --without-kiotar"
 	kde_src_compile
 }
 
