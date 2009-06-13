@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0.ebuild,v 1.13 2008/12/31 03:31:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/vdr-ffnetdev-0.1.0-r1.ebuild,v 1.1 2009/06/13 09:57:49 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -10,12 +10,13 @@ SRC_URI="mirror://berlios/${PN#vdr-}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 S=${WORKDIR}/${P}
 
 DEPEND=">=media-video/vdr-1.3.7"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	vdr-plugin_src_unpack unpack

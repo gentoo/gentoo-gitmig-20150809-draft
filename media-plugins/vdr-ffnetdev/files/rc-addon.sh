@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/files/rc-addon.sh,v 1.2 2007/04/17 09:46:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-ffnetdev/files/rc-addon.sh,v 1.3 2009/06/13 09:57:49 zzam Exp $
 #
 # rc-addon-script for plugin ffnetdev
 #
@@ -14,4 +14,6 @@ plugin_pre_vdr_start() {
   [ "${USE_TS}" = "yes" ] && add_plugin_param "-t  ${TS_PORT}"
 
   [ "${REMOTE}" = "yes" ] && add_plugin_param "-e"
+
+  return 0
 }
