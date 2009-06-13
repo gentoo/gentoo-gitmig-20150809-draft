@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.75 2009/05/25 17:22:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.76 2009/06/13 13:41:56 armin76 Exp $
+
+  13 Jun 2009; Raúl Porcel <armin76@gentoo.org> x11-drm-20090320.ebuild:
+  ia64 stable wrt #270495
 
   25 May 2009; Christian Faulhammer <fauli@gentoo.org>
   x11-drm-20090320.ebuild:
