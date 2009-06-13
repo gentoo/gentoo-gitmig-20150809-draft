@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/lcdproc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.66 2009/06/08 15:18:51 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/ChangeLog,v 1.67 2009/06/13 10:38:47 rbu Exp $
+
+  13 Jun 2009; Robert Buchholz <rbu@gentoo.org> -lcdproc-0.5.1-r4.ebuild,
+  lcdproc-0.5.2-r1.ebuild, lcdproc-0.5.2-r2.ebuild,
+  lcdproc-0.5.3_pre1.ebuild:
+  Add --skip-validation to xmlto for bug 273214, will be fixed upstream in
+  0.5.3, clean up old ebuild.
 
 *lcdproc-0.5.3_pre1 (08 Jun 2009)
 

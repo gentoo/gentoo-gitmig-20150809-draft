@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3_pre1.ebuild,v 1.2 2009/06/08 23:36:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.3_pre1.ebuild,v 1.3 2009/06/13 10:38:47 rbu Exp $
 
 EAPI=2
 inherit multilib versionator
@@ -143,12 +143,12 @@ src_compile() {
 	if use doc; then
 		ebegin "Creating user documentation"
 		cd "${S}"/docs/lcdproc-user
-		xmlto html lcdproc-user.docbook
+		xmlto html --skip-validation lcdproc-user.docbook
 		eend $?
 
 		ebegin "Creating dev documentation"
 		cd "${S}"/docs/lcdproc-dev
-		xmlto html lcdproc-dev.docbook
+		xmlto html --skip-validation lcdproc-dev.docbook
 		eend $?
 	fi
 }

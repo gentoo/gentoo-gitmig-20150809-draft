@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.9 2009/05/16 08:57:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.5.2-r1.ebuild,v 1.10 2009/06/13 10:38:47 rbu Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils autotools multilib
@@ -132,12 +132,12 @@ src_compile() {
 	if use doc; then
 		ebegin "Creating user documentation"
 		cd "${S}"/docs/lcdproc-user
-		xmlto html lcdproc-user.docbook
+		xmlto html --skip-validation lcdproc-user.docbook
 		eend $?
 
 		ebegin "Creating dev documentation"
 		cd "${S}"/docs/lcdproc-dev
-		xmlto html lcdproc-dev.docbook
+		xmlto html --skip-validation lcdproc-dev.docbook
 		eend $?
 	fi
 }
