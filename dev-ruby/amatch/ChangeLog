@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.8 2008/03/31 14:46:12 pclouds Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.9 2009/06/13 09:22:07 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> amatch-0.2.1.ebuild:
+  Fix quoting.
 
   31 Mar 2008; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
   amatch-0.2.1.ebuild:
