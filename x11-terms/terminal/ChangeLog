@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.17 2009/06/13 03:22:42 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.18 2009/06/13 13:57:37 tcunha Exp $
+
+  13 Jun 2009; Tiago Cunha <tcunha@gentoo.org> terminal-0.2.12.ebuild:
+  stable sparc, bug 265587
 
   13 Jun 2009; Jeremy Olexa <darkside@gentoo.org>
   +files/terminal-configure.in.patch, terminal-0.2.12.ebuild:
