@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2769 2009/06/13 09:20:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2770 2009/06/13 09:30:06 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  xf86-video-intel-2.7.0 is no longer in portage, add xkeyboard-config-1.6
+  to the xorg-server 1.6 mask entry
 
   13 Jun 2009; Fabian Groffen <grobian@gentoo.org> profiles.desc:
   Add Prefix profiles to profiles.desc. They are commented out and only
