@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nimage/nimage-0.5.9.ebuild,v 1.3 2007/03/15 03:10:40 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nimage/nimage-0.5.9.ebuild,v 1.4 2009/06/13 09:08:03 graaff Exp $
 
 DESCRIPTION="simple Ruby class for displaying 2-D Data as images on X11 display"
 HOMEPAGE="http://www.ir.isas.ac.jp/~masa/ruby/index-e.html"
@@ -20,6 +20,6 @@ src_compile() {
 }
 
 src_install() {
-	make exec_prefix=/usr DESTDIR=${D} install || die
+	make exec_prefix=/usr DESTDIR="${D}" install || die
 	dodoc ../ChangeLog README.*
 }

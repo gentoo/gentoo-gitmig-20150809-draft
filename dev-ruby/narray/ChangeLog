@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/narray
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.29 2007/03/15 10:11:08 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.30 2009/06/13 09:09:45 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> narray-0.5.9.ebuild:
+  Fix quoting.
 
   20 Oct 2006; Diego Pettenò <flameeyes@gentoo.org>
   -narray-0.5.7-r1.ebuild, narray-0.5.7_p2.ebuild, -narray-0.5.8.ebuild:
