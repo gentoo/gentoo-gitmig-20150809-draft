@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9918 2009/06/13 12:11:41 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9919 2009/06/13 14:06:01 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
+#  on behalf of QA Team
+#
+# Fails to build with gcc 4.4, bitrotting package and not updated to
+# latest release (from 2005).
+#
+# Removal pending 13 August 2009
+dev-db/framerd
+
 # Torsten Veller <tove@gentoo.org> (13 Jun 2009)
 # Mask dev-perl/X10 (#245631 and #264664)
 # only masked www-misc/zoneminder depends on it
@@ -38,7 +47,10 @@ dev-perl/X10
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
+#
 # Fails to build with newer glibc versions, see bug #241008
+#
+# Removal pending 13 August 2009
 net-misc/wso2-wsf-c
 
 # Hans de Graaff <graaff@gentoo.org> (13 Jun 2009)
@@ -58,12 +70,18 @@ dev-ruby/freeride
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
+#
 # Multiple QA issues, see bug #273313
+#
+# Removal pending 12 August 2009
 net-p2p/ed2k_recovermet
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
+#
 # Multiple QA issues, see bug #273872
+#
+# Removal pending 12 August 2009
 app-laptop/toshiba-utils
 
 # Tristan Heaven <nyhm@gentoo.org> (12 Jun 2009)
