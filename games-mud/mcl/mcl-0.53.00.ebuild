@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.18 2008/11/30 08:05:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/mcl-0.53.00.ebuild,v 1.19 2009/06/13 23:56:18 nyhm Exp $
 
 inherit eutils games
 
@@ -28,7 +28,8 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-dynacomplete.patch \
 		"${FILESDIR}"/${P}-libdir.patch \
 		"${WORKDIR}"/${P}-inputlines.patch \
-		"${FILESDIR}"/${P}-gcc42.patch
+		"${FILESDIR}"/${P}-gcc42.patch \
+		"${FILESDIR}"/${P}-glibc2.10.patch
 
 	sed -i \
 		-e "/MCL_LIBRARY_PATH/ s:/usr/lib/mcl:$(games_get_libdir)/${PN}:" \

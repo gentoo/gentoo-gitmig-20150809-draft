@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/mcl
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.18 2008/11/30 08:05:44 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/mcl/ChangeLog,v 1.19 2009/06/13 23:56:18 nyhm Exp $
+
+  13 Jun 2009; Tristan Heaven <nyhm@gentoo.org> mcl-0.53.00.ebuild,
+  +files/mcl-0.53.00-glibc2.10.patch:
+  Fix building with glibc-2.10, bug #273522
 
   30 Nov 2008; Tupone Alfredo <tupone@gentoo.org>
   -files/mcl-0.53.00-inputlines.patch, mcl-0.53.00.ebuild:
