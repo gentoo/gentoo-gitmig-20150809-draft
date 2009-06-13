@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9919 2009/06/13 14:06:01 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9920 2009/06/13 16:38:03 jsbronder Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -457,15 +457,6 @@ app-benchmark/phoronix-test-suite
 # Should fix a number of bug: 143763, 200293, 261357, 265466.
 # It "mostly works with 2.3.* too". Is "mostly" good enough?
 =dev-perl/math-pari-2.010801-r1
-
-# Justin Bronder <jsbronder@gentoo.org> (17 Apr 2009)
-# Mask sys-cluster/mpich for removal. (#266565)
-# No release since 2005, multiple bugs, easily replaced with
-# openmpi, mpich2 or lam-mpi
-#
-# commented out since it still being used by sci-visualization/paraview-2.6.2
-# -- mr_bones@gentoo.org
-#sys-cluster/mpich
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (17 Apr 2009)
 # Add patched dev-lang/ghc for testing.
