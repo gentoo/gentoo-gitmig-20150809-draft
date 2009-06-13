@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/squashfs-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.62 2009/06/08 17:41:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/ChangeLog,v 1.63 2009/06/13 10:34:12 agaffney Exp $
+
+  13 Jun 2009; Andrew Gaffney <agaffney@gentoo.org>
+  squashfs-tools-4.0.ebuild:
+  Change ewarn per bug #263762
 
   08 Jun 2009; Jeremy Olexa <darkside@gentoo.org> squashfs-tools-4.0.ebuild:
   amd64 stable, bug 273131

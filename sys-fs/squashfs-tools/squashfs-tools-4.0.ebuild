@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.0.ebuild,v 1.3 2009/06/08 17:41:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.0.ebuild,v 1.4 2009/06/13 10:34:12 agaffney Exp $
 
 inherit toolchain-funcs
 
@@ -38,5 +38,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "This version of mksquashfs requires a 2.6.24 kernel or better."
+	ewarn "This version of mksquashfs requires a 2.6.29 kernel or better."
 }
