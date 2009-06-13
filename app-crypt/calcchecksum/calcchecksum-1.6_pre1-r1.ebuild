@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/calcchecksum-1.6_pre1-r1.ebuild,v 1.1 2009/02/22 17:04:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/calcchecksum-1.6_pre1-r1.ebuild,v 1.2 2009/06/13 22:51:40 tampakrap Exp $
 
 ARTS_REQUIRED="never"
 
@@ -15,7 +15,7 @@ DESCRIPTION="CalcChecksum is a tool for calculating MD5 and CRC32, TIGER, HAVAL,
 HOMEPAGE="http://calcchecksum.sourceforge.net/"
 SRC_URI="mirror://sourceforge/calcchecksum/${MY_P}.tar.bz2"
 
-SLOT="0"
+SLOT="3.5"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE=""

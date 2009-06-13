@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/calcchecksum
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.10 2009/02/22 17:04:35 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/calcchecksum/ChangeLog,v 1.11 2009/06/13 22:51:40 tampakrap Exp $
+
+  13 Jun 2009; Theo Chatzimichos <tampakrap@gmail.com>
+  calcchecksum-1.6_pre1.ebuild, calcchecksum-1.6_pre1-r1.ebuild:
+  Changed Slot to 3.5
 
 *calcchecksum-1.6_pre1-r1 (22 Feb 2009)
 
