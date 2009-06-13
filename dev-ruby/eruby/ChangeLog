@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/eruby
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.33 2007/10/14 04:19:54 tgall Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/ChangeLog,v 1.34 2009/06/13 13:32:56 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> -eruby-1.0.5.ebuild,
+  eruby-1.0.5-r1.ebuild, +files/eruby-1.0.5-missing-xldflags.patch:
+  Add patch to take into account that XLDFLAGS in the ruby configuration can
+  be empty. Fixes problem with configure.rb not running at all. Remove
+  old version.
 
   13 Oct 2007; Tom Gall <tgall@gentoo.org> eruby-1.0.5-r1.ebuild:
   stable on ppc64
