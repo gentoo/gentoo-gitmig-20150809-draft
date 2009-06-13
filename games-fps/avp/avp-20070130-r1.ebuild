@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.3 2008/01/19 05:05:52 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/avp/avp-20070130-r1.ebuild,v 1.4 2009/06/13 16:25:34 nyhm Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Linux port of Aliens vs Predator"
@@ -13,20 +14,25 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	media-libs/openal
 	media-libs/libsdl
 	amd64? ( app-emulation/emul-linux-x86-sdl )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc42.patch
+src_prepare() {
+	epatch \
+		"${FILESDIR}"/${P}-gcc42.patch \
+		"${FILESDIR}"/${P}-glibc2.10.patch
 	sed -i \
+		-e '/^CC /s:=:?=:' \
+		-e '/^CXX /s:=:?=:' \
 		-e "/^CFLAGS/s/-g.*/${CFLAGS}/" \
 		-e "/^LDLIBS/s/$/${LDFLAGS}/" \
+		-e 's:openal-config:pkg-config openal:' \
 		Makefile \
 		|| die "sed failed"
 }
