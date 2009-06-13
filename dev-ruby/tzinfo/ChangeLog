@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/tzinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.34 2009/05/19 21:05:02 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tzinfo/ChangeLog,v 1.35 2009/06/13 10:46:26 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> -tzinfo-0.3.11.ebuild,
+  -tzinfo-0.3.12.ebuild, tzinfo-0.3.13.ebuild:
+  Remove old versions. Add ~alpha keyword to latest version, closing
+  #272787. Thanks to Yuta Satoh for testing.
 
   19 May 2009; Brent Baude <ranger@gentoo.org> tzinfo-0.3.13.ebuild:
   keyworded ~arch for ppc64, bug 270420
