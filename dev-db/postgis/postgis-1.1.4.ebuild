@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.1.4.ebuild,v 1.5 2008/05/21 15:57:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.1.4.ebuild,v 1.6 2009/06/13 20:25:04 djay Exp $
 
 inherit autotools eutils
 
@@ -49,8 +49,6 @@ src_unpack(){
 }
 
 src_compile(){
-	cd "${S}"
-
 	econf \
 		--enable-autoconf \
 		--datadir=/usr/share/postgresql/contrib/ \
@@ -68,7 +66,6 @@ src_compile(){
 }
 
 src_install(){
-	cd "${S}"
 	dodir /usr/$(get_libdir)/postgresql /usr/share/postgresql/contrib/
 	emake DESTDIR="${D}" install || die "emake install failed"
 	cd "${S}/topology/"
