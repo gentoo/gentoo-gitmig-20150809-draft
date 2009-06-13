@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/bsd-games
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.36 2009/05/20 16:38:29 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/bsd-games/ChangeLog,v 1.37 2009/06/13 16:53:38 nyhm Exp $
+
+  13 Jun 2009; Tristan Heaven <nyhm@gentoo.org> bsd-games-2.17-r3.ebuild,
+  +files/bsd-games-2.17-glibc2.10.patch:
+  Fix building with glibc-2.10, bug #273402
 
   20 May 2009; nixnut <nixnut@gentoo.org> bsd-games-2.17-r3.ebuild:
   ppc stable #267663
