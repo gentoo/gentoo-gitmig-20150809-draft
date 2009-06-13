@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.330 2009/06/11 19:49:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.331 2009/06/13 11:01:17 scarabeus Exp $
+
+  13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> amarok-2.1.ebuild:
+  Enable KDE_LINGUAS.
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org>
   amarok-1.4.10_p20090130-r2.ebuild:

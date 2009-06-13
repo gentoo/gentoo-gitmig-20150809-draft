@@ -1,9 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.1.ebuild,v 1.1 2009/06/04 19:48:24 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.1.ebuild,v 1.2 2009/06/13 11:01:17 scarabeus Exp $
 
 EAPI="2"
 
+KDE_LINGUAS="bg ca cs da de el en_GB es et eu fr gl he is it ja km ku lt lv nb
+nds nl nn pa pl pt pt_BR ro ru sl sv th tr uk wa zh_CN zh_TW"
 OPENGL_REQUIRED="optional"
 KMNAME="extragear/multimedia"
 inherit kde4-base
