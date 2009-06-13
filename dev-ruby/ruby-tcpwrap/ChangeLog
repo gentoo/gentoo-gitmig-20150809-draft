@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-tcpwrap
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.12 2007/02/22 01:18:01 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-tcpwrap/ChangeLog,v 1.13 2009/06/13 08:30:07 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> -ruby-tcpwrap-0.5.ebuild,
+  ruby-tcpwrap-0.6.ebuild:
+  Fix quoting. ruby16 is no longer supported. Remove old version.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
