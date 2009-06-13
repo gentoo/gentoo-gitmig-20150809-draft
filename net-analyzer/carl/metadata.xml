@@ -3,9 +3,6 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>klausman-carl@schwarzvogel.de</email>
-</maintainer>
-<maintainer>
-  <email>armin76@gentoo.org</email>
+  <email>klausman@gentoo.org</email>
 </maintainer>
 </pkgmetadata>
