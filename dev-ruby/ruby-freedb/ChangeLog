@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-freedb
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.14 2007/09/01 12:42:03 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-freedb/ChangeLog,v 1.15 2009/06/13 08:45:41 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> ruby-freedb-0.5.ebuild:
+  Fix quoting.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing twp from metadata due to his retirement (see #190561 for reference).
