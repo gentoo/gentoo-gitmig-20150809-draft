@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-qt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.52 2009/05/28 16:24:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qt/ChangeLog,v 1.53 2009/06/13 23:04:56 scarabeus Exp $
+
+  13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  gtk-engines-qt-0.8-r4.ebuild:
+  Fix buggy quoting. Per bug #273613.
 
   28 May 2009; Raúl Porcel <armin76@gentoo.org>
   gtk-engines-qt-0.8-r4.ebuild:
