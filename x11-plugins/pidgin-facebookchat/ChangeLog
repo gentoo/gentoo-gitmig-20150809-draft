@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/pidgin-facebookchat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.18 2009/06/13 19:55:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.19 2009/06/13 20:59:46 voyageur Exp $
+
+*pidgin-facebookchat-1.51-r1 (13 Jun 2009)
+
+  13 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -pidgin-facebookchat-1.51.ebuild, +pidgin-facebookchat-1.51-r1.ebuild:
+  Actually do a revbump for this fix, as the problem only appears at runtime
 
   13 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
   -pidgin-facebookchat-1.45.ebuild, -pidgin-facebookchat-1.46.ebuild,
