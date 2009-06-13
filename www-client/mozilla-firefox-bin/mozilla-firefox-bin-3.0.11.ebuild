@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.8.ebuild,v 1.3 2009/04/02 14:38:29 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox-bin/mozilla-firefox-bin-3.0.11.ebuild,v 1.1 2009/06/13 10:14:35 armin76 Exp $
+EAPI="2"
 
 inherit eutils mozilla-launcher multilib mozextension
 
@@ -8,11 +9,12 @@ LANGS="af ar be bg bn-IN ca cs cy da de el en-GB en-US eo es-AR es-ES et eu fi f
 NOSHORTLANGS="en-GB es-AR pt-BR zh-CN"
 
 DESCRIPTION="Firefox Web Browser"
-SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${PV}/linux-i686/en-US/firefox-${PV}.tar.bz2"
+REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/"
+SRC_URI="${REL_URI}/${PV}/linux-i686/en-US/firefox-${PV}.tar.bz2"
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="restrict-javascript"
@@ -20,14 +22,14 @@ IUSE="restrict-javascript"
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
 		SRC_URI="${SRC_URI}
-			linguas_${X/-/_}? ( http://dev.gentoo.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
+			linguas_${X/-/_}? ( ${REL_URI}/${PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
 	fi
 	IUSE="${IUSE} linguas_${X/-/_}"
 	# english is handled internally
 	if [ "${#X}" == 5 ] && ! has ${X} ${NOSHORTLANGS}; then
 		if [ "${X}" != "en-US" ]; then
 			SRC_URI="${SRC_URI}
-				linguas_${X%%-*}? ( http://dev.gentoo.org/~armin76/dist/${P/-bin}-xpi/${P/-bin/}-${X}.xpi )"
+				linguas_${X%%-*}? ( ${REL_URI}/${PV}/linux-i686/xpi/${X}.xpi -> ${P/-bin/}-${X}.xpi )"
 		fi
 		IUSE="${IUSE} linguas_${X%%-*}"
 	fi
@@ -75,7 +77,7 @@ linguas() {
 				fi
 			done
 		fi
-		ewarn "Sorry, but mozilla-firefox does not support the ${LANG} LINGUA"
+		ewarn "Sorry, but ${PN} does not support the ${LANG} LINGUA"
 	done
 }
 
@@ -134,14 +136,6 @@ EOF
 
 	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins
 	dosym /usr/"$(get_libdir)"/nsbrowser/plugins ${MOZILLA_FIVE_HOME}/plugins
-}
-
-pkg_preinst() {
-	declare MOZILLA_FIVE_HOME=/opt/firefox
-
-	# Remove entire installed instance to prevent all kinds of
-	# problems... see bug 44772 for example
-	rm -rf "${ROOT}"${MOZILLA_FIVE_HOME}
 }
 
 pkg_postinst() {
