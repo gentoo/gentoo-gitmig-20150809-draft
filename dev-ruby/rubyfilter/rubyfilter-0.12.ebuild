@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/rubyfilter-0.12.ebuild,v 1.4 2007/07/11 05:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyfilter/rubyfilter-0.12.ebuild,v 1.5 2009/06/13 08:13:43 graaff Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ LICENSE="BSD"
 
 SLOT="0"
 KEYWORDS="~ia64 ~ppc ~x86"
-USE_RUBY="ruby16 ruby18"
+USE_RUBY="ruby18"
 
 IUSE=""
 RDEPEND="dev-ruby/rubymail"
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install() {
-	ruby install.rb config --prefix=${D}/usr || die
+	ruby install.rb config --prefix="${D}/usr" || die
 	ruby install.rb install || die
 
 	dodoc NEWS README THANKS TODO

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/uconv-0.4.12.ebuild,v 1.10 2006/10/20 21:33:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/uconv-0.4.12.ebuild,v 1.11 2009/06/13 08:11:07 graaff Exp $
 
 inherit ruby
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ia64 ppc ppc64 x86"
 IUSE=""
 DEPEND="virtual/ruby"
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18 ruby19"
 S=${WORKDIR}/${PN}
 
 src_compile() {
@@ -23,6 +23,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 	dodoc README*
 }

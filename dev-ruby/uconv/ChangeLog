@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uconv
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.11 2006/10/20 21:33:58 agriffis Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.12 2009/06/13 08:11:07 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> uconv-0.4.12.ebuild:
+  Fix quoting. ruby16 is no longer supported.
 
   20 Oct 2006; Aron Griffis <agriffis@gentoo.org> uconv-0.4.12.ebuild:
   Mark 0.4.12 stable on ia64
