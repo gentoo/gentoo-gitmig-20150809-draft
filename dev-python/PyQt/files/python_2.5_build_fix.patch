@@ -1,0 +1,11 @@
+--- PyQt-x11-gpl-3.18/sip/qt/qobject.sip	2009-06-05 11:58:25.000000000 +0300
++++ PyQt-x11-gpl-3.18.1-snapshot-20090610/sip/qt/qobject.sip	2009-06-11 05:30:14.000000000 +0300
+@@ -1649,7 +1649,7 @@
+ 	// universal slot a child of the transmitter.  This doesn't work as
+ 	// expected because QWidget destroys its children before emitting the
+ 	// destroyed signal.)
+-	if (tx && PyObject_TypeCheck(tx, (PyTypeObject *)sipClass_QObject))
++	if (tx && PyObject_TypeCheck((PyObject *)tx, (PyTypeObject *)sipClass_QObject))
+ 		qtx = reinterpret_cast<QObject *>(conn.sc_transmitter);
+ 
+ 	return new UniversalSlot(qtx, &conn, member);
