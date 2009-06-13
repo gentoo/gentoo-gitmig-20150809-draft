@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmaa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.14 2009/06/04 20:14:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmaa/ChangeLog,v 1.15 2009/06/13 14:01:22 armin76 Exp $
+
+  13 Jun 2009; Raúl Porcel <armin76@gentoo.org> libmaa-1.1.1.ebuild:
+  ia64/sparc stable wrt #271122
 
   04 Jun 2009; Tobias Klausmann <klausman@gentoo.org> libmaa-1.1.1.ebuild:
   Stable on alpha, bug #271122
