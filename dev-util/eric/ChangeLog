@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.83 2009/06/05 20:58:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/ChangeLog,v 1.84 2009/06/13 21:16:19 hwoarang Exp $
+
+  13 Jun 2009; Markos Chandras <hwoarang@gentoo.org> eric-4.3.3.ebuild,
+  eric-4.3.4.ebuild:
+  Adjust PyQt4 use deps ( bug 272166 )
 
 *eric-4.3.4 (05 Jun 2009)
 
