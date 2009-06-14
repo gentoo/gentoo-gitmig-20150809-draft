@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/kile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.117 2009/06/11 17:10:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.118 2009/06/14 00:22:57 tampakrap Exp $
+
+  14 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> kile-2.0.ebuild,
+  kile-2.0.3-r1.ebuild:
+  Changed Slot to 3.5
 
   11 Jun 2009; Jeroen Roovers <jer@gentoo.org> kile-2.0.3-r1.ebuild:
   Stable for HPPA (bug #250349).
