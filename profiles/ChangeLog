@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2783 2009/06/14 12:06:45 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2784 2009/06/14 19:20:00 dagger Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2009; Robert Piasek <dagger@gentoo.org> package.mask:
+  Removed package.mask from networkmanager-0.7.1-r4 as I can't reproduce the
+  error.
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   KDE 4.2.3 was removed so no need to mask it anymore

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9926 2009/06/14 12:06:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9927 2009/06/14 19:20:00 dagger Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,10 +43,6 @@ net-fs/shfs
 # Theo Chatzimichos <tampakrap@gentoo.org> (14 Jun 2009)
 # Masked for removal in 30 days. Old and dead by upstream.
 app-dicts/kannadic
-
-# Robert Piasek <dagger@gentoo.org> (14 Jun 2009)
-# Masked due to regression bugs in 3G modems handling, bug (#273741)
-=net-misc/networkmanager-0.7.1-r4
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
