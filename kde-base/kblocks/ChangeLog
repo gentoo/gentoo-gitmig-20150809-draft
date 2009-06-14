@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kblocks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblocks/ChangeLog,v 1.18 2009/06/04 23:11:40 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblocks/ChangeLog,v 1.19 2009/06/14 10:28:41 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kblocks-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords
