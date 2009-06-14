@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-Send
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/ChangeLog,v 1.22 2009/06/10 13:21:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/ChangeLog,v 1.23 2009/06/14 14:33:53 tove Exp $
+
+*Email-Send-2.197 (14 Jun 2009)
+
+  14 Jun 2009; Torsten Veller <tove@gentoo.org> -Email-Send-2.196.ebuild,
+  +Email-Send-2.197.ebuild:
+  Version bump. Cleanup
 
 *Email-Send-2.196 (10 Jun 2009)
 

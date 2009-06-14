@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.196.ebuild,v 1.1 2009/06/10 13:21:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Send/Email-Send-2.197.ebuild,v 1.1 2009/06/14 14:33:53 tove Exp $
 
 EAPI=2
 
