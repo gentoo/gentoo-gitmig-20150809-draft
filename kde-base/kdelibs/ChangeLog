@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.607 2009/06/14 10:45:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.608 2009/06/14 12:52:36 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/4.2-glibc-2.9.patch, -files/4.2-glibc-2.10.patch,
+  -files/kdelibs-4.2.3-halbattery_backport_fix.patch,
+  -files/kdelibs-4.2-fix_kio_http_401.patch,
+  -files/kdelibs-4.2.2-kickoff-focus.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdelibs-4.2.3.ebuild:
   Drop KDE 4.2.3
