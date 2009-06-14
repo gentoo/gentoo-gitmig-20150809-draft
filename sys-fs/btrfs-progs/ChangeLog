@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.20 2009/06/06 05:13:09 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.21 2009/06/14 15:46:16 lavajoe Exp $
+
+*btrfs-progs-0.18-r1 (14 Jun 2009)
+
+  14 Jun 2009; Joe Peterson <lavajoe@gentoo.org>
+  +btrfs-progs-0.18-r1.ebuild, btrfs-progs-9999.ebuild, metadata.xml:
+  Add debug-utils USE flag to allow not building show-blocks, which requires
+  matplotlib and therefore pulls in many packages (bug #259786)
 
   06 Jun 2009; Joe Peterson <lavajoe@gentoo.org> btrfs-progs-0.16-r1.ebuild,
   btrfs-progs-0.17.ebuild, btrfs-progs-0.18.ebuild:

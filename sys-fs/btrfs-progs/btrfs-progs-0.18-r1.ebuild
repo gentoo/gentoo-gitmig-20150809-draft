@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.10 2009/06/14 15:46:16 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.18-r1.ebuild,v 1.1 2009/06/14 15:46:16 lavajoe Exp $
 
-inherit eutils git
+inherit eutils
 
 DESCRIPTION="Btrfs filesystem utilities"
 HOMEPAGE="http://btrfs.wiki.kernel.org/"
-SRC_URI=""
+SRC_URI="http://www.kernel.org/pub/linux/kernel/people/mason/btrfs/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,8 +20,13 @@ DEPEND="debug-utils? ( dev-python/matplotlib )
 	)"
 RDEPEND="${DEPEND}"
 
-EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs-unstable.git"
-EGIT_BRANCH="master"
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# Apply hot fixes
+	#epatch "${FILESDIR}/${P}-hotfix.patch"
+}
 
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
@@ -69,7 +74,10 @@ src_install() {
 }
 
 pkg_postinst() {
-	ewarn "WARNING: This version of btrfs-progs uses the latest unstable code,"
-	ewarn "         and care should be taken that it is compatible with the"
-	ewarn "         version of btrfs in your kernel!"
+	ewarn "WARNING: This version of btrfs-progs corresponds to and should only"
+	ewarn "         be used with the version of btrfs included in the"
+	ewarn "         Linux kernel (2.6.29-rc2 and above)."
+	ewarn ""
+	ewarn "         This version should NOT be used with earlier versions"
+	ewarn "         of the standaline btrfs module!"
 }
