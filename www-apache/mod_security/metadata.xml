@@ -3,6 +3,10 @@
 <pkgmetadata>
 	<herd>apache</herd>
 	<maintainer>
+		<email>flameeyes@gentoo.org</email>
+		<name>Diego E. Pettenò</name>
+	</maintainer>
+	<maintainer>
 		<email>chtekk@gentoo.org</email>
 		<name>Luca Longinotti</name>
 	</maintainer>

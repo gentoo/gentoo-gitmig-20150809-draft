@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.21 2009/06/02 16:46:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.22 2009/06/14 10:22:26 flameeyes Exp $
+
+  14 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Add myself as maintainer too since I haven't seen Luca in a while.
 
   02 Jun 2009; Raúl Porcel <armin76@gentoo.org> mod_security-2.5.9.ebuild:
   sparc stable wrt #262302
