@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2779 2009/06/14 09:41:37 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2780 2009/06/14 09:45:30 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2009; Fabian Groffen <grobian@gentoo.org> use.desc:
+  aqua and coreaudio USE-flags are masked in base, but were missing from
+  use.desc, causing repoman warnings for e.g. QT/KDE testers
 
   14 Jun 2009; Fabian Groffen <grobian@gentoo.org> base/use.mask,
   prefix/use.mask:
