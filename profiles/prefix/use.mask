@@ -1,34 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/use.mask,v 1.1 2009/06/06 03:54:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/use.mask,v 1.2 2009/06/14 09:41:38 grobian Exp $
 
 # multilib is never going to work as expected in Prefix
 multilib
 
-# Mask all elibc/kernel combinations, unmasked in the appropriate
-# profiles
-elibc_AIX
-elibc_Darwin
-elibc_FreeBSD
-elibc_HPUX
-elibc_IRIX
-elibc_Interix
-elibc_NetBSD
-elibc_OpenBSD
-elibc_SunOS
+# Mask all glibc/linux combination, unmasked in the appropriate profiles
 elibc_glibc
-elibc_mintlib
-
-kernel_AIX
-kernel_Darwin
-kernel_FreeBSD
-kernel_HPUX
-kernel_IRIX
-kernel_Interix
-kernel_NetBSD
-kernel_OpenBSD
-kernel_SunOS
-kernel_freemint
 kernel_linux
 
 # re-add userland GNU

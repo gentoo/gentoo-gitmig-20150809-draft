@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2778 2009/06/13 23:57:15 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2779 2009/06/14 09:41:37 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2009; Fabian Groffen <grobian@gentoo.org> base/use.mask,
+  prefix/use.mask:
+  Move kernels and elibcs from the Prefix profiles to base
 
   13 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Masked for removal in 30 days. Old and dead by upstream.
