@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.38 2009/06/05 17:50:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.39 2009/06/14 10:49:33 scarabeus Exp $
+
+  14 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> kdiff3-0.9.95.ebuild:
+  Remove wrong src_prepare. Will be handled by eclass soon enought.
 
   05 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> kdiff3-0.9.95.ebuild:
   Adjust useflags to corespond with reality. Thx to Mr_Bones_ for report.
