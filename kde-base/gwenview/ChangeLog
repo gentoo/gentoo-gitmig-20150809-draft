@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/gwenview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.33 2009/06/14 10:22:26 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/gwenview/ChangeLog,v 1.34 2009/06/14 12:30:17 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/gwenview-fix-version.diff:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -gwenview-4.2.3.ebuild:
   Drop KDE 4.2.3
