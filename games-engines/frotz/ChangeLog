@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/frotz
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.14 2009/01/30 06:49:50 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.15 2009/06/14 00:04:28 nyhm Exp $
+
+  14 Jun 2009; Tristan Heaven <nyhm@gentoo.org> frotz-2.43.ebuild,
+  +files/frotz-2.43-glibc2.10.patch:
+  Fix building with glibc-2.10, bug #273528
 
   30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> frotz-2.43.ebuild:
   EAPI=2; respect CC
