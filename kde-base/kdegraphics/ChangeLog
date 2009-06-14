@@ -1,6 +1,15 @@
 # ChangeLog for kde-base/kdegraphics
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.346 2009/03/30 13:03:21 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.347 2009/06/14 12:45:21 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/post-3.5.5-kdegraphics.diff,
+  -files/post-3.5.5-kdegraphics-CVE-2007-0104.diff,
+  -files/kamera-3.5.6-download-fix.diff, -files/kpdf-3.5.7-hash_path.diff,
+  -files/post-3.5.7-kdegraphics-CVE-2007-3387.diff,
+  -files/kdegraphics-kfile-plugins-3.5.7-openexr-1.6.0.patch,
+  -files/post-3.5.8-kdegraphics-kpdf.diff:
+  Clean unneeded patches
 
   30 Mar 2009; Peter Alfredsen <loki_val@gentoo.org>
   kdegraphics-3.5.9.ebuild:
