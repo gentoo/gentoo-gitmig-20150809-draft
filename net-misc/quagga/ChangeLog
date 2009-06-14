@@ -2,7 +2,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.81 2009/05/13 21:27:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.82 2009/06/14 07:41:26 mrness Exp $
+
+*quagga-0.99.12-r1 (14 Jun 2009)
+
+  14 Jun 2009; Alin Năstac <mrness@gentoo.org> +quagga-0.99.12-r1.ebuild:
+  Remove connected routes after removing IP address from interface (#272696)
+  and fix BGP reference counter bug (#271392).
 
 *quagga-0.99.12 (13 May 2009)
 
