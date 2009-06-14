@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kding
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.5 2008/06/01 03:08:56 tgurr Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.6 2009/06/14 09:52:05 scarabeus Exp $
+
+  14 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> kding-0.4.1.ebuild,
+  kding-0.4.3.ebuild:
+  Slotmove.
 
 *kding-0.4.3 (01 Jun 2008)
 
