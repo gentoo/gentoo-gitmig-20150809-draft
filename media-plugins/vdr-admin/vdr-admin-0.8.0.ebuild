@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.4.0.ebuild,v 1.6 2009/06/14 09:37:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-admin/vdr-admin-0.8.0.ebuild,v 1.1 2009/06/14 09:37:37 zzam Exp $
 
 inherit vdr-plugin
 
@@ -40,7 +40,10 @@ src_install() {
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
 
-	echo
-	elog "There more config Parameter than default are in /etc/conf.d/vdr"
-	elog "Find examples in /usr/share/doc/${PF}"
+	ewarn
+	ewarn "This plugin is not changed to support gentoo-vdr-scripts."
+	ewarn "So it may not work without large config changes"
+	ewarn
+	ewarn "There are more config Parameter than default are in /etc/conf.d/vdr"
+	ewarn "Find examples in /usr/share/doc/${PF}"
 }
