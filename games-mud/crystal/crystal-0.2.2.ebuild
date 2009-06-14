@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/crystal-0.2.2.ebuild,v 1.2 2008/05/01 10:30:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/crystal/crystal-0.2.2.ebuild,v 1.3 2009/06/14 00:17:47 nyhm Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="The crystal MUD client"
@@ -17,18 +18,16 @@ DEPEND="sys-libs/zlib
 	sys-libs/ncurses
 	dev-libs/openssl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-64bit.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-glibc2.10.patch
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-scripting || die
-	emake || die "emake failed"
 }
 
 src_install() {
