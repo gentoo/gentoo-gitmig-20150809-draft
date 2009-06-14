@@ -60,3 +60,4 @@ slotmove app-laptop/kthinkbat 0 3.5
 slotmove app-editors/kile 0 3.5
 slotmove app-editors/kxmleditor 0 3.5
 slotmove app-text/kding 0 3.5
+slotmove dev-db/koda 0 3.5
