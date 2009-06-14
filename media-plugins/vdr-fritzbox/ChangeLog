@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-fritzbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fritzbox/ChangeLog,v 1.9 2009/03/15 14:25:56 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-fritzbox/ChangeLog,v 1.10 2009/06/14 10:07:51 zzam Exp $
+
+*vdr-fritzbox-1.2.1 (14 Jun 2009)
+
+  14 Jun 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-fritzbox-1.0.2.ebuild, vdr-fritzbox-1.1.4.ebuild,
+  +vdr-fritzbox-1.2.1.ebuild:
+  Version bumped.
 
 *vdr-fritzbox-1.1.5 (15 Mar 2009)
 
