@@ -1,6 +1,17 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.62 2009/06/14 09:57:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.63 2009/06/14 10:30:56 scarabeus Exp $
+
+*hk_classes-0.8.3-r1 (14 Jun 2009)
+
+  14 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -hk_classes-0.7.4a.ebuild, -files/hk_classes-0.7.4a-amd64.patch,
+  -hk_classes-0.8.1_alpha3.ebuild, -files/hk_classes-amd64.patch,
+  -hk_classes-0.7.1.ebuild, -hk_classes-0.8.1.ebuild,
+  -hk_classes-0.8.2_alpha3.ebuild, +hk_classes-0.8.3-r1.ebuild,
+  metadata.xml:
+  Fix various issues, such as bundled sqlite or wrong configure options.
+  Bugs #259100, #252542. Remove old.
 
   14 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   hk_classes-0.8.3.ebuild:
