@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-xine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-xine/ChangeLog,v 1.83 2009/06/06 11:15:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-xine/ChangeLog,v 1.84 2009/06/14 12:25:44 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/kdemultimedia-3.5.8-xine-lib-1.1.10.1.patch:
+  Clean unneded patches
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org>
   artsplugin-xine-3.5.10.ebuild:
