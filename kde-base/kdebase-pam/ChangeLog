@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-pam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.40 2009/03/08 03:02:31 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-pam/ChangeLog,v 1.41 2009/06/14 12:42:44 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -files/kde-np.pam-5,
+  -files/kde.pam-5:
+  Clean unneeded patches
 
   08 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdebase-pam-7.ebuild:
