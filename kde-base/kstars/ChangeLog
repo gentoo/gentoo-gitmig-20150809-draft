@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.125 2009/06/14 11:32:03 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.126 2009/06/14 13:22:48 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/kstars-4.0.0-destdir.patch, -files/kstars-4.1.0-destdir.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kstars-4.2.3.ebuild:
   Drop KDE 4.2.3
