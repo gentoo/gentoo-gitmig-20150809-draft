@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Sane
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Sane/ChangeLog,v 1.1 2009/06/14 18:41:21 tove Exp $
+
+*Sane-0.03 (14 Jun 2009)
+
+  14 Jun 2009; Torsten Veller <tove@gentoo.org> +Sane-0.03.ebuild,
+  +metadata.xml:
+  Initial commit (#254716). Thanks to Jimmy.Jazz and Toffanin
+
