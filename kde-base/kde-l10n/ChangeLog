@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-l10n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.32 2009/06/12 12:42:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/ChangeLog,v 1.33 2009/06/14 10:44:49 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kde-l10n-4.2.3.ebuild,
+  -kde-l10n-4.2.3-r1.ebuild:
+  Drop KDE 4.2.3
 
 *kde-l10n-4.2.4-r1 (12 Jun 2009)
 
