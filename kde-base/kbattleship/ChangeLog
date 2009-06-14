@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kbattleship
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.117 2009/06/06 11:41:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbattleship/ChangeLog,v 1.118 2009/06/14 10:27:53 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kbattleship-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kbattleship-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
