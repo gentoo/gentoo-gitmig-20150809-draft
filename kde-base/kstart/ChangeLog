@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kstart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.96 2009/06/06 09:24:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstart/ChangeLog,v 1.97 2009/06/14 11:32:28 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kstart-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kstart-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
