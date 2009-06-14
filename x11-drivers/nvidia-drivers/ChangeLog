@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.149 2009/06/12 19:53:35 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.150 2009/06/14 13:58:47 vapier Exp $
+
+  14 Jun 2009; Mike Frysinger <vapier@gentoo.org> +files/nvidia-169.07:
+  Restore nvidia-169.07 as it is still in use by newer ebuilds.
 
   12 Jun 2009; Doug Goldstein <cardoe@gentoo.org>
   -files/NVIDIA_i2c-hwmon.patch, nvidia-drivers-96.43.09.ebuild,
