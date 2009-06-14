@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.7 2009/01/20 15:49:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kobodeluxe/kobodeluxe-0.5.1.ebuild,v 1.8 2009/06/14 00:30:35 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -21,8 +21,16 @@ DEPEND="media-libs/libsdl
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	unpack ./icons.tar.gz
+}
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-glibc29.patch
+	epatch \
+		"${FILESDIR}"/${P}-glibc29.patch \
+		"${FILESDIR}"/${P}-glibc2.10.patch
 	# Fix paths
 	sed -i \
 		-e 's:\$(datadir)/kobo-deluxe:$(datadir)/kobodeluxe:' \
@@ -32,7 +40,6 @@ src_prepare() {
 		-e 's:kobo-deluxe:kobodeluxe:' \
 		data/gfx/Makefile.in \
 		data/sfx/Makefile.in || die "sed data/Makefile.in failed"
-	tar xzvf icons.tar.gz || die "unpacking icons failed"
 }
 
 src_configure() {
