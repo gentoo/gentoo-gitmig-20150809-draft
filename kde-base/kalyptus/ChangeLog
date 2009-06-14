@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kalyptus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.66 2009/06/06 11:11:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.67 2009/06/14 12:32:51 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/no-gtk-glib-check.diff:
+  Clean unneeded patches
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kalyptus-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
