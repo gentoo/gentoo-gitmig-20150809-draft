@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.454 2009/05/16 09:02:35 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.455 2009/06/14 12:41:13 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/ksmserver-3.5.8-gdm_interop_197133.patch,
+  -files/kdm-3.5.8-login.diff:
+  Clean unneeded patches
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org> kdebase-3.5.9.ebuild,
   kdebase-3.5.9-r1.ebuild, kdebase-3.5.9-r2.ebuild, kdebase-3.5.9-r3.ebuild,
