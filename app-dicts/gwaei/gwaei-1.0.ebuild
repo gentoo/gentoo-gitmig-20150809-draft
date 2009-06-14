@@ -1,13 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.0_beta3.ebuild,v 1.3 2009/05/27 16:38:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gwaei/gwaei-1.0.ebuild,v 1.1 2009/06/14 15:35:53 matsuu Exp $
 
 inherit eutils gnome2-utils
 
-MY_P="${P/_beta/b}"
 DESCRIPTION="Japanese-English Dictionary for GNOME"
 HOMEPAGE="http://gwaei.sourceforge.net/"
-SRC_URI="mirror://sourceforge/gwaei/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/gwaei/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -27,8 +26,6 @@ DEPEND="${RDEPEND}
 	gnome? ( app-text/scrollkeeper )
 	nls? ( >=sys-devel/gettext-0.17 )
 	dev-util/pkgconfig"
-
-S="${WORKDIR}/${MY_P}"
 
 src_compile() {
 	econf \
