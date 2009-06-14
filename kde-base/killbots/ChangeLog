@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/killbots
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.14 2009/06/05 00:01:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/killbots/ChangeLog,v 1.15 2009/06/14 11:04:42 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -killbots-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords
