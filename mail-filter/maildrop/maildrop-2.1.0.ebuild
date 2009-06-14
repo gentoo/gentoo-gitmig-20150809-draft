@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.1.0.ebuild,v 1.1 2009/05/16 06:58:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/maildrop-2.1.0.ebuild,v 1.2 2009/06/14 21:02:09 tove Exp $
 
 EAPI=2
 
@@ -56,7 +56,7 @@ src_prepare() {
 
 src_configure() {
 	local myconf
-	local mytrustedusers="apache dspam root mail \
+	local mytrustedusers="apache dspam root mail fetchmail \
 		daemon postmaster qmaild mmdf vmail alias"
 
 	# These flags make maildrop cry
