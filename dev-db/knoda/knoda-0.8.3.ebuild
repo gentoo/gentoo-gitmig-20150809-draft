@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.8.3.ebuild,v 1.5 2009/06/14 10:01:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.8.3.ebuild,v 1.6 2009/06/14 10:03:38 scarabeus Exp $
 
 inherit kde
 
@@ -17,5 +17,6 @@ KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="~dev-db/hk_classes-${PV}"
+RDEPEND="${DEPEND}"
 
 need-kde 3
