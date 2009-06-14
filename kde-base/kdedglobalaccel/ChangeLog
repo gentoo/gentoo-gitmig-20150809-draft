@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdedglobalaccel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdedglobalaccel/ChangeLog,v 1.13 2009/06/04 23:33:49 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdedglobalaccel/ChangeLog,v 1.14 2009/06/14 10:42:10 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdedglobalaccel-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords
