@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2781 2009/06/14 10:01:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2782 2009/06/14 10:14:25 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask net-fs/shfs for removal.
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   Mask KDE 4.2.3

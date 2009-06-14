@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9924 2009/06/14 10:01:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9925 2009/06/14 10:14:25 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
+#  on behalf of QA Team
+#
+# Multiple issue, external kernel module unmaintained since 2005.
+# See bug #274105
+#
+# Removal pending 14 July 2009
+net-fs/shfs
 
 # Alexey Shvetsov <alexxy@gentoo.org> (14 Jun 2009)
 # Mask for removing KDE 4.2.3
