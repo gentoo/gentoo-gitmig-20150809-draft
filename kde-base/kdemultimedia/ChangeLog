@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdemultimedia
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.277 2008/06/07 16:22:31 keytoaster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.278 2009/06/14 12:54:51 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/kdemultimedia-3.5.6-alsa-tests.patch,
+  -files/kmix-3.5.8-198015_XF86Audio.patch,
+  -files/kdemultimedia-3.5.8-xine-lib-1.1.10.1.patch:
+  Clean unneeded patches
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kdemultimedia-3.5.8-r1.ebuild:
