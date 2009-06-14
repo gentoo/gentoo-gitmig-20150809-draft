@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdewebdev
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.161 2008/06/07 11:44:27 keytoaster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.162 2009/06/14 13:00:04 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/quanta-3.5.8-left-over-tab-fix.diff:
+  Clean unneeded patches
 
   07 Jun 2008; Tobias Heinlein <keytoaster@gentoo.org>
   -kdewebdev-3.5.8-r1.ebuild:
