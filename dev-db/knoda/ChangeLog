@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/knoda
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.48 2009/03/23 02:34:28 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/ChangeLog,v 1.49 2009/06/14 10:01:35 scarabeus Exp $
+
+  14 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> knoda-0.7.1.ebuild,
+  knoda-0.7.4.ebuild, knoda-0.7.4-r1.ebuild, knoda-0.8.1_alpha3.ebuild,
+  knoda-0.8.1.ebuild, knoda-0.8.2_alpha3.ebuild, knoda-0.8.3.ebuild:
+  Slotmove.
 
   23 Mar 2009; Friedrich Oslage <bluebird@gentoo.org> knoda-0.8.3.ebuild:
   Stable on sparc, bug #245549

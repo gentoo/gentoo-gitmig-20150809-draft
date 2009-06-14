@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.8.3.ebuild,v 1.4 2009/03/23 02:34:28 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.8.3.ebuild,v 1.5 2009/06/14 10:01:35 scarabeus Exp $
 
 inherit kde
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://hk-classes.sourceforge.net/"
 SRC_URI="mirror://sourceforge/knoda/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
