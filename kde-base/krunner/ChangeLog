@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/krunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.33 2009/06/14 11:27:13 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/ChangeLog,v 1.34 2009/06/14 13:21:43 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/krunner-4.0.2-linkage.patch, -files/krunner-4.0.2-opengl.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -krunner-4.2.3.ebuild:
   Drop KDE 4.2.3
