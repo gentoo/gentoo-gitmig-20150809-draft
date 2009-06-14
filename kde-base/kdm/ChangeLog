@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.166 2009/06/14 10:57:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.167 2009/06/14 13:07:04 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/kdm-3.5.8-login.diff, -files/kdm-4.2.0-qt4.5_h.patch,
+  -files/kdm-4.2.0-qt4.5.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdm-4.2.3.ebuild:
   Drop KDE 4.2.3
