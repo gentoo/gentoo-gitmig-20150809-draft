@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/korganizer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.123 2009/06/14 11:22:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/ChangeLog,v 1.124 2009/06/14 13:20:46 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/4.2.1-r933657_weekview.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -korganizer-4.2.3.ebuild:
   Drop KDE 4.2.3
