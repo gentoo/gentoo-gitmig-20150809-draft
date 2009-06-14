@@ -1,0 +1,58 @@
+diff -Nru ntop-3.3.10.orig/Makefile.am ntop-3.3.10/Makefile.am
+--- ntop-3.3.10.orig/Makefile.am	2009-06-14 10:05:37.000000000 +0000
++++ ntop-3.3.10/Makefile.am	2009-06-14 10:13:28.000000000 +0000
+@@ -45,7 +45,6 @@
+ 
+ #AM_CFLAGS =
+ #AM_LDFLAGS= 
+-ACLOCAL_AMFLAGS=-l m4
+ 
+ DISTCLEANFILES = trivialcompilemessage *.db #* *~ *.log
+ CLEANFILES     = $(DISTCLEANFILES) stamp-h1
+diff -Nru ntop-3.3.10.orig/configure.in ntop-3.3.10/configure.in
+--- ntop-3.3.10.orig/configure.in	2009-05-06 14:55:22.000000000 +0000
++++ ntop-3.3.10/configure.in	2009-06-14 09:48:54.000000000 +0000
+@@ -57,6 +57,7 @@
+ dnl>
+ umask 002
+ AM_CONFIG_HEADER(config.h)
++AM_MAINTAINER_MODE
+ 
+ HAS_ERROR=
+ HAS_WARNING=
+@@ -507,11 +508,6 @@
+     LOCALEDIR="/usr/lib/locale"
+ fi
+ 
+-dnl> Add /usr/local/ /opt/local
+-CFLAGS="${CFLAGS} -I/usr/local/include -I/opt/local/include"
+-CPPFLAGS="${CPPFLAGS} -I/usr/local/include -I/opt/local/include"
+-LDFLAGS="${LDFLAGS} -L/usr/local/lib -L/opt/local/lib"
+-
+ PWD=`pwd`
+ 
+ echo
+diff -Nru ntop-3.3.10.orig/globals-core.c ntop-3.3.10/globals-core.c
+--- ntop-3.3.10.orig/globals-core.c	2009-04-17 20:27:57.000000000 +0000
++++ ntop-3.3.10/globals-core.c	2009-06-14 09:47:43.000000000 +0000
+@@ -386,7 +386,7 @@
+   _mtuSize[DLT_ATM_RFC1483] = 9180                             /* LLC/SNAP encapsulated atm */;
+   _headerSize[DLT_ATM_RFC1483] = 0;
+ 
+-  /* _mtuSize[DLT_RAW] = ?                                        raw IP */
++  _mtuSize[DLT_RAW] = 1500                                     /*   raw IP */;
+   _headerSize[DLT_RAW] = 0;
+ 
+   /* Others defined in bpf.h at tcpdump.org as of the resync - it would be NICE
+diff -Nru ntop-3.3.10.orig/report.c ntop-3.3.10/report.c
+--- ntop-3.3.10.orig/report.c	2009-05-21 21:55:11.000000000 +0000
++++ ntop-3.3.10/report.c	2009-06-14 09:47:43.000000000 +0000
+@@ -2305,7 +2305,7 @@
+   if(fetchPrefsValue("dot.path", buf, sizeof(buf)) != -1) {
+     snprintf(dotPath, sizeof(dotPath), "%s", buf);
+   } else {
+-    snprintf(dotPath, sizeof(dotPath), "/usr/local/bin/dot");
++    snprintf(dotPath, sizeof(dotPath), "/usr/bin/dot");
+     storePrefsValue("dot.path", dotPath); /* Set the default */
+   }
+ 

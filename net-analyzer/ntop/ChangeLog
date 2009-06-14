@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.79 2009/05/09 09:31:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.80 2009/06/14 10:05:51 mrness Exp $
+
+*ntop-3.3.10 (14 Jun 2009)
+
+  14 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/ntop-3.3.10-external-geoip.patch, +files/ntop-3.3.10-gentoo.patch,
+  +ntop-3.3.10.ebuild:
+  Version bump (#271453).
 
   09 May 2009; Alin Năstac <mrness@gentoo.org> metadata.xml,
   ntop-3.3.9-r2.ebuild:
