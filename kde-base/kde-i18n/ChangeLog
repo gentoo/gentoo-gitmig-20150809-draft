@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.165 2009/06/06 11:12:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.166 2009/06/14 12:46:45 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/kde-i18n-3.5.8-farsi.patch, -files/kde-i18n-3.5.8-korean.patch:
+  Clean unneeded patches
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kde-i18n-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
