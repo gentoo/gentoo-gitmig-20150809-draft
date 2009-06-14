@@ -3,10 +3,16 @@
 <pkgmetadata>
 <herd>media-tv</herd>
 <maintainer>
-<email>vdr@gentoo.org</email>
-<name>Gentoo VDR Project</name>
+  <email>vdr@gentoo.org</email>
+  <name>Gentoo VDR Project</name>
+</maintainer>
+<maintainer>
+  <email>vdr@helmutauer.de</email>
+  <name>Helmut Auer</name>
+  <description>Upstream maintainer</description>
 </maintainer>
 <longdescription lang="en">
+VDR plugin: Control the LCD of the Siemens Activy 300
 </longdescription>
 </pkgmetadata>
 

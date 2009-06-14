@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/vdr-alcd
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-alcd/ChangeLog,v 1.2 2006/08/15 10:28:00 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-alcd/ChangeLog,v 1.3 2009/06/14 08:44:13 zzam Exp $
+
+*vdr-alcd-1.5.1 (14 Jun 2009)
+
+  14 Jun 2009; Matthias Schwarzott <zzam@gentoo.org> vdr-alcd-1.0.0.ebuild,
+  +vdr-alcd-1.5.1.ebuild, +files/vdr-alcd-1.5.1-gcc-4.4.diff,
+  +files/vdr-alcd-1.5.1-makefile-cleanup.diff, metadata.xml:
+  Version bumped. Added upstream Helmut Auer to maintainers.
 
   15 Aug 2006; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
   Assigned to Gentoo VDR Project.
