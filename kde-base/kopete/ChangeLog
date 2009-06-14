@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.202 2009/06/14 11:21:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.203 2009/06/14 13:19:37 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/gnomemeeting-ekiga.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kopete-4.2.3.ebuild:
   Drop KDE 4.2.3
