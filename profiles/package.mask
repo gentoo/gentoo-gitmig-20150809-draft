@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9922 2009/06/13 23:57:15 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9923 2009/06/14 09:29:11 dagger Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -34,6 +34,10 @@
 # Theo Chatzimichos <tampakrap@gentoo.org> (14 Jun 2009)
 # Masked for removal in 30 days. Old and dead by upstream.
 app-dicts/kannadic
+
+# Robert Piasek <dagger@gentoo.org> (14 Jun 2009)
+# Masked due to regression bugs in 3G modems handling, bug (#273741)
+=net-misc/networkmanager-0.7.1-r4
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
@@ -1182,10 +1186,6 @@ dev-lang/ghc-bin
 # the Asterisk is coming! the Asterisk is coming!
 >=net-misc/zaptel-1.4.0
 >=net-misc/asterisk-1.4.0
-
-# Robert Buchholz <rbu@gentoo.org> (29 Aug 2007)
-# PPTP Plugin doesn't work on amd64
-net-misc/networkmanager-pptp
 
 # Sven Wegener <swegener@gentoo.org> (07 Aug 2007)
 # CVS snapshot, needs some more testing
