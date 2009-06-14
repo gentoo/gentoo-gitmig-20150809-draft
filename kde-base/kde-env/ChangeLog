@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.41 2009/06/04 23:34:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.42 2009/06/14 10:42:56 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kde-env-4.2.3.ebuild,
+  -kde-env-4.2.3-r1.ebuild:
+  Drop KDE 4.2.3
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords
