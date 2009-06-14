@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hk_classes
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.61 2009/03/23 02:20:14 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.62 2009/06/14 09:57:55 scarabeus Exp $
+
+  14 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  hk_classes-0.8.3.ebuild:
+  Add missing pkgconfig dep per bug #227487. Clean up bit the ebuild.
 
   23 Mar 2009; Friedrich Oslage <bluebird@gentoo.org>
   hk_classes-0.8.3.ebuild:

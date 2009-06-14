@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.3.ebuild,v 1.8 2009/03/23 02:20:14 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.3.ebuild,v 1.9 2009/06/14 09:57:55 scarabeus Exp $
 
 inherit autotools eutils python
 
@@ -23,11 +23,14 @@ LICENSE="LGPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE="doc firebird mysql odbc postgres"
 
-DEPEND=">=media-libs/fontconfig-2.5.0-r1
+RDEPEND=">=media-libs/fontconfig-2.5.0-r1
 	firebird? ( dev-db/firebird )
 	mysql? ( >=dev-db/mysql-3.23.54a )
 	postgres? ( >=virtual/postgresql-server-7.3 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )"
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig
+"
 
 src_unpack() {
 	unpack ${A}
@@ -43,23 +46,25 @@ src_compile() {
 	python_version
 	export LIBPYTHON="-lpython${PYVER} -lz"
 
-	myconf="--with-pythondir=/usr/$(get_libdir)/python${PYVER}/\
+	econf \
+		--with-pythondir=/usr/$(get_libdir)/python${PYVER}/ \
 		$(use_with mysql) \
 		$(use_with firebird) \
 		$(use_with odbc) \
-		$(use_with postgres)"
+		$(use_with postgres)
 
-	econf ${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
 src_install() {
-	use doc && dohtml -r "${WORKDIR}"/${MY_P}/documentation/api
-	use doc && dohtml -r "${WORKDIR}"/hk_classestutorial
-	use doc && dohtml -r "${WORKDIR}"/hk_kdeclssestutorial
-	use doc && dohtml -r "${WORKDIR}"/knodascriptingtutorial
-	use doc && dohtml -r "${WORKDIR}"/knodatutorial
-	use doc && dohtml -r "${WORKDIR}"/pythonreference
+	if use doc; then
+		dohtml -r "${WORKDIR}"/${MY_P}/documentation/api
+		dohtml -r "${WORKDIR}"/hk_classestutorial
+		dohtml -r "${WORKDIR}"/hk_kdeclssestutorial
+		dohtml -r "${WORKDIR}"/knodascriptingtutorial
+		dohtml -r "${WORKDIR}"/knodatutorial
+		dohtml -r "${WORKDIR}"/pythonreference
+	fi
 
 	emake DESTDIR="${D}" install || die "make install failed"
 }
