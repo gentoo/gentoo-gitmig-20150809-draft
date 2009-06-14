@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-strigi-analyzer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.18 2009/06/04 23:48:23 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-strigi-analyzer/ChangeLog,v 1.19 2009/06/14 10:53:45 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdesdk-strigi-analyzer-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   04 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords
