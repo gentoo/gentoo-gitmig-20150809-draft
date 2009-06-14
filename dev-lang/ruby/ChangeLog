@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.410 2009/06/11 14:47:47 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.411 2009/06/14 10:43:16 a3li Exp $
+
+  14 Jun 2009; Alex Legler <a3li@gentoo.org> -ruby-1.8.6_p114.ebuild,
+  -files/ruby-1.8.6-openssl.patch,
+  -files/ruby-1.8.6-shortname_constants.patch,
+  -files/ruby-1.8.6_p111-r13657.patch,
+  -files/ruby-1.8.6_p287-entity_expansion_limit.diff:
+  Removing vulnerable old Ruby version and stale patches, bug 274108.
 
   11 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   ruby-1.8.6_p369.ebuild:
