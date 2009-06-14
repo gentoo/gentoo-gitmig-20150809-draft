@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksudoku
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.33 2009/06/09 13:35:47 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksudoku/ChangeLog,v 1.34 2009/06/14 11:33:52 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -ksudoku-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   09 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> -ksudoku-0.4.ebuild,
   -files/ksudoku-0.4-gcc43.patch:
