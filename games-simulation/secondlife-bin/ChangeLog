@@ -1,6 +1,13 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.22 2009/05/26 16:34:22 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.23 2009/06/14 18:34:25 lavajoe Exp $
+
+*secondlife-bin-1.23_rc4 (14 Jun 2009)
+
+  14 Jun 2009; Joe Peterson <lavajoe@gentoo.org>
+  +secondlife-bin-1.23_rc4.ebuild,
+  +files/secondlife-bin-1.23_rc4-amd64-audio-streaming-fix.patch:
+  Add new 1.23_rc4
 
   26 May 2009; Joe Peterson <lavajoe@gentoo.org>
   secondlife-bin-1.22.11.ebuild, secondlife-bin-1.23_rc2.ebuild:
