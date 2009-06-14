@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.36 2009/06/14 10:21:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.37 2009/06/14 12:28:21 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/dolphin-4.0.2-linkage.patch,
+  -files/dolphin-4.0.2-make-semantic-desktop-optional.patch:
+  Clean unneeded patches
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -dolphin-4.2.3.ebuild,
   -dolphin-4.2.3-r1.ebuild:
