@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.106 2009/06/06 10:59:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.107 2009/06/14 13:11:14 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/klaptopdaemon-3.5.7-has_acpi_sleep.patch,
+  -files/klaptopdaemon-3.5.7-libXss-linking.patch:
+  Clean unneeded patches
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> klaptopdaemon-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
