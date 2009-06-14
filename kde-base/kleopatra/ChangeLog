@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kleopatra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.20 2009/06/05 00:05:46 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/ChangeLog,v 1.21 2009/06/14 11:07:37 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kleopatra-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   05 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> ChangeLog:
   Fix accidently added keywords
