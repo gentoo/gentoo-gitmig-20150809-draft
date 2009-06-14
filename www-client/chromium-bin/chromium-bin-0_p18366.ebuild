@@ -1,12 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.9 2009/06/14 20:49:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-0_p18366.ebuild,v 1.1 2009/06/14 20:49:19 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
 
+# Latest revision id can be found at
+# http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST
+MY_PV="${PV/0\_p}"
+
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://code.google.com/chromium/"
+SRC_URI="http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/${MY_PV}/chrome-linux.zip -> ${PN}-${MY_PV}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~x86"
@@ -21,7 +26,6 @@ AMD64_DEPEND="amd64? (
 	)"
 
 DEPEND="app-arch/unzip
-	net-misc/curl
 	${AMD64_DEPEND}"
 RDEPEND="media-fonts/corefonts
 	>=sys-devel/gcc-4.2
@@ -34,14 +38,6 @@ RDEPEND="media-fonts/corefonts
 S=${WORKDIR}
 
 QA_EXECSTACK="opt/chromium.org/chrome-linux/chrome"
-
-src_unpack() {
-	LV=`curl --silent http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST`
-	elog "Installing/updating to version ${LV}"
-	wget -c "http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/${LV}/chrome-linux.zip" -O "${T}"/${PN}-${LV}.zip
-	unzip -qo "${T}"/${PN}-${LV}.zip || die "Unpack failed"
-	chmod -fR a+rX,u+w,g-w,o-w chrome-linux/
-}
 
 src_install() {
 	declare CHROMIUM_HOME=/opt/chromium.org
