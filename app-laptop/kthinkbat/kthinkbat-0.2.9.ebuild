@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/kthinkbat/kthinkbat-0.2.9.ebuild,v 1.2 2008/06/26 23:13:51 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/kthinkbat/kthinkbat-0.2.9.ebuild,v 1.3 2009/06/14 00:01:23 scarabeus Exp $
 
 EAPI=1
 
@@ -10,7 +10,7 @@ DESCRIPTION="A ThinkPad Battery Viewer Applet"
 HOMEPAGE="https://lepetitfou.dyndns.org/KThinkBat"
 SRC_URI="http://lepetitfou.dyndns.org/download/kthinkbat/src/kthinkbat-0.2.x/${P}.tar.bz2"
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="~amd64 ~x86"
 IUSE="+smapi"
 
