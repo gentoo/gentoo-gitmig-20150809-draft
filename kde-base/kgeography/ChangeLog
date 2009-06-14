@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgeography
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.88 2009/06/06 09:49:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgeography/ChangeLog,v 1.89 2009/06/14 11:01:10 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kgeography-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kgeography-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
