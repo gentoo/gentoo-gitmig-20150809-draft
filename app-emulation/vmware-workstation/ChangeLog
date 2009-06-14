@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.204 2009/06/02 20:27:25 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.205 2009/06/14 15:40:55 vadimk Exp $
+
+*vmware-workstation-6.5.2.156735-r1 (14 Jun 2009)
+
+  14 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org
+  +vmware-workstation-6.5.2.156735-r1.ebuild, metadata.xml:
+  Bug 273750.
 
   02 Jun 2009; Vadim Kuznetsov vadimk@gentoo.org Manifest:
   Bug 272290. Fixing Manifest
