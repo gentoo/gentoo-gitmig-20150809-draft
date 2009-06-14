@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kmilo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.103 2009/06/06 11:00:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmilo/ChangeLog,v 1.104 2009/06/14 13:14:21 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -files/kmilo-3.5.8-198015_XF86Audio.patch:
+  Clean unneeded patches
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kmilo-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
