@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knetattach
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.117 2009/06/06 09:45:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetattach/ChangeLog,v 1.118 2009/06/14 11:14:00 alexxy Exp $
+
+  14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -knetattach-4.2.3.ebuild:
+  Drop KDE 4.2.3
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> knetattach-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
