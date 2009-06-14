@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.125 2009/05/10 09:02:41 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.126 2009/06/14 17:25:13 ford_prefect Exp $
+
+  14 Jun 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  pulseaudio-0.9.15.ebuild:
+  Add extra comment about system-wide support since upstream gets a lot of
+  folks who are misusing the feature.
 
   10 May 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   pulseaudio-0.9.15.ebuild:
