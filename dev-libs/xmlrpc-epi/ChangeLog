@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/xmlrpc-epi
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.1 2009/06/15 22:07:10 volkmar Exp $
+
+*xmlrpc-epi-0.54 (15 Jun 2009)
+
+  15 Jun 2009; Mounir Lamouri <volkmar@gentoo.org> +metadata.xml,
+  +xmlrpc-epi-0.54.ebuild:
+  Initial commit. Fix bug 225295
+
