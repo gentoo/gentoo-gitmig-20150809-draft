@@ -1,6 +1,10 @@
 # ChangeLog for games-server/tetrix
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.7 2007/04/28 16:04:40 tove Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/ChangeLog,v 1.8 2009/06/15 04:24:28 mr_bones_ Exp $
+
+  15 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/tetrix-1.13.16.1.40c-build.patch, tetrix-1.13.16.1.40c-r2.ebuild:
+  EAPI=2; quoting; roll-up patch and fix warnings and hostname code
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org>
   tetrix-1.13.16.1.40c-r2.ebuild:
