@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.6 2009/06/10 18:12:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.7 2009/06/15 21:56:17 tester Exp $
+
+  15 Jun 2009; Olivier Crête <tester@gentoo.org> farsight2-0.0.10.ebuild:
+  Add some codecs to make the tests runnable
 
   10 Jun 2009; Olivier Crête <tester@gentoo.org> farsight2-0.0.10.ebuild:
   Bump the dependency to gst-plugins-base 0.10.23, bug #271582

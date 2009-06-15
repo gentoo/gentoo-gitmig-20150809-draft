@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.10.ebuild,v 1.2 2009/06/10 18:12:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/farsight2-0.0.10.ebuild,v 1.3 2009/06/15 21:56:17 tester Exp $
 
 EAPI="2"
 
@@ -27,6 +27,8 @@ RDEPEND="${COMMONDEPEND}
 	>=media-libs/gst-plugins-bad-0.10.11"
 
 DEPEND="${COMMONDEPEND}
+	test? ( media-plugins/gst-plugins-vorbis
+		media-plugins/gst-plugins-speex )
 	dev-util/pkgconfig"
 
 src_configure() {
