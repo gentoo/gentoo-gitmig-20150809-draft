@@ -1,6 +1,13 @@
 # ChangeLog for media-video/minitube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.3 2009/06/15 14:28:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/ChangeLog,v 1.4 2009/06/15 15:19:00 hwoarang Exp $
+
+*minitube-0.2.1-r1 (15 Jun 2009)
+
+  15 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +minitube-0.2.1-r1.ebuild:
+  Use kde use flag to handle the phonon dependencies. Apply patch
+  conditionaly
 
   15 Jun 2009; Markos Chandras <hwoarang@gentoo.org> minitube-0.2.1.ebuild:
   Added accessibility use dependency. Fixes bug 273813
