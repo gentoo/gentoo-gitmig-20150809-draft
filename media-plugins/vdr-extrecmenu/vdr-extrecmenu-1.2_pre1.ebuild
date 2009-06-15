@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2_pre1.ebuild,v 1.4 2009/05/07 21:00:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/vdr-extrecmenu-1.2_pre1.ebuild,v 1.5 2009/06/15 19:49:38 zzam Exp $
 
 inherit vdr-plugin eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	vdr-plugin_src_unpack
 
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 
 	if grep -q fskProtection /usr/include/vdr/timers.h; then
 		sed -i "s:#WITHPINPLUGIN:WITHPINPLUGIN:" Makefile

@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-extrecmenu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.23 2009/05/07 21:00:04 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extrecmenu/ChangeLog,v 1.24 2009/06/15 19:49:38 zzam Exp $
+
+  15 Jun 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-extrecmenu-1.2_pre1.ebuild,
+  +files/vdr-extrecmenu-1.2_pre1-gcc44.patch:
+  Make it compile with glibc-2.10 and gcc-4.4, Bug #273854.
 
   07 May 2009; Joerg Bornkessel <hd_brummy@gentoo.org>
   -files/vdr-extrecmenu-0.12a-uint32_t.diff, -vdr-extrecmenu-0.13.ebuild,
