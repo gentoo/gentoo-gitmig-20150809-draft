@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.126 2009/06/14 17:25:13 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.127 2009/06/15 15:04:53 flameeyes Exp $
+
+  15 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/pulseaudio.init.d-4:
+  Add a default-off killswitch for systemwide mode in the init script.
 
   14 Jun 2009; Arun Raghavan <ford_prefect@gentoo.org>
   pulseaudio-0.9.15.ebuild:
