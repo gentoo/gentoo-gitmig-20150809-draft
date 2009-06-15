@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.74.ebuild,v 1.7 2009/01/10 17:44:39 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/nfbtrans/nfbtrans-7.74.ebuild,v 1.8 2009/06/15 21:12:04 williamh Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	mv SPANISH.ZIP spanish.zip
 	make lowercase || die
 	epatch "${FILESDIR}"/${P}-gentoo-fix.patch
+	epatch "${FILESDIR}"/${P}-getline-fix.patch
 }
 
 src_compile() {
