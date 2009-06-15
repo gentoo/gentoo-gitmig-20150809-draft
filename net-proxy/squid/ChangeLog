@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.251 2009/05/20 17:06:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.252 2009/06/15 23:42:37 mrness Exp $
+
+*squid-3.0.16 (15 Jun 2009)
+
+  15 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squid-2-capability.patch, +files/squid-3.0.16-adapted-zph.patch,
+  +files/squid-3.0.16-cross-compile.patch, +files/squid-3.0.16-gentoo.patch,
+  +files/squid-3-capability.patch, squid-2.7.6-r1.ebuild,
+  squid-3.0.15.ebuild, +squid-3.0.16.ebuild, squid-3.1.0.7_beta.ebuild:
+  Remove ugly libcap hack (#270450). Version bump.
 
   20 May 2009; nixnut <nixnut@gentoo.org> squid-3.0.14-r2.ebuild:
   ppc stable #269096

@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.15.ebuild,v 1.1 2009/05/09 08:49:09 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.15.ebuild,v 1.2 2009/06/15 23:42:37 mrness Exp $
 
 EAPI="2"
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
 
 inherit eutils pam toolchain-funcs autotools linux-info
 
@@ -61,6 +59,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3-capability.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	epatch "${FILESDIR}"/${P}-cross-compile.patch

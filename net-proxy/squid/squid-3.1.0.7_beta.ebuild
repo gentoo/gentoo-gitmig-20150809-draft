@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.7_beta.ebuild,v 1.1 2009/04/26 12:03:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.7_beta.ebuild,v 1.2 2009/06/15 23:42:37 mrness Exp $
 
 EAPI="2"
 WANT_AUTOCONF="latest"
@@ -54,6 +54,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-3-capability.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 
 	# recursive eautoreconf breaks lib/libLtdl/libtool script and elibtoolize breaks linking

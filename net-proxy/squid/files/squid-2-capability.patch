@@ -1,0 +1,15 @@
+diff -Nru squid-2.7.STABLE6.orig/src/tools.c squid-2.7.STABLE6/src/tools.c
+--- squid-2.7.STABLE6.orig/src/tools.c	2008-10-06 23:27:17.000000000 +0200
++++ squid-2.7.STABLE6/src/tools.c	2009-06-15 23:40:53.000000000 +0200
+@@ -42,11 +42,6 @@
+ 
+ #ifdef _SQUID_LINUX_
+ #if HAVE_SYS_CAPABILITY_H
+-#undef _POSIX_SOURCE
+-/* Ugly glue to get around linux header madness colliding with glibc */
+-#define _LINUX_TYPES_H
+-#define _LINUX_FS_H
+-typedef uint32_t __u32;
+ #include <sys/capability.h>
+ #endif
+ #endif
