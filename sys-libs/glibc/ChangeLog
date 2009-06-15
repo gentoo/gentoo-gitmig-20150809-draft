@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.625 2009/05/18 04:41:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.626 2009/06/15 05:48:35 jer Exp $
+
+  15 Jun 2009; Jeroen Roovers <jer@gentoo.org>
+  glibc-2.9_p20081201-r2.ebuild:
+  Stable for HPPA (bug #270243).
 
 *glibc-2.10.1 (18 May 2009)
 
