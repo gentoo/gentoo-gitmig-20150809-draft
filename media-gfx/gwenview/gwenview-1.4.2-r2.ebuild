@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2-r2.ebuild,v 1.4 2009/05/30 17:09:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2-r2.ebuild,v 1.5 2009/06/15 11:44:42 pva Exp $
 
 ARTS_REQUIRED="never"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://gwenview.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="amd64 ppc ~sparc x86 ~x86-fbsd"
 IUSE="kipi"
 
@@ -58,19 +58,19 @@ src_compile() {
 	local myconf="$(use_with kipi)"
 	rm -f "${S}/configure"
 
-	kde_src_compile
-
 	if [ -d "${WORKDIR}/${I18N}" ]; then
 		KDE_S="${WORKDIR}/${I18N}" \
+		kde_src_compile
+	else
 		kde_src_compile
 	fi
 }
 
 src_install() {
-	kde_src_install
-
 	if [ -d "${WORKDIR}/${I18N}" ]; then
 		KDE_S="${WORKDIR}/${I18N}" \
+		kde_src_install
+	else
 		kde_src_install
 	fi
 }
