@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.5 2009/06/14 17:25:13 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.6 2009/06/15 15:18:08 flameeyes Exp $
 
 EAPI=2
 
@@ -118,7 +118,7 @@ src_configure() {
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	newconfd "${FILESDIR}/pulseaudio.conf.d" pulseaudio
 
@@ -162,7 +162,7 @@ pkg_postinst() {
 		elog
 		elog "By enabling gnome USE flag, you enabled gconf support. Please note"
 		elog "that you might need to remove the gnome USE flag or disable the"
-		elog "gconf module on /etc/pulse/default.pa to be able to use PulseAudio"
+		elog "gconf module on /etc/pulse/system.pa to be able to use PulseAudio"
 		elog "with a system-wide instance."
 	fi
 	elog
