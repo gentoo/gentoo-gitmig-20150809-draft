@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xfwm4-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.15 2009/06/13 14:01:54 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.16 2009/06/15 00:11:43 jer Exp $
+
+  15 Jun 2009; Jeroen Roovers <jer@gentoo.org> xfwm4-themes-4.6.0.ebuild:
+  Stable for HPPA (bug #265587).
 
   13 Jun 2009; Tiago Cunha <tcunha@gentoo.org> xfwm4-themes-4.6.0.ebuild:
   stable sparc, bug 265587
