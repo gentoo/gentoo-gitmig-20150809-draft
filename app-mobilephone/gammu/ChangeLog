@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.69 2009/05/13 19:59:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.70 2009/06/15 21:24:16 mrness Exp $
+
+  15 Jun 2009; Alin Năstac <mrness@gentoo.org> gammu-1.24.0-r1.ebuild:
+  Add USB support (#270039).
 
 *gammu-1.24.0-r1 (13 May 2009)
 

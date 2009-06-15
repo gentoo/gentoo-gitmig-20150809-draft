@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0-r1.ebuild,v 1.1 2009/05/13 19:59:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.24.0-r1.ebuild,v 1.2 2009/06/15 21:24:16 mrness Exp $
 
 EAPI="2"
 
@@ -13,11 +13,11 @@ SRC_URI="http://dl.cihar.com/gammu/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="curl debug bluetooth irda mysql postgres dbi nls"
+IUSE="curl debug bluetooth irda mysql postgres dbi nls usb"
 
-# TODO after bug 247687 gets solved: usb? ( >=dev-libs/libusb-1.0.0 )
 RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
 	curl? ( net-misc/curl )
+	usb? ( dev-libs/libusb:1 )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
 	dbi? ( >=dev-db/libdbi-0.8.3 )
@@ -55,10 +55,10 @@ src_prepare() {
 
 src_configure() {
 	# debug flag is used inside cmake-utils.eclass
-	# TODO	$(cmake-utils_use_with usb USB) \
 	local mycmakeargs="$(cmake-utils_use_with bluetooth Bluez) \
 		$(cmake-utils_use_with irda IRDA) \
 		$(cmake-utils_use_with curl CURL) \
+		$(cmake-utils_use_with usb USB) \
 		$(cmake-utils_use_with mysql MySQL) \
 		$(cmake-utils_use_with postgres Postgres) \
 		$(cmake-utils_use_with dbi LibDBI) \
