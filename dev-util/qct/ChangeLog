@@ -1,0 +1,8 @@
+# ChangeLog for dev-util/qct
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qct/ChangeLog,v 1.1 2009/06/15 20:19:28 yngwin Exp $
+
+  15 Jun 2009; Ben de Groot <yngwin@gentoo.org> +files/qct.rc:
+  Initial import from qting-edge overlay. Ebuild developed by Dror Levin and
+  contributors in bug 162963.
+
