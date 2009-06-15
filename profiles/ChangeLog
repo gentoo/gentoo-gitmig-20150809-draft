@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2785 2009/06/15 11:46:28 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2786 2009/06/15 14:29:37 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask yaffs-utils since it's currently not building and it's a live ebuild.
 
   15 Jun 2009; Peter Volkov <pva@gentoo.org> updates/2Q-2009:
   Moved slot for media-gfx/gwenview: 0 -> 3.5
