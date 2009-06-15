@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.3.3-r2.ebuild,v 1.6 2009/06/04 20:26:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.3.3-r2.ebuild,v 1.7 2009/06/15 16:56:42 armin76 Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -13,7 +13,7 @@ SRC_URI="http://memcached.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="test slabs-reassign"
 
 RDEPEND=">=dev-libs/libevent-1.4
