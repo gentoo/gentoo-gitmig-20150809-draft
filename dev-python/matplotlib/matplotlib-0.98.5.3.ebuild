@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.98.5.2-r3.ebuild,v 1.6 2009/05/30 09:07:05 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.98.5.3.ebuild,v 1.1 2009/06/15 05:32:10 bicatali Exp $
 
 WX_GTK_VER=2.8
 EAPI=2
@@ -12,7 +12,7 @@ DESCRIPTION="Pure python plotting library with matlab like syntax"
 HOMEPAGE="http://matplotlib.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-IUSE="cairo doc excel examples fltk gtk latex qt3 qt4 traits tk wxwindows"
+IUSE="cairo doc excel examples fltk gtk latex qt3 qt4 traits tk wxwidgets"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="PYTHON BSD"
@@ -24,7 +24,7 @@ CDEPEND=">=dev-python/numpy-1.1
 	media-libs/libpng
 	gtk? ( dev-python/pygtk )
 	tk? ( dev-lang/python[tk] )
-	wxwindows? ( dev-python/wxpython:2.8 )"
+	wxwidgets? ( dev-python/wxpython:2.8 )"
 
 DEPEND="${CDEPEND}
 	dev-python/pycxx
@@ -45,7 +45,7 @@ RDEPEND="${CDEPEND}
 	excel?  ( dev-python/xlwt )
 	fltk?   ( dev-python/pyfltk )
 	qt3?    ( dev-python/PyQt )
-	qt4?    ( dev-python/PyQt4 )
+	qt4?    ( dev-python/PyQt4[X] )
 	traits? ( dev-python/traits dev-python/configobj )
 	latex?  (
 		virtual/latex-base
@@ -71,9 +71,9 @@ use_setup() {
 
 src_prepare() {
 	# patch from mandriva
-	epatch "${FILESDIR}"/${P}-literal.patch
+	epatch "${FILESDIR}"/${PN}-0.98.5.2-literal.patch
 	# avoid to launch xv while building examples docs
-	epatch "${FILESDIR}"/${P}-no-xv.patch
+	epatch "${FILESDIR}"/${PN}-0.98.5.2-no-xv.patch
 
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
@@ -85,7 +85,7 @@ src_prepare() {
 		[gui_support]
 		$(use_setup gtk)
 		$(use_setup tk)
-		$(use_setup wxwindows wx)
+		$(use_setup wxwidgets wx)
 		$(use_setup qt3 qt)
 		$(use_setup qt4)
 		$(use_setup fltk)
