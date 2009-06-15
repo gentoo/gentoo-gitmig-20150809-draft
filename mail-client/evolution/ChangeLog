@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.267 2009/06/11 19:59:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.268 2009/06/15 03:55:22 jer Exp $
+
+  15 Jun 2009; Jeroen Roovers <jer@gentoo.org> evolution-2.26.2.ebuild:
+  Marked ~hppa (bug #271002).
 
   11 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   evolution-2.26.2.ebuild:
