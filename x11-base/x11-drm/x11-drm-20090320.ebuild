@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.7 2009/06/13 13:41:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20090320.ebuild,v 1.8 2009/06/15 23:42:35 battousai Exp $
 
 inherit eutils x11 linux-mod autotools
 
@@ -24,7 +24,7 @@ IUSE="${IUSE_VIDEO_CARDS} kernel_FreeBSD kernel_linux"
 RESTRICT="strip test"
 
 S="${WORKDIR}/drm"
-PATCHVER="0.1"
+PATCHVER="0.2"
 PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${WORKDIR}/excluded"
 
