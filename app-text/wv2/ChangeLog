@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.53 2009/06/09 14:40:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.54 2009/06/15 01:18:51 jer Exp $
+
+  15 Jun 2009; Jeroen Roovers <jer@gentoo.org> wv2-0.3.1.ebuild:
+  Stable for HPPA (bug #271967).
 
   09 Jun 2009; Raúl Porcel <armin76@gentoo.org> wv2-0.3.1.ebuild:
   ia64 stable wrt #271967
