@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.14-r1.ebuild,v 1.1 2009/06/15 19:50:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.5.14-r1.ebuild,v 1.2 2009/06/15 20:18:21 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -119,7 +119,6 @@ EOF
 	#                             ----------------------------
 	#                             encutils     | cssutils
 	#                             odf          | odfpy
-	module is installed by cssutils and 
 	rm -r "${D}"/usr/share/mime/{subclasses,XMLnamespaces,globs{,2},mime.cache,magic,aliases,types,treemagic,{generic-,}icons} \
 		"${D}"/usr/share/{applnk,desktop-directories} \
 		"${D}$(python_get_sitedir)"/{cherrypy,cssutils,encutils,odf,pyPdf}
