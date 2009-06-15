@@ -1,0 +1,11 @@
+# ChangeLog for x11-misc/xdotool
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/ChangeLog,v 1.1 2009/06/15 17:13:41 joker Exp $
+
+*xdotool-20090609 (15 Jun 2009)
+
+  15 Jun 2009; Christian Birchinger <joker@gentoo.org>
+  +xdotool-20090609.ebuild:
+  Initial import. Thanks to Maryasin Semen <marsoft@ya.ru> and Urban
+  <urban82@gmail.com>
+
