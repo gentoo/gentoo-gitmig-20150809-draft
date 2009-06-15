@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2787 2009/06/15 14:33:21 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2788 2009/06/15 15:23:27 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2009; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
+  add ipafont USE flag for media-fonts/mplus-outline-fonts
 
   15 Jun 2009; Alex Legler <a3li@gentoo.org> package.mask:
   Removing ruby-config mask, the packages are gone. Bugs 251833 and 274108.
