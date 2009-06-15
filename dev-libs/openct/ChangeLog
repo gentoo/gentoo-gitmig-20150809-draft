@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.67 2009/05/16 09:19:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.68 2009/06/15 03:25:32 jer Exp $
+
+  15 Jun 2009; Jeroen Roovers <jer@gentoo.org> openct-0.6.16.ebuild:
+  Stable for HPPA (bug #274177).
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org> openct-0.6.14.ebuild,
   openct-0.6.14-r1.ebuild, openct-0.6.15.ebuild:
