@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.14 2009/06/11 18:09:38 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.15 2009/06/15 03:54:38 jer Exp $
+
+  15 Jun 2009; Jeroen Roovers <jer@gentoo.org> libpst-0.6.37.ebuild:
+  Marked ~hppa (bug #271002).
 
   11 Jun 2009; Tobias Klausmann <klausman@gentoo.org> libpst-0.6.37.ebuild:
   Keyworded on alpha, bug #271000
