@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9931 2009/06/16 07:09:25 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9932 2009/06/16 07:18:39 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (16 Jun 2009)
+# will be treecleaned in 30 days, it's just beyond useless
+x11-libs/liboldX
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (15 Jun 2009)
 # Live ebuild, we cannot guarantee its working state
