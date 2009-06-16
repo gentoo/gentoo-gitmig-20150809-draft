@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.118 2009/06/13 21:38:22 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.119 2009/06/16 15:16:08 hwoarang Exp $
+
+*PyQt-3.18.1 (16 Jun 2009)
+
+  16 Jun 2009; Markos Chandras <hwoarang@gentoo.org> +PyQt-3.18.1.ebuild:
+  Version bump. Bug-fix release
 
   13 Jun 2009; Markos Chandras <hwoarang@gentoo.org> PyQt-3.17.6.ebuild:
   Fix sip dependencies
