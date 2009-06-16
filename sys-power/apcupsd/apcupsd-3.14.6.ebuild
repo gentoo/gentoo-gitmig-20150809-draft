@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.6.ebuild,v 1.1 2009/05/16 20:50:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.6.ebuild,v 1.2 2009/06/16 14:05:36 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -77,7 +77,10 @@ src_install() {
 
 	rm "${D}"/etc/init.d/apcupsd
 	newinitd "${FILESDIR}/${PN}.init.2" "${PN}" || die "newinitd failed"
-	newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
+
+	if has_version sys-apps/openrc; then
+		newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
+	fi
 }
 
 pkg_postinst() {

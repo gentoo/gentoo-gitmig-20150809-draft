@@ -1,6 +1,12 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.48 2009/05/23 12:03:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.49 2009/06/16 14:05:36 flameeyes Exp $
+
+  16 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  apcupsd-3.14.6.ebuild:
+  Only install the powerfail init script if openrc is installed; this way
+  it's not polluting the installation for baselayout 1 users. Closes bug
+  #271480.
 
   23 May 2009; Markus Meier <maekke@gentoo.org> apcupsd-3.14.5-r2.ebuild:
   amd64 stable, bug #255048
