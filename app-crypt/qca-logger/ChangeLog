@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-logger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.6 2009/06/10 20:19:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-logger/ChangeLog,v 1.7 2009/06/16 18:39:19 klausman Exp $
+
+  16 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  qca-logger-2.0.0_beta2.ebuild:
+  Stable on alpha, bug #272865
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org>
   qca-logger-2.0.0_beta2.ebuild:
