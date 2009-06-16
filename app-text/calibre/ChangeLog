@@ -1,9 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.32 2009/06/16 18:51:13 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.33 2009/06/16 18:52:47 zmedico Exp $
 
   16 Jun 2009; Zac Medico <zmedico@gentoo.org> -calibre-0.4.76.ebuild,
-  -calibre-0.5.13-r2.ebuild:
+  -calibre-0.5.13-r2.ebuild, -files/bug_270746_UnicodeEncodeError.patch:
   Remove old versions.
 
 *calibre-0.6_beta6 (16 Jun 2009)
