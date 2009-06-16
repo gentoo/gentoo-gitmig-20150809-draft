@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.350 2009/06/04 16:25:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.351 2009/06/16 07:42:55 jer Exp $
+
+*opera-10.00_pre4440 (16 Jun 2009)
+
+  16 Jun 2009; Jeroen Roovers <jer@gentoo.org> +opera-10.00_pre4440.ebuild:
+  Version bump <http://unite.opera.com/>.
 
   04 Jun 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4402.ebuild:
   Fix the fix (bug #272496 again).
