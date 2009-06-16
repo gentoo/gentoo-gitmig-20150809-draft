@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/pykde4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.23 2009/06/14 11:55:31 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/ChangeLog,v 1.24 2009/06/16 15:27:57 hwoarang Exp $
+
+*pykde4-4.2.4-r2 (16 Jun 2009)
+
+  16 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  -pykde4-4.2.4-r1.ebuild, +pykde4-4.2.4-r2.ebuild:
+  Drop qt3support use dependecy from PyQt4. Remove previous non-working
+  ebuild
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -pykde4-4.2.3.ebuild:
   Drop KDE 4.2.3

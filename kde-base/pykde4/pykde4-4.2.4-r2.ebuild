@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.4-r1.ebuild,v 1.1 2009/06/11 13:33:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.4-r2.ebuild,v 1.1 2009/06/16 15:27:57 hwoarang Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="akonadi debug examples semantic-desktop"
 
 DEPEND="
-	>=dev-python/PyQt4-4.5_pre1[dbus,qt3support,svg,webkit,X]
+	>=dev-python/PyQt4-4.5_pre1[dbus,svg,webkit,X]
 	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,opengl,semantic-desktop?]
 	akonadi? ( >=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=] )
 "
