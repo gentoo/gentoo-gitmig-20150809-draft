@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.3 2008/11/18 22:38:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-1.0.2-r2.ebuild,v 1.4 2009/06/16 20:28:29 nyhm Exp $
 
+EAPI=2
 inherit eutils python toolchain-funcs games
 
 DESCRIPTION="Fun 3D puzzle game using SDL/OpenGL"
@@ -13,26 +14,26 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-RDEPEND=">=media-libs/libsdl-1.2
-	>=media-libs/sdl-image-1.2.2
-	>=media-libs/sdl-mixer-1.2.5
-	>=dev-lang/python-2.2
+RDEPEND="media-libs/libsdl[opengl]
+	media-libs/sdl-image
+	media-libs/sdl-mixer
+	dev-lang/python
+	virtual/opengl
+	virtual/glu
 	virtual/glut"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
-		"${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}/${P}"-freeglut.patch \
-		"${FILESDIR}/${P}"-gcc43.patch
-	# There are CVS directories in the tgz file
-	rm -rf $(find -name CVS -type d)
-	rm -rf $(find -name .cvsignore)
+		"${FILESDIR}"/${P}-gcc41.patch \
+		"${FILESDIR}"/${P}-freeglut.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-build.patch
+	ecvs_clean
+	rm -f py/runkiki
 
 	# Change the hard-coded data dir for sounds, etc...
 	sed -i \
@@ -41,13 +42,6 @@ src_unpack() {
 		-e "s:KConsole\:\:printf(\"           ... assuming resources in current directory\");::g" \
 		src/main/KikiController.cpp \
 		|| die "sed KikiController.cpp failed"
-	python_version
-	sed -i \
-		-e "/^PYTHON_VERSION/s/2.3/${PYVER}/" \
-		-e '/lib-dynload/d' \
-		-e '/^PYTHONLIBS/s:\\:-lpython$(PYTHON_VERSION):' \
-		linux/Makefile \
-		|| die "sed kiki_src/kiki/linux/Makefile failed"
 
 	# Bug 139570
 	cd SWIG
@@ -56,9 +50,9 @@ src_unpack() {
 }
 
 src_compile() {
-	tc-export AR CXX
-	emake -C kodilib/linux || die "emake in kodilib/linux failed"
-	emake -C linux || die "emake in linux failed"
+	emake -C kodilib/linux AR="$(tc-getAR)" || die "emake kodilib failed"
+	python_version
+	emake -C linux PYTHON_VERSION="${PYVER}" || die "emake linux failed"
 }
 
 src_install() {
