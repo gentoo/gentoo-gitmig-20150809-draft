@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9930 2009/06/16 07:07:59 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9931 2009/06/16 07:09:25 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -87,12 +87,6 @@ dev-ruby/freeride
 # Markus Meier <maekke@gentoo.org> (13 Jun 2009)
 # mask pre releases of media-gfx/inkscape-0.47
 >=media-gfx/inkscape-0.47_pre0
-
-# Rémi Cardona <remi@gentoo.org> (10 Jun 2009)
-# see bug #260582 for xorg-server 1.6 issues
-# both are "unmaskable" when I write the upgrade guide
->=x11-misc/xkeyboard-config-1.6
->=x11-base/xorg-server-1.6.1
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
