@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/pidgin-msn-pecan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.6 2009/02/15 23:46:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/ChangeLog,v 1.7 2009/06/16 13:38:23 voyageur Exp $
+
+*pidgin-msn-pecan-0.0.19 (16 Jun 2009)
+
+  16 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -pidgin-msn-pecan-0.0.14.ebuild, -pidgin-msn-pecan-0.0.15.ebuild,
+  -pidgin-msn-pecan-0.0.16.ebuild, +pidgin-msn-pecan-0.0.19.ebuild:
+  Version bump, bugfixes and support for 'Now Playing' status field. Also
+  remove some old versions
 
 *pidgin-msn-pecan-0.0.18 (15 Feb 2009)
 

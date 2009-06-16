@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/pidgin-msn-pecan-0.0.15.ebuild,v 1.1 2008/08/29 08:41:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-msn-pecan/pidgin-msn-pecan-0.0.19.ebuild,v 1.1 2009/06/16 13:38:23 voyageur Exp $
 
 inherit toolchain-funcs multilib
 
@@ -22,13 +22,6 @@ DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i -e "s:/lib:/$(get_libdir):" Makefile || die "unable to fix Makefile"
-}
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die "emake failed"
