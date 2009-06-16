@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.49 2009/02/15 17:33:26 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.50 2009/06/16 19:07:09 fauli Exp $
+
+  16 Jun 2009; Christian Faulhammer <fauli@gentoo.org> poi-3.2.ebuild:
+  stable x86, bug 258723
 
   15 Feb 2009; Vlastimil Babka <caster@gentoo.org>
   -files/poi-3.0.1-src-isDateFormat.patch, -poi-3.0.1-r1.ebuild:
