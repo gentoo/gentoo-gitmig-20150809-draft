@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fdupes
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.27 2009/01/27 08:41:55 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fdupes/ChangeLog,v 1.28 2009/06/16 18:07:05 klausman Exp $
+
+  16 Jun 2009; Tobias Klausmann <klausman@gentoo.org> fdupes-1.40-r3.ebuild:
+  Keyworded on alpha, bug #272785
 
   27 Jan 2009; Peter Volkov <pva@gentoo.org> -fdupes-1.40.ebuild,
   fdupes-1.40-r3.ebuild:
