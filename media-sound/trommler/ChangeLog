@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/trommler
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.24 2009/06/10 19:58:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trommler/ChangeLog,v 1.25 2009/06/16 18:48:40 klausman Exp $
+
+  16 Jun 2009; Tobias Klausmann <klausman@gentoo.org> trommler-3.8.ebuild:
+  Stable on alpha, bug #272874
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org> trommler-3.8.ebuild:
   amd64/x86 stable, bug #272874
