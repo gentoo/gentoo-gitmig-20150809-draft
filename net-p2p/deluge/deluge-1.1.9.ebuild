@@ -1,33 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-9999.ebuild,v 1.21 2009/06/16 16:03:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/deluge-1.1.9.ebuild,v 1.1 2009/06/16 16:03:59 armin76 Exp $
 
-inherit eutils distutils subversion flag-o-matic
+EAPI="2"
 
-ESVN_REPO_URI="http://svn.deluge-torrent.org/trunk"
-ESVN_PROJECT="deluge"
+inherit eutils distutils flag-o-matic
 
 DESCRIPTION="BitTorrent client with a client/server model."
 HOMEPAGE="http://deluge-torrent.org/"
-SRC_URI=""
+SRC_URI="http://download.deluge-torrent.org/source/${P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gtk libnotify"
 
-DEPEND=">=dev-lang/python-2.5
-	>=dev-libs/boost-1.34
-	dev-python/setuptools"
+DEPEND=">=dev-lang/python-2.4
+	dev-python/setuptools
+	|| ( >=dev-libs/boost-1.34 =dev-libs/boost-1.33*[threads] )"
 RDEPEND="${DEPEND}
-	dev-python/chardet
 	dev-python/pyxdg
-	dev-python/twisted
-	dev-python/twisted-web
-	dev-python/simplejson
-	dev-python/pyopenssl
+	dev-python/pygobject
 	gtk? (
-		dev-python/pygobject
 		>=dev-python/pygtk-2
 		dev-python/pyxdg
 		dev-python/dbus-python
