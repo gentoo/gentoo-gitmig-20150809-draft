@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/openclipart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.2 2009/06/11 07:34:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.3 2009/06/16 19:24:44 fauli Exp $
+
+  16 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  openclipart-0.19.ebuild:
+  stable x86, bug 273554
 
   11 Jun 2009; Torsten Veller <tove@gentoo.org> Manifest:
   Fix Manifest (#273670)
