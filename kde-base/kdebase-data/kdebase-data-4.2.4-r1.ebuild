@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.2.4.ebuild,v 1.2 2009/06/04 23:30:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-data/kdebase-data-4.2.4-r1.ebuild,v 1.1 2009/06/16 19:08:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -29,6 +29,10 @@ KMEXTRACTONLY="
 	config-runtime.h.cmake
 	kde4
 "
+
+PATCHES=(
+	"${FILESDIR}/${SLOT}-fix-svg2png.patch"
+)
 
 src_configure() {
 	# remove instalation of colliding file for hicolor-icon-theme
