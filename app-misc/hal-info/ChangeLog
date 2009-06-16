@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.67 2009/06/15 01:34:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.68 2009/06/16 18:23:17 armin76 Exp $
+
+  16 Jun 2009; Raúl Porcel <armin76@gentoo.org> hal-info-20090414.ebuild:
+  alpha/arm/ia64/sh/sparc stable wrt #273761
 
   15 Jun 2009; Jeroen Roovers <jer@gentoo.org> hal-info-20090414.ebuild:
   Stable for HPPA (bug #273761).
