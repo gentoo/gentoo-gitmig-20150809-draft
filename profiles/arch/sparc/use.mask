@@ -1,15 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.22 2009/06/16 18:39:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/use.mask,v 1.23 2009/06/16 18:42:15 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc
 
 # This file contains a list of useflags that cannot be used on sparc.
-
-# Raúl Porcel <armin76@gentoo.org> (16 Jun 2009)
-# Needs kde4, remove when kde4 is keyworded
-ctypes-python
 
 # Raúl Porcel <armin76@gentoo.org>
 # Stuff that sigbuses
