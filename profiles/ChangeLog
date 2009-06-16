@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2792 2009/06/16 07:26:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2793 2009/06/16 07:43:24 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jun 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Include new post beta 1 =www-client/opera-10.00_pre4440 in mask.
 
   16 Jun 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   drop x11-libs/vte package.mask entry, broken ebuild has been axed
