@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9934 2009/06/16 07:43:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9935 2009/06/16 13:49:21 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,15 @@
 
 #--- END OF EXAMPLES ---
 
+# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
+#  on behalf of QA Team
+#
+# Fails to build with not even recent Linux headers.
+# See bug #248388
+#
+# Removal pending 16 August 2009
+sys-apps/ddcxinfo-knoppix
+
 # Rémi Cardona <remi@gentoo.org> (16 Jun 2009)
 # will be treecleaned in 30 days, it's just beyond useless
 x11-libs/liboldX
@@ -45,7 +54,7 @@ x11-libs/liboldX
 # Multiple issue, external kernel module unmaintained since 2005.
 # See bug #274105
 #
-# Removal pending 14 July 2009
+# Removal pending 14 August 2009
 net-fs/shfs
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (14 Jun 2009)
