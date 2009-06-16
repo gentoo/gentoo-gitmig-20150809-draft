@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.210 2009/06/16 16:08:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.211 2009/06/16 18:29:03 armin76 Exp $
+
+  16 Jun 2009; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.0.11.ebuild:
+  alpha/arm/ia64/sparc stable wrt #273918
 
   16 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   xulrunner-1.9.0.11.ebuild:
