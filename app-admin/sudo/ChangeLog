@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.177 2009/06/10 19:19:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.178 2009/06/16 18:18:12 klausman Exp $
+
+  16 Jun 2009; Tobias Klausmann <klausman@gentoo.org> sudo-1.7.1-r1.ebuild:
+  Stable on alpha, bug #272819
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org> sudo-1.7.1-r1.ebuild:
   amd64/x86 stable, bug #272819
