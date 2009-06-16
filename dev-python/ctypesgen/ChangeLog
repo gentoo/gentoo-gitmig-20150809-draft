@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.14 2009/06/11 05:45:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.15 2009/06/16 18:43:46 armin76 Exp $
+
+  16 Jun 2009; Raúl Porcel <armin76@gentoo.org> ctypesgen-0_p72.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #273304
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> ctypesgen-0_p72.ebuild:
   amd64 stable, bug #273304
