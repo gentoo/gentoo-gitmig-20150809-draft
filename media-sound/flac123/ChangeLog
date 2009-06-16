@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/flac123
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.24 2007/10/23 15:47:38 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/flac123/ChangeLog,v 1.25 2009/06/16 17:58:23 klausman Exp $
+
+  16 Jun 2009; Tobias Klausmann <klausman@gentoo.org> flac123-0.0.11.ebuild:
+  Keyworded on alpha, bug #272777
 
   23 Oct 2007; Alexis Ballier <aballier@gentoo.org>
   -files/flac123-0.0.9+flac-1.1.3.patch,
