@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/xmlrpc-epi-0.54.ebuild,v 1.1 2009/06/15 22:07:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/xmlrpc-epi-0.54.ebuild,v 1.2 2009/06/16 22:50:07 volkmar Exp $
 
 EAPI="2"
 
@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# do not build examples
 	sed -i -e "s:sample::" Makefile.in || die "sed failed"
+}
+
+src_configure() {
+	econf --disable-dependency-tracking
 }
 
 src_install() {

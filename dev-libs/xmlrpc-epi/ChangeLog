@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.1 2009/06/15 22:07:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.2 2009/06/16 22:50:07 volkmar Exp $
+
+  16 Jun 2009; Mounir Lamouri <volkmar@gentoo.org> xmlrpc-epi-0.54.ebuild:
+  Add --disable-dependency-tracking
 
 *xmlrpc-epi-0.54 (15 Jun 2009)
 
