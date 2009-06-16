@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-1.0.4.ebuild,v 1.5 2009/03/07 04:05:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/htpdate-1.0.4.ebuild,v 1.6 2009/06/16 17:48:06 klausman Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clevervest.com/htp/archive/c/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~mips ppc s390 sh x86"
+KEYWORDS="~alpha amd64 arm hppa ~mips ppc s390 sh x86"
 IUSE=""
 
 DEPEND=""
