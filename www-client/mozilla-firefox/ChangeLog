@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.509 2009/06/15 14:00:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.510 2009/06/16 14:59:36 jer Exp $
+
+  16 Jun 2009; Jeroen Roovers <jer@gentoo.org>
+  mozilla-firefox-3.0.11.ebuild:
+  Stable for HPPA (bug #273918).
 
   15 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-3.0.11.ebuild:
