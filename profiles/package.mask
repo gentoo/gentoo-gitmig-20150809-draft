@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9937 2009/06/16 14:21:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9938 2009/06/16 23:18:42 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,6 +31,13 @@
 
 #--- END OF EXAMPLES ---
 
+# Tony Vroon <chainsaw@gentoo.org> (16 Jun 2009)
+# Alpha/beta releases, you are free to test but bugs go upstream.
+# http://jira.atheme.org/
+=media-sound/audacious-2.1_alpha*
+=media-plugins/audacious-plugins-2.1_alpha*
+=net-irc/conspire-1.0_beta*
+
 # Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2009)
 #  on behalf of QA Team
 #
@@ -48,12 +55,6 @@ app-text/kaspaliste
 #
 # Removal pending 16 August 2009
 sys-apps/ddcxinfo-knoppix
-
-# Tony Vroon <chainsaw@gentoo.org> (16 Jun 2009)
-# Alpha releases, you are free to test but bugs go upstream.
-# http://jira.atheme.org/
-=media-sound/audacious-2.1_alpha*
-=media-plugins/audacious-plugins-2.1_alpha*
 
 # Rémi Cardona <remi@gentoo.org> (16 Jun 2009)
 # will be treecleaned in 30 days, it's just beyond useless
