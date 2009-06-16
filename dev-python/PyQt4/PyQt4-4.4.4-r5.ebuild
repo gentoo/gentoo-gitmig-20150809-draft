@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.5 2009/06/09 20:45:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.4.4-r5.ebuild,v 1.6 2009/06/16 15:15:35 hwoarang Exp $
 
 EAPI="2"
 
@@ -16,24 +16,23 @@ SRC_URI="http://www.riverbankcomputing.com/static/Downloads/${PN}/${MY_P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="X assistant +dbus debug doc examples kde opengl phonon +qt3support sql svg webkit xmlpatterns"
+IUSE="X assistant +dbus debug doc examples kde opengl phonon sql svg webkit xmlpatterns"
 
 DEPEND="~dev-python/sip-4.7.9
-	>=x11-libs/qt-core-${QTVER}:4[qt3support?]
+	>=x11-libs/qt-core-${QTVER}:4
 	>=x11-libs/qt-script-${QTVER}:4
 	>=x11-libs/qt-test-${QTVER}:4
-	X? ( >=x11-libs/qt-gui-${QTVER}:4[dbus?,qt3support?] )
+	X? ( >=x11-libs/qt-gui-${QTVER}:4[dbus?] )
 	assistant? ( >=x11-libs/qt-assistant-${QTVER}:4 )
 	dbus? (
 		>=dev-python/dbus-python-0.80
 		>=x11-libs/qt-dbus-${QTVER}:4
 	)
-	opengl? ( >=x11-libs/qt-opengl-${QTVER}:4[qt3support?] )
+	opengl? ( >=x11-libs/qt-opengl-${QTVER}:4 )
 	phonon? (
 		!kde? ( || ( >=x11-libs/qt-phonon-${QTVER}:4 media-sound/phonon ) )
 		kde? ( media-sound/phonon )
 	)
-	qt3support? ( >=x11-libs/qt-qt3support-${QTVER}:4 )
 	sql? ( >=x11-libs/qt-sql-${QTVER}:4 )
 	svg? ( >=x11-libs/qt-svg-${QTVER}:4 )
 	webkit? ( >=x11-libs/qt-webkit-${QTVER}:4 )
