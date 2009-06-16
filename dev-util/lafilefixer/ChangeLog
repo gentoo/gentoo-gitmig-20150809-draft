@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lafilefixer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.13 2009/06/16 06:17:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lafilefixer/ChangeLog,v 1.14 2009/06/16 18:25:06 armin76 Exp $
+
+  16 Jun 2009; Raúl Porcel <armin76@gentoo.org> lafilefixer-0.5.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #274202
 
   16 Jun 2009; Jeroen Roovers <jer@gentoo.org> lafilefixer-0.5.ebuild:
   Stable for HPPA (bug #274202).
