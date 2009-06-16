@@ -255,7 +255,7 @@ if [[ -f /etc/conf.d/dmcrypt ]] && [[ -x /sbin/cryptsetup ]] ; then
 	# Fix for baselayout-1.12.10 (bug 174256)
 	[ -z ${SVCNAME} ] && SVCNAME="${myservice}"
 
-	while read targetline ; do
+	while read -u 3 targetline ; do
 		# skip comments and blank lines
 		[[ ${targetline}\# == \#* ]] && continue
 
@@ -283,7 +283,7 @@ if [[ -f /etc/conf.d/dmcrypt ]] && [[ -x /sbin/cryptsetup ]] ; then
 
 		# Queue this setting for the next call to dm_crypt_execute_${SVCNAME}
 		eval "${targetline}"
-	done < /etc/conf.d/dmcrypt
+	done 3< /etc/conf.d/dmcrypt
 
 	# If we have a target queued up, then execute it
 	dm_crypt_execute_${SVCNAME}
