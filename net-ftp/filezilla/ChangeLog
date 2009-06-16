@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.43 2009/05/07 14:11:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.44 2009/06/16 09:11:30 voyageur Exp $
+
+*filezilla-3.2.5 (16 Jun 2009)
+
+  16 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.2.5.ebuild:
+  Version bump, adds remote file search, adds option to hide identical files
+  to directory comparison, remembers SSH keys for session duration if not
+  trusting permanently, and bugfixes (including gnutls pkg-config support)
 
 *filezilla-3.2.4.1-r1 (07 May 2009)
 
