@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.6 2008/12/04 22:45:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jove/jove-4.16.0.70.3.1.ebuild,v 1.7 2009/06/16 20:39:45 ulm Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}/${MY_DIFFP}.diff"
+	epatch "${FILESDIR}/${P}-getline.patch"
 
 	sed -i \
 		-e "s:-ltermcap:-lncurses:" \
