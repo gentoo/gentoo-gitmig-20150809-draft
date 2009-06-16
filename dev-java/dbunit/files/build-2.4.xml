@@ -4,7 +4,7 @@
 	<!-- some properties -->
 	<property name="src.dir" value="org/dbunit" />
 	<property name="build.dir" value="build" />
-	<property name="docs.dir" value="docs" />
+	<property name="docs.dir" value="build/javadoc" />
 	<property name="lib.dir" value="lib"/>
 	<property name="dist.dir" value="dist" />
 	<property name="jarfile" value="${dist.dir}/dbunit.jar" />
@@ -40,14 +40,16 @@
 	</target>
 	
 	<!-- generate javadocs -->
-	<target name="docs" depends="init">
-		<javadoc sourcepath="${src.dir}"
+	<target name="javadoc" depends="init">
+		<javadoc sourcepath="."
 			packagenames="org.*"
            		destdir="${docs.dir}"
            		author="true"
            		version="true"
            		use="true"
-           		windowtitle="${ant.project.name} API" />
+           		windowtitle="${ant.project.name} API" 
+			doctitle="${ant.project.name} Docs" 
+			private="no" />
 	</target>
 	
 	<!-- clean up -->
