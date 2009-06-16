@@ -1,31 +1,7 @@
-diff -ru vdr-1.6.0-orig/channels.c vdr-1.6.0/channels.c
---- vdr-1.6.0-orig/channels.c	2009-06-04 10:34:56.144472994 +0200
-+++ vdr-1.6.0/channels.c	2009-06-04 10:34:33.341139740 +0200
-@@ -574,7 +574,7 @@
-      }
-   else
-      q += sprintf(q, " none");
--  dsyslog(buffer);
-+  dsyslog("%s", buffer);
- }
- 
- void cChannel::SetRefChannel(cChannel *RefChannel)
-diff -ru vdr-1.6.0-orig/receiver.c vdr-1.6.0/receiver.c
---- vdr-1.6.0-orig/receiver.c	2009-06-04 10:34:46.547807527 +0200
-+++ vdr-1.6.0/receiver.c	2009-06-04 10:35:26.074465985 +0200
-@@ -40,7 +40,7 @@
- {
-   if (device) {
-      const char *msg = "ERROR: cReceiver has not been detached yet! This is a design fault and VDR will segfault now!";
--     esyslog(msg);
-+     esyslog("%s", msg);
-      fprintf(stderr, "%s\n", msg);
-      *(char *)0 = 0; // cause a segfault
-      }
-diff -ru vdr-1.6.0-orig/recording.c vdr-1.6.0/recording.c
---- vdr-1.6.0-orig/recording.c	2009-06-04 10:34:56.141139523 +0200
-+++ vdr-1.6.0/recording.c	2009-06-04 10:34:33.337807723 +0200
-@@ -509,8 +509,8 @@
+diff --git a/recording.c b/recording.c
+--- a/recording.c
++++ b/recording.c
+@@ -509,8 +509,8 @@ cRecording::cRecording(cTimer *Timer, const cEvent *Event)
       Utf8Strn0Cpy(SubtitleBuffer, Subtitle, MAX_SUBTITLE_LENGTH);
       Subtitle = SubtitleBuffer;
       }
@@ -36,7 +12,7 @@ diff -ru vdr-1.6.0-orig/recording.c vdr-1.6.0/recording.c
    if (macroTITLE || macroEPISODE) {
       name = strdup(Timer->File());
       name = strreplace(name, TIMERMACRO_TITLE, Title);
-@@ -551,7 +551,7 @@
+@@ -551,7 +551,7 @@ cRecording::cRecording(const char *FileName)
    sortBuffer = NULL;
    fileName = strdup(FileName);
    FileName += strlen(VideoDirectory) + 1;
@@ -45,20 +21,19 @@ diff -ru vdr-1.6.0-orig/recording.c vdr-1.6.0/recording.c
  
    name = NULL;
    info = new cRecordingInfo;
-@@ -1022,7 +1022,8 @@
+@@ -1022,7 +1022,7 @@ void cRecordings::DelByName(const char *FileName)
    if (recording) {
       cThreadLock DeletedRecordingsLock(&DeletedRecordings);
       Del(recording, false);
 -     char *ext = strrchr(recording->FileName(), '.');
-+     // wtf?
-+     char *ext = strrchr(const_cast<char*>(recording->FileName()), '.');
++     char *ext = strrchr(recording->fileName, '.');
       if (ext) {
          strncpy(ext, DELEXT, strlen(ext));
          recording->fileSizeMB = DirSizeMB(recording->FileName());
-diff -ru vdr-1.6.0-orig/svdrp.c vdr-1.6.0/svdrp.c
---- vdr-1.6.0-orig/svdrp.c	2009-06-04 10:34:56.141139523 +0200
-+++ vdr-1.6.0/svdrp.c	2009-06-04 10:34:33.337807723 +0200
-@@ -736,7 +736,7 @@
+diff --git a/svdrp.c b/svdrp.c
+--- a/svdrp.c
++++ b/svdrp.c
+@@ -736,7 +736,7 @@ void cSVDRP::CmdGRAB(const char *Option)
       char *strtok_next;
       FileName = strtok_r(p, delim, &strtok_next);
       // image type:
@@ -67,19 +42,74 @@ diff -ru vdr-1.6.0-orig/svdrp.c vdr-1.6.0/svdrp.c
       if (Extension) {
          if (strcasecmp(Extension, ".jpg") == 0 || strcasecmp(Extension, ".jpeg") == 0)
             Jpeg = true;
-@@ -796,12 +796,12 @@
+@@ -795,16 +795,17 @@ void cSVDRP::CmdGRAB(const char *Option)
+      char RealFileName[PATH_MAX];
       if (FileName) {
          if (grabImageDir) {
-            cString s;
+-           cString s;
 -           char *slash = strrchr(FileName, '/');
-+           char *slash = strrchr(const_cast<char*>(FileName), '/');
++           cString s(FileName);
++           FileName = s;
++           const char *slash = strrchr(FileName, '/');
             if (!slash) {
                s = AddDirectory(grabImageDir, FileName);
                FileName = s;
                }
--           slash = strrchr(FileName, '/'); // there definitely is one
-+           slash = strrchr(const_cast<char*>(FileName), '/'); // there definitely is one
-            *slash = 0;
-            char *r = realpath(FileName, RealFileName);
-            *slash = '/';
-
+            slash = strrchr(FileName, '/'); // there definitely is one
+-           *slash = 0;
+-           char *r = realpath(FileName, RealFileName);
+-           *slash = '/';
++           cString t(s);
++           t.Truncate(slash - FileName);
++           char *r = realpath(t, RealFileName);
+            if (!r) {
+               LOG_ERROR_STR(FileName);
+               Reply(501, "Invalid file name \"%s\"", FileName);
+diff --git a/channels.c b/channels.c
+--- a/channels.c
++++ b/channels.c
+@@ -574,7 +574,7 @@ void cChannel::SetLinkChannels(cLinkChannels *LinkChannels)
+      }
+   else
+      q += sprintf(q, " none");
+-  dsyslog(buffer);
++  dsyslog("%s", buffer);
+ }
+ 
+ void cChannel::SetRefChannel(cChannel *RefChannel)
+diff --git a/device.c b/device.c
+--- a/device.c
++++ b/device.c
+@@ -529,7 +529,7 @@ eVideoSystem cDevice::GetVideoSystem(void)
+   return vsPAL;
+ }
+ 
+-//#define PRINTPIDS(s) { char b[500]; char *q = b; q += sprintf(q, "%d %s ", CardIndex(), s); for (int i = 0; i < MAXPIDHANDLES; i++) q += sprintf(q, " %s%4d %d", i == ptOther ? "* " : "", pidHandles[i].pid, pidHandles[i].used); dsyslog(b); }
++//#define PRINTPIDS(s) { char b[500]; char *q = b; q += sprintf(q, "%d %s ", CardIndex(), s); for (int i = 0; i < MAXPIDHANDLES; i++) q += sprintf(q, " %s%4d %d", i == ptOther ? "* " : "", pidHandles[i].pid, pidHandles[i].used); dsyslog("%s", b); }
+ #define PRINTPIDS(s)
+ 
+ bool cDevice::HasPid(int Pid) const
+diff --git a/pat.c b/pat.c
+--- a/pat.c
++++ b/pat.c
+@@ -144,7 +144,7 @@ void cCaDescriptors::AddCaDescriptor(SI::CaDescriptor *d, bool Stream)
+   q += sprintf(q, "CAM: %04X %5d %5d %04X %d -", source, transponder, serviceId, d->getCaType(), Stream);
+   for (int i = 0; i < nca->Length(); i++)
+       q += sprintf(q, " %02X", nca->Data()[i]);
+-  dsyslog(buffer);
++  dsyslog("%s", buffer);
+ #endif
+ }
+ 
+diff --git a/receiver.c b/receiver.c
+--- a/receiver.c
++++ b/receiver.c
+@@ -40,7 +40,7 @@ cReceiver::~cReceiver()
+ {
+   if (device) {
+      const char *msg = "ERROR: cReceiver has not been detached yet! This is a design fault and VDR will segfault now!";
+-     esyslog(msg);
++     esyslog("%s", msg);
+      fprintf(stderr, "%s\n", msg);
+      *(char *)0 = 0; // cause a segfault
+      }

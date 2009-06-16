@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vdr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.130 2009/06/04 12:37:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/ChangeLog,v 1.131 2009/06/16 10:05:39 zzam Exp $
+
+  16 Jun 2009; Matthias Schwarzott <zzam@gentoo.org>
+  files/vdr-1.6.0-gcc-4.4.diff, files/vdr-dvb-api-5-is-fine.diff:
+  Improve patches.
 
 *vdr-1.6.0_p2-r3 (04 Jun 2009)
 
