@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9936 2009/06/16 13:58:26 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9937 2009/06/16 14:21:21 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,7 +31,16 @@
 
 #--- END OF EXAMPLES ---
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
+# Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2009)
+#  on behalf of QA Team
+#
+# Fails to build with gcc 4.2 and later.
+# See bug #273275
+#
+# Removal pending 16 August 2009
+app-text/kaspaliste
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2009)
 #  on behalf of QA Team
 #
 # Fails to build with not even recent Linux headers.
