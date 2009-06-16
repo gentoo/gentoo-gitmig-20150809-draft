@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p368.ebuild,v 1.8 2009/05/10 18:52:51 a3li Exp $
-
-ONIGURUMA="onigd2_5_9"
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p368.ebuild,v 1.9 2009/06/16 16:55:20 a3li Exp $
 
 inherit autotools eutils flag-o-matic multilib versionator
 
@@ -28,7 +26,7 @@ RDEPEND="
 	tk? ( dev-lang/tk )
 	app-admin/eselect-ruby
 	!=dev-lang/ruby-cvs-${SLOT}*
-	!dev-ruby/rdoc
+	!<dev-ruby/rdoc-2
 	!dev-ruby/rexml"
 DEPEND="${RDEPEND}"
 PDEPEND="emacs? ( app-emacs/ruby-mode )

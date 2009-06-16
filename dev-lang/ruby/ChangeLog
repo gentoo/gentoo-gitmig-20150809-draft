@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.411 2009/06/14 10:43:16 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.412 2009/06/16 16:55:20 a3li Exp $
+
+  16 Jun 2009; Alex Legler <a3li@gentoo.org> ruby-1.8.6_p368.ebuild,
+  ruby-1.8.6_p369.ebuild, -ruby-1.8.7_p160.ebuild:
+  Removing old version, minor cleanup
 
   14 Jun 2009; Alex Legler <a3li@gentoo.org> -ruby-1.8.6_p114.ebuild,
   -files/ruby-1.8.6-openssl.patch,
