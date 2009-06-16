@@ -1,6 +1,10 @@
 # ChangeLog for virtual/poppler-qt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-qt4/ChangeLog,v 1.18 2009/06/11 21:42:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/poppler-qt4/ChangeLog,v 1.19 2009/06/16 20:30:51 klausman Exp $
+
+  16 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  poppler-qt4-0.10.7.ebuild:
+  Stable on alpha, bug #272980
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> poppler-qt4-0.10.7.ebuild:
   amd64 stable, bug #272980
