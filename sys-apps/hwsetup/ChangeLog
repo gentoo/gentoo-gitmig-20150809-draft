@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hwsetup
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.59 2008/12/22 05:36:05 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/ChangeLog,v 1.60 2009/06/16 12:04:11 flameeyes Exp $
+
+  16 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  hwsetup-1.2-r1.ebuild:
+  Avoid mucking with flags you shouldn't.
 
   22 Dec 2008; Jeroen Roovers <jer@gentoo.org> +files/1.2-strip.patch,
   hwsetup-1.2-r1.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.4 2008/12/22 05:36:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwsetup/hwsetup-1.2-r1.ebuild,v 1.5 2009/06/16 12:04:11 flameeyes Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -38,8 +38,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -s
-	filter-ldflags -Wl,--as-needed --as-needed
 	if use zlib ; then
 		sed -i \
 			-e '/^LIBS=/s,-lpci,-lz -lpci,g' \
