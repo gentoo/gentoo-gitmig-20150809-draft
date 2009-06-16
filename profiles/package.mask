@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9929 2009/06/15 14:33:21 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9930 2009/06/16 07:07:59 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -366,25 +366,6 @@ dev-haskell/haskell-platform
 # Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
 # Mark ghc-6.10.3 for testing.
 ~dev-lang/ghc-6.10.3
-
-# Rémi Cardona <remi@gentoo.org> (09 May 2009)
-# Low-Bandwidth X and the X Proxy Management stuff has been declared
-# dead since last century. All of those will be gone in 30 days
-x11-apps/lbxproxy
-x11-apps/proxymngr
-x11-apps/xfindproxy
-x11-apps/xfwp
-x11-apps/xrx
-x11-proto/xproxymanagementprotocol
-
-# Rémi Cardona <remi@gentoo.org> (09 May 2009)
-# XPrint is dead, long live XPrint
-# nothing in portage uses those apps and libs anymore
-# will be removed in 30 days (see bug #264982 for rationale)
-x11-apps/xplsprinters
-x11-apps/xprehashprinterlist
-x11-libs/libXprintAppUtil
-x11-libs/libXprintUtil
 
 # Mark Loeser <halcy0n@gentoo.org> (6 May 2009)
 # Masked for testing

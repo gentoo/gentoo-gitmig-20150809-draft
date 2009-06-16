@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2788 2009/06/15 15:23:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2789 2009/06/16 07:07:59 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Jun 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  drop treecleaned X packages from package.mask
 
   15 Jun 2009; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
   add ipafont USE flag for media-fonts/mplus-outline-fonts
