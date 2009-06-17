@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.9 2009/06/14 20:49:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.10 2009/06/17 16:14:23 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -64,10 +64,12 @@ src_install() {
 			einfo "Using NSS/NSPR libraries from net-libs/xulrunner-bin"
 			NSS_DIR=../../../opt/xulrunner
 			NSPR_DIR=../../../opt/xulrunner
-		else
+		elif has_version www-plugins/adobe-flash; then
 			einfo "Using NSS/NSPR libraries from www-plugins/adobe-flash"
 			NSS_DIR=../../../opt/flash-libcompat
 			NSPR_DIR=../../../opt/flash-libcompat
+		else
+			die "One of these packages is needed: www-client/mozilla-firefox-bin, net-libs/xulrunner-bin, www-plugins/adobe-flash[32bit]"
 		fi
 
 	fi
