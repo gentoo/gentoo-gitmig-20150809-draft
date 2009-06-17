@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2801 2009/06/17 07:23:16 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2802 2009/06/17 11:45:38 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2009; <chainsaw@gentoo.org> package.mask:
+  Masking upstream-abandoned media-sound/ogg2mp3 software for removal in 1
+  month.
 
   17 Jun 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Masked bzr-1.16_rc1 pre-release and dependent bzrtools packages.
