@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.15_rc.ebuild,v 1.1 2009/06/17 12:20:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.1.15_rc.ebuild,v 1.2 2009/06/17 12:23:38 fauli Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ S="${WORKDIR}/${PN}-${MY_PV}"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+bundledlibevent debug"
+IUSE="debug"
 
 DEPEND="dev-libs/openssl
 	>=dev-libs/libevent-1.2"
@@ -39,8 +39,8 @@ src_prepare() {
 	# have to live with the bundled libevent for this release, as the
 	# current version in tree won't suffice for tor to build
 	# See http://bugs.noreply.org/flyspray/index.php?do=details&id=920
-	# for upstream's report use bundledlibevent || epatch
-	# "${FILESDIR}"/${PN}-0.2.1.5-no-internal-libevent.patch
+	# for upstream's report
+	# use bundledlibevent || epatch "${FILESDIR}"/${PN}-0.2.1.5-no-internal-libevent.patch
 }
 
 src_configure() {
@@ -78,10 +78,4 @@ pkg_postinst() {
 	elog "forward-socks4a / localhost:9050 ."
 	elog "(notice the . at the end of the line)"
 	elog "to /etc/privoxy/config"
-
-	if ! use bundledlibevent; then
-		elog
-		elog "Please be aware that using the system's libevent library will lower your anonymity"
-		elog "a little bit.  If you rely on it, please enable USE=bundledlibevent."
-	fi
 }
