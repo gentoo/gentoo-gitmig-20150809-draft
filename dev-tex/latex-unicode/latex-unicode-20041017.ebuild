@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20041017.ebuild,v 1.9 2008/09/03 11:40:31 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/latex-unicode-20041017.ebuild,v 1.10 2009/06/17 07:28:41 aballier Exp $
 
 inherit latex-package
 
@@ -58,7 +58,7 @@ pkg_postinst() {
 
 	latex-package_pkg_postinst
 	elog
-	elog "Please refer to /usr/share/doc/${P}/README.gz"
+	elog "Please refer to the README file in /usr/share/doc/${PF}"
 	elog "and languages.ps in that directory for language-specific examples."
 	elog
 }
