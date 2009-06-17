@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/foiltex
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/ChangeLog,v 1.13 2007/03/13 00:20:11 nattfodd Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/ChangeLog,v 1.14 2009/06/17 07:39:39 aballier Exp $
+
+*foiltex-2.1.4b (17 Jun 2009)
+
+  17 Jun 2009; Alexis Ballier <aballier@gentoo.org> +foiltex-2.1.4b.ebuild:
+  bump to 2.1.4b, bug #271226, install to texmf-site and some minor cleanups
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
