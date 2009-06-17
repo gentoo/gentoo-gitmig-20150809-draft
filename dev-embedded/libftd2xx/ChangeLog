@@ -1,6 +1,12 @@
 # ChangeLog for dev-embedded/libftd2xx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.3 2008/10/26 20:03:14 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftd2xx/ChangeLog,v 1.4 2009/06/17 09:56:18 vapier Exp $
+
+*libftd2xx-0.4.16 (17 Jun 2009)
+
+  17 Jun 2009; Mike Frysinger <vapier@gentoo.org> +libftd2xx-0.4.16.ebuild:
+  Version bump, add multilib support #261315 by Micke Prag, and fix path
+  install #261286 by Diego E. Pettenò.
 
   26 Oct 2008; Mike Frysinger <vapier@gentoo.org>
   libftd2xx-0.4.13-r1.ebuild:
