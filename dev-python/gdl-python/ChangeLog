@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.14 2009/05/14 23:14:08 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.15 2009/06/17 18:39:31 klausman Exp $
+
+  17 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  gdl-python-2.19.1-r1.ebuild:
+  Stable on alpha, bug #268359
 
   14 May 2009; Gordon Malm <gengor@gentoo.org> gdl-python-2.19.1.ebuild:
   Unrevert stabilization on amd64/x86, see bug #268359/comment #20.
