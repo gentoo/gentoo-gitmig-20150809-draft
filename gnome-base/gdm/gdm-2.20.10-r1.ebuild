@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r1.ebuild,v 1.1 2009/05/01 10:28:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r1.ebuild,v 1.2 2009/06/17 22:56:52 eva Exp $
 
 EAPI="2"
 
@@ -174,6 +174,9 @@ src_install() {
 
 	# Fix old X11R6 paths
 	dosed "s:/usr/X11R6/bin:/usr/bin:" /usr/share/gdm/defaults.conf
+
+	# Use Clearlooks as default theme, bug #268496
+	dosed "s:#GtkTheme=Default:GtkTheme=Clearlooks:" /usr/share/gdm/defaults.conf
 
 	# Move Gentoo theme in
 	if use branding ; then
