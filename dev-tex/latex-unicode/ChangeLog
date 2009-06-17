@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/latex-unicode
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.18 2008/09/03 11:40:31 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex-unicode/ChangeLog,v 1.19 2009/06/17 07:26:57 aballier Exp $
+
+  17 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  -latex-unicode-20030605.ebuild, -latex-unicode-20040307.ebuild:
+  remove old
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org>
   latex-unicode-20030605.ebuild, latex-unicode-20040307.ebuild,
