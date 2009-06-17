@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.24.1-r1.ebuild,v 1.10 2009/06/17 22:56:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/gnome-settings-daemon-2.24.1-r1.ebuild,v 1.11 2009/06/17 23:14:46 eva Exp $
 
 inherit autotools eutils gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.74
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
-	>=gnome-base/gnome-desktop-2.26
+	>=gnome-base/gnome-desktop-2.23.90
 
 	libnotify? ( >=x11-libs/libnotify-0.4.3 )
 
