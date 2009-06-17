@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacious
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.164 2009/06/17 19:43:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacious/ChangeLog,v 1.165 2009/06/17 21:18:05 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  audacious-2.0.1.ebuild:
+  stable x86, bug 274549
 
   17 Jun 2009; <chainsaw@gentoo.org> -files/1.1.1-ffwma-asm.diff,
   -audacious-1.4.5.ebuild, -files/1.1.2-fix-playlist-transparency.patch,
