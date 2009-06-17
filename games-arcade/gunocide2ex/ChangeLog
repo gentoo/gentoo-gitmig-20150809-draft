@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/gunocide2ex
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.10 2009/06/10 23:37:34 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gunocide2ex/ChangeLog,v 1.11 2009/06/17 23:13:36 nyhm Exp $
+
+  17 Jun 2009; Tristan Heaven <nyhm@gentoo.org> gunocide2ex-1.0.ebuild,
+  +files/gunocide2ex-1.0-glibc2.10.patch:
+  Fix building with glibc-2.10, bug #273602
 
   10 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -files/1.0-gcc3.patch, -files/1.0-gcc4.patch,
