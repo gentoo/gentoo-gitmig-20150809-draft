@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.8-r1.ebuild,v 1.6 2008/11/09 12:10:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.9.8-r1.ebuild,v 1.7 2009/06/17 07:21:05 pva Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
@@ -16,6 +16,7 @@ IUSE="chroot ssl ipv6 samba"
 
 DEPEND="net-libs/libpcap
 	ssl? ( >=dev-libs/openssl-0.9.6m )"
+RDEPEND="${DEPEND}"
 
 group_user_check() {
 	einfo "Checking for tcpdump group ..."
