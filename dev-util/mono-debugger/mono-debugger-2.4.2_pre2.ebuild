@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.4.2_pre1.ebuild,v 1.1 2009/06/09 22:56:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/mono-debugger-2.4.2_pre2.ebuild,v 1.1 2009/06/17 11:08:36 loki_val Exp $
 
 EAPI=2
 
