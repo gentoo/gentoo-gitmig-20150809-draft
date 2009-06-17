@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.15.ebuild,v 1.2 2009/06/15 23:42:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.15.ebuild,v 1.3 2009/06/17 20:31:31 fauli Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate \
 	mysql postgres sqlite \
 	zero-penalty-hit \
