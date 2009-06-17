@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2798 2009/06/17 06:08:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2799 2009/06/17 06:36:04 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Unmasking wireshark - it's finally released.
 
   17 Jun 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
   remove tl-langmanju mask, its gone

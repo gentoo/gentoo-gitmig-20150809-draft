@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9939 2009/06/17 06:08:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9940 2009/06/17 06:36:04 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -836,10 +836,6 @@ media-libs/realcodecs
 # Doug Goldstein <cardoe@gentoo.org> (17 Sep 2008)
 # under development
 gnome-extra/gnome-lirc-properties
-
-# Peter Volkov <pva@gentoo.org> (17 Sep 2008)
-# Development version, but yet nice :)
->=net-analyzer/wireshark-1.1
 
 # Michael Marineau <marineam@gentoo.org> (03 Sep 2008)
 # Unmaintained and out of date security wise,
