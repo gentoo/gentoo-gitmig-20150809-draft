@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.44 2009/06/16 09:11:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.45 2009/06/17 13:23:13 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  filezilla-3.2.4.1-r1.ebuild:
+  stable x86, bug 274335
 
 *filezilla-3.2.5 (16 Jun 2009)
 
