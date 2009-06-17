@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.3 2009/04/01 18:32:46 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/cegui-0.6.2b.ebuild,v 1.4 2009/06/17 12:52:38 fauli Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/crayzedsgui/${MY_P}b.tar.gz
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="~amd64 ppc x86"
 IUSE="debug devil directfb doc examples expat freeimage irrlicht lua opengl xerces-c xml"
 
 RDEPEND="dev-libs/libpcre
