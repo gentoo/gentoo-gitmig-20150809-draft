@@ -1,0 +1,11 @@
+--- src/file.cpp
++++ src/file.cpp
+@@ -418,7 +418,7 @@
+    if(!(fceufp = MakeMemWrap(t, 0)))
+     return(0);
+ 
+-   char *ld = strrchr(path, '.');
++   const char *ld = strrchr(path, '.');
+    fceufp->ext = strdup(ld ? ld + 1 : "");
+   }
+   else                  /* Probably gzip */

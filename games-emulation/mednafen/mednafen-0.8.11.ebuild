@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.11.ebuild,v 1.1 2009/04/15 15:52:29 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/mednafen-0.8.11.ebuild,v 1.2 2009/06/17 22:57:30 nyhm Exp $
 
 EAPI=2
-inherit autotools games
+inherit autotools eutils games
 
 DESCRIPTION="An advanced NES, GB/GBC/GBA, TurboGrafx 16/CD, NGPC and Lynx emulator"
 HOMEPAGE="http://mednafen.sourceforge.net/"
@@ -35,8 +35,11 @@ src_prepare() {
 		$(find . -name 'Makefile.*') \
 		|| die 'sed failed'
 	sed -i \
-		-e '/-fomit-frame/d' configure.ac \
+		-e '/-fomit-frame-pointer/d' \
+		-e '/-ffast-math/d' \
+		configure.ac \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-glibc2.10.patch
 	eautoreconf
 }
 
