@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.5 2009/06/12 22:49:51 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qtscriptgenerator/qtscriptgenerator-0.1.0.ebuild,v 1.6 2009/06/17 07:40:09 hwoarang Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ DEPEND="
 	x11-libs/qt-script:4
 	x11-libs/qt-sql:4
 	x11-libs/qt-svg:4
+	x11-libs/qt-webkit:4
 	x11-libs/qt-xmlpatterns:4
 "
 RDEPEND="${DEPEND}"
