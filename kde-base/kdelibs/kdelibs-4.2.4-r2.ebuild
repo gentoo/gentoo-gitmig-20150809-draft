@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r1.ebuild,v 1.1 2009/06/11 12:14:39 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r2.ebuild,v 1.1 2009/06/17 22:25:30 scarabeus Exp $
 
 EAPI="2"
 
@@ -115,6 +115,7 @@ PATCHES=(
 	"${FILESDIR}/dist/23_solid_no_double_build.patch"
 	"${FILESDIR}/${PN}-${SLOT}-fixx11h.h.patch"
 	"${FILESDIR}/${PV}-fixPopupForPlasmaboard.patch"
+	"${FILESDIR}/${PV}-CVE-2009-1690.patch"
 )
 
 src_prepare() {

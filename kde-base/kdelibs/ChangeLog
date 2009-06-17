@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.608 2009/06/14 12:52:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.609 2009/06/17 22:25:30 scarabeus Exp $
+
+*kdelibs-4.2.4-r2 (17 Jun 2009)
+
+  17 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kdelibs-4.2.4-r1.ebuild, +kdelibs-4.2.4-r2.ebuild,
+  +files/4.2.4-CVE-2009-1690.patch:
+  Revision bump. Apply security patch from upstream. Per bug #274566. Remove
+  affected stuff.
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -files/4.2-glibc-2.9.patch, -files/4.2-glibc-2.10.patch,
