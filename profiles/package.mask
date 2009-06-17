@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9944 2009/06/17 12:10:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9945 2009/06/17 23:16:58 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -354,11 +354,6 @@ dev-python/pycrash
 # Masked until a compatible nvidia-drivers package is available in the tree.
 >=dev-util/nvidia-cuda-sdk-2.2
 >=dev-util/nvidia-cuda-toolkit-2.2
-
-# Gilles Dartiguelongue <eva@gentoo.org> (15 May 2009)
-# Masked for removal wrt bug #244128. Old, rotten and
-# unused. Removal in 30 days.
-gnome-base/libghttp
 
 # Mike Pagano <mpagano@gentoo.org> (13 May 2009)
 # Masked for testing of ~ (tilde) unmasked packages
