@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.6.ebuild,v 1.3 2009/06/17 01:55:39 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.6.ebuild,v 1.4 2009/06/17 20:12:43 fauli Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.jcea.es/programacion/pybsddb.htm"
 SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ppc ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=sys-libs/db-4.6"
