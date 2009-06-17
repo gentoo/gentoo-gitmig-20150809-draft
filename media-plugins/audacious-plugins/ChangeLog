@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.117 2009/06/17 20:35:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.118 2009/06/17 21:21:56 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  audacious-plugins-2.0.1.ebuild:
+  stable x86, bug 274549
 
 *audacious-plugins-2.1_alpha1-r1 (17 Jun 2009)
 
