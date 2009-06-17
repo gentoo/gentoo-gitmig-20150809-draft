@@ -1,6 +1,9 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.19 2009/02/08 10:29:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.20 2009/06/17 12:53:42 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org> devede-3.12c.ebuild:
+  stable x86, bug 273536
 
 *devede-3.12c (08 Feb 2009)
 
