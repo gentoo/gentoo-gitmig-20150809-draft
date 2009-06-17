@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.166 2009/06/12 01:02:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.167 2009/06/17 12:20:03 fauli Exp $
+
+*tor-0.2.1.15_rc (17 Jun 2009)
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  +tor-0.2.1.15_rc.ebuild:
+  add release candidate for 0.2.1 series
 
   12 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   files/torrc.sample-0.1.2.6.patch, +tor-0.2.0.34.ebuild,
