@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.11.3.ebuild,v 1.2 2009/03/25 09:55:06 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/crow-designer/crow-designer-2.15.0.ebuild,v 1.1 2009/06/17 10:27:08 pva Exp $
 
+EAPI="2"
 inherit eutils
 
 DESCRIPTION="GTK+ GUI building tool"
@@ -10,24 +11,20 @@ SRC_URI="mirror://sourceforge/${PN}/crow-${PV}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-libs/guiloader-2.12
-		>=dev-libs/guiloader-c++-2.12
-		>=dev-libs/dbus-glib-0.74
-		x11-misc/xdg-utils"
+RDEPEND=">=dev-libs/guiloader-2.15
+	>=dev-libs/guiloader-c++-2.15
+	dev-cpp/gtkmm
+	>=dev-libs/dbus-glib-0.76"
 DEPEND="${RDEPEND}
-		dev-util/pkgconfig"
+	dev-libs/boost
+	dev-util/pkgconfig"
 
 S=${WORKDIR}/crow-${PV}
 
-src_compile() {
-	econf || die "configuration failed"
-	emake || die "compilation failed"
-}
-
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS README NEWS
+	dodoc doc/{authors.txt,news.{en,ru}.txt,readme.{en,ru}.txt,readme.ru.txt} || die
 }
