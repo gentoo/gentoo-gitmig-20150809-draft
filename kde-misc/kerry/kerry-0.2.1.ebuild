@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.6 2009/06/13 12:16:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/kerry-0.2.1.ebuild,v 1.7 2009/06/17 20:04:15 fauli Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://developer.kde.org/~binner/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="3.5"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND=">=app-misc/beagle-0.2.5"

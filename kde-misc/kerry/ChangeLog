@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kerry
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.16 2009/06/13 12:16:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kerry/ChangeLog,v 1.17 2009/06/17 20:04:15 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org> kerry-0.2.1.ebuild:
+  stable x86, bug 244228
 
   13 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> kerry-0.2.1.ebuild:
   Slot move to 3.5
