@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/halevt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/ChangeLog,v 1.3 2009/06/17 14:55:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/ChangeLog,v 1.4 2009/06/17 15:04:53 hwoarang Exp $
+
+*halevt-0.1.4-r1 (17 Jun 2009)
+
+  17 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +halevt-0.1.4-r1.ebuild, files/halevt:
+  Init script fixed. Bug 274484 . Thanks to Laurence <loz.hurst@gmail.com>
+  for
+  the proposed patch
 
   17 Jun 2009; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Fix proxy maintainers' e-mail
