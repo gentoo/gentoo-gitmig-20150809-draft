@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.115 2009/06/09 13:22:51 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.116 2009/06/17 21:15:34 eva Exp $
+
+*glade-3.6.5 (17 Jun 2009)
+
+  17 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org> +glade-3.6.5.ebuild:
+  Version bump. Bug fixes. No need to eautoreconf, closes: #273823.
 
   09 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   glade-2.12.2-r1.ebuild:
