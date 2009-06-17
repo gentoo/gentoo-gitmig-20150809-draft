@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3.ebuild,v 1.9 2009/05/15 16:43:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3.ebuild,v 1.10 2009/06/17 22:09:46 eva Exp $
 
 inherit autotools gnome2
 
@@ -49,6 +49,9 @@ src_unpack() {
 
 	# Use system libasyncns, bug #236844
 	epatch "${FILESDIR}/${P}-asyncns-system.patch"
+
+	# Fix detection of gnutls-2.8, bug #272027
+	epatch "${FILESDIR}/${P}-gnutls28.patch"
 
 	eautoreconf
 }
