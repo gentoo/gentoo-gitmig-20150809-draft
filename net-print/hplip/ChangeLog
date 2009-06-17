@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.119 2009/06/02 11:15:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.120 2009/06/17 20:04:12 betelgeuse Exp $
+
+  17 Jun 2009; Petteri Räty <betelgeuse@gentoo.org> hplip-3.9.4b.ebuild:
+  Add dependency on dev-python/pygobject when dbus is on.
 
   02 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> hplip-3.9.4b.ebuild:
   Depend on PyQt4 with X module enabled; closes bug #272178.

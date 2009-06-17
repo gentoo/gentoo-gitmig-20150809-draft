@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b.ebuild,v 1.2 2009/06/02 11:15:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b.ebuild,v 1.3 2009/06/17 20:04:12 betelgeuse Exp $
 
 EAPI="2"
 
@@ -29,8 +29,8 @@ DEPEND="!net-print/hpijs
 		dev-libs/libusb:0
 		cupsddk? ( net-print/cupsddk )
 		dbus? (
-			sys-apps/dbus
 			dev-python/dbus-python
+			dev-python/pygobject
 		)
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		snmp? (
@@ -54,11 +54,9 @@ RDEPEND="${DEPEND}
 		)
 		qt4? ( !qt3? (
 			dev-python/PyQt4[X]
-			dbus? ( dev-python/dbus-python )
 		) )
 		qt3? (
 			dev-python/PyQt
-			dbus? ( dev-python/dbus-python )
 		)
 	)"
 
