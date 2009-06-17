@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.3 2009/05/31 11:05:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.4 2009/06/17 21:27:02 klausman Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="crypt debug kde msn ncurses nls qt3 qt4 socks5 ssl xosd"
 
 # we use kde as KDE4
