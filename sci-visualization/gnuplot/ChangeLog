@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.102 2009/05/06 07:22:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.103 2009/06/17 21:39:18 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org> gnuplot-4.2.5.ebuild:
+  stable x86, bug 274558
 
   06 May 2009; Alexis Ballier <aballier@gentoo.org> gnuplot-4.2.5.ebuild:
   drop texlive 2007 support now that 2008 is stable and 2007 is going away
