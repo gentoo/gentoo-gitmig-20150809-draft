@@ -3,10 +3,8 @@
 <pkgmetadata>
 <herd>dev-embedded</herd>
 <use>
-  <flag name='ft2232'>Enable support for USB chips via
-    <pkg>dev-embedded/libftd2xx</pkg></flag>
-  <flag name='ftdi'>Enable support for USB FTDI chips
-    (<pkg>dev-embedded/libftdi</pkg>)</flag>
+  <flag name='ftd2xx'>Enable support for USB FTDI chips via <pkg>dev-embedded/libftd2xx</pkg></flag>
+  <flag name='ftdi'>Enable support for USB FTDI chips via <pkg>dev-embedded/libftdi</pkg></flag>
   <flag name='parport'>Enable support for parport JTAG devices</flag>
   <flag name='presto'>Enable support for AXIS PRESTO devices</flag>
 </use>

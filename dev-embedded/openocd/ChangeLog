@@ -1,6 +1,11 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.6 2009/02/23 22:47:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.7 2009/06/17 10:04:16 vapier Exp $
+
+  17 Jun 2009; Mike Frysinger <vapier@gentoo.org> openocd-0.1.0.ebuild,
+  openocd-9999.ebuild, metadata.xml:
+  Now that libftd2xx supports amd64, split the ftdi/ftd2xx USE flags #255309
+  by Andrej Gelenberg.
 
 *openocd-0.1.0 (23 Feb 2009)
 
