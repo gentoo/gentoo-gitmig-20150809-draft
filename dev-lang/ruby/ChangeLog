@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.413 2009/06/16 18:35:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.414 2009/06/17 15:45:48 ranger Exp $
+
+  17 Jun 2009; Brent Baude <ranger@gentoo.org> ruby-1.8.6_p369.ebuild:
+  Marking ruby-1.8.6_p369 ppc64 for bug 273213
 
   16 Jun 2009; Raúl Porcel <armin76@gentoo.org> ruby-1.8.6_p369.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #273213
