@@ -3,7 +3,10 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>jnrowe@ukfsn.org</email>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<maintainer>
+		<email>jnrowe@gmail.com</email>
 		<name>James Rowe</name>
 	</maintainer>
 	<longdescription>
