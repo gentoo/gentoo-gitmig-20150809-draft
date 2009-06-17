@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.1.ebuild,v 1.1 2009/04/14 18:21:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/traverso/traverso-0.49.1.ebuild,v 1.2 2009/06/17 23:24:26 aballier Exp $
 
 EAPI=1
 
@@ -39,6 +39,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-slv2.patch"
+	epatch "${FILESDIR}/${P}-cmake.patch"
 }
 
 src_compile() {
