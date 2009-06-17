@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.288 2009/06/07 22:59:48 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.289 2009/06/17 17:58:18 gentoofan23 Exp $
+
+*hal-0.5.11-r9 (17 Jun 2009)
+
+  17 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  +hal-0.5.11-r9.ebuild:
+  Stable revision bump for critical bug #268375, wrong cache dir leading to
+  broken systems when hal is installed with paludis.
 
   07 Jun 2009; Daniel Gryniewicz <dang@gentoo.org> hal-0.5.12_rc1-r6.ebuild:
   Update plugdev message to be more explicit
