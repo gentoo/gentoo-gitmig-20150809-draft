@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/kxmleditor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.29 2009/06/14 00:30:25 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kxmleditor/ChangeLog,v 1.30 2009/06/17 02:09:34 gentoofan23 Exp $
+
+  17 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  kxmleditor-1.1.4-r1.ebuild:
+  stable amd64, bug 274083
 
   14 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   kxmleditor-1.1.4.ebuild, kxmleditor-1.1.4-r1.ebuild:
