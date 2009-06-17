@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/mono-basic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.18 2009/06/09 22:56:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono-basic/ChangeLog,v 1.19 2009/06/17 11:08:13 loki_val Exp $
+
+*mono-basic-2.4.2_pre2 (17 Jun 2009)
+
+  17 Jun 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -mono-basic-2.4.2_pre1.ebuild, +mono-basic-2.4.2_pre2.ebuild:
+  Bump
 
 *mono-basic-2.4.2_pre1 (09 Jun 2009)
 
