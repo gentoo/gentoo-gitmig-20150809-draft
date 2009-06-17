@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/qbzr-0.11.0.ebuild,v 1.1 2009/06/17 07:29:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/qbzr-0.11.0.ebuild,v 1.2 2009/06/17 07:30:42 pva Exp $
 
 NEED_PYTHON=2.4
 
@@ -17,6 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-util/bzr-1.9
 		>=dev-python/PyQt4-4.1"
+RDEPEND="${DEPEND}"
 
 DOCS="AUTHORS.txt NEWS.txt README.txt TODO.txt"
 
