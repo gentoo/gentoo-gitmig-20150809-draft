@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.10.1.ebuild,v 1.8 2009/06/17 07:42:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/lablgtk-2.12.0.ebuild,v 1.1 2009/06/17 07:42:20 aballier Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils multilib
 
@@ -14,7 +14,7 @@ SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 LICENSE="LGPL-2.1 as-is"
 
 RDEPEND=">=x11-libs/gtk+-2.10
-	>=dev-lang/ocaml-3.07
+	>=dev-lang/ocaml-3.10[ocamlopt?]
 	svg? ( >=gnome-base/librsvg-2.2 )
 	glade? ( >=gnome-base/libglade-2.0.1 )
 	gnomecanvas? ( >=gnome-base/libgnomecanvas-2.2 )
@@ -29,18 +29,9 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 SLOT="2"
-KEYWORDS="alpha amd64 hppa ia64 ppc sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86 ~x86-fbsd"
 
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
-src_compile() {
+src_configure() {
 	econf $(use_enable debug) \
 		$(use_with svg rsvg) \
 		$(use_with glade) \
@@ -49,9 +40,10 @@ src_compile() {
 		$(use_with opengl gl) \
 		$(use_with spell gtkspell) \
 		$(use_with sourceview gtksourceview) \
-		$(use_with gnomecanvas) \
-		|| die "configure failed"
+		$(use_with gnomecanvas)
+}
 
+src_compile() {
 	emake -j1 all || die "make failed"
 	if use ocamlopt; then
 		emake -j1 opt || die "Compiling native code failed"
