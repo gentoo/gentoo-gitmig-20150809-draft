@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-1.1.0.ebuild,v 1.2 2008/09/25 12:21:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lwt/lwt-1.1.0.ebuild,v 1.3 2009/06/17 07:14:08 aballier Exp $
 
-EAPI=1
+EAPI=2
 
 inherit findlib eutils
 
@@ -10,26 +10,17 @@ DESCRIPTION="Cooperative light-weight thread library for OCaml"
 SRC_URI="http://ocsigen.org/download/${P}.tar.gz"
 HOMEPAGE="http://ocsigen.org/lwt"
 
-DEPEND=">=dev-lang/ocaml-3.10
+IUSE="doc +ocamlopt"
+
+DEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]
 	>=dev-ml/ocaml-ssl-0.4.0"
 
 RDEPEND="${DEPEND}
 	!<www-servers/ocsigen-1.1"
 
-IUSE="doc +ocamlopt"
-
 SLOT="0"
 LICENSE="LGPL-2.1 LGPL-2.1-linking-exception"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
-
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
 
 src_compile() {
 	# ocamlbuild is stupid and fails parallel make if it does not exist...
