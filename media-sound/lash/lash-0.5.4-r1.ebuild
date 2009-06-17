@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.7 2009/03/14 19:22:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.8 2009/06/17 07:06:36 aballier Exp $
 
 EAPI=2
 
@@ -25,9 +25,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	python? ( >=dev-lang/swig-1.3.31 )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-glibc2.8.patch"
 	elibtoolize
 }
