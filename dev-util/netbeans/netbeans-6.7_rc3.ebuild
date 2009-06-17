@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_rc2_p1.ebuild,v 1.1 2009/06/09 10:36:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-6.7_rc3.ebuild,v 1.1 2009/06/17 18:24:00 fordfrog Exp $
 
 EAPI="2"
 WANT_SPLIT_ANT="true"
@@ -10,7 +10,7 @@ DESCRIPTION="NetBeans IDE for Java"
 HOMEPAGE="http://www.netbeans.org"
 
 SLOT="6.7"
-SRC_URI="http://bits.netbeans.org/netbeans/6.7/community/rc2/zip/netbeans-6.7rc2-200906050001-src.zip
+SRC_URI="http://bits.netbeans.org/netbeans/6.7/community/rc3/zip/netbeans-6.7rc3-200906150201-src.zip
 	http://dev.gentoo.org/~fordfrog/distfiles/netbeans-6.7-l10n-20090604074049.tar.bz2"
 
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
@@ -450,8 +450,7 @@ pkg_setup() {
 src_prepare () {
 	# We need to disable downloading of jars
 	epatch "${FILESDIR}"/${SLOT}/nbbuild_build.xml.patch \
-		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch \
-		"${FILESDIR}"/${SLOT}/autoupdate.ui.fix.patch
+		"${FILESDIR}"/${SLOT}/nbbuild_templates_projectized.xml.patch
 
 	# Clean up nbbuild
 	einfo "Removing prebuilt *.class files from nbbuild"

@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.120 2009/06/09 10:36:03 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.121 2009/06/17 18:24:00 fordfrog Exp $
+
+*netbeans-6.7_rc3 (17 Jun 2009)
+
+  17 Jun 2009; <fordfrog@gentoo.org> -files/6.7/autoupdate.ui.fix.patch,
+  +netbeans-6.7_rc3.ebuild, -netbeans-6.7_rc2_p1.ebuild:
+  Version bump
 
 *netbeans-6.7_rc2_p1 (09 Jun 2009)
 
