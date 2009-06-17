@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2797 2009/06/16 23:18:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2798 2009/06/17 06:08:39 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove tl-langmanju mask, its gone
 
   16 Jun 2009; <chainsaw@gentoo.org> package.mask:
   Add Conspire to the atheme alpha/beta mask, move it up to the start where

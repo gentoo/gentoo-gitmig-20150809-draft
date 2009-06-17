@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9938 2009/06/16 23:18:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9939 2009/06/17 06:08:40 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -336,11 +336,6 @@ dev-python/pycrash
 # Masked until a compatible nvidia-drivers package is available in the tree.
 >=dev-util/nvidia-cuda-sdk-2.2
 >=dev-util/nvidia-cuda-toolkit-2.2
-
-# Alexis Ballier <aballier@gentoo.org> (15 May 2009)
-# Merged in dev-texlive/texlive-langmongolian-2008, use that instead
-# Masked for removal on 15 June 2009
-dev-texlive/texlive-langmanju
 
 # Gilles Dartiguelongue <eva@gentoo.org> (15 May 2009)
 # Masked for removal wrt bug #244128. Old, rotten and
