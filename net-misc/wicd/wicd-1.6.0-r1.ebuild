@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0.ebuild,v 1.2 2009/06/06 21:29:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.0-r1.ebuild,v 1.1 2009/06/17 05:14:21 darkside Exp $
 
 EAPI="2"
 
@@ -53,8 +53,10 @@ src_compile() {
 src_install() {
 	DOCS="CHANGES"
 	distutils_src_install
-	newinitd "${FILESDIR}/wicd-init.d" wicd || die "newinitd failed"
-	keepdir /var/lib/wicd/configurations || die "keepdir failed, critical for this app"
+	keepdir /var/lib/wicd/configurations \
+		|| die "keepdir failed, critical for this app"
+	keepdir /etc/wicd/scripts/{postconnect,disconnect,preconnect} \
+		|| die "keepdir failed, critical for this app"
 }
 
 pkg_postinst() {
@@ -66,8 +68,12 @@ pkg_postinst() {
 	elog "- Remove all net.* initscripts (except for net.lo) from all runlevels"
 	elog "- Add these scripts to the RC_PLUG_SERVICES line in /etc/conf.d/rc"
 	elog "(For example, RC_PLUG_SERVICES=\"!net.eth0 !net.wlan0\")"
-	elog
-	ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
-	ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf
-"
+	# Maintainer's note: the consolekit use flag short circuits a dbus rule and
+	# allows the connection. Else, you need to be in the group.
+	if has_version sys-auth/pambase; then
+		if ! built_with_use sys-auth/pambase consolekit; then
+			ewarn "Wicd-1.6 and newer requires your user to be in the 'users' group. If"
+			ewarn "you are not in that group, then modify /etc/dbus-1/system.d/wicd.conf"
+		fi
+	fi
 }
