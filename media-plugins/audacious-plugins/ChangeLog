@@ -1,6 +1,16 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.114 2009/06/16 14:04:09 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.115 2009/06/17 12:07:28 chainsaw Exp $
+
+  17 Jun 2009; <chainsaw@gentoo.org>
+  +files/2.0.1-icecast-flawed-vorbis-enum.patch,
+  audacious-plugins-2.0.1.ebuild:
+  Upstream patch from Matti Hamalainen <ccr@tnsp.org> allows unusual
+  USE-flag combination of icecast without vorbis, closes bug #274309 by
+  Diego E. 'Flameeyes' Pettenò <flameeyes@gentoo.org>. No revision bump,
+  just a build fix. Marking stable on AMD64 as there have been no
+  significant bugs reported for this package. Tested on a Core2 Duo with
+  Realtek ALC226 @ ICH9M HD-Audio.
 
 *audacious-plugins-2.1_alpha1 (16 Jun 2009)
 
