@@ -1,6 +1,9 @@
 # ChangeLog for www-client/surfraw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.40 2009/06/17 16:45:08 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/surfraw/ChangeLog,v 1.41 2009/06/17 20:32:24 fauli Exp $
+
+  17 Jun 2009; Christian Faulhammer <fauli@gentoo.org> surfraw-2.2.5.ebuild:
+  stable x86, bug 274439
 
   17 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
   surfraw-2.2.5.ebuild:
