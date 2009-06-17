@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.2.2.ebuild,v 1.1 2009/01/31 10:36:45 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/libdc1394-1.2.2.ebuild,v 1.2 2009/06/17 21:18:48 stefaan Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}; cd "${S}"
 	if ! use X; then
-		epatch "${FILESDIR}"/${P}-nox11.patch
+		epatch "${FILESDIR}"/${PN}-1.2.1-nox11.patch
 	fi
 	epatch "${FILESDIR}"/${PN}-disable-raw-capture.patch
 }

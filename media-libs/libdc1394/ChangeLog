@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdc1394
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.39 2009/01/31 10:54:58 stefaan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdc1394/ChangeLog,v 1.40 2009/06/17 21:18:48 stefaan Exp $
+
+  17 Jun 2009; Stefaan De Roeck <stefaan@gentoo.org> libdc1394-1.2.2.ebuild:
+  fix patch reference (bug #263251)
 
 *libdc1394-2.0.3 (31 Jan 2009)
 
