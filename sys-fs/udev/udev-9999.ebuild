@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.8 2009/05/06 23:52:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.9 2009/06/17 13:52:39 zzam Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
@@ -17,17 +19,20 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="selinux"
+IUSE="selinux +devfs-compat -doc"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )"
+# >=sys-apps/util-linux-2.16 should provide libblkid
+
+# for compiling the extras udev needs a lot more depends (see README)
+
+DEPEND="${COMMON_DEPEND}"
 
 if [[ ${PV} == "9999" ]]; then
 	# for documentation processing with xsltproc
-	DEPEND="${COMMON_DEPEND}
+	DEPEND="${DEPEND}
 		app-text/docbook-xsl-stylesheets
 		app-text/docbook-xml-dtd"
-else
-	DEPEND="${COMMON_DEPEND}"
 fi
 
 RDEPEND="${COMMON_DEPEND}
@@ -39,7 +44,7 @@ RDEPEND="${COMMON_DEPEND}
 PROVIDE="virtual/dev-manager"
 
 pkg_setup() {
-	udev_helper_dir="/$(get_libdir)/udev"
+	udev_libexec_dir="/$(get_libdir)/udev"
 
 	# comparing kernel version without linux-info.eclass to not pull
 	# virtual/linux-sources
@@ -49,7 +54,7 @@ pkg_setup() {
 	local KV_MINOR=$(get_version_component_range 2 ${KV})
 	local KV_MICRO=$(get_version_component_range 3 ${KV})
 
-	local KV_min_micro=15 KV_min_micro_reliable=22
+	local KV_min_micro=25 KV_min_micro_reliable=25
 	KV_min=2.6.${KV_min_micro}
 	KV_min_reliable=2.6.${KV_min_micro_reliable}
 
@@ -76,8 +81,8 @@ pkg_setup() {
 	fi
 }
 
-sed_helper_dir() {
-	sed -e "s#/lib/udev#${udev_helper_dir}#" -i "$@"
+sed_libexec_dir() {
+	sed -e "s#/lib/udev#${udev_libexec_dir}#" -i "$@"
 }
 
 src_unpack() {
@@ -90,6 +95,10 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
+	if ! use devfs-compat; then
+		# see Bug #269359
+		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
+	fi
 
 	# change rules back to group uucp instead of dialout for now
 	sed -e 's/GROUP="dialout"/GROUP="uucp"/' \
@@ -101,7 +110,7 @@ src_unpack() {
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != 980aeafcd2f2d057945cf3ddf2ae884e ]]
+		if [[ ${MD5} != b5c2f014a48a53921de37c4e469aab96 ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
@@ -110,14 +119,21 @@ src_unpack() {
 		fi
 	fi
 
-	sed_helper_dir \
+	sed_libexec_dir \
 		rules/rules.d/50-udev-default.rules \
+		rules/rules.d/78-sound-card.rules \
 		extras/rule_generator/write_*_rules \
-		udev/udev-util.c \
-		udev/udev-rules.c \
-		udev/udevd.c || die "sed failed"
+		|| die "sed failed"
 
 	if [[ ${PV} == 9999 ]]; then
+		if ! use doc; then
+			sed -e '/docs\/Makefile/d' \
+				-e '/GTK_DOC_CHECK/d' \
+				-i.orig configure.ac
+			sed -e 's/SUBDIRS =.*/SUBDIRS =/' \
+				-e 's/docs//' \
+				-i.orig libudev/Makefile.am
+		fi
 		eautoreconf
 	fi
 }
@@ -128,10 +144,13 @@ src_compile() {
 	econf \
 		--prefix=/usr \
 		--sysconfdir=/etc \
-		--exec-prefix= \
-		--with-libdir-name=$(get_libdir) \
+		--sbindir=/sbin \
+		--libdir=/usr/$(get_libdir) \
+		--with-rootlibdir=/$(get_libdir) \
+		--libexecdir="${udev_libexec_dir}" \
 		--enable-logging \
-		$(use_with selinux)
+		$(use_with selinux) \
+		--disable-extras
 
 	emake || die "compiling udev failed"
 }
@@ -149,7 +168,7 @@ src_install() {
 		rmdir "${D}"/lib
 	fi
 
-	exeinto "${udev_helper_dir}"
+	exeinto "${udev_libexec_dir}"
 	newexe "${FILESDIR}"/net-130-r1.sh net.sh	|| die "net.sh not installed properly"
 	newexe "${FILESDIR}"/move_tmp_persistent_rules-112-r1.sh move_tmp_persistent_rules.sh \
 		|| die "move_tmp_persistent_rules.sh not installed properly"
@@ -161,13 +180,12 @@ src_install() {
 	doexe "${scriptdir}"/shell-compat-addon.sh \
 		|| die "shell-compat.sh not installed properly"
 
-	keepdir "${udev_helper_dir}"/state
-	keepdir "${udev_helper_dir}"/devices
+	keepdir "${udev_libexec_dir}"/state
+	keepdir "${udev_libexec_dir}"/devices
 
 	# create symlinks for these utilities to /sbin
 	# where multipath-tools expect them to be (Bug #168588)
-	dosym "..${udev_helper_dir}/vol_id" /sbin/vol_id
-	dosym "..${udev_helper_dir}/scsi_id" /sbin/scsi_id
+	dosym "..${udev_libexec_dir}/scsi_id" /sbin/scsi_id
 
 	# Add gentoo stuff to udev.conf
 	echo "# If you need to change mount-options, do it in /etc/fstab" \
@@ -178,7 +196,7 @@ src_install() {
 
 	# Now installing rules
 	cd "${S}"/rules
-	insinto "${udev_helper_dir}"/rules.d/
+	insinto "${udev_libexec_dir}"/rules.d/
 
 	# Our rules files
 	doins gentoo/??-*.rules
@@ -220,8 +238,10 @@ src_install() {
 	newins "${FILESDIR}"/pnp-aliases pnp-aliases.conf
 
 	# convert /lib/udev to real used dir
-	sed_helper_dir \
+	sed_libexec_dir \
 		"${D}/$(get_libdir)"/rcscripts/addons/*.sh \
+		"${D}/${udev_libexec_dir}"/write_root_link_rule \
+		"${D}"/etc/conf.d/udev \
 		"${D}"/etc/init.d/udev* \
 		"${D}"/etc/modprobe.d/*
 
@@ -231,16 +251,22 @@ src_install() {
 	cd docs/writing_udev_rules
 	mv index.html writing_udev_rules.html
 	dohtml *.html
-
 	cd "${S}"
-
-	newdoc extras/volume_id/README README_volume_id
 
 	echo "CONFIG_PROTECT_MASK=\"/etc/udev/rules.d\"" > 20udev
 	doenvd 20udev
 }
 
 pkg_preinst() {
+	local f dir=${ROOT}/etc/modprobe.d/
+	for f in pnp-aliases blacklist; do
+		if [[ -f $dir/$f && ! -f $dir/$f.conf ]]
+		then
+			elog "Moving $dir/$f to $f.conf"
+			mv -f "$dir/$f" "$dir/$f.conf"
+		fi
+	done
+
 	if [[ -d ${ROOT}/lib/udev-state ]]
 	then
 		mv -f "${ROOT}"/lib/udev-state/* "${D}"/lib/udev/state/
@@ -429,6 +455,17 @@ pkg_postinst() {
 	ewarn "mount options for directory /dev are no longer"
 	ewarn "set in /etc/udev/udev.conf, but in /etc/fstab"
 	ewarn "as for other directories."
+
+	if use devfs-compat; then
+		ewarn
+		ewarn "You have devfs-compat use flag enabled."
+		ewarn "This enables devfs compatible device names."
+		ewarn "If you use /dev/md/*, /dev/loop/* or /dev/rd/*,"
+		ewarn "then please migrate over to using the device names"
+		ewarn "/dev/md*, /dev/loop* and /dev/ram*."
+		ewarn "The devfs-compat rules will be removed in the future."
+		ewarn "For reference see Bug #269359."
+	fi
 
 	elog
 	elog "For more information on udev on Gentoo, writing udev rules, and"

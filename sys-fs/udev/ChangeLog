@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.470 2009/06/17 13:29:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.471 2009/06/17 13:52:39 zzam Exp $
+
+  17 Jun 2009; Matthias Schwarzott <zzam@gentoo.org> udev-9999.ebuild:
+  Update to level of udev-141-r1. Update for changed configure-script. Patch
+  out gtk-doc stuff, else autotools fail without gtk. Note about needed
+  util-linux for it libblkid. udev no longer installs libvolume_id and
+  vol_id binary. Lift minimal required kernel version to 2.6.25. Disable new
+  udev-extras for now, they need a lot of dependencies.
 
   17 Jun 2009; Jeroen Roovers <jer@gentoo.org> udev-141-r1.ebuild:
   Stable for HPPA (bug #254616).
