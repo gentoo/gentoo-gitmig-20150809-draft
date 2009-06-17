@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.98 2009/05/24 17:48:50 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.99 2009/06/17 19:51:46 betelgeuse Exp $
+
+  17 Jun 2009; Petteri Räty <betelgeuse@gentoo.org> swt-3.3.1.1-r1.ebuild,
+  swt-3.4-r3.ebuild:
+  Add DEPEND on dev-util/pkg-config reported in bug #274542.
 
 *swt-3.4-r3 (24 May 2009)
 *swt-3.3.1.1-r1 (24 May 2009)
