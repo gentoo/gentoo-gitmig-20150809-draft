@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.0.ebuild,v 1.2 2009/06/12 12:24:13 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.0.ebuild,v 1.3 2009/06/17 07:05:44 tupone Exp $
 EAPI=2
 
 inherit eutils toolchain-funcs
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/boost
 	sci-libs/proj
 	x11-libs/agg
 	media-fonts/dejavu
-	python? ( dev-libs/boost[python] )
+	python? ( >=dev-libs/boost-1.35.0-r5[python] )
 	cairo? ( x11-libs/cairo
 		dev-cpp/cairomm )
 	postgres? ( >=dev-db/postgresql-base-8.3
