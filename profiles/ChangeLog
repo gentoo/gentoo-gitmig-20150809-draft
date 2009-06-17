@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2800 2009/06/17 06:54:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2801 2009/06/17 07:23:16 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Jun 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  Masked bzr-1.16_rc1 pre-release and dependent bzrtools packages.
 
   17 Jun 2009; Peter Volkov <pva@gentoo.org> package.mask:
   net-misc/l7-filter masked for removal, bug 274341 and bug 254086.

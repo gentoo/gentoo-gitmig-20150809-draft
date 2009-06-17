@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9941 2009/06/17 06:54:47 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9942 2009/06/17 07:23:16 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Peter Volkov <pva@gentoo.org> (17 Jun 2009)
+# Masked pre-release candidate and dependant packages.
+=dev-util/bzr-1.16*
+=dev-util/bzrtools-1.16*
 
 # Peter Volkov <pva@gentoo.org> (17 Jun 2009)
 # Pending removal, use net-misc/l7-filter-userspace, bug #274341
