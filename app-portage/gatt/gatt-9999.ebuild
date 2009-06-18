@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.3 2008/06/19 03:48:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.4 2009/06/18 11:30:48 gentoofan23 Exp $
 
-inherit eutils subversion
+inherit eutils subversion autotools
 
 ESVN_REPO_URI="svn://80.108.115.144/gatt/trunk"
 ESVN_PROJECT="Gatt"
@@ -42,6 +42,11 @@ pkg_setup() {
 		ewarn "You either have to emerge Paludis with USE=portage enabled or configure"
 		ewarn "it properly before using Gatt with it"
 	fi
+}
+
+src_unpack() {
+	subversion_src_unpack
+	eautoreconf
 }
 
 src_compile() {
