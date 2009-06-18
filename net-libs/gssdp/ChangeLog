@@ -1,9 +1,11 @@
 # ChangeLog for net-libs/gssdp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.9 2008/11/24 18:26:39 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/ChangeLog,v 1.10 2009/06/18 07:28:34 ssuominen Exp $
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
-  Re-assign to net-p2p herd.
+*gssdp-0.6.4 (18 Jun 2009)
+
+  18 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> +gssdp-0.6.4.ebuild:
+  Version bump wrt #274453, thanks to Alex Legler for reporting.
 
 *gssdp-0.6.3 (28 Oct 2008)
 
@@ -12,29 +14,23 @@
 
 *gssdp-0.4.2 (24 Apr 2008)
 
-  24 Apr 2008; Samuli Suominen <drac@gentoo.org> +gssdp-0.4.2.ebuild:
+  24 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> +gssdp-0.4.2.ebuild:
   Version bump.
 
-  29 Jan 2008; Samuli Suominen <drac@gentoo.org> gssdp-0.4.1.ebuild:
-  dont rebuild gtk-doc
-
-  29 Jan 2008; Samuli Suominen <drac@gentoo.org> gssdp-0.4.1.ebuild:
-  Fix libsoup dep
-
-  01 Nov 2007; Samuli Suominen <drac@gentoo.org> gssdp-0.4.1.ebuild:
-  keyword ~amd64.
+  01 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> gssdp-0.4.1.ebuild:
+  Keyword ~amd64.
 
 *gssdp-0.4.1 (24 Sep 2007)
 
-  24 Sep 2007; Samuli Suominen <drac@gentoo.org> +gssdp-0.4.1.ebuild:
+  24 Sep 2007; Samuli Suominen <ssuominen@gentoo.org> +gssdp-0.4.1.ebuild:
   Version bump.
 
-  13 Sep 2007; Samuli Suominen <drac@gentoo.org> gssdp-0.4.ebuild:
+  13 Sep 2007; Samuli Suominen <ssuominen@gentoo.org> gssdp-0.4.ebuild:
   Upstream changed tarball download directory. Also change USE minimal to use
   X as it's more suitable.
 
 *gssdp-0.4 (23 Aug 2007)
 
-  23 Aug 2007; Samuli Suominen <drac@gentoo.org> +gssdp-0.4.ebuild:
+  23 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> +gssdp-0.4.ebuild:
   Initial commit.
 
