@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-xlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ChangeLog,v 1.7 2009/06/13 08:24:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ChangeLog,v 1.8 2009/06/18 18:31:38 graaff Exp $
+
+  18 Jun 2009; Hans de Graaff <graaff@gentoo.org>
+  ruby-xlib-0.6.15-r1.ebuild:
+  PATCHES should be an array.
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org>
   ruby-xlib-0.6.15-r1.ebuild:

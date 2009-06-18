@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ruby-xlib-0.6.15-r1.ebuild,v 1.5 2009/06/13 08:24:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xlib/ruby-xlib-0.6.15-r1.ebuild,v 1.6 2009/06/18 18:31:38 graaff Exp $
 
 inherit ruby
 USE_RUBY="ruby18 ruby19"
@@ -20,4 +20,4 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/xextproto"
 
-PATCHES="${FILESDIR}/ruby-xlib-0.6.15-gcc.patch"
+PATCHES=( "${FILESDIR}/ruby-xlib-0.6.15-gcc.patch" )
