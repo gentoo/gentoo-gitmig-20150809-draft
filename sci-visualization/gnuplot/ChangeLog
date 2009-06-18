@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/gnuplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.103 2009/06/17 21:39:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/gnuplot/ChangeLog,v 1.104 2009/06/18 01:50:21 gentoofan23 Exp $
+
+  18 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  gnuplot-4.2.5.ebuild:
+  stable amd64, bug 274558
 
   17 Jun 2009; Christian Faulhammer <fauli@gentoo.org> gnuplot-4.2.5.ebuild:
   stable x86, bug 274558
