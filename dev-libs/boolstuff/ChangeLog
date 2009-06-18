@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/boolstuff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.1 2009/05/30 18:16:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boolstuff/ChangeLog,v 1.2 2009/06/18 13:11:46 hwoarang Exp $
+
+*boolstuff-0.1.12-r1 (18 Jun 2009)
+
+  18 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +boolstuff-0.1.12-r1.ebuild:
+  Fix gcc-4.4 compilation issues. Bug 273828
 
 *boolstuff-0.1.12 (30 May 2009)
 
