@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/log4r
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.6 2007/03/13 23:35:32 tgall Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/log4r/ChangeLog,v 1.7 2009/06/18 18:14:13 graaff Exp $
+
+  18 Jun 2009; Hans de Graaff <graaff@gentoo.org> log4r-1.0.5.ebuild:
+  Add missing IUSE.
 
   13 Mar 2007; Tom Gall <tgall@gentoo.org> log4r-1.0.5.ebuild:
   added ~ppc64
