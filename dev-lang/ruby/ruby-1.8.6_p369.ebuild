@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p369.ebuild,v 1.8 2009/06/17 15:45:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.6_p369.ebuild,v 1.9 2009/06/18 13:12:32 a3li Exp $
 
 inherit autotools eutils flag-o-matic multilib versionator
 
@@ -127,6 +127,9 @@ src_test() {
 }
 
 src_install() {
+	# Ruby is involved in the install process, we don't want interference here.
+	unset RUBYOPT
+
 	LD_LIBRARY_PATH="${D}/usr/$(get_libdir)"
 	RUBYLIB="${S}:${D}/usr/$(get_libdir)/ruby/${SLOT}"
 	for d in $(find "${S}/ext" -type d) ; do
