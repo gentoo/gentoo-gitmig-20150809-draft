@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gupnp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.7 2008/10/28 21:39:27 tester Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/ChangeLog,v 1.8 2009/06/18 07:36:21 ssuominen Exp $
+
+*gupnp-0.12.8 (18 Jun 2009)
+
+  18 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> +gupnp-0.12.8.ebuild:
+  Version bump wrt #274453, thanks to Alex Legler for reporting.
 
 *gupnp-0.12.3 (28 Oct 2008)
 
@@ -9,25 +14,22 @@
 
 *gupnp-0.8 (24 Apr 2008)
 
-  24 Apr 2008; Samuli Suominen <drac@gentoo.org> +gupnp-0.8.ebuild:
+  24 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> +gupnp-0.8.ebuild:
   Version bump.
 
-  29 Jan 2008; Samuli Suominen <drac@gentoo.org> gupnp-0.6.ebuild:
-  Fix libsoup dep, and don't rebuild gtk-doc.
-
-  01 Nov 2007; Samuli Suominen <drac@gentoo.org> gupnp-0.6.ebuild:
-  keyword ~amd64.
+  01 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> gupnp-0.6.ebuild:
+  Keyword ~amd64.
 
 *gupnp-0.6 (24 Sep 2007)
 
-  24 Sep 2007; Samuli Suominen <drac@gentoo.org> +gupnp-0.6.ebuild:
+  24 Sep 2007; Samuli Suominen <ssuominen@gentoo.org> +gupnp-0.6.ebuild:
   Version bump.
 
-  13 Sep 2007; Samuli Suominen <drac@gentoo.org> gupnp-0.4.ebuild:
+  13 Sep 2007; Samuli Suominen <ssuominen@gentoo.org> gupnp-0.4.ebuild:
   Upstream changed tarball download directory.
 
 *gupnp-0.4 (23 Aug 2007)
 
-  23 Aug 2007; Samuli Suominen <drac@gentoo.org> +gupnp-0.4.ebuild:
+  23 Aug 2007; Samuli Suominen <ssuominen@gentoo.org> +gupnp-0.4.ebuild:
   Initial commit.
 
