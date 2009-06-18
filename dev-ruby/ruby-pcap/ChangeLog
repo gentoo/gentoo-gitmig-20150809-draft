@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-pcap
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pcap/ChangeLog,v 1.3 2007/08/04 19:37:18 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pcap/ChangeLog,v 1.4 2009/06/18 18:28:52 graaff Exp $
+
+  18 Jun 2009; Hans de Graaff <graaff@gentoo.org> ruby-pcap-0.6.ebuild:
+  Fix IUSE, ruby16 is no longer supported, PATCHES should be an array.
 
   04 Aug 2007; Hans de Graaff <graaff@gentoo.org>
   +files/ruby-pcap-0.6-fixnum.patch, ruby-pcap-0.6.ebuild:
