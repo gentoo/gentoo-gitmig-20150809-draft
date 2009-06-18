@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/atlantik
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantik/ChangeLog,v 1.92 2009/06/06 11:25:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/atlantik/ChangeLog,v 1.93 2009/06/18 04:10:13 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> atlantik-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> atlantik-3.5.10.ebuild:
   amd64/x86 stable, bug #271889

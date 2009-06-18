@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kfloppy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.108 2009/06/14 11:00:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfloppy/ChangeLog,v 1.109 2009/06/18 03:57:18 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kfloppy-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kfloppy-4.2.3.ebuild:
   Drop KDE 4.2.3

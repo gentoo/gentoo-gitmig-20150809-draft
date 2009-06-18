@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdewebdev-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.104 2009/06/14 10:56:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev-meta/ChangeLog,v 1.105 2009/06/18 04:35:53 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kdewebdev-meta-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -kdewebdev-meta-4.2.3.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kttsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.123 2009/06/14 11:37:36 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kttsd/ChangeLog,v 1.124 2009/06/18 05:18:49 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kttsd-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kttsd-4.2.3.ebuild:
   Drop KDE 4.2.3

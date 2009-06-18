@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimexchange/libkpimexchange-3.5.10.ebuild,v 1.4 2009/06/06 12:12:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkpimexchange/libkpimexchange-3.5.10.ebuild,v 1.5 2009/06/18 04:42:25 jer Exp $
 
 KMNAME=kdepim
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="KDE PIM exchange library"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=kde-base/libkcal-${PV}:${SLOT}"

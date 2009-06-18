@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kteatime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.115 2009/06/14 11:35:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kteatime/ChangeLog,v 1.116 2009/06/18 03:22:30 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kteatime-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kteatime-4.2.3.ebuild:
   Drop KDE 4.2.3

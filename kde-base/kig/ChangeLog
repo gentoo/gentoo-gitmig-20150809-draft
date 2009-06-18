@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.124 2009/06/14 11:04:20 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kig/ChangeLog,v 1.125 2009/06/18 03:39:14 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kig-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kig-4.2.3.ebuild:
   Drop KDE 4.2.3

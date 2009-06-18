@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klaptopdaemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.107 2009/06/14 13:11:14 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klaptopdaemon/ChangeLog,v 1.108 2009/06/18 04:02:17 jer Exp $
+
+  18 Jun 2009; Jeroen Roovers <jer@gentoo.org> klaptopdaemon-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -files/klaptopdaemon-3.5.7-has_acpi_sleep.patch,
