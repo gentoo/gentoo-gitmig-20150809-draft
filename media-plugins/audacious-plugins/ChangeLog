@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.118 2009/06/17 21:21:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.119 2009/06/18 11:27:05 chainsaw Exp $
 
   17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   audacious-plugins-2.0.1.ebuild:
@@ -12,7 +12,7 @@
   +files/2.1_alpha1-timidity-conf-path.patch,
   +audacious-plugins-2.1_alpha1-r1.ebuild:
   Correct the Timidity configuration search path so it aligns with the
-  Timidity ebuild, patch by sir_tuam@web.de in bug #274123.
+  Timidity ebuild, patch by Bartosz Brachaczek in bug #273925.
 
   17 Jun 2009; <chainsaw@gentoo.org> -audacious-plugins-1.4.4.ebuild,
   -audacious-plugins-1.4.5.ebuild, -audacious-plugins-1.5.0.ebuild,
