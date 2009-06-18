@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5-r1.ebuild,v 1.2 2009/02/10 16:17:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5-r1.ebuild,v 1.3 2009/06/18 19:31:14 gentoofan23 Exp $
 
 ARTS_REQUIRED="never"
 
@@ -33,6 +33,14 @@ PATCHES=(
 	"${FILESDIR}/showimg-0.9.5-gcc-4.3.patch"
 	"${FILESDIR}/showimg-0.9.5-libpqxx-2.6.9.diff"
 	)
+
+src_unpack() {
+	kde_src_unpack
+
+	sed -i -e '/MimeType/s:$:;:' \
+		"${S}/showimg/showimgapp/showimg.desktop" \
+		|| die "Sed failed."
+}
 
 src_compile() {
 	local myconf="--with-showimgdb \
