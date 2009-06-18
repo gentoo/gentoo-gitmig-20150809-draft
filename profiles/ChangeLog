@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2805 2009/06/18 10:44:25 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2806 2009/06/18 11:47:02 chainsaw Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2009; <chainsaw@gentoo.org> package.mask:
+  Undo removal mask for media-sound/ogg2mp3, new maintainer stepped up.
 
   18 Jun 2009; Alistair Bush <ali_bush@gentoo.org> package.mask:
   Add jython-2.5.0 to package.mask as it will break other packages until

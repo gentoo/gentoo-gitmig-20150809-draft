@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9946 2009/06/18 10:44:25 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9947 2009/06/18 11:47:02 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,11 +39,6 @@
 
 # Christian Faulhammer <fauli@gentoo.org> (13 Apr 2009)
 =net-misc/tor-0.2.1.5_rc
-
-# Tony Vroon <chainsaw@gentoo.org> (17 Jun 2009)
-# Dead homepage, upstream vows not to maintain it anymore. No sense packaging abandoned software.
-# Removal: July 17, 2009
-media-sound/ogg2mp3
 
 # Peter Volkov <pva@gentoo.org> (17 Jun 2009)
 # Masked pre-release candidate and dependant packages.
