@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r2.ebuild,v 1.13 2009/06/02 17:02:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.19-r2.ebuild,v 1.14 2009/06/18 20:07:03 phosphan Exp $
+
+EAPI="1"
 
 inherit eutils flag-o-matic
 
@@ -12,7 +14,7 @@ HOMEPAGE="http://www.sane-project.org/"
 RDEPEND=">=media-libs/jpeg-6b
 	amd64? ( sys-libs/libieee1284 )
 	x86? ( sys-libs/libieee1284 )
-	usb? ( >=dev-libs/libusb-0.1.8 )
+	usb? ( dev-libs/libusb:0 )
 	gphoto2? ( media-libs/libgphoto2 )
 	v4l? ( sys-kernel/linux-headers )"
 

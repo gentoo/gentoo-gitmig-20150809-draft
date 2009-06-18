@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.159 2009/06/02 17:02:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.160 2009/06/18 20:07:03 phosphan Exp $
+
+  18 Jun 2009; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.17.ebuild, sane-backends-1.0.18-r6.ebuild,
+  sane-backends-1.0.19-r1.ebuild, sane-backends-1.0.19-r2.ebuild:
+  Adjusted libusb dependency according to bug #270039. No testing with
+  libusb-compat possible due to lack of hardware and no code review
+  because of limited time, sorry.
 
   02 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   sane-backends-1.0.19-r2.ebuild:
