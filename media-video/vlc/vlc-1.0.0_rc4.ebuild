@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.1 2009/06/18 08:16:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.2 2009/06/18 16:53:58 aballier Exp $
 
 EAPI="1"
 
@@ -184,6 +184,12 @@ vlc_use_enable_force() {
 }
 
 pkg_setup() {
+	if has_version '<=media-video/vlc-0.9.9999'; then
+		eerror "Please unmerge vlc-0.9.x first before installing ${P}"
+		eerror "If you don't do that, some plugins will get linked against"
+		eerror "the old ${PN} version and will not work."
+		die "Unmerge vlc 0.9.x first"
+	fi
 	vlc_use_needs skins truetype
 	vlc_use_force skins qt4
 	vlc_use_needs cddax cdio

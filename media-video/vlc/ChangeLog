@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.445 2009/06/18 08:16:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.446 2009/06/18 16:53:58 aballier Exp $
+
+  18 Jun 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.0_rc4.ebuild,
+  vlc-1.0.9999.ebuild, vlc-9999.ebuild:
+  Dont let users upgrade from 0.9.x to >=1.0.x without removing the old
+  version fist; otherwise some plugins are relinked to the old libvlc's and
+  will not work, thanks libtool...
 
 *vlc-1.0.0_rc4 (18 Jun 2009)
 
