@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/yarsrevenge-0.99.ebuild,v 1.9 2008/04/30 22:56:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/yarsrevenge-0.99.ebuild,v 1.10 2009/06/18 00:16:46 nyhm Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="remake of the Atari 2600 classic Yar's Revenge"
@@ -17,13 +18,11 @@ DEPEND="media-libs/libsdl"
 
 S=${WORKDIR}/yar-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch \
-		"${FILESDIR}"/${PV}-math.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
-}
+PATCHES=(
+	"${FILESDIR}"/${PV}-math.patch
+	"${FILESDIR}"/${P}-gcc43.patch
+	"${FILESDIR}"/${P}-gcc44.patch
+)
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
