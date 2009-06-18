@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.2-r1.ebuild,v 1.3 2009/06/18 06:12:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-1.5.2-r1.ebuild,v 1.4 2009/06/18 11:05:56 gentoofan23 Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="http://reductivelabs.com/downloads/${PN}/${P}.tgz"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~ppc ~ppc64 sparc x86"
 
 USE_RUBY="ruby18"
 
