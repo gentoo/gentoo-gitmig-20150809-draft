@@ -1,6 +1,10 @@
 # ChangeLog for games-board/eboard
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.24 2009/05/20 16:35:15 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/ChangeLog,v 1.25 2009/06/18 01:48:47 nyhm Exp $
+
+  18 Jun 2009; Tristan Heaven <nyhm@gentoo.org> eboard-1.1.1.ebuild,
+  +files/eboard-1.1.1-gcc44.patch:
+  Fix building with gcc-4.4, bug #273400
 
   20 May 2009; nixnut <nixnut@gentoo.org> eboard-1.1.1.ebuild:
   ppc stable #266562

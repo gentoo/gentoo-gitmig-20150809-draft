@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1.ebuild,v 1.6 2009/05/20 16:35:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/eboard/eboard-1.1.1.ebuild,v 1.7 2009/06/18 01:48:47 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -31,12 +31,15 @@ src_prepare() {
 		-e "s:(\"-O6\"):split(' ', \"${CXXFLAGS}\"):" \
 		configure \
 		|| die "sed configure failed"
-	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch \
+		"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_configure() {
 	# not an autoconf script
 	./configure \
+		--compiler="${CXX}" \
 		--prefix="${GAMES_PREFIX}" \
 		--data-prefix="${GAMES_DATADIR}" \
 		--man-prefix="/usr/share/man" \
