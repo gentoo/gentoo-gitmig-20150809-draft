@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4556 2009/06/18 09:47:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4557 2009/06/18 19:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2186,6 +2186,7 @@ net-libs/aqbanking:dtaus -  Enable dtaus backend
 net-libs/aqbanking:geldkarte -  Enable geldkarte backend 
 net-libs/aqbanking:hbci -  Enable support for HBCI 
 net-libs/aqbanking:yellownet -  Enable support for Yellownet 
+net-libs/clinkcc:mythtv - Enable MythTV support
 net-libs/courier-authlib:vpopmail - Enable vpopmail support
 net-libs/cvm:vpopmail - Enable vpopmail support
 net-libs/iax:snomhack - Use slower memset for SNOM phoneem
