@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libkexif
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.30 2009/02/09 00:21:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexif/ChangeLog,v 1.31 2009/06/18 21:37:15 ssuominen Exp $
+
+  18 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> -libkexif-0.1.ebuild,
+  -libkexif-0.2.1.ebuild, -libkexif-0.2.1-r1.ebuild,
+  -files/libkexif-0.2.1-gcc4.patch, -libkexif-0.2.2.ebuild,
+  -libkexif-0.2.3.ebuild, -libkexif-0.2.4.ebuild:
+  Remove unused since they rdepend arts.
 
 *libkexif-0.2.5-r1 (09 Feb 2009)
 
