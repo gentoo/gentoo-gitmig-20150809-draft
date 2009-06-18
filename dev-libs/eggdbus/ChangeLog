@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/eggdbus
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/ChangeLog,v 1.1 2009/06/18 21:39:38 volkmar Exp $
+
+*eggdbus-0.4 (18 Jun 2009)
+
+  18 Jun 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/eggdbus-0.4-ldflags.patch, +files/eggdbus-0.4-tests.patch,
+  +metadata.xml, +eggdbus-0.4.ebuild:
+  Initial commit. Package needed for policykit-0.92 version bump.
+
