@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-mdb/monodevelop-debugger-mdb-2.0.ebuild,v 1.2 2009/06/18 17:25:06 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monodevelop-debugger-mdb/monodevelop-debugger-mdb-2.0-r1.ebuild,v 1.1 2009/06/18 17:25:06 loki_val Exp $
 
 EAPI=2
 
-inherit mono multilib
+inherit mono multilib eutils
 
 DESCRIPTION="MDB Extension for MonoDevelop"
 HOMEPAGE="http://www.monodevelop.com/"
@@ -15,12 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
-RDEPEND="<dev-lang/mono-2.4.2_pre1
+RDEPEND=">=dev-lang/mono-2.4.2_pre1
 	=dev-util/monodevelop-${PV}*
 	 >=dev-util/mono-debugger-2.0"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.23"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-2.0-mono-2.4.2.patch"
+}
 
 src_configure() {
 	./configure \
