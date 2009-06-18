@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2-r2.ebuild,v 1.5 2009/06/15 11:44:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/gwenview-1.4.2-r3.ebuild,v 1.1 2009/06/18 09:23:37 pva Exp $
 
 ARTS_REQUIRED="never"
 
@@ -58,19 +58,19 @@ src_compile() {
 	local myconf="$(use_with kipi)"
 	rm -f "${S}/configure"
 
+	kde_src_compile
+
 	if [ -d "${WORKDIR}/${I18N}" ]; then
 		KDE_S="${WORKDIR}/${I18N}" \
-		kde_src_compile
-	else
 		kde_src_compile
 	fi
 }
 
 src_install() {
+	kde_src_install
+
 	if [ -d "${WORKDIR}/${I18N}" ]; then
 		KDE_S="${WORKDIR}/${I18N}" \
-		kde_src_install
-	else
 		kde_src_install
 	fi
 }
