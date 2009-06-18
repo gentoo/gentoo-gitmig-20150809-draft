@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/cob
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.9 2008/04/30 21:48:15 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/cob/ChangeLog,v 1.10 2009/06/18 01:31:16 nyhm Exp $
+
+  18 Jun 2009; Tristan Heaven <nyhm@gentoo.org> cob-0.9.ebuild,
+  +files/cob-0.9-gcc44.patch:
+  Fix building with gcc-4.4, bug #273520
 
   30 Apr 2008; Tristan Heaven <nyhm@gentoo.org> +files/cob-0.9-gcc43.patch,
   cob-0.9.ebuild:
