@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtelepathy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.25 2009/03/29 15:50:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/ChangeLog,v 1.26 2009/06/18 13:03:46 aballier Exp $
+
+  18 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  libtelepathy-0.3.3.ebuild:
+  keyword ~x86-fbsd and call elibtoolize for a sane .so versionning.
 
   29 Mar 2009; <solar@gentoo.org> libtelepathy-0.3.3.ebuild:
   - keyword ~arm
