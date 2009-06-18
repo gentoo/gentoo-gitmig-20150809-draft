@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.2.0.ebuild,v 1.1 2009/03/27 10:55:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.2.0.ebuild,v 1.2 2009/06/18 07:41:23 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -25,9 +25,8 @@ RDEPEND="dev-python/apptools
 	dev-python/ipython
 	>=dev-python/numpy-1.1
 	>=sci-libs/vtk-5[python]
-	qt4? ( dev-python/PyQt4[opengl] )
-	wxwindows? ( dev-python/wxpython:2.8[opengl] )
-	!wxwindows? ( !qt4? ( dev-python/wxpython:2.8[opengl] ) )"
+	dev-python/wxpython:2.8[opengl]
+	qt4? ( dev-python/PyQt4[X,opengl] )"
 
 DEPEND="dev-python/setuptools
 	>=dev-python/numpy-1.1

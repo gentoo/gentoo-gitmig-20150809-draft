@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.8 2009/03/27 10:55:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.9 2009/06/18 07:41:23 bicatali Exp $
+
+  18 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.2.0.ebuild:
+  Forced wxwidgets dependency (bug #266799) and added X for PyQt4 (bug
+  #272180)
 
 *mayavi-3.2.0 (27 Mar 2009)
 
