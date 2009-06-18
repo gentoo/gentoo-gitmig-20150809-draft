@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.2.ebuild,v 1.1 2009/06/04 13:49:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.2.ebuild,v 1.2 2009/06/18 09:08:04 aballier Exp $
 
 EAPI=1
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mlt/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dv compressed-lumas ffmpeg gtk jack kde libsamplerate mmx qt3 qt4 quicktime sdl sox sse vorbis xine xml"
 
 RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )
