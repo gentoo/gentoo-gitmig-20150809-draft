@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/clinkcc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/clinkcc/ChangeLog,v 1.1 2009/06/18 18:57:17 volkmar Exp $
+
+*clinkcc-1.7.1 (18 Jun 2009)
+
+  18 Jun 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/clinkcc-1.7.1-gentoo.patch, +metadata.xml, +clinkcc-1.7.1.ebuild:
+  Initial commit. Fixes bug 179471.
+
