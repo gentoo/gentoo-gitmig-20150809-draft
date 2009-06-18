@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.10.ebuild,v 1.1 2009/06/14 10:05:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.3.10-r1.ebuild,v 1.1 2009/06/18 00:16:36 mrness Exp $
 
 EAPI="2"
 
@@ -28,7 +28,8 @@ COMMON_DEPEND="sys-apps/gawk
 	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
 	sys-libs/zlib
-	>=dev-libs/geoip-1.4.5"
+	>=dev-libs/geoip-1.4.5
+	>=dev-lang/lua-5.1.4"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/libtool-1.4"
 
@@ -69,7 +70,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-external-geoip.patch
 	cat acinclude.m4.in acinclude.m4.ntop > acinclude.m4
 	eautoreconf
 }

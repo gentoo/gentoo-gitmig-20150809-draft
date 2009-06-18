@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.80 2009/06/14 10:05:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.81 2009/06/18 00:16:36 mrness Exp $
+
+*ntop-3.3.10-r1 (18 Jun 2009)
+
+  18 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  -files/ntop-3.3.10-external-geoip.patch, files/ntop-3.3.10-gentoo.patch,
+  -ntop-3.3.10.ebuild, +ntop-3.3.10-r1.ebuild:
+  Add missing lua dependency (#274447).
 
 *ntop-3.3.10 (14 Jun 2009)
 
