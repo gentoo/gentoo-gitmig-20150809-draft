@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.200 2009/06/17 21:02:36 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.201 2009/06/18 15:23:03 zzam Exp $
+
+  18 Jun 2009; Matthias Schwarzott <zzam@gentoo.org> lirc-0.8.4a.ebuild,
+  lirc-0.8.5.ebuild:
+  Rename modprobe config file to lirc.conf
 
 *lirc-0.8.5 (17 Jun 2009)
 

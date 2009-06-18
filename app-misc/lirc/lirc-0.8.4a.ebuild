@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4a.ebuild,v 1.4 2009/03/13 09:17:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4a.ebuild,v 1.5 2009/06/18 15:23:03 zzam Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -279,7 +279,7 @@ src_install() {
 	newconfd "${FILESDIR}"/lircd.conf.2 lircd
 
 	insinto /etc/modprobe.d/
-	newins "${FILESDIR}"/modprobed.lirc lirc
+	newins "${FILESDIR}"/modprobed.lirc lirc.conf
 
 	newinitd "${FILESDIR}"/irexec-initd irexec
 	newconfd "${FILESDIR}"/irexec-confd irexec
@@ -296,6 +296,12 @@ src_install() {
 
 pkg_preinst() {
 	linux-mod_pkg_preinst
+
+	local dir="${ROOT}/etc/modprobe.d"
+	if [[ -a ${dir}/lirc && ! -a ${dir}/lirc.conf ]]; then
+		elog "Renaming ${dir}/lirc to lirc.conf"
+		mv -f "${dir}/lirc" "${dir}/lirc.conf"
+	fi
 
 	# stop portage from deleting this file
 	if [[ -f ${ROOT}/etc/lircd.conf && ! -f ${D}/etc/lircd.conf ]]; then
