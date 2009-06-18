@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-bdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.29 2009/06/18 22:24:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.30 2009/06/18 22:30:14 flameeyes Exp $
+
+  18 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-bdb-0.6.5.ebuild:
+  Set RDEPEND, die on doc install failure.
 
   18 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -ruby-bdb-0.6.2.ebuild:
