@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-xslt
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.16 2008/12/20 14:48:53 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-xslt/ChangeLog,v 1.17 2009/06/18 18:23:42 graaff Exp $
+
+  18 Jun 2009; Hans de Graaff <graaff@gentoo.org> ruby-xslt-0.9.6.ebuild:
+  Add missing IUSE and USE_RUBY.
 
 *ruby-xslt-0.9.6 (20 Dec 2008)
 
