@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.36 2009/06/18 11:30:48 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.37 2009/06/18 11:50:33 gentoofan23 Exp $
+
+  18 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org> gatt-9999.ebuild:
+  Add note about the keywords template needing a ~arch version of
+  gentoolkit-dev.
 
   18 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org> gatt-9999.ebuild:
   Use eautoreconf for bootstrapping, fixes mass configure failures(dual runs
