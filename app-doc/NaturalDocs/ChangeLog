@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/NaturalDocs
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.23 2009/05/19 15:19:18 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/NaturalDocs/ChangeLog,v 1.24 2009/06/18 06:13:55 fauli Exp $
+
+  18 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  NaturalDocs-1.40.ebuild:
+  stable x86, bug 274576
 
   19 May 2009; Ferris McCormick <fmccor@gentoo.org> NaturalDocs-1.40.ebuild:
   Sparc stable, required for Bug #270432.
