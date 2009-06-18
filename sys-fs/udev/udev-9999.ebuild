@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.9 2009/06/17 13:52:39 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.10 2009/06/18 09:27:50 zzam Exp $
 
 EAPI="1"
 
@@ -19,26 +19,35 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="selinux +devfs-compat -doc"
+IUSE="selinux +devfs-compat -extras"
 
-COMMON_DEPEND="selinux? ( sys-libs/libselinux )"
+COMMON_DEPEND="selinux? ( sys-libs/libselinux )
+	extras? (
+		sys-apps/acl
+		>=sys-apps/usbutils-0.82
+		dev-libs/libusb
+		sys-apps/pciutils
+		dev-libs/glib:2
+	)
+	>=sys-apps/util-linux-2.16"
 # >=sys-apps/util-linux-2.16 should provide libblkid
 
-# for compiling the extras udev needs a lot more depends (see README)
-
-DEPEND="${COMMON_DEPEND}"
-
-if [[ ${PV} == "9999" ]]; then
-	# for documentation processing with xsltproc
-	DEPEND="${DEPEND}
-		app-text/docbook-xsl-stylesheets
-		app-text/docbook-xml-dtd"
-fi
+DEPEND="${COMMON_DEPEND}
+	extras? ( dev-util/gperf )"
 
 RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
 	!<sys-fs/device-mapper-1.02.19-r1
 	>=sys-apps/baselayout-1.12.5"
+
+if [[ ${PV} == "9999" ]]; then
+	# for documentation processing with xsltproc
+	DEPEND="${DEPEND}
+		app-text/docbook-xsl-stylesheets
+		app-text/docbook-xml-dtd
+		doc? ( dev-util/gtk-doc )"
+	IUSE="${IUSE} -doc"
+fi
 
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
@@ -126,13 +135,10 @@ src_unpack() {
 		|| die "sed failed"
 
 	if [[ ${PV} == 9999 ]]; then
-		if ! use doc; then
-			sed -e '/docs\/Makefile/d' \
-				-e '/GTK_DOC_CHECK/d' \
-				-i.orig configure.ac
-			sed -e 's/SUBDIRS =.*/SUBDIRS =/' \
-				-e 's/docs//' \
-				-i.orig libudev/Makefile.am
+		if use doc; then
+			gtkdocize --copy
+		else
+			epatch "${FILESDIR}/udev-9999-disable-doc.diff"
 		fi
 		eautoreconf
 	fi
@@ -150,7 +156,7 @@ src_compile() {
 		--libexecdir="${udev_libexec_dir}" \
 		--enable-logging \
 		$(use_with selinux) \
-		--disable-extras
+		$(use_enable extras)
 
 	emake || die "compiling udev failed"
 }
