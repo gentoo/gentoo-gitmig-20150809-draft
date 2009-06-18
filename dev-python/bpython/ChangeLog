@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.6 2009/06/11 20:56:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.7 2009/06/18 20:02:13 grozin Exp $
+
+*bpython-0.9.3 (18 Jun 2009)
+
+  18 Jun 2009; Andrey Grozin <grozin@gentoo.org> -bpython-0.9.2.ebuild,
+  -files/bpython-0.9.2.patch, +bpython-0.9.3.ebuild, metadata.xml:
+  Version bump
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> bpython-0.9.2.ebuild:
   add ~amd64, bug #273015

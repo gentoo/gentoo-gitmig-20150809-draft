@@ -6,5 +6,7 @@
 		<email>grozin@gentoo.org</email>
 		<name>Andrey Grozin</name>
 	</maintainer>
-	<longdescription>Curses interface to python</longdescription>
+	<longdescription>Syntax highlighting and autocompletion
+	  for the python interpreter
+	</longdescription>
 </pkgmetadata>
