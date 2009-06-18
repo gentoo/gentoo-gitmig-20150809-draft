@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.10.ebuild,v 1.5 2009/06/06 08:09:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-3.5.10.ebuild,v 1.6 2009/06/18 02:21:45 jer Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils versionator
@@ -17,7 +17,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${MY_PV}.tar.bz2"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="3.5"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="alsa esd artswrappersuid jack mp3 nas vorbis"
 
 RDEPEND="x11-libs/qt:3
