@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-hangul/ibus-hangul-1.1.0.20090328.ebuild,v 1.2 2009/06/18 15:40:05 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-anthy/ibus-anthy-1.2.0.20090617.ebuild,v 1.1 2009/06/18 15:38:45 matsuu Exp $
 
-DESCRIPTION="The Hangul engine for IBus input platform"
+inherit eutils python
+
+DESCRIPTION="Japanese input method Anthy IMEngine for IBus Framework"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
@@ -11,11 +13,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-RDEPEND=">=dev-lang/python-2.5
-	>=app-i18n/ibus-1.1
-	app-i18n/libhangul
+RDEPEND=">=app-i18n/ibus-1.1.0
+	app-i18n/anthy
+	>=dev-lang/python-2.5
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
+	dev-lang/swig
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.16.1 )"
 
@@ -43,4 +46,10 @@ pkg_postinst() {
 	elog
 	elog "You should run ibus-setup and enable IM Engines you want to use!"
 	elog
+
+	python_mod_optimize /usr/share/${PN}
+}
+
+pkg_postrm() {
+	python_mod_cleanup /usr/share/${PN}
 }
