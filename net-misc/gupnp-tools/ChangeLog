@@ -1,25 +1,29 @@
 # ChangeLog for net-misc/gupnp-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.5 2008/11/24 18:27:12 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gupnp-tools/ChangeLog,v 1.6 2009/06/18 08:40:43 ssuominen Exp $
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
-  Re-assign to net-p2p herd.
+*gupnp-tools-0.7.1 (18 Jun 2009)
+
+  18 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +gupnp-tools-0.7.1.ebuild:
+  Version bump.
 
 *gupnp-tools-0.3 (24 Apr 2008)
 
-  24 Apr 2008; Samuli Suominen <drac@gentoo.org> +gupnp-tools-0.3.ebuild:
+  24 Apr 2008; Samuli Suominen <ssuominen@gentoo.org> +gupnp-tools-0.3.ebuild:
   Version bump.
 
-  01 Nov 2007; Samuli Suominen <drac@gentoo.org> gupnp-tools-0.2.ebuild:
-  keyword ~amd64.
+  01 Nov 2007; Samuli Suominen <ssuominen@gentoo.org> gupnp-tools-0.2.ebuild:
+  Keyword ~amd64.
 
 *gupnp-tools-0.2 (24 Sep 2007)
 
-  24 Sep 2007; Samuli Suominen <drac@gentoo.org> +gupnp-tools-0.2.ebuild:
+  24 Sep 2007; Samuli Suominen <ssuominen@gentoo.org> +gupnp-tools-0.2.ebuild:
   Version bump.
 
 *gupnp-tools-0.1.2 (13 Sep 2007)
 
-  13 Sep 2007; Samuli Suominen <drac@gentoo.org> +gupnp-tools-0.1.2.ebuild:
+  13 Sep 2007; Samuli Suominen <ssuominen@gentoo.org>
+  +gupnp-tools-0.1.2.ebuild:
   Initial commit.
 
