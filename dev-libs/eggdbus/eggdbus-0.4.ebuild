@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.4.ebuild,v 1.1 2009/06/18 21:39:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.4.ebuild,v 1.2 2009/06/18 21:57:48 volkmar Exp $
 
 EAPI="2"
 
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="D-Bus bindings for GObject"
 HOMEPAGE="http://cgit.freedesktop.org/~david/eggdbus"
@@ -24,10 +24,7 @@ DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
 # NOTES:
-# man pages are built with doc enabled (libxslt)
-
-# TODO:
-# test on ppc
+# man pages are built (and installed) when doc is enabled
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
@@ -37,8 +34,9 @@ src_prepare() {
 }
 
 src_configure() {
-	# ansi: build fails with (maintainer contacted)
+	# ansi: build fails with
 	# verbose-mode: looks useless
+	# large-file: not sure usefull
 	econf \
 		--disable-maintainer-mode \
 		--disable-dependency-tracking \
