@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/lsyncd
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/lsyncd/ChangeLog,v 1.1 2009/06/18 12:02:54 deathwing00 Exp $
+
+*lsyncd-1.26 (18 Jun 2009)
+
+  18 Jun 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> +metadata.xml,
+  +lsyncd-1.26.ebuild:
+  Initial version.
+
