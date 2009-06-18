@@ -1,0 +1,12 @@
+diff -rupN QScintilla-gpl-2.3.2.old/Python/sip/qsciscintillabase4.sip QScintilla-gpl-2.3.2.new/Python/sip/qsciscintillabase4.sip
+--- QScintilla-gpl-2.3.2.old/Python/sip/qsciscintillabase4.sip	2008-11-17 08:52:33.000000000 -0500
++++ QScintilla-gpl-2.3.2.new/Python/sip/qsciscintillabase4.sip	2009-06-18 10:55:49.000000000 -0400
+@@ -916,7 +916,7 @@ public:
+ 
+ %ConvertToSubClassCode
+ static struct class_graph {
+-    char *name;
++    const char *name;
+     sipWrapperType **type;
+     int yes, no;
+ } graph[] = {
