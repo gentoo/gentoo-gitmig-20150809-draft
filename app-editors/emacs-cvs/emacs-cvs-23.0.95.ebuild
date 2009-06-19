@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.92.ebuild,v 1.5 2009/06/07 16:00:03 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.95.ebuild,v 1.1 2009/06/19 22:42:51 ulm Exp $
 
 EAPI=2
 
@@ -14,7 +14,6 @@ if [ "${PV##*.}" = "9999" ]; then
 	ECVS_LOCALNAME="emacs"
 	inherit cvs
 	SRC_URI=""
-	FULL_VERSION=""
 	S="${WORKDIR}/${ECVS_LOCALNAME}"
 else
 	SRC_URI="mirror://gentoo/emacs-${PV}.tar.gz
@@ -80,7 +79,7 @@ EMACS_SUFFIX="emacs-${SLOT}"
 SITEFILE="20${PN}-${SLOT}-gentoo.el"
 
 src_prepare() {
-	if [ -z "${FULL_VERSION}" ]; then
+	if [ "${PV##*.}" = "9999" ]; then
 		FULL_VERSION=$(grep 'defconst[	 ]*emacs-version' lisp/version.el \
 			| sed -e 's/^[^"]*"\([^"]*\)".*$/\1/')
 		[ "${FULL_VERSION}" ] || die "Cannot determine current Emacs version"
@@ -92,7 +91,7 @@ src_prepare() {
 		echo
 	fi
 
-	epatch "${FILESDIR}/emacs-${PV}-sh.patch" #262359
+	epatch "${FILESDIR}/emacs-23.0.94-handle-xz-suffix.patch"
 
 	sed -i -e "s:/usr/lib/crtbegin.o:$(`tc-getCC` -print-file-name=crtbegin.o):g" \
 		-e "s:/usr/lib/crtend.o:$(`tc-getCC` -print-file-name=crtend.o):g" \
@@ -143,14 +142,14 @@ src_configure() {
 		myconf="${myconf} $(use_with gif) $(use_with jpeg)"
 		myconf="${myconf} $(use_with png) $(use_with svg rsvg)"
 		myconf="${myconf} $(use_with tiff) $(use_with xpm)"
-		myconf="${myconf} $(use_with xft freetype) $(use_with xft)"
+		myconf="${myconf} $(use_with xft)"
 
 		if use xft; then
 			myconf="${myconf} $(use_with m17n-lib libotf)"
 			myconf="${myconf} $(use_with m17n-lib m17n-flt)"
 		else
 			myconf="${myconf} --without-libotf --without-m17n-flt"
-			use m17n-lib && einfo \
+			use m17n-lib && ewarn \
 				"USE flag \"m17n-lib\" has no effect because xft is not set."
 		fi
 
