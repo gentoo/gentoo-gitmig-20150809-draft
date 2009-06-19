@@ -1,37 +1,33 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ssrc/ssrc-1.30.ebuild,v 1.2 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ssrc/ssrc-1.30.ebuild,v 1.3 2009/06/19 14:04:15 ssuominen Exp $
 
-inherit eutils
+EAPI=2
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="A fast and high quality sampling rate converter"
 HOMEPAGE="http://shibatch.sourceforge.net"
 SRC_URI="http://shibatch.sf.net/download/${P}.tgz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
-
-#-sparc: kde's pop.wav "Error: Only PCM is supported."
-
-KEYWORDS="~x86 ~amd64 -sparc"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="app-arch/unzip"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-makefile.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
-	# Local CFLAGS should overwrite the ones in the Makefile
-	emake -e || die
+	use sparc && append-cflags -DBIGENDIAN
+	tc-export CC
+	emake || die "emake failed"
 }
 
 src_install() {
-	dobin ssrc
-	dobin ssrc_hp
-	dodoc ssrc.txt history.txt
+	dobin ssrc{,_hp} || die "dobin failed"
+	dodoc {history,ssrc}.txt
 }
