@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.2 2008/05/29 17:16:58 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.3 2009/06/19 19:41:23 ssuominen Exp $
 
 inherit distutils python multilib
 
@@ -10,10 +10,10 @@ SRC_URI="http://www.nanoo.org/~daniel/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="virtual/python"
+RDEPEND="dev-lang/python"
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
