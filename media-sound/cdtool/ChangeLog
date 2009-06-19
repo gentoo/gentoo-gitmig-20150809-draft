@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/cdtool
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.18 2007/12/12 15:45:38 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.19 2009/06/19 17:17:51 ssuominen Exp $
+
+*cdtool-2.1.8-r1 (19 Jun 2009)
+
+  19 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> +cdtool-2.1.8-r1.ebuild,
+  +files/cdtool-2.1.8-glibc-2.10.patch:
+  Fix compile with glibc 2.10 wrt #273764, thanks to Diego E. Pettenò for
+  reporting.
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> cdtool-2.1.8.ebuild:
   Sparc stable, Bug #200098.
@@ -16,7 +23,7 @@
 
 *cdtool-2.1.8 (27 Jul 2007)
 
-  27 Jul 2007; Samuli Suominen <drac@gentoo.org> +cdtool-2.1.8.ebuild:
+  27 Jul 2007; Samuli Suominen <ssuominen@gentoo.org> +cdtool-2.1.8.ebuild:
   Version bump.
 
   03 Feb 2007; Steve Dibb <beandog@gentoo.org> cdtool-2.1.5-r1.ebuild:
