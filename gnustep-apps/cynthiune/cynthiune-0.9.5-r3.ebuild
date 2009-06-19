@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r2.ebuild,v 1.1 2008/12/09 17:12:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/cynthiune-0.9.5-r3.ebuild,v 1.1 2009/06/19 16:44:33 voyageur Exp $
 
 inherit gnustep-2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Free software and romantic music player for GNUstep."
 HOMEPAGE="http://organact.mine.nu/~wolfgang/cynthiune"
 SRC_URI="http://organact.mine.nu/~wolfgang/cynthiune/${P/c/C}.tar.gz"
 
-IUSE="arts esd flac mad modplug musepack timidity vorbis"
+IUSE="flac mad modplug musepack timidity vorbis"
 
 KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="GPL-2"
@@ -18,8 +18,6 @@ SLOT="0"
 
 RDEPEND="media-libs/audiofile
 	media-libs/taglib
-	arts? ( kde-base/arts )
-	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
 	mad? ( media-libs/libid3tag
 		media-libs/libmad )
@@ -46,9 +44,7 @@ src_unpack() {
 
 cynthiune_get_config() {
 	# Gentoo doesn't have libavi (any more)
-	local myconf="disable-windowsmedia=yes"
-	use arts || myconf="${myconf} disable-arts=yes"
-	use esd || myconf="${myconf} disable-esound=yes"
+	local myconf="disable-windowsmedia=yes disable-arts=yes disable-esound=yes"
 	use flac || myconf="${myconf} disable-flac=yes disable-flactags=yes"
 	use mad || myconf="${myconf} disable-mp3=yes disable-id3tag=yes"
 	use modplug || myconf="${myconf} disable-mod=yes"
