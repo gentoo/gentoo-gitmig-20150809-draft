@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pydf
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.20 2008/06/17 14:46:06 drac Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pydf/ChangeLog,v 1.21 2009/06/19 22:20:52 ranger Exp $
+
+  19 Jun 2009; Brent Baude <ranger@gentoo.org> pydf-6.ebuild:
+  keyworded ~arch for ppc64, bug 272075
 
   17 Jun 2008; Samuli Suominen <drac@gentoo.org> pydf-6.ebuild:
   amd64 stable wrt #227425
