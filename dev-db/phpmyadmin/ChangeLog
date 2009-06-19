@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/phpmyadmin
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.359 2009/02/28 11:07:22 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.360 2009/06/19 14:38:56 a3li Exp $
+
+*phpmyadmin-3.2.0 (19 Jun 2009)
+*phpmyadmin-2.11.9.5 (19 Jun 2009)
+
+  19 Jun 2009; Alex Legler <a3li@gentoo.org> +phpmyadmin-2.11.9.5.ebuild,
+  -phpmyadmin-3.1.2.ebuild, +phpmyadmin-3.2.0.ebuild:
+  Non-maintainer commit: Version bump, security bugs 263711 and 266438, bump
+  request 270877.
 
   28 Feb 2009; Robin H. Johnson <robbat2@gentoo.org>
   phpmyadmin-3.1.2.ebuild:
