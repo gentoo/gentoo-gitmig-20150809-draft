@@ -1,0 +1,14 @@
+diff -ur krecord-1.16.orig/krecord.desktop krecord-1.16/krecord.desktop
+--- krecord-1.16.orig/krecord.desktop	2004-11-03 14:57:55.000000000 +0200
++++ krecord-1.16/krecord.desktop	2009-06-19 12:55:21.000000000 +0300
+@@ -1,9 +1,7 @@
+ [Desktop Entry]
+ Type=Application
+-Encoding=UTF-8
+ Icon=log
+ Exec=krecord
+-DocPath=
+ Comment=KRecord - a Sound Recorder
+ Name=KRecord
+-Categories=AudioVideo;Recorder
++Categories=AudioVideo;Recorder;

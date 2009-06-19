@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/krecord
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/ChangeLog,v 1.12 2007/02/22 01:09:10 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/ChangeLog,v 1.13 2009/06/19 09:58:07 ssuominen Exp $
+
+  19 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> krecord-1.16.ebuild,
+  +files/krecord-1.16-desktop_entry.patch,
+  +files/krecord-1.16-prestrip.patch:
+  Validate desktop entry and fix prestripping.
 
   22 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

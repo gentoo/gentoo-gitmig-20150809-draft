@@ -1,9 +1,9 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.16.ebuild,v 1.4 2009/06/19 09:20:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/krecord/krecord-1.16.ebuild,v 1.5 2009/06/19 09:58:07 ssuominen Exp $
 
 ARTS_REQUIRED=never
-inherit kde
+inherit kde toolchain-funcs
 
 DESCRIPTION="A KDE sound recorder."
 HOMEPAGE="http://bytesex.org/krecord.html"
@@ -21,6 +21,10 @@ DEPEND="${RDEPEND}"
 
 need-kde 3.5
 
+PATCHES=( "${FILESDIR}/${P}-desktop_entry.patch"
+	"${FILESDIR}/${P}-prestrip.patch" )
+
 src_compile() {
+	tc-export CC CXX
 	emake || die "emake failed"
 }
