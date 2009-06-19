@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/jsonpickle
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jsonpickle/ChangeLog,v 1.1 2009/06/19 07:48:17 dev-zero Exp $
+
+*jsonpickle-0.2.0 (19 Jun 2009)
+
+  19 Jun 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +jsonpickle-0.2.0.ebuild, +metadata.xml:
+  Initial commit (needed as dependency for git-cola).
+
