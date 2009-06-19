@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.33 2009/06/03 17:29:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.34 2009/06/19 17:26:25 mrpouet Exp $
+
+*webkit-gtk-1.1.10 (19 Jun 2009)
+
+  19 Jun 2009; <mrpouet@gentoo.org> +webkit-gtk-1.1.10.ebuild:
+  Bump to 1.1.10, bug #274445, thanks to Priit Laes <amd@store20.com>
 
   03 Jun 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   webkit-gtk-1.1.8.ebuild:
