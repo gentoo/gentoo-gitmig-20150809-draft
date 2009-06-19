@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.64 2009/06/17 20:07:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.65 2009/06/19 21:08:07 scarabeus Exp $
+
+  19 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  hk_classes-0.8.3-r1.ebuild, metadata.xml:
+  Add useflag for mdb. Microsoft access files. Per bug #274706.
 
   17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   hk_classes-0.8.3-r1.ebuild:
