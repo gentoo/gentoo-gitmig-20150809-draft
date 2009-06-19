@@ -1,3 +1,5 @@
+Fix building with GLIBC 2.10+ as reported in http://bugs.gentoo.org/273764
+
 diff -ur cdtool-2.1.8.orig/cdown.c cdtool-2.1.8/cdown.c
 --- cdtool-2.1.8.orig/cdown.c	2005-10-17 22:11:59.000000000 +0300
 +++ cdtool-2.1.8/cdown.c	2009-06-19 20:15:57.000000000 +0300
