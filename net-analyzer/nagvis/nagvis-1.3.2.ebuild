@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.3.2.ebuild,v 1.2 2009/02/16 18:45:56 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagvis/nagvis-1.3.2.ebuild,v 1.3 2009/06/19 18:22:08 dertobi123 Exp $
 
 inherit eutils confutils depend.php
 
@@ -41,7 +41,7 @@ src_install() {
 }
 pkg_postinst() {
 	elog "Before running NagVis for the first time, you will need to set up"
-	elog "/usr/share/nagvis/nagvis/etc/nagvis.ini.php"
+	elog "/usr/share/nagvis/etc/nagvis.ini.php"
 	elog "A sample is in"
-	elog "/usr/share/nagvis/nagvis/etc/nagvis.ini.php-sample"
+	elog "/usr/share/nagvis/etc/nagvis.ini.php-sample"
 }
