@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.613 2009/06/07 14:29:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.614 2009/06/19 21:12:56 ranger Exp $
+
+  19 Jun 2009; Brent Baude <ranger@gentoo.org> portage-2.1.6.13.ebuild:
+  stable ppc64, bug 272485
 
   07 Jun 2009; Raúl Porcel <armin76@gentoo.org> portage-2.1.6.13.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #272485
