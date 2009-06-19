@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r4.ebuild,v 1.1 2009/06/10 22:03:19 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.1 2009/06/19 08:58:11 dagger Exp $
 
 EAPI="2"
 inherit eutils autotools
 
-PATCH_VERSION="1"
+PATCH_VERSION="1b"
 
 # NetworkManager likes itself with capital letters
 MY_PN=${PN/networkmanager/NetworkManager}
