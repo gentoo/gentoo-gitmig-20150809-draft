@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.9.ebuild,v 1.2 2009/05/14 04:58:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundkonverter/soundkonverter-0.3.9.ebuild,v 1.3 2009/06/19 19:58:58 ssuominen Exp $
 
 EAPI=1
 ARTS_REQUIRED=never
-inherit autotools flag-o-matic kde
+inherit flag-o-matic kde
 
 DESCRIPTION="SoundKonverter: A frontend to various audio converters for KDE."
 HOMEPAGE="http://kde-apps.org/content/show.php?content=29024"
