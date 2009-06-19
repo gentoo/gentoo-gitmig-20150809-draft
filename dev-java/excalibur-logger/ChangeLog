@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/excalibur-logger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.6 2009/05/18 19:39:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/ChangeLog,v 1.7 2009/06/19 09:53:04 fauli Exp $
+
+  19 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  excalibur-logger-2.1-r2.ebuild:
+  stable x86, bug 274644
 
 *excalibur-logger-2.1-r2 (18 May 2009)
 

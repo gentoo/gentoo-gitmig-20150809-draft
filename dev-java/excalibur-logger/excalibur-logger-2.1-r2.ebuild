@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/excalibur-logger-2.1-r2.ebuild,v 1.1 2009/05/18 19:39:30 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/excalibur-logger/excalibur-logger-2.1-r2.ebuild,v 1.2 2009/06/19 09:53:04 fauli Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/${PN//-logger}/${PN}/source/${P}-src.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 
 IUSE=""
 
