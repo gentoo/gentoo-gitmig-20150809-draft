@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mutt
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.131 2009/06/18 13:42:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/ChangeLog,v 1.132 2009/06/19 07:46:49 grobian Exp $
+
+  19 Jun 2009; Fabian Groffen <grobian@gentoo.org>
+  files/mutt-1.5.19-mutt-gnutls-7d0583e0315d-0b13183e40e0.patch:
+  Remove mutt_read_line hunk from ssl_gnutls patch, thanks to Martin Jansa in
+  bug #274603
 
   18 Jun 2009; Fabian Groffen <grobian@gentoo.org>
   files/mutt-1.5.19-mutt_ssl-3af7e8af1983-dc9ec900c657.patch:
