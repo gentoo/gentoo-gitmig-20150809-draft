@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/channeleditor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/ChangeLog,v 1.4 2009/05/30 12:18:06 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/channeleditor/ChangeLog,v 1.5 2009/06/19 17:39:11 billie Exp $
+
+*channeleditor-1.9.2.1-r1 (19 Jun 2009)
+
+  19 Jun 2009; Pielmeier Daniel <billie@gentoo.org>
+  +files/channeleditor-1.9.2.1-messages.properties.patch,
+  +files/channeleditor-1.9.2.1-messages_en.properties.patch,
+  +files/build-1.9.2.1.xml, +channeleditor-1.9.2.1-r1.ebuild:
+  Ebuild and build.xml improvements. Added two patches with many translation
+  corrections, hopefully they apply for everyone.
 
   30 May 2009; Pielmeier Daniel <billie@gentoo.org> metadata.xml:
   Update email in metadata
