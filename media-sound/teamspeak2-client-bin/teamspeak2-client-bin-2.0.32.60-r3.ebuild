@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.17 2009/05/12 07:18:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.18 2009/06/19 20:08:15 ssuominen Exp $
 
 MY_PV=rc2_2032
 DESCRIPTION="The TeamSpeak voice communication tool"
@@ -22,11 +22,11 @@ RESTRICT="strip test"
 
 S=${WORKDIR}/ts2_client_${MY_PV}/setup.data/image
 
-dir="/opt/teamspeak2-client"
-
 src_compile() { :; }
 
 src_install() {
+	local dest=/opt/teamspeak2-client
+
 	newdoc Readme.txt README
 	dodoc client_sdk/SDK_readme.txt
 	dohtml manual/*
@@ -35,14 +35,14 @@ src_install() {
 	dobin "${FILESDIR}"/TeamSpeak
 	dosed "s:%installdir%:/opt/teamspeak2-client:g" /opt/bin/TeamSpeak
 
-	exeinto ${dir}
+	exeinto ${dest}
 	doexe TeamSpeak.bin *.so*
 
-	insinto ${dir}/sounds
+	insinto ${dest}/sounds
 	doins sounds/*
 
-	insinto ${dir}/client_sdk
-	exeinto ${dir}/client_sdk
+	insinto ${dest}/client_sdk
+	exeinto ${dest}/client_sdk
 	doins client_sdk/*.pas client_sdk/*.dpr
 	doexe client_sdk/tsControl client_sdk/*.so*
 
@@ -56,12 +56,10 @@ src_install() {
 	doins "${FILESDIR}"/teamspeak.protocol
 
 	# Fix bug #489010
-	dosym /usr/share/doc/${PF}/html ${dir}/manual
+	dosym /usr/share/doc/${PF}/html ${dest}/manual
 }
 
 pkg_postinst() {
-	echo
-	elog
 	elog "Please Note: The new Teamspeak2 Release Candidate 2 Client"
 	elog "will not be able to connect to any of the *old* rc1 servers."
 	elog "if you get 'Bad response' from your server check if your"
@@ -74,8 +72,7 @@ pkg_postinst() {
 	elog "soundfiles because they've been moved from their old location."
 	elog "You may want to perform the following commands:"
 	elog "# mkdir /usr/share/teamspeak2-client"
-	elog "# ln -s ${dir}/sounds /usr/share/teamspeak2-client/sounds"
+	elog "# ln -s /opt/teamspeak2-client/sounds /usr/share/teamspeak2-client/sounds"
 	elog "This way, each user won't have to modify their config files to"
 	elog "reflect this move."
-	echo
 }
