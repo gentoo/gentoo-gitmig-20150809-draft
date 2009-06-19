@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/cola-1.3.8.ebuild,v 1.1 2009/06/19 07:48:50 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/cola-1.3.8.ebuild,v 1.2 2009/06/19 19:30:13 dev-zero Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ IUSE="doc test"
 
 RDEPEND="dev-python/PyQt4
 	|| ( >=dev-lang/python-2.6 ( =dev-lang/python-2.5* dev-python/simplejson ) )
-	dev-python/pyinotify
+	>=dev-python/pyinotify-0.7.1
 	dev-python/jsonpickle
 	dev-util/git"
 DEPEND="${RDEPEND}
