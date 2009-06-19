@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.0.ebuild,v 1.5 2009/06/15 17:24:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/squashfs-tools/squashfs-tools-4.0.ebuild,v 1.6 2009/06/19 20:45:21 ranger Exp $
 
 inherit toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/squashfs/squashfs${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ~ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND="sys-libs/zlib"
