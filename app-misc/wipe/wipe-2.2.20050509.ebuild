@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.20050509.ebuild,v 1.7 2008/12/30 20:35:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/wipe-2.2.20050509.ebuild,v 1.8 2009/06/19 22:11:58 ranger Exp $
 
 inherit versionator toolchain-funcs
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/wipe/${MY_SRC}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 IUSE=""
 
 src_compile() {

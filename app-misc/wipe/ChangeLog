@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/wipe
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.21 2008/12/30 20:35:57 angelos Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wipe/ChangeLog,v 1.22 2009/06/19 22:11:58 ranger Exp $
+
+  19 Jun 2009; Brent Baude <ranger@gentoo.org> wipe-2.2.20050509.ebuild:
+  keyworded ~arch for ppc64, bug 272584
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org>
   wipe-2.2.20050509.ebuild:
