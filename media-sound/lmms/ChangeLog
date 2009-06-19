@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lmms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.8 2009/03/09 14:11:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.9 2009/06/19 21:51:02 aballier Exp $
+
+  19 Jun 2009; Alexis Ballier <aballier@gentoo.org> -lmms-0.4.2.ebuild:
+  remove old
 
   09 Mar 2009; Raúl Porcel <armin76@gentoo.org> lmms-0.4.2.ebuild,
   lmms-0.4.3.ebuild:
