@@ -210,3 +210,7 @@ pam_console
 # Jeremy Olexa <darkside@gentoo.org>
 # The prefix USE flag should never be used on non prefix profiles
 prefix
+
+# Alexey Shvetsov <alexxy@gentoo.org>
+# Mask kdeprefix since its broken by now
+kdeprefix
