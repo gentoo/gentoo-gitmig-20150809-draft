@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ranpwd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.7 2008/08/31 21:42:53 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.8 2009/06/19 22:09:28 ranger Exp $
+
+  19 Jun 2009; Brent Baude <ranger@gentoo.org> ranpwd-1.2.ebuild:
+  keyworded ~arch for ppc64, bug 272077
 
 *ranpwd-1.2 (31 Aug 2008)
 
