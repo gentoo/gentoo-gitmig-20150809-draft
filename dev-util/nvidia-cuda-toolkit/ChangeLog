@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.5 2009/05/16 15:46:35 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.6 2009/06/19 23:57:06 spock Exp $
+
+*nvidia-cuda-toolkit-2.2-r1 (19 Jun 2009)
+
+  19 Jun 2009; Michał Januszewski <spock@gentoo.org>
+  +nvidia-cuda-toolkit-2.2-r1.ebuild,
+  +files/nvidia-cuda-toolkit-2.2-enum_fix.patch, metadata.xml:
+  Add support for the CUDA visual profiler (bug #274095).
 
 *nvidia-cuda-toolkit-2.2 (16 May 2009)
 

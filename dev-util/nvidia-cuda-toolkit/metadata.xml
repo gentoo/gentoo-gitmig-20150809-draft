@@ -6,5 +6,10 @@
 		<email>spock@gentoo.org</email>
 		<name>Michał Januszewski</name>
 	</maintainer>
+	<use>
+		<flag name='profiler'>
+			Installs the NVIDIA CUDA visual profiler.
+		</flag>
+	</use>
 </pkgmetadata>
 
