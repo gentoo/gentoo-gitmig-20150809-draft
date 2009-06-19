@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.138 2009/06/02 05:57:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.139 2009/06/19 20:52:19 robbat2 Exp $
+
+  19 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  files/sysstat-9.0.3-ar.patch:
+  Really fix the parallel make bug with libsyscom.a now.
 
 *sysstat-9.0.3-r1 (02 Jun 2009)
 
