@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4559 2009/06/19 14:47:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4560 2009/06/19 20:07:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1504,7 +1504,6 @@ media-sound/amarok:real -  Build the Helix engine for Amarok, linked against med
 media-sound/amarok:visualization - Support visualization plugins through media-libs/libvisual
 media-sound/aqualung:cdda - Enables libcdda cd audio playback support
 media-sound/aqualung:ifp - Enable support for iRiver iFP portable audio players
-media-sound/aqualung:loop-playback - Enable adjustable loop playback support
 media-sound/aqualung:lua - Enable support for programmable title formatting with dev-lang/lua 
 media-sound/aqualung:podcast - Enable podcast support
 media-sound/aqualung:systray - Enable system tray support
