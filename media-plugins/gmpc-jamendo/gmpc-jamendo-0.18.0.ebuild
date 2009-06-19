@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/gmpc-jamendo-0.18.0.ebuild,v 1.1 2009/06/19 08:08:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/gmpc-jamendo-0.18.0.ebuild,v 1.2 2009/06/19 08:26:36 ssuominen Exp $
 
 EAPI=2
 
-DESCRIPTION="This plugin calls ogg123 and points it at mpd's shoutstream"
-HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_SHOUT"
+DESCRIPTION="Plugin allows you to browse and preview music available on jamendo."
+HOMEPAGE="http://gmpc.wikia.com/wiki/GMPC_PLUGIN_JAMENDO"
 SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 
 LICENSE="GPL-2"
