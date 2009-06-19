@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.64 2009/06/10 06:02:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.65 2009/06/19 09:20:29 dev-zero Exp $
+
+  19 Jun 2009; Tiziano Müller <dev-zero@gentoo.org> hugin-0.8.0_rc3.ebuild,
+  +files/hugin-0.8.0_rc3-unset_lapack.patch:
+  Added patch to unset LAPACK_LIBRARIES if lapack is not found, otherwise
+  cmake sets it to NOTFOUND leading to an error.
 
 *hugin-0.8.0_rc3 (10 Jun 2009)
 
