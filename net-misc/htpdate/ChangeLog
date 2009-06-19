@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/htpdate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.40 2009/06/16 17:48:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/htpdate/ChangeLog,v 1.41 2009/06/19 22:08:34 ranger Exp $
+
+  19 Jun 2009; Brent Baude <ranger@gentoo.org> htpdate-1.0.4.ebuild:
+  keyworded ~arch for ppc64, bug 272590
 
   16 Jun 2009; Tobias Klausmann <klausman@gentoo.org> htpdate-1.0.4.ebuild:
   Keyworded on alpha, bug #272769
