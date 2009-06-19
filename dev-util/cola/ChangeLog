@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cola
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cola/ChangeLog,v 1.1 2009/06/19 07:48:50 dev-zero Exp $
+
+*cola-1.3.8 (19 Jun 2009)
+
+  19 Jun 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.3.8-disable-tests.patch, +cola-1.3.8.ebuild, +metadata.xml:
+  Initial commit, moved over from my overlay (as requested in bug #274621).
+
