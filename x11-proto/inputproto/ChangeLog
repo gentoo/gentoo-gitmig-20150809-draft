@@ -1,6 +1,11 @@
 # ChangeLog for x11-proto/inputproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.76 2009/05/15 14:26:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/inputproto/ChangeLog,v 1.77 2009/06/19 21:14:41 remi Exp $
+
+  19 Jun 2009; Rémi Cardona <remi@gentoo.org> -inputproto-1.4.2.ebuild,
+  -inputproto-1.4.3.ebuild, -inputproto-1.4.3-r1.ebuild,
+  -inputproto-1.4.4.ebuild:
+  drop old ebuilds
 
   15 May 2009; Raúl Porcel <armin76@gentoo.org> inputproto-1.5.0.ebuild:
   arm/m68k/s390 stable
