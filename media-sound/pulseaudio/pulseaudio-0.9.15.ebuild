@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.6 2009/06/15 15:18:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.7 2009/06/19 20:33:37 aballier Exp $
 
 EAPI=2
 
@@ -77,10 +77,8 @@ pkg_setup() {
 	enewuser pulse -1 -1 /var/run/pulse pulse,audio
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
+	epatch "${FILESDIR}/${P}-bsd.patch"
 	elibtoolize
 }
 
