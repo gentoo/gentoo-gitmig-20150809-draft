@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1.ebuild,v 1.6 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavsplit/wavsplit-1.2.1.ebuild,v 1.7 2009/06/19 13:46:59 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,9 +10,10 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-#-sparc, -amd64: 1.0: "Only supports PCM wave format" error message.
 KEYWORDS="x86"
 IUSE=""
+
+RDEPEND=""
 DEPEND=""
 
 src_unpack() {

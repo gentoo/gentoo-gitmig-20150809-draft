@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r2.ebuild,v 1.7 2008/11/14 10:50:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.2.1-r2.ebuild,v 1.8 2009/06/19 13:42:31 ssuominen Exp $
 
 EAPI=1
-
 inherit eutils
 
 MY_P=ZynAddSubFX-${PV}
+
 DESCRIPTION="ZynAddSubFX is an opensource software synthesizer."
 HOMEPAGE="http://zynaddsubfx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/zynaddsubfx/${MY_P}.tar.bz2"
@@ -18,13 +18,14 @@ KEYWORDS="amd64 ~ppc x86"
 #IUSE="oss alsa jack mmx"
 IUSE="oss alsa jack"
 
-DEPEND=">=x11-libs/fltk-1.1.2:1.1
+RDEPEND=">=x11-libs/fltk-1.1.2:1.1
 	=sci-libs/fftw-3*
 	jack? ( media-sound/jack-audio-connection-kit )
 	>=dev-libs/mini-xml-2.2.1"
 #	portaudio? ( media-libs/portaudio )"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
 	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
