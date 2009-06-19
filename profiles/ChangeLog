@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2808 2009/06/18 16:54:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2809 2009/06/19 14:01:35 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jun 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  remove renderproto p.mask entry, ebuild is gone from portage
 
   18 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask plugins autoplaylist and serverstats because they are no longer
