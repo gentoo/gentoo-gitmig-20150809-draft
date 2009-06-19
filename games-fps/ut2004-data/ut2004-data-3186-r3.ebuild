@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.12 2007/03/12 15:44:29 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.13 2009/06/19 12:42:39 nyhm Exp $
 
 inherit eutils games games-ut2k4mod
 
@@ -143,16 +143,6 @@ src_install() {
 	# Copy ut2004
 	exeinto "${dir}"
 	doexe bin/ut2004 || die "copying ut2004"
-
-	exeinto "${dir}"/System
-	# We install the provided libraries because upstream wants it that way.
-	# If you want to use your own system binaries, then feel free to uncomment
-	# the following.  You will also want to comment the doexe line below that
-	# installs the libraries.
-#	newexe System/openal.so openal.so-binary
-#	newexe System/libSDL-1.2.so.0 libSDL-1.2.so.0-binary
-	doexe System/{libSDL-1.2.so.0,openal.so} \
-		|| die "copying libraries"
 
 	# Uncompressing files
 	einfo "Uncompressing files... this *will* take a while..."
