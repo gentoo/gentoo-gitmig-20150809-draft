@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/tsocks
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.28 2009/02/18 00:01:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.29 2009/06/20 12:03:13 mrness Exp $
+
+*tsocks-1.8_beta5-r5 (20 Jun 2009)
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/tsocks-1.8_beta5-gentoo-r3.patch, +tsocks-1.8_beta5-r5.ebuild:
+  Link tsocks-saveme dinamically (#273339). Migrate to EAPI 2.
 
 *tsocks-1.8_beta5-r4 (18 Feb 2009)
 
