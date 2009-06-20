@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.19.ebuild,v 1.8 2008/11/02 12:25:38 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.19.ebuild,v 1.9 2009/06/20 19:07:32 vapier Exp $
 
 DESCRIPTION="Network Information Service server"
 HOMEPAGE="http://www.linux-nis.org/nis/"
@@ -11,11 +11,22 @@ SLOT="0"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 IUSE="slp"
 
-RDEPEND=">=sys-libs/gdbm-1.8.0
+DEPEND=">=sys-libs/gdbm-1.8.0
 	 slp? ( net-libs/openslp )"
-DEPEND="${RDEPEND}"
-RDEPEND="${RDEPEND}
-	 net-nds/portmap"
+RDEPEND="${DEPEND}
+	 || ( net-nds/rpcbind net-nds/portmap )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i \
+		-e '/^INSTALL_STRIP_PROGRAM/s:-s::' \
+		configure || die
+	sed -i \
+		-e 's:INSTALL_STRIP_FLAG=-s::' \
+		-e '/^INSTALL_PROGRAM/s:-s::' \
+		Makefile.in */Makefile.in || die
+}
 
 src_compile() {
 	econf $(use_enable slp)
@@ -23,7 +34,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog NEWS README THANKS TODO
 
 	insinto /etc
