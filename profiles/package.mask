@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9957 2009/06/20 22:54:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9958 2009/06/20 23:50:48 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2009)
+#  on behalf of QA Team
+#
+# mp1e fails to build with recent compilers (still requires gcc 3.x!)
+# and even with recent assemblers. The older analogtv ebuilds will
+# follow it for a mandatory dependency, newer ones don't have the
+# dependency.
+#
+# See bug #274715
+#
+# Removal pending 21 August 2009
+media-video/mp1e
+<media-plugins/vdr-analogtv-1.0.00-r2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2009)
 #  on behalf of QA Team
