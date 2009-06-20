@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/squirm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.6 2008/10/12 08:05:06 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squirm/ChangeLog,v 1.7 2009/06/20 13:15:30 mrness Exp $
+
+*squirm-1.26 (20 Jun 2009)
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squirm-1.26-gentoo.patch, +squirm-1.26.ebuild:
+  Version bump. Migrate to EAPI 2. Install files in /opt/squirm directory.
 
   12 Oct 2008; Alin Năstac <mrness@gentoo.org> squirm-1.23.ebuild:
   Remove squid run-time dependency (#241212).
