@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/jsr311-api-1.1.ebuild,v 1.1 2009/06/20 20:31:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr311-api/jsr311-api-1.1.ebuild,v 1.2 2009/06/20 20:37:23 robbat2 Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source test"
@@ -25,7 +25,7 @@ DEPEND=">=virtual/jdk-1.5
 RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/${P}/${PN}"
-	
+
 # Helper to generate the tarball :-)
 # ( PN=jsr311-api ; PV=1.1 ; P="${PN}-${PV}" ; . ${P}.ebuild  ; src_tarball )
 src_tarball() {
