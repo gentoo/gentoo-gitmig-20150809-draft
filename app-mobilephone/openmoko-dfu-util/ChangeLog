@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/openmoko-dfu-util
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/ChangeLog,v 1.2 2008/11/28 20:03:58 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/ChangeLog,v 1.3 2009/06/20 21:57:27 mrness Exp $
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  openmoko-dfu-util-9999.ebuild:
+  Migrate to EAPI 2. Update libusb dependency atom (#270039).
 
   28 Nov 2008; Peter Volkov <pva@gentoo.org> openmoko-dfu-util-9999.ebuild:
   Install manual page.
