@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.4.ebuild,v 1.2 2009/02/18 00:24:00 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.4.ebuild,v 1.3 2009/06/20 22:10:42 mrness Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="bluetooth debug irda syslog usb"
 
-RDEPEND="usb? ( dev-libs/libusb )"
+RDEPEND="usb? ( dev-libs/libusb:0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
