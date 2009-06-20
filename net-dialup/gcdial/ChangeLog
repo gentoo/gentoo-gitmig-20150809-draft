@@ -1,6 +1,14 @@
 # ChangeLog for net-dialup/gcdial
-# Copyright 2000-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.6 2006/03/12 12:04:59 mrness Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gcdial/ChangeLog,v 1.7 2009/06/20 10:15:08 mrness Exp $
+
+*gcdial-0.7b-r1 (20 Jun 2009)
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/gcdial-0.7b-getline.patch, -gcdial-0.7b.ebuild,
+  +gcdial-0.7b-r1.ebuild:
+  Fix compilation error related to glibc-2.10 (#272268). Add ~amd64 keyword.
+  Migrate to EAPI 2.
 
   12 Mar 2006; Alin Nastac <mrness@gentoo.org> gcdial-0.7b.ebuild:
   Remove virtual/libc dependency.
