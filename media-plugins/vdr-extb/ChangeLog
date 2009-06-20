@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-extb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/ChangeLog,v 1.3 2008/12/17 15:08:40 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-extb/ChangeLog,v 1.4 2009/06/20 23:56:07 flameeyes Exp $
+
+  20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/extb-wakeup-0.2.9.tar.gz, -files/vdr.extb:
+  Remove unused files (one of which was a compressed tarball).
 
   17 Dec 2008; Matthias Schwarzott <zzam@gentoo.org>
   +files/vdr-extb-0.3.0-gcc4.3.diff, vdr-extb-0.3.0.ebuild:

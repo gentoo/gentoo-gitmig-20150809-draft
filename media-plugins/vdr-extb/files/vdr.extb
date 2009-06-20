@@ -1,6 +1,0 @@
-# /etc/conf.d/vdr.extb:
-
-# Global config file for vdr rc-scripts
-
-# configures the device for lirc
-DEVICE="/dev/lircd"
