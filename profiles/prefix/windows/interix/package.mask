@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.1 2009/06/06 03:55:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.2 2009/06/20 10:26:21 grobian Exp $
 
-# $Id: package.mask,v 1.1 2009/06/06 03:55:07 solar Exp $
+# $Id: package.mask,v 1.2 2009/06/20 10:26:21 grobian Exp $
+
+# Markus Duft <mduft@gentoo.org> (19 Jun 2009)
+# libiconf 1.13 doesn't work for now... needs further investigation.
+=dev-libs/libiconv-1.13
 
 # Markus Duft <mduft@gentoo.org> (27 May 2009)
 # boost not yet updated for winnt and interix interconnect.
@@ -16,13 +20,7 @@
 # Markus Duft <mduft@gentoo.org> (13 May 2009)
 # this dooms many things (must be some environment during install),
 # making installation fail.
-=dev-util/subversion-1.6.2
-
-# Markus Duft <mduft@gentoo.org> (12 Mar 2009)
-# this doesn't build at least on interix:
-# libtool: link: cannot find the library `../../libltdl/libltdlc.la' 
-#   or unhandled argument `../../libltdl/libltdlc.la'
-=media-gfx/graphviz-2.22.0
+=dev-util/subversion-1.6.2*
 
 # Markus Duft <mduft@gentoo.org> (02 Feb 2009)
 # this does not work correctly, since there seems to be some
@@ -37,17 +35,12 @@
 # Fabian Groffen <grobian@gentoo.org> (21 Sep 2008)
 # Fails to link with
 # sshd.o(.text+0x203a):sshd.c: undefined reference to `_setgroups'
-=net-misc/openssh-5*
+#=net-misc/openssh-5*
 
 # Markus Duft <mduft@gentoo.org> (05 May 2008)
 # Does not build with the slang interface, and
 # somebody removed the use flag for ncurses (bug #220365)
 >=app-misc/mc-4.6.2_pre1
-
-# Markus Duft <mduft@gentoo.org> (05 May 2008)
-# Does not build on interix (lots of unresolved
-# symbols which should be local...).
-=app-antivirus/clamav-0.93*
 
 # Michael Haubenwallner <haubi@gentoo.org> (18 Mar 2008)
 # Interix patches not working yet (mduft)
