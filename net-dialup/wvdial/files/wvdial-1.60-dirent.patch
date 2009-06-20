@@ -1,0 +1,15 @@
+diff -Nru wvdial-1.60.orig/wvmodemscan.cc wvdial-1.60/wvmodemscan.cc
+--- wvdial-1.60.orig/wvmodemscan.cc	2007-07-19 23:22:26.000000000 +0200
++++ wvdial-1.60/wvmodemscan.cc	2009-06-20 11:36:15.000000000 +0200
+@@ -496,10 +496,8 @@
+ }
+ 
+ 
+-static int filesort(const void *_e1, const void *_e2)
++static int filesort(const dirent **e1, const dirent **e2)
+ {
+-    dirent const * const *e1 = (dirent const * const *)_e1;
+-    dirent const * const *e2 = (dirent const * const *)_e2;
+     const char *p1, *p2;
+     int diff;
+     
