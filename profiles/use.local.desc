@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4562 2009/06/19 22:47:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4563 2009/06/20 00:07:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -920,6 +920,7 @@ dev-util/netbeans:cxx - Adds Netbeans C/C++ Pack
 dev-util/nsis:config-log - Enable the logging facility (useful in debugging installers)
 dev-util/nsis:prebuilt-system - Use the pre-compiled System.dll from the release to workaround the System::Call issue under GCC
 dev-util/nvidia-cuda-sdk:emulation -  Build binaries for device emulation mode. These binaries will not require a CUDA-capable GPU to run. 
+dev-util/nvidia-cuda-toolkit:profiler -  Installs the NVIDIA CUDA visual profiler. 
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
 dev-util/qct:bazaar -  Support for dev-util/bzr 
 dev-util/qct:mercurial -  Support for dev-util/mercurial 
