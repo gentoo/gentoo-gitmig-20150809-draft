@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.101 2009/06/20 09:25:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.102 2009/06/20 20:48:10 mrness Exp $
+
+*slmodem-2.9.11_pre20090222-r1 (20 Jun 2009)
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  -slmodem-2.9.11_pre20090222.ebuild, +slmodem-2.9.11_pre20090222-r1.ebuild:
+  Add .conf suffix to the installed modprobe.d file (#212257).
 
 *slmodem-2.9.11_pre20090222 (20 Jun 2009)
 

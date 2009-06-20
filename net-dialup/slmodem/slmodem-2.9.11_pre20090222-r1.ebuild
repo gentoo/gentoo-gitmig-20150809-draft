@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20090222.ebuild,v 1.1 2009/06/20 09:25:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.11_pre20090222-r1.ebuild,v 1.1 2009/06/20 20:48:10 mrness Exp $
 
 EAPI="2"
 
@@ -113,7 +113,7 @@ src_install() {
 
 	# Add module aliases
 	insinto /etc/modprobe.d/
-	newins "${FILESDIR}/slmodem-modprobe" ${PN}
+	newins "${FILESDIR}/slmodem-modprobe" ${PN}.conf
 
 	# Add configuration for udev
 	dodir /etc/udev/rules.d/
@@ -143,7 +143,6 @@ pkg_postinst() {
 		make DESTDIR="${ROOT}" install-devices
 	fi
 
-	ewarn "To avoid problems, slusb/slamr have been blacklisted in /etc/modprobe.d/${PN}"
 	elog "You must edit /etc/conf.d/${PN} for your configuration"
 	elog "To add slmodem to your startup - type : rc-update add slmodem default"
 	elog
