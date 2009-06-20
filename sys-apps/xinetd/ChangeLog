@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/xinetd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.48 2009/01/02 20:39:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/ChangeLog,v 1.49 2009/06/20 12:18:09 vapier Exp $
+
+  20 Jun 2009; Mike Frysinger <vapier@gentoo.org> xinetd-2.3.14.ebuild:
+  Switch to emake in src_install and drop old pkg_postinst messages.
 
   02 Jan 2009; Mike Frysinger <vapier@gentoo.org> files/xinetd.rc6:
   Tweak by Ian Pickworth for ssd usage to work on stable/unstable #253441.

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.14 2008/12/20 09:45:38 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.14.ebuild,v 1.15 2009/06/20 12:18:09 vapier Exp $
 
 inherit eutils
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	make install install-contrib DESTDIR="${D}" || die "failed install"
+	emake install install-contrib DESTDIR="${D}" || die "failed install"
 	use perl || rm -f "${D}"/usr/sbin/xconv.pl
 
 	newinitd "${FILESDIR}"/xinetd.rc6 xinetd || die
@@ -43,15 +43,4 @@ src_install() {
 
 	newdoc contrib/xinetd.conf xinetd.conf.dist.sample
 	dodoc AUDIT INSTALL README TODO CHANGELOG
-}
-
-pkg_postinst() {
-	einfo "This ebuild introduces the /etc/xinetd.d includedir with a default"
-	einfo "/etc/xinetd.conf file. Check your config files if you're upgrading from an older"
-	einfo "ebuild version. You should browse /etc/xinetd.conf and the files in /etc/xinetd.d."
-	ewarn
-	ewarn "PLEASE NOTE: Everything is off by default with access restricted to localhost."
-	ewarn
-	einfo "Check /etc/conf.d/xinetd for the startup options."
-	echo ""
 }
