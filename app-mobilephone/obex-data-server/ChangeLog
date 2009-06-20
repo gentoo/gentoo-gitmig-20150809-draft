@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.16 2009/03/08 01:35:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.17 2009/06/20 21:52:06 mrness Exp $
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  obex-data-server-0.4.4.ebuild:
+  Update libusb dependency atom (#270039).
 
   08 Mar 2009; Markus Meier <maekke@gentoo.org> obex-data-server-0.3.ebuild:
   x86 stable, bug #230591
