@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.2.ebuild,v 1.5 2008/04/11 22:02:25 maekke Exp $
-
-inherit findlib eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ounit-1.0.2.ebuild,v 1.6 2009/06/20 15:30:52 aballier Exp $
 
 EAPI="1"
+
+inherit findlib eutils
 
 DESCRIPTION="Unit testing framework for OCaml"
 HOMEPAGE="http://www.xs4all.nl/~mmzeeman/ocaml/"
