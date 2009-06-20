@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.1.ebuild,v 1.2 2009/06/11 13:49:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jokosher/jokosher-0.11.1.ebuild,v 1.3 2009/06/20 06:55:43 ssuominen Exp $
 
 NEED_PYTHON=2.4
 inherit eutils gnome2 distutils
@@ -16,8 +16,6 @@ IUSE="gnome"
 
 # NOTE: setuptools are a runtime requirement as the app
 #       loads its extensions via pkg_resources
-# Removed gnome-python and pyxml from deps because Ubuntu
-# doesn't dep on them. Let me know if there is trouble, ssuominen.
 RDEPEND="dev-python/dbus-python
 	>=dev-python/gst-python-0.10.8
 	dev-python/pycairo
