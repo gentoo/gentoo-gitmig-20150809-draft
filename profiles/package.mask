@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9952 2009/06/19 19:01:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9953 2009/06/20 12:55:18 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -557,11 +557,6 @@ dev-util/ctmkit
 # replacement, which is actively maintained and has more features.
 dev-php5/pecl-zip
 
-# Alin Năstac <mrness@gentoo.org> (10 Apr 2009)
-# Homepage no longer available (#264785)
-# To be removed by the tree cleaners after 30 days.
-net-dialup/qlcr
-
 # Jeremy Olexa <darkside@gentoo.org> (10 Apr 2009)
 # The bash-completion upstream naming scheme has drastically changed. As such,
 # I have renamed the 20081219-r1 to 0.20081219-r1 to allow for ~arch testing of
@@ -772,10 +767,6 @@ dev-util/w32api
 # Mike Pagano <mpagano@gentoo.org> (17 Dec 2008)
 # Masked waiting on >=portage-2.2* to be unmasked
 >=app-portage/portpeek-1.6
-
-# Alin Năstac <mrness@gentoo.org> (14 Dec 2008)
-# Dead upstream, masked for removal in ~60 days.
-net-proxy/squirm
 
 # Jim Ramsay <lack@gentoo.org> (11 Dec 2008)
 # Live ebuild, for advanced users only
