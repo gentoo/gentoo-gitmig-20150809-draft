@@ -1,6 +1,14 @@
 # ChangeLog for app-mobilephone/moto4lin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.10 2008/05/29 07:14:43 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/ChangeLog,v 1.11 2009/06/20 21:48:07 mrness Exp $
+
+*moto4lin-0.3_p20051125-r1 (20 Jun 2009)
+*moto4lin-0.3-r1 (20 Jun 2009)
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org> -moto4lin-0.3.ebuild,
+  +moto4lin-0.3-r1.ebuild, -moto4lin-0.3_p20051125.ebuild,
+  +moto4lin-0.3_p20051125-r1.ebuild:
+  Migrate to EAPI 2. Update libusb dependency atom (#270039).
 
   29 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Carlos Silva (r3pek) from metadata.xml (as per #80351).

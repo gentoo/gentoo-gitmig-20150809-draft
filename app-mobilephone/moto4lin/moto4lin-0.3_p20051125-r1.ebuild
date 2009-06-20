@@ -1,19 +1,21 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/moto4lin-0.3.ebuild,v 1.7 2007/03/10 14:51:14 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/moto4lin/moto4lin-0.3_p20051125-r1.ebuild,v 1.1 2009/06/20 21:48:07 mrness Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs
 
 DESCRIPTION="Moto4lin is file manager and seem editor for Motorola P2K phones"
 HOMEPAGE="http://moto4lin.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="dev-libs/libusb
+DEPEND="dev-libs/libusb:0
 	=x11-libs/qt-3*"
 
 src_compile() {
@@ -31,5 +33,5 @@ src_compile() {
 
 src_install() {
 	make INSTALL_ROOT="${D}" install || die "make install failed"
-	dodoc ChangeLog README
+	dodoc Changelog README
 }
