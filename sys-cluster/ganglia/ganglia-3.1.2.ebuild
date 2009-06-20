@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.2.ebuild,v 1.5 2009/06/20 16:02:50 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ganglia/ganglia-3.1.2.ebuild,v 1.6 2009/06/20 18:27:54 jsbronder Exp $
 
 WEBAPP_OPTIONAL="yes"
 inherit multilib webapp depend.php python
@@ -84,20 +84,22 @@ src_install() {
 		done
 	fi
 
-	insinto /etc/ganglia
 	if ! use minimal; then
-		doins gmetad/gmetad.conf
-		doman mans/gmetad.1
-		keepdir /var/lib/ganglia/rrds
-		fowners nobody:nobody /var/lib/ganglia/rrds
-		newinitd "${FILESDIR}"/gmetad.rc gmetad
-
 		webapp_src_preinst
 		insinto "${MY_HTDOCSDIR}"
 		doins -r web/*
-
 		webapp_configfile "${MY_HTDOCSDIR}"/conf.php
 		webapp_src_install
+
+		# webapp_src_install stomps on permissions, so do that
+		# stuff first.
+		insinto /etc/ganglia
+		doins gmetad/gmetad.conf
+		doman mans/gmetad.1
+
+		newinitd "${FILESDIR}"/gmetad.rc gmetad
+		keepdir /var/lib/ganglia/rrds
+		fowners nobody:nobody /var/lib/ganglia/rrds
 	fi
 }
 
