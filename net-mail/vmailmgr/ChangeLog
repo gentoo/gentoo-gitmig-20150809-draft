@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/vmailmgr
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.30 2008/06/22 22:18:05 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.31 2009/06/20 11:09:36 mrness Exp $
+
+*vmailmgr-0.97-r1 (20 Jun 2009)
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/vmailmgr-0.97-strcasestr.patch, -vmailmgr-0.97.ebuild,
+  +vmailmgr-0.97-r1.ebuild:
+  Define strcasestr() only when is not declared in string.h (#273270). Migrate
+  to EAPI 2.
 
   22 Jun 2008; Alin Năstac <mrness@gentoo.org>
   files/vmailmgr-0.97-gentoo.patch,

@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97.ebuild,v 1.9 2008/06/22 22:18:05 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.97-r1.ebuild,v 1.1 2009/06/20 11:09:36 mrness Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs eutils autotools
 
@@ -18,11 +20,9 @@ RDEPEND=">=sys-apps/ucspi-unix-0.34
 	virtual/qmail
 	>=net-mail/qmail-autoresponder-0.95"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}" || die "source dir not found"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
+	epatch "${FILESDIR}/${P}-strcasestr.patch"
 	eautoreconf
 }
 
