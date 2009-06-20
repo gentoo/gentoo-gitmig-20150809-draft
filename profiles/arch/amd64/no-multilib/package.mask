@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.35 2009/06/14 23:50:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.36 2009/06/20 09:29:47 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -60,7 +60,6 @@ dev-embedded/libftd2xx
 <dev-java/blackdown-jdk-1.4.2
 <dev-java/blackdown-jre-1.4.2
 dev-lang/dmd-bin
-dev-lang/anubis
 dev-lang/icc
 dev-lang/idb
 dev-lang/ifc
