@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.10.2.ebuild,v 1.1 2008/10/22 07:52:53 aballier Exp $
-
-inherit eutils findlib
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.10.2.ebuild,v 1.2 2009/06/20 15:17:50 aballier Exp $
 
 EAPI="2"
+
+inherit eutils findlib
 
 MY_P="${P/_p/pl}"
 DESCRIPTION="OCamlDuce is a merger between OCaml and CDuce"

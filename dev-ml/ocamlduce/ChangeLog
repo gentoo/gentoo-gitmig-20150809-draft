@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocamlduce
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.9 2008/12/11 08:11:46 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ChangeLog,v 1.10 2009/06/20 15:17:50 aballier Exp $
+
+  20 Jun 2009; Alexis Ballier <aballier@gentoo.org> ocamlduce-3.10.2.ebuild:
+  define eapi before inherit
 
   11 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   -ocamlduce-3.10.0.ebuild:
