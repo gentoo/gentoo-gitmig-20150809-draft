@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.120 2009/06/17 20:04:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.121 2009/06/20 18:00:17 billie Exp $
+
+*hplip-3.9.4b-r1 (20 Jun 2009)
+
+  20 Jun 2009; Pielmeier Daniel <billie@gentoo.org> +hplip-3.9.4b-r1.ebuild:
+  Revision bump. This should fix bug #274197.
 
   17 Jun 2009; Petteri Räty <betelgeuse@gentoo.org> hplip-3.9.4b.ebuild:
   Add dependency on dev-python/pygobject when dbus is on.
