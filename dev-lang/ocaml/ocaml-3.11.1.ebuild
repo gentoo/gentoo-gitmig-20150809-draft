@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.11.1.ebuild,v 1.2 2009/06/20 14:54:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.11.1.ebuild,v 1.3 2009/06/20 16:12:58 aballier Exp $
 
 EAPI="1"
 
@@ -47,7 +47,7 @@ src_unpack() {
 
 src_compile() {
 	export LC_ALL=C
-	local myconf="--host ${CHOST}"
+	local myconf=""
 
 	# It doesn't compile on alpha without this LDFLAGS
 	use alpha && append-ldflags "-Wl,--no-relax"
@@ -62,6 +62,10 @@ src_compile() {
 		--bindir /usr/bin \
 		--libdir /usr/$(get_libdir)/ocaml \
 		--mandir /usr/share/man \
+		-host "${CHOST}" \
+		-cc "$(tc-getCC)" \
+		-as "$(tc-getAS)" \
+		-aspp "$(tc-getCC) -c" \
 		--with-pthread ${myconf} || die "configure failed!"
 
 	make world || die "make world failed!"
