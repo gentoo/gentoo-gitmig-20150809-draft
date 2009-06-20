@@ -8,6 +8,7 @@
 	</maintainer>
 	<use>
 		<flag name="examples">Install tint2rc examples</flag>
+		<flag name="battery">Enable battery status plugin</flag>
 	</use>
 	<longdescription lang="en">
 		tint2 is a simple panel/taskbar intentionally made for <pkg>openbox</pkg>3, but should also work with other window managers.
