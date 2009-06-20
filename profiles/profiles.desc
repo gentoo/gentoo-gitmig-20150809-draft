@@ -185,69 +185,68 @@ ppc64		hardened/linux/powerpc/ppc64			dev
 x86		hardened/linux/x86				stable
 
 # These are Gentoo Prefix profiles, maintained by the Prefix team
-# Note: these profiles are automatically enabled in the Prefix rsync tree
 
-#prefix## Linux Profiles
-#prefix#amd64-linux		prefix/linux/amd64				dev
-#prefix#x86-linux		prefix/linux/x86				dev
-#prefix#ia64-linux		prefix/linux/ia64				dev
-#prefix#
-#prefix## Mac OS X Profiles
-#prefix#ppc-macos	prefix/darwin/macos/10.3			dev
-#prefix#ppc-macos	prefix/darwin/macos/10.4/ppc		dev
-#prefix#x86-macos	prefix/darwin/macos/10.4/x86		dev
-#prefix#ppc-macos	prefix/darwin/macos/10.5/ppc		dev
-#prefix#x86-macos	prefix/darwin/macos/10.5/x86		dev
-#prefix#x64-macos	prefix/darwin/macos/10.5/x64		dev
-#prefix#
-#prefix## Solaris Profiles
-#prefix#sparc-solaris	prefix/sunos/solaris/5.9/sparc	dev
-#prefix#sparc-solaris	prefix/sunos/solaris/5.10/sparc	dev
-#prefix#sparc64-solaris prefix/sunos/solaris/5.10/sparc64 dev
-#prefix#x86-solaris		prefix/sunos/solaris/5.10/x86	dev
-#prefix#x64-solaris		prefix/sunos/solaris/5.10/x64	dev
-#prefix#sparc-solaris	prefix/sunos/solaris/5.11/sparc	dev
-#prefix#sparc64-solaris prefix/sunos/solaris/5.11/sparc64 dev
-#prefix#x86-solaris		prefix/sunos/solaris/5.11/x86	dev
-#prefix#x64-solaris		prefix/sunos/solaris/5.11/x64	dev
-#prefix#
-#prefix## AIX Profiles
-#prefix#ppc-aix		prefix/aix/5.2.0.0/ppc				dev
-#prefix#ppc-aix		prefix/aix/5.3.0.0/ppc				dev
-#prefix#ppc-aix		prefix/aix/6.1.0.0/ppc				dev
-#prefix#
-#prefix## IRIX Profiles
-#prefix#mips-irix	prefix/irix/6.5/mips				dev
-#prefix#
-#prefix## Interix Profiles
-#prefix#x86-interix	prefix/windows/interix/3.5/x86		dev
-#prefix#x86-interix	prefix/windows/interix/5.2/x86		dev
-#prefix#x86-interix	prefix/windows/interix/6.0/x86		dev
-#prefix#
-#prefix## Windows Profiles
-#prefix#x86-winnt   prefix/windows/winnt/3.5/x86        dev
-#prefix#x86-winnt   prefix/windows/winnt/5.2/x86        dev
-#prefix#x86-winnt   prefix/windows/winnt/6.0/x86        dev
-#prefix#
-#prefix## HP-UX Profiles
-#prefix#ia64-hpux	prefix/hpux/B.11.23/ia64			dev
-#prefix#ia64-hpux	prefix/hpux/B.11.31/ia64			dev
-#prefix#
-#prefix## FreeBSD Profiles
-#prefix#x86-freebsd	prefix/bsd/freebsd/7.1/x86			dev
-#prefix#x64-freebsd	prefix/bsd/freebsd/7.1/x64			dev
-#prefix#x86-freebsd	prefix/bsd/freebsd/7.2/x86			dev
-#prefix#x64-freebsd	prefix/bsd/freebsd/7.2/x64			dev
-#prefix#
-#prefix## OpenBSD Profiles
-#prefix#ppc-openbsd prefix/bsd/openbsd/4.2/ppc			dev
-#prefix#x86-openbsd prefix/bsd/openbsd/4.2/x86			dev
-#prefix#x64-openbsd	prefix/bsd/openbsd/4.2/x64			dev
-#prefix#
-#prefix## NetBSD Profiles
-#prefix#x86-netbsd	prefix/bsd/netbsd/4.0/x86			dev
-#prefix#
-#prefix## FreeMiNT
-#prefix#m68k-mint	prefix/mint/m68k					dev
+# Linux Profiles
+amd64-linux		prefix/linux/amd64				dev
+x86-linux		prefix/linux/x86				dev
+ia64-linux		prefix/linux/ia64				dev
+
+# Mac OS X Profiles
+ppc-macos	prefix/darwin/macos/10.3			dev
+ppc-macos	prefix/darwin/macos/10.4/ppc		dev
+x86-macos	prefix/darwin/macos/10.4/x86		dev
+ppc-macos	prefix/darwin/macos/10.5/ppc		dev
+x86-macos	prefix/darwin/macos/10.5/x86		dev
+x64-macos	prefix/darwin/macos/10.5/x64		dev
+
+# Solaris Profiles
+sparc-solaris	prefix/sunos/solaris/5.9/sparc	dev
+sparc-solaris	prefix/sunos/solaris/5.10/sparc	dev
+sparc64-solaris prefix/sunos/solaris/5.10/sparc64 dev
+x86-solaris		prefix/sunos/solaris/5.10/x86	dev
+x64-solaris		prefix/sunos/solaris/5.10/x64	dev
+sparc-solaris	prefix/sunos/solaris/5.11/sparc	dev
+sparc64-solaris prefix/sunos/solaris/5.11/sparc64 dev
+x86-solaris		prefix/sunos/solaris/5.11/x86	dev
+x64-solaris		prefix/sunos/solaris/5.11/x64	dev
+
+# AIX Profiles
+ppc-aix		prefix/aix/5.2.0.0/ppc				dev
+ppc-aix		prefix/aix/5.3.0.0/ppc				dev
+ppc-aix		prefix/aix/6.1.0.0/ppc				dev
+
+# IRIX Profiles
+mips-irix	prefix/irix/6.5/mips				dev
+
+# Interix Profiles
+x86-interix	prefix/windows/interix/3.5/x86		dev
+x86-interix	prefix/windows/interix/5.2/x86		dev
+x86-interix	prefix/windows/interix/6.0/x86		dev
+
+# Windows Profiles
+x86-winnt   prefix/windows/winnt/3.5/x86        dev
+x86-winnt   prefix/windows/winnt/5.2/x86        dev
+x86-winnt   prefix/windows/winnt/6.0/x86        dev
+
+# HP-UX Profiles
+ia64-hpux	prefix/hpux/B.11.23/ia64			dev
+ia64-hpux	prefix/hpux/B.11.31/ia64			dev
+
+# FreeBSD Profiles
+x86-freebsd	prefix/bsd/freebsd/7.1/x86			dev
+x64-freebsd	prefix/bsd/freebsd/7.1/x64			dev
+x86-freebsd	prefix/bsd/freebsd/7.2/x86			dev
+x64-freebsd	prefix/bsd/freebsd/7.2/x64			dev
+
+# OpenBSD Profiles
+ppc-openbsd prefix/bsd/openbsd/4.2/ppc			dev
+x86-openbsd prefix/bsd/openbsd/4.2/x86			dev
+x64-openbsd	prefix/bsd/openbsd/4.2/x64			dev
+
+# NetBSD Profiles
+x86-netbsd	prefix/bsd/netbsd/4.0/x86			dev
+
+# FreeMiNT
+m68k-mint	prefix/mint/m68k					dev
 
 # vim: set ts=8
