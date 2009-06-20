@@ -1,0 +1,11 @@
+# ChangeLog for sci-libs/plotmm
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plotmm/ChangeLog,v 1.1 2009/06/20 10:58:09 volkmar Exp $
+
+*plotmm-0.1.2 (20 Jun 2009)
+
+  20 Jun 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/plotmm-0.1.2-libsigc++-2.2.patch, +metadata.xml,
+  +plotmm-0.1.2.ebuild:
+  Initial commit. Fix bug 225287.
+
