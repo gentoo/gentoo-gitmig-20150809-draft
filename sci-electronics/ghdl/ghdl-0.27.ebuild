@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.27.ebuild,v 1.1 2009/06/06 17:07:53 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ghdl/ghdl-0.27.ebuild,v 1.2 2009/06/20 03:36:43 calchan Exp $
 
 EAPI="2"
 
 inherit multilib
 
 GCC_VERSION="4.2.4"
+GNATGCC_SLOT="4.2"
 
 DESCRIPTION="Complete VHDL simulator using the GCC technology"
 HOMEPAGE="http://ghdl.free.fr"
@@ -17,14 +18,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=">=sys-apps/portage-2.1.2.10
-	>=dev-lang/gnat-gcc-4.2"
+	dev-lang/gnat-gcc:${GNATGCC_SLOT}"
 RDEPEND=""
 S="${WORKDIR}/gcc-${GCC_VERSION}"
+
+ADA_INCLUDE_PATH="${ROOT}/usr/lib/gnat-gcc/${CHOST}/${GNATGCC_SLOT}/adainclude"
+ADA_OBJECTS_PATH="${ROOT}/usr/lib/gnat-gcc/${CHOST}/${GNATGCC_SLOT}/adalib"
+GNATGCC_PATH="${ROOT}/usr/${CHOST}/gnat-gcc-bin/${GNATGCC_SLOT}:${ROOT}/usr/libexec/gnat-gcc/${CHOST}/${GNATGCC_SLOT}"
 
 src_prepare() {
 	mv "${WORKDIR}/${P}"/vhdl gcc
 	sed -i -e 's/ADAC = \$(CC)/ADAC = gnatgcc/' gcc/vhdl/Makefile.in || die "sed failed"
-	sed -i -e 's/AGCC_CFLAGS=-g/AGCC_CFLAGS=$(CFLAGS)/' gcc/vhdl/Make-lang.in || die "sed failed"
+	sed -i \
+		-e 's/AGCC_CFLAGS=-g/AGCC_CFLAGS=$(CFLAGS)/' \
+		-e 's/rm -rf $(infodir)/rm -rf $(DESTDIR)$(infodir)/' \
+		gcc/vhdl/Make-lang.in || die "sed failed"
 
 	# Fix issue similar to bug #195074, ported from vapier's fix for binutils
 	sed -i -e "s:egrep.*texinfo.*dev/null:egrep 'texinfo[^0-9]*(4\.([4-9]|[1-9][0-9])|[5-9]|[1-9][0-9])' >/dev/null:" \
@@ -44,15 +52,15 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --enable-languages=vhdl
+	PATH="${GNATGCC_PATH}:${PATH}" econf --enable-languages=vhdl
 }
 
 src_compile() {
-	emake -j1 || die "Compilation failed"
+	PATH="${GNATGCC_PATH}:${PATH}" emake -j1 || die "Compilation failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	PATH="${GNATGCC_PATH}:${PATH}" emake DESTDIR="${D}" install || die "Installation failed"
 
 	cd "${D}"/usr/bin ; rm `ls --ignore=ghdl`
 	rm -rf "${D}"/usr/include
