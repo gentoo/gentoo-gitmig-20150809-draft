@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.6.3_p20090204.ebuild,v 1.3 2009/06/01 03:25:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-1.6.3_p20090204.ebuild,v 1.4 2009/06/20 09:05:31 tampakrap Exp $
 
 ARTS_REQUIRED="never"
 
@@ -42,7 +42,7 @@ KMEXTRA="filters/kword"
 
 need-kde 3.5
 
-PATCHES=( "${FILESDIR}/${P}-gcc44.patch" )
+PATCHES=( "${FILESDIR}/${PN}-1.6.3-gcc44.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack unpack
