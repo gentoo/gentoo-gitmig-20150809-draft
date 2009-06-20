@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.3 2009/06/20 12:56:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.4 2009/06/20 13:03:18 aballier Exp $
 
 EAPI="1"
 
@@ -143,7 +143,7 @@ RDEPEND="
 			opengl? ( virtual/opengl )
 		)
 		x264? ( media-libs/x264 )
-		xcb? ( x11-libs/libxcb x11-libs/xcb-util )
+		xcb? ( >=x11-libs/libxcb-1.1.90.1 x11-libs/xcb-util )
 		xml? ( dev-libs/libxml2 )
 		xosd? ( x11-libs/xosd )
 		zvbi? ( >=media-libs/zvbi-0.2.25 )
