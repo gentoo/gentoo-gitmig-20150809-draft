@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-1.6.3_p20090204.ebuild,v 1.1 2009/02/08 17:28:35 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-1.6.3_p20090204.ebuild,v 1.2 2009/06/20 17:54:07 tampakrap Exp $
 
 ARTS_REQUIRED="never"
 
@@ -44,6 +44,8 @@ KMCOMPILEONLY="filters/liboofilter"
 KMEXTRA="filters/kspread"
 
 need-kde 3.5
+
+PATCHES=( "${FILESDIR}/${PN}-1.6.3-gcc44.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack unpack
