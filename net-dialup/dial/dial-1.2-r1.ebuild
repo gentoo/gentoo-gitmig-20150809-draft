@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/dial-1.2.ebuild,v 1.8 2006/03/12 09:57:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dial/dial-1.2-r1.ebuild,v 1.1 2009/06/20 10:08:58 mrness Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -10,21 +12,14 @@ SRC_URI="mirror://sourceforge/dwun/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
+DEPEND=""
 RDEPEND="net-dialup/dwun"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gcc3.3.patch"
-}
-
-src_compile() {
-	econf || die "econf failed."
-	emake || die "parallel make failed."
 }
 
 src_install() {
