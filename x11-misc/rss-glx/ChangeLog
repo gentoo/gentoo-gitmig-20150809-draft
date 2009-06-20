@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/rss-glx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.68 2009/03/21 21:54:41 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/ChangeLog,v 1.69 2009/06/20 08:32:00 ssuominen Exp $
+
+*rss-glx-0.9.0 (20 Jun 2009)
+
+  20 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> +rss-glx-0.9.0.ebuild:
+  Version bump.
 
   21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   -files/rss-glx-0.8.1-r4-gentoo.patch,
@@ -65,7 +70,8 @@
 
 *rss-glx-0.8.1-r4 (19 Feb 2007)
 
-  19 Feb 2007; Samuli Suominen <drac@gentoo.org> +rss-glx-0.8.1-r4.ebuild:
+  19 Feb 2007; Samuli Suominen <ssuominen@gentoo.org>
+  +rss-glx-0.8.1-r4.ebuild:
   Change location of XScreenSaver file for >=xscreensaver-5. Remove
   virtual/x11 usage.
 
