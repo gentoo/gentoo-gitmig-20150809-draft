@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.3 2008/11/28 13:30:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/rubrica-2.1.6-r1.ebuild,v 1.4 2009/06/20 23:22:05 flameeyes Exp $
 
 EAPI=1
 
@@ -10,7 +10,8 @@ MY_PN=${PN}2
 
 DESCRIPTION="A contact database for Gnome"
 HOMEPAGE="http://rubrica.berlios.de/"
-SRC_URI="mirror://berlios/${PN}/${MY_PN}-${PV}.tar.bz2"
+SRC_URI="mirror://berlios/${PN}/${MY_PN}-${PV}.tar.bz2
+	linguas_hu? ( mirror://gentoo/${P}-hu.po.bz2 )"
 
 IUSE="linguas_hu"
 SLOT="0"
@@ -47,8 +48,7 @@ src_compile() {
 
 	# Add Hungarian translation
 	if use linguas_hu; then
-		bunzip2 -c "${FILESDIR}/hu.po.bz2" > "${WORKDIR}"/hu.po
-		msgfmt "${WORKDIR}/hu.po" --output-file "po/hu.gmo" || die
+		msgfmt "${WORKDIR}/${P}-hu.po" --output-file "po/hu.gmo" || die
 	fi
 }
 

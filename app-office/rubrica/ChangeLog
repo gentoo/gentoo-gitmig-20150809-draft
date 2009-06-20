@@ -1,6 +1,10 @@
 # ChangeLog for app-office/rubrica
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.10 2008/11/28 13:30:38 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.11 2009/06/20 23:22:05 flameeyes Exp $
+
+  20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  rubrica-2.1.6-r1.ebuild, -files/hu.po.bz2:
+  Remove the hu.po.bz2 file from FILESDIR, move it to mirrors.
 
   28 Nov 2008; Christian Faulhammer <fauli@gentoo.org> -files/hu.po,
   +files/hu.po.bz2, rubrica-2.1.6-r1.ebuild:
