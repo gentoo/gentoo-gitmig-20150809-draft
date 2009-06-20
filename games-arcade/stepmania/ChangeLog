@@ -1,18 +1,19 @@
 # ChangeLog for games-arcade/stepmania
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.28 2009/03/24 21:21:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/stepmania/ChangeLog,v 1.29 2009/06/20 23:05:23 ssuominen Exp $
+
+*stepmania-3.9-r1 (20 Jun 2009)
+
+  20 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> -stepmania-3.9.ebuild,
+  +stepmania-3.9-r1.ebuild, -files/stepmania-3.9-newerffmpeg.diff,
+  -files/stepmania-3.9-newffmpeg.diff:
+  Bump patchset to fix FFmpeg >= 0.5 compability wrt #269080, thanks to Wai Ling.
 
   24 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org> stepmania-3.9.ebuild:
   add joystick use dep for bug #263553
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> stepmania-3.9.ebuild:
   EAPI=2; add use-based dep
-
-  24 Nov 2008; <ssuominen@gentoo.org> stepmania-3.9.ebuild:
-  Move patchset tarball out of my old dev space to gentoo mirrors.
-
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
-  Remove my old e-mail from metadata.xml. I don't play this.
 
   15 Oct 2008; Peter Alfredsen <loki_val@gentoo.org>
   +files/stepmania-3.9-newerffmpeg.diff, stepmania-3.9.ebuild:
