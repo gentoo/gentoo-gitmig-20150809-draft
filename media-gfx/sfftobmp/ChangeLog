@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/sfftobmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.14 2009/05/08 21:36:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sfftobmp/ChangeLog,v 1.15 2009/06/20 09:10:19 ssuominen Exp $
+
+*sfftobmp-3.1.2 (20 Jun 2009)
+
+  20 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +sfftobmp-3.1.2.ebuild:
+  Version bump.
 
   08 May 2009; Samuli Suominen <ssuominen@gentoo.org> sfftobmp-3.1.1.ebuild,
   +files/sfftobmp-3.1.1-gcc44-and-boost-1_37.patch:
