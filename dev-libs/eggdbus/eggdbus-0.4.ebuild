@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.4.ebuild,v 1.2 2009/06/18 21:57:48 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eggdbus/eggdbus-0.4.ebuild,v 1.3 2009/06/20 17:32:00 mrpouet Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://hal.freedesktop.org/releases/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="debug doc +largefile test"
 
 RDEPEND=">=dev-libs/dbus-glib-0.73
