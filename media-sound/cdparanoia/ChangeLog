@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/cdparanoia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.100 2009/05/23 03:29:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/ChangeLog,v 1.101 2009/06/20 19:09:28 ssuominen Exp $
+
+  20 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  cdparanoia-3.10.2-r3.ebuild, -files/cdparanoia-3.10.2-Makefile.in.patch,
+  -files/cdparanoia-3.10.2-include-cdda_interface_h.patch,
+  -files/cdparanoia-3.10.2-ppc64.patch,
+  -files/cdparanoia-3.10.2-use-destdir.patch:
+  Move patchset to mirrors. See, http://trac.xiph.org for source tree and
+  tickets where everything this is from or sent to.
 
   23 May 2009; Jeroen Roovers <jer@gentoo.org> cdparanoia-3.10.2-r3.ebuild:
   Stable for HPPA (bug #267726).
