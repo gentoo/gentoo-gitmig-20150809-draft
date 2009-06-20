@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ntp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.147 2009/06/20 12:05:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.148 2009/06/20 23:12:04 robbat2 Exp $
+
+  20 Jun 2009; Robin H. Johnson <robbat2@gentoo.org> +ntp-4.2.4_p6.ebuild:
+  Re-add _p6 until bug 274863 is resolved, but add the MOD_NANO patch so it
+  compiles.
 
   20 Jun 2009; Mike Frysinger <vapier@gentoo.org> files/ntp.conf:
   Update dhcp comments in ntp.conf #270672 by Rabbe Fogelholm.
