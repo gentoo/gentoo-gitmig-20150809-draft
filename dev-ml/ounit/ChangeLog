@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.14 2009/06/20 15:32:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.15 2009/06/20 15:53:35 aballier Exp $
+
+*ounit-1.0.3 (20 Jun 2009)
+
+  20 Jun 2009; Alexis Ballier <aballier@gentoo.org> +ounit-1.0.3.ebuild:
+  version bump
 
   20 Jun 2009; Alexis Ballier <aballier@gentoo.org> ounit-1.0.2.ebuild:
   explicitly assign rdepend
