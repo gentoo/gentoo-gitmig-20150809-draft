@@ -1,13 +1,15 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/pftop-0.7.ebuild,v 1.1 2009/01/27 12:50:32 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/pftop-0.7.ebuild,v 1.2 2009/06/20 22:37:02 flameeyes Exp $
 
-inherit bsdmk flag-o-matic
+PATCH_PV=1
+
+inherit bsdmk flag-o-matic eutils
+
 DESCRIPTION="Pftop: curses-based utility for real-time display of active states and rule statistics for pf"
-
 HOMEPAGE="http://www.eee.metu.edu.tr/~canacar/pftop/"
-
-SRC_URI="http://www.eee.metu.edu.tr/~canacar/${P}.tar.gz"
+SRC_URI="http://www.eee.metu.edu.tr/~canacar/${P}.tar.gz
+	mirror://gentoo/${P}-patches-${PATCH_PV}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
@@ -19,11 +21,7 @@ RDEPEND="sys-libs/ncurses"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PN}-0.7-pcap.patch"
-	epatch "${FILESDIR}/${PN}-0.7-dead.patch"
-	epatch "${FILESDIR}/${PN}-0.7-pr123670.patch"
-	epatch "${FILESDIR}/${PN}-0.7-queue.patch.bz2"
-	epatch "${FILESDIR}/${PN}-0.7-strnvis_fix.patch"
+	epatch "${WORKDIR}"/patches/*
 }
 
 src_compile() {

@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/pftop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.4 2009/01/27 12:50:32 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pftop/ChangeLog,v 1.5 2009/06/20 22:37:02 flameeyes Exp $
+
+  20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> pftop-0.7.ebuild,
+  -files/pftop-0.7-dead.patch, -files/pftop-0.7-pcap.patch,
+  -files/pftop-0.7-pr123670.patch, -files/pftop-0.7-queue.patch.bz2,
+  -files/pftop-0.7-strnvis_fix.patch:
+  Move all the patches to the mirrors, this removes a bzip2-compressed file
+  from CVS.
 
 *pftop-0.7 (27 Jan 2009)
 
