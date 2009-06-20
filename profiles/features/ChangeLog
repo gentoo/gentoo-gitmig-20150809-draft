@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.11 2008/12/30 15:58:16 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/ChangeLog,v 1.12 2009/06/20 09:27:40 ssuominen Exp $
+
+  20 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> no-nptl/package.mask:
+  Remove bonfire and banshee-official-plugins because they have been removed
+  from tree.
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org>
   64bit-native/package.mask:
