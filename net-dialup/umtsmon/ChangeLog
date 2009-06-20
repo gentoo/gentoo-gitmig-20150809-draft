@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/umtsmon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.9 2008/10/05 09:11:19 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/umtsmon/ChangeLog,v 1.10 2009/06/20 22:18:47 mrness Exp $
+
+  20 Jun 2009; Alin Năstac <mrness@gentoo.org> -umtsmon-0.8.ebuild,
+  umtsmon-0.9.ebuild:
+  Update libusb dependency atom (#270039).
 
 *umtsmon-0.9 (05 Oct 2008)
 
