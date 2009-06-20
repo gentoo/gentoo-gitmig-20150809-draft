@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9953 2009/06/20 12:55:18 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9954 2009/06/20 15:23:04 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -514,24 +514,9 @@ app-benchmark/phoronix-test-suite
 >www-plugins/mozilla-weave-0.2.104
 
 # Jeremy Olexa <darkside@gentoo.org> (14 Apr 2009)
-# Masked for removal in 60 days. Broken with gcc-4.3, doesn't work after gcc
-# patches, no maintainer, dead upstream. bug 228227
-x11-misc/temperature-app
-
-# Jeremy Olexa <darkside@gentoo.org> (14 Apr 2009)
-# Masked for removal in 60 days. Does not compile, no maintainer, dead upstream.
-# bug 247946
-net-dialup/ivcall
-
-# Jeremy Olexa <darkside@gentoo.org> (14 Apr 2009)
 # Masked for removal in 60 days. Security issues that warrant removal.
 # Non-vulnerable version exist, just needs a maintainer. bug 261507
 net-firewall/arno-iptables-firewall
-
-# Jeremy Olexa <darkside@gentoo.org> (14 Apr 2009)
-# Masked for removal in 60 days. Causes issues with other packages. Old port
-# that is not very useful and lacks a maintainer. bug 249080
-dev-util/ctmkit
 
 # Christian Faulhammer <fauli@gentoo.org> (13 Apr 2009)
 # Ulrich Mueller <ulm@gentoo.org>
