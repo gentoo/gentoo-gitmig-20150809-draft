@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.610 2009/06/18 02:33:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.611 2009/06/20 13:43:28 arfrever Exp $
+
+*kdelibs-4.2.4-r3 (20 Jun 2009)
+
+  20 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -kdelibs-4.2.4-r2.ebuild, +kdelibs-4.2.4-r3.ebuild,
+  files/4.2.4-CVE-2009-1690.patch:
+  Update patch for bug #274566.
 
   18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kdelibs-3.5.10-r6.ebuild:
   Stable for HPPA (bug #271889).
