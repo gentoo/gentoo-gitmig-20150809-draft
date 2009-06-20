@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6.ebuild,v 1.1 2008/11/02 18:13:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.1 2009/06/20 21:39:29 mrness Exp $
+
+EAPI="2"
 
 inherit distutils fdo-mime multilib
 
@@ -21,7 +23,7 @@ COMMON_DEPEND="=dev-python/wxpython-2.8*
 	dev-python/apsw
 	crypt? ( >=dev-python/paramiko-1.7.1
 		dev-python/pycrypto )
-	usb? ( dev-libs/libusb )"
+	usb? ( dev-libs/libusb:0 )"
 DEPEND="${COMMON_DEPEND}
 	usb? ( dev-lang/swig )"
 RDEPEND="${COMMON_DEPEND}
@@ -29,10 +31,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-libs/netpbm
 	>=dev-lang/python-2.5"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
