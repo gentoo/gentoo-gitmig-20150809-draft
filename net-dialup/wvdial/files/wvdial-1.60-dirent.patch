@@ -1,15 +1,21 @@
-diff -Nru wvdial-1.60.orig/wvmodemscan.cc wvdial-1.60/wvmodemscan.cc
---- wvdial-1.60.orig/wvmodemscan.cc	2007-07-19 23:22:26.000000000 +0200
-+++ wvdial-1.60/wvmodemscan.cc	2009-06-20 11:36:15.000000000 +0200
-@@ -496,10 +496,8 @@
+diff -Nru a/wvdial-1.60/wvmodemscan.cc b/wvdial-1.60/wvmodemscan.cc
+--- a/wvdial-1.60/wvmodemscan.cc	2007-07-20 00:22:03.000000000 +0300
++++ b/wvdial-1.60/wvmodemscan.cc	2009-06-20 21:43:58.000000000 +0300
+@@ -495,11 +495,16 @@
+ 	// (no internal ISDN support)   || !strncmp(e->d_name, "ttyI", 4);
  }
  
- 
--static int filesort(const void *_e1, const void *_e2)
+-
++#if defined(__GLIBC__) && __GLIBC_PREREQ(2, 10)
 +static int filesort(const dirent **e1, const dirent **e2)
++#else
+ static int filesort(const void *_e1, const void *_e2)
++#endif
  {
--    dirent const * const *e1 = (dirent const * const *)_e1;
--    dirent const * const *e2 = (dirent const * const *)_e2;
++#if !(defined(__GLIBC__) && __GLIBC_PREREQ(2, 10))
+     dirent const * const *e1 = (dirent const * const *)_e1;
+     dirent const * const *e2 = (dirent const * const *)_e2;
++#endif
      const char *p1, *p2;
      int diff;
      
