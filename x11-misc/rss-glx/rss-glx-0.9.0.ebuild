@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.0.ebuild,v 1.1 2009/06/20 08:32:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.9.0.ebuild,v 1.2 2009/06/20 08:40:06 ssuominen Exp $
 
 EAPI=2
 inherit autotools multilib
@@ -85,7 +85,6 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	has_version x11-misc/rss-glx && return 0
 	local xssconf="${ROOT}usr/share/X11/app-defaults/XScreenSaver"
 
 	if [ -f ${xssconf} ]; then
