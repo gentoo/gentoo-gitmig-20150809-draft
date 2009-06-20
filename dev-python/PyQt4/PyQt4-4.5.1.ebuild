@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.1.ebuild,v 1.2 2009/06/16 17:52:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.1.ebuild,v 1.3 2009/06/20 14:22:51 arfrever Exp $
 
 EAPI="2"
 
-inherit distutils qt4
+inherit distutils python qt4
 
 MY_P=PyQt-x11-gpl-${PV}
 QTVER="4.5.1"
@@ -56,6 +56,14 @@ src_prepare() {
 			"${S}"/configure.py || die
 	fi
 	qt4_src_prepare
+
+	# Remove this code after removing Python 2 from the tree.
+	python_version
+	if [[ "${PYVER:0:1}" == "3" ]]; then
+		rm -fr pyuic/uic/port_v2
+	else
+		rm -fr pyuic/uic/port_v3
+	fi
 }
 
 src_configure() {
