@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/plotmm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plotmm/ChangeLog,v 1.1 2009/06/20 10:58:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plotmm/ChangeLog,v 1.2 2009/06/20 12:15:36 mrpouet Exp $
+
+  20 Jun 2009; <mrpouet@gentoo.org> plotmm-0.1.2.ebuild:
+  Add ~amd64 into KEYWORDS
 
 *plotmm-0.1.2 (20 Jun 2009)
 
