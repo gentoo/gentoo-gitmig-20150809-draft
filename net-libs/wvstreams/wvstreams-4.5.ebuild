@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.5.ebuild,v 1.1 2008/12/09 23:31:27 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.5.ebuild,v 1.2 2009/06/20 07:47:55 gengor Exp $
 
 EAPI=2
 
@@ -38,9 +38,9 @@ pkg_setup() {
 	then
 		if ! version_is_at_least 4.1 "$(gcc-fullversion)"
 		then
-			eerror "This package needs the active gcc to be atleast of version 4.1"
-			eerror "or for >=dev-libs/boost-1.34.1 to be installed"
-			die "Please activate >=sys-devel/gcc-4.1 with gcc-config"
+			eerror "This package requires the active gcc to be at least version 4.1"
+			eerror "or >=dev-libs/boost-1.34.1 must be installed."
+			die "Please activate >=sys-devel/gcc-4.1 with gcc-config."
 		fi
 	fi
 }
