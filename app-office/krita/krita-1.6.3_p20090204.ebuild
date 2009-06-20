@@ -1,8 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3_p20090204.ebuild,v 1.2 2009/02/15 22:22:45 carlo Exp $
-
-EAPI="2"
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3_p20090204.ebuild,v 1.3 2009/06/20 12:50:17 tampakrap Exp $
 
 ARTS_REQUIRED="never"
 
@@ -25,8 +23,7 @@ DEPEND="~app-office/koffice-libs-1.6.3_p20090204
 	media-libs/libpng
 	>=media-libs/libexif-0.6.13-r1
 	virtual/opengl
-	virtual/glu
-	x11-libs/qt:3[opengl]"
+	virtual/glu"
 RDEPEND="${DEPEND}"
 
 KMCOPYLIB="libkformula lib/kformula
@@ -46,6 +43,14 @@ KMEXTRACTONLY="lib/"
 KMEXTRA="filters/krita"
 
 need-kde 3.5
+
+pkg_setup() {
+	# use opengl &&
+		if ! built_with_use =x11-libs/qt-3* opengl ; then
+			eerror "You need to build x11-libs/qt with opengl use flag enabled."
+			die
+		fi
+}
 
 src_unpack() {
 	kde-meta_src_unpack
