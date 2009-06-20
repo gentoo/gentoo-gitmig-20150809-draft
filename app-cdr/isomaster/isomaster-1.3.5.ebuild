@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.5.ebuild,v 1.4 2009/06/05 09:54:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/isomaster-1.3.5.ebuild,v 1.5 2009/06/20 13:04:57 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -21,6 +21,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.diff
 }
+
+src_configure() { :; }
 
 src_compile() {
 	tc-export CC

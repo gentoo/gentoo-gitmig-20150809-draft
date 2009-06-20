@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/isomaster
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.13 2009/05/31 22:39:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/isomaster/ChangeLog,v 1.14 2009/06/20 13:04:57 ssuominen Exp $
+
+  20 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  isomaster-1.3.5.ebuild:
+  Use a dummy src_configure to avoid running the script wrt #274361.
 
   31 May 2009; Markus Meier <maekke@gentoo.org> isomaster-1.3.5.ebuild:
   amd64 stable, bug #271266
