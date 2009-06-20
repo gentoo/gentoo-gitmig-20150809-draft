@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/ponyprog
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.15 2008/08/05 19:07:33 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ChangeLog,v 1.16 2009/06/20 11:50:43 vapier Exp $
+
+  20 Jun 2009; Mike Frysinger <vapier@gentoo.org> ponyprog-2.07a.ebuild,
+  files/ponyprog-2.07a-gcc43.patch:
+  Fix up build errors with fortify source #264395 by Diego E. Pettenò.
 
   05 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

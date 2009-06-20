@@ -1,16 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.4 2008/06/20 20:24:44 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ponyprog/ponyprog-2.07a.ebuild,v 1.5 2009/06/20 11:50:43 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Serial device programmer"
 HOMEPAGE="http://www.lancos.com/ppwin95.html"
 SRC_URI="mirror://sourceforge/${PN}/PonyProg2000-${PV}.tar.gz"
+
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="epiphany firefox seamonkey"
+
 RDEPEND="x11-libs/libXaw
 	x11-libs/libXmu
 	x11-libs/libXt
@@ -56,12 +58,8 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc43.patch"
 }
 
-src_compile() {
-	emake || die "Compilation failed"
-}
-
-src_install () {
-	dobin bin/ponyprog2000
+src_install() {
+	dobin bin/ponyprog2000 || die
 	keepdir /var/lock/uucp
 	fowners uucp:uucp /var/lock/uucp
 	fperms 755 /var/lock/uucp
@@ -70,9 +68,8 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "To use the COM port in user mode (not as root) you need to"
-	elog "make sure you have the rights to write to /dev/ttyS? devices"
-	elog "and /var/lock directory."
+	elog "To use the COM port in user mode (not as root), you need to"
+	elog "be in the 'uucp' group."
 	elog
 	elog "To use the LPT port in user mode (not as root) you need a kernel with"
 	elog "ppdev, parport and parport_pc compiled in or as modules. You need the"
