@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/chemtool
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.24 2008/04/26 13:03:47 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.25 2009/06/20 01:04:12 je_fro Exp $
+
+*chemtool-1.6.12 (20 Jun 2009)
+
+  20 Jun 2009; Jeff Gardner <je_fro@gentoo.org> +chemtool-1.6.12.ebuild:
+  Latest version, thanks to lumbrius in bug #274199 and Reinis Danne for the
+  science overlay ebuild.
 
 *chemtool-1.6.11 (26 Apr 2008)
 
