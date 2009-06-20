@@ -1,9 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.1 2009/06/20 20:23:13 flameeyes Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.2 2009/06/20 20:24:44 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
@@ -139,7 +136,7 @@ src_install() {
 
 	docinto modules
 	for dir in modules/pam_*; do
-		newdoc $dir/README README.$(basename ${dir})
+		newdoc "${dir}"/README README."$(basename "${dir}")"
 	done
 
 	# Remove the wrongly installed manpages

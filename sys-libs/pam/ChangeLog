@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.240 2009/06/20 20:23:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.241 2009/06/20 20:24:44 flameeyes Exp $
+
+  20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> pam-1.0.4.ebuild,
+  pam-1.1.0.ebuild:
+  Shut up a few QA warnings.
 
 *pam-1.1.0 (20 Jun 2009)
 
