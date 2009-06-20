@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.47 2009/05/29 20:48:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2007.0/no-multilib/package.mask,v 1.48 2009/06/20 09:31:04 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -10,7 +10,6 @@ app-antivirus/vlnx
 <app-arch/rar-3.8.0
 app-arch/stuffit
 app-benchmarks/cpuburn
-app-cdr/cdrecord-prodvd
 app-emulation/cedaga
 app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
@@ -55,7 +54,6 @@ app-text/bibus
 <dev-java/blackdown-jdk-1.4.2
 <dev-java/blackdown-jre-1.4.2
 dev-lang/dmd-bin
-dev-lang/anubis
 dev-lang/icc
 dev-lang/idb
 dev-lang/ifc
