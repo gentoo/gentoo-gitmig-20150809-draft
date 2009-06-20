@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/res
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.8 2008/04/13 18:16:46 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/ChangeLog,v 1.9 2009/06/20 17:26:41 aballier Exp $
+
+  20 Jun 2009; Alexis Ballier <aballier@gentoo.org> res-2.2.5.ebuild:
+  move eapi definition before inherit and assign rdepend explicitly
 
   13 Apr 2008; Alexis Ballier <aballier@gentoo.org> -res-2.1.1.ebuild:
   remove old
