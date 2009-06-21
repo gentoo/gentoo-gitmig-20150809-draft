@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tse3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.29 2009/05/30 22:30:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/ChangeLog,v 1.30 2009/06/21 04:05:27 ssuominen Exp $
+
+  21 Jun 2009; Samuli Suominen <ssuominen@gentoo.org> tse3-0.3.1-r1.ebuild,
+  -files/awe_voice.h:
+  Move awe_voice.h to mirrors as it's about 20K in size.
 
   30 May 2009; Samuli Suominen <ssuominen@gentoo.org> tse3-0.3.1-r1.ebuild:
   Remove arts support wrt #270575.

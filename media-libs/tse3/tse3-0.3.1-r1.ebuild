@@ -1,13 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1-r1.ebuild,v 1.7 2009/05/30 22:30:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tse3/tse3-0.3.1-r1.ebuild,v 1.8 2009/06/21 04:05:27 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
 
 DESCRIPTION="TSE3 Sequencer library"
 HOMEPAGE="http://TSE3.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
+	http://dev.gentoo.org/~ssuominen/distfiles/${P}-awe_voice.h.tbz2
+	mirror://gentoo/${P}-awe_voice.h.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,7 +24,7 @@ src_prepare() {
 	# linux-headers. Using a modified copy from 2.6.17.
 	# Bug 188163.
 	if use oss; then
-		cp "${FILESDIR}"/awe_voice.h src/
+		cp "${WORKDIR}"/awe_voice.h src/
 		append-flags -DHAVE_AWE_VOICE_H
 	fi
 
