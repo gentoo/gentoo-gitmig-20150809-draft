@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.3 2009/06/21 09:31:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.4 2009/06/21 16:23:23 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
@@ -55,7 +55,7 @@ check_old_modules() {
 		eerror ""
 		eerror "Your current setup is using one or more of the following modules,"
 		eerror "that are not built or supported anymore:"
-		eerror "pam_pwdb, pam_timestamp, pam_console"
+		eerror "pam_pwdb, pam_console"
 		eerror "If you are in real need for these modules, please contact the maintainers"
 		eerror "of PAM through http://bugs.gentoo.org/ providing information about its"
 		eerror "use cases."
@@ -78,6 +78,15 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
+	# Avoid regeneration man _and_ documentation. The documentation
+	# regeneration requires the xsl stylesheets for DocBook as well as
+	# a browser; if lynx is not found, the buildsystem will also
+	# default to Firefox, bad choice. — bug #274929
+	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
+
+	# Avoid building xtests during "make all"; note that for what
+	# we're concerned xtests are not even executed, so we should
+	# probably use EXTRA_PROGRAMS.
 	epatch "${FILESDIR}/${MY_PN}-0.99.8.1-xtests.patch"
 
 	# Remove NIS dependencies, see bug #235431
@@ -118,6 +127,7 @@ src_compile() {
 		--disable-db \
 		--disable-dependency-tracking \
 		--disable-prelude \
+		--disable-regenerate-man \
 		${myconf} || die "econf failed"
 	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"
 }
