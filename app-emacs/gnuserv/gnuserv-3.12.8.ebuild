@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8.ebuild,v 1.5 2009/03/29 20:48:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/gnuserv-3.12.8.ebuild,v 1.6 2009/06/21 18:27:20 ulm Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( ~app-emacs/gnuserv-programs-${PV} virtual/xemacs )"
+RDEPEND="|| ( ~app-emacs/gnuserv-programs-${PV} app-editors/xemacs )"
 
 DOCS="ChangeLog README README.orig"
 ELISP_PATCHES="${PN}-3.12.7-path-xemacs.patch"

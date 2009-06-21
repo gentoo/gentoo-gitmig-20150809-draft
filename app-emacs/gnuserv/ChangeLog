@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuserv
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.27 2009/03/29 20:48:28 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv/ChangeLog,v 1.28 2009/06/21 18:27:20 ulm Exp $
+
+  21 Jun 2009; Ulrich Mueller <ulm@gentoo.org> gnuserv-3.12.8.ebuild:
+  Fix dependency since the xemacs virtual is gone.
 
   29 Mar 2009; Ulrich Mueller <ulm@gentoo.org> gnuserv-3.12.8.ebuild:
   Use autopatch feature of elisp.eclass.
