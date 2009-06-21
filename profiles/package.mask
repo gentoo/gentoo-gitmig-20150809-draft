@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9962 2009/06/21 13:13:22 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9963 2009/06/21 16:13:18 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (21 Jun 2009)
+# Emacs 23 live CVS ebuilds and packages depending on them.
+~app-editors/emacs-cvs-23.0.9999
+~app-editors/emacs-cvs-23.1.9999
+>=virtual/emacs-23
+app-emacs/emacs-daemon
 
 # Christian Faulhammer <fauli@gentoo.org> (01 Apr 2008)
 # Masked for security reasons: bug 215699
@@ -727,12 +734,6 @@ app-emulation/ganeti-instance-debian-etch
 # No release since 2007, ebuild uses pre-compiled libs
 # that are, probably, affected by security issues.
 net-p2p/pandodl
-
-# Ulrich Mueller <ulm@gentoo.org> (02 Feb 2009)
-# Emacs 23 live CVS ebuild and packages depending on it.
-~app-editors/emacs-cvs-23.0.9999
->=virtual/emacs-23
-app-emacs/emacs-daemon
 
 # Ben de Groot <yngwin@gentoo.org> (1 Feb 2009)
 # Masked because it's broken in current form. Several issues, see
