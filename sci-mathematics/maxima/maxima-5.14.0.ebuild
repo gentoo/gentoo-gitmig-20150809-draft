@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.8 2009/05/30 06:46:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.14.0.ebuild,v 1.9 2009/06/21 18:40:32 graaff Exp $
 inherit eutils elisp-common
 
 DESCRIPTION="Free computer algebra environment based on Macsyma"
@@ -32,7 +32,7 @@ RDEPEND="X? ( x11-misc/xdg-utils
 			  tk? ( dev-lang/tk ) )
 	latex? ( virtual/latex-base )
 	emacs? ( virtual/emacs latex? ( app-emacs/auctex ) )
-	xemacs? ( virtual/xemacs latex? ( app-xemacs/auctex ) )"
+	xemacs? ( app-editors/xemacs latex? ( app-xemacs/auctex ) )"
 
 # create lisp dependencies
 for LISP in ${SUPP_LISPS}; do
