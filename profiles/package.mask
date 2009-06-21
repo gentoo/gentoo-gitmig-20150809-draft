@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9963 2009/06/21 16:13:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9964 2009/06/21 23:12:40 hoffie Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -588,12 +588,6 @@ net-firewall/arno-iptables-firewall
 =x11-drivers/ati-drivers-8.452
 =x11-drivers/ati-drivers-8.471.3
 =x11-apps/ati-drivers-extra-8.27.10
-
-# Christian Hoffmann <hoffie@gentoo.org> (12 Apr 2009)
-# Masked for security (bug 265756), unmaintained upstream (last release two
-# years ago), will be removed in 30 days. Use dev-lang/php with USE=zip as a
-# replacement, which is actively maintained and has more features.
-dev-php5/pecl-zip
 
 # Jeremy Olexa <darkside@gentoo.org> (10 Apr 2009)
 # The bash-completion upstream naming scheme has drastically changed. As such,
