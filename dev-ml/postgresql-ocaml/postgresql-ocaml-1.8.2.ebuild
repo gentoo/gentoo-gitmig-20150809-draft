@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-1.8.2.ebuild,v 1.3 2008/06/19 07:26:34 aballier Exp $
-
-inherit findlib eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/postgresql-ocaml/postgresql-ocaml-1.8.2.ebuild,v 1.4 2009/06/21 12:59:02 aballier Exp $
 
 EAPI="1"
+
+inherit findlib eutils
 
 IUSE="examples +ocamlopt"
 
