@@ -1,0 +1,118 @@
+=== modified file 'Microblogging/src/MicroblogClient.cs'
+--- Microblogging/src/MicroblogClient.cs	2009-05-18 06:07:11 +0000
++++ Microblogging/src/MicroblogClient.cs	2009-06-13 16:08:28 +0000
+@@ -103,7 +103,7 @@
+ 			UpdateStatus (status, null);
+ 		}
+ 		
+-		public void UpdateStatus (string status, Nullable<int> inReplyToID)
++		public void UpdateStatus (string status, Nullable<long> inReplyToID)
+ 		{
+ 			string errorMessage = "";
+ 			try {
+
+=== modified file 'Microblogging/src/MicroblogStatus.cs'
+--- Microblogging/src/MicroblogStatus.cs	2009-02-28 19:17:08 +0000
++++ Microblogging/src/MicroblogStatus.cs	2009-06-13 16:08:28 +0000
+@@ -8,7 +8,7 @@
+ 	
+ 	public class MicroblogStatus : Item
+ 	{				
+-		public MicroblogStatus (int id, string status, string owner, DateTime time)
++		public MicroblogStatus (long id, string status, string owner, DateTime time)
+ 		{
+ 			Id = id;
+ 			Owner = owner;
+@@ -28,7 +28,7 @@
+ 			get { return "microblogging.svg@" + GetType ().Assembly.FullName; }
+ 		}
+ 		
+-		public int Id { get; private set; }
++		public long Id { get; private set; }
+ 		public string Owner { get; private set; }
+ 		public string Status { get; private set; }
+ 		public DateTime Created { get; private set; }
+@@ -36,13 +36,13 @@
+ 	
+ 	public class MicroblogStatusReply
+ 	{
+-		public MicroblogStatusReply (Nullable<int> inReplyToID, string status)
++		public MicroblogStatusReply (Nullable<long> inReplyToID, string status)
+ 		{
+ 			Status = status;
+ 			InReplyToId = inReplyToID;			
+ 		}
+ 	
+-		public Nullable<int> InReplyToId { get; private set; }
++		public Nullable<long> InReplyToId { get; private set; }
+ 		public string Status { get; private set; }
+ 	}
+ }
+
+=== modified file 'Microblogging/src/Twitterizer/Twitterizer.Framework/DataTransferObjects/TwitterStatus.cs'
+--- Microblogging/src/Twitterizer/Twitterizer.Framework/DataTransferObjects/TwitterStatus.cs	2008-12-11 04:16:01 +0000
++++ Microblogging/src/Twitterizer/Twitterizer.Framework/DataTransferObjects/TwitterStatus.cs	2009-06-13 16:08:28 +0000
+@@ -40,8 +40,8 @@
+             set { created = value; }
+         }
+ 
+-        private int id;
+-        public int ID
++        private long id;
++        public long ID
+         {
+             get { return id; }
+             set { id = value; }
+@@ -82,8 +82,8 @@
+             set { isFavorited = value; }
+         }
+ 
+-        private int inReplyToStatusID;
+-        public int InReplyToStatusID
++        private long inReplyToStatusID;
++        public long InReplyToStatusID
+         {
+             get { return inReplyToStatusID; }
+             set { inReplyToStatusID = value; }
+
+=== modified file 'Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterStatusMethods.cs'
+--- Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterStatusMethods.cs.~1~	2009-06-21 13:48:03.966312847 +0200
++++ Microblogging/src/Twitterizer/Twitterizer.Framework/MethodClasses/TwitterStatusMethods.cs	2009-06-21 13:48:37.557938534 +0200
+@@ -131,7 +131,7 @@
+         /// <param name="Status">Required.  The text of your status update.</param>
+         /// <param name="InReplyToStatusID">Optional.  The ID of an existing status that the status to be posted is in reply to.</param>
+         /// <returns></returns>
+-        public TwitterStatus Update(string Status, int? InReplyToStatusID)
++        public TwitterStatus Update(string Status, long? InReplyToStatusID)
+         {
+             TwitterRequest Request = new TwitterRequest();
+             TwitterRequestData Data = new TwitterRequestData();
+=== modified file 'Microblogging/src/Twitterizer/Twitterizer.Framework/TwitterRequest.cs'
+--- Microblogging/src/Twitterizer/Twitterizer.Framework/TwitterRequest.cs	2009-04-17 02:15:08 +0000
++++ Microblogging/src/Twitterizer/Twitterizer.Framework/TwitterRequest.cs	2009-06-13 16:08:28 +0000
+@@ -159,13 +159,13 @@
+             if (Element == null) return null;
+ 
+             //Mon May 12 15:56:07 +0000 2008
+-            Status.ID = int.Parse(Element["id"].InnerText);
++            Status.ID = long.Parse(Element["id"].InnerText);
+             Status.Created = ParseDateString(Element["created_at"].InnerText);
+             Status.Text = Element["text"].InnerText;
+             Status.Source = Element["source"].InnerText;
+             Status.IsTruncated = bool.Parse(Element["truncated"].InnerText);
+             if (Element["in_reply_to_status_id"].InnerText != string.Empty)
+-                Status.InReplyToStatusID = int.Parse(Element["in_reply_to_status_id"].InnerText);
++                Status.InReplyToStatusID = long.Parse(Element["in_reply_to_status_id"].InnerText);
+             if (Element["in_reply_to_user_id"].InnerText != string.Empty) 
+                 Status.InReplyToUserID = int.Parse(Element["in_reply_to_user_id"].InnerText);
+             
+@@ -198,7 +198,7 @@
+ 
+             TwitterStatus Status = new TwitterStatus();
+ 
+-            Status.ID = int.Parse(Element["id"].InnerText);
++            Status.ID = long.Parse(Element["id"].InnerText);
+             Status.Created = ParseDateString(Element["created_at"].InnerText);
+             Status.Text = Element["text"].InnerText;
+             
+
