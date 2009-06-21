@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.7 2008/05/12 16:12:01 maekke Exp $
-
-inherit multilib eutils toolchain-funcs
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.03-r1.ebuild,v 1.8 2009/06/21 13:29:11 aballier Exp $
 
 EAPI="1"
+
+inherit multilib eutils toolchain-funcs
 
 IUSE="doc glut +ocamlopt tk"
 
@@ -12,7 +12,7 @@ DESCRIPTION="Objective CAML interface for OpenGL"
 HOMEPAGE="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgl.html"
 LICENSE="BSD"
 
-DEPEND=">=dev-lang/ocaml-3.05
+RDEPEND=">=dev-lang/ocaml-3.05
 	virtual/opengl
 	x11-libs/libXext
 	x11-libs/libXmu
@@ -20,6 +20,7 @@ DEPEND=">=dev-lang/ocaml-3.05
 	glut? ( virtual/glut )
 	tk? ( >=dev-lang/tcl-8.3
 	>=dev-lang/tk-8.3 )"
+DEPEND="${RDEPEND}"
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 SLOT="0"
