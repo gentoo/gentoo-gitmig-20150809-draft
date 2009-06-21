@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ssvnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.3 2009/03/10 05:53:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssvnc/ChangeLog,v 1.4 2009/06/21 21:59:54 vapier Exp $
+
+*ssvnc-1.0.23 (21 Jun 2009)
+
+  21 Jun 2009; Mike Frysinger <vapier@gentoo.org> +ssvnc-1.0.23.ebuild:
+  Version bump.
 
   10 Mar 2009; Mike Frysinger <vapier@gentoo.org> ssvnc-1.0.22.ebuild:
   Require tk as we use wish #261876 by RB.
