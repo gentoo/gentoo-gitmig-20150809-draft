@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.6.0.ebuild,v 1.1 2009/06/19 20:06:13 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.6.0.ebuild,v 1.2 2009/06/21 15:01:46 billie Exp $
 
 EAPI=2
 
@@ -24,14 +24,16 @@ RDEPEND="x11-libs/qt:3
 
 DEPEND="${RDEPEND}"
 
+src_prepare() {
+	epatch "${FILESDIR}"/dvbcut-0.6.0-parallel-install.patch
+}
+
 src_configure() {
 	econf --with-ffmpeg=/usr
 }
 
 src_install() {
-	# disable parallel build
-	# already created MANDIR causes the build to fail
-	emake -j1 DESTDIR="${D}" install \
+	emake DESTDIR="${D}" install \
 		|| die "Emake install failed"
 	make_desktop_entry dvbcut DVBcut
 	dodoc ChangeLog CREDITS README README.ffmpeg README.icons
