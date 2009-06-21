@@ -1,0 +1,42 @@
+#!/sbin/runscript
+# Copyright 2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/files/vnstatd.initd,v 1.1 2009/06/21 16:57:54 pva Exp $
+
+opts="reload"
+
+depend() {
+	use net
+}
+
+VNSTATD_PIDFILE="${VNSTATD_PIDFILE:-/var/run/vnstatd/vnstatd.pid}"
+
+start() {
+	ebegin "Starting vnstatd"
+	start-stop-daemon --start --quiet \
+		--pidfile "${VNSTATD_PIDFILE}" \
+		--chuid vnstat:vnstat \
+		--nicelevel ${VNSTATD_NICELEVEL:-0} \
+		--exec /usr/bin/vnstatd -- \
+		-d ${VNSTATD_EXTRAOPTS} -p ${VNSTATD_PIDFILE}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping vnstatd"
+	start-stop-daemon --stop --quiet \
+		--pidfile "${VNSTATD_PIDFILE}"
+	eend $?
+}
+
+reload() {
+	if [ ! -f ${VNSTATD_PIDFILE} ]; then
+		eerror "Cannot reload configuration, vnstatd is not running"
+		eend 1
+		return 1
+	fi
+
+	ebegin "Reloading vnstatd configuration"
+	kill -HUP $(< "${VNSTATD_PIDFILE}") &>/dev/null
+	eend $?
+}
