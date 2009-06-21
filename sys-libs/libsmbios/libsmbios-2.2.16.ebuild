@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.16.ebuild,v 1.1 2009/05/25 21:46:43 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsmbios/libsmbios-2.2.16.ebuild,v 1.2 2009/06/21 21:03:05 cedk Exp $
 
 EAPI=2
 
@@ -56,5 +56,5 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	use python && python_mod_optimize /usr/share/smbios-utils
+	use python && python_mod_cleanup /usr/share/smbios-utils
 }
