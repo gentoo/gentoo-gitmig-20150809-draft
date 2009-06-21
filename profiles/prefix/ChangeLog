@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.4 2009/06/21 13:21:07 grobian Exp $
+# $Id: ChangeLog,v 1.5 2009/06/21 16:07:32 grobian Exp $
+
+  21 Jun 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask ncurses-5.7-r1 as it breaks Solaris and Darwin, and probably much
+  more
 
   21 Jun 2009; Fabian Groffen <grobian@gentoo.org> bsd/package.mask,
   bsd/packages, darwin/package.mask, darwin/packages, package.mask:
