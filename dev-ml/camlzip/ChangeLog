@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlzip
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.14 2008/09/25 12:36:29 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.15 2009/06/21 12:35:21 aballier Exp $
+
+  21 Jun 2009; Alexis Ballier <aballier@gentoo.org> camlzip-1.03-r1.ebuild:
+  define eapi before inherit and assign rdepend explicitly
 
   25 Sep 2008; Alexis Ballier <aballier@gentoo.org> camlzip-1.03-r1.ebuild:
   keyword ~x86-fbsd

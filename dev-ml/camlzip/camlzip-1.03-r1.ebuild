@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.03-r1.ebuild,v 1.5 2008/09/25 12:36:29 aballier Exp $
-
-inherit findlib eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.03-r1.ebuild,v 1.6 2009/06/21 12:35:21 aballier Exp $
 
 EAPI="1"
+
+inherit findlib eutils
 
 IUSE="+ocamlopt"
 
@@ -16,8 +16,9 @@ SLOT="1"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
 
-DEPEND=">=dev-lang/ocaml-3.04 \
+RDEPEND=">=dev-lang/ocaml-3.04
 		>=sys-libs/zlib-1.1.3"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
