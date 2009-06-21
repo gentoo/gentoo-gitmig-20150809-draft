@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ltsp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.24 2008/03/02 00:06:18 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp/ChangeLog,v 1.25 2009/06/21 00:03:01 flameeyes Exp $
+
+  21 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> metadata.xml:
+  Fix metadata.
 
   02 Mar 2008; Christian Faulhammer <opfer@gentoo.org> ltsp-4.2-r1.ebuild:
   don't install useless file COPYING

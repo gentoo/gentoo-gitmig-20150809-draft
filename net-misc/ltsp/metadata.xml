@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>no-herd</herd>
-	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-	</maintainer>
-	<longdescription>
-	LTSP, the Linux Terminal Server Project, is designed to 
-	allow multiple dummy terminals to run off of one central server. It 
-	includes support for local sound, usb mass media access, CD-ROM access, 
-	floppy access, and a host of other goodies. See http://www.ltsp.org for a 
-	full run-down of this fantastic package. 
-	</longdescription>
-	<longdescription lang="ja">
-	LTSPãã¤ã¾ã the Linux Terminal Server Project ã¯ã1ã¤ã®ä¸­å¤®ãµã¼ãã¨å¶ãã«ãããã
-	èª­ã¿æ¸ãã§ããè¤æ°ã®ããã¼ç«¯æ«ã®ç°å¢ãä½ãåºããããã¶ã¤ã³ããããã®ã§ããç«¯æ«ã«ã¯ã
-	ã­ã¼ã«ã«ã»ãµã¦ã³ããUSB ãã¹ã»ã¡ãã£ã¢ã¸ã®ã¢ã¯ã»ã¹ãCDROM ã¸ã®ã¢ã¯ã»ã¹ã
-	floppy ã¸ã®ã¢ã¯ã»ã¹ãä»ã«ãæ§ããªãã¹ãæ©è½ã®ãµãã¼ããå«ã¾ãã¾ãããã®ãã¡ã³ã¿ã¹ãã£ãã¯ãª
-	ããã±ã¼ã¸ã®å¨ä½åãçªãã¨ããã« http://www.ltsp.org ãè¨ªããã¦ã¿ã¦ä¸ããã
-	</longdescription>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>maintainer-needed@gentoo.org</email>
+  </maintainer>
+  <longdescription>
+    LTSP, the Linux Terminal Server Project, is designed to 
+    allow multiple dummy terminals to run off of one central server. It 
+    includes support for local sound, usb mass media access, CD-ROM access, 
+    floppy access, and a host of other goodies. See http://www.ltsp.org for a 
+    full run-down of this fantastic package. 
+  </longdescription>
+  <longdescription lang="ja">
+    LTSP、つまり the Linux Terminal Server Project は、1つの中央サーバと其れにすらすら
+    読み書きできる複数のダミー端末の環境を作り出すためデザインされたものです。端末には、
+    ローカル・サウンド、USB マス・メディアへのアクセス、CDROM へのアクセス、
+    floppy へのアクセス、他にも様々なホスト機能のサポートが含まれます。このファンタスティックな
+    パッケージの全体像を突きとめるに http://www.ltsp.org を訪ずれてみて下さい。
+  </longdescription>
 </pkgmetadata>
