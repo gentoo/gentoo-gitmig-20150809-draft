@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22.ebuild,v 1.6 2009/04/21 16:24:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.22.ebuild,v 1.7 2009/06/21 12:58:26 graaff Exp $
 
 # Note: xemacs currently does not work with a hardened profile. If you
 # want to use xemacs on a hardened profile then compile with the
@@ -21,8 +21,7 @@ IUSE="eolconv esd gif gpm pop postgres ldap xface nas dnd X jpeg tiff png mule m
 
 X_DEPEND="x11-libs/libXt x11-libs/libXmu x11-libs/libXext x11-misc/xbitmaps"
 
-DEPEND="virtual/libc
-	!virtual/xemacs
+RDEPEND="
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	>=sys-libs/zlib-1.1.4
@@ -47,11 +46,10 @@ DEPEND="virtual/libc
 	!amd64? ( freewnn? ( app-i18n/freewnn ) )
 	>=sys-libs/ncurses-5.2
 	>=app-admin/eselect-emacs-1.2"
+DEPEND="${DEPEND}"
 
 PDEPEND="app-xemacs/xemacs-base
 	mule? ( app-xemacs/mule-base )"
-
-PROVIDE="virtual/xemacs"
 
 src_unpack() {
 	unpack ${P}.tar.gz

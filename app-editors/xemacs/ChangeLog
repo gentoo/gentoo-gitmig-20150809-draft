@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.123 2009/06/21 12:38:04 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.124 2009/06/21 12:58:26 graaff Exp $
+
+  21 Jun 2009; Hans de Graaff <graaff@gentoo.org> xemacs-21.4.22.ebuild:
+  Remove PROVIDE: app-editors/xemacs is the only provider right now so it
+  makes no sense to have an old-style virtual for this. Remove blocker on
+  virtual/xemacs. Remove virtual/libc dependency. Explicitly set RDEPEND.
 
   21 Jun 2009; Hans de Graaff <graaff@gentoo.org> -xemacs-21.4.21-r1.ebuild:
   Remove old version.
