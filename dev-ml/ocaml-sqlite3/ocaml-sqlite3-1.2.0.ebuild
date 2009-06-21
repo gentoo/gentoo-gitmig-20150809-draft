@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-1.2.0.ebuild,v 1.3 2008/09/25 12:35:43 aballier Exp $
-
-inherit findlib eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ocaml-sqlite3-1.2.0.ebuild,v 1.4 2009/06/21 12:03:40 aballier Exp $
 
 EAPI="1"
+
+inherit findlib eutils
 
 IUSE="doc +ocamlopt"
 

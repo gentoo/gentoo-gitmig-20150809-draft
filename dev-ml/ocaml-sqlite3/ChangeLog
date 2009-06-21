@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocaml-sqlite3
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.10 2008/09/25 12:35:43 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-sqlite3/ChangeLog,v 1.11 2009/06/21 12:03:40 aballier Exp $
+
+  21 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  ocaml-sqlite3-1.2.0.ebuild:
+  define eapi before inherit
 
   25 Sep 2008; Alexis Ballier <aballier@gentoo.org>
   files/ocaml-sqlite3-0.22.0-destdir.patch,
