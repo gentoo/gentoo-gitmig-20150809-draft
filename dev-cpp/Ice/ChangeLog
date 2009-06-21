@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/Ice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.19 2009/03/28 23:35:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/Ice/ChangeLog,v 1.20 2009/06/21 13:26:17 caleb Exp $
+
+  21 Jun 2009; Caleb Tennis <caleb@gentoo.org> -Ice-3.3.0.ebuild,
+  -Ice-3.3.0-r1.ebuild, -files/Ice-3.3.0-Makefile.patch,
+  -files/Ice-3.3.0-p1.patch, -files/Ice-3.3.0-p3.patch,
+  -files/Ice-3.3.0-p4.patch, -files/Ice-3.3.0-p5.patch,
+  -files/Ice-3.3.0-p6.patch, -files/Ice-3.3.0-p7.patch,
+  -files/Ice-3.3.0-p8.patch:
+  Remove old ebuild version
 
 *Ice-3.3.1 (28 Mar 2009)
 
