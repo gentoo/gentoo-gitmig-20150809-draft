@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/ocurl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.7 2009/06/21 13:10:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.8 2009/06/21 13:26:01 aballier Exp $
+
+*ocurl-0.5.1 (21 Jun 2009)
+
+  21 Jun 2009; Alexis Ballier <aballier@gentoo.org> +ocurl-0.5.1.ebuild,
+  +files/ocurl-0.5.1-asneeded.patch:
+  version bump
 
   21 Jun 2009; Alexis Ballier <aballier@gentoo.org> ocurl-0.2.1.ebuild:
   dont install copying
