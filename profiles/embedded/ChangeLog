@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.5 2008/06/06 08:16:11 remi Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/embedded/ChangeLog,v 1.6 2009/06/21 13:04:27 graaff Exp $
+
+  21 Jun 2009; Hans de Graaff <graaff@gentoo.org> virtuals:
+  Remove virtual/xemacs since xemacs no longer provides it.
 
   06 Jun 2008; Rémi Cardona <remi@gentoo.org> package.mask:
   pkgmove to gnome-base/gnome-control-center

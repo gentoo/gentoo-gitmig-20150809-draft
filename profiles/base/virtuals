@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.118 2009/06/03 09:04:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.119 2009/06/21 13:02:45 graaff Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -54,4 +54,3 @@ virtual/ssh					net-misc/openssh
 virtual/tftp				net-ftp/tftp-hpa
 virtual/utempter			sys-libs/libutempter
 virtual/w3m					www-client/w3m
-virtual/xemacs				app-editors/xemacs
