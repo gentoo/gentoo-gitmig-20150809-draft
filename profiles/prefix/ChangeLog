@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.3 2009/06/20 10:26:18 grobian Exp $
+# $Id: ChangeLog,v 1.4 2009/06/21 13:21:07 grobian Exp $
+
+  21 Jun 2009; Fabian Groffen <grobian@gentoo.org> bsd/package.mask,
+  bsd/packages, darwin/package.mask, darwin/packages, package.mask:
+  Prepare to remove bsd-man-pages as it doesn't really provide anything
+  useful (and it already exists on the host system)
 
   20 Jun 2009; Fabian Groffen <grobian@gentoo.org>
   bsd/freebsd/7.1/package.mask, bsd/freebsd/7.2/package.mask:
