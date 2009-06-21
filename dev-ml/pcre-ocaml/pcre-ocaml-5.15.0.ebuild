@@ -1,18 +1,19 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.15.0.ebuild,v 1.6 2008/09/25 12:13:16 aballier Exp $
-
-inherit findlib eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pcre-ocaml/pcre-ocaml-5.15.0.ebuild,v 1.7 2009/06/21 12:16:14 aballier Exp $
 
 EAPI="1"
+
+inherit findlib eutils
 
 DESCRIPTION="Perl Compatibility Regular Expressions for O'Caml"
 HOMEPAGE="http://www.ocaml.info/home/ocaml_sources.html"
 SRC_URI="http://www.ocaml.info/ocaml_sources/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 
-DEPEND=">=dev-lang/ocaml-3.07
+RDEPEND=">=dev-lang/ocaml-3.07
 	>=dev-libs/libpcre-4.5"
+DEPEND="${RDEPEND}"
 SLOT="0"
 IUSE="examples +ocamlopt"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
