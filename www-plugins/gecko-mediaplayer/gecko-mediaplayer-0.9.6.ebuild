@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.6.ebuild,v 1.2 2009/06/07 19:04:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.6.ebuild,v 1.3 2009/06/21 19:08:20 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -25,15 +25,19 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-G2CONF="$(use_with gnome gconf)
-	$(use_enable gnome schemas-install)"
+pkg_setup() {
+	G2CONF+=" $(use_with gnome gconf)
+		$(use_enable gnome schemas-install)"
+	DOCS="ChangeLog DOCS/tech/javascript.txt"
+}
 
-DOCS="ChangeLog DOCS/tech/javascript.txt"
+src_prepare() {
+	gnome2_src_prepare
+	epatch "${FILESDIR}"/${P}-xul.patch
+}
 
 src_install() {
 	gnome2_src_install
-
-	# remove duplicate dir
 	rm -rf "${D}"/usr/share/doc/${PN}
 
 	# move plugins to correct location and clean up empty dirs
