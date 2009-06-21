@@ -1,9 +1,0 @@
-#%PAM-1.0
-# For root login to succeed here with pam_securetty, "rexec" must be
-# listed in /etc/securetty.
-auth       required	pam_nologin.so
-auth       required	pam_securetty.so
-auth       optional	pam_env.so
-auth       include	system-auth
-account    include	system-auth
-session    include	system-auth
