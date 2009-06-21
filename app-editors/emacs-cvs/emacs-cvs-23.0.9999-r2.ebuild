@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.9999-r1.ebuild,v 1.13 2009/06/19 22:42:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-23.0.9999-r2.ebuild,v 1.1 2009/06/21 17:00:33 ulm Exp $
 
 EAPI=2
 
@@ -10,8 +10,8 @@ if [ "${PV##*.}" = "9999" ]; then
 	ECVS_AUTH="pserver"
 	ECVS_SERVER="cvs.savannah.gnu.org:/sources/emacs"
 	ECVS_MODULE="emacs"
-	ECVS_BRANCH="HEAD"
-	ECVS_LOCALNAME="emacs"
+	ECVS_BRANCH="EMACS_23_1_RC"
+	ECVS_LOCALNAME="emacs-23.1"
 	inherit cvs
 	SRC_URI=""
 	S="${WORKDIR}/${ECVS_LOCALNAME}"
