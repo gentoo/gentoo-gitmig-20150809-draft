@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.23 2009/06/07 19:04:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.24 2009/06/21 18:54:38 ssuominen Exp $
+
+  21 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gnome-mplayer-0.9.6.ebuild:
+  Tarball gconf-2.m4 for USE -gnome and eautoreconf wrt #273538, thanks to
+  Mark Huijgen for reporting.
 
   07 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   gnome-mplayer-0.9.6.ebuild:

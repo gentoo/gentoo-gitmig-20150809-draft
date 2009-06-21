@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.6.ebuild,v 1.3 2009/06/07 19:04:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.6.ebuild,v 1.4 2009/06/21 18:54:38 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -8,7 +8,9 @@ inherit autotools eutils gnome2
 
 DESCRIPTION="MPlayer GUI for GNOME Desktop Environment"
 HOMEPAGE="http://code.google.com/p/gnome-mplayer"
-SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz
+	!gnome? ( mirror://gentoo/${P}-gconf-2.m4.tgz
+		http://dev.gentoo.org/~ssuominen/${P}-gconf-2.m4.tgz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -33,8 +35,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	DOCS="ChangeLog README DOCS/keyboard_shortcuts.txt"
-	G2CONF="${G2CONF}
-		--disable-dependency-tracking
+	G2CONF+=" --disable-dependency-tracking
 		$(use_enable gnome schemas-install)
 		$(use_enable gnome nautilus)
 		--with-gio
@@ -46,14 +47,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-asneeded.patch
-	eautoreconf
+	AT_M4DIR=${WORKDIR} eautoreconf
 }
 
 src_install() {
 	gnome2_src_install
-	# remove duplicate doc dir
 	rm -rf "${D}"/usr/share/doc/${PN}
-	# remove empty dir
-	rmdir -p "${D}"/var/lib
+	rmdir -p "${D}"/var/lib # rm empty dir from destdir
 }
