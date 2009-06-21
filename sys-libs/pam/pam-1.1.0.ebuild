@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.4 2009/06/21 16:23:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.1.0.ebuild,v 1.5 2009/06/21 16:50:28 flameeyes Exp $
 
 inherit libtool multilib eutils autotools pam toolchain-funcs flag-o-matic
 
@@ -10,7 +10,8 @@ MY_P="${MY_PN}-${PV}"
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 DESCRIPTION="Linux-PAM (Pluggable Authentication Modules)"
 
-SRC_URI="mirror://kernel/linux/libs/pam/library/${MY_P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/libs/pam/library/${MY_P}.tar.bz2
+	mirror://kernel/linux/libs/pam/documentation/${MY_P}-docs.tar.bz2"
 
 LICENSE="PAM"
 SLOT="0"
@@ -78,12 +79,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	# Avoid regeneration man _and_ documentation. The documentation
-	# regeneration requires the xsl stylesheets for DocBook as well as
-	# a browser; if lynx is not found, the buildsystem will also
-	# default to Firefox, bad choice. — bug #274929
-	epatch "${FILESDIR}/${MY_PN}-0.99.7.0-disable-regenerate-man.patch"
-
 	# Avoid building xtests during "make all"; note that for what
 	# we're concerned xtests are not even executed, so we should
 	# probably use EXTRA_PROGRAMS.
@@ -127,7 +122,6 @@ src_compile() {
 		--disable-db \
 		--disable-dependency-tracking \
 		--disable-prelude \
-		--disable-regenerate-man \
 		${myconf} || die "econf failed"
 	emake sepermitlockdir="/var/run/sepermit" || die "emake failed"
 }
