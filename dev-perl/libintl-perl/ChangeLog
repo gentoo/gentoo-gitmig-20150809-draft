@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/libintl-perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.26 2009/05/26 19:02:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libintl-perl/ChangeLog,v 1.27 2009/06/21 10:15:46 tove Exp $
+
+*libintl-perl-1.19 (21 Jun 2009)
+
+  21 Jun 2009; Torsten Veller <tove@gentoo.org> +libintl-perl-1.19.ebuild:
+  Version bump
 
 *libintl-perl-1.18 (26 May 2009)
 
