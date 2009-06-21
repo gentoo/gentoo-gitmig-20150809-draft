@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Async/Net-DNS-Async-1.07.ebuild,v 1.2 2009/06/21 12:36:50 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS-Async/Net-DNS-Async-1.07.ebuild,v 1.3 2009/06/21 12:40:14 tove Exp $
 
 MODULE_AUTHOR="SHEVEK"
 inherit perl-module
@@ -18,6 +18,6 @@ SRC_TEST="do"
 
 src_test() {
 	# disable online test
-	mv ${S}/t/02_resolve.t{,.disable} || die
+	mv "${S}"/t/02_resolve.t{,.disable} || die
 	perl-module_src_test
 }
