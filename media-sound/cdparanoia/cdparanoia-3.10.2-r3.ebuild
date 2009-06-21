@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.7 2009/06/20 19:09:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.10.2-r3.ebuild,v 1.8 2009/06/21 02:20:56 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic libtool toolchain-funcs versionator
@@ -33,7 +33,7 @@ src_prepare() {
 
 src_configure() {
 	tc-export AR CC RANLIB
-	append-flags -I../interface
+	append-flags -I"${S}/interface"
 	econf
 }
 
