@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.190 2009/06/09 18:53:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.191 2009/06/21 07:35:10 ssuominen Exp $
+
+*mpg123-1.7.3-r1 (21 Jun 2009)
+
+  21 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +mpg123-1.7.3-r1.ebuild:
+  Revision bump for mpg123 symlink transition.
 
   09 Jun 2009; Raúl Porcel <armin76@gentoo.org> mpg123-1.7.3.ebuild:
   ia64/sparc stable wrt #270781
