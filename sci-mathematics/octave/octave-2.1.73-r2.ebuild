@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.9 2008/04/18 13:13:10 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.73-r2.ebuild,v 1.10 2009/06/21 18:47:58 graaff Exp $
 
 inherit flag-o-matic fortran autotools xemacs-elisp-common
 
@@ -26,7 +26,7 @@ DEPEND="virtual/libc
 	hdf5? ( sci-libs/hdf5 )
 	doc? ( virtual/latex-base )
 	mpi? ( virtual/mpi )
-	xemacs? ( virtual/xemacs )
+	xemacs? ( app-editors/xemacs )
 	!=app-text/texi2html-1.70"
 RDEPEND="${DEPEND}
 	emacs? ( virtual/emacs )"

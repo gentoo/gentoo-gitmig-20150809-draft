@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.10 2008/04/21 14:39:28 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.1.2.ebuild,v 1.11 2009/06/21 18:50:13 graaff Exp $
 
 inherit eutils flag-o-matic
 
@@ -21,7 +21,7 @@ IUSE="doc emacs"
 
 DEPEND=">=dev-lang/perl-5.6
 		>=dev-libs/gmp-4.1-r1
-		emacs? ( || ( virtual/xemacs
+		emacs? ( || ( app-editors/xemacs
 					virtual/emacs ) )"
 
 S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}

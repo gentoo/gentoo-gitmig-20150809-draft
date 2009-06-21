@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/singular
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.25 2008/11/08 03:53:08 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.26 2009/06/21 18:50:13 graaff Exp $
+
+  21 Jun 2009; Hans de Graaff <graaff@gentoo.org> singular-3.0.1.2.ebuild:
+  Rename virtual/xemacs -> app-editors/xemacs since the virtual has been
+  removed.
 
   08 Nov 2008; Markus Dittrich <markusle@gentoo.org>
   +files/singular-3.0.4.4-emacs-22.patch, singular-3.0.4.4.ebuild:
