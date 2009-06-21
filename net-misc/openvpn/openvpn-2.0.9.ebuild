@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.9.ebuild,v 1.4 2009/06/11 05:26:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.0.9.ebuild,v 1.5 2009/06/21 18:32:51 cedk Exp $
 
 inherit eutils multilib
 
@@ -100,9 +100,10 @@ src_install() {
 	if ! use minimal ; then
 		cd easy-rsa/2.0
 		exeinto "/usr/share/${PN}/easy-rsa"
-		doexe *-* pkitool
+		doexe build-* clean-all inherit-inter list-crl pkitool revoke-full \
+			sign-req whichopensslcnf
 		insinto "/usr/share/${PN}/easy-rsa"
-		doins README openssl.cnf vars
+		doins README openssl-0.9.6.cnf openssl.cnf vars
 		cd ../..
 
 		exeinto "/usr/$(get_libdir)/${PN}"
