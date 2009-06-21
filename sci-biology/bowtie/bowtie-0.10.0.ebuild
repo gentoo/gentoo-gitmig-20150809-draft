@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/bowtie-0.9.9.1.ebuild,v 1.2 2009/04/23 19:15:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/bowtie-0.10.0.ebuild,v 1.1 2009/06/21 15:15:43 weaver Exp $
+
+EAPI="2"
 
 DESCRIPTION="An ultrafast memory-efficient short read aligner"
 HOMEPAGE="http://bowtie-bio.sourceforge.net/"
@@ -9,15 +11,15 @@ SRC_URI="mirror://sourceforge/bowtie-bio/${P}-src.zip"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
 
 # NB: Bundles code from Maq (http://maq.sf.net) and the SeqAn library (http://www.seqan.de)
+# TODO: properly report system CFLAGS in -DCOMPILE_OPTIONS
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i 's/$(CXX) $(RELEASE_FLAGS)/$(CXX) $(CXXFLAGS) $(RELEASE_FLAGS)/' "${S}/Makefile" || die
 }
 
