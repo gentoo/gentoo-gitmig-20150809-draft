@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.13 2009/05/09 15:48:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-2.0.1.ebuild,v 1.14 2009/06/21 16:02:20 ssuominen Exp $
 
+EAPI=2
 WANT_AUTOCONF=2.5
 inherit autotools eutils
 
@@ -12,9 +13,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
-IUSE="gnome vorbis debug alsa"
+IUSE="+alsa +gnome vorbis"
 
-RDEPEND=">=dev-scheme/guile-1.4-r3
+RDEPEND=">=dev-scheme/guile-1.8[deprecated]
 	>=dev-libs/libxml-1.8
 	>=dev-libs/libxml2-2
 	>=media-sound/esound-0.2
@@ -23,45 +24,36 @@ RDEPEND=">=dev-scheme/guile-1.4-r3
 	media-libs/libmad
 	media-libs/ladspa-sdk
 	vorbis? ( >=media-libs/libvorbis-1 )
-	gnome? ( >=gnome-base/libglade-2 >=gnome-base/libgnome-2.6
-		>=gnome-base/libgnome-2.6 >=gnome-base/libgnomecanvas-2.6
-		>=dev-libs/glib-2.6 >=x11-libs/gtk+-2.6 >=gnome-base/libgnomeui-2.6 )
+	gnome? ( >=gnome-base/libglade-2
+		>=gnome-base/libgnome-2.6
+		>=gnome-base/libgnomecanvas-2.6
+		>=x11-libs/gtk+-2.6
+		>=gnome-base/libgnomeui-2.6 )
 	alsa? ( media-libs/alsa-lib )"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	if has_version =dev-scheme/guile-1.8*; then
-		built_with_use dev-scheme/guile deprecated || die "guile must be built with deprecated use flag."
-	fi
+	use gnome || ewarn "You will need to emerge with USE gnome to get a GUI."
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"/libltdl
+src_prepare() {
+	cd libltdl
 	eautoconf
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-cflags.patch
-	sed -i -e 's:glame.png:glame-logo.jpg:' src/gui/glame.desktop
+	cd ..
+	epatch "${FILESDIR}"/${P}-cflags.patch \
+		"${FILESDIR}"/${P}-guile_1_8_compat.patch
 }
 
-src_compile() {
-	econf $(use_enable alsa alsatest) \
-		$(use_enable debug swapfiledebug) $(use_enable debug) \
+src_configure() {
+	econf \
 		$(use_enable gnome gui) \
-		--enable-ladspa \
-		${myconf}
-
-	emake || die "emake failed."
+		$(use_enable alsa alsatest) \
+		--enable-ladspa
 }
 
 src_install() {
-	einstall || die "einstall failed."
-
-	if use gnome; then
-		dodir /usr/share/pixmaps
-		dosym ../glame/pixmaps/glame-logo.jpg /usr/share/pixmaps/glame-logo.jpg
-	fi
-
+	einstall || die "einstall failed"
+	use gnome && dosym ../glame/pixmaps/glame-logo.jpg /usr/share/pixmaps/${PN}.jpg
 	dodoc AUTHORS BUGS CREDITS ChangeLog MAINTAINERS NEWS README TODO
 }
