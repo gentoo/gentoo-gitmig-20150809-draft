@@ -33,7 +33,7 @@ start() {
         return -1
 	fi
 
-	start-stop-daemon --start --exec ${EXEC} --name beam \
+	start-stop-daemon --start --exec ${EXEC} --name ${COUCHDB_BEAM} \
 		--user ${COUCHDB_USER} --chuid ${COUCHDB_USER} --pidfile ${COUCHDB_PID_FILE} -- $args
 
 	eend $? "Failed to start ${SVCNAME}"
@@ -41,7 +41,7 @@ start() {
 
 stop() {
 	ebegin "Stopping ${SVCNAME}"
-	start-stop-daemon --stop --exec ${EXEC} --name beam \
+	start-stop-daemon --stop --exec ${EXEC} --name ${COUCHDB_BEAM} \
 		--pidfile ${COUCHDB_PID_FILE}
 	eend $? "Failed to stop ${SVCNAME}"
 }

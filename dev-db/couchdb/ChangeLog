@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/couchdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.2 2009/04/01 11:08:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/ChangeLog,v 1.3 2009/06/21 15:39:34 caleb Exp $
+
+  21 Jun 2009; Caleb Tennis <caleb@gentoo.org> files/couchdb.conf-0.9,
+  files/couchdb.init-0.9:
+  Add steps to conf.d and init.d scripts to determine which beam.smp script
+  needs to be run
 
 *couchdb-0.9.0 (01 Apr 2009)
 
