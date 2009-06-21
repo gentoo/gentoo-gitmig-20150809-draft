@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.15 2009/06/21 12:35:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.16 2009/06/21 12:43:29 aballier Exp $
+
+*camlzip-1.04 (21 Jun 2009)
+
+  21 Jun 2009; Alexis Ballier <aballier@gentoo.org> +camlzip-1.04.ebuild:
+  version bump
 
   21 Jun 2009; Alexis Ballier <aballier@gentoo.org> camlzip-1.03-r1.ebuild:
   define eapi before inherit and assign rdepend explicitly
