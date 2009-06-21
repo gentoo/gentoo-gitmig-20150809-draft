@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/couchdb-python
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/ChangeLog,v 1.1 2009/06/21 20:48:53 patrick Exp $
+
+*couchdb-python-0.5 (21 Jun 2009)
+
+  21 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  +couchdb-python-0.5.ebuild, +metadata.xml:
+  Initial commit of couchdb-python-0.5. Ebuild by Juergen Geuter. Fixes
+  #273719
+
