@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/istack-commons-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.9 2008/10/25 17:06:40 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.10 2009/06/21 02:51:24 robbat2 Exp $
+
+*istack-commons-tools-20090620 (21 Jun 2009)
+
+  21 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +istack-commons-tools-20090620.ebuild:
+  Add new istack-commons (upstream pom.xml tag is 1.1-SNAPSHOT) in a new
+  slot, needed for jersey.
 
   25 Oct 2008; nixnut <nixnut@gentoo.org>
   istack-commons-tools-20070122-r1.ebuild:
