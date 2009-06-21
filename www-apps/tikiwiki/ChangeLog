@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.65 2009/06/11 19:10:48 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.66 2009/06/21 14:04:03 ranger Exp $
+
+  21 Jun 2009; Brent Baude <ranger@gentoo.org> tikiwiki-2.4.ebuild:
+  Marking tikiwiki-2.4 ppc for bug 264570
 
 *tikiwiki-2.4 (11 Jun 2009)
 
