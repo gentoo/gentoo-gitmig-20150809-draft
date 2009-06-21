@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/plink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.1 2009/03/07 04:37:27 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.2 2009/06/21 14:58:13 weaver Exp $
+
+*plink-1.06 (21 Jun 2009)
+
+  21 Jun 2009; Andrey Kislyuk <weaver@gentoo.org>
+  -files/plink-1.05-gcc43.patch, -plink-1.05.ebuild, +plink-1.06.ebuild:
+  Version bump, change name to follow Debian, and drop old files
 
   06 Mar 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
   New package, ebuild written by Neil Shephard <nshephard@gmail.com> and me
