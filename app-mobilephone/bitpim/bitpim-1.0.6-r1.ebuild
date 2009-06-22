@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.1 2009/06/20 21:39:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/bitpim/bitpim-1.0.6-r1.ebuild,v 1.2 2009/06/22 00:03:25 mrness Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	epatch "${FILESDIR}/${P}-ffmpeg_quality.patch"
 	epatch "${FILESDIR}/${P}-gcc43.patch"
-	sed -i "s/python2.3/${python}/" "${S}/src/native/usb/build.sh"
+	sed -i "s/^PYTHONVER=.*/PYTHONVER=${python}/" src/native/usb/build.sh
 }
 
 src_compile() {
