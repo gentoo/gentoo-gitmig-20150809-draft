@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.4.2.ebuild,v 1.4 2009/04/27 01:59:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/jabref-2.5.ebuild,v 1.1 2009/06/22 22:33:35 caster Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/JabRef-${MY_PV}-src.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="mysql"
 
 CDEPEND="dev-java/spin:0
@@ -31,27 +31,28 @@ CDEPEND="dev-java/spin:0
 	dev-java/jpfcodegen:0
 	mysql? ( dev-java/jdbc-mysql:0 )"
 
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	${CDEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_prepare() {
+java_prepare() {
 	# moves jarbundler definition to where it's needed (not by us)
 	# don't call unjarlib, don't want to absorb deps
 	# failonerror in jpfcodegen
 	epatch "${FILESDIR}/${PN}-2.4-build.xml.patch"
+
+	# bug #268252
+	java-ant_xml-rewrite -f build.xml -d -e javac -a encoding -v UTF-8
 
 	mkdir libs || die
 	mv lib/antlr-3.0b5.jar libs/ || die
 
 	rm -v lib/*.jar lib/plugin/*.jar \
 		src/java/net/sf/jabref/plugin/core/generated/*.java || die
-
-	java-utils-2_src_prepare
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
@@ -75,10 +76,10 @@ src_install() {
 	java-pkg_dolauncher ${PN} \
 		--main net.sf.jabref.JabRef
 
-	java-pkg_register-optional-dependency jdbc-mysql
-
 	dodir /usr/share/${PN}/lib/plugins
 	keepdir /usr/share/${PN}/lib/plugins
+
+	java-pkg_register-optional-dependency jdbc-mysql
 
 	newicon src/images/JabRef-icon-48.png JabRef-icon.png || die
 	make_desktop_entry jabref JabRef JabRef-icon Office
