@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libkexiv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.29 2009/06/19 19:26:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkexiv2/ChangeLog,v 1.30 2009/06/22 06:27:45 pva Exp $
+
+  22 Jun 2009; Peter Volkov <pva@gentoo.org> libkexiv2-0.1.8-r1.ebuild:
+  amd64 stable, bug #270950
 
   19 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
   -libkexiv2-0.1.1.ebuild, -libkexiv2-0.1.6.ebuild,
