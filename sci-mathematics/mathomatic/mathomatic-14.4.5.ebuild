@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.3.1.ebuild,v 1.1 2009/02/03 13:01:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.4.5.ebuild,v 1.1 2009/06/22 18:47:03 bicatali Exp $
 
 inherit eutils
 
@@ -11,10 +11,11 @@ SRC_URI="http://www.panix.com/~gesslein/${P}.tar.bz2"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="doc"
+IUSE="doc secure"
 
 DEPEND="sys-libs/readline
 	sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	sed -i \
@@ -22,6 +23,9 @@ src_compile() {
 		makefile primes/makefile || die "sed failed"
 	emake READLINE=1 || die "emake failed"
 	emake -C primes || die "emake in primes failed"
+	if use secure; then
+		./compile.secure || die "compiling secure version failed"
+	fi
 }
 
 src_test() {
@@ -41,5 +45,8 @@ src_install() {
 		dohtml doc/* || die
 		insinto /usr/share/doc/${PF}
 		doins -r tests factorial m4 || die
+	fi
+	if use doc; then
+		dobin mathomatic_secure || die
 	fi
 }
