@@ -6,7 +6,4 @@
     <email>graaff@gentoo.org</email>
     <name>Hans de Graaff</name>
   </maintainer>
-  <use>
-    <flag name="rhythmbox">Enables support for currently playing song in rhythmbox</flag>
-  </use>
 </pkgmetadata>
