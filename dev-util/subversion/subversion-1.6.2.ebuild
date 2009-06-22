@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.2.ebuild,v 1.10 2009/06/17 17:16:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.2.ebuild,v 1.11 2009/06/22 21:57:03 arfrever Exp $
 
 EAPI="2"
 
@@ -181,7 +181,8 @@ src_unpack() {
 		elog
 
 		if [[ -z "${SVN_TEST_APACHE}" ]]; then
-			ebeep 24
+			ebeep 6
+			epause 18
 		else
 			if [[ ! -f "/etc/apache2/modules.d/99_subversion_tests.conf" ]]; then
 				die "/etc/apache2/modules.d/99_subversion_tests.conf doesn't exist"
