@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.1.6.ebuild,v 1.1 2009/06/21 20:56:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/git-python-0.1.6.ebuild,v 1.2 2009/06/22 01:05:00 gentoofan23 Exp $
 
-inherit python distutils
+inherit distutils
 
 DESCRIPTION="git-python is a python library used to interact with Git
 repositories."
@@ -14,12 +14,6 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-lang/python"
-RDEPEND="dev-lang/python
-		dev-util/git"
+RDEPEND="dev-util/git"
 
 S=${WORKDIR}/GitPython-${PV}
-
-src_install (){
-	distutils_src_install
-}

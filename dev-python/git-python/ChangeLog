@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/git-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.1 2009/06/21 20:56:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/git-python/ChangeLog,v 1.2 2009/06/22 01:05:00 gentoofan23 Exp $
+
+  22 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  git-python-0.1.6.ebuild:
+  Small QA fixes.
 
 *git-python-0.1.6 (21 Jun 2009)
 
