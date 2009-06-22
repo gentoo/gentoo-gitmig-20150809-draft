@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/fakechroot-2.9.ebuild,v 1.1 2009/04/09 09:59:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/fakechroot-2.9.ebuild,v 1.2 2009/06/22 21:52:35 spock Exp $
 
-inherit eutils
+inherit autotools eutils
 
 DESCRIPTION="Provide a faked chroot environment without requiring root privileges"
 HOMEPAGE="http://fakechroot.alioth.debian.org/"
@@ -17,6 +17,13 @@ RDEPEND=""
 DEPEND=""
 
 RESTRICT="test"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10-compat.patch
+	AT_M4DIR="m4" eautoreconf
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die

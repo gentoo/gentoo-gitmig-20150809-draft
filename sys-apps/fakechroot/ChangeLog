@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/fakechroot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.6 2009/04/09 09:59:51 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.7 2009/06/22 21:52:35 spock Exp $
+
+  22 Jun 2009; Michał Januszewski <spock@gentoo.org> fakechroot-2.9.ebuild,
+  +files/fakechroot-2.9-glibc-2.10-compat.patch:
+  Make fakechroot compatible with glibc 2.10 (bug #274077).
 
 *fakechroot-2.9 (09 Apr 2009)
 
