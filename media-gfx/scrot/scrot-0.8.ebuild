@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.19 2009/06/22 14:30:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.20 2009/06/22 14:31:52 jer Exp $
 
 inherit bash-completion
 
@@ -21,5 +21,5 @@ src_install() {
 	rm -r "${D}"/usr/doc
 	dodoc AUTHORS ChangeLog
 
-	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
+	dobashcompletion "${FILESDIR}/${PN}.bash-completion" ${PN}
 }
