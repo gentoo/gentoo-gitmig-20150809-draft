@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.0.0.ebuild,v 1.1 2009/06/01 21:20:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.0.0.ebuild,v 1.2 2009/06/22 19:24:01 hanno Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www2.aquamaniac.de/sites/download/download.php?package=03&releas
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="chipcard debug hbci kde ofx python qt3"
+IUSE="chipcard debug kde ofx python qt3"
 DEPEND=">=sys-libs/gwenhywfar-3.8.1
 	>=app-misc/ktoblzcheck-1.14
 	ofx? ( >=dev-libs/libofx-0.8.3 )
@@ -31,8 +31,7 @@ src_configure() {
 	(use qt3 || use kde) && FRONTENDS="${FRONTENDS} qbanking"
 	use kde && FRONTENDS="${FRONTENDS} kbanking"
 
-	local BACKENDS=""
-	use hbci && BACKENDS="aqhbci"
+	local BACKENDS="aqhbci"
 	use ofx && BACKENDS="${BACKENDS} aqofxconnect"
 
 	econf PATH="/usr/qt/3/bin:${PATH}" \
