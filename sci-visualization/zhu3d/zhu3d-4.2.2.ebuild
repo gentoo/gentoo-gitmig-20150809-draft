@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.1.8.ebuild,v 1.1 2009/01/29 11:17:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/zhu3d/zhu3d-4.2.2.ebuild,v 1.1 2009/06/22 08:06:04 bicatali Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit eutils qt4
 DESCRIPTION="Interactive 3D mathematical function viewer"
 HOMEPAGE="http://sourceforge.net/projects/zhu3d"
 LICENSE="GPL-2"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 
 IUSE=""
 
@@ -19,7 +19,8 @@ SLOT="0"
 RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 )
 		x11-libs/qt:4[opengl] )
 	virtual/glu"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_prepare() {
 	local datadir=/usr/share/${PN}
@@ -29,6 +30,7 @@ src_prepare() {
 		-e "s:^WORKDIR=:WORKDIR=${datadir}/work:" \
 		-e "s:^DOCDIR=:WORKDIR=/usr/share/doc/${PF}/html:" \
 		${PN}.pri || die "sed zhu3d.pri failed"
+	sed -i -e '/QMAKE_C/d' ${PN}.pro || die "sed zhu3d.pro for flags failed"
 }
 
 src_configure() {
@@ -47,5 +49,5 @@ src_install() {
 	doins -r work system || die
 
 	doicon system/icons/${PN}.png || die
-	make_desktop_entry ${PN} Zhu3D ${PN} "Education;Science;Math;Qt"
+	make_desktop_entry ${PN} "Zhu3D Function Viewer" ${PN} "Education;Science;Math;Qt"
 }
