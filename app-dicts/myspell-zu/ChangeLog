@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-zu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-zu/ChangeLog,v 1.13 2009/03/30 14:31:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-zu/ChangeLog,v 1.14 2009/06/22 13:47:38 jer Exp $
+
+  22 Jun 2009; Jeroen Roovers <jer@gentoo.org> myspell-zu-20060316.ebuild:
+  Stable for HPPA too.
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> myspell-zu-20060316.ebuild:
   Add ~arm/~sh wrt #261064

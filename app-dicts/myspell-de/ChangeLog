@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/myspell-de
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.22 2009/03/30 14:49:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/myspell-de/ChangeLog,v 1.23 2009/06/22 13:30:32 jer Exp $
+
+  22 Jun 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Stable for HPPA too.
 
   30 Mar 2009; Raúl Porcel <armin76@gentoo.org> myspell-de-20060316.ebuild,
   myspell-de-20080915-r1.ebuild:
