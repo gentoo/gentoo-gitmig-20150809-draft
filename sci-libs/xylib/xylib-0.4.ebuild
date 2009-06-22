@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/xylib-0.2.ebuild,v 1.1 2008/04/18 08:50:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/xylib/xylib-0.4.ebuild,v 1.1 2009/06/22 18:23:34 bicatali Exp $
 
 DESCRIPTION="Experimental x-y data reading library"
 HOMEPAGE="http://www.unipress.waw.pl/fityk/xylib/"
