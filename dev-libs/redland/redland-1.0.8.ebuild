@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.8.ebuild,v 1.13 2009/05/22 15:47:13 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.8.ebuild,v 1.14 2009/06/22 13:22:26 aballier Exp $
 
 EAPI=2
+
+inherit libtool
 
 DESCRIPTION="High-level interface for the Resource Description Framework"
 HOMEPAGE="http://librdf.org"
@@ -10,7 +12,7 @@ SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 LICENSE="LGPL-2.1 Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="berkdb mysql postgres sqlite ssl threads xml"
 
 RDEPEND="mysql? ( virtual/mysql )
@@ -24,6 +26,10 @@ RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	elibtoolize # for sande .so versionning on bsd
+}
 
 src_configure() {
 	local myconf
