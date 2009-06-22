@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/cherokee
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.55 2009/06/22 07:34:21 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/cherokee/ChangeLog,v 1.56 2009/06/22 07:35:48 bass Exp $
+
+  22 Jun 2009; J. Alberto Suárez López <bass@gentoo.org>
+  cherokee-0.99.17.ebuild:
+  Added ~amd64
 
 *cherokee-0.99.17 (22 Jun 2009)
 
