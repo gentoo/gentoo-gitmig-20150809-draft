@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.4 2009/06/14 10:49:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/kdiff3-0.9.95.ebuild,v 1.5 2009/06/22 12:35:42 voyageur Exp $
 
 EAPI="2"
 
@@ -15,8 +15,14 @@ SRC_URI="mirror://sourceforge/kdiff3/${P}.tar.gz"
 SLOT="1"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="debug handbook"
+IUSE="debug handbook konqueror"
 
-RDEPEND=">=kde-base/libkonq-${KDE_MINIMAL}
+RDEPEND="konqueror? ( >=kde-base/libkonq-${KDE_MINIMAL} )
 	sys-apps/diffutils
 	!kde-misc/kdiff3:0"
+
+src_configure() {
+	mycmakeargs="${mycmakeargs} $(cmake-utils_use_with konqueror LibKonq)"
+	kde4-base_src_configure
+}
+
