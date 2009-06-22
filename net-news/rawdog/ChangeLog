@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.23 2009/05/18 12:15:02 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.24 2009/06/22 13:59:40 jer Exp $
+
+  22 Jun 2009; Jeroen Roovers <jer@gentoo.org> rawdog-2.12.ebuild:
+  Stable for HPPA (bug #274903).
 
 *rawdog-2.12 (18 May 2009)
 
