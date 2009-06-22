@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.0.11733.9347.ebuild,v 1.1 2009/05/26 09:16:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.0.11733.9347.ebuild,v 1.2 2009/06/22 21:47:37 caster Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit eutils fdo-mime
 DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
 # no upstream versioning, version determined from help/about
-# incorrect digest means upstream bump and a need for version bump
+# incorrect digest means upstream bumped and thus needs version bump
 SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin
 			-> GoogleEarthLinux-${PV}.bin"
 
@@ -19,25 +19,31 @@ KEYWORDS="~amd64 ~x86"
 RESTRICT="mirror strip"
 IUSE=""
 
-RDEPEND="x86? (
-	media-libs/fontconfig
-	media-libs/freetype
-	virtual/opengl
-	x11-libs/libICE
-	x11-libs/libSM
-	x11-libs/libX11
-	x11-libs/libXcursor
-	x11-libs/libXext
-	x11-libs/libXft
-	x11-libs/libXinerama
-	x11-libs/libXrender )
+RDEPEND="
+	x86? (
+		media-libs/fontconfig
+		media-libs/freetype
+		virtual/opengl
+		x11-libs/libICE
+		x11-libs/libSM
+		x11-libs/libX11
+		x11-libs/libXi
+		x11-libs/libXext
+		x11-libs/libXinerama
+		x11-libs/libXrandr
+		x11-libs/libXrender
+		sys-libs/zlib
+		dev-libs/glib:2
+	)
 	amd64? (
-	app-emulation/emul-linux-x86-xlibs
-	app-emulation/emul-linux-x86-baselibs
-	|| (
-		>=app-emulation/emul-linux-x86-xlibs-7.0
-		x11-drivers/nvidia-drivers
-		<x11-drivers/ati-drivers-8.28.8 ) )
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-baselibs
+		|| (
+			>=app-emulation/emul-linux-x86-xlibs-7.0
+			x11-drivers/nvidia-drivers
+			<x11-drivers/ati-drivers-8.28.8
+		)
+	)
 	media-fonts/ttf-bitstream-vera"
 
 S="${WORKDIR}"
@@ -56,6 +62,9 @@ opt/googleearth/libmeasure.so"
 
 src_unpack() {
 	unpack_makeself
+}
+
+src_prepare() {
 	# make the postinst script only create the files; it's  installation
 	# are too complicated and inserting them ourselves is easier than
 	# hacking around it

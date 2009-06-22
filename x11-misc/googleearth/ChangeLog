@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.45 2009/05/26 09:18:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.46 2009/06/22 21:47:37 caster Exp $
+
+  22 Jun 2009; Vlastimil Babka <caster@gentoo.org>
+  googleearth-5.0.11733.9347.ebuild, metadata.xml:
+  Add missing deps, bug #274581. Move sed from unpack to src_prepare. Make
+  myself maintainer.
 
   26 May 2009; Jeroen Roovers <jer@gentoo.org>
   -googleearth-5.0.11337.1968_beta.ebuild,
