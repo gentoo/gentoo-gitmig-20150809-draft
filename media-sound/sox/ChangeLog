@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.106 2009/06/22 08:51:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.107 2009/06/22 08:54:38 aballier Exp $
+
+  22 Jun 2009; Alexis Ballier <aballier@gentoo.org> sox-14.2.0.ebuild,
+  sox-14.2.0-r1.ebuild:
+  add pkgconfig dep
 
   22 Jun 2009; Alexis Ballier <aballier@gentoo.org> -sox-14.1.0.ebuild,
   -files/sox-14.1.0-lavc.patch, -files/sox-14.1.0-runsox.patch:
