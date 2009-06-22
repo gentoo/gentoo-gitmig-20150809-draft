@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9965 2009/06/22 01:07:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9966 2009/06/22 07:14:00 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever <arfrever@gentoo.org> (22 Jun 2009)
+# pyreverse doesn't work with current versions of dev-python/astng.
+# Last release was over 4 years ago.
+# Masked for removal in 30 days.
+dev-python/pyreverse
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (22 Jun 2009)
 # Unusable with kernel >= 2.6.24, pointess.
