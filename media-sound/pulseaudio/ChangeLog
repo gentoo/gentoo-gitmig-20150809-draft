@@ -1,6 +1,17 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.130 2009/06/19 20:33:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.131 2009/06/22 10:52:39 flameeyes Exp $
+
+*pulseaudio-0.9.15-r50 (22 Jun 2009)
+*pulseaudio-0.9.15-r1 (22 Jun 2009)
+
+  22 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pulseaudio-0.9.15.ebuild, +pulseaudio-0.9.15-r1.ebuild,
+  +pulseaudio-0.9.15-r50.ebuild:
+  Resume with the doubled ebuild for pulseaudio: -r0 to -r49 will keep the
+  ebuilds without systemwide support, -r50 to -r99 will have it. The reason
+  for this is that the systemwide support requires OpenRC, which we won't
+  have stable anytime soon. Still, it requires libtool 2.2, so...
 
   19 Jun 2009; Alexis Ballier <aballier@gentoo.org>
   pulseaudio-0.9.15.ebuild, +files/pulseaudio-0.9.15-bsd.patch:

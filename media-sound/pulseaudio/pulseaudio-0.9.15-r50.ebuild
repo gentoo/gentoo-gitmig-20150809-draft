@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15.ebuild,v 1.7 2009/06/19 20:33:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r50.ebuild,v 1.1 2009/06/22 10:52:39 flameeyes Exp $
 
 EAPI=2
 
