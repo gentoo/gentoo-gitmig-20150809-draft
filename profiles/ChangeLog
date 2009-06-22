@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2824 2009/06/21 23:12:40 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2825 2009/06/22 01:07:57 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask realtime-lsm for removal.
 
   21 Jun 2009; Christian Hoffmann <hoffie@gentoo.org> package.mask:
   cleaning up package.mask, pecl-zip has been removed from the tree (bug
