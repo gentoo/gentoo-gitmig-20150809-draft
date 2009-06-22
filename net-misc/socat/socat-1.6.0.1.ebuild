@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.6.0.1.ebuild,v 1.7 2009/06/22 16:19:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-1.6.0.1.ebuild,v 1.8 2009/06/22 16:27:33 jer Exp $
 
 inherit eutils
 
@@ -19,6 +19,12 @@ DEPEND="
 	tcpd? ( sys-apps/tcp-wrappers )
 "
 RDEPEND="${DEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-1.6.0.0-noptytest.patch"
+}
 
 src_compile() {
 	econf \
