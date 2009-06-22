@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.131 2009/06/22 10:52:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.132 2009/06/22 10:57:22 flameeyes Exp $
+
+  22 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/pulseaudio.init.d-4:
+  Don't use bashism in the init script.
 
 *pulseaudio-0.9.15-r50 (22 Jun 2009)
 *pulseaudio-0.9.15-r1 (22 Jun 2009)
