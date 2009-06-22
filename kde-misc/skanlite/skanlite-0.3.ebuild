@@ -1,15 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.2.ebuild,v 1.3 2009/02/05 08:12:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-0.3.ebuild,v 1.1 2009/06/22 08:53:59 scarabeus Exp $
 
 EAPI="2"
-KDE_MINIMAL="4.1"
-KDE_LINGUAS="be cs da de el es et fr ga gl it ja km lt lv
-			nb nds nl nn pa pl pt pt_BR ro sk sv tr uk wa zh_CN zh_TW"
 
+KDE_LINGUAS="be cs da de el en_GB es et fr ga gl it ja km lt lv
+nb nds nl nn pa pl pt pt_BR ro ru sk sv tr uk wa zh_CN zh_TW"
 inherit kde4-base
 
-KDE_VERSION="4.2.0"
+KDE_VERSION="4.2.4"
 MY_P="${P}-kde${KDE_VERSION}"
 
 DESCRIPTION="KDE image scannig application"
