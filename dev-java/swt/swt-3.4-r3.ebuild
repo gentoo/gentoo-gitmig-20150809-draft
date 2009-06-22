@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r3.ebuild,v 1.2 2009/06/17 19:51:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r3.ebuild,v 1.3 2009/06/22 18:39:14 serkan Exp $
 
 EAPI="1"
 
@@ -196,4 +196,12 @@ src_install() {
 	fi
 
 	dohtml about.html || die
+}
+
+pkg_postinst() {
+	if use xulrunner; then
+		local gecko_dir="$(pkg-config libxul --variable=sdkdir)"
+		elog "You built swt with xulrunner support. For your custom applications please set"
+		elog "MOZILLA_FIVE_HOME environment variable to ${gecko_dir}"
+	fi
 }

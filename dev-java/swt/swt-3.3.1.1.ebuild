@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1.ebuild,v 1.6 2008/07/31 09:11:56 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.3.1.1.ebuild,v 1.7 2009/06/22 18:39:14 serkan Exp $
 
 EAPI="1"
 
@@ -212,4 +212,13 @@ src_install() {
 	fi
 
 	dohtml about.html || die
+}
+
+pkg_postinst() {
+	local gecko="$(get_gecko)"
+	if [[ -n "${gecko}" ]]; then
+		local gecko_dir="$(pkg-config ${gecko}-xpcom --variable=libdir)"
+		elog "You built swt with ${gecko} support. For your custom applications please set"
+		elog "MOZILLA_FIVE_HOME environment variable to ${gecko_dir}"
+	fi
 }
