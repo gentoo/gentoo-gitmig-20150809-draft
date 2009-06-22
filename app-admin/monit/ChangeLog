@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.39 2008/12/27 22:09:29 caleb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.40 2009/06/22 07:34:33 patrick Exp $
+
+*monit-5.0.3 (22 Jun 2009)
+
+  22 Jun 2009; Patrick Lauer <patrick@gentoo.org> +monit-5.0.3.ebuild:
+  Bump to 5.0.3
 
 *monit-5.0_beta6 (27 Dec 2008)
 
