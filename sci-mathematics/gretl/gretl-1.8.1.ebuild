@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.7.9.ebuild,v 1.2 2009/02/02 23:52:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gretl/gretl-1.8.1.ebuild,v 1.1 2009/06/22 18:53:19 bicatali Exp $
 
 USE_EINSTALL=true
 EAPI=2
@@ -46,7 +46,7 @@ SITEFILE=50${PN}-gentoo.el
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.7.5-locale.patch
-	epatch "${FILESDIR}"/${PN}-1.7.6-ldflags.patch
+	epatch "${FILESDIR}"/${PN}-1.8.0-ldflags.patch
 	epatch "${FILESDIR}"/${PN}-1.7.9-nls.patch
 }
 
@@ -84,7 +84,7 @@ src_install() {
 	if use gnome; then
 		gnome2_src_install gnome_prefix="${D}"/usr svprefix="${D}usr"
 	else
-		einstall svprefix="${D}usr" || die "einstall failed"
+		einstall svprefix="${D}usr"
 	fi
 	if use gtk && ! use gnome; then
 		doicon gnome/gretl.png
