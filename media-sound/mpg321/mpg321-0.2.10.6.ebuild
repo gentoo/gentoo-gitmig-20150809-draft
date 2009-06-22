@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10.6.ebuild,v 1.1 2009/06/21 07:31:59 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/mpg321-0.2.10.6.ebuild,v 1.2 2009/06/22 04:32:14 ssuominen Exp $
 
 EAPI=2
-inherit eutils
+inherit autotools
 
 DESCRIPTION="a realtime MPEG 1.0/2.0/2.5 audio player for layers 1, 2 and 3"
 HOMEPAGE="http://packages.debian.org/mpg321"
@@ -12,13 +12,12 @@ SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa -mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="+symlink"
+IUSE="+alsa symlink"
 
 RDEPEND="sys-libs/zlib
 	media-libs/libmad
 	media-libs/libid3tag
-	media-libs/libao
-	!<media-sound/mpg321-0.2.10-r4
+	media-libs/libao[alsa?]
 	symlink? ( !media-sound/mpg123 )"
 DEPEND="${RDEPEND}"
 PDEPEND="symlink? ( virtual/mpg123 )"
@@ -35,14 +34,30 @@ pkg_setup() {
 	fi
 }
 
-src_configure() {
-	econf \
-		--disable-dependency-tracking \
-		$(use_enable symlink mpg123-symlink)
+src_prepare() {
+	AT_M4DIR=m4 eautoreconf
 }
 
-src_install () {
+src_configure() {
+	local myao=oss
+	use alsa && myao=alsa09
+
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable symlink mpg123-symlink) \
+		--with-default-audio=${myao}
+}
+
+src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	newdoc debian/changelog ChangeLog.debian
 	dodoc AUTHORS BUGS HACKING NEWS README{,.remote} THANKS TODO
+}
+
+pkg_postinst() {
+	if ! use symlink; then
+		ewarn "USE symlink is disabled by default on purpose, to get people"
+		ewarn "to switch back into using mpg123 since it's been freed."
+		ewarn "See ChangeLog.debian in /usr/share/doc/${PF} for details."
+	fi
 }
