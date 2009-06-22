@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.6.1.ebuild,v 1.6 2009/06/15 00:00:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.6.1.ebuild,v 1.7 2009/06/22 16:45:05 armin76 Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ xfce4_core
 
 DESCRIPTION="Basic utilities library"
 HOMEPAGE="http://www.xfce.org/projects/libraries"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
 LICENSE="LGPL-2"
 IUSE="debug doc"
 
