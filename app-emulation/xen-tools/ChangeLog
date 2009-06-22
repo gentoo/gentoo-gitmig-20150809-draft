@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.47 2009/06/22 12:09:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.48 2009/06/22 16:33:24 patrick Exp $
+
+*xen-tools-3.4.0-r1 (22 Jun 2009)
+
+  22 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  +xen-tools-3.4.0-r1.ebuild, +files/xen-tools-3.4.0-udevinfo.patch:
+  Udev rules fix, closes #236819. Thanks to Frank Ridderbusch for the shiny
+  patch
 
 *xen-tools-3.4.0 (22 Jun 2009)
 
