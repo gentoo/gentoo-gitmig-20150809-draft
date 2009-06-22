@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.63 2009/06/22 14:17:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.64 2009/06/22 16:19:30 jer Exp $
+
+  22 Jun 2009; Jeroen Roovers <jer@gentoo.org> socat-1.6.0.1.ebuild,
+  -socat-1.7.0.0.ebuild, -socat-1.7.1.0.ebuild, -socat-1.7.1.0-r1.ebuild,
+  -files/socat-1.7.1.0-fixsetenv.patch, socat-1.7.1.1.ebuild,
+  socat-2.0.0_beta1.ebuild, socat-2.0.0_beta2.ebuild,
+  socat-2.0.0_beta3.ebuild:
+  Remove old. Do not depend on silly virtual/libc. Set RDEPEND explicitly.
 
   22 Jun 2009; Raúl Porcel <armin76@gentoo.org> socat-1.7.1.1.ebuild:
   ia64/sparc stable wrt #270855
