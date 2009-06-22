@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4567 2009/06/21 23:27:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4568 2009/06/22 12:47:52 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1175,6 +1175,7 @@ kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-b
 kde-base/plasma-workspace:xcomposite - Disable this flag to enable experimental fake transparency support for plasma panel.
 kde-base/pykde4:akonadi - Builds Akonadi python language bindings
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
+kde-misc/kdiff3:konqueror - Enable integration with konqueror
 kde-misc/knetworkmanager:cisco - Adds support for the Cisco VPN client net-misc/vpnc
 kde-misc/knetworkmanager:dialup - Enables Dialup (PPP) support
 kde-misc/knetworkmanager:openvpn - Adds support for the OpenVPN net-misc/openvpn client
