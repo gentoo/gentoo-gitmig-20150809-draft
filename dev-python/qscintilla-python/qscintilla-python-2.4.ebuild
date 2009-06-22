@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.1 2009/06/09 19:03:20 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.2 2009/06/22 06:29:56 arfrever Exp $
 
 EAPI="2"
 
-inherit eutils multilib python
+inherit eutils multilib python toolchain-funcs
 
 MY_P="QScintilla-gpl-${PV/_pre/-snapshot-}"
 
@@ -23,10 +23,10 @@ DEPEND=">=dev-python/sip-4.8
 	!qt4? ( >=dev-python/PyQt-3.18 )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}"/${MY_P}/Python
+S="${WORKDIR}/${MY_P}/Python"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-2.4-nostrip.patch
+	epatch "${FILESDIR}/${PN}-2.4-nostrip.patch"
 }
 
 src_configure() {
@@ -40,6 +40,10 @@ src_configure() {
 			$(use debug && echo '--debug')"
 	echo ${myconf}
 	${myconf} || die "configuration failed"
+}
+
+src_compile() {
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" || die "emake failed"
 }
 
 src_install() {
