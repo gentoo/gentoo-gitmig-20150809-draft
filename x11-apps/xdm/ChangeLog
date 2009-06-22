@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.97 2009/05/05 08:32:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdm/ChangeLog,v 1.98 2009/06/22 07:13:25 remi Exp $
+
+  22 Jun 2009; Rémi Cardona <remi@gentoo.org> xdm-1.1.8.ebuild:
+  add missing dep on xconsole (fixes bug #214354)
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> xdm-1.1.8.ebuild:
   fix repoman warnings
