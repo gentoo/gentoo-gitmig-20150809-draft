@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/unicode-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.19 2009/06/05 15:46:09 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicode-data/ChangeLog,v 1.20 2009/06/22 13:58:57 jer Exp $
+
+  22 Jun 2009; Jeroen Roovers <jer@gentoo.org> unicode-data-5.1.0.ebuild:
+  Stable for HPPA (bug #261824).
 
   05 Jun 2009; Peter Alfredsen <loki_val@gentoo.org> metadata.xml:
   Retiring, bug 220219.
