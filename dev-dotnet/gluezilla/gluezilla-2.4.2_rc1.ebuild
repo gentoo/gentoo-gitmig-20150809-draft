@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.4.2_pre2.ebuild,v 1.1 2009/06/17 11:07:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gluezilla/gluezilla-2.4.2_rc1.ebuild,v 1.1 2009/06/22 22:45:02 loki_val Exp $
 
 EAPI=2
 
