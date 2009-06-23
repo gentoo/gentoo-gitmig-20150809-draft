@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r22.ebuild,v 1.8 2009/05/28 05:29:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r23.ebuild,v 1.1 2009/06/23 06:25:07 mrness Exp $
 
 EAPI="2"
 
@@ -203,7 +203,7 @@ src_install() {
 	insopts -m0644
 	newins "${FILESDIR}/modules.ppp" ppp.conf
 	if use mppe-mppc; then
-		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' "${D}/etc/modprobe.d/ppp"
+		sed -i -e 's/ppp_mppe/ppp_mppe_mppc/' "${D}/etc/modprobe.d/ppp.conf"
 	fi
 
 	dodoc PLUGINS README* SETUP Changes-2.3 FAQ
