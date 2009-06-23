@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/smproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.21 2009/05/28 17:08:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.22 2009/06/23 20:51:31 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> smproxy-1.0.2.ebuild:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
   28 May 2009; Raúl Porcel <armin76@gentoo.org> smproxy-1.0.2.ebuild:
   Add ~alpha

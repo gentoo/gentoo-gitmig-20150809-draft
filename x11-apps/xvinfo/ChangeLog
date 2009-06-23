@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xvinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.33 2009/05/05 08:18:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xvinfo/ChangeLog,v 1.34 2009/06/23 20:52:41 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> xvinfo-1.0.2.ebuild:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> xvinfo-1.0.1.ebuild,
   xvinfo-1.0.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.24 2009/06/05 17:18:44 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwd/ChangeLog,v 1.25 2009/06/23 20:56:32 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> xwd-1.0.2.ebuild:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
   05 Jun 2009; Tiago Cunha <tcunha@gentoo.org> xwd-1.0.2.ebuild:
   stable sparc, bug 268581
