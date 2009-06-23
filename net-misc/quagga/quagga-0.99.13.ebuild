@@ -1,36 +1,36 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.11.ebuild,v 1.2 2008/10/13 21:59:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.13.ebuild,v 1.1 2009/06/23 21:12:04 mrness Exp $
 
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+EAPI="2"
 
 inherit eutils multilib autotools
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20081013.tar.gz"
+	mirror://gentoo/${P}-patches-20090623.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
-IUSE="caps ipv6 snmp pam bgpclassless ospfapi realms multipath tcp-zebra"
+IUSE="caps ipv6 snmp pam pcre bgpclassless ospfapi realms multipath tcp-zebra"
 RESTRICT="userpriv"
 
-DEPEND="sys-libs/readline
+COMMON_DEPEND="sys-libs/readline
 	caps? ( sys-libs/libcap )
 	snmp? ( net-analyzer/net-snmp )
-	pam? ( sys-libs/pam )"
-RDEPEND="${DEPEND}
+	pam? ( sys-libs/pam )
+	pcre? ( dev-libs/libpcre )"
+DEPEND="${COMMON_DEPEND}
+	>=sys-devel/libtool-2.2.4"
+RDEPEND="${COMMON_DEPEND}
 	sys-apps/iproute2"
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}" || die "source dir not found"
+src_prepare() {
+	epatch "${WORKDIR}/patch/${P}-ipaddr-bug486.diff"
 	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
-	epatch "${WORKDIR}/patch/${P}-ipv6.patch"
+	epatch "${WORKDIR}/patch/${P}-libpcre.patch"
 
 	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp_adapted.patch"
@@ -41,14 +41,15 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--disable-static \
 		$(use_enable caps capabilities) \
 		$(use_enable snmp) \
 		$(use_with pam libpam) \
+		$(use_enable pcre pcreposix) \
 		$(use_enable tcp-zebra)"
 	use ipv6 \
-			&& myconf="${myconf} --enable-ipv6 --enable-ripng --enable-ospf6d --enable-rtadv" \
+			&& myconf="${myconf} --enable-ipv6 --enable-ripngd --enable-ospf6d --enable-rtadv" \
 			|| myconf="${myconf} --disable-ipv6 --disable-ripngd --disable-ospf6d"
 	use ospfapi \
 			&& myconf="${myconf} --enable-opaque-lsa --enable-ospf-te --enable-ospfclient"
@@ -56,7 +57,6 @@ src_compile() {
 	use multipath && myconf="${myconf} --enable-multipath=0"
 
 	econf \
-		--enable-nssa \
 		--enable-user=quagga \
 		--enable-group=quagga \
 		--enable-vty-group=quagga \
@@ -68,7 +68,6 @@ src_compile() {
 		--libdir=/usr/$(get_libdir)/quagga \
 		${myconf} \
 		|| die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
