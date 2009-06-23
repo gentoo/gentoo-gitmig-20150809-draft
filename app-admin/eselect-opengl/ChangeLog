@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.44 2009/06/23 11:40:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.45 2009/06/23 14:23:57 scarabeus Exp $
+
+*eselect-opengl-1.0.7 (23 Jun 2009)
+
+  23 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +eselect-opengl-1.0.7.ebuild:
+  Version bump to fix bugs 228547 (broken symlinks) and 261498 (relative
+  path usage). Also fixes issue with file collisions for binary drivers per
+  bug 274959.
 
   23 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   eselect-opengl-1.0.5.ebuild, eselect-opengl-1.0.6.ebuild,
