@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jaxb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/ChangeLog,v 1.9 2008/10/25 17:09:34 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/ChangeLog,v 1.10 2009/06/23 15:49:30 betelgeuse Exp $
+
+  23 Jun 2009; Petteri Räty <betelgeuse@gentoo.org> -jaxb-2.1.2.ebuild:
+  Remove old revision.
 
   25 Oct 2008; nixnut <nixnut@gentoo.org> jaxb-2.1.2-r1.ebuild:
   Stable on ppc wrt bug 243130
