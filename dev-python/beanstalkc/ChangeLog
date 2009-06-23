@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/beanstalkc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beanstalkc/ChangeLog,v 1.1 2009/06/23 12:15:17 patrick Exp $
+
+*beanstalkc-0.1.1 (23 Jun 2009)
+
+  23 Jun 2009; Patrick Lauer <patrick@gentoo.org> +beanstalkc-0.1.1.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild by Johan Bergstroem. Fixes #274201
+
