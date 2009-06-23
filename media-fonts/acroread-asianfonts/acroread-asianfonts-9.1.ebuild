@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.1 2009/06/17 23:13:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.2 2009/06/23 15:21:49 mr_bones_ Exp $
 
 EAPI="2"
 inherit confutils
@@ -89,7 +89,6 @@ src_install() {
 	#if use !linguas_zh_TW ; then
 	#	rm "${D}/${CMAPDIR}"/{Adobe-CNS*,B5*,CNS*,ET*,HK*,UCS2-B5*,UCS-ET*,UniCNS*}
 	#fi
-
 
 	fowners -R -L --dereference 0:0 "${INSTALLDIR}"
 }
