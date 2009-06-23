@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/umbrello
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.118 2009/06/14 11:59:05 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/umbrello/ChangeLog,v 1.119 2009/06/23 06:29:44 jer Exp $
+
+  23 Jun 2009; Jeroen Roovers <jer@gentoo.org> umbrello-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -umbrello-4.2.3.ebuild:
   Drop KDE 4.2.3
