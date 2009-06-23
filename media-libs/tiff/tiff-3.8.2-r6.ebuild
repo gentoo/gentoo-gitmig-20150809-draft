@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r6.ebuild,v 1.1 2009/06/23 03:14:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.8.2-r6.ebuild,v 1.2 2009/06/23 08:23:12 flameeyes Exp $
 
 EAPI="2"
 
@@ -16,18 +16,10 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="jpeg jbig nocxx opengl zlib"
 
-DEPEND="jpeg? ( >=media-libs/jpeg-6b )
+RDEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	jbig? ( >=media-libs/jbigkit-1.6-r1 )
 	zlib? ( >=sys-libs/zlib-1.1.3-r2 )
-	opengl? ( app-admin/eselect-opengl
-		sys-devel/gcc[objc]
-		x11-proto/xproto
-		x11-proto/xcb-proto
-		x11-proto/xextproto
-		x11-proto/xf86vidmodeproto
-		x11-proto/glproto )"
-
-RDEPEND="opengl? ( media-libs/mesa
+	opengl? ( media-libs/mesa
 		x11-libs/libX11
 		x11-libs/libXmu
 		x11-libs/libXt
@@ -39,6 +31,15 @@ RDEPEND="opengl? ( media-libs/mesa
 		x11-libs/libxcb
 		x11-libs/libXau
 		x11-libs/libXdmcp )"
+
+DEPEND="${RDEPEND}
+	opengl? ( app-admin/eselect-opengl
+		sys-devel/gcc[objc]
+		x11-proto/xproto
+		x11-proto/xcb-proto
+		x11-proto/xextproto
+		x11-proto/xf86vidmodeproto
+		x11-proto/glproto )"
 
 src_prepare() {
 #	unpack ${A}

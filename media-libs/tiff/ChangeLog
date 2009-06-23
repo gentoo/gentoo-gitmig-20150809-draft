@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.117 2009/06/23 03:14:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.118 2009/06/23 08:23:12 flameeyes Exp $
+
+  23 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  tiff-3.8.2-r6.ebuild:
+  Fix dependencies.
 
 *tiff-3.8.2-r6 (23 Jun 2009)
 
