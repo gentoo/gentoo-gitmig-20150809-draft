@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/libtelepathy-0.3.3.ebuild,v 1.7 2009/06/18 13:03:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtelepathy/libtelepathy-0.3.3.ebuild,v 1.8 2009/06/23 15:22:06 mr_bones_ Exp $
 
 inherit flag-o-matic libtool
 
@@ -15,7 +15,6 @@ IUSE=""
 RDEPEND=">=dev-libs/glib-2.10
 	>=dev-libs/dbus-glib-0.73
 	>=net-libs/telepathy-glib-0.7.1"
-
 
 src_unpack() {
 	unpack ${A}
