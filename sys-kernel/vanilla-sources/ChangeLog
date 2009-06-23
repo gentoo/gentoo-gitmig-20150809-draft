@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.652 2009/06/16 14:11:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.653 2009/06/23 18:35:15 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  vanilla-sources-2.6.30.ebuild:
+  Stable on alpha. It's needed for xorg-server-1.5/xorg-x11-7.4
 
 *vanilla-sources-2.6.29.5 (16 Jun 2009)
 
