@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.9 2009/05/05 19:43:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.20.00-r3.ebuild,v 1.10 2009/06/23 16:35:48 jer Exp $
 
 EAPI=1
 inherit versionator eutils qt4 fortran elisp-common fdo-mime
@@ -110,6 +110,9 @@ src_unpack() {
 	epatch "${WORKDIR}"/${P}-include-defines-file.patch
 	# various patches from upstream branch
 	epatch "${WORKDIR}"/${P}-upstream.patch
+
+	# fix spelling errors (bug #275205)
+	epatch "${FILESDIR}/${P}-defind.patch"
 
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
