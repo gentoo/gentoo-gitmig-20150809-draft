@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.20 2009/04/28 12:02:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.21 2009/06/23 11:15:32 patrick Exp $
+
+*gdata-1.3.3 (23 Jun 2009)
+
+  23 Jun 2009; Patrick Lauer <patrick@gentoo.org> +gdata-1.3.3.ebuild:
+  Bump to 1.3.3, fixes #274892. Small fixes by Rodrigo Lazo
 
   28 Apr 2009; Raúl Porcel <armin76@gentoo.org> gdata-1.0.8.ebuild:
   arm stable
