@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/bristol
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.4 2008/08/05 23:05:48 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bristol/ChangeLog,v 1.5 2009/06/23 20:41:55 aballier Exp $
+
+*bristol-0.40.4 (23 Jun 2009)
+
+  23 Jun 2009; Alexis Ballier <aballier@gentoo.org> -bristol-0.20.6.ebuild,
+  +bristol-0.40.4.ebuild:
+  version bump
 
 *bristol-0.20.6 (05 Aug 2008)
 
