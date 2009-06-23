@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdesdk-kfile-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.72 2009/06/06 10:39:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kfile-plugins/ChangeLog,v 1.73 2009/06/23 06:19:14 jer Exp $
+
+  23 Jun 2009; Jeroen Roovers <jer@gentoo.org>
+  kdesdk-kfile-plugins-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org>
   kdesdk-kfile-plugins-3.5.10.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdesdk-misc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.91 2009/06/22 16:53:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-misc/ChangeLog,v 1.92 2009/06/23 06:17:05 jer Exp $
+
+  23 Jun 2009; Jeroen Roovers <jer@gentoo.org> kdesdk-misc-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> kdesdk-misc-3.5.10.ebuild,
   +files/kdesdk-misc-3.5.10-eof.patch:

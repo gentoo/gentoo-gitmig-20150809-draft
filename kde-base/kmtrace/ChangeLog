@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmtrace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.68 2009/06/06 10:41:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmtrace/ChangeLog,v 1.69 2009/06/23 06:20:27 jer Exp $
+
+  23 Jun 2009; Jeroen Roovers <jer@gentoo.org> kmtrace-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kmtrace-3.5.10.ebuild:
   amd64/x86 stable, bug #271889

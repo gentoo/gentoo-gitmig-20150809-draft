@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kspy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.63 2009/06/06 10:43:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspy/ChangeLog,v 1.64 2009/06/23 06:18:06 jer Exp $
+
+  23 Jun 2009; Jeroen Roovers <jer@gentoo.org> kspy-3.5.10.ebuild:
+  Stable for HPPA (bug #271889).
 
   06 Jun 2009; Markus Meier <maekke@gentoo.org> kspy-3.5.10.ebuild:
   amd64/x86 stable, bug #271889
