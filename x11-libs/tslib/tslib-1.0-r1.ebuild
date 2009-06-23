@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.10 2009/05/09 17:47:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/tslib-1.0-r1.ebuild,v 1.11 2009/06/23 19:19:35 klausman Exp $
 
 inherit eutils toolchain-funcs autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://berlios/${PN}/${PN}-${PV}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sh sparc x86"
 IUSE=""
 #extras arctic2 collie corgi h3600 linear-h2200 mk712 ucb1x00"
 

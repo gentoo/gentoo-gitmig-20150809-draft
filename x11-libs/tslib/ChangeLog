@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/tslib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.13 2009/05/09 17:47:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/tslib/ChangeLog,v 1.14 2009/06/23 19:19:35 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> tslib-1.0-r1.ebuild:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
   09 May 2009; Mike Frysinger <vapier@gentoo.org> tslib-1.0-r1.ebuild:
   Fix #264869 and #268531.
