@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.38.ebuild,v 1.1 2009/06/22 09:06:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.38.ebuild,v 1.2 2009/06/23 15:22:24 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="media-libs/gd[png]
 	#>=dev-libs/boost-1.35.0-r5[python]"
 DEPEND="${RDEPEND}"
 
-# we disable the python bindings for now. Feel free to fix the configure script to know about py 2.6 and 
+# we disable the python bindings for now. Feel free to fix the configure script to know about py 2.6 and
 # such advanced concepts ...
 src_configure() {
 	econf \
