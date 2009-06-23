@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.7 2008/10/07 16:25:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/cubetest/cubetest-0.9.4.ebuild,v 1.8 2009/06/23 16:58:53 mr_bones_ Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils qt4 games
 
 DESCRIPTION="A program to train your spatial insight"
@@ -14,23 +14,14 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND="|| (
-		( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4 )
-		x11-libs/qt:4
-	)"
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-core:4[qt3support]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	games_pkg_setup
-	QT4_BUILT_WITH_USE_CHECK="qt3support" qt4_pkg_setup
-}
-
-src_unpack() {
+src_prepare() {
 	local i
 
-	unpack ${A}
-	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
 	for i in $(find  src/ -iname *_moc.cpp) ; do
 		moc ${i/_moc.cpp/.h} -o $i || die
