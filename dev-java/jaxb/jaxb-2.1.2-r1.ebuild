@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/jaxb-2.1.2-r1.ebuild,v 1.3 2008/10/25 17:09:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb/jaxb-2.1.2-r1.ebuild,v 1.4 2009/06/23 15:51:27 betelgeuse Exp $
 
+EAPI="1"
 JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
@@ -18,10 +19,10 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
 COMMON_DEP="
-	dev-java/istack-commons-runtime
-	dev-java/jsr173
+	dev-java/istack-commons-runtime:0
+	dev-java/jsr173:0
 	java-virtuals/jaf
-	dev-java/txw2-runtime"
+	dev-java/txw2-runtime:0"
 DEPEND=">=virtual/jdk-1.5
 	app-arch/unzip
 	${COMMON_DEP}"

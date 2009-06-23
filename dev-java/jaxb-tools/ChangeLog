@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jaxb-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.6 2008/03/28 18:13:10 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/ChangeLog,v 1.7 2009/06/23 15:49:50 betelgeuse Exp $
+
+  23 Jun 2009; Petteri Räty <betelgeuse@gentoo.org>
+  jaxb-tools-2.1.2.ebuild:
+  Add slot deps to java deps in order for new slot of istack-commons-runtime
+  not to break things. Part of fixing bug #275049.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> jaxb-tools-2.1.2.ebuild:
   Stable on ppc wrt bug 214778

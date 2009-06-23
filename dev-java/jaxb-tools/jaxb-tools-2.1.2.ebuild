@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/jaxb-tools-2.1.2.ebuild,v 1.5 2008/03/28 18:13:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaxb-tools/jaxb-tools-2.1.2.ebuild,v 1.6 2009/06/23 15:49:50 betelgeuse Exp $
 
+EAPI="1"
 JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
@@ -15,21 +16,21 @@ SLOT="2"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-COMMON_DEP="=dev-java/codemodel-2*
-	dev-java/iso-relax
-	dev-java/istack-commons-runtime
-	dev-java/istack-commons-tools
-	=dev-java/jaxb-2*
-	dev-java/jsr173
-	dev-java/msv
-	dev-java/relaxng-datatype
-	dev-java/rngom
-	dev-java/sun-dtdparser
-	dev-java/sun-jaf
-	dev-java/txw2-runtime
-	dev-java/xml-commons-resolver
-	dev-java/xsdlib
-	dev-java/xsom"
+COMMON_DEP="dev-java/codemodel:2
+	dev-java/iso-relax:0
+	dev-java/istack-commons-runtime:0
+	dev-java/istack-commons-tools:0
+	dev-java/jaxb:2
+	dev-java/jsr173:0
+	dev-java/msv:0
+	dev-java/relaxng-datatype:0
+	dev-java/rngom:0
+	dev-java/sun-dtdparser:0
+	dev-java/sun-jaf:0
+	dev-java/txw2-runtime:0
+	dev-java/xml-commons-resolver:0
+	dev-java/xsdlib:0
+	dev-java/xsom:0"
 DEPEND=">=virtual/jdk-1.5
 	${COMMON_DEP}"
 RDEPEND=">=virtual/jre-1.5
