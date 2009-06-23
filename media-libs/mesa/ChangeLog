@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.215 2009/06/21 11:49:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.216 2009/06/23 19:24:39 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> mesa-7.4.2.ebuild:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
 *mesa-7.4.3 (21 Jun 2009)
 
