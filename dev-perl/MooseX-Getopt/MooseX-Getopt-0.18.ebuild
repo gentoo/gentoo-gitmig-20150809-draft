@@ -1,21 +1,23 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/MooseX-Getopt-0.18.ebuild,v 1.1 2009/06/23 07:44:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Getopt/MooseX-Getopt-0.18.ebuild,v 1.2 2009/06/23 14:05:09 tove Exp $
 
 EAPI=2
-MODULE_AUTHOR="RJBS"
 
+MODULE_AUTHOR=RJBS
 inherit perl-module
 
 DESCRIPTION="A Moose role for processing command line options"
 
-IUSE=""
-
 SLOT="0"
-LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ~x86"
+IUSE="test"
 
-DEPEND=">=dev-perl/Test-Exception-0.27
+RDEPEND=">=dev-perl/Moose-0.56
 	dev-perl/Getopt-Long-Descriptive
-	dev-perl/Moose"
-RDEPEND="${DEPEND}"
+	>=virtual/perl-Getopt-Long-2.37"
+DEPEND="${RDEPEND}
+	test? ( >=dev-perl/Test-Exception-0.21
+		>=virtual/perl-Test-Simple-0.62 )"
+
+SRC_TEST=do
