@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXxf86dga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.42 2009/04/16 02:39:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXxf86dga/ChangeLog,v 1.43 2009/06/23 20:50:22 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
   16 Apr 2009; Jeroen Roovers <jer@gentoo.org> libXxf86dga-1.0.2.ebuild:
   Stable for HPPA (bug #251832).
