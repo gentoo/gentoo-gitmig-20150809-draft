@@ -1,6 +1,6 @@
-# Copyright 2008-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/xcalibrateproto-0.1_pre20081210.ebuild,v 1.10 2009/05/15 14:40:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xcalibrateproto/xcalibrateproto-0.1_pre20081210.ebuild,v 1.11 2009/06/23 19:25:26 klausman Exp $
 
 # git clone git://anongit.freedesktop.org/git/xorg/proto/calibrateproto
 # rm -rf calibrateproto/.git
@@ -15,7 +15,7 @@ MY_PN=${PN/x/}
 MY_PV="${PV#*_pre}"
 
 DESCRIPTION="Touchscreen calibration protocol"
-KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"
 DEPEND="${RDEPEND}"
 RDEPEND=""
