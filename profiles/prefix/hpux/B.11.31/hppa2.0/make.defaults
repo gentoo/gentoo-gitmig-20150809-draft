@@ -1,0 +1,11 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/hpux/B.11.31/hppa2.0/make.defaults,v 1.1 2009/06/23 10:10:23 haubi Exp $
+
+ARCH="hppa-hpux"
+# NOTE: config.guess would tell either
+#    "hppa2.0n-hp-hpux11.31" for 32bit kernel
+# or "hppa2.0w-hp-hpux11.31" for 64bit kernel
+# but the binaries are 32bit always, so we ignore the kernel bits here.
+CHOST="hppa2.0-hp-hpux11.31"
+ACCEPT_KEYWORDS="~hppa-hpux"

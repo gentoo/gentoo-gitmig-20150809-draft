@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.5 2009/06/21 16:07:32 grobian Exp $
+# $Id: ChangeLog,v 1.6 2009/06/23 10:10:23 haubi Exp $
+
+  23 Jun 2009; Michael Haubenwallner <haubi@gentoo.org>
+  +hpux/B.11.31/hppa2.0/make.defaults, +hpux/B.11.31/hppa2.0/parent:
+  added profile for hppa2.0-hp-hpux11.31, the first hppa-hpux one.
 
   21 Jun 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask ncurses-5.7-r1 as it breaks Solaris and Darwin, and probably much
