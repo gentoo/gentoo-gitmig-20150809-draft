@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.3.ebuild,v 1.1 2009/06/22 21:59:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.6.3.ebuild,v 1.2 2009/06/23 15:19:22 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -449,7 +449,7 @@ src_test() {
 #	if [[ -n "${SVN_TEST_SASL}" ]]; then
 #		options+=" ENABLE_SASL=1"
 #	fi
-	
+
 	sleep 6
 
 	for ra_type in ${ra_types}; do
