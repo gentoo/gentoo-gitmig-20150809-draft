@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.70 2009/06/09 01:28:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.71 2009/06/23 12:33:40 keytoaster Exp $
+
+  23 Jun 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  strongswan-4.2.15.ebuild:
+  Build fix for >=glibc-2.10, patch by cmuelle8 <cmue81@gmx.de>, bug #272511
 
   09 Jun 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Reassign to maintainer-needed until a secure-tunneling herd is formed.
