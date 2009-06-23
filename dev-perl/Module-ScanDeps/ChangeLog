@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Module-ScanDeps
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/ChangeLog,v 1.1 2009/06/23 07:43:45 robbat2 Exp $
+
+*Module-ScanDeps-0.90 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Module-ScanDeps-0.90.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

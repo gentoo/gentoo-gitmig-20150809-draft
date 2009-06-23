@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DateTime-HiRes
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-HiRes/ChangeLog,v 1.1 2009/06/23 07:38:16 robbat2 Exp $
+
+*DateTime-HiRes-0.01 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +DateTime-HiRes-0.01.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

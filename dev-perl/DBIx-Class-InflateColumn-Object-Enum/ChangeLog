@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DBIx-Class-InflateColumn-Object-Enum
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class-InflateColumn-Object-Enum/ChangeLog,v 1.1 2009/06/23 07:37:15 robbat2 Exp $
+
+*DBIx-Class-InflateColumn-Object-Enum-0.04 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +DBIx-Class-InflateColumn-Object-Enum-0.04.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

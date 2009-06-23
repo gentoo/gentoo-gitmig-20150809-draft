@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/MooseX-Object-Pluggable
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Object-Pluggable/ChangeLog,v 1.1 2009/06/23 07:44:32 robbat2 Exp $
+
+*MooseX-Object-Pluggable-0.0011 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +MooseX-Object-Pluggable-0.0011.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

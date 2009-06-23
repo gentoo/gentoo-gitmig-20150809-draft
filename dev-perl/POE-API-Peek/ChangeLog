@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/POE-API-Peek
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-API-Peek/ChangeLog,v 1.1 2009/06/23 07:45:04 robbat2 Exp $
+
+*POE-API-Peek-1.34 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +POE-API-Peek-1.34.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

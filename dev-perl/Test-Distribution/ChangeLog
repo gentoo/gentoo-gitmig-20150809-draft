@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-Distribution
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/ChangeLog,v 1.1 2009/06/23 07:46:55 robbat2 Exp $
+
+*Test-Distribution-2.00 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Test-Distribution-2.00.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

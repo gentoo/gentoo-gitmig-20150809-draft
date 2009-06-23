@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Class-C3-Componentised
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-C3-Componentised/ChangeLog,v 1.1 2009/06/23 07:35:09 robbat2 Exp $
+
+*Class-C3-Componentised-1.0005 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Class-C3-Componentised-1.0005.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

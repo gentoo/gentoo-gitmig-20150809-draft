@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DBICx-TestDatabase
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBICx-TestDatabase/ChangeLog,v 1.1 2009/06/23 07:35:57 robbat2 Exp $
+
+*DBICx-TestDatabase-0.02 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +DBICx-TestDatabase-0.02.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

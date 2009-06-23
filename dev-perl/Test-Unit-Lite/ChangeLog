@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Test-Unit-Lite
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Unit-Lite/ChangeLog,v 1.1 2009/06/23 07:47:11 robbat2 Exp $
+
+*Test-Unit-Lite-0.12 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Test-Unit-Lite-0.12.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

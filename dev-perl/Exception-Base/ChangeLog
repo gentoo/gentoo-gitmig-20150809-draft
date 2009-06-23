@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Exception-Base
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Base/ChangeLog,v 1.1 2009/06/23 07:39:34 robbat2 Exp $
+
+*Exception-Base-0.2201 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +Exception-Base-0.2201.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+

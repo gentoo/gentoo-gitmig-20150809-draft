@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DBIx-Class
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Class/ChangeLog,v 1.1 2009/06/23 07:36:13 robbat2 Exp $
+
+*DBIx-Class-0.08107 (23 Jun 2009)
+
+  23 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +DBIx-Class-0.08107.ebuild, +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
+
