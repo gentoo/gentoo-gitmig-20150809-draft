@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.5.ebuild,v 1.16 2009/03/18 14:31:23 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/eselect-opengl-1.0.5.ebuild,v 1.17 2009/06/23 11:40:06 scarabeus Exp $
 
 inherit multilib
 
@@ -64,7 +64,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 	local impl="$(eselect opengl show)"
-	if [[ -n "${impl}" ]] ; then
+	if [[ -n "${impl}" && "${impl}" != '(none)' ]] ; then
 		eselect opengl set "${impl}"
 	fi
 }

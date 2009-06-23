@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.43 2009/03/18 14:31:23 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.44 2009/06/23 11:40:06 scarabeus Exp $
+
+  23 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  eselect-opengl-1.0.5.ebuild, eselect-opengl-1.0.6.ebuild,
+  eselect-opengl-1.0.6-r1.ebuild:
+  Fix bug #173571 causing wrong eselect opengl set call. On all versions.
 
   18 Mar 2009; <ricmm@gentoo.org> eselect-opengl-1.0.5.ebuild:
   Drop down to ~mips due to unstable deps
