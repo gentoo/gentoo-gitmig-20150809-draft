@@ -1,6 +1,15 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.256 2009/06/19 15:55:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.257 2009/06/23 19:45:10 mrness Exp $
+
+  23 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  files/squid-2-capability.patch, -files/squid-3.0.13-adapted-zph.patch,
+  -files/squid-3.0.13-gentoo.patch, -files/squid-3.0.13-heimdal.patch,
+  -files/squid-3.1.0.7_beta-gentoo.patch, files/squid-3-capability.patch,
+  squid-2.7.6-r1.ebuild, -squid-3.0.13.ebuild, squid-3.0.15.ebuild,
+  squid-3.0.16.ebuild, -squid-3.1.0.7_beta.ebuild,
+  squid-3.1.0.8_beta.ebuild:
+  Add libcap dependency (#274668).
 
   19 Jun 2009; Raúl Porcel <armin76@gentoo.org> squid-3.0.15.ebuild:
   alpha/arm/ia64/sparc stable wrt #274405

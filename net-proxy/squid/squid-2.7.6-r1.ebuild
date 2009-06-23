@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.6-r1.ebuild,v 1.7 2009/06/15 23:42:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-2.7.6-r1.ebuild,v 1.8 2009/06/23 19:45:10 mrness Exp $
 
 EAPI="2"
 
@@ -20,13 +20,14 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="pam ldap samba sasl kerberos nis ssl snmp selinux logrotate \
+IUSE="caps pam ldap samba sasl kerberos nis ssl snmp selinux logrotate \
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
 	elibc_uclibc kernel_linux epoll"
 
-DEPEND="pam? ( virtual/pam )
+DEPEND="caps? ( >=sys-libs/libcap-2.16 )
+	pam? ( virtual/pam )
 	ldap? ( net-nds/openldap )
 	kerberos? ( || ( app-crypt/mit-krb5 app-crypt/heimdal ) )
 	ssl? ( dev-libs/openssl )
@@ -130,6 +131,7 @@ src_configure() {
 		--enable-carp \
 		--enable-follow-x-forwarded-for \
 		--with-maxfd=8192 \
+		$(use_enable caps) \
 		$(use_enable snmp) \
 		$(use_enable ssl) \
 		${myconf} || die "econf failed"
