@@ -1,19 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-HiRes/DateTime-HiRes-0.01.ebuild,v 1.1 2009/06/23 07:38:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-HiRes/DateTime-HiRes-0.01.ebuild,v 1.2 2009/06/23 08:54:08 tove Exp $
 
 EAPI=2
-MODULE_AUTHOR="JHOBLITT"
 
+MODULE_AUTHOR="JHOBLITT"
 inherit perl-module
 
-DESCRIPTION="No description available"
-
-IUSE=""
+DESCRIPTION="Create DateTime objects with sub-second current time resolution"
 
 SLOT="0"
-LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-DEPEND="dev-perl/DateTime"
-RDEPEND="${DEPEND}"
+RDEPEND="dev-perl/DateTime"
+DEPEND="${RDEPEND}
+	virtual/perl-Module-Build"
