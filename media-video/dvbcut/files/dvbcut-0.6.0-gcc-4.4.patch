@@ -1,0 +1,10 @@
+--- dvbcut-0.6.0.orig/src/buffer.cpp
++++ dvbcut-0.6.0/src/buffer.cpp
+@@ -27,6 +27,7 @@
+ #include <cstring>
+ #include <cstdlib>
+ // #include <cstdio>
++#include <stdio.h>
+ #include <stdint.h>
+ #include <cassert>
+ 

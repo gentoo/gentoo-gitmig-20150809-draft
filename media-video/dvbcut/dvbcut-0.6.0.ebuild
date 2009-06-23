@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.6.0.ebuild,v 1.3 2009/06/21 15:14:21 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/dvbcut-0.6.0.ebuild,v 1.4 2009/06/23 15:43:16 zzam Exp $
 
 EAPI=2
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-parallel-install.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.4.patch
 }
 
 src_configure() {
