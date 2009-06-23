@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.177 2009/04/23 16:53:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.178 2009/06/23 11:06:02 patrick Exp $
+
+*webmin-1.480 (23 Jun 2009)
+
+  23 Jun 2009; Patrick Lauer <patrick@gentoo.org> +webmin-1.480.ebuild:
+  Bump to 1.480, fixes #274845
 
 *webmin-1.470 (23 Apr 2009)
 
