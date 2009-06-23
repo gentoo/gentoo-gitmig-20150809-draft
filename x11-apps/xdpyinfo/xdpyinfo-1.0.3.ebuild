@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/xdpyinfo-1.0.3.ebuild,v 1.8 2009/06/05 16:52:19 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xdpyinfo/xdpyinfo-1.0.3.ebuild,v 1.9 2009/06/23 21:23:49 klausman Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -8,7 +8,7 @@
 inherit x-modular
 
 DESCRIPTION="display information utility for X"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
 IUSE="dga dmx xinerama"
 
 RDEPEND="x11-libs/libXext
