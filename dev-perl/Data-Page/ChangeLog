@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Data-Page
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Page/ChangeLog,v 1.1 2009/06/23 07:38:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Page/ChangeLog,v 1.2 2009/06/23 13:27:38 tove Exp $
+
+  23 Jun 2009; Torsten Veller <tove@gentoo.org> Data-Page-2.01.ebuild:
+  Merge with perl-experimental version
 
 *Data-Page-2.01 (23 Jun 2009)
 
