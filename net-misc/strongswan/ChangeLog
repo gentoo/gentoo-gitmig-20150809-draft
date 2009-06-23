@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.72 2009/06/23 12:45:25 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.73 2009/06/23 12:53:15 keytoaster Exp $
+
+  23 Jun 2009; Tobias Heinlein <keytoaster@gentoo.org>
+  strongswan-4.2.8.ebuild:
+  Build fix for >=glibc-2.10, patch by cmuelle8 <cmue81@gmx.de>, bug #272511
 
 *strongswan-4.3.2 (23 Jun 2009)
 *strongswan-4.2.16 (23 Jun 2009)

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.2.8.ebuild,v 1.1 2008/11/10 22:21:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.2.8.ebuild,v 1.2 2009/06/23 12:53:15 keytoaster Exp $
 
 inherit eutils linux-info autotools
 
@@ -31,6 +31,8 @@ RDEPEND="${COMMON_DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	sed -i -e 's/getline/getline_own/g' src/libfreeswan/optionsfrom.c
 
 	epatch "${FILESDIR}"/${PN}-4.2.7-install.patch
 	eautoreconf
