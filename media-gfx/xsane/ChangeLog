@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/xsane
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.79 2009/06/23 21:48:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/ChangeLog,v 1.80 2009/06/23 22:22:24 phosphan Exp $
+
+  23 Jun 2009; Patrick Kursawe <phosphan@gentoo.org>
+  +files/MissingCapsFlag.patch, xsane-0.996.ebuild:
+  Adding a patch to make it work with sane-backends-1.0.20
 
   23 Jun 2009; Patrick Kursawe <phosphan@gentoo.org> metadata.xml,
   -xsane-0.995.ebuild, xsane-0.996.ebuild:

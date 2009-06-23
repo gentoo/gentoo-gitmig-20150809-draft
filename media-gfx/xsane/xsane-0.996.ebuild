@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.996.ebuild,v 1.7 2009/06/23 21:48:33 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xsane/xsane-0.996.ebuild,v 1.8 2009/06/23 22:22:24 phosphan Exp $
 
 inherit eutils
 
@@ -22,8 +22,7 @@ RDEPEND="media-gfx/sane-backends
 	lcms? ( media-libs/lcms )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	!>=media-gfx/sane-backends-1.0.20"
+	dev-util/pkgconfig"
 
 pkg_setup() {
 	export OLDXSANE
@@ -32,6 +31,12 @@ pkg_setup() {
 	else
 		OLDXSANE="no"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/MissingCapsFlag.patch"
 }
 
 src_compile() {
