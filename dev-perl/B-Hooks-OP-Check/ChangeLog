@@ -1,0 +1,17 @@
+# ChangeLog for dev-perl/B-Hooks-OP-Check
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-OP-Check/ChangeLog,v 1.1 2009/06/23 20:47:10 tove Exp $
+
+*B-Hooks-OP-Check-0.17 (23 Jun 2009)
+
+  23 Jun 2009; Torsten Veller <tove@gentoo.org>
+  +B-Hooks-OP-Check-0.17.ebuild, +metadata.xml:
+  Import from perl-experimental
+
+  24 Apr 2009; Michele Beltrame <mb@cattlegrid.info>
+  B-Hooks-OP-Check-0.17.ebuild:
+  Fixed a build dep
+
+  19 Apr 2009; Michele Beltrame <mb@cattlegrid.info>:
+  Initial release
+
