@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.40.5.ebuild,v 1.3 2009/06/22 09:32:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.40.5.ebuild,v 1.4 2009/06/23 20:00:13 aballier Exp $
 
 EAPI="2"
 
@@ -94,6 +94,7 @@ src_configure() {
 	    --disable-web-progs \
 	    --disable-xdv2pdf	\
 	    --disable-xdvipdfmx \
+		--without-x			\
 	    --without-system-kpathsea	\
 	    --with-system-gd	\
 	    --with-system-libpng	\
@@ -103,10 +104,9 @@ src_configure() {
 		--with-system-xpdf \
 	    --disable-largefile \
 	    --disable-multiplatform \
-		--disable-shared \
-		--with-system-zlib \
-		--with-system-libpng
+		--disable-shared
 	for i in ${PRELIBS} ; do
+		einfo "Configuring $i"
 		local j=$(basename $i)_extraconf
 		local myconf
 		eval myconf=\${$j}
