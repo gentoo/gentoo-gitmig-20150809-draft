@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-LibXML-Iterator
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Iterator/ChangeLog,v 1.18 2009/05/02 14:13:10 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML-Iterator/ChangeLog,v 1.19 2009/06/23 10:56:29 tove Exp $
+
+  23 Jun 2009; Torsten Veller <tove@gentoo.org>
+  XML-LibXML-Iterator-1.04.ebuild:
+  Add description
 
   02 May 2009; Thomas Anderson <gentoofan23@gentoo.org>
   XML-LibXML-Iterator-1.04.ebuild:
