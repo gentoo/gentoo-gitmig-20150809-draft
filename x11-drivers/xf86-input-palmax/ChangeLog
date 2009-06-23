@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-palmax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-palmax/ChangeLog,v 1.38 2009/05/15 16:13:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-palmax/ChangeLog,v 1.39 2009/06/23 20:08:42 klausman Exp $
+
+  23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  xf86-input-palmax-1.2.0.ebuild:
+  Stable on alpha for xorg-server-1.5/xorg-x11-7.4
 
   15 May 2009; Raúl Porcel <armin76@gentoo.org>
   xf86-input-palmax-1.2.0.ebuild:
