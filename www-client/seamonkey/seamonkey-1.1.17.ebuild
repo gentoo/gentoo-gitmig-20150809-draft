@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.15.ebuild,v 1.7 2009/03/23 15:20:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.17.ebuild,v 1.1 2009/06/24 14:51:04 armin76 Exp $
 
 WANT_AUTOCONF="2.1"
 
 inherit flag-o-matic toolchain-funcs eutils mozcoreconf mozconfig-2 mozilla-launcher makeedit multilib autotools
 
-PATCH="${P}-patches-0.1"
+PATCH="${PN}-1.1.15-patches-0.1"
 EMVER="0.95.7"
 
 DESCRIPTION="Mozilla Application Suite - web browser, email, HTML editor, IRC"
@@ -15,7 +15,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases/${PV}/${P}.s
 	mirror://gentoo/${PATCH}.tar.bz2
 	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming postgres crypt xforms"
