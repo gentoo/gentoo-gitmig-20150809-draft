@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9970 2009/06/24 09:36:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9971 2009/06/24 16:16:55 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (24 Jun 2009)
+# Firefox Release Candidates
+# nspr-4.8 has soname bump
+=www-client/mozilla-firefox-3.5*
+=net-libs/xulrunner-1.9.1*
+=dev-libs/nspr-4.8*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2009)
 # Masked for testing, beta version
