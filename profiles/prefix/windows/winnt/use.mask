@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/use.mask,v 1.1 2009/06/06 03:55:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/use.mask,v 1.2 2009/06/24 11:45:06 mduft Exp $
 
 # Re-add Interix libc
 -elibc_Winnt
@@ -81,5 +81,6 @@ portaudio
 pulseaudio
 qt3
 qt4
+readline
 tiff # libtiff only static, so avoid this!
 timidity
