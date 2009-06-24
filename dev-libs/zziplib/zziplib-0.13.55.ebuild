@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.55.ebuild,v 1.1 2009/06/23 11:46:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/zziplib/zziplib-0.13.55.ebuild,v 1.2 2009/06/24 21:09:36 mr_bones_ Exp $
 
 EAPI="2"
 inherit libtool eutils flag-o-matic
@@ -22,7 +22,9 @@ DEPEND="${RDEPEND}
 	test? ( app-arch/zip )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.13.49-SDL-test.patch
+	epatch \
+		"${FILESDIR}"/${PN}-0.13.49-SDL-test.patch \
+		"${FILESDIR}"/${PN}-0.13.49-python.patch
 	# zziplib tries to install backwards compat symlinks we dont want
 	sed -i -e '/^zzip-postinstall:/s|$|\ndisable-this:|' Makefile.in || die
 	sed -i -e '/^install-exec-local:/s|$|\ndisable-this:|' zzip/Makefile.in || die
