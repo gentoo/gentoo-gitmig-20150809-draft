@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-  <email>peitolm@gentoo.org</email>
-  <name>Colin Morey</name>
-  <description>Primary maintainer</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 Exim is a message transfer agent (MTA) developed at the University of Cambridge
