@@ -1,10 +1,21 @@
---- dvbcut-0.6.0.orig/src/buffer.cpp
-+++ dvbcut-0.6.0/src/buffer.cpp
-@@ -27,6 +27,7 @@
+--- trunk/src/buffer.cpp	2009/06/19 16:32:00	160
++++ trunk/src/buffer.cpp	2009/06/23 21:07:15	161
+@@ -26,7 +26,7 @@
+ #include <unistd.h>
  #include <cstring>
  #include <cstdlib>
- // #include <cstdio>
-+#include <stdio.h>
+-// #include <cstdio>
++#include <cstdio>
  #include <stdint.h>
  #include <cassert>
+
+--- trunk/src/mpegmuxer.cpp	2009/06/19 16:32:00	160
++++ trunk/src/mpegmuxer.cpp	2009/06/23 21:07:15	161
+@@ -20,6 +20,7 @@
  
+ #include <cstdlib>
+ #include <cstring>
++#include <cstdio>
+ #include <strings.h>
+ #include <unistd.h>
+ #include <fcntl.h>

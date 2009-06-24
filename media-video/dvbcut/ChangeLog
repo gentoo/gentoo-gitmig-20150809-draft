@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvbcut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.22 2009/06/23 15:43:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvbcut/ChangeLog,v 1.23 2009/06/24 10:15:55 zzam Exp $
+
+  24 Jun 2009; Matthias Schwarzott <zzam@gentoo.org>
+  files/dvbcut-0.6.0-gcc-4.4.patch:
+  Update patch to match the one upstream applied.
 
   23 Jun 2009; Matthias Schwarzott <zzam@gentoo.org> dvbcut-0.6.0.ebuild,
   +files/dvbcut-0.6.0-gcc-4.4.patch:
