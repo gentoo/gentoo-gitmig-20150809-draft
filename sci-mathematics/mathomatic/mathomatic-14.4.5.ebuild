@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.4.5.ebuild,v 1.1 2009/06/22 18:47:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/mathomatic-14.4.5.ebuild,v 1.2 2009/06/24 04:34:02 bicatali Exp $
 
 inherit eutils
 
@@ -21,6 +21,7 @@ src_compile() {
 	sed -i \
 		-e '/^CFLAGS/ s/-O.//' \
 		makefile primes/makefile || die "sed failed"
+	sed -i -e "s/-s.*-O/${CFLAGS}/" compile.secure || die
 	emake READLINE=1 || die "emake failed"
 	emake -C primes || die "emake in primes failed"
 	if use secure; then
@@ -46,7 +47,7 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r tests factorial m4 || die
 	fi
-	if use doc; then
+	if use secure; then
 		dobin mathomatic_secure || die
 	fi
 }

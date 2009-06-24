@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/mathomatic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.41 2009/06/22 18:47:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/mathomatic/ChangeLog,v 1.42 2009/06/24 04:34:02 bicatali Exp $
+
+  24 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  mathomatic-14.4.5.ebuild:
+  Fixed syntax error (bug #275195) and some CFLAGS propagation
 
 *mathomatic-14.4.5 (22 Jun 2009)
 
