@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.55 2009/06/23 19:22:42 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.56 2009/06/24 08:07:48 scarabeus Exp $
+
+  24 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> libXext-1.0.5.ebuild:
+  Add missing dep on >=libxcb-1.2.
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> libXext-1.0.4.ebuild:
   Stable on alpha for xorg-server-1.5/xorg-x11-7.4
