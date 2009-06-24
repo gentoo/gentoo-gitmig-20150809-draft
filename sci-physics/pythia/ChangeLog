@@ -1,6 +1,12 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.11 2009/05/05 19:42:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.12 2009/06/24 04:13:58 bicatali Exp $
+
+*pythia-8.1.25 (24 Jun 2009)
+
+  24 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +pythia-8.1.25.ebuild:
+  Version bump, thanks Ben Bannier for testing, closing bug #274969
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   pythia-8.1.08-r1.ebuild:
