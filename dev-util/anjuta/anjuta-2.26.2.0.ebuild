@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.26.2.0.ebuild,v 1.2 2009/06/03 21:51:17 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.26.2.0.ebuild,v 1.3 2009/06/24 15:33:59 darkside Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.anjuta.org"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="debug devhelp doc glade graphviz sourceview subversion +symbol-db valgrind test"
+IUSE="debug devhelp doc glade graphviz inherit-graph sourceview subversion +symbol-db valgrind test"
 
 RDEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/gtk+-2.12.10
