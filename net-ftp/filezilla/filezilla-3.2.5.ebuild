@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.2.5.ebuild,v 1.1 2009/06/16 09:11:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.2.5.ebuild,v 1.2 2009/06/24 14:30:32 voyageur Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}_src.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
-IUSE="dbus test"
+IUSE="dbus nls test"
 
 RDEPEND="net-dns/libidn
 	>=x11-libs/wxGTK-2.8.9
@@ -26,14 +26,15 @@ RDEPEND="net-dns/libidn
 	dbus? ( sys-apps/dbus )"
 DEPEND="${RDEPEND}
 	>=sys-devel/libtool-1.4
-	>=sys-devel/gettext-0.11
 	>=net-libs/gnutls-2.0.4
+	nls? ( >=sys-devel/gettext-0.11 )
 	test? ( dev-util/cppunit )"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
 
 src_configure() {
-	econf $(use_with dbus) --disable-autoupdatecheck || die "econf failed"
+	econf $(use_with dbus) $(use_enable nls locales) \
+		--disable-autoupdatecheck || die "econf failed"
 }
 
 src_install() {
