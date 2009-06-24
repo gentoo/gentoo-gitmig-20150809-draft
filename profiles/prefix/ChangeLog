@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.6 2009/06/23 10:10:23 haubi Exp $
+# $Id: ChangeLog,v 1.7 2009/06/24 09:12:15 haubi Exp $
+
+  24 Jun 2009; Michael Haubenwallner <haubi@gentoo.org> package.mask:
+  Mask icu-4.2, let it fix in ~main tree first (#269659).
 
   23 Jun 2009; Michael Haubenwallner <haubi@gentoo.org>
   +hpux/B.11.31/hppa2.0/make.defaults, +hpux/B.11.31/hppa2.0/parent:
