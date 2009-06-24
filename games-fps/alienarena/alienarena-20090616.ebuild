@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20090616.ebuild,v 1.1 2009/06/21 09:29:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/alienarena-20090616.ebuild,v 1.2 2009/06/24 18:14:01 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs games
+inherit eutils games
 
 MY_PN=${PN}${PV:0:4}
 DESCRIPTION="Fast-paced multiplayer deathmatch game"
@@ -12,7 +12,7 @@ SRC_URI="http://icculus.org/${PN}/Files/${MY_PN}-linux${PV}.zip"
 
 LICENSE="GPL-2 free-noncomm"
 SLOT="0"
-KEYWORDS="" # ~amd64 ~x86
+KEYWORDS="~amd64 ~x86"
 IUSE="dedicated opengl"
 
 UIRDEPEND="media-libs/jpeg
@@ -44,7 +44,6 @@ src_compile() {
 	emake \
 		ARCH="unknown" \
 		OSTYPE="linux" \
-		CC="$(tc-getCC)" \
 		OPTIMIZED_CFLAGS=no \
 		WITH_DATADIR=yes \
 		WITH_LIBDIR=yes \

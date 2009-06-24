@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/alienarena
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.13 2009/06/21 09:29:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/alienarena/ChangeLog,v 1.14 2009/06/24 18:14:01 mr_bones_ Exp $
+
+  24 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  alienarena-20090616.ebuild:
+  add keywords (bug #275124); tidy
 
 *alienarena-20090616 (21 Jun 2009)
 
