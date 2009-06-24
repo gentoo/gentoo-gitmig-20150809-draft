@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.415 2009/06/23 20:15:20 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.416 2009/06/24 15:26:44 cardoe Exp $
+
+  24 Jun 2009; Doug Goldstein <cardoe@gentoo.org>
+  xorg-server-1.6.1.901-r2.ebuild, xorg-server-1.6.1.901-r3.ebuild,
+  xorg-server-1.6.1.901-r4.ebuild:
+  re-apply the same nvidia-drivers fix from several months ago cause it
+  keeps disapearing.
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xorg-server-1.5.3-r6.ebuild:
