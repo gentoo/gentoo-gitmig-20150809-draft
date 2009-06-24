@@ -3,9 +3,7 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer>
-  <email>peitolm@gentoo.org</email>
-  <name>Colin Morey</name>
-  <description>Primary maintainer</description>
+  <email>maintainer-needed@gentoo.org</email>
 </maintainer>
 <longdescription>
 This is a complete standalone C implementation of the SRS (Sender Rewriting

@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libsrs_alt
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.17 2008/12/07 12:45:02 peitolm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/ChangeLog,v 1.18 2009/06/24 13:29:08 tove Exp $
+
+  24 Jun 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
+  New maintainer needed as peitolm retires (#203843)
 
 *libsrs_alt-1.0 (07 Dec 2008)
 
