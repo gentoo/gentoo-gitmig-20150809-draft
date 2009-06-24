@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.74.ebuild,v 1.1 2009/03/24 19:05:07 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/bullet-2.74.ebuild,v 1.2 2009/06/24 04:59:04 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -21,6 +21,7 @@ src_prepare() {
 	rm -rf Extras/LibXML
 	rm -f Extras/CDTestFramework/AntTweakBar/lib/libAntTweakBar.so
 	epatch "${FILESDIR}"/${P}-noextra.patch
+	epatch "${FILESDIR}"/${P}-missing-header.patch
 	eautoreconf
 	edos2unix install-sh || die
 }
