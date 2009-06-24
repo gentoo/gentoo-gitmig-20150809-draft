@@ -1,6 +1,16 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.16 2009/05/31 19:46:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.17 2009/06/24 12:55:49 caster Exp $
+
+*vuze-4.2.0.2-r1 (24 Jun 2009)
+
+  24 Jun 2009; Vlastimil Babka <caster@gentoo.org> -vuze-4.0.0.4.ebuild,
+  -files/patches-4.0.0.4/remove-osx-platform.diff,
+  -files/patches-4.0.0.4/use-jdk-cipher-only.diff, -vuze-4.2.0.0.ebuild,
+  +files/patches-4.2.0.0/0003-disable-core-updater.patch,
+  +vuze-4.2.0.2-r1.ebuild:
+  Revbump to remove core updater and patcher, advancing progress at bug
+  #218959. Thanks to Hanno Meyer-Thurow. Cleanup.
 
   31 May 2009; Markus Meier <maekke@gentoo.org> vuze-4.2.0.2.ebuild:
   amd64/x86 stable, bug #271963

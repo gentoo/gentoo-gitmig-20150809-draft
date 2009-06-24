@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.0.ebuild,v 1.1 2009/03/27 19:39:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.2-r1.ebuild,v 1.1 2009/06/24 12:55:49 caster Exp $
 
 EAPI=2
 
@@ -37,8 +37,10 @@ PDEPEND="~net-p2p/vuze-coreplugins-${PV}"
 
 src_unpack() {
 	mkdir "${S}" && cd "${S}" || die
-	unpack ${A}
+	default
+}
 
+java_prepare() {
 	# build.xml disappeared from 4.1.0.0 although it was there in 4.0.0.4
 	# hopefully that's just a packaging mistake
 	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
@@ -46,6 +48,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}/patches-4.2.0.0/0001-remove-osx-platform.patch"
 	epatch "${FILESDIR}/patches-4.2.0.0/0002-use-jdk-cipher-only.patch"
+	epatch "${FILESDIR}/patches-4.2.0.0/0003-disable-core-updater.patch"
 
 	### Removes OS X files and entries.
 	rm -rv "org/gudy/azureus2/platform/macosx" \
