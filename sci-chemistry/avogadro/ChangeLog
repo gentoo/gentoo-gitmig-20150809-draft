@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.23 2009/06/02 18:16:33 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.24 2009/06/24 03:29:40 cryos Exp $
+
+*avogadro-0.9.6 (24 Jun 2009)
+
+  24 Jun 2009; Marcus D. Hanwell <cryos@gentoo.org> +avogadro-0.9.6.ebuild:
+  Version bump.
 
 *avogadro-0.9.5 (02 Jun 2009)
 
