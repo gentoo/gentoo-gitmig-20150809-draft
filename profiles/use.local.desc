@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4573 2009/06/23 23:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4574 2009/06/24 08:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -348,6 +348,7 @@ app-misc/gpsdrive:garmin - Adds specific support for Garmin GPS receivers (pre-2
 app-misc/gpsdrive:gdal - Include gdal and ogr support for format conversions.
 app-misc/gpsdrive:mapnik - Include mapnik support for custom map creation.
 app-misc/gpsdrive:scripts - Include some of the additional helper scripts.
+app-misc/gpsdrive:speech - Include speech support.
 app-misc/gramps:mozembed - Use Mozilla-based rendering for geographical data view.
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
