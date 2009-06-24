@@ -12,5 +12,6 @@
   <flag name='gdal'>Include gdal and ogr support for format conversions.</flag>
   <flag name='mapnik'>Include mapnik support for custom map creation.</flag>
   <flag name='scripts'>Include some of the additional helper scripts.</flag>
+  <flag name='speech'>Include speech support.</flag>
 </use>
 </pkgmetadata>
