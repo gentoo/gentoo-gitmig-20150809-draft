@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.335 2009/06/23 06:09:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.336 2009/06/24 16:10:43 hoffie Exp $
+
+  24 Jun 2009; Christian Hoffmann <hoffie@gentoo.org> metadata.xml:
+  restoring metadata.xml with zip-external description, somehow repoman
+  complains otherwise
 
   23 Jun 2009; Jeroen Roovers <jer@gentoo.org> php-5.2.10.ebuild,
   metadata.xml:
