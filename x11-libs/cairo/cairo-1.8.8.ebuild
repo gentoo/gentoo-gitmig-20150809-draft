@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.0.ebuild,v 1.8 2009/01/05 13:26:13 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/cairo-1.8.8.ebuild,v 1.1 2009/06/24 13:45:12 cardoe Exp $
+
+EAPI=2
 
 inherit eutils flag-o-matic libtool
 
@@ -11,7 +13,7 @@ SRC_URI="http://cairographics.org/releases/${P}.tar.gz"
 LICENSE="|| ( LGPL-2.1 MPL-1.1 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="debug directfb doc glitz opengl svg X xcb"
+IUSE="cleartype debug directfb doc glitz opengl svg X xcb"
 
 # Test causes a circular depend on gtk+... since gtk+ needs cairo but test needs gtk+ so we need to block it
 RESTRICT="test"
@@ -34,7 +36,7 @@ RDEPEND="media-libs/fontconfig
 #	pdf test
 #	x11-libs/pango
 #	>=x11-libs/gtk+-2.0
-#	>=app-text/poppler-bindings-0.9.2
+#	>=app-text/poppler-bindings-0.9.2[gtk]
 #	ps test
 #	virtual/ghostscript
 #	svg test
@@ -48,27 +50,20 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/renderproto )
 	xcb? ( x11-proto/xcb-proto )"
 
-#pkg_setup() {
-#	if ! built_with_use app-text/poppler-bindings gtk ; then
-#		eerror 'poppler-bindings with gtk is required for the pdf backend'
-#		die 'poppler-bindings built without gtk support'
-#	fi
-#}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# ClearType-like patches applied by ArchLinux
+	use cleartype && epatch "${FILESDIR}"/cairo-1.2.4-lcd-cleartype-like.diff
 
 	# We need to run elibtoolize to ensure correct so versioning on FreeBSD
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	#gets rid of fbmmx.c inlining warnings
 	append-flags -finline-limit=1200
 
 	if use glitz && use opengl; then
-		export glitz_LIBS=-lglitz-glx
+		export glitz_LIBS=$(pkg-config --libs glitz-glx)
 	fi
 
 	econf $(use_enable X xlib) $(use_enable doc gtk-doc) \
@@ -77,11 +72,20 @@ src_compile() {
 		$(use_enable debug test-surfaces) --enable-pdf  --enable-png \
 		--enable-ft --enable-ps \
 		|| die "configure failed"
-
-	emake || die "compile failed"
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die "Installation failed"
 	dodoc AUTHORS ChangeLog NEWS README
+}
+
+pkg_postinst() {
+	if use xcb; then
+		ewarn "You have enabled the Cairo XCB backend which is used only by"
+		ewarn "a select few apps. The Cairo XCB backend is presently"
+		ewarn "un-maintained and needs a lot of work to get it caught up"
+		ewarn "to the Xrender and Xlib backends, which are the backends used"
+		ewarn "by most applications. See:"
+		ewarn "http://lists.freedesktop.org/archives/xcb/2008-December/004139.html"
+	fi
 }
