@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.128 2009/05/26 17:57:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.129 2009/06/24 13:18:15 scarabeus Exp $
+
+*bugzilla-3.2.3 (24 Jun 2009)
+
+  24 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +bugzilla-3.2.3.ebuild:
+  Version bump for security bugs 257923 and 258592. Request itself is in bug
+  273821. de lingua commented cause not able to test. This is non-maintainer
+  commit.
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   bugzilla-2.20.6.ebuild, bugzilla-2.22.5.ebuild:
