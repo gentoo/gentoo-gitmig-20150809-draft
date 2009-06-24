@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.12 2009/06/19 06:31:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.13 2009/06/24 09:35:38 graaff Exp $
+
+*passenger-2.2.4 (24 Jun 2009)
+
+  24 Jun 2009; Hans de Graaff <graaff@gentoo.org> -files/2.2.3-gentoo.patch,
+  -passenger-2.2.3.ebuild, +files/2.2.4-gentoo.patch,
+  +passenger-2.2.4.ebuild:
+  Version bump to fix memory leak introduced in 2.2.3.
 
   19 Jun 2009; Hans de Graaff <graaff@gentoo.org> -files/1.0.5-gentoo.patch,
   -files/2.0.1-gentoo.patch, -files/2.1.2-gentoo.patch:
