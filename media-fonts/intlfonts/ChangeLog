@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/intlfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.16 2009/06/24 05:28:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/intlfonts/ChangeLog,v 1.17 2009/06/24 05:32:25 jer Exp $
+
+  24 Jun 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Marked ~hppa (bug #275245).
 
   24 Jun 2009; Jeroen Roovers <jer@gentoo.org> intlfonts-1.2.1.ebuild:
   Fix quoting issues. Remove redundant cd ${S}.
