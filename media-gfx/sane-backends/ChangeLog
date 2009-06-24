@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.160 2009/06/18 20:07:03 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.161 2009/06/24 22:09:55 phosphan Exp $
+
+*sane-backends-1.0.20 (24 Jun 2009)
+
+  24 Jun 2009; Patrick Kursawe <phosphan@gentoo.org>
+  +sane-backends-1.0.20.ebuild:
+  The new version has a changed build system and the ebuild uses USE_EXPAND
+  for SANE_BACKENDS. Bug #244501, bug #271681
 
   18 Jun 2009; Patrick Kursawe <phosphan@gentoo.org>
   sane-backends-1.0.17.ebuild, sane-backends-1.0.18-r6.ebuild,
