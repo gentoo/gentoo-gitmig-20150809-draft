@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/emilia-pinball
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.15 2008/02/29 18:55:23 carlo Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/ChangeLog,v 1.16 2009/06/24 23:39:15 mr_bones_ Exp $
+
+  24 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/emilia-pinball-0.3.1-glibc210.patch, emilia-pinball-0.3.1.ebuild:
+  EAPI=2; tidy; add patch for building with glibc210 from Martin Väth (bug
+  #274833)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   emilia-pinball-0.3.1.ebuild:

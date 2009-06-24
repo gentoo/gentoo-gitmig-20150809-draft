@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1.ebuild,v 1.14 2008/02/29 18:55:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/emilia-pinball/emilia-pinball-0.3.1.ebuild,v 1.15 2009/06/24 23:39:15 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_PN=${PN/emilia-/}
@@ -17,24 +18,27 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	x11-libs/libSM
-	media-libs/libsdl
-	media-libs/sdl-image
-	media-libs/sdl-mixer"
+	media-libs/libsdl[opengl,video,X]
+	media-libs/sdl-image[png]
+	media-libs/sdl-mixer[vorbis]"
 DEPEND="${RDEPEND}
 	x11-libs/libXt"
 
 S=${WORKDIR}/${MY_P}
 
+PATCHES=( "${FILESDIR}"/${P}-glibc210.patch )
+
+src_configure() {
+	egamesconf --with-x
+}
+
 src_compile() {
-	egamesconf \
-		--with-x \
-		|| die
 	emake -j1 CXXFLAGS="${CXXFLAGS}" || die "emake failed"
 }
 
 src_install() {
 	dodoc README || die "dodoc failed"
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dosym "${GAMES_BINDIR}"/pinball "${GAMES_BINDIR}"/emilia-pinball
 	mv "${D}/${GAMES_PREFIX}/include" "${D}/usr/" \
 		|| die "mv failed (include)"
@@ -45,6 +49,6 @@ src_install() {
 		-e 's:-I${prefix}/include/pinball:-I/usr/include/pinball:' \
 		"${D}"/usr/bin/pinball-config || die "sed failed"
 	newicon data/pinball.xpm ${PN}.xpm
-	make_desktop_entry emilia-pinball "Emilia pinball" ${PN}
+	make_desktop_entry emilia-pinball "Emilia pinball"
 	prepgamesdirs
 }
