@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2831 2009/06/24 16:16:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2832 2009/06/24 16:39:22 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Jun 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Adjust www-client/opera mask to include build 4449.
 
   24 Jun 2009; <nirbheek@gentoo.org> package.mask:
   Mask firefox release candidates and nspr-4.8 (soname bump)

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9971 2009/06/24 16:16:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9972 2009/06/24 16:39:23 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -850,6 +850,7 @@ dev-util/w32api
 # Snapshots and alphas of Opera may delete kittens
 =www-client/opera-10.00_pre43*
 =www-client/opera-10.00_pre4440
+=www-client/opera-10.00_pre4449
 
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340
