@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.71_beta3.ebuild,v 1.1 2009/06/17 21:59:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.71_beta3.ebuild,v 1.2 2009/06/24 13:25:35 scarabeus Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit kde4-base
 
 MY_PV=${PV/_beta/b}
 DESCRIPTION="KDE4 based CDDA extraction tool."
-HOMEPAGE="http://opensource.maniatek.de/cgi-bin/audex/audex/index.html"
+HOMEPAGE="http://opensource.maniatek.de/audex/"
 SRC_URI="http://opensource.maniatek.de/${PN}/files/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-3"
