@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.5.ebuild,v 1.1 2009/01/22 17:39:09 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-1.5.5.ebuild,v 1.2 2009/06/24 05:35:38 jer Exp $
 
 EAPI="2"
 inherit eutils qt3 multilib elisp-common flag-o-matic
@@ -11,7 +11,7 @@ SRC_URI="http://uim.googlecode.com/files/${P}.tar.bz2"
 
 LICENSE="BSD GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="+anthy canna eb emacs gnome gtk kde libedit libnotify m17n-lib ncurses nls prime qt3 qt4 unicode X xft linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RDEPEND="X? (
