@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.6 2009/06/20 13:03:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.7 2009/06/25 16:35:32 aballier Exp $
 
 EAPI="1"
 
@@ -48,7 +48,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd fbcon fluidsynth +ffmpeg flac fontconfig ggi gnome gnutls hal httpd
-	id3tag jack kate libass libcaca +libgcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg mtp
+	id3tag jack kate libass libcaca +libgcrypt libnotify libproxy libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg mtp
 	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shine shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs wma-fixed
@@ -93,6 +93,7 @@ RDEPEND="
 		libcaca? ( media-libs/libcaca )
 		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		libnotify? ( x11-libs/libnotify )
+		libproxy? ( net-libs/libproxy )
 		libsysfs? ( sys-fs/sysfsutils )
 		lirc? ( app-misc/lirc )
 		live? ( >=media-plugins/live-2008.07.06 )
@@ -283,7 +284,7 @@ src_compile () {
 		$(use_enable libcaca caca) \
 		$(use_enable libgcrypt) \
 		$(use_enable libnotify notify) \
-		--disable-libproxy \
+		$(use_enable libproxy) \
 		--disable-libtar \
 		$(use_enable libsysfs) \
 		$(use_enable libv4l2) \
