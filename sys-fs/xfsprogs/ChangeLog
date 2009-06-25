@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.115 2009/02/24 05:11:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.116 2009/06/25 23:56:43 vapier Exp $
+
+  25 Jun 2009; Mike Frysinger <vapier@gentoo.org> +xfsprogs-3.0.1.ebuild,
+  +files/xfsprogs-3.0.1-sharedlibs.patch:
+  Version bump #275405 by Lars Wendler and USE=static support #273219 by
+  Wolfram Schlich.
+
+*xfsprogs-3.0.1 (25 Jun 2009)
+
+  25 Jun 2009; Mike Frysinger <vapier@gentoo.org> +xfsprogs-3.0.1.ebuild:
+  Version bump #275405 by Lars Wendler.
 
   24 Feb 2009; Mike Frysinger <vapier@gentoo.org>
   +files/xfsprogs-3.0.0-parallel-build.patch, xfsprogs-3.0.0.ebuild:
