@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/luatex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.33 2009/06/24 09:06:54 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/ChangeLog,v 1.34 2009/06/25 14:15:16 aballier Exp $
+
+  25 Jun 2009; Alexis Ballier <aballier@gentoo.org> luatex-0.40.5.ebuild:
+  configure and build in the proper subdirs instead of leaving the build
+  system doing it itself, should fix bug #274802
 
   24 Jun 2009; Alexis Ballier <aballier@gentoo.org> luatex-0.40.5.ebuild:
   Add a patch to fix build dependencies in the makefiles, bug #274770
