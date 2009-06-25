@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9977 2009/06/25 15:41:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9978 2009/06/25 19:15:23 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -39,10 +39,7 @@
 # modules they need as dependency. Unmasking this will most likely pull in
 # more than you need. This meta ebuild will be removed when we can add sets
 # to the portage tree.
-#
-# (25 Jun 2009) mr_bones_@gentoo.org
-# Still needed by several packages.  Clean up before masking again.
-#=x11-libs/qt-4*
+=x11-libs/qt-4*
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Jun 2009)
 # Firefox Release Candidates
