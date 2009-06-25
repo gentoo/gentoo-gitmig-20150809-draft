@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ssrc/ssrc-1.29.ebuild,v 1.8 2007/01/06 21:19:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ssrc/ssrc-1.29.ebuild,v 1.9 2009/06/25 18:01:17 armin76 Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ SLOT="0"
 #-amd64: 1.29: segfault on 44100 -> 11025 kde's pop.wav
 #-sparc: same test as amd64... "Error: Only PCM is supported."
 
-KEYWORDS="x86 -amd64 -sparc"
+KEYWORDS="-amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/libc"
