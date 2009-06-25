@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/dmapi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.58 2009/03/03 20:39:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/ChangeLog,v 1.59 2009/06/25 22:37:36 vapier Exp $
+
+*dmapi-2.2.10 (25 Jun 2009)
+
+  25 Jun 2009; Mike Frysinger <vapier@gentoo.org> +dmapi-2.2.10.ebuild:
+  Version bump #275405 by Lars Wendler.
 
   03 Mar 2009; Mike Frysinger <vapier@gentoo.org> dmapi-2.2.9.ebuild:
   Force usage of gentoo dmapi tarball #261019.
