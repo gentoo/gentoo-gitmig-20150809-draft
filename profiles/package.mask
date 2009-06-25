@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9978 2009/06/25 19:15:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9979 2009/06/25 19:17:43 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1121,10 +1121,6 @@ sys-apps/mindi-busybox
 # MATSUU Takuto <matsuu@gentoo.org> (8 Mar 2008)
 # Masked for Bug 173467
 >=net-im/coccinella-0.96.10
-
-# Tiziano Müller <dev-zero@gentoo.org> (8 Mar 2008)
-# Mask pre-version
-=net-fs/samba-3.2*
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Mar 2008)
 # Mask pending fix for new pambase, see bug #212452

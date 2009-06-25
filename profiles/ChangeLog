@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2834 2009/06/25 09:08:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2835 2009/06/25 19:17:43 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jun 2009; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Removing samba 3.2 mask.
 
   25 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Remove no longer needed mask for mesa.
