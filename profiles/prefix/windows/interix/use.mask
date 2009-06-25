@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.1 2009/06/06 03:55:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.2 2009/06/25 12:50:39 fauli Exp $
 
 # Re-add Interix libc
 -elibc_Interix
@@ -27,6 +27,7 @@ dri
 dvdr
 # missing implementation for unexec()
 emacs
+xemacs
 emul-linux-x86
 fbcon
 fdftk

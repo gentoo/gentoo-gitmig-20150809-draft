@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.8 2009/06/24 11:45:05 mduft Exp $
+# $Id: ChangeLog,v 1.9 2009/06/25 12:50:38 fauli Exp $
+
+  25 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  windows/interix/use.mask:
+  mask USE flag xemacs on Interix because it won't compile anyway
 
   24 Jun 2009; Markus Duft <mduft@gentoo.org> windows/winnt/use.mask:
   use.mask readline for winnt - readline doesnt work here...
