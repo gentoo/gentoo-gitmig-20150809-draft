@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.06.ebuild,v 1.1 2009/05/27 10:53:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/qmail-scanner/qmail-scanner-2.06.ebuild,v 1.2 2009/06/25 07:40:35 tupone Exp $
+EAPI=2
 
 inherit fixheadtails toolchain-funcs eutils
 
@@ -45,9 +46,7 @@ pkg_preinst() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${DISTDIR}"/q-s-${PV}st-${Q_S_DATE}.patch.gz
 	ht_fix_file autoupdaters/* configure
 	sed -i \
@@ -57,10 +56,13 @@ src_unpack() {
 
 	EXTRA_VIRII="bagle,beagle,mydoom,sco,maldal,mimail,novarg,shimg,bugler,cissi,cissy,dloade,netsky,qizy"
 	elog "Adding items to the SILENT_VIRUSES list (${EXTRA_VIRII})"
-	sed -e "/^SILENT_VIRUSES/s/\"$/,${EXTRA_VIRII}\"/g"  -i configure
+	sed -i \
+		-e "/^SILENT_VIRUSES/s/\"$/,${EXTRA_VIRII}\"/g" \
+		-e '/DD/s/1\\.0/ 1\\.0/' \
+		configure
 }
 
-src_compile () {
+src_configure() {
 	local myconf
 
 	addpredict /var/log/kav/kavscan.log
