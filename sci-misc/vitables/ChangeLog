@@ -1,6 +1,10 @@
 # ChangeLog for sci-misc/vitables
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/ChangeLog,v 1.1 2009/06/11 20:44:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/ChangeLog,v 1.2 2009/06/25 06:09:58 yngwin Exp $
+
+  25 Jun 2009; Ben de Groot <yngwin@gentoo.org> vitables-2.0.ebuild:
+  Drop illegal qt meta ebuild dependency (see 217161#c11). Add use dep for
+  PyQt4 (check for more, bug 272136). Whitespace.
 
 *vitables-2.0 (11 Jun 2009)
 

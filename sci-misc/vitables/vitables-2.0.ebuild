@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.0.ebuild,v 1.1 2009/06/11 20:44:13 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.0.ebuild,v 1.2 2009/06/25 06:09:58 yngwin Exp $
 
 EAPI="2"
 NEED_PYTHON="2.5"
@@ -18,8 +18,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="doc examples"
 
 DEPEND=">=dev-python/pytables-2.0
-	>=x11-libs/qt-4.0
-	>=dev-python/PyQt4-4.4"
+	dev-python/PyQt4[X]"  # FIXME: check if any other useflags are needed
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/ViTables-${PV}"
 
@@ -38,5 +37,4 @@ src_install() {
 	if use doc; then
 		dodoc doc/*
 	fi
-
 }
