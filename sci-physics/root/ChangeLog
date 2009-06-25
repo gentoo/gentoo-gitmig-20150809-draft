@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.49 2009/06/24 06:58:37 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.50 2009/06/25 04:10:35 bicatali Exp $
+
+  25 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org> Manifest:
+  Fixed a patch for python checking, bug #275284, thanks Adam Hunt
 
 *root-5.22.00-r2 (24 Jun 2009)
 
