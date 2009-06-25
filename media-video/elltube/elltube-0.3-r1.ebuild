@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/elltube-0.3-r1.ebuild,v 1.1 2009/06/01 21:36:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/elltube-0.3-r1.ebuild,v 1.2 2009/06/25 11:42:06 hwoarang Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4
-	<dev-python/PyQt4-4.5[X]
+	dev-python/PyQt4[X]
 	media-video/ffmpeg"
 
 src_compile() {

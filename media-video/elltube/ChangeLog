@@ -1,6 +1,10 @@
 # ChangeLog for media-video/elltube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/ChangeLog,v 1.4 2009/06/01 21:36:04 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/elltube/ChangeLog,v 1.5 2009/06/25 11:42:06 hwoarang Exp $
+
+  25 Jun 2009; Markos Chandras <hwoarang@gentoo.org> -elltube-0.3.ebuild,
+  elltube-0.3-r1.ebuild:
+  Fix PyQt4 dependency ( bug 274756 ). Drop old ebuild
 
 *elltube-0.3-r1 (01 Jun 2009)
 
