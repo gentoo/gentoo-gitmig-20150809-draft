@@ -1,0 +1,40 @@
+--- src/toqvalue.cpp.orig	2009-06-25 21:56:21.879870369 +0200
++++ src/toqvalue.cpp	2009-06-25 21:56:35.759867041 +0200
+@@ -44,6 +44,7 @@
+ #include "toconf.h"
+ #include "toqvalue.h"
+ 
++#include <cstdio>
+ #include <QVariant>
+ #include <QApplication>
+ 
+--- src/tomodeleditor.cpp.orig	2009-06-25 21:59:49.922104810 +0200
++++ src/tomodeleditor.cpp	2009-06-25 21:59:59.904863047 +0200
+@@ -48,6 +48,7 @@
+ #include "toresultview.h"
+ #include "tomain.h"
+ 
++#include <cstdio>
+ #include <qcheckbox.h>
+ #include <qlayout.h>
+ #include <qpixmap.h>
+--- src/toresultview.cpp.orig	2009-06-25 22:01:53.095862952 +0200
++++ src/toresultview.cpp	2009-06-25 22:02:06.038862175 +0200
+@@ -54,6 +54,7 @@
+ #include "totool.h"
+ #include "toresultlistformat.h"
+ 
++#include <cstdio>
+ #include <qapplication.h>
+ #include <qclipboard.h>
+ #include <qcombobox.h>
+--- src/todebug.cpp.orig	2009-06-25 22:31:27.233110649 +0200
++++ src/todebug.cpp	2009-06-25 22:31:41.032862675 +0200
+@@ -58,6 +58,7 @@
+ #include "totool.h"
+ #include "tocodemodel.h"
+ 
++#include <cstdio>
+ #include <stack>
+ 
+ #include <qcheckbox.h>

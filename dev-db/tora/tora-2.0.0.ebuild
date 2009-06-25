@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.0.0.ebuild,v 1.3 2009/05/04 16:51:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.0.0.ebuild,v 1.4 2009/06/25 21:06:31 dertobi123 Exp $
 
 EAPI=2
 
@@ -17,6 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 
 RDEPEND="${DEPEND}"
 DEPEND="dev-lang/perl
+	x11-libs/qt-sql
 	mysql? ( x11-libs/qt-sql[mysql] )
 	postgres? ( x11-libs/qt-sql[postgres] )
 	>=x11-libs/qscintilla-2.1[qt4]
