@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20.ebuild,v 1.1 2009/06/24 22:09:55 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20.ebuild,v 1.2 2009/06/25 08:19:02 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -208,7 +208,7 @@ src_compile() {
 	fi
 	if use sane_backends_mustek_pp; then
 		myconf="${myconf} --enable-parport-directio"
-	fi	
+	fi
 	SANEI_JPEG="sanei_jpeg.o" SANEI_JPEG_LO="sanei_jpeg.lo" \
 	BACKENDS="${BACKENDS}" econf \
 		$(use_enable usb libusb) \
