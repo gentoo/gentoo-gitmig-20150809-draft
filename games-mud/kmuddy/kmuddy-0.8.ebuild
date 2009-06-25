@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.8 2009/01/30 13:17:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/kmuddy-0.8.ebuild,v 1.9 2009/06/25 20:42:19 mr_bones_ Exp $
 
 inherit base eutils kde-functions autotools
 
@@ -11,10 +11,9 @@ SRC_URI="http://www.kmuddy.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
-IUSE="arts sdl"
+IUSE="sdl"
 
-DEPEND="arts? ( kde-base/arts )
-	sdl? ( media-libs/sdl-mixer )"
+DEPEND="sdl? ( media-libs/sdl-mixer )"
 
 need-kde 3
 PATCHES=(	"${FILESDIR}/${P}-nocrash.patch"
@@ -37,7 +36,7 @@ src_unpack() {
 
 src_compile() {
 	econf \
-		$(use_with arts) \
+		--without-arts \
 		$(use_with sdl) \
 		|| die
 	emake || die "emake failed"
