@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/polyester/polyester-2.0.0.ebuild,v 1.1 2009/06/13 23:53:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/polyester/polyester-2.0.0.ebuild,v 1.2 2009/06/25 08:19:21 mr_bones_ Exp $
 
 EAPI=2
 
@@ -15,4 +15,3 @@ SLOT="4"
 LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-
