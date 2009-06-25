@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/fapg-0.41.ebuild,v 1.4 2009/06/10 19:15:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/fapg-0.41.ebuild,v 1.5 2009/06/25 17:48:35 armin76 Exp $
 
 DESCRIPTION="Fast Audio Playlist Generator"
 HOMEPAGE="http://royale.zerezo.com/fapg/"
@@ -8,7 +8,7 @@ SRC_URI="http://royale.zerezo.com/fapg/${P}.tar.gz"
 IUSE="xspf"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86"
 RDEPEND="xspf? ( >=dev-libs/uriparser-0.6.3 )"
 DEPEND="${RDEPEND}"
 
