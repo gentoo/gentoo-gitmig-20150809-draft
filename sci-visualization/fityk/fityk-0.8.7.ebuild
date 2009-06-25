@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.7.ebuild,v 1.1 2009/06/22 18:29:11 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/fityk/fityk-0.8.7.ebuild,v 1.2 2009/06/25 03:16:57 bicatali Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -28,6 +28,8 @@ RDEPEND="${DEPEND}
 src_prepare() {
 	# avoid building xylib when 3rdparty is disabled
 	epatch "${FILESDIR}"/${P}-3rdparty.patch
+	# <libtool-2 compatibility (bug #275290)
+	rm -f "${S}"/libtool "${S}"/config/lt* "${S}"/config/libtool.m4
 	eautoreconf
 
 	has_version ">=dev-libs/boost-1.37" &&
