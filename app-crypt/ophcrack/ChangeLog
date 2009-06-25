@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/ophcrack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.30 2009/06/17 19:28:36 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ophcrack/ChangeLog,v 1.31 2009/06/25 18:17:34 yngwin Exp $
+
+  25 Jun 2009; Ben de Groot <yngwin@gentoo.org> -ophcrack-3.0.1-r2.ebuild,
+  -ophcrack-3.1.0.ebuild, -ophcrack-3.1.0-r1.ebuild,
+  ophcrack-3.1.0-r2.ebuild, ophcrack-3.3.0.ebuild:
+  Drop old. Change qt-gui version to slot dep.
 
 *ophcrack-3.3.0 (17 Jun 2009)
 
