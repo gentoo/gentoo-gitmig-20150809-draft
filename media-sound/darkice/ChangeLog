@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/darkice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.53 2009/06/01 16:33:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/ChangeLog,v 1.54 2009/06/25 17:42:10 armin76 Exp $
+
+  25 Jun 2009; Raúl Porcel <armin76@gentoo.org> darkice-0.19.ebuild:
+  sparc stable wrt #270783
 
   01 Jun 2009; nixnut <nixnut@gentoo.org> darkice-0.19.ebuild:
   ppc stable #270783
