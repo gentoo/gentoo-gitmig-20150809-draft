@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.7 2009/05/05 21:13:20 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.8 2009/06/25 18:59:07 yngwin Exp $
 
-EAPI="1"
+EAPI="2"
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs qt4
 
 DESCRIPTION="IEEE 802.1X/WPA supplicant for secure wireless transfers"
 HOMEPAGE="http://hostap.epitest.fi/wpa_supplicant/"
@@ -25,13 +25,10 @@ RDEPEND="dbus? ( sys-apps/dbus )
 			)
 		)
 		!kernel_linux? ( net-libs/libpcap )
-		qt4? (
-			|| ( ( x11-libs/qt-core:4
-					x11-libs/qt-gui:4 )
-					<x11-libs/qt-4.4:4
-			)
+		qt4? ( x11-libs/qt-gui:4[qt3support]
+			x11-libs/qt-svg:4
 		)
-		!qt4? ( qt3? ( =x11-libs/qt-3* ) )
+		!qt4? ( qt3? ( x11-libs/qt:3 ) )
 		readline? ( sys-libs/ncurses sys-libs/readline )
 		ssl? ( dev-libs/openssl )
 		gnutls? ( net-libs/gnutls )
@@ -52,16 +49,14 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-
+src_prepare() {
 	# net/bpf.h needed for net-libs/libpcap on Gentoo FreeBSD
 	sed -i \
 		-e "s:\(#include <pcap\.h>\):#include <net/bpf.h>\n\1:" \
 		../src/l2_packet/l2_packet_freebsd.c || die
+}
 
+src_configure() {
 	# toolchain setup
 	echo "CC = $(tc-getCC)" > .config
 
@@ -162,8 +157,9 @@ src_compile() {
 	emake || die "emake failed"
 
 	if use qt4 ; then
-		qmake -o "${S}"/wpa_gui-qt4/Makefile "${S}"/wpa_gui-qt4/wpa_gui.pro
+		#qmake -o "${S}"/wpa_gui-qt4/Makefile "${S}"/wpa_gui-qt4/wpa_gui.pro
 		cd "${S}"/wpa_gui-qt4
+		eqmake4 wpa_gui.pro
 		emake || die "emake wpa_gui-qt4 failed"
 	elif use qt3 ; then
 		[[ -d "${QTDIR}"/etc/settings ]] && addwrite "${QTDIR}"/etc/settings

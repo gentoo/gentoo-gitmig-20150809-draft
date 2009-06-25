@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.9.ebuild,v 1.3 2009/05/17 10:32:54 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.9.ebuild,v 1.4 2009/06/25 18:59:07 yngwin Exp $
 
 EAPI="2"
 
@@ -25,7 +25,8 @@ DEPEND="dev-libs/libnl
 		)
 	)
 	!kernel_linux? ( net-libs/libpcap )
-	qt4? ( x11-libs/qt-gui:4 )
+	qt4? ( x11-libs/qt-gui:4
+		x11-libs/qt-svg:4 )
 	!qt4? ( qt3? ( x11-libs/qt:3 ) )
 	readline? ( sys-libs/ncurses sys-libs/readline )
 	ssl? ( dev-libs/openssl )
