@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.6 2008/08/14 17:18:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/qlife/qlife-0.9.ebuild,v 1.7 2009/06/25 20:30:44 mr_bones_ Exp $
 
 EAPI=1
 inherit qt4 games
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND="|| ( x11-libs/qt-gui:4 x11-libs/qt:4 )"
+DEPEND="x11-libs/qt-gui:4"
 
 S=${WORKDIR}/${MY_P}
 
