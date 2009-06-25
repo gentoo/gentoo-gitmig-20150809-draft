@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9974 2009/06/25 09:08:13 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9975 2009/06/25 12:23:04 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,20 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tomáš Chvátal <scarabeus@gentoo.org> (25 Jun 2009)
+# Mask 2.0.1 before it is really released.
+>=app-office/kword-2.0.1
+>=app-office/kplato-2.0.1
+>=app-office/kpresenter-2.0.1
+>=app-office/koffice-l10n-2.0.1
+>=app-office/kchart-2.0.1
+>=app-office/karbon-2.0.1
+>=app-office/krita-2.0.1
+>=app-office/koffice-data-2.0.1
+>=app-office/koffice-libs-2.0.1
+>=app-office/koffice-meta-2.0.1
+>=app-office/kspread-2.0.1
 
 # Ben de Groot <yngwin@gentoo.org> (25 Jun 2009)
 # Mask the Qt4 meta ebuild, to prevent devs from being silly and depend on
