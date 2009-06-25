@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9972 2009/06/24 16:39:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9973 2009/06/25 06:22:59 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (25 Jun 2009)
+# Mask the Qt4 meta ebuild, to prevent devs from being silly and depend on
+# the meta ebuild instead of on the specific split Qt ebuilds needed. See
+# bug 217161 comment 11. Users may unmask this if they want to pull in all
+# Qt modules, but packages in portage (or overlays) will pull in the split
+# modules they need as dependency. Unmasking this will most likely pull in
+# more than you need. This meta ebuild will be removed when we can add sets
+# to the portage tree.
+=x11-libs/qt-4*
 
 # Nirbheek Chauhan <nirbheek@gentoo.org> (24 Jun 2009)
 # Firefox Release Candidates
@@ -117,7 +127,7 @@ net-misc/whoischk
 net-dialup/speedtouch
 
 # Romain Perier <mrpouet@gentoo.org> (20 Jun 2009)
-# A lot of changes into sources code 
+# A lot of changes into sources code
 # (re-structured, modules renamed and so on)
 # It may break some packages.
 =sys-auth/policykit-0.92
@@ -320,7 +330,7 @@ media-tv/zapping
 # Steve Dibb <beandog@gentoo.org> (04 Jun 2009)
 # Drop hacked support for optional MIDI in ALSA
 # Keep masked until all reverse deps are fixed
-# See bug 272659 
+# See bug 272659
 >=media-libs/alsa-lib-1.0.20-r1
 >=media-sound/alsa-utils-1.0.20-r1
 >=media-sound/alsa-tools-1.0.20-r1
