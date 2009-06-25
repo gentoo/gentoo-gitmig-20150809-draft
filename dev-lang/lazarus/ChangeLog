@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/lazarus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.28 2009/06/09 21:04:09 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.29 2009/06/25 20:36:51 truedfx Exp $
+
+  25 Jun 2009; Harald van Dĳk <truedfx@gentoo.org>
+  lazarus-0.9.26-r3.ebuild:
+  Don't try to create fp config files in /usr during build (bug #274518 by
+  Paul Hartman)
 
   09 Jun 2009; Harald van Dĳk <truedfx@gentoo.org>
   lazarus-0.9.26-r3.ebuild:

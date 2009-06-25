@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.2.4.ebuild,v 1.2 2009/06/09 21:04:09 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc-ide/fpc-ide-2.2.4.ebuild,v 1.3 2009/06/25 20:37:52 truedfx Exp $
 
 S="${WORKDIR}/fpcbuild-${PV}/fpcsrc/ide"
 
@@ -25,7 +25,8 @@ src_unpack() {
 	if ! test ${PPC_CONFIG_PATH+set}; then
 		local FPCVER=$(fpc -iV)
 		export PPC_CONFIG_PATH="${WORKDIR}"
-		/usr/lib/fpc/${FPCVER}/samplecfg /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
+		sed -e 's/^FPBIN=/#&/' /usr/lib/fpc/${FPCVER}/samplecfg |
+			sh -s /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
 		sed -i -e '/^-Xs/d' "${PPC_CONFIG_PATH}"/fpc.cfg || die
 	fi
 }
