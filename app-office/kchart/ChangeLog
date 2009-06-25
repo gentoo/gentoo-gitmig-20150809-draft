@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kchart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.86 2009/05/28 08:19:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kchart/ChangeLog,v 1.87 2009/06/25 12:32:41 scarabeus Exp $
+
+*kchart-2.0.1 (25 Jun 2009)
+
+  25 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> +kchart-2.0.1.ebuild:
+  Version bump to 2.0.1
 
 *kchart-2.0.0 (28 May 2009)
 
