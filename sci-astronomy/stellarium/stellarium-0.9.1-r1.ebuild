@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.1-r1.ebuild,v 1.5 2008/08/17 00:00:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.9.1-r1.ebuild,v 1.6 2009/06/25 20:34:32 mr_bones_ Exp $
 
 EAPI=1
 inherit toolchain-funcs eutils qt4
@@ -21,7 +21,10 @@ RDEPEND="virtual/opengl
 	dev-libs/boost
 	media-libs/jpeg
 	net-misc/curl
-	|| ( ( x11-libs/qt-core:4 x11-libs/qt-gui:4 x11-libs/qt-script:4 x11-libs/qt-opengl:4 )  =x11-libs/qt-4.3*:4 )
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4
+	x11-libs/qt-script:4
+	x11-libs/qt-opengl:4
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	>=dev-util/cmake-2.4.6
