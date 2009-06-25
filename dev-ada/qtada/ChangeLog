@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/qtada
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/ChangeLog,v 1.3 2008/10/23 14:17:58 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/qtada/ChangeLog,v 1.4 2009/06/25 19:05:23 yngwin Exp $
+
+  25 Jun 2009; Ben de Groot <yngwin@gentoo.org> -qtada-1.0.3.ebuild:
+  Drop old ebuild with illegal qt4 dep
 
   23 Oct 2008; George Shapovalov <george@gentoo.org> qtada-1.0.4.ebuild:
   fixed missing deps and USE (#241760), thanks to Philipp Riegger for report
