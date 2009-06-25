@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9973 2009/06/25 06:22:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9974 2009/06/25 09:08:13 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -55,10 +55,6 @@
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2009)
 # Masked for testing, beta version
 =app-admin/sudo-1.7.2*
-
-# Tomáš Chvátal <scarabeus@gentoo.org> (23 Jun 2009)
-# broken INTEL part causes X not starting up.
-=media-libs/mesa-7.4.3
 
 # Rémi Cardona <remi@gentoo.org> (23 Jun 2009)
 # broken opengl support, forces gcc's objc for no reason
