@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.355 2009/05/29 19:55:00 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.356 2009/06/25 18:18:09 patrick Exp $
+
+*samba-3.0.35 (25 Jun 2009)
+
+  25 Jun 2009; Patrick Lauer <patrick@gentoo.org> +samba-3.0.35.ebuild:
+  Bump to 3.0.35. Fixes #275236.
 
   29 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> samba-3.0.28.ebuild,
   samba-3.0.28a-r1.ebuild, samba-3.0.30.ebuild, samba-3.0.31.ebuild,
