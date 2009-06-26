@@ -1,0 +1,11 @@
+# ChangeLog for x11-libs/gtkdatabox
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.1 2009/06/26 20:24:11 mrpouet Exp $
+
+*gtkdatabox-0.9.1.1 (26 Jun 2009)
+
+  26 Jun 2009; Romain Perier <mrpouet@gentoo.org>
+  +gtkdatabox-0.9.1.1.ebuild, +metadata.xml:
+  New ebuild, import from scarabeus's overlay
+
+
