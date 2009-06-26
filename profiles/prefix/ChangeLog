@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.10 2009/06/26 02:51:55 solar Exp $
+# $Id: ChangeLog,v 1.11 2009/06/26 03:40:01 mr_bones_ Exp $
+
+  26 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +darwin/macos/10.4/eapi, +darwin/macos/10.5/eapi:
+  The PM needs to know the eapi right in the child node of the profile.
 
   26 Jun 2009; <solar@gentoo.org> +eapi:
   - commit 1.130 of ../profile.desc enabled prefix in QA tools. Mr_Bones
