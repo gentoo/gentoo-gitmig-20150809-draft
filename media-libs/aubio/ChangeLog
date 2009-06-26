@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aubio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.12 2008/05/11 16:23:56 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aubio/ChangeLog,v 1.13 2009/06/26 16:48:18 armin76 Exp $
+
+  26 Jun 2009; Raúl Porcel <armin76@gentoo.org> aubio-0.3.2-r1.ebuild:
+  sparc stable wrt #272863
 
   11 May 2008; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Sign my previously unsigned commit.
