@@ -1,0 +1,12 @@
+# ChangeLog for net-fs/samba-libs
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/ChangeLog,v 1.1 2009/06/26 20:19:44 patrick Exp $
+
+*samba-libs-3.3.6 (26 Jun 2009)
+
+  26 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/3.3/nsswitch.conf-winbind, +files/3.3/nsswitch.conf-wins,
+  +files/3.3/samba.pam, +files/3.3/system-auth-winbind.pam,
+  +samba-libs-3.3.6.ebuild, +metadata.xml:
+  Initial commit. New split samba ebuilds by dev-zero.
+

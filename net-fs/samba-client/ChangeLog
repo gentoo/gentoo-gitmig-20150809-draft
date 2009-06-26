@@ -1,0 +1,11 @@
+# ChangeLog for net-fs/samba-client
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.1 2009/06/26 20:22:56 patrick Exp $
+
+*samba-client-3.3.6 (26 Jun 2009)
+
+  26 Jun 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/3.3.3-fix-as-needed.patch, +files/3.3.4-missing_includes.patch,
+  +samba-client-3.3.6.ebuild, +metadata.xml:
+  Initial commit. New split samba ebuilds by dev-zero.
+
