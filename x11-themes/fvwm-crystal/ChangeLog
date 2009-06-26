@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/fvwm-crystal
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.58 2008/12/07 22:01:35 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.59 2009/06/26 20:04:35 tommy Exp $
+
+*fvwm-crystal-3.0.6-r1 (26 Jun 2009)
+
+  26 Jun 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -fvwm-crystal-3.0.6.ebuild, +fvwm-crystal-3.0.6-r1.ebuild,
+  +files/fvwm-crystal.apps.patch:
+  Misc fixes (bug 254360, bug 71033 and bug 272945), ebuild and patch from
+  Naohiro Aota (naota@elisp.net)
 
 *fvwm-crystal-3.0.6 (07 Dec 2008)
 
