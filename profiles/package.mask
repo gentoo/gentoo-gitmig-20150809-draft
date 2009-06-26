@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9981 2009/06/26 17:09:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9982 2009/06/26 20:08:19 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (26 Jun 2009)
+# Samba-3.3 ebuilds aren't ready for primetime yet.
+# Test and a few other bits are failing. 
+# Use at your own risk!
+>=net-fs/samba-3.3
+net-fs/samba-client
+net-fs/samba-libs
+net-fs/samba-server
+
 
 # Ben de Groot <yngwin@gentoo.org> (25 Jun 2009)
 # Mask the Qt4 meta ebuild, to prevent devs from being silly and depend on

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2837 2009/06/26 17:09:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2838 2009/06/26 20:08:18 patrick Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jun 2009; Patrick Lauer <patrick@gentoo.org> package.mask:
+  Masking samba 3.3 until it is better tested
 
   26 Jun 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Edit www-client/opera-10* mask yet again.
