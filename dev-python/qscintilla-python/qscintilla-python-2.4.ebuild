@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.2 2009/06/22 06:29:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.3 2009/06/26 22:09:59 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ IUSE="debug +qt4"
 
 DEPEND=">=dev-python/sip-4.8
 	~x11-libs/qscintilla-${PV}[qt4=]
-	qt4? ( >=dev-python/PyQt4-4.5 )
+	qt4? ( >=dev-python/PyQt4-4.5[X] )
 	!qt4? ( >=dev-python/PyQt-3.18 )"
 RDEPEND="${DEPEND}"
 
