@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/moinmoin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.63 2009/06/21 14:06:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/moinmoin/ChangeLog,v 1.64 2009/06/26 08:59:49 a3li Exp $
+
+  26 Jun 2009; Alex Legler <a3li@gentoo.org> -moinmoin-1.8.1.ebuild:
+  Removing vulnerable version, security bug 268565.
 
   21 Jun 2009; Brent Baude <ranger@gentoo.org> moinmoin-1.8.4.ebuild:
   Marking moinmoin-1.8.4 ppc for bug 268565
