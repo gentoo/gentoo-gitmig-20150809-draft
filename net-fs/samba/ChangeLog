@@ -1,6 +1,12 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.360 2009/06/26 17:21:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.361 2009/06/26 20:25:35 patrick Exp $
+
+*samba-3.3.6 (26 Jun 2009)
+
+  26 Jun 2009; Patrick Lauer <patrick@gentoo.org> +samba-3.3.6.ebuild,
+  metadata.xml:
+  First commit of 3.3 series. New split samba ebuilds by dev-zero.
 
 *samba-3.2.13-r1 (26 Jun 2009)
 

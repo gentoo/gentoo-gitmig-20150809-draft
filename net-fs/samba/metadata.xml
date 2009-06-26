@@ -17,5 +17,8 @@ Samba is an Open Source/Free Software suite that provides seamless file and prin
 	<flag name="quotas">Enables support for user quotas</flag>
 	<flag name="swat">Enables support for swat configuration gui</flag>
 	<flag name="winbind">Enables support for the winbind auth daemon</flag>
+        <flag name="client">Enables the client part</flag>
+        <flag name="server">Enables the server part</flag>
+
 </use>
 </pkgmetadata>
