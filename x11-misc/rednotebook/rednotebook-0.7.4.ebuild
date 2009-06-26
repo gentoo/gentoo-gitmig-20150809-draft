@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-0.7.0.ebuild,v 1.1 2009/05/20 19:17:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rednotebook/rednotebook-0.7.4.ebuild,v 1.1 2009/06/26 08:39:04 hwoarang Exp $
 
 NEED_PYTHON="2.5"
 inherit distutils
