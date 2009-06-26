@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/xfsprogs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.116 2009/06/25 23:56:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.117 2009/06/26 14:09:19 vapier Exp $
+
+*xfsprogs-3.0.1-r1 (26 Jun 2009)
+
+  26 Jun 2009; Mike Frysinger <vapier@gentoo.org> +xfsprogs-3.0.1-r1.ebuild,
+  files/xfsprogs-3.0.1-sharedlibs.patch:
+  Fix by Lars Wendler to install missing libxcmd.so #275456 by Chris Smith.
 
   25 Jun 2009; Mike Frysinger <vapier@gentoo.org> +xfsprogs-3.0.1.ebuild,
   +files/xfsprogs-3.0.1-sharedlibs.patch:

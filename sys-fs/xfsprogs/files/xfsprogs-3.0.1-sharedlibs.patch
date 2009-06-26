@@ -13,6 +13,20 @@ ripped from PLD Linux
 +	$(INSTALL_LTLIB_DEV)
  
  install-qa: install-dev
+--- xfsprogs-3.0.1/libxcmd/Makefile
++++ xfsprogs-3.0.1/libxcmd/Makefile
+@@ -24,4 +24,10 @@
+
+ include $(BUILDRULES)
+
+-install install-dev install-qa: default
++install: default
++	$(INSTALL_LTLIB)
++
++install-dev: default
++	$(INSTALL_LTLIB_DEV)
++
++install-qa: default
 --- xfsprogs-3.0.0/libxfs/Makefile
 +++ xfsprogs-3.0.0/libxfs/Makefile
 @@ -41,7 +41,9 @@
