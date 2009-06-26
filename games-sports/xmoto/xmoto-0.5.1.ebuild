@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.1.ebuild,v 1.3 2009/05/31 02:33:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.1.ebuild,v 1.4 2009/06/26 02:14:05 mr_bones_ Exp $
 
 EAPI=2
-inherit autotools eutils games
+inherit eutils games
 
 LVL_PV="0.5.1" #they unfortunately don't release both at the same time, why ~ as separator :(
 LVL="inksmoto-${LVL_PV}"
