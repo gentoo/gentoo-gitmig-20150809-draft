@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.3 2009/04/28 17:26:19 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/Freemail/Freemail-9999.ebuild,v 1.4 2009/06/26 14:57:39 tommy Exp $
 
 EAPI="2"
 
-ESVN_REPO_URI="http://freenet.googlecode.com/svn/trunk/apps/Freemail"
-ESVN_OPTIONS="--ignore-externals"
+EGIT_REPO_URI="git://github.com/freenet/plugin-Freemail-official.git"
+EGIT_PROJECT="Freemail/official"
 EANT_BUILD_TARGET="dist"
-inherit eutils java-pkg-2 java-ant-2 subversion
+inherit eutils git java-pkg-2 java-ant-2
 
 DESCRIPTION="Anonymous IMAP/SMTP e-mail server over Freenet"
 HOMEPAGE="http://www.freenetproject.org/tools.html"
@@ -32,16 +32,11 @@ src_prepare() {
 }
 
 src_install() {
-	java-pkg_dojar lib/Freemail.jar
+	java-pkg_dojar dist/Freemail.jar
 	dodir /var/freenet/plugins
 	fperms freenet:freenet /var/freenet/plugins
 	dosym ../../../usr/share/Freemail/lib/Freemail.jar /var/freenet/plugins/Freemail.jar
 	dodoc README || die "installation of documentation failed"
-}
-
-pkg_preinst() {
-	java-pkg-2_pkg_preinst
-	subversion_pkg_preinst
 }
 
 pkg_postinst () {

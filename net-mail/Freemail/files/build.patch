@@ -1,9 +1,9 @@
---- build.xml	2008-10-08 18:58:11.000000000 +0200
-+++ build.xml.new	2008-10-08 18:59:25.000000000 +0200
-@@ -4,64 +4,8 @@
- 	<property name="src" location="src"/>
+--- build.xml	2009-06-26 16:46:58.829728329 +0200
++++ build.xml.new	2009-06-26 16:48:44.654930593 +0200
+@@ -5,64 +5,7 @@
  	<property name="build" location="build"/>
  	<property name="lib" location="lib"/>
+ 	<property name="dist" location="dist"/>
 -	<property name="deps" location="deps"/>
 -	
 -	<property name="bcdist" value="lcrypto-jdk14-138"/>
@@ -60,17 +60,9 @@
 -			<exclude name="org/bouncycastle/util/AllTests.java" />
 -		</javac>
 -	</target>
- 
+-
 -	<target name="compile" depends="bouncycastle-compile, freenetjar-fetch">
 +	<target name="compile">
  		<mkdir dir="${build}"/>
  
  		<tstamp/>
-@@ -88,6 +33,7 @@
- 			<manifest>
- 				<attribute name="Main-Class" value="freemail.FreemailCli"/>
- 				<attribute name="Plugin-Main-Class" value="freemail.FreemailPlugin"/>
-+				<attribute name="Class-Path" value="/usr/share/bcprov/lib/bcprov.jar /usr/share/freenet/lib/freenet.jar"/>
- 				<attribute name="Built-By" value="${user.name}"/>
- 				<section name="common">
- 					<attribute name="Implementation-Title" value="Freemail"/>
