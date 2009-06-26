@@ -1,6 +1,10 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.146 2009/06/06 20:35:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.147 2009/06/26 11:13:25 fauli Exp $
+
+  26 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  avidemux-2.4.4-r2.ebuild:
+  stable x86, bug 272842
 
   06 Jun 2009; nixnut <nixnut@gentoo.org> avidemux-2.4.4-r2.ebuild:
   ppc stable #272842
