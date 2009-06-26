@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.1 2009/06/25 16:31:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.2 2009/06/26 12:53:26 scarabeus Exp $
 
 IUSE="acpi debug"
 
@@ -131,7 +131,7 @@ src_unpack() {
 	local src="${DISTDIR}/${A}"
 	sh "${src}" --extract "${S}"  2&>1 /dev/null
 	cd "${S}"
-	epatch "${FILESDIR}"/ati-drivers-xen-8.552.patch || die "epatch failed"
+	epatch "${FILESDIR}"/ati-drivers-xen.patch || die "epatch failed"
 
 	if kernel_is ge 2 6 29; then
 		epatch "${FILESDIR}"/kernel/2.6.29*.patch
