@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.40.5.ebuild,v 1.6 2009/06/25 14:15:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/luatex/luatex-0.40.6.ebuild,v 1.1 2009/06/26 06:13:00 aballier Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ PATCHLEVEL="12"
 
 DESCRIPTION="An extended version of pdfTeX using Lua as an embedded scripting language."
 HOMEPAGE="http://www.luatex.org/"
-SRC_URI="http://foundry.supelec.fr/gf/download/frsrelease/345/1287/${PN}-beta-${PV}.tar.bz2
+SRC_URI="http://foundry.supelec.fr/gf/download/frsrelease/348/1318/${PN}-beta-${PV}.tar.bz2
 	mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -129,10 +129,6 @@ src_install() {
 	cd "${WORKDIR}/${PN}-beta-${PV}/source/texk/web2c"
 	emake DESTDIR="${D}" bin_PROGRAMS="luatex" SUBDIRS="" nodist_man_MANS="" \
 		install || die
-
-	# Symlinks required by texlive
-	dosym luatex /usr/bin/texlua
-	dosym luatex /usr/bin/texluac
 
 	dodoc "${WORKDIR}/${PN}-beta-${PV}/README"
 	if use doc ; then
