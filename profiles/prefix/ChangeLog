@@ -1,6 +1,13 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.9 2009/06/25 12:50:38 fauli Exp $
+# $Id: ChangeLog,v 1.10 2009/06/26 02:51:55 solar Exp $
+
+  26 Jun 2009; <solar@gentoo.org> +eapi:
+  - commit 1.130 of ../profile.desc enabled prefix in QA tools. Mr_Bones
+  points out that slots are used in sub profiles package.mask files. This
+  eapi=1 commit is in accordance with
+  http://archives.gentoo.org/gentoo-dev/msg_930f58fcebcbbcbe523c001f2c825179.x
+  ml (Change to a higher eapi if needed)
 
   25 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   windows/interix/use.mask:
