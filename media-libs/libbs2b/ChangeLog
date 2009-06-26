@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbs2b
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.7 2009/06/04 20:05:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.8 2009/06/26 16:36:42 armin76 Exp $
+
+  26 Jun 2009; Raúl Porcel <armin76@gentoo.org> libbs2b-3.1.0.ebuild:
+  Add ~sparc wrt #270203
 
   04 Jun 2009; Tobias Klausmann <klausman@gentoo.org> libbs2b-3.0.0.ebuild:
   Keyworded on alpha, bug #270203
