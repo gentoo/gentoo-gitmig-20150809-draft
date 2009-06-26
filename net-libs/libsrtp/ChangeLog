@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.7 2009/04/25 18:33:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.8 2009/06/26 10:51:55 aballier Exp $
+
+  26 Jun 2009; Alexis Ballier <aballier@gentoo.org> libsrtp-1.4.4-r1.ebuild:
+  keyword ~x86-fbsd
 
   25 Apr 2009; Raúl Porcel <armin76@gentoo.org> libsrtp-1.4.4-r1.ebuild:
   Add ~ia64/-sparc wrt #266193
