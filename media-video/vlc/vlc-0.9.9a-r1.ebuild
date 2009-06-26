@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9a-r1.ebuild,v 1.1 2009/05/10 13:55:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9a-r1.ebuild,v 1.2 2009/06/26 11:16:04 pva Exp $
 
 EAPI="1"
 
@@ -48,7 +48,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddax cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac fontconfig ggi gnome gnutls hal httpd
-	id3tag jack kate libass libcaca +libgcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
+	id3tag jack kate libass libcaca +gcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
 	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs
@@ -93,7 +93,7 @@ RDEPEND="
 		kate? ( >=media-libs/libkate-0.1.1 )
 		libass? ( >=media-libs/libass-0.9.5 media-libs/fontconfig )
 		libcaca? ( media-libs/libcaca )
-		libgcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
+		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		libnotify? ( x11-libs/libnotify )
 		libsysfs? ( sys-fs/sysfsutils )
 		lirc? ( app-misc/lirc )
@@ -190,7 +190,7 @@ pkg_setup() {
 	vlc_use_needs vcdx vcdinfo
 	vlc_use_needs vcdinfo cdio
 	vlc_use_needs bidi truetype
-	vlc_use_force remoteosd libgcrypt
+	vlc_use_force remoteosd gcrypt
 	vlc_use_needs fontconfig truetype
 	vlc_use_needs libv4l2 v4l2
 	use cddb && use !cdda && use !cddax && ewarn "USE=cddb requires either cdda or cddax, cddb will be disabled."
@@ -277,7 +277,7 @@ src_compile () {
 		$(use_enable kate) \
 		$(use_enable libass) \
 		$(use_enable libcaca caca) \
-		$(use_enable libgcrypt) \
+		$(use_enable gcrypt libgcrypt) \
 		$(use_enable libnotify notify) \
 		--disable-libproxy \
 		--disable-libtar \
@@ -342,7 +342,7 @@ src_compile () {
 		--enable-fast-install \
 		$(vlc_use_enable_force vlm vlm sout) \
 		$(vlc_use_enable_force skins skins2 qt4) \
-		$(vlc_use_enable_force remoteosd remoteosd libgcrypt)
+		$(vlc_use_enable_force remoteosd remoteosd gcrypt)
 
 	emake || die "make of VLC failed"
 }
