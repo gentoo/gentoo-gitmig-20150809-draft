@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.49 2009/05/22 13:50:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.50 2009/06/26 05:50:20 aballier Exp $
+
+*freebsd-sources-7.2-r1 (26 Jun 2009)
+
+  26 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  +freebsd-sources-7.2-r1.ebuild, +files/freebsd-sources-7.2-ipv6.patch,
+  +files/freebsd-sources-7.2-pipe.patch:
+  Add patches for the two latest security advisories for FreeBSD kernel.
 
 *freebsd-sources-7.2 (22 May 2009)
 
