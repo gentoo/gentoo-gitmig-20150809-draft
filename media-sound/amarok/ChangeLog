@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.331 2009/06/13 11:01:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.332 2009/06/26 11:13:41 tampakrap Exp $
+
+*amarok-2.1.1 (26 Jun 2009)
+
+  26 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -files/2.0.1.1-ipod.patch, -amarok-2.0.2-r2.ebuild,
+  -amarok-2.0.2-r3.ebuild, -files/amarok-2.0.2-lastfm-authentication.patch,
+  +amarok-2.1.1.ebuild, -files/amarok-ipod.patch:
+  Version bump, remove old, bug 275467
 
   13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> amarok-2.1.ebuild:
   Enable KDE_LINGUAS.
