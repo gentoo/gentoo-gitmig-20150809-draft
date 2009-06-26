@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.1.ebuild,v 1.1 2009/06/26 10:09:53 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.1.ebuild,v 1.2 2009/06/26 10:16:11 hwoarang Exp $
 
 EAPI="2"
 
@@ -73,9 +73,6 @@ src_install() {
 		insinto /usr/share/icons/hicolor/${res}x${res}/apps/
 		newins icons/qmpdclient${res}.png ${PN}.png || die "Installing icons failed"
 	done
-
-	make_desktop_entry qmpdclient "QMPDClient" ${PN} \
-		"Qt;AudioVideo;Audio;" || die "Installing desktop entry failed"
 
 	#install translations
 	insinto /usr/share/${PN}/translations/
