@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.2.3.ebuild,v 1.1 2009/06/24 13:18:15 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.2.3.ebuild,v 1.2 2009/06/26 17:00:11 scarabeus Exp $
+
+EAPI="2"
 
 inherit webapp depend.apache versionator eutils
 
@@ -8,51 +10,49 @@ MY_PB=3.0
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
-#	linguas_de? ( http://ganderbay.net/dl/germzilla-${PV}-1.utf-8.tar.gz )"
 HOMEPAGE="http://www.bugzilla.org"
 
 LICENSE="MPL-1.1 NPL-1.1"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="modperl extras graphviz mysql postgres" # linguas_de"
+IUSE="modperl extras graphviz mysql postgres"
 
 RDEPEND="
 	virtual/httpd-cgi
-	>=dev-lang/perl-5.8.0
+	>=dev-lang/perl-5.8.8
 
-	>=dev-perl/DBI-1.41
+	>=dev-perl/DBI-1.50
 	>=dev-perl/Email-MIME-1.861
 	>=dev-perl/Email-MIME-Modifier-1.442
-	>=dev-perl/Email-Send-2.16
-	>=dev-perl/MIME-tools-5.406
-	>=dev-perl/Template-Toolkit-2.15
+	>=dev-perl/Email-Send-2.190
+	>=dev-perl/MIME-tools-5.417
+	>=dev-perl/Template-Toolkit-2.19
 	>=dev-perl/TimeDate-1.16
-	>=virtual/perl-CGI-3.21
-	>=virtual/perl-File-Spec-0.84
-	>=virtual/perl-MIME-Base64-3.01
+	>=virtual/perl-CGI-3.29
+	>=virtual/perl-File-Spec-3.25
+	>=virtual/perl-MIME-Base64-3.07
 
-	mysql? ( >=dev-perl/DBD-mysql-4.00 )
-	postgres? ( >=dev-perl/DBD-Pg-1.45 )
+	mysql? ( >=dev-perl/DBD-mysql-4.00.5 )
+	postgres? ( >=dev-perl/DBD-Pg-1.49 )
 	graphviz? ( media-gfx/graphviz )
 
 	modperl? (
-		>=dev-perl/Apache-DBI-0.96
-		>=virtual/perl-CGI-3.21
+		>=dev-perl/Apache-DBI-1.06
 		=www-apache/mod_perl-2*
 	)
 
 	extras? (
 		dev-perl/Authen-SASL
-		>=dev-perl/Chart-1.0
+		>=dev-perl/Chart-2.3
 		dev-perl/Email-MIME-Attachment-Stripper
 		dev-perl/Email-Reply
-		>=dev-perl/GD-1.20
+		>=dev-perl/GD-2.35
 		dev-perl/GDGraph
 		dev-perl/GDTextUtil
-		>=dev-perl/HTML-Parser-3.40
+		>=dev-perl/HTML-Parser-3.56
 		dev-perl/HTML-Scrubber
 		dev-perl/libwww-perl
-		>=dev-perl/PatchReader-0.9.4
+		>=dev-perl/PatchReader-0.9.5
 		dev-perl/perl-ldap
 		dev-perl/SOAP-Lite
 		dev-perl/Template-GD
@@ -78,13 +78,6 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	ecvs_clean
-
-#	if use linguas_de ; then
-#		mv ../de template/
-#		elog "Installing German translation pack"
-#		elog "Be sure to read http://wiki.ganderbay.net/wde/Germzilla-Installation"
-#		elog "for installation instructions"
-#	fi
 }
 
 src_install () {
@@ -102,4 +95,6 @@ src_install () {
 
 	# bug #124282
 	chmod +x "${D}${MY_HTDOCSDIR}"/*.cgi
+	# configuration must be executable
+	chmod u+x "${D}${MY_HTDOCSDIR}"/checksetup.pl
 }
