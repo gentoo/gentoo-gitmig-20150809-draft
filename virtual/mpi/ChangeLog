@@ -1,6 +1,13 @@
 # ChangeLog for virtual/mpi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.7 2009/06/13 16:32:58 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/mpi/ChangeLog,v 1.8 2009/06/26 22:57:13 jsbronder Exp $
+
+*mpi-2.0 (26 Jun 2009)
+
+  26 Jun 2009; Justin Bronder <jsbronder@gentoo.org> +mpi-2.0.ebuild:
+  Add a virtual for the 2.0 MPI spec. Also add deps for packages
+  needing c++ or fortran support. Can go stable once mpich2-1.0.8
+  and openmpi-1.2.9 are.
 
   13 Jun 2009; Justin Bronder <jsbronder@gentoo.org> mpi-1.0.ebuild:
   Remove sys-cluster/mpich from virtual/mpi. (#266565)
