@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gramofile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.19 2009/06/11 14:06:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gramofile/ChangeLog,v 1.20 2009/06/26 17:28:44 armin76 Exp $
+
+  26 Jun 2009; Raúl Porcel <armin76@gentoo.org> gramofile-1.6.ebuild,
+  gramofile-1.6-r1.ebuild:
+  Drop sparc keyword
 
   11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   gramofile-1.6-r1.ebuild:
