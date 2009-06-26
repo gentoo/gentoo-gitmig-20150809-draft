@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4578 2009/06/26 04:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4579 2009/06/26 11:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1865,12 +1865,12 @@ media-video/vlc:cdio - Enables CD input and control library support.
 media-video/vlc:dc1394 - Enables IIDC cameras support.
 media-video/vlc:dirac - Enable Dirac video support (an advanced royalty-free video compression format) via the reference library: dirac.
 media-video/vlc:fluidsynth - Enables Fluidsynth MIDI software synthesis (with external sound fonts).
+media-video/vlc:gcrypt - Enables cryptography support via libgcrypt.
 media-video/vlc:gnome - Adds support for GNOME's filesystem abstraction layer, gnome-base/gnome-vfs. This flag is not GUI-related.
 media-video/vlc:httpd - Enables a web based interface for vlc.
 media-video/vlc:id3tag - Enables id3tag metadata reader plugin.
 media-video/vlc:kate - Adds support for Ogg Kate subtitles via libkate.
 media-video/vlc:libass - Enables subtitles support using libass.
-media-video/vlc:libgcrypt - Enables cryptography support via libgcrypt.
 media-video/vlc:libproxy - Enables support for proxy settings in the HTTP access module.
 media-video/vlc:libsysfs - Get user key from firewire connected iPod via libsysfs.
 media-video/vlc:libv4l2 - Enables Libv4l2 Video4Linux2 support (for conversion from various video formats to standard ones, needed to use v4l2 devices with strange formats).
@@ -2209,7 +2209,7 @@ net-libs/libssh:gcrypt - Prefer dev-libs/libgcrypt over dev-libs/openssl for enc
 net-libs/libssh:server - Build with SSH server support
 net-libs/libssh:sftp - Build with SFTP support
 net-libs/libssh:ssh1 - Build with SSH1 support
-net-libs/libssh2:libgcrypt - Use libgcrypt for crypto
+net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt for crypto
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/loudmouth:asyncns - Use libasyncns for asynchronous name resolution.
