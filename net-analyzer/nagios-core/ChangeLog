@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.149 2009/06/26 11:34:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.150 2009/06/26 20:14:20 klausman Exp $
+
+  26 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  nagios-core-3.0.6-r2.ebuild:
+  Stable on alpha, bug #275288
 
   26 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   nagios-core-2.12-r1.ebuild, nagios-core-3.0.6-r2.ebuild:
