@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/klavaro
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.1 2009/06/26 20:45:48 mrpouet Exp $
+
+*klavaro-1.2.1 (26 Jun 2009)
+
+  26 Jun 2009; Romain Perier <mrpouet@gentoo.org>
+  +klavaro-1.2.1.ebuild, +metadata.xml:
+  New ebuild, import from scarabeus's overlay
+
