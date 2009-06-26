@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-2.8.ebuild,v 1.2 2009/06/26 03:34:04 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-2.16.ebuild,v 1.1 2009/06/26 03:34:04 weaver Exp $
 
 EAPI="2"
 
@@ -29,7 +29,6 @@ src_install() {
 	ln -s "${D}" debian/byobu
 	ln -s "${D}" debian/byobu-extras
 	emake --makefile=debian/rules install || die
-	rm -rf "${D}/debian*"
 	doman *.1
 	dodoc doc/*
 }
