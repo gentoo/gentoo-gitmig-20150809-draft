@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4582 2009/06/27 07:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4583 2009/06/27 11:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1380,6 +1380,7 @@ media-libs/alsa-lib:alisp - Enable support for ALISP (ALSA LISP) interpreter for
 media-libs/alsa-lib:midi - Enables MIDI output support (both Hardware and Software)
 media-libs/cal3d:16bit-indices - Enables use of 16bit indices
 media-libs/devil:allegro - Add support for Allegro
+media-libs/esdl:image - Enable image support
 media-libs/faad2:digitalradio - Digital Radio Mondiale (warning: disables other decoders)
 media-libs/freetype:fontforge - Install internal headers required for truetype debugger in media-gfx/fontforge (built with USE=fontforge-debugger)
 media-libs/freetype:kpathsea - Enable TeX support (ttf2pk and ttf2pfb)
