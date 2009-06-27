@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/engine_pkcs11
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.20 2008/10/31 21:58:05 gmsoft Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.21 2009/06/27 20:47:01 arfrever Exp $
+
+*engine_pkcs11-0.1.6 (27 Jun 2009)
+
+  27 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +engine_pkcs11-0.1.6.ebuild,
+  +files/engine_pkcs11-0.1.6-fix_implicit_declaration.patch:
+  Version bump.
 
   31 Oct 2008; Guy Martin <gmsoft@gentoo.org> engine_pkcs11-0.1.4.ebuild:
   hppa stable, #198685
