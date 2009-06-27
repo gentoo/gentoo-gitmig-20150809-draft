@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.6.ebuild,v 1.1 2009/06/26 20:23:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.6.ebuild,v 1.2 2009/06/27 08:05:51 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -81,7 +81,7 @@ src_configure() {
 
 	local dnssd="--disable-dnssd"
 	use zeroconf && ! use avahi && dnssd="--enable-dnssd"
-	
+
 	# Notes:
 	# - FAM is a plugin for the server
 	# - DNS-SD is only used in client/server code
