@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.14 2009/05/24 17:47:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.15 2009/06/27 17:41:44 arfrever Exp $
+
+*signing-party-1.1.1 (27 Jun 2009)
+
+  27 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -signing-party-0.4.9.ebuild, -signing-party-1.0.ebuild,
+  +signing-party-1.1.1.ebuild:
+  Version bump.
 
   24 May 2009; Markus Meier <maekke@gentoo.org> signing-party-1.1.ebuild:
   amd64/x86 stable, bug #269997
