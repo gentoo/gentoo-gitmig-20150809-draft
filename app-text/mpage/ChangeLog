@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mpage
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.24 2008/12/30 21:39:32 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mpage/ChangeLog,v 1.25 2009/06/27 11:00:44 patrick Exp $
+
+*mpage-2.5.5 (27 Jun 2009)
+
+  27 Jun 2009; Patrick Lauer <patrick@gentoo.org> +mpage-2.5.5.ebuild:
+  Bump to 2.5.5. Fixes #274579
 
   30 Dec 2008; Christoph Mende <angelos@gentoo.org> mpage-2.5.4.ebuild:
   QA: Respect CC (bug 243736)
