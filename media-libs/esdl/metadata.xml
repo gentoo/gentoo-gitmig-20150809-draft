@@ -13,4 +13,7 @@ functionality in your erlang program.
 SDL handles 2d graphics, user events and audio while 
 Opengl handles 3d graphics. More information. 
 </longdescription>
+<use>
+        <flag name="image">Enable image support</flag>
+</use>
 </pkgmetadata>
