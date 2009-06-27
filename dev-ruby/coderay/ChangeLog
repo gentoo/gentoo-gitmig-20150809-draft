@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/coderay
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.6 2009/04/20 20:04:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coderay/ChangeLog,v 1.7 2009/06/27 11:06:42 graaff Exp $
+
+  27 Jun 2009; Hans de Graaff <graaff@gentoo.org> -coderay-0.7.4.215.ebuild:
+  Remove old version.
 
   20 Apr 2009; Markus Meier <maekke@gentoo.org> coderay-0.8.260:
   x86 stable, bug #266506
