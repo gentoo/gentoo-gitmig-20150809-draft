@@ -1,52 +1,52 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.6.ebuild,v 1.7 2008/09/01 14:13:30 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.9.0.ebuild,v 1.1 2009/06/27 18:24:48 arfrever Exp $
+
+EAPI="2"
 
 inherit eutils multilib
 
-DESCRIPTION="Standard GUI for GnuPG"
+DESCRIPTION="The GNU Privacy Assistant (GPA) is a graphical user interface for GnuPG"
 HOMEPAGE="http://gpa.wald.intevation.org"
-STUPID_NUM="350"
+STUPID_NUM="603"
 SRC_URI="http://wald.intevation.org/frs/download.php/${STUPID_NUM}/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.2
-	>=app-crypt/gnupg-1.2
-	>=app-crypt/gpgme-1.1.1"
+RDEPEND=">=x11-libs/gtk+-2.10.0
+	>=dev-libs/libgpg-error-1.4
+	>=dev-libs/libassuan-1.0.4
+	>=app-crypt/gnupg-2
+	>=app-crypt/gpgme-1.2.0"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.7
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-qa.patch"
+src_prepare() {
 	sed -i -e 's|gnupg/:|:|g' configure*
 }
 
-src_compile() {
-	local myconf=
+src_configure() {
+	local myconf
 
 	# By default gnupg puts gpgkeys_hkp in /usr/libexec/gnupg, so
 	# check if it is in uncommon /usr/lib/gnupg, and change libexecdir
 	# if so.  If we do not do this, hkp server types is not usable,
 	# as gpa cannot find gpgkeys_hkp ...
-	[ -f /usr/lib/gnupg/gpgkeys_hkp ] && myconf="--libexecdir=/usr/$(get_libdir)"
+	[[ -f /usr/lib/gnupg/gpgkeys_hkp ]] && myconf="--libexecdir=/usr/$(get_libdir)"
 
 	econf \
 		--with-gpgme-prefix=/usr \
+		--with-libassuan-prefix=/usr \
 		$(use_enable nls) \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 	sed -i -e 's|gnupg||g' gpadefs.h
-	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog README NEWS TODO
 }
