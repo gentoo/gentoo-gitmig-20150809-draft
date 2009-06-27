@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/klavaro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.1 2009/06/26 20:45:48 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.2 2009/06/27 09:07:54 scarabeus Exp $
+
+  27 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> klavaro-1.2.1.ebuild:
+  Add ~x86 as it works there. :]
 
 *klavaro-1.2.1 (26 Jun 2009)
 

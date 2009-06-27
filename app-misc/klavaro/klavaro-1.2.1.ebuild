@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.2.1.ebuild,v 1.1 2009/06/26 20:45:48 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-1.2.1.ebuild,v 1.2 2009/06/27 09:07:54 scarabeus Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="net-misc/curl
