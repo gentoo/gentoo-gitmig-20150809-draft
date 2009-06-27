@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/crypto++
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.48 2008/08/30 02:33:58 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/crypto++/ChangeLog,v 1.49 2009/06/27 20:09:40 arfrever Exp $
+
+*crypto++-5.6.0 (27 Jun 2009)
+
+  27 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +crypto++-5.6.0.ebuild:
+  Version bump.
 
   30 Aug 2008; Daniel Black <dragonheart@gentoo.org> metadata.xml,
   crypto++-5.5.2-r1.ebuild:
