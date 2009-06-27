@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.34 2009/06/19 17:26:25 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.35 2009/06/27 11:34:54 nirbheek Exp $
+
+*webkit-gtk-0_p40220-r1 (27 Jun 2009)
+
+  27 Jun 2009; <nirbheek@gentoo.org> +webkit-gtk-0_p40220-r1.ebuild,
+  +files/webkit-gtk-CVE-2009-0945.patch:
+  Fix bug 271861 (Array indexing vulnerability (CVE-2009-0945))
 
 *webkit-gtk-1.1.10 (19 Jun 2009)
 
