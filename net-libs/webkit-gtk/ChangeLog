@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.35 2009/06/27 11:34:54 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.36 2009/06/27 12:54:51 klausman Exp $
+
+  27 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  webkit-gtk-0_p40220-r1.ebuild:
+  Stable on alpha, bug #271861
 
 *webkit-gtk-0_p40220-r1 (27 Jun 2009)
 
