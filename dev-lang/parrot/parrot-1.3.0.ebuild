@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-1.3.0.ebuild,v 1.2 2009/06/27 17:13:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/parrot/parrot-1.3.0.ebuild,v 1.3 2009/06/27 17:20:10 patrick Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="Parrot is a virtual machine designed to efficiently compile and exe
 HOMEPAGE="http://www.parrot.org/"
 SRC_URI="ftp://ftp.parrot.org/pub/parrot/releases/devel/${PV}/${P}.tar.gz"
 
-LICENSE="|| ( Artistic GPL-2 )"
+LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="opengl nls doc examples gdbm gmp ssl unicode pcre"
