@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2841 2009/06/27 16:15:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2842 2009/06/27 18:23:29 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Jun 2009; Ben de Groot <yngwin@gentoo.org> updates/2Q-2009:
+  Please don't forget to add the category
 
   27 Jun 2009; Ben de Groot <yngwin@gentoo.org> package.mask:
   Temporary Qt 4.5.2 mask, until all ebuilds are committed
