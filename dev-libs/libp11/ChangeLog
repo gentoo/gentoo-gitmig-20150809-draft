@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.32 2009/05/25 19:01:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.33 2009/06/27 20:28:29 arfrever Exp $
+
+*libp11-0.2.5 (27 Jun 2009)
+
+  27 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -libp11-0.2.2.ebuild, -libp11-0.2.3.ebuild, +libp11-0.2.5.ebuild:
+  Version bump.
 
   25 May 2009; Brent Baude <ranger@gentoo.org> libp11-0.2.4.ebuild:
   Remarking ppc64 and ppc stable.
