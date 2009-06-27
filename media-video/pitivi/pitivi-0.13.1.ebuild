@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.13.1.ebuild,v 1.1 2009/05/31 10:27:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.13.1.ebuild,v 1.2 2009/06/27 12:39:11 hanno Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -22,6 +22,7 @@ RDEPEND=">=dev-lang/python-2.5
 	dev-python/pycairo
 	dev-python/pygoocanvas
 	net-zope/zopeinterface
+	gnome-base/librsvg
 
 	>=media-libs/gstreamer-0.10.23
 	>=dev-python/gst-python-0.10.15
