@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.450 2009/06/26 11:16:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.451 2009/06/27 10:37:09 alexxy Exp $
+
+  27 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> vlc-0.9.8a.ebuild,
+  vlc-0.9.9a-r1.ebuild, vlc-0.9.9999.ebuild, vlc-1.0.0_rc4.ebuild,
+  vlc-1.0.9999.ebuild, vlc-9999.ebuild:
+  Unrecognized config option fixed. Reportad by Daniel Pielmeier
 
   26 Jun 2009; Peter Volkov <pva@gentoo.org> vlc-0.9.8a.ebuild,
   vlc-0.9.9a-r1.ebuild, vlc-0.9.9999.ebuild, vlc-1.0.0_rc4.ebuild,

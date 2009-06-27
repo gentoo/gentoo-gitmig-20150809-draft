@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9999.ebuild,v 1.6 2009/06/26 11:16:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9999.ebuild,v 1.7 2009/06/27 10:37:09 alexxy Exp $
 
 EAPI="1"
 
@@ -341,7 +341,7 @@ src_compile () {
 		--enable-fast-install \
 		$(vlc_use_enable_force vlm vlm sout) \
 		$(vlc_use_enable_force skins skins2 qt4) \
-		$(vlc_use_enable_force remoteosd remoteosd gcrypt)
+		$(vlc_use_enable_force remoteosd remoteosd libgcrypt)
 
 	emake || die "make of VLC failed"
 }
