@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.159 2009/06/26 12:53:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.160 2009/06/27 16:45:41 scarabeus Exp $
+
+  27 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.6.ebuild:
+  Add elog informations about supported video cards and also recomend other
+  driver. Also move slot to 1 so user can still use
+  x11-drivers/ati-drivers:0 in world set and for easier masking for blocking
+  automatic update.
 
   26 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.6.ebuild:
