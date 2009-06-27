@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.3 2009/06/27 16:45:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.4 2009/06/27 16:53:18 scarabeus Exp $
 
 EAPI="1"
 
@@ -27,7 +27,7 @@ RDEPEND="
 	>=app-admin/eselect-opengl-1.0.7
 	>=sys-apps/portage-2.1.1-r1
 	sys-libs/libstdc++-v3
-	>=x11-base/xorg-server-1.5
+	>=x11-base/xorg-server-1.5.3-r7
 	x11-libs/libXrandr
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	acpi? (
@@ -138,7 +138,7 @@ pkg_setup() {
 	elog
 	elog "If your card is older then usage of ${CATEGORY}/xf86-video-ati"
 	elog "as replacement is highly recommended. Rather than staying with"
-	elog "Old versions of this driver."
+	elog "old versions of this driver."
 	einfo
 }
 
@@ -210,7 +210,6 @@ src_unpack() {
 		lib/fglrx_gamma/fglrx_gamma.c || die "include fixup failed"
 	# Add a category.
 	mv programs/fglrx_gamma/fglrx_xgamma.{man,1} || die "man mv failed"
-	cd ..
 }
 
 src_compile() {
