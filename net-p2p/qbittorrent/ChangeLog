@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.56 2009/06/13 10:50:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.57 2009/06/27 12:49:31 yngwin Exp $
+
+  27 Jun 2009; Ben de Groot <yngwin@gentoo.org> metadata.xml:
+  Add qt herd as co-maintainer
 
   13 Jun 2009; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   Remove me as maintainer, adding net-p2p, feel free to maintain this
