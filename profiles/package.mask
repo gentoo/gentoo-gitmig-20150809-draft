@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9984 2009/06/27 16:15:24 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9985 2009/06/27 19:28:38 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,25 +30,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Ben de Groot <yngwin@gentoo.org> (27 Jun 2009)
-# Mask until all ebuilds are added, to prevent partial syncing
-# triggering blocks
-=x11-libs/qt-4.5.2
-=x11-libs/qt-assistant-4.5.2
-=x11-libs/qt-core-4.5.2
-=x11-libs/qt-dbus-4.5.2
-=x11-libs/qt-demo-4.5.2
-=x11-libs/qt-gui-4.5.2
-=x11-libs/qt-opengl-4.5.2
-=x11-libs/qt-phonon-4.5.2
-=x11-libs/qt-qt3support-4.5.2
-=x11-libs/qt-script-4.5.2
-=x11-libs/qt-sql-4.5.2
-=x11-libs/qt-svg-4.5.2
-=x11-libs/qt-test-4.5.2
-=x11-libs/qt-webkit-4.5.2
-=x11-libs/qt-xmlpatterns-4.5.2
 
 # Patrick Lauer <patrick@gentoo.org> (26 Jun 2009)
 # Samba-3.3 ebuilds aren't ready for primetime yet.
