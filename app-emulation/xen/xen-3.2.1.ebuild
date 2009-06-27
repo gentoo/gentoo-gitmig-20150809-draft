@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.2.1.ebuild,v 1.2 2008/09/01 00:30:53 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-3.2.1.ebuild,v 1.3 2009/06/27 07:13:43 patrick Exp $
 
 inherit mount-boot flag-o-matic toolchain-funcs
 
@@ -84,7 +84,7 @@ src_install() {
 pkg_postinst() {
 	elog "Official Xen Guide and the unoffical wiki page:"
 	elog " http://www.gentoo.org/doc/en/xen-guide.xml"
-	elog " http://gentoo-wiki.com/HOWTO_Xen_and_Gentoo"
+	elog " http://en.gentoo-wiki.com/wiki/Xen/"
 
 	if use pae; then
 		echo
