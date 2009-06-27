@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Devel-REPL
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/ChangeLog,v 1.1 2009/06/23 07:39:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/ChangeLog,v 1.2 2009/06/27 05:58:39 robbat2 Exp $
+
+  27 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
+  Devel-REPL-1.003006.ebuild:
+  Import the plugin deps from the ebuild version in the perl overlay, else
+  Torsten will be unhappy at me again.
 
 *Devel-REPL-1.003006 (23 Jun 2009)
 

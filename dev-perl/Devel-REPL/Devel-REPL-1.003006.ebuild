@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/Devel-REPL-1.003006.ebuild,v 1.1 2009/06/23 07:39:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-REPL/Devel-REPL-1.003006.ebuild,v 1.2 2009/06/27 05:58:39 robbat2 Exp $
 
 EAPI=2
 MODULE_AUTHOR="OLIVER"
@@ -15,11 +15,29 @@ SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=dev-perl/MooseX-Object-Pluggable-0.0011
-	dev-perl/File-HomeDir
-	dev-perl/namespace-clean
+RDEPEND="
+	>=dev-perl/Moose-0.74
+	>=dev-perl/MooseX-Object-Pluggable-0.0009
 	>=dev-perl/MooseX-Getopt-0.18
-	>=dev-perl/MooseX-AttributeHelpers-0.18.01
-	dev-perl/Task-Weaken
-	dev-perl/Moose"
-RDEPEND="${DEPEND}"
+	>=dev-perl/MooseX-AttributeHelpers-0.16
+	dev-perl/namespace-clean
+	dev-perl/File-HomeDir
+	virtual/perl-File-Spec
+	virtual/perl-Term-ANSIColor
+
+	dev-perl/PPI
+	dev-perl/Data-Dump-Streamer
+	dev-perl/File-Next
+	dev-perl/B-Keywords
+	dev-perl/Lexical-Persistence
+	dev-perl/App-Nopaste
+	dev-perl/Module-Refresh
+"
+# B::Concise? => perl
+# Devel::Peek => perl
+# Term::ReadLine => perl
+
+DEPEND="
+	${RDEPEND}"
+SRC_TEST="do"
+
