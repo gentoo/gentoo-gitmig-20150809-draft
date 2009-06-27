@@ -1,13 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2839 2009/06/27 08:40:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2840 2009/06/27 08:51:05 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
 
   27 Jun 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
-  Give a reason for net-misc/tor reason
+  Give a reason for net-misc/tor masking
 
   26 Jun 2009; Patrick Lauer <patrick@gentoo.org> package.mask:
   Masking samba 3.3 until it is better tested
