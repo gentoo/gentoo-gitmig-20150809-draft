@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/unieject
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.45 2008/08/08 06:28:16 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/ChangeLog,v 1.46 2009/06/27 13:26:10 flameeyes Exp $
+
+*unieject-6 (27 Jun 2009)
+
+  27 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> +unieject-6.ebuild:
+  Version bump, the new version uses glib and has been slightly optimised.
+  It also reduces warnings with GCC 4.4 and works fine on FreeBSD 7 (no more
+  bashism in configure), closing bug #275584.
 
   08 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
