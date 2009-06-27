@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.4.5.ebuild,v 1.1 2009/06/27 07:32:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/asciidoc/asciidoc-8.4.5.ebuild,v 1.2 2009/06/27 08:23:15 patrick Exp $
 
 EAPI="2"
 
@@ -14,9 +14,11 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="examples vim-syntax doc"
 
 DEPEND=">=virtual/python-2.4
+		~app-text/docbook-xml-dtd-4.5
 		app-text/docbook-xsl-stylesheets
 		dev-libs/libxslt
 		media-gfx/graphviz"
+RDEPEND="~app-text/docbook-xml-dtd-4.5"
 
 src_prepare(){
 	if ! use vim-syntax; then
