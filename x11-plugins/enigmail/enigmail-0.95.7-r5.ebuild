@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.7-r5.ebuild,v 1.3 2009/06/27 14:13:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/enigmail/enigmail-0.95.7-r5.ebuild,v 1.4 2009/06/27 20:05:14 rich0 Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -19,7 +19,7 @@ SRC_URI="http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/${TBVE
 	mirror://gentoo/mozilla-thunderbird-${TBPATCH}.tar.bz2
 	http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz"
 
-KEYWORDS="~alpha ~amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ia64 ppc ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 LICENSE="MPL-1.1 GPL-2"
 IUSE=""
