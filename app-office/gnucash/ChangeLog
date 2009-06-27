@@ -1,6 +1,9 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.190 2009/06/11 21:35:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.191 2009/06/27 10:44:38 tove Exp $
+
+  27 Jun 2009; Torsten Veller <tove@gentoo.org> gnucash-2.3.1.ebuild:
+  Add ~alpha agin after #271285 was resolved
 
   11 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   gnucash-2.2.9-r1.ebuild:

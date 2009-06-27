@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.3.1.ebuild,v 1.1 2009/06/10 11:48:55 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.3.1.ebuild,v 1.2 2009/06/27 10:44:38 tove Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.gnucash.org/pub/gnucash/sources/unstable/2.3.x/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 IUSE="+doc ofx hbci chipcard debug quotes sqlite postgres mysql webkit"
 
