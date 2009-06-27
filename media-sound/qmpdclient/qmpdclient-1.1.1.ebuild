@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.1.ebuild,v 1.2 2009/06/26 10:16:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmpdclient/qmpdclient-1.1.1.ebuild,v 1.3 2009/06/27 08:05:13 mr_bones_ Exp $
 
 EAPI="2"
 
 inherit qt4
-
 
 DESCRIPTION="QMPDClient with NBL additions, such as lyrics' display"
 HOMEPAGE="http://bitcheese.net/wiki/QMPDClient"

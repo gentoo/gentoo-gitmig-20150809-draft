@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.2.5.ebuild,v 1.1 2009/06/26 16:13:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vmpk/vmpk-0.2.5.ebuild,v 1.2 2009/06/27 08:05:32 mr_bones_ Exp $
 
 inherit cmake-utils eutils
 
@@ -20,7 +20,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS ChangeLog NEWS README TODO"
-
 
 src_install() {
 	cmake-utils_src_install
