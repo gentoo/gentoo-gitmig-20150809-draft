@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.2.ebuild,v 1.1 2009/06/24 21:27:21 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.1.2.ebuild,v 1.2 2009/06/27 21:10:46 dertobi123 Exp $
 
 EAPI="2"
 
@@ -36,15 +36,12 @@ pkg_setup() {
 	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use perl ; then
@@ -80,7 +77,9 @@ src_compile() {
 		--sysconfdir=/etc/nagios \
 		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
 		|| die "./configure failed"
+}
 
+src_compile() {
 	emake CC=$(tc-getCC) nagios || die "make failed"
 
 	if use web ; then
