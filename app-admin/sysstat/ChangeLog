@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.139 2009/06/19 20:52:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.140 2009/06/27 12:28:30 jer Exp $
+
+  27 Jun 2009; Jeroen Roovers <jer@gentoo.org> sysstat-9.0.3-r1.ebuild:
+  Stable for HPPA (bug #274808).
 
   19 Jun 2009; Robin H. Johnson <robbat2@gentoo.org>
   files/sysstat-9.0.3-ar.patch:
