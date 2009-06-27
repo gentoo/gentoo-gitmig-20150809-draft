@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/libapreq2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.36 2009/05/26 17:47:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/ChangeLog,v 1.37 2009/06/27 16:44:41 patrick Exp $
+
+*libapreq2-2.12 (27 Jun 2009)
+
+  27 Jun 2009; Patrick Lauer <patrick@gentoo.org> +libapreq2-2.12.ebuild:
+  Bump to 2.12, fixes #275390
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   libapreq2-2.08-r2.ebuild:
