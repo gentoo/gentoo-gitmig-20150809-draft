@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.39 2009/06/27 12:37:32 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.40 2009/06/27 18:55:02 yngwin Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -13,7 +13,7 @@
 
 inherit base eutils multilib toolchain-funcs flag-o-matic versionator
 
-IUSE="${IUSE} custom-cxxflags debug pch"
+IUSE="${IUSE} debug pch"
 RDEPEND="
 	!<x11-libs/qt-assistant-${PV}
 	!>x11-libs/qt-assistant-${PV}-r9999
@@ -109,17 +109,6 @@ qt4-build_pkg_setup() {
 		echo
 		ebeep 3
 	fi
-
-	if use custom-cxxflags; then
-		echo
-		ewarn "You have set USE=custom-cxxflags, which means Qt will be built with the"
-		ewarn "CXXFLAGS you have set in /etc/make.conf. This is not supported, and we"
-		ewarn "recommend to unset this useflag. But you are free to experiment with it."
-		ewarn "Just do not start crying if it breaks your system, or eats your kitten"
-		ewarn "for breakfast. ;-) "
-		echo
-	fi
-
 }
 
 # @ECLASS-VARIABLE: QT4_TARGET_DIRECTORIES
@@ -184,12 +173,6 @@ qt4-build_src_prepare() {
 		skip_qmake_build_patch
 		skip_project_generation_patch
 		symlink_binaries_to_buildtree
-	fi
-
-	if ! use custom-cxxflags;then
-		# Don't let the user go too overboard with flags.
-		strip-flags
-		replace-flags -O3 -O2
 	fi
 
 	# Bug 178652
