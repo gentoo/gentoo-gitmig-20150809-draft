@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/anope
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.14 2009/01/04 21:23:25 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/anope/ChangeLog,v 1.15 2009/06/27 11:04:34 patrick Exp $
+
+*anope-1.8.0 (27 Jun 2009)
+
+  27 Jun 2009; Patrick Lauer <patrick@gentoo.org> +anope-1.8.0.ebuild:
+  Bump to 1.8.0 final. Fixes #274378
 
   04 Jan 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
   anope-1.8.0_rc1.ebuild:
