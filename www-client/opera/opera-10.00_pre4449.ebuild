@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4449.ebuild,v 1.1 2009/06/24 16:35:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4449.ebuild,v 1.2 2009/06/27 12:04:29 jer Exp $
 
 EAPI="2"
 
@@ -35,11 +35,11 @@ SRC_URI="
 				qt3? ( ${O_U}intel-linux/${O_P}.gcc4-static-qt3.i386.tar.bz2 )
 				!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
 			)
-		)
 			!qt-static? (
 				qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
 				!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
 			)
+		)
 	)
 	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	x86? (
