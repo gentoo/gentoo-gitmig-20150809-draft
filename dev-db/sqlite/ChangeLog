@@ -1,6 +1,16 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.256 2009/06/27 15:48:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.257 2009/06/27 21:31:00 arfrever Exp $
+
+*sqlite-3.6.16 (27 Jun 2009)
+
+  27 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -files/sandbox-fix1.patch, -files/sqlite-3.3.3-tcl-fix.patch,
+  -sqlite-3.6.12.ebuild, -sqlite-3.6.14.ebuild,
+  -files/sqlite-3-test-fix-3.3.4.patch, -sqlite-3.6.14.1.ebuild,
+  +sqlite-3.6.16.ebuild, -files/sqlite-64bit-test-fix.patch,
+  -files/sqlite-64bit-test-fix2.patch:
+  Version bump.
 
   27 Jun 2009; Brent Baude <ranger@gentoo.org> sqlite-3.6.14.2.ebuild:
   Marking sqlite-3.6.14.2 ppc64 for bug 275592
