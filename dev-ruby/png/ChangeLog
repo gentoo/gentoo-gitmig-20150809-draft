@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/png
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.2 2009/03/20 12:13:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.3 2009/06/27 11:05:42 graaff Exp $
+
+*png-1.2.0 (27 Jun 2009)
+
+  27 Jun 2009; Hans de Graaff <graaff@gentoo.org> +png-1.2.0.ebuild:
+  Version bump with many enhancements.
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
