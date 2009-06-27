@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.216 2009/06/27 13:05:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.217 2009/06/27 19:24:59 a3li Exp $
+
+  27 Jun 2009; Alex Legler <a3li@gentoo.org> tomcat-6.0.20.ebuild:
+  amd64 stable, security bug 272566.
 
   27 Jun 2009; Brent Baude <ranger@gentoo.org> tomcat-6.0.20.ebuild:
   Marking tomcat-6.0.20 ppc64 and ppc for bug 272566
