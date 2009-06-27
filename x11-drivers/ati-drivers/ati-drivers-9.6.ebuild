@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.4 2009/06/27 16:53:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.5 2009/06/27 17:52:48 scarabeus Exp $
 
 EAPI="1"
 
@@ -64,15 +64,6 @@ pkg_setup() {
 
 	if kernel_is ge 2 6 25 && linux_chkconfig_present PREEMPT_RCU; then
 		die "${P} is not compatible with RCU Preemption (bug #223281), please disable it"
-	fi
-
-	if kernel_is ge 2 6 26 && ! linux_chkconfig_present UNUSED_SYMBOLS; then
-			ewarn "You have to Enable unused/obsolete exported symbols in Kernel hacking section of kernel config for fglrx to load"
-	fi
-
-	if kernel_is ge 2 6 24 && ! linux_chkconfig_present PCI_LEGACY; then
-		eerror "${P} requires support for pci_find_slot."
-		die "${P} requires support for pci_find_slot."
 	fi
 
 	if kernel_is ge 2 6 29; then

@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.162 2009/06/27 17:41:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.163 2009/06/27 17:52:48 scarabeus Exp $
+
+  27 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.6.ebuild:
+  Remove obsolete kernel config checks per bug #275488.
 
   27 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.6.ebuild:
