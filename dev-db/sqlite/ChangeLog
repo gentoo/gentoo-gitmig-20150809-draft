@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.254 2009/06/21 00:33:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.255 2009/06/27 12:55:54 fmccor Exp $
+
+  27 Jun 2009; Ferris McCormick <fmccor@gentoo.org> sqlite-3.6.14.2.ebuild:
+  Sparc stable, Bug #275592.
 
 *sqlite-3.6.15 (21 Jun 2009)
 
