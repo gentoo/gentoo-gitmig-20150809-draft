@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libraw1394
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.48 2009/01/31 10:48:17 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.49 2009/06/28 21:20:06 patrick Exp $
+
+*libraw1394-2.0.2 (28 Jun 2009)
+
+  28 Jun 2009; Patrick Lauer <patrick@gentoo.org> +libraw1394-2.0.2.ebuild:
+  Bump to 2.0.2
 
 *libraw1394-2.0.0 (31 Jan 2009)
 
