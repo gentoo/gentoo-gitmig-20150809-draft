@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.9.ebuild,v 1.4 2009/06/28 13:54:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/pyopenssl-0.9.ebuild,v 1.5 2009/06/28 14:08:58 klausman Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/pyopenssl/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND=">=dev-libs/openssl-0.9.6g"
