@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.28 2009/03/07 20:55:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.29 2009/06/28 13:07:25 arfrever Exp $
+
+*viewvc-1.1.1 (28 Jun 2009)
+
+  28 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +viewvc-1.1.1.ebuild, metadata.xml:
+  Version bump (bug #270124).
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> -viewvc-1.0.4.ebuild,
   -viewvc-1.0.4-r1.ebuild:

@@ -9,5 +9,7 @@
 			colourize code stored in the repository</flag>
 		<flag name='mod_python'>Add <pkg>www-apache/mod_python</pkg>
 			support</flag>
+		<flag name='pygments'>Add <pkg>dev-python/pygments</pkg> support
+			for syntax highlighting</flag>
 	</use>
 </pkgmetadata>
