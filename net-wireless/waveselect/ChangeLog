@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/waveselect
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/ChangeLog,v 1.5 2008/08/24 03:33:17 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/waveselect/ChangeLog,v 1.6 2009/06/28 23:33:36 halcy0n Exp $
+
+  27 Jun 2009; Mark Loeser <halcy0n@gentoo.org> waveselect-0.1.2.ebuild,
+  +files/waveselect-0.1.2-gcc43.patch:
+  Add patch to fix compilation with gcc-4.3 by Tyler Cordrey <tcordrey AT
+  umd DOT edu>; bug #251573
 
   24 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   waveselect-0.1.2.ebuild:
