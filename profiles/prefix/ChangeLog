@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.12 2009/06/28 12:03:07 grobian Exp $
+# $Id: ChangeLog,v 1.13 2009/06/28 12:18:30 grobian Exp $
+
+  28 Jun 2009; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.4/ppc/package.mask:
+  mask hmmer-3.0_beta1, as Altivec or dummy backends are still not yet
+  implemented
 
   28 Jun 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
