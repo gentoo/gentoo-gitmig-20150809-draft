@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r1.ebuild,v 1.1 2009/05/20 03:13:15 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.12-r1.ebuild,v 1.2 2009/06/28 14:52:14 klausman Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-3 LGPL-3 FDL-1.1"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=sys-devel/gdb-6.5
