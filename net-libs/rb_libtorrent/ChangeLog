@@ -1,6 +1,25 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.58 2009/06/27 12:56:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.59 2009/06/28 00:02:56 yngwin Exp $
+
+*rb_libtorrent-0.13-r1 (27 Jun 2009)
+
+  27 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  -rb_libtorrent-0.12.1.ebuild, +rb_libtorrent-0.13-r1.ebuild,
+  -rb_libtorrent-0.13_p2335.ebuild,
+  +files/rb_libtorrent-0.13-CVE-2009-1760.patch,
+  -rb_libtorrent-0.13.1.ebuild, +files/rb_libtorrent-0.13-boost-1.37.patch,
+  +files/rb_libtorrent-0.13-gcc44.patch, -rb_libtorrent-0.14.1.ebuild,
+  -rb_libtorrent-0.14.2.ebuild:
+  Remove all older ebuilds, except for latest stable.
+  Add 0.13-r1 with the following changes:
+  - add security patch for CVE-2009-1760 (bug 273156)
+  - add patch to fix building with boost-1.37 (bug 270447)
+  - migrate to EAPI=2 and general cleanup
+  - use append-ldflags from flag-o-matic.eclass
+  - disable as-needed for now (bug 271818)
+  - add minor patch to fix compilation with gcc-4.4
+  - add doc useflag to install HTML documentation
 
   27 Jun 2009; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Add qt herd as co-maintainer, as this is a dependency of qbittorrent
