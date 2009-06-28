@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.15.ebuild,v 1.6 2009/06/28 13:51:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.8.15.ebuild,v 1.7 2009/06/28 13:56:00 klausman Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
 	ESVN_REPO_URI="http://svn.enlightenment.org/svn/e/trunk/E16/e"
 	inherit subversion
 	SRC_URI=""
-	KEYWORDS="amd64 hppa x86"
+	KEYWORDS="alpha amd64 hppa x86"
 	S=${WORKDIR}/e16/e
 else
 	SRC_URI="mirror://sourceforge/enlightenment/e16-${PV/_/-}.tar.gz"
-	KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
+	KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
 	S=${WORKDIR}/e16-${PV/_pre?}
 fi
 inherit eutils
