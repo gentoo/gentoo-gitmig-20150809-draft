@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-icculus
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.31 2008/02/29 19:22:02 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.32 2009/06/28 20:45:02 klausman Exp $
+
+  28 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  quake2-icculus-0.16.1.ebuild, quake2-icculus-0.16.1-r1.ebuild:
+  Removing keywords. See bug 275507.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   quake2-icculus-0.16.1.ebuild, quake2-icculus-0.16.1-r1.ebuild:
