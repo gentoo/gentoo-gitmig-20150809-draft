@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.21 2009/06/22 16:56:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.22 2009/06/28 13:20:52 ranger Exp $
+
+  28 Jun 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking terminal-0.2.12 ppc64 stable for bug 265587
 
   22 Jun 2009; Raúl Porcel <armin76@gentoo.org> terminal-0.2.12.ebuild:
   arm/ia64 stable wrt #265587
