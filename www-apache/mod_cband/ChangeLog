@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_cband
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/ChangeLog,v 1.12 2008/01/31 17:24:40 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_cband/ChangeLog,v 1.13 2009/06/28 11:40:26 nelchael Exp $
+
+  28 Jun 2009; Krzysiek Pawlik <nelchael@gentoo.org>
+  mod_cband-0.9.7.5.ebuild:
+  Update home page.
 
   31 Jan 2008; Benedikt Böhm <hollow@gentoo.org> files/10_mod_cband.conf:
   cleanup
