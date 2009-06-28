@@ -1,0 +1,11 @@
+# ChangeLog for app-portage/pfl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.1 2009/06/28 17:59:41 billie Exp $
+
+*pfl-1.8.1 (28 Jun 2009)
+
+  28 Jun 2009; Pielmeier Daniel <billie@gentoo.org> +metadata.xml,
+  +pfl-1.8.1.ebuild:
+  Initial import. Original ebuild by desastre, fixes by me, yngwin and damage.
+  This closes bug #253074.
+
