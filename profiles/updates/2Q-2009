@@ -66,3 +66,4 @@ slotmove media-sound/krecord 0 3.5
 move dev-perl/Module-CoreList perl-core/Module-CoreList
 slotmove dev-util/kscope 0 3.5
 slotmove =x11-drivers/ati-drivers-9.6 0 1
+slotmove kde-misc/kdmtheme 0 3.5
