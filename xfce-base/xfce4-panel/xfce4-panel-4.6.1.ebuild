@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.6.1.ebuild,v 1.7 2009/06/22 16:51:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.6.1.ebuild,v 1.8 2009/06/28 13:18:01 ranger Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ xfce4_core
 
 DESCRIPTION="Panel"
 HOMEPAGE="http://www.xfce.org/projects/xfce4-panel/"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="GPL-2 LGPL-2"
 IUSE="debug doc startup-notification"
 
