@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqbanking
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.67 2009/06/22 19:24:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/ChangeLog,v 1.68 2009/06/28 10:45:15 hanno Exp $
+
+  28 Jun 2009; Hanno Boeck <hanno@gentoo.org> aqbanking-4.0.0.ebuild,
+  +files/aqbanking-4.0.0-gcc44.diff:
+  Fix for gcc 4.4.
 
   22 Jun 2009; Hanno Boeck <hanno@gentoo.org> aqbanking-4.0.0.ebuild:
   aqbanking 4 cannot be built without hbci support.

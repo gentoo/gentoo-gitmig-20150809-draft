@@ -1,0 +1,11 @@
+--- src/frontends/qbanking/lib/widgets/qbcfgtab.h
++++ src/frontends/qbanking/lib/widgets/qbcfgtab.h
+@@ -27,7 +27,7 @@
+ class QBCfgTabPage;
+ 
+ 
+-class QBANKING_API QBCfgTab: protected QBCfgTabUi {
++class QBANKING_API QBCfgTab: public QBCfgTabUi {
+   Q_OBJECT
+ private:
+   QBanking *_qbanking;

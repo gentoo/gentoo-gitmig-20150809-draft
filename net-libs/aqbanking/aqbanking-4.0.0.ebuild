@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.0.0.ebuild,v 1.2 2009/06/22 19:24:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.0.0.ebuild,v 1.3 2009/06/28 10:45:15 hanno Exp $
 
 EAPI="2"
 
-inherit kde-functions
+inherit kde-functions eutils
 
 DESCRIPTION="Generic Online Banking Interface"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
@@ -23,6 +23,10 @@ RDEPEND="${DEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 RESTRICT="test"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc44.diff" || die "epatch failed"
+}
 
 src_configure() {
 	KDEMAJORVER="3" set-kdedir
