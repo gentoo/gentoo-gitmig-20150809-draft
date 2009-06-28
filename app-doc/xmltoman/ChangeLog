@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/xmltoman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.9 2009/06/28 13:30:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/xmltoman/ChangeLog,v 1.10 2009/06/28 13:34:38 swegener Exp $
+
+*xmltoman-0.4 (28 Jun 2009)
+
+  28 Jun 2009; Sven Wegener <swegener@gentoo.org> +xmltoman-0.4.ebuild:
+  Version bump.
 
   28 Jun 2009; Sven Wegener <swegener@gentoo.org> xmltoman-0.3.ebuild:
   Update HOMEPAGE and SRC_URI.
