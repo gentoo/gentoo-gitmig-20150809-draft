@@ -1,0 +1,11 @@
+--- certmanager/lib/backends/qgpgme/qgpgmebackend.cpp
++++ certmanager/lib/backends/qgpgme/qgpgmebackend.cpp
+@@ -54,7 +54,7 @@
+     mOpenPGPProtocol( 0 ),
+     mSMIMEProtocol( 0 )
+ {
+-
++  GpgME::initializeLibrary();
+ }
+ 
+ Kleo::QGpgMEBackend::~QGpgMEBackend() {
