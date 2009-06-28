@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagstamon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.4 2009/05/15 16:14:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/ChangeLog,v 1.5 2009/06/28 08:54:16 dertobi123 Exp $
+
+*nagstamon-0.8.0 (28 Jun 2009)
+
+  28 Jun 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  -nagstamon-0.7.0.ebuild, -files/nagstamon-0.7.0-sharedir.patch,
+  +nagstamon-0.8.0.ebuild, +files/nagstamon-0.8.0-sharedir.patch:
+  Version bump
 
 *nagstamon-0.7.0 (15 May 2009)
 
