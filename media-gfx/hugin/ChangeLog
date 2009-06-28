@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.66 2009/06/27 12:20:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.67 2009/06/28 22:33:59 dev-zero Exp $
+
+  28 Jun 2009; Tiziano Müller <dev-zero@gentoo.org> hugin-0.8.0_rc4.ebuild,
+  +files/hugin-0.8.0_rc4-use_system_cmake_findboost.patch:
+  Added patch to make it build with recent boost versions. Removed now
+  unnecessary patch from stack. Added missing exiftool dependency.
 
 *hugin-0.8.0_rc4 (27 Jun 2009)
 

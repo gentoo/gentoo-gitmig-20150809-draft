@@ -1,0 +1,116 @@
+diff -Naur hugin-0.8.0.orig/CMakeLists.txt hugin-0.8.0/CMakeLists.txt
+--- hugin-0.8.0.orig/CMakeLists.txt	2009-06-29 00:09:44.091649435 +0200
++++ hugin-0.8.0/CMakeLists.txt	2009-06-29 00:10:23.898439132 +0200
+@@ -89,8 +89,6 @@
+   # create the cache entry
+   SET( SOURCE_BASE_DIR ${work} CACHE FILEPATH "parent dir of hugin source root" )
+ 
+-  # search boost there
+-  SET(BOOST_DIR_SEARCH_USER ${SOURCE_BASE_DIR})
+   # wxWidgets
+   SET(wxWidgets_ROOT_DIR ${SOURCE_BASE_DIR}/wxWidgets-2.8.10)
+   # GLEW moved to FildGLEW.cmake module
+@@ -179,11 +177,10 @@
+ ## Boost
+ ##
+ 
+-SET(Boost_LIB_SUFFIX_DEBUG gd)
+-FIND_PACKAGE(Boost REQUIRED thread)
+-IF (NOT Boost_thread_FOUND)
+-  MESSAGE(FATAL_ERROR "boost thread library not found. If it is installed with a\nunrecognized suffix, specify it with -DBoost_LIB_SUFFIX=<suffix>")
+-ENDIF (NOT Boost_thread_FOUND)
++FIND_PACKAGE(Boost COMPONENTS thread)
++IF (NOT Boost_FOUND)
++  MESSAGE(FATAL_ERROR "boost thread library not found. If it is installed with a\nunrecognized suffix, specify it with -DBOOST_LIBRARYDIR=<librarydir> and -DBOOST_INCLUDEDIR=<includedir>")
++ENDIF (NOT Boost_FOUND)
+ 
+ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
+ LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
+diff -Naur hugin-0.8.0.orig/src/CMakeLists.txt hugin-0.8.0/src/CMakeLists.txt
+--- hugin-0.8.0.orig/src/CMakeLists.txt	2009-06-29 00:09:44.024975006 +0200
++++ hugin-0.8.0/src/CMakeLists.txt	2009-06-29 00:11:03.751660063 +0200
+@@ -15,11 +15,11 @@
+   IF(LAPACK_FOUND)
+     # need to specify boost thread library
+     set(common_libs huginbase
+-        ${Boost_thread_LIBRARIES} ${PANO_LIBRARIES} ${LAPACK_LIBRARIES} huginlevmar)
++        ${Boost_LIBRARIES} ${PANO_LIBRARIES} ${LAPACK_LIBRARIES} huginlevmar)
+   ELSE(LAPACK_FOUND)
+     # need to specify boost thread library
+     set(common_libs huginbase 
+-        ${Boost_thread_LIBRARIES} ${PANO_LIBRARIES} huginlevmar)
++        ${Boost_LIBRARIES} ${PANO_LIBRARIES} huginlevmar)
+   ENDIF(LAPACK_FOUND)
+ ENDIF (MSVC)
+ 
+diff -Naur hugin-0.8.0.orig/src/CMakeLists.txt.orig hugin-0.8.0/src/CMakeLists.txt.orig
+--- hugin-0.8.0.orig/src/CMakeLists.txt.orig	1970-01-01 01:00:00.000000000 +0100
++++ hugin-0.8.0/src/CMakeLists.txt.orig	2009-06-17 19:48:37.000000000 +0200
+@@ -0,0 +1,56 @@
++
++# define common sets of libraries, used by different subdirectories
++IF (MSVC)
++  IF(LAPACK_FOUND)
++    # boost_thread is linked automatically
++    # additionally link to our getopt
++    set(common_libs huginbase hugingetopt
++        ${PANO_LIBRARIES} ${LAPACK_LIBRARIES} huginlevmar)
++  ELSE(LAPACK_FOUND)
++    set(common_libs huginbase hugingetopt
++        ${PANO_LIBRARIES} huginlevmar)
++  ENDIF(LAPACK_FOUND)
++  include_directories( ${CMAKE_SOURCE_DIR}/src/foreign/getopt/include )
++ELSE (MSVC)
++  IF(LAPACK_FOUND)
++    # need to specify boost thread library
++    set(common_libs huginbase
++        ${Boost_thread_LIBRARIES} ${PANO_LIBRARIES} ${LAPACK_LIBRARIES} huginlevmar)
++  ELSE(LAPACK_FOUND)
++    # need to specify boost thread library
++    set(common_libs huginbase 
++        ${Boost_thread_LIBRARIES} ${PANO_LIBRARIES} huginlevmar)
++  ENDIF(LAPACK_FOUND)
++ENDIF (MSVC)
++
++set(image_libs huginvigraimpex ${OPENEXR_LIBRARIES} ${JPEG_LIBRARIES} ${TIFF_LIBRARIES}
++    ${PNG_LIBRARIES} ${ZLIB_LIBRARIES} ${EXIV2_LIBRARIES})
++
++add_subdirectory(celeste)
++add_subdirectory(foreign)
++add_subdirectory(hugin_base)
++add_subdirectory(tools)
++add_subdirectory(matchpoint)
++add_subdirectory(deghosting)
++
++# build vips stuff, only if vips was found
++# not ready for the general public yet
++IF(VIPS_FOUND)
++#  add_subdirectory(vips)
++ENDIF(VIPS_FOUND)
++
++# build gui only if wxWidgets was found
++IF(wxWidgets_FOUND)
++  INCLUDE(${wxWidgets_USE_FILE})
++  add_subdirectory(hugin1)
++
++  include_directories( ${CMAKE_SOURCE_DIR}/src/hugin1 )
++  # do we need to define _UNICODE on windows?
++  IF(WIN32)
++    IF ("${wxWidgets_CONFIGURATION}" STREQUAL "mswu")
++      ADD_DEFINITIONS("-D_UNICODE")
++    ENDIF("${wxWidgets_CONFIGURATION}" STREQUAL "mswu")
++  ENDIF(WIN32)
++ENDIF(wxWidgets_FOUND)
++
++add_subdirectory(translations)
+diff -Naur hugin-0.8.0.orig/src/hugin_base/CMakeLists.txt hugin-0.8.0/src/hugin_base/CMakeLists.txt
+--- hugin-0.8.0.orig/src/hugin_base/CMakeLists.txt	2009-06-29 00:13:41.115785087 +0200
++++ hugin-0.8.0/src/hugin_base/CMakeLists.txt	2009-06-29 00:10:23.901636391 +0200
+@@ -58,6 +58,7 @@
+ 
+ IF (${HUGIN_SHARED_LIBS})
+   add_library(huginbase SHARED ${HUGIN_BASE_SRC})
++  target_link_libraries(huginbase ${Boost_LIBRARIES})
+   set_target_properties(huginbase PROPERTIES VERSION ${HUGIN_LIB_VERSION})
+   install(TARGETS huginbase DESTINATION ${LIBDIR})
+ ELSE (${HUGIN_SHARED_LIBS})
