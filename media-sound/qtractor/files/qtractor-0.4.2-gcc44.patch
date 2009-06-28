@@ -1,5 +1,5 @@
 https://bugs.gentoo.org/show_bug.cgi?id=274168
-Upstream status: mailed 28/06/2009
+Upstream status: mailed 28/06/2009, merged 28/06/2009
 
 Index: src/qtractorAudioVorbisFile.cpp
 ===================================================================
