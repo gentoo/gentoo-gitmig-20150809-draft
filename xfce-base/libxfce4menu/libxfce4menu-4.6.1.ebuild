@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4menu/libxfce4menu-4.6.1.ebuild,v 1.8 2009/06/22 16:47:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4menu/libxfce4menu-4.6.1.ebuild,v 1.9 2009/06/28 13:16:21 ranger Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ xfce4_core
 
 DESCRIPTION="Desktop menu library"
 HOMEPAGE="http://www.xfce.org/projects/libraries"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="LGPL-2 FDL-1.1"
 IUSE="debug doc"
 
