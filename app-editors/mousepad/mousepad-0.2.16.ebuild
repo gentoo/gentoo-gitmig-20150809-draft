@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/mousepad-0.2.16.ebuild,v 1.7 2009/06/22 16:52:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mousepad/mousepad-0.2.16.ebuild,v 1.8 2009/06/28 13:18:24 ranger Exp $
 
 EAPI=1
 
@@ -12,7 +12,7 @@ xfce4_core
 
 DESCRIPTION="Text editor"
 HOMEPAGE="http://www.xfce.org/projects/mousepad/"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=x11-libs/gtk+-2.6:2
