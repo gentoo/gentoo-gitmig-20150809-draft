@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.69 2009/06/15 03:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.70 2009/06/28 11:06:21 arfrever Exp $
+
+*pcsc-lite-1.5.4 (28 Jun 2009)
+
+  28 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -pcsc-lite-1.4.2.ebuild, -pcsc-lite-1.4.4.ebuild,
+  -pcsc-lite-1.4.99.ebuild, -pcsc-lite-1.4.102.ebuild,
+  -pcsc-lite-1.5.2.ebuild, +pcsc-lite-1.5.4.ebuild:
+  Version bump.
 
   15 Jun 2009; Jeroen Roovers <jer@gentoo.org> pcsc-lite-1.5.3.ebuild:
   Stable for HPPA (bug #271911).
