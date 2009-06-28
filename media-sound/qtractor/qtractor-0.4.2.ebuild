@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.4.2.ebuild,v 1.1 2009/06/17 05:56:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qtractor/qtractor-0.4.2.ebuild,v 1.2 2009/06/28 13:27:00 aballier Exp $
 
 EAPI=2
 
@@ -29,6 +29,10 @@ RDEPEND="|| ( ( x11-libs/qt-core x11-libs/qt-gui )
 	rubberband? ( media-libs/rubberband )
 	vorbis? ( media-libs/libvorbis )"
 DEPEND="${RDEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc44.patch"
+}
 
 src_configure() {
 	econf \

@@ -1,0 +1,33 @@
+https://bugs.gentoo.org/show_bug.cgi?id=274168
+Upstream status: mailed 28/06/2009
+
+Index: src/qtractorAudioVorbisFile.cpp
+===================================================================
+RCS file: /cvsroot/qtractor/qtractor/src/qtractorAudioVorbisFile.cpp,v
+retrieving revision 1.13
+diff -u -B -r1.13 qtractorAudioVorbisFile.cpp
+--- src/qtractorAudioVorbisFile.cpp	27 May 2009 10:54:33 -0000	1.13
++++ src/qtractorAudioVorbisFile.cpp	28 Jun 2009 13:01:47 -0000
+@@ -27,6 +27,7 @@
+ #endif
+ 
+ #include <stdlib.h>
++#include <cstdio>
+ 
+ 
+ //----------------------------------------------------------------------
+Index: src/qtractorInstrument.cpp
+===================================================================
+RCS file: /cvsroot/qtractor/qtractor/src/qtractorInstrument.cpp,v
+retrieving revision 1.10
+diff -u -B -r1.10 qtractorInstrument.cpp
+--- src/qtractorInstrument.cpp	14 Jun 2009 13:09:21 -0000	1.10
++++ src/qtractorInstrument.cpp	28 Jun 2009 13:01:47 -0000
+@@ -26,6 +26,7 @@
+ #include <QTextStream>
+ #include <QRegExp>
+ #include <QDate>
++#include <cstdlib>
+ 
+ 
+ //----------------------------------------------------------------------
