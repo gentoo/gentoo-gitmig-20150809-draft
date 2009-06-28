@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gtkimageview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.4 2009/06/12 19:31:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.5 2009/06/28 18:00:11 eva Exp $
+
+  28 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gtkimageview-1.6.4.ebuild:
+  Fix build with USE=doc, bug #273958. Move gnome-common to DEPEND, add die
+  messages, strip G_DISABLE* to prevent build failures.
 
   12 Jun 2009; Markus Meier <maekke@gentoo.org> gtkimageview-1.6.4.ebuild:
   do not use -Werror during build wrt bug #272301
