@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.5.9.ebuild,v 1.1 2008/10/29 22:11:07 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.3.ebuild,v 1.1 2009/06/28 02:39:13 serkan Exp $
 
 inherit gnome2 cmake-utils
 
@@ -11,12 +11,12 @@ SRC_URI="http://gnome-menu-file-browser-applet.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="gtkhotkey"
 
-RDEPEND=">=x11-libs/gtk+-2.12
+RDEPEND=">=x11-libs/gtk+-2.14
 	>=gnome-base/gnome-panel-2.0
-	>=gnome-base/libglade-2.0
-	>=dev-libs/glib-2.16"
+	>=dev-libs/glib-2.16
+	gtkhotkey? ( x11-libs/gtkhotkey )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -24,6 +24,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	mycmakeargs="${mycmakeargs} -DCMAKE_INSTALL_GCONF_SCHEMA_DIR=/etc/gconf/schemas"
+	mycmakeargs="${mycmakeargs} $(cmake-utils_use_enable gtkhotkey GTK_HOTKEY)"
 	cmake-utils_src_compile
 }
 
@@ -31,5 +32,5 @@ src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	cmake-utils_src_install
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
-	dodoc HISTORY README
+	dodoc HISTORY README || die "dodoc failed"
 }

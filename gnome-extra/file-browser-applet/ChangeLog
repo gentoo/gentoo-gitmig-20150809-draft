@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/file-browser-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/ChangeLog,v 1.11 2009/04/20 20:30:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/ChangeLog,v 1.12 2009/06/28 02:39:13 serkan Exp $
+
+*file-browser-applet-0.6.3 (28 Jun 2009)
+
+  28 Jun 2009; Serkan Kaba <serkan@gentoo.org>
+  -file-browser-applet-0.5.9.ebuild, -file-browser-applet-0.6.1.ebuild,
+  +file-browser-applet-0.6.3.ebuild:
+  Version bump. Remove old.
 
   20 Apr 2009; Markus Meier <maekke@gentoo.org>
   file-browser-applet-0.6.0-r1:
