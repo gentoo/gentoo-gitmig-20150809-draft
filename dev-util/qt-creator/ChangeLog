@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.17 2009/06/28 00:18:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.18 2009/06/28 17:06:24 hwoarang Exp $
+
+*qt-creator-1.2.0-r1 (28 Jun 2009)
+
+  28 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +qt-creator-1.2.0-r1.ebuild:
+  remove broken sed, fix multilib support using a more clean way. Thanks to
+  Davide Pesavento for all the help
 
 *qt-creator-1.2.0 (28 Jun 2009)
 
