@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/tsocks
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.29 2009/06/20 12:03:13 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/tsocks/ChangeLog,v 1.30 2009/06/28 12:45:13 maekke Exp $
+
+  28 Jun 2009; Markus Meier <maekke@gentoo.org> tsocks-1.8_beta5-r5.ebuild:
+  amd64/x86 stable, bug #274790
 
 *tsocks-1.8_beta5-r5 (20 Jun 2009)
 
