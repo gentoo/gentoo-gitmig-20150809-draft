@@ -1,9 +1,12 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.354 2009/06/27 12:04:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.355 2009/06/28 14:11:04 jer Exp $
+
+  28 Jun 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4453.ebuild:
+  Fix amd64 SRC_URI (patch by Jouni Rinne, bug #275629).
 
   27 Jun 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4449.ebuild:
-  Fix amd64 dependency (patch by Jouni Rinne, bug #275319).
+  Fix amd64 SRC_URI (patch by Jouni Rinne, bug #275319).
 
 *opera-10.00_pre4453 (26 Jun 2009)
 
