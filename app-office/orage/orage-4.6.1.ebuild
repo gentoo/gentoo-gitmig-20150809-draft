@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.6.1.ebuild,v 1.6 2009/06/22 16:53:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/orage/orage-4.6.1.ebuild,v 1.7 2009/06/28 13:19:02 ranger Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ xfce4_core
 
 DESCRIPTION="Calendar suite for Xfce4"
 HOMEPAGE="http://www.xfce.org/projects/orage/"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="berkdb dbus debug libnotify"
 
 RDEPEND=">=dev-libs/glib-2.6:2
