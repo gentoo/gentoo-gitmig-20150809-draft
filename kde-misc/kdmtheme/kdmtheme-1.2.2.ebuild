@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/kdmtheme-1.2.2.ebuild,v 1.4 2008/01/07 14:51:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdmtheme/kdmtheme-1.2.2.ebuild,v 1.5 2009/06/28 11:59:23 tampakrap Exp $
 
 inherit kde
 
@@ -13,6 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc x86"
 
 IUSE=""
-SLOT="0"
+SLOT="3.5"
 
 need-kde 3.5
