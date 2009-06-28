@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/acovea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.17 2009/06/03 07:27:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/acovea/ChangeLog,v 1.18 2009/06/28 22:52:34 patrick Exp $
+
+  28 Jun 2009; Patrick Lauer <patrick@gentoo.org> acovea-5.1.1.ebuild,
+  +files/acovea-5.1.1-gcc44.patch:
+  Adding gcc 4.4 compile fix by Victor Ostorga. Closes #272625
 
   03 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> acovea-5.1.1.ebuild:
   Request automake 1.9 otherwise eautomake fails.
