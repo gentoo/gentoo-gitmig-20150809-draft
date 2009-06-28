@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2g.ebuild,v 1.1 2009/06/28 11:41:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.2g.ebuild,v 1.2 2009/06/28 22:11:08 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -35,7 +35,7 @@ pkg_setup() {
 		USE_KBUILD=y MODINST=n RUNDM=n"
 	use keyscrub && BUILD_PARAMS="${BUILD_PARAMS} KEYSCRUB=y"
 	use padlock && BUILD_PARAMS="${BUILD_PARAMS} PADLOCK=y"
-	
+
 	if use extra-ciphers; then
 		MODULE_NAMES="${MODULE_NAMES}
 			loop_blowfish(block::tmp-d-kbuild)
