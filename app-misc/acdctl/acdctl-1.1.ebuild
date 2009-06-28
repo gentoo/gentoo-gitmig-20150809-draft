@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/acdctl/acdctl-1.1.ebuild,v 1.4 2005/09/29 16:24:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/acdctl/acdctl-1.1.ebuild,v 1.5 2009/06/28 18:03:43 patrick Exp $
+
+EAPI="2"
 
 DESCRIPTION="Apple Cinema Display Control"
 HOMEPAGE="http://www.technocage.com/~caskey/acdctl/"
@@ -9,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ppc"
 IUSE=""
-DEPEND="dev-libs/libusb"
+DEPEND="dev-libs/libusb:0"
 
 src_install() {
 	dobin acdctl
