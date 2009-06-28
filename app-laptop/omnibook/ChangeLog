@@ -1,6 +1,14 @@
 # ChangeLog for app-laptop/omnibook
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.22 2008/04/06 08:50:37 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/omnibook/ChangeLog,v 1.23 2009/06/28 15:22:23 hwoarang Exp $
+
+*omnibook-20090628 (28 Jun 2009)
+
+  28 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  -omnibook-20070211.ebuild, +omnibook-20090628.ebuild,
+  +files/remove_owner.patch, metadata.xml:
+  I am taking over this package. Remove old ebuild, bump snapshot (rev 280),
+  include patch to compile in new kernels ( >=2.6.29 )
 
 *omnibook-20080125 (06 Apr 2008)
 
