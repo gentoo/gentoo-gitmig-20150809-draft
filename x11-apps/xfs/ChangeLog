@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.62 2009/06/20 10:22:24 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.63 2009/06/28 17:56:55 remi Exp $
+
+*xfs-1.1.0-r1 (28 Jun 2009)
+
+  28 Jun 2009; Rémi Cardona <remi@gentoo.org> +xfs-1.1.0-r1.ebuild:
+  fix docs build error, add syslog and xinted USE flags (fixes bug #274925,
+  patch by idl0r)
 
 *xfs-1.1.0 (20 Jun 2009)
 
