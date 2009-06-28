@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.2.ebuild,v 1.1 2009/06/23 12:45:25 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.2.ebuild,v 1.2 2009/06/28 17:12:16 patrick Exp $
 
 EAPI=2
 inherit eutils linux-info autotools
@@ -18,6 +18,7 @@ IUSE="caps cisco curl debug ldap nat smartcard static xml"
 
 COMMON_DEPEND="!net-misc/openswan
 	dev-libs/gmp
+	dev-libs/libgcrypt
 	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
