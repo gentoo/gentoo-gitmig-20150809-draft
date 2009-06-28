@@ -8,5 +8,6 @@
   </maintainer>
   <use>
     <flag name='clock'>Enable clock screen</flag>
+	<flag name='outputs'>Enable outputs screen</flag>
   </use>
 </pkgmetadata>
