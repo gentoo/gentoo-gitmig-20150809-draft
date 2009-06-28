@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1.ebuild,v 1.7 2009/06/22 16:48:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1.ebuild,v 1.8 2009/06/28 13:16:46 ranger Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ inherit xfce4
 xfce4_core
 
 DESCRIPTION="Xfce configuration daemon and utilities"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ~ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="debug doc -perl"
 
 RDEPEND=">=dev-libs/dbus-glib-0.72
