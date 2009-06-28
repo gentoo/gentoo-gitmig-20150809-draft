@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.148 2009/06/27 10:48:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.149 2009/06/28 12:18:43 maekke Exp $
+
+  28 Jun 2009; Markus Meier <maekke@gentoo.org> avidemux-2.4.4-r2.ebuild:
+  amd64 stable, bug #272842
 
   27 Jun 2009; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.4-r1.ebuild,
   avidemux-2.4.4-r2.ebuild, +files/avidemux-2.4-ts-cmake.patch:
