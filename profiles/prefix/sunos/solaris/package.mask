@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.2 2009/06/20 10:26:19 grobian Exp $
-# $Id: package.mask,v 1.2 2009/06/20 10:26:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.3 2009/06/28 12:03:07 grobian Exp $
+# $Id: package.mask,v 1.3 2009/06/28 12:03:07 grobian Exp $
 
-# Fabian Groffen <grobian@gentoo.org> (17 Mar 2009)
-# segfaults during install, seems to suffer from race conditions, bug #270053
-=dev-lang/ruby-1.8.6_p368
+# Fabian Groffen <grobian@gentoo.org> (28 Jun 2009)
+# undefined reference to `Rule::Cache::PR_PNGAuto'
+=media-gfx/sam2p-0.46
 
 # Fabian Groffen <grobian@gentoo.org> (14 Mar 2009)
 # Fedora Linux cruft, doesn't compile, let's fix the patches once they
