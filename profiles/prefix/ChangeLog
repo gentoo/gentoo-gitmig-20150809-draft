@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.13 2009/06/28 12:18:30 grobian Exp $
+# $Id: ChangeLog,v 1.14 2009/06/28 15:16:07 grobian Exp $
+
+  28 Jun 2009; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/package.mask:
+  Removed gconf masks, I fixed the issue
 
   28 Jun 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.4/ppc/package.mask:
