@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/xfwm4-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.17 2009/06/22 16:58:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/xfwm4-themes/ChangeLog,v 1.18 2009/06/28 13:22:14 ranger Exp $
+
+  28 Jun 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
+  Marking xfwm4-themes-4.6.0 ppc64 stable for bug 265587
 
   22 Jun 2009; Raúl Porcel <armin76@gentoo.org> xfwm4-themes-4.6.0.ebuild:
   arm/ia64 stable wrt #265587
