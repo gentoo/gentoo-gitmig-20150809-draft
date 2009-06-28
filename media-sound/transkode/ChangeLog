@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/transkode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.19 2009/06/19 18:45:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.20 2009/06/28 12:21:05 maekke Exp $
+
+  28 Jun 2009; Markus Meier <maekke@gentoo.org> transkode-0.7-r2.ebuild:
+  amd64/x86 stable, bug #274732
 
   19 Jun 2009; Samuli Suominen <ssuominen@gentoo.org>
   -files/transkode-0.6+gcc-4.3.patch,
