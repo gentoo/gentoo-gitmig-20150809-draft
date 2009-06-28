@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.4-r1.ebuild,v 1.11 2009/04/05 21:27:04 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.8.4-r1.ebuild,v 1.12 2009/06/28 19:09:20 mrpouet Exp $
 
 EAPI="2"
 
-inherit gnome2 flag-o-matic python
+inherit gnome2 flag-o-matic python autotools
 
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
@@ -73,6 +73,10 @@ pkg_setup() {
 src_prepare() {
 	# Fix for CVE-2009-0318, bug #257012
 	epatch "${FILESDIR}/${P}-CVE-2009-0318.patch"
+
+	# Fix #275352 (the sed expression didn't work !)
+	intltoolize --automake --copy --force || die "intltoolize failed"
+	eautoreconf
 }
 
 src_install() {
