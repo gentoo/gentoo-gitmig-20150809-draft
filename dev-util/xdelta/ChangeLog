@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/xdelta
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.39 2008/09/04 19:27:45 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.40 2009/06/28 17:49:40 patrick Exp $
+
+*xdelta-3.0v (28 Jun 2009)
+
+  28 Jun 2009; Patrick Lauer <patrick@gentoo.org> +xdelta-3.0v.ebuild:
+  Bump to 3.0v (actually v2), small changes in emake call to fix tests
+  failing #272775
 
 *xdelta-1.1.4-r1 (04 Sep 2008)
 
