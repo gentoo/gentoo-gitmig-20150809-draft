@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.4.1.ebuild,v 1.1 2009/02/15 19:46:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/isight-firmware-tools-1.4.2.ebuild,v 1.1 2009/06/28 21:18:41 eva Exp $
+
+EAPI="2"
+WANT_AUTOMAKE="1.10"
 
 inherit autotools eutils multilib versionator
 
@@ -15,37 +18,36 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.14
-	dev-libs/libusb
+	virtual/libusb:0
 	dev-libs/libgcrypt"
-#	>=sys-apps/hal-0.5.9"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.5
 	sys-apps/texinfo"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Fix forced as-needed build, bug #247904
 	epatch "${FILESDIR}/${PN}-1.2-ift-ldadd.patch"
+
+	# Fix build without hal, bug #259015
+	epatch "${FILESDIR}/${PN}-1.4.2-hal-disable.patch"
 
 	sed "s:/lib/firmware:/$(get_libdir)/firmware:" \
 		-i src/isight.rules.in.in || die "sed failed"
 
-	eautomake
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	# https://bugs.launchpad.net/isight-firmware-tools/+bug/243255
 	econf --enable-udev --disable-hal --docdir="${ROOT}/usr/share/doc/${P}"
-	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	mv "${D}"/etc/udev/rules.d/isight.rules "${D}"/etc/udev/rules.d/70-isight.rules
 	rm -f "${D}/usr/share/doc/${P}/HOWTO"
-	dodoc AUTHORS ChangeLog HOWTO NEWS README
+	dodoc AUTHORS ChangeLog HOWTO NEWS README || die "dodoc failed"
 }
 
 pkg_postinst() {

@@ -1,6 +1,15 @@
 # ChangeLog for media-video/isight-firmware-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.8 2009/02/15 19:46:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/isight-firmware-tools/ChangeLog,v 1.9 2009/06/28 21:18:41 eva Exp $
+
+*isight-firmware-tools-1.4.2 (28 Jun 2009)
+
+  28 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -isight-firmware-tools-1.2-r1.ebuild, -isight-firmware-tools-1.4.1.ebuild,
+  +isight-firmware-tools-1.4.2.ebuild,
+  +files/isight-firmware-tools-1.4.2-hal-disable.patch:
+  Bump to 1.4.2. Make it buildable without hal installed, bug #259015. Use
+  virtual/libusb:0, bug #270039.
 
 *isight-firmware-tools-1.4.1 (15 Feb 2009)
 
