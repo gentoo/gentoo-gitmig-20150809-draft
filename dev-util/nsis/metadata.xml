@@ -22,6 +22,5 @@ software components, install or update shared components and more.
 </longdescription>
   <use>
     <flag name="config-log">Enable the logging facility (useful in debugging installers)</flag>
-    <flag name="prebuilt-system">Use the pre-compiled System.dll from the release to workaround the System::Call issue under GCC</flag>
   </use>
 </pkgmetadata>
