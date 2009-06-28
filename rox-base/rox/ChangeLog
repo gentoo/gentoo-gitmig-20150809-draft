@@ -1,6 +1,9 @@
 # ChangeLog for rox-base/rox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.69 2009/06/03 17:43:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/ChangeLog,v 1.70 2009/06/28 15:07:07 klausman Exp $
+
+  28 Jun 2009; Tobias Klausmann <klausman@gentoo.org> rox-2.9.ebuild:
+  Stable on alpha, bug #275392
 
   03 Jun 2009; Tobias Klausmann <klausman@gentoo.org> rox-2.8-r1.ebuild:
   Stable on alpha, bug #270738
