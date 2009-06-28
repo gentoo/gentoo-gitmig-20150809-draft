@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.41 2009/04/18 12:42:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.42 2009/06/28 11:41:36 arfrever Exp $
+
+*loop-aes-3.2g (28 Jun 2009)
+
+  28 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -loop-aes-3.2c.ebuild, +loop-aes-3.2g.ebuild, metadata.xml:
+  Version bump. Add extra ciphers (bug #275142).
 
   18 Apr 2009; Markus Meier <maekke@gentoo.org> loop-aes-3.2e:
   amd64/x86 stable, bug #264994
