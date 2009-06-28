@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.5.ebuild,v 1.2 2009/06/20 07:47:55 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.5.ebuild,v 1.3 2009/06/28 08:58:12 patrick Exp $
 
 EAPI=2
 
@@ -57,6 +57,8 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-parallel-make.patch"
 	epatch "${FILESDIR}/${P}-dbus-configure-fix.patch"
 	epatch "${FILESDIR}/${P}-qt-fixup.patch"
+	# glibc 2.10 fix
+	epatch "${FILESDIR}/${P}-glibc.patch"
 	eautoreconf || die "eautoreconf failed"
 }
 
