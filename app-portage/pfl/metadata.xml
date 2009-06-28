@@ -11,6 +11,6 @@
 		<description>Upstream author, please CC on bugs</description>
 	</maintainer>
 	<use>
-		<flag name='network-cron'>weekly submit of the package database</flag>
+		<flag name='network-cron'>Adds a cron job which does a weekly submit of the package database</flag>
 	</use>
 </pkgmetadata>
