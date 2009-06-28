@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r1.ebuild,v 1.3 2008/01/05 14:19:04 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rioutil/rioutil-1.5.0-r1.ebuild,v 1.4 2009/06/28 18:01:02 patrick Exp $
+
+EAPI="2"
 
 inherit multilib
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="dev-libs/libusb"
+DEPEND="dev-libs/libusb:0"
 
 src_install() {
 	emake DESTDIR="${D}" libdir="/usr/$(get_libdir)" \
