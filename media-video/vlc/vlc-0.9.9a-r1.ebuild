@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9a-r1.ebuild,v 1.3 2009/06/27 10:37:09 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9a-r1.ebuild,v 1.4 2009/06/28 19:33:36 pva Exp $
 
 EAPI="1"
 
@@ -47,8 +47,8 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddax cddb cdio dbus dc1394
-	debug dirac directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac fontconfig ggi gnome gnutls hal httpd
-	id3tag jack kate libass libcaca +gcrypt libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
+	debug dirac directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac fontconfig +gcrypt ggi gnome gnutls hal httpd
+	id3tag jack kate libass libcaca libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
 	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
 	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs
@@ -83,6 +83,7 @@ RDEPEND="
 			>=media-libs/flac-1.1.2 )
 		fluidsynth? ( media-sound/fluidsynth )
 		fontconfig? ( media-libs/fontconfig )
+		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		ggi? ( media-libs/libggi )
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.3.3 )
@@ -93,7 +94,6 @@ RDEPEND="
 		kate? ( >=media-libs/libkate-0.1.1 )
 		libass? ( >=media-libs/libass-0.9.5 media-libs/fontconfig )
 		libcaca? ( media-libs/libcaca )
-		gcrypt? ( >=dev-libs/libgcrypt-1.2.0 )
 		libnotify? ( x11-libs/libnotify )
 		libsysfs? ( sys-fs/sysfsutils )
 		lirc? ( app-misc/lirc )
