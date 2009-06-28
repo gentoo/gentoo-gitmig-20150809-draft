@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.35.ebuild,v 1.1 2009/06/25 18:18:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.35.ebuild,v 1.2 2009/06/28 16:46:15 patrick Exp $
 
 inherit autotools eutils pam python multilib versionator confutils
 
@@ -132,11 +132,11 @@ src_compile() {
 		$(use_with winbind) \
 		${myconf} ${mylangs} ${mymod_shared}
 
-	emake proto || die "emake proto failed"
-	emake everything || die "emake everything failed"
+	emake -j1 proto || die "emake proto failed"
+	emake -j1 everything || die "emake everything failed"
 
 	if use python ; then
-		emake python_ext || die "emake python_ext failed"
+		emake -j1 python_ext || die "emake python_ext failed"
 	fi
 
 	if use oav ; then
@@ -153,7 +153,7 @@ src_compile() {
 			--with-filetype \
 			--with-fileregexp \
 			$(use_enable debug)
-		emake || die "emake oav plugins failed"
+		emake -j1 || die "emake oav plugins failed"
 	fi
 }
 

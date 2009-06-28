@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.2.13-r2.ebuild,v 1.1 2009/06/27 07:27:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.2.13-r2.ebuild,v 1.2 2009/06/28 16:46:15 patrick Exp $
 
 inherit eutils pam multilib versionator confutils
 
@@ -128,8 +128,8 @@ src_compile() {
 		$(use_with winbind) \
 		${myconf} ${mylangs} ${mymod_shared} || die "econf failed"
 
-	emake proto || die "emake proto failed"
-	emake everything || die "emake everything failed"
+	emake -j1 proto || die "emake proto failed"
+	emake -j1 everything || die "emake everything failed"
 
 }
 
@@ -141,7 +141,7 @@ src_test() {
 src_install() {
 	cd "${S}/source"
 
-	emake DESTDIR="${D}" install-everything || die "emake install-everything failed"
+	emake -j1 DESTDIR="${D}" install-everything || die "emake install-everything failed"
 
 	# Extra rpctorture progs
 	local extra_bins="rpctorture"
