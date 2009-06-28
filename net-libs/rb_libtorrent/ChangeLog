@@ -1,6 +1,17 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.59 2009/06/28 00:02:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.60 2009/06/28 14:50:42 yngwin Exp $
+
+*rb_libtorrent-0.14.4-r1 (28 Jun 2009)
+
+  28 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  +rb_libtorrent-0.14.4-r1.ebuild:
+  Update ebuild for version 0.14.4:
+  - migrate to eapi-2
+  - add doc useflag to install HTML documentation
+  - check for python-enabled boost if USE=python (bug 270608)
+  - add switch for verbose logging if USE=debug (todo from previous
+  revision)
 
 *rb_libtorrent-0.13-r1 (27 Jun 2009)
 
