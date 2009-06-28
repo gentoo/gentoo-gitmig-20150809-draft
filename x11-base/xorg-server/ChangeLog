@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.417 2009/06/28 16:00:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.418 2009/06/28 17:34:33 remi Exp $
+
+*xorg-server-1.6.1.901-r5 (28 Jun 2009)
+
+  28 Jun 2009; Rémi Cardona <remi@gentoo.org>
+  +xorg-server-1.6.1.901-r5.ebuild:
+  backport some more patches from upstream's 1.6 nominations, bump dri2proto
+  dep to 2.1
 
   28 Jun 2009; Rémi Cardona <remi@gentoo.org> -xorg-server-1.5.3-r5.ebuild,
   -xorg-server-1.6.1.901-r2.ebuild, -xorg-server-1.6.1.901-r3.ebuild:
