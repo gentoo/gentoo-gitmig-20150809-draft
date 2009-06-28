@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.09.ebuild,v 1.1 2009/06/26 09:04:22 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/adodb/adodb-5.09a.ebuild,v 1.1 2009/06/28 20:01:04 pva Exp $
 
 EAPI="2"
 
@@ -25,12 +25,6 @@ need_php5
 
 pkg_setup() {
 	ewarn "ADODB requires some form of SQL or ODBC support in your PHP."
-}
-
-src_prepare() {
-	# Check http://phplens.com/lens/lensforum/msgs.php?id=18043
-	# probably this mv is a problem...
-	mv "${S}"/drivers/adodb-ads{\ ,.}inc.php
 }
 
 src_install() {
