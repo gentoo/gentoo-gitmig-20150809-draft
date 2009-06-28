@@ -1,11 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/engine_pkcs11-0.1.6.ebuild,v 1.1 2009/06/27 20:47:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/engine_pkcs11-0.1.6.ebuild,v 1.2 2009/06/28 23:59:37 mr_bones_ Exp $
 
 EAPI="2"
-
-DESCRIPTION="engine_pkcs11 is an implementation of an engine for OpenSSL"
-HOMEPAGE="http://www.opensc-project.org/engine_pkcs11"
 
 if [[ "${PV}" = "9999" ]]; then
 	inherit autotools subversion
@@ -14,6 +11,9 @@ else
 	inherit eutils
 	SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
 fi
+
+DESCRIPTION="engine_pkcs11 is an implementation of an engine for OpenSSL"
+HOMEPAGE="http://www.opensc-project.org/engine_pkcs11"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
