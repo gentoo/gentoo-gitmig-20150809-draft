@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/audicle
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.2 2008/04/27 11:12:59 cedk Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/ChangeLog,v 1.3 2009/06/28 21:28:03 halcy0n Exp $
+
+  27 Jun 2009; Mark Loeser <halcy0n@gentoo.org> audicle-1.0.0.6.ebuild,
+  +files/audicle-1.0.0.6-gcc43.patch:
+  Fix building with gcc-4.3 (and 4.4). Patch by Tyler Cordrey <tcordrey AT
+  umd DOT edu>; bug #251217
 
   27 Apr 2008; Cédric Krier <cedk@gentoo.org> audicle-1.0.0.6.ebuild:
   Add LEX, YACC variable and missing pkg-config DEPEND for bug #218614

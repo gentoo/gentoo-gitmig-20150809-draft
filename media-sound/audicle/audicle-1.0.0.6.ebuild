@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6.ebuild,v 1.2 2008/04/27 11:12:59 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audicle/audicle-1.0.0.6.ebuild,v 1.3 2009/06/28 21:28:03 halcy0n Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -32,6 +32,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-font.patch"
 	epatch "${FILESDIR}/${P}-hid-smc.patch"
+	epatch "${FILESDIR}/${P}-gcc43.patch"
 
 	sed -i \
 		-e "s@../ftgl_lib/FTGL/include@/usr/include/FTGL@" \
