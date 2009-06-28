@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openswan
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.64 2009/06/24 17:18:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.65 2009/06/28 09:45:59 mrness Exp $
+
+*openswan-2.4.15 (28 Jun 2009)
+
+  28 Jun 2009; Alin Năstac <mrness@gentoo.org>
+  +files/openswan-2.4.15-deprecated-ldap.patch,
+  +files/openswan-2.4.15-gentoo.patch, +openswan-2.4.15.ebuild,
+  openswan-2.6.22.ebuild:
+  Version bump wrt security bug #275233. Fix sed error (#275448).
 
 *openswan-2.6.22 (24 Jun 2009)
 
