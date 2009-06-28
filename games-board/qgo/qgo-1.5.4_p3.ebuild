@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p3.ebuild,v 1.2 2009/02/24 21:20:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p3.ebuild,v 1.3 2009/06/28 21:38:20 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils qt3 games
@@ -34,4 +34,10 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	elog "No go engines are emerged by default! If you want to play against"
+	elog "the computer, you can emerge gnugo and configure ${PN} to use it."
 }
