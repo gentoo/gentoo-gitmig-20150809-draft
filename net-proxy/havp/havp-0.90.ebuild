@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.90.ebuild,v 1.1 2009/04/08 23:46:25 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.90.ebuild,v 1.2 2009/06/28 12:28:43 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.server-side.de/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="clamav ssl"
 
 DEPEND="clamav? ( app-antivirus/clamav )"
