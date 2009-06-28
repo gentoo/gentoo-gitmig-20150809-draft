@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qmtest
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.7 2008/08/23 17:31:22 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/ChangeLog,v 1.8 2009/06/28 11:22:43 patrick Exp $
+
+*qmtest-2.4.1 (28 Jun 2009)
+
+  28 Jun 2009; Patrick Lauer <patrick@gentoo.org> +qmtest-2.4.1.ebuild:
+  Bump to 2.4.1, fixes python problems and closes #275675
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> qmtest-2.4.ebuild:
   x86 stable, bug #235487
