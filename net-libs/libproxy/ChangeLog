@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.16 2009/06/29 19:26:13 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.17 2009/06/29 19:29:30 leio Exp $
+
+  29 Jun 2009; Mart Raudsepp <leio@gentoo.org>
+  -files/libproxy-0.2.3-fix-mozjs-cflags.patch:
+  Remove now redundant previously used mozjs patch
 
   29 Jun 2009; Mart Raudsepp <leio@gentoo.org>
   +files/libproxy-0.2.3-fix-automagic-mozjs.patch:
