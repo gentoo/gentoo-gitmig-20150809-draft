@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.11 2009/05/22 08:52:18 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/enigma/enigma-1.01.ebuild,v 1.12 2009/06/29 16:31:53 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -19,7 +19,7 @@ RDEPEND="media-libs/sdl-ttf
 	media-libs/sdl-mixer
 	media-libs/sdl-image[png]
 	media-libs/libpng
-	>=dev-libs/xerces-c-3
+	>=dev-libs/xerces-c-3[icu]
 	net-libs/enet
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
@@ -38,8 +38,7 @@ src_prepare() {
 src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
-		$(use_enable nls) \
-		|| die
+		$(use_enable nls)
 }
 
 src_install() {
