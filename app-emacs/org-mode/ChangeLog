@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/org-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.73 2009/06/27 20:39:58 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/org-mode/ChangeLog,v 1.74 2009/06/29 22:21:41 fauli Exp $
+
+*org-mode-6.28e (29 Jun 2009)
+
+  29 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  -org-mode-6.27a.ebuild, +org-mode-6.28e.ebuild:
+  version bump and clean up
 
 *org-mode-6.28d (27 Jun 2009)
 
