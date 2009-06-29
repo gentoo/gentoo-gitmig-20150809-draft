@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.31 2009/05/22 22:21:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/ChangeLog,v 1.32 2009/06/29 21:10:07 maekke Exp $
+
+  29 Jun 2009; Markus Meier <maekke@gentoo.org> pmd-4.2.5.ebuild:
+  amd64/x86 stable, bug #275078
 
 *pmd-4.2.5 (22 May 2009)
 
