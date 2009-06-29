@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jrdesktop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/ChangeLog,v 1.1 2009/05/22 22:33:17 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/ChangeLog,v 1.2 2009/06/29 21:06:27 maekke Exp $
+
+  29 Jun 2009; Markus Meier <maekke@gentoo.org> jrdesktop-0.2.0030.ebuild:
+  amd64/x86 stable, bug #275103
 
 *jrdesktop-0.2.0030 (22 May 2009)
 
