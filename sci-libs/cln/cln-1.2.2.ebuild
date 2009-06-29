@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.11 2009/04/11 15:53:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/cln-1.2.2.ebuild,v 1.12 2009/06/29 13:39:55 scarabeus Exp $
 
 EAPI=2
 inherit eutils flag-o-matic
@@ -36,6 +36,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-examples.patch
 	# avoid installing dvi and html docs by default
 	epatch "${FILESDIR}"/${P}-docs.patch
+	# fix compilation under gcc 4.4
+	epatch "${FILESDIR}"/${P}-gcc-4.4.patch
 }
 
 src_configure () {

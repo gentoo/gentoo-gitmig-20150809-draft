@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.33 2009/04/11 15:53:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.34 2009/06/29 13:39:55 scarabeus Exp $
+
+  29 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org> cln-1.2.2.ebuild,
+  +files/cln-1.2.2-gcc-4.4.patch:
+  Add gcc 4.4 patch per bug #269254.
 
   11 Apr 2009; Raúl Porcel <armin76@gentoo.org> cln-1.2.2.ebuild:
   Add ~alpha/~ia64 wrt #260777
