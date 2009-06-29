@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.18 2008/02/29 19:20:21 carlo Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.19 2009/06/29 16:41:17 mr_bones_ Exp $
+
+  29 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  unreal-tournament-451.ebuild:
+  more quoting (bug #275839)
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   unreal-tournament-451.ebuild:
