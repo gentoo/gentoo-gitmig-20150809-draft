@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.1.ebuild,v 1.7 2009/04/21 16:29:35 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.1.ebuild,v 1.8 2009/06/29 09:49:42 fauli Exp $
 
 inherit eutils multilib
 
@@ -19,7 +19,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( net-libs/gnutls )
 	ldap? ( >=net-nds/openldap-2.0.7 )
-	crypt? ( >=app-crypt/gpgme-1.1.1 )
+	crypt? ( <app-crypt/gpgme-1.2.0 )
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
 	dillo? ( www-client/dillo )
 	spell? ( >=app-text/enchant-1.0.0 )
@@ -32,7 +32,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	bogofilter? ( mail-filter/bogofilter )
 	session? ( x11-libs/libSM
 			x11-libs/libICE )
-	smime? ( >=app-crypt/gpgme-1.1.1 )"
+	smime? ( <app-crypt/gpgme-1.2.0 )"
 
 DEPEND="${COMMONDEPEND}
 	xface? ( >=media-libs/compface-1.4 )
