@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5.ebuild,v 1.4 2009/05/31 22:31:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/itext/itext-2.1.5.ebuild,v 1.5 2009/06/29 21:32:58 maekke Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -18,7 +18,7 @@ SRC_URI="mirror://sourceforge/itext/${DISTFILE}
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="cjk rtf rups"
 
 BCV="1.38"

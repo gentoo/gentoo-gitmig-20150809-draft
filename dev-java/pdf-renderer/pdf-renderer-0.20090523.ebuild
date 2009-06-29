@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/pdf-renderer-0.20090523.ebuild,v 1.3 2009/05/31 22:29:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdf-renderer/pdf-renderer-0.20090523.ebuild,v 1.4 2009/06/29 21:31:53 maekke Exp $
 
 EAPI="2"
 JAVA_PKG_IUSE="doc source"
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.zip"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
