@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/distorm64
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.2 2009/02/04 15:23:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/ChangeLog,v 1.3 2009/06/29 12:29:20 arfrever Exp $
+
+  29 Jun 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  distorm64-1.7.30-r1.ebuild, +files/distorm64-1.7.30-python.patch,
+  +files/distorm64-1.7.30-respect_flags.patch:
+  Fix building with Python 2.6 (bug #272612). Respect CC, CFLAGS and
+  LDFLAGS.
 
 *distorm64-1.7.30-r1 (04 Feb 2009)
 

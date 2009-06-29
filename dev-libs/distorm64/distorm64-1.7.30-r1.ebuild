@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/distorm64-1.7.30-r1.ebuild,v 1.1 2009/02/04 15:23:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/distorm64/distorm64-1.7.30-r1.ebuild,v 1.2 2009/06/29 12:29:20 arfrever Exp $
 
-EAPI="1"
+EAPI="2"
 
-inherit eutils
+inherit eutils flag-o-matic python toolchain-funcs
 
 DESCRIPTION="The ultimate disassembler library (X86-32, X86-64)"
 HOMEPAGE="http://www.ragestorm.net/distorm/"
@@ -12,26 +12,31 @@ SRC_URI="http://ragestorm.net/distorm/${PN}-pkg${PV}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+python"
 
 DEPEND="python? ( >=dev-lang/python-2.4 )"
-RDEPEND="$DEPEND"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
+S="${WORKDIR}/${PN}"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-python.patch"
+	epatch "${FILESDIR}/${P}-respect_flags.patch"
 }
 
 src_compile() {
 	cd "${WORKDIR}/${PN}/build/linux"
-	emake clib || die "make clib failed!"
+	emake clib CC="$(tc-getCC)" || die "make clib failed!"
 
 	if use python; then
-		emake py || die "make py failed!"
+		python_version
+		append-flags "-I/usr/include/python${PYVER}"
+		emake py CC="$(tc-getCC)" || die "make py failed!"
 	fi
 
 	cd "${WORKDIR}/${PN}/linuxproj"
-	emake disasm || die "make disasm failed!"
+	emake disasm CC="$(tc-getCC)" || die "make disasm failed!"
 
 }
 
@@ -41,21 +46,15 @@ src_install() {
 	dolib.so libdistorm64.so
 
 	if use python; then
-		if has_version ">=dev-lang/python-2.5"; then
-			mkdir -p "${D}usr/lib/python2.5/site-packages/"
-			install libdistorm64.so "${D}usr/lib/python2.5/site-packages/distorm.so"
-		else
-			mkdir -p "${D}usr/lib/python2.4/site-packages/"
-			install libdistorm64.so "${D}usr/lib/python2.4/site-packages/distorm.o"
-		fi
+		dodir "$(python_get_sitedir)"
+		install libdistorm64.so "${D}$(python_get_sitedir)/distorm.so"
 	fi
 
 	cd "${WORKDIR}/${PN}/"
-	mv distorm64.a libdistorm64.a
-	dolib.a libdistorm64.a
+	newlib.a distorm64.a libdistorm64.a
 
 	dobin linuxproj/disasm
 
-	mkdir -p "${D}usr/include"
+	dodir "/usr/include"
 	install distorm.h "${D}usr/include/" || die "Unable to install distorm.h"
 }
