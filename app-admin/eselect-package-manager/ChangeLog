@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-package-manager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.3 2009/06/17 17:36:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-package-manager/ChangeLog,v 1.4 2009/06/29 15:48:00 darkside Exp $
+
+  29 Jun 2009; Jeremy Olexa <darkside@gentoo.org>
+  eselect-package-manager-20090604.ebuild:
+  add ~amd64, bug 274365
 
   17 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   eselect-package-manager-20090604.ebuild:
