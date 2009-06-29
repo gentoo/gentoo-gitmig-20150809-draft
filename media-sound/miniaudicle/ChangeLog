@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/miniaudicle
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/ChangeLog,v 1.1 2008/03/29 23:21:04 cedk Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/ChangeLog,v 1.2 2009/06/29 01:32:26 halcy0n Exp $
+
+  28 Jun 2009; Mark Loeser <halcy0n@gentoo.org> miniaudicle-0.1.3.8.ebuild,
+  +files/miniaudicle-0.1.3.8-gcc44.patch:
+  Fix compilation with gcc-4.3 and 4.4 by Gene Seto <geneseto AT hotmail DOT
+  com>; bug #251223
 
 *miniaudicle-0.1.3.8 (29 Mar 2008)
 

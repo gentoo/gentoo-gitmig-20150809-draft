@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8.ebuild,v 1.1 2008/03/29 23:21:04 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/miniaudicle/miniaudicle-0.1.3.8.ebuild,v 1.2 2009/06/29 01:32:26 halcy0n Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -41,7 +41,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "$FILESDIR/${P}-hid-smc.patch"
+	epatch "${FILESDIR}/${P}-hid-smc.patch"
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 }
 
 src_compile() {
