@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/paxtest
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.30 2007/11/13 18:22:46 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/ChangeLog,v 1.31 2009/06/29 22:32:39 idl0r Exp $
+
+*paxtest-0.9.7_pre5 (29 Jun 2009)
+
+  29 Jun 2009; Christian Ruppert <idl0r@gentoo.org>
+  +paxtest-0.9.7_pre5.ebuild, +files/paxtest-0.9.7_pre5-Makefile.patch,
+  +files/paxtest-0.9.7_pre5-missing-includes.patch:
+  Version bump to 0.9.7_pre5, fixes bug 246755. Fix HOMEPAGE, some QA stuff
+  QA_EXECSTACK and missing includes. Cleanup. Install also the manpage.
 
   13 Nov 2007; Raúl Porcel <armin76@gentoo.org> paxtest-0.9.7_pre4.ebuild:
   Add ~alpha
