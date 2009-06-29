@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.2.3-r1.ebuild,v 1.2 2009/06/24 15:43:08 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/libproxy-0.2.3-r2.ebuild,v 1.1 2009/06/29 19:26:13 leio Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="gnome kde networkmanager python webkit xulrunner"
+IUSE="gnome kde networkmanager python seamonkey webkit xulrunner"
 
 RDEPEND="
 	gnome? (
@@ -26,10 +26,11 @@ RDEPEND="
 	networkmanager? ( net-misc/networkmanager )
 	python? ( >=dev-lang/python-2.5 )
 	webkit? ( net-libs/webkit-gtk )
-	xulrunner? (
-		|| ( >=net-libs/xulrunner-1.9
-			 www-client/seamonkey ) )
+	xulrunner? ( >=net-libs/xulrunner-1.9.0.11-r1:1.9 )
+	!xulrunner? ( seamonkey? ( www-client/seamonkey ) )
 "
+# Since xulrunner-1.9.0.11-r1 its shipped mozilla-js.pc is fixed so we can use it
+
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.19"
 
@@ -43,28 +44,38 @@ src_prepare() {
 	# http://code.google.com/p/libproxy/issues/detail?id=25
 	epatch "${FILESDIR}/${P}-fix-as-needed-problem.patch"
 
-	# http://bugs.gentoo.org/show_bug.cgi?id=275127
-	epatch "${FILESDIR}/${P}-fix-mozjs-cflags.patch"
+	# Bug 275127 and 275318
+	epatch "${FILESDIR}/${P}-fix-automagic-mozjs.patch"
 
 	# Fix implicit declaration QA, bug #268546
 	epatch "${FILESDIR}/${P}-implicit-declaration.patch"
 
 	epatch "${FILESDIR}/${P}-fbsd.patch" # drop at next bump
 
-	# Fix test to follow POSIX (for x86-fbsd)
+	# Fix test to follow POSIX (for x86-fbsd).
+	# FIXME: This doesn't actually fix all == instances when two are on the same line
 	sed -e 's/\(test.*\)==/\1=/g' -i configure.ac configure || die "sed failed"
 
 	eautoreconf
 }
 
 src_configure() {
+	local myconf
+
+	# xulrunner:1.9 => mozilla;   seamonkey => seamonkey;
+	# xulrunner:1.8 => xulrunner; (firefox => mozilla-firefox[-xulrunner] ?)
+	if use xulrunner; then myconf="--with-mozjs=mozilla"
+	elif use seamonkey; then myconf="--with-mozjs=seamonkey"
+	else myconf="--without-mozjs"
+	fi
+
 	econf --with-envvar \
 		--with-file \
 		--disable-static \
 		$(use_with gnome) \
 		$(use_with kde) \
 		$(use_with webkit) \
-		$(use_with xulrunner mozjs) \
+		${myconf} \
 		$(use_with networkmanager) \
 		$(use_with python)
 }
