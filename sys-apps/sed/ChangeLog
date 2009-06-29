@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sed
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.94 2009/06/29 21:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.95 2009/06/29 22:38:07 fmccor Exp $
+
+  29 Jun 2009; Ferris McCormick <fmccor@gentoo.org> sed-4.2.ebuild:
+  Sparc stable, bug #275875.
 
 *sed-4.2.1 (29 Jun 2009)
 
