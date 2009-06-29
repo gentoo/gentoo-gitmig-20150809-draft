@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.61 2009/06/29 00:06:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.62 2009/06/29 19:34:59 yngwin Exp $
+
+  29 Jun 2009; Ben de Groot <yngwin@gentoo.org>
+  rb_libtorrent-0.13-r1.ebuild,
+  +files/rb_libtorrent-0.13-CVE-2009-1760-test-fix.patch,
+  -files/rb_libtorrent-0.14.1-ax_python_path.patch:
+  Add patch to fix the tests complementing the CVE patch. Remove no longer
+  used patch from filesdir.
 
   29 Jun 2009; Ben de Groot <yngwin@gentoo.org>
   rb_libtorrent-0.13-r1.ebuild, -rb_libtorrent-0.14.4.ebuild:

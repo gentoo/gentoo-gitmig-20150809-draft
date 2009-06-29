@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13-r1.ebuild,v 1.2 2009/06/29 00:06:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13-r1.ebuild,v 1.3 2009/06/29 19:34:59 yngwin Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic
 
-RESTRICT="test"  # tests break due to the CVE patch :(
 MY_P=${P/rb_/}
 S=${WORKDIR}/${MY_P}
 
@@ -25,6 +24,7 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2009-1760.patch  # bug 273156
+	epatch "${FILESDIR}"/${P}-CVE-2009-1760-test-fix.patch
 	epatch "${FILESDIR}"/${P}-boost-1.37.patch     # bug 270447
 	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
