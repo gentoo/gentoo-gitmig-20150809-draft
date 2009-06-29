@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvgrab
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.34 2009/03/08 20:04:36 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.35 2009/06/29 19:28:59 aballier Exp $
+
+  29 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  -files/dvgrab-2.1-automagic.patch, -dvgrab-3.0.ebuild:
+  remove old
 
 *dvgrab-3.4 (08 Mar 2009)
 
