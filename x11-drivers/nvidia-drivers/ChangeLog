@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.152 2009/06/29 20:33:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.153 2009/06/29 22:27:25 fauli Exp $
+
+  29 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  nvidia-drivers-71.86.09.ebuild, nvidia-drivers-96.43.11.ebuild,
+  nvidia-drivers-173.14.18.ebuild, nvidia-drivers-180.60.ebuild:
+  stable x86, bug 275495
 
   29 Jun 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add myself as maintainer.
