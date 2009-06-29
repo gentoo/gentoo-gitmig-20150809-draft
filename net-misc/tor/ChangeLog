@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.170 2009/06/29 10:17:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.171 2009/06/29 20:50:44 maekke Exp $
+
+  29 Jun 2009; Markus Meier <maekke@gentoo.org> tor-0.2.0.35.ebuild:
+  amd64 stable, bug #275628
 
 *tor-0.2.1.16_rc (29 Jun 2009)
 
