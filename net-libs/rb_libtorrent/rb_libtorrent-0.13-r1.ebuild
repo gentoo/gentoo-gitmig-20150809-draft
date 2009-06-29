@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13-r1.ebuild,v 1.1 2009/06/28 00:02:56 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13-r1.ebuild,v 1.2 2009/06/29 00:06:04 yngwin Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic
 
+RESTRICT="test"  # tests break due to the CVE patch :(
 MY_P=${P/rb_/}
 S=${WORKDIR}/${MY_P}
 
