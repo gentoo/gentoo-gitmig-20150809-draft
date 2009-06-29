@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xdelta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.40 2009/06/28 17:49:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/ChangeLog,v 1.41 2009/06/29 19:41:36 jer Exp $
+
+  29 Jun 2009; Jeroen Roovers <jer@gentoo.org> xdelta-3.0t.ebuild,
+  xdelta-3.0v.ebuild:
+  Marked ~hppa too.
 
 *xdelta-3.0v (28 Jun 2009)
 
