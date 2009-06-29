@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/dokuwiki
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.37 2008/05/30 07:23:09 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.38 2009/06/29 09:15:03 a3li Exp $
+
+*dokuwiki-20090214b (29 Jun 2009)
+
+  29 Jun 2009; Alex Legler <a3li@gentoo.org> -dokuwiki-20080505.ebuild,
+  +dokuwiki-20090214b.ebuild:
+  Non-maintainer commit: Version bump for security bug 272431. amd64 stable.
+  Thanks to Philippe Chaintreuil for proposing an updated ebuild. Removing
+  vulnerable version in ~arch.
 
   30 May 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing Andrej Kacian (Ticho) from metadata.xml (as per #59986).
