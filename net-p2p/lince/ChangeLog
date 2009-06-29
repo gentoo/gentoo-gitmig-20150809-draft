@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/lince
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/ChangeLog,v 1.16 2009/06/29 00:17:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/ChangeLog,v 1.17 2009/06/29 12:36:02 yngwin Exp $
+
+*lince-1.1_beta (29 Jun 2009)
+
+  29 Jun 2009; Ben de Groot <yngwin@gentoo.org> +lince-1.1_beta.ebuild:
+  Version bump. This version works with rb_libtorrent-0.14.
 
   29 Jun 2009; Ben de Groot <yngwin@gentoo.org> lince-1.0.ebuild:
   Restrict rb_libtorrent dep to ~0.13, as it doesnt build with any later
