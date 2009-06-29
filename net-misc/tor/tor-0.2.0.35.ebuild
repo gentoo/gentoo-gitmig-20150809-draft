@@ -1,15 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.35.ebuild,v 1.2 2009/06/29 20:50:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.0.35.ebuild,v 1.3 2009/06/29 21:12:17 fauli Exp $
 
 EAPI=1
 
 inherit eutils
 
 DESCRIPTION="Anonymizing overlay network for TCP"
-HOMEPAGE="http://tor.eff.org"
+HOMEPAGE="http://www.torproject.org/"
 MY_PV=${PV/_/-}
-SRC_URI="http://tor.eff.org/dist/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://www.torproject.org/dist/${PN}-${MY_PV}.tar.gz"
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 LICENSE="BSD"
