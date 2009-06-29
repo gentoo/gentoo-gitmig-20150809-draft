@@ -1,6 +1,13 @@
 # ChangeLog for media-video/subtitleeditor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.2 2009/05/23 13:10:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.3 2009/06/29 22:51:38 eva Exp $
+
+*subtitleeditor-0.33.0 (30 Jun 2009)
+
+  30 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +subtitleeditor-0.33.0.ebuild:
+  Version bump. Add gst-plugins-pango, bug #274830. Better spellchecking
+  integration, bug fixes and translation updates.
 
 *subtitleeditor-0.31.0 (23 May 2009)
 
