@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/lince-1.0.ebuild,v 1.1 2008/09/23 21:58:13 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lince/lince-1.0.ebuild,v 1.2 2009/06/29 00:17:22 yngwin Exp $
 
 EAPI="1"
 
@@ -19,7 +19,7 @@ IUSE="dbus libnotify"
 RDEPEND="dev-cpp/gtkmm:2.4
 	dev-cpp/cairomm
 	>=dev-cpp/glibmm-2.16
-	>=net-libs/rb_libtorrent-0.13
+	~net-libs/rb_libtorrent-0.13
 	dev-libs/libxml2
 	sys-devel/gettext
 	dbus? ( dev-libs/dbus-glib )
