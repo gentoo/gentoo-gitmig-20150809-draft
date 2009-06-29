@@ -3,10 +3,13 @@
 <pkgmetadata>
 <herd>none</herd>
 <maintainer>
-  <email>ricmm@gentoo.org</email>
+  <email>cardoe@gentoo.org</email>
 </maintainer>
 <maintainer>
-  <email>cardoe@gentoo.org</email>
+  <email>jer@gentoo.org</email>
+</maintainer>
+<maintainer>
+  <email>ricmm@gentoo.org</email>
 </maintainer>
 <longdescription>NVIDIA X11 driver and GLX libraries</longdescription>
 </pkgmetadata>
