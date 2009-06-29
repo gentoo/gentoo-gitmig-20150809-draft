@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.169 2009/06/28 13:35:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.170 2009/06/29 10:17:56 fauli Exp $
+
+*tor-0.2.1.16_rc (29 Jun 2009)
+
+  29 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  -tor-0.2.1.15_rc.ebuild, +tor-0.2.1.16_rc.ebuild:
+  extend version bump for security bug 275628 and remove one vulnerable
+  version
 
 *tor-0.2.0.35 (28 Jun 2009)
 
