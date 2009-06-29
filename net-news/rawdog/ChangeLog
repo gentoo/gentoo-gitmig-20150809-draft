@@ -1,6 +1,9 @@
 # ChangeLog for net-news/rawdog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.25 2009/06/28 14:15:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/rawdog/ChangeLog,v 1.26 2009/06/29 15:50:45 darkside Exp $
+
+  29 Jun 2009; Jeremy Olexa <darkside@gentoo.org> rawdog-2.12.ebuild:
+  amd64 stable, bug 274903
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org> rawdog-2.12.ebuild:
   Stable on alpha, bug #274903
