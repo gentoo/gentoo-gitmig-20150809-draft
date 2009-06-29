@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.213 2009/06/26 00:23:12 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.214 2009/06/29 16:42:04 nirbheek Exp $
+
+*xulrunner-1.9.0.11-r1 (29 Jun 2009)
+
+  29 Jun 2009; <nirbheek@gentoo.org>
+  +files/066-fix-includedir-mozilla-js.patch, -xulrunner-1.9.0.11.ebuild,
+  +xulrunner-1.9.0.11-r1.ebuild:
+  Add patch to fix mozilla-js.pc to have the correct path. Changes no code,
+  unbreaks a lot of apps (like bug 275318), and will not break anything.
+  Straight to stable! Muahahaha. (arch teams don't really have anything to
+  do here)
 
   26 Jun 2009; Richard Freeman <rich0@gentoo.org> xulrunner-1.9.0.11.ebuild:
   amd64 stable - 273918
