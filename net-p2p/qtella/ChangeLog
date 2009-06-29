@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/qtella
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.31 2008/07/27 22:12:53 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.32 2009/06/29 00:04:59 halcy0n Exp $
+
+  28 Jun 2009; Mark Loeser <halcy0n@gentoo.org> qtella-0.7.0-r1.ebuild,
+  +files/qtella-0.7.0-gcc44.patch:
+  Add patch to fix compilation with gcc-4.3 and gcc-4.4 by Gene Seto
+  <geneseto AT hotmail DOT com>; bug #251557
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> qtella-0.7.0-r1.ebuild:
   QA: Get rid of deprecated qt_min_version().Fix KDE dependency.

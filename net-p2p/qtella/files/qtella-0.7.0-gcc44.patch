@@ -1,0 +1,111 @@
+diff -ur qtella-0.7.0-orig/include/qtella_mini_xpm.h qtella-0.7.0/include/qtella_mini_xpm.h
+--- qtella-0.7.0-orig/include/qtella_mini_xpm.h	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/include/qtella_mini_xpm.h	2009-06-27 19:39:44.000000000 -0400
+@@ -1,5 +1,5 @@
+ /* XPM */
+-static char * qtella_mini_xpm[] = {
++static const char * qtella_mini_xpm[] = {
+ "16 16 141 2",
+ "  	c None",
+ ". 	c #665A5A",
+diff -ur qtella-0.7.0-orig/src/Address.cpp qtella-0.7.0/src/Address.cpp
+--- qtella-0.7.0-orig/src/Address.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/Address.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -7,6 +7,7 @@
+ 
+ #include <iostream>
+ #include <sstream>
++#include <cstdlib>
+ #if !defined(_WIN32)
+ #include <netdb.h>
+ #endif
+diff -ur qtella-0.7.0-orig/src/AudioGenre.cpp qtella-0.7.0/src/AudioGenre.cpp
+--- qtella-0.7.0-orig/src/AudioGenre.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/AudioGenre.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -2,7 +2,7 @@
+  */
+ #include "AudioGenre.h"
+ 
+-#include <string>
++#include <cstring>
+ 
+ struct genre_list_type
+ {
+diff -ur qtella-0.7.0-orig/src/BitTorrent.cpp qtella-0.7.0/src/BitTorrent.cpp
+--- qtella-0.7.0-orig/src/BitTorrent.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/BitTorrent.cpp	2009-06-27 19:50:47.000000000 -0400
+@@ -1,4 +1,6 @@
+ #include "BitTorrent.h"
++#include <cstdlib>
++#include <cstring>
+ #include <cstdio>
+ 
+ #undef DEBUG
+diff -ur qtella-0.7.0-orig/src/Download.cpp qtella-0.7.0/src/Download.cpp
+--- qtella-0.7.0-orig/src/Download.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/Download.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -31,6 +31,7 @@
+ #include <iomanip>
+ #include <sstream>
+ #include <ctime>
++#include <cstdlib>
+ 
+ Download::Download(const QueryHitEntry&      qhe, 
+ 		         DownloadManager*    parent, 
+diff -ur qtella-0.7.0-orig/src/InConnection.cpp qtella-0.7.0/src/InConnection.cpp
+--- qtella-0.7.0-orig/src/InConnection.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/InConnection.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -19,6 +19,7 @@
+ #include <qmessagebox.h>
+ #include <iostream>
+ #include <sstream>
++#include <cstdlib>
+ 
+ #undef _DEBUG
+ 
+diff -ur qtella-0.7.0-orig/src/MessengerThread.cpp qtella-0.7.0/src/MessengerThread.cpp
+--- qtella-0.7.0-orig/src/MessengerThread.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/MessengerThread.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -1,6 +1,7 @@
+ #include "MessengerThread.h"
+ #include "MessengerContacts.h"
+ #include <iostream>
++#include <cstdlib>
+ #include <netdb.h>
+ #include <sys/time.h>
+ #include <sys/types.h>
+diff -ur qtella-0.7.0-orig/src/QtellaSubConfig.cpp qtella-0.7.0/src/QtellaSubConfig.cpp
+--- qtella-0.7.0-orig/src/QtellaSubConfig.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/QtellaSubConfig.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -14,7 +14,7 @@
+ #include "MessengerContacts.h"
+ #include "kmdcodec.h"
+ 
+-#include <string>
++#include <cstdlib>
+ #include <fstream>
+ #include <sstream>
+ #include <iostream>
+diff -ur qtella-0.7.0-orig/src/QtellaSubMisc.cpp qtella-0.7.0/src/QtellaSubMisc.cpp
+--- qtella-0.7.0-orig/src/QtellaSubMisc.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/QtellaSubMisc.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -3,6 +3,8 @@
+ #include <qdatetime.h>
+ #include <qfile.h>
+ #include <qsocket.h>
++#include <cstdlib>
++
+ /*!
+  * This is not a backdoor! I just want to see whether it could
+  * be of interest to have a statistic about the number of
+diff -ur qtella-0.7.0-orig/src/RiffFile.cpp qtella-0.7.0/src/RiffFile.cpp
+--- qtella-0.7.0-orig/src/RiffFile.cpp	2009-06-27 19:50:15.000000000 -0400
++++ qtella-0.7.0/src/RiffFile.cpp	2009-06-27 19:39:44.000000000 -0400
+@@ -1,6 +1,7 @@
+ #include "RiffFile.h"
+ 
+ #include <fstream>
++#include <cstring>
+ 
+ #if !defined(_WIN32)
+ using namespace std;
