@@ -1,11 +1,11 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.39 2009/06/29 22:54:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.40 2009/06/29 22:55:56 jer Exp $
 
 *linkchecker-5.0.2 (29 Jun 2009)
 
   29 Jun 2009; Jeroen Roovers <jer@gentoo.org> +linkchecker-5.0.2.ebuild:
-  Version bump (bug #274827). Update DESCRIPTION.
+  Version bump thanks to Michał Masłowski (bug #274827). Update DESCRIPTION.
 
   14 Aug 2008; nixnut <nixnut@gentoo.org> linkchecker-4.9.ebuild:
   Stable on ppc wrt bug 234736
