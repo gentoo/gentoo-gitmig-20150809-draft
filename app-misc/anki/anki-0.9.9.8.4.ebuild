@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-0.9.9.7.9b.ebuild,v 1.1 2009/05/20 18:12:15 hncaldwell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/anki/anki-0.9.9.8.4.ebuild,v 1.1 2009/06/29 20:34:31 hncaldwell Exp $
 
 EAPI=2
 
@@ -16,8 +16,8 @@ IUSE="furigana +graph latex recording +sound"
 
 DEPEND="dev-lang/python
 	dev-python/setuptools"
-RDEPEND=">=dev-python/PyQt4-4.4[svg,webkit]
-	>=dev-python/sqlalchemy-0.4.3
+RDEPEND=">=dev-python/PyQt4-4.4[X,svg,webkit]
+	>=dev-python/sqlalchemy-0.5.3
 	>=dev-python/simplejson-1.7.3
 	|| ( >=dev-python/pysqlite-2.3.0 >=dev-lang/python-2.5[sqlite] )
 	latex? ( app-text/dvipng )
