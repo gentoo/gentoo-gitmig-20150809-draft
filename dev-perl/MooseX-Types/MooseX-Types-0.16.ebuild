@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/MooseX-Types-0.15.ebuild,v 1.1 2009/06/29 15:14:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types/MooseX-Types-0.16.ebuild,v 1.1 2009/06/30 06:15:59 tove Exp $
 
 EAPI=2
 
-#MODULE_AUTHOR=RKITOVER
-MODULE_AUTHOR=JJNAPIORK
+MODULE_AUTHOR=RKITOVER
+#MODULE_AUTHOR=JJNAPIORK
 inherit perl-module
 
 DESCRIPTION="Organise your Moose types in libraries"
