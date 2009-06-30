@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/linux-fusion
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.13 2008/10/09 19:32:01 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/linux-fusion/ChangeLog,v 1.14 2009/06/30 01:16:36 mr_bones_ Exp $
+
+*linux-fusion-8.1.1 (30 Jun 2009)
+
+  30 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +linux-fusion-8.1.1.ebuild:
+  version bump
 
 *linux-fusion-8.0.2 (09 Oct 2008)
 
