@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-1.6.3.ebuild,v 1.7 2009/03/18 06:45:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kspread/kspread-1.6.3.ebuild,v 1.8 2009/06/30 21:32:00 tampakrap Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=1.6.3
@@ -10,7 +10,7 @@ DESCRIPTION="KOffice spreadsheet application."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
@@ -45,8 +45,8 @@ KMCOMPILEONLY="filters/liboofilter"
 
 KMEXTRA="filters/kspread"
 
-PATCHES="${FILESDIR}/kspread-1.6.3-validate-desktop.diff
-	${FILESDIR}/kspread-gcc43.patch"
+PATCHES=( "${FILESDIR}/kspread-1.6.3-validate-desktop.diff"
+		"${FILESDIR}/kspread-gcc43.patch" )
 
 need-kde 3.4
 

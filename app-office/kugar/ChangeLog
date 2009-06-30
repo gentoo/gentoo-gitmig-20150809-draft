@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kugar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.77 2009/02/08 17:29:12 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/ChangeLog,v 1.78 2009/06/30 21:34:51 tampakrap Exp $
+
+  30 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> -kugar-1.6.1.ebuild,
+  kugar-1.6.2.ebuild, kugar-1.6.3_p20090204.ebuild:
+  Slotmove to 3.5, remove old
 
 *kugar-1.6.3_p20090204 (08 Feb 2009)
 

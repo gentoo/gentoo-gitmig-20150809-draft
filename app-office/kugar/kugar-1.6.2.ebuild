@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.6.2.ebuild,v 1.9 2007/07/26 17:37:57 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.6.2.ebuild,v 1.10 2009/06/30 21:34:51 tampakrap Exp $
 
 KMNAME=koffice
 MAXKOFFICEVER=1.6.3
@@ -10,7 +10,7 @@ DESCRIPTION="KOffice report viewer and generator."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
