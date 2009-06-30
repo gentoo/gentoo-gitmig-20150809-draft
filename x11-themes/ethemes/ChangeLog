@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/ethemes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.14 2009/06/28 13:58:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.15 2009/06/30 13:39:28 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> ChangeLog:
+  ia64/sh/sparc stable wrt #274834
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   ethemes-0.16.8.0.3.ebuild:
