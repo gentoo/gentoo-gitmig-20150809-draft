@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.3 2009/06/30 18:29:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.4 2009/06/30 18:35:22 jer Exp $
 
 inherit eutils autotools libtool mono
 
@@ -12,7 +12,7 @@ SRC_URI="http://libcaca.zoy.org/files/${PN}/${MY_P}.tar.gz"
 
 LICENSE="WTFPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="doc imlib mono ncurses nocxx opengl ruby slang X"
 
 RDEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
