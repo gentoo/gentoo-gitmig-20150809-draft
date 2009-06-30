@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake2-demodata
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.3 2007/03/12 14:51:22 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/ChangeLog,v 1.4 2009/06/30 21:00:40 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  quake2-demodata-3.14.ebuild:
+  stable x86, bug 275507
 
   12 Mar 2007; Marius Mauch <genone@gentoo.org> quake2-demodata-3.14.ebuild:
   Replacing einfo with elog
