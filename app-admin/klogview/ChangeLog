@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/klogview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.11 2009/06/17 16:22:49 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/klogview/ChangeLog,v 1.12 2009/06/30 15:19:22 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> klogview-0.6-r1.ebuild:
+  sparc stable wrt #273350
 
   17 Jun 2009; Thomas Anderson <gentoofan23@gentoo.org>
   klogview-0.6-r1.ebuild:
