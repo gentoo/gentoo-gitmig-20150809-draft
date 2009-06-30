@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090522.167859.ebuild,v 1.3 2009/06/30 12:27:06 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090618.172495.ebuild,v 1.1 2009/06/30 12:27:06 vadimk Exp $
 
 EAPI="2"
 
@@ -22,6 +22,9 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="X xinerama icu unity"
 DEPEND="
+		!app-emulation/vmware-workstation-tools
+		!app-emulation/vmware-server-tools
+		!app-emulation/vmware-esx-tools
 		virtual/linux-sources
 		sys-apps/ethtool
 		X? (
@@ -36,9 +39,6 @@ DEPEND="
 		xinerama? (
 			x11-libs/libXinerama
 		)
-		!app-emulation/vmware-workstation-tools
-		!app-emulation/vmware-server-tools
-		!app-emulation/vmware-esx-tools
 		sys-process/procps
 		dev-libs/libdnet
 		>=dev-libs/glib-2
@@ -85,7 +85,6 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/default-scripts.patch"
-	epatch "${FILESDIR}/wiper-warning-fix.patch"
 	sed -e 's:VMTOOLSD_PLUGIN_ROOT=\\"\$(pkglibdir)\\":VMTOOLSD_PLUGIN_ROOT=\\"\$(pkglibdir)/plugins\\":g' -i services/vmtoolsd/Makefile.in
 }
 
