@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.ebuild,v 1.2 2009/06/30 17:51:56 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.ebuild,v 1.3 2009/06/30 17:53:57 mr_bones_ Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -79,7 +79,6 @@ src_prepare() {
 
 	cd js/src
 	eautoreconf
-
 
 	# We need to re-patch this because autoreconf overwrites it
 #	epatch "${FILESDIR}"/patch/000_flex-configure-LANG.patch
@@ -165,7 +164,6 @@ src_configure() {
 	if [[ $(gcc-major-version) -lt 4 ]]; then
 		append-cxxflags -fno-stack-protector
 	fi
-
 
 	####################################
 	#
