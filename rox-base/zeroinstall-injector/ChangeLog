@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.14 2009/06/28 15:06:18 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.15 2009/06/30 20:53:40 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  zeroinstall-injector-0.40.ebuild:
+  stable x86, bug 275392
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   zeroinstall-injector-0.40.ebuild:
