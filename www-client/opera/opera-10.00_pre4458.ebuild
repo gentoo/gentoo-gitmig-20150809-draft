@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4458.ebuild,v 1.2 2009/06/30 17:01:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4458.ebuild,v 1.3 2009/06/30 17:07:24 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -105,7 +105,7 @@ RDEPEND="
 			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
 		)
 	)
-	x86-fsbd? ( =x11-libs/qt-3*[-immqt] )
+	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
 
 opera_linguas() {
@@ -148,7 +148,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-10.00-pluginpath.patch"
 	fi
 
-	sed -i 	-e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
+	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
 		-e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		-e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
