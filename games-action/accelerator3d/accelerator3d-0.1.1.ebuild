@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1.ebuild,v 1.3 2006/10/18 01:40:23 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/accelerator3d/accelerator3d-0.1.1.ebuild,v 1.4 2009/06/30 03:53:52 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Fast-paced, 3D, first-person shoot/dodge-'em-up, in the vain of Tempest or n2o"
@@ -20,9 +21,7 @@ DEPEND="dev-python/pyode
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo-paths.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
@@ -30,10 +29,9 @@ src_unpack() {
 }
 
 src_install() {
-	newgamesbin accelerator.py accelerator || die "gamesbin"
+	newgamesbin accelerator.py accelerator || die "newgamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
-	doins gfx/* || die "doins gfx"
-	doins snd/* || die "doins snd"
+	doins gfx/* snd/* || die "doins failed"
 	dodoc CHANGELOG README
 	prepgamesdirs
 }
