@@ -1,6 +1,15 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.18 2009/06/30 15:57:34 darkside Exp $
+# $Id: ChangeLog,v 1.19 2009/06/30 16:34:58 darkside Exp $
+
+  30 Jun 2009; Jeremy Olexa <darkside@gentoo.org> aix/make.defaults,
+  bsd/freebsd/make.defaults, bsd/netbsd/make.defaults,
+  bsd/openbsd/make.defaults, darwin/make.defaults, hpux/make.defaults,
+  irix/make.defaults, make.defaults, mint/make.defaults,
+  sunos/make.defaults, windows/interix/make.defaults,
+  windows/winnt/make.defaults:
+  Mark FEATURES=-sandbox globally because it fails to work reliably on any
+  Gentoo Prefix platform.
 
   30 Jun 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   Remove subversion mask

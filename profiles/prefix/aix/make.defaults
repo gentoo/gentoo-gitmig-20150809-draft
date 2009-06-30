@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/make.defaults,v 1.1 2009/06/06 03:54:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/make.defaults,v 1.2 2009/06/30 16:34:58 darkside Exp $
 
 # System-wide defaults for all AIX profiles
 # This file should rarely need to be changed
@@ -9,5 +9,5 @@
 ELIBC="AIX"
 KERNEL="AIX"
 
-# Sandbox is not ported to AIX yet, no scanelf
-FEATURES="-sandbox nostrip"
+# no scanelf
+FEATURES="nostrip"
