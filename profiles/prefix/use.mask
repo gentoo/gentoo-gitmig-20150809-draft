@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/use.mask,v 1.2 2009/06/14 09:41:38 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/use.mask,v 1.3 2009/06/30 14:13:04 darkside Exp $
 
 # multilib is never going to work as expected in Prefix
 multilib
@@ -23,3 +23,7 @@ gpm
 # and Gentoo Prefix does not have access to that. Also, definately problems with
 # coreutils on darwin.
 acl
+
+# USE=pam just does not make sense in Gentoo Prefix. Should be using the host
+# auth system.
+pam

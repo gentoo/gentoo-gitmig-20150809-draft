@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.5 2009/06/24 09:12:15 haubi Exp $
+# $Id: package.mask,v 1.6 2009/06/30 14:13:04 darkside Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (30 Jun 2009)
+# The PAM auth system just will not work in Gentoo Prefix, instead the host auth
+# system should be used.
+sys-libs/pam
+sys-auth/pambase
 
 # Michael Haubenwallner <haubi@gentoo.org> (24 Jun 2009)
 # pkgdata does not work yet, let fix in ~main first (#269659)
