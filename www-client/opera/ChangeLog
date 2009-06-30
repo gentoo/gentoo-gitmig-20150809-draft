@@ -1,6 +1,10 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.355 2009/06/28 14:11:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.356 2009/06/30 15:17:19 jer Exp $
+
+  30 Jun 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4453.ebuild:
+  Compress the faux src_ functions. Add a pkg_setup that describes what to
+  post on bugs.g.o.
 
   28 Jun 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4453.ebuild:
   Fix amd64 SRC_URI (patch by Jouni Rinne, bug #275629).

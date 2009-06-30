@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4453.ebuild,v 1.2 2009/06/28 14:11:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4453.ebuild,v 1.3 2009/06/30 15:17:19 jer Exp $
 
 EAPI="2"
 
@@ -118,6 +118,12 @@ opera_linguas() {
 	done
 }
 
+pkg_setup() {
+	elog "${WARN}If you seek support, please file a bug report at${NORMAL}"
+	elog "${WARN}https://bugs.gentoo.org and post the output of${NORMAL}"
+	elog "${WARN} \`emerge -vp =${CATEGORY}/${P}'${NORMAL}"
+}
+
 src_unpack() {
 	unpack ${A}
 	if [[ ! -d ${S} ]]; then
@@ -146,17 +152,10 @@ src_prepare() {
 		install.sh || die "sed failed"
 }
 
-src_configure() {
-	# This workaround is sadly needed because gnome2.eclass doesn't check
-	# whether a configure script exists.
-	true
-}
-
-src_compile() {
-	# This workaround is sadly needed because gnome2.eclass doesn't check
-	# whether a Makefile exists.
-	true
-}
+# These workarounds are sadly needed because gnome2.eclass doesn't check
+# whether a configure/Makefile script exists.
+src_configure() { :; }
+src_compile() { :; }
 
 src_install() {
 	# Prepare installation directories for Opera's installer script.
