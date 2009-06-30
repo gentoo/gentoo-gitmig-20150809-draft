@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/kcdlabel-2.13-r1.ebuild,v 1.3 2009/06/17 13:04:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kcdlabel/kcdlabel-2.13-r1.ebuild,v 1.4 2009/06/30 15:16:51 armin76 Exp $
 
 ARTS_REQUIRED="never"
 
@@ -13,7 +13,7 @@ SRC_URI="http://kcdlabel.sourceforge.net/download/${P}-KDE3.tar.gz
 
 SLOT="3.5"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE=""
 
 need-kde 3.5
