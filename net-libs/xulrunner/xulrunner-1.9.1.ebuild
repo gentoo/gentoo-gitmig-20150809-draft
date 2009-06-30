@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.ebuild,v 1.1 2009/06/30 17:14:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.ebuild,v 1.2 2009/06/30 17:51:56 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -23,12 +23,13 @@ SLOT="1.9"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 IUSE="debug python" # qt-experimental
 
+#	qt-experimental? (
+#		x11-libs/qt-gui
+#		x11-libs/qt-core )
+
 # nspr-4.8 due to BMO #499144
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	python? ( >=dev-lang/python-2.3 )
-	qt-experimental? (
-		x11-libs/qt-gui
-		x11-libs/qt-core )
 
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.3

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.215 2009/06/30 17:14:16 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.216 2009/06/30 17:51:56 nirbheek Exp $
+
+  30 Jun 2009; <nirbheek@gentoo.org> xulrunner-1.9.1.ebuild:
+  <Mr_Bones_> nirbheek: net-libs/xulrunner-1.9.1: attr(rdepends) uses
+  unstated flags [ qt-experimental ] commented out of IUSE but used in the
+  deps
 
 *xulrunner-1.9.1 (30 Jun 2009)
 
