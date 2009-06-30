@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.202 2009/06/10 17:25:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.203 2009/06/30 16:01:17 chainsaw Exp $
+
+*asterisk-1.6.1.1-r1 (30 Jun 2009)
+
+  30 Jun 2009; <chainsaw@gentoo.org> asterisk-1.6.1.1.ebuild,
+  +asterisk-1.6.1.1-r1.ebuild,
+  +files/1.6.1/asterisk-1.6.1.1-resolve-peer-not-section-header.patch,
+  +files/1.6.1/asterisk.rc6:
+  Revision bump. Patch by Federico Santulli to resolve the SIP peer instead
+  of a random section header nearby, closes bug #275394. Also updates the
+  init script to call the new-style graceful shutdown command.
 
 *asterisk-1.6.1.1 (10 Jun 2009)
 *asterisk-1.2.33 (10 Jun 2009)
