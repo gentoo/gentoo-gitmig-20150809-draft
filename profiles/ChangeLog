@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2846 2009/06/30 08:56:04 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2847 2009/06/30 12:45:02 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask alsa-patch-bay.
 
   30 Jun 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add the latest xorg-server to p.mask

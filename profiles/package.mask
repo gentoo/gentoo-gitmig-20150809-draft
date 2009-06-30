@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9988 2009/06/30 08:56:04 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9989 2009/06/30 12:45:02 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (30 Jun 2009)
+# Fails with glibc 2.10 (bug #274122), has had enough problems in the
+# past, and there is no upstream development. Use patchage or qjackctl
+# if you need something similar.
+# Pending removal on July 30th 2009
+media-sound/alsa-patch-bay
 
 # Rémi Cardona <remi@gentoo.org> (30 Jun 2009)
 # breaks Intel KMS, need to figure out why
