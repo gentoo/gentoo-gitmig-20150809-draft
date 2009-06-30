@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.ebuild,v 1.3 2009/06/30 17:53:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.ebuild,v 1.4 2009/06/30 19:45:28 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -214,6 +214,10 @@ pkg_postinst() {
 		python_need_rebuild
 		python_mod_optimize "${MOZLIBDIR}/python"
 	fi
+
+	ewarn "If firefox fails to start with \"failed to load xpcom\", run revdep-rebuild"
+	ewarn "If that does not fix the problem, rebuild dev-libs/nss"
+	ewarn "Try dev-util/lafilefixer if you get build failures related to .la files"
 }
 
 pkg_postrm() {
