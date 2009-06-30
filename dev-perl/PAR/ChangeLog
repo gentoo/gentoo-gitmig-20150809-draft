@@ -1,0 +1,16 @@
+# ChangeLog for dev-perl/PAR
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.1 2009/06/30 13:55:43 tove Exp $
+
+*PAR-0.992 (30 Jun 2009)
+
+  30 Jun 2009; Torsten Veller <tove@gentoo.org> +PAR-0.992.ebuild,
+  +metadata.xml:
+  Import from perl-experimental (#275932)
+
+  22 Apr 2009; Michele Beltrame <mb@cattlegrid.info>
+  -PAR-0.982.ebuild,
+  -PAR-0.983.ebuild,
+  +PAR-0.992.ebuild:
+  Bump + cleanup
+
