@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.74 2009/06/30 18:35:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.75 2009/06/30 21:17:24 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  libcaca-0.99_beta16.ebuild:
+  stable x86, bug 275907
 
   30 Jun 2009; Jeroen Roovers <jer@gentoo.org> libcaca-0.99_beta16.ebuild:
   Stable for HPPA (bug #275907).
