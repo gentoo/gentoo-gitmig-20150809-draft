@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.6 2009/06/30 14:13:04 darkside Exp $
+# $Id: package.mask,v 1.7 2009/06/30 15:57:34 darkside Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -46,10 +46,6 @@ sys-auth/pambase
 # fails to compile the widec version, ebuild changes somehow broke it,
 # need further investigation
 =sys-libs/ncurses-5.7-r1
-
-# Jeremy Olexa <darkside@gentoo.org> (05 Jun 2009)
-# Fails to build on multiple system types. bug 271424
-=dev-util/subversion-1.6.2
 
 # Fabian Groffen <grobian@gentoo.org> (05 Jun 2009)
 # {standard input}: Assembler messages:

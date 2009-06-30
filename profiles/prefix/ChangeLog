@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.17 2009/06/30 14:13:04 darkside Exp $
+# $Id: ChangeLog,v 1.18 2009/06/30 15:57:34 darkside Exp $
+
+  30 Jun 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  Remove subversion mask
 
   30 Jun 2009; Jeremy Olexa <darkside@gentoo.org> package.mask, use.mask:
   Mask USE=pam and sys-libs/pam, sys-auth/pambase because the host's auth
