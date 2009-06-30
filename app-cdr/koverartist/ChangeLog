@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/koverartist
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.30 2009/06/17 13:06:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/koverartist/ChangeLog,v 1.31 2009/06/30 15:17:37 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> koverartist-0.5-r1.ebuild:
+  sparc stable wrt #274022
 
   17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   koverartist-0.5-r1.ebuild:
