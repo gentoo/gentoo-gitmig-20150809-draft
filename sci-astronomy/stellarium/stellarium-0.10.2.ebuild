@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.2.ebuild,v 1.4 2009/06/25 20:34:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.10.2.ebuild,v 1.5 2009/06/30 08:25:00 fauli Exp $
 
 EAPI=2
 inherit cmake-utils eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/stellarium/${P}.tar.gz"
 
 LICENSE="GPL-2 BitstreamVera"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 x86"
 IUSE="nls"
 RESTRICT="test"
 

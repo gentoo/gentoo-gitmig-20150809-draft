@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/stellarium
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.50 2009/05/31 15:52:16 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.51 2009/06/30 08:25:00 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  stellarium-0.10.2.ebuild:
+  stable x86, bug 271176
 
   31 May 2009; Brent Baude <ranger@gentoo.org> stellarium-0.10.2.ebuild:
   Marking stellarium-0.10.2 ppc64 for bug 271176
