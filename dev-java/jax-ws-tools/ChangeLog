@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jax-ws-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-tools/ChangeLog,v 1.8 2008/10/05 11:27:52 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jax-ws-tools/ChangeLog,v 1.9 2009/06/30 20:38:39 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  jax-ws-tools-2.0.1-r1.ebuild:
+  stable x86, bug 275204
 
 *jax-ws-tools-2.0.1-r1 (05 Oct 2008)
 
