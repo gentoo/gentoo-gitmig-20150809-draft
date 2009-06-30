@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.41 2009/06/30 14:35:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.42 2009/06/30 14:41:06 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask:
+  Package.use.mask media-plugins/gst-plugins-meta lame taglib
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask libmms and sid

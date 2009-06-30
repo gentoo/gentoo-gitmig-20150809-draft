@@ -28,3 +28,8 @@ dev-libs/boost mpi
 
 # missing keyword for dev-libs/oniguruma
 sys-libs/slang cjk
+
+# Needs testing
+media-plugins/gst-plugins-meta lame taglib
+
+
