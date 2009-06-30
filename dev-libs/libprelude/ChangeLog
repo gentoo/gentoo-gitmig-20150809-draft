@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.62 2009/06/28 19:21:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.63 2009/06/30 21:16:04 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  libprelude-0.9.22.ebuild:
+  stable x86, bug 275702
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   libprelude-0.9.22.ebuild:
