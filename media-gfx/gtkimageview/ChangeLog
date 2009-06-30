@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gtkimageview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.5 2009/06/28 18:00:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/ChangeLog,v 1.6 2009/06/30 08:44:30 aballier Exp $
+
+  30 Jun 2009; Alexis Ballier <aballier@gentoo.org>
+  gtkimageview-1.6.4.ebuild:
+  keyword ~x86-fbsd
 
   28 Jun 2009; Gilles Dartiguelongue <eva@gentoo.org>
   gtkimageview-1.6.4.ebuild:
