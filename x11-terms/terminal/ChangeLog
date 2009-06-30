@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.22 2009/06/28 13:20:52 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.23 2009/06/30 19:18:38 klausman Exp $
+
+  30 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
+  terminal-0.2.12.ebuild:
+  Stable on alpha, bug #265587
 
   28 Jun 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking terminal-0.2.12 ppc64 stable for bug 265587
