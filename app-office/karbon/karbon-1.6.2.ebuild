@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-1.6.2.ebuild,v 1.11 2008/04/21 18:59:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/karbon-1.6.2.ebuild,v 1.12 2009/06/30 20:41:09 tampakrap Exp $
 
 MAXKOFFICEVER=1.6.3
 KMNAME=koffice
@@ -10,7 +10,7 @@ DESCRIPTION="KOffice vector drawing application."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 

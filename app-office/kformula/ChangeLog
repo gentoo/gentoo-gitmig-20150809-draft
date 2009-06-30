@@ -1,6 +1,11 @@
 # ChangeLog for app-office/kformula
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.84 2009/02/08 17:22:40 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kformula/ChangeLog,v 1.85 2009/06/30 20:50:42 tampakrap Exp $
+
+  30 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -kformula-1.6.1.ebuild, kformula-1.6.2.ebuild,
+  kformula-1.6.3_p20090204.ebuild:
+  Slotmove to 3.5, remove old
 
 *kformula-1.6.3_p20090204 (08 Feb 2009)
 

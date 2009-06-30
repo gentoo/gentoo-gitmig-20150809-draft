@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kexi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.88 2009/02/08 17:21:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/ChangeLog,v 1.89 2009/06/30 20:48:07 tampakrap Exp $
+
+  30 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org> -kexi-1.6.1.ebuild,
+  kexi-1.6.3.ebuild, kexi-1.6.3_p20090204.ebuild:
+  Slotmove to 3.5, remove old
 
 *kexi-1.6.3_p20090204 (08 Feb 2009)
 

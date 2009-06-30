@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/kivio-1.6.2.ebuild,v 1.10 2007/11/11 21:34:05 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kivio/kivio-1.6.2.ebuild,v 1.11 2009/06/30 20:54:42 tampakrap Exp $
 
 MAXKOFFICEVER=1.6.3
 KMNAME=koffice
@@ -10,7 +10,7 @@ DESCRIPTION="KOffice flowchart and diagram tool."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 

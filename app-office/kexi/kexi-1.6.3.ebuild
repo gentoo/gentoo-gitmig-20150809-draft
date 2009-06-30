@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.6.3.ebuild,v 1.10 2008/06/16 14:01:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kexi/kexi-1.6.3.ebuild,v 1.11 2009/06/30 20:48:07 tampakrap Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -10,7 +10,7 @@ DESCRIPTION="KOffice integrated environment for database management."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="mysql postgres kdeenablefinal"
 
