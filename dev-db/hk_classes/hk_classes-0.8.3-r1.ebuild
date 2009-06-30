@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.3-r1.ebuild,v 1.3 2009/06/19 21:08:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.8.3-r1.ebuild,v 1.4 2009/06/30 15:20:07 armin76 Exp $
 
 EAPI="1"
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://sourceforge/hk-classes/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc sparc x86"
 IUSE="doc firebird mdb mysql odbc postgres sqlite xbase"
 
 RDEPEND=">=media-libs/fontconfig-2.5.0-r1

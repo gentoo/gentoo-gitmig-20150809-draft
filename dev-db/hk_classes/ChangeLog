@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.65 2009/06/19 21:08:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.66 2009/06/30 15:20:07 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> hk_classes-0.8.3-r1.ebuild:
+  sparc stable wrt #274110
 
   19 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   hk_classes-0.8.3-r1.ebuild, metadata.xml:
