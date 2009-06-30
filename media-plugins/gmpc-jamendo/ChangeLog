@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gmpc-jamendo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/ChangeLog,v 1.1 2009/06/19 08:08:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/ChangeLog,v 1.2 2009/06/30 08:23:50 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  gmpc-jamendo-0.18.0.ebuild:
+  keyworded ~arch for x86, bug 268069
 
 *gmpc-jamendo-0.18.0 (19 Jun 2009)
 
