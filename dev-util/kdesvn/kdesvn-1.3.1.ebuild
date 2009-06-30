@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.3.0.ebuild,v 1.1 2009/04/20 14:58:43 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.3.1.ebuild,v 1.1 2009/06/30 15:42:24 tampakrap Exp $
 
 EAPI="2"
 
@@ -11,22 +11,24 @@ DESCRIPTION="KDESvn is a frontend to the subversion vcs."
 HOMEPAGE="http://www.alwins-world.de/wiki/programs/kdesvn"
 SRC_URI="http://kdesvn.alwins-world.de/downloads/${P}.tar.bz2"
 
-SLOT="2"
+SLOT="4"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug"
+IUSE="debug +handbook"
 
-RDEPEND="
-	!dev-util/kdesvn:1.2
+DEPEND="
 	dev-db/sqlite
 	>=dev-util/subversion-1.4
-	kde-base/kdesdk-kioslaves
+"
+RDEPEND="${DEPEND}
+	!dev-util/kdesvn:1.2
+	>=kde-base/kdesdk-kioslaves-${KDE_MINIMAL}
 "
 
 src_configure() {
 	append-cppflags -DQT_THREAD_SUPPORT
 	mycmakeargs="${mycmakeargs}
-		-DLIB_INSTALL_DIR=${KDEDIR}/$(get_libdir)"
+		-DLIB_INSTALL_DIR=${PREFIX}/$(get_libdir)"
 
 	kde4-base_src_configure
 }
@@ -35,14 +37,14 @@ src_install() {
 	kde4-base_src_install
 
 	# Remove kio svn service types - provided by kdesdk-kioslaves
-	rm -f "${D}/${KDEDIR}"/share/kde4/services/svn{,+ssh,+https,+file,+http}.protocol
+	rm -f "${D}/${PREFIX}"/share/kde4/services/svn{,+ssh,+https,+file,+http}.protocol
 }
 
 pkg_postinst() {
 	if ! has_version 'kde-base/kompare'; then
-		elog
+		echo
 		elog "For nice graphical diffs, install kde-base/kompare."
-		elog
+		echo
 	fi
 
 	kde4-base_pkg_postinst
