@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.9 2009/06/30 14:41:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.10 2009/06/30 14:43:20 armin76 Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -18,7 +18,7 @@ media-libs/gstreamer debug
 media-libs/gst-plugins-base debug
 
 # Masking this so repoman shuts up about paludis
-sys-apps/paludis ruby
+sys-apps/paludis ruby-bindings
 
 # missing keyword for sys-cluster/openmpi sys-cluster/mpich2
 dev-libs/boost mpi
