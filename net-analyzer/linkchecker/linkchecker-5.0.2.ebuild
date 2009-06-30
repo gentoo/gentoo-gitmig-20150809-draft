@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-5.0.2.ebuild,v 1.1 2009/06/29 22:54:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/linkchecker-5.0.2.ebuild,v 1.2 2009/06/30 00:15:44 mr_bones_ Exp $
 
 inherit distutils
 
@@ -21,4 +21,3 @@ RDEPEND="${DEPEND}"
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
-
