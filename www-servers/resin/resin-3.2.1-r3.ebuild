@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r3.ebuild,v 1.1 2009/05/09 15:39:47 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin/resin-3.2.1-r3.ebuild,v 1.2 2009/06/30 21:10:03 fauli Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="admin"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 
 	## java-virtuals/jaf"
 COMMON_DEP="~dev-java/resin-servlet-api-${PV}
