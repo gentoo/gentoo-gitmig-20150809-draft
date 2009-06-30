@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/kcometen4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.1 2009/02/12 19:43:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcometen4/ChangeLog,v 1.2 2009/06/30 20:09:27 hwoarang Exp $
+
+*kcometen4-1.0.5 (30 Jun 2009)
+
+  30 Jun 2009; Markos Chandras <hwoarang@gentoo.org>
+  +kcometen4-1.0.5.ebuild:
+  Version bump
 
 *kcometen4-1.0.4 (12 Feb 2009)
 
