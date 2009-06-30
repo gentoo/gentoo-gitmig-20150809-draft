@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.23 2009/06/29 02:19:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.24 2009/06/30 21:15:00 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  rsyslog-3.22.0.ebuild:
+  stable x86, bug 275700
 
   29 Jun 2009; Jeroen Roovers <jer@gentoo.org> rsyslog-3.22.0.ebuild:
   Stable for HPPA (bug #275700).
