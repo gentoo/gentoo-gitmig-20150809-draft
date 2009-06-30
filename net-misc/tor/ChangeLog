@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.173 2009/06/30 14:13:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.174 2009/06/30 21:50:27 ranger Exp $
+
+  30 Jun 2009; Brent Baude <ranger@gentoo.org> tor-0.2.0.35.ebuild:
+  Marking tor-0.2.0.35 ppc64 for bug 275628
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org> tor-0.2.0.35.ebuild:
   sparc stable wrt #275628
