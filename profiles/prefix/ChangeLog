@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.19 2009/06/30 16:34:58 darkside Exp $
+# $Id: ChangeLog,v 1.20 2009/06/30 16:39:18 darkside Exp $
+
+  30 Jun 2009; Jeremy Olexa <darkside@gentoo.org> linux/make.defaults:
+  Remove sandbox being enabled by default on linux prefix platforms, users can
+  still enable themselves if wanted
 
   30 Jun 2009; Jeremy Olexa <darkside@gentoo.org> aix/make.defaults,
   bsd/freebsd/make.defaults, bsd/netbsd/make.defaults,
