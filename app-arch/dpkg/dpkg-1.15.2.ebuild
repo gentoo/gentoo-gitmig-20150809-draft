@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.2.ebuild,v 1.1 2009/05/27 03:57:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/dpkg-1.15.2.ebuild,v 1.2 2009/06/30 14:04:23 fmccor Exp $
 
 inherit eutils multilib autotools
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/d/dpkg/${P/-/_}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~s390 ~sh sparc ~x86"
 IUSE="bzip2 nls selinux test unicode zlib"
 
 RDEPEND=">=dev-lang/perl-5.6.0
