@@ -1,6 +1,9 @@
 # ChangeLog for net-print/xfprint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.19 2009/06/28 13:20:10 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xfprint/ChangeLog,v 1.20 2009/06/30 19:18:13 klausman Exp $
+
+  30 Jun 2009; Tobias Klausmann <klausman@gentoo.org> xfprint-4.6.1.ebuild:
+  Stable on alpha, bug #265587
 
   28 Jun 2009; Brent Baude <ranger@gentoo.org> xfprint-4.6.1.ebuild:
   Marking xfprint-4.6.1 ppc64 stable for bug 265587
