@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/usb-robot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.8 2009/06/28 17:58:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/usb-robot/ChangeLog,v 1.9 2009/06/30 19:23:27 robbat2 Exp $
+
+  30 Jun 2009; Robin H. Johnson <robbat2@gentoo.org> usb-robot-0.2.0.ebuild:
+  Bug #270159 said that libusb-compat should be ok, so really reflect that.
+  If it's actually broken, please file a bug.
 
   28 Jun 2009; Patrick Lauer <patrick@gentoo.org> usb-robot-0.2.0.ebuild:
   EAPI2ification, nailing libusb dep to slot 0, fixes #270159
