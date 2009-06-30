@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4592 2009/06/28 23:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4593 2009/06/30 18:07:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -910,7 +910,6 @@ dev-util/kdevelop:pascal - Support for the Pascal programming language.
 dev-util/kdevelop:perforce - Support for the Perforce version control system.
 dev-util/kdevelop:qmake - Support for the QMake Build System.
 dev-util/kdevelop:sql - Support for the Structured Query Language (SQL).
-dev-util/kdevplatform:bazaar - Add suport for bazaar VCS
 dev-util/kdevplatform:git - Add suport for git VCS
 dev-util/kdevplatform:mercurial - Add suport for mercurial VCS
 dev-util/mercurial:bugzilla - Support bugzilla integration.
