@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.5 2009/06/28 16:04:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.6 2009/06/30 15:32:05 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> iniparser-3.0b-r1.ebuild:
+  Add ~ia64/~sparc wrt #275429
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   iniparser-3.0b-r1.ebuild:
