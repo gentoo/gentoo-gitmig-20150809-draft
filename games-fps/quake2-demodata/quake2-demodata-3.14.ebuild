@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.3 2007/03/12 14:51:22 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-demodata/quake2-demodata-3.14.ebuild,v 1.4 2009/06/30 21:00:27 fauli Exp $
 
 inherit eutils versionator games
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://idsoftware/${MY_PN}/${FILE}"
 # See license.txt - it's a bit different to Q2EULA in Portage
 LICENSE="quake2-demodata"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc x86 ~x86-fbsd"
 IUSE="symlink"
 
 RDEPEND=""
