@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3.ebuild,v 1.10 2008/04/21 22:53:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/krita-1.6.3.ebuild,v 1.11 2009/06/30 21:24:06 tampakrap Exp $
 
 MAXKOFFICEVER=${PV}
 KMNAME=koffice
@@ -10,7 +10,7 @@ DESCRIPTION="KOffice image manipulation program."
 HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
-SLOT="0"
+SLOT="3.5"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 # See bug #130442.
 #IUSE="opengl"
@@ -26,6 +26,7 @@ DEPEND="$(deprange $PV $MAXKOFFICEVER app-office/koffice-libs)
 	>=media-libs/libexif-0.6.13-r1
 	virtual/opengl
 	virtual/glu"
+RDEPEND="${DEPEND}"
 
 #opengl? ( virtual/opengl virtual/glu )"
 
