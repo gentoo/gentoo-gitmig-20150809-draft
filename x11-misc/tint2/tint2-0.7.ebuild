@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.7_beta3.ebuild,v 1.1 2009/06/20 18:06:03 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.7.ebuild,v 1.1 2009/06/30 20:24:39 idl0r Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="http://tint2.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="battery doc examples"
+IUSE="battery examples"
 
 RDEPEND="dev-libs/glib:2
 	x11-libs/cairo
@@ -24,7 +24,6 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf $(use_enable battery) \
-		$(use_enable doc) \
 		$(use_enable examples)
 }
 
