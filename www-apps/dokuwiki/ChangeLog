@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/dokuwiki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.39 2009/06/29 13:51:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dokuwiki/ChangeLog,v 1.40 2009/06/30 14:09:23 armin76 Exp $
+
+  30 Jun 2009; Raúl Porcel <armin76@gentoo.org> dokuwiki-20090214b.ebuild:
+  sparc stable wrt #272431
 
   29 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   dokuwiki-20090214b.ebuild:
