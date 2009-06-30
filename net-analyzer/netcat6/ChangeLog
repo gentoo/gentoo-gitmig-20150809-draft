@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netcat6
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.15 2009/06/28 14:56:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.16 2009/06/30 20:51:09 fauli Exp $
+
+  30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
+  netcat6-1.0-r1.ebuild:
+  stable x86, bug 275386
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org> netcat6-1.0-r1.ebuild:
   Stable on alpha, bug #275386
