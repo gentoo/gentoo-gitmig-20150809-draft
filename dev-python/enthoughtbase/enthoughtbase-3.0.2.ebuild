@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.2.ebuild,v 1.1 2009/03/27 10:38:36 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/enthoughtbase-3.0.2.ebuild,v 1.2 2009/07/01 07:55:29 lordvan Exp $
 
 EAPI=2
 inherit distutils
@@ -52,7 +52,8 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	if use doc; then
 		doins -r build/docs/html || die
-		doins build/docs/latex/*.pdf || die
+		# no pdf docs there...
+		#doins build/docs/latex/*.pdf || die
 	fi
 	if use examples; then
 		doins -r examples || die
