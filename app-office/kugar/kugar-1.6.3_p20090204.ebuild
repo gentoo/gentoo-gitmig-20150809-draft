@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.6.3_p20090204.ebuild,v 1.2 2009/06/30 21:34:51 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kugar/kugar-1.6.3_p20090204.ebuild,v 1.3 2009/07/01 12:50:09 fauli Exp $
 
 ARTS_REQUIRED="never"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 
 SLOT="3.5"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="~app-office/koffice-libs-1.6.3_p20090204"

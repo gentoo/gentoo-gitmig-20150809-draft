@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.90 2009/06/30 21:08:53 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-libs/ChangeLog,v 1.91 2009/07/01 12:31:36 fauli Exp $
+
+  01 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  koffice-libs-1.6.3_p20090204.ebuild:
+  stable x86, bug 276008
 
   30 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   -koffice-libs-1.6.1.ebuild, koffice-libs-1.6.3.ebuild,
