@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.23 2009/05/17 10:58:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.24 2009/07/01 10:05:57 aballier Exp $
+
+  01 Jul 2009; Alexis Ballier <aballier@gentoo.org> use.mask:
+  mask qcam sane backend, its linux only
 
   17 May 2009; Alexis Ballier <aballier@gentoo.org>
   +fbsd/amd64/7.2/make.defaults, +fbsd/amd64/7.2/parent,
