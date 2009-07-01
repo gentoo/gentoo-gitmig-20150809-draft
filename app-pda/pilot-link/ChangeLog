@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/pilot-link
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.50 2009/05/19 00:43:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/ChangeLog,v 1.51 2009/07/01 09:42:08 aballier Exp $
+
+  01 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  pilot-link-0.12.3-r2.ebuild:
+  keyword ~x86-fbsd
 
   19 May 2009; Robin H. Johnson <robbat2@gentoo.org>
   pilot-link-0.12.3.ebuild, pilot-link-0.12.3-r1.ebuild,
