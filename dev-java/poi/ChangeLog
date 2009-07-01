@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.50 2009/06/16 19:07:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.51 2009/07/01 20:20:59 maekke Exp $
+
+  01 Jul 2009; Markus Meier <maekke@gentoo.org> poi-3.2.ebuild:
+  amd64 stable, bug #258723
 
   16 Jun 2009; Christian Faulhammer <fauli@gentoo.org> poi-3.2.ebuild:
   stable x86, bug 258723
