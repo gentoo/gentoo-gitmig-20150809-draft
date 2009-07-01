@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.2.ebuild,v 1.7 2009/06/02 17:48:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.2.ebuild,v 1.8 2009/07/01 09:23:40 jer Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/gtkpod/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE="+gtk python test hal"
 
 RDEPEND=">=dev-libs/glib-2.16
