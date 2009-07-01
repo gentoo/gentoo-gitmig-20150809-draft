@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r1.ebuild,v 1.2 2009/03/01 09:54:32 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/pyxdg-0.17-r1.ebuild,v 1.3 2009/07/01 14:45:58 armin76 Exp $
 
 NEED_PYTHON=2.4
 
@@ -10,7 +10,7 @@ DESCRIPTION="a python module to deal with freedesktop.org specifications."
 SRC_URI="http://www.freedesktop.org/~lanius/${P}.tar.gz"
 HOMEPAGE="http://pyxdg.freedesktop.org/"
 LICENSE="LGPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
 
