@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gnome-mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.26 2009/06/29 21:45:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/ChangeLog,v 1.27 2009/07/01 09:24:09 jer Exp $
+
+  01 Jul 2009; Jeroen Roovers <jer@gentoo.org> gnome-mplayer-0.9.6.ebuild:
+  Marked ~hppa (bug #274984).
 
   29 Jun 2009; Markus Meier <maekke@gentoo.org> gnome-mplayer-0.9.6.ebuild:
   amd64/x86 stable, bug #274984
