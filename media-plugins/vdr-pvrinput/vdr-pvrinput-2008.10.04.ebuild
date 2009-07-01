@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-2008.10.04.ebuild,v 1.1 2008/10/04 18:59:36 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/vdr-pvrinput-2008.10.04.ebuild,v 1.2 2009/07/01 06:54:08 zzam Exp $
 
 inherit vdr-plugin eutils versionator
 
@@ -17,11 +17,12 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=media-video/vdr-1.2.6"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P#vdr-}"
 
 src_install() {
 	vdr-plugin_src_install
 
-	dodoc example/channels.conf.example
+	dodoc TODO FAQ example/channels.conf_*
 }

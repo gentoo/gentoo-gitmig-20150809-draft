@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-pvrinput
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.18 2009/03/29 04:34:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-pvrinput/ChangeLog,v 1.19 2009/07/01 06:54:08 zzam Exp $
+
+  01 Jul 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-pvrinput-2008.10.04.ebuild:
+  Fix installing of example channels.conf files.
 
   29 Mar 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -files/vdr-pvrinput-0.1.1-include-order.patch, -vdr-pvrinput-0.1.1.ebuild:
