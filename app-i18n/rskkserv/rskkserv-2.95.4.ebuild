@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4.ebuild,v 1.4 2007/04/28 15:45:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4.ebuild,v 1.5 2009/07/01 23:04:43 matsuu Exp $
 
 inherit ruby eutils
 
@@ -53,13 +53,11 @@ pkg_postinst() {
 	elog "SKK-JISYO.jinmei, SKK-JISYO.2ch and so on) you need to emerge"
 	elog "app-i18n/skk-jisyo-extra and uncomment dictionary entries in"
 	elog "/etc/rskkserv.conf manually."
-	#elog "See /usr/share/doc/${PF}/rskkserv.conf.sample.gz"
-	#elog "for an example of multiple dictionaries."
 	elog
 	draw_line
 	elog
 	elog "If you are upgrading from 2.94.x, you may want to use"
-	elog "/usr/share/doc/${PF}/conf-o2n.rb to convert configuration"
+	elog "conf-o2n.rb in /usr/share/doc/${PF} to convert configuration"
 	elog "file into new format."
 	elog
 }
