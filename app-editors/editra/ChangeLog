@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.3 2009/05/07 00:49:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.4 2009/07/01 17:58:27 billie Exp $
+
+*editra-0.4.95 (01 Jul 2009)
+
+  01 Jul 2009; Pielmeier Daniel <billie@gentoo.org> +editra-0.4.95.ebuild:
+  Version bump. Add a Main Category to the desktop entry. Fixes bug #275697.
 
 *editra-0.4.88 (07 May 2009)
 
