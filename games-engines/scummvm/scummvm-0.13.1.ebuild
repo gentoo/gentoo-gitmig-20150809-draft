@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.13.1.ebuild,v 1.2 2009/05/25 13:42:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.13.1.ebuild,v 1.3 2009/07/01 19:01:40 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -12,18 +12,18 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="alsa debug flac fluidsynth mp3 ogg vorbis zlib"
+IUSE="alsa debug flac fluidsynth mp3 ogg vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
 RDEPEND=">=media-libs/libsdl-1.2.2
 	>media-libs/libmpeg2-0.3.1
+	sys-libs/zlib
 	ogg? ( media-libs/libogg media-libs/libvorbis )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
 	alsa? ( >=media-libs/alsa-lib-0.9[midi] )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
-	fluidsynth? ( media-sound/fluidsynth )
-	zlib? ( sys-libs/zlib )"
+	fluidsynth? ( media-sound/fluidsynth )"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
@@ -62,11 +62,11 @@ src_configure() {
 		--bindir="${GAMES_BINDIR}" \
 		--datadir="${GAMES_DATADIR}" \
 		--libdir="${GAMES_LIBDIR}" \
+		--enable-zlib \
 		$(use_enable debug) \
 		$(use_enable alsa) \
 		$(use_enable mp3 mad) \
 		$(use_enable flac) \
-		$(use_enable zlib) \
 		$(use_enable x86 nasm) \
 		${myconf} \
 		|| die "configure failed"
