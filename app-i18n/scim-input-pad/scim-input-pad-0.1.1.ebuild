@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/scim-input-pad-0.1.1.ebuild,v 1.6 2009/07/01 23:08:25 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-input-pad/scim-input-pad-0.1.1.ebuild,v 1.7 2009/07/01 23:09:48 matsuu Exp $
 
 DESCRIPTION="Input pad for SCIM used to input symbols and special characters"
 HOMEPAGE="http://www.scim-im.org/"
