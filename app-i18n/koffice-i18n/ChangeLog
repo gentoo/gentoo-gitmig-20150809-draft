@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/koffice-i18n
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.103 2009/02/09 16:09:28 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n/ChangeLog,v 1.104 2009/07/01 15:44:15 tampakrap Exp $
+
+  01 Jul 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -koffice-i18n-1.6.1.ebuild, koffice-i18n-1.6.3.ebuild:
+  Slotmove to 3.5, remove old
 
   09 Feb 2009; Jeroen Roovers <jer@gentoo.org> koffice-i18n-1.6.3.ebuild:
   Stable for HPPA too.
