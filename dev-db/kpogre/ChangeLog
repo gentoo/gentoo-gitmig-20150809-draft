@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/kpogre
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.26 2008/07/08 16:22:35 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/ChangeLog,v 1.27 2009/07/01 12:31:20 fauli Exp $
+
+  01 Jul 2009; Christian Faulhammer <fauli@gentoo.org> kpogre-1.6.6.ebuild:
+  stable x86, bug 276039
 
   08 Jul 2008; Michael Sterrett <mr_bones_@gentoo.org> kpogre-1.6.6.ebuild:
   x86 back to unstable, bug 226621
