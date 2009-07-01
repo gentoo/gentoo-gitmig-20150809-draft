@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/mlterm
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.64 2008/09/30 16:24:04 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.65 2009/07/01 14:06:18 matsuu Exp $
+
+*mlterm-2.9.4-r4 (01 Jul 2009)
+
+  01 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> +mlterm-2.9.4-r4.ebuild:
+  Added 256 color patch.
 
 *mlterm-2.9.4-r3 (30 Sep 2008)
 
