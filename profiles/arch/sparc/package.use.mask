@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.24 2009/06/16 18:42:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.25 2009/07/01 11:28:39 fmccor Exp $
 # Please add a proper entry, like a ChangeLog file, to the top, thanks.
 
 # Raúl Porcel <armin76@gentoo.org> (09 Jun 2009)
@@ -54,3 +54,6 @@ net-im/pidgin	zephyr
 
 # Mask zemberek for enchant because it requires java.
 app-text/enchant	zemberek
+
+# Mask srtp for ortp because libsrtp is marked -sparc
+net-libs/ortp	srtp

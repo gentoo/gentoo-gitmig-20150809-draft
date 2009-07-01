@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.49 2009/06/16 18:42:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.50 2009/07/01 11:28:39 fmccor Exp $
+
+  01 Jul 2009; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
+  Add net-libs/ortp srtp to package.use.mask because libsrtp is -sparc.
 
   16 Jun 2009; Raúl Porcel <armin76@gentoo.org> package.use.mask, use.mask:
   Add dev-util/subversion kde to package.use.mask as it needs kde4

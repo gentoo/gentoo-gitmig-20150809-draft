@@ -38,3 +38,6 @@ net-im/pidgin   zephyr
 
 # Mask zemberek for enchant because it requires java.
 app-text/enchant        zemberek
+
+# Mask srtp for ortp because libsrtp is marked -sparc.
+net-libs/ortp	srtp
