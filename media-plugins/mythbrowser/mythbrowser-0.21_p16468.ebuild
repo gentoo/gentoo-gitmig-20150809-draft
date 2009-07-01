@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.21_p16468.ebuild,v 1.1 2008/03/09 20:41:17 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/mythbrowser-0.21_p16468.ebuild,v 1.2 2009/07/01 13:54:13 cardoe Exp $
+
+EAPI=1
 
 inherit mythtv-plugins kde-functions multilib
 
@@ -8,7 +10,7 @@ DESCRIPTION="Web browser module for MythTV."
 IUSE=""
 KEYWORDS="~amd64 ~ppc ~x86"
 
-RDEPEND=">=kde-base/kdelibs-3.1"
+RDEPEND="kde-base/kdelibs:3.5"
 DEPEND="${RDEPEND}"
 
 src_unpack() {

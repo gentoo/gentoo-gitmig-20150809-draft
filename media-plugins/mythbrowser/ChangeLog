@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythbrowser
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.43 2008/12/23 17:19:43 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.44 2009/07/01 13:54:13 cardoe Exp $
+
+  01 Jul 2009; Doug Goldstein <cardoe@gentoo.org>
+  mythbrowser-0.21_p16468.ebuild, mythbrowser-0.21_p17105.ebuild:
+  update dependencies to be slot based deps on kdelibs 3.5
 
   23 Dec 2008; Markus Meier <maekke@gentoo.org>
   mythbrowser-0.21_p17105.ebuild:
