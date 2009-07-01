@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.1 2009/06/30 22:20:42 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.2 2009/07/01 21:30:19 hwoarang Exp $
+
+*nted-1.6.0-r1 (01 Jul 2009)
+
+  01 Jul 2009; Markos Chandras <hwoarang@gentoo.org> +nted-1.6.0-r1.ebuild,
+  +files/nted.desktop.patch:
+  Patch to Fix locales on .desktop file. Thanks to Dominik Kozaczko
+  <dominik@kozaczko.info>. Bug 244716
 
 *nted-1.6.0 (30 Jun 2009)
 
