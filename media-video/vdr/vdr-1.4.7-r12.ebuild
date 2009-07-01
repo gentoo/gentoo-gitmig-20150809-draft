@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r12.ebuild,v 1.4 2009/01/12 13:23:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r12.ebuild,v 1.5 2009/07/01 10:42:27 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -201,8 +201,8 @@ src_unpack() {
 	if ! use vanilla; then
 
 		cd "${S}"
-		local fname="${PN}-${EXT_VDR_PV:-${PV}}_extensions.diff"
-		epatch "${EXT_DIR}/${fname}"
+		local fname="${EXT_DIR}/${PN}-${EXT_VDR_PV:-${PV}}_extensions.diff"
+		epatch "${fname}"
 
 		if use shutdown_rewrite; then
 			epatch "${EXT_DIR}/vdr-1.4.7-ext44_shutdown-rewrite.diff"

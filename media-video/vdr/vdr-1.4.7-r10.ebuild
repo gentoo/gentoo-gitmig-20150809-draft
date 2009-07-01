@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.9 2009/01/12 13:23:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.10 2009/07/01 10:42:27 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -201,8 +201,8 @@ src_unpack() {
 	if ! use vanilla; then
 
 		cd "${S}"
-		local fname="${PN}-${EXT_VDR_PV:-${PV}}_extensions.diff"
-		epatch "${EXT_DIR}/${fname}"
+		local fname="${EXT_DIR}/${PN}-${EXT_VDR_PV:-${PV}}_extensions.diff"
+		epatch "${fname}"
 
 		epatch "${FILESDIR}/vdr-add-svdrp-down-0.1.diff"
 		add_cap CAP_SHUTDOWN_SVDRP

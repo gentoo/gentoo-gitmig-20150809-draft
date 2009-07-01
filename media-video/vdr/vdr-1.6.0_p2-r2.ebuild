@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.4 2009/07/01 09:51:41 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.5 2009/07/01 10:42:27 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -172,9 +172,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd "${S}"
-	# fix for wrong header include #263840 ; this need >libdvdread-0.9.7
-	sed -e "s:dvdread:dvdnav:g" -i "${EXT_DIR}/${PN}"-1.6.0-2_extensions.diff
-
 	#applying maintainace-patches
 	epatch "${DISTDIR}/${MY_P}-1.diff"
 	epatch "${DISTDIR}/${MY_P}-2.diff"
@@ -226,8 +223,12 @@ src_unpack() {
 
 		cd "${S}"
 		# Now apply extensions patch
-		local fname="${PN}-${EXT_VDR_PV:-${PV}}_extensions.diff"
-		epatch "${EXT_DIR}/${fname}"
+		local fname="${EXT_DIR}/${PN}-${EXT_VDR_PV:-${PV}}_extensions.diff"
+
+		# fix for wrong header include #263840 ; this need >libdvdread-0.9.7
+		sed -e "s:dvdread:dvdnav:g" -i "${fname}"
+
+		epatch "${fname}"
 
 		# Fix typo in Make.config.template
 		sed -e 's/CMDRECMDI18N/CMDRECCMDI18N/' -i Make.config.template
