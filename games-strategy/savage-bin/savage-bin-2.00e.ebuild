@@ -1,13 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.6 2008/12/06 14:57:20 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/savage-bin-2.00e.ebuild,v 1.7 2009/07/01 05:02:57 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Unique mix of strategy and FPS"
 HOMEPAGE="http://www.s2games.com/savage/
-	http://www.notforidiots.com/SFE/"
-SRC_URI="http://www.notforidiots.com/SFE/SFE-Standalone.tar.gz"
+	http://www.notforidiots.com/SFE/
+	http://www.newerth.com/"
+SRC_URI="http://www.newerth.com/downloads/SFE-Standalone.tar.gz
+	http://www.newerth.com/downloads/lin-client-auth-patch.zip"
 
 LICENSE="as-is"
 SLOT="0"
@@ -16,27 +19,35 @@ IUSE=""
 RESTRICT="mirror strip"
 
 RDEPEND="virtual/opengl
-	media-libs/libsdl
-	media-libs/jpeg
-	>=media-libs/freetype-2"
+	x86? ( 	media-libs/libsdl
+		media-libs/jpeg
+		>=media-libs/freetype-2 )
+	amd64? ( app-emulation/emul-linux-x86-sdl )"
 
 S=${WORKDIR}
 
 dir=${GAMES_PREFIX_OPT}/savage
 
 QA_TEXTRELS="${dir:1}/libs/libfmod.so
-	${dir:1}/libs/libfmod-3.75.so"
+	${dir:1}/libs/libfmod-3.75.so
+	${dir:1}/game/game.so"
 QA_EXECSTACK="${dir:1}/libs/libfmod.so
 	${dir:1}/libs/libfmod-3.75.so"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	cp -f lin-client-auth-patch/silverback.bin .
+	cp -f lin-client-auth-patch/game/game.so game/.
+	cp -f lin-client-auth-patch/libs/libpng12.so.0 libs/.
+	rm -rf lin-client-auth-patch/
 	rm -f graveyard/game.dll *.sh
 	sed \
 		-e "s:%GAMES_PREFIX_OPT%:${GAMES_PREFIX_OPT}:" \
 		"${FILESDIR}"/savage > "${T}"/savage \
 		|| die "sed failed"
+	# Here, we default to the best resolution
+	sed -i -e  \
+		's/setsave vid_mode -1/setsave vid_mode 1/' \
+		game/settings/default.cfg || die "sed failed"
 }
 
 src_install() {

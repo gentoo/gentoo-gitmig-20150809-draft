@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/savage-bin
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.7 2008/09/05 15:43:44 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.8 2009/07/01 05:02:57 mr_bones_ Exp $
+
+  30 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  savage-bin-2.00e.ebuild:
+  improvements patch from Pacho Ramos (bug #237487)
 
   05 Sep 2008; Michael Sterrett <mr_bones_@gentoo.org> +files/savage,
   savage-bin-2.00e.ebuild:
