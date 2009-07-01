@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.5.ebuild,v 1.1 2009/06/01 17:47:26 fuzzyray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.4.5.ebuild,v 1.2 2009/07/01 15:29:41 fuzzyray Exp $
 
 EAPI=2
 
@@ -21,6 +21,7 @@ DEPEND="sys-apps/portage
 	dev-lang/perl
 	sys-apps/grep"
 RDEPEND="${DEPEND}"
+RESTRICT="test"
 
 src_install() {
 	emake DESTDIR="${D}" install-gentoolkit || die "install-gentoolkit failed"
