@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.1-r1.ebuild,v 1.2 2009/06/30 21:25:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toilet/toilet-0.1-r1.ebuild,v 1.3 2009/07/01 13:57:45 armin76 Exp $
 
 inherit autotools eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://libcaca.zoy.org/files/${P}.tar.gz"
 
 LICENSE="WTFPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 arm ~ppc ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=media-libs/libcaca-0.99_beta16"
