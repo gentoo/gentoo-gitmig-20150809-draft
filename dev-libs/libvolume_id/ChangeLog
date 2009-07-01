@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libvolume_id
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvolume_id/ChangeLog,v 1.6 2008/09/10 18:16:18 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libvolume_id/ChangeLog,v 1.7 2009/07/01 14:41:51 aballier Exp $
+
+  01 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  -libvolume_id-0.71.0.ebuild:
+  remove old
 
   10 Sep 2008; Doug Goldstein <cardoe@gentoo.org>
   libvolume_id-0.71.0.ebuild, libvolume_id-0.81.0.ebuild:
