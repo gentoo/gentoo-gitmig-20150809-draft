@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/adns
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.32 2009/02/15 02:14:25 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/adns/ChangeLog,v 1.33 2009/07/01 14:32:44 armin76 Exp $
+
+  01 Jul 2009; Raúl Porcel <armin76@gentoo.org> adns-1.4.ebuild:
+  Add ~arm/~s390/~sh
 
   15 Feb 2009; Daniel Black <dragonheart@gentoo.org> +files/README.security,
   -adns-1.1.ebuild, adns-1.4.ebuild:
