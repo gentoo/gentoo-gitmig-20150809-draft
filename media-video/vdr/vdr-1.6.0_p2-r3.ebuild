@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r3.ebuild,v 1.1 2009/06/04 12:37:14 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r3.ebuild,v 1.2 2009/07/01 09:51:41 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -376,7 +376,7 @@ pkg_preinst() {
 	previous_less_than_1_3_36_r3=$?
 
 	has_version "<${CATEGORY}/${PN}-1.6.0"
-	previous_less_than_1_3_36_r3=$?
+	previous_less_than_1_6_0=$?
 }
 
 pkg_postinst() {
