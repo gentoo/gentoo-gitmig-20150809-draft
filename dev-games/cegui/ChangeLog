@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cegui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.25 2009/06/17 12:52:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cegui/ChangeLog,v 1.26 2009/07/01 21:18:31 maekke Exp $
+
+  01 Jul 2009; Markus Meier <maekke@gentoo.org> cegui-0.6.2b.ebuild:
+  amd64 stable, bug #255080
 
   17 Jun 2009; Christian Faulhammer <fauli@gentoo.org> cegui-0.6.2b.ebuild:
   stable x86, bug 255080
