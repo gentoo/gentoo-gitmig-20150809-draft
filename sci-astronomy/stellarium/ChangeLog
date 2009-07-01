@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/stellarium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.51 2009/06/30 08:25:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/ChangeLog,v 1.52 2009/07/01 20:47:05 maekke Exp $
+
+  01 Jul 2009; Markus Meier <maekke@gentoo.org> stellarium-0.10.2.ebuild:
+  amd64 stable, bug #271176
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   stellarium-0.10.2.ebuild:
