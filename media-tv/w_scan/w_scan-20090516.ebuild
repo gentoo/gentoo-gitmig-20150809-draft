@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20090516.ebuild,v 1.1 2009/05/16 15:08:36 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/w_scan/w_scan-20090516.ebuild,v 1.2 2009/07/01 12:47:27 zzam Exp $
 
 EAPI="2"
 
@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="media-tv/linuxtv-dvb-headers"
-RDEPEND="${DEPEND}
-		>=sys-kernel/linux-headers-2.6.29"
+DEPEND="~media-tv/linuxtv-dvb-headers-5"
+RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-build-and-path-fixes.patch"
