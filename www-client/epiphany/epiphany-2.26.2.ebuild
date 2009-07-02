@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.2.ebuild,v 1.1 2009/05/18 21:40:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.2.ebuild,v 1.2 2009/07/02 07:13:39 nirbheek Exp $
 
 EAPI="2"
 
@@ -68,22 +68,12 @@ src_prepare() {
 	# Fix libcanberra automagic support, bug #266232
 	epatch "${FILESDIR}/${PN}-2.26.1-automagic-libcanberra.patch"
 
+	# Fix sandbox violations, bug 263585
+	epatch "${FILESDIR}/${PN}-2.26-fix-sandbox-violations.patch"
+
 	# Make it libtool-1 compatible
 	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
-}
-
-src_configure() {
-	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/xpti.dat
-	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/xpti.dat.tmp
-	addpredict /usr/$(get_libdir)/xulrunner-1.9/components/compreg.dat.tmp
-
-	# Why are these write-opened per bug #228589 and bug #253043
-	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat
-	addpredict /usr/$(get_libdir)/mozilla/components/xpti.dat.tmp
-	addpredict /usr/$(get_libdir)/mozilla/components/compreg.dat.tmp
-
-	gnome2_src_configure
 }
