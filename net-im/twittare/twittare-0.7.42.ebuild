@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/twittare/twittare-0.7.42.ebuild,v 1.1 2009/05/10 11:35:02 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/twittare/twittare-0.7.42.ebuild,v 1.2 2009/07/02 13:40:40 hwoarang Exp $
 
 EAPI="2"
 
@@ -20,10 +20,15 @@ DEPEND="x11-libs/qt-core:4
 	x11-libs/libnotify"
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/${PN}-gcc-4.4-glibc-2.10.patch"
+)
+
 src_prepare() {
 	# fix LDFLAGS issue
 	sed -i "s/-fpic/${LDFLAGS}\ -fpic/" "${S}"/libtwnotification/makefile || die "sed failed"
 	sed -i "s/-shared/${LDFLAGS}\ -shared/" "${S}"/libtwnotification/makefile || die "sed failed"
+	qt4_src_prepare
 }
 
 src_configure() {
