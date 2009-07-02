@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.4-r1.ebuild,v 1.2 2009/06/11 14:01:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/podsleuth/podsleuth-0.6.4-r1.ebuild,v 1.3 2009/07/02 19:25:18 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/mono-2.0
