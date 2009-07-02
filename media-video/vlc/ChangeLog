@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.453 2009/06/28 19:33:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.454 2009/07/02 18:50:18 aballier Exp $
+
+  02 Jul 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.0_rc4.ebuild,
+  vlc-1.0.9999.ebuild, vlc-9999.ebuild, metadata.xml:
+  add libtiger useflag
 
   28 Jun 2009; Peter Volkov <pva@gentoo.org> vlc-0.9.8a.ebuild,
   vlc-0.9.9a-r1.ebuild, vlc-0.9.9999.ebuild, vlc-1.0.0_rc4.ebuild,
