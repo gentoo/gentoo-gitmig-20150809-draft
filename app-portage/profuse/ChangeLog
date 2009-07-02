@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/profuse
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.56 2008/04/27 10:36:13 cla Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/profuse/ChangeLog,v 1.57 2009/07/02 23:58:26 jer Exp $
+
+  02 Jul 2009; Jeroen Roovers <jer@gentoo.org> profuse-0.25.4.ebuild:
+  Marked ~hppa too.
 
   27 Apr 2008; Dawid Węgliński <cla@gentoo.org> -profuse-0.22.1.ebuild,
   -profuse-0.23.0.ebuild, -profuse-0.24.0.ebuild, -profuse-0.25.0.ebuild,
