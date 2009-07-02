@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/Test-Script-1.03.ebuild,v 1.7 2008/07/17 20:51:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/Test-Script-1.03.ebuild,v 1.8 2009/07/02 18:41:59 jer Exp $
 
 MODULE_AUTHOR=ADAMK
 
@@ -10,7 +10,7 @@ DESCRIPTION="Cross-platform basic tests for scripts"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~hppa ia64 ~ppc sparc x86"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl

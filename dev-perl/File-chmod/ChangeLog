@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-chmod
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chmod/ChangeLog,v 1.7 2008/07/17 20:52:31 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-chmod/ChangeLog,v 1.8 2009/07/02 18:42:47 jer Exp $
+
+  02 Jul 2009; Jeroen Roovers <jer@gentoo.org> File-chmod-0.32.ebuild:
+  Stable for HPPA too.
 
   17 Jul 2008; Raúl Porcel <armin76@gentoo.org> File-chmod-0.32.ebuild:
   alpha/ia64/sparc/x86 stable
