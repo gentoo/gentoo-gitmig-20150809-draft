@@ -1,12 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/HTML-Strip-1.06.ebuild,v 1.9 2007/07/10 23:33:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/HTML-Strip-1.06.ebuild,v 1.10 2009/07/02 07:16:52 tove Exp $
 
+MODULE_AUTHOR=KILINRAX
 inherit perl-module
 
-DESCRIPTION="automate interaction with bugzilla"
-SRC_URI="mirror://cpan/authors/id/K/KI/KILINRAX/${P}.tar.gz"
-HOMEPAGE="http://search.cpan.org/~kilinrax/"
+DESCRIPTION="Extension for stripping HTML markup from text"
 
 SLOT="0"
 LICENSE="GPL-2"
