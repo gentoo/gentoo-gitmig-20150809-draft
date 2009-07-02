@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9991 2009/07/01 17:09:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9992 2009/07/02 09:51:45 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+# Raúl Porcel <armin76@gentoo.org> (2 Jul 2009)
+# Release candidates should be masked
+~sys-kernel/vanilla-sources-2.6.30_rc1
+~sys-kernel/vanilla-sources-2.6.30_rc3
+~sys-kernel/vanilla-sources-2.6.30_rc4
+~sys-kernel/vanilla-sources-2.6.30_rc5
+~sys-kernel/vanilla-sources-2.6.30_rc6
+~sys-kernel/vanilla-sources-2.6.30_rc7
+~sys-kernel/vanilla-sources-2.6.30_rc8
+~sys-kernel/vanilla-sources-2.6.31_rc1
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
 # koffice monolithic masked, latest koffice version
