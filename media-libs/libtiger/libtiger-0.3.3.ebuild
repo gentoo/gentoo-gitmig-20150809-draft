@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.3.ebuild,v 1.3 2009/07/02 20:38:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.3.ebuild,v 1.4 2009/07/02 20:44:59 aballier Exp $
 
 EAPI=2
 
@@ -28,6 +28,10 @@ src_prepare() {
 
 src_configure() {
 	econf $(use_enable doc) --docdir=/usr/share/doc/${PF}
+}
+
+src_test() {
+	LC_ALL=C emake check || die "tests failed"
 }
 
 src_install() {
