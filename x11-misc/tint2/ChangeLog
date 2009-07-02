@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/tint2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.3 2009/06/30 20:24:39 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/ChangeLog,v 1.4 2009/07/02 20:11:19 idl0r Exp $
+
+  02 Jul 2009; Christian Ruppert <idl0r@gentoo.org> tint2-0.7.ebuild:
+  Fixed dependency.
 
 *tint2-0.7 (30 Jun 2009)
 
