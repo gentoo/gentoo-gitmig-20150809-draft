@@ -1,4 +1,5 @@
 #!/bin/sh -
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-wxwidgets/files/wx-config-1,v 1.2 2009/07/02 19:45:48 grobian Exp $
 #
 # /usr/bin/wx-config
 #
