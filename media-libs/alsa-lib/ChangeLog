@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.282 2009/07/02 16:16:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.283 2009/07/02 19:15:15 maekke Exp $
+
+  02 Jul 2009; Markus Meier <maekke@gentoo.org> alsa-lib-1.0.19.ebuild:
+  amd64 stable, bug #272682
 
   02 Jul 2009; Brent Baude <ranger@gentoo.org> alsa-lib-1.0.19.ebuild:
   Marking alsa-lib-1.0.19 ppc64 stable for bug 272682
