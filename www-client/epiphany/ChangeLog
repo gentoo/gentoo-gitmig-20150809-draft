@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.209 2009/05/18 21:40:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.210 2009/07/02 06:39:16 nirbheek Exp $
+
+  02 Jul 2009; <nirbheek@gentoo.org> epiphany-2.24.3-r10.ebuild:
+  2.24* doesn't work with xulrunner-1.9.1, DEPEND on xulrunner-1.9.0*. bug
+  265700
 
 *epiphany-2.26.2 (18 May 2009)
 
