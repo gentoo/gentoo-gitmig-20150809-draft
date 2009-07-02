@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/geeqie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.1 2009/05/25 15:46:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.2 2009/07/02 19:03:28 voyageur Exp $
+
+*geeqie-1.0_beta2 (02 Jul 2009)
+
+  02 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +geeqie-1.0_beta2.ebuild:
+  Version bump, code is feature complete, adds sample external scripts for
+  lossless rotation, photo management with ufraw-batch and for import of
+  GQview metadata, and bugfixes
 
 *geeqie-1.0_beta1 (25 May 2009)
 
