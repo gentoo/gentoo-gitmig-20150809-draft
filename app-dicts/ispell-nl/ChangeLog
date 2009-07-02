@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/ispell-nl
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ChangeLog,v 1.10 2009/02/25 13:04:00 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-nl/ChangeLog,v 1.11 2009/07/02 16:59:27 jer Exp $
+
+  02 Jul 2009; Jeroen Roovers <jer@gentoo.org> ispell-nl-1.00.ebuild:
+  Stable for HPPA too.
 
   25 Feb 2009; Joseph Jezak <josejx@gentoo.org> ispell-nl-1.00.ebuild:
   Marked ~ppc for bug #245139.
