@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.1-r2.ebuild,v 1.2 2009/06/14 19:32:38 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.1-r3.ebuild,v 1.1 2009/07/02 15:45:52 dagger Exp $
 
 EAPI=2
 inherit gnome2 eutils versionator autotools
 
-PATCH_VERSION="1"
+PATCH_VERSION="1a"
 
 MY_P="${P/nm-applet/network-manager-applet}"
 MYPV_MINOR=$(get_version_component_range)
