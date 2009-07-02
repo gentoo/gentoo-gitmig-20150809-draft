@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.23-r1.ebuild,v 1.1 2009/03/23 19:47:12 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.23-r1.ebuild,v 1.2 2009/07/02 15:49:21 jer Exp $
 
 EAPI=2
 inherit eutils
@@ -20,7 +20,8 @@ RDEPEND="${DEPEND}
 	!net-libs/libnids:1.1"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.20-chksum.c-ebx.patch
+	epatch "${FILESDIR}/${PN}-1.20-chksum.c-ebx.patch"
+	epatch "${FILESDIR}/${P}-elif.patch"
 }
 
 src_configure() {
