@@ -4,6 +4,7 @@
   <herd>net-p2p</herd>
   <use>
     <flag name="event-callback">Enable calling a script or executable for certain events</flag>
+	<flag name="upnp">Enable support for UPnP</flag>
     <flag name="webinterface">install webBTG</flag>
   </use>
 </pkgmetadata>

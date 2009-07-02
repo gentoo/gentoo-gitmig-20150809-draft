@@ -1,6 +1,18 @@
 # ChangeLog for net-p2p/btg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.13 2009/03/07 14:54:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/ChangeLog,v 1.14 2009/07/02 22:55:49 yngwin Exp $
+
+*btg-1.0.0 (02 Jul 2009)
+
+  02 Jul 2009; Ben de Groot <yngwin@gentoo.org> +btg-1.0.0.ebuild,
+  +files/btg-1.0.0-gcc44.patch, +files/btg-1.0.0-gnutls-pc.patch:
+  Version bump, including patches and various ebuild improvements:
+  - patch to use pkgconfig to build with >=gnutls-2.8 (bug 275850)
+  - patch to fix compiling with gcc-4.4 by adding some missing C headers
+  - incorporate some changes from bug 231105 (curl useflag, dep updates)
+  - add upnp useflag, upnp is offered by >=rb_libtorrent-0.14
+  - migrate to eapi-2
+  - expand a bit on description
 
   07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> -btg-0.9.6-r1.ebuild:
   Remove old version.
