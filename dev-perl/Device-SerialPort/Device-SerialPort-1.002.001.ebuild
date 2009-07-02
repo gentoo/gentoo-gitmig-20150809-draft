@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/Device-SerialPort-1.002.001.ebuild,v 1.6 2007/11/10 12:38:42 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Device-SerialPort/Device-SerialPort-1.002.001.ebuild,v 1.7 2009/07/02 19:32:29 jer Exp $
 
 inherit perl-module versionator
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://cpan/authors/id/C/CO/COOK/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc sparc x86"
 IUSE=""
 
 #From the module:
