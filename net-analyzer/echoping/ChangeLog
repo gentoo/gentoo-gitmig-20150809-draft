@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/echoping
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.16 2008/08/04 19:25:13 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.17 2009/07/02 13:21:39 jer Exp $
+
+  02 Jul 2009; Jeroen Roovers <jer@gentoo.org> echoping-6.0.2.ebuild:
+  Restrict testing (bug #276210). Fix one grammatical error.
 
   04 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Describe local USE flags for GLEP 56.

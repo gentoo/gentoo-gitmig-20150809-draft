@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2.ebuild,v 1.4 2008/05/21 18:47:00 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2.ebuild,v 1.5 2009/07/02 13:21:39 jer Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="gnutls http icp idn priority smtp ssl tos postgres ldap"
+RESTRICT="test"
 
 DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
@@ -23,7 +24,7 @@ src_compile() {
 	local my_ssl_conf
 	if use gnutls; then
 		if use ssl; then
-			ewarn "You've enabled both ssl and gnutls USE flags but ${PN} could"
+			ewarn "You've enabled both ssl and gnutls USE flags but ${PN} can"
 			ewarn "not be built with both, see bug #141782. Using gnutls only."
 		fi
 		my_ssl_conf="${myconf} $(use_with gnutls)"
