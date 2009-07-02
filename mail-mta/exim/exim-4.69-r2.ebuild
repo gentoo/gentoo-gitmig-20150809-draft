@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.5 2009/07/02 20:45:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.6 2009/07/02 20:53:49 grobian Exp $
 
 inherit eutils toolchain-funcs
 
@@ -8,8 +8,8 @@ IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dn
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
-mirror://gentoo/exiscan.conf
-mirror://gentoo/system_filter.exim.gz"
+	mirror://gentoo/exiscan.conf
+	mirror://gentoo/system_filter.exim.gz"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -251,7 +251,7 @@ src_install () {
 	fperms 4755 /usr/sbin/exim
 
 	dodir /usr/bin /usr/sbin /usr/lib
-	if [ ! -e /usr/lib/sendmail ];
+	if [[ ! -e /usr/lib/sendmail ]];
 	then
 		dosym /usr/sbin/sendmail /usr/lib/sendmail
 	fi

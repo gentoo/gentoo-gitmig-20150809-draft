@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.138 2009/07/02 20:45:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.139 2009/07/02 20:53:49 grobian Exp $
+
+  02 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69.ebuild,
+  exim-4.69-r2.ebuild, -files/system_filter.exim:
+  exiscan.conf file is no longer in FILESDIR, remove system_filter from
+  FILESDIR, since we have it on the mirrors also, should make people more
+  happy on bug #120459
 
   02 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69.ebuild,
   exim-4.69-r2.ebuild:

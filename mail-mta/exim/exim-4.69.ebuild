@@ -1,13 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69.ebuild,v 1.13 2009/07/02 20:45:12 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69.ebuild,v 1.14 2009/07/02 20:53:49 grobian Exp $
 
 inherit eutils toolchain-funcs
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx mbox X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys"
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
-SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2 mirror://gentoo/exiscan.conf"
+SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
+	mirror://gentoo/exiscan.conf
+	mirror://gentoo/system_filter.exim.gz"
 HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
@@ -231,6 +233,7 @@ src_unpack() {
 }
 
 src_compile() {
+	# build system not parallel-safe at all
 	emake -j1 CC="$(tc-getCC)" || die "make failed"
 }
 
@@ -245,7 +248,7 @@ src_install () {
 	fperms 4755 /usr/sbin/exim
 
 	dodir /usr/bin /usr/sbin /usr/lib
-	if \[ ! -e /usr/lib/sendmail \];
+	if [[ ! -e /usr/lib/sendmail ]];
 	then
 		dosym /usr/sbin/sendmail /usr/lib/sendmail
 	fi
@@ -280,11 +283,11 @@ src_install () {
 	if use exiscan-acl; then
 		newins "${S}"/src/configure.default exim.conf.exiscan-acl
 	fi
-	doins "${FILESDIR}"/system_filter.exim
+	doins "${WORKDIR}"/system_filter.exim
 	doins "${FILESDIR}"/auth_conf.sub
 	if use exiscan; then
 		newins "${S}"/src/configure.default exim.conf.exiscan
-		doins "${FILESDIR}"/exiscan.conf
+		doins "${DISTDIR}"/exiscan.conf
 	fi
 
 	if use pam
