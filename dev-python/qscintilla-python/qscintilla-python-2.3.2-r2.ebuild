@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.3.2-r2.ebuild,v 1.6 2009/07/02 14:42:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.3.2-r2.ebuild,v 1.7 2009/07/02 20:31:43 maekke Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.riverbankcomputing.com/static/Downloads/QScintilla2/${MY_P}.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="qt4"
 
 DEPEND=">=dev-python/sip-4.4
