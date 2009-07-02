@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.7 2009/06/30 08:44:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkimageview/gtkimageview-1.6.4.ebuild,v 1.8 2009/07/02 23:22:23 robbat2 Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit autotools gnome2
 
 DESCRIPTION="GtkImageView is a simple image viewer widget for GTK."
 HOMEPAGE="http://trac.bjourne.webfactional.com/wiki"
-SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar.gz"
+SRC_URI="http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/${P}.tar.gz?format=raw -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
