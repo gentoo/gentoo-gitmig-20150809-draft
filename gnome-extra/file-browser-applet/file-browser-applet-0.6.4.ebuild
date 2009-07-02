@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.3.ebuild,v 1.1 2009/06/28 02:39:13 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/file-browser-applet/file-browser-applet-0.6.4.ebuild,v 1.1 2009/07/02 03:26:54 serkan Exp $
 
 inherit gnome2 cmake-utils
 
