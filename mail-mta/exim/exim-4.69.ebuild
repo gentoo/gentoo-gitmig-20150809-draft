@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69.ebuild,v 1.10 2008/07/16 16:34:18 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69.ebuild,v 1.11 2009/07/02 19:58:07 grobian Exp $
 
 inherit eutils
 
@@ -144,8 +144,8 @@ src_unpack() {
 	fi
 	if use radius; then
 		myconf="${myconf} -lradiusclient"
-		sed -i "s:# RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:" Local/Makefile
-		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Local/Makefile
+		sed -i "s:# RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:" Makefile
+		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Makefile
 	fi
 
 	if [ -n "$myconf" ] ; then

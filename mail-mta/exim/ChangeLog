@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.133 2009/06/24 13:28:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.134 2009/07/02 19:58:07 grobian Exp $
+
+  02 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69.ebuild,
+  -exim-4.69-r1.ebuild, exim-4.69-r2.ebuild, metadata.xml:
+  Take over maintainership, remove old (and masked), fix trivial bug
+  #275651, thanks Dmitri Bogomolov for pointing out
 
   24 Jun 2009; Torsten Veller <tove@gentoo.org> metadata.xml:
   New maintainer needed as peitolm retires (#203843)
