@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.4 2009/06/27 12:05:16 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.5 2009/07/02 19:42:46 aballier Exp $
+
+  02 Jul 2009; Alexis Ballier <aballier@gentoo.org> use.mask:
+  unmask policykit useflag on x86-fbsd
 
   27 Jun 2009; Alexis Ballier <aballier@gentoo.org> use.mask:
   Mask policykit support until it is keyworded
