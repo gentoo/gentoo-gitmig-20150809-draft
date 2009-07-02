@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.615 2009/06/19 21:57:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.616 2009/07/02 08:20:10 zmedico Exp $
+
+  02 Jul 2009; Zac Medico <zmedico@gentoo.org> portage-2.1.6.13.ebuild:
+  Bug #275442 - Refer to make.conf.example in the message about FETCHCOMMAND
+  and RESUMECOMMAND. Also, only show this message when a relevant setting
+  is found in make.conf.
 
   19 Jun 2009; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Redigest for missing pass.
