@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/wqy-microhei
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-microhei/ChangeLog,v 1.1 2009/07/02 16:48:48 matsuu Exp $
+
+*wqy-microhei-0.2.0_beta (02 Jul 2009)
+
+  02 Jul 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +wqy-microhei-0.2.0_beta.ebuild, +metadata.xml:
+  Initial import.
+
