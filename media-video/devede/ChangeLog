@@ -1,6 +1,9 @@
 # ChangeLog for media-video/devede
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.21 2009/06/28 11:14:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/ChangeLog,v 1.22 2009/07/02 19:50:29 maekke Exp $
+
+  02 Jul 2009; Markus Meier <maekke@gentoo.org> devede-3.12c.ebuild:
+  amd64 stable, bug #273536
 
 *devede-3.13.1 (28 Jun 2009)
 
