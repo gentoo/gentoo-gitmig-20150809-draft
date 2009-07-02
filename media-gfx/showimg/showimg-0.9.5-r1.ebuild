@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5-r1.ebuild,v 1.4 2009/07/01 12:28:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/showimg/showimg-0.9.5-r1.ebuild,v 1.5 2009/07/02 21:32:32 maekke Exp $
 
 ARTS_REQUIRED="never"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.jalix.org/projects/showimg/download/${MY_PV}/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="exif kipi mysql postgres"
 
 DEPEND="|| ( =kde-base/libkonq-3.5* =kde-base/kdebase-3.5* )
