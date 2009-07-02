@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libtiger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/ChangeLog,v 1.1 2009/07/02 18:21:42 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/ChangeLog,v 1.2 2009/07/02 18:32:15 aballier Exp $
+
+  02 Jul 2009; Alexis Ballier <aballier@gentoo.org> libtiger-0.3.3.ebuild:
+  keyword ~x86-fbsd
 
 *libtiger-0.3.3 (02 Jul 2009)
 
