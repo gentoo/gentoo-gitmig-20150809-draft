@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9992 2009/07/02 09:51:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9993 2009/07/02 10:04:00 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -87,7 +87,7 @@ net-fs/samba-server
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2009)
 # Masked for testing, beta version
-=media-sound/pulseaudio-0.9.16
+=media-sound/pulseaudio-0.9.16*
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (24 Jun 2009)
 # Masked for testing, beta version
