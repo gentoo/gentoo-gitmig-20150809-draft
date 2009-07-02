@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-firmware
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.87 2009/05/06 17:59:27 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.88 2009/07/02 11:37:24 fauli Exp $
+
+  02 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  alsa-firmware-1.0.19.ebuild:
+  stable x86, bug 272682
 
 *alsa-firmware-1.0.20 (06 May 2009)
 
