@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.42 2009/06/28 13:40:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/ChangeLog,v 1.43 2009/07/02 19:20:15 maekke Exp $
+
+  02 Jul 2009; Markus Meier <maekke@gentoo.org> gpsim-0.23.0.ebuild:
+  amd64 stable, bug #273223
 
   28 Jun 2009; Brent Baude <ranger@gentoo.org> gpsim-0.23.0.ebuild:
   Marking gpsim-0.23.0 ppc64 for bug 273223
