@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69.ebuild,v 1.11 2009/07/02 19:58:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69.ebuild,v 1.12 2009/07/02 20:16:06 grobian Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx mbox X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys"
 
@@ -231,7 +231,7 @@ src_unpack() {
 }
 
 src_compile() {
-	make || die "make failed"
+	emake -j1 CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install () {
@@ -281,7 +281,6 @@ src_install () {
 		newins "${S}"/src/configure.default exim.conf.exiscan-acl
 	fi
 	doins "${FILESDIR}"/system_filter.exim
-	doins "${FILESDIR}"/auth_conf.sub
 	if use exiscan; then
 		newins "${S}"/src/configure.default exim.conf.exiscan
 		doins "${FILESDIR}"/exiscan.conf
@@ -304,7 +303,6 @@ src_install () {
 
 pkg_postinst() {
 	einfo "/etc/exim/system_filter.exim is a sample system_filter."
-	einfo "/etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
 	einfo "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
 
 	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
