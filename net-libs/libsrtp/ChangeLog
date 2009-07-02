@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsrtp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.8 2009/06/26 10:51:55 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsrtp/ChangeLog,v 1.9 2009/07/02 13:52:30 fauli Exp $
+
+  02 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  libsrtp-1.4.4-r1.ebuild:
+  stable x86, bug 259172
 
   26 Jun 2009; Alexis Ballier <aballier@gentoo.org> libsrtp-1.4.4-r1.ebuild:
   keyword ~x86-fbsd
