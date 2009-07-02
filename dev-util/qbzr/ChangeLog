@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qbzr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/ChangeLog,v 1.10 2009/06/17 07:30:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/ChangeLog,v 1.11 2009/07/02 16:42:09 fauli Exp $
+
+  02 Jul 2009; Christian Faulhammer <fauli@gentoo.org> qbzr-0.9.9.ebuild,
+  qbzr-0.10.0.ebuild, qbzr-0.11.0.ebuild:
+  use EAPI 2 to ask for X USE flag on dev-python/PyQt4
 
   17 Jun 2009; Peter Volkov <pva@gentoo.org> qbzr-0.9.9.ebuild,
   qbzr-0.10.0.ebuild, qbzr-0.11.0.ebuild:
