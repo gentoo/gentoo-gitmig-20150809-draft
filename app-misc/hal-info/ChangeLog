@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hal-info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.68 2009/06/16 18:23:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-info/ChangeLog,v 1.69 2009/07/02 19:55:31 maekke Exp $
+
+  02 Jul 2009; Markus Meier <maekke@gentoo.org> hal-info-20090414.ebuild:
+  amd64 stable, bug #273761
 
   16 Jun 2009; Raúl Porcel <armin76@gentoo.org> hal-info-20090414.ebuild:
   alpha/arm/ia64/sh/sparc stable wrt #273761
