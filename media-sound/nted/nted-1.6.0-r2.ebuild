@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.6.0.ebuild,v 1.2 2009/07/01 14:48:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/nted-1.6.0-r2.ebuild,v 1.1 2009/07/02 14:22:52 hwoarang Exp $
 
 EAPI="2"
 
@@ -21,6 +21,11 @@ RDEPEND="doc? ( gnome-extra/yelp app-text/xmlto )
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}.desktop.patch"
+	epatch "${FILESDIR}/${P}-time-signature.patch"
+}
 
 src_configure() {
 	econf $(use_with doc) \
