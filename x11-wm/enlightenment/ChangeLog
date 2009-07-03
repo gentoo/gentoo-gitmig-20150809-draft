@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.114 2009/06/30 13:41:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.115 2009/07/03 01:12:53 vapier Exp $
+
+  03 Jul 2009; Mike Frysinger <vapier@gentoo.org>
+  enlightenment-1.0.0.ebuild:
+  Make sure xmlto isnt detected #274987 by Simone Scanzoni.
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   enlightenment-0.16.8.15.ebuild:

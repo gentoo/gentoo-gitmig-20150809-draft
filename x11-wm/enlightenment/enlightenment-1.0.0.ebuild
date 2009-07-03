@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.0.ebuild,v 1.1 2009/06/20 16:13:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-1.0.0.ebuild,v 1.2 2009/07/03 01:12:53 vapier Exp $
 
 EAPI="2"
 if [[ ${PV} == *9999 ]] ; then
@@ -70,6 +70,7 @@ src_configure() {
 		$(use_enable xinerama) \
 		$(use_enable xrandr) \
 		$(use_enable xcomposite composite) \
+		--disable-docs \
 		--enable-upgrade \
 		--enable-hints-ewmh \
 		--enable-fsstd \
