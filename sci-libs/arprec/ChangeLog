@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/arprec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.1 2009/04/13 21:48:34 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/ChangeLog,v 1.2 2009/07/03 12:56:35 grozin Exp $
+
+  03 Jul 2009; Andrey Grozin <grozin@gentoo.org> arprec-2.2.2.ebuild,
+  +files/arprec-2.2.2-gcc44.patch:
+  Added patch for compiling by gcc-4.4 (bug #273996), thanks to Victor
+  Ostorga <vostorga@gmail.com>
 
 *arprec-2.2.2 (14 Apr 2009)
 

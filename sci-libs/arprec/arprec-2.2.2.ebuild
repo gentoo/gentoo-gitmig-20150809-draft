@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.2.ebuild,v 1.1 2009/04/13 21:48:34 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.2.ebuild,v 1.2 2009/07/03 12:56:35 grozin Exp $
 EAPI=2
 DESCRIPTION="Arbitrary precision float arithmetics and functions"
 IUSE="fortran qd"
@@ -12,6 +12,11 @@ KEYWORDS="~x86"
 SRC_URI="http://crd.lbl.gov/~dhbailey/mpdist/${P}.tar.gz"
 
 DEPEND="qd? ( sci-libs/qd )"
+
+src_prepare() {
+	# bug #273996
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
 
 src_configure() {
 	econf $(use_enable fortran enable_fortran) \
