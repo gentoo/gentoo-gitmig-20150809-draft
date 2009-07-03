@@ -1,0 +1,16 @@
+--- src/ptlib/common/contain.cxx.old	2009-05-21 08:24:13.000000000 +0200
++++ src/ptlib/common/contain.cxx	2009-05-21 08:24:24.000000000 +0200
+@@ -56,13 +56,6 @@
+ #define __CLASS__ GetClass()
+ 
+ 
+-#ifdef __GNUC__
+-
+-#include <ext/pool_allocator.h>
+-#include <ext/mt_allocator.h>
+-
+-#endif
+-
+ ///////////////////////////////////////////////////////////////////////////////
+ //
+ //  Use a custom allocator for PContainer references
