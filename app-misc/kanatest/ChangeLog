@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/kanatest
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.24 2008/12/05 16:57:07 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.25 2009/07/03 16:58:03 matsuu Exp $
+
+*kanatest-0.4.8 (03 Jul 2009)
+
+  03 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> +kanatest-0.4.8.ebuild:
+  Version bumped. Changed HOMEPAGE and SRC_URI.
 
 *kanatest-0.4.6 (05 Dec 2008)
 
@@ -23,7 +28,7 @@
   kanatest-0.4.2.ebuild:
   ppc stable, bug #181640
 
-  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> kanatest-0.4.2.ebuild:
+  17 Jun 2007; Ra炭l Porcel <armin76@gentoo.org> kanatest-0.4.2.ebuild:
   x86 stable wrt #181640
 
   14 Jun 2007; Christoph Mende <angelos@gentoo.org> kanatest-0.4.2.ebuild:
@@ -41,7 +46,7 @@
   01 May 2007; Markus Rothe <corsair@gentoo.org> kanatest-0.4.1.ebuild:
   Stable on ppc64; bug #174902
 
-  28 Apr 2007; Raúl Porcel <armin76@gentoo.org> kanatest-0.4.1.ebuild:
+  28 Apr 2007; Ra炭l Porcel <armin76@gentoo.org> kanatest-0.4.1.ebuild:
   x86 stable wrt #174902
 
   28 Apr 2007; nixnut <nixnut@gentoo.org> kanatest-0.4.1.ebuild:
@@ -59,7 +64,7 @@
 
 *kanatest-0.4.0 (11 Jan 2007)
 
-  11 Jan 2007; Nguyễn Thái Ngọc Duy <pclouds@gentoo.org>
+  11 Jan 2007; Nguy畛n Th叩i Ng畛c Duy <pclouds@gentoo.org>
   +kanatest-0.4.0.ebuild:
   Version bump, #161534
 
