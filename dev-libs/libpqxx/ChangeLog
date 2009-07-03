@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libpqxx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.59 2009/07/02 21:31:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpqxx/ChangeLog,v 1.60 2009/07/03 00:08:43 jer Exp $
+
+  03 Jul 2009; Jeroen Roovers <jer@gentoo.org> libpqxx-2.6.9.ebuild,
+  +files/libpqxx-2.6.9-gcc44.patch:
+  Fix compiling with gcc 4.4, stable for HPPA (bug #249248).
 
   02 Jul 2009; Markus Meier <maekke@gentoo.org> libpqxx-2.6.9.ebuild:
   amd64 stable, bug #249248
