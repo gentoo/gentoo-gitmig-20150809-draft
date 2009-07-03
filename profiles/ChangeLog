@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2857 2009/07/03 08:35:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2858 2009/07/03 15:55:07 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Jul 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  remove entries for removed packages (treecleaner queue)
 
   03 Jul 2009; Matthias Schwarzott <zzam@gentoo.org> package.mask:
   Mask sys-fs/udev-142 and greater as it needs libblkid provided by not yet
