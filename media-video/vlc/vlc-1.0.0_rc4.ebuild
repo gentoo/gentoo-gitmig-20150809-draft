@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.9 2009/07/02 18:50:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.10 2009/07/03 21:15:35 aballier Exp $
 
 EAPI="1"
 
@@ -47,12 +47,14 @@ SLOT="0"
 
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc1394
-	debug dirac directfb dts dvb dvd fbcon fluidsynth +ffmpeg flac fontconfig +gcrypt ggi gnome gnutls hal httpd
-	id3tag jack kate libass libcaca libnotify libproxy libsysfs libtiger libv4l2 lirc live lua matroska mmx modplug mp3 mpeg mtp
-	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
-	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shine shout skins speex sse stream svg svga taglib
-	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs wma-fixed
-	X x264 xcb xinerama xml xosd xv zvbi"
+	debug dirac directfb dts dvb dvd fbcon fluidsynth +ffmpeg flac fontconfig
+	+gcrypt ggi gnome gnutls hal httpd ieee1394 id3tag jack kate libass libcaca
+	libnotify libproxy libsysfs libtiger libv4l2 lirc live lua matroska mmx
+	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
+	pda png pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba schroedinger
+	sdl sdl-image seamonkey shine shout skins speex sse stream svg svga taglib
+	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs
+	wma-fixed X x264 xcb xinerama xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -88,6 +90,7 @@ RDEPEND="
 		hal? ( sys-apps/hal )
 		id3tag? ( media-libs/libid3tag
 			sys-libs/zlib )
+		ieee1394? ( sys-libs/libraw1394 sys-libs/libavc1394 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		kate? ( >=media-libs/libkate-0.1.1 )
 		libass? ( >=media-libs/libass-0.9.5 media-libs/fontconfig )
@@ -266,7 +269,6 @@ src_compile () {
 		$(use_enable dc1394) \
 		$(use_enable debug) \
 		$(use_enable dts dca) \
-		--disable-dv \
 		$(use_enable dvb) \
 		$(use_enable dvd dvdread) $(use_enable dvd dvdnav) \
 		$(use_enable fbcon fb) \
@@ -280,6 +282,7 @@ src_compile () {
 		$(use_enable hal) \
 		$(use_enable httpd) \
 		$(use_enable id3tag) \
+		$(use_enable ieee1394 dv) \
 		$(use_enable jack) \
 		$(use_enable kate) \
 		$(use_enable libass) \
