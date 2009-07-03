@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4596 2009/07/03 00:27:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4597 2009/07/03 10:07:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2244,6 +2244,29 @@ net-libs/opal:novideo - Disable video codecs
 net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
 net-libs/ortp:srtp - Add support for Secure RTP
+net-libs/ptlib:asn - Enable ASN decoding/encoding support
+net-libs/ptlib:audio - Enable audio support
+net-libs/ptlib:config-file - Enable config file support
+net-libs/ptlib:dns - Enable DNS resolver support
+net-libs/ptlib:dtmf - Enable DTMF encoding/decoding support
+net-libs/ptlib:http - Enable HTTP support
+net-libs/ptlib:http-forms - Enable http forms support
+net-libs/ptlib:http-server - Enable http server support
+net-libs/ptlib:mail - Enable mail protocols (POP3/SMTP)
+net-libs/ptlib:pipechan - Enable pipechannel support
+net-libs/ptlib:qos - Enable QOS support
+net-libs/ptlib:remote - Enable remote connection support
+net-libs/ptlib:serial - Enable serial port support
+net-libs/ptlib:shmvideo - Enable shared memory video devices
+net-libs/ptlib:socks - Enable SOCKS protocol support
+net-libs/ptlib:stun - Enable STUN support
+net-libs/ptlib:telnet - Enable telnet protocol support
+net-libs/ptlib:tts - Enable Text-To-Speech server support
+net-libs/ptlib:url - Enable URL support
+net-libs/ptlib:video - Enable video support
+net-libs/ptlib:video-file - Enable video file support
+net-libs/ptlib:vxml - Enable VoiceXML support
+net-libs/ptlib:wav - Enable WAVFILE support
 net-libs/webkit-gtk:coverage - enable code coverage support
 net-libs/webkit-gtk:pango - Use pango as fontbackend instead of freetype
 net-libs/webkit-gtk:soup - Use SOUP as backend instead of curl
