@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/ethemes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.15 2009/06/30 13:39:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ethemes/ChangeLog,v 1.16 2009/07/03 13:44:54 ranger Exp $
+
+  03 Jul 2009; Brent Baude <ranger@gentoo.org> ethemes-0.16.8.0.3.ebuild:
+  Marking ethemes-0.16.8.0.3 ppc64 for bug 274834
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org> ChangeLog:
   ia64/sh/sparc stable wrt #274834
