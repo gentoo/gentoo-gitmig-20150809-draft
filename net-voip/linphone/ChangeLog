@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/linphone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.35 2009/07/02 13:58:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.36 2009/07/03 18:13:44 volkmar Exp $
+
+  03 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> linphone-3.1.1.ebuild:
+  Stable on ppc, bug 259172
 
   02 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   linphone-3.1.1.ebuild:
