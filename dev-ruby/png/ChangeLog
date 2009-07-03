@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/png
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.3 2009/06/27 11:05:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/png/ChangeLog,v 1.4 2009/07/03 06:01:32 graaff Exp $
+
+  03 Jul 2009; Hans de Graaff <graaff@gentoo.org> png-1.2.0.ebuild:
+  Add back ruby-inline dependency. It is not listed in the gemspec but still
+  needed by the code. Fixes #276179.
 
 *png-1.2.0 (27 Jun 2009)
 
