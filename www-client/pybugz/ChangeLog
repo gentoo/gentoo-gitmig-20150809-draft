@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.45 2009/06/29 15:53:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.46 2009/07/03 13:45:59 ranger Exp $
+
+  03 Jul 2009; Brent Baude <ranger@gentoo.org> pybugz-0.7.4.ebuild:
+  Marking pybugz-0.7.4 ppc64 for bug 275121
 
   29 Jun 2009; Jeremy Olexa <darkside@gentoo.org> pybugz-0.7.4.ebuild:
   amd64 stable, bug 275121
