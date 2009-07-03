@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/opal
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.43 2008/10/09 22:29:36 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.44 2009/07/03 10:09:58 volkmar Exp $
+
+*opal-3.6.2 (03 Jul 2009)
+
+  03 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/opal-3.6.2-as-needed.patch, +files/opal-3.6.2-jdkroot.patch,
+  +files/opal-3.6.2-sbc.patch, +files/opal-3.6.2-system-ilbc.patch,
+  metadata.xml, +opal-3.6.2.ebuild:
+  Version bump to 3.6.2. Add myself as maintainer. Fix bug 238610
 
   09 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> opal-2.2.11.ebuild:
   Fix build dependencies.

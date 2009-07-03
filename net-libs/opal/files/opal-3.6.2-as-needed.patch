@@ -1,0 +1,164 @@
+--- opal.m4.old	2009-05-22 12:44:22.000000000 +0200
++++ opal.m4	2009-05-22 13:43:58.000000000 +0200
+@@ -363,13 +363,13 @@
+ AC_DEFUN([OPAL_CHECK_PTLIB],
+          [
+           old_CXXFLAGS="$CXXFLAGS"
+-          old_LDFLAGS="$LDFLAGS"
++          old_LIBS="$LIBS"
+ 
+           CXXFLAGS="$CXXFLAGS $PTLIB_CFLAGS $PTLIB_CXXFLAGS"
+           if test "x${DEBUG_BUILD}" = xyes; then
+-            LDFLAGS="$LDFLAGS $DEBUG_LIBS"
++            LIBS="$LIBS $DEBUG_LIBS"
+           else
+-            LDFLAGS="$LDFLAGS $RELEASE_LIBS"
++            LIBS="$LIBS $RELEASE_LIBS"
+           fi
+ 
+           AC_LANG(C++)
+@@ -387,34 +387,69 @@
+                          [opal_ptlib_option=no])
+ 
+           CXXFLAGS="$old_CXXFLAGS"
+-          LDFLAGS="$old_LDFLAGS"
++          LIBS="$old_LIBS"
+ 
+           OPAL_MSG_CHECK([PTLIB has $1], [$opal_ptlib_option])
+-          if test "x$4" = "x" ; then
+-	    if test "x$opal_ptlib_option" = "xno" ; then
++					$4="$opal_ptlib_option"
++	    		AC_SUBST($4)
++	    		if test "x$opal_ptlib_option" = "xyes" ; then
++	      		AC_DEFINE([$4], [1], [$1])
++	    		fi
++	  
++         ])
++
++dnl OPAL_CHECK_PTLIB_MANDATORY
++dnl Check if ptlib was compiled with a specific mandatory feature
++dnl Arguments: $1 Name of feature
++dnl            $2 ptlib/pasn.h Header file to include
++dnl            $3 Code to test the feature
++AC_DEFUN([OPAL_CHECK_PTLIB_MANDATORY],
++         [
++          old_CXXFLAGS="$CXXFLAGS"
++          old_LIBS="$LIBS"
++
++          CXXFLAGS="$CXXFLAGS $PTLIB_CFLAGS $PTLIB_CXXFLAGS"
++          if test "x${DEBUG_BUILD}" = xyes; then
++            LIBS="$LIBS $DEBUG_LIBS"
++          else
++            LIBS="$LIBS $RELEASE_LIBS"
++          fi
++
++          AC_LANG(C++)
++          AC_LINK_IFELSE([
++                          #include <ptbuildopts.h>
++                          #include <ptlib.h>
++                          #include <$2>
++
++                          int main()
++                          {
++                            $3
++                          }
++                         ], 
++                         [opal_ptlib_option=yes],
++                         [opal_ptlib_option=no])
++
++          CXXFLAGS="$old_CXXFLAGS"
++          LIBS="$old_LIBS"
++
++          OPAL_MSG_CHECK([PTLIB has $1], [$opal_ptlib_option])
++	    		if test "x$opal_ptlib_option" = "xno" ; then
+               echo "  ERROR: compulsory feature from PTLib disabled.";
+               exit 1; 
+-            fi
+-          else
+-	    $4="$opal_ptlib_option"
+-	    AC_SUBST($4)
+-	    if test "x$opal_ptlib_option" = "xyes" ; then
+-	      AC_DEFINE([$4], [1], [$1])
+-	    fi
+           fi
+-	  
+-         ])
++
++					])
+ 
+ AC_DEFUN([OPAL_CHECK_PTLIB_EXISTS],
+          [
+           old_CXXFLAGS="$CXXFLAGS"
+-          old_LDFLAGS="$LDFLAGS"
++          old_LIBS="$LIBS"
+ 
+           CXXFLAGS="$CXXFLAGS $PTLIB_CFLAGS $PTLIB_CXXFLAGS"
+           if test "x${DEBUG_BUILD}" = xyes; then
+-            LDFLAGS="$LDFLAGS $DEBUG_LIBS"
++            LIBS="$LIBS $DEBUG_LIBS"
+           else
+-            LDFLAGS="$LDFLAGS $RELEASE_LIBS"
++            LIBS="$LIBS $RELEASE_LIBS"
+           fi
+ 
+           AC_LANG(C++)
+@@ -424,7 +459,7 @@
+                          [opal_ptlib_exists=no])
+ 
+           CXXFLAGS="$old_CXXFLAGS"
+-          LDFLAGS="$old_LDFLAGS"
++          LIBS="$old_LIBS"
+ 
+ 
+ 	  if test "x$opal_ptlib_exists" != "xyes" ; then
+--- configure.ac.old	2009-05-22 12:03:06.000000000 +0200
++++ configure.ac	2009-05-22 13:45:18.000000000 +0200
+@@ -291,8 +291,8 @@
+ OPAL_MSG_CHECK([ptlib version], [$PTLIB_VERSION])
+ 
+ OPAL_CHECK_PTLIB_EXISTS()
+-OPAL_CHECK_PTLIB([URL],     [ptclib/url.h],  [PURL url;],                 [])
+-OPAL_CHECK_PTLIB([STUN],    [ptclib/pstun.h],[PSTUNClient client;],       [])
++OPAL_CHECK_PTLIB_MANDATORY([URL],     [ptclib/url.h],  [PURL url;])
++OPAL_CHECK_PTLIB_MANDATORY([STUN],    [ptclib/pstun.h],[PSTUNClient client;])
+ OPAL_CHECK_PTLIB([SSL],     [ptclib/pssl.h], [PSSLContext ctx;],          [OPAL_PTLIB_SSL])
+ OPAL_CHECK_PTLIB([ASN.1],   [ptclib/pasn.h], [PASNInteger asnint(5);],    [OPAL_PTLIB_ASN])
+ OPAL_CHECK_PTLIB([expat],   [ptclib/pxml.h], [PXMLParser parser;],        [OPAL_PTLIB_EXPAT])
+@@ -439,7 +439,7 @@
+ OPAL_SIMPLE_OPTION([h323],[OPAL_H323], [whether to enable H.323 protocol support])
+ 
+ if test "x$OPAL_H323" = "xyes" ; then
+-  OPAL_CHECK_PTLIB([ASN], [ptclib/asner.h],  [PPER_Stream per;], [])
++  OPAL_CHECK_PTLIB_MANDATORY([ASN], [ptclib/asner.h],  [PPER_Stream per;])
+ fi
+ 
+ dnl MSWIN_DISPLAY iax2,IAX2 support
+--- plugins/configure.ac.old	2009-05-24 15:24:01.000000000 +0200
++++ plugins/configure.ac	2009-05-24 15:29:52.000000000 +0200
+@@ -230,6 +230,7 @@
+                    AC_SUBST(LIBAVCODEC_CFLAGS)
+                    AC_SUBST(LIBAVCODEC_LIBS)
+                    AC_DEFINE([HAVE_LIBAVCODEC], [1], [ffmpeg])
++                   AC_SUBST(LIBAVCODEC_LIB_NAME)
+                    HAVE_LIBAVCODEC=yes
+                    OPAL_LIBAVCODEC_HACK
+                    case "$target_os" in
+@@ -240,15 +241,13 @@
+                                          HAVE_H264_DECODER=yes
+                                          ;;
+                                      * ) 
+-                                         OPAL_GET_LIBNAME([LIBAVCODEC], [libavcodec], [$LIBAVCODEC_LIBS])
+-                                         OPAL_CHECK_LIBAVCODEC([h263p_encoder], [HAVE_H263P=yes], [HAVE_H263P=no])
+-                                         OPAL_CHECK_LIBAVCODEC([mpeg4_encoder], [HAVE_MPEG4=yes], [HAVE_MPEG4=no])
+-                                         OPAL_CHECK_LIBAVCODEC([h264_decoder], [HAVE_H264_DECODER=yes], [HAVE_H264_DECODER=no])
++                                         AC_CHECK_LIB(avcodec, h263p_encoder, [HAVE_H263P=yes], [HAVE_H263P=no])
++                                         AC_CHECK_LIB(avcodec, mpeg4_encoder, [HAVE_MPEG4=yes], [HAVE_MPEG4=no])
++                                         AC_CHECK_LIB(avcodec, h264_decoder, [HAVE_H264_DECODER=yes], [HAVE_H264_DECODER=no])
+                                          ;;
+                    esac
+                    AC_SUBST(HAVE_H263P)
+                    AC_SUBST(HAVE_MPEG4)
+-                   AC_SUBST(LIBAVCODEC_LIB_NAME)
+                    OPAL_LIBAVCODEC_HEADER
+                   ],
+                   [

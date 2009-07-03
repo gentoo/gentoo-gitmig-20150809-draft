@@ -1,0 +1,11 @@
+--- plugins/audio/SBC/Makefile.in.old	2009-05-24 13:15:46.000000000 +0200
++++ plugins/audio/SBC/Makefile.in	2009-05-24 13:16:18.000000000 +0200
+@@ -30,7 +30,7 @@
+ SRCDIR	= .
+ PLUGINDIR=../..
+ SONAME	= sbccodec
+-SAMPLERATELIB = -Lsamplerate
++SAMPLERATE_LIB = -lsamplerate
+ 
+ CC	 	=@CC@
+ CFLAGS	 	=@CFLAGS@ 

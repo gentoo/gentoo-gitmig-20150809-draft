@@ -1,0 +1,117 @@
+--- opal.m4.old	2009-05-22 19:42:30.000000000 +0200
++++ opal.m4	2009-05-22 20:07:45.000000000 +0200
+@@ -1007,3 +1007,41 @@
+            fi
+            AS_IF([test AS_VAR_GET([opal_java]) = yes], [$1], [$2])[]
+           ])
++
++dnl OPAL_DETERMINE_ILBC
++dnl Determine whether to use the system or internal iLBC (can be forced)
++dnl Arguments: none
++dnl Return:    $ILBC_SYSTEM whether system or internal iLBC shall be used
++dnl            $ILBC_CFLAGS system iLBC CFLAGS if using system iLBC
++dnl            $ILBC_LIBS   system iLBC LIBS if using system iLBC
++AC_DEFUN([OPAL_DETERMINE_ILBC],
++         [AC_ARG_ENABLE([localilbc],
++                        [AC_HELP_STRING([--enable-localilbc],[Force use local version of iLBC library rather than system version])],
++                        [localilbc=$enableval],
++                        [localilbc=])
++
++				if test "x${localilbc}" = "xyes" ; then
++					AC_MSG_NOTICE(forcing use of local iLBC sources)
++					ILBC_SYSTEM=no
++				else
++					AC_MSG_NOTICE(checking if iLBC is installed)
++
++          saved_LIBS="$LIBS"
++          LIBS="$LIBS -lilbc"
++          AC_CHECK_LIB(ilbc, iLBC_encode, [has_ilbc=yes], [has_ilbc=no])
++          LIBS=$saved_LIBS
++
++          if test "x${has_ilbc}" = "xyes"; then
++              AC_CHECK_HEADERS([ilbc/iLBC_decode.h ilbc/iLBC_define.h ilbc/iLBC_encode.h], [has_ilbc=yes], [has_ilbc=no])
++          fi
++
++					if test "x${has_ilbc}" = "xyes"; then
++						ILBC_CFLAGS=""
++						ILBC_LIBS="-lilbc"
++						ILBC_SYSTEM=yes
++					else
++						ILBC_SYSTEM=no
++					fi
++					OPAL_MSG_CHECK([System iLBC], [$has_ilbc])
++				fi
++      ])
+--- plugins/audio/iLBC/Makefile.in.old	2009-05-22 19:25:06.000000000 +0200
++++ plugins/audio/iLBC/Makefile.in	2009-05-22 20:10:11.000000000 +0200
+@@ -78,13 +78,26 @@
+ LDFLAGS		=@LDFLAGS@
+ EXTRACFLAGS     =-I$(PLUGINDIR)
+ 
+-SRCS	= ilbccodec.c $(SRCDIR)/anaFilter.c $(SRCDIR)/constants.c $(SRCDIR)/createCB.c $(SRCDIR)/doCPLC.c \
++ILBC_CFLAGS=@ILBC_CFLAGS@
++ILBC_LIBS=@ILBC_LIBS@
++ILBC_SYSTEM=@ILBC_SYSTEM@
++
++SRCS	= ilbccodec.c
++
++ifeq ($(ILBC_SYSTEM),no)
++SRCS	+= $(SRCDIR)/anaFilter.c $(SRCDIR)/constants.c $(SRCDIR)/createCB.c $(SRCDIR)/doCPLC.c \
+ 	  $(SRCDIR)/enhancer.c $(SRCDIR)/filter.c $(SRCDIR)/FrameClassify.c $(SRCDIR)/gainquant.c \
+ 	  $(SRCDIR)/getCBvec.c $(SRCDIR)/helpfun.c $(SRCDIR)/hpInput.c $(SRCDIR)/hpOutput.c \
+ 	  $(SRCDIR)/iCBConstruct.c $(SRCDIR)/iCBSearch.c $(SRCDIR)/iLBC_decode.c $(SRCDIR)/iLBC_encode.c \
+ 	  $(SRCDIR)/LPCdecode.c $(SRCDIR)/LPCencode.c $(SRCDIR)/lsf.c $(SRCDIR)/packing.c \
+ 	  $(SRCDIR)/StateConstructW.c $(SRCDIR)/StateSearchW.c $(SRCDIR)/syntFilter.c
+ 
++EXTRALIBS =
++else
++EXTRACFLAGS += $(IBLC_CFLAGS)
++EXTRALIBS = $(ILBC_LIBS)
++endif
++
+ OBJDIR	= ./obj
+ 
+ vpath	%.o $(OBJDIR)
+@@ -100,9 +113,9 @@
+ 
+ $(PLUGIN): $(OBJECTS)
+ ifeq (solaris,$(findstring solaris,$(target_os)))
+-	$(CC) $(LDSO) $@ -o $@ $^
++	$(CC) $(LDSO) $@ -o $@ $^ $(EXTRALIBS)
+ else	
+-	$(CC) $(LDSO) -o $@ $^
++	$(CC) $(LDSO) -o $@ $^ $(EXTRALIBS)
+ endif	
+ 
+ install:
+--- plugins/configure.ac.old	2009-05-22 19:39:05.000000000 +0200
++++ plugins/configure.ac	2009-05-22 19:41:25.000000000 +0200
+@@ -181,6 +181,14 @@
+ AC_SUBST(SPEEX_CFLAGS)
+ AC_SUBST(SPEEX_LIBS)
+ 
++dnl     ########################
++dnl     iLBC (system/local)
++dnl     ########################
++OPAL_DETERMINE_ILBC()
++AC_SUBST(ILBC_SYSTEM)
++AC_SUBST(ILBC_CFLAGS)
++AC_SUBST(ILBC_LIBS)
++
+ dnl ########################################################################
+ dnl sbc,Bluetooth SBC for telephony with CD quality
+ 
+@@ -516,7 +524,12 @@
+ fi
+ 
+ echo "                          gsm-amr :  yes"
+-echo "                             iLBC :  yes"
++if test "x${ILBC_SYSTEM}" = "xyes" ; then
++echo "                             iLBC :  yes (system)"
++else
++echo "                             iLBC :  yes (internal)"
++fi
++
+ if test "x${SPEEX_SYSTEM}" = "xyes" ; then
+ echo "                            Speex :  yes (system, version $SPEEX_SYSTEM_VERSION)"
+ else
