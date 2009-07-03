@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.14.ebuild,v 1.5 2009/06/08 03:33:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imap-admin/cyrus-imap-admin-2.3.14.ebuild,v 1.6 2009/07/03 16:06:23 dertobi123 Exp $
 
 inherit autotools perl-app eutils
 
@@ -50,7 +50,13 @@ src_compile() {
 
 	local myconf
 	myconf="${myconf} `use_with ssl openssl`"
-	myconf="${myconf} `use_with kerberos krb`"
+	myconf="${myconf} $(use_enable kerberos gssapi) $(use_enable kerberos krb5afspts)"
+
+	if use kerberos; then
+		myconf="${myconf} --with-krb=$(krb5-config --prefix) --with-krbdes=no"
+	else
+		myconf="${myconf} --with-krb=no"
+	fi
 
 	econf \
 		--disable-server \
