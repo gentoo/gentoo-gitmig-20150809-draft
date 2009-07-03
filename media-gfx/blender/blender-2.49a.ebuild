@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49a.ebuild,v 1.1 2009/07/02 18:37:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49a.ebuild,v 1.2 2009/07/03 00:43:28 mr_bones_ Exp $
 
 EAPI=2
 
@@ -84,15 +84,13 @@ src_configure() {
 		BF_OPENJPEG_LIB = "openjpeg"
 	EOF
 
-
-	#set CFLAGS used in /etc/make.conf correctly	
+	#set CFLAGS used in /etc/make.conf correctly
 
 	echo "CFLAGS= [`for i in ${CFLAGS[@]}; do printf "%s \'$i"\',; done`] " \
 		  | sed -e "s:,]: ]:" >> "${S}"/user-config.py
 
 	echo "CXXFLAGS= [`for i in ${CFLAGS[@]}; do printf "%s \'$i"\',; done`]" \
 		 | sed -e "s:,]: ]:" >> "${S}"/user-config.py
-
 
 	# check for blender-game USE flag.
 	# blender-game will merge with blenderplayer.
