@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4597 2009/07/03 10:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4598 2009/07/03 10:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2239,8 +2239,33 @@ net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt for crypto
 net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/loudmouth:asyncns - Use libasyncns for asynchronous name resolution.
+net-libs/opal:audio - Enable audio support
+net-libs/opal:capi - Enable CAPI support
+net-libs/opal:dns - Enable DNS resolver support
+net-libs/opal:dtmf - Enable DTMF encoding/decoding support
+net-libs/opal:fax - Enable T.38 FAX protocol
+net-libs/opal:h224 - Enable H.224 real time control protocol
+net-libs/opal:h281 - Enable H.281 Far-End Camera Control protocol
+net-libs/opal:h323 - Enable H.323 protocol
+net-libs/opal:iax - Enable Inter-Asterisk eXchange protocol
+net-libs/opal:ivr - Enable Interactive Voice Response
+net-libs/opal:ixj - Enable xJack cards support
+net-libs/opal:lid - Enable Line Interface Device
 net-libs/opal:noaudio - Disable audio codecs
 net-libs/opal:novideo - Disable video codecs
+net-libs/opal:plugins - Enable plugins support
+net-libs/opal:rfc4175 - Enable RTP Payload Format for Uncompressed Video 
+net-libs/opal:sbc - Enable the Bluetooth low-complexity, SubBand Codec 
+net-libs/opal:sip - Enable Session Initiation Protocol
+net-libs/opal:sipim - Enable SIP Instant Messages session
+net-libs/opal:srtp - Enable Secure Real-time Transport Protocol
+net-libs/opal:stats - Enable statistic reporting
+net-libs/opal:swig - Use swig to generate bindings
+net-libs/opal:video - Enable video support
+net-libs/opal:vpb - Enable Voicetronics VPB card support
+net-libs/opal:vxml - Enable VXML support
+net-libs/opal:wav - Enable WAVFILE support
+net-libs/opal:x264-static - Install x264 plugin statically linked with x264 
 net-libs/openh323:noaudio - Disable audio codecs
 net-libs/openh323:novideo - Disable video codecs
 net-libs/ortp:srtp - Add support for Secure RTP
