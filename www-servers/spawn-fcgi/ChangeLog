@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.18 2009/07/03 21:00:38 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.19 2009/07/03 21:17:10 bangert Exp $
+
+  03 Jul 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.confd,
+  files/spawn-fcgi.initd:
+  strip env (bug #271425)
 
   03 Jul 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.confd,
   files/spawn-fcgi.initd:
