@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>vmware</herd>
 	<maintainer>
-		<email>vadimk@g.o</email>
+		<email>vadimk@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		VMware kernel modules.
