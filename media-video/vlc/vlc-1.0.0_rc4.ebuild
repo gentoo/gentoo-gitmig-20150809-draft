@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.10 2009/07/03 21:15:35 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0_rc4.ebuild,v 1.11 2009/07/03 21:44:28 aballier Exp $
 
 EAPI="1"
 
@@ -23,7 +23,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="59"
+PATCHLEVEL="63"
 M4_TARBALL_VERSION="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
