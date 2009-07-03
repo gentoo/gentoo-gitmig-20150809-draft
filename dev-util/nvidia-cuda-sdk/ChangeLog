@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.10 2009/05/16 19:55:19 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.11 2009/07/03 18:15:08 spock Exp $
+
+*nvidia-cuda-sdk-2.2-r1 (03 Jul 2009)
+
+  03 Jul 2009; Michał Januszewski <spock@gentoo.org>
+  +nvidia-cuda-sdk-2.2-r1.ebuild:
+  New, more configurable ebuild. It is not possible not to install the code
+  examples and documentation by disabling the 'examples' and 'doc' USE
+  flags.
 
   16 May 2009; Michał Januszewski <spock@gentoo.org>
   nvidia-cuda-sdk-2.1.1215.2015.ebuild, nvidia-cuda-sdk-2.2.ebuild,
