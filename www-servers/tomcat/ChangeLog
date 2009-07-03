@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.217 2009/06/27 19:24:59 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.218 2009/07/03 11:02:15 ali_bush Exp $
+
+*tomcat-6.0.20-r1 (03 Jul 2009)
+
+  03 Jul 2009; Alistair Bush <ali_bush@gentoo.org> +tomcat-6.0.20-r1.ebuild:
+  Bump to fix bug #276059.  Thanks to weisso.
 
   27 Jun 2009; Alex Legler <a3li@gentoo.org> tomcat-6.0.20.ebuild:
   amd64 stable, security bug 272566.
