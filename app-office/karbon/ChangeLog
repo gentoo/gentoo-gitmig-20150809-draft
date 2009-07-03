@@ -1,6 +1,10 @@
 # ChangeLog for app-office/karbon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.91 2009/07/02 21:37:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/karbon/ChangeLog,v 1.92 2009/07/03 00:27:43 jer Exp $
+
+  03 Jul 2009; Jeroen Roovers <jer@gentoo.org>
+  karbon-1.6.3_p20090204.ebuild:
+  Stable for HPPA (bug #276008).
 
   02 Jul 2009; Markus Meier <maekke@gentoo.org>
   karbon-1.6.3_p20090204.ebuild:

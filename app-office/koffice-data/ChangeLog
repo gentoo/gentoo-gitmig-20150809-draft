@@ -1,6 +1,10 @@
 # ChangeLog for app-office/koffice-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.84 2009/07/02 21:36:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice-data/ChangeLog,v 1.85 2009/07/03 00:13:49 jer Exp $
+
+  03 Jul 2009; Jeroen Roovers <jer@gentoo.org>
+  koffice-data-1.6.3_p20090204.ebuild:
+  Stable for HPPA (bug #276008).
 
   02 Jul 2009; Markus Meier <maekke@gentoo.org>
   koffice-data-1.6.3_p20090204.ebuild:
