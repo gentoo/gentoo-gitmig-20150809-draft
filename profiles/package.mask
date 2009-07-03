@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10001 2009/07/03 16:08:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10002 2009/07/03 16:40:36 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,39 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Security issue, dead upstream. Removal in 60 days, bug 273105
+media-gfx/megapov
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Fails to build, no release since 2004. No Gentoo maintainer, bug 264174.
+# Removal in 60 days.
+app-editors/geresh
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# QA issues with build system, no Gentoo maintainer. Removed in 60 days,
+# bug 251426
+net-ftp/glftpd
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Fails to build on a stable system (glibc-2.8). Removed in 60 days. bug 249299
+app-i18n/jmcce
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Fails to build, no interest in fixing, old bugs. removed in 60 days.
+# bug 247945
+net-dialup/ivam2
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# binpkg that installs into /usr, no Gentoo maintainer, QA removal in 60 days
+# unless someone properly packages this one. bug 240768
+net-dns/dns2go
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Old, no interest in keeping it up to date, dead upstream. Removed in 60 days.
+# bug 183986
+net-irc/xchat-systray
 
 # Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
 # Broken, non-relevant, old. Removal in 60 days. bug 177920
@@ -376,6 +409,9 @@ media-sound/kamix
 # Broken PAM setup, causes sys-libs/pam to fail install because of
 # pam_console requirements. See bug #210820.  Fix it or punt it, it's
 # not my problem.
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Critical to fix before unmasking, no interest in fixing so removed in 30 days.
+# bug 210820
 media-tv/zapping
 
 # Alexey Shvetsov <alexxy@gentoo.org> (04 Jun 2009)
@@ -1482,6 +1518,8 @@ app-benchmarks/ltp
 
 # Matthew Kennedy <mkennedy@gentoo.org> (31 Jul 2005)
 # Upstream author requests official version ports only.
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Removed in 30 days. bug 208658
 dev-lisp/cl-blog
 
 # Sven Wegener <swegener@gentoo.org> (05 May 2005)
