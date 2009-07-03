@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.474 2009/06/27 09:11:51 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.475 2009/07/03 08:54:20 zzam Exp $
+
+*udev-143 (03 Jul 2009)
+
+  03 Jul 2009; Matthias Schwarzott <zzam@gentoo.org> +udev-143.ebuild,
+  udev-9999.ebuild:
+  Version bumped. This version no longer installs libvol_id, but requires
+  libblkid provided by util-linux-2.16.
 
   27 Jun 2009; Tobias Klausmann <klausman@gentoo.org> udev-141.ebuild:
   Stable on alpha, bug #254616

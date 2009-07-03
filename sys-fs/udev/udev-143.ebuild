@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.11 2009/07/03 08:54:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-143.ebuild,v 1.1 2009/07/03 08:54:20 zzam Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="selinux +devfs-compat -extras"
 
 COMMON_DEPEND="selinux? ( sys-libs/libselinux )
@@ -118,7 +118,7 @@ src_unpack() {
 		# (more for my own needs than anything else ...)
 		MD5=$(md5sum < "${S}/rules/rules.d/50-udev-default.rules")
 		MD5=${MD5/  -/}
-		if [[ ${MD5} != b5c2f014a48a53921de37c4e469aab96 ]]
+		if [[ ${MD5} != f2b651885232fafb44aefb23bb0827f8 ]]
 		then
 			echo
 			eerror "50-udev-default.rules has been updated, please validate!"
