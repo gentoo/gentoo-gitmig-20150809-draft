@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10000 2009/07/03 15:55:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10001 2009/07/03 16:08:09 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Broken, non-relevant, old. Removal in 60 days. bug 177920
+net-wireless/zd1211
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Broken, old, before 2.6.20 kernels. Removal in 60 days. bug 180008
+net-wireless/rtl8187
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Currently broken, security issue, no maintainer, 3rd party kernel module.
+# Removal in 60 days, bug 183085
+net-wireless/ralink-rt61
+
+# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
+# Currently broken, 3rd party kernel module, no maintainer to keep it updated.
+# Removal in 60 days, bug 190718
+net-wireless/rt61
 
 # Matthias Schwarzott <zzam@gentoo.org> (3 Jul 2009)
 # It needs libblkid provided by util-linux-2.16 not yet released
