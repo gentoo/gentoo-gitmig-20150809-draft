@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/spawn-fcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.17 2009/05/14 18:45:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/ChangeLog,v 1.18 2009/07/03 21:00:38 bangert Exp $
+
+  03 Jul 2009; Thilo Bangert <bangert@gentoo.org> files/spawn-fcgi.confd,
+  files/spawn-fcgi.initd:
+  make chdir configurable (bug #274573)
 
   14 May 2009; Jeroen Roovers <jer@gentoo.org> spawn-fcgi-1.6.2.ebuild:
   Marked ~hppa (bug #264840).
