@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9998 2009/07/02 22:39:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.9999 2009/07/03 08:35:08 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Schwarzott <zzam@gentoo.org> (3 Jul 2009)
+# It needs libblkid provided by util-linux-2.16 not yet released
+>=sys-fs/udev-142
 
 # Markos Chandras <hwoarang@gentoo.org> (2 Jul 2009)
 # Beta releases should be masked
