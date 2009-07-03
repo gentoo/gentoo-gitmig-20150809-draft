@@ -1,0 +1,21 @@
+From 6e79ecaaa2230a879ea51ff7c5680d9402b96321 Mon Sep 17 00:00:00 2001
+From: Eugen Dedu <Eugen.Dedu@pu-pm.univ-fcomte.fr>
+Date: Mon, 25 May 2009 12:14:23 +0000
+Subject: Fix compilation with gtk 2.12
+
+---
+diff --git a/src/gui/assistant.cpp b/src/gui/assistant.cpp
+index 238609b..883c10d 100644
+--- a/src/gui/assistant.cpp
++++ b/src/gui/assistant.cpp
+@@ -343,7 +343,7 @@ static void
+ name_changed_cb (GtkEntry     *entry,
+                  GtkAssistant *assistant)
+ {
+-  set_current_page_complete (assistant, gtk_entry_get_text_length (entry) > 0);
++  set_current_page_complete (assistant, (gtk_entry_get_text (entry))[0] != '\0');
+ }
+ 
+ 
+--
+cgit v0.8.2
