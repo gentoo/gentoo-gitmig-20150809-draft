@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ctypesgen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.17 2009/06/28 13:20:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypesgen/ChangeLog,v 1.18 2009/07/03 13:41:08 ranger Exp $
+
+  03 Jul 2009; Brent Baude <ranger@gentoo.org> ctypesgen-0_p72.ebuild:
+  Marking ctypesgen-0_p72 ppc for bug 273304
 
   28 Jun 2009; Brent Baude <ranger@gentoo.org> ctypesgen-0_p72.ebuild:
   Marking ctypesgen-0_p72 ppc64 for bug 273304
