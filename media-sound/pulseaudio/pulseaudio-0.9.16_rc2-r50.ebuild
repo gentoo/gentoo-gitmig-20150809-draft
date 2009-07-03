@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc2-r50.ebuild,v 1.1 2009/07/02 10:06:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc2-r50.ebuild,v 1.2 2009/07/03 00:14:32 flameeyes Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns +glib test"
+IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns +glib test doc"
 
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	caps? ( sys-libs/libcap )
@@ -51,6 +51,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
 
 DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
 	X? ( x11-proto/xproto )
 	dev-libs/libatomic_ops
 	dev-util/pkgconfig
@@ -114,6 +115,12 @@ src_configure() {
 		--disable-per-user-esound-socket \
 		--with-database=gdbm \
 		|| die "econf failed"
+
+	if use doc; then
+		pushd doxygen
+		doxygen doxygen.conf || die
+		popd
+	fi
 }
 
 src_install() {
@@ -144,8 +151,13 @@ src_install() {
 		sed -i -e 's:-udev:-hal:' "${D}/etc/pulse/default.pa" || die
 	fi
 
-	dohtml -r doc || die
-	dodoc README || die
+	dodoc README ChangeLog todo || die
+
+	if use doc; then
+		pushd doxygen/html
+		dohtml * || die
+		popd
+	fi
 
 	# Create the state directory
 	diropts -o pulse -g pulse -m0755
