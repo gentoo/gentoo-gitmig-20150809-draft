@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.358 2009/06/30 16:21:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.359 2009/07/03 15:01:37 jer Exp $
+
+*opera-10.00_pre4464 (03 Jul 2009)
+
+  03 Jul 2009; Jeroen Roovers <jer@gentoo.org> +opera-10.00_pre4464.ebuild:
+  Version bump
+  <http://my.opera.com/desktopteam/blog/2009/07/03/crash-logging-on-the-mac>
+  .
 
 *opera-10.00_pre4458 (30 Jun 2009)
 
