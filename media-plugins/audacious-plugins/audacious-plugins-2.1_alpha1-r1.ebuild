@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.1_alpha1-r1.ebuild,v 1.2 2009/06/18 11:57:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.1_alpha1-r1.ebuild,v 1.3 2009/07/03 08:22:56 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -30,6 +30,7 @@ RDEPEND="app-arch/unzip
 	esd? ( >=media-sound/esound-0.2.38-r1 )
 	flac? ( >=media-libs/libvorbis-1.0
 		>=media-libs/flac-1.2.1-r1 )
+	icecast? ( media-libs/libshout )
 	jack? ( >=media-libs/bio2jack-0.4
 		media-sound/jack-audio-connection-kit )
 	lirc? ( app-misc/lirc )
@@ -112,6 +113,7 @@ src_compile() {
 		$(use_enable wavpack) \
 		$(use_enable wma) \
 		$(use_enable wma mms) \
+		$(use_enable icecast) \
 		|| die
 
 	emake || die "make failed"
