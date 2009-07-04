@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.31 2009/06/30 06:01:45 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.32 2009/07/04 10:29:33 flameeyes Exp $
+
+  04 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mono-debugger-2.4.2.ebuild:
+  Remove readline dependency and avoid building the static libraries since
+  it's only loading them at runtime.
 
 *mono-debugger-2.4.2 (30 Jun 2009)
 
