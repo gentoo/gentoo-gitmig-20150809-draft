@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0_alpha2.ebuild,v 1.5 2009/07/04 19:25:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0_alpha2.ebuild,v 1.6 2009/07/04 19:27:20 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime multilib python
@@ -51,7 +51,7 @@ src_install() {
 
 	dodoc crossfade_design FUTURE PLANNING player_planning \
 		README SEARCHING
-	
+
 	if use doc; then
 		dohtml doc/*.{html,png}
 		dodoc doc/*.txt
