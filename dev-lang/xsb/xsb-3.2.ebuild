@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2.ebuild,v 1.1 2009/06/27 05:20:36 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/xsb/xsb-3.2.ebuild,v 1.2 2009/07/04 20:52:49 keri Exp $
 
 MY_P="XSB"
 
@@ -10,7 +10,7 @@ inherit eutils autotools java-pkg-opt-2
 
 DESCRIPTION="XSB is a logic programming and deductive database system"
 HOMEPAGE="http://xsb.sourceforge.net"
-SRC_URI="mirror://sourceforge/xsb/${MY_P}.tar.gz
+SRC_URI="http://xsb.sourceforge.net/downloads/${MY_P}.tar.gz
 	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
