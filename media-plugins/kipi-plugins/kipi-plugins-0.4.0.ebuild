@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.4.0.ebuild,v 1.1 2009/07/03 11:17:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.4.0.ebuild,v 1.2 2009/07/04 10:15:51 scarabeus Exp $
 
 EAPI="2"
 
 KDE_MINIMAL="4.2"
 OPENGL_REQUIRED="optional"
-KDE_LINGUAS="ar be ca cs da de el es et fi fr ga gl hi is it ja km lt lv ms nb nds nl
+KDE_LINGUAS="ar be ca cs da de el es et fi fr ga gl hi hne is it ja km lt lv ms nb nds nl
 nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zn_CN"
 inherit kde4-base
 

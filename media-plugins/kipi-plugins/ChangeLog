@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.54 2009/07/03 11:17:06 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.55 2009/07/04 10:15:51 scarabeus Exp $
+
+  04 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kipi-plugins-0.4.0.ebuild:
+  Add missing linguas.
 
 *kipi-plugins-0.4.0 (03 Jul 2009)
 
