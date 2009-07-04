@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.39 2009/07/02 14:50:17 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.40 2009/07/04 10:14:47 scarabeus Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -64,6 +64,7 @@ gu_IN - Gujarati locale for India
 he - Hebrew locale
 hi - Hindi locale
 hi_IN - Hindi locale
+hne - Chhattisgarhi locale
 hr - Croatian locale
 hsb - Upper Sorbian locale
 hu - Hungarian locale
