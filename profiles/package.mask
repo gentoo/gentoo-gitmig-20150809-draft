@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10002 2009/07/03 16:40:36 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10003 2009/07/04 15:01:16 nixphoeni Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -633,11 +633,6 @@ dev-haskell/haskell-platform
 # Masking before it hits more people.
 ~dev-tcltk/tls-1.6
 
-# Joe Sapp <nixphoeni@gentoo.org> (26 Apr 2009)
-# Doesn't seem to work any more
-# Masking for removal in 30 days
-x11-plugins/desklet-wirelessmonitor
-
 # Alin Năstac <mrness@gentoo.org> (26 Apr 2009)
 # Beta version
 =net-proxy/squid-3.1*
@@ -803,27 +798,12 @@ media-plugins/vdr-streamdev-server
 >=media-libs/libpano13-2.9.14_beta1
 
 # Joe Sapp <nixphoeni@gentoo.org> (22 Feb 2009)
-# These packages don't live on gdesklets.de any more,
-# which can be taken to mean they aren't supported
-# by anybody upstream.  Masking for removal in
-# 30 days (bug #259971).
-x11-plugins/desklet-discreetclock
-x11-plugins/desklet-regexp
-x11-plugins/desklet-rssgrab
-x11-plugins/desklet-rsstickerbar
-x11-plugins/desklet-scweather
-x11-plugins/desklet-sidecandy
-x11-plugins/desklet-sidecandygmail
-x11-plugins/desklet-sidecandyrhythmbox
-
-# Joe Sapp <nixphoeni@gentoo.org> (22 Feb 2009)
 # The following have made their way into the upstream
 # core package.  Unless there's a reason to keep
 # 0.35.4 around, I'd like them all gone in 30 days
 # too.  Masking for removal in 30 days (bug #259971).
 x11-plugins/desklet-calendar
 x11-plugins/desklet-clock
-=gnome-extra/gdesklets-core-0.35.4
 
 # Ben de Groot <yngwin@gentoo.org> (14 Feb 2009)
 # Masking because of build failures, bug 258961
