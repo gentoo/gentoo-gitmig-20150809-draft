@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.57 2009/06/28 13:52:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.58 2009/07/04 12:50:43 ranger Exp $
+
+  04 Jul 2009; Brent Baude <ranger@gentoo.org> openobex-1.5.ebuild:
+  stable ppc64, bug 274854
 
   28 Jun 2009; Markus Meier <maekke@gentoo.org> openobex-1.5.ebuild:
   amd64/x86 stable, bug #274854
