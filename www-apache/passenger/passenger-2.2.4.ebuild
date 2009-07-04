@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-2.2.4.ebuild,v 1.1 2009/06/24 09:35:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-2.2.4.ebuild,v 1.2 2009/07/04 08:00:54 graaff Exp $
 
 inherit apache-module flag-o-matic ruby
 
@@ -17,10 +17,8 @@ CDEPEND=">=dev-lang/ruby-1.8.5
 	>=dev-ruby/rubygems-0.9.0
 	>=dev-ruby/rake-0.8.1
 	>=dev-ruby/fastthread-1.0.1
-	>=dev-ruby/rails-1.2.0
 	>=dev-ruby/rack-1.0.0"
-DEPEND="${CDEPEND}
-	doc? ( app-doc/doxygen )"
+DEPEND="${CDEPEND}"
 RDEPEND="${CDEPEND}"
 
 APACHE2_MOD_FILE="${S}/ext/apache2/mod_${PN}.so"
