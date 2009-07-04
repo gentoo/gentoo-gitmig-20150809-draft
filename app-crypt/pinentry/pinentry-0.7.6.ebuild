@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.6.ebuild,v 1.1 2009/07/04 17:42:15 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.7.6.ebuild,v 1.2 2009/07/04 18:35:11 arfrever Exp $
 
 EAPI="1"
 
@@ -42,7 +42,13 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-0.7.5-grab.patch"
-	epatch "${FILESDIR}/${PN}-0.7.6-qt4-moc-fix.diff"
+
+	if use qt4; then
+		local file
+		for file in qt4/*.moc; do
+			/usr/bin/moc ${file/.moc/.h} > ${file} || die "moc ${file} failed"
+		done
+	fi
 }
 
 src_compile() {
