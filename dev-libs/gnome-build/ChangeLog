@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.24 2009/05/14 18:25:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.25 2009/07/04 18:40:43 ranger Exp $
+
+  04 Jul 2009; Brent Baude <ranger@gentoo.org> gnome-build-2.24.1.ebuild:
+  Marking gnome-build-2.24.1 ~ppc64 for bug 268359
 
   14 May 2009; Markus Meier <maekke@gentoo.org> gnome-build-2.24.1.ebuild:
   revert stabilization on amd64/x86, see bug #268359
