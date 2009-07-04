@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.3.ebuild,v 1.4 2009/07/04 12:27:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/lensfun-0.2.3.ebuild,v 1.5 2009/07/04 20:31:00 maekke Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-as-needed.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 
 	# disable stripping
 	sed -i -e 's:GCC.LDFLAGS.release = -s:GCC.LDFLAGS.release =:g' \
