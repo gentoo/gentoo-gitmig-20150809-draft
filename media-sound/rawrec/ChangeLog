@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rawrec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.17 2009/06/28 13:00:06 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rawrec/ChangeLog,v 1.18 2009/07/04 13:56:45 ranger Exp $
+
+  04 Jul 2009; Brent Baude <ranger@gentoo.org> rawrec-0.9.991.ebuild:
+  Marking rawrec-0.9.991 ppc64 for bug 274731
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org> rawrec-0.9.991.ebuild:
   Stable on alpha, bug #274731
