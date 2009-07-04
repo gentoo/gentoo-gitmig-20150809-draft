@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.5.ebuild,v 1.2 2009/06/05 16:16:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/djview4-4.5.ebuild,v 1.3 2009/07/04 15:39:04 scarabeus Exp $
 
 EAPI=2
 
@@ -12,20 +12,28 @@ DESCRIPTION="Portable DjVu viewer using Qt4"
 HOMEPAGE="http://djvu.sourceforge.net/djview4.html"
 SRC_URI="mirror://sourceforge/djvu/${MY_P}.tar.gz"
 LICENSE="GPL-2"
-SLOT="0"
+
 KEYWORDS="~amd64 ~ppc64 ~x86"
+SLOT="0"
 IUSE="debug"
-RDEPEND=">=app-text/djvu-3.5.19
-	|| ( ( x11-libs/qt-gui x11-libs/qt-core ) >=x11-libs/qt-4.2:4 )"
+RDEPEND="
+	>=app-text/djvu-3.5.19
+	x11-libs/qt-gui:4
+"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+"
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"
 
 src_configure() {
-	QTDIR=/usr econf $(use_enable debug) \
+	# QTDIR is needed because of kde3
+	QTDIR=/usr \
+	econf \
+		$(use_enable debug) \
+		--with-x \
 		--disable-nsdejavu \
-		--disable-desktopfiles || die "econf failed"
+		--disable-desktopfiles
 }
 
 src_compile() {
@@ -37,7 +45,7 @@ src_install() {
 	#remove conflicting symlinks
 	rm -f "${D}/usr/bin/djview" "${D}/usr/share/man/man1/djview.1"
 
-	dodoc README TODO NEWS
+	dodoc README TODO NEWS || die "dodoc failed"
 
 	cd desktopfiles
 	insinto /usr/share/icons/hicolor/32x32/apps
