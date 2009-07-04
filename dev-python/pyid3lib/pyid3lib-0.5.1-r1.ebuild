@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/pyid3lib-0.5.1-r1.ebuild,v 1.7 2008/01/26 06:53:38 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/pyid3lib-0.5.1-r1.ebuild,v 1.8 2009/07/04 16:05:10 arfrever Exp $
+
+EAPI="2"
 
 inherit distutils eutils
 
@@ -13,9 +15,10 @@ LICENSE="LGPL-2.1"
 KEYWORDS="amd64 ia64 ppc ppc64 sparc x86"
 DEPEND="virtual/python
 	media-libs/id3lib"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	distutils_src_unpack
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc-4.4.patch"
 	epatch "${FILESDIR}/${P}-py25.patch"
 }
 
