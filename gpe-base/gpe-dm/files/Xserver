@@ -3,7 +3,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Angelo Arrifano <miknix@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/files/Xserver,v 1.1 2009/05/30 15:19:41 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/files/Xserver,v 1.2 2009/07/04 01:34:27 miknix Exp $
 
 ############################################################################
 # NOTE: If you are using Xorg, you should edit /etc/X11/xorg.conf instead. #
@@ -34,8 +34,8 @@ FB_DEVICE=""
 EXTRA_ARGS="-br -pn"
 
 # Choose the Xserver to start.
-# Rule of the thumb: Xfbdev for embedded and Xorg for desktops.
-# exec Xfbdev ${SCREEN_GEOMETRY} ${SCREEN_DPI} ${FB_DEVICE} ${INPUT_DEVICES} ${EXTRA_ARGS}
-# exec Xorg :0 -audit 0 -nolisten tcp vt7
-exec Xorg :0 -audit 0 -nolisten tcp vt7
+# Rule of the thumb: Xfbdev for embedded, Xorg for desktops.
+# exec /usr/bin/Xfbdev ${SCREEN_GEOMETRY} ${SCREEN_DPI} ${FB_DEVICE} ${INPUT_DEVICES} ${EXTRA_ARGS}
+# exec /usr/bin/Xorg :0 -audit 0 -nolisten tcp vt7
+exec /usr/bin/Xorg :0 -audit 0 -nolisten tcp vt7
 

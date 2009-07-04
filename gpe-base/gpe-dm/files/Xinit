@@ -1,16 +1,12 @@
 #!/bin/sh
-# Copied from gpe xserver-common
+# /etc/X11/gpe-dm/Xinit: Launch stuff after the Xserver is up.
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# Angelo Arrifano <miknix@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-dm/files/Xinit,v 1.2 2009/07/04 01:34:27 miknix Exp $
+# Modified from gpe xserver-common
 
-export USER=root
-export HOME=/home/root
-if [ ! -d $HOME ] && [ -d /root ]; then
-  HOME=/root
-fi
-export XAPPLRESDIR=/usr/X11R6/lib/app-defaults
-export XFILESEARCHPATH=./%N%S%C.ad:/usr/X11R6/lib/X11/%L/%T/%N%S%C:/usr/X11R6/lib/X11/%l/%T/%N%S%C:/usr/X11R6/lib/X11/%T/%N%S%C:./%N%S.ad:/usr/X11R6/lib/X11/%L/%T/%N%S:/usr/X11R6/lib/X11/%l/%T/%N%S:/usr/X11R6/lib/X11/%T/%N%S:/usr/local/lib/X11/app-defaults/%N%S%C.ad
+# Please, make sure profile sets a proper PATH before filling a bug.
+. /etc/profile
 
-export PATH=$PATH:/usr/X11R6/bin
-
-SYSSESSIONDIR=/etc/X11/gpe-dm/Xinit.d
-
-exec run-parts $SYSSESSIONDIR
+exec run-parts /etc/X11/gpe-dm/Xinit.d
