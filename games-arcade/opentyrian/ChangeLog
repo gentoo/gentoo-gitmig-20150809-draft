@@ -1,6 +1,14 @@
 # ChangeLog for games-arcade/opentyrian
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.5 2009/04/23 22:53:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/opentyrian/ChangeLog,v 1.6 2009/07/04 14:01:09 chainsaw Exp $
+
+*opentyrian-20090702 (04 Jul 2009)
+
+  04 Jul 2009; <chainsaw@gentoo.org> -files/20090222-datapath.diff,
+  -opentyrian-20090222.ebuild, +files/20090702-datapath.diff,
+  +opentyrian-20090702.ebuild:
+  New snapshot. Upstream added palette fading and made numerous cleanups.
+  Deleted old ebuild.
 
 *opentyrian-20090423 (23 Apr 2009)
 
