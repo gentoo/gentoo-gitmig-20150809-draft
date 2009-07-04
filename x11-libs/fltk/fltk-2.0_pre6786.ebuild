@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786.ebuild,v 1.1 2009/05/08 14:33:26 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786.ebuild,v 1.2 2009/07/04 18:38:30 yngwin Exp $
 
 EAPI="2"
 inherit multilib autotools flag-o-matic
@@ -37,6 +37,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}"/fltk2-asneeded.patch  # bug 255494
 	epatch "${FILESDIR}"/fltk2-gcc43.patch
+	epatch "${FILESDIR}"/fltk2-glibc2.10-scandir.patch  # bug 270487
 	epatch "${FILESDIR}"/fltk2-ldflags.patch  # bug 251233
 	sed -i "/STRIP/d" fluid/Makefile  # don't pre-strip, bug 246694
 	use opengl || epatch "${FILESDIR}"/fltk2-nogl.patch
