@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/icalendar
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/ChangeLog,v 1.1 2009/07/04 14:47:01 nixphoeni Exp $
+
+*icalendar-2.0.1 (04 Jul 2009)
+
+  04 Jul 2009; Joe Sapp <nixphoeni@gentoo.org> +icalendar-2.0.1.ebuild,
+  +files/icalendar-2.0.1-UIDGenerator-fix.patch, +metadata.xml:
+  Initial commit - bug #111822
+
