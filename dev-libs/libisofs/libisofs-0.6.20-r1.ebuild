@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.18.ebuild,v 1.4 2009/06/22 05:24:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.20-r1.ebuild,v 1.1 2009/07/04 12:31:36 billie Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="http://files.libburnia-project.org/releases/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~x86"
-IUSE=""
+IUSE="acl xattr zlib"
 #IUSE="test"
 
 # http://libburnia-project.org/ticket/147#comment:4
@@ -23,13 +23,20 @@ IUSE=""
 # So it is best to disable test/test until its fate is decided.
 RESTRICT="test"
 
-RDEPEND=""
+RDEPEND="virtual/acl
+	sys-apps/attr
+	acl? ( virtual/acl )
+	xattr? ( sys-apps/attr )
+	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 #	test? ( >=dev-util/cunit-2.1 )"
 
 src_configure() {
-	econf --disable-static
+	econf --disable-static \
+	$(use_enable acl libacl) \
+	$(use_enable xattr) \
+	$(use_enable zlib)
 }
 
 src_test() {
