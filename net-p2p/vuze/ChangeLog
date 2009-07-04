@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/vuze
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.17 2009/06/24 12:55:49 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/ChangeLog,v 1.18 2009/07/04 14:33:53 ranger Exp $
+
+  04 Jul 2009; Brent Baude <ranger@gentoo.org> vuze-4.2.0.2.ebuild:
+  Marking vuze-4.2.0.2 ppc64 for bug 271963
 
 *vuze-4.2.0.2-r1 (24 Jun 2009)
 
