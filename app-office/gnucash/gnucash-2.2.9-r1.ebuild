@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r1.ebuild,v 1.3 2009/06/11 21:35:57 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-2.2.9-r1.ebuild,v 1.4 2009/07/04 05:38:46 tove Exp $
 
 EAPI=2
 
@@ -65,6 +65,11 @@ pkg_setup() {
 		--disable-doxygen
 		--enable-locale-specific-tax
 		--disable-error-on-warning"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/r18166-to-r18167.diff
+	gnome2_src_prepare
 }
 
 src_test() {
