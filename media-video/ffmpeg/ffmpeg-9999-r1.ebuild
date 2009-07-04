@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.6 2009/07/03 19:36:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.7 2009/07/04 08:20:56 aballier Exp $
 
 EAPI=2
 
@@ -84,13 +84,13 @@ src_configure() {
 
 	# libavdevice options
 	use ieee1394 && myconf="${myconf} --enable-libdc1394"
-	# Demuxers
+	# Indevs
 	for i in v4l v4l2 alsa oss jack ; do
-		use $i || myconf="${myconf} --disable-demuxer=$i"
+		use $i || myconf="${myconf} --disable-indev=$i"
 	done
-	# Muxers
+	# Outdevs
 	for i in alsa oss ; do
-		use $i || myconf="${myconf} --disable-muxer=$i"
+		use $i || myconf="${myconf} --disable-outdev=$i"
 	done
 	use X && myconf="${myconf} --enable-x11grab"
 
