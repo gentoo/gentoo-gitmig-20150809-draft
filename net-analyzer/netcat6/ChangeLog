@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netcat6
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.16 2009/06/30 20:51:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/ChangeLog,v 1.17 2009/07/04 12:55:24 ranger Exp $
+
+  04 Jul 2009; Brent Baude <ranger@gentoo.org> netcat6-1.0-r1.ebuild:
+  keyworded ~arch for ppc64, bug 275386
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   netcat6-1.0-r1.ebuild:
