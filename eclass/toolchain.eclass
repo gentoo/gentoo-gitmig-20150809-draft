@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.401 2009/07/03 05:43:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.402 2009/07/05 19:56:42 vapier Exp $
 #
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -882,6 +882,8 @@ gcc_pkg_setup() {
 
 	want_libssp && libc_has_ssp && \
 		die "libssp cannot be used with a glibc that has been patched to provide ssp symbols"
+
+	unset LANGUAGES #265283
 }
 
 gcc-compiler_pkg_preinst() {
