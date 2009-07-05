@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqldeveloper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.5 2009/03/09 16:48:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/ChangeLog,v 1.6 2009/07/05 08:48:54 bluebird Exp $
+
+  05 Jul 2009; <bluebird@gentoo.org> -sqldeveloper-1.5.3.5783.ebuild,
+  sqldeveloper-1.5.4.59.40.ebuild:
+  x86 stable, remove old
 
   09 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   sqldeveloper-1.5.3.5783.ebuild:

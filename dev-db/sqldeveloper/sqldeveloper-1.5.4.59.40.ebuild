@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-1.5.4.59.40.ebuild,v 1.1 2009/03/07 11:32:25 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqldeveloper/sqldeveloper-1.5.4.59.40.ebuild,v 1.2 2009/07/05 08:48:54 bluebird Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ RESTRICT="fetch"
 
 LICENSE="OTN"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="mssql mysql sybase"
 
 DEPEND="mssql? ( dev-java/jtds )
