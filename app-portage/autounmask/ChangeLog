@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/autounmask
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.39 2009/06/24 13:29:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/autounmask/ChangeLog,v 1.40 2009/07/05 20:39:04 maekke Exp $
+
+  05 Jul 2009; Markus Meier <maekke@gentoo.org> autounmask-0.27.ebuild:
+  amd64 stable, bug #275086
 
   24 Jun 2009; Jeroen Roovers <jer@gentoo.org> autounmask-0.27.ebuild:
   Stable for HPPA (bug #275086).
