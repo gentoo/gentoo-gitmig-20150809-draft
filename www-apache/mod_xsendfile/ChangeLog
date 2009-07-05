@@ -1,0 +1,10 @@
+# ChangeLog for www-apache/mod_xsendfile
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_xsendfile/ChangeLog,v 1.1 2009/07/05 19:56:03 hollow Exp $
+
+*mod_xsendfile-0.9 (05 Jul 2009)
+
+  05 Jul 2009; Benedikt Böhm <hollow@gentoo.org>
+  +files/50_mod_xsendfile.conf, +metadata.xml, +mod_xsendfile-0.9.ebuild:
+  initial ebuild, #244669
+
