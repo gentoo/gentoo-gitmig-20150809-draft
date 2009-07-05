@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2864 2009/07/05 19:05:49 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2865 2009/07/05 22:42:04 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jul 2009; Ben de Groot <yngwin@gentoo.org>
+  arch/powerpc/package.use.mask, arch/x86-fbsd/package.use.mask:
+  Add media-libs/mlt[frei0r] to package.use.mask on powerpc and x86-fbsd
 
   05 Jul 2009; Benedikt Böhm <hollow@gentoo.org> package.mask:
   mask www-apache/mod_auth_pam

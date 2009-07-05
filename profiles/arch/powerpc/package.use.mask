@@ -5,6 +5,10 @@ x11-base/xorg-server input_devices_spaceorb input_devices_mutouch input_devices_
 
 # This file requires >=portage-2.1.1
 
+# Ben de Groot <yngwin@gentoo.org> (05 Jun 2009)
+# media-plugins/frei0r-plugins is not yet keyworded, bug 276679
+media-libs/mlt frei0r
+
 # Joseph Jezak <josejx@gentoo.org> (Mar 20 2009)
 # Mask Ruby -> Oracle bindings
 dev-ruby/ruby-dbi oracle
@@ -32,9 +36,9 @@ media-sound/squeezecenter musepack
 # mono doesn't work with Openoffice - bug #202361
 app-office/openoffice mono
 
-=dev-java/ibm-jdk-bin-1.5* -nsplugin 
+=dev-java/ibm-jdk-bin-1.5* -nsplugin
 =dev-java/ibm-jre-bin-1.5* -nsplugin
-=dev-java/ibm-jdk-bin-1.6* -nsplugin 
+=dev-java/ibm-jdk-bin-1.6* -nsplugin
 =dev-java/ibm-jre-bin-1.6* -nsplugin
 ~dev-util/checkstyle-4.3 test
 
