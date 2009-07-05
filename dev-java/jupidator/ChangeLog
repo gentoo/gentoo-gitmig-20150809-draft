@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jupidator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/ChangeLog,v 1.6 2009/06/17 20:22:39 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jupidator/ChangeLog,v 1.7 2009/07/05 15:37:04 maekke Exp $
+
+  05 Jul 2009; Markus Meier <maekke@gentoo.org> jupidator-0.3.0.ebuild:
+  amd64 stable, bug #274397
 
   17 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   jupidator-0.3.0.ebuild:
