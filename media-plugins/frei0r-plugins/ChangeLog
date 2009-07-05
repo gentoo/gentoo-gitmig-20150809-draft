@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/frei0r-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.1 2009/07/05 13:59:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.2 2009/07/05 14:57:20 yngwin Exp $
+
+  05 Jul 2009; Ben de Groot <yngwin@gentoo.org>
+  frei0r-plugins-1.1.22.ebuild, +files/frei0r-plugins-1.1.22-libdir.patch:
+  Add libdir patch from Fedora for multilib compatibility
 
 *frei0r-plugins-1.1.22 (05 Jul 2009)
 

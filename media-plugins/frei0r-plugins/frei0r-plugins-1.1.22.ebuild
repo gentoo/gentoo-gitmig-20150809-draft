@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.1.22.ebuild,v 1.1 2009/07/05 13:59:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.1.22.ebuild,v 1.2 2009/07/05 14:57:20 yngwin Exp $
 
 EAPI="2"
-inherit base eutils autotools
+inherit base eutils autotools multilib
 
 DESCRIPTION="A minimalistic plugin API for video effects"
 HOMEPAGE="http://www.piksel.org/frei0r/"
@@ -20,11 +20,14 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-automagic-deps.patch
+	epatch "${FILESDIR}"/${P}-libdir.patch
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_enable facedetect) $(use_enable scale0tilt)
+	econf $(use_enable facedetect) \
+		$(use_enable scale0tilt) \
+		--libdir=/usr/$(get_libdir)
 }
 
 src_install() {
