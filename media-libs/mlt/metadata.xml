@@ -7,6 +7,8 @@
 </maintainer>
 <use>
 	<flag name="compressed-lumas">Compress the luma files in png.</flag>
+	<flag name="frei0r">Build the module for <pkg>media-plugins/frei0r-plugins</pkg></flag>
+	<flag name="melt">Build the melt commandline tool</flag>
 </use>
 </pkgmetadata>
 
