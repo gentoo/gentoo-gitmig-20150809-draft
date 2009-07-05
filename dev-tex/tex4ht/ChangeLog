@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.55 2009/06/28 13:26:24 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.56 2009/07/05 20:40:06 maekke Exp $
+
+  05 Jul 2009; Markus Meier <maekke@gentoo.org>
+  tex4ht-20090513_p1511.ebuild:
+  amd64 stable, bug #274741
 
   28 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   tex4ht-20090513_p1511.ebuild:
