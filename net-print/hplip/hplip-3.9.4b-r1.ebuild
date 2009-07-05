@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.1 2009/06/20 18:00:17 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.2 2009/07/05 20:53:08 robbat2 Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND="!net-print/hpijs
 	>=net-print/foomatic-filters-3.0.20080507[cups]
 	!minimal? (
 		net-print/cups
-		dev-libs/libusb:0
+		virtual/libusb:0
 		cupsddk? ( net-print/cupsddk )
 		dbus? (
 			sys-apps/dbus
