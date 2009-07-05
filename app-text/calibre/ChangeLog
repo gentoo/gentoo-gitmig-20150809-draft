@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.35 2009/06/28 19:46:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.36 2009/07/05 08:17:08 zmedico Exp $
+
+  05 Jul 2009; Zac Medico <zmedico@gentoo.org> -calibre-0.6_beta6.ebuild,
+  -calibre-0.6_beta8.ebuild, calibre-0.6_beta10.ebuild:
+  Bug #275845 - Use podofo instead of pdftk if available. Also, remove older
+  beta versions.
 
 *calibre-0.6_beta10 (28 Jun 2009)
 
