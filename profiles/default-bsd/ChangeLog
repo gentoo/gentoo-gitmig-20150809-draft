@@ -1,6 +1,10 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.66 2009/07/01 10:05:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/ChangeLog,v 1.67 2009/07/05 22:24:31 aballier Exp $
+
+  05 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  fbsd/6.2/x86/package.use.mask:
+  usemask anjuta[valgrind] on bsd
 
   01 Jul 2009; Alexis Ballier <aballier@gentoo.org> use.mask:
   mask qcam sane backend, its linux only
