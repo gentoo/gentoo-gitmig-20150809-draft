@@ -1,6 +1,11 @@
 # ChangeLog for www-misc/mergelog
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.8 2007/09/15 09:37:08 hollow Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.9 2009/07/05 20:05:12 hollow Exp $
+
+  05 Jul 2009; Benedikt Böhm <hollow@gentoo.org>
+  +files/mergelog-4.5-asneeded.patch, mergelog-4.5.ebuild,
+  mergelog-4.5-r1.ebuild:
+  fix #248482
 
   15 Sep 2007; Benedikt Böhm <hollow@gentoo.org> mergelog-4.5-r1.ebuild:
   maybe fix #192272

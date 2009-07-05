@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/mergelog-4.5-r1.ebuild,v 1.2 2007/09/15 09:37:08 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/mergelog-4.5-r1.ebuild,v 1.3 2009/07/05 20:05:12 hollow Exp $
 
 inherit autotools eutils
 
@@ -20,6 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-splitlog.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 	eautoreconf
 }
 
@@ -33,5 +34,5 @@ src_install() {
 	dobin src/mergelog src/zmergelog
 
 	doman man/*.1
-	dodoc AUTHORS COPYING README
+	dodoc AUTHORS README
 }
