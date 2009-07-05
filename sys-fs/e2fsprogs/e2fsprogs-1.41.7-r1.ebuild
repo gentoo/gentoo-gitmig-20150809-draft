@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.7-r1.ebuild,v 1.1 2009/07/03 19:35:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.41.7-r1.ebuild,v 1.2 2009/07/05 17:36:38 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs multilib
 
@@ -111,14 +111,14 @@ pkg_preinst() {
 }
 
 src_install() {
-	emake STRIP=: DESTDIR="${D}" install install-libs || die
+	# need to set root_libdir= manually as any --libdir options in the
+	# econf above (i.e. multilib) will screw up the default #276465
+	emake \
+		STRIP=: \
+		root_libdir="/$(get_libdir)" \
+		DESTDIR="${D}" \
+		install install-libs || die
 	dodoc README RELEASE-NOTES
-
-	# Move shared libraries to /lib/, install static libraries to /usr/lib/,
-	# and install linker scripts to /usr/lib/.
-	set -- "${D}"/usr/$(get_libdir)/*.a
-	set -- ${@/*\/lib}
-	gen_usr_ldscript -a "${@/.a}"
 
 	if use elibc_FreeBSD ; then
 		# Install helpers for us
