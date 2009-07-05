@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.47 2009/04/22 14:46:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.48 2009/07/05 20:03:30 aballier Exp $
+
+  05 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  xchat-gnome-0.26.1.ebuild:
+  keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
+  #233618
 
   22 Apr 2009; Brent Baude <ranger@gentoo.org> xchat-gnome-0.24.1.ebuild,
   xchat-gnome-0.24.3.1.ebuild, xchat-gnome-0.26.0.ebuild,
