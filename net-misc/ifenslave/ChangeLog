@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ifenslave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.19 2009/04/12 20:49:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.20 2009/07/05 20:05:42 robbat2 Exp $
+
+*ifenslave-1.1.0-r5 (05 Jul 2009)
+
+  05 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +ifenslave-1.1.0-r5.ebuild:
+  Version bump to latest debian patchset, also update modprobe.d file to
+  have .conf suffix for new modprobe.
 
   12 Apr 2009; Robin H. Johnson <robbat2@gentoo.org>
   -ifenslave-1.1.0.ebuild, -ifenslave-1.1.0-r1.ebuild,
