@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.5.ebuild,v 1.4 2009/06/11 14:07:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/comparator/comparator-2.5.ebuild,v 1.5 2009/07/05 22:17:40 ssuominen Exp $
 
 inherit distutils toolchain-funcs
 
@@ -15,6 +15,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="app-text/xmlto
+	=app-text/docbook-xml-dtd-4.1.2*
 	sys-apps/sed"
 
 src_unpack() {
