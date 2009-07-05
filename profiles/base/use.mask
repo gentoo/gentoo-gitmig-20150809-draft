@@ -214,3 +214,8 @@ prefix
 # Alexey Shvetsov <alexxy@gentoo.org>
 # Mask kdeprefix since its broken by now
 kdeprefix
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
+#  on behalf of QA Team
+# Removal of cman is scheduled for 2009-10-06
+cman
