@@ -10,6 +10,9 @@
 		<flag name='profiler'>
 			Installs the NVIDIA CUDA visual profiler.
 		</flag>
+		<flag name='debugger'>
+			Installs the CUDA debugger.
+		</flag>
 	</use>
 </pkgmetadata>
 
