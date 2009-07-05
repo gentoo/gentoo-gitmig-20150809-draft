@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3.ebuild,v 1.5 2009/04/26 19:25:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dansguardian/dansguardian-2.10.0.3.ebuild,v 1.6 2009/07/05 00:04:17 mrness Exp $
+
+inherit eutils
 
 DESCRIPTION="Web content filtering via proxy"
 HOMEPAGE="http://dansguardian.org"
@@ -34,6 +36,12 @@ pkg_setup() {
 			die "Obsolete config files detected"
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
