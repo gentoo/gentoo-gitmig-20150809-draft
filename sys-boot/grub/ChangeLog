@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.121 2009/07/04 18:46:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.122 2009/07/05 04:17:11 vapier Exp $
+
+  05 Jul 2009; Mike Frysinger <vapier@gentoo.org> grub-9999.ebuild:
+  Disable efiemu/pe2elf #276262 by Auke Booij.
 
   04 Jul 2009; Robin H. Johnson <robbat2@gentoo.org> grub-0.97-r9.ebuild:
   Bug #255271: check for IA32_EMULATION on 64-bit, as we are building a

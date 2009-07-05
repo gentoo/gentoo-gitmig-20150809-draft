@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.10 2009/06/20 12:43:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.11 2009/07/05 04:17:11 vapier Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -53,9 +53,9 @@ src_compile() {
 		--sbindir=/sbin \
 		--bindir=/bin \
 		--libdir=/$(get_libdir) \
-		--enable-efiemu \
+		--disable-efiemu \
+		--disable-grub-pe2elf \
 		--enable-grub-mkfont \
-		--enable-grub-pe2elf \
 		$(use_enable debug mm-debug) \
 		$(use_enable debug grub-emu) \
 		$(use_enable debug grub-emu-usb) \
