@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2866 2009/07/05 22:44:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2867 2009/07/05 23:11:49 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask libiimcf and dependnecies.
 
   05 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove libedit masking (pointless, version replaced).
