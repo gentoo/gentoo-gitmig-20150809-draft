@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.16 2009/04/04 17:50:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.17 2009/07/05 16:05:25 hollow Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -547,7 +547,7 @@ apache-2_src_install() {
 
 	# set some sane permissions for suexec
 	if use suexec ; then
-		fowners 0:apache /usr/sbin/suexec
+		fowners 0:${SUEXEC_CALLER:-apache} /usr/sbin/suexec
 		fperms 4710 /usr/sbin/suexec
 		# provide legacy symlink for suexec, bug 177697
 		dosym /usr/sbin/suexec /usr/sbin/suexec2
