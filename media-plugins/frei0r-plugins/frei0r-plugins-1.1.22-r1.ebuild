@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.1.22.ebuild,v 1.2 2009/07/05 14:57:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/frei0r-plugins-1.1.22-r1.ebuild,v 1.1 2009/07/05 20:39:05 yngwin Exp $
 
 EAPI="2"
 inherit base eutils autotools multilib
@@ -21,6 +21,7 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-no-automagic-deps.patch
 	epatch "${FILESDIR}"/${P}-libdir.patch
+	epatch "${FILESDIR}"/${P}-pkgconfig-support.patch   # needed by media-libs/mlt
 	eautoreconf
 }
 

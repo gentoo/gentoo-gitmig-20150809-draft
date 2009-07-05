@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/frei0r-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.2 2009/07/05 14:57:20 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/frei0r-plugins/ChangeLog,v 1.3 2009/07/05 20:39:05 yngwin Exp $
+
+*frei0r-plugins-1.1.22-r1 (05 Jul 2009)
+
+  05 Jul 2009; Ben de Groot <yngwin@gentoo.org>
+  -frei0r-plugins-1.1.22.ebuild, +frei0r-plugins-1.1.22-r1.ebuild,
+  +files/frei0r-plugins-1.1.22-pkgconfig-support.patch:
+  Add patch from upstream git to add pkgconfig support, needed by
+  media-libs/mlt. Revbump just to make sure this gets installed, removing
+  previous revision.
 
   05 Jul 2009; Ben de Groot <yngwin@gentoo.org>
   frei0r-plugins-1.1.22.ebuild, +files/frei0r-plugins-1.1.22-libdir.patch:
