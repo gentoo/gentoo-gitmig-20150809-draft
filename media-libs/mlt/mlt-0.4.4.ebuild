@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.4.ebuild,v 1.1 2009/07/05 22:43:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mlt/mlt-0.4.4.ebuild,v 1.2 2009/07/05 23:10:50 yngwin Exp $
 
 EAPI="2"
 
@@ -103,6 +103,8 @@ src_configure() {
 	else
 		myconf="${myconf} --disable-qimage"
 	fi
+
+	use melt || sed -i -e "s;src/melt;;" Makefile
 
 	# TODO: add swig language bindings
 	# see also http://www.mltframework.org/twiki/bin/view/MLT/ExtremeMakeover
