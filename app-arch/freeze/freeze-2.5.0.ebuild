@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.18 2008/05/13 14:01:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/freeze-2.5.0.ebuild,v 1.19 2009/07/05 23:39:49 yngwin Exp $
 
+EAPI="2"
 inherit toolchain-funcs
 
 DESCRIPTION="Freeze/unfreeze compression program"
@@ -13,14 +14,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="!<=media-libs/mlt-0.4.2
+	!media-libs/mlt[melt]"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Hard links confuse prepman and these links are absolute.
 	# Fix pre-stripped binary and respect CFLAGS as well
 	sed -i -e 's:ln -f:ln -sf:g' \
@@ -30,10 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf || die
-
-	emake \
-		CC=$(tc-getCC)
+	emake CC=$(tc-getCC)
 		OPTIONS="-DDEFFILE=\\\"/etc/freeze.cnf\\\"" \
 		|| die "compile problem"
 }
