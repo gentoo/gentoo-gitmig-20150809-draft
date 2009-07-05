@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.163 2009/06/27 17:52:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.164 2009/07/05 20:10:09 scarabeus Exp $
+
+  05 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.6.ebuild:
+  Fix prerm phase per bug #275918.
 
   27 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.6.ebuild:
