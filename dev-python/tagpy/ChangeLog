@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/tagpy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.24 2009/03/13 16:22:43 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/ChangeLog,v 1.25 2009/07/05 16:33:23 tommy Exp $
+
+*tagpy-0.94.5-r1 (05 Jul 2009)
+
+  05 Jul 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +tagpy-0.94.5-r1.ebuild:
+  Fix dependency (boot needs python useflag), switch to EAPI-2
 
   13 Mar 2009; Tiago Cunha <tcunha@gentoo.org> tagpy-0.94.5.ebuild:
   stable sparc
