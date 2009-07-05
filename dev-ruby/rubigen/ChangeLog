@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/rubigen
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubigen/ChangeLog,v 1.1 2009/07/05 07:25:06 graaff Exp $
+
+*rubigen-1.5.2 (05 Jul 2009)
+
+  05 Jul 2009; Hans de Graaff <graaff@gentoo.org> +rubigen-1.5.2.ebuild,
+  +metadata.xml:
+  Initial import. New dependency of dev-ruby/adhearsion.
+
