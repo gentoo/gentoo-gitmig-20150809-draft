@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jgoodies-looks
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.36 2008/01/27 19:18:17 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.37 2009/07/05 21:19:16 aballier Exp $
+
+  05 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  jgoodies-looks-2.1.4.ebuild:
+  keyword ~x86-fbsd, bug #207739
 
   27 Jan 2008; Petteri Räty <betelgeuse@gentoo.org>
   -jgoodies-looks-2.0.4-r1.ebuild, -jgoodies-looks-2.0.4-r2.ebuild:
