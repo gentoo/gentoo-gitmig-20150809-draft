@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.3.2.ebuild,v 1.2 2009/06/13 10:21:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.3.2.ebuild,v 1.3 2009/07/05 19:11:30 volkmar Exp $
 
 EAPI="2"
 
@@ -43,8 +43,9 @@ src_prepare() {
 	sed -i -e 's@^\(libdirs\s*:=\s*.*\)$@\1 /usr/lib/nspr /usr/lib/nss@' \
 		src/Makefile || die "patching Makefile failed"
 
-	# remove useless platforms
+	# remove compiled files
 	rm -fr platform/* || die "rm -rf never dies"
+	rm -f components/WeaveCrypto.so || die "rm -f never dies"
 
 	# ppc arch is not recognized on Linux
 	# upstream has been contacted w/patch, see bug 486797 in upstream bugtracker
