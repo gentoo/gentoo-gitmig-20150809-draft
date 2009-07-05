@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.184 2009/06/08 17:16:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.185 2009/07/05 20:57:15 gengor Exp $
+
+  05 Jul 2009; Gordon Malm <gengor@gentoo.org> postfix-2.4.11.ebuild,
+  postfix-2.5.5.ebuild, postfix-2.5.7.ebuild, postfix-2.6.2.ebuild:
+  Avoid gcc-version test under non-hardened, stylistic change wrt #76512.
 
 *postfix-2.6.2 (08 Jun 2009)
 

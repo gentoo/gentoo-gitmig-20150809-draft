@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.6.2.ebuild,v 1.1 2009/06/08 17:16:59 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.6.2.ebuild,v 1.2 2009/07/05 20:57:15 gengor Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -247,7 +247,9 @@ src_compile() {
 	einfo "CC=${my_cc:=gcc}"
 
 	# Workaround for bug #76512
-	[[ "$(gcc-version)" == "3.4" ]] && use hardened && replace-flags -O? -Os
+	if use hardened ; then
+		[[ "$(gcc-version)" == "3.4" ]] && replace-flags -O? -Os
+	fi
 
 	make DEBUG="" CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		makefiles || die "configure problem"
