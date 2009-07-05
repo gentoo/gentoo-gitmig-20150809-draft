@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpegthumbnailer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.79 2009/06/30 14:03:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpegthumbnailer/ChangeLog,v 1.80 2009/07/05 20:28:49 maekke Exp $
+
+  05 Jul 2009; Markus Meier <maekke@gentoo.org>
+  ffmpegthumbnailer-1.5.3.ebuild:
+  amd64 stable, bug #274666
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   ffmpegthumbnailer-1.5.3.ebuild:
