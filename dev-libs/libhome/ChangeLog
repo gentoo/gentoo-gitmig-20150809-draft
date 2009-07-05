@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libhome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.9 2009/07/05 19:25:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhome/ChangeLog,v 1.10 2009/07/05 19:53:51 arfrever Exp $
+
+  05 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  files/libhome-0.10.1-Makefile.patch:
+  Fix building with >=sys-libs/db-4.6 (bug #227553).
 
 *libhome-0.10.2 (05 Jul 2009)
 

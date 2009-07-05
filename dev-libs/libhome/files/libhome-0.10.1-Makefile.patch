@@ -59,7 +59,7 @@ Index: libhome-0.10.1/configure.in
    case $db_version in
    3) AC_SEARCH_LIBS(db_strerror, db-3.3 db-3.2 db-3.1 db-3.0 db-3 db3);;
 -  4) AC_SEARCH_LIBS(db_strerror, db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4,,
-+  4) AC_SEARCH_LIBS(db_strerror, db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4,,
++  4) AC_SEARCH_LIBS(db_strerror, db-4.8 db-4.7 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0 db-4 db4,,
        AC_SEARCH_LIBS(db_strerror_4002, db-4.2));;
    esac
  fi
