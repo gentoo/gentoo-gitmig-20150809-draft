@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.89.ebuild,v 1.2 2008/08/15 18:16:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/havp/havp-0.90-r1.ebuild,v 1.1 2009/07/05 00:29:41 mrness Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -21,11 +23,14 @@ pkg_setup() {
 	enewuser havp -1 -1 /etc/havp havp
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
+
+src_configure() {
 	econf --localstatedir=/var \
 		$(use_enable clamav) \
 		$(use_enable ssl ssl-tunnel) || die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
