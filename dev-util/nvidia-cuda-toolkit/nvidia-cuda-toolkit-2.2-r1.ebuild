@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.2-r1.ebuild,v 1.1 2009/06/19 23:57:06 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.2-r1.ebuild,v 1.2 2009/07/05 07:00:11 spock Exp $
 
 EAPI=2
 
@@ -20,9 +20,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc profiler"
 
-DEPEND="!dev-util/nvidia-cuda-profiler"
-RDEPEND=""
-RESTRICT="strip"
+DEPEND="!dev-util/nvidia-cuda-profiler
+	profiler? (	x86? (
+		x11-libs/qt-gui
+		x11-libs/qt-core
+		x11-libs/qt-assistant
+		x11-libs/qt-sql[sqlite] )
+	)"
+RDEPEND="${DEPEND}"
+RESTRICT="strip binchecks"
 
 S="${WORKDIR}"
 
@@ -81,14 +87,28 @@ EOF
 	newenvd "${T}/env" 99cuda
 
 	if use profiler; then
-		# Visual profiler needs qt4.
-		# TODO: use system libraries on x86 systems.
 		into ${DEST}/cudaprof
-		dobin cudaprof/bin/{cudaprof,assistant}
-		insinto ${DEST}/cudaprof/bin
-		doins cudaprof/bin/*.so*
-		insinto ${DEST}/cudaprof/bin/sqldrivers
-		doins cudaprof/bin/sqldrivers/*
+		dobin cudaprof/bin/cudaprof
+
+		cat > "${T}/env" << EOF
+PATH=${DEST}/cudaprof/bin
+ROOTPATH=${DEST}/cudaprof/bin
+EOF
+		if use x86 ; then
+			dosym /usr/bin/assistant ${DEST}/cudaprof/bin
+		else
+			dobin cudaprof/bin/assistant
+			insinto ${DEST}/cudaprof/bin
+			doins cudaprof/bin/*.so*
+			insinto ${DEST}/cudaprof/bin/sqldrivers
+			doins cudaprof/bin/sqldrivers/*
+
+			cat >> "${T}/env" << EOF
+LDPATH=${DEST}/cudaprof/bin
+EOF
+		fi
+
+		newenvd "${T}/env" 99cudaprof
 
 		if use doc; then
 			insinto ${DEST}/cudaprof/doc
@@ -96,13 +116,6 @@ EOF
 			insinto ${DEST}/cudaprof/projects
 			doins cudaprof/projects/*
 		fi
-
-		cat > "${T}/env" << EOF
-PATH=${DEST}/cudaprof/bin
-ROOTPATH=${DEST}/cudaprof/bin
-LDPATH=${DEST}/cudaprof/bin
-EOF
-		newenvd "${T}/env" 99cudaprof
 	fi
 }
 
