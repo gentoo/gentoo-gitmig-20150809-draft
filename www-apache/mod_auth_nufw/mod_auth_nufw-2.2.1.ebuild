@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.1.ebuild,v 1.3 2008/05/19 20:39:03 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/mod_auth_nufw-2.2.1.ebuild,v 1.4 2009/07/05 18:42:59 hollow Exp $
 
-inherit eutils apache-module autotools
+EAPI="1"
+
+inherit eutils apache-module
 
 DESCRIPTION="A NuFW authentication module for Apache."
 HOMEPAGE="http://software.inl.fr/trac/wiki/EdenWall/mod_auth_nufw"
@@ -11,7 +13,7 @@ SRC_URI="http://software.inl.fr/releases/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="mysql postgres"
+IUSE="+mysql postgres"
 
 DEPEND="mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )"

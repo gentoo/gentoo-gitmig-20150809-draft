@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_auth_nufw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.7 2008/05/19 20:39:03 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_nufw/ChangeLog,v 1.8 2009/07/05 18:42:59 hollow Exp $
+
+  05 Jul 2009; Benedikt Böhm <hollow@gentoo.org>
+  -files/mod_auth_nufw-2.2.0-configure_in.patch,
+  -mod_auth_nufw-2.2.0.ebuild, mod_auth_nufw-2.2.1.ebuild:
+  fix #273167
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   mod_auth_nufw-2.2.0.ebuild, mod_auth_nufw-2.2.1.ebuild:
