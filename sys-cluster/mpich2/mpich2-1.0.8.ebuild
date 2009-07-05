@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.8 2009/06/13 18:57:52 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.9 2009/07/05 14:45:01 maekke Exp $
 
 EAPI=1
 inherit python eutils fortran autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/${PV
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="+cxx debug doc fortran pvfs2 threads romio mpi-threads"
 
 COMMON_DEPEND="dev-lang/perl
