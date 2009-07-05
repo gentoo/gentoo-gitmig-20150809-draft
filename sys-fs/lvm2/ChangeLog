@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.157 2009/05/19 00:08:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.158 2009/07/05 22:02:51 robbat2 Exp $
+
+*lvm2-2.02.48 (05 Jul 2009)
+
+  05 Jul 2009; Robin H. Johnson <robbat2@gentoo.org> +lvm2-2.02.48.ebuild,
+  +files/lvm2-2.02.48-as-needed.patch,
+  +files/lvm2-2.02.48-device-mapper-export-format.patch:
+  Version bump. Patch for bug #217644: as-needed fixes.
 
 *lvm2-2.02.45-r2 (19 May 2009)
 
