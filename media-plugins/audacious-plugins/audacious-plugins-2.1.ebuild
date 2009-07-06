@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.1_alpha2.ebuild,v 1.2 2009/07/03 08:22:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.1.ebuild,v 1.1 2009/07/06 22:50:52 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,7 +19,7 @@ nls oss projectm pulseaudio scrobbler sdl sid sndfile sse2 timidity tta vorbis w
 RDEPEND="app-arch/unzip
 	>=dev-libs/dbus-glib-0.60
 	dev-libs/libxml2
-	>=media-sound/audacious-2.1_alpha2
+	>=media-sound/audacious-2.1_beta1
 	>=net-misc/neon-0.26.4
 	>=x11-libs/gtk+-2.14
 	adplug? ( >=dev-cpp/libbinio-1.4 )
@@ -62,10 +62,6 @@ mp3_warning() {
 }
 
 src_compile() {
-	# This is masked in the portage tree, so I'll save you the
-	# popup. Be good, bugs go upstream and we like patches.
-	append-flags -DNOT_ALPHA_RELEASE
-
 	mp3_warning
 
 	econf \
