@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.4.ebuild,v 1.2 2009/05/16 16:10:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.4.ebuild,v 1.3 2009/07/06 22:33:58 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -134,4 +134,12 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "Make sure you run 'hash -r' in your active shells"
+
+	# /bin/dircolors sometimes sticks around #224823
+	if [ -e "${ROOT}/usr/bin/dircolors" ] && [ -e "${ROOT}/bin/dircolors" ] ; then
+		if strings "${ROOT}/bin/dircolors" | grep -qs "GNU coreutils" ; then
+			einfo "Deleting orphaned GNU /bin/dircolors for you"
+			rm -f "${ROOT}/bin/dircolors"
+		fi
+	fi
 }
