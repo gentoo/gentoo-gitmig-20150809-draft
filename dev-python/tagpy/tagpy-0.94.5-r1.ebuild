@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.5-r1.ebuild,v 1.1 2009/07/05 16:33:23 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tagpy/tagpy-0.94.5-r1.ebuild,v 1.2 2009/07/06 16:35:55 tommy Exp $
 
 EAPI="2"
 
@@ -22,7 +22,7 @@ RDEPEND="virtual/python
 DEPEND="${RDEPEND}
 	dev-python/setuptools"
 
-src_configuree() {
+src_configure() {
 	./configure \
 		--taglib-inc-dir="/usr/include/taglib" \
 		--boost-python-libname="boost_python-mt" || die
