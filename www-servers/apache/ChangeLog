@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.105 2009/07/05 16:12:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.106 2009/07/06 02:25:01 jer Exp $
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> apache-2.2.11-r1.ebuild:
+  Stable for HPPA (bug #276589).
 
 *apache-2.2.11-r1 (05 Jul 2009)
 
