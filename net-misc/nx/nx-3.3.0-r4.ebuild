@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r4.ebuild,v 1.1 2009/03/25 23:00:24 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx/nx-3.3.0-r4.ebuild,v 1.2 2009/07/06 10:48:04 voyageur Exp $
 
 EAPI=2
 inherit autotools eutils multilib
@@ -42,9 +42,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}-X11
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	# For nxcl/qtnx
 	cd "${WORKDIR}"/nxproxy
 	epatch "${FILESDIR}"/${PN}-3.2.0-nxproxy_read_from_stdin.patch
@@ -52,6 +50,8 @@ src_unpack() {
 	# Quiet some warnings
 	cd "${WORKDIR}"/nxcomp
 	epatch "${FILESDIR}"/${PN}-2.1.0-invalid-options.patch
+	# GCC 4.4 + glibc 2.10
+	epatch "${FILESDIR}"/${P}-nxcomp-glibc2.10.patch
 
 	cd "${WORKDIR}"
 	# Fix sandbox violation
