@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.164 2009/07/05 20:10:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.165 2009/07/06 11:12:47 scarabeus Exp $
+
+  06 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.6.ebuild:
+  Fix uninstall of ati-drivers per bug #238686.
+
+  06 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.6.ebuild:
+  Fix various comments and deps per bugs #263669, #263779, #260329.
 
   05 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.6.ebuild:
