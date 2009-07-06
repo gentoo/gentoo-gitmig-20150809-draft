@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.17.0.ebuild,v 1.1 2009/07/06 16:15:44 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.17.0.ebuild,v 1.2 2009/07/06 18:09:44 darkside Exp $
 
 EAPI="1"
 
@@ -25,13 +25,11 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_compile() {
-	local myconf
-	use deprecated && myconf="--enable-obsolete-reminder"
 	econf --with-bzip2 $(use_with sqlite) $(use_with doc rst) \
 		$(use_enable nls) $(use_enable tools separate-tools) \
 		--with-ebuild-sh-default="/usr/$(get_libdir)/portage/bin/ebuild.sh" \
 		--with-portage-rootpath="${ROOTPATH}" \
-		${myconf}
+		$(use_enable deprecated obsolete-reminder)
 	emake || die "emake failed"
 }
 
