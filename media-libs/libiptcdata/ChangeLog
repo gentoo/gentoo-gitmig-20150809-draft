@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libiptcdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.13 2009/03/25 21:17:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libiptcdata/ChangeLog,v 1.14 2009/07/06 22:28:19 eva Exp $
+
+*libiptcdata-1.0.4 (07 Jul 2009)
+
+  07 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +libiptcdata-1.0.4.ebuild:
+  Version bump. Add examples USE flag, bug #264083. Do not install .la files
+  anymore.
 
 *libiptcdata-1.0.3 (25 Mar 2009)
 
