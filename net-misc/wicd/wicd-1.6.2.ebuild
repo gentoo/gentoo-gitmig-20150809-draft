@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.1.ebuild,v 1.1 2009/06/24 00:13:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.6.2.ebuild,v 1.1 2009/07/06 13:40:09 darkside Exp $
 
 EAPI="2"
 
