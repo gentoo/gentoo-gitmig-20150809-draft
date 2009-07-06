@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/farsi-fonts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.10 2008/05/18 23:48:34 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/farsi-fonts/ChangeLog,v 1.11 2009/07/06 21:25:48 jer Exp $
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> farsi-fonts-0.4.ebuild:
+  Stable for HPPA too.
 
   18 May 2008; Ryan Hill <dirtyepic@gentoo.org> farsi-fonts-0.4.ebuild:
   Update DESCRIPTION, SRC_URI, HOMEPAGE.
