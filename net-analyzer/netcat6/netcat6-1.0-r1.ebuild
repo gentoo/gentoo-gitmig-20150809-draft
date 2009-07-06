@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r1.ebuild,v 1.8 2009/07/04 12:55:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat6/netcat6-1.0-r1.ebuild,v 1.9 2009/07/06 17:50:18 armin76 Exp $
 
 inherit eutils autotools
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.deepspace6.net/pub/ds6/sources/nc6/nc6-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 m68k ~ppc ~ppc64 s390 sh sparc x86"
 IUSE="ipv6 nls bluetooth"
 
 DEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )"
