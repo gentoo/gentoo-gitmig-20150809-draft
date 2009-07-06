@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/gpe-login
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.4 2009/07/04 01:27:33 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-login/ChangeLog,v 1.5 2009/07/06 20:25:38 miknix Exp $
+
+  06 Jul 2009; Angelo Arrifano <miknix@gentoo.org> -files/gentoo-badge2.png:
+  Remove file for adding as binary.
 
 *gpe-login-0.95-r3 (04 Jul 2009)
 
