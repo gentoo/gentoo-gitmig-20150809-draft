@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.289 2009/06/17 17:58:18 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.290 2009/07/06 14:22:44 alexxy Exp $
+
+  06 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> hal-0.5.12_rc1-r6.ebuild:
+  Add ~mips keyword
 
 *hal-0.5.11-r9 (17 Jun 2009)
 
