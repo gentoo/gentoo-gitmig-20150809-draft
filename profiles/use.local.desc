@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4604 2009/07/05 22:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4605 2009/07/06 15:08:37 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -137,7 +137,6 @@ app-crypt/seahorse-plugins:epiphany - Enable text encryption plugin to integrate
 app-crypt/seahorse-plugins:gedit - Enable text encryption plugin to integrate into app-editors/gedit
 app-crypt/seahorse-plugins:nautilus - Enable file encryption plugin to integrate into the gnome-base/nautilus context menu
 app-dicts/aspell-be:classic - Support classic spelling by default
-app-dicts/gwaei:libsexy - Enable support for x11-libs/libsexy
 app-dicts/stardict:espeak - Enable text to speech synthesizer using espeak engine
 app-dicts/stardict:festival - Enable text to speech synthesizer using festival engine
 app-dicts/stardict:gucharmap - Enable gucharmap dictionary plugin
