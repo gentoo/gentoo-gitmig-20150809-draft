@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korundum
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.81 2009/06/11 15:14:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korundum/ChangeLog,v 1.82 2009/07/06 18:11:21 ranger Exp $
+
+  06 Jul 2009; Brent Baude <ranger@gentoo.org> korundum-3.5.10.ebuild:
+  Marking korundum-3.5.10 ppc64 stable for bug 271889
 
   11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   korundum-3.5.10.ebuild:
