@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.0.1.ebuild,v 1.1 2009/07/04 14:47:01 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/icalendar/icalendar-2.0.1.ebuild,v 1.2 2009/07/06 03:36:06 mr_bones_ Exp $
 
 EAPI=2
 inherit distutils
@@ -28,4 +28,3 @@ src_prepare() {
 src_test() {
 	"${python}" test.py || die
 }
-
