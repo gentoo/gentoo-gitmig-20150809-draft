@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.1 2009/04/23 20:30:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.7.11.0-r1.ebuild,v 1.2 2009/07/06 14:54:56 ssuominen Exp $
 
 EAPI="2"
 
@@ -68,8 +68,9 @@ k3d_use_module() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fix-potfiles.patch
-	epatch "${FILESDIR}"/${P}-cuda.patch
+	epatch "${FILESDIR}"/${P}-fix-potfiles.patch \
+		"${FILESDIR}"/${P}-cuda.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 	[[ -f CMakeCache.txt ]] && rm CMakeCache.txt
 }
 

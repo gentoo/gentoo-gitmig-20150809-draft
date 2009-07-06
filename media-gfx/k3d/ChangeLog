@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/k3d
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.45 2009/04/23 20:32:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.46 2009/07/06 14:54:56 ssuominen Exp $
+
+  06 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  k3d-0.7.11.0-r1.ebuild, +files/k3d-0.7.11.0-gcc44.patch:
+  Fix building with GCC 4.4 and BOOST by applying a Fedora patch wrt
+  #276660, thanks to Diego E. Pettenò for reporting.
 
 *k3d-0.7.11.0-r1 (23 Apr 2009)
 
