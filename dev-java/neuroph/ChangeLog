@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/neuroph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/neuroph/ChangeLog,v 1.1 2009/07/06 09:10:27 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/neuroph/ChangeLog,v 1.2 2009/07/06 10:41:10 ali_bush Exp $
+
+  06 Jul 2009; <alistair@gentoo.org> neuroph-2.2.ebuild:
+  Keyword ~x86
 
   06 Jul 2009; Alistair Bush <ali_bush@gentoo.org> +neuroph-2.2.ebuild,
   +metadata.xml:
