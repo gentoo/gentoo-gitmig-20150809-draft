@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0_beta1.ebuild,v 1.1 2009/05/25 15:46:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/geeqie-1.0_beta2-r1.ebuild,v 1.1 2009/07/06 19:42:22 voyageur Exp $
 
 EAPI=2
 
@@ -27,6 +27,11 @@ RDEPEND=">=x11-libs/gtk+-2.4.0
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_prepare() {
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i "${S}/po/Makefile.in.in" || die "sed failed"
+}
 
 src_configure() {
 	econf \
