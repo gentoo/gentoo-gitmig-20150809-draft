@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.110 2009/07/06 18:18:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.111 2009/07/06 18:21:18 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -188,6 +188,20 @@ mysql_init_vars() {
 				PREVIOUS_DATADIR="no"
 			fi
 			export PREVIOUS_DATADIR
+		fi
+	else
+		if [[ ${EBUILD_PHASE} == "config" ]]; then
+			local new_MY_DATADIR
+			new_MY_DATADIR=`"my_print_defaults" mysqld 2>/dev/null \
+				| sed -ne '/datadir/s|^--datadir=||p' \
+				| tail -n1`
+
+			if [[ ( -n "${new_MY_DATADIR}" ) && ( "${new_MY_DATADIR}" != "${MY_DATADIR}" ) ]]; then
+				ewarn "MySQL MY_DATADIR has changed"
+				ewarn "from ${MY_DATADIR}"
+				ewarn "to ${new_MY_DATADIR}"
+				MY_DATADIR="${new_MY_DATADIR}"
+			fi
 		fi
 	fi
 
@@ -760,6 +774,8 @@ mysql_pkg_postinst() {
 }
 
 mysql_pkg_config() {
+	local old_MY_DATADIR="${MY_DATADIR}"
+
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
 
@@ -767,6 +783,30 @@ mysql_pkg_config() {
 
 	if built_with_use ${CATEGORY}/${PN} minimal ; then
 		die "Minimal builds do NOT include the MySQL server"
+	fi
+
+	if [[ ( -n "${MY_DATADIR}" ) && ( "${MY_DATADIR}" != "${old_MY_DATADIR}" ) ]]; then
+		local MY_DATADIR_s="$(strip_duplicate_slashes ${ROOT}/${MY_DATADIR})"
+		local old_MY_DATADIR_s="$(strip_duplicate_slashes ${ROOT}/${old_MY_DATADIR})"
+
+		if [[ -d "${old_MY_DATADIR_s}" ]]; then
+			if [[ -d "${MY_DATADIR_s}" ]]; then
+				ewarn "Both ${old_MY_DATADIR_s} and ${MY_DATADIR_s} exist"
+				ewarn "Attempting to use ${MY_DATADIR_s} and preserving ${old_MY_DATADIR_s}"
+			else
+				elog "Moving MY_DATADIR from ${old_MY_DATADIR_s} to ${MY_DATADIR_s}"
+				mv --strip-trailing-slashes -T "${old_MY_DATADIR_s}" "${MY_DATADIR_s}" \
+				|| die "Moving MY_DATADIR failed"
+			fi
+		else
+			ewarn "Previous MY_DATADIR (${old_MY_DATADIR_s}) does not exist"
+			if [[ -d "${MY_DATADIR_s}" ]]; then
+				ewarn "Attempting to use ${MY_DATADIR_s}"
+			else
+				eerror "New MY_DATADIR (${MY_DATADIR_s}) does not exist"
+				die "Configuration Failed!  Please reinstall ${CATEGORY}/${PN}"
+			fi			
+		fi
 	fi
 
 	local pwd1="a"
