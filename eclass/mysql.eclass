@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.109 2009/02/28 10:51:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.110 2009/07/06 18:18:00 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -41,6 +41,16 @@ done
 # strip leading "0" (otherwise it's considered an octal number by BASH)
 MYSQL_VERSION_ID=${MYSQL_VERSION_ID##"0"}
 
+# Community features are available in mysql-community
+# AND in the re-merged mysql-5.0.82 and newer
+if [ "${PN}" == "mysql-community" ]; then
+	MYSQL_COMMUNITY_FEATURES=1
+elif [ "${PV#5.0}" != "${PV}" ] && mysql_version_is_at_least "5.0.82"; then
+	MYSQL_COMMUNITY_FEATURES=1
+else
+	MYSQL_COMMUNITY_FEATURES=0
+fi
+
 # Be warned, *DEPEND are version-dependant
 # These are used for both runtime and compiletime
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6d )
@@ -77,9 +87,9 @@ PDEPEND="${PDEPEND} =virtual/mysql-$(get_version_component_range 1-2 ${PV})"
 # Work out the default SERVER_URI correctly
 if [ -z "${SERVER_URI}" ]; then
 	# The community build is on the mirrors
-	if [ "${PN}" == "mysql-community" ]; then
+	if [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ]; then
 		SERVER_URI="mirror://mysql/Downloads/MySQL-${PV%.*}/mysql-${PV//_/-}.tar.gz"
-	# The enterprise source is on the primary site only
+	# The (old) enterprise source is on the primary site only
 	elif [ "${PN}" == "mysql" ]; then
 		SERVER_URI="ftp://ftp.mysql.com/pub/mysql/src/mysql-${PV//_/-}.tar.gz"
 	fi
@@ -118,6 +128,9 @@ mysql_version_is_at_least "5.1" \
 
 mysql_version_is_at_least "5.1.12" \
 && IUSE="${IUSE} pbxt"
+
+[ "${MYSQL_COMMUNITY_FEATURES}" == "1" ] \
+&& IUSE="${IUSE} community profiling"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
 				pkg_postinst pkg_config pkg_postrm
@@ -330,8 +343,13 @@ configure_40_41_50() {
 		fi
 	fi
 
-	if [ "${PN}" == "mysql-community" ]; then
-		myconf="${myconf} --enable-community-features"
+	if [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ]; then
+		myconf="${myconf} `use_enable community community-features`"
+		if use community; then
+			myconf="${myconf} `use_enable profiling`"
+		else
+			myconf="${myconf} --disable-profiling"
+		fi
 	fi
 
 	mysql_version_is_at_least "5.0.18" \
