@@ -8,8 +8,5 @@
   support. For example, you can use periods in place of
   unknown Kanji of a word to search for it.
 </longdescription>
-<use>
-  <flag name='libsexy'>Enable support for <pkg>x11-libs/libsexy</pkg></flag>
-</use>
 </pkgmetadata>
 
