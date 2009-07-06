@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r11.ebuild,v 1.4 2009/07/01 10:42:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r11.ebuild,v 1.5 2009/07/06 10:23:35 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -12,7 +12,7 @@ IUSE_EXTENSIONS="cmdctrl cmdsubmenu cutterlimit cutterqueue cuttime ddepgentry
 	syncearly dvlfriendlyfnames dvlrecscriptaddon dvlvidprefer hardlinkcutter
 	volctrl lircsettings deltimeshiftrec"
 
-IUSE="debug vanilla ${IUSE_EXTENSIONS}"
+IUSE="vanilla ${IUSE_EXTENSIONS}"
 
 EXT_V="54"
 EXT_P=VDR-Extensions-Patch-"${EXT_V}"
@@ -55,11 +55,10 @@ CAPS="# Capabilities of the vdr-executable for use by startscript etc."
 pkg_setup() {
 	check_menu_flags
 
-	use debug && append-flags -g
 	PLUGIN_LIBDIR="/usr/$(get_libdir)/vdr/plugins"
 }
 
-check_menu_flags () {
+check_menu_flags() {
 
 	count=0
 

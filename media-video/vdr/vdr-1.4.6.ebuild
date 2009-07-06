@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.6.ebuild,v 1.12 2009/01/12 13:23:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.6.ebuild,v 1.13 2009/07/06 10:23:35 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
-IUSE="debug vanilla aio bigpatch jumpplay dolby-record-switch dvbplayer
+IUSE="vanilla aio bigpatch jumpplay dolby-record-switch dvbplayer
 	lnbsharing sourcecaps cmdsubmenu dxr3-audio-denoise
 	child-protection yaepg setup-plugin submenu subtitles rotor noepg"
 
@@ -44,10 +44,6 @@ PLUGIN_LIB_DIR="/usr/$(get_libdir)/vdr/plugins"
 CONF_DIR=/etc/vdr
 CAP_FILE="${S}/capabilities.sh"
 CAPS="# Capabilities of the vdr-executable for use by startscript etc."
-
-pkg_setup() {
-	use debug && append-flags -g
-}
 
 add_cap() {
 	local ARG
