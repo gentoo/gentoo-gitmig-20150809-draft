@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.48.ebuild,v 1.2 2009/07/05 22:04:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.48.ebuild,v 1.3 2009/07/06 00:01:02 robbat2 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -150,7 +150,7 @@ src_install() {
 	fi
 
 	# move shared libs to /lib(64)
-	dolib.a libdm/ioctl/libdevmapper.a || die "dolib.a"
+	if use static; then dolib.a libdm/ioctl/libdevmapper.a || die "dolib.a" ; fi
 	#gen_usr_ldscript libdevmapper.so
 
 	insinto /etc
@@ -163,7 +163,7 @@ src_install() {
 	newconfd "${FILESDIR}"/device-mapper.conf-1.02.22-r3 device-mapper || die
 
 	newinitd "${FILESDIR}"/1.02.22-dmeventd.initd dmeventd || die
-	dolib.a daemons/dmeventd/libdevmapper-event.a || die
+	if use static; then dolib.a daemons/dmeventd/libdevmapper-event.a || die ; fi
 	#gen_usr_ldscript libdevmapper-event.so
 
 	insinto /etc/udev/rules.d/
