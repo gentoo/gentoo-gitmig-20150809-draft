@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.48-r1.ebuild,v 1.1 2009/07/06 00:12:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.02.48-r1.ebuild,v 1.2 2009/07/06 00:13:25 robbat2 Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -52,7 +52,7 @@ src_compile() {
 	myconf="${myconf} --enable-cmdlib"
 	myconf="${myconf} --enable-applib"
 	myconf="${myconf} --enable-fsadm"
-	
+
 	# Most of this package does weird stuff.
 	# The build options are tristate, and --without is NOT supported
 	# options: 'none', 'internal', 'shared'
@@ -127,7 +127,7 @@ src_compile() {
 	pushd lib
 	emake || die "failed to build lib"
 	popd
-	
+
 	einfo "Doing main build"
 	emake || die "compile problem"
 }
@@ -161,8 +161,8 @@ src_install() {
 	fi
 
 	# move shared libs to /lib(64)
-	if use static; then 
-		dolib.a libdm/ioctl/libdevmapper.a || die "dolib.a libdevmapper.a" 
+	if use static; then
+		dolib.a libdm/ioctl/libdevmapper.a || die "dolib.a libdevmapper.a"
 	fi
 	#gen_usr_ldscript libdevmapper.so
 
@@ -176,7 +176,7 @@ src_install() {
 	newconfd "${FILESDIR}"/device-mapper.conf-1.02.22-r3 device-mapper || die
 
 	newinitd "${FILESDIR}"/1.02.22-dmeventd.initd dmeventd || die
-	if use static; then 
+	if use static; then
 		dolib.a daemons/dmeventd/libdevmapper-event.a \
 		|| die "dolib.a libdevmapper-event.a"
 	fi
