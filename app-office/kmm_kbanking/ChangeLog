@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kmm_kbanking
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_kbanking/ChangeLog,v 1.1 2009/05/28 23:44:36 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_kbanking/ChangeLog,v 1.2 2009/07/06 09:52:14 hanno Exp $
+
+  06 Jul 2009; Hanno Boeck <hanno@gentoo.org> kmm_kbanking-0.9.10.ebuild:
+  Adjust dependencies for aqbanking 4, which has no hbci flag any more.
 
 *kmm_kbanking-0.9.10 (28 May 2009)
 

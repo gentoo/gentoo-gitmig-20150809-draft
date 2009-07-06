@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_kbanking/kmm_kbanking-0.9.10.ebuild,v 1.1 2009/05/28 23:44:36 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmm_kbanking/kmm_kbanking-0.9.10.ebuild,v 1.2 2009/07/06 09:52:14 hanno Exp $
 
 EAPI="2"
 ARTS_REQUIRED="never"
@@ -16,7 +16,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=app-office/kmymoney2-0.9.2
-	>=net-libs/aqbanking-3.8.1[hbci,kde,qt3]
+	|| (
+		>=net-libs/aqbanking-3.8.1[hbci,kde,qt3]
+		>=net-libs/aqbanking-4.0.0[qt3,kde]
+	)
 	>=sys-libs/gwenhywfar-3.5.2"
 RDEPEND="${DEPEND}"
 
