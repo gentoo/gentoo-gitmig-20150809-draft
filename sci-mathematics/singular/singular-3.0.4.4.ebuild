@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.4.ebuild,v 1.2 2008/11/08 03:53:08 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/singular-3.0.4.4.ebuild,v 1.3 2009/07/06 11:02:22 hkbst Exp $
 
 inherit eutils elisp-common flag-o-matic autotools multilib versionator
 
@@ -28,14 +28,16 @@ S="${WORKDIR}"/${MY_PN}-${MY_PV_MAJOR}
 SITEFILE=60${PN}-gentoo.el
 
 pkg_setup() {
+	if use emacs; then
 	# we need at least emacs-22 in order for our emacs patches
 	# to work
-	need_emacs=22
-	have_emacs=$(elisp-emacs-version)
-	if ! version_is_at_least "${need_emacs}" "${have_emacs}"; then
-		eerror "This package needs at least emacs version ${need_emacs}."
-		eerror "Use \"eselect emacs\" to select the active version."
-		die "Emacs version is too low."
+		need_emacs=22
+		have_emacs=$(elisp-emacs-version)
+		if ! version_is_at_least "${need_emacs}" "${have_emacs}"; then
+			eerror "This package needs at least emacs version ${need_emacs}."
+			eerror "Use \"eselect emacs\" to select the active version."
+			die "Emacs version is too low."
+		fi
 	fi
 }
 
