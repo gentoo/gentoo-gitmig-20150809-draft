@@ -1,6 +1,99 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.123 2009/06/29 09:49:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.124 2009/07/06 11:53:21 fauli Exp $
+
+*claws-mail-3.7.2 (06 Jul 2009)
+
+  06 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  +claws-mail-3.7.2.ebuild:
+  
+  version bump:
+  New in this release:
+
+  Default Cc, Bcc and Reply-To options have been added to Folder
+  Properties.
+
+  MIME parts that lack an end boundary are now handled, (even though
+  they're INVALID!).
+
+  A 'Metadata handling' option has been added to the Miscellaneous
+  options page. The options are 'safer' or 'faster'. 'faster' is
+  Claws' original behaviour. 'safer' prevents data loss on system
+  crashes where the filesystem is of a 'not-so-robust' variety, e.g.
+  xfs. If in doubt, use 'safer'. This option defaults to 'safer'.
+
+  Face and X-Face previews have been added to the Custom Header
+  Configuration dialogue in Account preferences.
+
+  An option has been added to the Receive page of IMAP account
+  preferences, Move deleted mails to trash and expunge immediately.
+  This option is on by default to avoid changing the existing
+  behaviour. Turning it off prevents automatic expunging.
+  Also, 'Tools/Expunge' and 'View/Hide deleted messages' menu items
+  have been added to main toolbar.
+
+  Support for clickable gopher:// links has been added.
+
+  In the Compose window a warning dialogue is raised if attachments
+  that have been added no longer exist on the filesystem at the time
+  of sending.
+
+  Buttons to clear header lines in the Compose window have been
+  added.
+
+  GnuTLS compatibility mode is now used, this avoids problems with 
+  servers that don't comply 100% with the spec, but still exist.
+
+  tools/csv2addressbook.pl
+  thunderbird import for version 2.0.0.21 has been added.
+
+  Added Indonesian, Japanese, Portuguese, and Slovakian translations.
+
+  Updated Bulgarian, Brazilian Portuguese, Czech, Finnish, French,
+  German, Hungarian, Italian, Russian, and Spanish translations.
+
+  Bug fixes:
+  o bug 1735, 'Change To: and Newsgroups: recipient field
+  according account type'
+  o bug 1866, 'Claws should make use of the IMAP 'deleted'
+  flag'
+  o bug 1872, 'A: Cc: CCi: selector should default on same as
+  preceding contact'
+  o bug 1878, 'Processing rules for folders with brackets
+  aren't saved'
+  o bug 1883, 'Message processing fails to act on Newsgroups:
+  field'
+  o bug 1895, '(imap) cache issues when cache dir is on a 
+  different mountpoint than tempdir'
+  o bug 1904, 'build mechanism looks for 'enchant.h' in a wrong
+  place'
+  o bug 1913, 'Allow to remove phantom messages from the cache'
+  o bug 1914, 'Crash reading corrupted tags file'
+  o bug 1915, 'Mails signed with smime.p7s display both signed
+  and attachment icon.'
+  o bug 1935, 'problems with very long filtering actions'
+  o bug 1940, 'Doesn't open links in user's default browser'
+  o Debian bug 531052: 'Message-ID header does not conform to
+  RFC-2822'
+  o Redhat bug 486422, Ubuntu bug 486422: Don't ask for IMAP
+  password when using GSSAPI auth
+  o fix old print interface
+  o fix wrong mime message printed out multiple times
+  o fix empty spell checker menu when there are no suggestions
+  o fix 'Wrong word replaced in 'Subject:' when spell-checking
+  correction used'
+  o fix internal headers visible in queue/sent
+  o don't use un-sensitive checkboxes in Privacy tab when
+  privacy system in None
+  o [IMAP] fix tag update when all tags are removed by another
+  client
+  o fix saving of UTF-16 files
+  o clear progressbar in the statusbar on 'Cancel'
+  o TrayIcon plugin: respect the 'empty trash on exit' option
+  o fix error messages in templates, and fix their checking
+  o win32: fix subject prefix length
+  o win32: fix exit status fetch
+  o win32: fix most focusing issues
 
   29 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   claws-mail-3.7.1.ebuild:
