@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745.ebuild,v 1.1 2009/07/06 17:16:01 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745.ebuild,v 1.2 2009/07/06 17:44:37 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -66,7 +66,7 @@ src_prepare() {
 	enewgroup ${VMWARE_GROUP}
 #	EPATCH_SOURCE="${FILESDIR}"/${PV} EPATCH_SUFFIX="patch" epatch
 
-	sed -i -e "s:/sbin/lsmod:/bin/lsmod:" ${S}/installer/services.sh || die "sed of services"
+	sed -i -e "s:/sbin/lsmod:/bin/lsmod:" "${S}"/installer/services.sh || die "sed of services"
 }
 
 src_install() {
@@ -83,7 +83,7 @@ src_install() {
 				|| die "copying ${x}"
 		fi
 	done
-	
+
 	# If we have an /etc directory, we copy it.
 	if [[ -e "${S}/etc" ]]
 	then
@@ -157,7 +157,7 @@ pkg_preinst() {
 				echo "" >> "${D}${config_dir}"/locations
 			else
 				echo -n " " >> "${D}${config_dir}"/locations
-				find ${D}${x} -printf %T@ >> "${D}${config_dir}"/locations
+				find "${D}${x}" -printf %T@ >> "${D}${config_dir}"/locations
 				echo "" >> "${D}${config_dir}"/locations
 			fi
 		fi
