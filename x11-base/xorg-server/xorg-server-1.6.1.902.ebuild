@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.1.902.ebuild,v 1.1 2009/07/03 11:52:56 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.1.902.ebuild,v 1.2 2009/07/06 10:24:03 scarabeus Exp $
 
 EAPI="2"
 
@@ -234,7 +234,7 @@ PDEPEND="
 		video_cards_neomagic? ( >=x11-drivers/xf86-video-neomagic-1.2.2 )
 		video_cards_nv? ( >=x11-drivers/xf86-video-nv-2.1.12 )
 		video_cards_nvidia? ( x11-drivers/nvidia-drivers )
-		video_cards_fglrx? ( >=x11-drivers/ati-drivers-8.552-r2 )
+		video_cards_fglrx? ( >=x11-drivers/ati-drivers-9.6 )
 		video_cards_r128? ( >=x11-drivers/xf86-video-r128-6.8.0 )
 		video_cards_radeon? ( >=x11-drivers/xf86-video-ati-6.11.0 )
 		video_cards_radeonhd? ( >=x11-drivers/xf86-video-radeonhd-1.2.1 )
