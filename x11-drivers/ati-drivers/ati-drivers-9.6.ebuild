@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.7 2009/07/05 20:10:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.8 2009/07/06 10:58:12 scarabeus Exp $
 
 EAPI="1"
 
@@ -17,28 +17,26 @@ LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
 SLOT="1"
 
-# The portage dep is for COLON_SEPARATED support in env-update.
-# The eselect dep (>=1.0.9) is for COLON_SEPARATED in eselect env update.
 RDEPEND="
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra
-	>=app-admin/eselect-1.0.9
 	>=app-admin/eselect-opengl-1.0.7
-	>=sys-apps/portage-2.1.1-r1
 	sys-libs/libstdc++-v3
 	>=x11-base/xorg-server-1.5.3-r7
+	x11-libs/libXinerama
 	x11-libs/libXrandr
 	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	acpi? (
-		x11-apps/xauth
 		sys-power/acpid
+		x11-apps/xauth
 	)
 "
 
 DEPEND="${RDEPEND}
+	x11-proto/inputproto
 	x11-proto/xf86miscproto
 	x11-proto/xf86vidmodeproto
-	x11-proto/inputproto
+	x11-proto/xineramaproto
 "
 
 EMULTILIB_PKG="true"
@@ -46,23 +44,43 @@ EMULTILIB_PKG="true"
 S="${WORKDIR}"
 
 pkg_setup() {
-
 	# Define module dir.
 	MODULE_DIR="${S}/common/lib/modules/fglrx/build_mod"
 
-	#check kernel and sets up KV_OBJ
+	# check kernel and sets up KV_OBJ
 	MODULE_NAMES="fglrx(video:${S}/common/lib/modules/fglrx/build_mod/2.6.x)"
 	BUILD_TARGETS="kmod_build"
 	linux-mod_pkg_setup
 	BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
 
+	# xorg folder
+	BASE_DIR="${S}/x740"
+
+	# amd64/x86
+	if use amd64 ; then
+		MY_BASE_DIR="${BASE_DIR}_64a"
+		PKG_LIBDIR=lib64
+		ARCH_DIR="${S}/arch/x86_64"
+	else
+		MY_BASE_DIR="${BASE_DIR}"
+		PKG_LIBDIR=lib
+		ARCH_DIR="${S}/arch/x86"
+	fi
+
 	if ! kernel_is 2 6; then
-		eerror "Need a 2.6 kernel to compile against!"
-		die "Need a 2.6 kernel to compile against!"
+		eerror "You need a 2.6 linux kernel to compile against!"
+		die "No 2.6 Kernel found"
 	fi
 
 	if kernel_is ge 2 6 25 && linux_chkconfig_present PREEMPT_RCU; then
-		die "${P} is not compatible with RCU Preemption (bug #223281), please disable it"
+		eerror "${P} is incompatible with RCU preemption (bug #223281)."
+		eerror "Please disable it:"
+		eerror "    CONFIG_PREEMT_RCU=n"
+		eerror "in /usr/src/linux/.config or"
+		eerror "    Processor type and features  --->"
+		eerror "        [ ] Preemptible RCU"
+		eerror "in the 'menuconfig'"
+		die "CONFIG_PREEMT_RCU enabled"
 	fi
 
 	if kernel_is ge 2 6 29; then
@@ -72,41 +90,51 @@ pkg_setup() {
 	fi
 
 	if ! linux_chkconfig_present MTRR; then
-		ewarn "You don't have MTRR support enabled, the direct rendering will not work."
+		ewarn "You don't have MTRR support enabled in the kernel."
+		ewarn "Direct rendering will not work."
 	fi
 
 	if linux_chkconfig_builtin DRM; then
-		ewarn "You have DRM support enabled builtin, the direct rendering will not work."
+		ewarn "You have DRM support built in to the kernel"
+		ewarn "Direct rendering will not work."
 	fi
 
 	if ! linux_chkconfig_present AGP && \
 		! linux_chkconfig_present PCIEPORTBUS; then
-		ewarn "You need AGP and/or PCI Express support for direct rendering to work."
+		ewarn "You don't have AGP and/or PCIe support enabled in the kernel"
+		ewarn "Direct rendering will not work."
 	fi
 
 	if linux_chkconfig_present PARAVIRT; then
-		eerror "The current ati-drivers don't compile when having"
-		eerror "paravirtualization active due to GPL symbol export"
-		eerror "restrictions."
+		eerror "Currently, ati-drivers don't compile with paravirtualization"
+		eerror "active in the kernel due to GPL symbol export restrictions."
 		eerror "Please disable it:"
-		eerror "	CONFIG_PARAVIRT=n"
+		eerror "    CONFIG_PARAVIRT=n"
 		eerror "in /usr/src/linux/.config or"
 		eerror "	Processor type and features -->"
 		eerror "		[ ] Paravirtualization support (EXPERIMENTAL)"
-		eerror "in 'menuconfig'"
+		eerror "in the 'menuconfig'"
 		die "CONFIG_PARAVIRT enabled"
 	fi
 
 	if ! linux_chkconfig_present MAGIC_SYSRQ; then
-		eerror "You need MAGIC_SYSRQ enabled in order to build ati-drivers"
-		die "CONFIG_MAGIC_SYSRQ disabled"
+		eerror "${P} requires the magic SysRq keys in the kernel."
+		eerror "Please enable it:"
+		eerror "    CONFIG_MAGIC_SYSRQ=y"
+		eerror "in /usr/src/linux/.config or"
+		eerror "    Kernel hacking  --->"
+		eerror "        [*] Magic SysRq key"
+		eerror "in the 'menuconfig'"
 	fi
 
-	# Only support xorg-server >=1.5
-	BASE_DIR="${S}/x740"
-
 	if ! linux_chkconfig_present PCI_MSI; then
-		eerror "You need PCI_MSI enabled in order to build ati-drivers"
+		eerror "${P} requires MSI in the kernel."
+		eerror "Please enable it:"
+		eerror "    CONFIG_PCI_MSI=y"
+		eerror "in /usr/src/linux/.config or"
+		eerror "    Bus options (PCI etc.)  --->"
+		eerror "        [*] Message Signaled Interrupts (MSI and MSI-X)"
+		eerror "in the kernel config."
 		die "CONFIG_PCI_MSI disabled"
 	fi
 
