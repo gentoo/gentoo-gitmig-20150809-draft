@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.113 2009/07/06 19:05:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.114 2009/07/06 19:06:03 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -9,6 +9,8 @@
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
+
+inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator
 
 case "${EAPI:-0}" in
 	2)
@@ -29,8 +31,6 @@ case "${EAPI:-0}" in
 					pkg_config pkg_postrm
 		;;
 esac
-
-inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator
 
 # Shorten the path because the socket path length must be shorter than 107 chars
 # and we will run a mysql server during test phase
