@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.9.8.ebuild,v 1.1 2009/06/13 21:48:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/systemtap/systemtap-0.9.8.ebuild,v 1.2 2009/07/06 21:38:47 swegener Exp $
 
 inherit linux-info eutils
 
@@ -43,6 +43,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--docdir=/usr/share/doc/${PF} \
+		--without-rpm \
 		--disable-server \
 		--disable-docs \
 		--disable-refdocs \
