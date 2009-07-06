@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.111 2009/07/06 18:21:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.112 2009/07/06 18:58:41 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -132,8 +132,24 @@ mysql_version_is_at_least "5.1.12" \
 [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ] \
 && IUSE="${IUSE} community profiling"
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_preinst \
-				pkg_postinst pkg_config pkg_postrm
+case "${EAPI:-0}" in
+	2)
+		EXPORT_FUNCTIONS pkg_setup \
+					src_unpack src_prepare \
+					src_configure src_compile \
+					src_install \
+					pkg_preinst pkg_postinst \
+					pkg_config pkg_postrm
+		;;
+	*)
+		EXPORT_FUNCTIONS pkg_setup \
+					src_unpack \
+					src_compile \
+					src_install \
+					pkg_preinst pkg_postinst \
+					pkg_config pkg_postrm
+		;;
+esac
 
 #
 # HELPER FUNCTIONS:
@@ -411,7 +427,7 @@ configure_51() {
 	myconf="${myconf} --with-plugins=${plugins}"
 }
 
-pbxt_src_compile() {
+pbxt_src_configure() {
 	mysql_init_vars
 
 	pushd "${WORKDIR}/pbxt-${PBXT_VERSION}" &>/dev/null
@@ -424,6 +440,13 @@ pbxt_src_compile() {
 	use debug && myconf="${myconf} --with-debug=full"
 	# TODO: is it safe/needed to use econf here ?
 	./configure ${myconf} || die "Problem configuring PBXT storage engine"
+}
+
+pbxt_src_compile() {
+	# Be backwards compatible for now
+	if [[ $EAPI != 2 ]]; then
+		pbxt_src_configure
+	fi
 	# TODO: is it safe/needed to use emake here ?
 	make || die "Problem making PBXT storage engine (${myconf})"
 
@@ -488,6 +511,14 @@ mysql_src_unpack() {
 	[[ "${MY_EXTRAS_VER}" == "live" ]] && S="${WORKDIR}/mysql-extras" git_src_unpack
 	
 	mv -f "${WORKDIR}/${MY_SOURCEDIR}" "${S}"
+
+	# Be backwards compatible for now
+	if [[ $EAPI != 2 ]]; then
+		mysql_src_prepare
+	fi
+}
+
+mysql_src_prepare() {
 	cd "${S}"
 
 	# Apply the patches for this MySQL version
@@ -558,7 +589,7 @@ mysql_src_unpack() {
 	fi
 }
 
-mysql_src_compile() {
+mysql_src_configure() {
 	# Make sure the vars are correctly initialized
 	mysql_init_vars
 
@@ -612,6 +643,17 @@ mysql_src_compile() {
 	find . -type f -name Makefile -print0 \
 	| xargs -0 -n100 sed -i \
 	-e 's|^pkglibdir *= *$(libdir)/mysql|pkglibdir = $(libdir)|;s|^pkgincludedir *= *$(includedir)/mysql|pkgincludedir = $(includedir)|'
+
+	if [[ $EAPI == 2 ]]; then
+		mysql_version_is_at_least "5.1.12" && use pbxt && pbxt_src_configure
+	fi
+}
+
+mysql_src_compile() {
+	# Be backwards compatible for now
+	if [[ $EAPI != 2 ]]; then
+		mysql_src_configure
+	fi
 
 	emake || die "emake failed"
 
