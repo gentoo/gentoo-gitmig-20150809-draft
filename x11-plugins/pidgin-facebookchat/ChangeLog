@@ -1,6 +1,13 @@
 # ChangeLog for x11-plugins/pidgin-facebookchat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.21 2009/06/29 09:22:05 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-facebookchat/ChangeLog,v 1.22 2009/07/06 09:54:28 voyageur Exp $
+
+*pidgin-facebookchat-1.54 (06 Jul 2009)
+
+  06 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-facebookchat-1.54.ebuild:
+  Version bump, adds option to disable history, shows users away and idle,
+  fix buddy names not being shown straight away, and other bugfixes
 
 *pidgin-facebookchat-1.53 (29 Jun 2009)
 
