@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.1 2009/07/05 17:13:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.2 2009/07/06 03:36:25 mr_bones_ Exp $
 
 inherit autotools gnome2
 
@@ -60,6 +60,6 @@ src_unpack() {
 	# Drop stanzas when failing to convert them to LmMessages
 	# From debian..
 	epatch "${FILESDIR}/${P}-drop-stanzas-on-fail.patch"
-	
+
 	eautoreconf
 }
