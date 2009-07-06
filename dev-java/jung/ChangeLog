@@ -1,0 +1,14 @@
+# ChangeLog for dev-java/jung
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jung/ChangeLog,v 1.1 2009/07/06 10:04:20 ali_bush Exp $
+
+  06 Jul 2009; Alistair Bush <ali_bush@gentoo.org> +jung-1.7.6.ebuild,
+  +files/jung-1.7.6-build.xml.patch, +metadata.xml:
+  Keyword ~x86 and move from java-overlay
+
+*jung-1.7.6 (24 May 2009)
+
+  24 May 2009; Alistair Bush <ali_bush@gentoo.org> +jung-1.7.6.ebuild,
+  +files/jung-1.7.6-build.xml.patch, +metadata.xml:
+  New Package
+
