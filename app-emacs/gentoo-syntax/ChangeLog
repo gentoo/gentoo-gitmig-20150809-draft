@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.39 2009/07/05 21:51:44 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.40 2009/07/06 03:14:28 jer Exp $
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> gentoo-syntax-1.12.ebuild:
+  Stable for HPPA (bug #276638).
 
   05 Jul 2009; Ferris McCormick <fmccor@gentoo.org>
   gentoo-syntax-1.12.ebuild:
