@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.15.ebuild,v 1.5 2007/12/30 18:58:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.15.ebuild,v 1.6 2009/07/06 20:45:45 jer Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ppc x86 ~x86-fbsd"
 IUSE="png mng"
 
 DEPEND="sys-libs/zlib app-arch/bzip2"
