@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.2 2009/06/16 22:50:07 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.3 2009/07/06 13:22:07 volkmar Exp $
+
+*xmlrpc-epi-0.54-r1 (06 Jul 2009)
+
+  06 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> -xmlrpc-epi-0.54.ebuild,
+  +xmlrpc-epi-0.54-r1.ebuild:
+  Fix xmlrpc-{c,epi} conflict by installing headers to /usr/include/xmlrpc-epi.
+  See bug 274291
 
   16 Jun 2009; Mounir Lamouri <volkmar@gentoo.org> xmlrpc-epi-0.54.ebuild:
   Add --disable-dependency-tracking

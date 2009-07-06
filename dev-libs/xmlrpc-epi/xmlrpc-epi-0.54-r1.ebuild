@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/xmlrpc-epi-0.54.ebuild,v 1.2 2009/06/16 22:50:07 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/xmlrpc-epi-0.54-r1.ebuild,v 1.1 2009/07/06 13:22:07 volkmar Exp $
 
 EAPI="2"
 
@@ -13,12 +13,12 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE="examples"
 
-DEPEND="dev-libs/expat
-	!!dev-libs/xmlrpc-c"
+DEPEND="dev-libs/expat"
 RDEPEND="${DEPEND}"
 
-# TODO:
-# fix /usr/include/xmlrpc.h conflict with dev-libs/xmlrpc-c, bug 274291
+# NOTES:
+# to prevent conflict with xmlrpc-c, headers are installed in
+# 	/usr/include/${PN} instead of /usr/include (bug 274291)
 
 src_prepare() {
 	# do not build examples
@@ -26,7 +26,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --disable-dependency-tracking
+	econf \
+		--includedir=/usr/include/${PN} \
+		--disable-dependency-tracking
 }
 
 src_install() {
