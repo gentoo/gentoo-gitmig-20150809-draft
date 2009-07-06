@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0v.ebuild,v 1.3 2009/07/06 23:26:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xdelta/xdelta-3.0v.ebuild,v 1.4 2009/07/06 23:31:31 ssuominen Exp $
 
 EAPI=2
 inherit distutils toolchain-funcs
@@ -22,12 +22,12 @@ S=${WORKDIR}/${P/-}
 DOCS="draft-korn-vcdiff.txt"
 
 src_prepare() {
-	sed -i -e 's:-O3:-Wall:' setup.py || die "sed failed"
+	sed -i -e 's:-O3:-Wall:' setup.py || die "setup.py sed failed"
 	sed \
 		-e 's:-O3::g' \
 		-e 's:$(CC):$(CC) $(LDFLAGS):g' \
 		-e 's:CFLAGS=:CFLAGS+=:' \
-		-i Makefile || die "sed failed"
+		-i Makefile || die "Makefile sed failed"
 }
 
 src_test() {
@@ -41,13 +41,13 @@ src_test() {
 src_compile() {
 	tc-export CC CXX
 	distutils_src_compile
-	emake xdelta3 || die "emake failed"
+	emake xdelta3 || die "emake xdelta3 failed"
 	if use test; then
-		emake xdelta3-debug || die "emake failed"
+		emake xdelta3-debug || die "emake xdelta3-debug failed"
 	fi
 }
 
 src_install() {
-	dobin xdelta3 || die "dobin xdelta failed"
+	dobin xdelta3 || die "dobin failed"
 	distutils_src_install
 }
