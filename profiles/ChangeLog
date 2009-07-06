@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2871 2009/07/06 06:16:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2872 2009/07/06 06:21:58 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Jul 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  add xf86-video-intel-2.7.99.901 to package.mask
 
   06 Jul 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Package mask app-emacs/mule-ucs for removal.
