@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/claws-mail-attachwarner-0.2.17.ebuild,v 1.1 2009/07/06 12:07:05 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-attachwarner/claws-mail-attachwarner-0.2.17.ebuild,v 1.2 2009/07/06 12:55:54 fauli Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="nls"
-RDEPEND=">=mail-client/claws-mail-3.7.1
+RDEPEND=">=mail-client/claws-mail-3.7.2
 		nls? ( >=sys-devel/gettext-0.12.1 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

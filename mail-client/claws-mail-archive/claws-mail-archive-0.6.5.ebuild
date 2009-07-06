@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/claws-mail-archive-0.6.5.ebuild,v 1.1 2009/07/06 12:17:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-archive/claws-mail-archive-0.6.5.ebuild,v 1.2 2009/07/06 13:03:34 fauli Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
-RDEPEND=">=mail-client/claws-mail-3.7.1
+RDEPEND=">=mail-client/claws-mail-3.7.2
 	app-arch/libarchive
 	>=net-misc/curl-7.9.7"
 DEPEND="${RDEPEND}

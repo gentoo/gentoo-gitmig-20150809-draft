@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.22.ebuild,v 1.1 2009/07/06 12:23:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-notification/claws-mail-notification-0.22.ebuild,v 1.2 2009/07/06 13:07:12 fauli Exp $
 
 MY_P="${PN#claws-mail-}_plugin-${PV}"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="libnotify"
-RDEPEND=">=mail-client/claws-mail-3.7.1
+RDEPEND=">=mail-client/claws-mail-3.7.2
 		>=x11-libs/gtk+-2.10
 		libnotify? ( x11-libs/libnotify )"
 DEPEND="${RDEPEND}

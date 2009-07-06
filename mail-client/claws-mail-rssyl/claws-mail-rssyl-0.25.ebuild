@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/claws-mail-rssyl-0.25.ebuild,v 1.1 2009/07/06 12:30:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-rssyl/claws-mail-rssyl-0.25.ebuild,v 1.2 2009/07/06 13:10:40 fauli Exp $
 
 MY_P="${P#claws-mail-}"
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="nls"
-RDEPEND=">=mail-client/claws-mail-3.7.1
+RDEPEND=">=mail-client/claws-mail-3.7.2
 	net-misc/curl
 	dev-libs/libxml2
 	nls? ( >=sys-devel/gettext-0.12.1 )"
