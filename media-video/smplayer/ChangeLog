@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.70 2009/05/14 18:55:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.71 2009/07/06 22:34:27 jer Exp $
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> smplayer-0.6.6.ebuild:
+  Stable for HPPA (bug #257852).
 
   14 May 2009; Ben de Groot <yngwin@gentoo.org> smplayer-0.6.6.ebuild:
   Broaden dependency on qt-gui to include 4.5.1 (just 4.5.0 didn't work).
