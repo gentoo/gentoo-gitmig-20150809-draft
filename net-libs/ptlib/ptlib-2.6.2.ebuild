@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.1 2009/07/03 09:57:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.2 2009/07/06 11:49:16 volkmar Exp $
 
 EAPI="2"
 
@@ -144,8 +144,8 @@ pkg_setup() {
 
 	if ${use_error}; then
 		echo
-		eerror "Please see messages above and re-emerge ${PN} accordingly."
-		die
+		eerror "Please look at previous messages and re-emerge ${PN} accordingly."
+		die "conditional USE flags error"
 	fi
 }
 
