@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.112 2009/07/06 18:58:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.113 2009/07/06 19:05:07 robbat2 Exp $
 
 # Author: Francesco Riosa (Retired) <vivo@gentoo.org>
 # Maintainer: MySQL Team <mysql-bugs@gentoo.org>
@@ -9,6 +9,26 @@
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
+
+case "${EAPI:-0}" in
+	2)
+		EXPORT_FUNCTIONS pkg_setup \
+					src_unpack src_prepare \
+					src_configure src_compile \
+					src_install \
+					pkg_preinst pkg_postinst \
+					pkg_config pkg_postrm
+		IUSE_DEFAULT_ON='+'
+		;;
+	*)
+		EXPORT_FUNCTIONS pkg_setup \
+					src_unpack \
+					src_compile \
+					src_install \
+					pkg_preinst pkg_postinst \
+					pkg_config pkg_postrm
+		;;
+esac
 
 inherit eutils flag-o-matic gnuconfig autotools mysql_fx versionator
 
@@ -109,7 +129,7 @@ DESCRIPTION="A fast, multi-threaded, multi-user SQL database server."
 HOMEPAGE="http://www.mysql.com/"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="big-tables debug embedded minimal perl selinux ssl static"
+IUSE="big-tables debug embedded minimal ${IUSE_DEFAULT_ON}perl selinux ssl static"
 
 mysql_version_is_at_least "4.1" \
 && IUSE="${IUSE} latin1"
@@ -130,26 +150,7 @@ mysql_version_is_at_least "5.1.12" \
 && IUSE="${IUSE} pbxt"
 
 [ "${MYSQL_COMMUNITY_FEATURES}" == "1" ] \
-&& IUSE="${IUSE} community profiling"
-
-case "${EAPI:-0}" in
-	2)
-		EXPORT_FUNCTIONS pkg_setup \
-					src_unpack src_prepare \
-					src_configure src_compile \
-					src_install \
-					pkg_preinst pkg_postinst \
-					pkg_config pkg_postrm
-		;;
-	*)
-		EXPORT_FUNCTIONS pkg_setup \
-					src_unpack \
-					src_compile \
-					src_install \
-					pkg_preinst pkg_postinst \
-					pkg_config pkg_postrm
-		;;
-esac
+&& IUSE="${IUSE} ${IUSE_DEFAULT_ON}community profiling"
 
 #
 # HELPER FUNCTIONS:
