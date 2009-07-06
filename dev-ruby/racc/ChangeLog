@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.39 2008/03/10 00:05:02 ricmm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.40 2009/07/06 03:11:51 jer Exp $
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> racc-1.4.5.ebuild:
+  Stable for HPPA (bug #276597).
 
   09 Mar 2008; <ricmm@gentoo.org> racc-1.4.4.ebuild, racc-1.4.5.ebuild:
   Drop to ~mips to match dev-lang/ruby
