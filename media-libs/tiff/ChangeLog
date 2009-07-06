@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/tiff
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.119 2009/07/04 19:26:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.120 2009/07/06 03:03:52 jer Exp $
+
+  06 Jul 2009; Jeroen Roovers <jer@gentoo.org> tiff-3.8.2-r7.ebuild:
+  Stable for HPPA (bug #276339).
 
 *tiff-3.8.2-r7 (04 Jul 2009)
 
