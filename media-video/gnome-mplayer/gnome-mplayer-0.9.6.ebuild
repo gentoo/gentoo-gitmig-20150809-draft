@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.6.ebuild,v 1.8 2009/07/02 11:54:36 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gnome-mplayer/gnome-mplayer-0.9.6.ebuild,v 1.9 2009/07/06 20:26:06 aballier Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -14,7 +14,7 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~hppa ppc ~ppc64 x86"
+KEYWORDS="alpha amd64 ~hppa ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="+alsa gnome ipod +libnotify musicbrainz"
 
 RDEPEND="dev-libs/glib:2
