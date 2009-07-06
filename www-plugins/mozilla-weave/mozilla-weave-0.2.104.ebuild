@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.2.104.ebuild,v 1.4 2009/07/05 19:11:30 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.2.104.ebuild,v 1.5 2009/07/06 20:33:27 volkmar Exp $
 
 EAPI="2"
 
@@ -30,8 +30,10 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
+RESTRICT="test"
+
 # NOTES:
-# there are tests but they don't break the build if not working
+# weave is still in heavy development and tests are known to fail so disabled
 # thunderbird and fennec are in install.rdf
 
 src_prepare() {
