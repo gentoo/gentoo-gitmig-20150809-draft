@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.13 2008/02/29 07:23:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.4.5.ebuild,v 1.14 2009/07/06 08:13:03 tupone Exp $
 
 MY_PN="Atlas-C++"
 MY_P=${MY_PN}-${PV}
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="virtual/libc
 	=dev-libs/libsigc++-1.0*"
+RDEPEND=${DEPEND}
 
 src_compile() {
 

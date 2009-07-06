@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/atlas-c++
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.29 2008/11/20 11:04:24 tove Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.30 2009/07/06 08:13:03 tupone Exp $
+
+  06 Jul 2009; Alfredo Tupone <tupone@gentoo.org>
+  +files/atlas-c++-0.6.1-gcc-4.4.patch, atlas-c++-0.4.5.ebuild,
+  atlas-c++-0.5.92.ebuild, atlas-c++-0.6.0.ebuild,
+  atlas-c++-0.6.1-r1.ebuild:
+  Fix build with gcc-4.4 Bug #275911 by Joost Ruis
+  Some QA fixes
 
   20 Nov 2008; Tupone Alfredo <tupone@gentoo.org> files/atlas-c++-0.6.1-as-needed.patch:
   Adding all dependency within libraries. Tested with -Wl,-no-undefined

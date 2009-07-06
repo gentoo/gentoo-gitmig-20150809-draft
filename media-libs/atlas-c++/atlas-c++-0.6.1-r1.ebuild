@@ -1,6 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.1-r1.ebuild,v 1.1 2008/11/19 14:47:42 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/atlas-c++-0.6.1-r1.ebuild,v 1.2 2009/07/06 08:13:03 tupone Exp $
+EAPI=2
 
 inherit eutils autotools
 
@@ -13,7 +14,7 @@ SRC_URI="mirror://sourceforge/worldforge/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="bzip2 doc zlib"
+IUSE="doc"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
@@ -21,20 +22,15 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-strict-aliasing.patch \
 		"${FILESDIR}"/${P}-gcc-4.3.patch \
+		"${FILESDIR}"/${P}-gcc-4.4.patch \
 		"${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 }
 
 src_compile() {
-	econf \
-	    $(use_enable zlib) \
-	    $(use_enable bzip2 bzlib) \
-	    || die "Error: econf failed!"
 	emake || die "Error: emake failed!"
 	if use doc; then
 		emake docs ||  die "Error: emake failed!"
