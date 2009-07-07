@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.2.0.ebuild,v 1.2 2008/05/15 11:18:37 ingmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-bin/nessus-bin-3.2.0.ebuild,v 1.3 2009/07/07 23:03:49 flameeyes Exp $
 
 inherit rpm
 
@@ -26,13 +26,13 @@ PDEPEND="X? ( net-analyzer/nessus-client )"
 
 pkg_nofetch() {
 	if use x86; then
-		einfo "Please download ${MY_P}.i386.rpm from ${HOMEPAGE}/download"
-		einfo "The archive should then be placed into ${DISTDIR}."
+		elog "Please download ${MY_P}.i386.rpm from ${HOMEPAGE}/download"
+		elog "The archive should then be placed into ${DISTDIR}."
 	fi
 
 	if use amd64; then
-		einfo "Please download ${MY_P}.x86_64.rpm from ${HOMEPAGE}/download"
-		einfo "The archive should then be placed into ${DISTDIR}."
+		elog "Please download ${MY_P}.x86_64.rpm from ${HOMEPAGE}/download"
+		elog "The archive should then be placed into ${DISTDIR}."
 	fi
 }
 
