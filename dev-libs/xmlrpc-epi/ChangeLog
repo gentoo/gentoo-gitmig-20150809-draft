@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.3 2009/07/06 13:22:07 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.4 2009/07/07 14:37:20 lavajoe Exp $
+
+  07 Jul 2009; Joe Peterson <lavajoe@gentoo.org> xmlrpc-epi-0.54-r1.ebuild:
+  Keyword ~amd64
 
 *xmlrpc-epi-0.54-r1 (06 Jul 2009)
 

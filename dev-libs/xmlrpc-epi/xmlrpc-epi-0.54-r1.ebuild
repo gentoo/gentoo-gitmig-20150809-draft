@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/xmlrpc-epi-0.54-r1.ebuild,v 1.1 2009/07/06 13:22:07 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/xmlrpc-epi-0.54-r1.ebuild,v 1.2 2009/07/07 14:37:20 lavajoe Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/xmlrpc-epi/${P}.tar.gz"
 
 LICENSE="Epinions"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples"
 
 DEPEND="dev-libs/expat"
