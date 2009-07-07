@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/phred/phred-071220.ebuild,v 1.1 2009/02/27 00:04:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/phred/phred-071220.ebuild,v 1.2 2009/07/07 22:53:19 flameeyes Exp $
 
 DESCRIPTION="A base caller for Sanger DNA sequencing"
 HOMEPAGE="http://phrap.org/phredphrapconsed.html"
@@ -19,8 +19,8 @@ S="${WORKDIR}"
 RESTRICT="fetch"
 
 pkg_nofetch() {
-	einfo "Please visit ${HOMEPAGE} and obtain the file"
-	einfo "${SRC_URI}, then place it in ${DISTDIR}"
+	elog "Please visit ${HOMEPAGE} and obtain the file"
+	elog "${SRC_URI}, then place it in ${DISTDIR}"
 }
 
 src_compile() {
