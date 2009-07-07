@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmbscan
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.8 2007/02/20 00:21:21 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmbscan/ChangeLog,v 1.9 2009/07/07 13:45:25 jer Exp $
+
+  07 Jul 2009; Jeroen Roovers <jer@gentoo.org> nmbscan-1.2.4.ebuild:
+  Stable for HPPA too.
 
   20 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
