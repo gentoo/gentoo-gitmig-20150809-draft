@@ -3,6 +3,6 @@
 <pkgmetadata>
 <herd>crypto</herd>
   <use>
-      <flag name="sse3">Enable optimisations using the sse3 assmbly code</flag>
+      <flag name="sse3">Enable optimizations via sse3 assembly code</flag>
   </use>
 </pkgmetadata>
