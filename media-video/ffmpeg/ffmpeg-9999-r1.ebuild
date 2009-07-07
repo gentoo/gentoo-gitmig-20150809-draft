@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.7 2009/07/04 08:20:56 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.8 2009/07/07 08:13:30 aballier Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://ffmpeg.org/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="+3dnow +3dnowext alsa altivec amr cpudetection custom-cflags debug dirac
+IUSE="+3dnow +3dnowext alsa altivec cpudetection custom-cflags debug dirac
 	  doc ieee1394 +encode faac faad gsm ipv6 jack +mmx +mmxext vorbis test
 	  theora threads x264 xvid network zlib sdl X mp3 opencore-amrnb
 	  opencore-amrwb oss schroedinger +hardcoded-tables bindist v4l v4l2
@@ -42,8 +42,7 @@ RDEPEND="sdl? ( >=media-libs/libsdl-1.2.10 )
 	schroedinger? ( media-libs/schroedinger )
 	speex? ( >=media-libs/speex-1.2_beta3 )
 	jack? ( media-sound/jack-audio-connection-kit )
-	X? ( x11-libs/libX11 x11-libs/libXext )
-	amr? ( media-libs/amrnb media-libs/amrwb )"
+	X? ( x11-libs/libX11 x11-libs/libXext )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/make-3.81
@@ -109,14 +108,11 @@ src_configure() {
 	fi
 	if use bindist
 	then
-		use amr && ewarn "libamr is nonfree and cannot be distributed; disabling amr support."
 		use faac && ewarn "faac is nonfree and cannot be distributed; disabling
 		faac support."
 	else
-		use amr && myconf="${myconf} --enable-libamr-nb \
-									 --enable-libamr-wb"
 		use faac && myconf="${myconf} --enable-libfaac"
-		{ use faac || use amr ; } && myconf="${myconf} --enable-nonfree"
+		{ use faac ; } && myconf="${myconf} --enable-nonfree"
 	fi
 
 	# CPU features
