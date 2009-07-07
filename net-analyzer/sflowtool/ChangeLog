@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/sflowtool
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.12 2008/08/16 17:36:16 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sflowtool/ChangeLog,v 1.13 2009/07/07 13:48:59 jer Exp $
+
+*sflowtool-3.10-r1 (07 Jul 2009)
+
+  07 Jul 2009; Jeroen Roovers <jer@gentoo.org> +sflowtool-3.10-r1.ebuild:
+  Call eautoreconf (bug #276920).
 
   16 Aug 2008; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove strerror from metadata.xml (#89719)
