@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.2 2009/07/05 17:16:11 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.3 2009/07/07 09:54:08 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -17,7 +17,8 @@ SLOT="1"
 DEPEND=">=dev-perl/Apache-Test-1.27
 	dev-perl/Apache-Reload
 	>=virtual/perl-CGI-3.08
-	>=virtual/perl-Compress-Zlib-1.09"
+	>=virtual/perl-Compress-Zlib-1.09
+	!=www-servers/apache-2.2.11-r1"
 RDEPEND="${DEPEND}"
 
 APACHE2_MOD_FILE="${S}/src/modules/perl/mod_perl.so"
