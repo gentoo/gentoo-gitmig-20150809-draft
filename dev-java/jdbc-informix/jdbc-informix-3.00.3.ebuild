@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-3.00.3.ebuild,v 1.5 2007/12/09 13:23:06 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-informix/jdbc-informix-3.00.3.ebuild,v 1.6 2009/07/07 23:22:17 flameeyes Exp $
 
 JAVA_PKG_IUSE="doc examples"
 
@@ -24,13 +24,13 @@ IUSE=""
 S="${WORKDIR}"
 
 pkg_nofetch() {
-	einfo "Due to licensing restrictions, you need to download the distfile manually."
-	einfo "Please navigate to ${DOWNLOADPAGE}"
-	einfo "Click on the 'Informix JDBC Driver' link, version ${MY_PV}"
-	einfo "Sign up with your IBM account (you need to register)."
-	einfo "Go through the license agreement and survey."
-	einfo "Download ${At} and place it into ${DISTDIR}"
-	einfo "And restart the installation."
+	elog "Due to licensing restrictions, you need to download the distfile manually."
+	elog "Please navigate to ${DOWNLOADPAGE}"
+	elog "Click on the 'Informix JDBC Driver' link, version ${MY_PV}"
+	elog "Sign up with your IBM account (you need to register)."
+	elog "Go through the license agreement and survey."
+	elog "Download ${At} and place it into ${DISTDIR}"
+	elog "And restart the installation."
 }
 
 src_compile() {
