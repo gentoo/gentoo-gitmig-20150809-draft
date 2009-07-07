@@ -1,6 +1,21 @@
 # ChangeLog for mail-mta/qmail-ldap
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.26 2008/08/23 02:01:49 cardoe Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/ChangeLog,v 1.27 2009/07/07 20:41:30 hollow Exp $
+
+  07 Jul 2009; Benedikt Böhm <hollow@gentoo.org> -files/99qmail,
+  -files/conf-common, -files/conf-pop3d, -files/conf-qmqpd,
+  -files/conf-qmtpd, -files/conf-send, -files/conf-smtpd, -files/dot-qmail,
+  -files/mailer.conf, -files/mkservercert, -files/qmail-config-system,
+  -files/qmail-genrsacert.sh, -files/run-qmail-pop3d,
+  -files/run-qmail-pop3d-log, -files/run-qmail-qmqpd,
+  -files/run-qmail-qmqpd-log, -files/run-qmail-qmtpd,
+  -files/run-qmail-qmtpd-log, -files/run-qmail-send,
+  -files/run-qmail-send-log, -files/run-qmail-smtpd,
+  -files/run-qmail-smtpd-log, -files/servercert.cnf, -files/smtpplugins,
+  -files/tcp.pop3.sample, -files/tcp.qmqp.sample, -files/tcp.qmtp.sample,
+  -files/tcp.smtp.sample, -files/tcprules.d-Makefile.qmail,
+  -qmail-ldap-1.03-r7.ebuild, qmail-ldap-1.03-r8.ebuild:
+  fix #272913 and remove obsolete ebuild
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

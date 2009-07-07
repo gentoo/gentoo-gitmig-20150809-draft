@@ -1,6 +1,0 @@
-#!/bin/sh
-# Init script for qmail-send
-# Copied from LWQ
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/files/run-qmail-send,v 1.1 2007/06/16 13:48:10 hollow Exp $
-exec env - PATH="/var/qmail/bin:$PATH" \
-	qmail-start "`cat /var/qmail/control/defaultdelivery`"

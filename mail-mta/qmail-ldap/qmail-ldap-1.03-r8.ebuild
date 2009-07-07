@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.1 2008/04/06 19:22:37 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/qmail-ldap-1.03-r8.ebuild,v 1.2 2009/07/07 20:41:30 hollow Exp $
 
 GENQMAIL_PV=20080406
 QMAIL_SPP_PV=0.42
@@ -204,8 +204,7 @@ pkg_postinst() {
 	elog "http://www.lifewithqmail.com/ldap/"
 	elog "  -- Life with qmail-ldap"
 	elog
-	elog "For sample ldifs, please check"
-	elog "/usr/share/doc/${PF}/samples.ldif.gz"
+	elog "For sample ldifs, please check /usr/share/doc/${PF}/"
 	elog
 }
 

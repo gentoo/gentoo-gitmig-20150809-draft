@@ -1,7 +1,0 @@
-#!/bin/bash
-# Gentoo Startup script for qmail's SMTP daemon (logging)
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-ldap/files/run-qmail-smtpd-log,v 1.1 2007/06/16 13:48:10 hollow Exp $
-
-SERVICE=smtp
-. /var/qmail/bin/qmail-config-system && \
-eval exec /usr/bin/setuidgid qmaill /usr/bin/multilog ${LOG_OPTS} ${LOG_DEST}
