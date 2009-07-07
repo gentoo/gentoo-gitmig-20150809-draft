@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.3.3.ebuild,v 1.1 2009/05/15 08:04:14 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/libkate-0.3.4.ebuild,v 1.1 2009/07/07 08:38:57 aballier Exp $
 
 DESCRIPTION="Codec for karaoke and text encapsulation for Ogg"
 HOMEPAGE="http://code.google.com/p/libkate/"
