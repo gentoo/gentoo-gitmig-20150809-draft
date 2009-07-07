@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.75 2009/07/07 20:39:09 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.76 2009/07/07 21:42:23 fauli Exp $
+
+  07 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  mod_perl-2.0.4-r1.ebuild:
+  stable x86, security bug 266035
 
   07 Jul 2009; Benedikt Böhm <hollow@gentoo.org> mod_perl-2.0.4-r1.ebuild:
   fix circular dependencies
