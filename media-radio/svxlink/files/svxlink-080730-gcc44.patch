@@ -1,0 +1,55 @@
+diff -NrU5 svxlink-080730.original/async/audio/AsyncAudioDevice.h svxlink-080730/async/audio/AsyncAudioDevice.h
+--- svxlink-080730.original/async/audio/AsyncAudioDevice.h	2009-07-07 22:05:53.000000000 -0600
++++ svxlink-080730/async/audio/AsyncAudioDevice.h	2009-07-07 22:44:51.000000000 -0600
+@@ -35,10 +35,11 @@
+  *
+  * System Includes
+  *
+  ****************************************************************************/
+ 
++#include <stdint.h>
+ #include <sigc++/sigc++.h>
+ 
+ #include <string>
+ #include <map>
+ #include <list>
+diff -NrU5 svxlink-080730.original/async/core/AsyncSerialDevice.cpp svxlink-080730/async/core/AsyncSerialDevice.cpp
+--- svxlink-080730.original/async/core/AsyncSerialDevice.cpp	2009-07-07 22:05:53.000000000 -0600
++++ svxlink-080730/async/core/AsyncSerialDevice.cpp	2009-07-07 22:40:25.000000000 -0600
+@@ -33,10 +33,11 @@
+  *
+  * System Includes
+  *
+  ****************************************************************************/
+ 
++#include <stdio.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <errno.h>
+ 
+diff -NrU5 svxlink-080730.original/async/cpp/AsyncCppDnsLookupWorker.cpp svxlink-080730/async/cpp/AsyncCppDnsLookupWorker.cpp
+--- svxlink-080730.original/async/cpp/AsyncCppDnsLookupWorker.cpp	2009-07-07 22:05:53.000000000 -0600
++++ svxlink-080730/async/cpp/AsyncCppDnsLookupWorker.cpp	2009-07-07 22:42:37.000000000 -0600
+@@ -36,10 +36,11 @@
+  *
+  * System Includes
+  *
+  ****************************************************************************/
+ 
++#include <stdio.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <sys/time.h>
+ #include <errno.h>
+diff -NrU5 svxlink-080730.original/async/demo/AsyncSerial_demo.cpp svxlink-080730/async/demo/AsyncSerial_demo.cpp
+--- svxlink-080730.original/async/demo/AsyncSerial_demo.cpp	2009-07-07 22:05:53.000000000 -0600
++++ svxlink-080730/async/demo/AsyncSerial_demo.cpp	2009-07-07 22:46:44.000000000 -0600
+@@ -1,5 +1,6 @@
++#include <stdio.h>
+ #include <iostream>
+ #include <cstdlib>
+ 
+ #include <AsyncCppApplication.h>
+ #include <AsyncSerial.h>

@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/svxlink
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.6 2008/12/15 12:27:51 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.7 2009/07/07 22:54:42 vostorga Exp $
+
+  07 Jul 2009; <vostorga@gentoo.org> +files/svxlink-080730-gcc44.patch,
+  svxlink-080730.ebuild:
+  Add patch to fix compilation with gcc 4.4
 
   15 Dec 2008; Peter Volkov <pva@gentoo.org>
   +files/svxlink-080730--as-needed.patch,
