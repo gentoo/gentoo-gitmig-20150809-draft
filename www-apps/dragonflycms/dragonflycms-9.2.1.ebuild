@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.2.1.ebuild,v 1.1 2008/02/28 07:06:41 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/dragonflycms/dragonflycms-9.2.1.ebuild,v 1.2 2009/07/07 23:31:43 flameeyes Exp $
 
 inherit webapp depend.php
 
@@ -22,9 +22,9 @@ need_php_httpd
 S="${WORKDIR}"
 
 pkg_nofetch() {
-	einfo "Please download ${MY_P}.tar.bz2 from:"
-	einfo "http://dragonflycms.org/Downloads/get=28.html"
-	einfo "and move it to ${DISTDIR}"
+	elog "Please download ${MY_P}.tar.bz2 from:"
+	elog "http://dragonflycms.org/Downloads/get=28.html"
+	elog "and move it to ${DISTDIR}"
 }
 
 src_install() {
