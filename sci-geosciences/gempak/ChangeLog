@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gempak
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/ChangeLog,v 1.8 2008/05/04 18:19:07 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gempak/ChangeLog,v 1.9 2009/07/07 23:23:14 flameeyes Exp $
+
+  07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> gempak-5.7.4.ebuild:
+  Use elog for fetch error.
 
   04 May 2008; Ulrich Mueller <ulm@gentoo.org> gempak-5.7.2_p2.ebuild,
   gempak-5.7.4.ebuild:
