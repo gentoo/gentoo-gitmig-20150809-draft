@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.3 2009/05/29 00:42:09 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/shelx/shelx-20060317-r1.ebuild,v 1.4 2009/07/07 23:04:21 flameeyes Exp $
 
 inherit autotools eutils flag-o-matic fortran
 
@@ -20,11 +20,11 @@ S="${WORKDIR}/unix"
 FORTRAN="ifc gfortran"
 
 pkg_nofetch() {
-	einfo "Go to ${HOMEPAGE}"
-	einfo "Fill out the application form, and send it in."
-	einfo "Download unix.tgz, rename it to ${P}.tgz,"
-	use openmp && einfo "download mp.tgz, rename it to ${P}-mp.tgz,"
-	einfo "and place renamed tarballs in ${DISTDIR}."
+	elog "Go to ${HOMEPAGE}"
+	elog "Fill out the application form, and send it in."
+	elog "Download unix.tgz, rename it to ${P}.tgz,"
+	use openmp && elog "download mp.tgz, rename it to ${P}-mp.tgz,"
+	elog "and place renamed tarballs in ${DISTDIR}."
 }
 
 src_unpack() {
