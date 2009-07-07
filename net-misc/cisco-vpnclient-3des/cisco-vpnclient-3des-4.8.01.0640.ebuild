@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.4 2008/06/02 22:22:04 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cisco-vpnclient-3des/cisco-vpnclient-3des-4.8.01.0640.ebuild,v 1.5 2009/07/07 23:15:46 flameeyes Exp $
 
 inherit eutils linux-mod
 
@@ -33,9 +33,9 @@ MODULE_NAMES="cisco_ipsec(CiscoVPN)"
 BUILD_TARGETS="clean default"
 
 pkg_nofetch() {
-	einfo "Please visit:"
-	einfo " ${HOMEPAGE}"
-	einfo "and download ${A} to ${DISTDIR}"
+	elog "Please visit:"
+	elog " ${HOMEPAGE}"
+	elog "and download ${A} to ${DISTDIR}"
 }
 
 src_unpack () {
