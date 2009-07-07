@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.5 2009/05/23 13:42:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gamess/gamess-20090112.1-r1.ebuild,v 1.6 2009/07/07 23:25:08 flameeyes Exp $
 
 inherit eutils toolchain-funcs fortran flag-o-matic
 
@@ -32,14 +32,14 @@ FORTRAN="ifc g77 gfortran"
 
 pkg_nofetch() {
 	echo
-	einfo "Please download ${PN}-current.tar.gz from"
-	einfo "${GAMESS_DOWNLOAD}."
-	einfo "Be sure to select the version ${GAMESS_VERSION} tarball!!"
-	einfo "Then move the tarball to"
-	einfo "${DISTDIR}/${P}.tar.gz"
+	elog "Please download ${PN}-current.tar.gz from"
+	elog "${GAMESS_DOWNLOAD}."
+	elog "Be sure to select the version ${GAMESS_VERSION} tarball!!"
+	elog "Then move the tarball to"
+	elog "${DISTDIR}/${P}.tar.gz"
 	if use qmmm-tinker ; then
-		einfo "Also download http://www.msg.ameslab.gov/GAMESS/tinker.tar.Z"
-		einfo "and place tinker.tar.Z to ${DISTDIR}"
+		elog "Also download http://www.msg.ameslab.gov/GAMESS/tinker.tar.Z"
+		elog "and place tinker.tar.Z to ${DISTDIR}"
 	fi
 	echo
 }

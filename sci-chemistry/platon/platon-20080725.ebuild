@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080725.ebuild,v 1.2 2008/10/07 17:01:37 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/platon/platon-20080725.ebuild,v 1.3 2009/07/07 23:30:21 flameeyes Exp $
 
 inherit fortran toolchain-funcs flag-o-matic
 
@@ -20,12 +20,12 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/${PN}"
 
 pkg_nofetch() {
-	einfo "Download ${A/-${PV}} from ftp://xraysoft.chem.uu.nl/pub/unix/,"
-	einfo "rename it to ${A} and place it"
-	einfo "in ${DISTDIR}."
-	einfo "If there is a digest mismatch, please file a bug"
-	einfo "at https://bugs.gentoo.org/ -- a version bump"
-	einfo "is probably required."
+	elog "Download ${A/-${PV}} from ftp://xraysoft.chem.uu.nl/pub/unix/,"
+	elog "rename it to ${A} and place it"
+	elog "in ${DISTDIR}."
+	elog "If there is a digest mismatch, please file a bug"
+	elog "at https://bugs.gentoo.org/ -- a version bump"
+	elog "is probably required."
 }
 
 src_unpack() {
