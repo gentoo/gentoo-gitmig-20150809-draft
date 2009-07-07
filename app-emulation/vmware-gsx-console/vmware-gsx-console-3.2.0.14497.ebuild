@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.6 2007/07/22 09:35:42 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-gsx-console/vmware-gsx-console-3.2.0.14497.ebuild,v 1.7 2009/07/07 23:21:20 flameeyes Exp $
 
 MY_PN="VMware-console"
 MY_PV=${PV%.*}-${PV##*.}
@@ -31,7 +31,7 @@ RDEPEND="x11-libs/gtk+
 	sys-libs/zlib"
 
 pkg_nofetch() {
-	einfo "Please obtain ${FN} and place it in ${DISTDIR}"
+	elog "Please obtain ${FN} and place it in ${DISTDIR}"
 }
 
 src_install () {

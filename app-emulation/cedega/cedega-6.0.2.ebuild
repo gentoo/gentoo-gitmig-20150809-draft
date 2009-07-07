@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-6.0.2.ebuild,v 1.4 2008/02/10 21:41:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-6.0.2.ebuild,v 1.5 2009/07/07 23:13:48 flameeyes Exp $
 
 MY_P="cedega-small-${PV}"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -24,13 +24,13 @@ RDEPEND="x11-libs/libX11
 	>=dev-util/glade-2.6
 	!app-emulation/point2play
 	amd64? ( app-emulation/emul-linux-x86-xlibs
-	         app-emulation/emul-linux-x86-soundlibs )"
+			 app-emulation/emul-linux-x86-soundlibs )"
 
 pkg_nofetch() {
-	einfo "Please download the appropriate Cedega archive (${MY_P}.tgz)"
-	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
-	einfo
-	einfo "Then put the file in ${DISTDIR}"
+	elog "Please download the appropriate Cedega archive (${MY_P}.tgz)"
+	elog "from ${HOMEPAGE} (requires a Transgaming subscription)"
+	elog
+	elog "Then put the file in ${DISTDIR}"
 }
 
 src_install() {

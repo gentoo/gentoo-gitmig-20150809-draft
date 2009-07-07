@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/transgaming-fontinstaller/transgaming-fontinstaller-1.0.ebuild,v 1.7 2006/12/05 00:54:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/transgaming-fontinstaller/transgaming-fontinstaller-1.0.ebuild,v 1.8 2009/07/07 23:25:39 flameeyes Exp $
 
 DESCRIPTION="font installer for WineX"
 HOMEPAGE="http://www.transgaming.com/"
@@ -15,10 +15,10 @@ RESTRICT="fetch"
 DEPEND="app-emulation/cedega"
 
 pkg_nofetch() {
-	einfo "Please download the appropriate WineX archive (${A})"
-	einfo "from ${HOMEPAGE} (requires a Transgaming subscription)"
-	einfo ""
-	einfo "Then put the file in ${DISTDIR}"
+	elog "Please download the appropriate WineX archive (${A})"
+	elog "from ${HOMEPAGE} (requires a Transgaming subscription)"
+	elog ""
+	elog "Then put the file in ${DISTDIR}"
 }
 
 src_install() {
