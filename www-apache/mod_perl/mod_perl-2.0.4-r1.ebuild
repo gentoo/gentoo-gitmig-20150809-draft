@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.4 2009/07/07 18:53:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.4-r1.ebuild,v 1.5 2009/07/07 20:39:09 hollow Exp $
 
 inherit apache-module perl-module eutils multilib
 
@@ -13,13 +13,12 @@ KEYWORDS="~amd64 ~hppa ~x86"
 IUSE=""
 SLOT="1"
 
-# see bug 30087 for why sudo is in here
 DEPEND=">=dev-perl/Apache-Test-1.27
-	dev-perl/Apache-Reload
 	>=virtual/perl-CGI-3.08
 	>=virtual/perl-Compress-Zlib-1.09
 	!=www-servers/apache-2.2.11-r1"
 RDEPEND="${DEPEND}"
+PDEPEND="dev-perl/Apache-Reload"
 
 APACHE2_MOD_FILE="${S}/src/modules/perl/mod_perl.so"
 APACHE2_MOD_CONF="2.0.3/75_${PN}"
