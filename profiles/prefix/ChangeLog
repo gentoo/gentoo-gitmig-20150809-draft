@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.22 2009/07/07 15:15:09 grobian Exp $
+# $Id: ChangeLog,v 1.23 2009/07/07 17:12:23 grobian Exp $
+
+  07 Jul 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask portage-2.2.00.13797, bug #276957
 
   07 Jul 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Remove mask on no longer existing portage version
