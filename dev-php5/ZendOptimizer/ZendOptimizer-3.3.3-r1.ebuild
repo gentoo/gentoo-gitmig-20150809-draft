@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.3-r1.ebuild,v 1.1 2008/05/09 13:10:00 hoffie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ZendOptimizer-3.3.3-r1.ebuild,v 1.2 2009/07/07 23:18:57 flameeyes Exp $
 
 PHP_EXT_ZENDEXT="yes"
 PHP_EXT_NAME="ZendOptimizer"
@@ -11,7 +11,7 @@ inherit php-ext-base-r1
 KEYWORDS="~amd64 ~x86"
 
 SRC_URI="amd64? ( ${PN}-${PV}-linux-glibc23-x86_64.tar.gz )
-	    x86? ( ${PN}-${PV}-linux-glibc23-i386.tar.gz )"
+		x86? ( ${PN}-${PV}-linux-glibc23-i386.tar.gz )"
 
 MY_ARCH=${ARCH/x86/glibc23-i386}
 MY_ARCH=${MY_ARCH/amd64/glibc23-x86_64}
@@ -32,13 +32,13 @@ RDEPEND="!dev-php5/xdebug !dev-php5/pecl-apc !dev-php5/eaccelerator"
 need_php_by_category
 
 pkg_nofetch() {
-	einfo
-	einfo "Please download ${PN}-${PV}-linux-${MY_ARCH} from:"
-	einfo "${HOMEPAGE}"
-	einfo "and put it into ${DISTDIR}."
-	einfo "Please note that you need a valid Zend Account"
-	einfo "(free) to download the Zend Optimizer!"
-	einfo
+	elog
+	elog "Please download ${PN}-${PV}-linux-${MY_ARCH} from:"
+	elog "${HOMEPAGE}"
+	elog "and put it into ${DISTDIR}."
+	elog "Please note that you need a valid Zend Account"
+	elog "(free) to download the Zend Optimizer!"
+	elog
 }
 
 pkg_setup() {

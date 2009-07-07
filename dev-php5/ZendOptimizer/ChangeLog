@@ -1,6 +1,10 @@
 # ChangeLog for dev-php5/ZendOptimizer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ChangeLog,v 1.3 2008/05/09 13:10:00 hoffie Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendOptimizer/ChangeLog,v 1.4 2009/07/07 23:18:57 flameeyes Exp $
+
+  07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ZendOptimizer-3.3.3-r1.ebuild:
+  Use elog for fetch error.
 
 *ZendOptimizer-3.3.3-r1 (09 May 2008)
 
