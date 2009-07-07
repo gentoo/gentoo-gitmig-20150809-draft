@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.68.ebuild,v 1.1 2009/01/22 08:21:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-3.70.ebuild,v 1.1 2009/07/07 07:35:41 pva Exp $
 
 inherit eutils multilib
 
