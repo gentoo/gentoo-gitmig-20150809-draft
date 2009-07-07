@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.2 2009/03/08 14:38:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ventrilo-server-bin-3.0.3.ebuild,v 1.3 2009/07/07 23:10:39 flameeyes Exp $
 
 inherit eutils
 
@@ -24,9 +24,9 @@ pkg_setup() {
 }
 
 pkg_nofetch() {
-	einfo "Please visit http://www.ventrilo.com/download.php"
-	einfo "and download the Linux i386 - 32bit ${PV} server."
-	einfo "Just save it in ${DISTDIR} !"
+	elog "Please visit http://www.ventrilo.com/download.php"
+	elog "and download the Linux i386 - 32bit ${PV} server."
+	elog "Just save it in ${DISTDIR} !"
 }
 
 src_install() {
