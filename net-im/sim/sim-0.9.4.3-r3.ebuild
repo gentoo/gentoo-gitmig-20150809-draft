@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.4 2008/10/25 17:36:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.4.3-r3.ebuild,v 1.5 2009/07/07 23:20:37 flameeyes Exp $
 
 EAPI=1
 
@@ -35,14 +35,14 @@ DEPEND="${RDEPEND}
 	x11-proto/scrnsaverproto"
 
 pkg_nofetch() {
-	einfo "${CATEGORY}/${P} contains icons and sounds with unclear licensing and thus"
-	einfo "you have to download and it put into '${DISTDIR}' by yourself."
-	einfo "Download location:"
+	elog "${CATEGORY}/${P} contains icons and sounds with unclear licensing and thus"
+	elog "you have to download and it put into '${DISTDIR}' by yourself."
+	elog "Download location:"
 	echo
-	einfo "${SRC_URI}"
+	elog "${SRC_URI}"
 	echo
-	einfo "See http://archives.gentoo.org/gentoo-dev/msg_144003.xml for further"
-	einfo "information."
+	elog "See http://archives.gentoo.org/gentoo-dev/msg_144003.xml for further"
+	elog "information."
 }
 
 pkg_setup() {
