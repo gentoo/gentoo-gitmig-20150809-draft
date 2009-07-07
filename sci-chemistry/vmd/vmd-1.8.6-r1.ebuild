@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6-r1.ebuild,v 1.1 2009/05/17 20:15:13 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.6-r1.ebuild,v 1.2 2009/07/07 22:54:52 flameeyes Exp $
 
 EAPI="1"
 
@@ -33,10 +33,10 @@ VMD_DOWNLOAD="http://www.ks.uiuc.edu/Development/Download/download.cgi?PackageNa
 
 pkg_nofetch() {
 	echo
-	einfo "Please download ${SRC_URI} from"
-	einfo "${VMD_DOWNLOAD}"
-	einfo "after agreeing to the license and then move it to "
-	einfo "${DISTDIR}"
+	elog "Please download ${SRC_URI} from"
+	elog "${VMD_DOWNLOAD}"
+	elog "after agreeing to the license and then move it to "
+	elog "${DISTDIR}"
 	echo
 }
 
@@ -60,14 +60,14 @@ src_unpack() {
 	cd "${WORKDIR}"/plugins
 
 	sed -e "s:CC = gcc:CC = $(tc-getCC):" \
-	    -e "s:CXX = g++:CXX = $(tc-getCXX):" \
+		-e "s:CXX = g++:CXX = $(tc-getCXX):" \
 		-e "s:COPTO = -o :COPTO = -fPIC -o :" \
 		-e "s:LOPTO = -o :LOPTO = -fPIC -o :" \
 		-e "s:CCFLAGS = -O2 -Wall:CCFLAGS = ${CFLAGS}:" \
 		-e "s:CXXFLAGS = -O2 -Wall:CXXFLAGS = ${CXXFLAGS}:" \
 		-e "s:SHLD = gcc:SHLD = $(tc-getCC):" \
 		-e "s:-ltcl8.4:-ltcl:" \
-	    -i Make-arch || die "Failed to set up plugins Makefile"
+		-i Make-arch || die "Failed to set up plugins Makefile"
 
 	sed -e "s:1.0:1.2:" -i vdna/pkgIndex.tcl \
 		|| die "Failed to fix vdna plugin"
