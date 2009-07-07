@@ -10,6 +10,3 @@ dev-libs/cyrus-sasl berkdb
 
 # missing the necessary linux-headers dep
 >=net-fs/netatalk-2.0.3-r3 xfs
-
-# needs sys-process/audit which is masked by this profile
-sys-libs/pam audit
