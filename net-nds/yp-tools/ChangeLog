@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/yp-tools
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.34 2008/11/02 12:59:39 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/ChangeLog,v 1.35 2009/07/07 01:05:09 jer Exp $
+
+*yp-tools-2.9-r1 (07 Jul 2009)
+
+  07 Jul 2009; Jeroen Roovers <jer@gentoo.org> +yp-tools-2.9-r1.ebuild,
+  +files/yp-tools-2.9-strip.patch:
+  Do not strip. Use emake instead of make. Use rm -f instead of rm -d (one
+  command execution instead of three). Remove stupid DEPEND.
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
