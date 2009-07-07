@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/apache
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.107 2009/07/06 18:27:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/ChangeLog,v 1.108 2009/07/07 00:31:21 rich0 Exp $
+
+  07 Jul 2009; Richard Freeman <rich0@gentoo.org> apache-2.2.11-r1.ebuild:
+  amd64 stable - 276589
 
   06 Jul 2009; Brent Baude <ranger@gentoo.org> apache-2.2.11-r1.ebuild:
   Marking apache-2.2.11-r1 ppc64 and ppc for bug 276589
