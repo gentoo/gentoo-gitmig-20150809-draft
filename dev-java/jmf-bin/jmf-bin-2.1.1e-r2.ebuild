@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e-r2.ebuild,v 1.5 2008/06/22 19:54:57 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/jmf-bin-2.1.1e-r2.ebuild,v 1.6 2009/07/07 23:02:09 flameeyes Exp $
 
 inherit java-pkg-2
 
@@ -19,15 +19,15 @@ RESTRICT="fetch"
 DOWNLOAD_URL="https://cds.sun.com/is-bin/INTERSHOP.enfinity/WFS/CDS-CDS_Developer-Site/en_US/-/USD/ViewProductDetail-Start?ProductRef=7372-jmf-2.1.1e-oth-JPR@CDS-CDS_Developer"
 
 pkg_nofetch() {
-	einfo
-	einfo " Due to license restrictions, we cannot fetch the"
-	einfo " distributables automagically."
-	einfo
-	einfo " 1. Visit ${DOWNLOAD_URL} and select 'Linux'"
-	einfo " 2. Download ${At}"
-	einfo " 3. Move file to ${DISTDIR}"
-	einfo " 4. Run emerge on this package again to complete"
-	einfo
+	elog
+	elog " Due to license restrictions, we cannot fetch the"
+	elog " distributables automagically."
+	elog
+	elog " 1. Visit ${DOWNLOAD_URL} and select 'Linux'"
+	elog " 2. Download ${At}"
+	elog " 3. Move file to ${DISTDIR}"
+	elog " 4. Run emerge on this package again to complete"
+	elog
 }
 
 src_unpack() {

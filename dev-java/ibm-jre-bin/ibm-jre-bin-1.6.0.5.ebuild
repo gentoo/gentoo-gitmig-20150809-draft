@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.5.ebuild,v 1.1 2009/06/19 21:10:47 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.6.0.5.ebuild,v 1.2 2009/07/07 23:01:03 flameeyes Exp $
 
 inherit java-vm-2 versionator eutils
 
@@ -127,21 +127,21 @@ opt/${P}/lib/amd64/compressedrefs/libj9gc24.so
 opt/${P}/lib/amd64/compressedrefs/libj9bcv24.so"
 
 pkg_nofetch() {
-	einfo "Due to license restrictions, we cannot redistribute or fetch the distfiles"
-	einfo "Please visit: ${DOWNLOADPAGE}"
+	elog "Due to license restrictions, we cannot redistribute or fetch the distfiles"
+	elog "Please visit: ${DOWNLOADPAGE}"
 
-	einfo "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
-	einfo "${JRE_DIST}"
+	elog "Under Java SE 6, download SR${SERVICE_RELEASE} for your arch:"
+	elog "${JRE_DIST}"
 
-	einfo "You can use direct link to your arch download page:"
-	einfo "${DIRECT_DOWNLOAD}"
-	einfo "Place the file(s) in: ${DISTDIR}"
-	einfo "Then restart emerge: 'emerge --resume'"
+	elog "You can use direct link to your arch download page:"
+	elog "${DIRECT_DOWNLOAD}"
+	elog "Place the file(s) in: ${DISTDIR}"
+	elog "Then restart emerge: 'emerge --resume'"
 
-	einfo "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
-	einfo "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
-	einfo "isn't updated, but the files should still available through the"
-	einfo "direct link to arch download page. If it doesn't work, file a bug."
+	elog "Note: if SR${SERVICE_RELEASE} is not available at ${DOWNLOADPAGE}"
+	elog "it may have been moved to ${ALT_DOWNLOADPAGE}. Lately that page"
+	elog "isn't updated, but the files should still available through the"
+	elog "direct link to arch download page. If it doesn't work, file a bug."
 }
 
 src_compile() { :; }
