@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r2.ebuild,v 1.4 2008/11/21 22:44:12 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpatrol/mpatrol-1.4.8-r2.ebuild,v 1.5 2009/07/07 18:07:25 vostorga Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,11 +24,14 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch "${FILESDIR}"/${PN}-1.4.8-soname.patch || die "patching failed"
+	epatch "${FILESDIR}/${P}-soname.patch"
+
+	#bug 272505
+	epatch "${FILESDIR}/${P}-gcc44-glibc210.patch"
 
 	cd ${S}/src
 	# [Bug 176592] textrel fix for dev-libs/mpatrol
-	epatch "${FILESDIR}"/${PN}-textrel-fix.patch || die "patching failed"
+	epatch "${FILESDIR}/${PN}-textrel-fix.patch"
 
 	sed -i \
 		-e 's:#define MP_SYMBOL_LIBS , MP_LIBNAME(bfd), MP_LIBNAME(iberty):#define MP_SYMBOL_LIBS , MP_LIBNAME(bfd):' config.h \
@@ -96,7 +99,7 @@ src_install () {
 	docinto images
 	dodoc images/*.{eps,pdf}
 
-	insinto /usr/share/doc/${F}/html/images
+	insinto /usr/share/doc/${PF}/html/images
 	doins images/*.jpg
 }
 
