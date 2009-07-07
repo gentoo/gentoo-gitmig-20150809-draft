@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xmlrpc-epi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.4 2009/07/07 14:37:20 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlrpc-epi/ChangeLog,v 1.5 2009/07/07 18:49:11 volkmar Exp $
+
+  07 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  xmlrpc-epi-0.54-r1.ebuild:
+  Add static-libs USE flag and remove .la files if not enabled.
+  Thanks to Mauro Toffanin.
 
   07 Jul 2009; Joe Peterson <lavajoe@gentoo.org> xmlrpc-epi-0.54-r1.ebuild:
   Keyword ~amd64

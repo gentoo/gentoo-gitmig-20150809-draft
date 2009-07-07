@@ -6,5 +6,8 @@
 		<email>volkmar@gentoo.org</email>
 		<name>Mounir Lamouri</name>
 	</maintainer>
+	<use>
+		<flag name="static-libs">Compile static archives</flag>
+	</use>
 </pkgmetadata>
 
