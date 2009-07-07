@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.2.0.ebuild,v 1.3 2009/03/05 08:38:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.2.0.ebuild,v 1.4 2009/07/07 23:02:56 flameeyes Exp $
 
 inherit eutils
 
@@ -27,8 +27,8 @@ RDEPEND="sys-libs/glibc
 S=${WORKDIR}
 
 pkg_nofetch() {
-	einfo "Please visit ${HOMEPAGE}"
-	einfo "and place ${A} in ${DISTDIR}"
+	elog "Please visit ${HOMEPAGE}"
+	elog "and place ${A} in ${DISTDIR}"
 }
 
 src_unpack() {
