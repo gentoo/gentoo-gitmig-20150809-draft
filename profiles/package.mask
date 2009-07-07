@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10022 2009/07/07 13:35:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10023 2009/07/07 14:54:20 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -122,7 +122,10 @@ www-apache/mod_auth_pam
 # Security issues (bug 276432) and 0.8.x has been abandoned upstream.
 # Upgrade to 2.1.1 which is in the process of being marked stable.
 # Older versions will be removed once that is complete.
-<=www-client/dillo-2.1
+#
+# Breaking stable deps with package masking is never allowed.
+# Uncomment again once dillo is keyworded properly.  mr_bones_@gentoo.org
+#<=www-client/dillo-2.1
 
 # Robin H. Johnson <robbat2@gentoo.org> (4 Jul 2009)
 # Bug #275291 - New GnuPG release broke seahorse, enigmail, mutt (uncommon
