@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-0.99.4.ebuild,v 1.2 2007/03/15 15:51:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/caver/caver-0.99.4.ebuild,v 1.3 2009/07/07 23:14:33 flameeyes Exp $
 
 inherit multilib python eutils
 
@@ -27,12 +27,12 @@ RESTRICT="fetch"
 S="${WORKDIR}/${MY_P}"
 
 pkg_nofetch() {
-	einfo "Download ${MY_P}.tar.gz"
+	elog "Download ${MY_P}.tar.gz"
 	if use pymol; then
-		einfo "and ${PLUG_P}.tar.gz"
+		elog "and ${PLUG_P}.tar.gz"
 	fi
-	einfo "from ${HOMEPAGE}. This requires registration."
-	einfo "Place tarballs in ${DISTDIR}."
+	elog "from ${HOMEPAGE}. This requires registration."
+	elog "Place tarballs in ${DISTDIR}."
 }
 
 src_unpack() {
