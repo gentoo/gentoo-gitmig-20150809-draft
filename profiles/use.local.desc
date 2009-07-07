@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4607 2009/07/06 19:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4608 2009/07/07 16:27:59 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -535,12 +535,14 @@ dev-db/mysql:profiling - Add support for statement profiling (requires USE=commu
 dev-db/mysql:raid - Deprecated option, removed in the 5.0 series
 dev-db/mysql-community:big-tables - Make tables contain up to 1.844E+19 rows
 dev-db/mysql-community:cluster - Add support for NDB clustering
+dev-db/mysql-community:community - Enables the community features from upstream.
 dev-db/mysql-community:embedded - Build embedded server (libmysqld)
 dev-db/mysql-community:extraengine - Add support for alternative storage engines
 dev-db/mysql-community:latin1 - Use LATIN1 encoding instead of UTF8
 dev-db/mysql-community:max-idx-128 - Raise the max index per table limit from 64 to 128 
 dev-db/mysql-community:minimal - Install client programs only, no server
 dev-db/mysql-community:pbxt - Add experimental support for pbxt storage engine
+dev-db/mysql-community:profiling - Add support for statement profiling (requires USE=community).
 dev-db/mysql-gui-tools:administrator - Build and install MySQL Administrator
 dev-db/mysql-gui-tools:query-browser - Build and install MySQL Query Browser
 dev-db/pgcluster:pg-intdatetime - Enable --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage
