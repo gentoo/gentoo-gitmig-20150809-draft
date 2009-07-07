@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Apache-Reload
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.1 2009/07/05 17:09:36 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Reload/ChangeLog,v 1.2 2009/07/07 18:52:11 jer Exp $
+
+  07 Jul 2009; Jeroen Roovers <jer@gentoo.org> Apache-Reload-0.10.ebuild:
+  Marked ~hppa (bug #266035).
 
 *Apache-Reload-0.10 (05 Jul 2009)
 
