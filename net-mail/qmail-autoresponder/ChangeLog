@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/qmail-autoresponder
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.30 2008/04/29 06:24:03 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.31 2009/07/07 12:26:30 bangert Exp $
+
+  07 Jul 2009; Thilo Bangert <bangert@gentoo.org>
+  -qmail-autoresponder-0.96.1-r1.ebuild,
+  -files/qmail-autoresponder-0.96.1-gcc33-multiline-string-fix.patch,
+  qmail-autoresponder-0.96.2.ebuild, qmail-autoresponder-0.97.ebuild:
+  remove old version - fix description (bug #272939)
 
 *qmail-autoresponder-0.97 (29 Apr 2008)
 
