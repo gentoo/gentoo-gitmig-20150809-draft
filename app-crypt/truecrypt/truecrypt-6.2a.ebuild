@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2a.ebuild,v 1.1 2009/06/22 23:56:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2a.ebuild,v 1.2 2009/07/07 22:54:27 flameeyes Exp $
 
 EAPI="2"
 
@@ -25,9 +25,9 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${P}-source"
 
 pkg_nofetch() {
-	einfo "Please download tar.gz source from:"
-	einfo "http://www.truecrypt.org/downloads2.php"
-	einfo "Then put the file in ${DISTDIR}/${SRC_URI}"
+	elog "Please download tar.gz source from:"
+	elog "http://www.truecrypt.org/downloads2.php"
+	elog "Then put the file in ${DISTDIR}/${SRC_URI}"
 }
 
 pkg_setup() {
