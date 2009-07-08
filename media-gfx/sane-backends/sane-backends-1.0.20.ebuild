@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20.ebuild,v 1.2 2009/06/25 08:19:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20.ebuild,v 1.3 2009/07/08 18:47:16 phosphan Exp $
 
 EAPI="1"
 
@@ -200,8 +200,10 @@ src_compile() {
 		BACKENDS=" "
 		elog "You are using sane_backends_nothing - disabling all backends!"
 	fi
-	if [ use usb -a has_version "=dev-libs/libusb-1*" ]; then
-		myconf="--enable-libusb_1_0"
+	if use usb && has_version "=dev-libs/libusb-1*"; then
+		myconf="--enable-libusb_1_0 --disable-libusb"
+	else
+		myconf=$(use_enable usb libusb)
 	fi
 	if ! use doc; then
 		myconf="${myconf} --disable-latex"
@@ -211,7 +213,6 @@ src_compile() {
 	fi
 	SANEI_JPEG="sanei_jpeg.o" SANEI_JPEG_LO="sanei_jpeg.lo" \
 	BACKENDS="${BACKENDS}" econf \
-		$(use_enable usb libusb) \
 		$(use_with gphoto2) \
 		$(use_enable ipv6) \
 		$(use_enable avahi) \
