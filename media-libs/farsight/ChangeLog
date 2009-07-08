@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/farsight
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/ChangeLog,v 1.23 2009/03/30 03:37:32 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/farsight/ChangeLog,v 1.24 2009/07/08 12:10:53 tester Exp $
+
+  08 Jul 2009; Olivier Crête <tester@gentoo.org> -farsight-0.1.27.ebuild,
+  farsight-0.1.28-r1.ebuild:
+  Add test restriction, remove old
 
 *farsight-0.1.28-r1 (30 Mar 2009)
 
