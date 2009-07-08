@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.10 2007/04/09 20:59:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/uglygs/uglygs-0_rc11.ebuild,v 1.11 2009/07/08 21:27:55 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_P=${P/0_/}
@@ -19,20 +20,22 @@ RDEPEND="net-analyzer/rrdtool
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PV}-uglygs.conf.patch
-	sed -i "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" uglygs.conf \
-		|| die "sed uglygs.conf failed"
+	sed -i \
+		-e "s:GENTOO_DIR:$(games_get_libdir)/${PN}:" uglygs.conf \
+		|| die "sed failed"
 	epatch "${FILESDIR}"/${PV}-uglygs.pl.patch
-	sed -i "s:GENTOO_DIR:${GAMES_SYSCONFDIR}:" uglygs.pl \
-		|| die "sed uglygs.pl failed"
+	sed -i \
+		-e "s:GENTOO_DIR:${GAMES_SYSCONFDIR}:" uglygs.pl \
+		|| die "sed failed"
+	sed -i \
+		-e "s/strndup/${PN}_strndup/" qstat/qstat.c \
+		|| die "sed failed"
 }
 
 src_compile() {
-	cd qstat
-	emake CFLAGS="${CFLAGS}" || die "emake failed"
+	emake -C qstat CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
