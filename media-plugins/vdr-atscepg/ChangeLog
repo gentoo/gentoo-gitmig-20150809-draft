@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-atscepg
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.1 2008/03/24 09:55:01 hd_brummy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-atscepg/ChangeLog,v 1.2 2009/07/08 19:21:05 zzam Exp $
+
+  08 Jul 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-atscepg-0.1.1.ebuild, +files/vdr-atscepg-0.1.1-gcc-4.4.diff:
+  Add missing vdr-plugin.eclass call, Bug #277051. Fix compilation with
+  gcc-4.4
 
 *vdr-atscepg-0.1.1 (24 Mar 2008)
 
