@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r1.ebuild,v 1.1 2009/07/08 18:26:38 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r1.ebuild,v 1.2 2009/07/08 23:07:16 mr_bones_ Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -44,7 +44,6 @@ RDEPEND="${DEPEND}
 	"
 
 S=${WORKDIR}/vmware-vix-distrib
-
 
 pkg_setup() {
 	if use x86; then
