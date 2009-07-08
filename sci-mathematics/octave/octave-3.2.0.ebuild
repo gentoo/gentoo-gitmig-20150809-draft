@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.1 2009/07/08 01:44:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.2 2009/07/08 23:45:08 markusle Exp $
 
 EAPI="2"
 inherit flag-o-matic fortran xemacs-elisp-common
@@ -94,10 +94,4 @@ src_install() {
 
 	echo "LDPATH=/usr/$(get_libdir)/octave-${PV}" > 99octave
 	doenvd 99octave || die
-
-	# Fixes ls-R files to remove /var/tmp/portage references.
-	#sed -i \
-	#	-e "s:${D}::g" \
-	#	"${D}"/usr/*/${PN}/ls-R \
-	#	|| die "Failed to fix ls-R files."
 }
