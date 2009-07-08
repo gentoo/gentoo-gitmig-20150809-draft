@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.6.ebuild,v 1.3 2009/01/25 11:59:35 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.8.6.ebuild,v 1.4 2009/07/08 16:31:20 fauli Exp $
 
 EAPI=2
 
@@ -30,6 +30,11 @@ DEPEND="${RDEPEND}
 
 # Disable parallel builds
 MAKEOPTS="${MAKEOPTS} -j1"
+
+src_prepare() {
+	# fix test suite
+	echo "blam.desktop.in" >> po/POTFILES.in || die
+}
 
 src_install() {
 	make DESTDIR="${D}" install || die
