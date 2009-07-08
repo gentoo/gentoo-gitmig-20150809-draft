@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.2.ebuild,v 1.1 2009/07/08 12:21:04 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.2.ebuild,v 1.2 2009/07/08 13:03:31 remi Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ inherit x-modular multilib
 BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/archive/individual"
 SRC_URI="${SRC_URI}
 	${BASE_INDIVIDUAL_URI}/${MODULE}/${P}.tar.bz2
-	mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
+	mirror://gentoo/${P}-gentoo-patches-02.tar.bz2"
 
 OPENGL_DIR="xorg-x11"
 
