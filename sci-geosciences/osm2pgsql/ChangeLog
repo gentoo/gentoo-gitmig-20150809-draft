@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/osm2pgsql
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/ChangeLog,v 1.1 2009/07/08 12:55:19 tupone Exp $
+
+*osm2pgsql-20090707 (08 Jul 2009)
+
+  08 Jul 2009; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +osm2pgsql-20090707.ebuild:
+  New package. Bug #261822 by : renato gallo
+
