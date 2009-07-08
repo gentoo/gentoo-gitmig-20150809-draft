@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.117 2009/07/08 11:34:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.118 2009/07/08 12:27:33 fmccor Exp $
+
+  08 Jul 2009; Ferris McCormick <fmccor@gentoo.org> fltk-2.0_pre6786.ebuild:
+  Sparc stable, Bug #276547.
 
 *fltk-2.0_pre6786-r1 (08 Jul 2009)
 *fltk-1.1.9-r1 (08 Jul 2009)
