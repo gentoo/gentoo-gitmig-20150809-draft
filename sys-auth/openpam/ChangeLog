@@ -1,6 +1,10 @@
 # ChangeLog for sys-auth/openpam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.14 2009/07/04 12:29:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/ChangeLog,v 1.15 2009/07/08 17:00:46 the_paya Exp $
+
+  08 Jul 2009; Javier Villavicencio <the_paya@gentoo.org>
+  openpam-20071221.ebuild:
+  Remove missing file from dodoc.
 
   04 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   openpam-20071221.ebuild:

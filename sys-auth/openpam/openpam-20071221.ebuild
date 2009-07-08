@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.4 2009/07/04 12:29:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/openpam/openpam-20071221.ebuild,v 1.5 2009/07/08 17:00:46 the_paya Exp $
 
 inherit multilib flag-o-matic autotools
 
@@ -48,7 +48,7 @@ src_compile() {
 src_install() {
 	emake -j1 DESTDIR="${D}" install
 
-	dodoc CREDITS HISTORY MANIFEST RELNOTES README || die
+	dodoc CREDITS HISTORY RELNOTES README || die
 
 	find "${D}" -name '*.la' -delete || die
 }
