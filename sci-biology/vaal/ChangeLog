@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/vaal
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vaal/ChangeLog,v 1.1 2009/07/08 03:52:35 weaver Exp $
+
+*vaal-1.2 (07 Jul 2009)
+
+  07 Jul 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +vaal-1.2.ebuild:
+  New package, ebuild written by me
+
