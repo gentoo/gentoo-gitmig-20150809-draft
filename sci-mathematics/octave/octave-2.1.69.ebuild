@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.13 2009/03/04 21:31:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.14 2009/07/08 01:44:18 markusle Exp $
 
 inherit flag-o-matic fortran
 
