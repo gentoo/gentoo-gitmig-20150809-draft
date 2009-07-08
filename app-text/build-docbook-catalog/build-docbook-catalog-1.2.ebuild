@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/build-docbook-catalog-1.2.ebuild,v 1.17 2009/07/08 19:56:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/build-docbook-catalog-1.2.ebuild,v 1.18 2009/07/08 20:18:17 ssuominen Exp $
 
 DESCRIPTION="DocBook XML catalog auto-updater"
 HOMEPAGE="http://unknown/"
@@ -17,5 +17,6 @@ DEPEND=""
 S=${WORKDIR}
 
 src_install() {
+	keepdir /etc/xml
 	newbin ${P} ${PN} || die "newbin failed"
 }
