@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fvwm
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.148 2009/01/09 15:06:36 remi Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.149 2009/07/08 07:03:45 fauli Exp $
+
+*fvwm-2.5.27 (08 Jul 2009)
+
+  08 Jul 2009; Christian Faulhammer <fauli@gentoo.org> +fvwm-2.5.27.ebuild,
+  +files/fvwm-2.5.27-translucent-menus.diff, +files/README.translucency,
+  -files/README.transluceny, metadata.xml:
+  version bump (non-maintainer commit) for bug 261301, fixes bug 238905,
+  too. Thanks to all the people who contributed
 
   09 Jan 2009; Rémi Cardona <remi@gentoo.org> fvwm-2.5.18-r1.ebuild,
   fvwm-2.5.19.ebuild, fvwm-2.5.21.ebuild, fvwm-2.5.25.ebuild,
