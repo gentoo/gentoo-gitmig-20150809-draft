@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kgamma
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.118 2009/06/18 03:29:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgamma/ChangeLog,v 1.119 2009/07/08 14:02:00 alexxy Exp $
+
+  08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> kgamma-3.5.10.ebuild:
+  Add ~mips keywords
 
   18 Jun 2009; Jeroen Roovers <jer@gentoo.org> kgamma-3.5.10.ebuild:
   Stable for HPPA (bug #271889).

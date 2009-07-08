@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.146 2009/06/18 04:15:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.147 2009/07/08 14:29:01 alexxy Exp $
+
+  08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> konqueror-3.5.10.ebuild:
+  Add ~mips keywords
 
   18 Jun 2009; Jeroen Roovers <jer@gentoo.org> konqueror-3.5.10.ebuild:
   Stable for HPPA (bug #271889).

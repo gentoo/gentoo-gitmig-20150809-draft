@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klines
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.118 2009/06/18 04:29:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.119 2009/07/08 14:13:47 alexxy Exp $
+
+  08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> klines-3.5.10.ebuild:
+  Add ~mips keywords
 
   18 Jun 2009; Jeroen Roovers <jer@gentoo.org> klines-3.5.10.ebuild:
   Stable for HPPA (bug #271889).

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.114 2009/07/05 21:16:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.115 2009/07/08 12:58:36 alexxy Exp $
+
+  08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  certmanager-3.5.10-r1.ebuild:
+  Add ~mips keywords
 
   05 Jul 2009; Markus Meier <maekke@gentoo.org>
   certmanager-3.5.10-r1.ebuild:
