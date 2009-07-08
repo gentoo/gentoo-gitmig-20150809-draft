@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2884 2009/07/08 11:34:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2885 2009/07/08 14:42:55 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
+  net-wireless/broadcom-sta: Masked broken ebuild, bug #276543.
 
   08 Jul 2009; Ben de Groot <yngwin@gentoo.org> hardened/linux/package.mask:
   Add same mask to hardened/linux to work around this design fail of not
