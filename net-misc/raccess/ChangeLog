@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/raccess
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.15 2009/01/05 18:28:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/ChangeLog,v 1.16 2009/07/08 18:33:20 vostorga Exp $
+
+  08 Jul 2009; <vostorga@gentoo.org> +files/raccess-0.7-glibc210.patch,
+  raccess-0.7.ebuild:
+  Adding patch to compile with glibc-2.10. Closes bug #272509
 
   05 Jan 2009; Christoph Mende <angelos@gentoo.org>
   +files/raccess-0.7-asneeded.patch, raccess-0.7.ebuild:

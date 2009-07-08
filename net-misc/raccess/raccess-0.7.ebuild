@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/raccess-0.7.ebuild,v 1.8 2009/01/05 18:28:57 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/raccess/raccess-0.7.ebuild,v 1.9 2009/07/08 18:33:20 vostorga Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,6 +14,7 @@ KEYWORDS="x86 sparc ~ppc ~amd64"
 IUSE=""
 
 DEPEND="net-libs/libpcap"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -21,6 +22,7 @@ src_unpack() {
 	sed -i '/^BINFILES/s:@bindir@:/usr/lib/raccess:' src/Makefile.in
 	sed -i '/^bindir/s:@bindir@/exploits:/usr/lib/raccess:' exploits/Makefile.in
 	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-glibc210.patch
 }
 
 src_compile() {
