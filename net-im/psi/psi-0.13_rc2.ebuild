@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc1-r1.ebuild,v 1.1 2009/06/02 17:04:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc2.ebuild,v 1.1 2009/07/08 10:44:52 pva Exp $
 
 EAPI="2"
 
@@ -14,13 +14,13 @@ DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-langs-${LANGPACK_VER}.tar.bz2
-	extras? ( mirror://gentoo/${PN}-extra-patches-r515.tar.bz2
-		mirror://gentoo/${PN}-extra-iconsets-r515.tar.bz2 )"
+	extras? ( mirror://gentoo/${PN}-extra-patches-r654.tar.bz2
+		mirror://gentoo/${PN}-extra-iconsets-r654.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="crypt dbus debug doc spell ssl xscreensaver extras"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+IUSE="crypt dbus debug doc extras jingle spell ssl xscreensaver"
 RESTRICT="test"
 
 LANGS="cs de eo es_ES fr it mk pl pt_BR ru uk ur_PK vi zh zh_TW"
@@ -29,17 +29,17 @@ for LNG in ${LANGS}; do
 	#SRC_URI="${SRC_URI} http://psi-im.org/download/lang/psi_${LNG/ur_PK/ur_pk}.qm"
 done
 
-COMMON_DEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
+RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
 	>=app-crypt/qca-2.0.2:2
 	spell? ( app-text/aspell )
 	xscreensaver? ( x11-libs/libXScrnSaver )"
 
-DEPEND="${COMMON_DEPEND}
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-RDEPEND="${COMMON_DEPEND}
-	crypt? ( >=app-crypt/qca-gnupg-2.0.0_beta2 )
-	ssl? ( >=app-crypt/qca-ossl-2.0.0_beta2 )"
+PDEPEND="crypt? ( app-crypt/qca-gnupg:2 )
+	jingle? ( net-im/psimedia )
+	ssl? ( app-crypt/qca-ossl:2 )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -54,7 +54,7 @@ src_prepare() {
 		ewarn "into /etc/portage/env/${CATEGORY}/${PN} file."
 		ebeep
 
-		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE} 280-psi-application-info.diff" \
+		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE} 270-psi-application-info.diff" \
 		EPATCH_SUFFIX="diff" EPATCH_FORCE="yes" epatch
 		sed -e 's/\(^#define PROG_CAPS_NODE	\).*/\1"http:\/\/psi-dev.googlecode.com\/caps";/' \
 			-e 's:\(^#define PROG_NAME "Psi\):\1+:' \
@@ -62,27 +62,29 @@ src_prepare() {
 	fi
 
 	rm -rf third-party/qca # We use system libraries.
-
-	epatch "${FILESDIR}/${P}-dialog-show.patch"
 }
 
 src_configure() {
+	# unable to use econf because of non-standard configure script
 	# disable growl as it is a MacOS X extension only
-	local myconf="--prefix=/usr --qtdir=/usr"
-	myconf="${myconf} --disable-growl --disable-bundled-qca"
-	use debug && myconf="${myconf} --enable-debug"
-	use dbus || myconf="${myconf} --disable-qdbus"
-	use spell || myconf="${myconf} --disable-aspell"
-	use xscreensaver || myconf="${myconf} --disable-xss"
+	local confcmd="./configure
+			--prefix=/usr
+			--qtdir=/usr
+			--disable-bundled-qca
+			--disable-growl
+			$(use dbus || echo '--disable-qdbus')
+			$(use debug && echo '--enable-debug')
+			$(use spell || echo '--disable-aspell')
+			$(use xscreensaver || echo '--disable-xss')"
 
-	# cannot use econf because of non-standard configure script
-	./configure ${myconf} || die "configure failed"
+	echo ${confcmd}
+	${confcmd} || die "configure failed"
 }
 
 src_compile() {
-	eqmake4 ${PN}.pro
+	eqmake4
 
-	SUBLIBS="-L/usr/${get_libdir}/qca2" emake || die "emake failed"
+	emake || die "emake failed"
 
 	if use doc; then
 		cd doc
@@ -117,9 +119,4 @@ src_install() {
 	if use extras; then
 		cp -a "${WORKDIR}"/iconsets/* "${D}"/usr/share/${PN}/iconsets/ || die
 	fi
-}
-
-pkg_postinst() {
-	elog "If you wish to try voice (and video) chat in psi, don't forget to"
-	elog " # emerge psimedia"
 }
