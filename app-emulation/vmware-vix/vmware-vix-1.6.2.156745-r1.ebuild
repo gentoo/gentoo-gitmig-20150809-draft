@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745.ebuild,v 1.3 2009/07/06 20:50:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r1.ebuild,v 1.1 2009/07/08 18:26:38 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -45,6 +45,7 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/vmware-vix-distrib
 
+
 pkg_setup() {
 	if use x86; then
 		MY_P="${MY_PN}.i386"
@@ -66,14 +67,15 @@ src_prepare() {
 #	EPATCH_SOURCE="${FILESDIR}"/${PV} EPATCH_SUFFIX="patch" epatch
 
 	sed -i -e "s:/sbin/lsmod:/bin/lsmod:" "${S}"/installer/services.sh || die "sed of services"
+
+	# We won't want any perl scripts from VMware
+	rm -f *.pl bin/*.pl
+	rm -f etc/installer.sh
 }
 
 src_install() {
-	# We won't want any perl scripts from VMware
-	rm -f *.pl bin/*.pl
-
 	# We loop through our directories and copy everything to our system.
-	for x in bin lib include
+	for x in api bin lib include
 	do
 		if [[ -e "${S}/vmware-vix/${x}" ]]
 		then
@@ -84,13 +86,13 @@ src_install() {
 	done
 
 	# If we have an /etc directory, we copy it.
-	if [[ -e "${S}/etc" ]]
-	then
+	#if [[ -e "${S}/etc" ]]
+	#then
 		dodir "${config_dir}"
-		cp -pPR "${S}"/etc/* "${D}""${config_dir}"
-		fowners root:${VMWARE_GROUP} "${config_dir}"
-		fperms 770 "${config_dir}"
-	fi
+	#	cp -pPR "${S}"/etc/* "${D}""${config_dir}"
+	#	fowners root:${VMWARE_GROUP} "${config_dir}"
+	#	fperms 770 "${config_dir}"
+	#fi
 
 	# If we have any helper files, we install them.  First, we check for an
 	# init script.
@@ -101,6 +103,7 @@ src_install() {
 
 	local ENVD="${T}/90${PN}"
 	echo "PATH=${VMWARE_INSTALL_DIR}/bin" > "${ENVD}"
+	echo "ROOTPATH=${VMWARE_INSTALL_DIR}/bin" >> "${ENVD}"
 	doenvd "${ENVD}" || die "doenvd"
 
 	# Last, we check for any mime files.
@@ -128,11 +131,20 @@ src_install() {
 	einfo "Adding answers to ${config_dir}/locations"
 	locations="${D}${config_dir}/locations"
 	echo "answer BINDIR ${VMWARE_INSTALL_DIR}/bin" >> ${locations}
-	echo "answer LIBDIR ${VMWARE_INSTALL_DIR}/lib" >> ${locations}
 	echo "answer VIXLIBDIR ${VMWARE_INSTALL_DIR}/lib" >> ${locations}
+	echo "answer LIBDIR ${VMWARE_INSTALL_DIR}/lib" >> ${locations}
 	#echo "answer MANDIR ${VMWARE_INSTALL_DIR}/man" >> ${locations}
 	echo "answer DOCDIR /usr/share/doc/${P}" >> ${locations}
 
+	local VMWARECONFIG="${T}"/config
+	if [[ -e ${ROOT}/etc/vmware/config ]]
+	then
+		cp -a "${ROOT}"/etc/vmware/config "${VMWARECONFIG}"
+		sed -i -e "/vix.libdir/d" "${VMWARECONFIG}"
+	fi
+	echo "vix.libdir = \"${VMWARE_INSTALL_DIR}/lib\"" >> "${VMWARECONFIG}"
+	insinto /etc/vmware/
+	doins "${VMWARECONFIG}"
 }
 
 pkg_preinst() {
@@ -180,6 +192,10 @@ pkg_postinst() {
 
 	ewarn "In order to run ${product_name}, you have to"
 	ewarn "be in the '${VMWARE_GROUP}' group."
+}
+
+pkg_prerm() {
+	sed -i -e "/vix.libdir/d" "${ROOT}"/etc/vmware/config
 }
 
 pkg_postrm() {
