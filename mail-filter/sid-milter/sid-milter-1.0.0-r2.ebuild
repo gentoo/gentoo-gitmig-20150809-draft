@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r2.ebuild,v 1.2 2009/05/09 12:29:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r2.ebuild,v 1.3 2009/07/08 15:21:34 mrness Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-nopra_on_spf1.patch
+	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	local ENVDEF=""
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
