@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.26.00.ebuild,v 1.1 2009/07/08 17:44:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/fmod-4.26.00.ebuild,v 1.2 2009/07/08 20:31:26 ssuominen Exp $
 
 inherit versionator
 
@@ -40,12 +40,12 @@ src_install() {
 	cp -f libfmodexp${fbits}-${PV}.so libfmodexp.so.${PV} || die
 	cp -f libfmodex${fbits}L-${PV}.so libfmodexL.so.${PV} || die
 
-	ln -s libfmodex.so.${PV} libfmodex.so || die
-	ln -s libfmodex.so.${PV} libfmodex.so.4 || die
-	ln -s libfmodexp.so.${PV} libfmodexp.so || die
-	ln -s libfmodexp.so.${PV} libfmodexp.so.4 || die
-	ln -s libfmodexL.so.${PV} libfmodexL.so || die
-	ln -s libfmodexL.so.${PV} libfmodexL.so.4 || die
+	ln -sf libfmodex.so.${PV} libfmodex.so || die
+	ln -sf libfmodex.so.${PV} libfmodex.so.4 || die
+	ln -sf libfmodexp.so.${PV} libfmodexp.so || die
+	ln -sf libfmodexp.so.${PV} libfmodexp.so.4 || die
+	ln -sf libfmodexL.so.${PV} libfmodexL.so || die
+	ln -sf libfmodexL.so.${PV} libfmodexL.so.4 || die
 
 	cp -dpR "${fsource}"/* "${D}"/opt/fmodex || die
 
