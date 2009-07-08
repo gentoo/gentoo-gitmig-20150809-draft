@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.9-r1.ebuild,v 1.13 2009/05/26 06:40:42 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.3.11.ebuild,v 1.1 2009/07/08 22:41:43 tgurr Exp $
 
 inherit autotools eutils flag-o-matic multilib pam
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.easysw.com/pub/cups/${PV}/${MY_P}-source.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="acl avahi dbus gnutls java jpeg kerberos ldap pam perl php png ppds python samba slp ssl static tiff X xinetd zeroconf"
 
 COMMON_DEPEND="acl? ( kernel_linux? ( sys-apps/acl sys-apps/attr ) )
@@ -101,8 +101,8 @@ src_unpack() {
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.3.7-backend-https.patch"
 
-	# security bug #249727
-	epatch "${FILESDIR}/${PN}-1.3.9-CVE-2008-5286.patch"
+	# detect recent libgnutls versions, upstream bug STR #3178
+	epatch "${FILESDIR}/${PN}-1.3.10-str3178.patch"
 
 	# cups does not use autotools "the usual way" and ship a static config.h.in
 	eaclocal
@@ -154,6 +154,7 @@ src_compile() {
 		--with-cups-group=lp \
 		--with-docdir=/usr/share/cups/html \
 		--with-languages=${LINGUAS} \
+		--with-pdftops=pdftops \
 		--with-system-groups=lpadmin \
 		--with-xinetd=/etc/xinetd.d \
 		$(use_enable acl) \
@@ -171,8 +172,8 @@ src_compile() {
 		$(use_with php) \
 		$(use_with python) \
 		--enable-libpaper \
+		--enable-pdftops \
 		--enable-threads \
-		--disable-pdftops \
 		${myconf}
 
 	# install in /usr/libexec always, instead of using /usr/lib/cups, as that
@@ -213,15 +214,6 @@ src_install() {
 		rm -rf "${D}"/etc/xinetd.d
 	fi
 
-	# install pdftops filter
-	exeinto /usr/libexec/cups/filter/
-	newexe "${FILESDIR}"/pdftops-1.20.gentoo pdftops
-
-	# only for gs-esp this is correct, see bug #163897
-	if has_version app-text/ghostscript-gpl || has_version app-text/ghostscript-gnu ; then
-		sed -i -e "s:#application/vnd.cups-postscript:application/vnd.cups-postscript:" "${D}"/etc/cups/mime.convs
-	fi
-
 	keepdir /usr/share/cups/profiles /usr/libexec/cups/driver /var/log/cups \
 		/var/run/cups/certs /var/cache/cups /var/spool/cups/tmp /etc/cups/ssl
 
@@ -240,8 +232,8 @@ src_install() {
 	diropts -m 0740 -o lp -g lp
 	dodir /var/cache/cups/rss
 
-	# create /etc/cups/client.conf, bug #196967
-	echo "ServerName localhost" >> "${D}"/etc/cups/client.conf
+	# create /etc/cups/client.conf, bug #196967 and #266678
+	echo "ServerName /var/run/cups/cups.sock" >> "${D}"/etc/cups/client.conf
 }
 
 pkg_preinst() {
