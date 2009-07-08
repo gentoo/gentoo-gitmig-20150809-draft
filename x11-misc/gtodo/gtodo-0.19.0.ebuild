@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.19.0.ebuild,v 1.1 2009/07/08 16:28:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/gtodo-0.19.0.ebuild,v 1.2 2009/07/08 17:52:34 ssuominen Exp $
 
 EAPI=2
 inherit eutils
 MY_P=${PN}2-${PV}
 
-DESCRIPTION="Gnome Task List Manager is a GTK+ based TODO application with applet."
+DESCRIPTION="Gnome Task List Manager is a GTK+ based TODO application."
 HOMEPAGE="http://blog.sarine.nl/category/gtodo"
 SRC_URI="http://download.sarine.nl/gtodo2/${MY_P}.tar.gz"
 
