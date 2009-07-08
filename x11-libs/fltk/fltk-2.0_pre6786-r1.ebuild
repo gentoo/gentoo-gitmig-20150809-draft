@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786.ebuild,v 1.3 2009/07/08 11:34:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-2.0_pre6786-r1.ebuild,v 1.1 2009/07/08 11:34:48 yngwin Exp $
 
 EAPI="2"
 inherit multilib autotools flag-o-matic
@@ -10,7 +10,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL"
 HOMEPAGE="http://www.fltk.org/"
 SRC_URI="mirror://easysw/fltk/snapshots/${MY_P}.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~x86"
 LICENSE="FLTK LGPL-2"
 SLOT="2"
 IUSE="cairo debug doc +jpeg +png opengl +xft xinerama zlib"
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/libXext
 	cairo? ( x11-libs/cairo )
 	xinerama? ( x11-libs/libXinerama )
 	zlib? ( sys-libs/zlib )
-	<sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695
+	>=sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	xinerama? ( x11-proto/xineramaproto )
@@ -38,6 +38,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}"/fltk2-asneeded.patch  # bug 255494
 	epatch "${FILESDIR}"/fltk2-gcc43.patch
+	epatch "${FILESDIR}"/fltk2-glibc2.10-scandir.patch  # bug 270487
 	epatch "${FILESDIR}"/fltk2-ldflags.patch  # bug 251233
 	sed -i "/STRIP/d" fluid/Makefile  # don't pre-strip, bug 246694
 	use opengl || epatch "${FILESDIR}"/fltk2-nogl.patch

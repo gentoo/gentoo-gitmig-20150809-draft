@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.9.ebuild,v 1.7 2009/07/08 11:34:48 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.9-r1.ebuild,v 1.1 2009/07/08 11:34:48 yngwin Exp $
 
 EAPI=2
 inherit eutils autotools versionator fdo-mime
@@ -9,7 +9,7 @@ DESCRIPTION="C++ user interface toolkit for X and OpenGL."
 HOMEPAGE="http://www.fltk.org"
 SRC_URI="mirror://easysw/${PN}/${PV}/${P}-source.tar.bz2"
 
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~x86"
 LICENSE="FLTK LGPL-2"
 
 SLOT="$(get_version_component_range 1-2)"
@@ -26,7 +26,7 @@ RDEPEND="x11-libs/libXext
 	opengl? ( virtual/opengl virtual/glu )
 	xinerama? ( x11-libs/libXinerama )
 	xft? ( x11-libs/libXft )
-	<sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695
+	>=sys-libs/glibc-2.10"   # glibc-2.10 patch breaks with 2.9, bug 276695
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	doc? ( app-text/htmldoc )
@@ -42,6 +42,9 @@ src_prepare() {
 	# prevent to run twice configure (needs eautoconf), to compile tests,
 	# remove forced -Os compile
 	epatch "${FILESDIR}"/${P}-conf-tests.patch
+	# fix stricter c++ handling in glibc-2.10/gcc-4.4 (bug 270487)
+	epatch "${FILESDIR}"/${P}-glibc2.10-scandir.patch
+	epatch "${FILESDIR}"/${P}-consts.patch
 	# remove forced flags from fltk-config
 	sed -i \
 		-e '/C\(XX\)\?FLAGS=/s:@C\(XX\)\?FLAGS@::' \
