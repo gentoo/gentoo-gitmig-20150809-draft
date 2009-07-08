@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kprof
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.18 2009/06/13 12:15:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/ChangeLog,v 1.19 2009/07/08 20:42:14 maekke Exp $
+
+  08 Jul 2009; Markus Meier <maekke@gentoo.org> kprof-1.4.3-r1.ebuild:
+  amd64 stable, bug #216741
 
   13 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   kprof-1.4.3-r1.ebuild:
