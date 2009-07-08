@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/starparse-0.9.ebuild,v 1.2 2009/01/14 00:55:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/starparse/starparse-0.9.ebuild,v 1.3 2009/07/08 09:45:41 fauli Exp $
 
 if [[ ${PV} = 9999* ]]; then
-	EBZR_REPO_URI="http://oregonstate.edu/~benisong/software/projects/starparse/"
-	EBZR_BRANCH="releases/0.9"
+	EBZR_REPO_URI="http://oregonstate.edu/~benisong/software/projects/starparse/releases/0.9"
 	EBZR_BOOTSTRAP="eautoreconf"
 	BZR="bzr"
 fi
