@@ -1,6 +1,7 @@
 #!/sbin/runscript
 
 opts="${opts} attach"
+PIDFILE=/var/run/boinc.pid
 
 depend() {
 	# we can use dns and net, but we can also in most cases live without them
@@ -73,6 +74,8 @@ start() {
 
 	eval ${CHRT} start-stop-daemon \
 		--quiet --start --chdir ${RUNTIMEDIR} \
+		--pidfile ${PIDFILE} \
+		--make-pidfile \
 		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
 		--nicelevel ${NICELEVEL} \
 		${PARAMS}
@@ -116,6 +119,7 @@ attach() {
 stop() {
 	ebegin "Stopping BOINC"
 	start-stop-daemon --stop --retry 3 --quiet --exec ${BOINCBIN}
+	rm -f ${PIDFILE}
 	eend $?
 }
 
