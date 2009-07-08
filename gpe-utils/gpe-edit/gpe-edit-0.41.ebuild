@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-utils/gpe-edit/gpe-edit-0.41.ebuild,v 1.3 2009/07/08 16:21:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-utils/gpe-edit/gpe-edit-0.41.ebuild,v 1.4 2009/07/08 16:28:40 fauli Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe autotools
@@ -9,7 +9,7 @@ DESCRIPTION="Editor for the GPE Palmtop Environment"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~x86"
+KEYWORDS="~amd64 ~arm x86"
 IUSE="${IUSE}"
 RDEPEND="${RDEPEND}
 	gpe-base/libgpewidget"
