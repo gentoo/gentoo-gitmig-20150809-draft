@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.1.156745-r2.ebuild,v 1.1 2009/07/06 17:40:52 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-server/vmware-server-2.0.1.156745-r2.ebuild,v 1.2 2009/07/08 20:17:28 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -100,6 +100,8 @@ src_prepare() {
 	# We won't want any perl scripts from VMware once we've finally got all
 	# of the configuration done, but for now, they're necessary.
 	#rm -f *.pl bin/*.pl
+	rm -f *.pl
+	rm -f etc/installer.sh
 
 	# Since with Gentoo we compile everthing it doesn't make sense to keep
 	# the precompiled modules arround. Saves about 4 megs of disk space too.
@@ -209,6 +211,8 @@ src_install() {
 	echo "answer RUN_CONFIGURATOR no" >> ${locations}
 	echo "answer INITDIR ${config_dir}/init.d" >> ${locations}
 	echo "answer INITSCRIPTSDIR ${config_dir}/init.d" >> ${locations}
+	echo "answer VMCI_CONFED yes" >> ${locations}
+	echo "answer VSOCK_CONFED yes" >> ${locations}
 }
 
 pkg_config() {
@@ -273,6 +277,11 @@ pkg_postinst() {
 
 	ewarn "VMWare Server also has issues when running on a JFS filesystem.  For more"
 	ewarn "information see http://bugs.gentoo.org/show_bug.cgi?id=122500#c94"
+}
+
+pkg_prerm() {
+	einfo "Stopping ${product_name} for safe unmerge"
+	/etc/init.d/vmware stop
 }
 
 pkg_postrm() {
