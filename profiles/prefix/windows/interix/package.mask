@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.2 2009/06/20 10:26:21 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.3 2009/07/08 06:26:22 mduft Exp $
 
-# $Id: package.mask,v 1.2 2009/06/20 10:26:21 grobian Exp $
+# $Id: package.mask,v 1.3 2009/07/08 06:26:22 mduft Exp $
 
 # Markus Duft <mduft@gentoo.org> (19 Jun 2009)
 # libiconf 1.13 doesn't work for now... needs further investigation.
@@ -15,12 +15,13 @@
 # Markus Duft <mduft@gentoo.org> (25 May 2009)
 # sed seems to be broken, it always says:
 # sed: couldn't flush stdin: Invalid seek on non-seekable object
-=sys-apps/sed-4.2
+=sys-apps/sed-4.2*
 
 # Markus Duft <mduft@gentoo.org> (13 May 2009)
 # this dooms many things (must be some environment during install),
 # making installation fail.
 =dev-util/subversion-1.6.2*
+=dev-util/subversion-1.6.3*
 
 # Markus Duft <mduft@gentoo.org> (02 Feb 2009)
 # this does not work correctly, since there seems to be some
@@ -31,11 +32,6 @@
 # this version doesn't work on interix, since unconditional
 # usage of "mbsinit" and "mbrtowc" which don't exist.
 =sys-apps/texinfo-4.13
-
-# Fabian Groffen <grobian@gentoo.org> (21 Sep 2008)
-# Fails to link with
-# sshd.o(.text+0x203a):sshd.c: undefined reference to `_setgroups'
-#=net-misc/openssh-5*
 
 # Markus Duft <mduft@gentoo.org> (05 May 2008)
 # Does not build with the slang interface, and
