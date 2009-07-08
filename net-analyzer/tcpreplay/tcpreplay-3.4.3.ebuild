@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.3.ebuild,v 1.1 2009/07/08 10:18:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/tcpreplay-3.4.3.ebuild,v 1.2 2009/07/08 10:22:49 pva Exp $
 
 EAPI="2"
-
-inherit eutils autotools
 
 DESCRIPTION="replay saved tcpdump or snoop files at arbitrary speeds"
 HOMEPAGE="http://tcpreplay.synfin.net/"
@@ -26,7 +24,6 @@ RDEPEND="${DEPEND}"
 
 src_prepare() {
 	echo "We don't use bundled libopts" > libopts/options.h
-	eautoreconf
 }
 
 src_configure() {

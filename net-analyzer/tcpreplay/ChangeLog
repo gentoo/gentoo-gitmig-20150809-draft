@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpreplay
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.33 2009/07/08 10:18:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpreplay/ChangeLog,v 1.34 2009/07/08 10:22:49 pva Exp $
+
+  08 Jul 2009; Peter Volkov <pva@gentoo.org> tcpreplay-3.4.3.ebuild:
+  We don't need inherit/eautoreconf here. Forgot to drop it after work on
+  fix which is now upstream...
 
 *tcpreplay-3.4.3 (08 Jul 2009)
 
