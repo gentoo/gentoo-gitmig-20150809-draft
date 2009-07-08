@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/istack-commons-tools-20090620.ebuild,v 1.1 2009/06/21 02:51:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/istack-commons-tools-20090620.ebuild,v 1.2 2009/07/08 10:53:44 ali_bush Exp $
 
 JAVA_PKG_IUSE="source"
 EAPI=2
@@ -19,7 +19,8 @@ SLOT="1.1"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=virtual/jdk-1.5"
+DEPEND=">=virtual/jdk-1.5
+	dev-java/ant-core"
 RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/${PROJ_P}"
@@ -45,7 +46,7 @@ java_prepare() {
 	cd "${S}/tools"
 	mkdir -p lib || die
 	ln -s $(java-config --tools) lib || die
-	java-pkg_jar-from --into "${S}"/tools/lib ant-core ant.jar
+	java-pkg_jar-from --build-only --into "${S}"/tools/lib ant-core ant.jar
 }
 
 EANT_BUILD_XML="tools/build.xml"
