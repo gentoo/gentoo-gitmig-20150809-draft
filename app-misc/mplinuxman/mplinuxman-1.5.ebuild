@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.5.ebuild,v 1.6 2008/11/15 13:25:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/mplinuxman-1.5.ebuild,v 1.7 2009/07/08 18:50:40 ssuominen Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Manager for MPMan F60/55/50 MP3 players."
@@ -13,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="x11-libs/gtk+:2
 	virtual/mpg123"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -21,22 +22,16 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-# This is ugly and someone should write upstream a patch,
-# but it's not me. - drac
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-stringh.patch
-
-	sed -e "s:CFLAGS = :CFLAGS = ${CFLAGS} :" \
-		-e 's:/usr/local/share/locale:$(DESTDIR)/usr/share/locale:' \
-		-i makefile
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-stringh.patch \
+		"${FILESDIR}"/${P}-makefile.patch
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" || die "emake failed."
+	tc-export CC
+	emake || die "emake failed"
 	cd extra/mp_util
-	emake CC="$(tc-getCC)" || die "emake failed."
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -44,10 +39,10 @@ src_install() {
 
 	dodir /usr/share/locale/{de,es,fr,ja,nl}/LC_MESSAGES
 
-	DESTDIR="${D}" emake install-po || die "emake insall-po failed"
+	DESTDIR="${D}" emake install-po || die "emake install-po failed"
 
 	newicon logo.xpm ${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN} "AudioVideo;Audio;GTK;"
+	make_desktop_entry ${PN} ${PN} ${PN} "AudioVideo;Audio;GTK"
 
 	dodoc CHANGES README extra/mp_util/USAGE.txt
 }
