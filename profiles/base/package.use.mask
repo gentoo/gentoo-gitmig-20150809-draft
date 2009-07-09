@@ -139,3 +139,7 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Unmask internal real player codec support on newer mplayer
 # Only for amd64 and x86
 >=media-video/mplayer-1.0_rc2_p20090530 nut
+
+# Alexis Ballier <aballier@gentoo.org> (07 Jul 2009)
+# The pda interface doesnt build, bug #277037
+>=media-video/vlc-1.0.0 pda
