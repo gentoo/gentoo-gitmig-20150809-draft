@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxmenu-data
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/ChangeLog,v 1.1 2009/05/24 22:27:57 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxmenu-data/ChangeLog,v 1.2 2009/07/09 16:16:19 vostorga Exp $
+
+  09 Jul 2009; Victor Ostorga <vostorga@gentoo.org> lxmenu-data-0.1.ebuild:
+  Adding newline at end of file POTFILES.in bug #276658
 
 *lxmenu-data-0.1 (24 May 2009)
 
