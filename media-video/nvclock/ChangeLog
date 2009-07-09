@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvclock
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.31 2009/04/03 23:55:23 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.32 2009/07/09 21:45:46 jer Exp $
+
+  09 Jul 2009; Jeroen Roovers <jer@gentoo.org> files/nvclock_initd:
+  More strict init.d dependency, ought to fix bug #144592 thanks to Stefano
+  Priore.
 
 *nvclock-0.8_beta4-r3 (03 Apr 2009)
 
