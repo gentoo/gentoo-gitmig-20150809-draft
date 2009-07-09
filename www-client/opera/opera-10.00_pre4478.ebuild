@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.3 2009/07/09 16:46:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.4 2009/07/09 18:57:05 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ DESCRIPTION="A standards-compliant graphical Web browser"
 HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
-LICENSE="OPERA-9.0"
+LICENSE="OPERA-10.00"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
@@ -25,11 +25,16 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
 done
 
-# always update the build number manually
-O_B="4478"
+# Please check for missing (qt3/qt-static) builds
+# and then update the build # number manually
+OPERABUILD="4478"
 
-O_U="http://snapshot.opera.com/unix/snapshot-${O_B}/"
-O_P="${P/_pre*/}-${O_B}"
+O_U="http://snapshot.opera.com/unix/snapshot-${PV/*_pre}/"
+if [ "${PV/*_pre}" = "${OPERABUILD}" ]; then
+	O_P="${P/_pre*/}-${OPERABUILD}"
+else
+	O_P="SET_OPERABUILD_IN_THE_EBUILD"
+fi
 
 SRC_URI="
 	amd64? (
