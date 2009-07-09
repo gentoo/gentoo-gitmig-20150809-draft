@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Most/Test-Most-0.21.ebuild,v 1.1 2009/06/09 20:09:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Most/Test-Most-0.21.ebuild,v 1.2 2009/07/09 16:20:16 tove Exp $
 
 EAPI=2
 
@@ -17,7 +17,8 @@ RDEPEND="dev-perl/Exception-Class
 	dev-perl/Test-Warn
 	dev-perl/Test-Deep
 	dev-perl/Test-Differences
-	dev-perl/Test-Exception"
+	dev-perl/Test-Exception
+	>=virtual/perl-Test-Simple-0.82"
 DEPEND="${RDEPEND}
 	virtual/perl-Module-Build"
 
