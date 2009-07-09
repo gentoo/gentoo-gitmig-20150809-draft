@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/ccs-tools
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ChangeLog,v 1.1 2009/07/09 00:19:54 matsuu Exp $
+
+*ccs-tools-1.6.8_p20090623 (09 Jul 2009)
+
+  09 Jul 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ccs-tools-1.6.8_p20090623.ebuild,
+  +files/ccs-tools-1.6.8_p20090623-gentoo.patch, +metadata.xml:
+  Initial import. Ebuild is submitted by Naohiro Aota, bug #271028.
+
