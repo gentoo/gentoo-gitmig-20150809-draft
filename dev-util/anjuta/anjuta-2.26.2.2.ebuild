@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.26.2.2.ebuild,v 1.2 2009/07/06 17:27:58 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.26.2.2.ebuild,v 1.3 2009/07/09 22:16:15 eva Exp $
 
 EAPI="2"
 
@@ -34,6 +34,7 @@ RDEPEND=">=dev-libs/glib-2.16
 
 	dev-libs/libxslt
 	>=dev-lang/perl-5
+	dev-perl/Locale-gettext
 	sys-devel/autogen
 
 	devhelp? (
