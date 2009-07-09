@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.24.4.ebuild,v 1.1 2009/07/09 11:28:49 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.24.4.ebuild,v 1.2 2009/07/09 17:32:31 mrpouet Exp $
 
 EAPI="2"
 
@@ -53,11 +53,6 @@ src_prepare() {
 	# gtk-doc checks do not pass, upstream bug #578944
 	sed 's:TESTS = check.docs: TESTS = :g'\
 		-i docs/Makefile.am docs/Makefile.in || die "sed failed"
-}
-
-src_install() {
-	gnome2_src_install
-	rm "${D}/etc/pango/pango.modules" || die "rm pango.modules failed"
 }
 
 pkg_postinst() {
