@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.4.ebuild,v 1.1 2009/07/03 11:36:47 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.4.ebuild,v 1.2 2009/07/09 17:05:11 volkmar Exp $
 
 EAPI="2"
 
@@ -11,6 +11,7 @@ inherit eutils kde4-base gnome2
 
 DESCRIPTION="H.323 and SIP VoIP softphone"
 HOMEPAGE="http://www.ekiga.org/"
+SRC_URI="${SRC_URI} mirror://gentoo/${P}-remove-exceptions.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -149,6 +150,7 @@ src_prepare() {
 	gnome2_src_prepare
 
 	epatch "${FILESDIR}"/${P}-gtk+-2.12-fix.patch
+	epatch "${WORKDIR}"/${P}-remove-exceptions.patch
 
 	# remove call to gconftool-2 --shutdown, upstream bug 555976
 	# gnome-2 eclass is reloading schemas with SIGHUP
