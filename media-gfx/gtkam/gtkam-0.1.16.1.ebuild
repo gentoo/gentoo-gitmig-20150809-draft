@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.7 2009/05/17 17:42:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.16.1.ebuild,v 1.8 2009/07/09 22:12:25 eva Exp $
 
 inherit autotools eutils gnome2
 
@@ -47,12 +47,15 @@ src_unpack() {
 	# Fix --as-needed, bug #169661
 	epatch "${FILESDIR}/${PN}-0.1.14-as-needed.patch"
 
+	# Fix .desktop validity, bug #271569
+	epatch "${FILESDIR}/${P}-desktop-validation.patch"
+
 	intltoolize --automake --force --copy || die "intltoolize failed"
-	eautomake
+	eautoreconf
 }
 
 src_install() {
 	gnome2_src_install
 
-	rm -rf "${D}"/usr/share/doc/gtkam
+	rm -rf "${D}"/usr/share/doc/gtkam || die "rm failed"
 }
