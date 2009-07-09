@@ -1,7 +1,8 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattleai/xbattleai-1.2.2-r1.ebuild,v 1.1 2006/11/12 16:18:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xbattleai/xbattleai-1.2.2-r1.ebuild,v 1.2 2009/07/09 15:42:28 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="A multi-player game of strategy and coordination"
@@ -25,9 +26,7 @@ DEPEND="${RDEPEND}
 	app-text/rman
 	x11-misc/imake"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f xbcs/foo.xbc~
 	epatch "${FILESDIR}"/${P}-sandbox.patch
 }
