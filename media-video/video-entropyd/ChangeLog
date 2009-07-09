@@ -1,6 +1,13 @@
 # ChangeLog for media-video/video-entropyd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/ChangeLog,v 1.10 2008/03/04 10:37:23 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/video-entropyd/ChangeLog,v 1.11 2009/07/09 14:14:17 fauli Exp $
+
+*video-entropyd-1.0 (09 Jul 2009)
+
+  09 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  +video-entropyd-1.0.ebuild:
+  version bump to fix building with media-libs/netpbm, see bug 247915,
+  thanks to basic <basic AT mozdev DOT org> for the fixes
 
 *video-entropyd-0.8 (04 Mar 2008)
 
