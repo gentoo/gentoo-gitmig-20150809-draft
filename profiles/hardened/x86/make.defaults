@@ -1,12 +1,12 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/make.defaults,v 1.17 2009/03/27 22:33:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/make.defaults,v 1.18 2009/07/09 00:47:51 gengor Exp $
 
 ARCH="x86"
 ACCEPT_KEYWORDS="x86"
 
 CHOST="i486-pc-linux-gnu"
-CFLAGS="-O2 -mcpu=i486 -pipe -fforce-addr"
+CFLAGS="-mcpu=i486 -O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 
 USE="berkdb crypt hardened nls nptl nptlonly pam pic readline ssl tcpd zlib"

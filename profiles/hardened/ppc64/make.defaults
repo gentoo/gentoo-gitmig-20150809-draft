@@ -1,6 +1,6 @@
 # Copyright 2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/make.defaults,v 1.8 2007/02/20 22:43:17 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc64/make.defaults,v 1.9 2009/07/09 00:47:50 gengor Exp $
 
 ARCH="ppc64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -8,6 +8,6 @@ USE="${ARCH} berkdb crypt hardened pam pic readline ssl zlib"
 
 # ppc64
 CHOST="powerpc64-unknown-linux-gnu"
-CFLAGS="-O2 -pipe -fforce-addr"
+CFLAGS="-O2 -pipe"
 CXXFLAGS="${CFLAGS}"
 FEATURES="-sandbox"
