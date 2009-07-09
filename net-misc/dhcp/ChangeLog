@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.154 2009/05/29 23:30:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.155 2009/07/09 14:45:21 chainsaw Exp $
+
+*dhcp-4.1.0 (09 Jul 2009)
+*dhcp-3.1.2 (09 Jul 2009)
+
+  09 Jul 2009; <chainsaw@gentoo.org> +dhcp-3.1.2.ebuild, +dhcp-4.1.0.ebuild,
+  +files/dhcp-4.1-dhclient-metric.patch, +files/dhcp-4.1-no_isc_blurb.patch,
+  +files/dhcpd.init2:
+  Version bump to 3.1.2 & 4.1.0 upstream releases, as requested in bug
+  #264809. Create /var/lib/dhclient as per bug #222261. Recursive chown to
+  dhcp:dhcp closes bug #236671. Test config in init-script, apache-style by
+  Arturas from Lithuania in bug #259364. Paranoia/chroot support now
+  upstream in 4.1, dropped patch.
 
   29 May 2009; Mike Frysinger <vapier@gentoo.org> -dhcp-3.0.3-r9.ebuild,
   -dhcp-3.0.6.ebuild, -dhcp-3.1.0.ebuild:

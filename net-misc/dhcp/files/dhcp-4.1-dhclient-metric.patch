@@ -1,0 +1,189 @@
+diff -uNr dhcp-4.1.0.ORIG/client/scripts/bsdos dhcp-4.1.0/client/scripts/bsdos
+--- dhcp-4.1.0.ORIG/client/scripts/bsdos	2009-07-09 15:16:11.000000000 +0100
++++ dhcp-4.1.0/client/scripts/bsdos	2009-07-09 15:17:41.000000000 +0100
+@@ -102,6 +102,9 @@
+ if [ x$new_interface_mtu != x ]; then
+   mtu_arg="mtu $new_interface_mtu"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric_arg="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -163,7 +166,7 @@
+   if [ x$old_ip_address = x ] || [ x$old_ip_address != x$new_ip_address ] || \
+      [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
+     eval "ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+     route add $new_ip_address 127.1 >/dev/null 2>&1
+     for router in $new_routers; do
+       route add default $router >/dev/null 2>&1
+@@ -220,7 +223,7 @@
+     route delete $alias_ip_address 127.0.0.1 > /dev/null 2>&1
+   fi
+   eval "ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+   sleep 1
+   if [ "$new_routers" != "" ]; then
+     set $new_routers
+diff -uNr dhcp-4.1.0.ORIG/client/scripts/freebsd dhcp-4.1.0/client/scripts/freebsd
+--- dhcp-4.1.0.ORIG/client/scripts/freebsd	2009-07-09 15:16:11.000000000 +0100
++++ dhcp-4.1.0/client/scripts/freebsd	2009-07-09 15:17:41.000000000 +0100
+@@ -112,6 +112,9 @@
+ if [ x$new_interface_mtu != x ]; then
+   mtu_arg="mtu $new_interface_mtu"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric_arg="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -173,7 +176,7 @@
+   if [ x$old_ip_address = x ] || [ x$old_ip_address != x$new_ip_address ] || \
+      [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
+     eval "ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+     $LOGGER "New IP Address ($interface): $new_ip_address"
+     $LOGGER "New Subnet Mask ($interface): $new_subnet_mask"
+     $LOGGER "New Broadcast Address ($interface): $new_broadcast_address"
+@@ -243,7 +246,7 @@
+     route delete $alias_ip_address 127.0.0.1 > /dev/null 2>&1
+   fi
+   eval "ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+   $LOGGER "New IP Address ($interface): $new_ip_address"
+   $LOGGER "New Subnet Mask ($interface): $new_subnet_mask"
+   $LOGGER "New Broadcast Address ($interface): $new_broadcast_address"
+diff -uNr dhcp-4.1.0.ORIG/client/scripts/linux dhcp-4.1.0/client/scripts/linux
+--- dhcp-4.1.0.ORIG/client/scripts/linux	2009-07-09 15:16:11.000000000 +0100
++++ dhcp-4.1.0/client/scripts/linux	2009-07-09 15:20:50.000000000 +0100
+@@ -104,11 +104,6 @@
+   fi
+ fi
+ 
+-release=`uname -r`
+-release=`expr $release : '\(.*\)\..*'`
+-relminor=`echo $release |sed -e 's/[0-9]*\.\([0-9][0-9]*\)\(\..*\)*$/\1/'`
+-relmajor=`echo $release |sed -e 's/\([0-9][0-9]*\)\..*$/\1/'`
+-
+ ###
+ ### DHCPv4 Handlers
+ ###
+@@ -131,6 +126,9 @@
+ if [ x$new_interface_mtu != x ]; then
+   mtu_arg="mtu $new_interface_mtu"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric_arg="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   # Linux doesn't do mediums (ok, ok, media).
+@@ -142,15 +140,7 @@
+     # Bring down alias interface. Its routes will disappear too.
+     ifconfig $interface:0- inet 0
+   fi
+-  if [ $relmajor -lt 2 ] || ( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] )
+-   then
+-    ifconfig $interface inet 0.0.0.0 netmask 0.0.0.0 \
+-		broadcast 255.255.255.255 up
+-    # Add route to make broadcast work. Do not omit netmask.
+-    route add default dev $interface netmask 0.0.0.0
+-  else
+-    ifconfig $interface 0 up
+-  fi
++  ifconfig $interface 0 up
+ 
+   # We need to give the kernel some time to get the interface up.
+   sleep 1
+@@ -192,15 +182,17 @@
+     ifconfig $interface inet $new_ip_address $new_subnet_arg \
+ 					$new_broadcast_arg $mtu_arg
+     # Add a network route to the computed network address.
+-    if [ $relmajor -lt 2 ] || \
+-		( [ $relmajor -eq 2 ] && [ $relminor -eq 0 ] ); then
+-      route add -net $new_network_number $new_subnet_arg dev $interface
++    if [ x$IF_METRIC != x ] && [ x$IF_METRIC != x0 ]; then
++      route del -net $new_network_number $new_subnet_arg \
++        dev $interface
++      route add -net $new_network_number $new_subnet_arg $metric_arg \
++              dev $interface
+     fi
+     for router in $new_routers; do
+       if [ "x$new_subnet_mask" = "x255.255.255.255" ] ; then
+-	route add -host $router dev $interface
++	route add -host $router $metric_arg dev $interface
+       fi
+-      route add default gw $router
++      route add default gw $router $metric_arg dev $interface
+     done
+   fi
+   if [ x$new_ip_address != x$alias_ip_address ] && [ x$alias_ip_address != x ];
+diff -uNr dhcp-4.1.0.ORIG/client/scripts/netbsd dhcp-4.1.0/client/scripts/netbsd
+--- dhcp-4.1.0.ORIG/client/scripts/netbsd	2009-07-09 15:16:11.000000000 +0100
++++ dhcp-4.1.0/client/scripts/netbsd	2009-07-09 15:17:41.000000000 +0100
+@@ -102,6 +102,9 @@
+ if [ x$new_interface_mtu != x ]; then
+   mtu_arg="mtu $new_interface_mtu"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric_arg="metric $IF_METRIC"
++fi
+ 
+ if [ x$reason = xMEDIUM ]; then
+   eval "ifconfig $interface $medium"
+@@ -163,7 +166,7 @@
+   if [ x$old_ip_address = x ] || [ x$old_ip_address != x$new_ip_address ] || \
+      [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
+     eval "ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+     route add $new_ip_address 127.1 >/dev/null 2>&1
+     for router in $new_routers; do
+       route add default $router >/dev/null 2>&1
+@@ -220,7 +223,7 @@
+     route delete $alias_ip_address 127.0.0.1 > /dev/null 2>&1
+   fi
+   eval "ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+   sleep 1
+   if [ "$new_routers" != "" ]; then
+     set $new_routers
+diff -uNr dhcp-4.1.0.ORIG/client/scripts/solaris dhcp-4.1.0/client/scripts/solaris
+--- dhcp-4.1.0.ORIG/client/scripts/solaris	2009-07-09 15:16:11.000000000 +0100
++++ dhcp-4.1.0/client/scripts/solaris	2009-07-09 15:17:41.000000000 +0100
+@@ -97,6 +97,9 @@
+ if [ x$new_interface_mtu != x ]; then
+   mtu_arg="mtu $new_interface_mtu"
+ fi
++if [ x$IF_METRIC != x ]; then
++  metric_arg="metric $IF_METRIC"
++fi
+ 
+ ifconfig=/sbin/ifconfig
+ 
+@@ -159,7 +162,7 @@
+   if [ x$old_ip_address = x ] || [ x$old_ip_address != x$new_ip_address ] || \
+      [ x$reason = xBOUND ] || [ x$reason = xREBOOT ]; then
+     eval "$ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+     route add $new_ip_address 127.1 1 >/dev/null 2>&1
+     for router in $new_routers; do
+       route add default $router 1 >/dev/null 2>&1
+@@ -200,7 +203,7 @@
+     route delete $alias_ip_address 127.0.0.1 > /dev/null 2>&1
+   fi
+   eval "$ifconfig $interface inet $new_ip_address $new_netmask_arg \
+-					$new_broadcast_arg $mtu_arg $medium"
++			$new_broadcast_arg $mtu_arg $metric_arg $medium"
+   sleep 1
+   set $new_routers
+   if ping -s -n -I 1 $1 64 1; then
