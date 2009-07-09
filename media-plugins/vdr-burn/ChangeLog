@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-burn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.39 2009/04/18 22:45:16 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/ChangeLog,v 1.40 2009/07/09 20:25:46 zzam Exp $
+
+  09 Jul 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-burn-0.1.0_pre21-r6.ebuild:
+  Disable test that is broken with gcc-4.4 and that never worked as it needs
+  full vdr sources and compiled object files, Bug #277157.
 
   18 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
   vdr-burn-0.1.0_pre21-r6.ebuild:
