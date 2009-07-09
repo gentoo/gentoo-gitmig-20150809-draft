@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.6.8_p20090623.ebuild,v 1.1 2009/07/09 00:19:54 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.6.8_p20090623.ebuild,v 1.2 2009/07/09 14:47:57 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -47,7 +47,6 @@ src_test() {
 	emake || die
 	./testall.sh || die
 }
-
 
 src_install() {
 	emake INSTALLDIR="${D}" install || die
