@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.14.ebuild,v 1.1 2008/10/02 21:00:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.14.ebuild,v 1.2 2009/07/09 21:46:00 eva Exp $
 
-inherit gnome2
+EAPI="2"
+GCONF_DEBUG="no"
+
+inherit eutils gnome2
 
 DESCRIPTION="A small, lightweight to-do list for Gnome"
 HOMEPAGE="http://pimlico-project.org/tasks.html"
@@ -18,7 +21,8 @@ IUSE=""
 
 RDEPEND=">=gnome-extra/evolution-data-server-1.8
 	>=x11-libs/gtk+-2.6
-	>=dev-libs/glib-2.14"
+	>=dev-libs/glib-2.14
+	>=dev-libs/libunique-1"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
@@ -26,3 +30,12 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog INSTALL NEWS README"
+
+pkg_setup() {
+	G2CONF="${G2CONF} --with-unique --enable-gtk"
+}
+
+src_prepare() {
+	# Add missing config.h, bug #277115
+	epatch "${FILESDIR}/${P}-configh.patch"
+}
