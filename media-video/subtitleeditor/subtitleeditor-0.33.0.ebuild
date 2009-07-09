@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.33.0.ebuild,v 1.1 2009/06/29 22:51:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/subtitleeditor-0.33.0.ebuild,v 1.2 2009/07/09 22:19:43 eva Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug opengl"
 
 RDEPEND=">=x11-libs/gtk+-2.12
-	>=dev-cpp/gtkmm-2.12
+	>=dev-cpp/gtkmm-2.14
 	>=dev-cpp/glibmm-2.16.3
 	>=dev-cpp/libglademm-2.4
 	>=dev-cpp/libxmlpp-2.20

@@ -1,6 +1,10 @@
 # ChangeLog for media-video/subtitleeditor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.3 2009/06/29 22:51:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/subtitleeditor/ChangeLog,v 1.4 2009/07/09 22:19:43 eva Exp $
+
+  09 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -subtitleeditor-0.30.0.ebuild, subtitleeditor-0.33.0.ebuild:
+  Raise gtkmm dependency to 2.14, bug #275950. Clean up old revision.
 
 *subtitleeditor-0.33.0 (30 Jun 2009)
 
