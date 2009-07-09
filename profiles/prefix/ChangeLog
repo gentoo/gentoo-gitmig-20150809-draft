@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.23 2009/07/07 17:12:23 grobian Exp $
+# $Id: ChangeLog,v 1.24 2009/07/09 07:52:29 mduft Exp $
+
+  09 Jul 2009; Markus Duft <mduft@gentoo.org>
+  +windows/interix/6.0/use.force, +windows/interix/6.0/use.mask:
+  added i6fork use.{mask,force} entry to enable/force i6fork on interix6 to
+  fix fork() problems
 
   07 Jul 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask portage-2.2.00.13797, bug #276957
