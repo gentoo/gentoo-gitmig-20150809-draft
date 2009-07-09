@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/nted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.3 2009/07/02 14:22:52 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/nted/ChangeLog,v 1.4 2009/07/09 20:57:01 hwoarang Exp $
+
+*nted-1.6.0-r3 (09 Jul 2009)
+
+  09 Jul 2009; Markos Chandras <hwoarang@gentoo.org> +nted-1.6.0-r3.ebuild,
+  +files/makefile_am_ldflags.patch:
+  Fix force --as-needed bug 276286. Thanks to Diego E. 'Flameeyes' Pettenò 
+  <flameeyes@gentoo.org>
 
 *nted-1.6.0-r2 (02 Jul 2009)
 
