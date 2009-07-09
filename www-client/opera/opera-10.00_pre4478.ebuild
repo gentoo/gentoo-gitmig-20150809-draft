@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.1 2009/07/09 14:47:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.2 2009/07/09 16:12:43 jer Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 RESTRICT="mirror strip test"
 QA_DT_HASH="opt/${PN}/.*"
 
-IUSE="elibc_FreeBSD gnome ia32 qt-static"
+IUSE="elibc_FreeBSD gnome ia32 qt3 qt-static"
 MY_LINGUAS="be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk zh-CN zh-HK zh-TW"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
@@ -30,16 +30,28 @@ O_P="${P/_pre/-}"
 
 SRC_URI="
 	amd64? (
-		!ia32? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+		!ia32? (
+			qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
+			!qt-static? (
+				qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+				!qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
+			)
+		)
 		ia32? (
 			qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
-			!qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+			!qt-static? (
+				qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+				!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+			)
 		)
 	)
 	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	x86? (
 		qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
-		!qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+		!qt-static? (
+			qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+			!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+		)
 	)
 	x86-fbsd? ( ${O_U}intel-freebsd/${O_P}.freebsd7-shared-qt3.i386.tar.bz2 )
 	"
@@ -63,14 +75,20 @@ RDEPEND="
 	amd64? (
 		ia32? (
 			qt-static? ( media-libs/nas )
-			!qt-static? ( x11-libs/qt-core x11-libs/qt-gui )
+			!qt-static? (
+				qt3? ( =x11-libs/qt-3*[-immqt] )
+				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+			)
 		)
 		!ia32? ( =x11-libs/qt-3*[-immqt] )
 	)
 	ppc? ( =x11-libs/qt-3*[-immqt] )
 	x86? (
 		qt-static? ( media-libs/nas )
-		!qt-static? ( x11-libs/qt-core x11-libs/qt-gui )
+		!qt-static? (
+			qt3? ( =x11-libs/qt-3*[-immqt] )
+			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+		)
 	)
 	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
