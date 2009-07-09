@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.69 2009/07/08 14:46:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.70 2009/07/09 15:33:39 fmccor Exp $
+
+  09 Jul 2009; Ferris McCormick <fmccor@gentoo.org> PyQt4-4.4.4-r5.ebuild:
+  Sparc stable, Bug #276852.
 
   08 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   PyQt4-4.4.4-r5.ebuild:
