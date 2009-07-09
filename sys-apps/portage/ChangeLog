@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.617 2009/07/05 22:16:55 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.618 2009/07/09 14:24:00 fauli Exp $
+
+  09 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  portage-2.1.6.7.ebuild, portage-2.1.6.13.ebuild, portage-2.2_rc33.ebuild:
+  also allow eselect 1.1 or higher instead of eselect-news, the first ships
+  another news reading module
 
   05 Jul 2009; Zac Medico <zmedico@gentoo.org> -portage-2.1.6.4.ebuild,
   portage-2.1.6.7.ebuild, -portage-2.1.6.11.ebuild, portage-2.1.6.13.ebuild:
