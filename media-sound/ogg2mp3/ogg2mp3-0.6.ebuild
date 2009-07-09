@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ogg2mp3-0.6.ebuild,v 1.1 2009/07/09 15:48:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogg2mp3/ogg2mp3-0.6.ebuild,v 1.2 2009/07/09 16:53:04 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="A perl script to convert Ogg Vorbis files to MP3 files."
@@ -15,7 +16,7 @@ IUSE=""
 
 RDEPEND="media-sound/lame
 	dev-perl/String-ShellQuote
-	media-sound/vorbis-tools"
+	media-sound/vorbis-tools[ogg123]"
 DEPEND=""
 
 src_install() {
