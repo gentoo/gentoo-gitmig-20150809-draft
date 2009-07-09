@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.20-r1.ebuild,v 1.1 2009/07/04 12:31:36 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libisofs/libisofs-0.6.20-r1.ebuild,v 1.2 2009/07/09 14:23:07 ssuominen Exp $
 
 EAPI=2
 
@@ -23,9 +23,7 @@ IUSE="acl xattr zlib"
 # So it is best to disable test/test until its fate is decided.
 RESTRICT="test"
 
-RDEPEND="virtual/acl
-	sys-apps/attr
-	acl? ( virtual/acl )
+RDEPEND="acl? ( virtual/acl )
 	xattr? ( sys-apps/attr )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
