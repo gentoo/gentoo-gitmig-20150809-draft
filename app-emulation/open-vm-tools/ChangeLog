@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.20 2009/06/30 12:27:06 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.21 2009/07/09 21:01:41 vadimk Exp $
+
+*open-vm-tools-0.0.20090618.172495-r1 (09 Jul 2009)
+
+  09 Jul 2009; Vadim Kuznetsov vadimk@gentoo.org
+  +open-vm-tools-0.0.20090618.172495-r1.ebuild, metadata.xml:
+  Fixes bugs 273211, 270433, 260878. Hardcoded procpc, Werror, general
+  ebuild clean up and missing dependencies. USE flags are added: doc, fuse.
+  However, vmblock-fuse still needs init script changes.
 
 *open-vm-tools-0.0.20090618.172495 (30 Jun 2009)
 
