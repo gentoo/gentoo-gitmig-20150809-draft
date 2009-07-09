@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r1.ebuild,v 1.2 2009/06/12 22:35:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r2.ebuild,v 1.1 2009/07/09 19:05:02 dertobi123 Exp $
 
 EAPI=1
 
-inherit autotools eutils ssl-cert fixheadtails pam multilib
+inherit autotools db-use eutils flag-o-matic ssl-cert fixheadtails pam multilib
 
 MY_P=${P/_/}
 
@@ -130,6 +130,14 @@ src_unpack() {
 		-e "s:master:cyrusmaster:g" \
 		man/cyrusmaster.8 || die "sed failed"
 
+	# Remove unwanted m4 files
+	rm "cmulocal/ax_path_bdb.m4" || die "Failed to remove cmulocal/ax_path_bdb.m4"
+
+	# Add db-4.7 support
+	epatch "${FILESDIR}/${P}-add-db47-support.patch"
+	# Fix RPATH issues
+	epatch "${FILESDIR}/${P}-fix-db-rpath.patch"
+
 	# Recreate configure.
 	WANT_AUTOCONF="2.5"
 	AT_M4DIR="cmulocal" eautoreconf
@@ -168,6 +176,7 @@ src_compile() {
 		--with-cyrus-group=mail \
 		--with-com_err=yes \
 		--without-perl \
+		--with-bdb=$(db_libname) \
 		${myconf} || die "econf failed"
 
 	# needed for parallel make. Bug #72352.
