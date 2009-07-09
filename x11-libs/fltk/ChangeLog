@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.120 2009/07/08 20:40:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.121 2009/07/09 16:32:26 jer Exp $
+
+  09 Jul 2009; Jeroen Roovers <jer@gentoo.org> fltk-2.0_pre6786.ebuild:
+  Stable for HPPA (bug #276547).
 
   08 Jul 2009; Markus Meier <maekke@gentoo.org> fltk-2.0_pre6786.ebuild:
   amd64 stable, bug #276547
