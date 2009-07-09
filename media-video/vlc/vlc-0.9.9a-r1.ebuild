@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9a-r1.ebuild,v 1.7 2009/07/08 20:25:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.9a-r1.ebuild,v 1.8 2009/07/09 14:58:09 ssuominen Exp $
 
 EAPI="1"
 
@@ -109,7 +109,8 @@ RDEPEND="
 		ncurses? ( sys-libs/ncurses )
 		nsplugin? (
 			seamonkey?  ( =www-client/seamonkey-1* )
-			!seamonkey? ( >=net-libs/xulrunner-1.8 )
+			!seamonkey? ( >=net-libs/xulrunner-1.8
+				<net-libs/xulrunner-1.9.1 )
 		)
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
