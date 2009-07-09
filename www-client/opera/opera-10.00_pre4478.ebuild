@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.2 2009/07/09 16:12:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.3 2009/07/09 16:46:14 jer Exp $
 
 EAPI="2"
 
@@ -25,8 +25,11 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
 done
 
-O_U="http://snapshot.opera.com/unix/snapshot-${PV/*_pre/}/"
-O_P="${P/_pre/-}"
+# always update the build number manually
+O_B="4478"
+
+O_U="http://snapshot.opera.com/unix/snapshot-${O_B}/"
+O_P="${P/_pre*/}-${O_B}"
 
 SRC_URI="
 	amd64? (
