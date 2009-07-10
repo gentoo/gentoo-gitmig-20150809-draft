@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.90 2009/07/06 17:26:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.91 2009/07/10 11:07:09 nirbheek Exp $
+
+  10 Jul 2009; <nirbheek@gentoo.org> devhelp-0.21.ebuild,
+  devhelp-0.21-r1.ebuild:
+  Depend on =net-libs/xulrunner-1.9.0* w.r.t bug 268394
 
   06 Jul 2009; Alexis Ballier <aballier@gentoo.org> devhelp-0.23-r1.ebuild:
   keyword ~x86-fbsd

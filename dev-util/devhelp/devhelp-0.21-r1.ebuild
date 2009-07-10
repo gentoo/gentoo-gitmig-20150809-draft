@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.3 2009/04/10 20:46:55 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.4 2009/07/10 11:07:09 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/gconf-2.6
 	>=dev-libs/glib-2.8
 	>=gnome-base/libglade-2.4
 	>=x11-libs/libwnck-2.10
-	=net-libs/xulrunner-1.9*
+	=net-libs/xulrunner-1.9.0*
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	  sys-devel/gettext
