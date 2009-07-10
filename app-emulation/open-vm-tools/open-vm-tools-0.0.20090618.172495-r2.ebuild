@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090618.172495-r1.ebuild,v 1.1 2009/07/09 21:01:41 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-0.0.20090618.172495-r2.ebuild,v 1.1 2009/07/10 19:51:51 vadimk Exp $
 
 EAPI="2"
 
@@ -83,9 +83,8 @@ src_prepare() {
 	epatch "${FILESDIR}/default-scripts.patch"
 	sed -i -e 's:VMTOOLSD_PLUGIN_ROOT=\\"\$(pkglibdir)\\":VMTOOLSD_PLUGIN_ROOT=\\"\$(pkglibdir)/plugins\\":g' \
 		services/vmtoolsd/Makefile.in || die "sed plugin path failed"
-	sed -i -e 's/proc-3.2.7/proc/g' configure{,.ac} || die "sed configure failed"
-	sed -i -e 's/CFLAGS=.*Werror/#&/g' configure{,.ac} || die "sed comment out Werror failed"
-	#eautoreconf
+	sed -i -e 's/proc-3.2.7/proc/g' configure || die "sed configure failed"
+	sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
 }
 
 src_configure() {
