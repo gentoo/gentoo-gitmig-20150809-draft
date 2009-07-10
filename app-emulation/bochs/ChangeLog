@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.83 2009/02/25 13:01:29 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.84 2009/07/10 20:01:44 lu_zero Exp $
+
+*bochs-2.4.1 (10 Jul 2009)
+
+  10 Jul 2009; Luca Barbato <lu_zero@gentoo.org> +bochs-2.4.1.ebuild:
+  New version
 
   25 Feb 2009; Joseph Jezak <josejx@gentoo.org> bochs-2.3.7.ebuild:
   Marked ppc stable for bug #245554.
