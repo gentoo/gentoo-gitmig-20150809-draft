@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.15 2008/05/21 18:59:22 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.3.ebuild,v 1.16 2009/07/10 13:51:51 ssuominen Exp $
 
 inherit eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~amd64"
 IUSE="ssl ldap mysql perl pam tcpd maildir debug postgres"
 
-DEPEND="virtual/libc
-	debug?      ( >=dev-util/efence-2.4.13 )
-	ssl?		( >=dev-libs/openssl-0.9.6 )
+DEPEND="ssl?		( >=dev-libs/openssl-0.9.6 )
 	ldap? 		( >=net-nds/openldap-2.0.7 )
 	mysql? 		( virtual/mysql )
 	postgres?	( >=virtual/postgresql-server-7.3 )
@@ -66,7 +64,7 @@ src_compile() {
 		myconf="${myconf} --enable-drac"
 	fi
 	if use debug; then
-		myconf="${myconf} --enable-electric-fence --enable-backtrace"
+		myconf="${myconf} --enable-backtrace"
 	fi
 	econf ${myconf} || die "./configure failed"
 

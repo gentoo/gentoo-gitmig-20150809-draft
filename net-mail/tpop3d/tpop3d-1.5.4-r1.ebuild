@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.4-r1.ebuild,v 1.1 2008/08/11 21:26:11 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tpop3d/tpop3d-1.5.4-r1.ebuild,v 1.2 2009/07/10 13:51:51 ssuominen Exp $
 
 EAPI=1
 
@@ -16,9 +16,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE="authexternal debug drac flatfile gdbm ldap maildir mbox mysql offensive
 	pam passwd perl postgres +sha1 shadow ssl tcpd"
 
-RDEPEND="
-	debug?		( >=dev-util/efence-2.4.13 )
-	sha1?		( >=dev-libs/openssl-0.9.6 )
+RDEPEND="sha1?		( >=dev-libs/openssl-0.9.6 )
 	ssl?		( >=dev-libs/openssl-0.9.6 )
 	ldap? 		( >=net-nds/openldap-2.0.7 )
 	mysql? 		( virtual/mysql )
@@ -61,7 +59,7 @@ src_compile() {
 	fi
 
 	# Other optional features
-	use debug		&& myconf="${myconf} --enable-electric-fence --enable-backtrace"
+	use debug		&& myconf="${myconf} --enable-backtrace"
 	use maildir		&& myconf="${myconf} --enable-mbox-maildir"
 	use mbox		|| myconf="${myconf} --disable-mbox-bsd"
 	use offensive	|| myconf="${myconf} --disable-snide-comments"
