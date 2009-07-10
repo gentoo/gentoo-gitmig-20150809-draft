@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/squeezecenter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.41 2009/06/23 17:37:10 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/ChangeLog,v 1.42 2009/07/10 11:31:32 lavajoe Exp $
+
+*squeezecenter-7.3.3-r1 (10 Jul 2009)
+
+  10 Jul 2009; Joe Peterson <lavajoe@gentoo.org>
+  +squeezecenter-7.3.3-r1.ebuild,
+  +files/squeezecenter-7.3.3-r1-aac-transcode-gentoo.patch:
+  Use mplayer instead of faad (bug #277025)
 
 *squeezecenter-7.3.3 (23 Jun 2009)
 
