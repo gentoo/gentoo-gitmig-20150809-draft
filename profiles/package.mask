@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10035 2009/07/10 10:22:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10036 2009/07/10 13:46:48 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -32,9 +32,15 @@
 #--- END OF EXAMPLES ---
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Jul 2009)
+# efence doesn't build wrt #262528, or work wrt #128814
+# masked for removal. please use dev-util/duma instead.
+dev-util/efence
+
+# Samuli Suominen <ssuominen@gentoo.org> (10 Jul 2009)
 # New libmp4v2 release. New upstream. Masked for testing.
 >=media-libs/libmp4v2-1.9.0
 >=media-libs/faac-1.28-r1
+>=media-sound/easytag-2.1.6-r2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
 #  on behalf of QA Team
