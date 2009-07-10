@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.26.2.ebuild,v 1.1 2009/05/23 20:21:23 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-2.26.2.ebuild,v 1.2 2009/07/10 14:02:18 dang Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="A GNOME application for managing encryption keys"
 HOMEPAGE="http://www.gnome.org/projects/seahorse/index.html"
@@ -62,6 +62,9 @@ src_prepare() {
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+
+	# fix building with gpgme with lfs  Bug #275445
+	epatch "${FILESDIR}"/${P}-gpgme-lfs.patch
 }
 
 pkg_postinst() {
