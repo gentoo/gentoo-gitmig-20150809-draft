@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.0.ebuild,v 1.1 2009/07/10 09:54:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.0.ebuild,v 1.2 2009/07/10 09:58:45 ssuominen Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86
 IUSE="utils"
 
 RDEPEND=""
-DEPEND="sys-apps/help2man
+DEPEND="utils? ( sys-apps/help2man )
 	!media-video/mpeg4ip"
 
 S=${WORKDIR}/${P/lib}
