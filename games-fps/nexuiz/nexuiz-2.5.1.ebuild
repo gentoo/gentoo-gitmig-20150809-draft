@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.1.ebuild,v 1.2 2009/05/30 20:00:27 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/nexuiz/nexuiz-2.5.1.ebuild,v 1.3 2009/07/10 16:06:46 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,7 +28,7 @@ UIRDEPEND="media-libs/libogg
 	x11-libs/libXxf86vm
 	virtual/opengl
 	alsa? ( media-libs/alsa-lib )
-	sdl? ( media-libs/libsdl )"
+	sdl? ( media-libs/libsdl[joystick,video] )"
 UIDEPEND="x11-proto/xextproto
 	x11-proto/xf86dgaproto
 	x11-proto/xf86vidmodeproto
