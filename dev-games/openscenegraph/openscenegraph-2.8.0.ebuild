@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.12 2009/04/14 17:37:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/openscenegraph-2.8.0.ebuild,v 1.13 2009/07/10 15:36:54 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator cmake-utils
@@ -29,13 +29,13 @@ RDEPEND="virtual/opengl
 	x11-libs/libXext
 	xrandr? ( x11-libs/libXrandr )
 	curl? ( net-misc/curl )
-	xulrunner? ( net-libs/xulrunner )
+	xulrunner? ( net-libs/xulrunner:1.8 )
 	svg? ( gnome-base/librsvg )
 	jpeg2k? ( media-libs/jasper )
 	xine? ( media-libs/xine-lib )
-	pdf? ( virtual/poppler-glib[cairo] )
-	"
+	pdf? ( virtual/poppler-glib[cairo] )"
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	app-arch/unzip"
 
 S="${WORKDIR}"/${MY_P}
