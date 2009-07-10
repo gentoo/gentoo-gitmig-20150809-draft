@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.26-r1.ebuild,v 1.9 2008/12/18 06:32:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/faac-1.26-r1.ebuild,v 1.10 2009/07/10 19:42:29 ssuominen Exp $
 
 inherit libtool eutils autotools flag-o-matic
 
@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE=""
-RDEPEND="media-libs/libmp4v2"
+RDEPEND="<media-libs/libmp4v2-1.9.0"
 DEPEND="${RDEPEND}
 	!<media-libs/faad2-2.0-r3"
 
