@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.3 2009/07/10 15:43:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.4 2009/07/10 16:18:49 markusle Exp $
 
 EAPI="2"
 inherit flag-o-matic fortran xemacs-elisp-common
@@ -48,10 +48,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}_as_needed.patch
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--localstatedir=/var/state/octave \
 		--enable-shared \
+		--without-arpack \
 		--with-blas="$(pkg-config --libs blas)" \
 		--with-lapack="$(pkg-config --libs lapack)" \
 		$(use_with hdf5) \
@@ -64,7 +65,10 @@ src_compile() {
 		$(use_with sparse cholmod) \
 		$(use_with sparse cxsparse) \
 		$(use_enable readline)
+}
 
+
+src_compile() {
 	emake || die "emake failed"
 
 	if use xemacs; then
