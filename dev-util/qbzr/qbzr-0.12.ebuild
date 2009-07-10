@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/qbzr-0.9.9.ebuild,v 1.3 2009/07/02 16:42:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/qbzr-0.12.ebuild,v 1.1 2009/07/10 08:17:17 pva Exp $
 
 EAPI=2
 
@@ -10,14 +10,16 @@ inherit distutils versionator
 
 DESCRIPTION="Qt frontend for Bazaar"
 HOMEPAGE="https://launchpad.net/qbzr"
-SRC_URI="http://launchpad.net/qbzr/trunk/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/qbzr/trunk/${PV}/+download/${PN}-${PV/.0}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-util/bzr-1.9
+# bzr version comes from NEWS file. It's lowest version required for some
+# features to work.
+DEPEND=">=dev-util/bzr-1.14
 		>=dev-python/PyQt4-4.1[X]"
 RDEPEND="${DEPEND}"
 
@@ -31,4 +33,13 @@ src_test() {
 	elog "It's impossible to run tests at this point. If you wish to run tests"
 	elog "after installation of ${PN} execute:"
 	elog " $ bzr selftest -s bzrlib.plugins.qbzr"
+}
+
+pkg_postinst() {
+	distutils_pkg_postinst
+	elog
+	elog "To enable spellchecking in qcommit, please, install >=dev-python/pyenchant-1.5.0"
+	elog " # emerge -a >=dev-python/pyenchant-1.5.0"
+	elog "To enable syntax highlighting, please, install dev-python/pygments"
+	elog " # emerge -a dev-python/pygments"
 }
