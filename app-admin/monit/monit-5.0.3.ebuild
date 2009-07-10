@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.0.3.ebuild,v 1.1 2009/06/22 07:34:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-5.0.3.ebuild,v 1.2 2009/07/10 20:40:19 gengor Exp $
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
-HOMEPAGE="http://www.tildeslash.com/monit/"
-SRC_URI="http://www.tildeslash.com/monit/dist/${P}.tar.gz"
+HOMEPAGE="http://mmonit.com/monit/"
+SRC_URI="http://mmonit.com/monit/dist/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc CHANGES.txt CONTRIBUTORS FAQ.txt README* STATUS UPGRADE.txt
+	dodoc CHANGES.txt CONTRIBUTORS FAQ.txt README*
 	dohtml -r doc/*
 
 	insinto /etc; insopts -m700; doins monitrc || die "doins monitrc failed"
@@ -38,6 +38,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Sample configurations are available at"
-	elog "http://www.tildeslash.com/monit/doc/examples.php"
+	elog "Sample configurations are available at:"
+	elog "http://mmonit.com/monit/documentation/"
 }

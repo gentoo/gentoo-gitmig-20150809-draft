@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/monit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.40 2009/06/22 07:34:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/ChangeLog,v 1.41 2009/07/10 20:40:19 gengor Exp $
+
+  10 Jul 2009; Gordon Malm <gengor@gentoo.org> monit-4.8.1.ebuild,
+  monit-4.8.2.ebuild, monit-4.10.1.ebuild, monit-5.0_beta6.ebuild,
+  monit-5.0.3.ebuild:
+  Update upstream URLs, minor dodoc QA. Bug #276632
 
 *monit-5.0.3 (22 Jun 2009)
 

@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.8.2.ebuild,v 1.5 2007/04/24 18:12:28 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/monit/monit-4.8.2.ebuild,v 1.6 2009/07/10 20:40:19 gengor Exp $
 
 DESCRIPTION="a utility for monitoring and managing daemons or similar programs running on a Unix system."
-HOMEPAGE="http://www.tildeslash.com/monit/"
-SRC_URI="http://www.tildeslash.com/monit/dist/${P}.tar.gz"
+HOMEPAGE="http://mmonit.com/monit/"
+SRC_URI="http://mmonit.com/monit/dist/old/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,6 +39,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Sample configurations are available at"
-	elog "http://www.tildeslash.com/monit/doc/examples.php"
+	elog "Sample configurations are available at:"
+	elog "http://mmonit.com/monit/documentation/"
 }
