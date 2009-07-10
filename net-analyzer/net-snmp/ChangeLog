@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.190 2009/05/31 07:00:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.191 2009/07/10 21:58:28 dertobi123 Exp $
+
+*net-snmp-5.4.2.1-r1 (10 Jul 2009)
+
+  10 Jul 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  +net-snmp-5.4.2.1-r1.ebuild, +files/CVE-2008-6123.patch:
+  Revbump, include upstream fix for CVE-2008-6123, fixed #250429
 
   31 May 2009; Jeroen Roovers <jer@gentoo.org>
   -files/net-snmp-5.4.1-CVE-2008-2292.patch,
