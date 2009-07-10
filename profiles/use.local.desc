@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4617 2009/07/10 13:47:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4618 2009/07/10 19:27:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2678,6 +2678,7 @@ sci-libs/metis:int64 - Build the 64 bits integer library (metis >=5 only)
 sci-libs/mkl:fortran95 - Installs the BLAS/LAPACK FORTRAN95 static libraries
 sci-libs/mkl:int64 - Installs the 64 bits integer libraries
 sci-libs/mkl:serial - Installs the serial (as non-threaded) libraries
+sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/plplot:ada - Add bindings for the ADA programming language
 sci-libs/plplot:itcl - Add bindings for dev-tcltk/itcl
 sci-libs/plplot:jadetex - Add device for app-text/jadetex (for processing tex files produced by the TeX backend of Jade)
