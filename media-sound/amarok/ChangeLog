@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.333 2009/07/04 15:55:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.334 2009/07/10 21:02:07 jmbsvicetto Exp $
+
+*amarok-1.4.10_p20090130-r3 (10 Jul 2009)
+
+  10 Jul 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +files/amarok-libmp4v2.patch, +amarok-1.4.10_p20090130-r3.ebuild:
+  Added a patch to amarok-1.4.10_p20090130-r3 to support the new libmp4v2 -
+  thanks to Samuli Suominen <ssuominen@gentoo.org> for the patch.
 
   04 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   amarok-1.4.10_p20090130-r2.ebuild:

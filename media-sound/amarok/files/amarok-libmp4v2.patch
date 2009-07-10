@@ -1,0 +1,70 @@
+diff -ur amarok-1.4.10.orig/amarok/configure.in.in amarok-1.4.10/amarok/configure.in.in
+--- amarok-1.4.10.orig/amarok/configure.in.in	2008-08-14 00:21:51.000000000 +0300
++++ amarok-1.4.10/amarok/configure.in.in	2009-07-10 17:58:31.000000000 +0300
+@@ -977,7 +977,7 @@
+     ac_cppflags_save=$CPPFLAGS
+     CPPFLAGS="$CPPFLAGS -I."
+     AC_CHECK_HEADERS(systems.h)
+-    AC_CHECK_HEADERS([mp4.h], [have_mp4_h=yes], [],
++    AC_CHECK_HEADERS([mp4v2/mp4v2.h], [have_mp4_h=yes], [],
+         [#ifdef HAVE_SYSTEMS_H
+          # include <systems.h>
+          #endif
+diff -ur amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4properties.h amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.h
+--- amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4properties.h	2008-08-14 00:21:51.000000000 +0300
++++ amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.h	2009-07-10 17:57:45.000000000 +0300
+@@ -24,7 +24,7 @@
+ 
+ #include <audioproperties.h>
+ #include <tstring.h>
+-#include <mp4.h>
++#include <mp4v2/mp4v2.h>
+ // mp4.h drags in mp4_config.h that defines these
+ // get rid of them so they don't conflict with our config.h
+ #undef VERSION
+diff -ur amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4tag.h amarok-1.4.10/amarok/src/metadata/mp4/mp4tag.h
+--- amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4tag.h	2008-08-14 00:21:51.000000000 +0300
++++ amarok-1.4.10/amarok/src/metadata/mp4/mp4tag.h	2009-07-10 17:57:52.000000000 +0300
+@@ -23,7 +23,7 @@
+ 
+ #include <tag.h>
+ #include "mp4file.h"
+-#include <mp4.h>
++#include <mp4v2/mp4v2.h>
+ 
+ namespace TagLib {
+ diff -ur amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4file.cpp amarok-1.4.10/amarok/src/metadata/mp4/mp4file.cpp
+--- amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4file.cpp	2009-07-10 18:58:13.000000000 +0000
++++ amarok-1.4.10/amarok/src/metadata/mp4/mp4file.cpp	2009-07-10 18:59:11.000000000 +0000
+@@ -30,6 +30,8 @@
+ #include <audioproperties.h>
+ 
+ #include <stdint.h>
++#include <stdlib.h>
++#include <sys/types.h>
+ 
+ #define MP4V2_HAS_WRITE_BUG 1
+ 
+diff -ur amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4properties.cpp amarok-1.4.10/amarok/src/metadata/mp4properties.cpp
+--- amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4properties.cpp	2009-07-10 18:58:13.000000000 +0000
++++ amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.cpp	2009-07-10 18:58:39.000000000 +0000
+@@ -30,6 +30,7 @@
+ #endif
+ 
+ #include <stdint.h>
++#include <sys/types.h>
+ 
+ #ifndef UINT64_TO_DOUBLE
+ #define UINT64_TO_DOUBLE(a) ((double)((int64_t)(a)))
+diff -ur amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4tag.cpp amarok-1.4.10/amarok/src/metadata/mp4/mp4tag.cpp
+--- amarok-1.4.10.orig/amarok/src/metadata/mp4/mp4tag.cpp	2009-07-10 18:58:13.000000000 +0000
++++ amarok-1.4.10/amarok/src/metadata/mp4/mp4tag.cpp	2009-07-10 18:59:36.000000000 +0000
+@@ -24,6 +24,8 @@
+ 
+ #include <tag.h>
+ #include <stdint.h>
++#include <stdlib.h>
++#include <sys/types.h>
+ 
+ using namespace TagLib;
+ 
