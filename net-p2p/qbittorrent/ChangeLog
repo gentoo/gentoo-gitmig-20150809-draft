@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.57 2009/06/27 12:49:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.58 2009/07/10 20:26:55 hwoarang Exp $
+
+*qbittorrent-1.3.3-r1 (10 Jul 2009)
+
+  10 Jul 2009; Markos Chandras <hwoarang@gentoo.org>
+  +qbittorrent-1.3.3-r1.ebuild, +files/qbittorrent-1.3.3-no-strip.patch:
+  Fix Pre-stripped files issue ( bug 265209 )
 
   27 Jun 2009; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Add qt herd as co-maintainer
