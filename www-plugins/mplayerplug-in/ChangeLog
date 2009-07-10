@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/mplayerplug-in
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mplayerplug-in/ChangeLog,v 1.3 2009/05/31 00:47:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mplayerplug-in/ChangeLog,v 1.4 2009/07/10 11:14:25 nirbheek Exp $
+
+  10 Jul 2009; <nirbheek@gentoo.org> mplayerplug-in-3.55-r1.ebuild:
+  Fix firefox[xulrunner] check to apply only to 3.0. 3.5 doesn't have it
+  optional anymore, bug 268394
 
   31 May 2009; Ryan Hill <dirtyepic@gentoo.org>
   mplayerplug-in-3.55-r1.ebuild, +files/mplayerplug-in-3.55-glibc210.patch:

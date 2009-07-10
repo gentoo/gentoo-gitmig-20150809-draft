@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mplayerplug-in/mplayerplug-in-3.55-r1.ebuild,v 1.2 2009/05/31 00:47:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mplayerplug-in/mplayerplug-in-3.55-r1.ebuild,v 1.3 2009/07/10 11:14:25 nirbheek Exp $
 
 inherit eutils multilib autotools flag-o-matic
 
@@ -33,7 +33,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	### Mozilla Firefox 3.0 doesn't install the pkg config files
-	if has_version ">=www-client/mozilla-firefox-3.0" &&
+	if has_version "=www-client/mozilla-firefox-3.0*" &&
 		! built_with_use www-client/mozilla-firefox xulrunner; then
 		die 'Firefox 3.0 must be built with USE="xulrunner"'
 	fi
