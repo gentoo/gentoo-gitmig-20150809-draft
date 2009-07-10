@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.6.2.ebuild,v 1.2 2009/07/05 20:57:15 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.6.2-r1.ebuild,v 1.1 2009/07/10 18:56:28 dertobi123 Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -21,7 +21,7 @@ IUSE="cdb dovecot-sasl hardened ipv6 ldap mbox mysql nis pam postgres sasl selin
 MY_PV="${PV/_rc/-RC}"
 MY_SRC="${PN}-${MY_PV}"
 MY_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official"
-VDA_PV="2.5.5"
+VDA_PV="2.6.2"
 VDA_P="${PN}-${VDA_PV}-vda-ng"
 RC_VER="2.5"
 
@@ -247,9 +247,7 @@ src_compile() {
 	einfo "CC=${my_cc:=gcc}"
 
 	# Workaround for bug #76512
-	if use hardened ; then
-		[[ "$(gcc-version)" == "3.4" ]] && replace-flags -O? -Os
-	fi
+	[[ "$(gcc-version)" == "3.4" ]] && use hardened && replace-flags -O? -Os
 
 	make DEBUG="" CC="${my_cc:=gcc}" OPT="${CFLAGS}" CCARGS="${mycc}" AUXLIBS="${mylibs}" \
 		makefiles || die "configure problem"
