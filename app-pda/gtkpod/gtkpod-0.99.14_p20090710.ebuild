@@ -1,12 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.14_p20090710.ebuild,v 1.1 2009/07/10 16:14:17 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.14_p20090710.ebuild,v 1.2 2009/07/10 19:18:33 ssuominen Exp $
 
 EAPI=2
+inherit autotools
+
 DESCRIPTION="GUI for iPod using GTK2"
 HOMEPAGE="http://gtkpod.sourceforge.net/"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
-#SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~ssuominen/${P}.tar.bz2"
 #SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2 FDL-1.2"
@@ -32,6 +34,10 @@ DEPEND="${RDEPEND}
 	sys-devel/flex
 	nls? ( dev-util/intltool
 		sys-devel/gettext )"
+
+src_prepare() {
+	eautoreconf
+}
 
 src_configure() {
 	econf \
