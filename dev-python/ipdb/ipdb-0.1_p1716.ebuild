@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ipdb-0.1_p1716.ebuild,v 1.1 2009/04/04 10:59:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ipdb-0.1_p1716.ebuild,v 1.2 2009/07/10 18:22:15 arfrever Exp $
 
 EAPI=2
 inherit distutils
@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 LICENSE="GPL-2"
 
 RDEPEND=""
-DEPEND=""
+DEPEND="dev-python/setuptools"
 
 S="${WORKDIR}"/${PN}-${MY_PV}

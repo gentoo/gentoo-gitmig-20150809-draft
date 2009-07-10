@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ipdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.1 2009/04/04 10:59:59 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipdb/ChangeLog,v 1.2 2009/07/10 18:22:15 arfrever Exp $
+
+  10 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ipdb-0.1_p1716.ebuild:
+  Add dev-python/setuptools to DEPEND (bug #271577).
 
 *ipdb-0.1_p1716 (04 Apr 2009)
 
