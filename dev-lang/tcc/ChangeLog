@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcc
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.28 2009/01/04 21:03:25 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.29 2009/07/10 21:44:58 truedfx Exp $
+
+*tcc-0.9.25 (10 Jul 2009)
+
+  10 Jul 2009; Harald van Dĳk <truedfx@gentoo.org> +tcc-0.9.25.ebuild:
+  Version bump, with amd64 support (#276586 by Thomas)
 
 *tcc-0.9.24 (04 Jan 2009)
 
