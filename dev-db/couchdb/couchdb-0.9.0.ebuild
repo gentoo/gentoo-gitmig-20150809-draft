@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.9.0.ebuild,v 1.1 2009/04/01 11:08:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.9.0.ebuild,v 1.2 2009/07/10 15:56:53 caleb Exp $
 
-inherit eutils distutils
+inherit eutils distutils multilib
 
 DESCRIPTION="Apache CouchDB is a distributed, fault-tolerant and schema-free document-oriented database."
 HOMEPAGE="http://couchdb.apache.org/"
@@ -48,4 +48,6 @@ src_install() {
 
 	newinitd "${FILESDIR}/couchdb.init-0.9" couchdb || die
 	newconfd "${FILESDIR}/couchdb.conf-0.9" couchdb || die
+
+	sed -i -e "s:LIBDIR:$(get_libdir):" "${D}/etc/conf.d/couchdb"
 }
