@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.19.ebuild,v 1.7 2009/07/10 01:07:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.19.ebuild,v 1.8 2009/07/10 01:09:06 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="aac alsa jack mp3 twolame vorbis"
 
-RDEPEND="encode? ( media-sound/lame )
+RDEPEND="mp3? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
 	aac? ( media-libs/faac )
 	twolame? ( media-sound/twolame )
