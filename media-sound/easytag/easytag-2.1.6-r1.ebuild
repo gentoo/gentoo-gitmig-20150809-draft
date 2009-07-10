@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r1.ebuild,v 1.7 2009/06/25 18:02:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-2.1.6-r1.ebuild,v 1.8 2009/07/10 13:47:05 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~ppc ppc64 sparc x86"
-IUSE="aac flac mp3 speex vorbis wavpack"
+IUSE="flac mp3 mp4 speex vorbis wavpack"
 
 RDEPEND=">=x11-libs/gtk+-2.12:2
 	mp3? ( >=media-libs/id3lib-3.8.3-r7
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 	flac? ( media-libs/flac
 		media-libs/libvorbis )
 	vorbis? ( media-libs/libvorbis )
-	aac? ( media-libs/libmp4v2 )
+	mp4? ( <media-libs/libmp4v2-1.9.0 )
 	wavpack? ( media-sound/wavpack )
 	speex? ( media-libs/speex
 		media-libs/libvorbis )"
@@ -38,7 +38,7 @@ src_configure() {
 		$(use_enable mp3 id3v23) \
 		$(use_enable vorbis ogg) \
 		$(use_enable flac) \
-		$(use_enable aac mp4) \
+		$(use_enable mp4) \
 		$(use_enable wavpack) \
 		$(use_enable speex)
 }
