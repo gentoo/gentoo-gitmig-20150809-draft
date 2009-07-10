@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/freehdl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.16 2008/04/23 08:56:29 calchan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.17 2009/07/10 17:09:17 calchan Exp $
+
+*freehdl-0.0.7 (10 Jul 2009)
+
+  10 Jul 2009; Denis Dupeyron <calchan@gentoo.org> +freehdl-0.0.7.ebuild:
+  Version bump, thanks to Christopher Covington.
 
 *freehdl-0.0.6 (23 Apr 2008)
 
