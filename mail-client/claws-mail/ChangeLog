@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.124 2009/07/06 11:53:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.125 2009/07/10 07:35:27 fauli Exp $
+
+  10 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  claws-mail-3.7.2.ebuild:
+  add minimal version of net-libs/gnutls that is required
 
 *claws-mail-3.7.2 (06 Jul 2009)
 

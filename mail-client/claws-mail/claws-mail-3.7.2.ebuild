@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.1 2009/07/06 11:53:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.2 2009/07/10 07:35:27 fauli Exp $
 
 inherit eutils multilib
 
@@ -17,7 +17,7 @@ session smime spamassassin spell ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.6
 	pda? ( >=app-pda/jpilot-0.99 )
-	ssl? ( net-libs/gnutls )
+	ssl? ( >=net-libs/gnutls-2.0.3 )
 	ldap? ( >=net-nds/openldap-2.0.7 )
 	crypt? ( >=app-crypt/gpgme-0.4.5 )
 	dbus? ( >=dev-libs/dbus-glib-0.60 )
@@ -27,7 +27,7 @@ COMMONDEPEND=">=x11-libs/gtk+-2.6
 	imap? ( >=net-libs/libetpan-0.57 )
 	nntp? ( >=net-libs/libetpan-0.57 )
 	gnome? ( >=gnome-base/libgnomeprintui-2.2 )
-	gnutls? ( net-libs/gnutls )
+	gnutls? ( >=net-libs/gnutls-2.0.3 )
 	startup-notification? ( x11-libs/startup-notification )
 	bogofilter? ( mail-filter/bogofilter )
 	session? ( x11-libs/libSM
