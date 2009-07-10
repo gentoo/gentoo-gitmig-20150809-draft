@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r2.ebuild,v 1.1 2009/05/29 12:14:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tunepimp/tunepimp-0.5.3-r2.ebuild,v 1.2 2009/07/10 12:49:06 ssuominen Exp $
 
 EAPI="1"
 
@@ -26,6 +26,7 @@ RDEPEND="sys-libs/zlib
 	>=media-libs/flac-1.1.2
 	media-libs/libmad
 	>=media-libs/musicbrainz-2.1.0:1
+	media-libs/libmp4v2
 	media-libs/libofa
 	media-libs/libvorbis
 	!media-sound/trm
@@ -47,6 +48,10 @@ src_unpack() {
 		"${FILESDIR}/${P}-gcc44.patch"
 
 	sed -i -e "s: tta::" configure.in
+
+	if has_version ">=media-libs/libmp4v2-1.9.0"; then
+		epatch "${FILESDIR}"/${P}-new_libmp4v2.patch
+	fi
 
 	eautoreconf
 }
