@@ -1,6 +1,13 @@
 # ChangeLog for x11-wm/afterstep
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.81 2007/07/22 06:02:57 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/ChangeLog,v 1.82 2009/07/10 13:58:19 ssuominen Exp $
+
+  10 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -files/afterstep-1.8.11-gentoo.diff, -afterstep-2.00.05.ebuild,
+  -afterstep-2.1.2.ebuild, -afterstep-2.2.0.ebuild, -afterstep-2.2.1.ebuild,
+  -afterstep-2.2.2.ebuild, -afterstep-2.2.2-r1.ebuild,
+  -afterstep-2.2.3.ebuild, afterstep-2.2.4.ebuild:
+  dev-util/efence is no more
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   afterstep-2.00.05.ebuild, afterstep-2.1.2.ebuild, afterstep-2.2.0.ebuild,

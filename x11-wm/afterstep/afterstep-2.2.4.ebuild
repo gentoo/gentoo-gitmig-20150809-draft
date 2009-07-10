@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.13 2007/07/22 06:02:57 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.14 2009/07/10 13:58:19 ssuominen Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,9 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="debug gif jpeg mmx nls png tiff xinerama"
 
-RDEPEND="virtual/libc
-	media-libs/freetype
-	debug? ( !hppa? ( !ppc? ( dev-util/efence ) ) )
+RDEPEND="media-libs/freetype
 	png? ( >=media-libs/libpng-1.2.5 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	gif?  ( >=media-libs/giflib-4.1.0 )
@@ -29,18 +27,16 @@ RDEPEND="virtual/libc
 	x11-libs/libXpm
 	x11-libs/libXrender
 	xinerama? ( x11-libs/libXinerama )"
-
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	xinerama? ( x11-proto/xineramaproto )"
 
-S="${WORKDIR}/AfterStep-${PV}"
+S=${WORKDIR}/AfterStep-${PV}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/no-alternatives.patch"
 }
 
@@ -49,10 +45,6 @@ src_compile() {
 
 	use debug && myconf="--enable-gdb --enable-warn --enable-gprof
 		--enable-audit --enable-trace --enable-trace-x"
-
-	if ! use ppc && use debug ; then
-		myconf="${myconf} --with-libefence"
-	fi
 
 	#implied intent of debug means you need the frame pointers.
 	use debug && filter-flags -fomit-frame-pointer
