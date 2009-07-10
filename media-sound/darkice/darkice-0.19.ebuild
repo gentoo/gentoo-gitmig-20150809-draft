@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.19.ebuild,v 1.6 2009/06/25 17:42:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.19.ebuild,v 1.7 2009/07/10 01:07:23 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="IceCast live streamer, delivering ogg and mp3 streams simultaneously to multiple hosts."
@@ -11,7 +12,7 @@ SRC_URI="http://${PN}.tyrell.hu/dist/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
-IUSE="aac alsa encode jack twolame vorbis"
+IUSE="aac alsa jack mp3 twolame vorbis"
 
 RDEPEND="encode? ( media-sound/lame )
 	vorbis? ( media-libs/libvorbis )
@@ -19,33 +20,35 @@ RDEPEND="encode? ( media-sound/lame )
 	twolame? ( media-sound/twolame )
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
-	!encode? ( !vorbis? ( !aac? ( !twolame? ( media-libs/libvorbis ) ) ) )"
+	!mp3? ( !vorbis? ( !aac? ( !twolame? ( media-sound/lame ) ) ) )"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.18.1-gcc43.patch
+	epatch "${FILESDIR}"/${PN}-0.18.1-gcc43.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
-src_compile() {
-	if ! use encode && ! use vorbis && ! use aac && ! use twolame; then
-		ewarn "One of USE flags encode, vorbis, aac, or twolame is required."
-		ewarn "Selecting vorbis for you."
-		local myconf="--with-vorbis"
+src_configure() {
+	local myconf
+
+	if ! use mp3 && ! use vorbis && ! use aac && ! use twolame; then
+		ewarn "One of USE flags mp3, vorbis, aac, or twolame is required."
+		ewarn "Selecting mp3 for you."
+		myconf="--with-lame"
 	fi
 
 	econf $(use_with aac faac) \
 		$(use_with alsa) \
-		$(use_with encode lame) \
+		$(use_with mp3 lame) \
 		$(use_with jack) \
 		$(use_with twolame) \
 		$(use_with vorbis) \
 		${myconf}
-	emake || die "emake failed."
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
 }
