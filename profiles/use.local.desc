@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4619 2009/07/10 20:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4620 2009/07/10 21:28:09 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1940,6 +1940,7 @@ net-analyzer/echoping:priority - enable socket priority support.
 net-analyzer/echoping:smtp - enable support for SMTP protocol.
 net-analyzer/echoping:tos - enable support for TOS (TYpe Of Service).
 net-analyzer/fprobe:messages - enable console messages
+net-analyzer/lilac:nmap - Installs nmap which can be used to automatically discover devices to monitor.
 net-analyzer/metasploit:httpd - Enable web interface
 net-analyzer/munin:irc - installs deps for monitoring IRC
 net-analyzer/munin:munin-apache - installs deps for monitoring apache
