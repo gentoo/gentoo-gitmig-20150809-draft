@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.3-r3.ebuild,v 1.8 2008/11/04 03:32:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.1.4-r2.ebuild,v 1.1 2009/07/10 22:50:21 mabi Exp $
 
 EAPI="1"
 
-inherit eutils portability versionator
+inherit eutils portability versionator toolchain-funcs
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="+deprecated readline static"
 
 DEPEND="readline? ( sys-libs/readline )"
@@ -22,13 +22,13 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-${PATCH_PV}-make.patch
+	epatch "${FILESDIR}"/${PN}-${PATCH_PV}-make-r1.patch
 	epatch "${FILESDIR}"/${PN}-${PATCH_PV}-module_paths.patch
 
 	EPATCH_SOURCE="${FILESDIR}/${PV}" EPATCH_SUFFIX="upstream.patch" epatch
 
 	# correct lua versioning
-	sed -i -e 's/\(LIB_VERSION = \)6:1:1/\16:3:1/' src/Makefile
+	sed -i -e 's/\(LIB_VERSION = \)6:1:1/\16:4:1/' src/Makefile
 
 	sed -i -e 's:\(/README\)\("\):\1.gz\2:g' doc/readme.html
 
@@ -48,7 +48,7 @@ src_unpack() {
 	# compiler (built statically) nor the lua libraries (both shared and static
 	# are installed)
 	if use static ; then
-		epatch "${FILESDIR}"/${PN}-${PATCH_PV}-make_static.patch
+		epatch "${FILESDIR}"/${PN}-${PATCH_PV}-make_static-r1.patch
 	fi
 
 	# We want packages to find our things...
@@ -56,10 +56,10 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	myflags=
 	# what to link to liblua
 	liblibs="-lm"
-	mycflags="${mycflags} -DLUA_USE_LINUX"
 	liblibs="${liblibs} $(dlopen_lib)"
 
 	# what to link to the executables
@@ -69,8 +69,8 @@ src_compile() {
 	fi
 
 	cd src
-	emake CFLAGS="${mycflags} ${CFLAGS}" \
-			RPATH="/usr/$(get_libdir)/" \
+	emake CC="${CC}" CFLAGS="-DLUA_USE_LINUX ${CFLAGS}" \
+			RPATH="${ROOT}/usr/$(get_libdir)/" \
 			LUA_LIBS="${mylibs}" \
 			LIB_LIBS="${liblibs}" \
 			V=${PV} \
