@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.24-r2.ebuild,v 1.1 2009/07/05 20:11:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.24-r2.ebuild,v 1.2 2009/07/10 20:45:43 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,13 +13,15 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
-DEPEND=""
 RDEPEND=""
+DEPEND="sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/1.21-pic.patch
+	sed -i -e 's:$(CFLAGS) -o x86:$(LDFLAGS) $(CFLAGS) -o x86:' \
+		Makefile || die "I don't want your LDFLAGS."
 }
 
 src_compile() {
