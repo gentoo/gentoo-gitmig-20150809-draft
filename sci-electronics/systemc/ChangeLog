@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/systemc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.13 2009/07/11 16:19:51 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/systemc/ChangeLog,v 1.14 2009/07/11 17:59:04 calchan Exp $
+
+*systemc-2.2.0-r1 (11 Jul 2009)
+
+  11 Jul 2009; Denis Dupeyron <calchan@gentoo.org> +systemc-2.2.0-r1.ebuild:
+  Fixed compilation with gcc 4.3 and 4.4 (bug #252623, thanks to Gene Seto
+  for the patch). Fixed executable stack warnings in a portable way.
 
   11 Jul 2009; Denis Dupeyron <calchan@gentoo.org>
   -systemc-2.2_beta20060605.ebuild:
