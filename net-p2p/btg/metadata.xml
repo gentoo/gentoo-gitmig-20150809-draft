@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>net-p2p</herd>
+  <maintainer>
+	  <email>volkmar@gentoo.org</email>
+	  <name>Mounir Lamouri</name>
+  </maintainer>
   <use>
     <flag name="event-callback">Enable calling a script or executable for certain events</flag>
 	<flag name="upnp">Enable support for UPnP</flag>

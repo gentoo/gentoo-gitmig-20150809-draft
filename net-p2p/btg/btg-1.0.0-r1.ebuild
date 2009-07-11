@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-1.0.0.ebuild,v 1.1 2009/07/02 22:55:49 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/btg/btg-1.0.0-r1.ebuild,v 1.1 2009/07/11 15:46:26 volkmar Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -21,8 +21,9 @@ RDEPEND=">=dev-libs/boost-1.35
 	dev-libs/libgcrypt
 	dev-libs/libgpg-error
 	dev-libs/libtasn1
+	dev-libs/xmlrpc-epi
 	net-libs/gnutls
-	net-libs/rb_libtorrent
+	>=net-libs/rb_libtorrent-0.13.1
 	curl? ( net-misc/curl )
 	gtk? ( dev-cpp/gtkmm:2.4
 		dev-libs/libsigc++:2
@@ -31,7 +32,7 @@ RDEPEND=">=dev-libs/boost-1.35
 	!minimal? ( dev-util/dialog )
 	ncurses? ( sys-libs/ncurses )
 	test? ( dev-util/cppunit )
-	upnp? ( >=net-libs/rb_libtorrent-0.14 )
+	upnp? ( || ( >=net-libs/rb_libtorrent-0.13 net-libs/clinkcc ) )
 	webinterface? ( dev-lang/php:5[xml,zlib] virtual/httpd-cgi )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
@@ -42,6 +43,7 @@ S="${WORKDIR}/${P%_*}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gnutls-pc.patch  # bug 275850
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-xmlrpc.patch
 	eautoreconf
 }
 
