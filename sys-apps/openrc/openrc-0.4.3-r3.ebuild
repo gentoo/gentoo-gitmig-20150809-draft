@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r3.ebuild,v 1.2 2009/06/08 19:38:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r3.ebuild,v 1.3 2009/07/11 15:12:25 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -67,6 +67,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/0.4.2/0003-KV.patch
 	epatch "${FILESDIR}"/0.4.3/0001-fix-is_older_than.patch
 	epatch "${FILESDIR}"/0.4.3/0002-support-custom-status.patch
+	epatch "${FILESDIR}"/0.4.3/0003-command-line-size-fix.patch
 }
 
 src_compile() {
