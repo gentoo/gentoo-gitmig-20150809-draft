@@ -1,13 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.11.1.ebuild,v 1.3 2008/06/11 20:49:08 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/fetchyahoo-2.13.6.ebuild,v 1.1 2009/07/11 14:23:57 dertobi123 Exp $
 
 IUSE=""
 DESCRIPTION="Download mail from a Yahoo! webmail account to a local mail spool, an mbox file, or to procmail."
-SRC_URI="http://fetchyahoo.twizzler.org/${P}.tar.gz"
+MY_P=${P/_alpha/alpha}
+SRC_URI="http://fetchyahoo.twizzler.org/${MY_P}.tar.gz"
 HOMEPAGE="http://fetchyahoo.twizzler.org/"
 LICENSE="LGPL-2.1"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
+
+S="${WORKDIR}/${MY_P}"
 
 SLOT="0"
 
@@ -24,12 +27,12 @@ DEPEND="dev-lang/perl
 	dev-perl/TermReadKey"
 
 src_install() {
-	dobin fetchyahoo
-	doman fetchyahoo.1
+	dobin fetchyahoo || die
+	doman fetchyahoo.1 || die
 	insinto /etc
-	doins fetchyahoorc
-	dodoc ChangeLog Credits INSTALL TODO fetchyahoorc
-	dohtml index.html
+	doins fetchyahoorc || die
+	dodoc ChangeLog Credits INSTALL TODO fetchyahoorc || die
+	dohtml index.html || die
 }
 
 pkg_postinst() {
