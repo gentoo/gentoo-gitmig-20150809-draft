@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11.ebuild,v 1.1 2009/03/20 10:44:37 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11.ebuild,v 1.2 2009/07/11 17:00:43 tove Exp $
 
 inherit eutils multilib python
 
@@ -119,7 +119,7 @@ pkg_postinst() {
 	   python_version
 	   python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/dbmail
 	fi
-	elog "Please read /usr/share/doc/${PF}/INSTALL.gz"
+	elog "Please read the INSTALL file in /usr/share/doc/${PF}/"
 	elog "for remaining instructions on setting up dbmail users and "
 	elog "for finishing configuration to connect to your MTA and "
 	elog "to connect to your db."

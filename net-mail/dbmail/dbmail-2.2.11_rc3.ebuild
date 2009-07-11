@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11_rc3.ebuild,v 1.2 2008/12/01 12:38:03 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dbmail/dbmail-2.2.11_rc3.ebuild,v 1.3 2009/07/11 17:00:43 tove Exp $
 
 inherit eutils
 
@@ -82,7 +82,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Please read /usr/share/doc/${PF}/INSTALL.gz"
+	elog "Please read the INSTALL file in /usr/share/doc/${PF}/"
 	elog "for remaining instructions on setting up dbmail users and "
 	elog "for finishing configuration to connect to your MTA and "
 	elog "to connect to your db."
