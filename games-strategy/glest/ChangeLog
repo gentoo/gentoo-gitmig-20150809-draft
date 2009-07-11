@@ -1,6 +1,14 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.22 2009/01/22 18:53:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.23 2009/07/11 00:36:39 mr_bones_ Exp $
+
+*glest-3.2.2 (11 Jul 2009)
+
+  11 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/glest-3.1.2-gcc43.patch, -files/glest-3.1.2-home.patch,
+  +files/glest-3.2.2-gentoo.patch, +files/glest-3.2.2-xerces-c.patch,
+  -glest-3.1.2.ebuild, +glest-3.2.2.ebuild:
+  version bump (bug #259701 with submissions from yury fedorchenko); clean old
 
   22 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> glest-3.1.2.ebuild:
   transition to the non-no* use flags in libsdl
