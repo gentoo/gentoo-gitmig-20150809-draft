@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.77 2009/07/04 12:49:30 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.78 2009/07/11 00:23:06 chainsaw Exp $
+
+  11 Jul 2009; <chainsaw@gentoo.org> libcaca-0.99_beta16.ebuild:
+  Marked stable on AMD64 for bug #275982; tested on a dual Opteron 2354.
 
   04 Jul 2009; Brent Baude <ranger@gentoo.org> libcaca-0.99_beta16.ebuild:
   stable ppc64, bug 275907
