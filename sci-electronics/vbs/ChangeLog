@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/vbs
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.7 2009/02/16 00:49:15 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/vbs/ChangeLog,v 1.8 2009/07/11 04:14:09 calchan Exp $
+
+  11 Jul 2009; Denis Dupeyron <calchan@gentoo.org> vbs-1.4.0.ebuild:
+  Fixed compatibility with glibc 2.10, thanks to Diego Pettenò (bug
+  #276734).
 
   16 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/vbs-1.4.0-gcc-4.3.patch, vbs-1.4.0.ebuild:
