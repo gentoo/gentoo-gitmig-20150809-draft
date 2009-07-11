@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4622 2009/07/11 09:07:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4623 2009/07/11 18:47:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -29,7 +29,7 @@ app-admin/conky:audacious - enable monitoring of music played by media-sound/aud
 app-admin/conky:bmpx - enable monitoring of music played by media-sound/bmpx
 app-admin/conky:math - enable support for glibc's libm math library
 app-admin/conky:moc - enable monitoring of music played by media-sound/moc
-app-admin/conky:mpd - enable monitoring of music played by media-sound/mpd
+app-admin/conky:mpd - enable monitoring of music controlled by media-sound/mpd
 app-admin/conky:nano-syntax - enable syntax highlighting for app-editors/nano
 app-admin/conky:nvidia - enable reading of nvidia card temperature sensors via media-video/nvidia-settings
 app-admin/conky:portmon - enable support for tcp (ip4) port monitoring
