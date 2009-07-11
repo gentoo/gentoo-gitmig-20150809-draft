@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.28.ebuild,v 1.4 2009/06/29 12:28:54 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/xlockmore-5.28.ebuild,v 1.5 2009/07/11 21:51:42 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic pam
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.tux.org/pub/tux/bagleyd/${PN}/${P}/${P}.tar.bz2"
 LICENSE="BSD GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 hppa ~ppc ~ppc64 sparc x86"
-IUSE="crypt debug esd gtk motif nas opengl pam truetype unicode xlockrc"
+IUSE="crypt debug esd gtk motif nas opengl pam truetype xlockrc"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXext
@@ -43,15 +43,17 @@ src_configure() {
 			myconf+=" --without-ftgl"
 	fi
 
-	econf --enable-vtlock \
+	econf \
+		--enable-vtlock \
 		--enable-syslog \
 		$(use_enable xlockrc) \
 		$(use_enable pam) \
-		$(use_enable unicode use-mb) \
+		--disable-use-mb \
 		--enable-appdefaultdir=/usr/share/X11/app-defaults \
 		$(use_with motif) \
 		$(use_with debug editres) \
 		$(use_with truetype freetype) \
+		$(use_with truetype ttf) \
 		$(use_with opengl) \
 		$(use_with opengl mesa) \
 		$(use_with esd esound) \
@@ -71,4 +73,9 @@ src_install() {
 
 	dohtml docs/xlock.html
 	dodoc README docs/{3d.howto,cell_automata,HACKERS.GUIDE,Purify,Revisions,TODO}
+}
+
+pkg_postinst() {
+	ewarn "xlockmore doesn't support multibyte or unicode password(s)"
+	ewarn "see http://bugs.gentoo.org/277061 for more information"
 }
