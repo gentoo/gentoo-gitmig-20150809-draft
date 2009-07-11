@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/iverilog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.25 2009/05/16 17:59:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/iverilog/ChangeLog,v 1.26 2009/07/11 21:28:35 calchan Exp $
+
+*iverilog-0.9.1 (11 Jul 2009)
+
+  11 Jul 2009; Denis Dupeyron <calchan@gentoo.org> +iverilog-0.9.1.ebuild:
+  Version bump, which apparently fixes bug #273834. Fixed LDFLAGS.
 
   16 May 2009; nixnut <nixnut@gentoo.org> iverilog-0.8.6.ebuild:
   ppc stable #245704
