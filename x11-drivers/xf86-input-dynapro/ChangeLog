@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-dynapro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-dynapro/ChangeLog,v 1.40 2009/06/23 20:02:46 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-dynapro/ChangeLog,v 1.41 2009/07/11 07:52:39 remi Exp $
+
+  11 Jul 2009; Rémi Cardona <remi@gentoo.org>
+  -xf86-input-dynapro-1.1.1.ebuild:
+  drop old ebuilds
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xf86-input-dynapro-1.1.2.ebuild:
