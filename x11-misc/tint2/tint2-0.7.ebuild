@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.7.ebuild,v 1.2 2009/07/02 20:11:19 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.7.ebuild,v 1.3 2009/07/11 11:02:04 idl0r Exp $
 
 EAPI="2"
 
@@ -20,7 +20,8 @@ RDEPEND="dev-libs/glib:2
 	x11-libs/libXinerama
 	media-libs/imlib2[X]"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	x11-proto/xineramaproto"
 
 src_configure() {
 	econf $(use_enable battery) \
