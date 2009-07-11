@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.20 2009/06/12 14:25:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.21 2009/07/11 03:33:20 arfrever Exp $
 
 EAPI="2"
 
@@ -19,15 +19,16 @@ IUSE="audiofile +crypt +dcc_voice debug doc gsm +ipc ipv6 kde +nls oss +perl +ph
 
 RDEPEND="
 	sys-libs/zlib
-	x11-libs/qt-core
-	x11-libs/qt-gui
+	>=x11-libs/qt-core-4.5
+	>=x11-libs/qt-gui-4.5
+	>=x11-libs/qt-sql-4.5
 	kde? ( >=kde-base/kdelibs-4 )
 	oss? ( audiofile? ( media-libs/audiofile ) )
 	perl? ( dev-lang/perl )
-	phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
+	phonon? ( || ( media-sound/phonon >=x11-libs/qt-phonon-4.5 ) )
 	python? ( dev-lang/python )
-	qt-dbus? ( x11-libs/qt-dbus )
-	qt-webkit? ( x11-libs/qt-webkit )
+	qt-dbus? ( >=x11-libs/qt-dbus-4.5 )
+	qt-webkit? ( >=x11-libs/qt-webkit-4.5 )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
@@ -45,7 +46,7 @@ pkg_setup() {
 
 src_prepare() {
 	subversion_wc_info
-	local VERSIO_PRAESENS="${ESVN_WC_REVISION}"
+	VERSIO_PRAESENS="${ESVN_WC_REVISION}"
 	elog "Setting revision number to ${VERSIO_PRAESENS}"
 	sed -e "/#define KVI_DEFAULT_FRAME_CAPTION/s/KVI_VERSION/& \" r${VERSIO_PRAESENS}\"/" -i src/kvirc/ui/kvi_frame.cpp || die "Failed to set revision number"
 }
@@ -56,6 +57,7 @@ src_configure() {
 		-DCMAKE_INSTALL_PREFIX=/usr
 		-DCOEXISTENCE=1
 		-DLIB_SUFFIX=${libdir#lib}
+		-DMANUAL_REVISION=${VERSIO_PRAESENS}
 		-DVERBOSE=1
 		$(cmake-utils_use_want audiofile AUDIOFILE)
 		$(cmake-utils_use_want crypt CRYPT)
