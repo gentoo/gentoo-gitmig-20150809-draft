@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/heckle
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.4 2007/10/14 05:51:36 tgall Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/heckle/ChangeLog,v 1.5 2009/07/11 05:15:32 graaff Exp $
+
+*heckle-1.4.3 (11 Jul 2009)
+
+  11 Jul 2009; Hans de Graaff <graaff@gentoo.org> +heckle-1.4.3.ebuild:
+  Version bump with fixed dependencies and autotest enhancements.
 
   14 Oct 2007; Tom Gall <tgall@gentoo.org> heckle-1.4.1.ebuild:
   added ~ppc64
