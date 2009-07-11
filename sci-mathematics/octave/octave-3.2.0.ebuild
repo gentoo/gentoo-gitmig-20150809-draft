@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.4 2009/07/10 16:18:49 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-3.2.0.ebuild,v 1.5 2009/07/11 16:28:28 mr_bones_ Exp $
 
 EAPI="2"
 inherit flag-o-matic fortran xemacs-elisp-common
@@ -66,7 +66,6 @@ src_configure() {
 		$(use_with sparse cxsparse) \
 		$(use_enable readline)
 }
-
 
 src_compile() {
 	emake || die "emake failed"
