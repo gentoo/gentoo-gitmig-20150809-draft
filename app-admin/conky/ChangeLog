@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.110 2009/03/17 01:22:09 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.111 2009/07/11 08:48:51 billie Exp $
+
+*conky-1.7.1.1 (11 Jul 2009)
+
+  11 Jul 2009; Pielmeier Daniel <billie@gentoo.org> metadata.xml,
+  -conky-1.6.2_pre1355.ebuild, +conky-1.7.1.1.ebuild:
+  Remove old and bump version. Closes bug #273264, thanks to all reporters there.
+  Ebuild cleanup. Dropping ppc64 as the new dependency sys-power/apcupsd has no
+  keywords, see bug #274847. Taking over maintainership.
 
 *conky-1.7.0_rc1 (17 Mar 2009)
 
