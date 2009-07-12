@@ -1,13 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.5 2007/11/02 21:57:14 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/amphetamine/amphetamine-0.8.10.ebuild,v 1.6 2009/07/12 17:24:34 tupone Exp $
 
 inherit eutils toolchain-funcs games
 
 DESCRIPTION="a cool Jump'n Run game offering some unique visual effects"
-HOMEPAGE="http://n.ethz.ch/student/loehrerl/amph/amph.html"
-SRC_URI="http://n.ethz.ch/student/loehrerl/amph/files/${P}.tar.bz2
-	http://n.ethz.ch/student/loehrerl/amph/files/${PN}-data-0.8.6.tar.bz2"
+HOMEPAGE="http://homepage.hispeed.ch/loehrer/amph/amph.html"
+SRC_URI="http://homepage.hispeed.ch/loehrer/amph/files/${P}.tar.bz2
+	http://homepage.hispeed.ch/loehrer/amph/files/${PN}-data-0.8.6.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,6 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/libsdl
 	x11-libs/libXpm"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
