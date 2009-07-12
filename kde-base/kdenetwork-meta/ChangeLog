@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.125 2009/07/08 13:49:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork-meta/ChangeLog,v 1.126 2009/07/12 13:01:47 armin76 Exp $
+
+  12 Jul 2009; Raúl Porcel <armin76@gentoo.org>
+  kdenetwork-meta-3.5.10.ebuild:
+  alpha/ia64/sparc stable wrt #271889
 
   08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org>
   kdenetwork-meta-3.5.10.ebuild:

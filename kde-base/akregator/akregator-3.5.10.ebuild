@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.10.ebuild,v 1.7 2009/07/08 12:54:30 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akregator/akregator-3.5.10.ebuild,v 1.8 2009/07/12 13:19:02 armin76 Exp $
 
 KMNAME=kdepim
 
@@ -11,7 +11,7 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/kdepim-3.5-patchset-05.tar.bz2"
 
 DESCRIPTION="KDE news feed aggregator."
-KEYWORDS="~alpha amd64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=kde-base/libkdepim-${PV}:${SLOT}

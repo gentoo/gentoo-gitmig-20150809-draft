@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/korn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.100 2009/07/08 14:34:08 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korn/ChangeLog,v 1.101 2009/07/12 13:04:03 armin76 Exp $
+
+  12 Jul 2009; Raúl Porcel <armin76@gentoo.org> korn-3.5.10.ebuild:
+  alpha/ia64/sparc stable wrt #271889
 
   08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> korn-3.5.10.ebuild:
   Add ~mips keywords
