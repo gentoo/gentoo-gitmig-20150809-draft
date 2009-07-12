@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r2.ebuild,v 1.6 2008/12/20 20:20:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.10-r2.ebuild,v 1.7 2009/07/12 18:08:07 halcy0n Exp $
 
 inherit flag-o-matic
 
@@ -57,6 +57,6 @@ pkg_postinst() {
 	elog "Check out http://www.crosswire.org/sword/modules/"
 	elog "to download modules that you would like to use with SWORD."
 	elog "Follow module installation instructions found on"
-	elog "the web or in /usr/share/doc/${PF}/INSTALL.gz."
+	elog "the web or in /usr/share/doc/${PF}/"
 	echo
 }
