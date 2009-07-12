@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531-r1.ebuild,v 1.12 2008/01/08 08:13:38 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn-transport/msn-transport-20040531-r1.ebuild,v 1.13 2009/07/12 18:18:40 halcy0n Exp $
 
 MY_PV="2004-05-31"
 #Ugly, msn-transport weired version numbers
@@ -40,7 +40,7 @@ src_install() {
 
 pkg_postinst() {
 	elog
-	elog "Please read /usr/share/doc/${P}/README.Gentoo.gz"
+	elog "Please read README.Gentoo in /usr/share/doc/${P}/"
 	elog "And please notice that now msn-transport comes with a init.d script"
 	elog "dont forget to add it to your runlevel."
 	elog
