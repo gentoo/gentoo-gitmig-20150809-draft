@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.14.2.ebuild,v 1.1 2009/04/10 20:06:56 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.15.ebuild,v 1.1 2009/07/12 19:15:49 halcy0n Exp $
 
 inherit flag-o-matic
 
