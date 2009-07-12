@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.13 2007/11/27 11:36:42 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.6e.ebuild,v 1.14 2009/07/12 00:39:19 ssuominen Exp $
 
+EAPI=1
 MY_V="16"
 MY_VR="e"
 DESCRIPTION="extract MPEG streams from CD images, convert VCD files to MPEG, correct MPEG errors, and more"
@@ -14,8 +15,8 @@ SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="static"
 
+RDEPEND="virtual/libstdc++:3.3"
 DEPEND=""
-RDEPEND="virtual/libc"
 
 S=${WORKDIR}/${PN}
 
