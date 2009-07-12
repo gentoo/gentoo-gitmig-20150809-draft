@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/mkpythonproj
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mkpythonproj/ChangeLog,v 1.1 2009/07/12 13:34:57 neurogeek Exp $
+
+*mkpythonproj-1.7 (12 Jul 2009)
+
+  12 Jul 2009; Jesus Rivero <neurogeek@gentoo.org>
+  +files/mkpythonproj_licenses.patch, +metadata.xml,
+  +mkpythonproj-1.7.ebuild:
+  Initial commit.
+
