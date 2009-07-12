@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.5 2009/07/09 19:05:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.6 2009/07/12 15:21:34 jer Exp $
 
 EAPI="2"
 
@@ -89,7 +89,13 @@ RDEPEND="
 				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
 			)
 		)
-		!ia32? ( =x11-libs/qt-3*[-immqt] )
+		!ia32? (
+			qt-static? ( media-libs/nas )
+			!qt-static? (
+				qt3? ( =x11-libs/qt-3*[-immqt] )
+				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+			)
+		)
 	)
 	ppc? ( =x11-libs/qt-3*[-immqt] )
 	x86? (
