@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/oops
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.21 2008/12/14 14:52:13 mrness Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/oops/ChangeLog,v 1.22 2009/07/12 10:57:25 mrness Exp $
+
+*oops-1.5.24_pre20050503-r4 (12 Jul 2009)
+
+  12 Jul 2009; Alin Năstac <mrness@gentoo.org> +files/rotate-logs.patch,
+  +oops-1.5.24_pre20050503-r4.ebuild:
+  Migrate to EAPI 2. Set file permissions on rotating logs (#275919).
 
 *oops-1.5.24_pre20050503-r3 (14 Dec 2008)
 
