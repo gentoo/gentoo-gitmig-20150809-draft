@@ -1,0 +1,78 @@
+FIXME. Detect and build with MP4V2 1.9.0. Uncompatible with old version,
+since the headers checking should be done based on version.
+
+diff -ur kid3-1.2.orig/CMakeLists.txt kid3-1.2/CMakeLists.txt
+--- kid3-1.2.orig/CMakeLists.txt	2008-03-12 22:24:35.000000000 +0200
++++ kid3-1.2/CMakeLists.txt	2009-07-13 01:38:25.000000000 +0300
+@@ -45,7 +45,7 @@
+ ### Check for mp4v2
+ set(MP4V2_LIBRARIES)
+ if(WITH_MP4V2)
+-  find_path(MP4V2_INCLUDE_DIR mp4.h
++  find_path(MP4V2_INCLUDE_DIR mp4v2/mp4v2.h
+    /usr/include/
+    /usr/local/include/
+   )
+@@ -63,7 +63,7 @@
+ 
+     set(_CMAKE_REQUIRED_LIBRARIES_TMP ${CMAKE_REQUIRED_LIBRARIES})
+     set(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} ${MP4V2_LIBRARIES})
+-    CHECK_CXX_SOURCE_COMPILES("#include <mp4.h>\nint main() {\n  MP4FileHandle hFile;\n  u_int32_t index;\n  char* ppName;\n  u_int8_t* ppValue;\n  u_int32_t pValueSize;\n  MP4GetMetadataByIndex(hFile, index, &ppName, &ppValue, &pValueSize);\n  return 0;\n}\n" HAVE_MP4V2_MP4GETMETADATABYINDEX_CHARPP_ARG)
++    CHECK_CXX_SOURCE_COMPILES("#include <mp4v2/mp4v2.h>\n#include <sys/types.h>\nint main() {\n  MP4FileHandle hFile;\n  u_int32_t index;\n  char* ppName;\n  u_int8_t* ppValue;\n  u_int32_t pValueSize;\n  MP4GetMetadataByIndex(hFile, index, &ppName, &ppValue, &pValueSize);\n  return 0;\n}\n" HAVE_MP4V2_MP4GETMETADATABYINDEX_CHARPP_ARG)
+     set(CMAKE_REQUIRED_LIBRARIES ${_CMAKE_REQUIRED_LIBRARIES_TMP})
+ 
+   else (MP4V2_INCLUDE_DIR AND MP4V2_LIBRARIES)
+diff -ur kid3-1.2.orig/configure.in.in kid3-1.2/configure.in.in
+--- kid3-1.2.orig/configure.in.in	2009-04-02 20:44:10.000000000 +0300
++++ kid3-1.2/configure.in.in	2009-07-13 00:57:38.000000000 +0300
+@@ -62,7 +62,7 @@
+   ac_cppflags_save=$CPPFLAGS
+   CPPFLAGS="$CPPFLAGS -I."
+   AC_CHECK_HEADERS(systems.h)
+-  AC_CHECK_HEADERS([mp4.h], [have_mp4_h=yes], [],
++  AC_CHECK_HEADERS([mp4v2/mp4v2.h], [have_mp4_h=yes], [],
+     [#ifdef HAVE_SYSTEMS_H
+      # include <systems.h>
+      #endif
+@@ -99,7 +99,7 @@
+     AC_LANG_SAVE
+     AC_LANG_CPLUSPLUS
+   cat > conftest.$ac_ext <<EOF
+-#include <mp4.h>
++#include <mp4v2/mp4v2.h>
+ int main() {
+   MP4FileHandle hFile;
+   u_int32_t index;
+diff -ur kid3-1.2.orig/doc/en/index.docbook kid3-1.2/doc/en/index.docbook
+--- kid3-1.2.orig/doc/en/index.docbook	2009-04-26 19:52:47.000000000 +0300
++++ kid3-1.2/doc/en/index.docbook	2009-07-13 00:59:34.000000000 +0300
+@@ -1463,7 +1463,7 @@
+  files. These three formats are also supported by
+ <ulink url="http://developer.kde.org/~wheeler/taglib.html">TagLib</ulink>,
+ which can also handle MPC, MP2, Speex, TrueAudio and WavPack files. 
+-<ulink url="http://mpeg4ip.sourceforge.net">mp4v2</ulink> is required for
++<ulink url="http://code.google.com/p/mp4v2">mp4v2</ulink> is required for
+ MP4 files.
+ For MusicBrainz support,
+ <ulink url="http://musicbrainz.org/doc/libtunepimp">libtunepimp</ulink>
+diff -ur kid3-1.2.orig/kid3/m4afile.cpp kid3-1.2/kid3/m4afile.cpp
+--- kid3-1.2.orig/kid3/m4afile.cpp	2008-12-22 11:57:24.000000000 +0200
++++ kid3-1.2/kid3/m4afile.cpp	2009-07-13 01:36:31.000000000 +0300
+@@ -42,10 +42,16 @@
+ #include <utime.h>
+ #endif
+ #include <stdio.h>
+-#include <mp4.h>
++#include <mp4v2/mp4v2.h>
+ #include <cstdlib>
+ #include <cstring>
+ 
++/** FIXME. Define MP4V2 project version to MPEG4IP project version. */
++#if defined MP4V2_PROJECT_version_major && MP4V2_PROJECT_version_minor
++#define MPEG4IP_MAJOR_VERSION 0x1
++#define MPEG4IP_MINOR_VERSION 0x9
++#endif
++
+ /** MPEG4IP version as 16-bit hex number with major and minor version. */
+ #if defined MPEG4IP_MAJOR_VERSION && defined MPEG4IP_MINOR_VERSION
+ #define MPEG4IP_MAJOR_MINOR_VERSION ((MPEG4IP_MAJOR_VERSION << 8) | MPEG4IP_MINOR_VERSION)
