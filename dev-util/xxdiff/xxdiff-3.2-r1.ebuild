@@ -1,13 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2-r1.ebuild,v 1.6 2008/04/20 09:37:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-3.2-r1.ebuild,v 1.7 2009/07/12 08:39:55 betelgeuse Exp $
 
 EAPI="1"
 
 inherit distutils eutils kde-functions toolchain-funcs
 
 DESCRIPTION="A graphical file and directories comparator and merge tool."
-HOMEPAGE="http://xxdiff.sourceforge.net/"
+HOMEPAGE="http://furius.ca/xxdiff/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
