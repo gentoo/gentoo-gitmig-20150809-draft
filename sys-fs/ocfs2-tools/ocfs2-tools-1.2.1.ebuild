@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.2.1.ebuild,v 1.3 2007/06/26 02:53:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ocfs2-tools/ocfs2-tools-1.2.1.ebuild,v 1.4 2009/07/12 18:24:49 halcy0n Exp $
 
 PV_MAJOR="${PV%%.*}"
 PV_MINOR="${PV#*.}"
@@ -73,6 +73,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "Read ${ROOT}usr/share/doc/${P}/INSTALL.GENTOO.gz for instructions"
+	elog "Read INSTALL.GENTOO in ${ROOT}usr/share/doc/${P}/ for instructions"
 	elog "about how to install, configure and run ocfs2."
 }
