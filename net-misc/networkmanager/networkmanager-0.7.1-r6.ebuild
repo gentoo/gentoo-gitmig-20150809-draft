@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.1 2009/06/19 08:58:11 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.2 2009/07/12 14:43:32 rbu Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -28,7 +28,7 @@ RDEPEND=">=sys-apps/dbus-1.2
 	>=sys-apps/hal-0.5.10
 	>=net-wireless/wireless-tools-28_pre9
 	>=dev-libs/glib-2.16
-	>=sys-auth/policykit-0.8
+	<sys-auth/policykit-0.92
 	>=dev-libs/libnl-1.1
 	>=net-wireless/wpa_supplicant-0.5.10[dbus]
 	|| ( sys-libs/e2fsprogs-libs <sys-fs/e2fsprogs-1.41.0 )

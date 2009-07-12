@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.49 2009/06/19 08:58:11 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.50 2009/07/12 14:43:32 rbu Exp $
+
+  12 Jul 2009; Robert Buchholz <rbu@gentoo.org>
+  networkmanager-0.7.1-r3.ebuild, networkmanager-0.7.1-r6.ebuild:
+  Adapt DEPEND to reflect that policykit 0.92 does not work for us, bug 274906.
 
 *networkmanager-0.7.1-r6 (19 Jun 2009)
 
