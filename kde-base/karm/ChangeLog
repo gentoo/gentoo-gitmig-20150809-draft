@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/karm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.95 2009/07/08 13:10:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/karm/ChangeLog,v 1.96 2009/07/12 13:43:15 armin76 Exp $
+
+  12 Jul 2009; Raúl Porcel <armin76@gentoo.org> karm-3.5.10.ebuild:
+  alpha/ia64/sparc stable wrt #271889
 
   08 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> karm-3.5.10.ebuild:
   Add ~mips keywords

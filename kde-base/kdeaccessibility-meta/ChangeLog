@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.119 2009/06/18 05:21:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.120 2009/07/12 13:37:30 armin76 Exp $
+
+  12 Jul 2009; Raúl Porcel <armin76@gentoo.org>
+  kdeaccessibility-meta-3.5.10.ebuild:
+  alpha/ia64/sparc stable wrt #271889
 
   18 Jun 2009; Jeroen Roovers <jer@gentoo.org>
   kdeaccessibility-meta-3.5.10.ebuild:
