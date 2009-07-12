@@ -1,6 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/x25_utils/x25_utils-2.3.93.ebuild,v 1.3 2005/08/21 03:43:17 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/x25_utils/x25_utils-2.3.93-r1.ebuild,v 1.1 2009/07/12 12:41:35 mrness Exp $
+
+EAPI="2"
 
 inherit eutils linux-info
 
@@ -10,19 +12,19 @@ SRC_URI="http://www.baty.hanse.de/linux-x25/utils/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
+
 DEPEND="sys-libs/ncurses"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
-	CONFIG_CHECK="X25"
+	CONFIG_CHECK="~X25"
 	linux-info_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 
 src_compile() {
