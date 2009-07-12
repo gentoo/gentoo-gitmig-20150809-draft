@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/gftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.79 2009/07/08 10:57:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gftp/ChangeLog,v 1.80 2009/07/12 16:18:46 armin76 Exp $
+
+  12 Jul 2009; Raúl Porcel <armin76@gentoo.org> gftp-2.0.19-r1.ebuild:
+  alpha/sparc stable wrt #276468
 
   08 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   gftp-2.0.19-r1.ebuild:
