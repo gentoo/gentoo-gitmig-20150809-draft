@@ -1,26 +1,23 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.3.ebuild,v 1.9 2009/04/10 19:17:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/libprelude-0.9.24.ebuild,v 1.1 2009/07/12 19:07:10 halcy0n Exp $
 
-inherit perl-module flag-o-matic
+inherit perl-module flag-o-matic eutils
 
 DESCRIPTION="Prelude-IDS Framework Library"
 HOMEPAGE="http://www.prelude-ids.org/"
-SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
+SRC_URI="http://www.prelude-ids.org/download/releases/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc sparc x86"
-IUSE="perl python"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~sparc ~x86"
+IUSE="doc perl python swig"
 
 RDEPEND=">=net-libs/gnutls-1.0.17
 	!net-analyzer/prelude-nids"
 
 DEPEND="${RDEPEND}
 	sys-devel/flex"
-
-#	doc? ( dev-util/gtk-doc )"
-# Doc disabled as per bug 77575
 
 pkg_setup() {
 	use perl && perl-module_pkg_setup
@@ -29,22 +26,22 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-#    grep -qs 'include.*fts.h' prelude-adduser/prelude-adduser.c || die "remove lfs filter"
 	filter-lfs-flags
 }
 
 src_compile() {
 	econf \
-		$(use_enable perl) \
-		$(use_enable python) \
+		$(use_enable doc gtk-doc) \
+		$(use_with swig) \
+		$(use_with perl) \
+		$(use_with python) \
 		|| die "econf failed"
 
-	emake -j1 || die "emake failed"
-	# -j1 may not be necessary in the future
+	emake OTHERLDFLAGS="${LDFLAGS}" || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	use perl && fixlocalpod
 }
 
