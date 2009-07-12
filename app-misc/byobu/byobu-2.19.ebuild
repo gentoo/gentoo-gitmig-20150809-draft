@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-2.19.ebuild,v 1.1 2009/07/12 12:51:27 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/byobu/byobu-2.19.ebuild,v 1.2 2009/07/12 12:56:09 weaver Exp $
 
 EAPI="2"
 
@@ -33,7 +33,7 @@ src_install() {
 	emake --makefile=debian/rules install || die
 	chmod +x "${D}/usr/bin/byobu-janitor"
 	rm -rf "${D}/debian"
-	doman *.1
+	doman *.1 || die
 	dodoc doc/*
 }
 
