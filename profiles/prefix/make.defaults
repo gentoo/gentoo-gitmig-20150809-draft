@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/make.defaults,v 1.2 2009/06/30 16:34:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/make.defaults,v 1.3 2009/07/12 10:08:57 grobian Exp $
 
 # Some USE-flags that only die-hards don't want:
 # readline:  to have some sane command line editing, e.g. in python
@@ -22,7 +22,7 @@ FEATURES="collision-protect"
 #
 # If in the future, there does exist a working sandbox implementation then it
 # should be enabled on a per-profile basis only.
-FEATURES="-sandbox"
+FEATURES="${FEATURES} -sandbox"
 
 
 # this probably already is like this, but we assure that in prefix we
