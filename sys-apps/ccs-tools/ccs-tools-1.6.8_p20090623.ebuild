@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.6.8_p20090623.ebuild,v 1.2 2009/07/09 14:47:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.6.8_p20090623.ebuild,v 1.3 2009/07/12 04:24:32 matsuu Exp $
 
 inherit eutils multilib toolchain-funcs
 
 MY_P="${P/_p/-}"
 DESCRIPTION="TOMOYO Linux tools"
-HOMEPAGE="http://www.sourcefoge.jp/projects/tomoyo/"
+HOMEPAGE="http://www.sourceforge.jp/projects/tomoyo/"
 SRC_URI="mirror://sourceforge.jp/tomoyo/30298/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
