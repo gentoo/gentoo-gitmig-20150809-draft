@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.3 2009/03/08 02:33:01 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sguil-server/sguil-server-0.6.1-r1.ebuild,v 1.4 2009/07/12 18:15:34 halcy0n Exp $
 
 EAPI="2"
 
@@ -93,8 +93,8 @@ pkg_postinst(){
 	elog "as a large amount of data will be kept in the directory structure"
 	elog "underneath that top directory."
 	elog
-	elog "You should create the sguild db as per the instructions in"
-	elog "/usr/share/doc/${PF}/INSTALL.gz and use the appropriate"
+	elog "You should create the sguild db as per the install instructions in"
+	elog "/usr/share/doc/${PF}/ and use the appropriate"
 	elog "database setup script located in the same directory."
 
 	elog
