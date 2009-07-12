@@ -1,15 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.2 2009/06/07 21:21:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.12.3_beta-r2.ebuild,v 1.3 2009/07/12 18:53:36 ssuominen Exp $
 
 EAPI=2
+MY_P=${P/_/}
+PATCHLEVEL=5
 
-inherit eutils autotools
+inherit autotools eutils flag-o-matic
 
-MY_P="${P/_/}"
-S="${WORKDIR}/${MY_P}"
-
-PATCHLEVEL="5"
 DESCRIPTION="Sound editor and recorder"
 HOMEPAGE="http://rezound.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
@@ -31,21 +29,17 @@ RDEPEND="=sci-libs/fftw-2*
 	portaudio? ( >=media-libs/portaudio-18 )
 	soundtouch? ( >=media-libs/libsoundtouch-1.2.1 )
 	vorbis? ( media-libs/libvorbis media-libs/libogg )"
-
-# optional packages (don't need to be installed during emerge):
-#
-# >=media-sound/lame-3.92
-# app-cdr/cdrdao
-
 DEPEND="${RDEPEND}
 	sys-devel/bison
 	dev-util/pkgconfig
 	sys-devel/flex
 	dev-util/reswrap"
 
+S=${WORKDIR}/${MY_P}
+
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}/patches"
-
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	AT_M4DIR="config/m4" eautoreconf
 }
 
@@ -58,6 +52,9 @@ src_configure() {
 	# -> flac, oggvorbis, soundtouch
 	local sampletype="--enable-internal-sample-type=float"
 	use 16bittmp && sampletype="--enable-internal-sample-type=int16"
+
+	# -O3 isn't safe wrt #275437
+	replace-flags -O[3-9] -O2
 
 	econf \
 		$(use_enable alsa) \
