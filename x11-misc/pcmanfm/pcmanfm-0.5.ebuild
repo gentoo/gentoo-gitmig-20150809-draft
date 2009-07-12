@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.ebuild,v 1.1 2008/08/31 18:05:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-0.5.ebuild,v 1.2 2009/07/12 17:30:25 vostorga Exp $
 
 EAPI="1"
 inherit eutils fdo-mime
@@ -24,6 +24,16 @@ RDEPEND="virtual/fam
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	#fixing tests, bug #262733
+	echo "pcmanfm-find.desktop.in" >> po/POTFILES.skip
+	echo "pcmanfm.desktop.in" >> po/POTFILES.skip
+	echo "src/exo/exo-icon-view.c" >> po/POTFILES.skip
+	echo "src/exo/exo-tree-view.c" >> po/POTFILES.skip
+}
 
 src_compile() {
 	econf $(use_enable hal) || die "econf failed"
