@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.66.ebuild,v 1.6 2008/12/28 00:32:11 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/siege-2.66.ebuild,v 1.7 2009/07/12 18:05:03 halcy0n Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -59,7 +59,7 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	elog "An example ~/.siegerc file has been installed as"
-	elog "/usr/share/doc/${PF}/siegerc-example.gz"
+	elog "An example ~/.siegerc file has been installed in"
+	elog "/usr/share/doc/${PF}/"
 	bash-completion_pkg_postinst
 }
