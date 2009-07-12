@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmrtg
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/ChangeLog,v 1.2 2007/06/12 13:05:16 genone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/ChangeLog,v 1.3 2009/07/12 18:23:23 halcy0n Exp $
+
+  12 Jul 2009; Mark Loeser <halcy0n@gentoo.org> qmrtg-2.1.ebuild:
+  Fix elog statement; bug #272941
 
   12 Jun 2007; Marius Mauch <genone@gentoo.org> qmrtg-2.1.ebuild:
   Replacing einfo with elog

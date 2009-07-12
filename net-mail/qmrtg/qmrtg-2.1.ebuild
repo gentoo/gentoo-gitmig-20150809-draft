@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1.ebuild,v 1.3 2007/07/14 22:22:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmrtg/qmrtg-2.1.ebuild,v 1.4 2009/07/12 18:23:23 halcy0n Exp $
 
 inherit eutils
 
@@ -48,7 +48,7 @@ pkg_postinst () {
 	elog
 	elog "You need to configure manually qmrtg in order to run it."
 	elog "The configuration templates in /usr/share/qmrtg2/ and"
-	elog "the file in /usr/share/doc/qmrtg-2.1/INSTALL.txt.gz"
+	elog "the INSTALL file in /usr/share/doc/qmrtg-2.1/"
 	elog "will be useful."
 	elog
 }
