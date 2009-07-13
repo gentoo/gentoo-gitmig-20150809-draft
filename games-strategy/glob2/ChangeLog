@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.47 2009/06/09 08:48:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.48 2009/07/13 10:46:02 tupone Exp $
+
+  13 Jul 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/glob2-0.9.4.1-gcc44.patch, glob2-0.9.4.1.ebuild:
+  Fix build with gcc-4.4 Bug #277179 by <flameeyes@gentoo.org>
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org> glob2-0.9.4.1.ebuild:
   stable x86, bug 272098

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.1.ebuild,v 1.4 2009/06/09 08:48:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.1.ebuild,v 1.5 2009/07/13 10:46:02 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -26,6 +26,8 @@ RDEPEND="virtual/opengl
 	media-libs/speex"
 DEPEND="${RDEPEND}
 	>=dev-util/scons-1"
+
+PATCHES=( "${FILESDIR}"/${P}-gcc44.patch )
 
 src_compile() {
 	local sconsopts=$(echo "${MAKEOPTS}" | sed -ne "/-j/ { s/.*\(-j[0-9]\+\).*/\1/; p }")
