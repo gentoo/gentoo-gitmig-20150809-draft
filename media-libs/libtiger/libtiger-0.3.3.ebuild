@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.3.ebuild,v 1.5 2009/07/13 07:26:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtiger/libtiger-0.3.3.ebuild,v 1.6 2009/07/13 18:14:42 josejx Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="http://libtiger.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="x11-libs/pango
