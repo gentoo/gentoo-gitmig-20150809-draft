@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/fusil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/ChangeLog,v 1.1 2009/02/28 19:40:44 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fusil/ChangeLog,v 1.2 2009/07/13 22:03:19 neurogeek Exp $
+
+*fusil-1.2.1-r1 (13 Jul 2009)
+
+  13 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> +fusil-1.2.1-r1.ebuild:
+  Added USE flags for doc and examples. Closes bug #263582. Thanks to August
+  for the patch.
 
 *fusil-1.2.1 (28 Feb 2009)
 
