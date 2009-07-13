@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/sndpeek-1.3-r1.ebuild,v 1.2 2009/06/06 07:57:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/sndpeek-1.3-r1.ebuild,v 1.3 2009/07/13 20:36:07 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -14,15 +14,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="oss jack alsa"
 
-DEPEND="virtual/glut
+RDEPEND="virtual/glut
 	virtual/opengl
 	virtual/glu
 	x11-libs/libXmu
 	x11-libs/libX11
 	x11-libs/libXext
+	media-libs/libsndfile
 	jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( media-libs/alsa-lib )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-makefile.patch \
