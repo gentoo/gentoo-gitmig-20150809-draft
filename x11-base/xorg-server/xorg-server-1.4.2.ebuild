@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.12 2009/05/13 08:53:59 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.13 2009/07/13 10:53:18 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -22,30 +22,17 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-
 IUSE_INPUT_DEVICES="
 	input_devices_acecad
 	input_devices_aiptek
-	input_devices_calcomp
 	input_devices_citron
-	input_devices_digitaledge
-	input_devices_dmc
-	input_devices_dynapro
-	input_devices_elo2300
 	input_devices_elographics
 	input_devices_evdev
 	input_devices_fpit
 	input_devices_hyperpen
-	input_devices_jamstudio
 	input_devices_joystick
 	input_devices_keyboard
-	input_devices_magellan
-	input_devices_microtouch
 	input_devices_mouse
 	input_devices_mutouch
-	input_devices_palmax
 	input_devices_penmount
-	input_devices_spaceorb
-	input_devices_summa
-	input_devices_tek4957
 	input_devices_tslib
-	input_devices_ur98
 	input_devices_vmmouse
 	input_devices_void
 
@@ -186,30 +173,17 @@ PDEPEND="
 	xorg? (
 		input_devices_acecad? ( >=x11-drivers/xf86-input-acecad-1.1.0 )
 		input_devices_aiptek? ( >=x11-drivers/xf86-input-aiptek-1.0.1 )
-		input_devices_calcomp? ( >=x11-drivers/xf86-input-calcomp-1.1.1 )
 		input_devices_citron? ( >=x11-drivers/xf86-input-citron-2.2.1 )
-		input_devices_digitaledge? ( >=x11-drivers/xf86-input-digitaledge-1.1.0 )
-		input_devices_dmc? ( >=x11-drivers/xf86-input-dmc-1.1.0 )
-		input_devices_dynapro? ( >=x11-drivers/xf86-input-dynapro-1.1.1 )
-		input_devices_elo2300? ( >=x11-drivers/xf86-input-elo2300-1.1.1 )
 		input_devices_elographics? ( >=x11-drivers/xf86-input-elographics-1.1.0 )
 		input_devices_evdev? ( >=x11-drivers/xf86-input-evdev-1.1.1 )
 		input_devices_fpit? ( >=x11-drivers/xf86-input-fpit-1.1.0 )
 		input_devices_hyperpen? ( >=x11-drivers/xf86-input-hyperpen-1.1.0 )
-		input_devices_jamstudio? ( >=x11-drivers/xf86-input-jamstudio-1.1.0 )
 		input_devices_joystick? ( >=x11-drivers/xf86-input-joystick-1.1.0 )
 		input_devices_keyboard? ( >=x11-drivers/xf86-input-keyboard-1.2.0 )
-		input_devices_magellan? ( >=x11-drivers/xf86-input-magellan-1.1.1 )
-		input_devices_microtouch? ( >=x11-drivers/xf86-input-microtouch-1.1.1 )
 		input_devices_mouse? ( >=x11-drivers/xf86-input-mouse-1.1.0 )
 		input_devices_mutouch? ( >=x11-drivers/xf86-input-mutouch-1.1.0 )
-		input_devices_palmax? ( >=x11-drivers/xf86-input-palmax-1.1.0 )
 		input_devices_penmount? ( >=x11-drivers/xf86-input-penmount-1.2.1 )
-		input_devices_spaceorb? ( >=x11-drivers/xf86-input-spaceorb-1.1.1 )
-		input_devices_summa? ( >=x11-drivers/xf86-input-summa-1.1.0 )
-		input_devices_tek4957? ( >=x11-drivers/xf86-input-tek4957-1.1.0 )
 		input_devices_tslib? ( x11-drivers/xf86-input-tslib )
-		input_devices_ur98? ( >=x11-drivers/xf86-input-ur98-1.1.0 )
 		input_devices_vmmouse? ( >=x11-drivers/xf86-input-vmmouse-12.4.2 )
 		input_devices_void? ( >=x11-drivers/xf86-input-void-1.1.1 )
 
