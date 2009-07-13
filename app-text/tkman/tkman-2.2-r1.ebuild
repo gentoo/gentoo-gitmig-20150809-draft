@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.2 2009/07/13 00:51:04 rbu Exp $
+
 
 EAPI=2
 inherit eutils
