@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10042 2009/07/13 00:26:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10043 2009/07/13 07:27:51 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -519,9 +519,9 @@ dev-perl/X10
 net-misc/wso2-wsf-c
 
 # Hans de Graaff <graaff@gentoo.org> (13 Jun 2009)
-# dev-ruby/freeride ships broken elf shared object files
+# dev-util/freeride ships broken elf shared object files
 # that we cannot rebuild properly, see bug #251935
-dev-ruby/freeride
+dev-util/freeride
 
 # Markus Meier <maekke@gentoo.org> (13 Jun 2009)
 # mask pre releases of media-gfx/inkscape-0.47
