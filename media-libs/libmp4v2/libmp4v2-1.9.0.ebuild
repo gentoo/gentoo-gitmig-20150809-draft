@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.0.ebuild,v 1.2 2009/07/10 09:58:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp4v2/libmp4v2-1.9.0.ebuild,v 1.3 2009/07/13 17:42:35 ssuominen Exp $
 
 EAPI=2
+inherit flag-o-matic
 
 DESCRIPTION="Functions for accessing ISO-IEC:14496-1:2001 MPEG-4 standard"
 HOMEPAGE="http://code.google.com/p/mp4v2"
@@ -21,6 +22,7 @@ DEPEND="utils? ( sys-apps/help2man )
 S=${WORKDIR}/${P/lib}
 
 src_configure() {
+	replace-flags -ggdb3 -ggdb2
 	econf \
 		$(use_enable utils util) \
 		--disable-dependency-tracking
