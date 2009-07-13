@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lastfmlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/ChangeLog,v 1.1 2009/07/11 21:11:17 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lastfmlib/ChangeLog,v 1.2 2009/07/13 07:43:06 hwoarang Exp $
+
+  13 Jul 2009; Markos Chandras <hwoarang@gentoo.org> lastfmlib-0.3.0.ebuild:
+  Remove test use flag since ebuild doesnt use it
 
 *lastfmlib-0.3.0 (11 Jul 2009)
 
