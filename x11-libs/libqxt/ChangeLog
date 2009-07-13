@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libqxt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.8 2009/04/30 13:26:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/ChangeLog,v 1.9 2009/07/13 07:35:29 hwoarang Exp $
+
+  13 Jul 2009; Markos Chandras <hwoarang@gentoo.org> libqxt-0.5.0.ebuild,
+  +files/libqxt-0.5.0-gcc4.4.patch:
+  Fix gcc-4.4 compilation bug 277591. Thanks to Håvard Wall <haavardw@ifi.uio.no> for the patch
 
 *libqxt-0.5.0 (30 Apr 2009)
 

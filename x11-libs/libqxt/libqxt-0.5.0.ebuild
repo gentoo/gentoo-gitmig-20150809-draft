@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.5.0.ebuild,v 1.1 2009/04/30 13:26:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.5.0.ebuild,v 1.2 2009/07/13 07:35:29 hwoarang Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -22,6 +22,10 @@ RDEPEND="x11-libs/qt-gui:4
 	web? ( >=dev-libs/fcgi-2.4 )"
 DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"
+
+PATCHES=(
+	"${FILESDIR}/libqxt-0.5.0-gcc4.4.patch"
+)
 
 src_configure() {
 	local myconf
