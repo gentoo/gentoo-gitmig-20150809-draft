@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.4.0.ebuild,v 1.1 2009/07/13 07:52:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.4.0.ebuild,v 1.2 2009/07/13 08:25:17 nirbheek Exp $
 
 EAPI="2"
 
@@ -34,11 +34,7 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-#RESTRICT="test"
-
-# NOTES:
-# weave is still in heavy development and tests are known to fail so disabled
-# fennec is also listed in install.rdf
+# XXX: fennec is also listed in install.rdf but not in-tree
 
 src_prepare() {
 	# We want to use system nss and nspr
@@ -54,13 +50,13 @@ src_prepare() {
 
 src_compile() {
 	if has_version '=net-libs/xulrunner-1.9.0*'; then
-		XULRUNNER_BIN=/usr/bin/xulrunner-1.9
-		MOZSDKDIR=/usr/$(get_libdir)/xulrunner-1.9
+		export XULRUNNER_BIN=/usr/bin/xulrunner-1.9
+		export MOZSDKDIR=/usr/$(get_libdir)/xulrunner-1.9
 	elif has_version '=net-libs/xulrunner-1.9.1*'; then
-		XULRUNNER_BIN=/usr/bin/xulrunner-1.9.1
-		MOZSDKDIR=/usr/$(get_libdir)/xulrunner-1.9.1
+		export XULRUNNER_BIN=/usr/bin/xulrunner-1.9.1
+		export MOZSDKDIR=/usr/$(get_libdir)/xulrunner-devel-1.9.1
 	fi
-	WEAVE_BUILDID=${PV}
+	export WEAVE_BUILDID=${PV}
 
 	emake release_build=1 xpi || die "emake failed"
 }
@@ -68,37 +64,37 @@ src_compile() {
 src_install() {
 	local MOZILLA_FIVE_HOME xpiname mozillas
 
-	xpiname="${MY_P}-rel.xpi"
-	xpi_unpack "${xpiname}"
+	xpiname="${MY_P}-rel"
+	xpi_unpack "${S}/${xpiname}.xpi"
 
 	if has_version '>=www-client/mozilla-firefox-3.5'; then
 		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-firefox"
-		xpi_install "${S}/${xpiname}"
+		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version www-client/mozilla-firefox) ${mozillas}"
 	fi
 	if has_version '>=www-client/mozilla-firefox-bin-3.5'; then
 		MOZILLA_FIVE_HOME="/opt/firefox"
-		xpi_install "${S}/${xpiname}"
+		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version www-client/mozilla-firefox-bin) ${mozillas}"
 	fi
 	if has_version '>=www-client/seamonkey-2.0_alpha3'; then
 		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/seamonkey"
-		xpi_install "${S}/${xpiname}"
+		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version www-client/seamonkey) ${mozillas}"
 	fi
 	if has_version '>=www-client/seamonkey-bin-2.0_alpha3'; then
 		MOZILLA_FIVE_HOME="/opt/seamonkey"
-		xpi_install "${S}/${xpiname}"
+		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version www-client/seamonkey-bin) ${mozillas}"
 	fi
 	if has_version '>=mail-client/mozilla-thunderbird-3.0_beta2'; then
 		MOZILLA_FIVE_HOME="/usr/$(get_libdir)/mozilla-thunderbird"
-		xpi_install "${S}/${xpiname}"
+		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version mail-client/mozilla-thunderbird) ${mozillas}"
 	fi
 	if has_version '>=mail-client/mozilla-thunderbird-bin-3.0_beta2'; then
 		MOZILLA_FIVE_HOME="/opt/thunderbird"
-		xpi_install "${S}/${xpiname}"
+		xpi_install "${WORKDIR}/${xpiname}"
 		mozillas="$(best_version mail-client/mozilla-thunderbird-bin) ${mozillas}"
 	fi
 }
@@ -112,6 +108,6 @@ pkg_postinst() {
 	for i in ${mozillas}; do
 		elog "	$i"
 	done
-	elog "After installing other mozilla products, if you want to use weave with them"
-	elog "Reinstall www-plugins/mozilla-weave"
+	elog "After installing other mozilla ebuilds, if you want to use weave with them,"
+	elog "reinstall www-plugins/mozilla-weave"
 }

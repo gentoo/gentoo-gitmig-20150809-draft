@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/mozilla-weave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/ChangeLog,v 1.8 2009/07/13 07:52:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/ChangeLog,v 1.9 2009/07/13 08:25:17 nirbheek Exp $
+
+  13 Jul 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  mozilla-weave-0.4.0.ebuild:
+  Committed too soon. Fixes to allow 0.4.0 to build and install
 
 *mozilla-weave-0.4.0 (13 Jul 2009)
 
