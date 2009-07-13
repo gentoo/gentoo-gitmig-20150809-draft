@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.5 2008/01/25 23:34:13 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/syslogread-0.92.ebuild,v 1.6 2009/07/13 00:22:46 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -29,7 +29,8 @@ src_compile() {
 	echo "${D}/usr/share/man" > conf-man
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
-	make || die  #don't use emake b/c of jobserver
+	# See bug #277586
+	emake -j1 || die
 }
 
 src_install() {

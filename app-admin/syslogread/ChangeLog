@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/syslogread
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.4 2008/01/25 23:34:13 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslogread/ChangeLog,v 1.5 2009/07/13 00:22:46 flameeyes Exp $
+
+  13 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  syslogread-0.92.ebuild:
+  Replace the make call with emake -j1 and add a bug to track the issue.
 
   25 Jan 2008; Thilo Bangert <bangert@gentoo.org> syslogread-0.92.ebuild:
   honour ROOT
