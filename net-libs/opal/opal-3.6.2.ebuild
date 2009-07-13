@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.2.ebuild,v 1.3 2009/07/12 17:07:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.2.ebuild,v 1.4 2009/07/13 20:23:49 volkmar Exp $
 
 EAPI="2"
 
@@ -173,6 +173,13 @@ src_prepare() {
 }
 
 src_configure() {
+	local forcedconf=""
+
+	# fix bug 277233, upstream bug 2820939
+	if use fax; then
+		forcedconf="${forcedconf} --enable-statistics"
+	fi
+
 	# --with-libavcodec-source-dir should _not_ be set, it's for trunk sources
 	# versioncheck: check for ptlib version
 	# shared: should always be enabled for a lib
@@ -230,7 +237,8 @@ src_configure() {
 		$(use_enable video) \
 		$(use_enable vpb) \
 		$(use_enable x264 h264) \
-		$(use_enable x264-static x264-link-static)
+		$(use_enable x264-static x264-link-static) \
+		${forcedconf}
 }
 
 src_compile() {
