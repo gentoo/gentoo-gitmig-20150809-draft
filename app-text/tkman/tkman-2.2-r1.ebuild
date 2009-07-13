@@ -1,7 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2.ebuild,v 1.7 2005/01/01 16:38:51 eradicator Exp $
+# $Header: 
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="TkMan man and info page browser"
@@ -10,26 +11,22 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 DEPEND=">=app-text/rman-3.1
 	>=dev-lang/tcl-8.4
 	>=dev-lang/tk-8.4"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
-}
-
-src_compile() {
-	emake || die
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.2-gentoo.diff
+	epatch "${FILESDIR}"/${PN}-CVE-2008-5137.diff #bug 247540
 }
 
 src_install() {
 	dodir /usr/bin
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die
 
 	dodoc ANNOUNCE-tkman.txt CHANGES README-tkman manual.html
 
@@ -37,5 +34,5 @@ src_install() {
 	doins contrib/TkMan.gif
 
 	insinto /usr/share/applications
-	doins ${FILESDIR}/tkman.desktop
+	doins "${FILESDIR}"/tkman.desktop
 }

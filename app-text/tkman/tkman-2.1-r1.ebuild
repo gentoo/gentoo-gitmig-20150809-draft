@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.12 2005/01/01 16:38:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.1-r1.ebuild,v 1.13 2009/07/13 00:49:43 rbu Exp $
 
 inherit eutils
 
@@ -16,16 +16,17 @@ IUSE=""
 DEPEND=">=app-text/rman-3.0.9
 	>=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}"/${PF}-gentoo.diff
 
 	# A workaround until app-text/rman-3.1 is stable
 	has_version '>=sys-apps/groff-1.18' \
 		has_version '<app-text/rman-3.1' \
-		&& sed -i -e "s:groff -te -Tlatin1:groff -P -c -te -Tlatin1:" ${S}/Makefile
+		&& sed -i -e "s:groff -te -Tlatin1:groff -P -c -te -Tlatin1:" "${S}"/Makefile
 }
 
 src_compile() {
