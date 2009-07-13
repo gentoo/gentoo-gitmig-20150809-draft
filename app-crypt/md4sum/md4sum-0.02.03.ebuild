@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/md4sum-0.02.03.ebuild,v 1.5 2008/10/25 22:22:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/md4sum/md4sum-0.02.03.ebuild,v 1.6 2009/07/13 12:28:29 flameeyes Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ src_compile() {
 	econf || die "econf failed"
 	sed -i -e "s:CFLAGS=:CFLAGS=${CFLAGS} :g" \
 		-e "s:install -s:install:g" Makefile
-	make LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
+	emake LDFLAGS="${LDFLAGS}" CC="$(tc-getCC)" || die "emake failed"
 }
 
 src_install() {
