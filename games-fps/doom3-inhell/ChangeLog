@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/doom3-inhell
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-inhell/ChangeLog,v 1.4 2008/02/15 00:37:45 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-inhell/ChangeLog,v 1.5 2009/07/13 17:04:47 mr_bones_ Exp $
+
+  13 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  doom3-inhell-1.1-r1.ebuild:
+  switch to working SRC_URI (bug #262877)
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -doom3-inhell-1.1.ebuild, doom3-inhell-1.1-r1.ebuild:
