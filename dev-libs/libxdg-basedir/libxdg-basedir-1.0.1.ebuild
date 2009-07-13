@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.0.1.ebuild,v 1.1 2009/06/16 10:33:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.0.1.ebuild,v 1.2 2009/07/13 17:43:55 josejx Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="http://n.ethz.ch/student/nevillm/download/libxdg-basedir/${P}.tar.gz"
 IUSE="doc"
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
