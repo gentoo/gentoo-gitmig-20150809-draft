@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.79.ebuild,v 1.3 2009/01/09 17:12:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.79.ebuild,v 1.4 2009/07/13 23:04:29 vostorga Exp $
 
 inherit eutils autotools
 
@@ -20,6 +20,7 @@ DEPEND="
 		>=dev-db/libiodbc-3.5
 	)
 	sqlite3? ( >=dev-db/sqlite-3.5 )"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
@@ -34,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib
+	dodir /usr/$(get_libdir)
 	einstall || die "could not install"
 	dodoc README ChangeLog
 }
