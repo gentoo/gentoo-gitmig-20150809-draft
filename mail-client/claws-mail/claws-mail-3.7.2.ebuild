@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.2 2009/07/10 07:35:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.3 2009/07/13 22:07:55 fauli Exp $
 
 inherit eutils multilib
 
@@ -12,8 +12,7 @@ SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bogofilter crypt dbus dillo doc gnome gnutls imap ipv6 kde ldap nntp pda
-session smime spamassassin spell ssl startup-notification xface"
+IUSE="bogofilter crypt dbus dillo doc gnome gnutls imap ipv6 kde ldap nntp pda session smime spamassassin spell ssl startup-notification xface"
 
 COMMONDEPEND=">=x11-libs/gtk+-2.6
 	pda? ( >=app-pda/jpilot-0.99 )
@@ -42,7 +41,7 @@ RDEPEND="${COMMONDEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
 
-PLUGIN_NAMES="acpi-notifier archive att-remover attachwarner cachesaver fetchinfo gtkhtml mailmbox newmail notification perl rssyl spam_report tnef_parse vcalendar"
+PLUGIN_NAMES="acpi-notifier archive att-remover attachwarner bsfilter cachesaver fancy fetchinfo gtkhtml mailmbox newmail notification perl rssyl spam_report tnef_parse vcalendar"
 
 src_compile() {
 	local myconf="--disable-libetpan --disable-gnutls"
