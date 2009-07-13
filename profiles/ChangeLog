@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2903 2009/07/13 09:30:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2904 2009/07/13 09:52:52 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -18,6 +18,9 @@
   13 Jul 2009; Hans de Graaff <graaff@gentoo.org> package.mask:
   Freeride is in dev-util, not dev-ruby. Fixed and will wait another 30 days
   just to be sure.
+
+  13 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask bobs for removal.
 
   13 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove rubinius mask.
