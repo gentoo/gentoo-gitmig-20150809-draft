@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/wine-doors-0.1.3.ebuild,v 1.1 2009/03/19 20:03:20 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine-doors/wine-doors-0.1.3.ebuild,v 1.2 2009/07/13 09:16:17 hanno Exp $
 
 EAPI=2
 
@@ -23,7 +23,8 @@ DEPEND="dev-python/pycairo
 	app-pda/orange
 	app-arch/cabextract
 	app-emulation/wine"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	dev-python/gconf-python"
 
 src_compile() {
 	einfo "nothing to compile"
