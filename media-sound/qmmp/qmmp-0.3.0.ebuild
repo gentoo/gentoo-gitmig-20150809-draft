@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.3.0.ebuild,v 1.2 2009/07/13 07:38:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.3.0.ebuild,v 1.3 2009/07/13 21:31:34 hwoarang Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://qmmp.ylsoftware.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+alsa +dbus bs2b faad2 ffmpeg flac jack libsamplerate +mad modplug musepack oss
+IUSE="aac +alsa +dbus bs2b ffmpeg flac jack libsamplerate +mad modplug musepack oss
 projectm pulseaudio scrobbler sndfile +vorbis wavpack"
 
 RDEPEND="x11-libs/qt-gui:4
@@ -21,7 +21,7 @@ RDEPEND="x11-libs/qt-gui:4
 	alsa? ( media-libs/alsa-lib )
 	bs2b? ( media-libs/libbs2b )
 	dbus? ( sys-apps/dbus )
-	faad2? ( media-libs/faad2 )
+	aac? ( media-libs/faad2 )
 	flac? ( media-libs/flac )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
@@ -54,6 +54,7 @@ qmmp_use_enable() {
 src_compile() {
 	mycmakeargs="${mycmakeargs}
 		$(qmmp_use_enable alsa ALSA)
+		$(qmmp_use_enable aac AAC)
 		$(qmmp_use_enable bs2b BS2B )
 		$(qmmp_use_enable dbus DBUS)
 		$(qmmp_use_enable ffmpeg FFMPEG)

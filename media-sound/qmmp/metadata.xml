@@ -6,7 +6,6 @@
     <email>sound@gentoo.org</email>
   </maintainer>
   <use>
-  	<flag name="faad2">Enable ACC audio decoding library</flag>
   	<flag name="bs2b">Enable Bauer stereophonic-to-binaural DSP library</flag>
 	<flag name="projectm">Enable projectm music visualization plugin</flag>
     <flag name="scrobbler">Enable audioscrobbler/last.fm support</flag>
