@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.13.1.ebuild,v 1.6 2009/07/07 18:15:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.13.1.ebuild,v 1.7 2009/07/13 17:58:30 josejx Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="alsa debug flac fluidsynth mp3 ogg vorbis"
 RESTRICT="test"  # it only looks like there's a test there #77507
 
