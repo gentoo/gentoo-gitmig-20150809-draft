@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/activylircd/activylircd-0.4.ebuild,v 1.2 2009/06/13 11:43:06 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/activylircd/activylircd-0.4.ebuild,v 1.3 2009/07/13 14:37:15 zzam Exp $
 
 inherit eutils
 
@@ -12,6 +12,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${P}-linking.patch" # Bug #277656
+}
 
 src_install() {
 	dosbin activylircd
