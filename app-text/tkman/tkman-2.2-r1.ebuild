@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.3 2009/07/13 04:39:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkman/tkman-2.2-r1.ebuild,v 1.4 2009/07/13 12:41:49 fmccor Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc sparc ~x86"
 IUSE=""
 
 DEPEND=">=app-text/rman-3.1
