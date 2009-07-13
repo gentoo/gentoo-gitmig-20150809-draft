@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.20 2009/07/08 08:41:53 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.21 2009/07/13 09:10:54 aballier Exp $
 
 EAPI="1"
 
@@ -51,10 +51,10 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc139
 	+gcrypt ggi gnome gnutls hal httpd id3tag ieee1394 jack kate libass libcaca
 	libnotify libproxy libsysfs libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
-	pda png pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba schroedinger
-	sdl sdl-image seamonkey shine shout skins speex sse stream svg svga taglib
-	theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm vorbis win32codecs
-	wma-fixed X x264 xcb xinerama xml xosd xv zvbi"
+	pda png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
+	schroedinger sdl sdl-image seamonkey shine shout skins speex sse stream
+	svg svga taglib theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm
+	vorbis win32codecs wma-fixed X x264 xcb xinerama xml xosd xv zvbi"
 
 RDEPEND="
 		sys-libs/zlib
@@ -118,6 +118,7 @@ RDEPEND="
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng )
+		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
@@ -313,6 +314,7 @@ src_compile () {
 		$(use_enable pda) \
 		$(use_enable png) \
 		--disable-portaudio \
+		$(use_enable projectm) \
 		$(use_enable pulseaudio pulse) \
 		$(use_enable pvr) \
 		$(use_enable qt4) \
