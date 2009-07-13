@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.3 2009/07/12 16:19:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.4 2009/07/13 15:11:36 volkmar Exp $
+
+  13 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> ptlib-2.6.2.ebuild:
+  xmlrpc USE flag needs http-server instead of http. Fix bug 277385
 
   12 Jul 2009; Tobias Klausmann <klausman@gentoo.org> ptlib-2.6.2.ebuild:
   Keyworded on alpha, bug #276278

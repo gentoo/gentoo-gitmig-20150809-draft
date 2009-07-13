@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.3 2009/07/12 16:19:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.4 2009/07/13 15:11:36 volkmar Exp $
 
 EAPI="2"
 
@@ -125,8 +125,10 @@ pkg_setup() {
 			conditional_use_error_msg "xmlrpc" "xml"
 			use_error=true
 		fi
-		if ! use http; then
-			conditional_use_error_msg "xmlrpc" "http"
+		# configure script tells it needs http but it fails, see bug 277385
+		# the bug has been reported at upstream bug 2820814
+		if ! use http-server; then
+			conditional_use_error_msg "xmlrpc" "http-server"
 			use_error=true
 		fi
 	fi
