@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4630 2009/07/14 16:48:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4631 2009/07/14 19:07:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2186,6 +2186,7 @@ net-im/psi:insecure-patches - Enables extra non official patches that may pose a
 net-im/psimedia:demo -  build simple test application for the PsiMedia system. 
 net-im/pyaim-t:webinterface - Install dependencies needed for the web interface 
 net-im/pyicq-t:webinterface - Install dependencies needed for the web interface 
+net-im/qtwitter:oauth - Enables authorization using OAuth for Twitter accounts
 net-im/sim:gpg - Enable gpg plugin to adds GnuPG encryption/decryption support for messages 
 net-im/sim:livejournal - Enable livejournal plugin to post in LiveJournal 
 net-im/sim:sms - Enable sms plugin
