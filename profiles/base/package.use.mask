@@ -1,5 +1,10 @@
 # This file requires >=portage-2.1.1
 
+# Petteri Räty <betelgeuse@gentoo.org> (14 Jul 2009)
+# Open source Java plugin development happens in IcedTea
+# these days.
+dev-java/gnu-classpath nsplugin
+
 # Thomas Anderson <gentoofan23@gentoo.org> (17 Jun 2009)
 # app-misc/iguanaIR is p.masked so lirc_devices_iguana
 # needs to get masked for app-misc/lirc.
