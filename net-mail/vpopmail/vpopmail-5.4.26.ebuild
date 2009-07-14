@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.26.ebuild,v 1.1 2008/07/31 18:34:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.26.ebuild,v 1.2 2009/07/14 08:54:16 flameeyes Exp $
 
 inherit autotools eutils fixheadtails qmail
 
@@ -108,7 +108,8 @@ src_compile() {
 src_install() {
 	vpopmail_set_homedir
 
-	make DESTDIR="${D}" install || die "make install failed"
+	# bug #277764
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 	keepdir "${VPOP_HOME}"/domains
 
 	# install helper script for maildir conversion
