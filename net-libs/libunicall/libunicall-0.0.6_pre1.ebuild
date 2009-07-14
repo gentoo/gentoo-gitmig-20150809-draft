@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.6_pre1.ebuild,v 1.1 2008/12/15 09:58:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.6_pre1.ebuild,v 1.2 2009/07/14 09:25:28 flameeyes Exp $
 
 inherit eutils autotools
 
@@ -25,6 +25,12 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-expose-internal-headers.patch"
 	epatch "${FILESDIR}/${P}--as-needed.2.patch"
 	eautoreconf
+}
+
+src_compile() {
+	econf || die "econf failed"
+	# bug #277783
+	emake -j1 || die "emake failed"
 }
 
 src_install () {
