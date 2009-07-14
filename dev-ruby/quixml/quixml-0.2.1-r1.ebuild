@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/quixml-0.2.1-r1.ebuild,v 1.4 2007/07/11 05:23:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/quixml/quixml-0.2.1-r1.ebuild,v 1.5 2009/07/14 18:28:10 graaff Exp $
 
 inherit ruby
 
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18"
 
 DESCRIPTION="A fast Ruby XML API written in C with pretty-printing, entity
 en-/decoding, marshalling and regex addressing."
