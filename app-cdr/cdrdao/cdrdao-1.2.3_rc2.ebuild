@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3_rc2.ebuild,v 1.4 2009/07/08 14:48:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.2.3_rc2.ebuild,v 1.5 2009/07/14 09:07:08 ssuominen Exp $
 
 EAPI=2
-inherit eutils flag-o-matic eutils autotools
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
@@ -17,7 +17,7 @@ fi
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd"
-IUSE="gcdmaster encode pccts mp3 ogg"
+IUSE="gcdmaster encode pccts mad vorbis"
 
 RDEPEND="virtual/cdrtools
 	encode? ( >=media-sound/lame-3.90 )
@@ -26,22 +26,17 @@ RDEPEND="virtual/cdrtools
 		>=dev-cpp/libgnomecanvasmm-2.6
 		>=dev-cpp/gconfmm-2.6
 		>=dev-cpp/libgnomeuimm-2.6
-		media-libs/libao
-	)
-	mp3? (
-		media-libs/libmad
-		media-libs/libao
-	)
-	ogg? (
-		media-libs/libvorbis
-		media-libs/libao
-	)
-	"
+		media-libs/libao )
+	mad? ( media-libs/libmad
+		media-libs/libao )
+	vorbis? ( media-libs/libvorbis
+		media-libs/libao )"
 DEPEND="${RDEPEND}
 	pccts? ( >=dev-util/pccts-1.33.24-r1 )
 	!app-cdr/cue2toc"
 
-S="${WORKDIR}/${P/_}"
+MAKEOPTS="${MAKEOPTS} -j1"
+S=${WORKDIR}/${P/_}
 
 src_prepare() {
 	# Fix ERROR: CD/cdda.toc:36: Invalid CD-TEXT item for a track.
@@ -61,23 +56,24 @@ src_prepare() {
 }
 
 src_configure() {
-	# A few CFLAGS do not work see bug #99998
-	#strip-flags
-	#append-flags "-fno-inline"
+	local myconf
+
+	# GCC 3.x isn't safe wrt bug #230415
+	if [[ $(gcc-major-version) -le 3 ]]; then
+		myconf="--without-xdao"
+		use gcdmaster && ewarn "You need GCC 4.x for gcdmaster to be built."
+	fi
 
 	econf \
-		$(use_with gcdmaster xdao)		\
-		$(use_with encode lame)			\
-		$(use_with mp3 mp3-support)		\
-		$(use_with ogg ogg-support)		\
-		--disable-dependency-tracking || die "configure failed"
-}
-
-src_compile() {
-	emake -j1 || die "could not compile"
+		$(use_with gcdmaster xdao) \
+		$(use_with encode lame) \
+		$(use_with mad mp3-support) \
+		$(use_with vorbis ogg-support) \
+		--disable-dependency-tracking \
+		${myconf}
 }
 
 src_install() {
-	emake -j1 DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS CREDITS ChangeLog NEWS README*
 }
