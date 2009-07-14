@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/opengl-manpages-20001215.ebuild,v 1.14 2006/07/19 14:34:46 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/opengl-manpages/opengl-manpages-20001215.ebuild,v 1.15 2009/07/14 09:43:26 flameeyes Exp $
 
 DESCRIPTION="Man pages for OpenGL"
 HOMEPAGE="http://www.opengl.org/documentation/specs/"
@@ -24,14 +24,14 @@ src_compile() {
 	for x in ${S}/*; do
 		cd ${x}
 		xmkmf || die "xmkmf failed"
-		make || die "make failed"
+		emake || die "make failed"
 	done
 }
 
 src_install() {
 	for x in ${S}/*; do
 		cd ${x}
-		make DESTDIR="${D}" install || die "make install failed"
+		emake DESTDIR="${D}" install || die "make install failed"
 	done
 	dohtml -r ${WORKDIR}/release/xc/doc/hardcopy/GL/html/*
 }
