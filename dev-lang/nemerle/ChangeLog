@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/nemerle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.13 2009/07/14 21:19:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nemerle/ChangeLog,v 1.14 2009/07/14 21:21:52 fauli Exp $
+
+  14 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  -nemerle-0.2.1-r1.ebuild, -nemerle-0.2.1-r2.ebuild,
+  -files/nemerle-0.2.1-ncc-fix.diff, -nemerle-0.3.1.ebuild,
+  -files/nemerle-0.3.1-pathfix.diff, -nemerle-0.9.2.ebuild:
+  clean up
 
   14 Jul 2009; Christian Faulhammer <fauli@gentoo.org> nemerle-0.9.3.ebuild:
   stable x86, bug 277862
