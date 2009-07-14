@@ -1,6 +1,12 @@
 # ChangeLog for games-rpg/drascula
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.2 2008/10/04 00:59:34 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/drascula/ChangeLog,v 1.3 2009/07/14 07:13:10 mr_bones_ Exp $
+
+*drascula-1.0-r1 (14 Jul 2009)
+
+  14 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org> -drascula-1.0.ebuild,
+  +drascula-1.0-r1.ebuild:
+  newer files from upstream
 
   04 Oct 2008; Jeremy Olexa <darkside@gentoo.org> drascula-1.0.ebuild:
   add ~amd64, bug #239219
