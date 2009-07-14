@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.7.99.901.ebuild,v 1.2 2009/07/07 14:25:31 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/xf86-video-intel-2.7.99.901.ebuild,v 1.3 2009/07/14 23:19:35 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xproto
 	dri? ( 	x11-proto/xf86driproto
-			>=x11-libs/libdrm-2.4.6
+			>=x11-libs/libdrm-2.4.11
 			x11-libs/libX11 )"
 
 EPATCH_FORCE="yes"
