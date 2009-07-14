@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.10.91.9-r3.ebuild,v 1.1 2009/07/14 15:27:59 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/broadcom-sta-5.10.91.9-r3.ebuild,v 1.2 2009/07/14 23:09:40 matsuu Exp $
 
 inherit eutils linux-mod versionator
 
@@ -29,8 +29,10 @@ MODULESD_WL_ALIASES=("wlan0 wl")
 pkg_setup() {
 	check_license
 
-	# bug #276057
-	if kernel_is ge 2 6 29; then
+	if kernel_is ge 2 6 31; then
+		CONFIG_CHECK="LIB80211"
+	elif kernel_is ge 2 6 29; then
+		# bug #276057
 		CONFIG_CHECK="LIB80211 COMPAT_NET_DEV_OPS"
 	else
 		CONFIG_CHECK="IEEE80211 IEEE80211_CRYPT_TKIP"
