@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/amrita
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.26 2009/04/30 08:51:55 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amrita/ChangeLog,v 1.27 2009/07/14 17:59:53 graaff Exp $
+
+  14 Jul 2009; Hans de Graaff <graaff@gentoo.org> amrita-1.8.2-r1.ebuild:
+  Remove ruby19 keyword: not compatible. See bug 276821, thanks to Kevin
+  Fullerton for reporting.
 
   30 Apr 2009; Samuli Suominen <ssuominen@gentoo.org>
   amrita-1.8.2-r1.ebuild:
