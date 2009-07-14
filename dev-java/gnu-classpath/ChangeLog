@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/gnu-classpath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.90 2009/07/14 21:36:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/ChangeLog,v 1.91 2009/07/14 21:40:34 betelgeuse Exp $
+
+  14 Jul 2009; Petteri Räty <betelgeuse@gentoo.org>
+  gnu-classpath-0.98.ebuild:
+  Disable -Werror. Fixes bug #268299.
 
 *gnu-classpath-0.98 (14 Jul 2009)
 

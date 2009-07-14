@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98.ebuild,v 1.1 2009/07/14 21:36:38 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.98.ebuild,v 1.2 2009/07/14 21:40:34 betelgeuse Exp $
 
 EAPI=2
 
@@ -99,6 +99,7 @@ src_configure() {
 		--host=${CHOST} \
 		--prefix=/usr/${PN}-${SLOT} \
 		--with-ecj-jar=$(java-pkg_getjar eclipse-ecj:3.3 ecj.jar) \
+		--disable-Werror \
 		${myconf} \
 		|| die "configure failed"
 }
