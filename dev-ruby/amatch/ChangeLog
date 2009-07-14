@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.9 2009/06/13 09:22:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.10 2009/07/14 17:54:26 graaff Exp $
+
+*amatch-0.2.3 (14 Jul 2009)
+
+  14 Jul 2009; Hans de Graaff <graaff@gentoo.org> amatch-0.2.1.ebuild,
+  +amatch-0.2.3.ebuild:
+  Version bump to latest upstream version. Remove ruby19 keyword: not
+  compatible. See bug 276819, thanks to Kevin Fullerton for reporting.
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org> amatch-0.2.1.ebuild:
   Fix quoting.
