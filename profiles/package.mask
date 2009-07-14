@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10050 2009/07/14 15:50:54 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10051 2009/07/14 16:41:29 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (14 Jul 2009)
+#  on behalf of QA Team
+#
+# Fails to build with glibc 2.10 (bug #277833), doesn't respect
+# CC (bug #244010) nor CFLAGS (bug #240281). Unmaintained in Gentoo
+# and unneeded by in-tree packages.
+#
+# Removal on 2009-09-14
+dev-util/jscalltree
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (14 Jul 2009)
 #  on behalf of QA Team
