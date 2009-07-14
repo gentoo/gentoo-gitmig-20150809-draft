@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>maintainer-needed</herd>
-	<longdescription>
-	Avant Window Navigator (Awn) is a dock-like bar which sits at the
-	bottom of the screen. It has support for launchers, task lists, and
-	third party applets.
-	</longdescription>
-	<use>
-		<flag name='xfce'>Enables support for the XFCE 4 desktop
-		environment</flag>
-	</use>
+  <use>
+    <flag name="vala">Enables support for applets written in <pkg>dev-lang/vala</pkg>.</flag>
+    <flag name='xfce'>Enables support for the XFCE 4 desktop environment</flag>
+  </use>
+  <herd>desktop-effects</herd>
+  <longdescription>
+  Avant Window Navigator (Awn) is a dock-like bar which sits at the
+  bottom of the screen. It has support for launchers, task lists, and
+  third party applets.
+  </longdescription>
 </pkgmetadata>
