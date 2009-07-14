@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/libgpepimc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpepimc/ChangeLog,v 1.1 2009/03/01 00:06:25 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpepimc/ChangeLog,v 1.2 2009/07/14 23:40:26 miknix Exp $
+
+  14 Jul 2009; Angelo Arrifano <miknix@gentoo.org> libgpepimc-0.9.ebuild:
+  Prevent gtk-doc being always installed, add doc use flag.
 
 *libgpepimc-0.9 (01 Mar 2009)
 
