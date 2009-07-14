@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/python-distutils-extra-1.92_pre67.ebuild,v 1.1 2009/07/13 23:31:57 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/python-distutils-extra-1.92_pre67.ebuild,v 1.2 2009/07/14 22:52:51 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -21,4 +21,3 @@ RDEPEND="${DEPEND}"
 DOCS="doc/FAQ doc/README  doc/setup.cfg.example  doc/setup.py.example"
 
 S=${WORKDIR}/${PN}
-
