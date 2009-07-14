@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4453.ebuild,v 1.5 2009/07/09 18:57:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4453.ebuild,v 1.6 2009/07/14 13:14:33 jer Exp $
 
 EAPI="2"
 
@@ -122,7 +122,7 @@ opera_linguas() {
 pkg_setup() {
 	elog "${WARN}If you seek support, please file a bug report at${NORMAL}"
 	elog "${WARN}https://bugs.gentoo.org and post the output of${NORMAL}"
-	elog "${WARN} \`emerge -vp =${CATEGORY}/${P}'${NORMAL}"
+	elog "${WARN} \`emerge --info =${CATEGORY}/${P}'${NORMAL}"
 }
 
 src_unpack() {
