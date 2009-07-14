@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/package.mask,v 1.2 2009/07/14 13:20:21 haubi Exp $
 
 # Jeremy Olexa <darkside@gentoo.org> (08 Jan 2008)
 # Something is fishy with the port-aix.{c,h} code provided by upstream. Old
