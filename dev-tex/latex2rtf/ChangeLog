@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.25 2009/05/30 08:47:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.26 2009/07/14 13:28:36 fmccor Exp $
+
+  14 Jul 2009; Ferris McCormick <fmccor@gentoo.org> latex2rtf-1.9.19.ebuild:
+  Sparc stable, part of bug #276990.
 
   30 May 2009; Ulrich Mueller <ulm@gentoo.org> latex2rtf-1.9.19.ebuild:
   Remove app-text/tetex from dependencies, bug 227443.
