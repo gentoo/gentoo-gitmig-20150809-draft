@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.8.0.ebuild,v 1.1 2009/07/14 19:03:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.8.0.ebuild,v 1.2 2009/07/14 19:07:22 hwoarang Exp $
 
 EAPI="2"
 
@@ -19,8 +19,15 @@ DEPEND="x11-libs/qt-gui:4
 	oauth? ( dev-libs/qoauth )"
 RDEPEND="${DEPEND}"
 
-LANGS="pt_BR"
-LANGSLONG="ca_ES de_DE es_ES fr_FR it_IT ja_JP pl_PL"
+QTWITTER_LANGS="pt_BR"
+QTWITTER_NOLONGLANGS="ca_ES de_DE es_ES fr_FR ja_JP pl_PL"
+
+for L in $QTWITTER_LANGS; do
+	IUSE="$IUSE linguas_$L"
+done
+for L in $QTWITTER_NOLONGLANGS; do
+	IUSE="$IUSE linguas_${L%_*}"
+done
 
 src_prepare() {
 	qt4_src_prepare
@@ -28,10 +35,10 @@ src_prepare() {
 
 	local langs=
 	for lingua in $LINGUAS; do
-		if has $lingua $LANGS; then
+		if has $lingua $QTWITTER_LANGS; then
 			langs="$langs loc/${PN}_${lingua}.ts"
 		else
-			for a in $LANGSLONG; do
+			for a in $QTWITTER_NOLONGLANGS; do
 				if [[ $lingua == ${a%_*} ]]; then
 					langs="$langs loc/${PN}_${a}.ts"
 				fi
