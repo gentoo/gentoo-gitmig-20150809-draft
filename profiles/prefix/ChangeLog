@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.28 2009/07/14 14:47:27 haubi Exp $
+# $Id: ChangeLog,v 1.29 2009/07/14 14:50:20 darkside Exp $
+
+  14 Jul 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask portage-2.2.00.13825 due to regression with virtuals
 
   14 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> hpux/profile.bashrc:
   preserve busy text files based on installed file types, not
