@@ -1,6 +1,6 @@
 # ChangeLog for sci-libs/lapack-reference
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.47 2009/07/14 01:57:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/ChangeLog,v 1.48 2009/07/14 04:44:44 tove Exp $
 
 *lapack-reference-3.2.1 (13 Jul 2009)
 
@@ -13,7 +13,7 @@
   lapack-reference-3.1.1-r1.ebuild:
   Move ESELECT_PROF so binary packages work.
 
-  21 Nov 2007; SÃ©bastien Fabbro <bicatali@gentoo.org>
+  21 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
   -files/lapack-reference-3.1.0-autotool.patch,
   -files/lapack-reference-3.1.1-autotool.patch, -files/eselect-reference,
   -lapack-reference-3.1.0.ebuild, -lapack-reference-3.1.1.ebuild,
@@ -27,22 +27,22 @@
   16 Nov 2007; nixnut <nixnut@gentoo.org> lapack-reference-3.1.1-r1.ebuild:
   Stable on ppc wrt bug 189738
 
-  14 Nov 2007; SÃ©bastien Fabbro <bicatali@gentoo.org>
+  14 Nov 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-reference-3.1.1-r1.ebuild:
   amd64 stable wrt #189738, with kingtaco's green light.
 
-  29 Oct 2007; RaÃºl Porcel <armin76@gentoo.org>
+  29 Oct 2007; Raúl Porcel <armin76@gentoo.org>
   lapack-reference-3.1.1-r1.ebuild:
   alpha stable wrt #189738
 
   21 Oct 2007; nixnut <nixnut@gentoo.org> lapack-reference-3.1.1-r1.ebuild:
   Added ~ppc
 
-  11 Oct 2007; SÃ©bastien Fabbro <bicatali@gentoo.org>
+  11 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
   lapack-reference-3.1.1-r1.ebuild:
   fixed lib->get_libdir for eselect bug workaround
 
-  10 Oct 2007; SÃ©bastien Fabbro <bicatali@gentoo.org>
+  10 Oct 2007; Sébastien Fabbro <bicatali@gentoo.org>
   -files/lapack-reference-3.0-autotool.patch, -files/f77-reference,
   -lapack-reference-3.0.ebuild, -lapack-reference-3.0-r1.ebuild,
   lapack-reference-3.1.1-r1.ebuild:
@@ -52,7 +52,7 @@
   lapack-reference-3.1.1-r1.ebuild:
   Stable on ppc64; bug #189738
 
-  27 Sep 2007; RaÃºl Porcel <armin76@gentoo.org>
+  27 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   lapack-reference-3.1.1-r1.ebuild:
   ia64/sparc stable wrt #189738
 
@@ -66,7 +66,7 @@
 
 *lapack-reference-3.1.1-r1 (21 Aug 2007)
 
-  21 Aug 2007; SÃ©bastien Fabbro <bicatali@gentoo.org>
+  21 Aug 2007; Sébastien Fabbro <bicatali@gentoo.org>
   +files/lapack-reference-3.1.1-autotools.patch,
   +files/eselect.lapack.reference, metadata.xml,
   +lapack-reference-3.1.1-r1.ebuild:
@@ -92,7 +92,7 @@
   It seems to be rare and only occurs on 64-bit platforms.  Reference:
   https://icl.cs.utk.edu/lapack-forum/viewtopic.php?t=299
 
-  25 Jun 2007; RaÃºl Porcel <armin76@gentoo.org>
+  25 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   lapack-reference-3.1.1.ebuild:
   Add ~alpha wrt #159002
 
@@ -138,7 +138,7 @@
   +files/lapack-reference-3.1.0-autotool.patch,
   +lapack-reference-3.1.0.ebuild:
   Version bump. Ebuild now allows library checks via lapack's 
-  test-routines. Thanks much to Adam PiÄtyszek 
+  test-routines. Thanks much to Adam Piątyszek 
   <ediap@et.put.poznan.pl> for his ebuild and patches 
   (this fixes bug #157410).
 
@@ -185,7 +185,7 @@
   +files/lapack-reference-3.0-autotool.patch,
   +lapack-reference-3.0-r3.ebuild:
   Bump to autotool the package, which makes the build work much better in
-  parallel and with gcc4. Thanks to Adam PiÄtyszek for catching an initial
+  parallel and with gcc4. Thanks to Adam Piątyszek for catching an initial
   problem; a couple of files cannot be compiled with optimization.
 
   15 May 2006; Donnie Berkholz <dberkholz@gentoo.org>;
