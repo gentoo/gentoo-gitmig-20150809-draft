@@ -24,6 +24,7 @@
 		<flag name='apcupsd'>enable support for <pkg>sys-power/apcupsd</pkg></flag>
 		<flag name='audacious'>enable monitoring of music played by <pkg>media-sound/audacious</pkg></flag>
 		<flag name='bmpx'>enable monitoring of music played by <pkg>media-sound/bmpx</pkg></flag>
+		<flag name='ipv6'>disable support for tcp (ip4) port monitoring</flag>
 		<flag name='math'>enable support for glibc's libm math library</flag>
 		<flag name='moc'>enable monitoring of music played by <pkg>media-sound/moc</pkg></flag>
 		<flag name='mpd'>enable monitoring of music controlled by <pkg>media-sound/mpd</pkg></flag>
