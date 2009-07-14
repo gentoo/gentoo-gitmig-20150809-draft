@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.27 2009/07/14 13:20:20 haubi Exp $
+# $Id: ChangeLog,v 1.28 2009/07/14 14:47:27 haubi Exp $
+
+  14 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> hpux/profile.bashrc:
+  preserve busy text files based on installed file types, not
+  to-be-installed ones
 
   14 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
   fixed cvs header
