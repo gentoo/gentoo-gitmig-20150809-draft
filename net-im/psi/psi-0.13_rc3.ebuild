@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc2.ebuild,v 1.1 2009/07/08 10:44:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13_rc3.ebuild,v 1.1 2009/07/14 15:24:38 pva Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ DESCRIPTION="Qt4 Jabber client, with Licq-like interface"
 HOMEPAGE="http://psi-im.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2
 	mirror://gentoo/${PN}-langs-${LANGPACK_VER}.tar.bz2
-	extras? ( mirror://gentoo/${PN}-extra-patches-r654.tar.bz2
-		mirror://gentoo/${PN}-extra-iconsets-r654.tar.bz2 )"
+	extras? ( mirror://gentoo/${PN}-extra-patches-r691.tar.bz2
+		mirror://gentoo/${PN}-extra-iconsets-r691.tar.bz2 )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -47,11 +47,15 @@ src_prepare() {
 	if use extras; then
 		# some patches from psi+ project http://code.google.com/p/psi-dev
 		ewarn "You're about to build heavily patched version of Psi called Psi+."
-		ewarn "It has really nice features but still under heavy development."
+		ewarn "It has really nice features but still is under heavy development."
 		ewarn "Take a look at homepage for more info: http://code.google.com/p/psi-dev"
 		ewarn "If you wish to disable some patches just put"
 		ewarn "MY_EPATCH_EXCLUDE=\"list of patches\""
 		ewarn "into /etc/portage/env/${CATEGORY}/${PN} file."
+		ewarn
+		ewarn "Note: some patches depend on other. So if you disabled some patch"
+		ewarn "and other started to fail to apply, you'll have to disable patches"
+		ewarn "that fail too."
 		ebeep
 
 		EPATCH_EXCLUDE="${MY_EPATCH_EXCLUDE} 270-psi-application-info.diff" \
