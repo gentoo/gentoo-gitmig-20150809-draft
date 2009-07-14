@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.31 2009/06/13 16:30:32 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.32 2009/07/14 15:09:02 markusle Exp $
+
+  14 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.4.0.ebuild,
+  +files/paraview-3.4.0-qt4.4-5.patch:
+  Added support for >=qt4.4 to 3.4.0 ebuild.
 
   13 Jun 2009; Justin Bronder <jsbronder@gentoo.org> -paraview-2.6.2.ebuild:
   Removing paraview-2.6.2, depends on sys-cluster/mpich which is going

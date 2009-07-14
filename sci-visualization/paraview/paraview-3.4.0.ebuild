@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.5 2008/11/05 23:53:50 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.6 2009/07/14 15:09:02 markusle Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit distutils eutils flag-o-matic toolchain-funcs versionator python qt4
 
@@ -23,9 +23,9 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 				sys-cluster/openmpi
 				sys-cluster/mpich2 ) )
 	python? ( >=dev-lang/python-2.0 )
-	qt4? ( || ( ( x11-libs/qt-gui:4 x11-libs/qt-qt3support:4
-				x11-libs/qt-assistant:4 )
-		=x11-libs/qt-4.3*:4 ) )
+	qt4? ( x11-libs/qt-gui:4
+			x11-libs/qt-qt3support:4
+			x11-libs/qt-assistant:4 )
 	dev-libs/libxml2
 	media-libs/libpng
 	media-libs/jpeg
@@ -55,12 +55,11 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	mkdir "${BUILDDIR}" || die "Failed to generate build directory"
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-${PATCH_V}-gcc4.3.patch
-	epatch "${FILESDIR}"/${PN}-${PATCH_V}-qt4.4.patch
+	epatch "${FILESDIR}"/${P}-qt4.4-5.patch
 	epatch "${DISTDIR}"/${P}-OpenFOAM-48.patch.bz2
 
 	# rename paraview's assistant wrapper
