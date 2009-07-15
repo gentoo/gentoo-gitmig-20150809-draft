@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.9 2009/07/06 11:12:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.10 2009/07/15 09:54:12 scarabeus Exp $
 
-EAPI="1"
-
-IUSE="acpi debug"
+EAPI="2"
 
 inherit eutils multilib linux-mod toolchain-funcs versionator
 
@@ -12,6 +10,8 @@ DESCRIPTION="Ati precompiled drivers for r600 (HD Series) and newer chipsets"
 HOMEPAGE="http://www.ati.com"
 ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV/./-}-x86.x86_64.run"
+IUSE="acpi debug +modules"
+
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
@@ -21,11 +21,9 @@ RDEPEND="
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-opengl-1.0.7
-	sys-libs/libstdc++-v3
 	>=x11-base/xorg-server-1.5.3-r7
 	x11-libs/libXinerama
 	x11-libs/libXrandr
-	amd64? ( app-emulation/emul-linux-x86-xlibs )
 	acpi? (
 		sys-power/acpid
 		x11-apps/xauth
@@ -43,30 +41,7 @@ EMULTILIB_PKG="true"
 
 S="${WORKDIR}"
 
-pkg_setup() {
-	# Define module dir.
-	MODULE_DIR="${S}/common/lib/modules/fglrx/build_mod"
-
-	# check kernel and sets up KV_OBJ
-	MODULE_NAMES="fglrx(video:${S}/common/lib/modules/fglrx/build_mod/2.6.x)"
-	BUILD_TARGETS="kmod_build"
-	linux-mod_pkg_setup
-	BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
-
-	# xorg folder
-	BASE_DIR="${S}/x740"
-
-	# amd64/x86
-	if use amd64 ; then
-		MY_BASE_DIR="${BASE_DIR}_64a"
-		PKG_LIBDIR=lib64
-		ARCH_DIR="${S}/arch/x86_64"
-	else
-		MY_BASE_DIR="${BASE_DIR}"
-		PKG_LIBDIR=lib
-		ARCH_DIR="${S}/arch/x86"
-	fi
-
+_check_kernel_config() {
 	if ! kernel_is 2 6; then
 		eerror "You need a 2.6 linux kernel to compile against!"
 		die "No 2.6 Kernel found"
@@ -137,8 +112,15 @@ pkg_setup() {
 		eerror "in the kernel config."
 		die "CONFIG_PCI_MSI disabled"
 	fi
+}
 
-	# This is used like $(get_libdir) for paths in ati's package.
+pkg_setup() {
+	# Define module dir.
+	MODULE_DIR="${S}/common/lib/modules/fglrx/build_mod"
+	# xorg folder
+	BASE_DIR="${S}/x740"
+
+	# amd64/x86
 	if use amd64 ; then
 		MY_BASE_DIR="${BASE_DIR}_64a"
 		PKG_LIBDIR=lib64
@@ -149,6 +131,14 @@ pkg_setup() {
 		ARCH_DIR="${S}/arch/x86"
 	fi
 
+	if use modules; then
+		MODULE_NAMES="fglrx(video:${S}/common/lib/modules/fglrx/build_mod/2.6.x)"
+		BUILD_TARGETS="kmod_build"
+		BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
+		linux-mod_pkg_setup
+		_check_kernel_config
+	fi
+
 	elog
 	elog "Please note that this driver supports only graphic cards based on"
 	elog "r600 chipset and newer."
@@ -157,22 +147,34 @@ pkg_setup() {
 	elog "If your card is older then usage of ${CATEGORY}/xf86-video-ati"
 	elog "as replacement is highly recommended. Rather than staying with"
 	elog "old versions of this driver."
+	elog "For migration informations please reffer to:"
+	elog "http://www.gentoo.org/proj/en/desktop/x/x11/ati-migration-guide.xml"
 	einfo
 }
 
 src_unpack() {
-	#Switching to a standard way to extract the files since otherwise no signature file
-	#would be created
+	# Switching to a standard way to extract the files since otherwise no signature file
+	# would be created
 	local src="${DISTDIR}/${A}"
 	sh "${src}" --extract "${S}"  2&>1 /dev/null
-	cd "${S}"
-	epatch "${FILESDIR}"/ati-drivers-xen.patch || die "epatch failed"
+}
 
-	if kernel_is ge 2 6 29; then
-		epatch "${FILESDIR}"/kernel/2.6.29*.patch
-	fi
-	if kernel_is ge 2 6 30; then
-		epatch "${FILESDIR}"/kernel/2.6.30*.patch
+src_prepare() {
+	epatch "${FILESDIR}"/ati-drivers-xen.patch
+
+	# All kernel options for prepare are ment to be in here
+	if use modules; then
+		if kernel_is ge 2 6 29; then
+			epatch "${FILESDIR}"/kernel/2.6.29*.patch
+		fi
+		if kernel_is ge 2 6 30; then
+			epatch "${FILESDIR}"/kernel/2.6.30*.patch
+		fi
+		if use debug; then
+			sed -i '/^#define DRM_DEBUG_CODE/s/0/1/' \
+				"${MODULE_DIR}/firegl_public.c" \
+				|| die "Failed to enable debug output."
+		fi
 	fi
 
 	# These are the userspace utilities that we also have source for.
@@ -181,13 +183,6 @@ src_unpack() {
 		"${ARCH_DIR}"/usr/X11R6/bin/{fgl_glxgears,fglrx_xgamma} \
 		"${ARCH_DIR}"/usr/X11R6/${PKG_LIBDIR}/libfglrx_gamma* \
 		|| die "bin rm failed"
-
-	if use debug; then
-		# Enable debug mode in the Source Code.
-		sed -i '/^#define DRM_DEBUG_CODE/s/0/1/' \
-			"${MODULE_DIR}/firegl_public.c" \
-			|| die "Failed to enable debug output."
-	fi
 
 	if use acpi; then
 		sed -i \
@@ -205,7 +200,7 @@ src_unpack() {
 		epatch "${FILESDIR}"/ati-powermode-opt-path-2.patch || die "Failed to epatch powermode-opt-path-2.patch"
 	fi
 
-	pushd ${MODULE_DIR} >/dev/null
+	cd "${MODULE_DIR}"
 	ln -s "${ARCH_DIR}"/lib/modules/fglrx/build_mod/libfglrx_ip.a.GCC$(gcc-major-version) \
 		|| die "symlinking precompiled core failed"
 
@@ -219,7 +214,7 @@ src_unpack() {
 	sed -i -e 's/__SMP__/CONFIG_SMP/' *.c *h || die "SMP sed failed"
 	sed -i -e 's/ifdef MODVERSIONS/ifdef CONFIG_MODVERSIONS/' *.c *.h \
 		|| die "MODVERSIONS sed failed"
-	popd >/dev/null
+	cd "${S}"
 
 	mkdir extra || die "mkdir failed"
 	cd extra
@@ -231,9 +226,9 @@ src_unpack() {
 }
 
 src_compile() {
-	linux-mod_src_compile
+	use modules && linux-mod_src_compile
 
-	einfo "Building fgl_glxgears"
+	ebegin "Building fgl_glxgears"
 	cd "${S}"/extra/fgl_glxgears
 	# These extra libs/utils either have an Imakefile that does not
 	# work very well without tweaking or a Makefile ignoring CFLAGS
@@ -244,26 +239,29 @@ src_compile() {
 	"$(tc-getCC)" -o fgl_glxgears ${CFLAGS} ${LDFLAGS} -DUSE_GLU \
 		-I"${S}"/common/usr/include fgl_glxgears.c \
 		-lGL -lGLU -lX11 -lm || die "fgl_glxgears build failed"
+	eend $?
 
-	einfo "Building fglrx_gamma lib"
+	ebegin "Building fglrx_gamma lib"
 	cd "${S}"/extra/lib/fglrx_gamma
 	"$(tc-getCC)" -shared -fpic -o libfglrx_gamma.so.1.0 ${CFLAGS} ${LDFLAGS} \
 		-DXF86MISC -Wl,-soname,libfglrx_gamma.so.1.0 fglrx_gamma.c \
 		-lXext || die "fglrx_gamma lib build failed"
 	ln -s libfglrx_gamma.so.1.0 libfglrx_gamma.so || die "ln failed"
 	ln -s libfglrx_gamma.so.1.0 libfglrx_gamma.so.1 || die "ln failed"
+	eend $?
 
-	einfo "Building fglrx_gamma util"
+	ebegin "Building fglrx_gamma util"
 	cd "${S}"/extra/programs/fglrx_gamma
 	"$(tc-getCC)" -o fglrx_xgamma ${CFLAGS} ${LDFLAGS} \
 		-I../../../common/usr/X11R6/include -L../../lib/fglrx_gamma \
 		fglrx_xgamma.c -lm -lfglrx_gamma -lX11 \
 		|| die "fglrx_gamma util build failed"
+	eend $?
 
 }
 
 src_install() {
-	linux-mod_src_install
+	use modules && linux-mod_src_install
 
 	# We can do two things here, and neither of them is very nice.
 
@@ -290,7 +288,7 @@ src_install() {
 	# below.
 
 	echo "COLON_SEPARATED=LIBGL_DRIVERS_PATH" > "${T}/03ati-colon-sep"
-	doenvd "${T}/03ati-colon-sep"
+	doenvd "${T}/03ati-colon-sep" || die
 
 	# All libraries that we have a 32 bit and 64 bit version of on
 	# amd64 are installed in src_install-libs. Everything else
@@ -316,20 +314,20 @@ src_install() {
 
 	# X modules.
 	exeinto /usr/$(get_libdir)/xorg/modules/drivers
-	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/drivers/fglrx_drv.so
+	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/drivers/fglrx_drv.so || die
 	exeinto /usr/$(get_libdir)/xorg/modules/linux
-	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/linux/libfglrxdrm.so
+	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/linux/libfglrxdrm.so || die
 	exeinto /usr/$(get_libdir)/xorg/modules
-	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/{esut.a,glesx.so,amdxmm.so}
+	doexe "${MY_BASE_DIR}"/usr/X11R6/${PKG_LIBDIR}/modules/{esut.a,glesx.so,amdxmm.so} || die
 
 	# Arch-specific files.
 	# (s)bin.
 	into /opt
 	if use acpi; then
-		dosbin "${ARCH_DIR}"/usr/sbin/atieventsd
+		dosbin "${ARCH_DIR}"/usr/sbin/atieventsd || die
 	fi
 	# We cleaned out the compilable stuff in src_unpack
-	dobin "${ARCH_DIR}"/usr/X11R6/bin/*
+	dobin "${ARCH_DIR}"/usr/X11R6/bin/* || die
 
 	# lib.
 	exeinto /usr/$(get_libdir)
@@ -347,60 +345,60 @@ src_install() {
 	doins common/etc/ati/{logo*,control,atiogl.xml,signature,amdpcsdb.default}
 	if use acpi; then
 		insopts -m0755
-		doins common/etc/ati/authatieventsd.sh
+		doins common/etc/ati/authatieventsd.sh || die
 	fi
 
 	# include.
 	insinto /usr
-	doins -r common/usr/include
+	doins -r common/usr/include || die
 	insinto /usr/include/X11/extensions
-	doins common/usr/X11R6/include/X11/extensions/fglrx_gamma.h
+	doins common/usr/X11R6/include/X11/extensions/fglrx_gamma.h || die
 
 	# Just the atigetsysteminfo.sh script.
 	into /usr
-	dosbin common/usr/sbin/*
+	dosbin common/usr/sbin/* || die
 
 	# data files for the control panel.
 	insinto /usr/share
-	doins -r common/usr/share/ati
+	doins -r common/usr/share/ati || die
 	insinto /usr/share/pixmaps
-	doins common/usr/share/icons/ccc_{large,small}.xpm
+	doins common/usr/share/icons/ccc_{large,small}.xpm || die
 	make_desktop_entry amdcccle 'ATI Catalyst Control Center' \
 		ccc_large System
 
 	# doc.
-	dohtml -r common/usr/share/doc/fglrx
+	dohtml -r common/usr/share/doc/fglrx || die
 
 	if use acpi; then
-		doman common/usr/share/man/man8/atieventsd.8
+		doman common/usr/share/man/man8/atieventsd.8 || die
 
-		pushd common/usr/share/doc/fglrx/examples/etc/acpi >/dev/null
+		pushd common/usr/share/doc/fglrx/examples/etc/acpi > /dev/null
 
 		exeinto /etc/acpi
-		doexe ati-powermode.sh
+		doexe ati-powermode.sh || die
 		insinto /etc/acpi/events
-		doins events/*
+		doins events/* || die
 
-		popd >/dev/null
+		popd > /dev/null
 	fi
 
 	# Done with the "source" tree. Install tools we rebuilt:
-	dobin extra/fgl_glxgears/fgl_glxgears
-	newdoc extra/fgl_glxgears/README README.fgl_glxgears
+	dobin extra/fgl_glxgears/fgl_glxgears || die
+	newdoc extra/fgl_glxgears/README README.fgl_glxgears || die
 
-	dolib extra/lib/fglrx_gamma/*so*
-	newdoc extra/lib/fglrx_gamma/README README.libfglrx_gamma
+	dolib extra/lib/fglrx_gamma/*so* || die
+	newdoc extra/lib/fglrx_gamma/README README.libfglrx_gamma || die
 
-	dobin extra/programs/fglrx_gamma/fglrx_xgamma
-	doman extra/programs/fglrx_gamma/fglrx_xgamma.1
-	newdoc extra/programs/fglrx_gamma/README README.fglrx_gamma
+	dobin extra/programs/fglrx_gamma/fglrx_xgamma || die
+	doman extra/programs/fglrx_gamma/fglrx_xgamma.1 || die
+	newdoc extra/programs/fglrx_gamma/README README.fglrx_gamma || die
 
 	# Gentoo-specific stuff:
 	if use acpi; then
 		newinitd "${FILESDIR}"/atieventsd.init atieventsd \
 			|| die "Failed to install atieventsd.init.d"
 		echo 'ATIEVENTSDOPTS=""' > "${T}"/atieventsd.conf
-		newconfd "${T}"/atieventsd.conf atieventsd
+		newconfd "${T}"/atieventsd.conf atieventsd || die
 	fi
 }
 
@@ -424,21 +422,30 @@ src_install-libs() {
 	# The GLX libraries
 	# (yes, this really is "lib" even on amd64/multilib --marienz)
 	exeinto ${ATI_ROOT}/lib
-	doexe "${MY_ARCH_DIR}"/usr/X11R6/${pkglibdir}/libGL.so.${libver}
-	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so.${libmajor}
-	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so
+	doexe "${MY_ARCH_DIR}"/usr/X11R6/${pkglibdir}/libGL.so.${libver} || die
+	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so.${libmajor} || die
+	dosym libGL.so.${libver} ${ATI_ROOT}/lib/libGL.so || die
 
 	exeinto ${ATI_ROOT}/extensions
-	doexe "${EX_BASE_DIR}"/usr/X11R6/${pkglibdir}/modules/extensions/*
+	doexe "${EX_BASE_DIR}"/usr/X11R6/${pkglibdir}/modules/extensions/* || die
 
 	# DRI modules, installed into the path used by recent versions of mesa.
 	exeinto /usr/$(get_libdir)/dri
-	doexe "${MY_ARCH_DIR}"/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so
+	doexe "${MY_ARCH_DIR}"/usr/X11R6/${pkglibdir}/modules/dri/fglrx_dri.so || die
 
 	# AMD Cal libraries
 	exeinto /usr/$(get_libdir)
-	doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/*.so
+	doexe "${MY_ARCH_DIR}"/usr/${pkglibdir}/*.so || die
 
+	# warn about removal of .la file
+	# WILL BE NEEDED IN FUTURE
+	#if [[ -e ${ATI_ROOT}/lib/libGL.la ]]; then
+	#	ewarn "Since this version the libGL.la is not installed"
+	#	ewarn "For fixing this issues please take look on:"
+	#	ewarn "  dev-util/lafilefixer"
+	#	ewarn "This step is needed because the libGL.la is going"
+	#	ewarn "to be removed by newer versions of the media-libs/mesa"
+	#fi
 	# Make up a libGL.la. Ati does not provide one, but mesa does. If
 	# a (libtool-based) libfoo is built with libGL.la present a
 	# reference to it is put into libfoo.la, and compiling
@@ -458,12 +465,10 @@ src_install-libs() {
 		envname="${envname}-${ABI}"
 	fi
 	echo "LIBGL_DRIVERS_PATH=/usr/$(get_libdir)/dri" > "${envname}"
-	doenvd "${envname}"
+	doenvd "${envname}" || die
 }
 
 pkg_postinst() {
-	/usr/bin/eselect opengl set --use-old ati
-
 	elog "To switch to ATI OpenGL, run \"eselect opengl set ati\""
 	elog "To change your xorg.conf you can use the bundled \"aticonfig\""
 	elog
@@ -479,15 +484,16 @@ pkg_postinst() {
 	ewarn '         Option "XAANoOffscreenPixmaps" "true"'
 	ewarn "in the Device Section of /etc/X11/xorg.conf."
 
-	linux-mod_pkg_postinst
+	use modules && linux-mod_pkg_postinst
+	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
 }
 
 pkg_prerm() {
-	linux-mod_pkg_prerm
-	/usr/bin/eselect opengl set --use-old xorg-x11
+	use modules && linux-mod_pkg_prerm
+	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
 }
 
 pkg_postrm() {
-	linux-mod_pkg_postrm
-	/usr/bin/eselect opengl set --use-old xorg-x11
+	use modules && linux-mod_pkg_postrm
+	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
 }
