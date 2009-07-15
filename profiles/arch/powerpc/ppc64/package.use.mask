@@ -1,3 +1,7 @@
+# Ben de Groot <yngwin@gentoo.org> (15 Jul 2009)
+# Mask dillo useflag as current version is unkeyworded (bug 253083)
+mail-client/claws-mail dillo
+
 # Brent Baude <ranger@gentoo.org> (30 May 2009)
 # Masking prolog from dev-libs/ppl
 dev-libs/ppl	prolog
@@ -12,7 +16,7 @@ net-libs/libproxy	webkit
 >=media-gfx/gimp-2.6.4 webkit
 
 # Brent Baude <ranger@gentoo.org> (11 June 2008)
-# Masking out passwdqc from pambase since passwdqc 
+# Masking out passwdqc from pambase since passwdqc
 sys-auth/pambase passwdqc
 
 # Joseph Jezak <josejx@gentoo.org> (8 March 2009)
