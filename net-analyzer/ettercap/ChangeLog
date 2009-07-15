@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.69 2009/07/15 13:16:10 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.70 2009/07/15 16:30:33 jer Exp $
+
+  15 Jul 2009; Jeroen Roovers <jer@gentoo.org> ettercap-0.7.3-r3.ebuild:
+  Stable for HPPA (bug #277296).
 
   15 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   ettercap-0.7.3-r3.ebuild:
