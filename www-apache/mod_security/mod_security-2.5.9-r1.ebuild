@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.9-r1.ebuild,v 1.1 2009/07/14 17:09:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.9-r1.ebuild,v 1.2 2009/07/15 19:13:03 flameeyes Exp $
 
 inherit apache-module autotools
 
@@ -75,7 +75,7 @@ src_install() {
 
 	# install rules updater only if perl is enabled (optionally)
 	if use perl; then
-		newbin tools/rules-updater.pl modsec-rules-updater || die
+		newsbin tools/rules-updater.pl modsec-rules-updater || die
 	fi
 
 	# install documentation
