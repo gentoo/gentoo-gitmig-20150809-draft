@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/adobe-flash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.2 2009/07/15 13:39:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.3 2009/07/15 15:29:32 arfrever Exp $
+
+  15 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  adobe-flash-10.0.22.87-r1.ebuild:
+  Set QA_DT_HASH to avoid QA warning about ignoring of LDFLAGS.
 
 *adobe-flash-10.0.22.87-r1 (14 Jul 2009)
 

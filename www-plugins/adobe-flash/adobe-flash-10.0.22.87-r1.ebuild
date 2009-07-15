@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.22.87-r1.ebuild,v 1.1 2009/07/15 13:39:03 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.22.87-r1.ebuild,v 1.2 2009/07/15 15:29:32 arfrever Exp $
 
 EAPI=1
 inherit nsplugins rpm multilib
@@ -52,6 +52,10 @@ RDEPEND="x86? ( $NATIVE_DEPS )
 # from app-text/acroread, so tell QA to ignore it.
 # Apparently the flash library itself also suffers from this issue
 QA_EXECSTACK="opt/flash-libcompat/libcrypto.so.0.9.7
+	opt/netscape/plugins32/libflashplayer.so
+	opt/netscape/plugins/libflashplayer.so"
+
+QA_DT_HASH="opt/flash-libcompat/lib.*
 	opt/netscape/plugins32/libflashplayer.so
 	opt/netscape/plugins/libflashplayer.so"
 
