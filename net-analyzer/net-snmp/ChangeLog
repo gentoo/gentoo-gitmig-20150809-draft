@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.195 2009/07/15 14:03:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.196 2009/07/15 14:05:39 jer Exp $
+
+  15 Jul 2009; Jeroen Roovers <jer@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
+  Stable for HPPA (bug #250429).
 
   15 Jul 2009; Raúl Porcel <armin76@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #250429
