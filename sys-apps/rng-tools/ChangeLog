@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/rng-tools
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.23 2009/03/21 22:34:33 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.24 2009/07/15 19:47:22 nelchael Exp $
+
+  15 Jul 2009; Krzysiek Pawlik <nelchael@gentoo.org> files/2/rngd:
+  Check /dev/hwrng, see bug #276973.
 
   21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> rng-tools-2.ebuild:
   Fix QA warnings.
