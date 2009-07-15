@@ -1,6 +1,9 @@
 # ChangeLog for app-text/chm2pdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.2 2009/03/20 04:22:32 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/chm2pdf/ChangeLog,v 1.3 2009/07/15 02:37:59 tcunha Exp $
+
+  15 Jul 2009; Tiago Cunha <tcunha@gentoo.org> chm2pdf-0.9.1.ebuild:
+  stable amd64, bug 277724
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
