@@ -7,7 +7,8 @@
 		<name>Jim Ramsay</name>
 	</maintainer>
 	<use>
-		<flag name='32bit'>For amd64-multilib, installs the 32-bit plugin
-			alongside the native 64-bit plugin</flag>
+		<flag name='64bit'>For amd64-multilib, installs the native 64-bit
+			plugin</flag>
+		<flag name='32bit'>For amd64-multilib, installs the 32-bit plugin</flag>
 	</use>
 </pkgmetadata>

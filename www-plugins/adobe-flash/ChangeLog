@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/adobe-flash
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.1 2009/04/10 13:14:04 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/ChangeLog,v 1.2 2009/07/15 13:39:03 lack Exp $
+
+*adobe-flash-10.0.22.87-r1 (14 Jul 2009)
+
+  14 Jul 2009; Jim Ramsay <lack@gentoo.org> -adobe-flash-10.0.15.3.ebuild,
+  +adobe-flash-10.0.22.87-r1.ebuild, metadata.xml:
+  Bug #268336 -> Check for the lahf_lm flag in /proc/cpuinfo. If it is not
+  present, instruct the user to install the 32-bit version only.
 
 *adobe-flash-10.0.22.87 (10 Apr 2009)
 *adobe-flash-10.0.15.3 (10 Apr 2009)
