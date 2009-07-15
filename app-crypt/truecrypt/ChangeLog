@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/truecrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.48 2009/07/07 22:54:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/ChangeLog,v 1.49 2009/07/15 23:07:36 arfrever Exp $
+
+  15 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  truecrypt-6.2a.ebuild:
+  Add dependency on app-admin/sudo (bug #277373).
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   truecrypt-6.2a.ebuild:

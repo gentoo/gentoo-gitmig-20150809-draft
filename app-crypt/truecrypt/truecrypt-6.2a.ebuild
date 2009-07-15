@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2a.ebuild,v 1.2 2009/07/07 22:54:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2a.ebuild,v 1.3 2009/07/15 23:07:36 arfrever Exp $
 
 EAPI="2"
 
@@ -21,6 +21,8 @@ RDEPEND="|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
 	x11-libs/wxGTK:2.8[X?]"
 DEPEND="${RDEPEND}
 	|| ( dev-libs/pkcs11-helper dev-libs/opensc )"
+RDEPEND="${RDEPEND}
+	app-admin/sudo"
 
 S="${WORKDIR}/${P}-source"
 
