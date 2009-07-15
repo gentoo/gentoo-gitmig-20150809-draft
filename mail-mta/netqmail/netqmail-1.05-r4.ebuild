@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.22 2007/12/03 21:36:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/netqmail/netqmail-1.05-r4.ebuild,v 1.23 2009/07/15 21:26:24 vapier Exp $
 
 inherit eutils toolchain-funcs fixheadtails flag-o-matic
 
@@ -115,7 +115,6 @@ src_unpack() {
 	fi
 
 	ht_fix_file Makefile*
-	append-ldflags $(bindnow-flags)
 
 	use ssl && append-flags -DTLS
 
