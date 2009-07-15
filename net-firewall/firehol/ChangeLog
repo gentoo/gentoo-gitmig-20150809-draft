@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.40 2009/03/09 16:54:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.41 2009/07/15 16:06:24 rbu Exp $
+
+*firehol-1.273-r1 (15 Jul 2009)
+
+  15 Jul 2009; Robert Buchholz <rbu@gentoo.org>
+  +files/firehol-1.273-CVE-2008-4953.patch, +firehol-1.273-r1.ebuild:
+  Patch CVE-2008-4953, symlink attack on a firehol directory in /tmp. Patch
+  tested by Kerin Millar, thanks. Fixes bug 246013.
 
   09 Mar 2009; Raúl Porcel <armin76@gentoo.org> firehol-1.273.ebuild:
   x86 stable wrt #261699
