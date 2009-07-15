@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/libcontactsdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libcontactsdb/ChangeLog,v 1.1 2009/03/01 00:37:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libcontactsdb/ChangeLog,v 1.2 2009/07/15 00:05:54 miknix Exp $
+
+  15 Jul 2009; Angelo Arrifano <miknix@gentoo.org> libcontactsdb-0.5.ebuild:
+  Add doc use flag.
 
 *libcontactsdb-0.5 (01 Mar 2009)
 
