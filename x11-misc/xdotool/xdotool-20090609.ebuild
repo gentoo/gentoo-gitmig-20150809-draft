@@ -1,27 +1,44 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20090609.ebuild,v 1.1 2009/06/15 17:13:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20090609.ebuild,v 1.2 2009/07/15 15:02:46 joker Exp $
 
-inherit eutils
+EAPI=2
 
-DESCRIPTION="Fake keyboard/mouse input"
+inherit toolchain-funcs
+
+DESCRIPTION="Simulate keyboard input and mouse activity, move and resize windows."
 HOMEPAGE="http://www.semicomplete.com/projects/xdotool/"
 SRC_URI="http://semicomplete.googlecode.com/files/${P}.tar.gz"
 LICENSE="as-is"
+
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="examples"
 
 DEPEND="x11-libs/libXtst
 	x11-libs/libX11"
 
 RDEPEND="${DEPEND}"
 
-src_compile() {
-	emake || die "emake failed"
+src_prepare() {
+	cd "${S}"
+	sed -i -e "s:^CFLAGS=.*:CFLAGS=-std=c99 ${CFLAGS}:" \
+		-e "s:^LIBS=.*:LIBS=$(pkg-config --libs x11 xtst):" \
+		-e "s:^INC=.*:INC=$(pkg-config --cflags x11 xtst):" \
+		-e "s:\$(CC):$(tc-getCC):" \
+		-e "s:\$(LDFLAGS): \$(LIBS) \$(LDFLAGS):" \
+		-e 's:LDFLAGS+=$(LIBS)::' \
+		-e "s:\$(CFLAGS):\$(INC) \$(CFLAGS):" \
+		Makefile \
+		|| die "sed Makefile failed."
 }
 
 src_install() {
-	dobin xdotool
-	doman xdotool.1
+	dobin ${PN}
+	doman ${PN}.1
+	dodoc CHANGELIST README
+	if use examples; then
+		insinto /usr/share/doc/${PF}/examples
+		doins examples/*
+	fi
 }
