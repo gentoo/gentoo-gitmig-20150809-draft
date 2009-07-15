@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.187 2009/07/14 07:23:51 gengor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.188 2009/07/15 13:17:30 fauli Exp $
+
+  15 Jul 2009; Christian Faulhammer <fauli@gentoo.org> postfix-2.5.7.ebuild:
+  stable x86, bug 277343
 
   14 Jul 2009; Gordon Malm <gengor@gentoo.org> postfix-2.6.2-r1.ebuild:
   Add dropped change - Avoid gcc-version test under non-hardened, stylistic
