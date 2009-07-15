@@ -1,6 +1,11 @@
 # ChangeLog for www-client/dillo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.79 2009/07/15 21:45:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/dillo/ChangeLog,v 1.80 2009/07/15 22:22:03 yngwin Exp $
+
+  15 Jul 2009; Ben de Groot <yngwin@gentoo.org> -dillo-0.8.6.ebuild,
+  -dillo-0.8.6-r1.ebuild, -dillo-2.0.ebuild, -dillo-2.0-r1.ebuild:
+  Removing vulnerable versions wrt bug 276432 now that 2.1.1 is stable on
+  all arches
 
   15 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> dillo-2.1.1.ebuild:
   Stable on ppc. Bug 276432
