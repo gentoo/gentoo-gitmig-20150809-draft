@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.73 2009/07/10 23:41:47 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.74 2009/07/15 16:36:12 jsbronder Exp $
+
+  15 Jul 2009; Justin Bronder <jsbronder@gentoo.org>
+  lam-mpi-7.1.4-r1.ebuild:
+  Remove sweep to avoid conflict with media-libs/sweep. #245439.
 
   10 Jul 2009; Justin Bronder <jsbronder@gentoo.org>
   lam-mpi-7.1.4-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.4 2009/07/10 23:41:47 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.5 2009/07/15 16:36:12 jsbronder Exp $
 
 inherit autotools eutils fortran flag-o-matic multilib portability
 
@@ -137,6 +137,13 @@ src_install () {
 	# but they are replicated in the pdfs!
 	dodoc README HISTORY VERSION
 	dodoc "${S}"/doc/{user,install}.pdf
+
+	# With USE=xmpi /usr/bin/sweep is installed.  However it's just
+	# a bash script to call bfctl -R and it causes file collisions
+	# with media-sound/sweep.  Hence, we remove it, see man bfcfl.
+	if [ -f "${D}"/usr/bin/sweep ]; then
+		rm -f "${D}"/usr/bin/sweep || die
+	fi
 
 	if use examples; then
 		cd "${S}"/examples
