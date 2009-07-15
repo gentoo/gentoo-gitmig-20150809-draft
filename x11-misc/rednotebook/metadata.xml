@@ -2,6 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
+<use>
+	<flag name='libyaml'>enable libyaml support</flag>
+</use>
 <maintainer>
 <email>hwoarang@gentoo.org</email>
 <name>Markos Chandras</name>
