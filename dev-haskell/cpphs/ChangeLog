@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/cpphs
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.21 2007/11/24 11:29:22 kolmodin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/cpphs/ChangeLog,v 1.22 2009/07/15 18:07:49 kolmodin Exp $
+
+*cpphs-1.7 (15 Jul 2009)
+
+  15 Jul 2009; Lennart Kolmodin <kolmodin@gentoo.org> +cpphs-1.7.ebuild:
+  Version bump.
 
 *cpphs-1.5 (24 Nov 2007)
 
