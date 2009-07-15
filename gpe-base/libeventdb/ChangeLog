@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/libeventdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/ChangeLog,v 1.3 2009/07/15 00:30:18 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/ChangeLog,v 1.4 2009/07/15 00:55:03 miknix Exp $
+
+  15 Jul 2009; Angelo Arrifano <miknix@gentoo.org> libeventdb-0.90.ebuild:
+  Add eautoreconf missing from previous commit.
 
   15 Jul 2009; Angelo Arrifano <miknix@gentoo.org> libeventdb-0.90.ebuild:
   Prevent gtk-doc being always installed, add doc use flag.
