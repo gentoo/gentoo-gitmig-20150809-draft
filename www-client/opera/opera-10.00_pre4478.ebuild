@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.7 2009/07/14 13:14:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4478.ebuild,v 1.8 2009/07/15 03:07:54 jer Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ fi
 SRC_URI="
 	amd64? (
 		!ia32? (
-			qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
+			qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
 			!qt-static? (
 				qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
 				!qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )

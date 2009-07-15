@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.365 2009/07/14 13:14:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.366 2009/07/15 03:07:54 jer Exp $
+
+  15 Jul 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4478.ebuild:
+  Fix SRC_URI for gt-static Qt4 amd64 thanks to James Rowe (bug #277790).
 
   14 Jul 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00_pre4453.ebuild,
   opera-10.00_pre4458.ebuild, opera-10.00_pre4464.ebuild,
