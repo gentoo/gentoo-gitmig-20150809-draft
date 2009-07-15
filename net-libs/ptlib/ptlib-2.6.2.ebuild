@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.5 2009/07/13 20:45:15 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.6 2009/07/15 09:48:14 volkmar Exp $
 
 EAPI="2"
 
@@ -48,6 +48,7 @@ DEPEND="${COMMON_DEP}
 # tools/ directory is ignored
 # looks to have an auto-magic dep with medialibs, but not in the tree so...
 #	upstream bug 2794736
+# avc plugin is disabled to fix bug 276514, see upstream bug 2821744
 
 # TODO:
 # manage in a better way the conditional use flags (with eapi-3 ?)
@@ -194,6 +195,7 @@ src_configure() {
 	# appshare, vfw: only for windows
 	# sockagg: not used anymore, upstream bug 2794755
 	# samples: no need to build samples
+	# avc: disabled, bug 276514, upstream bug 2821744
 	econf ${myconf} \
 		--disable-minsize \
 		--disable-openh323 \
@@ -207,6 +209,7 @@ src_configure() {
 		--disable-vfw \
 		--disable-sockagg \
 		--disable-samples \
+		--disable-avc \
 		$(use_enable audio) \
 		$(use_enable alsa) \
 		$(use_enable asn) \
@@ -222,7 +225,6 @@ src_configure() {
 		$(use_enable http) \
 		$(use_enable http-forms httpforms) \
 		$(use_enable http-server httpsvc) \
-		$(use_enable ieee1394 avc) \
 		$(use_enable ieee1394 dc) \
 		$(use_enable ipv6) \
 		$(use_enable jabber) \
