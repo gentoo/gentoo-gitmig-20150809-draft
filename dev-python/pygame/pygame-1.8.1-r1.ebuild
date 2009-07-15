@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.8.1-r1.ebuild,v 1.1 2009/04/09 10:04:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.8.1-r1.ebuild,v 1.2 2009/07/15 02:00:12 neurogeek Exp $
 
 EAPI="2"
 
-inherit distutils multilib eutils
+inherit distutils
 
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
 HOMEPAGE="http://www.pygame.org/"
@@ -26,6 +26,10 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}release
 
+src_prepare(){
+	epatch "${FILESDIR}/${P}_icon_path.patch"
+}
+
 src_compile() {
 	python config.py
 	sed -i -e 's:X11R6/lib:lib64:g' Setup
@@ -34,18 +38,28 @@ src_compile() {
 }
 
 src_install() {
-	DOCS=WHATSNEW
+	DOCS="WHATSNEW"
 	distutils_src_install
 
 	if use doc; then
 		dohtml -r docs/*
 
-		insinto /usr/share/doc/${PF}
+		insinto "/usr/share/doc/${PF}"
 		doins -r "${S}/examples"
 	fi
 }
 
 src_test() {
 	python_version
+
+	#Skip tests that depend on DISPLAY being set. Bug #223055
+	SKIP_TESTS="display_test image__save_gl_surface_test movie_test"
+
+	for test_ in $SKIP_TESTS
+	do
+		einfo "Removing test: ${test_}"
+		rm -rf "${S}/test/${test_}.py"
+	done
+
 	PYTHONPATH="$(ls -d build/lib.*)" "${python}" run_tests.py || die "tests failed"
 }

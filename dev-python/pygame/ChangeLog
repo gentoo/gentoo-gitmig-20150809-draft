@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygame
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.60 2009/04/09 10:04:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.61 2009/07/15 02:00:12 neurogeek Exp $
+
+  15 Jul 2009; Jesus Rivero <neurogeek@gentoo.org>
+  +files/pygame-1.8.1_icon_path.patch, pygame-1.8.1-r1.ebuild:
+  Fixed some tests that failed. Closes Bug #223055.
 
 *pygame-1.8.1-r1 (09 Apr 2009)
 

@@ -1,0 +1,30 @@
+Patch: Patch to make tests works
+Added: 14 Jul 2009
+By: Jesus Rivero (Neurogeek)
+
+diff -uNr pygame-1.8.1release.orig/test/image_test.py pygame-1.8.1release/test/image_test.py
+--- pygame-1.8.1release.orig/test/image_test.py 2009-07-14 19:20:38.000000000 -0430
++++ pygame-1.8.1release/test/image_test.py      2009-07-14 19:34:11.000000000 -0430
+@@ -27,7 +27,7 @@
+     def testLoadIcon(self):
+         """ see if we can load the pygame icon.
+         """
+-        f = pygame.pkgdata.getResource("pygame_icon.bmp")
++        f = pygame.pkgdata.getResource("../../../lib/pygame_icon.bmp")
+         self.assertEqual(f.mode, "rb")
+ 
+         surf = pygame.image.load_basic(f)
+
+diff -uNtr pygame-1.8.1release.orig/test/font_test.py pygame-1.8.1release.new/test/font_test.py
+--- pygame-1.8.1release.orig/test/font_test.py	2009-07-14 19:20:38.000000000 -0430
++++ pygame-1.8.1release.new/test/font_test.py	2009-07-14 20:53:02.000000000 -0430
+@@ -11,7 +11,7 @@
+         """
+         #print __file__
+         pygame.font.init ()
+-        f = pygame.font.Font(None, 20)
++        f = pygame.font.Font("lib/freesansbold.ttf", 20)
+         s = f.render("foo", True, [0, 0, 0], [255, 255, 255])
+         s = f.render("xxx", True, [0, 0, 0], [255, 255, 255])
+         s = f.render("", True, [0, 0, 0], [255, 255, 255])
+
