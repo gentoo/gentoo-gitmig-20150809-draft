@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/whaawmp-0.2.10.ebuild,v 1.2 2009/02/18 07:21:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/whaawmp-0.2.12.1.ebuild,v 1.1 2009/07/15 18:41:20 yngwin Exp $
 
 inherit distutils
 

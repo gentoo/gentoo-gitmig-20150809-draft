@@ -1,6 +1,12 @@
 # ChangeLog for media-video/whaawmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/ChangeLog,v 1.3 2009/02/18 07:21:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/whaawmp/ChangeLog,v 1.4 2009/07/15 18:41:20 yngwin Exp $
+
+*whaawmp-0.2.12.1 (15 Jul 2009)
+
+  15 Jul 2009; Ben de Groot <yngwin@gentoo.org> -whaawmp-0.2.10.ebuild,
+  +whaawmp-0.2.12.1.ebuild:
+  Version bump, bug 277949
 
   18 Feb 2009; Ben de Groot <yngwin@gentoo.org> whaawmp-0.2.10,
   whaawmp-0.2.10.1:
