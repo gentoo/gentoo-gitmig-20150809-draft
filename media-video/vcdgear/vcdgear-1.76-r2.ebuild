@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.76-r2.ebuild,v 1.4 2009/07/12 15:51:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdgear/vcdgear-1.76-r2.ebuild,v 1.5 2009/07/15 13:26:04 fauli Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.vcdgear.com/files/vcdgear${PV//.}-${STAMP}_linux.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 x86"
 IUSE=""
 
 RDEPEND="virtual/libstdc++:3.3"
