@@ -1,17 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpevtype/libgpevtype-0.50.ebuild,v 1.2 2009/03/01 06:00:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpevtype/libgpevtype-0.50.ebuild,v 1.3 2009/07/15 02:04:23 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
-inherit gpe
+inherit gpe autotools
 
 DESCRIPTION="Data interchange library for the GPE Palmtop Environment"
 
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
-IUSE="${IUSE}"
+IUSE="${IUSE} doc"
 GPE_DOCS="ChangeLog"
+GPECONF="${GPECONF} $(use_enable doc gtk-doc)"
 
 RDEPEND="${RDEPEND}
 	gpe-base/libtododb
@@ -20,4 +21,17 @@ RDEPEND="${RDEPEND}
 	>=gpe-base/libeventdb-0.29"
 
 DEPEND="${DEPEND}
-	${RDEPEND}"
+	${RDEPEND}
+	doc? ( >=dev-util/gtk-doc-1.2 )"
+
+src_unpack() {
+	gpe_src_unpack "$@"
+
+	if ! use doc; then
+		sed -i -e 's;SUBDIRS = doc;SUBDIRS = ;' Makefile.am \
+		|| die "sed failed"
+	fi
+
+	eautoreconf
+}
+
