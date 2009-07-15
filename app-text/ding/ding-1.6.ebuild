@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.6.ebuild,v 1.1 2009/05/06 15:11:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ding/ding-1.6.ebuild,v 1.2 2009/07/15 13:25:20 fauli Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://wftp.tu-chemnitz.de/pub/Local/urz/ding/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/tk-8.3"
