@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/singularity
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.10 2009/01/30 05:05:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/ChangeLog,v 1.11 2009/07/15 13:33:25 fauli Exp $
+
+  15 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  singularity-0.30.ebuild:
+  stable x86, bug 277882
 
 *singularity-0.30 (30 Jan 2009)
 
