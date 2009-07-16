@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/prawn-0.4.1.ebuild,v 1.1 2009/07/16 13:09:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn/prawn-0.4.1.ebuild,v 1.2 2009/07/16 13:25:05 flameeyes Exp $
 
 EAPI=2
 
 GITHUB_USER=sandal
 
-inherit ruby
+inherit ruby eutils
 
 DESCRIPTION="Fast, Nimble PDF Generation For Ruby"
 HOMEPAGE="http://prawn.majesticseacreature.com/"
@@ -24,6 +24,7 @@ RDEPEND="dev-ruby/ttfunk"
 DEPEND="doc? ( dev-ruby/rake )
 	test? (
 		dev-ruby/rake
+		dev-ruby/mocha
 		dev-ruby/test-spec
 		>=dev-ruby/pdf-reader-0.7.3
 		${RDEPEND}
@@ -64,9 +65,15 @@ EOF
 src_install() {
 	cd "${WORKDIR}"/${GITHUB_USER}-${PN}-*
 
+	# This sucks but it has to go after test and before install.
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+
 	pushd lib
 	doruby -r * || die "install lib failed"
 	popd
+
+	insinto /usr/share/${PN}
+	doins -r data || die
 
 	dofakegemspec
 
