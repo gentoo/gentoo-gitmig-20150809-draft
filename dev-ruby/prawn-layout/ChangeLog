@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/prawn-layout
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-layout/ChangeLog,v 1.1 2009/07/16 13:28:53 flameeyes Exp $
+
+*prawn-layout-0.1.0 (16 Jul 2009)
+
+  16 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +prawn-layout-0.1.0.ebuild, +metadata.xml:
+  Initial import of prawn-layout extension for prawn.
+
