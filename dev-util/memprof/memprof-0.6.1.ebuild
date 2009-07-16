@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.6.ebuild,v 1.2 2008/10/14 02:07:45 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/memprof-0.6.1.ebuild,v 1.1 2009/07/16 20:53:57 mpagano Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="MemProf - Profiling and leak detection"
-HOMEPAGE="http://www.gnome.org/projects/memprof/"
-SRC_URI="${SRC_URI}"
+HOMEPAGE="http://www.secretlabs.de/projects/memprof/"
+SRC_URI="http://www.secretlabs.de/projects/memprof/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +22,3 @@ RDEPEND="${DEPEND}
 	sys-devel/gettext"
 
 DOCS="AUTHORS ChangeLog README NEWS"
-
-src_unpack() {
-	unpack ${A}
-	epatch "${FILESDIR}"/${P}-Makefile.in.patch
-}
