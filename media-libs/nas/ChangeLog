@@ -1,9 +1,11 @@
 # ChangeLog for media-libs/nas
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.62 2007/07/22 08:45:50 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.63 2009/07/16 11:41:06 ssuominen Exp $
 
-  22 Jul 2007; Samuli Suominen <drac@gentoo.org> nas-1.7-r1.ebuild:
-  Remove virtual/x11 references.
+*nas-1.9.2 (16 Jul 2009)
+
+  16 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> +nas-1.9.2.ebuild:
+  Version bump.
 
   12 Apr 2007; Fernando J. Pereda <ferdy@gentoo.org> nas-1.8b.ebuild:
   Stable on alpha as per sec bug #171428
@@ -29,14 +31,10 @@
   02 Apr 2007; Markus Rothe <corsair@gentoo.org> nas-1.8b.ebuild:
   Stable on ppc64; bug #171428
 
-  02 Apr 2007; Samuli Suominen <drac@gentoo.org> files/nas.init.d:
-  Remove old X11R6 legacy path from init script.
-
 *nas-1.8b (02 Apr 2007)
 
-  02 Apr 2007; Samuli Suominen <drac@gentoo.org> -nas-1.8.ebuild,
-  -nas-1.8-r1.ebuild, +nas-1.8b.ebuild:
-  Version bump for security bug 171428.
+  02 Apr 2007; Samuli Suominen <ssuominen@gentoo.org> +nas-1.8b.ebuild:
+  Version bump for security #171428.
 
 *nas-1.8-r1 (09 Mar 2007)
 *nas-1.7-r2 (09 Mar 2007)
