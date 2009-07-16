@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/sqlalchemy-migrate-0.5.4.ebuild,v 1.1 2009/07/16 13:47:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/sqlalchemy-migrate-0.5.4.ebuild,v 1.2 2009/07/16 14:31:48 flameeyes Exp $
 
 EAPI="2"
 
@@ -15,9 +15,10 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 
-RDEPEND="dev-python/sqlalchemy"
+RDEPEND="dev-python/sqlalchemy
+	dev-python/decorator"
 
 DEPEND="dev-python/setuptools"
 
