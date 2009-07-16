@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.26.0.ebuild,v 1.1 2009/05/10 22:39:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mousetweaks/mousetweaks-2.26.3.ebuild,v 1.1 2009/07/16 22:52:15 eva Exp $
 
 inherit gnome2
 
@@ -18,6 +18,7 @@ RDEPEND=">=x11-libs/gtk+-2.13.1
 	>=gnome-base/gnome-panel-2
 	gnome-extra/at-spi
 
+	x11-libs/libX11
 	x11-libs/libXtst
 	x11-libs/libXfixes
 	x11-libs/libXcursor"
