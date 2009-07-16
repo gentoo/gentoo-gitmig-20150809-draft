@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xplore
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/ChangeLog,v 1.13 2008/06/17 12:44:34 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/ChangeLog,v 1.14 2009/07/16 16:26:32 flameeyes Exp $
+
+  16 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> xplore-1.2a.ebuild:
+  Use emake -j1 rather than make; bug #278073.
 
   17 Jun 2008; Krzysiek Pawlik <nelchael@gentoo.org> xplore-1.2a.ebuild:
   Add missing x11-libs/libXpm to DEPEND, bug #227663.

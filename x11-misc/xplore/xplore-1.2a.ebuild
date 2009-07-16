@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.12 2008/06/17 12:44:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplore/xplore-1.2a.ebuild,v 1.13 2009/07/16 16:26:32 flameeyes Exp $
 
 inherit eutils
 
@@ -38,11 +38,11 @@ src_compile() {
 		Xplore.tmpl.orig > Xplore.tmpl
 
 	xmkmf -a || die "xmkmf Makefile creation failed"
-	# parallel make fails
-	make || die "make failed"
+	# parallel make fails (bug #
+	emake -j1 || die "make failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake -j1 DESTDIR="${D}" install || die "make install failed"
 	dodoc ChangeLog README TODO
 }
