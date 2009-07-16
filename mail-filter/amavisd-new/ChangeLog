@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.143 2009/07/15 13:20:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.144 2009/07/16 17:39:58 fauli Exp $
+
+  16 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  amavisd-new-2.6.3-r1.ebuild:
+  revert stable x86 keyword, see bug 277363 comment 2
 
   15 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   amavisd-new-2.6.3-r1.ebuild:
