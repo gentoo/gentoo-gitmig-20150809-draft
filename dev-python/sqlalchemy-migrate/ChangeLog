@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/sqlalchemy-migrate
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy-migrate/ChangeLog,v 1.1 2009/07/16 13:47:19 lu_zero Exp $
+
+*sqlalchemy-migrate-0.5.4 (16 Jul 2009)
+
+  16 Jul 2009; Luca Barbato <lu_zero@gentoo.org> +metadata.xml,
+  +sqlalchemy-migrate-0.5.4.ebuild:
+  Initial commit
+
