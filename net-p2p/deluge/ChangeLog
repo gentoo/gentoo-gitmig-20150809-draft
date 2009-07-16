@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.131 2009/07/16 18:29:04 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.132 2009/07/16 18:39:42 tove Exp $
 
   16 Jul 2009; Thomas Anderson <gentoofan23@gentoo.org> deluge-1.1.9.ebuild:
   stable amd64, bug 273961
@@ -10,11 +10,11 @@
 
 *deluge-1.1.9 (16 Jun 2009)
 
-  16 Jun 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.9.ebuild,
+  16 Jun 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.9.ebuild,
   deluge-9999.ebuild:
   Version bump, add missing dep wrt #273444
 
-  13 Jun 2009; RaÃºl Porcel <armin76@gentoo.org> metadata.xml:
+  13 Jun 2009; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   Remove me as maintainer, adding net-p2p, feel free to maintain this
   package
 
@@ -23,66 +23,66 @@
 
 *deluge-1.1.8 (31 May 2009)
 
-  31 May 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.8.ebuild:
+  31 May 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.8.ebuild:
   Version bump
 
-  25 May 2009; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.1.3.ebuild,
+  25 May 2009; Raúl Porcel <armin76@gentoo.org> -deluge-1.1.3.ebuild,
   -deluge-1.1.4.ebuild, -deluge-1.1.5.ebuild, -deluge-1.1.6.ebuild,
   deluge-1.1.7.ebuild, deluge-9999.ebuild:
   Add libnotify USE-flag for bug #268056
 
 *deluge-1.1.7 (27 Apr 2009)
 
-  27 Apr 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.7.ebuild:
+  27 Apr 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.7.ebuild:
   Version bump
 
 *deluge-1.1.6 (07 Apr 2009)
 
-  07 Apr 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.6.ebuild:
+  07 Apr 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.6.ebuild:
   Version bump
 
 *deluge-1.1.5 (17 Mar 2009)
 
-  17 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.5.ebuild:
+  17 Mar 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.5.ebuild:
   Version bump
 
 *deluge-1.1.4 (09 Mar 2009)
 
-  09 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.4.ebuild:
+  09 Mar 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.4.ebuild:
   Version bump
 
-  07 Mar 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> deluge-0.5.9.3.ebuild,
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> deluge-0.5.9.3.ebuild,
   deluge-1.0.7-r1.ebuild, deluge-9999.ebuild:
   Remove built_with_use calls on boost by depending on new enough versions
   that always have threads.
 
-  07 Mar 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org>
+  07 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   -deluge-1.1.0-r1.ebuild, -deluge-1.1.1.ebuild, -deluge-1.1.2.ebuild:
   Remove old versions.
 
-  19 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
+  19 Feb 2009; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
   Fix deps
 
-  17 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> files/deluged.init:
+  17 Feb 2009; Raúl Porcel <armin76@gentoo.org> files/deluged.init:
   add DELUGED_HOME support in config, wrt bug #259278, thanks to Maks
   Polunin <ph0enix at ngs dot ru>
 
 *deluge-1.1.3 (16 Feb 2009)
 
-  16 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.3.ebuild:
+  16 Feb 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.3.ebuild:
   Version bump
 
-  12 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
+  12 Feb 2009; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
   Add new deps to svn ebuild, bug #258284
 
 *deluge-1.1.2 (12 Feb 2009)
 
-  12 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.2.ebuild:
+  12 Feb 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.2.ebuild:
   Version bump
 
 *deluge-1.1.1 (25 Jan 2009)
 
-  25 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.1.ebuild:
+  25 Jan 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.1.ebuild:
   Version bump
 
   18 Jan 2009; Markus Meier <maekke@gentoo.org> deluge-1.0.7-r1.ebuild:
@@ -91,99 +91,99 @@
 *deluge-1.1.0-r1 (15 Jan 2009)
 *deluge-1.0.7-r1 (15 Jan 2009)
 
-  15 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> files/deluged.init,
+  15 Jan 2009; Raúl Porcel <armin76@gentoo.org> files/deluged.init,
   -deluge-1.0.7.ebuild, +deluge-1.0.7-r1.ebuild, -deluge-1.1.0.ebuild,
   +deluge-1.1.0-r1.ebuild:
   Revbump so users get the fix on the init script, bug #254995, thanks to
   Matt Farmer <matt at mattfarmer dot net> for the fix
 
-  13 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.5.ebuild,
+  13 Jan 2009; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.5.ebuild,
   -deluge-1.0.6.ebuild, deluge-1.0.7.ebuild:
   x86 stable, remove old
 
 *deluge-1.1.0 (13 Jan 2009)
 
-  13 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.1.0_rc1.ebuild,
+  13 Jan 2009; Raúl Porcel <armin76@gentoo.org> -deluge-1.1.0_rc1.ebuild,
   -deluge-1.1.0_rc2.ebuild, -deluge-1.1.0_rc3.ebuild, +deluge-1.1.0.ebuild:
   Version bump
 
 *deluge-1.1.0_rc3 (06 Jan 2009)
 
-  06 Jan 2009; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.0_rc3.ebuild:
+  06 Jan 2009; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.0_rc3.ebuild:
   Version bump
 
 *deluge-1.1.0_rc2 (30 Dec 2008)
 
-  30 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.0_rc2.ebuild:
+  30 Dec 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.0_rc2.ebuild:
   Version bump
 
-  28 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> files/deluged.conf,
+  28 Dec 2008; Raúl Porcel <armin76@gentoo.org> files/deluged.conf,
   files/deluged.init:
   Enhance init script, thanks to Alex Kravtsov and Kevin Bowling on bug #238733
 
-  26 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-1.1.0_rc1.ebuild:
+  26 Dec 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.1.0_rc1.ebuild:
   Change SRC_URI to bz2
 
 *deluge-1.1.0_rc1 (26 Dec 2008)
 
-  26 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.1.0_rc1.ebuild:
+  26 Dec 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.1.0_rc1.ebuild:
   Version bump
 
 *deluge-1.0.7 (12 Dec 2008)
 
-  12 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.0.7.ebuild:
+  12 Dec 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.0.7.ebuild:
   Version bump
 
 *deluge-1.0.6 (02 Dec 2008)
 
-  02 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0.ebuild,
+  02 Dec 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0.ebuild,
   -deluge-1.0.2.ebuild, -deluge-1.0.3.ebuild, -deluge-1.0.4.ebuild,
   +deluge-1.0.6.ebuild:
   Version bump
 
 *deluge-1.0.5 (11 Nov 2008)
 
-  11 Nov 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.0.5.ebuild:
+  11 Nov 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.0.5.ebuild:
   Version bump
 
 *deluge-1.0.4 (31 Oct 2008)
 
-  31 Oct 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.0.4.ebuild:
+  31 Oct 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.0.4.ebuild:
   Version bump
 
 *deluge-1.0.3 (20 Oct 2008)
 
-  20 Oct 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.0.3.ebuild,
+  20 Oct 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.0.3.ebuild,
   deluge-9999.ebuild:
   Version bump
 
 *deluge-1.0.2 (11 Oct 2008)
 
-  11 Oct 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.0.2.ebuild:
+  11 Oct 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.0.2.ebuild:
   Version bump
 
-  24 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.9999.ebuild:
+  24 Sep 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.9999.ebuild:
   Remove live ebuild of the 0.5 branch
 
 *deluge-1.0.0 (22 Sep 2008)
 
-  22 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> -files/setup.patch,
+  22 Sep 2008; Raúl Porcel <armin76@gentoo.org> -files/setup.patch,
   -deluge-1.0.0_rc9-r1.ebuild, +deluge-1.0.0.ebuild:
   Version bump
 
 *deluge-1.0.0_rc9-r1 (20 Sep 2008)
 
-  20 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc9.ebuild,
+  20 Sep 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc9.ebuild,
   +deluge-1.0.0_rc9-r1.ebuild:
   Fix SRC_URI, bug #238070
 
 *deluge-1.0.0_rc9 (15 Sep 2008)
 
-  15 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc8.ebuild,
+  15 Sep 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc8.ebuild,
   +deluge-1.0.0_rc9.ebuild:
   Version bump
 
-  03 Sep 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.9.1.ebuild,
+  03 Sep 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.9.1.ebuild,
   deluge-0.5.9.3.ebuild:
   x86 stable, remove old
 
@@ -192,94 +192,94 @@
 
 *deluge-1.0.0_rc8 (27 Aug 2008)
 
-  27 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc7.ebuild,
+  27 Aug 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc7.ebuild,
   +deluge-1.0.0_rc8.ebuild:
   Version bump
 
 *deluge-1.0.0_rc7 (25 Aug 2008)
 
-  25 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc6.ebuild,
+  25 Aug 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc6.ebuild,
   +deluge-1.0.0_rc7.ebuild:
   Version bump
 
 *deluge-1.0.0_rc6 (14 Aug 2008)
 
-  14 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc5.ebuild,
+  14 Aug 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc5.ebuild,
   +deluge-1.0.0_rc6.ebuild:
   Version bump
 
-  07 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-1.0.0_rc5.ebuild,
+  07 Aug 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.0.0_rc5.ebuild,
   deluge-9999.ebuild:
   Add missing dep, bug #234026
 
 *deluge-1.0.0_rc5 (04 Aug 2008)
 
-  04 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc2.ebuild,
+  04 Aug 2008; Raúl Porcel <armin76@gentoo.org> -deluge-1.0.0_rc2.ebuild,
   -deluge-1.0.0_rc3.ebuild, -deluge-1.0.0_rc4.ebuild,
   +deluge-1.0.0_rc5.ebuild:
   Version bump
 
-  29 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-1.0.0_rc2.ebuild,
+  29 Jul 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.0.0_rc2.ebuild,
   deluge-1.0.0_rc3.ebuild, deluge-1.0.0_rc4.ebuild:
   1.0.0_rc* should have keywords
 
 *deluge-1.0.0_rc4 (29 Jul 2008)
 
-  29 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-1.0.0_rc2.ebuild,
+  29 Jul 2008; Raúl Porcel <armin76@gentoo.org> deluge-1.0.0_rc2.ebuild,
   deluge-1.0.0_rc3.ebuild, +deluge-1.0.0_rc4.ebuild:
   Version bump
 
 *deluge-1.0.0_rc3 (21 Jul 2008)
 
-  21 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-1.0.0_rc3.ebuild:
+  21 Jul 2008; Raúl Porcel <armin76@gentoo.org> +deluge-1.0.0_rc3.ebuild:
   Version bump
 
 *deluge-1.0.0_rc2 (15 Jul 2008)
 
-  15 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> files/setup.patch,
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org> files/setup.patch,
   -deluge-1.0.0_rc1.ebuild, +deluge-1.0.0_rc2.ebuild:
   Version bump
 
 *deluge-1.0.0_rc1 (15 Jul 2008)
 
-  15 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> +files/setup.patch,
+  15 Jul 2008; Raúl Porcel <armin76@gentoo.org> +files/setup.patch,
   -deluge-0.9_pre9999.ebuild, +deluge-1.0.0_rc1.ebuild, +deluge-9999.ebuild:
   Version bump
 
 *deluge-0.9_pre9999 (13 Jul 2008)
 
-  13 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.9999.ebuild,
+  13 Jul 2008; Raúl Porcel <armin76@gentoo.org> deluge-0.5.9999.ebuild,
   -deluge-0.6_pre9999.ebuild, +deluge-0.9_pre9999.ebuild:
   trunk is now 0.9 instead of 0.5, 0.6 is now 0.9
 
-  07 Jul 2008; RaÃºl Porcel <armin76@gentoo.org> files/deluged.init:
+  07 Jul 2008; Raúl Porcel <armin76@gentoo.org> files/deluged.init:
   Fix typo in init script, bug #231035
 
 *deluge-0.5.9.3 (27 Jun 2008)
 
-  27 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.9.2.ebuild,
+  27 Jun 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.9.2.ebuild,
   +deluge-0.5.9.3.ebuild:
   Version bump, no code changes, though, bug #229671
 
-  24 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.8.9.ebuild,
+  24 Jun 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8.9.ebuild,
   -deluge-0.5.9.0.ebuild, deluge-0.5.9.1.ebuild:
   x86 stable, remove old
 
-  24 Jun 2008; Dawid WÄgliÅski <cla@gentoo.org> deluge-0.5.9.1.ebuild:
+  24 Jun 2008; Dawid Węgliński <cla@gentoo.org> deluge-0.5.9.1.ebuild:
   Stable on amd64 (bug 229083)
 
 *deluge-0.5.9.2 (20 Jun 2008)
 
-  20 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.9.2.ebuild:
+  20 Jun 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.9.2.ebuild:
   Version bump
 
-  16 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-0.6_pre9999.ebuild:
+  16 Jun 2008; Raúl Porcel <armin76@gentoo.org> deluge-0.6_pre9999.ebuild:
   Add missing dep
 
 *deluge-0.6_pre9999 (12 Jun 2008)
 *deluge-0.5.9999 (12 Jun 2008)
 
-  12 Jun 2008; RaÃºl Porcel <armin76@gentoo.org> +files/deluged.conf,
+  12 Jun 2008; Raúl Porcel <armin76@gentoo.org> +files/deluged.conf,
   +files/deluged.init, +deluge-0.5.9999.ebuild, +deluge-0.6_pre9999.ebuild,
   -deluge-9999.ebuild:
   Add 0.6 livesvn ebuild, bug #220355, thanks to Benedikt Morbach and Andrew
@@ -287,10 +287,10 @@
 
 *deluge-0.5.9.1 (21 May 2008)
 
-  21 May 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.9.1.ebuild:
+  21 May 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.9.1.ebuild:
   Version bump
 
-  09 May 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.8.5.ebuild,
+  09 May 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8.5.ebuild,
   -deluge-0.5.8.6.ebuild, -deluge-0.5.8.7.ebuild, deluge-0.5.8.9.ebuild:
   x86 stable, remove old
 
@@ -299,27 +299,27 @@
 
 *deluge-0.5.9.0 (01 May 2008)
 
-  01 May 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.9.0.ebuild:
+  01 May 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.9.0.ebuild:
   Version bump
 
-  19 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.8.9.ebuild,
+  19 Apr 2008; Raúl Porcel <armin76@gentoo.org> deluge-0.5.8.9.ebuild,
   deluge-9999.ebuild:
   Some tweaks
 
 *deluge-0.5.8.9 (15 Apr 2008)
 
-  15 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8.9.ebuild:
+  15 Apr 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8.9.ebuild:
   Version bump
 
-  11 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.8.8.ebuild:
+  11 Apr 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8.8.ebuild:
   remove 0.5.8.8 as its broken
 
 *deluge-0.5.8.8 (09 Apr 2008)
 
-  09 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8.8.ebuild:
+  09 Apr 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8.8.ebuild:
   Version bump
 
-  31 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.8.3.ebuild,
+  31 Mar 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8.3.ebuild,
   -deluge-0.5.8.4.ebuild, deluge-0.5.8.5.ebuild:
   x86 stable
 
@@ -328,36 +328,36 @@
 
 *deluge-0.5.8.7 (26 Mar 2008)
 
-  26 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8.7.ebuild:
+  26 Mar 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8.7.ebuild:
   Version bump
 
-  24 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.8.4.ebuild:
+  24 Mar 2008; Raúl Porcel <armin76@gentoo.org> deluge-0.5.8.4.ebuild:
   x86 stable
 
 *deluge-0.5.8.6 (12 Mar 2008)
 
-  12 Mar 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8.6.ebuild,
+  12 Mar 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8.6.ebuild,
   deluge-9999.ebuild:
   Version bump
 
 *deluge-0.5.8.5 (29 Feb 2008)
 
-  29 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8.5.ebuild:
+  29 Feb 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8.5.ebuild:
   Version bump
 
 *deluge-0.5.8.4 (14 Feb 2008)
 
-  14 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.8.3.ebuild,
+  14 Feb 2008; Raúl Porcel <armin76@gentoo.org> deluge-0.5.8.3.ebuild,
   +deluge-0.5.8.4.ebuild:
   Version bump
 
-  11 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.7.1.ebuild:
+  11 Feb 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.7.1.ebuild:
   old
 
-  10 Feb 2008; Olivier CrÃªte <tester@gentoo.org> deluge-0.5.8.3.ebuild:
+  10 Feb 2008; Olivier Crête <tester@gentoo.org> deluge-0.5.8.3.ebuild:
   stable on amd64, security bug #208162
 
-  01 Feb 2008; RaÃºl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
+  01 Feb 2008; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
   Fix SVN repo URL
 
   01 Feb 2008; Christian Faulhammer <opfer@gentoo.org>
@@ -366,21 +366,21 @@
 
 *deluge-0.5.8.3 (29 Jan 2008)
 
-  29 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.8.1.ebuild,
+  29 Jan 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8.1.ebuild,
   -deluge-0.5.8.2.ebuild, +deluge-0.5.8.3.ebuild:
   Version bump, remove old
 
 *deluge-0.5.8.2 (25 Jan 2008)
 
-  25 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8.2.ebuild:
+  25 Jan 2008; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8.2.ebuild:
   Version bump
 
-  20 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> metadata.xml:
+  20 Jan 2008; Raúl Porcel <armin76@gentoo.org> metadata.xml:
   This is mine
 
 *deluge-0.5.8.1 (19 Jan 2008)
 
-  19 Jan 2008; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.6.2.ebuild,
+  19 Jan 2008; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.6.2.ebuild,
   -deluge-0.5.8.ebuild, +deluge-0.5.8.1.ebuild:
   Version bump, remove old, browser has been removed from the app
 
@@ -389,29 +389,29 @@
 
 *deluge-0.5.8 (30 Dec 2007)
 
-  30 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.7.1.ebuild,
+  30 Dec 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.7.1.ebuild,
   -deluge-0.5.8_rc2.ebuild, +deluge-0.5.8.ebuild, deluge-9999.ebuild:
   Version bump, remove old, x86 stable
 
-  28 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.8_rc1.ebuild,
+  28 Dec 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.8_rc1.ebuild,
   deluge-0.5.8_rc2.ebuild:
   Add browser USE-flag, bug #203374
 
 *deluge-0.5.8_rc2 (25 Dec 2007)
 
-  25 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8_rc2.ebuild:
+  25 Dec 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8_rc2.ebuild:
   Version bump
 
 *deluge-0.5.8_rc1 (23 Dec 2007)
 
-  23 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.8_rc1.ebuild:
+  23 Dec 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.8_rc1.ebuild:
   Version bump
 
-  07 Dec 2007; RaÃºl Porcel <armin76@gentoo.org>
+  07 Dec 2007; Raúl Porcel <armin76@gentoo.org>
   -files/0.5.0-use-system-rblibtorrent.patch:
   Remove unneded patch
 
-  06 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.5.ebuild:
+  06 Dec 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.5.ebuild:
   Redigest wrt #201517 and remove old
 
   06 Dec 2007; Steve Dibb <beandog@gentoo.org> deluge-0.5.6.2.ebuild:
@@ -419,50 +419,50 @@
 
 *deluge-0.5.7.1 (04 Dec 2007)
 
-  04 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.7.ebuild,
+  04 Dec 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.7.ebuild,
   +deluge-0.5.7.1.ebuild:
   Version bump
 
-  04 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.6.2.ebuild:
+  04 Dec 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.6.2.ebuild:
   x86 stable
 
 *deluge-0.5.7 (28 Nov 2007)
 
-  28 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.7_rc2.ebuild,
+  28 Nov 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.7_rc2.ebuild,
   +deluge-0.5.7.ebuild:
   Version bump
 
 *deluge-0.5.7_rc2 (25 Nov 2007)
 
-  25 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.7_rc2.ebuild:
+  25 Nov 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.7_rc2.ebuild:
   Version bump
 
   09 Nov 2007; nixnut <nixnut@gentoo.org> deluge-0.5.6.2.ebuild:
   Added ~ppc wrt bug 196544
 
-  01 Nov 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.5.ebuild,
+  01 Nov 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.5.ebuild,
   deluge-0.5.6.2.ebuild, deluge-9999.ebuild:
   Cosmetics, thanks to dberkholz
 
 *deluge-0.5.6.2 (31 Oct 2007)
 
-  31 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.6.1.ebuild,
+  31 Oct 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.6.1.ebuild,
   +deluge-0.5.6.2.ebuild:
   Version bump, remove buggy version
 
 *deluge-0.5.6.1 (30 Oct 2007)
 
-  30 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.6.ebuild,
+  30 Oct 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.6.ebuild,
   +deluge-0.5.6.1.ebuild:
   Version bump, remove old
 
 *deluge-0.5.6 (25 Oct 2007)
 
-  25 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.6_rc1.ebuild,
+  25 Oct 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.6_rc1.ebuild,
   +deluge-0.5.6.ebuild:
   Version bump
 
-  24 Oct 2007; Olivier CrÃªte <tester@gentoo.org> deluge-0.5.5.ebuild:
+  24 Oct 2007; Olivier Crête <tester@gentoo.org> deluge-0.5.5.ebuild:
   Stable on amd64 for bug #196541
 
   22 Oct 2007; Markus Meier <maekke@gentoo.org> deluge-0.5.5.ebuild:
@@ -470,127 +470,127 @@
 
 *deluge-0.5.6_rc1 (21 Oct 2007)
 
-  21 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.6_rc1.ebuild:
+  21 Oct 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.6_rc1.ebuild:
   Version bump
 
-  09 Oct 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
+  09 Oct 2007; Raúl Porcel <armin76@gentoo.org> deluge-9999.ebuild:
   Add gnome-base/librsvg RDEPEND to live ebuild
 
 *deluge-0.5.5 (09 Sep 2007)
 
-  09 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.4.1.ebuild,
+  09 Sep 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.4.1.ebuild,
   -deluge-0.5.5_rc1.ebuild, +deluge-0.5.5.ebuild:
   Version bump, remove old
 
 *deluge-0.5.5_rc1 (03 Sep 2007)
 
-  03 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.5_rc1.ebuild:
+  03 Sep 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.5_rc1.ebuild:
   Version bump
 
 *deluge-0.5.4.1 (12 Aug 2007)
 
-  12 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.3.ebuild,
+  12 Aug 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.3.ebuild,
   -deluge-0.5.4.ebuild, +deluge-0.5.4.1.ebuild:
   Version bump, old
 
 *deluge-0.5.4 (05 Aug 2007)
 
-  05 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.4_rc1.ebuild,
+  05 Aug 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.4_rc1.ebuild,
   +deluge-0.5.4.ebuild:
   Version bump, remove old
 
 *deluge-0.5.4_rc1 (02 Aug 2007)
 
-  02 Aug 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.4_rc1.ebuild:
+  02 Aug 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.4_rc1.ebuild:
   Version bump
 
 *deluge-0.5.3 (26 Jul 2007)
 
-  26 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.2.ebuild,
+  26 Jul 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.2.ebuild,
   -deluge-0.5.3_rc2.ebuild, +deluge-0.5.3.ebuild, deluge-9999.ebuild:
   Version bump and remove old, bug #186642
 
 *deluge-0.5.3_rc2 (24 Jul 2007)
 
-  24 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.3_rc1.ebuild,
+  24 Jul 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.3_rc1.ebuild,
   +deluge-0.5.3_rc2.ebuild:
   Version bump
 
-  23 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.2.ebuild,
+  23 Jul 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.2.ebuild,
   deluge-0.5.3_rc1.ebuild, deluge-9999.ebuild:
   Filter --as-needed from LDFLAGS, bug 182324
 
 *deluge-0.5.3_rc1 (18 Jul 2007)
 
-  18 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.1.1.ebuild,
+  18 Jul 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.1.1.ebuild,
   +deluge-0.5.3_rc1.ebuild:
   Version bump and remove old
 
 *deluge-0.5.2 (06 Jul 2007)
 
-  06 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.2_rc1.ebuild,
+  06 Jul 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.2_rc1.ebuild,
   +deluge-0.5.2.ebuild:
   Version bump, remove rc
 
 *deluge-0.5.2_rc1 (28 Jun 2007)
 
-  28 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.2_rc1.ebuild:
+  28 Jun 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.2_rc1.ebuild:
   Version bump
 
-  17 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.0.ebuild,
+  17 Jun 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.0.ebuild,
   deluge-0.5.1.1.ebuild, deluge-9999.ebuild:
   Remove old and add another warning
 
 *deluge-9999 (15 Jun 2007)
 
-  15 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-9999.ebuild:
+  15 Jun 2007; Raúl Porcel <armin76@gentoo.org> +deluge-9999.ebuild:
   Add livesvn ebuild
 
 *deluge-0.5.1.1 (12 Jun 2007)
 
-  12 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.1.ebuild,
+  12 Jun 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.1.ebuild,
   +deluge-0.5.1.1.ebuild:
   Version bump
 
 *deluge-0.5.1 (12 Jun 2007)
 
-  12 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.1_rc2.ebuild,
+  12 Jun 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.1_rc2.ebuild,
   +deluge-0.5.1.ebuild:
   Version bump
 
 *deluge-0.5.1_rc2 (11 Jun 2007)
 
-  11 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.1_rc1.ebuild,
+  11 Jun 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.1_rc1.ebuild,
   +deluge-0.5.1_rc2.ebuild:
   Version bump, old
 
 *deluge-0.5.1_rc1 (08 Jun 2007)
 
-  08 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.1_beta2.ebuild,
+  08 Jun 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.1_beta2.ebuild,
   +deluge-0.5.1_rc1.ebuild:
   Version bump
 
 *deluge-0.5.1_beta2 (05 Jun 2007)
 
-  05 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> -deluge-0.5.1_beta1.ebuild,
+  05 Jun 2007; Raúl Porcel <armin76@gentoo.org> -deluge-0.5.1_beta1.ebuild,
   +deluge-0.5.1_beta2.ebuild:
   Version bump
 
 *deluge-0.5.1_beta1 (30 May 2007)
 
-  30 May 2007; RaÃºl Porcel <armin76@gentoo.org> +deluge-0.5.1_beta1.ebuild:
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> +deluge-0.5.1_beta1.ebuild:
   Add beta version
 
-  30 May 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
+  30 May 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
   Re-fix threads use-flag check if >boost-1.33, bug 180322
 
-  07 May 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
+  07 May 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
   0.5.0 only works with rb_libtorrent-0.11, bug 177469
 
-  20 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
+  20 Apr 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
   Fix threads USE-flag check if boost >1.33, bug 174714
 
-  19 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
+  19 Mar 2007; Raúl Porcel <armin76@gentoo.org> deluge-0.5.0.ebuild:
   This time really use 0.5.0
 
   18 Mar 2007; Peter Weller <welp@gentoo.org> deluge-0.5.0.ebuild:
@@ -598,20 +598,20 @@
 
 *deluge-0.5.0 (18 Mar 2007)
 
-  18 Mar 2007; RaÃºl Porcel <armin76@gentoo.org>
+  18 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   +files/0.5.0-use-system-rblibtorrent.patch,
   -files/0.5.0_rc2-use-system-rblibtorrent.patch, -deluge-0.5.0_rc2.ebuild,
   +deluge-0.5.0.ebuild:
   Version bump, yay 0.5.0
 
-  16 Mar 2007; RaÃºl Porcel <armin76@gentoo.org>
+  16 Mar 2007; Raúl Porcel <armin76@gentoo.org>
   +files/0.5.0_rc2-use-system-rblibtorrent.patch, deluge-0.5.0_rc2.ebuild:
   Some changes, including use the rb_libtorrent library from the system, and
   some other changes from Fedora
 
 *deluge-0.5.0_rc2 (16 Mar 2007)
 
-  16 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> +metadata.xml,
+  16 Mar 2007; Raúl Porcel <armin76@gentoo.org> +metadata.xml,
   +deluge-0.5.0_rc2.ebuild:
   New ebuild, bug 153543
 
