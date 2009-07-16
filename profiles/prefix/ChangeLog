@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.30 2009/07/16 09:59:00 haubi Exp $
+# $Id: ChangeLog,v 1.31 2009/07/16 19:40:29 darkside Exp $
+
+  16 Jul 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask =sys-apps/portage-2.2.00.13827 due to regression, bug 278014
 
   16 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> hpux/package.mask:
   masking gcc-4.3 on hpux for various reasons
