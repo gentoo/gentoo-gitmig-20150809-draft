@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/deluge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.129 2009/07/14 20:20:56 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/deluge/ChangeLog,v 1.130 2009/07/16 18:27:00 gentoofan23 Exp $
+
+  16 Jul 2009; Thomas Anderson <gentoofan23@gentoo.org> deluge-1.1.9.ebuild:
+  stable amd64, bug 155831
 
   14 Jul 2009; Christian Faulhammer <fauli@gentoo.org> deluge-1.1.9.ebuild:
   stable x86, security bug 273961
