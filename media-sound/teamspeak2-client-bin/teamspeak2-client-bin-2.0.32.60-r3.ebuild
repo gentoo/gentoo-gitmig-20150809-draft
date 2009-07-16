@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.18 2009/06/19 20:08:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.19 2009/07/16 19:01:42 ssuominen Exp $
 
 MY_PV=rc2_2032
+inherit eutils
+
 DESCRIPTION="The TeamSpeak voice communication tool"
 HOMEPAGE="http://www.goteamspeak.com"
 SRC_URI="ftp://ftp.freenet.de/pub/4players/teamspeak.org/releases/ts2_client_${MY_PV}.tar.bz2"
@@ -13,8 +15,8 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXt
-	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0
-		>=app-emulation/emul-linux-x86-xlibs-1.0 )"
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1
+		>=app-emulation/emul-linux-x86-xlibs-1 )"
 DEPEND=""
 
 QA_TEXTRELS="opt/teamspeak2-client/*.so"
@@ -46,9 +48,8 @@ src_install() {
 	doins client_sdk/*.pas client_sdk/*.dpr
 	doexe client_sdk/tsControl client_sdk/*.so*
 
-	#Install the teamspeak icon.
-	insinto /usr/share/pixmaps
-	newins icon.xpm teamspeak.xpm
+	newicon icon.xpm teamspeak.xpm
+	make_desktop_entry TeamSpeak TeamSpeak teamspeak
 
 	# Install a teamspeak.protocol file for kde/konqueror to accept
 	# teamspeak:// links
