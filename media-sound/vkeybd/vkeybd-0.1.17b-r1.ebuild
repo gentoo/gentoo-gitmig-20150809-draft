@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.17b-r1.ebuild,v 1.2 2009/07/16 08:05:18 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/vkeybd-0.1.17b-r1.ebuild,v 1.3 2009/07/16 08:58:25 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs eutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.gtlib.gatech.edu/pub/suse/people/tiwai/vkeybd/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc x86"
+KEYWORDS="amd64 ~sparc x86"
 IUSE="alsa lash oss"
 
 RDEPEND="alsa? ( media-libs/alsa-lib )
