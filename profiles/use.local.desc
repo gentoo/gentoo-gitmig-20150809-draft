@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4638 2009/07/16 04:27:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4639 2009/07/16 09:08:07 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3054,7 +3054,6 @@ www-client/seamonkey:xforms - XForms is a standard to split up XHTML into XForms
 www-client/w3m:lynxkeymap - If you prefer Lynx-like key binding
 www-misc/vdradmin-am:vdr -  Support for media-video/vdr. Disable this if the VDR you want to control runs at a remote machine. 
 www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
-www-misc/zoneminder:X10 - Enable support for X10 devices
 www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin
 www-plugins/adobe-flash:64bit - For amd64-multilib, installs the native 64-bit plugin
 www-plugins/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
