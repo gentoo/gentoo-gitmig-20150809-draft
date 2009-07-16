@@ -1,0 +1,10 @@
+# ChangeLog for sci-geosciences/bt747
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.1 2009/07/16 07:17:15 tupone Exp $
+
+*bt747-1.68.22 (16 Jul 2009)
+
+  16 Jul 2009; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
+  +bt747-1.68.22.ebuild:
+  New package. Bug #235598 by me
+
