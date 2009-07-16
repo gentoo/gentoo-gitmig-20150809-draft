@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.44.ebuild,v 1.1 2009/06/28 11:41:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.44.ebuild,v 1.2 2009/07/16 09:44:31 ssuominen Exp $
 
-inherit elisp-common flag-o-matic bash-completion eutils
+EAPI=2
+inherit bash-completion elisp-common eutils
 
 DESCRIPTION="Monotone Distributed Version Control System"
 HOMEPAGE="http://monotone.ca"
@@ -11,18 +12,15 @@ SRC_URI="http://monotone.ca/downloads/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
-
 IUSE="doc emacs ipv6 nls"
 
-RDEPEND="
-	sys-libs/zlib
+RDEPEND="sys-libs/zlib
 	emacs? ( virtual/emacs )
 	>=dev-libs/libpcre-7.6
 	>=dev-libs/botan-1.8.0
 	>=dev-db/sqlite-3.3.8
 	>=dev-lang/lua-5.1
 	net-dns/libidn"
-
 DEPEND="${RDEPEND}
 	>=dev-libs/boost-1.33.1
 	nls? ( >=sys-devel/gettext-0.11.5 )
@@ -34,25 +32,20 @@ pkg_setup() {
 	if [[ "$(gcc-version)" == "3.3" ]]; then
 		die 'requires >=gcc-3.4'
 	fi
-	# https://bugs.gentoo.org/show_bug.cgi?id=202371#c2
-	if ! has userpriv ${FEATURES} && has test ${FEATURES}; then
-		ewarn "No test will be performed due to lack of FEATURES=userpriv"
-	fi
+}
+
+src_configure() {
+	econf \
+		$(use_enable nls) \
+		$(use_enable ipv6) \
+		--with-system-pcre
 }
 
 src_compile() {
-	# more aggressive optimizations cause trouble with the crypto library
-	strip-flags
-	append-flags $(test-flags -fno-stack-protector-all -fno-stack-protector)
-	append-flags -fno-strict-aliasing -fno-omit-frame-pointer
-
-	econf $(use_enable nls) \
-		$(use_enable ipv6) \
-		--with-system-pcre || die "configure failed"
-	emake || die "Compilation failed"
+	emake || die "emake failed"
 
 	if use doc; then
-		emake html || die 'html compilation failed'
+		emake html || die "emake html failed"
 	fi
 
 	if use emacs; then
@@ -62,17 +55,17 @@ src_compile() {
 }
 
 src_test() {
-	if has userpriv ${FEATURES}; then
-		emake check || die "self test failed"
+	if [ $UID != 0 ]; then
+		emake check || die "emake check failed"
 	else
-		ewarn 'not tested - requires FEATURES=userpriv'
+		ewarn "Tests will fail if ran as root, skipping."
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	mv "${D}"/usr/share/doc/"${PN}" "${D}"/usr/share/doc/"${PF}"
+	mv "${D}"/usr/share/doc/${PN} "${D}"/usr/share/doc/${PF}
 
 	dobashcompletion contrib/monotone.bash_completion
 

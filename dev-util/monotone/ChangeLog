@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/monotone
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.61 2009/06/28 11:41:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/ChangeLog,v 1.62 2009/07/16 09:44:31 ssuominen Exp $
+
+  16 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> monotone-0.44.ebuild:
+  Remove obsolete strip-flags and replace FEATURES testing by UID testing
+  wrt #277450, thanks to Jack Lloyd for reporting.
 
 *monotone-0.44 (28 Jun 2009)
 
