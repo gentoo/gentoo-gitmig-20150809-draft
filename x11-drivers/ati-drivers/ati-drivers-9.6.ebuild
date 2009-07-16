@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.11 2009/07/16 00:45:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.12 2009/07/16 09:24:51 scarabeus Exp $
 
 EAPI="2"
 
@@ -20,6 +20,7 @@ RDEPEND="
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-opengl-1.0.7
+	sys-libs/libstdc++-v3
 	>=x11-base/xorg-server-1.5.3-r7
 	x11-libs/libXinerama
 	x11-libs/libXrandr
@@ -27,6 +28,7 @@ RDEPEND="
 		sys-power/acpid
 		x11-apps/xauth
 	)
+	amd64? ( multilib? ( app-emulation/emul-linux-x86-xlibs ) )
 "
 
 DEPEND="${RDEPEND}
@@ -133,8 +135,8 @@ pkg_setup() {
 	if use modules; then
 		MODULE_NAMES="fglrx(video:${S}/common/lib/modules/fglrx/build_mod/2.6.x)"
 		BUILD_TARGETS="kmod_build"
-		BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
 		linux-mod_pkg_setup
+		BUILD_PARAMS="GCC_VER_MAJ=$(gcc-major-version) KVER=${KV_FULL} KDIR=${KV_DIR}"
 		_check_kernel_config
 	fi
 
