@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-gconf2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.39 2009/07/16 07:10:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf2/ChangeLog,v 1.40 2009/07/16 07:14:36 graaff Exp $
+
+*ruby-gconf2-0.19.0 (16 Jul 2009)
+
+  16 Jul 2009; Hans de Graaff <graaff@gentoo.org>
+  +ruby-gconf2-0.19.0.ebuild:
+  Version bump. Thanks to Mark Somerville for providing an updated version
+  in the ruby overlay.
 
   16 Jul 2009; Hans de Graaff <graaff@gentoo.org>
   -ruby-gconf2-0.14.1.ebuild:
