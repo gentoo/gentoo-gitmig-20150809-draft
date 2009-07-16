@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.31 2009/07/14 23:19:35 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.32 2009/07/16 05:11:32 remi Exp $
+
+*xf86-video-intel-2.7.99.902 (16 Jul 2009)
+
+  16 Jul 2009; Rémi Cardona <remi@gentoo.org>
+  +files/2.7.99.902-0001-Fix-XV-scan-line-calculation-when-rotated.patch,
+  +xf86-video-intel-2.7.99.902.ebuild,
+  +files/2.7.99.902-0002-Reset-framebuffer-offset-when-rebinding-aperture-22
+  7.patch,
+  +files/2.7.99.902-0003-Use-batch_start_atomic-to-fix-batchbuffer-wrapping-
+  p.patch:
+  bump to 2.7.99.902
 
   14 Jul 2009; Rémi Cardona <remi@gentoo.org>
   xf86-video-intel-2.7.99.901.ebuild:
