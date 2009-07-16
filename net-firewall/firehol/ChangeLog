@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/firehol
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.41 2009/07/15 16:06:24 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.42 2009/07/16 08:02:59 fauli Exp $
+
+  16 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  firehol-1.273-r1.ebuild:
+  stable x86, security bug 246013
 
 *firehol-1.273-r1 (15 Jul 2009)
 
