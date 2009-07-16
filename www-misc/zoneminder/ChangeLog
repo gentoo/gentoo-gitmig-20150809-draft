@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/zoneminder
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.34 2009/02/08 14:02:10 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.35 2009/07/16 08:59:19 tove Exp $
+
+  16 Jul 2009; Torsten Veller <tove@gentoo.org> zoneminder-1.23.3.ebuild,
+  metadata.xml:
+  dev-perl/X10 was removed
 
   08 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
   zoneminder-1.23.3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.9 2009/02/08 14:02:10 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/zoneminder-1.23.3.ebuild,v 1.10 2009/07/16 08:59:19 tove Exp $
 
 inherit eutils autotools depend.php depend.apache multilib perl-module
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.zoneminder.com/downloads/${MY_PN}-${MY_PV}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug ffmpeg X10"
+IUSE="debug ffmpeg"
 SLOT="0"
 
 DEPEND="app-admin/sudo
@@ -36,8 +36,7 @@ DEPEND="app-admin/sudo
 	virtual/perl-Getopt-Long
 	virtual/perl-libnet
 	virtual/perl-Sys-Syslog
-	virtual/perl-Time-HiRes
-	X10? ( dev-perl/X10 )"
+	virtual/perl-Time-HiRes"
 
 RDEPEND="dev-perl/DBD-mysql
 	ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20080326 )

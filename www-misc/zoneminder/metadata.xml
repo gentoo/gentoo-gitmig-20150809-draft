@@ -6,7 +6,4 @@
 		<email>gentoofan23@gentoo.org</email>
 		<name>Thomas Anderson</name>
 	</maintainer>
-	<use>
-		<flag name='X10'>Enable support for X10 devices</flag>
-	</use>
 </pkgmetadata>
