@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.32 2009/07/14 15:09:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.33 2009/07/16 15:43:20 markusle Exp $
+
+  16 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.4.0.ebuild:
+  More ebuild cleanups.
 
   14 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.4.0.ebuild,
   +files/paraview-3.4.0-qt4.4-5.patch:

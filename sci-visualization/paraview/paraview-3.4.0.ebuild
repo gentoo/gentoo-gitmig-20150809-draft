@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.6 2009/07/14 15:09:02 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.7 2009/07/16 15:43:21 markusle Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ IUSE="mpi python hdf5 doc examples threads qt4"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
 	mpi? ( || (
 				sys-cluster/openmpi
-				sys-cluster/mpich2 ) )
+				sys-cluster/mpich2[cxx] ) )
 	python? ( >=dev-lang/python-2.0 )
 	qt4? ( x11-libs/qt-gui:4
 			x11-libs/qt-qt3support:4
@@ -46,14 +46,6 @@ PVLIBDIR="$(get_libdir)/${PN}-${MAJOR_PV}"
 BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView-${PV}
 
-pkg_setup() {
-	use qt4 && qt4_pkg_setup
-	if use mpi && has_version sys-cluster/mpich2; then
-		if ! built_with_use sys-cluster/mpich2 cxx; then
-			die "Please re-emerge sys-cluster/mpich2 with USE=\"cxx\""
-		fi
-	fi
-}
 
 src_prepare() {
 	mkdir "${BUILDDIR}" || die "Failed to generate build directory"
@@ -74,6 +66,7 @@ src_prepare() {
 		-i VTK/Rendering/vtkOpenGLRenderWindow.cxx \
 		|| die "Failed to fix GL issues."
 }
+
 
 src_compile() {
 	cd "${BUILDDIR}"
