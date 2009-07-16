@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.10 2009/07/15 09:54:12 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.11 2009/07/16 00:45:08 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://www.ati.com"
 ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV/./-}-x86.x86_64.run"
 IUSE="acpi debug +modules"
-
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
