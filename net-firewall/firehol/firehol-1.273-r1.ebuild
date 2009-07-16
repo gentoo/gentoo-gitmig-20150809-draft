@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.273-r1.ebuild,v 1.1 2009/07/15 16:06:24 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.273-r1.ebuild,v 1.2 2009/07/16 00:44:47 mr_bones_ Exp $
 
 EAPI=2
 
@@ -27,7 +27,6 @@ RDEPEND="net-firewall/iptables
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2008-4953.patch || die
 }
-
 
 pkg_setup() {
 	# perform checks for kernel config from eclass linux-info
