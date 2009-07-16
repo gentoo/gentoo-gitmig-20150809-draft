@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gentoo-syntax
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.42 2009/07/16 16:44:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/ChangeLog,v 1.43 2009/07/16 17:42:15 tcunha Exp $
+
+  16 Jul 2009; Tiago Cunha <tcunha@gentoo.org> gentoo-syntax-1.12.ebuild:
+  stable amd64, bug 276638
 
   16 Jul 2009; nixnut <nixnut@gentoo.org> gentoo-syntax-1.12.ebuild:
   ppc stable #276638
