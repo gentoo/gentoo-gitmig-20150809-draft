@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.19 2009/06/09 18:20:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.20 2009/07/16 21:43:01 patrick Exp $
+
+*virtualbox-ose-3.0.2 (16 Jul 2009)
+
+  16 Jul 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/virtualbox-ose-3.0.0-mesa-check.patch,
+  +virtualbox-ose-3.0.2.ebuild:
+  Bump to 3.0.2. Fixes #275963. Thanks to Alessio Cassiba and all the
+  testers
 
   09 Jun 2009; Patrick Lauer <patrick@gentoo.org> +files/vboxwebsrv-confd,
   +files/vboxwebsrv-initd:
