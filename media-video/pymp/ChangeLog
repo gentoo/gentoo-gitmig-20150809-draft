@@ -1,11 +1,13 @@
 # ChangeLog for media-video/pymp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.5 2008/11/24 17:07:15 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/pymp/ChangeLog,v 1.6 2009/07/16 08:08:58 ssuominen Exp $
 
-  24 Nov 2008; <ssuominen@gentoo.org> metadata.xml:
-  Re-assign to media-video herd.
+*pymp-1.1 (16 Jul 2009)
 
-  30 Jul 2008; Samuli Suominen <drac@gentoo.org> pymp-1.0.ebuild:
+  16 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> +pymp-1.1.ebuild:
+  Version bump wrt #278010, thanks to Tim Harder.
+
+  30 Jul 2008; Samuli Suominen <ssuominen@gentoo.org> pymp-1.0.ebuild:
   amd64 stable
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> pymp-1.0.ebuild:
@@ -16,6 +18,6 @@
 
 *pymp-1.0 (07 Jul 2007)
 
-  07 Jul 2007; Samuli Suominen <drac@gentoo.org> +pymp-1.0.ebuild:
-  package move from media-sound, mplayer frontend belongs here.
+  07 Jul 2007; Samuli Suominen <ssuominen@gentoo.org> +pymp-1.0.ebuild:
+  Initial commit.
 
