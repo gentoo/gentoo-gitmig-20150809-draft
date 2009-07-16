@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<herd>desktop-dock</herd>
+	<use>
+		<flag name="threads">Use separate thread to init connection (unsafe)</flag>
+	</use>
 </pkgmetadata>
