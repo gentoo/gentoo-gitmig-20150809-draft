@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r5.ebuild,v 1.1 2009/07/10 01:20:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.99.99-r5.ebuild,v 1.2 2009/07/16 08:14:58 fauli Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -13,7 +13,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 IUSE="python +shout +xiph"
 
 RDEPEND=">=x11-libs/gtk+-2.4
