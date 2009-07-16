@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/gitg-0.0.4.ebuild,v 1.1 2009/07/12 10:40:57 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/gitg-0.0.4.ebuild,v 1.2 2009/07/16 14:47:21 ikelos Exp $
+
+EAPI="2"
 
 inherit gnome2
 
@@ -24,6 +26,12 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
 DOCS="AUTHORS ChangeLog NEWS README"
+
+src_prepare() {
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i "${S}/po/Makefile.in.in" || die "sed failed"
+}
+
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-bundle"
