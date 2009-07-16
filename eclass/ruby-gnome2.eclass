@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.13 2009/02/08 21:09:54 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-gnome2.eclass,v 1.14 2009/07/16 06:39:47 graaff Exp $
 #
 # This eclass simplifies installation of the various pieces of
 # ruby-gnome2 since they share a very common installation procedure.
@@ -16,13 +16,8 @@ EXPORT_FUNCTIONS src_compile src_install src_unpack
 IUSE=""
 
 subbinding=${PN#ruby-} ; subbinding=${subbinding%2}
-if [[ ${PV} == 0.5.0 ]]; then
-	S=${WORKDIR}/ruby-gnome2-${PV}/${subbinding}
-	SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-${PV}.tar.gz"
-else
-	S=${WORKDIR}/ruby-gnome2-all-${PV}/${subbinding}
-	SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-${PV}.tar.gz"
-fi
+S=${WORKDIR}/ruby-gnome2-all-${PV}/${subbinding}
+SRC_URI="mirror://sourceforge/ruby-gnome2/ruby-gnome2-all-${PV}.tar.gz"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 LICENSE="Ruby"
 SLOT="0"
