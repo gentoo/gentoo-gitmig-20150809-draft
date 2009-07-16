@@ -1,6 +1,10 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.132 2009/07/01 11:31:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.133 2009/07/16 10:35:53 ssuominen Exp $
+
+  16 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> sparc32/use.mask:
+  Remove ladcca from sparc32/use.mask because it's been p.masked for
+  removal.
 
   01 Jul 2009; Ferris McCormick <fmccor@gentoo.org> package.use.mask:
   Add net-libs/ortp srtp to package.use.mask because libsrtp is -sparc.
