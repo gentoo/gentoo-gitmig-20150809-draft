@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.5.5.ebuild,v 1.1 2009/07/16 20:58:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sqlalchemy/sqlalchemy-0.5.5.ebuild,v 1.2 2009/07/16 23:32:21 neurogeek Exp $
 
 EAPI="2"
 
@@ -37,11 +37,16 @@ RDEPEND="firebird? ( dev-python/kinterbasdb )
 DEPEND="dev-python/setuptools
 	test? (
 		>=dev-db/sqlite-3.3.13
+		>=dev-python/nose-0.10.4
 		|| ( dev-python/pysqlite >=dev-lang/python-2.5[sqlite] )
-		dev-python/nose
 	)"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare(){
+	#Skip flawed test
+	epatch "${FILESDIR}/${P}_tests.patch"
+}
 
 src_install() {
 	distutils_src_install
@@ -55,6 +60,7 @@ src_install() {
 }
 
 src_test() {
-	cd test
-	PYTHONPATH="./test/" nosetests -v || die "tests failed"
+	PYTHONPATH="${T}"
+	${python} setup.py develop --install-dir="${T}"
+	nosetests --with-sqlalchemy || die "tests failed"
 }
