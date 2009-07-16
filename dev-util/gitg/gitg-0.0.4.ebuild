@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/gitg-0.0.4.ebuild,v 1.2 2009/07/16 14:47:21 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/gitg-0.0.4.ebuild,v 1.3 2009/07/16 15:42:51 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -31,7 +31,6 @@ src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i "${S}/po/Makefile.in.in" || die "sed failed"
 }
-
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-bundle"
