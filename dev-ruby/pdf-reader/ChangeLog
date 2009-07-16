@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/pdf-reader
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/ChangeLog,v 1.1 2009/07/16 13:02:52 flameeyes Exp $
+
+*pdf-reader-0.7.4 (16 Jul 2009)
+
+  16 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pdf-reader-0.7.4.ebuild, +metadata.xml:
+  Initial import of pdf-reader as test dependency of prawn.
+
