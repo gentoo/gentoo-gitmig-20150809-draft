@@ -2,7 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>sound</herd>
-	<longdescription lang="en">
-		A gkrellm plugin to control the MPD (Music Player Daemon).
-	</longdescription>
+	<herd>desktop-dock</herd>
 </pkgmetadata>
