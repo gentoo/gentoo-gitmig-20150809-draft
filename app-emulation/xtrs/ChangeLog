@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xtrs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.33 2009/06/17 21:34:21 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/ChangeLog,v 1.34 2009/07/16 18:07:14 fauli Exp $
+
+  16 Jul 2009; Christian Faulhammer <fauli@gentoo.org> xtrs-4.9d.ebuild:
+  stable x86, bug 278051
 
 *xtrs-4.9d (17 Jun 2009)
 
