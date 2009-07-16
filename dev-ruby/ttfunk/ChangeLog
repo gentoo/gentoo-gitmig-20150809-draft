@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ttfunk
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.1 2009/07/16 12:43:07 flameeyes Exp $
+
+*ttfunk-0_pre20090123 (16 Jul 2009)
+
+  16 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +ttfunk-0_pre20090123.ebuild, +metadata.xml:
+  Initial import of ttfunk as dependency of prawn.
+
