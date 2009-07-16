@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.2 2009/07/16 20:54:42 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/cacao-0.99.4.ebuild,v 1.3 2009/07/16 20:57:36 betelgeuse Exp $
 
 EAPI=2
 
@@ -40,8 +40,8 @@ src_install() {
 	dodoc AUTHORS ChangeLog* NEWS README || die "failed to install docs"
 
 	for files in ${CLASSPATH_DIR}/bin/g*; do
-	  dosym $files \
-	  	/usr/${PN}/bin/$(echo $files|sed "s#$(dirname $files)/g##") || die
+		dosym $files \
+			/usr/${PN}/bin/$(echo $files|sed "s#$(dirname $files)/g##") || die
 	done
 
 	dodir /usr/${PN}/jre/lib
@@ -61,4 +61,3 @@ src_install() {
 	dosym ${CLASSPATH_DIR}/lib/classpath/libjawt.so /usr/${PN}/jre/lib/${libarch}/libjawt.so
 	set_java_env
 }
-
