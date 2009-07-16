@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/twitter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.9 2009/05/25 19:18:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/twitter/ChangeLog,v 1.10 2009/07/16 06:02:32 graaff Exp $
+
+*twitter-0.6.12 (16 Jul 2009)
+
+  16 Jul 2009; Hans de Graaff <graaff@gentoo.org> +twitter-0.6.12.ebuild:
+  Version bump: fixed tests and ability to set user agent.
 
 *twitter-0.6.11 (25 May 2009)
 
