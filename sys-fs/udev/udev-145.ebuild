@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145.ebuild,v 1.1 2009/07/13 14:09:57 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145.ebuild,v 1.2 2009/07/16 07:40:20 zzam Exp $
 
 EAPI="1"
 
@@ -29,7 +29,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 		sys-apps/pciutils
 		dev-libs/glib:2
 	)
-	>=sys-apps/util-linux-2.16_rc1"
+	>=sys-apps/util-linux-2.16"
 
 DEPEND="${COMMON_DEPEND}
 	extras? ( dev-util/gperf )"
