@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/moosic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.18 2009/06/28 12:17:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/ChangeLog,v 1.19 2009/07/17 18:55:37 ssuominen Exp $
+
+  17 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> moosic-1.5.4.ebuild:
+  Fix bash-completion install wrt #274738, thanks to Tiago Cunha.
 
   28 Jun 2009; Markus Meier <maekke@gentoo.org> moosic-1.5.4.ebuild:
   amd64/x86 stable, bug #274738
