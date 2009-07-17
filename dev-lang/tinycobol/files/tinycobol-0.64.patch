@@ -106,3 +106,35 @@ diff -Nru tinycobol-0.64/lib/Makefile.in tinycobol-0.64.new/lib/Makefile.in
  ACXFLAGS=@ACXFLAGS@
  
  #
+--- tinycobol-0.64/compiler/Makefile.in	2009-07-17 19:46:28.000000000 +0200
++++ tinycobol-0.64/compiler/Makefile.in.new	2009-07-17 20:13:04.000000000 +0200
+@@ -78,14 +78,16 @@
+ #	strip $@
+ 
+ 
+-scan.c: scan.l
++scan.c: scan.l htcobol.tab.c
+ 	$(LEX) -o$@ $< 
+ 
+-htcobol.tab.c: htcobol.y scan.c
++htcobol.tab.c: htcobol.y
+ 	$(YACC) -dv -b htcobol $<  
+ 
+ #htcobgen.o: htcoboly.h htcobol.c
+ 
++reswords.o: htcobol.tab.c reswords.c
++
+ htcobol.o: htcoboly.h
+ 	$(CCX) $(CCXFLAGS) -c htcobol.c
+ 
+--- tinycobol-0.64/Makefile.in	2009-07-17 19:35:54.000000000 +0200
++++ tinycobol-0.64/Makefile.in.new	2009-07-17 20:14:42.000000000 +0200
+@@ -44,7 +44,7 @@
+ all:
+ 	@for i in ${subdirs}; do \
+ 		echo Making all in $$i ; \
+-		(cd $$i; ${MAKE} all) ; \
++		(cd $$i; ${MAKE} all) || exit ; \
+ 	done
+ 
+ install: all

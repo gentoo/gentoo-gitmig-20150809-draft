@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tinycobol
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.14 2009/07/17 17:29:17 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.15 2009/07/17 18:45:34 phosphan Exp $
+
+  17 Jul 2009; Patrick Kursawe <phosphan@gentoo.org>
+  files/tinycobol-0.64.patch:
+  Fixed some parallel make problems.
 
   17 Jul 2009; Patrick Kursawe <phosphan@gentoo.org>
   -files/tinycobol-0.63.patch, -tinycobol-0.63.ebuild:
