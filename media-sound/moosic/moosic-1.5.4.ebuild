@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.5 2009/07/17 18:55:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moosic/moosic-1.5.4.ebuild,v 1.6 2009/07/17 23:26:28 tcunha Exp $
 
 inherit bash-completion distutils python multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nanoo.org/~daniel/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc sparc x86"
 IUSE="doc"
 
 RDEPEND="dev-lang/python"
