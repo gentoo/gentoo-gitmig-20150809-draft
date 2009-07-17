@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.2-r1.ebuild,v 1.4 2009/07/17 11:49:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.2-r1.ebuild,v 1.5 2009/07/17 12:21:15 leio Exp $
 
 EAPI="2"
 
@@ -198,7 +198,7 @@ PDEPEND="
 		video_cards_cirrus? ( >=x11-drivers/xf86-video-cirrus-1.2.1 )
 		video_cards_dummy? ( >=x11-drivers/xf86-video-dummy-0.3.1 )
 		video_cards_fbdev? ( >=x11-drivers/xf86-video-fbdev-0.4.0 )
-		video_cards_geode? ( >=x11-drivers/xf86-video-geode-2.9.0  )
+		video_cards_geode? ( >=x11-drivers/xf86-video-geode-2.11.0  )
 		video_cards_glint? ( >=x11-drivers/xf86-video-glint-1.2.2 )
 		video_cards_i128? ( >=x11-drivers/xf86-video-i128-1.3.1 )
 		video_cards_i740? ( >=x11-drivers/xf86-video-i740-1.2.0 )

@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.429 2009/07/17 11:49:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.430 2009/07/17 12:21:15 leio Exp $
+
+  17 Jul 2009; Mart Raudsepp <leio@gentoo.org> xorg-server-1.6.2.ebuild,
+  xorg-server-1.6.2-r1.ebuild:
+  Update VIDEO_CARDS=geode dependency to xf86-video-geode-2.11, as earlier
+  versions do not compile against xorg-server-1.6+
 
   17 Jul 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.6.2-r1.ebuild:
   make the ebuild call eautoreconf (fixes bug #276187 again)
