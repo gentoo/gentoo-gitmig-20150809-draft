@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/remind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.43 2009/07/15 13:22:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/remind/ChangeLog,v 1.44 2009/07/17 01:27:15 darkside Exp $
+
+  17 Jul 2009; Jeremy Olexa <darkside@gentoo.org> remind-03.01.07.ebuild:
+  amd64 stable, bug 277399
 
   15 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   remind-03.01.07.ebuild:
