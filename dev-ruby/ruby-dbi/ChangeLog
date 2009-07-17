@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.33 2009/07/02 20:21:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.34 2009/07/17 11:07:27 graaff Exp $
+
+  17 Jul 2009; Hans de Graaff <graaff@gentoo.org>
+  -ruby-dbi-0.0.21-r2.ebuild, -ruby-dbi-0.2.0.ebuild:
+  Remove old versions.
 
   02 Jul 2009; Markus Meier <maekke@gentoo.org> ruby-dbi-0.2.0-r1.ebuild:
   amd64 stable, bug #273962
