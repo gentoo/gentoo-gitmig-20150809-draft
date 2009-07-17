@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.37.ebuild,v 1.2 2009/07/15 13:34:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.37.ebuild,v 1.3 2009/07/17 15:44:10 araujo Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.haskell.org/himerge/release/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/ghc-6.8.2
