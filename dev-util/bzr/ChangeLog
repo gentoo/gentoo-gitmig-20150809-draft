@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bzr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.102 2009/07/10 08:50:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr/ChangeLog,v 1.103 2009/07/17 18:35:52 nixnut Exp $
+
+  17 Jul 2009; nixnut <nixnut@gentoo.org> bzr-1.15.1.ebuild:
+  ppc stable #274451
 
   10 Jul 2009; Peter Volkov <pva@gentoo.org> bzr-1.16.1.ebuild:
   Mask more tests, update info on old failures.
