@@ -1,25 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.6.3.ebuild,v 1.7 2009/07/17 08:13:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pokerth/pokerth-0.7.1.ebuild,v 1.1 2009/07/17 08:13:02 mr_bones_ Exp $
 
 EAPI=2
 inherit multilib flag-o-matic eutils qt4 games
 
-MY_P="PokerTH-${PV}-2-src"
+MY_P="PokerTH-${PV}-src"
 DESCRIPTION="Texas Hold'em poker game"
 HOMEPAGE="http://www.pokerth.net/"
 SRC_URI="mirror://sourceforge/pokerth/${MY_P}.tar.bz2"
 
 LICENSE="GPL-1 GPL-2 GPL-3 BitstreamVera public-domain"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dedicated"
 
-DEPEND="
-	|| ( >=dev-libs/boost-1.35.0-r5:0
-		~dev-libs/boost-1.35.0
-		~dev-libs/boost-1.34.1
-		~dev-libs/boost-1.33.1 )
+DEPEND="dev-libs/boost:1.39
 	>=net-libs/gnutls-2.2.2
 	>=net-misc/curl-7.16
 	!dedicated? (
@@ -43,13 +39,9 @@ src_prepare() {
 		*pro \
 		|| die 'sed failed'
 	append-cxxflags \
-		-I/usr/include/boost-1_35 \
-		-I/usr/include/boost-1_34 \
-		-I/usr/include/boost-1_33
+		-I/usr/include/boost-1_39
 	append-ldflags \
-		-L/usr/$(get_libdir)/boost-1_35 \
-		-L/usr/$(get_libdir)/boost-1_34 \
-		-L/usr/$(get_libdir)/boost-1_33
+		-L/usr/$(get_libdir)/boost-1_39
 }
 
 src_configure() {
