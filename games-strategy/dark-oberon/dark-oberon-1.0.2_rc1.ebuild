@@ -1,8 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/dark-oberon-1.0.2_rc1.ebuild,v 1.2 2007/10/17 18:11:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dark-oberon/dark-oberon-1.0.2_rc1.ebuild,v 1.3 2009/07/17 08:05:57 mr_bones_ Exp $
 
-inherit eutils games
+EAPI=2
+inherit games
 
 MY_PV=${PV/_rc/-RC}
 MY_P=${PN}-${MY_PV}
@@ -21,22 +22,15 @@ DEPEND="virtual/opengl
 	media-libs/glfw
 	fmod? ( =media-libs/fmod-3* )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}"-gcc41.patch \
-		"${FILESDIR}/${P}"-gentoo.patch
-}
+PATCHES=(
+	"${FILESDIR}/${P}"-gcc41.patch
+	"${FILESDIR}/${P}"-gentoo.patch
+)
 
 src_compile() {
-	cd src
-	if use fmod; then
-		emake SOUND=1 ../${PN} || die "emake failed"
-	else
-		emake ../${PN} || die "emake failed"
-	fi
+	emake -C src $(use fmod && echo "SOUND=1") ../${PN} || die "emake failed"
 }
 
 src_install() {
