@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/libecap-0.0.2.ebuild,v 1.1 2009/07/16 21:16:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/libecap-0.0.2.ebuild,v 1.2 2009/07/17 12:25:14 fmccor Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.measurement-factory.com/tmp/ecap/${P}.tar.gz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""

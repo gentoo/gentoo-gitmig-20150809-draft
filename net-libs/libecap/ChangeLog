@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.1 2009/07/16 21:16:10 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.2 2009/07/17 12:25:13 fmccor Exp $
+
+  17 Jul 2009; Ferris McCormick <fmccor@gentoo.org> libecap-0.0.2.ebuild:
+  Add ~sparc for testing at request of Ivan Mironov and mmess, bug #277883.
 
 *libecap-0.0.2 (16 Jul 2009)
 
