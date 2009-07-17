@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.428 2009/07/13 10:53:18 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.429 2009/07/17 11:49:38 remi Exp $
+
+  17 Jul 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.6.2-r1.ebuild:
+  make the ebuild call eautoreconf (fixes bug #276187 again)
 
   13 Jul 2009; Rémi Cardona <remi@gentoo.org>
   xorg-server-1.3.0.0-r6.ebuild, xorg-server-1.4.2.ebuild,
