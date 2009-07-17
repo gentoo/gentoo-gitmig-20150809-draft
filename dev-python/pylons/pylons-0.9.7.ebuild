@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.7.ebuild,v 1.1 2009/04/26 10:05:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylons/pylons-0.9.7.ebuild,v 1.2 2009/07/17 15:52:40 arfrever Exp $
 
 EAPI="1"
 
@@ -26,6 +26,7 @@ RDEPEND=">=dev-python/routes-1.10.3
 	>=dev-python/paste-1.7.2
 	>=dev-python/pastedeploy-1.3.3
 	>=dev-python/pastescript-1.7.3
+	>=dev-python/pygments-0.7
 	>=dev-python/formencode-1.2.1
 	>=dev-python/simplejson-2.0.8
 	>=dev-python/decorator-2.3.2
