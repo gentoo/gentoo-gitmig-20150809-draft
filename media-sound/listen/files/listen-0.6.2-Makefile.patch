@@ -1,0 +1,37 @@
+diff -ur listen-0.6.2.orig/Makefile listen-0.6.2/Makefile
+--- listen-0.6.2.orig/Makefile	2009-05-11 19:37:47.000000000 +0300
++++ listen-0.6.2/Makefile	2009-07-17 11:55:48.000000000 +0300
+@@ -49,10 +49,8 @@
+ 	echo 'Name=org.gnome.Listen' >> org.gnome.Listen.service
+ 	echo 'Exec=$(BINDIR)/listen' >> org.gnome.Listen.service
+ 
+-	docbook2x-man misc/listen.1.docbook --to-stdout | gzip > listen.1.gz
++	docbook2man.pl misc/listen.1.docbook
+ 
+-	python -m compileall src
+-	python -O -m compileall src
+ 	@echo "Done"
+ 	@echo "Type: make install now"
+ 
+@@ -103,12 +101,8 @@
+ 
+ install: make-install-dirs
+ 	install -m 644 src/*.py $(DESTDIR)$(LIBDIR)/listen
+-	install -m 644 src/*.pyc $(DESTDIR)$(LIBDIR)/listen
+-	install -m 644 src/*.pyo $(DESTDIR)$(LIBDIR)/listen
+ 	for dir in $(PYSRC_DIR); do \
+ 		install -m 644 src/$${dir}/*.py $(DESTDIR)$(LIBDIR)/listen/$${dir} ; \
+-		install -m 644 src/$${dir}/*.pyc $(DESTDIR)$(LIBDIR)/listen/$${dir} ; \
+-		install -m 644 src/$${dir}/*.pyo $(DESTDIR)$(LIBDIR)/listen/$${dir} ; \
+ 	done
+ 	
+ 	install -m 644 src/mmkeys.so $(DESTDIR)$(LIBDIR)/listen/
+@@ -120,7 +114,7 @@
+ 	install -m 644 data/img/listen.png $(DESTDIR)$(DATADIR)/pixmaps/
+ 	
+ 	install -m 644 listen.desktop $(DESTDIR)$(DATADIR)/applications/
+-	install -m 644 listen.1.gz $(DESTDIR)$(MANDIR)/man1/
++	install -m 644 listen.1 $(DESTDIR)$(MANDIR)/man1/
+ 	install -m 644 org.gnome.Listen.service $(DESTDIR)$(DBUSDIR)/services
+ 	
+ 	for lang in $(PO); do install -m 644 po/$$lang.mo $(DESTDIR)$(LOCALEDIR)/$$lang/LC_MESSAGES/listen.mo; done
