@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/python-musicbrainz-0.7.0.ebuild,v 1.1 2009/07/17 10:19:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-musicbrainz/python-musicbrainz-0.7.0.ebuild,v 1.2 2009/07/17 12:41:10 ssuominen Exp $
 
 MY_P=${PN}2-${PV}
 inherit distutils
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~x86"
 IUSE="doc examples"
 
-RDEPEND="=media-libs/musicbrainz-2*
-	>=dev-lang/python-2.5
+RDEPEND=">=dev-lang/python-2.5
 	media-libs/libdiscid"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )"
