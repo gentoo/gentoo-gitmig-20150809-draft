@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.66 2009/06/11 20:13:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.67 2009/07/17 13:22:49 hkbst Exp $
+
+*g-wrap-1.9.11-r1 (17 Jul 2009)
+
+  17 Jul 2009; Marijn Schouten <hkBst@gentoo.org> +g-wrap-1.9.11-r1.ebuild:
+  fix installation of srfi's: bug 273772
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> g-wrap-1.9.11.ebuild:
   amd64 stable, bug #272675
