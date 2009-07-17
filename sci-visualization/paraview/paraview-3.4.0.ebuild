@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.7 2009/07/16 15:43:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.4.0.ebuild,v 1.8 2009/07/17 06:21:06 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -46,7 +46,6 @@ PVLIBDIR="$(get_libdir)/${PN}-${MAJOR_PV}"
 BUILDDIR="${WORKDIR}/build"
 S="${WORKDIR}"/ParaView-${PV}
 
-
 src_prepare() {
 	mkdir "${BUILDDIR}" || die "Failed to generate build directory"
 	cd "${S}"
@@ -66,7 +65,6 @@ src_prepare() {
 		-i VTK/Rendering/vtkOpenGLRenderWindow.cxx \
 		|| die "Failed to fix GL issues."
 }
-
 
 src_compile() {
 	cd "${BUILDDIR}"
