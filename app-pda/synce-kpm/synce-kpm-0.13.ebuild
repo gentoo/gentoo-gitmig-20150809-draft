@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.13.ebuild,v 1.3 2009/01/21 11:46:33 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/synce-kpm-0.13.ebuild,v 1.4 2009/07/17 07:11:30 hwoarang Exp $
+
+EAPI="2"
 
 inherit distutils versionator
 
@@ -23,7 +25,7 @@ RDEPEND="dev-python/pygobject
 		=app-pda/synce-hal-${synce_PV}*
 		=app-pda/synce-librra-${synce_PV}*
 		~app-pda/synce-librtfcomp-1.1
-		dev-python/PyQt4"
+		dev-python/PyQt4[X]"
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
 
