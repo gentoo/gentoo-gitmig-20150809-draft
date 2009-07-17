@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.15 2009/06/03 16:58:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.16 2009/07/17 08:35:04 ulm Exp $
+
+  17 Jul 2009; Ulrich Mueller <ulm@gentoo.org> emacs-daemon-0.14.ebuild:
+  Remove backwards compatibility code.
 
   03 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   -emacs-daemon-0.13.ebuild:
