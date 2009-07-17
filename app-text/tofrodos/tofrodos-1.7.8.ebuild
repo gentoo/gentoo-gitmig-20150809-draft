@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tofrodos/tofrodos-1.7.8.ebuild,v 1.1 2009/03/07 15:46:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tofrodos/tofrodos-1.7.8.ebuild,v 1.2 2009/07/17 14:34:31 vostorga Exp $
+
+inherit eutils
 
 DESCRIPTION="text file conversion utility that converts ASCII files between the
 MSDOS format and the Unix format"
@@ -17,12 +19,18 @@ RDEPEND=""
 
 S="${WORKDIR}/${PN}/src"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-CFLAGS.patch
+}
+
 src_compile() {
-	emake DEBUG=1 || die "Compile failed."
+	emake DEBUG=1 CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die "Compile failed."
 }
 
 src_install() {
 	dobin fromdos || die
-	dosym fromdos /usr/bin/todos
-	doman fromdos.1
+	dosym fromdos /usr/bin/todos || die
+	doman fromdos.1 || die
 }
