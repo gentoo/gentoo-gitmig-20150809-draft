@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.46 2009/07/04 12:51:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.47 2009/07/17 18:16:59 nixnut Exp $
+
+  17 Jul 2009; nixnut <nixnut@gentoo.org> pyzor-0.5.0.ebuild:
+  ppc stable #274904
 
   04 Jul 2009; Brent Baude <ranger@gentoo.org> pyzor-0.5.0.ebuild:
   Marking pyzor-0.5.0 ppc64 for bug 274904
