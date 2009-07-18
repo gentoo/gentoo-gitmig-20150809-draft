@@ -1,111 +1,87 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.12 2004/08/08 00:29:38 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.13 2009/07/18 18:08:35 ssuominen Exp $
 
-# Note: this also d/ls the hp-ppa-howto and installs it under /usr/share/doc/${P}
+inherit flag-o-matic toolchain-funcs
 
-SRC_URI="mirror://sourceforge/pnm2ppa/${P}.tar.gz
-	 mirror://sourceforge/pnm2ppa/howto.tgz"
-
-HOMEPAGE="http://pnm2ppa.sourceforge.net"
-KEYWORDS="x86 ~amd64"
-SLOT="0"
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
+HOMEPAGE="http://pnm2ppa.sourceforge.net"
+SRC_URI="mirror://sourceforge/pnm2ppa/${P}.tar.gz"
+
+KEYWORDS="~amd64 x86"
+SLOT="0"
 LICENSE="GPL-2"
-IUSE="gtk ncurses"
+IUSE=""
 
-# note: this doesn't depend on virtual/lpr, because it can work on its own,
-# just without queuing etc. since it's not just a driver but a standalone
-# executable.
-DEPEND="gtk? ( x11-libs/gtk+ )
-	ncurses? ( sys-libs/ncurses )"
-
+RDEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}
 	app-text/enscript
 	dev-util/dialog"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	cd ${S}
-	unpack howto.tgz
-
-	patch -l -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
-	export CFLAGS="-DNDEBUG ${CFLAGS}"
+	append-flags -DNDEBUG
 
-	emake CFLAGS="${CFLAGS} -DLANG_EN" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DLANG_EN" \
+		|| die "emake failed"
 
-	cd ${S}/ppa_protocol
-	emake CFLAGS="${CFLAGS}" || die
+	cd ppa_protocol
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install () {
-	dodir /usr/bin
-	dodir /etc
-	dodir /usr/share/man/man1
+	dodir /etc /usr/{bin,share/man/man1}
 
-	make	\
-		BINDIR=${D}/usr/bin	\
-		CONFDIR=${D}/etc	\
-		MANDIR=${D}/usr/share/man/man1	\
-		install || die
+	emake BINDIR="${D}/usr/bin" CONFDIR="${D}/etc" \
+		MANDIR="${D}/usr/share/man/man1" install \
+		|| die "emake install failed"
 
-	exeinto /usr/bin
-	doexe utils/Linux/detect_ppa utils/Linux/test_ppa
+	dobin utils/Linux/detect_ppa utils/Linux/test_ppa || die "dobin failed"
 
-	insinto /usr/share/pnm2ppa/lpd
-	doins ${S}/lpd/*
+	insinto /usr/share/pnm2ppa
+	doins -r lpd pdq || die "doins failed"
 	exeinto /usr/share/pnm2ppa/lpd
-	doexe ${S}/lpd/lpdsetup
-
-	insinto /usr/share/pnm2ppa/pdq
-	doins ${S}/pdq/*
-
-	# Interfaces for configuration of integration with lpd
-	# These are not installed because we do not assume that
-	# lpd, ncurses, gtk, but the sources are provided.  Thus,
-	# if the headers were found they would have been built.
+	doexe lpd/lpdsetup || die "doexe failed"
 
 	exeinto /usr/share/pnm2ppa/sample_scripts
-	doexe ${S}/sample_scripts/*
+	doexe sample_scripts/* || die "doexe failed"
 
-	cd ${S}/pdq
+	cd "${S}"/pdq
 	exeinto /etc/pdq/drivers/ghostscript
-	doexe gs-pnm2ppa
+	doexe gs-pnm2ppa || die "doexe failed"
 	exeinto /etc/pdq/interfaces
-	doexe dummy
+	doexe dummy || die "doexe failed"
 
-	# possibly not needed
-	#rm ${D}/etc/printcap.*
+	cd "${S}"/docs/en
+	dodoc CALIBRATION*txt COLOR*txt PPA*txt RELEASE* CREDITS README \
+		TODO || die "dodoc failed"
 
-	cd ${S}/docs/en
-	dodoc CALIBRATION*txt COLOR*txt PPA*txt RELEASE*
-	dodoc CREDITS INSTALL LICENSE README TODO
+	cd "${S}"/docs/en/sgml
+	insinto /usr/share/doc/${PF}
+	doins *.sgml || die "doins failed"
 
-	cd sgml
-	insinto /usr/share/doc/${P}
-	doins *.sgml
-
-	cd ${S}
-	dohtml -r .
-
+	cd "${S}"
+	dohtml -r . || die "dohtml failed"
 }
 
 pkg_postinst() {
-	einfo "Now, you *must* edit /etc/pnm2ppa.conf and choose (at least)"
-	einfo "your printer model and papersize."
-	einfo ""
-	einfo "Run calibrate_ppa to calibrate color offsets."
-	einfo ""
-	einfo "Read the docs in /usr/share/pnm2ppa/ to configure the printer,"
-	einfo "configure lpr substitutes, cups, pdq, networking etc."
-	einfo ""
-	einfo "Note that lpr and pdq drivers *have* been installed, but if your"
-	einfo "config file management has /etc blocked (the default), they have"
-	einfo "been installed under different filenames. Read the appropriate"
-	einfo "Gentoo documentation for more info."
-	einfo ""
-	einfo "Note: lpr has been configured for default papersize letter"
+	elog "Now, you *must* edit /etc/pnm2ppa.conf and choose (at least)"
+	elog "your printer model and papersize."
+	echo ""
+	elog "Run calibrate_ppa to calibrate color offsets."
+	echo ""
+	elog "Read the docs in /usr/share/pnm2ppa/ to configure the printer,"
+	elog "configure lpr substitutes, cups, pdq, networking etc."
+	echo ""
+	elog "Note that lpr and pdq drivers *have* been installed, but if your"
+	elog "config file management has /etc blocked (the default), they have"
+	elog "been installed under different filenames. Read the appropriate"
+	elog "Gentoo documentation for more info."
+	echo ""
+	elog "Note: lpr has been configured for default papersize letter"
 }
