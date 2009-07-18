@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xmbdfed
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.20 2009/01/01 01:33:50 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/ChangeLog,v 1.21 2009/07/18 22:19:52 ssuominen Exp $
+
+  18 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xmbdfed-4.7_p1-r1.ebuild:
+  Fix building with glibc 2.10+ wrt #276182, thanks to Joost Ruis and Arttu
+  Valo.
 
 *xmbdfed-4.7_p1-r1 (01 Jan 2009)
 
