@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/line6usb
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.2 2008/10/18 06:16:23 nerdboy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.3 2009/07/18 16:14:05 nerdboy Exp $
+
+*line6usb-0.8.1 (18 Jul 2009)
+
+  18 Jul 2009; Steve Arnold <nerdboy@gentoo.org> line6usb-0.7.3.ebuild,
+  +line6usb-0.8.1.ebuild:
+  Updated to current upstream release with support for newer kernels 
+  (see bug # 278164).
 
   18 Oct 2008; Steve Arnold <nerdboy@gentoo.org> line6usb-0.7.3.ebuild:
   Updated Makefile by replacing uname-based paths with ebuild vars; fixes

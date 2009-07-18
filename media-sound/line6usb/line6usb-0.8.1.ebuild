@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.7.3.ebuild,v 1.4 2009/07/18 16:14:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/line6usb-0.8.1.ebuild,v 1.1 2009/07/18 16:14:05 nerdboy Exp $
 
 inherit linux-mod eutils multilib linux-info
 
@@ -22,10 +22,9 @@ ERROR_PODXTPRO="${P} requires the podxtpro driver to be removed first."
 
 RDEPEND="virtual/modutils
 	dev-lang/perl"
-
 DEPEND="${RDEPEND}
 	virtual/alsa
-	<virtual/linux-sources-2.6.25
+	>=virtual/linux-sources-2.6.25
 	sys-apps/debianutils"
 
 pkg_setup() {
