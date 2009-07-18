@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/pidof-bsd-20050501-r3.ebuild,v 1.3 2007/07/14 23:02:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/pidof-bsd-20050501-r3.ebuild,v 1.4 2009/07/18 09:44:04 aballier Exp $
 
 inherit base bsdmk
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
-DEPEND=""
+DEPEND="sys-freebsd/freebsd-mk-defs"
 RDEPEND="!sys-process/psmisc"
 
 S="${WORKDIR}/pidof"
