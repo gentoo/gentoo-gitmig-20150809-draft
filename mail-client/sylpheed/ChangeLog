@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.274 2009/07/11 14:23:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.275 2009/07/18 02:34:39 darkside Exp $
+
+  18 Jul 2009; Jeremy Olexa <darkside@gentoo.org> sylpheed-2.6.0.ebuild:
+  amd64 stable, bug 276830
 
   11 Jul 2009; Jeroen Roovers <jer@gentoo.org> sylpheed-2.6.0.ebuild:
   Stable for HPPA (bug #276830).
