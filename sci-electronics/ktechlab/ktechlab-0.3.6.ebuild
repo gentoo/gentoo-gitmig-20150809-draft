@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.4 2008/12/19 20:51:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.5 2009/07/18 13:42:10 ssuominen Exp $
 
 inherit kde
 
@@ -9,20 +9,20 @@ HOMEPAGE="http://sourceforge.net/projects/ktechlab/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~x86"
-
-IUSE=""
 SLOT="0"
+KEYWORDS="amd64 ~x86"
+IUSE=""
 
-DEPEND=">=dev-embedded/gpsim-0.21.11"
+RDEPEND=">=dev-embedded/gpsim-0.21.11
+	<dev-embedded/gpsim-0.23.0"
+DEPEND="${RDEPEND}"
 
-need-kde 3.2
+need-kde 3.5
 
 UNSERMAKE=""
 
-S="${WORKDIR}/${PN}-0.3"
+S=${WORKDIR}/${PN}-0.3
 
-PATCHES=(	"${FILESDIR}/${PN}-0.3-gcc-4.1.patch"
-		"${FILESDIR}/${P}-gcc42.patch"
-		"${FILESDIR}/${P}-gcc43.patch"
-	)
+PATCHES=( "${FILESDIR}/${PN}-0.3-gcc-4.1.patch"
+	"${FILESDIR}/${P}-gcc42.patch"
+	"${FILESDIR}/${P}-gcc43.patch" )
