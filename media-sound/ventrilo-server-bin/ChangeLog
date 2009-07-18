@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/ventrilo-server-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ChangeLog,v 1.15 2009/07/07 23:10:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ventrilo-server-bin/ChangeLog,v 1.16 2009/07/18 11:59:43 gurligebis Exp $
+
+  18 Jul 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  ventrilo-server-bin-2.3.1.ebuild, ventrilo-server-bin-3.0.3.ebuild:
+  Adding QA_PRESTRIPPED variable to ebuilds, fixing bug #251966
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   ventrilo-server-bin-3.0.3.ebuild:
