@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/gtk-server-2.0.12.ebuild,v 1.3 2009/06/01 13:23:59 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-server/gtk-server-2.0.12.ebuild,v 1.4 2009/07/18 11:45:18 ssuominen Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND="=x11-libs/gtk+-2*
-	virtual/libffi"
+	virtual/libffi
+	gnome-base/libglade"
 DEPEND=">=sys-devel/autoconf-2.60
 	${RDEPEND}"
 
