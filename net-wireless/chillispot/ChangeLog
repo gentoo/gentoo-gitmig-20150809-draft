@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/chillispot
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.20 2008/06/17 02:54:36 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/ChangeLog,v 1.21 2009/07/18 21:17:52 vostorga Exp $
+
+  18 Jul 2009; Víctor Ostorga <vostorga@gentoo.org>
+  chillispot-1.1.0.ebuild, +files/chillispot-1.1.0-gcc44.patch:
+  Added patch to fix compilation with gcc 4.4, fixes bug 277733
 
   17 Jun 2008; Jeremy Olexa <darkside@gentoo.org>
   -files/chillispot-0.94-src.patch:

@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.1.0.ebuild,v 1.4 2008/02/26 19:16:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/chillispot/chillispot-1.1.0.ebuild,v 1.5 2009/07/18 21:17:52 vostorga Exp $
+
+inherit eutils
 
 DESCRIPTION="open source captive portal or wireless LAN access point controller"
 HOMEPAGE="http://www.chillispot.info/"
@@ -19,6 +21,8 @@ src_unpack() {
 	cd "${S}"
 	chmod 644 doc/*.conf
 	find . -exec chmod go-w '{}' \;
+
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_install() {
