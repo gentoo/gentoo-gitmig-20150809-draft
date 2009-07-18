@@ -12,8 +12,8 @@
 </longdescription>
 <use>
   <flag name='garmin'>Enable support for Garmin simple text protocol</flag>
-  <flag name='italk'>Enable iTalk protocol support</flag>
-  <flag name='itrax'>Enable iTrax hardware support</flag>
+  <flag name='minimal'>Reduced install set, limited number of devices and 
+   client, no X deps</flag>
   <flag name='ntp'>Enable <pkg>net-misc/ntp</pkg> shared memory interface
     and PPS kernel support for GPS time</flag>
   <flag name='ocean'>Enable OceanServer support</flag>

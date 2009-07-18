@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.37.ebuild,v 1.4 2008/12/21 17:56:11 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39.ebuild,v 1.1 2009/07/18 17:47:15 nerdboy Exp $
 
-inherit eutils distutils
+inherit autotools eutils distutils flag-o-matic
 
 DESCRIPTION="GPS daemon and library to support USB/serial GPS devices and various GPS/mapping clients."
 HOMEPAGE="http://gpsd.berlios.de/"
@@ -10,10 +10,9 @@ SRC_URI="mirror://berlios/gpsd/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="dbus italk itrax minimal ntp python usb X"
-# tnt support is broken in this version - add tntc back when fixed
+IUSE="dbus garmin minimal ntp ocean python tntc usb X"
 
 RDEPEND="X? (
 		x11-libs/libXmu
@@ -25,7 +24,6 @@ RDEPEND="X? (
 		x11-libs/libICE
 		x11-libs/libXpm
 		x11-libs/libXaw
-		x11-libs/openmotif
 	)
 	python? ( dev-lang/python )
 
@@ -48,16 +46,26 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	sed -i -e \
-	    "s:gpspacket\", extension_source)]:gpspacket\", extension_source, libraries=['m'])]:g" \
-	    setup.py || die "sed failed"
+	# add -lm to setup.py again (see bug #250757)
+	sed -i \
+	    -e "s:, gpspacket_sources:, gpspacket_sources, libraries=['m']:g" \
+	    -e "s:geoid.c\"]:geoid.c\"], libraries=['m']:g" \
+	    setup.py || die "sed 1 failed"
+	# fix Garmin text struct
+	sed -i -e "s:RTCM2_PACKET;:RTCM2_PACKET,:g" \
+	    drivers.c || die "sed 2 failed"
+	# add missing include file (see bug #162361)
+	sed -i -e "s:gps.h libgpsmm.h:gps.h libgpsmm.h gpsd_config.h:g" \
+	    Makefile.am || die "sed 3 failed"
+
+	eautoreconf
 }
 
 src_compile() {
 
 	local my_conf="--enable-shared --with-pic --enable-static \
-		--disable-garmin --disable-garmintxt"
-	# Garmin support is broken in this version
+		--disable-fast-install"
+		# --enable-superstar2 is missing a header file
 
 	use python && distutils_python_version
 
@@ -71,33 +79,36 @@ src_compile() {
 		local max_clients="5"
 		local max_devices="2"
 		if ! use ntp; then
-		my_conf="${my_conf} --disable-pps"
+			my_conf="${my_conf} --disable-pps --disable-ntpshm"
 		fi
 		my_conf="${my_conf} --enable-squelch --without-x \
 		--enable-max-devices=${max_devices} \
 		--enable-max-clients=${max_clients}"
 
 		WITH_XSLTPROC=no WITH_XMLTO=no econf ${my_conf} \
-		$(use_enable dbus) $(use_enable italk) \
-		$(use_enable itrax) $(use_enable python) \
-		|| die "econf failed"
+		$(use_enable dbus) $(use_enable ocean oceanserver) \
+		$(use_enable tntc tnt) $(use_enable python) \
+		$(use_enable garmin garmintxt) || die "econf failed"
 	else
-		econf ${my_conf} $(use_enable dbus) $(use_enable italk) \
-		$(use_enable itrax) $(use_enable python) $(use_with X x) \
+		econf ${my_conf} $(use_enable dbus) $(use_enable tntc tnt) \
+		$(use_enable ocean oceanserver) $(use_enable python) \
+		$(use_enable garmin garmintxt) $(use_with X x) \
 		|| die "econf failed"
 	fi
-	# Support for the TNT digital compass is currently broken
-	# $(use_enable tntc tnt)
 
-	# still needs an explicit linkage with the math lib (bug #250757)
-	append-ldflags -lm
+	# still needs an explicit link flag (bug #250757)
+	append-ldflags -Wl,-z,-defs -Wl,--no-undefined
 
-	emake || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
 
 	make DESTDIR="${D}" install || die "make install failed"
+
+	if ! test -x "${D}"usr/sbin/gpsd; then
+	    ewarn "gpsd link error detected; please re-emerge gpsd."
+	fi
 
 	if use usb ; then
 		insinto /etc/hotplug/usb
@@ -121,39 +132,36 @@ src_install() {
 		"${D}usr/share/man/man1/xgps.1.bz2"
 	fi
 
-	diropts "-m0644"
-	dobin logextract
-
-	if use python ; then
-		exeinto /usr/$(get_libdir)/python${PYVER}/site-packages
-		doexe gps.py gpsfake.py gpspacket.so
-	fi
-
-	if use minimal; then
-		doman gpsctl.1 gpsflash.1 gpspipe.1 gpsd.8 gps.1
-		use python && doman gpsprof.1 gpsfake.1 gpscat.1
-	fi
+	use python && distutils_src_install
 
 	dodoc INSTALL README TODO
 
-	# add missing include file (see bug #162361)
-	insinto /usr/include
-	doins gpsd_config.h
+	# add missing dgpsip-servers and capabilities files
+	insinto /usr/share/${PN}
+	doins dgpsip-servers gpscap.ini
+
+	if use minimal; then
+		doman gpsctl.1 gpsd.8 gps.1 cgps.1 gpxlogger.1 gpspipe.1
+		use python && doman gpsprof.1
+	else
+		diropts "-m0644"
+		dobin logextract
+		use python && dobin striplog
+	fi
 }
 
 pkg_postinst() {
 	elog ""
-	elog "This version of gpsd has broken the support for the TNT compass"
-	elog "and Garmin so they are disabled.  If you need it, stay with the"
-	elog "previous version for now.  The minimal flag now removes X and"
-	elog "enables the embedded device (ie, small footprint) support, but"
-	elog "you'll need to modify the ebuild if you need to change either"
-	elog "the number of clients or the number of devices.  Although pps"
-	elog "is enabled, it still needs the correct kernel patches.  All"
-	elog "recent versions of udev (>=udev-115 or so) should have correct"
+	elog "This version of gpsd has broken support for the SuperStarII"
+	elog "chipset which is currently disabled."
+	elog ""
+	elog "Other than the above, all default devices are enabled, and all"
+	elog "optional devices and formats are controlled via USE flags."
+	elog ""
+	elog "Recent versions of udev (>=udev-115 or so) should have correct"
 	elog "usb device detection and startup of gpsd (ie, without hotplug)."
 	elog ""
-	elog "Different GPS devices require the corresponding kernel options"
+	elog "Certain GPS devices also require the corresponding kernel options"
 	elog "to be enabled, such as USB_SERIAL_GARMIN, or a USB serial driver"
 	elog "for an adapter such as those that come with Deluo GPS units (eg,"
 	elog "USB_SERIAL_PL2303). Straight serial devices should always work,"
@@ -163,10 +171,14 @@ pkg_postinst() {
 	elog "if your device isn't detected correctly, please use lsusb or"
 	elog "another suitable tool to determine the proper device IDs and"
 	elog "use the commented rules to fill in the blanks for your device."
-	elog "Please file a bug to get your device added to the list."
 	elog ""
-	elog "Read the INSTALL doc for more information on supported hardware,"
-	elog "and make sure udev has the right group permissions set on the tty"
+	elog "Please see this post about the new capabilities database:"
+	elog ""
+	elog "http://lists.berlios.de/pipermail/gpsd-dev/2009-January/006333.html"
+	elog ""
+	elog "on current hardware, adding new hardware, etc.  Read the above"
+	elog "and the INSTALL doc for more information on supported hardware,"
+	elog "and make sure udev has the right group permissions set on the"
 	elog "devices if using USB (it should Do The Right Thing (TM))..."
 	elog ""
 }
