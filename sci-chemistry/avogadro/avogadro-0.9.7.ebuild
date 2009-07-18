@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.5.ebuild,v 1.1 2009/06/02 18:16:33 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/avogadro-0.9.7.ebuild,v 1.1 2009/07/18 15:45:39 cryos Exp $
 
 EAPI=2
 
@@ -16,9 +16,9 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+glsl python"
 
 # boost deps look like that because -r5 and later have a python useflag we need
-RDEPEND=">=sci-chemistry/openbabel-2.2.1
-	>=x11-libs/qt-gui-4.4.0:4
-	>=x11-libs/qt-opengl-4.4.0:4
+RDEPEND=">=sci-chemistry/openbabel-2.2.2
+	>=x11-libs/qt-gui-4.5.0:4
+	>=x11-libs/qt-opengl-4.5.0:4
 	glsl? ( >=media-libs/glew-1.5.0	)
 	python? (
 		>=dev-lang/python-2.5
