@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.10 2008/12/19 18:04:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.11 2009/07/18 10:38:22 ssuominen Exp $
 
-EAPI=1
-
-inherit eutils
+EAPI=2
+inherit autotools eutils
 
 DESCRIPTION="Finds, fetches, shares, and plays freely licensed music."
 HOMEPAGE="http://gnomoradio.org"
@@ -25,19 +24,20 @@ RDEPEND=">=dev-cpp/gtkmm-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc42.patch
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc42.patch \
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-lm.patch
+	eautoreconf
 }
 
-src_compile() {
-	econf --disable-dependency-tracking $(use_enable vorbis)
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable vorbis)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnomoradio
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.20 2008/12/19 18:04:30 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.21 2009/07/18 10:38:22 ssuominen Exp $
+
+  18 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gnomoradio-0.15.1.ebuild, +files/gnomoradio-0.15.1-lm.patch:
+  Insert -lm to LIBADD for forced asneeded wrt #274074.
 
   19 Dec 2008; Alexis Ballier <aballier@gentoo.org>
   +files/gnomoradio-0.15.1-gcc43.patch, gnomoradio-0.15.1.ebuild:
