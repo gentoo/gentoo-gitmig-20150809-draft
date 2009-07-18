@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r1.ebuild,v 1.2 2009/01/04 16:47:05 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.1 2009/07/18 12:08:51 gurligebis Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 MY_PV="$(replace_version_separator 3 -)"
@@ -13,7 +13,7 @@ SRC_URI="http://www.psybnc.at/download/beta/psyBNC-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
-IUSE="ipv6 ssl oidentd scripting"
+IUSE="ipv6 ssl oidentd scripting multinetwork"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.7d )
 		oidentd? ( >=net-misc/oidentd-2.0 )"
@@ -36,6 +36,9 @@ src_unpack() {
 
 	# add scripting support
 	use scripting && epatch "${FILESDIR}/${P}-scripting.patch"
+
+	# add multinetwork support
+	use scripting && epatch "${FILESDIR}/${P}-multinetwork.patch"
 
 	# Useless files
 	rm -f */INFO

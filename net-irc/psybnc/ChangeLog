@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/psybnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.10 2009/01/04 16:47:05 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/ChangeLog,v 1.11 2009/07/18 12:08:51 gurligebis Exp $
+
+*psybnc-2.3.2.9-r2 (18 Jul 2009)
+
+  18 Jul 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -psybnc-2.3.2.9-r1.ebuild, +psybnc-2.3.2.9-r2.ebuild,
+  +files/psybnc-2.3.2.9-multinetwork.patch, metadata.xml:
+  Adding support for multiple networks, fixing bug #273658
 
   04 Jan 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
   psybnc-2.3.2.9-r1.ebuild:
