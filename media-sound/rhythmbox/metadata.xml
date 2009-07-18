@@ -2,7 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>gnome</herd>
-  <herd>sound</herd>
   <herd>gstreamer</herd>
   <use>
     <flag name="daap">Enable support for local network music sharing via daap</flag>
