@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.1 2009/07/18 12:08:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/psybnc/psybnc-2.3.2.9-r2.ebuild,v 1.2 2009/07/18 12:11:58 gurligebis Exp $
 
 inherit eutils versionator toolchain-funcs flag-o-matic
 MY_PV="$(replace_version_separator 3 -)"
@@ -38,7 +38,7 @@ src_unpack() {
 	use scripting && epatch "${FILESDIR}/${P}-scripting.patch"
 
 	# add multinetwork support
-	use scripting && epatch "${FILESDIR}/${P}-multinetwork.patch"
+	use multinetwork && epatch "${FILESDIR}/${P}-multinetwork.patch"
 
 	# Useless files
 	rm -f */INFO
