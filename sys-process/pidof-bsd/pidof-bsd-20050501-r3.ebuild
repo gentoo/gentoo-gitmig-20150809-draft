@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/pidof-bsd-20050501-r3.ebuild,v 1.4 2009/07/18 09:44:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/pidof-bsd-20050501-r3.ebuild,v 1.5 2009/07/18 10:22:42 aballier Exp $
 
 inherit base bsdmk
 
@@ -18,9 +18,9 @@ RDEPEND="!sys-process/psmisc"
 
 S="${WORKDIR}/pidof"
 
-PATCHES="${FILESDIR}/${P}-gfbsd.patch
-	${FILESDIR}/${P}-firstarg.patch
-	${FILESDIR}/${P}-pname.patch"
+PATCHES=( "${FILESDIR}/${P}-gfbsd.patch"
+	"${FILESDIR}/${P}-firstarg.patch"
+	"${FILESDIR}/${P}-pname.patch" )
 
 src_install() {
 	into /

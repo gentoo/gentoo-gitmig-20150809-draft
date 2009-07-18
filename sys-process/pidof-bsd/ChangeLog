@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/pidof-bsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.7 2009/07/18 09:45:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/pidof-bsd/ChangeLog,v 1.8 2009/07/18 10:22:42 aballier Exp $
+
+  18 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  pidof-bsd-20050501-r3.ebuild:
+  make patches a bash array
 
   18 Jul 2009; Alexis Ballier <aballier@gentoo.org>
   -pidof-bsd-20050501-r1.ebuild, -pidof-bsd-20050501-r2.ebuild:
