@@ -1,9 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.2.9.ebuild,v 1.4 2008/01/05 10:17:03 calchan Exp $
-
-WANT_AUTOCONF=latest
-WANT_AUTOMAKE=latest
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/gpsim-lcd-0.2.9.ebuild,v 1.5 2009/07/18 16:02:49 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -19,8 +16,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc64 x86"
 IUSE=""
 
-DEPEND=">=dev-embedded/gpsim-0.22.0
+RDEPEND=">=dev-embedded/gpsim-0.22.0
 	=x11-libs/gtk+-2*"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
