@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.23.0.ebuild,v 1.4 2009/07/02 19:20:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.23.0.ebuild,v 1.5 2009/07/18 13:23:57 ssuominen Exp $
 
 EAPI=2
 
 DESCRIPTION="A simulator for the Microchip PIC microcontrollers"
-HOMEPAGE="http://www.dattalo.com/gnupic/gpsim.html"
+HOMEPAGE="http://gpsim.sourceforge.net"
 SRC_URI="mirror://sourceforge/gpsim/${P}.tar.gz"
 
 LICENSE="GPL-2"
