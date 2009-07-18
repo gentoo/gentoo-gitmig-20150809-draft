@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.622 2009/07/14 22:19:01 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.623 2009/07/18 23:37:31 mpagano Exp $
+
+*gentoo-sources-2.6.30-r3 (18 Jul 2009)
+
+  18 Jul 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.30-r3.ebuild:
+  Security fix PER_CLEAR_ON_SETUID CVE-2009-1895 and patch to fix NULL
+  pointer dereference in tun_chr_pool CVE-2009-1897
 
   14 Jul 2009; Mike Pagano <mpagano@gentoo.org> Manifest:
   Fix manifest for 2.6.29-r6
