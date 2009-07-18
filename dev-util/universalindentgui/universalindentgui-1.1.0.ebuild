@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0.ebuild,v 1.1 2009/07/18 19:09:57 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/universalindentgui/universalindentgui-1.1.0.ebuild,v 1.2 2009/07/18 19:14:23 wired Exp $
 
 EAPI="2"
 
@@ -29,7 +29,8 @@ RDEPEND="${DEPEND}
 	dev-util/indent
 	dev-util/astyle
 	dev-util/bcpp
-	html? ( app-text/htmltidy dev-lang/perl )
+	html? ( app-text/htmltidy
+			perl? ( dev-lang/perl ) )
 	perl? ( dev-perl/perltidy )
 	php? ( dev-php/PEAR-PHP_Beautifier )
 	python? ( dev-lang/python )
