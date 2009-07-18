@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-73.ebuild,v 1.1 2009/03/29 17:08:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-76.ebuild,v 1.1 2009/07/18 00:27:21 arfrever Exp $
 
-inherit eutils pam
+EAPI="2"
+
+inherit autotools pam
 
 DESCRIPTION="eCryptfs userspace utilities"
 HOMEPAGE="http://launchpad.net/ecryptfs"
@@ -30,13 +32,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	python? ( dev-lang/swig )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-fix_implicit_declarations.patch"
+S="${WORKDIR}/${PN}_${PV}.orig"
+
+src_prepare() {
+	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--with-pamdir=$(getpam_mod_dir) \
@@ -49,7 +51,6 @@ src_compile() {
 		$(use_enable pkcs11 pkcs11-helper) \
 		$(use_enable python pywrap) \
 		$(use_enable tpm tspi)
-	emake || die "emake failed"
 }
 
 src_install(){

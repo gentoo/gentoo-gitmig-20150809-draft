@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/ecryptfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.24 2009/05/02 18:30:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ChangeLog,v 1.25 2009/07/18 00:27:21 arfrever Exp $
+
+*ecryptfs-utils-76 (18 Jul 2009)
+
+  18 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -ecryptfs-utils-40.ebuild, -ecryptfs-utils-42.ebuild,
+  -ecryptfs-utils-73.ebuild,
+  -files/ecryptfs-utils-73-fix_implicit_declarations.patch,
+  +ecryptfs-utils-76.ebuild:
+  Version bump.
 
 *ecryptfs-utils-75 (02 May 2009)
 
