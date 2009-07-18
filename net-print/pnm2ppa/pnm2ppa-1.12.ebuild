@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.14 2009/07/18 18:10:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.15 2009/07/18 18:24:17 ssuominen Exp $
 
+EAPI=2
 inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
@@ -17,20 +18,18 @@ RDEPEND="app-text/enscript
 	dev-util/dialog"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
-	append-flags -DNDEBUG
+	tc-export CC
+	append-flags -DNDEBUG -DLANG_EN
 
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} -DLANG_EN" \
-		|| die "emake failed"
+	emake || die "emake failed"
 
 	cd ppa_protocol
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install () {
