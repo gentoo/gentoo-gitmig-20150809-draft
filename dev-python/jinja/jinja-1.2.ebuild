@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-1.2.ebuild,v 1.9 2009/06/09 15:14:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja/jinja-1.2.ebuild,v 1.10 2009/07/18 18:08:50 arfrever Exp $
+
+EAPI="2"
 
 inherit distutils
 
@@ -15,7 +17,9 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ~ppc64 sparc x86"
 IUSE="test"
 
-RDEPEND="dev-python/setuptools"
+# dev-python/setuptools is used at run-time.
+RDEPEND="dev-lang/python[threads]
+	dev-python/setuptools"
 DEPEND="${RDEPEND}
 	test? ( dev-python/py )"
 
