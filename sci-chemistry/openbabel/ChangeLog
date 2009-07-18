@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.25 2009/06/13 10:18:31 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.26 2009/07/18 15:40:42 cryos Exp $
+
+*openbabel-2.2.2 (18 Jul 2009)
+
+  18 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org> +openbabel-2.2.2.ebuild:
+  Version bump.
 
   13 Jun 2009; Torsten Veller <tove@gentoo.org> openbabel-2.2.1.ebuild:
   Add missing die: "..." -> die "..."
