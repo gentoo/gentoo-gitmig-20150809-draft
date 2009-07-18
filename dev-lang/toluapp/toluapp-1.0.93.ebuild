@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.93.ebuild,v 1.1 2009/07/02 14:12:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.93.ebuild,v 1.2 2009/07/18 13:15:08 ssuominen Exp $
 
 inherit toolchain-funcs
 
-MY_P=${PN/pp/++}-${PV}
+MY_P=${P/pp/++}
 
 DESCRIPTION="A tool to integrate C/C++ code with Lua."
 HOMEPAGE="http://www.codenix.com/~tolua/"
@@ -12,7 +12,7 @@ SRC_URI="http://www.codenix.com/~tolua/${MY_P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/lua-5.1.1"
