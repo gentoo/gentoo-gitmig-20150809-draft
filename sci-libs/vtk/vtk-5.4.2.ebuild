@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.0.3.ebuild,v 1.13 2008/07/28 21:16:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.1 2009/07/18 03:33:23 markusle Exp $
 
-EAPI="1"
-
+EAPI="2"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
 
 # Short package version
@@ -12,23 +11,30 @@ SPV="$(get_version_component_range 1-2)"
 DESCRIPTION="The Visualization Toolkit"
 HOMEPAGE="http://www.vtk.org"
 SRC_URI="http://www.${PN}.org/files/release/${SPV}/${P}.tar.gz
-		examples? ( http://www.${PN}.org/files/release/${SPV}/${PN}data-${PV}.tar.gz )"
+		examples? ( http://www.${PN}.org/files/release/${SPV}/${PN}data-${PV}.tar.gz )
+		doc? ( http://www.${PN}.org/doc/release/${SPV}/${PN}DocHtml-${PV}.tar.gz )"
 
 LICENSE="BSD LGPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="doc examples mpi patented python tcl tk threads qt3 qt4"
+IUSE="boost cg doc examples mpi patented python tcl tk threads qt3 qt4"
 RDEPEND="mpi? ( || (
 					sys-cluster/openmpi
 					sys-cluster/lam-mpi
-					sys-cluster/mpich2 ) )
+					sys-cluster/mpich2[cxx] ) )
 	python? ( >=dev-lang/python-2.0 )
+	boost? ( dev-libs/boost )
+	cg? ( media-gfx/nvidia-cg-toolkit )
 	tcl? ( >=dev-lang/tcl-8.2.3 )
 	tk? ( >=dev-lang/tk-8.2.3 )
 	java? ( >=virtual/jre-1.5 )
-	qt3? ( x11-libs/qt:3 )
-	qt4? ( =x11-libs/qt-4.3*:4 )
+	!qt4? ( qt3? ( >=x11-libs/qt-3.3.4:3 ) )
+	qt4? ( x11-libs/qt-core:4
+			x11-libs/qt-gui:4 )
+	examples? ( x11-libs/qt-core:4[qt3support]
+			x11-libs/qt-gui:4[qt3support] )
 	dev-libs/expat
+	dev-libs/libxml2
 	media-libs/freetype
 	media-libs/jpeg
 	media-libs/libpng
@@ -38,7 +44,7 @@ RDEPEND="mpi? ( || (
 
 DEPEND="${RDEPEND}
 		java? ( >=virtual/jdk-1.5 )
-		>=dev-util/cmake-2.2.3"
+		>=dev-util/cmake-2.4"
 
 S="${WORKDIR}"/VTK
 
@@ -51,28 +57,17 @@ pkg_setup() {
 		echo
 	fi
 
-	use qt4 && use examples && \
-		if ! built_with_use =x11-libs/qt-4* qt3support; then
-			echo
-			eerror 'Please emerge qt4 with USE="qt3support" to'
-			eerror 'build the examples under qt4!'
-			die "qt4 setup error"
-		fi
-
-	if use mpi && has_version sys-cluster/mpich2; then
-		append-flags -DMPICH_IGNORE_CXX_SEEK
-		if ! built_with_use sys-cluster/mpich2 cxx; then
-			die "Please re-emerge sys-cluster/mpich2 with USE=\"cxx\""
-		fi
+	if use qt4; then
+		qt4_pkg_setup
 	fi
-
-	use qt4 && qt4_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-mpi.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-cg-path.patch
+	epatch "${FILESDIR}"/${PN}-5.2.0-tcl-install.patch
+	sed -e "s:@VTK_TCL_LIBRARY_DIR@:/usr/$(get_libdir):" \
+		-i Wrapping/Tcl/pkgIndex.tcl.in \
+		|| die "Failed to fix tcl pkgIndex file"
 }
 
 src_compile() {
@@ -85,28 +80,29 @@ src_compile() {
 		echo "$(get-flag -march)"
 	fi
 
-	# Fix Examples cmake file
-	sed -e "s/MAKEPROGRAM/CMAKE_MAKE_PROGRAM/g" \
-		-i "${S}"/Examples/CMakeLists.txt || \
-		die "Failed to fix examples CMakeList.txt"
-
 	# build list of config variable define's to pass to cmake
-	local CMAKE_VARIABLES=""
+	# Let's ignore developer warnings via -Wno-dev
+	local CMAKE_VARIABLES="-Wno-dev"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_PACKAGE_DIR:PATH=/$(get_libdir)/${PN}-${SPV}"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_SKIP_RPATH:BOOL=YES"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DIR:PATH=${S}"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_LIB_DIR:PATH=/$(get_libdir)/"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_INSTALL_PREFIX:PATH=/usr"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_SHARED_LIBS:BOOL=ON"
-	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FREETYPE:BOOL=ON"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_FREETYPE:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_JPEG:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_PNG:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_TIFF:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_ZLIB:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_EXPAT:BOOL=ON"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_LIBXML2:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DBUILD_TESTING:BOOL=OFF"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_HYBRID:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_GL2PS:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_RENDERING:BOOL=ON"
+
+	use boost && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_BOOST:BOOL=ON"
+	use cg && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_CG_SHADERS:BOOL=ON"
 
 	use examples && CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_DATA_ROOT:PATH=/usr/share/${PN}/data -DBUILD_EXAMPLES:BOOL=ON"
 	if use java; then
@@ -131,11 +127,13 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_WRAP_PYTHON:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_INCLUDE_PATH:PATH=/usr/include/python${PYVER}"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPYTHON_LIBRARY:PATH=/usr/$(get_libdir)/libpython${PYVER}.so"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_PYTHON_SETUP_ARGS:STRING=\"--prefix=${D}/usr\""
 	fi
 
 	if use qt3 || use qt4 ; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_GUISUPPORT:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_QVTK:BOOL=ON"
+		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_QVTK_QTOPENGL:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_CPP:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DQT_WRAP_UI:BOOL=ON"
 	fi
@@ -176,8 +174,7 @@ src_compile() {
 
 	# run cmake twice to achieve proper
 	# configuration with cmake 2.2.x
-	cmake ${CMAKE_VARIABLES} . && cmake ${CMAKE_VARIABLES} . \
-		|| die "cmake configuration failed"
+	cmake ${CMAKE_VARIABLES} || die "cmake configuration failed"
 
 	# fix java.lang.OutOfMemoryError on amd64 (see bug #123178)
 	if use java && [ "${ARCH}" == "amd64" ]; then
@@ -186,7 +183,7 @@ src_compile() {
 		|| die "Failed to patch javac"
 	fi
 
-	emake -j1 || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -244,9 +241,18 @@ src_install() {
 			die "Failed to fix data files permissions"
 	fi
 
+	#install big docs
+	if use doc; then
+		cd "${WORKDIR}"/html
+		rm -f *.md5 || die "Failed to remove superfluous hashes"
+		einfo "Installing API docs. This may take some time."
+		insinto "/usr/share/doc/${PF}/api-docs"
+		doins -r ./* || die "Failed to install docs"
+	fi
+
 	# environment
 	echo "VTK_DATA_ROOT=/usr/share/${PN}/data" >> "${T}"/40${PN}
-	echo "VTK_DIR=/usr/lib/${PN}-${SPV}" >> "${T}"/40${PN}
+	echo "VTK_DIR=/usr/$(get_libdir)/${PN}-${SPV}" >> "${T}"/40${PN}
 	echo "VTKHOME=/usr" >> "${T}"/40${PN}
 	doenvd "${T}"/40${PN}
 }
