@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.13 2009/07/18 18:08:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/pnm2ppa-1.12.ebuild,v 1.14 2009/07/18 18:10:51 ssuominen Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -8,15 +8,14 @@ DESCRIPTION="Print driver for Hp Deskjet 710, 712, 720, 722, 820, 1000 series"
 HOMEPAGE="http://pnm2ppa.sourceforge.net"
 SRC_URI="mirror://sourceforge/pnm2ppa/${P}.tar.gz"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
 
-RDEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}
-	app-text/enscript
+RDEPEND="app-text/enscript
 	dev-util/dialog"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
