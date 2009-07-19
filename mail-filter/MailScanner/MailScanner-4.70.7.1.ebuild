@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.4 2009/01/08 03:01:41 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/MailScanner/MailScanner-4.70.7.1.ebuild,v 1.5 2009/07/19 17:51:16 tove Exp $
 
 inherit eutils versionator
 
@@ -19,7 +19,7 @@ IUSE="bitdefender clamav doc exim f-prot postfix spamassassin"
 DEPEND="dev-lang/perl"
 RDEPEND="${DEPEND}
 	dev-perl/Archive-Zip
-	virtual/perl-Compress-Zlib
+	virtual/perl-IO-Compress
 	dev-perl/Convert-BinHex
 	dev-perl/Convert-TNEF
 	dev-perl/DBD-SQLite
