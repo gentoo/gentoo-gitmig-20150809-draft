@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.23 2009/07/17 10:52:03 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.24 2009/07/19 17:29:45 mrpouet Exp $
+
+  20 Jul 2009; Romain Perier <mrpouet@gentoo.org> libcanberra-0.14.ebuild:
+  Fix bug #278269, src_unpack() failed due to unnecessary quotes around rm
+  commands, * was not matched
 
   17 Jul 2009; Romain Perier <mrpouet@gentoo.org> libcanberra-0.14.ebuild,
   +files/libcanberra-0.14-backward-compatibility-libtool.patch:

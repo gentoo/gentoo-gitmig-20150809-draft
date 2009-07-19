@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.14.ebuild,v 1.3 2009/07/17 10:52:03 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.14.ebuild,v 1.4 2009/07/19 17:29:45 mrpouet Exp $
 
 EAPI="1"
 
@@ -33,9 +33,9 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-backward-compatibility-libtool.patch"
 
-	rm "${S}/lt*"    || die "clean-up ltmain.sh failed"
-	rm "${S}/m4/lt*" || die "clean-up lt scripts failed"
-	rm "${S}/m4/libtool*" || die "clean-up libtool script failed"
+	rm lt*    || die "clean-up ltmain.sh failed"
+	rm m4/lt* || die "clean-up lt scripts failed"
+	rm m4/libtool* || die "clean-up libtool script failed"
 
 	eautoreconf
 }
