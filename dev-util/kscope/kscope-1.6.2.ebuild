@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.6.2.ebuild,v 1.4 2009/07/08 21:15:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kscope/kscope-1.6.2.ebuild,v 1.5 2009/07/19 12:18:37 nixnut Exp $
 
 EAPI=1
 ARTS_REQUIRED="never"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/kscope/${P}.tar.gz"
 
 SLOT="3.5"
 LICENSE="BSD"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
 DEPEND="|| ( kde-base/kate:3.5 kde-base/kdebase:3.5 )"
