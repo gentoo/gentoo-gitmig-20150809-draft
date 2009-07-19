@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha19054.ebuild,v 1.3 2009/03/06 18:11:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.22_alpha20959.ebuild,v 1.1 2009/07/19 23:59:47 cardoe Exp $
 
 EAPI=2
 inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
@@ -8,8 +8,6 @@ inherit flag-o-matic multilib eutils qt4 mythtv toolchain-funcs python
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="alsa altivec autostart debug directv dvb dvd \
@@ -71,20 +69,18 @@ pkg_setup() {
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
 	# svnversion in MythTV's build doesn't work
-	sed -e "s:\`(svnversion \$\${SVNTREEDIR} 2>\/dev\/null) || echo Unknown\`:${MYTHTV_REV}:" \
+	sed -e "s:\`(svnversion 2>\/dev\/null) || echo Unknown\`:${MYTHTV_REV}:" \
 		-i "${S}"/version.pro || die "svnversion sed failed"
 
 	# Perl bits need to go into vender_perl and not site_perl
 	sed -e "s:pure_install:pure_install INSTALLDIRS=vendor:" \
 		-i "${S}"/bindings/perl/perl.pro
+
+	epatch "${FILESDIR}/${PN}-0.21-ldconfig-sanxbox-fix.patch"
 }
 
 src_configure() {

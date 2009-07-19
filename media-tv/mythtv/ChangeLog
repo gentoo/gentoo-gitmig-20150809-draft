@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.274 2009/07/19 03:40:27 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.275 2009/07/19 23:59:47 cardoe Exp $
+
+*mythtv-0.22_alpha20959 (19 Jul 2009)
+
+  19 Jul 2009; Doug Goldstein <cardoe@gentoo.org> mythtv-0.21_p20877.ebuild,
+  +files/mythtv-0.21-ldconfig-sanxbox-fix.patch,
+  -mythtv-0.22_alpha19054.ebuild, +mythtv-0.22_alpha20959.ebuild:
+  fix sandbox 1.9/2.0 issues, bug #272847. fix up EAPI=2 usage. bump trunk
+  version.
 
 *mythtv-0.21_p20877 (19 Jul 2009)
 
