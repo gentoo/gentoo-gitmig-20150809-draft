@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.3.ebuild,v 1.7 2008/11/30 18:34:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.4.3.ebuild,v 1.8 2009/07/19 17:32:59 ssuominen Exp $
 
 inherit elisp-common eutils autotools
 
@@ -33,14 +33,14 @@ src_unpack() {
 
 src_compile() {
 	econf || die "econf failed"
-	emake CFLAGS="${CFLAGS} -I/usr/X11R6/include" || die "emake failed"
+	emake CFLAGS="${CFLAGS}" || die "emake failed"
 	if use emacs; then
 		elisp-compile contrib/ratpoison.el || die "elisp-compile failed"
 	fi
 }
 
 src_install() {
-	einstall
+	einstall || die
 
 	exeinto /etc/X11/Sessions
 	newexe "${FILESDIR}/ratpoison.xsession" ratpoison
