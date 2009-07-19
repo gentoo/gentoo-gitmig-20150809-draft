@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r3.ebuild,v 1.6 2009/07/05 20:47:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r3.ebuild,v 1.7 2009/07/19 10:27:20 caster Exp $
 
 EAPI="1"
 
@@ -42,7 +42,7 @@ COMMON=">=dev-libs/glib-2.6
 				=gnome-base/gnome-vfs-2*
 				=gnome-base/libgnomeui-2*
 				)
-		xulrunner? ( net-libs/xulrunner:1.9 )
+		xulrunner? ( =net-libs/xulrunner-1.9.0*:1.9 )
 		opengl?	(
 			virtual/opengl
 			virtual/glu

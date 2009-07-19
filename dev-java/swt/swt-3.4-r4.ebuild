@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r2.ebuild,v 1.7 2009/07/19 10:27:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.4-r4.ebuild,v 1.1 2009/07/19 10:27:20 caster Exp $
 
 EAPI="1"
 
@@ -30,7 +30,7 @@ SRC_URI="x86? (
 
 SLOT="3.4"
 LICENSE="CPL-1.0 LGPL-2.1 MPL-1.1"
-KEYWORDS="amd64 ppc ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
 IUSE="cairo gnome opengl xulrunner"
 COMMON=">=dev-libs/glib-2.6
@@ -42,7 +42,7 @@ COMMON=">=dev-libs/glib-2.6
 				=gnome-base/gnome-vfs-2*
 				=gnome-base/libgnomeui-2*
 				)
-		xulrunner? ( =net-libs/xulrunner-1.9.0*:1.9 )
+		xulrunner? ( net-libs/xulrunner:1.9 )
 		opengl?	(
 			virtual/opengl
 			virtual/glu
@@ -60,6 +60,7 @@ DEPEND=">=virtual/jdk-1.4
 		x11-libs/libXt
 		x11-proto/xextproto
 		x11-proto/inputproto
+		dev-util/pkgconfig
 		${COMMON}"
 
 RDEPEND=">=virtual/jre-1.4
@@ -80,17 +81,18 @@ src_unpack() {
 	cp "${FILESDIR}/build.xml" "${S}/build.xml" || die "Unable to update build.xml"
 	mkdir "${S}/src" && mv "${S}/org" "${S}/src" || die "Unable to restructure SWT sources"
 
-	# Apply all the patches, including arch-specific
-	# EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" epatch
-
-	sed -i "s/CFLAGS = -O -Wall/CFLAGS = ${CFLAGS} -Wall/" \
-		make_linux.mak || die "Failed to tweak make_linux.mak"
-
-	sed -i "s/MOZILLACFLAGS = -O/MOZILLACFLAGS = ${CXXFLAGS}/" \
-		make_linux.mak || die "Failed to tweak make_linux.mak"
+	# Fix Makefiles to respect flags and work with --as-needed
+	epatch "${FILESDIR}"/as-needed-and-flag-fixes.patch
 
 	# Kill some strict-aliasing warnings
 	epatch "${FILESDIR}/${PN}-3.3-callback-pointer-dereferencing.patch"
+
+	# bug 241400
+	if use amd64 || use ppc64; then
+		epatch "${FILESDIR}/${PN}-3.4-xulrunner-1.9.1-amd64.patch"
+	else
+		epatch "${FILESDIR}/${PN}-3.4-xulrunner-1.9.1.patch"
+	fi
 }
 
 src_compile() {
@@ -126,7 +128,7 @@ src_compile() {
 
 	use elibc_FreeBSD && platform="freebsd"
 
-	local make="emake -f make_${platform}.mak NO_STRIP=y"
+	local make="emake -f make_${platform}.mak NO_STRIP=y CC=$(tc-getCC) CXX=$(tc-getCXX)"
 
 	einfo "Building AWT library"
 	${make} make_awt || die "Failed to build AWT support"
@@ -145,9 +147,9 @@ src_compile() {
 	if use xulrunner ; then
 		einfo "Building the Mozilla component against xulrunner-1.9"
 
-		export MOZILLA_INCLUDES="$(pkg-config libxul --cflags)"
+		export MOZILLA_INCLUDES="$(pkg-config --cflags libxul libxul-embedding)"
 		# the -R is a workaround for bug #234934
-		export MOZILLA_LIBS="-Wl,-R$(pkg-config libxul --variable=sdkdir) $(pkg-config libxul --libs)"
+		export MOZILLA_LIBS="-Wl,-R$(pkg-config libxul --variable=sdkdir) $(pkg-config --libs libxul libxul-embedding)"
 
 		${make} make_mozilla || die "Failed to build Mozilla support"
 
@@ -160,6 +162,8 @@ src_compile() {
 		export XULRUNNER_LIBS="${MOZILLA_LIBS}"
 
 		${make} make_xulrunner || die "Failed to build xulrunner support"
+
+		${make} make_xpcominit || die "Failed to build xpcominit support"
 	fi
 
 	if use cairo ; then

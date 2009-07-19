@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.105 2009/07/05 20:49:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.106 2009/07/19 10:27:20 caster Exp $
+
+*swt-3.5 (19 Jul 2009)
+*swt-3.4-r4 (19 Jul 2009)
+
+  19 Jul 2009; Vlastimil Babka <caster@gentoo.org> swt-3.4-r2.ebuild,
+  swt-3.4-r3.ebuild, +swt-3.4-r4.ebuild,
+  +files/swt-3.4-xulrunner-1.9.1-amd64.patch,
+  +files/swt-3.4-xulrunner-1.9.1.patch, +swt-3.5.ebuild,
+  +files/swt-3.5-manifest:
+  Version bump to 3.5, new slot, bug #277704. Revbump 3.4-r4 fixes missing
+  symbol issue and adds backported upstream patch for xulrunner-1.9.1
+  support, both discussed in bug #241400. Older 3.4 versions restrict
+  xulrunner dependency to 1.9.0*.
 
   05 Jul 2009; Markus Meier <maekke@gentoo.org> swt-3.3.1.1-r1.ebuild:
   amd64 stable, bug #275287
