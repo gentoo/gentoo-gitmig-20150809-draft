@@ -1,25 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-erbi/ibus-table-erbi-1.1.0.20090402.ebuild,v 1.1 2009/04/02 16:00:27 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-yong/ibus-table-yong-1.2.0.20090717.ebuild,v 1.1 2009/07/19 06:05:56 matsuu Exp $
 
-DESCRIPTION="The ErBi for IBus Tables"
+DESCRIPTION="The Yong for IBus Tables"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="extra-phrases"
+IUSE=""
 
 RDEPEND=">=app-i18n/ibus-table-1.1"
 DEPEND="${RDEPEND}
-	extra-phrases? ( >=app-i18n/ibus-table-extraphrase-1.1 )
 	dev-util/pkgconfig"
-
-src_compile() {
-	econf $(use_enable extra-phrases) || die
-	emake || die
-}
 
 src_install() {
 	emake DESTDIR="${D}" install || die
