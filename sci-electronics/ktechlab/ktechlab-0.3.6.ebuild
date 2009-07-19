@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.5 2009/07/18 13:42:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/ktechlab/ktechlab-0.3.6.ebuild,v 1.6 2009/07/19 17:59:38 ssuominen Exp $
 
 inherit kde
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
 
-RDEPEND=">=dev-embedded/gpsim-0.21.11
-	<dev-embedded/gpsim-0.23.0"
+RDEPEND=">=dev-embedded/gpsim-0.22
+	!>=dev-embedded/gpsim-0.23"
 DEPEND="${RDEPEND}"
 
 need-kde 3.5
