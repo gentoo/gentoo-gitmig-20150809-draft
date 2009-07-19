@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.26 2009/07/10 23:10:15 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.27 2009/07/19 17:29:08 tove Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -118,9 +118,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xineramaproto
 	>=sys-apps/findutils-4.1.20-r1
 	dev-perl/Archive-Zip
-	virtual/perl-Compress-Zlib
+	virtual/perl-IO-Compress
 	>=virtual/perl-Compress-Raw-Zlib-2.002
-	virtual/perl-IO-Compress-Base
 	dev-util/pkgconfig
 	dev-util/intltool
 	>=dev-libs/boost-1.33.1
