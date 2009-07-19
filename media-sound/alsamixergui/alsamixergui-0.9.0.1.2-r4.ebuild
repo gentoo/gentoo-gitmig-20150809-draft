@@ -1,15 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.16 2009/06/01 15:01:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/alsamixergui-0.9.0.1.2-r4.ebuild,v 1.17 2009/07/19 20:47:54 ssuominen Exp $
 
 EAPI=2
+MY_P=${PN}-0.9.0rc1-2
 inherit autotools eutils
 
-NATIVE_VER=0.9.0rc1-2
-
 DESCRIPTION="AlsaMixerGui - a FLTK based amixer Frontend"
-HOMEPAGE="http://www.iua.upf.es/~mdeboer/projects/alsamixergui/"
-SRC_URI="ftp://www.iua.upf.es/pub/mdeboer/projects/alsamixergui/${PN}-${NATIVE_VER}.tar.gz"
+HOMEPAGE="http://www.gentoo.org"
+SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -21,7 +20,7 @@ RDEPEND="media-libs/alsa-lib
 	x11-libs/fltk:1.1"
 DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${PN}-${NATIVE_VER}
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc34.patch \

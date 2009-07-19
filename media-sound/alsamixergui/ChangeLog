@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsamixergui
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.29 2008/12/15 01:39:01 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsamixergui/ChangeLog,v 1.30 2009/07/19 20:47:54 ssuominen Exp $
+
+  19 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  alsamixergui-0.9.0.1.2-r4.ebuild,
+  files/alsamixergui-0.9.0.1.2-fltk-1.1.patch:
+  Autoconf 2.64 compability wrt #257606.
 
   15 Dec 2008; Ben de Groot <yngwin@gentoo.org>
   alsamixergui-0.9.0.1.2-r4.ebuild:
