@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.163 2009/07/17 20:20:09 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.164 2009/07/19 10:47:47 phosphan Exp $
+
+  19 Jul 2009; Patrick Kursawe <phosphan@gentoo.org>
+  sane-backends-1.0.20.ebuild, sane-backends-1.0.20-r1.ebuild:
+  IUSE/SANE_BACKENDS handling was a bit too clever, see bug #278274
 
 *sane-backends-1.0.20-r1 (17 Jul 2009)
 

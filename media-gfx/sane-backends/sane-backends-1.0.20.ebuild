@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20.ebuild,v 1.3 2009/07/08 18:47:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.20.ebuild,v 1.4 2009/07/19 10:47:47 phosphan Exp $
 
 EAPI="1"
 
@@ -86,21 +86,10 @@ IUSE_SANE_BACKENDS="
 	umax1220u
 	xerox_mfp"
 
-IUSE="avahi usb gphoto2 ipv6 v4l doc sane_backends_nothing"
+IUSE="avahi usb gphoto2 ipv6 v4l doc"
 
-# Use old SANE_BACKENDS values as defaults for our USE_EXPAND variable
 for backend in ${IUSE_SANE_BACKENDS}; do
-	IUSE="${IUSE} "
-	if [ -z "${SANE_BACKENDS}" ]; then
-		IUSE="${IUSE}+"
-	else
-		for oldbackend in ${SANE_BACKENDS}; do
-			if [ "${oldbackend}" == "${backend}" ]; then
-				IUSE="${IUSE}+"
-			fi
-		done
-	fi
-	IUSE="${IUSE}sane_backends_${backend}"
+	IUSE="${IUSE} +sane_backends_${backend}"
 done
 
 DESCRIPTION="Scanner Access Now Easy - Backends"
@@ -154,11 +143,10 @@ SLOT="0"
 LICENSE="GPL-2 public-domain"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
-BACKENDS=""
+# the blank is intended - an empty string would result in building ALL backends.
+BACKENDS=" "
 
 pkg_setup() {
-
-	ensure_a_backend_is_building
 
 	enewgroup scanner
 
@@ -193,13 +181,6 @@ src_unpack() {
 src_compile() {
 	append-flags -fno-strict-aliasing
 
-	# if you are using a backend that is not contained in the sane-backends
-	# distribution, it can make sense to build just the libs and no backend
-	# at all.
-	if use sane_backends_nothing; then
-		BACKENDS=" "
-		elog "You are using sane_backends_nothing - disabling all backends!"
-	fi
 	if use usb && has_version "=dev-libs/libusb-1*"; then
 		myconf="--enable-libusb_1_0 --disable-libusb"
 	else
@@ -251,16 +232,4 @@ src_install () {
 	cd ../..
 	dodoc NEWS AUTHORS ChangeLog* README README.linux
 	echo "SANE_CONFIG_DIR=/etc/sane.d" >> "${D}"/etc/env.d/30sane
-}
-
-ensure_a_backend_is_building() {
-	use v4l && return
-	use gphoto2 && return
-	use sane_backends_nothing && return
-	for b in ${IUSE_SANE_BACKENDS}; do
-		use "sane_backends_${b}" && return
-	done
-	eerror "You must specify at least one backend or sane_backends_nothing to build."
-	eerror "See \"emerge -pv sane-backends\" for a list."
-	die "No backend selected."
 }
