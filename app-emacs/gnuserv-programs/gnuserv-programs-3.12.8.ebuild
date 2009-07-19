@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/gnuserv-programs-3.12.8.ebuild,v 1.2 2007/12/01 11:26:26 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuserv-programs/gnuserv-programs-3.12.8.ebuild,v 1.3 2009/07/19 17:27:32 ssuominen Exp $
+
+inherit multilib
 
 DESCRIPTION="Binary programs for app-emacs/gnuserv"
 HOMEPAGE="http://meltin.net/hacks/emacs/"
@@ -24,8 +26,8 @@ src_compile() {
 	unset LDFLAGS
 
 	econf $(use_enable X xauth) \
-		--x-includes=/usr/X11R6/include \
-		--x-libraries=/usr/X11R6/lib || die "econf failed"
+		--x-includes=/usr/include \
+		--x-libraries=/usr/$(get_libdir) || die "econf failed"
 	emake ELC="" || die "emake failed"
 }
 
