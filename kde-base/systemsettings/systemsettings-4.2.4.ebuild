@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.4.ebuild,v 1.1 2009/06/04 13:56:24 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.4.ebuild,v 1.2 2009/07/19 22:52:53 wired Exp $
 
 EAPI="2"
 
@@ -68,6 +68,10 @@ src_prepare() {
 	sed -i -e 's/systemsettingsrc DESTINATION ${SYSCONF_INSTALL_DIR}/systemsettingsrc DESTINATION ${CONFIG_INSTALL_DIR}/' \
 		systemsettings/CMakeLists.txt \
 		|| die "Failed to fix systemsettingsrc install location"
+
+	if has_version ">=x11-libs/libxklavier-4.0"; then
+		epatch "${FILESDIR}"/10_xklavier_adaptor_fix.patch
+	fi
 
 	if ! version_is_at_least 4.1.2 "$(gcc-fullversion)" ; then
 		ewarn
