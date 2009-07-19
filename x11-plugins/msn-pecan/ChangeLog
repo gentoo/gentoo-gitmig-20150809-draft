@@ -1,0 +1,60 @@
+# ChangeLog for x11-plugins/msn-pecan
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/msn-pecan/ChangeLog,v 1.1 2009/07/19 19:54:21 voyageur Exp $
+
+*msn-pecan-0.0.19 (19 Jul 2009)
+
+  19 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +msn-pecan-0.0.19.ebuild, +metadata.xml:
+  Package move to x11-plugins/msn-pecan
+
+  19 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -pidgin-msn-pecan-0.0.17.ebuild, -pidgin-msn-pecan-0.0.18.ebuild:
+  Remove previous versions
+
+*pidgin-msn-pecan-0.0.19 (16 Jun 2009)
+
+  16 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -pidgin-msn-pecan-0.0.14.ebuild, -pidgin-msn-pecan-0.0.15.ebuild,
+  -pidgin-msn-pecan-0.0.16.ebuild, +pidgin-msn-pecan-0.0.19.ebuild:
+  Version bump, bugfixes and support for 'Now Playing' status field. Also
+  remove some old versions
+
+*pidgin-msn-pecan-0.0.18 (15 Feb 2009)
+
+  15 Feb 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-msn-pecan-0.0.18.ebuild:
+  Version bump, bugfixes including personal status messages, adds voice clip
+  support, remove Makefile sed for multilib as it's not longer needed and
+  breaks things in this version
+
+*pidgin-msn-pecan-0.0.17 (01 Dec 2008)
+
+  01 Dec 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-msn-pecan-0.0.17.ebuild:
+  Version bump, adds custom emoticon sending support and independent
+  personal status messages
+
+*pidgin-msn-pecan-0.0.16 (14 Sep 2008)
+
+  14 Sep 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-msn-pecan-0.0.16.ebuild:
+  Version bump, bugfixes, handwritten messages support, direct connections
+  (receive only)
+
+*pidgin-msn-pecan-0.0.15 (29 Aug 2008)
+
+  29 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org>
+  +pidgin-msn-pecan-0.0.15.ebuild:
+  Version bump, adds offline messaging support (read-only), and bugfixes
+
+  28 Aug 2008; Diego Pettenò <flameeyes@gentoo.org>
+  pidgin-msn-pecan-0.0.14.ebuild:
+  Fix multilib installation directory for amd64.
+
+*pidgin-msn-pecan-0.0.14 (18 Aug 2008)
+
+  18 Aug 2008; Bernard Cafarelli <voyageur@gentoo.org> +metadata.xml,
+  +pidgin-msn-pecan-0.0.14.ebuild:
+  Initial import. Thanks everyone in bug #230033
+
