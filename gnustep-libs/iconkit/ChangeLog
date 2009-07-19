@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-libs/iconkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/iconkit/ChangeLog,v 1.10 2009/06/11 21:44:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/iconkit/ChangeLog,v 1.11 2009/07/19 15:28:56 nixnut Exp $
+
+  19 Jul 2009; nixnut <nixnut@gentoo.org> iconkit-0.4.1.ebuild:
+  ppc stable #273704
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> iconkit-0.4.1.ebuild:
   amd64 stable, bug #273704
