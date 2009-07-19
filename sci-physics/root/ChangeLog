@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.52 2009/07/16 07:01:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.53 2009/07/19 22:56:53 darkside Exp $
+
+  19 Jul 2009; Jeremy Olexa <darkside@gentoo.org> root-5.22.00-r2.ebuild:
+  amd64 stable, bug 275997
 
   16 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   root-5.22.00-r2.ebuild:
