@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/dkim-milter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.30 2009/05/09 12:16:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.31 2009/07/19 07:26:16 mrness Exp $
+
+*dkim-milter-2.8.3 (19 Jul 2009)
+
+  19 Jul 2009; Alin Năstac <mrness@gentoo.org>
+  +files/dkim-milter-2.8.3-gentoo.patch,
+  +files/dkim-milter-build-system.patch, +dkim-milter-2.8.3.ebuild:
+  Version bump.
 
   09 May 2009; Alin Năstac <mrness@gentoo.org>
   -files/dkim-milter-2.8.0-gentoo.patch, -dkim-milter-2.8.1.ebuild,
