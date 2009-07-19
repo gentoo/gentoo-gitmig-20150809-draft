@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.196 2009/07/15 14:05:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.197 2009/07/19 16:38:51 nixnut Exp $
+
+  19 Jul 2009; nixnut <nixnut@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
+  ppc stable #250429
 
   15 Jul 2009; Jeroen Roovers <jer@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
   Stable for HPPA (bug #250429).
