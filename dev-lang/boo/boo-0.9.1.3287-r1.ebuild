@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.1.3287-r1.ebuild,v 1.2 2009/05/20 19:54:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/boo/boo-0.9.1.3287-r1.ebuild,v 1.3 2009/07/19 08:25:06 dev-zero Exp $
 
 EAPI=2
 
@@ -34,6 +34,9 @@ pkg_setup() {
 		eerror "Please run: emerge -C ${CATEGORY}/${PN} and try again."
 		die "Please run: emerge -C ${CATEGORY}/${PN} and try again."
 	fi
+
+	# gacutil may generate a root-owned directory in ${T} which makes nant fail afterwards (bug #269907)
+	rm -rf "${T}/.wapi"
 }
 
 src_prepare() {
