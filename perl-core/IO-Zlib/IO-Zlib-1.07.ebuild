@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/IO-Zlib-1.07.ebuild,v 1.1 2008/11/02 07:25:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/IO-Zlib/IO-Zlib-1.07.ebuild,v 1.2 2009/07/19 18:03:23 tove Exp $
 
 inherit perl-module
 
@@ -15,5 +15,5 @@ IUSE=""
 
 SRC_TEST="do"
 
-DEPEND="virtual/perl-Compress-Zlib
+DEPEND="virtual/perl-IO-Compress
 	dev-lang/perl"
