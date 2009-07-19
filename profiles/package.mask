@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10062 2009/07/19 17:38:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10063 2009/07/19 17:41:55 kolmodin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -893,14 +893,6 @@ app-benchmark/phoronix-test-suite
 # Should fix a number of bug: 143763, 200293, 261357, 265466.
 # It "mostly works with 2.3.* too". Is "mostly" good enough?
 =dev-perl/math-pari-2.010801-r1
-
-# Lennart Kolmodin <kolmodin@gentoo.org> (17 Apr 2009)
-# Add patched dev-lang/ghc for testing.
-# It includes a bundled readline package to be able to use old bootstrapping
-# binaries. See bug #259867.
-# Only x86 and amd64 supported so far. This ebuild won't be very interesting
-# once we add ghc 6.10.2.
-=dev-lang/ghc-6.8.2-r1
 
 # Christian Faulhammer <fauli@gentoo.org> (13 Apr 2009)
 # Ulrich Mueller <ulm@gentoo.org>
