@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.21_p16468.ebuild,v 1.1 2008/03/09 20:43:11 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/mythgallery-0.21_p20585.ebuild,v 1.1 2009/07/19 04:53:10 cardoe Exp $
 
-inherit mythtv-plugins
+EAPI=2
+inherit qt3 mythtv-plugins
 
 DESCRIPTION="Gallery and slideshow module for MythTV."
 KEYWORDS="~amd64 ~ppc ~x86"

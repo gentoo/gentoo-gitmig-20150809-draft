@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythgallery
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.54 2008/12/23 17:22:27 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythgallery/ChangeLog,v 1.55 2009/07/19 04:53:10 cardoe Exp $
+
+*mythgallery-0.21_p20585 (19 Jul 2009)
+
+  19 Jul 2009; Doug Goldstein <cardoe@gentoo.org>
+  -mythgallery-0.21_p16468.ebuild, mythgallery-0.21_p17105.ebuild,
+  +mythgallery-0.21_p20585.ebuild:
+  new version bump. use new eclass bits. clean old version.
 
   23 Dec 2008; Markus Meier <maekke@gentoo.org>
   mythgallery-0.21_p17105.ebuild:
