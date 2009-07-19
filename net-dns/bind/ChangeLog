@@ -1,6 +1,14 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.231 2009/05/31 13:33:01 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.232 2009/07/19 19:57:22 idl0r Exp $
+
+*bind-9.6.1 (19 Jul 2009)
+
+  19 Jul 2009; Christian Ruppert <idl0r@gentoo.org> +bind-9.6.1.ebuild,
+  +files/named.init-r6:
+  Version bump to 9.6.1, bug 274494. Fix bug 275684. Add xml useflags.
+  append-flags -D_GNU_SOURCE is not needed anymore since it has been fixed
+  by upstream. Fix HOMEPAGE. Cleanup.
 
   31 May 2009; Mike Auty <ikelos@gentoo.org> metadata.xml:
   Fixing typo in local USE flag description (see bug 271604).
