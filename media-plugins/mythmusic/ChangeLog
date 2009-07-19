@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/mythmusic
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.81 2009/01/10 13:07:40 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.82 2009/07/19 05:29:41 cardoe Exp $
+
+*mythmusic-0.21_p20563 (19 Jul 2009)
+
+  19 Jul 2009; Doug Goldstein <cardoe@gentoo.org>
+  -mythmusic-0.21_p17015-r1.ebuild, mythmusic-0.21_p17821.ebuild,
+  +mythmusic-0.21_p20563.ebuild:
+  version bump. use new eclass bits. clean up old versions.
 
 *mythmusic-0.21_p17015-r1 (10 Jan 2009)
 
