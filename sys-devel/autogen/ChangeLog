@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autogen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.55 2009/07/18 15:38:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autogen/ChangeLog,v 1.56 2009/07/19 22:14:09 tcunha Exp $
+
+  19 Jul 2009; Tiago Cunha <tcunha@gentoo.org> autogen-5.9.7.ebuild:
+  stable sparc, bug 274468
 
   18 Jul 2009; Jeroen Roovers <jer@gentoo.org> autogen-5.9.7.ebuild:
   Stable for HPPA (bug #274468).
