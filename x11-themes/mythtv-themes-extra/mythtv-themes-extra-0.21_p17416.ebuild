@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.21_p17416.ebuild,v 1.4 2008/12/23 17:18:13 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes-extra/mythtv-themes-extra-0.21_p17416.ebuild,v 1.5 2009/07/19 16:00:26 cardoe Exp $
 
-EAPI=1
-
+EAPI=2
 inherit qt3 mythtv
 
 DESCRIPTION="A collection of themes for the MythTV project."
@@ -14,10 +13,12 @@ IUSE=""
 DEPEND="x11-libs/qt:3
 	=media-tv/mythtv-${MY_PV}*"
 
-src_compile() {
-	./configure --prefix="${ROOT}"/usr || die "configure died"
+src_configure() {
+	sh ./configure --prefix="${ROOT}"/usr || die "configure died"
+}
 
-	eqmake3 themes.pro -o "Makefile" || die "eqmake3 failed"
+src_compile() {
+	eqmake3 themes.pro || die "eqmake3 failed"
 }
 
 src_install() {
