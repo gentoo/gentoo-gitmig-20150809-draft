@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.275 2009/07/18 02:34:39 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/ChangeLog,v 1.276 2009/07/19 10:56:43 armin76 Exp $
+
+  19 Jul 2009; Raúl Porcel <armin76@gentoo.org> sylpheed-2.6.0.ebuild:
+  alpha/ia64/sparc stable wrt #276830
 
   18 Jul 2009; Jeremy Olexa <darkside@gentoo.org> sylpheed-2.6.0.ebuild:
   amd64 stable, bug 276830
