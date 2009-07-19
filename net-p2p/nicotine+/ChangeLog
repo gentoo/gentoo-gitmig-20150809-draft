@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.34 2009/07/19 15:06:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.35 2009/07/19 16:02:17 darkside Exp $
+
+  19 Jul 2009; Jeremy Olexa <darkside@gentoo.org> nicotine+-1.2.10.ebuild:
+  amd64 stable, bug 276113
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> nicotine+-1.2.10.ebuild:
   ppc stable #276113

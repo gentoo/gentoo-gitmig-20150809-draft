@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.10.ebuild,v 1.4 2009/07/19 15:06:00 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/nicotine+-1.2.10.ebuild,v 1.5 2009/07/19 16:02:17 darkside Exp $
 
 inherit distutils multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.nicotine-plus.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-3 LGPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE="geoip spell vorbis"
 
 RDEPEND="virtual/python
