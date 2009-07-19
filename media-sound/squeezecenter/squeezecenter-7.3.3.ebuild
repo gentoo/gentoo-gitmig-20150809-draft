@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.3.ebuild,v 1.1 2009/06/23 17:37:10 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.3.ebuild,v 1.2 2009/07/19 17:54:59 tove Exp $
 
 inherit eutils
 
@@ -40,7 +40,7 @@ RDEPEND="
 	avahi? ( net-dns/avahi )
 	>=dev-lang/perl-5.8.8
 	>=dev-perl/GD-2.35
-	>=virtual/perl-Compress-Zlib-2.015
+	>=virtual/perl-IO-Compress-2.015
 	>=dev-perl/YAML-Syck-1.05
 	>=dev-perl/DBD-mysql-4.00.5
 	>=dev-perl/DBI-1.607
