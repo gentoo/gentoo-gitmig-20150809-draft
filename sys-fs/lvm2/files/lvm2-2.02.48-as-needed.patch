@@ -86,13 +86,14 @@ diff -Nuarp --exclude '*.rej' --exclude '*.orig' LVM2.2.02.48.orig/daemons/dmeve
  SOURCES = dmeventd_snapshot.c
  
 diff -Nuarp --exclude '*.rej' --exclude '*.orig' LVM2.2.02.48.orig/lib/Makefile.in LVM2.2.02.48/lib/Makefile.in
---- LVM2.2.02.48.orig/lib/Makefile.in	2009-06-03 04:31:06.000000000 -0700
-+++ LVM2.2.02.48/lib/Makefile.in	2009-07-05 14:33:03.801620744 -0700
-@@ -137,7 +137,7 @@ ifeq ("@HAVE_LIBDL@", "yes")
+--- LVM2.2.02.48.orig/lib/Makefile.in	2009-07-17 11:16:40.572301218 +0200
++++ LVM2.2.02.48/lib/Makefile.in	2009-07-17 11:17:55.035551029 +0200
+@@ -137,7 +137,8 @@ ifeq ("@HAVE_LIBDL@", "yes")
  endif
  
  ifeq ("@DMEVENTD@", "yes")
 -  CLDFLAGS += -ldevmapper-event
++  CLDFLAGS += -L../daemons/dmeventd
 +  LIBS += -ldevmapper-event
  endif
  
