@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.13_p2.ebuild,v 1.1 2009/07/19 12:43:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sooperlooper/sooperlooper-1.6.13_p2.ebuild,v 1.2 2009/07/19 12:50:38 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils wxwidgets
@@ -31,7 +31,11 @@ S=${WORKDIR}/${P/_p*}
 
 src_prepare() {
 	cp -rf "${WORKDIR}"/aclocal "${S}" || die "copying aclocal failed"
-	epatch "${FILESDIR}"/${PN}-1.6.5-cxxflags.patch
+
+	epatch "${FILESDIR}"/${PN}-1.6.5-cxxflags.patch \
+		"${FILESDIR}"/${PN}-1.6.10-asneeded.patch \
+		"${FILESDIR}"/${P}-const.patch
+
 	AT_M4DIR="${S}/aclocal" eautoreconf
 }
 
