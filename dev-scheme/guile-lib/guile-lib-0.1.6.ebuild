@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.6.ebuild,v 1.1 2009/07/17 14:00:24 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/guile-lib/guile-lib-0.1.6.ebuild,v 1.2 2009/07/19 14:49:45 hkbst Exp $
 
 inherit eutils
 
 DESCRIPTION="An accumulation place for pure-scheme Guile modules"
-HOMEPAGE="home.gna.org/guile-lib/"
+HOMEPAGE="http://home.gna.org/guile-lib/"
 SRC_URI="http://download.gna.org/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
