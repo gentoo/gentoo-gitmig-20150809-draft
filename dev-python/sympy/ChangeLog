@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/sympy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.4 2009/04/13 18:34:07 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/ChangeLog,v 1.5 2009/07/19 10:10:51 grozin Exp $
+
+*sympy-0.6.5 (19 Jul 2009)
+
+  19 Jul 2009; Andrey Grozin <grozin@gentoo.org> -sympy-0.6.3.ebuild,
+  -files/sympy-0.6.3-sphinx.patch, +sympy-0.6.5.ebuild,
+  +files/sympy-0.6.5-sphinx.patch:
+  Version bump
 
 *sympy-0.6.4 (14 Apr 2009)
 

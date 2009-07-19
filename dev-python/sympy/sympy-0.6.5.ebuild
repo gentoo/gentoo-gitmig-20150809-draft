@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.3.ebuild,v 1.1 2008/11/20 15:49:59 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sympy/sympy-0.6.5.ebuild,v 1.1 2009/07/19 10:10:51 grozin Exp $
 EAPI=2
 NEED_PYTHON=2.4
 inherit distutils
@@ -29,8 +29,8 @@ RDEPEND="mathml? ( dev-libs/libxml2[python]
 DEPEND="doc? ( dev-python/sphinx )
 	test? ( >=dev-python/py-0.9.0 )"
 
-src_unpack() {
-	distutils_src_unpack
+src_prepare() {
+	distutils_src_prepare
 
 	# use local sphinx
 	epatch "${FILESDIR}"/${P}-sphinx.patch
