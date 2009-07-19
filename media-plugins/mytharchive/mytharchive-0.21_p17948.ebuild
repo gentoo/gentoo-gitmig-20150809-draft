@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.21_p17948.ebuild,v 1.4 2008/12/23 17:18:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mytharchive/mytharchive-0.21_p17948.ebuild,v 1.5 2009/07/19 04:30:35 cardoe Exp $
 
-inherit mythtv-plugins
+EAPI=2
+inherit qt3 mythtv-plugins
 
 DESCRIPTION="Allows for archiving your videos to DVD."
 IUSE=""
