@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.68 2009/07/19 11:10:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.69 2009/07/19 11:45:58 hkbst Exp $
+
+  19 Jul 2009; Marijn Schouten <hkBst@gentoo.org> g-wrap-1.9.11.ebuild,
+  -g-wrap-1.9.11-r1.ebuild, g-wrap-1.9.12.ebuild:
+  srfi-3[45] are provided by guile-lib, so don't install them anymore, bug
+  278233
 
 *g-wrap-1.9.12 (19 Jul 2009)
 
