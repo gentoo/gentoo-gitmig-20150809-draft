@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10060 2009/07/19 13:05:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10061 2009/07/19 13:18:48 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Jul 2009)
+# Masked for removal. No upstream. QA issues wrt #273342.
+media-sound/streamixer
+
+# Samuli Suominen <ssuominen@gentoo.org> (19 Jul 2009)
+# Doesn't compile wrt #272602. ALSA support broken wrt #98769.
+# No upstream. Masked for removal.
+media-sound/sidplay
 
 # Samuli Suominen <ssuominen@gentoo.org> (18 Jul 2009)
 # Doesn't compile and maintainers don't care wrt #222235.
