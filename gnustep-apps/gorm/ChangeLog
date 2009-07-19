@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/gorm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.34 2009/06/11 21:35:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gorm/ChangeLog,v 1.35 2009/07/19 13:24:15 nixnut Exp $
+
+  19 Jul 2009; nixnut <nixnut@gentoo.org> gorm-1.2.8.ebuild:
+  ppc stable #272673
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> gorm-1.2.8.ebuild:
   amd64 stable, bug #272673
