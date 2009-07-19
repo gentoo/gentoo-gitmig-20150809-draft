@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/PAR
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.1 2009/06/30 13:55:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/ChangeLog,v 1.2 2009/07/19 17:42:11 tove Exp $
+
+  19 Jul 2009; Torsten Veller <tove@gentoo.org> PAR-0.992.ebuild:
+  IO-Compress replaces Compress-Zlib
 
 *PAR-0.992 (30 Jun 2009)
 

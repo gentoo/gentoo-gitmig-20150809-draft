@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/PAR-0.992.ebuild,v 1.1 2009/06/30 13:55:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PAR/PAR-0.992.ebuild,v 1.2 2009/07/19 17:42:11 tove Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="virtual/perl-AutoLoader
-	>=virtual/perl-Compress-Zlib-1.30
+	>=virtual/perl-IO-Compress-1.30
 	>=dev-perl/Archive-Zip-1.00
 	>=dev-perl/PAR-Dist-0.32
 	virtual/perl-Digest-SHA

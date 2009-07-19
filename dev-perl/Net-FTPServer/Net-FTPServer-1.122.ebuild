@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.122.ebuild,v 1.12 2008/11/18 15:18:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-FTPServer/Net-FTPServer-1.122.ebuild,v 1.13 2009/07/19 17:41:32 tove Exp $
 
 inherit perl-module
 
@@ -19,7 +19,7 @@ PATCHES="${FILESDIR}/240abort.patch
 DEPEND="dev-perl/Archive-Zip
 	dev-perl/Authen-PAM
 		dev-perl/BSD-Resource
-		>=virtual/perl-Compress-Zlib-1.14
+		>=virtual/perl-IO-Compress-1.14
 		virtual/perl-Digest-MD5
 		virtual/perl-File-Temp
 		virtual/perl-Getopt-Long

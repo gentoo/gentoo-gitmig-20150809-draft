@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.1.1.ebuild,v 1.7 2009/01/11 13:50:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ImageSize/ImageSize-3.1.1.ebuild,v 1.8 2009/07/19 17:39:12 tove Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ SRC_TEST="do"
 mydoc="ToDo"
 
 RDEPEND="dev-lang/perl
-	virtual/perl-Compress-Zlib
+	virtual/perl-IO-Compress
 	virtual/perl-File-Spec"
 DEPEND="${RDEPEND}
 	>=virtual/perl-Module-Build-0.28

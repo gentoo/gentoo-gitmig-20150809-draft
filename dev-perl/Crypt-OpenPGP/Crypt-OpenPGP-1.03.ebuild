@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.16 2008/11/18 14:38:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenPGP/Crypt-OpenPGP-1.03.ebuild,v 1.17 2009/07/19 17:36:37 tove Exp $
 
 inherit perl-module
 
@@ -27,7 +27,7 @@ IUSE=""
 DEPEND=">=dev-perl/data-buffer-0.04
 		virtual/perl-MIME-Base64
 		>=dev-perl/math-pari-2.010603
-		virtual/perl-Compress-Zlib
+		virtual/perl-IO-Compress
 		dev-perl/libwww-perl
 		dev-perl/URI
 		dev-perl/crypt-dsa

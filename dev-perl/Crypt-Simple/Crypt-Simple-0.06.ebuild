@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Simple/Crypt-Simple-0.06.ebuild,v 1.6 2008/11/18 14:39:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Simple/Crypt-Simple-0.06.ebuild,v 1.7 2009/07/19 17:37:29 tove Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 x86"
 SRC_TEST="do"
 RDEPEND="dev-perl/FreezeThaw
 	dev-lang/perl
-	virtual/perl-Compress-Zlib
+	virtual/perl-IO-Compress
 	dev-perl/Crypt-Blowfish
 	virtual/perl-Digest-MD5
 	virtual/perl-MIME-Base64

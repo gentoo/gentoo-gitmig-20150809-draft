@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.25.ebuild,v 1.1 2009/05/30 21:10:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.25.ebuild,v 1.2 2009/07/19 17:35:02 tove Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ IUSE=""
 #SRC_TEST="do"
 
 RDEPEND="dev-perl/libwww-perl
-	virtual/perl-Compress-Zlib
+	virtual/perl-IO-Compress
 	virtual/perl-Archive-Tar
 	>=dev-perl/CPAN-Mini-0.32
 	dev-perl/CPAN-Checksums"

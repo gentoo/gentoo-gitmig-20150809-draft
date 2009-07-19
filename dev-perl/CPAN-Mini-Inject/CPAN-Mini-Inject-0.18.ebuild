@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.18.ebuild,v 1.8 2008/11/18 14:28:42 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Mini-Inject/CPAN-Mini-Inject-0.18.ebuild,v 1.9 2009/07/19 17:35:02 tove Exp $
 
 inherit perl-module
 
@@ -18,7 +18,7 @@ IUSE=""
 #SRC_TEST="do"
 
 DEPEND="dev-perl/libwww-perl
-		virtual/perl-Compress-Zlib
+		virtual/perl-IO-Compress
 		dev-perl/HTTP-Server-Simple
 		>=dev-perl/CPAN-Mini-0.32
 		dev-perl/CPAN-Checksums

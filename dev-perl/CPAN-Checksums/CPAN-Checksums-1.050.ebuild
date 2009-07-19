@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/CPAN-Checksums-1.050.ebuild,v 1.10 2008/11/18 14:27:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CPAN-Checksums/CPAN-Checksums-1.050.ebuild,v 1.11 2009/07/19 17:34:19 tove Exp $
 
 inherit perl-module
 
@@ -16,7 +16,7 @@ IUSE=""
 SRC_TEST="do"
 
 DEPEND="dev-perl/Data-Compare
-		virtual/perl-Compress-Zlib
+		virtual/perl-IO-Compress
 		dev-perl/Compress-Bzip2
 		virtual/perl-Digest-SHA
 		virtual/perl-File-Temp

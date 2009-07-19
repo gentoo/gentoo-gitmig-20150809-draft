@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.11.ebuild,v 1.1 2009/06/07 13:29:47 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/Bio-Das-1.11.ebuild,v 1.2 2009/07/19 17:33:07 tove Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 # Tests work again as of 1.10 (were broken in 1.09)
 SRC_TEST="do"
 
-DEPEND=">=virtual/perl-Compress-Zlib-1.0
+DEPEND=">=virtual/perl-IO-Compress-1.0
 	sci-biology/bioperl
 	>=dev-perl/HTML-Parser-3
 	>=dev-perl/libwww-perl-5

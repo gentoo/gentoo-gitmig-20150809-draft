@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.006.ebuild,v 1.1 2009/05/31 08:39:01 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.006.ebuild,v 1.2 2009/07/19 17:43:52 tove Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ IUSE="ipv6 libwww ncurses tk test"
 RDEPEND=">=dev-perl/Event-1.09
 	>=virtual/perl-File-Spec-0.87
 	>=virtual/perl-IO-1.23.01
-	>=virtual/perl-Compress-Zlib-1.33
+	>=virtual/perl-IO-Compress-1.33
 	>=virtual/perl-Storable-2.12
 	>=dev-perl/IO-Tty-1.08
 	perl-core/Filter

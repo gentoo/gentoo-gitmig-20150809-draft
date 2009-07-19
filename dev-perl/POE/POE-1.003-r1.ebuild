@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.003-r1.ebuild,v 1.4 2009/03/18 07:31:02 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.003-r1.ebuild,v 1.5 2009/07/19 17:43:52 tove Exp $
 
 inherit versionator
 MODULE_AUTHOR=RCAPUTO
@@ -19,7 +19,7 @@ DEPEND="dev-lang/perl
 	>=dev-perl/Event-1.09
 	>=virtual/perl-File-Spec-0.87
 	>=virtual/perl-IO-1.23.01
-	>=virtual/perl-Compress-Zlib-1.33
+	>=virtual/perl-IO-Compress-1.33
 	>=virtual/perl-Storable-2.12
 	>=dev-perl/IO-Tty-1.02
 	perl-core/Filter

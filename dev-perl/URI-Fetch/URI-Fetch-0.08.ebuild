@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI-Fetch/URI-Fetch-0.08.ebuild,v 1.2 2008/11/18 15:42:10 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI-Fetch/URI-Fetch-0.08.ebuild,v 1.3 2009/07/19 17:45:32 tove Exp $
 
 MODULE_AUTHOR=BTROTT
 inherit perl-module
@@ -17,7 +17,7 @@ DEPEND="dev-perl/libwww-perl
 	virtual/perl-Storable
 	dev-perl/URI
 	dev-perl/Cache
-	virtual/perl-Compress-Zlib"
+	virtual/perl-IO-Compress"
 
 PREFER_BUILDPL=no
 SRC_TEST=no
