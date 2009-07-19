@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/yaydl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/ChangeLog,v 1.2 2009/05/17 15:07:52 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/ChangeLog,v 1.3 2009/07/19 18:55:12 volkmar Exp $
+
+  17 May 2009; Mounir Lamouri <volkmar@gentoo.org> yaydl-1.3.ebuild:
+  Upstream has changed whitout version bump (sic). Udpating ebuild and
+  Manifest to prevent corruption errors.
 
 *yaydl-1.3 (17 May 2009)
 

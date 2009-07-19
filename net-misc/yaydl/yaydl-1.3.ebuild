@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/yaydl-1.3.ebuild,v 1.1 2009/05/17 15:07:52 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/yaydl/yaydl-1.3.ebuild,v 1.2 2009/07/19 18:55:12 volkmar Exp $
 
 EAPI="2"
 
@@ -23,8 +23,6 @@ RDEPEND="dev-lang/perl
 		media-video/mplayer[encode,mp3,xvid] ) )
 	soundextract? ( || ( media-video/ffmpeg[encode,mp3]
 		( media-video/mplayer media-sound/lame ) ) )"
-
-S=${WORKDIR}/${PN}
 
 src_install() {
 	exeinto /usr/bin
