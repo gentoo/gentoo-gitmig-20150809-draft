@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/amphetadesk/amphetadesk-0.93.1.ebuild,v 1.5 2008/11/18 16:18:46 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/amphetadesk/amphetadesk-0.93.1.ebuild,v 1.6 2009/07/19 17:59:03 tove Exp $
 
 DESCRIPTION="AmphetaDesk is a free syndicated news aggregator"
 HOMEPAGE="http://www.disobey.com/amphetadesk/"
@@ -13,7 +13,7 @@ DEPEND="dev-lang/perl
 	dev-perl/libwww-perl
 	dev-libs/expat
 	dev-perl/XML-Parser
-	virtual/perl-Compress-Zlib"
+	virtual/perl-IO-Compress"
 S=${WORKDIR}/${PN}-src-v${PV}
 
 src_install() {
