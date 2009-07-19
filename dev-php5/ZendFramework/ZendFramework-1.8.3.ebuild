@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.8.3.ebuild,v 1.3 2009/07/19 11:44:40 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.8.3.ebuild,v 1.4 2009/07/19 11:52:28 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
@@ -30,11 +30,14 @@ pkg_setup() {
 }
 
 src_unpack() {
+	unpack ${A}
+
 	if use minimal ; then
 		S="${WORKDIR}/${P}-minimal"
+		if use doc ; then
+			mv "${WORKDIR}/${P}/documentation" "${S}"
+		fi
 	fi
-
-	unpack ${A}
 
 	cd "${S}"
 }
