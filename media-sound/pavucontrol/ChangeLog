@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.23 2009/07/09 15:24:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.24 2009/07/19 13:11:29 ssuominen Exp $
+
+*pavucontrol-0.9.8-r1 (19 Jul 2009)
+
+  19 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  pavucontrol-0.9.8.ebuild, +pavucontrol-0.9.8-r1.ebuild,
+  +files/pavucontrol-0.9.8-icons.patch:
+  Don't abort if icons are not found wrt #273815, thanks to Robert Förster.
 
   09 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pavucontrol-0.9.8.ebuild:

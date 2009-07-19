@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.8.ebuild,v 1.4 2009/07/09 15:24:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.8-r1.ebuild,v 1.1 2009/07/19 13:11:29 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="Pulseaudio Volume Control, GTK based mixer for Pulseaudio"
 HOMEPAGE="http://0pointer.de/lennart/projects/pavucontrol/"
@@ -19,11 +20,15 @@ RDEPEND="dev-cpp/gtkmm:2.4
 	>=x11-libs/gtk+-2.16:2
 	>=media-sound/pulseaudio-0.9.15[glib]
 	>=media-libs/libcanberra-0.11[gtk]
-	x11-themes/gnome-icon-theme"
+	|| ( x11-themes/tango-icon-theme x11-themes/gnome-icon-theme )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext
 		dev-util/intltool )
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-icons.patch
+}
 
 src_configure() {
 	econf \

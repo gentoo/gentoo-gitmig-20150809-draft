@@ -1,0 +1,38 @@
+From 874ebedf163195c7d54d5f9da3ff1725c1e43aa2 Mon Sep 17 00:00:00 2001
+From: Lennart Poettering <lennart@poettering.net>
+Date: Sun, 14 Jun 2009 19:28:32 +0200
+Subject: [PATCH] don't abort when icon is missing from the theme
+
+---
+ src/mainwindow.cc |   13 +++++++++----
+ 1 files changed, 9 insertions(+), 4 deletions(-)
+
+diff --git a/src/mainwindow.cc b/src/mainwindow.cc
+index 9d2a33d..61156c4 100644
+--- a/src/mainwindow.cc
++++ b/src/mainwindow.cc
+@@ -111,12 +111,17 @@ static void set_icon_name_fallback(Gtk::Image *i, const char *name, Gtk::IconSiz
+ 
+     Gtk::IconSize::lookup(size, width, height);
+     theme = Gtk::IconTheme::get_default();
+-    pixbuf = theme->load_icon(name, width, Gtk::ICON_LOOKUP_GENERIC_FALLBACK);
+ 
+-    if (pixbuf)
+-        i->set(pixbuf);
+-    else
++    try {
++        pixbuf = theme->load_icon(name, width, Gtk::ICON_LOOKUP_GENERIC_FALLBACK);
++
++        if (pixbuf)
++            i->set(pixbuf);
++        else
++            i->set(name);
++    } catch (Gtk::IconThemeError &e) {
+         i->set(name);
++    }
+ }
+ 
+ void MainWindow::updateCard(const pa_card_info &info) {
+-- 
+1.6.2.4
+
