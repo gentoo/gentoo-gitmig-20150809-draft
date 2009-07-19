@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/nicotine+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.33 2009/07/02 10:03:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine+/ChangeLog,v 1.34 2009/07/19 15:06:00 nixnut Exp $
+
+  19 Jul 2009; nixnut <nixnut@gentoo.org> nicotine+-1.2.10.ebuild:
+  ppc stable #276113
 
   02 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   nicotine+-1.2.10.ebuild:
