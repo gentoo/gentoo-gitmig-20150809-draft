@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.8.3.ebuild,v 1.2 2009/07/18 12:40:03 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.8.3.ebuild,v 1.3 2009/07/19 11:44:40 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
@@ -23,9 +23,13 @@ DEPEND=""
 RDEPEND=""
 need_php_by_category
 
-src_unpack() {
-	use cli && require_php_with_use simplexml
+pkg_setup() {
+	if use cli ; then
+		require_php_with_use simplexml tokenizer
+	fi
+}
 
+src_unpack() {
 	if use minimal ; then
 		S="${WORKDIR}/${P}-minimal"
 	fi
