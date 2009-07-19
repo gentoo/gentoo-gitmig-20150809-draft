@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/amanith
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.6 2008/12/04 20:52:48 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/amanith/ChangeLog,v 1.7 2009/07/19 19:18:55 ssuominen Exp $
+
+  19 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> amanith-0.3-r2.ebuild,
+  +files/amanith-0.3-gcc44.patch:
+  Fix building with GCC 4.4 wrt #269245, thanks to Victor Ostorga.
 
   04 Dec 2008; Markus Meier <maekke@gentoo.org> amanith-0.3-r2.ebuild:
   fix for bug #247744, do not try to install plugins, when they aren't
