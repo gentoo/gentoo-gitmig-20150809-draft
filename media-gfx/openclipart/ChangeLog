@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/openclipart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.4 2009/07/02 20:12:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.5 2009/07/19 13:27:23 nixnut Exp $
+
+  19 Jul 2009; nixnut <nixnut@gentoo.org> openclipart-0.19.ebuild:
+  ppc stable #272673
 
   02 Jul 2009; Markus Meier <maekke@gentoo.org> openclipart-0.19.ebuild:
   amd64 stable, bug #273554
