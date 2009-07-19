@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.11-r1.ebuild,v 1.2 2009/07/19 11:10:31 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.12.ebuild,v 1.1 2009/07/19 11:10:31 hkbst Exp $
 
 inherit eutils
 
 DESCRIPTION="A tool for exporting C libraries into Scheme"
 HOMEPAGE="http://www.nongnu.org/g-wrap/"
 SRC_URI="http://download.savannah.gnu.org/releases/g-wrap/${P}.tar.gz"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
@@ -18,7 +18,8 @@ RDEPEND="dev-scheme/guile
 	virtual/libffi
 	dev-scheme/guile-lib"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/indent"
 
 pkg_setup() {
 	if has_version =dev-scheme/guile-1.8*; then
@@ -30,16 +31,17 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-#	cp guile/g-wrap-2.0-guile.pc.in guile/g-wrap-2.0-guile.pc.in.old
+	cp guile/g-wrap-2.0-guile.pc.in guile/g-wrap-2.0-guile.pc.in.old
 
 	sed "s:@LIBFFI_CFLAGS_INSTALLED@:@LIBFFI_CFLAGS@:g" -i guile/g-wrap-2.0-guile.pc.in
 	sed "s:@LIBFFI_LIBS_INSTALLED@:@LIBFFI_LIBS@:g" -i guile/g-wrap-2.0-guile.pc.in
 
-#	diff -u guile/g-wrap-2.0-guile.pc.in.old guile/g-wrap-2.0-guile.pc.in
+	diff -u guile/g-wrap-2.0-guile.pc.in.old guile/g-wrap-2.0-guile.pc.in
 }
 
 src_compile() {
 	econf --with-glib --disable-Werror
+	# bug 275222
 	emake -j1 || die "make failed"
 }
 
