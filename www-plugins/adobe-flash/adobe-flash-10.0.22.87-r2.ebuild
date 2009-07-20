@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.22.87-r2.ebuild,v 1.1 2009/07/20 13:54:59 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/adobe-flash/adobe-flash-10.0.22.87-r2.ebuild,v 1.2 2009/07/20 19:21:44 lack Exp $
 
 EAPI=1
-inherit nsplugins rpm multilib
+inherit nsplugins rpm multilib toolchain-funcs
 
 MY_32B_URI="http://fpdownload.macromedia.com/get/flashplayer/current/flash-plugin-${PV}-release.i386.rpm"
 MY_64B_URI="http://download.macromedia.com/pub/labs/flashplayer10/libflashplayer-${PV}.linux-x86_64.so.tar.gz"
@@ -87,7 +87,7 @@ src_compile() {
 	if [[ $need_lahf_wrapper ]]; then
 		# This experimental wrapper, from Maks Verver via bug #268336 should
 		# emulate the missing lahf instruction affected platforms.
-		cc -fPIC -shared -nostdlib -lc -oflashplugin-lahf-fix.so \
+		$(tc-getCC) -fPIC -shared -nostdlib -lc -oflashplugin-lahf-fix.so \
 			"${FILESDIR}/flashplugin-lahf-fix.c" \
 			|| die "Compile of flashplugin-lahf-fix.so failed"
 	fi
