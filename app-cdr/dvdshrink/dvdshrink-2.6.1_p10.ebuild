@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p10.ebuild,v 1.3 2009/04/04 01:23:43 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/dvdshrink/dvdshrink-2.6.1_p10.ebuild,v 1.4 2009/07/20 04:13:45 ssuominen Exp $
 
 EAPI=2
-
 inherit eutils
 
 DESCRIPTION="Scriptable DVD copy software"
@@ -27,9 +26,7 @@ DEPEND=""
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -e 's:applications/::g' -i usr/bin/dvdsfunctions \
 		-i usr/bin/xdvdshrink.pl || die "sed failed."
 }
