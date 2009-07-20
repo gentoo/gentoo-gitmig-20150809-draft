@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.4 2008/04/22 19:53:55 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omnievents/omnievents-2.6.2.ebuild,v 1.5 2009/07/20 15:16:32 vostorga Exp $
 
 inherit eutils versionator
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=net-misc/omniORB-4"
+RDEPEND=""
 
 S=${WORKDIR}/${MY_P}
 
@@ -23,6 +24,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
