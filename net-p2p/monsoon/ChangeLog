@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/monsoon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/monsoon/ChangeLog,v 1.3 2009/04/27 09:02:04 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/monsoon/ChangeLog,v 1.4 2009/07/20 03:31:37 darkside Exp $
+
+  20 Jul 2009; Jeremy Olexa <darkside@gentoo.org> monsoon-0.21.ebuild:
+  amd64 stable, bug 273254
 
 *monsoon-0.21 (27 Apr 2009)
 
