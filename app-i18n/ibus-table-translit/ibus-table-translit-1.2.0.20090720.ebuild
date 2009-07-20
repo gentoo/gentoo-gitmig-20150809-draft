@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-translit/ibus-table-translit-1.1.0.20090603.ebuild,v 1.1 2009/06/04 16:15:38 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-translit/ibus-table-translit-1.2.0.20090720.ebuild,v 1.1 2009/07/20 16:49:45 matsuu Exp $
 
 DESCRIPTION="The Translit input method on IBus Table"
 HOMEPAGE="http://code.google.com/p/ibus/"
