@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfkc/xfkc-0.2.ebuild,v 1.4 2008/11/08 17:09:06 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfkc/xfkc-0.2.ebuild,v 1.5 2009/07/20 15:46:18 ssuominen Exp $
 
 DESCRIPTION="a keyboard layout configuration tool"
 HOMEPAGE="http://gauvain.tuxfamily.org/code/xfkc.html"
@@ -13,7 +13,8 @@ IUSE="debug nls"
 
 RDEPEND=">=xfce-base/libxfce4util-4.4
 	>=xfce-base/libxfcegui4-4.4
-	>=x11-libs/libxklavier-3"
+	>=x11-libs/libxklavier-3
+	!>=x11-libs/libxklavier-4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( dev-util/intltool
