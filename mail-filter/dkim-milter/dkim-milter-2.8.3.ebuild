@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.3.ebuild,v 1.1 2009/07/19 07:26:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/dkim-milter-2.8.3.ebuild,v 1.2 2009/07/20 21:46:57 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -42,7 +42,7 @@ src_prepare() {
 
 	if use diffheaders ; then
 		epatch "${FILESDIR}/${PN}-diffheaders.patch"
-		
+
 		sed -i -e 's/^dnl \(APPENDDEF.*-D_FFR_DIFFHEADERS.*\)/\1/' \
 			devtools/Site/site.config.m4
 	fi
