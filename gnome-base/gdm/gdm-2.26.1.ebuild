@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.3 2009/06/19 18:36:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.26.1.ebuild,v 1.4 2009/07/20 23:10:36 eva Exp $
 
 EAPI="2"
 
@@ -114,9 +114,10 @@ src_prepare() {
 	# Fix libxklavier automagic support
 	epatch "${WORKDIR}/${PN}-2.26.1-automagic-libxklavier-support.patch"
 
-	# Fix intltoolize broken file, see upstream #577133
-	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed 2 failed"
+	# Fix libxklavier-4 support
+	epatch "${FILESDIR}/${PN}-2.26.1-libxklavier4.patch"
 
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
