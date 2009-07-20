@@ -3,8 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>tester@gentoo.org</email>
-    <name>Olivier Crête</name>
+    <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <use>
     <flag name="id3">Support ID3 in the player</flag>
