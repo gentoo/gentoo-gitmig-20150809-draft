@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10068 2009/07/20 16:48:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10069 2009/07/20 22:09:38 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1154,17 +1154,6 @@ dev-util/w32api
 # Peter Volkov <pva@gentoo.org> (16 Nov 2008)
 # The development branch, to be unmasked when out of beta by upstream.
 =net-misc/socat-2.0.0*
-
-# Mike Doty <kingtaco@gentoo.org> (9 Nov 2008)
-# Masked for testing
-=app-emulation/emul-linux-x86-baselibs-20081109
-=app-emulation/emul-linux-x86-gtklibs-20081109
-=app-emulation/emul-linux-x86-qtlibs-20081109
-=app-emulation/emul-linux-x86-soundlibs-20081109
-=app-emulation/emul-linux-x86-compat-20081109
-=app-emulation/emul-linux-x86-medialibs-20081109
-=app-emulation/emul-linux-x86-sdl-20081109
-=app-emulation/emul-linux-x86-xlibs-20081109
 
 # Steve Dibb <beandog@gentoo.org> (5 Nov 2008)
 # Mask realplayer, real codecs for security, upstream issues, bug 245662
