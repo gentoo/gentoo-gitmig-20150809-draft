@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/zphoto
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.19 2007/12/25 17:11:56 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/ChangeLog,v 1.20 2009/07/20 18:21:39 vostorga Exp $
+
+  20 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> zphoto-1.2-r2.ebuild,
+  +files/zphoto-1.2-glibc210.patch:
+  Adding patch to build with glibc-2.10, closes bug #273831
+  Adding built with use dependency : =x11-libs/wxGTK-2.6*[X]
 
   25 Dec 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing usata from metadata.xml as per #22931. Assigning to maintainer-needed.
