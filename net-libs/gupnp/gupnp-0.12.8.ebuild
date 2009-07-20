@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.12.8.ebuild,v 1.1 2009/06/18 07:36:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.12.8.ebuild,v 1.2 2009/07/20 08:52:03 ssuominen Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=net-libs/gssdp-0.6
 	net-libs/libsoup:2.4
 	>=dev-libs/glib-2.18:2
 	dev-libs/libxml2
-	sys-fs/e2fsprogs"
+	|| ( >=sys-apps/util-linux-2.16 <sys-libs/e2fsprogs-libs-1.41.8 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
