@@ -1,7 +1,7 @@
 From a1e6abb5ca89d699144d10fdc4309b3b78f2f7a9 Mon Sep 17 00:00:00 2001
 From: Eric Anholt <eric@anholt.net>
 Date: Wed, 15 Jul 2009 14:15:10 -0700
-Subject: [PATCH 3/3] Use batch_start_atomic to fix batchbuffer wrapping problems with 8xx render.
+Subject: [PATCH 3/7] Use batch_start_atomic to fix batchbuffer wrapping problems with 8xx render.
 
 Bug #22483.
 ---

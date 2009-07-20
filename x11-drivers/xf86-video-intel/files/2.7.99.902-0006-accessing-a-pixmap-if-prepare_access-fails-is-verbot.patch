@@ -1,0 +1,34 @@
+From 57c7cbade9556e7b21867e61353f0928fd553616 Mon Sep 17 00:00:00 2001
+From: Owain Ainsworth <zerooa@googlemail.com>
+Date: Thu, 16 Jul 2009 20:38:43 +0100
+Subject: [PATCH 6/7] accessing a pixmap if prepare_access fails is verboten.
+
+Don't do it, treat this the same as every other prepare access call in uxa.
+
+Reviewed-by: Keith Packard <keithp@keithp.com>
+Signed-off-by: Owain Ainsworth <zerooa@googlemail.com>
+---
+ uxa/uxa.c |    7 ++++---
+ 1 files changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/uxa/uxa.c b/uxa/uxa.c
+index 1f2d75b..22c7c40 100644
+--- a/uxa/uxa.c
++++ b/uxa/uxa.c
+@@ -244,9 +244,10 @@ uxa_validate_gc (GCPtr pGC, unsigned long changes, DrawablePtr pDrawable)
+ 	/* We can't inline stipple handling like we do for GCTile because it sets
+ 	 * fbgc privates.
+ 	 */
+-	uxa_prepare_access(&pGC->stipple->drawable, UXA_ACCESS_RW);
+-	fbValidateGC (pGC, changes, pDrawable);
+-	uxa_finish_access(&pGC->stipple->drawable);
++	if (uxa_prepare_access(&pGC->stipple->drawable, UXA_ACCESS_RW)) {
++	    fbValidateGC (pGC, changes, pDrawable);
++	    uxa_finish_access(&pGC->stipple->drawable);
++	}
+     } else {
+ 	fbValidateGC (pGC, changes, pDrawable);
+     }
+-- 
+1.6.3.3
+

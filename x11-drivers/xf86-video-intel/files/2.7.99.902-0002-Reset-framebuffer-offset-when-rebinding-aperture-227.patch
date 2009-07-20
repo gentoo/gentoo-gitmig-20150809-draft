@@ -1,7 +1,7 @@
 From e386e7b14b139f15205e14b173e8222bf38d9e18 Mon Sep 17 00:00:00 2001
 From: Keith Packard <keithp@keithp.com>
 Date: Wed, 15 Jul 2009 09:43:04 -0700
-Subject: [PATCH 2/3] Reset framebuffer offset when rebinding aperture (22760).
+Subject: [PATCH 2/7] Reset framebuffer offset when rebinding aperture (22760).
 
 scrn->fbOffset may be changed when binding objects to the aperture during
 server initialization or VT enter. This was accidentally removed when the
