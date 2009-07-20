@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.ebuild,v 1.1 2009/07/08 13:03:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.15.ebuild,v 1.2 2009/07/20 21:53:08 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -30,7 +30,8 @@ RDEPEND="!sys-cluster/mpich2
 	ffmpeg? ( media-video/ffmpeg )
 	flac? ( media-libs/flac[ogg?] )
 	fluidsynth? ( media-sound/fluidsynth )
-	network? ( >=media-libs/libshout-2 )
+	network? ( >=media-libs/libshout-2
+		!lame? ( !vorbis? ( media-libs/libvorbis ) ) )
 	id3? ( media-libs/libid3tag )
 	jack? ( media-sound/jack-audio-connection-kit )
 	lame? ( network? ( media-sound/lame ) )
@@ -70,6 +71,10 @@ src_configure() {
 	if use network; then
 		mpdconf+=" --enable-shout $(use_enable vorbis vorbis-encoder)
 			--enable-httpd-output $(use_enable lame lame-encoder)"
+		if ! use lame && ! use vorbis; then
+			ewarn "At least one encoder is required, enabling vorbis for you."
+			mpdconf+=" --enable-vorbis-encoder"
+		fi
 	else
 		mpdconf+=" --disable-shout --disable-vorbis-encoder
 			--disable-httpd-output --disable-lame-encoder"
