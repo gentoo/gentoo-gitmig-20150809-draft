@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.2.ebuild,v 1.3 2009/03/28 18:12:03 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/webcdwriter/webcdwriter-2.8.2.ebuild,v 1.4 2009/07/20 04:16:16 ssuominen Exp $
 
 inherit eutils java-pkg-2 pam
 
