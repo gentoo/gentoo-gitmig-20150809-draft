@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.9 2008/03/28 22:49:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.10 2009/07/20 12:53:04 flameeyes Exp $
 
 CRON_SYSTEM_CRONTAB="yes"
 
@@ -30,7 +30,8 @@ src_compile() {
 	echo "${D}/usr/bin" > conf-bin
 	echo "$(tc-getCC) ${CFLAGS}" > conf-cc
 	echo "$(tc-getCC) ${LDFLAGS}" > conf-ld
-	make || die "make failed" #no emake b/c jobserver
+	# bug #278459
+	emake -j1 || die "make failed"
 }
 
 src_install() {
