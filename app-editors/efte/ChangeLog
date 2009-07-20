@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/efte
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.4 2008/05/28 13:55:33 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/ChangeLog,v 1.5 2009/07/20 22:15:41 hanno Exp $
+
+*efte-1.0 (20 Jul 2009)
+
+  20 Jul 2009; Hanno Boeck <hanno@gentoo.org> +efte-1.0.ebuild:
+  Version bump, cefte stuff no longer needed.
 
   28 May 2008; Hanno Boeck <hanno@gentoo.org> efte-0.96.ebuild:
   Change dependencies from xorg-x11 to the separate libraries.
