@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.46 2009/06/01 22:47:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.47 2009/07/20 15:17:05 tester Exp $
+
+*telepathy-gabble-0.7.30 (20 Jul 2009)
+
+  20 Jul 2009; Olivier Crête <tester@gentoo.org>
+  -telepathy-gabble-0.7.15.ebuild, -telepathy-gabble-0.7.16.ebuild,
+  -telepathy-gabble-0.7.17.ebuild, -telepathy-gabble-0.7.20.ebuild,
+  -telepathy-gabble-0.7.26.ebuild, +telepathy-gabble-0.7.30.ebuild:
+  Version bump, remove old
 
 *telepathy-gabble-0.7.28 (01 Jun 2009)
 

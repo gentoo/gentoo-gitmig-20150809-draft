@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.7.17.ebuild,v 1.2 2009/01/07 17:09:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.7.30.ebuild,v 1.1 2009/07/20 15:17:05 tester Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -16,29 +18,20 @@ IUSE="debug test"
 RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.78
-	>=net-libs/telepathy-glib-0.7.18
-	>=net-libs/loudmouth-1.3.2"
+	>=net-libs/telepathy-glib-0.7.31
+	>=net-libs/loudmouth-1.3.2[ssl]"
 
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-lang/python
+	>=dev-lang/python-2.5
 	test? ( dev-python/twisted
-		dev-python/twisted-words )"
+		dev-python/twisted-words
+		>=dev-python/dbus-python-0.83 )"
 
-pkg_setup() {
-	if ! built_with_use -o net-libs/loudmouth ssl gnutls ; then
-		eerror "${PN} needs net-libs/loudmouth built with"
-		eerror "USE='gnutls' or USE='ssl'."
-		die "No TLS support in net-libs/loudmouth"
-	fi
-}
-
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable debug) \
-		$(use_enable debug handle-leak-debug) \
-		|| die "econf failed"
-	emake || die "emake failed"
+		$(use_enable debug handle-leak-debug)
 }
 
 src_test() {
@@ -47,5 +40,5 @@ src_test() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS NEWS ChangeLog
+	dodoc AUTHORS NEWS ChangeLog README || die "dodoc failed"
 }
