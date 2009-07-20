@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.2.2.ebuild,v 1.2 2009/07/20 20:26:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.2.2-r1.ebuild,v 1.1 2009/07/20 20:26:05 chutzpah Exp $
+
+EAPI=2
 
 inherit eutils nsplugins multilib
 
@@ -10,7 +12,7 @@ SRC_URI="http://www.gibix.net/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64"
+KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2
@@ -25,12 +27,12 @@ autoinstall() {
 	if [[ -x /usr/bin/${PN} ]]; then
 		einfo "Auto installing 32bit plugins..."
 		${PN} -a -i
-		ls /usr/lib64/nsbrowser/plugins
+		ls /usr/$(get_libdir)/nsbrowser/plugins
 
 		# Remove wrappers if equivalent 64-bit plugins exist
 		# TODO: May be better to patch nspluginwrapper so it doesn't create
 		#       duplicate wrappers in the first place...
-		local DIR64="${ROOT}/usr/lib64/nsbrowser/plugins/"
+		local DIR64="${ROOT}/usr/$(get_libdir)/nsbrowser/plugins/"
 		for f in "${DIR64}"/npwrapper.*.so; do
 			local PLUGIN=${f##*/npwrapper.}
 			if [[ -f ${DIR64}/${PLUGIN} ]]; then
@@ -41,14 +43,21 @@ autoinstall() {
 	fi
 }
 
-src_compile() {
-	econf --with-biarch \
+src_prepare() {
+	epatch "${FILESDIR}/${P}-gcc44.patch"
+	epatch "${FILESDIR}/${P}-npidentifiers.patch"
+}
+
+src_configure() {
+	econf --enable-biarch \
+		--target-cpu=i386 \
 		--with-lib32=$(ABI=x86 get_libdir) \
 		--with-lib64=$(get_libdir) \
 		--pkglibdir=/usr/$(get_libdir)/${PN}
+}
 
+src_compile() {
 	emake || die "emake failed"
-
 }
 
 src_install() {

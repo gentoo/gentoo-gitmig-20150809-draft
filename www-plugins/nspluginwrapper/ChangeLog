@@ -1,6 +1,15 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.1 2009/04/09 21:06:33 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.2 2009/07/20 20:26:05 chutzpah Exp $
+
+*nspluginwrapper-1.2.2-r1 (20 Jul 2009)
+
+  20 Jul 2009; Patrick McLean <chutzpah@gentoo.org>
+  nspluginwrapper-1.2.2.ebuild, +nspluginwrapper-1.2.2-r1.ebuild,
+  +files/nspluginwrapper-1.2.2-gcc44.patch,
+  +files/nspluginwrapper-1.2.2-npidentifiers.patch:
+  Stabilize 1.2.2, add 1.2.2-r1 with gcc44 patch (bug #269250, thanks to
+  hubertstar@gmail.com for patch).
 
   09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +nspluginwrapper-1.0.0.ebuild, +nspluginwrapper-1.2.2.ebuild:
