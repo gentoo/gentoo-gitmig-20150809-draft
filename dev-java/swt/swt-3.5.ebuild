@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.5.ebuild,v 1.1 2009/07/19 10:27:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/swt-3.5.ebuild,v 1.2 2009/07/20 12:57:36 caster Exp $
 
 EAPI=2
 
@@ -53,7 +53,6 @@ COMMON=">=dev-libs/glib-2.6
 # so this is the only way to prevent collisions
 
 DEPEND=">=virtual/jdk-1.4
-		!=dev-java/swt-3.5:*3
 		app-arch/unzip
 		x11-libs/libX11
 		x11-libs/libXrender

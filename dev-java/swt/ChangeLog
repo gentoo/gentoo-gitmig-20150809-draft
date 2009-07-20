@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.106 2009/07/19 10:27:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.107 2009/07/20 12:57:36 caster Exp $
+
+  20 Jul 2009; Vlastimil Babka <caster@gentoo.org> swt-3.5.ebuild:
+  Remove useless blocker with bad syntax, thanks to darkside. Fixes bug
+  278368.
+
+  20 Jul 2009; Vlastimil Babka <caster@gentoo.org> swt-3.5.ebuild:
+  Remove useless blocker with bad syntax, thanks to darkside.
 
 *swt-3.5 (19 Jul 2009)
 *swt-3.4-r4 (19 Jul 2009)
