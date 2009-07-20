@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1-r1.ebuild,v 1.1 2009/03/12 18:50:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1-r1.ebuild,v 1.2 2009/07/20 04:59:47 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -164,6 +164,8 @@ src_unpack() {
 		EPATCH_SUFFIX="patch"
 		epatch "${WORKDIR}"/patch
 	fi
+
+	sed -i 's:getline:get_line:' extra/scripts/unifdef.c #277186
 
 	########## CPU SELECTION ##########
 

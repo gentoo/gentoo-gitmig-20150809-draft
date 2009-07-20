@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.45 2009/03/12 18:50:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.46 2009/07/20 04:59:47 vapier Exp $
+
+  20 Jul 2009; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.30.1.ebuild,
+  uclibc-0.9.30.1-r1.ebuild:
+  Fix getline() conflict with glibc-2.10 #277186 by Diego E. Pettenò.
 
 *uclibc-0.9.30.1-r1 (12 Mar 2009)
 
