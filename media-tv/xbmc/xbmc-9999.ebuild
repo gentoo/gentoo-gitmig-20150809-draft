@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.25 2009/05/29 20:58:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.26 2009/07/20 08:22:27 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -47,7 +47,9 @@ RDEPEND="opengl? ( virtual/opengl )
 	media-libs/freetype
 	media-libs/glew
 	media-libs/jasper
+	media-libs/libass
 	media-libs/libmad
+	media-libs/libmms
 	media-libs/libogg
 	media-libs/libsamplerate
 	media-libs/libsdl[alsa,audio,video,X]
@@ -56,6 +58,7 @@ RDEPEND="opengl? ( virtual/opengl )
 	media-libs/sdl-image[gif,jpeg,png]
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
+	media-sound/wavpack
 	net-misc/curl
 	sys-apps/dbus
 	sys-apps/hal
@@ -93,8 +96,9 @@ src_prepare() {
 	find . -type f -print0 | xargs -0 touch -r configure
 
 	# Fix XBMC's final version string showing as "exported"
-	# instead of the SVN revision number.  Also cleanup flags.
+	# instead of the SVN revision number.
 	export SVN_REV=${ESVN_WC_REVISION:-exported}
+
 	# Avoid lsb-release dependency
 	sed -i \
 		-e 's:/usr/bin/lsb_release -d:cat /etc/gentoo-release:' \
@@ -113,6 +117,7 @@ src_configure() {
 	econf \
 		--disable-ccache \
 		--disable-optimizations \
+		--enable-external-libraries \
 		$(use_enable debug) \
 		$(use_enable joystick) \
 		$(use_enable opengl gl) \

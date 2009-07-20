@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.20 2009/07/20 06:51:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.21 2009/07/20 08:22:27 vapier Exp $
+
+  20 Jul 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Add more libraries to DEPEND #278294 by BT and move to external libraries
+  #275844 by candrews.
 
   20 Jul 2009; Mike Frysinger <vapier@gentoo.org> files/xbmc-9.04-gcc.patch:
   Update gcc-4.4 patch #277562 by Diego E. Pettenò.
