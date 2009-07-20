@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.2.ebuild,v 1.1 2009/07/18 15:40:42 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/openbabel-2.2.2.ebuild,v 1.2 2009/07/20 21:47:17 mr_bones_ Exp $
 
 EAPI=1
 
@@ -57,4 +57,3 @@ src_install() {
 		doins *
 	fi
 }
-
