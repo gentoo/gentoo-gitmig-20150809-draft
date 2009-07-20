@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6-r1.ebuild,v 1.5 2006/11/18 04:43:11 joshuabaergen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/gmfsk/gmfsk-0.6-r1.ebuild,v 1.6 2009/07/20 16:38:39 vostorga Exp $
 
 inherit eutils gnome2
 
@@ -29,7 +29,7 @@ DOCS="AUTHORS COPYING COPYING-DOCS ChangeLog INSTALL NEWS README"
 
 src_unpack(){
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-patch-mt63_dsp.h || \
-		die "epatch failed"
+	cd "${S}"
+	epatch "${FILESDIR}"/"${PN}"-patch-mt63_dsp.h
+	epatch "${FILESDIR}"/"${P}"-gcc44.patch
 }
