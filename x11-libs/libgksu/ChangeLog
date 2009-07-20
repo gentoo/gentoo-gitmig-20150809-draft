@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.53 2009/03/22 17:41:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.54 2009/07/20 20:37:36 eva Exp $
+
+*libgksu-2.0.12 (20 Jul 2009)
+
+  20 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org> -libgksu-2.0.7.ebuild,
+  +libgksu-2.0.12.ebuild:
+  Version bump, closes bug #278445. Drop libglade usage, make sudo work when
+  tty is required. Clean up old revision.
 
 *libgksu-2.0.9 (22 Mar 2009)
 
