@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.13 2009/04/30 18:22:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.14 2009/07/20 10:56:12 flameeyes Exp $
 
 inherit base eutils
 
@@ -49,7 +49,9 @@ src_compile() {
 	# --without-swf for bug https://bugs.gentoo.org/show_bug.cgi?id=137204
 	econf $(use_with emf) --without-swf $(use_with imagemagick magick) \
 		  $(use_with plotutils libplot) || die 'econf failed'
-	make || die 'compilation failed'
+
+	# bug #278417
+	emake -j1 || die 'compilation failed'
 }
 
 src_install () {
