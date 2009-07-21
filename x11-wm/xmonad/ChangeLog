@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/xmonad
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.10 2008/09/06 19:30:53 kolmodin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/ChangeLog,v 1.11 2009/07/21 16:43:58 chainsaw Exp $
+
+  21 Jul 2009; <chainsaw@gentoo.org> xmonad-0.8.ebuild:
+  Marked stable on AMD64 as requested by Lennart Kolmodin
+  <kolmodin@gentoo.org> in bug #278543.
 
 *xmonad-0.8 (06 Sep 2008)
 
