@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.2.ebuild,v 1.9 2008/12/19 17:02:49 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/icecast-2.3.2.ebuild,v 1.10 2009/07/21 17:18:54 ssuominen Exp $
 
-EAPI=1
-
-inherit libtool base eutils
+EAPI=2
+inherit eutils libtool
 
 DESCRIPTION="An opensource alternative to shoutcast that supports mp3, ogg (vorbis/theora) and aac streaming"
 HOMEPAGE="http://www.icecast.org/"
@@ -30,13 +29,13 @@ pkg_setup() {
 	enewuser icecast -1 -1 -1 nogroup
 }
 
-src_unpack() {
-	base_src_unpack
+src_prepare() {
 	elibtoolize
 }
 
-src_compile() {
-	econf 	--disable-dependency-tracking \
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
 		--sysconfdir=/etc/icecast2 \
 		$(use_with theora) \
 		$(use_with speex) \
@@ -48,19 +47,24 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist || die
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS README TODO HACKING NEWS conf/icecast.xml.dist
 	dohtml -A chm,hhc,hhp doc/*
-	doman "${S}/debian/icecast2.1"
+	doman debian/icecast2.1
 
-	newinitd "${FILESDIR}/init.d.icecast" icecast
+	newinitd "${FILESDIR}"/init.d.icecast icecast
 
-	insinto /etc/icecast2/
-	doins "${FILESDIR}/icecast.xml"
+	insinto /etc/icecast2
+	doins "${FILESDIR}"/icecast.xml
 	fperms 600 /etc/icecast2/icecast.xml
 
 	diropts -m0764 -o icecast -g nogroup
 	dodir /var/log/icecast
 	keepdir /var/log/icecast
-	rm -rf "${D}/usr/share/doc/icecast"
+	rm -rf "${D}"/usr/share/doc/icecast
+}
+
+pkg_postinst() {
+	touch "${ROOT}"var/log/icecast/{access,error}.log
+	chown icecast:nogroup "${ROOT}"var/log/icecast/{access,error}.log
 }

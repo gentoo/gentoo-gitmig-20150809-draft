@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/icecast
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.84 2008/12/19 17:02:49 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icecast/ChangeLog,v 1.85 2009/07/21 17:18:54 ssuominen Exp $
+
+  21 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> icecast-2.3.2.ebuild:
+  Touch access.log and error.log and chown them to icecast:nogroup wrt
+  #245727, thanks to Christopher Schwan for reporting.
 
   19 Dec 2008; Peter Volkov <pva@gentoo.org> icecast-2.3.2.ebuild:
   Removed || die after enewuser, bug #237290
