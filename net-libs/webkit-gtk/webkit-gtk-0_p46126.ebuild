@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46126.ebuild,v 1.2 2009/07/21 21:02:24 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46126.ebuild,v 1.3 2009/07/21 21:40:39 jokey Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://nightly.webkit.org/files/trunk/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 -ia64 ~ppc -sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 -ia64 ppc -sparc x86 ~x86-fbsd"
 IUSE="coverage debug gstreamer pango soup sqlite svg wxwidgets xslt"
 
 RDEPEND=">=x11-libs/gtk+-2.8
@@ -31,7 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.8
 	soup? ( >=net-libs/libsoup-2.27.4 )
 	xslt? ( dev-libs/libxslt )
 	pango? ( x11-libs/pango )
-	wxwidgets? ( x11-libs/wxGTK dev-util/bakefile )"
+	wxwidgets? ( x11-libs/wxGTK )"
 
 DEPEND="${RDEPEND}
 	dev-util/gperf
@@ -43,6 +43,7 @@ S="${WORKDIR}/${MY_P}"
 src_prepare() {
 	epatch "${FILESDIR}/${P}-cxxmissing.patch"
 	epatch "${FILESDIR}/${P}-wxslot-gentoo.patch"
+	epatch "${FILESDIR}/${P}-wx-parallel-make.patch"
 	gtkdocize
 	eautoreconf
 }
@@ -52,8 +53,8 @@ src_configure() {
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	local myconf
-		use pango && myconf="${myconf} --with-font-backend=pango"
-		use soup && myconf="${myconf} --with-http-backend=soup"
+	use pango && myconf="${myconf} --with-font-backend=pango"
+	use soup && myconf="${myconf} --with-http-backend=soup"
 
 	econf \
 		$(use_enable sqlite database) \
@@ -71,9 +72,11 @@ src_configure() {
 
 src_compile() {
 	emake || die "emake failed"
-
+	read
 	if use wxwidgets ; then
-		cd "${S}"/WebKitTools/wx
+		# Upstream without further comment
+		cp DerivedSources/JSDataGridC* bindings/js
+		cd ${S}/WebKitTools/wx
 		./build-wxwebkit || die "wxwebkit build failed"
 	fi
 }
