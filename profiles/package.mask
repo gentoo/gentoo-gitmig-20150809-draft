@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10077 2009/07/21 20:12:15 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10078 2009/07/21 20:57:44 jokey Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Markus Ullmann <jokey@gentoo.org> (21 Jul 2009)
+# mask until libsoap 2.27 or higher is in-tree
+=webkit-gtk-0_p46*
+=webkit-gtk-0_p47*
+=webkit-gtk-0_p48*
+=webkit-gtk-0_p49*
 
 # Romain Perier <mrpouet@gentoo.org> (21 Jul 2009)
 # Builds only with >=sys-apps/lm_sensors-3 which is masked
