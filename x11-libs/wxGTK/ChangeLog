@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.231 2009/07/21 20:49:28 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.232 2009/07/21 21:10:06 fmccor Exp $
+
+  21 Jul 2009; Ferris McCormick <fmccor@gentoo.org> wxGTK-2.6.4.0-r5.ebuild:
+  Sparc stable, bug #277722.
 
 *wxGTK-2.8.10.1-r2 (21 Jul 2009)
 
