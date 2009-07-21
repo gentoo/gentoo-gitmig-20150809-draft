@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.193 2009/07/21 21:11:14 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.194 2009/07/21 21:12:12 beandog Exp $
+
+  21 Jul 2009; Steve Dibb <beandog@gentoo.org> mpg123-1.8.1.ebuild:
+  amd64 stable, bug 278597
 
   21 Jul 2009; Steve Dibb <beandog@gentoo.org> mpg123-1.8.1.ebuild:
   Drop useless PDEPEND
