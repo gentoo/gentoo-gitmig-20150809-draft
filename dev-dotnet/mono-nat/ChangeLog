@@ -1,6 +1,10 @@
 # ChangeLog for dev-dotnet/mono-nat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/ChangeLog,v 1.4 2009/07/20 03:30:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/ChangeLog,v 1.5 2009/07/21 19:07:53 fauli Exp $
+
+  21 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  mono-nat-1.0.1.ebuild:
+  stable x86, bug 273254
 
   20 Jul 2009; Jeremy Olexa <darkside@gentoo.org> mono-nat-1.0.1.ebuild:
   amd64 stable, bug 273254
