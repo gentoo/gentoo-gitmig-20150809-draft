@@ -1,8 +1,11 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.4.ebuild,v 1.1 2008/07/27 09:12:20 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.4.ebuild,v 1.2 2009/07/21 19:26:06 mrpouet Exp $
 
-inherit gnome2
+EAPI="2"
+GCONF_DEBUG="no"
+
+inherit gnome2 eutils autotools
 
 DESCRIPTION="Gnome2 Hardware Monitor Applet"
 HOMEPAGE="http://people.iola.dk/olau/hardware-monitor/"
@@ -16,10 +19,12 @@ IUSE="lm_sensors"
 RDEPEND=">=dev-cpp/gconfmm-2.6.0
 		>=dev-cpp/gtkmm-2.6.0
 		>=dev-cpp/libgnomecanvasmm-2.6.0
+		>=gnome-base/libgnomeui-2.20
 		>=dev-cpp/libglademm-2.6.0
 		>=gnome-base/gnome-panel-2
 		>=gnome-base/libgtop-2.6.0
-		lm_sensors? ( sys-apps/lm_sensors )"
+		lm_sensors? ( sys-apps/lm_sensors
+			!>=sys-apps/lm_sensors-3 )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		>=dev-util/intltool-0.29"
@@ -27,4 +32,12 @@ DEPEND="${RDEPEND}
 pkg_setup() {
 	G2CONF="${G2CONF} \
 			$(use_with lm_sensors libsensors)"
+}
+
+src_prepare() {
+	# Fix compilation error due to missing libgnomeui CFLAGS,
+	# and missing header
+	epatch "${FILESDIR}/${P}-libgnomeui.patch"
+
+	eautoreconf
 }
