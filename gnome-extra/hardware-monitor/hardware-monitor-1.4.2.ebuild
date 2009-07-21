@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.4.2.ebuild,v 1.2 2009/07/20 21:38:12 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/hardware-monitor/hardware-monitor-1.4.2.ebuild,v 1.3 2009/07/21 20:17:09 mrpouet Exp $
 
 GCONF_DEBUG="no"
 
@@ -22,7 +22,7 @@ RDEPEND=">=dev-cpp/gconfmm-2.6.0
 		>=gnome-base/gnome-panel-2
 		>=gnome-base/libgnomeui-2.20.1
 		>=gnome-base/libgtop-2.6.0
-		lm_sensors? ( sys-apps/lm_sensors )"
+		lm_sensors? ( >=sys-apps/lm_sensors-3 )"
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig
 		>=dev-util/intltool-0.29"
