@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5-r3.ebuild,v 1.1 2009/07/13 08:51:35 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.1.ebuild,v 1.1 2009/07/21 14:03:55 nirbheek Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -14,10 +14,10 @@ NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
 XUL_PV="1.9.1"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
+DESKTOP_PV="3.5"
 MY_PV="${PV/_beta/b}" # Handle betas for SRC_URI
 MY_PV="${PV/_/}" # Handle rcs for SRC_URI
-MY_PV="${MY_PV/1.9.1/3.5}" # Why is this here?
-PATCH="${PN}-${MAJ_PV}-patches-0.1"
+PATCH="${PN}-3.5-patches-0.1"
 
 DESCRIPTION="Firefox Web Browser"
 HOMEPAGE="http://www.mozilla.com/firefox"
@@ -108,10 +108,6 @@ pkg_setup(){
 		elog "a legal problem with Mozilla Foundation"
 		elog "You can disable it by emerging ${PN} _with_ the bindist USE-flag"
 	fi
-
-	elog
-	elog "libgnomebreakpad now works with firefox so you can debug crashes using bug-buddy"
-	elog "If you don't have bug-buddy installed, ignore the gtk-warning at startup"
 }
 
 src_unpack() {
@@ -269,22 +265,22 @@ src_install() {
 	if use iceweasel; then
 		newicon "${S}"/browser/base/branding/icon48.png iceweasel-icon.png
 		newmenu "${FILESDIR}"/icon/iceweasel.desktop \
-			${PN}-${MAJ_PV}.desktop
+			${PN}-${DESKTOP_PV}.desktop
 	elif ! use bindist; then
 		newicon "${S}"/other-licenses/branding/firefox/content/icon48.png firefox-icon.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
-			${PN}-${MAJ_PV}.desktop
+			${PN}-${DESKTOP_PV}.desktop
 	else
 		newicon "${S}"/browser/base/branding/icon48.png firefox-icon-unbranded.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
-			${PN}-${MAJ_PV}.desktop
+			${PN}-${DESKTOP_PV}.desktop
 		sed -e "s/Bon Echo/Minefield/" \
-			-i "${D}"/usr/share/applications/${PN}-${MAJ_PV}.desktop
+			-i "${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
 	fi
 
 	# Add StartupNotify=true bug 237317
 	if use startup-notification; then
-		echo "StartupNotify=true" >> "${D}"/usr/share/applications/${PN}-${MAJ_PV}.desktop
+		echo "StartupNotify=true" >> "${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
 	fi
 
 	# Create /usr/bin/firefox
@@ -302,8 +298,7 @@ EOF
 
 pkg_postinst() {
 	ewarn "All the packages built against ${PN} won't compile,"
-	ewarn "if after installing firefox 3.5 you get some blockers,"
-	ewarn "please add 'xulrunner' to your USE-flags."
+	ewarn "any package that fails to build warrants a bug report."
 	elog
 
 	# Update mimedb for the new .desktop file
