@@ -1,21 +1,32 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/logserial-0.4.2.ebuild,v 1.4 2006/02/20 18:21:32 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logserial/logserial-0.4.2.ebuild,v 1.5 2009/07/21 16:41:09 ssuominen Exp $
+
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A tool for logging raw data from a serial device."
 HOMEPAGE="http://www.gtlib.cc.gatech.edu/pub/Linux/system/serial/logserial-0.4.2.lsm"
 SRC_URI="http://www.gtlib.cc.gatech.edu/pub/Linux/system/serial/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+SLOT="0"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
+RDEPEND=""
+DEPEND=""
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
 src_compile() {
-	make
+	tc-export CC
+	emake || die "emake failed"
 }
 
 src_install() {
-	dodir /usr/bin
-	cp logserial ${D}/usr/bin
+	dobin logserial || die "dobin failed"
+	dodoc CHANGELOG README
 }
