@@ -1,6 +1,14 @@
 # ChangeLog for games-fps/darkplaces
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.4 2008/02/29 19:10:55 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/darkplaces/ChangeLog,v 1.5 2009/07/21 04:13:54 mr_bones_ Exp $
+
+*darkplaces-20090709 (21 Jul 2009)
+
+  21 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +darkplaces-20090709.ebuild:
+  version bump - bug #140074 with submissions from Piotr Szymaniak and Paul
+  Bredbury
+
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org>
   darkplaces-20060616_beta1.ebuild:
