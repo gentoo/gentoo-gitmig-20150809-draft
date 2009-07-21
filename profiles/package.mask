@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10074 2009/07/21 15:33:15 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10075 2009/07/21 16:29:22 armin76 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1202,10 +1202,6 @@ media-libs/realcodecs
 # Christian Parpart <trapni@gentoo.org> (25 Sep 2008)
 # for testing/experienced users only
 >=sys-fs/zfs-fuse-9999
-
-# Robin H. Johnson <robbat2@gentoo.org> (25 Sep 2008)
-# Mainly intended for BSD world. Has multiple interface support.
->=net-misc/dhcpcd-4.99
 
 # Ben de Groot <yngwin@gentoo.org> (23 Sep 2008)
 # Mask for testing, possible ABI breakage (see bug 219227)
