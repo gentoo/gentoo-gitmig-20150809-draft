@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/fisicalab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/ChangeLog,v 1.1 2009/03/16 11:50:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/fisicalab/ChangeLog,v 1.2 2009/07/21 12:18:26 voyageur Exp $
+
+  21 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org> fisicalab-0.1.ebuild,
+  +files/fisicalab-0.1-as-needed.patch:
+  Fix compilation with forced --as-needed, bug #278135
 
 *fisicalab-0.1 (16 Mar 2009)
 
