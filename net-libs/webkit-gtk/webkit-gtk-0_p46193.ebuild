@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46126.ebuild,v 1.3 2009/07/21 21:40:39 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46193.ebuild,v 1.1 2009/07/21 23:20:13 jokey Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://nightly.webkit.org/files/trunk/src/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2 LGPL-2.1 BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 -ia64 ppc -sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 -ia64 ~ppc -sparc ~x86 ~x86-fbsd"
 IUSE="coverage debug gstreamer pango soup sqlite svg wxwidgets xslt"
 
 RDEPEND=">=x11-libs/gtk+-2.8
@@ -41,9 +41,10 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-cxxmissing.patch"
-	epatch "${FILESDIR}/${P}-wxslot-gentoo.patch"
-	epatch "${FILESDIR}/${P}-wx-parallel-make.patch"
+	epatch "${FILESDIR}/${PN}-0_p46126-cxxmissing.patch"
+	epatch "${FILESDIR}/${PN}-0_p46126-wxslot-gentoo.patch"
+	epatch "${FILESDIR}/${PN}-0_p46126-wx-parallel-make.patch"
+	epatch "${FILESDIR}/${PN}-0_p46193-bake.patch"
 	gtkdocize
 	eautoreconf
 }
@@ -72,10 +73,12 @@ src_configure() {
 
 src_compile() {
 	emake || die "emake failed"
-	read
+
 	if use wxwidgets ; then
 		# Upstream without further comment
-		cp DerivedSources/JSDataGridC* bindings/js
+		cd ${S}
+		cp DerivedSources/JSDataGridC*.{cpp,h} WebCore/bindings/js || die "copy failed"
+		
 		cd ${S}/WebKitTools/wx
 		./build-wxwebkit || die "wxwebkit build failed"
 	fi
