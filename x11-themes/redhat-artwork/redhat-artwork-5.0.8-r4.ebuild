@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.6 2008/08/25 17:06:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-5.0.8-r4.ebuild,v 1.7 2009/07/21 14:14:02 ssuominen Exp $
 
 inherit eutils rpm kde-functions autotools
 
@@ -17,7 +17,7 @@ IUSE="kde audacious"
 # See end of src_install():
 IUSE="${IUSE} gdm kdm cursors icons nautilus"
 
-RDEPEND=">=x11-libs/gtk+-2.0
+RDEPEND=">=x11-libs/gtk+-2
 	kde? ( || ( ( kde-base/kcontrol kde-base/kwin )
 	            kde-base/kdebase ) )"
 
@@ -25,6 +25,8 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	media-gfx/icon-slicer
 	=sys-devel/automake-1.8*"
+
+RESTRICT="test"
 
 src_compile() {
 
