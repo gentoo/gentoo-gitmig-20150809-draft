@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.120 2009/06/25 18:59:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.121 2009/07/21 13:43:56 fauli Exp $
+
+  21 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  wpa_supplicant-0.6.9.ebuild:
+  stable x86, bug 278355
 
   25 Jun 2009; Ben de Groot <yngwin@gentoo.org>
   -wpa_supplicant-0.5.7.ebuild, -wpa_supplicant-0.5.8.ebuild,
