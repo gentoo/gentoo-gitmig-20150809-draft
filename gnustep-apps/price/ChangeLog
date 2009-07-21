@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/price
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.16 2008/09/21 15:44:01 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/price/ChangeLog,v 1.17 2009/07/21 15:16:20 voyageur Exp $
+
+*price-0.8.3 (21 Jul 2009)
+
+  21 Jul 2009; Bernard Cafarelli <voyageur@gentoo.org> +price-0.8.3.ebuild:
+  Version bump, and fix bug #278160, using #include instead of #import for
+  <limits.h>
 
   21 Sep 2008; nixnut <nixnut@gentoo.org> price-0.8.2.ebuild:
   Stable on ppc wrt bug 235922
