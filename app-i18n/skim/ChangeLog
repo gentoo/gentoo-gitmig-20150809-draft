@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.70 2009/07/20 01:48:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.71 2009/07/21 00:49:22 jer Exp $
+
+  21 Jul 2009; Jeroen Roovers <jer@gentoo.org> skim-1.4.5-r5.ebuild:
+  Stable for HPPA (bug #277353).
 
   20 Jul 2009; Jeremy Olexa <darkside@gentoo.org> skim-1.4.5-r5.ebuild:
   amd64 stable, bug 277353
