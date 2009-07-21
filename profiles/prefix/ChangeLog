@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.33 2009/07/21 09:49:09 haubi Exp $
+# $Id: ChangeLog,v 1.34 2009/07/21 11:17:32 mduft Exp $
+
+  21 Jul 2009; Markus Duft <mduft@gentoo.org> windows/interix/use.mask:
+  masked a few more user flags that wont work on interix
 
   21 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> hpux/profile.bashrc:
   typo calling 'prefix_hpux-pre_pkg_postinst' while it should have been
