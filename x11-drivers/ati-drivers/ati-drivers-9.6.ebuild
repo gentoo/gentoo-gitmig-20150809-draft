@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.12 2009/07/16 09:24:51 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.6.ebuild,v 1.13 2009/07/21 10:43:20 scarabeus Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Ati precompiled drivers for r600 (HD Series) and newer chipsets"
 HOMEPAGE="http://www.ati.com"
 ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV/./-}-x86.x86_64.run"
-IUSE="acpi debug +modules"
+IUSE="acpi debug +modules multilib"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
