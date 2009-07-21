@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.230 2009/07/21 17:59:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.231 2009/07/21 20:49:28 jokey Exp $
+
+*wxGTK-2.8.10.1-r2 (21 Jul 2009)
+
+  21 Jul 2009; Markus Ullmann <jokey@gentoo.org> +wxGTK-2.8.10.1-r2.ebuild,
+  +files/wxGTK-2.8.10.1-slot-bake-b0rkage.patch:
+  Add patch to fix slot b0rkage
 
   21 Jul 2009; Tobias Klausmann <klausman@gentoo.org>
   wxGTK-2.6.4.0-r5.ebuild:
