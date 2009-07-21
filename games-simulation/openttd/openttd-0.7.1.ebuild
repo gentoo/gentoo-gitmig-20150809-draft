@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.1.ebuild,v 1.1 2009/07/02 21:36:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.1.ebuild,v 1.2 2009/07/21 02:19:55 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -65,7 +65,11 @@ src_configure() {
 		--binary-dir="${GAMES_BINDIR}" \
 		--data-dir="${GAMES_DATADIR}/${PN}" \
 		--install-dir="${D}" \
-		--doc-dir=share/doc/${PF} \
+		--icon-theme-dir=/usr/share/icons \
+		--icon-dir=/usr/share/pixmaps \
+		--menu-dir=/usr/share/applications \
+		--man-dir=/usr/share/man \
+		--doc-dir=/usr/share/doc/${PF} \
 		--menu-group="Game;Simulation;" \
 		${myopts} \
 		$(use_with iconv) \
