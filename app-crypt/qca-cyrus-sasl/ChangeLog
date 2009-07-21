@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-cyrus-sasl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-cyrus-sasl/ChangeLog,v 1.7 2009/06/16 18:37:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-cyrus-sasl/ChangeLog,v 1.8 2009/07/21 16:48:28 armin76 Exp $
+
+  21 Jul 2009; Raúl Porcel <armin76@gentoo.org>
+  qca-cyrus-sasl-2.0.0_beta3.ebuild:
+  ia64/sparc stable wrt #272865
 
   16 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   qca-cyrus-sasl-2.0.0_beta3.ebuild:
