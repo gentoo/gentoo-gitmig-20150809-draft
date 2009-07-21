@@ -1,14 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/lagan/lagan-2.0.ebuild,v 1.1 2009/02/27 00:23:49 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/lagan/lagan-2.0-r1.ebuild,v 1.1 2009/07/21 08:12:46 weaver Exp $
+
+EAPI="2"
 
 inherit eutils
 
-MY_PV="20"
+MY_P="lagan20"
 
 DESCRIPTION="LAGAN, Multi-LAGAN, Shuffle-LAGAN, Supermap: Whole-genome multiple alignment of genomic DNA"
 HOMEPAGE="http://lagan.stanford.edu/lagan_web/index.shtml"
-SRC_URI="http://lagan.stanford.edu/lagan_web/lagan${MY_PV}.tar.gz"
+SRC_URI="http://lagan.stanford.edu/lagan_web/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,11 +20,12 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=""
 RDEPEND=""
 
-S="${WORKDIR}/lagan${MY_PV}"
+S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i "/use Getopt::Long;/ i use lib \"/usr/share/${PN}/lib\";" "${S}/supermap.pl" || die
+	# NB: Testing with glibc-2.10 has uncovered a bug in src/utils/Sequence.h where libc getline is erroneously used instead of own getline
+	sed -i 's/getline/my_getline/' "${S}"/src/{anchors.c,glocal/io.cpp} || die
 	epatch "${FILESDIR}"/${P}-*.patch
 }
 
