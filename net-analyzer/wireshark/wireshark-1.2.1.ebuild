@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.0.ebuild,v 1.1 2009/06/17 06:34:46 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.2.1.ebuild,v 1.1 2009/07/21 13:56:12 pva Exp $
 
 EAPI=2
 inherit autotools libtool flag-o-matic eutils toolchain-funcs
