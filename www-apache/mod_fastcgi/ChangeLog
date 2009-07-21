@@ -1,6 +1,13 @@
 # ChangeLog for www-apache/mod_fastcgi
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.6 2008/07/06 13:03:12 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.7 2009/07/21 09:40:38 hanno Exp $
+
+*mod_fastcgi-2.4.7_pre0811090952 (21 Jul 2009)
+
+  21 Jul 2009; Hanno Boeck <hanno@gentoo.org>
+  +mod_fastcgi-2.4.7_pre0811090952.ebuild:
+  Bump to snapshot version, contains some fixes and there has been no
+  release for ages, upstream is quite inactive.
 
   06 Jul 2008; Markus Meier <maekke@gentoo.org> mod_fastcgi-2.4.6-r1.ebuild:
   add empty IUSE
