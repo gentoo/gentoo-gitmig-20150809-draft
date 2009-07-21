@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.39 2009/06/30 14:45:30 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.40 2009/07/21 21:01:23 jokey Exp $
+
+*webkit-gtk-0_p46126 (21 Jul 2009)
+
+  21 Jul 2009; Markus Ullmann <jokey@gentoo.org>
+  +webkit-gtk-0_p46126.ebuild, +files/webkit-gtk-0_p46126-cxxmissing.patch,
+  +files/webkit-gtk-0_p46126-wxslot-gentoo.patch:
+  Add webkit nightly with wx support
 
   30 Jun 2009; Mart Raudsepp <leio@gentoo.org> -webkit-gtk-0_p40220.ebuild:
   Remove security vulnerable revision
