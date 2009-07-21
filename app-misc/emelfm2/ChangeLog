@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/emelfm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.27 2009/04/20 20:34:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/ChangeLog,v 1.28 2009/07/21 08:55:26 ssuominen Exp $
+
+*emelfm2-0.6.2 (21 Jul 2009)
+
+  21 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> +emelfm2-0.6.2.ebuild:
+  Version bump wrt #276470, thanks to Tobias Jakobi for reporting.
 
   20 Apr 2009; Markus Meier <maekke@gentoo.org> emelfm2-0.4.1:
   amd64 stable, bug #259212
