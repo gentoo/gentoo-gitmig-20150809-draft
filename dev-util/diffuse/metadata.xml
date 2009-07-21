@@ -6,5 +6,5 @@
 		<email>grozin@gentoo.org</email>
 		<name>Andrey Grozin</name>
 	</maintainer>
-	<longdescription>A graphicsl tool to compare and merge text files</longdescription>
+	<longdescription>A graphical tool to compare and merge text files</longdescription>
 </pkgmetadata>

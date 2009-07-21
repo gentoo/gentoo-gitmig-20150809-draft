@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/diffuse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.1 2009/07/19 15:27:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.2 2009/07/21 18:29:10 jer Exp $
+
+  21 Jul 2009; Jeroen Roovers <jer@gentoo.org> diffuse-0.3.4.ebuild,
+  metadata.xml:
+  Fix spelling.
 
 *diffuse-0.3.4 (19 Jul 2009)
 
