@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.4.ebuild,v 1.7 2009/03/07 19:57:16 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.11.4.ebuild,v 1.8 2009/07/21 11:34:22 ssuominen Exp $
 
-EAPI="2"
+EAPI=2
 inherit multilib python eutils
 
 DESCRIPTION="Jabber client written in PyGTK"
@@ -14,10 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="avahi dbus gnome idle libnotify nls spell srv trayicon X xhtml"
 
-DEPEND="|| (
-		( <dev-lang/python-2.5 dev-python/pysqlite )
-		>=dev-lang/python-2.5[sqlite]
-	)
+DEPEND=">=dev-lang/python-2.5[sqlite,xml]
 	dev-python/pygtk
 	sys-devel/gettext
 	dev-util/intltool
@@ -53,9 +50,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack "${A}"
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-test_fix.patch"
 }
 
