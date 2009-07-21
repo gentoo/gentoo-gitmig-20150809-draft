@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.6.ebuild,v 1.1 2009/07/16 21:55:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/couchdb-python/couchdb-python-0.6.ebuild,v 1.2 2009/07/21 18:52:47 arfrever Exp $
 
-EAPI=1
+EAPI="2"
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://pypi.python.org/packages/source/C/CouchDB/CouchDB-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 RDEPEND="dev-python/httplib2
@@ -25,6 +25,14 @@ DEPEND=""
 PYTHON_MODNAME="couchdb"
 S=${WORKDIR}/CouchDB-${PV}
 
+src_prepare() {
+	distutils_src_prepare
+
+	# Delete debug print (bug #278561).
+	# Check if it is still needed in next version.
+	sed -e "/print 'Using stdlib json'/d" -i couchdb/json.py || die "sed failed"
+}
+
 src_install() {
 	distutils_src_install
 
@@ -32,5 +40,5 @@ src_install() {
 		epydoc --config=doc/conf/epydoc.ini
 	fi
 
-	dohtml -r doc/* || die
+	dohtml -r doc/* || die "dohtml failed"
 }
