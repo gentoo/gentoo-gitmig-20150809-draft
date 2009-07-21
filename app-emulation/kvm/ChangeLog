@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.35 2009/05/14 14:40:02 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.36 2009/07/21 18:26:49 dang Exp $
+
+*kvm-88 (21 Jul 2009)
+
+  21 Jul 2009; Daniel Gryniewicz <dang@gentoo.org> +kvm-88.ebuild:
+  Bump to kvm-88
 
 *kvm-85-r2 (14 May 2009)
 
