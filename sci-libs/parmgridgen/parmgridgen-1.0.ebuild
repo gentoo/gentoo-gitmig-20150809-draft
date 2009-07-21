@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmgridgen/parmgridgen-1.0.ebuild,v 1.1 2009/04/25 16:04:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/parmgridgen/parmgridgen-1.0.ebuild,v 1.2 2009/07/21 08:01:31 fauli Exp $
+
+EAPI=2
 
 inherit eutils autotools
 
@@ -24,15 +26,13 @@ pkg_setup(){
 	export CC=mpicc
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-autotools.patch"
+	epatch "${FILESDIR}/${P}-as-needed.patch"
 	eautoreconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc README Doc/*.pdf || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc README Doc/*.pdf || die
 }
