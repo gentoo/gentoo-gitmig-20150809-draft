@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/gcl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.54 2009/04/19 19:29:09 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.55 2009/07/21 16:30:28 fauli Exp $
+
+  21 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  gcl-2.6.8_pre20090419.ebuild:
+  stable x86, bug 264649
 
 *gcl-2.6.8_pre20090419 (20 Apr 2009)
 
