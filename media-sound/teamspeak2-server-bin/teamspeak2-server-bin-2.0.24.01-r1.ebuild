@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.24.01-r1.ebuild,v 1.2 2009/05/12 07:21:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.24.01-r1.ebuild,v 1.3 2009/07/21 12:49:51 ssuominen Exp $
 
 inherit eutils
 
@@ -24,11 +24,16 @@ RESTRICT="strip test"
 
 S=${WORKDIR}/tss2_rc2
 
-RDEPEND="amd64? ( >=sys-libs/glibc-2.3.4.20041102 )"
+RDEPEND=""
 DEPEND=""
 
 pkg_setup() {
 	enewuser teamspeak2
+}
+
+src_unpack() {
+	unpack ts2_server_rc2_202319.tar.bz2
+	unpack server_linux-202401.tar.bz2
 }
 
 src_install() {
