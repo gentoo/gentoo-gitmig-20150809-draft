@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.1.ebuild,v 1.1 2009/07/21 14:03:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.1.ebuild,v 1.2 2009/07/21 15:11:05 nirbheek Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -54,6 +54,7 @@ done
 #		x11-libs/qt-core )
 #	=net-libs/xulrunner-${XUL_PV}*[java=,qt-experimental=]
 
+PDEPEND="restrict-javascript? ( >=www-plugins/noscript-1.8.7 )"
 RDEPEND="
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.2

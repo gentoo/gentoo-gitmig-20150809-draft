@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.19.ebuild,v 1.8 2009/01/25 20:22:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-2.0.0.19.ebuild,v 1.9 2009/07/21 15:11:05 nirbheek Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -53,7 +53,7 @@ RDEPEND="java? ( virtual/jre )
 DEPEND="${RDEPEND}
 	java? ( >=dev-java/java-config-0.2.0 )"
 
-PDEPEND="restrict-javascript? ( x11-plugins/noscript )"
+PDEPEND="restrict-javascript? ( www-plugins/noscript )"
 
 S="${WORKDIR}/mozilla"
 
