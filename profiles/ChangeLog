@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2930 2009/07/20 23:27:58 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2931 2009/07/21 08:21:55 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Jul 2009; Christian Faulhammer <fauli@gentoo.org> updates/3Q-2009:
+  move sci-misc/gri to sci-visualization/gri
 
   20 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Totally broken ebuild, make does not die, cp is used 
