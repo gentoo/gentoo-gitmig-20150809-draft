@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.184 2009/07/10 02:51:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.185 2009/07/21 01:33:46 tcunha Exp $
+
+  21 Jul 2009; Tiago Cunha <tcunha@gentoo.org> kdevelop-3.5.4-r1.ebuild:
+  stable sparc, bug 272563
 
   10 Jul 2009; Jeroen Roovers <jer@gentoo.org> kdevelop-3.9.93.ebuild:
   Marked ~hppa (bug #274175).
