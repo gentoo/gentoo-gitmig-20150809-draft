@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r2.ebuild,v 1.2 2009/07/21 10:49:28 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r2.ebuild,v 1.3 2009/07/21 12:03:44 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -85,6 +85,10 @@ src_unpack() {
 	epatch "${FILESDIR}"/mutt-1.5.20-tab-subject-questionmark-298194c414f0-cff8e8ce4327.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-smtp-batch-mode-0a3de4d9a009-f6c6066a5925.patch
 	epatch "${FILESDIR}"/mutt-1.5.20-leave-mailbox-no-new-mail-118b8fef8aae.patch
+
+	# patch version string for bug reports
+	sed -i -e 's/"Mutt %s (%s)"/"Mutt %s (%s, Gentoo '"${PVR}"')"/' \
+		muttlib.c || die "failed patching in Gentoo version"
 
 	if use !vanilla && use !sidebar ; then
 		use nntp || rm "${PATCHDIR}"/06-nntp.patch
