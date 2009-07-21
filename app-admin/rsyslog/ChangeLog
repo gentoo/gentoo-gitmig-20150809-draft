@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/rsyslog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.24 2009/06/30 21:15:00 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rsyslog/ChangeLog,v 1.25 2009/07/21 15:04:12 chainsaw Exp $
+
+  21 Jul 2009; <chainsaw@gentoo.org> rsyslog-3.22.0.ebuild:
+  Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org> in bug #275700.
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   rsyslog-3.22.0.ebuild:
