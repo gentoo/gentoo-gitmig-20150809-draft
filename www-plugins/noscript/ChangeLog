@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/noscript
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/ChangeLog,v 1.1 2009/07/21 15:05:38 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/ChangeLog,v 1.2 2009/07/21 15:39:00 nirbheek Exp $
+
+*noscript-1.9.6.6 (21 Jul 2009)
+
+  21 Jul 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -noscript-1.6.9.ebuild, -noscript-1.8.1.3.ebuild,
+  +noscript-1.9.6.6.ebuild:
+  Bump to 1.9.6.6, cleanup old versions
 
   21 Jul 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   +noscript-1.6.9.ebuild, +noscript-1.8.1.3.ebuild, +noscript-1.8.8.ebuild,
