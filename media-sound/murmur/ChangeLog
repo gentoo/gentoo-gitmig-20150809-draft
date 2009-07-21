@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.13 2009/03/25 18:54:46 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.14 2009/07/21 19:30:34 dagger Exp $
+
+  21 Jul 2009; Robert Piasek <dagger@gentoo.org> murmur-1.1.8.ebuild:
+  Murmur doesn't compile against Ice 3.2.x
 
   25 Mar 2009; Timo Gurr <tgurr@gentoo.org> murmur-1.1.8.ebuild:
   Add missing dep on sys-libs/libcap, else murmur fails to compile.
