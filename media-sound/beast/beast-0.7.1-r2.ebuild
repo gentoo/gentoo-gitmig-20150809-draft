@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r1.ebuild,v 1.8 2009/07/21 17:40:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beast/beast-0.7.1-r2.ebuild,v 1.1 2009/07/21 17:40:19 ssuominen Exp $
 
 inherit autotools eutils fdo-mime
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://beast.gtk.org/pub/beast/v${PV%.[0-9]}/${P}.tar.bz2
 	mirror://gentoo/${P}-guile-1.8.diff.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0
@@ -56,7 +56,7 @@ src_unpack() {
 	# Fix po tests
 	epatch "${FILESDIR}/${P}-potfiles.patch"
 
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 
 	# Remove useless dist check that makes tests fail
 	sed -i "s/\.PHONY:.*/.PHONY:/" Makefile.decl || die "sed failed"
