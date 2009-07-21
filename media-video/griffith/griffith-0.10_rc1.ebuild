@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.10_beta3.ebuild,v 1.1 2009/07/02 20:14:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/griffith/griffith-0.10_rc1.ebuild,v 1.1 2009/07/21 13:01:48 hwoarang Exp $
 
 EAPI="2"
 
