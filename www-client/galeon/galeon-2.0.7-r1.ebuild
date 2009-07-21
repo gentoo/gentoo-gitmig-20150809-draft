@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.7.ebuild,v 1.2 2009/07/21 15:38:52 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/galeon/galeon-2.0.7-r1.ebuild,v 1.1 2009/07/21 15:38:52 nirbheek Exp $
 
 inherit gnome2 eutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 IUSE="seamonkey xulrunner"
 KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 SLOT="0"
-RDEPEND=">=net-libs/xulrunner-1.8
-	<net-libs/xulrunner-1.9.1
+RDEPEND=">=net-libs/xulrunner-1.9.1
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/libxml2-2.6.6
 	>=gnome-base/libgnomeui-2.5.2
@@ -35,6 +34,9 @@ src_unpack() {
 	for i in "${WORKDIR}/${P}-patches/*"; do
 		epatch $i || die "patch $i failed"
 	done
+
+	# bug 275252, patch => no building with <1.9.1
+	epatch "${FILESDIR}/${P}-build-with-xulrunner-1.9.1.patch"
 }
 
 src_compile() {
