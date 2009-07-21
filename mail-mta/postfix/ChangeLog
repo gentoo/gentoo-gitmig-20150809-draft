@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.189 2009/07/19 18:43:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.190 2009/07/21 14:19:38 chainsaw Exp $
+
+  21 Jul 2009; <chainsaw@gentoo.org> postfix-2.5.7.ebuild:
+  Mark stable on AMD64 as requested by Tobias Scherbaum
+  <dertobi123@gentoo.org> in bug #277343. Tested on a dual dual-core Opteron
+  2218 in combination with mail-filter/amavisd-new-2.6.1-r1.
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> postfix-2.5.7.ebuild:
   ppc stable #277343
