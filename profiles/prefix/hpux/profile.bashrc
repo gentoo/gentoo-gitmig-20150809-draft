@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/hpux/profile.bashrc,v 1.2 2009/07/14 14:47:31 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/hpux/profile.bashrc,v 1.3 2009/07/21 09:49:09 haubi Exp $
 
 # On hpux, binary files (executables, shared libraries) in use
 # cannot be replaced during merge.
@@ -100,7 +100,7 @@ prefix_hpux-pre_pkg_postinst() {
 }
 
 post_pkg_preinst() {
-	prefix_hpux-pre_pkg_postinst
+	prefix_hpux-post_pkg_preinst
 }
 
 pre_pkg_postinst() {
