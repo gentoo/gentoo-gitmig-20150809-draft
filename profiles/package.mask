@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10075 2009/07/21 16:29:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10076 2009/07/21 16:42:39 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -45,12 +45,6 @@
 # Masked for removal.
 media-sound/teamspeak2-server-bin
 media-sound/teamspeak2-client-bin
-
-# Víctor Ostorga <vostorga@gentoo.org> (20 Jul 2009)
-# Totally broken ebuild wrt #240076
-# make does not die, cp is used instead of dobin, 
-# CFLAGS and LDFLAGS are not respected.
-app-misc/logserial
 
 # Samuli Suominen <ssuominen@gentoo.org> (20 Jul 2009)
 # Obsolete. Codebase has been merged into xfwm4 and xfce4-xkb.
