@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r2.ebuild,v 1.1 2009/07/20 20:09:35 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mutt/mutt-1.5.20-r2.ebuild,v 1.2 2009/07/21 10:49:28 grobian Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -220,7 +220,7 @@ src_install() {
 
 pkg_setup() {
 	if ! use gpg &&
-		has_version ${CATEGORY}/${PN} &&
+		has_version "<${CATEGORY}/${PN}-1.5.20-r2" &&
 		built_with_use ${CATEGORY}/${PN} gpgme ;
 	then
 		ewarn 'The "gpgme" USE-flag has been changed into "gpg".  You'
