@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/rfkill
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rfkill/ChangeLog,v 1.1 2009/07/21 12:41:09 chainsaw Exp $
+
+*rfkill-0.1 (21 Jul 2009)
+
+  21 Jul 2009; <chainsaw@gentoo.org> +rfkill-0.1.ebuild, +metadata.xml:
+  Initial commit, ebuild by me. From the announcement on linux-wireless by
+  Johannes Berg; HOMEPAGE to surface soon.
+
