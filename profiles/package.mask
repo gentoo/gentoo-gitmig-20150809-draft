@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10071 2009/07/21 05:37:36 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10072 2009/07/21 12:53:56 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (21 Jul 2009)
+# Security problems. Internal copies of vulnerable libraries,
+# such as libpng. See, http://bugs.gentoo.org/show_bug.cgi?id=251492
+# Masked for removal.
+media-sound/teamspeak2-server-bin
+media-sound/teamspeak2-client-bin
 
 # Víctor Ostorga <vostorga@gentoo.org> (20 Jul 2009)
 # Totally broken ebuild wrt #240076
