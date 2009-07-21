@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46126.ebuild,v 1.1 2009/07/21 21:01:23 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46126.ebuild,v 1.2 2009/07/21 21:02:24 jokey Exp $
 
 EAPI=2
 
@@ -71,9 +71,9 @@ src_configure() {
 
 src_compile() {
 	emake || die "emake failed"
-	
+
 	if use wxwidgets ; then
-		cd ${S}/WebKitTools/wx
+		cd "${S}"/WebKitTools/wx
 		./build-wxwebkit || die "wxwebkit build failed"
 	fi
 }
