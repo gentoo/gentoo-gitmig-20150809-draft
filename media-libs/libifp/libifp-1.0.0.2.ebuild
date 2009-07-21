@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.10 2009/05/11 22:25:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.11 2009/07/21 18:48:27 ssuominen Exp $
 
 EAPI=2
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://sourceforge/ifp-driver/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc ppc64 x86"
-IUSE="doc examples module"
+IUSE="doc examples modules"
 
 RDEPEND=">=dev-libs/libusb-0.1
-	module? (
+	modules? (
 		kernel_linux? ( ~media-sound/libifp-module-${PV} )
 	)"
 DEPEND="${RDEPEND}

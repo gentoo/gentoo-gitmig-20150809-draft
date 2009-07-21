@@ -10,6 +10,6 @@
 A general-purpose library-driver for iRiver's iFP portable audio players."
 </longdescription>
   <use>
-    <flag name="module">Build kernel module for non-root usage</flag>
+    <flag name="modules">Build kernel modules for non-root usage</flag>
   </use>
 </pkgmetadata>
