@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-2.7.0-r1.ebuild,v 1.2 2009/06/10 15:29:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/livestation/livestation-2.7.0-r2.ebuild,v 1.1 2009/07/21 09:29:06 ssuominen Exp $
 
 inherit eutils
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs
-	app-emulation/emul-linux-x86-xlibs )"
+RDEPEND="amd64? ( >=app-emulation/emul-linux-x86-baselibs-20081109
+	>=app-emulation/emul-linux-x86-xlibs-20081109
+	>=app-emulation/emul-linux-x86-sdl-20081109 )"
 DEPEND=""
 
 MY_PN=${PN/l/L}
@@ -37,8 +38,8 @@ src_install() {
 
 	dodir ${dest}
 	cp -dpR *.{bin,conf} plugins "${D}"/${dest} || die "cp failed"
+	rm -f lib/{libopenal.so.0,libXtst.so.6} || die "rm failed"
 	exeinto ${dest}/lib
-	rm -f lib/libXtst.so.6
 	doexe lib/* || die "doexe failed"
 	dosym plugins/imageformats ${dest}/imageformats || die "dosym failed"
 	dodoc README
