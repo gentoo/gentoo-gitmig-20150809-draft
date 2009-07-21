@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/simpletal-4.1.ebuild,v 1.1 2007/06/25 07:39:15 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpletal/simpletal-4.1.ebuild,v 1.2 2009/07/21 20:51:29 arfrever Exp $
+
+EAPI="2"
 
 NEED_PYTHON=2.3
 
@@ -16,8 +18,10 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="examples"
+RESTRICT="test"
 
 DEPEND="dev-python/pyxml"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
