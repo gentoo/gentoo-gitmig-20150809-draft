@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.2.ebuild,v 1.1 2009/04/19 22:09:22 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-0.8.2.ebuild,v 1.2 2009/07/21 17:12:18 fauli Exp $
 
 WX_GTK_VER="2.8"
 EAPI="2"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MYP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE="unicode"
 
 DEPEND=">=dev-libs/libxml2-2.5.0
