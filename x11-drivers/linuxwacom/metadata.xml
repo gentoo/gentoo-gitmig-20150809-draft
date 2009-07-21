@@ -12,6 +12,6 @@
   </maintainer>
   <longdescription>linuxwacom is an open-source XFree86 input driver for Wacom tablets.</longdescription>
   <use>
-	  <flag name='module'>Build kernel module</flag>
+	  <flag name='modules'>Build kernel module</flag>
   </use>
 </pkgmetadata>
