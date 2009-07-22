@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.8 2009/07/05 08:51:58 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.9 2009/07/22 14:07:12 josejx Exp $
+
+  22 Jul 2009; Joseph Jezak <josejx@gentoo.org> iniparser-3.0b-r1.ebuild:
+  Marked ~ppc/~ppc64 for bug #275429.
 
   05 Jul 2009; Javier Villavicencio <the_paya@gentoo.org>
   iniparser-3.0b-r1.ebuild:
