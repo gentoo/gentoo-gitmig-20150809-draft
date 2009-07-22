@@ -15,7 +15,6 @@
 		by means of a very clean and user friendly interface.
 	</longdescription>
   <use>
-    <flag name="cdaudio">Adds support for CD audio playback and lookups via CDDB.</flag>
     <flag name="gnome-keyring">Adds support for storing your Last.fm password using gnome-keyring.</flag>
   </use>
 </pkgmetadata>
