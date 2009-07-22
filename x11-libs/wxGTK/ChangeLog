@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.233 2009/07/21 21:27:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.234 2009/07/22 14:54:09 jer Exp $
+
+  22 Jul 2009; Jeroen Roovers <jer@gentoo.org> wxGTK-2.6.4.0-r5.ebuild:
+  Stable for HPPA (bug #277722).
 
   21 Jul 2009; Ferris McCormick <fmccor@gentoo.org>
   wxGTK-2.8.10.1-r1.ebuild:
