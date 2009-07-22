@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.226 2009/07/22 09:31:49 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.227 2009/07/22 10:32:59 remi Exp $
+
+  22 Jul 2009; Rémi Cardona <remi@gentoo.org> mesa-7.5-r2.ebuild:
+  use mirror://gentoo/ instead of gentooexperimental.org
 
   22 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.5-r2.ebuild:
   Disable the gallium, it somewhere in the process changed to
