@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.4 2007/11/27 11:55:08 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.8.0-r2.ebuild,v 1.5 2009/07/22 21:23:20 ssuominen Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -44,6 +44,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-fix-lav2mpeg.patch"
 	epatch "${FILESDIR}/${P}-lavrec-memleak.patch"
 	epatch "${FILESDIR}/${P}-no-jpeg-mmx.patch"
+	epatch "${FILESDIR}/${P}-libc.patch"
 
 	# eautoreconf instead of elibtoolize
 	# as pkg-config-patch changes configure.in
