@@ -1,11 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0.ebuild,v 1.7 2009/06/04 21:40:51 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.9.0.ebuild,v 1.8 2009/07/22 23:30:35 ssuominen Exp $
 
 EAPI="1"
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
 
 inherit flag-o-matic toolchain-funcs eutils libtool
 
