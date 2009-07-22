@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1.ebuild,v 1.3 2009/07/20 04:59:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.30.1.ebuild,v 1.4 2009/07/22 09:03:36 zmedico Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -34,17 +34,16 @@ SRC_URI="http://uclibc.org/downloads/${MY_P}.tar.bz2"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~m68k ~mips ~ppc ~sh ~sparc ~x86"
-IUSE="build uclibc-compat debug hardened ssp ipv6 minimal wordexp crosscompile_opts_headers-only"
+IUSE="build elibc_uclibc uclibc-compat debug hardened ssp ipv6 minimal wordexp crosscompile_opts_headers-only"
 RESTRICT="strip"
 
 RDEPEND=""
+PROVIDE="elibc_uclibc? ( virtual/libc )"
 if [[ -n $CTARGET && ${CTARGET} != ${CHOST} ]]; then
 	DEPEND=""
-	PROVIDE=""
 	SLOT="${CTARGET}"
 else
 	DEPEND="virtual/os-headers app-misc/pax-utils"
-	PROVIDE="virtual/libc"
 	SLOT="0"
 fi
 

@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.46 2009/07/20 04:59:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.47 2009/07/22 09:03:36 zmedico Exp $
+
+  22 Jul 2009; Zac Medico <zmedico@gentoo.org> uclibc-0.9.27-r1.ebuild,
+  uclibc-0.9.28.3.ebuild, uclibc-0.9.28.3-r3.ebuild,
+  uclibc-0.9.28.3-r7.ebuild, uclibc-0.9.30.ebuild, uclibc-0.9.30.1.ebuild,
+  uclibc-0.9.30.1-r1.ebuild:
+  Bug #270496 - Fix PROVIDE conditionals to use elibc_uclibc.
 
   20 Jul 2009; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.30.1.ebuild,
   uclibc-0.9.30.1-r1.ebuild:
