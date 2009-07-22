@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/elfsh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.10 2009/05/02 20:29:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/ChangeLog,v 1.11 2009/07/22 23:26:52 vostorga Exp $
+
+  22 Jul 2009; Víctor Ostorga <vostorga@gentoo.org>
+  elfsh-0.51_beta3.ebuild, +files/elfsh-0.51_beta3-glibc210.patch:
+  Fix compilation with glibc-2.10, wrt bug #276065
 
   02 May 2009; Mark Loeser <halcy0n@gentoo.org> elfsh-0.51_beta3.ebuild,
   elfsh-0.65_rc1.ebuild:

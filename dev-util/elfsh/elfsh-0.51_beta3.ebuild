@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.51_beta3.ebuild,v 1.6 2009/05/02 20:29:16 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/elfsh/elfsh-0.51_beta3.ebuild,v 1.7 2009/07/22 23:26:52 vostorga Exp $
 
 inherit eutils
 
@@ -17,11 +17,13 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=dev-libs/expat-1.95"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-glibc210.patch
 	sed -i \
 		-e "s:-g3 -O2:${CFLAGS}:" \
 		`find -name Makefile` \
