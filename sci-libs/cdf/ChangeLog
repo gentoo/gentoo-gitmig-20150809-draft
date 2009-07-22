@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/cdf
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.17 2009/02/02 18:34:08 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cdf/ChangeLog,v 1.18 2009/07/22 22:46:52 bicatali Exp $
+
+*cdf-3.3.0 (22 Jul 2009)
+
+  22 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org> +cdf-3.3.0.ebuild:
+  Version bump
 
 *cdf-3.2.4 (02 Feb 2009)
 
