@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.1.ebuild,v 1.1 2009/07/21 21:40:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/scipy-0.7.1.ebuild,v 1.2 2009/07/22 22:30:54 bicatali Exp $
 
 EAPI=2
 NEED_PYTHON=2.4
@@ -39,7 +39,9 @@ pkg_setup() {
 	export {FFTW,FFTW3,UMFPACK}=None
 	use umfpack && unset UMFPACK
 	append-ldflags -shared
-	[[ -z ${FC} ]] && FC=$(tc-getFC)
+	[[ -z ${FC}  ]] && export FC=$(tc-getFC)
+	# hack to force F77 to be FC until bug #278772 is fixed
+	[[ -z ${F77} ]] && export F77=$(tc-getFC)
 	export SCIPY_FCONFIG="config_fc --noopt --noarch"
 }
 
