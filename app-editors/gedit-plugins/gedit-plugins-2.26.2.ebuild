@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.1 2009/07/22 18:28:43 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.2 2009/07/22 19:49:52 mrpouet Exp $
 
 EAPI="1"
+GCONF_DEBUG="no"
 
 inherit gnome2
 
@@ -15,7 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64"
 SLOT="0"
 
-IUSE="bookmarks +bracketcompletion charmap +codecomment colorpicker +drawspaces +joinlines python +sessionsaver showtabbar smartspaces terminal"
+IUSE="bookmarks +bracketcompletion charmap +codecomment colorpicker +drawspaces +joinlines python +session showtabbar smartspaces terminal"
 
 RDEPEND=">=x11-libs/gtk+-2.14
 	gnome-base/gconf
@@ -38,7 +39,9 @@ pkg_setup()
 	local myplugins=
 
 	for plugin in ${IUSE/python}; do
-		if use ${plugin/+}; then
+		if use session && [ "${plugin/+}" = "session" ]; then
+			myplugins="${myplugins:+${myplugins},}sessionsaver"
+		elif use ${plugin/+}; then
 			myplugins="${myplugins:+${myplugins},}${plugin/+}"
 		fi
 	done
