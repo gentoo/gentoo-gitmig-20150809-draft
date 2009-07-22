@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.14 2009/06/14 11:55:10 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.15 2009/07/22 22:29:32 wired Exp $
+
+  22 Jul 2009; Alex Alexander <wired@gentoo.org> powerdevil-4.2.4.ebuild:
+  updated dependencies - fixed bug 265976 - thanks to: lxnay, reavertm
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -powerdevil-4.2.3.ebuild:
   Drop KDE 4.2.3

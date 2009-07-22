@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/powerdevil-4.2.4.ebuild,v 1.1 2009/06/04 13:50:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/powerdevil-4.2.4.ebuild,v 1.2 2009/07/22 22:29:32 wired Exp $
 
 EAPI="2"
 
@@ -14,11 +14,15 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
-DEPEND="
+COMMONDEPEND="
 	>=kde-base/libkworkspace-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/solid-${PV}:${SLOT}[kdeprefix=]
+	x11-libs/libXScrnSaver
 "
-RDEPEND="${DEPEND}
+DEPEND="${COMMONDEPEND}
+	x11-proto/scrnsaverproto
+"
+RDEPEND="${COMMONDEPEND}
 	!sys-power/powerdevil
 "
 
