@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4660 2009/07/22 18:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4661 2009/07/22 20:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -172,7 +172,6 @@ app-editors/gedit-plugins:codecomment - Comment and uncomment blocks of code
 app-editors/gedit-plugins:colorpicker - Pick a color from a dialog and insert its hexadecimal representation
 app-editors/gedit-plugins:drawspaces - Draw spaces and tabs
 app-editors/gedit-plugins:joinlines - Join several lines or split long ones
-app-editors/gedit-plugins:sessionsaver - Save and restore your working sessions
 app-editors/gedit-plugins:showtabbar - Add a menu entry to show/hide the tabbar
 app-editors/gedit-plugins:smartspaces - Forget you're not using tabulations
 app-editors/gedit-plugins:terminal - Embed a terminal in the bottom pane
