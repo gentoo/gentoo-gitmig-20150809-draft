@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.2.1-r2.ebuild,v 1.2 2009/07/21 12:38:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/openvz-sources-2.6.27.2.1-r2.ebuild,v 1.3 2009/07/22 05:54:03 pva Exp $
 
 inherit versionator
 
@@ -54,7 +54,8 @@ ${FILESDIR}/${PN}-2.6.27.2.1-bridge-process-skbs.patch
 ${FILESDIR}/${PN}-2.6.27.2.1-bridge-set_via_phys_dev_state.patch
 ${FILESDIR}/${PN}-2.6.27.2.1-avoid-double-free.patch
 ${FILESDIR}/${PN}-2.6.27.2.1-check-for-no-mmaps.patch
-${FILESDIR}/${PN}-2.6.27.2.1-pi-futex-pid-check-fixup.patch"
+${FILESDIR}/${PN}-2.6.27.2.1-pi-futex-pid-check-fixup.patch
+${FILESDIR}/${PN}-2.6.27.2.1-SLAB.patch"
 
 K_EXTRAEINFO="For more information about this kernel take a look at:
 http://wiki.openvz.org/Download/kernel/${CKV}/${CKV}-${OVZ_KV}"
