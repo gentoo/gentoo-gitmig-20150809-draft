@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.22-r1.ebuild,v 1.2 2009/07/22 18:20:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-2.9.22-r1.ebuild,v 1.3 2009/07/22 18:21:58 ssuominen Exp $
 
 EAPI=2
-inherit multilib eutils
+inherit eutils multilib
 
 DESCRIPTION="The PowerDNS Daemon"
 SRC_URI="http://downloads.powerdns.com/releases/${P}.tar.gz"
@@ -14,22 +14,17 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="debug doc ldap mysql postgres sqlite sqlite3 static opendbx"
 
-DEPEND="mysql? ( virtual/mysql )
+RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( >=dev-cpp/libpqpp-4.0-r1 )
 	ldap? ( >=net-nds/openldap-2.0.27-r4 )
 	sqlite? ( =dev-db/sqlite-2.8* )
 	sqlite3? ( =dev-db/sqlite-3* )
 	opendbx? ( dev-db/opendbx )
 	>=dev-libs/boost-1.31"
-
-RDEPEND="${DEPEND}"
-
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	default
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/2.9.18-default-mysql-options.patch \
 		"${FILESDIR}"/${P}-gcc44.patch
 }
