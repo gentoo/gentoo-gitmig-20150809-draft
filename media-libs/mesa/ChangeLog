@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.224 2009/07/22 08:31:04 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.225 2009/07/22 09:13:44 scarabeus Exp $
+
+*mesa-7.5-r2 (22 Jul 2009)
+
+  22 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> +mesa-7.5-r2.ebuild:
+  Revision bump for applied patches from upstream. Per bug #278630.
 
   22 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> files/lib/libGL.la,
   files/lib/libGLU.la:
