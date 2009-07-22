@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.4.ebuild,v 1.1 2008/03/31 23:25:48 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.4.ebuild,v 1.2 2009/07/22 13:17:35 pebenito Exp $
 
 inherit java-pkg-opt-2
 
@@ -10,7 +10,7 @@ SRC_URI="http://oss.tresys.com/projects/setools/chrome/site/dists/${PN}-${PV}/${
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="X debug java python"
 
 DEPEND=">=sys-libs/libsepol-1.16.3
