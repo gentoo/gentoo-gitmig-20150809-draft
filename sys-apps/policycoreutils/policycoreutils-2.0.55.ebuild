@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.55.ebuild,v 1.1 2008/10/03 03:51:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.55.ebuild,v 1.2 2009/07/22 13:20:53 pebenito Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ SRC_URI="http://userspace.selinuxproject.org/releases/current/devel/${P}.tar.gz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 x86"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}
 	>=sys-libs/glibc-2.4
