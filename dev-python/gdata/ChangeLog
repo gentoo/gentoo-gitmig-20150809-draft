@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.23 2009/07/15 12:59:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.24 2009/07/22 03:10:46 darkside Exp $
+
+  22 Jul 2009; Jeremy Olexa <darkside@gentoo.org> gdata-2.0.0.ebuild:
+  amd64 stable, bug 277347
 
   15 Jul 2009; Christian Faulhammer <fauli@gentoo.org> gdata-1.3.3.ebuild:
   stable x86, bug 277347
