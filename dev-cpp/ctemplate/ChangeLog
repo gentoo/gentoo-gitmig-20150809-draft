@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/ctemplate
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.3 2008/09/17 11:59:42 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/ctemplate/ChangeLog,v 1.4 2009/07/22 14:16:47 dev-zero Exp $
+
+*ctemplate-0.95 (22 Jul 2009)
+
+  22 Jul 2009; Tiziano Müller <dev-zero@gentoo.org> +ctemplate-0.95.ebuild:
+  Version bump (bug #264848, thanks to Tim Harder & Huber Kowalski).
 
   17 Sep 2008; Ulrich Mueller <ulm@gentoo.org> ctemplate-0.90.ebuild:
   Use elisp-compile instead of elisp-comp, bug 235525.
