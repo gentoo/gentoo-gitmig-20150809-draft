@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.11.ebuild,v 1.3 2009/06/06 14:22:40 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/picard/picard-0.11.ebuild,v 1.4 2009/07/22 15:59:44 ssuominen Exp $
 
 EAPI="2"
 inherit distutils
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/picard/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="cdaudio ffmpeg nls"
+IUSE="cdda ffmpeg nls"
 
 RDEPEND="|| (
 		>=dev-lang/python-2.5
@@ -21,7 +21,7 @@ RDEPEND="|| (
 	)
 	dev-python/PyQt4[X]
 	media-libs/mutagen
-	cdaudio? ( >=media-libs/libdiscid-0.1.1 )
+	cdda? ( >=media-libs/libdiscid-0.1.1 )
 	ffmpeg? ( media-video/ffmpeg
 		>=media-libs/libofa-0.9.2 )"
 DEPEND="${RDEPEND}"
@@ -34,8 +34,8 @@ pkg_setup() {
 		ewarn "The 'ffmpeg' USE flag is disabled. Acoustic fingerprinting and"
 		ewarn "recognition will not be available."
 	fi
-	if ! use cdaudio; then
-		ewarn "The 'cdaudio' USE flag is disabled. CD index lookup and"
+	if ! use cdda; then
+		ewarn "The 'cdda' USE flag is disabled. CD index lookup and"
 		ewarn "identification will not be available. You can get audio CD support"
 		ewarn "by installing media-libs/libdiscid."
 	fi
