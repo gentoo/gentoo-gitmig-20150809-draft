@@ -145,9 +145,9 @@ diff -Nuarp --exclude '*.rej' --exclude '*.orig' LVM2.2.02.48.orig/test/api/Make
 +	$(CC) $(CFLAGS) $(LDFLAGS) -o test $(OBJECTS) $(LVMLIBS) $(LIBS)
  
 diff -Nuarp --exclude '*.rej' --exclude '*.orig' LVM2.2.02.48.orig/tools/Makefile.in LVM2.2.02.48/tools/Makefile.in
---- LVM2.2.02.48.orig/tools/Makefile.in	2009-05-21 04:11:29.000000000 -0700
-+++ LVM2.2.02.48/tools/Makefile.in	2009-07-05 14:38:36.536891908 -0700
-@@ -106,24 +106,30 @@ include $(top_srcdir)/make.tmpl
+--- LVM2.2.02.48.orig/tools/Makefile.in	2009-07-17 11:16:40.579301663 +0200
++++ LVM2.2.02.48/tools/Makefile.in	2009-07-21 19:27:05.526972872 +0200
+@@ -106,24 +106,29 @@ include $(top_srcdir)/make.tmpl
  device-mapper: $(TARGETS_DM)
  
  dmsetup: dmsetup.o $(top_srcdir)/libdm/libdevmapper.$(LIB_SUFFIX)
@@ -156,16 +156,16 @@ diff -Nuarp --exclude '*.rej' --exclude '*.orig' LVM2.2.02.48.orig/tools/Makefil
 +	$(CC) $(CFLAGS) $(LDFLAGS) \
 +	      -L$(top_srcdir)/libdm \
 +		  -o $@ dmsetup.o \
-+		  -ldevmapper $(LIBS)
++		  -ldevmapper $(LIB_PTHREAD)
  
  dmsetup.static: dmsetup.o $(interfacedir)/libdevmapper.a
 -	$(CC) -o $@ dmsetup.o $(CFLAGS) $(LDFLAGS) -static \
 -	      -L$(interfacedir) -ldevmapper $(LIBS) \
+-	      $(LIB_PTHREAD)
 +	$(CC) $(CFLAGS) $(LDFLAGS) -static \
 +	      -L$(interfacedir) \
 +		  -o $@ dmsetup.o \
-+		  -ldevmapper $(LIBS) \
- 	      $(LIB_PTHREAD)
++		  -ldevmapper $(LIB_PTHREAD)
  
  all: device-mapper
  

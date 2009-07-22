@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.162 2009/07/19 18:09:35 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.163 2009/07/22 00:40:49 robbat2 Exp $
+
+*lvm2-2.02.48-r2 (22 Jul 2009)
+
+  22 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +lvm2-2.02.48-r2.ebuild, files/lvm2-2.02.48-as-needed.patch,
+  +files/lvm2-2.02.48-fix-pkgconfig.patch:
+  Bug #270350: implement pkgconfig for lvm2. Also bump to EAPI=2. Include
+  new spin of as-needed patch, tested by Calchan.
 
   19 Jul 2009; Christian Ruppert <idl0r@gentoo.org>
   files/lvm2-2.02.48-as-needed.patch:
