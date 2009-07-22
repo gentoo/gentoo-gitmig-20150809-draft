@@ -1,0 +1,12 @@
+diff -ur muse-0.9.orig/grepmidi/grepmidi.cpp muse-0.9/grepmidi/grepmidi.cpp
+--- muse-0.9.orig/grepmidi/grepmidi.cpp	2003-10-27 20:57:02.000000000 +0200
++++ muse-0.9/grepmidi/grepmidi.cpp	2009-07-22 16:28:25.000000000 +0300
+@@ -280,7 +280,7 @@
+ int grepMidi(const char* name)
+       {
+       curName = name;
+-      char*p = strrchr(name, '.');
++      const char*p = strrchr(name, '.');
+       FILE* f;
+       if (p && strcmp(p, ".gz") == 0) {
+             char buffer[512];
