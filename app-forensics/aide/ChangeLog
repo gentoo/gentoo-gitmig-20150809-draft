@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/aide
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.43 2009/06/01 16:30:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/aide/ChangeLog,v 1.44 2009/07/22 22:32:24 matsuu Exp $
+
+  22 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> files/aideinit:
+  Fixed aideinit -b issue, bug #277282.
 
   01 Jun 2009; nixnut <nixnut@gentoo.org> aide-0.13.1-r3.ebuild:
   ppc stable #270440

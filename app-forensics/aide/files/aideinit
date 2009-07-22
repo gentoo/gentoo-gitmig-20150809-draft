@@ -114,9 +114,9 @@ if [ $opt_b -eq 1 ]; then
 	if [ -f "$dbfile" -a $opt_f -eq 0 ]; then
 		echo "$dbfile exists and -f was not specified" >> /var/log/aide/aideinit.errors
 	fi
-	lines=`wc -l /var/log/aideinit.errors | awk '{ print $1 }'`
+	lines=`wc -l /var/log/aide/aideinit.errors | awk '{ print $1 }'`
 	if [ "$lines" -gt 0 ]; then
-		(echo "AIDE init errors:"; cat /var/log/aide/aideinit.errors) | /usr/bin/mail -s "AIDE initialization problem" $MAILTO
+		(echo "AIDE init errors:"; cat /var/log/aide/aideinit.errors) | /bin/mail -s "AIDE initialization problem" $MAILTO
 	else
 		cp -f $outfile $dbfile
 	fi) &
