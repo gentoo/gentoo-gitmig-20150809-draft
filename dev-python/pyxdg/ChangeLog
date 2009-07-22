@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.52 2009/07/20 03:41:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.53 2009/07/22 15:00:11 armin76 Exp $
+
+  22 Jul 2009; Raúl Porcel <armin76@gentoo.org> pyxdg-0.17-r1.ebuild:
+  alpha/ia64/sparc stable wrt #277350
 
   20 Jul 2009; Jeroen Roovers <jer@gentoo.org> pyxdg-0.17-r1.ebuild:
   Stable for HPPA (bug #277350).
