@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2950 2009/07/22 21:09:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2951 2009/07/22 22:25:43 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jul 2009; Ben de Groot <yngwin@gentoo.org> desc/linguas.desc:
+  Add Asturian locale, needed for www-client/arora
 
   22 Jul 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   remove spurious mask for ltsp
