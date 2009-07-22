@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2940 2009/07/22 08:22:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2941 2009/07/22 08:25:48 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jul 2009; Zac Medico <zmedico@gentoo.org> uclibc/virtuals:
+  Bug #270496 - Eliminate the base profile's sys-libs/glibc from the
+  virtual/libc choices.
 
   22 Jul 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   remove xf86-video-intel entry from p.mask
