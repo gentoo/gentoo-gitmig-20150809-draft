@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gitg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/ChangeLog,v 1.5 2009/07/16 14:47:21 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gitg/ChangeLog,v 1.6 2009/07/22 22:38:36 ikelos Exp $
+
+  22 Jul 2009; Mike Auty <ikelos@gentoo.org> gitg-0.0.4.ebuild:
+  Fix up bug 278347.
 
   16 Jul 2009; Mike Auty <ikelos@gentoo.org> gitg-0.0.4.ebuild:
   Fix up bug 278025.
