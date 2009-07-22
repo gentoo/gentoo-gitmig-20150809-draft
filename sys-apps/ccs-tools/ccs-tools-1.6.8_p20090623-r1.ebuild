@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.6.8_p20090623-r1.ebuild,v 1.1 2009/07/21 23:48:01 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ccs-tools/ccs-tools-1.6.8_p20090623-r1.ebuild,v 1.2 2009/07/22 03:26:43 mr_bones_ Exp $
 
 inherit eutils multilib toolchain-funcs
 
@@ -70,7 +70,7 @@ pkg_postinst() {
 	elog
 	elog "For >=kernel-2.6.30:"
 	elog "http://tomoyo.sourceforge.jp/en/2.2.x/"
-	elog 
+	elog
 	elog "For <kernel-2.6.30 + ccs-patch:"
 	elog "http://tomoyo.sourceforge.jp/en/1.6.x/"
 }
