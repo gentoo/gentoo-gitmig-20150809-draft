@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/mlocate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.46 2009/06/11 21:11:13 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mlocate/ChangeLog,v 1.47 2009/07/22 20:49:40 fauli Exp $
+
+  22 Jul 2009; Christian Faulhammer <fauli@gentoo.org> mlocate-0.22.ebuild:
+  test for usersandbox and userpriv in FEATURES is not needed anymore as
+  upstream fixed the test suite, this cloes bug 278743 by bangert
 
   11 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   -mlocate-0.21.1.ebuild:
