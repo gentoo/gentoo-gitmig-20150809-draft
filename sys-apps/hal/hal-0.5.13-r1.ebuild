@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.13.ebuild,v 1.1 2009/07/21 19:14:17 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.13-r1.ebuild,v 1.1 2009/07/22 14:54:15 dang Exp $
 
 EAPI="2"
 
 inherit eutils linux-info autotools flag-o-matic multilib
 
-PATCH_VERSION="0"
+PATCH_VERSION="1"
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
