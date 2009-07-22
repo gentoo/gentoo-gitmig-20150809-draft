@@ -35,10 +35,6 @@ hardened
 # With vapier's permission masking aoss:
 aoss
 
-# Saleem Abdulrasool <compnerd@gentoo.org>
-# With vapier's permission masking this.
-dmi
-
 # Paul de Vrieze <pauldv@gentoo.org>
 # There is no java in this profile (if there is it must be available). Without
 # this repoman will fail on apps like sys-libs/db
@@ -51,6 +47,7 @@ java-external
 cpufreq
 dell
 laptop
+dmi
 
 # Stuff we don't want
 chicken
@@ -99,6 +96,7 @@ webkit
 prolog
 sid
 libmms
+mtp
 
 # 2006/02/05 - Donnie Berkholz <dberkholz@gentoo.org>
 # Modular X: mask for architectures on which they aren't available
