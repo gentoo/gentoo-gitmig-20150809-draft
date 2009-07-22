@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5-r5.ebuild,v 1.4 2009/07/21 00:49:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.4.5-r5.ebuild,v 1.5 2009/07/22 15:31:46 matsuu Exp $
 
 inherit kde-functions multilib toolchain-funcs eutils
 
@@ -44,8 +44,15 @@ src_unpack() {
 }
 
 src_compile() {
-	local sconsopts=$(echo "${MAKEOPTS}" | sed -e "s/.*\(-j[0-9]\+\).*/\1/")
-	[ "${MAKEOPTS/-s/}" != "${MAKEOPTS}" ] && sconsopts="${sconsopts} -s"
+	local sconsopts=""
+	# parallel make b0rked, bug #253611
+	#if [ "${MAKEOPTS/-j/}" != "${MAKEOPTS}" ] ; then
+	#	local jobs=$(echo "${MAKEOPTS}" | sed -e "s/.*-j[^0-9]*\([0-9]\+\).*/\1/")
+	#	sconsopts="${sconsopts} -j ${jobs}"
+	#fi
+	if [ "${MAKEOPTS/-s/}" != "${MAKEOPTS}" ] ; then
+		sconsopts="${sconsopts} -s"
+	fi
 	./scons ${sconsopts} || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.71 2009/07/21 00:49:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.72 2009/07/22 15:31:46 matsuu Exp $
+
+  22 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> -skim-1.4.5-r3.ebuild,
+  -skim-1.4.5-r4.ebuild, skim-1.4.5-r5.ebuild:
+  Fixed parallel make issue, bug #253611.
 
   21 Jul 2009; Jeroen Roovers <jer@gentoo.org> skim-1.4.5-r5.ebuild:
   Stable for HPPA (bug #277353).
