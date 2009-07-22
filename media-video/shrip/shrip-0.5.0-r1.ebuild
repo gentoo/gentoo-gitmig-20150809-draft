@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/shrip/shrip-0.5.0-r1.ebuild,v 1.1 2009/07/22 19:10:05 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/shrip/shrip-0.5.0-r1.ebuild,v 1.2 2009/07/22 21:13:32 gengor Exp $
 
 EAPI=2
 
@@ -15,8 +15,7 @@ IUSE="debug"
 KEYWORDS="~amd64 ~x86"
 
 RDEPEND=">=dev-libs/glib-2.6
-	>=media-video/ogmrip-0.12.2
-	<media-video/ogmrip-0.13.0"
+	=media-video/ogmrip-0.12*"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.12.0"
