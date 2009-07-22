@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.162 2009/07/19 17:17:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/ChangeLog,v 1.163 2009/07/22 14:37:17 armin76 Exp $
+
+  22 Jul 2009; Raúl Porcel <armin76@gentoo.org> dhcp-3.1.2_p1.ebuild:
+  arm/s390/sh/sparc stable wrt #275231
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> dhcp-3.1.2_p1.ebuild:
   ppc stable #275231
