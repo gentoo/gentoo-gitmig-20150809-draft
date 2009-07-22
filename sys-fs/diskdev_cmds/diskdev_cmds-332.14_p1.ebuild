@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/diskdev_cmds-332.14_p1.ebuild,v 1.1 2008/12/10 23:35:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/diskdev_cmds-332.14_p1.ebuild,v 1.2 2009/07/22 16:04:34 josejx Exp $
 
 inherit eutils
 
@@ -12,9 +12,10 @@ SRC_URI="http://darwinsource.opendarwin.org/tarballs/apsl/diskdev_cmds-${MY_PV}.
 		 mirror://gentoo/diskdev_cmds-${PV}.patch.bz2"
 LICENSE="APSL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE=""
 DEPEND=""
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
@@ -22,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/diskdev_cmds-${PV}.patch
+	epatch "${FILESDIR}"/diskdev_cmds-respect-cflags.patch
 }
 
 src_compile() {

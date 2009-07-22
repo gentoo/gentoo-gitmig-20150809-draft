@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/diskdev_cmds
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/ChangeLog,v 1.3 2008/12/10 23:35:17 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/diskdev_cmds/ChangeLog,v 1.4 2009/07/22 16:04:34 josejx Exp $
+
+  22 Jul 2009; Joseph Jezak <josejx@gentoo.org>
+  +files/diskdev_cmds-respect-cflags.patch, diskdev_cmds-332.14_p1.ebuild:
+  Add patch to ensure CFLAGS are respected. Marked ppc stable.
 
 *diskdev_cmds-332.14_p1 (10 Dec 2008)
 
