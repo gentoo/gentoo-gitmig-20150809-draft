@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.150 2009/07/08 13:09:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.151 2009/07/22 18:42:13 klausman Exp $
+
+  22 Jul 2009; Tobias Klausmann <klausman@gentoo.org> fvwm-2.5.27.ebuild:
+  Keyworded on alpha, bug #277004
 
   08 Jul 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
   edit metadata for new proxied commiter
