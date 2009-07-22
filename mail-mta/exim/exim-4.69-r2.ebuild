@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.6 2009/07/02 20:53:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.7 2009/07/22 19:55:36 grobian Exp $
 
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs pam
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir logrotate"
 
@@ -293,15 +293,9 @@ src_install () {
 		doins "${DISTDIR}"/exiscan.conf
 	fi
 
-	if use pam
-	then
-		# INSTALL a pam.d file for SMTP AUTH that works with gentoo's pam
-		insinto /etc/pam.d
-		newins "${FILESDIR}"/pam.d-exim exim
-	fi
+	pamd_mimic system-auth exim auth account
 
-	if use logrotate
-	then
+	if use logrotate; then
 		insinto /etc/logrotate.d
 		newins "${FILESDIR}/exim.logrotate" exim
 	fi

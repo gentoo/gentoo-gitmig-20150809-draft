@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.139 2009/07/02 20:53:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.140 2009/07/22 19:55:36 grobian Exp $
+
+  22 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69-r2.ebuild:
+  Install pam.eclass generated /etc/pam.d/exim file, bug #261679
 
   02 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69.ebuild,
   exim-4.69-r2.ebuild, -files/system_filter.exim:
