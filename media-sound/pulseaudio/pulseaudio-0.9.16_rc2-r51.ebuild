@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc2-r51.ebuild,v 1.1 2009/07/16 14:00:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc2-r51.ebuild,v 1.2 2009/07/22 18:30:53 flameeyes Exp $
 
 EAPI=2
 
-inherit eutils libtool flag-o-matic
+WANT_AUTOMAKE=1.11
+
+inherit eutils libtool flag-o-matic autotools
 
 MY_P=${P/_rc/-test}
 
@@ -77,6 +79,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.9.16-CVE-2009-1894.patch"
+	eautoreconf
 	elibtoolize
 }
 
