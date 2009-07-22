@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.1.1.ebuild,v 1.1 2009/06/26 11:13:41 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.1.1.ebuild,v 1.2 2009/07/22 16:11:11 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://kde/stable/${PN}/${PV}/src/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="4"
-IUSE="cdaudio daap debug ipod mp3tunes mtp +semantic-desktop"
+IUSE="cdda daap debug ipod mp3tunes mtp +semantic-desktop"
 
 # ipod requires gdk enabled and also gtk compiled in libgpod
 DEPEND="
@@ -31,7 +31,7 @@ DEPEND="
 	>=kde-base/kdelibs-${KDE_MINIMAL}[opengl?,semantic-desktop?]
 	sys-libs/zlib
 	>=x11-libs/qtscriptgenerator-0.1.0
-	cdaudio? (
+	cdda? (
 		>=kde-base/libkcddb-${KDE_MINIMAL}
 		>=kde-base/libkcompactdisc-${KDE_MINIMAL}
 	)
