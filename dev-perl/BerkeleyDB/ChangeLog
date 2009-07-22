@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.58 2009/07/22 04:16:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.59 2009/07/22 15:48:54 fauli Exp $
+
+  22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  BerkeleyDB-0.39.ebuild:
+  stable x86, bug 278089
 
   22 Jul 2009; Jeremy Olexa <darkside@gentoo.org> BerkeleyDB-0.39.ebuild:
   amd64 stable, bug 278089
