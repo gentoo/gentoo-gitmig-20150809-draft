@@ -21,6 +21,6 @@ die() {
 }
 
 cd /usr/share/hddtemp
-wget http://www.guzu.net/linux/hddtemp.db -O hddtemp.db -q || die "Failed to download new hddtemp.db file"
+wget http://download.savannah.nongnu.org/releases/hddtemp/hddtemp.db -O hddtemp.db -q || die "Failed to download new hddtemp.db file"
 update_db "hddgentoo.db" "hddtemp.db"
 
