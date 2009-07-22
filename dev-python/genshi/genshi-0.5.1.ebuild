@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.5.1.ebuild,v 1.6 2009/07/22 00:32:48 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/genshi-0.5.1.ebuild,v 1.7 2009/07/22 00:56:50 neurogeek Exp $
 
 EAPI="2"
 NEED_PYTHON=2.3
@@ -18,7 +18,8 @@ KEYWORDS="amd64 ppc ~ppc64 ~sparc x86"
 IUSE="doc examples"
 
 DEPEND="dev-python/setuptools"
-RDEPEND=""
+RDEPEND="${DEPEND}"
+#It uses dev-python/setuptools as RDEPEND
 
 S="${WORKDIR}/${MY_P}"
 

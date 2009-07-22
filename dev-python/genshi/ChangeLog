@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/genshi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.17 2009/07/22 00:32:48 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/genshi/ChangeLog,v 1.18 2009/07/22 00:56:50 neurogeek Exp $
+
+  22 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> genshi-0.5.1.ebuild:
+  Readded dev-python/setuptools to RDEPEND.
 
   22 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> genshi-0.5.1.ebuild,
   +files/genshi-0.5.1_test_fix.patch:
