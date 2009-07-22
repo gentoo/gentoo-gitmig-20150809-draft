@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.27 2009/07/19 17:29:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.0.0.ebuild,v 1.28 2009/07/22 20:30:15 suka Exp $
 
 WANT_AUTOCONF="2.5"
 WANT_AUTOMAKE="1.9"
@@ -84,7 +84,7 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	java? ( >=dev-java/bsh-2.0_beta4
 		>=dev-db/hsqldb-1.8.0.9 )
 	mono? ( || ( >dev-lang/mono-2.4-r1 <dev-lang/mono-2.4 ) )
-	nsplugin? ( || ( net-libs/xulrunner:1.8 net-libs/xulrunner:1.9 =www-client/seamonkey-1* )
+	nsplugin? ( || ( =net-libs/xulrunner-1.9.0* net-libs/xulrunner:1.8 =www-client/seamonkey-1* )
 		>=dev-libs/nspr-4.6.6
 		>=dev-libs/nss-3.11-r1 )
 	opengl? ( virtual/opengl
