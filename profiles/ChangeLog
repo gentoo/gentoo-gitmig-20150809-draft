@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2945 2009/07/22 13:29:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2946 2009/07/22 14:40:49 haubi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  22 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> arch.list,
+  profiles.desc:
+  add new Gentoo Prefix arch 'hppa-hpux' with profile for hppa2.0-hpux11.31.
 
   22 Jul 2009; Chris PeBenito <pebenito@gentoo.org> profiles.desc,
   -selinux/2007.0/alpha/parent, -selinux/2007.0/mips/parent,

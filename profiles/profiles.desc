@@ -226,6 +226,7 @@ x86-winnt   prefix/windows/winnt/6.0/x86        dev
 
 # HP-UX Profiles
 ia64-hpux	prefix/hpux/B.11.23/ia64			dev
+hppa-hpux	prefix/hpux/B.11.31/hppa2.0			dev
 ia64-hpux	prefix/hpux/B.11.31/ia64			dev
 
 # FreeBSD Profiles
