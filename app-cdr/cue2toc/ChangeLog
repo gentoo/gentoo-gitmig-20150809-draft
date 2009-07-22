@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cue2toc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cue2toc/ChangeLog,v 1.3 2009/07/22 12:56:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cue2toc/ChangeLog,v 1.4 2009/07/22 14:46:38 armin76 Exp $
+
+  22 Jul 2009; Raúl Porcel <armin76@gentoo.org> cue2toc-0.4.ebuild:
+  Add ~alpha/~arm/~ia64/~sh/~sparc wrt #277813
 
   22 Jul 2009; Alexis Ballier <aballier@gentoo.org> cue2toc-0.4.ebuild:
   keyword ~x86-fbsd, bug #277813
