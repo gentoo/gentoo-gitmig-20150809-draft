@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4652 2009/07/21 19:07:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4653 2009/07/22 10:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -930,6 +930,9 @@ dev-util/mercurial:bugzilla - Support bugzilla integration.
 dev-util/mercurial:gpg - Support signing with GnuPG.
 dev-util/mercurial:tk - Install dev-lang/tk for hgk script.
 dev-util/mercurial:zsh-completion - Install zsh command completion for hg.
+dev-util/metro:ccache - Enable support for ccache
+dev-util/metro:git - Enable support for git snapshots
+dev-util/metro:threads - Enable support for pbzip2 tarball packing/unpacking
 dev-util/mono-tools:webkit - Use net-libs/webkit-gtk for rendering.
 dev-util/nemiver:memoryview - Enable the optional hexadecimal memory inspection with app-editors/ghex.
 dev-util/netbeans:cxx - Adds Netbeans C/C++ Pack
