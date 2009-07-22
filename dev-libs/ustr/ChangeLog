@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ustr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.1 2008/10/03 03:15:41 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.2 2009/07/22 13:24:12 pebenito Exp $
+
+  22 Jul 2009; Chris PeBenito <pebenito@gentoo.org> ustr-1.0.4.ebuild:
+  Mark stable. Remove old ebuilds.
 
 *ustr-1.0.4 (03 Oct 2008)
 
