@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.15 2009/06/27 11:29:54 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.16 2009/07/22 16:13:36 josejx Exp $
+
+  22 Jul 2009; Joseph Jezak <josejx@gentoo.org> ppl-0.10.2.ebuild:
+  Marked ~ppc for bug #269087.
 
   27 Jun 2009; Tobias Klausmann <klausman@gentoo.org> ppl-0.10.2.ebuild:
   Keyworded on alpha, bug #269088
