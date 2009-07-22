@@ -15,7 +15,4 @@
   written in Python. Picard Tagger is intended to be the next generation of
   tagger for MusicBrainz, with a focus on album oriented tagging as opposed to
   track based tagging and cross platform compatibility.</longdescription>
-  <use>
-    <flag name="cdaudio">Enable support for CD Index Lookups.</flag>
-  </use>
 </pkgmetadata>
