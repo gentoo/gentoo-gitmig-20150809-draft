@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.4-r1.ebuild,v 1.1 2009/06/09 21:04:10 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-2.2.4-r2.ebuild,v 1.1 2009/07/22 20:24:39 truedfx Exp $
 
 inherit eutils
+
+RESTRICT="strip" #269221
 
 S="${WORKDIR}/fpcbuild-${PV}/fpcsrc"
 
@@ -24,8 +26,8 @@ IUSE="doc source"
 DEPEND="!dev-lang/fpc-bin
 	!dev-lang/fpc-source"
 RDEPEND="${DEPEND}"
-DEPEND="${DEPEND}
-	>=sys-devel/binutils-2.19.1-r1"
+#DEPEND="${DEPEND}
+#	>=sys-devel/binutils-2.19.1-r1"
 
 src_unpack() {
 	case ${ARCH} in
@@ -43,7 +45,7 @@ src_unpack() {
 
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-execstack.patch
-	sed -i -e 's/ -Xs / /g' $(find . -name Makefile) || die "sed failed"
+	#sed -i -e 's/ -Xs / /g' $(find . -name Makefile) || die "sed failed"
 }
 
 set_pp() {
@@ -102,17 +104,13 @@ src_install() {
 
 	dosym ../lib/fpc/${PV}/ppc${FPC_ARCH} /usr/bin/ppc${FPC_ARCH}
 
-	if ! has nodoc ${FEATURES} ; then
-		cd "${S}"/../install/doc
-		emake -j1 "$@" installdoc || die "make installdoc failed!"
-	fi
+	cd "${S}"/../install/doc
+	emake -j1 "$@" installdoc || die "make installdoc failed!"
 
-	if ! has noman ${FEATURES} ; then
-		cd "${S}"/../install/man
-		emake -j1 "$@" installman || die "make installman failed!"
-	fi
+	cd "${S}"/../install/man
+	emake -j1 "$@" installman || die "make installman failed!"
 
-	if ! has nodoc ${FEATURES} && use doc ; then
+	if use doc ; then
 		cd "${S}"/../../share/doc/fpdocs-${PV}
 		insinto /usr/share/doc/${P}
 		doins -r * || die "doins fpdocs failed"

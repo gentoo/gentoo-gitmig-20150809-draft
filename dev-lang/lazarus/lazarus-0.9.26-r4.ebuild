@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r3.ebuild,v 1.4 2009/06/25 20:36:51 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/lazarus-0.9.26-r4.ebuild,v 1.1 2009/07/22 20:24:39 truedfx Exp $
 
 EAPI=2
 
 inherit eutils
+
+RESTRICT="strip" #269221
 
 FPCVER="2.2.4"
 
@@ -36,7 +38,7 @@ src_prepare() {
 		export PPC_CONFIG_PATH="${WORKDIR}"
 		sed -e 's/^FPBIN=/#&/' /usr/lib/fpc/${FPCVER}/samplecfg |
 			sh -s /usr/lib/fpc/${FPCVER} "${PPC_CONFIG_PATH}" || die
-		sed -i -e '/^-Xs/d' "${PPC_CONFIG_PATH}"/fpc.cfg || die
+		#sed -i -e '/^-Xs/d' "${PPC_CONFIG_PATH}"/fpc.cfg || die
 	fi
 }
 

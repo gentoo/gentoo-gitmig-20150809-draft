@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/fpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.48 2009/06/09 21:04:10 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/ChangeLog,v 1.49 2009/07/22 20:24:39 truedfx Exp $
+
+*fpc-2.2.4-r2 (22 Jul 2009)
+
+  22 Jul 2009; Harald van Dĳk <truedfx@gentoo.org> -fpc-2.2.4.ebuild,
+  -fpc-2.2.4-r1.ebuild, +fpc-2.2.4-r2.ebuild:
+  Re-add RESTRICT=strip (#269221); drop FEATURES misuse (#278740)
 
 *fpc-2.2.4-r1 (09 Jun 2009)
 
