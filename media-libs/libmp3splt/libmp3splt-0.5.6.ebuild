@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.6.ebuild,v 1.1 2009/06/10 16:24:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmp3splt/libmp3splt-0.5.6.ebuild,v 1.2 2009/07/22 20:04:50 ssuominen Exp $
 
 EAPI=2
+inherit multilib
 
 DESCRIPTION="a library for mp3splt to split mp3 and ogg files without decoding."
 HOMEPAGE="http://mp3splt.sourceforge.net"
@@ -30,4 +31,8 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog LIMITS NEWS README TODO
 	find "${D}"/usr -name '*.la' -delete
+}
+
+pkg_postinst() {
+	chmod -R 755 "${ROOT}"usr/$(get_libdir)/${PN}
 }
