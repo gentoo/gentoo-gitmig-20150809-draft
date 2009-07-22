@@ -150,14 +150,10 @@ ppc64		hardened/ppc64					dev
 x86		hardened/x86					stable
 
 # selinux profiles
-#alpha		selinux/2007.0/alpha				dev
-amd64		selinux/2007.0/amd64				dev
-amd64		selinux/2007.0/amd64/hardened			dev
-#mips		selinux/2007.0/mips				dev
-#ppc		selinux/2007.0/ppc				dev
-#sparc		selinux/2007.0/sparc64				dev
-x86		selinux/2007.0/x86				dev
-x86		selinux/2007.0/x86/hardened			dev
+amd64		selinux/2007.0/amd64				stable
+amd64		selinux/2007.0/amd64/hardened			stable
+x86		selinux/2007.0/x86				stable
+x86		selinux/2007.0/x86/hardened			stable
 
 # uclibc/embedded multiarch profiles
 #amd64		uclibc/amd64					dev
