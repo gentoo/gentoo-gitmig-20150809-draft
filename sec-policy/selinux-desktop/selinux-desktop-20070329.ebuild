@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-desktop/selinux-desktop-20070329.ebuild,v 1.2 2007/06/04 00:26:42 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-desktop/selinux-desktop-20070329.ebuild,v 1.3 2009/07/22 13:12:35 pebenito Exp $
 
 IUSE="acpi apm avahi bluetooth crypt dbus hal pcmcia"
 
@@ -19,4 +19,4 @@ inherit selinux-policy-2
 
 DESCRIPTION="SELinux policy for desktops"
 
-KEYWORDS="alpha amd64 mips ppc sparc x86"
+KEYWORDS="amd64 x86"

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-base-policy
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.62 2008/05/25 23:49:52 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.63 2009/07/22 13:12:36 pebenito Exp $
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20070329.ebuild, selinux-base-policy-20070928.ebuild,
+  selinux-base-policy-20080525.ebuild:
+  Drop alpha, mips, ppc, sparc selinux support.
 
 *selinux-base-policy-20080525 (25 May 2008)
 

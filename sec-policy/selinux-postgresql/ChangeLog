@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-postgresql
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.23 2008/05/25 23:49:56 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postgresql/ChangeLog,v 1.24 2009/07/22 13:12:25 pebenito Exp $
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
+  selinux-postgresql-20070329.ebuild, selinux-postgresql-20070928.ebuild,
+  selinux-postgresql-20080525.ebuild:
+  Drop alpha, mips, ppc, sparc selinux support.
 
 *selinux-postgresql-20080525 (25 May 2008)
 

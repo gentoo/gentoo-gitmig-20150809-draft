@@ -1,6 +1,6 @@
-# Copyright 2006-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/selinux-squid-20070329.ebuild,v 1.3 2007/07/11 02:56:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-squid/selinux-squid-20070329.ebuild,v 1.4 2009/07/22 13:12:25 pebenito Exp $
 
 MODS="squid"
 IUSE=""
@@ -9,4 +9,4 @@ inherit selinux-policy-2
 
 DESCRIPTION="SELinux policy for squid"
 
-KEYWORDS="alpha amd64 mips ppc sparc x86"
+KEYWORDS="amd64 x86"

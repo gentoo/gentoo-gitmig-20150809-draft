@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-tcpd
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-tcpd/ChangeLog,v 1.4 2008/05/25 23:49:54 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-tcpd/ChangeLog,v 1.5 2009/07/22 13:12:31 pebenito Exp $
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
+  selinux-tcpd-20070329.ebuild, selinux-tcpd-20070928.ebuild,
+  selinux-tcpd-20080525.ebuild:
+  Drop alpha, mips, ppc, sparc selinux support.
 
 *selinux-tcpd-20080525 (25 May 2008)
 

@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-screen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.13 2008/05/25 23:49:33 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-screen/ChangeLog,v 1.14 2009/07/22 13:12:34 pebenito Exp $
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
+  selinux-screen-20070329.ebuild, selinux-screen-20070928.ebuild,
+  selinux-screen-20080525.ebuild:
+  Drop alpha, mips, ppc, sparc selinux support.
 
 *selinux-screen-20080525 (25 May 2008)
 

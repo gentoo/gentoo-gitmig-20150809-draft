@@ -1,6 +1,11 @@
 # ChangeLog for sec-policy/selinux-ipsec-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ipsec-tools/ChangeLog,v 1.18 2008/05/25 23:49:43 pebenito Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ipsec-tools/ChangeLog,v 1.19 2009/07/22 13:12:35 pebenito Exp $
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
+  selinux-ipsec-tools-20070329.ebuild, selinux-ipsec-tools-20070928.ebuild,
+  selinux-ipsec-tools-20080525.ebuild:
+  Drop alpha, mips, ppc, sparc selinux support.
 
 *selinux-ipsec-tools-20080525 (25 May 2008)
 

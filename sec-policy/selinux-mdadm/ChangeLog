@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-mdadm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.5 2008/04/28 15:40:23 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-mdadm/ChangeLog,v 1.6 2009/07/22 13:12:33 pebenito Exp $
+
+  18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
+  selinux-mdadm-20061008.ebuild:
+  Drop alpha, mips, ppc, sparc selinux support.
 
   28 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Remove Stephen Bennett (spb) from metadata.xml (as per #64840).
