@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.222 2009/07/21 21:16:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.223 2009/07/22 08:19:26 scarabeus Exp $
+
+  22 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> -mesa-7.5.ebuild,
+  mesa-7.5-r1.ebuild:
+  Remove sparc asm checks. As per bug #237648. Reason in comment 13.
 
   21 Jul 2009; Rémi Cardona <remi@gentoo.org> mesa-7.5-r1.ebuild:
   it's not an ebuild's job to add -g to CFLAGS (backport from the x11

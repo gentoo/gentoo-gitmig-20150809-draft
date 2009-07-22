@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.5-r1.ebuild,v 1.2 2009/07/21 21:16:21 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.5-r1.ebuild,v 1.3 2009/07/22 08:19:26 scarabeus Exp $
 
 EAPI="2"
 
@@ -174,9 +174,7 @@ src_configure() {
 	fi
 
 	# Deactivate assembly code for pic build
-	# Sparc assembly code is not working
 	myconf="${myconf} $(use_enable !pic asm)"
-	myconf="${myconf} $(use_enable !sparc asm)"
 
 	# --with-driver=dri|xlib|osmesa ; might get changed later to something
 	# else than dri
