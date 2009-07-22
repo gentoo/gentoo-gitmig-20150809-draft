@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.27.ebuild,v 1.1 2008/10/03 03:26:17 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.27.ebuild,v 1.2 2009/07/22 13:25:19 pebenito Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/current/devel/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 x86"
 DEPEND="=sys-libs/libsepol-${SEPOL_VER}*
 	=sys-libs/libselinux-${SELNX_VER}*
 	dev-libs/ustr"
