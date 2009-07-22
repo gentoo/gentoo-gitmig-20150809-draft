@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.76 2009/07/12 00:10:24 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.77 2009/07/22 17:56:33 klausman Exp $
+
+  22 Jul 2009; Tobias Klausmann <klausman@gentoo.org> xlockmore-5.28.ebuild:
+  Keyworded on alpha, bug #277004
 
   12 Jul 2009; Tobias Heinlein <keytoaster@gentoo.org>
   xlockmore-5.28.ebuild:
