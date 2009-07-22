@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.13.ebuild,v 1.1 2008/10/03 03:46:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/sepolgen-1.0.13.ebuild,v 1.2 2009/07/22 13:22:21 pebenito Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://userspace.selinuxproject.org"
 SRC_URI="http://userspace.selinuxproject.org/releases/current/devel/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=""
 RDEPEND=">=dev-lang/python-2.5
