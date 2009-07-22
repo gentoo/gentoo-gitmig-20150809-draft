@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/profile.bashrc,v 1.1 2009/06/06 03:54:34 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/profile.bashrc,v 1.2 2009/07/22 16:29:50 haubi Exp $
 
 # never use /bin/sh as CONFIG_SHELL on AIX: it works, but is way to slow.
 export CONFIG_SHELL=${BASH}
@@ -51,7 +51,9 @@ aixdll_unprepare_from_merge() {
 	true
 }
 
-post_src_install() {
+prefix_aix-post_src_install() {
+	prefix-post_src_install
+
 	local liba
 	einfo "Preparing AIX libraries for merge..."
 	pushd "${D}" >/dev/null || die "Cannot cd to ${D}"
@@ -66,7 +68,7 @@ post_src_install() {
 	popd >/dev/null || die "Cannot cd back from ${D}"
 }
 
-pre_pkg_postinst() {
+prefix_aix-pre_pkg_postinst() {
 	local libad save_IFS content
 	einfo "Preparing AIX libraries for unmerge..."
 	pushd "${D}" >/dev/null || die "Cannot cd to ${D}"
@@ -80,7 +82,7 @@ pre_pkg_postinst() {
 	popd >/dev/null || die "Cannot cd back from ${D}"
 }
 
-pre_pkg_postrm() {
+prefix_aix-pre_pkg_postrm() {
 	local libad save_IFS content
 	einfo "Preparing AIX libraries for unmerge..."
 	pushd "${ROOT}" >/dev/null || die "Cannot cd to ${ROOT}"
@@ -103,3 +105,14 @@ pre_pkg_postrm() {
 	done
 	popd >/dev/null || die "Cannot cd back from ${ROOT}"
 }
+
+# These are because of
+# http://archives.gentoo.org/gentoo-dev/msg_529a0806ed2cf841a467940a57e2d588.xml
+# The profile-* ones are meant to be used in etc/portage/profile.bashrc by user
+# until there is the registration mechanism.
+profile-post_src_install() { prefix_aix-post_src_install ; }
+        post_src_install() { prefix_aix-post_src_install ; }
+profile-pre_pkg_postinst() { prefix_aix-pre_pkg_postinst ; }
+        pre_pkg_postinst() { prefix_aix-pre_pkg_postinst ; }
+profile-pre_pkg_postrm()   { prefix_aix-pre_pkg_postrm   ; }
+        pre_pkg_postrm()   { prefix_aix-pre_pkg_postrm   ; }
