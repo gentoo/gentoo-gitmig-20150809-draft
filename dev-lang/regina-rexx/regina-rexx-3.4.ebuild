@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.4.ebuild,v 1.1 2008/06/24 03:33:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.4.ebuild,v 1.2 2009/07/23 23:27:45 vostorga Exp $
+
+inherit toolchain-funcs
 
 WANT_AUTOCONF="2.1"
 
@@ -14,6 +16,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~s390 ~sparc ~x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
 
 S=${WORKDIR}/Regina-${PV}
 
@@ -23,7 +26,7 @@ src_compile() {
 		-e 's|-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack||' \
 		-e "s|/usr/share/regina|${D}/usr/share/regina|" \
 		Makefile || die
-	emake -j1 || die "make problem"
+	emake CC=$(tc-getCC) -j1 || die "make problem"
 }
 
 src_install() {
