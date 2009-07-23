@@ -1,12 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.5.0.ebuild,v 1.4 2008/12/14 14:36:51 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/sshproxy-0.6.0_beta2-r1.ebuild,v 1.1 2009/07/23 08:16:12 mrness Exp $
 
-inherit distutils
+EAPI="2"
+
+inherit distutils eutils
 
 DESCRIPTION="sshproxy is an ssh gateway to apply ACLs on ssh connections"
-HOMEPAGE="http://penguin.fr/sshproxy/"
-SRC_URI="http://penguin.fr/sshproxy/download/${P}.tar.gz"
+HOMEPAGE="http://sshproxy-project.org/"
+SRC_URI="http://sshproxy-project.org/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -17,11 +19,10 @@ IUSE="client-only mysql minimal"
 # minimal: do not install extra plugins
 # client-only: install only the client wrappers
 
-DEPEND="!net-misc/putty
-	!client-only? (
-			>=dev-python/paramiko-1.6.2
-			mysql? ( >=dev-python/mysql-python-1.2.0 )
-		)"
+DEPEND="!client-only? (
+		>=dev-python/paramiko-1.6.2
+		mysql? ( >=dev-python/mysql-python-1.2.0 )
+	)"
 RDEPEND="${DEPEND}
 		net-misc/openssh"
 
@@ -30,9 +31,22 @@ pkg_setup() {
 	enewuser sshproxy -1 -1 /var/lib/sshproxy sshproxy
 }
 
+src_prepare() {
+	# avoid conflicts with net-misc/putty and x11-terms/pssh 
+	# by renaming pscp and pssh scripts (#248193 and #278794)
+	epatch "${FILESDIR}"/${P}-rename-wrappers.patch
+	sed -i -e 's/pscp/spscp/g;s/pssh/spssh/g' doc/* && \
+		mv bin/pssh bin/spssh && \
+		mv bin/pscp bin/spscp && \
+		mv doc/pscp.1 doc/spscp.1 && \
+		mv doc/pssh.1 doc/spssh.1 || die "failed to rename pscp or pssh files"
+	ewarn "For avoiding conflicts with net-misc/putty and x11-terms/pssh,"
+	ewarn "pscp and pssh scripts have been renamed as spscp respectively spssh."
+}
+
 src_install () {
-	dobin bin/pssh
-	dobin bin/pscp
+	dobin bin/spssh
+	dobin bin/spscp
 	if ! use client-only; then
 		distutils_src_install
 
@@ -42,7 +56,7 @@ src_install () {
 
 		# Create a default sshproxy.ini
 		dodir /etc/sshproxy
-		insopts -o sshproxy -g sshproxy -m0600
+		insopts -o root -g sshproxy -m0600
 		insinto /etc/sshproxy
 		doins "${FILESDIR}/sshproxy.ini"
 		local BLOWFISH_SECRET=$(printf "%04hX%04hX%04hX%04hX\n" ${RANDOM} ${RANDOM} ${RANDOM} ${RANDOM})
@@ -50,6 +64,7 @@ src_install () {
 			-e "s/%HOSTNAME%/${HOSTNAME}/" \
 			"${D}/etc/sshproxy/sshproxy.ini"
 
+		insopts -o sshproxy -g sshproxy -m0600
 		rm -rf "${D}/usr/lib/sshproxy/spexpect"
 		if use minimal; then
 			local p
@@ -70,6 +85,15 @@ src_install () {
 		newinitd "${FILESDIR}/sshproxyd.initd" sshproxyd
 		newconfd "${FILESDIR}/sshproxyd.confd" sshproxyd
 
+		# install manpages
+		doman doc/spscp.1
+		doman doc/spssh.1
+		if ! use client-only; then
+			doman doc/sshproxy.ini.5
+			doman doc/sshproxy-setup.8
+			doman doc/sshproxyd.8
+		fi
+
 		if use mysql; then
 			insinto /usr/share/sshproxy/mysql_db
 			doins misc/mysql_db.sql
@@ -83,14 +107,13 @@ src_install () {
 }
 
 pkg_postinst () {
-	if use client-only; then
-		echo
-		einfo "Don't forget to set the following environment variables"
-		einfo "   SSHPROXY_HOST (default to localhost)"
-		einfo "   SSHPROXY_PORT (default to 2242)"
-		einfo "   SSHPROXY_USER (default to $USER)"
-		einfo "for each sshproxy user."
-	else
+	echo
+	einfo "Don't forget to set the following environment variables"
+	einfo "   SSHPROXY_HOST (default to localhost)"
+	einfo "   SSHPROXY_PORT (default to 2242)"
+	einfo "   SSHPROXY_USER (default to \$USER)"
+	einfo "for each sshproxy user."
+	if ! use client-only; then
 		distutils_pkg_postinst
 
 		echo
@@ -100,7 +123,7 @@ pkg_postinst () {
 		echo
 		einfo "There is no need to install sshproxy on a client machine."
 		einfo "You can connect to a SSH server using this proxy by running"
-		einfo "   ssh -tp PROXY_PORT PROXY_HOST REMOTE_USER@REMOTE_HOST"
+		einfo "   ssh -tp PROXY_PORT PROXY_USER@PROXY_HOST -- REMOTE_USER@REMOTE_HOST"
 	fi
 }
 
@@ -148,7 +171,7 @@ EOF
 				echo "port = ${DB_PORT}"
 			} >> "${ROOT}/etc/sshproxy/sshproxy.ini"
 
-			sed -i -e 's/^\(\(acl\|client\|site\)_db = \)file_db/\1mysql_db/g' \
+			sed -i -e 's/^\(\(acl\|client\|site\)_db = \)ini_db/\1mysql_db/g' \
 				"${ROOT}/etc/sshproxy/sshproxy.ini"
 			grep -q "^plugin_list .* mysql_db" \
 				"${ROOT}/etc/sshproxy/sshproxy.ini" || \

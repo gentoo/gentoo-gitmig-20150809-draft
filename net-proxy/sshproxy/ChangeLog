@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/sshproxy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.11 2008/12/14 14:36:51 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/sshproxy/ChangeLog,v 1.12 2009/07/23 08:16:12 mrness Exp $
+
+*sshproxy-0.6.0_beta2-r1 (23 Jul 2009)
+
+  23 Jul 2009; Alin Năstac <mrness@gentoo.org>
+  +files/sshproxy-0.6.0_beta2-rename-wrappers.patch, -sshproxy-0.5.0.ebuild,
+  +sshproxy-0.6.0_beta2-r1.ebuild:
+  Avoid conflicts with net-misc/putty and x11-terms/pssh by renaming pscp and
+  pssh scripts (#248193 and #278794).
 
   14 Dec 2008; Alin Năstac <mrness@gentoo.org> sshproxy-0.5.0.ebuild,
   -sshproxy-0.6.0_beta1.ebuild, sshproxy-0.6.0_beta2.ebuild:
