@@ -1,6 +1,14 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.265 2009/07/22 23:24:36 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.266 2009/07/23 06:57:45 mrness Exp $
+
+  23 Jul 2009; Alin Năstac <mrness@gentoo.org>
+  -files/squid-3.0.14-adapted-zph.patch,
+  -files/squid-3.0.14-cross-compile.patch, -files/squid-3.0.14-gcc43.patch,
+  -files/squid-3.0.14-gentoo.patch, -files/squid-3.0.14-heimdal.patch,
+  -files/squid-3.0.14-max-forwards.patch, squid-2.7.6-r1.ebuild,
+  -squid-3.0.14-r2.ebuild, squid-3.0.16.ebuild, squid-3.1.0.9_beta.ebuild:
+  Remove linux-info inheritance (#278272).
 
   22 Jul 2009; Dawid Węgliński <cla@gentoo.org> squid-3.0.16.ebuild:
   Stable on amd64 (bug #277749)
