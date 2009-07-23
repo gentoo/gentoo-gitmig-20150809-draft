@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.7 2007/11/13 21:51:55 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.1-r2.ebuild,v 1.8 2009/07/23 13:20:03 ali_bush Exp $
 
 JAVA_PKG_OPT_USE="examples"
 JAVA_PKG_IUSE="doc source examples"
@@ -29,7 +29,7 @@ COMMON_DEP="
 		~dev-java/servletapi-2.3
 		=dev-java/burlap-3.0*
 		=dev-java/hessian-3.0.8*
-		dev-java/jython
+		=dev-java/jython-2.2*
 		=dev-java/gnu-jaf-1*
 		=dev-java/gnu-javamail-1*
 	)

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.2.ebuild,v 1.1 2008/06/17 14:05:26 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j/mx4j-3.0.2.ebuild,v 1.2 2009/07/23 13:20:03 ali_bush Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="examples source doc"
@@ -28,7 +28,7 @@ COMMON_DEP="
 		www-servers/axis:1
 		java-virtuals/servlet-api:2.3
 		dev-java/hessian:3.0
-		dev-java/jython
+		dev-java/jython:0
 		dev-java/gnu-jaf:1
 		java-virtuals/javamail
 	)
@@ -48,7 +48,7 @@ DEPEND=">=virtual/jdk-1.5
 src_unpack() {
 	unpack "${P}-src.tar.gz"
 
-	epatch "${FILESDIR}/${P}-new-hessian.patch"
+	#epatch "${FILESDIR}/${P}-new-hessian.patch"
 
 	if use doc; then
 		mkdir binary && cd binary
