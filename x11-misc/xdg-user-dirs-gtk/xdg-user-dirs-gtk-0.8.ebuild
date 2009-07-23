@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.8.ebuild,v 1.1 2008/09/07 18:27:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdg-user-dirs-gtk/xdg-user-dirs-gtk-0.8.ebuild,v 1.2 2009/07/23 23:08:30 eva Exp $
+
+GCONF_DEBUG="no"
 
 inherit gnome2
 
@@ -18,10 +20,9 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35.5
 	  dev-util/pkgconfig"
 
-DOCS="AUTHOR ChangeLog INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 
 pkg_postinst() {
-
 	elog
 	elog " This package tries to automatically use some sensible default "
 	elog " directories for you documents, music, video and other stuff "
@@ -29,5 +30,4 @@ pkg_postinst() {
 	elog " If you want to change those directories to your needs, see "
 	elog " the settings in ~/.config/user-dir.dirs "
 	elog
-
 }
