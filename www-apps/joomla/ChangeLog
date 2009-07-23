@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/joomla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.29 2009/07/23 09:28:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/joomla/ChangeLog,v 1.30 2009/07/23 09:31:09 fauli Exp $
+
+  23 Jul 2009; Christian Faulhammer <fauli@gentoo.org> -joomla-1.5.9.ebuild:
+  clean up
 
   23 Jul 2009; Christian Faulhammer <fauli@gentoo.org> joomla-1.5.12.ebuild:
   fix SRC_URI for bug 276362
