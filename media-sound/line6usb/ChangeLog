@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/line6usb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.3 2009/07/18 16:14:05 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/line6usb/ChangeLog,v 1.4 2009/07/23 07:53:09 ssuominen Exp $
+
+  23 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> line6usb-0.7.3.ebuild,
+  line6usb-0.8.1.ebuild:
+  Remove FEATURES checking wrt #278745.
 
 *line6usb-0.8.1 (18 Jul 2009)
 
