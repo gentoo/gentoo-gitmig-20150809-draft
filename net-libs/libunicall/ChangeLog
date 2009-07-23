@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libunicall
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.6 2009/07/23 19:35:01 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.7 2009/07/23 19:43:36 volkmar Exp $
+
+  23 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -files/libunicall-0.0.6_pre1-expose-internal-headers.patch,
+  libunicall-0.0.6_pre1.ebuild:
+  Previous commit makes removed useless
 
   23 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
   libunicall-0.0.6_pre1.ebuild:
