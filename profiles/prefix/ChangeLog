@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.36 2009/07/22 16:29:50 haubi Exp $
+# $Id: ChangeLog,v 1.37 2009/07/23 15:54:53 haubi Exp $
+
+  23 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> aix/package.mask:
+  gdb-*.50 are linux-only releases and don't (need to) work on aix.
 
   22 Jul 2009; Michael Haubenwallner <haubi@gentoo.org> aix/profile.bashrc,
   hpux/profile.bashrc, profile.bashrc:

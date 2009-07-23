@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/package.mask,v 1.2 2009/07/14 13:20:21 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/aix/package.mask,v 1.3 2009/07/23 15:54:53 haubi Exp $
+
+# Michael Haubenwallner <haubi@gentoo.org> (23 Jul 2008)
+# gdb-*.50 are linux-only releases and don't (need to) work on aix.
+=sys-devel/gdb-6.8.50*
 
 # Jeremy Olexa <darkside@gentoo.org> (08 Jan 2008)
 # Something is fishy with the port-aix.{c,h} code provided by upstream. Old
