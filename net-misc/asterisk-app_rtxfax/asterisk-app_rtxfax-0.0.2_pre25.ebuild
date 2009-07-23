@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/asterisk-app_rtxfax-0.0.2_pre25.ebuild,v 1.2 2007/07/02 14:57:52 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_rtxfax/asterisk-app_rtxfax-0.0.2_pre25.ebuild,v 1.3 2009/07/23 15:19:20 volkmar Exp $
 
 IUSE=""
 
@@ -21,15 +21,16 @@ KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=media-libs/spandsp-0.0.2_pre20
 	>=net-misc/asterisk-1.0.5-r1"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
 
-	cd ${S}
 	# use asterisk-config...
-	epatch ${FILESDIR}/${MY_PN}-0.0.2_pre25-gentoo.diff
+	epatch "${FILESDIR}"/${MY_PN}-0.0.2_pre25-gentoo.diff
 }
 
 src_compile() {
@@ -37,7 +38,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 
-	dodoc README
+	dodoc README || die "dodoc failed"
 }
