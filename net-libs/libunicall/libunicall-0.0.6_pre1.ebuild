@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.6_pre1.ebuild,v 1.2 2009/07/14 09:25:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.6_pre1.ebuild,v 1.3 2009/07/23 15:44:12 volkmar Exp $
 
 inherit eutils autotools
 
@@ -14,8 +14,9 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=media-libs/audiofile-0.2.6-r1
-	>=media-libs/spandsp-0.0.2_pre26
+	>=media-libs/spandsp-0.0.6_pre3
 	>=media-libs/tiff-3.8.2-r2"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-${PV/_pre*}
 
