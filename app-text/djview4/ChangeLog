@@ -1,6 +1,9 @@
 # ChangeLog for app-text/djview4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.16 2009/07/12 17:38:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/djview4/ChangeLog,v 1.17 2009/07/23 14:00:01 armin76 Exp $
+
+  23 Jul 2009; Raúl Porcel <armin76@gentoo.org> djview4-4.5.ebuild:
+  Add ~ia64 wrt #276477
 
   12 Jul 2009; Tobias Klausmann <klausman@gentoo.org> djview4-4.5.ebuild:
   Keyworded on alpha, bug #276477
