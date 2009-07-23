@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2-r2.ebuild,v 1.4 2008/01/10 22:02:11 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/aspectj/aspectj-1.2-r2.ebuild,v 1.5 2009/07/23 13:06:26 ali_bush Exp $
 
 inherit eutils java-pkg-2 java-ant-2
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/aspectj-CVS-V1_2_0.tar.bz2"
 HOMEPAGE="http://www.eclipse.org/aspectj/"
 CDEPEND="dev-java/bcel
 	=dev-java/junit-3.8*
-	dev-java/jython
+	=dev-java/jython-2.2*
 	=dev-java/jakarta-regexp-1.3*
 	=dev-java/saxon-6.5*
 	dev-java/ant-core"
