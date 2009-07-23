@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xlockmore
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.77 2009/07/22 17:56:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xlockmore/ChangeLog,v 1.78 2009/07/23 16:54:04 josejx Exp $
+
+  23 Jul 2009; Joseph Jezak <josejx@gentoo.org> xlockmore-5.28.ebuild:
+  Marked ppc/ppc64 stable.
 
   22 Jul 2009; Tobias Klausmann <klausman@gentoo.org> xlockmore-5.28.ebuild:
   Keyworded on alpha, bug #277004
