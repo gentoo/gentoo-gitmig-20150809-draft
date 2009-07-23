@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/aoetools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.34 2009/03/21 12:04:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/aoetools/ChangeLog,v 1.35 2009/07/23 17:50:15 alexxy Exp $
+
+*aoetools-30 (23 Jul 2009)
+
+  23 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> +aoetools-30.ebuild:
+  version bump. thanks to Andrei Vinogradov aka slepnoga
 
   21 Mar 2009; Caleb Tennis <caleb@gentoo.org> aoetools-29.ebuild:
   Missing src_install broke
