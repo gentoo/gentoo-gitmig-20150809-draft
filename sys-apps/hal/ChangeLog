@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.293 2009/07/22 14:54:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.294 2009/07/23 15:10:07 dang Exp $
+
+*hal-0.5.13-r2 (23 Jul 2009)
+
+  23 Jul 2009; Daniel Gryniewicz <dang@gentoo.org> -hal-0.5.13-r1.ebuild,
+  +hal-0.5.13-r2.ebuild:
+  Bump to hal-0.5.13-r2
+  - Fix udev hotplug notifications
+
 
 *hal-0.5.13-r1 (22 Jul 2009)
 

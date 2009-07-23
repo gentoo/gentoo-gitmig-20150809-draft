@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.13-r1.ebuild,v 1.1 2009/07/22 14:54:15 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.5.13-r2.ebuild,v 1.1 2009/07/23 15:10:07 dang Exp $
 
 EAPI="2"
 
@@ -212,6 +212,7 @@ src_configure() {
 		  --with-pid-file=/var/run/hald.pid \
 		  --with-hwdata=/usr/share/misc \
 		  --with-socket-dir=/var/run/hald \
+		  --with-udev-prefix=/etc \
 		  --enable-umount-helper \
 		  --enable-man-pages \
 		  --disable-acl-management \
