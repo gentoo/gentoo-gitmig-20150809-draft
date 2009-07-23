@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencore-amr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.1 2009/07/03 19:27:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.2 2009/07/23 18:17:31 aballier Exp $
+
+  23 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  opencore-amr-0.1.1.ebuild:
+  keyword ~x86-fbsd
 
 *opencore-amr-0.1.1 (03 Jul 2009)
 
