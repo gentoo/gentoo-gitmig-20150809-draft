@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.40.ebuild,v 1.4 2008/11/08 12:39:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/monotone/monotone-0.40.ebuild,v 1.5 2009/07/23 07:58:16 ssuominen Exp $
 
 inherit elisp-common flag-o-matic bash-completion eutils
 
@@ -30,10 +30,6 @@ pkg_setup() {
 	if [[ "$(gcc-version)" == "3.3" ]]; then
 		die 'requires >=gcc-3.4'
 	fi
-	# https://bugs.gentoo.org/show_bug.cgi?id=202371#c2
-	if ! has userpriv ${FEATURES} && has test ${FEATURES}; then
-		ewarn "No test will be performed due to lack of FEATURES=userpriv"
-	fi
 }
 
 src_compile() {
@@ -58,8 +54,8 @@ src_compile() {
 }
 
 src_test() {
-	if has userpriv ${FEATURES}; then
-		emake check || die "self test failed"
+	if [ $UID != 0 ]; then
+		emake check || die "emake check failed"
 	else
 		ewarn 'not tested - requires FEATURES=userpriv'
 	fi
