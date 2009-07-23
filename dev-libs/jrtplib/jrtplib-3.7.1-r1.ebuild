@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/jrtplib-3.7.1.ebuild,v 1.2 2008/12/16 08:38:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jrtplib/jrtplib-3.7.1-r1.ebuild,v 1.1 2009/07/23 15:01:32 volkmar Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -16,23 +18,23 @@ IUSE="examples ipv6"
 RDEPEND="dev-libs/jthread"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+src_prepare() {
+	# do not compile examples
+	sed -i -e "s/examples //" Makefile.in || die "sed failed"
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc-4.4.patch
 }
 
-src_compile() {
+src_configure() {
 	econf $(use_enable ipv6 IPv6)
-	emake || die "emake failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog README* TODO
+	dodoc ChangeLog README.TXT TODO || die "dodoc failed"
 
 	if use examples; then
 		insinto /usr/share/${PN}/examples
-		doins examples/*.cpp
+		doins examples/*.cpp || die "doins failed"
 	fi
 }
