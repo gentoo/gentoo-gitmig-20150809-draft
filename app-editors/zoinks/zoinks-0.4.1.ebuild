@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.6 2008/01/12 11:59:01 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/zoinks-0.4.1.ebuild,v 1.7 2009/07/23 22:42:10 vostorga Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_enable nls)	--disable-imlib
-	emake || die "emake failed."
+	emake CXX=$(tc-getCXX) || die "emake failed"
 }
 
 src_install() {

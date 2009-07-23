@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/zoinks
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.26 2008/01/12 13:13:18 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zoinks/ChangeLog,v 1.27 2009/07/23 22:42:10 vostorga Exp $
+
+  23 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> zoinks-0.4.1.ebuild:
+  Fixing CXX variable, closes bug #243574
 
   12 Jan 2008; Samuli Suominen <drac@gentoo.org>
   -files/zoinks-0.4.0-gcc-4.1-fix.diff, -files/xorg-library-configure.patch,
