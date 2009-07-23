@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/vblade
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.22 2009/07/23 17:53:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/vblade/ChangeLog,v 1.23 2009/07/23 17:58:06 alexxy Exp $
+
+*vblade-19 (23 Jul 2009)
+
+  23 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org> +vblade-19.ebuild:
+  Version bump. thanks to Andrei Vinogradov aka slepnoga. fix bug #278043
 
   23 Jul 2009; Alexey Shvetsov <alexxy@gentoo.org>
   files/init.d-vblade.vblade0:
