@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ftgl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.27 2009/06/29 12:28:02 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ChangeLog,v 1.28 2009/07/23 16:52:53 josejx Exp $
+
+  23 Jul 2009; Joseph Jezak <josejx@gentoo.org> ftgl-2.1.3_rc5.ebuild:
+  Marked ppc/ppc64 stable.
 
   29 Jun 2009; Ferris McCormick <fmccor@gentoo.org> ftgl-2.1.3_rc5.ebuild:
   Sparc stable, required for bug #255229.
