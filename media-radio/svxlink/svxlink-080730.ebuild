@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-080730.ebuild,v 1.3 2009/07/07 22:54:42 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/svxlink-080730.ebuild,v 1.4 2009/07/23 21:55:32 vostorga Exp $
 
 EAPI=1
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}--as-needed.patch"
 	epatch "${FILESDIR}/${P}-spandsp-0.0.6_pre2.patch"
 	epatch "${FILESDIR}/${P}-gcc44.patch"
+	epatch "${FILESDIR}/${P}-glibc210.patch"
 }
 
 src_compile() {

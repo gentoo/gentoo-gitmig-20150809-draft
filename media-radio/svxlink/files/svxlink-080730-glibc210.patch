@@ -1,0 +1,48 @@
+diff -NrU5 svxlink-080730.original/echolib/EchoLinkStationData.cpp svxlink-080730/echolib/EchoLinkStationData.cpp
+--- svxlink-080730.original/echolib/EchoLinkStationData.cpp	2009-07-23 21:51:06.000000000 -0600
++++ svxlink-080730/echolib/EchoLinkStationData.cpp	2009-07-23 21:53:31.000000000 -0600
+@@ -199,11 +199,11 @@
+     else
+     {
+       m_status = STAT_UNKNOWN;
+     }
+     
+-    char *space = strchr(end_desc, ' ');
++    const char *space = strchr(end_desc, ' ');
+     if (space != 0)
+     {
+       strncpy(str, space+1, 5);
+       str[5] = 0;
+       m_time = str;
+diff -NrU5 svxlink-080730.original/svxlink/remotetrx/remotetrx.cpp svxlink-080730/svxlink/remotetrx/remotetrx.cpp
+--- svxlink-080730.original/svxlink/remotetrx/remotetrx.cpp	2009-07-23 21:51:06.000000000 -0600
++++ svxlink-080730/svxlink/remotetrx/remotetrx.cpp	2009-07-23 22:02:04.000000000 -0600
+@@ -617,11 +617,11 @@
+ 	continue;
+       }
+     }
+ 
+     int write_len = 0;
+-    char *nl = strchr(ptr, '\n');
++    const char *nl = strchr(ptr, '\n');
+     if (nl != 0)
+     {
+       write_len = nl-ptr+1;
+       print_timestamp = true;
+     }
+diff -NrU5 svxlink-080730.original/svxlink/svxlink/svxlink.cpp svxlink-080730/svxlink/svxlink/svxlink.cpp
+--- svxlink-080730.original/svxlink/svxlink/svxlink.cpp	2009-07-23 21:51:06.000000000 -0600
++++ svxlink-080730/svxlink/svxlink/svxlink.cpp	2009-07-23 21:59:04.000000000 -0600
+@@ -607,11 +607,11 @@
+ 	continue;
+       }
+     }
+ 
+     int write_len = 0;
+-    char *nl = strchr(ptr, '\n');
++    const char *nl = strchr(ptr, '\n');
+     if (nl != 0)
+     {
+       write_len = nl-ptr+1;
+       print_timestamp = true;
+     }
