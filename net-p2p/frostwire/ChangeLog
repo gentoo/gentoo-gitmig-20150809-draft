@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/frostwire
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.7 2008/12/08 02:52:00 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/frostwire/ChangeLog,v 1.8 2009/07/23 13:22:56 ali_bush Exp $
+
+  23 Jul 2009; Alistair Bush <ali_bush@gentoo.org>
+  frostwire-4.13.5-r1.ebuild:
+  Constrain jython dependency so it doesn't pullin 2.5 slot.
 
   08 Dec 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
