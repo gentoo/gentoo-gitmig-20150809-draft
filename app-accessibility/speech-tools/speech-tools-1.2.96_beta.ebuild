@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.13 2009/05/12 17:14:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-1.2.96_beta.ebuild,v 1.14 2009/07/23 16:49:06 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,23 +15,23 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="esd nas X"
 
-DEPEND="esd? ( media-sound/esound )
+RDEPEND="esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	X? ( x11-libs/libX11
 		x11-libs/libXt )
 	!<app-accessibility/festival-1.96_beta
 	!sys-power/powerman"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/speech_tools"
+S=${WORKDIR}/speech_tools
 
 src_unpack() {
 	local CONFIG=${S}/config/config.in
-
 	unpack ${A}
 
-	# apply patches for gcc 4.2 and gcc 4.3
-	epatch "${FILESDIR}"/${P}-gcc42.patch
-	epatch "${FILESDIR}"/${P}-gcc43-include.patch
+	epatch "${FILESDIR}"/${P}-gcc42.patch \
+		"${FILESDIR}"/${P}-gcc43-include.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 
 # set compiler flags for base_class
 	sed -i -e "s:-O3:\$(OPTIMISE_CXXFLAGS):" "${S}"/base_class/Makefile
