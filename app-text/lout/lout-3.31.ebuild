@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.31.ebuild,v 1.2 2008/01/22 21:32:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.31.ebuild,v 1.3 2009/07/23 23:02:13 vostorga Exp $
+
+inherit toolchain-funcs
 
 IUSE="zlib doc"
 
@@ -13,11 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1.4 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf
 	use zlib && myconf="$myconf PDF_COMPRESSION=1 ZLIB=-lz"
-	emake BINDIR=/usr/bin \
+	emake CC="$(tc-getCC)" BINDIR=/usr/bin \
 		LIBDIR=/usr/share/lout \
 		DOCDIR=/usr/share/doc/${P} \
 		MANDIR=/usr/share/man/man1 \
