@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.6 2009/05/10 20:20:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.7 2009/07/23 08:25:00 graaff Exp $
+
+  23 Jul 2009; Hans de Graaff <graaff@gentoo.org> rack-1.0.0.ebuild:
+  Add ruby19 to USE_RUBY. Fixes #278680.
 
   10 May 2009; Hans de Graaff <graaff@gentoo.org> -rack-0.2.0.ebuild,
   -rack-0.4.0.ebuild:
