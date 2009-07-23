@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/UltraDNS
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/UltraDNS/ChangeLog,v 1.1 2009/07/23 01:31:17 robbat2 Exp $
+
+*UltraDNS-0.06 (23 Jul 2009)
+
+  23 Jul 2009; Robin H. Johnson <robbat2@gentoo.org> +UltraDNS-0.06.ebuild,
+  +metadata.xml:
+  Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>, for use
+  in infra.
+
