@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.8 2009/02/28 00:12:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.25.ebuild,v 1.9 2009/07/23 14:51:59 vostorga Exp $
 
 EAPI=1
 
@@ -33,6 +33,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.9.19-pic.patch #51698
 	epatch "${FILESDIR}"/${PN}-1.9.25-build.patch
 	epatch "${FILESDIR}"/${PN}-1.9.25-linux2.6.28.patch
+	epatch "${FILESDIR}"/${PN}-1.9.25-glibc210.patch #274305
 }
 
 src_compile() {

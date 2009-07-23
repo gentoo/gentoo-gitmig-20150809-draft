@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.84 2009/02/28 00:12:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.85 2009/07/23 14:51:59 vostorga Exp $
+
+  23 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> svgalib-1.9.25.ebuild,
+  +files/svgalib-1.9.25-glibc210.patch:
+  Fix compilation with glibc-2.10, wrt bug #274305
+  Patch thanks to Markus Dittrich <markusle@gentoo.org>
 
   28 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   +files/svgalib-1.9.25-linux2.6.28.patch, metadata.xml,
