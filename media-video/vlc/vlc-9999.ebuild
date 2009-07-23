@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.24 2009/07/21 09:31:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.25 2009/07/23 18:45:17 aballier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="63"
+PATCHLEVEL="68"
 M4_TARBALL_VERSION="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
@@ -135,7 +135,7 @@ RDEPEND="
 		taglib? ( >=media-libs/taglib-1.5 )
 		theora? ( >=media-libs/libtheora-1.0_beta3 )
 		truetype? ( media-libs/freetype
-			media-fonts/ttf-bitstream-vera )
+			media-fonts/dejavu )
 		twolame? ( media-sound/twolame )
 		upnp? ( net-libs/libupnp )
 		v4l2? ( libv4l2? ( media-libs/libv4l ) )
