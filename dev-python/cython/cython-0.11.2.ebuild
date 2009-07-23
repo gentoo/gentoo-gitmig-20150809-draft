@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.11.2.ebuild,v 1.6 2009/07/23 01:30:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cython/cython-0.11.2.ebuild,v 1.7 2009/07/23 01:34:14 darkside Exp $
 
 NEED_PYTHON="2.2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.cython.org/${MY_P}.tar.gz"
 
 LICENSE="PSF-2.4"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 hppa ~ia64 ppc ~ppc64 sparc x86"
 IUSE="doc examples"
 
 DEPEND=""
