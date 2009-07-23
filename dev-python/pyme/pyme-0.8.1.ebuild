@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.8.1.ebuild,v 1.1 2009/07/23 03:05:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.8.1.ebuild,v 1.2 2009/07/23 20:41:45 arfrever Exp $
 
 EAPI="2"
 
@@ -27,7 +27,8 @@ src_prepare() {
 		-e 's/SWIGOPT :=.*/& -D_FILE_OFFSET_BITS=64/' \
 		-e 's:$(PYTHON):/usr/bin/python:' \
 		-e '/-rm doc\/\*\.html$/d' \
-		Makefile || die "sed in Makefile failed"
+		Makefile || die "sed Makefile failed"
+	sed -e 's/^\(define_macros = \).*/\1[("_FILE_OFFSET_BITS=64", None)]/' -i setup.py || die "sed setup.py failed"
 }
 
 src_compile() {
@@ -46,9 +47,14 @@ src_install() {
 	fi
 }
 
+src_test() {
+	env PYTHONPATH=$(echo build/lib.*) \
+		"${python}" examples/genkey.py || die "genkey test failed"
+}
+
 #src_test() {
 #	tests() {
-#		PYTHONPATH=$(echo build-${PYTHON_ABI}/lib.*) "${python}" examples/genkey.py || die "genkey test failed"
+#		PYTHONPATH=$(echo build-${PYTHON_ABI}/lib.*) "${PYTHON}" examples/genkey.py || die "genkey test failed"
 #	}
 #	python_execute_function tests
 #}
