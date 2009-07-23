@@ -1,6 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ezstream-0.5.3.ebuild,v 1.2 2008/01/13 18:49:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ezstream/ezstream-0.5.3.ebuild,v 1.3 2009/07/23 08:15:50 ssuominen Exp $
+
+EAPI=2
+inherit eutils
 
 DESCRIPTION="Enables you to stream mp3 or vorbis files to an icecast server without reencoding"
 HOMEPAGE="http://www.icecast.org/ezstream.php"
@@ -22,14 +25,17 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
-src_compile() {
-	econf --enable-examplesdir="/usr/share/doc/${PF}/examples" \
-		--docdir="/usr/share/doc/${PF}" $(use_with taglib)
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		--enable-examplesdir=/usr/share/doc/${PF}/examples \
+		--docdir=/usr/share/doc/${PF} \
+		$(use_with taglib)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
+	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die "newinitd failed"
+	newconfd "${FILESDIR}"/${PN}.confd ${PN} || die "newconfd failed"
 	rm -f "${D}"/usr/share/doc/${PF}/COPYING
 	dodoc ChangeLog
 	prepalldocs
