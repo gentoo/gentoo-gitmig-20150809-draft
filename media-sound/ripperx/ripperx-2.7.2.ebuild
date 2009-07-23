@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.2.ebuild,v 1.6 2008/03/25 12:23:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.7.2.ebuild,v 1.7 2009/07/23 08:37:54 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 MY_P=${P/x/X}
@@ -26,19 +27,19 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-ldflags.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-ldflags.patch \
+		"${FILESDIR}"/${P}-pkgconfig.patch
 }
 
-src_compile() {
-	econf --disable-dependency-tracking $(use_enable nls)
-	emake || die "emake failed."
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		$(use_enable nls)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc BUGS CHANGES FAQ README* TODO
 	doicon src/xpms/${MY_PN}-icon.xpm
 	make_desktop_entry ${MY_PN} ${MY_PN} ${MY_PN}-icon
