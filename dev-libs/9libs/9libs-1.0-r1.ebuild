@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r1.ebuild,v 1.5 2008/09/20 09:09:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/9libs/9libs-1.0-r1.ebuild,v 1.6 2009/07/23 23:38:30 vostorga Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="A package of Plan 9 compatibility libraries"
 HOMEPAGE="http://www.netlib.org/research/9libs/9libs-1.0.README"
@@ -23,7 +25,7 @@ src_compile() {
 		--includedir=/usr/include/9libs \
 		--enable-shared \
 		|| die "econf failed"
-	emake || die
+	emake CC=$(tc-getCC) || die
 }
 
 src_install() {
