@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8.1.ebuild,v 1.2 2008/12/22 20:34:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/sphinx-0.9.8.1.ebuild,v 1.3 2009/07/23 21:48:24 gengor Exp $
 
 inherit eutils autotools
 
@@ -15,7 +15,7 @@ RESTRICT="mirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="debug mysql postgres stemmer test"
+IUSE="debug id64 mysql postgres stemmer test"
 
 DEPEND="mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )"
@@ -36,20 +36,19 @@ src_unpack() {
 
 src_compile() {
 	econf \
+		--sysconfdir="/etc/${PN}" \
+		$(use_enable id64) \
+		$(use_with debug) \
 		$(use_with mysql) \
 		$(use_with postgres pgsql) \
-		$(use_with stemmer libstemmer) \
-		$(use_with debug) || die "econf failed"
+		$(use_with stemmer libstemmer)
 
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
-	dodoc doc/* example.sql
-	dodir /etc/sphinx
-	insinto /etc/sphinx
-	doins sphinx.conf.dist
+	dodoc doc/*
 
 	dodir /var/lib/sphinx
 	dodir /var/log/sphinx

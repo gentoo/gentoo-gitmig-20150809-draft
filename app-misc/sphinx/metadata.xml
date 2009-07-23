@@ -7,6 +7,7 @@
   <name>Caleb Tennis</name>
 </maintainer>
 <use>
+  <flag name='id64'>use 64-bit document and word IDs</flag>
   <flag name='stemmer'>Enable language stemming support</flag>
 </use>
 </pkgmetadata>

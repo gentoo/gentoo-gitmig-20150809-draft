@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/sphinx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.17 2008/12/22 20:34:48 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sphinx/ChangeLog,v 1.18 2009/07/23 21:48:24 gengor Exp $
+
+*sphinx-0.9.9_rc2 (23 Jul 2009)
+
+  23 Jul 2009; Gordon Malm <gengor@gentoo.org> sphinx-0.9.8.ebuild,
+  sphinx-0.9.8.1.ebuild, sphinx-0.9.9_rc1.ebuild, +sphinx-0.9.9_rc2.ebuild,
+  metadata.xml:
+  Version bump 0.9.9_rc2, add id64 USE flag #268122, redigest
+  libstemmer_c.tgz #276252, cleanup /etc #269514.
 
   22 Dec 2008; Markus Meier <maekke@gentoo.org> sphinx-0.9.8.1.ebuild:
   amd64/x86 stable, bug #251894
