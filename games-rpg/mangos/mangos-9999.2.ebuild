@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/mangos-9999.1.ebuild,v 1.4 2009/07/23 01:10:43 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/mangos/mangos-9999.2.ebuild,v 1.1 2009/07/23 01:10:43 trapni Exp $
 
 # TODO:
 # - make use of system's zlib/zthread ebuilds instead of mangos' packaged
@@ -20,7 +20,7 @@ HOMEPAGE="http://getmangos.com/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="cli ra sd2 debug mysql postgres"
+IUSE="cli ra sd2 debug mysql postgres ahbot tools"
 
 RDEPEND="postgres? ( virtual/postgresql-server )
 		 mysql? ( >=virtual/mysql-4.1 )
@@ -29,20 +29,20 @@ RDEPEND="postgres? ( virtual/postgresql-server )
 DEPEND="${RDEPEND}
 		>=sys-devel/gcc-3.2
 		sys-devel/make
-		sys-devel/automake
+		>=sys-devel/automake-1.5
 		sys-devel/autoconf
 		dev-libs/glib
 		dev-libs/openssl"
 
 ## setup some env vars we use everywhere (but might change from ebuild to ebuild)
 setup_env() {
-#	export PREFIX='/usr'
-#	export SYSCONFDIR='/etc/mangos'
-#	export LOGDIR='/var/log/mangos'
+	export PREFIX='/usr'
+	export SYSCONFDIR='/etc/mangos'
+	export LOGDIR='/var/log/mangos'
 
-	export PREFIX='/opt/mangos'
-	export SYSCONFDIR='/opt/mangos/etc'
-	export LOGDIR='/opt/mangos/log'
+#	export PREFIX='/opt/mangos'
+#	export SYSCONFDIR='/opt/mangos/etc'
+#	export LOGDIR='/opt/mangos/log'
 
 	export PV_FILES='9999'
 }
@@ -53,6 +53,7 @@ pkg_setup() {
 		eerror "explicitely enabling/disabling the mysql and postgres USE-flags!"
 		die "Both useflags - mysql and postgres - has been specified. Choose one of them only!"
 	fi
+
 	enewgroup mangos
 	enewuser mangos -1 -1 -1 "mangos"
 }
@@ -67,10 +68,22 @@ sd2_src_unpack() {
 	EPATCH_OPTS="-d ${S}" EPATCH_FORCE="yes" epatch "${PATCHES_DIR}/${FILE}" || die
 }
 
+## unpacks AHBot
+ahbot_src_unpack() {
+	S="/var/tmp/portage/AHBot"
+	ESVN_REPO_URI="${AHBOT_SVN}"
+	ESVN_PROJECT="auctionhousebot"
+	subversion_src_unpack || die
+
+	S="${WORKDIR}/${P}"
+	EPATCH_OPTS="-d ${S}" epatch "/var/tmp/portage/AHBot/auctionhousebot.patch" || die
+}
+
 src_unpack() {
 	git_src_unpack
 
 	useq sd2 && sd2_src_unpack
+	useq ahbot && ahbot_src_unpack
 
 	cd "${S}" || die
 	eautoreconf --force --install || die "eautoreconf failed"
@@ -101,11 +114,13 @@ src_compile() {
 		$(use_enable debug debug-info) \
 		|| die "econf failed"
 
-	emake || die "emake with current options failed"
+	emake || die "emake failed"
 
-	cd "${S}/contrib/extractor" || die
-	cmake . || die
-	emake || die "failed to run emake for extractor"
+	if useq tools; then
+		cd "${S}/contrib/extractor" || die
+		cmake . || die
+		emake || die "failed to run emake for extractor"
+	fi
 }
 
 src_install() {
@@ -116,14 +131,18 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	dodir "${PREFIX}/share"
-	mv "${D}/usr/share/mangos" "${D}${PREFIX}/share/mangos" || die
+	if [[ "${PREFIX}" != "/usr" ]]; then
+		mv "${D}/usr/share/mangos" "${D}${PREFIX}/share/mangos" || die
+	fi
 	rm -f "${D}${PREFIX}/bin/genrevision" # not really part of mangos dist
 
 	doinitd "${FILESDIR}/${PV_FILES}/mangos-realmd" || die
 	doinitd "${FILESDIR}/${PV_FILES}/mangos-worldd" || die
 
 	exeinto "${PREFIX}/bin"
-	doexe "${S}/contrib/extractor/ad" || die
+	if useq tools; then
+		doexe "${S}/contrib/extractor/ad" || die
+	fi
 
 	keepdir ${PREFIX}/share/mangos/dbc
 	keepdir ${PREFIX}/share/mangos/maps
@@ -134,7 +153,7 @@ src_install() {
 
 		for dir in ${DIRS[*]}; do
 			dodir "${PREFIX}/share/sd2/${dir}" || die
-			cp -r "../src/bindings/ScriptDev2/${dir}/*.sql" "${D}${PREFIX}/share/sd2/${dir}" || die
+			cp "${S}/src/bindings/ScriptDev2/${dir}/"*.sql "${D}${PREFIX}/share/sd2/${dir}" || die
 		done
 	fi
 
