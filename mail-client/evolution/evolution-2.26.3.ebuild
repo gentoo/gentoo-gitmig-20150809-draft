@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.2.ebuild,v 1.5 2009/07/23 21:02:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.3.ebuild,v 1.1 2009/07/23 21:02:16 eva Exp $
 
 EAPI="2"
 
@@ -113,8 +113,8 @@ src_prepare() {
 	# Fix delete keyboard shortcut
 	epatch "${FILESDIR}/${PN}-2.23.3.1-delete-key.patch"
 
-	# Fix multiple automagics plugins
-	epatch "${FILESDIR}/${PN}-2.26.1.1-automagics-plugins.patch"
+	# Fix multiple automagic plugins, bug #204300 & bug #271451
+	epatch "${FILESDIR}/${PN}-2.26.3-automagic-plugins.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf

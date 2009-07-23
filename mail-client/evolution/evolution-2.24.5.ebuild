@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.24.5.ebuild,v 1.8 2009/04/27 14:40:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.24.5.ebuild,v 1.9 2009/07/23 21:02:16 eva Exp $
 
 inherit gnome2 flag-o-matic libtool
 
@@ -39,7 +39,7 @@ RDEPEND=">=dev-libs/glib-2.16
 	networkmanager? ( net-misc/networkmanager )
 	>=net-libs/libsoup-2.4
 	kerberos? ( virtual/krb5 )
-	krb4? ( virtual/krb5 )
+	krb4? ( app-crypt/mit-krb5 )
 	>=gnome-base/orbit-2.9.8
 	crypt? ( || ( >=app-crypt/gnupg-2.0.1-r2 =app-crypt/gnupg-1.4* ) )
 	ldap? ( >=net-nds/openldap-2 )
@@ -81,7 +81,7 @@ pkg_setup() {
 		fi
 	fi
 
-	if use krb4 && ! built_with_use virtual/krb5 krb4; then
+	if use krb4 && ! built_with_use app-crypt/mit-krb5 krb4; then
 		ewarn
 		ewarn "In order to add kerberos 4 support, you have to emerge"
 		ewarn "virtual/krb5 with the 'krb4' USE flag enabled as well."
