@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/gst-plugins-bad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.31 2009/07/01 16:47:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-bad/ChangeLog,v 1.32 2009/07/23 11:50:42 ssuominen Exp $
 
   01 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-bad-0.10.11.ebuild:
@@ -35,17 +35,10 @@
   +gst-plugins-bad-0.10.11.ebuild:
   Version bump
 
-*gst-plugins-bad-0.10.9-r1 (26 Dec 2008)
-
-  26 Dec 2008; <ssuominen@gentoo.org> metadata.xml,
-  +gst-plugins-bad-0.10.9-r1.ebuild:
-  Stop using separate plugins, drop .la files, disable static libs to speed
-  up. New plugins bz2, sdl, dts, gsm, jack, musicbrainz, sndfile, twolame
-  and vcd.
-
 *gst-plugins-bad-0.10.9 (05 Dec 2008)
 
-  05 Dec 2008; <ssuominen@gentoo.org> +gst-plugins-bad-0.10.9.ebuild:
+  05 Dec 2008; Samuli Suominen <ssuominen@gentoo.org>
+  +gst-plugins-bad-0.10.9.ebuild:
   Version bump.
 
   08 Aug 2008; Markus Meier <maekke@gentoo.org>
