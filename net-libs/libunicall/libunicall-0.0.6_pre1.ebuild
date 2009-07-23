@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.6_pre1.ebuild,v 1.3 2009/07/23 15:44:12 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/libunicall-0.0.6_pre1.ebuild,v 1.4 2009/07/23 19:35:01 volkmar Exp $
+
+EAPI="2"
 
 inherit eutils autotools
 
@@ -20,21 +22,21 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}-${PV/_pre*}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# do not compile test program
+	sed -i -e "/testcall/d" Makefile.am || die "sed failed"
+
 	epatch "${FILESDIR}/${P}-expose-internal-headers.patch"
 	epatch "${FILESDIR}/${P}--as-needed.2.patch"
 	eautoreconf
 }
 
 src_compile() {
-	econf || die "econf failed"
 	# bug #277783
 	emake -j1 || die "emake failed"
 }
 
 src_install () {
-	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc AUTHORS INSTALL NEWS README || die
+	emake DESTDIR="${D}" install || die "emake install failed"
+	dodoc AUTHORS NEWS README || die "dodoc failed"
 }

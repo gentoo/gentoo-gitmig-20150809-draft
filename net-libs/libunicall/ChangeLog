@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libunicall
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.5 2009/07/23 15:44:12 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libunicall/ChangeLog,v 1.6 2009/07/23 19:35:01 volkmar Exp $
+
+  23 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  libunicall-0.0.6_pre1.ebuild:
+  Do not compile test program and move to EAPI-2
 
   23 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
   libunicall-0.0.6_pre1.ebuild:
