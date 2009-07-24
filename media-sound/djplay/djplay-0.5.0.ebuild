@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.5.0.ebuild,v 1.3 2009/07/24 06:08:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.5.0.ebuild,v 1.4 2009/07/24 06:31:58 aballier Exp $
 
 EAPI=1
 
@@ -34,7 +34,8 @@ DEPEND="media-libs/alsa-lib
 	mad? ( media-libs/libmad )
 	mpeg? ( media-libs/libmpeg3 )"
 	#sdl? ( media-libs/libsdl )
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	sys-devel/gettext"
 
 src_unpack() {
 	unpack ${A}
@@ -43,7 +44,11 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-libmpeg3.patch"
 	epatch "${FILESDIR}/${P}-gcc44.patch"
 
-	eautoconf || die "eautoconf failed"
+	# Stolen from enlightenment.eclass
+	cp $(type -p gettextize) "${T}/" || die "Could not copy gettextize"
+	sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize"
+	"${T}/gettextize" -f --no-changelog || die "gettexize failed"
+	eautoreconf
 }
 
 src_compile() {
