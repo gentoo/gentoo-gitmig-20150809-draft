@@ -31,16 +31,12 @@ diff -ur TiMidity++-2.13.2.orig/autoconf/vorbis.m4 TiMidity++-2.13.2/autoconf/vo
  dnl
 diff -ur TiMidity++-2.13.2.orig/configure.in TiMidity++-2.13.2/configure.in
 --- TiMidity++-2.13.2.orig/configure.in	2004-10-03 15:39:52.000000000 +0300
-+++ TiMidity++-2.13.2/configure.in	2009-07-24 11:31:44.000000000 +0300
-@@ -1925,11 +1925,6 @@
++++ TiMidity++-2.13.2/configure.in	2009-07-24 11:48:33.000000000 +0300
+@@ -1927,7 +1927,6 @@
  
- AM_CONDITIONAL(W32READDIR, test "x$W32READDIR" = "xyes")
- 
--SET_UNIQ_WORDS(LDFLAGS,$LDFLAGS)
--SET_UNIQ_WORDS(SHLDFLAGS,$SHLDFLAGS)
+ SET_UNIQ_WORDS(LDFLAGS,$LDFLAGS)
+ SET_UNIQ_WORDS(SHLDFLAGS,$SHLDFLAGS)
 -SET_UNIQ_WORDS(CFLAGS,$EXTRACFLAGS $CFLAGS)
--SET_UNIQ_WORDS(CPPFLAGS,$CPPFLAGS $EXTRADEFS)
--
+ SET_UNIQ_WORDS(CPPFLAGS,$CPPFLAGS $EXTRADEFS)
+ 
  if test "x$oss_device" != x; then
-   AC_DEFINE_UNQUOTED(OSS_DEVICE,"$oss_device", oss device name)
- fi
