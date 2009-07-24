@@ -1,6 +1,13 @@
 # ChangeLog for app-text/glosung
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.8 2008/06/26 01:55:12 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/glosung/ChangeLog,v 1.9 2009/07/24 20:17:44 beandog Exp $
+
+*glosung-3.4.2 (24 Jul 2009)
+*glosung-3.4.1 (24 Jul 2009)
+
+  24 Jul 2009; Steve Dibb <beandog@gentoo.org> +glosung-3.4.1.ebuild,
+  +glosung-3.4.2.ebuild:
+  Version bumps
 
   26 Jun 2008; Steve Dibb <beandog@gentoo.org> glosung-2.1.3.ebuild,
   glosung-3.2.1.ebuild, glosung-3.2.2.ebuild:
