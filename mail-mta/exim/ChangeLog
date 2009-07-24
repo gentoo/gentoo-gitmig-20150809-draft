@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.141 2009/07/24 07:21:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.142 2009/07/24 07:47:06 grobian Exp $
+
+  24 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69-r2.ebuild:
+  Exim uses libiconv for header expansion, make this dependency explicit and
+  do what's necessary for non-glibc platforms
 
   24 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69-r2.ebuild:
   Grab includes and libs from the target ROOT, part of bug #266591

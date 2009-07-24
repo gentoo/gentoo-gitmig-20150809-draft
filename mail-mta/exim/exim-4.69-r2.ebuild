@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.8 2009/07/24 07:21:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.9 2009/07/24 07:47:06 grobian Exp $
 
 inherit eutils toolchain-funcs multilib pam
 
@@ -41,6 +41,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	radius? ( net-dialup/radiusclient )
 	domainkeys? ( mail-filter/libdomainkeys )
 	logrotate? ( app-admin/logrotate )
+	virtual/libiconv
 	"
 	# added X check for #57206
 RDEPEND="${DEPEND}
@@ -156,6 +157,11 @@ src_unpack() {
 	if [[ -n ${myconf} ]] ; then
 		echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
 	fi
+
+	# Make iconv usage explicit
+	echo "HAVE_ICONV=yes" >> Makefile
+	# If we use libiconv, now is the time to tell so
+	use !elibc_glibc && echo "EXTRALIBS_EXIM=-liconv" >> Makefile
 
 	cd "${S}"
 	if use ssl; then
