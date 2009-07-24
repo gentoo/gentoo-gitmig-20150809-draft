@@ -1,14 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-notifyd/xfce4-notifyd-0.1.0_p20090722.ebuild,v 1.1 2009/07/22 07:32:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfce4-notifyd/xfce4-notifyd-0.1.0_p20090722.ebuild,v 1.2 2009/07/24 10:59:45 ssuominen Exp $
 
 EAPI=2
 inherit autotools
 
 DESCRIPTION="Xfce4 notification daemon"
 HOMEPAGE="http://spuriousinterrupt.org/projects/xfce4-notifyd"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2
-	mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
