@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.5.0.ebuild,v 1.2 2008/07/27 21:21:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/djplay/djplay-0.5.0.ebuild,v 1.3 2009/07/24 06:08:36 aballier Exp $
 
 EAPI=1
 
@@ -41,6 +41,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-configure.ac.patch"
 	epatch "${FILESDIR}/${P}-libmpeg3.patch"
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 
 	eautoconf || die "eautoconf failed"
 }
