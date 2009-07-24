@@ -1,3 +1,24 @@
+--- build/scons-tools/detect_revision.py
++++ build/scons-tools/detect_revision.py
+@@ -8,17 +8,10 @@
+ 
+ import os,sys
+ 
+-# Support for bzr local branches
+-try:
+-    from bzrlib.branch import Branch
+-    from bzrlib.bzrdir import BzrDir
+-    from bzrlib.errors import NotBranchError
+-    __has_bzr = True
+-except ImportError:
+-    __has_bzr = False
+ 
+ def detect_revision():
+     revstring='UNKNOWN-REVISION'
++    return revstring
+ 
+     # All code below relies on posix-isms, don't even try on other systems for now
+     # TODO: find out how revision detection can be done cross platform instead of returning "UNKNOWN"
 --- Makefile
 +++ Makefile
 @@ -26,7 +26,7 @@
