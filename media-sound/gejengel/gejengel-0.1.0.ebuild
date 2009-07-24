@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.1 2009/07/23 18:21:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.2 2009/07/24 15:08:53 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -32,7 +32,6 @@ RDEPEND=">=dev-cpp/gtkmm-2.10
 
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.11"
-
 
 src_configure() {
 	econf \
