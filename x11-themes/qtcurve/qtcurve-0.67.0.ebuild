@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.62.4.ebuild,v 1.1 2009/03/16 11:36:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve/qtcurve-0.67.0.ebuild,v 1.1 2009/07/24 08:47:09 yngwin Exp $
 
 EAPI=1
 
