@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/doom3-dungeon-8.01.ebuild,v 1.5 2008/02/15 00:35:24 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/doom3-dungeon-8.01.ebuild,v 1.6 2009/07/24 20:31:37 mr_bones_ Exp $
 
+EAPI=2
 MOD_DESC="rogue-like 3D mod"
 MOD_NAME="Dungeon"
 MOD_DIR="dungeon"
@@ -16,21 +17,11 @@ SRC_URI="mirror://filefront/Doom_III/Hosted_Mods/Final_Releases/DungeonDOOM/${MO
 LICENSE="as-is"
 
 RDEPEND="games-fps/doom3-roe
-	games-fps/doom3"
+	games-fps/doom3[roe]"
 
 S=${WORKDIR}
 
-pkg_setup() {
-	games-mods_pkg_setup
-	if ! built_with_use games-fps/doom3 roe
-	then
-		eerror "You need to install games-fps/doom3 with the roe USE flag."
-		die "Needs USE=roe games-fps/doom3"
-	fi
-}
-
-src_unpack() {
-	games-mods_src_unpack
+src_prepare() {
 	# Standardize directory name.
 	local dir=$(find . -maxdepth 1 -name "dungeon*" -type d)
 	mv "${dir}" "${MOD_DIR}" || die "mv ${dir} failed"
