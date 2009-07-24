@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0_beta2.ebuild,v 1.2 2009/05/30 18:57:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/kmess-2.0_rc1.ebuild,v 1.1 2009/07/24 08:58:36 hwoarang Exp $
 
 EAPI="2"
 
@@ -36,8 +36,6 @@ RDEPEND="${COMMONDEPEND}
 "
 
 S="${WORKDIR}/${MY_P}"
-
-PATCHES=( "${FILESDIR}/${P}-fix-broken-RPATH.patch" )
 
 src_configure() {
 	mycmakeargs="${mycmakeargs}
