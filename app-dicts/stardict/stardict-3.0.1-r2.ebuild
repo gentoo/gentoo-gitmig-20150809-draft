@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r2.ebuild,v 1.2 2009/02/24 15:26:07 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-3.0.1-r2.ebuild,v 1.3 2009/07/24 17:28:30 ssuominen Exp $
 
 inherit gnome2 eutils autotools
 
@@ -56,6 +56,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	epatch "${FILESDIR}"/${P}-transparent_trayicon.patch
 	epatch "${FILESDIR}"/${P}-changelog-minor-typo-fixes.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 
 	# Fix compatibility with gucharmap-2, bug #240728
 	epatch "${FILESDIR}/${P}-gucharmap2.patch"
