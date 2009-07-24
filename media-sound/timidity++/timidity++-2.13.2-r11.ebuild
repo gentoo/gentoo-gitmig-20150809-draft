@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r11.ebuild,v 1.1 2009/07/24 08:14:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r11.ebuild,v 1.2 2009/07/24 08:38:23 ssuominen Exp $
 
 EAPI=2
-inherit eutils elisp-common
+inherit autotools eutils elisp-common
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -52,11 +52,14 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gcc4.patch \
 		"${FILESDIR}"/${P}-flac.patch \
 		"${FILESDIR}"/${P}-flac113.patch \
-		"${FILESDIR}"/${P}-protos.patch
+		"${FILESDIR}"/${P}-protos.patch \
+		"${FILESDIR}"/${P}-params.patch
 
 	# fix header location of speex
 	sed -i -e "s:#include <speex:#include <speex/speex:g" \
-		configure timidity/speex_a.c || die "sed failed"
+		configure.in timidity/speex_a.c || die "sed failed"
+
+	eautoreconf
 }
 
 src_configure() {
