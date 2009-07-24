@@ -1,6 +1,11 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.144 2009/07/24 09:06:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.145 2009/07/24 09:18:59 grobian Exp $
+
+  24 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69-r3.ebuild:
+  Fix bug #258182, remove logrotate USE-flag. Install logrotate.d entry
+  unconditionally now per #198901. If you rotate your Exim logs differently,
+  make sure you disable /etc/logrotate.d/exim if you have logrotate installed.
 
 *exim-4.69-r3 (24 Jul 2009)
 

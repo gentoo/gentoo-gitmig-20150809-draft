@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.2 2009/07/24 09:06:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.3 2009/07/24 09:18:59 grobian Exp $
 
 inherit eutils toolchain-funcs multilib pam
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir logrotate"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir"
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
@@ -41,7 +41,6 @@ DEPEND=">=sys-apps/sed-4.0.5
 	sqlite? ( dev-db/sqlite )
 	radius? ( net-dialup/radiusclient )
 	domainkeys? ( mail-filter/libdomainkeys )
-	logrotate? ( app-admin/logrotate )
 	virtual/libiconv
 	"
 	# added X check for #57206
@@ -294,10 +293,8 @@ src_install () {
 
 	pamd_mimic system-auth exim auth account
 
-	if use logrotate; then
-		insinto /etc/logrotate.d
-		newins "${FILESDIR}/exim.logrotate" exim
-	fi
+	insinto /etc/logrotate.d
+	newins "${FILESDIR}/exim.logrotate" exim
 
 	newinitd "${FILESDIR}"/exim.rc6 exim
 
