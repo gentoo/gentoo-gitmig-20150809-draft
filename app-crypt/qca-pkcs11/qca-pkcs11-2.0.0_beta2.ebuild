@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.4 2008/08/08 18:49:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-pkcs11/qca-pkcs11-2.0.0_beta2.ebuild,v 1.5 2009/07/24 17:38:20 ssuominen Exp $
 
 inherit eutils qt4
 
@@ -34,6 +34,12 @@ pkg_setup() {
 		echo
 		die "can't emerge ${PN} with debug USE flag"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
