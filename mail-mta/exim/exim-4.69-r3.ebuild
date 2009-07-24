@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.1 2009/07/24 08:54:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.2 2009/07/24 09:06:31 grobian Exp $
 
 inherit eutils toolchain-funcs multilib pam
 
@@ -47,6 +47,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	# added X check for #57206
 RDEPEND="${DEPEND}
 	!virtual/mta
+	!net-mail/mailwrapper
 	>=net-mail/mailbase-0.00-r5
 	virtual/logger"
 

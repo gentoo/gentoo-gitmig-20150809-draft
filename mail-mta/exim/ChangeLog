@@ -1,6 +1,6 @@
 # ChangeLog for mail-mta/exim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.143 2009/07/24 08:54:11 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.144 2009/07/24 09:06:31 grobian Exp $
 
 *exim-4.69-r3 (24 Jul 2009)
 
@@ -10,7 +10,8 @@
   The big bug-fix (bug #82772), remove mailwrapper support.  After long
   discussions, and many possibilities, it was finally decided to remove
   mailwrapper instead of fixing it, hopefully followed by some other approach
-  soon.  Added cross-compile patch, in preparation for bug #266591.
+  soon.  Block mailwrapper since Exim will now collide on the sendmail
+  symlink.  Added cross-compile patch, in preparation for bug #266591.
 
   24 Jul 2009; Fabian Groffen <grobian@gentoo.org> exim-4.69-r2.ebuild:
   Exim uses libiconv for header expansion, make this dependency explicit and
