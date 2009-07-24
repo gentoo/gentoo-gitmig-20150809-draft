@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/libkdenetwork-3.5.10-r1.ebuild,v 1.4 2009/07/08 15:06:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdenetwork/libkdenetwork-3.5.10-r1.ebuild,v 1.5 2009/07/24 15:31:22 josejx Exp $
 
 KMNAME=kdepim
 EAPI="1"
 inherit kde-meta eutils
 
 DESCRIPTION="library common to many KDE network apps"
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=app-crypt/gpgme-1.0.2"
