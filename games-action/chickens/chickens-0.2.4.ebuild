@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.14 2009/04/02 18:53:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chickens/chickens-0.2.4.ebuild,v 1.15 2009/07/24 14:02:38 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -28,17 +28,20 @@ src_prepare() {
 	sed -i \
 		-e "s:options.cfg:${GAMES_SYSCONFDIR}/${PN}/options.cfg:" \
 		-e "s:\"sound/:\"${GAMES_DATADIR}/${PN}/sound/:" \
-		-e "s:\"dat/:\"${GAMES_DATADIR}/${PN}/dat/:" main.cpp README \
+		-e "s:\"dat/:\"${GAMES_DATADIR}/${PN}/dat/:" \
+		main.cpp README \
 		|| die "sed failed"
 	sed -i \
 		-e '/^CPPFLAGS/d' \
+		-e 's:g++:\\$(CXX) \\$(CXXFLAGS) \\$(LDFLAGS):' \
 		configure \
 		|| die "sed failed"
 }
 
 src_configure() {
-	./configure || die
+	bash ./configure || die "configure failed"
 }
+
 src_install() {
 	dogamesbin ${PN} || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}"/${PN}
