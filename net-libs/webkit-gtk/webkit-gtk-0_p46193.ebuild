@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46193.ebuild,v 1.1 2009/07/21 23:20:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46193.ebuild,v 1.2 2009/07/24 15:09:14 mr_bones_ Exp $
 
 EAPI=2
 
@@ -78,7 +78,7 @@ src_compile() {
 		# Upstream without further comment
 		cd ${S}
 		cp DerivedSources/JSDataGridC*.{cpp,h} WebCore/bindings/js || die "copy failed"
-		
+
 		cd ${S}/WebKitTools/wx
 		./build-wxwebkit || die "wxwebkit build failed"
 	fi
