@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/monica
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.3 2008/11/14 20:59:15 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/monica/ChangeLog,v 1.4 2009/07/24 17:44:52 ssuominen Exp $
+
+  24 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> monica-3.7.ebuild,
+  +files/monica-3.7-gcc44.patch:
+  Fix building with GCC 4.4 wrt #277770.
 
   14 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> monica-3.6.ebuild,
   monica-3.7.ebuild:
