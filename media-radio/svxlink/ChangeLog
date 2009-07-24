@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.8 2009/07/23 21:55:32 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.9 2009/07/24 09:58:39 volkmar Exp $
+
+  24 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -svxlink-080102-r1.ebuild:
+  Removing 080102-r1 ebuild because failing with gcc-4.4 and glibc-2.10
 
   23 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> svxlink-080730.ebuild,
   +files/svxlink-080730-glibc210.patch:
