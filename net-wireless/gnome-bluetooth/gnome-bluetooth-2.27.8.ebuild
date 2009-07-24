@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.27.5.ebuild,v 1.1 2009/05/11 09:35:01 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.27.8.ebuild,v 1.1 2009/07/24 06:12:50 nirbheek Exp $
 
 EAPI="2"
 
@@ -13,12 +13,11 @@ SLOT="2"
 IUSE="doc"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
 
-# FIXME: KEYWORDS for libunique
 COMMON_DEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/gtk+-2.15
 	>=x11-libs/libnotify-0.4.3
 	>=gnome-base/gconf-2.6
-	>=dev-libs/dbus-glib-0.73
+	>=dev-libs/dbus-glib-0.74
 	>=sys-apps/hal-0.5.8
 	dev-libs/libunique"
 DEPEND="${COMMON_DEPEND}
@@ -31,4 +30,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-mobilephone/obex-data-server-0.4"
 
 DOCS="AUTHORS README NEWS ChangeLog"
-G2CONF="${G2CONF} --disable-desktop-update --disable-icon-update"
+G2CONF="${G2CONF}
+--disable-desktop-update
+--disable-icon-update
+--disable-introspection"
