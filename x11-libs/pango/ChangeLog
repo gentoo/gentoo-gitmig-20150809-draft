@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/pango
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.262 2009/07/24 17:19:03 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/ChangeLog,v 1.263 2009/07/24 17:20:26 dang Exp $
+
+  24 Jul 2009; Daniel Gryniewicz <dang@gentoo.org> pango-1.24.2.ebuild:
+  pango needs libXft for testing; bug #277489
 
   24 Jul 2009; Daniel Gryniewicz <dang@gentoo.org> pango-1.24.5.ebuild:
   pango needs libXft for testing; bug #277489
