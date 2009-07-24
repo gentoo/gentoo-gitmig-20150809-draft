@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.123 2009/06/09 10:32:02 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.124 2009/07/24 16:18:56 scarabeus Exp $
+
+  24 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ktorrent-3.2.2.ebuild:
+  Rdepend on krosspython. Per bug #277105
 
   09 Jun 2009; Theo Chatzimichos <tampakrap@gentoo.org>
   ktorrent-3.2.2.ebuild:
