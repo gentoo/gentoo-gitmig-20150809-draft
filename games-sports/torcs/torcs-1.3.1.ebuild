@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.2 2009/01/08 22:52:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.3 2009/07/24 01:33:22 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils multilib games
 
 DESCRIPTION="The Open Racing Car Simulator"
@@ -25,22 +26,22 @@ RDEPEND=">=media-libs/plib-1.8.4
 DEPEND="${RDEPEND}
 	x11-proto/xf86vidmodeproto"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-as-needed.patch
 	eautoreconf
 	ecvs_clean
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--disable-dependency-tracking \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		--x-libraries=/usr/$(get_libdir) \
-		--enable-xrandr \
-		|| die
+		--enable-xrandr
+}
+
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 
