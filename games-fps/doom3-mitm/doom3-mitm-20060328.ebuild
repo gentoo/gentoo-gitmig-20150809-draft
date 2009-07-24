@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.4 2008/02/29 19:16:57 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.5 2009/07/24 20:14:21 mr_bones_ Exp $
 
+EAPI=2
 MOD_DESC="single-player map trilogy"
 MOD_NAME="Make it to Morning"
 MOD_DIR="mitm"
@@ -18,18 +19,10 @@ SRC_URI="mirror://filefront/Doom_III/Resurrection_of_Evil/Maps/Single_Player/mak
 
 LICENSE="as-is"
 
-RDEPEND="games-fps/doom3-roe"
+RDEPEND="games-fps/doom3-roe
+	games-fps/doom3[roe]"
 
 S=${WORKDIR}
-
-pkg_setup() {
-	games-mods_pkg_setup
-	if ! built_with_use games-fps/doom3 roe
-	then
-		eerror "You need to install games-fps/doom3 with the roe USE flag."
-		die "Needs USE=roe games-fps/doom3"
-	fi
-}
 
 src_unpack() {
 	games-mods_src_unpack
