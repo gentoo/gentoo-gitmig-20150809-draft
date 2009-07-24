@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.11-r1.ebuild,v 1.4 2009/07/07 00:31:21 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.2.11-r3.ebuild,v 1.1 2009/07/24 18:38:38 hollow Exp $
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20090705"
+GENTOO_PATCHSTAMP="20090724"
 GENTOO_DEVELOPER="hollow"
 
 # IUSE/USE_EXPAND magic
@@ -80,8 +80,8 @@ HOMEPAGE="http://httpd.apache.org/"
 # some helper scripts are Apache-1.1, thus both are here
 LICENSE="Apache-2.0 Apache-1.1"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="sni"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="sni peruser_dc"
 
 DEPEND="${DEPEND}
 	apache2_modules_deflate? ( sys-libs/zlib )"
@@ -91,7 +91,15 @@ RDEPEND="${RDEPEND}
 
 src_unpack() {
 	if ! use sni ; then
-		EPATCH_EXCLUDE="04_all_mod_ssl_tls_sni.patch"
+		EPATCH_EXCLUDE="${EPATCH_EXCLUDE} 04_all_mod_ssl_tls_sni.patch"
+	fi
+
+	if use peruser_dc ; then
+		if ! use apache2_mpms_peruser ; then
+			die "USE=peruser_dc requires APACHE2_MPMS=peruser"
+		fi
+	else
+		EPATCH_EXCLUDE="${EPATCH_EXCLUDE} 22_all_peruser_0.3.0-dc3.patch"
 	fi
 
 	apache-2_src_unpack
