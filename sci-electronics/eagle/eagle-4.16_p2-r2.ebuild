@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.4 2009/03/12 16:03:21 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-4.16_p2-r2.ebuild,v 1.5 2009/07/24 03:59:14 nixphoeni Exp $
 
 inherit eutils
 
@@ -33,7 +33,9 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau
-	x11-libs/libXdmcp"
+	x11-libs/libXdmcp
+	amd64? ( app-emulation/emul-linux-x86-baselibs
+		 app-emulation/emul-linux-x86-xlibs )"
 
 INSTALLDIR="/opt/eagle"
 case "${LINGUAS}" in
