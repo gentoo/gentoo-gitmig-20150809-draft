@@ -1,17 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-1.0.2.ebuild,v 1.2 2008/08/18 11:49:15 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/openvas-libraries/openvas-libraries-2.0.3.ebuild,v 1.1 2009/07/24 19:29:58 hanno Exp $
 
 DESCRIPTION="A remote security scanner for Linux (openvas-libraries)"
 HOMEPAGE="http://www.openvas.org/"
-SRC_URI="http://wald.intevation.org/frs/download.php/467/${P}.tar.gz"
+SRC_URI="http://wald.intevation.org/frs/download.php/600/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="net-libs/gnutls
 	net-libs/libpcap"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	einstall || die "failed to install"
