@@ -1,0 +1,34 @@
+# ChangeLog for dev-libs/xml-security-c
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/ChangeLog,v 1.1 2009/07/24 05:16:43 dev-zero Exp $
+
+*xml-security-c-1.5.1 (24 Jul 2009)
+
+  24 Jul 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.5.1-parallel_build.patch, +xml-security-c-1.5.1.ebuild,
+  +metadata.xml:
+  Moved to the tree.
+
+  23 Jul 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.5.1-parallel_build.patch, -xml-security-c-1.5.0.ebuild,
+  +xml-security-c-1.5.1.ebuild, -files/CVE-2009-0217-fix.patch:
+  Version bump, includes the fix for the CVE. Fixed dependency (xml-security-c
+  is supposed to _not_ need xerces-c-2 anymore).
+
+  16 Jul 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de>
+  xml-security-c-1.5.0.ebuild, +files/CVE-2009-0217-fix.patch:
+  Security fix for CVE-2009-0217
+
+  16 Jul 2009; Thomas Beierlein (TomJBE) <tb@forth-ev.de>
+  -xml-security-c-1.4.0.ebuild, +xml-security-c-1.5.0.ebuild:
+  Version bump
+
+  30 Dec 2008; Thomas Beierlein (TomJBE) <tb@forth-ev.de>
+  xml-security-c-1.4.0.ebuild:
+  works only with =dev-libs/xerces-c-2* and =dev-libs/xalan-c-1.10*
+
+  22 Oct 2008; Thomas Beierlein (TomJBE) <tb@forth-ev.de>
+  +xml-security-c-1.4.0.ebuild, +metadata.xml:
+  New ebuild wrt bug 202952. Thanks to original bug authors and chithead,
+  scarabeus, pva and tommy for help polishing.
+
