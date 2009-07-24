@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.8.2-r1.ebuild,v 1.1 2009/07/19 14:28:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ipod-sharp/ipod-sharp-0.8.2-r1.ebuild,v 1.2 2009/07/24 11:00:26 ssuominen Exp $
 
 EAPI=2
 inherit eutils mono
@@ -8,7 +8,6 @@ inherit eutils mono
 DESCRIPTION="ipod-sharp provides high-level feature support for Apple's iPod and binds libipoddevice."
 HOMEPAGE="http://banshee-project.org/Ipod-sharp"
 SRC_URI="http://banshee-project.org/files/${PN}/${P}.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}-fix_ipod_podcast_playlist.patch.bz2
 	mirror://gentoo/${P}-fix_ipod_podcast_playlist.patch.bz2"
 
 LICENSE="GPL-2"
