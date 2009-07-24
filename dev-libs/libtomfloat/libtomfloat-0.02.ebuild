@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/libtomfloat-0.02.ebuild,v 1.6 2008/06/10 13:14:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtomfloat/libtomfloat-0.02.ebuild,v 1.7 2009/07/24 22:42:16 vostorga Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="library for floating point number manipulation"
 HOMEPAGE="http://libtom.org/"
@@ -14,8 +16,12 @@ IUSE=""
 DEPEND="dev-libs/libtommath"
 RDEPEND=""
 
+src_compile() {
+	emake CC=$(tc-getCC) || die
+}
+
 src_install() {
-	make install DESTDIR="${D}" || die
+	emake install DESTDIR="${D}" || die
 	dodoc changes.txt *.pdf WARNING
 	docinto demos ; dodoc demos/*
 }
