@@ -10,8 +10,7 @@
 	<use>
 	  <flag name='bookmarks'>Advanced Bookmarking, it remembers all the bookmarks you ever toggled, highlights them in the text and allows you to navigate through a list with the navigation pane</flag>
 	  <flag name='bracketcompletion'>Automatically adds closing brackets</flag>
-	  <flag name='charmap'>	Insert special characters just by clicking on them</flag> 
-	  <flag name='codecomment'>Comment and uncomment blocks of code</flag> 
+	  <flag name='charmap'>	Insert special characters just by clicking on them</flag>
 	  <flag name='colorpicker'>Pick a color from a dialog and insert its hexadecimal representation</flag> 
 	  <flag name='drawspaces'>Draw spaces and tabs</flag> 
 	  <flag name='joinlines'>Join several lines or split long ones</flag>

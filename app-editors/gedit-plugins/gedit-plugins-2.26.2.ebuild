@@ -1,13 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.2 2009/07/22 19:49:52 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.3 2009/07/24 15:49:03 mrpouet Exp $
 
-EAPI="1"
+EAPI="2"
 GCONF_DEBUG="no"
 
 inherit gnome2
-
-MY_PV=${PV#*.}
 
 DESCRIPTION="Offical plugins for gedit."
 HOMEPAGE="http://live.gnome.org/GeditPlugins"
@@ -16,18 +14,26 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64"
 SLOT="0"
 
-IUSE="bookmarks +bracketcompletion charmap +codecomment colorpicker +drawspaces +joinlines python +session showtabbar smartspaces terminal"
+IUSE="bookmarks +bracketcompletion charmap colorpicker +drawspaces +joinlines python +session showtabbar smartspaces terminal"
+
 
 RDEPEND=">=x11-libs/gtk+-2.14
-	gnome-base/gconf
-	>=x11-libs/gtksourceview-2.6
-	>=app-editors/gedit-2.26.1
-	python? (
-	>=dev-python/pygobject-2.15.4
-	>=dev-python/pygtk-2.12.0
-	>=dev-python/pygtksourceview-2.2.0
-	)"
-
+		gnome-base/gconf
+		>=x11-libs/gtksourceview-2.6
+		>=app-editors/gedit-2.26.1[python]
+		>=dev-python/pygtk-2.14
+		charmap? (
+			>=gnome-extra/gucharmap-2.24.3
+		)
+		session? (
+			dev-lang/python[xml]
+		)
+		python? (
+			>=dev-python/pygtksourceview-2.2.0
+		)
+		terminal? (
+			>=x11-libs/vte-0.19.4[python]
+		)"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
@@ -36,13 +42,13 @@ DOCS="AUTHORS NEWS"
 
 pkg_setup()
 {
-	local myplugins=
+	local myplugins="codecomment"
 
 	for plugin in ${IUSE/python}; do
 		if use session && [ "${plugin/+}" = "session" ]; then
-			myplugins="${myplugins:+${myplugins},}sessionsaver"
+			myplugins="${myplugins},sessionsaver"
 		elif use ${plugin/+}; then
-			myplugins="${myplugins:+${myplugins},}${plugin/+}"
+			myplugins="${myplugins},${plugin/+}"
 		fi
 	done
 
