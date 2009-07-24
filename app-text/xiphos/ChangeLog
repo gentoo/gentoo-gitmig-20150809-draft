@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xiphos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.1 2009/07/24 19:47:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/ChangeLog,v 1.2 2009/07/24 19:49:03 beandog Exp $
+
+  24 Jul 2009; Steve Dibb <beandog@gentoo.org> xiphos-3.1.ebuild:
+  Add !gnomesword to dep
 
 *xiphos-3.1 (24 Jul 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.ebuild,v 1.1 2009/07/24 19:47:29 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xiphos/xiphos-3.1.ebuild,v 1.2 2009/07/24 19:49:03 beandog Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ RDEPEND="
 		app-text/gnome-spell
 		>=gnome-base/libbonoboui-2 )"
 DEPEND="${RDEPEND}
+	!app-text/gnomesword
 	>=dev-util/pkgconfig-0.12
 	>=dev-util/intltool-0.29
 	>=app-text/scrollkeeper-0.3.14"
