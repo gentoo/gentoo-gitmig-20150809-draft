@@ -9,31 +9,31 @@ depend() {
 }
 
 create_work_directory() {
-	if [[ ! -d ${RUNTIMEDIR} ]]; then
+	if [ ! -d "${RUNTIMEDIR}" ]; then
 		einfo "Directory ${RUNTIMEDIR} not existing, creating now."
-		mkdir ${RUNTIMEDIR}
-		chown ${USER}:${GROUP} ${RUNTIMEDIR}
-		if [[ ! -d ${RUNTIMEDIR} ]]; then
+		mkdir "${RUNTIMEDIR}"
+		chown "${USER}:${GROUP}" "${RUNTIMEDIR}"
+		if [ ! -d "${RUNTIMEDIR}" ]; then
 			eeror "Directory ${RUNTIMEDIR} could not be created!"
 			return 1
 		fi
-		ln -s /etc/ssl/certs/ca-certificates.crt ${RUNTIMEDIR}/ca-bundle.crt
+		ln -s /etc/ssl/certs/ca-certificates.crt "${RUNTIMEDIR}"/ca-bundle.crt
 	fi
 }
 
 generate_logs() {
-	if [[ ! -f ${LOGFILE} ]]; then
+	if [ ! -f "${LOGFILE}" ]; then
 		einfo "No ${LOGFILE} around. Creating new..."
 		einfo "For good log rotation is great tool app-admin/logrotate"
-		touch ${LOGFILE}
-		chown ${USER}:${GROUP} ${LOGFILE}
+		touch "${LOGFILE}"
+		chown "${USER}:${GROUP}" "${LOGFILE}"
 	fi
 }
 
 cuda_check() {
-	if [[ -f /opt/cuda/lib/libcudart.so ]]; then
+	if [ -f /opt/cuda/lib/libcudart.so ]; then
 		# symlink wont harm :]
-		ln -snf /opt/cuda/lib/libcudart.so ${RUNTIMEDIR}/libcudart.so
+		ln -snf /opt/cuda/lib/libcudart.so "${RUNTIMEDIR}"/libcudart.so
 	fi
 }
 
@@ -43,9 +43,9 @@ start() {
 	create_work_directory
 	cuda_check
 
-	pushd ${RUNTIMEDIR} > /dev/null
+	cd "${RUNTIMEDIR}"
 
-	if [[ ! -f lockfile ]]; then
+	if [ ! -f lockfile ]; then
 		einfo "File $RUNTIMEDIR/lockfile does not exist, assuming first run."
 		einfo "You need to setup an account on the BOINC project homepage beforehand!"
 		einfo "Go to http://boinc.berkeley.edu/ and locate your project."
@@ -58,36 +58,36 @@ start() {
 
 	generate_logs
 
-	if [[ ${ALLOW_REMOTE_RPC} = "yes" ]]; then
+	if [ "${ALLOW_REMOTE_RPC}" = "yes" ]; then
 		ARGS="${ARGS} -allow_remote_gui_rpc"
 	fi
-	
+
 	# sys-apps/util-linux
 	CHRT="/usr/bin/chrt ${SCHED_PARAM}"
 
 	# check for baselayout version
-	if [[ -n "${RC_UNAME}" ]]; then
-		PARAMS="--background --stdout ${LOGFILE} --stderr ${LOGFILE} -- ${ARGS}"
+	if [ -n "${RC_UNAME}" ]; then
+		PARAMS="--background --stdout '${LOGFILE}' --stderr '${LOGFILE}' -- ${ARGS}"
 	else
-		PARAMS="-- ${ARGS} >> ${LOGFILE} 2>&1 &"
+		PARAMS="-- ${ARGS} >> '${LOGFILE}' 2>&1 &"
 	fi
 
 	eval ${CHRT} start-stop-daemon \
-		--quiet --start --chdir ${RUNTIMEDIR} \
-		--pidfile ${PIDFILE} \
+		--quiet --start --chdir "${RUNTIMEDIR}" \
+		--pidfile "${PIDFILE}" \
 		--make-pidfile \
-		--exec ${BOINCBIN} --chuid ${USER}:${GROUP} \
-		--nicelevel ${NICELEVEL} \
+		--exec "${BOINCBIN}" --chuid "${USER}:${GROUP}" \
+		--nicelevel "${NICELEVEL}" \
 		${PARAMS}
 
 	RESULT=$?
 
-	if [ "${CPU_SHARE}" -a -d /sys/kernel/uids ]; then
-		BUID=`id -u ${USER}`
+	if [ "${CPU_SHARE}" ] && [ -d /sys/kernel/uids ]; then
+		BUID="$(id -u "${USER}")"
 		# It might take a moment for start-stop-daemon to chuid
-		[[ -d /sys/kernel/uids/${BUID} ]] || sleep 5 # 5 was working always here
-		if [[ -w /sys/kernel/uids/${BUID}/cpu_share ]]; then
-			echo ${CPU_SHARE} > /sys/kernel/uids/${BUID}/cpu_share
+		[ -d /sys/kernel/uids/"${BUID}" ] || sleep 5 # 5 was working always here
+		if [ -w /sys/kernel/uids/"${BUID}"/cpu_share ]; then
+			echo "${CPU_SHARE}" > /sys/kernel/uids/"${BUID}"/cpu_share
 		fi							      
 	fi	  
 
@@ -101,25 +101,24 @@ attach() {
 	read key
 
 	RC_QUIET_STDOUT="yes" svc_status
-	if [[ $? = 1 ]]; then
+	if [ $? = 1 ]; then
 		svc_start
 	fi
 	ebegin "Attaching to project"
 		# we have to work in runtime directory
-		pushd ${RUNTIMEDIR} > /dev/null
+		cd "${RUNTIMEDIR}"
 		# boinc does not return 1 when it fails currently
-		${BOINCBIN} --chuid ${USER}:${GROUP} --attach_project ${url} ${key} &> /dev/null
-		popd > /dev/null
+		"${BOINCBIN}" --chuid "${USER}:${GROUP}" --attach_project "${url}" "${key}" &> /dev/null
 	eend $?
 
 	sleep 10
-	tail ${LOGFILE}
+	tail "${LOGFILE}"
 }
 
 stop() {
 	ebegin "Stopping BOINC"
-	start-stop-daemon --stop --retry 3 --quiet --exec ${BOINCBIN}
-	rm -f ${PIDFILE}
+	start-stop-daemon --stop --retry 3 --quiet --exec "${BOINCBIN}"
+	rm -f "${PIDFILE}"
 	eend $?
 }
 
