@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4670 2009/07/24 16:07:50 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4671 2009/07/24 18:47:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3076,6 +3076,7 @@ www-plugins/mplayerplug-in:divx - Divx Playback Support
 www-plugins/mplayerplug-in:gmedia - Google Media Playback Support
 www-plugins/mplayerplug-in:realmedia - Real Media Playback Support
 www-plugins/mplayerplug-in:wmp - Windows Media Playback Support
+www-servers/apache:peruser_dc - Enable support for the dc branch of peruser. EXPERIMENTAL!
 www-servers/apache:sni - Enable TLS Server Name Indication (SNI) - EXPERIMENTAL!
 www-servers/apache:suexec - Install suexec with apache
 www-servers/cherokee:admin - Install web based cherokee conf tool
