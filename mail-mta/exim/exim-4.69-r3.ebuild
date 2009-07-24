@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.9 2009/07/24 07:47:06 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.1 2009/07/24 08:54:11 grobian Exp $
 
 inherit eutils toolchain-funcs multilib pam
 
-IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir logrotate"
+IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir logrotate"
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.bz2
@@ -17,6 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 PROVIDE="virtual/mta"
+
 DEPEND=">=sys-apps/sed-4.0.5
 	perl? ( sys-devel/libperl )
 	>=sys-libs/db-3.2
@@ -45,8 +46,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	"
 	# added X check for #57206
 RDEPEND="${DEPEND}
-	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
-	!mailwrapper? ( !virtual/mta )
+	!virtual/mta
 	>=net-mail/mailbase-0.00-r5
 	virtual/logger"
 
@@ -60,6 +60,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/exim-4.43-r2-localscan_dlopen.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.27021.patch
 	epatch "${FILESDIR}"/exim-4.69-r1.boolean_redefine_protect.152706.patch
+	# for cross-compilation, but currently breaks normal compiles :/ #266591
+	#epatch "${FILESDIR}"/${P}-buildconfig-cross-compile.patch
 
 	if use maildir; then
 		einfo "Patching maildir support into exim.conf"
@@ -257,24 +259,13 @@ src_install () {
 	fperms 4755 /usr/sbin/exim
 
 	dodir /usr/bin /usr/sbin /usr/lib
-	if [[ ! -e /usr/lib/sendmail ]];
-	then
-		dosym /usr/sbin/sendmail /usr/lib/sendmail
-	fi
 
-	if use mailwrapper
-	then
-		insinto /etc/mail
-		doins "${FILESDIR}"/mailer.conf
-	else
-		dosym exim /usr/sbin/sendmail
-		dosym /usr/sbin/exim /usr/bin/mailq
-		dosym /usr/sbin/exim /usr/bin/newaliases
-		einfo "The Exim ebuild will no longer touch /usr/bin/mail, "
-		einfo "so as not to interfere with mailx/nail."
-		dosym exim /usr/sbin/rsmtp
-		dosym exim /usr/sbin/rmail
-	fi
+	dosym exim /usr/sbin/sendmail
+	dosym exim /usr/sbin/rsmtp
+	dosym exim /usr/sbin/rmail
+	dosym /usr/sbin/exim /usr/bin/mailq
+	dosym /usr/sbin/exim /usr/bin/newaliases
+	dosym /usr/sbin/sendmail /usr/lib/sendmail
 
 	exeinto /usr/sbin
 	for i in exicyclog exim_dbmbuild exim_dumpdb exim_fixdb exim_lock \
@@ -319,12 +310,4 @@ pkg_postinst() {
 	einfo "/etc/exim/system_filter.exim is a sample system_filter."
 	einfo "/etc/exim/auth_conf.sub contains the configuration sub for using smtp auth."
 	einfo "Please create /etc/exim/exim.conf from /etc/exim/exim.conf.dist."
-
-	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
-	then
-		einfo
-		einfo "Since you emerged $PN without mailwrapper in USE,"
-		einfo "you probably want to 'emerge -C mailwrapper' now."
-		einfo
-	fi
 }
