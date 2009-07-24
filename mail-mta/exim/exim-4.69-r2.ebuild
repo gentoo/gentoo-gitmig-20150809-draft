@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.7 2009/07/22 19:55:36 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r2.ebuild,v 1.8 2009/07/24 07:21:22 grobian Exp $
 
-inherit eutils toolchain-funcs pam
+inherit eutils toolchain-funcs multilib pam
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl mailwrapper lmtp ipv6 sasl dnsdb perl mbx X exiscan nis syslog spf srs gnutls sqlite dovecot-sasl radius domainkeys maildir logrotate"
 
@@ -153,7 +153,7 @@ src_unpack() {
 		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Makefile
 	fi
 
-	if [ -n "$myconf" ] ; then
+	if [[ -n ${myconf} ]] ; then
 		echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
 	fi
 
@@ -178,32 +178,32 @@ src_unpack() {
 		sed -i \
 			-e "s:# \(LOOKUP_LDAP=yes\):\1:" \
 			-e "s:# \(LDAP_LIB_TYPE=OPENLDAP2\):\1:" Local/Makefile
-		LOOKUP_INCLUDE="-I/usr/include/ldap"
-		LOOKUP_LIBS="-L/usr/lib -lldap -llber"
+		LOOKUP_INCLUDE="-I${ROOT}/usr/include/ldap"
+		LOOKUP_LIBS="-lldap -llber"
 	fi
 
 	if use mysql; then
 		sed -i "s:# LOOKUP_MYSQL=yes:LOOKUP_MYSQL=yes:" Local/Makefile
-		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/mysql"
-		LOOKUP_LIBS="$LOOKUP_LIBS -L/usr/lib -lmysqlclient"
+		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${ROOT}/usr/include/mysql"
+		LOOKUP_LIBS="$LOOKUP_LIBS -lmysqlclient"
 	fi
 
 	if use postgres; then
 		sed -i "s:# LOOKUP_PGSQL=yes:LOOKUP_PGSQL=yes:" Local/Makefile
-		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/postgresql"
+		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${ROOT}/usr/include/postgresql"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lpq"
 	fi
 	if use sqlite; then
 		sed -i "s:# LOOKUP_SQLITE=yes: LOOKUP_SQLITE=yes:" Local/Makefile
-		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I/usr/include/sqlite"
+		LOOKUP_INCLUDE="$LOOKUP_INCLUDE -I${ROOT}/usr/include/sqlite"
 		LOOKUP_LIBS="$LOOKUP_LIBS -lsqlite3"
 	fi
-	if [ -n "$LOOKUP_INCLUDE" ]; then
+	if [[ -n ${LOOKUP_INCLUDE} ]]; then
 		sed -i "s:# LOOKUP_INCLUDE=-I /usr/local/ldap/include -I /usr/local/mysql/include -I /usr/local/pgsql/include:LOOKUP_INCLUDE=$LOOKUP_INCLUDE:" \
 			Local/Makefile
 	fi
 
-	if [ -n "$LOOKUP_LIBS" ]; then
+	if [[ -n ${LOOKUP_LIBS} ]]; then
 		sed -i "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq -lgds -lsqlite3:LOOKUP_LIBS=$LOOKUP_LIBS:" \
 			Local/Makefile
 	fi
@@ -227,8 +227,8 @@ src_unpack() {
 	if use domainkeys; then
 		echo "
 		EXPERIMENTAL_DOMAINKEYS=yes
-		CFLAGS  += -I/usr/include/libdomainkeys
-		LDFLAGS += -lcrypto -ldomainkeys -L/usr/lib/libdomainkeys" >> Local/Makefile
+		CFLAGS  += -I${ROOT}/usr/include/libdomainkeys
+		LDFLAGS += -lcrypto -L${ROOT}/usr/$(get_libdir)/libdomainkeys -ldomainkeys" >> Local/Makefile
 	fi
 
 # Use the "native" interface to the DBM library
@@ -264,7 +264,8 @@ src_install () {
 		dosym exim /usr/sbin/sendmail
 		dosym /usr/sbin/exim /usr/bin/mailq
 		dosym /usr/sbin/exim /usr/bin/newaliases
-		einfo "The Exim ebuild will no longer touch /usr/bin/mail, so as not to interfere with mailx/nail."
+		einfo "The Exim ebuild will no longer touch /usr/bin/mail, "
+		einfo "so as not to interfere with mailx/nail."
 		dosym exim /usr/sbin/rsmtp
 		dosym exim /usr/sbin/rmail
 	fi
