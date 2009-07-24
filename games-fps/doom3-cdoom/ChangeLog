@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-cdoom
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-cdoom/ChangeLog,v 1.6 2008/02/15 00:28:48 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-cdoom/ChangeLog,v 1.7 2009/07/24 18:24:42 nyhm Exp $
+
+*doom3-cdoom-1.3.1 (24 Jul 2009)
+
+  24 Jul 2009; Tristan Heaven <nyhm@gentoo.org> +doom3-cdoom-1.3.1.ebuild:
+  Version bump by Paul Bredbury, bug #167558
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> -doom3-cdoom-1.ebuild,
   doom3-cdoom-1-r1.ebuild:
