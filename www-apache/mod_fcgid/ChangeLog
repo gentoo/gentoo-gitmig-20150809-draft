@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_fcgid
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.37 2007/12/31 11:47:47 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fcgid/ChangeLog,v 1.38 2009/07/24 12:14:33 hollow Exp $
+
+*mod_fcgid-2.2-r1 (24 Jul 2009)
+
+  24 Jul 2009; Benedikt Böhm <hollow@gentoo.org> +mod_fcgid-2.2-r1.ebuild,
+  +files/mod_fcgid-2.2-vhost-granularity.patch:
+  add virtualhost granularity patch for suexec and mpm-itk compatibility
 
   31 Dec 2007; Benedikt Böhm <hollow@gentoo.org>
   -files/1.10/20_mod_fcgid.conf, files/2.2/20_mod_fcgid.conf,
