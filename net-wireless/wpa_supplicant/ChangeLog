@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.122 2009/07/21 14:14:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.123 2009/07/24 16:42:43 josejx Exp $
+
+  24 Jul 2009; Joseph Jezak <josejx@gentoo.org> wpa_supplicant-0.6.9.ebuild:
+  Marked ppc/ppc64 stable for bug #278355.
 
   21 Jul 2009; <chainsaw@gentoo.org> wpa_supplicant-0.6.9.ebuild:
   Marked stable on AMD64 as requested by Bjarke Istrup Pedersen
