@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.3.ebuild,v 1.1 2009/07/23 21:02:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.3.ebuild,v 1.2 2009/07/24 11:10:10 mrpouet Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE="crypt dbus hal kerberos krb4 ldap mono networkmanager nntp pda profile pyt
 # Pango dependency required to avoid font rendering problems
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2.14
-	>=gnome-extra/evolution-data-server-2.26.1
+	>=gnome-extra/evolution-data-server-2.26.3
 	>=x11-themes/gnome-icon-theme-2.20
 	>=gnome-base/libbonobo-2.20.3
 	>=gnome-base/libbonoboui-2.4.2
