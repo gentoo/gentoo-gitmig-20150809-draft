@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4669 2009/07/24 15:47:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4670 2009/07/24 16:07:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -168,7 +168,6 @@ app-editors/fe:sendmail - Send mail after editor abend
 app-editors/gedit-plugins:bookmarks - Advanced Bookmarking, it remembers all the bookmarks you ever toggled, highlights them in the text and allows you to navigate through a list with the navigation pane
 app-editors/gedit-plugins:bracketcompletion - Automatically adds closing brackets
 app-editors/gedit-plugins:charmap -  Insert special characters just by clicking on them
-app-editors/gedit-plugins:codecomment - Comment and uncomment blocks of code
 app-editors/gedit-plugins:colorpicker - Pick a color from a dialog and insert its hexadecimal representation
 app-editors/gedit-plugins:drawspaces - Draw spaces and tabs
 app-editors/gedit-plugins:joinlines - Join several lines or split long ones
