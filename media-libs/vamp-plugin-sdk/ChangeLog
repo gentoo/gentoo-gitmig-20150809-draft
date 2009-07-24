@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/vamp-plugin-sdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.30 2009/07/04 12:58:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vamp-plugin-sdk/ChangeLog,v 1.31 2009/07/24 16:54:08 josejx Exp $
+
+  24 Jul 2009; Joseph Jezak <josejx@gentoo.org> vamp-plugin-sdk-2.0.ebuild:
+  Marked ppc stable.
 
   04 Jul 2009; Brent Baude <ranger@gentoo.org> vamp-plugin-sdk-2.0.ebuild:
   stable ppc64, bug 273093
