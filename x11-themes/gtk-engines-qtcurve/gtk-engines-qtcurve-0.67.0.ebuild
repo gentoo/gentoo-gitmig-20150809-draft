@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.62.5.ebuild,v 1.1 2009/03/21 08:23:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-qtcurve/gtk-engines-qtcurve-0.67.0.ebuild,v 1.1 2009/07/24 09:15:33 yngwin Exp $
 
 EAPI=1
 inherit eutils cmake-utils
@@ -29,7 +29,7 @@ DOCS="ChangeLog README TODO"
 
 src_compile() {
 	local mycmakeargs=""
-	use mozilla && mycmakeargs="-DQTC_MODIFY_MOZILLA=true -DQTC_MODIFY_MOZILLA_USER_JS=true"
-	use firefox3 && mycmakeargs="-DQTC_NEW_MOZILLA=true -DQTC_MODIFY_MOZILLA=true -DQTC_MODIFY_MOZILLA_USER_JS=true"
+	use mozilla && mycmakeargs="-DQTC_MODIFY_MOZILLA=true -DQTC_OLD_MOZILLA=true"
+	use firefox3 && mycmakeargs="-DQTC_MODIFY_MOZILLA=true -DQTC_OLD_MOZILLA=false"
 	cmake-utils_src_compile
 }
