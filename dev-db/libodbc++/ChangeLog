@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/libodbc++
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.16 2008/11/16 20:44:59 halcy0n Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.17 2009/07/24 17:31:27 ssuominen Exp $
+
+  24 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  libodbc++-0.2.3-r2.ebuild, +files/libodbc++-0.2.3-gcc44.patch:
+  Fix building with GCC 4.4 wrt #273832, thanks to Łukasz Michalik.
 
   16 Nov 2008; Mark Loeser <halcy0n@gentoo.org>
   +files/libodbc++-0.2.3-gcc43.patch, libodbc++-0.2.3-r2.ebuild:
