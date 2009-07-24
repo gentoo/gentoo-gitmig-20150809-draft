@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libmfcr2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmfcr2/ChangeLog,v 1.3 2008/12/15 11:30:44 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmfcr2/ChangeLog,v 1.4 2009/07/24 10:26:01 volkmar Exp $
+
+  24 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> -libmfcr2-0.0.3.ebuild,
+  libmfcr2-0.0.6_pre1.ebuild:
+  Removing old ebuild (with QA issues) and cleanig/EAPI-2 bump for the other
 
 *libmfcr2-0.0.6_pre1 (15 Dec 2008)
 
