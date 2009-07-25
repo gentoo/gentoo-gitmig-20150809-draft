@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.1 2009/07/24 15:06:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.2 2009/07/25 00:57:23 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -105,7 +105,7 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_USE_SYSTEM_HDF5:BOOL=ON"
 
 		# we also need to append -DH5Tget_array_dims_vers=1 to our CFLAGS
-		# to make sure we can compile against >=hdf5-1.8.3 
+		# to make sure we can compile against >=hdf5-1.8.3
 		append-flags -DH5_USE_16_API
 	fi
 
@@ -163,7 +163,6 @@ src_compile() {
 	CMAKE_VARIABLES="${CMAKE_VARIABLES}	-DPARAVIEW_BUILD_PLUGIN_ClientTreeView:BOOL=no"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_BUILD_PLUGIN_GraphLayoutFilterPanel:BOOL=OFF"
 
-
 	if use qt4; then
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_BUILD_QT_GUI:BOOL=ON"
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR=/${PVLIBDIR}/plugins/designer"
@@ -200,7 +199,6 @@ src_install() {
 	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
 	doenvd "${T}"/40${PN}
 }
-
 
 pkg_postinst() {
 	# with Qt4.5 there seem to be issues reading data files
