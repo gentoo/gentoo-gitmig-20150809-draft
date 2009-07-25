@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/evolution-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.237 2009/07/25 03:23:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-data-server/ChangeLog,v 1.238 2009/07/25 07:31:14 tove Exp $
 
   25 Jul 2009; Joseph Jezak <josejx@gentoo.org>
   evolution-data-server-2.24.5-r3.ebuild,
@@ -33,7 +33,7 @@
   evolution-data-server-2.26.2.ebuild:
   Marking evolution-data-server-2.26.2 ~ppc64 for bug 270996
 
-  28 May 2009; Tiziano MÃ¼ller <dev-zero@gentoo.org>
+  28 May 2009; Tiziano Müller <dev-zero@gentoo.org>
   evolution-data-server-2.26.2.ebuild,
   +files/evolution-data-server-2.26.2-as-needed-configure.patch:
   Fixed configure with USE=kerberos and --as-needed (bug #271492).
@@ -65,7 +65,7 @@
   evolution-data-server-2.24.5-r2:
   Stable for HPPA (bug #260063).
 
-  27 Apr 2009; RaÃºl Porcel <armin76@gentoo.org>
+  27 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-2.24.5-r2.ebuild:
   arm stable
 
@@ -92,13 +92,13 @@
   evolution-data-server-2.24.5-r1.ebuild:
   marking eds-2.22.3-r2 and 2.24.5-r1 for bug 258867
 
-  18 Mar 2009; RaÃºl Porcel <armin76@gentoo.org>
+  18 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-2.22.3-r2.ebuild,
   evolution-data-server-2.24.5-r1.ebuild,
   evolution-data-server-2.24.5-r2.ebuild:
   alpha/ia64/sparc stable wrt #258867
 
-  18 Mar 2009; RaÃºl Porcel <armin76@gentoo.org>
+  18 Mar 2009; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-2.24.5.ebuild:
   alpha/ia64 stable wrt #260063
 
@@ -215,7 +215,7 @@
   evolution-data-server-2.22.3-r1.ebuild:
   Marked stable on amd64 for bug #250728
 
-  16 Dec 2008; RaÃºl Porcel <armin76@gentoo.org>
+  16 Dec 2008; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-2.22.3-r1.ebuild:
   alpha/ia64/sparc/x86 stable wrt #250728
 
@@ -256,7 +256,7 @@
   evolution-data-server-2.22.3.ebuild:
   Stable for HPPA (bug #236971).
 
-  09 Sep 2008; RaÃºl Porcel <armin76@gentoo.org>
+  09 Sep 2008; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-2.22.3.ebuild:
   alpha/ia64/sparc stable wrt #236971
 
@@ -264,11 +264,11 @@
   evolution-data-server-2.22.3.ebuild:
   x86 stable, bug #236971
 
-  07 Sep 2008; Olivier CrÃªte <tester@gentoo.org>
+  07 Sep 2008; Olivier Crête <tester@gentoo.org>
   evolution-data-server-2.22.3.ebuild:
   amd64 stable, bug #236971
 
-  12 Aug 2008; RaÃºl Porcel <armin76@gentoo.org>
+  12 Aug 2008; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-2.22.2.ebuild:
   alpha/ia64/sparc stable wrt #229709
 
@@ -280,7 +280,7 @@
   evolution-data-server-2.22.2.ebuild:
   Marking evolution-data-server-2.22.2 ppc stable for bug 229709
 
-  26 Jul 2008; Olivier CrÃªte <tester@gentoo.org>
+  26 Jul 2008; Olivier Crête <tester@gentoo.org>
   evolution-data-server-2.22.2.ebuild:
   Stable on amd64, bug #229709
 
@@ -464,7 +464,7 @@
   evolution-data-server-1.12.3.ebuild:
   Stable for HPPA (bug #208366).
 
-  03 Feb 2008; RaÃºl Porcel <armin76@gentoo.org>
+  03 Feb 2008; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-1.12.3.ebuild:
   alpha/ia64/sparc stable wrt #208366
 
@@ -558,11 +558,11 @@
   evolution-data-server-1.12.1.ebuild:
   Marking evolution-data-server-1.12.1 ppc stable for bug 199740
 
-  22 Nov 2007; RaÃºl Porcel <armin76@gentoo.org>
+  22 Nov 2007; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-1.12.1.ebuild:
   alpha/ia64/sparc stable wrt #199740
 
-  21 Nov 2007; Dawid WÄgliÅski <cla@gentoo.org>
+  21 Nov 2007; Dawid Węgliński <cla@gentoo.org>
   evolution-data-server-1.12.1.ebuild:
   Stable on x86 (bug #199740)
 
@@ -602,7 +602,7 @@
   evolution-data-server-1.10.3.1.ebuild:
   stable on ppc64
 
-  01 Sep 2007; RaÃºl Porcel <armin76@gentoo.org>
+  01 Sep 2007; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-1.10.3.1.ebuild:
   alpha/ia64 stable wrt security #190861
 
@@ -652,7 +652,7 @@
   evolution-data-server-1.10.2.ebuild:
   Stable on amd64 wrt bug #185823
 
-  08 Aug 2007; RaÃºl Porcel <armin76@gentoo.org>
+  08 Aug 2007; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-1.10.2.ebuild:
   alpha/ia64 stable wrt #185823
 
@@ -664,7 +664,7 @@
   evolution-data-server-1.10.2.ebuild:
   Stable on sparc wrt #185823
 
-  02 Jul 2007; Piotr JaroszyÅski <peper@gentoo.org>
+  02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   evolution-data-server-1.6.2.ebuild, evolution-data-server-1.6.2-r1.ebuild,
   evolution-data-server-1.8.3-r5.ebuild,
   evolution-data-server-1.10.1-r3.ebuild,
@@ -690,7 +690,7 @@
   evolution-data-server-1.6.2-r1.ebuild:
   Stable for HPPA (bug #182011).
 
-  15 Jun 2007; RaÃºl Porcel <armin76@gentoo.org>
+  15 Jun 2007; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-1.6.2-r1.ebuild,
   evolution-data-server-1.8.3-r5.ebuild:
   alpha/ia64 stable wrt security #182011
@@ -754,7 +754,7 @@
   evolution-data-server-1.8.3-r4.ebuild:
   Marking evolution-data-server-1.8.3-r4 ppc64 stable for bug #171107
 
-  30 May 2007; RaÃºl Porcel <armin76@gentoo.org>
+  30 May 2007; Raúl Porcel <armin76@gentoo.org>
   evolution-data-server-1.8.3-r4.ebuild:
   alpha/ia64 stable wrt #171107
 
@@ -833,7 +833,7 @@
   +evolution-data-server-1.8.3.ebuild:
   New version for translation updates
 
-  21 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  21 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.8.2.ebuild:
   Stable on IA64, bug 156662.
 
@@ -841,7 +841,7 @@
   evolution-data-server-1.8.2.ebuild:
   Stable for HPPA (bug #147751).
 
-  14 Jan 2007; Bryan Ãstergaard <kloeri@gentoo.org>
+  14 Jan 2007; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.8.2.ebuild:
   Stable on Alpha.
 
@@ -889,7 +889,7 @@
   +evolution-data-server-1.8.1-r1.ebuild:
   apply patch to fix subfolder problem with exchange.  fixes #151048
 
-  19 Oct 2006; Bryan Ãstergaard <kloeri@gentoo.org>
+  19 Oct 2006; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.6.2.ebuild:
   Stable on Alpha.
 
@@ -965,7 +965,7 @@
   06 May 2006; <dang@gentoo.org> +evolution-data-server-1.6.1.ebuild:
   Bump for 2.14.1
 
-  18 Apr 2006; Diego PettenÃ² <flameeyes@gentoo.org>
+  18 Apr 2006; Diego Pettenò <flameeyes@gentoo.org>
   evolution-data-server-1.2.3.ebuild, evolution-data-server-1.4.2.1.ebuild,
   evolution-data-server-1.6.0.ebuild:
   Restrict confcache as per bug #130117.
@@ -1072,7 +1072,7 @@
   -evolution-data-server-1.3.7.ebuild, +evolution-data-server-1.3.8.ebuild:
   New version. Fixed patch. Added 'firefox' USE flag.
 
-  22 Aug 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  22 Aug 2005; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.2.3.ebuild:
   Stable on ia64.
 
@@ -1124,7 +1124,7 @@
   evolution-data-server-1.2.1-r1.ebuild:
   Stable on alpha
 
-  12 Jun 2005; Olivier CrÃªte <tester@gentoo.org>
+  12 Jun 2005; Olivier Crête <tester@gentoo.org>
   evolution-data-server-1.2.1-r1.ebuild:
   Stable on amd64
 
@@ -1166,11 +1166,11 @@
   evolution-data-server-1.0.4.ebuild:
   Stable on amd64.
 
-  28 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  28 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.0.4.ebuild:
   Stable on alpha.
 
-  27 Apr 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  27 Apr 2005; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.0.4.ebuild:
   Stable on ia64.
 
@@ -1196,7 +1196,7 @@
   +evolution-data-server-1.2.1.ebuild:
   New version
 
-  20 Mar 2005; Bryan Ãstergaard <kloeri@gentoo.org>
+  20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.0.3.ebuild:
   Stable on alpha.
 
@@ -1255,7 +1255,7 @@
   evolution-data-server-1.0.2.ebuild:
   Stable on ppc64
 
-  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org>
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   evolution-data-server-1.0.2.ebuild:
   Stable on alpha.
 
