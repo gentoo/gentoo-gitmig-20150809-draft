@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.15 2009/01/29 09:51:12 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.16 2009/07/25 02:31:15 halcy0n Exp $
+
+  25 Jul 2009; Mark Loeser <halcy0n@gentoo.org> freemat-3.6.ebuild,
+  +files/freemat-3.6-gcc44.patch:
+  Patch to fix compilation with gcc-4.4 by Martin Väth <vaeth AT
+  mathematik.uni-wuerzburg DOT de>; bug #269278
 
   29 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> freemat-3.6.ebuild:
   Added qt-svg dependency, switch to eapi 2

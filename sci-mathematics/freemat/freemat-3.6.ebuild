@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.6 2009/01/29 09:51:13 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.7 2009/07/25 02:31:15 halcy0n Exp $
 
 EAPI="2"
 inherit eutils autotools fdo-mime
@@ -38,6 +38,7 @@ src_prepare() {
 	# allow enable/disable for configure
 	epatch "${FILESDIR}"/${P}-optional-deps.patch
 	epatch "${FILESDIR}"/${P}-includes.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	eautoreconf
 }
 
