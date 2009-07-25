@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/functest
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/functest/ChangeLog,v 1.1 2009/07/25 19:53:15 neurogeek Exp $
+
+*functest-0.8.8 (25 Jul 2009)
+
+  25 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> +functest-0.8.8.ebuild,
+  +metadata.xml:
+  Initial commit. Thanks to Almad (bugs@almad.net). Closes bug #238899.
+
