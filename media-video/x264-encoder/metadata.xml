@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>video</herd>
   <use>
-    <flag name="mp4">Enables support for encoding to mp4 container format</flag>
+    <flag name="mp4">Support for MP4 container format</flag>
   </use>
 </pkgmetadata>
