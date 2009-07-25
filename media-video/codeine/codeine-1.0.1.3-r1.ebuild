@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.1.3-r1.ebuild,v 1.1 2009/02/15 17:10:09 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/codeine/codeine-1.0.1.3-r1.ebuild,v 1.2 2009/07/25 18:49:53 halcy0n Exp $
 
 inherit kde-functions multilib versionator toolchain-funcs
 
@@ -30,6 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-respect-cc.patch"
 	epatch "${FILESDIR}/codeine-1.0.1.3-desktop-file.diff"
 	epatch "${FILESDIR}/codeine-1.0.1.3-gcc43.diff"
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 }
 
 src_compile() {
