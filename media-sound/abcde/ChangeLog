@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/abcde
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.41 2009/01/10 10:59:13 beandog Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.42 2009/07/25 15:34:22 ssuominen Exp $
+
+  25 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  abcde-2.3.99.7_p235.ebuild, abcde-2.3.99.7_p235-r2.ebuild:
+  Remove mppenc from deps since there is no such binary in Musepack SV8.
 
   10 Jan 2009; Steve Dibb <beandog@gentoo.org> abcde-2.3.0.ebuild,
   abcde-2.3.3.ebuild, abcde-2.3.3-r1.ebuild, abcde-2.3.99.7_p235.ebuild,

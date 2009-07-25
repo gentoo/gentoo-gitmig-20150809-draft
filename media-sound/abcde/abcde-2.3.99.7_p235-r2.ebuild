@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.99.7_p235-r2.ebuild,v 1.2 2009/01/10 10:59:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.3.99.7_p235-r2.ebuild,v 1.3 2009/07/25 15:34:22 ssuominen Exp $
 
 DESCRIPTION="A Better CD Encoder"
 HOMEPAGE="http://code.google.com/p/abcde/"
@@ -12,7 +12,7 @@ S="${WORKDIR}"/${MY_PV}
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="aac cdparanoia id3 vorbis flac speex lame musepack normalize replaygain"
+IUSE="aac cdparanoia id3 vorbis flac speex lame normalize replaygain"
 
 RDEPEND="
 	id3? (
@@ -27,7 +27,6 @@ RDEPEND="
 	flac? ( media-libs/flac )
 	speex? ( media-libs/speex )
 	lame? ( media-sound/lame )
-	musepack? ( media-sound/mppenc )
 	normalize? ( >=media-sound/normalize-0.7.4 )
 	replaygain? ( vorbis? ( media-sound/vorbisgain )
 		lame? ( media-sound/mp3gain ) )"
