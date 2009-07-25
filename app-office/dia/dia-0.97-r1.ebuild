@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97-r1.ebuild,v 1.1 2009/07/14 22:41:36 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.97-r1.ebuild,v 1.2 2009/07/25 02:16:47 darkside Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ MY_PV_MM=$(get_version_component_range 1-2)
 SRC_URI="mirror://gnome/sources/${PN}/${MY_PV_MM}/${MY_P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 # the doc USE flag doesn't seem to do anything without docbook2html
 # FIXME: configure mixes debug and devel meaning (see -DGTK_DISABLE...)
 IUSE="cairo doc gnome png python zlib"
