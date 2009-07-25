@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.6.ebuild,v 1.1 2009/07/20 23:30:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonic-visualiser/sonic-visualiser-1.6.ebuild,v 1.2 2009/07/25 15:04:56 aballier Exp $
 
 EAPI=1
 
@@ -50,6 +50,7 @@ src_unpack() {
 	cd "${S}"
 	# remove crap
 	sed -i -e "s:-O3::" prf/sv.prf
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 }
 
 sv_disable_opt() {
