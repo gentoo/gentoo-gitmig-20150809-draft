@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10101 2009/07/25 19:59:22 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10102 2009/07/25 22:33:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,10 +36,9 @@
 >net-ftp/lftp-3.99
 
 # Samuli Suominen <ssuominen@gentoo.org> (25 Jul 2009)
-# Masked for testing and deps adjusting.
+# Musepack SV8. Masked for testing and deps adjusting.
+# See, http://bugs.gentoo.org/show_bug.cgi?id=279064
 >=media-sound/musepack-tools-444
-media-libs/libreplaygain
-media-libs/libcuefile
 
 # Torsten Veller <tove@gentoo.org> (25 Jul 2009)
 # breaks tests of POE-XS-Loop-Poll and POE-XS-Loop-EPoll
