@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.25 2009/07/18 15:45:39 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.26 2009/07/25 10:43:34 cryos Exp $
+
+  25 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org> avogadro-0.9.7.ebuild:
+  Tidied up boost dep, Avogadro will not compile with older boost versions.
 
 *avogadro-0.9.7 (18 Jul 2009)
 
