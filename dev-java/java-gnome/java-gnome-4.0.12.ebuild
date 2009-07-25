@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.10.ebuild,v 1.3 2009/03/22 18:33:56 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-4.0.12.ebuild,v 1.1 2009/07/25 15:51:07 serkan Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc examples source"
@@ -25,6 +25,10 @@ RDEPEND=">=dev-libs/glib-2.16.1
 	>=gnome-base/libgnome-2.22.0
 	>=gnome-base/gnome-desktop-2.22.0
 	>=x11-libs/cairo-1.6.4[svg]
+	>=x11-libs/gtksourceview-2.6.2
+	>=app-text/gtkspell-2.0.15-r1
+	>=x11-libs/libnotify-0.4.5
+	>=dev-libs/libunique-1.0.8
 	>=virtual/jre-1.5"
 DEPEND="${RDEPEND}
 	dev-java/junit:0
@@ -36,11 +40,6 @@ DEPEND="${RDEPEND}
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-i18n-javadoc.patch
-	java-pkg-2_src_prepare
-}
 
 src_configure() {
 	# Handwritten in perl so not using econf

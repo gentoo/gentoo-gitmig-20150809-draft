@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.85 2009/07/19 13:50:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.86 2009/07/25 15:51:07 serkan Exp $
+
+*java-gnome-4.0.12 (25 Jul 2009)
+
+  25 Jul 2009; Serkan Kaba <serkan@gentoo.org> -java-gnome-4.0.7.ebuild,
+  -java-gnome-4.0.7-r3.ebuild, -java-gnome-4.0.8-r2.ebuild,
+  -java-gnome-4.0.9-r1.ebuild, -java-gnome-4.0.10.ebuild,
+  +java-gnome-4.0.12.ebuild:
+  Version bump. Remove old.
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> java-gnome-4.0.11.ebuild:
   ppc stable #273948
