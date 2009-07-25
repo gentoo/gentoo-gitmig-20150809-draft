@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/bitstormlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/ChangeLog,v 1.10 2009/02/16 00:05:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitstormlite/ChangeLog,v 1.11 2009/07/25 19:53:52 ssuominen Exp $
+
+  25 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  bitstormlite-0.2p.ebuild, +files/bitstormlite-0.2p-gcc44.patch:
+  Fix building with GCC 4.4 wrt #277188.
 
   16 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/bitstormlite-0.2p-gcc43.patch, bitstormlite-0.2p.ebuild:
