@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.34 2009/07/24 15:06:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.35 2009/07/25 14:25:26 markusle Exp $
+
+  25 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.6.1.ebuild:
+  Remove threads useflag and always force compilation against pthreads.
 
 *paraview-3.6.1 (23 Jul 2009)
 

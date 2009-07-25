@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.2 2009/07/25 00:57:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.3 2009/07/25 14:25:26 markusle Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="paraview GPL-2"
 KEYWORDS="~x86 ~amd64"
 SLOT="0"
-IUSE="mpi python hdf5 doc examples threads qt4 plugins boost"
+IUSE="mpi python hdf5 doc examples qt4 plugins boost"
 RDEPEND="hdf5? ( sci-libs/hdf5 )
 	mpi? ( || (
 				sys-cluster/openmpi
@@ -91,6 +91,7 @@ src_compile() {
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_SYSTEM_LIBXML2:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_BUILD_StreamingParaView:BOOL=ON"
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_OFFSCREEN=TRUE"
+	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=ON"
 
 	# FIXME: compiling against ffmpeg is currently broken
 	CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_USE_FFMPEG_ENCODER:BOOL=OFF"
@@ -168,12 +169,6 @@ src_compile() {
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DVTK_INSTALL_QT_DIR=/${PVLIBDIR}/plugins/designer"
 	else
 		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DPARAVIEW_BUILD_QT_GUI:BOOL=OFF"
-	fi
-
-	if use threads; then
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=ON"
-	else
-		CMAKE_VARIABLES="${CMAKE_VARIABLES} -DCMAKE_USE_PTHREADS:BOOL=OFF"
 	fi
 
 	cmake ${CMAKE_VARIABLES} "${S}" \
