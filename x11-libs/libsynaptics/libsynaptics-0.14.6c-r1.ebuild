@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6c-r1.ebuild,v 1.4 2009/02/26 14:39:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6c-r1.ebuild,v 1.5 2009/07/25 22:12:32 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="library for accessing synaptics touchpads"
@@ -14,14 +15,13 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 RDEPEND=">=x11-drivers/synaptics-0.14.4"
+DEPEND=""
 
-src_unpack() {
-	unpack ${A} || die
-	cd "${S}" || die
-	epatch "${FILESDIR}/libsynaptics-0.14.6c-r1-gcc-4-3-0.patch" || die
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog README TODO
 }
