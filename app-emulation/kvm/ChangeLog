@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/kvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.36 2009/07/21 18:26:49 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/ChangeLog,v 1.37 2009/07/25 14:19:52 dang Exp $
+
+*kvm-88-r1 (25 Jul 2009)
+
+  25 Jul 2009; Daniel Gryniewicz <dang@gentoo.org> -kvm-81.ebuild,
+  -kvm-82.ebuild, -kvm-83.ebuild, -kvm-85-r1.ebuild, +kvm-88-r1.ebuild:
+  Bump to kvm-88-r1
+  - Fix hard-coded share path; bug #279013
+  - Fix build with esd/pulse; bug #278652
 
 *kvm-88 (21 Jul 2009)
 
