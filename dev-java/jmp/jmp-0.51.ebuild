@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.51.ebuild,v 1.6 2007/11/28 03:18:04 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmp/jmp-0.51.ebuild,v 1.7 2009/07/25 20:45:49 halcy0n Exp $
 
-inherit java-pkg-2
+inherit eutils java-pkg-2
 
 DESCRIPTION="Java Memory Profiler"
 HOMEPAGE="http://www.khelekore.org/jmp/"
@@ -27,6 +27,13 @@ RDEPEND="|| ( =virtual/jre-1.5* =virtual/jre-1.4* )
 	gtk? ( >=x11-libs/gtk+-2.0 )"
 DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
 
 src_compile() {
 	econf $(use_enable !gtk noui) || die "econf ${myconf} failed"
