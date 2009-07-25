@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/murmur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.14 2009/07/21 19:30:34 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/murmur/ChangeLog,v 1.15 2009/07/25 11:10:59 dagger Exp $
+
+  25 Jul 2009; Robert Piasek <dagger@gentoo.org> murmur-1.1.8.ebuild:
+  Reverted dependency bump as per bug #278896
 
   21 Jul 2009; Robert Piasek <dagger@gentoo.org> murmur-1.1.8.ebuild:
   Murmur doesn't compile against Ice 3.2.x
