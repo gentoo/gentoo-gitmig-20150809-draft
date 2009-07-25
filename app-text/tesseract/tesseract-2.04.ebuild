@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.04.ebuild,v 1.1 2009/07/19 15:28:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tesseract/tesseract-2.04.ebuild,v 1.2 2009/07/25 21:12:14 vostorga Exp $
 
 inherit eutils
 
@@ -35,6 +35,9 @@ src_unpack() {
 
 	# Remove obsolete makefile, install target only in uppercase Makefile
 	rm -f "${S}/java/makefile"
+
+	#bug 269320
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
