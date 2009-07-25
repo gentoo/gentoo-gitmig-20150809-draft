@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/nilfs-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.4 2009/07/20 02:09:51 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/nilfs-utils/ChangeLog,v 1.5 2009/07/25 16:20:47 matsuu Exp $
+
+  25 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> -nilfs-utils-2.0.12.ebuild,
+  -nilfs-utils-2.0.13.ebuild:
+  Removed old versions.
 
 *nilfs-utils-2.0.14 (20 Jul 2009)
 
