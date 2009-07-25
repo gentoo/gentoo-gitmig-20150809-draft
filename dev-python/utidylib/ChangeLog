@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/utidylib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.7 2008/05/02 18:41:01 pythonhead Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/ChangeLog,v 1.8 2009/07/25 16:13:11 neurogeek Exp $
+
+*utidylib-0.2-r1 (25 Jul 2009)
+
+  25 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> -utidylib-0.2.ebuild,
+  +utidylib-0.2-r1.ebuild, files/utidylib-0.2-fix_tests.patch,
+  -files/utidylib-0.2-tests-twisted-2.1-compat.patch:
+  Revision bump. Fixed tests. Closes bug #276881
 
   02 May 2008; Rob Cakebread <pythonhead@gentoo.org> utidylib-0.2.ebuild:
   Use berlios mirror. bug #218657

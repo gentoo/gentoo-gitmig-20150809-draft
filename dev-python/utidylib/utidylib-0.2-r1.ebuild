@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2.ebuild,v 1.7 2008/05/02 18:41:01 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2-r1.ebuild,v 1.1 2009/07/25 16:13:11 neurogeek Exp $
 
-inherit distutils eutils
+EAPI="2"
+inherit distutils
 
 MY_P="uTidylib-${PV}"
 
@@ -26,10 +27,7 @@ DEPEND="${RDEPEND}
 PYTHON_MODNAME="tidy"
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-tests-twisted-2.1-compat.patch"
+src_prepare(){
 	epatch "${FILESDIR}/${P}-no-docs-in-site-packages.patch"
 	epatch "${FILESDIR}/${P}-fix_tests.patch"
 }
@@ -42,7 +40,9 @@ src_compile() {
 }
 
 src_test() {
-	trial tidy || die "tests failed"
+	einfo "${S}"
+	einfo "$(ls ${S}/foo.htm)"
+	PYTHONPATH="." trial tidy || die "tests failed"
 }
 
 src_install() {
