@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sdcv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sdcv/ChangeLog,v 1.1 2008/12/16 19:39:34 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/sdcv/ChangeLog,v 1.2 2009/07/25 21:46:52 halcy0n Exp $
+
+  25 Jul 2009; Mark Loeser <halcy0n@gentoo.org>
+  files/sdcv-0.4.2-missing-headers.patch:
+  Update missing headers patch for gcc-4.4; bug #276288
 
 *sdcv-0.4.2 (16 Dec 2008)
 
