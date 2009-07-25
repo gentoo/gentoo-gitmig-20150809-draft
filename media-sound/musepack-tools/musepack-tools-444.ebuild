@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-444.ebuild,v 1.2 2009/07/25 15:42:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-444.ebuild,v 1.3 2009/07/25 17:16:14 ssuominen Exp $
 
 inherit cmake-utils
 
@@ -29,4 +29,5 @@ src_install() {
 	cmake-utils_src_install
 	insinto /usr/include/mpc
 	doins include/mpc/*.h || die "doins failed"
+	dosym mpc /usr/include/mpcdec || die "dosym failed"
 }
