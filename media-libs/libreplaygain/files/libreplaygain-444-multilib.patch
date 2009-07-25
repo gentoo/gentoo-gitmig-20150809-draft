@@ -1,0 +1,9 @@
+diff -ur libreplaygain-444.orig/src/CMakeLists.txt libreplaygain-444/src/CMakeLists.txt
+--- libreplaygain-444.orig/src/CMakeLists.txt	2009-07-25 14:49:52.000000000 +0300
++++ libreplaygain-444/src/CMakeLists.txt	2009-07-25 15:00:48.000000000 +0300
+@@ -6,4 +6,4 @@
+ add_library(replaygain-shared SHARED gain_analysis)
+ set_target_properties(replaygain-shared PROPERTIES OUTPUT_NAME replaygain CLEAN_DIRECT_OUTPUT 1 VERSION 1.0.0 SOVERSION 1)
+ 
+-install(TARGETS replaygain-static replaygain-shared LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
++install(TARGETS replaygain-static replaygain-shared LIBRARY DESTINATION "lib${LIB_SUFFIX}" ARCHIVE DESTINATION "lib${LIB_SUFFIX}")
