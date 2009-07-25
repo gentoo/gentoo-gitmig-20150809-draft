@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.1 2009/04/07 18:51:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/qwtplot3d-0.2.7-r1.ebuild,v 1.2 2009/07/25 22:20:56 halcy0n Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -27,6 +27,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-examples.patch
 	epatch "${FILESDIR}"/${PN}-doxygen.patch
 	epatch "${FILESDIR}"/${PN}-sys-gl2ps.patch
+	epatch "${FILESDIR}"/${PN}-gcc44.patch
 	cat >> ${PN}.pro <<-EOF
 		target.path = /usr/$(get_libdir)
 		headers.path = /usr/include/${PN}

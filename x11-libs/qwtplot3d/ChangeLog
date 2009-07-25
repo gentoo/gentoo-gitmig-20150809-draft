@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwtplot3d
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.16 2009/04/08 07:57:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwtplot3d/ChangeLog,v 1.17 2009/07/25 22:20:56 halcy0n Exp $
+
+  25 Jul 2009; Mark Loeser <halcy0n@gentoo.org>
+  +files/qwtplot3d-gcc44.patch, qwtplot3d-0.2.7-r1.ebuild:
+  Fix compilation with gcc-4.4; bug #272417
 
   08 Apr 2009; Sébastien Fabbro <bicatali@gentoo.org>
   files/qwtplot3d-sys-gl2ps.patch:
