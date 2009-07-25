@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nepenthes
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.18 2009/02/03 10:03:53 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/ChangeLog,v 1.19 2009/07/25 02:18:43 halcy0n Exp $
+
+  25 Jul 2009; Mark Loeser <halcy0n@gentoo.org> nepenthes-0.2.2.ebuild,
+  +files/nepenthes-0.2.2-gcc44.patch:
+  Fix compilation with gcc-4.4. Thanks to Victor Ostorga <vostorga AT gentoo
+  DOT org>; bug #273845
 
   03 Feb 2009; Peter Volkov <pva@gentoo.org>
   +files/nepenthes-0.2.2-gcc4.patch, nepenthes-0.2.2.ebuild:

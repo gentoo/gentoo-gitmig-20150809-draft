@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.2 2009/02/03 10:03:53 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.3 2009/07/25 02:18:43 halcy0n Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -28,7 +28,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch ${FILESDIR}/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-gcc4.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	sed 's|var/cache|/var/lib/cache|' -i modules/shellcode-signatures/shellcode-signatures.cpp
 	find . -name Makefile.am -exec sed 's: -Werror::' -i '{}' \;
 	eautoreconf
