@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/simplesettings
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplesettings/ChangeLog,v 1.1 2009/07/25 20:23:36 neurogeek Exp $
+
+*simplesettings-0.5 (25 Jul 2009)
+
+  25 Jul 2009; Jesus Rivero <neurogeek@gentoo.org>
+  +simplesettings-0.5.ebuild, +metadata.xml:
+  Initial commit. Thanks to Almad (bugs@almad.net). Closes bug #238902
+
