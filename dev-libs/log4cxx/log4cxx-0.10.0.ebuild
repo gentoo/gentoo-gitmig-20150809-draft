@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.4 2009/04/11 15:40:08 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/log4cxx/log4cxx-0.10.0.ebuild,v 1.5 2009/07/25 20:23:41 ssuominen Exp $
 
 EAPI="1"
 
@@ -36,8 +36,8 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
-	epatch "${FILESDIR}/${PV}-missing_includes.patch"
+	epatch "${FILESDIR}"/${PV}-missing_includes.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
