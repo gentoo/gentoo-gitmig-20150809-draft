@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/wmmsens-0.29.8.ebuild,v 1.2 2008/06/28 07:11:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmsens/wmmsens-0.29.8.ebuild,v 1.3 2009/07/25 19:47:15 ssuominen Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="a dockapp for monitoring hardware sensors (sys-apps/lm_sensors)"
 HOMEPAGE="http://www.digressed.net/wmmsens"
@@ -10,7 +10,7 @@ SRC_URI="http://www.digressed.net/${PN}/src/${P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="sys-apps/lm_sensors
@@ -24,6 +24,7 @@ S=${WORKDIR}/${P}/src
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	sed -e 's:$(OBJS) $(LDFLAGS):$(LDFLAGS) $(OBJS) $(LIBS):g' \
 		-e 's:LDFLAGS = -L/usr/X11R6/lib:LIBS =:' -e '/DELETE/q' \
 		-i "${S}"/Makefile
