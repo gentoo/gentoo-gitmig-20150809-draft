@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/jusb-0.4.4-r1.ebuild,v 1.2 2007/05/25 19:33:48 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/jusb-0.4.4-r1.ebuild,v 1.3 2009/07/25 19:54:53 flameeyes Exp $
 
 inherit eutils java-pkg-2 linux-info flag-o-matic multilib
 
@@ -57,7 +57,8 @@ src_compile() {
 	# one native source file
 	append-flags -fPIC
 
-	make || die "Failed to compile"
+	# bug #279088
+	emake -j1 || die "Failed to compile"
 	use doc && make javadoc
 }
 

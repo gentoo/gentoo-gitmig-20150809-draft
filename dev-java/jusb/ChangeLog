@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jusb
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.5 2007/05/25 19:33:48 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.6 2009/07/25 19:54:53 flameeyes Exp $
+
+  25 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  jusb-0.4.4-r1.ebuild:
+  Use emake -j1 rather than make (bug #279088).
 
   25 May 2007; Petteri Räty <betelgeuse@gentoo.org> jusb-0.4.4-r1.ebuild:
   Add pkg_setup that calls both linux-info_pkg_setup and java-pkg-2_pkg_setup
