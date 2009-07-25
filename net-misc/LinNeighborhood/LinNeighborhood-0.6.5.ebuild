@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.5.ebuild,v 1.17 2008/12/18 12:23:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/LinNeighborhood-0.6.5.ebuild,v 1.18 2009/07/25 21:17:49 halcy0n Exp $
 
 inherit eutils
 
@@ -19,7 +19,8 @@ DEPEND="=x11-libs/gtk+-1.2* net-fs/samba
 src_compile() {
 	local myopts
 
-	epatch ${FILESDIR}/linneighborhood-0.6.5-samba301.patch
+	epatch "${FILESDIR}"/linneighborhood-0.6.5-samba301.patch
+	epatch "${FILESDIR}"/linneighborhood-0.6.5-gcc44.patch
 	use nls || myopts="--disable-nls"
 
 	./configure --prefix=/usr \
