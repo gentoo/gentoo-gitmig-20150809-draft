@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.13.1.ebuild,v 1.1 2009/06/28 11:14:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/devede/devede-3.13.1.ebuild,v 1.2 2009/07/25 17:45:20 ssuominen Exp $
 
 NEED_PYTHON=2.4
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="psyco"
 
-RDEPEND=">=x11-libs/gtk+-2.6
+RDEPEND=">=x11-libs/gtk+-2.16
 	dev-python/pygtk
 	>=media-video/mplayer-1.0_rc1
 	media-video/dvdauthor
