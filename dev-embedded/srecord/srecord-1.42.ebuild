@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/srecord-1.42.ebuild,v 1.1 2008/06/17 08:32:08 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/srecord/srecord-1.42.ebuild,v 1.2 2009/07/25 19:21:34 ssuominen Exp $
+
+inherit eutils
 
 DESCRIPTION="A collection of powerful tools for manipulating EPROM load files."
 HOMEPAGE="http://srecord.sourceforge.net/"
@@ -19,6 +21,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 
 src_unpack() {
 	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	sed -i \
 		-e 's/(SOELIM) -I. -Ietc man\/man1/(SOELIM) -I. -Ietc -Iman\/man1 man\/man1/' \
 		-e 's/(SOELIM) -I. -Ietc man\/man5/(SOELIM) -I. -Ietc -Iman\/man5 man\/man5/' \
