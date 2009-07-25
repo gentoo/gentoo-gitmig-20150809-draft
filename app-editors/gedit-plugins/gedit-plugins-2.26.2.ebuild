@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.3 2009/07/24 15:49:03 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit-plugins/gedit-plugins-2.26.2.ebuild,v 1.4 2009/07/25 00:55:39 mr_bones_ Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -15,7 +15,6 @@ KEYWORDS="~amd64"
 SLOT="0"
 
 IUSE="bookmarks +bracketcompletion charmap colorpicker +drawspaces +joinlines python +session showtabbar smartspaces terminal"
-
 
 RDEPEND=">=x11-libs/gtk+-2.14
 		gnome-base/gconf
