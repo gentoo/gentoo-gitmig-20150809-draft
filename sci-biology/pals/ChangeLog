@@ -1,0 +1,13 @@
+# ChangeLog for sci-biology/pals
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/pals/ChangeLog,v 1.1 2009/07/25 18:10:34 weaver Exp $
+
+*pals-1.0 (25 Jul 2009)
+
+  25 Jul 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +pals-1.0.ebuild:
+  Import from Science overlay
+
+  18 Feb 2009; weaver <weaver@gentoo.org> ChangeLog:
+  New package sci-biology/pals, ebuild written by me
+
