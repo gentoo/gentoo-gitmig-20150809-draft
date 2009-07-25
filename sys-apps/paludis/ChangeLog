@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.135 2009/07/25 09:22:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.136 2009/07/25 09:26:12 betelgeuse Exp $
+
+  25 Jul 2009; Petteri Räty <betelgeuse@gentoo.org> paludis-0.38.1.ebuild:
+  Conditionalize libpcre built_with_use check under either qa or inquisitio
+  use flags.
 
   25 Jul 2009; Petteri Räty <betelgeuse@gentoo.org> paludis-0.38.1.ebuild:
   Add check for boost build with python use flag when python-bindings is

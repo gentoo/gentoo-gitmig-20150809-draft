@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.38.1.ebuild,v 1.2 2009/07/25 09:22:43 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/paludis-0.38.1.ebuild,v 1.3 2009/07/25 09:26:12 betelgeuse Exp $
 
 inherit bash-completion eutils flag-o-matic
 
@@ -48,10 +48,12 @@ create-paludis-user() {
 }
 
 pkg_setup() {
-	if ! built_with_use dev-libs/libpcre cxx ; then
-		eerror "Paludis needs dev-libs/libpcre built with C++ support"
-		eerror "Please build dev-libs/libpcre with USE=cxx support"
-		die "Rebuild dev-libs/libpcre with USE=cxx"
+	if use inquisitio || use qa; then
+		if ! built_with_use dev-libs/libpcre cxx ; then
+			eerror "Paludis needs dev-libs/libpcre built with C++ support"
+			eerror "Please build dev-libs/libpcre with USE=cxx support"
+			die "Rebuild dev-libs/libpcre with USE=cxx"
+		fi
 	fi
 
 	if use python-bindings && \
