@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/inn
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.23 2008/08/22 19:51:39 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.24 2009/07/25 15:16:14 patrick Exp $
+
+*inn-2.5.0 (25 Jul 2009)
+
+  25 Jul 2009; Patrick Lauer <patrick@gentoo.org> +inn-2.5.0.ebuild:
+  Bump to 2.5.0. Restricting tests. Fixes #230527
 
   22 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
