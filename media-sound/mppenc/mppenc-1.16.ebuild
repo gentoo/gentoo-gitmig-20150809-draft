@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/mppenc-1.16.ebuild,v 1.11 2007/11/23 21:26:20 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mppenc/mppenc-1.16.ebuild,v 1.12 2009/07/25 15:09:26 ssuominen Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -13,8 +13,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=dev-util/cmake-2.4"
-RDEPEND="!media-sound/musepack-tools"
+RDEPEND="!<media-sound/musepack-tools-444"
+DEPEND="${RDEPEND}
+	dev-util/cmake"
 
 src_unpack() {
 	unpack ${A}
