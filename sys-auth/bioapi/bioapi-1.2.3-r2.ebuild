@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r2.ebuild,v 1.1 2009/03/08 19:49:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/bioapi/bioapi-1.2.3-r2.ebuild,v 1.2 2009/07/25 20:28:44 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -22,6 +22,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-enroll-ret.patch #236654
 	epatch "${FILESDIR}"/${P}-no-delete.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
