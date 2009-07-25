@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r2.ebuild,v 1.2 2009/06/05 17:45:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r2.ebuild,v 1.3 2009/07/25 19:42:22 halcy0n Exp $
 
 EAPI="2"
 inherit base cmake-utils flag-o-matic
@@ -43,6 +43,7 @@ S="${WORKDIR}/${PN}"
 
 PATCHES=(
 	"${FILESDIR}/libgsm-ugly-code.patch"
+	"${FILESDIR}/${P}-gcc44.patch"
 )
 
 # set given .config variable to =m or =y
