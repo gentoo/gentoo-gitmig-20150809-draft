@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4676 2009/07/25 01:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4677 2009/07/25 19:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1567,7 +1567,7 @@ media-sound/banshee:daap - Build with Daap support
 media-sound/banshee:karma - Build with karma support
 media-sound/banshee:podcast - Build with podcasting support
 media-sound/bmpx:sid - Build with SID (Commodore 64 Audio) support
-media-sound/cmus:mp4 - enable mp4 decoding
+media-sound/cmus:mp4 - Support for MP4 container format
 media-sound/cmus:pidgin - install support script for net-im/pidgin
 media-sound/cmus:wma - add support for Windows Media Audio
 media-sound/cmus:zsh-completion - enable zsh completion support
@@ -1948,7 +1948,7 @@ media-video/vlc:vlm - New videolan (media) manager (vlm), a little manager desig
 media-video/vlc:wma-fixed - Enables fixed point WMA decoder.
 media-video/vlc:zvbi - Enables support for teletext subtitles via the zvbi library.
 media-video/winki:mjpeg - Enables mjpegtools support
-media-video/x264-encoder:mp4 - Enables support for encoding to mp4 container format
+media-video/x264-encoder:mp4 - Support for MP4 container format
 media-video/xine-ui:vdr - Enables Video Disk Recorder support
 net-analyzer/aimsniff:http - Install the WAS (Web AIM Sniff) frontend
 net-analyzer/barnyard:sguil - Enable sguil (The Analyst Console for Network Security Monitoring) support
