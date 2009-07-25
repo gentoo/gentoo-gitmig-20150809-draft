@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.6 2006/04/21 17:33:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/w3mmee/w3mmee-0.3.2_p24-r6.ebuild,v 1.7 2009/07/25 20:09:00 ssuominen Exp $
 
 inherit alternatives eutils
 
@@ -30,12 +30,13 @@ DEPEND=">=sys-libs/ncurses-5.2-r3
 
 PROVIDE="virtual/w3m"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-w3mman-gentoo.diff \
+		"${FILESDIR}"/${PN}-gcc44.patch
 }
 
 src_compile() {
