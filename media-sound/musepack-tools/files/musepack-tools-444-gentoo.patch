@@ -1,0 +1,127 @@
+diff -ruN musepack-tools-444.orig/CMakeLists.txt musepack-tools-444/CMakeLists.txt
+--- musepack-tools-444.orig/CMakeLists.txt	2009-07-25 16:49:11.000000000 +0300
++++ musepack-tools-444/CMakeLists.txt	2009-07-25 18:04:19.000000000 +0300
+@@ -22,3 +22,4 @@
+ add_subdirectory(mpc2sv8)
+ add_subdirectory(mpccut)
+ add_subdirectory(mpcchap)
++add_subdirectory(wavcmp)
+diff -ruN musepack-tools-444.orig/include/mpc/mpcmath.h musepack-tools-444/include/mpc/mpcmath.h
+--- musepack-tools-444.orig/include/mpc/mpcmath.h	2009-07-25 16:49:10.000000000 +0300
++++ musepack-tools-444/include/mpc/mpcmath.h	2009-07-25 17:37:16.000000000 +0300
+@@ -16,6 +16,8 @@
+  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+  */
+ 
++#include <math.h>
++
+ #include <mpc/mpc_types.h>
+ 
+ typedef union mpc_floatint
+diff -ruN musepack-tools-444.orig/libmpcdec/CMakeLists.txt musepack-tools-444/libmpcdec/CMakeLists.txt
+--- musepack-tools-444.orig/libmpcdec/CMakeLists.txt	2009-07-25 16:49:10.000000000 +0300
++++ musepack-tools-444/libmpcdec/CMakeLists.txt	2009-07-25 17:58:04.000000000 +0300
+@@ -1,2 +1,15 @@
+ include_directories(${libmpc_SOURCE_DIR}/include)
++
+ add_library(mpcdec_static STATIC huffman mpc_decoder mpc_reader streaminfo mpc_bits_reader mpc_demux requant synth_filter ${libmpc_SOURCE_DIR}/common/crc32)
++set_target_properties(mpcdec_static PROPERTIES OUTPUT_NAME mpcdec CLEAN_DIRECT_OUTPUT 1)
++if(NOT MSVC)
++target_link_libraries(mpcdec_static m)
++endif(NOT MSVC)
++
++add_library(mpcdec_shared SHARED huffman mpc_decoder mpc_reader streaminfo mpc_bits_reader mpc_demux requant synth_filter ${libmpc_SOURCE_DIR}/common/crc32)
++set_target_properties(mpcdec_shared PROPERTIES OUTPUT_NAME mpcdec CLEAN_DIRECT_OUTPUT 1 VERSION 6.1.0 SOVERSION 6)
++if(NOT MSVC)
++target_link_libraries(mpcdec_shared m)
++endif(NOT MSVC)
++
++install(TARGETS mpcdec_static mpcdec_shared LIBRARY DESTINATION "lib${LIB_SUFFIX}" ARCHIVE DESTINATION "lib${LIB_SUFFIX}")
+diff -ruN musepack-tools-444.orig/mpc2sv8/CMakeLists.txt musepack-tools-444/mpc2sv8/CMakeLists.txt
+--- musepack-tools-444.orig/mpc2sv8/CMakeLists.txt	2009-07-25 16:49:11.000000000 +0300
++++ musepack-tools-444/mpc2sv8/CMakeLists.txt	2009-07-25 17:59:54.000000000 +0300
+@@ -12,7 +12,7 @@
+ 
+ add_executable(mpc2sv8 mpc2sv8.c)
+ 
+-target_link_libraries(mpc2sv8 mpcdec_static)
++target_link_libraries(mpc2sv8 mpcdec_shared)
+ target_link_libraries(mpc2sv8 mpcenc_static)
+ 
+ if(WIN32)
+@@ -27,3 +27,4 @@
+ target_link_libraries(mpc2sv8 ossaudio)
+ endif(CMAKE_SYSTEM_NAME STREQUAL OpenBSD)
+ 
++install(TARGETS mpc2sv8 RUNTIME DESTINATION bin)
+diff -ruN musepack-tools-444.orig/mpcchap/CMakeLists.txt musepack-tools-444/mpcchap/CMakeLists.txt
+--- musepack-tools-444.orig/mpcchap/CMakeLists.txt	2009-07-25 16:49:11.000000000 +0300
++++ musepack-tools-444/mpcchap/CMakeLists.txt	2009-07-25 17:59:30.000000000 +0300
+@@ -14,7 +14,7 @@
+ 
+ add_executable(mpcchap mpcchap dictionary iniparser ${libmpc_SOURCE_DIR}/common/tags)
+ 
+-target_link_libraries(mpcchap mpcdec_static)
++target_link_libraries(mpcchap mpcdec_shared)
+ target_link_libraries(mpcchap mpcenc_static)
+ target_link_libraries(mpcchap ${CUEFILE_LIBRARY})
+ 
+@@ -22,3 +22,4 @@
+ target_link_libraries(mpcchap m)
+ endif(NOT MSVC)
+ 
++install(TARGETS mpcchap RUNTIME DESTINATION bin)
+diff -ruN musepack-tools-444.orig/mpccut/CMakeLists.txt musepack-tools-444/mpccut/CMakeLists.txt
+--- musepack-tools-444.orig/mpccut/CMakeLists.txt	2009-07-25 16:49:10.000000000 +0300
++++ musepack-tools-444/mpccut/CMakeLists.txt	2009-07-25 18:00:24.000000000 +0300
+@@ -12,10 +12,11 @@
+ 
+ add_executable(mpccut mpccut)
+ 
+-target_link_libraries(mpccut mpcdec_static)
++target_link_libraries(mpccut mpcdec_shared)
+ target_link_libraries(mpccut mpcenc_static)
+ 
+ if(NOT MSVC)
+ target_link_libraries(mpccut m)
+ endif(NOT MSVC)
+ 
++install(TARGETS mpccut RUNTIME DESTINATION bin)
+diff -ruN musepack-tools-444.orig/mpcdec/CMakeLists.txt musepack-tools-444/mpcdec/CMakeLists.txt
+--- musepack-tools-444.orig/mpcdec/CMakeLists.txt	2009-07-25 16:49:10.000000000 +0300
++++ musepack-tools-444/mpcdec/CMakeLists.txt	2009-07-25 18:00:49.000000000 +0300
+@@ -17,4 +17,6 @@
+ endif(NOT MSVC)
+ 
+ target_link_libraries(mpcdec wavformat_static)
+-target_link_libraries(mpcdec mpcdec_static)
++target_link_libraries(mpcdec mpcdec_shared)
++
++install(TARGETS mpcdec RUNTIME DESTINATION bin)
+diff -ruN musepack-tools-444.orig/mpcgain/CMakeLists.txt musepack-tools-444/mpcgain/CMakeLists.txt
+--- musepack-tools-444.orig/mpcgain/CMakeLists.txt	2009-07-25 16:49:11.000000000 +0300
++++ musepack-tools-444/mpcgain/CMakeLists.txt	2009-07-25 18:05:03.000000000 +0300
+@@ -18,9 +18,10 @@
+ add_executable(mpcgain mpcgain.c)
+ 
+ target_link_libraries(mpcgain ${REPLAY_GAIN_LIBRARY})
+-target_link_libraries(mpcgain mpcdec_static)
++target_link_libraries(mpcgain mpcdec_shared)
+ 
+ if(NOT MSVC)
+ target_link_libraries(mpcgain m)
+ endif(NOT MSVC)
+ 
++install(TARGETS mpcgain RUNTIME DESTINATION bin)
+diff -ruN musepack-tools-444.orig/wavcmp/CMakeLists.txt musepack-tools-444/wavcmp/CMakeLists.txt
+--- musepack-tools-444.orig/wavcmp/CMakeLists.txt	1970-01-01 02:00:00.000000000 +0200
++++ musepack-tools-444/wavcmp/CMakeLists.txt	2009-07-25 18:20:36.000000000 +0300
+@@ -0,0 +1,8 @@
++include_directories(${libmpc_SOURCE_DIR}/libwavformat)
++link_directories(${libmpc_BINARY_DIR}/libwavformat)
++
++add_executable(wavcmp wavcmp)
++
++target_link_libraries(wavcmp wavformat_static)
++
++install(TARGETS wavcmp RUNTIME DESTINATION bin)
