@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.3 2009/07/25 14:25:26 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.4 2009/07/25 16:38:38 markusle Exp $
 
 EAPI="2"
 
@@ -57,7 +57,9 @@ src_prepare() {
 	epatch "${DISTDIR}"/${P}-openfoam-r120.patch.bz2
 	epatch "${DISTDIR}"/${P}-openfoam-gpl-r120.patch.bz2
 
-	use hdf5 && epatch "${FILESDIR}"/${P}-hdf-1.8.3.patch
+	if use hdf5 && has_version '>=sci-libs/hdf5-1.8.0'; then
+		epatch "${FILESDIR}"/${P}-hdf-1.8.3.patch
+	fi
 
 	# fix GL issues
 	sed -e "s:DEPTH_STENCIL_EXT:DEPTH_COMPONENT24:" \
