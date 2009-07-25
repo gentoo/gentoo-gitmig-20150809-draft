@@ -1,0 +1,16 @@
+diff -ur libcuefile-444.orig/src/CMakeLists.txt libcuefile-444/src/CMakeLists.txt
+--- libcuefile-444.orig/src/CMakeLists.txt	2009-07-25 15:58:50.000000000 +0300
++++ libcuefile-444/src/CMakeLists.txt	2009-07-25 16:04:43.000000000 +0300
+@@ -1,3 +1,10 @@
+ add_definitions(-DYY_NEVER_INTERACTIVE)
+ include_directories(${libcuefile_SOURCE_DIR}/include)
+-add_library(cuefile STATIC cd cdtext cue_parse cue_print cue_scan cuefile time toc toc_parse toc_print toc_scan)
+\ No newline at end of file
++
++add_library(cuefile-static STATIC cd cdtext cue_parse cue_print cue_scan cuefile time toc toc_parse toc_print toc_scan)
++set_target_properties(cuefile-static PROPERTIES OUTPUT_NAME cuefile CLEAN_DIRECT_OUTPUT 1)
++
++add_library(cuefile-shared SHARED cd cdtext cue_parse cue_print cue_scan cuefile time toc toc_parse toc_print toc_scan)
++set_target_properties(cuefile-shared PROPERTIES OUTPUT_NAME cuefile CLEAN_DIRECT_OUTPUT 1 VERSION 0.0.0 SOVERSION 0)
++
++install(TARGETS cuefile-static cuefile-shared LIBRARY DESTINATION "lib${LIB_SUFFIX}" ARCHIVE DESTINATION "lib${LIB_SUFFIX}")

@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libcuefile
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.1 2009/07/25 13:25:39 ssuominen Exp $
+
+*libcuefile-444 (25 Jul 2009)
+
+  25 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +libcuefile-444.ebuild, +files/libcuefile-444-multilib_and_shared.patch:
+  Initial commit.
+
