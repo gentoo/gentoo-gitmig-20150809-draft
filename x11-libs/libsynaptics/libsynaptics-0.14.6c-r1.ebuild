@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6c-r1.ebuild,v 1.5 2009/07/25 22:12:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsynaptics/libsynaptics-0.14.6c-r1.ebuild,v 1.6 2009/07/26 10:22:51 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=x11-drivers/synaptics-0.14.4"
+RDEPEND="|| ( x11-drivers/xf86-input-synaptics >=x11-drivers/synaptics-0.14.4 )"
 DEPEND=""
 
 src_prepare() {
