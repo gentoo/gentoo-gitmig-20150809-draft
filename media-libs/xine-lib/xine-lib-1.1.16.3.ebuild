@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3.ebuild,v 1.7 2009/04/10 13:22:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3.ebuild,v 1.8 2009/07/26 10:57:31 ssuominen Exp $
 
 EAPI=1
 
@@ -27,7 +27,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="-aalib -libcaca -arts esd win32codecs nls +dvd +X directfb +vorbis +alsa
 gnome sdl speex +theora ipv6 altivec opengl aac -fbcon +xv xvmc
 -samba dxr3 vidix mng -flac -oss +v4l xinerama vcd +a52 +mad -imagemagick +dts
-+modplug -gtk pulseaudio -mmap -truetype wavpack +musepack +xcb -jack
++modplug -gtk pulseaudio -mmap -truetype wavpack musepack +xcb -jack
 -real +vis"
 
 RDEPEND="X? ( x11-libs/libXext
