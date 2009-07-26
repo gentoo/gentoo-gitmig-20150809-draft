@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.105-r2.ebuild,v 1.9 2008/11/04 03:39:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.2.105-r2.ebuild,v 1.10 2009/07/26 04:56:14 dirtyepic Exp $
 
 inherit gnome2 eutils
 
@@ -30,6 +30,8 @@ src_unpack() {
 
 	# Fix GNOME bug #518384 - API docs not found by devhelp
 	epatch "${FILESDIR}/${P}-fix-devhelp-docs.patch"
+	# Fix building with glibc-2.10
+	epatch "${FILESDIR}/${P}-dprintf.patch"
 	mv "${S}"/docs/reference/html/libsoup{,-2.2}.devhelp
 	mv "${S}"/docs/reference/html/libsoup{,-2.2}.devhelp2
 	mv "${S}"/docs/reference/libsoup{,-2.2}-docs.sgml
