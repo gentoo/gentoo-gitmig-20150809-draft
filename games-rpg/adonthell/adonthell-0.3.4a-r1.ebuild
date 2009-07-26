@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a-r1.ebuild,v 1.2 2008/05/29 12:16:46 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/adonthell-0.3.4a-r1.ebuild,v 1.3 2009/07/26 22:03:30 dirtyepic Exp $
 
 inherit autotools eutils games
 
@@ -34,7 +34,8 @@ src_unpack() {
 		"${FILESDIR}"/${PV}-configure.in.patch \
 		"${FILESDIR}"/${P}-gcc-41.patch \
 		"${FILESDIR}"/${P}-inline.patch \
-		"${FILESDIR}"/${P}-external-libs.patch
+		"${FILESDIR}"/${P}-external-libs.patch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch
 	rm -f src/SDL_ttf.* # SDL_ttf
 	rm -f src/{music*,SDL_mixer.h,wavestream*,mixer.c} # SDL_mixer
 	rm -f ac{local,include}.m4

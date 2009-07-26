@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/adonthell
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.15 2008/05/29 12:16:46 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/adonthell/ChangeLog,v 1.16 2009/07/26 22:03:30 dirtyepic Exp $
+
+  26 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> adonthell-0.3.4a-r1.ebuild,
+  +files/adonthell-0.3.4a-glibc-2.10.patch:
+  Fix building with glibc-2.10. (bug #226191)
 
   29 May 2008; Tristan Heaven <nyhm@gentoo.org> adonthell-0.3.4a-r1.ebuild:
   Move swig to DEPEND, bug #221483
