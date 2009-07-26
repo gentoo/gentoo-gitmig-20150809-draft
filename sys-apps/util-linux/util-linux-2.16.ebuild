@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.ebuild,v 1.3 2009/07/26 16:54:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.16.ebuild,v 1.4 2009/07/26 16:58:31 vapier Exp $
 
 EAPI="2"
 
@@ -41,6 +41,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
+		autopoint --force
 		eautoreconf
 	else
 		use loop-aes && epatch "${WORKDIR}"/util-linux-ng-*.diff
