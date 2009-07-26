@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/pilercr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/pilercr/ChangeLog,v 1.2 2009/07/26 08:08:28 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/pilercr/ChangeLog,v 1.3 2009/07/26 17:44:35 weaver Exp $
+
+  26 Jul 2009; Andrey Kislyuk <weaver@gentoo.org> pilercr-1.0.ebuild:
+  Correct description
 
   25 Jul 2009; Andrey Kislyuk <weaver@gentoo.org>
   +files/pilercr-1.0-gcc43.patch, +metadata.xml:
