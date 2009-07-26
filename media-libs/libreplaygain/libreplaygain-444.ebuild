@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-444.ebuild,v 1.4 2009/07/25 12:49:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-444.ebuild,v 1.5 2009/07/26 13:28:21 ssuominen Exp $
 
 inherit cmake-utils
 
@@ -9,8 +9,7 @@ inherit cmake-utils
 
 DESCRIPTION="Replay Gain library from Musepack"
 HOMEPAGE="http://www.musepack.net"
-SRC_URI="http://dev.gentoo.org/~ssuominen/${P}.tar.bz2
-	mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
