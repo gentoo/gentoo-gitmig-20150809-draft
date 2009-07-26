@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r1.ebuild,v 1.1 2009/07/26 12:41:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r1.ebuild,v 1.2 2009/07/26 19:12:41 ssuominen Exp $
 
 EAPI=1
 
@@ -88,6 +88,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	rm -f ltmain.sh m4/{libtool,lt*}.m4 || die "libtool patch failed"
 	epatch "${FILESDIR}"/${P}-libmpcdecsv7.patch
 	eautoreconf
 }
