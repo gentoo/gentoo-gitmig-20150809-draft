@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3.ebuild,v 1.11 2009/07/22 09:03:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3.ebuild,v 1.12 2009/07/26 19:39:02 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -437,7 +437,6 @@ src_install() {
 	fi
 
 	dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
-	doman docs/man/*.[1-9]
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.34 2009/07/22 09:03:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.35 2009/07/26 19:39:02 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -379,7 +379,6 @@ src_install() {
 	fi
 
 	dodoc Changelog* README TODO docs/*.txt DEDICATION.mjn3
-	doman debian/*.1
 }
 
 pkg_postinst() {
