@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.3-r1.ebuild,v 1.2 2009/07/19 17:54:59 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/squeezecenter/squeezecenter-7.3.3-r1.ebuild,v 1.3 2009/07/26 15:14:23 ssuominen Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.slimdevices.com/pi_features.html"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="lame wavpack musepack alac ogg bonjour flac avahi aac"
+IUSE="lame wavpack alac ogg bonjour flac avahi aac"
 
 #SRC_URI="http://www.slimdevices.com/downloads/${SRC_DIR}/${MY_P}.tgz
 SRC_URI="http://downloads.slimdevices.com/${SRC_DIR}/${MY_P}.tgz
@@ -89,7 +89,6 @@ RDEPEND="
 		media-libs/flac
 		media-sound/sox
 		)
-	musepack? ( media-sound/musepack-tools )
 	ogg? ( media-sound/sox )
 	aac? ( media-video/mplayer )
 	"
