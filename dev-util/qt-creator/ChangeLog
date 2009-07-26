@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qt-creator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.23 2009/07/17 07:28:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/ChangeLog,v 1.24 2009/07/26 20:26:35 cryos Exp $
+
+  26 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org> qt-creator-1.1.0.ebuild:
+  Stable on amd64, bug 275505.
 
   17 Jul 2009; Markos Chandras <hwoarang@gentoo.org>
   -qt-creator-1.2.0-r2.ebuild:
