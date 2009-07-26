@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.168 2009/07/21 10:43:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.169 2009/07/26 10:39:57 scarabeus Exp $
+
+*ati-drivers-9.7 (26 Jul 2009)
+
+  26 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/kernel/9.7-smp.patch, +ati-drivers-9.7.ebuild,
+  +files/kernel/9.7-x86_32b.patch:
+  Version bump. Patches for 2.6.30 needs more testing in this version.
 
   21 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.6.ebuild:
