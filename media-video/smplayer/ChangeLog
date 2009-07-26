@@ -1,6 +1,15 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.71 2009/07/06 22:34:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.72 2009/07/26 13:14:37 yngwin Exp $
+
+*smplayer-0.6.8 (26 Jul 2009)
+
+  26 Jul 2009; Ben de Groot <yngwin@gentoo.org> -smplayer-0.6.1-r1.ebuild,
+  -smplayer-0.6.5-r1.ebuild, -smplayer-0.6.5.1.ebuild,
+  -smplayer-0.6.6_p2776.ebuild, -smplayer-0.6.7_p2872-r1.ebuild,
+  +smplayer-0.6.8.ebuild:
+  Version bump. Add Estonian and Vietnamese translations. Remove some old
+  ebuilds.
 
   06 Jul 2009; Jeroen Roovers <jer@gentoo.org> smplayer-0.6.6.ebuild:
   Stable for HPPA (bug #257852).
