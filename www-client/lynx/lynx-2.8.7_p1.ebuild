@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_rc6.ebuild,v 1.3 2009/07/26 23:07:42 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_p1.ebuild,v 1.1 2009/07/26 23:07:42 wormo Exp $
 
 EAPI=2
 
