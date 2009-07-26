@@ -1,6 +1,10 @@
 # ChangeLog for www-client/lynx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.78 2009/07/26 05:36:10 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.79 2009/07/26 05:55:24 wormo Exp $
+
+  26 Jul 2009; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/lynx-2.8.6-CVE-2008-4690.patch, lynx-2.8.6-r2.ebuild:
+  Apply patch for CVE-2008-4690 (bug #243058)
 
   25 Jul 2009; Stephanie Lockwood-Childs <wormo@gentoo.org> metadata.xml,
   lynx-2.8.6-r2.ebuild:

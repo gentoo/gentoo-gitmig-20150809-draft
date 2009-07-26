@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6-r2.ebuild,v 1.15 2009/07/26 05:36:10 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6-r2.ebuild,v 1.16 2009/07/26 05:55:24 wormo Exp $
 
 inherit eutils
 
@@ -38,6 +38,12 @@ pkg_setup() {
 		eerror "ncurses with \`emerge --oneshot sys-libs/ncurses\`."
 		die "Re-emerge ncurses with the unicode flag"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-CVE-2008-4690.patch"
 }
 
 src_compile() {
