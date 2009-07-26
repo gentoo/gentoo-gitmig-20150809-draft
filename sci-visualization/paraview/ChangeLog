@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.36 2009/07/25 16:38:38 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.37 2009/07/26 10:56:48 markusle Exp $
+
+  26 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.6.1.ebuild:
+  Disabled building of tests since they seem to fail for a number
+  of people (#279002 and #278982).
 
   25 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.6.1.ebuild:
   Only apply hdf5 patch conditional on >=hdf-1.8.0 (bug #279060).
