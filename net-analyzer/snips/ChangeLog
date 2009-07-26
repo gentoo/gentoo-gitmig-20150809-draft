@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snips
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.4 2008/07/04 14:46:06 chainsaw Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snips/ChangeLog,v 1.5 2009/07/26 20:30:44 chainsaw Exp $
+
+  26 Jul 2009; <chainsaw@gentoo.org> metadata.xml:
+  Adding no-herd tag as requested by Thilo Bangert <bangert@gentoo.org> in
+  bug #279214.
 
   04 Jul 2008; <chainsaw@gentoo.org>
   +files/snips-1.2-link-correct-snmp-lib.patch, snips-1.2-r2.ebuild:
