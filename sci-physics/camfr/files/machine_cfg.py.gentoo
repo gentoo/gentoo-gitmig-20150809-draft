@@ -26,21 +26,6 @@ flags = flags + base_flags
 fflags =  fflags + base_flags
 
 
-include_dirs = []
-
-if os.path.isdir("/usr/include/python2.5"):
-   include_dirs.append("/usr/include/python2.5")   
-   include_dirs.append("/usr/lib/python2.5/site-packages")
-elif os.path.isdir("/usr/include/python2.4"):
-   include_dirs.append("/usr/include/python2.4")
-   include_dirs.append("/usr/lib/python2.4/site-packages")
-elif os.path.isdir("/usr/include/python2.3"):
-   include_dirs.append("/usr/include/python2.3")   
-   include_dirs.append("/usr/lib/python2.3/site-packages")
-else:
-   print "Python dir not found!"
-   sys.exit()
-
 dllsuffix = ".so"
 strip_command = ""
 extra_files = [("doc", ["docs/camfr.pdf"])]

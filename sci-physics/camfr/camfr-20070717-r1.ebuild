@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.3 2009/03/14 14:25:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/camfr/camfr-20070717-r1.ebuild,v 1.4 2009/07/26 00:24:15 bicatali Exp $
 
 EAPI=2
-inherit eutils distutils fortran
+inherit eutils distutils fortran python
 
 DESCRIPTION="Full vectorial Maxwell solver based on eigenmode expansion"
 HOMEPAGE="http://camfr.sourceforge.net/"
@@ -31,6 +31,15 @@ S="${WORKDIR}/${P/-/_}"
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
 	cp "${FILESDIR}"/machine_cfg.py.gentoo machine_cfg.py || die
+
+	# Configure to compile against selected python version
+	python_version
+	cat <<-EOF >> machine_cfg.py
+		include_dirs = []
+		include_dirs.append("/usr/include/python${PYVER}")
+		include_dirs.append("$(python_get_sitedir)")
+	EOF
+
 	local lapack_libs=
 	for x in $(pkg-config --libs-only-l lapack); do
 		lapack_libs="${lapack_libs}, \"${x#-l}\""
@@ -56,12 +65,13 @@ src_prepare() {
 src_test() {
 	# trick to avoid X in testing (bug #229753)
 	echo "backend : Agg" > matplotlibrc
-	PYTHONPATH=".:visualisation" ${python} testsuite/camfr_test.py \
+	PYTHONPATH=".:visualisation" "${python}" testsuite/camfr_test.py \
 		|| die "tests failed"
 	rm -f matplotlibrc
 }
 
 src_install() {
+	python_need_rebuild
 	distutils_src_install
 	dodoc docs/camfr.pdf || die "doc install failed"
 }
