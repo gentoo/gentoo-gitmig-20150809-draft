@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.0.ebuild,v 1.1 2009/07/25 12:53:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/gmt-4.5.0-r1.ebuild,v 1.1 2009/07/26 18:29:55 cryos Exp $
 
-inherit multilib autotools
+inherit multilib autotools eutils
 
 GSHHS="GSHHS2.0"
 
@@ -30,6 +30,7 @@ S="${WORKDIR}/GMT${PV}"
 
 src_unpack() {
 	unpack ${A} || die "Unpacking failed."
+	epatch "${FILESDIR}/${P}-no-strip.patch"
 	mv -f "${WORKDIR}/share/"*  "${S}/share/" || die "Moving sources failed."
 	cd "${S}"
 	if use gmtsuppl; then

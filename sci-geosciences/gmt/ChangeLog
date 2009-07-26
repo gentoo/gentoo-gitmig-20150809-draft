@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gmt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.18 2009/07/25 12:53:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gmt/ChangeLog,v 1.19 2009/07/26 18:29:55 cryos Exp $
+
+*gmt-4.5.0-r1 (26 Jul 2009)
+
+  26 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org> -gmt-4.5.0.ebuild,
+  +gmt-4.5.0-r1.ebuild, +files/gmt-4.5.0-no-strip.patch:
+  Stop files being pre-stripped, thanks to Martin von Gagern
+  <Martin.vGagern@gmx.net> for the patch, in bug 145277.
 
 *gmt-4.5.0 (25 Jul 2009)
 
