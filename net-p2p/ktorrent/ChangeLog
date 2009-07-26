@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/ktorrent
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.124 2009/07/24 16:18:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ChangeLog,v 1.125 2009/07/26 13:55:09 scarabeus Exp $
+
+  26 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ktorrent-3.2.2.ebuild:
+  Depend on krosspython only when kross use enabled.
 
   24 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ktorrent-3.2.2.ebuild:

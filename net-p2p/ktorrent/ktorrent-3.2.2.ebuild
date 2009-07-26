@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.2.ebuild,v 1.3 2009/07/24 16:18:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.2.2.ebuild,v 1.4 2009/07/26 13:55:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -30,9 +30,9 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/gettext
 "
 RDEPEND="${COMMONDEPEND}
-	>=kde-base/krosspython-${KDE_MINIMAL}
 	infowidget? ( >=dev-libs/geoip-1.4.4 )
-	ipfilter? ( >=kde-base/kdebase-kioslaves-${KDE_MINIMAL} )"
+	ipfilter? ( >=kde-base/kdebase-kioslaves-${KDE_MINIMAL} )
+	kross? ( >=kde-base/krosspython-${KDE_MINIMAL} )"
 
 src_prepare() {
 	if ! use plasma; then
