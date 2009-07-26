@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdecsv7/libmpcdecsv7-1.2.6.ebuild,v 1.2 2009/07/26 15:39:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpcdecsv7/libmpcdecsv7-1.2.6.ebuild,v 1.3 2009/07/26 17:03:17 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils
+inherit autotools
 
 DESCRIPTION="Musepack SV7 decoding library (transition package)"
 HOMEPAGE="http://www.musepack.net"
