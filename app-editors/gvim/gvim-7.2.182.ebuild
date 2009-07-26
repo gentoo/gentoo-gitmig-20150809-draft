@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.2.182.ebuild,v 1.7 2009/07/22 04:48:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.2.182.ebuild,v 1.8 2009/07/26 12:33:28 ranger Exp $
 
 inherit vim
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.vim.org/pub/vim/unstable/unix/vim-${VIM_VERSION}.tar.bz2
 
 S="${WORKDIR}/vim${VIM_VERSION/.}"
 DESCRIPTION="GUI version of the Vim text editor"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="aqua gnome gtk motif nextaw"
 DEPEND="${DEPEND}
 	~app-editors/vim-core-${PV}
