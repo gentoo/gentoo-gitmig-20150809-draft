@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-chextrek
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/ChangeLog,v 1.8 2008/02/15 00:32:04 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/ChangeLog,v 1.9 2009/07/26 10:28:56 nyhm Exp $
+
+*doom3-chextrek-0.52 (26 Jul 2009)
+
+  26 Jul 2009; Tristan Heaven <nyhm@gentoo.org> +doom3-chextrek-0.52.ebuild:
+  Version bump by Paul Bredbury, bug #190745
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   -doom3-chextrek-0.5_beta.ebuild, doom3-chextrek-0.5_beta-r1.ebuild:
