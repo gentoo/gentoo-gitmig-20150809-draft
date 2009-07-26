@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.10 2009/05/12 08:41:16 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.11 2009/07/26 14:00:41 yngwin Exp $
+
+*droid-112_p1 (26 Jul 2009)
+
+  26 Jul 2009; Ben de Groot <yngwin@gentoo.org> +droid-112_p1.ebuild:
+  Still supposedly build 112, but upstream added DroidSansJapanese.ttf, so
+  we update our archive.
 
   12 May 2009; Peter Alfredsen <loki_val@gentoo.org> droid-107.ebuild,
   droid-112.ebuild:
