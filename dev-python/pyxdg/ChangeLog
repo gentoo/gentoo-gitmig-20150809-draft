@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyxdg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.53 2009/07/22 15:00:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxdg/ChangeLog,v 1.54 2009/07/26 22:29:45 ranger Exp $
+
+  26 Jul 2009; Brent Baude <ranger@gentoo.org> pyxdg-0.17-r1.ebuild:
+  stable ppc64, bug 277350
 
   22 Jul 2009; Raúl Porcel <armin76@gentoo.org> pyxdg-0.17-r1.ebuild:
   alpha/ia64/sparc stable wrt #277350
