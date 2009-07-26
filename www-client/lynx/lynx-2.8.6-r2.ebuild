@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6-r2.ebuild,v 1.14 2009/02/02 16:50:24 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6-r2.ebuild,v 1.15 2009/07/26 05:36:10 wormo Exp $
 
 inherit eutils
 
@@ -8,13 +8,13 @@ MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P//./-}
 
 DESCRIPTION="An excellent console-based web browser with ssl support"
-HOMEPAGE="http://lynx.browser.org/"
+HOMEPAGE="http://lynx.isc.org/"
 SRC_URI="ftp://lynx.isc.org/${MY_P}/${MY_P}rel.4.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="bzip2 cjk ipv6 linguas_ja nls ssl unicode"
+IUSE="bzip2 cjk ipv6 nls ssl unicode"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/zlib
@@ -24,6 +24,11 @@ RDEPEND="sys-libs/ncurses
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
+
+LANGS="ca cs da de et fr hu it ja nl pt_BR ru rw sl sv tr uk vi zh_CN zh_TW"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
 pkg_setup() {
 	if use unicode && ! built_with_use sys-libs/ncurses unicode; then
@@ -65,7 +70,7 @@ src_install() {
 	make install DESTDIR="${D}" || die
 
 	dosed "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help_main.html|" \
-			/etc/lynx/lynx.cfg
+			/etc/lynx.cfg
 	dodoc CHANGES COPYHEADER PROBLEMS README
 	docinto docs
 	dodoc docs/*
