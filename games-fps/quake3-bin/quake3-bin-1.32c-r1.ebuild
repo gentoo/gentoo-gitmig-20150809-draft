@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.8 2009/02/09 03:50:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r1.ebuild,v 1.9 2009/07/26 10:55:33 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -101,7 +101,6 @@ src_install() {
 		newconfd "${FILESDIR}"/q3ded.conf.d quake3-ded
 	fi
 
-	games_link_mods
 	prepgamesdirs
 }
 
