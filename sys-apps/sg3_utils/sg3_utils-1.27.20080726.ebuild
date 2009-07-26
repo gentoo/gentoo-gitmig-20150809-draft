@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.27.ebuild,v 1.8 2009/07/15 18:45:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sg3_utils/sg3_utils-1.27.20080726.ebuild,v 1.1 2009/07/26 00:39:57 robbat2 Exp $
 
 inherit eutils
 
 DESCRIPTION="Apps for querying the sg SCSI interface"
 HOMEPAGE="http://sg.danny.cz/sg/"
-SRC_URI="http://sg.danny.cz/sg/p/${P}.tgz"
+#SRC_URI="http://sg.danny.cz/sg/p/${P}.tgz"
+SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -16,6 +17,8 @@ IUSE=""
 DEPEND="sys-devel/libtool"
 RDEPEND="sys-apps/sdparm"
 PDEPEND=">=sys-apps/rescan-scsi-bus-1.24"
+
+S="${WORKDIR}/${P/.200*}"
 
 src_unpack() {
 	unpack ${A}
