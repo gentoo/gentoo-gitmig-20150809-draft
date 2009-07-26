@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/parted
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.131 2009/04/10 12:18:17 caleb Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.132 2009/07/26 19:13:37 jer Exp $
+
+*parted-1.9.0 (26 Jul 2009)
+
+  26 Jul 2009; Jeroen Roovers <jer@gentoo.org>
+  -files/parted-1.7.0-pyparted.patch, -parted-1.7.1-r1.ebuild,
+  -files/parted-1.7.1-fix-seg.patch, -parted-1.8.6.ebuild,
+  -parted-1.8.7.ebuild, +parted-1.9.0.ebuild:
+  Version bump thanks to Arfrever Frehtes Taifersar Arahesis (bug #279079).
+  Remove old.
 
   10 Apr 2009; Caleb Tennis <caleb@gentoo.org> parted-1.8.6.ebuild,
   parted-1.8.7.ebuild, parted-1.8.8.ebuild:
