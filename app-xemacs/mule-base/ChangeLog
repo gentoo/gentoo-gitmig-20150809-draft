@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/mule-base
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.20 2009/02/20 00:21:58 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/mule-base/ChangeLog,v 1.21 2009/07/26 07:15:16 graaff Exp $
+
+*mule-base-1.53 (26 Jul 2009)
+
+  26 Jul 2009; Hans de Graaff <graaff@gentoo.org> +mule-base-1.53.ebuild:
+  Version bump: better Emacs compatibility and improvements for Cyrrilic.
 
   20 Feb 2009; Christian Faulhammer <fauli@gentoo.org>
   -mule-base-1.49.ebuild:
