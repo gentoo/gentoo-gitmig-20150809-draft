@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/gerix
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/ChangeLog,v 1.1 2009/07/26 16:50:09 scarabeus Exp $
+
+*gerix-0.20 (26 Jul 2009)
+
+  26 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> +gerix-0.20.ebuild,
+  +metadata.xml:
+  Initial commit. Per bug #279186.
+
