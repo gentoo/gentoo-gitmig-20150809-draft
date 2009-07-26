@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.81 2009/05/16 10:36:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.82 2009/07/26 13:29:33 ford_prefect Exp $
+
+  26 Jul 2009; Arun Raghavan <ford_prefect@gentoo.org> gphoto2-2.4.5.ebuild:
+  Bump libgphoto2 dependency to 2.4.5 as per configure.ac (bug #279033).
 
   16 May 2009; Hanno Boeck <hanno@gentoo.org> gphoto2-2.4.5.ebuild:
   Take virtual/libusb dependency from 2.4.4-r1 ebuild.
