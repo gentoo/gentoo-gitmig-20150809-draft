@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.3.0.ebuild,v 1.3 2009/07/13 21:31:34 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.3.0.ebuild,v 1.4 2009/07/26 13:02:36 ssuominen Exp $
 
 EAPI="2"
 
@@ -25,8 +25,8 @@ RDEPEND="x11-libs/qt-gui:4
 	flac? ( media-libs/flac )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
-	musepack? ( >=media-libs/libmpcdec-1.2.5
-		media-sound/musepack-tools )
+	musepack? ( || ( >=media-sound/musepack-tools-444
+		media-libs/libmpcdec ) )
 	modplug? ( >=media-libs/libmodplug-0.8.4 )
 	vorbis? ( media-libs/libvorbis
 		media-libs/libogg )
