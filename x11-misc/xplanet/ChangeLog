@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xplanet
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.62 2008/05/03 19:02:05 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/ChangeLog,v 1.63 2009/07/26 18:45:54 ssuominen Exp $
+
+*xplanet-1.2.1 (26 Jul 2009)
+
+  26 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> +xplanet-1.2.1.ebuild,
+  +files/xplanet-1.2.1-gentoo.patch:
+  Fix building with GCC 4.4 and other issues wrt #277937, thanks to Zeev
+  Tarantov.
 
   03 May 2008; Samuli Suominen <drac@gentoo.org>
   +files/xplanet-1.2.0-gcc43.patch, xplanet-1.2.0.ebuild:
