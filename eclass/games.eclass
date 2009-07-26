@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.137 2009/07/26 10:57:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.138 2009/07/26 11:05:04 nyhm Exp $
 
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -14,8 +14,6 @@ case ${EAPI:-0} in
 	0|1) EXPORT_FUNCTIONS pkg_setup src_compile pkg_preinst pkg_postinst ;;
 	2) EXPORT_FUNCTIONS pkg_setup src_configure src_compile pkg_preinst pkg_postinst ;;
 esac
-
-[[ -z ${GAME} ]] && GAME=${PN%%-*}
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
