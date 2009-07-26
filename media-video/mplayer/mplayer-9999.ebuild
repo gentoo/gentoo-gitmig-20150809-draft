@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.9 2009/07/24 22:46:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.10 2009/07/26 10:48:35 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ bidi bindist bl +cddb +cdio cdparanoia cpudetection custom-cflags
 custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
 +enca +encode esd +faac +faad fbcon ftp gif ggi -gmplayer +iconv ipv6 jack
 joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
-mmxext mng +mp2 +mp3 musepack nas +nemesi +network nut openal +opengl +osdmenu
+mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
 oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba +shm
 +schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
 +truetype +unicode v4l v4l2 vdpau vidix +vorbis win32codecs +X +x264 xanim
@@ -108,7 +108,6 @@ RDEPEND="sys-libs/ncurses
 	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
-	musepack? ( >=media-libs/libmpcdec-1.2.2 )
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
 	openal? ( media-libs/openal )
@@ -389,6 +388,8 @@ src_configure() {
 	########
 	# Won't work with external liba52
 	myconf="${myconf} --disable-liba52"
+	# Use internal codecs for SV7 and SV8 support
+	myconf="${myconf} --disable-musepack"
 
 	use aac || myconf="${myconf} --disable-faad-internal"
 	use dirac || myconf="${myconf} --disable-libdirac-lavc"
@@ -401,7 +402,7 @@ src_configure() {
 	use schroedinger || myconf="${myconf} --disable-libschroedinger-lavc"
 	use xanim && myconf="${myconf} --xanimcodecsdir=/usr/lib/xanim/mods"
 	! use png && ! use gmplayer && myconf="${myconf} --disable-png"
-	for x in gif jpeg live mad mng musepack pnm speex tga theora xanim; do
+	for x in gif jpeg live mad mng pnm speex tga theora xanim; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
 	if use vorbis || use tremor; then
