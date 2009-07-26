@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.478 2009/07/24 12:02:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.479 2009/07/26 15:26:11 ssuominen Exp $
+
+  26 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> vlc-1.0.0.ebuild,
+  vlc-1.0.9999.ebuild, vlc-9999.ebuild:
+  Fix Musepack deps for SV8.
 
   24 Jul 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.0.ebuild,
   vlc-1.0.9999.ebuild, vlc-9999.ebuild:
