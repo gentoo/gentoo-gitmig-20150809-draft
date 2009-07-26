@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/diffuse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.3 2009/07/22 21:18:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/ChangeLog,v 1.4 2009/07/26 16:11:06 grozin Exp $
+
+  26 Jul 2009; Andrey Grozin <grozin@gentoo.org> diffuse-0.3.4.ebuild:
+  Blocking sci-chemistry/tinker (file collision, bug #279018)
 
   22 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   diffuse-0.3.4.ebuild:
