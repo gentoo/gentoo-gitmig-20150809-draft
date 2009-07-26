@@ -1,0 +1,48 @@
+diff -ur Cynthiune-0.9.5.orig/Bundles/Musepack/CNSFileHandle.h Cynthiune-0.9.5/Bundles/Musepack/CNSFileHandle.h
+--- Cynthiune-0.9.5.orig/Bundles/Musepack/CNSFileHandle.h	2006-03-22 00:33:28.000000000 +0200
++++ Cynthiune-0.9.5/Bundles/Musepack/CNSFileHandle.h	2009-07-26 18:31:10.000000000 +0300
+@@ -23,7 +23,7 @@
+ #ifndef CNSFILEHANDLE_H
+ #define CNSFILEHANDLE_H
+ 
+-#include <mpcdec/config_types.h>
++#include <mpcdecsv7/config_types.h>
+ 
+ #ifdef __cplusplus
+ extern "C" {
+diff -ur Cynthiune-0.9.5.orig/Bundles/Musepack/GNUmakefile.preamble Cynthiune-0.9.5/Bundles/Musepack/GNUmakefile.preamble
+--- Cynthiune-0.9.5.orig/Bundles/Musepack/GNUmakefile.preamble	2005-12-07 18:42:43.000000000 +0200
++++ Cynthiune-0.9.5/Bundles/Musepack/GNUmakefile.preamble	2009-07-26 18:31:32.000000000 +0300
+@@ -19,7 +19,7 @@
+ # the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ # Boston, MA 02111-1307, USA.
+ 
+-MUSEPACK_LIBS = -lmpcdec
++MUSEPACK_LIBS = -lmpcdecsv7
+ 
+ ADDITIONAL_INCLUDE_DIRS += -I../..
+ 
+diff -ur Cynthiune-0.9.5.orig/Bundles/Musepack/Musepack.m Cynthiune-0.9.5/Bundles/Musepack/Musepack.m
+--- Cynthiune-0.9.5.orig/Bundles/Musepack/Musepack.m	2006-03-31 11:17:11.000000000 +0300
++++ Cynthiune-0.9.5/Bundles/Musepack/Musepack.m	2009-07-26 18:30:54.000000000 +0300
+@@ -30,7 +30,7 @@
+ #import <Cynthiune/Format.h>
+ #import <Cynthiune/utils.h>
+ 
+-#import <mpcdec/mpcdec.h>
++#import <mpcdecsv7/mpcdec.h>
+ 
+ #import "Musepack.h"
+ #import "CNSFileHandle.h"
+diff -ur Cynthiune-0.9.5.orig/Cynthiune.pbproj/project.pbxproj Cynthiune-0.9.5/Cynthiune.pbproj/project.pbxproj
+--- Cynthiune-0.9.5.orig/Cynthiune.pbproj/project.pbxproj	2006-03-31 11:35:16.000000000 +0300
++++ Cynthiune-0.9.5/Cynthiune.pbproj/project.pbxproj	2009-07-26 18:31:59.000000000 +0300
+@@ -3405,7 +3405,7 @@
+ 				FRAMEWORK_SEARCH_PATHS = /home/wolfgang/programmes/gnustep/Cynthiune/build;
+ 				OPTIMIZATION_CFLAGS = "-O0";
+ 				OTHER_CFLAGS = "";
+-				OTHER_LDFLAGS = "-lmpcdec";
++				OTHER_LDFLAGS = "-lmpcdecsv7";
+ 				OTHER_REZFLAGS = "";
+ 				PRODUCT_NAME = Musepack;
+ 				SECTORDER_FLAGS = "";
