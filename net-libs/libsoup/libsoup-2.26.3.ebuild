@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.26.1.ebuild,v 1.12 2009/05/20 19:27:54 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.26.3.ebuild,v 1.1 2009/07/26 18:08:09 eva Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="2.4"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 # Do NOT build with --disable-debug/--enable-debug=no - gnome2.eclass takes care of that
 IUSE="debug doc gnome ssl"
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 #		dev-lang/php
 #		net-misc/curl )
 
-DOCS="AUTHORS ChangeLog NEWS README"
+DOCS="AUTHORS NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
@@ -41,6 +41,9 @@ pkg_setup() {
 
 src_prepare() {
 	gnome2_src_prepare
+
+	# Allow validation of common certificates, upstream bug #589323
+	epatch "${FILESDIR}/${PN}-2.26.3-gnutls-strict.patch"
 
 	# Fix test to follow POSIX (for x86-fbsd)
 	# No patch to prevent having to eautoreconf
