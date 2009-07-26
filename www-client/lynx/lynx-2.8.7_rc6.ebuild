@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_rc6.ebuild,v 1.1 2009/06/28 17:20:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.7_rc6.ebuild,v 1.2 2009/07/26 22:55:46 wormo Exp $
 
 EAPI=2
 
@@ -63,6 +63,18 @@ pkg_setup() {
 			elog "No SSL library selected, you will not be able to access secure websites."
 		fi
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	# fix up toplevel makefile to enable parallel make (bug #262972)
+	#
+	# add '+' prefix to lines using $(MAKE_RECUR),
+	# making sure '+' comes after leading whitespace
+	sed -i -e '/$(MAKE_RECUR)/ s/\([[:blank:]]\)/\1+/' makefile.in || \
+	    die "failed to update makefile.in"
 }
 
 src_configure() {
