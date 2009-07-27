@@ -1,6 +1,14 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.156 2009/07/25 06:11:53 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.157 2009/07/27 06:37:51 spock Exp $
+
+*nvidia-drivers-190.18 (27 Jul 2009)
+
+  27 Jul 2009; Michał Januszewski <spock@gentoo.org>
+  +nvidia-drivers-190.18.ebuild:
+  Add the latest beta version of the NVIDIA drivers. This is the first
+  version of the drivers in the tree to support CUDA 2.3. This ebuild should
+  remain masked.
 
 *nvidia-drivers-185.18.14 (25 Jul 2009)
 
