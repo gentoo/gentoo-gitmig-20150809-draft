@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1218-r2.ebuild,v 1.2 2009/06/10 19:36:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1218-r2.ebuild,v 1.3 2009/07/27 07:49:43 ssuominen Exp $
 
 EAPI=2
 inherit eutils flag-o-matic toolchain-funcs
@@ -22,7 +22,8 @@ S=${WORKDIR}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2008-2040.patch \
 		"${FILESDIR}"/${PN}-0.1216-makefile.patch \
-		"${FILESDIR}"/${PN}-0.1216-amd64.patch
+		"${FILESDIR}"/${PN}-0.1216-amd64.patch \
+		"${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 src_compile() {

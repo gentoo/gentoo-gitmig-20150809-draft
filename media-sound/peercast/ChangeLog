@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/peercast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.22 2009/06/10 19:36:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.23 2009/07/27 07:49:43 ssuominen Exp $
+
+  27 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  peercast-0.1218-r2.ebuild, +files/peercast-0.1218-glibc-2.10.patch:
+  Fix building with glibc-2.10+ wrt #275809, thanks to Alexis Ballier.
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org> peercast-0.1218-r2.ebuild:
   amd64/x86 stable, bug #272836
