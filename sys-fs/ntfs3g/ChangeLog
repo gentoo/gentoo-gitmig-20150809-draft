@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.77 2009/03/30 17:18:08 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.78 2009/07/27 12:44:39 chainsaw Exp $
+
+  27 Jul 2009; <chainsaw@gentoo.org> ntfs3g-2009.3.8.ebuild:
+  Marked stable on AMD64 as requested by "JetDog" in bug #272355.
+  Compile-tested with USE="hal -debug -suid" on a Core2 Duo.
 
 *ntfs3g-2009.3.8 (30 Mar 2009)
 
