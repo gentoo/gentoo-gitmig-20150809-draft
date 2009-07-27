@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.263 2009/07/27 17:02:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.264 2009/07/27 22:08:43 arfrever Exp $
+
+  27 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sqlite-3.6.16.ebuild, +files/sqlite-3.6.16-tkt3922.test.patch:
+  Disable failing tests which were absent in previous versions. Don't check
+  FEATURES (bug #278870).
 
   27 Jul 2009; nixnut <nixnut@gentoo.org> sqlite-3.6.14.2.ebuild:
   ppc stable #275592
