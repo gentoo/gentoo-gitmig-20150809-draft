@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.18 2009/04/15 22:58:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/exult/exult-1.2.ebuild,v 1.19 2009/07/27 19:52:47 nyhm Exp $
 
 EAPI=2
 inherit eutils autotools multilib games
@@ -48,7 +48,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-64bits.patch \
 		"${FILESDIR}"/${P}-x11link.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 	sed -i \
 		-e "s/u7siinstrics.data/u7siintrinsics.data/" \
 		usecode/ucxt/data/Makefile.am \
@@ -67,8 +68,6 @@ src_configure() {
 		--disable-dependency-tracking \
 		--disable-tools \
 		--disable-opengl \
-		--disable-3dnow \
-		--disable-mmx \
 		$(use_enable timidity) \
 		$(use_enable zlib zip-support)
 }
