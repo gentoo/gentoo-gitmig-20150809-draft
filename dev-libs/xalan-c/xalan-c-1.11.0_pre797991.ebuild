@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.11.0_pre797991.ebuild,v 1.1 2009/07/27 00:07:33 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/xalan-c-1.11.0_pre797991.ebuild,v 1.2 2009/07/27 00:09:13 dev-zero Exp $
 
 EAPI="2"
 
@@ -63,14 +63,14 @@ src_configure() {
 	use threads && thread="pthread"
 
 	local bitstobuild="32"
-    $(has_m64) && bitstobuild="64"
+	$(has_m64) && bitstobuild="64"
 
 	./runConfigure -p ${target} -c "$(tc-getCC)" -x "$(tc-getCXX)" \
 		-m ${mloader} -t ${transcoder} \
-		-r ${thread} -b ${bitstobuild} > configure.vars || die "runConfigure failed"	
+		-r ${thread} -b ${bitstobuild} > configure.vars || die "runConfigure failed"
 
 	eval $(grep export configure.vars)
-	
+
 	default
 }
 
