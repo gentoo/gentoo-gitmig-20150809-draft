@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.2 2009/07/16 18:07:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9d.ebuild,v 1.3 2009/07/27 14:26:45 chainsaw Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.tim-mann.org/trs80/${P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="sys-libs/ncurses
