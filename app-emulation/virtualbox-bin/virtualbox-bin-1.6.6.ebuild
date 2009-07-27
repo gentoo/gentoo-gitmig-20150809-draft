@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.5 2009/01/04 22:12:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.6 2009/07/27 20:16:24 flameeyes Exp $
 
 EAPI=1
 
@@ -51,7 +51,7 @@ RDEPEND="!app-emulation/virtualbox-ose
 
 S=${WORKDIR}
 
-RESTRICT="fetch"
+RESTRICT="fetch mirror"
 
 pkg_nofetch() {
 	# Fetch restriction added due licensing and problems downloading with
