@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.67 2009/06/17 07:42:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.68 2009/07/27 08:02:19 aballier Exp $
+
+  27 Jul 2009; Alexis Ballier <aballier@gentoo.org> lablgtk-2.12.0.ebuild,
+  +files/lablgtk-2.12.0-libgnomeui.patch:
+  Add upstream patch for bug #274528
 
 *lablgtk-2.12.0 (17 Jun 2009)
 
