@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.53 2009/07/15 13:13:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.54 2009/07/27 11:32:54 chainsaw Exp $
+
+  27 Jul 2009; <chainsaw@gentoo.org> dmenu-4.0.ebuild:
+  Marked stable as requested by Jeroen Roovers <jer@gentoo.org> in bug
+  #275411. Compile-tested with USE="xinerama -savedconfig" and
+  MAKEOPTS="-j2" on a Core2 Duo.
 
   15 Jul 2009; Christian Faulhammer <fauli@gentoo.org> dmenu-4.0.ebuild:
   stable x86, bug 275411
