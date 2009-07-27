@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.9.0.ebuild,v 1.1 2009/07/26 19:13:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.9.0.ebuild,v 1.2 2009/07/27 01:40:20 dirtyepic Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ DEPEND=">=sys-fs/e2fsprogs-1.27
 		sys-fs/device-mapper )
 	)"
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_with readline) \
 		$(use_enable nls) \
@@ -36,11 +36,10 @@ src_compile() {
 		$(use_enable device-mapper) \
 		--disable-rpath \
 		--disable-Werror || die "Configure failed"
-	emake || die "Make failed"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "Install failed"
+	emake install DESTDIR="${D}" || die "Install failed"
 	dodoc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 	dodoc doc/{API,FAT,USER.jp}
 }
