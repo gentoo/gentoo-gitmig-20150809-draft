@@ -1,6 +1,13 @@
 # ChangeLog for sci-biology/mafft
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.5 2009/07/27 04:23:06 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mafft/ChangeLog,v 1.6 2009/07/27 05:53:45 dberkholz Exp $
+
+*mafft-6.707 (27 Jul 2009)
+
+  27 Jul 2009; Donnie Berkholz <dberkholz@gentoo.org>; +mafft-6.707.ebuild:
+  Bump to latest. Use no-extensions version because the extensions rely on a
+  bunch of bundled packages. That means you don't get RNA structural
+  alignment, sorry.
 
   27 Jul 2009; Donnie Berkholz <dberkholz@gentoo.org>;
   mafft-6.240-r1.ebuild:
