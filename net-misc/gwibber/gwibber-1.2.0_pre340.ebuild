@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-1.2.0_pre340.ebuild,v 1.1 2009/07/13 23:48:44 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/gwibber-1.2.0_pre340.ebuild,v 1.2 2009/07/27 20:06:34 flameeyes Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-python/python-distutils-extra-1.92_pre67
+RDEPEND=">=dev-python/python-distutils-extra-1.92_pre67
 	>=dev-python/dbus-python-0.82.4
 	>=dev-python/pywebkitgtk-1.1.5
 	>=dev-python/notify-python-0.1.1
@@ -27,8 +27,8 @@ DEPEND=">=dev-python/python-distutils-extra-1.92_pre67
 	>=dev-python/gconf-python-2.18.0
 	>=dev-python/pyxdg-0.15
 	>=dev-python/mako-0.2.4
-	>=gnome-base/librsvg-2.22.2"
-RDEPEND="virtual/python"
+	>=gnome-base/librsvg-2.22.2
+	virtual/python"
 
 S=${WORKDIR}/${PN}
 
