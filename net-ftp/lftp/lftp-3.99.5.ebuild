@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.99.4.ebuild,v 1.1 2009/07/27 05:02:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.99.5.ebuild,v 1.1 2009/07/27 17:44:13 jer Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="A sophisticated ftp/sftp/http/https client and file transfer program"
 HOMEPAGE="http://lftp.yar.ru/"
@@ -26,9 +26,17 @@ RDEPEND=">=sys-libs/ncurses-5.1
 		virtual/libc
 		>=sys-libs/readline-5.1"
 
-DEPEND="${RDEPEND}
+DEPEND="
+	${RDEPEND}
 	nls? ( sys-devel/gettext )
-	dev-lang/perl"
+	dev-lang/perl
+	=sys-devel/libtool-2*
+"
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-gnutls.patch"
+	eautoreconf
+}
 
 src_configure() {
 	local myconf="$(use_enable nls) --enable-packager-mode"
