@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_gnutls
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.22 2009/07/16 08:06:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_gnutls/ChangeLog,v 1.23 2009/07/27 11:52:37 chainsaw Exp $
+
+  27 Jul 2009; <chainsaw@gentoo.org> mod_gnutls-0.5.5.ebuild:
+  Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org> in bug #277987. Compile-tested with USE="ssl" on a
+  Core2 Duo.
 
   16 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   mod_gnutls-0.5.5.ebuild:
