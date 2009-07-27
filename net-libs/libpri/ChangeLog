@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.73 2009/05/17 22:22:58 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.74 2009/07/27 11:50:09 volkmar Exp $
+
+  27 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -files/libpri-1.2.2-gentoo.diff, -files/libpri-1.2.3-gentoo.diff,
+  -libpri-1.0.7-r1.ebuild, -libpri-1.0.8.ebuild, -libpri-1.0.9-r2.ebuild,
+  -libpri-1.2.2-r1.ebuild, -libpri-1.2.2-r2.ebuild, -libpri-1.2.3.ebuild,
+  -libpri-1.2.3-r1.ebuild, -libpri-1.2.4.ebuild, -libpri-1.2.4-r1.ebuild,
+  -libpri-1.2.4-r2.ebuild:
+  Removing old ebuilds and patches.
 
   17 May 2009; Mounir Lamouri <volkmar@gentoo.org> libpri-1.2.5.ebuild,
   libpri-1.4.9.ebuild:
