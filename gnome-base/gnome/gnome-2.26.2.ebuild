@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.26.2.ebuild,v 1.2 2009/07/27 08:35:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.26.2.ebuild,v 1.3 2009/07/27 08:43:49 eva Exp $
 
 EAPI="1"
 
@@ -61,7 +61,6 @@ RDEPEND="
 	>=gnome-base/gnome-control-center-2.26.0
 
 	>=gnome-base/gvfs-1.2.3
-	>=gnome-base/eel-2.24.0
 	>=gnome-base/nautilus-2.26.3
 
 	>=media-libs/gstreamer-0.10.23
@@ -107,7 +106,6 @@ RDEPEND="
 
 	>=gnome-extra/gnome-utils-2.26.0
 
-	>=dev-python/gnome-python-desktop-2.26.0
 	>=gnome-extra/gnome-games-2.26.2
 	>=gnome-base/librsvg-2.26.0
 
