@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.3 2009/07/21 18:26:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.4 2009/07/27 13:57:06 dang Exp $
+
+*kvm-kmod-88-r1 (27 Jul 2009)
+
+  27 Jul 2009; Daniel Gryniewicz <dang@gentoo.org> -kvm-kmod-88.ebuild,
+  +kvm-kmod-88-r1.ebuild, +files/kvm-kmod-devel-88-2.6.30.patch:
+  Fix kvm-kmod for 2.6.30; bug #278804
+
 
 *kvm-kmod-88 (21 Jul 2009)
 

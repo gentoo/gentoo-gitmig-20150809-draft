@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-88.ebuild,v 1.1 2009/07/21 18:26:11 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/kvm-kmod-88-r1.ebuild,v 1.1 2009/07/27 13:57:06 dang Exp $
 
 EAPI="2"
 
@@ -42,6 +42,10 @@ pkg_setup() {
 	MODULE_NAMES="${MODULE_NAMES} kvm-intel(kvm:${S}:${S}/x86)"
 	MODULE_NAMES="${MODULE_NAMES} kvm-amd(kvm:${S}:${S}/x86)"
 	linux-mod_pkg_setup
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${MY_P}-2.6.30.patch
 }
 
 src_configure() {
