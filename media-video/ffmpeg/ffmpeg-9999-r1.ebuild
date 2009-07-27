@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.14 2009/07/25 10:44:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.15 2009/07/27 06:24:43 aballier Exp $
 
 EAPI=2
 
@@ -60,6 +60,14 @@ DEPEND="${RDEPEND}
 	test? ( net-misc/wget )
 	v4l? ( sys-kernel/linux-headers )
 	v4l2? ( sys-kernel/linux-headers )"
+
+src_prepare() {
+	if [[ ${PV} = *9999* ]]; then
+		# Set SVN version manually
+		subversion_wc_info
+		sed -i s/UNKNOWN/SVN-r${ESVN_WC_REVISION}/ "${S}/version.sh"
+	fi
+}
 
 src_configure() {
 	local myconf="${EXTRA_FFMPEG_CONF}"
