@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.4.ebuild,v 1.1 2009/06/17 06:46:45 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.4.ebuild,v 1.2 2009/07/27 18:16:07 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="http://iptables.org/projects/iptables/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
-IUSE=""
+IUSE="ipv6"
 
 DEPEND="virtual/os-headers"
 RDEPEND=""
@@ -42,7 +42,8 @@ src_compile() {
 		--enable-devel \
 		--enable-libipq \
 		--enable-shared \
-		--enable-static
+		--enable-static \
+		$(use_enable ipv6)
 	emake V=1 || die
 }
 
@@ -50,14 +51,16 @@ src_install() {
 	emake install DESTDIR="${D}" || die
 
 	insinto /usr/include
-	doins include/iptables.h include/ip6tables.h || die
+	doins include/iptables.h $(use ipv6 && echo include/ip6tables.h) || die
 	insinto /usr/include/iptables
 	doins include/iptables/internal.h || die
 
 	keepdir /var/lib/iptables
 	newinitd "${FILESDIR}"/${PN}-1.3.2.init iptables || die
 	newconfd "${FILESDIR}"/${PN}-1.3.2.confd iptables || die
-	keepdir /var/lib/ip6tables
-	newinitd "${FILESDIR}"/iptables-1.3.2.init ip6tables || die
-	newconfd "${FILESDIR}"/ip6tables-1.3.2.confd ip6tables || die
+	if use ipv6 ; then
+		keepdir /var/lib/ip6tables
+		newinitd "${FILESDIR}"/iptables-1.3.2.init ip6tables || die
+		newconfd "${FILESDIR}"/ip6tables-1.3.2.confd ip6tables || die
+	fi
 }
