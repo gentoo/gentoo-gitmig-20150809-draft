@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0.ebuild,v 1.11 2009/07/26 15:26:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.0.ebuild,v 1.12 2009/07/27 07:14:05 aballier Exp $
 
 EAPI="2"
 
@@ -163,7 +163,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dvb? ( sys-kernel/linux-headers )
 	v4l? ( sys-kernel/linux-headers )
-	v4l2? ( sys-kernel/linux-headers )
+	v4l2? ( >=sys-kernel/linux-headers-2.6.25 )
 	X? ( xinerama? ( x11-proto/xineramaproto ) )
 	xcb? ( x11-proto/xproto )
 	dev-util/pkgconfig"
