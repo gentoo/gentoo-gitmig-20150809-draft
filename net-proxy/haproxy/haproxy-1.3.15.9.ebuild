@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.15.9.ebuild,v 1.3 2009/07/19 18:47:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.3.15.9.ebuild,v 1.4 2009/07/27 15:06:24 chainsaw Exp $
 
 inherit versionator eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://haproxy.1wt.eu/download/$(get_version_component_range 1-2)/src/$
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="pcre"
 
 DEPEND="pcre? ( dev-libs/libpcre )"
