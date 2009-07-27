@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/dmenu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.54 2009/07/27 11:32:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dmenu/ChangeLog,v 1.55 2009/07/27 17:23:02 nixnut Exp $
+
+  27 Jul 2009; nixnut <nixnut@gentoo.org> dmenu-4.0.ebuild:
+  ppc stable #275411
 
   27 Jul 2009; <chainsaw@gentoo.org> dmenu-4.0.ebuild:
   Marked stable as requested by Jeroen Roovers <jer@gentoo.org> in bug
