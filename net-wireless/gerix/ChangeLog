@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/gerix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/ChangeLog,v 1.1 2009/07/26 16:50:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/ChangeLog,v 1.2 2009/07/27 09:21:23 scarabeus Exp $
+
+  27 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> gerix-0.20.ebuild:
+  Add missing runtime dep. Per upstream request.
 
 *gerix-0.20 (26 Jul 2009)
 

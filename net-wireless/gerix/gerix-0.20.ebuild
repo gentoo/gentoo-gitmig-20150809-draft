@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/gerix-0.20.ebuild,v 1.1 2009/07/26 16:50:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/gerix-0.20.ebuild,v 1.2 2009/07/27 09:21:23 scarabeus Exp $
 
 EAPI="2"
 
@@ -19,6 +19,7 @@ IUSE=""
 DEPEND="dev-python/PyQt"
 RDEPEND="${DEPEND}
 	gnome-extra/zenity
+	net-analyzer/macchanger
 	net-wireless/aircrack-ng
 	x11-terms/xterm
 "
