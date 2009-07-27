@@ -1,3 +1,5 @@
+http://www.sqlite.org/cvstrac/tktview?tn=3951
+
 --- test/tkt3922.test
 +++ test/tkt3922.test
 @@ -36,20 +36,6 @@
