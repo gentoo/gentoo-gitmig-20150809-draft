@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ltrace
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.49 2008/09/28 20:27:07 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ChangeLog,v 1.50 2009/07/27 20:26:28 dirtyepic Exp $
+
+  27 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> ltrace-0.5.3.1.ebuild,
+  +files/ltrace-0.5.3.1-gcc43-testsuite.patch:
+  Add patch to fix testsuite failures with GCC 4.3. (bug #233958)
+  Add test USE to pull in missing dejagnu dep.
 
   28 Sep 2008; Raúl Porcel <armin76@gentoo.org> ltrace-0.5.3.1.ebuild:
   Add ~arm wrt #225275

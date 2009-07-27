@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.1.ebuild,v 1.2 2008/09/28 20:27:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ltrace/ltrace-0.5.3.1.ebuild,v 1.3 2009/07/27 20:26:28 dirtyepic Exp $
 
 inherit eutils autotools
 
@@ -16,9 +16,11 @@ SRC_URI="mirror://debian/pool/main/l/ltrace/${MY_P}.orig.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE=""
+IUSE="test"
 
-DEPEND="dev-libs/elfutils"
+RDEPEND="dev-libs/elfutils"
+DEPEND="${RDEPEND}
+		test? ( dev-util/dejagnu )"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
@@ -33,6 +35,7 @@ src_unpack() {
 		-e 's:uname -m:echo @HOST_CPU@:' \
 		sysdeps/linux-gnu/Makefile > sysdeps/linux-gnu/Makefile.in
 	epatch "${FILESDIR}"/${PN}-0.5.3-ppc.patch
+	epatch "${FILESDIR}"/${P}-gcc43-testsuite.patch
 	eautoconf
 }
 
