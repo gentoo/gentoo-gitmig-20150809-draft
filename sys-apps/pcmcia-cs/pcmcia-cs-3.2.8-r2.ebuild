@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.16 2008/04/19 23:04:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.2.8-r2.ebuild,v 1.17 2009/07/27 19:37:16 ssuominen Exp $
 
 inherit eutils flag-o-matic toolchain-funcs linux-info
 
@@ -92,9 +92,6 @@ src_compile() {
 		einfo "CardBus support disabled"
 		config="${config} --nocardbus"
 	fi
-
-	# cardctl, cardinfo and xcardinfo are setUID
-	append-ldflags $(bindnow-flags)
 
 	pcmcia_cs_configure \
 		--noprompt \

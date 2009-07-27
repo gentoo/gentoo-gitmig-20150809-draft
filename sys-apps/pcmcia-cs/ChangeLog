@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.116 2008/09/01 04:49:26 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.117 2009/07/27 19:37:16 ssuominen Exp $
+
+  27 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  pcmcia-cs-3.2.8-r2.ebuild:
+  Remove bindnow-flags wrt #226935.
 
   01 Sep 2008; Mike Frysinger <vapier@gentoo.org>
   pcmcia-cs-3.2.9_pre20050614.ebuild:
