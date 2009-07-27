@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.10 2009/07/26 10:48:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.11 2009/07/27 06:56:35 aballier Exp $
 
 EAPI="2"
 
@@ -14,9 +14,9 @@ inherit eutils flag-o-matic multilib ${SVN_ECLASS}
 IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +ass
 bidi bindist bl +cddb +cdio cdparanoia cpudetection custom-cflags
 custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
-+enca +encode esd +faac +faad fbcon ftp gif ggi -gmplayer +iconv ipv6 jack
-joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
-mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
++enca +encode esd external-ffmpeg +faac +faad fbcon ftp gif ggi -gmplayer +iconv
+ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum
++mmx mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
 oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba +shm
 +schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
 +truetype +unicode v4l v4l2 vdpau vidix +vorbis win32codecs +X +x264 xanim
@@ -87,6 +87,7 @@ RDEPEND="sys-libs/ncurses
 	)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
+	external-ffmpeg? ( media-video/ffmpeg )
 	faad? ( !aac? ( media-libs/faad2 ) )
 	gif? ( media-libs/giflib )
 	ggi? (
@@ -544,6 +545,12 @@ src_configure() {
 	else
 		unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS YASMFLAGS
 	fi
+
+	#################
+	# External FFmpeg #
+	#################
+
+	use external-ffmpeg && myconf="${myconf} --disable-libavutil_a --disable-libavcodec_a --disable-libavformat_a --disable-libpostproc_a --disable-libswscale_a"
 
 	myconf="--cc=$(tc-getCC) \
 		--host-cc=$(tc-getBUILD_CC) \
