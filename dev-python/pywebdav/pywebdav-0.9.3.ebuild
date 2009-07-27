@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/pywebdav-0.9.3.ebuild,v 1.1 2009/07/02 17:34:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebdav/pywebdav-0.9.3.ebuild,v 1.2 2009/07/27 06:48:08 cedk Exp $
 
 PYTHON_MODNAME="DAV DAVServer"
 
@@ -15,6 +15,6 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
-DEPEND=""
+DEPEND="dev-python/setuptools"
 RDEPEND=""
 S="${WORKDIR}/${MY_P}"
