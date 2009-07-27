@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/amule
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.142 2009/07/26 12:42:41 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.143 2009/07/27 22:08:20 maekke Exp $
+
+  27 Jul 2009; Markus Meier <maekke@gentoo.org> amule-2.2.5.ebuild:
+  amd64 stable, bug #268163
 
   26 Jul 2009; Brent Baude <ranger@gentoo.org> amule-2.2.5.ebuild:
   Marking amule-2.2.5 ppc64 for bug 268163
