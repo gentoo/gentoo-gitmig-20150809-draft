@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r4.ebuild,v 1.3 2008/05/16 18:23:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r4.ebuild,v 1.4 2009/07/27 19:31:11 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,8 +38,6 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags $(bindnow-flags)
-
 	if use gtk; then
 		sed -i 's:^#\(.*gtk-config.*\)$:\1:g' Makefile || die "sed enable gtk failed"
 		emake || die "gtk+ build failed"
