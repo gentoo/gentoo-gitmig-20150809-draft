@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.39 2009/07/26 19:36:59 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.40 2009/07/27 07:05:07 aballier Exp $
+
+  27 Jul 2009; Alexis Ballier <aballier@gentoo.org>
+  musepack-tools-444.ebuild:
+  keyword ~x86-fbsd, bug #279069
 
   26 Jul 2009; Mark Loeser <halcy0n@gentoo.org> musepack-tools-444.ebuild:
   Marked ~x86; bug #279069
