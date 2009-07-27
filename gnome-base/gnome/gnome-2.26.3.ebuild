@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.26.2.ebuild,v 1.2 2009/07/27 08:35:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.26.3.ebuild,v 1.1 2009/07/27 08:35:02 eva Exp $
 
 EAPI="1"
 
@@ -19,10 +19,10 @@ IUSE="accessibility cdr cups dvdr esd ldap mono"
 S=${WORKDIR}
 
 RDEPEND="
-	>=dev-libs/glib-2.20.2
-	>=x11-libs/gtk+-2.16.1
+	>=dev-libs/glib-2.20.4
+	>=x11-libs/gtk+-2.16.5
 	>=dev-libs/atk-1.26.0
-	>=x11-libs/pango-1.24.2
+	>=x11-libs/pango-1.24.5
 
 	>=dev-libs/libxml2-2.7.2
 	>=dev-libs/libxslt-1.1.22
@@ -35,10 +35,10 @@ RDEPEND="
 	>=dev-libs/libIDL-0.8.13
 	>=gnome-base/orbit-2.14.16
 
-	>=x11-libs/libwnck-2.26.1
+	>=x11-libs/libwnck-2.26.2
 	>=x11-wm/metacity-2.26.0
 
-	>=gnome-base/gnome-keyring-2.26.1
+	>=gnome-base/gnome-keyring-2.26.3
 	>=app-crypt/seahorse-2.26.2
 
 	>=gnome-base/gnome-vfs-2.24.1
@@ -46,7 +46,7 @@ RDEPEND="
 	>=gnome-base/gnome-mime-data-2.18.0
 
 	>=gnome-base/gconf-2.26.2
-	>=net-libs/libsoup-2.26.2
+	>=net-libs/libsoup-2.26.3
 
 	>=gnome-base/libbonobo-2.24.1
 	>=gnome-base/libbonoboui-2.24.1
@@ -70,45 +70,44 @@ RDEPEND="
 	>=gnome-extra/gnome-media-2.26.0
 	>=media-sound/sound-juicer-2.26.1
 	>=dev-libs/totem-pl-parser-2.26.2
-	>=media-video/totem-2.26.2
+	>=media-video/totem-2.26.3
 
-	>=media-gfx/eog-2.26.2
+	>=media-gfx/eog-2.26.3
 
-	>=www-client/epiphany-2.26.2
-	>=app-arch/file-roller-2.26.2
-	>=gnome-extra/gcalctool-5.26.2
+	>=www-client/epiphany-2.26.3
+	>=app-arch/file-roller-2.26.3
+	>=gnome-extra/gcalctool-5.26.3
 
 	>=gnome-extra/gconf-editor-2.26.0
 	>=gnome-base/gdm-2.20.10
 	>=x11-libs/gtksourceview-2.6.2:2.0
-	>=app-editors/gedit-2.26.2
+	>=app-editors/gedit-2.26.3
 
 	>=app-text/evince-2.26.2
 
-	>=gnome-base/gnome-desktop-2.26.2
-	>=gnome-base/gnome-session-2.26.1
-	>=dev-libs/libgweather-2.26.1
-	>=gnome-base/gnome-applets-2.26.1
-	>=gnome-base/gnome-panel-2.26.2
-	>=gnome-base/gnome-menus-2.26.1
+	>=gnome-base/gnome-desktop-2.26.3
+	>=gnome-base/gnome-session-2.26.2
+	>=dev-libs/libgweather-2.26.2.1
+	>=gnome-base/gnome-applets-2.26.3
+	>=gnome-base/gnome-panel-2.26.3
+	>=gnome-base/gnome-menus-2.26.2
 	>=x11-themes/gnome-icon-theme-2.26.0
-	>=x11-themes/gnome-themes-2.26.2
+	>=x11-themes/gnome-themes-2.26.3.1
 	>=gnome-extra/deskbar-applet-2.26.2
 
 	>=x11-themes/gtk-engines-2.18.2
 	>=x11-themes/gnome-backgrounds-2.24.1
 
-	>=x11-libs/vte-0.20.3
-	>=x11-terms/gnome-terminal-2.26.2
+	>=x11-libs/vte-0.20.5
+	>=x11-terms/gnome-terminal-2.26.3.1
 
-	>=gnome-extra/gucharmap-2.26.2
+	>=gnome-extra/gucharmap-2.26.3.1
 	>=gnome-base/libgnomeprint-2.18.6
 	>=gnome-base/libgnomeprintui-2.18.4
 
 	>=gnome-extra/gnome-utils-2.26.0
 
-	>=dev-python/gnome-python-desktop-2.26.0
-	>=gnome-extra/gnome-games-2.26.2
+	>=gnome-extra/gnome-games-2.26.3
 	>=gnome-base/librsvg-2.26.0
 
 	>=gnome-extra/gnome-system-monitor-2.26.2
@@ -125,21 +124,21 @@ RDEPEND="
 
 	cdr? (
 		|| (
-			>=app-cdr/brasero-2.26.2
+			>=app-cdr/brasero-2.26.3
 			>=gnome-extra/nautilus-cd-burner-2.24.0 ) )
 	dvdr? (
 		|| (
-			>=app-cdr/brasero-2.26.2
+			>=app-cdr/brasero-2.26.3
 			>=gnome-extra/nautilus-cd-burner-2.24.0 ) )
 
-	>=gnome-extra/gtkhtml-3.26.2
-	>=mail-client/evolution-2.26.2
-	>=gnome-extra/evolution-data-server-2.26.2
+	>=gnome-extra/gtkhtml-3.26.3
+	>=mail-client/evolution-2.26.3
+	>=gnome-extra/evolution-data-server-2.26.3
 	>=gnome-extra/evolution-webcal-2.26.0
 
 	>=net-misc/vino-2.26.2
 
-	>=app-admin/pessulus-2.26.1
+	>=app-admin/pessulus-2.26.2
 	ldap? (
 		>=app-admin/sabayon-2.25.0
 		>=net-voip/ekiga-2.0.12 )
@@ -156,11 +155,11 @@ RDEPEND="
 		>=gnome-extra/libgail-gnome-1.20.1
 		>=gnome-extra/at-spi-1.26.0
 		>=app-accessibility/dasher-4.10.1
-		>=app-accessibility/gnome-mag-0.15.6
+		>=app-accessibility/gnome-mag-0.15.7
 		>=app-accessibility/gnome-speech-0.4.25
 		>=app-accessibility/gok-2.26.0
-		>=app-accessibility/orca-2.26.2
-		>=gnome-extra/mousetweaks-2.26.2 )
+		>=app-accessibility/orca-2.26.3
+		>=gnome-extra/mousetweaks-2.26.3 )
 	cups? ( >=net-print/gnome-cups-manager-0.31-r2 )
 
 	mono? ( >=app-misc/tomboy-0.14.2 )"

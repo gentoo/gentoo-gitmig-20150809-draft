@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.362 2009/05/28 22:33:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.363 2009/07/27 08:35:02 eva Exp $
+
+*gnome-2.26.3 (27 Jul 2009)
+
+  27 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org> -gnome-2.22.3.ebuild,
+  gnome-2.26.2.ebuild, +gnome-2.26.3.ebuild:
+  Version bump for GNOME 2.26.3.
 
 *gnome-2.26.2 (28 May 2009)
 
