@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.26.3.ebuild,v 1.1 2009/07/26 18:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-2.26.3-r1.ebuild,v 1.1 2009/07/27 04:43:00 dirtyepic Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="An HTTP library implementation in C"
 HOMEPAGE="http://www.gnome.org/"

@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.192 2009/07/26 18:08:09 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.193 2009/07/27 04:43:00 dirtyepic Exp $
+
+*libsoup-2.26.3-r1 (27 Jul 2009)
+
+  27 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> -libsoup-2.26.3.ebuild,
+  +libsoup-2.26.3-r1.ebuild:
+  Add missing eutils inherit for epatch.
 
 *libsoup-2.26.3 (26 Jul 2009)
 
