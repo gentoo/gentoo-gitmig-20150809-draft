@@ -35,4 +35,7 @@ Tools
 stexec - execute scripts in GNUstep environment
 stalk - tool for talking to the GNUstep servers and applications
 </longdescription>
+<use>
+	<flag name='gdl2'>Compile module for <pkg>gnustep-libs/gdl2</pkg></flag>
+</use>
 </pkgmetadata>
