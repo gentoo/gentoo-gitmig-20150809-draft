@@ -1,0 +1,10 @@
+# ChangeLog for games-misc/gpe-julia
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/gpe-julia/ChangeLog,v 1.1 2009/07/27 15:00:41 miknix Exp $
+
+*gpe-julia-0.0.6 (27 Jul 2009)
+
+  27 Jul 2009; Angelo Arrifano <miknix@gentoo.org> +metadata.xml,
+  +gpe-julia-0.0.6.ebuild:
+  Initial commit, import from gpe overlay.
+
