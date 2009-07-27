@@ -1,6 +1,10 @@
 # ChangeLog for rox-base/zeroinstall-injector
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.17 2009/07/19 14:59:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/zeroinstall-injector/ChangeLog,v 1.18 2009/07/27 09:44:00 tcunha Exp $
+
+  27 Jul 2009; Tiago Cunha <tcunha@gentoo.org>
+  zeroinstall-injector-0.40.ebuild:
+  stable sparc, bug 275392
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> zeroinstall-injector-0.40.ebuild:
   ppc stable #275392
