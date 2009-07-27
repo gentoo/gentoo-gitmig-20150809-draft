@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-88-r1.ebuild,v 1.1 2009/07/25 14:19:52 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm/kvm-88-r1.ebuild,v 1.2 2009/07/27 18:04:51 dang Exp $
 
 EAPI="2"
 
@@ -34,7 +34,7 @@ RDEPEND="sys-libs/zlib
 	sdl? ( >=media-libs/libsdl-1.2.11[X] )
 	vde? ( net-misc/vde )
 	bluetooth? ( net-wireless/bluez )
-	modules? ( =app-emulation/kvm-kmod-${PV} )"
+	modules? ( ~app-emulation/kvm-kmod-${PV} )"
 
 #    bios? (
 #        sys-devel/dev86
