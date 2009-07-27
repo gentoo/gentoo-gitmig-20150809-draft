@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libpri
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.74 2009/07/27 11:50:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/ChangeLog,v 1.75 2009/07/27 12:04:10 volkmar Exp $
+
+  27 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> libpri-1.2.5.ebuild,
+  libpri-1.4.9.ebuild:
+  Remove -Werror. Fix bug 260923
 
   27 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
   -files/libpri-1.2.2-gentoo.diff, -files/libpri-1.2.3-gentoo.diff,

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.5.ebuild,v 1.8 2009/05/17 22:22:58 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-1.2.5.ebuild,v 1.9 2009/07/27 12:04:10 volkmar Exp $
 
 EAPI="2"
 
@@ -42,6 +42,9 @@ src_prepare() {
 		epatch ${S_BRI}/patches/libpri.patch
 #		epatch ${WORKDIR}/libpri-${PV}-bristuff-${BRI_VERSION}.diff
 	fi
+
+	# remove -Werror, fix bug 260923
+	sed -i -e "s/-Werror //" Makefile || die "sed failed"
 }
 
 src_install() {
