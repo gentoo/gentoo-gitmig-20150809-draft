@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/mono-debugger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.32 2009/07/04 10:29:33 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mono-debugger/ChangeLog,v 1.33 2009/07/27 22:16:02 flameeyes Exp $
+
+*mono-debugger-2.4.2-r1 (27 Jul 2009)
+
+  27 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +mono-debugger-2.4.2-r1.ebuild:
+  Add patched version of mono-debugger that works with splitdebug (and uses
+  system libraries). Closes bugs #276435, #276437, #276438.
 
   04 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mono-debugger-2.4.2.ebuild:
