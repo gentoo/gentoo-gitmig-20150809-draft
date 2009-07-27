@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.40 2009/07/27 08:23:43 mduft Exp $
+# $Id: ChangeLog,v 1.41 2009/07/27 09:53:49 haubi Exp $
+
+  27 Jul 2009; Michael Haubenwallner <haubi@gentoo.org>
+  +hpux/B.11.11/hppa2.0/make.defaults, +hpux/B.11.11/hppa2.0/parent,
+  +hpux/B.11.11/package.provided, +hpux/B.11.11/parent:
+  added 32bit profile for hppa2.0*-hp-hpux11.11
 
   27 Jul 2009; Markus Duft <mduft@gentoo.org> windows/winnt/package.mask:
   unmaske icu-4, seems to work
