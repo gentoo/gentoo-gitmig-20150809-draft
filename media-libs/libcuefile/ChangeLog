@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.2 2009/07/26 19:35:44 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.3 2009/07/27 07:03:06 aballier Exp $
+
+  27 Jul 2009; Alexis Ballier <aballier@gentoo.org> libcuefile-444.ebuild:
+  keyword ~x86-fbsd, bug #279069
 
   26 Jul 2009; Mark Loeser <halcy0n@gentoo.org> libcuefile-444.ebuild:
   Marked ~x86; bug #279069
