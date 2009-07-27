@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.26 2009/07/20 08:22:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.27 2009/07/27 01:49:56 wormo Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -10,7 +10,7 @@ EAPI="2"
 inherit eutils
 
 # Use XBMC_ESVN_REPO_URI to track a different branch
-ESVN_REPO_URI=${XBMC_ESVN_REPO_URI:-https://xbmc.svn.sourceforge.net/svnroot/xbmc/branches/linuxport/XBMC}
+ESVN_REPO_URI=${XBMC_ESVN_REPO_URI:-http://xbmc.svn.sourceforge.net/svnroot/xbmc/branches/linuxport/XBMC}
 ESVN_PROJECT=${ESVN_REPO_URI##*/svnroot/}
 ESVN_PROJECT=${ESVN_PROJECT%/XBMC}
 if [[ ${PV} == "9999" ]] ; then
