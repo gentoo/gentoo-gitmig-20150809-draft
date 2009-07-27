@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.43 2009/07/21 23:20:13 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.44 2009/07/27 20:21:53 flameeyes Exp $
+
+  27 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  webkit-gtk-1.1.10.ebuild:
+  Add missing flex dependency.
 
   21 Jul 2009; Markus Ullmann <jokey@gentoo.org>
   -webkit-gtk-0_p46126.ebuild, +webkit-gtk-0_p46193.ebuild:

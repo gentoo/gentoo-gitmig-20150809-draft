@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.10.ebuild,v 1.1 2009/06/19 17:26:25 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.10.ebuild,v 1.2 2009/07/27 20:21:53 flameeyes Exp $
 
 EAPI="2"
 
@@ -41,6 +41,7 @@ RDEPEND="
 		media-libs/fontconfig )
 "
 DEPEND="${RDEPEND}
+	sys-devel/flex
 	sys-devel/gettext
 	dev-util/gperf
 	dev-util/pkgconfig
