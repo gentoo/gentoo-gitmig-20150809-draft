@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/amap
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.4 2008/04/17 18:20:13 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amap/ChangeLog,v 1.5 2009/07/27 05:52:01 dberkholz Exp $
+
+*amap-2.2-r1 (27 Jul 2009)
+
+  27 Jul 2009; Donnie Berkholz <dberkholz@gentoo.org>; +amap-2.2-r1.ebuild:
+  Someone wasn't reading the upstream changelogs ... add an option to build
+  the Java GUI.
 
 *amap-2.2 (17 Apr 2008)
 
