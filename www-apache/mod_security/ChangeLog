@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.26 2009/07/15 19:13:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.27 2009/07/27 16:42:44 flameeyes Exp $
+
+  27 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mod_security-2.5.9-r1.ebuild:
+  Also list rule 950907 in the list of draconian rules.
 
   15 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mod_security-2.5.9-r1.ebuild:

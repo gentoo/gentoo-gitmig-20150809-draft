@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.9-r1.ebuild,v 1.2 2009/07/15 19:13:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.9-r1.ebuild,v 1.3 2009/07/27 16:42:44 flameeyes Exp $
 
 inherit apache-module autotools
 
@@ -99,14 +99,14 @@ pkg_postinst() {
 	elog "Please note that the core rule set distributed with mod_security is quite"
 	elog "draconic. If you're using this on a blog, a forum or another user-submitted"
 	elog "web application where you might talk about standard Unix paths (such as /etc"
-	elog "or /bin), you might want to disable at least rule 950005 (command injection)"
-	elog "if you're sure it might not be a security risk."
+	elog "or /bin), you might want to disable at least rules 950005 and 950907"
+	elog "(command injection) if you're sure it might not be a security risk."
 	elog " "
 	elog "To do that on the most limited case you might want to use something like"
 	elog "the following code (this comes from a Typo weblog instance):"
 	elog " "
 	elog "	<Location /comments>"
-	elog "	SecRuleRemoveById 950005"
+	elog "	SecRuleRemoveById 950005 950907"
 	elog "	</Location>"
 	elog " "
 }
