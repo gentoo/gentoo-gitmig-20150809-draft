@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.172 2009/04/21 17:28:54 dang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.173 2009/07/27 00:18:38 dev-zero Exp $
+
+*liferea-1.6.0 (27 Jul 2009)
+
+  27 Jul 2009; Tiziano Müller <dev-zero@gentoo.org> +liferea-1.6.0.ebuild:
+  Version bump.
 
   21 Apr 2009; Daniel Gryniewicz <dang@gentoo.org> liferea-1.4.28-r1:
   Bump sqlite dep so sparc can keyword; bug #252292
