@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-do
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.16 2009/06/27 07:37:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-do/ChangeLog,v 1.17 2009/07/27 05:41:52 graaff Exp $
+
+  27 Jul 2009; Hans de Graaff <graaff@gentoo.org> metadata.xml:
+  Add missing herd tag, fixes #279219.
 
 *gnome-do-0.8.2 (27 Jun 2009)
 

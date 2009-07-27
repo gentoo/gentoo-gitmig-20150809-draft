@@ -7,6 +7,8 @@
 		<name>Hans de Graaff</name>
 	</maintainer>
 
+    <herd>no-herd</herd>
+
 	<use>
 	 	<flag name="banshee">Enables the Banshee (<pkg>media-sound/banshee</pkg>) plugin</flag>
 	</use>
