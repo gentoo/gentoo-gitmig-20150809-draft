@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4679 2009/07/26 23:07:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4680 2009/07/27 07:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1799,6 +1799,7 @@ media-video/mplayer:dirac - Enable Dirac video support (an advanced royalty-free
 media-video/mplayer:dvdnav - Use forked libdvdnav, navigate menus in GUIs
 media-video/mplayer:dxr3 - Enable DXR3/H+ video output
 media-video/mplayer:enca - Enables support for charset discovery and conversion
+media-video/mplayer:external-ffmpeg - Use shared FFmpeg libraries instead of static bundled ones. Discouraged by upstream.
 media-video/mplayer:faac - Use external faac library for AAC encoding
 media-video/mplayer:faad - Use external faad library for AAC decoding
 media-video/mplayer:gmplayer - Build gmplayer, a GTK+ MPlayer gui (UNSUPPORTED)
