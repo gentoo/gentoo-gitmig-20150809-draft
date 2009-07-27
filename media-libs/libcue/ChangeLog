@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcue
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.7 2009/07/22 22:11:29 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/ChangeLog,v 1.8 2009/07/27 16:58:50 nixnut Exp $
+
+  27 Jul 2009; nixnut <nixnut@gentoo.org> libcue-1.3.0.ebuild:
+  ppc stable #278677
 
   22 Jul 2009; Dawid Węgliński <cla@gentoo.org> libcue-1.3.0.ebuild:
   Stable on amd64 (bug #278677)
