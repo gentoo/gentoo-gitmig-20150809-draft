@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.1 2006/03/12 08:04:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/coldsync-3.0_pre4.ebuild,v 1.2 2009/07/27 10:12:29 flameeyes Exp $
 
 DESCRIPTION="A command-line tool to synchronize PalmOS PDAs with Unix workstations"
 MY_PV="${PV/_/-}"
@@ -29,7 +29,9 @@ src_compile() {
 	myconf="${myconf} `use_with caps capabilities`"
 
 	econf ${myconf} || die "configuring coldsync failed"
-	make || die "couldn't make coldsync"
+
+	# bug #279292
+	emake -j1 || die "couldn't make coldsync"
 }
 
 src_install() {

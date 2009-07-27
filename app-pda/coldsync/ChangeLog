@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/coldsync
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.9 2007/02/21 22:53:05 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/coldsync/ChangeLog,v 1.10 2009/07/27 10:12:29 flameeyes Exp $
+
+  27 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  coldsync-3.0_pre4.ebuild:
+  Use -j1 for build, and reference a bug with the log.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.
