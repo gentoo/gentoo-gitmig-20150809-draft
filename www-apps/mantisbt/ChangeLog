@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/mantisbt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.82 2009/07/22 15:53:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mantisbt/ChangeLog,v 1.83 2009/07/27 11:48:24 chainsaw Exp $
+
+  27 Jul 2009; <chainsaw@gentoo.org> mantisbt-1.1.8.ebuild:
+  Marked stable on AMD64 as requested by Peter Volkov <pva@gentoo.org> in
+  bug #278435. Compile-tested on a Core2 Duo with USE="-vhosts".
 
   22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   mantisbt-1.1.8.ebuild:
