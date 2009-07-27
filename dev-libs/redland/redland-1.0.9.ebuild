@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.6 2009/06/22 13:22:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.7 2009/07/27 15:55:16 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils libtool
@@ -24,12 +24,12 @@ RDEPEND="mysql? ( virtual/mysql )
 	>=dev-libs/rasqal-0.9.16
 	postgres? ( virtual/postgresql-base )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	>=sys-devel/libtool-2"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch
 	eautoreconf
-	elibtoolize # for sande .so versionning on bsd
 }
 
 src_configure() {
