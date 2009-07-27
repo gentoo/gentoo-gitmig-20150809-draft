@@ -1,0 +1,10 @@
+# ChangeLog for dev-haskell/language-c
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-c/ChangeLog,v 1.1 2009/07/27 20:30:07 kolmodin Exp $
+
+*language-c-0.3.1.1 (27 Jul 2009)
+
+  27 Jul 2009; Lennart Kolmodin <kolmodin@gentoo.org> +metadata.xml,
+  +language-c-0.3.1.1.ebuild:
+  Initial import.
+
