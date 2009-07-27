@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.1.ebuild,v 1.1 2009/07/16 15:47:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-2.1.ebuild,v 1.2 2009/07/27 08:28:56 ssuominen Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -34,10 +34,9 @@ RDEPEND="${COMMON_DEPEND}
 		esd? ( media-plugins/gst-plugins-esd:0.10 ) )
 	xine? ( >=media-libs/xine-lib-1.1
 		dev-python/ctypes )
-	gnome? ( dev-python/gnome-python-extras
+	gnome? ( dev-python/feedparser
 		gstreamer? ( media-plugins/gst-plugins-gconf:0.10
-			media-plugins/gst-plugins-gnomevfs:0.10 )
-		dev-python/feedparser )
+			media-plugins/gst-plugins-gnomevfs:0.10 ) )
 	hal? ( sys-apps/hal )
 	dbus? ( >=dev-python/dbus-python-0.71 )
 	ipod? ( >=media-libs/libgpod-0.5.2[python] )"
