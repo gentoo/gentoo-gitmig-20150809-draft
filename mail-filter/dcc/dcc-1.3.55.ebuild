@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.55.ebuild,v 1.9 2007/04/21 20:53:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.55.ebuild,v 1.10 2009/07/27 19:29:32 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -41,7 +41,6 @@ src_compile() {
 		cgi-bin/Makefile.in
 
 	local myconf
-	append-ldflags $(bindnow-flags)
 	myconf="${myconf} --homedir=${dcc_homedir}"
 	myconf="${myconf} --libexecdir=${dcc_libexec}"
 	myconf="${myconf} --bindir=/usr/bin"
