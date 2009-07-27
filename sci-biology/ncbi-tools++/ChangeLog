@@ -1,0 +1,16 @@
+# ChangeLog for sci-biology/ncbi-tools++
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.1 2009/07/27 05:26:29 weaver Exp $
+
+*ncbi-tools++-2009.05.15 (27 Jul 2009)
+
+  27 Jul 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +ncbi-tools++-2009.05.15.ebuild:
+  Import from Science overlay
+
+  25 Jul 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  Version bump
+
+  28 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> ChangeLog:
+  New package, ebuild written by me
+
