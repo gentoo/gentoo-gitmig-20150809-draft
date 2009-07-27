@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.26.2.ebuild,v 1.2 2009/07/27 08:35:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-light/gnome-light-2.26.2.ebuild,v 1.3 2009/07/27 08:44:35 eva Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop, merge this package to install"
@@ -52,7 +52,6 @@ RDEPEND="!gnome-base/gnome
 	>=gnome-base/gnome-control-center-2.26.0
 
 	>=gnome-base/gvfs-1.2.3
-	>=gnome-base/eel-2.24.1
 	>=gnome-base/nautilus-2.26.3
 
 	>=gnome-base/gnome-desktop-2.26.2
