@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.39 2009/07/27 07:02:17 mduft Exp $
+# $Id: ChangeLog,v 1.40 2009/07/27 08:23:43 mduft Exp $
+
+  27 Jul 2009; Markus Duft <mduft@gentoo.org> windows/winnt/package.mask:
+  unmaske icu-4, seems to work
 
   27 Jul 2009; Markus Duft <mduft@gentoo.org> windows/interix/package.mask,
   windows/winnt/package.mask:
