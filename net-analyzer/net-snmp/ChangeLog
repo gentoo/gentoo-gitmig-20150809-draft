@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.198 2009/07/26 12:37:08 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.199 2009/07/27 22:09:27 maekke Exp $
+
+  27 Jul 2009; Markus Meier <maekke@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
+  amd64 stable, bug #250429
 
   26 Jul 2009; Brent Baude <ranger@gentoo.org> net-snmp-5.4.2.1-r1.ebuild:
   Marking net-snmp-5.4.2.1-r1 ppc64 for bug 250429
