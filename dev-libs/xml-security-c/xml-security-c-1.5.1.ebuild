@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/xml-security-c-1.5.1.ebuild,v 1.1 2009/07/24 05:16:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xml-security-c/xml-security-c-1.5.1.ebuild,v 1.2 2009/07/27 09:54:18 dev-zero Exp $
 
 EAPI="2"
 
@@ -22,7 +22,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PV}-parallel_build.patch"
+		"${FILESDIR}/${PV}-parallel_build.patch" \
+		"${FILESDIR}/${PV}-xalan-c-1.11-compat.patch"
 
 	# script checks for autoconf for no reason
 	sed -i \
