@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.52 2009/04/25 23:13:17 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.53 2009/07/28 15:02:11 flameeyes Exp $
+
+  28 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> radvd-1.2.ebuild:
+  If you haven't set WANT_AUTOMAKE you want eautoreconf.
 
   25 Apr 2009; Patrick Lauer <patrick@gentoo.org> radvd-1.2:
   Restricting emake to avoid parallel make failure. Fixes #255332
