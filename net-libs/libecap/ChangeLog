@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libecap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.4 2009/07/23 14:59:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libecap/ChangeLog,v 1.5 2009/07/28 05:08:08 jer Exp $
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> libecap-0.0.2.ebuild:
+  Marked ~hppa (bug #277883).
 
   23 Jul 2009; Raúl Porcel <armin76@gentoo.org> libecap-0.0.2.ebuild:
   Add ~alpha/~arm/~ia64 wrt #277883
