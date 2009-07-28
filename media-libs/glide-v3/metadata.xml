@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>x11-drivers</herd>
+  <herd>x11</herd>
   <use>
     <flag name="voodoo1">Support 3DFX Voodoo1 video cards</flag>
     <flag name="voodoo2">Support 3DFX Voodoo2 video cards</flag>
