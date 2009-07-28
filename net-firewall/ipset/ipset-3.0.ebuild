@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-3.0.ebuild,v 1.1 2009/06/05 15:03:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-3.0.ebuild,v 1.2 2009/07/28 01:09:29 robbat2 Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=net-firewall/iptables-1.4.1"
+RDEPEND=">=net-firewall/iptables-1.4.4"
 DEPEND="${RDEPEND}"
 
 # configurable from outside
