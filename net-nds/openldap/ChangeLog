@@ -1,6 +1,17 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.344 2009/07/28 02:11:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.345 2009/07/28 21:28:24 robbat2 Exp $
+
+*openldap-2.4.17-r1 (28 Jul 2009)
+
+  28 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +openldap-2.4.17-r1.ebuild, files/openldap-2.4.17-contrib-smbk5pwd.patch,
+  +files/openldap-2.4.17-fix-lmpasswd-gnutls-symbols.patch,
+  files/slapd-initd:
+  Bug #219371: Install C++ libraries and headers as needed. Bug #233633: Fix
+  compile with USE="samba gnutls". Bug #273699: Fix slapd init ordering. Bug
+  #261186: Build plugins with libtool instead of directly. Bug #279461:
+  Update smbk5pwd building.
 
 *openldap-2.4.17 (28 Jul 2009)
 

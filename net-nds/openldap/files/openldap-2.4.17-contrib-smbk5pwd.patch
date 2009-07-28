@@ -6,7 +6,7 @@ diff -Nuar --exclude 'openldap-2.4*' --exclude p -I '$OpenLDAP' openldap-2.4.17.
  # <http://www.OpenLDAP.org/license.html>.
  
 +#libexecdir=/usr/lib/openldap
-+moduledir=$(libexecdir)/openldap
++moduledir=$(libexecdir)
  LIBTOOL=../../../libtool
 -OPT=-g -O2
 +#OPT=
@@ -56,6 +56,6 @@ diff -Nuar --exclude 'openldap-2.4*' --exclude p -I '$OpenLDAP' openldap-2.4.17.
 -	mkdir -p $(PREFIX)/lib/openldap
 -	$(LIBTOOL) --mode=install cp smbk5pwd.la $(PREFIX)/lib/openldap
 -	$(LIBTOOL) --finish $(PREFIX)/lib
-+	mkdir -p $(moduledir)
-+	$(LIBTOOL) --mode=install cp smbk5pwd.la $(moduledir)
-+	$(LIBTOOL) --finish $(libexecdir)
++	mkdir -p $(DESTDIR)$(moduledir)
++	$(LIBTOOL) --mode=install cp smbk5pwd.la $(DESTDIR)$(moduledir)
++	$(LIBTOOL) --finish $(DESTDIR)$(libexecdir)
