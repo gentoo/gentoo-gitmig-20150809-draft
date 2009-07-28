@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.30 2009/04/17 16:54:38 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.31 2009/07/28 05:21:56 jer Exp $
+
+*adie-1.6.36 (28 Jul 2009)
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> +adie-1.6.36.ebuild:
+  Version bump (bug #276854).
 
   17 Apr 2009; Matti Bickel <mabi@gentoo.org> -adie-1.6.34.ebuild:
   cleanup
