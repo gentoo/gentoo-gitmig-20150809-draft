@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/IceE/IceE-1.3.0.ebuild,v 1.2 2009/02/27 21:47:03 tove Exp ${P}.ebuild,v 1.1 2009/01/07 15:24:59 b33fc0d3 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/IceE/IceE-1.3.0-r1.ebuild,v 1.1 2009/07/28 08:02:49 b33fc0d3 Exp ${P}.ebuild,v 1.1 2009/01/07 15:24:59 b33fc0d3 Exp $
 
 inherit eutils mono multilib toolchain-funcs
 
@@ -27,7 +27,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-makefile-2.patch"
 	epatch "${FILESDIR}/${P}-gcc4.3-fix.patch"
 	epatch "${FILESDIR}/${P}-maverick-fix.patch"
-
+	epatch "${FILESDIR}/${P}-remove-explicit-rpath.patch"
 }
 
 src_compile() {
