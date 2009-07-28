@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090601-r1.ebuild,v 1.2 2009/06/13 14:35:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090727.ebuild,v 1.1 2009/07/28 18:43:26 tommy Exp $
 
 EGIT_REPO_URI="http://git.c3sl.ufpr.br/pub/scm/aufs/aufs2-standalone.git"
 
@@ -21,19 +21,22 @@ RDEPEND="!sys-fs/aufs"
 MODULE_NAMES="aufs(misc:${S})"
 
 get_kernelpatch() {
-	KERNELPATCH=""
 	if kernel_is eq 2 6 27; then
-		KERNELPATCH="aufs2-standalone.patch"
+		KERNELPATCH="aufs2-standalone-27.patch"
 		EGIT_BRANCH="aufs2-27"
-		EGIT_TREE="8e8d6394f50d9cfdc434766ea2434018788ca111"
+		EGIT_TREE="957d5a6b6408016f9b074eccc7bffd1429d0a64d"
 	elif kernel_is eq 2 6 28; then
-		KERNELPATCH="aufs2-standalone.patch"
+		KERNELPATCH="aufs2-standalone-28.patch"
 		EGIT_BRANCH="aufs2-28"
-		EGIT_TREE="78e9abebac8f283dd4f113f392a9943a7b212b0e"
+		EGIT_TREE="2e3a4181f3d391c72e086fb7ca23b151fc961371"
 	elif kernel_is eq 2 6 29; then
 		KERNELPATCH="aufs2-standalone-29.patch"
 		EGIT_BRANCH="aufs2-29"
-		EGIT_TREE="d2db0dbfac69b5a04df5a78a454a2c9b8c658aa6"
+		EGIT_TREE="dc5a4600a23ba474a5eb941d4379330e0f36141e"
+	elif kernel_is eq 2 6 30; then
+		KERNELPATCH="aufs2-standalone-30.patch"
+		EGIT_BRANCH="aufs2-30"
+		EGIT_TREE="b599d87c0ad475e309f81d9b85ba56527371db81"
 	else
 		die "no supported kernel found"
 	fi
@@ -42,11 +45,11 @@ get_kernelpatch() {
 pkg_setup() {
 	get_version
 	get_kernelpatch
-	if ! patch -p1 --dry-run --force -R -d ${KV_DIR} <"${FILESDIR}"/${KERNELPATCH} >/dev/null; then
+	if ! patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/${KERNELPATCH} >/dev/null; then
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
-			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} <"${FILESDIR}"/${KERNELPATCH} >/dev/null
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/${KERNELPATCH} >/dev/null
 			epatch "${FILESDIR}"/${KERNELPATCH}
 			einfo "You need to compile your kernel with the applied patch"
 			einfo "to be able to load and use the aufs kernel module"

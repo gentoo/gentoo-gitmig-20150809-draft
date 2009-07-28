@@ -1,6 +1,15 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.6 2009/06/13 14:35:10 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.7 2009/07/28 18:43:26 tommy Exp $
+
+*aufs2-0_p20090727 (28 Jul 2009)
+
+  28 Jul 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/aufs2-standalone-27.patch, -files/aufs2-standalone.patch,
+  -aufs2-0_p20090601-r1.ebuild, +aufs2-0_p20090727.ebuild,
+  +files/aufs2-standalone-28.patch, files/aufs2-standalone-29.patch,
+  +files/aufs2-standalone-30.patch:
+  Version bump, add support for kernel version 2.6.30
 
   13 Jun 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   aufs2-0_p20090601-r1.ebuild:
