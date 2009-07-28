@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39.ebuild,v 1.1 2009/07/18 17:47:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39.ebuild,v 1.2 2009/07/28 03:22:29 nerdboy Exp $
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -31,7 +31,8 @@ RDEPEND="X? (
 		>=dev-libs/glib-2.6
 		dev-libs/dbus-glib )
 	ntp? ( net-misc/ntp )
-	usb? ( virtual/dev-manager )"
+	usb? ( virtual/dev-manager )
+	sys-libs/ncurses"
 
 DEPEND="${RDEPEND}
 	X? (
@@ -40,7 +41,6 @@ DEPEND="${RDEPEND}
 	)
 	!minimal? (
 		dev-libs/libxslt
-		sys-libs/ncurses
 	)"
 
 src_unpack() {
@@ -63,24 +63,18 @@ src_unpack() {
 
 src_compile() {
 
-	local my_conf="--enable-shared --with-pic --enable-static \
-		--disable-fast-install"
+	local my_conf="--enable-shared --with-pic --enable-static"
 		# --enable-superstar2 is missing a header file
 
 	use python && distutils_python_version
 
-	if use ntp; then
-		my_conf="${my_conf} --enable-ntpshm --enable-pps"
-	else
-		my_conf="${my_conf} --disable-ntpshm --disable-pps"
+	if ! use ntp; then
+		my_conf="${my_conf} --disable-pps --disable-ntpshm"
 	fi
 
 	if use minimal; then
 		local max_clients="5"
 		local max_devices="2"
-		if ! use ntp; then
-			my_conf="${my_conf} --disable-pps --disable-ntpshm"
-		fi
 		my_conf="${my_conf} --enable-squelch --without-x \
 		--enable-max-devices=${max_devices} \
 		--enable-max-clients=${max_clients}"

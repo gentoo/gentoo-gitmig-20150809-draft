@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.40 2009/07/18 17:47:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.41 2009/07/28 03:22:29 nerdboy Exp $
+
+  28 Jul 2009; Steve Arnold <nerdboy@gentoo.org> gpsd-2.39.ebuild:
+  Updated build to work around libtool funkiness (see bug #278340).
 
 *gpsd-2.39 (18 Jul 2009)
 
