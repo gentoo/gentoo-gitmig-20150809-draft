@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10110 2009/07/28 14:41:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10111 2009/07/28 15:53:50 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,6 +44,7 @@
 # For more info:
 #  http://dev.gentoo.org/~scarabeus/ati-mask-reason.txt
 <x11-drivers/ati-drivers-9.6
+x11-apps/ati-drivers-extra
 
 # Ryan Hill <dirtyepic@gentoo.org> (27 Jul 2009)
 # Masked for removal 20090927
@@ -952,18 +953,6 @@ app-benchmark/phoronix-test-suite
 # Thomas Anderson <gentoofan23@gentoo.org>
 # Live version
 ~app-doc/pms-99999999
-
-# Jeffrey Gardner <je_fro@gentoo.org> (27 Feb 2009)
-# Masked for spring cleaning. Removal soon if there's no objections.
-=x11-drivers/ati-drivers-8.471.3
-=x11-drivers/ati-drivers-8.27.10-r1
-=x11-drivers/ati-drivers-8.35.5
-=x11-drivers/ati-drivers-8.36.5
-=x11-drivers/ati-drivers-8.39.4
-=x11-drivers/ati-drivers-8.40.4
-=x11-drivers/ati-drivers-8.452
-=x11-drivers/ati-drivers-8.471.3
-=x11-apps/ati-drivers-extra-8.27.10
 
 # Jeremy Olexa <darkside@gentoo.org> (10 Apr 2009)
 # The bash-completion upstream naming scheme has drastically changed. As such,

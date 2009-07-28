@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2970 2009/07/28 14:41:16 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2971 2009/07/28 15:53:50 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Adjust mask for ati-drivers to mask also ati-drivers-extra
 
   28 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
   Mask old ati-drivers. 8.XXX.
