@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+		<email>jer@gentoo.org</email>
+		<name>Jeroen Roovers</name>
 	</maintainer>
 	<longdescription lang="en">
 		A utility for overclocking NVidia based video cards.
