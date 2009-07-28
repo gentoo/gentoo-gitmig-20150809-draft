@@ -148,8 +148,3 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Alexis Ballier <aballier@gentoo.org> (07 Jul 2009)
 # The pda interface doesnt build, bug #277037
 >=media-video/vlc-1.0.0 pda
-
-# Alexis Ballier <aballier@gentoo.org> (14 Jul 2009)
-# Shine files are not correctly distributed in the tarball, it is fixed in
-# bugfix branch thus mask it only for the broken version, 1.0.0
-~media-video/vlc-1.0.0 shine
