@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.165 2009/07/24 23:37:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.166 2009/07/28 20:27:57 robbat2 Exp $
+
+*lvm2-2.02.49-r2 (28 Jul 2009)
+
+  28 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/64-device-mapper.rules-1.02.49-r2, +lvm2-2.02.49-r2.ebuild:
+  Bug #278304: Update removal of vol_id, replaced by blkid -o udev.
 
 *lvm2-2.02.49-r1 (24 Jul 2009)
 
