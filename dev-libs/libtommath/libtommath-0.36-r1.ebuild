@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.12 2009/07/24 16:41:31 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtommath/libtommath-0.36-r1.ebuild,v 1.13 2009/07/28 21:53:31 vostorga Exp $
 
 inherit eutils multilib
 
@@ -19,18 +19,19 @@ RDEPEND=""
 RESTRICT="test"
 
 src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-shared-lib.patch
-	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
+		unpack ${A}
+		cd "${S}"
+		epatch "${FILESDIR}"/${P}-shared-lib.patch
+		epatch "${FILESDIR}"/${P}-LDFLAGS.patch
+		epatch "${FILESDIR}"/${P}-CC.patch
 }
 
 src_compile() {
-	emake -f makefile.shared IGNORE_SPEED=1 || die
+		emake CC="$(tc-getCC)" -f makefile.shared IGNORE_SPEED=1 || die
 }
 
 src_install() {
-	make -f makefile.shared install DESTDIR="${D}" LIBPATH="/usr/$(get_libdir)" || die
-	dodoc changes.txt *.pdf
-	docinto demo ; dodoc demo/*
+		make -f makefile.shared install DESTDIR="${D}" LIBPATH="/usr/$(get_libdir)" || die
+		dodoc changes.txt *.pdf
+		docinto demo ; dodoc demo/*
 }
