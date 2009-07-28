@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/Babel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.13 2009/07/05 20:58:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Babel/ChangeLog,v 1.14 2009/07/28 05:35:18 jer Exp $
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> Babel-0.9.4.ebuild:
+  Stable for HPPA (bug #278978).
 
   05 Jul 2009; Alexis Ballier <aballier@gentoo.org> Babel-0.9.4.ebuild:
   keyword ~x86-fbsd
