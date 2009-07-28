@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.7 2008/07/02 16:51:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/geos/geos-2.2.3.ebuild,v 1.8 2009/07/28 14:45:16 bicatali Exp $
 
 USE_RUBY="ruby18"
 RUBY_OPTIONAL="yes"
@@ -11,7 +11,7 @@ DESCRIPTION="Geometry engine library for Geographic Information Systems"
 HOMEPAGE="http://geos.refractions.net"
 SRC_URI="http://geos.refractions.net/${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ppc64 ~sparc x86"
 IUSE="doc python ruby"
