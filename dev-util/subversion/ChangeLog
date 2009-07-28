@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/subversion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.394 2009/07/27 21:49:04 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.395 2009/07/28 17:14:44 armin76 Exp $
+
+  28 Jul 2009; Raúl Porcel <armin76@gentoo.org> subversion-1.6.3.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #278623
 
   27 Jul 2009; Robert Piasek <dagger@gentoo.org> subversion-1.6.3.ebuild:
   arm stable (bug #278623)
