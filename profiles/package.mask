@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10106 2009/07/27 09:38:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10107 2009/07/28 02:17:14 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1445,10 +1445,6 @@ dev-libs/liboobs
 # https://bugs.gentoo.org/show_bug.cgi?id=190835
 games-fps/doomsday
 games-fps/doomsday-resources
-
-# Markus Ullmann <jokey@gentoo.org> (13 Jan 2008)
-# contrib modules need to be added back and needs general testing
->=net-nds/openldap-2.4
 
 # Mart Raudsepp <leio@gentoo.org> (28 Dec 2007)
 # Live Subversion ebuild until pending first upstream release
