@@ -10,5 +10,5 @@
   <name>Ned Ludd</name>
 </maintainer>
 <herd>embedded</herd>
-<herd>x11-drivers</herd>
+<herd>x11</herd>
 </pkgmetadata>
