@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/candycrisis
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/ChangeLog,v 1.4 2008/06/23 07:30:21 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/candycrisis/ChangeLog,v 1.5 2009/07/28 15:18:29 nyhm Exp $
+
+  28 Jul 2009; Tristan Heaven <nyhm@gentoo.org> candycrisis-1.0-r1.ebuild,
+  +files/candycrisis-1.0-gcc44.patch:
+  Fix building with gcc-4.4, bug #273575
 
   23 Jun 2008; Christian Faulhammer <opfer@gentoo.org>
   candycrisis-1.0-r1.ebuild:
