@@ -1,6 +1,13 @@
 # ChangeLog for app-text/kding
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.8 2009/07/08 20:36:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kding/ChangeLog,v 1.9 2009/07/28 20:58:17 tgurr Exp $
+
+*kding-0.5 (28 Jul 2009)
+
+  28 Jul 2009; Timo Gurr <tgurr@gentoo.org> -kding-0.4.1.ebuild,
+  -files/kding-0.4.1-appsdir.patch, -files/kding-0.4.1-desktopentry.patch,
+  -files/kding-0.4.1-localization-de.patch, +kding-0.5.ebuild:
+  Version bump thanks to Alexander Stein, fixes bug #278387.
 
   08 Jul 2009; Markus Meier <maekke@gentoo.org> kding-0.4.3.ebuild:
   amd64 stable, bug #226699
