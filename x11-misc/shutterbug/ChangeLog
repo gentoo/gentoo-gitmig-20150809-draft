@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/shutterbug
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.21 2009/04/10 15:10:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shutterbug/ChangeLog,v 1.22 2009/07/28 05:23:26 jer Exp $
+
+*shutterbug-1.6.36 (28 Jul 2009)
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> +shutterbug-1.6.36.ebuild:
+  Version bump (bug #276854).
 
   10 Apr 2009; Raúl Porcel <armin76@gentoo.org> shutterbug-1.6.35.ebuild:
   x86 stable wrt #263795

@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/pathfinder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.25 2009/04/17 16:59:26 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/ChangeLog,v 1.26 2009/07/28 05:22:24 jer Exp $
+
+*pathfinder-1.6.36 (28 Jul 2009)
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> +pathfinder-1.6.36.ebuild:
+  Version bump (bug #276854).
 
   17 Apr 2009; Matti Bickel <mabi@gentoo.org> -pathfinder-1.6.34.ebuild:
   cleanup
