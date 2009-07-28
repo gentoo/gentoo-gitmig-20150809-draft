@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/linuxwacom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.38 2009/07/28 14:49:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/linuxwacom/ChangeLog,v 1.39 2009/07/28 15:50:06 ikelos Exp $
+
+*linuxwacom-0.8.3_p6 (28 Jul 2009)
+
+  28 Jul 2009; Mike Auty <ikelos@gentoo.org> +linuxwacom-0.8.3_p6.ebuild,
+  +files/linuxwacom-0.8.3_p6-xf86config.patch:
+  Version bump, temporarily removes buildable module support, fixes bug
+  274520.
 
   28 Jul 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   x11-drivers -> x11.
