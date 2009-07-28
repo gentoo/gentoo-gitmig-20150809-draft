@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libroadnav
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.8 2009/07/01 05:19:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libroadnav/ChangeLog,v 1.9 2009/07/28 05:19:45 dirtyepic Exp $
+
+  28 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> -libroadnav-0.18.ebuild:
+  Remove old.
 
 *libroadnav-0.19 (01 Jul 2009)
 
