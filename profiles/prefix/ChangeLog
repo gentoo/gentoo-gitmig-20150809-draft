@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.42 2009/07/28 09:01:03 grobian Exp $
+# $Id: ChangeLog,v 1.43 2009/07/28 13:50:24 haubi Exp $
+
+  28 Jul 2009; Michael Haubenwallner <haubi@gentoo.org>
+  +hpux/B.11.11/package.use.mask:
+  hpux11.11 does not have /dev/*random: use.masked 'urandom' for
+  dev-libs/apr
 
   28 Jul 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask >=sys-apps/util-linux-2.16 too, comment #5 in bug #278341
