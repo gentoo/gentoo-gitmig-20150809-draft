@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6-r2.ebuild,v 1.17 2009/07/28 05:23:26 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/lynx-2.8.6-r4.ebuild,v 1.1 2009/07/28 05:23:26 wormo Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SRC_URI="ftp://lynx.isc.org/${MY_P}/${MY_P}rel.4.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh
+~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="bzip2 cjk ipv6 nls ssl unicode"
 
 RDEPEND="sys-libs/ncurses
@@ -38,6 +39,12 @@ pkg_setup() {
 		eerror "ncurses with \`emerge --oneshot sys-libs/ncurses\`."
 		die "Re-emerge ncurses with the unicode flag"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-CVE-2008-4690.patch"
 }
 
 src_compile() {
