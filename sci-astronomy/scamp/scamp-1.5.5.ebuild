@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/scamp-1.5.5.ebuild,v 1.1 2009/07/28 17:08:38 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/scamp/scamp-1.5.5.ebuild,v 1.2 2009/07/28 17:41:43 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -9,7 +9,7 @@ DESCRIPTION="Computes astrometric and photometric solutions for astronomical ima
 HOMEPAGE="http://astromatic.iap.fr/software/scamp"
 SRC_URI="ftp://ftp.iap.fr/pub/from_users/bertin/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="CeCILL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc threads plplot"
