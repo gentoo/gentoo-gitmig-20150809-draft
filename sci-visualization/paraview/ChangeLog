@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.38 2009/07/27 09:32:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.39 2009/07/28 15:16:45 markusle Exp $
+
+  28 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.6.1.ebuild,
+  +files/paraview-3.6.1-no-doc-finder.patch:
+  Added patch and fixes to ebuild to remove several install location
+  snafus.
 
   27 Jul 2009; Markus Dittrich <markusle@gentoo.org> paraview-3.6.1.ebuild:
   Have paraview block vtk until a better solution is found (#279264).

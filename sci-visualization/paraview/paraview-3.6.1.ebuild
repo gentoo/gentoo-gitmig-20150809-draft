@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.6 2009/07/27 09:32:19 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.7 2009/07/28 15:16:45 markusle Exp $
 
 EAPI="2"
 
@@ -59,6 +59,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-assistant.patch
 	epatch "${DISTDIR}"/${P}-openfoam-r120.patch.bz2
 	epatch "${DISTDIR}"/${P}-openfoam-gpl-r120.patch.bz2
+	epatch "${FILESDIR}"/${P}-no-doc-finder.patch
 
 	if use hdf5 && has_version '>=sci-libs/hdf5-1.8.0'; then
 		epatch "${FILESDIR}"/${P}-hdf-1.8.3.patch
@@ -69,6 +70,10 @@ src_prepare() {
 		-i VTK/Rendering/vtkOpenGLRenderWindow.cxx \
 		|| die "Failed to fix GL issues."
 
+	# fix plugin install directory
+	sed -e "s:\${PV_INSTALL_BIN_DIR}/plugins:/usr/${PVLIBDIR}/plugins:" \
+		-i CMake/ParaViewPlugins.cmake \
+		|| die "Failed to fix plugin install directories"
 }
 
 src_compile() {
@@ -199,6 +204,15 @@ src_install() {
 	# set up the environment
 	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
 	doenvd "${T}"/40${PN}
+
+	# move and remove some of the files that should not be 
+	# in /usr/bin
+	dohtml "${D}/usr/bin/about.html" && rm -f "${D}/usr/bin/about.html" \
+		|| die "Failed to move about.html into doc dir"
+
+	# this binary does not work and probably should not be installed
+	rm -f "${D}/usr/bin/vtkSMExtractDocumentation" \
+		|| die "Failed to remove vtkSMExtractDocumentation"
 }
 
 pkg_postinst() {
