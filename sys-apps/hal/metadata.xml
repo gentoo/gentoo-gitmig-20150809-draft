@@ -33,8 +33,6 @@
 		format.</flag>
 	<flag name='laptop'>Adds support for power management scripts
 		(<pkg>sys-power/pm-utils</pkg>)</flag>
-	<flag name='pcmcia'>Allows HAL to process PCMCIA/CardBus slot data which
-		includes inserts and removals and act on these events.</flag>
 	<flag name='selinux'>Installs SELinux policies and links HAL to the SELinux
 		libraries.</flag>
 </use>

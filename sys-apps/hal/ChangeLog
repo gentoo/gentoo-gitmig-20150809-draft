@@ -1,6 +1,59 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.294 2009/07/23 15:10:07 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.295 2009/07/28 22:49:29 eva Exp $
+
+  28 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/0.5.9-hald.conf, -files/hal-0.5.7-hald-scripts.patch,
+  -files/hal-0.5.7-hibernate.patch, -files/hal-0.5.7-ignored-volumes.patch,
+  -files/hal-0.5.7-part-table.patch,
+  -files/hal-0.5.7-plugdev-allow-send.patch, -files/hal-0.5.7-pmu-fix.patch,
+  -files/hal-0.5.7-rescan-on-resume.patch,
+  -files/hal-0.5.7-sony-brightness.patch,
+  -files/hal-0.5.7-unclean-unmount-r1.patch,
+  -files/hal-0.5.7.1-autofs-subfs.patch, -files/hal-0.5.7.1-ctype-fix.patch,
+  -files/hal-0.5.7.1-dbus-close.patch, -files/hal-0.5.7.1-fix-dbus.patch,
+  -files/hal-0.5.7.1-floppies-fix.patch,
+  -files/hal-0.5.7.1-hald-scripts.patch,
+  -files/hal-0.5.7.1-hibernate-fix.patch,
+  -files/hal-0.5.7.1-ignored-volumes.patch,
+  -files/hal-0.5.7.1-indirection-fix.patch,
+  -files/hal-0.5.7.1-ipod-nano.patch,
+  -files/hal-0.5.7.1-rescan-on-resume.patch,
+  -files/hal-0.5.7.1-sr-driver.patch, -hal-0.5.9.1-r3.ebuild,
+  -files/hal-0.5.9-hide-recovery-partitions.patch,
+  -files/hal-0.5.10-autotools.patch, -files/0.5.9-hald.rc,
+  -files/0.5.9/01_luks_mount_fix.patch, -files/hal-0.5.11-ppc64.patch,
+  -files/0.5.9/02_acpi_repeated_property_change.patch,
+  -files/0.5.9/03_crasher_fix_fail_to_return_value.patch,
+  -files/0.5.9/04_cache_regen_return_fix.patch,
+  -files/0.5.9/05_freebsd_partutil_make_fix.patch,
+  -files/0.5.9/06_freebsd_backend_fix.patch,
+  -files/0.5.9/07_malloc_h_for_stdlib_h.patch,
+  -files/0.5.9/08_contains_not_fdi_directive.patch,
+  -files/0.5.9/09_hald_addon_keyboard_start_one.patch,
+  -files/0.5.9/10_freebsd_storage_reprobe_fix.patch,
+  -files/0.5.9/11_hal_fix_segfault_probe_volume.patch,
+  -files/0.5.9/12_hal_fix-vol_label_probe_volume.patch,
+  -files/0.5.9/13_detect_newer_macbooks.patch,
+  -files/0.5.9/14_ntfs_allows_utf8.patch,
+  -files/0.5.9/15_spec_fdi_matching.patch,
+  -files/0.5.9/16_dev_root_is_mounted.patch,
+  -files/0.5.9/17_autoconf_cflag_cleanup.patch,
+  -files/0.5.9/18_hal_fix_info.category_for_laptop_panel_v2.patch,
+  -files/0.5.9/19_hald_runner_catch_dbus_disconnect.patch,
+  -files/0.5.9/20_firewire_prober_ioctls_fix.patch,
+  -files/0.5.9/21_pm-suspend_correct_options.patch,
+  -files/0.5.9/22_pm-hibernate_correct_options.patch,
+  -files/0.5.9/23_runner_64bit_values.patch,
+  -files/0.5.9/24_libparted_1_8_7.patch,
+  -files/0.5.9/95_gentoo_man_page.patch,
+  -files/0.5.9/96_plugdev_allow_send.patch,
+  -files/0.5.9/97_ignore_fixed_drives.patch,
+  -files/0.5.9/98_hald_cache_test_path.patch,
+  -files/0.5.9/99_sun_disklabel_ignore.patch, -files/0.5.9/series,
+  -files/0.5-hald.rc, -files/96_plugdev_allow_send.patch,
+  -hal-0.5.11-r8.ebuild, -hal-0.5.12_rc1-r4.ebuild, metadata.xml:
+  Late spring cleaning. Removing old revisions.
 
 *hal-0.5.13-r2 (23 Jul 2009)
 
