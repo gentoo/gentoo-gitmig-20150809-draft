@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.34 2009/07/28 15:20:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.35 2009/07/28 17:14:17 jer Exp $
+
+*nvclock-9999 (28 Jul 2009)
+
+  28 Jul 2009; Jeroen Roovers <jer@gentoo.org> +nvclock-9999.ebuild:
+  Add a live ebuild (based on the one by Peter Fern attached to bug #204428).
 
   28 Jul 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Pick up maintainership.
