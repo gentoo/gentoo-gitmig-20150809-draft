@@ -1,0 +1,11 @@
+# ChangeLog for sys-apps/tomoyo-tools
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tomoyo-tools/ChangeLog,v 1.1 2009/07/28 23:48:36 matsuu Exp $
+
+*tomoyo-tools-2.2.0_p20090727 (28 Jul 2009)
+
+  28 Jul 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +tomoyo-tools-2.2.0_p20090727.ebuild,
+  +files/tomoyo-tools-2.2.0_p20090727-gentoo.patch, +metadata.xml:
+  Initial import, bug #278513.
+
