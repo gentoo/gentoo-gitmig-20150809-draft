@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27-r1.ebuild,v 1.2 2009/07/27 22:05:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27-r1.ebuild,v 1.3 2009/07/28 14:52:40 flameeyes Exp $
 
 inherit toolchain-funcs eutils linux-mod flag-o-matic multilib
 
@@ -252,19 +252,20 @@ src_compile() {
 	export MYLIBDIR="$(get_libdir)"
 
 	# build
-	make KVERS=${KV_FULL} \
-	     KSRC=${KV_DIR} ARCH=$(tc-arch-kernel) || die
+	# bug #279480
+	emake -j1 KVERS=${KV_FULL} \
+		KSRC=${KV_DIR} ARCH=$(tc-arch-kernel) || die
 
 	if use astribank; then
 		cd "${S}"/xpp/utils
-		make || die "make xpp utils failed"
+		emake -j1 || die "make xpp utils failed"
 	fi
 
 	if use bri; then
 		cd ${S_BRI}
 		for x in cwain qozap zaphfc; do
 			einfo "Building ${x}..."
-			make KVERS=${KV_FULL} \
+			emake -j1 KVERS=${KV_FULL} \
 				KSRC=/usr/src/linux \
 				ARCH=$(tc-arch-kernel) \
 				-C ${x} || die "make ${x} failed"
@@ -277,7 +278,7 @@ src_install() {
 	mkdir -p "${D}"/lib/firmware/
 
 	kernel_is 2 4 && cp /etc/modules.conf "${D}"/etc
-	make DESTDIR="${D}" ARCH=$(tc-arch-kernel) \
+	emake -j1 DESTDIR="${D}" ARCH=$(tc-arch-kernel) \
 	KVERS=${KV_FULL} KSRC=/usr/src/linux devices firmware \
 	install-modules install-programs || die
 
@@ -338,7 +339,7 @@ src_install() {
 	if use astribank; then
 		cd "${S}"/xpp/utils
 		eval `perl '-V:installarchlib'`
-		make DESTDIR="${D}" PERLLIBDIR=${installarchlib} install || die "failed xpp utils install"
+		emake -j1 DESTDIR="${D}" PERLLIBDIR=${installarchlib} install || die "failed xpp utils install"
 		dosbin zt_registration xpp_sync lszaptel
 	fi
 }
