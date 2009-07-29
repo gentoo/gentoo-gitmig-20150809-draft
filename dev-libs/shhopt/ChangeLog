@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/shhopt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.13 2009/03/22 12:43:03 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shhopt/ChangeLog,v 1.14 2009/07/29 22:45:23 vostorga Exp $
+
+  29 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> shhopt-1.1.7.ebuild,
+  shhopt-1.1.7-r2.ebuild:
+  Respecting CC variable, closes bug #243944
 
   22 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
