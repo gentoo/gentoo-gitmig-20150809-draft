@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.0.ebuild,v 1.2 2009/07/29 16:24:15 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.0.ebuild,v 1.3 2009/07/29 16:32:46 gengor Exp $
 
 inherit perl-app
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
-src_install () {
+src_install() {
 	exeinto usr/bin
 	newexe whois bwwhois || die
 
