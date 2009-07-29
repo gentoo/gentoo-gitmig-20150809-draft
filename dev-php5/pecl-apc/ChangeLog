@@ -1,6 +1,11 @@
 # ChangeLog for dev-php5/pecl-apc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.51 2008/08/21 22:15:12 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/pecl-apc/ChangeLog,v 1.52 2009/07/29 15:36:44 darkside Exp $
+
+  29 Jul 2009; Jeremy Olexa <darkside@gentoo.org>
+  -pecl-apc-3.0.12_p2.ebuild, -pecl-apc-3.0.15.ebuild,
+  -pecl-apc-3.0.16.ebuild:
+  Remove vulnerable version(s), bug 271727
 
   21 Aug 2008; Friedrich Oslage <bluebird@gentoo.org>
   pecl-apc-3.0.19.ebuild:
