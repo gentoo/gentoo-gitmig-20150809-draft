@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r5.ebuild,v 1.7 2009/07/26 15:33:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.6.4.0-r5.ebuild,v 1.8 2009/07/29 21:43:35 maekke Exp $
 
 inherit eutils versionator flag-o-matic
 
@@ -15,7 +15,7 @@ BASE_P="${PN}-${BASE_PV}"
 SRC_URI="mirror://sourceforge/wxpython/wxPython-src-${PV}.tar.bz2
 		doc? ( mirror://sourceforge/wxwindows/wxWidgets-${BASE_PV}-HTML.tar.gz )"
 
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="X doc debug gnome odbc opengl pch sdl unicode"
 
 RDEPEND="
