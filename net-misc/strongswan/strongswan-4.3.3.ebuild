@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.2.8.ebuild,v 1.2 2009/06/23 12:53:15 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-4.3.3.ebuild,v 1.1 2009/07/29 08:33:36 wschlich Exp $
 
+EAPI=2
 inherit eutils linux-info autotools
 
 UGID="ipsec"
@@ -13,28 +14,25 @@ SRC_URI="http://download.strongswan.org/${P}.tar.bz2"
 LICENSE="GPL-2 RSA-MD2 RSA-MD5 RSA-PKCS11 DES"
 SLOT="0"
 KEYWORDS="~ppc ~sparc ~x86 ~amd64"
-IUSE="cisco curl debug ldap nat smartcard static xml"
+IUSE="caps cisco curl debug ldap nat smartcard static xml"
 
 COMMON_DEPEND="!net-misc/openswan
-	dev-libs/gmp"
-DEPEND="${COMMON_DEPEND}
-	virtual/linux-sources
-	sys-kernel/linux-headers
+	dev-libs/gmp
+	dev-libs/libgcrypt
+	caps? ( sys-libs/libcap )
 	curl? ( net-misc/curl )
 	ldap? ( net-nds/openldap )
 	smartcard? ( dev-libs/opensc )
 	xml? ( dev-libs/libxml2 )"
+DEPEND="${COMMON_DEPEND}
+	virtual/linux-sources
+	sys-kernel/linux-headers"
 RDEPEND="${COMMON_DEPEND}
 	virtual/logger
 	sys-apps/iproute2"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i -e 's/getline/getline_own/g' src/libfreeswan/optionsfrom.c
-
-	epatch "${FILESDIR}"/${PN}-4.2.7-install.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-4.3.3-install.patch
 	eautoreconf
 }
 
@@ -55,11 +53,11 @@ pkg_setup() {
 	enewuser ${UGID} -1 -1 -1 ${UGID}
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
 
 	# change to an unprivileged user by default
-	#myconf="${myconf} --with-user=${UGID} --with-group=${UGID}"
+	myconf="${myconf} --with-user=${UGID} --with-group=${UGID}"
 	# strongswan enables both by default; switch to the user's wish
 	if use static; then
 		myconf="${myconf} --enable-static --disable-shared"
@@ -67,18 +65,18 @@ src_compile() {
 		myconf="${myconf} --disable-static --enable-shared"
 	fi
 
+	# TODO: Review new configure options such as networkmanager
 	econf \
-		$(use_enable curl http) \
+		$(use_with caps capabilities libcap) \
+		$(use_enable curl) \
 		$(use_enable ldap) \
-		$(use_enable xml) \
+		$(use_enable xml smp) \
 		$(use_enable smartcard) \
 		$(use_enable cisco cisco-quirks) \
 		$(use_enable debug leak-detective) \
 		$(use_enable nat nat-transport) \
 		${myconf} \
 		|| die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {
@@ -91,17 +89,14 @@ src_install() {
 
 pkg_postinst() {
 	echo
-	ewarn "Starting with the strongswan-4 branch, the configuration files"
-	ewarn "will be installed into the default directory \"/etc/\""
-	ewarn "instead of the Gentoo-specific directory \"/etc/ipsec/\"."
-	ewarn "Please adjust your configuration!"
-	echo
 	einfo "For your own security we install strongSwan without superuser"
 	einfo "privileges.  If you use iptables, you might want to change that"
 	einfo "setting.  See http://wiki.strongswan.org/wiki/nonRoot for more"
 	einfo "information."
+	# TODO: Should we recommend this sudoers line to users?
+	# %ipsec ALL = NOPASSWD: /sbin/iptables
 	echo
 	einfo "The up-to-date configuration manual is available online at"
-	einfo "http://www.strongswan.org/docs/readme.htm"
+	einfo "http://www.strongswan.org/docs/readme42.htm"
 	echo
 }
