@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/libspf2
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.35 2008/10/18 16:39:37 gmsoft Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libspf2/ChangeLog,v 1.36 2009/07/29 15:51:42 darkside Exp $
+
+  29 Jul 2009; Jeremy Olexa <darkside@gentoo.org> -libspf2-1.2.5-r2.ebuild:
+  Remove vulnerable version(s), bug 271751
 
   18 Oct 2008; Guy Martin <gmsoft@gentoo.org> libspf2-1.2.8.ebuild:
   hppa stable, #242254
