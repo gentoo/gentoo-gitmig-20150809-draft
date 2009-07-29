@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.8.ebuild,v 1.1 2008/12/08 23:01:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.8.ebuild,v 1.2 2009/07/29 20:28:07 vostorga Exp $
 
 MY_PN=ScientificPython
 DV=2309 # hardcoded download version
@@ -9,7 +9,7 @@ inherit eutils distutils
 
 DESCRIPTION="Scientific Module for Python"
 SRC_URI="http://sourcesup.cru.fr/frs/download.php/${DV}/${MY_PN}-${PV}.tar.gz"
-HOMEPAGE="http://dirac.cnrs-orleans.fr/ScientificPython/"
+HOMEPAGE="http://sourcesup.cru.fr/projects/scientific-py/"
 SLOT="0"
 LICENSE="CeCILL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
