@@ -1,9 +1,0 @@
---- Makefile.orig	2003-04-04 13:23:27.000000000 -0600
-+++ Makefile	2003-04-04 13:25:14.000000000 -0600
-@@ -33,5 +33,5 @@
- install:
- 	install $(soname) $(POSTGRES_HOME)/lib
- 	rm -f $(POSTGRES_HOME)/lib/$(TARGET).so
--	ln -s $(POSTGRES_HOME)/lib/$(soname) $(POSTGRES_HOME)/lib/$(TARGET).so
- 	install -c $(TARGET).h $(POSTGRES_HOME)/include
-+	cd ${POSTGRES_HOME}/lib && ln -s $(soname) $(TARGET).so
