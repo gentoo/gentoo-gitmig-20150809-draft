@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/safecopy-1.4.ebuild,v 1.1 2009/07/16 13:13:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/safecopy-1.5.ebuild,v 1.1 2009/07/29 22:44:56 scarabeus Exp $
 
 EAPI=2
 inherit base
@@ -15,10 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND=""
-DEPEND="test? ( sys-apps/findutils
-	sys-apps/grep
-	sys-apps/coreutils
-	sys-apps/sed )"
+DEPEND=""
 
 src_prepare() {
 	sed -e 's:bin/sh:bin/bash:' \
@@ -28,7 +25,7 @@ src_prepare() {
 src_configure() {
 	base_src_configure
 	if use test; then
-		cd "${S}"/test/libsafecopydebug
+		cd "${S}"/simulator
 		econf
 	fi
 }
@@ -36,8 +33,8 @@ src_configure() {
 src_compile() {
 	base_src_compile
 	if use test; then
-		cd "${S}"/test/libsafecopydebug
-		emake || die "Testsuite compilation failed"
+		cd "${S}"/simulator
+		emake || die "Simulator compilation failed -- needed for testing"
 	fi
 }
 
