@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/qtparted
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.32 2008/08/23 06:22:05 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/ChangeLog,v 1.33 2009/07/29 16:18:22 vostorga Exp $
+
+  29 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> qtparted-0.4.5.ebuild,
+  +files/qtparted-0.4.5-parted-1.9-fix.patch:
+  Allowing sys-apps/qtparted-0.4.5 to build against sys-apps/parted-1.9.0
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

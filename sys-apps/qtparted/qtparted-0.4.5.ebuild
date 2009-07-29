@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.7 2008/07/28 21:23:23 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qtparted/qtparted-0.4.5.ebuild,v 1.8 2009/07/29 16:18:22 vostorga Exp $
 
 EAPI=1
 
@@ -33,6 +33,9 @@ src_unpack() {
 
 	# Fix up for parted v1.7
 	epatch "${FILESDIR}"/qtparted-0.4.5-parted-1.7-fix.patch
+
+	# Fix up for parted v 1.9
+	epatch "${FILESDIR}"/${P}-parted-1.9-fix.patch
 
 	# Switch from gksu to kdesu for the KDE desktop.
 	if use kde; then
