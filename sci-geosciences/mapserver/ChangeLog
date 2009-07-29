@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.16 2009/05/26 17:06:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.17 2009/07/29 20:30:45 flameeyes Exp $
+
+  29 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mapserver-5.0.0-r1.ebuild:
+  Use emake -j1 (bug #279627).
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   mapserver-5.0.0.ebuild, mapserver-5.0.0-r1.ebuild:
