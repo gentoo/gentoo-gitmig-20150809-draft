@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3.ebuild,v 1.6 2008/10/05 14:21:35 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/sud-1.3.ebuild,v 1.7 2009/07/29 20:17:43 flameeyes Exp $
 
 EAPI=2
 
@@ -33,7 +33,8 @@ src_configure() {
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "emake install failed."
+	# bug #277406
+	emake -j1 DESTDIR="${D}" install || die "emake install failed."
 	dodoc AUTHORS ChangeLog* README NEWS TODO
 	doman ilogin.1 sud.1 suz.1
 	insinto /etc
