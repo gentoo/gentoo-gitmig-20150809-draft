@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.209 2009/07/27 17:44:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.210 2009/07/29 05:05:15 jer Exp $
+
+  29 Jul 2009; Jeroen Roovers <jer@gentoo.org> lftp-3.99.5.ebuild,
+  +files/lftp-3.99.5-torrent_la.patch:
+  Make sure cmd-torrent.so gets linked properly (patch sent upstream).
 
 *lftp-3.99.5 (27 Jul 2009)
 
