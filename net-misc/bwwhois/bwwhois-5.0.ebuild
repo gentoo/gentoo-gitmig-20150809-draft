@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.0.ebuild,v 1.1 2006/12/02 21:39:00 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bwwhois/bwwhois-5.0.ebuild,v 1.2 2009/07/29 16:24:15 gengor Exp $
 
 inherit perl-app
 
@@ -16,21 +16,20 @@ KEYWORDS="alpha ~amd64 ppc sparc x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
 src_install () {
 	exeinto usr/bin
-	newexe whois bwwhois
+	newexe whois bwwhois || die
 
-	mv whois.1 bwwhois.1
-	doman bwwhois.1
+	newman whois.1 bwwhois.1 || die
 
-	insinto etc/whois
-	doins whois.conf tld.conf sd.conf
+	insinto /etc/whois
+	doins whois.conf tld.conf sd.conf || die
 
 	perlinfo
-	insinto ${SITE_LIB}
-	doins bwInclude.pm
-	updatepod
+	insinto "${SITE_LIB}"
+	doins bwInclude.pm || die
 }
