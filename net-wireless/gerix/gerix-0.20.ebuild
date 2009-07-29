@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/gerix-0.20.ebuild,v 1.2 2009/07/27 09:21:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gerix/gerix-0.20.ebuild,v 1.3 2009/07/29 15:04:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -27,7 +27,9 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_install() {
-	dobin ${PN}
+	make_wrapper ${PN} /usr/share/${PN}/${PN}.py "" "" /usr/sbin
 	insinto /usr/share/${PN}
 	doins ${PN}*.{py,ui{,.h},png} || die
+	fperms 755 /usr/share/${PN}/${PN}.py || die
+
 }
