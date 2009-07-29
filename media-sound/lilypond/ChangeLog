@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lilypond
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.97 2009/05/26 05:56:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/ChangeLog,v 1.98 2009/07/29 20:49:39 dirtyepic Exp $
+
+  29 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> lilypond-2.12.2.ebuild,
+  +files/lilypond-2.12.2-glibc-2.10.patch:
+  Fix build w/ glibc-2.10. (bug #270718)
 
   26 May 2009; Peter Volkov <pva@gentoo.org> lilypond-2.10.33.ebuild,
   lilypond-2.11.50.ebuild, lilypond-2.11.51.ebuild, lilypond-2.11.52.ebuild,

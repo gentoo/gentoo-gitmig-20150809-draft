@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.2.ebuild,v 1.2 2009/05/26 05:56:51 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.12.2.ebuild,v 1.3 2009/07/29 20:49:39 dirtyepic Exp $
 
 inherit eutils versionator toolchain-funcs elisp-common
 
@@ -51,6 +51,12 @@ pkg_setup() {
 		local flags="deprecated regex"
 		built_with_use dev-scheme/guile ${flags} || die "guile must be built with \"${flags}\" use flags"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 src_compile() {
