@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.7 2009/07/28 15:16:45 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1.ebuild,v 1.8 2009/07/29 00:21:31 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -205,7 +205,7 @@ src_install() {
 	echo "LDPATH=/usr/${PVLIBDIR}" >> "${T}"/40${PN}
 	doenvd "${T}"/40${PN}
 
-	# move and remove some of the files that should not be 
+	# move and remove some of the files that should not be
 	# in /usr/bin
 	dohtml "${D}/usr/bin/about.html" && rm -f "${D}/usr/bin/about.html" \
 		|| die "Failed to move about.html into doc dir"
