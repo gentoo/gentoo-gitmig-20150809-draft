@@ -1,6 +1,11 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.67 2009/07/24 10:58:33 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.68 2009/07/29 11:48:31 scarabeus Exp $
+
+  29 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/6.4.5-glibc210.patch, boinc-6.4.5-r2.ebuild:
+  Fix glibc-2.10 compilation issues. Per bug #276868. Thx to Joost Ruis for
+  the patch.
 
   24 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> files/boinc.init:
   Remove bashism in initscript. Per bug #278811. Thanks to Michał Górny

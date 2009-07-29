@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r2.ebuild,v 1.3 2009/05/29 16:42:45 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.4.5-r2.ebuild,v 1.4 2009/07/29 11:48:31 scarabeus Exp $
 
 #
 # Don't forget to keep things in sync with binary boinc package!
@@ -55,10 +55,12 @@ src_prepare() {
 	# RSA Security bug fix. Per bug #258011
 	# GCC 4.4 Compilation issue. Per bug #269618
 	# Fix stripping. Per bug #257297
+	# Fix glibc 2.10 compilation issues. Per bug #276868
 	epatch \
 		"${FILESDIR}"/${PV}-RSA_security.patch \
 		"${FILESDIR}"/${PV}-gcc44.patch \
-		"${FILESDIR}"/${PV}-nostrip.patch
+		"${FILESDIR}"/${PV}-nostrip.patch \
+		"${FILESDIR}"/${PV}-glibc210.patch
 }
 
 src_configure() {
