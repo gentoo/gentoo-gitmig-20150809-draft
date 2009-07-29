@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.8.ebuild,v 1.2 2009/03/30 15:01:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/abiword-plugins-2.6.8.ebuild,v 1.3 2009/07/29 22:51:02 dirtyepic Exp $
 
 EAPI=2
 
@@ -54,6 +54,10 @@ pkg_setup() {
 		eerror "AbiCollab needs dev-libs/boost to be build"
 		die "Add USE=\"cxx\" to build AbiCollab plugin"
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 src_configure(){
