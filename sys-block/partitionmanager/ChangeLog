@@ -1,0 +1,10 @@
+# ChangeLog for sys-block/partitionmanager
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/ChangeLog,v 1.1 2009/07/29 17:00:54 scarabeus Exp $
+
+*partitionmanager-1.0.0_beta3 (29 Jul 2009)
+
+  29 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +partitionmanager-1.0.0_beta3.ebuild, +metadata.xml:
+  Initial commit from kde-testing. Per bug #238458.
+
