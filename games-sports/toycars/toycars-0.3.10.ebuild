@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.10.ebuild,v 1.1 2009/07/01 02:14:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/toycars-0.3.10.ebuild,v 1.2 2009/07/29 01:13:55 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -14,13 +14,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libsdl[video]
+DEPEND="media-libs/libsdl[video]
 	media-libs/sdl-image[png]
 	>=x11-libs/fltk-1.1.9:1.1
 	>=media-libs/fmod-4.25.07-r1:1
 	virtual/glu
 	virtual/opengl"
-DEPEND="${RDEPEND}"
 
 src_configure() {
 	append-ldflags -L/opt/fmodex/api/lib
