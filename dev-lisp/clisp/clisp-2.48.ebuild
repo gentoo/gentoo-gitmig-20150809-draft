@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.48.ebuild,v 1.1 2009/07/29 11:29:44 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.48.ebuild,v 1.2 2009/07/29 14:22:17 hkbst Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 
 SLOT="2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc -sparc ~x86"
-IUSE="hyperspec X new-clx dbus fastcgi gdbm gtk pari pcre postgres readline svm zlib"
+IUSE="hyperspec X new-clx dbus fastcgi gdbm gtk pari +pcre postgres +readline svm +unicode +zlib" #threads
 
 RDEPEND="virtual/libiconv
 		 >=dev-libs/libsigsegv-2.4
@@ -42,7 +42,7 @@ enable_modules() {
 	[[ $# = 0 ]] && die "${FUNCNAME[0]} must receive at least one argument"
 	for m in "$@" ; do
 		einfo "enabling module $m"
-		myconf="${myconf} --with-module=${m}"
+		myconf+=" --with-module=${m}"
 	done
 }
 
@@ -63,7 +63,7 @@ src_prepare() {
 src_configure() {
 	# built-in features
 	local myconf="--with-ffcall --with-dynamic-modules"
-	use readline || myconf="${myconf} --with-noreadline"
+#	use threads && myconf+=" --with-threads=POSIX_THREADS"
 
 	# We need this to build on alpha/ia64
 	if use alpha || use ia64; then
@@ -106,6 +106,7 @@ src_configure() {
 
 	# configure chokes on --sysconfdir option
 	local configure="./configure --prefix=/usr --libdir=/usr/$(get_libdir) \
+		$(use_with readline) $(use_with unicode) \
 		${myconf} --hyperspec=${CLHSROOT} ${BUILDDIR}"
 	einfo "${configure}"
 	${configure} || die "./configure failed"
@@ -117,6 +118,7 @@ src_configure() {
 }
 
 src_compile() {
+	export VARTEXFONTS="${T}"/fonts
 	cd "${BUILDDIR}"
 	# parallel build fails
 	emake -j1 || die "emake failed"
@@ -126,7 +128,7 @@ src_install() {
 	pushd "${BUILDDIR}"
 	make DESTDIR="${D}" prefix=/usr install-bin || die
 	doman clisp.1
-	dodoc SUMMARY README* NEWS MAGIC.add ANNOUNCE clisp.dvi clisp.html
+	dodoc SUMMARY README* NEWS MAGIC.add ANNOUNCE
 	chmod a+x "${D}"/usr/$(get_libdir)/clisp-${PV/_*/}/clisp-link
 	# stripping them removes common symbols (defined but uninitialised variables)
 	# which are then needed to build modules...

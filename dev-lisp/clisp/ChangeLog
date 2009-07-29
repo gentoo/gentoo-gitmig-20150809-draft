@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.94 2009/07/29 11:32:46 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.95 2009/07/29 14:22:17 hkbst Exp $
+
+  29 Jul 2009; Marijn Schouten <hkBst@gentoo.org> clisp-2.48.ebuild:
+  some small improvement
 
   29 Jul 2009; Marijn Schouten <hkBst@gentoo.org> -clisp-2.43-r1.ebuild,
   -clisp-2.44.1.ebuild, -clisp-2.44.1-r1.ebuild, -clisp-2.46.ebuild,
