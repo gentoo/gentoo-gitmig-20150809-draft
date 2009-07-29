@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1.ebuild,v 1.2 2009/07/26 15:02:59 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p1.ebuild,v 1.1 2009/07/29 19:40:47 idl0r Exp $
 
 EAPI="2"
 

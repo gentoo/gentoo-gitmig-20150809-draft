@@ -1,6 +1,12 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.237 2009/07/29 09:55:45 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.238 2009/07/29 19:40:47 idl0r Exp $
+
+*bind-9.6.1_p1 (29 Jul 2009)
+
+  29 Jul 2009; Christian Ruppert <idl0r@gentoo.org> -bind-9.6.1.ebuild,
+  +bind-9.6.1_p1.ebuild:
+  Version bump to 9.6.1_p1 due to CVE-2009-0696, bug 279508.
 
   29 Jul 2009; <chainsaw@gentoo.org> bind-9.4.3_p3.ebuild:
   Marked stable on AMD64 as requested by Robert Buchholz <rbu@gentoo.org> in
