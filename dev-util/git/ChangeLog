@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.351 2009/06/30 13:34:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.352 2009/07/29 23:50:37 robbat2 Exp $
+
+*git-1.6.4 (29 Jul 2009)
+*git-1.6.3.4 (29 Jul 2009)
+
+  29 Jul 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.3.4.ebuild,
+  +git-1.6.4.ebuild:
+  New upstream releases.
 
   30 Jun 2009; Raúl Porcel <armin76@gentoo.org> git-1.6.3.3.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #273905
