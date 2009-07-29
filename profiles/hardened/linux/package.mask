@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.19 2009/07/09 00:47:45 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.20 2009/07/29 20:38:10 ssuominen Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -46,5 +46,4 @@ net-im/skype
 # by placing Driver "nv" in xorg.conf.
 # 2006-06-29 solar
 x11-drivers/nvidia-drivers
-x11-drivers/nvidia-legacy-drivers
 media-video/nvidia-settings
