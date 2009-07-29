@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.73 2009/07/19 12:51:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.74 2009/07/29 14:11:10 arfrever Exp $
+
+*openct-0.6.17 (29 Jul 2009)
+
+  29 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -openct-0.6.14.ebuild, -openct-0.6.14-r1.ebuild, -openct-0.6.15.ebuild,
+  +openct-0.6.17.ebuild:
+  Version bump.
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> openct-0.6.16.ebuild:
   ppc stable #274177

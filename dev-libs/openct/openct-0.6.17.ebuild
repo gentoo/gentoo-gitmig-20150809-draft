@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.15.ebuild,v 1.8 2009/05/16 09:19:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/openct-0.6.17.ebuild,v 1.1 2009/07/29 14:11:10 arfrever Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -8,14 +10,14 @@ DESCRIPTION="library for accessing smart card terminals"
 HOMEPAGE="http://www.opensc-project.org/openct/"
 
 SRC_URI="http://www.opensc-project.org/files/${PN}/${P}.tar.gz"
-KEYWORDS="~alpha amd64 arm ~hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="doc pcsc-lite usb"
 
 RDEPEND="pcsc-lite? ( sys-apps/pcsc-lite )
-		usb? ( =virtual/libusb-0* )
+		usb? ( virtual/libusb:0 )
 		>=sys-fs/udev-096"
 
 DEPEND="${RDEPEND}
@@ -26,7 +28,7 @@ pkg_setup() {
 	enewuser openctd
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--htmldir="/usr/share/doc/${PF}/html" \
@@ -39,7 +41,6 @@ src_compile() {
 		$(use_enable doc api-doc) \
 		$(use_enable pcsc-lite pcsc) \
 		$(use_enable usb)
-	emake || die "emake failed"
 }
 
 src_install() {
