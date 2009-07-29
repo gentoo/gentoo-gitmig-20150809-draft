@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/audit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.52 2008/12/06 15:03:22 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.53 2009/07/29 16:01:22 darkside Exp $
+
+  29 Jul 2009; Jeremy Olexa <darkside@gentoo.org> -audit-1.5.4.ebuild,
+  -audit-1.6.1.ebuild, -audit-1.6.2.ebuild, -audit-1.7.ebuild:
+  Remove vulnerable version(s), bug 271746
 
 *audit-1.7.9 (06 Dec 2008)
 
