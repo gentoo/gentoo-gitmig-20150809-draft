@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r2.ebuild,v 1.1 2008/09/01 23:01:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nestra/nestra-0.66-r2.ebuild,v 1.2 2009/07/29 01:17:56 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils toolchain-funcs flag-o-matic multilib games
 
 PATCH="${P/-/_}-10.diff"
@@ -20,9 +21,7 @@ DEPEND="amd64? ( app-emulation/emul-linux-x86-xlibs )
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${WORKDIR}"/${PATCH} \
 		"${FILESDIR}"/${P}-exec-stack.patch \
