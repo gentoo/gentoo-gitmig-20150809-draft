@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.34.ebuild,v 1.1 2009/04/23 20:07:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/moreutils-0.34.ebuild,v 1.2 2009/07/29 18:25:20 ssuominen Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ inherit eutils
 DESCRIPTION="a growing collection of the unix tools that nobody thought to write
 thirty years ago"
 HOMEPAGE="http://kitenet.net/~joey/code/moreutils/"
-SRC_URI="http://ftp.de.debian.org/debian/pool/main/m/moreutils/moreutils_${PV}.tar.gz"
+SRC_URI="mirror://debian/pool/main/${PN:0:1}/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
