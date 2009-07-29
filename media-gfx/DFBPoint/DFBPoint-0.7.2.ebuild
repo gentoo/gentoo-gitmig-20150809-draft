@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/DFBPoint-0.7.2.ebuild,v 1.13 2008/04/20 15:30:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/DFBPoint-0.7.2.ebuild,v 1.14 2009/07/29 23:42:12 vostorga Exp $
 
 DESCRIPTION="DFBPoint is presentation program based on DirectFB"
 HOMEPAGE="http://www.directfb.org/dfbpoint.xml"
@@ -11,9 +11,11 @@ SLOT="0"
 KEYWORDS="~amd64 -sparc x86"
 IUSE=""
 
-RDEPEND=""
 DEPEND="dev-util/pkgconfig
-	dev-libs/DirectFB"
+	dev-libs/DirectFB
+	>=dev-libs/glib-2"
+RDEPEND="dev-libs/DirectFB
+	>=dev-libs/glib-2"
 
 src_install () {
 	make DESTDIR="${D}" install || die "make install failed"
