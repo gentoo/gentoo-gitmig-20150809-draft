@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p1.ebuild,v 1.1 2009/07/29 19:40:47 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.6.1_p1.ebuild,v 1.2 2009/07/29 20:20:15 idl0r Exp $
 
 EAPI="2"
 
@@ -54,7 +54,7 @@ pkg_setup() {
 
 src_prepare() {
 	# bug 278364 (workaround)
-	epatch "${FILESDIR}/${P}-parallel.patch"
+	epatch "${FILESDIR}/${PN}-9.6.1-parallel.patch"
 
 	# Adjusting PATHs in manpages
 	for i in bin/{named/named.8,check/named-checkconf.8,rndc/rndc.8} ; do
