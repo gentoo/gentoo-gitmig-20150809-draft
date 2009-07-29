@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10142 2009/07/29 21:19:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10143 2009/07/29 21:20:44 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1229,10 +1229,6 @@ net-irc/bitchx
 # User's who need to test these should unmask explicitly.
 =sys-fs/btrfs-9999
 =sys-fs/btrfs-progs-9999
-
-# Peter Alfredsen <loki_val@gentoo.org> (04 Jun 2008)
-# o Fails its own tests in horrendous ways (buuh!)
-=dev-libs/xmlrpc-c-1.15*
 
 # Rémi Cardona <remi@gentoo.org> (27 May 2008)
 # mildly broken, see bug #156583
