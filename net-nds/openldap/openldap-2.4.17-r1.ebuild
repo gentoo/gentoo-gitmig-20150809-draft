@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.17-r1.ebuild,v 1.1 2009/07/28 21:28:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.4.17-r1.ebuild,v 1.2 2009/07/29 00:21:10 mr_bones_ Exp $
 
 EAPI="2"
 inherit db-use eutils flag-o-matic multilib ssl-cert versionator toolchain-funcs
@@ -185,7 +185,7 @@ src_prepare() {
 
 	# bug #189817
 	epatch "${FILESDIR}"/${PN}-2.4.11-libldap_r.patch
-	
+
 	# bug #233633
 	epatch "${FILESDIR}"/${PN}-2.4.17-fix-lmpasswd-gnutls-symbols.patch
 
