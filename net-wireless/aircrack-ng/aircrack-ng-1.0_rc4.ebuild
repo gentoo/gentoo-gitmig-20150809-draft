@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.0_rc2-r1.ebuild,v 1.3 2009/03/19 17:14:23 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/aircrack-ng-1.0_rc4.ebuild,v 1.1 2009/07/29 18:28:21 arfrever Exp $
 
 EAPI=2
 inherit versionator eutils toolchain-funcs
@@ -28,24 +28,28 @@ have_sqlite() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/sha-compile-fix-64bit.patch"
 	if use kernel_FreeBSD ; then
-		epatch "${FILESDIR}/${P}-freebsd.patch"
+		epatch "${FILESDIR}/${PN}-1.0_rc2-freebsd.patch"
 		sed -i -e "s:^\(SCRIPTS.*\)airmon-ng:\1:g" Makefile
 		sed -i -e "s:airmon-ng.1::g" manpages/Makefile
 	fi
+
+	epatch "${FILESDIR}/${PN}-1.0_rc3-respect_LDFLAGS.patch"
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" LD="$(tc-getLD)" sqlite=$(have_sqlite) || die "emake failed"
+	# UNSTABLE=true enables building of buddy-ng, easside-ng, tkiptun-ng and wesside-ng
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" sqlite=$(have_sqlite) UNSTABLE=true || die "emake failed"
 }
 
 src_install() {
+	# UNSTABLE=true enables installation of buddy-ng, easside-ng, tkiptun-ng and wesside-ng
 	emake \
 		prefix="/usr" \
 		mandir="/usr/share/man/man1" \
 		DESTDIR="${D}" \
 		sqlite=$(have_sqlite) \
+		UNSTABLE=true \
 		install \
 		|| die "emake install failed"
 
