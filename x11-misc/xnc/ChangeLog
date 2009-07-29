@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xnc
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.14 2007/08/02 13:28:02 uberlord Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/ChangeLog,v 1.15 2009/07/29 10:49:33 flameeyes Exp $
+
+  29 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> xnc-5.0.4.ebuild:
+  Use emake -j1 during install.
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org> xnc-5.0.4.ebuild:
   Keyworded ~x86-fbsd, #156902 thanks to Marc Kowarsky.

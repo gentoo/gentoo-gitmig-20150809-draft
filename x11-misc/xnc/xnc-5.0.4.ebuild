@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/xnc-5.0.4.ebuild,v 1.11 2007/08/02 13:28:02 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xnc/xnc-5.0.4.ebuild,v 1.12 2009/07/29 10:49:33 flameeyes Exp $
 
 DESCRIPTION="file manager for X Window system very similar to Norton Commander"
 HOMEPAGE="http://xnc.dubna.su/"
@@ -33,6 +33,6 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake -j1 DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog LICENSE README TODO
 }
