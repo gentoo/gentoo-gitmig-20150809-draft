@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.4 2009/06/05 17:29:44 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.5 2009/07/29 04:13:59 dirtyepic Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -47,6 +47,7 @@ RDEPEND="${CDEPEND}
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-syslibs.patch
 	epatch "${FILESDIR}"/${P}-docbuild.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 
 	python_version
 	sed -i \
