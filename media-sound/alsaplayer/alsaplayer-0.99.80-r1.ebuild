@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.3 2009/07/19 21:22:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.80-r1.ebuild,v 1.4 2009/07/29 18:03:21 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -12,7 +12,8 @@ SRC_URI="http://www.${PN}.org/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
-IUSE="alsa audiofile doc esd flac gtk id3tag jack mad mikmod nas nls ogg opengl oss vorbis xosd"
+IUSE="alsa audiofile doc esd flac gtk id3tag jack mad nas nls ogg opengl oss vorbis xosd"
+# mikmod is disabled wrt #279344
 
 RDEPEND="media-libs/libsndfile
 	mad? ( media-libs/libmad )
@@ -23,12 +24,12 @@ RDEPEND="media-libs/libsndfile
 	esd? ( media-sound/esound )
 	flac? ( media-libs/flac )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.80 )
-	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	nas? ( media-libs/nas )
 	ogg? ( media-libs/libogg )
 	opengl? ( virtual/opengl )
 	vorbis? ( media-libs/libvorbis )
 	xosd? ( x11-libs/xosd )"
+# media-libs/libmikmod
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
@@ -60,7 +61,7 @@ src_configure() {
 		$(use_enable gtk gtk2) \
 		$(use_enable id3tag) \
 		$(use_enable jack) \
-		$(use_enable mikmod) \
+		--disable-mikmod \
 		$(use_enable nas) \
 		$(use_enable opengl) \
 		$(use_enable oss) \
