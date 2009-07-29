@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10143 2009/07/29 21:20:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10144 2009/07/29 21:24:27 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -870,10 +870,6 @@ dev-haskell/haskell-platform
 # Mark Loeser <halcy0n@gentoo.org> (6 May 2009)
 # Masked for testing
 >=sys-devel/gcc-4.4
-
-# Robin H. Johnson <robbat2@gentoo.org> (05 May 2009)
-# Not ready for primetime, but worth testing still.
-=dev-util/git-1.6.3_rc*
 
 # Tomas Chvatal <scarabeus@gentoo.org> (03 May 2009)
 # Breaks too many packages.
