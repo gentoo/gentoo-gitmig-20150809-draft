@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/tig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.21 2009/07/30 14:31:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tig/ChangeLog,v 1.22 2009/07/30 14:47:44 fauli Exp $
+
+  30 Jul 2009; Christian Faulhammer <fauli@gentoo.org> tig-0.14.1.ebuild:
+  add IUSE to make repoman happy
 
   30 Jul 2009; Christian Faulhammer <fauli@gentoo.org> -tig-0.10.ebuild,
   -tig-0.10.1.ebuild, -tig-0.11.ebuild, -tig-0.12.ebuild,
