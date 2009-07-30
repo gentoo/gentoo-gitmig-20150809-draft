@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.2.156735.ebuild,v 1.2 2009/05/05 10:42:51 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.2.156735.ebuild,v 1.3 2009/07/30 21:16:37 maekke Exp $
 
 inherit eutils versionator fdo-mime gnome2-utils
 
@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="vmware"
 SLOT="0"
-KEYWORDS="-* ~amd64 x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 RESTRICT="strip binchecks"
 

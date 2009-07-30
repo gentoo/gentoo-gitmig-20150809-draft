@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.74 2009/06/14 15:39:14 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.75 2009/07/30 21:16:37 maekke Exp $
+
+  30 Jul 2009; Markus Meier <maekke@gentoo.org>
+  vmware-player-2.5.2.156735.ebuild:
+  amd64 stable, bug #265139
 
 *vmware-player-2.5.2.156735-r1 (14 Jun 2009)
 
