@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gqview
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.92 2009/03/13 14:44:33 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.93 2009/07/30 21:12:52 maekke Exp $
+
+  30 Jul 2009; Markus Meier <maekke@gentoo.org> gqview-2.1.5.ebuild:
+  x11-libs/gtk+ needs to be built with USE=X by Fabian Holler in bug #278460
 
   13 Mar 2009; Christian Faulhammer <fauli@gentoo.org> -gqview-2.0.4.ebuild:
   clean up
