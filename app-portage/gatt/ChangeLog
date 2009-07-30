@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.39 2009/07/21 07:04:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.40 2009/07/30 11:46:54 ssuominen Exp $
+
+  30 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> gatt-0.6.4.ebuild,
+  +files/gatt-0.6.4-gcc44.patch:
+  Fix building with GCC 4.4 wrt #277659.
 
   21 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   -files/gatt-0.6.1-nonfataltests.patch, -files/gatt-0.6.1-tests.patch:
