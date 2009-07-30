@@ -1,7 +1,0 @@
-# ChangeLog for sys-apps/usermode
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode/ChangeLog,v 1.9 2008/03/19 07:29:57 dberkholz Exp $
-
-  19 Mar 2008; Donnie Berkholz <dberkholz@gentoo.org>; usermode-1.96.ebuild:
-  Keyword ~amd64.
-
