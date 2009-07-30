@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.2.4.ebuild,v 1.2 2009/07/30 14:44:56 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/phonon-kde-4.2.4.ebuild,v 1.3 2009/07/30 17:45:13 scarabeus Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ src_prepare() {
 	# Disable automagic
 	sed -e 's/find_package(Xine)/macro_optional_find_package(Xine)/' \
 		-i phonon/kcm/xine/CMakeLists.txt || die "Failed to make xine optional"
-	sed -e "s:FIND_PACKAGE(Alsa):macro_optional_find_package(Alsa):"
+	sed -e "s:FIND_PACKAGE(Alsa):macro_optional_find_package(Alsa):" \
 		-i phonon/CMakeLists.txt || die "Failed to make alsa optional"
 
 	kde4-meta_src_prepare
