@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.4 2009/06/08 13:22:40 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/italc/italc-1.0.9.ebuild,v 1.5 2009/07/30 08:05:30 ssuominen Exp $
 
 EAPI=2
 
@@ -46,6 +46,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-qt4-libpath.patch
 	epatch "${FILESDIR}"/${P}-strip.patch
 	use system-libvncserver && epatch "${FILESDIR}"/${P}-system-libvncserver.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	eautoreconf
 }
 
