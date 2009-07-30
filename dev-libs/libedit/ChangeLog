@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.32 2009/07/25 10:42:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/ChangeLog,v 1.33 2009/07/30 13:37:37 flameeyes Exp $
+
+  30 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -libedit-20090610.3.0.ebuild:
+  Remove old version.
 
 *libedit-20090722.3.0 (25 Jul 2009)
 
