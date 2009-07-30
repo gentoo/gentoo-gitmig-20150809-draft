@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.18 2008/10/03 03:44:46 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.mask,v 1.19 2009/07/30 14:44:03 ssuominen Exp $
 
 # Unmask =mozilla-thunderbird-1.5* until 2.0 is keyworded and stabilized
 -=mail-client/mozilla-thunderbird-1.5*
@@ -15,14 +15,6 @@ sys-auth/nss_ldap
 
 # Still masked except in nptl profiles (Will be unmasked in 2007.0)
 >=sys-libs/glibc-2.4
-
-
-###################################################################
-# Mask gcc-mips64                                                 #
-# Use sys-devel/kgcc64 from now on -- it replaces gcc-mips64      #
-###################################################################
-sys-devel/gcc-mips64
-
 
 # newer iproute2's need newer -headers, so unmask
 # only on 2007.1 and greater profiles.

@@ -10,8 +10,6 @@ dev-util/ltrace
 # Jose Luis Rivero <yoswink@gentoo.org> (7 Jul 2006)
 # Masked by lost of virtual java/{jdk,jre} providers see Bug #138747
 # also compaq java is dead upstream and buggy: Bug #84306, and others.
-dev-java/compaq-jdk
-dev-java/compaq-jre
 app-arch/dczip
 app-misc/jitac
 dev-tex/ppower4
@@ -25,7 +23,5 @@ dev-util/jarwizard
 
 # Raúl Porcel <armin76@gentoo.org> (06 Feb 2009)
 # mask these versions for a smooth upgrade of x11-libs/qt-4.4.2 wrt bug #248038.
-=x11-libs/qt-4.3*
 <dev-python/PyQt4-4.4
 <dev-python/PyQt-3.17.6
-

@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.5 2009/02/24 15:27:24 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.6 2009/07/30 14:39:03 ssuominen Exp $
 
 # As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
 # used to limit usage of unsupported packages.
@@ -19,16 +19,11 @@ dev-util/strace
 
 # Diego Pettenò <flameeyes@gentoo.org> (28 April 2005)
 # Those versions uses the pam_stack module instead of include format.
-<=app-admin/sudo-1.6.7_p5-r2
 <net-mail/mailbase-1
-<=net-misc/openssh-4.0_p1
 
 # Don't use them, use the one in base system
 dev-util/yacc
 dev-util/byacc
-
-# revdep-rebuild is broken for g/fbsd in this version
-=app-portage/gentoolkit-0.2.4_pre6
 
 # Javier Villavicencio <the_paya@gentoo.org> (22 Jan 2009)
 # We are the bleeding edge here.
