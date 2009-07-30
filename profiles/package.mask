@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10151 2009/07/30 05:46:08 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10152 2009/07/30 06:01:35 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -796,16 +796,6 @@ app-pda/plptools
 # Bernard Cafarelli <voyageur@gentoo.org> (27 May 2009)
 # Live ebuild for bleeding-edge users
 ~www-client/chromium-bin-9999
-
-# Torsten Veller <tove@gentoo.org> (27 May 2009)
-# PDEPEND on more dual life modules that also install
-# into scriptdir
-# Masked until perl-5.8.8-r6 is stable for amd64 and x86
-=dev-lang/perl-5.8.8-r7
-perl-core/CPAN
-virtual/perl-CPAN
-perl-core/Encode
-virtual/perl-Encode
 
 # MATSUU Takuto <matsuu@gentoo.org> (26 May 2009)
 # Masked for testing, bug #267365.
