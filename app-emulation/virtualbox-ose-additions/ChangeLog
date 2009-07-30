@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/virtualbox-ose-additions
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.15 2009/07/16 21:43:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose-additions/ChangeLog,v 1.16 2009/07/30 18:41:48 flameeyes Exp $
+
+  30 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  virtualbox-ose-additions-2.1.4.ebuild,
+  virtualbox-ose-additions-2.2.0.ebuild,
+  virtualbox-ose-additions-2.2.2.ebuild,
+  virtualbox-ose-additions-2.2.4.ebuild,
+  virtualbox-ose-additions-3.0.2.ebuild:
+  Updates from Alessio for mirror and check_license (bug #279198).
 
 *virtualbox-ose-additions-3.0.2 (16 Jul 2009)
 
