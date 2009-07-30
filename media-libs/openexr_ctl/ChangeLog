@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openexr_ctl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.17 2008/12/17 07:50:00 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr_ctl/ChangeLog,v 1.18 2009/07/30 08:47:35 ssuominen Exp $
+
+  30 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
+  openexr_ctl-1.0.1-r1.ebuild, +files/openexr_ctl-1.0.1-gcc44.patch:
+  Fix building with GCC 4.4 wrt #275903.
 
   17 Dec 2008; <ssuominen@gentoo.org> openexr_ctl-1.0.1-r1.ebuild:
   x86 stable wrt #207663, Comment #14.
