@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/amos-2.0.8.ebuild,v 1.2 2009/03/15 17:58:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/amos/amos-2.0.8.ebuild,v 1.3 2009/07/30 16:49:34 ssuominen Exp $
 
-EAPI="1"
-inherit qt3 eutils
+EAPI=2
+inherit eutils qt3
 
 DESCRIPTION="A Modular, Open-Source whole genome assembler"
 HOMEPAGE="http://amos.sourceforge.net/"
@@ -19,12 +19,14 @@ RDEPEND="${DEPEND}
 	dev-perl/DBI
 	sci-biology/mummer"
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
+
 src_compile() {
-	econf || die "econf failed"
-	# TODO: fix parallel make. Notified upstream
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
