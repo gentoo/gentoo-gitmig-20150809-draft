@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vdramgw/vdramgw-0.0.2.ebuild,v 1.3 2007/12/19 14:09:15 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vdramgw/vdramgw-0.0.2.ebuild,v 1.4 2009/07/30 11:03:22 ssuominen Exp $
+
+inherit eutils
 
 MY_P=vdr-amarok-${PV}
 
@@ -18,6 +20,11 @@ RDEPEND=""
 
 S="${WORKDIR}/${MY_P#vdr-}/${PN}"
 RDEPEND="media-sound/amarok"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+}
 
 src_install() {
 	dobin ${PN}
