@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10170 2009/07/30 12:42:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10171 2009/07/30 13:05:45 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -751,43 +751,6 @@ media-tv/zapping
 # Development versions.
 =net-libs/gnutls-2.9*
 
-# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
-# Masked for removal in 60 days, unmaintained. Binary package in /usr. bug
-# 240029
-app-misc/cbtracker
-
-# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
-# Masked for removal in 60 days. Multiple bugs, doesn't build, version bump
-# pending, unmaintained. bug 265668
-sys-libs/libuser
-# These depend on libuser:
-app-admin/firstboot
-sys-apps/usermode
-# These depend on usermode:
-app-admin/authconfig
-app-admin/hwbrowser
-app-admin/system-config-date
-app-admin/system-config-display
-app-admin/system-config-httpd
-app-admin/system-config-keyboard
-app-admin/system-config-language
-app-admin/system-config-nfs
-app-admin/system-config-printer
-app-admin/system-config-samba
-app-admin/system-config-soundcard
-app-admin/system-config-users
-
-# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
-# Masked for removal in 60 days. Multiple bugs, upstream is dead, crashes with
-# stable gtk+ bug 271214
-app-editors/nvu
-
-# Jeremy Olexa <darkside@gentoo.org> (30 May 2009)
-# Masked for removal in 60 days. Doesn't build, version bump pending. Designed
-# for really old PDA hardware (circa '90s) - will need a maintainer that has
-# hardware. bug 227601
-app-pda/plptools
-
 # Alistair Bush <ali_bush@gentoo.org> (28 May 2009)
 # Masked as a release candidate.  Testing is needed,
 # need to determine whether a new slot is required.
@@ -1502,22 +1465,6 @@ games-action/armagetronad
 # 1.5.x is a development branch, people should test 1.4.x by default
 =net-fs/openafs-1.5*
 =net-fs/openafs-kernel-1.5*
-
-# Donnie Berkholz <dberkholz@gentoo.org> (05 Sep 2006)
-# Masked until it gets some testing
-## Below here safe to unmask after testing
-app-admin/firstboot
-app-admin/system-config-keyboard
-app-admin/system-config-bind
-app-admin/system-config-httpd
-# Available languages must be listed in SUPPORTED var in /etc/sysconfig/i18n
-app-admin/system-config-language
-# Seems to require already existing volumes to run
-app-admin/system-config-lvm
-app-admin/system-config-printer
-dev-libs/alchemist
-# for system-config-bind
-net-dns/bind-dns-keygen
 
 # Alastair Tse <liquidx@gentoo.org> (27 Jul 2006)
 # Masking synce-0.9.2 because of breakages (#141466) (#141491)
