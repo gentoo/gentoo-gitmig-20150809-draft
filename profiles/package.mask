@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10155 2009/07/30 06:23:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10156 2009/07/30 06:32:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1516,10 +1516,6 @@ games-strategy/ufo2000
 #     emerge -a layman
 #     layman -ka armagetron
 games-action/armagetronad
-
-# Mike Frysinger <vapier@gentoo.org> (28 Dec 2006)
-# Build failure on big-endian #154294 and breaks non-default journals #154974
-~sys-fs/reiserfsprogs-3.6.20
 
 # Stefaan De Roeck <stefaan@gentoo.org> (09 Sep 2006)
 # 1.5.x is a development branch, people should test 1.4.x by default
