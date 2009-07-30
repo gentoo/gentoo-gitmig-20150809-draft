@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.8.ebuild,v 1.1 2009/03/24 09:10:08 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.8.ebuild,v 1.2 2009/07/30 11:40:58 ssuominen Exp $
 
 EAPI="2"
 
@@ -22,7 +22,8 @@ CONFIG_CHECK="INOTIFY"
 ERROR_INOTIFY="Recompile your kernel with inotify support - CONFIG_INOTIFY"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
