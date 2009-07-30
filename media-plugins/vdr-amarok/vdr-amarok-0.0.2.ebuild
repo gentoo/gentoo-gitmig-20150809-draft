@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/vdr-amarok-0.0.2.ebuild,v 1.4 2008/12/17 14:15:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-amarok/vdr-amarok-0.0.2.ebuild,v 1.5 2009/07/30 11:11:10 ssuominen Exp $
 
 inherit vdr-plugin
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND=">=media-video/vdr-1.4.0"
 
-PATCHES=("${FILESDIR}/${P}-gcc4.3.patch")
+PATCHES=( "${FILESDIR}/${P}-gcc4.3.patch"
+	"${FILESDIR}/${P}-gcc4.4.patch" )
 
 pkg_postinst() {
 	vdr-plugin_pkg_postinst
