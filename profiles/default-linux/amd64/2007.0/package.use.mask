@@ -63,7 +63,6 @@ media-video/transcode -3dnow -mmx -sse -sse2
 >=sci-libs/fftw-3.1.2 -sse -sse2
 x11-libs/evas -mmx -sse
 x11-libs/libast -mmx
-x11-misc/rss-glx -sse -3dnow
 x11-misc/eterm -sse2
 x11-wm/afterstep -mmx
 media-video/ffmpeg -mmx
