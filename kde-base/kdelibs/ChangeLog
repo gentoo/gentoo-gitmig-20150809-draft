@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.615 2009/07/30 13:34:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.616 2009/07/30 15:07:08 scarabeus Exp $
+
+  30 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdelibs-4.2.4-r4.ebuild:
+  Rdepend on gnupg. Per bug #275545
 
 *kdelibs-4.2.4-r4 (30 Jul 2009)
 

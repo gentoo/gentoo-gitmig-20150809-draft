@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r4.ebuild,v 1.1 2009/07/30 13:34:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r4.ebuild,v 1.2 2009/07/30 15:07:08 scarabeus Exp $
 
 EAPI="2"
 
@@ -99,6 +99,7 @@ RDEPEND="${COMMONDEPEND}
 	kdeprefix? (
 		!<=kde-misc/kdnssd-avahi-0.1.2:0
 	)
+	>=app-crypt/gnupg-2.0.11
 	x11-apps/iceauth
 	x11-apps/rgb
 	>=x11-misc/xdg-utils-1.0.2-r3
