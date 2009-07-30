@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.2.ebuild,v 1.3 2008/10/09 13:03:30 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.2.ebuild,v 1.4 2009/07/30 08:31:01 ssuominen Exp $
 
 inherit toolchain-funcs multilib eutils versionator autotools perl-module
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 DEPEND="dev-lang/perl
 	media-libs/gd"
 
-S="${WORKDIR}/ViennaRNA-${PV}"
+S=${WORKDIR}/ViennaRNA-${PV}
 
 src_unpack() {
 	unpack ${A}
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-gcc4.3.patch
 	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 	epatch "${FILESDIR}"/${P}-disable-gd.patch
+	epatch "${FILESDIR}"/${P}-gcc4.4.patch
 	eautoreconf
 
 	# we need a separate eautoreconf in RNAforester
