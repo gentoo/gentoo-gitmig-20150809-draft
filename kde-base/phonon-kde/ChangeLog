@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/phonon-kde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.18 2009/06/14 11:54:07 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/phonon-kde/ChangeLog,v 1.19 2009/07/30 14:44:56 scarabeus Exp $
+
+  30 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  phonon-kde-4.2.4.ebuild:
+  Make alsa optional. Per bug #276052.
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -phonon-kde-4.2.3.ebuild:
   Drop KDE 4.2.3
