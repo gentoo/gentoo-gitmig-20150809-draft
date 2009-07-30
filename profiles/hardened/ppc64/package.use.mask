@@ -16,7 +16,6 @@ dev-java/eclipse-ecj gcj
 #Brent Baude <ranger@gentoo.org> (1 Feb 2008)
 # Masking hb and hb2 USE flags as no suitable solution for evms exists
 sys-fs/evms hb hb2
-=sys-power/nut-2.2.0 hal
 
 # Mart Raudsepp <leio@gentoo.org> (02 Apr 2008)
 # media-plugins/gst-plugins-mythtv not keyworded

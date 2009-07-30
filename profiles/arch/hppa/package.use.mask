@@ -1,5 +1,5 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.26 2009/05/31 14:50:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.27 2009/07/30 19:20:07 ssuominen Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Mask media-gfx/imagemagick[openmp] until we have a stable
@@ -36,10 +36,6 @@ media-sound/mpd fluidsynth
 # Jeroen Roovers <jer@gentoo.org> (2 Apr 2008)
 # Help browsing through webkit doesn't seem to work really well yet
 media-gfx/gimp webkit
-
-# Jeroen Roovers <jer@gentoo.org> (12 Mar 2009)
-# This would otherwise pull in Java stuff
-dev-libs/soprano sesame2
 
 # Jeroen Roovers <jer@gentoo.org> (16 Sep 2008)
 # dxr2/3 cards have not been tested on HPPA hardware
