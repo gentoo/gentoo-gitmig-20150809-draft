@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.2.4.ebuild,v 1.3 2009/07/30 18:40:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.2.4.ebuild,v 1.4 2009/07/30 19:14:25 mr_bones_ Exp $
 
 EAPI=2
 
@@ -109,7 +109,6 @@ pkg_setup() {
 	# http://www.virtualbox.org/wiki/Licensing_FAQ
 	check_license
 }
-
 
 src_unpack() {
 	unpack_makeself ${MY_P}_${ARCH}.run
