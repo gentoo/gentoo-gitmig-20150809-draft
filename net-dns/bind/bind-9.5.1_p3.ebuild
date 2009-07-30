@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.1_p2.ebuild,v 1.1 2009/04/11 17:02:23 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/bind-9.5.1_p3.ebuild,v 1.1 2009/07/30 15:35:42 dertobi123 Exp $
 
 inherit eutils libtool autotools toolchain-funcs flag-o-matic
 
-MY_PV="${PV/_p2/-P2}"
+MY_PV="${PV/_p3/-P3}"
 SDB_LDAP_VER="1.1.0"
 
 DESCRIPTION="BIND - Berkeley Internet Name Domain - Name Server"

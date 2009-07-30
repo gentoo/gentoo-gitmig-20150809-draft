@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.5.1_p2.ebuild,v 1.1 2009/04/11 17:05:45 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.5.1_p3.ebuild,v 1.1 2009/07/30 15:37:30 dertobi123 Exp $
 
 inherit flag-o-matic
 
 MY_PN=${PN//-tools}
-MY_PV=${PV/_p2/-P2}
+MY_PV=${PV/_p3/-P3}
 MY_P="${MY_PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="bind tools: dig, nslookup, host, nsupdate, dnssec-keygen"
