@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/qmtest-2.4.1.ebuild,v 1.1 2009/06/28 11:22:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qmtest/qmtest-2.4.1.ebuild,v 1.2 2009/07/30 22:48:47 darkside Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.codesourcery.com/public/${PN}/${PF}/${PF}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~x86"
+KEYWORDS="amd64 ~mips ~x86"
 IUSE=""
 
 DEPEND="dev-lang/python"
