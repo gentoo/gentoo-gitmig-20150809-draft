@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r3.ebuild,v 1.9 2008/05/21 18:55:53 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.18-r3.ebuild,v 1.10 2009/07/30 17:09:31 flameeyes Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_compile() {
 
 src_install() {
 	local a b
-	make DEST="${D}"/opt/eggdrop install || die "make install failed"
+	emake -j1 DEST="${D}"/opt/eggdrop install || die "make install failed"
 
 	for a in doc/*
 	do

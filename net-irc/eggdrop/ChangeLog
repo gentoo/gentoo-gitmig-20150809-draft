@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/eggdrop
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.78 2008/05/21 18:55:53 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.79 2009/07/30 17:09:31 flameeyes Exp $
+
+  30 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  eggdrop-1.6.18-r3.ebuild:
+  Use -j1 during install.
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org>
   eggdrop-1.6.18-r3.ebuild:
