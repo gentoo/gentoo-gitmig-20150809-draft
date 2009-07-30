@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.39 2009/07/25 01:57:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.40 2009/07/30 03:49:00 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -6,12 +6,9 @@ app-accessibility/mbrola
 app-accessibility/perlbox-voice
 app-antivirus/bitdefender-console
 app-antivirus/f-prot
-app-antivirus/vlnx
 <app-arch/rar-3.8.0
 app-arch/stuffit
 app-benchmarks/cpuburn
-app-cdr/cdrecord-prodvd
-app-emulation/cedaga
 app-emulation/crossover-office-bin
 app-emulation/crossover-office-pro-bin
 app-emulation/playonlinux
@@ -25,22 +22,17 @@ app-emulation/vmware-player
 app-emulation/vmware-server
 app-emulation/vmware-server-console
 <app-emulation/vmware-workstation-6.5
-app-emulation/winex-transgaming
 >=app-i18n/atokx3-3.0.0
 app-i18n/kurso-de-esperanto
 app-office/mozilla-sunbird-bin
 app-office/ooextras
-app-office/oooqs
-app-office/ooqstart-gnome
 app-office/openoffice-bin
 app-pda/qtopia-desktop-bin
 app-emulation/cedega
 app-emulation/emul-linux-x86-baselibs
 app-emulation/emul-linux-x86-compat
-app-emulation/emul-linux-x86-glibc
 app-emulation/emul-linux-x86-gtklibs
 app-emulation/emul-linux-x86-medialibs
-app-emulation/emul-linux-x86-nvidia
 app-emulation/emul-linux-x86-qtlibs
 app-emulation/emul-linux-x86-sdl
 app-emulation/emul-linux-x86-soundlibs
@@ -51,9 +43,6 @@ app-emulation/transgaming-fontinstaller
 app-emulation/transgaming-mozctlinstaller
 app-emulation/wine
 app-emulation/wine-doors
-app-emulation/winesetuptk
-app-emulation/winex
-app-emulation/winex-cvs
 app-text/acroread
 app-text/bibus
 dev-embedded/libftd2xx
@@ -78,7 +67,6 @@ games-action/heretic2
 games-action/heretic2-demo
 games-action/lugaru-demo
 games-action/mutantstorm-demo
-games-action/parsec
 games-action/phobiaii
 games-action/rune
 games-action/spacetripper-demo
@@ -93,7 +81,6 @@ games-emulation/snes9x
 games-emulation/zinc
 games-emulation/zsnes
 games-emulation/mupen64
-games-fps/americas-army
 games-fps/avp
 games-fps/doom3-cdoom
 games-fps/doom3-chextrek
@@ -137,10 +124,7 @@ games-fps/quake3-ra3
 games-fps/quake3-ruinhunters
 games-fps/quake3-teamarena
 games-fps/quake3-threewave
-games-fps/quake3-tremulous
-games-fps/quake3-truecombat
 games-fps/quake3-urbanterror
-games-fps/quake3-wop
 games-fps/quake4-bin
 games-fps/quake4-data
 games-fps/quake4-deltactf
@@ -151,12 +135,10 @@ games-fps/rtcwsp-demo
 games-fps/sauerbraten
 games-fps/soldieroffortune
 games-fps/soldieroffortune-demo
-games-fps/tremulous-bin
 games-fps/unreal-tournament
 games-fps/ut2003
 games-fps/ut2003-demo
 games-fps/ut2004-demo
-games-fps/vendetta-online-bin
 games-puzzle/hoh-bin
 <games-puzzle/world-of-goo-demo-1.41
 <games-puzzle/world-of-goo-1.41
@@ -203,10 +185,8 @@ media-tv/livestation
 media-video/binkplayer
 media-video/realplayer
 net-dialup/slmodem
-net-im/aim
 net-im/skype
 net-im/skysentials
-net-im/ymessenger
 net-libs/xulrunner-bin
 net-misc/icaclient
 net-p2p/pandodl
@@ -219,7 +199,6 @@ sys-apps/memtest86+
 sys-block/hpacucli
 sys-libs/lib-compat-loki
 <www-client/opera-9.62
-www-client/mozilla-bin
 www-client/mozilla-firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
