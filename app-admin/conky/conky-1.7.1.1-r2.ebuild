@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.1.1.ebuild,v 1.3 2009/07/11 18:36:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.1.1-r2.ebuild,v 1.1 2009/07/30 20:50:37 billie Exp $
 
 EAPI="2"
+
+inherit eutils
 
 DESCRIPTION="An advanced, highly configurable system monitor for X"
 HOMEPAGE="http://conky.sourceforge.net/"
@@ -11,7 +13,8 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="alsa apcupsd audacious bmpx debug hddtemp imlib lua math moc mpd nano-syntax nvidia openmp +portmon rss thinkpad truetype vim-syntax wifi X"
+IUSE="alsa apcupsd audacious bmpx debug hddtemp imlib lua math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax wifi X"
+# currently removed openmp
 
 DEPEND_COMMON="
 	X? (
@@ -27,10 +30,10 @@ DEPEND_COMMON="
 	bmpx? ( media-sound/bmpx >=sys-apps/dbus-0.35 )
 	portmon? ( dev-libs/glib )
 	lua? ( >=dev-lang/lua-5.1 )
-	openmp? ( >=sys-devel/gcc-4.3[openmp] )
 	rss? ( dev-libs/libxml2 net-misc/curl dev-libs/glib )
 	wifi? ( net-wireless/wireless-tools )
 	"
+#	openmp? ( >=sys-devel/gcc-4.3[openmp] )
 RDEPEND="
 	${DEPEND_COMMON}
 	apcupsd? ( sys-power/apcupsd )
@@ -46,6 +49,7 @@ DEPEND="
 
 src_prepare() {
 	cp "${FILESDIR}"/conky_no_x11.conf data/
+	epatch "${FILESDIR}"/"${P}"-comment.patch
 }
 
 src_configure() {
@@ -72,10 +76,10 @@ src_configure() {
 		$(use_enable moc) \
 		$(use_enable mpd) \
 		$(use_enable nvidia) \
-		$(use_enable openmp) \
 		$(use_enable rss) \
 		$(use_enable wifi wlan) \
 		$(use_enable portmon)
+#		$(use_enable openmp) \
 }
 
 src_install() {

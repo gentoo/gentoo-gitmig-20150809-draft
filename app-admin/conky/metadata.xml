@@ -25,6 +25,10 @@
 		<flag name='audacious'>enable monitoring of music played by <pkg>media-sound/audacious</pkg></flag>
 		<flag name='bmpx'>enable monitoring of music played by <pkg>media-sound/bmpx</pkg></flag>
 		<flag name='ipv6'>disable support for tcp (ip4) port monitoring</flag>
+		<flag name='iostats'>enable support for per-task I/O statistics</flag>
+		<flag name='lua'>enable if you want Lua scripting support</flag>
+		<flag name='lua-cairo'>enable if you want Lua Cairo bindings for Conky (also anables lua support)</flag>
+		<flag name='lua-imlib'>enable if you want Lua Imlib2 bindings for Conky (also enables lua and imlib support)</flag>
 		<flag name='math'>enable support for glibc's libm math library</flag>
 		<flag name='moc'>enable monitoring of music played by <pkg>media-sound/moc</pkg></flag>
 		<flag name='mpd'>enable monitoring of music controlled by <pkg>media-sound/mpd</pkg></flag>
@@ -33,5 +37,7 @@
 		<flag name='portmon'>enable support for tcp (ip4) port monitoring</flag>
 		<flag name='smapi'>enable support for smapi</flag>
 		<flag name='thinkpad'>enable support for IBM/Lenovo notebooks</flag>
+		<flag name='weather-metar'>enable support for metar weather service</flag>
+		<flag name='weather-xoap'>enable support for metar and xoap weather service</flag>
 	</use>
 </pkgmetadata>

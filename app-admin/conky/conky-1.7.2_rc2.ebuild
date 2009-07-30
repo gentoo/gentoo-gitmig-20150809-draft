@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.1.1-r1.ebuild,v 1.1 2009/07/19 20:33:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2_rc2.ebuild,v 1.1 2009/07/30 20:50:37 billie Exp $
 
 EAPI="2"
 
@@ -12,27 +12,31 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="alsa apcupsd audacious bmpx debug hddtemp imlib lua math moc mpd nano-syntax nvidia openmp +portmon rss thinkpad truetype vim-syntax wifi X"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="alsa apcupsd audacious debug hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
+# currently removed openmp
 
 DEPEND_COMMON="
 	X? (
+		imlib? ( media-libs/imlib2 )
+		lua-cairo? ( >=dev-lang/toluapp-1.0.93 x11-libs/cairo[X] )
+		lua-imlib? ( >=dev-lang/toluapp-1.0.93 media-libs/imlib2 )
+		nvidia? ( media-video/nvidia-settings )
+		truetype? ( x11-libs/libXft >=media-libs/freetype-2 )
 		x11-libs/libX11
 		x11-libs/libXdamage
 		x11-libs/libXext
-		truetype? ( x11-libs/libXft >=media-libs/freetype-2 )
-		imlib? ( media-libs/imlib2 )
-		nvidia? ( media-video/nvidia-settings )
 	)
 	alsa? ( media-libs/alsa-lib )
 	audacious? ( >=media-sound/audacious-1.5 )
-	bmpx? ( media-sound/bmpx >=sys-apps/dbus-0.35 )
 	portmon? ( dev-libs/glib )
 	lua? ( >=dev-lang/lua-5.1 )
-	openmp? ( >=sys-devel/gcc-4.3[openmp] )
 	rss? ( dev-libs/libxml2 net-misc/curl dev-libs/glib )
 	wifi? ( net-wireless/wireless-tools )
+	weather-metar? ( net-misc/curl )
+	weather-xoap? ( dev-libs/libxml2 net-misc/curl )
 	"
+#	openmp? ( >=sys-devel/gcc-4.3[openmp] )
 RDEPEND="
 	${DEPEND_COMMON}
 	apcupsd? ( sys-power/apcupsd )
@@ -45,11 +49,6 @@ DEPEND="
 	${DEPEND_COMMON}
 	dev-util/pkgconfig
 	"
-
-src_prepare() {
-	cp "${FILESDIR}"/conky_no_x11.conf data/
-	epatch "${FILESDIR}"/"${P}"-comment.patch
-}
 
 src_configure() {
 	local myconf
@@ -65,20 +64,24 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable apcupsd) \
 		$(use_enable audacious) \
-		$(use_enable bmpx) \
 		$(use_enable debug) \
 		$(use_enable hddtemp) \
 		$(use_enable imlib imlib2) \
+		$(use_enable iostats) \
 		$(use_enable lua) \
+		$(use_enable lua-cairo) \
+		$(use_enable lua-imlib lua-imlib2) \
 		$(use_enable thinkpad ibm) \
 		$(use_enable math) \
 		$(use_enable moc) \
 		$(use_enable mpd) \
 		$(use_enable nvidia) \
-		$(use_enable openmp) \
+		$(use_enable portmon) \
 		$(use_enable rss) \
-		$(use_enable wifi wlan) \
-		$(use_enable portmon)
+		$(use_enable weather-metar) \
+		$(use_enable weather-xoap) \
+		$(use_enable wifi wlan)
+#		$(use_enable openmp) \
 }
 
 src_install() {
