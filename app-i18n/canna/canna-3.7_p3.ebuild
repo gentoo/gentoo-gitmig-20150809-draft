@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3.ebuild,v 1.4 2007/07/22 09:06:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p3.ebuild,v 1.5 2009/07/30 16:52:47 flameeyes Exp $
 
 inherit cannadic eutils multilib
 
@@ -46,7 +46,8 @@ src_compile() {
 	xmkmf || die
 
 	#make libCannaDir=../lib/canna canna || die
-	make canna || die
+	# bug #279706
+	emake -j1 canna || die
 
 	if use doc ; then
 		einfo "Compiling DVI, PS (and PDF) document"
