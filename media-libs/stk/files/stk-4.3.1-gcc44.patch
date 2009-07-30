@@ -1,0 +1,22 @@
+diff -ur stk-4.3.1.orig/src/FileRead.cpp stk-4.3.1/src/FileRead.cpp
+--- stk-4.3.1.orig/src/FileRead.cpp	2007-12-06 02:58:27.000000000 +0200
++++ stk-4.3.1/src/FileRead.cpp	2009-07-30 14:28:03.000000000 +0300
+@@ -32,6 +32,7 @@
+ #include "FileRead.h"
+ #include <sys/stat.h>
+ #include <sys/types.h>
++#include <cstdio>
+ #include <cmath>
+ 
+ FileRead :: FileRead()
+diff -ur stk-4.3.1.orig/src/FileWrite.cpp stk-4.3.1/src/FileWrite.cpp
+--- stk-4.3.1.orig/src/FileWrite.cpp	2007-12-06 02:58:27.000000000 +0200
++++ stk-4.3.1/src/FileWrite.cpp	2009-07-30 14:28:13.000000000 +0300
+@@ -22,6 +22,7 @@
+ /***************************************************/
+ 
+ #include "FileWrite.h"
++#include <cstdio>
+ #include <cmath>
+ 
+ const FileWrite::FILE_TYPE FileWrite :: FILE_RAW = 1;
