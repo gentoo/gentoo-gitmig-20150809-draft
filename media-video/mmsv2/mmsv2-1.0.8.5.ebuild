@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.8.5.ebuild,v 1.2 2007/10/27 09:43:43 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/mmsv2-1.0.8.5.ebuild,v 1.3 2009/07/30 08:33:17 dirtyepic Exp $
 
 inherit eutils toolchain-funcs
 
@@ -38,6 +38,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-cc.patch
+	epatch "${FILESDIR}"/${P}-gcc_compat.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {

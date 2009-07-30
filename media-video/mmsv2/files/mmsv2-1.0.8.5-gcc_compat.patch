@@ -1,0 +1,169 @@
+--- mms-1.0.8.5/config_header.hpp.orig
++++ mms-1.0.8.5/config_header.hpp
+@@ -1,5 +1,6 @@
+ #include <string>
+ #include <list>
++#include <cstdlib>
+ 
+ #include "print.hpp"
+ 
+--- mms-1.0.8.5/config_maker.hpp.orig
++++ mms-1.0.8.5/config_maker.hpp
+@@ -3,6 +3,7 @@
+ #include <fstream>
+ #include <iostream>
+ #include <sstream>
++#include <cstdlib>
+ 
+ #include "gettext.hpp"
+ 
+--- mms-1.0.8.5/input.cpp.orig
++++ mms-1.0.8.5/input.cpp
+@@ -13,6 +13,7 @@
+ #include <fstream>
+ #include <sstream>
+ #include <iostream>
++#include <cstdlib>
+ 
+ using std::string;
+ 
+--- mms-1.0.8.5/renderer.cpp.orig
++++ mms-1.0.8.5/renderer.cpp
+@@ -1219,16 +1219,16 @@
+ }
+ 
+ void Render::text_part(const string& message, const string& font_name, int r, int g, int b, 
+-		       int x, int y, int total_w, int total_h, const rect& rect)
++		       int x, int y, int total_w, int total_h, const rect& rct)
+ {
+   if (set_font(font_name)) {
+-    Imlib_Image temp2= imlib_create_cropped_image(rect.x, rect.y, rect.w, rect.h);
++    Imlib_Image temp2= imlib_create_cropped_image(rct.x, rct.y, rct.w, rct.h);
+ 
+     Imlib_Image temp = imlib_create_image(total_w, total_h);
+     
+     imlib_context_set_image(temp);
+ 
+-    imlib_blend_image_onto_image(temp2, 0, 0, 0, rect.w, rect.h, rect.x-x, rect.y-y, rect.w, rect.h);
++    imlib_blend_image_onto_image(temp2, 0, 0, 0, rct.w, rct.h, rct.x-x, rct.y-y, rct.w, rct.h);
+ 
+     imlib_context_set_image(temp2);
+     imlib_free_image();
+@@ -1251,7 +1251,7 @@
+ 
+     imlib_context_set_image(current.image_data);
+ 
+-    imlib_blend_image_onto_image(temp, 0, rect.x-x, rect.y-y, rect.w, rect.h, rect.x, rect.y, rect.w, rect.h);
++    imlib_blend_image_onto_image(temp, 0, rct.x-x, rct.y-y, rct.w, rct.h, rct.x, rct.y, rct.w, rct.h);
+ 
+     imlib_context_set_image(temp);
+     imlib_free_image();
+--- mms-1.0.8.5/renderer.hpp.orig
++++ mms-1.0.8.5/renderer.hpp
+@@ -182,7 +182,7 @@
+ 
+   void text(const std::string& text, const std::string& font, int x, int y, int r, int g, int b);
+   void text_part(const std::string& text, const std::string& font, int r, int g, int b,  
+-		 int x, int y, int total_w, int total_h, const rect& r);
++		 int x, int y, int total_w, int total_h, const rect& rct);
+   void rectangle(int x, int y, int width, int height, int r, int g, int b, int a);
+ };
+ 
+--- mms-1.0.8.5/general.cc.orig
++++ mms-1.0.8.5/general.cc
+@@ -7,6 +7,7 @@
+ #include <sys/stat.h>
+ #include <unistd.h>
+ #include <sstream>
++#include <cstdlib>
+ 
+ #include <map>
+ #include <string>
+--- mms-1.0.8.5/library-builder/md5digest.h.orig
++++ mms-1.0.8.5/library-builder/md5digest.h
+@@ -3,6 +3,7 @@
+ 
+ #include <string>
+ #include <stdio.h>
++#include <cstring>
+ #include "md5.h"
+ 
+ using std::string;
+--- mms-1.0.8.5/library-builder/picker.cc.orig
++++ mms-1.0.8.5/library-builder/picker.cc
+@@ -1,5 +1,6 @@
+ #include <iostream>
+ #include <algorithm>
++#include <climits>
+ 
+ #include <math.h>
+ 
+--- mms-1.0.8.5/library-builder/sqldb.cc.orig
++++ mms-1.0.8.5/library-builder/sqldb.cc
+@@ -1,5 +1,6 @@
+ #include <iostream>
+ #include <sstream>
++#include <cstring>
+ #include <sqlite.h>
+ 
+ #include "strmanip.h"
+--- mms-1.0.8.5/library-builder/spectrum.cc.orig
++++ mms-1.0.8.5/library-builder/spectrum.cc
+@@ -1,5 +1,8 @@
+ #include <math.h>
+ #include <assert.h>
++#include <climits>
++#include <cstring>
++#include <cstdlib>
+ 
+ #include <iostream>
+ #include <utility>
+--- mms-1.0.8.5/imdb.cpp.orig
++++ mms-1.0.8.5/imdb.cpp
+@@ -2,6 +2,8 @@
+ // converted from Winblows to UNIX by Anders Rune Jensen
+ // changed to use http_fetcher library instead of buggy and ugly http class
+ 
++#include <cstdlib>
++
+ #include "imdb.hpp"
+ 
+ #include "print.hpp"
+--- mms-1.0.8.5/libs/libavcodec/i386/mpegvideo_mmx.c.orig
++++ mms-1.0.8.5/libs/libavcodec/i386/mpegvideo_mmx.c
+@@ -25,6 +25,17 @@
+ #include "../avcodec.h"
+ #include "mmx.h"
+ 
++/* x86_cpu.h from ffmpeg */
++
++#include <stdint.h>
++
++#ifdef ARCH_X86_64
++typedef int64_t x86_reg;
++#elif ARCH_X86_32
++typedef int32_t x86_reg;
++#endif
++
++
+ extern uint8_t zigzag_direct_noperm[64];
+ extern uint16_t inv_zigzag_direct16[64];
+ 
+@@ -35,7 +46,7 @@
+ static void dct_unquantize_h263_intra_mmx(MpegEncContext *s,
+                                   DCTELEM *block, int n, int qscale)
+ {
+-    long level, qmul, qadd, nCoeffs;
++    x86_reg level, qmul, qadd, nCoeffs;
+ 
+     qmul = qscale << 1;
+ 
+@@ -100,7 +111,7 @@
+ 
+ 		"add $16, %3			\n\t"
+ 		"jng 1b				\n\t"
+-		::"r" (block+nCoeffs), "g"(qmul), "g" (qadd), "r" (2*(-nCoeffs))
++		::"r" (block+nCoeffs), "rm"(qmul), "rm" (qadd), "r" (2*(-nCoeffs))
+ 		: "memory"
+ 	);
+         block[0]= level;

@@ -1,0 +1,31 @@
+--- mms-1.0.8.5-orig/keyboard.cpp
++++ mms-1.0.8.5/keyboard.cpp
+@@ -8,6 +8,7 @@
+ #endif
+ 
+ #include <iostream>
++#include <cstdio>
+ 
+ using std::string;
+ 
+--- mms-1.0.8.5-orig/mpeg_out.cpp
++++ mms-1.0.8.5/mpeg_out.cpp
+@@ -4,6 +4,8 @@
+ 
+ #include "gettext.hpp"
+ 
++#include <cstdio>
++
+ #ifdef benchmark_output
+ #include "bench.hpp"
+ #endif
+--- mms-1.0.8.5-orig/library-builder/main.cc
++++ mms-1.0.8.5/library-builder/main.cc
+@@ -8,6 +8,7 @@
+ #include "../config.hpp"
+ 
+ #include <iostream>
++#include <cstring>
+ 
+ using std::list;
+ using std::string;

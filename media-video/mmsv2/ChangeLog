@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mmsv2
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.26 2007/10/26 20:24:11 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mmsv2/ChangeLog,v 1.27 2009/07/30 08:33:17 dirtyepic Exp $
+
+  30 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> mmsv2-1.0.8.5.ebuild,
+  +files/mmsv2-1.0.8.5-gcc44.patch, +files/mmsv2-1.0.8.5-gcc_compat.patch:
+  Fix building with GCC 4.3 and various other build issues with patch from
+  Nikolay Orlyuk in bug #240614. Fix building with GCC 4.4 with patch by me.
 
 *mmsv2-1.0.8.5 (26 Oct 2007)
 
