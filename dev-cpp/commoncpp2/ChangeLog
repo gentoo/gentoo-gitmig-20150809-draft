@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.48 2009/05/03 16:04:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.49 2009/07/30 07:58:34 dirtyepic Exp $
+
+  30 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> commoncpp2-1.6.3.ebuild,
+  +files/commoncpp2-1.6.3-glibc-2.10.patch:
+  Fix build w/ glibc-2.10. (bug #275750)
 
   03 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   commoncpp2-1.6.3.ebuild:

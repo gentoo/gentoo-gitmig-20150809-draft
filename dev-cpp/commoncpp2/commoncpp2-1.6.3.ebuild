@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.3.ebuild,v 1.3 2009/05/03 16:04:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.6.3.ebuild,v 1.4 2009/07/30 07:58:34 dirtyepic Exp $
 
 inherit eutils autotools
 
@@ -26,6 +26,7 @@ src_unpack() {
 	epatch "${FILESDIR}/1.6.1-gcc42_atomicity.patch"
 	epatch "${FILESDIR}/${PV}-autoconf.patch"
 	epatch "${FILESDIR}/1.6.2-configure_detect_netfilter.patch" # bug 236177
+	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 
 	AT_M4DIR="m4" eautoreconf
 }
