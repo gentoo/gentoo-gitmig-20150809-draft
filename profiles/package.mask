@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10146 2009/07/30 04:45:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10147 2009/07/30 04:47:48 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1466,10 +1466,6 @@ dev-php5/php-java-bridge
 # Mask livesvn ebuild
 =net-p2p/deluge-9999
 
-# Seemant Kulleen <seemant@gentoo.org> (23 May 2007)
-# Masked because 1.2.1 because it is broken
-=net-wireless/ipw3945-1.2.1
-
 # Ryan Hill <dirtyepic@gentoo.org> (13 May 2007)
 #   Mask for testing.
 =net-fs/sfs-0.8.0_pre20070512
@@ -1488,10 +1484,6 @@ app-pda/plucker
 # Masked until it's updated to use >=wxpython-2.6
 # https://bugs.gentoo.org/show_bug.cgi?id=115079
 games-rpg/openrpg
-
-# Roy Marples <uberlord@gentoo.org> (15 Apr 2007)
-# Masked as it segfaults and fails with our scripts, #174693.
-=net-wireless/wireless-tools-29_pre17
 
 # Benedikt Böhm <hollow@gentoo.org> (07 Apr 2007)
 # masked for testing
