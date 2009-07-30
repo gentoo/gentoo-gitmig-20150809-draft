@@ -27,6 +27,11 @@
       libpulse client library, to allow using libpulse on glib-based
       programs.
     </flag>
+    <flag name="udev">
+      Use <pkg>sys-fs/udev</pkg> for autodiscovery of sound devices;
+      this replaces the deprecated <pkg>sys-apps/hal</pkg>
+      autodiscovery code.
+    </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
     <flag name="glib">Enable glib eventloop support</flag>
     <flag name="policykit">Enable support for PolicyKit framework.</flag>

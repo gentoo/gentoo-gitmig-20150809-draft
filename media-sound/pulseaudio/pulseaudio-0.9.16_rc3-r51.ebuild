@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc2-r50.ebuild,v 1.2 2009/07/03 00:14:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc3-r51.ebuild,v 1.1 2009/07/30 13:27:22 flameeyes Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_P}"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns +glib test doc"
+IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns +glib test doc udev"
 
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	caps? ( sys-libs/libcap )
@@ -43,6 +43,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	)
 	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
+	udev? ( >=sys-fs/udev-143 )
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-libs/speex-1.2_beta
 	>=media-libs/libsndfile-1.0.10
@@ -73,6 +74,13 @@ pkg_setup() {
 	enewgroup pulse-access
 	enewgroup pulse
 	enewuser pulse -1 -1 /var/run/pulse pulse,audio
+
+	if use udev && use hal; then
+		elog "Please note that enabling both udev and hal will build both"
+		elog "discover modules, but only udev will be ued automatically."
+		elog "If you wish to use hal you have to enable it explicitly"
+		elog "or you might just disable the hal USE flag entirely."
+	fi
 }
 
 src_prepare() {
@@ -110,7 +118,7 @@ src_configure() {
 		$(use_enable X x11) \
 		$(use_enable test default-build-tests) \
 		$(use_with caps) \
-		--disable-udev \
+		$(use_enable udev) \
 		--localstatedir=/var \
 		--disable-per-user-esound-socket \
 		--with-database=gdbm \
@@ -138,6 +146,7 @@ src_install() {
 		$(use_define avahi) \
 		$(use_define alsa) \
 		$(use_define bluetooth) \
+		$(use_define udev) \
 		"${FILESDIR}/pulseaudio.init.d-4" \
 		> "${T}/pulseaudio"
 
@@ -145,9 +154,7 @@ src_install() {
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${D}/etc/pulse/default.pa"
 
-	# the “true” condition should be replaced by “use udev” once
-	# that's enabled.
-	if use hal && true; then
+	if use hal && !use udev; then
 		sed -i -e 's:-udev:-hal:' "${D}/etc/pulse/default.pa" || die
 	fi
 
