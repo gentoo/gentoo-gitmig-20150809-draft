@@ -68,8 +68,6 @@ www-client/epiphany spell
 
 # Gilles Dartiguelongue <eva@gentoo.org> (22 Oct 2007)
 # GNU attr isn't supported
-=app-editors/gedit-2.18* acl
-=app-editors/gedit-2.20* xattr
 dev-libs/glib xattr
 gnome-base/gnome-vfs acl
 
