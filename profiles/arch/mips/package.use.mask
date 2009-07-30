@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.6 2009/02/14 00:27:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/package.use.mask,v 1.7 2009/07/30 19:06:44 ssuominen Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -30,11 +30,9 @@ sys-apps/paludis ruby
 
 # Chris Gianelloni <cgianelloni@gentoo.org> (22 Sep 2007)
 # dependency can't be fulfilled at the moment
-net-im/gaim krb4
 kde-base/kdelibs kerberos
 dev-util/cvs kerberos
 net-mail/fetchmail kerberos
-dev-util/cyrus-sasl kerberos
 
 # Jim Ramsay <lack@gentoo.org> (7 Sep 2007)
 # app-admin/gkrellm may pull in hddtemp, which is not yet available here
@@ -47,10 +45,7 @@ dev-libs/apr-util mysql
 # Stuart Longland <redhatter@gentoo.org> (07 Sep 2007)
 # mplayer not tested with these flags yet.  I may remove these slowly as I test
 # more functions of mplayer.
-media-video/mplayer amrnb amrwb bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd ivtv joystick live mad mp2 openal pnm pvr radio rar rtc srt svga teletext tga tivo v4l2 xanim xinerama zoran
-
-# NPTL only works on >=glibc-2.4 ...
-<sys-lib/glibc-2.4 nptl
+media-video/mplayer amrnb amrwb bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd joystick live mad mp2 openal pnm pvr radio rar rtc svga teletext tga v4l2 xanim xinerama zoran
 
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
@@ -67,8 +62,3 @@ net-dialup/ppp atm
 # Richard Brown <rbrown@gentoo.org> (23 Dec 2007)
 # app-xemacs/ruby-modes is not keyworded on this arch
 dev-lang/ruby xemacs
-
-# Ben de Groot <yngwin@gentoo.org> 13 Feb 2009
-# Mask for unkeyworded deps
-x11-libs/qt phonon
-
