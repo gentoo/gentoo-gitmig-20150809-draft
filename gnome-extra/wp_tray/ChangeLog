@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/wp_tray
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/ChangeLog,v 1.1 2009/05/17 12:58:17 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wp_tray/ChangeLog,v 1.2 2009/07/30 17:04:04 dertobi123 Exp $
+
+  30 Jul 2009; Tobias Scherbaum <dertobi123@gentoo.org> metadata.xml:
+  add no-herd to metadata, #279216
 
 *wp_tray-0.5.5 (17 May 2009)
 
