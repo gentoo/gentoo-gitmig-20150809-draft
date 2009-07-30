@@ -40,15 +40,11 @@ app-office/openoffice mono
 =dev-java/ibm-jre-bin-1.5* -nsplugin
 =dev-java/ibm-jdk-bin-1.6* -nsplugin
 =dev-java/ibm-jre-bin-1.6* -nsplugin
-~dev-util/checkstyle-4.3 test
 
 # Joseph Jezak <josejx@gentoo.org> (28 Jun 2007)
 # Masked Parallel LCD devices for bug #180683
 # app-misc/lcd4linux
 app-misc/lcd4linux lcd_devices_hd44780
-
-# ppc does not have nvidia-drivers
-media-tv/mythtv opengl-xvmc
 
 # nixnut <nixnut@gentoo.org> (5 feb 2008)
 # Masking hb and hb2 USE flags as no suitable solution for evms exists
