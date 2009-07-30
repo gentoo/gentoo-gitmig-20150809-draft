@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.6 2009/07/27 20:16:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.7 2009/07/30 18:40:12 flameeyes Exp $
 
 EAPI=1
 
@@ -51,7 +51,7 @@ RDEPEND="!app-emulation/virtualbox-ose
 
 S=${WORKDIR}
 
-RESTRICT="fetch mirror"
+RESTRICT="fetch"
 
 pkg_nofetch() {
 	# Fetch restriction added due licensing and problems downloading with
@@ -86,7 +86,7 @@ src_unpack() {
 
 src_install() {
 	if ! use headless ; then
-		newicon VBox.png virtualbox.png
+		newicon VBox.png ${PN}.png
 		newmenu "${FILESDIR}"/${PN}.desktop ${PN}.desktop
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.2.0.ebuild,v 1.2 2009/07/27 20:16:24 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-2.2.0.ebuild,v 1.3 2009/07/30 18:40:12 flameeyes Exp $
 
 EAPI=2
 
@@ -19,7 +19,8 @@ LICENSE="PUEL"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+additions +chm headless sdk vboxwebsrv"
-RESTRICT="strip mirror"
+RESTRICT="mirror"
+PROPERTIES="interactive"
 
 RDEPEND="!!app-emulation/virtualbox-ose
 	!app-emulation/virtualbox-ose-additions
@@ -56,6 +57,60 @@ RDEPEND="!!app-emulation/virtualbox-ose
 S=${WORKDIR}
 
 QA_TEXTRELS_amd64="opt/VirtualBox/VBoxVMM.so"
+QA_PRESTRIPPED="opt/VirtualBox/VBoxDD.so
+	opt/VirtualBox/VBoxDD2.so
+	opt/VirtualBox/VBoxDDU.so
+	opt/VirtualBox/VBoxDbg.so
+	opt/VirtualBox/VBoxGuestPropSvc.so
+	opt/VirtualBox/VBoxHeadless
+	opt/VirtualBox/VBoxHeadless.so
+	opt/VirtualBox/VBoxKeyboard.so
+	opt/VirtualBox/VBoxManage
+	opt/VirtualBox/VBoxNetAdpCtl
+	opt/VirtualBox/VBoxNetDHCP
+	opt/VirtualBox/VBoxNetDHCP.so
+	opt/VirtualBox/VBoxOGLhostcrutil.so
+	opt/VirtualBox/VBoxOGLhosterrorspu.so
+	opt/VirtualBox/VBoxOGLrenderspu.so
+	opt/VirtualBox/VBoxPython.so
+	opt/VirtualBox/VBoxPython2_3.so
+	opt/VirtualBox/VBoxPython2_4.so
+	opt/VirtualBox/VBoxPython2_5.so
+	opt/VirtualBox/VBoxPython2_6.so
+	opt/VirtualBox/VBoxREM.so
+	opt/VirtualBox/VBoxRT.so
+	opt/VirtualBox/VBoxSDL
+	opt/VirtualBox/VBoxSDL.so
+	opt/VirtualBox/VBoxSVC
+	opt/VirtualBox/VBoxSettings.so
+	opt/VirtualBox/VBoxSharedClipboard.so
+	opt/VirtualBox/VBoxSharedCrOpenGL.so
+	opt/VirtualBox/VBoxSharedFolders.so
+	opt/VirtualBox/VBoxTestOGL
+	opt/VirtualBox/VBoxTunctl
+	opt/VirtualBox/VBoxVMM.so
+	opt/VirtualBox/VBoxVRDP.so
+	opt/VirtualBox/VBoxXPCOM.so
+	opt/VirtualBox/VBoxXPCOMC.so
+	opt/VirtualBox/VBoxXPCOMIPCD
+	opt/VirtualBox/VRDPAuth.so
+	opt/VirtualBox/VirtualBox
+	opt/VirtualBox/VirtualBox.so
+	opt/VirtualBox/accessible/libqtaccessiblewidgets.so
+	opt/VirtualBox/components/VBoxC.so
+	opt/VirtualBox/components/VBoxSVCM.so
+	opt/VirtualBox/components/VBoxXPCOMIPCC.so
+	opt/VirtualBox/kchmviewer
+	opt/VirtualBox/libQtCoreVBox.so.4
+	opt/VirtualBox/libQtGuiVBox.so.4
+	opt/VirtualBox/libQtNetworkVBox.so.4
+	opt/VirtualBox/vboxwebsrv"
+
+pkg_setup() {
+	# We cannot mirror VirtualBox PUEL licensed files see:
+	# http://www.virtualbox.org/wiki/Licensing_FAQ
+	check_license
+}
 
 src_unpack() {
 	unpack_makeself ${MY_P}_${ARCH}.run
