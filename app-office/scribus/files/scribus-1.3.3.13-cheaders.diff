@@ -1,0 +1,35 @@
+diff -Naur scribus-1.3.3.13/scribus/md5.c scribus-1.3.3.13-1/scribus/md5.c
+--- scribus-1.3.3.13/scribus/md5.c	2005-07-05 09:36:06.000000000 +0300
++++ scribus-1.3.3.13-1/scribus/md5.c	2009-07-27 23:04:27.000000000 +0300
+@@ -24,6 +24,7 @@
+ #include "scconfig.h"
+ #endif
+ 
++#include <strings.h>
+ #include <sys/types.h>
+ 
+ #if STDC_HEADERS || defined _LIBC
+diff -Naur scribus-1.3.3.13/scribus/pixbuf/gdk-pixbuf-xlibrgb.c scribus-1.3.3.13-1/scribus/pixbuf/gdk-pixbuf-xlibrgb.c
+--- scribus-1.3.3.13/scribus/pixbuf/gdk-pixbuf-xlibrgb.c	2005-07-05 09:36:06.000000000 +0300
++++ scribus-1.3.3.13-1/scribus/pixbuf/gdk-pixbuf-xlibrgb.c	2009-07-27 23:00:46.000000000 +0300
+@@ -51,16 +51,12 @@
+ 
+ #if HAVE_CONFIG_H
+ #  include "scconfig.h"
+-#  if STDC_HEADERS
+-#    include <stdio.h>
+-#    include <stdlib.h>
+-#    include <string.h>
+-#  endif
+-#else
+-#  include <stdio.h>
+-#  include <stdlib.h>
+ #endif
+ 
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++
+ #define ENABLE_GRAYSCALE
+ 
+ /* include this before so that we can get endian definitions if
