@@ -36,8 +36,6 @@ net-im/kadu amarok2
 # Vlastimil Babka <caster@gentoo.org> (12 Dec 2008)
 # finally a 64bit java plugin
 >=dev-java/sun-jdk-1.6.0.12_beta2 -nsplugin
-# but not on 1.7 yet
-=dev-java/sun-jdk-1.7*
 
 # Serkan Kaba <serkan@gentoo.org> (5 Feb 2009)
 # finally a 64bit java plugin
