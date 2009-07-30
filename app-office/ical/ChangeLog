@@ -1,6 +1,11 @@
 # ChangeLog for app-office/ical
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.19 2009/01/21 16:28:32 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.20 2009/07/30 19:39:29 vostorga Exp $
+
+  30 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> ical-2.2.1.ebuild,
+  ical-2.3.3.ebuild, +files/ical-2.3.3-glibc210.patch:
+  Added patch allowing compilation against glibc-2.10, closes bug #274307
+  Respecting CC variable.
 
   17 Jan 2009; Federico Ferri <mescalinum@gentoo.org> ChangeLog:
   closes bug #158621

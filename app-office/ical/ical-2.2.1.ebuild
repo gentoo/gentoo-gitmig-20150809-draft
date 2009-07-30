@@ -1,10 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.16 2006/04/08 09:14:09 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.2.1.ebuild,v 1.17 2009/07/30 19:39:29 vostorga Exp $
 
 inherit eutils
 
-PATCH_VER="0.1"
+PATCH_VER="0.2"
 MY_P="${P}a"
 DESCRIPTION="Tk-based Calendar program"
 HOMEPAGE="http://www.fnal.gov/docs/products/tktools/ical.html"
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch ${MY_P}-hack.patch
 	epatch ${MY_P}-glibc22.patch
 	epatch ${MY_P}-print.patch
+	epatch ${MY_P}-glibc210.patch
 
 	sed -i \
 		-e "s: \@TCL_LIBS\@::" \
@@ -46,7 +47,7 @@ src_compile() {
 	# don't use autoconf, bug 101658
 	# autoconf
 	econf --with-tclsh=/usr/bin/tclsh || die
-	emake -j1 || die "make failed"
+	emake CXX=$(tc-getCXX) -j1 || die "make failed"
 }
 
 src_install() {
