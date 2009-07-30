@@ -6,8 +6,6 @@
 # Vlastimil Babka <caster@gentoo.org> (12 Dec 2008)
 # finally a 64bit java plugin
 >=dev-java/sun-jdk-1.6.0.12_beta2 -nsplugin
-# but not on 1.7 yet
-=dev-java/sun-jdk-1.7* nsplugin
 
 # assembler-section
 
@@ -25,7 +23,6 @@ games-emulation/xmame mmx
 games-emulation/xmess mmx
 media-gfx/inkscape mmx
 media-libs/allegro mmx sse
-media-libs/gdk-pixbuf mmx
 media-libs/libfame mmx
 media-libs/libmovtar mmx
 media-libs/sdl-gfx mmx
@@ -46,11 +43,9 @@ x11-themes/polymer mmx sse2
 # Oct 24th 2006; blubb@gentoo.org
 # working asm; drop this list once the flags are unmasked globally (2007.0)
 >=dev-libs/DirectFB-0.9.25.1 -mmx -sse
->=dev-libs/DirectFB-extra-0.9.25 -mmx
 games-engines/exult -mmx -3dnow
 media-gfx/gimp -mmx -sse
 media-gfx/optipng -mmx
-media-libs/libmpeg -mmx
 media-libs/flac -sse -3dnow
 media-libs/libggi -mmx
 media-libs/libquicktime -mmx
@@ -61,9 +56,7 @@ media-tv/mythtv -mmx
 media-video/ogle -mmx
 media-video/transcode -3dnow -mmx -sse -sse2
 >=sci-libs/fftw-3.1.2 -sse -sse2
-x11-libs/evas -mmx -sse
 x11-libs/libast -mmx
-x11-misc/eterm -sse2
 x11-wm/afterstep -mmx
 media-video/ffmpeg -mmx
 media-tv/xdtv -mmx
@@ -84,11 +77,6 @@ media-libs/mlt mmx
 # Mask doc flag for fop as nearly impossible to
 # run javadoc target.  see #177585
 >=dev-java/fop-0.93 doc
-
-# 26 July 2007: Alexis Ballier <aballier@gentoo.org>
-# Mask x86-32 asm only flags
-# bug #178033
-media-video/cinelerra-cvs mmx 3dnow
 
 # 20 Mar 2008: Petteri Räty <betelgeuse@gentoo.org>
 # jamvm needs ffi on amd64
