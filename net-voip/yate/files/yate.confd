@@ -1,5 +1,10 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/yate/files/yate.confd,v 1.1 2006/10/18 19:57:28 genstef Exp $
+# /etc/conf.d/yate: config file for /etc/init.d/yate
 
-OPTS=""
+# Any random options you want to pass to yate
+YATE_OPTS=""
+
+# Pid file to use (needs to be absolute path)
+#YATE_PIDFILE="/var/run/yate.pid"
+
+# Path to yate binary (needs to be absolute path)
+#YATE_BINARY="/usr/bin/yate"
