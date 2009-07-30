@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntpclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ChangeLog,v 1.3 2009/01/14 18:18:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ChangeLog,v 1.4 2009/07/30 20:07:32 solar Exp $
+
+  30 Jul 2009; <solar@gentoo.org> ntpclient-2007.365.ebuild:
+  install a few docs
 
   14 Jan 2009; <solar@gentoo.org> ntpclient-2007.365.ebuild:
   - do not use hidden symbol __adjtimex directly ; bug 254952

@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2007.365.ebuild,v 1.3 2009/01/14 18:18:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntpclient/ntpclient-2007.365.ebuild,v 1.4 2009/07/30 20:07:32 solar Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -34,4 +34,5 @@ src_compile() {
 src_install() {
 	dodir /usr/bin
 	dobin ntpclient
+	dodoc README HOWTO rate.awk rate2.awk
 }
