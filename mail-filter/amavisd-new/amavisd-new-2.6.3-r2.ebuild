@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.6.3-r1.ebuild,v 1.7 2009/07/19 17:52:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/amavisd-new-2.6.3-r2.ebuild,v 1.1 2009/07/30 17:49:59 dertobi123 Exp $
 
 inherit eutils
 
@@ -66,6 +66,7 @@ src_unpack() {
 	fi
 
 	epatch "${FILESDIR}/${P}-amavisd.conf-gentoo.patch"
+	epatch "${FILESDIR}/${P}-startup.patch"
 
 	if ! use dkim ; then
 		epatch "${FILESDIR}/${P}-dkimconf.patch"
