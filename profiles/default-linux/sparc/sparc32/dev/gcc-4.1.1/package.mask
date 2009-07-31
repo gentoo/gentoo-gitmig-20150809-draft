@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/gcc-4.1.1/package.mask,v 1.7 2009/07/29 21:15:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/dev/gcc-4.1.1/package.mask,v 1.8 2009/07/31 11:03:36 ssuominen Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Totally untested on sparc32
@@ -9,7 +9,6 @@ gnome-base/gnome-volume-manager
 sys-apps/hal
 sys-apps/ivman
 sys-apps/pmount
-
 
 # Gustavo Zacarias <gustavoz@gentoo.org>
 # Mask until bug #155887 is solved
