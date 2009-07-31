@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-8.1.4.ebuild,v 1.4 2009/04/14 10:25:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.1.3.ebuild,v 1.1 2009/07/31 16:03:41 tgurr Exp $
 
 inherit eutils gnome2-utils nsplugins
 
@@ -8,25 +8,26 @@ DESCRIPTION="Adobe's PDF reader"
 HOMEPAGE="http://www.adobe.com/products/reader/"
 IUSE="cups ldap minimal nsplugin"
 
-SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/${PV}"
-SRC_FOOT="-${PV}-1.i486.tar.bz2"
+SRC_HEAD="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PV}"
+SRC_FOOT=".tar.bz2"
 
-LINGUA_LIST="da:dan de:deu en:enu es:esp fi:suo fr:fra it:ita ja:jpn ko:kor nb:nor nl:nld pt:ptb sv:sve zh_CN:chs zh_TW:cht"
-DEFAULT_URI="${SRC_HEAD}/enu/AdobeReader_enu${SRC_FOOT}"
+# languages not available yet: it:ita es:esp pt:ptb sv:sve zh_CN:chs zh_TW:cht fi:suo nb:nor nl:nld ko:kor da:dan
+LINGUA_LIST="de:deu en:enu fr:fra ja:jpn"
+DEFAULT_URI="${SRC_HEAD}/enu/AdbeRdr${PV}-1_i486linux_enu${SRC_FOOT}"
 for ll in ${LINGUA_LIST} ; do
 	iuse_l="linguas_${ll/:*}"
 	src_l=${ll/*:}
 	IUSE="${IUSE} ${iuse_l}"
 	DEFAULT_URI="!${iuse_l}? ( ${DEFAULT_URI} )"
 	SRC_URI="${SRC_URI}
-		${iuse_l}? ( ${SRC_HEAD}/${src_l}/AdobeReader_${src_l}${SRC_FOOT} )"
+		${iuse_l}? ( ${SRC_HEAD}/${src_l}/AdbeRdr${PV}-1_i486linux_${src_l}${SRC_FOOT} )"
 done
 SRC_URI="${SRC_URI}
 	${DEFAULT_URI}"
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 RESTRICT="strip mirror"
 
 # mozilla-firefox-bin won't work because it doesn't have gtkembedmoz.so
@@ -43,15 +44,12 @@ RDEPEND="media-libs/fontconfig
 			>=app-emulation/emul-linux-x86-gtklibs-2.0
 			!minimal? ( || ( net-libs/xulrunner-bin
 						www-client/seamonkey-bin ) ) )"
-QA_TEXTRELS="opt/Adobe/Reader8/Reader/intellinux/plug_ins/PPKLite.api
-	opt/Adobe/Reader8/Browser/intellinux/nppdf.so
-	opt/netscape/plugins/nppdf.so"
-QA_EXECSTACK="opt/Adobe/Reader8/Reader/intellinux/plug_ins/Annots.api
-	opt/Adobe/Reader8/Reader/intellinux/plug_ins/PPKLite.api
-	opt/Adobe/Reader8/Reader/intellinux/bin/acroread
-	opt/Adobe/Reader8/Reader/intellinux/bin/SynchronizerApp-binary
-	opt/Adobe/Reader8/Reader/intellinux/lib/libsccore.so
-	opt/Adobe/Reader8/Reader/intellinux/lib/libcrypto.so.0.9.7"
+
+QA_EXECSTACK="opt/Adobe/Reader9/Reader/intellinux/bin/acroread
+	opt/Adobe/Reader9/Reader/intellinux/lib/libauthplay.so.0.0.0
+	opt/Adobe/Reader9/Reader/intellinux/lib/libsccore.so
+	opt/Adobe/Reader9/Reader/intellinux/lib/libcrypto.so.0.9.8
+	opt/Adobe/Reader9/Reader/intellinux/plug_ins/PPKLite.api"
 
 INSTALLDIR=/opt
 
@@ -60,7 +58,7 @@ S="${WORKDIR}/AdobeReader"
 # Actually, ahv segfaults when run standalone so presumably
 # it isn't intended for direct use - so the only launcher is
 # acroread after all.
-LAUNCHERS="Adobe/Reader8/bin/acroread"
+LAUNCHERS="Adobe/Reader9/bin/acroread"
 #	Adobe/HelpViewer/1.0/intellinux/bin/ahv"
 
 pkg_setup() {
@@ -92,21 +90,17 @@ src_unpack() {
 		cd "${WORKDIR}"
 		unpack ${pkg}
 		cd "${S}"
-		if [[ ${pkg} =~ ^AdobeReader_ ]] ; then
-			tar xf ILINXR.TAR ||
-				die "Failed to unpack ILINXR.TAR; is distfile corrupt?"
-			tar xf COMMON.TAR ||
-				die "Failed to unpack COMMON.TAR; is distfile corrupt?"
-			ll=$(acroread_get_ll ${pkg})
-			for launcher in ${LAUNCHERS} ; do
-				mv ${launcher} ${launcher}.${ll}
-			done
-			if [[ -z ${fl} ]] ; then
-				fl=${ll}
-				linguas="${ll}"
-			else
-				linguas="${linguas} ${ll}"
-			fi
+		tar xf ILINXR.TAR || die "Failed to unpack ILINXR.TAR."
+		tar xf COMMON.TAR || die "Failed to unpack COMMON.TAR."
+		ll=$(acroread_get_ll ${pkg})
+		for launcher in ${LAUNCHERS} ; do
+			mv ${launcher} ${launcher}.${ll}
+		done
+		if [[ -z ${fl} ]] ; then
+			fl=${ll}
+			linguas="${ll}"
+		else
+			linguas="${linguas} ${ll}"
 		fi
 	done
 	if [[ ${linguas} == ${fl} ]] ; then
@@ -150,39 +144,37 @@ src_unpack() {
 	fi
 
 	# remove cruft
-	rm "${S}"/Adobe/Reader8/bin/UNINSTALL
-	rm "${S}"/Adobe/Reader8/Resource/Support/vnd.*.desktop
+	rm "${S}"/Adobe/Reader9/bin/UNINSTALL
+	rm "${S}"/Adobe/Reader9/Browser/install_browser_plugin
+	rm "${S}"/Adobe/Reader9/Resource/Support/vnd.*.desktop
 
 	# replace some configuration sections
-	for binfile in "${S}"/Adobe/Reader8/bin/* ; do
-		sed -i -e '/Font-config/,+10d' \
+	for binfile in "${S}"/Adobe/Reader9/bin/* ; do
+		sed -i -e '/Font-config/,+9d' \
 			-e "/acrogre.conf/r ${FILESDIR}/gentoo_config" -e //N \
-			"${binfile}" || die "sed failed"
+			"${binfile}" || die "sed configuration settings failed."
 	done
 }
 
 src_install() {
 	# Install desktop files
-	domenu Adobe/Reader8/Resource/Support || die "Installing desktop files failed."
+	domenu Adobe/Reader9/Resource/Support/AdobeReader.desktop || die "Installing desktop files failed."
 
 	# Install commonly used icon sizes
 	for res in 16x16 22x22 32x32 48x48 64x64 128x128 ; do
 		insinto /usr/share/icons/hicolor/${res}/apps
-		doins Adobe/Reader8/Resource/Icons/${res}/* || die "Installing icons failed."
+		doins Adobe/Reader9/Resource/Icons/${res}/* || die "Installing icons failed."
 	done
 
 	dodir /opt || die "Creating directoy failed."
 	chown -R --dereference -L root:0 Adobe
 	cp -dpR Adobe "${D}"opt/
 
-	# The Browser_Plugin_HowTo.txt is now in a subdirectory, which
-	# is named according to the language the user is using.
-	# Ie. for German, it is in a DEU directory. See bug #118015
-	dodoc Adobe/Reader8/Browser/HowTo/*/Browser_Plugin_HowTo.txt || die "Installing docs failed."
+	doman Adobe/Reader9/Resource/Shell/acroread.1.gz || die "Installing manpage failed."
 
 	if use nsplugin ; then
 		exeinto /opt/netscape/plugins
-		doexe Adobe/Reader8/Browser/intellinux/nppdf.so || die "Installing the browser plugin failed."
+		doexe Adobe/Reader9/Browser/intellinux/nppdf.so || die "Installing the browser plugin failed."
 		inst_plugin /opt/netscape/plugins/nppdf.so
 	fi
 
@@ -198,9 +190,9 @@ src_install() {
 		if use x86 ; then
 			for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox ; do
 				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
-					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader8/Reader/GlobalPrefs/mozilla_config
+					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
 					elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
-					elog "your system in ${lib}, and configured in ${INSTALLDIR}/Adobe/Reader8/Reader/GlobalPrefs/mozilla_config."
+					elog "your system in ${lib}, and configured in ${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config."
 					break # don't search any more libraries
 				fi
 			done
@@ -208,9 +200,9 @@ src_install() {
 		if use amd64 ; then
 			for lib in /opt/seamonkey ; do
 				if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
-					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader8/Reader/GlobalPrefs/mozilla_config
+					echo "MOZILLA_COMP_PATH=${lib}" >> "${D}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
 					elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
-					elog "your system in ${lib}, and configured in ${INSTALLDIR}/Adobe/Reader8/Reader/GlobalPrefs/mozilla_config."
+					elog "your system in ${lib}, and configured in ${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config."
 					break # don't search any more libraries
 				fi
 			done
