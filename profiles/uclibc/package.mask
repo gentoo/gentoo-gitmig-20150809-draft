@@ -1,9 +1,11 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/package.mask,v 1.17 2009/07/31 09:53:16 ssuominen Exp $
+
 sys-libs/glibc
+
 # breaks gcc and such
 dev-libs/libiconv
-
-# uclibc had a broken stat() which caused tar to freak out
-#>=app-arch/tar-1.15.91
 
 # requires funcs we dont yet provide
 >=sys-fs/xfsprogs-2.8.10
