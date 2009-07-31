@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.23 2009/07/31 14:48:49 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.24 2009/07/31 21:37:54 tcunha Exp $
+
+  31 Jul 2009; Tiago Cunha <tcunha@gentoo.org> nettle-2.0.ebuild:
+  stable sparc, bug 279372
 
   31 Jul 2009; <chainsaw@gentoo.org> nettle-2.0.ebuild:
   Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
