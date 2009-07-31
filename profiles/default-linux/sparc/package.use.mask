@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/package.use.mask,v 1.25 2009/07/31 09:43:07 ssuominen Exp $
+
 # Ben de Groot <yngwin@gentoo.org> (20 Feb 2009)
 # needs kde4 keyworded
 x11-themes/qtcurve-qt4 kde
@@ -13,13 +17,13 @@ net-misc/asterisk h323
 media-libs/sdl-sound mikmod
 
 # Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
 dev-util/anjuta	valgrind
+
 # Needs chicken
-dev-lang/swig	chicken
+dev-lang/swig chicken
+
 # Needs pike
-dev-lang/swig	pike
+dev-lang/swig pike
 
 #wavgain fails to build
 media-sound/rubyripper wav
@@ -31,13 +35,13 @@ sci-libs/hdf5 mpi
 net-misc/kvpnc smartcard
 
 # xindy requires clisp which does not build
-app-text/texlive	xindy
+app-text/texlive xindy
 
 # Needs krb4 USE flag for mit-krb5 (Bug #255579), and we believe it to be unstable.
-net-im/pidgin   zephyr
+net-im/pidgin zephyr
 
 # Mask zemberek for enchant because it requires java.
-app-text/enchant        zemberek
+app-text/enchant zemberek
 
 # Mask srtp for ortp because libsrtp is marked -sparc.
-net-libs/ortp	srtp
+net-libs/ortp srtp

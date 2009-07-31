@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/package.mask,v 1.15 2008/12/14 14:15:56 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/package.mask,v 1.16 2009/07/31 09:43:07 ssuominen Exp $
 
 # Gustavo Zacarias <gustavoz@gentoo.org> 14 Feb 2007
 # Mask mono stuff
