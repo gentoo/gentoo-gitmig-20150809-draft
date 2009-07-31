@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.9 2009/07/19 09:30:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.10 2009/07/31 14:03:29 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -9,7 +9,7 @@
 
 EAPI="1"
 
-inherit autotools eutils flag-o-matic libtool multilib python toolchain-funcs versionator
+inherit autotools eutils flag-o-matic libtool multilib pax-utils python toolchain-funcs versionator
 
 # We need this so that we don't depends on python.eclass
 PYVER_MAJOR=$(get_major_version)
@@ -189,7 +189,10 @@ src_test() {
 
 	# test_pow fails on alpha.
 	# http://bugs.python.org/issue756093
-	[[ ${ARCH} == "alpha" ]] && skip_tests="${skip_tests} pow"
+	[[ ${ARCH} == "alpha" ]] && skip_tests+=" pow"
+
+	# test_ctypes fails with PAX kernel (bug #234498).
+	host-is-pax && skip_tests+=" ctypes"
 
 	for test in ${skip_tests}; do
 		mv "${S}"/Lib/test/test_${test}.py "${T}"
