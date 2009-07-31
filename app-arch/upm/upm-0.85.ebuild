@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/upm-0.85.ebuild,v 1.12 2009/03/28 13:59:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/upm-0.85.ebuild,v 1.13 2009/07/31 09:37:03 volkmar Exp $
 
 inherit eutils
 
@@ -14,10 +14,12 @@ KEYWORDS="alpha ~hppa ppc ~sparc x86"
 IUSE=""
 
 DEPEND="sys-apps/fakeroot"
+RDEPEND=${DEPEND}
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-gentoo.diff
+	epatch "${FILESDIR}"/${P}-static.patch # bug 264067
 }
 
 src_compile() {
@@ -26,7 +28,7 @@ src_compile() {
 
 src_install() {
 	dodir /bin
-	make DESTDIR=${D} install || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodir /usr/upm/installed
 	dodir /var/upm/{binary,cache}
 }

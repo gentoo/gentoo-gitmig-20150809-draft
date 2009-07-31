@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/upm
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/ChangeLog,v 1.10 2009/03/28 13:59:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upm/ChangeLog,v 1.11 2009/07/31 09:37:03 volkmar Exp $
+
+  31 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
+  +files/upm-0.85-static.patch, upm-0.85.ebuild:
+  Fixing compilation issue. Bug 264067. Thanks to Robert Lewis.
 
   28 Mar 2009; Diego E. Pettenò <flameeyes@gentoo.org> upm-0.85.ebuild:
   Die during src_compile if make fails.
