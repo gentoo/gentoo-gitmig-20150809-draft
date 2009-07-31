@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/bip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.6 2009/03/23 15:58:15 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/ChangeLog,v 1.7 2009/07/31 18:51:29 a3li Exp $
+
+*bip-0.8.1 (31 Jul 2009)
+
+  31 Jul 2009; Alex Legler <a3li@gentoo.org> -bip-0.7.4-r1.ebuild,
+  -bip-0.8.0_rc1.ebuild, +bip-0.8.1.ebuild,
+  +files/bip-0.8.1-configure-oidentd.patch:
+  Version bump, removing old versions, fix configure (thanks to flameeyes)
 
 *bip-0.8.0 (23 Mar 2009)
 

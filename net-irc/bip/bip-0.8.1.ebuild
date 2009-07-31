@@ -1,6 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.7.4-r1.ebuild,v 1.1 2008/10/10 12:06:29 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.1.ebuild,v 1.1 2009/07/31 18:51:29 a3li Exp $
+
+EAPI="2"
+
+inherit autotools
 
 DESCRIPTION="Multiuser IRC proxy with ssl support"
 HOMEPAGE="http://bip.t1r.net/"
@@ -9,15 +13,29 @@ SRC_URI="http://bip.t1r.net/downloads/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="ssl vim-syntax"
+IUSE="debug ssl vim-syntax oidentd"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 RDEPEND="${DEPEND}
 	vim-syntax? ( || ( app-editors/vim
-	app-editors/gvim ) )"
+	app-editors/gvim ) )
+	oidentd? ( >=net-misc/oidentd-2.0 )"
+
+src_prepare() {
+	# configure broken: --disable-oidentd enables it, too
+	epatch "${FILESDIR}/${P}-configure-oidentd.patch"
+
+	eautoreconf
+}
+
+src_configure() {
+	econf \
+		$(use_enable ssl openssl)\
+		$(use_enable debug)\
+		$(use_enable oidentd)
+}
 
 src_compile() {
-	econf $(use_enable ssl)
 	# Parallel make fails.
 	# {C,CXX,LD}FLAGS aren't respected, bug 241030.
 	emake CFLAGS="${CFLAGS}" CPPFLAGS="${CXXFLAGS}" \
