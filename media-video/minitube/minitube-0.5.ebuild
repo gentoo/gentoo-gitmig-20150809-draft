@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.5.ebuild,v 1.1 2009/07/31 10:26:24 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-0.5.ebuild,v 1.2 2009/07/31 13:34:48 hwoarang Exp $
 
 EAPI="2"
 
@@ -27,10 +27,6 @@ S="${WORKDIR}/${PN}"
 
 LANGS="es_AR pt_BR"
 LANGSNOLONG="de_DE it_IT pl_PL ru_RU"
-
-PATCHES=(
-	"${FILESDIR}"/fix_version_${PV}.patch
-)
 
 src_configure() {
 	eqmake4 ${PN}.pro
