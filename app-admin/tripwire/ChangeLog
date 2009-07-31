@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/tripwire
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.28 2009/01/04 19:28:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/ChangeLog,v 1.29 2009/07/31 09:20:08 volkmar Exp $
+
+  31 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> tripwire-2.4.1.2.ebuild:
+  Add static USE flag. Fix bug 131816. Thanks to Eric Martin.
 
 *tripwire-2.4.1.2 (04 Jan 2009)
 

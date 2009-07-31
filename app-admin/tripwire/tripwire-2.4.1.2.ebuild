@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.1.2.ebuild,v 1.1 2009/01/04 19:28:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.1.2.ebuild,v 1.2 2009/07/31 09:20:08 volkmar Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/tripwire/tripwire-${TW_VER}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
-IUSE="ssl"
+IUSE="ssl static"
 
 DEPEND="virtual/libc
 		sys-devel/automake
@@ -58,7 +58,7 @@ src_compile() {
 		eend
 	einfo "Done."
 	chmod +x configure
-	econf `use_enable ssl openssl` || die
+	econf $(use_enable ssl openssl) $(use_enable static)
 	emake || die
 }
 
