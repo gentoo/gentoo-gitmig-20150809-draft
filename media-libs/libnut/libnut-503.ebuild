@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/libnut-503.ebuild,v 1.2 2009/03/11 23:09:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/libnut-503.ebuild,v 1.3 2009/07/31 21:31:54 chainsaw Exp $
 
 inherit flag-o-matic
 
@@ -19,6 +19,6 @@ RDEPEND=""
 src_install() {
 	make PREFIX="${D}/usr" install || die "make install died"
 	dodoc README docs/*
-	cd ${S}/nututils
+	cd "${S}/nututils"
 	dobin nutindex nutmerge nutparse avireader
 }
