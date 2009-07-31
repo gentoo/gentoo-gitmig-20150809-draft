@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.45 2009/07/31 07:12:16 grobian Exp $
+# $Id: ChangeLog,v 1.46 2009/07/31 14:31:33 mduft Exp $
+
+  31 Jul 2009; Markus Duft <mduft@gentoo.org>
+  windows/interix/3.5/package.mask:
+  masked numpy on interix 3.5, since it conflicts with system headers
 
   31 Jul 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   unmask perl's -r6 and -r7, r7 is now gone in Prefix again too, -r6 made
