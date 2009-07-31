@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/yaz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.57 2009/07/31 08:58:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.58 2009/07/31 09:01:46 robbat2 Exp $
+
+  31 Jul 2009; Robin H. Johnson <robbat2@gentoo.org> -yaz-2.0.8.ebuild,
+  -yaz-2.0.19.ebuild, -files/yaz-2.0.19-notcpd-fix.diff, -yaz-2.1.8.ebuild,
+  -yaz-2.1.8-r1.ebuild, -yaz-2.1.10.ebuild, -yaz-2.1.42.ebuild,
+  -yaz-3.0.16.ebuild, -files/yaz-3.0.16-icu-automagic.patch:
+  Clean up old ebuilds to make bug #226559 happy.
 
 *yaz-3.0.47 (31 Jul 2009)
 
