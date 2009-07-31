@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.23 2009/07/31 17:26:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.24 2009/07/31 17:31:04 ssuominen Exp $
 
 # This file requires >=portage-2.1.2 (see bug #61732)
 
@@ -13,7 +13,3 @@ sys-fs/lvm2 static
 # Scheduled for removal, so the tools support only LVM2 by default as of the
 # 2008.0 release.
 sys-fs/lvm2 lvm1
-
-# 2008/02/05 - Chris Gianelloni <wolf31o2@gentoo.org>
-# Starting with 2008.0, arts is no longer in default USE.
-app-emulation/emul-linux-x86-soundlibs arts
