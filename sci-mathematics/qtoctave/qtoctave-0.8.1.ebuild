@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.1.ebuild,v 1.3 2009/02/20 18:14:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.1.ebuild,v 1.4 2009/07/31 13:12:55 markusle Exp $
 
 EAPI="1"
 
@@ -23,6 +23,13 @@ RDEPEND="${DEPEND}
 		>=sci-mathematics/octave-3.0.0"
 
 S="${WORKDIR}"/${P}/${PN}
+
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gcc4.4.patch
+}
 
 src_compile() {
 	mycmakeargs="-DCMAKE_SKIP_RPATH:BOOL=YES"
