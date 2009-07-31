@@ -1,7 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.25 2009/07/01 11:28:39 fmccor Exp $
-# Please add a proper entry, like a ChangeLog file, to the top, thanks.
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.26 2009/07/31 09:08:26 ssuominen Exp $
 
 # Raúl Porcel <armin76@gentoo.org> (09 Jun 2009)
 # Needs qt-assistant
@@ -35,25 +34,25 @@ sci-libs/hdf5 mpi
 media-sound/rubyripper wav
 
 # Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
 dev-util/anjuta	valgrind
+
 # Needs chicken
-dev-lang/swig	chicken
+dev-lang/swig chicken
+
 # Needs pike
-dev-lang/swig	pike
+dev-lang/swig pike
 
 # Needs libmodplug
 media-libs/sdl-sound mikmod
 
 # Needs clisp which won't build
-app-text/texlive	xindy
+app-text/texlive xindy
 
 # Needs krb4 USE flag for mit-krb5 (Bug #255579), and we believe it to be unstable.
-net-im/pidgin	zephyr
+net-im/pidgin zephyr
 
 # Mask zemberek for enchant because it requires java.
-app-text/enchant	zemberek
+app-text/enchant zemberek
 
 # Mask srtp for ortp because libsrtp is marked -sparc
-net-libs/ortp	srtp
+net-libs/ortp srtp
