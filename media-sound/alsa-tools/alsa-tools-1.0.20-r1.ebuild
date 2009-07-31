@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20-r1.ebuild,v 1.1 2009/06/04 18:24:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20-r1.ebuild,v 1.2 2009/07/31 21:37:25 beandog Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -26,7 +26,6 @@ alsa_cards_rme32 alsa_cards_rme96 alsa_cards_sscape alsa_cards_pcxhr
 ${ECHOAUDIO_CARDS}"
 
 RDEPEND=">=media-libs/alsa-lib-1.0.20-r1
-	<media-libs/alsa-lib-1.0.20-r1
 	fltk? ( =x11-libs/fltk-1.1* )
 	gtk? ( =x11-libs/gtk+-2* )"
 DEPEND="${RDEPEND}"
