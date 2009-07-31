@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090521.ebuild,v 1.1 2009/05/26 02:07:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090521.ebuild,v 1.2 2009/07/31 06:47:10 robbat2 Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -83,15 +83,15 @@ src_install() {
 		dobin "${T}"/${bin}
 	done
 	dodoc README changes.txt
-	if hasq test $FEATURES ; then
+	if use test ; then
+		tb="${T}"/testresults.tar.bz2
 		export ASLTSDIR="$(<"${T}"/asltdir)"
-		cd "${ASLTSDIR}"/tmp/RESULTS || die "cd ${ASLTSDIR}/tmp/RESULTS failed"
 		ebegin "Creating Test Tarball"
-		tar -cjf testresults.tar.bz2 * || die "tar failed"
+		tar -cjf "${tb}" -C "${ASLTSDIR}"/tmp/RESULTS .  || die "tar failed"
 		eend $?
 		dodir /usr/share/${PF}
 		insinto /usr/share/${PF}
-		doins testresults.tar.bz2 || die "doins testresults.tar.bz2 failed"
+		doins ${tb} || die "doins testresults.tar.bz2 failed"
 	fi
 
 }
