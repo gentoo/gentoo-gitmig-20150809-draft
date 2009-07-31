@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/ccrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.15 2009/06/27 18:00:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.16 2009/07/31 14:22:49 chainsaw Exp $
+
+  31 Jul 2009; <chainsaw@gentoo.org> ccrypt-1.8.ebuild:
+  Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org> in bug #279363. Compile-tested on a Core2 Duo.
 
 *ccrypt-1.8 (27 Jun 2009)
 
