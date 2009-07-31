@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64-fbsd/package.use.mask,v 1.2 2009/07/31 08:55:53 ssuominen Exp $
+
 # Java currently uses generation 1
 dev-libs/cyrus-sasl java
 
@@ -11,4 +15,3 @@ x11-drivers/nvidia-drivers acpi
 # Ben de Groot <yngwin@gentoo.org> (4 Feb 2009)
 # needs qt-webkit keyworded
 x11-libs/qt-assistant webkit
-

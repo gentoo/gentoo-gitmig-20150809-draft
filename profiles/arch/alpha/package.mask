@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/package.mask,v 1.9 2009/07/31 08:53:45 ssuominen Exp $
+
 # Jose Luis Rivero <yoswink@gentoo.org> (13 Jun 2006)
 # Alpha arch team doesn't want to keep this alive due to
 # the rare existance of systems using it.
