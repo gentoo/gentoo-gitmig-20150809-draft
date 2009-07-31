@@ -24,10 +24,6 @@ sys-libs/glibc hardened
 games-fps/doom-data doomsday
 games-fps/freedoom doomsday
 
-# Ben de Groot <yngwin@gentoo.org> (22 Jun 2008)
-# does not work with ffmpeg new headers yet
-<www-plugins/gnash-0.8.3 ffmpeg
-
 # Steve Dibb <beandog@gentoo.org> (28 Oct 2008)
 # Mask realplayer binary codec support for security issues, bug 232999, 240341
 media-sound/amarok real
