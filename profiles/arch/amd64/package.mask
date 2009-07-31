@@ -1,5 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.mask,v 1.14 2009/07/31 07:40:52 ssuominen Exp $
-
-# Markus Meier <maekke@gentoo.org> (18 Jan 2009)
-# mask these versions for a smooth upgrade of x11-libs/qt-4.4.2 wrt bug #248038.
-~dev-util/qgit-2.0
