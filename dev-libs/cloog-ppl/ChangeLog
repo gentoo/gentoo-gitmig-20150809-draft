@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.9 2009/07/22 16:17:54 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.10 2009/07/31 07:52:20 dirtyepic Exp $
+
+*cloog-ppl-0.15.4 (31 Jul 2009)
+
+  31 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> +cloog-ppl-0.15.4.ebuild:
+  Version bump.
 
   22 Jul 2009; Joseph Jezak <josejx@gentoo.org> cloog-ppl-0.15.3.ebuild:
   Marked ~ppc for bug #269088.
