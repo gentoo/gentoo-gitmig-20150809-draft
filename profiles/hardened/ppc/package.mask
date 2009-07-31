@@ -1,6 +1,6 @@
-# Copyright 2007 Gentoo Foundation.
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.18 2008/10/18 21:10:47 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.mask,v 1.19 2009/07/31 11:13:27 ssuominen Exp $
 
 # needs >=sys-devel/gcc-4.2
 sys-libs/libfreevec
@@ -23,7 +23,8 @@ app-text/bibus
 # >=sys-libs/glibc-2.5 is required for glibc-based installs
 sys-apps/openrc
 sys-apps/makedev
->=sys-apps/baselayout-2.0.0
+>=sys-apps/baselayout-2
+
 # needs openrc
 >=media-sound/pulseaudio-0.9.11
 

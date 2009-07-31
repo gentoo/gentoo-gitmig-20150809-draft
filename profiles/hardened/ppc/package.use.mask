@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ppc/package.use.mask,v 1.23 2009/07/31 11:13:27 ssuominen Exp $
+
 # This file requires >=portage-2.1.1
 
 # Joseph Jezak <josejx@gentoo.org> (Mar 20 2009)
@@ -35,10 +39,6 @@ media-video/avidemux aften
 
 # app-misc/tomboy is missing ppc support
 gnome-base/gnome mono
-
-# nixnut <nixnut@gentoo.org> (11 mar 2008)
-# USE=musepack wants musepack-tools which can't be build on ppc
-media-sound/squeezecenter musepack
 
 # USE=laptop wants x86 specific packages which can't be build on ppc
 sys-apps/hal laptop
