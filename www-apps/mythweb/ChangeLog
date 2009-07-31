@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/mythweb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.66 2009/07/19 05:43:22 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mythweb/ChangeLog,v 1.67 2009/07/31 18:18:10 cardoe Exp $
+
+  31 Jul 2009; Doug Goldstein <cardoe@gentoo.org>
+  mythweb-0.21_p17573.ebuild, mythweb-0.21_p20323.ebuild:
+  need to explicitly depend on unzip since the PM does not for the unpack
+  step in current EAPIs
 
 *mythweb-0.21_p20323 (19 Jul 2009)
 
