@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.16-r13.ebuild,v 1.6 2007/02/21 02:51:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.6.16-r13.ebuild,v 1.7 2009/07/31 00:55:37 mpagano Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
