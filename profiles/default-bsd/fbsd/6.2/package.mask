@@ -1,6 +1,6 @@
-# Copyright 2004-2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.13 2009/05/22 14:12:38 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/package.mask,v 1.14 2009/07/31 09:49:30 ssuominen Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Make sure we don't get wrong versions
