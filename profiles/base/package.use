@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.16 2009/07/31 16:44:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.17 2009/07/31 16:47:13 ssuominen Exp $
 
 # This file requires >=portage-2.1.2 (see bug #61732)
 
@@ -42,13 +42,7 @@ dev-lang/ruby berkdb gdbm openssl
 # Starting with 2008.0, arts is no longer in default USE.
 app-emulation/emul-linux-x86-soundlibs arts
 
-# 2008/02/20 - Chris Gianelloni <wolf31o2@gentoo.org>
-# Since we have unicode on by default pretty much everywhere, add slang so we
-# can get a unicode-aware Midnight Commander.
-app-misc/mc slang
-
 # 2008/08/31 - Alin Năstac <mrness@gentoo.org>
 # This option is needed on multi-homed boxes, otherwise the server could
 # answer with the wrong source IP address (#235688).
 net-dialup/freeradius udpfromto
-
