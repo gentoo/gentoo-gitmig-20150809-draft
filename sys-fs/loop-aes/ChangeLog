@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/loop-aes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.44 2009/07/20 02:03:16 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/ChangeLog,v 1.45 2009/07/31 15:01:18 chainsaw Exp $
+
+  31 Jul 2009; <chainsaw@gentoo.org> loop-aes-3.2g.ebuild:
+  Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org> in bug #279401. Compile-tested on a Core2 Duo with
+  USE="-extra-ciphers -keyscrub -padlock".
 
   20 Jul 2009; Jeremy Olexa <darkside@gentoo.org> loop-aes-3.2f.ebuild:
   amd64 stable, bug 268676
