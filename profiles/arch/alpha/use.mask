@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.25 2009/05/28 16:48:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.26 2009/07/31 15:59:14 ssuominen Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -133,9 +133,6 @@ video_cards_vesa
 # dspam and dspam-web use this one
 # We've never supported cyrus-imapd because nobody asked for
 cyrus
-
-# Masked until bmpx works and is re-keyworded, see Bug #111975
-bmpx
 
 # disable until tested
 # # bug 148402
