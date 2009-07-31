@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.255 2009/07/09 05:12:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.256 2009/07/31 17:01:30 ssuominen Exp $
+
+  31 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> dhcpcd-4.0.7.ebuild,
+  dhcpcd-4.0.13.ebuild, dhcpcd-5.0.4.ebuild, dhcpcd-5.0.5.ebuild,
+  dhcpcd-5.0.6.ebuild:
+  Move USE default zeroconf from profiles/base/package.use to here.
 
 *dhcpcd-5.0.6 (09 Jul 2009)
 
