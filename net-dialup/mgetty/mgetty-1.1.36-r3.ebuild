@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.1 2008/12/09 23:18:11 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.2 2009/07/31 11:14:43 flameeyes Exp $
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -60,8 +60,8 @@ src_compile() {
 	use fidonet && append-flags "-DFIDO"
 	append-flags "-DAUTO_PPP"
 
-	# parallel make fix later - 'sedscript' issue
-	VARTEXFONTS="${T}"/fonts make prefix=/usr \
+	# bug #279783
+	VARTEXFONTS="${T}"/fonts emake -j1 prefix=/usr \
 		CC="$(tc-getCC)" \
 		CONFDIR=/etc/mgetty+sendfax \
 		CFLAGS="${CFLAGS}" \
@@ -74,7 +74,7 @@ src_install () {
 	keepdir /var/log/mgetty
 	dodir /usr/share/info
 
-	make prefix="${D}/usr" \
+	emake -j1 prefix="${D}/usr" \
 		INFODIR="${D}/usr/share/info" \
 		CONFDIR="${D}/etc/mgetty+sendfax" \
 		MAN1DIR="${D}/usr/share/man/man1" \
@@ -112,20 +112,20 @@ src_install () {
 	dodoc voice/doc/*
 
 	if use fax; then
-	    mv samples/new_fax.all samples_new_fax.all || die "move failed."
-	    docinto samples
-	    dodoc samples/*
+		mv samples/new_fax.all samples_new_fax.all || die "move failed."
+		docinto samples
+		dodoc samples/*
 
-	    docinto samples/new_fax
-	    dodoc samples_new_fax.all/*
+		docinto samples/new_fax
+		dodoc samples_new_fax.all/*
 	fi
 
 	if ! use fax; then
-	    insinto /usr/share/${PN}/frontends
-	    doins -r frontends/{voice,network}
+		insinto /usr/share/${PN}/frontends
+		doins -r frontends/{voice,network}
 	else
-	    insinto /usr/share/${PN}
-	    doins -r frontends
+		insinto /usr/share/${PN}
+		doins -r frontends
 	fi
 	insinto /usr/share/${PN}
 	doins -r patches
