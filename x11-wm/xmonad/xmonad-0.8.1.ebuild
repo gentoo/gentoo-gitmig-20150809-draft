@@ -1,33 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.8.ebuild,v 1.3 2009/07/31 17:31:20 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.8.1.ebuild,v 1.1 2009/07/31 17:31:20 kolmodin Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
+inherit haskell-cabal eutils
 
-inherit base haskell-cabal eutils
-
-DESCRIPTION="A lightweight X11 window manager"
-HOMEPAGE="http://www.xmonad.org/"
+DESCRIPTION="A tiling window manager"
+HOMEPAGE="http://xmonad.org"
 SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
-IUSE=""
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+IUSE=""
 
-DEPEND="dev-haskell/mtl
-	>=dev-haskell/x11-1.4.1
-	>=dev-lang/ghc-6.6
-	>=dev-haskell/cabal-1.2"
+DEPEND=">=dev-lang/ghc-6.6.1
+		>=dev-haskell/cabal-1.2
+		dev-haskell/mtl
+		>=dev-haskell/x11-1.4.3"
 RDEPEND="${DEPEND}"
 
 SAMPLE_CONFIG="xmonad.hs"
 SAMPLE_CONFIG_LOC="man"
-
-src_unpack() {
-	base_src_unpack
-	sed -e 's/base >= 3/base < 4 \&\& >= 3/' -i "${S}/${PN}.cabal"
-}
 
 src_install() {
 	cabal_src_install
