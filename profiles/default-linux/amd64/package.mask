@@ -1,9 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.mask,v 1.24 2009/07/31 07:44:29 ssuominen Exp $
-
-# Markus Meier <maekke@gentoo.org> (18 Jan 2009)
-# mask these versions for a smooth upgrade of x11-libs/qt-4.4.2 wrt bug #248038.
-~dev-util/qgit-2.0
-
-# 2005/10/24 Simon Stelling <blubb@gentoo.org>
-# OpenOffice.org versions prior to 2.0.4 do not work in 64bit mode
-<app-office/openoffice-2.0.4
