@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.214 2009/07/30 23:18:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.215 2009/07/31 09:33:22 fauli Exp $
+
+  31 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
+  pygtk-2.14.1-r1.ebuild:
+  stable x86, bug 279391
 
   30 Jul 2009; Jeremy Olexa <darkside@gentoo.org> pygtk-2.14.1-r1.ebuild:
   amd64 stable, bug 279391
