@@ -1,15 +1,19 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.9 2009/07/31 08:48:46 ssuominen Exp $
+
 # Ben de Groot <yngwin@gentoo.org> (15 Jul 2009)
 # Mask dillo useflag as current version is unkeyworded (bug 253083)
 mail-client/claws-mail dillo
 
 # Brent Baude <ranger@gentoo.org> (30 May 2009)
 # Masking prolog from dev-libs/ppl
-dev-libs/ppl	prolog
+dev-libs/ppl prolog
 
 # Brent Baude <ranger@gentoo.org> (05 May 2009)
 # Masking webkit from  libproxy due to TOC failure on webkit
 # and stupid 64bit toolchain.
-net-libs/libproxy	webkit
+net-libs/libproxy webkit
 
 # Brent Baude <ranger@gentoo.org> (11 June 2008)
 # Masking webkit from gimp do to lame ppc64 toolchain and TOC
@@ -22,5 +26,3 @@ sys-auth/pambase passwdqc
 # Joseph Jezak <josejx@gentoo.org> (8 March 2009)
 # Masking laptop use flag for hal
 sys-apps/hal laptop
-
-
