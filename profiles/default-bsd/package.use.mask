@@ -1,7 +1,3 @@
-# Mask until Qt 4.4 works with this package, as we need to mask 4.3
-# because of bug 248038. See also bug 243362.
-sci-visualization/paraview qt4
-
 app-misc/mc pam
 dev-util/catalyst cdr
 # See http://bugzilla.gnome.org/show_bug.cgi?id=370847 for why we disable pam
@@ -53,12 +49,10 @@ media-video/vlc dc1394 libsysfs ieee1394
 # Depends on torque which is a linux only thing
 sys-cluster/openmpi pbs
 
-
 # Alexis Ballier <aballier@gentoo.org> (25 Sep 2008)
 # elf -> dev-libs/elfutils is too tight to the gnu libc
 # rpm could be masked but we have rpm 5 keyworded even if it's still masked.
 net-analyzer/net-snmp elf
-
 
 # Alexis Ballier <aballier@gentoo.org> (4 Oct 2008)
 # clisp doesn't build out of the box but can be fixed, xindy's way of building
@@ -70,11 +64,6 @@ app-text/texlive xindy
 # Requires bluez-libs which is linux only
 net-libs/libpcap bluetooth
 gnome-base/gvfs bluetooth
-
-# Alexis Ballier <aballier@gentoo.org> (15 Dec 2008)
-# Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
 
 # Alexis Ballier <aballier@gentoo.org> (22 Jan 2009)
 # Requires gpm
