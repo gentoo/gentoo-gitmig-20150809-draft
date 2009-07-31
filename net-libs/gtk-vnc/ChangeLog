@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gtk-vnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.30 2009/05/13 10:31:15 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gtk-vnc/ChangeLog,v 1.31 2009/07/31 12:47:05 chainsaw Exp $
+
+  31 Jul 2009; <chainsaw@gentoo.org> gtk-vnc-0.3.8-r1.ebuild:
+  Marked stable on AMD64 as requested by Gilles Dartiguelongue
+  <eva@gentoo.org> in bug #279511. Compile-tested on a Core2 Duo.
 
 *gtk-vnc-0.3.8-r1 (13 May 2009)
 
