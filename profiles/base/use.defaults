@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.32 2008/09/03 07:43:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.33 2009/07/31 15:52:04 ssuominen Exp $
 
 aalib				media-libs/aalib
 acl					sys-apps/acl
@@ -117,7 +117,6 @@ wmf					media-libs/libwmf
 xine				media-libs/xine-lib
 xml					dev-libs/libxml
 xml2				dev-libs/libxml2
-xmms				media-sound/xmms
 xvid				media-libs/xvid
 yaz					dev-libs/yaz
 zlib				sys-libs/zlib

@@ -85,8 +85,6 @@ bmp
 # media-sound/bmpx is broken, app-admin/conky wants to pull it in (bug #162405)
 bmpx
 
-# xmms is going away
-xmms
 # app-admin/conky deps on xmms with this flag
 infopipe
 
