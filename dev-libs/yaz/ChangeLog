@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/yaz
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.56 2009/01/05 21:46:11 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz/ChangeLog,v 1.57 2009/07/31 08:58:47 robbat2 Exp $
+
+*yaz-3.0.47 (31 Jul 2009)
+
+  31 Jul 2009; Robin H. Johnson <robbat2@gentoo.org> +yaz-3.0.47.ebuild,
+  +files/yaz-3.0.47-icu-automagic.patch:
+  Bug #277853: version bump. Thanks to John Klehm
+  <xixsimplicityxix@gmail.com>.
 
   05 Jan 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   drop local icu USE-flag description, as it's global now
