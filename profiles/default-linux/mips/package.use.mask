@@ -1,4 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.30 2009/07/30 19:34:26 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/package.use.mask,v 1.31 2009/07/31 09:37:02 ssuominen Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -45,15 +47,11 @@ dev-libs/apr-util mysql
 # Stuart Longland <redhatter@gentoo.org> (07 Sep 2007)
 # mplayer not tested with these flags yet.  I may remove these slowly as I test
 # more functions of mplayer.
-media-video/mplayer amrnb amrwb bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd joystick live mad mp2 openal pnm pvr radio rar rtc svga teletext tga v4l2 xanim xinerama zoran
+media-video/mplayer amrnb amrwb bidi bl cddb cdio cdparanoia cpudetection dga dv dvb enca esd joystick live mad mp2 openal pnm pvr radio rar rtc svga teletext tga v4l2 xanim xinerama zoran ladspa
 
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=gnome-base/gdm-2.20 remote
-
-# Steve Dibb <beandog@gentoo.org> (01 Nov 2007)
-# needs media-libs/ladspa-sdk keyworded
-media-video/mplayer ladspa
 
 # Stuart Longland <redhatter@gentoo.org> (23 Dec 2007)
 # Don't know if ATM works, can't test.
