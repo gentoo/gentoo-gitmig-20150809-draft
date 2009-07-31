@@ -86,7 +86,7 @@ phonon
 qdbm
 
 # java releated use flags
-# need to get dev-java/ant marked stable  and dev-php4/php-java-bridge stable
+# need to get dev-java/ant marked stable stable
 # before unmasking (16 Oct 2006 nichoj)
 java
 java6
