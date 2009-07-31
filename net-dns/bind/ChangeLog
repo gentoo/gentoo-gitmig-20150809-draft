@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.242 2009/07/30 20:03:08 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.243 2009/07/31 21:23:48 tcunha Exp $
+
+  31 Jul 2009; Tiago Cunha <tcunha@gentoo.org> bind-9.4.3_p3.ebuild:
+  stable sparc, security bug 279508
 
   30 Jul 2009; Joseph Jezak <josejx@gentoo.org> bind-9.4.3_p3.ebuild:
   Marked ppc/ppc64 stable for bug #279508.
