@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/moleinvasion
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moleinvasion/ChangeLog,v 1.1 2009/07/31 12:30:22 nyhm Exp $
+
+*moleinvasion-0.4 (31 Jul 2009)
+
+  31 Jul 2009; Tristan Heaven <nyhm@gentoo.org> +moleinvasion-0.4.ebuild,
+  +metadata.xml:
+  Initial commit
+
