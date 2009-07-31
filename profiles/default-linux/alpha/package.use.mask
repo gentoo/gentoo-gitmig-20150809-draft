@@ -1,8 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.22 2009/03/20 15:31:34 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/package.use.mask,v 1.23 2009/07/31 09:17:20 ssuominen Exp $
 
 # Patrick Lauer <patrick@gentoo.org> (23 Nov 2008)
 # needs webkit keyworded
 dev-python/PyQt4 webkit
+
 # Tobias Klausmann <klausman@gentoo.org) (31 Jan 2009)
 # idem
 x11-libs/qt-assistant webkit
@@ -23,10 +26,6 @@ xfce-base/xfce4-extras lm_sensors
 # dependency can't be fulfilled at the moment
 net-im/mcabber otr
 
-# Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
-
 # Tobias Klausmann <klausman@gentoo.org> (15 Jun 2008)
 # No hardware to test net-dialup/linux-atm on alpha, so mask atm use flag
 # on those.
@@ -35,4 +34,3 @@ net-dialup/ppp atm
 
 # Needs nut and qstat respectively, neither is keyworded on alpha.
 net-analyzer/nagios-plugins ups nagios-game
-
