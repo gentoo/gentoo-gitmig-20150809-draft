@@ -1,12 +1,10 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/package.mask,v 1.8 2009/07/30 05:04:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/package.mask,v 1.9 2009/07/31 09:47:15 ssuominen Exp $
 
 >=sys-kernel/linux-headers-2.5
-
 >=sys-devel/gcc-2.95.4
 >=sys-libs/glibc-2.2.6
-
 sys-fs/ntfsprogs
 media-video/cinelerra
 dev-libs/elfutils
