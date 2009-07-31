@@ -2,6 +2,4 @@
 
 # Brent Baude <ranger@gentoo.org>
 # Masking request for qt for hwoarang
-<dev-python/PyQt4-4.4
-<dev-python/PyQt-3.17.6
 ~dev-util/qgit-2.0

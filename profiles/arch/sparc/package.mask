@@ -1,11 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.13 2009/07/30 14:41:08 ssuominen Exp $
-
-# Raúl Porcel <armin76@gentoo.org> (06 Feb 2009)
-# mask these versions for a smooth upgrade of x11-libs/qt-4.4.2 wrt bug #248038.
-<dev-python/PyQt4-4.4
-<dev-python/PyQt-3.17.6
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.mask,v 1.14 2009/07/31 07:42:30 ssuominen Exp $
 
 # Jason Wever <weeve@gentoo.org>
 # gradm requires 64 bit support, which doesn't exist in this profile
