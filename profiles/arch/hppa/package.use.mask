@@ -1,5 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.27 2009/07/30 19:20:07 ssuominen Exp $
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.use.mask,v 1.28 2009/07/31 08:58:45 ssuominen Exp $
+
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Mask media-gfx/imagemagick[openmp] until we have a stable
@@ -74,12 +76,6 @@ kde-base/kopete sms
 #  causes segfaults but issues illegal instructions as well.
 dev-lang/swig mzscheme clisp chicken
 
-# Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
-# Needs dev-util/valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
-
 # Jeroen Roovers <jer@gentoo.org> (12 Apr 2007)
 # Mask until fixed.
 net-misc/tightvnc server
-
