@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.74 2009/07/27 17:25:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.75 2009/07/31 07:09:45 wired Exp $
+
+*PyQt4-4.5.4 (31 Jul 2009)
+
+  31 Jul 2009; Alex Alexander <wired@gentoo.org> +PyQt4-4.5.4.ebuild:
+  version bump
 
   27 Jul 2009; nixnut <nixnut@gentoo.org> PyQt4-4.4.4-r5.ebuild:
   ppc stable #276852
