@@ -1,5 +1,6 @@
-# Mask since there are no targets for other archs than x86 and amd64
-sci-misc/boinc cuda
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.13 2009/07/31 07:57:00 ssuominen Exp $
 
 # Note that this requires portage-2.1.1+ so if you need this functionality,
 # make sure your package forces a new-enough portage.
@@ -12,6 +13,5 @@ sys-libs/glibc hardened
 games-fps/doom-data doomsday
 games-fps/freedoom doomsday
 
-# Steve Dibb <beandog@gentoo.org> (26 Feb 2009)
-# General mask of VDPAU support, only available on x86 and amd64
-media-video/mplayer vdpau
+# amd64 and x86 only
+sci-misc/boinc cuda
