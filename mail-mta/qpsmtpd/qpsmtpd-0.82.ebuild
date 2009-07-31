@@ -1,19 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.82_pre9999.ebuild,v 1.1 2009/04/28 07:50:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.82.ebuild,v 1.1 2009/07/31 08:06:40 robbat2 Exp $
 
 EAPI=2
 
-inherit eutils git
+inherit eutils perl-app
 
 DESCRIPTION="qpsmtpd is a flexible smtpd daemon written in Perl"
 HOMEPAGE="http://smtpd.develooper.com"
-EGIT_REPO_URI="git://git.develooper.com/qpsmtpd.git"
+SRC_URI="http://smtpd.develooper.com/files/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS=""
-IUSE="postfix async ipv6 syslog"
+KEYWORDS="~amd64 ~x86"
+IUSE="postfix ipv6 syslog"
 
 RDEPEND=">=dev-lang/perl-5.8.0
 	dev-perl/Net-DNS
@@ -42,13 +42,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.40-clamd_conf.patch
 }
 
-src_compile() {
-	perl Makefile.PL PREFIX=/usr || die "Running Makefile.PL failed"
-	emake || die "make failed"
-}
-
 src_install() {
-	emake install DESTDIR="${D}" || die "emake install failed"
+	perl-module_src_install
 
 	insinto /etc/xinetd.d
 	newins "${FILESDIR}"/qpsmtpd.xinetd qpsmtpd

@@ -1,6 +1,14 @@
 # ChangeLog for mail-mta/qpsmtpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.5 2009/04/28 07:50:08 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/ChangeLog,v 1.6 2009/07/31 08:06:40 robbat2 Exp $
+
+*qpsmtpd-0.83_pre9999 (31 Jul 2009)
+*qpsmtpd-0.82 (31 Jul 2009)
+
+  31 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
+  -qpsmtpd-0.82_pre9999.ebuild, +qpsmtpd-0.82.ebuild,
+  +qpsmtpd-0.83_pre9999.ebuild:
+  Version bump per bug #279490.
 
 *qpsmtpd-0.82_pre9999 (28 Apr 2009)
 
