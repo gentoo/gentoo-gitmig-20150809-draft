@@ -80,11 +80,6 @@ video_cards_virtualbox
 input_devices_synaptics
 input_devices_wacom
 
-# beep-media-player is in package.mask
-bmp
-# media-sound/bmpx is broken, app-admin/conky wants to pull it in (bug #162405)
-bmpx
-
 # app-admin/conky deps on xmms with this flag
 infopipe
 
