@@ -1,4 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.22 2009/02/06 16:30:54 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/package.use.mask,v 1.23 2009/07/31 09:31:00 ssuominen Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -11,11 +13,6 @@ app-admin/gkrellm ntlm
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=media-video/totem-2.20 galago
-
-# Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
-# Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
 
 # missing keyword for sys-cluster/openmpi sys-cluster/mpich2
 dev-libs/boost mpi
