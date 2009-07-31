@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/traceroute-nanog
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.14 2007/07/02 14:44:09 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/ChangeLog,v 1.15 2009/07/31 22:27:30 chainsaw Exp $
+
+  31 Jul 2009; <chainsaw@gentoo.org> traceroute-nanog-6.3.10-r1.ebuild:
+  Marked stable on AMD64 as requested by Mike Nerone. Quoted two variables;
+  package tested by AMD64 AT Chad A. Simmons in
+  http://bugs.gentoo.org/show_bug.cgi?id=279519#c1
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   traceroute-nanog-6.3.10-r1.ebuild:
