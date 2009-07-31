@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.166 2009/07/28 20:27:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.167 2009/07/31 17:51:02 ssuominen Exp $
+
+  31 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.33.ebuild,
+  lvm2-2.02.33-r1.ebuild, lvm2-2.02.36.ebuild, lvm2-2.02.37.ebuild,
+  lvm2-2.02.39.ebuild, lvm2-2.02.42.ebuild, lvm2-2.02.45.ebuild,
+  lvm2-2.02.45-r1.ebuild, lvm2-2.02.45-r2.ebuild, lvm2-2.02.48.ebuild,
+  lvm2-2.02.48-r1.ebuild, lvm2-2.02.48-r2.ebuild, lvm2-2.02.49.ebuild,
+  lvm2-2.02.49-r1.ebuild, lvm2-2.02.49-r2.ebuild:
+  Move USE defaults static and lvm1 from profiles/base/package.use to here.
 
 *lvm2-2.02.49-r2 (28 Jul 2009)
 
