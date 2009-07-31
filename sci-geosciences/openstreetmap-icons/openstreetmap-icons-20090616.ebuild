@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/openstreetmap-icons/openstreetmap-icons-20090616.ebuild,v 1.4 2009/06/30 06:58:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/openstreetmap-icons/openstreetmap-icons-20090616.ebuild,v 1.5 2009/07/31 06:53:55 nerdboy Exp $
 
 EAPI=2
 
@@ -18,7 +18,9 @@ IUSE=""
 DEPEND="dev-perl/ImageInfo
 	media-gfx/imagemagick[perl]
 	dev-perl/File-Slurp
-	dev-perl/DBD-SQLite"
+	dev-perl/DBD-SQLite
+	dev-perl/XML-Twig"
+
 RDEPEND=""
 
 S=${WORKDIR}/${P}/map-icons

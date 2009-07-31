@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/openstreetmap-icons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/openstreetmap-icons/ChangeLog,v 1.4 2009/06/30 06:58:50 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/openstreetmap-icons/ChangeLog,v 1.5 2009/07/31 06:53:55 nerdboy Exp $
+
+  31 Jul 2009; Steve Arnold <nerdboy@gentoo.org>
+  openstreetmap-icons-20090616.ebuild:
+  Added missing dependency, but it still triggers exceptions on svg files.
+  At least the geoinfo perl script runs now...
 
   30 Jun 2009; Alfredo Tupone <tupone@gentoo.org>
   openstreetmap-icons-20090616.ebuild:
