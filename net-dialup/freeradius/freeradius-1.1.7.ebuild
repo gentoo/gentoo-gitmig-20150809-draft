@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.7 2008/05/21 18:53:24 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.1.7.ebuild,v 1.8 2009/07/31 17:06:44 ssuominen Exp $
+
+EAPI=1
 
 WANT_AUTOMAKE="none"
 
@@ -13,7 +15,7 @@ HOMEPAGE="http://www.freeradius.org/"
 KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="bindist debug edirectory firebird frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl udpfromto"
+IUSE="bindist debug edirectory firebird frascend frnothreads frxp kerberos ldap mysql pam postgres snmp ssl +udpfromto"
 
 RDEPEND="!net-dialup/cistronradius
 	!net-dialup/gnuradius
