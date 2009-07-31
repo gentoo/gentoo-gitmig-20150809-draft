@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/tome
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.30 2008/09/17 22:03:11 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/tome/ChangeLog,v 1.31 2009/07/31 13:51:20 nyhm Exp $
+
+  31 Jul 2009; Tristan Heaven <nyhm@gentoo.org> tome-2.3.1.ebuild,
+  tome-2.3.4.ebuild, tome-2.3.5.ebuild:
+  Fix typo in DEPEND, bug #279797
 
 *tome-2.3.5 (17 Sep 2008)
 
