@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2988 2009/07/30 18:02:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2989 2009/07/31 06:52:04 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 Jul 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
+  unmask virtual/emacs-23 and emacs-daemon, update mask for the forthcoming
+  Emacs 24
 
   30 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Mask gnbd and gnbd-kernel since they require cman.
