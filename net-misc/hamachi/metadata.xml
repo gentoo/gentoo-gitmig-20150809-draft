@@ -7,7 +7,4 @@
   </maintainer>
   <longdescription>Hamachi is an encrypted tunneling service that allows pseudo networks to be joined together.
 </longdescription>
-  <use>
-    <flag name="pentium">Add support for older Pentium based systems</flag>
-  </use>
 </pkgmetadata>
