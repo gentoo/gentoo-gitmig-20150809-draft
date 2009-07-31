@@ -138,3 +138,8 @@ media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 # Alexis Ballier <aballier@gentoo.org> (07 Jul 2009)
 # The pda interface doesnt build, bug #277037
 >=media-video/vlc-1.0.0 pda
+
+# Samuli Suominen <ssuominen@gentoo.org> (31 Jul 2009)
+# Security issues wrt #190835
+games-fps/doom-data doomsday
+games-fps/freedoom doomsday
