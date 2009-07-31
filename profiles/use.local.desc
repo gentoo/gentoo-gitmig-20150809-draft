@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4692 2009/07/31 12:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4693 2009/07/31 16:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -26,7 +26,6 @@ app-accessibility/speech-dispatcher:flite - Adds support for flite speech engine
 app-admin/bcfg2:server - Installs scripts to be used on the server-side of this app
 app-admin/conky:apcupsd - enable support for sys-power/apcupsd
 app-admin/conky:audacious - enable monitoring of music played by media-sound/audacious
-app-admin/conky:bmpx - enable monitoring of music played by media-sound/bmpx
 app-admin/conky:iostats - enable support for per-task I/O statistics
 app-admin/conky:ipv6 - disable support for tcp (ip4) port monitoring
 app-admin/conky:lua - enable if you want Lua scripting support
@@ -2183,7 +2182,6 @@ net-im/kadu:amarok - Enables media-sound/amarok:0 (amarok1) media player support
 net-im/kadu:amarok2 - Enables media-sound/amarok:2 (amarok2) media player support
 net-im/kadu:audacious - Enables media-sound/audacious media player support
 net-im/kadu:avatar - Display Gadu Avatars in Kadu
-net-im/kadu:bmpx - Enables media-sound/bmpx media player support
 net-im/kadu:config_wizard - Enables configuration wizard module
 net-im/kadu:dragonplayer - Enables kde-base/dragonplayer KDE4 media player support
 net-im/kadu:extramodules - Enables building of extra modules
