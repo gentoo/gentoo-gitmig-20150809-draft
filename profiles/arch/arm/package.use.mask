@@ -1,4 +1,6 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.10 2009/06/30 14:43:20 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.11 2009/07/31 08:57:06 ssuominen Exp $
 
 # Jim Ramsay <lack@gentoo.org> (5 Nov 2008)
 # app-admin/gkrellm may pull in net-libs/libntlm, which is not keyworded
@@ -12,11 +14,6 @@ app-admin/gkrellm ntlm
 # gdm depends on zenity which is not keyworded
 >=media-video/totem-2.20 galago
 
-# Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
-# Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
-
 # Masking this so repoman shuts up about paludis
 sys-apps/paludis ruby-bindings
 
@@ -25,6 +22,4 @@ dev-libs/boost mpi
 
 # missing keywords
 media-sound/sox amrnb amrwb ladspa
-
-# Needs testing
 media-plugins/gst-plugins-meta lame taglib
