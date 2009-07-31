@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sh/package.use.mask,v 1.11 2009/07/31 09:06:30 ssuominen Exp $
+
 # Alon Bar-Lev <alonbl@gentoo.org> (24 Jan 2007)
 # pkcs11-helper is not keyworded
 net-misc/openvpn pkcs11
@@ -9,11 +13,6 @@ net-misc/openvpn pkcs11
 # Gilles Dartiguelongue <eva@gentoo.org> (23 Oct 2007)
 # gdm depends on zenity which is not keyworded
 >=media-video/totem-2.20 galago
-
-# Samuli Suominen <drac@gentoo.org> (17 Nov 2007)
-# Needs valgrind
-media-libs/gstreamer debug
-media-libs/gst-plugins-base debug
 
 # Christoph Mende <angelos@gentoo.org> (14 May 2008)
 # media-sound/wavpack is not keyworded
@@ -31,5 +30,3 @@ sys-libs/slang cjk
 
 # Needs testing
 media-plugins/gst-plugins-meta lame taglib
-
-
