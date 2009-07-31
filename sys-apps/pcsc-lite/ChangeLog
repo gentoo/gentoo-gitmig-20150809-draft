@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pcsc-lite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.70 2009/06/28 11:06:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/ChangeLog,v 1.71 2009/07/31 14:52:25 chainsaw Exp $
+
+  31 Jul 2009; <chainsaw@gentoo.org> pcsc-lite-1.5.4.ebuild:
+  Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
+  <arfrever@gentoo.org>. Compile-tested on a Core2 Duo with USE="hal usb
+  -static".
 
 *pcsc-lite-1.5.4 (28 Jun 2009)
 
