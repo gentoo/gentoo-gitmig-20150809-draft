@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/cacao
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.17 2009/07/16 20:57:36 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cacao/ChangeLog,v 1.18 2009/07/31 14:28:36 betelgeuse Exp $
+
+  31 Jul 2009; Petteri Räty <betelgeuse@gentoo.org> +files/cacao.env:
+  Add missing cacao.env. Fixes bug #279032.
 
   16 Jul 2009; Petteri Räty <betelgeuse@gentoo.org> cacao-0.99.4.ebuild:
   Fix whitespace issue reported by pcheck.
