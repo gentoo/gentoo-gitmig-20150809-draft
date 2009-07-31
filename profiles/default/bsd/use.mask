@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.3 2009/07/01 10:05:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/use.mask,v 1.4 2009/07/31 21:56:06 ssuominen Exp $
 
 # Mart Raudsepp <leio@gentoo.org>
 # net-misc/networkmanager not keyworded
@@ -31,7 +31,6 @@ madwifi
 jack
 3dfx
 pmount
-dxr3
 nvidia
 xvmc
 xfs

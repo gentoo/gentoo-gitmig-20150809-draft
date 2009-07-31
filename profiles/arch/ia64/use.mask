@@ -7,7 +7,6 @@
 3dfx
 bluetooth
 dvb
-dxr3
 gnokii
 gphoto2
 gps
