@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use,v 1.16 2009/07/31 16:44:43 ssuominen Exp $
+
 # This file requires >=portage-2.1.2 (see bug #61732)
 
 # 2007/10/11 - Christian Heim <phreak@gentoo.org>
