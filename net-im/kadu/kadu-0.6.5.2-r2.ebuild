@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r2.ebuild,v 1.3 2009/07/25 19:42:22 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kadu/kadu-0.6.5.2-r2.ebuild,v 1.4 2009/07/31 15:55:51 ssuominen Exp $
 
 EAPI="2"
 inherit base cmake-utils flag-o-matic
@@ -12,7 +12,7 @@ SRC_URI="http://www.kadu.net/download/stable/${P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
-IUSE="alsa amarok amarok2 ao audacious +avatar bmpx config_wizard dragonplayer
+IUSE="alsa amarok amarok2 ao audacious +avatar config_wizard dragonplayer
 oss phonon sms spell +ssl vlc voice"
 
 COMMON_DEPEND="
@@ -33,7 +33,6 @@ RDEPEND="${COMMON_DEPEND}
 	amarok? ( media-sound/amarok:3.5 )
 	amarok2? ( media-sound/amarok:4 )
 	audacious? ( media-sound/audacious )
-	bmpx? ( media-sound/bmpx )
 	dragonplayer? ( kde-base/dragonplayer )
 	ssl? ( app-crypt/qca-ossl:2 )
 	vlc? ( media-video/vlc )
@@ -104,12 +103,11 @@ src_prepare() {
 	config_enable module_plus_pl_sms m
 
 	# Media players
-	if use amarok || use amarok2 || use audacious || use bmpx || use dragonplayer || use vlc; then
+	if use amarok || use amarok2 || use audacious || use dragonplayer || use vlc; then
 		config_enable module_mediaplayer m
 		use amarok && config_enable amarok1_mediaplayer m
 		use amarok2 && config_enable amarok2_mediaplayer m
 		use audacious && config_enable audacious_mediaplayer m
-		use bmpx && config_enable bmpx_mediaplayer m
 		use dragonplayer && config_enable dragon_mediaplayer m
 		# falf_mediaplayer
 		# itunes_mediaplayer

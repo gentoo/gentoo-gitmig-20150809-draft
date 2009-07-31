@@ -11,7 +11,6 @@
 		<flag name="amarok2">Enables <pkg>media-sound/amarok:2</pkg> (amarok2) media player support</flag>
 		<flag name="audacious">Enables <pkg>media-sound/audacious</pkg> media player support</flag>
 		<flag name="avatar">Display Gadu Avatars in Kadu</flag>
-		<flag name="bmpx">Enables <pkg>media-sound/bmpx</pkg> media player support</flag>
 		<flag name="dragonplayer">Enables <pkg>kde-base/dragonplayer</pkg> KDE4 media player support</flag>
 		<flag name="config_wizard">Enables configuration wizard module</flag>
 		<flag name="extramodules">Enables building of extra modules</flag>
