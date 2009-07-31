@@ -1,9 +1,6 @@
-# Copyright 2004-2005 Gentoo Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.6 2009/07/30 14:39:03 ssuominen Exp $
-
-# As soon as the ~x86-fbsd keyword is spread enough, drop the extra masking
-# used to limit usage of unsupported packages.
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/fbsd/package.mask,v 1.7 2009/07/31 09:15:01 ssuominen Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org> (27 May 2005)
 # SGI's FAM is dead upstream, and requires mayor changes.
