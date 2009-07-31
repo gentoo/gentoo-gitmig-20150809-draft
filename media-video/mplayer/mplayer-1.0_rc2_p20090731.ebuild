@@ -1,22 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.12 2009/07/31 20:43:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.1 2009/07/31 20:43:25 beandog Exp $
 
 EAPI="2"
 
-ESVN_REPO_URI="svn://svn.mplayerhq.hu/mplayer/trunk"
-[[ ${PV} = *9999* ]] && SVN_ECLASS="subversion" || SVN_ECLASS=""
+inherit eutils flag-o-matic multilib
 
-inherit eutils flag-o-matic multilib ${SVN_ECLASS}
-
-[[ ${PV} != *9999* ]] && MPLAYER_REVISION=29330
+MPLAYER_REVISION=SVN-r29463
 
 IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +ass
 bidi bindist bl +cddb +cdio cdparanoia cpudetection custom-cflags
 custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
-+enca +encode esd external-ffmpeg +faac +faad fbcon ftp gif ggi -gmplayer +iconv
-ipv6 jack joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum
-+mmx mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
++enca +encode esd +faac +faad fbcon ftp gif ggi -gmplayer +iconv ipv6 jack
+joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
+mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
 oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba +shm
 +schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
 +truetype +unicode v4l v4l2 vdpau vidix +vorbis win32codecs +X +x264 xanim
@@ -31,44 +28,30 @@ done
 BLUV="1.7"
 SVGV="1.9.17"
 AMR_URI="http://www.3gpp.org/ftp/Specs/archive"
-FONT_URI="
-	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-	mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2
-"
-if [[ ${PV} = *9999* ]]; then
-	RELEASE_URI=""
-else
-	RELEASE_URI="mirror://gentoo/${P}.tar.bz2"
-fi
-SRC_URI="${RELEASE_URI}
-	!truetype? ( ${FONT_URI} )
+SRC_URI="mirror://gentoo/${P}.tar.bz2
+	!truetype? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+				 mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+				 mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
+	!iconv? ( mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
+			  mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
+			  mirror://mplayer/releases/fonts/font-arial-cp1250.tar.bz2 )
 	gmplayer? ( mirror://mplayer/skins/Blue-${BLUV}.tar.bz2 )
-	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
-"
+	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )"
 
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
-FONT_RDEPS="
-	media-libs/fontconfig
-	media-libs/freetype:2
-"
-X_RDEPS="
-	x11-libs/libXext
-	x11-libs/libXxf86vm
-"
-# Rar: althrought -gpl version is nice, it cant do most functions normal rar can
 RDEPEND="sys-libs/ncurses
 	!bindist? (
 		x86? (
 			win32codecs? ( media-libs/win32codecs )
-		)
+			)
 	)
-	X? ( ${X_RDEPS} )
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( ${FONT_RDEPS} )
+	ass? ( media-libs/freetype:2
+		media-libs/fontconfig )
+	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	cdio? ( dev-libs/libcdio )
 	cdparanoia? ( media-sound/cdparanoia )
@@ -79,120 +62,90 @@ RDEPEND="sys-libs/ncurses
 	dv? ( media-libs/libdv )
 	dvb? ( media-tv/linuxtv-dvb-headers )
 	encode? (
-		faac? ( media-libs/faac )
 		mp2? ( media-sound/twolame )
 		mp3? ( media-sound/lame )
+		faac? ( media-libs/faac )
 		x264? ( >=media-libs/x264-0.0.20081006 )
 		xvid? ( media-libs/xvid )
-	)
+		)
 	esd? ( media-sound/esound )
 	enca? ( app-i18n/enca )
-	external-ffmpeg? ( media-video/ffmpeg )
 	faad? ( !aac? ( media-libs/faad2 ) )
 	gif? ( media-libs/giflib )
-	ggi? (
-		media-libs/libggi
-		media-libs/libggiwmh
-	)
-	gmplayer? (
-		media-libs/libpng
-		x11-libs/gtk+:2
+	ggi? ( media-libs/libggi
+		media-libs/libggiwmh )
+	gmplayer? ( media-libs/libpng
+		x11-libs/libXxf86vm
+		x11-libs/libXext
 		x11-libs/libXi
-		${X_RDEPS}
-	)
+		x11-libs/gtk+:2 )
 	jack? ( media-sound/jack-audio-connection-kit )
 	jpeg? ( media-libs/jpeg )
 	ladspa? ( media-libs/ladspa-sdk )
 	libcaca? ( media-libs/libcaca )
 	lirc? ( app-misc/lirc )
-	live? ( media-plugins/live )
 	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
-	openal? ( media-libs/openal )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	pulseaudio? ( media-sound/pulseaudio )
-	rar? (
-		|| (
-			app-arch/unrar
-			app-arch/unrar-gpl
-			app-arch/rar
-		)
-	)
+	rar? ( || ( app-arch/unrar-gpl
+		app-arch/unrar
+		app-arch/rar ) )
 	samba? ( net-fs/samba )
 	schroedinger? ( media-libs/schroedinger )
 	sdl? ( media-libs/libsdl )
 	speex? ( media-libs/speex )
 	svga? ( media-libs/svgalib )
 	theora? ( media-libs/libtheora )
-	truetype? ( ${FONT_RDEPS} )
+	live? ( media-plugins/live )
+	truetype? ( media-libs/freetype:2
+		media-libs/fontconfig )
 	video_cards_nvidia? (
-		vdpau? ( >=x11-drivers/nvidia-drivers-180.51 )
+		vdpau? ( >=x11-drivers/nvidia-drivers-180.60 )
 	)
-	vidix? ( ${X_RDEPS} )
+	vidix? ( x11-libs/libXxf86vm
+			 x11-libs/libXext )
 	vorbis? ( media-libs/libvorbis )
 	xanim? ( media-video/xanim )
-	xinerama? (
-		x11-libs/libXinerama
-		${X_RDEPS}
-	)
+	xinerama? ( x11-libs/libXinerama
+		x11-libs/libXxf86vm
+		x11-libs/libXext )
 	xscreensaver? ( x11-libs/libXScrnSaver )
-	xv? (
-		${X_RDEPS}
-		x11-libs/libXv
-		xvmc? ( x11-libs/libXvMC )
-	)
-"
+	xv? ( x11-libs/libXv
+		x11-libs/libXxf86vm
+		x11-libs/libXext
+		xvmc? ( x11-libs/libXvMC ) )
+	X? ( x11-libs/libXxf86vm
+		x11-libs/libXext
+	)"
 
-X_DEPS="
-	x11-proto/videoproto
-	x11-proto/xf86vidmodeproto
-"
-ASM_DEP="dev-lang/yasm"
 DEPEND="${RDEPEND}
-	X? ( ${X_DEPS} )
-	amd64? ( ${ASM_DEP} )
-	dga? ( x11-proto/xf86dgaproto )
+	amd64? ( dev-lang/yasm )
 	doc? ( dev-libs/libxslt )
+	dga? ( x11-proto/xf86dgaproto )
 	dxr3? ( media-video/em8300-libraries )
-	gmplayer? ( ${X_DEPS} )
-	iconv? ( virtual/libiconv )
-	xv? ( ${X_DEPS} )
-	x86? ( ${ASM_DEP} )
-	x86-fbsd? ( ${ASM_DEP} )
 	xinerama? ( x11-proto/xineramaproto )
+	xv? ( x11-proto/videoproto
+		  x11-proto/xf86vidmodeproto )
+	gmplayer? ( x11-proto/xextproto
+		   x11-proto/xf86vidmodeproto )
+	X? ( x11-proto/xextproto
+		 x11-proto/xf86vidmodeproto )
+	x86? ( dev-lang/yasm )
+	x86-fbsd? ( dev-lang/yasm )
 	xscreensaver? ( x11-proto/scrnsaverproto )
-	xv? ( ${X_DEPS} )
-"
+	iconv? ( virtual/libiconv )"
 
 SLOT="0"
 LICENSE="GPL-2"
-if [[ ${PV} != *9999* ]]; then
-	KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-else
-	KEYWORDS=""
-fi
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 pkg_setup() {
-	if [[ ${PV} = *9999* ]]; then
-		elog ""
-		elog "This is a live ebuild which installs the latest from upstream's"
-		elog "subversion repository, and is unsupported by Gentoo."
-		elog "Everything but bugs in the ebuild itself will be ignored."
-		elog ""
-	fi
-
-	if [[ -n ${LINGUAS} ]]; then
-		elog ""
-		elog "MPlayer's build system uses the LINGUAS variable for both"
-		elog "output messages and which man pages to build.  The first"
-		elog "language in the LINGUAS variable will be used to display"
-		elog "output messages.  See bug #228799."
-	fi
 
 	if use gmplayer; then
 		ewarn ""
@@ -240,27 +193,24 @@ pkg_setup() {
 }
 
 src_unpack() {
-	[[ ${PV} = *9999* ]] && subversion_src_unpack || unpack ${A}
+	unpack ${A}
 
-	if ! use truetype; then
+	if ! use truetype ; then
 		unpack font-arial-iso-8859-1.tar.bz2 \
 			font-arial-iso-8859-2.tar.bz2 \
 			font-arial-cp1250.tar.bz2
 	fi
 
-	use gmplayer && unpack "Blue-${BLUV}.tar.bz2"
-	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.bz2"
-}
+	cd "${WORKDIR}"
 
-src_prepare() {
-	if [[ ${PV} = *9999* ]]; then
-		# Set SVN version manually
-		subversion_wc_info
-		sed -i s/UNKNOWN/${ESVN_WC_REVISION}/ "${S}/version.sh"
-	else
-		# Set version #
-		sed -i s/UNKNOWN/${MPLAYER_REVISION}/ "${S}/version.sh"
-	fi
+	use gmplayer && unpack "Blue-${BLUV}.tar.bz2"
+
+	use svga && unpack "svgalib_helper-${SVGV}-mplayer.tar.bz2"
+
+	cd "${S}"
+
+	# Set version #
+	sed -i s/UNKNOWN/${MPLAYER_REVISION}/ "${S}/version.sh"
 
 	if use svga; then
 		echo
@@ -274,6 +224,7 @@ src_prepare() {
 }
 
 src_configure() {
+
 	local myconf=""
 
 	# MPlayer reads in the LINGUAS variable from make.conf, and sets
@@ -295,10 +246,7 @@ src_configure() {
 	################
 	#Optional features#
 	###############
-	myconf="${myconf}
-		--disable-arts
-		$(use_enable network)
-	"
+	myconf="${myconf} $(use_enable network) --disable-arts"
 	use ass || myconf="${myconf} --disable-ass"
 	use bidi || myconf="${myconf} --disable-fribidi"
 	use bl && myconf="${myconf} --enable-bl"
@@ -395,7 +343,7 @@ src_configure() {
 	########
 	# Won't work with external liba52
 	myconf="${myconf} --disable-liba52"
-	# Use internal codecs for SV7 and SV8 support
+	# Use internal musepack codecs for SV7 and SV8 support
 	myconf="${myconf} --disable-musepack"
 
 	use aac || myconf="${myconf} --disable-faad-internal"
@@ -552,12 +500,6 @@ src_configure() {
 		unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS YASMFLAGS
 	fi
 
-	#################
-	# External FFmpeg #
-	#################
-
-	use external-ffmpeg && myconf="${myconf} --disable-libavutil_a --disable-libavcodec_a --disable-libavformat_a --disable-libpostproc_a --disable-libswscale_a"
-
 	myconf="--cc=$(tc-getCC) \
 		--host-cc=$(tc-getBUILD_CC) \
 		--prefix=/usr \
@@ -566,8 +508,9 @@ src_configure() {
 		--libdir=/usr/$(get_libdir) \
 		${myconf}"
 
-	echo "CFLAGS=\"${CFLAGS}\" ./configure ${myconf}"
+	#echo "CFLAGS=\"${CFLAGS}\" ./configure ${myconf}"
 	CFLAGS="${CFLAGS}" ./configure ${myconf} || die "configure died"
+
 }
 
 src_compile() {
@@ -576,6 +519,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make prefix="${D}/usr" \
 		BINDIR="${D}/usr/bin" \
 		LIBDIR="${D}/usr/$(get_libdir)" \
@@ -654,11 +598,15 @@ EOT
 }
 
 pkg_preinst() {
-	[[ -d ${ROOT}/usr/share/mplayer/Skin/default ]] && \
+
+	if [[ -d ${ROOT}/usr/share/mplayer/Skin/default ]]
+	then
 		rm -rf "${ROOT}/usr/share/mplayer/Skin/default"
+	fi
 }
 
 pkg_postrm() {
+
 	# Cleanup stale symlinks
 	if [ -L "${ROOT}/usr/share/mplayer/font" -a \
 		 ! -e "${ROOT}/usr/share/mplayer/font" ]
