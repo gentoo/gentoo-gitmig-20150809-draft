@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.1.1-r2.ebuild,v 1.1 2009/07/30 20:50:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.1.1-r2.ebuild,v 1.2 2009/07/31 15:58:19 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
-IUSE="alsa apcupsd audacious bmpx debug hddtemp imlib lua math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax wifi X"
+IUSE="alsa apcupsd audacious debug hddtemp imlib lua math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax wifi X"
 # currently removed openmp
 
 DEPEND_COMMON="
@@ -27,7 +27,6 @@ DEPEND_COMMON="
 	)
 	alsa? ( media-libs/alsa-lib )
 	audacious? ( >=media-sound/audacious-1.5 )
-	bmpx? ( media-sound/bmpx >=sys-apps/dbus-0.35 )
 	portmon? ( dev-libs/glib )
 	lua? ( >=dev-lang/lua-5.1 )
 	rss? ( dev-libs/libxml2 net-misc/curl dev-libs/glib )
@@ -66,7 +65,7 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable apcupsd) \
 		$(use_enable audacious) \
-		$(use_enable bmpx) \
+		--disable-bmpx \
 		$(use_enable debug) \
 		$(use_enable hddtemp) \
 		$(use_enable imlib imlib2) \
