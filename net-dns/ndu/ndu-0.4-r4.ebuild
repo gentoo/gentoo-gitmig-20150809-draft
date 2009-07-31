@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r4.ebuild,v 1.4 2007/04/22 13:56:11 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r4.ebuild,v 1.5 2009/07/31 09:12:36 robbat2 Exp $
 
 inherit eutils toolchain-funcs
 
@@ -19,9 +19,9 @@ RDEPEND="virtual/libc
 src_unpack() {
 	unpack ${A}
 
-	epatch ${FILESDIR}/${P}-binary-locations.patch
+	epatch "${FILESDIR}"/${P}-binary-locations.patch
 
-	cd ${S}/src
+	cd "${S}"/src
 	# use the correct compiler
 	sed -e 's|gcc|$(CXX)|g' -i Makefile
 	# set correct config pathes
@@ -32,7 +32,7 @@ src_unpack() {
 	# use the correct editor
 	sed -e 's|VISUAL|EDITOR|g' -i dnsedit
 
-	cd ${S}
+	cd "${S}"
 	# match our bind config
 	sed -e 's|0.0.127.in-addr.arpa|127.in-addr.arpa|g' -i ndu.conf
 	# document the support for the chrooted BIND setup
@@ -42,7 +42,7 @@ src_unpack() {
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 	emake CFLAGS="${CFLAGS}" CXX="$(tc-getCXX)"
 }
 
@@ -53,4 +53,10 @@ src_install () {
 	insinto /etc/bind
 	doins ndu.conf
 	dodoc README INSTALL
+}
+
+pkg_postinst() {
+	elog "The ndu binary expects to read your configuration"
+	elog "from /etc/bind/named.conf, however the other binaries"
+	elog "are useful with BIND locally installed."
 }
