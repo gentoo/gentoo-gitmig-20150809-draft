@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10178 2009/07/31 06:02:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10179 2009/07/31 06:41:24 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1061,12 +1061,6 @@ dev-util/w32api
 media-video/realplayer
 media-libs/amd64codecs
 media-libs/realcodecs
-
-# Markus Dittrich <markusle@gentoo.org> (28 Oct 2008)
-# New upstream version is currently masked due to an interface
-# glitch with Qt-4.4.2 that needs to be looked at (bug #243362)
-# Qt-4.3 users should probably be fine.
-=sci-visualization/paraview-3.4.0
 
 # Alexis Ballier <aballier@gentoo.org> (15 Oct 2008)
 # Needs testing
