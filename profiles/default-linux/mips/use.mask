@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.118 2009/03/12 15:17:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.119 2009/08/01 16:59:30 ssuominen Exp $
 
 # Samuli Suominen <ssuominen@gentoo.org>
 # Media cannot be tested for MIPS at the moment.
@@ -120,7 +120,6 @@ input_devices_wacom
 input_devices_joystick
 video_cards_chips
 video_cards_cirrus
-video_cards_fglrx
 video_cards_glint
 video_cards_nvidia
 video_cards_s3
