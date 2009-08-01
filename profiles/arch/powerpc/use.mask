@@ -126,7 +126,6 @@ lcd_devices_t6963
 
 cmucl
 hdf
-real
 fmod
 i8x0
 xvmc

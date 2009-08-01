@@ -1,6 +1,9 @@
 # ChangeLog for sparc profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.133 2009/07/16 10:35:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/ChangeLog,v 1.134 2009/08/01 15:32:57 beandog Exp $
+
+  01 Aug 2009; Steve Dibb <beandog@gentoo.org> use.mask:
+  Remove "real" use flag mask, as its already in base
 
   16 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> sparc32/use.mask:
   Remove ladcca from sparc32/use.mask because it's been p.masked for

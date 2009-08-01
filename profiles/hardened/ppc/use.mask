@@ -19,7 +19,6 @@ lm_sensors
 mbrola
 nvtv
 rar
-real
 uml
 video_cards_apm
 video_cards_ark
