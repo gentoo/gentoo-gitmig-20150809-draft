@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.8 2008/04/29 14:28:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amsynth/amsynth-1.2.0.ebuild,v 1.9 2009/08/01 06:21:29 ssuominen Exp $
 
-IUSE="debug alsa jack sndfile oss"
-
-inherit eutils autotools
+EAPI=2
+inherit autotools eutils
 
 MY_P=${P/_rc/-rc}
 MY_P=${MY_P/amsynth/amSynth}
@@ -16,6 +15,7 @@ SRC_URI="mirror://sourceforge/amsynthe/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc sparc x86"
+IUSE="alsa debug jack oss sndfile"
 
 RDEPEND=">=dev-cpp/gtkmm-2.4
 	sndfile? ( >=media-libs/libsndfile-1.0 )
@@ -24,50 +24,35 @@ RDEPEND=">=dev-cpp/gtkmm-2.4
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build amSynth with ALSA support you need"
-		eerror "to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-asneeded.patch"
-	epatch "${FILESDIR}/${P}-cflags.patch"
-	epatch "${FILESDIR}/${P}-debug.patch"
-	epatch "${FILESDIR}/${P}+gcc-4.3.patch"
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-cflags.patch
+	epatch "${FILESDIR}"/${P}-debug.patch
+	epatch "${FILESDIR}"/${P}+gcc-4.3.patch
 	eautoreconf
 }
 
-src_compile() {
-	econf $(use_with oss) \
+src_configure() {
+	econf \
+		$(use_with oss) \
 		$(use_with alsa) \
 		$(use_with jack) \
 		$(use_with sndfile) \
-		$(use_enable debug) \
-		|| die "configure failed"
-	emake || die
+		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS README
 }
 
 pkg_postinst() {
 	elog
-	elog "amSynth has been installed normally."
-	elog "If you would like to use the virtual"
-	elog "keyboard option, then do"
-	elog "emerge vkeybd"
-	elog "and make sure you emerged amSynth"
-	elog "with alsa support (USE=alsa)"
+	elog "amSynth has been installed normally. If you would like to use"
+	elog "the virtual keyboard option, then do:"
+	elog "# emerge vkeybd"
+	elog "and make sure you emerged amSynth with alsa support (USE=alsa)"
 	elog
 }
