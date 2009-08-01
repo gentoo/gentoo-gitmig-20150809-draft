@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6_beta10.ebuild,v 1.3 2009/07/22 07:55:17 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.4.ebuild,v 1.1 2009/08/01 18:38:57 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -9,9 +9,7 @@ inherit python distutils eutils fdo-mime bash-completion
 
 DESCRIPTION="Ebook management application."
 HOMEPAGE="http://calibre.kovidgoyal.net"
-# Snapshots for beta releases are not distributed on upstream mirrors.
-SRC_URI="mirror://gentoo/$P.tar.gz"
-#SRC_URI="http://calibre.kovidgoyal.net/downloads/$P.tar.gz"
+SRC_URI="http://calibre.kovidgoyal.net/downloads/$P.tar.gz"
 
 LICENSE="GPL-2"
 
@@ -107,10 +105,7 @@ EOF
 	domenu "$HOME"/.local/share/applications/*.desktop || \
 		die "failed to install .desktop menu files"
 
-	# Move the bash-completion file and properly install it.
-	mv "${D}"/etc/bash_completion.d/calibre "${S}/" \
-		|| die "cannot move the bash-completion file"
-	dobashcompletion "${S}"/calibre
+	dobashcompletion "$D"usr/share/bash-completion/calibre
 	find "${D}"/etc -type d -empty -delete
 
 	# Removing junk.
