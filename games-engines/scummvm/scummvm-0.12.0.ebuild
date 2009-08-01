@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.12.0.ebuild,v 1.7 2009/03/13 22:10:49 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-0.12.0.ebuild,v 1.8 2009/08/01 06:47:44 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/libsdl-1.2.2
 	>media-libs/libmpeg2-0.3.1
 	ogg? ( media-libs/libogg media-libs/libvorbis )
 	vorbis? ( media-libs/libogg media-libs/libvorbis )
-	alsa? ( >=media-libs/alsa-lib-0.9[midi] )
+	alsa? ( media-libs/alsa-lib )
 	mp3? ( media-libs/libmad )
 	flac? ( media-libs/flac )
 	fluidsynth? ( media-sound/fluidsynth )

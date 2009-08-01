@@ -1,6 +1,10 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.75 2009/07/13 17:58:30 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.76 2009/08/01 06:47:44 ssuominen Exp $
+
+  01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> scummvm-0.12.0.ebuild,
+  scummvm-0.13.1.ebuild:
+  Remove USE depend for media-libs/alsa-lib[midi].
 
   13 Jul 2009; Joseph Jezak <josejx@gentoo.org> scummvm-0.13.1.ebuild:
   Marked ppc/ppc64 stable for bug #276010.

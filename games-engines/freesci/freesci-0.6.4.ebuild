@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.4.ebuild,v 1.4 2009/06/13 16:42:09 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/freesci/freesci-0.6.4.ebuild,v 1.5 2009/08/01 06:51:04 ssuominen Exp $
 
 EAPI=2
 inherit eutils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="X ggi sdl"
 
-DEPEND="media-libs/alsa-lib[midi]
+DEPEND="media-libs/alsa-lib
 	X? (
 		x11-libs/libX11
 		x11-libs/libXrender
