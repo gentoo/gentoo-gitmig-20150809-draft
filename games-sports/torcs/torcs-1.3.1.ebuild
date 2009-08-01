@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.3 2009/07/24 01:33:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.3.1.ebuild,v 1.4 2009/08/01 17:02:47 maekke Exp $
 
 EAPI=2
 inherit autotools eutils multilib games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/torcs/${P}.tar.bz2"
 
 LICENSE="GPL-2 FreeArt"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-libs/plib-1.8.4
