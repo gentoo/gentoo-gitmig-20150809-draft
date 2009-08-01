@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.396 2009/07/31 14:03:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.397 2009/08/01 08:16:10 zmedico Exp $
+
+  01 Aug 2009; Zac Medico <zmedico@gentoo.org> python-2.6.2-r1.ebuild:
+  Bug #248081 - Fix tests not to assume that stdin is a tty.
 
   31 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.5.4-r3.ebuild, python-2.6.2-r1.ebuild:
