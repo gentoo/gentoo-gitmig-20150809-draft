@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.19-r2.ebuild,v 1.8 2009/07/02 19:18:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.19-r2.ebuild,v 1.9 2009/08/01 14:48:34 beandog Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://alsaproject/utils/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0.9"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~sh sparc x86"
-IUSE="doc nls midi minimal"
+IUSE="doc nls minimal"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	dev-util/dialog
@@ -27,15 +27,6 @@ RDEPEND=">=sys-libs/ncurses-5.1
 
 S="${WORKDIR}/${MY_P}"
 
-pkg_setup() {
-	if use midi && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build alsa-utils with midi support you need"
-		eerror "to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
-}
-
 src_compile() {
 
 	local myconf=""
@@ -43,7 +34,6 @@ src_compile() {
 
 	econf ${myconf} \
 		$(use_enable nls) \
-		$(use_enable midi sequencer) \
 		|| die "configure failed"
 
 	emake || die "make failed"
