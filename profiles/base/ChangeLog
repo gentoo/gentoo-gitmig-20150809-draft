@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.86 2009/08/01 06:53:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.87 2009/08/01 14:55:18 beandog Exp $
+
+  01 Aug 2009; Steve Dibb <beandog@gentoo.org> package.use.force:
+  Remove temporary force of +midi on media-sound/alsa-lib
 
   01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.force:
   Force USE midi in alsa-lib for old versions since the checks in ebuilds
