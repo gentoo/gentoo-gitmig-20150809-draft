@@ -1,13 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.0_rc1.ebuild,v 1.1 2009/05/18 21:04:10 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.2.ebuild,v 1.1 2009/08/01 01:26:02 darkside Exp $
 
-EAPI=1
+EAPI="1"
 
-MY_PV=${PV/_rc/RC}
 inherit xfce4
 
-XFCE_VERSION=4.5.90
+XFCE_VERSION=4.6.1
 
 xfce4_goodies
 
