@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10190 2009/08/01 01:53:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10191 2009/08/01 05:01:28 beandog Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Steve Dibb <beandog@gentoo.org> (31 Jul 2009)
+# Mask for removal, name change to app-text/xiphos
+# bug 278973
+app-text/gnomesword
 
 # Jeremy Olexa <darkside@gentoo.org> (1 Aug 2009)
 # Doesn't build, removed in 30 days. bug 277163
