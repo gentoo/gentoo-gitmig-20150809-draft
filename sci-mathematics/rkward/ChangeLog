@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/rkward
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.16 2009/04/01 11:56:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/ChangeLog,v 1.17 2009/08/01 12:24:11 bicatali Exp $
+
+*rkward-0.5.0d (18 Jun 2009)
+*rkward-0.4.9b (18 Jun 2009)
+
+  18 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +rkward-0.4.9b.ebuild, -rkward-0.5.0c.ebuild, +rkward-0.5.0d.ebuild:
+  Version bumps and fixes, thanks to Michel Lang, bug #269940.
 
 *rkward-0.5.0c (01 Apr 2009)
 

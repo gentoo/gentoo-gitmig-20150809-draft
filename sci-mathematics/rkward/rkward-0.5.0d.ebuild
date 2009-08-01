@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.0c.ebuild,v 1.1 2009/04/01 11:56:42 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/rkward/rkward-0.5.0d.ebuild,v 1.1 2009/08/01 12:24:11 bicatali Exp $
 
 EAPI="2"
 KDE_MINIMAL="4.1"
