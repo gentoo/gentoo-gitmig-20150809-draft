@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.0.8.ebuild,v 1.9 2009/05/23 15:30:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/libunique-1.0.8.ebuild,v 1.10 2009/08/01 14:10:22 nirbheek Exp $
 
 EAPI="2"
 
@@ -37,7 +37,13 @@ src_prepare() {
 src_test() {
 	cd "${S}/tests"
 
-	cp "${FILESDIR}/run-tests" .
+	# Fix environment variable leakage (due to `su` etc)
+	unset DBUS_SESSION_BUS_ADDRESS
+
+	# Force Xemake to use Xvfb, bug 279840
+	unset XAUTHORITY
+
+	cp "${FILESDIR}/run-tests" . || die "Unable to cp \${FILESDIR}/run-tests"
 	Xemake -f run-tests || die "Tests failed"
 }
 

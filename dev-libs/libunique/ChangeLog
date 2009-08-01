@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libunique
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.10 2009/05/23 15:30:39 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunique/ChangeLog,v 1.11 2009/08/01 14:10:22 nirbheek Exp $
+
+  01 Aug 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  libunique-1.0.8.ebuild:
+  Workaround for bug 279840 -- Xemake using the user's X instead of spawning
+  Xvfb
 
   23 May 2009; Brent Baude <ranger@gentoo.org> libunique-1.0.8.ebuild:
   Marking libunique-1.0.8 ~ppc for bug 268487
