@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-cellmodem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.8 2009/05/20 02:19:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cellmodem/ChangeLog,v 1.9 2009/08/01 01:48:23 darkside Exp $
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-cellmodem-0.0.5.ebuild:
+  RESTRICT=test, bug 277146
 
   20 May 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-cellmodem-0.0.5.ebuild:
