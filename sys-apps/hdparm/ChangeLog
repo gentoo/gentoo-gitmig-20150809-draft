@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.196 2009/07/29 23:52:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.197 2009/08/01 21:17:11 robbat2 Exp $
+
+*hdparm-9.18 (01 Aug 2009)
+
+  01 Aug 2009; Robin H. Johnson <robbat2@gentoo.org> +hdparm-9.18.ebuild:
+  Last upstream release had a bug with -E and CD/DVD drives, new release.
 
 *hdparm-9.17 (29 Jul 2009)
 
