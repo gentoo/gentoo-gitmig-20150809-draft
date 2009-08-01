@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.9.ebuild,v 1.7 2009/06/25 17:59:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.9.ebuild,v 1.8 2009/08/01 06:27:08 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic eutils libtool autotools
@@ -18,7 +18,7 @@ KEYWORDS="alpha amd64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( >=media-libs/ladspa-sdk-1.12
 		  >=media-libs/ladspa-cmt-1.15 )
-	alsa? ( media-libs/alsa-lib[midi]
+	alsa? ( media-libs/alsa-lib
 		lash? ( >=media-sound/lash-0.5 ) )
 	pulseaudio? ( >=media-sound/pulseaudio-0.9.8 )
 	portaudio? ( >=media-libs/portaudio-19_pre )

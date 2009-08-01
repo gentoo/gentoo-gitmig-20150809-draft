@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.5.1.ebuild,v 1.5 2008/03/06 14:18:37 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.5.1.ebuild,v 1.6 2009/08/01 06:37:24 ssuominen Exp $
 
 inherit eutils kde-functions
 
@@ -47,13 +47,6 @@ pkg_setup() {
 		ewarn "If you want JACK support you also need to enable"
 		ewarn "ALSA support, or the whole sound support will be"
 		ewarn "disabled."
-	fi
-
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build Rose Garden with ALSA support you need"
-		eerror "to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
 }
 

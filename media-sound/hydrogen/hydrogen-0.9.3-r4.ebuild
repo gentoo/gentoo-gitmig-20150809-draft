@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.4 2009/06/29 17:53:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r4.ebuild,v 1.5 2009/08/01 06:30:07 ssuominen Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ RDEPEND="dev-libs/libxml2
 	media-libs/libsndfile
 	media-libs/audiofile
 	flac? ( media-libs/flac[cxx] )
-	alsa? ( media-libs/alsa-lib[midi] )
+	alsa? ( media-libs/alsa-lib )
 	jack? ( media-sound/jack-audio-connection-kit )
 	ladspa? ( media-libs/liblrdf )"
 DEPEND="${RDEPEND}

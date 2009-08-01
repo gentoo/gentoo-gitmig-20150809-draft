@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.7.1.ebuild,v 1.4 2009/04/01 21:33:24 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-2.7.1.ebuild,v 1.5 2009/08/01 06:22:59 ssuominen Exp $
 
 EAPI=2
 
@@ -24,7 +24,7 @@ RDEPEND="media-libs/liblo
 	x11-libs/pango
 	>=x11-libs/gtk+-2.8.8
 	media-libs/flac
-	>=media-libs/alsa-lib-1.0.14a-r1[midi]
+	media-libs/alsa-lib
 	>=media-libs/libsamplerate-0.1.1-r1
 	>=dev-libs/libxml2-2.6.0
 	dev-libs/libxslt

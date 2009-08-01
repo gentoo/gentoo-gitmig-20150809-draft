@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gmorgan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.25 2009/06/25 17:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/ChangeLog,v 1.26 2009/08/01 06:28:47 ssuominen Exp $
+
+  01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gmorgan-0.25-r1.ebuild:
+  Remove USE depend for media-libs/alsa-lib[midi].
 
   25 Jun 2009; Raúl Porcel <armin76@gentoo.org> gmorgan-0.25-r1.ebuild:
   sparc stable wrt #272812

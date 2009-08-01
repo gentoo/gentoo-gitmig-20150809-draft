@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.8 2009/06/17 07:06:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lash/lash-0.5.4-r1.ebuild,v 1.9 2009/08/01 06:32:25 ssuominen Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
 IUSE="alsa debug gtk python"
 
-RDEPEND="alsa? ( media-libs/alsa-lib[midi] )
+RDEPEND="alsa? ( media-libs/alsa-lib )
 	media-sound/jack-audio-connection-kit
 	dev-libs/libxml2
 	gtk? ( >=x11-libs/gtk+-2.0 )

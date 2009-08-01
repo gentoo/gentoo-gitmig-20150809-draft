@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.2.ebuild,v 1.7 2009/06/05 18:13:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.2.ebuild,v 1.8 2009/08/01 06:34:14 ssuominen Exp $
 
 EAPI=1
 
@@ -23,15 +23,6 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 		) =x11-libs/qt-4.3*:4 )
 	media-sound/jack-audio-connection-kit"
 DEPEND="${RDEPEND}"
-
-pkg_setup() {
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
-		eerror "need to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
-}
 
 src_compile() {
 	econf \

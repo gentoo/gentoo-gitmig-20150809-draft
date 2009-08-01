@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.7.3.ebuild,v 1.1 2009/02/19 08:39:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/rosegarden-1.7.3.ebuild,v 1.2 2009/08/01 06:37:24 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="alsa debug jack dssi lirc"
 
 RDEPEND="
-	alsa? ( >=media-libs/alsa-lib-1.0[midi]
+	alsa? ( media-libs/alsa-lib
 		jack? ( >=media-sound/jack-audio-connection-kit-0.77 )
 	)
 	>=media-libs/ladspa-sdk-1.0

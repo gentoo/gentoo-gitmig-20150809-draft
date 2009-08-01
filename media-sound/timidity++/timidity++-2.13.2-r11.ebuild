@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r11.ebuild,v 1.2 2009/07/24 08:38:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.2-r11.ebuild,v 1.3 2009/08/01 06:38:59 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils elisp-common
@@ -23,7 +23,7 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5 )
 	gtk? ( x11-libs/gtk+:2 )
 	tk? ( dev-lang/tk )
 	nas? ( >=media-libs/nas-1.4 )
-	alsa? ( media-libs/alsa-lib[midi] )
+	alsa? ( media-libs/alsa-lib )
 	slang? ( sys-libs/slang )
 	jack? ( media-sound/jack-audio-connection-kit )
 	vorbis? ( media-libs/libvorbis )

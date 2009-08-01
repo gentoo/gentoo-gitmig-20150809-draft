@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r3.ebuild,v 1.7 2008/12/02 20:50:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r3.ebuild,v 1.8 2009/08/01 06:30:07 ssuominen Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -27,12 +27,6 @@ DEPEND="${RDEPEND}
 need-qt 3
 
 pkg_setup() {
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build ${CATEGORY}/${PN} with ALSA support you"
-		eerror "need to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
-	fi
 	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
 		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
 		eerror "Please enable the cxx USE flag for media-libs/flac"

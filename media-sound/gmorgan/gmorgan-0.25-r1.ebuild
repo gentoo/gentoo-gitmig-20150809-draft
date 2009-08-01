@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25-r1.ebuild,v 1.7 2009/06/25 17:47:45 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmorgan/gmorgan-0.25-r1.ebuild,v 1.8 2009/08/01 06:28:47 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -15,7 +15,7 @@ KEYWORDS="amd64 sparc x86"
 IUSE=""
 
 RDEPEND=">=x11-libs/fltk-1.1.2:1.1
-	media-libs/alsa-lib[midi]"
+	media-libs/alsa-lib"
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 

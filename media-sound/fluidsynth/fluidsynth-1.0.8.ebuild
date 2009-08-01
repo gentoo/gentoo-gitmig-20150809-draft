@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.8.ebuild,v 1.5 2008/08/16 12:56:39 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.8.ebuild,v 1.6 2009/08/01 06:27:08 ssuominen Exp $
 
 inherit flag-o-matic eutils libtool
 
@@ -28,13 +28,6 @@ pkg_setup() {
 	if use lash && ! use alsa; then
 		ewarn "ALSA support is required for lash support to be enabled."
 		ewarn "Continuing with lash support disabled."
-	fi
-
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror ""
-		eerror "To be able to build Fluidsynth with ALSA support you need"
-		eerror "to have built media-libs/alsa-lib with midi USE flag."
-		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
 }
 
