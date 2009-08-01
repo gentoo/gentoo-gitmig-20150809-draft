@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.1.ebuild,v 1.4 2009/07/31 13:12:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/qtoctave/qtoctave-0.8.1.ebuild,v 1.5 2009/08/01 06:13:55 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -23,7 +23,6 @@ RDEPEND="${DEPEND}
 		>=sci-mathematics/octave-3.0.0"
 
 S="${WORKDIR}"/${P}/${PN}
-
 
 src_unpack() {
 	unpack ${A}
