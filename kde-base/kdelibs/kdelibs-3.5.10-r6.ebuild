@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.7 2009/07/12 09:18:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.5.10-r6.ebuild,v 1.8 2009/08/01 07:12:04 ssuominen Exp $
 
 EAPI="1"
 inherit kde flag-o-matic eutils multilib
@@ -112,15 +112,6 @@ pkg_setup() {
 		elog "utempter might not update them correctly. If you experience unexpected"
 		elog "behaviour, try to rebuild kde-base/kdelibs with utempter use-flag enabled."
 		echo ""
-	fi
-
-	if use alsa && ! built_with_use --missing true media-libs/alsa-lib midi; then
-		eerror "The alsa USE flag in this package enables ALSA support"
-		eerror "for libkmid, KDE midi library."
-		eerror "For this reason, you have to merge media-libs/alsa-lib"
-		eerror "with the midi USE flag enabled, or disable alsa USE flag"
-		eerror "for this package."
-		die "Missing midi USE flag on media-libs/alsa-lib"
 	fi
 }
 
