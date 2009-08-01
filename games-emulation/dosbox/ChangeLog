@@ -1,6 +1,12 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.44 2009/08/01 06:44:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.45 2009/08/01 23:41:55 chainsaw Exp $
+
+  01 Aug 2009; <chainsaw@gentoo.org> dosbox-0.73.ebuild:
+  Marked stable on AMD64 as requested by Michael "Mr. Bones" Sterrett
+  <mr_bones_@gentoo.org> in bug #279864. Tested with Pinball Fantasies (full
+  screen, 3000 cycles) on a dual hex-core Opteron with USE="alsa opengl
+  -debug -hardened".
 
   01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> dosbox-0.72.ebuild,
   dosbox-0.73.ebuild:
