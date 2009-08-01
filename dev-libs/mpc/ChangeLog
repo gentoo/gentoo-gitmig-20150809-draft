@@ -1,0 +1,19 @@
+# ChangeLog for dev-libs/mpc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.1 2009/08/01 05:10:04 dirtyepic Exp $
+
+  01 Aug 2009; Ryan Hill <dirtyepic@gentoo.org> +mpc-0.6.ebuild,
+  +files/mpc-0.6-fortify.patch, +metadata.xml:
+  Move into main tree
+
+  01 Aug 2009; Ryan Hill <dirtyepic@gentoo.org> mpc-0.6.ebuild,
+  +files/mpc-0.6-fortify.patch:
+  Fix testsuite failure w/ -D_FORTIFY_SOURCE=2.
+  Revert EAPI to 0 since this package will be a hard dependency of GCC 4.5.
+
+*mpc-0.6 (31 May 2009)
+
+  31 May 2009; Ryan Hill <dirtyepic@gentoo.org> +mpc-0.6.ebuild,
+  +metadata.xml:
+  Initial import.
+
