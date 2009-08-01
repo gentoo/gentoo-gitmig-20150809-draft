@@ -1,6 +1,13 @@
 # ChangeLog for app-text/refbase
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.7 2008/02/12 19:22:36 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.8 2009/08/01 10:59:29 a3li Exp $
+
+*refbase-0.9.5 (01 Aug 2009)
+
+  01 Aug 2009; Alex Legler <a3li@gentoo.org> -refbase-0.8.0.ebuild,
+  -refbase-0.9.0.ebuild, +refbase-0.9.5.ebuild:
+  Non-maintainer commit: Version bump for security bug 261384. Removing
+  vulnerable versions.
 
 *refbase-0.9.0 (12 Feb 2008)
 

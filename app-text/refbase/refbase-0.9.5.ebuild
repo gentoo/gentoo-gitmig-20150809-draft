@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/refbase-0.9.0.ebuild,v 1.1 2008/02/12 19:22:36 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/refbase-0.9.5.ebuild,v 1.1 2009/08/01 10:59:29 a3li Exp $
 
 inherit depend.apache depend.php webapp
 
@@ -12,6 +12,7 @@ KEYWORDS="~x86 ~amd64"
 IUSE=""
 DEPEND="app-admin/webapp-config
 	app-text/bibutils"
+RDEPEND="${DEPEND}"
 
 need_apache
 need_php
