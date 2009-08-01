@@ -1,6 +1,11 @@
 # ChangeLog for app-text/recode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.61 2009/04/10 04:27:00 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/recode/ChangeLog,v 1.62 2009/08/01 23:27:44 chainsaw Exp $
+
+  01 Aug 2009; <chainsaw@gentoo.org> recode-3.6_p15-r1.ebuild:
+  Marked stable on AMD64 as requested by Jeremy "Darkside" Olexa
+  <darkside@gentoo.org> in bug #279935. Compile-tested on a dual hex-core
+  Opteron with USE="nls".
 
   10 Apr 2009; Jeremy Olexa <darkside@gentoo.org> -recode-3.6-r2.ebuild:
   QA, remove version for bug 209710
