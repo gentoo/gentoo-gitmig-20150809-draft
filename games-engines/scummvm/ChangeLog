@@ -1,6 +1,11 @@
 # ChangeLog for games-engines/scummvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.76 2009/08/01 06:47:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.77 2009/08/01 23:55:29 chainsaw Exp $
+
+  01 Aug 2009; <chainsaw@gentoo.org> scummvm-0.13.1.ebuild:
+  Marked stable on AMD64 as requested by Michael "Mr. Bones" Sterrett
+  <mr_bones_@gentoo.org> in bug #276010. Compile-tested on a dual hex-core
+  Opteron with USE="alsa flac mp3 ogg vorbis -debug -fluidsynth".
 
   01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> scummvm-0.12.0.ebuild,
   scummvm-0.13.1.ebuild:
