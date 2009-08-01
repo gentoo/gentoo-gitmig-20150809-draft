@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/twiki
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.46 2008/12/28 21:09:26 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/ChangeLog,v 1.47 2009/08/01 10:18:37 a3li Exp $
+
+*twiki-4.3.1 (01 Aug 2009)
+
+  01 Aug 2009; Alex Legler <a3li@gentoo.org> -twiki-4.2.4.ebuild,
+  +twiki-4.3.1.ebuild:
+  Non-maintainer commit: Version bump for security bug 268159. Removing
+  vulnerable version
 
 *twiki-4.2.4 (28 Dec 2008)
 
