@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/openbabel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.28 2009/08/01 15:22:51 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel/ChangeLog,v 1.29 2009/08/01 21:27:55 cryos Exp $
+
+  01 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> -openbabel-2.1.1.ebuild,
+  -openbabel-2.2.0.ebuild,
+  -files/openbabel-2.2.0_beta4-obconversion_api_fix.diff,
+  -openbabel-2.2.2.ebuild:
+  Removed old versions that are no longer required.
 
 *openbabel-2.2.3 (01 Aug 2009)
 
