@@ -1,11 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.use.mask,v 1.60 2009/08/01 08:15:37 ssuominen Exp $
-
-# !!! WARNING !!!
-# MAKE SURE YOU KEEP default-linux/amd64/package.use.mask AND
-# default-linux/amd64/(dev)?/2007.0/package.use.mask IN SYNC
-# SEE BUG #168249 FOR DETAILS
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.use.mask,v 1.61 2009/08/01 09:14:11 ssuominen Exp $
 
 # Vlastimil Babka <caster@gentoo.org> (12 Dec 2008)
 # finally a 64bit java plugin
