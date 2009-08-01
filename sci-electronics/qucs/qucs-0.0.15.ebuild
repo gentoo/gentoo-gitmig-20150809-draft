@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.15.ebuild,v 1.1 2009/05/26 18:07:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/qucs/qucs-0.0.15.ebuild,v 1.2 2009/08/01 20:10:53 cryos Exp $
 
 EAPI=1
 
@@ -16,7 +16,7 @@ IUSE="debug"
 
 DEPEND="x11-libs/qt:3"
 RDEPEND="x11-libs/qt:3
-	sci-electronics/freehdl"
+	>=sci-electronics/freehdl-0.0.7"
 
 src_compile() {
 	myconf="--with-x $(use_enable debug)"
