@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.8.ebuild,v 1.9 2009/03/18 14:44:02 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.8.ebuild,v 1.10 2009/08/01 01:05:28 tcunha Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hpl.hp.com/pub/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ~sparc x86"
+KEYWORDS="amd64 ~mips sparc x86"
 IUSE="debug ssl"
 
 DEPEND=""
