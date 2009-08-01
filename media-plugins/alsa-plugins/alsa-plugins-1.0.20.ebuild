@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.20.ebuild,v 1.2 2009/05/21 12:42:41 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.20.ebuild,v 1.3 2009/08/01 15:26:07 ssuominen Exp $
 
 EAPI=2
 
@@ -42,7 +42,10 @@ src_prepare() {
 		"${S}/pulse/Makefile.am"
 
 	# Bug #256119
-	epatch "${FILESDIR}/${PN}-1.0.19-missing-avutil.patch"
+	epatch "${FILESDIR}"/${PN}-1.0.19-missing-avutil.patch
+
+	# Bug #278352
+	epatch "${FILESDIR}"/${P}-automagic.patch
 
 	eautoreconf
 }
@@ -50,14 +53,21 @@ src_prepare() {
 src_configure() {
 	use debug || append-flags -DNDEBUG
 
+	local myspeex
+
+	if use speex; then
+		myspeex=lib
+	else
+		myspeex=no
+	fi
+
 	econf \
+		--disable-dependency-tracking \
 		$(use_enable ffmpeg avcodec) \
 		$(use_enable jack) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable pulseaudio) \
-		$(use_with speex speex lib) \
-		--disable-dependency-tracking \
-		|| die "econf failed"
+		--with-speex=${myspeex}
 }
 
 src_install() {
