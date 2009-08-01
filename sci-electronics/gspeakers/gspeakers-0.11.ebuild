@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/gspeakers-0.11.ebuild,v 1.6 2009/02/15 22:08:49 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gspeakers/gspeakers-0.11.ebuild,v 1.7 2009/08/01 21:21:38 cryos Exp $
 
-inherit eutils gnome2
+inherit eutils gnome2 autotools
 
 DESCRIPTION="GTK based loudspeaker enclosure and crossovernetwork designer"
 HOMEPAGE="http://gspeakers.sourceforge.net/"
@@ -27,4 +27,5 @@ DOCS="README* INSTALL Changelog AUTHORS NEWS ABOUT"
 src_unpack() {
 	gnome2_src_unpack
 	epatch "${FILESDIR}"/${P}-gcc43.patch
+	eautoreconf
 }
