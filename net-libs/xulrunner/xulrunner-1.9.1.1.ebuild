@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.1.ebuild,v 1.2 2009/07/31 15:02:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.1.ebuild,v 1.3 2009/08/01 00:31:41 darkside Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -202,7 +202,7 @@ src_install() {
 	echo "LDPATH=${MOZLIBDIR}" > "${D}"/etc/env.d/08xulrunner || die "env.d failed"
 
 	# Add our defaults to xulrunner and out of firefox
-	cp "${FILESDIR}"/xulrunner-default-prefs.js "${D}/${MOZLIBDIR}/defaults/pref/all-gentoo.js"
+	cp "${FILESDIR}"/xulrunner-default-prefs.js	"${D}/${MOZLIBDIR}/defaults/pref/all-gentoo.js" || die "cp failed"
 
 	if use java ; then
 		java-pkg_regjar "${D}/${MOZLIBDIR}/javaxpcom.jar"
