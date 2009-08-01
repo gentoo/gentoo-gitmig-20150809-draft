@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/arpack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.10 2009/07/14 14:27:22 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arpack/ChangeLog,v 1.11 2009/08/01 17:00:25 jer Exp $
+
+  01 Aug 2009; Jeroen Roovers <jer@gentoo.org> arpack-96-r2.ebuild:
+  Marked ~hppa (bug #277805).
 
   14 Jul 2009; Ferris McCormick <fmccor@gentoo.org> arpack-96-r2.ebuild:
   Keyword for ~sparc --- Bug #277805 --- tests success.
