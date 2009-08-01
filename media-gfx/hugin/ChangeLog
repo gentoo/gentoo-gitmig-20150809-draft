@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/hugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.69 2009/07/26 13:41:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/ChangeLog,v 1.70 2009/08/01 09:49:21 maekke Exp $
+
+  01 Aug 2009; Markus Meier <maekke@gentoo.org> hugin-0.8.0.ebuild:
+  tweak x11-libs/wxGTK dep for bug #279653 and bug #269689
 
 *hugin-0.8.0 (26 Jul 2009)
 

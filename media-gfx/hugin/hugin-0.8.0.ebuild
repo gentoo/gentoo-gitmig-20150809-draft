@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.8.0.ebuild,v 1.1 2009/07/26 13:41:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.8.0.ebuild,v 1.2 2009/08/01 09:49:21 maekke Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -27,7 +27,7 @@ DEPEND="app-arch/zip
 	media-libs/openexr
 	media-libs/tiff
 	sys-libs/zlib
-	x11-libs/wxGTK:2.8
+	x11-libs/wxGTK:2.8[opengl,-odbc]
 	lapack? ( virtual/lapack )
 	sift? ( media-gfx/autopano-sift-C )"
 RDEPEND="${DEPEND}
