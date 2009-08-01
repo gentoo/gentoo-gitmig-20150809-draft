@@ -1,0 +1,4 @@
+default/linux/amd64/2008.0
+# cd /etc
+# rm make.profile
+# ln -s ../usr/portage/profiles/default/linux/amd64/2008.0 make.profile
