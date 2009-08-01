@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.7.ebuild,v 1.1 2009/07/26 10:39:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.7.ebuild,v 1.2 2009/08/01 17:56:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -79,18 +79,6 @@ _check_kernel_config() {
 		! linux_chkconfig_present PCIEPORTBUS; then
 		ewarn "You don't have AGP and/or PCIe support enabled in the kernel"
 		ewarn "Direct rendering will not work."
-	fi
-
-	if linux_chkconfig_present PARAVIRT; then
-		eerror "Currently, ati-drivers don't compile with paravirtualization"
-		eerror "active in the kernel due to GPL symbol export restrictions."
-		eerror "Please disable it:"
-		eerror "    CONFIG_PARAVIRT=n"
-		eerror "in /usr/src/linux/.config or"
-		eerror "	Processor type and features -->"
-		eerror "		[ ] Paravirtualization support (EXPERIMENTAL)"
-		eerror "in the 'menuconfig'"
-		die "CONFIG_PARAVIRT enabled"
 	fi
 
 	if ! linux_chkconfig_present MAGIC_SYSRQ; then
