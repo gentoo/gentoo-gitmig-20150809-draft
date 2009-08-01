@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/hatools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.7 2008/03/26 17:34:02 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hatools/ChangeLog,v 1.8 2009/08/01 03:00:37 darkside Exp $
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -hatools-1.00.ebuild:
+  remove old
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> hatools-2.00.ebuild:
   sparc/x86 stable

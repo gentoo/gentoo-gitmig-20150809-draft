@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lxsplit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.14 2008/10/26 18:54:21 maekke Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lxsplit/ChangeLog,v 1.15 2009/08/01 02:59:41 darkside Exp $
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -lxsplit-0.1.1.ebuild:
+  remove old
 
   26 Oct 2008; Markus Meier <maekke@gentoo.org> lxsplit-0.2.3.ebuild:
   amd64/x86 stable, bug #244252
