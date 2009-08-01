@@ -1,6 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/smtpclient/smtpclient-1.0.0.ebuild,v 1.7 2006/03/19 06:21:54 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/smtpclient/smtpclient-1.0.0.ebuild,v 1.8 2009/08/01 01:10:25 vostorga Exp $
+
+inherit toolchain-funcs
 
 IUSE=""
 
@@ -13,6 +15,12 @@ SLOT="0"
 KEYWORDS="ppc x86"
 
 DEPEND=""
+RDEPEND=""
+
+src_compile() {
+	econf
+	emake CC="$(tc-getCC)" || die "emake failed"
+}
 
 src_install () {
 	dobin smtpclient
