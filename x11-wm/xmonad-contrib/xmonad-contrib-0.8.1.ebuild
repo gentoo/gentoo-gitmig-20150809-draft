@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/xmonad-contrib-0.8.1.ebuild,v 1.1 2009/07/31 17:38:27 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad-contrib/xmonad-contrib-0.8.1.ebuild,v 1.2 2009/08/01 06:14:15 mr_bones_ Exp $
 
 CABAL_FEATURES="lib profile haddock"
 inherit haskell-cabal
@@ -21,7 +21,6 @@ RDEPEND=">=dev-lang/ghc-6.6.1
 
 DEPEND="${RDEPEND}
 		>=dev-haskell/cabal-1.2.1"
-
 
 src_compile() {
 	CABAL_CONFIGURE_FLAGS="${CABAL_CONFIGURE_FLAGS} --flags=-use_xft"
