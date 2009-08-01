@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/realpath
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.43 2009/08/01 16:09:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.44 2009/08/01 23:31:08 chainsaw Exp $
+
+  01 Aug 2009; <chainsaw@gentoo.org> realpath-1.15.ebuild:
+  Marked stable on AMD64 as requested by Jeremy "Darkside" Olexa
+  <darkside@gentoo.org> in bug #279841. Compile-tested on a dual hex-core
+  Opteron with USE="nls".
 
   01 Aug 2009; Jeroen Roovers <jer@gentoo.org> realpath-1.15.ebuild:
   Stable for HPPA (bug #279841).
