@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.8.ebuild,v 1.1 2009/06/06 15:54:15 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/rapidsvn-0.9.8.ebuild,v 1.2 2009/08/01 15:42:52 nerdboy Exp $
 
 WANT_AUTOCONF="2.5"
 inherit versionator eutils libtool autotools wxwidgets flag-o-matic fdo-mime
@@ -82,7 +82,12 @@ src_compile() {
 		--with-apr-config="/usr/bin/apr${apr_suffix}-config" \
 		--with-apu-config="/usr/bin/apu${apr_suffix}-config" \
 		${myconf} || die "econf failed"
-	emake  || die "emake failed"
+
+	## doxygen made a sandbox error; no bug filed yet
+	if use doc; then
+		addpredict /var/cache/fontconfig
+		emake  || die "emake failed"
+	fi
 }
 
 src_install() {

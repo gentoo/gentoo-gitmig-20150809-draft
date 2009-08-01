@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/rapidsvn
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.65 2009/06/06 15:54:15 nerdboy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.66 2009/08/01 15:42:52 nerdboy Exp $
+
+  01 Aug 2009; Steve Arnold <nerdboy@gentoo.org> rapidsvn-0.9.8.ebuild:
+  Added work-around for doxygen sandbox violation (no bug, yet...) due to
+  font diddling by latex.  No idea why generating one particular jpg file
+  would cause this.
 
 *rapidsvn-0.9.8 (06 Jun 2009)
 
