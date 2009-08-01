@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39.ebuild,v 1.2 2009/07/28 03:22:29 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/gpsd-2.39.ebuild,v 1.3 2009/08/01 17:01:19 nerdboy Exp $
 
 inherit autotools eutils distutils flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="dbus garmin minimal ntp ocean python tntc usb X"
+IUSE="dbus garmin minimal ntp ocean tntc usb X"
 
 RDEPEND="X? (
 		x11-libs/libXmu
@@ -25,14 +25,14 @@ RDEPEND="X? (
 		x11-libs/libXpm
 		x11-libs/libXaw
 	)
-	python? ( dev-lang/python )
-
 	dbus? ( >=sys-apps/dbus-0.94
 		>=dev-libs/glib-2.6
 		dev-libs/dbus-glib )
 	ntp? ( net-misc/ntp )
 	usb? ( virtual/dev-manager )
-	sys-libs/ncurses"
+	sys-libs/ncurses
+	dev-lang/python"
+
 
 DEPEND="${RDEPEND}
 	X? (
@@ -66,7 +66,7 @@ src_compile() {
 	local my_conf="--enable-shared --with-pic --enable-static"
 		# --enable-superstar2 is missing a header file
 
-	use python && distutils_python_version
+	distutils_python_version
 
 	if ! use ntp; then
 		my_conf="${my_conf} --disable-pps --disable-ntpshm"
@@ -81,12 +81,12 @@ src_compile() {
 
 		WITH_XSLTPROC=no WITH_XMLTO=no econf ${my_conf} \
 		$(use_enable dbus) $(use_enable ocean oceanserver) \
-		$(use_enable tntc tnt) $(use_enable python) \
-		$(use_enable garmin garmintxt) || die "econf failed"
+		$(use_enable tntc tnt) $(use_enable garmin garmintxt) \
+		|| die "econf failed"
 	else
 		econf ${my_conf} $(use_enable dbus) $(use_enable tntc tnt) \
-		$(use_enable ocean oceanserver) $(use_enable python) \
-		$(use_enable garmin garmintxt) $(use_with X x) \
+		$(use_enable ocean oceanserver) $(use_with X x) \
+		$(use_enable garmin garmintxt) \
 		|| die "econf failed"
 	fi
 
@@ -126,7 +126,7 @@ src_install() {
 		"${D}usr/share/man/man1/xgps.1.bz2"
 	fi
 
-	use python && distutils_src_install
+	distutils_src_install
 
 	dodoc INSTALL README TODO
 
@@ -135,12 +135,10 @@ src_install() {
 	doins dgpsip-servers gpscap.ini
 
 	if use minimal; then
-		doman gpsctl.1 gpsd.8 gps.1 cgps.1 gpxlogger.1 gpspipe.1
-		use python && doman gpsprof.1
+		doman gpsctl.1 gpsd.8 gps.1 cgps.1 gpxlogger.1 gpspipe.1 gpsprof.1
 	else
 		diropts "-m0644"
-		dobin logextract
-		use python && dobin striplog
+		dobin logextract striplog
 	fi
 }
 
