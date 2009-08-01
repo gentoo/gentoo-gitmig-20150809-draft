@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/leave-20041016.ebuild,v 1.7 2009/04/16 20:11:42 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/leave-20041016.ebuild,v 1.8 2009/08/01 17:42:42 darkside Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,15 +10,16 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-fix-makefile.diff
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-fix-makefile.diff"
 }
 
 src_compile() {
@@ -30,5 +31,5 @@ src_compile() {
 src_install() {
 	dobin leave || die "dobin failed"
 	doman leave.1 || die "doman failed"
-	dodoc ${FILESDIR}/README || die "dodoc failed"
+	dodoc "${FILESDIR}/README" || die "dodoc failed"
 }

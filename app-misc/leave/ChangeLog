@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/leave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/ChangeLog,v 1.9 2009/04/16 20:11:42 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/leave/ChangeLog,v 1.10 2009/08/01 17:42:42 darkside Exp $
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> leave-20041016.ebuild:
+  amd64 stable, cleanup
 
   16 Apr 2009; Tiago Cunha <tcunha@gentoo.org> leave-20041016.ebuild:
   keyworded ~arch for amd64, bug 265883
