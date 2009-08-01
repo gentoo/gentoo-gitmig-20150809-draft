@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cloog-ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.10 2009/07/31 07:52:20 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cloog-ppl/ChangeLog,v 1.11 2009/08/01 05:04:37 dirtyepic Exp $
+
+  01 Aug 2009; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
+  Add toolchain to metadata.xml
 
 *cloog-ppl-0.15.4 (31 Jul 2009)
 
