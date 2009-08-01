@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mailman
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.115 2008/11/14 11:07:45 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.116 2009/08/01 09:57:05 hanno Exp $
+
+*mailman-2.1.12 (01 Aug 2009)
+
+  01 Aug 2009; Hanno Boeck <hanno@gentoo.org> +mailman-2.1.12.ebuild,
+  +files/mailman-2.1.12-add-destdir.patch,
+  +files/mailman-2.1.12-directory-check.patch:
+  Version bump.
 
   14 Nov 2008; Hanno Boeck <hanno@gentoo.org> files/README.gentoo-r3:
   Typos in exim doc, thanks to Martin DiViaio in #244545.
