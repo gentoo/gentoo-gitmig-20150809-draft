@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.165 2009/07/29 18:02:58 kolmodin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.166 2009/08/01 11:50:00 mabi Exp $
+
+  01 Aug 2009; <mabi@gentoo.org> ghc-6.8.2.ebuild:
+  ~ppc added back
 
   29 Jul 2009; Lennart Kolmodin <kolmodin@gentoo.org> Manifest:
   Fix broken manifest, ghc-6.8.2-ia64. Reported by Jeremy Olexa (darkside).
