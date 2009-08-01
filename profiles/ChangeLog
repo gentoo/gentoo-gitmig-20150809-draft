@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3000 2009/08/01 20:35:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3001 2009/08/01 22:23:43 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> thirdpartymirrors:
+  Modify mirror://xfce - remove mocha.xfce.org because it's naming doesn't
+  comply with the rest of the mirrors. Remove de.xfce.org because it is
+  outdated. Add tx-us.xfce.org
 
   01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask gsynaptics-mcs-plugin because it needs xfce-mcs-manager which isn't
