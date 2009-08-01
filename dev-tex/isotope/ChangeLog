@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/isotope
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/isotope/ChangeLog,v 1.2 2007/11/10 13:39:10 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/isotope/ChangeLog,v 1.3 2009/08/01 19:37:47 cryos Exp $
+
+  01 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> isotope-20040401.ebuild:
+  Marked stable on amd64, bug 274133.
 
   10 Nov 2007; Christian Faulhammer <opfer@gentoo.org>
   isotope-20040401.ebuild:
