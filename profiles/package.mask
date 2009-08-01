@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10194 2009/08/01 11:19:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10195 2009/08/01 13:17:39 matsuu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -400,10 +400,6 @@ net-p2p/entropy_rsa
 # Removal scheduled for 2009-09-09
 # Bug #240286
 net-misc/sambasentinel
-
-# MATSUU Takuto <matsuu@gentoo.org> (8 Jul 2009)
-# Masked broken ebuild, bug #276543.
-=net-wireless/broadcom-sta-5.10.91.9-r2
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
 #  on behalf of QA Team
