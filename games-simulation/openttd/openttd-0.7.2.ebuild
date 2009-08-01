@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.0.ebuild,v 1.3 2009/08/01 11:59:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/openttd-0.7.2.ebuild,v 1.1 2009/08/01 17:00:49 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -33,8 +33,6 @@ RDEPEND="${DEPEND}
 		alsa? ( media-sound/alsa-utils )
 	)"
 
-PATCHES=( "${FILESDIR}"/${P}-build.patch )
-
 src_configure() {
 	local myopts
 
@@ -61,13 +59,17 @@ src_configure() {
 	myopts="${myopts} --without-allegro"
 
 	# configure is a hand-written bash-script, so econf will not work
-	bash ./configure \
+	./configure \
 		--disable-strip \
-		--prefix-dir=/usr \
+		--prefix-dir=/ \
 		--binary-dir="${GAMES_BINDIR}" \
 		--data-dir="${GAMES_DATADIR}/${PN}" \
 		--install-dir="${D}" \
-		--doc-dir=share/doc/${PF} \
+		--icon-theme-dir=/usr/share/icons \
+		--icon-dir=/usr/share/pixmaps \
+		--menu-dir=/usr/share/applications \
+		--man-dir=/usr/share/man \
+		--doc-dir=/usr/share/doc/${PF} \
 		--menu-group="Game;Simulation;" \
 		${myopts} \
 		$(use_with iconv) \
