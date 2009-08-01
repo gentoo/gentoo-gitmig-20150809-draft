@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r6.ebuild,v 1.12 2009/07/29 08:05:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.3.0.0-r6.ebuild,v 1.13 2009/08/01 17:17:15 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -230,39 +230,37 @@ PDEPEND="
 	)"
 LICENSE="${LICENSE} MIT"
 
-PATCHES="
-	${FILESDIR}/${PV}-fix-xkb-openoffice-hangs.patch
-	${FILESDIR}/${PV}-fix-dual-head-screen-resolutions.patch
-	${FILESDIR}/${PV}-fix-randr-resizing.patch
-	${FILESDIR}/${PV}-fix-xephyr-amd64-segfault.patch
-	${FILESDIR}/${PV}-ramdac.patch
-	${FILESDIR}/use-composite-for-unequal-depths.patch
-	${FILESDIR}/1.2.0-fix-amd-cpu-detection.patch
-	${FILESDIR}/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch
-	${FILESDIR}/1.2.0-typo-fix.patch
-	${FILESDIR}/1.2.0-zero-out-client-devprivates-on-allocation.patch
-	${FILESDIR}/${PV}-use-proc-instead-of-sys.patch
-	${FILESDIR}/avoid-crash-on-minimized-xv-window.patch
-	${FILESDIR}/xorg-server-sam225bw-quirks.patch
-	${FILESDIR}/1.3-alpha-build-fix.patch
-	${FILESDIR}/${PV}-xephyr_crash_at_exit.patch
-	${FILESDIR}/xorg-x11-server-1.0.1-fpic-libxf86config.patch
-	${FILESDIR}/1.4-0001-Fix-for-CVE-2007-5760-XFree86-Misc-extension-out-o.patch
-	${FILESDIR}/1.4-0002-Fix-for-CVE-2007-6428-TOG-cup-extension-memory-cor.patch
-	${FILESDIR}/1.3-0003-Fix-for-CVE-2007-6427-Xinput-extension-memory-corr.patch
-	${FILESDIR}/1.4-0004-Fix-for-CVE-2007-6429-MIT-SHM-and-EVI-extensions-i.patch
-	${FILESDIR}/1.4-0005-Fix-for-CVE-2008-0006-PCF-Font-parser-buffer-overf.patch
-	${FILESDIR}/1.3-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch
-	${FILESDIR}/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch
-	${FILESDIR}/1.4-0008-CVE-2007-6429-Always-test-for-size-offset-wrapping.patch
-	${FILESDIR}/1.4-0009-Don-t-break-grab-and-focus-state-for-a-window-when-r.patch
-	${FILESDIR}/xorg-server-1.4.0.90-automake-1.10.1-fixup.patch
-	${FILESDIR}/xorg-xserver-1.4-cve-2008-1377.diff
-	${FILESDIR}/xorg-xserver-1.4-cve-2008-1379.diff
-	${FILESDIR}/xorg-xserver-1.4-cve-2008-2360.diff
-	${FILESDIR}/xorg-xserver-1.4-cve-2008-2361.diff
-	${FILESDIR}/xorg-xserver-1.4-cve-2008-2362.diff
-	"
+PATCHES=( "${FILESDIR}/${PV}-fix-xkb-openoffice-hangs.patch"
+	"${FILESDIR}/${PV}-fix-dual-head-screen-resolutions.patch"
+	"${FILESDIR}/${PV}-fix-randr-resizing.patch"
+	"${FILESDIR}/${PV}-fix-xephyr-amd64-segfault.patch"
+	"${FILESDIR}/${PV}-ramdac.patch"
+	"${FILESDIR}/use-composite-for-unequal-depths.patch"
+	"${FILESDIR}/1.2.0-fix-amd-cpu-detection.patch"
+	"${FILESDIR}/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch"
+	"${FILESDIR}/1.2.0-typo-fix.patch"
+	"${FILESDIR}/1.2.0-zero-out-client-devprivates-on-allocation.patch"
+	"${FILESDIR}/${PV}-use-proc-instead-of-sys.patch"
+	"${FILESDIR}/avoid-crash-on-minimized-xv-window.patch"
+	"${FILESDIR}/xorg-server-sam225bw-quirks.patch"
+	"${FILESDIR}/1.3-alpha-build-fix.patch"
+	"${FILESDIR}/${PV}-xephyr_crash_at_exit.patch"
+	"${FILESDIR}/xorg-x11-server-1.0.1-fpic-libxf86config.patch"
+	"${FILESDIR}/1.4-0001-Fix-for-CVE-2007-5760-XFree86-Misc-extension-out-o.patch"
+	"${FILESDIR}/1.4-0002-Fix-for-CVE-2007-6428-TOG-cup-extension-memory-cor.patch"
+	"${FILESDIR}/1.3-0003-Fix-for-CVE-2007-6427-Xinput-extension-memory-corr.patch"
+	"${FILESDIR}/1.4-0004-Fix-for-CVE-2007-6429-MIT-SHM-and-EVI-extensions-i.patch"
+	"${FILESDIR}/1.4-0005-Fix-for-CVE-2008-0006-PCF-Font-parser-buffer-overf.patch"
+	"${FILESDIR}/1.3-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch"
+	"${FILESDIR}/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch"
+	"${FILESDIR}/1.4-0008-CVE-2007-6429-Always-test-for-size-offset-wrapping.patch"
+	"${FILESDIR}/1.4-0009-Don-t-break-grab-and-focus-state-for-a-window-when-r.patch"
+	"${FILESDIR}/xorg-server-1.4.0.90-automake-1.10.1-fixup.patch"
+	"${FILESDIR}/xorg-xserver-1.4-cve-2008-1377.diff"
+	"${FILESDIR}/xorg-xserver-1.4-cve-2008-1379.diff"
+	"${FILESDIR}/xorg-xserver-1.4-cve-2008-2360.diff"
+	"${FILESDIR}/xorg-xserver-1.4-cve-2008-2361.diff"
+	"${FILESDIR}/xorg-xserver-1.4-cve-2008-2362.diff" )
 
 pkg_setup() {
 	use minimal || ensure_a_server_is_building

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.13 2009/07/13 10:53:18 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.4.2.ebuild,v 1.14 2009/08/01 17:17:15 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -244,12 +244,10 @@ PDEPEND="
 	)"
 LICENSE="${LICENSE} MIT"
 
-PATCHES="
-	${FILESDIR}/1.4-ia64.patch
-	${FILESDIR}/1.3.0.0-use-proc-instead-of-sys.patch
-	${FILESDIR}/1.4-fpic-libxf86config.patch
-	${FILESDIR}/1.4-fix-kdrive-automake.patch
-	"
+PATCHES=( "${FILESDIR}/1.4-ia64.patch"
+	"${FILESDIR}/1.3.0.0-use-proc-instead-of-sys.patch"
+	"${FILESDIR}/1.4-fpic-libxf86config.patch"
+	"${FILESDIR}/1.4-fix-kdrive-automake.patch" )
 
 pkg_setup() {
 	use minimal || ensure_a_server_is_building
