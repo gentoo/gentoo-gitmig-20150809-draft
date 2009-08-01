@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.8-r1.ebuild,v 1.1 2009/07/22 15:38:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-server-bin/shoutcast-server-bin-1.9.8-r1.ebuild,v 1.2 2009/08/01 14:27:15 maekke Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="sc_serv_${PV}_Linux.tar.gz"
 
 LICENSE="shoutcast"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND=""
