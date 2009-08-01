@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.3.1.ebuild,v 1.1 2009/08/01 10:18:37 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/twiki/twiki-4.3.1.ebuild,v 1.2 2009/08/01 20:59:32 a3li Exp $
 
 WEBAPP_NO_AUTO_INSTALL="yes"
 
@@ -29,6 +29,7 @@ RDEPEND=">=app-text/rcs-5.7
 	dev-perl/locale-maketext-lexicon
 	dev-perl/Text-Diff
 	dev-perl/URI
+	dev-perl/Unicode-String
 	virtual/cron
 	>=virtual/perl-CGI-3.20
 	virtual/perl-digest-base
