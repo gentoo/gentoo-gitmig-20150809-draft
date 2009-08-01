@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/freshmeat-submit
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.8 2007/03/19 02:22:16 kloeri Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/freshmeat-submit/ChangeLog,v 1.9 2009/08/01 19:08:22 darkside Exp $
+
+  01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -freshmeat-submit-1.4.ebuild:
+  remove old
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.
