@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090801.ebuild,v 1.1 2009/08/01 02:20:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090801.ebuild,v 1.2 2009/08/01 12:38:05 arfrever Exp $
 
 DESCRIPTION="Manages multiple Python versions"
 HOMEPAGE="http://www.gentoo.org"
@@ -17,6 +17,9 @@ RDEPEND="${DEPEND}"
 src_install() {
 	insinto /usr/share/eselect/modules
 	newins "${WORKDIR}/python.eselect-${PVR}" python.eselect || die "newins python.eselect failed"
+
+	# Fix shebang (bug #279875).
+	sed -e 's:/bin/sh:/bin/bash:' -i "${D}/usr/share/eselect/modules/python.eselect" || die "sed failed"
 }
 
 pkg_preinst() {
