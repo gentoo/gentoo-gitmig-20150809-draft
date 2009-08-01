@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.12 2009/07/30 18:12:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.13 2009/08/01 18:07:18 cryos Exp $
+
+*eigen-2.0.4 (01 Aug 2009)
+
+  01 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> +eigen-2.0.4.ebuild,
+  +files/eigen-2.0.4-qt-test.patch:
+  Version bump, disabled fortran in testing for now - bug 279824.
 
 *eigen-2.0.3 (30 Jul 2009)
 
