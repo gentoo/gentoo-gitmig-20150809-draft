@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.22.ebuild,v 1.1 2009/05/24 00:25:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.22.ebuild,v 1.2 2009/08/01 06:58:00 ssuominen Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 		x11-libs/libXxf86vm
 		x11-apps/xmessage
 	)
-	alsa? ( media-libs/alsa-lib[midi] )
+	alsa? ( media-libs/alsa-lib )
 	esd? ( media-sound/esound )
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
