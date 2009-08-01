@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/rpy
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.31 2009/04/07 07:56:55 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rpy/ChangeLog,v 1.32 2009/08/01 12:44:43 bicatali Exp $
+
+*rpy-2.0.6 (01 Aug 2009)
+
+  01 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> -rpy-2.0.2.ebuild,
+  +rpy-2.0.6.ebuild, +files/rpy-2.0.6-setup.patch:
+  Version bump
 
 *rpy-2.0.3 (07 Apr 2009)
 
