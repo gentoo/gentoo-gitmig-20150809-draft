@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.43 2009/05/27 23:03:02 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.44 2009/08/01 06:44:02 ssuominen Exp $
+
+  01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> dosbox-0.72.ebuild,
+  dosbox-0.73.ebuild:
+  Remove USE depend for media-libs/alsa-lib[midi].
 
 *dosbox-0.73 (27 May 2009)
 
