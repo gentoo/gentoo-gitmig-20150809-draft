@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.367 2009/07/06 17:55:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.368 2009/08/01 12:45:19 a3li Exp $
+
+*phpmyadmin-3.2.0.1 (01 Aug 2009)
+
+  01 Aug 2009; Alex Legler <a3li@gentoo.org> -phpmyadmin-3.2.0.ebuild,
+  +phpmyadmin-3.2.0.1.ebuild:
+  Non-maintainer commit: Version bump for security bug 276218.
+  Removing vulnerable version.
 
   06 Jul 2009; Raúl Porcel <armin76@gentoo.org> phpmyadmin-2.11.9.5.ebuild:
   sparc stable wrt #263711
