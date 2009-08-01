@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/tkcon-20081103.ebuild,v 1.2 2009/01/09 22:41:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/tkcon-2.5.ebuild,v 1.1 2009/08/01 12:52:18 bicatali Exp $
 
 inherit eutils
 
 DESCRIPTION="Tk GUI console"
 HOMEPAGE="http://tkcon.sourceforge.net/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
@@ -14,6 +14,7 @@ SLOT="0"
 IUSE="doc"
 
 DEPEND="dev-lang/tk"
+RDEPEND="${DEPEND}"
 
 src_install() {
 	local tclver="$(echo 'puts $tcl_version' | tclsh)"

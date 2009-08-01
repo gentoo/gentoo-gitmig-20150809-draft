@@ -6,6 +6,7 @@
   <name>Sébastien Fabbro</name>
   <description>Feel free to take over</description>
 </maintainer>
+<herd>tcltk</herd>
 <longdescription lang="en">
   tkcon is a replacement for the standard console that comes with
   Tk. The console itself provides  more features than the standard

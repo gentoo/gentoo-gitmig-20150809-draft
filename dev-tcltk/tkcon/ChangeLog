@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tkcon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.2 2009/01/09 22:41:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkcon/ChangeLog,v 1.3 2009/08/01 12:52:18 bicatali Exp $
+
+*tkcon-2.5 (01 Aug 2009)
+
+  01 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> +tkcon-2.5.ebuild,
+  -tkcon-20081103.ebuild, metadata.xml:
+  Version bump
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> tkcon-20081103.ebuild:
   Marked ~ppc for bug #253299.
