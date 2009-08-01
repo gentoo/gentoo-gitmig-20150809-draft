@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/quilt-el
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.10 2009/07/30 14:58:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/quilt-el/ChangeLog,v 1.11 2009/08/01 14:57:43 flameeyes Exp $
+
+  01 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  quilt-el-0.46.2.ebuild:
+  Fix the ebuild that didn't even unpack.
 
 *quilt-el-0.46.2 (30 Jul 2009)
 
