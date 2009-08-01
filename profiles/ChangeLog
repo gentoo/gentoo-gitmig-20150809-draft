@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.2999 2009/08/01 13:17:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3000 2009/08/01 20:35:36 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask gsynaptics-mcs-plugin because it needs xfce-mcs-manager which isn't
+  used with Xfce 4.6.
 
   01 Aug 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask:
   Unmask =net-wireless/broadcom-sta-5.10.91.9-r2.
