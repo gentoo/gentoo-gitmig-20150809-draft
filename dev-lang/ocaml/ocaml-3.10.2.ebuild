@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.2.ebuild,v 1.15 2009/08/01 23:11:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.10.2.ebuild,v 1.16 2009/08/02 12:19:49 flameeyes Exp $
 
 EAPI="1"
 
@@ -90,13 +90,13 @@ src_compile() {
 
 	# Native code generation can be disabled now
 	if use ocamlopt ; then
-		make opt || die "make opt failed!"
-		make opt.opt || die "make opt.opt failed!"
+		emake -j1 opt || die "make opt failed!"
+		emake -j1 opt.opt || die "make opt.opt failed!"
 	fi
 }
 
 src_install() {
-	make BINDIR="${D}"/usr/bin \
+	emake -j1 BINDIR="${D}"/usr/bin \
 		LIBDIR="${D}"/usr/$(get_libdir)/ocaml \
 		MANDIR="${D}"/usr/share/man \
 		install || die "make install failed!"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.169 2009/08/01 23:11:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.170 2009/08/02 12:19:49 flameeyes Exp $
+
+  02 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> ocaml-3.10.2.ebuild:
+  Use serial make everywhere until fixed.
 
   01 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> ocaml-3.10.2.ebuild:
   Use -j1 for make. Bug #279968.
