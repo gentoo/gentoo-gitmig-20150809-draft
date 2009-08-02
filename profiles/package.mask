@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10197 2009/08/02 10:02:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10198 2009/08/02 10:08:14 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,9 +31,11 @@
 
 #--- END OF EXAMPLES ---
 
-# Samuli Suominen <ssuominen@gentoo.org> (01 Aug 2009)
+# Samuli Suominen <ssuominen@gentoo.org> (02 Aug 2009)
 # Outdated. Needs Xfce 4.4 style xfce-mcs-manager.
+# Use notification-daemon or xfce4-notifyd.
 xfce-extra/gsynaptics-mcs-plugin
+x11-misc/notification-daemon-xfce
 
 # Steve Dibb <beandog@gentoo.org> (01 Aug 2009)
 # Mask for removal, name change to app-text/xiphos
