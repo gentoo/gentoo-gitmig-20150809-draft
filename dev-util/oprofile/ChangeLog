@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/oprofile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.58 2009/06/05 22:23:27 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/oprofile/ChangeLog,v 1.59 2009/08/02 22:57:48 spock Exp $
+
+*oprofile-0.9.5 (02 Aug 2009)
+
+  02 Aug 2009; Michał Januszewski <spock@gentoo.org>
+  +oprofile-0.9.5.ebuild:
+  Version bump (bug #279902).
 
   05 Jun 2009; Michał Januszewski <spock@gentoo.org> oprofile-0.9.3.ebuild:
   Make oprofile 0.9.3 build with GCC 4.3.3.
