@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/virt-viewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.3 2009/01/31 07:40:31 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-viewer/ChangeLog,v 1.4 2009/08/02 14:23:51 cardoe Exp $
+
+*virt-viewer-0.2.0 (02 Aug 2009)
+
+  02 Aug 2009; Doug Goldstein <cardoe@gentoo.org> +virt-viewer-0.2.0.ebuild:
+  version bump
 
   31 Jan 2009; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Give up maintainership.
