@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.69 2009/07/29 13:38:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.70 2009/08/02 12:12:50 yngwin Exp $
+
+  02 Aug 2009; Ben de Groot <yngwin@gentoo.org> qtcurve-qt4-0.65.2.ebuild:
+  Remove kde support from 0.65.2, so it can be marked stable.
 
 *qtcurve-qt4-0.67.1 (29 Jul 2009)
 
