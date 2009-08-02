@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.0.ebuild,v 1.4 2009/07/28 05:37:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose/nose-0.11.0.ebuild,v 1.5 2009/08/02 14:41:40 maekke Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://somethingaboutorange.com/mrl/projects/nose/"
 SRC_URI="http://somethingaboutorange.com/mrl/projects/nose/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="doc examples test"
 
 RDEPEND="dev-python/setuptools"
