@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.124 2009/05/18 21:28:03 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.125 2009/08/02 10:52:31 eva Exp $
+
+*vino-2.26.2-r1 (02 Aug 2009)
+
+  02 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> -vino-2.26.1.ebuild,
+  +vino-2.26.2-r1.ebuild, +files/vino-2.26.2-autorestart-loop.patch:
+  Version bump. Fix autorestart loop when session-saving is enabled, bug
+  #277989. Clean up old revision. Fix locales installation.
 
 *vino-2.26.2 (18 May 2009)
 

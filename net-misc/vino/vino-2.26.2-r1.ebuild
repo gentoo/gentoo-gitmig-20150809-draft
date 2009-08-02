@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.26.1.ebuild,v 1.4 2009/05/16 13:25:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.26.2-r1.ebuild,v 1.1 2009/08/02 10:52:31 eva Exp $
 
 EAPI="2"
 
@@ -58,6 +58,9 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fix build issue on fbsd, upstream bug #577831
-	epatch "${FILESDIR}/${P}-fbsd-fix.patch"
+	# Fix autorestart loop, bug #277989
+	epatch "${FILESDIR}/${P}-autorestart-loop.patch"
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
