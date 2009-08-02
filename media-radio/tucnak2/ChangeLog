@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/tucnak2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.10 2009/07/27 14:32:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tucnak2/ChangeLog,v 1.11 2009/08/02 14:32:33 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> tucnak2-2.26.ebuild:
+  x86 stable, bug #278691
 
   27 Jul 2009; <chainsaw@gentoo.org> tucnak2-2.26.ebuild:
   Marked stable on AMD64 as requested by Hannes Jochriem in bug #278691.
