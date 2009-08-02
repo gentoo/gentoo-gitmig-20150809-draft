@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.1 2009/08/01 05:10:04 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.2 2009/08/02 09:43:37 volkmar Exp $
+
+  02 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> mpc-0.6.ebuild:
+  Keywording for ppc. Bug 279851
 
   01 Aug 2009; Ryan Hill <dirtyepic@gentoo.org> +mpc-0.6.ebuild,
   +files/mpc-0.6-fortify.patch, +metadata.xml:
