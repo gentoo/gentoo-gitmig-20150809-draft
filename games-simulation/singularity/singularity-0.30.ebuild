@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30.ebuild,v 1.2 2009/07/15 13:33:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/singularity/singularity-0.30.ebuild,v 1.3 2009/08/02 00:06:45 chainsaw Exp $
 
 EAPI=2
 inherit eutils games
@@ -13,7 +13,7 @@ SRC_URI="http://www.emhsoft.com/singularity/${P}-src.tar.gz
 
 LICENSE="GPL-2 CCPL-Attribution-ShareAlike-2.5"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="+music"
 
 RDEPEND="dev-python/pygame"
