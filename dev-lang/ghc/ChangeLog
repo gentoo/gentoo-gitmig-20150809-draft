@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.167 2009/08/02 10:23:12 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.168 2009/08/02 11:01:42 kolmodin Exp $
+
+  02 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.8.2.ebuild:
+  Make ppc work in pkg_setup.
 
   02 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.10.4.ebuild:
   Add sparc binary for ghc 6.10.4. Binary compiled by
