@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4700 2009/08/02 21:10:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4701 2009/08/02 22:47:38 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -363,6 +363,7 @@ app-misc/freemind:pdf - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/freemind:svg - Build plugin for exporting mindmaps to SVG and PDF
 app-misc/g15composer:amarok - Enable display of titles played in Amarok
 app-misc/geneweb:ocamlopt - Enable ocamlopt support (dev-lang/ocaml native code compiler)
+app-misc/gnote:applet - Enable gnote applet for gnome-base/gnome-panel
 app-misc/gourmet:gnome-print - Enable printing support using gnome-print.
 app-misc/gourmet:rtf - Enable RTF support.
 app-misc/gpsdrive:garmin - Adds specific support for Garmin GPS receivers (pre-2.10 only)
@@ -1119,8 +1120,6 @@ gnome-extra/gtkhtml:glade - Provide integration with dev-util/glade.
 gnome-extra/libgda:mdb - Enables Microsoft Access DB support
 gnome-extra/libgda:xbase - Enables support for xbase databases (dBase, FoxPro, etc.)
 gnome-extra/music-applet:mpd - Enable MPD support
-gnome-extra/nautilus-sendto:balsa - Enables support for mail-client/balsa
-gnome-extra/nautilus-sendto:claws - Enables support for mail-client/claws
 gnome-extra/nautilus-sendto:eds - Enables support for evolution-sendto using gnome-extra/evolution-data-server
 gnome-extra/nautilus-sendto:empathy - Enables support for net-im/empathy
 gnome-extra/nautilus-sendto:gajim - Enables support for net-im/gajim
