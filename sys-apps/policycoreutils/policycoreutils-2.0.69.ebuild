@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.69.ebuild,v 1.1 2009/08/02 01:25:55 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.0.69.ebuild,v 1.2 2009/08/02 01:27:47 pebenito Exp $
 
 IUSE="nls"
 
@@ -21,11 +21,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPS=">=sys-libs/libselinux-${SELNX_VER}
-        >=sys-libs/glibc-2.4
-        >=sys-process/audit-1.5.1 
-        >=sys-libs/libcap-1.10-r10
-        sys-libs/pam
-        =sys-libs/libsemanage-${SEMNG_VER}*"
+	>=sys-libs/glibc-2.4
+	>=sys-process/audit-1.5.1
+	>=sys-libs/libcap-1.10-r10
+	sys-libs/pam
+	=sys-libs/libsemanage-${SEMNG_VER}*"
 
 RDEPEND="${COMMON_DEPS}
 	dev-python/sepolgen"
