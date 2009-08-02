@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/glassfish-deployment-api
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.2 2009/06/30 21:06:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-deployment-api/ChangeLog,v 1.3 2009/08/02 14:10:22 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org>
+  glassfish-deployment-api-1.2.ebuild:
+  amd64 stable, bug #275672
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   glassfish-deployment-api-1.2.ebuild:
