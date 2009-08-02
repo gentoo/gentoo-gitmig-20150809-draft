@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.4.ebuild,v 1.1 2009/08/01 18:07:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/eigen-2.0.4.ebuild,v 1.2 2009/08/02 05:03:23 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -66,7 +66,7 @@ src_install() {
 }
 
 src_test() {
-	mycmakeargs="${mycmakeargs} 
+	mycmakeargs="${mycmakeargs}
 		-DEIGEN_BUILD_TESTS=ON
 		-DEIGEN_TEST_NO_FORTRAN=ON"
 	cmake-utils_src_configure
