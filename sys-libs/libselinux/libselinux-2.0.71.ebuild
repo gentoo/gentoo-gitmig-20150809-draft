@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.71.ebuild,v 1.2 2009/07/22 13:25:49 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.0.71.ebuild,v 1.3 2009/08/02 01:50:32 pebenito Exp $
 
 IUSE="ruby"
 RUBY_OPTIONAL="yes"
@@ -53,6 +53,7 @@ src_compile() {
 
 src_install() {
 	python_version
+	python_need_rebuild
 	make DESTDIR="${D}" PYLIBVER="python${PYVER}" install install-pywrap || die
 
 	if use ruby; then
