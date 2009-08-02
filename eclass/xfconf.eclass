@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.1 2009/08/01 20:08:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfconf.eclass,v 1.2 2009/08/02 10:35:53 ssuominen Exp $
 
 # @ECLASS: xfconf.eclass
 # @MAINTAINER:
@@ -31,7 +31,12 @@
 
 inherit autotools base fdo-mime gnome2-utils libtool
 
-MY_P=${P}
+if ! [[ ${MY_P} ]]; then
+	MY_P=${P}
+else
+	S=${WORKDIR}/${MY_P}
+fi
+
 SRC_URI="mirror://xfce/xfce-${PV}/src/${MY_P}.tar.bz2"
 
 if [[ "${EINTLTOOLIZE}" == "yes" ]]; then
