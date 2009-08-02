@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.2 2009/08/02 05:17:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.3 2009/08/02 05:19:41 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -93,7 +93,7 @@ src_configure() {
 				$(pyqt4_use_enable webkit QtWebKit)
 				$(pyqt4_use_enable xmlpatterns QtXmlPatterns)"
 		echo ${myconf}
-		${myconf} || exit 1
+		${myconf} || return 1
 
 		# Fix insecure runpath.
 		if use X ; then
