@@ -1,6 +1,20 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.660 2009/08/02 13:29:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.661 2009/08/02 20:52:00 chainsaw Exp $
+
+  02 Aug 2009; <chainsaw@gentoo.org> mplayer-1.0_rc2_p20090731.ebuild:
+  Marked stable on AMD64 for security bug #279342 filed by Alex Legler
+  <a3li@gentoo.org>. Tested with fullscreen XV playback of XviD content on a
+  Radeon X600, dual hex-core Opteron system with USE="3dnow 3dnowext X a52
+  aac aalib alsa ass cddb cdio cdparanoia dirac dts dv dvd dvdnav enca
+  encode faac faad fbcon ftp gif iconv ipv6 jpeg libcaca live lzo mad md5sum
+  mmx mmxext mng mp2 mp3 nemesi network opengl osdmenu png pnm pulseaudio
+  quicktime rar real rtc schroedinger sdl shm speex sse sse2 ssse3 theora
+  tremor truetype unicode v4l2 vorbis x264 xinerama xv xvid xvmc (-altivec)
+  -bidi -bindist -bl -cpudetection -custom-cflags -custom-cpuopts -debug
+  -dga -directfb -doc -dvb -dxr3 -esd -ggi -gmplayer -jack -joystick -ladspa
+  -lirc -nas -nut -openal -oss -pvr -radio -samba (-svga) -teletext -tga
+  -v4l -vdpau (-vidix) (-win32codecs) -xanim -xscreensaver -zoran".
 
   02 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   mplayer-1.0_rc2_p20090731.ebuild:
