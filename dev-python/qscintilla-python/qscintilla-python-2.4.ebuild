@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.3 2009/06/26 22:09:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.4 2009/08/02 05:32:25 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit eutils multilib python toolchain-funcs
 
@@ -27,26 +28,36 @@ S="${WORKDIR}/${MY_P}/Python"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.4-nostrip.patch"
+
+	python_copy_sources
 }
 
 src_configure() {
-	python_version
-
-	local myconf="${python} configure.py
-			--destdir=$(python_get_sitedir)/PyQt$(use qt4 && echo 4)
-			-n /usr/include
-			-o /usr/$(get_libdir)
-			-p $(use qt4 && echo 4 || echo 3)
-			$(use debug && echo '--debug')"
-	echo ${myconf}
-	${myconf} || die "configuration failed"
+	configure_package() {
+		local myconf="$(get_python) configure.py
+				--destdir=$(python_get_sitedir)/PyQt$(use qt4 && echo 4)
+				-n /usr/include
+				-o /usr/$(get_libdir)
+				-p $(use qt4 && echo 4 || echo 3)
+				$(use debug && echo '--debug')"
+		echo ${myconf}
+		${myconf}
+	}
+	python_execute_function -s configure_package
 }
 
 src_compile() {
-	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)" || die "emake failed"
+	build_package() {
+		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)"
+	}
+	python_execute_function -s build_package
 }
 
 src_install() {
 	python_need_rebuild
-	emake DESTDIR="${D}" install || die "emake install failed"
+
+	install_package() {
+		emake DESTDIR="${D}" install
+	}
+	python_execute_function -s install_package
 }
