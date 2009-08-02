@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.69 2009/07/29 00:10:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.70 2009/08/02 15:22:19 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> gwenhywfar-3.8.2.ebuild:
+  amd64 stable, bug #275705
 
   29 Jul 2009; Jeroen Roovers <jer@gentoo.org> gwenhywfar-3.8.2.ebuild:
   Stable for HPPA (bug #275705).
