@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.2 2009/08/02 17:12:03 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.2.1.ebuild,v 1.3 2009/08/02 21:27:51 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -117,4 +117,3 @@ pkg_postinst(){
 		ewarn "You need to reemerge sci-chemistry/apbs!"
 	fi
 }
-
