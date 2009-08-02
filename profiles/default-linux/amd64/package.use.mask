@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.use.mask,v 1.61 2009/08/01 09:14:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/package.use.mask,v 1.62 2009/08/02 10:03:55 ssuominen Exp $
 
 # Vlastimil Babka <caster@gentoo.org> (12 Dec 2008)
 # finally a 64bit java plugin
@@ -27,7 +27,6 @@ media-libs/libmovtar mmx
 media-libs/sdl-gfx mmx
 media-libs/smpeg mmx
 media-video/mjpegtools mmx
-media-video/mpeg4ip mmx
 net-irc/xchat mmx
 net-irc/xchat-gnome mmx
 net-misc/asterisk mmx

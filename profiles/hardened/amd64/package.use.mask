@@ -85,7 +85,6 @@ media-libs/libmovtar mmx
 media-libs/sdl-gfx mmx
 media-libs/smpeg mmx
 media-video/mjpegtools mmx
-media-video/mpeg4ip mmx
 net-irc/xchat mmx
 net-irc/xchat-gnome mmx
 net-misc/asterisk mmx
