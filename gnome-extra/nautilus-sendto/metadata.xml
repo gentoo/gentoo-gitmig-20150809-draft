@@ -3,9 +3,6 @@
 <pkgmetadata>
 	<herd>gnome</herd>
 	<use>
-		<flag name='balsa'>Enables support for
-			<pkg>mail-client/balsa</pkg></flag>
-		<flag name='claws'>Enables support for <pkg>mail-client/claws</pkg></flag>
 		<flag name='eds'>Enables support for evolution-sendto using
 			<pkg>gnome-extra/evolution-data-server</pkg></flag>
 		<flag name='empathy'>Enables support for <pkg>net-im/empathy</pkg></flag>
