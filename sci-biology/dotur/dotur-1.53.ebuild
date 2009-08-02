@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/dotur-1.53.ebuild,v 1.1 2009/04/13 01:06:44 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/dotur-1.53.ebuild,v 1.2 2009/08/02 20:42:17 chainsaw Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="http://schloss.micro.umass.edu/software/${PN}/${P}.tgz"
 LICENSE="as-is"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND=""
 RDEPEND="${DEPEND}"

@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/dotur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/ChangeLog,v 1.1 2009/04/13 01:06:44 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/ChangeLog,v 1.2 2009/08/02 20:42:17 chainsaw Exp $
+
+  02 Aug 2009; <chainsaw@gentoo.org> dotur-1.53.ebuild:
+  Marked stable on AMD64 as requested by Andrey "weaver" Kislyuk
+  <weaver@gentoo.org> in bug #279347. Arch-tested by Chad A. Simmons who
+  reports he has no test-suite; reporter confirmed and agreed compile-test
+  was sufficient.
 
   12 Apr 2009; Andrey Kislyuk <weaver@gentoo.org> +ChangeLog, +Manifest:
   Import from Science overlay
