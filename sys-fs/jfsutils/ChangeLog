@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/jfsutils
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.51 2009/02/06 05:38:04 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/ChangeLog,v 1.52 2009/08/02 21:43:30 darkside Exp $
+
+*jfsutils-1.1.14 (02 Aug 2009)
+
+  02 Aug 2009; Jeremy Olexa <darkside@gentoo.org> +jfsutils-1.1.14.ebuild:
+  (non maintainer commit) Version bump for bug 267509, tested by Lars
+  Wendler (Polynomial-C), approved to commit by Daniel Drake (dsd). bug
+  267509
 
   06 Feb 2009; Jeroen Roovers <jer@gentoo.org> jfsutils-1.1.13.ebuild:
   Stable for HPPA (bug #250281).
