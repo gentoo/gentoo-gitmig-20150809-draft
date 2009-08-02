@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre1.ebuild,v 1.2 2009/08/02 14:43:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre1.ebuild,v 1.3 2009/08/02 15:18:21 ssuominen Exp $
 
 EAPI=2
 
@@ -52,7 +52,4 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS NEWS README
-
-	insinto /usr/share/mc/syntax
-	doins "${FILESDIR}"/ebuild.syntax || die "doins failed"
 }
