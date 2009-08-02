@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jabref
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.78 2009/07/04 16:03:20 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.79 2009/08/02 10:32:47 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> jabref-2.5.ebuild:
+  amd64/x86 stable, bug #279666
 
   04 Jul 2009; Vlastimil Babka <caster@gentoo.org> +jabref-2.4.2.ebuild,
   -jabref-2.5_beta.ebuild, -jabref-2.5_beta2.ebuild:
