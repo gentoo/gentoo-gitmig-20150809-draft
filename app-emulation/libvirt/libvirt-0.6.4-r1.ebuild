@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.6.4-r1.ebuild,v 1.1 2009/06/10 15:34:16 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-0.6.4-r1.ebuild,v 1.2 2009/08/02 14:27:07 cardoe Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ RDEPEND="sys-libs/readline
 	sys-fs/sysfsutils
 	net-analyzer/netcat
 	avahi? ( >=net-dns/avahi-0.6 )
+	hal? ( >=sys-apps/hal-0.5.9 )
 	iscsi? ( sys-block/open-iscsi )
 	kvm? ( app-emulation/kvm )
 	lvm? ( sys-fs/lvm2 )
