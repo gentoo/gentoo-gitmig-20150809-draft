@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.13.0.ebuild,v 1.4 2009/07/15 13:21:08 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/scummvm-tools-0.13.0.ebuild,v 1.5 2009/08/02 00:02:37 chainsaw Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/scummvm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="media-libs/libpng
