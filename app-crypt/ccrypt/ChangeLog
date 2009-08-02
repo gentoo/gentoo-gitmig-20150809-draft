@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/ccrypt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.17 2009/08/02 14:19:03 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ccrypt/ChangeLog,v 1.18 2009/08/02 16:41:06 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> ccrypt-1.8.ebuild:
+  x86 stable, bug #279363
 
   02 Aug 2009; nixnut <nixnut@gentoo.org> ccrypt-1.8.ebuild:
   ppc stable #279363
