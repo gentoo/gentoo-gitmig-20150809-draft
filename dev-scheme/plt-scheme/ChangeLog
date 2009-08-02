@@ -1,8 +1,57 @@
 # ChangeLog for dev-scheme/plt-scheme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.8 2009/06/04 15:35:12 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.9 2009/08/02 15:16:54 hkbst Exp $
 
-*plt-scheme-4.2 (04 Jun 2009)
+*plt-scheme-4.2.1 (02 Aug 2009)
+
+  02 Aug 2009; Marijn Schouten <hkBst@gentoo.org> +plt-scheme-4.2.1.ebuild:
+  bump
+	* This is the last release that includes ProfessorJ. As of the
+	next release, Kathy Gray who created and maintained the
+	Professor will move the code to planet and maintain only at a
+	minimal level.
+
+	* Typed Scheme 2.0 extends the type system significantly, making
+	it more expressive.  For example, predicates applied to
+	selectors, such as (number? (car x)), are meaningful to the type
+	system.
+
+	* Faster installation of Planet packages that trigger install of
+	other Planet packages, because the documentation index is
+	updated only once after a group of packages is installed.
+
+	* The `syntax/parse' library provides macro writers with an
+	enhanced syntax pattern matcher that reports errors based on the
+	patterns' declared classes of syntax.
+
+	* Identifier mappings following the v4 dictionary interface and
+	naming conventions are available from the `syntax/id-table'
+	library.
+
+	* Redex: added `define-relation' and generalized patterns that
+	appear in "where" clauses to use the full Redex pattern matcher.
+	(This is a backwards incompatible change, but one often
+	requested; see the Redex release notes for details.)
+
+	* The Web Server's serializable closures are now available for
+	other purposes through the web-server/lang/serial-lambda
+	library.
+
+	* Teachpacks: small changes to universe portion of the
+	"universe.ss" API, plus the addition of a form for launching
+	many (communicating) worlds simultaneously.  Bug fixes
+	concerning conversion to strings.
+
+	* It is now possible to create custom scribble readers with a
+	command characters different than `@', see
+	`make-at-reader/inside' and `make-at-reader'
+
+	* Note: this is likely to be the last release that includes a
+	solaris distribution.  If you need these builds, or if you have
+	access to a (Sparc) Solaris machine than can be used in PLT
+	builds, then please let me know.
+
+	*plt-scheme-4.2 (04 Jun 2009)
 
   04 Jun 2009; Marijn Schouten <hkBst@gentoo.org> +plt-scheme-4.2.ebuild:
   bump
