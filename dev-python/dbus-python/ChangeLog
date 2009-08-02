@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/dbus-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.46 2009/03/10 15:35:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/ChangeLog,v 1.47 2009/08/02 00:45:44 arfrever Exp $
+
+  02 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  dbus-python-0.83.0-r1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   10 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> metadata.xml:
   Remove steev from metadata.xml as he isn't associated with this package

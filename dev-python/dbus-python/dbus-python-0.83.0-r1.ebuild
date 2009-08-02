@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0-r1.ebuild,v 1.2 2009/03/10 15:33:46 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0-r1.ebuild,v 1.3 2009/08/02 00:45:44 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit python multilib
 
@@ -23,22 +26,37 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/pygobject )
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+RESTRICT_PYTHON_ABIS="3*"
 
-	# disable pyc compiling
+src_prepare() {
+	# Disable compiling of .pyc files.
 	mv "${S}"/py-compile "${S}"/py-compile.orig
 	ln -s $(type -P true) "${S}"/py-compile
+
+	python_copy_sources
+}
+
+src_configure() {
+	configure_package() {
+		econf --docdir=/usr/share/doc/dbus-python-${PV}
+	}
+	python_execute_function -s configure_package
 }
 
 src_compile() {
-	econf --docdir=/usr/share/doc/dbus-python-${PV}
-	emake || die "emake failed"
+	build_package() {
+		emake
+	}
+	python_execute_function -s build_package
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "make install failed"
+	python_need_rebuild
+
+	install_package() {
+		emake DESTDIR="${D}" install
+	}
+	python_execute_function -s install_package
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/
@@ -47,9 +65,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_need_rebuild
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/dbus
+	python_mod_optimize dbus
 }
 
 pkg_postrm() {
