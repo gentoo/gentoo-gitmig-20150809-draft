@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/happy
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.42 2009/05/21 00:11:52 tcunha Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/happy/ChangeLog,v 1.43 2009/08/02 09:09:50 kolmodin Exp $
+
+*happy-1.18.4 (02 Aug 2009)
+
+  02 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org> +happy-1.18.4.ebuild:
+  Version bump.
 
   21 May 2009; Tiago Cunha <tcunha@gentoo.org> happy-1.18.2.ebuild:
   stable sparc, bug 268074
