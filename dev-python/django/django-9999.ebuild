@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.3 2009/05/18 14:58:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.4 2009/08/02 19:28:51 arfrever Exp $
 
 EAPI="2"
 
@@ -17,17 +17,21 @@ IUSE="doc examples mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
 	sqlite? ( || (
+		>=dev-lang/python-2.5[sqlite] )
 		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
-		>=dev-lang/python-2.5[sqlite] ) )
-	test? ( || (
-		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
-		>=dev-lang/python-2.5[sqlite] ) )
+	)
 	postgres? ( dev-python/psycopg )
 	mysql? ( >=dev-python/mysql-python-1.2.1_p2 )"
 DEPEND="${RDEPEND}
-	doc? ( >=dev-python/sphinx-0.3 )"
+	doc? ( >=dev-python/sphinx-0.3 )
+	test? ( || (
+		>=dev-lang/python-2.5[sqlite] )
+		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
+	)"
 
 S="${WORKDIR}"
+
+PYTHON_MODNAME="django"
 
 DOCS="docs/*.txt AUTHORS"
 
@@ -45,6 +49,7 @@ src_test() {
 	einfo "Running tests."
 	cat >> tests/settings.py << __EOF__
 DATABASE_ENGINE='sqlite3'
+DATABASE_NAME='test.db'
 ROOT_URLCONF='tests/urls.py'
 SITE_ID=1
 __EOF__
