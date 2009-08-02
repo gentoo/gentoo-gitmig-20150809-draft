@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.433 2009/08/01 16:42:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.434 2009/08/02 21:25:16 remi Exp $
+
+*xorg-server-1.6.3 (02 Aug 2009)
+
+  02 Aug 2009; Rémi Cardona <remi@gentoo.org> +xorg-server-1.6.3.ebuild:
+  bump to 1.6.3, drop useless D-Bus sed hack
 
   01 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   xorg-server-1.5.3-r6.ebuild:
