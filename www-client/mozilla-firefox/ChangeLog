@@ -1,6 +1,13 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.524 2009/08/02 16:27:01 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.525 2009/08/02 18:55:46 darkside Exp $
+
+*mozilla-firefox-3.5.1-r2 (02 Aug 2009)
+
+  02 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -mozilla-firefox-3.5.1.ebuild, -mozilla-firefox-3.5.1-r1.ebuild,
+  +mozilla-firefox-3.5.1-r2.ebuild, +files/firefox-default-prefs.js:
+  bug fixes from mozilla overlay, proxy commit for mozilla team
 
   02 Aug 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   -mozilla-firefox-3.0.10.ebuild, mozilla-firefox-3.0.11.ebuild,
