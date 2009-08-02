@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.22 2009/07/31 14:43:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.23 2009/08/02 20:56:02 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> engine_pkcs11-0.1.6.ebuild:
+  x86 stable, bug #279370
 
   31 Jul 2009; <chainsaw@gentoo.org> engine_pkcs11-0.1.6.ebuild:
   Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
