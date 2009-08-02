@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.166 2009/08/01 11:50:00 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.167 2009/08/02 10:23:12 kolmodin Exp $
+
+  02 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.10.4.ebuild:
+  Add sparc binary for ghc 6.10.4. Binary compiled by
+  Duncan Coutts <duncan.coutts@worc.ox.ac.uk>.
 
   01 Aug 2009; <mabi@gentoo.org> ghc-6.8.2.ebuild:
   ~ppc added back
