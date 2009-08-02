@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/patchage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.7 2009/07/22 16:12:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/patchage/ChangeLog,v 1.8 2009/08/02 21:12:43 chainsaw Exp $
+
+  02 Aug 2009; <chainsaw@gentoo.org> patchage-0.4.2.ebuild:
+  Marked stable on AMD64 as requested by Alexis Ballier
+  <aballier@gentoo.org> in bug #278595. Compile-tested on a dual hex-core
+  Opteron with USE="alsa dbus -debug -jack".
 
   22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   patchage-0.4.2.ebuild:
