@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.35 2009/07/31 14:36:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.36 2009/08/02 20:54:49 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> libp11-0.2.5.ebuild:
+  x86 stable, bug #279368
 
   31 Jul 2009; <chainsaw@gentoo.org> libp11-0.2.5.ebuild:
   Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
