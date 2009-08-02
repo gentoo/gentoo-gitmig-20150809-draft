@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.25 2009/08/02 01:14:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.26 2009/08/02 01:54:26 pebenito Exp $
+
+  02 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
+  libsemanage-2.0.27.ebuild, libsemanage-2.0.33.ebuild:
+  Add python_need_rebuild to libsemanage.
 
 *libsemanage-2.0.33 (02 Aug 2009)
 

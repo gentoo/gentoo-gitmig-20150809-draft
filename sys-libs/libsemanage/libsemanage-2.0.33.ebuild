@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.33.ebuild,v 1.1 2009/08/02 01:14:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.0.33.ebuild,v 1.2 2009/08/02 01:54:26 pebenito Exp $
 
 IUSE=""
 
@@ -58,6 +58,7 @@ src_compile() {
 
 src_install() {
 	python_version
+	python_need_rebuild
 	make DESTDIR="${D}" PYLIBVER="python${PYVER}" install install-pywrap
 }
 
