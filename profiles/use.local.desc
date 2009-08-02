@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4695 2009/08/02 08:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4696 2009/08/02 10:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1789,10 +1789,6 @@ media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/mmsv2:dxr3 - Enable support for RealMagic Hollywood+/Creative DXR3 cards
 media-video/mmsv2:radio - Enable support for Internet Radio and BTTV Hardware Tuners
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
-media-video/mpeg4ip:id3 - Support ID3 in the player
-media-video/mpeg4ip:mp4live - Build the live streaming/encoding software
-media-video/mpeg4ip:mpeg2 - Support mpeg2 in the player
-media-video/mpeg4ip:player - Build the player
 media-video/mplayer:3dnowext - Enable 3dnowext cpu instructions
 media-video/mplayer:amrnb - Enables Adaptive Multi-Rate Audio support (Narrow Band)
 media-video/mplayer:amrwb - Enables Adaptive Multi-Rate Audio support (Wide Band)
