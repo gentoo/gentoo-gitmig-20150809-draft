@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.2.ebuild,v 1.2 2009/07/02 07:13:39 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r1.ebuild,v 1.1 2009/08/02 10:12:47 eva Exp $
 
 EAPI="2"
 
@@ -50,7 +50,6 @@ pkg_setup() {
 	G2CONF="${G2CONF}
 		--disable-scrollkeeper
 		--with-gecko=libxul-embedding
-		--enable-certificate-manager
 		--with-distributor-name=Gentoo
 		--enable-canberra
 		$(use_enable avahi zeroconf)
@@ -68,12 +67,22 @@ src_prepare() {
 	# Fix libcanberra automagic support, bug #266232
 	epatch "${FILESDIR}/${PN}-2.26.1-automagic-libcanberra.patch"
 
-	# Fix sandbox violations, bug 263585
+	# Fix sandbox violations, bug #263585
 	epatch "${FILESDIR}/${PN}-2.26-fix-sandbox-violations.patch"
+
+	# Fix detection of system plugin, bug #279417
+	epatch "${FILESDIR}/${P}-system-plugin.patch"
 
 	# Make it libtool-1 compatible
 	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
+}
+
+src_install() {
+	gnome2_src_install
+
+	# Drop useless .la file
+	find "${D}" -name '*.la' -delete
 }

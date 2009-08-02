@@ -1,6 +1,14 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.212 2009/07/06 22:08:22 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.213 2009/08/02 10:12:47 eva Exp $
+
+*epiphany-2.26.3-r1 (02 Aug 2009)
+
+  02 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -epiphany-2.26.1.ebuild, -epiphany-2.26.2.ebuild,
+  +epiphany-2.26.3-r1.ebuild, +files/epiphany-2.26.3-system-plugin.patch:
+  Version bump. Fix system plugin lookup, bug #279417. Clean up old
+  revisions.
 
 *epiphany-2.26.3 (07 Jul 2009)
 
