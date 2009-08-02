@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.6 2009/08/01 19:01:50 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.7 2009/08/02 16:40:03 vostorga Exp $
+
+  02 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> lxde-meta-0.4.ebuild:
+  Ok, it was =lxde-base/lxtask-0.1* wrt bug #279867
 
   01 Aug 2009; <vostorga@gentoo.org> lxde-meta-0.4.ebuild:
   Adding support to ~lxde-base/lxtask-0.1* , closes bug #279867
