@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.7 2009/06/08 04:51:04 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.8 2009/08/02 18:50:17 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -8,7 +8,7 @@ MY_PV=$(get_version_component_range 1-2 ${PV})
 MY_PVM=$(delete_all_version_separators ${MY_PV})
 MY_PM=${PN}${MY_PVM}
 
-DESCRIPTION="An open-source GIS with raster and vector functionality, as well as 3D vizualization."
+DESCRIPTION="A free GIS with raster and vector functionality, as well as 3D vizualization."
 HOMEPAGE="http://grass.osgeo.org//"
 SRC_URI="http://download.osgeo.org/grass/${MY_PM}/source/${P}.tar.gz"
 
@@ -287,7 +287,7 @@ generate_files() {
 	Version=1.0
 	Name=Grass ${PV}
 	Type=Application
-	Comment=GRASS Open Source GIS, derived from the original US Army Corps of Engineers project.
+	Comment=GRASS (Geographic Resources Analysis Support System), the original GIS.
 	Exec=${TERM} -T Grass -e /usr/bin/${MY_PM} ${GUI}
 	Path=
 	Icon=grass_icon.png
