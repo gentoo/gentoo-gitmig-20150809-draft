@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>xfce</herd>
-<use>
-	<flag name="xfce">Build Xfce4 panel plugins</flag>
-</use>
+	<herd>xfce</herd>
+	<use>
+		<flag name="panel-plugins">Build with panel plugins</flag>
+		<flag name="dpms">Build with DPMS support</flag>
+	</use>
 </pkgmetadata>
