@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.5 2009/08/02 13:15:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.6 2009/08/02 13:29:04 ssuominen Exp $
 
 EAPI="2"
 
@@ -146,7 +146,6 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 pkg_setup() {
-
 	if use gmplayer; then
 		ewarn ""
 		ewarn "GMPlayer is no longer actively developed upstream"
@@ -226,12 +225,7 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=""
-
-	# MPlayer reads in the LINGUAS variable from make.conf, and sets
-	# the languages accordingly.  Some will have to be altered to match
-	# upstream's naming scheme.
-	[[ -n $LINGUAS ]] && LINGUAS="${LINGUAS/da/dk}"
+	local myconf="--language=all"
 
 	# mplayer ebuild uses "use foo || --disable-foo" to forcibly disable
 	# compilation in almost every situation.  The reason for this is
