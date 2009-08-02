@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/torrentinfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.1 2009/06/07 23:20:06 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/torrentinfo/ChangeLog,v 1.2 2009/08/02 20:36:46 chainsaw Exp $
+
+  02 Aug 2009; <chainsaw@gentoo.org> torrentinfo-1.0.2.ebuild:
+  Marked stable on AMD64 as requested by Markos "hwoarang" Chandras
+  <hwoarang@gentoo.org> in bug #280036. Successfully parsed ~100 files in
+  ~/.azureus/torrents/ on a dual hex-core Opteron system.
 
 *torrentinfo-1.0.2 (07 Jun 2009)
 
