@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.6 2009/05/15 22:49:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.7 2009/08/02 15:42:25 vostorga Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -26,13 +26,17 @@ src_unpack () {
 	unpack ${A}
 	cd "${WORKDIR}"/bzip2-1.0.2
 	epatch "${FILESDIR}"/bzip2-1.0.2-makefile-CFLAGS.patch
+	cd "${WORKDIR}"/bzip2-1.0.3
+	epatch "${FILESDIR}"/bzip2-1.0.3-makefile-CFLAGS.patch
 	cd "${S}"
 	epatch "${FILESDIR}"/gcc-4.3-compile.fix
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${FILESDIR}"/${P}-CFLAGS.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
 }
 
 src_compile () {
-	emake CC=$(tc-getCXX) || die "emake getdelta failed"
+	emake CXX=$(tc-getCXX) || die "emake getdelta failed"
 
 	cd "${WORKDIR}"/bzip2-1.0.2
 	local makeopts="

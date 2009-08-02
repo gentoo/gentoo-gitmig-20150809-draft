@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/deltup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.19 2009/05/15 22:49:31 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.20 2009/08/02 15:42:25 vostorga Exp $
+
+  02 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> deltup-0.4.4.ebuild,
+  +files/deltup-0.4.4-CFLAGS.patch, +files/deltup-0.4.4-asneeded.patch,
+  files/bzip2-1.0.2-makefile-CFLAGS.patch,
+  +files/bzip2-1.0.3-makefile-CFLAGS.patch:
+  Respecting CFLAGS and LDFLAGS, fixing build with --as-needed. Patch thanks
+  to Zeev Tarantov, bugs #240121 #246916 #246189
 
   15 May 2009; Ryan Hill <dirtyepic@gentoo.org> deltup-0.4.4.ebuild,
   +files/deltup-0.4.4-gcc44.patch:
