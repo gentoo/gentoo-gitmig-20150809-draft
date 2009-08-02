@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b-r1.ebuild,v 1.7 2009/01/17 16:41:01 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.8b-r1.ebuild,v 1.8 2009/08/02 21:54:28 tommy Exp $
 
 # *** Please remember to update qt3.eclass when revbumping this ***
 
@@ -50,8 +50,6 @@ PDEPEND="odbc? ( ~dev-db/qt-unixODBC-$PV )"
 S="${WORKDIR}/qt-x11-${SRCTYPE}-${PV}"
 
 QTBASE="/usr/qt/3"
-
-libdir="$(get_libdir)"
 
 pkg_setup() {
 	if use immqt && use immqt-bc ; then
@@ -167,8 +165,8 @@ src_unpack() {
 		   -e "s:\<QMAKE_LINK_SHLIB\>.*=.*:QMAKE_LINK_SHLIB=$(tc-getCXX):" \
 		"${S}"/mkspecs/${PLATFORM}/qmake.conf || die
 
-	if [ ${libdir} != "lib" ] ; then
-		sed -i -e "s:/lib$:/${libdir}:" \
+	if [ $(get_libdir) != "lib" ] ; then
+		sed -i -e "s:/lib$:/$(get_libdir):" \
 			"${S}"/mkspecs/${PLATFORM}/qmake.conf || die
 	fi
 
@@ -185,12 +183,12 @@ src_compile() {
 	addwrite "${QTBASE}/etc/settings"
 	addwrite "${HOME}/.qt"
 
-	[ "${libdir}" != "lib" ] && myconf="${myconf} -L/usr/${libdir}"
+	[ "$(get_libdir)" != "lib" ] && myconf="${myconf} -L/usr/$(get_libdir)"
 
 	# unixODBC support is now a PDEPEND on dev-db/qt-unixODBC; see bug 14178.
 	use nas		&& myconf+=" -system-nas-sound"
 	use nis		&& myconf+=" -nis" || myconf+=" -no-nis"
-	use mysql	&& myconf+=" -plugin-sql-mysql -I/usr/include/mysql -L/usr/${libdir}/mysql" || myconf+=" -no-sql-mysql"
+	use mysql	&& myconf+=" -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf+=" -no-sql-mysql"
 	use postgres	&& myconf+=" -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf+=" -no-sql-psql"
 	use firebird    && myconf+=" -plugin-sql-ibase -I/opt/firebird/include" || myconf+=" -no-sql-ibase"
 	use sqlite	&& myconf+=" -plugin-sql-sqlite" || myconf+=" -no-sql-sqlite"
@@ -212,7 +210,7 @@ src_compile() {
 	./configure -sm -thread -stl -system-libjpeg -verbose -largefile \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -xft -platform ${PLATFORM} -xplatform \
-		${PLATFORM} -xrender -prefix ${QTBASE} -libdir ${QTBASE}/${libdir} \
+		${PLATFORM} -xrender -prefix ${QTBASE} -libdir ${QTBASE}/$(get_libdir) \
 		-fast -no-sql-odbc ${myconf} -dlopen-opengl || die
 
 	emake src-qmake src-moc sub-src || die
@@ -249,7 +247,7 @@ src_install() {
 	dolib.so lib/lib{editor,qassistantclient,designercore}.a
 	dolib.so lib/libqt-mt.la
 	dolib.so lib/libqt-mt.so.${PV/b} lib/libqui.so.1.0.0
-	cd "${D}"/${QTBASE}/${libdir}
+	cd "${D}"/${QTBASE}/$(get_libdir)
 
 	for x in libqui.so ; do
 		ln -s $x.1.0.0 $x.1.0
@@ -287,11 +285,11 @@ src_install() {
 
 	# prl files
 	sed -i -e "s:${S}:${QTBASE}:g" "${S}"/lib/*.prl
-	insinto ${QTBASE}/${libdir}
+	insinto ${QTBASE}/$(get_libdir)
 	doins "${S}"/lib/*.prl
 
 	# pkg-config file
-	insinto ${QTBASE}/${libdir}/pkgconfig
+	insinto ${QTBASE}/$(get_libdir)/pkgconfig
 	doins "${S}"/lib/*.pc
 
 	# List all the multilib libdirs
@@ -307,7 +305,7 @@ ROOTPATH=${QTBASE}/bin
 LDPATH=${libdirs:1}
 QMAKESPEC=${PLATFORM}
 MANPATH=${QTBASE}/doc/man
-PKG_CONFIG_PATH=${QTBASE}/${libdir}/pkgconfig
+PKG_CONFIG_PATH=${QTBASE}/$(get_libdir)/pkgconfig
 EOF
 
 	cat <<EOF > "${T}"/50qtdir3
