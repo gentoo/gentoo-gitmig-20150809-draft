@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.56 2009/08/01 22:36:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.57 2009/08/02 00:30:29 arfrever Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -71,7 +71,8 @@ distutils_src_prepare() {
 distutils_src_compile() {
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		build_modules() {
-			${python} setup.py build -b "build-${PYTHON_ABI}" "$@"
+			echo "$(get_python)" setup.py build -b "build-${PYTHON_ABI}" "$@"
+			"$(get_python)" setup.py build -b "build-${PYTHON_ABI}" "$@"
 		}
 		python_execute_function build_modules "$@"
 	else
@@ -95,11 +96,11 @@ distutils_src_install() {
 			# a package uses distutils but does not install anything
 			# in site-packages. (eg. dev-java/java-config-2.x)
 			# - liquidx (14/08/2006)
-			pylibdir="$(${python} -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
+			pylibdir="$("$(get_python)" -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
 			[[ -n "${pylibdir}" ]] && dodir "${pylibdir}"
 
-			echo ${python} setup.py build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
-			${python} setup.py build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
+			echo "$(get_python)" setup.py build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
+			"$(get_python)" setup.py build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
 		}
 		python_execute_function install_modules "$@"
 	else
