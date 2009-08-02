@@ -1,6 +1,6 @@
 # Copyright 2004-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.1/package.mask,v 1.2 2009/05/18 05:28:07 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/freebsd-7.1/package.mask,v 1.3 2009/08/02 21:12:19 ssuominen Exp $
 
 # Diego Pettenò <flameeyes@gentoo.org>
 # Make sure we don't get wrong versions
@@ -36,7 +36,6 @@
 >sys-freebsd/freebsd-sources-7.1.99
 
 # And this masked as we cannot use this anymore
-sys-freebsd/freebsd-baselayout
 <sys-apps/baselayout-1.13.0_alpha1
 
 # Javier Villavicencio <the_paya@gentoo.org> (04 Jan 2009)
