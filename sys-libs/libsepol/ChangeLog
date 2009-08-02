@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.33 2009/07/22 13:26:16 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.34 2009/08/02 01:12:10 pebenito Exp $
+
+*libsepol-2.0.37 (02 Aug 2009)
+
+  02 Aug 2009; Chris PeBenito <pebenito@gentoo.org> +libsepol-2.0.37.ebuild:
+  New upstream release.
 
   18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
   -files/libsepol-1.12.2.diff, -libsepol-1.16.11.ebuild,
