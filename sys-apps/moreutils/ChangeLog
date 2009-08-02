@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.9 2009/07/29 22:17:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.10 2009/08/02 14:00:09 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> moreutils-0.34.ebuild:
+  x86 stable, bug #276013
 
   29 Jul 2009; <chainsaw@gentoo.org> moreutils-0.34.ebuild:
   Marked stable on AMD64 as requested by Gordon Malm <gengor@gentoo.org> in
