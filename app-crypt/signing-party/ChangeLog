@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/signing-party
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.16 2009/07/31 14:19:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/signing-party/ChangeLog,v 1.17 2009/08/02 16:38:19 maekke Exp $
+
+  02 Aug 2009; Markus Meier <maekke@gentoo.org> signing-party-1.1.1.ebuild:
+  x86 stable, bug #279361
 
   31 Jul 2009; <chainsaw@gentoo.org> signing-party-1.1.1.ebuild:
   Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
