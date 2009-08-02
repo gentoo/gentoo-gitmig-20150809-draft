@@ -1,6 +1,11 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.14 2009/07/27 18:15:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.15 2009/08/02 00:57:57 darkside Exp $
+
+*midori-0.1.9 (02 Aug 2009)
+
+  02 Aug 2009; Jeremy Olexa <darkside@gentoo.org> +midori-0.1.9.ebuild:
+  Version bump, ChangeLog: http://releases.xfce.org/feeds/project/midori
 
 *midori-0.1.8 (27 Jul 2009)
 
