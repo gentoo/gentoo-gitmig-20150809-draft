@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.74 2009/08/02 03:47:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.75 2009/08/02 03:54:55 darkside Exp $
+
+  02 Aug 2009; Jeremy Olexa <darkside@gentoo.org> metadata.xml:
+  add drobbins to metadata per discussion with him
 
 *keychain-2.6.9 (02 Aug 2009)
 
