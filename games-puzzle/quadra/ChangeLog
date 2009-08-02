@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/quadra
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.19 2008/05/02 22:35:13 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.20 2009/08/02 03:21:04 mr_bones_ Exp $
+
+*quadra-1.2.0 (02 Aug 2009)
+
+  02 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> +quadra-1.2.0.ebuild:
+  version bump
 
   02 May 2008; Tristan Heaven <nyhm@gentoo.org>
   +files/quadra-1.1.8-gcc43.patch, quadra-1.1.8.ebuild:
