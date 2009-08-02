@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.0-r1.ebuild,v 1.3 2008/08/17 03:06:59 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/pymol-1.0-r1.ebuild,v 1.4 2009/08/02 14:58:31 je_fro Exp $
 
 inherit distutils eutils multilib subversion
 
@@ -21,6 +21,8 @@ dev-lang/tk
 media-libs/libpng
 sys-libs/zlib
 virtual/glut"
+
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	subversion_src_unpack

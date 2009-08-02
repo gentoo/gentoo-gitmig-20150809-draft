@@ -1,6 +1,14 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.42 2009/05/06 21:06:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.43 2009/08/02 14:58:31 je_fro Exp $
+
+*pymol-1.2.1 (02 Aug 2009)
+
+  02 Aug 2009; Jeff Gardner <je_fro@gentoo.org> +pymol-1.2.1.ebuild,
+  +files/1.2.1/pymol-1.2.1-data-path.patch,
+  +files/1.2.1/pymol-1.2.1-shaders.patch:
+  New version, works with python 2.6, closes bug #269119. Many thanks to
+  Justin Lecher for doing the work, and fauli for a kick in the pants :)
 
   06 May 2009; Markus Meier <maekke@gentoo.org> pymol-1.1-r2.ebuild:
   amd64/x86 stable, bug #250903
