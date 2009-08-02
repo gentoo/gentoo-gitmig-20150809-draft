@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.5 2008/02/02 21:39:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.6 2009/08/02 04:45:24 mr_bones_ Exp $
 
+EAPI=2
 inherit games
 
 DESCRIPTION="An enhanced version of the Roguelike game Angband"
@@ -25,14 +26,12 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		--datadir="${GAMES_DATADIR_BASE}" \
 		--with-setgid="${GAMES_GROUP}" \
 		--without-gtk \
-		$(use_with tk tcltk) \
-		|| die
-	emake || die "emake failed"
+		$(use_with tk tcltk)
 }
 
 src_install() {
@@ -54,5 +53,5 @@ src_install() {
 	prepgamesdirs
 	# All users in the games group need write permissions to
 	# some important dirs
-	fperms -R g+w "${GAMES_DATADIR}"/zangband/lib/{apex,save,user}
+	fperms -R g+w "${GAMES_DATADIR}"/zangband/lib/{apex,data,save,user}
 }

@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/zangband
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.14 2008/03/13 17:39:52 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.15 2009/08/02 04:45:24 mr_bones_ Exp $
+
+  02 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  zangband-2.7.4c.ebuild:
+  EAPI=2; fix data directory permissions (bug #270064)
 
   13 Mar 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   zangband-2.7.4b.ebuild:
