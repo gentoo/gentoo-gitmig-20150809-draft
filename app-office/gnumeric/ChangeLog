@@ -1,6 +1,15 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.189 2009/06/28 19:09:20 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.190 2009/08/02 21:21:14 eva Exp $
+
+*gnumeric-1.8.4-r2 (02 Aug 2009)
+
+  02 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnumeric-1.8.4-r2.ebuild,
+  +files/gnumeric-1.8.4-gtk216-abi-spinbuttons.patch,
+  +files/gnumeric-1.8.4-gtk216-im-block.patch:
+  Version bump. Fix gtk+ 2.16 compatibility issues, bug #278502. Remove
+  useless .la files.
 
   28 Jun 2009; Romain Perier <mrpouet@gentoo.org>
   gnumeric-1.8.4-r1.ebuild:
