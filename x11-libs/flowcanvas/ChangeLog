@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/flowcanvas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/ChangeLog,v 1.6 2009/07/22 16:11:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/flowcanvas/ChangeLog,v 1.7 2009/08/02 21:09:04 chainsaw Exp $
+
+  02 Aug 2009; <chainsaw@gentoo.org> flowcanvas-0.5.1.ebuild:
+  Marked stable on AMD64 as a dependency of media-sound/patchage-0.4.2;
+  requested by Alexis Ballier <aballier@gentoo.org> in bug #278595.
+  Compile-tested on a dual hex-core Opteron with USE="-debug -doc".
 
   22 Jul 2009; Christian Faulhammer <fauli@gentoo.org>
   flowcanvas-0.5.1.ebuild:
