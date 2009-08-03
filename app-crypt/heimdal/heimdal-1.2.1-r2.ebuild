@@ -1,13 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r2.ebuild,v 1.1 2009/01/26 15:36:50 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r2.ebuild,v 1.2 2009/08/03 07:53:57 mueli Exp $
+
+EAPI=1
 
 WANT_AUTOMAKE=latest
 WANT_AUTOCONF=latest
 
 inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 
-EAPI=1
 PATCHVER=0.2
 PATCH_P=${PN}-gentoo-patches-${PATCHVER}
 RESTRICT="test"

@@ -1,11 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r1.ebuild,v 1.11 2009/08/03 07:53:57 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r3.ebuild,v 1.1 2009/08/03 07:53:57 mueli Exp $
 
 EAPI=1
-
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
 
 inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 
@@ -20,7 +17,7 @@ SRC_URI="http://www.h5l.org/dist/src/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~m68k"
 IUSE="afs +berkdb hdb-ldap ipv6 otp pkinit ssl threads X"
 
 RDEPEND="ssl? ( dev-libs/openssl )
@@ -54,17 +51,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-system_sqlite.patch
 	epatch "${FILESDIR}"/${PN}-symlinked-manpages.patch
 	epatch "${FILESDIR}"/${PN}-autoconf-ipv6-backport.patch
+	epatch "${FILESDIR}"/${PN}-autoconf-2.64.patch
 
 	AT_M4DIR="cf" eautoreconf
-
-	elog ""
-	elog "Heimdal is still under development in gentoo and you might"
-	elog "find problems with dependencies to virtual/krb5. Nevertheless"
-	elog "it's still usable. Please report bugs!"
-	elog ""
-	elog "There is also a development overlay at: (not for productive use)"
-	elog "    git://git.overlays.gentoo.org/proj/kerberos.git"
-	elog ""
 }
 
 src_compile() {
@@ -115,13 +104,13 @@ src_install() {
 	dodoc ChangeLog README NEWS TODO
 
 	# Begin client rename and install
-	for i in {telnetd,ftpd,rshd}
+	for i in {telnetd,ftpd,rshd,popper}
 	do
 		mv "${D}"/usr/share/man/man8/{,k}${i}.8
 		mv "${D}"/usr/sbin/{,k}${i}
 	done
 
-	for i in {rcp,rsh,telnet,ftp,su,login,pagsh}
+	for i in {rcp,rsh,telnet,ftp,su,login,pagsh,kf}
 	do
 		mv "${D}"/usr/share/man/man1/{,k}${i}.1
 		mv "${D}"/usr/bin/{,k}${i}
@@ -129,6 +118,7 @@ src_install() {
 
 	mv "${D}"/usr/share/man/man5/{,k}ftpusers.5
 	mv "${D}"/usr/share/man/man5/{,k}login.access.5
+	mv "${D}"/usr/share/man/man3/{,k}editline.3
 
 	doinitd "${GENTOODIR}"/configs/heimdal-kdc
 	doinitd "${GENTOODIR}"/configs/heimdal-kadmind

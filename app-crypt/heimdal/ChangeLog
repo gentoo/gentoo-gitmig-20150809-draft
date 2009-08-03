@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.136 2009/03/18 14:48:06 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.137 2009/08/03 07:53:57 mueli Exp $
+
+*heimdal-1.2.1-r3 (03 Aug 2009)
+
+  03 Aug 2009; Michael Hammer <mueli@gentoo.org>
+  +files/heimdal-autoconf-2.64.patch, +heimdal-1.2.1-r3.ebuild:
+  - add heimdal-1.2.1-r3 with patch enabling autoconf-2.64
+  - did some clean up to convince repoman
 
   18 Mar 2009; <ricmm@gentoo.org> heimdal-0.7.2-r3.ebuild:
   Drop down to ~mips due to unstable deps
