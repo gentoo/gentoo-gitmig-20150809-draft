@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3cat/mp3cat-0.4.ebuild,v 1.4 2006/12/11 21:47:20 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3cat/mp3cat-0.4.ebuild,v 1.5 2009/08/03 13:05:15 ssuominen Exp $
 
 inherit toolchain-funcs
 
@@ -15,8 +15,9 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	sed -i -e 's:cc -o:${CC} ${CFLAGS} ${LDFLAGS} -o:' Makefile
+	cd "${S}"
+	sed -i -e 's:cc -o:${CC} ${CFLAGS} ${LDFLAGS} -o:' \
+		Makefile || die "sed failed"
 }
 
 src_compile() {
@@ -24,5 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	dobin mp3cat mp3log mp3log-conf mp3dirclean mp3http mp3stream-conf
+	dobin mp3cat mp3log mp3log-conf mp3dirclean mp3http \
+		mp3stream-conf || die "sed failed"
 }

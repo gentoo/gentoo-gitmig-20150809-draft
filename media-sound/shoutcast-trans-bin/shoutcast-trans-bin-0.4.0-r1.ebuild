@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.7 2009/05/11 19:56:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shoutcast-trans-bin/shoutcast-trans-bin-0.4.0-r1.ebuild,v 1.8 2009/08/03 13:10:54 ssuominen Exp $
 
 IUSE=""
 
 inherit eutils
 
-SVER="${PV//./}"
+SVER=${PV//./}
 RESTRICT="mirror strip fetch"
 DESCRIPTION="A transcoder that provides a source for shoutcast-server-bin to stream from."
 HOMEPAGE="http://www.shoutcast.com"
@@ -15,7 +15,7 @@ LICENSE="shoutcast"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 RDEPEND="media-sound/shoutcast-server-bin"
-S="${WORKDIR}/sc_trans_${SVER}"
+S=${WORKDIR}/sc_trans_${SVER}
 
 src_install() {
 	# install executable
@@ -23,7 +23,7 @@ src_install() {
 	doexe sc_trans_linux
 
 	# install the init.d file
-	doinitd ${FILESDIR}/shoutcast_trans
+	doinitd "${FILESDIR}"/shoutcast_trans
 
 	# install sample configuration file
 	dodoc example.lst

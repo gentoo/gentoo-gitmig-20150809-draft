@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.5.ebuild,v 1.4 2008/02/29 19:57:16 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.5.ebuild,v 1.5 2009/08/03 13:00:23 ssuominen Exp $
 
 inherit eutils kde-functions
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin kmp
+	dobin kmp || die "dobin failed"
 	dodoc README
 
 	insinto /usr/share/pixmaps
@@ -34,5 +34,5 @@ src_install() {
 	make_desktop_entry kmp "KMP" kmp "KDE;Qt;AudioVideo" "" "Multimedia"
 
 	# KDE doesn't like two of the same .desktop entries
-	rm -rf ${D}/usr/share/applnk
+	rm -rf "${D}"/usr/share/applnk
 }

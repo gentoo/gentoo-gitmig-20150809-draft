@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.15 2007/01/05 17:53:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/saydate-0.3.0.ebuild,v 1.16 2009/08/03 13:11:44 ssuominen Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A Linux shell program that talks the date and system uptime."
@@ -20,15 +20,15 @@ src_compile() { :; }
 
 src_install () {
 	insinto /usr/share/man/man1
-	doins ${S}/man/saydate.1.gz ${S}/man/au2raw.1.gz
+	doins "${S}"/man/saydate.1.gz "${S}"/man/au2raw.1.gz
 
 	dodir /usr/share/saydate
 	insinto /usr/share/saydate
-	doins ${S}/data/*.raw
+	doins "${S}"/data/*.raw
 
-	sed -i "s:/dev/audio:/dev/dsp:" ${S}/saydate
-	sed -i "s:/dev/audio:/dev/dsp:" ${S}/au2raw
-	sed -i "s:/dev/audio:/dev/dsp:" ${S}/DESIGN
+	sed -i "s:/dev/audio:/dev/dsp:" "${S}"/saydate
+	sed -i "s:/dev/audio:/dev/dsp:" "${S}"/au2raw
+	sed -i "s:/dev/audio:/dev/dsp:" "${S}"/DESIGN
 	dodoc README TODO HISTORY DESIGN
-	dobin saydate au2raw
+	dobin saydate au2raw || die "dobin failed"
 }

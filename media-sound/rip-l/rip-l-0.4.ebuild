@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip-l/rip-l-0.4.ebuild,v 1.1 2005/01/15 11:19:09 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip-l/rip-l-0.4.ebuild,v 1.2 2009/08/03 13:15:45 ssuominen Exp $
 
 inherit common-lisp eutils
 
@@ -13,16 +13,17 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="dev-lisp/common-lisp-controller
+RDEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/sbcl
 	media-sound/cdparanoia
 	media-sound/vorbis-tools"
+DEPEND="${RDEPEND}"
 
 CLPACKAGE=rip-l
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-gentoo.patch || die
+	epatch "${FILESDIR}"/${PV}-gentoo.patch
 }
 
 pkg_setup() {

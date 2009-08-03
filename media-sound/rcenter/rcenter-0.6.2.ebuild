@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.14 2007/07/11 19:30:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rcenter/rcenter-0.6.2.ebuild,v 1.15 2009/08/03 13:08:52 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,8 +17,7 @@ KEYWORDS="amd64 -sparc x86"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-makefile.patch"
 }
 
@@ -30,8 +29,8 @@ src_install() {
 	chmod 755 rcenter
 	dobin rcenter
 	dodir /usr/share/rcenter
-	cp -R config ${D}/usr/share/rcenter/
-	dodoc HISTORY LICENSE README
+	cp -R config "${D}"/usr/share/rcenter/
+	dodoc HISTORY README
 }
 
 pkg_postinst() {
