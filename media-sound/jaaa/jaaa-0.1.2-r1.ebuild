@@ -1,12 +1,12 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/jaaa-0.1.2-r1.ebuild,v 1.7 2006/10/02 06:35:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/jaaa-0.1.2-r1.ebuild,v 1.8 2009/08/03 13:26:45 ssuominen Exp $
 
 inherit eutils
 
 IUSE=""
 
-DESCRIPTION="The JACK and ALSA Audio Analyser is an audio signal generator and spectrum analyser designed to make accurate measurements."
+DESCRIPTION="The JACK and ALSA Audio Analyser is an audio signal generator and spectrum analyser"
 HOMEPAGE="http://users.skynet.be/solaris/linuxaudio"
 SRC_URI="http://users.skynet.be/solaris/linuxaudio/downloads/${P}.tar.bz2"
 
