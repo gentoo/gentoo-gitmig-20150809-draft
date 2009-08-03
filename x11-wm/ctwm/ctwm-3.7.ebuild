@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.9 2008/07/19 10:00:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ctwm/ctwm-3.7.ebuild,v 1.10 2009/08/03 10:32:20 ssuominen Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_install() {
 	echo "/usr/bin/ctwm" >> ${T}/ctwm
 
 	exeinto /etc/X11/Sessions
-	doexe ${T}/ctwm
+	doexe "${T}"/ctwm
 
 	dodoc CHANGES README* TODO* PROBLEMS
 	dodoc *.ctwmrc*

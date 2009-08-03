@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.5.3.ebuild,v 1.11 2007/08/02 15:12:14 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/larswm/larswm-7.5.3.ebuild,v 1.12 2009/08/03 10:27:41 ssuominen Exp $
 
 DESCRIPTION="Tiling window manager for X11, based on 9wm by David Hogan."
 HOMEPAGE="http://larswm.fnurt.net/"
@@ -40,5 +40,5 @@ src_install() {
 	exeinto /etc/X11/Sessions
 	newexe sample.xsession larswm
 	insinto /usr/share/xsessions
-	doins ${FILESDIR}/larswm.desktop || die
+	doins "${FILESDIR}"/larswm.desktop || die
 }

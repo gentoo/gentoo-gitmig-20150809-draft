@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r2.ebuild,v 1.6 2007/07/22 04:24:27 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ion-20020207-r2.ebuild,v 1.7 2009/08/03 10:30:57 ssuominen Exp $
 
 inherit eutils
 
@@ -18,8 +18,8 @@ DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {
@@ -39,12 +39,12 @@ src_compile() {
 	sed -e 's:$(DOCDIR)/ion:$(DOCDIR)/${P}:g' \
 		Makefile.new > Makefile
 
-	make depend || die
+	emake depend || die
 	emake || die
 }
 
 src_install () {
-	make PREFIX=${D}/usr ETCDIR=${D}/etc/X11 install || die
+	make PREFIX="${D}/usr" ETCDIR="${D}/etc/X11" install || die
 }
 
 pkg_postinst () {
