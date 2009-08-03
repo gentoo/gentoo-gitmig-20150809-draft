@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-0.23.ebuild,v 1.4 2007/07/22 04:44:15 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/jwm/jwm-0.23.ebuild,v 1.5 2009/08/03 10:19:39 ssuominen Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_install() {
 	dodir /usr/bin
 	dodir /etc
 	dodir /usr/share/man
-	make BINDIR=${D}/usr/bin SYSCONF=${D}/etc MANDIR=${D}/usr/share/man install || die
+	emake BINDIR="${D}/usr/bin" SYSCONF="${D}/etc" MANDIR="${D}/usr/share/man" install || die
 
 	echo "#!/bin/sh" > jwm
 	echo "exec /usr/bin/jwm" >> jwm
