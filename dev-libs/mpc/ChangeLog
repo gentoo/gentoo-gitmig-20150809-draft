@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.2 2009/08/02 09:43:37 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.3 2009/08/03 04:28:35 jer Exp $
+
+  03 Aug 2009; Jeroen Roovers <jer@gentoo.org> mpc-0.6.ebuild:
+  Marked ~hppa (bug #279851).
 
   02 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> mpc-0.6.ebuild:
   Keywording for ppc. Bug 279851
