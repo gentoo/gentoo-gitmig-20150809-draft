@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.10 2009/08/03 13:44:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.11 2009/08/03 19:08:29 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ bidi bindist bl +cddb +cdio cdparanoia cpudetection custom-cflags
 custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
 +enca +encode esd +faac +faad fbcon ftp gif ggi -gmplayer +iconv ipv6 jack
 joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
-mmxext mng +mp2 +mp3 nas +nemesi +network nut openal +opengl +osdmenu
+mmxext mng +mp2 +mp3 nas +network nut openal +opengl +osdmenu
 oss png pnm pulseaudio pvr +quicktime radio +rar +real +rtc samba +shm
 +schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
 +truetype +unicode v4l v4l2 vdpau vidix +vorbis win32codecs +X +x264 xanim
@@ -239,7 +239,7 @@ src_configure() {
 	################
 	#Optional features#
 	###############
-	myconf="${myconf} $(use_enable network) --disable-arts"
+	myconf="${myconf} $(use_enable network) --disable-arts --disable-nemesi"
 	use ass || myconf="${myconf} --disable-ass"
 	use bidi || myconf="${myconf} --disable-fribidi"
 	use bl && myconf="${myconf} --enable-bl"
@@ -249,7 +249,6 @@ src_configure() {
 	use ipv6 || myconf="${myconf} --disable-inet6"
 	use lirc || myconf="${myconf} --disable-lirc --disable-lircc \
 		--disable-apple-ir"
-	use nemesi || myconf="${myconf} --disable-nemesi"
 	use nut || myconf="${myconf} --disable-libnut"
 	use osdmenu && myconf="${myconf} --enable-menu"
 	use rar || myconf="${myconf} --disable-unrarexec"
