@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20090609.ebuild,v 1.2 2009/07/15 15:02:46 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdotool/xdotool-20090609.ebuild,v 1.3 2009/08/03 05:57:59 joker Exp $
 
 EAPI=2
 
@@ -26,8 +26,8 @@ src_prepare() {
 		-e "s:^LIBS=.*:LIBS=$(pkg-config --libs x11 xtst):" \
 		-e "s:^INC=.*:INC=$(pkg-config --cflags x11 xtst):" \
 		-e "s:\$(CC):$(tc-getCC):" \
-		-e "s:\$(LDFLAGS): \$(LIBS) \$(LDFLAGS):" \
 		-e 's:LDFLAGS+=$(LIBS)::' \
+		-e 's:-o $@:$(LIBS) -o $@:' \
 		-e "s:\$(CFLAGS):\$(INC) \$(CFLAGS):" \
 		Makefile \
 		|| die "sed Makefile failed."
