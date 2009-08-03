@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.30.ebuild,v 1.7 2007/07/22 04:25:55 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.30.ebuild,v 1.8 2009/08/03 10:46:18 ssuominen Exp $
 
 inherit eutils
 
@@ -49,10 +49,10 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
+	cd "${S}"/src
 
-	echo "#!/bin/sh" > $T/icewm
-	echo "/usr/bin/icewm-session" >> $T/icewm
+	echo "#!/bin/sh" > ${T}/icewm
+	echo "/usr/bin/icewm-session" >> ${T}/icewm
 }
 
 src_compile() {
@@ -93,8 +93,8 @@ src_install(){
 	dohtml -a html,sgml doc/*
 
 	exeinto /etc/X11/Sessions
-	doexe $T/icewm
+	doexe "${T}"/icewm
 
 	insinto /usr/share/xsessions
-	doins ${FILESDIR}/IceWM.desktop
+	doins "${FILESDIR}"/IceWM.desktop
 }
