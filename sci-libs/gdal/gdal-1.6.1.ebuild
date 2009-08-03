@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.0-r1.ebuild,v 1.3 2009/08/03 03:49:06 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.1.ebuild,v 1.1 2009/08/03 03:49:06 nerdboy Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module ruby toolchain-funcs
@@ -76,10 +76,9 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-1.4.2-datadir.patch \
 	    "${FILESDIR}"/${PN}-1.5.0-soname.patch \
 	    "${FILESDIR}"/${PN}-1.5.1-python-install.patch \
-	    "${FILESDIR}"/${PN}-1.6.1-ruby-make.patch \
-	    "${FILESDIR}"/${P}-swig-fix.patch \
-	    "${FILESDIR}"/${P}-mysql_ogr_header.patch \
-	    || die "sed failed"
+	    "${FILESDIR}"/${PN}-1.6.0-swig-fix.patch \
+	    "${FILESDIR}"/${PN}-1.6.0-mysql_ogr_header.patch \
+	    "${FILESDIR}"/${P}-ruby-make.patch
 
 	if useq hdf; then
 	    einfo	"Checking if HDF4 is compiled with szip..."
@@ -203,7 +202,7 @@ pkg_postinst() {
 	elog "If you need libgrass support, then you must rebuild gdal, after"
 	elog "installing the latest Grass, and set the following option:"
 	elog
-	elog "GDAL_CONFIGURE_OPTS=--with-grass=${GRASS_HOME} emerge gdal"
+	elog "GDAL_CONFIGURE_OPTS=--with-grass=\$GRASS_HOME emerge gdal"
 	elog
 	elog "GDAL is most useful with full graphics support enabled via various"
 	elog "USE flags: png, jpeg, gif, jpeg2k, etc. Also python, fits, ogdi,"
