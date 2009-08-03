@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.164 2009/08/03 03:53:52 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.165 2009/08/03 03:58:20 spock Exp $
+
+  03 Aug 2009; Michał Januszewski <spock@gentoo.org>
+  nvidia-drivers-185.18.29.ebuild, nvidia-drivers-185.18.31.ebuild:
+  Add a device compatibility check (bug #280031, #279542). Users of graphics
+  cards known to be incompatible with a particular version of the drivers
+  will now be warned about the incompatibility when installing the package.
 
 *nvidia-drivers-173.14.20 (03 Aug 2009)
 
