@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.8 2009/08/03 03:55:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.9 2009/08/03 07:10:37 ssuominen Exp $
 
 EAPI="2"
 
@@ -222,10 +222,13 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-1.0_rc2_p20090530-fix-mp3lib-use-local-labels-2.patch
+	epatch "${FILESDIR}"/${P}-linguas.patch
 }
 
 src_configure() {
-	local myconf="--language=all"
+	local myconf=""
+
+	[[ -n $LINGUAS ]] && LINGUAS="${LINGUAS/da/dk}"
 
 	# mplayer ebuild uses "use foo || --disable-foo" to forcibly disable
 	# compilation in almost every situation.  The reason for this is
