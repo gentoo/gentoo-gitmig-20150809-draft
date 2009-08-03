@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.14 2009/07/10 13:58:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/afterstep/afterstep-2.2.4.ebuild,v 1.15 2009/08/03 10:39:23 ssuominen Exp $
 
 inherit flag-o-matic eutils
 
@@ -37,7 +37,7 @@ S=${WORKDIR}/AfterStep-${PV}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/no-alternatives.patch"
+	epatch "${FILESDIR}"/no-alternatives.patch
 }
 
 src_compile() {
@@ -84,32 +84,32 @@ src_install() {
 	# for the video device.  bug #87356
 	unset DISPLAY
 
-	make DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	# This fixes a bug with shared libraries
-	rm ${D}/usr/lib/{libAfterImage.a,libAfterBase.a}
-	cp -pPR ${S}/libAfterImage/libAfterImage.so* ${D}/usr/lib
-	cp -pPR ${S}/libAfterBase/libAfterBase.so* ${D}/usr/lib
-	cp -pPR ${S}/libAfterConf/libAfterConf.so* ${D}/usr/lib
-	cp -pPR ${S}/libAfterStep/libAfterStep.so* ${D}/usr/lib
+	rm "${D}"/usr/lib/{libAfterImage.a,libAfterBase.a}
+	cp -pPR "${S}"/libAfterImage/libAfterImage.so* "${D}"/usr/lib
+	cp -pPR "${S}"/libAfterBase/libAfterBase.so* "${D}"/usr/lib
+	cp -pPR "${S}"/libAfterConf/libAfterConf.so* "${D}"/usr/lib
+	cp -pPR "${S}"/libAfterStep/libAfterStep.so* "${D}"/usr/lib
 
 	# Create a symlink from MonitorWharf to Wharf
-	rm ${D}/usr/bin/MonitorWharf
+	rm "${D}"/usr/bin/MonitorWharf
 	dosym /usr/bin/Wharf /usr/bin/MonitorWharf
 
 	# Handle the documentation
 	dodoc COPYRIGHT ChangeLog INSTALL NEW* README* TEAM UPGRADE
-	cp -pPR ${S}/TODO ${D}/usr/share/doc/${PF}/
+	cp -pPR "${S}"/TODO "${D}"/usr/share/doc/${PF}/
 	dodir /usr/share/doc/${PF}/html
-	cp -pPR ${S}/doc/* ${D}/usr/share/doc/${PF}/html
-	rm ${D}/usr/share/doc/${PF}/html/{Makefile*,afterstepdoc.in}
+	cp -pPR "${S}"/doc/* "${D}"/usr/share/doc/${PF}/html
+	rm "${D}"/usr/share/doc/${PF}/html/{Makefile*,afterstepdoc.in}
 
 	insinto /usr/share/xsessions
-	newins ${S}/AfterStep.desktop.final AfterStep.desktop
+	newins "${S}"/AfterStep.desktop.final AfterStep.desktop
 
 	# For desktop managers like GDM or KDE
 	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/afterstep
+	doexe "${FILESDIR}"/afterstep
 }
 
 pkg_postinst() {
