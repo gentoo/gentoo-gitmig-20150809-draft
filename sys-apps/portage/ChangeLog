@@ -1,6 +1,30 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.619 2009/08/02 19:51:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.620 2009/08/03 22:55:35 zmedico Exp $
+
+*portage-2.2_rc34 (03 Aug 2009)
+
+  03 Aug 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc34.ebuild:
+  2.2_rc34 bump. This fixes bug #82488 (problem in evaluation of conditional
+  PROVIDE), bug #137562 (backtracking for unsatisfied deps), bug #236786
+  (repoman warning for test useflag in RDEPEND), bug #253467 (fix possible
+  interference with portage environment variables), bug #258684 (move sandbox
+  variables from ebuild.sh), bug #264434 (lazy evaluation of || deps),
+  bug #268929 (strict-aliasing check for gcc 4.4), bug #270040 (fix repoman
+  to handle overlay categories), bug #270658 (fix usev to comply with PMS),
+  bug #270953 (fix !!atom blockers to work for package is same slot),
+  bug #272063 (fix docbook xml to work with xmlto-0.0.22), bug #273020
+  (document FEATURES=multilib-strict), bug #274279 (color.map support for
+  color=color), bug #274742 (remove repoman quoting check for "dir" variable,
+  bug #275047 (split _emerge python module), bug #275217 (backtracking for
+  slot conflicts), bug #275796 (make || deps prefer packages in graph over
+  installed packages), bug #275821 (make emerge reject !!atom blockers for
+  old EAPIs), bug #275901 (make emerge reject USE deps for old EAPIs),
+  bug #275945 (make emerge avoid updates unless --update is enabled),
+  bug #275947 (enable build.log on selinux), bug #276264 (document cache
+  issues with eclass-overrides), bug #276813 (performance improvements),
+  bug #276866 (--binpkg-respect-use option), and bug #278729 (prevent
+  interaction between || deps and unsatisfied USE deps).
 
   02 Aug 2009; Zac Medico <zmedico@gentoo.org> portage-2.1.6.13.ebuild,
   portage-2.2_rc33.ebuild:
