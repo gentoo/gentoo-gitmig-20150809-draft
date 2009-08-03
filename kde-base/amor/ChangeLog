@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/amor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.121 2009/08/03 23:13:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/amor/ChangeLog,v 1.122 2009/08/03 23:42:47 wired Exp $
+
+  03 Aug 2009; Alex Alexander <wired@gentoo.org> amor-4.3.0.ebuild:
+  4.3 keywords update
 
 *amor-4.3.0 (03 Aug 2009)
 

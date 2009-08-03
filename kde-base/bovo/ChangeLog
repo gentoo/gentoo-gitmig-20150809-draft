@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/bovo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.30 2009/08/03 23:14:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/bovo/ChangeLog,v 1.31 2009/08/03 23:40:59 wired Exp $
+
+  03 Aug 2009; Alex Alexander <wired@gentoo.org> bovo-4.3.0.ebuild:
+  4.3 keywords update
 
 *bovo-4.3.0 (03 Aug 2009)
 
