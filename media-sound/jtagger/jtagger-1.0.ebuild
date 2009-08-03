@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0.ebuild,v 1.1 2009/05/16 23:06:11 serkan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jtagger/jtagger-1.0.ebuild,v 1.2 2009/08/03 13:06:56 ssuominen Exp $
 
 EAPI="2"
-
 JAVA_PKG_IUSE="source test"
 
 inherit eutils java-pkg-2
@@ -13,16 +12,14 @@ HOMEPAGE="http://dronten.googlepages.com/jtagger"
 SRC_URI="http://dronten.googlepages.com/${PN}.zip -> ${P}.zip"
 
 LICENSE="GPL-3"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-SLOT="0"
 
-COMMON_DEP="
-	dev-java/jlayer
+COMMON_DEP="dev-java/jlayer
 	>=dev-java/jid3-0.46-r1"
-RDEPEND=">=virtual/jre-1.5
-	${COMMON_DEP}"
-
+RDEPEND="${COMMON_DEP}
+	>=virtual/jre-1.5"
 DEPEND="${COMMON_DEP}
 	>=virtual/jdk-1.5
 	app-arch/unzip"
@@ -33,7 +30,9 @@ src_unpack() {
 
 	unpack ${A}
 	unzip -q ${PN}.jar || die
+}
 
+src_prepare() {
 	# Fix for bug #231571 comment #2. This removes real @Override annotations but safer.
 	sed -i -e "s/@Override//g" $(find . -name "*.java") || die "failed fixing for Java 5."
 
