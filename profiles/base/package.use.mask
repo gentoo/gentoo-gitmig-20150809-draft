@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.82 2009/07/31 23:50:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.83 2009/08/03 17:09:09 hkbst Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Marijn Schouten <hkBst@gentoo.org> (03 Aug 2009)
+# gcl is an old piece of crap that has a lot of problems
+sci-mathematics/maxima gcl
 
 # Jeremy Olexa <darkside@gentoo.org> (31 Jul 2009)
 # Mask the gnome USE flag globally for app-office/abiword-plugins-2.4.6 because
