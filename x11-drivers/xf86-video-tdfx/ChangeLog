@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-tdfx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.49 2009/06/23 20:06:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tdfx/ChangeLog,v 1.50 2009/08/03 15:27:57 remi Exp $
+
+*xf86-video-tdfx-1.4.3 (03 Aug 2009)
+
+  03 Aug 2009; Rémi Cardona <remi@gentoo.org>
+  +xf86-video-tdfx-1.4.3.ebuild:
+  bump to 1.4.3
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xf86-video-tdfx-1.4.1.ebuild:
