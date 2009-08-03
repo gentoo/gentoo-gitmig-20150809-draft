@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/poppassd_ceti
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.10 2009/08/01 23:31:19 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/poppassd_ceti/ChangeLog,v 1.11 2009/08/03 18:08:36 cryos Exp $
+
+  03 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org>
+  poppassd_ceti-1.8.5-r2.ebuild:
+  Forgot to remove the use dependent cracklib too. Thanks Mr_Bones.
 
 *poppassd_ceti-1.8.5-r2 (01 Aug 2009)
 
