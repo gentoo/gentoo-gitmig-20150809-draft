@@ -1,6 +1,16 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.35 2009/07/16 08:59:19 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.36 2009/08/03 11:19:59 gentoofan23 Exp $
+
+*zoneminder-1.24.2 (03 Aug 2009)
+
+  03 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  +files/1.24.2/Makefile.am.patch, +zoneminder-1.24.2.ebuild,
+  +files/1.24.2/db_upgrade_script_location.patch,
+  +files/1.24.2/zm_create.sql.in.patch,
+  +files/1.24.2/zm_remote_camera_http.patch:
+  Add www-misc/zoneminder-1.24.2; fixes bug #262019 and security bug
+  #236517.
 
   16 Jul 2009; Torsten Veller <tove@gentoo.org> zoneminder-1.23.3.ebuild,
   metadata.xml:
