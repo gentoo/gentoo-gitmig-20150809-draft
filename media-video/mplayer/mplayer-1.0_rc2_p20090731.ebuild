@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.13 2009/08/03 20:45:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731.ebuild,v 1.14 2009/08/03 20:53:28 ssuominen Exp $
 
 EAPI="2"
 
@@ -50,8 +50,8 @@ RDEPEND="sys-libs/ncurses
 	)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	ass? ( media-libs/freetype:2
-		media-libs/fontconfig )
+	ass? ( || ( media-fonts/dejavu media-found/ttf-bitstream-vera )
+		media-libs/freetype:2 media-libs/fontconfig )
 	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
 	cdio? ( dev-libs/libcdio )
