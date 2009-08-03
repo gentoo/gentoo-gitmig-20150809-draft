@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-prolinux/fortune-mod-prolinux-0.25.ebuild,v 1.1 2009/08/03 12:52:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-prolinux/fortune-mod-prolinux-0.25.ebuild,v 1.2 2009/08/03 13:12:50 zzam Exp $
 
 DESCRIPTION="Quotes from Prolinux articles and comments"
 HOMEPAGE="http://www.pro-linux.de/news/2009/14520.html"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-RDEPEND="games-misc/fortune-mod"
+DEPEND="games-misc/fortune-mod"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN/-mod/s}
 

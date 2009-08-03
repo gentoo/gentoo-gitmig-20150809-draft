@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-prolinux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-prolinux/ChangeLog,v 1.1 2009/08/03 12:52:45 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-prolinux/ChangeLog,v 1.2 2009/08/03 13:12:50 zzam Exp $
+
+  03 Aug 2009; Matthias Schwarzott <zzam@gentoo.org>
+  fortune-mod-prolinux-0.25.ebuild:
+  Add fortune-mod to DEPEND for strfile
 
 *fortune-mod-prolinux-0.25 (03 Aug 2009)
 
