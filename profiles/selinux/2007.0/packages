@@ -7,8 +7,6 @@
 >=sys-apps/policycoreutils-1.34.1
 >=sys-apps/checkpolicy-1.34.0
 
->=sec-policy/selinux-base-policy-20070329
-
 # appropriate version with multiple inheritance
 >=sys-apps/portage-2.1.2
 
