@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-180.60.ebuild,v 1.5 2009/07/31 15:14:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-180.60.ebuild,v 1.6 2009/08/03 00:47:30 cardoe Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -159,23 +159,6 @@ mtrr_check() {
 	fi
 }
 
-paravirt_check() {
-	ebegin "Checking for Paravirtualized guest support"
-	linux_chkconfig_present PARAVIRT_GUEST
-
-	if [[ $? -eq 0 ]]; then
-		eerror "Please disable PARAVIRT_GUEST in your kernel config, found at:"
-		eerror
-		eerror "  Processor type and features"
-		eerror "    [*] Paravirtualized guest support"
-		eerror
-		eerror "or XEN support"
-		eerror
-		eerror "and recompile your kernel .."
-		die "PARAVIRT_GUEST support detected!"
-	fi
-}
-
 pkg_setup() {
 	# try to turn off distcc and ccache for people that have a problem with it
 	export DISTCC_DISABLE=1
@@ -192,7 +175,6 @@ pkg_setup() {
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} HOST_CC=$(tc-getBUILD_CC)"
 		mtrr_check
-		paravirt_check
 	fi
 
 	# On BSD userland it wants real make command

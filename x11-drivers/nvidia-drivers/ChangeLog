@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.161 2009/08/02 20:59:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.162 2009/08/03 00:47:30 cardoe Exp $
+
+  03 Aug 2009; Doug Goldstein <cardoe@gentoo.org>
+  nvidia-drivers-180.29.ebuild, nvidia-drivers-180.60.ebuild,
+  nvidia-drivers-185.18.14.ebuild, nvidia-drivers-185.18.29.ebuild,
+  nvidia-drivers-185.18.31.ebuild, nvidia-drivers-190.18.ebuild,
+  -files/eblits/paravirt_check.eblit:
+  remove paravirt check again. bug #264375 again
 
   02 Aug 2009; <chainsaw@gentoo.org> nvidia-drivers-71.86.09.ebuild,
   nvidia-drivers-96.43.11.ebuild:
