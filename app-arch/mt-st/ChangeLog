@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.29 2009/08/03 16:17:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.30 2009/08/03 18:16:27 jer Exp $
+
+  03 Aug 2009; Jeroen Roovers <jer@gentoo.org> -mt-st-0.7-r1.ebuild:
+  Remove old.
 
   03 Aug 2009; Jeroen Roovers <jer@gentoo.org> mt-st-1.1.ebuild:
   Update HOMEPAGE and DESCRIPTION.
