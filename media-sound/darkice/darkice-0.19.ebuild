@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.19.ebuild,v 1.8 2009/07/10 01:09:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darkice/darkice-0.19.ebuild,v 1.9 2009/08/03 13:13:55 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -23,9 +23,7 @@ RDEPEND="mp3? ( media-sound/lame )
 	!mp3? ( !vorbis? ( !aac? ( !twolame? ( media-sound/lame ) ) ) )"
 DEPEND="${RDEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.18.1-gcc43.patch \
 		"${FILESDIR}"/${P}-gcc44.patch
 }
