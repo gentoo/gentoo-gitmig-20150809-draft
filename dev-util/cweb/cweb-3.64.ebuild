@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64.ebuild,v 1.14 2008/09/03 12:19:08 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64.ebuild,v 1.15 2009/08/03 22:29:02 flameeyes Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Knuth's and Levy's C/C++ documenting system"
@@ -18,8 +18,8 @@ DEPEND="virtual/libc
 	!app-text/ptex"
 
 src_compile() {
-	#emake won't work, because cweave needs ctangle to compile
-	make all CFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" || die
+	# bug #258130
+	emake -j1 all CFLAGS="${CFLAGS}" LINKFLAGS="${LDFLAGS}" || die
 }
 
 src_install () {
