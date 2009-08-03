@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.15 2009/01/09 15:06:36 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.18-r1.ebuild,v 1.16 2009/08/03 10:17:16 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,20 +41,22 @@ DEPEND="${RDEPEND}
 		xinerama? ( x11-proto/xineramaproto )"
 
 src_unpack() {
-	unpack ${A}; export EPATCH_OPTS="-F3 -l"
+	unpack ${A}
+	cd "${S}"
+	export EPATCH_OPTS="-F3 -l"
 
 	# this patch enables fast translucent menus in fvwm. this is a
 	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
 	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
-	cd ${S}; epatch ${WORKDIR}/fvwm-2.5.18-translucent-menus.diff
+	epatch "${WORKDIR}"/fvwm-2.5.18-translucent-menus.diff
 
 	# fixing #51287, the fvwm-menu-xlock script is not compatible
 	# with the xlockmore implementation in portage.
-	cd ${S}; epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
+	epatch "${FILESDIR}"/fvwm-menu-xlock-xlockmore-compat.diff
 
 	# fix security issue in fvwm-menu-directory when parsing directories
 	# with newlines.
-	cd ${S}; epatch ${FILESDIR}/fvwm-menu-directory-security.diff
+	epatch "${FILESDIR}"/fvwm-menu-directory-security.diff
 }
 
 src_compile() {
@@ -98,7 +100,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	if use perl; then
 
@@ -106,38 +108,38 @@ src_install() {
 
 		if ! use tk; then
 			# Remove the Tk bindings (requires perl-tk)
-			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
+			rm -f "${D}"/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
 			toolkits=${toolkits/tcltk/}
 		fi
 		if ! use gtk; then
 			# Remove gtk bindings (requires gtk-perl/gtk2-perl)
-			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm \
-				${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
+			rm -f "${D}"/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm \
+				"${D}"/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
 			toolkits=${toolkits/gtk/}
 		fi
 		toolkits=${toolkits// /}
 		if ! test "${toolkits}"; then
 			# No perl toolkit bindings wanted, remove the unneeded files
 			# and empty directories.
-			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Toolkit.pm
-			find ${D}/usr/share/fvwm/perllib -depth -type d -exec rmdir {} \; 2>/dev/null
+			rm -f "${D}"/usr/share/fvwm/perllib/FVWM/Module/Toolkit.pm
+			find "${D}"/usr/share/fvwm/perllib -depth -type d -exec rmdir {} \; 2>/dev/null
 		fi
 	else
 		# Remove useless script if perllib isnt required.
-		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
+		rm -rf "${D}"/usr/bin/fvwm-perllib "${D}"/usr/share/man/man1/fvwm-perllib.1
 	fi
 
 	# neat utility for testing fvwm behaviour on applications setting various
 	# hints, creates a simple black window with configurable hints set.
 	if use debug; then
-		dobin ${S}/tests/hints/hints_test
-		newdoc ${S}/tests/hints/README README.hints
+		dobin "${S}"/tests/hints/hints_test
+		newdoc "${S}"/tests/hints/README README.hints
 	fi
 
 	# fvwm-convert-2.6 is just a stub, contains no code - remove it for now.
 	# fvwm-convert-2.2 has a man page, but the script is no longer distributed.
-	rm -f ${D}/usr/bin/fvwm-convert-2.6 ${D}/usr/share/man/man1/fvwm-convert-2.6.1
-	rm -f ${D}/usr/share/man/man1/fvwm-convert-2.2.1
+	rm -f "${D}"/usr/bin/fvwm-convert-2.6 "${D}"/usr/share/man/man1/fvwm-convert-2.6.1
+	rm -f "${D}"/usr/share/man/man1/fvwm-convert-2.2.1
 
 	# ive included `exec` to save a few bytes of memory.
 	echo "#!/bin/bash" > fvwm2
@@ -148,11 +150,11 @@ src_install() {
 
 	wm=fvwm2 make_session_desktop FVWM fvwm2
 
-	dodoc AUTHORS ChangeLog COPYING README NEWS docs/ANNOUNCE docs/BUGS \
+	dodoc AUTHORS ChangeLog README NEWS docs/ANNOUNCE docs/BUGS \
 	docs/COMMANDS docs/DEVELOPERS docs/FAQ docs/error_codes docs/TODO \
 	docs/fvwm.lsm
 
-	dodoc ${FILESDIR}/README.transluceny
+	dodoc "${FILESDIR}"/README.transluceny
 }
 
 pkg_postinst() {
