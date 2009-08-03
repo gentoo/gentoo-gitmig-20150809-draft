@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10202 2009/08/03 22:50:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10203 2009/08/03 22:59:32 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,16 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (29 Jul 2009)
+#  on behalf of QA Team
+# Live ebuild, we cannot guarantee its working state
+dev-lisp/cl-arnesi-darcs
+dev-lisp/cl-fiveam-darcs
+dev-lisp/cl-parenscript-darcs
+dev-lisp/cl-rfc2109-darcs
+dev-lisp/cl-rfc2388-darcs
+dev-lisp/cl-yaclml-darcs
 
 # Alex Alexander <wired@gentoo.org> (03 Aug 2009)
 # masking kde 4.3 ebuilds before mass-commit
