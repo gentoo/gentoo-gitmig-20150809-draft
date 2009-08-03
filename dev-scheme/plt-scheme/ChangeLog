@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/plt-scheme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.9 2009/08/02 15:16:54 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/plt-scheme/ChangeLog,v 1.10 2009/08/03 15:55:26 hkbst Exp $
+
+  03 Aug 2009; Marijn Schouten <hkBst@gentoo.org> plt-scheme-4.2.1.ebuild,
+  +files/typo.patch:
+  fix bug 280166
 
 *plt-scheme-4.2.1 (02 Aug 2009)
 
