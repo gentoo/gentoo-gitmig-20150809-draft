@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.32 2009/08/01 12:38:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.33 2009/08/03 15:07:14 flameeyes Exp $
+
+  03 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  eselect-python-20090801.ebuild:
+  FreeBSD doesn't like having as interpreter of a script another script,
+  unkeywording until fixed.
 
   01 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   eselect-python-20090801.ebuild:
