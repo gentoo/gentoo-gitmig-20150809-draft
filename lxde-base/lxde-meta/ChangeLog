@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.8 2009/08/03 18:36:05 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-meta/ChangeLog,v 1.9 2009/08/03 23:30:58 vostorga Exp $
+
+  03 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> lxde-meta-0.4.ebuild:
+  Fixing lxrandr entry to match lxde-base/lxrandr-0.1.1
 
   03 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> lxde-meta-0.4.ebuild:
   Adding entry for =lxde-base/lxmenu-data-0.1*
