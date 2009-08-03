@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.3.ebuild,v 1.5 2008/04/14 20:16:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.9.3.ebuild,v 1.6 2009/08/03 13:20:44 ssuominen Exp $
 
-inherit eutils autotools
+inherit eutils
 
 DESCRIPTION="Audio editor and live playback tool"
 HOMEPAGE="http://www.metadecks.org/software/sweep/"
