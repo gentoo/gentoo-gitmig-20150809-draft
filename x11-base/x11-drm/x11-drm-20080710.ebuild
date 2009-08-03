@@ -1,8 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20080710.ebuild,v 1.8 2009/02/05 13:36:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/x11-drm-20080710.ebuild,v 1.9 2009/08/03 11:43:22 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.7"
 
 inherit eutils x11 linux-mod autotools
