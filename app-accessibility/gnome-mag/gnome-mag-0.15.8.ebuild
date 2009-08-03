@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.15.8.ebuild,v 1.1 2009/08/02 21:21:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.15.8.ebuild,v 1.2 2009/08/03 16:42:46 mr_bones_ Exp $
 
 inherit gnome2 virtualx
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.11.1
 #	applet? (
 #		>=dev-python/pygtk-2.6
 #		dev-python/pygobject
-#		
+#
 #		>=dev-python/libbonobo-python-2.10
 #		>=dev-python/gconf-python-2.10
 #		>=dev-python/libgnome-python-2.10
