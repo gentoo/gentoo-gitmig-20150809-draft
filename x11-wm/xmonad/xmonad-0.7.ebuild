@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.7.ebuild,v 1.3 2008/08/07 22:03:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xmonad/xmonad-0.7.ebuild,v 1.4 2009/08/03 10:35:43 ssuominen Exp $
 
 CABAL_FEATURES="bin lib profile haddock"
 
@@ -13,6 +13,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
+IUSE=""
 
 DEPEND="dev-haskell/mtl
 	>=dev-haskell/x11-1.4.1
