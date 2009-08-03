@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.5 2009/07/31 21:31:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.6 2009/08/03 20:26:17 maekke Exp $
+
+  03 Aug 2009; Markus Meier <maekke@gentoo.org> libnut-661.ebuild:
+  x86 stable, bug #279342
 
   31 Jul 2009; <chainsaw@gentoo.org> libnut-503.ebuild, libnut-661.ebuild:
   Marked stable on AMD64 as a dependency of
