@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.17 2009/07/31 07:12:16 grobian Exp $
+# $Id: package.mask,v 1.18 2009/08/03 17:41:46 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -33,6 +33,9 @@
 #--- END OF EXAMPLES ---
 
 
+# Fabian Groffen <grobian@gentoo.org> (03 Jul 2009)
+# Mask this, messing around with Python is better done in gentoo-x86 ONLY
+>=app-admin/eselect-python-20090801
 
 # Fabian Groffen <grobian@gentoo.org> (26 Jul 2009)
 # util-linux doesn't work on non-Linux and doesn't work in Prefix.  This

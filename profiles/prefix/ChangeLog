@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.46 2009/07/31 14:31:33 mduft Exp $
+# $Id: ChangeLog,v 1.47 2009/08/03 17:41:46 grobian Exp $
+
+  03 Aug 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask eselect-python-20090801, messing around with Python is better done in
+  gentoo-x86 ONLY
 
   31 Jul 2009; Markus Duft <mduft@gentoo.org>
   windows/interix/3.5/package.mask:
