@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.67 2009/07/27 23:45:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.68 2009/08/03 03:23:07 jer Exp $
+
+  03 Aug 2009; Jeroen Roovers <jer@gentoo.org> dosfstools-3.0.2.ebuild:
+  Stable for HPPA (bug #278612).
 
 *dosfstools-3.0.5 (27 Jul 2009)
 
