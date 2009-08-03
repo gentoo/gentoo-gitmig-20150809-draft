@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.122 2009/06/29 20:50:20 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.123 2009/08/03 17:53:50 fordfrog Exp $
+
+*netbeans-6.7.1 (03 Aug 2009)
+
+  03 Aug 2009; Miroslav Šulc <fordfrog@gentoo.org> +netbeans-6.7.1.ebuild:
+  Version bump. I did not add JavaFX support as part of the project is
+  closed source and it seems it is not possible to build it. Anyway,
+  netbeans users can use update center to get JavaFX module.
 
 *netbeans-6.7 (29 Jun 2009)
 
