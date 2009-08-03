@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/qmidiarp-0.0.2.ebuild,v 1.8 2008/07/27 21:28:24 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmidiarp/qmidiarp-0.0.2.ebuild,v 1.9 2009/08/03 13:18:51 ssuominen Exp $
 
 EAPI=1
 
@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="x11-libs/qt:3
-	>=media-libs/alsa-lib-0.9.0"
+RDEPEND="x11-libs/qt:3
+	media-libs/alsa-lib"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +30,7 @@ src_compile() {
 
 src_install() {
 	dobin qmidiarp
-	dodoc LICENSE README
+	dodoc README
 	insinto /usr/share/${PN}
 	doins demo.qma demo_up_down.qma
 }
