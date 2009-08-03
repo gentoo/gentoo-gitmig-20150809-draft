@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/radmind-1.7.1-r1.ebuild,v 1.2 2007/03/20 22:40:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/radmind-1.7.1-r1.ebuild,v 1.3 2009/08/03 22:40:44 flameeyes Exp $
 
 inherit eutils
 
@@ -26,7 +26,8 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_with ssl) || die "econf failed"
-	emake || die "emake failed"
+	# bug #239862
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
