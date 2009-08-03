@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/tapestrea-0.1.0.5.ebuild,v 1.1 2009/06/28 23:16:25 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tapestrea/tapestrea-0.1.0.5.ebuild,v 1.2 2009/08/03 13:10:07 ssuominen Exp $
 
 EAPI="1"
 
@@ -41,7 +41,6 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-gcc44.patch"
 }
@@ -75,12 +74,12 @@ src_install() {
 
 	dodoc AUTHORS BUGS DEVELOPER PROGRAMMER QUICKSTART README THANKS TODO VERSIONS
 	if use doc; then
-		for dir in `find examples/* -type d -maxdepth 0`; do
-			docinto $dir
-			dodoc `find $dir/* -type f -maxdepth 0`
-			for dir2 in `find $dir/* -type d -maxdepth 0`; do
-				docinto $dir2
-				dodoc `find $dir2/* -type f -maxdepth 0`
+		for tapedir in `find examples/* -type d -maxdepth 0`; do
+			docinto $tapedir
+			dodoc `find $tapedir/* -type f -maxdepth 0`
+			for tapedir2 in `find $tapedir/* -type d -maxdepth 0`; do
+				docinto $tapedir2
+				dodoc `find $tapedir2/* -type f -maxdepth 0`
 			done
 		done
 		docinto doc

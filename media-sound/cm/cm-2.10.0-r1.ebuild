@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0-r1.ebuild,v 1.4 2008/08/25 16:51:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.10.0-r1.ebuild,v 1.5 2009/08/03 13:08:22 ssuominen Exp $
 
 inherit elisp-common
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}"
 
 IUSE="doc emacs test"
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 SITEFILE=50${PN}-gentoo.el
 
@@ -91,8 +91,8 @@ src_test() {
 
 src_install() {
 	insinto /usr/share/${PN}/
-	for dir in "bin etc src"; do
-		doins -r ${dir}
+	for cmdir in "bin etc src"; do
+		doins -r ${cmdir}
 	done;
 	doins cm.asd
 	chmod +x "${D}"/usr/share/${PN}/bin/cm.sh
