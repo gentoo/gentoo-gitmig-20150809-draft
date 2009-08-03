@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.12 2009/07/31 20:43:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-9999.ebuild,v 1.13 2009/08/03 06:42:36 aballier Exp $
 
 EAPI="2"
 
@@ -282,7 +282,7 @@ src_configure() {
 	if [[ -n $LINGUAS ]]; then
 		LINGUAS="${LINGUAS/da/dk}"
 		available_linguas=$(echo $LINGUAS | awk '{ print $1 }')
-		myconf_linguas=$(echo $LINGUAS | sed s/\ /,/)
+		myconf_linguas=$(echo $LINGUAS | tr ' ' ',')
 		myconf="${myconf} --language=${available_linguas} \
 			--language-doc=${myconf_linguas} --language-man=${myconf_linguas}"
 	fi
