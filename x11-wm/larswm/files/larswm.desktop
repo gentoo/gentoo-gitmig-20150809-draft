@@ -1,6 +1,7 @@
 [Desktop Entry]
-Encoding=UTF-8
+Version=1.0
 Name=larswm
 Comment=This session logs you into larswm
 Exec=larswm-session
-TryExec=larswm-session
+Icon=
+Type=Application
