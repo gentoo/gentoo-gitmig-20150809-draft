@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10198 2009/08/02 10:08:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10199 2009/08/03 01:54:49 pebenito Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Chris PeBenito <pebenito@gentoo.org> (02 Aug 2009)
+# Masked for removal.  These policies have been
+# in selinux-base-policy for a long time.
+sec-policy/selinux-lvm
+sec-policy/selinux-mdadm
 
 # Samuli Suominen <ssuominen@gentoo.org> (02 Aug 2009)
 # Outdated. Needs Xfce 4.4 style xfce-mcs-manager.
