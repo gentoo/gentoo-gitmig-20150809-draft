@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3006 2009/08/03 13:40:37 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3007 2009/08/03 18:40:39 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask mplayer-skins for removal since gmplayer is deprecated and these are
+  causing problems wrt #224563.
 
   03 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org> package.mask:
   All of www-misc/zoneminder's security flaws have been resolved, unmask

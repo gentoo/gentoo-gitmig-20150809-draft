@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10200 2009/08/03 13:40:37 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10201 2009/08/03 18:40:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (03 Aug 2009)
+# USE gmplayer in mplayer is deprecated. Use smplayer or
+# gnome-mplayer as replacement. Also, this theme pack
+# is outdated and is causing problems wrt #224563.
+x11-themes/mplayer-skins
 
 # Chris PeBenito <pebenito@gentoo.org> (02 Aug 2009)
 # Masked for removal.  These policies have been
