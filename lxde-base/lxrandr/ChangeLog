@@ -1,6 +1,12 @@
 # ChangeLog for lxde-base/lxrandr
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.1 2008/11/07 15:28:52 yngwin Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/ChangeLog,v 1.2 2009/08/03 23:20:33 vostorga Exp $
+
+*lxrandr-0.1.1 (03 Aug 2009)
+
+  03 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> +lxrandr-0.1.1.ebuild,
+  +files/lxrandr-0.1.1-intltool.patch:
+  Version bump to 0.1.1
 
 *lxrandr-0.1 (07 Nov 2008)
 
