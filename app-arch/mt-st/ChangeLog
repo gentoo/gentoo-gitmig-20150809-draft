@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/mt-st
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.27 2008/10/23 02:42:32 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.28 2009/08/03 16:15:24 jer Exp $
+
+*mt-st-1.1 (03 Aug 2009)
+
+  03 Aug 2009; Jeroen Roovers <jer@gentoo.org> +mt-st-1.1.ebuild:
+  Version bump. Move to EAPI="2". Remove DEPEND.
 
   23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> mt-st-0.9b.ebuild:
   Respect CFLAGS, LDFLAGS and CC.
