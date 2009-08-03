@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.57 2009/08/02 16:56:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.58 2009/08/03 22:28:01 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -187,18 +187,21 @@ python_set_build_dir_symlink() {
 }
 
 # @FUNCTION: python_execute_function
-# @USAGE: [--action-message message] [--failure-message message] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] <function> [arguments]
+# @USAGE: [--action-message message] [-d|--default-function] [--failure-message message] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] <function> [arguments]
 # @DESCRIPTION:
 # Execute specified function for each value of PYTHON_ABIS, optionally passing
 # additional arguments. The specified function can use PYTHON_ABI variable.
 python_execute_function() {
-	local action action_message action_message_template= failure_message failure_message_template= function nonfatal="0" PYTHON_ABI quiet="0" separate_build_dirs="0"
+	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function nonfatal="0" PYTHON_ABI quiet="0" separate_build_dirs="0"
 
 	while (($#)); do
 		case "$1" in
 			--action-message)
 				action_message_template="$2"
 				shift
+				;;
+			-d|--default-function)
+				default_function="1"
 				;;
 			--failure-message)
 				failure_message_template="$2"
@@ -223,11 +226,45 @@ python_execute_function() {
 		shift
 	done
 
-	if [[ "$#" -eq "0" ]]; then
-		die "${FUNCNAME}(): Missing function name"
+	if [[ "${default_function}" == "0" ]]; then
+		if [[ "$#" -eq "0" ]]; then
+			die "${FUNCNAME}(): Missing function name"
+		fi
+		function="$1"
+		shift
+	else
+		if [[ "$#" -ne "0" ]]; then
+			die "${FUNCNAME}(): --default-function option and function name cannot be specified simultaneously"
+		fi
+		if has "${EAPI:-0}" 0 1; then
+			die "${FUNCNAME}(): --default-function option cannot be used in this EAPI"
+		fi
+
+		if [[ "${EBUILD_PHASE}" == "configure" ]]; then
+			python_default_function() {
+				econf
+			}
+		elif [[ "${EBUILD_PHASE}" == "compile" ]]; then
+			python_default_function() {
+				emake
+			}
+		elif [[ "${EBUILD_PHASE}" == "test" ]]; then
+			python_default_function() {
+				if emake -j1 -n check &> /dev/null; then
+					emake -j1 check
+				elif emake -j1 -n test &> /dev/null; then
+					emake -j1 test
+				fi
+			}
+		elif [[ "${EBUILD_PHASE}" == "install" ]]; then
+			python_default_function() {
+				emake DESTDIR="${D}" install
+			}
+		else
+			die "${FUNCNAME}(): --default-function option cannot be used in this ebuild phase"
+		fi
+		function="python_default_function"
 	fi
-	function="$1"
-	shift
 
 	if [[ "${quiet}" == "0" ]]; then
 		[[ "${EBUILD_PHASE}" == "setup" ]] && action="Setting up"
@@ -292,6 +329,10 @@ python_execute_function() {
 			popd > /dev/null || die "popd failed"
 		fi
 	done
+
+	if [[ "${default_function}" == "1" ]]; then
+		unset -f python_default_function
+	fi
 }
 
 
