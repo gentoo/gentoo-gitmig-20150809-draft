@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.8 2009/01/05 17:24:48 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cowbell/cowbell-0.2.7.1.ebuild,v 1.9 2009/08/03 13:19:27 ssuominen Exp $
 
 EAPI=2
 
@@ -29,11 +29,11 @@ DOCS="AUTHORS ChangeLog NEWS README"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-libtool.patch \
 		"${FILESDIR}"/${P}-desktop-entry.patch
-	intltoolize --force --copy --automake || die "intltoolize failed."
+	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautoreconf
 }
 
