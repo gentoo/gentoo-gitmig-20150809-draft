@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.2.0.ebuild,v 1.1 2009/06/22 01:33:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-1.2.0.ebuild,v 1.2 2009/08/03 03:11:29 jer Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnupg/gpgme/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="pth"
 
 DEPEND=">=dev-libs/libgpg-error-1.4
