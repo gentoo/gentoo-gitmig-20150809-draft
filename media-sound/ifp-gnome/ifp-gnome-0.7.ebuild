@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ifp-gnome-0.7.ebuild,v 1.2 2007/08/19 16:54:31 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ifp-gnome/ifp-gnome-0.7.ebuild,v 1.3 2009/08/03 12:54:46 ssuominen Exp $
 
 inherit eutils
 
@@ -17,17 +17,15 @@ RDEPEND=">=dev-python/pyifp-0.2.2
 	>=dev-python/gnome-python-2.12"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}"/${PN}
+S=${WORKDIR}/${PN}
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-file-locations.patch
 }
 
-src_compile() {
-	echo "Nothing to compile."
-}
+src_compile() { :; }
 
 src_install() {
 	insinto /usr/share/${PN}
