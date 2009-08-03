@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dragonplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/ChangeLog,v 1.25 2009/07/26 20:47:01 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dragonplayer/ChangeLog,v 1.26 2009/08/03 23:15:52 wired Exp $
+
+*dragonplayer-4.3.0 (03 Aug 2009)
+
+  03 Aug 2009; Alex Alexander <wired@gentoo.org> +dragonplayer-4.3.0.ebuild:
+  Version bump
 
   26 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org>
   dragonplayer-4.2.4.ebuild:
