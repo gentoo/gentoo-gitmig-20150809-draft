@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/lxterminal-0.1.4.ebuild,v 1.2 2009/08/03 19:24:57 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxterminal/lxterminal-0.1.6.ebuild,v 1.1 2009/08/03 19:24:57 vostorga Exp $
 
 EAPI="1"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE=""
 
@@ -18,9 +18,10 @@ RDEPEND="x11-libs/gtk+:2
 	x11-libs/vte"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	sys-devel/gettext"
+	sys-devel/gettext
+	>=dev-util/intltool-0.40.0"
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS README || die "dodoc failed"
 }
