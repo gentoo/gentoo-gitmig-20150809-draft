@@ -1,30 +1,28 @@
-# Copyright 2006-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1-r2.ebuild,v 1.3 2009/03/14 03:52:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-common/matchbox-common-0.9.1-r2.ebuild,v 1.4 2009/08/03 10:49:43 ssuominen Exp $
 
 inherit eutils versionator
 
 DESCRIPTION="Common files used by matchbox-panel and matchbox-desktop packages"
 HOMEPAGE="http://matchbox-project.org/"
 SRC_URI="http://matchbox-project.org/sources/${PN}/$(get_version_component_range 1-2)/${P}.tar.bz2"
+
 LICENSE="GPL-2"
 SLOT="0"
-
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86"
 IUSE="pda"
 
-DEPEND=">=x11-libs/libmatchbox-1.1"
+RDEPEND=">=x11-libs/libmatchbox-1.1"
+DEPEND="${RDEPEND}"
 
 src_compile() {
-
-	econf $(use_enable pda pda-folders) \
-		|| die "Configuration failed"
-
-	emake || die "Compilation failed"
+	econf $(use_enable pda pda-folders)
+	emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 
 	# Insert our Xsession
 	echo -e "#!/bin/sh\n\nmatchbox-session" > "${T}"/matchbox
