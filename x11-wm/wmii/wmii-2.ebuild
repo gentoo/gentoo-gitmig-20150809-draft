@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-2.ebuild,v 1.6 2007/08/01 00:59:17 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wmii/wmii-2.ebuild,v 1.7 2009/08/03 10:40:41 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -50,7 +50,7 @@ src_install() {
 	make DESTDIR="${D}" install || die "make install failed."
 
 	dodoc ANNOUNCE || die "ANNOUNCE failed." # only in releases
-	dodoc CHANGES README LICENSE doc/welcome.txt || die "dodoc failed."
+	dodoc CHANGES README doc/welcome.txt || die "dodoc failed."
 
 	if use python ; then
 		cd "${S}"/libixp/python
