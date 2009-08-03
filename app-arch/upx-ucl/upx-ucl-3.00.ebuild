@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.00.ebuild,v 1.1 2007/06/21 16:34:08 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.00.ebuild,v 1.2 2009/08/03 00:02:55 vostorga Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-glibc210.patch
 	mkdir "${WORKDIR}"/lzma-${LZMA_VER}
 	cd "${WORKDIR}"/lzma-${LZMA_VER}
 	unpack lzma${LZMA_VER/.}.tar.bz2

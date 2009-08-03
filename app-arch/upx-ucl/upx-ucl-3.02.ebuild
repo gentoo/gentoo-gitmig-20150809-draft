@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.02.ebuild,v 1.2 2008/05/16 09:43:44 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-3.02.ebuild,v 1.3 2009/08/03 00:02:55 vostorga Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -25,6 +25,8 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${MY_P}.tar.bz2
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-glibc210.patch
 	mkdir "${WORKDIR}"/lzma-${LZMA_VER}
 	cd "${WORKDIR}"/lzma-${LZMA_VER}
 	unpack lzma${LZMA_VER/.}.tar.bz2

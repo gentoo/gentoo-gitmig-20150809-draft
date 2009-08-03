@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/upx-ucl
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.16 2009/02/25 12:17:26 drizzt Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.17 2009/08/03 00:02:55 vostorga Exp $
+
+  02 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
+  +files/upx-ucl-glibc210.patch, upx-ucl-3.00.ebuild, upx-ucl-3.02.ebuild,
+  upx-ucl-3.03.ebuild:
+  Fixing build against glibc 2.10. Bug #279911
 
   25 Feb 2009; Timothy Redaelli <drizzt@gentoo.org> upx-ucl-3.03.ebuild:
   Add ~x86-fbsd keyword to upx-ucl (and deps)
