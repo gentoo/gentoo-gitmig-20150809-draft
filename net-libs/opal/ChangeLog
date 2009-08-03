@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.47 2009/07/13 20:23:49 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.48 2009/08/03 21:33:00 maekke Exp $
+
+  03 Aug 2009; Markus Meier <maekke@gentoo.org> opal-3.6.2.ebuild:
+  add ~amd64, bug #276355
 
   13 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> opal-3.6.2.ebuild:
   Force --enable-statistics if fax USE flag is enabled. Fix bug 277233

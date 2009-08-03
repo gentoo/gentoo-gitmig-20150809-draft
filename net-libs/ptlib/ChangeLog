@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.6 2009/07/15 09:48:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.7 2009/08/03 21:31:01 maekke Exp $
+
+  03 Aug 2009; Markus Meier <maekke@gentoo.org> ptlib-2.6.2.ebuild:
+  add ~amd64, bug #276355
 
   15 Jul 2009; Mounir Lamouri <volkmar@gentoo.org> ptlib-2.6.2.ebuild:
   Disabling avc plugin. Fix bug 276514

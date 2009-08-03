@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.6 2009/07/15 09:48:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.7 2009/08/03 21:31:01 maekke Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="~alpha ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 # default enabled are features from 'minsize', the most used according to ptlib
 IUSE="alsa +asn +audio config-file debug dns doc dtmf esd examples ffmpeg ftp
 +http http-forms http-server ieee1394 ipv6 jabber ldap mail pipechan odbc oss
