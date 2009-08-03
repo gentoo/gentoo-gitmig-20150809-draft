@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-1.1.ebuild,v 1.1 2009/08/03 16:15:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-1.1.ebuild,v 1.2 2009/08/03 16:17:44 jer Exp $
 
 EAPI="2"
 
 inherit eutils toolchain-funcs
 
-DESCRIPTION="Enhanced mt command for Linux, supporting Linux 2.4 ioctls"
-HOMEPAGE="http://www.gnu.org/software/tar/"
+DESCRIPTION="control magnetic tape drive operation"
+HOMEPAGE="http://www.ibiblio.org/pub/linux/system/backup/"
 SRC_URI="http://www.ibiblio.org/pub/linux/system/backup/${P}.tar.gz"
 
 LICENSE="GPL-2"
