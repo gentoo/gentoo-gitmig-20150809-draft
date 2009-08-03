@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.4 2009/08/02 19:28:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-9999.ebuild,v 1.5 2009/08/03 05:10:34 arfrever Exp $
 
 EAPI="2"
 
@@ -17,17 +17,17 @@ IUSE="doc examples mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
 	sqlite? ( || (
-		>=dev-lang/python-2.5[sqlite] )
+		>=dev-lang/python-2.5[sqlite]
 		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
-	)
+	) )
 	postgres? ( dev-python/psycopg )
 	mysql? ( >=dev-python/mysql-python-1.2.1_p2 )"
 DEPEND="${RDEPEND}
 	doc? ( >=dev-python/sphinx-0.3 )
 	test? ( || (
-		>=dev-lang/python-2.5[sqlite] )
+		>=dev-lang/python-2.5[sqlite]
 		( dev-python/pysqlite:2 <dev-lang/python-2.5 )
-	)"
+	) )"
 
 S="${WORKDIR}"
 
