@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.8.ebuild,v 1.4 2009/08/02 15:23:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libchipcard/libchipcard-4.2.8.ebuild,v 1.5 2009/08/03 12:31:14 hanno Exp $
 
 EAPI="2"
 
@@ -10,6 +10,7 @@ SRC_URI="http://www2.aquamaniac.de/sites/download/download.php?package=02&releas
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="amd64 hppa ~ppc ~ppc64 ~sparc x86"
+IUSE="doc"
 
 DEPEND=">=sys-libs/gwenhywfar-3.8.1
 	dev-libs/libgcrypt
