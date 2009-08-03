@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.4.1-r1.ebuild,v 1.2 2009/02/28 13:30:25 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pslib/pslib-0.4.1-r1.ebuild,v 1.3 2009/08/03 10:27:06 aballier Exp $
 
 inherit autotools eutils
 
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}/${PN}-lm.patch"
+	epatch "${FILESDIR}/${PN}-getline.patch"
 	eautoreconf
 }
 
