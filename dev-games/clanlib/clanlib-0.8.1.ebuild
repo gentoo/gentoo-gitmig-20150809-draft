@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.4 2008/08/26 20:53:25 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.8.1.ebuild,v 1.5 2009/08/04 21:24:39 mr_bones_ Exp $
 
+EAPI=2
 inherit flag-o-matic eutils
 
 DESCRIPTION="multi-platform game development library"
@@ -34,15 +35,14 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/ClanLib-${PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-ndebug.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+		"${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
-src_compile() {
+src_configure() {
 	#clanSound only controls mikmod/vorbis so there's
 	# no need to pass --{en,dis}able-clanSound ...
 	#clanDisplay only controls X, SDL, OpenGL plugins
@@ -58,9 +58,7 @@ src_compile() {
 		$(use_enable sdl clanSDL) \
 		$(use_enable vorbis clanVorbis) \
 		$(use_enable mikmod clanMikMod) \
-		$(use_enable ipv6 getaddr) \
-		|| die
-	emake || die "emake failed"
+		$(use_enable ipv6 getaddr)
 }
 
 src_install() {

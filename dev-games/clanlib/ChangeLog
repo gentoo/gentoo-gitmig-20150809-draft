@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/clanlib
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.44 2008/08/26 20:53:25 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.45 2009/08/04 21:24:39 mr_bones_ Exp $
+
+  04 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> clanlib-0.8.1.ebuild,
+  +files/clanlib-0.8.1-gcc44.patch:
+  EAPI=2; add gcc44 patch submitted by Fredric Johansson via bug #275791
 
   26 Aug 2008; Tristan Heaven <nyhm@gentoo.org> clanlib-0.8.1.ebuild:
   Add missing media-libs/alsa-lib dependency, bug #227509
