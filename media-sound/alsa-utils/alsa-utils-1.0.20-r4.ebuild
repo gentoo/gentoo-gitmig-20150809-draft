@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.20-r3.ebuild,v 1.1 2009/08/02 11:27:28 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-1.0.20-r4.ebuild,v 1.1 2009/08/04 09:40:23 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
-MY_P="${P/_rc/rc}"
+MY_P=${P/_rc/rc}
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -39,15 +40,16 @@ pkg_setup() {
 	fi
 }
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-modprobe.d.patch
+}
+
+src_configure() {
 	local myconf=""
 	use doc || myconf="--disable-xmlto"
 
 	econf ${myconf} \
-		$(use_enable nls) \
-		|| die "configure failed"
-
-	emake || die "make failed"
+		$(use_enable nls)
 }
 
 src_install() {
