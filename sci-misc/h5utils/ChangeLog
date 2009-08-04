@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/h5utils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.10 2008/08/06 18:25:30 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/h5utils/ChangeLog,v 1.11 2009/08/04 05:53:45 spock Exp $
+
+*h5utils-1.12.1 (04 Aug 2009)
+
+  04 Aug 2009; Michał Januszewski <spock@gentoo.org>
+  +h5utils-1.12.1.ebuild:
+  Version bump.
 
   06 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
