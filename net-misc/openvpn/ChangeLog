@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.154 2009/08/01 15:04:41 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.155 2009/08/04 20:44:17 fauli Exp $
+
+  04 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  openvpn-2.1_rc15.ebuild:
+  stable x86, bug 280072
 
 *openvpn-2.1_rc19 (01 Aug 2009)
 
