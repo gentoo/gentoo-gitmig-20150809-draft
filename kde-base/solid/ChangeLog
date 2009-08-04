@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.34 2009/08/04 04:47:07 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.35 2009/08/04 17:33:41 wired Exp $
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added wicd use desc
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)
