@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kwrited
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.15 2009/06/14 11:43:06 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwrited/ChangeLog,v 1.16 2009/08/04 01:17:19 wired Exp $
+
+*kwrited-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +kwrited-4.3.0.ebuild:
+  Version bump
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwrited-4.2.3.ebuild:
   Drop KDE 4.2.3

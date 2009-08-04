@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kblocks
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kblocks/ChangeLog,v 1.19 2009/06/14 10:28:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kblocks/ChangeLog,v 1.20 2009/08/03 23:56:52 wired Exp $
+
+*kblocks-4.3.0 (03 Aug 2009)
+
+  03 Aug 2009; Alex Alexander <wired@gentoo.org> +kblocks-4.3.0.ebuild:
+  Version bump
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org> -kblocks-4.2.3.ebuild:
   Drop KDE 4.2.3

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/ksystraycmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.107 2009/07/24 15:33:55 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksystraycmd/ChangeLog,v 1.108 2009/08/04 01:08:11 wired Exp $
+
+*ksystraycmd-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +ksystraycmd-4.3.0.ebuild:
+  Version bump
 
   24 Jul 2009; Joseph Jezak <josejx@gentoo.org>
   ksystraycmd-3.5.10-r1.ebuild:

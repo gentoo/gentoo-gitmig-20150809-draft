@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kbounce
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.119 2009/07/12 11:44:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbounce/ChangeLog,v 1.120 2009/08/03 23:57:16 wired Exp $
+
+*kbounce-4.3.0 (03 Aug 2009)
+
+  03 Aug 2009; Alex Alexander <wired@gentoo.org> +kbounce-4.3.0.ebuild:
+  Version bump
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org> kbounce-3.5.10.ebuild:
   alpha/ia64/sparc stable wrt #271889

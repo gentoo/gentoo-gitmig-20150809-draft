@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/khotkeys
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.124 2009/07/12 09:40:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/khotkeys/ChangeLog,v 1.125 2009/08/04 00:35:15 wired Exp $
+
+*khotkeys-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +khotkeys-4.3.0.ebuild:
+  Version bump
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org> khotkeys-3.5.10.ebuild:
   alpha/ia64/sparc stable wrt #271889

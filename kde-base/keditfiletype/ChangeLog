@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/keditfiletype
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.1 2009/08/04 00:29:01 wired Exp $
+
+*keditfiletype-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org>
+  +keditfiletype-4.3.0.ebuild:
+  Version bump
+

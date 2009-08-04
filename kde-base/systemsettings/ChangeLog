@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.38 2009/07/19 22:52:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.39 2009/08/04 01:38:28 wired Exp $
+
+*systemsettings-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org>
+  +systemsettings-4.3.0.ebuild:
+  Version bump
 
   19 Jul 2009; Alex Alexander <wired@gentoo.org>
   +files/10_xklavier_adaptor_fix.patch, systemsettings-4.2.4.ebuild:

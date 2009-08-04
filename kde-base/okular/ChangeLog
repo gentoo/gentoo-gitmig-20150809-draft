@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.37 2009/06/14 13:29:58 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.38 2009/08/04 01:28:52 wired Exp $
+
+*okular-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +okular-4.3.0.ebuild:
+  Version bump
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -files/kdegraphics-4.0.2-system-libspectre.patch:

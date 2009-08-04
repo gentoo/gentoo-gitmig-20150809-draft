@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.132 2009/07/12 13:45:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-meta/ChangeLog,v 1.133 2009/08/04 00:11:42 wired Exp $
+
+*kdebase-meta-4.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +kdebase-meta-4.3.0.ebuild:
+  Version bump
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org> kdebase-meta-3.5.10.ebuild:
   alpha/ia64/sparc stable wrt #271889
