@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.3.0.ebuild,v 1.1 2009/08/04 01:29:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/oxygen-icons/oxygen-icons-4.3.0.ebuild,v 1.2 2009/08/04 13:45:44 wired Exp $
 
 EAPI="2"
 
@@ -23,14 +23,14 @@ IUSE=""
 # Block conflicting packages
 RDEPEND="
 	!kdeprefix? (
-		!<=kde-base/step-4.2.95[-kdeprefix]
-		!<=kde-base/kdepim-icons-4.2.89[-kdeprefix]
 		!<kde-base/kdebase-data-4.2.67:4.2[-kdeprefix]
 		!<kde-base/kdebase-data-4.2.67:4.3[-kdeprefix]
+		!<=kde-base/kdepim-icons-4.2.89[-kdeprefix]
+		!<=kde-base/step-4.2.98[-kdeprefix]
 	)
 	kdeprefix? (
 		!<kde-base/kdebase-data-4.2.67:${SLOT}[kdeprefix]
 		!<=kde-base/kdepim-icons-4.2.89:${SLOT}[kdeprefix]
-		!<=kde-base/step-4.2.95:${SLOT}[kdeprefix]
+		!<=kde-base/step-4.2.98:${SLOT}[kdeprefix]
 	)
 "
