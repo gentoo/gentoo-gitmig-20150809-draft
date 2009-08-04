@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.58 2009/08/03 22:28:01 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.59 2009/08/04 21:01:25 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -22,7 +22,7 @@ else
 fi
 
 if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-	DEPEND="${DEPEND} >=app-admin/eselect-python-20090801"
+	DEPEND="${DEPEND} >=app-admin/eselect-python-20090804"
 fi
 
 __python_eclass_test() {
@@ -112,9 +112,9 @@ get_python() {
 # @DESCRIPTION:
 # Make sure PYTHON_ABIS variable has valid value.
 validate_PYTHON_ABIS() {
-	# Ensure that /usr/bin/python and /usr/bin/python-config are scripts.
-	if [[ "$(</usr/bin/python)" != *"Gentoo Python wrapper script"* ]]; then
-		die "/usr/bin/python isn't valid script"
+	# Ensure that /usr/bin/python and /usr/bin/python-config are valid.
+	if [[ "$(</usr/bin/python)" != *"Gentoo Python wrapper program"* ]]; then
+		die "/usr/bin/python isn't valid program"
 	fi
 	if [[ "$(</usr/bin/python-config)" != *"Gentoo python-config wrapper script"* ]]; then
 		die "/usr/bin/python-config isn't valid script"
