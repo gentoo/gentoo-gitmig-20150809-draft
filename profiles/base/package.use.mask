@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.83 2009/08/03 17:09:09 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.84 2009/08/04 10:27:48 ssuominen Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -133,7 +133,7 @@ media-sound/lmms vst
 # CPU opts: This needs amd64, x86 and ppc on some of them
 # dvdnav: hard masked dependency
 # vdpau: availble on x86, amd64 only
-media-video/mplayer cpudetection custom-cpuopts bindist vdpau nut
+media-video/mplayer cpudetection custom-cpuopts bindist vdpau
 
 # Steve Dibb <beandog@gentoo.org> (26 Feb 2009)
 # Unmask internal real player codec support on newer mplayer
