@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.28 2009/06/02 18:45:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.29 2009/08/04 14:37:59 jer Exp $
+
+  04 Aug 2009; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=wicd (bug #280312).
 
   02 Jun 2009; Jeroen Roovers <jer@gentoo.org> +package.unmask:
   Unmask sys-devel/gcc-4.4 for HPPA (bug #225917).
