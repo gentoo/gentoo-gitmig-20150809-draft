@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/mirrorselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.73 2009/08/03 18:14:49 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/mirrorselect/ChangeLog,v 1.74 2009/08/04 02:27:43 arfrever Exp $
+
+  04 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  mirrorselect-2.0.0.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *mirrorselect-2.0.0 (03 Aug 2009)
 
