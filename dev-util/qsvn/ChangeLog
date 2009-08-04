@@ -1,0 +1,13 @@
+# ChangeLog for dev-util/qsvn
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qsvn/ChangeLog,v 1.1 2009/08/04 12:50:54 hwoarang Exp $
+
+*qsvn-0.8.3 (04 Aug 2009)
+
+  04 Aug 2009; Markos Chandras <hwoarang@gentoo.org> +qsvn-0.8.3.ebuild,
+  +metadata.xml:
+  Initial commit of qsvn application. Fixes bug 135792. Thanks to Georges
+  Toth
+  <sim0n@trypill.org>, Thomas Beinicke <merlin@liao.homelinux.org>, Vladimir
+  <vovan888@gmail.com> for the initial ebuilds
+
