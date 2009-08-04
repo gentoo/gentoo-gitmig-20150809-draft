@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext3grep/ext3grep-0.10.1.ebuild,v 1.1 2009/08/03 22:31:37 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ext3grep/ext3grep-0.10.1.ebuild,v 1.2 2009/08/04 16:24:25 mr_bones_ Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ src_compile() {
 
 	emake || die "emake failed"
 }
-
 
 src_install() {
 	emake DESTDIR="${D}" install || die
