@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0-r1.ebuild,v 1.3 2009/08/02 00:45:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dbus-python/dbus-python-0.83.0-r1.ebuild,v 1.4 2009/08/04 02:34:49 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit python multilib
+inherit multilib python
 
 DESCRIPTION="Python bindings for the D-Bus messagebus."
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/DBusBindings \
@@ -37,26 +37,20 @@ src_prepare() {
 }
 
 src_configure() {
-	configure_package() {
+	configuration() {
 		econf --docdir=/usr/share/doc/dbus-python-${PV}
 	}
-	python_execute_function -s configure_package
+	python_execute_function -s configuration
 }
 
 src_compile() {
-	build_package() {
-		emake
-	}
-	python_execute_function -s build_package
+	python_execute_function -d -s
 }
 
 src_install() {
 	python_need_rebuild
 
-	install_package() {
-		emake DESTDIR="${D}" install
-	}
-	python_execute_function -s install_package
+	python_execute_function -d -s
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}/

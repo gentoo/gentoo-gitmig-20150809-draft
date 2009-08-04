@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.4 2009/08/02 05:32:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.5 2009/08/04 02:41:34 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -33,7 +33,7 @@ src_prepare() {
 }
 
 src_configure() {
-	configure_package() {
+	configuration() {
 		local myconf="$(get_python) configure.py
 				--destdir=$(python_get_sitedir)/PyQt$(use qt4 && echo 4)
 				-n /usr/include
@@ -43,21 +43,18 @@ src_configure() {
 		echo ${myconf}
 		${myconf}
 	}
-	python_execute_function -s configure_package
+	python_execute_function -s configuration
 }
 
 src_compile() {
-	build_package() {
+	building() {
 		emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" LINK="$(tc-getCXX)"
 	}
-	python_execute_function -s build_package
+	python_execute_function -s building
 }
 
 src_install() {
 	python_need_rebuild
 
-	install_package() {
-		emake DESTDIR="${D}" install
-	}
-	python_execute_function -s install_package
+	python_execute_function -d -s
 }

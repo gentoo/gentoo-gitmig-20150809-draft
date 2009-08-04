@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.4 2009/08/02 17:44:36 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.5 2009/08/04 02:38:20 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -59,18 +59,18 @@ src_prepare() {
 
 	python_copy_sources
 
-	prepare_package() {
+	preparation() {
 		if [[ "${PYTHON_ABI:0:1}" == "3" ]]; then
 			rm -fr pyuic/uic/port_v2
 		else
 			rm -fr pyuic/uic/port_v3
 		fi
 	}
-	python_execute_function -s prepare_package
+	python_execute_function -s preparation
 }
 
 src_configure() {
-	configure_package() {
+	configuration() {
 		local myconf="$(get_python) configure.py
 				--confirm-license
 				--bindir=/usr/bin
@@ -100,25 +100,22 @@ src_configure() {
 			sed -i -e "/^LFLAGS/s:-Wl,-rpath,${S}-${PYTHON_ABI}/qpy/${pkg}::" ${pkg}/Makefile || die "failed to fix rpath issues"
 		done
 	}
-	python_execute_function -s configure_package
+	python_execute_function -s configuration
 }
 
 src_compile() {
-	build_package() {
-		emake
-	}
-	python_execute_function -s build_package
+	python_execute_function -d -s
 }
 
 src_install() {
 	python_need_rebuild
 
-	install_package() {
+	installation() {
 		# INSTALL_ROOT is needed for the QtDesigner module,
 		# the other Makefiles use DESTDIR.
 		emake DESTDIR="${D}" INSTALL_ROOT="${D}" install
 	}
-	python_execute_function -s install_package
+	python_execute_function -s installation
 
 	dodoc ChangeLog NEWS THANKS || die
 
