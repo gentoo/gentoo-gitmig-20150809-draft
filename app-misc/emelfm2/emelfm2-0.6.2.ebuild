@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.6.2.ebuild,v 1.1 2009/07/21 08:55:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/emelfm2/emelfm2-0.6.2.ebuild,v 1.2 2009/08/04 08:00:17 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -24,6 +24,8 @@ RDEPEND=">=x11-libs/gtk+-2.12:2
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
+
+RESTRICT="test"
 
 pkg_setup() {
 	myconf="DOCS_VERSION=1 WITH_TRANSPARENCY=1 USE_LATEST=1 STRIP=0"
