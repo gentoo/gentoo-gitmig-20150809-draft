@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.2.0.ebuild,v 1.1 2009/08/04 05:25:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.2.0.ebuild,v 1.2 2009/08/04 12:20:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://pim.kde.org/akonadi"
 SRC_URI="http://download.akonadi-project.org/${P/-server/}.tar.bz2"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 SLOT="0"
 IUSE="+mysql sqlite"
 
