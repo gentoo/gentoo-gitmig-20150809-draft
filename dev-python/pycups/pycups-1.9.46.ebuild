@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.1 2009/08/04 11:51:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycups/pycups-1.9.46.ebuild,v 1.2 2009/08/04 18:46:41 arfrever Exp $
+
+EAPI="2"
 
 NEED_PYTHON="2.4"
+SUPPORT_PYTHON_ABIS="1"
+
 inherit distutils flag-o-matic
 
 DESCRIPTION="Python bindings for the CUPS API"
@@ -20,6 +24,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	doc? ( dev-python/epydoc )
 "
+
+RESTRICT_PYTHON_ABIS="3*"
 
 src_compile() {
 	append-cflags -DVERSION=\\\"${PV}\\\"
