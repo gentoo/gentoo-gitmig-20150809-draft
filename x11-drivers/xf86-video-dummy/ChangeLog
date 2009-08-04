@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-dummy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.42 2009/06/23 19:56:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-dummy/ChangeLog,v 1.43 2009/08/04 08:56:19 remi Exp $
+
+*xf86-video-dummy-0.3.2 (04 Aug 2009)
+
+  04 Aug 2009; Rémi Cardona <remi@gentoo.org>
+  +xf86-video-dummy-0.3.2.ebuild:
+  bump to 0.3.2
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xf86-video-dummy-0.3.1.ebuild:
