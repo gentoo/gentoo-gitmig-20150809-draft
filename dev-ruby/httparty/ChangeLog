@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/httparty
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.5 2009/05/21 19:36:57 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/httparty/ChangeLog,v 1.6 2009/08/04 05:58:47 graaff Exp $
+
+*httparty-0.4.4 (04 Aug 2009)
+
+  04 Aug 2009; Hans de Graaff <graaff@gentoo.org> +httparty-0.4.4.ebuild:
+  Version bump with minor updates.
 
   21 May 2009; Brent Baude <ranger@gentoo.org> httparty-0.4.3.ebuild:
   keyworded ~arch for ppc, bug 270038
