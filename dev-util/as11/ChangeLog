@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/as11
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/ChangeLog,v 1.6 2007/05/15 09:10:31 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/ChangeLog,v 1.7 2009/08/04 21:39:45 vostorga Exp $
+
+  04 Aug 2009; <vostorga@gentoo.org> as11-1.0.ebuild:
+  Respecting CC variable, bug #243968
 
   14 May 2007; Thilo Bangert <bangert@gentoo.org> metadata.xml:
   add <herd>no-herd</herd>
