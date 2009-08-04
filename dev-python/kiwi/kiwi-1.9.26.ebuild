@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.21.ebuild,v 1.1 2008/03/28 06:58:26 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.26.ebuild,v 1.1 2009/08/04 03:30:06 arfrever Exp $
 
-NEED_PYTHON=2.3
+NEED_PYTHON="2.3"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils versionator
 
@@ -16,6 +17,9 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="examples"
 
 DEPEND="dev-python/pygtk"
+RDEPEND="${DEPEND}"
+
+RESTRICT_PYTHON_ABIS="3*"
 
 src_unpack() {
 	unpack ${A}
