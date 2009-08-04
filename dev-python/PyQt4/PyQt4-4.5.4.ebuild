@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.5 2009/08/04 02:38:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.6 2009/08/04 07:32:16 hwoarang Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -120,7 +120,7 @@ src_install() {
 	dodoc ChangeLog NEWS THANKS || die
 
 	if use doc; then
-		dohtml -r doc/html/* || die
+		dohtml -r doc/* || die
 	fi
 
 	if use examples; then
