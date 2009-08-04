@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/blinken
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.98 2009/08/03 23:41:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blinken/ChangeLog,v 1.99 2009/08/04 04:27:34 wired Exp $
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
+  manifest update (upstream tarball changed)
 
   03 Aug 2009; Alex Alexander <wired@gentoo.org> blinken-4.3.0.ebuild:
   4.3 keywords update

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.1 2009/08/04 01:31:13 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.2 2009/08/04 04:45:42 wired Exp $
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
+  manifest update (upstream tarball changed)
 
 *plasma-runtime-4.3.0 (04 Aug 2009)
 

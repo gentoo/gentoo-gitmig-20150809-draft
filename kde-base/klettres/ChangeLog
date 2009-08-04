@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klettres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.123 2009/08/04 00:40:04 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klettres/ChangeLog,v 1.124 2009/08/04 04:35:58 wired Exp $
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
+  manifest update (upstream tarball changed)
 
 *klettres-4.3.0 (04 Aug 2009)
 

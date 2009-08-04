@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kiten
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.120 2009/08/04 00:38:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiten/ChangeLog,v 1.121 2009/08/04 04:35:44 wired Exp $
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
+  manifest update (upstream tarball changed)
 
 *kiten-4.3.0 (04 Aug 2009)
 
