@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/x11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.13 2009/07/28 18:47:34 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/x11/ChangeLog,v 1.14 2009/08/04 05:38:39 maekke Exp $
+
+  04 Aug 2009; Markus Meier <maekke@gentoo.org> x11-1.4.2.ebuild:
+  x86 stable, bug #278543
 
 *x11-1.4.5 (28 Jul 2009)
 
