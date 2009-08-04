@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/amb-plugins/amb-plugins-0.3.0.ebuild,v 1.2 2008/08/13 11:19:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/amb-plugins/amb-plugins-0.4.0.ebuild,v 1.1 2009/08/04 07:53:35 aballier Exp $
 
-inherit multilib toolchain-funcs
+inherit multilib toolchain-funcs eutils
 
 MY_P=${P/amb/AMB}
 
@@ -15,13 +15,18 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="media-libs/ladspa-sdk"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${PN}-makefile.patch"
+}
+
 src_compile() {
 	tc-export CXX
-	sed -i -e "s/-O3//" Makefile
-	sed -i -e "s/g++/$(tc-getCXX)/" Makefile
 	emake || die
 }
 
