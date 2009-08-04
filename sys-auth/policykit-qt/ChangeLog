@@ -1,0 +1,10 @@
+# ChangeLog for sys-auth/policykit-qt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit-qt/ChangeLog,v 1.1 2009/08/04 11:14:00 wired Exp $
+
+*policykit-qt-0.9.2 (04 Aug 2009)
+
+  04 Aug 2009; Alex Alexander <wired@gentoo.org> +policykit-qt-0.9.2.ebuild,
+  +metadata.xml:
+  new ebuild for policykit-qt (from kde-testing overlay)
+
