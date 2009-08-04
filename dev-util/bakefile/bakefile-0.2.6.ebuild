@@ -14,7 +14,7 @@ LICENSE="MIT"
 
 RDEPEND=""
 DEPEND=""
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc"
 
