@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.ebuild,v 1.1 2009/08/01 21:47:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.ebuild,v 1.2 2009/08/04 05:46:03 arfrever Exp $
 
 EAPI="2"
 
@@ -72,6 +72,9 @@ src_prepare() {
 	# Fix OtherFileTests.testStdin() not to assume
 	# that stdin is a tty for bug #248081.
 	sed -e "s:'osf1V5':'osf1V5' and sys.stdin.isatty():" -i Lib/test/test_file.py || die "sed failed"
+
+	# Ignore non-UTF-8 characters (bug #280001)
+	sed -e "s/f = open(f)\.read()/f = open(f, errors='replace').read()/" -i setup.py || die "sed failed"
 
 	eautoreconf
 }
