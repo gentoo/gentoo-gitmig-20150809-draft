@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.621 2009/08/04 00:05:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.622 2009/08/04 00:42:06 zmedico Exp $
+
+*portage-2.2_rc35 (04 Aug 2009)
+
+  04 Aug 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc35.ebuild:
+  2.2_rc35 bump. Fixes previously mentioned regression in 2.2_rc34.
 
   03 Aug 2009; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc34.ebuild:
   Punt due to NameError exception produced by emerge during
