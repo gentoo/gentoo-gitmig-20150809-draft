@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.1 2009/08/04 20:53:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.2 2009/08/04 21:41:00 arfrever Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND=">=app-admin/eselect-1.0.2"
 RDEPEND="${DEPEND}"
 
 src_compile() {
-	$(tc-getCC) ${CFLAGS} ${LDFLAGS} -o python-wrapper python.c || die "Building of python wrapper failed"
+	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python.c || die "Building of python wrapper failed"
 }
 
 src_install() {
