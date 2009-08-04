@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.64-r2.ebuild,v 1.6 2009/05/26 06:05:25 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.70.ebuild,v 1.1 2009/08/04 21:59:54 tgurr Exp $
 
 inherit autotools eutils versionator flag-o-matic
 
@@ -8,17 +8,15 @@ DESCRIPTION="GPL Ghostscript - the most current Ghostscript, AFPL, relicensed."
 HOMEPAGE="http://ghostscript.com/"
 
 MY_P=${P/-gpl}
-GSDJVU_PV=1.3
+GSDJVU_PV=1.4
 PVM=$(get_version_component_range 1-2)
-SRC_URI="cjk? ( ftp://ftp.gyve.org/pub/gs-cjk/adobe-cmaps-200406.tar.gz
-		ftp://ftp.gyve.org/pub/gs-cjk/acro5-cmaps-2001.tar.gz )
-	!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
+SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-3.tar.bz2"
+	mirror://gentoo/${P}-patchset-1.tar.bz2"
 
-LICENSE="GPL-2 CPL-1.0"
+LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 IUSE="bindist cairo cjk cups djvu gtk jpeg2k X"
 
 COMMON_DEPEND="app-text/libpaper
@@ -39,24 +37,21 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 
 RDEPEND="${COMMON_DEPEND}
-	cjk? ( media-fonts/arphicfonts
-		media-fonts/kochi-substitute
-		media-fonts/baekmuk-fonts )
+	linguas_ja? ( media-fonts/kochi-substitute )
+	linguas_ko? ( media-fonts/baekmuk-fonts )
+	linguas_zh_CN? ( media-fonts/arphicfonts )
+	linguas_zh_TW? ( media-fonts/arphicfonts )
 	media-fonts/gnu-gs-fonts-std"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A/adobe-cmaps-200406.tar.gz acro5-cmaps-2001.tar.gz}
-	if use cjk ; then
-		cat "${WORKDIR}/patches/ghostscript-esp-8.15.2-cidfmap.cjk" >> "${S}/lib/cidfmap"
-		cat "${WORKDIR}/patches/ghostscript-esp-8.15.2-FAPIcidfmap.cjk" >> "${S}/lib/FAPIcidfmap"
-		cd "${S}/Resource"
-		unpack adobe-cmaps-200406.tar.gz
-		unpack acro5-cmaps-2001.tar.gz
-		cd "${WORKDIR}"
-	fi
+LANGS="ja ko zh_CN zh_TW"
+for X in ${LANGS} ; do
+	IUSE="${IUSE} linguas_${X}"
+done
 
+src_unpack() {
+	unpack ${A}
 	cd "${S}"
 
 	# remove internal copies of expat, jasper, jpeg, libpng and zlib
@@ -70,19 +65,14 @@ src_unpack() {
 
 	# Fedora patches
 	# http://cvs.fedora.redhat.com/viewcvs/devel/ghostscript/
-	epatch "${WORKDIR}/patches/${PN}-8.64-fPIC.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.61-multilib.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.64-noopt.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.64-scripts.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.64-noopt.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.64-fPIC.patch"
+	epatch "${WORKDIR}/patches/${PN}-8.70-runlibfileifexists.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.64-system-jasper.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.64-pksmraw.patch"
-
-	# Fixes which are already applied in ghostscript trunk
-	epatch "${WORKDIR}/patches/${PN}-8.64-bitcmyk-regression-r9452.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.64-respect-ldflags-r9461.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.64-respect-ldflags-r9476.patch"
-	epatch "${WORKDIR}/patches/${PN}-8.64-respect-gsc-ldflags.patch" #209803
-	epatch "${WORKDIR}/patches/${PN}-8.64-CVE-2009-0583.patch" #261087
+	epatch "${WORKDIR}/patches/${PN}-8.70-jbig2dec-nullderef.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
@@ -166,4 +156,17 @@ src_install() {
 
 	cd "${S}/ijs"
 	emake DESTDIR="${D}" install || die "emake ijs install failed"
+
+	# Rename an original cidfmap to cidfmap.GS
+	mv "${D}/usr/share/ghostscript/${PVM}/Resource/Init/cidfmap"{,.GS}
+
+	# Install our own cidfmap to allow the separated cidfmap
+	insinto "/usr/share/ghostscript/${PVM}/Resource/Init"
+	doins "${WORKDIR}/fontmaps/CIDFnmap" || die "doins CIDFnmap failed"
+	doins "${WORKDIR}/fontmaps/cidfmap" || die "doins cidfmap failed"
+	for X in ${LANGS} ; do
+		if use linguas_${X} ; then
+			doins "${WORKDIR}/fontmaps/cidfmap.${X}" || die "doins cidfmap.${X} failed"
+		fi
+	done
 }
