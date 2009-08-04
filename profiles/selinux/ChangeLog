@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.1 2009/08/03 23:37:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.2 2009/08/04 17:56:02 pebenito Exp $
+
+  04 Aug 2009; Chris PeBenito <pebenito@gentoo.org> +package.unmask:
+  Add workaround for masking of packages in default/linux profile.
 
   03 Aug 2009; Chris PeBenito <pebenito@gentoo.org> 2007.0/packages:
   Drop selinux-base-policy required versioning as its not needed.
