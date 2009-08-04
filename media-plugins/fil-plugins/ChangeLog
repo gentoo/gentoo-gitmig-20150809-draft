@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/fil-plugins
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.10 2007/11/19 09:53:36 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/fil-plugins/ChangeLog,v 1.11 2009/08/04 08:01:12 aballier Exp $
+
+*fil-plugins-0.3.0 (04 Aug 2009)
+
+  04 Aug 2009; Alexis Ballier <aballier@gentoo.org>
+  +fil-plugins-0.3.0.ebuild, +files/fil-plugins-makefile.patch:
+  version bump
 
   19 Nov 2007; Samuli Suominen <drac@gentoo.org> fil-plugins-0.1.0.ebuild:
   amd64 stable wrt #199573
