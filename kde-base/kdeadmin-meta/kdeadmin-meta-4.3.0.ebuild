@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/kdeadmin-meta-4.3.0.ebuild,v 1.1 2009/08/04 00:04:01 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/kdeadmin-meta-4.3.0.ebuild,v 1.2 2009/08/04 06:21:48 wired Exp $
 
 EAPI="2"
 
@@ -10,14 +10,13 @@ HOMEPAGE="http://www.kde.org/"
 LICENSE="GPL-2"
 SLOT="4.3"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
-IUSE="cups kdeprefix lilo"
+IUSE="kdeprefix lilo"
 
 RDEPEND="
 	>=kde-base/kcron-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/knetworkconf-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/ksystemlog-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/kuser-${PV}:${SLOT}[kdeprefix=]
-	cups? ( >=kde-base/system-config-printer-kde-${PV}:${SLOT}[kdeprefix=] )
 	lilo? ( >=kde-base/lilo-config-${PV}:${SLOT}[kdeprefix=] )
 "
 
