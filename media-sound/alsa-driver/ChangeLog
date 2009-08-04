@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.299 2009/06/02 17:31:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.300 2009/08/04 04:49:56 beandog Exp $
+
+  04 Aug 2009; Steve Dibb <beandog@gentoo.org> alsa-driver-1.0.20.ebuild,
+  alsa-driver-9999.ebuild:
+  Drop midi use flag
 
   02 Jun 2009; Steve Dibb <beandog@gentoo.org> alsa-driver-9999.ebuild:
   Update live ebuild to use git; Thanks to Alexey Charkov for ebuild, bug

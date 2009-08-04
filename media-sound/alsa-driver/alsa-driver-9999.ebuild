@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.10 2009/06/02 17:31:35 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.11 2009/08/04 04:49:56 beandog Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools git
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
 KEYWORDS=""
-IUSE="oss debug midi"
+IUSE="oss debug"
 
 IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
 loopback portman2x4 ad1848-lib adlib ad1816a ad1848
@@ -125,7 +125,7 @@ src_compile() {
 		--with-kernel="${KV_DIR}" \
 		--with-build="${KV_OUT_DIR}" \
 		--with-isapnp=yes \
-		$(use_with midi sequencer) \
+		--with-sequencer \
 		--with-cards="${ALSA_CARDS}" || die "econf failed"
 
 	# linux-mod_src_compile doesn't work well with alsa
