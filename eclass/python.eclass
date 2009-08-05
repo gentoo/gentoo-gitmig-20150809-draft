@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.59 2009/08/04 21:01:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.60 2009/08/05 18:31:30 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -66,12 +66,12 @@ python_version() {
 	__python_version_extract $PYVER_ALL
 }
 
-# @FUNCTION: get_python
+# @FUNCTION: PYTHON
 # @USAGE: [-a|--absolute-path] <Python_ABI="${PYTHON_ABI}">
 # @DESCRIPTION:
 # Get Python interpreter filename for specified Python ABI. If Python_ABI argument
 # is ommitted, then PYTHON_ABI environment variable must be set and is used.
-get_python() {
+PYTHON() {
 	local absolute_path="0" slot=
 
 	while (($#)); do
@@ -189,8 +189,8 @@ python_set_build_dir_symlink() {
 # @FUNCTION: python_execute_function
 # @USAGE: [--action-message message] [-d|--default-function] [--failure-message message] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] <function> [arguments]
 # @DESCRIPTION:
-# Execute specified function for each value of PYTHON_ABIS, optionally passing
-# additional arguments. The specified function can use PYTHON_ABI variable.
+# Execute specified function for each value of PYTHON_ABIS, optionally passing additional
+# arguments. The specified function can use PYTHON_ABI and BUILDDIR variables.
 python_execute_function() {
 	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function nonfatal="0" PYTHON_ABI quiet="0" separate_build_dirs="0"
 
@@ -304,9 +304,12 @@ python_execute_function() {
 			echo " ${GREEN}*${NORMAL} ${BLUE}${action_message}${NORMAL}"
 		fi
 		if [[ "${separate_build_dirs}" == "1" ]]; then
-			pushd "${S}-${PYTHON_ABI}" > /dev/null || die "pushd failed"
+			export BUILDDIR="${S}-${PYTHON_ABI}"
+			pushd "${BUILDDIR}" > /dev/null || die "pushd failed"
+		else
+			export BUILDDIR="${S}"
 		fi
-		if ! EPYTHON="$(get_python)" "${function}" "$@"; then
+		if ! EPYTHON="$(PYTHON)" "${function}" "$@"; then
 			if [[ -n "${failure_message_template}" ]]; then
 				failure_message="$(eval echo -n "${failure_message_template}")"
 			else
@@ -328,6 +331,7 @@ python_execute_function() {
 		if [[ "${separate_build_dirs}" == "1" ]]; then
 			popd > /dev/null || die "popd failed"
 		fi
+		unset BUILDDIR
 	done
 
 	if [[ "${default_function}" == "1" ]]; then
@@ -635,15 +639,15 @@ python_mod_optimize() {
 					for dir in "${site_packages_dirs[@]}"; do
 						site_packages_absolute_dirs+=("${root}/$(python_get_sitedir)/${dir}")
 					done
-					"$(get_python)" "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" || return_code="1"
-					"$(get_python)" -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}"  || return_code="1"
+					"$(PYTHON)" "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" || return_code="1"
+					"$(PYTHON)" -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}"  || return_code="1"
 				fi
 				if ((${#site_packages_files[@]})); then
 					for file in "${site_packages_files[@]}"; do
 						site_packages_absolute_files+=("${root}/$(python_get_sitedir)/${file}")
 					done
-					"$(get_python)" "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
-					"$(get_python)" -O "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
+					"$(PYTHON)" "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
+					"$(PYTHON)" -O "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
 				fi
 				eend "${return_code}"
 			fi
