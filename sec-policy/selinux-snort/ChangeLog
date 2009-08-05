@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snort/ChangeLog,v 1.19 2009/07/22 13:12:37 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-snort/ChangeLog,v 1.20 2009/08/05 13:35:11 pebenito Exp $
+
+*selinux-snort-2.20090730 (03 Aug 2009)
+
+  03 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-snort-2.20090730.ebuild:
+  New upstream release.
 
   18 Jul 2009; Chris PeBenito <pebenito@gentoo.org>
   selinux-snort-20070329.ebuild, selinux-snort-20070928.ebuild,
