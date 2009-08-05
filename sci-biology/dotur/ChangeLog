@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/dotur
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/ChangeLog,v 1.2 2009/08/02 20:42:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/dotur/ChangeLog,v 1.3 2009/08/05 21:10:14 maekke Exp $
+
+  05 Aug 2009; Markus Meier <maekke@gentoo.org> dotur-1.53.ebuild:
+  x86 stable, bug #279347
 
   02 Aug 2009; <chainsaw@gentoo.org> dotur-1.53.ebuild:
   Marked stable on AMD64 as requested by Andrey "weaver" Kislyuk
