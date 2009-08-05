@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4709 2009/08/05 10:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4710 2009/08/05 23:27:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -468,7 +468,6 @@ app-pda/multisync:irmc - Add support for Mobile Client synchronization via IrDa/
 app-pda/multisync:kdepim - Add support for KDEPIM sync
 app-pda/multisync:nokia6600 - Add support for Nokia 6600
 app-pda/synce:serial - Enable serial port support (installs app-pda/synce-serial)
-app-pda/synce:syncengine - Installs the app-pda/synce-sync-engine
 app-pda/synce-kde:avantgo - Add support for syncing Avantgo accounts
 app-portage/conf-update:colordiff - Use colors when displaying diffs (app-misc/colordiff)
 app-portage/eix:deprecated - Installs wrapper scripts for all the previous executable names that will soon be going away
