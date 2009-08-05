@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/xfce4-weather-0.7.3.ebuild,v 1.1 2009/08/04 18:13:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather/xfce4-weather-0.7.3.ebuild,v 1.2 2009/08/05 23:03:26 ssuominen Exp $
 
-MY_P="${PN}-plugin-${PV}"
+EINTLTOOLIZE="yes"
+EAUTORECONF="yes"
+
+MY_P=${PN}-plugin-${PV}
+
 inherit xfconf
 
 DESCRIPTION="panel plugin that shows the current temperature and weather condition."
@@ -14,12 +18,17 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="debug"
 
-RDEPEND=">=xfce-base/xfce4-panel-4.3.99.1"
+RDEPEND=">=xfce-base/xfce4-panel-4.3.99.1
+	>=xfce-base/libxfcegui4-4.3.90.2
+	>=xfce-base/libxfce4util-4.3.90.2
+	dev-libs/libxml2"
 DEPEND="${RDEPEND}
-	dev-libs/libxml2
+	dev-util/pkgconfig
+	dev-util/intltool
 	sys-devel/gettext"
 
-EINTLTOOLIZE="yes"
-EAUTORECONF="yes"
-
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+pkg_setup() {
+	XFCONF="--disable-dependency-tracking
+		$(use_enable debug)"
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
+}
