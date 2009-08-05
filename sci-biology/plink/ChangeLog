@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/plink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.3 2009/08/02 20:43:48 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/plink/ChangeLog,v 1.4 2009/08/05 21:16:10 maekke Exp $
+
+  05 Aug 2009; Markus Meier <maekke@gentoo.org> plink-1.06.ebuild:
+  x86 stable, bug #279345
 
   02 Aug 2009; <chainsaw@gentoo.org> plink-1.06.ebuild:
   Marked stable on AMD64 as requested by Andrey "weaver" Kislyuk
