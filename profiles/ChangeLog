@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3015 2009/08/05 10:09:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3016 2009/08/05 13:44:38 mescalinum Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Aug 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
+  removed old and broken versions of synce
 
   05 Aug 2009; Peter Volkov <pva@gentoo.org> package.mask:
   Unmasked pyxfce. It was easy to fix :)
