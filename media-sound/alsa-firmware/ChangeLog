@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-firmware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.89 2009/07/02 19:16:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-firmware/ChangeLog,v 1.90 2009/08/05 15:17:14 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> alsa-firmware-1.0.20.ebuild:
+  Early stable on AMD64 as requested by Samuli Suominen
+  <ssuominen@gentoo.org> in bug #280464. Tested with a Realtek ALC269 on a
+  Fujitsu-Siemens Lifebook S6420.
 
   02 Jul 2009; Markus Meier <maekke@gentoo.org> alsa-firmware-1.0.19.ebuild:
   amd64 stable, bug #272682
