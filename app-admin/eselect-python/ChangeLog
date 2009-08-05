@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.34 2009/08/04 20:53:43 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.35 2009/08/05 16:35:24 arfrever Exp $
+
+  05 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  eselect-python-20090804.ebuild:
+  Append -fno-PIC -fno-PIE to avoid problems with hardened compiler.
 
 *eselect-python-20090804 (04 Aug 2009)
 

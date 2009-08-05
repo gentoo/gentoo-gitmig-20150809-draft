@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.2 2009/08/04 21:41:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.3 2009/08/05 16:35:24 arfrever Exp $
 
-inherit toolchain-funcs
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="Manages multiple Python versions"
 HOMEPAGE="http://www.gentoo.org"
@@ -16,7 +16,12 @@ IUSE=""
 DEPEND=">=app-admin/eselect-1.0.2"
 RDEPEND="${DEPEND}"
 
+pkg_setup() {
+	append-flags -fno-PIC -fno-PIE
+}
+
 src_compile() {
+	echo $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python.c
 	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python.c || die "Building of python wrapper failed"
 }
 
