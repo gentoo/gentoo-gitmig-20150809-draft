@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.19.2.ebuild,v 1.1 2008/10/04 12:01:45 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/xfe-1.19.2.ebuild,v 1.2 2009/08/05 12:53:13 ssuominen Exp $
 
 EAPI=2
-
 inherit eutils
 
 DESCRIPTION="MS-Explorer-like minimalist file manager for X"
@@ -15,16 +14,22 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug nls +png"
 
-DEPEND="=x11-libs/fox-1.6*[truetype,png?]
+RDEPEND="=x11-libs/fox-1.6*[truetype,png?]"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
-src_compile() {
-	econf $(use_enable nls) $(use_enable debug)
-	emake || die "emake failed."
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
+
+src_configure() {
+	econf \
+		$(use_enable nls) \
+		$(use_enable debug)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS BUGS ChangeLog README TODO
 	make_desktop_entry xfe "X File Explorer" xfe "System;FileTools;FileManager"
 	make_desktop_entry xfi "X File Image" xfi "System;FileTools"

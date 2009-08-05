@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfe
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.49 2008/10/04 12:01:45 mabi Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfe/ChangeLog,v 1.50 2009/08/05 12:53:13 ssuominen Exp $
+
+  05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> xfe-1.19.2.ebuild,
+  +files/xfe-1.19.2-gcc44.patch:
+  Fix building with GCC 4.4+ and GLIBC 2.10+ wrt #278101.
 
 *xfe-1.19.2 (04 Oct 2008)
 
