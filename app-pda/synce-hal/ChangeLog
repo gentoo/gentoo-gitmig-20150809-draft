@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/ChangeLog,v 1.7 2009/05/10 15:04:18 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-hal/ChangeLog,v 1.8 2009/08/05 12:53:22 mescalinum Exp $
+
+  05 Aug 2009; Federico Ferri <mescalinum@gentoo.org> -synce-hal-0.1.ebuild,
+  -synce-hal-0.2.ebuild:
+  removed old versions
 
   10 May 2009; Federico Ferri <mescalinum@gentoo.org> synce-hal-0.13.ebuild:
   fix bug #233416

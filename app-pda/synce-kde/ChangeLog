@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-kde
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/ChangeLog,v 1.14 2008/08/03 13:04:39 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kde/ChangeLog,v 1.15 2009/08/05 12:56:15 mescalinum Exp $
+
+  05 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  -synce-kde-0.6.1.ebuild, -synce-kde-0.7.2.ebuild, -synce-kde-0.8.0.ebuild,
+  -synce-kde-0.9.ebuild:
+  removed old versions
 
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.

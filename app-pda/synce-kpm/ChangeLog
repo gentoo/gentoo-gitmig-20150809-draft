@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/synce-kpm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/ChangeLog,v 1.6 2009/07/17 07:11:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kpm/ChangeLog,v 1.7 2009/08/05 12:57:12 mescalinum Exp $
+
+  05 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  -synce-kpm-0.12.ebuild:
+  removed old versions
 
   17 Jul 2009; Markos Chandras <hwoarang@gentoo.org> synce-kpm-0.12.ebuild,
   synce-kpm-0.13.ebuild:
