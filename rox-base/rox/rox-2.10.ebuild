@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.8-r1.ebuild,v 1.6 2009/06/03 17:43:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox/rox-2.10.ebuild,v 1.1 2009/08/05 15:24:36 lack Exp $
 
-EAPI=1
+EAPI=2
 inherit eutils multilib
 
 MY_P="rox-filer-${PV}"
@@ -14,15 +14,15 @@ SRC_URI="mirror://sourceforge/rox/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
-IUSE="svg +video"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+IUSE="+svg +video"
 
 RDEPEND=">=x11-libs/gtk+-2.4
 	>=dev-libs/glib-2.2
 	>=dev-libs/libxml2-2.4.23
 	>=x11-misc/shared-mime-info-0.14
 	svg? ( gnome-base/librsvg )
-	>=rox-base/zeroinstall-injector-0.31-r1
+	>=rox-base/zeroinstall-injector-0.40
 	"
 
 PDEPEND="rox-base/mime-editor
@@ -39,22 +39,18 @@ WRAPPERNAME="rox"
 MIMEDIR="/usr/share/mime"
 MIMECONFDIR="/etc/xdg/rox.sourceforge.net"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-nostrip.patch
 }
 
 src_compile() {
-
 	cd ${APPNAME}
 
-	# Most rox self-compiles have a 'read' call to wait for the user to
-	# press return if the compile fails.
-	# Find and remove this:
-	sed -i.bak -e 's/\<read WAIT\>/#read/' AppRun
-
-	./AppRun --compile || die "make failed"
+	mkdir build
+	pushd build
+	../src/configure
+	emake
+	popd
 
 	# don't need these directories anymore
 	if [ -n "${KEEP_SRC}" ]; then
@@ -65,9 +61,6 @@ src_compile() {
 		rm -rf src
 	fi
 	rm -fr build
-
-	# Restore the original AppRun
-	mv AppRun.bak AppRun
 }
 
 # new streamlined install
@@ -142,7 +135,9 @@ EOF
 }
 
 pkg_postinst() {
-	update-mime-database ${MIMEDIR}
+	# Do not install rox.xml - It wrecks any app with a SVG-format .DirIcon
+	#update-mime-database ${MIMEDIR}
+
 	einfo "${APPNAME} has been installed in ${APPDIR}."
 	einfo "To run, you may type ${WRAPPERNAME} at a prompt (within a WM) or"
 	einfo "add it to an .xinit or other script during WM startup."
