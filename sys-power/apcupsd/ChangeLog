@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.51 2009/08/04 11:39:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.52 2009/08/05 16:24:32 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> apcupsd-3.14.6.ebuild:
+  Marked stable on AMD64 as requested by Diego E. "Flameeyes" Pettenò
+  <flameeyes@gentoo.org> in bug #280300. Compile-tested on a Core2 Duo, no
+  hardware available to test.
 
   04 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/3.12.4/apcupsd.in.patch, -files/3.12.4/apcupsd-snmp.patch,
