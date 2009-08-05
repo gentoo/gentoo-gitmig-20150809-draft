@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/dpic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/ChangeLog,v 1.2 2009/04/18 22:18:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/ChangeLog,v 1.3 2009/08/05 07:28:46 aballier Exp $
+
+*dpic-20090713 (05 Aug 2009)
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> +dpic-20090713.ebuild:
+  version bump, by Matthias Schwarzott <zzam@gentoo.org>, bug #280357
 
   18 Apr 2009; Matthias Schwarzott <zzam@gentoo.org> dpic-20080511.ebuild:
   Added ~x86 keyword.
