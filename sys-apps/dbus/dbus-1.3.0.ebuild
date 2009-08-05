@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.3.0.ebuild,v 1.1 2009/08/03 02:13:42 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.3.0.ebuild,v 1.2 2009/08/05 17:20:57 ssuominen Exp $
 
-inherit eutils multilib flag-o-matic
+inherit autotools eutils multilib flag-o-matic
 
 DESCRIPTION="A message bus system, a simple way for applications to talk to each other"
 HOMEPAGE="http://dbus.freedesktop.org/"
@@ -30,6 +30,8 @@ src_unpack() {
 	# Tests were restricted because of this
 	sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
 		-e '/"dispatch"/d' -i "${S}/bus/test-main.c"
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }
 
 src_compile() {
