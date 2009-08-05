@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.5 2009/06/04 13:31:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/gargoyle/gargoyle-20060917-r1.ebuild,v 1.6 2009/08/05 22:01:05 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils
 
 MY_PV="2006-09-17"
@@ -31,20 +32,23 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	#Fix file named
-	epatch "${FILESDIR}"/filename-friendliness-${PV}.patch
-
 	#Fix level9 compilation
-	epatch "${FILESDIR}"/level9-compilation-fix-${PV}.patch
+	epatch \
+		"${FILESDIR}"/filename-friendliness-${PV}.patch \
+		"${FILESDIR}"/level9-compilation-fix-${PV}.patch
 
 	#Fix gtk+ detection
 	sed -i \
 		-e 's/"pkg-config freetype2 gtk+"/"pkg-config freetype2 gtk+-2.0"/' \
 		Jamrules \
+		|| die "sed failed"
+
+	#Fix getline function name conflict with glibc
+	sed -i \
+		-e "s/getline/${PN}_getline/" \
+		terps/alan3/parse.c terps/alan2/parse.c \
 		|| die "sed failed"
 }
 
