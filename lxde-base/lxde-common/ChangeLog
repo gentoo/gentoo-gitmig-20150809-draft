@@ -1,6 +1,9 @@
 # ChangeLog for lxde-base/lxde-common
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.4 2009/07/12 18:17:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/ChangeLog,v 1.5 2009/08/05 18:22:01 volkmar Exp $
+
+  05 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> lxde-common-0.4.2.ebuild:
+  Keywording for ppc, bug 271148
 
 *lxde-common-0.4.2 (12 Jul 2009)
 

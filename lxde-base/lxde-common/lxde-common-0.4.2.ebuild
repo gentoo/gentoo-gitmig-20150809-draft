@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/lxde-common-0.4.2.ebuild,v 1.1 2009/07/12 18:17:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxde-common/lxde-common-0.4.2.ebuild,v 1.2 2009/08/05 18:22:01 volkmar Exp $
 
 EAPI="1"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/lxde/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/gtk+:2"
@@ -20,5 +20,5 @@ DEPEND="${RDEPEND}
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS ChangeLog README || die "dodoc failed"
 }
