@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.227 2009/08/02 18:48:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.228 2009/08/05 14:49:09 tommy Exp $
+
+*xulrunner-1.9.1.2 (05 Aug 2009)
+
+  05 Aug 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -xulrunner-1.9.1.1-r2.ebuild, +xulrunner-1.9.1.2.ebuild:
+  Version bump for security fixes (proxy commit for mozilla team)
 
 *xulrunner-1.9.1.1-r2 (02 Aug 2009)
 
