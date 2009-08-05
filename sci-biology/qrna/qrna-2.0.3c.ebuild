@@ -1,26 +1,32 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.12 2008/09/07 11:23:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/qrna/qrna-2.0.3c.ebuild,v 1.13 2009/08/05 19:32:12 ssuominen Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Prototype ncRNA genefinder"
 HOMEPAGE="http://selab.janelia.org/software.html"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="dev-lang/perl
+RDEPEND="dev-lang/perl
 	sci-biology/hmmer"
+DEPEND="${RDEPEND}"
 
-src_compile () {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	sed -e "s/CC = gcc/CC = $(tc-getCC)/" \
 		-e "s/CFLAGS = -O/CFLAGS = ${CFLAGS}/" \
 		-i src/Makefile squid/Makefile
+}
 
+src_compile() {
 	cd "${S}"/squid
 	emake || die
 
