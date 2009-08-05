@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxshortcut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/ChangeLog,v 1.1 2009/08/04 19:16:27 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxshortcut/ChangeLog,v 1.2 2009/08/05 05:24:18 vostorga Exp $
+
+  05 Aug 2009; <vostorga@gentoo.org> lxshortcut-0.1.1.ebuild,
+  +files/lxshortcut-0.1.1-intltool.patch:
+  Fixing infinite loop, bug #280399
+  Patch thanks to Yuan Ye <yuanyelele@gmail.com>
 
 *lxshortcut-0.1.1 (04 Aug 2009)
 
