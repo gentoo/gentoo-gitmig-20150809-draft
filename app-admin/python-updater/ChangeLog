@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/python-updater
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.39 2009/08/01 16:11:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/python-updater/ChangeLog,v 1.40 2009/08/05 21:07:32 maekke Exp $
+
+  05 Aug 2009; Markus Meier <maekke@gentoo.org> python-updater-0.7.ebuild:
+  x86 stable, bug #277647
 
   01 Aug 2009; Jeroen Roovers <jer@gentoo.org> python-updater-0.7.ebuild:
   Stable for HPPA (bug #277647).
