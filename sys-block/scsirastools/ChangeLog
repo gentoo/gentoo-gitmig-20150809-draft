@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/scsirastools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/ChangeLog,v 1.7 2008/06/29 07:53:32 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/scsirastools/ChangeLog,v 1.8 2009/08/05 19:50:07 ssuominen Exp $
+
+  05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  scsirastools-1.5.6.ebuild, +files/scsirastools-1.5.6-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #278182.
 
   29 Jun 2008; Torsten Veller <tove@gentoo.org> scsirastools-1.5.4.ebuild,
   scsirastools-1.5.6.ebuild:
