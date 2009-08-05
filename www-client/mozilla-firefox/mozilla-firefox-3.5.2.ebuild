@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.1-r2.ebuild,v 1.2 2009/08/03 13:34:40 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.2.ebuild,v 1.1 2009/08/05 14:50:37 tommy Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -12,7 +12,7 @@ ka kk kn ko ku lt lv mk ml mn mr nb-NO nl nn-NO oc or pa-IN pl pt-BR pt-PT rm ro
 ru si sk sl sq sr sv-SE ta-LK ta te th tr uk vi zh-CN zh-TW"
 NOSHORTLANGS="en-GB es-AR es-CL es-MX pt-BR zh-CN zh-TW"
 
-XUL_PV="1.9.1.1"
+XUL_PV="1.9.1.2"
 MAJ_PV="${PV/_*/}" # Without the _rc and _beta stuff
 DESKTOP_PV="3.5"
 MY_PV="${PV/_beta/b}" # Handle betas for SRC_URI
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa bindist iceweasel java mozdevelop restrict-javascript" # qt-experimental
+IUSE="bindist iceweasel java mozdevelop restrict-javascript" # qt-experimental
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
@@ -60,9 +60,6 @@ RDEPEND="
 	>=dev-libs/nspr-4.7.3
 	>=dev-db/sqlite-3.6.7
 	>=app-text/hunspell-1.2
-
-	alsa? ( media-libs/alsa-lib )
-
 	>=net-libs/xulrunner-${XUL_PV}[java=]
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]"
@@ -147,7 +144,7 @@ src_prepare() {
 	eautoreconf
 
 	# We need to re-patch this because autoreconf overwrites it
-#	epatch "${WORKDIR}"/patch/000_flex-configure-LANG.patch
+	epatch "${FILESDIR}/000_flex-configure-LANG.patch"
 }
 
 src_configure() {
@@ -194,8 +191,6 @@ src_configure() {
 	mozconfig_annotate '' --with-system-bz2
 	mozconfig_annotate '' --with-system-libxul
 	mozconfig_annotate '' --with-libxul-sdk=/usr/$(get_libdir)/xulrunner-devel-${XUL_PV}
-	mozconfig_use_enable alsa ogg
-	mozconfig_use_enable alsa wave
 
 	# IUSE mozdevelop
 	mozconfig_use_enable mozdevelop jsd
