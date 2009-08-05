@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.13.ebuild,v 1.1 2009/05/25 21:49:53 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/nautilus-open-terminal-0.13.ebuild,v 1.2 2009/08/05 22:34:50 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -19,7 +19,7 @@ RDEPEND="
 	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/glib-2.16
 	>=gnome-base/nautilus-2.21.2
-	>=gnome-base/gnome-desktop-2.9.91
+	>=gnome-base/gnome-desktop-2.26
 	>=gnome-base/gconf-2"
 DEPEND="${RDEPEND}
 	sys-devel/gettext
