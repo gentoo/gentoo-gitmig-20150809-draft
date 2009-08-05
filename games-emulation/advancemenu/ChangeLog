@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/advancemenu
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.29 2008/12/05 16:19:47 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemenu/ChangeLog,v 1.30 2009/08/05 23:51:31 mr_bones_ Exp $
+
+*advancemenu-2.5.0 (05 Aug 2009)
+
+  05 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +advancemenu-2.5.0.ebuild, +files/advancemenu-2.5.0-alsa-pkg-config.patch,
+  +files/advancemenu-2.5.0-pic.patch:
+  version bump (bug #280044)
 
   05 Dec 2008; Tristan Heaven <nyhm@gentoo.org> advancemenu-2.4.13.ebuild:
   Remove expat and zlib USE flags, bug #249459
