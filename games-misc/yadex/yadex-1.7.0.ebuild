@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.10 2009/01/29 08:40:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.11 2009/08/05 02:53:29 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -22,9 +22,11 @@ src_prepare() {
 		-e '/iwad/s/local\///' \
 		"${S}"/yadex.cfg \
 		|| die "sed yadex.cfg failed"
-	epatch "${FILESDIR}/${P}"-NULL-is-not-zero.patch
+	epatch "${FILESDIR}/${P}"-NULL-is-not-zero.patch \
+		"${FILESDIR}/${P}"-elif.patch
 	# Force the patched file to be old, otherwise the compile fails
 	touch -t 196910101010 "${S}"/src/wadlist.cc
+	touch -t 196910101010 "${S}"/src/gfx.cc
 }
 
 src_configure() {
