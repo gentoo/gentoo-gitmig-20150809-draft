@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.5 2009/08/04 02:41:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/qscintilla-python-2.4.ebuild,v 1.6 2009/08/05 18:48:38 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -34,7 +34,7 @@ src_prepare() {
 
 src_configure() {
 	configuration() {
-		local myconf="$(get_python) configure.py
+		local myconf="$(PYTHON) configure.py
 				--destdir=$(python_get_sitedir)/PyQt$(use qt4 && echo 4)
 				-n /usr/include
 				-o /usr/$(get_libdir)
