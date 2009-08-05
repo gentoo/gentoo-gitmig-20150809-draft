@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.48 2009/08/05 09:42:04 grobian Exp $
+# $Id: ChangeLog,v 1.49 2009/08/05 09:48:42 grobian Exp $
+
+  05 Aug 2009; Fabian Groffen <grobian@gentoo.org> aix/package.mask,
+  hpux/package.mask, package.mask:
+  Drop masks on sys-apps/file that apply to versions no longer in our tree
 
   05 Aug 2009; Fabian Groffen <grobian@gentoo.org> aix/package.mask,
   -aix/package.unmask:
