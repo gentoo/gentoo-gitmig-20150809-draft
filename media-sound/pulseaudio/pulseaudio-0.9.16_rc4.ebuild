@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc3.ebuild,v 1.1 2009/07/30 13:27:22 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc4.ebuild,v 1.1 2009/08/05 13:52:21 flameeyes Exp $
 
 EAPI=2
 
-inherit eutils libtool flag-o-matic
+WANT_AUTOMAKE=1.11
+
+inherit eutils libtool flag-o-matic autotools
 
 DESCRIPTION="A networked sound server with an advanced plugin system"
 HOMEPAGE="http://www.pulseaudio.org/"
@@ -79,6 +81,13 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Not extremely nice but allows to avoid a bit of work in the case
+	# users don't request tests.
+	if use test; then
+		sed -i -e 's:\<mix-test::' src/Makefile.am || die
+
+		eautomake
+	fi
 	elibtoolize
 }
 
@@ -86,6 +95,8 @@ src_configure() {
 	# To properly fix CVE-2008-0008
 	append-flags -UNDEBUG
 
+	# It's a binutils bug, once I can find time to fix that I'll add a
+	# proper dependency and fix this up. — flameeyes
 	append-ldflags -Wl,--no-as-needed
 
 	econf \
@@ -120,6 +131,13 @@ src_configure() {
 		doxygen doxygen.conf || die
 		popd
 	fi
+}
+
+src_test() {
+	# We avoid running the toplevel check target because that will run
+	# po/'s tests too, and they are broken. Officially, it should work
+	# with intltool 0.40.6, but that doesn't seem to be the case.
+	emake -C src check || die
 }
 
 src_install() {
