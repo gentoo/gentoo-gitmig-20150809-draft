@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/dpic-20090713.ebuild,v 1.1 2009/08/05 07:28:46 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dpic/dpic-20090713.ebuild,v 1.2 2009/08/05 07:31:52 aballier Exp $
 
 inherit toolchain-funcs
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 DEPEND=""
+RDEPEND=""
 
 S="${WORKDIR}/${PN}"
 
