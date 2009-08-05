@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/irrlicht
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.31 2009/01/17 14:36:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/irrlicht/ChangeLog,v 1.32 2009/08/05 16:51:36 mr_bones_ Exp $
+
+*irrlicht-1.5.1 (05 Aug 2009)
+
+  05 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +irrlicht-1.5.1.ebuild, +files/irrlicht-1.5.1-config.patch,
+  +files/irrlicht-1.5.1-demoMake.patch:
+  version bump
 
   17 Jan 2009; nixnut <nixnut@gentoo.org> irrlicht-1.5.ebuild:
   ppc stable #253659
