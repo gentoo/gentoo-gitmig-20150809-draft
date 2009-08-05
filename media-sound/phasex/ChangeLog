@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/phasex
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/phasex/ChangeLog,v 1.1 2007/10/16 16:02:35 eldad Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/phasex/ChangeLog,v 1.2 2009/08/05 12:39:54 ssuominen Exp $
+
+*phasex-0.12.0_beta3 (05 Aug 2009)
+
+  05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +phasex-0.12.0_beta3.ebuild:
+  Version bump.
 
 *phasex-0.11.1 (16 Oct 2007)
 
