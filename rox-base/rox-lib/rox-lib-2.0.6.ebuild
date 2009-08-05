@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.5.ebuild,v 1.8 2008/08/31 21:11:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/rox-base/rox-lib/rox-lib-2.0.6.ebuild,v 1.1 2009/08/05 14:18:05 lack Exp $
 
 NEED_PYTHON="2.3"
 inherit python eutils multilib
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/rox/${MY_PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
 RDEPEND=">=rox-base/rox-2.2.0
@@ -21,6 +21,13 @@ RDEPEND=">=rox-base/rox-2.2.0
 DEPEND="rox-base/zeroinstall-injector"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	epatch "${FILESDIR}/rox-lib-nosvg.patch"
+}
 
 src_install() {
 	local baselibdir="/usr/$(get_libdir)"
