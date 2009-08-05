@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=LinPopUp
-Comment=Send and recieve network messages
-Exec=LinPopUp
-StartupNotify=false
-Terminal=false
-Type=Application
-Icon=linpopup.xpm
-Categories=Application;Network;

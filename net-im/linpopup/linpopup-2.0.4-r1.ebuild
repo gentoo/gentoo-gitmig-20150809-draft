@@ -1,43 +1,41 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4-r1.ebuild,v 1.3 2007/05/06 11:43:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/linpopup/linpopup-2.0.4-r1.ebuild,v 1.4 2009/08/05 07:12:04 ssuominen Exp $
 
-inherit gnome2 eutils
+EAPI=2
+GCONF_DEBUG=no
+inherit autotools eutils gnome2
 
-DESCRIPTION="GTK2 port of the LinPopUp messaging client for Samba (including Samba 3)"
+DESCRIPTION="GTK+ port of the LinPopUp messaging client for Samba (including Samba 3)"
 HOMEPAGE="http://linpopup2.sourceforge.net/"
 SRC_URI="mirror://sourceforge/linpopup2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
-IUSE="gnome"
+IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2
-	>=dev-libs/glib-2
-	>=net-fs/samba-2.2.8a"
+RDEPEND="x11-libs/libX11
+	x11-libs/libXmu
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	x11-libs/libXmu"
+	x11-proto/xproto"
 
-DOCS="AUTHORS BUGS ChangeLog INSTALL MANUAL NEWS README THANKS TODO"
+DOCS="AUTHORS BUGS ChangeLog MANUAL NEWS README THANKS TODO"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-overflow.patch
+src_prepare() {
+	gnome2_src_prepare
+	epatch "${FILESDIR}"/${PV}-overflow.patch \
+		"${FILESDIR}"/${PV}-link.patch
+	eautoreconf
 }
 
 src_install() {
-	# Install icon and .desktop for menu entry
-	if use gnome ; then
-		insinto /usr/share/pixmaps
-		newins ${S}/pixmaps/icon_256.xpm linpopup.xpm
-		insinto /usr/share/applications
-		doins ${FILESDIR}/linpopup.desktop
-	fi
-
 	gnome2_src_install
+	dosym linpopup /usr/bin/LinPopUp || die "dosym failed"
+	newicon pixmaps/icon_256.xpm ${PN}.xpm
+	make_desktop_entry ${PN} LinPopUp ${PN}
 }
 
 pkg_postinst() {
