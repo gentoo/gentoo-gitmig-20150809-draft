@@ -1,11 +1,18 @@
-# Copyright 1999-2009 Gentoo Foundation.
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.5 2009/03/26 03:03:23 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.6 2009/08/05 15:22:54 gengor Exp $
+
+-hardened
+
+emul-linux-x86
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 raw
 
-emul-linux-x86
+# nvidia-drivers are masked, this has to be too
+video_cards_nvidia
+nvidia
+vdpau
 
 x264
 
@@ -14,7 +21,3 @@ tcc
 
 # precompiled headers are not compat with ASLR.
 pch
-
-# we love this stuff
--hardened
-
