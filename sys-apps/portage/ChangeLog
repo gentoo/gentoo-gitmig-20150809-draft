@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.622 2009/08/04 00:42:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.623 2009/08/05 01:13:06 zmedico Exp $
+
+*portage-2.2_rc36 (05 Aug 2009)
+
+  05 Aug 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc36.ebuild:
+  2.2_rc36 bump. This fixes bug #280259 (UnicodeDecodeError), bug #280269
+  (sets with unicode names), #280275 (AttributeError with license groups),
+  and bug #280320 (ImportError).
 
 *portage-2.2_rc35 (04 Aug 2009)
 
