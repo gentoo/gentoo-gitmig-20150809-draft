@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/synce-kio-rapip-0.10-r1.ebuild,v 1.1 2008/12/14 17:02:30 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-kio-rapip/synce-kio-rapip-0.10-r1.ebuild,v 1.2 2009/08/05 23:51:05 mescalinum Exp $
 
 inherit distutils eutils qt3
 
@@ -11,8 +11,8 @@ LICENSE="MIT"
 IUSE="arts"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-RDEPEND="~app-pda/synce-libsynce-0.12
-		~app-pda/synce-librapi2-0.12"
+RDEPEND="app-pda/synce-libsynce
+		app-pda/synce-librapi2"
 DEPEND="${RDEPEND}
 	arts? ( kde-base/arts )"
 
