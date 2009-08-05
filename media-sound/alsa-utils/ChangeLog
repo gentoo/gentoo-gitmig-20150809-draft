@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.272 2009/08/04 09:40:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.273 2009/08/05 15:23:35 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> alsa-utils-1.0.20-r4.ebuild:
+  Early stable on AMD64 as requested by Samuli Suominen
+  <ssuominen@gentoo.org> in bug #280464. Tested with a Realtek ALC269 on a
+  Fujitsu-Siemens Lifebook S6420 with USE="nls -doc -minimal".
 
 *alsa-utils-1.0.20-r4 (04 Aug 2009)
 
