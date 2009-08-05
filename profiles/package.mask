@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10207 2009/08/04 15:28:37 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10208 2009/08/05 06:43:24 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1722,7 +1722,6 @@ net-misc/xsupplicant
 dev-tex/lineno
 dev-tex/SIunits
 dev-tex/floatflt
-<dev-tex/g-brief-4.0.2
 
 # Alec Warner <antarus@gentoo.org> (05 Feb 2007)
 # Masked to security problems, use 1.23-r1 until I fix it

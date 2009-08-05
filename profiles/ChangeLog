@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3013 2009/08/04 15:28:37 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3014 2009/08/05 06:43:24 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
+  remove old g-brief mask, the masked versions are gone
 
   04 Aug 2009; Alex Legler <a3li@gentoo.org> package.mask:
   Mask www-apps/phpgroupware, security bug 278864.
