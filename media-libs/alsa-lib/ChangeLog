@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.284 2009/08/01 14:44:02 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.285 2009/08/05 15:19:50 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> alsa-lib-1.0.20-r1.ebuild:
+  Early stable on AMD64 as requested by Samuli Suominen
+  <ssuominen@gentoo.org> in bug #280464. Tested with a Realtek ALC269 on a
+  Fujitsu-Siemens Lifebook S6420 with USE="python -alisp -debug -doc".
 
   01 Aug 2009; Steve Dibb <beandog@gentoo.org> alsa-lib-1.0.17a.ebuild,
   alsa-lib-1.0.19.ebuild, -alsa-lib-1.0.20.ebuild,
