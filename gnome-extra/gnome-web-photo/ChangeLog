@@ -1,0 +1,10 @@
+# ChangeLog for gnome-extra/gnome-web-photo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-web-photo/ChangeLog,v 1.1 2009/08/05 10:36:11 hwoarang Exp $
+
+*gnome-web-photo-0.8 (05 Aug 2009)
+
+  05 Aug 2009; Markos Chandras <hwoarang@gentoo.org>
+  +gnome-web-photo-0.8.ebuild, +metadata.xml:
+  Initial commit of gnome-web-photo. Fixes bug 200203 . Thanks to Christoph
+  Brill (egore) <egore@gmx.de> for the initial ebuild
