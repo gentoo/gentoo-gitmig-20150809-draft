@@ -13,6 +13,5 @@
 </maintainer>
 <use>
 	<flag name="serial">Enable serial port support (installs <pkg>app-pda/synce-serial</pkg>)</flag>
-	<flag name="syncengine">Installs the <pkg>app-pda/synce-sync-engine</pkg></flag>
 </use>
 </pkgmetadata>
