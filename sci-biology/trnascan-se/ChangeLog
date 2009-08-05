@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/trnascan-se
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.9 2007/05/22 01:22:13 ribosome Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/trnascan-se/ChangeLog,v 1.10 2009/08/05 18:45:47 ssuominen Exp $
+
+  05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  trnascan-se-1.23-r1.ebuild, +files/trnascan-se-1.23-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #279574.
 
   22 May 2007; Olivier Fisette <ribosome@gentoo.org>
   trnascan-se-1.23-r1.ebuild:
