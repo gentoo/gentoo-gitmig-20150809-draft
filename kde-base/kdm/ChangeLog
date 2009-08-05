@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.172 2009/08/04 04:32:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.173 2009/08/05 18:02:38 wired Exp $
+
+*kdm-4.2.4-r1 (05 Aug 2009)
+
+  05 Aug 2009; Alex Alexander <wired@gentoo.org> +kdm-4.2.4-r1.ebuild:
+  rev bump, fixes bug 272664
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)
