@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/glossaries
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.25 2009/06/22 09:24:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/glossaries/ChangeLog,v 1.26 2009/08/05 06:50:53 aballier Exp $
+
+*glossaries-2.02 (05 Aug 2009)
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> +glossaries-2.02.ebuild:
+  version bump
 
 *glossaries-2.01 (22 Jun 2009)
 
