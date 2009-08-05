@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Goo-Canvas
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/ChangeLog,v 1.1 2009/08/05 12:19:54 hwoarang Exp $
+
+*Goo-Canvas-0.06 (05 Aug 2009)
+
+  05 Aug 2009; Markos Chandras <hwoarang@gentoo.org>
+  +Goo-Canvas-0.06.ebuild, +files/fix_implicit_pointer_declaration.patch,
+  +metadata.xml:
+  Initial commit of Goo-Canvas perl module
+
