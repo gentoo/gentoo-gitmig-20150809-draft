@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r3.ebuild,v 1.1 2009/02/03 23:53:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/libxml-1.8.17-r3.ebuild,v 1.2 2009/08/05 14:58:53 vostorga Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	LIBS="-lncurses" econf || die
-	emake -j1 || die # Doesn't work with -j 4 (hallski)
+	emake CC="$(tc-getCC)" -j1 || die # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
