@@ -1,6 +1,14 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.474 2009/08/05 11:28:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.475 2009/08/05 16:07:25 suka Exp $
+
+*openoffice-3.1.1_beta2 (05 Aug 2009)
+
+  05 Aug 2009; Andreas Proschofsky <suka@gentoo.org>
+  -openoffice-3.1.1_beta1.ebuild, +openoffice-3.1.1_beta2.ebuild,
+  -files/gentoo-3.1.1_beta1.diff, +files/gentoo-3.1.1_beta2.diff:
+  Newer beta release for OOo 3.1.1, some more KDE4 fixes thanks to Tomas 
+  Chvatal <scarabeus@gentoo.org>
 
   05 Aug 2009; Andreas Proschofsky <suka@gentoo.org>
   openoffice-3.1.1_beta1.ebuild:

@@ -1,18 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1_beta1.ebuild,v 1.2 2009/08/05 11:28:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1_beta2.ebuild,v 1.1 2009/08/05 16:07:25 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
+KDE_REQUIRED="optional"
 
-inherit bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-functions mono multilib toolchain-funcs
+inherit bash-completion check-reqs db-use eutils fdo-mime flag-o-matic java-pkg-opt-2 kde4-base mono multilib toolchain-funcs
 
 IUSE="binfilter cups dbus debug eds gnome gstreamer gtk kde ldap mono nsplugin odk opengl pam templates"
 
-MY_PV=3.1.0.99.1
+MY_PV=3.1.0.99.2
 PATCHLEVEL=OOO310
 SRC=OOo_${PV}_src
-MST=ooo310-m16
+MST=ooo310-m17
 DEVPATH=http://download.go-oo.org/${PATCHLEVEL}/${MST}
 S=${WORKDIR}/ooo
 S_OLD=${WORKDIR}/ooo-build-${MY_PV}
@@ -82,7 +83,6 @@ COMMON_DEPEND="!app-office/openoffice-bin
 	eds? ( >=gnome-extra/evolution-data-server-1.2 )
 	gstreamer? ( >=media-libs/gstreamer-0.10
 			>=media-libs/gst-plugins-base-0.10 )
-	kde? ( >=kde-base/kdelibs-4.2 )
 	java? ( >=dev-java/bsh-2.0_beta4
 		>=dev-db/hsqldb-1.8.0.9
 		dev-java/lucene:2.3
@@ -217,6 +217,8 @@ pkg_setup() {
 
 	# sys-libs/db version used
 	local db_ver=$(db_findver '>=sys-libs/db-4.3')
+
+	kde4-base_pkg_setup
 
 }
 
@@ -357,7 +359,6 @@ src_configure() {
 
 src_compile() {
 
-	use kde && set-kdedir 3
 	make || die "Build failed"
 
 }
@@ -411,5 +412,7 @@ pkg_postinst() {
 	elog " /usr/$(get_libdir)/openoffice/share/extension/install/ "
 	elog " instead of those from the SUN extension site. "
 	elog
+
+	kde4-base_pkg_postinst
 
 }
