@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.4.0-r1.ebuild,v 1.5 2009/02/11 15:08:51 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/cssed/cssed-0.4.0-r1.ebuild,v 1.6 2009/08/05 22:59:04 ssuominen Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-asneeded.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	sed -i -e "/^cssed_LINK/s:g++:$(tc-getCXX) \$(LDFLAGS):" src/Makefile.am
 	eautoreconf
 }
