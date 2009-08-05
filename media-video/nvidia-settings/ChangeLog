@@ -1,6 +1,10 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.68 2009/08/01 20:59:24 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.69 2009/08/05 15:47:02 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> nvidia-settings-180.60.ebuild:
+  Marked stable on AMD64 as requested by Víctor "VQuicksilver" Enríquez in
+  bug #280164, arch-tested by same.
 
 *nvidia-settings-185.18.31 (01 Aug 2009)
 
