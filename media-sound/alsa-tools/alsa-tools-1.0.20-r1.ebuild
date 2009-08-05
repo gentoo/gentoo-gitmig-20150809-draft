@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20-r1.ebuild,v 1.2 2009/07/31 21:37:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.20-r1.ebuild,v 1.3 2009/08/05 15:30:17 chainsaw Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://alsaproject/tools/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0.9"
-KEYWORDS="~amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
 ECHOAUDIO_CARDS="alsa_cards_darla20 alsa_cards_gina20
 alsa_cards_layla20 alsa_cards_darla24 alsa_cards_gina24
@@ -80,7 +80,7 @@ src_unpack() {
 	# This block only deals with the tools that still use GTK and the
 	# AM_PATH_GTK macro.
 	for dir in echomixer envy24control rmedigicontrol; do
-		has $dir ${ALSA_TOOLS} || continue
+		has "${dir}" "${ALSA_TOOLS}" || continue
 		pushd "${dir}" &> /dev/null
 		sed -i -e '/AM_PATH_GTK/d' configure.in
 		eautoreconf
@@ -89,7 +89,7 @@ src_unpack() {
 
 	# This block deals with the tools that are being patched
 	for dir in hdspconf; do
-		has $dir ${ALSA_TOOLS} || continue
+		has "${dir}" "${ALSA_TOOLS}" || continue
 		pushd "${dir}" &> /dev/null
 		eautoreconf
 		popd &> /dev/null

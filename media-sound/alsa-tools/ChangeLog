@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.177 2009/07/31 21:37:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.178 2009/08/05 15:30:17 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> alsa-tools-1.0.20-r1.ebuild:
+  Early stable on AMD64 as requested by Samuli Suominen
+  <ssuominen@gentoo.org> in bug #280464. Tested with a Realtek ALC269 on a
+  Fujitsu-Siemens Lifebook S6420 with USE="gtk -fltk". Quoted variables.
 
   31 Jul 2009; Steve Dibb <beandog@gentoo.org> alsa-tools-1.0.20-r1.ebuild:
   Fix redundant alsa-lib dependency, bug 273137
