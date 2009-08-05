@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/synce-dccm
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-dccm/ChangeLog,v 1.15 2007/02/09 00:45:53 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-dccm/ChangeLog,v 1.16 2009/08/05 13:08:01 mescalinum Exp $
+
+  05 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  -synce-dccm-0.3.1.ebuild, -synce-dccm-0.7.ebuild, -synce-dccm-0.8.ebuild,
+  -synce-dccm-0.8.9.ebuild, -synce-dccm-0.9.0.ebuild:
+  removed old versions
 
   09 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.
