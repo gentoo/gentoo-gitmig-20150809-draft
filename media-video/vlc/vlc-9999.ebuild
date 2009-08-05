@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.28 2009/07/27 07:14:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.29 2009/08/05 22:39:51 aballier Exp $
 
 EAPI="2"
 
@@ -269,7 +269,6 @@ src_configure() {
 		$(use_enable cddax)\
 		$(use_enable cddb libcddb) \
 		$(use_enable cdio libcdio) \
-		--disable-csri \
 		$(use_enable dbus) $(use_enable dbus dbus-control) \
 		$(use_enable dirac) \
 		$(use_enable directfb) \

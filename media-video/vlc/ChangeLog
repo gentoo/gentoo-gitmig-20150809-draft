@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.484 2009/07/29 21:21:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.485 2009/08/05 22:39:51 aballier Exp $
+
+  05 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  csri is gone in master
 
   29 Jul 2009; Markus Meier <maekke@gentoo.org> vlc-0.9.10.ebuild:
   amd64/x86 stable, bug #279340
