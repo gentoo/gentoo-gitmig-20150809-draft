@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.137 2009/08/03 07:53:57 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.138 2009/08/05 06:39:16 mueli Exp $
+
+  05 Aug 2009; Michael Hammer <mueli@gentoo.org> heimdal-1.2.1-r3.ebuild:
+  changed depend for e2fsprogs-libs - it is now stable and we don't have to
+  chooce beetwen this and com_err and ss
 
 *heimdal-1.2.1-r3 (03 Aug 2009)
 

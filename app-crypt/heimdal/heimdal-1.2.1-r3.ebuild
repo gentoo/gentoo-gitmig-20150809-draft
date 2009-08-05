@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r3.ebuild,v 1.1 2009/08/03 07:53:57 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1-r3.ebuild,v 1.2 2009/08/05 06:39:16 mueli Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ RDEPEND="ssl? ( dev-libs/openssl )
 	berkdb? ( sys-libs/db )
 	!berkdb? ( sys-libs/gdbm )
 	>=dev-db/sqlite-3.5.7
-	|| ( ( >sys-libs/e2fsprogs-libs-1.40.11 ) ( sys-libs/com_err sys-libs/ss ) )
+	sys-libs/e2fsprogs-libs
 	afs? ( net-fs/openafs )
 	hdb-ldap? ( >=net-nds/openldap-2.3.0 )
 	!virtual/krb5"
