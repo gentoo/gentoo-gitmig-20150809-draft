@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/nut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.64 2009/05/16 08:45:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/ChangeLog,v 1.65 2009/08/05 15:39:17 chainsaw Exp $
+
+  05 Aug 2009; <chainsaw@gentoo.org> nut-2.4.1-r1.ebuild:
+  Marked stable on AMD64 as requested by Michael "Mr. Bones" Sterrett in bug
+  #280368. Compile-tested on a Core2 Duo with USE="bash-completion hal snmp
+  ssl usb xml -cgi", no test hardware available.
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org> nut-2.0.5-r2.ebuild,
   nut-2.2.2.ebuild, nut-2.4.1.ebuild, nut-2.4.1-r1.ebuild:

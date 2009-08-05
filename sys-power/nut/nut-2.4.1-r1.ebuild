@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1-r1.ebuild,v 1.2 2009/05/16 08:45:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/nut/nut-2.4.1-r1.ebuild,v 1.3 2009/08/05 15:39:17 chainsaw Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="cgi snmp usb ssl hal xml"
 
 RDEPEND="cgi? ( >=media-libs/gd-2[png] )
