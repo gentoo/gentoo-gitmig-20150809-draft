@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10208 2009/08/05 06:43:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10209 2009/08/05 10:09:18 pva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -362,10 +362,6 @@ x11-misc/notification-daemon-xfce
 # Mask for removal, name change to app-text/xiphos
 # bug 278973
 app-text/gnomesword
-
-# Jeremy Olexa <darkside@gentoo.org> (01 Aug 2009)
-# Doesn't build, removed in 30 days. bug 277163
-dev-python/pyxfce
 
 # Steve Dibb <beandog@gentoo.org> (31 Jul 2009)
 # Unsupported, but popular.  No plans for removal.
