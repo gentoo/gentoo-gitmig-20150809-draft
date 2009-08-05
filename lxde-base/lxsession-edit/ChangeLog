@@ -1,6 +1,10 @@
 # ChangeLog for lxde-base/lxsession-edit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession-edit/ChangeLog,v 1.4 2009/08/05 19:43:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession-edit/ChangeLog,v 1.5 2009/08/05 19:47:15 volkmar Exp $
+
+  05 Aug 2009; Mounir Lamouri <volkmar@gentoo.org>
+  lxsession-edit-0.1.1.ebuild:
+  Create a CDEPEND to prevent lxde-common and lxsession to be in DEPEND.
 
   05 Aug 2009; Mounir Lamouri <volkmar@gentoo.org>
   lxsession-edit-0.1.1.ebuild:
