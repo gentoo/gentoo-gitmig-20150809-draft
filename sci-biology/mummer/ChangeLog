@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/mummer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.8 2009/08/02 20:39:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/mummer/ChangeLog,v 1.9 2009/08/05 21:12:52 maekke Exp $
+
+  05 Aug 2009; Markus Meier <maekke@gentoo.org> mummer-3.21.ebuild:
+  x86 stable, bug #279350
 
   02 Aug 2009; <chainsaw@gentoo.org> mummer-3.21.ebuild:
   Marked stable on AMD64 as requested by Andrey "weaver" Kislyuk
