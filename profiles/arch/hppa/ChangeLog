@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.30 2009/08/05 05:54:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.31 2009/08/05 06:10:23 jer Exp $
+
+  05 Aug 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  No need for a p.mask while it is -hppa anyway.
 
   05 Aug 2009; Jeroen Roovers <jer@gentoo.org> package.mask,
   -package.unmask:
