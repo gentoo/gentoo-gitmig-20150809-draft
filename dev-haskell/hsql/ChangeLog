@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hsql
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.11 2007/12/13 05:41:55 dcoutts Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsql/ChangeLog,v 1.12 2009/08/05 18:07:58 kolmodin Exp $
+
+*hsql-1.7.1 (05 Aug 2009)
+
+  05 Aug 2009; Lennart Kolmodin <kolmodin@gentoo.org> +hsql-1.7.1.ebuild:
+  Version bump (builds with ghc 6.10).
 
   13 Dec 2007; Duncan Coutts <dcoutts@gentoo.org> hsql-1.7.ebuild:
   Updates for upward compatability with cabal-1.2 and ghc-6.8
