@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/kget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.127 2009/08/04 00:32:35 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kget/ChangeLog,v 1.128 2009/08/05 18:26:56 wired Exp $
+
+*kget-4.3.0-r1 (05 Aug 2009)
+*kget-4.2.4-r1 (05 Aug 2009)
+
+  05 Aug 2009; Alex Alexander <wired@gentoo.org> +kget-4.2.4-r1.ebuild,
+  +kget-4.3.0-r1.ebuild:
+  fixed bug 266532 and adjusted dependencies
 
 *kget-4.3.0 (04 Aug 2009)
 
