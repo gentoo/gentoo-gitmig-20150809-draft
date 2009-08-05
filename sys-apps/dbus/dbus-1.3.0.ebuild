@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.3.0.ebuild,v 1.2 2009/08/05 17:20:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-1.3.0.ebuild,v 1.3 2009/08/05 20:47:45 ssuominen Exp $
 
 inherit autotools eutils multilib flag-o-matic
 
@@ -31,6 +31,8 @@ src_unpack() {
 	sed -e 's/.*bus_dispatch_test.*/printf ("Disabled due to excess noise\\n");/' \
 		-e '/"dispatch"/d' -i "${S}/bus/test-main.c"
 	epatch "${FILESDIR}"/${P}-asneeded.patch
+	# required for asneeded patch but also for bug 263909, cross-compile so
+	# don't remove eautoreconf
 	eautoreconf
 }
 
