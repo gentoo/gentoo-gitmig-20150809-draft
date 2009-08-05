@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.2.0.ebuild,v 1.9 2008/06/09 10:12:00 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/wise-2.2.0.ebuild,v 1.10 2009/08/05 19:42:00 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,10 +20,12 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	virtual/latex-base"
 
-S="${WORKDIR}/${PN}${PV}"
+S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	cd "${S}"/src
 #	if use threads; then
 #		append-flags "-DPTHREAD"

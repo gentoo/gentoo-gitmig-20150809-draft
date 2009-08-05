@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/wise
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/ChangeLog,v 1.13 2008/06/09 10:12:00 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/wise/ChangeLog,v 1.14 2009/08/05 19:42:00 ssuominen Exp $
+
+  05 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> wise-2.2.0.ebuild,
+  +files/wise-2.2.0-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #278307.
 
   09 Jun 2008; Markus Dittrich <markusle@gentoo.org> wise-2.2.0.ebuild:
   Switched virtual/tetex -> virtual/latex-base and added amd64 
