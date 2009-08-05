@@ -1,12 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.14 2009/07/31 08:06:48 ssuominen Exp $
-
-# Note that this requires portage-2.1.1+ so if you need this functionality,
-# make sure your package forces a new-enough portage.
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/package.use.mask,v 1.15 2009/08/05 06:32:38 ssuominen Exp $
 
 sys-devel/gcc hardened
 sys-libs/glibc hardened
-
-# amd64 and x86 only
-sci-misc/boinc cuda
