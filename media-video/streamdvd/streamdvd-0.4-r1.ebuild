@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.15 2008/07/09 09:24:15 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/streamdvd/streamdvd-0.4-r1.ebuild,v 1.16 2009/08/05 19:06:47 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -22,17 +22,18 @@ DEPEND="media-libs/libdvdread
 	>=media-video/dvdauthor-0.6.5
 	>=app-cdr/dvd+rw-tools-5.13.4.7.4 )"
 
-S="${WORKDIR}/StreamDVD-${PV}"
+S=${WORKDIR}/StreamDVD-${PV}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}" || die
-	use X && epatch "${FILESDIR}/${P}.patch"
+	cd "${S}"
+	use X && epatch "${FILESDIR}"/${P}.patch
 
-	epatch "${FILESDIR}/${P}-makefile.patch"
-	epatch "${FILESDIR}/${P}-gcc41.patch"
-	epatch "${FILESDIR}/${P}-libdvdread.patch"
-	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}"/${P}-makefile.patch
+	epatch "${FILESDIR}"/${P}-gcc41.patch
+	epatch "${FILESDIR}"/${P}-libdvdread.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
