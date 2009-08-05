@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.6 2009/08/04 07:32:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4.ebuild,v 1.7 2009/08/05 18:45:33 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -71,7 +71,7 @@ src_prepare() {
 
 src_configure() {
 	configuration() {
-		local myconf="$(get_python) configure.py
+		local myconf="$(PYTHON) configure.py
 				--confirm-license
 				--bindir=/usr/bin
 				--destdir=$(python_get_sitedir)
@@ -97,7 +97,7 @@ src_configure() {
 
 		# Fix insecure runpath.
 		for pkg in QtCore $(use X && echo "QtDesigner QtGui"); do
-			sed -i -e "/^LFLAGS/s:-Wl,-rpath,${S}-${PYTHON_ABI}/qpy/${pkg}::" ${pkg}/Makefile || die "failed to fix rpath issues"
+			sed -i -e "/^LFLAGS/s:-Wl,-rpath,${BUILDDIR}/qpy/${pkg}::" ${pkg}/Makefile || die "Failed to fix rpath issues"
 		done
 	}
 	python_execute_function -s configuration
