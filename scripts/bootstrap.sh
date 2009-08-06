@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.87 2008/03/30 16:51:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.88 2009/08/06 22:21:16 zmedico Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.87 2008/03/30 16:51:39 vapier Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.88 2009/08/06 22:21:16 zmedico Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -254,7 +254,7 @@ done
 # parents.  So we now call portage to read the aggregate profile and store
 # that into a variable.
 
-eval $(pycmd 'import portage; print portage.settings.packages;' |
+eval $(pycmd 'import portage; print [str(x) for x in portage.settings.packages];' |
 sed 's/[][,]//g; s/\*//g' | tr ' ' '\n' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
