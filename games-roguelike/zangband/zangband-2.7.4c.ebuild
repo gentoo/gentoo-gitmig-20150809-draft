@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.6 2009/08/02 04:45:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4c.ebuild,v 1.7 2009/08/06 20:15:22 mr_bones_ Exp $
 
 EAPI=2
-inherit games
+inherit autotools games
 
 DESCRIPTION="An enhanced version of the Roguelike game Angband"
 HOMEPAGE="http://www.zangband.org/"
@@ -14,9 +14,6 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~x86-fbsd"
 IUSE="tk"
 
-# Dropping X use keyword:
-#  it had to be $(use_with X x11)
-#  but ebuild fails to link without-x11
 RDEPEND="tk? (
 		dev-lang/tcl
 		dev-lang/tk )
@@ -25,6 +22,11 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto"
 
 S=${WORKDIR}/${PN}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-tk85.patch
+	eautoreconf
+}
 
 src_configure() {
 	egamesconf \

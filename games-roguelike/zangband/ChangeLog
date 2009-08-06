@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/zangband
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.15 2009/08/02 04:45:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/ChangeLog,v 1.16 2009/08/06 20:15:22 mr_bones_ Exp $
+
+  06 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  zangband-2.7.4c.ebuild, +files/zangband-2.7.4c-tk85.patch:
+  add patch for detecting tcl/tk85 (bug #267451)
 
   02 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
   zangband-2.7.4c.ebuild:
