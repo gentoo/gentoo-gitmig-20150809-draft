@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3017 2009/08/06 07:53:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3018 2009/08/06 08:12:28 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Aug 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  add x11-drivers/synaptics to package.mask
 
   06 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove mask on removed iiimf packages.
