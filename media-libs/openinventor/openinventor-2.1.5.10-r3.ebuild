@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.5 2009/02/07 21:11:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.6 2009/08/06 14:57:11 ssuominen Exp $
 
+EAPI=2
 inherit eutils versionator flag-o-matic toolchain-funcs
 
 MY_PV=$(replace_version_separator 3 '-')
-MY_PN="inventor"
+MY_PN=inventor
 
 DESCRIPTION="SGI OpenInventor Toolkit and Utilities"
 HOMEPAGE="http://oss.sgi.com/projects/inventor/"
@@ -16,25 +17,15 @@ SLOT="0"
 KEYWORDS="alpha amd64 sparc x86"
 IUSE=""
 
-RDEPEND="media-libs/mesa
+RDEPEND="media-libs/mesa[motif]
 	x11-libs/openmotif
 	>=media-libs/jpeg-6b
 	>=media-libs/freetype-2.0
 	media-fonts/corefonts"
-DEPEND="dev-util/byacc
-	${RDEPEND}"
+DEPEND="${RDEPEND}
+	dev-util/byacc"
 
-S="${WORKDIR}/${MY_PN}"
-
-pkg_setup() {
-	if ! built_with_use media-libs/mesa motif; then
-		echo
-		eerror "In order to compile openinventor, you need to have media-libs/mesa emerged"
-		eerror "with 'motif' in your USE flags. Please add that flag, re-emerge"
-		eerror "media-libs/mesa, and then emerge openinventor"
-		die "media-libs/mesa is missing motif"
-	fi
-}
+S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
@@ -56,6 +47,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/gcc4-support.patch
 	# fix bug #251681
 	epatch "${FILESDIR}"/bug-251681.patch
+
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 
 	# respect CC etc
 	sed -i \
