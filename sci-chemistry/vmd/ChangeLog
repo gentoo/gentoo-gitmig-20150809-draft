@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.22 2009/07/07 22:54:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.23 2009/08/06 14:19:15 markusle Exp $
+
+*vmd-1.8.7 (05 Aug 2009)
+
+  05 Aug 2009; Markus Dittrich <markusle@gentoo.org> +vmd-1.8.7.ebuild,
+  +files/vmd-1.8.7-config.patch, +files/vmd-1.8.7-use-bash-startup.patch:
+  Version bump (fixes bug #262275).
 
   07 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> vmd-1.8.6-r1.ebuild:
   Use elog for fetch error.
