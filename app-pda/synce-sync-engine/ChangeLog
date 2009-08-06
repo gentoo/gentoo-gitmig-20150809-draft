@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-sync-engine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/ChangeLog,v 1.6 2009/08/05 12:50:21 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-sync-engine/ChangeLog,v 1.7 2009/08/06 12:28:27 mescalinum Exp $
+
+*synce-sync-engine-0.14 (06 Aug 2009)
+
+  06 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  +synce-sync-engine-0.14.ebuild:
+  adding synce-0.14 packages
 
   05 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
   -synce-sync-engine-0.11.1.ebuild,
