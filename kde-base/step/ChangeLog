@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/step
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.23 2009/08/04 04:47:58 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/ChangeLog,v 1.24 2009/08/06 19:32:42 scarabeus Exp $
+
+  06 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> step-4.3.0.ebuild:
+  Adjust the rm to be kdeprefix aware.
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)

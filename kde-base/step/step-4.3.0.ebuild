@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/step/step-4.3.0.ebuild,v 1.1 2009/08/04 01:36:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/step/step-4.3.0.ebuild,v 1.2 2009/08/06 19:32:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -32,5 +32,5 @@ src_install() {
 	kde4-meta_src_install
 
 	# this file collides with oxygen-icons
-	rm -f "${D}/usr/share/icons/oxygen/22x22/actions/pointer.png"
+	rm -f "${D}${KDEDIR}/share/icons/oxygen/22x22/actions/pointer.png"
 }
