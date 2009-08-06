@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/mdsplib-0.11.ebuild,v 1.5 2009/01/03 14:14:36 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mdsplib/mdsplib-0.11.ebuild,v 1.6 2009/08/06 10:34:42 ssuominen Exp $
 
-inherit toolchain-funcs
+EAPI=2
+inherit eutils toolchain-funcs
 
 DESCRIPTION="METAR Decoder Software Package Library"
 HOMEPAGE="http://limulus.net/mdsplib/"
@@ -10,18 +11,23 @@ SRC_URI="http://limulus.net/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+}
+
 src_compile() {
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" all || die "make failed"
+	tc-export AR CC RANLIB
+	emake all || die "emake all failed"
 }
 
 src_install() {
 	insinto /usr/include
 	insopts -m0644
-	newins metar.h metar.h
-	dolib.a libmetar.a
+	doins metar.h || die "doins failed"
+	dolib.a libmetar.a || die "dolib.a failed"
 	dodoc README README.MDSP
-	dobin dmetar || die
+	dobin dmetar || die "dobin failed"
 }
