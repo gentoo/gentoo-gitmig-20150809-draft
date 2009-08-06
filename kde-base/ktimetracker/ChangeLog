@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/ktimetracker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.21 2009/08/04 01:09:19 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.22 2009/08/06 14:41:28 tampakrap Exp $
+
+*ktimetracker-4.3.0-r1 (06 Aug 2009)
+*ktimetracker-4.2.4-r1 (06 Aug 2009)
+
+  06 Aug 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  -ktimetracker-4.2.4.ebuild, +ktimetracker-4.2.4-r1.ebuild,
+  -ktimetracker-4.3.0.ebuild, +ktimetracker-4.3.0-r1.ebuild:
+  Fix automagic depedency of XScreenSaver and revision bump, bug 265982
 
 *ktimetracker-4.3.0 (04 Aug 2009)
 

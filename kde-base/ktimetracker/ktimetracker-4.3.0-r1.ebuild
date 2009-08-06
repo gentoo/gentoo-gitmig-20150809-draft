@@ -1,23 +1,28 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ktimetracker-4.3.0.ebuild,v 1.2 2009/08/04 16:23:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ktimetracker-4.3.0-r1.ebuild,v 1.1 2009/08/06 14:41:28 tampakrap Exp $
 
 EAPI="2"
 
 KMNAME="kdepim"
-
 inherit kde4-meta
 
-DESCRIPTION="KDE app that tracks time spent on various tasks."
+DESCRIPTION="KTimeTracker tracks time spent on various tasks."
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug +handbook"
 
-DEPEND="
+RDEPEND="
 	>=kde-base/kdepim-kresources-${PV}:${SLOT}[kdeprefix=]
-	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]"
-RDEPEND="${DEPEND}"
+	>=kde-base/libkdepim-${PV}:${SLOT}[kdeprefix=]
+	x11-libs/libXScrnSaver
+"
+DEPEND="${RDEPEND}
+	x11-proto/scrnsaverproto
+"
 
-KMEXTRACTONLY="kresources/"
+KMEXTRACTONLY="
+	kresources/
+"
 
 KMLOADLIBS="libkdepim"
 
