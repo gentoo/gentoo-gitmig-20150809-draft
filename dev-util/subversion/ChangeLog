@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/subversion
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.397 2009/08/05 19:48:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.398 2009/08/06 20:59:51 arfrever Exp $
+
+*subversion-1.6.4-r10 (06 Aug 2009)
+*subversion-1.6.4 (06 Aug 2009)
+
+  06 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +subversion-1.6.4.ebuild, +subversion-1.6.4-r10.ebuild:
+  Version bump (bug #280494).
 
   05 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   -subversion-1.5.5.ebuild, subversion-1.5.6.ebuild,
