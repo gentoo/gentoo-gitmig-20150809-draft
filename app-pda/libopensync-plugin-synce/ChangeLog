@@ -1,6 +1,13 @@
 # ChangeLog for app-pda/libopensync-plugin-synce
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-synce/ChangeLog,v 1.5 2009/07/31 12:17:10 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-synce/ChangeLog,v 1.6 2009/08/06 12:18:17 mescalinum Exp $
+
+*libopensync-plugin-synce-0.22-r1 (06 Aug 2009)
+
+  06 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  -libopensync-plugin-synce-0.22.ebuild,
+  +libopensync-plugin-synce-0.22-r1.ebuild:
+  revbump
 
   31 Jul 2009; Federico Ferri <mescalinum@gentoo.org>
   -libopensync-plugin-synce-0.20.ebuild:
