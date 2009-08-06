@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.0.ebuild,v 1.2 2008/12/27 12:07:55 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/workrave-1.9.0.ebuild,v 1.3 2009/08/06 16:45:27 ssuominen Exp $
 
 inherit autotools eutils gnome2
 
@@ -80,6 +80,7 @@ src_unpack() {
 
 	# Fix compilation with gcc-4
 	epatch "${FILESDIR}/${P}-gcc43.patch"
+	epatch "${FILESDIR}/${P}-gcc44.patch"
 
 	# Fix compilation with USE="-distribution"
 	epatch "${FILESDIR}/${P}-compilation-fixes.patch"

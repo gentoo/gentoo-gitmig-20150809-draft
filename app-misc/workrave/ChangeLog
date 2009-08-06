@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/workrave
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.57 2008/12/27 12:07:55 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/workrave/ChangeLog,v 1.58 2009/08/06 16:45:27 ssuominen Exp $
+
+  06 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> workrave-1.9.0.ebuild,
+  +files/workrave-1.9.0-gcc44.patch:
+  Fix building with GCC 4.4+ and GLIBC 2.10+ wrt #277026.
 
   27 Dec 2008; Gilles Dartiguelongue <eva@gentoo.org>
   +files/workrave-1.9.0-nosoundplayer.patch, workrave-1.9.0.ebuild:
