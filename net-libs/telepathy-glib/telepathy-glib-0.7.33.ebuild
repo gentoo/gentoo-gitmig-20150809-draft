@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.33.ebuild,v 1.1 2009/08/05 23:12:13 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-glib/telepathy-glib-0.7.33.ebuild,v 1.2 2009/08/06 18:50:19 tester Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ src_prepare() {
 	# Do not build tests if not needed
 	epatch "${FILESDIR}/${P}-nobuildtest.patch"
 
-	#elibtoolize # for sane .so versionning on BSD
+	elibtoolize # for sane .so versionning on BSD
 	eautoreconf
 }
 
