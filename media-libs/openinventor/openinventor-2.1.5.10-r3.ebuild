@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.6 2009/08/06 14:57:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openinventor/openinventor-2.1.5.10-r3.ebuild,v 1.7 2009/08/06 14:59:32 ssuominen Exp $
 
 EAPI=2
 inherit eutils versionator flag-o-matic toolchain-funcs
@@ -27,9 +27,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_PN}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# ordinary yacc fails
 	epatch "${FILESDIR}"/use-byacc.patch
 	# support for amd64, sparc and alpha
