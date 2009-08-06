@@ -1,8 +1,8 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/lyx2html-0.2.ebuild,v 1.3 2005/10/15 20:31:08 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lyx2html/lyx2html-0.2-r1.ebuild,v 1.1 2009/08/06 11:58:13 aballier Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="A very simple Lyx to HTML command line converter"
 SRC_URI="http://www.netmeister.org/apps/${P}.tar.gz"
@@ -12,9 +12,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 DEPEND=""
+RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-alloc.patch"
+	epatch "${FILESDIR}/${P}-ldflags.patch"
+}
 
 src_compile() {
-	make CC=$(tc-getCC) COPTS="${CFLAGS}" || die
+	emake CC=$(tc-getCC) COPTS="${CFLAGS}" || die
 }
 
 src_test() {
