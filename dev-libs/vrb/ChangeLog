@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/vrb
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/ChangeLog,v 1.12 2008/08/27 19:05:54 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/ChangeLog,v 1.13 2009/08/06 02:11:05 vostorga Exp $
+
+  06 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> vrb-0.3.0.ebuild,
+  vrb-0.5.1.ebuild, files/vrb-0.5.1-configure.patch:
+  respecting CC variable, CFLAGS, LDFLAGS, omiting -Werror, fixing links,
+  bugs #240232 #243956 #260888
 
   27 Aug 2008; Raúl Porcel <armin76@gentoo.org> vrb-0.5.1.ebuild:
   Re-add ~sparc

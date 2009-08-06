@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.13 2004/07/13 06:25:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.14 2009/08/06 02:11:05 vostorga Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="library for a virtual ring buffer"
 HOMEPAGE="http://phil.ipal.org/freeware/vrb/"
@@ -12,14 +14,25 @@ KEYWORDS="x86 sparc"
 IUSE=""
 
 DEPEND="virtual/libc"
+RDEPEND="${DEPEND}"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_compile() {
-	sed -i "s/copts=\"-pipe -O2\"/copts=\"${CFLAGS}\"/g" Configure
+	#respecting CFLAGS and LDFLAGS
+	sed -i "s/copts=\"-pipe -O2\"/copts=\"${CFLAGS} ${LDFLAGS}\"/g" Configure
+	sed -i "s/gcc -v/\${CC} \${COPTS}/g" Configure
 
-	./Configure 						\
+	#respecting CC
+	sed -i "s/gcc/\${CC}/g" Configure
+
+	#omiting -Werror
+	sed -i "s/-Werror//g" Configure
+
+	CC="$(tc-getCC)" ./Configure 						\
 		--prefix=/usr || die "./Configure failed"
 
-	make || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
@@ -27,9 +40,10 @@ src_install() {
 	doins include/vrb.h
 
 	dolib.so lib/libvrb.so.0.3.0
-	dosym /usr/lib/libvrb.so.0.3.0 /usr/lib/libvrb.so.0.3
-	dosym /usr/lib/libvrb.so.0.3.0 /usr/lib/libvrb.so.0
-	dosym /usr/lib/libvrb.so.0.3.0 /usr/lib/libvrb.so
+
+	dosym libvrb.so.0.3.0 /usr/$(get_libdir)/libvrb.so.0.3
+	dosym libvrb.so.0.3.0 /usr/$(get_libdir)/libvrb.so.0
+	dosym libvrb.so.0.3.0 /usr/$(get_libdir)/libvrb.so
 
 	dobin bin/iobuffer
 
