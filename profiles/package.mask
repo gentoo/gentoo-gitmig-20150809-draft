@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10214 2009/08/06 13:24:32 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10215 2009/08/06 14:49:40 hollow Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -790,11 +790,6 @@ sys-cluster/gnbd-kernel
 sys-fs/gfs2
 sys-fs/gfs
 sys-fs/clvm
-
-# Benedikt Böhm <hollow@gentoo.org> (5 Jul 2009)
-# superseded by www-apache/mod_authn_pam, #222159
-# removal: 31 Aug 2009
-www-apache/mod_auth_pam
 
 # Robin H. Johnson <robbat2@gentoo.org> (4 Jul 2009)
 # Bug #275291 - New GnuPG release broke seahorse, enigmail, mutt (uncommon
