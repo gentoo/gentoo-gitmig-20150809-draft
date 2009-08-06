@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.138 2009/08/05 06:39:16 mueli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.139 2009/08/06 08:58:45 mueli Exp $
+
+  06 Aug 2009; Michael Hammer <mueli@gentoo.org> heimdal-1.2.1-r3.ebuild:
+  pulled util-linux in as dependency because libuuid is going to move there
 
   05 Aug 2009; Michael Hammer <mueli@gentoo.org> heimdal-1.2.1-r3.ebuild:
   changed depend for e2fsprogs-libs - it is now stable and we don't have to
