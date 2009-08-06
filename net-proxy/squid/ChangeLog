@@ -1,6 +1,18 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.266 2009/07/23 06:57:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.267 2009/08/06 22:52:30 mrness Exp $
+
+*squid-3.1.0.13_beta (06 Aug 2009)
+*squid-3.0.18 (06 Aug 2009)
+
+  06 Aug 2009; Alin Năstac <mrness@gentoo.org>
+  +files/squid-3.0.18-adapted-zph.patch,
+  +files/squid-3.0.18-cross-compile.patch, +files/squid-3.0.18-gentoo.patch,
+  +files/squid-3.1.0.13_beta-gentoo.patch,
+  +files/squid-3.1.0.13_beta-qafixes.patch, +squid-3.0.18.ebuild,
+  +squid-3.1.0.13_beta.ebuild:
+  Security version bumps (#279379, #280441). Fix zph patch QA issue. Enable
+  test phase on squid-3.1.0.13 (#278648).
 
   23 Jul 2009; Alin Năstac <mrness@gentoo.org>
   -files/squid-3.0.14-adapted-zph.patch,
