@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3016 2009/08/05 13:44:38 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3017 2009/08/06 07:53:59 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove mask on removed iiimf packages.
 
   05 Aug 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
   removed old and broken versions of synce
