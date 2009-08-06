@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/x11-drm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.81 2009/07/28 14:20:20 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/x11-drm/ChangeLog,v 1.82 2009/08/06 05:32:33 battousai Exp $
+
+*x11-drm-20090805 (05 Aug 2009)
+
+  05 Aug 2009; Bryan Stine <battousai@gentoo.org> +x11-drm-20090805.ebuild:
+  Version bump to 20090805.
 
   28 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org> metadata.xml:
   This package moves under x11 jurisdiction. x11-drivers are going to be
