@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/gst-plugins-ximagesrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.16 2009/05/21 19:01:23 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ximagesrc/ChangeLog,v 1.17 2009/08/06 01:40:17 leio Exp $
+
+  06 Aug 2009; Mart Raudsepp <leio@gentoo.org>
+  -gst-plugins-ximagesrc-0.10.8.ebuild,
+  -gst-plugins-ximagesrc-0.10.11.ebuild:
+  Remove old
 
   21 May 2009; Brent Baude <ranger@gentoo.org>
   gst-plugins-ximagesrc-0.10.14.ebuild:
