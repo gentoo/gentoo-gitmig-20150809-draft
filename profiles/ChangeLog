@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3019 2009/08/06 14:49:40 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3020 2009/08/06 15:59:47 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.mask:
+  Adjust remi's mask for <xorg-server-1.5
 
   06 Aug 2009; Benedikt Böhm <hollow@gentoo.org> package.mask:
   remove mod_auth_pam from p.mask, it no longer exists
