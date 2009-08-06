@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.99.7.ebuild,v 1.2 2009/08/06 09:35:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.99.8.ebuild,v 1.1 2009/08/06 09:35:48 jer Exp $
 
 EAPI="2"
 
