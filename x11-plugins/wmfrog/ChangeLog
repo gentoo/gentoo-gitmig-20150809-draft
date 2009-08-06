@@ -1,6 +1,12 @@
 # ChangeLog for x11-plugins/wmfrog
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.6 2008/04/28 15:41:44 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfrog/ChangeLog,v 1.7 2009/08/06 20:23:20 lack Exp $
+
+*wmfrog-0.2.0-r1 (06 Aug 2009)
+
+  06 Aug 2009; Jim Ramsay <lack@gentoo.org> +wmfrog-0.2.0-r1.ebuild,
+  +files/01-fix-segfault-0.2.0.patch, +files/02-buffer-overflow-0.2.0.patch:
+  Fix a segfault and set of buffer overflows
 
 *wmfrog-0.2.0 (28 Apr 2008)
 
