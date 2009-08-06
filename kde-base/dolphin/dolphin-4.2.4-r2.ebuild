@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.3.0.ebuild,v 1.2 2009/08/03 23:42:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/dolphin-4.2.4-r2.ebuild,v 1.1 2009/08/06 14:24:08 tampakrap Exp $
 
 EAPI="2"
 
@@ -16,11 +16,12 @@ DEPEND="
 	>=kde-base/libkonq-${PV}:${SLOT}[kdeprefix=]
 "
 RDEPEND="${DEPEND}
+	>=kde-base/konqueror-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/kfind-${PV}:${SLOT}[kdeprefix=]
 	semantic-desktop? ( >=kde-base/nepomuk-${PV}:${SLOT}[kdeprefix=] )
 "
 PDEPEND="
-	thumbnail? ( >=kde-base/mplayerthumbs-${PV}:${SLOT}[kdeprefix=] )
+	thumbnail? ( media-video/mplayerthumbs:1 )
 "
 
 KMLOADLIBS="libkonq"
