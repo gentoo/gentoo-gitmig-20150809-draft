@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/awka-0.7.5.ebuild,v 1.10 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/awka-0.7.5.ebuild,v 1.11 2009/08/06 17:42:07 vostorga Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
 IUSE=""
 DEPEND="virtual/libc"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 
@@ -25,14 +26,14 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--includedir=/usr/include \
 		|| die "./configure failed"
-	emake || die "make failed"
+	emake CC="$(tc-getCC)" || die "make failed"
 }
 
 src_install() {
-	make prefix=${D} \
-		MANSRCDIR=${D}/usr/share/man \
-		INCDIR=${D}/usr/include \
-		LIBDIR=${D}/usr/$(get_libdir) \
+	make prefix="${D}" \
+		MANSRCDIR="${D}"/usr/share/man \
+		INCDIR="${D}"/usr/include \
+		LIBDIR="${D}"/usr/$(get_libdir) \
 		install || die "install failed"
 
 	dodoc ACKNOWLEDGEMENTS *.txt
