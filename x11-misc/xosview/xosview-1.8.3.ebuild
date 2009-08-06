@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.3.ebuild,v 1.11 2009/01/03 16:27:21 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/xosview-1.8.3.ebuild,v 1.12 2009/08/06 16:00:49 ssuominen Exp $
 
 inherit eutils
 
@@ -25,9 +25,10 @@ DEPEND="${COMMON_DEPS}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/xosview-emptyxpaths.patch"
-	epatch "${FILESDIR}/xosview-resdir.patch"
-	epatch "${FILESDIR}/${P}-remove-serialmeter.patch"
+	epatch "${FILESDIR}"/xosview-emptyxpaths.patch
+	epatch "${FILESDIR}"/xosview-resdir.patch
+	epatch "${FILESDIR}"/${P}-remove-serialmeter.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_install() {
