@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.6 2009/02/03 15:11:55 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-1.3.ebuild,v 1.7 2009/08/06 11:25:40 ssuominen Exp $
 
 EAPI=1
 
@@ -15,18 +15,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="=dev-db/sqlite-3*
+RDEPEND="=dev-db/sqlite-3*
 	x11-libs/qt:3"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN}/${PN}"
+S=${WORKDIR}/${PN}/${PN}
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	rm -r sqlite_source
 
-	sed -i 's/\r/\n/g' *.{cpp,h}
+	sed -i -e 's/\r/\n/g' *.{cpp,h} || die "sed failed"
 
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	epatch "${FILESDIR}"/${P}-externalsqlite.patch
 	# Don't use internal sqlite3 function wrt #227215
 	epatch "${FILESDIR}"/${P}-sqlite-deprecated.patch
@@ -38,5 +40,5 @@ src_compile() {
 }
 
 src_install() {
-	dobin sqlitebrowser || die "installing failed"
+	dobin sqlitebrowser || die "dobin failed"
 }
