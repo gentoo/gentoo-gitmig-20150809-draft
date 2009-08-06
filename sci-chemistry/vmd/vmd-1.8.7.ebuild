@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7.ebuild,v 1.1 2009/08/06 14:19:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7.ebuild,v 1.2 2009/08/06 15:18:08 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -104,14 +104,12 @@ src_prepare() {
 		-i "${S}"/bin/vmd.sh || die "failed setting up vmd wrapper script"
 }
 
-
 src_configure() {
 	local myconfig="LINUX OPENGL FLTK TK TCL PTHREADS PYTHON IMD NETCDF NUMPY"
 	rm -f configure.options && echo $myconfig >> configure.options
 
 	./configure &> /dev/null || die "failed to configure"
 }
-
 
 src_compile() {
 	# build plugins
