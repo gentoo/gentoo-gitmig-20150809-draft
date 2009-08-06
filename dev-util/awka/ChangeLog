@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/awka
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.8 2009/08/06 17:42:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/awka/ChangeLog,v 1.9 2009/08/06 18:00:28 vostorga Exp $
+
+  06 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> awka-0.7.5.ebuild:
+  Explicitly inheriting toolchain-funcs
 
   06 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> awka-0.7.5.ebuild:
   Respecting CC variable, bug #243970
