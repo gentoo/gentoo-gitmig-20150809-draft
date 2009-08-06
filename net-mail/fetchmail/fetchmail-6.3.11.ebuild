@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.11.ebuild,v 1.1 2009/08/06 06:56:53 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.3.11.ebuild,v 1.2 2009/08/06 22:29:05 fauli Exp $
 
 EAPI=2
 
@@ -18,6 +18,7 @@ IUSE="ssl nls kerberos krb4 hesiod"
 RDEPEND="hesiod? ( net-dns/hesiod )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	kerberos? ( app-crypt/mit-krb5 )
+	krb4? ( <app-crypt/mit-krb5-1.7[krb4] )
 	nls? ( virtual/libintl )
 	elibc_FreeBSD? ( sys-libs/com_err )
 	virtual/python"
