@@ -1,6 +1,9 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.527 2009/08/05 14:50:37 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.528 2009/08/06 13:39:47 lack Exp $
+
+  06 Aug 2009; Jim Ramsay <lack@gentoo.org> mozilla-firefox-3.5.2.ebuild:
+  Proxy commit for Anarchy: missed update from overlay to enable audio.
 
 *mozilla-firefox-3.5.2 (05 Aug 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.2.ebuild,v 1.1 2009/08/05 14:50:37 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.2.ebuild,v 1.2 2009/08/06 13:39:47 lack Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="bindist iceweasel java mozdevelop restrict-javascript" # qt-experimental
+IUSE="+alsa bindist iceweasel java mozdevelop restrict-javascript" # qt-experimental
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
@@ -60,6 +60,7 @@ RDEPEND="
 	>=dev-libs/nspr-4.7.3
 	>=dev-db/sqlite-3.6.7
 	>=app-text/hunspell-1.2
+	alsa? ( media-libs/alsa-lib )
 	>=net-libs/xulrunner-${XUL_PV}[java=]
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]"
@@ -210,6 +211,10 @@ src_configure() {
 
 	# Other ff-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
+
+	# Enable/Disable audio in firefox
+	mozconfig_use_enable alsa ogg
+	mozconfig_use_enable alsa wave
 
 	if ! use bindist && ! use iceweasel; then
 		mozconfig_annotate '' --enable-official-branding
