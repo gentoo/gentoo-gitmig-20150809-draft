@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.11 2008/06/29 09:39:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/paragui-1.1.8.ebuild,v 1.12 2009/08/06 00:07:15 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils
 
 DESCRIPTION="A cross-platform high-level application framework and GUI library"
@@ -25,9 +26,7 @@ RDEPEND="media-libs/libsdl
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-header.patch \
 		"${FILESDIR}"/${P}-asneeded.patch \

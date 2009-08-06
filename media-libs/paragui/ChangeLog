@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/paragui
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.31 2009/02/02 11:16:46 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.32 2009/08/06 00:07:15 mr_bones_ Exp $
+
+  06 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> paragui-1.1.8.ebuild:
+  EAPI=2
 
   02 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/paragui-1.0.4-as-needed.patch, paragui-1.0.4.ebuild:
