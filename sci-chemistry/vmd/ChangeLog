@@ -1,6 +1,12 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.23 2009/08/06 14:19:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.24 2009/08/07 13:29:11 markusle Exp $
+
+  07 Aug 2009; Markus Dittrich <markusle@gentoo.org> vmd-1.8.7.ebuild,
+  files/vmd-1.8.7-config.patch:
+  Remove the EAPI2 check for -truetype and add explicit error logic
+  so tk-8.4 users can emerge vmd as well. Also updated the config
+  patch to handle tk8.4 better.
 
 *vmd-1.8.7 (05 Aug 2009)
 
