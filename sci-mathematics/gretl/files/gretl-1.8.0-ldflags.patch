@@ -1,6 +1,5 @@
-diff -Nur gretl-1.8.0.orig/cli/Makefile.in gretl-1.8.0/cli/Makefile.in
---- gretl-1.8.0.orig/cli/Makefile.in	2008-03-24 12:46:11.000000000 +0000
-+++ gretl-1.8.0/cli/Makefile.in	2009-02-02 23:48:16.880402952 +0000
+--- cli/Makefile.in.orig	2008-03-24 12:46:11.000000000 +0000
++++ cli/Makefile.in	2009-02-02 23:48:16.880402952 +0000
 @@ -3,6 +3,7 @@
  
  CC = @CC@
@@ -18,9 +17,8 @@ diff -Nur gretl-1.8.0.orig/cli/Makefile.in gretl-1.8.0/cli/Makefile.in
  
  .deps:
  	mkdir $@
-diff -Nur gretl-1.8.0.orig/gui2/Makefile.in gretl-1.8.0/gui2/Makefile.in
---- gretl-1.8.0.orig/gui2/Makefile.in	2008-12-11 18:44:33.000000000 +0000
-+++ gretl-1.8.0/gui2/Makefile.in	2009-02-02 23:20:16.989339642 +0000
+--- gui2/Makefile.in.orig	2008-12-11 18:44:33.000000000 +0000
++++ gui2/Makefile.in	2009-02-02 23:20:16.989339642 +0000
 @@ -7,6 +7,7 @@
  libdir = @libdir@
  CC = @CC@
@@ -38,9 +36,8 @@ diff -Nur gretl-1.8.0.orig/gui2/Makefile.in gretl-1.8.0/gui2/Makefile.in
  
  $(HACK_OBJ): $(HACK_SRC) $(HACK_HDR)
  	$(CC) $(CFLAGS) $(GTK_CFLAGS) -c $<
-diff -Nur gretl-1.8.0.orig/lib/Makefile.in gretl-1.8.0/lib/Makefile.in
---- gretl-1.8.0.orig/lib/Makefile.in	2008-12-14 17:35:18.000000000 +0000
-+++ gretl-1.8.0/lib/Makefile.in	2009-02-02 23:21:00.017863458 +0000
+--- lib/Makefile.in.orig	2008-12-14 17:35:18.000000000 +0000
++++ lib/Makefile.in	2009-02-02 23:21:00.017863458 +0000
 @@ -6,6 +6,7 @@
  bindir = @bindir@
  CC = @CC@
@@ -58,9 +55,8 @@ diff -Nur gretl-1.8.0.orig/lib/Makefile.in gretl-1.8.0/lib/Makefile.in
  	-rpath $(prefix)/lib $(LIBS) \
  	-version-info $(CURRENT):$(REVISION):$(AGE)
  
-diff -Nur gretl-1.8.0.orig/plugin/Makefile.in gretl-1.8.0/plugin/Makefile.in
---- gretl-1.8.0.orig/plugin/Makefile.in	2008-12-09 15:49:20.000000000 +0000
-+++ gretl-1.8.0/plugin/Makefile.in	2009-02-02 23:21:36.595339921 +0000
+--- plugin/Makefile.in.orig	2008-12-09 15:49:20.000000000 +0000
++++ plugin/Makefile.in	2009-02-02 23:21:36.595339921 +0000
 @@ -7,6 +7,7 @@
  
  CC = @CC@
