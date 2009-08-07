@@ -1,18 +1,21 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.3 2009/07/25 02:18:43 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nepenthes/nepenthes-0.2.2.ebuild,v 1.4 2009/08/07 14:02:48 ssuominen Exp $
 
 EAPI="2"
 inherit eutils autotools
 
 DESCRIPTION="Nepenthes is a low interaction honeypot that captures worms by emulating known vulnerabilities"
 HOMEPAGE="http://nepenthes.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
+	http://dev.gentoo.org/~ssuominen/${P}-gcc44.patch.bz2
+	mirror://gentoo/~ssuominen/${P}-gcc44.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="selinux"
+IUSE=""
+# selinux
 
 DEPEND="net-misc/curl
 	sys-apps/file
@@ -29,7 +32,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc4.patch
-	epatch "${FILESDIR}"/${P}-gcc44.patch
+	epatch "${WORKDIR}"/${P}-gcc44.patch
 	sed 's|var/cache|/var/lib/cache|' -i modules/shellcode-signatures/shellcode-signatures.cpp
 	find . -name Makefile.am -exec sed 's: -Werror::' -i '{}' \;
 	eautoreconf
@@ -42,7 +45,6 @@ src_configure() {
 }
 
 src_install() {
-
 	einstall || die "make install failed"
 
 	for i in "${D}"/etc/nepenthes/*; do
@@ -71,5 +73,4 @@ src_install() {
 	keepdir /var/lib/nepenthes/hexdumps
 	keepdir /var/lib/nepenthes/cache
 	keepdir /var/lib/nepenthes/cache/geolocation
-
 }
