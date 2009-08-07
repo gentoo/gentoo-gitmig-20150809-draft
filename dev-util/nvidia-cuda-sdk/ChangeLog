@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/nvidia-cuda-sdk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.15 2009/07/29 06:57:43 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-sdk/ChangeLog,v 1.16 2009/08/07 14:32:58 chainsaw Exp $
+
+  07 Aug 2009; <chainsaw@gentoo.org> nvidia-cuda-sdk-2.02.0807.1535.ebuild:
+  Marked stable as requested by Michal "Spock" Januszewski
+  <spock@gentoo.org> in bug #276538. Arch-tested by Víctor "VQuicksilver"
+  Enríquez using K3d.
+
+  07 Aug 2009; <chainsaw@gentoo.org> nvidia-cuda-sdk-2.02.0807.1535.ebuild:
+  Marked stable as requested by Michal "Spock" Januszewski
+  <spock@gentoo.org> in bug #276538. Arch-tested by Víctor "VQuicksilver"
+  Enríquez using K3d & cuda-profiler.
 
 *nvidia-cuda-sdk-2.3 (29 Jul 2009)
 
