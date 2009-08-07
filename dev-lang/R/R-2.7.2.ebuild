@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.11 2009/05/30 08:30:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-2.7.2.ebuild,v 1.12 2009/08/07 17:18:52 bicatali Exp $
 
 EAPI=2
 inherit fortran flag-o-matic bash-completion versionator
@@ -56,6 +56,7 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-javareconf.patch
 	epatch "${FILESDIR}"/${PN}-2.7.1-test-fix.patch
+	export PERL5LIB="${S}/share/perl:${PERL5LIB:+:}${PERL5LIB}"
 }
 
 src_test() {
