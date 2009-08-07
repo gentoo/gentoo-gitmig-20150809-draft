@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.674 2009/08/03 20:52:18 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.675 2009/08/07 18:33:12 ssuominen Exp $
+
+  07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  vanilla-sources-2.6.31_rc5.ebuild:
+  Keyword ~amd64. Tested on Intel(R) Core(TM)2 Quad CPU Q8200 @ 2.33GHz.
 
   03 Aug 2009; Markus Meier <maekke@gentoo.org>
   vanilla-sources-2.6.30.3.ebuild:
