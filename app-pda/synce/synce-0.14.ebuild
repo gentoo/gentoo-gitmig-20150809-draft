@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/synce-0.14.ebuild,v 1.1 2009/08/06 12:38:56 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce/synce-0.14.ebuild,v 1.2 2009/08/07 01:48:27 mescalinum Exp $
 
 inherit versionator
 
@@ -26,6 +26,7 @@ RDEPEND="=app-pda/synce-sync-engine-${synce_PV}*
 			~app-pda/synce-gvfs-0.3
 			=app-pda/synce-trayicon-${synce_PV}*
 		)
+		>=app-arch/unshield-0.6
 		!app-pda/synce-gnomevfs
 		!app-pda/synce-odccm"
 
