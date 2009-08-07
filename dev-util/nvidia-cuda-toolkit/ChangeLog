@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/nvidia-cuda-toolkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.12 2009/07/29 06:55:23 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.13 2009/08/07 14:20:32 chainsaw Exp $
+
+  07 Aug 2009; <chainsaw@gentoo.org> nvidia-cuda-toolkit-2.0.ebuild:
+  Marked stable as requested by Michal "Spock" Januszewski
+  <spock@gentoo.org> in bug #276538. Arch-tested by Víctor "VQuicksilver"
+  Enríquez using K3d & cuda-profiler.
 
   29 Jul 2009; Michał Januszewski <spock@gentoo.org>
   -nvidia-cuda-toolkit-2.2.ebuild, -nvidia-cuda-toolkit-2.2-r1.ebuild:
