@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.5.ebuild,v 1.5 2008/12/13 16:50:32 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/encfs/encfs-1.5.ebuild,v 1.6 2009/08/07 10:45:25 ssuominen Exp $
 
 WANT_AUTOMAKE="1.10"
 
@@ -27,6 +27,7 @@ src_unpack() {
 	cd "${S}"
 	# bug 245782 - sys-fs/encfs-1.5 fails to build with --as-needed
 	epatch "${FILESDIR}"/${P}-boost-system-and-as-needed.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	eautomake
 }
 
