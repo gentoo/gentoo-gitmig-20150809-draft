@@ -1,52 +1,50 @@
-# Copyright 2003-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.16.3.ebuild,v 1.1 2008/11/22 23:28:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.18.2.ebuild,v 1.1 2009/08/07 14:20:44 pva Exp $
 
-inherit fdo-mime versionator
+EAPI="2"
+inherit eutils autotools fdo-mime versionator
 
 DESCRIPTION="VIPS Image Processing Graphical User Interface"
 SRC_URI="http://www.vips.ecs.soton.ac.uk/supported/$(get_version_component_range 1-2)/${P}.tar.gz"
 HOMEPAGE="http://vips.sourceforge.net"
 
-SLOT="0"
 LICENSE="GPL-2"
-
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-
-IUSE="fftw"
+IUSE="fftw gsl"
 
 RDEPEND="
 	>=dev-libs/glib-2
 	dev-libs/libxml2
+	x11-misc/xdg-utils
 	>=media-libs/vips-${PV}
-	>=x11-libs/gtk+-2.4
-	fftw? ( >=sci-libs/fftw-3 )"
+	>=x11-libs/gtk+-2.4.9
+	gsl? ( sci-libs/gsl )
+	fftw? ( sci-libs/fftw:3.0 )"
 
-# Flex and bison are build dependencies, but are not needed at runtime
 DEPEND="${RDEPEND}
 	=sys-devel/bison-2.3*
 	sys-devel/flex"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-7.16.4-fftw3-build.patch"
+	eautoreconf
+}
+
+src_configure() {
 	econf \
 		--disable-update-desktop \
+		$(use_with gsl) \
 		$(use_with fftw fftw3)
-	emake || die "emake failed"
 }
 
 src_install() {
-	# create these dirs to make the makefile installs these items correctly
-	dodir /usr/share/{applications,application-registry,mime-info}
-
-	insinto /usr/share/pixmaps
-	doins "${FILESDIR}"/nip2.png
-	insinto /usr/share/applications
-	doins "${FILESDIR}"/nip2.desktop
-	insinto /usr/share/mime/packages
-	doins "${FILESDIR}"/nip2.xml
-
-	einstall || die "einstall failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README* || die
+	# icon for .desktop
+	insinto /usr/share/icons/hicolor/128x128/apps
+	newins share/nip2/data/vips-128.png nip2.png || die
 }
 
 pkg_postinst() {
