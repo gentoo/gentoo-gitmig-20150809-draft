@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/uconv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.13 2009/07/14 17:30:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.14 2009/08/07 17:21:32 graaff Exp $
+
+  07 Aug 2009; Hans de Graaff <graaff@gentoo.org> uconv-0.4.12.ebuild:
+  Remove unneeded virtual/ruby DEPEND.
 
   14 Jul 2009; Hans de Graaff <graaff@gentoo.org> uconv-0.4.12.ebuild:
   Remove ruby19 keyword: not compatible. See bug 276649, thanks to Kevin
