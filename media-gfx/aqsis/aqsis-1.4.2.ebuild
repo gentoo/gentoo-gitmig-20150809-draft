@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.4.2.ebuild,v 1.1 2009/01/23 19:57:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aqsis/aqsis-1.4.2.ebuild,v 1.2 2009/08/07 16:18:59 ssuominen Exp $
 
 EAPI="1"
 
@@ -38,6 +38,8 @@ DEPEND="
 	>=dev-util/cmake-2.4.6
 	>=sys-devel/bison-1.35
 	>=sys-devel/flex-2.5.4"
+
+PATCHES=( "${FILESDIR}/${P}-gcc44.patch" )
 
 src_compile() {
 	if use fltk ; then
