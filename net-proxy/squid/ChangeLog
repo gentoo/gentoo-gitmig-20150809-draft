@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.267 2009/08/06 22:52:30 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.268 2009/08/07 17:12:19 fauli Exp $
+
+  07 Aug 2009; Christian Faulhammer <fauli@gentoo.org> squid-3.0.18.ebuild:
+  stable x86, security bug 279379
 
 *squid-3.1.0.13_beta (06 Aug 2009)
 *squid-3.0.18 (06 Aug 2009)
