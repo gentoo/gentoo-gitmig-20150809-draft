@@ -12,6 +12,6 @@
 <name>Federico Ferri</name>
 </maintainer>
 <longdescription>
-SynCE synchronization engine
+The data synchronisation software for Windows Mobile 5 and later, including a plugin for opensync.
 </longdescription>
 </pkgmetadata>

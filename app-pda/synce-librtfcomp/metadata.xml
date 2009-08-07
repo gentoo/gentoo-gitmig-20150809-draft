@@ -12,6 +12,7 @@
 <name>Federico Ferri</name>
 </maintainer>
 <longdescription>
-Compressed (LZ)RTF extensions for SynCE
+Compressed (LZ)RTF extensions for SynCE:
+Various fields in PIM data on Windows Mobile 5 and higher are stored as compressed RTF. This library provides conversion functions. 
 </longdescription>
 </pkgmetadata>

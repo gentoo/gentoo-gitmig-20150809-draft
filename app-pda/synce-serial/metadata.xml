@@ -11,4 +11,7 @@
 <email>mescalinum@gentoo.org</email>
 <name>Federico Ferri</name>
 </maintainer>
+<longdescription>
+Used to connect to WM 2003 and earlier devices, replaced by synce-hal.
+</longdescription>
 </pkgmetadata>

@@ -11,4 +11,7 @@
 <email>mescalinum@gentoo.org</email>
 <name>Federico Ferri</name>
 </maintainer>
+<longdescription>
+RAPI (Remote API) is the Microsoft protocol used to control and communicate with Windows Mobile devices. This library implements those functions.
+</longdescription>
 </pkgmetadata>

@@ -11,4 +11,7 @@
 <email>mescalinum@gentoo.org</email>
 <name>Federico Ferri</name>
 </maintainer>
+<longdescription>
+The SynCE core library, mostly consisting of utility and helper functions. 
+</longdescription>
 </pkgmetadata>
