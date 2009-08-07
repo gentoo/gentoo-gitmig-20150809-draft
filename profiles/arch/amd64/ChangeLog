@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.49 2009/07/15 13:40:04 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.50 2009/08/07 18:38:45 tampakrap Exp $
+
+  07 Aug 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Initial commit of package.mask file for amd64, with an entry of unmasked
+  kde 4.3.0 for amd64 as it is properly keyworded there, under darkside's
+  permission
 
   15 Jul 2009; Tristan Heaven <nyhm@gentoo.org> no-multilib/package.mask:
   Adjust games-puzzle/world-of-goo{,-demo} masks, bug #277881
