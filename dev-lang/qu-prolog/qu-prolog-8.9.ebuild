@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.9.ebuild,v 1.1 2009/04/04 21:22:06 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-8.9.ebuild,v 1.2 2009/08/07 06:24:27 keri Exp $
 
 EAPI=1
 
@@ -17,10 +17,12 @@ SLOT="0"
 KEYWORDS="-amd64 ~ppc -ppc64 ~sparc ~x86"
 IUSE="debug doc examples qt4 threads"
 
-DEPEND="dev-lang/perl
-	!dev-util/mpatch
+RDEPEND="!dev-util/mpatch
 	!dev-util/rej
 	qt4? ( || ( x11-libs/qt-gui:4 >=x11-libs/qt-4.1.0:4 ) )"
+
+DEPEND="${RDEPEND}
+	dev-lang/perl"
 
 S="${WORKDIR}"/${MY_P}
 
@@ -28,6 +30,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-portage.patch
+	epatch "${FILESDIR}"/${P}-print-atom.patch
+	epatch "${FILESDIR}"/${P}-glibc2.10.patch
 }
 
 src_compile() {

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.59 2009/04/04 21:22:06 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.60 2009/08/07 06:24:27 keri Exp $
+
+  07 Aug 2009; <keri@gentoo.org> qu-prolog-8.9.ebuild,
+  +files/qu-prolog-8.9-glibc2.10.patch,
+  +files/qu-prolog-8.9-print-atom.patch:
+  Fix compile against glibc2.10. Closes #273841
 
 *qu-prolog-8.9 (04 Apr 2009)
 
