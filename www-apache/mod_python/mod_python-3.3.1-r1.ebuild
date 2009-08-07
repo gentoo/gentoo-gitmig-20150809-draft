@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1-r1.ebuild,v 1.4 2008/10/18 13:38:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.3.1-r1.ebuild,v 1.5 2009/08/07 02:41:32 arfrever Exp $
 
-inherit eutils python apache-module multilib
+EAPI="2"
+
+inherit autotools eutils python apache-module multilib
 
 KEYWORDS="alpha amd64 ia64 ~mips ppc sparc x86"
 
@@ -23,19 +25,23 @@ DOCFILES="README NEWS CREDITS"
 
 need_apache2
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${PN}-apr_brigade_sentinel.patch"
+	epatch "${FILESDIR}/${P}-apache-2.4.patch"
+	epatch "${FILESDIR}/${P}-LDFLAGS.patch"
+
 	# Remove optimisations, we do that outside Portage
 	sed -i -e 's:--optimize 2:--no-compile:' dist/Makefile.in
+
+	eautoreconf
+}
+
+src_configure() {
+	econf --with-apxs=${APXS}
 }
 
 src_compile() {
-	econf --with-apxs=${APXS} || die "econf failed"
-	sed -i -e 's/ -Wl,--hash-style  $//' src/Makefile
-	emake OPT="`apxs2 -q CFLAGS` -fPIC" || die "econf failed"
+	emake OPT="`apxs2 -q CFLAGS` -fPIC" || die "emake failed"
 }
 
 src_install() {
