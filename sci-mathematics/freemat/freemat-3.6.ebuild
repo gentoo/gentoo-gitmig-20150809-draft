@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.7 2009/07/25 02:31:15 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/freemat-3.6.ebuild,v 1.8 2009/08/07 17:07:14 bicatali Exp $
 
 EAPI="2"
-inherit eutils autotools fdo-mime
+inherit eutils autotools fdo-mime virtualx
 
 MY_PN=FreeMat
 MY_P=${MY_PN}-${PV}
@@ -12,7 +12,7 @@ DESCRIPTION="Environment for rapid engineering and scientific processing"
 HOMEPAGE="http://freemat.sourceforge.net/"
 SRC_URI="mirror://sourceforge/freemat/${MY_P}.tar.gz"
 
-IUSE="+arpack ffcall +fftw ncurses portaudio +umfpack"
+IUSE="+arpack ffcall +fftw ncurses portaudio test +umfpack"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -30,7 +30,10 @@ RDEPEND="|| ( ( x11-libs/qt-gui:4 x11-libs/qt-opengl:4 x11-libs/qt-svg:4 )
 	ffcall? ( dev-libs/ffcall )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	test? (
+		media-fonts/font-misc-misc
+		media-fonts/font-cursor-misc )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -52,6 +55,10 @@ src_configure() {
 		$(use_enable fftw) \
 		$(use_enable portaudio) \
 		$(use_enable ffcall)
+}
+
+src_test () {
+	Xemake check || die "emake check failed"
 }
 
 src_install() {
