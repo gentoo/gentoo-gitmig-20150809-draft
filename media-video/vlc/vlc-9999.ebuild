@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.29 2009/08/05 22:39:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.30 2009/08/07 15:53:12 aballier Exp $
 
 EAPI="2"
 
@@ -313,7 +313,7 @@ src_configure() {
 		$(use_enable ncurses) \
 		$(use_enable nsplugin mozilla) --with-mozilla-pkg="${MOZILLA_PC}" \
 		$(use_enable ogg) \
-		$(use_enable opengl glx) $(use_enable opengl) $(use_enable opengl galaktos) \
+		$(use_enable opengl glx) $(use_enable opengl) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
 		$(use_enable pda) \

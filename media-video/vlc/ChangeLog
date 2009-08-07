@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.485 2009/08/05 22:39:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.486 2009/08/07 15:53:12 aballier Exp $
+
+  07 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  galaktos has been removed in master now, projectm is prefered
 
   05 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   csri is gone in master
