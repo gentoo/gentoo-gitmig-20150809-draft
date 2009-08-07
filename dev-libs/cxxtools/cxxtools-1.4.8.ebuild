@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/cxxtools-1.4.8.ebuild,v 1.2 2008/06/23 13:10:33 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cxxtools/cxxtools-1.4.8.ebuild,v 1.3 2009/08/07 16:28:43 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Collection of general purpose C++-classes"
@@ -13,14 +14,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libiconv"
+RDEPEND="virtual/libiconv"
+DEPEND="${RDEPEND}"
 
-src_compile() {
-	econf --disable-dependency-tracking
-	emake || die "emake failed."
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
+
+src_configure() {
+	econf \
+		--disable-dependency-tracking
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog
 }
