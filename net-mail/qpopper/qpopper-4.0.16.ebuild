@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.16.ebuild,v 1.3 2009/07/02 14:44:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.16.ebuild,v 1.4 2009/08/07 10:42:47 ssuominen Exp $
 
 EAPI="2"
 #inherit eutils flag-o-matic ssl-cert
@@ -38,7 +38,8 @@ pkg_setup() {
 src_prepare() {
 	# Test dirs are full of binary craft. Drop it.
 	rm -rf test/ ./mmangle/test
-	epatch "${FILESDIR}/${PN}-4.0.14-parallel-build.patch"
+	epatch "${FILESDIR}"/${PN}-4.0.14-parallel-build.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	sed -i -e 's:-o popauth:& ${LDFLAGS}:' popper/Makefile.in
 }
 
