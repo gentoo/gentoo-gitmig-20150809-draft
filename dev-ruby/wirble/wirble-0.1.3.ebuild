@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.3.ebuild,v 1.1 2009/07/07 06:16:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/wirble/wirble-0.1.3.ebuild,v 1.2 2009/08/07 16:51:10 graaff Exp $
 
 inherit ruby gems
 
@@ -12,7 +12,6 @@ SRC_URI="http://gems.rubyforge.org/gems/${P}.gem"
 LICENSE="Ruby"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-DEPEND=""
 IUSE=""
 
 pkg_postinst() {
