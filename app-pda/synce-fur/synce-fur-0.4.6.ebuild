@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-fur/synce-fur-0.4.6.ebuild,v 1.1 2009/08/07 01:24:20 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-fur/synce-fur-0.4.6.ebuild,v 1.2 2009/08/07 01:31:00 mescalinum Exp $
 
 EAPI=2
 
@@ -18,7 +18,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="void-chmod"
 
 DEPEND=">=app-pda/synce-0.14"
-RDEPEND=">=app-pda/synce-0.14"
+RDEPEND=">=app-pda/synce-0.14
+	>=sys-fs/fuse-2.7.4"
 
 S="${WORKDIR}/${MY_P}"
 
