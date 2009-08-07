@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.60 2009/08/05 18:31:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.61 2009/08/07 00:43:16 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -241,9 +241,15 @@ python_execute_function() {
 		fi
 
 		if [[ "${EBUILD_PHASE}" == "configure" ]]; then
-			python_default_function() {
-				econf
-			}
+			if has "${EAPI}" 2; then
+				python_default_function() {
+					econf
+				}
+			else
+				python_default_function() {
+					nonfatal econf
+				}
+			fi
 		elif [[ "${EBUILD_PHASE}" == "compile" ]]; then
 			python_default_function() {
 				emake
@@ -552,7 +558,7 @@ python_mod_compile() {
 
 	if ((${#myfiles[@]})); then
 		python${PYVER} ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py "${myfiles[@]}"
-		python${PYVER} -O ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py "${myfiles[@]}"
+		python${PYVER} -O ${myroot}/usr/$(get_libdir)/python${PYVER}/py_compile.py "${myfiles[@]}" 2> /dev/null
 	else
 		ewarn "No files to compile!"
 	fi
@@ -640,14 +646,14 @@ python_mod_optimize() {
 						site_packages_absolute_dirs+=("${root}/$(python_get_sitedir)/${dir}")
 					done
 					"$(PYTHON)" "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" || return_code="1"
-					"$(PYTHON)" -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}"  || return_code="1"
+					"$(PYTHON)" -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" 2> /dev/null || return_code="1"
 				fi
 				if ((${#site_packages_files[@]})); then
 					for file in "${site_packages_files[@]}"; do
 						site_packages_absolute_files+=("${root}/$(python_get_sitedir)/${file}")
 					done
 					"$(PYTHON)" "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
-					"$(PYTHON)" -O "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
+					"$(PYTHON)" -O "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" 2> /dev/null || return_code="1"
 				fi
 				eend "${return_code}"
 			fi
@@ -662,11 +668,11 @@ python_mod_optimize() {
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for Python ${PYVER}..."
 			if ((${#other_dirs[@]})); then
 				python${PYVER} "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
-				python${PYVER} -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
+				python${PYVER} -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" 2> /dev/null || return_code="1"
 			fi
 			if ((${#other_files[@]})); then
 				python${PYVER} "${root}/$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
-				python${PYVER} -O "${root}/$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
+				python${PYVER} -O "${root}/$(python_get_libdir)/py_compile.py" "${other_files[@]}" 2> /dev/null || return_code="1"
 			fi
 			eend "${return_code}"
 		fi
@@ -722,7 +728,7 @@ python_mod_optimize() {
 				"${myopts[@]}" "${mydirs[@]}"
 			python${PYVER} -O \
 				"${myroot}"/usr/$(get_libdir)/python${PYVER}/compileall.py \
-				"${myopts[@]}" "${mydirs[@]}"
+				"${myopts[@]}" "${mydirs[@]}" 2> /dev/null
 		fi
 
 		if ((${#myfiles[@]})); then
