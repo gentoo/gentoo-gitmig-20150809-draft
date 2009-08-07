@@ -1,6 +1,12 @@
 # ChangeLog for app-text/kbedic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.22 2009/05/27 11:52:19 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.23 2009/08/07 09:02:38 ssuominen Exp $
+
+  07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  -files/kbedic-3.1-gcc3.diff, -files/kbedic-3.1-location.diff,
+  kbedic-4.0.ebuild, +files/kbedic-4.0-gcc44.patch, -files/kbedic.desktop:
+  Fix building with GCC 4.4+ and GLIBC 2.10+ wrt #276847. Remove .desktop
+  entry from invalid location. Remove invalid aRts depend.
 
   27 May 2009; Theo Chatzimichos <tampakrap@gentoo.org> kbedic-4.0.ebuild:
   Fix typo in deps, bug 213432
