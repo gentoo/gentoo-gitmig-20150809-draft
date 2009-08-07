@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.70.ebuild,v 1.1 2009/08/04 21:59:54 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-8.70-r1.ebuild,v 1.1 2009/08/07 02:22:05 tgurr Exp $
 
 inherit autotools eutils versionator flag-o-matic
 
@@ -12,12 +12,12 @@ GSDJVU_PV=1.4
 PVM=$(get_version_component_range 1-2)
 SRC_URI="!bindist? ( djvu? ( mirror://sourceforge/djvu/gsdjvu-${GSDJVU_PV}.tar.gz ) )
 	mirror://sourceforge/ghostscript/${MY_P}.tar.bz2
-	mirror://gentoo/${P}-patchset-1.tar.bz2"
+	mirror://gentoo/${P}-patchset-2.tar.bz2"
 
 LICENSE="GPL-3 CPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="bindist cairo cjk cups djvu gtk jpeg2k X"
+IUSE="bindist cairo cups djvu gtk jpeg2k X"
 
 COMMON_DEPEND="app-text/libpaper
 	media-libs/fontconfig
@@ -73,6 +73,10 @@ src_unpack() {
 	epatch "${WORKDIR}/patches/${PN}-8.64-system-jasper.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.64-pksmraw.patch"
 	epatch "${WORKDIR}/patches/${PN}-8.70-jbig2dec-nullderef.patch"
+
+	# Gentoo patches
+	# respect LDFLAGS, bug #209803
+	epatch "${WORKDIR}/patches/${PN}-8.64-respect-gsc-ldflags.patch"
 
 	if use bindist && use djvu ; then
 		ewarn "You have bindist in your USE, djvu support will NOT be compiled!"
