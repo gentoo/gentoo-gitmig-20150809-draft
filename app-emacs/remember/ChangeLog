@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/remember
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.15 2009/01/29 07:25:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/remember/ChangeLog,v 1.16 2009/08/07 18:20:13 ulm Exp $
+
+  07 Aug 2009; Ulrich Mueller <ulm@gentoo.org> remember-2.0.ebuild:
+  Add RESTRICT=test, fixes bug 279093.
 
   29 Jan 2009; Christian Faulhammer <fauli@gentoo.org>
   -remember-1.9-r1.ebuild:
