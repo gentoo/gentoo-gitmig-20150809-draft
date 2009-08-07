@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.13 2009/02/13 11:35:28 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-0.14.3-r1.ebuild,v 1.14 2009/08/07 21:09:58 mr_bones_ Exp $
 
+EAPI=2
 inherit flag-o-matic eutils games
 
 WPV="0.14"
@@ -44,9 +45,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv ../${PN}.weights-${WPV} "${S}/${PN}.weights"
 	mv ../*bd .
 	sed -i 's:$(localedir):/usr/share/locale:' \
@@ -98,9 +97,7 @@ src_compile() {
 		$(use_with python) \
 		$(use_with readline) \
 		$(use_with X x) \
-		${myconf} \
-		|| die
-	emake || die "emake failed"
+		${myconf}
 }
 
 src_install() {

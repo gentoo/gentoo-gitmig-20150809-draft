@@ -16,7 +16,7 @@
              echo "$as_me:$LINENO: checking for python libraries" >&5
  echo $ECHO_N "checking for python libraries... $ECHO_C" >&6
 -      PYTHON_LIBS=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('LIBS'), distutils.sysconfig.get_config_var('LIBPL')+'/'+distutils.sysconfig.get_config_var('LIBRARY')"`
-+      PYTHON_LIBS=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('LIBPL')+'/'+distutils.sysconfig.get_config_var('LIBRARY'), distutils.sysconfig.get_config_var('LIBS')"`
++      PYTHON_LIBS=`python-config --libs`
        echo "$as_me:$LINENO: result: $PYTHON_LIBS" >&5
  echo "${ECHO_T}$PYTHON_LIBS" >&6
 
