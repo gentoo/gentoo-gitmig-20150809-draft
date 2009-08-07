@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.167 2009/07/31 17:51:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.168 2009/08/07 21:02:28 robbat2 Exp $
+
+*lvm2-2.02.49-r3 (07 Aug 2009)
+
+  07 Aug 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +files/lvm2-start.sh-2.02.49-r3, +files/lvm2-stop.sh-2.02.49-r3,
+  +lvm2-2.02.49-r3.ebuild:
+  Bug #280009: Much better way to set the locking directory, per upstream.
+  Thanks to TGL <tom.gl@free.fr> for the patches.
 
   31 Jul 2009; Samuli Suominen <ssuominen@gentoo.org> lvm2-2.02.33.ebuild,
   lvm2-2.02.33-r1.ebuild, lvm2-2.02.36.ebuild, lvm2-2.02.37.ebuild,
