@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10217 2009/08/06 22:15:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10218 2009/08/07 01:23:52 mescalinum Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,6 +36,7 @@
 # by synce-gvfs-0.3
 =app-pda/synce-0.14*
 =app-pda/synce-gvfs-0.3*
+app-pda/synce-fur
 
 # Rémi Cardona <remi@gentoo.org> (06 Aug 2009)
 # Big Xorg 1.3/1.4 mask. Masked for removal Real Soon Now (tm)
