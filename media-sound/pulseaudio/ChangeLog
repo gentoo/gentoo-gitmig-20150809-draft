@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.140 2009/08/05 13:52:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.141 2009/08/07 23:41:49 flameeyes Exp $
+
+  07 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.15-r2.ebuild, pulseaudio-0.9.15-r51.ebuild,
+  pulseaudio-0.9.16_rc4.ebuild, pulseaudio-0.9.16_rc4-r51.ebuild:
+  Enable a few USE flags by default unless user requests them off (alsa,
+  caps, asyncns, udev).
 
 *pulseaudio-0.9.16_rc4-r51 (05 Aug 2009)
 *pulseaudio-0.9.16_rc4 (05 Aug 2009)
