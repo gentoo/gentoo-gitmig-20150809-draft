@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3021 2009/08/06 22:15:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3022 2009/08/07 18:44:00 jmbsvicetto Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ChangeLog:
+  Added missing entries in ChangeLog.
+
+  07 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Updated masks for printer-applet and system-config-printer-kde.
+
+  07 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Dropped old mask on printing deps for KDE4.
 
   06 Aug 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   remove mask entry for net-misc/tor release candidates, final 0.2.1 version
