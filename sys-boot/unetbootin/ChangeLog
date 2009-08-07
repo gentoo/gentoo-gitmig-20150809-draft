@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.17 2009/07/22 05:51:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.18 2009/08/07 15:24:37 chainsaw Exp $
+
+  07 Aug 2009; <chainsaw@gentoo.org> unetbootin-356.ebuild:
+  Marked stable on AMD64 as requested by Jeroen Roovers <jer@gentoo.org> in
+  bug #280253. Arch-tested by Chad A. Simmons on an Athlon64 X2 with the
+  2008.0 desktop profile.
 
   22 Jul 2009; Jeroen Roovers <jer@gentoo.org> -unetbootin-323.ebuild:
   Remove old.
