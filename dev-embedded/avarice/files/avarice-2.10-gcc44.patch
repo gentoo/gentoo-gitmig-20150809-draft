@@ -1,15 +1,6 @@
 diff -ur avarice-2.10.orig/src/jtag2usb.cc avarice-2.10/src/jtag2usb.cc
 --- avarice-2.10.orig/src/jtag2usb.cc	2007-02-18 00:41:46.000000000 +0200
-+++ avarice-2.10/src/jtag2usb.cc	2009-08-07 11:53:46.000000000 +0300
-@@ -18,7 +18,7 @@
-  * This file implements the libusb-based USB connection to a JTAG ICE
-  * mkII.
-  *
-- * $Id: avarice-2.10-gcc44.patch,v 1.1 2009/08/07 08:53:45 ssuominen Exp $
-+ * $Id: avarice-2.10-gcc44.patch,v 1.1 2009/08/07 08:53:45 ssuominen Exp $
-  */
- 
- 
++++ avarice-2.10/src/jtag2usb.cc	2009-08-07 14:55:04.000000000 +0300
 @@ -70,7 +70,7 @@
    struct usb_bus *bus;
    struct usb_device *dev;
