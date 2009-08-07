@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.0.ebuild,v 1.1 2009/08/06 11:23:49 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gambit/gambit-4.5.1.ebuild,v 1.1 2009/08/07 13:20:05 hkbst Exp $
 
 inherit elisp-common
 
