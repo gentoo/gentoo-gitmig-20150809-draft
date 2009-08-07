@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nailgun
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.1 2009/08/07 12:31:36 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.2 2009/08/07 20:32:58 ali_bush Exp $
+
+  07 Aug 2009; Alistair Bush <ali_bush@gentoo.org> nailgun-0.7.1.ebuild:
+  Keyword ~x86 after testing.
 
 *nailgun-0.7.1 (07 Aug 2009)
 
