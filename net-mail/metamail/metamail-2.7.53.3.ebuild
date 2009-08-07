@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.53.3.ebuild,v 1.2 2008/08/19 14:56:15 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/metamail-2.7.53.3.ebuild,v 1.3 2009/08/07 09:10:23 ssuominen Exp $
 
 WANT_AUTOCONF="2.5"
 
@@ -25,13 +25,14 @@ DEPEND="sys-libs/ncurses
 RDEPEND="app-misc/mime-types
 	sys-apps/debianutils"
 
-S="${WORKDIR}"/mm${MY_PV}/src
+S=${WORKDIR}/mm${MY_PV}/src
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${WORKDIR}"/metamail_${DEB_PV}.diff
 	epatch "${FILESDIR}"/${PN}-2.7.45.3-CVE-2006-0709.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	eautoreconf
 	chmod +x "${S}"/configure
 }

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/metamail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.37 2008/08/19 14:56:15 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/metamail/ChangeLog,v 1.38 2009/08/07 09:10:23 ssuominen Exp $
+
+  07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  metamail-2.7.53.3.ebuild, +files/metamail-2.7.53.3-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #274107.
 
   19 Aug 2008; Donnie Berkholz <dberkholz@gentoo.org>;
   metamail-2.7.45.3-r1.ebuild, metamail-2.7.53.3.ebuild:
