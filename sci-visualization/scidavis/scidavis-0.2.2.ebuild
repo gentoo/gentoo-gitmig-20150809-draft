@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.2.ebuild,v 1.2 2009/06/05 17:37:31 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/scidavis/scidavis-0.2.2.ebuild,v 1.3 2009/08/07 19:56:32 markusle Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime
@@ -23,6 +23,7 @@ CDEPEND="sys-libs/zlib
 	=x11-libs/qwt-5.1*[svg]
 	>=x11-libs/qwtplot3d-0.2.7
 	x11-libs/qt-assistant:4
+	x11-libs/qt-qt3support:4
 	>=dev-cpp/muParser-1.30
 	>=sci-libs/gsl-1.8"
 # remove because unsupported for now
