@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.13 2007/06/24 23:29:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.14 2009/08/08 01:47:40 mescalinum Exp $
 
 inherit autotools eutils multilib
 
@@ -15,6 +15,7 @@ IUSE="gdbm"
 
 DEPEND="gdbm? ( sys-libs/gdbm )
 	dev-lang/tcl"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}${PV}
 
@@ -43,11 +44,13 @@ src_unpack() {
 }
 
 src_compile() {
+	local use_gdbm=""
+	if use gdbm; then use_gdbm="--with-gdbm"; fi
 	econf \
 		--with-threads \
 		--with-tclinclude=/usr/include \
 		--with-tcl="/usr/$(get_libdir)" \
-		$(use_with gdbm) || die "econf failed"
+		${use_gdbm} || die "econf failed"
 	emake || die "emake failed"
 }
 
