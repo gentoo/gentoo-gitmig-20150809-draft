@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.2 2009/08/08 02:28:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.3 2009/08/08 02:51:16 tester Exp $
+
+inherit autotools
 
 DESCRIPTION="A SIP connection manager for Telepathy based around the Sofia-SIP library."
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -15,11 +17,20 @@ RDEPEND=">=net-libs/sofia-sip-1.12.10
 	>=net-libs/telepathy-glib-0.7.27
 	>=dev-libs/glib-2.16
 	sys-apps/dbus
-	dev-libs/dbus-glib"
+	dev-libs/dbus-glib
+	test? ( dev-python/twisted )"
 
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	dev-lang/python"
+
+src_unpack() {
+	unpack ${A}
+
+	cd "${S}"
+	sed -i -e "s/python2.5/python2.6 python2.5/" configure.ac
+	eautoreconf
+}
 
 src_compile() {
 	econf $(use_enable debug) || die "econf failed"
