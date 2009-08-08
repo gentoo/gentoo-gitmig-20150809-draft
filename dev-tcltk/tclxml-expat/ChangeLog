@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/tclxml-expat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/ChangeLog,v 1.15 2008/08/17 03:47:16 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/ChangeLog,v 1.16 2009/08/08 02:25:55 mescalinum Exp $
+
+*tclxml-expat-2.4-r1 (08 Aug 2009)
+
+  08 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  +tclxml-expat-2.4-r1.ebuild, +files/tclxml-expat-no-bundle.patch:
+  add -r1 for fixing bug 253515
 
   17 Aug 2008; Michael Sterrett <mr_bones_@gentoo.org>
   -tclxml-expat-2.6.ebuild:
