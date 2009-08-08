@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.12 2009/06/09 20:11:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/expect/expect-5.43.0.ebuild,v 1.13 2009/08/08 00:10:24 mescalinum Exp $
 
 WANT_AUTOCONF="2.1"
-inherit autotools eutils
+inherit autotools eutils versionator
 
 DESCRIPTION="tool for automating interactive applications"
 HOMEPAGE="http://expect.nist.gov/"
@@ -20,19 +20,19 @@ DEPEND=">=dev-lang/tcl-8.2
 	X? ( >=dev-lang/tk-8.2 )"
 RDEPEND="${DEPEND}"
 
-NON_MICRO_V=${P%.[0-9]}
+NON_MICRO_V=${PN}-$(get_version_component_range 1-2)
 S=${WORKDIR}/${NON_MICRO_V}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-multilib.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/"${P}"-multilib.patch
 
 	#fix the rpath being set to /var/tmp/portage/...
-	epatch ${FILESDIR}/expect-5.39.0-libdir.patch
+	epatch "${FILESDIR}"/expect-5.39.0-libdir.patch
 
 	#Removes references to functions that Tcl 8.5 no longer exposes.
-	epatch ${FILESDIR}/${P}-avoid-tcl-internals-1.patch
+	epatch "${FILESDIR}"/"${P}"-avoid-tcl-internals-1.patch
 
 	sed -i 's#/usr/local/bin#/usr/bin#' expect.man
 	sed -i 's#/usr/local/bin#/usr/bin#' expectk.man
@@ -88,12 +88,15 @@ src_test() {
 
 src_install() {
 	dodir /usr/$(get_libdir)
-	make install INSTALL_ROOT=${D} || die "make install failed"
+	make install INSTALL_ROOT="${D}" || die "make install failed"
 
 	dodoc ChangeLog FAQ HISTORY NEWS README
 
-	local static_lib="lib${NON_MICRO_V/-/}.a"
-	rm ${D}/usr/$(get_libdir)/${NON_MICRO_V/-/}/${static_lib}
+	local lib_basename="lib${NON_MICRO_V/-/}"
+	rm "${D}/usr/$(get_libdir)/${NON_MICRO_V/-/}/${lib_basename}.a"
+
+	# bug #182278 - /usr/lib/expect.so symlink
+	ln -s "${lib_basename}.so" "${D}/usr/$(get_libdir)/lib${PN}.so"
 
 	#install examples if 'doc' is set
 	if use doc ; then
