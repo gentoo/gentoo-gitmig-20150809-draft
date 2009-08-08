@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.42 2009/01/03 20:13:45 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.43 2009/08/08 16:07:13 ssuominen Exp $
+
+  08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ircservices-5.0.63.ebuild, ircservices-5.1.14.ebuild:
+  Mark all versions -amd64 because of bug 273978.
 
 *ircservices-5.1.14 (03 Jan 2009)
 
