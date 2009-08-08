@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.7.5.ebuild,v 1.4 2007/11/27 10:42:59 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nxtvepg/nxtvepg-2.7.5.ebuild,v 1.5 2009/08/08 15:14:40 ssuominen Exp $
 
 inherit eutils
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/tcl-8.0
-	>=dev-lang/tk-8.0
+RDEPEND="<dev-lang/tcl-8.5
+	<dev-lang/tk-8.5
 	x11-libs/libX11
 	x11-libs/libXmu"
 
