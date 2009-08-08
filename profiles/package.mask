@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10224 2009/08/08 07:51:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10225 2009/08/08 09:23:17 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -594,20 +594,10 @@ virtual/perl-IO-Compress-Zlib
 virtual/perl-IO-Compress-Bzip2
 virtual/perl-IO-Compress-Base
 
-# Samuli Suominen <ssuominen@gentoo.org> (19 Jul 2009)
-# Orphaned libraries. Masked for removal. QA issues wrt #247961.
-media-libs/smjpeg
-media-libs/ofbis
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (19 Jul 2009)
 # cjkcodecs modules are included in Python >=2.4. Separate dev-python/cjkcodecs package
 # isn't needed anymore and fails tests (bug #277773). Masked for deletion in 30 days.
 dev-python/cjkcodecs
-
-# Samuli Suominen <ssuominen@gentoo.org> (18 Jul 2009)
-# Doesn't compile and maintainers don't care wrt #222235.
-# Masked for removal by treecleaners.
-x11-libs/gtk-server
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (14 Jul 2009)
 #  on behalf of QA Team
@@ -689,11 +679,6 @@ sys-apps/lkcp
 # Removed in ~60 days by treecleaners. Nothing uses it. Upstream doesn't care
 # about it, unmaintained. Comment on bug 246960
 app-text/dgs
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Jul 2009)
-# efence doesn't build wrt #262528, or work wrt #128814
-# masked for removal. please use dev-util/duma instead.
-dev-util/efence
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
 #  on behalf of QA Team
@@ -946,15 +931,6 @@ net-dialup/speedtouch
 # (re-structured, modules renamed and so on)
 # It may break some packages.
 =sys-auth/policykit-0.92
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2009)
-#  on behalf of QA Team
-#
-# Fails to build with gcc 4.2 and later.
-# See bug #273275
-#
-# Removal pending 16 August 2009
-app-text/kaspaliste
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2009)
 #  on behalf of QA Team
