@@ -1,0 +1,10 @@
+# ChangeLog for net-voip/telepathy-idle
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-idle/ChangeLog,v 1.1 2009/08/08 02:37:08 tester Exp $
+
+*telepathy-idle-0.1.4 (08 Aug 2009)
+
+  08 Aug 2009; Olivier Crête <tester@gentoo.org>
+  +telepathy-idle-0.1.4.ebuild, +metadata.xml:
+  Initial import
+
