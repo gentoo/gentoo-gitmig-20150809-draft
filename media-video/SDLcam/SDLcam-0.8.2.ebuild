@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.8.2.ebuild,v 1.1 2007/10/08 18:10:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.8.2.ebuild,v 1.2 2009/08/08 20:44:56 vostorga Exp $
+
+inherit eutils
 
 DESCRIPTION="webcam application that uses the SDL library"
 HOMEPAGE="http://sdlcam.raphnet.net/"
@@ -20,6 +22,12 @@ DEPEND="dev-libs/libxml2
 	media-libs/sdl-ttf"
 
 S=${WORKDIR}/sdlcam-${PV}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${PN}-glibc210.patch
+}
 
 src_install() {
 	emake install DESTDIR="${D}" || die

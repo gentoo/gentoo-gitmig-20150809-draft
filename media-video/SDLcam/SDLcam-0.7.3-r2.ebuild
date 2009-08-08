@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r2.ebuild,v 1.4 2006/10/30 00:56:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/SDLcam-0.7.3-r2.ebuild,v 1.5 2009/08/08 20:44:56 vostorga Exp $
 
 inherit eutils
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-build.patch
 	epatch "${FILESDIR}"/${P}-relax-asm.patch #152002
 	epatch "${FILESDIR}"/${P}-jpeg.patch
+	epatch "${FILESDIR}"/${PN}-glibc210.patch
 
 	# Don't you love hardcoded vars?
 	sed -i \
