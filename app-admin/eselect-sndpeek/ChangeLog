@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/eselect-sndpeek
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-sndpeek/ChangeLog,v 1.1 2009/08/08 18:11:21 cedk Exp $
+
+*eselect-sndpeek-1.0.0 (08 Aug 2009)
+
+  08 Aug 2009; Cédric Krier <cedk@gentoo.org>
+  +eselect-sndpeek-1.0.0.ebuild, +metadata.xml:
+  New ebuild
+
