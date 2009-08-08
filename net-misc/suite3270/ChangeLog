@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/suite3270
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.29 2008/10/20 04:27:02 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.30 2009/08/08 14:02:21 mescalinum Exp $
+
+*suite3270-3.3.9_p12 (08 Aug 2009)
+
+  08 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  +suite3270-3.3.9_p12.ebuild:
+  version bump - fix bug 249479, bug 257683
 
   20 Oct 2008; Robin H. Johnson <robbat2@gentoo.org>
   -suite3270-3.2.20.ebuild, -suite3270-3.3.2_p1.ebuild,
