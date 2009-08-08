@@ -1,10 +1,10 @@
 # Copyright 2006-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.14.ebuild,v 1.1 2009/05/09 19:18:44 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/sptk-3.5.8.14.ebuild,v 1.2 2009/08/08 16:11:31 iluxa Exp $
 
 EAPI=1
 
-inherit multilib cmake-utils
+inherit cmake-utils
 
 IUSE="fltk odbc doc sqlite excel postgres aspell mysql gnutls"
 
