@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10223 2009/08/08 03:08:08 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10224 2009/08/08 07:51:15 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1074,6 +1074,7 @@ app-text/remem
 # Michael Sterrett <mr_bones_@gentoo.org> (25 May 2009)
 # Masked for testing.
 =app-admin/syslog-ng-3.0.2
+=app-admin/syslog-ng-3.0.4
 
 # Peter Volkov <pva@gentoo.org> (17 May 2009)
 # Masked development/git sources
