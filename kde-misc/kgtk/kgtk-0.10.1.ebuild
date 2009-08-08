@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.1 2009/03/12 15:15:44 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kgtk/kgtk-0.10.1.ebuild,v 1.2 2009/08/08 21:57:48 ssuominen Exp $
 
 EAPI="2"
 
@@ -33,7 +33,9 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/KGtk-${PV}"
+PATCHES=( "${FILESDIR}/${P}-glibc-2.10.patch" )
+
+S=${WORKDIR}/KGtk-${PV}
 
 src_configure() {
 	if use qt3 && use qt4 ; then
