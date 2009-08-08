@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10241 2009/08/08 15:25:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10242 2009/08/08 15:35:55 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1066,13 +1066,6 @@ media-libs/freeimage
 # Torsten Veller <tove@gentoo.org> (10 Jun 2009)
 # Mask unstable releases. Read the warning!
 =app-office/gnucash-2.3*
-
-# Ulrich Mueller <ulm@gentoo.org> (09 Jun 2009)
-# Masked for removal in 60 days. Doesn't build with glibc-2.10. Incompatible
-# with current Emacs versions. No upstream release since more than five years.
-# If you want us to keep this package, please contact <emacs@gentoo.org>, or
-# leave a comment at bug 272593.
-app-text/remem
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (30 May 2009)
 # Development versions.
