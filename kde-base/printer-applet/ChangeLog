@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/printer-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.3 2009/08/04 01:33:04 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/printer-applet/ChangeLog,v 1.4 2009/08/08 16:32:46 jer Exp $
+
+  08 Aug 2009; Jeroen Roovers <jer@gentoo.org> printer-applet-4.3.0.ebuild:
+  Marked ~hppa (bug #280312).
 
 *printer-applet-4.3.0 (04 Aug 2009)
 

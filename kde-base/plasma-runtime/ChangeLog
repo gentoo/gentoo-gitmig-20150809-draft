@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/plasma-runtime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.3 2009/08/04 10:45:38 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-runtime/ChangeLog,v 1.4 2009/08/08 16:28:27 jer Exp $
+
+  08 Aug 2009; Jeroen Roovers <jer@gentoo.org> plasma-runtime-4.3.0.ebuild:
+  Marked ~hppa (bug #280312).
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> +metadata.xml:
   added metadata...

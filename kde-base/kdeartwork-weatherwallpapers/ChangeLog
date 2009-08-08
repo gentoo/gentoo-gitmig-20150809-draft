@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeartwork-weatherwallpapers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.2 2009/08/04 10:45:27 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-weatherwallpapers/ChangeLog,v 1.3 2009/08/08 16:26:36 jer Exp $
+
+  08 Aug 2009; Jeroen Roovers <jer@gentoo.org>
+  kdeartwork-weatherwallpapers-4.3.0.ebuild:
+  Marked ~hppa (bug #280312).
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> +metadata.xml:
   added metadata...
