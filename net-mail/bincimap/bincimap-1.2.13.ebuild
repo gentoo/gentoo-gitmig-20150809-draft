@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.8 2009/02/08 16:50:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.13.ebuild,v 1.9 2009/08/08 07:37:16 ssuominen Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 
 	epatch "${FILESDIR}"/${P}-gentoo.diff
 	epatch "${FILESDIR}"/${PN}-1.2-gcc43.patch
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 src_compile() {
