@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10232 2009/08/08 09:52:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10233 2009/08/08 11:18:22 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -430,10 +430,6 @@ media-tv/ktvschedule
 # Masked for testing.
 =sys-kernel/vanilla-sources-2.6.31_rc*
 
-# Samuli Suominen <ssuominen@gentoo.org> (30 Jul 2009)
-# Doesn't compile. Masked for removal wrt #275915.
-app-editors/qe
-
 # Samuli Suomienn <ssuominen@gentoo.org> (30 Jul 2009)
 # Needs =net-libs/xulrunner-1.8* to compile.
 # Replaced by gecko-mediaplayer, see bug #273121.
@@ -819,11 +815,6 @@ sys-fs/clvm
 # Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
 # Security issue, dead upstream. Removal in 60 days, bug 273105
 media-gfx/megapov
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Fails to build, no release since 2004. No Gentoo maintainer, bug 264174.
-# Removal in 60 days.
-app-editors/geresh
 
 # Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
 # QA issues with build system, no Gentoo maintainer. Removed in 60 days,
