@@ -1,6 +1,11 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.52 2009/08/05 16:24:32 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.53 2009/08/08 14:11:29 flameeyes Exp $
+
+  08 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  apcupsd-3.14.7.ebuild:
+  Make sure that MANPAGER values won't break the build, bug #280674 by Semen
+  Maryasin.
 
   05 Aug 2009; <chainsaw@gentoo.org> apcupsd-3.14.6.ebuild:
   Marked stable on AMD64 as requested by Diego E. "Flameeyes" Pettenò

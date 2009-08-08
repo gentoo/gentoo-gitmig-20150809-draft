@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.1 2009/08/04 11:36:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.2 2009/08/08 14:11:29 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -66,7 +66,12 @@ src_compile() {
 		${myconf} \
 		APCUPSD_MAIL=/bin/mail \
 		|| die "econf failed"
-	emake || die "emake failed"
+
+	# Workaround for bug #280674; upstream should really just provide
+	# the text files in the distribution, but I wouldn't count on them
+	# doing that anytime soon.
+	MANPAGER=$(type -p cat) \
+		emake || die "emake failed"
 }
 
 src_install() {
