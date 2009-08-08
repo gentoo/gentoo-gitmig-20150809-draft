@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/policykit-0.9-r1.ebuild,v 1.3 2009/07/06 10:53:44 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/policykit/policykit-0.9-r1.ebuild,v 1.4 2009/08/08 23:23:15 dang Exp $
 
 inherit autotools bash-completion eutils multilib pam
 
@@ -82,7 +82,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake -j1 DESTDIR="${D}" install || die "emake install failed"
 
 	dodoc NEWS README AUTHORS ChangeLog
 
