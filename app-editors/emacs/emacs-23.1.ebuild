@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1.ebuild,v 1.1 2009/07/30 14:43:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1.ebuild,v 1.2 2009/08/08 23:13:45 fauli Exp $
 
 EAPI=2
 
@@ -288,6 +288,9 @@ pkg_postinst() {
 	elog "the Emacs eselect module, which also redirects man and info pages."
 	elog "Therefore, several Emacs versions can be installed at the same time."
 	elog "\"man emacs.eselect\" for details."
+	echo
+	elog "If you upgrade from a previous version you need to recompile all"
+	elog "byte-compiles elisp files.  Run app-admin/emacs-updater to achieve this"
 }
 
 pkg_postrm() {
