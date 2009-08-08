@@ -1,6 +1,13 @@
 # ChangeLog for sci-chemistry/gchemutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.8 2009/02/28 00:40:51 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/ChangeLog,v 1.9 2009/08/08 08:44:25 ssuominen Exp $
+
+  08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gchemutils-0.10.3.ebuild, +files/gchemutils-0.10.3-glibc-2.10.patch:
+  Remove invalid USE debug inherited with gnome2.eclass. Disable mozilla
+  plug-in because it needs =xulrunner-1.8* wrt #280049. Fix building with
+  GLIBC 2.10+ wrt #276298. Port from built_with_use to EAPI=2 USE deps. Fix
+  missing deps intltool and rarian.
 
   28 Feb 2009; Jeff Gardner <je_fro@gentoo.org> gchemutils-0.10.3.ebuild:
   Fix SRC_URI

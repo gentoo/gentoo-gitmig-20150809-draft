@@ -1,10 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.3.ebuild,v 1.2 2009/02/28 00:40:51 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gchemutils/gchemutils-0.10.3.ebuild,v 1.3 2009/08/08 08:44:25 ssuominen Exp $
 
-inherit gnome2 autotools
+EAPI=2
+GCONF_DEBUG=no
+MY_P=gnome-chemistry-utils-${PV}
 
-MY_P="gnome-chemistry-utils-${PV}"
+inherit autotools eutils gnome2
+
 DESCRIPTION="C++ classes and Gtk+-2 widgets related to chemistry"
 HOMEPAGE="http://www.nongnu.org/gchemutils/"
 SRC_URI="http://savannah.nongnu.org/download/gchemutils/0.10/${MY_P}.tar.bz2"
@@ -14,41 +17,34 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="=gnome-base/libglade-2*
-		>=gnome-base/libgnomeprintui-2.4.0
-		>=x11-libs/goffice-0.6.5
-		x11-libs/gtkglext
-		app-text/gnome-doc-utils
-		>=sci-chemistry/openbabel-2.1.1
-		sci-chemistry/bodr
-		sci-chemistry/chemical-mime-data"
-
+RDEPEND="gnome-base/libglade:2.0
+	>=gnome-base/libgnomeprintui-2.4
+	>=gnome-extra/libgsf-1.14[gnome]
+	>=x11-libs/goffice-0.6.5:0.6[gnome]
+	x11-libs/gtkglext
+	app-text/gnome-doc-utils
+	>=sci-chemistry/openbabel-2.1.1
+	sci-chemistry/bodr
+	sci-chemistry/chemical-mime-data"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	app-text/rarian
+	dev-util/intltool
 	!sci-chemistry/gchempaint"
 
 S=${WORKDIR}/${MY_P}
 
-pkg_setup() {
-	if ! built_with_use x11-libs/goffice:0.6 gnome ; then
-		eerror "Please rebuild >=x11-libs/goffice-0.6.5 with gnome support enabled."
-		eerror "This needs gnome-extra/libgsf to be built with gnome support."
-		eerror "echo \"x11-libs/goffice gnome\" >> /etc/portage/package.use"
-		eerror "and"
-		eerror "echo \"gnome-extra/libgsf gnome\" >> /etc/portage/package.use"
-		eerror "or add  \"gnome\" to your USE string in /etc/make.conf"
-		die "No Gnome support found in goffice."
-
-	fi
-}
-
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	eautoreconf
 }
 
-src_compile() {
-	gnome2_src_compile --disable-update-databases --docdir=/usr/share/doc/${PN}/html
+src_configure() {
+	gnome2_src_configure \
+		--docdir=/usr/share/doc/${PN}/html \
+		--disable-update-databases \
+		--disable-mozilla-plugin
 }
 
 pkg_postinst() {
