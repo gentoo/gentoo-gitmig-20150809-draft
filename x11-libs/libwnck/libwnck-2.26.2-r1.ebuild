@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.26.2-r1.ebuild,v 1.1 2009/08/08 22:02:42 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.26.2-r1.ebuild,v 1.2 2009/08/08 23:34:45 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.40
 	dev-util/gtk-doc-am
+	gnome-base/gnome-common
 	doc? ( >=dev-util/gtk-doc-1.9 )"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README"
