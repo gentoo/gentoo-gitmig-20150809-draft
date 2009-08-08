@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kload
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.6 2008/06/30 18:07:09 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kload/ChangeLog,v 1.7 2009/08/08 22:16:28 ssuominen Exp $
+
+  08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> kload-0.9.4-r1.ebuild,
+  +files/kload-0.9.4-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #277567, thanks to Arttu Valo for patch.
 
 *kload-0.9.4-r1 (29 Jun 2008)
 
