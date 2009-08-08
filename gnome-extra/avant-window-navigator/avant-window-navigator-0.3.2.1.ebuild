@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.1 2009/07/14 16:24:54 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/avant-window-navigator/avant-window-navigator-0.3.2.1.ebuild,v 1.2 2009/08/08 20:17:44 jmbsvicetto Exp $
 
 inherit gnome2 python
 
@@ -64,6 +64,7 @@ src_compile() {
 		$(use_with vala) \
 		--with-gconf \
 		--disable-static \
+		--disable-pymod-checks \
 		${myconf}
 
 	emake || die "emake failed"
