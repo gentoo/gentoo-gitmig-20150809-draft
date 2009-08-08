@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.10 2008/12/21 21:58:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.11 2009/08/08 22:19:53 ssuominen Exp $
 
-inherit toolchain-funcs
+inherit eutils toolchain-funcs
 
 DESCRIPTION="Small forking webserver with optional ssl and ipv6 support"
 HOMEPAGE="http://www.acme.com/software/mini_httpd/"
@@ -13,7 +13,14 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc s390 sparc x86"
 IUSE="ssl ipv6"
 
-DEPEND="ssl? ( dev-libs/openssl )"
+RDEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="${RDEPEND}"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+}
 
 src_compile() {
 	## we need to hack a bit to have the correct install-dir -- no autoconf :(
