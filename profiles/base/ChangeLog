@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.89 2009/08/01 15:24:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.90 2009/08/08 19:18:52 jmbsvicetto Exp $
+
+  08 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +package.mask:
+  Moved KDE-4.3.0 mask from profiles/package.mask to
+  profiles/base/package.mask - fixes bug 280734.
 
   01 Aug 2009; Steve Dibb <beandog@gentoo.org> use.mask:
   Remove old realcodecs use flag
