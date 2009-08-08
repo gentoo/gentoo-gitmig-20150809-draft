@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/telepathy-idle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.8 2009/08/07 12:29:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/ChangeLog,v 1.9 2009/08/08 03:42:27 tester Exp $
+
+*telepathy-idle-0.1.4 (08 Aug 2009)
+
+  08 Aug 2009; Olivier Crête <tester@gentoo.org>
+  +telepathy-idle-0.1.4.ebuild, metadata.xml:
+  Version bump, enable tests
 
   07 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   telepathy-idle-0.1.2.ebuild, +files/telepathy-idle-0.1.2-glibc-2.10.patch:
