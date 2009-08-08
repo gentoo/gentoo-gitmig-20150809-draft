@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r1.ebuild,v 1.2 2007/06/26 23:57:35 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/iwidgets/iwidgets-4.0.1-r2.ebuild,v 1.1 2009/08/08 01:23:42 mescalinum Exp $
 
 inherit multilib
 
@@ -20,6 +20,7 @@ IUSE=""
 
 DEPEND=">=dev-tcltk/itcl-3.2.1
 	>=dev-tcltk/itk-3.2.1"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -41,5 +42,13 @@ src_install() {
 	emake -j1 INSTALL_ROOT="${D}" install || die "emake install failed"
 
 	dodoc CHANGES ChangeLog README license.terms
-	doman doc/*.n
+
+	# bug 247184 - iwidget installs man pages in /usr/man
+	mkdir -p "${D}"/usr/share/man/mann
+	mv "${D}"/usr/man/mann/* "${D}"/usr/share/man/mann/
+	rm -rf "${D}"/usr/man
+
+	# demos are in the wrong place:
+	mkdir -p "${D}/usr/share/doc/${PVR}"
+	mv "${D}/usr/$(get_libdir)/${MY_P}/demos" "${D}/usr/share/doc/${PVR}/"
 }
