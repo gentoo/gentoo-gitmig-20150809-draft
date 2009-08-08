@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-1.2.ebuild,v 1.1 2009/04/27 19:15:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/rawstudio/rawstudio-1.2.ebuild,v 1.2 2009/08/08 08:31:15 maekke Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="a program to read and manipulate raw images from digital cameras."
@@ -25,9 +26,12 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+}
+
+src_configure() {
 	econf --disable-dependency-tracking
-	emake || die "emake failed."
 }
 
 src_install() {
