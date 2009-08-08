@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/flvstreamer-1.8i.ebuild,v 1.1 2009/08/08 09:18:43 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/flvstreamer/flvstreamer-1.8i.ebuild,v 1.2 2009/08/08 10:54:31 hwoarang Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs
 
-DESCRIPTION="open source command-line RTMP client intended to stream audio or video flash content"
+DESCRIPTION="Open source command-line RTMP client intended to stream audio or video flash content"
 HOMEPAGE="http://savannah.nongnu.org/projects/flvstreamer/"
 SRC_URI="http://ftp.cc.uoc.gr/mirrors/nongnu.org/${PN}/source/${P}.tar.gz"
 
