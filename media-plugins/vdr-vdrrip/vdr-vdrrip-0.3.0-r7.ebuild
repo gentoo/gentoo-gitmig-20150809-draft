@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/vdr-vdrrip-0.3.0-r7.ebuild,v 1.1 2007/09/17 22:56:35 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-vdrrip/vdr-vdrrip-0.3.0-r7.ebuild,v 1.2 2009/08/08 22:24:39 ssuominen Exp $
 
 inherit vdr-plugin eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.a-land.de/${P}.tgz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-video/vdr-1.2.0"
@@ -23,6 +23,7 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	vdr-plugin_src_unpack
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	cp ${DISTDIR}/queuehandler-fixed-0.3.0.sh ${S}/scripts/queuehandler.sh
 
 	if
