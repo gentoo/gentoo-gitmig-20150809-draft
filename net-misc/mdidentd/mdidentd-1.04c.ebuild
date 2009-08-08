@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04c.ebuild,v 1.1 2007/04/10 13:40:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mdidentd/mdidentd-1.04c.ebuild,v 1.2 2009/08/08 18:55:25 vostorga Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
+RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/ezbounce-${PV}
 
@@ -27,11 +28,12 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}"/1.04a-security.patch
 	epatch "${FILESDIR}"/1.04a-pidfile.patch
+	epatch "${FILESDIR}"/1.04a-glibc210.patch
 }
 
 src_compile() {
 	econf $(use_with ssl) || die
-	emake -C mdidentd CXX_OPTIMIZATIONS="${CXXFLAGS}" || die
+	emake CXX="$(tc-getCXX)" -C mdidentd CXX_OPTIMIZATIONS="${CXXFLAGS}" || die
 }
 
 src_install() {
