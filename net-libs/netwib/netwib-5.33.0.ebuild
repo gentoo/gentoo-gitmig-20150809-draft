@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.33.0.ebuild,v 1.4 2007/04/16 08:28:33 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/netwib/netwib-5.33.0.ebuild,v 1.5 2009/08/08 20:31:44 flameeyes Exp $
 
 # NOTE: netwib, netwox and netwag go together, bump all or bump none
 
@@ -36,7 +36,7 @@ src_unpack() {
 		-e "s:-O2:${CFLAGS}:" \
 		config.dat
 
-	./genemake || die "problem creating Makefile"
+	sh genemake || die "problem creating Makefile"
 }
 
 src_compile() {
