@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.4.ebuild,v 1.3 2008/04/28 10:59:19 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/vdr-radio-0.2.4.ebuild,v 1.4 2009/08/08 19:50:34 ssuominen Exp $
 
 inherit vdr-plugin eutils
 
@@ -13,9 +13,15 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND=">=media-video/vdr-1.3.43"
+RDEPEND=">=media-video/vdr-1.3.43"
+DEPEND="${RDEPEND}"
 
 VDR_RCADDON_FILE="${FILESDIR}/rc-addon.sh-0.2.0"
+
+src_unpack() {
+	vdr-plugin_src_unpack
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+}
 
 src_install() {
 	vdr-plugin_src_install

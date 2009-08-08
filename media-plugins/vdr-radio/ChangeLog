@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-radio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/ChangeLog,v 1.20 2008/04/28 10:59:19 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-radio/ChangeLog,v 1.21 2009/08/08 19:50:34 ssuominen Exp $
+
+  08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  vdr-radio-0.2.4.ebuild, +files/vdr-radio-0.2.4-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #276281.
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> vdr-radio-0.2.0.ebuild,
   vdr-radio-0.2.4.ebuild:
