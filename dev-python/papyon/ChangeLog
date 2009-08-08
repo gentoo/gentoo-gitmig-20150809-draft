@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/papyon
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.1 2009/08/08 03:14:55 tester Exp $
+
+*papyon-0.4.1 (08 Aug 2009)
+
+  08 Aug 2009; Olivier Crête <tester@gentoo.org> +papyon-0.4.1.ebuild,
+  +metadata.xml:
+  Initial import
+
