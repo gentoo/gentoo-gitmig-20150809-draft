@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.8 2009/01/10 12:42:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.9 2009/08/08 00:57:28 bicatali Exp $
+
+*pyfltk-1.1.4 (08 Aug 2009)
+
+  08 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> +pyfltk-1.1.4.ebuild:
+  Version bump
 
   10 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org>
   +files/pyfltk-1.1.3-python25.patch, pyfltk-1.1.3.ebuild:
