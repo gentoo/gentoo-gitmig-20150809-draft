@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.1 2009/08/08 02:44:02 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.2 2009/08/08 02:45:27 mescalinum Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,6 +17,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 
 DEPEND=">=dev-lang/tk-8.0
 	x11-libs/libX11"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}${PV}${MY_V_SUFFIX}"
 
