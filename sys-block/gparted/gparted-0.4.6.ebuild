@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.4.4.ebuild,v 1.2 2009/04/27 00:52:24 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.4.6.ebuild,v 1.1 2009/08/08 21:47:21 eva Exp $
+
+EAPI="1"
+GCONF_DEBUG="no"
 
 inherit eutils gnome2
 
@@ -42,7 +45,8 @@ DEPEND="${common_depends}
 	>=dev-util/pkgconfig-0.12
 	>=dev-util/intltool-0.35.5
 	app-text/scrollkeeper
-	app-text/gnome-doc-utils"
+	app-text/gnome-doc-utils
+	app-text/docbook-xml-dtd:4.1.2"
 
 DOCS="AUTHORS NEWS ChangeLog README"
 
@@ -55,7 +59,10 @@ src_unpack() {
 }
 
 pkg_setup() {
-	G2CONF="${G2CONF} --enable-doc --disable-scrollkeeper GKSUPROG=/bin/true"
+	G2CONF="${G2CONF}
+		--enable-doc
+		--disable-scrollkeeper
+		GKSUPROG=$(type -P true)"
 }
 
 src_install() {
