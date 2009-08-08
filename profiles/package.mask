@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10229 2009/08/08 09:35:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10230 2009/08/08 09:37:06 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
+# Masked by treecleaners for removal. Doesn't compile wrt #240257.
+dev-util/hxd
 
 # Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
 # Masked by treecleaners for removal. Doesn't compile wrt #239776.
