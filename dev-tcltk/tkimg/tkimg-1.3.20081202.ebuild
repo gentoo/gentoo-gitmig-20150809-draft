@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.2 2009/01/09 22:42:39 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.3 2009/08/08 03:01:32 mescalinum Exp $
 
 inherit eutils
 
@@ -20,6 +20,8 @@ DEPEND="dev-lang/tk
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff"
+
+RESTRICT="test"
 
 src_unpack() {
 	unpack ${A}
