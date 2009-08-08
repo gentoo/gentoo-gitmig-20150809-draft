@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.1 2009/08/08 02:24:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.2 2009/08/08 02:28:13 tester Exp $
 
 DESCRIPTION="A SIP connection manager for Telepathy based around the Sofia-SIP library."
-HOMEPAGE="http://sourceforge.net/projects/tp-sofiasip/"
-SRC_URI="mirror://sourceforge/tp-sofiasip/${P}.tar.gz"
+HOMEPAGE="http://telepathy.freedesktop.org/"
+SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
