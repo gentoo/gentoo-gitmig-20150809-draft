@@ -1,6 +1,12 @@
 # ChangeLog for dev-tcltk/mysqltcl
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.12 2008/04/10 18:31:56 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mysqltcl/ChangeLog,v 1.13 2009/08/08 01:08:07 mescalinum Exp $
+
+*mysqltcl-3.05 (08 Aug 2009)
+
+  08 Aug 2009; Federico Ferri <mescalinum@gentoo.org> -mysqltcl-3.02.ebuild,
+  +mysqltcl-3.05.ebuild:
+  version bump 3.05
 
   10 Apr 2008; Ferris McCormick <fmccor@gentoo.org> mysqltcl-3.02.ebuild:
   Add ~sparc at user's (LabMonkey) suggestion. Nice application and appears to
