@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10240 2009/08/08 14:21:07 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10241 2009/08/08 15:25:13 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (08 Aug 2009)
+# Emacs live CVS ebuilds. Use at your own risk.
+app-editors/emacs-cvs
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, no updates since 1/18/06
@@ -944,12 +948,6 @@ net-fs/samba-server
 #
 # Pending removal 22 August 2009
 sys-apps/realtime-lsm
-
-# Ulrich Mueller <ulm@gentoo.org> (21 Jun 2009)
-# Emacs 23 live CVS ebuilds and packages depending on them plus some
-# prerequisite works for Emacs 24
-~app-editors/emacs-cvs-23.1.9999
->=virtual/emacs-24
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2009)
 #  on behalf of QA Team
