@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.61 2009/04/25 22:12:22 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.62 2009/08/08 22:09:56 ssuominen Exp $
+
+  08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> kdbg-2.1.1.ebuild,
+  +files/kdbg-2.1.1-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #277774, thanks to Evan Teran for patch.
 
 *kdbg-2.1.1 (25 Apr 2009)
 
