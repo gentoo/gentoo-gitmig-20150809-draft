@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.8.2.ebuild,v 1.1 2009/07/30 12:49:01 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.8.3.ebuild,v 1.1 2009/08/08 17:42:03 hwoarang Exp $
 
 EAPI="2"
 
@@ -16,11 +16,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug +oauth"
 
 DEPEND="x11-libs/qt-gui:4
-	oauth? ( dev-libs/qoauth )"
+	oauth? ( >=dev-libs/qoauth-1.0 )"
 RDEPEND="${DEPEND}"
 
 QTWITTER_LANGS="pt_BR"
-QTWITTER_NOLONGLANGS="ca_ES de_DE es_ES fr_FR ja_JP pl_PL"
+QTWITTER_NOLONGLANGS="ca_ES de_DE es_ES fr_FR it_IT ja_JP pl_PL"
 
 for L in $QTWITTER_LANGS; do
 	IUSE="$IUSE linguas_$L"
@@ -51,7 +51,7 @@ src_prepare() {
 	    -e "/^TRANSLATIONS/s:loc.*:${langs}:" \
 	        qtwitter-app/qtwitter-app.pro || die "sed failed"
 	# first line fixes bug about unsecure runpaths
-	# second disables docs installation by make (done by dodoc in install)
+	# second disables docs installation by make (done by dodoc)
 	sed -i -e '/-Wl,-rpath,\$\${TOP}/d' \
 	    -e '/doc \\/d' \
 	    qtwitter-app/qtwitter-app.pro || die "sed failed"
@@ -59,7 +59,9 @@ src_prepare() {
 	sed -i "s!\(\$\${INSTALL_PREFIX}\)/lib!\1/$(get_libdir)!" \
 		twitterapi/twitterapi.pro urlshortener/urlshortener.pro || die "sed failed"
 
-	use oauth || sed -i '/DEFINES += OAUTH/d' ${PN}.pri
+	if ! use oauth; then
+		sed -i '/DEFINES += OAUTH/d' ${PN}.pri || die "sed failed"
+	fi
 }
 
 src_configure() {
