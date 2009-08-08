@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.0.1.ebuild,v 1.3 2009/08/05 18:38:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decorator/decorator-3.0.1.ebuild,v 1.4 2009/08/08 00:55:22 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -27,7 +27,7 @@ src_test() {
 	# multiprocessing module is available only in Python >=2.6, and isn't used anyway.
 	sed -i -e '/multiprocessing/d' documentation.py || die
 	testing() {
-		PYTHONPATH="build/lib-${PYTHON_ABI}" "$(PYTHON)" documentation.py
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" documentation.py
 	}
 	python_execute_function testing
 }
