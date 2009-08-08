@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3041 2009/08/08 15:35:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3042 2009/08/08 17:08:17 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Removed notification-daemon-xfce, xfkc and gsynaptics-mcs-plugin from
+  tree.
 
   08 Aug 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   app-text/remem is gone.

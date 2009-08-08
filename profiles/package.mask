@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10242 2009/08/08 15:35:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10243 2009/08/08 17:08:17 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -457,12 +457,6 @@ x11-themes/mplayer-skins
 sec-policy/selinux-lvm
 sec-policy/selinux-mdadm
 
-# Samuli Suominen <ssuominen@gentoo.org> (02 Aug 2009)
-# Outdated. Needs Xfce 4.4 style xfce-mcs-manager.
-# Use notification-daemon or xfce4-notifyd.
-xfce-extra/gsynaptics-mcs-plugin
-x11-misc/notification-daemon-xfce
-
 # Steve Dibb <beandog@gentoo.org> (01 Aug 2009)
 # Mask for removal, name change to app-text/xiphos
 # bug 278973
@@ -645,11 +639,6 @@ app-admin/haskell-updater
 # Waiting for TeamSpeak 3 to be released.
 media-sound/teamspeak2-server-bin
 media-sound/teamspeak2-client-bin
-
-# Samuli Suominen <ssuominen@gentoo.org> (20 Jul 2009)
-# Obsolete. Codebase has been merged into xfwm4 and xfce4-xkb.
-# Doesn't compile with >=libxklavier-4 wrt #278466.
-x11-misc/xfkc
 
 # Torsten Veller <tove@gentoo.org> (19 Jul 2009)
 # Fix your dependencies:
