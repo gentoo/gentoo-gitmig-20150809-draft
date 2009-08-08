@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10235 2009/08/08 12:00:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10236 2009/08/08 13:18:48 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (8 Aug 2009)
+#  on behalf of QA Team
+#
+# Mass-masking of live ebuilds; we cannot guarantee working state of
+# live ebuilds, nor the availability of the server hosting them. As
+# per QA team policy, all these need to be kept masked by default, if
+# available in the tree.
+dev-lisp/cl-arnesi-darcs
+dev-lisp/cl-fiveam-darcs
+dev-lisp/cl-parenscript-darcs
+dev-lisp/cl-rfc2109-darcs
+dev-lisp/cl-rfc2388-darcs
+dev-lisp/cl-yaclml-darcs
+media-tv/v4l-dvb-hg
+dev-embedded/sdcc-svn
+~sys-fs/yaffs-utils-9999
+games-emulation/dosbox-cvs
 
 # Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
 # Masked by treecleaners for removal. Doesn't compile wrt #273716.
@@ -124,16 +142,6 @@ www-apps/phpgroupware
 >=dev-libs/soprano-2.3.0
 sys-auth/policykit-qt
 app-misc/hal-cups-utils
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (29 Jul 2009)
-#  on behalf of QA Team
-# Live ebuild, we cannot guarantee its working state
-dev-lisp/cl-arnesi-darcs
-dev-lisp/cl-fiveam-darcs
-dev-lisp/cl-parenscript-darcs
-dev-lisp/cl-rfc2109-darcs
-dev-lisp/cl-rfc2388-darcs
-dev-lisp/cl-yaclml-darcs
 
 # Alex Alexander <wired@gentoo.org> (03 Aug 2009)
 # masking kde 4.3 ebuilds before mass-commit
@@ -478,11 +486,6 @@ net-misc/asterisk-chan_bluetooth
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (29 Jul 2009)
 #  on behalf of QA Team
-# Live ebuild, we cannot guarantee its working state
-media-tv/v4l-dvb-hg
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (29 Jul 2009)
-#  on behalf of QA Team
 #
 # Fails to build with gcc 4.3 (bug #240614), 4.4 (bug #278432) and mixes
 # compiler flags (bug #199585).
@@ -657,11 +660,6 @@ dev-python/cjkcodecs
 #
 # Removal on 2009-09-14
 dev-util/jscalltree
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (14 Jul 2009)
-#  on behalf of QA Team
-# Live ebuild, we cannot guarantee its working state
-dev-embedded/sdcc-svn
 
 # Rémi Cardona <remi@gentoo.org> (13 Jul 2009)
 # broken and unmaintained by upstream, masked for removal in 30 days
@@ -979,10 +977,6 @@ net-dialup/speedtouch
 #
 # Removal pending 16 August 2009
 sys-apps/ddcxinfo-knoppix
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (15 Jun 2009)
-# Live ebuild, we cannot guarantee its working state
-~sys-fs/yaffs-utils-9999
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
 #  on behalf of QA Team
