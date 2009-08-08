@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.3 2009/08/08 02:51:16 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.4 2009/08/08 03:06:43 tester Exp $
 
 inherit autotools
 
@@ -17,12 +17,12 @@ RDEPEND=">=net-libs/sofia-sip-1.12.10
 	>=net-libs/telepathy-glib-0.7.27
 	>=dev-libs/glib-2.16
 	sys-apps/dbus
-	dev-libs/dbus-glib
-	test? ( dev-python/twisted )"
+	dev-libs/dbus-glib"
 
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
-	dev-lang/python"
+	dev-lang/python
+	test? ( dev-python/twisted )"
 
 src_unpack() {
 	unpack ${A}
