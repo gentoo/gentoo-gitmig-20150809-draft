@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.3_p1.ebuild,v 1.2 2009/06/06 14:50:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poco/poco-1.3.3_p1.ebuild,v 1.3 2009/08/08 12:27:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/poco/${MY_P}-all.tar.bz2
 LICENSE="Boost-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc examples iodbc mysql odbc sqlite ssl"
+IUSE="doc examples iodbc mysql odbc sqlite ssl test"
 
 DEPEND="dev-libs/libpcre
 	dev-libs/expat
@@ -63,7 +63,7 @@ src_configure() {
 		echo Data/MySQL >> components
 	fi
 
-	if has test ${FEATURES}; then
+	if use test; then
 		targets="${targets} cppunit tests"
 		echo CppUnit >> components
 		use ssl && targets="${targets} NetSSL_OpenSSL-tests Crypto-tests"
@@ -73,7 +73,7 @@ src_configure() {
 	fi
 
 	local myconf
-	has test ${FEATURES} || myconf="--no-tests"
+	use test || myconf="--no-tests"
 	# not autoconf
 	./configure \
 		--no-samples ${myconf} \
