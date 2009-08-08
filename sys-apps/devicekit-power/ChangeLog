@@ -1,0 +1,13 @@
+# ChangeLog for sys-apps/devicekit-power
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.1 2009/08/08 22:29:30 eva Exp $
+
+*devicekit-power-009 (08 Aug 2009)
+
+  08 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +files/devicekit-power-007-maintainer-cflags.patch,
+  +devicekit-power-009.ebuild,
+  +files/devicekit-power-009-build-gcc-4.1.2.patch, +metadata.xml:
+  Initial ebuild presumably from nirbheek. Dependency of
+  gnome-power-manager-2.26.
+
