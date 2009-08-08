@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.1.ebuild,v 1.2 2009/05/17 10:35:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.1.ebuild,v 1.3 2009/08/08 22:43:26 ssuominen Exp $
 
 inherit eutils elisp-common
 
@@ -23,8 +23,13 @@ DEPEND="dev-libs/gmp
 
 SITEFILE=50${PN}-gentoo.el
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+}
 
+src_compile() {
 	econf \
 		$(use_enable xml) \
 		$(use_enable ofx) \
