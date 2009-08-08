@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10221 2009/08/07 20:47:05 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10222 2009/08/08 01:33:35 mescalinum Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
+# Doesn't build with Tcl 8.5, has several bugs open
+=dev-tcltk/tcl-debug-2.0
 
 # Jorge Manuel B. S. Vicetto <jmbsvicett@gentoo.org> (07 Aug 2009)
 # Update the mask to match only system-config-printer-kde-4.2.4
