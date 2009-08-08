@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.14.0.ebuild,v 1.1 2007/10/13 00:55:13 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.15.10.ebuild,v 1.1 2009/08/08 02:20:45 tester Exp $
 
 inherit distutils
 
@@ -10,8 +10,8 @@ SRC_URI="http://telepathy.freedesktop.org/releases/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
 IUSE=""
 
-DEPEND=""
-RDEPEND=">=dev-python/dbus-python-0.71"
+DEPEND="dev-libs/libxslt"
+RDEPEND=">=dev-python/dbus-python-0.80"
