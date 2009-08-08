@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-idle/telepathy-idle-0.1.4.ebuild,v 1.1 2009/08/08 02:37:08 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-idle/telepathy-idle-0.1.4.ebuild,v 1.2 2009/08/08 02:38:45 tester Exp $
 
 DESCRIPTION="A IRC connection manager for Telepathy"
 HOMEPAGE="http://telepathy.freedesktop.org/"
@@ -17,7 +17,7 @@ RDEPEND=">=net-libs/telepathy-glib-0.7.15
 	sys-apps/dbus
 	>=dev-libs/openssl-0.9.7
 	dev-libs/dbus-glib
-	tests? ( dev-python/twisted-words )"
+	test? ( dev-python/twisted-words )"
 
 DEPEND="${RDEPEND}
 	dev-libs/libxslt
