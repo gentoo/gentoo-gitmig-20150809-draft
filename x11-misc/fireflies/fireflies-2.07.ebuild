@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.7 2009/04/29 18:04:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.07.ebuild,v 1.8 2009/08/09 18:18:30 ssuominen Exp $
 
 inherit eutils multilib
 
@@ -27,6 +27,7 @@ src_unpack() {
 	sed -i -e '/gunzip/d' Makefile
 	tar xzf libgfx-1.0.1.tar.gz
 	epatch "${FILESDIR}"/${PN}-2.07-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
