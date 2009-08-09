@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/mkinitrd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.23 2008/10/14 15:28:49 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.24 2009/08/09 16:22:09 ssuominen Exp $
+
+*mkinitrd-4.2.0.3-r1 (09 Aug 2009)
+
+  09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +mkinitrd-4.2.0.3-r1.ebuild, +files/mkinitrd-4.2.0.3-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #271605.
 
   14 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   mkinitrd-4.2.0.3.ebuild:
