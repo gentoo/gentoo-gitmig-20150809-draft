@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.25 2009/08/09 15:35:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml/ChangeLog,v 1.26 2009/08/09 18:51:07 jer Exp $
+
+  09 Aug 2009; Jeroen Roovers <jer@gentoo.org> libxml-1.8.17-r3.ebuild:
+  Stable for HPPA (bug #280470).
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> libxml-1.8.17-r3.ebuild:
   ppc stable #280470
