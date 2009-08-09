@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10290 2009/08/09 21:52:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10291 2009/08/09 22:09:04 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
+#  on behalf of QA team
+#
+# Fail to build with glibc 2.8 (bug #239935).
+#
+# Removal on 2009-10-09
+app-backup/afbackup-client
+app-backup/afbackup-server
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
