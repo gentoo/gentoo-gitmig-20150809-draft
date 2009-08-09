@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10.ebuild,v 1.1 2008/10/27 21:40:46 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10.ebuild,v 1.2 2009/08/09 07:22:19 mescalinum Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -44,6 +44,7 @@ src_compile() {
 
 	econf \
 		$(use_with gpm gpm-support) \
+		$(use_with tcl) \
 		$(use_enable nls)
 
 	# not parallel safe
