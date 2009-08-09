@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/poppler-glib/poppler-glib-0.10.7.ebuild,v 1.7 2009/07/17 14:02:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/poppler-glib/poppler-glib-0.10.7.ebuild,v 1.8 2009/08/09 11:55:00 nixnut Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ DESCRIPTION="Glib bindings for poppler"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 IUSE="+cairo"
 
 # The Cairo renderer represents a superset of the splash renderer.
