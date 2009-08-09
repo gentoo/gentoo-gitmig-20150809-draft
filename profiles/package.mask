@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10278 2009/08/09 19:15:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10279 2009/08/09 19:35:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -599,16 +599,6 @@ virtual/perl-IO-Compress-Base
 # cjkcodecs modules are included in Python >=2.4. Separate dev-python/cjkcodecs package
 # isn't needed anymore and fails tests (bug #277773). Masked for deletion in 30 days.
 dev-python/cjkcodecs
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (14 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to build with glibc 2.10 (bug #277833), doesn't respect
-# CC (bug #244010) nor CFLAGS (bug #240281). Unmaintained in Gentoo
-# and unneeded by in-tree packages.
-#
-# Removal on 2009-09-14
-dev-util/jscalltree
 
 # Rémi Cardona <remi@gentoo.org> (13 Jul 2009)
 # broken and unmaintained by upstream, masked for removal in 30 days
