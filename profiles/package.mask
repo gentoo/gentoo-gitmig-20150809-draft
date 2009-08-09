@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10252 2009/08/09 16:02:15 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10253 2009/08/09 16:10:57 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
+#  on behalf of QA team
+#
+# Fails to build with glibc 2.8 (bug #241416, October 2008,
+# now stable). Abuses $ROOT (bug #258122). Lacks maintainers.
+#
+# Removal on 2009-10-08
+sys-fs/ocfs2-tools
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
 #
