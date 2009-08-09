@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3-r2.ebuild,v 1.2 2009/01/26 01:48:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intel2gas/intel2gas-1.3.3-r2.ebuild,v 1.3 2009/08/09 15:30:54 vostorga Exp $
 
 inherit eutils autotools toolchain-funcs
 
@@ -18,13 +18,14 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-nostrip.patch
 	epatch "${FILESDIR}"/${P}-cxx.patch
 	epatch "${FILESDIR}"/${P}-constchar.patch
+	epatch "${FILESDIR}"/${P}-glibc210.patch
 	eautomake
 }
 
 src_compile() {
 	tc-export CXX
 	econf
-	emake
+	emake || die "emake failed"
 }
 
 src_install() {
