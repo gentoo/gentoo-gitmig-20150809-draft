@@ -1,6 +1,10 @@
 # ChangeLog for games-util/agistudio
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.10 2008/07/27 21:41:55 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.11 2009/08/09 19:13:24 ssuominen Exp $
+
+  09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  agistudio-1.2.2.ebuild, +files/agistudio-1.2.2-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #273367.
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> agistudio-1.2.2.ebuild:
   QA: Get rid of deprecated qt_min_version().
