@@ -1,6 +1,12 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.110 2009/05/10 22:10:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.111 2009/08/09 10:40:30 eva Exp $
+
+  09 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/epiphany-extensions-2.21.92-sessionsaver-v4.patch.gz,
+  epiphany-extensions-2.22.2.ebuild, epiphany-extensions-2.24.3.ebuild,
+  epiphany-extensions-2.24.3-r10.ebuild, epiphany-extensions-2.26.1.ebuild:
+  Move gzip'ed patch to mirors, bug #274881.
 
 *epiphany-extensions-2.26.1 (10 May 2009)
 
