@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre4.ebuild,v 1.6 2008/10/25 11:18:13 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mp3ng/vdr-mp3ng-0.0.1_pre4.ebuild,v 1.7 2009/08/09 19:29:42 ssuominen Exp $
 
 inherit vdr-plugin eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc4.diff"
 	epatch "${DISTDIR}/${P}-span-0.0.3.diff.tar.gz"
 	epatch "${FILESDIR}/${P}-vdr-1.5.1.diff"
+	epatch "${FILESDIR}/${P}-glibc-2.10.patch"
 
 	use !vorbis && sed -i "s:#WITHOUT_LIBVORBISFILE:WITHOUT_LIBVORBISFILE:" Makefile
 	use oss && sed -i "s:#WITH_OSS_OUTPUT:WITH_OSS_OUTPUT:" Makefile
