@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.9a-r1.ebuild,v 1.2 2009/06/03 20:43:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audtty/audtty-0.1.9a-r1.ebuild,v 1.3 2009/08/09 11:37:24 nixnut Exp $
 
 inherit autotools eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://${PN}.alioth.debian.org/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc x86"
+KEYWORDS="~alpha amd64 ppc x86"
 IUSE=""
 
 RDEPEND="sys-libs/ncurses
