@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/httping
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.47 2008/08/27 12:03:16 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.48 2009/08/09 14:16:05 ssuominen Exp $
+
+*httping-1.2.9-r1 (09 Aug 2009)
+
+  09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +httping-1.2.9-r1.ebuild:
+  Fix building with GLIBC 2.10+ wrt #277231, thanks to Markus Peloquin and
+  Andrew Savchenko.
 
   27 Aug 2008; Thomas Anderson <gentoofan23@gentoo.org>
   httping-1.2.6.ebuild:
