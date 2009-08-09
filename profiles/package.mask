@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10264 2009/08/09 17:34:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10265 2009/08/09 17:40:53 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
+#  on behalf of QA team
+#
+# dev-util/sgb: fails with parallel make, without stopping
+# ebuild (installing broken data).
+#
+# sci-misc/gt-itm: depend on sgb, fails to build because of
+# the bug above (bug #248373).
+#
+# Removal on 2009-10-08
+dev-util/sgb
+sci-misc/gt-itm
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (09 Aug 2009)
 # Masked for removal in 30 days due to security vulnerability (bug #280494).
