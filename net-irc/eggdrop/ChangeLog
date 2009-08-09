@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/eggdrop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.82 2009/08/09 11:35:50 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/ChangeLog,v 1.83 2009/08/09 16:45:03 armin76 Exp $
+
+  09 Aug 2009; Raúl Porcel <armin76@gentoo.org> eggdrop-1.6.19.ebuild:
+  alpha/ia64/sparc stable wrt #270221
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> eggdrop-1.6.19.ebuild:
   ppc stable #270221
