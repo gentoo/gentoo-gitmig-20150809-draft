@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.24 2009/02/17 03:28:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.6.ebuild,v 1.25 2009/08/09 16:43:31 halcy0n Exp $
 
 inherit eutils flag-o-matic libtool multilib
 
@@ -93,6 +93,9 @@ do_filter_flags() {
 	# xgcc isnt patched with the gcc symbol visibility patch
 	filter-flags -fvisibility-inlines-hidden
 	filter-flags -fvisibility=hidden
+
+	# bug #269433
+	filter-flags -fno-strict-overflow
 
 	# ...sure, why not?
 	strip-unsupported-flags
