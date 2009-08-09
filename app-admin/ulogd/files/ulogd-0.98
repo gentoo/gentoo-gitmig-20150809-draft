@@ -3,15 +3,14 @@
 # chkconfig: - 91 35
 # description: Starts and stops the ulogd daemon
 #
-# pidfile: /var/lock/samba/ulogd.pid
-# config:  /usr/local/etc/ulogd.conf
+# config:  /etc/ulogd.conf
 
 
 opts="${opts} reload"
 
 depend() {
 	need net
-    use mysql
+	use mysql
 }
 
 initService() {
