@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10275 2009/08/09 18:49:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10276 2009/08/09 19:09:32 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
+#  on behalf of QA team
+#
+# Fails to build with _FORTIFY_SOURCE=2 (bug #264094) and
+# gcc 4.4 (bug #280824). Upstream disappeared.
+#
+# Removal on 2009-10-08
+net-fs/fex
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
