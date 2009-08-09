@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sndpeek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/ChangeLog,v 1.6 2009/08/08 18:14:30 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/ChangeLog,v 1.7 2009/08/09 10:43:12 cedk Exp $
+
+  09 Aug 2009; Cédric Krier <cedk@gentoo.org> sndpeek-1.3-r2.ebuild:
+  Add einfo for eselect update and use backend's Makefile to clean up
 
 *sndpeek-1.3-r2 (08 Aug 2009)
 

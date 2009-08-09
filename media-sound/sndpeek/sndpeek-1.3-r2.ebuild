@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/sndpeek-1.3-r2.ebuild,v 1.1 2009/08/08 18:14:30 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sndpeek/sndpeek-1.3-r2.ebuild,v 1.2 2009/08/09 10:43:12 cedk Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -46,7 +46,7 @@ compile_backend() {
 	emake -f "makefile.${backend}" CC=$(tc-getCC) \
 		CXX=$(tc-getCXX) || die "emake failed"
 	mv sndpeek{,-${backend}}
-	emake clean
+	emake -f "makefile.${backend}" clean
 	cd -
 }
 
@@ -64,5 +64,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	elog "Sndpeek now can use many audio engines, so you can specify audio engine"
+	elog "with sndpeek-{jack,alsa,oss}"
+	elog "Or you can use 'eselect sndpeek' to set the audio engine"
+
+	einfo "Calling eselect sndpeek update..."
 	eselect sndpeek update --if-unset
 }
