@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r7.ebuild,v 1.6 2008/06/26 08:39:18 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thttpd/thttpd-2.25b-r7.ebuild,v 1.7 2009/08/09 13:39:07 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${MY_P}/*.diff
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 pkg_setup() {
