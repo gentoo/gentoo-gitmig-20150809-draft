@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3043 2009/08/08 19:31:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3044 2009/08/09 08:34:47 spock Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Aug 2009; Michał Januszewski <spock@gentoo.org> package.mask:
+  Add a mask for live git versions of pycuda and pytools.
 
   08 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:

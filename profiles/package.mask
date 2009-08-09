@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10245 2009/08/09 06:58:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10246 2009/08/09 08:34:47 spock Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michał Januszewski <spock@gentoo.org> (08 Aug 2009)
+# Live git ebuilds for pycuda/pytools. Use at your own risk, do not
+# report Gentoo bugs if stuff breaks after you install them.
+=dev-python/pytools-9999
+=dev-python/pycuda-9999
 
 # Ulrich Mueller <ulm@gentoo.org> (08 Aug 2009)
 # Emacs live CVS ebuilds. Use at your own risk.
