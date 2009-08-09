@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.4.ebuild,v 1.2 2009/06/04 14:16:56 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.2.4-r3.ebuild,v 1.1 2009/08/09 11:29:12 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,15 +14,18 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="akonadi debug examples semantic-desktop"
 
 DEPEND="
-	>=dev-python/PyQt4-4.4.4-r1[dbus,qt3support,svg,webkit,X]
+	>=dev-python/PyQt4-4.5_pre1[dbus,svg,webkit,X]
 	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,opengl,semantic-desktop?]
 	akonadi? ( >=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=] )
 "
 # blocker added due to compatibility issues and error during compile time
 RDEPEND="${DEPEND}
 	!dev-python/pykde
-	!>=dev-python/PyQt4-4.5_pre1
 "
+PATCHES=(
+	"${FILESDIR}"/pykde4_sip-4.8.patch
+	"${FILESDIR}"/pykde4-installation-fix.patch
+)
 
 src_prepare() {
 	kde4-meta_src_prepare
