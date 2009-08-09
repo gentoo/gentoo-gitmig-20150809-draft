@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3045 2009/08/09 09:04:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3046 2009/08/09 11:14:58 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  targets/desktop/make.defaults:
+  Enable USE a52 aac mp4 x264 and xvid by default (acked by beandog).
 
   09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask xfce-base/xfce4-extras for removal.
