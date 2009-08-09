@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cgikit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/ChangeLog,v 1.14 2009/08/09 12:16:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cgikit/ChangeLog,v 1.15 2009/08/09 13:44:42 graaff Exp $
+
+  09 Aug 2009; Hans de Graaff <graaff@gentoo.org> -cgikit-1.2.0.ebuild:
+  Remove old version.
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> cgikit-1.2.1.ebuild:
   ppc stable #273964
