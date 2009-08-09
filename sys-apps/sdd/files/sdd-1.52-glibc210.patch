@@ -1,0 +1,45 @@
+diff -NrU5 sdd-1.52.original/include/schily.h sdd-1.52/include/schily.h
+--- sdd-1.52.original/include/schily.h	2009-08-09 16:33:27.000000000 -0600
++++ sdd-1.52/include/schily.h	2009-08-09 16:49:22.000000000 -0600
+@@ -106,11 +106,11 @@
+ extern	int	fexecle __PR((const char *, FILE *, FILE *, FILE *,
+ 							const char *, ...));
+ 		/* 6th arg not const, fexecv forces av[ac] = NULL */
+ extern	int	fexecv __PR((const char *, FILE *, FILE *, FILE *, int,
+ 							char **));
+-extern	int	fexecve __PR((const char *, FILE *, FILE *, FILE *,
++extern	int	f_execve __PR((const char *, FILE *, FILE *, FILE *,
+ 					char * const *, char * const *));
+ extern	int	fspawnv __PR((FILE *, FILE *, FILE *, int, char * const *));
+ extern	int	fspawnl __PR((FILE *, FILE *, FILE *,
+ 					const char *, const char *, ...));
+ extern	int	fspawnv_nowait __PR((FILE *, FILE *, FILE *,
+@@ -185,11 +185,11 @@
+ extern	int	error __PR((const char *, ...)) __printflike__(1, 2);
+ extern	char	*fillbytes __PR((void *, int, char));
+ extern	char	*findbytes __PR((const void *, int, char));
+ extern	int	findline __PR((const char *, char, const char *,
+ 							int, char **, int));
+-extern	int	getline __PR((char *, int));
++extern	int	get_line __PR((char *, int));
+ extern	int	getstr __PR((char *, int));
+ extern	int	breakline __PR((char *, char, char **, int));
+ extern	int	getallargs __PR((int *, char * const**, const char *, ...));
+ extern	int	getargs __PR((int *, char * const**, const char *, ...));
+ extern	int	getfiles __PR((int *, char * const**, const char *));
+diff -NrU5 sdd-1.52.original/libschily/stdio/fgetline.c sdd-1.52/libschily/stdio/fgetline.c
+--- sdd-1.52.original/libschily/stdio/fgetline.c	2009-08-09 16:33:27.000000000 -0600
++++ sdd-1.52/libschily/stdio/fgetline.c	2009-08-09 16:45:03.000000000 -0600
+@@ -62,11 +62,11 @@
+ 
+ 	return (bp - buf);
+ }
+ 
+ EXPORT int
+-getline(buf, len)
++get_line(buf, len)
+ 	char	*buf;
+ 	int	len;
+ {
+ 	return (fgetline(stdin, buf, len));
+ }
