@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/pgaccess
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.15 2008/05/21 15:56:32 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.16 2009/08/09 03:06:31 mescalinum Exp $
+
+*pgaccess-0.99.0.20040219-r1 (09 Aug 2009)
+
+  09 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  +pgaccess-0.99.0.20040219-r1.ebuild,
+  +files/pgaccess-0.99.0.20040219-tcl8.5.patch:
+  fix bug 247210
 
   21 May 2008; Tiziano Müller <dev-zero@gentoo.org> pgaccess-0.98.8.ebuild,
   pgaccess-0.99.0.20040219.ebuild:
