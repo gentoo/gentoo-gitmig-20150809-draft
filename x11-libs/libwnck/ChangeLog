@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.219 2009/08/08 23:34:45 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.220 2009/08/09 18:58:10 ford_prefect Exp $
+
+*libwnck-2.26.2-r2 (09 Aug 2009)
+
+  09 Aug 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +libwnck-2.26.2-r2.ebuild, +files/libwnck-2.26.2-fix-glib-mkenums.diff:
+  Fix glib-mkenums command-line in Makefile.am (bug 279832)
 
   08 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
   libwnck-2.26.2-r1.ebuild:
