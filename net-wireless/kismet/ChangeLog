@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.105 2009/04/15 13:43:25 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.106 2009/08/09 15:09:23 ssuominen Exp $
+
+  09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kismet-2008.05.1.ebuild, +files/kismet-2008.05.1-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #270845.
 
   15 Apr 2009; Hanno Boeck <hanno@gentoo.org> kismet-2008.05.1.ebuild:
   Add dbus use-flag.
