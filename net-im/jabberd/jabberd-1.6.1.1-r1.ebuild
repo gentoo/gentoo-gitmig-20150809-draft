@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.14 2009/02/18 17:09:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/jabberd-1.6.1.1-r1.ebuild,v 1.15 2009/08/09 17:46:41 ssuominen Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit autotools eutils
@@ -39,6 +39,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 
 	#Shamelessly stolen from Freebsd
 	epatch "${FILESDIR}/${P}-gnutls2.2.patch"
