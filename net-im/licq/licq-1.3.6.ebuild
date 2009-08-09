@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.7 2009/07/31 22:11:34 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/licq/licq-1.3.6.ebuild,v 1.8 2009/08/09 20:05:12 ssuominen Exp $
 
 EAPI="1"
 
@@ -29,6 +29,8 @@ RDEPEND="kde? (
 	xosd? ( x11-libs/xosd )"
 DEPEND="${RDEPEND}
 	dev-libs/boost"
+
+PATCHES=( "${FILESDIR}/${P}-glibc-2.10.patch" )
 
 _generate_plugins_directories() {
 	PLUGINS="auto-reply email rms"
@@ -90,7 +92,7 @@ src_install() {
 	# install core
 	einfo "Installing Licq core."
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc ChangeLog INSTALL README* doc/*
+	dodoc README* doc/*
 	# Install the plug-ins
 	for plugin in ${PLUGINS}; do
 		cd "${S}"/plugins/"${plugin}"
@@ -102,7 +104,6 @@ src_install() {
 		einfo "Installing Licq: \"qt4-gui\"."
 		cmake-utils_src_install
 		docinto plugins/qt4-gui
-		dodoc doc/README*
 	fi
 
 	exeinto /usr/share/${PN}/upgrade
