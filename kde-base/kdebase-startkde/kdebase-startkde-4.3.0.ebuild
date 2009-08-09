@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.3.0.ebuild,v 1.1 2009/08/04 00:12:16 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.3.0.ebuild,v 1.2 2009/08/09 10:40:54 scarabeus Exp $
 
 EAPI="2"
 
@@ -33,6 +33,8 @@ RDEPEND="
 	>=kde-base/plasma-apps-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/plasma-workspace-${PV}:${SLOT}[kdeprefix=]
 	>=kde-base/systemsettings-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/kmimetypefinder-${PV}:${SLOT}[kdeprefix=]
+	>=kde-base/ktimezoned-${PV}:${SLOT}[kdeprefix=]
 	x11-apps/mkfontdir
 	x11-apps/xmessage
 	x11-apps/xprop
