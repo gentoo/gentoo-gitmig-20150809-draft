@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10261 2009/08/09 17:09:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10262 2009/08/09 17:21:00 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -202,10 +202,6 @@ net-wireless/wlassistant
 # Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
 # Masked by treecleaners for removal. Doesn't compile wrt #277941.
 dev-util/cccc
-
-# Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
-# Masked by treecleaners for removal. Doesn't compile wrt #279083.
-net-misc/hsc
 
 # Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
 # Masked by treecleaners for removal. Doesn't compile wrt #277571.
@@ -636,15 +632,6 @@ net-misc/netgo
 #
 # Removal on 2009-09-07
 sci-visualization/qmatplot
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to build with recent glibc (2.10, bug #276861); pointless
-# (hexdump does more or less the same), unmaintained.
-#
-# Removal on 2009-09-07
-sys-apps/hdump
 
 # Ulrich Mueller <ulm@gentoo.org> (06 Jul 2009)
 # Masked for removal in 60 days. Last upstream version is from 2003.
