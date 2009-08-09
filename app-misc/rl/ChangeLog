@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.32 2009/08/03 14:16:51 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.33 2009/08/09 15:18:31 nixnut Exp $
+
+  09 Aug 2009; nixnut <nixnut@gentoo.org> rl-0.2.7.ebuild:
+  ppc stable #279842
 
   03 Aug 2009; Tiago Cunha <tcunha@gentoo.org> rl-0.2.7.ebuild:
   stable sparc, bug 279842
