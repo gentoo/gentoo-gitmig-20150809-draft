@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10289 2009/08/09 21:47:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10290 2009/08/09 21:52:45 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,18 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
+#  on behalf of QA team
+#
+# Lacks a Gentoo maintainer (needs a Japanese
+# speaker). Incompatible with current dev-libs/eb (bug
+# #269526), QA issues (bug #258754), needs a check for
+# pango (bug #246874) and has bad autotools handling (bug
+# #226679). Last release in 2004.
+#
+# Removal on 2009-10-08
+app-dicts/ebview
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
