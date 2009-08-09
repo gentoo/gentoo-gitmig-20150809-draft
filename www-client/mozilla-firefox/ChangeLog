@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.528 2009/08/06 13:39:47 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.529 2009/08/09 16:06:37 gengor Exp $
+
+  09 Aug 2009; Gordon Malm <gengor@gentoo.org> mozilla-firefox-3.5.2.ebuild:
+  Disable jemalloc on hardened, thanks to Anarchy in bug #278698 for the
+  workaround.
 
   06 Aug 2009; Jim Ramsay <lack@gentoo.org> mozilla-firefox-3.5.2.ebuild:
   Proxy commit for Anarchy: missed update from overlay to enable audio.

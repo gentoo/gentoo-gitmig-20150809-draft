@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.2.ebuild,v 1.2 2009/08/06 13:39:47 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-3.5.2.ebuild,v 1.3 2009/08/09 16:06:37 gengor Exp $
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
@@ -25,7 +25,7 @@ HOMEPAGE="http://www.mozilla.com/firefox"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa bindist iceweasel java mozdevelop restrict-javascript" # qt-experimental
+IUSE="+alsa bindist hardened iceweasel java mozdevelop restrict-javascript" # qt-experimental
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
@@ -61,7 +61,7 @@ RDEPEND="
 	>=dev-db/sqlite-3.6.7
 	>=app-text/hunspell-1.2
 	alsa? ( media-libs/alsa-lib )
-	>=net-libs/xulrunner-${XUL_PV}[java=]
+	>=net-libs/xulrunner-${XUL_PV}[hardened=,java=]
 	>=x11-libs/cairo-1.8.8[X]
 	x11-libs/pango[X]"
 
@@ -100,8 +100,8 @@ linguas() {
 	done
 }
 
-pkg_setup(){
-	if ! use bindist && ! use iceweasel; then
+pkg_setup() {
+	if ! use bindist && ! use iceweasel ; then
 		elog "You are enabling official branding. You may not redistribute this build"
 		elog "to any users on your network or the internet. Doing so puts yourself into"
 		elog "a legal problem with Mozilla Foundation"
@@ -112,7 +112,7 @@ pkg_setup(){
 src_unpack() {
 	unpack ${A}
 
-	if use iceweasel; then
+	if use iceweasel ; then
 		unpack iceweasel-icons-3.0.tar.bz2
 
 		cp -r iceweaselicons/browser "${WORKDIR}"
@@ -134,9 +134,9 @@ src_prepare() {
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
 
-	if use iceweasel; then
-		sed -i -e "s|Minefield|Iceweasel|" browser/locales/en-US/chrome/branding/brand.* \
-			browser/branding/nightly/configure.sh
+	if use iceweasel ; then
+		sed -i -e "s:Minefield:Iceweasel:" browser/locales/en-US/chrome/branding/brand.* \
+			browser/branding/nightly/configure.sh || die "iceweasel sed failed!"
 	fi
 
 	eautoreconf
@@ -199,7 +199,7 @@ src_configure() {
 	#mozconfig_use_extension mozdevelop venkman
 
 	# IUSE qt-experimental
-#	if use qt-experimental; then
+#	if use qt-experimental ; then
 #		ewarn "You are enabling the EXPERIMENTAL qt toolkit"
 #		ewarn "Usage is at your own risk"
 #		ewarn "Known to be broken. DO NOT file bugs."
@@ -216,8 +216,13 @@ src_configure() {
 	mozconfig_use_enable alsa ogg
 	mozconfig_use_enable alsa wave
 
-	if ! use bindist && ! use iceweasel; then
+	if ! use bindist && ! use iceweasel ; then
 		mozconfig_annotate '' --enable-official-branding
+	fi
+
+	# Bug #278698
+	if use hardened ; then
+		mozconfig_annotate 'hardened' --disable-jemalloc
 	fi
 
 	# Finalize and report settings
@@ -233,8 +238,7 @@ src_configure() {
 	#
 	####################################
 
-	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" \
-	econf || die
+	CC="$(tc-getCC)" CXX="$(tc-getCXX)" LD="$(tc-getLD)" econf
 }
 
 src_compile() {
@@ -255,11 +259,11 @@ src_install() {
 	done
 
 	# Install icon and .desktop for menu entry
-	if use iceweasel; then
+	if use iceweasel ; then
 		newicon "${S}"/browser/base/branding/icon48.png iceweasel-icon.png
 		newmenu "${FILESDIR}"/icon/iceweasel.desktop \
 			${PN}-${DESKTOP_PV}.desktop
-	elif ! use bindist; then
+	elif ! use bindist ; then
 		newicon "${S}"/other-licenses/branding/firefox/content/icon48.png firefox-icon.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5.desktop \
 			${PN}-${DESKTOP_PV}.desktop
@@ -267,12 +271,12 @@ src_install() {
 		newicon "${S}"/browser/base/branding/icon48.png firefox-icon-unbranded.png
 		newmenu "${FILESDIR}"/icon/mozilla-firefox-1.5-unbranded.desktop \
 			${PN}-${DESKTOP_PV}.desktop
-		sed -e "s/Bon Echo/Minefield/" \
-			-i "${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
+		sed -i -e "s:Bon Echo:Minefield:" \
+			"${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop || die "sed failed!"
 	fi
 
 	# Add StartupNotify=true bug 237317
-	if use startup-notification; then
+	if use startup-notification ; then
 		echo "StartupNotify=true" >> "${D}"/usr/share/applications/${PN}-${DESKTOP_PV}.desktop
 	fi
 
@@ -285,9 +289,10 @@ EOF
 
 	fperms 0755 /usr/bin/firefox
 
-	#Enable very specific settings not inherited from xulrunner
+	# Enable very specific settings not inherited from xulrunner
 	cp "${FILESDIR}"/firefox-default-prefs.js \
-		"${D}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || die "failed to cp xulrunner-default-prefs.js"
+		"${D}/${MOZILLA_FIVE_HOME}/defaults/preferences/all-gentoo.js" || \
+		die "failed to cp xulrunner-default-prefs.js"
 
 	# Plugins dir
 	ln -s "${D}"/usr/$(get_libdir)/{nsbrowser,mozilla-firefox}/plugins
