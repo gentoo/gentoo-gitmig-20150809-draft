@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tardy
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.9 2008/06/28 18:00:50 vanquirius Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/ChangeLog,v 1.10 2009/08/09 16:47:07 ssuominen Exp $
+
+  09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> tardy-1.17.ebuild,
+  +files/tardy-1.17-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #273842.
 
 *tardy-1.17 (28 Jun 2008)
 

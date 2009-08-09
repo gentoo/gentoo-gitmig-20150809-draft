@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.17.ebuild,v 1.1 2008/06/28 18:00:50 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tardy/tardy-1.17.ebuild,v 1.2 2009/08/09 16:47:07 ssuominen Exp $
 
 inherit eutils
 
@@ -17,6 +17,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -i '/^CFLAGS/d' Makefile.in
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 src_test() {
