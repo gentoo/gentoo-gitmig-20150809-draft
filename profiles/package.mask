@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10295 2009/08/09 22:26:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10296 2009/08/09 22:51:24 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,17 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
+#  on behalf of QA team
+#
+# Latest version fails with current Linux headers (bug
+# #247970), and has multiple issues; masked version is in
+# package.mask since 2007, since then, never touched. It
+# also uses the old net-nds/portmap package.
+#
+# Removal on 2009-10-09
+net-fs/sfs
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
 #  on behalf of QA team
