@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/nailgun-0.7.1.ebuild,v 1.4 2009/08/09 07:28:11 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/nailgun-0.7.1.ebuild,v 1.5 2009/08/09 14:17:41 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE=""
+IUSE="test"
 
 RDEPEND=">=virtual/jre-1.4"
 DEPEND=">=virtual/jdk-1.4
