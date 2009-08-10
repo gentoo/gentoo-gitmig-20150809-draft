@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2-r1.ebuild,v 1.1 2009/03/02 10:33:41 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/neoengine/neoengine-0.8.2-r1.ebuild,v 1.2 2009/08/10 08:39:17 ssuominen Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -26,7 +26,8 @@ S=${WORKDIR}/neoengine
 src_prepare() {
 	epatch "${FILESDIR}/${P}"-gcc41.patch \
 		"${FILESDIR}/${P}"-gcc43.patch \
-		"${FILESDIR}"/${P}-nolibs.patch
+		"${FILESDIR}"/${P}-nolibs.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 
 	./setbuildtype.sh dynamic
 
