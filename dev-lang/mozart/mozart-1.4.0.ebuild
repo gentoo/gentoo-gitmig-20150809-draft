@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.5 2008/11/27 05:32:08 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0.ebuild,v 1.6 2009/08/10 06:33:41 keri Exp $
 
 inherit elisp-common eutils
 
@@ -37,7 +37,9 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${P}-cstdio.patch
+	epatch "${FILESDIR}"/${P}-const-cast.patch
 	epatch "${FILESDIR}"/${P}-ozhome.patch
+	epatch "${FILESDIR}"/${P}-ozplatform-amd64.patch
 	epatch "${FILESDIR}"/${P}-ozplatform-sparc.patch
 	epatch "${FILESDIR}"/${P}-parallel-make.patch
 	epatch "${FILESDIR}"/${P}-contrib.patch
@@ -81,8 +83,7 @@ src_test() {
 }
 
 src_install() {
-	# Parallel make install issues, bug #244872
-	emake -j1 \
+	emake \
 		PREFIX="${D}"/usr/lib/mozart \
 		ELISPDIR="${D}${SITELISP}/${PN}" \
 		install || die "emake install failed"
