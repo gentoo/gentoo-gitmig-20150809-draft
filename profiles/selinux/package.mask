@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.38 2009/08/02 12:49:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.39 2009/08/10 13:31:08 pebenito Exp $
+
+# Chris PeBenito <pebenito@gentoo.org> (10 Aug 2009)
+# SELinux code problems
+=sys-apps/portage-2.2_rc38
 
 # Sebastien Fabbro <bicatali@gentoo.org> (08 Oct 2007)
 # acml -3.6 and over needs gcc-4.1*
