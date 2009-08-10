@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.12.0.ebuild,v 1.1 2009/06/28 19:27:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.12.0.ebuild,v 1.2 2009/08/10 12:10:11 ssuominen Exp $
 
 inherit eutils
 
@@ -24,6 +24,11 @@ DEPEND="${COMMONDEPEND}
 	>=sys-devel/automake-1.8
 	>=sys-devel/gcc-3.2.0
 	virtual/os-headers"
+
+src_unpack() {
+	unpack ${A}
+	sed -i -e 's:-Werror::g' "${S}"/configure || die "sed failed"
+}
 
 src_compile() {
 	econf --with-varpath=/var/lib/openhpi \
