@@ -1,6 +1,10 @@
 # ChangeLog for games-board/six
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.14 2009/02/17 09:17:57 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/six/ChangeLog,v 1.15 2009/08/10 16:56:29 ssuominen Exp $
+
+  10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> six-0.5.3.ebuild,
+  files/six-0.5.3-gcc43.patch:
+  Extend GCC 4.3+ patch to include test suite wrt #273531.
 
   17 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org> six-0.5.3.ebuild:
   fix desktop entry as reported by Pacho Ramos in bug #160251
