@@ -1,47 +1,51 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-2.4.0.ebuild,v 1.4 2009/08/10 00:09:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rdflib/rdflib-2.4.1.ebuild,v 1.1 2009/08/10 00:09:24 arfrever Exp $
 
+EAPI="2"
 NEED_PYTHON="2.3"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
 DESCRIPTION="RDF library containing a triple store and parser/serializer"
 HOMEPAGE="http://rdflib.net/"
 SRC_URI="http://rdflib.net/${P}.tar.gz"
+
 LICENSE="BSD-2"
-KEYWORDS="~amd64 ~x86"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE="berkdb examples mysql redland sqlite zodb"
+
 DEPEND=">=dev-python/setuptools-0.6_rc5"
+#	test? ( dev-python/nose )"
 RDEPEND="mysql? ( dev-python/mysql-python )
 	sqlite? (
 		>=dev-db/sqlite-3.3.13
 		|| ( dev-python/pysqlite >=dev-lang/python-2.5 ) )
 	berkdb? ( sys-libs/db )
-	redland? ( dev-libs/redland-bindings )
+	redland? ( dev-libs/redland-bindings[python] )
 	zodb? ( net-zope/zodb )"
+
 RESTRICT="test"
+RESTRICT_PYTHON_ABIS="3*"
 
-pkg_setup() {
-	if use redland && ! built_with_use dev-libs/redland-bindings python; then
-		eerror "In order to have rdflib working with redland support, you need"
-		eerror "to have dev-libs/redland-bindings emerged with 'python' in"
-		eerror "your USE flags."
-		die "dev-libs/redland-bindings is missing the python USE flag."
-	fi
-}
+PYTHON_MODNAME="rdflib rdflib_tools"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Don't install tests. Remove tests_require to prevent setuptools
 	# from trying to download deps that it can't find
 	sed -i \
-		-e "s/\(find_packages(\)/\1exclude=('test','test.*')/" \
+		-e '/packages = find_packages/s/"test"/&, "test.*"/' \
 		-e "/tests_require/d" \
 		setup.py || die "sed in setup.py failed"
+}
+
+src_test() {
+	testing() {
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" setup.py test
+	}
+	python_execute_function testing
 }
 
 src_install() {
