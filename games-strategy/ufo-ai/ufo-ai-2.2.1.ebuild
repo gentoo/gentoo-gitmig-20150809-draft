@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.1 2008/10/04 19:46:06 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.2 2009/08/10 00:35:30 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools games
 
 MY_P="${P/o-a/oa}"
@@ -39,11 +40,9 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}-source
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# move data from packages to source dir
-	mv "${WORKDIR}/base" "${S}"
+	mv "${WORKDIR}/base" "${S}" || die
 
 	# Set basedir & fixes bug in finding text files - it should use fs_basedir
 	epatch "${FILESDIR}"/${P}-gentoo.patch
@@ -57,7 +56,7 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf \
 		$(use_enable mmx) \
 		--enable-release \
@@ -65,7 +64,9 @@ src_compile() {
 		--enable-dedicated \
 		$(use_enable !dedicated client) \
 		--with-shaders
+}
 
+src_compile() {
 	emake lang || die "emake langs failed"
 
 	if use doc ; then
