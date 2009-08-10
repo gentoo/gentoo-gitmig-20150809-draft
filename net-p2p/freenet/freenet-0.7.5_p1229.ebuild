@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1228.ebuild,v 1.2 2009/08/10 20:04:50 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.7.5_p1229.ebuild,v 1.1 2009/08/10 20:04:50 tommy Exp $
 
 EAPI="1"
 DATE=20090708
 
 EGIT_REPO_URI="git://github.com/freenet/fred-staging.git"
 EGIT_PROJECT="freenet/fred-staging"
-EGIT_TREE="11afcd3792fbb5c6099f5c6d170bfe0fc69d216a"
+EGIT_TREE="127b7772c442079abdc0acb1f45a5aae91266cb9"
 
 inherit eutils git java-pkg-2 java-ant-2 multilib
 
@@ -55,7 +55,7 @@ src_unpack() {
 	cd "${S}"
 	cp "${FILESDIR}"/wrapper1.conf freenet-wrapper.conf || die
 	cp "${FILESDIR}"/run.sh-20090501 run.sh || die
-	epatch "${FILESDIR}"/{ext,${PV}strip-version-check}.patch
+	epatch "${FILESDIR}"/{ext,strip-version-check}.patch
 	sed -i -e "s:=/usr/lib:=/usr/$(get_libdir):g" freenet-wrapper.conf || die "sed failed"
 	use freemail && echo "wrapper.java.classpath.12=/usr/share/bcprov/lib/bcprov.jar" >> freenet-wrapper.conf
 	java-ant_rewrite-classpath

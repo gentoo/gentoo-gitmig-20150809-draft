@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.65 2009/08/10 00:33:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.66 2009/08/10 20:04:50 tommy Exp $
+
+*freenet-0.7.5_p1229 (10 Aug 2009)
+
+  10 Aug 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +files/0.7.5_p1228strip-version-check.patch, freenet-0.7.5_p1228.ebuild,
+  +freenet-0.7.5_p1229.ebuild, files/strip-version-check.patch:
+  Version bump
 
 *freenet-0.7.5_p1228 (10 Aug 2009)
 
