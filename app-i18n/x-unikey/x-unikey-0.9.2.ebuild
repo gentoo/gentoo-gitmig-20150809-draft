@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-0.9.2.ebuild,v 1.8 2007/07/22 09:48:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/x-unikey/x-unikey-0.9.2.ebuild,v 1.9 2009/08/10 11:51:50 ssuominen Exp $
 
 inherit eutils
 
@@ -18,6 +18,7 @@ DEPEND="x11-libs/libX11
 	x11-libs/libICE
 	nls? ( sys-devel/gettext )
 	gtk? ( >=x11-libs/gtk+-2.2 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	local myconf
@@ -30,10 +31,10 @@ src_compile() {
 src_install() {
 	if use gtk;then
 		dodir etc/gtk-2.0
-		make DESTDIR=${D} install -C src/unikey-gtk
+		emake DESTDIR="${D}" install -C src/unikey-gtk
 	fi
 	dobin src/xim/ukxim src/gui/unikey
-	doenvd ${FILESDIR}/01x-unikey
+	doenvd "${FILESDIR}"/01x-unikey
 	dodoc doc/manual doc/ukmacro doc/unikeyrc
 }
 
@@ -43,7 +44,7 @@ pkg_postinst() {
 	elog "to enable x-unikey"
 	elog ""
 	if use gtk; then
-		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+		gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/gtk.immodules
 		elog "If you want to use x-unikey as the default gtk+ input method,"
 		elog "change GTK_IM_MODULE in /etc/env.d/01x-unikey to \"unikey\""
 		elog ""
@@ -52,6 +53,6 @@ pkg_postinst() {
 
 pkg_postrm() {
 	if use gtk; then
-		gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
+		gtk-query-immodules-2.0 > "${ROOT}"/etc/gtk-2.0/gtk.immodules
 	fi
 }
