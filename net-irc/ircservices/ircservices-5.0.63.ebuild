@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.63.ebuild,v 1.4 2009/08/08 16:07:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.63.ebuild,v 1.5 2009/08/10 17:22:36 vostorga Exp $
 
 inherit eutils fixheadtails flag-o-matic toolchain-funcs
 
@@ -9,10 +9,9 @@ HOMEPAGE="http://www.ircservices.za.net/"
 SRC_URI="http://www.ircservices.za.net/download/old/${P}.tar.gz
 	ftp://ftp.esper.net/${PN}/old/${P}.tar.gz
 	mirror://gentoo/${P}.tar.gz"
-
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-amd64 ppc x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND=""
@@ -37,6 +36,8 @@ src_unpack() {
 		-e "s/-m 750/-m 755/" \
 		-e "s/-m 640/-m 644/" \
 		configure
+	#bug 273978
+	sed -i -e "s/getline/get_line/" lang/langcomp.c
 }
 
 src_compile() {

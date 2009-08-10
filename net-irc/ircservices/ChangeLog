@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.43 2009/08/08 16:07:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.44 2009/08/10 17:22:36 vostorga Exp $
+
+  10 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
+  ircservices-5.0.63.ebuild, ircservices-5.1.14.ebuild:
+  Fixing build against glibc 2.10, bug #273978
 
   08 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   ircservices-5.0.63.ebuild, ircservices-5.1.14.ebuild:
