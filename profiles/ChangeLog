@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3098 2009/08/10 10:18:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3099 2009/08/10 10:24:02 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask =dev-libs/dietlibc-0.32 (acked by hollow).
 
   10 Aug 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
   mask latest libass that has api changes
