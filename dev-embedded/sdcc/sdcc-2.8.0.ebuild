@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.8.0.ebuild,v 1.2 2008/08/06 18:04:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.8.0.ebuild,v 1.3 2009/08/10 08:11:49 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -31,6 +31,7 @@ src_unpack() {
 
 	# Fix automagic C{,XX}FLAGS
 	epatch "${FILESDIR}"/${P}-flags.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 
 	# We'll install doc manually
 	sed -i -e '/SDCC_DOC/d' Makefile.in || die "sed failed"
