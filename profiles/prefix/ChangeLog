@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.50 2009/08/10 18:17:57 darkside Exp $
+# $Id: ChangeLog,v 1.51 2009/08/10 18:26:25 darkside Exp $
+
+  10 Aug 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask ebuilds that need >=app-admin/eselect-python-20090801
 
   10 Aug 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   p.mask =virtual/emacs-23 to salvage the depgraph
