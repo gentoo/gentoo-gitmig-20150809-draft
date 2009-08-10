@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/bmake
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.6 2009/05/12 10:14:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bmake/ChangeLog,v 1.7 2009/08/10 09:19:13 aballier Exp $
+
+  10 Aug 2009; Alexis Ballier <aballier@gentoo.org> -bmake-20080515.ebuild:
+  remove old
 
 *bmake-20090222 (12 May 2009)
 
