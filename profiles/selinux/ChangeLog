@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.6 2009/08/10 13:31:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.7 2009/08/10 17:07:09 pebenito Exp $
+
+  10 Aug 2009; Chris PeBenito <pebenito@gentoo.org> make.defaults:
+  Clean up top level make.defaults and add back the missing PORTAGE_T
+  variable.
 
   10 Aug 2009; Chris PeBenito <pebenito@gentoo.org> package.mask:
   SELinux code issues in portage 2.2_rc38.
