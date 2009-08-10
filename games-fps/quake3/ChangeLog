@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.49 2007/12/31 21:27:47 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.50 2009/08/10 02:43:18 mr_bones_ Exp $
+
+  10 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  quake3-1.34_rc3.ebuild, quake3-9999.ebuild:
+  EAPI=2; add joystick use dep for bug #264741
 
   31 Dec 2007; Mike Frysinger <vapier@gentoo.org> quake3-9999.ebuild:
   Fixes from David Watzke for building with newer svn checkouts #203733.

@@ -1,12 +1,13 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.15 2008/01/12 02:54:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-9999.ebuild,v 1.16 2009/08/10 02:43:18 mr_bones_ Exp $
 
 # quake3-9999          -> latest svn
 # quake3-9999.REV      -> use svn REV
 # quake3-VER_alphaREV  -> svn snapshot REV for version VER
 # quake3-VER           -> normal quake release
 
+EAPI=2
 if [[ ${PV} == 9999* ]] ; then
 	[[ ${PV} == 9999.* ]] && ESVN_UPDATE_CMD="svn up -r ${PV/9999./}"
 	ESVN_REPO_URI="svn://svn.icculus.org/quake3/trunk"
@@ -41,7 +42,7 @@ IUSE="dedicated opengl teamarena"
 
 UIDEPEND="virtual/opengl
 	media-libs/openal
-	media-libs/libsdl"
+	media-libs/libsdl[joystick]"
 DEPEND="opengl? ( ${UIDEPEND} )
 	!dedicated? ( ${UIDEPEND} )"
 RDEPEND="${DEPEND}
@@ -53,8 +54,10 @@ src_unpack() {
 		subversion_src_unpack
 	else
 		unpack ${A}
-		cd "${S}"
 	fi
+}
+
+src_prepare() {
 	sed -i \
 		-e '/INSTALL/s: -s : :' \
 		Makefile code/tools/lcc/Makefile code/tools/asm/Makefile
