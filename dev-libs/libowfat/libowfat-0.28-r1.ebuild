@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.1 2009/08/10 14:43:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libowfat/libowfat-0.28-r1.ebuild,v 1.2 2009/08/10 14:54:25 ssuominen Exp $
 
 EAPI=2
+inherit flag-o-matic
 
 DESCRIPTION="reimplement libdjb - excellent libraries from Dan Bernstein."
 SRC_URI="http://dl.fefe.de/${P}.tar.bz2"
@@ -16,6 +17,11 @@ IUSE=""
 RDEPEND=">=dev-libs/dietlibc-0.33_pre20090721"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
+
+pkg_setup() {
+	# Required for mult/umult64.c to be usable
+	append-flags -fomit-frame-pointer
+}
 
 src_prepare() {
 	sed -e "s:^CFLAGS.*:CFLAGS=-I. ${CFLAGS}:" \
