@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.44 2009/03/25 11:06:22 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.45 2009/08/10 12:12:01 zzam Exp $
+
+*vdr-xineliboutput-1.0.4_p20090810 (10 Aug 2009)
+
+  10 Aug 2009; Matthias Schwarzott <zzam@gentoo.org>
+  +vdr-xineliboutput-1.0.4_p20090810.ebuild,
+  +files/vdr-xineliboutput-1.0.4_p20090810-compile-fix.diff:
+  Added a new snapshot. It needs a compile fix patch. Fixes compiling with
+  glibc-2.10, Bug #278395.
 
   25 Mar 2009; Matthias Schwarzott <zzam@gentoo.org> Manifest:
   Fix manifest
