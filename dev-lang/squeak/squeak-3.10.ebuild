@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.10.ebuild,v 1.1 2008/06/09 17:55:03 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.10.ebuild,v 1.2 2009/08/10 15:45:28 vostorga Exp $
 
-inherit base fixheadtails eutils
+inherit base fixheadtails eutils toolchain-funcs
 
 MY_PV="${PV}-1"
 
@@ -29,6 +29,8 @@ src_unpack() {
 	sed -i s/\${MAJOR}/39/ "${S}/platforms/unix/config/inisqueak.in"
 	# ht_fix_all doesn't catch this because there's no number
 	sed -i -e 's/tail +/tail -n +/' platforms/unix/config/inisqueak.in
+	epatch "${FILESDIR}"/${P}-glibc210.patch
+	sed -i s/-Werror// "${S}/platforms/unix/vm-display-fbdev/Makefile.in"
 }
 
 src_compile() {
@@ -45,8 +47,8 @@ src_compile() {
 		--prefix=/usr \
 		--infodir=/usr/share/info \
 		--mandir=/usr/share/man \
-		${myconf} || die "configure failed"
-	emake || die
+		${myconf} CC="$(tc-getCC)" LD="$(tc-getLD)" || die "configure failed"
+	emake CC="$(tc-getCC)" LD="$(tc-getLD)" || die
 }
 
 src_install() {
