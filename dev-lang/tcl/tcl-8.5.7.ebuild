@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.7.ebuild,v 1.2 2009/08/10 15:53:53 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.7.ebuild,v 1.3 2009/08/10 16:31:04 jer Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
@@ -20,11 +20,6 @@ IUSE="debug threads"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
-
-if use hppa; then
-	# workaround stack check issues, bug #280934
-	append-cflags -DTCL_NO_STACK_CHECK=1
-fi
 
 pkg_setup() {
 	if use threads ; then
@@ -52,6 +47,11 @@ src_unpack() {
 }
 
 src_compile() {
+	# workaround stack check issues, bug #280934
+	if use hppa; then
+		append-cflags "-DTCL_NO_STACK_CHECK=1"
+	fi
+
 	tc-export CC
 
 	cd "${S}"/unix
