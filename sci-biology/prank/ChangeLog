@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/prank
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.1 2009/04/09 12:05:11 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prank/ChangeLog,v 1.2 2009/08/10 08:00:34 ssuominen Exp $
+
+  10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> prank-081202.ebuild,
+  +files/prank-081202-gcc44.patch:
+  Fix building with GCC 4.4+ wrt #277246.
 
 *prank-081202 (09 Apr 2009)
 
