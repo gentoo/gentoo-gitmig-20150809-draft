@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-1.0.3.ebuild,v 1.1 2009/07/14 18:33:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/meep/meep-1.0.3.ebuild,v 1.2 2009/08/10 13:16:06 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="Simulation software to model electromagnetic systems"
 HOMEPAGE="http://ab-initio.mit.edu/meep/"
@@ -21,6 +22,10 @@ DEPEND="sci-libs/fftw
 	hdf5? ( sci-libs/hdf5 )
 	mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
 
 src_configure() {
 	econf \
