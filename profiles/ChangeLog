@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3104 2009/08/10 16:29:01 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3105 2009/08/10 20:49:45 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Aug 2009; Torsten Veller <tove@gentoo.org> package.mask:
+  New core modules wrt perl-5.10.1: parent and Parse-CPAN-Meta
+  Move them from dev-perl to perl-core
 
   10 Aug 2009; Federico Ferri <mescalinum@gentoo.org> package.mask:
   mask quirc wrt bug #249468
