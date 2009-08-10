@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.0.ebuild,v 1.1 2009/03/03 09:00:34 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xqilla/xqilla-2.2.0.ebuild,v 1.2 2009/08/10 12:40:06 ssuominen Exp $
 
 EAPI="2"
+inherit eutils
 
 MY_P="XQilla-${PV}"
 
@@ -25,9 +26,10 @@ RDEPEND=">=dev-libs/xerces-c-3.0.1
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	sed -i -e 's|^LDFLAGS =|LDFLAGS +=|' Makefile.in || die "sed failed"
 }
 
