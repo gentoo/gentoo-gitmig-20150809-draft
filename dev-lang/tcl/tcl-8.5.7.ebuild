@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.7.ebuild,v 1.1 2009/04/17 18:56:08 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.5.7.ebuild,v 1.2 2009/08/10 15:53:53 mescalinum Exp $
 
 WANT_AUTOCONF=latest
 WANT_AUTOMAKE=latest
 
-inherit autotools eutils multilib toolchain-funcs
+inherit autotools eutils flag-o-matic multilib toolchain-funcs
 
 MY_P="${PN}${PV/_beta/b}"
 DESCRIPTION="Tool Command Language"
@@ -20,6 +20,11 @@ IUSE="debug threads"
 DEPEND=""
 
 S="${WORKDIR}/${MY_P}"
+
+if use hppa; then
+	# workaround stack check issues, bug #280934
+	append-cflags -DTCL_NO_STACK_CHECK=1
+fi
 
 pkg_setup() {
 	if use threads ; then
