@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.06.ebuild,v 1.3 2009/01/11 11:05:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-3.06.ebuild,v 1.4 2009/08/10 12:00:18 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-build.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	sed -i \
 		-e 's:@modexecdir@:$(libdir)/$(PACKAGE):' \
 		-e '/^AM_CPPFLAGS/s:=:= -DMODULESDIR=\\"$(modexecdir)\\" :' \

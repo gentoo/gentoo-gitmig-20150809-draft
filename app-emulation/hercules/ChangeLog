@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/hercules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.26 2009/02/28 10:18:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/ChangeLog,v 1.27 2009/08/10 12:00:17 ssuominen Exp $
+
+  10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> hercules-3.06.ebuild,
+  +files/hercules-3.06-gcc44.patch:
+  Fix building with GCC 4.4+ wrt #278068.
 
   28 Feb 2009; Markus Meier <maekke@gentoo.org> metadata.xml:
   custom-cflags is a global USE-flag
