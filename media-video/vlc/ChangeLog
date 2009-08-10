@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.489 2009/08/10 10:21:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.490 2009/08/10 10:22:54 aballier Exp $
+
+  10 Aug 2009; Alexis Ballier <aballier@gentoo.org> -vlc-0.9.9a-r1.ebuild,
+  -vlc-0.9.9999.ebuild:
+  remove old
 
   10 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   bump libass requirement
