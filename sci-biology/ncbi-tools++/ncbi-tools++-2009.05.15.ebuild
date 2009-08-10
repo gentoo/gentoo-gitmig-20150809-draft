@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15.ebuild,v 1.3 2009/07/27 14:52:41 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15.ebuild,v 1.4 2009/08/10 14:02:36 ssuominen Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit eutils multilib
 
 MY_TAG="May_15_2009"
 MY_Y="${MY_TAG/*_/}"
@@ -18,7 +18,8 @@ LICENSE="public-domain"
 SLOT="0"
 #IUSE="X unicode opengl gnutls test"
 IUSE="sqlite"
-KEYWORDS="~amd64 ~x86"
+# relocation R_X86_64_32S errors on AMD64
+KEYWORDS="-amd64 ~x86"
 
 # wxGTK: must run eselect wxwindows after installing wxgtk or build will fail. Check and abort here.
 # dev-libs/xalan-c - problems detecting, api mismatch?
@@ -45,6 +46,10 @@ DEPEND="sqlite? ( dev-db/sqlite:3 )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-gcc44.patch
+}
 
 src_configure() {
 	# econf fails
