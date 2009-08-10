@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.623 2009/08/05 01:13:06 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.624 2009/08/10 00:19:12 zmedico Exp $
+
+*portage-2.2_rc37 (10 Aug 2009)
+
+  10 Aug 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc37.ebuild:
+  2.2_rc37 bump. This fixes bug #277537 (update PATH order in ebuild.sh),
+  bug #277544 (add -c to bzip2 arguments when creating binpkgs),
+  bug #280460 (misc unicode fixes), bug #280521 (use the libselinux swig
+  wrapper api instead of python-selinux), and bug #280690 (environment
+  filtering chokes on newline after start quote, triggering bash unexpected
+  EOF error).
 
 *portage-2.2_rc36 (05 Aug 2009)
 
