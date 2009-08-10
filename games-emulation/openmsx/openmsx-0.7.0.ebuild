@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.7.0.ebuild,v 1.1 2009/04/21 00:11:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.7.0.ebuild,v 1.2 2009/08/10 07:16:08 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs games
@@ -14,14 +14,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="jack"
 
-DEPEND="dev-lang/tcl
+RDEPEND="dev-lang/tcl
 	dev-libs/libxml2
 	media-libs/libpng
 	media-libs/libsdl
 	media-libs/glew
 	media-libs/sdl-image
+	media-libs/sdl-ttf
 	virtual/opengl
 	jack? ( media-sound/jack-audio-connection-kit )"
+DEPEND="${RDEPEND}"
 
 src_prepare() {
 	sed -i '/LINK_FLAGS+=/s/-s//' build/main.mk || die "sed failed"
