@@ -1,7 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.39 2009/08/10 13:31:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.40 2009/08/10 14:39:30 pebenito Exp $
 
 # Chris PeBenito <pebenito@gentoo.org> (10 Aug 2009)
 # SELinux code problems
+=sys-apps/portage-2.2_rc37
 =sys-apps/portage-2.2_rc38
 
 # Sebastien Fabbro <bicatali@gentoo.org> (08 Oct 2007)
