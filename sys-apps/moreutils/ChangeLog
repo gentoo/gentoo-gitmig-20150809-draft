@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/moreutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.10 2009/08/02 14:00:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/moreutils/ChangeLog,v 1.11 2009/08/10 00:23:26 jer Exp $
+
+  10 Aug 2009; Jeroen Roovers <jer@gentoo.org> moreutils-0.34.ebuild:
+  Stable for HPPA (bug #276013).
 
   02 Aug 2009; Markus Meier <maekke@gentoo.org> moreutils-0.34.ebuild:
   x86 stable, bug #276013
