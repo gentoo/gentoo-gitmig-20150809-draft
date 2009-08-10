@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.49 2009/08/05 09:48:42 grobian Exp $
+# $Id: ChangeLog,v 1.50 2009/08/10 18:17:57 darkside Exp $
+
+  10 Aug 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask =virtual/emacs-23 to salvage the depgraph
 
   05 Aug 2009; Fabian Groffen <grobian@gentoo.org> aix/package.mask,
   hpux/package.mask, package.mask:

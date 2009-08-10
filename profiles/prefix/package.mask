@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.20 2009/08/05 09:48:42 grobian Exp $
+# $Id: package.mask,v 1.21 2009/08/10 18:17:57 darkside Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -32,6 +32,9 @@
 
 #--- END OF EXAMPLES ---
 
+# Jeremy Olexa <darkside@gentoo.org> (10 Aug 2009)
+# Mask virtual until emacs-23* gets added, no time to do it myself atm.
+=virtual/emacs-23
 
 # Fabian Groffen <grobian@gentoo.org> (03 Aug 2009)
 # Mask this, messing around with Python is better done in gentoo-x86 ONLY
