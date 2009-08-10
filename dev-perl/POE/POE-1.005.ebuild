@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.005.ebuild,v 1.2 2009/07/19 17:43:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE/POE-1.005.ebuild,v 1.3 2009/08/10 19:58:39 tove Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-perl/Event-1.09
 	>=virtual/perl-IO-Compress-1.33
 	>=virtual/perl-Storable-2.12
 	>=dev-perl/IO-Tty-1.08
-	perl-core/Filter
+	virtual/perl-Filter
 	>=virtual/perl-Test-Harness-2.26
 	dev-perl/FreezeThaw
 	dev-perl/yaml
