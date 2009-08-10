@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10303 2009/08/10 10:24:02 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10304 2009/08/10 12:06:33 zzam Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -997,10 +997,6 @@ net-wireless/ralink-rt61
 # Currently broken, 3rd party kernel module, no maintainer to keep it updated.
 # Removal in 60 days, bug 190718
 net-wireless/rt61
-
-# Matthias Schwarzott <zzam@gentoo.org> (3 Jul 2009)
-# It needs libblkid provided by util-linux-2.16 not yet released
->=sys-fs/udev-142
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
 # koffice monolithic masked, latest koffice version
