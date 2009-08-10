@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.36.2-r1.ebuild,v 1.1 2009/04/22 15:33:33 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/himerge-0.30.36.2-r1.ebuild,v 1.2 2009/08/10 19:48:14 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/ghc-6.8.2
+RDEPEND=">=dev-lang/ghc-6.8.2
 	>=dev-haskell/gtk2hs-0.9.12.1[xulrunner]
 	dev-haskell/parallel
 	dev-haskell/regex-posix
@@ -23,7 +23,7 @@ DEPEND=">=dev-lang/ghc-6.8.2
 	>=app-portage/gentoolkit-0.2.3
 	>=app-portage/portage-utils-0.1.28
 	>=dev-haskell/filepath-1.0"
-RDEPEND=""
+DEPEND="${RDEPEND}"
 
 RESTRICT="strip"
 
