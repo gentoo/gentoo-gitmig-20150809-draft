@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.3.ebuild,v 1.2 2009/08/08 19:46:09 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.3.ebuild,v 1.3 2009/08/10 17:37:33 remi Exp $
 
 EAPI="2"
 
@@ -130,7 +130,6 @@ RDEPEND="hal? ( sys-apps/hal )
 		>=x11-libs/libXtst-1.0.3
 		>=x11-libs/libXres-1.0.3
 		>=media-libs/mesa-7.3_rc1[nptl=]
-		media-fonts/font-cursor-misc
 	)
 	>=x11-libs/libxkbui-1.0.2
 	kdrive? ( sdl? ( media-libs/libsdl ) )"

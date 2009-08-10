@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r7.ebuild,v 1.3 2009/08/08 19:46:09 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r7.ebuild,v 1.4 2009/08/10 17:37:33 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -119,17 +119,12 @@ RDEPEND="hal? ( sys-apps/hal )
 	>=x11-libs/libXxf86misc-1.0.1
 	>=x11-libs/libXxf86vm-1.0.2
 	>=x11-libs/libpciaccess-0.10.3
-	dmx? (
-		>=x11-libs/libdmx-1.0.2
-		>=x11-libs/libXfixes-4.0.3
-	)
-	!minimal? (
-		>=x11-libs/libXtst-1.0.3
+	dmx? ( >=x11-libs/libdmx-1.0.2
+			>=x11-libs/libXfixes-4.0.3 )
+	!minimal? ( >=x11-libs/libXtst-1.0.3
 		>=x11-libs/libXres-1.0.3
 		>=media-libs/mesa-7.1
-		media-fonts/font-adobe-75dpi
-		media-fonts/font-cursor-misc
-	)
+		media-fonts/font-adobe-75dpi )
 	>=x11-libs/libxkbui-1.0.2
 	kdrive? ( sdl? ( media-libs/libsdl ) )"
 	# Xres is dmx-dependent, xkbui is xorgcfg-dependent
@@ -166,10 +161,8 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xcmiscproto-1.1.2
 	>=x11-proto/glproto-1.4.9
 	dmx? ( >=x11-proto/dmxproto-2.2.2 )
-	!minimal? (
-		>=x11-proto/xf86driproto-2.0.4
-		>=x11-libs/libdrm-2.3
-	)"
+	!minimal? ( >=x11-proto/xf86driproto-2.0.4
+		>=x11-libs/libdrm-2.3 )"
 
 # Drivers
 PDEPEND="
