@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.3.8.ebuild,v 1.4 2009/08/07 16:29:29 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-1.3.8.ebuild,v 1.5 2009/08/10 03:30:46 arfrever Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://apache/apr/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="debug doc +urandom"
+IUSE="+cloexec debug doc +urandom"
 RESTRICT="test"
 
 DEPEND="doc? ( app-doc/doxygen )"
@@ -28,6 +28,11 @@ src_prepare() {
 
 src_configure() {
 	local myconf
+
+	if ! use cloexec; then
+		export apr_cv_sock_cloexec="no"
+		export apr_cv_epoll_create1="no"
+	fi
 
 	if use debug; then
 		myconf+=" --enable-maintainer-mode --enable-pool-debug=all"
@@ -48,6 +53,10 @@ src_configure() {
 	sed -i 's,$(apr_builddir)/libtool,/usr/bin/libtool,' build/apr_rules.mk
 	sed -i 's,${installbuilddir}/libtool,/usr/bin/libtool,' apr-1-config
 	rm -f libtool
+
+	if ! use cloexec; then
+		unset apr_cv_sock_cloexec apr_cv_epoll_create1
+	fi
 }
 
 src_compile() {
