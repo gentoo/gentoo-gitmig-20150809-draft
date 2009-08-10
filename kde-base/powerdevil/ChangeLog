@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.17 2009/08/04 04:46:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.18 2009/08/10 17:23:57 jmbsvicetto Exp $
+
+  10 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  powerdevil-4.3.0.ebuild, metadata.xml:
+  Moved pm-utils dep to PDEPEND and made it optional through the pm-utils
+  use flag.
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)
