@@ -1,6 +1,12 @@
 # ChangeLog for games-util/agistudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.11 2009/08/09 19:13:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/agistudio/ChangeLog,v 1.12 2009/08/10 22:36:10 mr_bones_ Exp $
+
+*agistudio-1.2.4 (10 Aug 2009)
+
+  10 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +agistudio-1.2.4.ebuild:
+  version bump
 
   09 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   agistudio-1.2.2.ebuild, +files/agistudio-1.2.2-glibc-2.10.patch:
