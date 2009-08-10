@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.5 2009/08/09 12:43:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pm-utils/pm-utils-1.2.5.ebuild,v 1.6 2009/08/10 21:58:40 arfrever Exp $
 
 EAPI="2"
 
 inherit autotools eutils
 
-DESCRIPTION="Suspend and hibernation utilties for HAL"
+DESCRIPTION="Suspend and hibernation utilities for HAL"
 HOMEPAGE="http://pm-utils.freedesktop.org/"
 SRC_URI="http://pm-utils.freedesktop.org/releases/${P}.tar.gz"
 
