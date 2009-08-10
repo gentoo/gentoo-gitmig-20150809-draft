@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r1.ebuild,v 1.4 2009/08/10 13:41:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/scilab-4.1.2-r2.ebuild,v 1.1 2009/08/10 13:41:15 markusle Exp $
 
 inherit eutils fortran toolchain-funcs multilib autotools java-pkg-opt-2
 
@@ -10,8 +10,8 @@ SRC_URI="http://www.scilab.org/download/${PV}/${P}-src.tar.gz"
 HOMEPAGE="http://www.scilab.org/"
 
 SLOT="0"
-IUSE="ocaml gtk Xaw3d java"
-KEYWORDS="amd64 ppc x86"
+IUSE="ocaml gtk Xaw3d java examples"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/blas
 	virtual/lapack
@@ -110,8 +110,15 @@ src_install() {
 		Readme_Visual.txt || die "failed to install docs"
 
 	# install examples
-	insinto /usr/share/${PN}/
-	doins -r examples/ || die "failed to install examples"
+	if use examples; then
+		insinto /usr/share/${PN}/
+		doins -r examples/ || die "failed to install examples"
+	fi
+
+	# install static libs since they are needed to link some third
+	# party apps (see bug #257252)
+	insinto /usr/$(get_libdir)/${P}/libs
+	doins libs/*.a || die "failed to install static libs"
 
 	insinto /usr/$(get_libdir)/${P}
 	doins Makefile.incl || die "failed to install Makefile.incl"
