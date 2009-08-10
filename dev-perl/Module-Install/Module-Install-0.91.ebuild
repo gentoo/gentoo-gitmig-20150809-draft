@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/Module-Install-0.91.ebuild,v 1.2 2009/06/23 08:34:00 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/Module-Install-0.91.ebuild,v 1.3 2009/08/10 21:40:39 tove Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ RDEPEND=">=dev-perl/File-Remove-1.42
 	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-Module-Build-0.33
 	>=virtual/perl-Archive-Tar-1.44
-	>=dev-perl/Parse-CPAN-Meta-1.39
+	>=virtual/perl-Parse-CPAN-Meta-1.39
 	>=dev-perl/YAML-Tiny-1.38
 	>=virtual/perl-ExtUtils-ParseXS-2.19
 	>=dev-perl/PAR-Dist-0.29
