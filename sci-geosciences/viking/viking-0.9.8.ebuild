@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-0.9.8.ebuild,v 1.1 2009/02/13 21:59:01 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-0.9.8.ebuild,v 1.2 2009/08/10 22:01:15 hanno Exp $
+
+inherit eutils
 
 DESCRIPTION="Viking is a program to manage GPS data."
 HOMEPAGE="http://viking.sourceforge.net/"
@@ -19,6 +21,12 @@ DEPEND=">=x11-libs/gtk+-2.2.0
 	gps? ( sci-geosciences/gpsd )
 	dev-util/intltool
 	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}/viking-new-gpsd.diff"
+}
 
 src_compile() {
 	econf --enable-openstreetmap \
