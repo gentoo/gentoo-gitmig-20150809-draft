@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gf2x
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.1 2009/08/10 21:17:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gf2x/ChangeLog,v 1.2 2009/08/10 21:50:24 bicatali Exp $
+
+  10 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> gf2x-0.3.1.ebuild:
+  Add include files.
 
 *gf2x-0.3.1 (10 Aug 2009)
 
