@@ -1,0 +1,10 @@
+# ChangeLog for virtual/perl-parent
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-parent/ChangeLog,v 1.1 2009/08/10 21:21:03 tove Exp $
+
+*perl-parent-0.221 (10 Aug 2009)
+
+  10 Aug 2009; Torsten Veller <tove@gentoo.org> +perl-parent-0.221.ebuild,
+  +metadata.xml:
+  Add virtual for parent
+
