@@ -1,8 +1,8 @@
-# Copyright 2003-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-picselshow/vdr-picselshow-0.0.2.ebuild,v 1.1 2008/01/13 16:44:54 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-picselshow/vdr-picselshow-0.0.2.ebuild,v 1.2 2009/08/10 09:21:38 zzam Exp $
 
-inherit vdr-plugin
+inherit vdr-plugin eutils
 
 DESCRIPTION="VDR plugin: picselshow for vdr-music"
 HOMEPAGE="http://www.vdr.glaserei-franz.de/"
@@ -13,8 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 IUSE="imagemagick"
 
-PATCHES="${FILESDIR}/${P}-vdr-1.5.x.diff
-	${FILESDIR}/${P}-gentoo.diff"
+PATCHES=("${FILESDIR}/${P}-vdr-1.5.x.diff"
+	"${FILESDIR}/${P}-gcc-4.4.diff"
+	"${FILESDIR}/${P}-gentoo.diff")
 
 DEPEND="imagemagick? ( media-gfx/imagemagick )
 		!imagemagick? ( media-libs/imlib2 )"
