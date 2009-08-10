@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.624 2009/08/10 00:19:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.625 2009/08/10 09:15:51 zmedico Exp $
+
+*portage-2.2_rc38 (10 Aug 2009)
+
+  10 Aug 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc38.ebuild:
+  2.2_rc38 bump. This fixes bug #280962 (non-existent set errors).
 
 *portage-2.2_rc37 (10 Aug 2009)
 
