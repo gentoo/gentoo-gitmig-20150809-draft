@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/mapson
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mapson/ChangeLog,v 1.6 2009/01/22 22:29:45 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mapson/ChangeLog,v 1.7 2009/08/10 08:25:04 ssuominen Exp $
+
+  10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> mapson-3.0.ebuild,
+  +files/mapson-3.0-gcc43-tests.patch:
+  Fix building with GCC 4.3+ wrt #277151.
 
   22 Jan 2009; Mark Loeser <halcy0n@gentoo.org>
   +files/mapson-3.0-gcc43.patch, mapson-3.0.ebuild:
