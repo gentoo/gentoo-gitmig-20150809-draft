@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.138 2009/08/10 15:57:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.139 2009/08/10 16:46:18 arfrever Exp $
+
+  10 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  apr-1.3.8.ebuild, metadata.xml:
+  Rename "cloexec" USE flag to "older-kernels-compatibility" (bug #280648).
 
   10 Aug 2009; Tobias Klausmann <klausman@gentoo.org> apr-1.3.8.ebuild:
   Stable on alpha, bug #280514

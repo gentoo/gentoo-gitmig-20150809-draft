@@ -6,7 +6,7 @@
   <email>apache-bugs@gentoo.org</email>
 </maintainer>
 <use>
-  <flag name='cloexec'>Support for SOCK_CLOEXEC</flag>
+  <flag name='older-kernels-compatibility'>Enable binary compatibility with older kernels</flag>
   <flag name='urandom'>Use /dev/urandom instead of /dev/random</flag>
 </use>
 </pkgmetadata>
