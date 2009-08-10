@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/xlispstat
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/xlispstat/ChangeLog,v 1.4 2007/07/22 08:00:34 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/xlispstat/ChangeLog,v 1.5 2009/08/10 16:36:11 ssuominen Exp $
+
+  10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xlispstat-3.52.20.ebuild, +files/xlispstat-3.52.20-fmax.patch:
+  Fix building with GCC 4.4+ wrt #277422.
 
   22 Jul 2007; Hans de Graaff <graaff@gentoo.org> xlispstat-3.52.20.ebuild:
   Drop virtual/x11 references.
