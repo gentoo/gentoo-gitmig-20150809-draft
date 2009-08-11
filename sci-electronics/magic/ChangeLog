@@ -1,6 +1,12 @@
 # ChangeLog for sci-electronics/magic
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.52 2008/04/08 13:14:50 calchan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/magic/ChangeLog,v 1.53 2009/08/11 21:47:02 mescalinum Exp $
+
+*magic-7.4.46-r1 (11 Aug 2009)
+
+  11 Aug 2009; Federico Ferri <mescalinum@gentoo.org>
+  +magic-7.4.46-r1.ebuild:
+  revbump magic-7.4.46.ebuild to fix bug #281148
 
 *magic-7.5.129 (08 Apr 2008)
 
