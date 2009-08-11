@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/sunstudioexpress
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/ChangeLog,v 1.6 2009/03/18 13:18:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/ChangeLog,v 1.7 2009/08/11 15:09:42 alexxy Exp $
+
+  11 Aug 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  sunstudioexpress-2009.03.ebuild:
+  Fix bug #269230 by Aleksandr Yakimov
 
 *sunstudioexpress-2009.03 (18 Mar 2009)
 

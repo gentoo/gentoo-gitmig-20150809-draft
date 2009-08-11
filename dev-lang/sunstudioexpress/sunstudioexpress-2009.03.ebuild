@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/sunstudioexpress-2009.03.ebuild,v 1.1 2009/03/18 13:18:57 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sunstudioexpress/sunstudioexpress-2009.03.ebuild,v 1.2 2009/08/11 15:09:42 alexxy Exp $
 
 inherit versionator
 
@@ -47,6 +47,7 @@ src_install() {
 	cat << EOF >> "${T}"/envd
 ROOTPATH="${DIR}/bin"
 PATH="${DIR}/bin"
+LDPATH="${DIR}/rtlibs:${DIR}/rtlibs/amd64"
 MANPATH="${DIR}/man"
 SUNW_NO_UPDATE_NOTIFY="true"
 EOF
