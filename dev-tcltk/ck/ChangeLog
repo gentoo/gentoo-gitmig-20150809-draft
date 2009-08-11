@@ -1,6 +1,11 @@
 # ChangeLog for dev-tcltk/ck
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.6 2009/05/03 19:24:53 mescalinum Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ChangeLog,v 1.7 2009/08/11 23:10:28 mescalinum Exp $
+
+*ck-8.0-r2 (11 Aug 2009)
+
+  11 Aug 2009; Federico Ferri <mescalinum@gentoo.org> +ck-8.0-r2.ebuild:
+  fix collision with tcl-8.5
 
 *ck-8.0-r1 (03 May 2009)
 
