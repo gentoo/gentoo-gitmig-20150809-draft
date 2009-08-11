@@ -1,0 +1,12 @@
+# ChangeLog for games-rpg/lure
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/ChangeLog,v 1.1 2009/08/11 22:52:58 mr_bones_ Exp $
+
+*lure-1.1 (11 Aug 2009)
+
+  11 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> +lure-1.1.ebuild,
+  +metadata.xml:
+  initial commit - ebuild submitted by Andreas Thalhammer and Anton Romanov
+  in
+  bug #221991
+
