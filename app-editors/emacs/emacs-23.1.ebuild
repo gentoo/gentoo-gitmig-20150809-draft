@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1.ebuild,v 1.2 2009/08/08 23:13:45 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1.ebuild,v 1.3 2009/08/11 17:57:44 ulm Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ if [ "${PV##*.}" = "9999" ]; then
 	SRC_URI=""
 	S="${WORKDIR}/${ECVS_LOCALNAME}"
 else
-	SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
+	SRC_URI="mirror://gnu/emacs/${P}.tar.bz2"
 	# FULL_VERSION keeps the full version number, which is needed in
 	# order to determine some path information correctly for copy/move
 	# operations later on
@@ -289,8 +289,9 @@ pkg_postinst() {
 	elog "Therefore, several Emacs versions can be installed at the same time."
 	elog "\"man emacs.eselect\" for details."
 	echo
-	elog "If you upgrade from a previous version you need to recompile all"
-	elog "byte-compiles elisp files.  Run app-admin/emacs-updater to achieve this"
+	elog "If you upgrade from a previous major version of Emacs, then it is"
+	elog "strongly recommended that you use app-admin/emacs-updater to rebuild"
+	elog "all byte-compiled elisp files of the installed Emacs packages."
 }
 
 pkg_postrm() {
