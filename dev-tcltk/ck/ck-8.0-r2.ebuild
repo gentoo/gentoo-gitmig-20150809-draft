@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ck-8.0-r2.ebuild,v 1.1 2009/08/11 23:10:28 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/ck/ck-8.0-r2.ebuild,v 1.2 2009/08/11 23:12:02 mescalinum Exp $
 
 EAPI=2
 
@@ -38,5 +38,5 @@ src_install() {
 	dodoc README
 	einstall || die "Failed to install."
 	# fix file collision with tcl-8.5*
-	rm -f "${D}"/usr/share/man/mann/{exit,after,update,fileevent}.n*
+	rm -rf "${D}"/usr/share/man/mann
 }
