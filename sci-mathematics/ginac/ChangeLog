@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.28 2009/08/07 18:14:51 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.29 2009/08/11 19:41:42 fauli Exp $
+
+  11 Aug 2009; Christian Faulhammer <fauli@gentoo.org> ginac-1.5.1.ebuild:
+  stable x86, bug 271396
 
 *ginac-1.5.3 (07 Aug 2009)
 
