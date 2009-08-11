@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/cnetworkmanager
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.1 2009/08/11 09:16:52 dagger Exp $
+
+*cnetworkmanager-0.21 (11 Aug 2009)
+
+  11 Aug 2009; Robert Piasek <dagger@gentoo.org>
+  +cnetworkmanager-0.21.ebuild, +metadata.xml:
+  New ebuild for cnetworkmanager - command line client for NetworkManager
+
