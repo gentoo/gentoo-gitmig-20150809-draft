@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10310 2009/08/10 21:39:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10311 2009/08/11 08:20:35 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,15 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
+#  on behalf of QA team
+#
+# Fails to build (bug #277245), last release in 2004,
+# unmaintained in Gentoo.
+#
+# Removal on 2009-10-10
+app-i18n/canuum
 
 # Federico Ferri <mescalinum@gentoo.org> (10 Aug 2009)
 # Unmaintained. Masked for removal, bug #249468. (2009-10-11)
