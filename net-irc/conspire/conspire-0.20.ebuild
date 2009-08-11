@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.20.ebuild,v 1.3 2008/10/31 13:14:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/conspire/conspire-0.20.ebuild,v 1.4 2009/08/11 19:50:02 fauli Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.nenolod.net/conspire/"
 SRC_URI="http://distfiles.atheme.org/${MY_P}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="amd64 ~ia64 ~sparc x86"
 IUSE="python gnutls ipv6 nls mmx socks5 dbus"
 DEPEND="nls? ( dev-util/intltool )
 	dev-util/pkgconfig"
