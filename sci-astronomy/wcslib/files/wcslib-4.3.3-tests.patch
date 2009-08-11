@@ -1,0 +1,11 @@
+--- C/GNUmakefile.orig	2009-08-11 17:13:16.000000000 +0100
++++ C/GNUmakefile	2009-08-11 17:13:43.000000000 +0100
+@@ -137,7 +137,7 @@
+ 	-@ echo ''
+ 	-@ $(TIMER)
+ 	 @ if [ '$<' = tcel2 ] ; then \
+-	     echo N | $< ; \
++	     echo N | ./$< ; \
+ 	   elif [ '$<' = tunits ] ; then \
+ 	     ./$< < test/units_test ; \
+ 	   elif [ '$<' != twcshdr ] ; then \

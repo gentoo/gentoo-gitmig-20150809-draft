@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/wcslib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.5 2009/07/16 18:46:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/ChangeLog,v 1.6 2009/08/11 17:57:46 bicatali Exp $
+
+  11 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  wcslib-4.3.3-r1.ebuild, +files/wcslib-4.3.3-tests.patch:
+  Cleaned an obsolete function, added a patch for test, and avoid
+  FORTIFY_SOURCE (but only fixes the C part, not the FORTRAN one)
 
 *wcslib-4.3.3-r1 (16 Jul 2009)
 

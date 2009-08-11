@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.3.3-r1.ebuild,v 1.1 2009/07/16 18:46:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.3.3-r1.ebuild,v 1.2 2009/08/11 17:57:46 bicatali Exp $
 
 EAPI=2
-inherit eutils versionator
+inherit eutils versionator virtualx flag-o-matic
 
 DESCRIPTION="Astronomical World Coordinate System transformations library"
 HOMEPAGE="http://www.atnf.csiro.au/people/mcalabre/WCS/"
@@ -16,28 +16,34 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND="sci-libs/pgplot
 	sci-libs/cfitsio"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	test? (
+		media-fonts/font-misc-misc
+		media-fonts/font-cursor-misc )"
 
 src_prepare() {
 	sed -i \
 		-e 's/$(SHRLD)/$(SHRLD) $(LDFLAGS)/' \
 		C/GNUmakefile || die
-	WCSV=$(get_version_component_range 1-2)
 	epatch "${FILESDIR}"/${P}-flibs.patch
+	epatch "${FILESDIR}"/${P}-tests.patch
+	append-flags -U_FORTIFY_SOURCE
 }
 
 src_compile() {
 	# -j1 forced. build system too crappy to be worth debugging
+	# does not really fix anything
 	emake -j1 || die "emake failed"
 }
 
-rc_install() {
-   emake DESTDIR="${D}" install || die "emake install failed"
+src_test() {
+	Xemake -j1 check || die "emake test failed"
 }
 
 src_install () {
 	# make install from makefile is buggy
 	dobin utils/{HPXcvt,fitshdr,wcsgrid} || die "dobin failed"
+	WCSV=$(get_version_component_range 1-2)
 	dolib.a C/libwcs-${WCSV}.a pgsbox/libpgsbox-${WCSV}.a || die
 	dolib.so C/libwcs.so.${WCSV} || die
 	dosym libwcs.so.${WCSV} /usr/$(get_libdir)/libwcs.so
