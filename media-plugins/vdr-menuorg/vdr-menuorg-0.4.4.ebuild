@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/vdr-menuorg-0.4.4.ebuild,v 1.1 2008/08/19 11:46:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-menuorg/vdr-menuorg-0.4.4.ebuild,v 1.2 2009/08/11 18:05:01 zzam Exp $
 
 EAPI="1"
 
@@ -18,6 +18,7 @@ IUSE=""
 DEPEND=">=media-video/vdr-1.5.18
 	dev-cpp/libxmlpp:2.6
 	dev-cpp/glibmm"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	if [[ ! -f /usr/include/vdr/menuorgpatch.h ]]; then
