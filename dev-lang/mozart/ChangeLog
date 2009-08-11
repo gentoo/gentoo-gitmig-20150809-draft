@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mozart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.24 2009/08/10 06:33:41 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/ChangeLog,v 1.25 2009/08/11 07:04:33 keri Exp $
+
+  11 Aug 2009; <keri@gentoo.org> mozart-1.3.2.ebuild,
+  mozart-1.3.2-r1.ebuild, +files/mozart-1.3.2-const-cast.patch,
+  files/mozart-1.3.2-ozplatform.patch:
+  glibc2.10 fixes; amd64 chroot fixes
 
   10 Aug 2009; <keri@gentoo.org> mozart-1.4.0.ebuild,
   +files/mozart-1.4.0-const-cast.patch,
