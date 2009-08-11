@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10312 2009/08/11 08:56:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10313 2009/08/11 09:41:55 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (11 Aug 2009)
+# Segmentation faults. Doesn't compile with -Wl,--as-needed.
+# Doesn't pass configure with Autoconf 2.64. Bugs 281080,
+# 247823 and 281076. Masked for removal.
+media-sound/beast
+media-sound/beast-data
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Aug 2009)
 # For vis5d+, see https://bugs.gentoo.org/show_bug.cgi?id=274281
