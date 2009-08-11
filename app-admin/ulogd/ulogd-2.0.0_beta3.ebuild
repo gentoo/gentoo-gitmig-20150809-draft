@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta3.ebuild,v 1.1 2009/08/10 06:01:18 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta3.ebuild,v 1.2 2009/08/11 06:20:30 wormo Exp $
 
 EAPI="1"
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.netfilter.org/pub/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc -sparc ~x86"
+KEYWORDS="~amd64 -sparc ~x86"
 # sqlite not supported in ulogd-2 yet
 IUSE="doc mysql postgres pcap" # sqlite
 
