@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kanyremote
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.4 2009/07/26 14:16:29 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kanyremote/ChangeLog,v 1.5 2009/08/11 13:23:32 hwoarang Exp $
+
+  11 Aug 2009; Markos Chandras <hwoarang@gentoo.org>
+  -kanyremote-5.8.2.ebuild:
+  Remove old ebuild
 
   26 Jul 2009; Markos Chandras <hwoarang@gentoo.org> metadata.xml:
   Add kde herd on metadata.xml. Fixes bug 279156
