@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta3.ebuild,v 1.2 2009/08/11 06:20:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.0_beta3.ebuild,v 1.3 2009/08/11 06:35:14 wormo Exp $
 
 EAPI="1"
 
@@ -22,7 +22,7 @@ RDEPEND="net-firewall/iptables
 	>=net-libs/libnetfilter_conntrack-0.0.95
 	>=net-libs/libnetfilter_log-0.0.15
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( virtual/postgresql-base )
 	pcap? ( net-libs/libpcap )"
 	#sqlite? ( dev-db/sqlite:3 )
 

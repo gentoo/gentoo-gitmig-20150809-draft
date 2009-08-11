@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.57 2009/08/11 06:20:30 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.58 2009/08/11 06:35:14 wormo Exp $
+
+  11 Aug 2009; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  ulogd-1.24-r1.ebuild, ulogd-2.0.0_beta3.ebuild:
+  Only require postgres libraries rather than postgres server when 
+  PGSQL module is enabled - database for storing logs can live on 
+  another host (Thanks to Christian Bricart, bug #281054)
 
   11 Aug 2009; Stephanie Lockwood-Childs <wormo@gentoo.org>
   ulogd-2.0.0_beta3.ebuild:

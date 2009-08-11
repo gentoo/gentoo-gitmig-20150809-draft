@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24-r1.ebuild,v 1.1 2009/08/09 06:23:59 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.24-r1.ebuild,v 1.2 2009/08/11 06:35:14 wormo Exp $
 
 EAPI="1"
 
@@ -18,7 +18,7 @@ IUSE="mysql postgres sqlite"
 
 DEPEND="net-firewall/iptables
 	mysql? ( virtual/mysql )
-	postgres? ( virtual/postgresql-server )
+	postgres? ( virtual/postgresql-base )
 	sqlite? ( dev-db/sqlite:3 )"
 RDEPEND="${DEPEND}
 	net-libs/libpcap"
