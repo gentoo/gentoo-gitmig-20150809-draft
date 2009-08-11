@@ -1,0 +1,11 @@
+diff -ur stratagus-2.2.4.orig/src/stratagus/util.cpp stratagus-2.2.4/src/stratagus/util.cpp
+--- stratagus-2.2.4.orig/src/stratagus/util.cpp	2006-11-26 23:34:36.000000000 +0200
++++ stratagus-2.2.4/src/stratagus/util.cpp	2009-08-11 09:14:05.000000000 +0300
+@@ -28,6 +28,7 @@
+ //
+ //      $Id: stratagus-2.2.4-gcc44.patch,v 1.1 2009/08/11 06:15:02 ssuominen Exp $
+ 
++#include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>

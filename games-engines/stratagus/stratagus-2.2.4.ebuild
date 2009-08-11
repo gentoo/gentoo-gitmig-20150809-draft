@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.4.ebuild,v 1.2 2008/12/17 15:41:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.4.ebuild,v 1.3 2009/08/11 06:15:01 ssuominen Exp $
 
 inherit eutils games
 
@@ -33,7 +33,8 @@ src_unpack() {
 		-e 's/-O.*\(-fsigned-char\).*/\1"/' \
 		configure \
 		|| die "sed failed"
-	epatch "${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-gcc43.patch \
+		"${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
