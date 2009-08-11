@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.3.3-r1.ebuild,v 1.2 2009/08/11 17:57:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcslib/wcslib-4.3.3-r1.ebuild,v 1.3 2009/08/11 18:55:50 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils versionator virtualx flag-o-matic
@@ -12,8 +12,8 @@ SRC_URI="ftp://ftp.atnf.csiro.au/pub/software/${PN}/${P}.tar.gz"
 LICENSE="LGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="test"
 
-IUSE=""
 RDEPEND="sci-libs/pgplot
 	sci-libs/cfitsio"
 DEPEND="${RDEPEND}
