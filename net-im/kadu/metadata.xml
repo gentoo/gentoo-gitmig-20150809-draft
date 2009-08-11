@@ -15,7 +15,6 @@
 		<flag name="config_wizard">Enables configuration wizard module</flag>
 		<flag name="extramodules">Enables building of extra modules</flag>
 		<flag name="mail">Enables mail module</flag>
-		<flag name="phonon">Phonon sound support</flag>
 		<flag name="powerkadu">Installs extra powerkadu modules</flag>
 		<flag name="sms">Enables SMS sending plugin</flag>
 		<flag name="speech">Enables speech module</flag>
