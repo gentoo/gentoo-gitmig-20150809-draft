@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7.ebuild,v 1.3 2009/08/07 13:29:11 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7.ebuild,v 1.4 2009/08/11 13:59:47 markusle Exp $
 
 EAPI="2"
 
@@ -162,4 +162,10 @@ src_install() {
 	# adjust path in vmd wrapper
 	sed -e "s:${D}::" -i "${D}"/usr/bin/${PN} \
 		|| die "failed to set up vmd wrapper script"
+
+	# install icon and generate desktop entry
+	insinto /usr/share/pixmaps
+	doins "${FILESDIR}"/vmd.png || die "Failed to install vmd icon"
+	insinto /usr/share/applications
+	doins "${FILESDIR}"/vmd.desktop || die "Failed to install desktop entry"
 }
