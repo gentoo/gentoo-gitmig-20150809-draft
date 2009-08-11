@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.8.ebuild,v 1.1 2009/08/10 09:47:56 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.8.8.ebuild,v 1.2 2009/08/11 14:42:12 voxus Exp $
 
 inherit eutils ssl-cert toolchain-funcs
 
@@ -34,7 +34,6 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	sed -i 's/ make/ \\$(MAKE)/' "${S}"/auto/lib/perl/make || die
-	epatch "${FILESDIR}"/${PN}-secure-link-timeout.patch
 }
 
 src_compile() {
