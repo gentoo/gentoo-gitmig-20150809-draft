@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.1.ebuild,v 1.2 2008/04/28 08:37:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/vdr-mplayer-0.10.1.ebuild,v 1.3 2009/08/11 09:22:16 ssuominen Exp $
 
 inherit vdr-plugin eutils
 
@@ -21,7 +21,8 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/mp3-${PV}
 
-PATCHES=("${FILESDIR}/${PV}/01_gentoo.diff")
+PATCHES=( "${FILESDIR}/${PV}/01_gentoo.diff"
+	"${FILESDIR}/${P}-glibc-2.10.patch" )
 
 VDR_RCADDON_FILE=${FILESDIR}/rc-addon-0.9.15.sh
 VDR_CONFD_FILE=${FILESDIR}/confd-0.9.15.sh

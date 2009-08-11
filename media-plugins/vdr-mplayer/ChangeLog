@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-mplayer
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.22 2008/04/28 08:37:50 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-mplayer/ChangeLog,v 1.23 2009/08/11 09:22:16 ssuominen Exp $
+
+  11 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  vdr-mplayer-0.10.1.ebuild, +files/vdr-mplayer-0.10.1-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+.
 
   28 Apr 2008; Matthias Schwarzott <zzam@gentoo.org>
   vdr-mplayer-0.10.0.ebuild, vdr-mplayer-0.10.1.ebuild:
