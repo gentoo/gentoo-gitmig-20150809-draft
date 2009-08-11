@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.265 2009/05/31 17:37:14 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.266 2009/08/11 21:44:34 eva Exp $
+
+*libxml2-2.7.3-r2 (11 Aug 2009)
+
+  11 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +libxml2-2.7.3-r2.ebuild,
+  +files/libxml2-2.7.3-CVE-2009-2414-CVE-2009-2416.patch:
+  Version bump. Fix CVE 2009-2414 and CVE 2009-2416, bug #280617.
 
   31 May 2009; Gilles Dartiguelongue <eva@gentoo.org>
   libxml2-2.7.3-r1.ebuild:
