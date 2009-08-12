@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.8.3.ebuild,v 1.1 2009/08/04 17:41:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-2.8.4.ebuild,v 1.1 2009/08/12 17:13:21 dertobi123 Exp $
 
 inherit webapp depend.php
 
