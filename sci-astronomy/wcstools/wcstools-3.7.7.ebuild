@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.7.ebuild,v 1.1 2009/07/16 18:59:25 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/wcstools-3.7.7.ebuild,v 1.2 2009/08/12 19:18:04 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -16,14 +16,15 @@ IUSE=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3.7.0-fix-leaks.patch
-	epatch "${FILESDIR}"/${PN}-3.7.6-autotools.patch
-	sed -i -e 's/3.7.x/${PV}/' "${S}"/configure.ac || die "sed failed"
-	eautoreconf
-	# avoid colliding with fixdos and getdate (also in autotools patch)
+	epatch "${FILESDIR}"/${PN}-3.7-autotools.patch
+	# avoid colliding with fixdos, getdate and remap from other packages
 	sed -i \
 		-e 's/getdate/wcsgetdate/' \
 		-e 's/crlf/wcscrlf/' \
-		wcstools || die
+		-e 's/remap/wcsremap/' \
+		wcstools Makefile.am || die
+	sed -i -e 's/3.7.x/${PV}/' "${S}"/configure.ac || die "sed failed"
+	eautoreconf
 }
 
 src_test() {
@@ -47,5 +48,6 @@ pkg_postinst() {
 	elog "The following execs have been renamed to avoid colliding"
 	elog "with other packages:"
 	elog " getdate -> wcsgetdate"
-	elog " crlf -> wcscrlf"
+	elog " crlf    -> wcscrlf"
+	elog " remap   -> wcsremap"
 }

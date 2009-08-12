@@ -2,7 +2,7 @@
 +++ configure.ac	2008-11-03 09:59:35.000000000 +0000
 @@ -0,0 +1,11 @@
 +AC_PREREQ([2.59])
-+AC_INIT(wcstools, 3.7.6, [http://tdc-www.harvard.edu/wcstools/])
++AC_INIT(wcstools, 3.7.x, [http://tdc-www.harvard.edu/wcstools/])
 +AM_INIT_AUTOMAKE([foreign])
 +AM_CONFIG_HEADER(config.h)
 +
@@ -53,12 +53,12 @@
 +	cphead delwcs delhead edhead fixpix gethead i2f imcat imhead immatch \
 +	imrot imsize imstar imwcs scat sethead addpix getpix setpix sky2xy \
 +	keyhead skycoor subpix xy2sky wcshead conpix gettab newfits getfits \
-+	imstack imextract sumpix remap getcol wcsgetdate imfill imsmooth imresize \
-+	fileroot filename filext char2sp sp2char wcscrlf isnum isrange isfits \
++	imstack imextract sumpix remap getcol getdate imfill imsmooth imresize \
++	fileroot filename filext char2sp sp2char crlf isnum isrange isfits \
 +	simpos nedpos bincat nedname
 +
 +# these ones don't need libwcs
-+wcscrlf_SOURCES = crlf.c
++crlf_SOURCES = crlf.c
 +filename_SOURCES = filename.c
 +fileroot_SOURCES = fileroot.c
 +filext_SOURCES = filext.c
@@ -68,7 +68,7 @@
 +
 +bincat_SOURCES = bincat.c
 +getcol_SOURCES = getcol.c
-+wcsgetdate_SOURCES = getdate.c
++getdate_SOURCES = getdate.c
 +gethead_SOURCES = gethead.c
 +getfits_SOURCES = getfits.c
 +getpix_SOURCES = getpix.c
