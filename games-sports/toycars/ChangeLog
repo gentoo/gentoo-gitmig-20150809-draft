@@ -1,6 +1,11 @@
 # ChangeLog for games-sports/toycars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.13 2009/07/01 02:14:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/toycars/ChangeLog,v 1.14 2009/08/12 20:37:10 ssuominen Exp $
+
+  12 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> toycars-0.3.10.ebuild,
+  +files/toycars-0.3.10-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #277072, thanks to Dominik Kapusta for
+  patch.
 
 *toycars-0.3.10 (01 Jul 2009)
 
