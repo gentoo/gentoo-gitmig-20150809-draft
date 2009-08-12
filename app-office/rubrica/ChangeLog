@@ -1,6 +1,9 @@
 # ChangeLog for app-office/rubrica
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.11 2009/06/20 23:22:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rubrica/ChangeLog,v 1.12 2009/08/12 10:14:22 scarabeus Exp $
+
+  12 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> ChangeLog:
+  Cleanup.
 
   20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   rubrica-2.1.6-r1.ebuild, -files/hu.po.bz2:
