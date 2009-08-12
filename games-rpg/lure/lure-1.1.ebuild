@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/lure-1.1.ebuild,v 1.1 2009/08/11 22:52:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/lure/lure-1.1.ebuild,v 1.2 2009/08/12 15:47:36 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -11,12 +11,12 @@ HOMEPAGE="http://www.revolution.co.uk/_display.php?id=10"
 SRC_URI="
 	http://scummvm.svn.sourceforge.net/svnroot/scummvm/scummvm/tags/release-0-13-1/dists/engine-data/lure.dat -> lure-${DAT_PV}.dat
 	!linguas_en? ( !linguas_es? ( !linguas_fr? ( !linguas_de? ( !linguas_it?
-		( mirror://sourceforge//scummvm/${P}.zip -> ${PN}-en-${PV}.zip ) ) ) ) )
-	linguas_en? ( mirror://sourceforge//scummvm/${P}.zip  -> ${PN}-en-${PV}.zip )
-	linguas_es? ( mirror://sourceforge//scummvm/${PN}-es-${PV}.zip )
-	linguas_fr? ( mirror://sourceforge//scummvm/${PN}-fr-${PV}.zip )
-	linguas_de? ( mirror://sourceforge//scummvm/${PN}-de-${PV}.zip )
-	linguas_it? ( mirror://sourceforge//scummvm/${PN}-it-${PV}.zip )"
+		( mirror://sourceforge/scummvm/${P}.zip -> ${PN}-en-${PV}.zip ) ) ) ) )
+	linguas_en? ( mirror://sourceforge/scummvm/${P}.zip  -> ${PN}-en-${PV}.zip )
+	linguas_es? ( mirror://sourceforge/scummvm/${PN}-es-${PV}.zip )
+	linguas_fr? ( mirror://sourceforge/scummvm/${PN}-fr-${PV}.zip )
+	linguas_de? ( mirror://sourceforge/scummvm/${PN}-de-${PV}.zip )
+	linguas_it? ( mirror://sourceforge/scummvm/${PN}-it-${PV}.zip )"
 
 LICENSE="lure"
 SLOT="0"
