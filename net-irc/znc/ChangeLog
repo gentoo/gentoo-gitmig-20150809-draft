@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/znc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.22 2009/07/17 15:41:09 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/znc/ChangeLog,v 1.23 2009/08/12 10:05:02 a3li Exp $
+
+*znc-0.074 (12 Aug 2009)
+
+  12 Aug 2009; Alex Legler <a3li@gentoo.org> -znc-0.060.ebuild,
+  -znc-0.070.ebuild, +znc-0.074.ebuild, metadata.xml:
+  Non-maintainer commit: Version bump for security bug 278684. Removing
+  unneded vulnerable versions. Adding local "ares" USE flag for
+  newly-introduced support for c-ares in 0.074.
 
 *znc-0.070 (17 Jul 2009)
 
