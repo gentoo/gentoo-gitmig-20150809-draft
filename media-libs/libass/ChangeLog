@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libass
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.14 2009/08/10 10:19:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libass/ChangeLog,v 1.15 2009/08/12 08:22:16 aballier Exp $
+
+  12 Aug 2009; Alexis Ballier <aballier@gentoo.org> libass-0.9.7.ebuild:
+  enable fontconfig by default per upstream recommendations
 
 *libass-0.9.7 (10 Aug 2009)
 
