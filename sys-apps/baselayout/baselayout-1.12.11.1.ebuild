@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.11.1.ebuild,v 1.13 2008/03/31 00:46:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.12.11.1.ebuild,v 1.14 2009/08/12 15:51:29 beandog Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -371,7 +371,6 @@ src_install() {
 	if ! use build ; then
 		doman "${S}"/man/*.*
 		docinto /
-		dodoc ${FILESDIR}/copyright
 		dodoc "${S}"/ChangeLog
 	fi
 
