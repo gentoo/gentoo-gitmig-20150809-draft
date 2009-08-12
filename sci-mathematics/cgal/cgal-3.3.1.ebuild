@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.3.1.ebuild,v 1.3 2009/08/12 20:27:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/cgal-3.3.1.ebuild,v 1.4 2009/08/12 21:29:10 bicatali Exp $
 
 EAPI=2
 
@@ -34,6 +34,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-rpath.patch
 	# a patch from debian on missing qt headers
 	epatch "${FILESDIR}"/${P}-qt.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 	# sed for blas and lapack gentoo style
 	sed -e 's:Intel MKL:Gentoo BLAS-LAPACK:' \
 		-e "s:^LIBS.=.*:LIBS=$(pkg-config --libs-only-l lapack | sed 's/-l//g'):" \

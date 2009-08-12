@@ -1,6 +1,10 @@
 # ChangeLog for sci-mathematics/cgal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.3 2009/08/12 20:27:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/cgal/ChangeLog,v 1.4 2009/08/12 21:29:10 bicatali Exp $
+
+  12 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> cgal-3.3.1.ebuild,
+  +files/cgal-3.3.1-gcc44.patch:
+  Added a gcc-4.4 patch in order to build cgal-python
 
   12 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> cgal-3.3.1.ebuild:
   Fixed a sed line
