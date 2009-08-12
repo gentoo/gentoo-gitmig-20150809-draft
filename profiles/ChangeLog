@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3112 2009/08/12 16:03:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3113 2009/08/12 17:27:13 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask redland 1.0.9 wrt #281226.
 
   12 Aug 2009; Steve Dibb <beandog@gentoo.org>
   targets/desktop/make.defaults:
