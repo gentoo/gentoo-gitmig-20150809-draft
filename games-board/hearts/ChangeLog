@@ -1,6 +1,10 @@
 # ChangeLog for games-board/hearts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/ChangeLog,v 1.4 2009/01/19 14:54:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hearts/ChangeLog,v 1.5 2009/08/12 00:56:56 ssuominen Exp $
+
+  12 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> hearts-1.98.ebuild,
+  +files/hearts-1.98-gcc44.patch:
+  Fix building with GCC 4.4+ wrt #273560.
 
   19 Jan 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/hearts-1.98-gcc43.patch, hearts-1.98.ebuild:
