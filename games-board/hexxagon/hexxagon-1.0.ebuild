@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.9 2008/04/08 01:45:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/hexxagon/hexxagon-1.0.ebuild,v 1.10 2009/08/12 20:32:39 ssuominen Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="clone of the original DOS game"
@@ -15,14 +16,12 @@ IUSE=""
 
 RDEPEND=">=dev-cpp/glibmm-2.4
 	>=dev-cpp/gtkmm-2.4
-	>=x11-libs/gtk+-2.0"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${P}-gcc42.patch
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-toolchain.patch
 }
 
 src_install() {
