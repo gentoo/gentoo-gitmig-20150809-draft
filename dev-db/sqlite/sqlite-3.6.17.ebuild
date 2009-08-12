@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.17.ebuild,v 1.1 2009/08/10 18:26:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.6.17.ebuild,v 1.2 2009/08/12 17:03:43 arfrever Exp $
 
 EAPI="2"
 
@@ -25,9 +25,10 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# note: this sandbox fix is no longer needed with sandbox-1.3+
-	epatch "${FILESDIR}"/sandbox-fix2.patch
+	epatch "${FILESDIR}/sandbox-fix2.patch"
 
-	epatch "${FILESDIR}"/${PN}-3.6.16-tkt3922.test.patch
+	epatch "${FILESDIR}/${PN}-3.6.16-tkt3922.test.patch"
+	epatch "${FILESDIR}/${P}-fix_installation.patch"
 
 	epunt_cxx
 }
