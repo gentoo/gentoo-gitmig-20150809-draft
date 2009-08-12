@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qmultirecord/qmultirecord-0.0.3.ebuild,v 1.1 2009/08/12 19:07:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qmultirecord/qmultirecord-0.0.3.ebuild,v 1.2 2009/08/12 19:26:20 ssuominen Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -19,7 +19,7 @@ COMMON_DEPEND="x11-libs/qt-dbus:4
 	x11-libs/qt-gui:4
 	x11-libs/qt-core:4"
 RDEPEND="${COMMON_DEPEND}
-	sys-apps/eject
+	virtual/eject
 	app-cdr/dvd+rw-tools
 	virtual/cdrtools"
 DEPEND="${COMMON_DEPEND}"
