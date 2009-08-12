@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/sphinx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.23 2009/08/09 16:38:17 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinx/ChangeLog,v 1.24 2009/08/12 02:03:49 arfrever Exp $
+
+  12 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  sphinx-0.6.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   09 Aug 2009; Raúl Porcel <armin76@gentoo.org> sphinx-0.6.1-r1.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #278978
