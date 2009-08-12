@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4-r1.ebuild,v 1.1 2009/08/05 22:27:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.5.4-r3.ebuild,v 1.1 2009/08/12 08:58:25 hwoarang Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit python qt4
+inherit python qt4 toolchain-funcs
 
 MY_P=PyQt-x11-gpl-${PV}
 QTVER="4.5.1"
@@ -44,6 +44,8 @@ S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/configure.py.patch"
+	# Remember to remove this patch since it is already on PyQt4-4.6
+	"${FILESDIR}/${P}-qgraphicslinearlayout-fix.patch"
 )
 
 src_prepare() {
@@ -93,12 +95,13 @@ src_configure() {
 				$(pyqt4_use_enable webkit QtWebKit)
 				$(pyqt4_use_enable xmlpatterns QtXmlPatterns)
 				CC=$(tc-getCC) CXX=$(tc-getCXX)
+				LINK=$(tc-getCXX) LINK_SHLIB=$(tc-getCXX)
 				CFLAGS='${CFLAGS}' CXXFLAGS='${CXXFLAGS}' LFLAGS='${LDFLAGS}'"
 		echo ${myconf}
 		eval ${myconf} || return 1
 
 		# Fix insecure runpath.
-		for mod in QtCore $(use X && echo "QtDesigner QtGui"); do
+		for mod in QtCore $(use X && echo 'QtDesigner QtGui'); do
 			# Run eqmake4 to inside the qpy subdirs to prevent
 			# stripping and many QA issues
 			pushd qpy/${mod} > /dev/null || die

@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.80 2009/08/11 08:44:38 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.81 2009/08/12 08:58:25 hwoarang Exp $
+
+*PyQt4-4.5.4-r3 (12 Aug 2009)
+
+  12 Aug 2009; Markos Chandras <hwoarang@gentoo.org> -PyQt4-4.5.4-r1.ebuild,
+  +PyQt4-4.5.4-r3.ebuild,
+  +files/PyQt4-4.5.4-qgraphicslinearlayout-fix.patch:
+  Added patch for removing items from QGraphicsLinearLayout. Fixes bug
+  280634 .
+  THanks to Fabio Erculiani <lxnay@sabayonlinux.org> for the patch
 
 *PyQt4-4.5.4-r2 (11 Aug 2009)
 
