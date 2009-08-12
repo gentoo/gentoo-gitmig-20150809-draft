@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.0.5.ebuild,v 1.3 2009/05/31 21:20:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/kdesvn-1.0.5.ebuild,v 1.4 2009/08/12 16:45:46 wired Exp $
 
 EAPI="2"
 
@@ -50,13 +50,13 @@ src_prepare() {
 	for X in ${LANGS} ; do
 		use linguas_${X} || rm -f po/"${X}."*
 	done
-
-	cmake-utils_src_prepare
 }
 
 src_compile() {
 	# fixing up lib paths
-	sed -i "/^KDE3/ s:/usr/lib:${KDEDIR}/lib:g" "${WORKDIR}"/"${PN}"_build/CMakeCache.txt
+	sed -i "/^KDE3/ s:/usr/lib:${KDEDIR}/lib:g" \
+		"${WORKDIR}"/"${P}"_build/CMakeCache.txt ||
+			die "lib path fix failed"
 
 	cmake-utils_src_compile
 }
