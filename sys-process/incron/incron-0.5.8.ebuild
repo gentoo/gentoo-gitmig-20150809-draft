@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.8.ebuild,v 1.2 2009/07/30 11:40:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.8.ebuild,v 1.3 2009/08/12 02:59:33 robbat2 Exp $
 
 EAPI="2"
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-CONFIG_CHECK="INOTIFY"
+CONFIG_CHECK="~INOTIFY"
 ERROR_INOTIFY="Recompile your kernel with inotify support - CONFIG_INOTIFY"
 
 src_prepare() {

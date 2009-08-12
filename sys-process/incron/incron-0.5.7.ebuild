@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.7.ebuild,v 1.3 2009/01/09 19:36:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/incron/incron-0.5.7.ebuild,v 1.4 2009/08/12 02:59:33 robbat2 Exp $
 
 inherit eutils linux-info toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-CONFIG_CHECK="INOTIFY"
+CONFIG_CHECK="~INOTIFY"
 ERROR_INOTIFY="Recompile your kernel with inotify support - CONFIG_INOTIFY"
 
 src_unpack() {
