@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.81 2009/06/18 00:16:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.82 2009/08/12 21:49:08 vapier Exp $
+
+  12 Aug 2009; Mike Frysinger <vapier@gentoo.org>
+  files/ntop-update-geoip-db:
+  Run wget with -nv so it doesnt spam logs so much.
 
 *ntop-3.3.10-r1 (18 Jun 2009)
 
