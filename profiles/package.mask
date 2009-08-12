@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10319 2009/08/12 17:27:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10320 2009/08/12 22:20:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -42,12 +42,6 @@ media-plugins/gst-plugins-fluendo-mpegdemux
 # 247823 and 281076. Masked for removal.
 media-sound/beast
 media-sound/beast-data
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Aug 2009)
-# See https://bugs.gentoo.org/show_bug.cgi?id=278106
-# Will be removed or fixed in 60 days but can't be unmasked
-# before.
-dev-python/cgal-python
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
 #  on behalf of QA team
