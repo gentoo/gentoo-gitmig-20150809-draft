@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4724 2009/08/12 10:07:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4725 2009/08/12 23:47:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2552,6 +2552,7 @@ net-p2p/ktorrent:logviewer - Enable the logviewer plugin
 net-p2p/ktorrent:mediaplayer - Enable the mediaplayer plugin
 net-p2p/ktorrent:scanfolder - Enable the scanfolder plugin
 net-p2p/ktorrent:search - Enable the search plugin
+net-p2p/ktorrent:shutdown - Shutdown when done
 net-p2p/ktorrent:stats - Enable the statistics plugin
 net-p2p/ktorrent:upnp - Enable the uphp plugin
 net-p2p/ktorrent:webinterface - Enable the webinterface plugin
