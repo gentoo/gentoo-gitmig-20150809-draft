@@ -27,5 +27,4 @@ virtual/ssh			net-misc/dropbear
 virtual/tftp			sys-apps/busybox
 virtual/wine			app-emulation/wine
 virtual/utempter 		sys-apps/utempter
-virtual/eject			sys-apps/busybox
 virtual/dev-manager		sys-apps/busybox
