@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.4.ebuild,v 1.2 2009/08/09 14:18:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/telepathy-idle/telepathy-idle-0.1.4.ebuild,v 1.3 2009/08/12 02:18:42 ssuominen Exp $
 
 EAPI=2
+inherit eutils
 
 DESCRIPTION="Full-featured IRC connection manager for Telepathy."
 HOMEPAGE="http://telepathy.freedesktop.org/wiki/Components"
@@ -21,6 +22,10 @@ RDEPEND="dev-libs/dbus-glib
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	test? ( dev-python/twisted-words )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.1.2-glibc-2.10.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
