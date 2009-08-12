@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.50 2009/05/24 09:40:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.51 2009/08/12 17:04:35 bicatali Exp $
+
+*celestia-1.6.0 (21 Jul 2009)
+
+  21 Jul 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  celestia-1.5.1.ebuild, +celestia-1.6.0.ebuild,
+  +files/celestia-1.6.0-cfg.patch:
+  Version bump. Fixed a few unicode guide (bug #271613), kde deps (bug
+  #254010). The lua script engine is now mandatory (might be an upstream
+  bug). Closing also bug #278469, thanks Juan Aguado for his work.
 
   24 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   -celestia-1.4.1-r2.ebuild, -files/celestia-1.4.1-3dsmodels.patch,
