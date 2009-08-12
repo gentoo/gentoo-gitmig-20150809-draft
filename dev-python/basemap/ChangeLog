@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/basemap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.14 2009/04/30 17:55:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/ChangeLog,v 1.15 2009/08/12 17:13:20 bicatali Exp $
+
+*basemap-0.99.4 (12 Aug 2009)
+
+  12 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -files/basemap-0.99.2-syslib.patch, basemap-0.99.3.ebuild,
+  +basemap-0.99.4.ebuild:
+  Version bump and really apply datadir patch
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -basemap-0.99.2.ebuild:
   Remove old

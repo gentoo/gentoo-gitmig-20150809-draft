@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.99.3.ebuild,v 1.2 2009/08/12 17:13:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/basemap/basemap-0.99.4.ebuild,v 1.1 2009/08/12 17:13:20 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -22,15 +22,15 @@ DEPEND="${CDEPEND}
 	dev-python/setuptools"
 
 RDEPEND="${CDEPEND}
-	dev-python/pupynere
+	>=dev-python/pupynere-1.0.8
 	dev-python/dap"
 
 DOCS="FAQ API_CHANGES"
 
 src_prepare() {
 	# use system libraries
-	epatch "${FILESDIR}"/${P}-syslib.patch
-	epatch "${FILESDIR}"/${P}-datadir.patch
+	epatch "${FILESDIR}"/${PN}-0.99.3-syslib.patch
+	epatch "${FILESDIR}"/${PN}-0.99.3-datadir.patch
 	rm -f lib/mpl_toolkits/basemap/pupynere.py || die
 }
 
