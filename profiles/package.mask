@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10317 2009/08/12 11:12:55 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10318 2009/08/12 14:11:49 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,12 +44,10 @@ media-sound/beast
 media-sound/beast-data
 
 # Samuli Suominen <ssuominen@gentoo.org> (11 Aug 2009)
-# For vis5d+, see https://bugs.gentoo.org/show_bug.cgi?id=274281
-# For cgal-python, see https://bugs.gentoo.org/show_bug.cgi?id=278106
-# These will be removed or fixed in 60 days but they can't be unmasked
-# before they have.
+# See https://bugs.gentoo.org/show_bug.cgi?id=278106
+# Will be removed or fixed in 60 days but can't be unmasked
+# before.
 dev-python/cgal-python
-sci-visualization/vis5d+
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
 #  on behalf of QA team
