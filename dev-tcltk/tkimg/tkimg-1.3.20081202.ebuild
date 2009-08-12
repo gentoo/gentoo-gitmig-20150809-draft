@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.4 2009/08/08 13:03:55 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.5 2009/08/12 20:31:01 bicatali Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Adds a lot of image formats to Tcl/Tk"
@@ -17,13 +18,13 @@ LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="dev-lang/tk
+	dev-tcltk/tcllib
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff"
+RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-systemlibs.patch
 	epatch "${FILESDIR}"/${P}-tests.patch
 }
