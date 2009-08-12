@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-6.ebuild,v 1.1 2009/06/27 13:26:10 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/unieject/unieject-6.ebuild,v 1.2 2009/08/12 19:23:24 ssuominen Exp $
 
 inherit eutils libtool
 
@@ -22,11 +22,7 @@ DEPEND="${RDEPEND}
 	sys-apps/sed
 	dev-util/pkgconfig"
 RDEPEND="${RDEPEND}
-	pmount? ( sys-apps/pmount )
-	!sys-apps/eject
-	!sys-block/eject-bsd"
-
-PROVIDE="virtual/eject"
+	pmount? ( sys-apps/pmount )"
 
 pkg_setup() {
 	use pmount && enewgroup plugdev
