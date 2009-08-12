@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3115 2009/08/12 22:20:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3116 2009/08/12 23:26:08 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2009; Alex Alexander <wired@gentoo.org> package.mask:
+  masked ktorrent beta versions
 
   12 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask cgal-python since it's fixed.
