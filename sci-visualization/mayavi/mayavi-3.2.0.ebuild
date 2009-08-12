@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.2.0.ebuild,v 1.2 2009/06/18 07:41:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.2.0.ebuild,v 1.3 2009/08/12 18:17:52 bicatali Exp $
 
 EAPI=2
 inherit eutils distutils
@@ -11,7 +11,7 @@ DESCRIPTION="VTK based scientific data visualizer"
 HOMEPAGE="http://code.enthought.com/projects/mayavi"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples qt4 wxwindows"
+IUSE="doc examples qt4"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"

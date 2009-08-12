@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.9 2009/06/18 07:41:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.10 2009/08/12 18:17:52 bicatali Exp $
+
+  12 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.2.0.ebuild:
+  Removed wxwindows flag, since it is mandatory even with qt
 
   18 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.2.0.ebuild:
   Forced wxwidgets dependency (bug #266799) and added X for PyQt4 (bug
