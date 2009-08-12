@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.90 2009/08/08 19:18:52 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.91 2009/08/12 16:41:00 ulm Exp $
+
+  12 Aug 2009; Ulrich Mueller <ulm@gentoo.org> use.defaults:
+  Add gnuplot and skey to use.defaults.
 
   08 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +package.mask:
