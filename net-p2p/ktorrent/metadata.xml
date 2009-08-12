@@ -17,6 +17,7 @@
 	<flag name="mediaplayer">Enable the mediaplayer plugin</flag>
 	<flag name="scanfolder">Enable the scanfolder plugin</flag>
 	<flag name="search">Enable the search plugin</flag>
+	<flag name="shutdown">Shutdown when done</flag>
 	<flag name="stats">Enable the statistics plugin</flag>
 	<flag name="upnp">Enable the uphp plugin</flag>
 	<flag name="webinterface">Enable the webinterface plugin</flag>
