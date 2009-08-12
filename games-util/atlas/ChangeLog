@@ -1,6 +1,12 @@
 # ChangeLog for games-util/atlas
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.15 2008/07/22 19:03:34 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/atlas/ChangeLog,v 1.16 2009/08/12 19:51:26 mr_bones_ Exp $
+
+*atlas-0.3.1_p20090812 (12 Aug 2009)
+
+  12 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +atlas-0.3.1_p20090812.ebuild:
+  CVS snap version bump from Samuli Suominen via bug #280236
 
   22 Jul 2008; Tupone Alfredo <tupone@gentoo.org>
   +files/atlas-0.3.1-gcc-4.3.patch, atlas-0.3.1.ebuild:
