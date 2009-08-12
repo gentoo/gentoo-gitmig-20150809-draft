@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.8.0_rc2.ebuild,v 1.1 2009/07/04 23:11:44 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/pybugz-0.8.0_rc3.ebuild,v 1.1 2009/08/12 20:42:37 williamh Exp $
 
 EAPI="2"
 
-inherit distutils
+inherit bash-completion distutils
 
 DESCRIPTION="Command line interface to (Gentoo) Bugzilla"
 HOMEPAGE="http://www.liquidx.net/pybugz"
@@ -16,10 +16,16 @@ IUSE="zsh-completion"
 DEPEND="|| ( >=dev-lang/python-2.5[readline]
 	( >=dev-lang/python-2.4[readline]
 		dev-python/elementtree ) )"
-		RDEPEND="zsh-completion? ( app-shells/zsh )"
+RDEPEND="${DEPEND}
+	bash-completion? ( app-shells/bash )
+	zsh-completion? ( app-shells/zsh )"
 
 src_install() {
 	distutils_src_install
+
+	if use bash-completion; then
+		dobashcompletion contrib/bash-completion bugz
+	fi
 
 	if use zsh-completion ; then
 		insinto /usr/share/zsh/site-functions
