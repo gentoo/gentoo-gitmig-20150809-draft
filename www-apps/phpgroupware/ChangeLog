@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/phpgroupware
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.35 2008/02/23 21:15:05 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.36 2009/08/12 11:10:49 a3li Exp $
+
+*phpgroupware-0.9.16.012-r1 (12 Aug 2009)
+
+  12 Aug 2009; Alex Legler <a3li@gentoo.org>
+  +files/phpgroupware-SA35519.patch, +phpgroupware-0.9.16.012-r1.ebuild:
+  Non-maintainer commit: Version bump for security bug 278864.
 
   23 Feb 2008; Benedikt Böhm <hollow@gentoo.org> metadata.xml,
   phpgroupware-0.9.16.012.ebuild:
