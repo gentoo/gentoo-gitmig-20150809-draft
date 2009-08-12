@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4723 2009/08/12 09:27:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4724 2009/08/12 10:07:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2271,6 +2271,7 @@ net-irc/xchat:xchatdccserver - Enables support for the /dccserver command via a 
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
 net-irc/xchat-gnome:sound - Enable sound event support with media-libs/libcanberra
 net-irc/xchat-xsys:audacious - Enables media-sound/audacious integration
+net-irc/znc:ares - Enables support for asynchronous DNS using the c-ares library
 net-irc/znc:nomodules - Don't build modules
 net-libs/aqbanking:chipcard -  Enable support for DDV/RSA-chipcards 
 net-libs/aqbanking:dtaus -  Enable dtaus backend 
