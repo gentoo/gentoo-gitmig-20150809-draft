@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.3 2009/08/05 16:35:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.4 2009/08/13 01:45:32 arfrever Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -35,7 +35,7 @@ src_install() {
 }
 
 pkg_preinst() {
-	if has_version "<${CATEGORY}/${PN}-20090804"; then
+	if has_version "<${CATEGORY}/${PN}-20090804" || ! has_version "${CATEGORY}/${PN}"; then
 		run_eselect_python_update="1"
 	fi
 }

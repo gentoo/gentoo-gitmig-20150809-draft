@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/eselect-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.35 2009/08/05 16:35:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/ChangeLog,v 1.36 2009/08/13 01:45:32 arfrever Exp $
+
+  13 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  eselect-python-20090804.ebuild:
+  Run `eselect python update` when no version of app-admin/eselect-python
+  was earlier installed (bug #281247).
 
   05 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   eselect-python-20090804.ebuild:
