@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10321 2009/08/12 23:26:08 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10322 2009/08/13 00:20:14 tgurr Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Timo Gurr <tgurr@gentoo.org> (13 Aug 2009)
+# Mask Mumble 1.2.0 snapshots for testing.
+=media-sound/mumble-1.2.0_pre*
+=media-sound/murmur-1.2.0_pre*
 
 # Alex Alexander <wired@gentoo.org> (12 Aug 2009)
 # Masked beta versions for testing
