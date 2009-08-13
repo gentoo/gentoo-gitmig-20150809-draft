@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.8.2-r1.ebuild,v 1.1 2009/08/13 01:06:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.8.3.ebuild,v 1.1 2009/08/13 16:15:11 arfrever Exp $
 
 EAPI="2"
 
@@ -53,8 +53,6 @@ pkg_setup() {
 
 src_prepare() {
 	sed -e 's/imagesdir = $(infodir)/imagesdir = $(htmldir)/' -i doc/Makefile.am
-
-	epatch "${FILESDIR}/${P}-fix_reading_of_memory.patch"
 
 	local dir
 	for dir in m4 lib/m4 libextra/m4; do
