@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3123 2009/08/13 17:45:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3124 2009/08/13 19:41:34 halcy0n Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Aug 2009; Mark Loeser <halcy0n@gentoo.org> package.mask:
+  Removing mask for gcc-4.4. It is still masked in all the hardened profiles
 
   13 Aug 2009; Steve Dibb <beandog@gentoo.org> desc/alsa_cards.desc:
   Update ALSA cards, bug 269167
