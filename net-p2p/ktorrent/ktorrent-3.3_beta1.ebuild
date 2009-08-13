@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3_beta1.ebuild,v 1.1 2009/08/12 23:34:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ktorrent/ktorrent-3.3_beta1.ebuild,v 1.2 2009/08/13 07:53:51 wired Exp $
 
 EAPI="2"
 
-if [[ ${PV} == "9999" ]] ; then
+if [[ ${PV} == *9999* ]] ; then
 	KEYWORDS=""
 	KMNAME="extragear/network"
 else
@@ -43,7 +43,6 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/gettext
 "
 RDEPEND="${COMMONDEPEND}
-	!kdeprefix? ( !net-p2p/ktorrent:0 )
 	infowidget? ( >=dev-libs/geoip-1.4.4 )
 	ipfilter? (
 			app-arch/bzip2
