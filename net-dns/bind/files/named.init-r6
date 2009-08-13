@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r6,v 1.1 2009/07/19 19:57:22 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/files/named.init-r6,v 1.2 2009/08/13 00:41:06 idl0r Exp $
 
 opts="start stop reload restart"
 
@@ -74,7 +74,6 @@ start() {
 	if [[ -n ${CHROOT} ]];
 	then
 		einfo "Mounting chroot dirs"
-		_mount none ${CHROOT}/proc -t proc
 		_mount /etc/bind ${CHROOT}/etc/bind -o bind
 		_mount /var/bind ${CHROOT}/var/bind -o bind
 		_mount /var/log/named ${CHROOT}/var/log/named -o bind
@@ -119,7 +118,6 @@ stop() {
 		_umount ${CHROOT}/etc/bind
 		_umount ${CHROOT}/var/log/named
 		_umount ${CHROOT}/var/bind
-		_umount ${CHROOT}/proc
 	fi
 
 	eend $?
