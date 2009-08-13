@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.20.ebuild,v 1.2 2009/08/04 04:49:56 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.20-r1.ebuild,v 1.1 2009/08/13 15:09:41 beandog Exp $
 
 inherit autotools linux-mod flag-o-matic eutils multilib linux-info
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~mips ~ppc ~ppc64 ~x86"
 IUSE="oss debug"
 
-IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
+IUSE_CARDS="hrtimer rtctimer hpet pcsp seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
 loopback portman2x4 ad1848-lib adlib ad1816a ad1848
 als100 azt2320 cmi8330 cs4231 cs4232 cs4236 dt019x es968 es1688 es18xx
 gusclassic gusextreme gusmax interwave interwave-stb opl3sa2
@@ -135,8 +135,8 @@ src_compile() {
 		--with-suse=no \
 		--with-isapnp=auto \
 		--with-sequencer \
-		--with-cards="${ALSA_CARDS} \
-		--with-card-options=all" || die "econf failed"
+		--with-cards="${ALSA_CARDS}" \
+		--with-card-options=all || die "econf failed"
 
 	# linux-mod_src_compile doesn't work well with alsa
 

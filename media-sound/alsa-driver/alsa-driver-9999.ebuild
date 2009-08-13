@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.12 2009/08/13 15:10:27 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-9999.ebuild,v 1.13 2009/08/13 15:11:32 beandog Exp $
 
 inherit linux-mod flag-o-matic eutils multilib autotools git
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="oss debug"
 
-IUSE_CARDS="seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
+IUSE_CARDS="hrtimer rtctimer hpet pcsp seq-dummy dummy virmidi mtpav mts64 serial-u16550 mpu401
 loopback portman2x4 ad1848-lib adlib ad1816a ad1848
 als100 azt2320 cmi8330 cs4231 cs4232 cs4236 dt019x es968 es1688 es18xx
 gusclassic gusextreme gusmax interwave interwave-stb opl3sa2
