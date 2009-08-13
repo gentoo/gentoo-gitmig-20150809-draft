@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/librpcsecgss
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.21 2008/04/20 10:43:15 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librpcsecgss/ChangeLog,v 1.22 2009/08/13 04:48:28 vapier Exp $
+
+*librpcsecgss-0.19 (13 Aug 2009)
+
+  13 Aug 2009; Mike Frysinger <vapier@gentoo.org> +librpcsecgss-0.19.ebuild:
+  Version bump.
 
 *librpcsecgss-0.18 (20 Apr 2008)
 
