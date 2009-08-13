@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.0.6-r1.ebuild,v 1.8 2009/05/26 17:05:27 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-3.2.0.ebuild,v 1.1 2009/08/13 14:49:54 dertobi123 Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils depend.apache toolchain-funcs
 
@@ -13,14 +13,13 @@ SRC_URI="mirror://sourceforge/nagios/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug lighttpd perl +web vim-syntax"
 DEPEND="virtual/mailx
 	web? (
-		>=media-libs/jpeg-6b-r3
-		>=media-libs/libpng-1.2.5-r4
-		>=media-libs/gd-1.8.3-r5
-		lighttpd? ( www-servers/lighttpd )
+		>=media-libs/gd-1.8.3-r5[jpeg,png]
+		lighttpd? ( www-servers/lighttpd dev-lang/php[cgi] )
+		apache2? ( || ( dev-lang/php[apache2] dev-lang/php[cgi] ) )
 	)
 	perl? ( >=dev-lang/perl-5.6.1-r7 )"
 RDEPEND="${DEPEND}
@@ -33,29 +32,16 @@ S="${WORKDIR}/${MY_P}"
 pkg_setup() {
 	depend.apache_pkg_setup
 
-	# Check if gd has been compiled with jpeg and png support
-	if use web; then
-		if ! built_with_use media-libs/gd jpeg png; then
-			eerror "Your gd has been compiled without jpeg and/or png support."
-			eerror "Please re-emerge gd:"
-			eerror "# USE="jpeg png" emerge gd"
-			die "pkg_setup failed"
-		fi
-	fi
-
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /var/nagios/home nagios
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	local strip="$(echo '$(MAKE) strip-post-install')"
 	sed -i -e "s:${strip}::" {cgi,base}/Makefile.in || die "sed failed in Makefile.in"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use perl ; then
@@ -91,7 +77,9 @@ src_compile() {
 		--sysconfdir=/etc/nagios \
 		--libexecdir=/usr/$(get_libdir)/nagios/plugins \
 		|| die "./configure failed"
+}
 
+src_compile() {
 	emake CC=$(tc-getCC) nagios || die "make failed"
 
 	if use web ; then
