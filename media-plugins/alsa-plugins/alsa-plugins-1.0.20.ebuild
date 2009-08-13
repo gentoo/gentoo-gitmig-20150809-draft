@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.20.ebuild,v 1.4 2009/08/13 14:52:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/alsa-plugins-1.0.20.ebuild,v 1.5 2009/08/13 16:47:48 beandog Exp $
 
 EAPI=2
 
@@ -19,14 +19,14 @@ IUSE="debug ffmpeg jack libsamplerate pulseaudio speex"
 
 RDEPEND=">=media-libs/alsa-lib-${PV}[alsa_pcm_plugins_ioplug]
 	ffmpeg? ( media-video/ffmpeg
-		media-libs/alsa-lib[alsa_pcm_plugins_rate] )
+		media-libs/alsa-lib[alsa_pcm_plugins_rate,alsa_pcm_plugins_plug] )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.98 )
 	libsamplerate? (
 		media-libs/libsamplerate
-		media-libs/alsa-lib[alsa_pcm_plugins_rate] )
+		media-libs/alsa-lib[alsa_pcm_plugins_rate,alsa_pcm_plugins_plug] )
 	pulseaudio? ( media-sound/pulseaudio )
 	speex? ( media-libs/speex
-		media-libs/alsa-lib[alsa_pcm_plugins_rate] )
+		media-libs/alsa-lib[alsa_pcm_plugins_rate,alsa_pcm_plugins_plug] )
 	!media-plugins/alsa-jack"
 
 DEPEND="${RDEPEND}
