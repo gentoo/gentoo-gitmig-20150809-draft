@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.4 2009/08/13 16:56:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.5 2009/08/13 20:43:32 ssuominen Exp $
 
 EAPI="2"
 
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="alsa audioscrobbler debug dbus +ffmpeg flac libnotify mad openal pulseaudio syslog test"
 
 RDEPEND=">=dev-cpp/gtkmm-2.16
+	>=dev-cpp/pangomm-2.24
 	dev-cpp/libsexymm
 	media-libs/taglib
 	dev-db/sqlite
