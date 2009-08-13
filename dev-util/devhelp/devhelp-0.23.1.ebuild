@@ -1,18 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.23.ebuild,v 1.1 2009/06/01 20:08:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.23.1.ebuild,v 1.1 2009/08/13 13:24:51 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
 
-inherit toolchain-funcs gnome2 python
+inherit eutils toolchain-funcs gnome2 python
 
 DESCRIPTION="An API documentation browser for GNOME 2"
 HOMEPAGE="http://developer.imendio.com/wiki/Devhelp"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-2.6
@@ -21,7 +21,7 @@ RDEPEND=">=gnome-base/gconf-2.6
 	>=x11-libs/libwnck-2.10
 	net-libs/webkit-gtk"
 DEPEND="${RDEPEND}
-	  sys-devel/gettext
+	sys-devel/gettext
 	>=dev-util/intltool-0.40
 	>=dev-util/pkgconfig-0.9"
 
