@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.67 2009/08/13 13:06:50 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.68 2009/08/13 13:50:45 remi Exp $
+
+  13 Aug 2009; Rémi Cardona <remi@gentoo.org> libSM-1.1.1.ebuild:
+  look for FreeBSD's libc instead of x86-fbsd, thanks aballier
 
 *libSM-1.1.1 (13 Aug 2009)
 
