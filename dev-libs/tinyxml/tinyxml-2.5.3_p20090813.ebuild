@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.5.3_p20090813.ebuild,v 1.1 2009/08/13 02:26:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tinyxml/tinyxml-2.5.3_p20090813.ebuild,v 1.2 2009/08/13 07:10:44 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ src_compile() {
 
 	scons debug=${debug} program=0 sharedlibrary=1 staticlibrary=1 \
 		. || die "scons failed"
-	
+
 	if use doc; then
 		doxygen dox || die "doxygen failed"
 	fi
