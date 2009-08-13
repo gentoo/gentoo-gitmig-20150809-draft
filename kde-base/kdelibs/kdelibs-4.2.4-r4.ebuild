@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r4.ebuild,v 1.3 2009/08/01 06:49:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r4.ebuild,v 1.4 2009/08/13 12:11:28 scarabeus Exp $
 
 EAPI="2"
 
@@ -48,7 +48,7 @@ COMMONDEPEND="
 	x11-libs/libXpm
 	x11-libs/libXrender
 	x11-libs/libXtst
-	x11-misc/shared-mime-info
+	>=x11-misc/shared-mime-info-0.30
 	acl? ( virtual/acl )
 	alsa? ( media-libs/alsa-lib )
 	bzip2? ( app-arch/bzip2 )

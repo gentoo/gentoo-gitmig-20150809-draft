@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.618 2009/08/04 00:17:10 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.619 2009/08/13 12:11:28 scarabeus Exp $
+
+  13 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  kdelibs-4.2.4-r4.ebuild, kdelibs-4.3.0.ebuild:
+  Depend on correct version of shared-mime-info. Per bug #281285.
 
 *kdelibs-4.3.0 (04 Aug 2009)
 
