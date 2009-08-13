@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.1.9.ebuild,v 1.2 2009/08/13 10:54:26 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-2.1.9.ebuild,v 1.3 2009/08/13 15:26:06 tcunha Exp $
 
 EAPI=2
 inherit eutils
@@ -17,7 +17,7 @@ HOMEPAGE="http://www.nano-editor.org/"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug justify minimal ncurses nls slang spell unicode"
 
 DEPEND=">=sys-libs/ncurses-5.2[unicode?]
