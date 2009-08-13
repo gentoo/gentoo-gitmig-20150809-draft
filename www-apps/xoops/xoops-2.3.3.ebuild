@@ -1,18 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.2.4.ebuild,v 1.7 2008/02/26 14:32:53 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/xoops-2.3.3.ebuild,v 1.1 2009/08/13 12:25:15 a3li Exp $
 
 inherit webapp depend.php
 
 DESCRIPTION="eXtensible Object Oriented Portal System (xoops) is an open-source
 Content Management System, including various portal features and supplemental modules."
 HOMEPAGE="http://www.xoops.org/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-2.2.3a-Final.tar.gz
-mirror://sourceforge/${PN}/xoops-2.2.3a-to-2.2.4.tgz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64"
-S=${WORKDIR}
 
 IUSE=""
 
@@ -27,13 +25,6 @@ pkg_setup() {
 	webapp_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	cp -f xoops-2.2.3a-to-2.2.4/docs/* docs/ || die
-	cp -Rf xoops-2.2.3a-to-2.2.4/html/* html/ || die
-}
-
 src_install() {
 	webapp_src_preinst
 
@@ -42,7 +33,7 @@ src_install() {
 	dohtml docs/INSTALL.html docs/UPDATE.html
 
 	cp -R docs/images "${D}"/usr/share/doc/${PF}/html
-	cp -pPR html/* "${D}/${MY_HTDOCSDIR}"
+	cp -pPR htdocs/* "${D}/${MY_HTDOCSDIR}"
 	cp -pPR extras/* "${D}"/${MY_HOSTROOTDIR}/${PF}
 
 	webapp_serverowned ${MY_HTDOCSDIR}/uploads

@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/xoops
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.18 2008/02/26 14:32:53 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/xoops/ChangeLog,v 1.19 2009/08/13 12:25:15 a3li Exp $
+
+*xoops-2.3.3 (13 Aug 2009)
+
+  13 Aug 2009; Alex Legler <a3li@gentoo.org> -xoops-2.2.4.ebuild,
+  +xoops-2.3.3.ebuild:
+  Non-maintainer commit: Version bump for security bug 280016. Removing
+  vulnerable version.
 
   26 Feb 2008; Gunnar Wrobel <wrobel@gentoo.org> xoops-2.2.4.ebuild:
   Fix wrt #208584
