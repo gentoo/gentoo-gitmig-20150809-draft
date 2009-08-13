@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.8.ebuild,v 1.1 2009/07/26 13:14:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-0.6.8.ebuild,v 1.2 2009/08/13 18:15:40 tampakrap Exp $
 
-EAPI=2
+EAPI="2"
+
 inherit eutils qt4
 
 MY_PV=${PV##*_p}
@@ -40,6 +41,9 @@ for X in ${NOLONGLANGS}; do
 done
 
 src_prepare() {
+	# Force Ctrl+Q as default quit shortcut
+	epatch "${FILESDIR}/${P}-quit.patch"
+
 	# Upstream Makefile sucks
 	sed -i -e "/^PREFIX=/s:/usr/local:/usr:" \
 		-e "/^DOC_PATH=/s:packages/smplayer:${PF}:" \

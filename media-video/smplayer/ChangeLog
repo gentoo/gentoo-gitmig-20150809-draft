@@ -1,6 +1,10 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.72 2009/07/26 13:14:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.73 2009/08/13 18:15:40 tampakrap Exp $
+
+  13 Aug 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  smplayer-0.6.8.ebuild, +files/smplayer-0.6.8-quit.patch:
+  Add patch to force Ctrl+Q as default quit shortcut, by George Kargiotakis
 
 *smplayer-0.6.8 (26 Jul 2009)
 
