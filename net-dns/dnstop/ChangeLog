@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnstop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.26 2009/08/12 01:11:50 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.27 2009/08/13 12:41:04 tcunha Exp $
+
+  13 Aug 2009; Tiago Cunha <tcunha@gentoo.org> dnstop-20090128.ebuild:
+  stable amd64/sparc, bug 281160
 
   12 Aug 2009; Rajiv Aaron Manglani <rajiv@gentoo.org>
   -dnstop-20070510-r1.ebuild, -files/dnstop-20070510-handle_ipv6.patch:
