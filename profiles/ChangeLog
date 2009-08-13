@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3122 2009/08/13 15:09:22 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3123 2009/08/13 17:45:40 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -14,10 +14,6 @@
 
   13 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> -base/use.defaults:
   Remove use.defaults since it's not used anymore.
-
-  13 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
-  Mask latest kyra temporarily since the installed headers include private
-  ones.
 
   13 Aug 2009; Alexis Ballier <aballier@gentoo.org> base/package.use.mask,
   features/64bit-native/package.use.mask:
