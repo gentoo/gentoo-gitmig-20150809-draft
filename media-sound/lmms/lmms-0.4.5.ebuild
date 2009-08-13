@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.3.ebuild,v 1.2 2009/03/09 14:11:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/lmms-0.4.5.ebuild,v 1.1 2009/08/13 07:07:09 aballier Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( (
 				x11-libs/qt-gui[accessibility]
 			) >=x11-libs/qt-4.3.0:4[accessibility] )
 	>=media-libs/libsndfile-1.0.11
-	>=media-libs/libsamplerate-0.1.6
+	>=media-libs/libsamplerate-0.1.7
 	alsa? ( media-libs/alsa-lib )
 	fftw? ( =sci-libs/fftw-3* )
 	jack? ( >=media-sound/jack-audio-connection-kit-0.99.0 )
@@ -43,6 +43,7 @@ src_configure() {
 		-DWANT_SYSTEM_SR=TRUE
 		-DWANT_CAPS=TRUE
 		-DWANT_TAP=TRUE
+		-DWANT_CALF=TRUE
 		$(cmake-utils_use_want alsa ALSA)
 		$(cmake-utils_use_want fftw FFTW3F)
 		$(cmake-utils_use_want jack JACK)
