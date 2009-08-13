@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.5 2009/08/13 09:56:51 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.6 2009/08/13 10:00:21 mduft Exp $
 
-# $Id: package.mask,v 1.5 2009/08/13 09:56:51 mduft Exp $
+# $Id: package.mask,v 1.6 2009/08/13 10:00:21 mduft Exp $
+
+# Markus Duft <mduft@gentoo.org> (13 Aug 2009)
+# requires xcb-util, which does not work for interix (yet?).
+>=x11-libs/startup-notification-0.10
 
 # Markus Duft <mduft@gentoo.org> (25 May 2009)
 # sed seems to be broken, it always says:
