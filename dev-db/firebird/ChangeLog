@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/firebird
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.97 2009/01/18 22:03:05 jsbronder Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.98 2009/08/13 17:38:10 vostorga Exp $
+
+  13 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
+  firebird-2.1.1.17910.0.ebuild,
+  +files/firebird-2.1.1.17910.0-gcc-icu-declare.patch:
+  Fixing gcc 4.4.0 and icu 4.2 build error, bug #270154
+  patch thanks to Steffen 'j0inty' Stollfuß <steffen@stollfuss.net>
 
   18 Jan 2009; Justin Bronder <jsbronder@gentoo.org>
   firebird-2.0.3.12981.0-r6.ebuild, firebird-2.0.3.12981.0-r7.ebuild,
