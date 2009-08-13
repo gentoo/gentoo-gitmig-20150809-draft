@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.25.ebuild,v 1.1 2009/04/17 18:41:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/avahi/avahi-0.6.25.ebuild,v 1.2 2009/08/13 18:19:28 swegener Exp $
 
 EAPI="1"
 
@@ -182,7 +182,7 @@ src_install() {
 		newins "${FILESDIR}"/autoipd-openrc.sh autoipd.sh
 	fi
 
-	dodoc docs/{AUTHORS,README,TODO}
+	dodoc docs/{AUTHORS,NEWS,README,TODO}
 
 	if use doc
 	then
