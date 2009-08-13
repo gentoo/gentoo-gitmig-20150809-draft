@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.3 2009/08/11 17:52:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.4 2009/08/13 16:56:10 ssuominen Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="alsa audioscrobbler debug dbus +ffmpeg flac libnotify mad openal pulseaudio syslog test"
 
-RDEPEND=">=dev-cpp/gtkmm-2.10
+RDEPEND=">=dev-cpp/gtkmm-2.16
 	dev-cpp/libsexymm
 	media-libs/taglib
 	dev-db/sqlite
@@ -29,7 +29,6 @@ RDEPEND=">=dev-cpp/gtkmm-2.10
 	openal? ( media-libs/openal )
 	alsa? ( media-libs/alsa-lib )
 	pulseaudio? ( media-sound/pulseaudio )"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/automake-1.11"
 
