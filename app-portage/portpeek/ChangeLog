@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.31 2009/08/13 18:24:08 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.32 2009/08/13 23:58:37 mpagano Exp $
+
+*portpeek-1.9.9 (13 Aug 2009)
+
+  13 Aug 2009; Michael Pagano <mpagano@gentoo.org> -portpeek-1.9.8.ebuild,
+  +portpeek-1.9.9.ebuild:
+  Version bump to add package.use check to 'all' parameter
 
 *portpeek-1.9.8 (13 Aug 2009)
 
