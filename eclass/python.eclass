@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.61 2009/08/07 00:43:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.62 2009/08/13 16:57:01 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -616,13 +616,13 @@ python_mod_optimize() {
 						fi
 					else
 						for PYTHON_ABI in ${PYTHON_ABIS}; do
-							if [[ -d "${root}/$(python_get_sitedir)/$1" ]]; then
+							if [[ -d "${root}$(python_get_sitedir)/$1" ]]; then
 								site_packages_dirs+=("$1")
 								break
-							elif [[ -f "${root}/$(python_get_sitedir)/$1" ]]; then
+							elif [[ -f "${root}$(python_get_sitedir)/$1" ]]; then
 								site_packages_files+=("$1")
 								break
-							elif [[ -e "${root}/$(python_get_sitedir)/$1" ]]; then
+							elif [[ -e "${root}$(python_get_sitedir)/$1" ]]; then
 								ewarn "'$1' is not a file or a directory!"
 							else
 								ewarn "'$1' doesn't exist!"
@@ -643,17 +643,17 @@ python_mod_optimize() {
 				ebegin "Compilation and optimization of Python modules for Python ${PYTHON_ABI}"
 				if ((${#site_packages_dirs[@]})); then
 					for dir in "${site_packages_dirs[@]}"; do
-						site_packages_absolute_dirs+=("${root}/$(python_get_sitedir)/${dir}")
+						site_packages_absolute_dirs+=("${root}$(python_get_sitedir)/${dir}")
 					done
-					"$(PYTHON)" "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" || return_code="1"
-					"$(PYTHON)" -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" 2> /dev/null || return_code="1"
+					"$(PYTHON)" "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" || return_code="1"
+					"$(PYTHON)" -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${site_packages_absolute_dirs[@]}" 2> /dev/null || return_code="1"
 				fi
 				if ((${#site_packages_files[@]})); then
 					for file in "${site_packages_files[@]}"; do
-						site_packages_absolute_files+=("${root}/$(python_get_sitedir)/${file}")
+						site_packages_absolute_files+=("${root}$(python_get_sitedir)/${file}")
 					done
-					"$(PYTHON)" "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
-					"$(PYTHON)" -O "${root}/$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" 2> /dev/null || return_code="1"
+					"$(PYTHON)" "${root}$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" || return_code="1"
+					"$(PYTHON)" -O "${root}$(python_get_libdir)/py_compile.py" "${site_packages_absolute_files[@]}" 2> /dev/null || return_code="1"
 				fi
 				eend "${return_code}"
 			fi
@@ -667,12 +667,12 @@ python_mod_optimize() {
 			return_code="0"
 			ebegin "Compilation and optimization of Python modules placed outside of site-packages directories for Python ${PYVER}..."
 			if ((${#other_dirs[@]})); then
-				python${PYVER} "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
-				python${PYVER} -O "${root}/$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" 2> /dev/null || return_code="1"
+				python${PYVER} "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" || return_code="1"
+				python${PYVER} -O "${root}$(python_get_libdir)/compileall.py" "${options[@]}" "${other_dirs[@]}" 2> /dev/null || return_code="1"
 			fi
 			if ((${#other_files[@]})); then
-				python${PYVER} "${root}/$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
-				python${PYVER} -O "${root}/$(python_get_libdir)/py_compile.py" "${other_files[@]}" 2> /dev/null || return_code="1"
+				python${PYVER} "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" || return_code="1"
+				python${PYVER} -O "${root}$(python_get_libdir)/py_compile.py" "${other_files[@]}" 2> /dev/null || return_code="1"
 			fi
 			eend "${return_code}"
 		fi
@@ -768,7 +768,7 @@ python_mod_cleanup() {
 					SEARCH_PATH+=("${root}/${1#/}")
 				else
 					for PYTHON_ABI in ${PYTHON_ABIS}; do
-						SEARCH_PATH+=("${root}/$(python_get_sitedir)/$1")
+						SEARCH_PATH+=("${root}$(python_get_sitedir)/$1")
 					done
 				fi
 				shift
@@ -782,17 +782,18 @@ python_mod_cleanup() {
 	fi
 
 	for path in "${SEARCH_PATH[@]}"; do
+		[[ ! -d "${path}" ]] && continue
 		einfo "Cleaning orphaned Python bytecode from ${path} .."
 		find "${path}" -name '*.py[co]' -print0 | while read -rd ''; do
 			src_py="${REPLY%[co]}"
-			[[ -f "${src_py}" ]] && continue
+			[[ -f "${src_py}" || (! -f "${src_py}c" && ! -f "${src_py}o") ]] && continue
 			einfo "Purging ${src_py}[co]"
 			rm -f "${src_py}"[co]
 		done
 
 		# Attempt to remove directories that may be empty.
 		find "${path}" -type d | sort -r | while read -r dir; do
-			rmdir "${dir}" 2>/dev/null
+			rmdir "${dir}" 2>/dev/null && einfo "Removing empty directory ${dir}"
 		done
 	done
 }
