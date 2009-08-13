@@ -1,11 +1,11 @@
 # ChangeLog for dev-games/kyra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.14 2009/08/13 06:32:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/kyra/ChangeLog,v 1.15 2009/08/13 17:44:38 ssuominen Exp $
 
-*kyra-2.1.3_p20090813 (13 Aug 2009)
+*kyra-2.1.3_p20090814 (14 Aug 2009)
 
   13 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
-  +kyra-2.1.3_p20090813.ebuild, +files/kyra-2.1.3_p20090813-compile.patch:
+  +kyra-2.1.3_p20090814.ebuild:
   Version bump.
 
   16 Jan 2009; Tupone Alfredo <tupone@gentoo.org>
