@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/gemhun
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.9 2008/02/29 19:34:20 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/ChangeLog,v 1.10 2009/08/13 18:44:30 ssuominen Exp $
+
+  13 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gemhun-20040529.ebuild:
+  Change Kyra depend to <2.1.0 since GlDynArray was replaced by std::vector.
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> gemhun-20040529.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.

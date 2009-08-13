@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.6 2008/02/29 19:34:20 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gemhun/gemhun-20040529.ebuild,v 1.7 2009/08/13 18:44:30 ssuominen Exp $
 
 inherit eutils autotools games
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="dev-games/kyra
+DEPEND="<dev-games/kyra-2.1.0
 	media-libs/sdl-mixer
 	virtual/opengl
 	media-libs/sdl-net
