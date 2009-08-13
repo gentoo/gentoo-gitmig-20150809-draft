@@ -1,0 +1,285 @@
+diff -ur kyra.orig/configure.in kyra/configure.in
+--- kyra.orig/configure.in	2006-07-21 04:54:05.000000000 +0300
++++ kyra/configure.in	2009-08-13 09:32:42.000000000 +0300
+@@ -82,7 +82,6 @@
+ AC_SUBST(KYRA_LIBS)
+ 
+ AC_OUTPUT(	Makefile
+-          	tinyxml/Makefile
+ 			util/Makefile
+ 	  		gui/Makefile
+ 			guiExtended/Makefile
+diff -ur kyra.orig/encoder/main.cpp kyra/encoder/main.cpp
+--- kyra.orig/encoder/main.cpp	2006-08-20 01:30:50.000000000 +0300
++++ kyra/encoder/main.cpp	2009-08-13 09:32:42.000000000 +0300
+@@ -29,9 +29,9 @@
+ 	The full text of the license can be found in lgpl.txt
+ */
+ 
++#define TIXML_USE_STL
++#include <tinyxml.h>
+ 
+-
+-#include "../../tinyxml/tinyxml.h"
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+diff -ur kyra.orig/encoder/Makefile.am kyra/encoder/Makefile.am
+--- kyra.orig/encoder/Makefile.am	2004-03-09 08:41:46.000000000 +0200
++++ kyra/encoder/Makefile.am	2009-08-13 09:32:42.000000000 +0300
+@@ -4,5 +4,5 @@
+ krencoder_LDADD = ../engine/libengine.la \
+ 				  ../util/libutil.la \
+ 				  ../gui/libgui.la \
+-				  ../tinyxml/libtinyxml.la \
++				  -ltinyxml \
+ 				  @SDL_LIBS@ 
+diff -ur kyra.orig/engine/encoder.h kyra/engine/encoder.h
+--- kyra.orig/engine/encoder.h	2006-07-23 06:55:25.000000000 +0300
++++ kyra/engine/encoder.h	2009-08-13 09:32:42.000000000 +0300
+@@ -35,7 +35,9 @@
+ #include "SDL.h"
+ #include <vector>
+ 
+-#include "../../tinyxml/tinyxml.h"
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+diff -ur kyra.orig/engine/imagetree.h kyra/engine/imagetree.h
+--- kyra.orig/engine/imagetree.h	2005-03-31 04:02:38.000000000 +0300
++++ kyra/engine/imagetree.h	2009-08-13 09:32:42.000000000 +0300
+@@ -190,7 +190,7 @@
+ 	void Clear( KrImNode* root );	// delete the entire tree
+ 
+ 	// Recursive hit test walk.
+-	bool KrImageTree::HitTestRec( KrImNode* node, int x, int y, int flags, std::vector<KrImage*>* outputArray, int windowIndex );
++	bool HitTestRec( KrImNode* node, int x, int y, int flags, std::vector<KrImage*>* outputArray, int windowIndex );
+ 
+ 	KrImNode*  root;			// The root to position the window
+ 	KrImNode*  offsetRoot;		// The root as returned to the client
+diff -ur kyra.orig/engine/kyra.h kyra/engine/kyra.h
+--- kyra.orig/engine/kyra.h	2005-03-31 04:02:39.000000000 +0300
++++ kyra/engine/kyra.h	2009-08-13 09:32:42.000000000 +0300
+@@ -72,7 +72,9 @@
+ #include "dataresource.h"
+ 
+ // Tinyxml includes
+-#include "../../tinyxml/tinyxml.h"
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+diff -ur kyra.orig/engine/Makefile.am kyra/engine/Makefile.am
+--- kyra.orig/engine/Makefile.am	2005-04-10 07:58:51.000000000 +0300
++++ kyra/engine/Makefile.am	2009-08-13 09:32:42.000000000 +0300
+@@ -15,10 +15,6 @@
+ 	mkdir -p $(DESTDIR)/$(includedir)/Kyra/guiExtended
+ 	cp ../guiExtended/*.h $(DESTDIR)/$(includedir)/Kyra/guiExtended
+  
+-#and another ... could probably be combined with install-data-hook
+-install-exec-hook:
+-	mkdir -p $(DESTDIR)/$(includedir)/Kyra/tinyxml
+-
+ libengineinclude_HEADERS = action.h \
+ box.h \
+ boxresource.h \
+@@ -84,10 +80,6 @@
+ vault.cpp \
+ namefield.cpp \
+ ogltexture.cpp \
+-../../tinyxml/tinyxml.cpp \
+-../../tinyxml/tinyxmlparser.cpp \
+-../../tinyxml/tinystr.cpp \
+-../../tinyxml/tinyxmlerror.cpp \
+ ../../grinliz/gldebug.cpp \
+ ../../grinliz/glmemorypool.cpp \
+ ../../grinliz/glrandom.cpp \
+@@ -95,5 +87,6 @@
+ ../../grinliz/glperformance.cpp \
+ ../../grinliz/glutil.cpp \
+ ../../grinliz/glmatrix.cpp \
+-../../grinliz/glprime.cpp
++../../grinliz/glprime.cpp \
++../../grinliz/gldynamic.cpp
+ 
+diff -ur kyra.orig/engine/parser.cpp kyra/engine/parser.cpp
+--- kyra.orig/engine/parser.cpp	2005-03-31 04:02:41.000000000 +0300
++++ kyra/engine/parser.cpp	2009-08-13 09:32:42.000000000 +0300
+@@ -29,7 +29,9 @@
+ 	The full text of the license can be found in lgpl.txt
+ */
+ 
+-#include "../../tinyxml/tinyxml.h"
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+diff -ur kyra.orig/guiExtended/progress.h kyra/guiExtended/progress.h
+--- kyra.orig/guiExtended/progress.h	2004-11-21 21:28:32.000000000 +0200
++++ kyra/guiExtended/progress.h	2009-08-13 09:32:42.000000000 +0300
+@@ -43,7 +43,7 @@
+ 	/** if width of the resource is greater then its height then makes
+ 		a horizontal, else makes a vertical progress bar
+ 	*/
+-	KrProgress::KrProgress (int width,
++	KrProgress (int width,
+ 							int height,
+ 							KrRGBA FillColor,
+ 							KrRGBA ChangeColor,
+@@ -53,7 +53,7 @@
+ 	/** if width of the resource is greater then its height then makes
+ 		a horizontal, else makes a vertical progress bar
+ 	*/
+-	KrProgress::KrProgress (int width,
++	KrProgress (int width,
+ 							int height,
+ 							const KrScheme& scheme);
+ 
+diff -ur kyra.orig/isogen/isogen.h kyra/isogen/isogen.h
+--- kyra.orig/isogen/isogen.h	2007-03-27 06:16:45.000000000 +0300
++++ kyra/isogen/isogen.h	2009-08-13 09:32:42.000000000 +0300
+@@ -40,7 +40,8 @@
+ #include "../../grinliz/glgeometry.h"
+ #include "../../grinliz/glcolor.h"
+ 
+-#include "../../tinyxml/tinyxml.h"
++#define TIXML_USE_STL
++#include <tinyxml.h>
+ 
+ enum {
+ 	USE_TEXTURE =	0x01,
+diff -ur kyra.orig/Makefile.am kyra/Makefile.am
+--- kyra.orig/Makefile.am	2005-04-10 07:58:48.000000000 +0300
++++ kyra/Makefile.am	2009-08-13 09:32:42.000000000 +0300
+@@ -1,4 +1,4 @@
+-SUBDIRS = engine gui util guiExtended tinyxml encoder spriteed
++SUBDIRS = engine gui util guiExtended encoder spriteed
+ bin_SCRIPTS = kyra-config 
+ 
+ EXTRA_DIST = ltconfig kyra.m4 kyra.h
+@@ -16,13 +16,13 @@
+ 
+ #and another
+ install-data-hook:
+-	mkdir -p $(includedir)/Kyra/util
+-	cp util/*.h $(includedir)/Kyra/util
+-	cp kyra.h $(includedir)/Kyra
+-	mkdir -p $(includedir)/Kyra/gui
+-	cp gui/*.h $(includedir)/Kyra/gui
+-	mkdir -p $(includedir)/Kyra/guiExtended
+-	cp guiExtended/*.h $(includedir)/Kyra/guiExtended
++	mkdir -p $(DESTDIR)$(includedir)/Kyra/util
++	cp util/*.h $(DESTDIR)$(includedir)/Kyra/util
++	cp kyra.h $(DESTDIR)$(includedir)/Kyra
++	mkdir -p $(DESTDIR)$(includedir)/Kyra/gui
++	cp gui/*.h $(DESTDIR)$(includedir)/Kyra/gui
++	mkdir -p $(DESTDIR)$(includedir)/Kyra/guiExtended
++	cp guiExtended/*.h $(DESTDIR)$(includedir)/Kyra/guiExtended
+  
+ #and another ... could probably be combined with install-data-hook
+ install-exec-hook:
+diff -ur kyra.orig/mapmaker/xmlutil.h kyra/mapmaker/xmlutil.h
+--- kyra.orig/mapmaker/xmlutil.h	2005-03-31 04:03:28.000000000 +0300
++++ kyra/mapmaker/xmlutil.h	2009-08-13 09:32:42.000000000 +0300
+@@ -1,7 +1,9 @@
+ #ifndef MAPMAKER_XMLUTIL_INCLUDED
+ #define MAPMAKER_XMLUTIL_INCLUDED
+ 
+-#include "../tinyxml/tinyxml.h"
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+@@ -68,4 +70,4 @@
+ 	KrSquareWorldMap* worldMap;
+ };
+ 
+-#endif
+\ No newline at end of file
++#endif
+diff -ur kyra.orig/spriteed/dom.cpp kyra/spriteed/dom.cpp
+--- kyra.orig/spriteed/dom.cpp	2005-04-06 08:07:22.000000000 +0300
++++ kyra/spriteed/dom.cpp	2009-08-13 09:32:42.000000000 +0300
+@@ -36,7 +36,9 @@
+ #include "../engine/imagetree.h"
+ #include "../engine/textbox.h"
+ 
+-#include "../../tinyxml/tinyxml.h"
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+diff -ur kyra.orig/spriteed/Makefile.am kyra/spriteed/Makefile.am
+--- kyra.orig/spriteed/Makefile.am	2004-03-09 08:41:46.000000000 +0200
++++ kyra/spriteed/Makefile.am	2009-08-13 09:32:42.000000000 +0300
+@@ -21,6 +21,6 @@
+ 
+ krspriteed_LDADD = ../engine/libengine.la \
+ ../gui/libgui.la \
+-../tinyxml/libtinyxml.la \
++-ltinyxml \
+ ../util/libutil.la \
+ @SDL_LIBS@
+diff -ur kyra.orig/spriteed/sharedstate.h kyra/spriteed/sharedstate.h
+--- kyra.orig/spriteed/sharedstate.h	2006-08-12 23:04:37.000000000 +0300
++++ kyra/spriteed/sharedstate.h	2009-08-13 09:32:42.000000000 +0300
+@@ -40,7 +40,10 @@
+ #endif
+ 
+ #include <string>
+-#include "../../tinyxml/tinyxml.h"
++
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #include "SDL.h"
+ 
+ #include "../engine/color.h"
+diff -ur kyra.orig/spriteed/states.h kyra/spriteed/states.h
+--- kyra.orig/spriteed/states.h	2005-04-06 08:07:22.000000000 +0300
++++ kyra/spriteed/states.h	2009-08-13 09:32:42.000000000 +0300
+@@ -33,7 +33,10 @@
+ #define STATES_INCLUDED
+ 
+ #include "../engine/krmath.h"
+-#include "../../tinyxml/tinyxml.h"
++
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+diff -ur kyra.orig/stitch/main.cpp kyra/stitch/main.cpp
+--- kyra.orig/stitch/main.cpp	2005-04-06 08:07:22.000000000 +0300
++++ kyra/stitch/main.cpp	2009-08-13 09:32:42.000000000 +0300
+@@ -24,7 +24,10 @@
+ #include "stitch.h"
+ #include "../engine/color.h"
+ #include "../engine/painter.h"
+-#include "../../tinyxml/tinyxml.h"
++
++#define TIXML_USE_STL
++#include <tinyxml.h>
++
+ #ifdef _MSC_VER
+ // Disable the no-exception handling warning.
+ #pragma warning( disable : 4530 )
+@@ -444,4 +447,4 @@
+ 	SDL_FreeSurface( s );
+ 	SDL_Quit();
+ 	return 0;
+-}
+\ No newline at end of file
++}
