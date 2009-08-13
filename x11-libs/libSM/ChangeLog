@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.66 2009/08/11 18:35:42 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.67 2009/08/13 13:06:50 remi Exp $
+
+*libSM-1.1.1 (13 Aug 2009)
+
+  13 Aug 2009; Rémi Cardona <remi@gentoo.org> +libSM-1.1.1.ebuild:
+  bump to 1.1.1, fix bugs 270003 and 280518
 
   11 Aug 2009; Rémi Cardona <remi@gentoo.org> -libSM-1.0.2.ebuild,
   -libSM-1.0.3.ebuild:
