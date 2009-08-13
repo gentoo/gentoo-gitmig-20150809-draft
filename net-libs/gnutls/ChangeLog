@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.205 2009/08/10 18:50:07 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.206 2009/08/13 01:06:06 arfrever Exp $
+
+*gnutls-2.8.2-r1 (13 Aug 2009)
+
+  13 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +gnutls-2.8.2-r1.ebuild, +files/gnutls-2.8.2-fix_reading_of_memory.patch:
+  Fix reading of memory (bug #281249).
 
 *gnutls-2.8.2 (10 Aug 2009)
 
