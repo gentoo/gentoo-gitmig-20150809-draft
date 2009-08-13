@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/halevt-0.1.4-r2.ebuild,v 1.2 2009/07/17 13:07:18 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/halevt/halevt-0.1.4-r2.ebuild,v 1.3 2009/08/13 12:09:28 hwoarang Exp $
 
 EAPI="2"
 
@@ -35,10 +35,6 @@ src_install () {
 }
 
 pkg_postinst() {
-	elog "You need to add user 'root' to 'plugdev' group"
-	elog "in order to be able to mount devices. To do that, use"
-	elog "the following command:"
-	elog "usermod -a -G plugdev root"
 	einfo
 	einfo "Default config file resides at /etc/halevt/halevt.xml."
 	einfo
