@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.4 2009/07/27 07:02:17 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.5 2009/08/13 09:56:51 mduft Exp $
 
-# $Id: package.mask,v 1.4 2009/07/27 07:02:17 mduft Exp $
+# $Id: package.mask,v 1.5 2009/08/13 09:56:51 mduft Exp $
 
 # Markus Duft <mduft@gentoo.org> (25 May 2009)
 # sed seems to be broken, it always says:
@@ -14,6 +14,7 @@
 # making installation fail.
 =dev-util/subversion-1.6.2*
 =dev-util/subversion-1.6.3*
+=dev-util/subversion-1.6.4*
 
 # Markus Duft <mduft@gentoo.org> (02 Feb 2009)
 # this does not work correctly, since there seems to be some

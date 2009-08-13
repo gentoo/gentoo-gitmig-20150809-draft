@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.52 2009/08/11 13:00:24 darkside Exp $
+# $Id: ChangeLog,v 1.53 2009/08/13 09:56:51 mduft Exp $
+
+  13 Aug 2009; Markus Duft <mduft@gentoo.org> windows/interix/6.0/use.mask,
+  windows/interix/package.mask, windows/interix/profile.bashrc:
+  extended subversion mask to 1.6.4. re-formatted an expression which failed
+  on windows 7. masked the i6fork flag on interix 6 for now - not working.
 
   11 Aug 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
   fix typos

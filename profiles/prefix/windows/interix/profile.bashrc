@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/profile.bashrc,v 1.1 2009/06/06 03:55:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/profile.bashrc,v 1.2 2009/08/13 09:56:51 mduft Exp $
 
 # One basically always wants -D_ALL_SOURCE, it's some stupid restriction
 # to hide useful stuff. newer GCCs have this define built-int, so no need
@@ -93,8 +93,10 @@ post_pkg_preinst() {
 	
 	# now go for current package
 	cd "${D}"
-	find ".${EROOT}" -type f | xargs -r /usr/bin/file | grep ' PE ' | while read f t
+	find ".${EROOT}" -type f | while read f;
 	do
+		/usr/bin/file "${f}" | grep ' PE ' > /dev/null || continue
+
 		f=${f#./} # find prints: "./path/to/file"
 		f=${f%:} # file prints: "file-argument: type-of-file"
 		test -r "${ROOT}${f}" || continue
