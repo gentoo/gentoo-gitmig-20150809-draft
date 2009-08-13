@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r1.ebuild,v 1.3 2007/06/21 19:43:14 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/915resolution/915resolution-0.5.3-r1.ebuild,v 1.4 2009/08/13 21:20:06 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,12 +19,11 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/${P}-freebsd.patch"
 }
 
 src_compile() {
-	filter-flags -O -O1 -O2 -O3 -Os
+	filter-flags -O*
 	emake clean
 	emake CFLAGS="${CFLAGS}" || die "Compiliation failed."
 }
