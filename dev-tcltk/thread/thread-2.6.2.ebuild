@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.14 2009/08/08 01:47:40 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/thread/thread-2.6.2.ebuild,v 1.15 2009/08/14 00:45:12 fauli Exp $
+
+EAPI=2
 
 inherit autotools eutils multilib
 
@@ -14,25 +16,14 @@ KEYWORDS="~alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86
 IUSE="gdbm"
 
 DEPEND="gdbm? ( sys-libs/gdbm )
-	dev-lang/tcl"
+	dev-lang/tcl[threads]"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}${PV}
 
 RESTRICT="test"
 
-pkg_setup() {
-	if ! built_with_use dev-lang/tcl threads ; then
-		eerror "dev-lang/tcl was not merged with threading enabled."
-		eerror "please re-emerge dev-lang/tcl with USE=threads"
-		die "threading not enabled in dev-lang/tcl"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# Search for libs in libdir not just exec_prefix/lib
 	sed -i -e 's:${exec_prefix}/lib:${libdir}:' \
 		aclocal.m4 || die "sed failed"
@@ -43,7 +34,7 @@ src_unpack() {
 	eautoconf
 }
 
-src_compile() {
+src_configure() {
 	local use_gdbm=""
 	if use gdbm; then use_gdbm="--with-gdbm"; fi
 	econf \
@@ -51,7 +42,6 @@ src_compile() {
 		--with-tclinclude=/usr/include \
 		--with-tcl="/usr/$(get_libdir)" \
 		${use_gdbm} || die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
