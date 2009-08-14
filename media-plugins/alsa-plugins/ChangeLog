@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.107 2009/08/13 16:47:48 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.108 2009/08/14 01:11:51 fauli Exp $
+
+  14 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  alsa-plugins-1.0.20.ebuild:
+  stable x86, bug 280464
 
   13 Aug 2009; Steve Dibb <beandog@gentoo.org> alsa-plugins-1.0.20.ebuild:
   Fix more ALSA_PCM_PLUGIN deps, bug 185362
