@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090804.ebuild,v 1.4 2009/08/13 01:45:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090814.ebuild,v 1.1 2009/08/14 19:52:33 arfrever Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -21,8 +21,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	echo $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python.c
-	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python.c || die "Building of python wrapper failed"
+	echo $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python-wrapper.c
+	$(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -o python-wrapper python-wrapper.c || die "Building of python-wrapper failed"
 }
 
 src_install() {
