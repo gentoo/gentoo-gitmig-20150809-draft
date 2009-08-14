@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/appframework
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.1 2009/07/06 10:36:09 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/ChangeLog,v 1.2 2009/08/14 18:50:44 maekke Exp $
+
+  14 Aug 2009; Markus Meier <maekke@gentoo.org> appframework-1.03.ebuild:
+  amd64/x86 stable, bug #280658
 
 *appframework-1.03 (06 Jul 2009)
 

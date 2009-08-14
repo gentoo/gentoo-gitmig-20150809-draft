@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/appframework-1.03.ebuild,v 1.1 2009/07/06 10:36:09 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/appframework/appframework-1.03.ebuild,v 1.2 2009/08/14 18:50:44 maekke Exp $
 
 EAPI=1
 JAVA_PKG_IUSE="doc examples source test"
@@ -16,7 +16,7 @@ SRC_URI="https://appframework.dev.java.net/downloads/${MY_P}-src.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
