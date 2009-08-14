@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.17 2009/01/04 23:03:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/emilia-pinedit-0.3.1.ebuild,v 1.18 2009/08/14 20:23:53 mr_bones_ Exp $
 
-EAPI=1
-
+EAPI=2
 inherit eutils qt3 games
 
 MY_P=${PN/emilia-/}-${PV}
@@ -28,24 +27,24 @@ DEPEND="media-libs/libsdl
 	x11-libs/qt:3
 	>=games-arcade/emilia-pinball-0.3.1"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^CFLAGS=/s:-g -W -Wall:${CFLAGS}:" \
 		-e "/^CXXFLAGS=/s:-g -W -Wall:${CXXFLAGS}:" \
 		configure \
 		|| die "sed configure failed"
 	sed -i \
-		-e "/^LDFLAGS/s:$: $(pinball-config --libs) @LIBS@ -lSDL -lSDL_image -lSDL_mixer:" \
+		-e "/^LDFLAGS/s:$: $(pinball-config --libs):" \
+		-e "/^LIBS/s:$: -lSDL -lSDL_image -lSDL_mixer:" \
 		pinedit/Makefile.in \
 		|| die "sed pinedit/Makefile.in failed"
-	epatch "${FILESDIR}"/${PV}-assert.patch \
+
+	epatch \
+		"${FILESDIR}"/${PV}-assert.patch \
 		"${FILESDIR}"/${P}-gcc4.patch
 }
 
 src_compile() {
-	egamesconf || die
 	emake MOC="${QTDIR}"/bin/moc -j1 || die "emake failed"
 }
 

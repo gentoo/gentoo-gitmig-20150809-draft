@@ -1,6 +1,10 @@
 # ChangeLog for games-util/emilia-pinedit
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/ChangeLog,v 1.13 2009/01/04 23:03:26 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/emilia-pinedit/ChangeLog,v 1.14 2009/08/14 20:23:53 mr_bones_ Exp $
+
+  14 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  emilia-pinedit-0.3.1.ebuild:
+  LIBS patch from Fredric Johansson via bug #281460; EAPI=2
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> emilia-pinedit-0.3.1.ebuild:
   Change virtual/xft dependency to x11-libs/libXft, bug 253771.
