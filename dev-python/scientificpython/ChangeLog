@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/scientificpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.19 2009/08/08 23:00:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/ChangeLog,v 1.20 2009/08/14 14:59:36 armin76 Exp $
+
+  14 Aug 2009; Raúl Porcel <armin76@gentoo.org>
+  scientificpython-2.8.ebuild:
+  alpha/ia64/sparc stable wrt #280378
 
   08 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   scientificpython-2.8.ebuild:
