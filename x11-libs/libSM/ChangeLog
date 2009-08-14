@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libSM
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.68 2009/08/13 13:50:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libSM/ChangeLog,v 1.69 2009/08/14 09:14:57 remi Exp $
+
+  14 Aug 2009; Rémi Cardona <remi@gentoo.org> libSM-1.1.1.ebuild:
+  up libICE dep to 1.0.5 (fixes bug #281360)
 
   13 Aug 2009; Rémi Cardona <remi@gentoo.org> libSM-1.1.1.ebuild:
   look for FreeBSD's libc instead of x86-fbsd, thanks aballier
