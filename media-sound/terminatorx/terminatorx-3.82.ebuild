@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.13 2008/05/17 09:26:20 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.14 2009/08/14 08:24:30 ssuominen Exp $
 
 inherit gnome2 eutils
 
@@ -15,16 +15,16 @@ SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE="alsa mad vorbis sox"
 
-RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
+RDEPEND="alsa? ( media-libs/alsa-lib )
 	mad? ( media-sound/madplay )
-	vorbis? ( >=media-libs/libvorbis-1.0_beta4 )
+	vorbis? ( media-libs/libvorbis )
 	sox? ( media-sound/sox
 		virtual/mpg123 )
-	>=x11-libs/gtk+-2.2.0
-	>=dev-libs/glib-2.2.0
+	>=x11-libs/gtk+-2.2
+	>=dev-libs/glib-2.2
 	x11-libs/libXi
 	x11-libs/libXxf86dga
-	dev-libs/libxml
+	dev-libs/libxml2
 	media-libs/audiofile
 	media-libs/ladspa-sdk
 	media-libs/ladspa-cmt
