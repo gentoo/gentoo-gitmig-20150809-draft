@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/fonttools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.14 2009/01/12 15:15:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/ChangeLog,v 1.15 2009/08/14 15:35:10 arfrever Exp $
+
+  14 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  fonttools-2.2.ebuild, +files/fonttools-2.2-fix_syntax.patch:
+  Fix syntax (bug #265805).
 
   12 Jan 2009; Peter Volkov <pva@gentoo.org> -fonttools-2.0_beta1.ebuild,
   -fonttools-2.0_beta1-r1.ebuild, fonttools-2.2.ebuild:

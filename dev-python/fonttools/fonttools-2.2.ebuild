@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.2.ebuild,v 1.5 2009/01/12 15:15:32 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fonttools/fonttools-2.2.ebuild,v 1.6 2009/08/14 15:35:10 arfrever Exp $
+
+EAPI="2"
 
 inherit distutils
 
@@ -17,12 +19,14 @@ DEPEND="virtual/python
 	>=dev-python/numpy-1.0.2
 	dev-python/pyxml"
 
+PYTHON_MODNAME="FontTools"
+
 DOCS="README.txt Doc/*.txt"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	distutils_src_prepare
 	sed '/data_files/{s:man/man1:share/man/man1:}' -i setup.py #247154
+	epatch "${FILESDIR}/${P}-fix_syntax.patch"
 }
 
 src_install() {
