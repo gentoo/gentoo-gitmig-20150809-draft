@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/moodss
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.13 2008/02/25 22:36:09 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/moodss/ChangeLog,v 1.14 2009/08/14 00:52:06 fauli Exp $
+
+  14 Aug 2009; Christian Faulhammer <fauli@gentoo.org> moodss-21.5.ebuild:
+  port to EAPI 2
 
   25 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> moodss-20.0.ebuild,
   moodss-20.2.ebuild:
