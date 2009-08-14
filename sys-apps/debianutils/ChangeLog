@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/debianutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.137 2009/08/11 16:52:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/ChangeLog,v 1.138 2009/08/14 13:59:29 jer Exp $
+
+  14 Aug 2009; Jeroen Roovers <jer@gentoo.org>
+  -files/debianutils-2.16.2-palo.patch,
+  -files/debianutils-2.28.2-mkboot-quiet.patch,
+  -files/debianutils-2.28.2-no-bs-namespace.patch,
+  -debianutils-2.28.5.ebuild, -debianutils-2.29.ebuild,
+  -debianutils-2.30.ebuild, -debianutils-2.31.ebuild,
+  -debianutils-3.0.1.ebuild, -debianutils-3.0.2.ebuild,
+  -debianutils-3.1.ebuild, -debianutils-3.1.1.ebuild:
+  Remove old.
 
 *debianutils-3.2.1-r1 (11 Aug 2009)
 
