@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.4.0.ebuild,v 1.4 2008/12/20 19:10:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.4.0.ebuild,v 1.5 2009/08/14 09:36:29 beandog Exp $
 
 EAPI="1"
 inherit eutils wxwidgets flag-o-matic qt4 autotools
@@ -59,7 +59,9 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" STRIP="true" install || die "make install failed"
 	dodoc AUTHORS ChangeLog README TODO
-	dohtml doc/mkvmerge-gui.html doc/images/*
+	dohtml doc/mkvmerge-gui.html
+	docinto images
+	dohtml doc/images/*
 	docinto examples
-	dodoc examples/*
+	dohtml examples/*
 }
