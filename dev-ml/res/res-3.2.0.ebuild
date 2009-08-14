@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-3.2.0.ebuild,v 1.2 2009/08/09 16:23:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/res/res-3.2.0.ebuild,v 1.3 2009/08/14 18:15:11 maekke Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="LGPL-2.1"
 DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
 RDEPEND="${DEPEND}"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="doc examples +ocamlopt"
 
 src_prepare() {
