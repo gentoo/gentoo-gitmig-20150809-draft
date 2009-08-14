@@ -1,6 +1,17 @@
 # ChangeLog for dev-php5/eaccelerator
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.21 2009/05/26 17:00:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/eaccelerator/ChangeLog,v 1.22 2009/08/14 11:00:24 a3li Exp $
+
+*eaccelerator-0.9.5.3-r1 (14 Aug 2009)
+
+  14 Aug 2009; Alex Legler <a3li@gentoo.org> -eaccelerator-0.9.5.1.ebuild,
+  -files/eaccelerator-0.9.5.1-optimize-catch-exceptions.patch,
+  -eaccelerator-0.9.5.3.ebuild, +eaccelerator-0.9.5.3-r1.ebuild,
+  +files/eaccelerator-remove-encoder.patch:
+  Non-mainatiner commit: Removing encoder because it a) contains a
+  vulnerabilitiy and b) is already deprecated by upstream and will be gone
+  anyway in the next upstream release. Security bug 277293. Removing
+  vulnerable versions.
 
   26 May 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   eaccelerator-0.9.5.1.ebuild, eaccelerator-0.9.5.3.ebuild:
