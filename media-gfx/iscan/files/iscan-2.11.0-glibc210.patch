@@ -73,7 +73,7 @@
 +  strcpy( dirname, s.c_str());
  
 -  *slash = '^';			// re-anchor the regexp
-+  s = std::string("^") + slash; // re-anchor the regexp
++  s = std::string("^") + (slash + 1); // re-anchor the regexp
  
    regex_t *comp_regex = new regex_t;
 -  int comp = regcomp( comp_regex, slash, REG_EXTENDED );
