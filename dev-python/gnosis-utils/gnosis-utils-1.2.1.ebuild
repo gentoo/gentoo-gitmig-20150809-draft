@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.1.ebuild,v 1.5 2009/02/15 22:22:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/gnosis-utils-1.2.1.ebuild,v 1.6 2009/08/14 21:02:01 arfrever Exp $
 
-NEED_PYTHON=2.1
+EAPI="2"
+NEED_PYTHON="2.1"
 
 inherit distutils
 
@@ -21,7 +22,13 @@ RDEPEND=""
 
 PYTHON_MODNAME="gnosis"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	distutils_src_prepare
+
+	sed -e "s/with/with_/" -i gnosis/util/convert/pyfontify.py || die "sed failed"
+}
 
 src_install() {
 	dodoc README gnosis/doc/{*.txt,readme,GETTING_HELP,*ANNOUNCE}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnosis-utils
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.13 2009/02/15 22:22:37 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnosis-utils/ChangeLog,v 1.14 2009/08/14 21:02:01 arfrever Exp $
+
+  14 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gnosis-utils-1.2.1.ebuild:
+  Fix syntax for compatibility with Python 2.6 (bug #281416).
 
   15 Feb 2009; Patrick Lauer <patrick@gentoo.org> gnosis-utils-1.2.1.ebuild:
   Adding ~amd64 keyword
