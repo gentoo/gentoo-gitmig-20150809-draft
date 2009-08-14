@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.4 2008/06/30 17:52:50 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.5 2009/08/14 00:05:08 vostorga Exp $
 
 WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="latest"
@@ -205,6 +205,9 @@ src_unpack() {
 	# autotool stuff
 #	rm libltdl/acinclude.m4
 	rm m4/libtool.m4
+
+	epatch "${FILESDIR}/${P}-glibc210.patch"
+
 	eautoreconf
 }
 
