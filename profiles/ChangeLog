@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3124 2009/08/13 19:41:34 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3125 2009/08/14 09:13:07 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Aug 2009; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove dev-util/freeride mask, it is gone.
 
   12 Aug 2009; Mark Loeser <halcy0n@gentoo.org> package.mask:
   Removing mask for gcc-4.4. It is still masked in all the hardened profiles
