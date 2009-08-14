@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3125 2009/08/14 09:13:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3126 2009/08/14 10:42:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> -obsolete/README,
+  -obsolete/alpha/deprecated, -obsolete/alpha/make.defaults,
+  -obsolete/amd64/deprecated, -obsolete/amd64/make.defaults,
+  -obsolete/hppa/deprecated, -obsolete/hppa/make.defaults,
+  -obsolete/ia64/deprecated, -obsolete/ia64/make.defaults,
+  -obsolete/mips/deprecated, -obsolete/mips/make.defaults,
+  -obsolete/ppc/deprecated, -obsolete/ppc/make.defaults,
+  -obsolete/ppc64/deprecated, -obsolete/ppc64/make.defaults,
+  -obsolete/sparc/deprecated, -obsolete/sparc/make.defaults,
+  -obsolete/x86/deprecated, -obsolete/x86/make.defaults:
+  Remove obsolete directory.
 
   14 Aug 2009; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove dev-util/freeride mask, it is gone.
