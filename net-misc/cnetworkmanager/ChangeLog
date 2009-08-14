@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/cnetworkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.1 2009/08/11 09:16:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/ChangeLog,v 1.2 2009/08/14 10:25:02 dagger Exp $
+
+*cnetworkmanager-0.21-r1 (14 Aug 2009)
+
+  14 Aug 2009; Robert Piasek <dagger@gentoo.org>
+  -cnetworkmanager-0.21.ebuild, +cnetworkmanager-0.21-r1.ebuild,
+  +files/cnetworkmanager-0.21-wepwapfix.patch:
+  fixes bug #281099. Big thank you to gbin@gootz.net for pointing it out
+  and providing patch.
 
 *cnetworkmanager-0.21 (11 Aug 2009)
 

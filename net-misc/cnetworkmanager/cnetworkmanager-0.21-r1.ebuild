@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/cnetworkmanager-0.21.ebuild,v 1.1 2009/08/11 09:16:52 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cnetworkmanager/cnetworkmanager-0.21-r1.ebuild,v 1.1 2009/08/14 10:25:02 dagger Exp $
 
 EAPI=2
 
@@ -20,3 +20,8 @@ RDEPEND=">=dev-lang/python-2.5
 	>=net-misc/networkmanager-0.7.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	# Fixes bug 281099
+	epatch "${FILESDIR}"/${P}-wepwapfix.patch
+}
