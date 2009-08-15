@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.63 2009/08/14 21:22:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.64 2009/08/15 21:50:31 betelgeuse Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -366,7 +366,7 @@ python_execute_function() {
 # @DESCRIPTION:
 # Makes sure PYTHON_USE_WITH or PYTHON_USE_WITH_OR listed use flags
 # are respected. Only exported if one of those variables is set.
-if ! has ${EAPI} 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR} ]]; then
+if ! has ${EAPI:-0} 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR} ]]; then
 	python_pkg_setup_fail() {
 		eerror "${1}"
 		die "${1}"
