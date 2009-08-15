@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.13 2007/08/16 16:12:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/multiskkserv/multiskkserv-20020201.ebuild,v 1.14 2009/08/15 13:08:33 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils fixheadtails
 
@@ -18,59 +20,48 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
 IUSE=""
 
-DEPEND="virtual/libc
+DEPEND="
 	|| (
-		>=app-i18n/skk-jisyo-200705
+		>=app-i18n/skk-jisyo-200705[cdb]
 		app-i18n/skk-jisyo-cdb
 	)"
 PROVIDE="virtual/skkserv"
 
-pkg_setup() {
-	if has_version '>=app-i18n/skk-jisyo-200705' && ! built_with_use '>=app-i18n/skk-jisyo-200705' cdb ; then
-		eerror "multiskkserv requires skk-jisyo to be built with cdb support. Please add"
-		eerror "'cdb' to your USE flags, and re-emerge app-i18n/skk-jisyo."
-		die "Missing cdb USE flag."
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${WORKDIR}/${CDB_P}
-	epatch ${FILESDIR}/${CDB_P}-errno.diff
+src_prepare() {
+	cd "${WORKDIR}/${CDB_P}" || die
+	epatch "${FILESDIR}/${CDB_P}-errno.diff"
 	ht_fix_all
 
-	cd ${S}
+	cd "${S}" || die
 	ht_fix_all
 
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-gcc34.diff
+	cd "${S}/src" || die
+	epatch "${FILESDIR}/${P}-gcc34.diff"
 }
 
-src_compile() {
-	cd ${WORKDIR}/${CDB_P}
-	make || die
-	cd -
+src_configure() {
+	cd "${WORKDIR}/${CDB_P}"
+	emake || die
+	cd - || die
 
-	cd /usr/share/skk
-	echo "# Available SKK-JISYO files are:" >> ${S}/multiskkserv.conf
+	cd /usr/share/skk || die
+	echo "# Available SKK-JISYO files are:" >> "${S}/multiskkserv.conf"
 	for i in *.cdb ; do
-		echo "#   ${i}" >> ${S}/multiskkserv.conf
+		echo "#   ${i}" >> "${S}/multiskkserv.conf"
 	done
 	cd -
 
-	econf --with-cdb=${WORKDIR}/${CDB_P} || die
-	emake || die
+	econf --with-cdb="${WORKDIR}/${CDB_P}" || die
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
-	newconfd ${FILESDIR}/multiskkserv.conf multiskkserv
+	newconfd "${FILESDIR}/multiskkserv.conf" multiskkserv || die
 
-	newinitd ${FILESDIR}/multiskkserv.initd multiskkserv
+	newinitd "${FILESDIR}/multiskkserv.initd" multiskkserv || die
 
-	dodoc AUTHORS ChangeLog INSTALL NEWS README*
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* || die
 }
 
 pkg_postinst() {
