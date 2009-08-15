@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10331 2009/08/15 07:03:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10332 2009/08/15 22:33:38 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -265,18 +265,10 @@ app-i18n/minichinput
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
 #
-# Removal of dev-libs/libowfat because it fails to build (bug
-# #272507) and lacks a proper Gentoo maintainer. Dependencies
-# follow the mask.
-#
-# sys-process/minit is already masked for removal
-#
-# net-misc/slidentd also links statically (bug #273326).
+# net-misc/slidentd links statically (bug #273326).
 #
 # Removal on 2009-10-08
-dev-libs/libowfat
 net-misc/slidentd
-www-servers/gatling
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
