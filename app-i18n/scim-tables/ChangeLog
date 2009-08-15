@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-tables
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.60 2008/11/16 16:59:32 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.61 2009/08/15 12:49:56 betelgeuse Exp $
+
+  15 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  scim-tables-0.5.8-r1.ebuild:
+  Raise the scim dependency to >=1.4.7-r2 so we can drop the built_with_use
+  call. Bug #261562.
 
   16 Nov 2008; MATSUU Takuto <matsuu@gentoo.org>
   -files/scim-tables-0.5.6-fixconfigure.patch, -scim-tables-0.5.7.ebuild,
