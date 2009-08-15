@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.24-r2.ebuild,v 1.2 2009/07/10 20:45:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/x86info-1.24-r2.ebuild,v 1.3 2009/08/15 23:41:13 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,26 +20,14 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/1.21-pic.patch
+	epatch "${FILESDIR}"/${P}-pic.patch #270388
 	sed -i -e 's:$(CFLAGS) -o x86:$(LDFLAGS) $(CFLAGS) -o x86:' \
 		Makefile || die "I don't want your LDFLAGS."
 }
 
 src_compile() {
 	emake x86info CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}" || die "emake failed"
-}
-
-pkg_preinst() {
-	if [[ -a /etc/modules.d/x86info ]] && [[ ! -a /etc/modprobe.d/x86info ]]; then
-		elog "Moving old x86info configuration in modules.d to new"
-		elog "location in modprobe.d in /etc/"
-		mv "${ROOT}"/etc/{modules,modprobe}.d/x86info
-	fi
-	if [[ -a /etc/modprobe.d/x86info ]] && [[ ! -a /etc/modprobe.d/x86info.conf ]]; then
-		elog "Moving old x86info configuration in modprobe.d to"
-		elog "new naming scheme with trailing .conf"
-		mv "${ROOT}"/etc/modprobe.d/x86info{,.conf}
-	fi
+		CFLAGS="${CFLAGS} ${CPPFLAGS}" || die "emake failed"
 }
 
 src_install() {
@@ -53,6 +41,17 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	doins -r results
 	prepalldocs
+}
+
+pkg_preinst() {
+	if [ -a "${ROOT}"/etc/modules.d/x86info ] && [ ! -a "${ROOT}"/etc/modprobe.d/x86info ] ; then
+		elog "Moving x86info from /etc/modules.d/ to /etc/modprobe.d/"
+		mv "${ROOT}"/etc/{modules,modprobe}.d/x86info
+	fi
+	if [ -a "${ROOT}"/etc/modprobe.d/x86info ] && [ ! -a "${ROOT}"/etc/modprobe.d/x86info.conf ] ; then
+		elog "Adding .conf suffix to x86info in /etc/modprobe.d/"
+		mv "${ROOT}"/etc/modprobe.d/x86info{,.conf}
+	fi
 }
 
 pkg_postinst() {

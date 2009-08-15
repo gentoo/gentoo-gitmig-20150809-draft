@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/x86info
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.27 2009/07/05 20:11:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/x86info/ChangeLog,v 1.28 2009/08/15 23:41:13 vapier Exp $
+
+  15 Aug 2009; Mike Frysinger <vapier@gentoo.org> x86info-1.24-r2.ebuild,
+  +files/x86info-1.24-pic.patch:
+  Fix by Radoslaw Madej for PIC issues with cpuid #270388 by Richard Scott.
+  Also fix $ROOT checking in pkg_preinst.
 
 *x86info-1.24-r2 (05 Jul 2009)
 
