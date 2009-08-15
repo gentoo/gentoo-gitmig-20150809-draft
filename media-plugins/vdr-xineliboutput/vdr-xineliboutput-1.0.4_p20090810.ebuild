@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4_p20090810.ebuild,v 1.1 2009/08/10 12:12:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/vdr-xineliboutput-1.0.4_p20090810.ebuild,v 1.2 2009/08/15 20:34:43 zzam Exp $
 
 GENTOO_VDR_CONDITIONAL=yes
 
@@ -21,32 +21,37 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
-IUSE="+vdr +xine fbcon X libextractor"
+IUSE="+vdr +xine fbcon X libextractor xinerama"
 
 # both vdr plugin or vdr-sxfe can use X11
+# still depends need some cleanup
 COMMON_DEPEND="
 	vdr? ( >=media-video/vdr-1.4.0 )
 
 	xine? ( >=media-libs/xine-lib-1.1.1 )
 
 	media-libs/jpeg
-	libextractor? ( >=media-libs/libextractor-0.5.20 )"
+	libextractor? ( >=media-libs/libextractor-0.5.20 )
 
-DEPEND="${COMMON_DEPEND}
-	sys-kernel/linux-headers
 	X? (
 		x11-libs/libX11
 		x11-libs/libXv
 		x11-libs/libXext
 		x11-libs/libXrender
+		xinerama? ( x11-libs/libXinerama )
 	)"
-RDEPEND="${COMMON_DEPEND}
+
+DEPEND="${COMMON_DEPEND}
+	sys-kernel/linux-headers
 	X? (
 		x11-proto/xextproto
 		x11-proto/xf86vidmodeproto
 		x11-proto/xproto
 		x11-proto/renderproto
+		xinerama? ( x11-proto/xineramaproto )
 	)"
+
+RDEPEND="${COMMON_DEPEND}"
 
 S=${WORKDIR}/${MY_P#vdr-}
 
@@ -106,6 +111,7 @@ src_prepare() {
 		HAVE_XRENDER = 1
 		HAVE_XDPMS = 1
 		HAVE_EXTRACTOR_H = $(use_onoff libextractor)
+		HAVE_XINERAMA = $(use_onoff xinerama)
 	EOF
 
 	# patching makefile to work with this

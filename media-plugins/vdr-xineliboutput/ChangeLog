@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/vdr-xineliboutput
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.45 2009/08/10 12:12:01 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-xineliboutput/ChangeLog,v 1.46 2009/08/15 20:34:43 zzam Exp $
+
+  15 Aug 2009; Matthias Schwarzott <zzam@gentoo.org>
+  vdr-xineliboutput-1.0.4_p20090810.ebuild:
+  Fix ebuild to compile without xinerama support, reported by Marko_ in
+  #gentoo-vdr.
 
 *vdr-xineliboutput-1.0.4_p20090810 (10 Aug 2009)
 
