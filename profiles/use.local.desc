@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4729 2009/08/15 07:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4730 2009/08/15 12:07:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1410,10 +1410,12 @@ media-gfx/graphviz:pango -  Enables the rendering of the graphs using pango & ca
 media-gfx/gthumb:iptc -  Add support for IPTC metadata 
 media-gfx/gwenview:kipi -  Support for the KDE Image Plugin Interface. 
 media-gfx/hugin:sift - automatically align images with media-gfx/autopano-sift or media-gfx/autopano-sift-C
+media-gfx/imagemagick:autotrace -  use media-gfx/autotrace to convert bitmaps into vector graphics 
 media-gfx/imagemagick:corefonts -  pull in media-fonts/corefonts, which is required for some commands 
 media-gfx/imagemagick:fpx -  enable media-libs/libfpx support 
 media-gfx/imagemagick:gs -  enable ghostscript support 
 media-gfx/imagemagick:hdri -  enable High Dynamic Range Images formats 
+media-gfx/imagemagick:lqr -  enable experimental liquid rescale support 
 media-gfx/imagemagick:q32 -  set quantum depth to 32 
 media-gfx/imagemagick:q8 -  set quantum depth to 8 
 media-gfx/inkscape:dia -  pull in app-office/dia for dia import extension 
