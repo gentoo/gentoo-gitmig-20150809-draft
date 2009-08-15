@@ -1,6 +1,14 @@
 # ChangeLog for games-server/cyphesis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.8 2009/01/02 03:59:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/cyphesis/ChangeLog,v 1.9 2009/08/15 17:24:08 ssuominen Exp $
+
+*cyphesis-0.5.20 (15 Aug 2009)
+
+  15 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +cyphesis-0.5.20.ebuild, +files/cyphesis-0.5.20-gcc44.patch,
+  +files/cyphesis-0.5.20-gentoo.patch,
+  +files/cyphesis-0.5.20-python26.patch:
+  Version bump wrt #273547, thanks to Pacho Ramos for reporting.
 
   02 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org>
   -files/cyphesis-0.5.15-gentoo.patch, -cyphesis-0.5.15.ebuild,
