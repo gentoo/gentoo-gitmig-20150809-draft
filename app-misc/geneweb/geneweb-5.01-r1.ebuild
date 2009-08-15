@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.01-r1.ebuild,v 1.5 2008/12/01 09:06:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/geneweb/geneweb-5.01-r1.ebuild,v 1.6 2009/08/15 12:46:40 ssuominen Exp $
 
+EAPI=2
 inherit eutils
-
-EAPI="1"
 
 DESCRIPTION="Genealogy software program with a Web interface."
 HOMEPAGE="http://cristal.inria.fr/~ddr/GeneWeb/"
@@ -15,23 +14,12 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="+ocamlopt"
 
-DEPEND="dev-lang/ocaml
-	dev-ml/camlp5
+RDEPEND="dev-lang/ocaml[ocamlopt?]
+	dev-ml/camlp5"
+DEPEND="${RDEPEND}
 	!net-p2p/ghostwhitecrab"
 
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt
-	then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 	sed -i -e "s:@GENTOO_DATADIR@:/usr/share/${PN}:" \
 		setup/setup.ml || die "Failed sed for gentoo path"
@@ -39,7 +27,6 @@ src_unpack() {
 }
 
 src_compile() {
-	econf
 	if use ocamlopt; then
 		emake || die "Compiling native code executables failed"
 	else
