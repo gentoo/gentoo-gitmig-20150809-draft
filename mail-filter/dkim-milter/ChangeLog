@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/dkim-milter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.31 2009/07/19 07:26:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dkim-milter/ChangeLog,v 1.32 2009/08/15 12:46:13 mrness Exp $
+
+  15 Aug 2009; Alin Năstac <mrness@gentoo.org> dkim-milter-2.8.2.ebuild,
+  dkim-milter-2.8.3.ebuild:
+  Set /var/lib/milter as home directory for milter user (#280571). Stable on x86.
 
 *dkim-milter-2.8.3 (19 Jul 2009)
 
