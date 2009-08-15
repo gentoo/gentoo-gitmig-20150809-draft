@@ -1,6 +1,9 @@
 # ChangeLog for www-client/pybugz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.50 2009/08/13 16:47:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/pybugz/ChangeLog,v 1.51 2009/08/15 23:41:44 williamh Exp $
+
+  15 Aug 2009; William Hubbs <williamh@gentoo.org> pybugz-0.8.0_rc3.ebuild:
+  fixed bash completion support
 
   13 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pybugz-0.8.0_rc3.ebuild:
