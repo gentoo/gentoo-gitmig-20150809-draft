@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/gatling
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.1 2009/05/01 12:23:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/ChangeLog,v 1.2 2009/08/15 22:25:20 vostorga Exp $
+
+*gatling-0.11 (15 Aug 2009)
+
+  15 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> +gatling-0.11.ebuild,
+  metadata.xml:
+  Version bump to 0.11
+  Adding myself to metadata.xml
 
   01 May 2009; Patrick Lauer <patrick@gentoo.org> ChangeLog:
   Initial import from sunrise.
