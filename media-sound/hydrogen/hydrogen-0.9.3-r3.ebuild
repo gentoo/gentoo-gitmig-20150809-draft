@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r3.ebuild,v 1.8 2009/08/01 06:30:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.3-r3.ebuild,v 1.9 2009/08/15 15:09:36 ssuominen Exp $
 
 inherit eutils kde-functions autotools multilib
 
@@ -25,14 +25,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 need-qt 3
-
-pkg_setup() {
-	if use flac && ! built_with_use --missing true media-libs/flac cxx; then
-		eerror "To build ${PN} with flac support you need the C++ bindings for flac."
-		eerror "Please enable the cxx USE flag for media-libs/flac"
-		die "Missing FLAC C++ bindings."
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
