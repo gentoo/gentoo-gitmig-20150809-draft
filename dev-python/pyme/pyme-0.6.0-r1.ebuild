@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.6.0-r1.ebuild,v 1.3 2008/05/12 07:57:42 hawking Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.6.0-r1.ebuild,v 1.4 2009/08/15 16:21:31 arfrever Exp $
 
-inherit distutils eutils
+inherit distutils eutils flag-o-matic
 
 DESCRIPTION="GPGME Interface for Python"
 HOMEPAGE="http://pyme.sourceforge.net/"
@@ -17,11 +17,16 @@ RDEPEND=">=app-crypt/gpgme-0.9.0"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
 
+pkg_setup() {
+	append-flags -D_FILE_OFFSET_BITS=64
+}
+
 src_unpack() {
 	distutils_src_unpack
 
 	sed -i \
 		-e 's:include/:include/gpgme/:' \
+		-e 's/SWIGOPT :=.*/& -D_FILE_OFFSET_BITS=64/' \
 		-e 's:$(PYTHON):/usr/bin/python:' \
 		-e '/-rm doc\/\*\.html$/d' \
 		Makefile || die "sed in Makefile failed"

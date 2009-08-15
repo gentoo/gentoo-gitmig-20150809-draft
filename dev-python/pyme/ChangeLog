@@ -1,12 +1,16 @@
 # ChangeLog for dev-python/pyme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.25 2009/07/23 03:05:26 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/ChangeLog,v 1.26 2009/08/15 16:21:31 arfrever Exp $
+
+  15 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyme-0.6.0-r1.ebuild:
+  Fix building with >=app-crypt/gpgme-1.2.0 (bug #278720).
 
 *pyme-0.8.1 (23 Jul 2009)
 
   23 Jul 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   +pyme-0.8.1.ebuild:
-  Version bump (bug #278716). Fix building with app-crypt/gpgme >= 1.2.0
+  Version bump (bug #278716). Fix building with >=app-crypt/gpgme-1.2.0
   (bug #278720).
 
   25 Jan 2009; Markus Meier <maekke@gentoo.org> pyme-0.7.0-r1.ebuild:
