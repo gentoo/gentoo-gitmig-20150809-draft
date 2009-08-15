@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.20 2009/07/21 19:16:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.21 2009/08/15 14:10:41 jmbsvicetto Exp $
+
+  15 Aug 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Unmasked KDE-4.3.0 for x86 with the permission of Raúl Porcel (armin76).
 
   21 Jul 2009; Christian Faulhammer <fauli@gentoo.org> package.use.mask:
   remove spurious mask, see bug 278246
