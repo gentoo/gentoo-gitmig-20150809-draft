@@ -1,6 +1,10 @@
 # ChangeLog for app-text/kchmviewer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.16 2009/07/01 20:51:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/ChangeLog,v 1.17 2009/08/15 18:33:38 betelgeuse Exp $
+
+  15 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -kchmviewer-3.1_p2.ebuild:
+  Remove old ebuild using built_with_use.
 
   01 Jul 2009; Markus Meier <maekke@gentoo.org> kchmviewer-3.1_p2-r1.ebuild:
   amd64 stable, bug #271241
