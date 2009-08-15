@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxfce/pyxfce-4.4.0.ebuild,v 1.2 2009/08/05 10:07:26 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxfce/pyxfce-4.4.0.ebuild,v 1.3 2009/08/15 06:36:38 mr_bones_ Exp $
 
 inherit eutils xfce44
 
@@ -9,7 +9,7 @@ xfce44
 DESCRIPTION="Python bindings for Xfce4 desktop enviroment"
 HOMEPAGE="http://pyxfce.xfce.org"
 SRC_URI="${HOMEPAGE}/${P}.tar.gz
-	${P}-libxfce4panel-enum-types.h.patch.bz2"
+	mirror://gentoo/${P}-libxfce4panel-enum-types.h.patch.bz2"
 
 LICENSE="as-is"
 KEYWORDS="~x86"
