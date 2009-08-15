@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.8.1.ebuild,v 1.2 2009/07/23 20:41:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyme/pyme-0.8.1.ebuild,v 1.3 2009/08/15 16:41:08 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils
 
@@ -19,6 +20,8 @@ RDEPEND=">=app-crypt/gpgme-0.9.0"
 DEPEND="${RDEPEND}
 	dev-lang/swig"
 
+RESTRICT_PYTHON_ABIS="3*"
+
 src_prepare() {
 	distutils_src_prepare
 
@@ -32,9 +35,15 @@ src_prepare() {
 }
 
 src_compile() {
-	PYTHON="/usr/bin/python"
-	emake -j1 swig || die "emake swig failed"
+	emake -j1 PYTHON="/usr/bin/python" swig || die "emake swig failed"
 	distutils_src_compile
+}
+
+src_test() {
+	testing() {
+		PYTHONPATH=$(echo build-${PYTHON_ABI}/lib.*) "$(PYTHON)" examples/genkey.py || die "genkey test failed with Python ${PYTHON_ABI}"
+	}
+	python_execute_function testing
 }
 
 src_install() {
@@ -46,15 +55,3 @@ src_install() {
 		doins examples/*
 	fi
 }
-
-src_test() {
-	env PYTHONPATH=$(echo build/lib.*) \
-		"${python}" examples/genkey.py || die "genkey test failed"
-}
-
-#src_test() {
-#	tests() {
-#		PYTHONPATH=$(echo build-${PYTHON_ABI}/lib.*) "${PYTHON}" examples/genkey.py || die "genkey test failed"
-#	}
-#	python_execute_function tests
-#}
