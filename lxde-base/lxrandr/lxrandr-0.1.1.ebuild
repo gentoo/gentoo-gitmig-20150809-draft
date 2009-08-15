@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/lxrandr-0.1.1.ebuild,v 1.2 2009/08/04 16:24:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxrandr/lxrandr-0.1.1.ebuild,v 1.3 2009/08/15 11:05:19 volkmar Exp $
 
 EAPI="1"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://lxde.sf.net/"
 SRC_URI="mirror://sourceforge/lxde/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 SLOT="0"
 IUSE=""
 
@@ -35,5 +35,5 @@ src_unpack() {
 
 src_install () {
 	emake DESTDIR="${D}" install || die "emake install failed!"
-	dodoc AUTHORS
+	dodoc AUTHORS || die "dodoc failed"
 }
