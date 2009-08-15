@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.43 2009/03/18 18:06:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.44 2009/08/15 23:59:04 vapier Exp $
+
+*tftp-hpa-5.0 (15 Aug 2009)
+
+  15 Aug 2009; Mike Frysinger <vapier@gentoo.org> +tftp-hpa-5.0.ebuild:
+  Version bump #280489 by Farid.
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org> tftp-hpa-0.49-r1.ebuild:
   stable ppc, bug 260516
