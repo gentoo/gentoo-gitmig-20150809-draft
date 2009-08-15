@@ -1,0 +1,23 @@
+diff -ur amarok-1.4.10_p20090130-r3-orig/work/amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.cpp amarok-1.4.10_p20090130-r3/work/amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.cpp
+--- amarok-1.4.10_p20090130-r3-orig/work/amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.cpp        2009-08-15 15:28:01.000000000 +0700
++++ amarok-1.4.10_p20090130-r3/work/amarok-1.4.10/amarok/src/metadata/mp4/mp4properties.cpp     2009-08-15 15:32:06.000000000 +0700
+@@ -28,7 +28,7 @@
+ #ifdef HAVE_SYSTEMS_H
+ #include <systems.h>
+ #endif
+-
++#include <string.h>
+ #include <stdint.h>
+ #include <sys/types.h>
+
+diff -ur amarok-1.4.10_p20090130-r3-orig/work/amarok-1.4.10/amarok/src/metadata/mp4/taglib_mp4filetyperesolver.cpp amarok-1.4.10_p20090130-r3/work/amarok-1.4.10/amarok/src/metadata/mp4/taglib_mp4filetyperesolver.cpp
+--- amarok-1.4.10_p20090130-r3-orig/work/amarok-1.4.10/amarok/src/metadata/mp4/taglib_mp4filetyperesolver.cpp   2008-08-14 04:21:51.000000000 +0700
++++ amarok-1.4.10_p20090130-r3/work/amarok-1.4.10/amarok/src/metadata/mp4/taglib_mp4filetyperesolver.cpp        2009-08-15 15:32:28.000000000 +0700
+@@ -24,6 +24,7 @@
+
+ #include "taglib_mp4filetyperesolver.h"
+ #include "mp4file.h"
++#include <string.h>
+
+ TagLib::File *MP4FileTypeResolver::createFile(const char *fileName,
+         bool readProperties,

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r3.ebuild,v 1.3 2009/08/15 08:47:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.4.10_p20090130-r3.ebuild,v 1.4 2009/08/15 18:18:15 ssuominen Exp $
 
 EAPI="2"
 
@@ -76,6 +76,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-1.4.10-gcc-4.3.patch"
 	"${FILESDIR}/${PN}-1.4.10-gcc44.patch"
 	"${FILESDIR}/${PN}-libmp4v2.patch"
+	"${FILESDIR}/${PN}-libmp4v2-2.patch"
 	"${WORKDIR}/${PN}-1.4.10-post20090130.diff"
 	"${WORKDIR}/${PN}-1.4.10-desktop-entry.diff"
 )
