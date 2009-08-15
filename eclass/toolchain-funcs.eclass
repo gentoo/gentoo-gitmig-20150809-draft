@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.91 2009/05/24 07:25:48 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.92 2009/08/15 15:11:17 grobian Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -457,6 +457,10 @@ gen_usr_ldscript() {
 
 			if ${auto} ; then
 				mv "${ED}"/usr/${libdir}/${lib%${suffix}}.*${suffix#.} "${ED}"/${libdir}/ || die
+				# some install_names are funky: they encode a version
+				if [[ ${tlib} != ${lib%${suffix}}.*${suffix#.} ]] ; then
+					mv "${ED}"/usr/${libdir}/${tlib%${suffix}}.*${suffix#.} "${ED}"/${libdir}/ || die
+				fi
 				rm -f "${ED}"/${libdir}/${lib}
 			fi
 
