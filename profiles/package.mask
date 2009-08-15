@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10330 2009/08/14 17:36:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10331 2009/08/15 07:03:54 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -474,10 +474,6 @@ sys-fs/ocfs2-tools
 #
 # Removal on 2009-10-08
 net-fs/am-utils
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2009)
-# Needs Xfce 4.4 style xfce-mcs-manager. Masked for removal.
-dev-python/pyxfce
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
