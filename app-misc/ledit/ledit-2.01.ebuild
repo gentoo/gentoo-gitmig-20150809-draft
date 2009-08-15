@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.01.ebuild,v 1.4 2008/09/25 12:10:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ledit/ledit-2.01.ebuild,v 1.5 2009/08/15 13:02:14 ssuominen Exp $
 
+EAPI=2
 inherit eutils
-
-EAPI="1"
 
 RESTRICT="installsources"
 IUSE="+ocamlopt"
@@ -13,24 +12,15 @@ DESCRIPTION="A line editor to be used with interactive commands."
 SRC_URI="http://pauillac.inria.fr/~ddr/ledit/distrib/src/${P}.tgz"
 HOMEPAGE="http://pauillac.inria.fr/~ddr/ledit/"
 
-DEPEND=">=dev-lang/ocaml-3.09 dev-ml/camlp5"
+DEPEND=">=dev-lang/ocaml-3.09[ocamlopt?]
+	dev-ml/camlp5"
 RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
-src_compile()
-{
+src_compile() {
 	emake -j1 all || die "make failed"
 	if use ocamlopt; then
 		emake -j1 ledit.opt || die "make failed"
@@ -41,12 +31,11 @@ src_compile()
 	fi
 }
 
-src_install()
-{
+src_install() {
 	if use ocamlopt; then
-		newbin ledit.opt ledit
+		newbin ledit.opt ledit || die
 	else
-		newbin ledit.out ledit
+		newbin ledit.out ledit || die
 	fi
 	doman ledit.1
 	dodoc CHANGES README

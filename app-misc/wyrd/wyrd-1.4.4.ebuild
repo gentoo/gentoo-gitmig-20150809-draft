@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.4.ebuild,v 1.2 2008/10/26 19:09:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wyrd/wyrd-1.4.4.ebuild,v 1.3 2009/08/15 13:06:35 ssuominen Exp $
 
-inherit eutils
+EAPI=2
 
 DESCRIPTION="Text-based front-end to Remind"
 HOMEPAGE="http://pessimization.com/software/wyrd/"
@@ -14,27 +14,17 @@ KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="unicode"
 
 DEPEND=">=dev-lang/ocaml-3.08
-	sys-libs/ncurses
+	sys-libs/ncurses[unicode?]
 	>=x11-misc/remind-03.01"
 RDEPEND=${DEPEND}
 
-pkg_setup() {
-	use unicode || return 0
-	if ! built_with_use sys-libs/ncurses unicode ; then
-		eerror "To use unicode in wyrd you must build sys-libs/ncurses"
-		eerror "with unicode support."
-		die "Please rebuilt sys-libs/ncurses with unicode in USE!"
-	fi
-}
-
-src_compile() {
-	econf $(use_enable unicode utf8 ) || die "configure failed"
-	emake || die "make failed"
+src_configure() {
+	econf \
+		$(use_enable unicode utf8)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install died"
-
+	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc ChangeLog || die "dodoc failed"
 	dohtml doc/manual.html || die "dohtml failed"
 }

@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.10 2009/03/30 02:02:05 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-0.6.6-r1.ebuild,v 1.11 2009/08/15 12:55:07 ssuominen Exp $
 
-inherit autotools eutils flag-o-matic linux-info
+EAPI=2
+inherit eutils flag-o-matic linux-info
 
 DESCRIPTION="A tagging metadata database, search tool and indexer"
 HOMEPAGE="http://www.tracker-project.org/"
@@ -19,8 +20,8 @@ RDEPEND=">=dev-libs/glib-2.14.0
 		 >=dev-libs/dbus-glib-0.71
 		 >=media-libs/libpng-1.2
 		 >=dev-libs/libxml2-2.6
-		 >=dev-db/sqlite-3.4
-		 >=media-gfx/imagemagick-5.2.1
+		 >=dev-db/sqlite-3.4[threadsafe]
+		 >=media-gfx/imagemagick-5.2.1[png,jpeg?]
 		 applet? ( >=x11-libs/libnotify-0.4.3 )
 		 deskbar? ( >=gnome-extra/deskbar-applet-2.19 )
 		 gnome? (
@@ -67,36 +68,17 @@ function inotify_enabled() {
 pkg_setup() {
 	linux-info_pkg_setup
 
-	if built_with_use --missing false 'dev-db/sqlite' 'nothreadsafe' ||
-		! built_with_use --missing true 'dev-db/sqlite' 'threadsafe' ; then
-		eerror "You must build sqlite with threading support"
-		die "dev-db/sqlite built without thread safety"
-	fi
-
-	if ! built_with_use 'media-gfx/imagemagick' 'png' ; then
-		ewarn "You must build imagemagick with png"
-		die "imagemagick needs png support"
-	fi
-
-	if use jpeg && ! built_with_use 'media-gfx/imagemagick' 'jpeg' ; then
-		ewarn "You must build imagemagick with jpeg to get support for JPEG"
-		die "imagemagick needs jpeg support"
-	fi
-
 	if use kernel_linux ; then
 		inotify_enabled || notify_inotify
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# fix tests
 	echo "src/tracker-applet/tracker-applet-prefs.glade" >> po/POTFILES.in
 }
 
-src_compile() {
+src_configure() {
 	local myconf=
 
 	if use gstreamer ; then
@@ -124,10 +106,7 @@ src_compile() {
 		  $(use_enable gtk libtrackergtk) \
 		  $(use_enable hal) \
 		  $(use_enable jpeg exif) \
-		  $(use_enable pdf) \
-		|| die "configure failed"
-
-	emake || die "build failed"
+		  $(use_enable pdf)
 }
 
 src_install() {
