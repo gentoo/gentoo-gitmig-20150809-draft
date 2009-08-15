@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.91 2009/08/12 16:41:00 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.92 2009/08/15 20:17:43 zmedico Exp $
+
+  15 Aug 2009; Zac Medico <zmedico@gentoo.org> make.defaults:
+  Remove FEATURES settings that are already included in make.globals for
+  all supported portage versions (since at least portage-2.1.4.x).
 
   12 Aug 2009; Ulrich Mueller <ulm@gentoo.org> use.defaults:
   Add gnuplot and skey to use.defaults.

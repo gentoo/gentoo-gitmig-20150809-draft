@@ -1,12 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.44 2009/08/01 14:59:57 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/make.defaults,v 1.45 2009/08/15 20:17:43 zmedico Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
-
-# Turn on strict checking and smart filesystems permissions (man make.conf)
-FEATURES="strict sfperms"
 
 # Env vars to expand into USE vars.  Modifying this requires prior
 # discussion on gentoo-dev@gentoo.org.
