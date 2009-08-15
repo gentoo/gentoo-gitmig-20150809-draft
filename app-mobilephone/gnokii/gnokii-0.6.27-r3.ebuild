@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.26-r2.ebuild,v 1.7 2009/08/15 09:08:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27-r3.ebuild,v 1.1 2009/08/15 09:39:23 mrness Exp $
 
-inherit eutils linux-info
+inherit eutils linux-info autotools
 
 DESCRIPTION="user space driver and tools for use with mobile phones"
 HOMEPAGE="http://www.gnokii.org/"
@@ -10,24 +10,24 @@ SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
 IUSE="nls bluetooth ical irda sms postgres mysql usb X debug"
 
 RDEPEND="!app-mobilephone/smstools
 	sys-apps/pcsc-lite
-	X? ( >=x11-libs/gtk+-2.8.19 )
-	bluetooth? ( >=net-wireless/bluez-libs-2.25 )
+	X? ( >=x11-libs/gtk+-2 )
+	bluetooth? ( || ( net-wireless/bluez >=net-wireless/bluez-libs-2.25 ) )
 	sms? (
 		!app-mobilephone/smstools
-		>=dev-libs/glib-2.10.3
-		postgres? ( >=virtual/postgresql-server-8.0 )
+		>=dev-libs/glib-2
+		postgres? ( >=virtual/postgresql-base-8.0 )
 		mysql? ( >=virtual/mysql-4.1 )
 	)
-	ical? ( >=dev-libs/libical-0.26.6 )
+	ical? ( dev-libs/libical )
 	usb? ( =virtual/libusb-0* )"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )
-	nls? ( >=sys-devel/gettext-0.14.5 )"
+	nls? ( sys-devel/gettext )"
 
 CONFIG_CHECK="UNIX98_PTYS"
 
@@ -39,7 +39,12 @@ IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 src_unpack() {
 	unpack ${A}
 
-	epatch "${FILESDIR}"/${P}-qa-fixes.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-icon.patch
+	epatch "${FILESDIR}"/${P}-disable-database.patch
+	epatch "${FILESDIR}"/${P}-TP-PI.patch
+
+	eautoreconf
 }
 
 src_compile() {
@@ -55,7 +60,9 @@ src_compile() {
 		$(use_enable irda) \
 		$(use_enable bluetooth) \
 		$(use_with X x) \
-		$(use_with sms smsd) \
+		$(use_enable sms smsd) \
+		$(use_enable mysql) \
+		$(use_enable postgres) \
 		$(use_enable debug fulldebug) \
 		${config_xdebug} \
 		$(use_enable debug rlpdebug) \

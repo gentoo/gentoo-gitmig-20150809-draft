@@ -1,6 +1,13 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.95 2009/08/15 09:08:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.96 2009/08/15 09:39:23 mrness Exp $
+
+*gnokii-0.6.27-r3 (15 Aug 2009)
+
+  15 Aug 2009; Alin Năstac <mrness@gentoo.org>
+  -files/gnokii-0.6.26-qa-fixes.patch, +files/gnokii-0.6.27-TP-PI.patch,
+  -gnokii-0.6.26-r2.ebuild, +gnokii-0.6.27-r3.ebuild:
+  Drop ppc64 keyword (#234787). Fix bug in status report reading (#278715).
 
   15 Aug 2009; Alin Năstac <mrness@gentoo.org>
   -files/gnokii-0.6.22-locale.patch, -files/gnokii-0.6.22-xmandir.patch,
