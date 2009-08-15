@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/habak
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.39 2008/12/27 19:05:04 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/habak/ChangeLog,v 1.40 2009/08/15 14:58:07 graaff Exp $
+
+*habak-0.2.5-r1 (15 Aug 2009)
+
+  15 Aug 2009; Hans de Graaff <graaff@gentoo.org> +habak-0.2.5-r1.ebuild:
+  Switch to EAPI=2 and change built_with_use to a USE flag dependency.
 
   27 Dec 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml,
   habak-0.2.5.ebuild:
