@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-cdparanoia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.125 2009/07/01 16:33:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-cdparanoia/ChangeLog,v 1.126 2009/08/15 02:23:12 tester Exp $
+
+  15 Aug 2009; Olivier Crête <tester@gentoo.org>
+  gst-plugins-cdparanoia-0.10.23.ebuild:
+  Stable on amd64, bug #280946
 
   01 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   gst-plugins-cdparanoia-0.10.22.ebuild:
