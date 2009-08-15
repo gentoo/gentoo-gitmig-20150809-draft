@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.150 2009/08/04 12:02:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.151 2009/08/15 21:18:23 yngwin Exp $
+
+  15 Aug 2009; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.3.ebuild:
+  Remove old
 
 *avidemux-2.5.0 (04 Aug 2009)
 
