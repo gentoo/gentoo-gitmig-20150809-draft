@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.230 2009/08/06 15:06:23 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.231 2009/08/15 02:21:57 tester Exp $
+
+  15 Aug 2009; Olivier Crête <tester@gentoo.org> gstreamer-0.10.23.ebuild:
+  Stable on amd64, bug #280946
 
   06 Aug 2009; Mart Raudsepp <leio@gentoo.org> gstreamer-0.10.23.ebuild:
   Fix glib requirement, 0.10.23 needs >=2.14
