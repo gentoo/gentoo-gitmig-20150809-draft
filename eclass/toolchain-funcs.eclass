@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.92 2009/08/15 15:11:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.93 2009/08/15 15:12:56 grobian Exp $
 
 # @ECLASS: toolchain-funcs.eclass
 # @MAINTAINER:
@@ -480,7 +480,7 @@ gen_usr_ldscript() {
 			ln -snf "../../${libdir}/${tlib}" "${lib}"
 			popd > /dev/null
 			;;
-		*-aix*|*-irix*|*-hpux*|*-interix*|*-winnt*)
+		*-aix*|*-irix*|*64*-hpux*|*-interix*|*-winnt*)
 			if ${auto} ; then
 				mv "${ED}"/usr/${libdir}/${lib}* "${ED}"/${libdir}/ || die
 				# no way to retrieve soname on these platforms (?)
@@ -513,6 +513,31 @@ gen_usr_ldscript() {
 			pushd "${ED}/usr/${libdir}" > /dev/null
 			ln -snf "../../${libdir}/${tlib}" "${lib}"
 			popd > /dev/null
+			;;
+		hppa*-hpux*) # PA-RISC 32bit (SOM) only, others (ELF) match *64*-hpux* above.
+			if ${auto} ; then
+				tlib=$(chatr "${ED}"/usr/${libdir}/${lib} | sed -n '/internal name:/{n;s/^ *//;p;q}')
+				[[ -z ${tlib} ]] && tlib=${lib}
+				tlib=${tlib##*/} # 'internal name' can have a path component
+				mv "${ED}"/usr/${libdir}/${lib}* "${ED}"/${libdir}/ || die
+				# some SONAMEs are funky: they encode a version before the .so
+				if [[ ${tlib} != ${lib}* ]] ; then
+					mv "${ED}"/usr/${libdir}/${tlib}* "${ED}"/${libdir}/ || die
+				fi
+				[[ ${tlib} != ${lib} ]] &&
+				rm -f "${ED}"/${libdir}/${lib}
+			else
+				tlib=$(chatr "${ED}"/${libdir}/${lib} | sed -n '/internal name:/{n;s/^ *//;p;q}')
+				[[ -z ${tlib} ]] && tlib=${lib}
+				tlib=${tlib##*/} # 'internal name' can have a path component
+			fi
+			pushd "${ED}"/usr/${libdir} >/dev/null
+			ln -snf "../../${libdir}/${tlib}" "${lib}"
+			# need the internal name in usr/lib too, to be available at runtime
+			# when linked with /path/to/lib.sl (hardcode_direct_absolute=yes)
+			[[ ${tlib} != ${lib} ]] &&
+			ln -snf "../../${libdir}/${tlib}" "${tlib}"
+			popd >/dev/null
 			;;
 		*)
 			if ${auto} ; then
