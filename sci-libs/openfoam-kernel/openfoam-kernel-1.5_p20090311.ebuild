@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-kernel/openfoam-kernel-1.5_p20090311.ebuild,v 1.1 2009/04/25 16:19:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-kernel/openfoam-kernel-1.5_p20090311.ebuild,v 1.2 2009/08/15 12:18:55 ssuominen Exp $
 
 EAPI="2"
 
@@ -44,6 +44,7 @@ src_prepare() {
 	epatch "${DISTDIR}"/${MY_P}-svn.patch
 	epatch "${DISTDIR}"/${MY_PN}-git-${PVR}.patch
 	epatch "${FILESDIR}"/${MY_P}-ggi.patch
+	epatch "${FILESDIR}"/${P}-gcc44.patch
 }
 
 src_compile() {
