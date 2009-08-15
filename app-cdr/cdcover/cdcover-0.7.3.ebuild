@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdcover/cdcover-0.7.3.ebuild,v 1.1 2008/06/07 09:23:27 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdcover/cdcover-0.7.3.ebuild,v 1.2 2009/08/15 13:27:45 ssuominen Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="cdcover allows the creation of inlay-sheets for jewel cd-cases"
@@ -14,22 +15,14 @@ KEYWORDS="~amd64 ~x86"
 IUSE="cddb"
 
 RDEPEND="cddb? ( dev-python/cddb-py )
-	dev-lang/python
+	dev-lang/python[tk]
 	app-text/ggv
 	media-sound/cd-discid"
 DEPEND=""
 
 S=${WORKDIR}/${PN}
 
-pkg_setup() {
-	if ! built_with_use dev-lang/python tk; then
-		die "dev-lang/python needs to be built with USE tk."
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-install_all_images.patch
 }
 
