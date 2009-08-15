@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.481 2009/08/10 12:49:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.482 2009/08/15 22:22:42 zzam Exp $
+
+  15 Aug 2009; Matthias Schwarzott <zzam@gentoo.org> udev-145.ebuild:
+  Fix duplicated docs, Bug #281137. Depend on glibc-2.7 to get
+  signalfd-header, Bug #281520.
 
   10 Aug 2009; Matthias Schwarzott <zzam@gentoo.org>
   files/udev-9999-disable-doc.diff:
