@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/libsvm
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.14 2008/11/01 13:21:58 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/ChangeLog,v 1.15 2009/08/15 00:08:44 bicatali Exp $
+
+*libsvm-2.89 (15 Aug 2009)
+
+  15 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> -libsvm-2.86.ebuild,
+  +libsvm-2.89.ebuild:
+  Version bump
 
 *libsvm-2.88 (01 Nov 2008)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.86.ebuild,v 1.1 2008/06/13 13:48:15 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libsvm/libsvm-2.89.ebuild,v 1.1 2009/08/15 00:08:45 bicatali Exp $
 
 inherit java-pkg-opt-2 python toolchain-funcs multilib
 
@@ -23,11 +23,12 @@ src_compile() {
 		CFLAGS="${CXXFLAGS}" \
 		|| die "emake failed"
 
-	sed -i -e 's@\.\./@/usr/bin/@g' tools/*.py || die
+	sed -i -e 's@\.\./@/usr/bin/@g' tools/*.py \
+		|| die "Failed to fix paths in python files"
 
 	if use python ; then
 		pushd python
-		python_version || die
+		python_version || die "python_version failed"
 		emake \
 			CC="$(tc-getCXX)" \
 			CFLAGS="${CXXFLAGS} -I/usr/include/python${PYVER} -I.." \
@@ -40,21 +41,23 @@ src_compile() {
 		local JAVAC_FLAGS="$(java-pkg_javac-args)"
 		sed -i \
 			-e "s/JAVAC_FLAGS =/JAVAC_FLAGS=${JAVAC_FLAGS}/g" \
-			Makefile || die
+			Makefile || die "Failed to fix java makefile"
 		emake || die "emake for java modules failed"
 		popd
 	fi
 }
 
 src_install() {
-	dobin svm-train svm-predict svm-scale || die
+	dobin svm-train svm-predict svm-scale \
+		|| die "Failed to install binaries"
 	dohtml FAQ.html
 	dodoc README
 
 	if use tools; then
 		pushd tools
-		insinto /usr/share/doc/${PF}/tools
-		doins easy.py grid.py subset.py
+		insinto /usr/share/${PN}/tools
+		doins easy.py grid.py subset.py \
+			|| die "Failed to install python tools"
 		docinto tools
 		dodoc README
 		popd
@@ -64,7 +67,8 @@ src_install() {
 		pushd python
 		python_version || die
 		insinto /usr/$(get_libdir)/python${PYVER}/site-packages
-		doins svmc.so svm.py || die
+		doins svmc.so svm.py \
+			|| die "Failed to install python scripts"
 		docinto python
 		dodoc README
 		popd
