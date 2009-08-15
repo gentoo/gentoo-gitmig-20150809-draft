@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.21 2009/07/11 03:33:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-9999.ebuild,v 1.22 2009/08/15 19:21:52 arfrever Exp $
 
 EAPI="2"
 
@@ -31,6 +31,7 @@ RDEPEND="
 	qt-webkit? ( >=x11-libs/qt-webkit-4.5 )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.6.4
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
