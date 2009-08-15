@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.2.ebuild,v 1.2 2009/05/09 12:09:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/dk-milter-1.0.2.ebuild,v 1.3 2009/08/15 12:39:29 mrness Exp $
 
 EAPI="2"
 
@@ -22,7 +22,10 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	enewgroup milter
-	enewuser milter -1 -1 -1 milter
+	# mail-milter/spamass-milter creates milter user with this home directory
+	# For consistency reasons, milter user must be created here with this home directory
+	# even though this package doesn't need a home directory for this user (#280571)
+	enewuser milter -1 -1 /var/lib/milter milter
 }
 
 src_prepare() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7.ebuild,v 1.4 2009/05/09 12:32:01 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/milter-regex-1.7.ebuild,v 1.5 2009/08/15 12:41:17 mrness Exp $
 
 EAPI="2"
 
@@ -46,7 +46,10 @@ src_install() {
 
 pkg_preinst() {
 	enewgroup milter
-	enewuser milter -1 -1 -1 milter
+	# mail-milter/spamass-milter creates milter user with this home directory
+	# For consistency reasons, milter user must be created here with this home directory
+	# even though this package doesn't need a home directory for this user (#280571)
+	enewuser milter -1 -1 /var/lib/milter milter
 
 	fowners milter:milter /var/run/milter-regex
 }

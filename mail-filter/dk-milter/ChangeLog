@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/dk-milter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/ChangeLog,v 1.17 2009/05/09 12:09:40 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dk-milter/ChangeLog,v 1.18 2009/08/15 12:39:29 mrness Exp $
+
+  15 Aug 2009; Alin Năstac <mrness@gentoo.org> dk-milter-1.0.2.ebuild:
+  Set /var/lib/milter as home directory for milter user (#280571).
 
   09 May 2009; Alin Năstac <mrness@gentoo.org>
   -files/dk-milter-1.0.1-as-needed.patch, -dk-milter-1.0.1-r1.ebuild,
