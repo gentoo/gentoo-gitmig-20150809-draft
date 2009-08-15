@@ -1,17 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.3.3-r1.ebuild,v 1.1 2009/07/10 20:26:55 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-1.3.3-r1.ebuild,v 1.2 2009/08/15 23:21:49 yngwin Exp $
 
 EAPI="2"
-
 inherit eutils qt4 multilib
 
 MY_P="${P/_/}"
-
-DESCRIPTION="BitTorrent client in C++ and Qt."
+DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
-S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,10 +19,13 @@ IUSE=""
 DEPEND=" x11-libs/qt-gui:4
 	>=net-libs/rb_libtorrent-0.14.1
 	>=dev-libs/boost-1.34.1
+	dev-libs/zziplib
 	net-misc/curl
 	dev-cpp/commoncpp2"
 RDEPEND="${DEPEND}
 	>=dev-lang/python-2.3"
+
+S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
 	"${FILESDIR}/${P}-no-strip.patch"
