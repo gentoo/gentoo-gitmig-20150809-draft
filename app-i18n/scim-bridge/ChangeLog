@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.26 2009/05/09 16:36:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.27 2009/08/15 13:20:59 betelgeuse Exp $
+
+  15 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  scim-bridge-0.4.16.ebuild:
+  Migrate to EAPI 2 to get rid of built_with_use for bug #261562.
 
   09 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   scim-bridge-0.4.16.ebuild, +files/scim-bridge-0.4.16+gcc-4.4.patch:

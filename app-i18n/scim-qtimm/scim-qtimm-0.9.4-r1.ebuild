@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4-r1.ebuild,v 1.2 2008/07/27 19:54:45 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.9.4-r1.ebuild,v 1.3 2009/08/15 13:21:02 betelgeuse Exp $
 
-EAPI=1
+EAPI="2"
 
 WANT_AUTOMAKE="1.9"
 WANT_AUTOCONF="latest"
@@ -22,22 +22,16 @@ IUSE="debug"
 
 RDEPEND=">=app-i18n/scim-1.4.2
 	virtual/libintl
-	x11-libs/qt:3"
+	|| (
+		x11-libs/qt:3[immqt-bc]
+		x11-libs/qt:3[immqt]
+	)"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	if ! built_with_use =x11-libs/qt-3* immqt-bc && ! built_with_use =x11-libs/qt-3* immqt; then
-		die "You need to rebuild >=x11-libs/qt-3.3.4 with immqt-bc(recommended) or immqt USE flag enabled."
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	rm -rf "${S}/admin"
 	ln -sf "${WORKDIR}/admin" "${S}/admin"
 
@@ -57,7 +51,7 @@ src_unpack() {
 	emake -j1 -f admin/Makefile.common || die "reautotooling failed"
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if use debug; then
@@ -70,13 +64,12 @@ src_compile() {
 		--disable-static \
 		--disable-dependency-tracking \
 		${myconf} || die "econf failed"
-	emake || die "make failed."
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	dodoc AUTHORS ChangeLog README NEWS TODO
+	dodoc AUTHORS ChangeLog README NEWS TODO || die
 }
 
 pkg_postinst() {
