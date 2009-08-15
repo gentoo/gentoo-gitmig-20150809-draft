@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.1-r2.ebuild,v 1.1 2008/06/15 09:28:02 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/spamass-milter-0.3.1-r2.ebuild,v 1.2 2009/08/15 12:51:38 mrness Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( mail-filter/libmilter mail-mta/sendmail )
 
 pkg_setup() {
 	enewgroup milter
-	enewuser milter -1 -1 /var/milter milter
+	enewuser milter -1 -1 /var/lib/milter milter
 }
 
 src_install() {
@@ -32,9 +32,9 @@ src_install() {
 	dodir /var/run/milter
 	keepdir /var/run/milter
 	fowners milter:milter /var/run/milter
-	dodir /var/milter
-	keepdir /var/milter
-	fowners milter:milter /var/milter
+	dodir /var/lib/milter
+	keepdir /var/lib/milter
+	fowners milter:milter /var/lib/milter
 
 	dodoc AUTHORS NEWS README ChangeLog "${FILESDIR}/README.gentoo"
 }

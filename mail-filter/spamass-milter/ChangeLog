@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/spamass-milter
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.20 2008/06/15 09:28:02 dertobi123 Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamass-milter/ChangeLog,v 1.21 2009/08/15 12:51:38 mrness Exp $
+
+  15 Aug 2009; Alin Năstac <mrness@gentoo.org>
+  spamass-milter-0.3.1-r1.ebuild, spamass-milter-0.3.1-r2.ebuild:
+  Change home directory for milter user from /var/milter to /var/lib/milter
+  (#280571).
 
 *spamass-milter-0.3.1-r2 (15 Jun 2008)
 
