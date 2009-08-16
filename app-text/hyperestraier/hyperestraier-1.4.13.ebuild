@@ -1,17 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.4 2009/04/11 15:45:24 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/hyperestraier/hyperestraier-1.4.13.ebuild,v 1.5 2009/08/16 08:14:39 hattya Exp $
 
 inherit java-pkg-opt-2
+
+IUSE="debug java mecab ruby"
 
 DESCRIPTION="a full-text search system for communities"
 HOMEPAGE="http://hyperestraier.sf.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug java mecab ruby"
 
 RDEPEND=">=dev-db/qdbm-1.8.75
 	sys-libs/zlib
@@ -27,9 +28,12 @@ src_unpack() {
 	cd "${S}"
 
 	# fix for insecure runpath warning.
-	sed -i "/^LDENV/d" Makefile.in
-
-	sed -i "/^JAVACFLAGS/s:$: ${JAVACFLAGS}:" java*/Makefile.in
+	sed -i \
+		-e "/^LDENV/d" \
+		-e "/^CFLAGS/s/$/ ${CFLAGS}/" \
+		Makefile.in \
+		|| die
+	sed -i "/^JAVACFLAGS/s/$/ ${JAVACFLAGS}/" java*/Makefile.in || die
 
 }
 
