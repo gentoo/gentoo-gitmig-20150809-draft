@@ -1,6 +1,17 @@
 # ChangeLog for sys-power/pmtools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.10 2009/02/28 20:04:59 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/pmtools/ChangeLog,v 1.11 2009/08/16 17:10:55 nerdboy Exp $
+
+*pmtools-20071116-r1 (16 Aug 2009)
+
+  16 Aug 2009; Steve Arnold <nerdboy@gentoo.org>
+  +pmtools-20071116-r1.ebuild, +files/pmtools-20071116-64bit.patch,
+  +files/pmtools-20071116-cflags-ldflags.patch:
+  Changes in this revision:
+	1) updated with build patches (kindly provided by Zeev Tarantov 
+	   <zeev.tarantov _at_ gmail.com>, see bug #281567)
+	2) updated to EAPI2
+	3) removed ppc, since ACPI is really only relevant for x86/amd64
 
   28 Feb 2009; Steve Arnold <nerdboy@gentoo.org> pmtools-20071116.ebuild:
   Updated to respect user LDFLAGS (see bug #253087), although I don't
