@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.5.0.ebuild,v 1.6 2009/07/04 09:55:05 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.7.1.ebuild,v 1.1 2009/08/16 07:05:34 hattya Exp $
 
 inherit autotools eutils
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://sylpheed.sraoss.jp/"
 SRC_URI="http://sylpheed.sraoss.jp/${PN}/v${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.4
 	nls? ( >=sys-devel/gettext-0.12.1 )
-	crypt? ( >=app-crypt/gpgme-0.4.5 )
-	ldap? ( >=net-nds/openldap-2.0.11 )
+	crypt? ( >=app-crypt/gpgme-1 )
+	ldap? ( net-nds/openldap )
 	pda? ( app-pda/jpilot )
 	spell? ( app-text/gtkspell )
 	ssl? ( dev-libs/openssl )"
@@ -26,6 +26,7 @@ DEPEND="${COMMON_DEPEND}
 	xface? ( >=media-libs/compface-1.4 )"
 RDEPEND="${COMMON_DEPEND}
 	app-misc/mime-types
+	net-misc/curl
 	x11-misc/shared-mime-info"
 
 AT_M4DIR="ac"
@@ -35,12 +36,9 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}"/${PN}-2.[124]-*.diff
+	epatch "${FILESDIR}"/${PN}-2.[457]-*.diff
 
 	use crypt || cp ac/missing/gpgme.m4 ac
-
-	# remove "-I m4" from aclocal arguments
-	sed -i "/^ACLOCAL_AMFLAGS/d" Makefile.am
 
 	eautoreconf
 
@@ -54,7 +52,6 @@ src_compile() {
 		$(use_enable crypt gpgme) \
 		$(use_enable ipv6) \
 		$(use_enable ldap) \
-		$(use_enable nls) \
 		$(use_enable pda jpilot) \
 		$(use_enable spell gtkspell) \
 		$(use_enable ssl) \
