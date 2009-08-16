@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/mecab-perl-0.97.ebuild,v 1.2 2008/11/28 21:38:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mecab-perl/mecab-perl-0.97.ebuild,v 1.3 2009/08/16 07:56:14 hattya Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ IUSE=""
 
 DESCRIPTION="Perl binding for MeCab"
 HOMEPAGE="http://mecab.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mecab/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN/-*}/${P}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
 KEYWORDS="amd64 ~ia64 x86"
