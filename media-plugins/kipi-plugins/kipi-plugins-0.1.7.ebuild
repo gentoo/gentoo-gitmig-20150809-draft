@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.7.ebuild,v 1.6 2009/07/19 11:49:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.7.ebuild,v 1.7 2009/08/16 11:14:12 armin76 Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/kipi/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="calendar opengl gphoto2 ipod tiff"
 
 DEPEND="calendar? ( || ( kde-base/libkcal:3.5 kde-base/kdepim:3.5 ) )
