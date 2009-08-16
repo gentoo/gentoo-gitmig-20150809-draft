@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.143 2009/08/15 18:04:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.144 2009/08/16 00:16:12 vapier Exp $
 
 # @ECLASS: flag-o-matic.eclass
 # @MAINTAINER:
@@ -325,7 +325,7 @@ strip-flags() {
 	local NEW_FCFLAGS=""
 
 	# Allow unstable C[XX]FLAGS if we are using unstable profile ...
-	if has \~$(tc-arch) ${ACCEPT_KEYWORDS} ; then
+	if has "~$(tc-arch)" ${ACCEPT_KEYWORDS} ; then
 		ALLOWED_FLAGS="${ALLOWED_FLAGS} ${UNSTABLE_FLAGS}"
 	fi
 
