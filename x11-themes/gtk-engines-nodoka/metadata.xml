@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>a3li@gentoo.org</email>
+		<name>Alex Legler</name>
+	</maintainer>
+	<use>
+		<flag name="animation-rtl">Progressbar animation from right to left</flag>
+	</use>
+</pkgmetadata>
