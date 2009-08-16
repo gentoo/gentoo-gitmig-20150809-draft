@@ -1,7 +1,0 @@
-# /etc/init.d/in.tftpd
-
-# Path to server files from
-INTFTPD_PATH="/tftproot"
-
-# For more options, see tftpd(8)
-INTFTPD_OPTS="-s ${INTFTPD_PATH}"
