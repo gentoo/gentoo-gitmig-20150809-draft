@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/tftp-hpa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.44 2009/08/15 23:59:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/tftp-hpa/ChangeLog,v 1.45 2009/08/16 00:02:55 vapier Exp $
+
+  16 Aug 2009; Mike Frysinger <vapier@gentoo.org> tftp-hpa-0.49-r1.ebuild,
+  tftp-hpa-5.0.ebuild:
+  Split DEPEND vars.
 
 *tftp-hpa-5.0 (15 Aug 2009)
 
