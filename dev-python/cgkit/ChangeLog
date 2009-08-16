@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cgkit
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.24 2008/08/06 20:30:42 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/ChangeLog,v 1.25 2009/08/16 20:42:09 arfrever Exp $
+
+  16 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cgkit-2.0.0_alpha8.ebuild:
+  Fix syntax for compatibility with Python 2.6 (bug #281417).
 
   06 Aug 2008; Jesus Rivero <neurogeek@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

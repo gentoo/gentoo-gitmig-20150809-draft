@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha8.ebuild,v 1.3 2008/05/22 20:46:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cgkit/cgkit-2.0.0_alpha8.ebuild,v 1.4 2009/08/16 20:42:09 arfrever Exp $
 
 inherit distutils flag-o-matic
 
@@ -47,6 +47,8 @@ src_unpack() {
 	#fi
 
 	sed -i -e "s:INC_DIRS = \[\]:INC_DIRS = \['/usr/include'\]:" "${S}"/setup.py
+
+	sed -i -e "160s/as/as_/;168s/as/as_/" cgkit/flockofbirds.py
 }
 
 src_compile() {
