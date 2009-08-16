@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.5.ebuild,v 1.3 2009/07/26 13:29:33 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.4.5.ebuild,v 1.4 2009/08/16 10:01:09 maekke Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -17,7 +19,7 @@ IUSE="aalib exif ncurses nls readline"
 # raise libgphoto to get a proper .pc
 RDEPEND="=virtual/libusb-0*
 	dev-libs/popt
-	>=media-libs/libgphoto2-2.4.5
+	>=media-libs/libgphoto2-2.4.5[exif]
 	ncurses? ( dev-libs/cdk )
 	aalib? (
 		media-libs/aalib
@@ -28,14 +30,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( >=sys-devel/gettext-0.14 )"
 
-pkg_setup() {
-	if use exif && ! built_with_use media-libs/libgphoto2 exif; then
-		eerror "exif support required but libgphoto2 does not have it."
-		die "rebuild media-libs/libgphoto2 with USE=\"exif\"."
-	fi
-}
-
-src_compile() {
+src_configure() {
 	econf \
 		--docdir=/usr/share/doc/${PF} \
 		$(use_with aalib) \
@@ -44,7 +39,6 @@ src_compile() {
 		$(use_with ncurses cdk) \
 		$(use_enable nls) \
 		$(use_with readline)
-	emake || die "compilation failed"
 }
 
 src_install() {
