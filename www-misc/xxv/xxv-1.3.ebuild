@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.3.ebuild,v 1.2 2009/07/19 18:08:02 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/xxv-1.3.ebuild,v 1.3 2009/08/16 18:27:55 hd_brummy Exp $
 
 EAPI="2"
 
@@ -99,9 +99,7 @@ pkg_setup() {
 	db_update_check
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 
 	sed -i "${S}"/bin/xxvd \
 		-e "s:debian:Gentoo:" \
