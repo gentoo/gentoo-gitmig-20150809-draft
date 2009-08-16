@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.7.ebuild,v 1.5 2009/03/11 09:02:42 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/wmauda-0.7.ebuild,v 1.6 2009/08/16 09:15:27 betelgeuse Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,15 +16,10 @@ IUSE=""
 RDEPEND="dev-libs/dbus-glib
 	x11-libs/libX11
 	>=x11-libs/gtk+-2
-	>=media-sound/audacious-1.4"
+	>=media-sound/audacious-1.5"
 DEPEND="${RDEPEND}
 	x11-proto/xproto
 	dev-util/pkgconfig"
-
-pkg_setup() {
-	built_with_use --missing true media-sound/audacious dbus || \
-		die "needs media-sound/audacious with USE dbus."
-}
 
 src_compile() {
 	tc-export CC

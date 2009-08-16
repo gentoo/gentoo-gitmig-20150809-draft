@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmauda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.13 2009/03/11 09:02:42 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmauda/ChangeLog,v 1.14 2009/08/16 09:15:27 betelgeuse Exp $
+
+  16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org> wmauda-0.7.ebuild:
+  Raise audacious dependency to >=1.5 so we can drop the built_with_use
+  call.
 
   11 Mar 2009; Michele Noberasco <s4t4n@gentoo.org> wmauda-0.7.ebuild:
   Changed audacious dbus USE flag check to work if audacious does not
