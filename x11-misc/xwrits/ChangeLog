@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xwrits
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.20 2009/02/03 00:00:22 nelchael Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xwrits/ChangeLog,v 1.21 2009/08/16 13:12:39 ssuominen Exp $
+
+*xwrits-2.26 (16 Aug 2009)
+
+  16 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> +xwrits-2.26.ebuild:
+  Version bump wrt #281470, thanks to James Broadhead for reporting.
 
   02 Feb 2009; Krzysiek Pawlik <nelchael@gentoo.org> ChangeLog:
   Fix ChangeLog entries.
