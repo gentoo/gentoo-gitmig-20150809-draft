@@ -2,7 +2,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.83 2009/06/23 21:12:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.84 2009/08/16 12:10:11 mrness Exp $
+
+*quagga-0.99.14 (16 Aug 2009)
+
+  16 Aug 2009; Alin Năstac <mrness@gentoo.org> files/zebra.conf,
+  -quagga-0.99.12.ebuild, -quagga-0.99.12-r1.ebuild, +quagga-0.99.14.ebuild:
+  Remove "-l 255" from ZEBRA_OPTS (#279763). Bump version and add doc USE flag.
 
 *quagga-0.99.13 (23 Jun 2009)
 

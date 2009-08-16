@@ -1,36 +1,36 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.12.ebuild,v 1.1 2009/05/13 21:27:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.99.14.ebuild,v 1.1 2009/08/16 12:10:11 mrness Exp $
 
 EAPI="2"
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
 
 inherit eutils multilib autotools
 
 DESCRIPTION="A free routing daemon replacing Zebra supporting RIP, OSPF and BGP."
 HOMEPAGE="http://quagga.net/"
 SRC_URI="http://www.quagga.net/download/${P}.tar.gz
-	mirror://gentoo/${P}-patches-20090513.tar.gz"
+	mirror://gentoo/${P}-patches-20090816.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~s390 ~sparc ~x86"
-IUSE="caps ipv6 snmp pam bgpclassless ospfapi realms multipath tcp-zebra"
+IUSE="caps doc ipv6 snmp pam pcre bgpclassless ospfapi realms multipath tcp-zebra"
 RESTRICT="userpriv"
 
 COMMON_DEPEND="sys-libs/readline
 	caps? ( sys-libs/libcap )
 	snmp? ( net-analyzer/net-snmp )
-	pam? ( sys-libs/pam )"
+	pam? ( sys-libs/pam )
+	pcre? ( dev-libs/libpcre )"
 DEPEND="${COMMON_DEPEND}
 	>=sys-devel/libtool-2.2.4"
 RDEPEND="${COMMON_DEPEND}
 	sys-apps/iproute2"
 
 src_prepare() {
+	epatch "${WORKDIR}/patch/${P}-ipaddr-bug486.diff"
 	epatch "${WORKDIR}/patch/${P}-link-libcap.patch"
-	epatch "${WORKDIR}/patch/${P}-ipv6.patch"
+	epatch "${WORKDIR}/patch/${P}-libpcre.patch"
 
 	# Classless prefixes for BGP - http://hasso.linux.ee/doku.php/english:network:quagga
 	use bgpclassless && epatch "${WORKDIR}/patch/ht-20040304-classless-bgp_adapted.patch"
@@ -46,7 +46,9 @@ src_configure() {
 		$(use_enable caps capabilities) \
 		$(use_enable snmp) \
 		$(use_with pam libpam) \
-		$(use_enable tcp-zebra)"
+		$(use_enable pcre pcreposix) \
+		$(use_enable tcp-zebra)
+		$(use_enable doc)"
 	use ipv6 \
 			&& myconf="${myconf} --enable-ipv6 --enable-ripngd --enable-ospf6d --enable-rtadv" \
 			|| myconf="${myconf} --disable-ipv6 --disable-ripngd --disable-ospf6d"
