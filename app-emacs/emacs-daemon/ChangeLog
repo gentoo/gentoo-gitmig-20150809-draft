@@ -1,9 +1,6 @@
 # ChangeLog for app-emacs/emacs-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.18 2009/08/15 22:19:03 ulm Exp $
-
-  15 Aug 2009; Ulrich Mueller <ulm@gentoo.org> ChangeLog:
-  Dummy commit to trigger update of packages.gentoo.org.
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-daemon/ChangeLog,v 1.19 2009/08/16 03:35:42 ulm Exp $
 
 *emacs-daemon-0.15 (17 Jul 2009)
 
