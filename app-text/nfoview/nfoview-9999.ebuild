@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-9999.ebuild,v 1.4 2009/07/20 06:55:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/nfoview/nfoview-9999.ebuild,v 1.5 2009/08/16 17:38:20 vapier Exp $
 
 inherit distutils
 if [[ ${PV} == "9999" ]] ; then
@@ -21,3 +21,5 @@ SLOT="0"
 IUSE=""
 
 DEPEND="dev-python/pygtk"
+RDEPEND="${DEPEND}
+	media-fonts/terminus-font"
