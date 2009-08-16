@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libnfc
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnfc/ChangeLog,v 1.1 2009/08/16 14:18:29 ikelos Exp $
+
+*libnfc-1.2.1 (16 Aug 2009)
+
+  16 Aug 2009; Mike Auty <ikelos@gentoo.org> +libnfc-1.2.1.ebuild,
+  +metadata.xml:
+  Initial commit of a library for manipulating PN53x NFC chips.
+
