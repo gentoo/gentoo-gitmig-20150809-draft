@@ -1,17 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.0.11-r1.ebuild,v 1.11 2009/05/24 19:30:15 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.1.3.ebuild,v 1.1 2009/08/16 11:12:08 ulm Exp $
 
-inherit eutils
-
-DESCRIPTION="Modular -config replacement utility"
+DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
-SRC_URI="http://dev.gentooexperimental.org/~peper/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="doc bash-completion vim-syntax"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+IUSE="doc bash-completion"
 
 RDEPEND="sys-apps/sed
 	|| (
@@ -22,19 +20,15 @@ RDEPEND="sys-apps/sed
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
 RDEPEND="${RDEPEND}
-	sys-apps/file"
+	sys-apps/file
+	sys-libs/ncurses"
 
-PDEPEND="vim-syntax? ( app-vim/eselect-syntax )"
-
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
-	epatch "${FILESDIR}/${P}-fix-paludis-command.patch"
-}
+# Commented out: only few users of eselect will edit its source
+#PDEPEND="emacs? ( app-emacs/gentoo-syntax )
+#	vim-syntax? ( app-vim/eselect-syntax )"
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 	emake || die "emake failed"
 
 	if use doc ; then
@@ -47,6 +41,9 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/*.txt
 	use doc && dohtml *.html doc/*
 
+	# needed by news-tng module
+	keepdir /var/lib/gentoo/news
+
 	# we don't use bash-completion.eclass since eselect
 	# is listed in RDEPEND.
 	if use bash-completion ; then
@@ -56,6 +53,11 @@ src_install() {
 }
 
 pkg_postinst() {
+	# fowners in src_install doesn't work for the portage group:
+	# merging changes the group back to root
+	chgrp portage "${ROOT}/var/lib/gentoo/news" \
+		&& chmod g+w "${ROOT}/var/lib/gentoo/news"
+
 	if use bash-completion ; then
 		elog "In case you have not yet enabled command-line completion"
 		elog "for eselect, you can run:"
