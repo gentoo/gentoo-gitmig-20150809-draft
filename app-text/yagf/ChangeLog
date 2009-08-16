@@ -1,0 +1,22 @@
+# ChangeLog for app-text/yagf
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yagf/ChangeLog,v 1.1 2009/08/16 15:46:30 pva Exp $
+
+*yagf-0.8.0 (16 Aug 2009)
+
+  16 Aug 2009; Peter Volkov <pva@gentoo.org> +yagf-0.8.0.ebuild,
+  +metadata.xml:
+  Moved from Sunrise overlay to portage tree, bug #278013.
+
+  26 Jul 2009; Aleksandr Yakimov (yaleks) <skyaleks@ya.ru>
+  -yagf-0.7.0.ebuild, +yagf-0.7.1.ebuild:
+  Version bump to 0.7.1
+
+  20 Jul 2009; Aleksandr Yakimov (yaleks) <skyaleks@ya.ru>
+  -yagf-0.6.2.ebuild, +yagf-0.7.0.ebuild:
+  Version bump to 0.7.0
+
+  18 Jul 2009; Aleksandr Yakimov (yaleks) <skyaleks@ya.ru>
+  +yagf-0.6.2.ebuild, +metadata.xml:
+  New Ebuild for bug 278013
+
