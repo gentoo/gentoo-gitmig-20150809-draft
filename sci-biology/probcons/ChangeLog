@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/probcons
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.8 2008/04/15 03:30:10 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/ChangeLog,v 1.9 2009/08/16 18:18:18 dberkholz Exp $
+
+  16 Aug 2009; Donnie Berkholz <dberkholz@gentoo.org>; probcons-1.12.ebuild:
+  Keyword ~amd64.
 
   15 Apr 2008; Donnie Berkholz <dberkholz@gentoo.org>; +files/gcc-4.3.patch,
   probcons-1.12.ebuild:

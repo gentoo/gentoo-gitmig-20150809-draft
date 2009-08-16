@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12.ebuild,v 1.3 2008/04/15 03:30:10 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/probcons/probcons-1.12.ebuild,v 1.4 2009/08/16 18:18:18 dberkholz Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://probcons.stanford.edu/"
 SRC_URI="http://probcons.stanford.edu/${MY_P}.tar.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 # Gnuplot is explicitly runtime-only, it's run using system()
 RDEPEND="sci-visualization/gnuplot"
