@@ -1,8 +1,0 @@
-diff -Naurp File-MimeInfo-0.13/t/default/plain_text File-MimeInfo-0.13.new/t/default/plain_text
---- File-MimeInfo-0.13/t/default/plain_text	2003-07-12 12:39:39.000000000 -0400
-+++ File-MimeInfo-0.13.new/t/default/plain_text	2006-09-06 10:19:44.000000000 -0400
-@@ -1,4 +1 @@
--
- This is a plain text file
--
--
