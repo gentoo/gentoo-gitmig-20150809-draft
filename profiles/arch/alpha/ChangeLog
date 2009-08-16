@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.37 2009/05/28 16:48:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.38 2009/08/16 22:06:26 remi Exp $
+
+  16 Aug 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop last traces of i810
 
   28 May 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Use.mask radeonhd and ast video_cards

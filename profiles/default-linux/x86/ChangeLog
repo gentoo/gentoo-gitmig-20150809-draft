@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.150 2009/07/21 19:16:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.151 2009/08/16 22:08:23 remi Exp $
+
+  16 Aug 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
+  drop last traces of i810
 
   21 Jul 2009; Christian Faulhammer <fauli@gentoo.org> package.use.mask:
   remove spurious mask, see bug 278246

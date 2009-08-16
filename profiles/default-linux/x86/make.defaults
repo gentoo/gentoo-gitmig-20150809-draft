@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/make.defaults,v 1.20 2008/10/22 14:49:32 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/make.defaults,v 1.21 2009/08/16 22:08:23 remi Exp $
 
 # All extra USE/etc should be specified in sub-profiles.
 # DO NOT POLLUTE USE ON THIS PROFILE.
@@ -18,7 +18,7 @@ USE="berkdb crypt ipv6 ncurses nls pam perl python readline ssl tcpd zlib"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 i740 i810 imstt intel \
+VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 i740 imstt intel \
 	mach64 mga neomagic nsc nv r128 radeon rendition s3 s3virge savage \
 	siliconmotion sis sisusb tdfx tga trident tseng v4l vesa vga via vmware \
 	voodoo"

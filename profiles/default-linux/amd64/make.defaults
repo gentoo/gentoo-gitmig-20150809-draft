@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.29 2008/10/22 14:49:29 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/make.defaults,v 1.30 2009/08/16 22:07:48 remi Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -47,7 +47,7 @@ SYMLINK_LIB="yes"
 
 # 2006/08/18 - Donnie Berkholz <dberkholz@gentoo.org>
 # Defaults for video drivers
-VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 i810 intel mach64 \
+VIDEO_CARDS="apm ark chips cirrus cyrix dummy fbdev glint i128 intel mach64 \
 	mga neomagic nv r128 radeon rendition s3 s3virge savage siliconmotion sis \
 	sisusb tdfx tga trident tseng v4l vesa vga via vmware voodoo"
 

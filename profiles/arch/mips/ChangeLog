@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/MIPS profile directory
-# Copyright 2007-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.12 2009/03/12 15:16:33 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/mips/ChangeLog,v 1.13 2009/08/16 22:07:00 remi Exp $
+
+  16 Aug 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop last traces of i810
 
   12 Mar 2009; Peter Volkov <pva@gentoo.org> use.mask:
   Added unsupported on mips video_cards (radeonhd and ast) to use.mask.

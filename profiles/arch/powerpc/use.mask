@@ -144,7 +144,6 @@ video_cards_ast
 video_cards_cyrix
 video_cards_i128
 video_cards_i740
-video_cards_i810
 video_cards_intel
 video_cards_neomagic
 video_cards_nsc

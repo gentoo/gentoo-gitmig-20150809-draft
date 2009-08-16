@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.42 2009/08/16 14:55:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/arm/ChangeLog,v 1.43 2009/08/16 22:07:55 remi Exp $
+
+  16 Aug 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop last traces of i810
 
   16 Aug 2009; Raúl Porcel <armin76@gentoo.org> -2004.3/deprecated,
   -2004.3/make.defaults, -2004.3/package.use.mask, -2004.3/parent,

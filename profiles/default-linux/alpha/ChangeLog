@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.122 2009/05/03 18:52:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/ChangeLog,v 1.123 2009/08/16 22:07:41 remi Exp $
+
+  16 Aug 2009; Rémi Cardona <remi@gentoo.org> use.mask:
+  drop last traces of i810
 
   03 May 2009; Tobias Klausmann <klausman@gentoo.org> use.mask:
   Masked topal use flag since it needs gnat/ada
