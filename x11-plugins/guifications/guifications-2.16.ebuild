@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.16.ebuild,v 1.8 2008/02/21 20:25:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/guifications-2.16.ebuild,v 1.9 2009/08/16 09:09:12 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -17,27 +19,19 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86"
 IUSE="debug nls"
 
-RDEPEND="net-im/pidgin
+RDEPEND="net-im/pidgin[gtk]
 	>=x11-libs/gtk+-2"
 
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	if ! built_with_use net-im/pidgin gtk; then
-		eerror "You need to compile net-im/pidgin with USE=gtk"
-		die "Missing gtk USE flag on net-im/pidgin"
-	fi
-}
-
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable debug ) \
 		$(use_enable nls) || die "econf failure"
-	emake || die "emake failure"
 }
 
 src_install() {
-	make install DESTDIR="${D}" || die "make install failure"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO VERSION
+	emake install DESTDIR="${D}" || die "make install failure"
+	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO VERSION || die
 }

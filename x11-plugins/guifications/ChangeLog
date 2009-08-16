@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/guifications
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.60 2009/08/16 09:06:14 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/guifications/ChangeLog,v 1.61 2009/08/16 09:09:12 betelgeuse Exp $
+
+  16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  guifications-2.16.ebuild:
+  Migrate to EAPI 2 in order to get rid of built_with_use.
 
   16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
   -guifications-2.14.ebuild:

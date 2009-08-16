@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-libnotify
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.15 2009/02/01 02:01:38 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-libnotify/ChangeLog,v 1.16 2009/08/16 09:11:58 betelgeuse Exp $
+
+  16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  pidgin-libnotify-0.14.ebuild:
+  Migrate to EAPI 2 in order to get rid of built_with_use.
 
 *pidgin-libnotify-0.14 (01 Feb 2009)
 
