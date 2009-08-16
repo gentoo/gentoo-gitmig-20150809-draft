@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.1 2009/08/16 10:09:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.2 2009/08/16 14:09:48 mr_bones_ Exp $
 
 EAPI=2
 
 inherit eutils linux-info autotools
 
-DESCRIPTION="user space driver and tools for use with mobile phones"
 HOMEPAGE="http://www.gnokii.org/"
 if [ "$PV" != "9999" ]; then
 	SRC_URI="http://www.gnokii.org/download/${PN}/${P}.tar.bz2"
@@ -17,6 +16,7 @@ else
 	EGIT_REPO_URI="git://git.savannah.nongnu.org/gnokii.git"
 	inherit git
 fi
+DESCRIPTION="user space driver and tools for use with mobile phones"
 
 LICENSE="GPL-2"
 SLOT="0"
