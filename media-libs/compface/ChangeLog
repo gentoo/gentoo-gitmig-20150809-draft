@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/compface
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.43 2009/08/16 07:27:42 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/compface/ChangeLog,v 1.44 2009/08/16 07:30:33 hattya Exp $
+
+  16 Aug 2009; Akinori Hattori <hattya@gentoo.org> -compface-1.4.ebuild:
+  cleaned out old ebuild(s).
 
   16 Aug 2009; Akinori Hattori <hattya@gentoo.org> compface-1.5.2.ebuild:
   cleanup.
