@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.77.ebuild,v 1.8 2009/03/30 18:48:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/qdbm/qdbm-1.8.77.ebuild,v 1.9 2009/08/16 07:52:02 hattya Exp $
 
 inherit eutils java-pkg-opt-2 multilib
 
@@ -26,7 +26,8 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	sed -i "/^JAVACFLAGS/s:$: ${JAVACFLAGS}:" java/Makefile.in
+	sed -i "/^CFLAGS/s/$/ ${CFLAGS}/" Makefile.in || die
+	sed -i "/^JAVACFLAGS/s/$/ ${JAVACFLAGS}/" java/Makefile.in || die
 
 	epatch "${FILESDIR}"/${P}-runpath.diff
 	epatch "${FILESDIR}"/${PN}-perl-runpath-vendor.diff
