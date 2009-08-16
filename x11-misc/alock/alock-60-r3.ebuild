@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.5 2008/05/12 08:42:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/alock/alock-60-r3.ebuild,v 1.6 2009/08/16 09:29:02 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -17,43 +19,34 @@ IUSE="imlib pam"
 DEPEND="x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXpm
-	imlib? ( media-libs/imlib2 )
+	imlib? ( media-libs/imlib2[X] )
 	pam? ( virtual/pam )"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/alock-svn-${PV}
 
-pkg_setup() {
-	if use imlib && ! built_with_use media-libs/imlib2 X ; then
-		eerror "media-libs/imlib2 has to be built with X support"
-		die "emerge media-libs/imlib2 with USE=\"X\""
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	sed -i 's|\$(DESTDIR)\$(prefix)/man|\$(DESTDIR)\$(prefix)/share/man|g' \
 		"${S}"/Makefile || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	econf --with-all \
 		$(use_with pam) \
 		$(use_with imlib) \
 	|| die "configure failed"
-	emake || die "make failed"
 }
 
 src_install() {
-	dobin src/alock
-	doman alock.1
-	dodoc README.txt LICENSE.txt CHANGELOG.txt
+	dobin src/alock || die
+	doman alock.1 || die
+	dodoc README.txt LICENSE.txt CHANGELOG.txt || die
 
 	insinto /usr/share/alock/xcursors
-	doins contrib/xcursor-*
+	doins contrib/xcursor-* || die
 
 	insinto /usr/share/alock/bitmaps
-	doins bitmaps/*
+	doins bitmaps/* || die
 }
 
 pkg_postinst() {
