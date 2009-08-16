@@ -1,6 +1,13 @@
 # ChangeLog for ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.70 2009/04/06 17:22:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/ia64/ChangeLog,v 1.71 2009/08/16 14:52:32 armin76 Exp $
+
+  16 Aug 2009; Raúl Porcel <armin76@gentoo.org> -2007.0/deprecated,
+  -2007.0/desktop/deprecated, -2007.0/desktop/make.defaults,
+  -2007.0/desktop/parent, -2007.0/desktop/virtuals, -2007.0/make.defaults,
+  -2007.0/packages, -2007.0/parent, -2007.0/server/deprecated,
+  -2007.0/server/make.defaults, -2007.0/server/parent:
+  Punt 2007.0
 
   06 Apr 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
   Add lasi to use.mask
