@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/p3nfs-5.19.ebuild,v 1.5 2008/06/21 09:02:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/p3nfs/p3nfs-5.19-r1.ebuild,v 1.1 2009/08/16 08:54:32 mrness Exp $
+
+EAPI="2"
 
 inherit eutils flag-o-matic
 
@@ -13,19 +15,21 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE=""
 
-DEPEND="net-nds/portmap"
+DEPEND=""
+RDEPEND="|| ( net-nds/portmap net-nds/rpcbind )"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	sed -i "s:.*cd client/epoc32.*:#&:" "${S}/Makefile.in"
 }
 
-src_compile() {
+src_configure() {
 	append-flags -fno-strict-aliasing # fix QA issues
 	sed -i "s:\$(LDFLAGS):${LDFLAGS}:" "${S}/server/Makefile.in"
 
 	econf || die "econf failed"
+}
+
+src_compile() {
 	emake CFLAGS="${CFLAGS} -Wall -I." || die "emake failed"
 }
 
@@ -40,7 +44,7 @@ pkg_postinst() {
 	elog "You need to install one of the nfsapp-*.sis clients on your"
 	elog "Symbian device to be able to mount it's filesystems."
 	elog
-	elog "Make sure to have portmap running before you start the"
-	elog "p3nfsd server."
+	elog "Make sure to have portmap or rpcbind service running"
+	elog "before you start the p3nfsd server."
 	elog
 }
