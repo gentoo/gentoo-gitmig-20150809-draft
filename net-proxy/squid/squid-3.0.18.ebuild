@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.18.ebuild,v 1.7 2009/08/14 14:11:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.18.ebuild,v 1.8 2009/08/16 11:01:46 mrness Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ IUSE="caps pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client 
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
-	elibc_uclibc kernel_linux epoll"
+	elibc_uclibc kernel_linux +epoll"
 
 DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )

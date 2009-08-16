@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.10 2008/11/30 19:20:44 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/files/squid.initd,v 1.11 2009/08/16 11:01:46 mrness Exp $
 
 opts="${opts} reload rotate"
 
@@ -9,15 +9,21 @@ depend() {
 	need net
 }
 
+upprocval() {
+	[ -f $1 ] || return 0
+	if [ `cat $1` -lt $2 ]; then
+		echo $2 > $1
+	fi
+}
+
 # Try to increase the # of filedescriptors we can open.
 maxfds() {
 	[ -n "$SQUID_MAXFD" ] || return
-	[ -f /proc/sys/fs/file-max ] || return 0
 	[ $SQUID_MAXFD -le 8192 ] || SQUID_MAXFD=8192
-	local global_file_max=`cat /proc/sys/fs/file-max`
 	local minimal_file_max=$(($SQUID_MAXFD + 4096))
-	if [ "$global_file_max" -lt $minimal_file_max ]; then
-		echo $minimal_file_max > /proc/sys/fs/file-max
+	upprocval /proc/sys/fs/file-max $minimal_file_max
+	if /usr/sbin/squid -v | grep -q "\--enable-epoll" ; then
+		upprocval /proc/sys/fs/epoll/max_user_watches $minimal_file_max
 	fi
 	ulimit -n $SQUID_MAXFD
 }
