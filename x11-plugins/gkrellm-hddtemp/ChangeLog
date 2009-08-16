@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-hddtemp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.22 2008/07/28 14:02:14 lack Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.23 2009/08/16 08:47:29 betelgeuse Exp $
+
+  16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  gkrellm-hddtemp-0.2_beta-r1.ebuild:
+  Migrate to EAPI 2 in order to get rid of built_with_use for bug #261562.
 
   28 Jul 2008; Jim Ramsay <lack@gentoo.org>
   gkrellm-hddtemp-0.2_beta-r1.ebuild:

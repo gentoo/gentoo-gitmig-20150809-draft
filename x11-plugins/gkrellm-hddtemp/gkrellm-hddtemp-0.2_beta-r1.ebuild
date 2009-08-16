@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta-r1.ebuild,v 1.3 2008/07/28 14:02:14 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/gkrellm-hddtemp-0.2_beta-r1.ebuild,v 1.4 2009/08/16 08:47:29 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils multilib
 
@@ -15,37 +17,27 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
-CDEPEND="=app-admin/gkrellm-2*
+CDEPEND="=app-admin/gkrellm-2*[X]
 	>=x11-libs/gtk+-2"
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig"
 RDEPEND="${CDEPEND}
 	>=app-admin/hddtemp-0.3_beta6"
 
-pkg_setup() {
-	if ! built_with_use app-admin/gkrellm X ; then
-		eerror "In order to install ${PN} you need to"
-		eerror "reinstall app-admin/gkrell with USE='X'."
-		die "app-admin/gkrellm built without USE='X'"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# patch Makefile
 	sed -i "s:^CFLAGS.*:CFLAGS=${CFLAGS} -fPIC:" Makefile || die
 }
 
 src_compile() {
-	make gkrellm2 || die
+	emake gkrellm2 || die
 }
 
 src_install() {
-	dodoc README
+	dodoc README || die
 
 	insinto /usr/$(get_libdir)/gkrellm2/plugins
-	doins gkrellm-hddtemp.so
+	doins gkrellm-hddtemp.so || die
 }
 
 pkg_postinst() {
