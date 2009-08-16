@@ -1,0 +1,10 @@
+# ChangeLog for games-util/vispatch
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/vispatch/ChangeLog,v 1.1 2009/08/16 22:39:56 mr_bones_ Exp $
+
+*vispatch-1.4.5 (16 Aug 2009)
+
+  16 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +vispatch-1.4.5.ebuild, +metadata.xml:
+  initial commit - ebuild submitted by Piotr Szymaniak via bug #213556
+
