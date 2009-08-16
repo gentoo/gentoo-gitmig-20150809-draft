@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.97.ebuild,v 1.4 2008/12/05 10:00:52 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/mecab-python-0.97.ebuild,v 1.5 2009/08/16 07:59:31 hattya Exp $
 
 inherit distutils
 
@@ -8,7 +8,7 @@ IUSE=""
 
 DESCRIPTION="Python binding for MeCab"
 HOMEPAGE="http://mecab.sourceforge.net/"
-SRC_URI="mirror://sourceforge/mecab/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN/-*}/${P}.tar.gz"
 
 LICENSE="|| ( BSD LGPL-2.1 GPL-2 )"
 KEYWORDS="amd64 ~ia64 ppc64 x86"

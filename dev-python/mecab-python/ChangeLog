@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mecab-python
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.9 2008/12/05 10:00:52 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.10 2009/08/16 07:59:31 hattya Exp $
+
+  16 Aug 2009; Akinori Hattori <hattya@gentoo.org>
+  -mecab-python-0.92.ebuild, -mecab-python-0.96.ebuild,
+  mecab-python-0.97.ebuild:
+  cleaned out old ebuild(s).
 
   05 Dec 2008; Raúl Porcel <armin76@gentoo.org> mecab-python-0.97.ebuild:
   Re-add ~ia64
