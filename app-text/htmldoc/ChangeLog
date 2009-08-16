@@ -1,6 +1,15 @@
 # ChangeLog for app-text/htmldoc
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.46 2009/02/02 15:49:56 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/ChangeLog,v 1.47 2009/08/16 18:21:40 a3li Exp $
+
+*htmldoc-1.8.27-r1 (16 Aug 2009)
+
+  16 Aug 2009; Alex Legler <a3li@gentoo.org> -htmldoc-1.8.20-r1.ebuild,
+  -htmldoc-1.8.23.ebuild, -htmldoc-1.8.24.ebuild, -htmldoc-1.8.25.ebuild,
+  -htmldoc-1.8.26.ebuild, +htmldoc-1.8.27-r1.ebuild, -files/fonts.diff,
+  +files/htmldoc-sscanf-overflows.patch:
+  Non-maintainer commit: Version bump for security bug 278186. Removing
+  unneded vulnerable versions. Also making repoman happy.
 
   02 Feb 2009; Brent Baude <ranger@gentoo.org> htmldoc-1.8.27.ebuild:
   Marking htmldoc-1.8.27 ~ppc64 for bug 254386
