@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.6 2008/12/06 18:49:05 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-3.2.ebuild,v 1.7 2009/08/16 09:55:01 maekke Exp $
+
+EAPI=2
 
 inherit eutils
 
@@ -13,37 +15,27 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-DEPEND=">=dev-libs/boost-1.31.0
+RDEPEND=">=dev-libs/boost-1.31.0
 	media-libs/lcms
 	media-libs/glew
-	media-libs/plotutils
+	media-libs/plotutils[X]
 	media-libs/tiff
 	virtual/glut"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${PN}-enfuse-${PV}"
 
 pkg_setup() {
-	# bug 202476
-	if ! built_with_use media-libs/plotutils X ; then
-		eerror
-		eerror "media-gfx/plotutils has to be built with USE=\"X\""
-		eerror
-		die "emerge plotutils with USE=\"X\""
-	fi
-
 	ewarn
 	ewarn "Please note: the compilation of enblend needs about 1 GB RAM (and swap)."
 	ewarn
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e 's:-O3::' configure || die
 }
 
 src_compile() {
-	econf
 	# forcing -j1 as every parallel compilation process needs about 1 GB RAM.
 	emake -j1 || die
 }
