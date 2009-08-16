@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.74 2009/08/16 18:43:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.75 2009/08/16 18:47:57 vapier Exp $
+
+  16 Aug 2009; Mike Frysinger <vapier@gentoo.org>
+  cryptsetup-1.0.6-r2.ebuild:
+  Install into rcscripts multilib dir #262838 by Thilo Bangert.
 
   16 Aug 2009; Mike Frysinger <vapier@gentoo.org>
   cryptsetup-1.0.6-r2.ebuild:
