@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.0.16.ebuild,v 1.1 2009/03/29 19:43:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd-kernel/drbd-kernel-8.0.16.ebuild,v 1.2 2009/08/17 10:18:34 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -41,6 +41,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-8.0.0-scripts.adjust_drbd_config_h.sh.patch || die
+	epatch "${FILESDIR}"/${MY_P}-kernel-2.6.30-compile-fix.patch || die
 }
 
 pkg_postinst() {
