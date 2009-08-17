@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.3 2009/05/01 17:38:18 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.4 2009/08/17 17:23:58 tommy Exp $
 
 EAPI="1"
 DATE=20090413
@@ -82,7 +82,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	if [ -z has_version ]; then
+	if ! [[ -e /usr/share/freenet/lib/freenet.jar ]] ; then
 		elog "If you dont want to use freenet any more"
 		elog "and dont want to keep your identity/other stuff"
 		elog "remember to do 'rm -rf /var/freenet' to remove everything"
