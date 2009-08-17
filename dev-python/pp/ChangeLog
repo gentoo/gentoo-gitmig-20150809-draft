@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.8 2009/08/16 23:45:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/ChangeLog,v 1.9 2009/08/17 04:37:31 arfrever Exp $
+
+  17 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pp-1.5.7.ebuild:
+  Fix path passed to dohtml.
 
 *pp-1.5.7 (16 Aug 2009)
 

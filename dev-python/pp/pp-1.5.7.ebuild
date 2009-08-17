@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/pp-1.5.7.ebuild,v 1.1 2009/08/16 23:45:47 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pp/pp-1.5.7.ebuild,v 1.2 2009/08/17 04:37:31 arfrever Exp $
 
 EAPI="2"
 
@@ -27,7 +27,7 @@ src_install() {
 	distutils_src_install
 
 	doman doc/ppserver.1
-	use doc && dohtml ppdoc.html
+	use doc && dohtml doc/ppdoc.html
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}
