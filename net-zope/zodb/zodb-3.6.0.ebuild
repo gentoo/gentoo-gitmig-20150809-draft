@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.6.0.ebuild,v 1.5 2009/06/01 09:15:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/zodb-3.6.0.ebuild,v 1.6 2009/08/17 14:52:31 ssuominen Exp $
 
 inherit distutils
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/python-2.4"
+RDEPEND="<dev-lang/python-2.5"
 DEPEND="${RDEPEND}
 	!net-zope/zopeinterface"
 

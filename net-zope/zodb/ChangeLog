@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.29 2009/08/17 10:17:42 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.30 2009/08/17 14:52:31 ssuominen Exp $
+
+  17 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> zodb-3.3.1.ebuild,
+  zodb-3.3.1-r1.ebuild, zodb-3.6.0.ebuild, zodb-3.6.0-r1.ebuild:
+  Pull in Python 2.4 or older wrt #257545.
 
 *zodb-3.6.0-r1 (17 Aug 2009)
 *zodb-3.3.1-r1 (17 Aug 2009)
