@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.5 2009/08/12 20:31:01 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkimg/tkimg-1.3.20081202.ebuild,v 1.6 2009/08/17 16:45:09 bicatali Exp $
 
 EAPI=2
 inherit eutils
@@ -18,7 +18,7 @@ LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
 DEPEND="dev-lang/tk
-	dev-tcltk/tcllib
+	>=dev-tcltk/tcllib-1.11
 	media-libs/libpng
 	media-libs/jpeg
 	media-libs/tiff"
