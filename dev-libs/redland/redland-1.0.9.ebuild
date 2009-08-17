@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.9 2009/08/12 17:25:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.10 2009/08/17 15:25:40 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils libtool
@@ -25,6 +25,7 @@ RDEPEND="mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
+	dev-util/gtk-doc-am
 	>=sys-devel/libtool-2"
 
 src_prepare() {
