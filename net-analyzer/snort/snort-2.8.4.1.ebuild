@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.1.ebuild,v 1.7 2009/05/25 22:46:12 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.8.4.1.ebuild,v 1.8 2009/08/17 16:18:30 patrick Exp $
 
 inherit eutils autotools multilib
 
@@ -292,7 +292,7 @@ src_install() {
 	#Just some clean up of trailing /'s in the config
 	sed -i -e 's:snort_dynamicpreprocessor/$:snort_dynamicpreprocessor:g' \
 		"${D}etc/snort/snort.conf.distrib"
-	sed -i -e 's:snort_dynamicrule/$:snort_dynamicrules:g' \
+	sed -i -e 's:snort_dynamicrules/$:snort_dynamicrules:g' \
 		"${D}etc/snort/snort.conf.distrib"
 
 	#Make it clear in the config where these are...
