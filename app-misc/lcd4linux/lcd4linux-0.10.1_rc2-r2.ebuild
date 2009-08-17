@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.6 2009/05/16 09:00:26 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/lcd4linux-0.10.1_rc2-r2.ebuild,v 1.7 2009/08/17 16:09:34 rbu Exp $
 
 WANT_AUTOMAKE="1.9"
 inherit eutils multilib autotools
@@ -54,6 +54,7 @@ DEPEND="
 	lcd_devices_png?      ( media-libs/libpng media-libs/gd )
 	lcd_devices_X?        ( x11-libs/libX11  media-libs/gd )
 	lcd_devices_serdisplib? ( dev-libs/serdisplib  media-libs/gd )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -61,7 +62,7 @@ pkg_setup() {
 	echo
 	elog "If you wish to compile only specific plugins, please use"
 	elog "the LCD4LINUX_PLUGINS environment variable. Plugins must be comma separated and can be either of:"
-	elog "apm cpuinfo diskstats dvb exec file ic_sensors imon isdn kvv loadavg meminfo netdev pop3 ppp proc_stat seti statfs uname uptime wireless"
+	elog "apm cpuinfo diskstats dvb exec file i2c_sensors imon isdn kvv loadavg meminfo netdev pop3 ppp proc_stat seti statfs uname uptime wireless"
 	echo
 }
 
