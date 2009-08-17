@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent/mktorrent-0.4.ebuild,v 1.3 2008/01/29 12:24:25 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mktorrent/mktorrent-0.4.ebuild,v 1.4 2009/08/17 18:19:01 rbu Exp $
 
 inherit toolchain-funcs
 
@@ -10,10 +10,11 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="dev-libs/openssl"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
