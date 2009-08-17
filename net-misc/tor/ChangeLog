@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.178 2009/08/06 22:06:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.179 2009/08/17 19:42:11 fauli Exp $
+
+*tor-0.2.1.19-r1 (17 Aug 2009)
+
+  17 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  +tor-0.2.1.19-r1.ebuild, +files/tor-0.2.1.19-logrotate.patch:
+  fix logrotate support as provided by Martin von Gagern <Martin AT vGagern
+  AT gmx DOT net> in bug 281439
 
   06 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   -tor-0.2.1.16_rc.ebuild:
