@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/xfitsview-2.2.ebuild,v 1.2 2008/06/27 10:22:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/xfitsview/xfitsview-2.2.ebuild,v 1.3 2009/08/17 17:09:00 bicatali Exp $
 
+EAPI=2
 inherit eutils
 
 MY_PN=XFITSview
@@ -15,13 +16,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RESTRICT="test"
-DEPEND="x11-libs/openmotif"
 
-S=${WORKDIR}/${MY_PN}
+DEPEND="x11-libs/openmotif"
+RDEPEND="${DEPEND}"
+
+S="${WORKDIR}/${MY_PN}"
 
 src_compile() {
-	econf || die "econf failed"
 	# trick to make parallel building work
 	for d in fitssubs src; do
 	   pushd ${d}
