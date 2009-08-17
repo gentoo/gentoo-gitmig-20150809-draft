@@ -1,10 +1,21 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3133 2009/08/17 18:32:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3134 2009/08/17 18:54:24 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  +default/linux/alpha/10.0/eapi, +default/linux/amd64/10.0/eapi,
+  +default/linux/arm/10.0/eapi, +default/linux/hppa/10.0/eapi,
+  +default/linux/ia64/10.0/eapi, +default/linux/m68k/10.0/eapi,
+  +default/linux/mips/10.0/eapi, +default/linux/powerpc/ppc32/10.0/eapi,
+  +default/linux/powerpc/ppc64/10.0/eapi, +default/linux/s390/10.0/eapi,
+  +default/linux/sh/10.0/eapi, +default/linux/sparc/10.0/eapi,
+  +default/linux/x86/10.0/eapi, +releases/10.0/eapi, releases/10.0/packages:
+  Make 10.0 profiles EAPI-2 compliant (based on community feedback).
+  Initial commit: may need some tweaking later.
 
   17 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   targets/server/make.defaults:
