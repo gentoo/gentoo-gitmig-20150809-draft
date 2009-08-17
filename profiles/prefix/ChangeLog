@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.55 2009/08/14 15:31:30 mduft Exp $
+# $Id: ChangeLog,v 1.56 2009/08/17 08:59:29 grobian Exp $
+
+  17 Aug 2009; Fabian Groffen <grobian@gentoo.org> +irix/package.mask,
+  sunos/solaris/package.mask:
+  Mask perl-5.8.8-r6 on Solaris and IRIX because it breaks autotools there,
+  bug #269430
 
   14 Aug 2009; Markus Duft <mduft@gentoo.org> windows/interix/6.0/use.mask:
   unmask i6fork on interix 6 again - i6fork has been fixed
