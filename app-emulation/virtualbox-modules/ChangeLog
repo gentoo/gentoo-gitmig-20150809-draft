@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.39 2009/08/17 14:33:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.40 2009/08/17 14:39:07 patrick Exp $
+
+  17 Aug 2009; Patrick Lauer <patrick@gentoo.org>
+  -virtualbox-modules-2.1.4.ebuild, -virtualbox-modules-2.2.0.ebuild,
+  -virtualbox-modules-2.2.2.ebuild, -virtualbox-modules-2.2.4.ebuild,
+  -virtualbox-modules-3.0.2.ebuild:
+  Dropping vulnerable versions for #280157
 
 *virtualbox-modules-3.0.4 (17 Aug 2009)
 
