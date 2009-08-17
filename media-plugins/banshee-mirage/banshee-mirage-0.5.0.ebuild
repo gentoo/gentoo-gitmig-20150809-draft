@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-mirage/banshee-mirage-0.5.0.ebuild,v 1.1 2009/05/26 09:47:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-mirage/banshee-mirage-0.5.0.ebuild,v 1.2 2009/08/17 15:12:41 ssuominen Exp $
 
 EAPI=2
 
@@ -25,9 +25,10 @@ RDEPEND=">=media-sound/banshee-1.4
 	media-libs/libsamplerate
 	>=dev-dotnet/gtk-sharp-2.10"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	!media-gfx/mirage"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 src_configure() {
 	econf --disable-static
