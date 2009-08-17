@@ -1,6 +1,16 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.56 2009/08/17 08:59:29 grobian Exp $
+# $Id: ChangeLog,v 1.57 2009/08/17 09:46:54 grobian Exp $
+
+  17 Aug 2009; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.6/eapi,
+  +darwin/macos/10.6/make.defaults, +darwin/macos/10.6/package.mask,
+  +darwin/macos/10.6/package.provided, +darwin/macos/10.6/package.use.mask,
+  +darwin/macos/10.6/parent, +darwin/macos/10.6/profile.bashrc,
+  +darwin/macos/10.6/x64/make.defaults, +darwin/macos/10.6/x64/package.mask,
+  +darwin/macos/10.6/x64/package.use.force,
+  +darwin/macos/10.6/x64/package.use.mask, +darwin/macos/10.6/x64/parent,
+  +darwin/macos/10.6/x64/use.mask:
+  Add initial 10.6 (Snow Leopard) profile
 
   17 Aug 2009; Fabian Groffen <grobian@gentoo.org> +irix/package.mask,
   sunos/solaris/package.mask:
