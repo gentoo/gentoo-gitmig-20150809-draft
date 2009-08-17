@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/dvda-author-09.05.ebuild,v 1.4 2009/08/08 13:18:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dvda-author/dvda-author-09.05.ebuild,v 1.5 2009/08/17 12:00:22 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -21,7 +21,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-sandbox.patch
-	AT_NO_RECURSIVE="yes" eautoreconf
+	eautoreconf
 }
 
 src_configure() {
