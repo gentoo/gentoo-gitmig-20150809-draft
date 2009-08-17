@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.5 2009/01/25 22:59:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/blokish/blokish-0.9.4-r1.ebuild,v 1.6 2009/08/17 21:36:00 mr_bones_ Exp $
 
 EAPI=2
+WX_GTK_VER="2.8"
 inherit eutils wxwidgets games
 
 MY_P="${PN}_v${PV}"
@@ -15,15 +16,10 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="x11-libs/wxGTK:2.8[opengl]
+DEPEND="x11-libs/wxGTK:2.8[X,opengl]
 	virtual/opengl"
 
 S=${WORKDIR}/${PN}
-
-pkg_setup() {
-	WX_GTK_VER=2.8 need-wxwidgets unicode
-	games_pkg_setup
-}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc43.patch
