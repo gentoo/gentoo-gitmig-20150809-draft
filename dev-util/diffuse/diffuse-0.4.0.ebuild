@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.3.4.ebuild,v 1.4 2009/07/26 16:11:06 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diffuse/diffuse-0.4.0.ebuild,v 1.1 2009/08/17 17:02:00 grozin Exp $
 
 EAPI="2"
 
