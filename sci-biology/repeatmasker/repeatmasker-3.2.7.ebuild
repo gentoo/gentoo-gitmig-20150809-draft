@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/repeatmasker/repeatmasker-3.2.7.ebuild,v 1.1 2009/02/27 00:16:15 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/repeatmasker/repeatmasker-3.2.7.ebuild,v 1.2 2009/08/17 19:41:31 weaver Exp $
 
 inherit versionator
 
@@ -40,7 +40,11 @@ Y
 }
 
 src_install() {
-	dobin DateRepeats ProcessRepeats RepeatMasker DupMasker RepeatProteinMask
+	exeinto /usr/share/${PN}
+	for i in DateRepeats ProcessRepeats RepeatMasker DupMasker RepeatProteinMask; do
+		doexe $i
+		dosym /usr/share/${PN}/$i /usr/bin/$i
+	done
 
 	dodir /usr/share/${PN}/lib
 	insinto /usr/share/${PN}/lib
