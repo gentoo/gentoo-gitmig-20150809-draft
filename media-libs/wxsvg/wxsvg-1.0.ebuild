@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.ebuild,v 1.3 2009/08/09 13:51:19 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/wxsvg/wxsvg-1.0.ebuild,v 1.4 2009/08/17 14:23:41 ssuominen Exp $
 
+EAPI=2
 WX_GTK_VER="2.8"
-
 inherit autotools wxwidgets
 
 DESCRIPTION="C++ library to create, manipulate and render SVG files."
@@ -11,8 +11,8 @@ HOMEPAGE="http://wxsvg.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="wxWinLL-3"
-KEYWORDS="amd64 ppc x86"
 SLOT="0"
+KEYWORDS="amd64 ppc x86"
 IUSE="ffmpeg"
 
 RDEPEND="=x11-libs/wxGTK-2.8*
@@ -26,18 +26,13 @@ RDEPEND="=x11-libs/wxGTK-2.8*
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-#	epatch "${FILESDIR}"/${P}-new-ffmpeg-headers.patch
-
+src_prepare() {
 	AT_M4DIR="${S}" eautoreconf
 }
 
-src_compile() {
-	econf --with-wx-config="${WXCONFIG}"  || die "econf failed"
-	emake || die "emake failed"
+src_configure() {
+	econf \
+		--with-wx-config="${WXCONFIG}"
 }
 
 src_install() {
