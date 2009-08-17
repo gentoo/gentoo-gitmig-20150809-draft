@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zope
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.151 2008/11/24 09:14:04 tupone Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.152 2009/08/17 10:14:28 a3li Exp $
+
+*zope-2.10.7-r1 (17 Aug 2009)
+*zope-2.9.10-r1 (17 Aug 2009)
+
+  17 Aug 2009; Alex Legler <a3li@gentoo.org> +zope-2.9.10-r1.ebuild,
+  +zope-2.10.7-r1.ebuild, +files/CVE-2009-0668+0669.patch:
+  Non-maintainer commit: Version bump for security bug 278824.
 
   24 Nov 2008; Alfredo Tupone <tupone@gentoo.org> -zope-2.9.7.ebuild,
   -zope-2.9.8.ebuild, -zope-2.9.9.ebuild, -zope-2.10.3.ebuild,
