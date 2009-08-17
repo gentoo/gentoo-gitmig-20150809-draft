@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.6.ebuild,v 1.1 2009/08/11 20:51:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.6.ebuild,v 1.2 2009/08/17 23:49:43 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -37,7 +37,7 @@ SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/pyPdf-1.12
 	|| ( app-text/podofo >=app-text/pdftk-1.12 )
 	>=dev-python/cherrypy-3.0.2-r1
-	>=dev-python/cssutils-0.9.5.1
+	>=dev-python/cssutils-0.9.6_alpha4
 	>=dev-python/odfpy-0.7"
 
 RDEPEND="$SHARED_DEPEND
