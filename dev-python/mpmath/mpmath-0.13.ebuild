@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.11.ebuild,v 1.2 2009/02/15 22:32:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpmath/mpmath-0.13.ebuild,v 1.1 2009/08/17 16:55:05 grozin Exp $
 
+EAPI=2
 NEED_PYTHON=2.4
 inherit distutils
 
@@ -14,9 +15,18 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples gmp test"
 
+RDEPEND="gmp? ( dev-python/gmpy )"
 DEPEND="doc? ( dev-python/sphinx )
-	gmp? ( dev-python/gmpy )
 	test? ( dev-python/py )"
+
+src_compile() {
+	distutils_src_compile
+	if use doc; then
+		cd doc
+		"${python}" build.py
+		cd ..
+	fi
+}
 
 src_install() {
 	DOCS="CHANGES"
@@ -24,7 +34,6 @@ src_install() {
 
 	if use doc; then
 		cd doc
-		"${python}" build.py
 		dohtml -r build/*
 		cd ..
 	fi
