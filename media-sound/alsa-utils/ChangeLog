@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.276 2009/08/17 05:03:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.277 2009/08/17 19:35:50 ssuominen Exp $
+
+*alsa-utils-1.0.20-r5 (17 Aug 2009)
+
+  17 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +alsa-utils-1.0.20-r5.ebuild, +files/alsa-utils-1.0.20-init_default.patch:
+  Fix brackets inside /usr/share/alsa/init/default wrt #281538.
 
   17 Aug 2009; Jeroen Roovers <jer@gentoo.org> alsa-utils-1.0.20-r4.ebuild:
   Stable for HPPA (bug #280464).
