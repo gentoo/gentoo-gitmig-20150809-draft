@@ -1,8 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.7 2008/05/05 21:03:00 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/jugglemaster/jugglemaster-0.4.ebuild,v 1.8 2009/08/17 21:34:03 mr_bones_ Exp $
 
-inherit eutils toolchain-funcs wxwidgets games
+EAPI=2
+WX_GTK_VER="2.6"
+inherit eutils wxwidgets games
 
 DESCRIPTION="A siteswap animator"
 HOMEPAGE="http://icculus.org/jugglemaster/"
@@ -13,17 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="ffmpeg"
 
-DEPEND="=x11-libs/wxGTK-2.6*
+DEPEND="x11-libs/wxGTK:2.6[X]
 	ffmpeg? ( media-video/ffmpeg )"
 
-pkg_setup() {
-	games_pkg_setup
-	WX_GTK_VER=2.6 need-wxwidgets gtk2
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	if use ffmpeg ; then
 		epatch "${FILESDIR}/${P}"-ffmpeg.patch
 		sed -i \
@@ -45,10 +40,7 @@ src_unpack() {
 }
 
 src_compile() {
-	emake \
-		-C src/jmdlx \
-		CXX="$(tc-getCXX)" \
-		|| die "emake failed"
+	emake -C src/jmdlx || die "emake failed"
 }
 
 src_install () {
