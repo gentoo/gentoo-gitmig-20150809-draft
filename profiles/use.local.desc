@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4732 2009/08/17 19:14:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4733 2009/08/18 14:47:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -199,6 +199,7 @@ app-editors/xemacs:eolconv - Support detection and translation of newline conven
 app-editors/xemacs:pop - Support POP for mail retrieval
 app-editors/xemacs:xim - Enable X11 XiM input method
 app-editors/xmlcopyeditor:guidexml - Install GuideXML templates to work with Gentoo official docs
+app-editors/zile:valgrind - Enable usage of dev-util/valgrind in tests
 app-emacs/auctex:preview-latex - Use bundled preview-latex
 app-emacs/bbdb:tex - Install plain TeX support files
 app-emacs/company-mode:semantic - Install backend for semantic (app-emacs/cedet)
