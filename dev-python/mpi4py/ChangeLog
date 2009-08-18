@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/mpi4py
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mpi4py/ChangeLog,v 1.1 2009/08/18 17:37:17 bicatali Exp $
+
+*mpi4py-1.1.0 (18 Aug 2009)
+
+  18 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> +mpi4py-1.1.0.ebuild,
+  +metadata.xml:
+  Initial import. Closing bug #189376, thanks Marek and Ben Bannier for
+  their initial work
+
