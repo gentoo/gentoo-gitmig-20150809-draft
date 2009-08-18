@@ -1,6 +1,11 @@
 # ChangeLog for www-plugins/mozplugger
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/ChangeLog,v 1.1 2009/04/09 21:05:18 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozplugger/ChangeLog,v 1.2 2009/08/18 21:15:49 beandog Exp $
+
+*mozplugger-1.12.1 (18 Aug 2009)
+
+  18 Aug 2009; Steve Dibb <beandog@gentoo.org> +mozplugger-1.12.1.ebuild:
+  Version bump, bug 246543
 
   09 Apr 2009; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +mozplugger-1.7.3-r1.ebuild, +mozplugger-1.10.2.ebuild:
