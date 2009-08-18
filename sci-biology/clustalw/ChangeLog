@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/clustalw
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/ChangeLog,v 1.17 2009/08/18 15:41:51 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/ChangeLog,v 1.18 2009/08/18 16:05:23 weaver Exp $
+
+  18 Aug 2009; Andrey Kislyuk <weaver@gentoo.org> +clustalw-1.83-r2.ebuild:
+  Avoid dropping stable keywords until stablereqs are done
 
 *clustalw-1.83-r3 (18 Aug 2009)
 
