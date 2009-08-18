@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgaccess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.20 2009/08/18 06:53:47 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.21 2009/08/18 07:21:12 fauli Exp $
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org> ChangeLog:
+  stable x86, bug 281407
 
   18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   pgaccess-0.99.0.20040219-r2.ebuild:
