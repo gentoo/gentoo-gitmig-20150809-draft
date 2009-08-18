@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/polarssl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/polarssl/ChangeLog,v 1.1 2009/08/18 12:34:06 tommy Exp $
+
+*polarssl-0.12.0 (18 Aug 2009)
+
+  18 Aug 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +polarssl-0.12.0.ebuild, +metadata.xml:
+  Move net-libs/xyssl -> net-libs/polarssl
+
