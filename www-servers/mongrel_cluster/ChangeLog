@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/mongrel_cluster
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.3 2007/12/16 02:47:59 nichoj Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mongrel_cluster/ChangeLog,v 1.4 2009/08/18 11:10:30 a3li Exp $
+
+  18 Aug 2009; Alex Legler <a3li@gentoo.org> mongrel_cluster-0.2.2.ebuild,
+  mongrel_cluster-1.0.5.ebuild:
+  Removing deprecated USE_RUBY="any", assigning RDEPEND explicitly.
 
 *mongrel_cluster-1.0.5 (09 Dec 2007)
 
