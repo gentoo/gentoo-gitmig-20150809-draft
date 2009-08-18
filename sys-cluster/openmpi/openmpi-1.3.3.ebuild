@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.3.3.ebuild,v 1.2 2009/08/17 23:53:09 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.3.3.ebuild,v 1.3 2009/08/18 00:34:21 jsbronder Exp $
 
 EAPI=2
 inherit eutils multilib flag-o-matic toolchain-funcs fortran
@@ -75,9 +75,6 @@ src_configure() {
 	if use fortran; then
 		if [[ "${FORTRANC}" = "g77" ]]; then
 			myconf="${myconf} --disable-mpi-f90"
-		elif [[ "${FORTRANC}" = "gfortran" ]]; then
-			# Because that's just a pain in the butt.
-			myconf="${myconf} --with-wrapper-fflags=-I/usr/include"
 		elif [[ "${FORTRANC}" = if* ]]; then
 			# Enabled here as gfortran compile times are huge with this enabled.
 			myconf="${myconf} --with-mpi-f90-size=medium"
