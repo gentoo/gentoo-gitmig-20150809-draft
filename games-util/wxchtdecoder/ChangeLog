@@ -1,6 +1,10 @@
 # ChangeLog for games-util/wxchtdecoder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/ChangeLog,v 1.5 2009/08/18 00:41:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/wxchtdecoder/ChangeLog,v 1.6 2009/08/18 00:44:02 mr_bones_ Exp $
+
+  18 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  wxchtdecoder-1.5.ebuild, wxchtdecoder-1.5a.ebuild:
+  EAPI=2; need to set WX_GTK_VER
 
 *wxchtdecoder-1.5a (18 Aug 2009)
 
