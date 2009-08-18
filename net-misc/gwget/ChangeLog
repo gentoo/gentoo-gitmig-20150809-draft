@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/gwget
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.16 2009/02/22 19:13:26 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.17 2009/08/18 14:51:50 mrpouet Exp $
+
+*gwget-1.0.2 (18 Aug 2009)
+
+  18 Aug 2009; Romain Perier <mrpouet@gentoo.org> +gwget-1.0.2.ebuild:
+  Version bump to 1.0.2. Fix bug #281900. Several fixes, clean dialog code,
+  remove gnome-vfs and remove old DBus code. Switch to eapi-2 due to sed
+  expression which fix translations problem.
 
 *gwget-1.0.1 (22 Feb 2009)
 
