@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.26.ebuild,v 1.1 2009/03/07 23:07:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/blas-goto/blas-goto-1.26.ebuild,v 1.2 2009/08/18 14:22:19 bicatali Exp $
 
 inherit eutils fortran flag-o-matic toolchain-funcs
 
 MY_PN="GotoBLAS"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Fast implementations of the Basic Linear Algebra Subroutines"
-HOMEPAGE="http://www.tacc.utexas.edu/resources/software/software.php"
-SRC_URI="http://www.tacc.utexas.edu/resources/software/login/gotoblas/${MY_P}.tar.gz"
+HOMEPAGE="http://www.tacc.utexas.edu/research-development/tacc-projects/"
+SRC_URI="http://www-prc.tacc.utexas.edu/resources/software/login/gotoblas/${MY_P}.tar.gz"
 LICENSE="tacc"
 SLOT="0"
 # See http://www.tacc.utexas.edu/resources/software/gotoblasfaq.php
