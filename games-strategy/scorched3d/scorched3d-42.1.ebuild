@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-42.1.ebuild,v 1.1 2009/03/03 17:59:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-42.1.ebuild,v 1.2 2009/08/18 00:35:54 mr_bones_ Exp $
 
 EAPI=2
+WX_GTK_VER=2.8
 inherit autotools eutils wxwidgets games
 
 DESCRIPTION="Multi-player tank battle in 3D (OpenGL)"
