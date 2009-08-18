@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt-webkit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.45 2009/08/17 20:12:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-webkit/ChangeLog,v 1.46 2009/08/18 08:09:06 fauli Exp $
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  qt-webkit-4.4.2-r2.ebuild, qt-webkit-4.5.1-r1.ebuild:
+  stable x86, security bug 281821
 
 *qt-webkit-4.5.2-r1 (17 Aug 2009)
 *qt-webkit-4.5.1-r1 (17 Aug 2009)
