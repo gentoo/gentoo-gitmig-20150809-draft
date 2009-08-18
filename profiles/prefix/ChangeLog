@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.60 2009/08/18 19:19:50 grobian Exp $
+# $Id: ChangeLog,v 1.61 2009/08/18 21:16:23 darkside Exp $
+
+  18 Aug 2009; Jeremy Olexa <darkside@gentoo.org> package.mask:
+  p.mask =app-admin/eselect-1.1.3 in favor of 1.2 coming soon
 
   18 Aug 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/package.use.mask:
