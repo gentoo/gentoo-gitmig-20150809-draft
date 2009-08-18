@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.7.ebuild,v 1.2 2009/08/01 17:56:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.1 2009/08/18 09:32:40 scarabeus Exp $
 
 EAPI="2"
 
@@ -59,10 +59,10 @@ _check_kernel_config() {
 		die "CONFIG_PREEMT_RCU enabled"
 	fi
 
-	if kernel_is ge 2 6 29; then
-		ewarn "Kernels newer then 2.6.28 are heavily patched and might result in runtime failitures."
-		ewarn "Consider them as unsupported by us."
-		ewarn "All bug reports are needed to be tested with 2.6.28 kernel"
+	# kernel hook checking up latest allowed version
+	if kernel_is ge 2 6 31; then
+		eerror "Kernels newer then 2.6.30 are not supported by this driver"
+		die "Downgrade your kernel"
 	fi
 
 	if ! linux_chkconfig_present MTRR; then
