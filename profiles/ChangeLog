@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3136 2009/08/18 13:03:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3137 2009/08/18 18:16:32 bicatali Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
+  Masked dev-python/basemap-data for removal
 
   18 Aug 2009; Rémi Cardona <remi@gentoo.org> package.mask,
   +releases/2008.0/package.mask:

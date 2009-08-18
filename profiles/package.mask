@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10336 2009/08/18 16:16:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10337 2009/08/18 18:16:32 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastien Fabbro <bicatali@gentoo.org> (18 Aug 2009)
+# Masked for removal in 30 days. Portage versions of dev-python/basemap
+# already include it.
+dev-python/basemap-data
 
 # Alex Legler <a3li@gentoo.org> (18 Aug 2009)
 # Dead upstream, doesn't install correctly with more than one ruby version.
