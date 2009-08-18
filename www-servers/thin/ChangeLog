@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/thin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.4 2009/06/18 14:03:48 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/thin/ChangeLog,v 1.5 2009/08/18 11:05:28 a3li Exp $
+
+  18 Aug 2009; Alex Legler <a3li@gentoo.org> -thin-0.8.1.ebuild:
+  Removing old version to get rid of USE_RUBY="any"
 
 *thin-1.2.2 (18 Jun 2009)
 
