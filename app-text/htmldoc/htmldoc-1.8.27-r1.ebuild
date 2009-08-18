@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r1.ebuild,v 1.2 2009/08/17 17:41:12 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.27-r1.ebuild,v 1.3 2009/08/18 14:52:53 mr_bones_ Exp $
 
 inherit eutils
 
 DESCRIPTION="Convert HTML pages into a PDF document"
-SRC_URI="mirror:///easysw/htmldoc/${PV}/${P}-source.tar.bz2"
+SRC_URI="mirror://easysw/htmldoc/${PV}/${P}-source.tar.bz2"
 HOMEPAGE="http://www.easysw.com/htmldoc/"
 
 IUSE="fltk ssl"
