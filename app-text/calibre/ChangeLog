@@ -1,6 +1,11 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.43 2009/08/17 23:49:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.44 2009/08/18 00:01:45 zmedico Exp $
+
+*calibre-0.6.7 (17 Aug 2009)
+
+  17 Aug 2009; Zac Medico <zmedico@gentoo.org> +calibre-0.6.7.ebuild:
+  0.6.7 version bump.
 
   17 Aug 2009; Zac Medico <zmedico@gentoo.org> calibre-0.6.6.ebuild:
   Bug #281200 - Update cssutils dependency.
