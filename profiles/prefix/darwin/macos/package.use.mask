@@ -1,7 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.1 2009/06/06 03:54:46 solar Exp $
-# $Id: package.use.mask,v 1.1 2009/06/06 03:54:46 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/package.use.mask,v 1.2 2009/08/18 19:19:51 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (18 Aug 2009)
+# This is a Framework build in progress, that currently doesn't play
+# nice with a traditional UNIX build (think of detection of site-packages)
+dev-lang/python aqua
 
 # Jeremy Olexa <darkside@gentoo.org> (12 Feb 2009)
 # Doesn't work with python support, bug 257572
