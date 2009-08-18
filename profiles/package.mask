@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10333 2009/08/16 20:31:57 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10334 2009/08/18 11:39:54 a3li Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alex Legler <a3li@gentoo.org> (18 Aug 2009)
+# Dead upstream, doesn't install correctly with more than one ruby version.
+# Due for removal in 30 days. Bug 281897.
+www-apps/diaria
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Aug 2009)
 # Unresolved building issues wrt bugs #276246, #117523 and #213804.

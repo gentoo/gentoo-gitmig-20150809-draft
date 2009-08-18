@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3134 2009/08/17 18:54:24 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3135 2009/08/18 11:39:54 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Aug 2009; Alex Legler <a3li@gentoo.org> package.mask:
+  Masing www-apps/diaria for last rites. Bug 281897.
 
   17 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
   +default/linux/alpha/10.0/eapi, +default/linux/amd64/10.0/eapi,
