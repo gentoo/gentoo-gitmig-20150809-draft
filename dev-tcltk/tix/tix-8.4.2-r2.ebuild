@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.2-r2.ebuild,v 1.1 2009/04/17 20:22:49 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.4.2-r2.ebuild,v 1.2 2009/08/18 07:24:21 fauli Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/tix/${MY_P}-src.tar.gz"
 IUSE=""
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc x86"
 
 RESTRICT="test"
 
