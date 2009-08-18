@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.98.8.ebuild,v 1.14 2008/05/21 15:56:32 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.98.8.ebuild,v 1.15 2009/08/18 06:19:09 fauli Exp $
 
 DESCRIPTION="a database frontend for postgresql"
-HOMEPAGE="http://www.pgaccess.org/"
+HOMEPAGE="http://sourceforge.net/projects/pgaccess/"
 SRC_URI="http://www.pgaccess.org/download/${P}.tar.gz"
 LICENSE="POSTGRESQL"
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgaccess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.16 2009/08/09 03:06:31 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.17 2009/08/18 06:19:09 fauli Exp $
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  pgaccess-0.98.8.ebuild, pgaccess-0.99.0.20040219.ebuild,
+  pgaccess-0.99.0.20040219-r1.ebuild:
+  correct HOMEPAGE for bug 280745 and quote variables
 
 *pgaccess-0.99.0.20040219-r1 (09 Aug 2009)
 

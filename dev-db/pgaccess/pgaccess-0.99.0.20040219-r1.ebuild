@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219-r1.ebuild,v 1.1 2009/08/09 03:06:31 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219-r1.ebuild,v 1.2 2009/08/18 06:19:09 fauli Exp $
 
 inherit eutils
 
 MY_P=${P//./_}
 
 DESCRIPTION="a database frontend for postgresql"
-HOMEPAGE="http://www.pgaccess.org/"
+HOMEPAGE="http://sourceforge.net/projects/pgaccess/"
 SRC_URI="mirror://sourceforge/pgaccess/${MY_P}.tgz"
 LICENSE="POSTGRESQL"
 
@@ -25,19 +25,18 @@ RDEPEND=">=dev-lang/tcl-8.3.4
 	dev-tcltk/tcllib"
 
 src_compile() {
-	cd ${S}
-	epatch ${FILESDIR}/${P}.patch
-	epatch ${FILESDIR}/${P}-tcl8.5.patch
+	epatch "${FILESDIR}"/${P}.patch
+	epatch "${FILESDIR}"/${P}-tcl8.5.patch
 }
 
 src_install() {
-	make prefix=${D} install || die
-	rm -rf ${D}/usr/lib/pgaccess/win32 \
-		${D}/usr/lib/pgaccess/Makefile
-	rm -rf ${D}/usr/lib/pgaccess/osx
+	make prefix="${D}" install || die
+	rm -rf "${D}"/usr/lib/pgaccess/win32 \
+		"${D}"/usr/lib/pgaccess/Makefile
+	rm -rf "${D}"/usr/lib/pgaccess/osx
 	dodir /usr/share/doc/${PF}
-	mv ${D}/usr/lib/pgaccess/{README,changelog,copyright,demo,doc/html,todo} ${D}/usr/share/doc/${PF}
-	rmdir ${D}/usr/lib/pgaccess/doc
+	mv "${D}"/usr/lib/pgaccess/{README,changelog,copyright,demo,doc/html,todo} "${D}"/usr/share/doc/${PF}
+	rmdir "${D}"/usr/lib/pgaccess/doc
 }
 
 pkg_postinst() {
