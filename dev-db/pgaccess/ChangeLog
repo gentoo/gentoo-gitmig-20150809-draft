@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgaccess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.19 2009/08/18 06:33:01 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.20 2009/08/18 06:53:47 fauli Exp $
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  pgaccess-0.99.0.20040219-r2.ebuild:
+  fix installation, introduce the missing whitespace
 
 *pgaccess-0.99.0.20040219-r2 (18 Aug 2009)
 
