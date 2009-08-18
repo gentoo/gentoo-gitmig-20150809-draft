@@ -6,3 +6,4 @@ move sci-misc/gri sci-visualization/gri
 move x11-plugins/noscript www-plugins/noscript
 move dev-perl/parent perl-core/parent
 move dev-perl/Parse-CPAN-Meta perl-core/Parse-CPAN-Meta
+move net-libs/xyssl net-libs/polarssl
