@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.11-r1.ebuild,v 1.1 2009/08/18 12:50:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/gatling/gatling-0.11-r1.ebuild,v 1.2 2009/08/18 15:39:56 mr_bones_ Exp $
 
 inherit eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 
 src_compile() {
 	# FIX ME
-	#if use ssl; then 
+	#if use ssl; then
 	#	emake tlsgatling || die "emake tlsgatling failed"
 	#fi
 	emake gatling || die "emake gatling failed"
