@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.11.1.ebuild,v 1.1 2009/05/10 15:23:15 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcllib/tcllib-1.11.1.ebuild,v 1.2 2009/08/18 07:07:04 fauli Exp $
 
 DESCRIPTION="Tcl Standard Library."
 HOMEPAGE="http://www.tcl.tk/software/tcllib/"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/tcllib/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 IUSE="examples"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc x86 ~x86-fbsd"
 
 DEPEND=">=dev-lang/tcl-8.4"
 
