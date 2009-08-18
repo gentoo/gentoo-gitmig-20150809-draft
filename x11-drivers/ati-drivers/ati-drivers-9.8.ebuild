@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.2 2009/08/18 09:37:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.3 2009/08/18 10:45:59 scarabeus Exp $
 
 EAPI="2"
 
@@ -154,7 +154,7 @@ src_prepare() {
 	# All kernel options for prepare are ment to be in here
 	if use modules; then
 		# version patches
-		epatch "${FILESDIR}"/kernel/${PV}-*.patch
+		# epatch "${FILESDIR}"/kernel/${PV}-*.patch
 		if use debug; then
 			sed -i '/^#define DRM_DEBUG_CODE/s/0/1/' \
 				"${MODULE_DIR}/firegl_public.c" \
