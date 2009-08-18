@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/halibut
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.6 2007/03/12 20:42:46 leonardop Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/halibut/ChangeLog,v 1.7 2009/08/18 09:52:37 vapier Exp $
+
+*halibut-1.0 (18 Aug 2009)
+
+  18 Aug 2009; Mike Frysinger <vapier@gentoo.org> +halibut-1.0.ebuild:
+  Version bump.
 
   12 Mar 2007; Leonardo Boshell <leonardop@gentoo.org> metadata.xml:
   Re-assigning to the sgml herd, after text-markup split.
