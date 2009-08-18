@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.102 2009/08/18 08:33:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.103 2009/08/18 16:34:37 jer Exp $
+
+  18 Aug 2009; Jeroen Roovers <jer@gentoo.org> wget-1.11.3.ebuild:
+  Stable for HPPA (bug #281876).
 
   18 Aug 2009; Mike Frysinger <vapier@gentoo.org> wget-1.11.1.ebuild,
   wget-1.11.3.ebuild, wget-1.11.4.ebuild:
