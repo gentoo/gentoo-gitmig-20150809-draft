@@ -1,0 +1,13 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/2008.0/package.mask,v 1.1 2009/08/18 13:03:54 remi Exp $
+
+# Rémi Cardona <remi@gentoo.org> (18 Aug 2009)
+# All the following packages should be unmasked at the same time
+# see bug #174434 for xcb-related issues (not all are blocker)
+>=x11-libs/libXext-1.0.5
+>=x11-libs/libX11-1.2
+>=x11-libs/libxcb-1.2
+>=x11-proto/xcb-proto-1.4
+>=x11-proto/xproto-7.0.15
+>=x11-proto/xextproto-7.0.5

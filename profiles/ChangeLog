@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3135 2009/08/18 11:39:54 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3136 2009/08/18 13:03:53 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Aug 2009; Rémi Cardona <remi@gentoo.org> package.mask,
+  +releases/2008.0/package.mask:
+  move the libxcb 1.2 mask entries to the 2008.0 profiles, all other
+  profiles will get the new xcb and libX11
 
   18 Aug 2009; Alex Legler <a3li@gentoo.org> package.mask:
   Masing www-apps/diaria for last rites. Bug 281897.
