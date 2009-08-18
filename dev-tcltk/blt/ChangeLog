@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/blt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.27 2009/08/08 02:46:44 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/ChangeLog,v 1.28 2009/08/18 07:11:19 fauli Exp $
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org> blt-2.4z-r5.ebuild:
+  stable x86, bug 281404
 
   08 Aug 2009; Federico Ferri <mescalinum@gentoo.org> -blt-2.4z-r2.ebuild,
   -blt-2.4z-r4.ebuild:
