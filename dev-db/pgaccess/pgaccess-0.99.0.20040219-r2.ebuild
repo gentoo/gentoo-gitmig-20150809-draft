@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219-r1.ebuild,v 1.2 2009/08/18 06:19:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219-r2.ebuild,v 1.1 2009/08/18 06:33:01 fauli Exp $
 
 inherit eutils
 
@@ -30,12 +30,12 @@ src_compile() {
 }
 
 src_install() {
-	make prefix="${D}" install || die
+	make prefix="${D}" bindir="${D}"/usr/bininstall || die
 	rm -rf "${D}"/usr/lib/pgaccess/win32 \
 		"${D}"/usr/lib/pgaccess/Makefile
 	rm -rf "${D}"/usr/lib/pgaccess/osx
 	dodir /usr/share/doc/${PF}
-	mv "${D}"/usr/lib/pgaccess/{README,changelog,copyright,demo,doc/html,todo} "${D}"/usr/share/doc/${PF}
+	mv "${D}"/usr/lib/pgaccess/{README,changelog,demo,doc/html,todo} "${D}"/usr/share/doc/${PF}
 	rmdir "${D}"/usr/lib/pgaccess/doc
 }
 

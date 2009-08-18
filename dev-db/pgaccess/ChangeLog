@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/pgaccess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.18 2009/08/18 06:21:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.19 2009/08/18 06:33:01 fauli Exp $
+
+*pgaccess-0.99.0.20040219-r2 (18 Aug 2009)
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  -pgaccess-0.99.0.20040219-r1.ebuild, +pgaccess-0.99.0.20040219-r2.ebuild:
+  install binary in correct location, see bug 246659, and don't install
+  copyright file
 
   18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   -pgaccess-0.98.8.ebuild, -files/pgaccess-0.98.8.patch:
