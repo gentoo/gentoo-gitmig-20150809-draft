@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.270 2009/08/14 02:27:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.271 2009/08/18 08:17:29 vapier Exp $
+
+  18 Aug 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.27.ebuild:
+  Fix gecko version #281438 by netfab.
 
 *wine-1.1.27 (14 Aug 2009)
 
