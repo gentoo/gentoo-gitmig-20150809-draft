@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9.ebuild,v 1.10 2009/08/17 15:25:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/redland-1.0.9-r1.ebuild,v 1.1 2009/08/18 14:20:46 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils libtool
@@ -30,7 +30,8 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-ldflags.patch \
-		"${FILESDIR}"/${P}-sqlite.patch
+		"${FILESDIR}"/${P}-sqlite.patch \
+		"${FILESDIR}"/${P}-librdf_storage_register_factory.patch
 	eautoreconf
 }
 
