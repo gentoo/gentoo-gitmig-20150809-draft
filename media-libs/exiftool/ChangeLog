@@ -1,6 +1,17 @@
 # ChangeLog for media-libs/exiftool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.56 2009/07/09 09:09:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exiftool/ChangeLog,v 1.57 2009/08/18 18:14:46 graaff Exp $
+
+*exiftool-7.89 (18 Aug 2009)
+
+  18 Aug 2009; Hans de Graaff <graaff@gentoo.org> +exiftool-7.89.ebuild:
+  Version bump to fix possible corruption with NRW images. Remove broken
+  version.
+
+*exiftool-7.88 (18 Aug 2009)
+
+  18 Aug 2009; Hans de Graaff <graaff@gentoo.org> +exiftool-7.88.ebuild:
+  Version bump to the next upstream production release.
 
 *exiftool-7.82-r1 (09 Jul 2009)
 
