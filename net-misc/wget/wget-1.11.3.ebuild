@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.11.3.ebuild,v 1.3 2008/12/07 05:59:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.11.3.ebuild,v 1.4 2009/08/18 08:33:57 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,10 +11,9 @@ SRC_URI="mirror://gnu/wget/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
-IUSE="debug ipv6 nls socks5 ssl static"
+IUSE="debug ipv6 nls ssl static"
 
-RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
-	socks5? ( net-proxy/dante )"
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -34,7 +33,6 @@ src_compile() {
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_enable debug) \
-		$(use_with socks5 socks) \
 		|| die
 	emake || die
 }
