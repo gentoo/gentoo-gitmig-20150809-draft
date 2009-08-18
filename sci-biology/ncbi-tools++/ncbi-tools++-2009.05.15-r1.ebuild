@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15.ebuild,v 1.4 2009/08/10 14:02:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r1.ebuild,v 1.1 2009/08/18 19:08:02 weaver Exp $
 
 EAPI="2"
 
@@ -18,8 +18,7 @@ LICENSE="public-domain"
 SLOT="0"
 #IUSE="X unicode opengl gnutls test"
 IUSE="sqlite"
-# relocation R_X86_64_32S errors on AMD64
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="~amd64 ~x86"
 
 # wxGTK: must run eselect wxwindows after installing wxgtk or build will fail. Check and abort here.
 # dev-libs/xalan-c - problems detecting, api mismatch?
@@ -49,11 +48,19 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	sed -i -e 's/-print-file-name=libstdc++.a//' src/build-system/configure
 }
 
 src_configure() {
 	# econf fails
-	"${S}"/configure --without-debug --with-bin-release --prefix="${D}"/usr \
+	# --with-bin-release and --without-ftds are workarounds for build system bugs
+	# NB: build system supports ICC
+	"${S}"/configure --without-debug \
+		--with-bin-release \
+		--without-static \
+		--with-dll \
+		--without-ftds \
+		--prefix="${D}"/usr \
 		--libdir="${D}"/usr/$(get_libdir) \
 		--with-z="/usr" \
 		--with-bz2="/usr" \

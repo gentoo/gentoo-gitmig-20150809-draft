@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/ncbi-tools++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.4 2009/08/10 14:02:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ChangeLog,v 1.5 2009/08/18 19:08:02 weaver Exp $
+
+*ncbi-tools++-2009.05.15-r1 (18 Aug 2009)
+
+  18 Aug 2009; Andrey Kislyuk <weaver@gentoo.org>
+  -ncbi-tools++-2009.05.15.ebuild, +ncbi-tools++-2009.05.15-r1.ebuild:
+  Remove static linking and fix fPIC issues, re-keyword amd64
 
   10 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   ncbi-tools++-2009.05.15.ebuild,
