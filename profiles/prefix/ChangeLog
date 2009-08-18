@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.57 2009/08/17 09:46:54 grobian Exp $
+# $Id: ChangeLog,v 1.58 2009/08/18 14:48:09 darkside Exp $
+
+  18 Aug 2009; Jeremy Olexa <darkside@gentoo.org> aix/use.mask,
+  bsd/use.mask, hpux/use.mask, irix/use.mask, linux/amd64/make.defaults,
+  linux/x86/make.defaults, mint/use.mask, sunos/use.mask,
+  windows/winnt/use.mask:
+  be more strict in profile syntax, bug 281838
 
   17 Aug 2009; Fabian Groffen <grobian@gentoo.org> +darwin/macos/10.6/eapi,
   +darwin/macos/10.6/make.defaults, +darwin/macos/10.6/package.mask,

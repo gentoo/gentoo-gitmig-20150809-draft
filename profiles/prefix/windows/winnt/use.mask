@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/use.mask,v 1.2 2009/06/24 11:45:06 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/use.mask,v 1.3 2009/08/18 14:48:15 darkside Exp $
 
 # Re-add Interix libc
 -elibc_Winnt
@@ -26,7 +26,8 @@ divx4linux
 djbfft
 dri
 dvdr
-emacs # missing implementation for unexec()
+# emacs USE flag is masked because of missing implementation for unexec()
+emacs
 emul-linux-x86
 fbcon
 fdftk
@@ -50,7 +51,8 @@ matrox
 ncurses
 netboot
 old-linux
-on-the-fly-crypt  # requires device-mapper
+# the following USE flag requires device-mapper
+on-the-fly-crypt
 opengl
 oss
 pcmcia
@@ -61,7 +63,8 @@ scanner
 smartcard
 svga
 uclibc
-unicode #  totally b0rked on interix
+# unicode is totally b0rked on interix
+unicode
 usb
 voodoo3
 pvm
@@ -76,11 +79,13 @@ flac
 jack
 joystick
 ladspa
-openmp # not working yet on interix
+# opennmp is not working yet on interix
+openmp
 portaudio
 pulseaudio
 qt3
 qt4
 readline
-tiff # libtiff only static, so avoid this!
+# libtiff only static, so avoid the tiff USE flag!
+tiff
 timidity
