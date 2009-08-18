@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60.ebuild,v 1.8 2009/07/23 08:20:03 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/putty/putty-0.60.ebuild,v 1.9 2009/08/18 15:22:47 vostorga Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -28,28 +28,34 @@ src_compile() {
 	use gtk  && append-flags '`gtk-config --cflags`'
 
 	emake -f Makefile.gtk ${ptargets:-all} CC="$(tc-getCC)" \
-		CFLAGS="${CFLAGS}"
+		CFLAGS="${CFLAGS}" || die "emake failed"
 }
 
 src_install() {
 	cd "${S}"/doc
-	use gtk && doman pterm.1 putty.1 puttytel.1
-	use doc && dohtml *.html
-	dodoc puttydoc.txt
-	doman puttygen.1 plink.1
+	if use gtk; then
+		doman pterm.1 putty.1 puttytel.1 || die "doman failed"
+	fi
+	if use doc; then
+		 dohtml *.html || die "dohtml failed"
+	fi
+	dodoc puttydoc.txt || die "dodoc failed"
+	doman puttygen.1 plink.1 || die "doman failed"
 
 	cd "${S}"/unix
-	use gtk && dobin pterm putty puttytel
-	dobin puttygen plink pscp psftp
+	if use gtk; then
+		dobin pterm putty puttytel || die "dobin failed"
+	fi
+	dobin puttygen plink pscp psftp || die "dobin failed"
 
 	cd "${S}"
 	dodoc README CHECKLST.txt LATEST.VER
 
 	# install desktop file provided by Gustav Schaffter in #49577
-	use gtk && {
+	if use gtk; then
 		doicon "${FILESDIR}"/${PN}.xpm
 		make_desktop_entry "putty" "PuTTY" putty "Network"
-	}
+	fi
 
 	if test ! -c /dev/ptmx; then
 		ewarn
