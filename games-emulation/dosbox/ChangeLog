@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/dosbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.46 2009/08/09 14:19:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/ChangeLog,v 1.47 2009/08/18 22:21:59 fauli Exp $
+
+  18 Aug 2009; Christian Faulhammer <fauli@gentoo.org> dosbox-0.73.ebuild:
+  stable x86, bug 279864
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> dosbox-0.73.ebuild:
   ppc stable #279864
