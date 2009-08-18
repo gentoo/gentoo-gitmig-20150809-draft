@@ -1,0 +1,11 @@
+# ChangeLog for games-puzzle/sgt-puzzles
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.1 2009/08/18 09:52:35 vapier Exp $
+
+*sgt-puzzles-99999999 (18 Aug 2009)
+*sgt-puzzles-8605 (18 Aug 2009)
+
+  18 Aug 2009; Mike Frysinger <vapier@gentoo.org> +sgt-puzzles-8605.ebuild,
+  +sgt-puzzles-99999999.ebuild, +metadata.xml:
+  Initial package by Denilson and Eugene Kapun and lumato and me #114102.
+
