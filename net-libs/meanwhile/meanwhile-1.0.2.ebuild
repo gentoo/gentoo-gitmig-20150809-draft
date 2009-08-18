@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-1.0.2.ebuild,v 1.15 2007/07/13 07:18:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/meanwhile-1.0.2.ebuild,v 1.16 2009/08/18 20:55:51 vostorga Exp $
+
+inherit eutils
 
 DESCRIPTION="Meanwhile (Sametime protocol) library"
 HOMEPAGE="http://meanwhile.sourceforge.net/"
@@ -17,6 +19,15 @@ DEPEND="${RDEPEND}
 	dev-libs/gmp
 	dev-util/pkgconfig
 	doc? ( app-doc/doxygen )"
+
+src_unpack(){
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-presence.patch" #239144
+
+	#241298
+	sed -i -e "/sampledir/ s:-doc::" samples/Makefile.in
+}
 
 src_compile() {
 	local myconf
