@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rubymail
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.37 2009/04/29 12:19:02 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubymail/ChangeLog,v 1.38 2009/08/18 11:55:38 a3li Exp $
+
+  18 Aug 2009; Alex Legler <a3li@gentoo.org> -rubymail-0.17.ebuild:
+  Removing old version.
 
   29 Apr 2009; Jeroen Roovers <jer@gentoo.org> rubymail-1.0.0.ebuild:
   Stable for HPPA (bug #266138).
