@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.9.1.ebuild,v 1.10 2009/08/01 12:18:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.9.1.ebuild,v 1.11 2009/08/18 16:47:06 bicatali Exp $
 
 NEED_PYTHON=2.4
 
@@ -34,13 +34,20 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${P}-globalpath.patch
-
 	sed -i \
-		-e '/examfiles)/d' \
-		-e '/manfiles)/d' \
-		-e '/manstatic)/d' \
-		-e 's/^docfiles.*/docfiles=""/' \
-		setup.py || die "sed failed"
+		-e "s:share/doc/ipython:share/doc/${PF}:" \
+		setupbase.py || die "sed failed"
+	if ! use doc; then
+		sed -i \
+			-e '/extensions/d' \
+			-e 's/+ manual_files//' \
+			setupbase.py || die "sed failed"
+	fi
+	if ! use examples; then
+		sed -i \
+			-e 's/+ example_files//' \
+			setupbase.py || die "sed failed"
+	fi
 }
 
 src_compile() {
@@ -68,20 +75,8 @@ src_install() {
 	DOCS="docs/source/changes.txt"
 	distutils_src_install
 
-	cd docs
-	insinto "/usr/share/doc/${PF}"
-
-	if use doc; then
-		doins -r dist/* || die "doc install failed"
-		doins "${S}"/IPython/Extensions/igrid_help* || die
-	fi
-
-	if use examples ; then
-		doins -r examples || die "examples install failed"
-	fi
-
 	if use emacs ; then
-		pushd emacs
+		pushd docs/emacs
 		elisp-install ${PN} ${PN}.el* || die "elisp-install failed"
 		elisp-site-file-install "${FILESDIR}/${SITEFILE}"
 		popd
