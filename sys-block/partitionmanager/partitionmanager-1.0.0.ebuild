@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.0_beta3.ebuild,v 1.1 2009/07/29 17:00:54 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/partitionmanager/partitionmanager-1.0.0.ebuild,v 1.1 2009/08/18 08:18:30 scarabeus Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="bg ca cs da de el en_GB es et fr ga gl hu ja lt lv nb nds nl nn pa
-pl pt pt_BR ro ru sk sv tr uk zh_CN zh_TW"
+KDE_LINGUAS="bg ca da de el en_GB es et fr gl ja lt nb nds nl nn pa pl pt
+pt_BR ro ru sv tr uk zh_CN zh_TW"
 
 KMNAME="extragear/sysadmin"
 inherit kde4-base
