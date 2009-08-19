@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.28 2009/08/16 22:06:26 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.29 2009/08/19 21:19:47 ulm Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -51,6 +51,7 @@ mzscheme
 netbeans
 pike
 timidity
+valgrind
 
 # Stuff that doesn't compile on alpha
 clisp

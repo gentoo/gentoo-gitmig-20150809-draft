@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3139 2009/08/19 18:04:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3140 2009/08/19 21:19:46 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Aug 2009; Ulrich Mueller <ulm@gentoo.org> arch/alpha/use.mask,
+  arch/sparc-fbsd/use.mask, arch/sparc/package.use.mask,
+  arch/sparc/use.mask, arch/x86-fbsd/package.use.mask,
+  arch/x86-fbsd/use.mask, default-bsd/fbsd/6.2/sparc/use.mask,
+  default-bsd/fbsd/6.2/x86/package.use.mask,
+  default-bsd/fbsd/6.2/x86/use.mask, default-linux/alpha/use.mask,
+  default-linux/sparc/package.use.mask, default-linux/sparc/use.mask:
+  Add valgrind to use.mask, and remove from package.use.mask where
+  appropriate. Bug 281922.
 
   19 Aug 2009; Ulrich Mueller <ulm@gentoo.org> package.mask,
   prefix/package.mask:

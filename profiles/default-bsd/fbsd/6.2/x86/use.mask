@@ -1,6 +1,6 @@
 # Copyright 2004-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/x86/use.mask,v 1.7 2009/06/27 12:06:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/x86/use.mask,v 1.8 2009/08/19 21:19:48 ulm Exp $
 
 -3dnow
 -3dnowext
@@ -29,3 +29,6 @@ java6
 
 # Mask policykit support until it is keyworded
 policykit
+
+# valgrind hasn't been ported to fbsd yet
+valgrind

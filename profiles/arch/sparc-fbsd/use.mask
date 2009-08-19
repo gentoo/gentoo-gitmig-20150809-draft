@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.1 2009/05/16 09:17:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.2 2009/08/19 21:19:47 ulm Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc-fbsd
@@ -10,6 +10,9 @@ acpi
 # guile fails to build on sparc
 # Even with the patch from FreeBSD Ports it core dumps :/
 guile
+
+# valgrind hasn't been ported to sparc-fbsd yet
+valgrind
 
 # These should work one day
 cairo

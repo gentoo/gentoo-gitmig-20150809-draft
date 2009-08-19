@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.106 2009/08/16 22:07:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.107 2009/08/19 21:19:48 ulm Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -47,6 +47,7 @@ mzscheme
 netbeans
 pike
 timidity
+valgrind
 
 # Stuff that doesn't compile on alpha
 clisp
