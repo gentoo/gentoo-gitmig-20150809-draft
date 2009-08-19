@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.16 2009/07/04 18:37:40 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.17 2009/08/19 16:48:23 jer Exp $
+
+  19 Aug 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Stable for HPPA (bug #268359).
 
   04 Jul 2009; Brent Baude <ranger@gentoo.org> gdl-python-2.19.1-r1.ebuild:
   Marking gdl-python-2.19.1-r1 ppc64 for bug 268359
