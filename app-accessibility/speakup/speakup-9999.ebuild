@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.1 2009/07/15 18:06:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/speakup-9999.ebuild,v 1.2 2009/08/19 22:40:45 williamh Exp $
 
 EAPI="2"
 
@@ -58,6 +58,7 @@ src_install() {
 	dobin tools/speakupconf
 	dosbin tools/talkwith
 	dodoc Bugs.txt README To-Do doc/DefaultKeyAssignments doc/spkguide.txt
+	doman man/*
 	newdoc tools/README README.tools
 }
 
