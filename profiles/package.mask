@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10339 2009/08/19 15:46:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10340 2009/08/19 18:04:06 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ulrich Mueller <ulm@gentoo.org> (19 Aug 2009)
+# Release candidate for eselect-1.2, masked for testing.
+=app-admin/eselect-1.2_rc*
 
 # Sebastien Fabbro <bicatali@gentoo.org> (18 Aug 2009)
 # Masked for removal in 30 days. Portage versions of dev-python/basemap

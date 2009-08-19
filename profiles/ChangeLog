@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3138 2009/08/19 15:46:29 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3139 2009/08/19 18:04:06 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Aug 2009; Ulrich Mueller <ulm@gentoo.org> package.mask,
+  prefix/package.mask:
+  Mask app-admin/eselect-1.2_rc* for testing, and unmask it in prefix.
 
   19 Aug 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask,
   releases/2008.0/package.mask:
