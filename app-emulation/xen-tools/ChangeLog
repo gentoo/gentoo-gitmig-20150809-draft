@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.50 2009/08/17 15:59:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.51 2009/08/19 15:06:58 patrick Exp $
+
+  19 Aug 2009; Patrick Lauer <patrick@gentoo.org> xen-tools-3.4.1.ebuild:
+  Changing python dep (use=ssl) for #279917
 
 *xen-tools-3.4.1 (17 Aug 2009)
 

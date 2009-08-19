@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1.ebuild,v 1.1 2009/08/17 15:59:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1.ebuild,v 1.2 2009/08/19 15:06:58 patrick Exp $
 
 EAPI="2"
 
@@ -29,7 +29,7 @@ CDEPEND="dev-lang/python[ncurses,threads]
 DEPEND="${CDEPEND}
 	sys-devel/gcc
 	dev-lang/perl
-	dev-lang/python
+	dev-lang/python[ssl]
 	app-misc/pax-utils
 	doc? (
 		app-doc/doxygen
