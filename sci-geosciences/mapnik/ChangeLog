@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/mapnik
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.9 2009/06/17 07:05:44 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/ChangeLog,v 1.10 2009/08/19 02:59:58 nerdboy Exp $
+
+  19 Aug 2009; Steve Arnold <nerdboy@gentoo.org> mapnik-0.5.1.ebuild,
+  mapnik-0.6.0.ebuild:
+  Updated postgres deps to explicitly exclude libpq (which will not work).
+  The virtual is currently not an option, and none of the new postgresql
+  packages have been stablized yet, so this is the only way mapnik (and a
+  few other packages) can go stable.
 
   17 Jun 2009; Alfredo Tupone <tupone@gentoo.org> mapnik-0.6.0.ebuild:
   Selecting boost version that has python IUSE. Bug #274358 by Arjen Robbemond
