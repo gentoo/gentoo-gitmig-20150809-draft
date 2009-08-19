@@ -1,6 +1,14 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.43 2009/06/08 18:41:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.44 2009/08/19 22:17:52 fauli Exp $
+
+*qemacs-0.4.0_pre20080605-r1 (19 Aug 2009)
+
+  19 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  +qemacs-0.4.0_pre20080605-r1.ebuild,
+  +files/qemacs-0.4.0_pre20080605-Makefile.patch:
+  now that app-editors/qe is gone we can live with a simple block and clean
+  up patches
 
   08 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   -qemacs-0.3.2_pre20070226.ebuild,
