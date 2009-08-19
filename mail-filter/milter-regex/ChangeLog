@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/milter-regex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.5 2009/08/15 12:41:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.6 2009/08/19 20:32:46 mrness Exp $
+
+*milter-regex-1.7-r1 (19 Aug 2009)
+
+  19 Aug 2009; Alin Năstac <mrness@gentoo.org> files/milter-regex-init,
+  -milter-regex-1.7.ebuild, +milter-regex-1.7-r1.ebuild:
+  Remove stale socket file on startup (#281197).
 
   15 Aug 2009; Alin Năstac <mrness@gentoo.org> milter-regex-1.7.ebuild:
   Set /var/lib/milter as home directory for milter user (#280571).

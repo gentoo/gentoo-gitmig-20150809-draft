@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/files/milter-regex-init,v 1.1 2008/02/18 10:34:54 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/files/milter-regex-init,v 1.2 2009/08/19 20:32:46 mrness Exp $
 
 depend() {
 	use dns logger net
@@ -22,6 +22,11 @@ check_cfg() {
 start() {
 	check_cfg || return 1
 
+	# Remove stalled Unix socket if no other process is using it
+	if [ -S "${SOCKET}" ] && ! fuser -s "${SOCKET}"; then
+		rm "${SOCKET}"
+	fi
+	
 	ebegin "Starting milter-regex"
 	start-stop-daemon --start --exec /usr/bin/milter-regex -- \
 		-u "${USER}" -p "${SOCKET}" -c "${CONFIG}"
