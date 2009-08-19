@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-gnupg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.19 2009/07/21 16:49:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-gnupg/ChangeLog,v 1.20 2009/08/19 14:01:26 betelgeuse Exp $
+
+  19 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -qca-gnupg-2.0.0_beta2.ebuild:
+  Remove old version.
 
   21 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   qca-gnupg-2.0.0_beta3.ebuild:
@@ -81,6 +85,8 @@
   -qca-gnupg-2.0.0_beta1.ebuild, +qca-gnupg-2.0.0_beta2.ebuild:
   Added qca-gnupg-2.0.0_beta2.ebuild.
 
+*qca-gnupg-2.0.0_beta1 (06 Nov 2007)
+
   06 Nov 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
   +qca-gnupg-2.0.0_beta1.ebuild, -qca-gnupg-0.1_p20070904-r1.ebuild:
   Added qca-gnupg-2.0.0_beta1.ebuild, thanks to Davide Pesavento in Bug 129536.
@@ -89,15 +95,15 @@
   -qca-gnupg-0.1_p20070904.ebuild, qca-gnupg-0.1_p20070904-r1.ebuild:
   Minor changes to the ebuild, thanks to Davide Pesavento. See bug #129536.
   Removed '-r0' ebuild.
+  
+*qca-gnupg-0.1_p20070904-r1 (10 Sep 2007)
 
   10 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
   +qca-gnupg-0.1_p20070904-r1.ebuild:
   Updated to reflect change about the behaviour of debug builds.
   Thanks to Davide Pesavento.
 
-  10 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
-  +qca-gnupg-0.1_p20070904-r1.ebuild:
-  Updated to reflect change about the behaviour of debug builds.
+*qca-gnupg-0.1_p20070904 (07 Sep 2007)
 
   07 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
   +qca-gnupg-0.1_p20070904.ebuild:
