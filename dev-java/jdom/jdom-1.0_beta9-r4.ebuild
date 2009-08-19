@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r4.ebuild,v 1.7 2008/04/08 16:02:18 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-1.0_beta9-r4.ebuild,v 1.8 2009/08/19 08:27:24 elvanor Exp $
 
 JAVA_PKG_IUSE="doc examples source"
 
@@ -37,7 +37,7 @@ src_unpack() {
 		|| die "Unable to remove Jaxen Binding class."
 	rm -rf build/apidocs || die
 
-	cd ${S}/lib
+	cd "${S}/lib"
 	java-pkg_jar-from saxpath,xerces-2
 }
 
