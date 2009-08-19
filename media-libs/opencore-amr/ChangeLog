@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencore-amr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.3 2009/08/04 17:27:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.4 2009/08/19 16:41:38 fauli Exp $
+
+  19 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  opencore-amr-0.1.1.ebuild:
+  add ~x86, bug 280281
 
   04 Aug 2009; Jeroen Roovers <jer@gentoo.org> opencore-amr-0.1.1.ebuild:
   Marked ~hppa (bug #280281).
