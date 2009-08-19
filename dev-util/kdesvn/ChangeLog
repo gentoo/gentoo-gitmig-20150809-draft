@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdesvn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.67 2009/08/12 16:45:46 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdesvn/ChangeLog,v 1.68 2009/08/19 22:08:31 patrick Exp $
+
+*kdesvn-1.4.0 (19 Aug 2009)
+
+  19 Aug 2009; Patrick Lauer <patrick@gentoo.org> +kdesvn-1.4.0.ebuild:
+  Bump to 1.4.0, fixes #281816
 
   12 Aug 2009; Alex Alexander <wired@gentoo.org> kdesvn-1.0.5.ebuild:
   fixed build fail with kde 4 installed
