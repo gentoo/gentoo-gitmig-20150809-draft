@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/qca-cyrus-sasl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-cyrus-sasl/ChangeLog,v 1.8 2009/07/21 16:48:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-cyrus-sasl/ChangeLog,v 1.9 2009/08/19 14:01:51 betelgeuse Exp $
+
+  19 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  qca-cyrus-sasl-2.0.0_beta3.ebuild:
+  Migrated to EAPI 2 in order to get rid of built_with_use.
 
   21 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   qca-cyrus-sasl-2.0.0_beta3.ebuild:
@@ -40,6 +44,8 @@
   -qca-cyrus-sasl-2.0.0_beta1.ebuild, +qca-cyrus-sasl-2.0.0_beta3.ebuild:
   Added qca-cyrus-sasl-2.0.0_beta3.ebuild.
 
+*qca-cyrus-sasl-2.0.0_beta1 (06 Nov 2007)
+
   06 Nov 2007; Ingmar Vanhassel <ingmar.vanhassel@gmail.com>
   -qca-cyrus-sasl-0.1_p20070829-r1.ebuild,
   +qca-cyrus-sasl-2.0.0_beta1.ebuild:
@@ -52,10 +58,14 @@
   Minor changes to the -r1 ebuild, thanks to Davide Pesavento. See bug #129536.
   Removed qca-cyrus-sasl-0.1_p20070829 ebuild.
 
+*qca-cyrus-sasl-0.1_p20070829-r1 (10 Sep 2007)
+
   10 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
   +qca-cyrus-sasl-0.1_p20070829-r1.ebuild:
   Updated to reflect change about the behaviour of debug builds.
   Thanks to Davide Pesavento.
+
+*qca-cyrus-sasl-0.1_p20070829 (07 Sep 2007)
 
   07 Sep 2007; Emanuele A. Bagnaschi <zephyrus@mirach.it>
   +qca-cyrus-sasl-0.1_p20070829.ebuild:
