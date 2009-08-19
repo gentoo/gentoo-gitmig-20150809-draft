@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10337 2009/08/18 18:16:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10338 2009/08/19 01:30:47 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -826,11 +826,6 @@ virtual/perl-Compress-Zlib
 virtual/perl-IO-Compress-Zlib
 virtual/perl-IO-Compress-Bzip2
 virtual/perl-IO-Compress-Base
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (19 Jul 2009)
-# cjkcodecs modules are included in Python >=2.4. Separate dev-python/cjkcodecs package
-# isn't needed anymore and fails tests (bug #277773). Masked for deletion in 30 days.
-dev-python/cjkcodecs
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (13 Jul 2009)
 #  on behalf of QA Team
