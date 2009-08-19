@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.31 2009/07/06 09:26:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.32 2009/08/19 16:47:31 jer Exp $
+
+  19 Aug 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
+  Stable for HPPA (bug #268359).
 
   06 Jul 2009; Alexis Ballier <aballier@gentoo.org> gdl-2.26.2.ebuild:
   keyword ~x86-fbsd thanks to Davide Italiano <dav_it@gentoo.org>, bug
