@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/openmoko-dfu-util
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/ChangeLog,v 1.3 2009/06/20 21:57:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/openmoko-dfu-util/ChangeLog,v 1.4 2009/08/19 07:41:54 vapier Exp $
+
+*openmoko-dfu-util-5484 (19 Aug 2009)
+
+  19 Aug 2009; Mike Frysinger <vapier@gentoo.org>
+  +openmoko-dfu-util-5484.ebuild, openmoko-dfu-util-9999.ebuild:
+  Now that svn has settled, make a snapshot release.
 
   20 Jun 2009; Alin Năstac <mrness@gentoo.org>
   openmoko-dfu-util-9999.ebuild:
