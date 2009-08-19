@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13-r1.ebuild,v 1.1 2009/08/17 11:16:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13-r1.ebuild,v 1.2 2009/08/19 16:30:23 pva Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
 IUSE="crypt dbus debug doc extras jingle spell ssl xscreensaver"
 RESTRICT="test"
 
-LANGS="de es fr it mk pl pt_BR ru sv uk ur_PK zh_TW"
+LANGS="de es fr it mk pl pt_BR ru sv ur_PK zh_TW"
 for LNG in ${LANGS}; do
 	IUSE="${IUSE} linguas_${LNG}"
 	#SRC_URI="${SRC_URI} http://psi-im.org/download/lang/psi_${LNG/ur_PK/ur_pk}.qm"
