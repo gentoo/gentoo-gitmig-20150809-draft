@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.3 2009/07/21 11:17:32 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.4 2009/08/19 15:44:14 darkside Exp $
 
 # Re-add Interix libc
 -elibc_Interix
@@ -13,7 +13,6 @@ alsa
 altivec
 apm
 arts
-aqua
 bluetooth
 cap
 caps

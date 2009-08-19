@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.62 2009/08/19 10:33:03 grobian Exp $
+# $Id: ChangeLog,v 1.63 2009/08/19 15:44:14 darkside Exp $
+
+  19 Aug 2009; Jeremy Olexa <darkside@gentoo.org> windows/interix/use.mask,
+  windows/winnt/use.mask:
+  Remove spurious entires for USE=aqua. Not needed in subdirs when it is
+  inherited from base
 
   19 Aug 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.6/package.mask:
