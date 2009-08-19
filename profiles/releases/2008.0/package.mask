@@ -1,6 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/releases/2008.0/package.mask,v 1.1 2009/08/18 13:03:54 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/releases/2008.0/package.mask,v 1.2 2009/08/19 15:46:30 matsuu Exp $
+
+# MATSUU Takuto <matsuu@gentoo.org> (19 Aug 2009)
+# depends on >=x11-proto/xproto-7.0.15, bug #267365.
+>=x11-libs/xcb-util-0.3.4
+>=x11-wm/awesome-3.3
+
 
 # Rémi Cardona <remi@gentoo.org> (18 Aug 2009)
 # All the following packages should be unmasked at the same time

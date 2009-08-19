@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3137 2009/08/18 18:16:32 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3138 2009/08/19 15:46:29 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Aug 2009; MATSUU Takuto <matsuu@gentoo.org> package.mask,
+  releases/2008.0/package.mask:
+  move >=x11-libs/xcb-util-0.3.4 and >=x11-wm/awesome-3.3 to the 2008.0
+  profiles.
 
   18 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> package.mask:
   Masked dev-python/basemap-data for removal
