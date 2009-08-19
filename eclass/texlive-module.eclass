@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.24 2009/08/14 11:52:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/texlive-module.eclass,v 1.25 2009/08/19 07:43:20 aballier Exp $
 
 # @ECLASS: texlive-module.eclass
 # @MAINTAINER:
@@ -59,7 +59,7 @@ for i in ${TEXLIVE_MODULE_CONTENTS}; do
 	SRC_URI="${SRC_URI} mirror://gentoo/texlive-module-${i}-${PV}.tar.lzma"
 done
 DEPEND="${COMMON_DEPEND}
-	app-arch/lzma-utils"
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 IUSE="${IUSE} source"
 
 # Forge doc SRC_URI
