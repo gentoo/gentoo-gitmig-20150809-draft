@@ -1,6 +1,13 @@
 # ChangeLog for app-office/gtg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.3 2009/04/14 09:46:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gtg/ChangeLog,v 1.4 2009/08/19 01:27:45 leio Exp $
+
+*gtg-0.1.2 (19 Aug 2009)
+
+  19 Aug 2009; Mart Raudsepp <leio@gentoo.org> -gtg-0.1.1.ebuild,
+  +gtg-0.1.2.ebuild:
+  Version bump, bug 278570. Various changes, primarily bug fixes and
+  translations
 
   14 Apr 2009; Raúl Porcel <armin76@gentoo.org> gtg-0.1.1.ebuild:
   Add ~x86 wrt #264958
