@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/devhelp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.93 2009/08/13 22:51:21 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/ChangeLog,v 1.94 2009/08/19 16:51:37 jer Exp $
+
+  19 Aug 2009; Jeroen Roovers <jer@gentoo.org> devhelp-0.21-r1.ebuild:
+  Stable for HPPA (bug #268359).
 
   13 Aug 2009; Mart Raudsepp <leio@gentoo.org> devhelp-0.21.ebuild,
   devhelp-0.21-r1.ebuild, devhelp-0.23-r1.ebuild, devhelp-0.23.1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.98 2009/07/09 22:16:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.99 2009/08/19 16:52:10 jer Exp $
+
+  19 Aug 2009; Jeroen Roovers <jer@gentoo.org> anjuta-2.24.2.ebuild:
+  Stable for HPPA (bug #268359).
 
   09 Jul 2009; Gilles Dartiguelongue <eva@gentoo.org>
   anjuta-2.26.2.2.ebuild:
