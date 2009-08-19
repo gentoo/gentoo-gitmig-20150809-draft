@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/polyglot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.1 2009/08/08 16:16:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.2 2009/08/19 05:51:39 graaff Exp $
+
+*polyglot-0.2.8 (19 Aug 2009)
+
+  19 Aug 2009; Hans de Graaff <graaff@gentoo.org> +polyglot-0.2.8.ebuild:
+  Version bump: fixes related to catching of LoadErrors.
 
 *polyglot-0.2.6 (08 Aug 2009)
 
