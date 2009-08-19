@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.7 2009/01/11 21:03:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.8 2009/08/19 18:33:54 patrick Exp $
 
-inherit python multilib toolchain-funcs
+EAPI="2"
+
+inherit python multilib toolchain-funcs eutils
 
 DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://lilypond.org/download/sources/mftrace/"
@@ -21,11 +23,14 @@ RDEPEND="${DEPEND}
 	>=app-text/t1utils-1.25
 	truetype? ( media-gfx/fontforge )"
 
-src_compile() {
+src_prepare() {
+	epatch "${FILESDIR}/${P}-python-2.6.patch"
 	python_version
 	tc-export CC
 	econf --datadir=/usr/$(get_libdir)/python${PYVER}/site-packages || \
 	die "econf failed"
+}
+src_compile() {
 	emake CFLAGS="-Wall ${CFLAGS}" || die "emake failed"
 }
 

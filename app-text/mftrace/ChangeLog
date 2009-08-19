@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mftrace
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.50 2009/01/11 21:03:17 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/ChangeLog,v 1.51 2009/08/19 18:33:54 patrick Exp $
+
+  19 Aug 2009; Patrick Lauer <patrick@gentoo.org> mftrace-1.2.13.ebuild,
+  +files/mftrace-1.2.13-python-2.6.patch:
+  Py 2.6 fix, closes #279997. Thanks to David Leverton.
 
   11 Jan 2009; Markus Meier <maekke@gentoo.org> mftrace-1.2.13.ebuild:
   x86 stable, bug #254222
