@@ -1,6 +1,15 @@
 # ChangeLog for net-voip/kphone
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/kphone/ChangeLog,v 1.2 2009/05/02 21:24:41 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/kphone/ChangeLog,v 1.3 2009/08/19 17:49:53 vostorga Exp $
+
+  19 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> -kphone-4.1.0.ebuild,
+  -files/kphone-4.1.0-Makefiles.patch, -kphone-4.1.1.ebuild,
+  -files/kphone-4.1.1-gcc34.patch, -kphone-4.2.ebuild, kphone-4.2-r1.ebuild,
+  +files/kphone-4.2-parse-fr.diff:
+  Fixing parse error in translation, bug #268348 , patch thanks to
+  Olivier Huber <oli.huber@gmail.com>
+  Fixing pre-stripped files, bug #252015
+  Respecting CXX variable, cleaning out old versions
 
   28 Apr 2009; Mounir Lamouri <volkmar@gentoo.org>
   +files/kphone-4.1.0-Makefiles.patch, +files/kphone-4.1.1-gcc34.patch,

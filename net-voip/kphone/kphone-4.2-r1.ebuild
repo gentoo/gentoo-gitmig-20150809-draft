@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/kphone/kphone-4.2-r1.ebuild,v 1.1 2009/04/28 15:54:37 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/kphone/kphone-4.2-r1.ebuild,v 1.2 2009/08/19 17:49:53 vostorga Exp $
 
-inherit qt3 eutils
+inherit qt3 eutils toolchain-funcs
 
 DESCRIPTION="A SIP user agent for Linux, with which you can initiate VoIP connections over the Internet."
 HOMEPAGE="http://sourceforge.net/projects/kphone"
@@ -27,14 +27,17 @@ src_unpack() {
 	unpack ${A}
 	epatch "${FILESDIR}"/kphone-4.2-gcc4.diff
 	epatch "${FILESDIR}"/kphone-4.2-CVE-2006-2442.diff
+	epatch "${FILESDIR}"/${P}-parse-fr.diff
 	sed -i -e "s:\$CFLAGS -O3:\$CFLAGS $CFLAGS:" "${S}"/configure
+	#Pre-stripped file, bug 252015
+	sed -i -e "/install --strip/ s:--strip::" "${S}"/kphone/Makefile.in
 }
 
 src_compile() {
 	local myconf="$(use_enable alsa) $(use_enable jack)
 	              $(use_enable debug) --disable-srtp"
 	econf ${myconf} || die
-	emake || die
+	emake CXX="$(tc-getCXX)" || die "emake failed"
 }
 
 src_install() {
