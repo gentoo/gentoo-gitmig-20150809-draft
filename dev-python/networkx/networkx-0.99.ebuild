@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-0.99.ebuild,v 1.1 2009/02/28 19:40:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/networkx/networkx-0.99.ebuild,v 1.2 2009/08/19 05:09:38 bicatali Exp $
 
 EAPI=2
 NEED_PYTHON=2.4
@@ -16,7 +16,12 @@ LICENSE="LGPL-2.1"
 IUSE="examples"
 
 DEPEND="dev-python/setuptools"
-RDEPEND=""
+RDEPEND="examples? (
+	dev-python/pygraphviz
+	dev-python/matplotlib
+	dev-python/pyyaml
+	dev-python/pyparsing
+	sci-libs/scipy )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-setup.py.patch
