@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.2.0.ebuild,v 1.2 2009/08/04 12:20:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/akonadi-server-1.2.0.ebuild,v 1.3 2009/08/20 09:33:33 scarabeus Exp $
 
 EAPI="2"
 
@@ -18,8 +18,7 @@ IUSE="+mysql sqlite"
 RDEPEND="
 	dev-libs/boost
 	>=dev-libs/soprano-2.2
-	>=x11-libs/qt-core-4.5.0:4
-	>=x11-libs/qt-dbus-4.5.0:4
+	>=x11-libs/qt-gui-4.5.0:4[dbus]
 	>=x11-libs/qt-sql-4.5.0:4[mysql?,sqlite?]
 	x11-misc/shared-mime-info
 "
