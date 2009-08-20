@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.3 2009/07/22 12:20:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.4 2009/08/20 16:12:18 chainsaw Exp $
+
+*bird-1.1.1 (20 Aug 2009)
+
+  20 Aug 2009; <chainsaw@gentoo.org> +files/1.1.1-nostrip.patch,
+  +files/initd-v4-bird-1.1.1, +files/initd-v6-bird-1.1.1,
+  +bird-1.1.1.ebuild:
+  With thanks to Ondrej Filip, the build system can now handle parallel
+  make. This new release also improves portability and adds more-style
+  paging to the client. The init-scripts have been reworked.
 
 *bird-1.1.0 (22 Jul 2009)
 
