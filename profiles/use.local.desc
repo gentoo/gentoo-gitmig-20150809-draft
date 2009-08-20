@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4736 2009/08/20 12:07:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4737 2009/08/20 19:09:34 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1678,7 +1678,7 @@ media-sound/pulseaudio:asyncns - Use libasyncns for asynchronous name resolution
 media-sound/pulseaudio:doc - Build the doxygen-described API documentation.
 media-sound/pulseaudio:glib - Enable glib eventloop support
 media-sound/pulseaudio:gnome -  Use GConf to store user preferences on streams and so on. Don't enable this flag if you want to use a system wide instance. If unsure, enable this flag. 
-media-sound/pulseaudio:oss -  Enable OSS sink/source (output/input). Also build the padsp script to make OSS software use PulseAudio. 
+media-sound/pulseaudio:oss -  Enable OSS sink/source (output/input). Deprecated, upstream does not support this on systems where other sink/source systems are available (i.e.: Linux). The padsp wrapper is now always build if the system supports OSS at all. 
 media-sound/pulseaudio:policykit - Enable support for PolicyKit framework.
 media-sound/pulseaudio:udev -  Use sys-fs/udev for autodiscovery of sound devices; this replaces the deprecated sys-apps/hal autodiscovery code. 
 media-sound/qmmp:bs2b - Enable Bauer stereophonic-to-binaural DSP library
