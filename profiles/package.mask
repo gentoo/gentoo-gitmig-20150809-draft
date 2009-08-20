@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10340 2009/08/19 18:04:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10341 2009/08/20 12:43:18 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1408,11 +1408,11 @@ dev-util/w32api
 >sys-process/audit-1.7.4
 
 # Jeroen Roovers <jer@gentoo.org> (5 Dec 2008)
-# Snapshots and alphas but not betas of Opera 10
-=www-client/opera-10.00_pre4493
-=www-client/opera-10.00_pre4502
-=www-client/opera-10.00_pre452*
->=www-client/opera-10.00_pre4538
+# Snapshots and alphas but not betas of Opera 10(.10)
+=www-client/opera-10.00_pre4538
+=www-client/opera-10.00_pre4546
+=www-client/opera-10.00_pre4562
+=www-client/opera-10.10*
 
 # MATSUU Takuto <matsuu@gentoo.org> (19 Nov 2008)
 # Masked for bug #196340
