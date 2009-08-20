@@ -1,6 +1,13 @@
 # ChangeLog for games-board/gnubg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.42 2009/08/07 21:09:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/ChangeLog,v 1.43 2009/08/20 06:44:36 mr_bones_ Exp $
+
+*gnubg-20090817 (20 Aug 2009)
+
+  20 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +gnubg-20090817.ebuild, +files/gnubg-20090817-build.patch:
+  version bump to snapshot releases (bug #156953) - ebuild submitted by
+  Marijn Schouten
 
   07 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
   gnubg-0.14.3-r1.ebuild, files/gnubg-0.14.3-as-needed.patch:
