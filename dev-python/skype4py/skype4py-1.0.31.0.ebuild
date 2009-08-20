@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/skype4py-1.0.31.0.ebuild,v 1.2 2009/03/21 05:51:26 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skype4py/skype4py-1.0.31.0.ebuild,v 1.3 2009/08/20 03:23:43 darkside Exp $
 
-inherit distutils
+inherit distutils eutils
 
 DESCRIPTION="Python wrapper for the Skype API."
 HOMEPAGE="https://developer.skype.com/wiki/Skype4Py"
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	use doc && mv "${WORKDIR}/Skype4Py-${PV}-htmldoc" "${S}/html_doc"
+	epatch "${FILESDIR}/${P}-automagic-cython.patch"
 }
 
 src_install() {
