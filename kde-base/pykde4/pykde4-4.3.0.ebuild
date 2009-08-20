@@ -1,12 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.0.ebuild,v 1.1 2009/08/04 01:33:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/pykde4/pykde4-4.3.0.ebuild,v 1.2 2009/08/20 09:14:00 scarabeus Exp $
 
 EAPI="2"
 
 KMNAME="kdebindings"
 KMMODULE="python/${PN}"
 OPENGL_REQUIRED="always"
+PYTHON_USE_WITH="threads"
 inherit python kde4-meta
 
 DESCRIPTION="Python bindings for KDE4"
@@ -25,9 +26,10 @@ RDEPEND="${COMMON_DEPEND}
 	!dev-python/pykde
 "
 
-#PATCHES=(
-#	"${FILESDIR}/${PN}-installation-fix.patch"
-#)
+pkg_setup() {
+	python_pkg_setup
+	kde4-meta_pkg_setup
+}
 
 src_prepare() {
 	kde4-meta_src_prepare
