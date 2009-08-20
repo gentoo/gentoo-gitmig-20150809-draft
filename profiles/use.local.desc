@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4734 2009/08/19 09:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4735 2009/08/20 10:47:53 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1163,7 +1163,10 @@ kde-base/kcontrol:logitech-mouse -  Build the Control Center module to configure
 kde-base/kdeadmin-meta:lilo - Install lilo-config, a frontend for the lilo boot loader
 kde-base/kdeartwork-kscreensaver:eigen - Enable various aritmethic screensavers which use Eigen2 for computations.
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
-kde-base/kdebindings-csharp:qscintilla -  Add support for qscintilla 
+kde-base/kdebindings-csharp:akonadi - Compile bindings for kde-base/akonadi.
+kde-base/kdebindings-csharp:phonon - Compile bindings for media-sound/phonon.
+kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
+kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/webkit.
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig
 kde-base/kdeedu:solver - Enable Kalzium ocaml equation solver
 kde-base/kdegraphics:kpathsea - Enable integration with kpathsea search library (TeX related)
@@ -1240,6 +1243,12 @@ kde-base/plasma-workspace:rss - Enables building RSSNOW plasmoid (requires kde-b
 kde-base/plasma-workspace:xcomposite - Disable this flag to enable experimental fake transparency support for plasma panel.
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
 kde-base/pykde4:akonadi - Builds Akonadi python language bindings
+kde-base/smoke:akonadi - Compile bindings for kde-base/akonadi.
+kde-base/smoke:kdevplatform - Compile bindings for dev-util/kdevplatform.
+kde-base/smoke:phonon - Compile bindings for media-sound/phonon.
+kde-base/smoke:qscintilla - Compile bindings for x11-libs/qscintilla.
+kde-base/smoke:qwt - Compile bindings for x11-libs/qwt.
+kde-base/smoke:webkit - Compile bindings for x11-libs/webkit.
 kde-base/solid:wicd - Enable Wicd wired and wireless network manager.
 kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-misc/kdiff3:konqueror - Enable integration with konqueror
