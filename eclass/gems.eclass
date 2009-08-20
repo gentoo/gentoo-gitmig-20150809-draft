@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.28 2009/08/20 08:38:25 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gems.eclass,v 1.29 2009/08/20 08:55:01 graaff Exp $
 
 # @ECLASS: gems.eclass
 # @MAINTAINER:
@@ -80,8 +80,8 @@ gems_src_install() {
 
 		USE_RUBY="ruby18"
 	elif [[ "${USE_RUBY}" == "any" ]]; then
-		eerror "USE_RUBY=\"any\" is deprecated. Please use explicit versions instead."
-		die "USE_RUBY=\"any\" is deprecated."
+		eerror "USE_RUBY=\"any\" is no longer supported. Please use explicit versions instead."
+		die "USE_RUBY=\"any\" is no longer supported."
 	fi
 
 	local num_ruby_slots=$(echo "${USE_RUBY}" | wc -w)
