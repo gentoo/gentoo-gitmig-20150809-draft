@@ -1,6 +1,10 @@
 # ChangeLog for app-text/crm114
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.36 2009/08/01 17:55:38 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/ChangeLog,v 1.37 2009/08/20 03:42:46 darkside Exp $
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -files/crm114-20060704a-fataltraptest.patch:
+  remove unused patches
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -crm114-20041231.ebuild,
   -crm114-20060704a.ebuild:
