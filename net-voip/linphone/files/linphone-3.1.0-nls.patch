@@ -1,5 +1,9 @@
 Allow to disable localization.
 
+	# this patch removes need to gettext and intltool
+	# but intltool was needed for eautoreconf so I add m4_pattern_allow
+	# which is probably not the best way but it's working
+
 Patch by Arfrever Frehtes Taifersar Arahesis
 
 --- configure.in
