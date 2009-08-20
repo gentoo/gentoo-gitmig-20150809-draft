@@ -1,6 +1,12 @@
 # ChangeLog for net-news/raggle
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.11 2007/07/09 10:07:23 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.12 2009/08/20 08:14:31 a3li Exp $
+
+*raggle-0.4.4-r1 (20 Aug 2009)
+
+  20 Aug 2009; Alex Legler <a3li@gentoo.org> -raggle-0.4.3.ebuild,
+  -raggle-0.4.4.ebuild, +raggle-0.4.4-r1.ebuild:
+  Revbump to remove USE_RUBY="any" and hardcoding on ruby18. Minor fix.
 
   26 Jun 2007; Michael Sterrett <mr_bones_@gentoo.org> raggle-0.4.0.ebuild:
   dev-lang/ruby-cvs was removed
