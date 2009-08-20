@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.77 2009/03/29 00:05:53 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.78 2009/08/20 02:17:13 vostorga Exp $
+
+  20 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> -files/xosd-2.2.8-libxosd.patch,
+  -files/bmp-dlg_config.patch:
+  Cleaning out unused patches
 
   29 Mar 2009; <solar@gentoo.org> xosd-2.2.14-r1.ebuild:
   - keyword ~arm
