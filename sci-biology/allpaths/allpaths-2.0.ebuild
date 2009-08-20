@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-2.0.ebuild,v 1.2 2009/07/08 03:50:03 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/allpaths/allpaths-2.0.ebuild,v 1.3 2009/08/20 16:56:10 weaver Exp $
 
 EAPI="2"
+
+inherit base
 
 DESCRIPTION="De novo assembly of whole-genome shotgun microreads"
 HOMEPAGE="http://www.broadinstitute.org/science/programs/genome-biology/crd"
@@ -18,9 +20,14 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=">=sys-devel/gcc-4.3.2"
 RDEPEND=""
 
+PATCHES=(
+	"${FILESDIR}"/${P}-gcc-x86-no-autocast.patch
+)
+
 S="${WORKDIR}"
 
 src_prepare() {
+	base_src_prepare
 	rm -rf libxerces* xerces_include || die
 }
 
