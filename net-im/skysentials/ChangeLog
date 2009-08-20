@@ -1,6 +1,12 @@
 # ChangeLog for net-im/skysentials
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skysentials/ChangeLog,v 1.1 2009/03/21 05:04:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skysentials/ChangeLog,v 1.2 2009/08/20 02:39:20 darkside Exp $
+
+*skysentials-1.0.1-r1 (20 Aug 2009)
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -skysentials-1.0.1.ebuild,
+  +skysentials-1.0.1-r1.ebuild, +files/skysentials-1.0.1-python26.patch:
+  revbump to include a py-2.6 patch, bug 280372
 
 *skysentials-1.0.1 (21 Mar 2009)
 

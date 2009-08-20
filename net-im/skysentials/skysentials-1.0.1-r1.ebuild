@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skysentials/skysentials-1.0.1.ebuild,v 1.1 2009/03/21 05:04:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skysentials/skysentials-1.0.1-r1.ebuild,v 1.1 2009/08/20 02:39:20 darkside Exp $
 
-inherit python
+inherit eutils python
 
 DESCRIPTION="Provides some handy Skype features that are lacking in the Linux client (SMS, etc)"
 HOMEPAGE="http://www.kolmann.at/philipp/linux/skysentials/"
@@ -15,6 +15,12 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="dev-python/skype4py"
+
+src_unpack() {
+	unpack "${A}"
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-python26.patch"
+}
 
 src_install() {
 	dodir $(python_get_sitedir)/skysentials || die "dodir failed"
