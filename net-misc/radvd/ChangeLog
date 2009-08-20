@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.54 2009/08/20 11:42:38 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.55 2009/08/20 12:23:49 rbu Exp $
+
+*radvd-1.4 (20 Aug 2009)
+
+  20 Aug 2009; Robert Buchholz <rbu@gentoo.org> +radvd-1.4.ebuild,
+  +files/radvd-1.4-parallel-make.patch:
+  Version bump, bug 281637. Add another parallel-make patch to stop ylwrap
+  from running in parallel with gcc. gnu-source detection is upstream.
 
   20 Aug 2009; Robert Buchholz <rbu@gentoo.org> -radvd-1.0-r1.ebuild,
   radvd-1.1.ebuild:
