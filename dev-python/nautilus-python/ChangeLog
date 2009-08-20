@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/nautilus-python
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nautilus-python/ChangeLog,v 1.1 2009/08/20 08:25:24 pva Exp $
+
+*nautilus-python-0.5.1-r1 (20 Aug 2009)
+
+  20 Aug 2009; Peter Volkov <pva@gentoo.org>
+  +nautilus-python-0.5.1-r1.ebuild,
+  +files/nautilus-python-0.5.1-CVE-2009-0317.patch,
+  +files/nautilus-python-0.5.1-submenu-example.patch, +metadata.xml:
+  Initial import: merged bazaar and rion overlays. Bug #78021, thank Caleb
+  Shay, Christian Faulhammer and Rion.
+
