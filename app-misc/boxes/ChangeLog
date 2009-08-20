@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/boxes
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.21 2009/04/13 03:06:29 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.22 2009/08/20 03:39:08 darkside Exp $
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -files/boxes-1.0.1-Makefile.patch, -files/boxes-1.0.1-flex.patch:
+  remove unused patches
 
   13 Apr 2009; Jeremy Olexa <darkside@gentoo.org> boxes-1.1.ebuild:
   QA: respect CC, bug 243614

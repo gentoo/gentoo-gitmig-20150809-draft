@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/splitvt
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.24 2008/03/29 13:29:04 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/ChangeLog,v 1.25 2009/08/20 03:41:52 darkside Exp $
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -files/splitvt-1.6.5-gcc4.diff:
+  remove unused patches
 
   29 Mar 2008; Santiago M. Mola <coldwind@gentoo.org>
   splitvt-1.6.6-r1.ebuild:
