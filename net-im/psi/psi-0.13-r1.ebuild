@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13-r1.ebuild,v 1.2 2009/08/19 16:30:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.13-r1.ebuild,v 1.3 2009/08/20 17:20:17 pva Exp $
 
 EAPI="2"
 
@@ -32,7 +32,8 @@ done
 RDEPEND=">=x11-libs/qt-gui-4.4:4[qt3support,dbus?]
 	>=app-crypt/qca-2.0.2:2
 	spell? ( app-text/aspell )
-	xscreensaver? ( x11-libs/libXScrnSaver )"
+	xscreensaver? ( x11-libs/libXScrnSaver )
+	app-arch/unzip"
 
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
