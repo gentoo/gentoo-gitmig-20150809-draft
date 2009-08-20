@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_pre4402.ebuild,v 1.4 2009/07/09 18:57:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10_pre4563.ebuild,v 1.1 2009/08/20 12:43:27 jer Exp $
 
 EAPI="2"
 
@@ -16,46 +16,53 @@ LICENSE="OPERA-10.00"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
+QA_DT_HASH="opt/${PN}/.*"
 
-IUSE="elibc_FreeBSD gnome ia32 qt-static qt3"
-MY_LINGUAS="en-GB"
+IUSE="elibc_FreeBSD gnome ia32 qt3 qt-static"
+MY_LINGUAS="be bg cs da de el en-GB es-ES es-LA et fi fr fr-CA fy hi hr hu id it ja ka ko lt mk nb nl nn pl pt pt-BR ro ru sk sr sv ta te tr uk zh-CN zh-HK zh-TW"
 
 for MY_LINGUA in ${MY_LINGUAS}; do
 	IUSE="${IUSE} linguas_${MY_LINGUA/-/_}"
 done
 
-O_U="mirror://opera/"
+O_U="http://snapshot.opera.com/unix/snapshot-${PV/*_pre}/"
+
+# 1) Please check for missing (qt3/qt-static) builds
+# 2) and only then update the build number manually
+OPERABUILD="4563"
+
+if [ "${PV/*_pre}" = "${OPERABUILD}" ]; then
+	O_P="${P/_pre*/}-${OPERABUILD}"
+else
+	O_P="SET_OPERABUILD_IN_THE_EBUILD"
+fi
 
 SRC_URI="
-	ppc? ( ${O_U}linux/1000b1/beta1/en/ppc/shared/opera-10.00-b1.gcc4-shared-qt3.ppc.tar.bz2 )
-	qt-static? (
-		x86-fbsd? ( ${O_U}unix/freebsd/1000b1/en/intel/static/opera-10.00-b1-freebsd5-static-qt3.i386.tar.bz2 )
-		x86? (
-			qt3? ( ${O_U}linux/1000b1/beta1/en/i386/static/opera-10.00-b1.gcc4-static-qt3.i386.tar.bz2 )
-			!qt3? ( ${O_U}linux/1000b1/beta1/en/i386/opera-10.00-b1.gcc4-bundled-qt4.i386.tar.bz2 )
-		)
-		amd64? (
-			ia32? (
-				qt3? ( ${O_U}linux/1000b1/beta1/en/i386/static/opera-10.00-b1.gcc4-static-qt3.i386.tar.bz2 )
-				!qt3? ( ${O_U}linux/1000b1/beta1/en/i386/opera-10.00-b1.gcc4-bundled-qt4.i386.tar.bz2 )
+	amd64? (
+		!ia32? (
+			qt-static? ( ${O_U}x86_64-linux/${O_P}.gcc4-bundled-qt4.x86_64.tar.bz2 )
+			!qt-static? (
+				qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-shared-qt3.x86_64.tar.bz2 )
+				!qt3? ( ${O_U}x86_64-linux/${O_P}.gcc4-qt4.x86_64.tar.bz2 )
 			)
-			!ia32? ( ${O_U}linux/1000b1/beta1/en/x86_64/opera-10.00-b1.gcc4-shared-qt3.x86_64.tar.bz2 )
+		)
+		ia32? (
+			qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
+			!qt-static? (
+				qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+				!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
+			)
 		)
 	)
-	!qt-static? (
-		x86-fbsd? ( ${O_U}unix/freebsd/1000b1/en/intel/shared/opera-10.00-b1-freebsd5-shared-qt3.i386.tar.bz2 )
-		x86? (
-			qt3? ( ${O_U}linux/1000b1/beta1/en/i386/shared/opera-10.00-b1.gcc4-shared-qt3.i386.tar.bz2 )
-			!qt3? ( ${O_U}linux/1000b1/beta1/en/i386/opera-10.00-b1.gcc4-qt4.i386.tar.bz2 )
-		)
-		amd64? (
-			ia32? (
-				qt3? ( ${O_U}linux/1000b1/beta1/en/i386/shared/opera-10.00-b1.gcc4-shared-qt3.i386.tar.bz2 )
-				!qt3? ( ${O_U}linux/1000b1/beta1/en/i386/opera-10.00-b1.gcc4-qt4.i386.tar.bz2 )
-			)
-			!ia32? ( ${O_U}linux/1000b1/beta1/en/x86_64/opera-10.00-b1.gcc4-shared-qt3.x86_64.tar.bz2 )
+	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
+	x86? (
+		qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
+		!qt-static? (
+			qt3? ( ${O_U}intel-linux/${O_P}.gcc4-shared-qt3.i386.tar.bz2 )
+			!qt3? ( ${O_U}intel-linux/${O_P}.gcc4-qt4.i386.tar.bz2 )
 		)
 	)
+	x86-fbsd? ( ${O_U}intel-freebsd/${O_P}.freebsd7-shared-qt3.i386.tar.bz2 )
 	"
 
 DEPEND=">=sys-apps/sed-4"
@@ -74,31 +81,31 @@ RDEPEND="
 	x11-libs/libX11
 	x11-libs/libSM
 	x11-libs/libICE
-	x86? (
-		qt-static? ( !qt3? ( media-libs/nas ) )
-		!qt-static? (
-			qt3? ( =x11-libs/qt-3*[-immqt] )
-			!qt3? (
-				x11-libs/qt-core
-				x11-libs/qt-gui
+	amd64? (
+		ia32? (
+			qt-static? ( media-libs/nas )
+			!qt-static? (
+				qt3? ( =x11-libs/qt-3*[-immqt] )
+				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
+			)
+		)
+		!ia32? (
+			qt-static? ( media-libs/nas )
+			!qt-static? (
+				qt3? ( =x11-libs/qt-3*[-immqt] )
+				!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
 			)
 		)
 	)
 	ppc? ( =x11-libs/qt-3*[-immqt] )
-	amd64? (
-		ia32? (
-			qt-static? ( !qt3? ( media-libs/nas ) )
-			!qt-static? (
-				qt3? ( =x11-libs/qt-3*[-immqt] )
-				!qt3? (
-					x11-libs/qt-core
-					x11-libs/qt-gui
-				)
-			)
+	x86? (
+		qt-static? ( media-libs/nas )
+		!qt-static? (
+			qt3? ( =x11-libs/qt-3*[-immqt] )
+			!qt3? ( x11-libs/qt-core x11-libs/qt-gui )
 		)
-		!ia32? ( =x11-libs/qt-3*[-immqt] )
 	)
-	x86-fbsd? ( !qt-static? ( =x11-libs/qt-3*[-immqt] ) )
+	x86-fbsd? ( =x11-libs/qt-3*[-immqt] )
 	"
 
 opera_linguas() {
@@ -112,6 +119,12 @@ opera_linguas() {
 			rm -r "${LINGUA}"
 		fi
 	done
+}
+
+pkg_setup() {
+	elog "${WARN}If you seek support, please file a bug report at${NORMAL}"
+	elog "${WARN}https://bugs.gentoo.org and post the output of${NORMAL}"
+	elog "${WARN} \`emerge --info =${CATEGORY}/${P}'${NORMAL}"
 }
 
 src_unpack() {
@@ -135,24 +148,17 @@ src_prepare() {
 		epatch "${FILESDIR}/${PN}-10.00-pluginpath.patch"
 	fi
 
-	sed -i 	-e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
+	sed -i -e "s:config_dir=\"/etc\":config_dir=\"${D}/etc/\":g" \
 		-e "s:\(str_localdirplugin=\).*$:\1/opt/opera/lib/opera/plugins:" \
 		-e 's:#\(export LD_PRELOAD OPERA_FORCE_JAVA_ENABLED\):\1:' \
 		-e 's:#\(OPERA_FORCE_JAVA_ENABLED=\):\1:' \
 		install.sh || die "sed failed"
 }
 
-src_configure() {
-	# This workaround is sadly needed because gnome2.eclass doesn't check
-	# whether a configure script exists.
-	true
-}
-
-src_compile() {
-	# This workaround is sadly needed because gnome2.eclass doesn't check
-	# whether a Makefile exists.
-	true
-}
+# These workarounds are sadly needed because gnome2.eclass doesn't check
+# whether a configure/Makefile script exists.
+src_configure() { :; }
+src_compile() { :; }
 
 src_install() {
 	# Prepare installation directories for Opera's installer script.
