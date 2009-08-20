@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.69 2009/08/04 01:34:17 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.70 2009/08/20 10:41:29 wired Exp $
+
+  20 Aug 2009; Alex Alexander <wired@gentoo.org> metadata.xml:
+  added missing use flag descriptions
 
 *smoke-4.3.0 (04 Aug 2009)
 
