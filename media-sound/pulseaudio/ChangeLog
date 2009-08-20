@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.141 2009/08/07 23:41:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.142 2009/08/20 18:53:27 flameeyes Exp $
+
+*pulseaudio-0.9.16_rc5-r51 (20 Aug 2009)
+*pulseaudio-0.9.16_rc5 (20 Aug 2009)
+
+  20 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pulseaudio-0.9.16_rc4.ebuild, -pulseaudio-0.9.16_rc4-r51.ebuild,
+  +pulseaudio-0.9.16_rc5.ebuild, +pulseaudio-0.9.16_rc5-r51.ebuild,
+  metadata.xml:
+  Bump to the latest test version released by Lennart; this changes the
+  meaning of the oss USE flag (and removes some hacks around).
 
   07 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.15-r2.ebuild, pulseaudio-0.9.15-r51.ebuild,

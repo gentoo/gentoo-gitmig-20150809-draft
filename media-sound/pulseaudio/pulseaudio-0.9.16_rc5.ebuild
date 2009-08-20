@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc4.ebuild,v 1.2 2009/08/07 23:41:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc5.ebuild,v 1.1 2009/08/20 18:53:27 flameeyes Exp $
 
 EAPI=2
 
@@ -81,20 +81,10 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Not extremely nice but allows to avoid a bit of work in the case
-	# users don't request tests.
-	if use test; then
-		sed -i -e 's:\<mix-test::' src/Makefile.am || die
-
-		eautomake
-	fi
 	elibtoolize
 }
 
 src_configure() {
-	# To properly fix CVE-2008-0008
-	append-flags -UNDEBUG
-
 	# It's a binutils bug, once I can find time to fix that I'll add a
 	# proper dependency and fix this up. — flameeyes
 	append-ldflags -Wl,--no-as-needed
@@ -104,7 +94,7 @@ src_configure() {
 		$(use_enable glib glib2) \
 		--disable-solaris \
 		$(use_enable asyncns) \
-		$(use_enable oss) \
+		$(use_enable oss oss-output) \
 		$(use_enable alsa) \
 		$(use_enable lirc) \
 		$(use_enable tcpd tcpwrap) \
@@ -136,7 +126,7 @@ src_configure() {
 src_test() {
 	# We avoid running the toplevel check target because that will run
 	# po/'s tests too, and they are broken. Officially, it should work
-	# with intltool 0.40.6, but that doesn't seem to be the case.
+	# with intltool 0.41, but that doesn't look like a stable release.
 	emake -C src check || die
 }
 
@@ -181,14 +171,14 @@ pkg_postinst() {
 		elog "still experimental, so please report to upstream if you have"
 		elog "problems with it."
 	fi
-	if use alsa; then
-		local pkg="media-plugins/alsa-plugins"
-		if has_version ${pkg} && ! built_with_use --missing false ${pkg} pulseaudio; then
-			elog
-			elog "You have alsa support enabled so you probably want to install"
-			elog "${pkg} with pulseaudio support to have"
-			elog "alsa using applications route their sound through pulseaudio"
-		fi
+	if use alsa &&
+		has_version media-plugins/alsa-plugins &&
+		!built_with_use --missing false media-plugins/alsa-plugins pulseaudio; then
+
+		elog
+		elog "You have alsa support enabled so you probably want to install"
+		elog "${pkg} with pulseaudio support to have"
+		elog "alsa using applications route their sound through pulseaudio"
 	fi
 
 	eselect esd update --if-unset
