@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1.ebuild,v 1.3 2009/08/11 17:57:44 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-23.1.ebuild,v 1.4 2009/08/20 07:41:41 ulm Exp $
 
 EAPI=2
 
@@ -245,11 +245,15 @@ src_install () {
 	X  ${c}(setq find-function-C-source-directory
 	X  ${c}      "/usr/share/emacs/${FULL_VERSION}/src")
 	X  (let ((path (getenv "INFOPATH"))
-	X	(dir "/usr/share/info/${EMACS_SUFFIX}"))
+	X	(dir "/usr/share/info/${EMACS_SUFFIX}")
+	X	(re "\\\\\`/usr/share/info\\\\>"))
 	X    (and path
-	X	 ;; move Emacs Info dir to beginning of list
-	X	 (setq Info-directory-list
-	X	       (cons dir (delete dir (split-string path ":" t)))))))
+	X	 ;; move Emacs Info dir before anything else in /usr/share/info
+	X	 (let* ((p (cons nil (split-string path ":" t))) (q p))
+	X	   (while (and (cdr q) (not (string-match re (cadr q))))
+	X	     (setq q (cdr q)))
+	X	   (setcdr q (cons dir (delete dir (cdr q))))
+	X	   (setq Info-directory-list (prune-directory-list (cdr p)))))))
 	EOF
 	elisp-site-file-install "${SITEFILE}" || die
 
