@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/xfburn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.15 2009/03/19 13:39:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/ChangeLog,v 1.16 2009/08/20 03:33:33 darkside Exp $
+
+  20 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  -files/xfburn-disable-hal.patch:
+  remove unused patches
 
   19 Mar 2009; Brent Baude <ranger@gentoo.org> xfburn-0.4.0.ebuild:
   Marking xfburn-0.4.0 ppc for bug 256151
