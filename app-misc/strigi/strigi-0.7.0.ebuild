@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.6.4.ebuild,v 1.11 2009/04/11 15:46:47 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.0.ebuild,v 1.1 2009/08/20 09:05:47 scarabeus Exp $
 
 EAPI="2"
 
-inherit cmake-utils eutils
+inherit base cmake-utils
 
 DESCRIPTION="Fast crawling desktop search engine with Qt4 GUI"
 HOMEPAGE="http://strigi.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+SRC_URI="http://www.vandenoever.info/software/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,21 +20,19 @@ COMMONDEPEND="
 	virtual/libiconv
 	>=virtual/poppler-utils-0.8
 	clucene? ( >=dev-cpp/clucene-0.9.19[-debug] )
-	dbus? ( sys-apps/dbus
-		|| ( ( x11-libs/qt-dbus:4
-			x11-libs/qt-gui:4 )
-			=x11-libs/qt-4.3*:4[dbus] )
-		)
+	dbus? (
+		x11-libs/qt-dbus:4
+		x11-libs/qt-gui:4
+	)
 	exif? ( >=media-gfx/exiv2-0.17 )
 	fam? ( virtual/fam )
 	hyperestraier? ( app-text/hyperestraier )
 	log? ( >=dev-libs/log4cxx-0.10.0 )
 	qt4? (
-		|| ( ( x11-libs/qt-core:4
-			x11-libs/qt-gui:4
-			x11-libs/qt-dbus:4 )
-			=x11-libs/qt-4.3*:4[dbus] )
-		)
+		x11-libs/qt-core:4
+		x11-libs/qt-gui:4
+		x11-libs/qt-dbus:4
+	)
 	!clucene? (
 		!hyperestraier? (
 			>=dev-cpp/clucene-0.9.19[-debug]
@@ -45,9 +43,11 @@ DEPEND="${COMMONDEPEND}
 	test? ( dev-util/cppunit )"
 RDEPEND="${COMMONDEPEND}"
 
-src_prepare() {
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-}
+PATCHES=(
+	"${FILESDIR}/${PN}-0.6.4-gcc44.patch"
+	"${FILESDIR}/${PN}-0.6.5-gcc4.4-missing-headers.patch"
+	"${FILESDIR}/${PN}-disable_java.patch"
+)
 
 src_configure() {
 	# Strigi needs either expat or libxml2.
@@ -59,15 +59,15 @@ src_configure() {
 		-DENABLE_EXPAT=OFF -DENABLE_POLLING=ON
 		-DFORCE_DEPS=ON -DENABLE_CPPUNIT=OFF
 		-DENABLE_REGENERATEXSD=OFF
-		$(cmake-utils_use_enable clucene CLUCENE)
-		$(cmake-utils_use_enable dbus DBUS)
+		$(cmake-utils_use_enable clucene)
+		$(cmake-utils_use_enable dbus)
 		$(cmake-utils_use_enable exif EXIV2)
-		$(cmake-utils_use_enable fam FAM)
-		$(cmake-utils_use_enable hyperestraier HYPERESTRAIER)
-		$(cmake-utils_use_enable inotify INOTIFY)
+		$(cmake-utils_use_enable fam)
+		$(cmake-utils_use_enable hyperestraier)
+		$(cmake-utils_use_enable inotify)
 		$(cmake-utils_use_enable log LOG4CXX)
 		$(cmake-utils_use_enable qt4 DBUS)
-		$(cmake-utils_use_enable qt4 QT4)"
+		$(cmake-utils_use_enable qt4)"
 
 	if ! use clucene && ! use hyperestraier; then
 		mycmakeargs="${mycmakeargs} -DENABLE_CLUCENE=ON"

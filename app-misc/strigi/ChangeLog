@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.37 2009/05/18 12:56:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.38 2009/08/20 09:05:47 scarabeus Exp $
+
+*strigi-0.7.0 (20 Aug 2009)
+
+  20 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> -strigi-0.6.4.ebuild,
+  +strigi-0.7.0.ebuild:
+  Version bump. Remove old.
 
   18 May 2009; Tomas Chvatal <scarabeus@gentoo.org> strigi-0.6.5.ebuild,
   +files/strigi-0.6.5-gcc4.4-missing-headers.patch:
