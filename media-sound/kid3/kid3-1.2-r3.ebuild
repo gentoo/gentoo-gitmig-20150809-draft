@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.2-r3.ebuild,v 1.1 2009/08/21 09:22:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/kid3-1.2-r3.ebuild,v 1.2 2009/08/21 09:25:21 ssuominen Exp $
 
 EAPI=2
 inherit kde4-base
@@ -35,6 +35,6 @@ src_configure() {
 		$(cmake-utils_use_with vorbis)
 		$(cmake-utils_use_with flac)
 		$(cmake-utils_use_with taglib)"
-	
+
 	kde4-base_src_configure
 }
