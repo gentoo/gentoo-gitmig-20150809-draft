@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.8.ebuild,v 1.8 2009/08/13 21:22:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.8.ebuild,v 1.9 2009/08/21 21:45:22 tester Exp $
 
 EAPI=2
 
@@ -53,6 +53,7 @@ DEPEND="$RDEPEND
 	dev-lang/perl
 	dev-perl/XML-Parser
 	dev-util/pkgconfig
+	dev-util/intltool
 	gtk? ( x11-proto/scrnsaverproto )
 	doc? ( app-doc/doxygen )
 	nls? ( sys-devel/gettext )"

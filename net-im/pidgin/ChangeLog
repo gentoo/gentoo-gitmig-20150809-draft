@@ -1,6 +1,14 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.114 2009/08/19 16:12:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.115 2009/08/21 21:45:22 tester Exp $
+
+  21 Aug 2009; Olivier Crête <tester@gentoo.org> pidgin-2.5.8.ebuild,
+  pidgin-2.5.9.ebuild:
+  Added intltool build time dependency, bug #236761
+
+  21 Aug 2009; Olivier Crête <tester@gentoo.org> pidgin-2.5.8.ebuild,
+  pidgin-2.5.9.ebuild:
+  Added intltool build time dependency, bug #236761
 
   19 Aug 2009; Jeroen Roovers <jer@gentoo.org> pidgin-2.5.9.ebuild:
   Stable for HPPA (bug #281545).
