@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10341 2009/08/20 12:43:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10342 2009/08/21 10:57:21 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1055,29 +1055,6 @@ net-fs/samba-server
 # Pending removal 22 August 2009
 sys-apps/realtime-lsm
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2009)
-#  on behalf of QA Team
-#
-# mp1e fails to build with recent compilers (still requires gcc 3.x!)
-# and even with recent assemblers. The older analogtv ebuilds will
-# follow it for a mandatory dependency, newer ones don't have the
-# dependency.
-#
-# See bug #274715
-#
-# Removal pending 21 August 2009
-media-video/mp1e
-<media-plugins/vdr-analogtv-1.0.00-r2
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (21 Jun 2009)
-#  on behalf of QA Team
-#
-# Dead homepage, binary file in $FILESDIR
-# See bug #274859
-#
-# Removal pending 21 August 2009
-net-misc/whoischk
-
 # Alin Năstac <mrness@gentoo.org> (20 Jun 2009)
 # Masked for removal in 60 days (#273316).
 # SpeedTouch modems are supported by modern Linux kernels (>=2.6.10),
@@ -1091,64 +1068,13 @@ net-dialup/speedtouch
 # It may break some packages.
 =sys-auth/policykit-0.92
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (16 Jun 2009)
-#  on behalf of QA Team
-#
-# Fails to build with not even recent Linux headers.
-# See bug #248388
-#
-# Removal pending 16 August 2009
-sys-apps/ddcxinfo-knoppix
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
-#  on behalf of QA Team
-#
-# Multiple issue, external kernel module unmaintained since 2005.
-# See bug #274105
-#
-# Removal pending 14 August 2009
-net-fs/shfs
-
 # Theo Chatzimichos <tampakrap@gentoo.org> (14 Jun 2009)
 # Masked for removal in 30 days. Old and dead by upstream.
 app-dicts/kannadic
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
-#  on behalf of QA Team
-#
-# Fails to build with gcc 4.4, bitrotting package and not updated to
-# latest release (from 2005).
-#
-# Removal pending 13 August 2009
-dev-db/framerd
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
-#  on behalf of QA Team
-#
-# Fails to build with newer glibc versions, see bug #241008
-#
-# Removal pending 13 August 2009
-net-misc/wso2-wsf-c
-
 # Markus Meier <maekke@gentoo.org> (13 Jun 2009)
 # mask pre releases of media-gfx/inkscape-0.47
 >=media-gfx/inkscape-0.47_pre0
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
-#  on behalf of QA Team
-#
-# Multiple QA issues, see bug #273313
-#
-# Removal pending 12 August 2009
-net-p2p/ed2k_recovermet
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (12 Jun 2009)
-#  on behalf of QA Team
-#
-# Multiple QA issues, see bug #273872
-#
-# Removal pending 12 August 2009
-app-laptop/toshiba-utils
 
 # Tristan Heaven <nyhm@gentoo.org> (12 Jun 2009)
 # https://bugs.gentoo.org/show_bug.cgi?id=269516
