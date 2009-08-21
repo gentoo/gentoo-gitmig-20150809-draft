@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.7.1.ebuild,v 1.4 2008/01/24 19:49:48 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-2.7.1.ebuild,v 1.5 2009/08/21 19:12:22 ulm Exp $
 
 DESCRIPTION="Very tiny editor in ASM with emacs, pico, wordstar, and vi keybindings"
 HOMEPAGE="http://freshmeat.net/projects/e3/
@@ -30,5 +30,8 @@ src_install() {
 	dosym e3 /usr/bin/e3pi
 	dosym e3 /usr/bin/e3vi
 	dosym e3 /usr/bin/e3ws
+
 	newman e3.man e3.1
+	dodoc ChangeLog README
+	dohtml e3.html
 }
