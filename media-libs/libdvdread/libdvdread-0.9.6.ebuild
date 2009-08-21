@@ -1,11 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.6.ebuild,v 1.17 2008/01/29 21:43:22 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/libdvdread-0.9.6.ebuild,v 1.18 2009/08/21 20:22:48 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
-
-inherit eutils libtool autotools
+inherit autotools eutils
 
 DESCRIPTION="Provides a simple foundation for reading DVD-Video images."
 SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
@@ -16,16 +13,14 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sh sparc x86"
 IUSE=""
 
-DEPEND=">=media-libs/libdvdcss-1.1.1"
+RDEPEND=">=media-libs/libdvdcss-1.1.1"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/${P}-udfsymbols.patch"
-
 	eautoreconf
-	elibtoolize
 }
 
 src_compile() {
@@ -38,9 +33,9 @@ src_install() {
 	einstall || die "make install failed"
 
 	dobin src/.libs/*  # install executables
-	cd ${D}usr/bin
+	cd "${D}"/usr/bin
 	mv ./ifo_dump ./ifo_dump_dvdread
 
-	cd ${S}
+	cd "${S}"
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }
