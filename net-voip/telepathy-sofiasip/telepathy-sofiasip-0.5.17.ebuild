@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.5 2009/08/09 14:19:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-sofiasip/telepathy-sofiasip-0.5.17.ebuild,v 1.6 2009/08/21 21:21:13 tester Exp $
 
 inherit autotools
 
@@ -29,6 +29,7 @@ src_unpack() {
 
 	cd "${S}"
 	sed -i -e "s/python2.5/python2.6 python2.5/" configure.ac
+	rm ltmain.sh m4/libtool.m4 m4/lt*.m4
 	eautoreconf
 }
 
