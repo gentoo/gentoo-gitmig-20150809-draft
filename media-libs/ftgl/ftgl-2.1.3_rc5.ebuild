@@ -1,9 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.7 2009/08/10 15:10:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ftgl/ftgl-2.1.3_rc5.ebuild,v 1.8 2009/08/21 21:02:05 ssuominen Exp $
 
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
 inherit eutils flag-o-matic autotools
 
 MY_PV=${PV/_/-}
@@ -20,12 +18,13 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=media-libs/freetype-2.0.9
+RDEPEND=">=media-libs/freetype-2.0.9
 	virtual/opengl
 	virtual/glu
 	virtual/glut"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}"/${MY_P2}
+S=${WORKDIR}/${MY_P2}
 
 src_unpack() {
 	unpack ${A}
