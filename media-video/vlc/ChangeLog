@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.497 2009/08/21 12:13:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.498 2009/08/21 12:17:17 aballier Exp $
+
+  21 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-0.9.10.ebuild,
+  vlc-1.0.1.ebuild:
+  Force libass to be < 0.9.7, vlc 0.9.10 and 1.0.1 will not build against
+  0.9.7, git versions are fine.
 
   21 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.1.ebuild,
   vlc-1.0.9999.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.1.ebuild,v 1.4 2009/08/21 12:13:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.1.ebuild,v 1.5 2009/08/21 12:17:17 aballier Exp $
 
 EAPI="2"
 
@@ -95,7 +95,7 @@ RDEPEND="
 		ieee1394? ( sys-libs/libraw1394 sys-libs/libavc1394 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		kate? ( >=media-libs/libkate-0.1.1 )
-		libass? ( >=media-libs/libass-0.9.5 media-libs/fontconfig )
+		libass? ( >=media-libs/libass-0.9.5 <media-libs/libass-0.9.7 media-libs/fontconfig )
 		libcaca? ( media-libs/libcaca )
 		libnotify? ( x11-libs/libnotify )
 		libproxy? ( net-libs/libproxy )
