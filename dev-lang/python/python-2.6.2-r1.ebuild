@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r1.ebuild,v 1.6 2009/08/21 00:10:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r1.ebuild,v 1.7 2009/08/21 01:53:28 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -19,7 +19,7 @@ PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 
-PATCHSET_REVISION="1"
+PATCHSET_REVISION="2"
 
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
@@ -45,7 +45,7 @@ DEPEND=">=app-admin/eselect-python-20080925
 			gdbm? ( sys-libs/gdbm )
 			ssl? ( dev-libs/openssl )
 			doc? ( dev-python/python-docs:${SLOT} )
-			xml? ( dev-libs/expat )
+			xml? ( >=dev-libs/expat-2 )
 	)"
 RDEPEND="${DEPEND}"
 PDEPEND="${DEPEND} app-admin/python-updater"

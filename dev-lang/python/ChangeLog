@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.403 2009/08/18 00:54:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.404 2009/08/21 01:53:28 arfrever Exp $
+
+  21 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.5.4-r3.ebuild, python-2.6.2-r1.ebuild, python-3.1.1.ebuild:
+  Add missing dependency on >=dev-libs/expat-2 and non-zero exit status of
+  setup.py when building of extensions has failed (bug #281968).
 
 *python-3.1.1 (17 Aug 2009)
 
