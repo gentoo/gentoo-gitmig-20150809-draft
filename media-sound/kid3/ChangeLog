@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/kid3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.42 2009/07/16 22:09:39 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kid3/ChangeLog,v 1.43 2009/08/21 09:22:49 ssuominen Exp $
+
+*kid3-1.2-r3 (21 Aug 2009)
+
+  21 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> +kid3-1.2-r3.ebuild:
+  USE flac mp3 mp4 +musicbrainz +taglib vorbis
 
 *kid3-1.2-r2 (16 Jul 2009)
 
