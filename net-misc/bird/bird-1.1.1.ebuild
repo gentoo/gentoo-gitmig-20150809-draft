@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.1.1.ebuild,v 1.1 2009/08/20 16:12:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/bird-1.1.1.ebuild,v 1.2 2009/08/21 05:39:29 mr_bones_ Exp $
 
 inherit eutils
 
@@ -38,8 +38,8 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	if use ipv6; then
-		# The only thing worse then not supplying 
-		# a sample configuration file to a user is 
+		# The only thing worse then not supplying
+		# a sample configuration file to a user is
 		# wasting his/her time with a totally
 		# broken one.
 		rm "${D}/etc/bird6.conf"
