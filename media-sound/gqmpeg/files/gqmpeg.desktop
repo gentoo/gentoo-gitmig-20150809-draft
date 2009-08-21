@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=GQmpeg
-Comment=front end to various audio players
-Exec=gqmpeg
-Icon=gqmpeg.png
-Terminal=0
-Type=Application
