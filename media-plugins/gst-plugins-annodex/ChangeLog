@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-annodex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-annodex/ChangeLog,v 1.19 2009/08/05 04:33:54 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-annodex/ChangeLog,v 1.20 2009/08/21 11:18:56 leio Exp $
+
+*gst-plugins-annodex-0.10.15 (21 Aug 2009)
+
+  21 Aug 2009; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  gst-plugins-annodex-0.10.14.ebuild, +gst-plugins-annodex-0.10.15.ebuild:
+  Version bump with no code changes. Add some useful descriptions for the
+  package.
 
   05 Aug 2009; Mart Raudsepp <leio@gentoo.org>
   -gst-plugins-annodex-0.10.8.ebuild, -gst-plugins-annodex-0.10.11.ebuild:

@@ -2,4 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gstreamer</herd>
+<longdescription lang="en">
+	GStreamer plugin for annodex stream manipulation
+
+	(info about annodex: http://www.annodex.net)
+</longdescription>
 </pkgmetadata>
