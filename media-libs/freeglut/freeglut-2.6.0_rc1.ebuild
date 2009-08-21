@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.6.0_rc1.ebuild,v 1.1 2009/08/21 08:39:08 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/freeglut-2.6.0_rc1.ebuild,v 1.2 2009/08/21 08:41:11 scarabeus Exp $
 
 EAPI="2"
 
@@ -32,9 +32,7 @@ src_configure() {
 		--disable-warnings \
 		--disable-warnings-as-errors \
 		--enable-replace-glut \
-		$(use_enable debug) \
-
-
+		$(use_enable debug)
 }
 
 src_install() {
