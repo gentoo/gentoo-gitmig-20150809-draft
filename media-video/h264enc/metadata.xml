@@ -7,6 +7,5 @@
 	</maintainer>
 	<use>
 		<flag name="ogm">Support for OGM container format</flag>
-		<flag name="mp4">Support for MP4 container format</flag>
 	</use>
 </pkgmetadata>
