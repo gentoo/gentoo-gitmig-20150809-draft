@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.13.200902232204.ebuild,v 1.4 2009/05/25 03:02:05 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-2.1.13.200902232204-r1.ebuild,v 1.1 2009/08/21 18:56:27 gengor Exp $
 
 inherit flag-o-matic toolchain-funcs eutils versionator
 
@@ -26,7 +26,8 @@ S="${WORKDIR}/${PN}2"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/2.1.7.200511041858-non-lazy-bindings.patch
+	epatch "${FILESDIR}"/2.1.7.200511041858-non-lazy-bindings.patch \
+		"${FILESDIR}"/${P}-fix-segfault-in-newlearn.patch
 	sed -i -e s/MKNOD=/'MKNOD ?='/ -e s/STRIP=/'STRIP ?='/ "${S}/Makefile"
 }
 

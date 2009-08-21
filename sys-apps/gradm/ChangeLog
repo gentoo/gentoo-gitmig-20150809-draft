@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/gradm
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.112 2009/05/27 16:55:37 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/ChangeLog,v 1.113 2009/08/21 18:56:27 gengor Exp $
+
+*gradm-2.1.13.200902232204-r1 (21 Aug 2009)
+
+  21 Aug 2009; Gordon Malm <gengor@gentoo.org>
+  -gradm-2.1.13.200902232204.ebuild, +gradm-2.1.13.200902232204-r1.ebuild,
+  +files/gradm-2.1.13.200902232204-fix-segfault-in-newlearn.patch:
+  Revision bump - fix bug #281512. Thanks to Matthew Thode for reporting and
+  providing a patch.
 
   27 May 2009; nixnut <nixnut@gentoo.org> gradm-2.1.12.200812271437.ebuild:
   ppc stable
