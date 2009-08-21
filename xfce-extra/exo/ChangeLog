@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.93 2009/08/20 21:12:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.94 2009/08/21 12:40:23 darkside Exp $
+
+  21 Aug 2009; Jeremy Olexa <darkside@gentoo.org> exo-0.3.102.ebuild:
+  s/XFCE4_PATCHES/PATCHES/ - typo
 
 *exo-0.3.102 (20 Aug 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.102.ebuild,v 1.2 2009/08/21 05:39:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.102.ebuild,v 1.3 2009/08/21 12:40:23 darkside Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ pkg_setup() {
 	XFCONF=" $(use_enable doc gtk-doc) $(use_enable hal)
 		$(use_enable libnotify notifications) $(use_enable python)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
-	XFCE4_PATCHES="${FILESDIR}/exo-0.3.101-iocharset.patch"
+	PATCHES=("${FILESDIR}/exo-0.3.101-iocharset.patch")
 }
 
 src_prepare() {
