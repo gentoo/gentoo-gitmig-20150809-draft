@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10343 2009/08/21 16:51:48 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10344 2009/08/21 20:01:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -778,16 +778,6 @@ media-sound/gnusound
 # Weird boost dependencies, need to solve this in a different way: Probably by
 # actually doing 'amazonmp3-libcompat' for both x86 and amd64. (bug #272699)
 net-misc/amazonmp3
-
-# Samuli Suominen <ssuominen@gentoo.org> (22 Jul 2009)
-# Orphaned library. Moved to samba and samba-libs.
-# Masked for removal.
-dev-libs/tdb
-
-# Rémi Cardona <remi@gentoo.org> (22 Jul 2009)
-# superceded by x11-libs/pixman, nothing deps on it
-# masked for removal in 30 days
-media-libs/libpixman
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (22 Jul 2009)
 # Mark ghc-6.10.4 and the haskell updater.
