@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.1 2009/08/18 00:54:54 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.2 2009/08/21 00:10:48 arfrever Exp $
 
 EAPI="2"
 
@@ -14,10 +14,12 @@ PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
 MY_P="Python-${PV}"
 S="${WORKDIR}/${MY_P}"
 
+PATCHSET_REVISION="0"
+
 DESCRIPTION="Python is an interpreted, interactive, object-oriented programming language."
 HOMEPAGE="http://www.python.org/"
 SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
-	mirror://gentoo/python-gentoo-patches-${PV}.tar.bz2"
+	mirror://gentoo/python-gentoo-patches-${PV}$([[ "${PATCHSET_REVISION}" != "0" ]] && echo "-r${PATCHSET_REVISION}").tar.bz2"
 
 LICENSE="PSF-2.2"
 SLOT="3.1"
@@ -80,26 +82,28 @@ src_configure() {
 	# Disable extraneous modules with extra dependencies.
 	if use build; then
 		export PYTHON_DISABLE_MODULES="gdbm _curses _curses_panel readline _sqlite3 _tkinter pyexpat"
-		export PYTHON_DISABLE_SSL=1
+		export PYTHON_DISABLE_SSL="1"
 	else
 		local disable
-		use gdbm     || disable="${disable} gdbm"
-		use ncurses  || disable="${disable} _curses _curses_panel"
-		use readline || disable="${disable} readline"
-		use sqlite   || disable="${disable} _sqlite3"
-		use ssl      || export PYTHON_DISABLE_SSL=1
-		use tk       || disable="${disable} _tkinter"
-		use xml      || disable="${disable} pyexpat"
+		use gdbm     || disable+=" gdbm"
+		use ncurses  || disable+=" _curses _curses_panel"
+		use readline || disable+=" readline"
+		use sqlite   || disable+=" _sqlite3"
+		use ssl      || export PYTHON_DISABLE_SSL="1"
+		use tk       || disable+=" _tkinter"
+		use xml      || disable+=" pyexpat"
 		export PYTHON_DISABLE_MODULES="${disable}"
+
+		if ! use xml; then
+			ewarn "You have configured Python without XML support."
+			ewarn "This is NOT a recommended configuration as you"
+			ewarn "may face problems parsing any XML documents."
+		fi
 	fi
 
-	if ! use xml; then
-		ewarn "You have configured Python without XML support."
-		ewarn "This is NOT a recommended configuration as you"
-		ewarn "may face problems parsing any XML documents."
+	if [[ -n "${PYTHON_DISABLE_MODULES}" ]]; then
+		einfo "Disabled modules: ${PYTHON_DISABLE_MODULES}"
 	fi
-
-	einfo "Disabled modules: $PYTHON_DISABLE_MODULES"
 
 	export OPT="${CFLAGS}"
 
@@ -109,8 +113,8 @@ src_configure() {
 
 	# https://bugs.gentoo.org/show_bug.cgi?id=50309
 	if is-flag -O3; then
-	   is-flag -fstack-protector-all && replace-flags -O3 -O2
-	   use hardened && replace-flags -O3 -O2
+		is-flag -fstack-protector-all && replace-flags -O3 -O2
+		use hardened && replace-flags -O3 -O2
 	fi
 
 	if tc-is-cross-compiler; then
@@ -172,7 +176,7 @@ src_test() {
 	skip_tests+=" telnetlib"
 
 	# test_pow fails on alpha.
-	# http://bugs.python.org/issue756093
+	# https://bugs.python.org/issue756093
 	[[ ${ARCH} == "alpha" ]] && skip_tests+=" pow"
 
 	# test_ctypes fails with PAX kernel (bug #234498).
@@ -234,13 +238,6 @@ src_install() {
 	newconfd "${FILESDIR}/pydoc.conf" pydoc-${SLOT}
 }
 
-pkg_postrm() {
-	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2
-
-	python_mod_cleanup /usr/lib/python${PYVER}
-	[[ "$(get_libdir)" != "lib" ]] && python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
-}
-
 pkg_postinst() {
 	# Update symlink temporarily for byte-compiling.
 	eselect python update
@@ -258,4 +255,11 @@ pkg_postinst() {
 	ewarn "Python 3 hasn't been activated and Python wrapper is still configured to use Python 2."
 	ewarn
 	ebeep
+}
+
+pkg_postrm() {
+	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2
+
+	python_mod_cleanup /usr/lib/python${PYVER}
+	[[ "$(get_libdir)" != "lib" ]] && python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
 }
