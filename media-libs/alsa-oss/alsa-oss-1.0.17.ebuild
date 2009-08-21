@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-1.0.17.ebuild,v 1.8 2009/07/02 19:02:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-1.0.17.ebuild,v 1.9 2009/08/21 20:17:35 ssuominen Exp $
 
-WANT_AUTOCONF="latest"
 WANT_AUTOMAKE="1.9"
 
-inherit multilib autotools
+inherit autotools eutils multilib
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
@@ -19,12 +18,12 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND=">=media-libs/alsa-lib-${PV}"
+RDEPEND=">=media-libs/alsa-lib-${PV}"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/${PN}-1.0.12-hardened.patch"
 	eautomake
 }
