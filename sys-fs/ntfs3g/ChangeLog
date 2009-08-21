@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.80 2009/08/02 13:29:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.81 2009/08/21 14:40:56 chutzpah Exp $
+
+*ntfs3g-2009.4.4 (21 Aug 2009)
+
+  21 Aug 2009; Patrick McLean <chutzpah@gentoo.org> -ntfs3g-1.5130.ebuild,
+  -ntfs3g-2009.2.1.ebuild, +ntfs3g-2009.4.4.ebuild:
+  Version bump (bug #282149). Use external FUSE library instead of internal
+  one, to avoid another case of library bundling, also fixes bug #235966 as
+  sys-fs/fuse checks the kernel config. Clean out some older versions.
 
   02 Aug 2009; Markus Meier <maekke@gentoo.org> ntfs3g-2009.3.8.ebuild:
   x86 stable, bug #272355

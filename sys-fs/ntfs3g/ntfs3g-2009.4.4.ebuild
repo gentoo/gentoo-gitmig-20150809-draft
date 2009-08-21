@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.2.1.ebuild,v 1.1 2009/02/12 16:21:24 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.4.4.ebuild,v 1.1 2009/08/21 14:40:56 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug hal suid"
 
-RDEPEND="hal? ( sys-apps/hal )"
+RDEPEND=">=sys-fs/fuse-2.6.0
+	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
@@ -24,6 +25,7 @@ src_compile() {
 		--docdir="/usr/share/doc/${PF}" \
 		--enable-ldscript \
 		--disable-ldconfig \
+		--with-fuse=external \
 		$(use_enable debug)
 	emake || die "emake failed"
 }
@@ -31,10 +33,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" install || die "install failed"
 
-	prepalldocs
+	prepalldocs || die "prepalldocs failed"
 	dodoc AUTHORS ChangeLog CREDITS
 
-	use suid && fperms u+s "/bin/${MY_PN}"
+	use suid && fperms u+s "/bin/${MY_PN}" || die "error enabling suid on binary"
 
 	if use hal; then
 		insinto /etc/hal/fdi/policy/
