@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.67 2009/08/19 07:53:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.68 2009/08/21 12:39:53 weaver Exp $
+
+*icc-11.1.046-r1 (21 Aug 2009)
+
+  21 Aug 2009; Andrey Kislyuk <weaver@gentoo.org> +icc-11.1.046-r1.ebuild:
+  Reinstate env.d file
 
 *icc-11.1.046 (19 Aug 2009)
 
