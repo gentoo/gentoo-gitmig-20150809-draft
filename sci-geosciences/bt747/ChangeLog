@@ -1,6 +1,11 @@
 # ChangeLog for sci-geosciences/bt747
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.1 2009/07/16 07:17:15 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.2 2009/08/21 10:05:04 bangert Exp $
+
+*bt747-1.68.25 (21 Aug 2009)
+
+  21 Aug 2009; Thilo Bangert <bangert@gentoo.org> +bt747-1.68.25.ebuild:
+  version bump
 
 *bt747-1.68.22 (16 Jul 2009)
 
