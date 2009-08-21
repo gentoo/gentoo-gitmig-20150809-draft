@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/nspluginwrapper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.2 2009/07/20 20:26:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/ChangeLog,v 1.3 2009/08/21 15:56:46 chutzpah Exp $
+
+*nspluginwrapper-1.2.2-r2 (21 Aug 2009)
+
+  21 Aug 2009; Patrick McLean <chutzpah@gentoo.org>
+  +nspluginwrapper-1.2.2-r2.ebuild,
+  +files/nspluginwrapper-1.2.2-respect-ldflags.patch:
+  Add patch and modify ebuild to properly respect LDFLAGS (bug #278607).
 
 *nspluginwrapper-1.2.2-r1 (20 Jul 2009)
 
