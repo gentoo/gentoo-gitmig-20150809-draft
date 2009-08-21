@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>gstreamer</herd>
-<herd>gnome</herd>
+<longdescription lang="en">
+	GStreamer DV demuxer and decoder plugin based on libdv (libdv.sf.net)
+</longdescription>
 </pkgmetadata>
