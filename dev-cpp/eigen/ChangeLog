@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.13 2009/08/01 18:07:18 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.14 2009/08/21 16:00:02 cryos Exp $
+
+*eigen-2.0.4-r1 (21 Aug 2009)
+
+  21 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> +eigen-2.0.4-r1.ebuild,
+  +files/eigen-2.0.4-gcc-4-1.patch:
+  Patch applied by Benoit Jacob upstream, fixes compilation issue with GCC
+  4.1. Closes bug 280588.
 
 *eigen-2.0.4 (01 Aug 2009)
 
