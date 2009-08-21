@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.7 2009/08/21 15:24:42 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.8 2009/08/21 15:42:09 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -48,8 +48,22 @@ pkg_setup() {
 	fi
 
 	G2CONF="$(use_with zlib)
-		--with-gecko=libxul
+		--with-gecko=libxul"
+	
+	# Properly detect dir for libxul.so etc.
+	# No, really, don't ask.
+	if has_version "=net-libs/xulrunner-1.9.0*"; then
+		# xulrunner-1.9.0* dir structure is broken
+		G2CONF="${G2CONF}
+		--with-gecko-home=/usr/$(get_libdir)/xulrunner-1.9"
+	elif has_version "=net-libs/xulrunner-1.9.1*"; then
+		# xulrunner-1.9.1 dir structure is fine, but the build system pukes on
+		# auto-detect
+		G2CONF="${G2CONF}
 		--with-gecko-home=$(pkg-config --variable=sdkdir libxul)/bin"
+	else
+		die "Unknown xulrunner version, unable to auto-detect gecko-home"
+	fi
 
 	# ICC is crazy, silence warnings (bug #154010)
 	if [[ $(tc-getCC) == "icc" ]] ; then
