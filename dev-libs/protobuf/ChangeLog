@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/protobuf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.7 2009/05/24 22:32:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf/ChangeLog,v 1.8 2009/08/21 17:41:18 nelchael Exp $
+
+*protobuf-2.2.0 (21 Aug 2009)
+
+  21 Aug 2009; Krzysiek Pawlik <nelchael@gentoo.org> -protobuf-2.0.3.ebuild,
+  +protobuf-2.2.0.ebuild,
+  +files/protobuf-2.2.0-decoder_test_64bit_fix.patch,
+  +files/protobuf-2.2.0-fix-emacs-byte-compile.patch:
+  Version bump.
 
   24 May 2009; Krzysiek Pawlik <nelchael@gentoo.org>
   +files/70protobuf-gentoo.el, protobuf-2.1.0.ebuild,
