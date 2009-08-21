@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.102.ebuild,v 1.1 2009/08/20 21:12:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/exo-0.3.102.ebuild,v 1.2 2009/08/21 05:39:50 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -27,7 +27,6 @@ RDEPEND=">=dev-lang/perl-5.6
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	doc? ( dev-util/gtk-doc )"
-
 
 pkg_setup() {
 	XFCONF=" $(use_enable doc gtk-doc) $(use_enable hal)
