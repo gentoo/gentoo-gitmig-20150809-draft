@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.9 2008/10/08 10:06:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-20070315.ebuild,v 1.10 2009/08/21 16:05:07 ssuominen Exp $
 
 inherit eutils libtool autotools
 
@@ -19,18 +19,13 @@ RDEPEND="=x11-libs/qt-3*
 		media-libs/alsa-lib"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${PN}-${MY_PV}"
+S=${WORKDIR}/${PN}-${MY_PV}
 
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${PV}.patch"
+	epatch "${FILESDIR}"/${PV}.patch
 	eautoreconf
-
-	# Camstream has 32 bit asssembler normally.
-	# patch has to be adapted
-	#use amd64 && epatch ${FILESDIR}/x86_64-asm.patch
-	#disabling mmx for amd64 as a workaround
 }
 
 src_compile () {
