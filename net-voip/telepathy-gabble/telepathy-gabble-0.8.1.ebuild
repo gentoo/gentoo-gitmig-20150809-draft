@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.7.30.ebuild,v 1.1 2009/07/20 15:17:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/telepathy-gabble-0.8.1.ebuild,v 1.1 2009/08/21 21:28:34 tester Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ IUSE="debug test"
 RDEPEND=">=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.78
-	>=net-libs/telepathy-glib-0.7.31
+	>=net-libs/telepathy-glib-0.7.34
 	>=net-libs/loudmouth-1.3.2[ssl]"
 
 DEPEND="${RDEPEND}
