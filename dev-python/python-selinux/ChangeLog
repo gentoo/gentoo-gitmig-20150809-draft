@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-selinux
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.36 2007/09/01 11:57:47 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/ChangeLog,v 1.37 2009/08/21 19:55:31 pebenito Exp $
+
+  21 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
+  python-selinux-2.16-r2.ebuild:
+  Add python_need_rebuild to fix bug #244614.  Drop non x86/amd64 support.
 
   01 Sep 2007; Christian Heim <phreak@gentoo.org> metadata.xml:
   Removing method from metadata due to his retirement (see #175298 for
