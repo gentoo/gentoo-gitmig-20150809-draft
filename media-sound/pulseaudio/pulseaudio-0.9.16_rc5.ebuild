@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc5.ebuild,v 1.1 2009/08/20 18:53:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.16_rc5.ebuild,v 1.2 2009/08/21 23:16:13 flameeyes Exp $
 
 EAPI=2
 
@@ -47,7 +47,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	)
 	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
-	udev? ( >=sys-fs/udev-143 )
+	udev? ( >=sys-fs/udev-143[extras] )
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-libs/speex-1.2_beta
 	>=media-libs/libsndfile-1.0.10

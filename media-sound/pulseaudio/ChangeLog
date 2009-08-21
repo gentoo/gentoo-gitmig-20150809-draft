@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.142 2009/08/20 18:53:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.143 2009/08/21 23:16:13 flameeyes Exp $
+
+  21 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.9-r54.ebuild, pulseaudio-0.9.16_rc5.ebuild,
+  pulseaudio-0.9.16_rc5-r51.ebuild, files/pulseaudio.init.d-4:
+  Depend on libtool 1.5 for 0.9.9 (bug #281342), fix dependency on udev for
+  0.9.16 to require extras (bug #281951), fix init scripts to ignore
+  comments (bug #263350) and also consider udev detect in ALSA's case.
 
 *pulseaudio-0.9.16_rc5-r51 (20 Aug 2009)
 *pulseaudio-0.9.16_rc5 (20 Aug 2009)
