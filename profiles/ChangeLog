@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3145 2009/08/21 14:31:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3146 2009/08/21 16:51:48 tommy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  21 Aug 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org> package.mask:
+  Mask alpha version of k3b
 
   21 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> use.desc:
   New global USE flag "mp4".
