@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.6 2009/08/19 16:51:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.7 2009/08/21 15:24:42 nirbheek Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND=">=gnome-base/gconf-2.6
 	>=dev-libs/glib-2.8
 	>=gnome-base/libglade-2.4
 	>=x11-libs/libwnck-2.10
-	=net-libs/xulrunner-1.9.0*
+	net-libs/xulrunner:1.9
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	  sys-devel/gettext
@@ -49,7 +49,7 @@ pkg_setup() {
 
 	G2CONF="$(use_with zlib)
 		--with-gecko=libxul
-		--with-gecko-home=/usr/$(get_libdir)/xulrunner-1.9"
+		--with-gecko-home=$(pkg-config --variable=sdkdir libxul)/bin"
 
 	# ICC is crazy, silence warnings (bug #154010)
 	if [[ $(tc-getCC) == "icc" ]] ; then
