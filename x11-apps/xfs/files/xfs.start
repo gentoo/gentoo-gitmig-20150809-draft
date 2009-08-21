@@ -2,7 +2,7 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
 # Author:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/files/xfs.start,v 1.4 2008/04/17 04:23:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/files/xfs.start,v 1.5 2009/08/21 09:16:52 scarabeus Exp $
 
 #NB: Config is in /etc/conf.d/xfs
 
@@ -238,7 +238,7 @@ setup_font_dirs() {
 			# NOTE: ttmkfdir does NOT work on type1 fonts (#53753)
 			# Also, there is no way to regenerate Speedo/CID fonts.scale
 			# <spyderous@gentoo.org> 2 August 2004
-			if [ "${x/encodings}" = "${x}" -a \
+			if [ "${x%*encodings*}" = "${x}" -a \
 			     -n "$(find ${x} -iname '*.tt[cf]' -print)" ]
 			then
 				/usr/bin/ttmkfdir -x 2 \
@@ -254,7 +254,7 @@ setup_font_dirs() {
 				fi
 
 			# Next type1 and opentype (pfa,pfb,otf,otc)
-			elif [ "${x/encodings}" = "${x}" -a \
+			elif [ "${x%*encodings*}" = "${x}" -a \
 				-n "$(find ${x} -iname '*.[po][ft][abcf]' -print)" ]
 			then
 				/usr/bin/mkfontscale \
@@ -263,7 +263,7 @@ setup_font_dirs() {
 			fi
           
 		  	# Now generate fonts.dir files ...
-			if [ "${x/encodings}" = "${x}" ]
+			if [ "${x%*encodings*}" = "${x}" ]
 			then
 				/usr/bin/mkfontdir \
 					-e /usr/share/fonts/encodings \
@@ -271,7 +271,7 @@ setup_font_dirs() {
 					-- ${x} > /dev/null
 			fi
 
-			if [ "${x/encodings}" = "${x}" -a -x /usr/bin/xftcache ] && \
+			if [ "${x%*encodings*}" = "${x}" -a -x /usr/bin/xftcache ] && \
 			   [ -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 			then
 				# xftcache is broken, but run it anyhow ...
@@ -313,7 +313,7 @@ start() {
 			# See discussion at http://freedesktop.org/bugzilla/show_bug.cgi?id=306
 			rm -rf /tmp/.font-unix
 			mkdir -m 1777 /tmp/.font-unix
-			((sanity+=1))
+			sanity=$((sanity+1))
 			if [ ${sanity} -gt 1000 ] ; then
 				eend 1 "i give up"
 				return 1
