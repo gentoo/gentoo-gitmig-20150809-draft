@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.10.ebuild,v 1.4 2009/08/09 16:48:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.9.10.ebuild,v 1.5 2009/08/21 10:11:40 aballier Exp $
 
 EAPI="1"
 
@@ -47,7 +47,7 @@ SLOT="0"
 
 KEYWORDS="alpha amd64 ~arm ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec arts atmo avahi bidi cdda cddax cddb cdio dbus dc1394
-	debug dirac directfb dts dvb dvd esd fbcon fluidsynth +ffmpeg flac fontconfig +gcrypt ggi gnome gnutls hal httpd
+	debug dirac directfb dts dvb dvd elibc_glibc esd fbcon fluidsynth +ffmpeg flac fontconfig +gcrypt ggi gnome gnutls hal httpd
 	id3tag jack kate libass libcaca libnotify libsysfs libv4l2 lirc live lua matroska mmx modplug mp3 mpeg
 	musepack ncurses nsplugin ogg opengl optimisememory oss pda png	pulseaudio pvr +qt4
 	remoteosd rtsp run-as-root samba schroedinger sdl sdl-image seamonkey shout skins speex sse stream svg svga taglib
@@ -77,6 +77,7 @@ RDEPEND="
 				media-libs/libdvdcss
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
+		elibc_glibc? ( >=sys-libs/glibc-2.8 )
 		esd? ( media-sound/esound )
 		ffmpeg? ( >=media-video/ffmpeg-0.4.9_p20090201 )
 		flac? ( media-libs/libogg
