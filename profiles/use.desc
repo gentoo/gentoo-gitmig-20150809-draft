@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.423 2009/07/24 17:35:47 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.424 2009/08/21 14:31:20 ssuominen Exp $
 
 # Keep them sorted
 
@@ -223,6 +223,7 @@ mono - Build Mono bindings to support dotnet type stuff
 motif - Adds support for the Motif toolkit
 mozilla - Adds support for the Mozilla web-browser
 mp3 - Add support for reading mp3 files
+mp4 - Support for MP4 container format
 mpeg - Adds libmpeg3 support to various packages
 mpi - Adds MPI (Message Passing Interface) layer to the apps that support it
 mplayer - Enable mplayer support for playback or encoding
