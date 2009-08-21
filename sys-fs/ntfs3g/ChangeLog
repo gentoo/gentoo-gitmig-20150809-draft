@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.81 2009/08/21 14:40:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.82 2009/08/21 15:49:21 chutzpah Exp $
+
+  21 Aug 2009; Patrick McLean <chutzpah@gentoo.org> ntfs3g-2009.4.4.ebuild:
+  Remove suid check as it fails with the suid use flag off.
 
 *ntfs3g-2009.4.4 (21 Aug 2009)
 

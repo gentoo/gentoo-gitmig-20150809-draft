@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.4.4.ebuild,v 1.1 2009/08/21 14:40:56 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.4.4.ebuild,v 1.2 2009/08/21 15:49:21 chutzpah Exp $
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -36,7 +36,7 @@ src_install() {
 	prepalldocs || die "prepalldocs failed"
 	dodoc AUTHORS ChangeLog CREDITS
 
-	use suid && fperms u+s "/bin/${MY_PN}" || die "error enabling suid on binary"
+	use suid && fperms u+s "/bin/${MY_PN}"
 
 	if use hal; then
 		insinto /etc/hal/fdi/policy/
