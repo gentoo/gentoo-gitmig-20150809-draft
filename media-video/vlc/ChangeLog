@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.491 2009/08/19 21:52:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.492 2009/08/21 09:53:21 aballier Exp $
+
+  21 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  xvideo output is now libxcb-xv based, no need to depend on libXv
 
   19 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   xinerama is gone in master

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.32 2009/08/19 21:52:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.33 2009/08/21 09:53:21 aballier Exp $
 
 EAPI="2"
 
@@ -146,7 +146,6 @@ RDEPEND="
 		X? (
 			x11-libs/libX11
 			x11-libs/libXext
-			xv? ( x11-libs/libXv )
 			opengl? ( virtual/opengl )
 		)
 		x264? ( media-libs/x264 )
