@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.4.4.ebuild,v 1.2 2009/08/21 15:49:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ntfs3g-2009.4.4.ebuild,v 1.3 2009/08/21 20:49:53 chutzpah Exp $
+
+EAPI=2
 
 MY_PN="${PN/3g/-3g}"
 MY_P="${MY_PN}-${PV}"
@@ -12,7 +14,7 @@ SRC_URI="http://www.ntfs-3g.org/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug hal suid"
+IUSE="debug hal suid +external-fuse"
 
 RDEPEND=">=sys-fs/fuse-2.6.0
 	hal? ( sys-apps/hal )"
@@ -20,14 +22,13 @@ DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
-src_compile() {
+src_configure() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
 		--enable-ldscript \
 		--disable-ldconfig \
-		--with-fuse=external \
+		--with-fuse=$(use external-fuse && echo external || echo internal) \
 		$(use_enable debug)
-	emake || die "emake failed"
 }
 
 src_install() {

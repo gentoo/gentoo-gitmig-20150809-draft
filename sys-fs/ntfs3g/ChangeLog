@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/ntfs3g
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.82 2009/08/21 15:49:21 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfs3g/ChangeLog,v 1.83 2009/08/21 20:49:53 chutzpah Exp $
+
+  21 Aug 2009; Patrick McLean <chutzpah@gentoo.org> ntfs3g-2009.4.4.ebuild,
+  metadata.xml:
+  Migrate to EAPI=2. Add a default-on USE flag for external FUSE, as the
+  internal FUSE must be used for unpriviliged mounting to work (bug
+  #282222).
 
   21 Aug 2009; Patrick McLean <chutzpah@gentoo.org> ntfs3g-2009.4.4.ebuild:
   Remove suid check as it fails with the suid use flag off.
