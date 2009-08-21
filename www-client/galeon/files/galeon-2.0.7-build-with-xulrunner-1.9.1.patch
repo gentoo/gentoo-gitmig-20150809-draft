@@ -2,7 +2,19 @@ Fix building with xulrunner-1.9.1, bug 275252
 
 Patch taken from http://cvs.fedoraproject.org/viewvc/devel/galeon/galeon-2.0.7-moz191.patch?view=log
 
+Addendum from bug 278917 -- patch adapted from bug 263990 by Michael Mauch
+
 --
+--- a/mozilla/MozRegisterComponents.cpp
++++ b/mozilla/MozRegisterComponents.cpp
+@@ -44,6 +44,7 @@
+ 
+ #ifdef HAVE_NSIXULAPPINFO_H
+ #include <nsXULAppAPI.h>
++#include <nsXPCOMCIDInternal.h>
+ #include "EphyXULAppInfo.h"
+ #endif
+ 
 --- a/mozilla/EventContext.cpp
 +++ b/mozilla/EventContext.cpp
 @@ -35,6 +35,7 @@
