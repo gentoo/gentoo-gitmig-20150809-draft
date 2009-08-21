@@ -1,34 +1,33 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.22 2008/06/04 17:24:30 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoGtk/SoGtk-20010601-r1.ebuild,v 1.23 2009/08/21 20:13:30 ssuominen Exp $
 
-inherit eutils autotools
+EAPI=2
+inherit autotools eutils multilib
 
 DESCRIPTION="A Gtk Interface for coin"
 HOMEPAGE="http://www.coin3d.org"
 SRC_URI="mirror://gentoo/${P}.tar.gz"
+
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
 IUSE="doc nls"
 
 RDEPEND="media-libs/coin
-		<x11-libs/gtkglarea-1.99.0"
+	<x11-libs/gtkglarea-1.99.0"
 DEPEND="${RDEPEND}
-	=sys-apps/sed-4*
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 
 S=${WORKDIR}/${PN}
 
-src_unpack() {
-	unpack ${A}; cd ${S}
-	epatch ${FILESDIR}/${P}-string.patch
-
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-string.patch
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	local myconf
 
 	if ! use nls
@@ -40,21 +39,18 @@ src_compile() {
 
 	econf \
 		--with-x \
-		${myconf} || die
+		${myconf}
 
 	sed -i "s:ENABLE_NLS 1:ENABLE_NLS 0:" config.h
-	make || die
 }
 
 src_install () {
-
 	einstall \
-		bindir=${D}/usr/bin \
-		includedir=${D}/usr/include \
-		libdir=${D}/usr/lib || die
+		bindir="${D}/usr/bin" \
+		includedir="${D}/usr/include" \
+		libdir="${D}/usr/$(get_libdir)" || die "einstall failed"
 
-	cd ${S}
-	dodoc AUTHORS COPYING ChangeLog* LICENSE* NEWS README*
+	dodoc AUTHORS ChangeLog* NEWS README*
 	docinto txt
 	dodoc docs/*
 }
