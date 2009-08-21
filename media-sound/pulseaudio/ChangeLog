@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.143 2009/08/21 23:16:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.144 2009/08/21 23:18:46 flameeyes Exp $
+
+  21 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.9-r54.ebuild:
+  Fix install of init.d script when all service USE flags are disabled (bug
+  #267734).
 
   21 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.9-r54.ebuild, pulseaudio-0.9.16_rc5.ebuild,

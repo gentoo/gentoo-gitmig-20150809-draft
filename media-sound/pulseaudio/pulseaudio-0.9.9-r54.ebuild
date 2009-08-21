@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.9-r54.ebuild,v 1.2 2009/08/21 23:16:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.9-r54.ebuild,v 1.3 2009/08/21 23:18:46 flameeyes Exp $
 
 inherit eutils libtool autotools flag-o-matic
 
@@ -123,7 +123,11 @@ src_install() {
 	use avahi && neededservices="$neededservices avahi-daemon"
 	use hal && neededservices="$neededservices hald"
 	use bluetooth && neededservices="$neededservices bluetooth"
-	[[ -n ${neededservices} ]] && sed -e "s/@neededservices@/need $neededservices/" "${FILESDIR}/pulseaudio.init.d-2" > "${T}/pulseaudio"
+	if [[ -n ${neededservices} ]]; then
+		sed -e "s/@neededservices@/need $neededservices/" "${FILESDIR}/pulseaudio.init.d-2" > "${T}/pulseaudio"
+	else
+		sed -e "/@neededservices@/d" "${FILESDIR}/pulseaudio.init.d-2" > "${T}/pulseaudio"
+	fi
 	doinitd "${T}/pulseaudio"
 
 	use avahi && sed -i -e '/module-zeroconf-publish/s:^#::' "${D}/etc/pulse/default.pa"
