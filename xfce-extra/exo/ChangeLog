@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.94 2009/08/21 12:40:23 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/exo/ChangeLog,v 1.95 2009/08/21 18:15:38 darkside Exp $
+
+*exo-0.3.102-r1 (21 Aug 2009)
+
+  21 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -exo-0.3.102.ebuild,
+  +exo-0.3.102-r1.ebuild:
+  add eject patch to 102-r1, bug 282218
 
   21 Aug 2009; Jeremy Olexa <darkside@gentoo.org> exo-0.3.102.ebuild:
   s/XFCE4_PATCHES/PATCHES/ - typo
