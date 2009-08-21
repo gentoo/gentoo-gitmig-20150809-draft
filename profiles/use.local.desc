@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4739 2009/08/21 10:27:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4740 2009/08/21 13:27:49 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -79,8 +79,8 @@ app-arch/libarchive:bzip2 -  Allow accessing bzip2-compressed archives through l
 app-arch/libarchive:lzma -  Allow accessing lzma-compressed archives through the lzmadec library. 
 app-arch/libarchive:static -  Build bsdtar and bsdcpio as static archives, removing dependencies over the enabled compression libraries (lzmadec, libbz2, zlib). 
 app-arch/p7zip:rar - Enable support for non-free rar decoder
-app-arch/rpm:file - add magic file support
-app-arch/rpm:neon - include support for neon
+app-arch/rpm:magic - Add magic file support (sys-apps/file)
+app-arch/rpm:neon - Include support for net-misc/neon
 app-arch/squeeze:pathbar - Include pathbar feature
 app-arch/squeeze:toolbar - Include toolbar feature
 app-backup/amanda:devpay - Support for using Amazon DevPay with S3
