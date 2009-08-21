@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.36 2009/08/21 10:11:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.37 2009/08/21 10:29:01 aballier Exp $
 
 EAPI="2"
 
@@ -73,7 +73,7 @@ RDEPEND="
 		dc1394? ( >=sys-libs/libraw1394-2.0.1
 			>=media-libs/libdc1394-2.0.2 )
 		dirac? ( >=media-video/dirac-0.10.0 )
-		directfb? ( dev-libs/DirectFB )
+		directfb? ( dev-libs/DirectFB sys-libs/zlib )
 		dts? ( media-libs/libdca )
 		dvd? (	media-libs/libdvdread
 				media-libs/libdvdcss
@@ -90,8 +90,7 @@ RDEPEND="
 		gnome? ( gnome-base/gnome-vfs )
 		gnutls? ( >=net-libs/gnutls-1.7.4 )
 		hal? ( sys-apps/hal )
-		id3tag? ( media-libs/libid3tag
-			sys-libs/zlib )
+		id3tag? ( media-libs/libid3tag sys-libs/zlib )
 		ieee1394? ( >=sys-libs/libraw1394-2.0.1 >=sys-libs/libavc1394-0.5.3 )
 		jack? ( >=media-sound/jack-audio-connection-kit-0.99.0-r1 )
 		kate? ( >=media-libs/libkate-0.1.1 )
@@ -120,7 +119,7 @@ RDEPEND="
 		)
 		ogg? ( media-libs/libogg )
 		pda? ( x11-libs/gtk+:2 )
-		png? ( media-libs/libpng )
+		png? ( media-libs/libpng sys-libs/zlib )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
@@ -128,13 +127,13 @@ RDEPEND="
 		samba? ( net-fs/samba )
 		schroedinger? ( >=media-libs/schroedinger-1.0.6 )
 		sdl? ( >=media-libs/libsdl-1.2.8
-			sdl-image? ( media-libs/sdl-image ) )
+			sdl-image? ( media-libs/sdl-image sys-libs/zlib	) )
 		shout? ( media-libs/libshout )
 		skins? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libXext x11-libs/libX11 )
 		speex? ( media-libs/speex )
 		svg? ( >=gnome-base/librsvg-2.9.0 )
 		svga? ( media-libs/svgalib )
-		taglib? ( >=media-libs/taglib-1.5 )
+		taglib? ( >=media-libs/taglib-1.5 sys-libs/zlib )
 		theora? ( >=media-libs/libtheora-1.0_beta3 )
 		truetype? ( media-libs/freetype
 			media-fonts/dejavu )
