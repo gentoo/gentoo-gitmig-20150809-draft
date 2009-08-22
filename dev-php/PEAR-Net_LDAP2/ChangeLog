@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_LDAP2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/ChangeLog,v 1.3 2009/03/07 05:52:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_LDAP2/ChangeLog,v 1.4 2009/08/22 18:58:54 beandog Exp $
+
+*PEAR-Net_LDAP2-2.0.6 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Net_LDAP2-2.0.6.ebuild:
+  Version bump, bug 274694
 
 *PEAR-Net_LDAP2-2.0.0_rc5 (07 Mar 2009)
 
