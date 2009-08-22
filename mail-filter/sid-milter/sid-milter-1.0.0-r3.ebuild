@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r2.ebuild,v 1.4 2009/08/15 12:42:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sid-milter/sid-milter-1.0.0-r3.ebuild,v 1.1 2009/08/22 23:20:57 mrness Exp $
 
 EAPI="2"
 
@@ -15,10 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 x86"
 IUSE="ipv6"
 
-RDEPEND="dev-libs/openssl
-	>=sys-libs/db-3.2"
-DEPEND="${RDEPEND}
-	|| ( mail-filter/libmilter mail-mta/sendmail )" # libmilter is a static library
+DEPEND="dev-libs/openssl
+	>=sys-libs/db-3.2
+	|| ( mail-filter/libmilter mail-mta/sendmail )"
+RDEPEND="${DEPEND}"
 
 pkg_setup() {
 	enewgroup milter
@@ -32,16 +32,19 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-nopra_on_spf1.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 
+	local CC="$(tc-getCC)"
 	local ENVDEF=""
 	use ipv6 && ENVDEF="${ENVDEF} -DNETINET6"
-	sed -e "s:@@CFLAGS@@:${CFLAGS}:" \
+	sed -e "s:@@CC@@:${CC}:" \
+		-e "s:@@CFLAGS@@:${CFLAGS}:" \
+		-e "s:@@LDFLAGS@@:${LDFLAGS}:" \
 		-e "s:@@ENVDEF@@:${ENVDEF}:" \
 		"${FILESDIR}/gentoo-config.m4" > "${S}/devtools/Site/site.config.m4" \
 		|| die "failed to generate site.config.m4"
 }
 
 src_compile() {
-	emake -j1 CC="$(tc-getCC)" || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
