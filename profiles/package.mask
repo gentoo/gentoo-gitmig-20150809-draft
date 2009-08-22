@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10351 2009/08/22 21:44:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10352 2009/08/22 22:05:06 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
+# devel-logger is now bundled with ruby 1.8. The standalone version
+# is only suited for ruby 1.6, which has gone from our tree a long
+# time ago. devel-logger will follow in 30 days.
+dev-ruby/devel-logger
 
 # Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
 # cgi_multipart_eof_fix is used to fix ruby versions up to 1.8.5.
