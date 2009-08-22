@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.11 2008/11/02 06:30:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-6.5.ebuild,v 1.12 2009/08/22 19:10:03 ssuominen Exp $
 
 inherit rpm eutils versionator
 
@@ -34,15 +34,15 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="app-arch/unzip"
 
 RDEPEND="app-shells/tcsh
-	 x86? ( virtual/fam
-	        !bundled-libs? ( =x11-libs/qt-3*
-	                         || ( sys-libs/libstdc++-v3 =sys-devel/gcc-3.3* )
-	                         >=x11-libs/openmotif-2.2 ) )
-	 amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.1.4
-	          app-emulation/emul-linux-x86-xlibs
-	          !bundled-libs? ( app-emulation/emul-linux-x86-qtlibs ) )
-	 doc? ( !bundled-libs? ( >=virtual/jre-1.4.2 ) )
-	 virtual/opengl"
+	x86? ( virtual/fam
+		!bundled-libs? ( =x11-libs/qt-3*
+			=virtual/libstdc++-3*
+			>=x11-libs/openmotif-2.2 ) )
+	amd64? ( >=app-emulation/emul-linux-x86-baselibs-2.1.4
+		app-emulation/emul-linux-x86-xlibs
+		!bundled-libs? ( app-emulation/emul-linux-x86-qtlibs ) )
+	doc? ( !bundled-libs? ( >=virtual/jre-1.4.2 ) )
+	virtual/opengl"
 
 AWDIR="/opt/aw"
 MAYADIR="${AWDIR}/maya${SLOT}"
