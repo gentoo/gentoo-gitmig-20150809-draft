@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/realbasic
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/ChangeLog,v 1.3 2008/12/26 03:00:41 wormo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/realbasic/ChangeLog,v 1.4 2009/08/22 19:23:11 williamh Exp $
+
+  22 Aug 2009; William Hubbs <williamh@gentoo.org> realbasic-2007.3.ebuild:
+  Fixed virtual/libstdc++ dependency for bug 231870.
 
   26 Dec 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   realbasic-2007.3.ebuild:
