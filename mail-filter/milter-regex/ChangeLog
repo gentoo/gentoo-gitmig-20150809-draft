@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/milter-regex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.6 2009/08/19 20:32:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/milter-regex/ChangeLog,v 1.7 2009/08/22 23:10:29 mrness Exp $
+
+*milter-regex-1.7-r2 (22 Aug 2009)
+
+  22 Aug 2009; Alin Năstac <mrness@gentoo.org> -milter-regex-1.7-r1.ebuild,
+  +milter-regex-1.7-r2.ebuild:
+  Use shared libmilter library (#245950).
 
 *milter-regex-1.7-r1 (19 Aug 2009)
 
