@@ -1,6 +1,9 @@
 # ChangeLog for www-client/midori
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.15 2009/08/02 00:57:57 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/midori/ChangeLog,v 1.16 2009/08/22 16:18:22 darkside Exp $
+
+  22 Aug 2009; Jeremy Olexa <darkside@gentoo.org> midori-9999.ebuild:
+  Update EGIT_REPO_URI, bug 281859
 
 *midori-0.1.9 (02 Aug 2009)
 
