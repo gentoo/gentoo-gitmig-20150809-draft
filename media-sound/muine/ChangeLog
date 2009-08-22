@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/muine
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.53 2009/04/05 17:19:23 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.54 2009/08/22 22:12:31 loki_val Exp $
+
+*muine-0.8.10-r1 (22 Aug 2009)
+
+  22 Aug 2009; Peter Alfredsen <loki_val@gentoo.org>
+  +muine-0.8.10-r1.ebuild, +files/muine-0.8.10-gtk-sharp-2.12.9.patch:
+  Fix bug 272651, bugzilla.gnome.org bug 584702. Patch by Iain Lane.
 
   05 Apr 2009; Peter Alfredsen <loki_val@gentoo.org> muine-0.8.10.ebuild:
   Remove -Werror from build, bug 260915. Also drop aac use-flag, since faad2
