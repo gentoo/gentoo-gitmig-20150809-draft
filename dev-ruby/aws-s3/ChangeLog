@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/aws-s3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/ChangeLog,v 1.3 2009/05/04 11:51:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-s3/ChangeLog,v 1.4 2009/08/22 21:30:40 graaff Exp $
+
+  22 Aug 2009; Hans de Graaff <graaff@gentoo.org> -aws-s3-0.5.1.ebuild:
+  Remove old version.
 
   04 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> aws-s3-0.6.2.ebuild:
   Fix src_test when Ruby 1.9 is not present.
