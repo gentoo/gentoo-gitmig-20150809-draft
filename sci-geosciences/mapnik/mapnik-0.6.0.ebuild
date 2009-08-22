@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.0.ebuild,v 1.4 2009/08/19 02:59:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapnik/mapnik-0.6.0.ebuild,v 1.5 2009/08/22 23:18:09 nerdboy Exp $
 EAPI=2
 
 inherit eutils toolchain-funcs
@@ -26,12 +26,8 @@ RDEPEND="dev-libs/boost
 	python? ( >=dev-libs/boost-1.35.0-r5[python] )
 	cairo? ( x11-libs/cairo
 		dev-cpp/cairomm )
-	postgres? ( || (
-			>=dev-db/postgresql-base-8.0
-			>=dev-db/postgresql-server-8.0
-			>=dev-db/postgresql-8.0
-		)
-		!dev-db/libpq
+	postgres? (
+		>=virtual/postgresql-base-8.0
 		>=dev-db/postgis-1.1.2
 	)
 	gdal? ( sci-libs/gdal )
@@ -49,7 +45,7 @@ src_prepare() {
 
 	sed -i -e "s:libraries \= \[:libraries \= \[\'mapnik\',:g" \
 	    plugins/input/{gdal,postgis,shape,raster}/SConscript \
-	    || die "sed 4 failed"
+	    || die "sed 2 failed"
 }
 
 src_configure() {
