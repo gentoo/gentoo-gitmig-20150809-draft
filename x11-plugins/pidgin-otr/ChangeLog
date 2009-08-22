@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/pidgin-otr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.15 2009/08/16 09:02:49 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-otr/ChangeLog,v 1.16 2009/08/22 04:05:23 tester Exp $
+
+  22 Aug 2009; Olivier Crête <tester@gentoo.org> pidgin-otr-3.2.0.ebuild:
+  Build with parallel make, remove -j1. Bug #235990
 
   16 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
   pidgin-otr-3.2.0.ebuild:
