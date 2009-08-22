@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.3-r1.ebuild,v 1.1 2009/08/22 21:41:23 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.3-r1.ebuild,v 1.2 2009/08/22 22:37:26 mrness Exp $
 
 EAPI="2"
 
@@ -49,10 +49,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/sendmail-delivered_hdr.patch
 	epatch "${FILESDIR}"/libmilter-sharedlib.patch
 
-	confCCOPTS="${CFLAGS}"
-	confLDOPTS="${LDFLAGS}"
-	confMAPDEF="-DMAP_REGEX"
-	conf_sendmail_LIBS=""
+	local confCC="$(tc-getCC)"
+	local confCCOPTS="${CFLAGS}"
+	local confLDOPTS="${LDFLAGS}"
+	local confMAPDEF="-DMAP_REGEX"
+	local conf_sendmail_LIBS=""
 	use sasl && confLIBS="${confLIBS} -lsasl2"  \
 		&& confENVDEF="${confENVDEF} -DSASL=2" \
 		&& confCCOPTS="${confCCOPTS} -I/usr/include/sasl" \
@@ -69,6 +70,7 @@ src_prepare() {
 	use sockets && confENVDEF="${confENVDEF} -DSOCKETMAP"
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
 		-e "s/@@confLDOPTS@@/${confLDOPTS}/" \
+		-e "s/@@confCC@@/${confCC}/" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
 		-e "s/@@confLIBS@@/${confLIBS}/" \
@@ -77,9 +79,9 @@ src_prepare() {
 }
 
 src_compile() {
-	sh Build CC="$(tc-getCC)"|| die "compilation failed in main Build script"
+	sh Build || die "compilation failed in main Build script"
 	pushd libmilter
-	sh Build MILTER_SOVER=${LIBMILTER_VER} CC="$(tc-getCC)"|| die "libmilter compilation failed"
+	sh Build MILTER_SOVER=${LIBMILTER_VER} || die "libmilter compilation failed"
 	popd
 }
 
