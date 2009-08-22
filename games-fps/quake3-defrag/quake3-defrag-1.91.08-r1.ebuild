@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/quake3-defrag-1.91.08-r1.ebuild,v 1.2 2006/10/23 21:54:32 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/quake3-defrag-1.91.08-r1.ebuild,v 1.3 2009/08/22 22:04:55 mr_bones_ Exp $
 
 MOD_DESC="Trickjumping challenges for Quake III"
 MOD_NAME="Defrag"
@@ -8,7 +8,7 @@ MOD_DIR="defrag"
 inherit games games-mods
 
 HOMEPAGE="http://www.planetquake.com/defrag/"
-SRC_URI="http://cgg0.free.fr/defrag/defrag_${PV}.zip
+SRC_URI="http://www.defrag.ru/files/defrag_${PV}.zip
 	http://www.german-defrag.de/files/defrag/defragpak1.zip
 	http://www.german-defrag.de/files/defrag/defragpak2.zip
 	http://www.german-defrag.de/files/defrag/defragpak3.zip
