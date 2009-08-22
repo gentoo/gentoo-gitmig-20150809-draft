@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.3.185404.ebuild,v 1.1 2009/08/22 01:50:11 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/vmware-player-2.5.3.185404.ebuild,v 1.2 2009/08/22 13:46:53 vadimk Exp $
 
 EAPI="2"
 
@@ -155,6 +155,11 @@ pkg_postinst() {
 
 	ewarn "Before you can use vmware-player, you must configure a default network setup."
 	ewarn "You can do this by running 'emerge --config ${PN}'."
+}
+
+pkg_prerm() {
+	einfo "Stopping ${product_name} for safe unmerge"
+	/etc/init.d/vmware stop
 }
 
 pkg_postrm() {

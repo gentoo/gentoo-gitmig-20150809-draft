@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-player
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.76 2009/08/22 01:50:11 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-player/ChangeLog,v 1.77 2009/08/22 13:46:53 vadimk Exp $
+
+  22 Aug 2009; Vadim Kuznetsov vadimk@gentoo.org
+  vmware-player-2.5.3.185404.ebuild:
+  Added pkg_prerm for safe unmerge
 
 *vmware-player-2.5.3.185404 (22 Aug 2009)
 
