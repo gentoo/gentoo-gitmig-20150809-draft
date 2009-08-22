@@ -41,3 +41,42 @@ diff -Nru squid-3.1.0.13.orig/src/ftp.cc squid-3.1.0.13/src/ftp.cc
              if (escaped)
                  rfc1738_unescape(user);
          }
+diff -Nru squid-3.1.0.13.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in squid-3.1.0.13/helpers/negotiate_auth/squid_kerb_auth/configure.in
+--- squid-3.1.0.13.orig/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-08-19 19:00:43.000000000 +0200
++++ squid-3.1.0.13/helpers/negotiate_auth/squid_kerb_auth/configure.in	2009-08-22 12:53:13.000000000 +0200
+@@ -94,7 +94,7 @@
+                        else
+                          ac_gssapi_libs=`krb5-config --libs gssapi 2>/dev/null`
+                          if test "x$ac_gssapi_libs" != "x" ; then
+-                           LDFLAGS="$LDFLAGS $ac_gssapi_libs"
++                           LIBS="$LIBS $ac_gssapi_libs"
+                          else
+                            for lib in $ac_gss_libs; do
+                              AC_CHECK_LIB($lib,main)
+@@ -118,7 +118,7 @@
+                      fi
+                      ac_gssapi_libs=`krb5-config --libs gssapi 2>/dev/null`
+                      if test "x$ac_gssapi_libs" != "x" ; then
+-                         LDFLAGS="$LDFLAGS $ac_gssapi_libs"
++                         LIBS="$LIBS $ac_gssapi_libs"
+                      else
+                          for lib in $ac_gss_libs; do
+                             AC_CHECK_LIB($lib,main)
+@@ -172,7 +172,7 @@
+                              ac_libdir=`echo $ac_gssapi_libs | sed -e 's/.*-L//' | sed -e 's/ .*//'`  
+                              LDFLAGS="$LDFLAGS $w_flag$ac_libdir$w_flag_2"
+                            fi
+-                           LDFLAGS="$LDFLAGS $ac_gssapi_libs"
++                           LIBS="$LIBS $ac_gssapi_libs"
+                          else
+                            for lib in $ac_gss_libs; do
+                              AC_CHECK_LIB($lib,main)
+@@ -201,7 +201,7 @@
+                            ac_libdir=`echo $ac_gssapi_libs | sed -e 's/.*-L//' | sed -e 's/ .*//'`  
+                            LDFLAGS="$LDFLAGS $w_flag$ac_libdir$w_flag_2"
+                          fi
+-                         LDFLAGS="$LDFLAGS $ac_gssapi_libs"
++                         LIBS="$LIBS $ac_gssapi_libs"
+                      else
+                          for lib in $ac_gss_libs; do
+                             AC_CHECK_LIB($lib,main)

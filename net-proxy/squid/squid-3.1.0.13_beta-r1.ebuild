@@ -1,12 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.9_beta.ebuild,v 1.2 2009/07/23 06:57:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.13_beta-r1.ebuild,v 1.1 2009/08/22 12:57:20 mrness Exp $
 
 EAPI="2"
 
 inherit eutils pam toolchain-funcs
-
-RESTRICT="test" # check if test works in next bump
 
 DESCRIPTION="A full-featured web proxy cache"
 HOMEPAGE="http://www.squid-cache.org/"
@@ -15,11 +13,11 @@ SRC_URI="http://www.squid-cache.org/Versions/v3/3.1/${P/_beta}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate \
+IUSE="caps ipv6 pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate test \
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
-	elibc_uclibc kernel_linux epoll"
+	elibc_uclibc kernel_linux +epoll"
 
 COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )
@@ -34,7 +32,8 @@ COMMON_DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 DEPEND="${COMMON_DEPEND}
 	sys-devel/automake
 	sys-devel/autoconf
-	sys-devel/libtool"
+	sys-devel/libtool
+	test? ( dev-util/cppunit )"
 RDEPEND="${COMMON_DEPEND}
 	samba? ( net-fs/samba )
 	mysql? ( dev-perl/DBD-mysql )
@@ -58,8 +57,9 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-3-capability.patch
+	epatch "${FILESDIR}"/${P}-cve-2009-2855.patch
 	epatch "${FILESDIR}"/${P}-gentoo.patch
-	epatch "${FILESDIR}"/${P}-invconv.patch
+	epatch "${FILESDIR}"/${P}-qafixes.patch
 
 	# eautoreconf breaks lib/libLtdl/libtool script
 	./bootstrap.sh || die "autoreconf failed"
