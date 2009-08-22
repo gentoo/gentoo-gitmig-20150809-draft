@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.1.ebuild,v 1.3 2009/08/22 03:44:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.1.ebuild,v 1.4 2009/08/22 14:59:22 tester Exp $
 
 EAPI=2
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~x86"
-IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer meanwhile"
+IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer idn meanwhile"
 IUSE="${IUSE} networkmanager nls perl silc tcl tk spell qq gadu"
 IUSE="${IUSE} +gtk sasl ncurses groupwise prediction zephyr" # mono"
 
@@ -48,7 +48,8 @@ RDEPEND="
 	>=dev-libs/libxml2-2.6.18
 	networkmanager? ( net-misc/networkmanager )
 	prediction? ( =dev-db/sqlite-3* )
-	ncurses? ( sys-libs/ncurses[unicode] )"
+	ncurses? ( sys-libs/ncurses[unicode] )
+	idn? ( net-dns/libidn )"
 	# Mono support crashes pidgin
 	#mono? ( dev-lang/mono )"
 
@@ -150,12 +151,14 @@ src_configure() {
 		$(use_enable meanwhile) \
 		$(use_enable eds gevolution) \
 		$(use_enable gstreamer) \
+		$(use_enable gstreamer vv) \
 		$(use_enable sasl cyrus-sasl ) \
 		$(use_enable doc doxygen) \
 		$(use_enable prediction cap) \
 		$(use_enable networkmanager nm) \
 		$(use_with zephyr krb4) \
 		$(use_enable bonjour avahi) \
+		$(use_enable idn) \
 		"--with-dynamic-prpls=${DYNAMIC_PRPLS}" \
 		--disable-mono \
 		--x-includes=/usr/include/X11 \
