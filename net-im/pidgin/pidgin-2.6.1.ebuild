@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.1.ebuild,v 1.1 2009/08/22 03:35:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.6.1.ebuild,v 1.2 2009/08/22 03:38:50 tester Exp $
 
 EAPI=2
 
@@ -32,7 +32,8 @@ RDEPEND="
 	>=dev-libs/glib-2.0
 	gstreamer? ( =media-libs/gstreamer-0.10*
 		=media-libs/gst-plugins-good-0.10*
-		>=net-libs/farsight2-0.0.14 )
+		>=net-libs/farsight2-0.0.14
+		media-plugins/gst-plugins-gconf )
 	perl? ( >=dev-lang/perl-5.8.2-r1 )
 	gadu?  ( net-libs/libgadu[-ssl] )
 	gnutls? ( net-libs/gnutls )
