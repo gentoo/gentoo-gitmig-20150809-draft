@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.10 2009/08/22 19:03:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.11 2009/08/22 23:01:50 williamh Exp $
 
 inherit pax-utils
 
@@ -17,7 +17,7 @@ RDEPEND="virtual/libc
 	amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		app-emulation/emul-linux-x86-compat )
-	x86? ( =virtual/libstdc++-3* )"
+	x86? ( ~virtual/libstdc++-3.3 )"
 PROVIDE="virtual/antivirus"
 
 SLOT="0"
