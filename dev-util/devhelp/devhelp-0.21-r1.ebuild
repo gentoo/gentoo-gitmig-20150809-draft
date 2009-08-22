@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.8 2009/08/21 15:42:09 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.21-r1.ebuild,v 1.9 2009/08/22 05:29:26 mr_bones_ Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -49,7 +49,7 @@ pkg_setup() {
 
 	G2CONF="$(use_with zlib)
 		--with-gecko=libxul"
-	
+
 	# Properly detect dir for libxul.so etc.
 	# No, really, don't ask.
 	if has_version "=net-libs/xulrunner-1.9.0*"; then
