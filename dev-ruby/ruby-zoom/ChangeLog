@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-zoom
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.7 2009/06/05 18:31:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-zoom/ChangeLog,v 1.8 2009/08/22 20:42:29 graaff Exp $
+
+*ruby-zoom-0.4.1 (22 Aug 2009)
+
+  22 Aug 2009; Hans de Graaff <graaff@gentoo.org> +ruby-zoom-0.4.1.ebuild:
+  Version bump. Switch to gem format since upstream only releases gems now.
 
   05 Jun 2009; Hans de Graaff <graaff@gentoo.org> -ruby-zoom-0.2.0.ebuild:
   Remove old version.
