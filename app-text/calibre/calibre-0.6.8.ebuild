@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.6.ebuild,v 1.2 2009/08/17 23:49:43 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.8.ebuild,v 1.1 2009/08/22 03:42:08 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -41,8 +41,7 @@ SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/odfpy-0.7"
 
 RDEPEND="$SHARED_DEPEND
-	>=dev-python/reportlab-2.1
-	!dev-python/django-tagging"
+	>=dev-python/reportlab-2.1"
 
 DEPEND="$SHARED_DEPEND
 	dev-python/setuptools
