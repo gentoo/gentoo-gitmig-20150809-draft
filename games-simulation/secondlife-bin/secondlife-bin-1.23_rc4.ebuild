@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc4.ebuild,v 1.2 2009/06/14 18:48:10 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.23_rc4.ebuild,v 1.3 2009/08/22 19:12:47 ssuominen Exp $
 
 inherit eutils multilib games versionator
 
@@ -51,7 +51,7 @@ RDEPEND="sys-libs/glibc
 	net-misc/curl
 	net-dns/c-ares
 	sys-libs/zlib
-	virtual/libstdc++
+	=virtual/libstdc++-3*
 	virtual/glu
 	virtual/opengl
 	media-libs/openal
