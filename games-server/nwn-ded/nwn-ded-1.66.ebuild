@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.66.ebuild,v 1.4 2008/02/20 07:35:16 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/nwn-ded/nwn-ded-1.66.ebuild,v 1.5 2009/08/22 19:08:17 ssuominen Exp $
 
 inherit games
 
@@ -24,10 +24,7 @@ IUSE=""
 RESTRICT="mirror"
 
 DEPEND="app-arch/unzip"
-RDEPEND="x86? (
-	|| (
-		=sys-devel/gcc-3.3*
-		sys-libs/libstdc++-v3 ) )
+RDEPEND="x86? ( =virtual/libstdc++-3* )
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		app-emulation/emul-linux-x86-compat )"
 
