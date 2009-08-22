@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.6 2009/08/18 13:43:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.7 2009/08/22 19:11:08 ssuominen Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-opengl-1.0.7
-	sys-libs/libstdc++-v3
+	=virtual/libstdc++-3*
 	>=x11-base/xorg-server-1.5.3-r7
 	x11-libs/libXinerama
 	x11-libs/libXrandr
