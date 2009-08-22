@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.31 2009/07/04 08:39:20 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.32 2009/08/22 22:16:31 a3li Exp $
+
+  22 Aug 2009; Alex Legler <a3li@gentoo.org> narray-0.5.7_p2.ebuild,
+  narray-0.5.9.ebuild, narray-0.5.9_p6.ebuild:
+  Setting USE_RUBY="ruby18" for all versions
 
 *narray-0.5.9_p6 (04 Jul 2009)
 
