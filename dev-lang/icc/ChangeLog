@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.68 2009/08/21 12:39:53 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.69 2009/08/22 02:34:13 weaver Exp $
+
+  21 Aug 2009; Andrey Kislyuk <weaver@gentoo.org> -icc-11.1.046.ebuild,
+  icc-11.1.046-r1.ebuild:
+  Un-keyword icc-11.1 until bug 282146 is resolved
 
 *icc-11.1.046-r1 (21 Aug 2009)
 
