@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/allison
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.8 2009/06/07 17:42:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/allison/ChangeLog,v 1.9 2009/08/22 21:20:16 graaff Exp $
+
+  22 Aug 2009; Hans de Graaff <graaff@gentoo.org> -allison-2.0.2.ebuild:
+  Remove old version.
 
   07 Jun 2009; Raúl Porcel <armin76@gentoo.org> allison-2.0.3.ebuild:
   Add ~arm/~s390
