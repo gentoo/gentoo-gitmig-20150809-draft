@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.1.0.ebuild,v 1.7 2008/03/27 16:41:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libotr/libotr-3.1.0.ebuild,v 1.8 2009/08/22 03:59:54 tester Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,7 +21,7 @@ src_compile() {
 	replace-flags -O? -O2
 
 	econf || die "econf failed"
-	emake -j1 || die "Make failed"
+	emake || die "Make failed"
 }
 
 src_install() {
