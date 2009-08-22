@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10348 2009/08/22 19:37:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10349 2009/08/22 19:52:59 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
+# ruby-amazon uses the obsolete v3 protocol which has been shut
+# down by Amazon on 2008-03-31, and upstream indicates that they
+# will not continue development on it.
+dev-ruby/ruby-amazon
 
 # Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
 # These Rails versions are no longer supported upstream
