@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.1 2009/08/22 10:29:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.2 2009/08/22 10:31:33 ssuominen Exp $
 
 EAPI=2
 inherit libtool toolchain-funcs
@@ -34,13 +34,13 @@ src_configure() {
 src_compile() {
 	emake || die "emake failed"
 	tc-export CC
-	emake -C "${WORKDIR}"/${P}-extra
+	emake -C "${WORKDIR}"/${P}-extra || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	emake -C "${WORKDIR}"/${P}-extra DESTDIR="${D}" \
-		install || die "install failed"
+		install || die "emake install failed"
 
 	dodoc example.c README *.{log,txt} || die "dodoc failed"
 }
