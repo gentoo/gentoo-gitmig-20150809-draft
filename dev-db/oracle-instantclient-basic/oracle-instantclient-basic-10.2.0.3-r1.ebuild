@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3-r1.ebuild,v 1.3 2008/06/18 22:34:51 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/oracle-instantclient-basic-10.2.0.3-r1.ebuild,v 1.4 2009/08/22 19:07:02 ssuominen Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RESTRICT="fetch"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="|| ( =sys-libs/libstdc++-v3-3.3* =sys-devel/gcc-3.3* )"
+RDEPEND="=virtual/libstdc++-3*"
 
 my_arch() {
 	MY_P=MY_P_${ARCH}
