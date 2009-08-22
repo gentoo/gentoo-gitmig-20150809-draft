@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-HTTP_Upload
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Upload/ChangeLog,v 1.8 2007/12/06 00:23:22 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTTP_Upload/ChangeLog,v 1.9 2009/08/22 22:51:41 beandog Exp $
+
+*PEAR-HTTP_Upload-1.0.0_beta1 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org>
+  +PEAR-HTTP_Upload-1.0.0_beta1.ebuild:
+  Version bump
 
   06 Dec 2007; Markus Ullmann <jokey@gentoo.org>
   PEAR-HTTP_Upload-0.9.1.ebuild:

@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Auth
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.41 2007/12/05 23:31:53 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Auth/ChangeLog,v 1.42 2009/08/22 22:30:46 beandog Exp $
+
+*PEAR-Auth-1.6.1 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Auth-1.6.1.ebuild:
+  Version bump
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org> -PEAR-Auth-1.2.4.ebuild,
   PEAR-Auth-1.5.4.ebuild:
