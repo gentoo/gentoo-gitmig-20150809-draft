@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.13 2008/08/22 17:16:46 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-10.0.026.ebuild,v 1.14 2009/08/22 19:15:24 ssuominen Exp $
 
 inherit rpm eutils
 
@@ -26,7 +26,7 @@ SLOT="0"
 RESTRICT="test strip mirror"
 IUSE=""
 DEPEND=""
-RDEPEND="virtual/libstdc++
+RDEPEND="=virtual/libstdc++-3*
 	amd64? ( app-emulation/emul-linux-x86-compat )"
 
 pkg_setup() {
