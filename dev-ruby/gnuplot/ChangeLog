@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gnuplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.1 2009/07/05 17:55:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/ChangeLog,v 1.2 2009/08/22 20:48:06 graaff Exp $
+
+  22 Aug 2009; Hans de Graaff <graaff@gentoo.org> gnuplot-2.2.ebuild:
+  Add missing CVS header. Add explicit empty DEPEND.
 
 *gnuplot-2.2 (05 Jul 2009)
 
