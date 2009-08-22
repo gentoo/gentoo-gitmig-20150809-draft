@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-termios
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.16 2009/06/13 08:25:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-termios/ChangeLog,v 1.17 2009/08/22 22:31:18 a3li Exp $
+
+  22 Aug 2009; Alex Legler <a3li@gentoo.org> ruby-termios-0.9.4.ebuild:
+  Remove ruby16 and ruby19 from USE_RUBY.
 
   13 Jun 2009; Hans de Graaff <graaff@gentoo.org> ruby-termios-0.9.4.ebuild:
   Fix quoting.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-gd
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.19 2009/03/08 15:16:01 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ChangeLog,v 1.20 2009/08/22 22:30:05 a3li Exp $
+
+  22 Aug 2009; Alex Legler <a3li@gentoo.org> ruby-gd-0.7.4-r1.ebuild:
+  Remove ruby16 and ruby19 from USE_RUBY.
 
   08 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   ruby-gd-0.7.4-r1.ebuild:

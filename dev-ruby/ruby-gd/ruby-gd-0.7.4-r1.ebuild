@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4-r1.ebuild,v 1.6 2009/03/08 15:16:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gd/ruby-gd-0.7.4-r1.ebuild,v 1.7 2009/08/22 22:30:05 a3li Exp $
 
 EAPI="2"
 
 inherit ruby
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18"
 
 MY_P="${P/gd/GD}"
 S="${WORKDIR}/${MY_P}"

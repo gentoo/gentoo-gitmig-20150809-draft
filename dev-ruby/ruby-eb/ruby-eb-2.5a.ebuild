@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ruby-eb-2.5a.ebuild,v 1.4 2006/03/30 03:47:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-eb/ruby-eb-2.5a.ebuild,v 1.5 2009/08/22 22:26:43 a3li Exp $
 
 inherit ruby
 
@@ -15,7 +15,7 @@ SRC_URI="http://rubyeb.sourceforge.net/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18"
 KEYWORDS="~ia64 ~ppc ~x86"
 
 DEPEND="sys-libs/zlib
