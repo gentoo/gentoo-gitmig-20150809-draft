@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4.ebuild,v 1.5 2009/07/01 23:04:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/rskkserv-2.95.4.ebuild,v 1.6 2009/08/22 22:07:45 a3li Exp $
 
 inherit ruby eutils
 
@@ -17,7 +17,7 @@ DEPEND="dev-ruby/ruby-tcpwrap"
 RDEPEND="${DEPEND}
 	app-i18n/skk-jisyo"
 PROVIDE="virtual/skkserv"
-USE_RUBY="ruby16 ruby18 ruby19"
+USE_RUBY="ruby18"
 
 src_compile() {
 	ruby -i -pe "gsub(/with_RUBY/,'with_ruby')" configure || die

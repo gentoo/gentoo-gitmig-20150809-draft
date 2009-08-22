@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/rskkserv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.21 2009/07/01 23:04:42 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.22 2009/08/22 22:07:45 a3li Exp $
+
+  22 Aug 2009; Alex Legler <a3li@gentoo.org> rskkserv-2.95.3-r1.ebuild,
+  rskkserv-2.95.4.ebuild:
+  Remove ruby16 and ruby19 from USE_RUBY.
 
   01 Jul 2009; MATSUU Takuto <matsuu@gentoo.org> -rskkserv-2.95.3.ebuild,
   rskkserv-2.95.3-r1.ebuild, rskkserv-2.95.4.ebuild:
