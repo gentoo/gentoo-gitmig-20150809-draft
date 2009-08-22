@@ -1,3 +1,77 @@
+diff -Nru mgetty-1.1.36.orig/Makefile mgetty-1.1.36/Makefile
+--- mgetty-1.1.36.orig/Makefile	2009-08-22 10:37:19.000000000 +0200
++++ mgetty-1.1.36/Makefile	2009-08-22 10:43:31.000000000 +0200
+@@ -617,15 +617,15 @@
+ # fax spool directories
+ #
+ 	test -d $(spool) || \
+-		( mkdir $(spool) && chmod 755 $(spool) )
++		( ./mkidirs $(spool) && chmod 755 $(spool) )
+ 	test -d $(FAX_SPOOL) || \
+-		( mkdir $(FAX_SPOOL) && \
++		( ./mkidirs $(FAX_SPOOL) && \
+ 		  chown $(FAX_OUT_USER) $(FAX_SPOOL) && \
+ 		  chmod 755 $(FAX_SPOOL) )
+ 	test -d $(FAX_SPOOL_IN) || \
+-		( mkdir $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
++		( ./mkidirs $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
+ 	test -d $(FAX_SPOOL_OUT) || \
+-		  mkdir $(FAX_SPOOL_OUT)
++		  ./mkidirs $(FAX_SPOOL_OUT)
+ 	chown $(FAX_OUT_USER) $(FAX_SPOOL_OUT)
+ 	chmod 755 $(FAX_SPOOL_OUT)
+ #
+diff -Nru mgetty-1.1.36.orig/doc/Makefile mgetty-1.1.36/doc/Makefile
+--- mgetty-1.1.36.orig/doc/Makefile	2009-08-22 09:25:53.000000000 +0200
++++ mgetty-1.1.36/doc/Makefile	2009-08-22 09:35:54.000000000 +0200
+@@ -63,7 +63,7 @@
+ 	      *.man *.[1-9] mgetty.texi
+ 
+ install: $(MANSRC) mgetty.info
+-	-mkdir `dirname $(MAN1DIR)` $(MAN1DIR) $(MAN4DIR) $(MAN5DIR) $(MAN8DIR) 2>/dev/null
++	mkdir -p $(MAN1DIR) $(MAN4DIR) $(MAN5DIR) $(MAN8DIR)
+ 	for i in $(MAN1PAGES) ; do \
+ 		$(INSTALL) -m 644 $$i $(MAN1DIR) ; \
+ 	done
+@@ -120,16 +120,16 @@
+ #
+ .SUFFIXES: .1in .4in .5in .8in .1 .4 .5 .8
+ 
+-.1in.1:
++.1in.1: ../sedscript
+ 	../sedscript <$< >$*.1
+ 
+-.4in.4:
++.4in.4: ../sedscript
+ 	../sedscript <$< >$*.4
+ 
+-.5in.5:
++.5in.5: ../sedscript
+ 	../sedscript <$< >$*.5
+ 
+-.8in.8:
++.8in.8: ../sedscript
+ 	../sedscript <$< >$*.8
+ 
+ #
+diff -Nru mgetty-1.1.36.orig/frontends/www/Makefile mgetty-1.1.36/frontends/www/Makefile
+--- mgetty-1.1.36.orig/frontends/www/Makefile	2006-02-22 18:25:32.000000000 +0100
++++ mgetty-1.1.36/frontends/www/Makefile	2009-08-22 09:39:03.000000000 +0200
+@@ -125,12 +125,12 @@
+ #
+ .SUFFIXES: .in .cgi .html
+ 
+-.in.cgi:
++.in.cgi: ../../sedscript
+ 	rm -f $*.cgi
+ 	../../sedscript <$< >$*.cgi
+ 	chmod +x $*.cgi
+ 
+-.in.html:
++.in.html: ../../sedscript
+ 	rm -f $*.html
+ 	../../sedscript <$< | \
+ 		sed -e "s!@CGI_HREF@!$(CGI_HREF)!" >$*.html
 diff -Nru mgetty-1.1.36.orig/fax/Makefile mgetty-1.1.36/fax/Makefile
 --- mgetty-1.1.36.orig/fax/Makefile	2006-02-22 19:25:30.000000000 +0200
 +++ mgetty-1.1.36/fax/Makefile	2007-09-14 23:02:58.000000000 +0300

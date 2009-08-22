@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.3 2009/07/31 16:54:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.4 2009/08/22 08:51:39 mrness Exp $
 
 EAPI=1
 inherit toolchain-funcs flag-o-matic eutils
@@ -61,8 +61,7 @@ src_compile() {
 	use fidonet && append-flags "-DFIDO"
 	append-flags "-DAUTO_PPP"
 
-	# bug #279783
-	VARTEXFONTS="${T}"/fonts emake -j1 prefix=/usr \
+	VARTEXFONTS="${T}"/fonts emake prefix=/usr \
 		CC="$(tc-getCC)" \
 		CONFDIR=/etc/mgetty+sendfax \
 		CFLAGS="${CFLAGS}" \
@@ -71,24 +70,27 @@ src_compile() {
 }
 
 src_install () {
-	dodir /var/spool
-	keepdir /var/log/mgetty
-	dodir /usr/share/info
+	# parallelization issue: vgetty-install target fails if install target
+	#                        isn't finished 
+	local targets
+	for targets in install "vgetty-install install-callback"; do
+		emake prefix="${D}/usr" \
+			INFODIR="${D}/usr/share/info" \
+			CONFDIR="${D}/etc/mgetty+sendfax" \
+			MAN1DIR="${D}/usr/share/man/man1" \
+			MAN4DIR="${D}/usr/share/man/man4" \
+			MAN5DIR="${D}/usr/share/man/man5" \
+			MAN8DIR="${D}/usr/share/man/man8" \
+			SBINDIR="${D}/usr/sbin" \
+			BINDIR="${D}/usr/bin" \
+			VOICE_DIR="${D}/var/spool/voice" \
+			PHONE_GROUP=fax \
+			PHONE_PERMS=755 \
+			spool="${D}/var/spool" \
+			${targets} || die "emake $targets failed."
+	done
 
-	emake -j1 prefix="${D}/usr" \
-		INFODIR="${D}/usr/share/info" \
-		CONFDIR="${D}/etc/mgetty+sendfax" \
-		MAN1DIR="${D}/usr/share/man/man1" \
-		MAN4DIR="${D}/usr/share/man/man4" \
-		MAN5DIR="${D}/usr/share/man/man5" \
-		MAN8DIR="${D}/usr/share/man/man8" \
-		SBINDIR="${D}/usr/sbin" \
-		BINDIR="${D}/usr/bin" \
-		VOICE_DIR="${D}/var/spool/voice" \
-		PHONE_GROUP=fax \
-		PHONE_PERMS=755 \
-		spool="${D}/var/spool" \
-		install vgetty-install install-callback || die "make install failed."
+	keepdir /var/log/mgetty
 
 	#Install mgetty into /sbin (#119078)
 	dodir /sbin && \
@@ -97,7 +99,6 @@ src_install () {
 	#Don't install ct (#106337)
 	rm "${D}"/usr/bin/ct || die "failed to remove useless ct program"
 
-	cd "${S}"
 	dodoc BUGS ChangeLog README.1st Recommend THANKS TODO \
 		doc/*.txt doc/modems.db || die "dodoc failed."
 	doinfo doc/mgetty.info || die "doinfo failed."

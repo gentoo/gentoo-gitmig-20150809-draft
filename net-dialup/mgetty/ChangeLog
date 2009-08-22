@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.96 2009/07/31 11:14:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.97 2009/08/22 08:51:39 mrness Exp $
+
+  22 Aug 2009; Alin Năstac <mrness@gentoo.org>
+  files/mgetty-1.1.36-qa-fixes.patch, mgetty-1.1.36-r3.ebuild:
+  Fix parallel make bugs (#279783).
 
   31 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mgetty-1.1.36-r3.ebuild:
