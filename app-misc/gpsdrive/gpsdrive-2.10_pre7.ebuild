@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.1 2009/06/24 08:05:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/gpsdrive-2.10_pre7.ebuild,v 1.2 2009/08/22 23:39:36 nerdboy Exp $
 EAPI=2
 
 inherit cmake-utils eutils fdo-mime
@@ -27,7 +27,7 @@ COMMON_DEP="sci-geosciences/gpsd
 	dbus? ( dev-libs/dbus-glib )
 	gdal? ( sci-libs/gdal )
 	mapnik? ( sci-geosciences/mapnik )
-	libgda? ( >=gnome-extra/libgda-3.0.1[postgres] )
+	libgda? ( =gnome-extra/libgda-3.0*[postgres] )
 	speech? ( app-accessibility/speech-dispatcher )"
 
 DEPEND="${COMMON_DEP}
@@ -46,8 +46,8 @@ src_prepare() {
 	    tests/gpsdriverc-in \
 	    src/gpsdrive_config.c || die "sed failed"
 	# Fix desktop file...
-	sed -i -e "s:gpsicon:/usr/share/gpsdrive/pixmaps/gpsicon.png:g" \
-	    -e "s:Graphics;Network;Geography:Application;Geography;GPS:g" \
+	sed -i -e "s:gpsicon:/usr/share/icons/gpsdrive.png:g" \
+	    -e "s:Graphics;Network;Geography:Education;Science;Geography;GPS:g" \
 	    data/gpsdrive.desktop || die "sed failed"
 }
 
@@ -91,8 +91,8 @@ pkg_postinst() {
 	elog "for information on using Kismet with gpsdrive."
 	elog
 	if use mapnik ; then
-		elog "Using mapnik to render online map require you to"
-		elog "load data into the postgis database. Follow instructions"
+		elog "Using mapnik to render online maps requires you to load"
+		elog "data into the postgis database. Follow the instructions"
 		elog "on http://wiki.openstreetmap.org/index.php/Mapnik"
 	fi
 	elog
@@ -101,6 +101,12 @@ pkg_postinst() {
 	elog "otherwise gpsdrive will only run in simulation mode (which"
 	elog "is handy for downloading maps for another location, but"
 	elog "not much else)."
+	elog
+	elog "openstreetmap-icons now installs to a more appropriate"
+	elog "location, so if you have trouble starting gpsdrive, you"
+	elog "should probably update your ~/.gpsdrive/gpsdriverc file"
+	elog "and change the path to the geoinfofile to reflect this:"
+	elog "   geoinfofile = /usr/share/osm/geoinfo.db"
 	elog
 }
 
