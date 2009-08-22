@@ -1,0 +1,11 @@
+# ChangeLog for x11-plugins/screenlets
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/screenlets/ChangeLog,v 1.1 2009/08/22 19:38:59 lack Exp $
+
+*screenlets-0.1.2 (22 Aug 2009)
+
+  22 Aug 2009; Jim Ramsay <lack@gentoo.org> +screenlets-0.1.2.ebuild,
+  +metadata.xml:
+  New package: Screenlets is another desktop applet thing, like desklets...
+  only newer ;) Bug #212448
+
