@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/files/sendmail,v 1.6 2007/09/26 10:46:26 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/files/sendmail,v 1.7 2009/08/22 21:41:22 mrness Exp $
 
 depend() {
 	need net
-	use logger antivirus
+	use dns logger antivirus
 	provide mta
 }
 
