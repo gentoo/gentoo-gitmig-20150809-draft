@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.0.4.ebuild,v 1.1 2009/08/17 14:32:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-3.0.4.ebuild,v 1.2 2009/08/22 19:06:12 ssuominen Exp $
 
 EAPI=2
 
@@ -50,7 +50,7 @@ RDEPEND="!!app-emulation/virtualbox-ose
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXdmcp
-	x86? ( sys-libs/libstdc++-v3 )"
+	x86? ( =virtual/libstdc++-3* )"
 
 S=${WORKDIR}
 
