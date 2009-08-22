@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/secondlife-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.24 2009/06/14 18:48:10 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/ChangeLog,v 1.25 2009/08/22 21:09:38 williamh Exp $
+
+  22 Aug 2009; William Hubbs <williamh@gentoo.org>
+  secondlife-bin-1.23_rc4.ebuild:
+  Fixed virtual/libstdc++ dependency for bug 231870.
 
   14 Jun 2009; Joe Peterson <lavajoe@gentoo.org>
   secondlife-bin-1.23_rc4.ebuild:

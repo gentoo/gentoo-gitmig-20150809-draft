@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/secondlife
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/ChangeLog,v 1.4 2009/07/07 14:41:27 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife/ChangeLog,v 1.5 2009/08/22 21:04:59 williamh Exp $
+
+  22 Aug 2009; William Hubbs <williamh@gentoo.org>
+  secondlife-1.23_rc4-r1.ebuild:
+  fixed rdepend for bug 231870.
 
 *secondlife-1.23_rc4-r1 (07 Jul 2009)
 
