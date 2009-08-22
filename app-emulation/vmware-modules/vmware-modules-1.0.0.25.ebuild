@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25.ebuild,v 1.1 2009/08/22 01:45:09 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/vmware-modules-1.0.0.25.ebuild,v 1.2 2009/08/22 05:29:05 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -71,4 +71,3 @@ src_install() {
 
 	linux-mod_src_install
 }
-
