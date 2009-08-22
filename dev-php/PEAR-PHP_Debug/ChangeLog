@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PHP_Debug
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Debug/ChangeLog,v 1.1 2008/03/17 12:49:34 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PHP_Debug/ChangeLog,v 1.2 2009/08/22 19:11:36 beandog Exp $
+
+*PEAR-PHP_Debug-1.0.3 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-PHP_Debug-1.0.3.ebuild:
+  Version bump
 
 *PEAR-PHP_Debug-1.0.0 (17 Mar 2008)
 
