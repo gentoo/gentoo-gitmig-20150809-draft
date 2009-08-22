@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.8 2009/05/16 13:14:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.64.ebuild,v 1.9 2009/08/22 19:37:04 williamh Exp $
 
 EAPI="2"
 
@@ -91,7 +91,7 @@ RDEPEND="media-libs/libexif
 	ppc? ( =x11-libs/qt-3*[-immqt] )
 	spell? ( app-text/aspell )
 	x86-fbsd? (
-		=virtual/libstdc++-3*
+		=virtual/libstdc++-3.3
 		!qt-static? ( !qt3-static? ( =x11-libs/qt-3*[-immqt] ) )
 	)
 	"

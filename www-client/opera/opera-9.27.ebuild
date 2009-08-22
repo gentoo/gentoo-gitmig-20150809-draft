@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.8 2009/03/20 19:42:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-9.27.ebuild,v 1.9 2009/08/22 19:37:04 williamh Exp $
 
 GCONF_DEBUG="no"
 
@@ -63,7 +63,7 @@ RDEPEND="
 			  spell? ( app-text/aspell )
 			  x86? ( !qt-static? ( =x11-libs/qt-3* ) )
 			  media-libs/jpeg )
-	x86-fbsd? ( =virtual/libstdc++-3*
+	x86-fbsd? ( =virtual/libstdc++-3.3
 				!qt-static? ( =x11-libs/qt-3* )  )
 	"
 
