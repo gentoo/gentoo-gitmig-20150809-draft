@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.2 2009/08/22 10:31:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.3 2009/08/22 12:16:57 ssuominen Exp $
 
 EAPI=2
-inherit libtool toolchain-funcs
+inherit eutils libtool toolchain-funcs
 
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
 HOMEPAGE="http://www.ijg.org/"
 SRC_URI="http://www.ijg.org/files/${PN}src.v${PV}.tar.gz
-	http://dev.gentoo.org/~ssuominen/${P}-extra.tar.bz2"
+	mirror://gentoo/${P}-extra.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-maxmem_sysconf.patch
 	elibtoolize
 }
 
