@@ -3,4 +3,8 @@
 <pkgmetadata>
 <herd>net-mail</herd>
 <maintainer><email>net-mail@gentoo.org</email></maintainer>
+<longdescription>A program for Milter supported mail servers that implements antispam, antivirus and other customizable filtering on email messages</longdescription>
+<use>
+	<flag name='poll'>Use poll instead of select</flag>
+</use>
 </pkgmetadata>
