@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.80 2009/04/01 04:58:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.81 2009/08/22 21:10:29 graaff Exp $
+
+  22 Aug 2009; Hans de Graaff <graaff@gentoo.org> fxruby-1.6.19.ebuild:
+  QA: fix quotation.
 
   01 Apr 2009; Jeroen Roovers <jer@gentoo.org> fxruby-1.6.18-r1.ebuild:
   Stable for HPPA (bug #263282). Fix one quoting issue.

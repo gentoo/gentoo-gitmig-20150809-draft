@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.19.ebuild,v 1.1 2009/03/21 18:56:10 mabi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/fxruby-1.6.19.ebuild,v 1.2 2009/08/22 21:10:29 graaff Exp $
 
 EAPI="1"
 
@@ -50,7 +50,7 @@ src_install() {
 
 		insinto ${rdbase}
 		[ -n "${rdfiles}" ] && doins ${rdfiles}
-		rmdir ${D}${rdbase} 2>/dev/null || true
+		rmdir "${D}"${rdbase} 2>/dev/null || true
 		if [ -d doc -o -d docs ] ; then
 			dohtml -x html -r {doc,docs}/*
 			dohtml -r {doc,docs}/html/*
@@ -67,7 +67,7 @@ src_install() {
 		for dir in sample samples example examples; do
 			if [ -d ${dir} ] ; then
 				dodir /usr/share/doc/${PF}
-				cp -pPR ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
+				cp -pPR ${dir} "${D}"/usr/share/doc/${PF} || die "cp failed"
 			fi
 		done
 	fi
