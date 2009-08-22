@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ruby-inifile-2.0.0.ebuild,v 1.1 2006/10/06 04:36:44 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ruby-inifile-2.0.0.ebuild,v 1.2 2009/08/22 22:31:06 a3li Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://gregoire.lejeune.free.fr/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 IUSE=""
-USE_RUBY="ruby16 ruby18"
+USE_RUBY="ruby18"
 LICENSE="Ruby"
 KEYWORDS="~x86 ~amd64"
 S=${WORKDIR}/${PN}

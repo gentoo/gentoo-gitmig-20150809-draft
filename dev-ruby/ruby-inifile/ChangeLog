@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-inifile
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ChangeLog,v 1.1 2006/10/06 04:36:44 pclouds Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-inifile/ChangeLog,v 1.2 2009/08/22 22:31:06 a3li Exp $
+
+  22 Aug 2009; Alex Legler <a3li@gentoo.org> ruby-inifile-2.0.0.ebuild:
+  Remove ruby16 from USE_RUBY
 
 *ruby-inifile-2.0.0 (06 Oct 2006)
 
