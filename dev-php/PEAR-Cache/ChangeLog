@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Cache
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.38 2007/12/05 23:36:42 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Cache/ChangeLog,v 1.39 2009/08/22 18:08:07 beandog Exp $
+
+*PEAR-Cache-1.5.5 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Cache-1.5.5.ebuild:
+  Version bump
 
   05 Dec 2007; Markus Ullmann <jokey@gentoo.org> PEAR-Cache-1.5.4-r1.ebuild:
   LICENSE fix from project overlay
