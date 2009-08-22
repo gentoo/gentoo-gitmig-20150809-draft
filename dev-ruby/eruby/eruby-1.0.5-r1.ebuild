@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5-r1.ebuild,v 1.10 2009/06/13 13:32:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eruby/eruby-1.0.5-r1.ebuild,v 1.11 2009/08/22 22:10:28 a3li Exp $
 
 inherit ruby
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="alpha ~amd64 hppa ia64 mips ppc ppc64 sparc x86 ~x86-fbsd"
 DEPEND="virtual/ruby"
 PDEPEND="vim-syntax? ( app-vim/eruby-syntax )"
-USE_RUBY="ruby16 ruby18"	# doesn't build on ruby19
+USE_RUBY="ruby18"	# doesn't build on ruby19
 
 src_unpack() {
 	unpack ${A}
