@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/libmilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.19 2009/05/09 12:23:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/ChangeLog,v 1.20 2009/08/22 22:40:17 mrness Exp $
+
+*libmilter-1.0.1 (22 Aug 2009)
+
+  22 Aug 2009; Alin Năstac <mrness@gentoo.org> files/gentoo.config.m4,
+  +files/libmilter-sharedlib.patch, +libmilter-1.0.1.ebuild,
+  -libmilter-8.14.3.ebuild:
+  Use the real libmilter version iso sendmail version. Install libmilter
+  library in both forms, static and dynamic (#245950).
 
   09 May 2009; Alin Năstac <mrness@gentoo.org> libmilter-8.14.3.ebuild:
   Migrate to EAPI 2.
