@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rbbr
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.15 2007/04/14 06:11:35 graaff Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/ChangeLog,v 1.16 2009/08/22 19:47:18 graaff Exp $
+
+  13 Jun 2009; Hans de Graaff <graaff@gentoo.org> rbbr-0.6.0.ebuild:
+  Fix QA issues.
 
   14 Apr 2007; Hans de Graaff <graaff@gentoo.org> rbbr-0.6.0.ebuild:
   Remove ruby-cvs from dependencies.

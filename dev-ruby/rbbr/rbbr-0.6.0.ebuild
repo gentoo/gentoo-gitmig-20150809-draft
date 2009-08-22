@@ -1,10 +1,12 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.13 2007/04/14 06:11:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rbbr/rbbr-0.6.0.ebuild,v 1.14 2009/08/22 19:47:18 graaff Exp $
 
 DESCRIPTION="Ruby Browser for modules/classes hierarchy and their constants and methods"
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/hiki.cgi?rbbr"
 SRC_URI="mirror://sourceforge/ruby-gnome2/${P}-withapi.tar.gz"
+
+USE_RUBY="ruby18"
 
 KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
 SLOT="0"
@@ -15,6 +17,7 @@ DEPEND=">=dev-lang/ruby-1.8.0
 	 >=dev-ruby/ruby-gtk2-0.9.1
 	 nls? ( >=dev-ruby/ruby-gettext-0.5.5 )
 	 cjk? ( >=dev-ruby/refe-0.8.0 )"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-withapi"
 
@@ -27,5 +30,5 @@ src_compile() {
 }
 
 src_install() {
-	ruby install.rb install --prefix=${D} || die "install.rb install failed"
+	ruby install.rb install --prefix="${D}" || die "install.rb install failed"
 }
