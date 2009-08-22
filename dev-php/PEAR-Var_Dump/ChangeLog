@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-Var_Dump
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Var_Dump/ChangeLog,v 1.1 2009/08/22 19:20:09 beandog Exp $
+
+*PEAR-Var_Dump-1.0.3 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Var_Dump-1.0.3.ebuild,
+  +metadata.xml:
+  Initial commit
+
