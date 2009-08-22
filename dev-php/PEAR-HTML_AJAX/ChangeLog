@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-HTML_AJAX
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_AJAX/ChangeLog,v 1.3 2007/09/06 15:19:11 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_AJAX/ChangeLog,v 1.4 2009/08/22 18:11:12 beandog Exp $
+
+*PEAR-HTML_AJAX-0.5.6 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-HTML_AJAX-0.5.6.ebuild:
+  Version bump, bug 219113
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -PEAR-HTML_AJAX-0.5.0.ebuild:
