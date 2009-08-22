@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.37 2009/08/11 12:52:18 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.38 2009/08/22 16:14:15 rbu Exp $
+
+  22 Aug 2009; Robert Buchholz <rbu@gentoo.org> f-spot-0.6.0.0.ebuild:
+  restrict to MAKEOPTS="-j1" for now, bug 281242
 
 *f-spot-0.6.0.0 (10 Aug 2009)
 
