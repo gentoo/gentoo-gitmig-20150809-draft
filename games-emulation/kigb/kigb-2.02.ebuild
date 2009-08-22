@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-2.02.ebuild,v 1.4 2008/11/25 01:43:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/kigb/kigb-2.02.ebuild,v 1.5 2009/08/22 19:11:36 ssuominen Exp $
 
 inherit games
 
@@ -19,7 +19,7 @@ IUSE=""
 RDEPEND="x11-libs/libXext
 	sys-libs/zlib
 	dev-games/hawknl
-	virtual/libstdc++"
+	=virtual/libstdc++-3*"
 
 S=${WORKDIR}
 
