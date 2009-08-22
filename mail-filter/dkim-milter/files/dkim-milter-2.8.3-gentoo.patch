@@ -1,12 +1,14 @@
 diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/devtools/Site/site.config.m4
---- dkim-milter-2.8.3.orig/devtools/Site/site.config.m4	2009-07-19 09:56:41.000000000 +0300
-+++ dkim-milter-2.8.3/devtools/Site/site.config.m4	2009-07-19 09:57:00.000000000 +0300
-@@ -11,7 +11,13 @@
+--- dkim-milter-2.8.3.orig/devtools/Site/site.config.m4	2009-08-23 00:52:05.000000000 +0200
++++ dkim-milter-2.8.3/devtools/Site/site.config.m4	2009-08-23 00:56:05.000000000 +0200
+@@ -11,7 +11,15 @@
  dnl If you are encountering coredumps and want to be able to analyze them
  dnl using something like "gdb", enable this next line by deleting the "dnl"
  dnl at the front of it.
 -dnl define(`confOPTIMIZE', `-g')
++define(`confCC', `@@CC@@')
 +define(`confOPTIMIZE', `@@CFLAGS@@')
++define(`confLDOPTS', `@@LDFLAGS@@')
 +define(`confENVDEF', `@@ENVDEF@@')
 +define(`confMKDIR', `mkdir')
 +define(`confLIBDIR', `@@LIBDIR@@')
@@ -16,7 +18,7 @@ diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/
  
  dnl Shared library for libdkim
  dnl
-@@ -26,7 +32,7 @@
+@@ -26,7 +34,7 @@
  dnl the package, enable this next line by deleting the "dnl" at the front
  dnl of it.  This is done automatically if you've requested the shared
  dnl library.
@@ -25,7 +27,7 @@ diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/
  
  dnl Use native strlcat()/strlcpy() functions
  dnl
-@@ -53,7 +59,7 @@
+@@ -53,7 +61,7 @@
  dnl 
  dnl If you want to use the provided asynchronous resolver library, enable this
  dnl next line by deleting the "dnl" at the front of it.
@@ -34,7 +36,7 @@ diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/
  dnl 
  dnl libar normally uses res_init() or res_ninit() to load the contents
  dnl of resolv.conf for its use.  If neither of these work on your system
-@@ -94,7 +100,7 @@
+@@ -94,7 +102,7 @@
  dnl it has seen, rather than relying on the DNS server to provide caching,
  dnl enable this next line by deleting the "dnl" at the front of it.  Also
  dnl see the section below called "BerkeleyDB".
@@ -43,7 +45,7 @@ diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/
  
  dnl BerkeleyDB -- Berkeley DB ("Sleepycat") database
  dnl 
-@@ -107,7 +113,7 @@
+@@ -107,7 +115,7 @@
  dnl by deleting "dnl" from the front of them:
  dnl APPENDDEF(`confINCDIRS', `-I/usr/local/BerkeleyDB/include ')
  dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/BerkeleyDB/lib ')
@@ -52,7 +54,7 @@ diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/
  
  dnl OpenSSL -- cryptography library
  dnl
-@@ -146,7 +152,7 @@
+@@ -146,7 +154,7 @@
  dnl APPENDDEF(`confENVDEF', `-D_FFR_REPORT_INTERVALS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECTOR_HEADER ')
@@ -62,8 +64,8 @@ diff -Nru dkim-milter-2.8.3.orig/devtools/Site/site.config.m4 dkim-milter-2.8.3/
  dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
  
 diff -Nru dkim-milter-2.8.3.orig/dkim-filter/dkim-filter.conf.sample dkim-milter-2.8.3/dkim-filter/dkim-filter.conf.sample
---- dkim-milter-2.8.3.orig/dkim-filter/dkim-filter.conf.sample	2008-12-27 07:21:56.000000000 +0200
-+++ dkim-milter-2.8.3/dkim-filter/dkim-filter.conf.sample	2009-07-19 09:57:00.000000000 +0300
+--- dkim-milter-2.8.3.orig/dkim-filter/dkim-filter.conf.sample	2008-12-27 06:21:56.000000000 +0100
++++ dkim-milter-2.8.3/dkim-filter/dkim-filter.conf.sample	2009-08-23 00:52:30.000000000 +0200
 @@ -90,13 +90,6 @@
  
  # AutoRestartRate	n/tu
