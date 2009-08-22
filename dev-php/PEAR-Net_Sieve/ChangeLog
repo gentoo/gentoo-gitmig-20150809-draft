@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_Sieve
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.62 2008/05/09 22:20:51 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Sieve/ChangeLog,v 1.63 2009/08/22 19:29:42 beandog Exp $
+
+*PEAR-Net_Sieve-1.1.7 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Net_Sieve-1.1.7.ebuild:
+  Version bump
 
   09 May 2008; Markus Meier <maekke@gentoo.org> PEAR-Net_Sieve-1.1.6.ebuild:
   amd64 stable, bug #214081

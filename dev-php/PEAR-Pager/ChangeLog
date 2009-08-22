@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Pager
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.31 2008/02/26 16:32:56 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Pager/ChangeLog,v 1.32 2009/08/22 19:25:18 beandog Exp $
+
+*PEAR-Pager-2.4.8 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Pager-2.4.8.ebuild:
+  Version bump
 
 *PEAR-Pager-2.4.5 (26 Feb 2008)
 

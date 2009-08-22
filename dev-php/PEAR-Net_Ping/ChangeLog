@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-Net_Ping
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/ChangeLog,v 1.9 2007/12/30 14:35:06 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_Ping/ChangeLog,v 1.10 2009/08/22 19:33:30 beandog Exp $
+
+*PEAR-Net_Ping-2.4.4 (22 Aug 2009)
+
+  22 Aug 2009; Steve Dibb <beandog@gentoo.org> +PEAR-Net_Ping-2.4.4.ebuild:
+  Version bump
 
 *PEAR-Net_Ping-2.4.3 (30 Dec 2007)
 
