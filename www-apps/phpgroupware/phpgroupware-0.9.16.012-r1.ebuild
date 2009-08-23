@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.012-r1.ebuild,v 1.1 2009/08/12 11:10:49 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/phpgroupware-0.9.16.012-r1.ebuild,v 1.2 2009/08/23 10:26:49 nixnut Exp $
 
 inherit webapp eutils depend.php
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ppc ~sparc ~x86"
 
 need_httpd_cgi
 need_php_httpd
