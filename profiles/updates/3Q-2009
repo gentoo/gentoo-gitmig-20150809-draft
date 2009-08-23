@@ -11,3 +11,4 @@ move xfce-extra/thunar-svn xfce-extra/thunar-svn-plugin
 move xfce-extra/thunar-shares xfce-extra/thunar-shares-plugin
 move xfce-extra/xfce4-mpc xfce-extra/xfce4-mpc-plugin
 move xfce-extra/xfce4-xkb xfce-extra/xfce4-xkb-plugin
+move xfce-extra/xfce4-clipman xfce-extra/xfce4-clipman-plugin
