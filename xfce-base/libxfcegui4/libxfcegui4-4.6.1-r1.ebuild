@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.1-r1.ebuild,v 1.2 2009/08/01 20:50:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.1-r1.ebuild,v 1.3 2009/08/23 16:17:16 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xfce.org/projects/libraries"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
 IUSE="debug glade startup-notification"
 
 RDEPEND="gnome-base/libglade
