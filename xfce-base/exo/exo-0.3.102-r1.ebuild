@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.3.102-r1.ebuild,v 1.1 2009/08/23 17:43:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.3.102-r1.ebuild,v 1.2 2009/08/23 18:01:26 ssuominen Exp $
 
 EAPI=2
 inherit xfconf python multilib
@@ -43,11 +43,11 @@ src_prepare() {
 }
 
 pkg_postinst() {
-	xfce4_pkg_postinst
+	xfconf_pkg_postinst
 	python_mod_optimize "$(python_get_sitedir)"
 }
 
 pkg_postrm() {
-	xfce4_pkg_postrm
+	xfconf_pkg_postrm
 	python_mod_cleanup "$(python_get_sitedir)"
 }
