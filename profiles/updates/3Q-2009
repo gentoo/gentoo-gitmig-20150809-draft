@@ -15,3 +15,4 @@ move xfce-extra/xfce4-clipman xfce-extra/xfce4-clipman-plugin
 move xfce-extra/xfce4-wmdock xfce-extra/xfce4-wmdock-plugin
 move xfce-extra/exo xfce-base/exo
 move xfce-base/xfce4 xfce-base/xfce4-meta
+move xfce-extra/xfce4-radio xfce-extra/xfce4-radio-plugin
