@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.0.ebuild,v 1.5 2009/03/19 13:39:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.0.ebuild,v 1.6 2009/08/23 17:50:15 ssuominen Exp $
 
-EAPI=1
-
+EAPI=2
 inherit gnome2-utils
 
 DESCRIPTION="GTK+ based CD and DVD burning application"
@@ -19,7 +18,7 @@ RDEPEND=">=dev-libs/libburn-0.4.2
 	>=dev-libs/libisofs-0.6.2
 	>=x11-libs/gtk+-2.10:2
 	>=xfce-base/libxfcegui4-4.4
-	>=xfce-extra/exo-0.3
+	>=xfce-base/exo-0.3
 	dbus? ( dev-libs/dbus-glib )
 	gstreamer? ( media-libs/gstreamer
 		>=media-libs/gst-plugins-base-0.10.20 )
@@ -30,14 +29,14 @@ DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext"
 
-src_compile() {
-	econf --disable-dependency-tracking \
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
 		$(use_enable dbus) \
 		$(use_enable debug) \
 		$(use_enable gstreamer) \
 		$(use_enable hal) \
 		$(use_enable xfce thunar-vfs)
-	emake || die "emake failed"
 }
 
 pkg_preinst() {
