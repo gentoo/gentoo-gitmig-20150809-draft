@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10352 2009/08/22 22:05:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10353 2009/08/23 06:48:29 mrness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1086,13 +1086,6 @@ net-fs/samba-server
 #
 # Pending removal 22 August 2009
 sys-apps/realtime-lsm
-
-# Alin Năstac <mrness@gentoo.org> (20 Jun 2009)
-# Masked for removal in 60 days (#273316).
-# SpeedTouch modems are supported by modern Linux kernels (>=2.6.10),
-# the firmware files being available under Gentoo as package
-# net-dialup/speedtouch-usb.
-net-dialup/speedtouch
 
 # Romain Perier <mrpouet@gentoo.org> (20 Jun 2009)
 # A lot of changes into sources code
