@@ -1,6 +1,10 @@
 # ChangeLog for app-dicts/canna-cannadic
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.26 2007/02/21 20:27:29 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/ChangeLog,v 1.27 2009/08/23 17:21:51 flameeyes Exp $
+
+  23 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  canna-cannadic-0.95c.ebuild:
+  Use emake for build.
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

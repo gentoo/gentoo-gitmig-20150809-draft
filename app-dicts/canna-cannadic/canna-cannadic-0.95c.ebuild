@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95c.ebuild,v 1.7 2006/10/21 00:18:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-cannadic/canna-cannadic-0.95c.ebuild,v 1.8 2009/08/23 17:21:51 flameeyes Exp $
 
 inherit cannadic
 
@@ -23,5 +23,5 @@ CANNADICS="gcanna gcannaf"
 DICSDIRFILE="${FILESDIR}/05cannadic.dics.dir"
 
 src_compile() {
-	make maindic || die
+	emake maindic || die
 }
