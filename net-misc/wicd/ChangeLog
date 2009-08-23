@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.50 2009/07/06 13:40:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.51 2009/08/23 00:18:56 darkside Exp $
+
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -wicd-1.6.0-r1.ebuild:
+  remove old
 
 *wicd-1.6.2 (06 Jul 2009)
 
