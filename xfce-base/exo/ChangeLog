@@ -1,0 +1,12 @@
+# ChangeLog for xfce-base/exo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.1 2009/08/23 17:43:26 ssuominen Exp $
+
+*exo-0.3.102-r1 (23 Aug 2009)
+*exo-0.3.101-r1 (23 Aug 2009)
+
+  23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +exo-0.3.101-r1.ebuild, +files/exo-0.3.101-iocharset.patch,
+  +exo-0.3.102-r1.ebuild, +files/exo-0.3.102-eject.patch:
+  Move from xfce-extra category.
+
