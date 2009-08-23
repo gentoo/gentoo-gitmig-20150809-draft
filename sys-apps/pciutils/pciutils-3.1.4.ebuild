@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.4.ebuild,v 1.2 2009/08/23 09:37:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.4.ebuild,v 1.3 2009/08/23 09:45:38 vapier Exp $
 
 inherit eutils multilib
 
@@ -18,6 +18,7 @@ DEPEND="zlib? ( sys-libs/zlib )"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-install-lib.patch #273489
 	epatch "${FILESDIR}"/${PN}-2.2.7-update-pciids-both-forms.patch
 	sed -i -e "/^LIBDIR=/s:/lib:/$(get_libdir):" Makefile
 }
