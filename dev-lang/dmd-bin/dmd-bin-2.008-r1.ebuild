@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008-r1.ebuild,v 1.4 2009/08/22 19:07:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/dmd-bin/dmd-bin-2.008-r1.ebuild,v 1.5 2009/08/23 01:57:40 williamh Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ S="${WORKDIR}"
 DEPEND="sys-apps/findutils
 	app-arch/unzip"
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-compat )
-	x86? ( =virtual/libstdc++-3* )"
+	x86? ( ~virtual/libstdc++-3.3 )"
 
 src_unpack() {
 	unpack ${A}
