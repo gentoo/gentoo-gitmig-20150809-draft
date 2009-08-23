@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre1.ebuild,v 1.9 2009/08/21 15:08:54 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre1.ebuild,v 1.10 2009/08/23 01:04:21 darkside Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -28,13 +28,13 @@ RDEPEND=">=dev-libs/glib-2.6:2
 		x11-libs/libXdmcp
 		x11-libs/libSM )"
 DEPEND="${RDEPEND}
-	>=sys-devel/libtool-2
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
+	rm -f m4/{libtool,lt*}.m4 || die "libtool fix failed"
 	epatch "${FILESDIR}"/${P}-ebuild_syntax.patch \
 		"${FILESDIR}"/${P}-tbz2_filetype.patch \
 		"${FILESDIR}"/${P}-undelfs_configure.patch
