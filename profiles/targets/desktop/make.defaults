@@ -1,8 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/make.defaults,v 1.9 2009/08/12 16:03:13 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/make.defaults,v 1.10 2009/08/23 19:29:59 ssuominen Exp $
 
-USE="a52 aac acpi alsa branding cairo cdr dbus dts dvd dvdr eds emboss encode evo fam firefox flac gif gnome gpm gstreamer gtk hal jpeg kde ldap libnotify mad mikmod mp3 mp4 mpeg ogg opengl pdf png ppds qt3support qt4 quicktime sdl spell svg tiff truetype vorbis win32codecs unicode usb X x264 xml xulrunner xv xvid"
+USE="a52 aac acpi alsa branding cairo cdr dbus dts dvd dvdr eds emboss encode evo fam firefox flac gif gnome gpm gstreamer gtk hal jpeg kde ldap libnotify mad mikmod mp3 mp4 mpeg ogg opengl pdf png ppds qt3support qt4 quicktime sdl spell svg thunar tiff truetype vorbis win32codecs unicode usb X x264 xml xulrunner xv xvid"
 
 # This is added for GNOME/Xfce
 USE="${USE} startup-notification"
