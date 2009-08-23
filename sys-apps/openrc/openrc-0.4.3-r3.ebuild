@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r3.ebuild,v 1.3 2009/07/11 15:12:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.4.3-r3.ebuild,v 1.4 2009/08/23 09:19:10 vapier Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -111,11 +111,19 @@ src_install() {
 
 add_boot_init() {
 	local initd=$1
-	# if the initscript is not going to be installed and  is not
+	# if the initscript is not going to be installed and is not
 	# currently installed, return
 	[[ -e ${D}/etc/init.d/${initd} || -e ${ROOT}/etc/init.d/${initd} ]] \
 		|| return
 	[[ -e ${ROOT}/etc/runlevels/boot/${initd} ]] && return
+
+	# if runlevels dont exist just yet, then create it but still flag
+	# to pkg_postinst that it needs real setup #277323
+	if [[ ! -d ${ROOT}/etc/runlevels/boot ]] ; then
+		mkdir -p "${ROOT}"/etc/runlevels/boot
+		touch "${ROOT}"/etc/runlevels/.add_boot_init.created
+	fi
+
 	elog "Auto-adding '${initd}' service to your boot runlevel"
 	ln -snf /etc/init.d/${initd} "${ROOT}"/etc/runlevels/boot/${initd}
 }
@@ -288,9 +296,10 @@ pkg_postinst() {
 	[[ -e ${T}/net && ! -e ${ROOT}/etc/conf.d/net ]] && mv "${T}"/net "${ROOT}"/etc/conf.d/net
 
 	# Make our runlevels if they don't exist
-	if [[ ! -e ${ROOT}/etc/runlevels ]] ; then
+	if [[ ! -e ${ROOT}/etc/runlevels ]] || [[ -e ${ROOT}/etc/runlevels/.add_boot_init.created ]] ; then
 		einfo "Copying across default runlevels"
 		cp -RPp "${ROOT}"/usr/share/${PN}/runlevels "${ROOT}"/etc
+		rm -f "${ROOT}"/etc/runlevels/.add_boot_init.created
 	else
 		if [[ ! -e ${ROOT}/etc/runlevels/sysinit/devfs ]] ; then
 			mkdir -p "${ROOT}"/etc/runlevels/sysinit

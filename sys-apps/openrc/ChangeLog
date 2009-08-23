@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.75 2009/07/11 15:12:25 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.76 2009/08/23 09:19:10 vapier Exp $
+
+  23 Aug 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.4.3-r3.ebuild,
+  openrc-9999.ebuild:
+  Make sure ${ROOT}/etc/runlevels exists early enough #277323 by Ed
+  Wildgoose.
 
   11 Jul 2009; Robin H. Johnson <robbat2@gentoo.org>
   +files/0.4.3/0003-command-line-size-fix.patch, openrc-0.4.3-r3.ebuild:
