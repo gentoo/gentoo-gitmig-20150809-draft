@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.6 2009/08/23 05:17:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.7 2009/08/23 14:33:07 ssuominen Exp $
 
 EAPI="2"
 
@@ -45,5 +45,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc example.c README *.{log,txt}
+	dodoc change.log example.c README *.txt
 }
