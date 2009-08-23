@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/monodoc-2.4.ebuild,v 1.2 2009/05/20 19:50:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/monodoc/monodoc-2.4.2.3.ebuild,v 1.1 2009/08/23 14:16:46 loki_val Exp $
 
 DESCRIPTION="Virtual for monodoc"
 HOMEPAGE="http://www.mono-project.com/"
