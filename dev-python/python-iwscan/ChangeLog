@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-iwscan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/ChangeLog,v 1.4 2009/05/13 19:00:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-iwscan/ChangeLog,v 1.5 2009/08/23 00:28:25 darkside Exp $
+
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  python-iwscan-20080402.ebuild:
+  amd64 stable, bug 282382. Tested with =net-misc/wicd-1.6.2
 
   13 May 2009; Christian Faulhammer <fauli@gentoo.org>
   python-iwscan-20080402.ebuild:
