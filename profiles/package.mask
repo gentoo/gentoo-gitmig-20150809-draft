@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10353 2009/08/23 06:48:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10354 2009/08/23 13:08:33 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,12 +36,6 @@
 # is only suited for ruby 1.6, which has gone from our tree a long
 # time ago. devel-logger will follow in 30 days.
 dev-ruby/devel-logger
-
-# Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
-# cgi_multipart_eof_fix is used to fix ruby versions up to 1.8.5.
-# We no longer ship these versions, and all versions in the tree
-# are unaffected, so this will be removed in 30 days.
-dev-ruby/cgi_multipart_eof_fix
 
 # Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
 # ruby-amazon uses the obsolete v3 protocol which has been shut
