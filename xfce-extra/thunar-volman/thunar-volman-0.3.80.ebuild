@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.3.80.ebuild,v 1.1 2009/03/10 14:15:39 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.3.80.ebuild,v 1.2 2009/08/23 17:56:55 ssuominen Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ IUSE="debug"
 
 RDEPEND="dev-libs/dbus-glib
 	sys-apps/hal
-	>=xfce-extra/exo-0.3.8[hal]
-	>=xfce-base/thunar-${THUNAR_VERSION}"
+	>=xfce-base/exo-0.3.8[hal]
+	>=xfce-base/thunar-1"
 
 DOCS="AUTHORS ChangeLog NEWS README THANKS"

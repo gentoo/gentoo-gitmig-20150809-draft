@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.2.0.ebuild,v 1.9 2008/12/21 12:40:08 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/thunar-volman-0.2.0.ebuild,v 1.10 2009/08/23 17:56:55 ssuominen Exp $
 
 inherit eutils xfce44
 
@@ -15,23 +15,22 @@ IUSE="debug"
 
 RDEPEND="dev-libs/dbus-glib
 	sys-apps/hal
-	>=xfce-extra/exo-0.3.2
-	>=xfce-base/thunar-${THUNAR_MASTER_VERSION}"
+	>=xfce-base/exo-0.3.2
+	>=xfce-base/thunar-1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 pkg_setup() {
-	if ! built_with_use xfce-extra/exo hal; then
+	if ! built_with_use xfce-base/exo hal; then
 		ewarn "Volume management requires xfce-extra/exo with hal support. Enable"
 		ewarn "hal USE flag and re-emerge xfce-extra/exo."
-		die "re-emerge xfce-extra/exo with USE hal"
+		die "re-emerge xfce-base/exo with USE hal"
 	fi
 }
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	# Fix make check.
 	echo thunar-volman-settings.desktop.in.in >> po/POTFILES.skip
 }
 
