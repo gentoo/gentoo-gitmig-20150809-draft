@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cheese
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.14 2009/07/19 20:05:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/ChangeLog,v 1.15 2009/08/23 02:01:48 eva Exp $
+
+  23 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> cheese-2.24.3.ebuild,
+  -cheese-2.26.2.ebuild, cheese-2.26.3.ebuild:
+  Clean up old revision. Add docbook-xml-dtd-4.3 to DEPEND per bug #281839.
 
 *cheese-2.26.3 (19 Jul 2009)
 

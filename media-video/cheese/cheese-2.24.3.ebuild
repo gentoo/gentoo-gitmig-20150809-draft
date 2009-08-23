@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.24.3.ebuild,v 1.3 2009/03/15 22:09:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.24.3.ebuild,v 1.4 2009/08/23 02:01:48 eva Exp $
 
 GCONF_DEBUG="no"
 
@@ -41,7 +41,8 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
-	x11-proto/xf86vidmodeproto"
+	x11-proto/xf86vidmodeproto
+	~app-text/docbook-xml-dtd-4.3"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 

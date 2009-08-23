@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.26.3.ebuild,v 1.1 2009/07/19 20:05:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cheese/cheese-2.26.3.ebuild,v 1.2 2009/08/23 02:01:48 eva Exp $
 
+EAPI="2"
 GCONF_DEBUG="no"
 
 inherit gnome2 eutils
@@ -43,10 +44,18 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	app-text/scrollkeeper
 	app-text/gnome-doc-utils
-	x11-proto/xf86vidmodeproto"
+	x11-proto/xf86vidmodeproto
+	app-text/docbook-xml-dtd:4.3"
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
 pkg_setup() {
 	G2CONF="${G2CONF} --disable-scrollkeeper --disable-hildon"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Fix intltoolize broken file, see upstream #577133
+	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
 }
