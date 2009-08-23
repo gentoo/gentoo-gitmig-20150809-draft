@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.3.ebuild,v 1.13 2009/08/03 06:20:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.3.ebuild,v 1.14 2009/08/23 16:04:34 flameeyes Exp $
 
 MY_P=${P/-dtd/}
 DESCRIPTION="Docbook DTD for XML"
@@ -9,7 +9,7 @@ SRC_URI="http://www.docbook.org/xml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="4.3"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
 RDEPEND=""

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r6.ebuild,v 1.17 2009/08/03 06:20:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r6.ebuild,v 1.18 2009/08/23 16:04:34 flameeyes Exp $
 
 inherit sgml-catalog
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.oasis-open.org/docbook/xml/${PV}/${MY_P}.zip"
 
 LICENSE="X11"
 SLOT="4.1.2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE=""
 
 RDEPEND=""
