@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-all
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/ChangeLog,v 1.13 2009/08/02 02:12:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-all/ChangeLog,v 1.14 2009/08/23 23:19:32 mr_bones_ Exp $
+
+  23 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  fortune-mod-all-1.ebuild:
+  remove quotes from Martin Piskernig as his request (bug #282420)
 
   02 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
   fortune-mod-all-1.ebuild:
