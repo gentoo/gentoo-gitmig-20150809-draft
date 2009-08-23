@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher/xfce4-quicklauncher-1.9.4.ebuild,v 1.12 2008/06/23 00:04:07 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher/xfce4-quicklauncher-1.9.4.ebuild,v 1.13 2009/08/23 16:51:05 ssuominen Exp $
 
 inherit autotools xfce44
 
@@ -8,7 +8,7 @@ xfce44
 xfce44_goodies_panel_plugin
 
 DESCRIPTION="Xfce4 panel quicklauncher plugin"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 DEPEND="dev-util/xfce4-dev-tools
 	dev-util/intltool"
