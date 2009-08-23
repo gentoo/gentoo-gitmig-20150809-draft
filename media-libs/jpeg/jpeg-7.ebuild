@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.5 2009/08/23 01:59:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-7.ebuild,v 1.6 2009/08/23 05:17:28 vapier Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ DEB="${DEB_PN}_${DEB_PV}"
 inherit eutils libtool
 
 DESCRIPTION="Library to load, handle and manipulate images in the JPEG format"
-HOMEPAGE="http://www.ijg.org/"
+HOMEPAGE="http://jpegclub.org/ http://www.ijg.org/"
 SRC_URI="http://www.ijg.org/files/${PN}src.v${PV}.tar.gz
 	mirror://debian/pool/main/libj/${DEB_PN}/${DEB}.diff.gz"
 
