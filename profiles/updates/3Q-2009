@@ -8,3 +8,4 @@ move dev-perl/parent perl-core/parent
 move dev-perl/Parse-CPAN-Meta perl-core/Parse-CPAN-Meta
 move net-libs/xyssl net-libs/polarssl
 move xfce-extra/thunar-svn xfce-extra/thunar-svn-plugin
+move xfce-extra/thunar-shares xfce-extra/thunar-shares-plugin

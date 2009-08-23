@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3156 2009/08/23 02:20:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3157 2009/08/23 02:45:17 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> updates/3Q-2009:
+  move xfce-extra/thunar-shares xfce-extra/thunar-shares-plugin
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> updates/3Q-2009:
   move xfce-extra/thunar-svn xfce-extra/thunar-svn-plugin
