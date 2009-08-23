@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/gst-plugins-soup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.12 2009/08/05 04:49:49 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-soup/ChangeLog,v 1.13 2009/08/23 07:30:38 leio Exp $
+
+*gst-plugins-soup-0.10.15 (23 Aug 2009)
+
+  23 Aug 2009; Mart Raudsepp <leio@gentoo.org> metadata.xml,
+  +gst-plugins-soup-0.10.15.ebuild:
+  Version bump with a few API additions (timeout and extra-headers
+  properties). Add a long description.
 
   05 Aug 2009; Mart Raudsepp <leio@gentoo.org>
   -gst-plugins-soup-0.10.8.ebuild, -gst-plugins-soup-0.10.11.ebuild:
