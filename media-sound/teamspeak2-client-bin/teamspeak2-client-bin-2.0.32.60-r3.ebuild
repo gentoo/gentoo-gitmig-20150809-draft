@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.20 2009/07/21 17:49:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-client-bin/teamspeak2-client-bin-2.0.32.60-r3.ebuild,v 1.21 2009/08/23 10:13:33 ssuominen Exp $
 
 MY_PV=rc2_2032
 inherit eutils
@@ -15,6 +15,7 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 RDEPEND="x11-libs/libXt
+	|| ( media-libs/jpeg-compat <media-libs/jpeg-7 )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1
 		>=app-emulation/emul-linux-x86-xlibs-1 )"
 DEPEND=""
