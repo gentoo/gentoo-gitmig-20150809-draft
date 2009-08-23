@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/hxd
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.9 2008/12/27 05:46:19 wormo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.10 2009/08/23 04:31:47 vostorga Exp $
+
+*hxd-0.70.02 (23 Aug 2009)
+
+  23 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> +hxd-0.70.02.ebuild:
+  Version bump to 0.70.02
+  Respecting CFLAGS, LDFLAGS and CC variable
+  Fixing pre-stripped files
+  Workaround for parallel make
 
   27 Dec 2008; Stephanie Lockwood-Childs <wormo@gentoo.org> hxd-0.70.ebuild:
   add ~amd64 keyword, reporter Andrew Savchenko (bug #252644)
