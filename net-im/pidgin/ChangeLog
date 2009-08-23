@@ -1,6 +1,9 @@
 # ChangeLog for net-im/pidgin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.121 2009/08/22 15:38:35 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/ChangeLog,v 1.122 2009/08/23 08:35:05 nixnut Exp $
+
+  23 Aug 2009; nixnut <nixnut@gentoo.org> pidgin-2.5.9.ebuild:
+  ppc stable #281545
 
   22 Aug 2009; Olivier Crête <tester@gentoo.org> pidgin-2.6.1.ebuild:
   Replace intltool files, bug #282282
