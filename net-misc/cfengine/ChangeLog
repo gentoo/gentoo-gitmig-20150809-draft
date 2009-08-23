@@ -1,6 +1,25 @@
 # ChangeLog for net-misc/cfengine
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.90 2008/12/05 20:26:04 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.91 2009/08/23 23:22:18 ramereth Exp $
+
+*cfengine-2.2.10 (23 Aug 2009)
+
+  23 Aug 2009; Lance Albertson <ramereth@gentoo.org>
+  -cfengine-2.1.20.ebuild, -cfengine-2.1.21.ebuild,
+  -cfengine-2.1.22-r1.ebuild, cfengine-2.1.22-r2.ebuild,
+  -cfengine-2.2.6.ebuild, -cfengine-2.2.7.ebuild, cfengine-2.2.8.ebuild,
+  cfengine-2.2.8-r1.ebuild, +cfengine-2.2.10.ebuild:
+  Version bump to 2.2.10, mark 2.2.x series stable
+
+    * Old version clean up
+    * Finally stablize the 2.2.x series (minus 2.2.10)
+    * Fix QA issues with ebuilds
+    * Update SRC_URI as it changed
+    * 2.2.10
+      - Include info files
+      - Remove libcfengine.la/.a files as they aren't needed
+      - Update ebuild to EAPI 2
+      - package locking patch no longer needed
 
   05 Dec 2008; Robin H. Johnson <robbat2@gentoo.org>
   files/cfengine-2.1-package-locking-fixup.patch,

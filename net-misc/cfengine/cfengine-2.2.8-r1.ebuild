@@ -1,22 +1,23 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.8-r1.ebuild,v 1.3 2008/12/05 08:26:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.2.8-r1.ebuild,v 1.4 2009/08/23 23:22:18 ramereth Exp $
 
 inherit eutils
 
 DESCRIPTION="An automated suite of programs for configuring and maintaining
 Unix-like computers"
 HOMEPAGE="http://www.cfengine.org/"
-SRC_URI="http://www.cfengine.org/downloads/${P}.tar.gz"
+SRC_URI="http://www.cfengine.org/tarballs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="amd64 ~arm ~ppc ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/db-4
 	>=dev-libs/openssl-0.9.7
 	app-portage/portage-utils"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
