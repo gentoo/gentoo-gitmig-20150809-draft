@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r1.ebuild,v 1.1 2009/08/09 21:52:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r1.ebuild,v 1.2 2009/08/23 21:25:26 eva Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.10"
@@ -26,6 +26,9 @@ COMMON_DEPEND=">=dev-libs/glib-2.16.0
 	>=net-libs/libsoup-2.26:2.4[gnome]
 
 	>=media-libs/gst-plugins-base-0.10.20
+	|| (
+		>=media-libs/gst-plugins-base-0.10.24
+		>=media-libs/gst-plugins-bad-0.10.6 )
 
 	cdr? (
 		brasero? ( >=app-cdr/brasero-0.9.1 )
