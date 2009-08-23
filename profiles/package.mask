@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10355 2009/08/23 14:14:34 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10356 2009/08/23 15:43:01 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -535,13 +535,6 @@ dev-libs/libexploit
 #
 # Removal on 2009-10-08
 dev-db/sqsh
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2009)
-# Outdated virtual for Xfce 4.4. Use eix to search for
-# xfce plugins you want to install. This meta only covered
-# old ones. Unnecessary maintaince burden for minor arches
-# if we wanted to keep this up to date. Masked for removal.
-xfce-base/xfce4-extras
 
 # Michał Januszewski <spock@gentoo.org> (08 Aug 2009)
 # Live git ebuilds for pycuda/pytools. Use at your own risk, do not
