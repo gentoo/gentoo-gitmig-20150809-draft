@@ -1,8 +1,8 @@
 # ChangeLog for net-misc/hamachi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.13 2009/08/23 01:47:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/ChangeLog,v 1.14 2009/08/23 01:48:38 darkside Exp $
 
-  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> ChangeLog:
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> -files/tuncfg.confd:
   remove unused patches
 
   31 Jul 2009; Tomáš Chvátal <scarabeus@gentoo.org>

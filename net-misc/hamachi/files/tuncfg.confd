@@ -1,6 +1,0 @@
-# Copyright 1999-2006 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hamachi/files/tuncfg.confd,v 1.1 2006/09/20 12:02:02 caleb Exp $
-
-# /etc/conf.d/tuncfg
-# Config file for Hamachi's tuncfg control script
