@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4.ebuild,v 1.6 2009/05/20 19:51:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-2.4.2.3.ebuild,v 1.1 2009/08/23 00:59:23 loki_val Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.go-mono.com"
 
 LICENSE="MIT LGPL-2.1 GPL-2 BSD-4 NPL-1.1 Ms-PL GPL-2-with-linking-exception IDPL"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="xen moonlight minimal"
 
 #Bash requirement is for += operator
@@ -38,7 +38,6 @@ PATCHES=(
 	"${WORKDIR}/mono-2.2-libdir126.patch"
 	"${FILESDIR}/mono-2.2-ppc-threading.patch"
 	"${FILESDIR}/mono-2.2-uselibdir.patch"
-	"${FILESDIR}/mono-2.4-ppcbuild-fix.patch"
 )
 
 pkg_setup() {
@@ -114,6 +113,10 @@ src_install() {
 		"${D}"/usr/bin/mod || die "Failed to fix mod."
 
 	find "${D}"/usr/ -name '*nunit-docs*' -exec rm -rf '{}' '+' || die "Removing nunit .docs failed"
+
+	# Remove Jay to avoid colliding with dev-util/jay, the internal
+	# version is only used to build mcs.
+	rm -r "${D}"/usr/share/jay "${D}"/usr/bin/jay "${D}"/usr/share/man/man1/jay.1*
 }
 
 #THINK!!!! Before touching postrm and postinst
@@ -137,10 +140,10 @@ pkg_preinst() {
 				einfo "be advised that this is a known problem, which will now be fixed:"
 				ebegin "Found broken symlinks created by $(best_version dev-lang/mono), fixing"
 				for symlink in						\
-				    "${ROOT}/${NUNIT_DIR}"				\
-				    "${ROOT}/usr/$(get_libdir)/pkgconfig/nunit.pc"	\
-				    "${ROOT}/usr/bin/nunit-console"			\
-				    "${ROOT}/usr/bin/nunit-console2"
+					"${ROOT}/${NUNIT_DIR}"				\
+					"${ROOT}/usr/$(get_libdir)/pkgconfig/nunit.pc"	\
+					"${ROOT}/usr/bin/nunit-console"			\
+					"${ROOT}/usr/bin/nunit-console2"
 				do
 					if [[ -L "${symlink}" ]]
 					then
