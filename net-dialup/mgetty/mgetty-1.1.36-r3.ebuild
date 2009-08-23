@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.4 2009/08/22 08:51:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.36-r3.ebuild,v 1.5 2009/08/23 14:18:22 mr_bones_ Exp $
 
 EAPI=1
 inherit toolchain-funcs flag-o-matic eutils
@@ -71,7 +71,7 @@ src_compile() {
 
 src_install () {
 	# parallelization issue: vgetty-install target fails if install target
-	#                        isn't finished 
+	#                        isn't finished
 	local targets
 	for targets in install "vgetty-install install-callback"; do
 		emake prefix="${D}/usr" \
