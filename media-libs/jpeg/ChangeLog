@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.73 2009/08/23 00:52:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.74 2009/08/23 01:59:57 vapier Exp $
+
+  23 Aug 2009; Mike Frysinger <vapier@gentoo.org> jpeg-7.ebuild,
+  +files/Makefile.extra, +files/Makefile.in.extra:
+  Move from custom jpeg extras to Debian extras since ours is just a copy.
 
   23 Aug 2009; Mike Frysinger <vapier@gentoo.org> jpeg-7.ebuild:
   Hook the extra subdir into the normal jpeg dir so we can re-use the
