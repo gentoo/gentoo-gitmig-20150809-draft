@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/maya
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.31 2008/11/02 12:46:00 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/ChangeLog,v 1.32 2009/08/23 02:04:44 williamh Exp $
+
+  23 Aug 2009; William Hubbs <williamh@gentoo.org> maya-6.5.ebuild:
+  updated dependencies for but 231870.
 
   02 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
