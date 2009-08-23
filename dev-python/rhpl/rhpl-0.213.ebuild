@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/rhpl-0.213.ebuild,v 1.2 2009/04/28 10:09:32 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/rhpl-0.213.ebuild,v 1.3 2009/08/23 00:16:50 darkside Exp $
 
 inherit eutils multilib python rpm toolchain-funcs distutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://fedoraproject.org/wiki/SystemConfig/"
 SRC_URI="mirror://fedora-dev/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 RDEPEND="dev-lang/python
 	!<sys-libs/libkudzu-1.2"
