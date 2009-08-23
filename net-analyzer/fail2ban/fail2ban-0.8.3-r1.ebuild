@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.1.ebuild,v 1.5 2008/06/15 09:21:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.3-r1.ebuild,v 1.1 2009/08/23 21:04:47 a3li Exp $
 
 inherit distutils
 
@@ -10,19 +10,30 @@ SRC_URI="mirror://sourceforge/fail2ban/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4"
 RDEPEND="${DEPEND}
 	virtual/mta"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}/${PN}-CVE-2009-0362.patch"
+}
+
 src_install() {
 	distutils_src_install
 
+	diropts -m 0755 -o root -g root
+	dodir /var/run/${PN}
+	keepdir /var/run/${PN}
+
 	newconfd files/gentoo-confd fail2ban
 	newinitd files/gentoo-initd fail2ban
-	dodoc CHANGELOG README TODO || die "dodoc failed"
+	dodoc ChangeLog README TODO || die "dodoc failed"
 	doman man/*.1 || die "doman failed"
 
 	# Use INSTALL_MASK  if you do not want to touch /etc/logrotate.d.
@@ -48,14 +59,5 @@ pkg_postinst() {
 		elog
 		elog "You are upgrading from version 0.6.x, please see:"
 		elog "http://www.fail2ban.org/wiki/index.php/HOWTO_Upgrade_from_0.6_to_0.8"
-	fi
-}
-
-pkg_setup() {
-	if ! built_with_use dev-lang/python readline ; then
-		echo
-		eerror "dev-lang/python is missing readline support. Please add"
-		eerror "'readline' to your USE flags, and re-emerge dev-lang/python."
-		die "dev-lang/python needs readline support"
 	fi
 }

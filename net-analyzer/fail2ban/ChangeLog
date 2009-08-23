@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.46 2009/06/01 19:48:27 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.47 2009/08/23 21:04:47 a3li Exp $
+
+*fail2ban-0.8.3-r1 (23 Aug 2009)
+
+  23 Aug 2009; Alex Legler <a3li@gentoo.org> -fail2ban-0.8.1.ebuild,
+  -fail2ban-0.8.2.ebuild, -fail2ban-0.8.3.ebuild, +fail2ban-0.8.3-r1.ebuild,
+  +files/fail2ban-CVE-2009-0362.patch:
+  Non-maintainer commit: Revbump to fix security bug 258866. Removing
+  unneeded vulnerable versions.
 
   01 Jun 2009; Peter Volkov <pva@gentoo.org> -fail2ban-0.6.2-r1.ebuild:
   Removed vulnerable version, bug #271687, thank Robert Buchholz for report.
