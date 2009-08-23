@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.7 2008/11/20 17:00:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xfmedia/xfmedia-0.9.2-r2.ebuild,v 1.8 2009/08/23 17:58:48 ssuominen Exp $
 
 inherit eutils fdo-mime gnome2-utils
 
@@ -23,7 +23,7 @@ RDEPEND="x11-libs/libX11
 	>=xfce-base/libxfce4util-4.2
 	>=xfce-base/libxfcegui4-4.2
 	media-libs/xine-lib
-	xfce-extra/exo
+	xfce-base/exo
 	startup-notification? ( x11-libs/startup-notification )
 	dbus? ( dev-libs/dbus-glib )
 	taglib? ( media-libs/taglib )"
