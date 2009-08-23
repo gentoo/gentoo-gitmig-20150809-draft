@@ -3,15 +3,15 @@
 <pkgmetadata>
 <herd>xfce</herd>
 <herd>media-optical</herd>
-	<maintainer>
-		<email>mario@xfce.org</email>
-		<description>Upstream. CC on bugzilla!</description>
-	</maintainer>
-	<maintainer>
-		<email>bugs@da.mcbf.net</email>
-		<description>Upstream. CC on bugzilla!</description>
-	</maintainer>
-<use>
-	<flag name='xfce'>Adds integration with Xfce4 desktop environment</flag>
-</use>
+  <maintainer>
+    <email>mario@xfce.org</email>
+    <description>Upstream. CC on bugzilla!</description>
+  </maintainer>
+  <maintainer>
+    <email>bugs@da.mcbf.net</email>
+    <description>Upstream. CC on bugzilla!</description>
+  </maintainer>
+  <use>
+    <flag name='thunar'>Adds integration with Thunar file manager</flag>
+  </use>
 </pkgmetadata>
