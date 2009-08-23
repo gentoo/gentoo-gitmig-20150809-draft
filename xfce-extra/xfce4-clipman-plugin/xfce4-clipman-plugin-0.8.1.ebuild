@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-0.8.1.ebuild,v 1.1 2009/08/23 16:35:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-clipman-plugin/xfce4-clipman-plugin-0.8.1.ebuild,v 1.2 2009/08/23 17:43:55 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2.14:2
 	>=xfce-base/libxfcegui4-4.4
 	>=xfce-base/xfce4-panel-4.4
 	>=xfce-base/xfconf-4.6
-	>=xfce-extra/exo-0.3"
+	>=xfce-base/exo-0.3"
 DEPEND="${RDEPEND}
 	dev-util/intltool
 	sys-devel/gettext
