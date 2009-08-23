@@ -1,15 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.3.2.ebuild,v 1.1 2009/06/07 18:31:05 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/gigolo-0.3.2.ebuild,v 1.2 2009/08/23 03:30:32 darkside Exp $
 
-EAPI=1
-
-inherit xfce4
-
-xfce4_goodies
+EAPI="2"
+inherit xfconf multilib
 
 DESCRIPTION="a frontend to easily manage connections to remote filesystems using
 GIO/GVfs"
+HOMEPAGE="http://www.uvena.de/gigolo/index.html http://goodies.xfce.org/projects/applications/gigolo"
+SRC_URI="http://files.uvena.de/gigolo/${P}.tar.bz2"
+
+LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
@@ -17,20 +19,25 @@ DEPEND=">=x11-libs/gtk+-2.12:2
 	>=dev-libs/glib-2.16:2"
 RDEPEND="${DEPEND}"
 
-DOCS="AUTHORS ChangeLog NEWS README TODO"
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog NEWS README TODO"
+}
+
+src_configure() {
+	./waf --prefix="/usr" --libdir="/usr/$(get_libdir)" configure \
+		|| die "./waf configure failed"
+}
 
 src_compile() {
-	./waf --prefix="/usr" --libdir="/usr/$(get_libdir)" configure \
-			|| die "./waf configure failed"
-
 	# Build takes -jX, but not -lX so cannot use $MAKEOPTS
-	./waf build || die "./waf build failed"
+	NUMJOBS=$(sed -e 's/.*\(\-j[ 0-9]\+\) .*/\1/; s/--jobs=\?/-j/' <<< ${MAKEOPTS})
+	./waf build ${NUMJOBS} || die "./waf build failed"
 }
 
 src_install() {
 	./waf --destdir="${D}" install || die "./waf install failed"
 
 	# process docs
-	dodoc ${DOCS}
+	dodoc ${DOCS} || die "dodoc failed"
 	rm -rf "${D}"/usr/share/doc/${PN}
 }

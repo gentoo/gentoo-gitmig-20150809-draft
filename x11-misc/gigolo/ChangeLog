@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gigolo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.2 2009/06/07 18:52:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gigolo/ChangeLog,v 1.3 2009/08/23 03:30:32 darkside Exp $
+
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> gigolo-0.3.2.ebuild:
+  convert to EAPI-2, convert to xfconf.eclass
 
 *gigolo-0.3.2 (07 Jun 2009)
 
