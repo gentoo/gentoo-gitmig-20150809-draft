@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.4.ebuild,v 1.1 2009/08/23 09:35:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/pciutils-3.1.4.ebuild,v 1.2 2009/08/23 09:37:21 vapier Exp $
 
 inherit eutils multilib
 
@@ -42,7 +42,7 @@ src_compile() {
 }
 
 src_install() {
-	pemake DESTDIR="${D}" install || die
+	pemake DESTDIR="${D}" install install-lib || die
 	dodoc ChangeLog README TODO
 
 	if use network-cron ; then
