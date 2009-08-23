@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.046-r1.ebuild,v 1.5 2009/08/22 20:29:05 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.046-r2.ebuild,v 1.1 2009/08/23 21:28:09 weaver Exp $
 
 EAPI="2"
+
+inherit toolchain-funcs
 
 PID=1536
 PB=cproc
@@ -24,7 +26,7 @@ SRC_URI="http://registrationcenter-download.intel.com/irc_nas/${PID}/${PACKAGEID
 LICENSE="Intel-SDP"
 SLOT="0"
 IUSE=""
-KEYWORDS=""
+KEYWORDS="~amd64"
 
 RESTRICT="mirror strip binchecks"
 
@@ -65,17 +67,33 @@ src_install() {
 	if use ia64; then MYARCH=ia64; fi
 	if use x86; then MYARCH=ia32; fi
 
-	env - bash --noprofile --norc -c "source '${D}/${INSTALL_DIR}/bin/iccvars.sh' ${MYARCH}; env|egrep -v '(PWD|SHLVL|_)='" > ${ENV_FILE}
+	# By default, icpc 11.1 will prepend /usr to these paths, failing to find stdc++ headers
+	cat <<EOF >> "${D}/${INSTALL_DIR}/bin/${MYARCH}/icpc.cfg"
+-nostdinc++
+-isystem/usr/lib/gcc/${CHOST}/$(gcc-fullversion)/include/g++-v4
+-isystem/usr/lib/gcc/${CHOST}/$(gcc-fullversion)/include/g++-v4/${CHOST}
+-isystem/usr/lib/gcc/${CHOST}/$(gcc-fullversion)/include/g++-v4/backward
+EOF
+
+	cat <<EOF > ${ENV_FILE}
+MANPATH=${ROOT}${INSTALL_DIR}/man/en_US
+INTEL_LICENSE_FILE=${ROOT}${INSTALL_DIR}/licenses:${ROOT}opt/intel/licenses
+LIBRARY_PATH=${ROOT}${INSTALL_DIR}/lib/intel64:${ROOT}${INSTALL_DIR}/tbb/em64t/cc4.1.0_libc2.4_kernel2.6.16.21/lib
+LD_LIBRARY_PATH=${ROOT}${INSTALL_DIR}/lib/intel64:${ROOT}${INSTALL_DIR}/tbb/em64t/cc4.1.0_libc2.4_kernel2.6.16.21/lib
+CPATH=${ROOT}${INSTALL_DIR}/tbb/include
+NLSPATH=${ROOT}${INSTALL_DIR}/lib/intel64/locale/%l_%t/%N
+PATH=${ROOT}${INSTALL_DIR}/bin/${MYARCH}
+ROOTPATH=${ROOT}${INSTALL_DIR}/bin/${MYARCH}
+DYLD_LIBRARY_PATH=${ROOT}${INSTALL_DIR}/tbb/em64t/cc4.1.0_libc2.4_kernel2.6.16.21/lib
+EOF
+
 	doenvd ${ENV_FILE} || die
 
-	# PROFILE_FILE=${PN}.sh
-	# echo "source ${ROOT}${INSTALL_DIR}/bin/iccvars.sh ${MYARCH}" >> ${PROFILE_FILE}
-	# exeinto /etc/profile.d; doexe ${PROFILE_FILE} || die
-
-	mkdir -p "${D}/opt/intel/licenses"
+	keepdir /opt/intel/licenses
 }
 
 pkg_postinst() {
+	env-update
 	elog "${PN} requires a license file in order to run."
 	elog "To receive a restrictive non-commercial license, please register at:"
 	elog "http://www.intel.com/cd/software/products/asmo-na/eng/download/download/219771.htm"
@@ -86,4 +104,14 @@ pkg_postinst() {
 	elog "\t dev-lang/idb"
 	elog "\t sci-libs/ipp"
 	elog "\t sci-libs/mkl"
+	ewarn
+	ewarn "The ${P} C++ compiler (icpc) is unable to find the GNU C++ headers on Gentoo."
+	ewarn "To correct this, the following icpc options have been put in the file"
+	ewarn "${ROOT}${INSTALL_DIR}/bin/${MYARCH}/icpc.cfg:"
+	ewarn "\t -nostdinc++"
+	ewarn "\t -isystem/usr/lib/gcc/${CHOST}/$(gcc-fullversion)/include/g++-v4"
+	ewarn "\t -isystem/usr/lib/gcc/${CHOST}/$(gcc-fullversion)/include/g++-v4/${CHOST}"
+	ewarn "\t -isystem/usr/lib/gcc/${CHOST}/$(gcc-fullversion)/include/g++-v4/backward"
+	ewarn "You will have to update these lines every time you upgrade GCC for icpc to work."
+	ewarn
 }

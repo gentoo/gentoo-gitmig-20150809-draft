@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/icc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.70 2009/08/22 19:55:40 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.71 2009/08/23 21:28:09 weaver Exp $
+
+*icc-11.1.046-r2 (23 Aug 2009)
+
+  23 Aug 2009; Andrey Kislyuk <weaver@gentoo.org> -icc-11.1.046-r1.ebuild,
+  +icc-11.1.046-r2.ebuild:
+  Fix env.d file and workaround for bug 282146 for amd64. Re-keyword ~amd64 only
 
   22 Aug 2009; William Hubbs <williamh@gentoo.org> icc-10.0.026.ebuild,
   icc-10.1.017-r1.ebuild, icc-10.1.018.ebuild, icc-11.1.046-r1.ebuild:
