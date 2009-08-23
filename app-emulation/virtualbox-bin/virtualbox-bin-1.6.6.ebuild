@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.8 2009/08/22 19:06:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/virtualbox-bin-1.6.6.ebuild,v 1.9 2009/08/23 01:22:32 williamh Exp $
 
 EAPI=1
 
@@ -46,7 +46,7 @@ RDEPEND="!app-emulation/virtualbox-ose
 	x11-libs/libXdmcp
 	sys-apps/usermode-utilities
 	net-misc/bridge-utils
-	x86? ( =virtual/libstdc++-3* )
+	x86? ( ~virtual/libstdc++-3.3 )
 	sdk? ( dev-libs/libIDL )"
 
 S=${WORKDIR}
