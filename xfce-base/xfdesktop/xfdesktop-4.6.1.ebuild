@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.1.ebuild,v 1.10 2009/08/02 09:49:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.1.ebuild,v 1.11 2009/08/23 17:47:26 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.xfce.org/projects/xfdesktop"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
-IUSE="debug doc +file-icons +menu-plugin"
+IUSE="debug doc file-icons +menu-plugin"
 
 LINGUAS="be ca cs da de el es et eu fi fr he hu it ja ko nb_NO nl pa pl pt_BR ro ru sk sv tr uk vi zh_CN zh_TW"
 
@@ -30,7 +30,7 @@ RDEPEND="gnome-base/libglade
 	>=xfce-base/libxfce4menu-4.6
 	>=xfce-base/xfconf-4.6
 	file-icons? ( >=xfce-base/thunar-1
-		>=xfce-extra/exo-0.3.100
+		>=xfce-base/exo-0.3.100
 		dev-libs/dbus-glib )
 	menu-plugin? ( >=xfce-base/xfce4-panel-4.6 )"
 DEPEND="${RDEPEND}
