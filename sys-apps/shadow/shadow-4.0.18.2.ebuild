@@ -1,11 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2.ebuild,v 1.11 2008/05/11 13:11:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.18.2.ebuild,v 1.12 2009/08/23 10:45:45 vapier Exp $
 
 inherit eutils libtool toolchain-funcs autotools pam multilib
 
 DESCRIPTION="Utilities to deal with user accounts"
-HOMEPAGE="http://shadow.pld.org.pl/ http://packages.qa.debian.org/s/shadow.html"
+HOMEPAGE="http://shadow.pld.org.pl/ http://pkg-shadow.alioth.debian.org/"
 SRC_URI="mirror://debian/pool/main/s/shadow/shadow_${PV}.orig.tar.gz"
 
 LICENSE="BSD GPL-2"
