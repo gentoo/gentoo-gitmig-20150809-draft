@@ -1,60 +1,53 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.5_pre1.ebuild,v 1.1 2009/07/14 09:42:48 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.5.1.ebuild,v 1.1 2009/08/23 22:25:42 volkmar Exp $
 
 EAPI="2"
 
 inherit mozextension multilib
 
 MY_PN="weave"
-MY_PV="${PV/_/}"
-MY_P="${MY_PN}-${MY_PV}"
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Mozilla Labs prototype for online services into Firefox"
 HOMEPAGE="http://labs.mozilla.com/projects/weave/"
-SRC_URI="http://hg.mozilla.org/labs/${MY_PN}/archive/${MY_PV}.tar.gz
+SRC_URI="http://hg.mozilla.org/labs/${MY_PN}/archive/${PV}.tar.gz
 	-> ${P}.tar.gz"
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
-#KEYWORDS="~amd64 ~ppc ~x86"
-KEYWORDS=""
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND="|| (
 		>=www-client/mozilla-firefox-3.5
 		>=www-client/mozilla-firefox-bin-3.5
-		>=www-client/seamonkey-bin-2.0_alpha3
 		>=www-client/seamonkey-2.0_alpha3
-		>=mail-client/mozilla-thunderbird-bin-3.0_beta2
+		>=www-client/seamonkey-bin-2.0_alpha3
 		>=mail-client/mozilla-thunderbird-3.0_beta2
+		>=mail-client/mozilla-thunderbird-bin-3.0_beta2
 	)
 	>=net-libs/xulrunner-1.9.1
 	>=dev-libs/nss-3.12
 	>=dev-libs/nspr-4.7.1"
 DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${MY_P}"
+S=${WORKDIR}/${MY_P}
 
 # XXX: fennec is also listed in install.rdf but not in-tree
 
 src_prepare() {
-	# Fix hard-coded paths in the Makefiles
-	epatch "${FILESDIR}/${PN}-use-pkgconfig.patch"
-
 	# remove compiled files
-	rm -rf platform/*
+	rm -rf crypto/platform/* || die "rm -rf never dies"
+
+	# upstream bug 504022
+	epatch "${FILESDIR}"/${P}-pkgconfig.patch
 }
 
 src_compile() {
-	if has_version '=net-libs/xulrunner-1.9.0*'; then
-		export XULRUNNER_BIN="${ROOT}/usr/bin/xulrunner-1.9"
-	elif has_version '=net-libs/xulrunner-1.9.1*'; then
-		export XULRUNNER_BIN="${ROOT}/usr/bin/xulrunner-1.9.1"
-	fi
 	export WEAVE_BUILDID=${PV}
 
-	emake release_build=1 xpi || die "emake failed"
+	emake rebuild_crypto=1 release_build=1 xpi || die "emake failed"
 }
 
 src_install() {
@@ -62,7 +55,7 @@ src_install() {
 
 	mozillas=""
 	xpiname="${MY_P}-rel"
-	xpi_unpack "${S}/${xpiname}.xpi"
+	xpi_unpack "${S}/dist/xpi/${xpiname}.xpi"
 
 	# FIXME: Hard-coded MOZILLA_FIVE_HOME dirs
 	if has_version '>=www-client/mozilla-firefox-3.5'; then
@@ -106,6 +99,7 @@ pkg_postinst() {
 	for i in ${mozillas}; do
 		elog "	$i"
 	done
+	elog
 	elog "After installing other mozilla ebuilds, if you want to use weave with them,"
 	elog "reinstall www-plugins/mozilla-weave"
 }

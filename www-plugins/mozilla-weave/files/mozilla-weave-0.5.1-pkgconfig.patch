@@ -1,11 +1,6 @@
-Fix hard-coded paths in Makefiles. Use pkg-config if available instead
-
-bmo: 504022
-
-Nirbheek Chauhan <nirbheek@gentoo.org>
----
---- a/Makefile
-+++ b/Makefile
+diff -r adb27ed2f421 crypto/Makefile
+--- a/crypto/Makefile	Fri Aug 21 17:32:41 2009 -0700
++++ b/crypto/Makefile	Mon Aug 24 00:09:43 2009 +0200
 @@ -39,12 +39,23 @@
  stage_dir=../dist/stage
  
@@ -15,7 +10,7 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
 +# To add a path to pkg-config search path, use PKG_CONFIG_PATH
 +# (see man pkg-config)
 +ifeq ($(sdkdir),)
-+  sdkdir = $(shell pkg-config --variable sdkdir libxul-unstable)
++	sdkdir = $(shell pkg-config --variable sdkdir libxul-unstable)
 +endif
 +
  ifeq ($(sdkdir),)
@@ -30,9 +25,10 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
  endif
  
  all: build
---- a/src/Makefile
-+++ b/src/Makefile
-@@ -37,6 +37,15 @@
+diff -r adb27ed2f421 crypto/src/Makefile
+--- a/crypto/src/Makefile	Fri Aug 21 17:32:41 2009 -0700
++++ b/crypto/src/Makefile	Mon Aug 24 00:09:43 2009 +0200
+@@ -37,9 +37,17 @@
  #
  # ***** END LICENSE BLOCK *****
  
@@ -47,23 +43,22 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
 +
  # OS detection
  
+-xpidl = $(sdkdir)/bin/xpidl
+ link = link
+ 
  sys := $(shell uname -s)
-@@ -133,7 +142,7 @@
-   cpp_objects = $(cpp_sources:.cpp=.o)
- endif
- 
--# source and path configurations
-+# Source and path configurations
- idl = IWeaveCrypto.idl
- cpp_sources = WeaveCrypto.cpp WeaveCryptoModule.cpp
- 
-@@ -141,7 +150,15 @@
+@@ -48,7 +56,6 @@
+ ifeq ($(wince), 1)
+   os = WINNT
+   cxx = $(sdkdir)/sdk/bin/arm-wince-gcc
+-  xpidl = $(sdkdir)/host/bin/host_xpidl
+   link = $(sdkdir)/sdk/bin/arm-wince-link
+   so = dll
+ else
+@@ -165,13 +172,24 @@
  destdir = ..
  platformdir = $(destdir)/platform/$(platform)
  
--xpidl = $(sdkdir)/bin/xpidl
-+sdkdir ?= ${MOZSDKDIR}
-+
 +# If blank, try to use pkg-config
 +# To add a path to pkg-config search path, use PKG_CONFIG_PATH
 +# (see man pkg-config)
@@ -71,10 +66,10 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
 +  pkgconfig="yes"
 +  sdkdir = $(call pkg-config-var,sdkdir,libxul-unstable)
 +endif
- 
++
  # FIXME: we don't actually require this for e.g. clean
  ifeq ($(sdkdir),)
-@@ -149,32 +161,73 @@
+   $(warning No 'sdkdir' variable given)
    $(warning It should point to the location of the Gecko SDK)
    $(warning For example: "make sdkdir=/foo/bar/baz")
    $(warning Or set the MOZSDKDIR environment variable to point to it)
@@ -84,9 +79,8 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
 +  $(info Using Mozilla SDKDIR as: ${sdkdir})
  endif
  
-+xpidl = $(sdkdir)/bin/xpidl
  idl_headers = $(idl:.idl=.h)
- idl_typelib = $(idl:.idl=.xpt)
+@@ -179,30 +197,75 @@
  cpp_objects = $(cpp_sources:.cpp=.o)
  so_target = $(target:=.$(so))
  
@@ -98,6 +92,11 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
 -          -I$(sdkdir)/include/pipnss \
 -          -I$(sdkdir)/include/nspr \
 -          -I$(sdkdir)/sdk/include
++xpidl = $(sdkdir)/bin/xpidl
++ifeq ($(wince), 1)
++  xpidl = $(sdkdir)/host/bin/host_xpidl
++endif
++
 +ifeq ($(pkgconfig),"yes")
 +  # Include dirs
 +  nss_includes    = $(call pkg-config-I,mozilla-nss)
@@ -136,7 +135,16 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
 +  # Libs
 +  nss_libs        = ssl3 smime3 nss3 nssutil3
 +  nspr_libs       = nspr4 plds4 plc4
-+  libxul_libs     = xpcomglue_s xpcom
++  libxul_libs     = xpcomglue_s
++  ifeq ($(wince),1)
++    libxul_libs = $(libxul_libs) xpcom
++  else
++    libxul_libs = $(libxul_libs) xpcomglue
++  endif
++
++  ifeq ($(os), linux)
++	  libxul_libs = $(libxul_libs) xpcom_core
++  endif
 +
 +  idl_dir         = $(sdkdir)/idl
 +endif
@@ -147,24 +155,29 @@ Nirbheek Chauhan <nirbheek@gentoo.org>
  
  # libraries
 -libdirs := $(sdkdir)/lib $(sdkdir)/bin
+-ifeq ($(wince),1)
 -libs := xpcomglue_s xpcom nspr4 \
 -        crmf smime3 ssl3 nss3 nssutil3 \
 -        plds4 plc4
--
--ifeq ($(os), linux)
--  libs := xpcom_core $(libs)
+-else
+-libs := xpcomglue xpcomglue_s nspr4 \
+-        crmf smime3 ssl3 nss3 nssutil3 \
+-        plds4 plc4
 -endif
 +libdirs = $(nss_libdirs) \
 +          $(nspr_libdirs) \
 +          $(libxul_libdirs)
-+
+ 
+-ifeq ($(os), Linux)
+-  libs := xpcom_core $(libs)
+-endif
 +libs = $(nss_libs) \
 +       $(nspr_libs) \
 +       $(libxul_libs)
  
  # compiler and Linker Flags
  
-@@ -277,10 +340,10 @@
+@@ -328,10 +391,10 @@
  
  # rules to build the c headers and .xpt from idl
  $(idl_headers): $(idl)
