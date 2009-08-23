@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3165 2009/08/23 17:23:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3166 2009/08/23 17:51:37 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
+  Move xfce-extra/exo to xfce-base/exo.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Renamed xfce4-mpc, xfce4-clipman, xfce4-xkb and xfce4-wmdock to -plugin naming.
