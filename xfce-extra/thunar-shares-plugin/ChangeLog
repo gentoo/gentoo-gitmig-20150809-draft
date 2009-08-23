@@ -1,0 +1,23 @@
+# ChangeLog for xfce-extra/thunar-shares-plugin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-shares-plugin/ChangeLog,v 1.1 2009/08/23 02:37:43 darkside Exp $
+
+*thunar-shares-plugin-0.2.0 (23 Aug 2009)
+
+  23 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  +thunar-shares-plugin-0.2.0.ebuild, +metadata.xml:
+  ebuild rewrite to fix many small issues, convert to xfconf.eclass. pkgmove
+  from xfce-extra/thunar-shares
+
+*thunar-shares-0.2.0 (15 Feb 2009)
+
+  15 Feb 2009; Christoph Mende <angelos@gentoo.org>
+  +thunar-shares-0.2.0.ebuild, -thunar-shares-0.16.ebuild:
+  Version bump
+
+*thunar-shares-0.16 (01 Dec 2008)
+
+  01 Dec 2008; Christoph Mende <angelos@gentoo.org>
+  +thunar-shares-0.16.ebuild:
+  Initial import, bug 248265
+
