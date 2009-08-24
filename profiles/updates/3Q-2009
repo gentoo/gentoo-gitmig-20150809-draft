@@ -18,3 +18,4 @@ move xfce-base/xfce4 xfce-base/xfce4-meta
 move xfce-extra/xfce4-radio xfce-extra/xfce4-radio-plugin
 move xfce-extra/xfce4-sensors xfce-extra/xfce4-sensors-plugin
 move xfce-extra/thunar-archive xfce-extra/thunar-archive-plugin
+move xfce-extra/xfce4-cpu-freq xfce-extra/xfce4-cpufreq-plugin
