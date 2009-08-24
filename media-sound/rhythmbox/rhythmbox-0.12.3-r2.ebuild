@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r2.ebuild,v 1.1 2009/08/24 20:51:23 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r2.ebuild,v 1.2 2009/08/24 22:05:35 mrpouet Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.10"
 
-inherit eutils gnome2 python multilib virtualx
+inherit eutils gnome2 python multilib virtualx autotools
 
 DESCRIPTION="Music management and playback software for GNOME"
 HOMEPAGE="http://www.rhythmbox.org/"

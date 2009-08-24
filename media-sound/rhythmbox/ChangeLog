@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.156 2009/08/24 20:51:23 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.157 2009/08/24 22:05:35 mrpouet Exp $
+
+  24 Aug 2009; Romain Perier <mrpouet@gentoo.org>
+  rhythmbox-0.12.3-r2.ebuild:
+  Add inheritance from autotools.eclass, without it the Makefile.am from
+  lastfm plugin was patched without beeing regenerated
 
 *rhythmbox-0.12.3-r2 (24 Aug 2009)
 
