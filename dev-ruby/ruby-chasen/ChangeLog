@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-chasen
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.5 2006/11/05 16:53:10 usata Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-chasen/ChangeLog,v 1.6 2009/08/24 18:54:32 graaff Exp $
+
+*ruby-chasen-1.7 (24 Aug 2009)
+
+  24 Aug 2009; Hans de Graaff <graaff@gentoo.org> +ruby-chasen-1.7.ebuild:
+  Version bump.
 
   05 Nov 2006; Mamoru KOMACHI <usata@gentoo.org> ruby-chasen-1.6.ebuild:
   Fixed compile error reported in bug #152273.
