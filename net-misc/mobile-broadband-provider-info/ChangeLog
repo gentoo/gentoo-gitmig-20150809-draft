@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/mobile-broadband-provider-info
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mobile-broadband-provider-info/ChangeLog,v 1.1 2009/08/24 13:21:52 dagger Exp $
+
+  02 Jul 2009; Robert Piasek <dagger@gentoo.org>
+  mobile-broadband-provider-info-20090602.ebuild, +metadata.xml:
+  New ebuild for mobole mroadband providers info
+
