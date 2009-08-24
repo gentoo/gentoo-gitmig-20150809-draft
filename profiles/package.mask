@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10358 2009/08/24 06:24:08 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10359 2009/08/24 11:39:11 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1157,6 +1157,7 @@ media-libs/freeimage
 =virtual/poppler-qt4-0.11*
 =virtual/poppler-0.11*
 =virtual/poppler-glib-0.11*
+=app-text/xpdf-3.02-r3
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
 # Mark the haskell-platform, depends on other things masked for testing.
