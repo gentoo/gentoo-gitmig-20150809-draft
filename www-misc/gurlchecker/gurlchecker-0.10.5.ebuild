@@ -1,15 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.1.ebuild,v 1.3 2008/03/28 02:03:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.5.ebuild,v 1.1 2009/08/24 21:48:34 eva Exp $
 
-inherit eutils gnome2
+EAPI="2"
+GCONF_DEBUG="no"
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="Gnome tool that checks links on web pages/sites"
 HOMEPAGE="http://gurlchecker.labs.libre-entreprise.org/"
-SRC_URI="http://labs.libre-entreprise.org/frs/download.php/547/${P}.tar.gz"
+SRC_URI="http://labs.libre-entreprise.org/frs/download.php/737/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 SLOT="0"
 IUSE="clamav doc gnutls tidy"
 
@@ -28,24 +31,38 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9
 	>=dev-util/intltool-0.30
 	app-text/docbook-sgml-utils
+	dev-util/gtk-doc-am
 	doc? ( >dev-util/gtk-doc-1.1 )"
 
 DOCS="AUTHORS CONTRIBUTORS ChangeLog FAQ NEWS README THANKS TODO"
 
 pkg_setup() {
-	G2CONF="--with-croco \
-		$(use_with tidy)   \
-		$(use_with clamav) \
+	G2CONF="${G2CONF}
+		--with-croco
+		$(use_with tidy)
+		$(use_with clamav)
 		$(use_with gnutls)"
 }
 
-src_unpack() {
-	unpack ${A}
-
-	# Leave the LDFLAGS alone, appending $withval is utterly broken
-	epatch "${FILESDIR}/${P}-ldflags.patch"
+src_prepare() {
+	gnome2_src_prepare
 
 	# The file index.sgml should be distributed with the sources, but
 	# it is not, causing problems. See bug #92784.
 	touch "${S}"/doc/html/index.sgml
+
+	# Fix bad yes/no detection
+	epatch "${FILESDIR}/${PN}-0.10.2-configure.in.patch"
+
+	# Fix tidy.h include dir for Gentoo:
+	epatch "${FILESDIR}/${PN}-0.10.5-autoconf-tidy.patch"
+
+	# Fix gnutls detection, bug #273980
+	epatch "${FILESDIR}/${PN}-0.10.5-gnutls28.patch"
+
+	# Fix intltool test failure
+	echo "src/cookies.c" >> po/POTFILES.in
+
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	eautoreconf
 }

@@ -1,5 +1,5 @@
---- var/tmp/portage/www-misc/gurlchecker-0.10.2/work/gurlchecker-0.10.2/src/ucclam.c 
-+++ home/eva/Téléchargements/gurlchecker-scm-2008-06-15/src/ucclam.c 
+--- a/src/ucclam.c 
++++ b/src/ucclam.c 
 @@ -34,9 +34,8 @@
    clam->limits.maxfiles = 1;
    clam->limits.maxfilesize = 10 * 1048576;

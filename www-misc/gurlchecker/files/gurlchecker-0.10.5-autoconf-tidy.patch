@@ -7,7 +7,7 @@
 -	     [tidy.h tidy/tidy.h],
 +	     [tidy.h],
  	     [
- 	      have_tidy=yes
+ 	      want_tidy=yes
 -	      TIDY_FLAGS="$TIDY_FLAGS -DHAVE_TIDY_H_IN_SUBDIR -DENABLE_TIDY"
 +	      TIDY_FLAGS="$TIDY_FLAGS -DENABLE_TIDY"
          TIDY_LIBS="-ltidy"

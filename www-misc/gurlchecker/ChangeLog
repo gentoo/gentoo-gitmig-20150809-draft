@@ -1,6 +1,18 @@
 # ChangeLog for www-misc/gurlchecker
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.24 2008/11/04 01:18:10 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.25 2009/08/24 21:48:34 eva Exp $
+
+*gurlchecker-0.10.5 (24 Aug 2009)
+
+  24 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gurlchecker-0.10.0.ebuild, -gurlchecker-0.10.1.ebuild,
+  files/gurlchecker-0.10.2-clamav093.patch,
+  files/gurlchecker-0.10.2-configure.in.patch,
+  files/gurlchecker-0.10.2-configure.in-2.patch, +gurlchecker-0.10.5.ebuild,
+  +files/gurlchecker-0.10.5-autoconf-tidy.patch,
+  +files/gurlchecker-0.10.5-gnutls28.patch:
+  Version bump. Fix build with latest gnutls, bug #273980. Clean up old
+  revisions.
 
   04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, gurlchecker-0.8.2.ebuild, gurlchecker-0.10.0.ebuild:
