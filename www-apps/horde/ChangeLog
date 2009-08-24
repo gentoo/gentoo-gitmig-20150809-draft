@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horde
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.77 2008/10/20 00:05:23 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.78 2009/08/24 13:19:47 a3li Exp $
+
+*horde-3.3.4 (24 Aug 2009)
+
+  24 Aug 2009; Alex Legler <a3li@gentoo.org> -horde-3.3.ebuild,
+  +horde-3.3.4.ebuild:
+  Non-maintainer commit: Version bump for security bug #256125 and bug
+  #262978. Removing unneded vulnerable version.
 
 *horde-3.3 (20 Oct 2008)
 
