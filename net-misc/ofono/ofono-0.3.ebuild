@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.3.ebuild,v 1.1 2009/08/24 13:20:40 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ofono-0.3.ebuild,v 1.2 2009/08/24 14:57:39 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -29,4 +29,3 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 }
-

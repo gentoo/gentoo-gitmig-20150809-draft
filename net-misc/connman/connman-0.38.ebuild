@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.38.ebuild,v 1.1 2009/08/24 13:24:08 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.38.ebuild,v 1.2 2009/08/24 14:57:20 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -28,7 +28,6 @@ RDEPEND=">=dev-libs/glib-2.16
 
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
-
 
 src_configure() {
 	econf \
@@ -69,4 +68,3 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 
 }
-
