@@ -1,6 +1,11 @@
 # ChangeLog for games-action/lugaru-demo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.8 2008/02/29 18:06:13 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru-demo/ChangeLog,v 1.9 2009/08/24 10:16:49 nyhm Exp $
+
+*lugaru-demo-1.0b (24 Aug 2009)
+
+  24 Aug 2009; Tristan Heaven <nyhm@gentoo.org> +lugaru-demo-1.0b.ebuild:
+  Version bump, bug #282401
 
   29 Feb 2008; Carsten Lohrke <carlo@gentoo.org> lugaru-demo-1.0.ebuild:
   Remove icon extension from desktop entry to match Icon Theme Specification.
