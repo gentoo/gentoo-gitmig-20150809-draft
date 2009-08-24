@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/ofono
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.1 2009/08/24 13:20:40 dagger Exp $
+
+*ofono-0.3 (13 Aug 2009)
+
+  13 Aug 2009; Robert Piasek <dagger@gentoo.org> +ofono-0.3.ebuild,
+  +metadata.xml:
+  Initial port of ofono
+
