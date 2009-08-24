@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mpeg-tools
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.19 2007/07/22 08:46:49 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg-tools/ChangeLog,v 1.20 2009/08/24 19:27:30 ssuominen Exp $
+
+*mpeg-tools-1.5b-r3 (24 Aug 2009)
+
+  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +mpeg-tools-1.5b-r3.ebuild, +files/mpeg-tools-1.5b-system-jpeg-7.patch:
+  Fix building with >=media-libs/jpeg-7 wrt #282588, thanks to Christian
+  Becke for reporting.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   mpeg-tools-1.5b-r2.ebuild:
