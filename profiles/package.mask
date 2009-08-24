@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10361 2009/08/24 17:30:42 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10362 2009/08/24 18:33:39 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (24 Aug 2009)
+# Masking for removal: Has bundled security-vulnerable expat library
+# and is discontinued.  See bug 248427
+sys-apps/einit
+sys-apps/einit-modules-scheme
+sys-apps/einit-modules-xml
 
 # Mounir Lamouri <volkmar@gentoo.org> (24 Aug 2009)
 # Masking testing version of mozilla-weave
