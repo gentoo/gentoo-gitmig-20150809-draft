@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-passwd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.18 2009/08/24 14:59:28 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.19 2009/08/24 16:31:32 beandog Exp $
+
+  24 Aug 2009; Steve Dibb <beandog@gentoo.org> horde-passwd-3.1.1.ebuild:
+  amd64 stable, bug 277294
 
 *horde-passwd-3.1.1 (24 Aug 2009)
 
