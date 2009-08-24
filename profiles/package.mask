@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10360 2009/08/24 13:05:05 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10361 2009/08/24 17:30:42 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mounir Lamouri <volkmar@gentoo.org> (24 Aug 2009)
+# Masking testing version of mozilla-weave
+>=www-plugins/mozilla-weave-0.6
 
 # Robert Piasek <dagger@gentoo.org> (24 Aug 2009)
 # Development snapshots of NetworkManager. Masked
