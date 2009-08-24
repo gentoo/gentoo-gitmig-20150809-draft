@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.55.1.ebuild,v 1.1 2009/08/24 06:46:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/d1x-rebirth/d1x-rebirth-0.55.1.ebuild,v 1.2 2009/08/24 06:53:20 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -24,7 +24,8 @@ RDEPEND="virtual/opengl
 	virtual/glu
 	dev-games/physfs[hog,zip]
 	media-libs/libsdl
-	media-libs/sdl-mixer[timidity?]"
+	media-libs/sdl-mixer[timidity?]
+	cdinstall? ( !games-action/descent1-demodata )"
 DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-util/scons"
