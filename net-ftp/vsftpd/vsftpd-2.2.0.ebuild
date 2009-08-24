@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.2.0.ebuild,v 1.1 2009/08/23 16:11:13 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.2.0.ebuild,v 1.2 2009/08/24 05:37:00 wormo Exp $
 
 inherit eutils toolchain-funcs
 
@@ -40,7 +40,7 @@ src_unpack() {
 	# Ensure that we don't link against libcap unless asked
 	if ! use caps ; then
 		sed -i '/^#define VSF_SYSDEP_HAVE_LIBCAP$/ d' sysdeputil.c
-		epatch "${FILESDIR}"/${PN}-2.1.2-dont-link-caps.patch
+		epatch "${FILESDIR}"/${P}-dont-link-caps.patch
 	fi
 
 	# Let portage control stripping

@@ -1,6 +1,11 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.117 2009/08/23 16:11:13 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.118 2009/08/24 05:37:00 wormo Exp $
+
+  24 Aug 2009; Stephanie Lockwood-Childs <wormo@gentoo.org>
+  +files/vsftpd-2.2.0-dont-link-caps.patch:
+  Need new version of caps-disabling patch to apply cleanly to 2.2.0
+  (bug #282494, reported by Sergey Plyukhin)
 
 *vsftpd-2.2.0 (23 Aug 2009)
 
