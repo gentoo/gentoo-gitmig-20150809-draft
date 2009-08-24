@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.9 2009/08/09 12:40:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.99_beta16.ebuild,v 1.10 2009/08/24 19:54:11 arfrever Exp $
 
 inherit eutils autotools libtool mono
 
@@ -35,6 +35,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}/${PN}-0.99_beta14-deoptimise.patch"
+	epatch "${FILESDIR}/${P}-freeglut-2.6.patch"
 
 	eautoreconf
 	elibtoolize

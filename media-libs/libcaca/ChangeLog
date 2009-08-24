@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libcaca
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.80 2009/08/10 09:55:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/ChangeLog,v 1.81 2009/08/24 19:54:11 arfrever Exp $
+
+  24 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  libcaca-0.99_beta16.ebuild, +files/libcaca-0.99_beta16-freeglut-2.6.patch:
+  Fix building with media-libs/freeglut-2.6* (bug #282573).
 
   10 Aug 2009; Alexis Ballier <aballier@gentoo.org>
   -libcaca-0.99_beta14.ebuild, -files/libcaca-0.99_beta14-nogl.patch:
