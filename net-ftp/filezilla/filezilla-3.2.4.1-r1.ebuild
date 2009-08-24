@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.2.4.1-r1.ebuild,v 1.5 2009/08/01 16:56:34 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/filezilla-3.2.4.1-r1.ebuild,v 1.6 2009/08/24 09:18:02 voyageur Exp $
 
 EAPI=2
 
@@ -20,14 +20,16 @@ SLOT="0"
 KEYWORDS="amd64 ~ia64 ppc sparc x86"
 IUSE="dbus test"
 
-RDEPEND="net-dns/libidn
+RDEPEND=">=app-admin/eselect-wxwidgets-0.7-r1
+	net-dns/libidn
+	>=net-libs/gnutls-2.0.4
 	>=x11-libs/wxGTK-2.8.9
-	>=app-admin/eselect-wxwidgets-0.7-r1
 	dbus? ( sys-apps/dbus )"
+
 DEPEND="${RDEPEND}
+	dev-util/pkgconfig
 	>=sys-devel/libtool-1.4
 	>=sys-devel/gettext-0.11
-	>=net-libs/gnutls-2.0.4
 	test? ( dev-util/cppunit )"
 
 S="${WORKDIR}"/${PN}-${MY_PV}
