@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.1.2.ebuild,v 1.1 2009/08/20 19:40:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.1.2.ebuild,v 1.2 2009/08/24 09:13:15 vapier Exp $
 
 EAPI="2"
 
@@ -48,11 +48,6 @@ pkg_setup() {
 	fi
 
 	strip-linguas ${IUSE_LINGUAS}
-
-	if [[ -z ${LINGUAS} ]] ; then
-		# no linguas set, using the default one
-		LINGUAS=" "
-	fi
 }
 
 src_prepare() {
@@ -72,6 +67,8 @@ src_prepare() {
 	sed -i -e "s:oRTP::" -e "s:mediastreamer2::" Makefile.am \
 		|| die "patching Makefile.am failed"
 
+	# make sure to use host libtool version
+	rm -f m4/libtool.m4 m4/lt*.m4 #282268
 	eautoreconf
 }
 
