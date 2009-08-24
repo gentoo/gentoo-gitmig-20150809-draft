@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.627 2009/08/21 23:11:12 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.628 2009/08/24 06:21:52 zmedico Exp $
+
+*portage-2.2_rc40 (24 Aug 2009)
+
+  24 Aug 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc40.ebuild:
+  2.2_rc40 bump. Fixes bug #282269 (unicode fixes for overlay paths),
+  bug #282306 (unicode fixes for merge phase), and bug #282505
+  (unicode fixes for binary package moves).
 
 *portage-2.2_rc39 (21 Aug 2009)
 
