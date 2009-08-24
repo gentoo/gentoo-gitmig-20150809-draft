@@ -1,6 +1,6 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3176 2009/08/24 12:01:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3177 2009/08/24 12:15:22 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
@@ -8,16 +8,13 @@
 
   24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Rename xfce4-xfapplet to xfce4-xfapplet-plugin.
+  Rename xfce4-smartbookmark to xfce4-smartbookmark-plugin.
+  Rename xfce4-cpu-freq to xfce4-cpufreq-plugin.
+  Rename thunar-archive to thunar-archive-plugin.
 
   24 Aug 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Add xpdf-3.02-r3 to poppler mask, since it will only work with
   >=poppler-0.11.3
-
-  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename xfce4-cpu-freq to xfce4-cpufreq-plugin.
-
-  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename thunar-archive to thunar-archive-plugin.
 
   24 Aug 2009; Ulrich Mueller <ulm@gentoo.org> package.mask,
   prefix/package.mask:
@@ -28,8 +25,6 @@
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Rename xfce4-sensors to xfce4-sensors-plugin.
-
-  23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Rename xfce4-radio to xfce4-radio-plugin.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
@@ -39,11 +34,7 @@
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Rename xfce-base/xfce4 to xfce-base/xfce4-meta with new dependencies.
-
-  23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Move xfce-extra/exo to xfce-base/exo.
-
-  23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
   Renamed xfce4-mpc, xfce4-clipman, xfce4-xkb and xfce4-wmdock to -plugin naming.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:

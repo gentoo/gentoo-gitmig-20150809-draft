@@ -20,3 +20,4 @@ move xfce-extra/xfce4-sensors xfce-extra/xfce4-sensors-plugin
 move xfce-extra/thunar-archive xfce-extra/thunar-archive-plugin
 move xfce-extra/xfce4-cpu-freq xfce-extra/xfce4-cpufreq-plugin
 move xfce-extra/xfce4-xfapplet xfce-extra/xfce4-xfapplet-plugin
+move xfce-extra/xfce4-smartbookmark xfce-extra/xfce4-smartbookmark-plugin
