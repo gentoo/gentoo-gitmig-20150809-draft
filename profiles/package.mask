@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10357 2009/08/23 21:29:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10358 2009/08/24 06:24:08 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -66,10 +66,6 @@ media-libs/clibpdf
 # Thomas Sachau <tommy@gentoo.org> (21 Aug 2009)
 # Mask alpha version of k3b
 >=app-cdr/k3b-1.66.0_alpha2
-
-# Ulrich Mueller <ulm@gentoo.org> (19 Aug 2009)
-# Release candidate for eselect-1.2, masked for testing.
-=app-admin/eselect-1.2_rc*
 
 # Sebastien Fabbro <bicatali@gentoo.org> (18 Aug 2009)
 # Masked for removal in 30 days. Portage versions of dev-python/basemap

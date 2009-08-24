@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.27 2009/08/21 14:05:33 darkside Exp $
+# $Id: package.mask,v 1.28 2009/08/24 06:24:09 ulm Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -36,10 +36,6 @@
 # python-3 will most certainly cause problems if it ever gets unleashed without
 # a look over from a prefix dev. (not me) ;)
 dev-lang/python:3.1
-
-# Ulrich Mueller <ulm@gentoo.org> (19 Aug 2009)
-# Release candidate for eselect-1.2, unmasked on behalf of darkside.
--=app-admin/eselect-1.2_rc*
 
 # Fabian Groffen <grobian@gentoo.org> (26 Jul 2009)
 # util-linux doesn't work on non-Linux and doesn't work in Prefix.  This
