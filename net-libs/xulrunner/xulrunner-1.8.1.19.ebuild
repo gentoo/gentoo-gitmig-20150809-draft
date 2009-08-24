@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.19.ebuild,v 1.9 2009/07/07 15:03:57 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.8.1.19.ebuild,v 1.10 2009/08/24 20:41:18 anarchy Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -62,6 +62,7 @@ src_unpack() {
 
 	# gcc-4.4 #elif -> #else, bug 270093
 	epatch "${FILESDIR}/xulrunner-1.8-gcc-4.4.patch"
+	epatch "${FILESDIR}/${P}-glibc-2.10-support.patch"
 
 	eautoreconf || die "failed  running eautoreconf"
 }
