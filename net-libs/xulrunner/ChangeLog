@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.237 2009/08/23 08:26:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.238 2009/08/24 17:54:36 fauli Exp $
+
+  24 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  xulrunner-1.9.0.13.ebuild:
+  stable x86, security bug 282179
 
   23 Aug 2009; nixnut <nixnut@gentoo.org> xulrunner-1.9.0.13.ebuild:
   ppc stable #282179
