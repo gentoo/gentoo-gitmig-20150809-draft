@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-gvfs-mount
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-gvfs-mount/ChangeLog,v 1.1 2009/08/24 10:03:55 ssuominen Exp $
+
+*xfce4-gvfs-mount-0.0.4 (24 Aug 2009)
+
+  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-gvfs-mount-0.0.4.ebuild:
+  Initial commit.
+
