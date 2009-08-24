@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.85 2009/08/24 08:16:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.86 2009/08/24 08:43:22 vapier Exp $
+
+*net-tools-1.60_p20090728014017 (24 Aug 2009)
+
+  24 Aug 2009; Mike Frysinger <vapier@gentoo.org>
+  +net-tools-1.60_p20090728014017.ebuild:
+  Update cvs snapshot. Fix limited ifconfig output #238363 by cilly. Add
+  SCTP support to netstat #258714 by Maxim Treskin. Add fix from Debian for
+  ifconfig IPv6 parsing #270466 by Lindsay Haisley.
 
   24 Aug 2009; Mike Frysinger <vapier@gentoo.org>
   net-tools-1.60_p20071202044231-r1.ebuild:
