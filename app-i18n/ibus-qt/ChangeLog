@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-qt
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-qt/ChangeLog,v 1.1 2009/08/24 15:00:19 matsuu Exp $
+
+*ibus-qt-1.2.0.20090822 (24 Aug 2009)
+
+  24 Aug 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-qt-1.2.0.20090822.ebuild, +metadata.xml:
+  Initial import.
+
