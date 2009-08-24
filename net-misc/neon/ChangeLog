@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.134 2009/08/23 08:33:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.135 2009/08/24 14:56:38 ranger Exp $
+
+  24 Aug 2009; Brent Baude <ranger@gentoo.org> neon-0.28.6.ebuild:
+  Marking neon-0.28.6 ppc64 for bug 281950
 
   23 Aug 2009; nixnut <nixnut@gentoo.org> neon-0.28.6.ebuild:
   ppc stable #281950
