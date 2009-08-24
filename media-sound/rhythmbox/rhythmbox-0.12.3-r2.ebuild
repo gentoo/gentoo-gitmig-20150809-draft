@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r1.ebuild,v 1.2 2009/08/23 21:25:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.12.3-r2.ebuild,v 1.1 2009/08/24 20:51:23 mrpouet Exp $
 
 EAPI="2"
 WANT_AUTOMAKE="1.10"
@@ -131,6 +131,10 @@ src_prepare() {
 
 	# Fix last.fm plugin linking, bug #276972
 	epatch "${FILESDIR}/${P}-lastfm.patch"
+
+	# Fix bug #282546, don't crash if there are no saveable types
+	# (upstream bug #590108)
+	epatch "${FILESDIR}/${P}-sigsegv-no-saveable-types.patch"
 
 	intltoolize --force --copy --automake || die "intltoolize failed"
 	eautomake

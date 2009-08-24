@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.155 2009/08/23 21:25:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.156 2009/08/24 20:51:23 mrpouet Exp $
+
+*rhythmbox-0.12.3-r2 (24 Aug 2009)
+
+  24 Aug 2009; Romain Perier <mrpouet@gentoo.org>
+  -rhythmbox-0.12.3-r1.ebuild, +rhythmbox-0.12.3-r2.ebuild,
+  +files/rhythmbox-0.12.3-sigsegv-no-saveable-types.patch:
+  Fix bug #282546, application crashed when song properties was opened,
+  Patch import from upstream bug #590108.
+  Clean up old revision.
 
   23 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
   -rhythmbox-0.12.2-r1.ebuild, -files/rhythmbox-0.12.2-link-fixes.patch,
