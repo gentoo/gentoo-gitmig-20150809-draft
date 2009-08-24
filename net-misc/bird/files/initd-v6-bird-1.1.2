@@ -1,9 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/files/initd-bird-1.1.0,v 1.1 2009/07/22 12:20:53 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/files/initd-v6-bird-1.1.2,v 1.1 2009/08/24 12:22:41 chainsaw Exp $
 
-SOCK=/var/lib/run/bird.ctl
+EXE=bird6
+CLI=birdc6
+SOCK="/var/lib/run/${EXE}.ctl"
 
 depend() {
 	need net
@@ -11,8 +13,8 @@ depend() {
 }
 
 checkconfig() {
-	if [ ! -f /etc/bird.conf ]; then
-		eerror "Please create /etc/bird.conf"
+	if [ ! -f "/etc/${EXE}.conf" ]; then
+		eerror "Please create /etc/${EXE}.conf"
 		return 1
 	fi
 	return 0
@@ -22,14 +24,14 @@ start() {
 	checkconfig || return $?
 
 	ebegin "Starting BIRD"
-	/usr/sbin/bird -c /etc/bird.conf -s "${SOCK}"
+	"/usr/sbin/${EXE}" -c "/etc/${EXE}.conf" -s "${SOCK}"
 	eend $? "Failed to start BIRD"
 }
 
 stop() {
 	ebegin "Stopping BIRD"
 	if [ -f "${SOCK}" ]; then
-		echo "down" | /usr/sbin/birdc &>/dev/null
+		echo "down" | "/usr/sbin/${CLI}" -s "${SOCK}" &>/dev/null
 		eend $? "Failed to stop BIRD"
 	else
 		eend 0

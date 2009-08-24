@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.4 2009/08/20 16:12:18 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.5 2009/08/24 12:22:41 chainsaw Exp $
+
+*bird-1.1.2 (24 Aug 2009)
+
+  24 Aug 2009; <chainsaw@gentoo.org> -files/1.1.0-nostrip.patch,
+  -files/initd-bird-1.1.0, -bird-1.1.0.ebuild, +files/1.1.2-nostrip.patch,
+  +files/initd-v4-bird-1.1.2, +files/initd-v6-bird-1.1.2,
+  +bird-1.1.2.ebuild:
+  New version that allows more kernel routing tables in IPv6 and contains a
+  core bugfix. Removed old ebuild.
 
 *bird-1.1.1 (20 Aug 2009)
 

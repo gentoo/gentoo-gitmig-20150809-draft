@@ -1,7 +1,7 @@
-diff -uNr bird-1.1.0.ORIG/tools/Makefile.in bird-1.1.0/tools/Makefile.in
---- bird-1.1.0.ORIG/tools/Makefile.in	2009-07-22 12:23:19.000000000 +0100
-+++ bird-1.1.0/tools/Makefile.in	2009-07-22 12:25:50.000000000 +0100
-@@ -44,9 +44,9 @@
+diff -uNr bird-1.1.2.ORIG/tools/Makefile.in bird-1.1.2/tools/Makefile.in
+--- bird-1.1.2.ORIG/tools/Makefile.in	2009-08-24 13:13:24.000000000 +0100
++++ bird-1.1.2/tools/Makefile.in	2009-08-24 13:13:39.000000000 +0100
+@@ -56,9 +56,9 @@
  
  install: all
  	$(INSTALL) -d $(DESTDIR)/$(sbindir) $(DESTDIR)/$(sysconfdir) $(DESTDIR)/$(localstatedir)
