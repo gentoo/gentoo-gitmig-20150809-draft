@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.50 2009/07/12 14:43:32 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.51 2009/08/24 13:11:44 dagger Exp $
+
+*networkmanager-0.8.0_pre20090824 (24 Aug 2009)
+*networkmanager-0.7.1_p20090824 (24 Aug 2009)
+
+  24 Aug 2009; Robert Piasek <dagger@gentoo.org>
+  +networkmanager-0.7.1_p20090824.ebuild,
+  +networkmanager-0.8.0_pre20090824.ebuild:
+  New stable snapshot of NetworkManager (0.7.1)
+  New dev snapshot of NetworkManager (0.8)
 
   12 Jul 2009; Robert Buchholz <rbu@gentoo.org>
   networkmanager-0.7.1-r3.ebuild, networkmanager-0.7.1-r6.ebuild:
