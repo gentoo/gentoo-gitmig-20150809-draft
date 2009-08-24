@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/connman-gnome-0.5.ebuild,v 1.1 2009/08/24 13:25:24 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/connman-gnome/connman-gnome-0.5.ebuild,v 1.2 2009/08/24 14:57:00 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -22,8 +22,6 @@ RDEPEND=">=dev-libs/glib-2.16
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35"
 
-
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 }
-
