@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7a_p4650.ebuild,v 1.3 2009/08/24 16:14:01 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/cacti-spine-0.8.7e.ebuild,v 1.1 2009/08/24 16:14:01 ramereth Exp $
 
-WANT_AUTOCONF="latest"
-inherit autotools subversion
+inherit autotools
 
-if [[ "${PV}" =~ (_p)([0-9]+) ]] ; then
+if [[ ${PV} =~ (_p)([0-9]+) ]] ; then
 	inherit subversion
 	SRC_URI=""
 	MTSLPT_REV=${BASH_REMATCH[2]}
@@ -23,9 +22,10 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
 DEPEND="net-analyzer/net-snmp
-		virtual/mysql"
+	dev-libs/openssl
+	virtual/mysql"
 RDEPEND="${DEPEND}
-		>net-analyzer/cacti-0.8.7"
+	>net-analyzer/cacti-0.8.7"
 
 src_unpack() {
 	if [[ "${SRC_URI}" == "" ]] ; then
@@ -40,24 +40,23 @@ src_unpack() {
 }
 
 src_install() {
-	exeinto usr/sbin ; doexe "${S}"/spine
-	insinto etc/ ; insopts -m0640 -o root ; newins "${S}"/spine.conf.dist spine.conf
-	dodoc ChangeLog INSTALL README
+	dosbin spine || die
+	insinto /etc/
+	insopts -m0640 -o root
+	newins spine.conf spine.conf || die
+	dodoc ChangeLog README || die
 }
 
 pkg_postinst() {
 	ewarn "NOTE: If you upgraded from cactid, do not forgive to setup spine"
 	ewarn "instead of cactid through web interface."
 	ewarn
-	elog "Please see cacti's site for installation instructions."
-	elog "Theres no need to change the crontab for this, just"
-	elog "read the instructions on how to implement it"
+	elog "Please see the cacti's site for installation instructions:"
 	elog
 	elog "http://cacti.net/spine_install.php"
 	echo
 	ewarn "/etc/spine.conf should be readable by webserver, thus after you"
-	ewarn "decide on webserver/webserver group do not forget to change it's"
-	ewarn "group with the following command:"
+	ewarn "decide on webserver do not forget to run the following command:"
 	ewarn
 	ewarn " # chown root:wwwgroup /etc/spine.conf"
 	echo
