@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-xfapplet-plugin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-xfapplet-plugin/ChangeLog,v 1.1 2009/08/24 11:59:32 ssuominen Exp $
+
+*xfce4-xfapplet-plugin-0.1.0 (24 Aug 2009)
+
+  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +xfce4-xfapplet-plugin-0.1.0.ebuild:
+  Rename xfce4-xfapplet to xfce4-xfapplet-plugin.
+
