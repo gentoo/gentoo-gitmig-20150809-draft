@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/nora
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nora/ChangeLog,v 1.13 2009/08/24 17:57:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/nora/ChangeLog,v 1.14 2009/08/24 17:58:28 graaff Exp $
+
+  24 Aug 2009; Hans de Graaff <graaff@gentoo.org> -nora-0.0.20040310.ebuild,
+  -nora-0.0.20040830.ebuild:
+  Remove old versions.
 
 *nora-0.0.20041114 (24 Aug 2009)
 
