@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4752 2009/08/23 19:48:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4753 2009/08/24 13:27:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2422,6 +2422,16 @@ net-misc/asterisk:pri - Enables pri support
 net-misc/asterisk:span - Enable support for the spandsp codec
 net-misc/asterisk:zaptel - Enables deprecated zaptel support (use dahdi if available)
 net-misc/asterisk-addons:h323 - Build the chan_ooh323c H.323 channel driver
+net-misc/connman:3G - Enable plugins for 3G modems net-misc/dhcp for getting ip.
+net-misc/connman:dhclient - Use dhclient from net-misc/dhcp for getting ip.
+net-misc/connman:dnsproxy - Enable dnsproxy support.
+net-misc/connman:ethernet - Enable ethernet support.
+net-misc/connman:modemmanager - Use modemmanager support from net-misc/modemmanager package.
+net-misc/connman:ofono - Use net-misc/ofono for telephony support.
+net-misc/connman:ppp - Enable ppp support.
+net-misc/connman:resolvconf - Use net-dns/openresolv for managing DNS information
+net-misc/connman:tools - Enable testing tools.
+net-misc/connman:udev - Enable udev support.
 net-misc/curl:ares - Enabled c-ares dns support
 net-misc/curl:libssh2 - Enabled SSH urls in curl using libssh2
 net-misc/curl:nss - Use NSS as the crypto engine
