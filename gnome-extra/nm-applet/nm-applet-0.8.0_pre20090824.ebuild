@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.0_pre20090824.ebuild,v 1.1 2009/08/24 13:16:39 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.0_pre20090824.ebuild,v 1.2 2009/08/24 14:20:18 dagger Exp $
 
 EAPI=2
 inherit gnome2 eutils versionator
@@ -18,7 +18,8 @@ KEYWORDS=""
 IUSE="bluetooth"
 
 RDEPEND=">=sys-apps/dbus-1.2
-	>=net-wireless/gnome-bluetooth-2.27.9
+	>=net-wireless/gnome-bluetooth-2.27.7
+	>=net-wireless/bluez-4.42
 	>=dev-libs/libnl-1.1
 	>=net-misc/networkmanager-${MYPV_MINOR}
 	>=net-wireless/wireless-tools-28_pre9
