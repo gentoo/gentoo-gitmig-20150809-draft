@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r1.ebuild,v 1.2 2009/06/17 22:56:52 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.20.10-r2.ebuild,v 1.1 2009/08/24 22:54:11 mrpouet Exp $
 
 EAPI="2"
 
@@ -114,6 +114,10 @@ src_prepare() {
 
 	# ssh-agent handling must be done at xinitrc.d, bug #220603
 	epatch "${FILESDIR}/${PN}-2.20.10-xinitrc-ssh-agent.patch"
+
+	# Fix wrong DESKTOP_SESSION set if ${HOME}/.dmrc is not found or
+	# does not contain any relevant data and autologin enabled, bug #281442
+	epatch "${FILESDIR}/${P}-desktop-session-dmrc-autologin.patch"
 }
 
 src_install() {
