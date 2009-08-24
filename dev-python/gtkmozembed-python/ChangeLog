@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gtkmozembed-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.13 2009/04/10 20:46:00 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkmozembed-python/ChangeLog,v 1.14 2009/08/24 20:58:35 eva Exp $
+
+  24 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  gtkmozembed-python-2.19.1.ebuild, -gtkmozembed-python-2.19.1-r10.ebuild:
+  Clean up old revisions per bug #282294.
 
   10 Apr 2009; Friedrich Oslage <bluebird@gentoo.org>
   gtkmozembed-python-2.19.1-r11.ebuild:
