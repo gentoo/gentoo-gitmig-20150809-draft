@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.86 2009/08/24 08:43:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.87 2009/08/24 17:10:40 mr_bones_ Exp $
+
+  24 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  net-tools-1.60_p20071202044231-r1.ebuild:
+  restore the keywords so people can actually do installs
 
 *net-tools-1.60_p20090728014017 (24 Aug 2009)
 
