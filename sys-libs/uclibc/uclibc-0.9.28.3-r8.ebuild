@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r8.ebuild,v 1.1 2009/08/25 08:28:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r8.ebuild,v 1.2 2009/08/25 08:50:30 vapier Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -418,6 +418,17 @@ src_install() {
 
 	# remove files coming from kernel-headers
 	rm -rf "${sysroot}"/usr/include/{linux,asm*}
+
+	if [[ -e ${D}/usr/include/bits/fenv.h && ! -e ${D}/usr/include/fenv.h ]] ; then
+		# install fenv.h for newer gcc versions #266298
+		cat <<-EOF > "${D}"/usr/include/fenv.h
+		#ifndef _FENV_H
+		#define _FENV_H
+		#include <features.h>
+		#include <bits/fenv.h>
+		#endif
+		EOF
+	fi
 
 	# Make sure we install the sys-include symlink so that when
 	# we build a 2nd stage cross-compiler, gcc finds the target
