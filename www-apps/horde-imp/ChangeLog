@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-imp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.49 2009/08/25 11:43:43 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-imp/ChangeLog,v 1.50 2009/08/25 14:24:14 klausman Exp $
+
+  25 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  horde-imp-4.3.4.ebuild:
+  Stable on alpha, bug #256125
 
   25 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   horde-imp-4.3.4.ebuild:
