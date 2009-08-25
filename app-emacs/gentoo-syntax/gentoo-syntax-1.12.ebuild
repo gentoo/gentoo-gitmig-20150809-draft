@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.12.ebuild,v 1.6 2009/07/16 17:42:15 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-1.12.ebuild,v 1.7 2009/08/25 17:02:55 ulm Exp $
 
 inherit elisp
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE=""
 
 DOCS="ChangeLog"
-SITEFILE="50${PN}-gentoo.el"
+SITEFILE="50${PN}-gentoo-${PV}.el"
 
 pkg_postinst() {
 	elisp-site-regen

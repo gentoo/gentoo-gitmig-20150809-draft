@@ -7,5 +7,3 @@
 (add-to-list 'auto-mode-alist '("\\.eselect\\'" . eselect-mode))
 (add-to-list 'interpreter-mode-alist '("runscript" . sh-mode))
 (modify-coding-system-alist 'file "\\.\\(ebuild\\|eclass\\)\\'" 'utf-8)
-
-(setq ebuild-mode-portdir "@PORTDIR@")

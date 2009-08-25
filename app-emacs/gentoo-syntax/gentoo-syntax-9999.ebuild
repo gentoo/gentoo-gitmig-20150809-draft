@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-9999.ebuild,v 1.7 2009/08/25 13:39:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gentoo-syntax/gentoo-syntax-9999.ebuild,v 1.8 2009/08/25 17:02:55 ulm Exp $
 
 inherit elisp subversion
 
@@ -23,8 +23,12 @@ src_compile() {
 }
 
 src_install() {
-	elisp_src_install
-	doinfo gentoo-syntax.info
+	elisp-install ${PN} *.el *.elc || die
+	sed -e "s:@PORTDIR@:${PORTDIR}:" \
+		"${FILESDIR}/${SITEFILE}" >"${T}/${SITEFILE}" || die
+	elisp-site-file-install "${T}/${SITEFILE}" || die
+	doinfo gentoo-syntax.info || die
+	dodoc ${DOCS} || die
 }
 
 pkg_postinst() {
