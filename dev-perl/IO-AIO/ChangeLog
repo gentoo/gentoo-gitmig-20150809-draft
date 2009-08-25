@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-AIO
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.8 2009/01/17 22:29:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-AIO/ChangeLog,v 1.9 2009/08/25 17:49:58 robbat2 Exp $
+
+*IO-AIO-3.3 (25 Aug 2009)
+
+  25 Aug 2009; Robin H. Johnson <robbat2@gentoo.org> +IO-AIO-3.3.ebuild:
+  Version bump via perl-bump experimental tool.
 
   17 Jan 2009; Robin H. Johnson <robbat2@gentoo.org> IO-AIO-3.17.ebuild:
   Emerge on an empty system (without perl) failed due to lack of perl dep.
