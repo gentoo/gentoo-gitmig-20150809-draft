@@ -26,3 +26,5 @@ move xfce-extra/thunar-media-tags xfce-extra/thunar-media-tags-plugin
 move xfce-extra/xfce4-places xfce-extra/xfce4-places-plugin
 move xfce-extra/xfce4-netload xfce-extra/xfce4-netload-plugin
 move xfce-extra/xfce4-quicklauncher xfce-extra/xfce4-quicklauncher-plugin
+move xfce-extra/xfce4-eyes xfce-extra/xfce4-eyes-plugin
+move xfce-extra/xfce4-genmon xfce-extra/xfce4-genmon-plugin
