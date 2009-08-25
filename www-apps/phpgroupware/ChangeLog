@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/phpgroupware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.37 2009/08/23 10:26:49 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpgroupware/ChangeLog,v 1.38 2009/08/25 14:58:46 klausman Exp $
+
+  25 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  phpgroupware-0.9.16.012-r1.ebuild:
+  Stable on alpha, bug #278864
 
   23 Aug 2009; nixnut <nixnut@gentoo.org> phpgroupware-0.9.16.012-r1.ebuild:
   ppc stable #278864
