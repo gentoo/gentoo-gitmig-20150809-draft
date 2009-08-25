@@ -31,3 +31,6 @@ move xfce-extra/xfce4-genmon xfce-extra/xfce4-genmon-plugin
 move xfce-extra/xfce4-battery xfce-extra/xfce4-battery-plugin
 move xfce-extra/xfce4-cellmodem xfce-extra/xfce4-cellmodem-plugin
 move xfce-extra/xfce4-notes xfce-extra/xfce4-notes-plugin
+move xfce-extra/xfce4-datetime xfce-extra/xfce4-datetime-plugin
+move xfce-extra/xfce4-fsguard xfce-extra/xfce4-fsguard-plugin
+move xfce-extra/xfce4-cpugraph xfce-extra/xfce4-cpugraph-plugin
