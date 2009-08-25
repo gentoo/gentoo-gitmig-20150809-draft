@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.73 2009/08/09 12:56:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.74 2009/08/25 21:21:31 klausman Exp $
+
+  25 Aug 2009; Tobias Klausmann <klausman@gentoo.org> skim-1.4.5-r5.ebuild:
+  Stable on alpha, bug #277353
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> skim-1.4.5-r5.ebuild:
   ppc stable #277353
