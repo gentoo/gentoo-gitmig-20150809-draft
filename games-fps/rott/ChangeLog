@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/rott
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/ChangeLog,v 1.8 2007/07/22 13:10:50 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rott/ChangeLog,v 1.9 2009/08/25 06:51:35 mr_bones_ Exp $
+
+*rott-1.1.1 (25 Aug 2009)
+
+  25 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> +rott-1.1.1.ebuild,
+  +files/rott-1.1.1-full-version.patch:
+  version bump
 
   22 Jul 2007; Tristan Heaven <nyhm@gentoo.org>
   +files/rott-1.0-full-version.patch, rott-1.0.ebuild:
