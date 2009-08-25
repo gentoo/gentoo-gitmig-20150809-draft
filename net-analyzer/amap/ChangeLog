@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/amap
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.43 2008/03/06 17:34:15 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.44 2009/08/25 23:59:07 jer Exp $
+
+  25 Aug 2009; Jeroen Roovers <jer@gentoo.org> -amap-4.8-r1.ebuild,
+  -files/amap-4.8-fix-icky-lvalue-casts.diff, -files/amap-4.8-gcc4.patch,
+  -amap-5.2.ebuild, amap-5.2-r1.ebuild:
+  Remove old. Block sci-biology/amap (bug #248233).
 
   06 Mar 2008; nixnut <nixnut@gentoo.org> amap-5.2-r1.ebuild:
   Stable on ppc wrt bug 212358
