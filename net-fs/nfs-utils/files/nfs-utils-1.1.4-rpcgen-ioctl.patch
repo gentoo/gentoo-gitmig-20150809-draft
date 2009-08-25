@@ -2,12 +2,11 @@ http://bugs.gentoo.org/174393
 
 --- tools/rpcgen/rpc_main.c
 +++ tools/rpcgen/rpc_main.c
-@@ -548,6 +548,9 @@
- #ifndef linux
- 	if( !tirpcflag && inetdflag )
+@@ -548,7 +548,7 @@
  	  f_print(fout, "#include <sys/ttycom.h>/* TIOCNOTTY */\n");
-+#else
-+	if( !tirpcflag )
+ #else
+ 	if( !tirpcflag )
+-	  f_print(fout, "#include <sys/ttycom.h>/* TIOCNOTTY */\n");
 +	  f_print(fout, "#include <sys/ioctl.h>/* TIOCNOTTY */\n");
  #endif
  	if( Cflag && (inetdflag || pmflag ) ) {

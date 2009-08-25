@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.4-r1.ebuild,v 1.8 2009/03/25 18:46:28 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.1.4-r1.ebuild,v 1.9 2009/08/25 02:43:17 vapier Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.1.2-rpcgen-ioctl.patch
+	epatch "${FILESDIR}"/${PN}-1.1.4-rpcgen-ioctl.patch
 	epatch "${FILESDIR}"/${PN}-1.1.4-ascii-man.patch
 	epatch "${FILESDIR}"/${PN}-1.1.4-mtab-sym.patch
 	epatch "${FILESDIR}"/${PN}-1.1.4-no-exec.patch
