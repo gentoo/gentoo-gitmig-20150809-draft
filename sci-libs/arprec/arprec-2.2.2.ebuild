@@ -1,7 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.2.ebuild,v 1.2 2009/07/03 12:56:35 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/arprec/arprec-2.2.2.ebuild,v 1.3 2009/08/25 13:09:27 grozin Exp $
 EAPI=2
+inherit eutils
+
 DESCRIPTION="Arbitrary precision float arithmetics and functions"
 IUSE="fortran qd"
 HOMEPAGE="http://crd.lbl.gov/~dhbailey/mpdist/"
