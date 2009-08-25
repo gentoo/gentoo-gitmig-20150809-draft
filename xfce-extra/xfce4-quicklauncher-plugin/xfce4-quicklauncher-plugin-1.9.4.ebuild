@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4.ebuild,v 1.2 2009/08/25 19:29:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-quicklauncher-plugin/xfce4-quicklauncher-plugin-1.9.4.ebuild,v 1.3 2009/08/25 19:34:32 ssuominen Exp $
 
 EAUTORECONF=yes
-ELIBTOOLIZE=yes
+EINTLTOOLIZE=yes
 EAPI=2
 inherit xfconf
 
