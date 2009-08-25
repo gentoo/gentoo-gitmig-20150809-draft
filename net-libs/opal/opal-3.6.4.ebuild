@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.2.ebuild,v 1.5 2009/08/03 21:33:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.1 2009/08/25 18:50:14 volkmar Exp $
 
 EAPI="2"
 
@@ -94,11 +94,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# move files from doc tarball into ${S}
-	if use doc; then
-		mv ../html . || die "moving doc files failed"
-	fi
-
 	# remove visual studio related files from samples/
 	if use examples; then
 		rm -f samples/*/*.vcproj
@@ -107,19 +102,8 @@ src_prepare() {
 		rm -f samples/*/*.dsw
 	fi
 
-	# fix as-needed and aclocal, upstream patch 2795827
-	epatch "${FILESDIR}"/${P}-as-needed.patch
-
-	# use system ilbc, upstream patch 2795830
-	epatch "${FILESDIR}"/${P}-system-ilbc.patch
-
-	# fix sbc plugin link, upstream patch 2796087
-	epatch "${FILESDIR}"/${P}-sbc.patch
-
 	# upstream patch 2808915
 	epatch "${FILESDIR}"/${P}-jdkroot.patch
-
-	epatch "${FILESDIR}"/${P}-gcc-4.4.patch
 
 	# h224 really needs h323 ?
 	# TODO: get a confirmation in ml
@@ -253,7 +237,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	if use doc; then
-		dohtml -r html/* docs/* || die "dohtml failed"
+		dohtml -r "${WORKDIR}"/html/* docs/* || die "dohtml failed"
 	fi
 
 	# ChangeLog is not standard

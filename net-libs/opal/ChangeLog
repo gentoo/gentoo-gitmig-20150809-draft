@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.48 2009/08/03 21:33:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.49 2009/08/25 18:50:14 volkmar Exp $
+
+*opal-3.6.4 (25 Aug 2009)
+
+  25 Aug 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -files/opal-3.6.2-as-needed.patch, -files/opal-3.6.2-gcc-4.4.patch,
+  -files/opal-3.6.2-jdkroot.patch, -files/opal-3.6.2-sbc.patch,
+  -files/opal-3.6.2-system-ilbc.patch, +files/opal-3.6.4-jdkroot.patch,
+  -opal-3.6.2.ebuild, +opal-3.6.4.ebuild:
+  Version bump to 3.6.4. Bug 281170
+	Thanks to Colin Macdonald.
 
   03 Aug 2009; Markus Meier <maekke@gentoo.org> opal-3.6.2.ebuild:
   add ~amd64, bug #276355
