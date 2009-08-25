@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/DCOP-Amarok-Player
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok-Player/ChangeLog,v 1.5 2008/02/22 05:49:52 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DCOP-Amarok-Player/ChangeLog,v 1.6 2009/08/25 17:24:01 robbat2 Exp $
+
+*DCOP-Amarok-Player-0.037 (25 Aug 2009)
+
+  25 Aug 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +DCOP-Amarok-Player-0.037.ebuild:
+  Version bump via perl-bump experimental tool.
 
   22 Feb 2008; Robin H. Johnson <robbat2@gentoo.org>
   DCOP-Amarok-Player-0.036.ebuild:
