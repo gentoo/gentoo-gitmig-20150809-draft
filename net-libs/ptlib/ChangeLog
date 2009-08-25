@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.7 2009/08/03 21:31:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.8 2009/08/25 13:52:05 volkmar Exp $
+
+*ptlib-2.6.4 (25 Aug 2009)
+
+  25 Aug 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -files/ptlib-2.6.2-gcc-allocator.patch, -ptlib-2.6.2.ebuild,
+  +ptlib-2.6.4.ebuild:
+  Version bump to 2.6.4. Bug 281170.
+	Thanks to Colin MacDonald.
 
   03 Aug 2009; Markus Meier <maekke@gentoo.org> ptlib-2.6.2.ebuild:
   add ~amd64, bug #276355

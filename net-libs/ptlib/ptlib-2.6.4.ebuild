@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.2.ebuild,v 1.7 2009/08/03 21:31:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4.ebuild,v 1.1 2009/08/25 13:52:05 volkmar Exp $
 
 EAPI="2"
 
@@ -161,11 +161,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# move files from doc tarball into ${S}
-	if use doc; then
-		mv ../html . || die "moving doc files failed"
-	fi
-
 	# remove visual studio related files from samples/
 	if use examples; then
 		rm -f samples/*/*.vcproj
@@ -173,9 +168,6 @@ src_prepare() {
 		rm -f samples/*/*.dsp
 		rm -f samples/*/*.dsw
 	fi
-
-	# workaround for a compilation issue in contain.cxx, upstream bug 2794741
-	epatch "${FILESDIR}"/${P}-gcc-allocator.patch
 }
 
 src_configure() {
@@ -193,7 +185,6 @@ src_configure() {
 	# internalregex: we want to use system one
 	# sunaudio and bsdvideo are respectively for SunOS and BSD's
 	# appshare, vfw: only for windows
-	# sockagg: not used anymore, upstream bug 2794755
 	# samples: no need to build samples
 	# avc: disabled, bug 276514, upstream bug 2821744
 	econf ${myconf} \
@@ -207,7 +198,6 @@ src_configure() {
 		--disable-bsdvideo \
 		--disable-appshare \
 		--disable-vfw \
-		--disable-sockagg \
 		--disable-samples \
 		--disable-avc \
 		$(use_enable audio) \
@@ -274,13 +264,17 @@ src_install() {
 	emake DESTDIR="${D}" ${makeopts} install || die "emake install failed"
 
 	if use doc; then
-		dohtml -r html/* || die "dohtml failed"
+		dohtml -r "${WORKDIR}"/html/* || die "dohtml failed"
 	fi
 
 	dodoc History.txt ReadMe.txt ReadMe_QOS.txt || die "dodoc failed"
 
 	# ChangeLog is not standard
 	dodoc ChangeLog-${PN}-v${PV//./_}.txt || die "dodoc failed"
+
+	if use audio || use video; then
+		newdoc plugins/ReadMe.txt ReadMe-Plugins.txt || die "newdoc failed"
+	fi
 
 	if use examples; then
 		local exampledir="/usr/share/doc/${PF}/examples"
