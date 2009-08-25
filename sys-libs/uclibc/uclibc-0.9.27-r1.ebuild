@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.35 2009/07/26 19:39:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.36 2009/08/25 07:24:59 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -28,7 +28,7 @@ SVN_VER="20050114"
 PATCH_VER="1.6"
 DESCRIPTION="C library for developing embedded Linux systems"
 HOMEPAGE="http://www.uclibc.org/"
-SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
+SRC_URI="mirror://kernel/linux/libs/uclibc/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-cvs-update-${SVN_VER}.patch.bz2
 	mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2
 	nls? ( !userlocales? ( pregen? (
