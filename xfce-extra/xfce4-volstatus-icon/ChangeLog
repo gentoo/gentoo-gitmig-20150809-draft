@@ -1,11 +1,15 @@
 # ChangeLog for xfce-extra/xfce4-volstatus-icon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.11 2009/08/01 01:38:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.12 2009/08/25 11:06:35 ssuominen Exp $
+
+  25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-volstatus-icon-0.1.0-r1.ebuild:
+  Use xfconf.eclass.
 
 *xfce4-volstatus-icon-0.1.0-r1 (01 Aug 2009)
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
-  +files/xfce4-volstatus-icon-0.1.0-dialogsegfault.diff,
+  +files/xfce4-volstatus-icon-0.1.0-dialog_segfault.patch,
   +xfce4-volstatus-icon-0.1.0-r1.ebuild:
   Switch to EAPI=2 and xfce4.eclass. Add patch for duplicate variable names,
   bug 278976
