@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/horde-passwd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.22 2009/08/25 14:45:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.23 2009/08/25 16:52:05 armin76 Exp $
+
+  25 Aug 2009; Raúl Porcel <armin76@gentoo.org> horde-passwd-3.1.1.ebuild:
+  sparc stable wrt #277294
 
   25 Aug 2009; Jeroen Roovers <jer@gentoo.org> horde-passwd-3.1.1.ebuild:
   Stable for HPPA (bug #277294).
