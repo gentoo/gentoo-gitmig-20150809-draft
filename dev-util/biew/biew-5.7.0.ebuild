@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.7.0.ebuild,v 1.1 2008/12/26 08:07:23 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/biew-5.7.0.ebuild,v 1.2 2009/08/25 18:40:37 vostorga Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs flag-o-matic
 
 DESCRIPTION="A portable viewer of binary files, hexadecimal and disassembler modes."
 HOMEPAGE="http://biew.sourceforge.net"
@@ -27,7 +27,7 @@ S=${WORKDIR}/${PN}-${PV//./}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/biew-570-configure-gpm.patch
+	epatch "${FILESDIR}"/biew-570-configure.patch
 	epatch "${FILESDIR}"/biew-570-makefile.patch
 }
 
@@ -41,8 +41,13 @@ src_compile() {
 	fi
 	export _gpm=${enable_gpm}
 
-	econf
-	emake
+	append-flags -D_GNU_SOURCE
+
+	econf --cc="$(tc-getCC)" --ld="$(tc-getCC)" \
+		--ar="$(tc-getAR) -rcu" --ranlib="$(tc-getRANLIB)" \
+		--enable-debug
+	emake HOST_CFLAGS="${CFLAGS}" HOST_LDFLAGS="${LDFLAGS}" \
+		|| die "make failed"
 	for i in doc/*.ru doc/file_id.diz doc/biew_ru.txt doc/biew_en.txt
 	do
 		if iconv -f cp866 -t utf-8 "$i" > "$i.conv"

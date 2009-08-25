@@ -1,6 +1,17 @@
 # ChangeLog for dev-util/biew
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.24 2008/12/26 08:07:23 wormo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/biew/ChangeLog,v 1.25 2009/08/25 18:40:37 vostorga Exp $
+
+  25 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> biew-5.7.0.ebuild,
+  +files/biew-570-configure.patch, -files/biew-570-configure-gpm.patch,
+  files/biew-570-makefile.patch:
+  Respecting CC, LD, AR, RANLIB variables, bug #243972
+  Fixing pre-stripped files, bug #255833
+  Fixing man page location, patch thanks to Sandro Bonazzola and Wim Muskee
+  bug #255835 
+  Respecting CFLAGS and LDFLAGS
+  Now builds in ~amd64 , thanks to Diego E." Flameeyes" Pettenò
+  <flameeyes@gmail.com>
 
 *biew-5.7.0 (26 Dec 2008)
 

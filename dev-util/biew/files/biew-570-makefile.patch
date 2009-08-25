@@ -1,6 +1,9 @@
---- makefile.orig	2008-12-21 12:33:37.001959467 +0100
-+++ makefile	2008-12-21 12:38:56.925669582 +0100
-@@ -271,16 +271,16 @@
+diff -NrU5 biew-570.original/makefile biew-570/makefile
+--- biew-570.original/makefile	2009-08-25 18:45:37.000000000 -0600
++++ biew-570/makefile	2009-08-25 18:47:01.000000000 -0600
+@@ -269,20 +269,20 @@
+ 	@echo "*** installation. Please download 'fileutils' from ftp://ftp.gnu.org and"
+ 	@echo "*** install them to have possibility perform autiomatic installation"
  	@echo "*** of this project" 
  	@exit 1
  endif
@@ -15,7 +18,7 @@
 -	$(INSTALL) -D -c -m 644 bin_rc/xlt/russian/*.xlt $(DATADIR)/xlt/russian
 -	$(INSTALL) -D -c -m 644 bin_rc/xlt/*.xlt bin_rc/xlt/readme $(DATADIR)/xlt
 +	$(INSTALL) -D -m 755 $(TARGET) $(DESTDIR)$(PREFIX)/bin/$(TARGET)
-+	$(INSTALL) -D -c -m 644 doc/biew.1 $(DESTDIR)$(PREFIX)/man/man1/biew.1
++	$(INSTALL) -D -c -m 644 doc/biew.1 $(DESTDIR)$(DATADIR)/man/man1/biew.1
 +	$(INSTALL) -D -c -m 644 bin_rc/biew.hlp $(DESTDIR)$(DATADIR)/biew.hlp
 +	mkdir --parents $(DESTDIR)$(DATADIR)/skn
 +	$(INSTALL) -D -c -m 644 bin_rc/skn/*.skn $(DESTDIR)$(DATADIR)/skn
@@ -27,3 +30,5 @@
  uninstall:
  	$(RM) $(PREFIX)/bin/$(TARGET)
  	$(RM) $(DATADIR)/skn/*
+ 	rmdir -p --ignore-fail-on-non-empty $(DATADIR)/skn
+ 	$(RM) $(DATADIR)/syntax/*
