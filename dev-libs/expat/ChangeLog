@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.85 2009/08/24 14:49:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.86 2009/08/25 11:56:42 fauli Exp $
+
+  25 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  expat-2.0.1-r2.ebuild:
+  stable x86, security bug 280615
 
   24 Aug 2009; Brent Baude <ranger@gentoo.org> expat-2.0.1-r2.ebuild:
   Marking expat-2.0.1-r2 ppc64 for bug 280615
