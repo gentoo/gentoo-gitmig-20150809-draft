@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.5 2009/06/18 11:50:33 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-9999.ebuild,v 1.6 2009/08/25 19:48:10 fauli Exp $
 
 inherit eutils subversion autotools
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://gatt.sourceforge.net/
 	http://www.gentoo.org/proj/en/base/alpha/AT/index.xml"
 SRC_URI=""
 
-LICENSE="GPL-2 GPL-3 FDL-1.2"
+LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc libpaludis"
