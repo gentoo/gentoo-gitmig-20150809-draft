@@ -1,19 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/xfce4-dict-0.5.3.ebuild,v 1.2 2009/08/23 16:52:46 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-dict/xfce4-dict-0.5.3.ebuild,v 1.3 2009/08/25 13:47:47 ssuominen Exp $
 
-EAPI=1
-
-inherit fdo-mime gnome2-utils
+EAPI=2
+inherit xfconf
 
 DESCRIPTION="plugin and stand-alone application to query dict.org"
-HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-dict"
-SRC_URI="http://goodies.xfce.org/releases/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://www.xfce.org/"
+SRC_URI="mirror://xfce/src/apps/${PN}/0.5/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE=""
+IUSE="debug"
 
 RDEPEND=">=dev-libs/glib-2.6:2
 	>=x11-libs/gtk+-2.6:2
@@ -21,34 +20,11 @@ RDEPEND=">=dev-libs/glib-2.6:2
 	>=xfce-base/libxfce4util-4.4
 	>=xfce-base/xfce4-panel-4.4"
 DEPEND="${RDEPEND}
-	dev-util/intltool"
+	dev-util/intltool
+	dev-util/pkgconfig"
 
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README
-}
-
-pkg_preinst() {
-	gnome2_icon_savelist
-}
-
-pkg_postinst() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-	gnome2_icon_cache_update
-
-	if ! has_version app-text/aspell && ! has_version app-text/ispell \
-	&& ! has_version app-text/enchant; then
-		echo
-		elog "You need a spell check program for spell checking."
-		elog "xfce4-dict works with enchant, aspell, ispell or any other spell"
-		elog "check program which is compatible with the ispell command"
-		elog "The dictionary function will still work without those"
-	fi
-}
-
-pkg_postrm() {
-	fdo-mime_desktop_database_update
-	fdo-mime_mime_database_update
-	gnome2_icon_cache_update
+pkg_setup() {
+	DOCS="AUTHORS ChangeLog README"
+	XFCONF="--disable-dependency-tracking
+		$(use_enable debug)"
 }
