@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4753 2009/08/24 13:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4754 2009/08/25 11:27:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3283,5 +3283,5 @@ xfce-base/xfdesktop:thunar - Build support for application launchers using xfce-
 xfce-extra/thunar-thumbnailers:grace - Enable support for sci-visualization/grace thumbnails
 xfce-extra/xfce4-mpc-plugin:libmpd - Build using media-libs/libmpd backend, instead of native fallback which is preferred
 xfce-extra/xfce4-power-manager:dpms - Build with DPMS support
-xfce-extra/xfce4-power-manager:panel-plugins - Build with panel plugins
+xfce-extra/xfce4-power-manager:plugins - Build panel plugins
 xfce-extra/xfce4-screenshooter:zimagez - Optional support to host screenshots on ZimageZ, a free online image service
