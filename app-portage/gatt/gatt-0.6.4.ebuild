@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.4.ebuild,v 1.3 2009/08/18 07:51:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/gatt-0.6.4.ebuild,v 1.4 2009/08/25 13:00:41 fauli Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gatt.sourceforge.net/
 	http://www.gentoo.org/proj/en/base/alpha/AT/index.xml"
 SRC_URI="mirror://sourceforge/gatt/${P}.tar.bz2"
 
-LICENSE="GPL-2 GPL-3 FDL-1.2"
+LICENSE="GPL-2 GPL-3 CCPL-Attribution-ShareAlike-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE="doc libpaludis"
