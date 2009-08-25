@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10363 2009/08/24 18:34:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10364 2009/08/25 06:03:00 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -147,11 +147,6 @@ media-plugins/gmpc-lyricwiki
 # Doesn't compile wrt #277660. Doesn't install wrt #211336.
 # Masked for removal.
 net-mail/lurker
-
-# Alexis Ballier <aballier@gentoo.org> (10 Aug 2009)
-# Breaks vlc, fixed in git.
-# Leave it masked until vlc 1.0.2 is released
->=media-libs/libass-0.9.7
 
 # Samuli Suominen <ssuominen@gentoo.org> (10 Aug 2009)
 # Orphaned library which doesn't compile wrt #278071.

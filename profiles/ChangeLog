@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3181 2009/08/24 18:36:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3182 2009/08/25 06:02:59 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Aug 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unmask latest libass now that vlc 1.0.1 builds fine against it
 
   24 Aug 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   Security-vulnerable bundled expat version:
