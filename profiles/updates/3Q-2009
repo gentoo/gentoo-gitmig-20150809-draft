@@ -39,3 +39,4 @@ move xfce-extra/xfce4-timer xfce-extra/xfce4-timer-plugin
 move xfce-extra/xfce4-systemload xfce-extra/xfce4-systemload-plugin
 move xfce-extra/xfce4-verve xfce-extra/xfce4-verve-plugin
 move xfce-extra/xfce4-diskperf xfce-extra/xfce4-diskperf-plugin
+move xfce-extra/xfce4-wavelan xfce-extra/xfce4-wavelan-plugin
