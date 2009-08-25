@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/gensink
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.7 2007/02/19 12:46:29 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gensink/ChangeLog,v 1.8 2009/08/25 22:51:31 jer Exp $
+
+*gensink-4.1-r1 (25 Aug 2009)
+
+  25 Aug 2009; Jeroen Roovers <jer@gentoo.org> +gensink-4.1-r1.ebuild,
+  +files/gensink-4.1-make.patch:
+  Use CFLAGS, CC, LDFLAGS. Use emake instead of make, dobin instead of
+  exeinto/doexe.
 
   19 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
