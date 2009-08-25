@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.12.ebuild,v 1.1 2009/08/25 13:07:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/psycopg-2.0.12.ebuild,v 1.2 2009/08/25 15:37:26 arfrever Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.4"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils eutils
 
 MY_P=${PN}2-${PV}
 
@@ -30,6 +30,8 @@ S=${WORKDIR}/${MY_P}
 PYTHON_MODNAME="${PN}2"
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-setup.py.patch"
+
 	if use debug; then
 		sed -i 's/^\(define=\)/\1PSYCOPG_DEBUG,/' setup.cfg || die "sed failed"
 	fi
