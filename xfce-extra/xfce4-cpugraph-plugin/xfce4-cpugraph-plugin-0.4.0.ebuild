@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph-plugin/xfce4-cpugraph-plugin-0.4.0.ebuild,v 1.1 2009/08/25 12:15:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-cpugraph-plugin/xfce4-cpugraph-plugin-0.4.0.ebuild,v 1.2 2009/08/25 15:54:10 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -9,7 +9,7 @@ DESCRIPTION="CPU load panel plugin"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.4/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
