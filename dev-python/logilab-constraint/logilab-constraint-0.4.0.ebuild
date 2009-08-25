@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.3 2009/05/27 15:15:28 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-constraint/logilab-constraint-0.4.0.ebuild,v 1.4 2009/08/25 16:02:24 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -14,18 +17,19 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE="doc"
 
-DOCS="doc/CONTRIBUTORS"
-PYTHON_MODNAME="logilab/constraint"
-
 DEPEND=""
 RDEPEND=">=dev-python/logilab-common-0.12.0"
 
-#S="${WORKDIR}/${MY_P}"
+RESTRICT_PYTHON_ABIS="3*"
+
+PYTHON_MODNAME="logilab/constraint"
+
+DOCS="doc/CONTRIBUTORS"
 
 src_install() {
 	distutils_src_install
 
-	# avoid conflict with dev-python/logilab-common:
+	# Avoid conflict with dev-python/logilab-common.
 	rm -f "${D}"usr/$(get_libdir)/python*/site-packages/logilab/__init__.py
 
 	if use doc; then
@@ -37,7 +41,7 @@ src_install() {
 
 pkg_postinst() {
 	distutils_pkg_postinst
-	if use x86 && ! has_version dev-python/psyco ; then
+	if use x86 && ! has_version dev-python/psyco; then
 		einfo ""
 		einfo "Although it is not required, you should consider installing"
 		einfo "\"dev-python/psyco\". It can speed up this module a lot."
