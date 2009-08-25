@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0-r1.ebuild,v 1.5 2009/08/05 02:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.0-r1.ebuild,v 1.6 2009/08/25 17:58:53 armin76 Exp $
 
 ARTS_REQUIRED="never"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.methylblue.com/filelight/packages/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 hppa ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="!kde-misc/filelight-i18n"
