@@ -1,6 +1,14 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.277 2009/08/16 13:45:16 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.278 2009/08/25 16:52:15 gentoofan23 Exp $
+
+  25 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  mythtv-0.21_p18314-r1.ebuild, mythtv-0.21_p18314-r2.ebuild,
+  mythtv-0.21_p19961-r1.ebuild, mythtv-0.21_p19961-r2.ebuild:
+  Make all ebuilds use mythtv.eclass' SRC_URI, fixing bug #280516. Convert
+  mythtv-0.21_p18314-r* to EAPI 2 for SRC_URI arrows. Adjust all ebuilds to
+  call source preparation commands in src_prepare as they should be in EAPI
+  2.
 
   16 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org>
   mythtv-0.21_p19961-r2.ebuild:

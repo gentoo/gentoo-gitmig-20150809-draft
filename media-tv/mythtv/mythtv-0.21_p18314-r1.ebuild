@@ -1,15 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18314-r1.ebuild,v 1.7 2009/03/06 18:11:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.21_p18314-r1.ebuild,v 1.8 2009/08/25 16:52:15 gentoofan23 Exp $
 
-EAPI=1
+EAPI=2
 inherit flag-o-matic multilib eutils qt3 mythtv toolchain-funcs python confutils
 
 DESCRIPTION="Homebrew PVR project"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 IUSE_VIDEO_CARDS="video_cards_nvidia"
 IUSE="aac alsa altivec autostart debug directv dvb dvd fftw ieee1394 jack lcd \
@@ -72,11 +70,7 @@ pkg_setup() {
 	usermod -a -G ${MYTHTV_GROUPS} mythtv
 }
 
-src_unpack() {
-
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# upstream wants the revision number in their version.cpp
 	# since the subversion.eclass strips out the .svn directory
 	# svnversion in MythTV's build doesn't work
@@ -94,7 +88,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${PN}-0.21-bttv.patch
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--prefix=/usr
 		--mandir=/usr/share/man
 		--libdir-name=$(get_libdir)"
@@ -177,8 +171,10 @@ src_compile() {
 	CFLAGS=""
 	CXXFLAGS=""
 	einfo "Running ./configure ${myconf}"
-	./configure ${myconf} || die "configure died"
+	sh configure ${myconf} || die "configure died"
+}
 
+src_compile() {
 	eqmake3 mythtv.pro -o "Makefile" || die "eqmake3 failed"
 	emake || die "emake failed"
 
