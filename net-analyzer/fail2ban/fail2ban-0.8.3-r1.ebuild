@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.3-r1.ebuild,v 1.2 2009/08/25 11:49:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.8.3-r1.ebuild,v 1.3 2009/08/25 12:44:12 jer Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/fail2ban/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 hppa ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4"
