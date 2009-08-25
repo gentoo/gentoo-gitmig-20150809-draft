@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/perl-Math-BigInt-FastCalc-0.19.ebuild,v 1.2 2008/11/03 16:46:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Math-BigInt-FastCalc/perl-Math-BigInt-FastCalc-0.19.ebuild,v 1.3 2009/08/25 10:57:01 tove Exp $
 
 DESCRIPTION="Math::BigInt::Calc with some XS for more speed"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -13,4 +13,4 @@ KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE=""
 DEPEND=""
 
-RDEPEND="~perl-core/Math-BigInt-FastCalc-${PV}"
+RDEPEND="|| ( ~dev-lang/perl-5.10.1 ~perl-core/Math-BigInt-FastCalc-${PV} )"

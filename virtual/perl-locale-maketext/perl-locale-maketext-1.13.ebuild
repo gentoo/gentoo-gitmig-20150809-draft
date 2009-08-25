@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/perl-locale-maketext-1.13.ebuild,v 1.1 2008/07/22 07:29:32 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-locale-maketext/perl-locale-maketext-1.13.ebuild,v 1.2 2009/08/25 10:56:44 tove Exp $
 
 DESCRIPTION="Virtual for locale-maketext"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -12,4 +12,4 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~s390 ~sh ~sparc ~x86"
 
 IUSE=""
 DEPEND=""
-RDEPEND="~perl-core/locale-maketext-${PV}"
+RDEPEND="|| ( ~dev-lang/perl-5.10.1 ~perl-core/locale-maketext-${PV} )"
