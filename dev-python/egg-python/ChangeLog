@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/egg-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.10 2009/03/23 05:04:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/ChangeLog,v 1.11 2009/08/25 13:18:31 aballier Exp $
+
+  25 Aug 2009; Alexis Ballier <aballier@gentoo.org>
+  egg-python-2.19.1.ebuild:
+  keyword ~x86-fbsd
 
   23 Mar 2009; Jeroen Roovers <jer@gentoo.org> egg-python-2.19.1.ebuild:
   Stable for HPPA (bug #258040).

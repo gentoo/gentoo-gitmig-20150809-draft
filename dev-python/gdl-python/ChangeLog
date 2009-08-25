@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gdl-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.17 2009/08/19 16:48:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdl-python/ChangeLog,v 1.18 2009/08/25 13:15:34 aballier Exp $
+
+  25 Aug 2009; Alexis Ballier <aballier@gentoo.org>
+  gdl-python-2.19.1-r1.ebuild:
+  keyword ~x86-fbsd
 
   19 Aug 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Stable for HPPA (bug #268359).

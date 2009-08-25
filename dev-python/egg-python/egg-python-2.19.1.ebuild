@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.11 2009/03/23 05:04:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egg-python/egg-python-2.19.1.ebuild,v 1.12 2009/08/25 13:18:31 aballier Exp $
 
 # We don't support the egg.recent bindings that are also provided - they are
 # deprecated, have deps we don't really want and there are no users in-tree.
@@ -16,7 +16,7 @@ SRC_URI="mirror://gnome/sources/${G_PY_PN}/${PVP}/${G_PY_PN}-${PV}.tar.bz2
 DESCRIPTION="EggTrayIcon bindings for Python"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="examples"
 
 RDEPEND=">=dev-python/libbonobo-python-2.22.1
