@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-modemlights-plugin/xfce4-modemlights-plugin-0.1.3.99.ebuild,v 1.1 2009/08/25 15:33:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-modemlights-plugin/xfce4-modemlights-plugin-0.1.3.99.ebuild,v 1.2 2009/08/25 15:48:39 ssuominen Exp $
 
 EAPI=2
-inherit xfce44
+inherit xfconf
 
 DESCRIPTION="a panel plugin to turn dialup (ppp) connections on/off"
 HOMEPAGE="http://www.xfce.org/"
