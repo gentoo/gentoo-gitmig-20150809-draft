@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/certmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.118 2009/07/28 17:11:53 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/certmanager/ChangeLog,v 1.119 2009/08/25 14:58:48 jer Exp $
+
+  25 Aug 2009; Jeroen Roovers <jer@gentoo.org> certmanager-3.5.10-r1.ebuild:
+  Stable for HPPA (bug #271889).
 
   28 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   certmanager-3.5.10-r1.ebuild:
