@@ -25,3 +25,4 @@ move xfce-extra/xfce4-mount xfce-extra/xfce4-mount-plugin
 move xfce-extra/thunar-media-tags xfce-extra/thunar-media-tags-plugin
 move xfce-extra/xfce4-places xfce-extra/xfce4-places-plugin
 move xfce-extra/xfce4-netload xfce-extra/xfce4-netload-plugin
+move xfce-extra/xfce4-quicklauncher xfce-extra/xfce4-quicklauncher-plugin
