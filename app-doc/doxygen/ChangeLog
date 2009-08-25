@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.166 2009/08/25 06:12:37 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.167 2009/08/25 06:33:19 nerdboy Exp $
+
+*doxygen-1.5.9 (25 Aug 2009)
+
+  25 Aug 2009; Steve Arnold <nerdboy@gentoo.org> +doxygen-1.5.9.ebuild:
+  Adding version 1.5.9 until some issues are worked out.  This fixes some
+  problems with 1.5.8, and 1.6.0 is masked for time being.  Fixes bug
+  #275753.
 
 *doxygen-1.6.0 (25 Aug 2009)
 
