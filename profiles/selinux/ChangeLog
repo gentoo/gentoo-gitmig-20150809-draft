@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.7 2009/08/10 17:07:09 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.8 2009/08/25 09:09:12 voyageur Exp $
+
+  25 Aug 2009; Bernard Cafarelli <voyageur@gentoo.org> package.mask:
+  Add mask for www-client/chromium-bin, it requires >=gcc-4.2 libstdc++
 
   10 Aug 2009; Chris PeBenito <pebenito@gentoo.org> make.defaults:
   Clean up top level make.defaults and add back the missing PORTAGE_T

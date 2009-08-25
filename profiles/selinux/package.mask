@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.40 2009/08/10 14:39:30 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.41 2009/08/25 09:09:12 voyageur Exp $
+
+# Bernard Cafarelli <voyageur@gentoo.org> (25 Aug 2009)
+# Requires libstdc++ from >=gcc-4.2
+www-client/chromium-bin
 
 # Chris PeBenito <pebenito@gentoo.org> (10 Aug 2009)
 # SELinux code problems
