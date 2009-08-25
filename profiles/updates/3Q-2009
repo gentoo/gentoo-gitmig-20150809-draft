@@ -34,3 +34,6 @@ move xfce-extra/xfce4-notes xfce-extra/xfce4-notes-plugin
 move xfce-extra/xfce4-datetime xfce-extra/xfce4-datetime-plugin
 move xfce-extra/xfce4-fsguard xfce-extra/xfce4-fsguard-plugin
 move xfce-extra/xfce4-cpugraph xfce-extra/xfce4-cpugraph-plugin
+move xfce-extra/xfce4-time-out xfce-extra/xfce4-time-out-plugin
+move xfce-extra/xfce4-timer xfce-extra/xfce4-timer-plugin
+move xfce-extra/xfce4-systemload xfce-extra/xfce4-systemload-plugin
