@@ -1,9 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.1 2008/11/25 18:45:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/mpb/mpb-1.4.2-r2.ebuild,v 1.2 2009/08/25 01:25:28 markusle Exp $
 
 EAPI=2
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="Photonic band structure program"
 SRC_URI="http://ab-initio.mit.edu/mpb/${P}.tar.gz"
@@ -45,6 +45,9 @@ src_prepare() {
 }
 
 src_configure() {
+	# enable legacy API for hdf-1.8
+	use hdf5 && append-cflags -DH5_USE_16_API
+
 	local myconf="$(use_with hdf5)"
 	export BLAS_LIBS="$(pkg-config --libs blas)"
 	export LAPACK_LIBS="$(pkg-config --libs lapack)"
