@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3182 2009/08/25 06:02:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3183 2009/08/25 07:56:14 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
+  Rename xfce-extra/ packages.
 
   25 Aug 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
   unmask latest libass now that vlc 1.0.1 builds fine against it
@@ -18,16 +21,7 @@
   Masking mozilla-weave testing versions
 
   24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename thunar-media-tags to thunar-media-tags-plugin.
-
-  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename xfce4-mount to xfce4-mount-plugin.
-
-  24 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename xfce4-xfapplet to xfce4-xfapplet-plugin.
-  Rename xfce4-smartbookmark to xfce4-smartbookmark-plugin.
-  Rename xfce4-cpu-freq to xfce4-cpufreq-plugin.
-  Rename thunar-archive to thunar-archive-plugin.
+  Rename xfce-extra/ packages.
 
   24 Aug 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Add xpdf-3.02-r3 to poppler mask, since it will only work with
@@ -41,8 +35,7 @@
   Mask more live scm ebuilds.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename xfce4-sensors to xfce4-sensors-plugin.
-  Rename xfce4-radio to xfce4-radio-plugin.
+  Rename xfce-extra/ packages.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
   targets/desktop/make.defaults:
@@ -50,9 +43,7 @@
   default.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> updates/3Q-2009:
-  Rename xfce-base/xfce4 to xfce-base/xfce4-meta with new dependencies.
-  Move xfce-extra/exo to xfce-base/exo.
-  Renamed xfce4-mpc, xfce4-clipman, xfce4-xkb and xfce4-wmdock to -plugin naming.
+  Rename xfce-base/ and xfce-extra/ packages.
 
   23 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Removed xfce-base/xfce4-extras meta from tree.
