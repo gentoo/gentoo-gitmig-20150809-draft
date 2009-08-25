@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.39.ebuild,v 1.1 2009/08/25 15:17:21 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.39.ebuild,v 1.2 2009/08/25 19:28:22 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -78,4 +78,3 @@ src_install() {
 	newinitd "${FILESDIR}"/${PN}.initd ${PN} || die
 
 }
-
