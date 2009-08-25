@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.19.1.ebuild,v 1.8 2009/03/23 04:58:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gtkspell-python/gtkspell-python-2.19.1.ebuild,v 1.9 2009/08/25 12:42:59 aballier Exp $
 
 G_PY_PN="gnome-python-extras"
 
@@ -15,7 +15,7 @@ DESCRIPTION="GtkSpell bindings for Python"
 # an ebuild, currently. Punt till we actually have to face the issue.
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="doc examples"
 
 RDEPEND="=app-text/gtkspell-2*"
