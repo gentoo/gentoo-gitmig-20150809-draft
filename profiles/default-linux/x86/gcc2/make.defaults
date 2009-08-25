@@ -1,5 +1,0 @@
-# Copyright 1999-2005 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc2/make.defaults,v 1.21 2007/08/08 19:27:27 dev-zero Exp $
-
-USE="oss apm arts berkdb bitmap-fonts crypt cups emboss encode fortran font-server gdbm gif gpm gtk imlib java jpeg kde libwww mikmod mmx motif  mpeg ncurses nls oggvorbis opengl pam png python qt3 qt4 quicktime readline sdl slang spell ssl svga tcpd truetype truetype-fonts type1-fonts X xml2 xv"
