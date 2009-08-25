@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.87 2009/08/25 12:10:12 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.88 2009/08/25 15:22:03 klausman Exp $
+
+  25 Aug 2009; Tobias Klausmann <klausman@gentoo.org> expat-2.0.1-r2.ebuild:
+  Stable on alpha, bug #280615
 
   25 Aug 2009; <chainsaw@gentoo.org> expat-2.0.1-r2.ebuild:
   Marked stable on AMD64 as requested by Robert Buchholz <rbu@gentoo.org> in
