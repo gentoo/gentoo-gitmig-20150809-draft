@@ -1,6 +1,26 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.682 2009/08/22 21:11:34 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.683 2009/08/25 00:21:14 gregkh Exp $
+
+  25 Aug 2009; Greg Kroah-Hartman <gregkh@gentoo.org>
+  -vanilla-sources-2.6.27.10.ebuild, -vanilla-sources-2.6.27.11.ebuild,
+  -vanilla-sources-2.6.27.12.ebuild, -vanilla-sources-2.6.27.18.ebuild,
+  -vanilla-sources-2.6.27.19.ebuild, -vanilla-sources-2.6.27.20.ebuild,
+  -vanilla-sources-2.6.27.21.ebuild, -vanilla-sources-2.6.27.22.ebuild,
+  -vanilla-sources-2.6.27.23.ebuild, -vanilla-sources-2.6.27.24.ebuild,
+  -vanilla-sources-2.6.27.26.ebuild, -vanilla-sources-2.6.27.27.ebuild,
+  -vanilla-sources-2.6.27.28.ebuild, -vanilla-sources-2.6.27.29.ebuild,
+  -vanilla-sources-2.6.28.4.ebuild, -vanilla-sources-2.6.28.5.ebuild,
+  -vanilla-sources-2.6.28.6.ebuild, -vanilla-sources-2.6.28.7.ebuild,
+  -vanilla-sources-2.6.28.8.ebuild, -vanilla-sources-2.6.28.9.ebuild,
+  -vanilla-sources-2.6.29.1.ebuild, -vanilla-sources-2.6.29.2.ebuild,
+  -vanilla-sources-2.6.29.3.ebuild, -vanilla-sources-2.6.29.4.ebuild,
+  -vanilla-sources-2.6.29.5.ebuild, -vanilla-sources-2.6.30.1.ebuild,
+  -vanilla-sources-2.6.30.2.ebuild, -vanilla-sources-2.6.30.3.ebuild,
+  -vanilla-sources-2.6.30.4.ebuild, -vanilla-sources-2.6.31_rc1.ebuild,
+  -vanilla-sources-2.6.31_rc2.ebuild, -vanilla-sources-2.6.31_rc3.ebuild,
+  -vanilla-sources-2.6.31_rc4.ebuild, -vanilla-sources-2.6.31_rc5.ebuild:
+  remove a bunch of older kernel versions that should not be used anymore.
 
 *vanilla-sources-2.6.31_rc7 (22 Aug 2009)
 
