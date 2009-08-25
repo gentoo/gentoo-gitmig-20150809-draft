@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/vserver-sources
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.146 2009/06/28 16:55:33 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.147 2009/08/25 07:19:05 hollow Exp $
+
+*vserver-sources-2.3.0.36.14-r1 (25 Aug 2009)
+*vserver-sources-2.2.0.7-r1 (25 Aug 2009)
+
+  25 Aug 2009; Benedikt Böhm <hollow@gentoo.org>
+  +vserver-sources-2.2.0.7-r1.ebuild, -vserver-sources-2.3.0.34.ebuild,
+  -vserver-sources-2.3.0.35.6.ebuild, -vserver-sources-2.3.0.36.4.ebuild,
+  +vserver-sources-2.3.0.36.14-r1.ebuild:
+  security fix for CVE-2009-2692, see bug #281391
 
 *vserver-sources-2.3.0.36.14 (28 Jun 2009)
 

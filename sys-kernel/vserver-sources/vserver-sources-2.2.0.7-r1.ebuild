@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.3.0.36.4.ebuild,v 1.1 2009/01/05 16:13:55 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.2.0.7-r1.ebuild,v 1.1 2009/08/25 07:19:05 hollow Exp $
 
 ETYPE="sources"
-CKV="2.6.28"
+CKV="2.6.22"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="1"
+K_GENPATCHES_VER="11"
 
 K_USEPV=1
 K_NOSETEXTRAVERSION=1
@@ -23,4 +23,5 @@ HOMEPAGE="http://www.gentoo.org/proj/en/vps/"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI}
 	http://dev.gentoo.org/~hollow/distfiles/${MY_PN}-${CKV}_${PVR}.tar.bz2"
 
+UNIPATCH_EXCLUDE="2400_atl1-disable-broken-64-bit-DMA.patch"
 UNIPATCH_LIST="${DISTDIR}/${MY_PN}-${CKV}_${PVR}.tar.bz2"
