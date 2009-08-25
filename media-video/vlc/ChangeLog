@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.498 2009/08/21 12:17:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.499 2009/08/25 06:01:43 aballier Exp $
+
+  25 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.1.ebuild:
+  Backport libass fixes from 1.0-bugfix so that we can unmask latest libass
 
   21 Aug 2009; Alexis Ballier <aballier@gentoo.org> vlc-0.9.10.ebuild,
   vlc-1.0.1.ebuild:
