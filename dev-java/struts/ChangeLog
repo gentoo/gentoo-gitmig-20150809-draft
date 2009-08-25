@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/struts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.45 2009/08/24 08:12:12 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/ChangeLog,v 1.46 2009/08/25 11:50:45 fauli Exp $
+
+  25 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  struts-1.2.9-r3.ebuild:
+  stable x86, security bug 267081
 
 *struts-1.2.9-r3 (24 Aug 2009)
 
