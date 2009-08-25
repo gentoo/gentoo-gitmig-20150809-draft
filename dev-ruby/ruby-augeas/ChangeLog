@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.4 2009/05/19 15:23:40 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.5 2009/08/25 23:12:05 matsuu Exp $
+
+*ruby-augeas-0.3.0 (25 Aug 2009)
+
+  25 Aug 2009; MATSUU Takuto <matsuu@gentoo.org> +ruby-augeas-0.3.0.ebuild:
+  Version bumped.
 
   19 May 2009; Ferris McCormick <fmccor@gentoo.org>
   ruby-augeas-0.2.0.ebuild:
