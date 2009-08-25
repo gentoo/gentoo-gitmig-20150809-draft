@@ -1,6 +1,9 @@
 # ChangeLog for net-zope/zope
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.155 2009/08/25 11:54:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.156 2009/08/25 14:45:01 klausman Exp $
+
+  25 Aug 2009; Tobias Klausmann <klausman@gentoo.org> zope-2.10.7-r1.ebuild:
+  Stable on alpha, bug #278824
 
   25 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   zope-2.9.10-r1.ebuild:
