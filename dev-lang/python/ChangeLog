@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.404 2009/08/21 01:53:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.405 2009/08/25 01:26:59 arfrever Exp $
+
+  25 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.6.2-r1.ebuild, python-3.1.1.ebuild:
+  Fix building of Python 2.6.2-r1 with USE=-threads (bug #282518). Fix
+  building with USE=build or USE=-xml (bug #282259). Small updates.
 
   21 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.5.4-r3.ebuild, python-2.6.2-r1.ebuild, python-3.1.1.ebuild:

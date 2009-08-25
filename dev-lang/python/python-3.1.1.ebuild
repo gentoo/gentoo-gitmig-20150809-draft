@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.3 2009/08/21 01:53:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.4 2009/08/25 01:27:00 arfrever Exp $
 
 EAPI="2"
 
@@ -81,7 +81,7 @@ src_prepare() {
 src_configure() {
 	# Disable extraneous modules with extra dependencies.
 	if use build; then
-		export PYTHON_DISABLE_MODULES="gdbm _curses _curses_panel readline _sqlite3 _tkinter pyexpat"
+		export PYTHON_DISABLE_MODULES="gdbm _curses _curses_panel readline _sqlite3 _tkinter _elementtree pyexpat"
 		export PYTHON_DISABLE_SSL="1"
 	else
 		local disable
@@ -91,7 +91,7 @@ src_configure() {
 		use sqlite   || disable+=" _sqlite3"
 		use ssl      || export PYTHON_DISABLE_SSL="1"
 		use tk       || disable+=" _tkinter"
-		use xml      || disable+=" pyexpat"
+		use xml      || disable+=" _elementtree pyexpat" # _elementtree uses pyexpat.
 		export PYTHON_DISABLE_MODULES="${disable}"
 
 		if ! use xml; then
@@ -219,13 +219,14 @@ src_install() {
 	sed -e "s:^OPT=.*:OPT=-DNDEBUG:" -i "${D}usr/$(get_libdir)/python${PYVER}/config/Makefile"
 
 	if use build; then
-		rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{email,encodings,test,tkinter}
+		rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{email,encodings,sqlite3,test,tkinter}
 	else
 		use elibc_uclibc && rm -fr "${D}usr/$(get_libdir)/python${PYVER}/test"
-		use tk || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{tkinter,test/test_tk.py*}
+		use sqlite || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{sqlite3,test/test_sqlite*}
+		use tk || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{tkinter,test/test_tk*}
 	fi
 
-	use sqlite || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{sqlite3,test/test_sqlite.py*}
+	use threads || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/multiprocessing"
 
 	prep_ml_includes usr/include/python${PYVER}
 
