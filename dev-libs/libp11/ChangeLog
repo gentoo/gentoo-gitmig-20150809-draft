@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.38 2009/08/09 14:02:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.39 2009/08/25 17:13:53 armin76 Exp $
+
+  25 Aug 2009; Raúl Porcel <armin76@gentoo.org> libp11-0.2.5.ebuild:
+  alpha/ia64/sparc stable
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> libp11-0.2.5.ebuild:
   ppc stable #279368

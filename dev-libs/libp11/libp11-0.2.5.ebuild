@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.5.ebuild,v 1.5 2009/08/09 14:02:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/libp11-0.2.5.ebuild,v 1.6 2009/08/25 17:13:53 armin76 Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ fi
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ia64 ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86"
 IUSE="doc"
 
 RDEPEND=""
