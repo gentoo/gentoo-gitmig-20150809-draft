@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.12 2009/08/21 01:53:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.13 2009/08/25 01:20:20 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -236,10 +236,11 @@ src_install() {
 	sed -e "s:^OPT=.*:OPT=-DNDEBUG:" -i "${D}usr/$(get_libdir)/python${PYVER}/config/Makefile"
 
 	if use build; then
-		rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{bsddb/test,email,encodings,lib-tk,test}
+		rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{bsddb,email,encodings,lib-tk,sqlite3,test}
 	else
 		use elibc_uclibc && rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{bsddb/test,test}
-		use berkdb || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/bsddb"
+		use berkdb || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{bsddb,test/test_bsddb*}
+		use sqlite || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{sqlite3,test/test_sqlite*}
 		use tk || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/lib-tk"
 	fi
 
