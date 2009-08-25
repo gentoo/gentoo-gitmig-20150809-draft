@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-0_p22046.ebuild,v 1.1 2009/07/30 09:54:48 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.203.0_p23809.ebuild,v 1.1 2009/08/25 09:09:40 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
 
 # Latest revision id can be found at
 # http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST
-MY_PV="${PV/0\_p}"
+MY_PV="${PV/[0-9.]*\_p}"
 
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://code.google.com/chromium/"
@@ -97,7 +97,7 @@ src_install() {
 	# Create chromium-bin wrapper
 	make_wrapper chromium-bin ./chrome ${CHROMIUM_HOME}/chrome-linux ${CHROMIUM_HOME}/lib:${CHROMIUM_HOME}/chrome-linux
 	newicon "${FILESDIR}"/chromium.png ${PN}.png
-	make_desktop_entry chromium-bin "Chromium" ${PN}.png "Network;WebBrowser"
+	make_desktop_entry chromium-bin "Chromium (bin)" ${PN}.png "Network;WebBrowser"
 }
 
 pkg_postinst() {
