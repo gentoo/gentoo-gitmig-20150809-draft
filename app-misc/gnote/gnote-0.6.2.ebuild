@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.6.2.ebuild,v 1.1 2009/08/26 21:52:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-0.6.2.ebuild,v 1.2 2009/08/26 21:54:04 eva Exp $
 
 EAPI="2"
 
-inherit autotools eutils gnome2
+inherit gnome2
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="http://www.gnome.org/"
