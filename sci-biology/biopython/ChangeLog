@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/biopython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.32 2009/08/02 14:32:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/biopython/ChangeLog,v 1.33 2009/08/26 12:38:25 klausman Exp $
+
+  26 Aug 2009; Tobias Klausmann <klausman@gentoo.org> biopython-1.49.ebuild:
+  Stable on alpha, bug #277822
 
   02 Aug 2009; nixnut <nixnut@gentoo.org> biopython-1.49.ebuild:
   ppc stable #277822
