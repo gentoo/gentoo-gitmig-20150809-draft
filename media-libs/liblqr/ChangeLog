@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblqr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.2 2009/08/18 10:32:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.3 2009/08/26 14:17:57 jer Exp $
+
+  26 Aug 2009; Jeroen Roovers <jer@gentoo.org> liblqr-0.4.1.ebuild:
+  Marked ~hppa (bug #281573).
 
   18 Aug 2009; Alexis Ballier <aballier@gentoo.org> liblqr-0.4.1.ebuild:
   keyword ~x86-fbsd, bug #281573
