@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r1.ebuild,v 1.8 2009/08/25 01:26:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r1.ebuild,v 1.9 2009/08/26 14:47:42 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -190,9 +190,10 @@ src_test() {
 	# (See bug #67970)
 	local skip_tests="distutils global httpservers mimetools minidom mmap posix pyexpat sax strptime subprocess syntax tcl time urllib urllib2 xml_etree"
 
-	# test_pow fails on alpha.
+	# test_math and test_pow fail on alpha.
+	# https://bugs.gentoo.org/show_bug.cgi?id=282786
 	# https://bugs.python.org/issue756093
-	[[ ${ARCH} == "alpha" ]] && skip_tests+=" pow"
+	[[ ${ARCH} == "alpha" ]] && skip_tests+=" math pow"
 
 	# test_ctypes fails with PAX kernel (bug #234498).
 	host-is-pax && skip_tests+=" ctypes"
@@ -208,7 +209,7 @@ src_test() {
 		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
-	elog "Portage skipped the following tests which aren't able to run from emerge:"
+	elog "The following tests have been skipped:"
 	for test in ${skip_tests}; do
 		elog "test_${test}.py"
 	done

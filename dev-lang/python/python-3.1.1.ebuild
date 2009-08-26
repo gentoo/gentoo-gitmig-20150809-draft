@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.4 2009/08/25 01:27:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.5 2009/08/26 14:47:42 arfrever Exp $
 
 EAPI="2"
 
@@ -175,9 +175,10 @@ src_test() {
 	# socket.error: [Errno 104] Connection reset by peer
 	skip_tests+=" telnetlib"
 
-	# test_pow fails on alpha.
+	# test_math and test_pow fail on alpha.
+	# https://bugs.gentoo.org/show_bug.cgi?id=282786
 	# https://bugs.python.org/issue756093
-	[[ ${ARCH} == "alpha" ]] && skip_tests+=" pow"
+	[[ ${ARCH} == "alpha" ]] && skip_tests+=" math pow"
 
 	# test_ctypes fails with PAX kernel (bug #234498).
 	host-is-pax && skip_tests+=" ctypes"
@@ -193,7 +194,7 @@ src_test() {
 		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
-	elog "Portage skipped the following tests due to various reasons:"
+	elog "The following tests have been skipped:"
 	for test in ${skip_tests}; do
 		elog "test_${test}.py"
 	done
