@@ -1,17 +1,17 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan-plugin/xfce4-wavelan-plugin-0.5.5.ebuild,v 1.1 2009/08/25 14:05:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-wavelan-plugin/xfce4-wavelan-plugin-0.5.5.ebuild,v 1.2 2009/08/26 03:55:59 darkside Exp $
 
 EAPI=2
 inherit xfconf
 
 DESCRIPTION="Wireless monitor panel plugin"
-HOMEPAGE="http://www.xfce.org/"
+HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-wavelan-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.5/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 RDEPEND=">=xfce-base/xfce4-panel-4.3.20
