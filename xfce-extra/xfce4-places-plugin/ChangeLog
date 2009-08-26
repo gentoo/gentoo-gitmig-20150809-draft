@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-places-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/ChangeLog,v 1.4 2009/08/26 10:19:27 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/ChangeLog,v 1.5 2009/08/26 13:17:57 jer Exp $
+
+  26 Aug 2009; Jeroen Roovers <jer@gentoo.org>
+  xfce4-places-plugin-1.2.0.ebuild:
+  Stable for HPPA (bug #282652).
 
   26 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   xfce4-places-plugin-1.2.0.ebuild:
