@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fail2ban
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.50 2009/08/25 12:44:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/ChangeLog,v 1.51 2009/08/26 23:40:06 a3li Exp $
+
+  26 Aug 2009; Alex Legler <a3li@gentoo.org> -fail2ban-0.8.0-r1.ebuild,
+  fail2ban-0.8.3-r1.ebuild:
+  amd64 stable, security bug 258866. Removing vulnerable version.
 
   25 Aug 2009; Jeroen Roovers <jer@gentoo.org> fail2ban-0.8.3-r1.ebuild:
   Stable for HPPA (bug #258866).
