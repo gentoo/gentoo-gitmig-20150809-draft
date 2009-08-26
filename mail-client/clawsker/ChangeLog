@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/clawsker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/clawsker/ChangeLog,v 1.10 2009/08/01 02:13:47 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/clawsker/ChangeLog,v 1.11 2009/08/26 16:51:49 fauli Exp $
+
+  26 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  -clawsker-0.6.0.ebuild:
+  clean up
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> clawsker-0.7.0.ebuild:
   amd64 stable, bug 278682
