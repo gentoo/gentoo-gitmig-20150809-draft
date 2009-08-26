@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.130 2009/08/01 02:08:19 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/ChangeLog,v 1.131 2009/08/26 15:35:56 klausman Exp $
+
+  26 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  claws-mail-3.7.2.ebuild:
+  Stable on alpha, bug #278682
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org> claws-mail-3.7.2.ebuild:
   amd64 stable, bug 278682
