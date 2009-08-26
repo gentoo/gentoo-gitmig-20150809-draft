@@ -1,0 +1,11 @@
+diff -ur openexr_viewers-1.0.1.orig/exrdisplay/applyCtl.cpp openexr_viewers-1.0.1/exrdisplay/applyCtl.cpp
+--- openexr_viewers-1.0.1.orig/exrdisplay/applyCtl.cpp	2007-07-26 04:38:21.000000000 +0300
++++ openexr_viewers-1.0.1/exrdisplay/applyCtl.cpp	2009-08-26 13:17:37.000000000 +0300
+@@ -39,6 +39,7 @@
+ //-----------------------------------------------------------------------------
+ 
+ #include <applyCtl.h>
++#include <stdio.h>
+ 
+ #if HAVE_CTL_INTERPRETER
+ 
