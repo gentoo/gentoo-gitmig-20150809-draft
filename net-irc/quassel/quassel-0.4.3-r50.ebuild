@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.3.ebuild,v 1.2 2009/08/26 18:06:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.3-r50.ebuild,v 1.1 2009/08/26 18:06:01 scarabeus Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://quassel-irc.org/pub/${P}.tar.bz2"
 LICENSE="GPL-3"
 KEYWORDS="~amd64 ~x86"
 SLOT="0"
-IUSE="dbus debug monolithic +oxygen phonon +server +ssl webkit +X"
+IUSE="dbus debug kde monolithic +oxygen phonon +server +ssl webkit +X"
 
 LANGS="cs da de fr hu nb_NO ru sl tr"
 for l in ${LANGS}; do
@@ -27,6 +27,7 @@ RDEPEND="
 		x11-libs/qt-sql:4[sqlite]
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
+		kde? ( >=kde-base/kdelibs-4.1 )
 		phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
 		webkit? ( x11-libs/qt-webkit:4 )
 	)
@@ -38,6 +39,7 @@ RDEPEND="
 		)
 		X? (
 			x11-libs/qt-gui:4
+			kde? ( >=kde-base/kdelibs-4.1 )
 			phonon? ( || ( media-sound/phonon x11-libs/qt-phonon ) )
 			webkit? ( x11-libs/qt-webkit:4 )
 		)
@@ -63,12 +65,12 @@ src_configure() {
 	done
 
 	local mycmakeargs="
-		-DWITH_KDE=OFF
 		$(cmake-utils_use_want X QTCLIENT)
 		$(cmake-utils_use_want server CORE)
 		$(cmake-utils_use_want monolithic MONO)
 		$(cmake-utils_use_with webkit WEBKIT)
 		$(cmake-utils_use_with phonon PHONON)
+		$(cmake-utils_use_with kde KDE)
 		$(cmake-utils_use_with dbus DBUS)
 		$(cmake-utils_use_with ssl OPENSSL)
 		$(cmake-utils_use_with oxygen OXYGEN)
