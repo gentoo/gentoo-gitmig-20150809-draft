@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.13 2009/08/25 01:20:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.14 2009/08/26 14:45:51 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -210,7 +210,7 @@ src_test() {
 		mv "${T}"/test_${test}.py "${S}"/Lib/test/test_${test}.py
 	done
 
-	elog "Portage skipped the following tests which aren't able to run from emerge:"
+	elog "The following tests have been skipped:"
 	for test in ${skip_tests}; do
 		elog "test_${test}.py"
 	done
