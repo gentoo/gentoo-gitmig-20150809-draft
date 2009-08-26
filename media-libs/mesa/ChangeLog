@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.228 2009/08/26 14:59:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.229 2009/08/26 17:33:33 scarabeus Exp $
+
+  26 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> mesa-7.3-r1.ebuild:
+  Stabilise 7.3-r1 on alpha which should be the target (not the 7.4.2). They
+  are mostly 1:1.
 
 *mesa-7.5-r3 (26 Aug 2009)
 
