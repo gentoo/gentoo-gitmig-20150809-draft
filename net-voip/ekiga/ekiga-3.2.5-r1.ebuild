@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5.ebuild,v 1.1 2009/08/26 11:25:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r1.ebuild,v 1.1 2009/08/26 21:28:00 volkmar Exp $
 
 EAPI="2"
 
@@ -35,9 +35,7 @@ RDEPEND=">=dev-libs/glib-2.8.0:2
 		( >=gnome-base/libgnome-2.14.0
 		>=gnome-base/libgnomeui-2.14.0 ) ) )
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.21.3:0.10 )
-	kde? ( >=kde-base/kdelibs-${KDE_MINIMAL}
-		x11-libs/qt-core:4
-		kontact? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} ) )
+	kde? ( kontact? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} ) )
 	ldap? ( dev-libs/cyrus-sasl:2
 		net-nds/openldap )
 	libnotify? ( x11-libs/libnotify
@@ -64,9 +62,6 @@ DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
 # opal[sip] should be opal[sip?], upstream bug 577248
 # libnotify-0.4.4 bug with +debug, upstream bug 583719
 # +doc is not installing dev doc (doxygen)
-
-# TODO:
-# if really want to use ked4-base, should use COMMONDEPEND
 
 # UPSTREAM:
 # contact ekiga team to be sure intltool and gettext are not nls deps

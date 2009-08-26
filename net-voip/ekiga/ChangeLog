@@ -1,6 +1,12 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.7 2009/08/26 11:25:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.8 2009/08/26 21:28:00 volkmar Exp $
+
+*ekiga-3.2.5-r1 (26 Aug 2009)
+
+  26 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> -ekiga-3.2.5.ebuild,
+  +ekiga-3.2.5-r1.ebuild:
+  Let kde eclass manage kde deps. Thanks to scarabeus.
 
 *ekiga-3.2.5 (26 Aug 2009)
 
