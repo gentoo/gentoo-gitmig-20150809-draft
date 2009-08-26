@@ -1,6 +1,10 @@
 # ChangeLog for sci-astronomy/wcstools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.14 2009/08/12 19:18:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/wcstools/ChangeLog,v 1.15 2009/08/26 06:19:40 bicatali Exp $
+
+  26 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/wcstools-3.7-autotools.patch:
+  Better autotools patch, ready to resend upstream
 
   12 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
   -wcstools-3.7.6-r1.ebuild, -files/wcstools-3.7.6-autotools.patch,

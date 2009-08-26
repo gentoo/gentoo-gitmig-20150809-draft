@@ -14,10 +14,12 @@
 +AC_OUTPUT
 --- libned/Makefile.am.orig	1970-01-01 01:00:00.000000000 +0100
 +++ libned/Makefile.am	2008-11-03 09:34:57.000000000 +0000
-@@ -0,0 +1,3 @@
+@@ -0,0 +1,5 @@
 +lib_LTLIBRARIES = libned.la
++noinst_HEADERS = nedc.h  ned_client.h
 +libned_la_SOURCES = \
 +	ned_cli.c ned_cif.c ned_err.c ned_sk.c
++EXTRA_DIST = README
 --- libwcs/Makefile.am.orig	1970-01-01 01:00:00.000000000 +0100
 +++ libwcs/Makefile.am	2008-11-03 09:34:57.000000000 +0000
 @@ -0,0 +1,17 @@
@@ -40,7 +42,7 @@
 +noinst_HEADERS = fitsfile1.h wcscat1.h
 --- Makefile.am.orig	1970-01-01 01:00:00.000000000 +0100
 +++ Makefile.am	2008-11-03 10:09:43.000000000 +0000
-@@ -0,0 +1,78 @@
+@@ -0,0 +1,80 @@
 +SUBDIRS = libwcs libned
 +INCLUDES = -I$(top_srcdir)/libwcs
 +
@@ -48,6 +50,8 @@
 +pkgconfig_DATA = wcstools.pc
 +
 +bin_SCRIPTS = wcstools
++
++EXTRA_DIST = wcstools COPYING Readme NEWS Programs
 +
 +bin_PROGRAMS = \
 +	cphead delwcs delhead edhead fixpix gethead i2f imcat imhead immatch \
