@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>net-mail</herd>
 	<use>
-		<flag name='dovecot-sasl'>Enable <pkg>mail-mta/dovecot</pkg> protocol
+		<flag name='dovecot-sasl'>Enable <pkg>net-mail/dovecot</pkg> protocol
 			version 1 (server only) SASL implementation</flag>
 		<flag name='vda'>Adds support for virtual delivery agent quota
 			enforcing</flag>
