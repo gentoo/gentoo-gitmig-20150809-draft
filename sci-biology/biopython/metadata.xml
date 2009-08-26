@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>sci-biology</herd>
-<use>
-  <flag name='kdtree'>Do not build KDTree module and its dependencies
-    (NeighborSearch)</flag>
-</use>
 </pkgmetadata>
