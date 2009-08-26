@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.1 2009/08/10 20:48:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.2 2009/08/26 23:25:46 robbat2 Exp $
 
 EAPI="2"
 
@@ -63,10 +63,14 @@ src_prepare() {
 	EPATCH_OPTS="-p1 -d ${S}" epatch "${FILESDIR}"/${PN}-1.3.4-no-html-if-no-input.patch
 
 	# Bug #253965, compatibility changes for rrdtool 1.3
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}/${P}-rrdtool-1.3.patch"
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-1.3.4-rrdtool-1.3.patch
 
 	# Bug #248849, samba plugin does not have max values
-	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}/${P}-samba-plugin.patch"
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-1.3.4-samba-plugin.patch
+
+	# Bug #267801, ensure that directories to install to are created before
+	# trying to populate them for parallel install.
+	EPATCH_OPTS="-p0 -d ${S}" epatch "${FILESDIR}"/${PN}-1.3.4-parallel-make-fix.patch
 }
 
 src_compile() {
