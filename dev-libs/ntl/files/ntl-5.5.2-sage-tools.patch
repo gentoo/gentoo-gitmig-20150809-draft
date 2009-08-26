@@ -5,7 +5,7 @@
  
  
 +/*
-+  This function is not present in vanilla NTL 5.4.2.
++  This function is not present in vanilla NTL
 +  See tools.c for documentation.
 + */
 +void SetErrorCallbackFunction(void (*func)(const char *s, void *context), void *context);
@@ -20,7 +20,7 @@
  
  
 +/*
-+   The following code differs from vanilla NTL 5.4.2.
++   The following code differs from vanilla NTL
 +
 +   We add a SetErrorCallbackFunction(). This sets a global callback function _function_,
 +   which gets called with parameter _context_ and an error message string whenever Error()

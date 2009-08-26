@@ -35,18 +35,6 @@
 
 --- src/mfile.orig	2009-05-05 07:46:39.000000000 +0100
 +++ src/mfile	2009-08-10 20:31:36.000000000 +0100
-@@ -77,6 +77,11 @@
- # where to install NTL
- 
- ###############################################################
-+# choose the appropriate shared object makefile
-+###############################################################
-+SHMAKE=@{SHMAKE}
-+
-+###############################################################
- #
- #  Second, if you want to use GMP (the GNU Multi-Precision library),
- #  define the variables GMP_OPT_INCDIR, GMP_OPT_LIBDIR, GMP_OPT_LIB below.
 @@ -141,6 +146,16 @@
  WIZARD=@{WIZARD}
  # Set to off if you want to bypass the wizard; otherwise, set to on.
@@ -64,30 +52,11 @@
  
  #################################################################
  #
-@@ -173,6 +188,27 @@
+@@ -173,6 +188,8 @@
  
  OBJ=$(O19)
  
-+SHOBJ=FFT.lo FacVec.lo GF2.lo GF2E.lo GF2EX.lo GF2EXFactoring.lo GF2X.lo GF2X1.lo \
-+	GF2XFactoring.lo GF2XVec.lo GetTime.lo HNF.lo ctools.lo LLL.lo LLL_FP.lo \
-+	LLL_QP.lo LLL_RR.lo LLL_XD.lo RR.lo WordVector.lo ZZ.lo ZZVec.lo \
-+	ZZX.lo ZZX1.lo ZZXCharPoly.lo ZZXFactoring.lo ZZ_p.lo ZZ_pE.lo ZZ_pEX.lo \
-+	ZZ_pEXFactoring.lo ZZ_pX.lo ZZ_pX1.lo ZZ_pXCharPoly.lo ZZ_pXFactoring.lo \
-+	fileio.lo lip.lo lzz_p.lo lzz_pE.lo lzz_pEX.lo lzz_pEXFactoring.lo \
-+	lzz_pX.lo lzz_pX1.lo lzz_pXCharPoly.lo lzz_pXFactoring.lo \
-+	mat_GF2.lo mat_GF2E.lo mat_RR.lo mat_ZZ.lo mat_ZZ_p.lo \
-+	mat_ZZ_pE.lo mat_lzz_p.lo mat_lzz_pE.lo mat_poly_ZZ.lo \
-+	mat_poly_ZZ_p.lo mat_poly_lzz_p.lo pair_GF2EX_long.lo \
-+	pair_GF2X_long.lo pair_ZZX_long.lo pair_ZZ_pEX_long.lo \
-+	pair_ZZ_pX_long.lo pair_lzz_pEX_long.lo pair_lzz_pX_long.lo \
-+	quad_float.lo tools.lo vec_GF2.lo vec_GF2E.lo vec_GF2XVec.lo \
-+	vec_RR.lo vec_ZZ.lo vec_ZZVec.lo vec_ZZ_p.lo vec_ZZ_pE.lo \
-+	vec_double.lo vec_long.lo vec_lzz_p.lo vec_lzz_pE.lo vec_quad_float.lo \
-+	vec_vec_GF2.lo vec_vec_GF2E.lo vec_vec_RR.lo vec_vec_ZZ.lo \
-+	vec_vec_ZZ_p.lo vec_vec_ZZ_pE.lo vec_vec_long.lo vec_vec_lzz_p.lo \
-+	vec_vec_lzz_pE.lo vec_xdouble.lo xdouble.lo \
-+	G_LLL_FP.lo G_LLL_QP.lo G_LLL_XD.lo G_LLL_RR.lo vec_ulong.lo vec_vec_ulong.lo
-+
++SHOBJ=$(subst .o,.lo,$(OBJ))
 +
  # library source files
  
@@ -184,8 +153,10 @@
  	rm -rf small
  @{LSHAR}	- $(LIBTOOL) --mode=clean rm -f libntl.la *.lo #LSHAR
  
-@@ -549,3 +597,4 @@
+@@ -549,3 +597,6 @@
  
  
  
-+sinclude $(SHMAKE).mk
++shared: DIRNAME $(SHOBJ)
++	 $(LINK_CXX) $(PICFLAG) -shared -Wl,-soname,lib`cat DIRNAME`.so -o lib`cat DIRNAME`.so $(SHOBJ) $(GMP_OPT_LIBDIR) $(GMP_OPT_LIB) $(GF2X_OPT_LIBDIR) $(GF2X_OPT_LIB)
++	 ln -s lib`cat DIRNAME`.so libntl.so
