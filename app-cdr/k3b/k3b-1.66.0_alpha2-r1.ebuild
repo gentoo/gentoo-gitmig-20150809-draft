@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.66.0_alpha2-r1.ebuild,v 1.1 2009/08/20 12:00:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-1.66.0_alpha2-r1.ebuild,v 1.2 2009/08/26 07:14:57 wired Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="4"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug dvd emovix encode ffmpeg flac mad lame musicbrainz musepack sndfile sox taglib vorbis +wav"
+IUSE="debug dvd emovix encode ffmpeg flac mad lame musicbrainz musepack sndfile sox taglib vcd vorbis +wav"
 
 DEPEND="
 	>=kde-base/libkcddb-${KDE_MINIMAL}
