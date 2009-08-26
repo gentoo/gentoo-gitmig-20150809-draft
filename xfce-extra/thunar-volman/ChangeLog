@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-volman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.46 2009/08/25 15:11:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-volman/ChangeLog,v 1.47 2009/08/26 03:32:14 darkside Exp $
+
+  26 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
+  thunar-volman-0.3.80.ebuild:
+  amd64 stable, bug 282664
 
   25 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
   thunar-volman-0.3.80.ebuild:
