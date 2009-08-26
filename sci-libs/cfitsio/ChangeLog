@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/cfitsio
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.30 2009/03/28 13:31:17 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.31 2009/08/26 06:18:24 bicatali Exp $
+
+  26 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  files/cfitsio-3.140-autotools.patch:
+  Better autotools patch, ready to resend upstream
 
   28 Mar 2009; Friedrich Oslage <bluebird@gentoo.org>
   cfitsio-3.100-r1.ebuild:
