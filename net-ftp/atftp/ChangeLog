@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/atftp
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.22 2008/11/26 22:11:09 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.23 2009/08/26 22:36:15 vostorga Exp $
+
+  26 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -files/atftp-0.6-security.patch, -files/atftp-0.7-gcc.patch:
+  Cleaning out unused patches
 
   26 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org> atftp-0.7-r1.ebuild:
   Use mirror://debian/.
