@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libhandoff/libhandoff-0.1.ebuild,v 1.2 2009/08/26 17:19:52 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libhandoff/libhandoff-0.1.ebuild,v 1.3 2009/08/26 17:52:55 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 GPE_MIRROR="http://gpe.linuxtogo.org/download/source"
@@ -14,7 +14,7 @@ KEYWORDS="~arm ~amd64 ~x86"
 GPE_DOCS="ChangeLog"
 
 IUSE=""
-GPECONF="--disable-gtk-doc"
+GPECONF="${GPECONF} --disable-gtk-doc"
 # This package doesn't generate any gtk-doc yet,
 # leave this commented for now.
 # IUSE="doc"
