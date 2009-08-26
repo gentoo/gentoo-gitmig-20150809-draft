@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/warzone2100
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.33 2009/07/16 11:22:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/warzone2100/ChangeLog,v 1.34 2009/08/26 08:42:16 nyhm Exp $
+
+*warzone2100-2.2.2 (26 Aug 2009)
+
+  26 Aug 2009; Tristan Heaven <nyhm@gentoo.org> +warzone2100-2.2.2.ebuild:
+  Version bump
 
   16 Jul 2009; Tristan Heaven <nyhm@gentoo.org> warzone2100-2.2.1.ebuild:
   Depend on dev-games/physfs with zip enabled, bug #277288
