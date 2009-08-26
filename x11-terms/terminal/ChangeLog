@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.26 2009/08/26 03:58:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.27 2009/08/26 10:39:17 fauli Exp $
+
+  26 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  terminal-0.4.0.ebuild:
+  stable x86, bug 282698
 
   26 Aug 2009; Jeremy Olexa <darkside@gentoo.org> terminal-0.4.0.ebuild:
   amd64 stable, bug 282698
