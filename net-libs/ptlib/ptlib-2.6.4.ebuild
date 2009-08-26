@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4.ebuild,v 1.1 2009/08/25 13:52:05 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4.ebuild,v 1.2 2009/08/26 12:48:05 volkmar Exp $
 
 EAPI="2"
 
@@ -139,8 +139,9 @@ pkg_setup() {
 			conditional_use_error_msg "soap" "xml"
 			use_error=true
 		fi
-		if ! use http; then
-			conditional_use_error_msg "soap" "http"
+		# fix bug 280850, see upstream bug 2844915
+		if ! use http-server; then # this means http and http-forms
+			conditional_use_error_msg "soap" "http-server"
 			use_error=true
 		fi
 	fi
