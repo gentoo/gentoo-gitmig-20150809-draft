@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/zaz
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.1 2009/08/26 05:50:27 mr_bones_ Exp $
+
+*zaz-0.2.8 (26 Aug 2009)
+
+  26 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> +zaz-0.2.8.ebuild,
+  +files/zaz-0.2.8-build.patch, +metadata.xml:
+  Initial commit (bug #282349)
+

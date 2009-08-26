@@ -1,0 +1,70 @@
+diff -ru zaz-0.2.8.orig/Makefile.am zaz-0.2.8/Makefile.am
+--- zaz-0.2.8.orig/Makefile.am	2009-08-17 17:04:21.000000000 -0400
++++ zaz-0.2.8/Makefile.am	2009-08-26 00:45:19.247689804 -0400
+@@ -3,21 +3,7 @@
+ 
+ SUBDIRS = src data extra
+ 
+-zazdocdir = ${prefix}/doc/zaz
+-zazdoc_DATA = \
+-	README\
+-	COPYING\
+-	AUTHORS\
+-	ChangeLog\
+-	INSTALL\
+-	NEWS
+-
+-
+ EXTRA_DIST = $(zazdoc_DATA) \
+ 	$(shared_data_DATA) \
+ 	zaz.anjuta\
+ 	win32.zip
+-
+-# Remove doc directory on uninstall
+-uninstall-local:
+-	-rm -r $(zazdocdir)
+diff -ru zaz-0.2.8.orig/extra/Makefile.am zaz-0.2.8/extra/Makefile.am
+--- zaz-0.2.8.orig/extra/Makefile.am	2009-08-17 17:04:37.000000000 -0400
++++ zaz-0.2.8/extra/Makefile.am	2009-08-26 00:44:48.372852572 -0400
+@@ -1,7 +1,7 @@
+-pkgdesktopdatadir = $(datadir)/applications
++pkgdesktopdatadir = /usr/share/applications
+ pkgdesktopdata_DATA = zaz.desktop
+ 
+-pkgpixmapdatadir = $(datadir)/pixmaps
++pkgpixmapdatadir = /usr/share/pixmaps
+ pkgpixmapdata_DATA = zaz.xpm
+ 
+ EXTRA_DIST = \
+diff -ru zaz-0.2.8.orig/extra/zaz.desktop zaz-0.2.8/extra/zaz.desktop
+--- zaz-0.2.8.orig/extra/zaz.desktop	2009-08-09 14:00:52.000000000 -0400
++++ zaz-0.2.8/extra/zaz.desktop	2009-08-26 00:45:04.786724295 -0400
+@@ -1,11 +1,10 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Encoding=UTF-8
+ Name=Zaz
+ Comment=Zaz ain't Z***
+ TryExec=zaz
+ Exec=zaz
+ Categories=Game;LogicGame;
+-Icon=zaz.xpm
++Icon=zaz
+ MimeType=
+diff -ru zaz-0.2.8.orig/src/Makefile.am zaz-0.2.8/src/Makefile.am
+--- zaz-0.2.8.orig/src/Makefile.am	2009-08-16 10:45:44.000000000 -0400
++++ zaz-0.2.8/src/Makefile.am	2009-08-26 00:46:34.193690422 -0400
+@@ -3,10 +3,8 @@
+ ## Created by Anjuta
+ 
+ AM_CPPFLAGS = \
+-	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+-	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
+-	-DPACKAGE_DATA_DIR=\""$(datadir)"\"\
+-	-I/usr/include/freetype2
++	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
++	-I/usr/include/freetype2
+ 
+ AM_CFLAGS =\
+ 	 -Wall\
