@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/podbrowser
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.7 2008/11/18 15:54:01 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/podbrowser/ChangeLog,v 1.8 2009/08/26 16:17:18 tove Exp $
+
+  26 Aug 2009; Torsten Veller <tove@gentoo.org> -podbrowser-0.09.ebuild,
+  podbrowser-0.12.ebuild:
+  Mark 0.12 stable on amd64. Drop old version and dev-perl/Gtk2-PodViewer
+  dependency
 
   18 Nov 2008; Torsten Veller <tove@gentoo.org> podbrowser-0.09.ebuild,
   podbrowser-0.12.ebuild:
