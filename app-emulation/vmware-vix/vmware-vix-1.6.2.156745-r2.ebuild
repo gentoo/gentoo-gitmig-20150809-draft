@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r1.ebuild,v 1.2 2009/07/08 23:07:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-vix/vmware-vix-1.6.2.156745-r2.ebuild,v 1.1 2009/08/26 14:59:25 vadimk Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -26,24 +26,24 @@ RESTRICT="strip"
 
 # vmware-server should not use virtual/libc as this is a
 # precompiled binary package thats linked to glibc.
-DEPEND=">=sys-libs/glibc-2.3.5
+DEPEND="
 	>=dev-lang/perl-5
 	sys-apps/pciutils
 	sys-apps/findutils
+	>=sys-libs/glibc-2.3.5
 	x11-misc/shared-mime-info
 	virtual/os-headers"
 RDEPEND="${DEPEND}
-	dev-libs/libxml2
 	dev-libs/glib
+	dev-libs/libxml2
 	dev-libs/openssl
 	net-misc/curl
 	sys-libs/zlib
-	~app-emulation/vmware-modules-1.0.0.24
-	!<app-emulation/vmware-modules-1.0.0.24
-	!>=app-emulation/vmware-modules-1.0.0.25
+	!app-emulation/vmware-workstation
 	"
 
 S=${WORKDIR}/vmware-vix-distrib
+
 
 pkg_setup() {
 	if use x86; then
@@ -120,8 +120,8 @@ src_install() {
 	fi
 
 	# Now, we copy in our services.sh file
-	exeinto "${config_dir}"/init.d
-	newexe installer/services.sh ${product} || die "services.sh"
+	#exeinto "${config_dir}"/init.d
+	#newexe installer/services.sh ${product} || die "services.sh"
 
 	dohtml -r doc/VMwareVix/*
 
