@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe/gpe-2.8.ebuild,v 1.1 2009/08/23 11:36:42 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe/gpe-2.8.ebuild,v 1.2 2009/08/26 14:35:10 miknix Exp $
 
 EAPI="2"
 
@@ -33,7 +33,6 @@ RDEPEND="
 
 games? (
 	>=games-misc/gpe-julia-0.0.6
-	>=games-misc/gpe-life-0.2
 )"
 
 pkg_postinst() {

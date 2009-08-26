@@ -1,6 +1,9 @@
 # ChangeLog for gpe-base/gpe
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe/ChangeLog,v 1.1 2009/08/23 11:36:42 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe/ChangeLog,v 1.2 2009/08/26 14:35:10 miknix Exp $
+
+  26 Aug 2009; Angelo Arrifano <miknix@gentoo.org> gpe-2.8.ebuild:
+  Remove gpe-life from RDEPEND, see bug 282554 .
 
 *gpe-2.8 (23 Aug 2009)
 
