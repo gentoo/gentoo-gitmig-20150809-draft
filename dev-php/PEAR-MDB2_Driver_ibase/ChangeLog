@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/PEAR-MDB2_Driver_ibase
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_ibase/ChangeLog,v 1.1 2008/03/17 12:45:53 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-MDB2_Driver_ibase/ChangeLog,v 1.2 2009/08/26 21:09:23 beandog Exp $
+
+*PEAR-MDB2_Driver_ibase-1.5.0_beta2 (26 Aug 2009)
+
+  26 Aug 2009; Steve Dibb <beandog@gentoo.org>
+  +PEAR-MDB2_Driver_ibase-1.5.0_beta2.ebuild:
+  Version bump, bug 273684
 
 *PEAR-MDB2_Driver_ibase-1.5.0_beta1 (17 Mar 2008)
 
