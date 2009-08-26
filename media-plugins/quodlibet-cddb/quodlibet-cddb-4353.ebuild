@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-cddb/quodlibet-cddb-4353.ebuild,v 1.1 2009/05/30 14:53:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-cddb/quodlibet-cddb-4353.ebuild,v 1.2 2009/08/26 10:23:46 ssuominen Exp $
 
 inherit multilib python
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE=""
 
-RDEPEND=">=media-sound/quodlibet-2"
+RDEPEND=">=media-sound/quodlibet-2
+	dev-python/cddb-py"
 DEPEND=""
 
 pkg_setup() {
