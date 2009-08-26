@@ -1,16 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28.ebuild,v 1.1 2009/04/16 18:08:13 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.4.28.ebuild,v 1.2 2009/08/26 13:14:20 dang Exp $
 
-WANT_AUTOMAKE=1.9
-inherit gnome2 eutils autotools
+EAPI="1"
+inherit gnome2 eutils
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
 HOMEPAGE="http://liferea.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
-EAPI="1"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="dbus gtkhtml +gnutls libnotify lua networkmanager webkit +xulrunner"

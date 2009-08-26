@@ -1,6 +1,11 @@
 # ChangeLog for net-news/liferea
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.174 2009/08/11 19:08:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.175 2009/08/26 13:14:20 dang Exp $
+
+  26 Aug 2009; Daniel Gryniewicz <dang@gentoo.org> liferea-1.2.23-r1.ebuild,
+  liferea-1.4.15.ebuild, liferea-1.4.23.ebuild, liferea-1.4.24.ebuild,
+  liferea-1.4.28.ebuild, liferea-1.4.28-r1.ebuild:
+  Some cleanups to make repoman happier
 
   11 Aug 2009; Christian Faulhammer <fauli@gentoo.org> liferea-1.6.0.ebuild:
   rekeyword ~x86, bug 279241

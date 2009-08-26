@@ -1,9 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.23-r1.ebuild,v 1.7 2008/03/17 14:11:01 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/liferea-1.2.23-r1.ebuild,v 1.8 2009/08/26 13:14:20 dang Exp $
 
 WANT_AUTOMAKE=1.7
-WANT_AUTOCONF=latest
 inherit gnome2 flag-o-matic eutils autotools
 
 DESCRIPTION="News Aggregator for RDF/RSS/CDF/Atom/Echo/etc feeds"
