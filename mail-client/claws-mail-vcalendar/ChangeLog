@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-vcalendar
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.69 2009/08/01 02:16:40 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-vcalendar/ChangeLog,v 1.70 2009/08/26 16:46:37 armin76 Exp $
+
+  26 Aug 2009; Raúl Porcel <armin76@gentoo.org>
+  claws-mail-vcalendar-2.0.5.ebuild:
+  sparc stable wrt #278682
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
   claws-mail-vcalendar-2.0.5.ebuild:
