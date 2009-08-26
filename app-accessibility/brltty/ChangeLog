@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.91 2009/08/11 18:06:08 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.92 2009/08/26 17:35:35 armin76 Exp $
+
+  26 Aug 2009; Raúl Porcel <armin76@gentoo.org> brltty-4.0.ebuild:
+  alpha/ia64 stable wrt #281126
 
   11 Aug 2009; William Hubbs <williamh@gentoo.org> brltty-4.0.ebuild:
   stable on x86
