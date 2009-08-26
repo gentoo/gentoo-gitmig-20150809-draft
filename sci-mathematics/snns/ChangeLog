@@ -1,6 +1,15 @@
 # ChangeLog for sci-mathematics/snns
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.13 2008/05/29 14:37:00 hawking Exp $
+# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.14 2009/08/26 18:36:00 phosphan Exp $
+
+  26 Aug 2009; Patrick Kursawe <phosphan@gentoo.org> +snns-4.2-r8.ebuild:
+  Renaming netperf to snns-netperf to avoid file collision with
+  net-analyzer/netperf, see bug #248322.
+
+*snns-4.3 (07 Feb 2009)
+
+  07 Feb 2009; Patrick Kursawe <phosphan@gentoo.org> +snns-4.3.ebuild:
+  Upgrade to new version, almost identical to 4.2 + Python-patches.
 
   29 May 2008; Ali Polatel <hawking@gentoo.org> snns-4.2-r7.ebuild:
   python_mod_compile is ROOT aware. Use ${python} instead of python.
