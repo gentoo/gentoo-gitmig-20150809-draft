@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.166 2009/08/05 16:45:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.167 2009/08/26 15:25:55 klausman Exp $
+
+  26 Aug 2009; Tobias Klausmann <klausman@gentoo.org> gpgme-1.2.0.ebuild:
+  Stable on alpha, bug #278625
 
   05 Aug 2009; <chainsaw@gentoo.org> gpgme-1.2.0.ebuild:
   Marked stable on AMD64 as requested by Arfrever Frehtes Taifersar Arahesis
