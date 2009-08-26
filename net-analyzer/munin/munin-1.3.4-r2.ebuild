@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.4 2009/08/26 23:47:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.5 2009/08/26 23:55:23 robbat2 Exp $
 
 EAPI="2"
 
@@ -114,6 +114,10 @@ src_install() {
 	newinitd "${FILESDIR}"/munin-node_init.d_1.3.3-r1 munin-node
 	newconfd "${FILESDIR}"/munin-node_conf.d_1.3.3-r1 munin-node
 	dodoc README ChangeLog INSTALL logo.eps logo.svg build/resources/apache*
+
+	# bug 254968
+	insinto /etc/logrotate.d/
+	newins "${FILESDIR}"/logrotate.d-munin munin
 }
 
 pkg_config() {
