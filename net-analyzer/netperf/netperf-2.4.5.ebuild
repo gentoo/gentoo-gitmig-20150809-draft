@@ -1,34 +1,25 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.4.ebuild,v 1.8 2009/08/26 00:49:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.4.5.ebuild,v 1.1 2009/08/26 00:49:05 jer Exp $
 
-inherit eutils flag-o-matic autotools
+EAPI="2"
 
-MY_P=${P/_rc/-rc}
+inherit eutils
 
 DESCRIPTION="Network performance benchmark including tests for TCP, UDP, sockets, ATM and more."
-#SRC_URI="ftp://ftp.netperf.org/netperf/experimental/${MY_P}.tar.gz"
-SRC_URI="ftp://ftp.netperf.org/netperf/${MY_P}.tar.gz
-		mirror://gentoo/netperf-2.4.4-svn_trunk_20071205.patch.bz2"
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
+SRC_URI="ftp://ftp.netperf.org/netperf/${P}.tar.gz"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 HOMEPAGE="http://www.netperf.org/"
 LICENSE="netperf"
 SLOT="0"
 IUSE=""
 
+DEPEND=">=sys-apps/sed-4"
 RDEPEND="!sci-mathematics/snns"
 
-S=${WORKDIR}/${MY_P}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i 's:^\(#define DEBUG_LOG_FILE "\)/tmp/netperf.debug:\1/var/log/netperf.debug:' src/netserver.c
-	epatch "${WORKDIR}"/${P}-svn_trunk_20071205.patch
-	epatch "${FILESDIR}"/${PN}-2.4.0-gcc41.patch
-	epatch "${FILESDIR}"/${PN}-CVE-2007-1444.patch
 	epatch "${FILESDIR}"/${PN}-fix-scripts.patch
 
 	# Fixing paths in scripts
@@ -39,8 +30,6 @@ src_unpack() {
 			doc/examples/tcp_stream_script \
 			doc/examples/udp_rr_script \
 			doc/examples/udp_stream_script
-
-	eautoconf
 }
 
 src_install () {

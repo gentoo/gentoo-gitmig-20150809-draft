@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/netperf
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.42 2008/03/31 21:30:53 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/ChangeLog,v 1.43 2009/08/26 00:49:05 jer Exp $
+
+*netperf-2.4.5 (26 Aug 2009)
+
+  26 Aug 2009; Jeroen Roovers <jer@gentoo.org> netperf-2.4.4.ebuild,
+  +netperf-2.4.5.ebuild:
+  Version bump. Drop useless MY_P. Block sci-mathematics/snns (bug #248322).
+  Drop autotools since the gcc41 patch is no longer needed, incidentally fix
+  maintainer-mode (bug #255896). Drop unused flag-o-matic. Depend on sed.
 
   31 Mar 2008; Markus Meier <maekke@gentoo.org> netperf-2.4.4.ebuild:
   amd64 stable, bug #209035
