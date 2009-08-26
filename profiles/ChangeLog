@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3187 2009/08/26 18:05:01 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3188 2009/08/26 22:57:26 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Aug 2009; Alex Legler <a3li@gentoo.org> thirdpartymirrors:
+  Removing roedu from mirror://rubyforge, dead.
 
   26 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> package.mask:
   Fix mask of mozilla-weave
