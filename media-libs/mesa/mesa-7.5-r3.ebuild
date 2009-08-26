@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.5-r1.ebuild,v 1.3 2009/07/22 08:19:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-7.5-r3.ebuild,v 1.1 2009/08/26 14:59:28 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-#SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
+SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-02.tar.bz2"
 if [[ $PV = *_rc* ]]; then
 	SRC_URI="http://www.mesa3d.org/beta/${MY_SRC_P}.tar.gz
 		${SRC_PATCHES}"
@@ -171,6 +171,9 @@ src_configure() {
 				#$(use_enable video_cards_radeon gallium-radeon)
 				#$(use_enable video_cards_radeonhd gallium-radeon)"
 		fi
+	else
+		# we need to disable the gallium since they enable by default...
+		myconf="${myconf} --disable-gallium"
 	fi
 
 	# Deactivate assembly code for pic build
