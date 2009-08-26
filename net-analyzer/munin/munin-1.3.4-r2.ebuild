@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.2 2009/08/26 23:25:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-1.3.4-r2.ebuild,v 1.3 2009/08/26 23:27:22 robbat2 Exp $
 
 EAPI="2"
 
@@ -100,8 +100,6 @@ src_install() {
 
 	emake DESTDIR="${D}" install-main install-man install-node install-node-plugins || die "install failed"
 	fowners munin:munin ${dirs}
-
-	emake DESTDIR="${D}" install-man || die "install manpages failed"
 
 	insinto /etc/munin/plugin-conf.d/
 	newins "${FILESDIR}"/${PN}-1.3.2-plugins.conf munin-node
