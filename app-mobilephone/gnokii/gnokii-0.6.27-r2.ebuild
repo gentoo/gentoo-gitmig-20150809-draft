@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27-r2.ebuild,v 1.10 2009/08/15 09:08:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-0.6.27-r2.ebuild,v 1.11 2009/08/26 21:09:33 mrness Exp $
 
 inherit eutils linux-info autotools
 
@@ -27,7 +27,8 @@ RDEPEND="!app-mobilephone/smstools
 	usb? ( =virtual/libusb-0* )"
 DEPEND="${RDEPEND}
 	irda? ( virtual/os-headers )
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	dev-util/intltool"
 
 CONFIG_CHECK="UNIX98_PTYS"
 
