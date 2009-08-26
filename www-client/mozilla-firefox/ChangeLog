@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.539 2009/08/25 14:14:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.540 2009/08/26 16:11:21 armin76 Exp $
+
+  26 Aug 2009; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.0.13.ebuild:
+  3.0.13 needs nss-3.12.3
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org>
   mozilla-firefox-3.5.2.ebuild, mozilla-firefox-3.5.2-r1.ebuild:
