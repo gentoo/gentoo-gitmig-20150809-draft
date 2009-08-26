@@ -1,17 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.4.ebuild,v 1.4 2009/08/03 21:34:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5.ebuild,v 1.1 2009/08/26 11:25:39 volkmar Exp $
 
 EAPI="2"
 
 KDE_REQUIRED="optional"
+WANT_CMAKE="false"
+GCONF_DEBUG="no" # debug managed by the ebuild
 
-inherit eutils kde4-base gnome2
+inherit kde4-base gnome2
 # gnome2 at the end to make it default
 
 DESCRIPTION="H.323 and SIP VoIP softphone"
 HOMEPAGE="http://www.ekiga.org/"
-SRC_URI="${SRC_URI} mirror://gentoo/${P}-remove-exceptions.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -22,8 +23,8 @@ libnotify mmx nls +shm +sip static v4l xcap xv"
 RDEPEND=">=dev-libs/glib-2.8.0:2
 	dev-libs/libsigc++:2
 	dev-libs/libxml2:2
-	>=net-libs/opal-3.6.2[audio,sip,video,debug=,h323?]
-	>=net-libs/ptlib-2.6.2[stun,video,wav,debug=]
+	>=net-libs/opal-3.6.4[audio,sip,video,debug=,h323?]
+	>=net-libs/ptlib-2.6.4[stun,video,wav,debug=]
 	>=x11-libs/gtk+-2.12.0:2
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	dbus? ( >=sys-apps/dbus-0.36
@@ -52,20 +53,7 @@ DEPEND="${RDEPEND}
 		app-text/gnome-doc-utils )
 	v4l? ( sys-kernel/linux-headers )"
 
-DOC_LINGUAS="bg ca de el en_GB es eu fi fr oc pt_BR ru sv uk"
-IUSE_LINGUAS="${DOC_LINGUAS} am ar as az be bg bn_IN bn bs ca crh cs cy da de dz
-el en_CA en_GB eo es et eu fa fi fr ga gl gu he hi hr hu id is it ja ka kn ko ku
-lt lv mai mk ml mn mr ms nb ne nl nn oc or pa pl pt_BR pt ro ru rw si sk sl sq
-sr@latin sr sv ta te th tr uk vi wa xh zh_CN zh_HK zh_TW"
-
-for l in ${IUSE_LINGUAS}; do
-	IUSE="${IUSE} linguas_${l}"
-done
-
 DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
-
-# debug is managed by the ebuild
-GCONF_DEBUG="no"
 
 # NOTES:
 # having >=gtk+-2.14 is actually removing need of +gnome but it's clearer to
@@ -75,7 +63,7 @@ GCONF_DEBUG="no"
 # ptlib/opal needed features are not checked by ekiga, upstream bug 577249
 # opal[sip] should be opal[sip?], upstream bug 577248
 # libnotify-0.4.4 bug with +debug, upstream bug 583719
-# doc is not installing dev doc (doxygen)
+# +doc is not installing dev doc (doxygen)
 
 # TODO:
 # if really want to use ked4-base, should use COMMONDEPEND
@@ -99,13 +87,6 @@ pkg_setup() {
 		eerror "To enable kontact USE flag, you need kde USE flag to be enabled"
 		eerror "Please, enable kde or disable kontact and re-emerge ${PN}."
 		die "You need to enable kde or disable kontact."
-	fi
-
-	strip-linguas ${IUSE_LINGUAS}
-
-	if [[ -z "${LINGUAS}" ]]; then
-		# no linguas set, using the default one
-		LINGUAS=" "
 	fi
 
 	# update scrollkeeper database if doc has been enabled
@@ -149,32 +130,26 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	epatch "${FILESDIR}"/${P}-gtk+-2.12-fix.patch
-	epatch "${WORKDIR}"/${P}-remove-exceptions.patch
-
 	# remove call to gconftool-2 --shutdown, upstream bug 555976
 	# gnome-2 eclass is reloading schemas with SIGHUP
-	sed -i -e '/gconftool-2 --shutdown/d' Makefile.in \
-		|| die "patching Makefile.in failed"
+	sed -i -e '/gconftool-2 --shutdown/d' Makefile.in || die "sed failed"
 
 	# SIP is automatically enabled with opal[sip], want it to be a user choice
 	# upstream bug 575832
 	if ! use sip; then
-		sed -i -e "s/SIP=\"yes\"/SIP=\"no\"/" configure \
-			|| die "patching configure failed"
+		sed -i -e "s/SIP=\"yes\"/SIP=\"no\"/" configure || die "sed failed"
 		sed -i -e \
 			"s:SIP=\`\$PKG_CONFIG --variable=OPAL_SIP opal\`:SIP=\"no\":" \
-			configure || die "patching configure failed"
+			configure || die "sed failed"
 	fi
 
 	# H323 is automatically enabled with opal[h323], want it to be a user choice
 	# upstream bug 575833
 	if ! use h323; then
-		sed -i -e "s/H323=\"yes\"/H323=\"no\"/" configure \
-			|| die "patching configure failed"
+		sed -i -e "s/H323=\"yes\"/H323=\"no\"/" configure || die "sed failed"
 		sed -i -e \
 			"s:H323=\`\$PKG_CONFIG --variable=OPAL_H323 opal\`:H323=\"no\":" \
-			configure || die "patching configure failed"
+			configure || die "sed failed"
 	fi
 
 	# V4L support is auto-enabled, want it to be a user choice
@@ -182,7 +157,7 @@ src_prepare() {
 	# TODO: check if upstream has removed this hack
 	if ! use v4l; then
 		sed -i -e "s/V4L=\"enabled\"/V4L=\"disabled\"/" configure \
-			|| die "patching configure failed"
+			|| die "sed failed"
 	fi
 }
 

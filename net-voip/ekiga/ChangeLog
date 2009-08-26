@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.6 2009/08/03 21:34:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.7 2009/08/26 11:25:39 volkmar Exp $
+
+*ekiga-3.2.5 (26 Aug 2009)
+
+  26 Aug 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -files/ekiga-3.2.4-gtk+-2.12-fix.patch, -ekiga-3.2.4.ebuild,
+  +ekiga-3.2.5.ebuild:
+  Version bump to 3.2.5. Fix bug 281170.
 
   03 Aug 2009; Markus Meier <maekke@gentoo.org> ekiga-3.2.4.ebuild:
   add ~amd64, bug #276355
