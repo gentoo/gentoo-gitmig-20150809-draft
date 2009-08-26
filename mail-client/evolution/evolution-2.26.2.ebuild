@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.2.ebuild,v 1.5 2009/07/23 21:02:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.2.ebuild,v 1.6 2009/08/26 01:17:26 jer Exp $
 
 EAPI="2"
 
@@ -131,13 +131,6 @@ src_prepare() {
 
 	# problems with -O3 on gcc-3.3.1
 	replace-flags -O3 -O2
-
-	# Bug #?
-	if [ "${ARCH}" = "hppa" ]; then
-		append-flags "-fPIC -ffunction-sections"
-		# bad bad bad, what about user settings !!!
-		export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000"
-	fi
 }
 
 pkg_postinst() {

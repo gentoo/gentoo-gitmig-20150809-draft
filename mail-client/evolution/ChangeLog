@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.270 2009/07/24 11:10:10 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.271 2009/08/26 01:17:26 jer Exp $
+
+  26 Aug 2009; Jeroen Roovers <jer@gentoo.org> evolution-2.24.5.ebuild,
+  evolution-2.26.2.ebuild, evolution-2.26.3.ebuild:
+  Remove HPPA specific CFLAGS/LDFLAGS (bug #278856).
 
   24 Jul 2009; Romain Perier <mrpouet@gentoo.org> evolution-2.26.3.ebuild:
   Fix bug #278905, moved gnome-extra/evolution-data-server to

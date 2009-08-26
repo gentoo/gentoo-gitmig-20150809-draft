@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.24.5.ebuild,v 1.9 2009/07/23 21:02:16 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.24.5.ebuild,v 1.10 2009/08/26 01:17:26 jer Exp $
 
 inherit gnome2 flag-o-matic libtool
 
@@ -122,12 +122,6 @@ src_compile() {
 
 	# problems with -O3 on gcc-3.3.1
 	replace-flags -O3 -O2
-
-	# Bug #?
-	if [ "${ARCH}" = "hppa" ]; then
-		append-flags "-fPIC -ffunction-sections"
-		export LDFLAGS="-ffunction-sections -Wl,--stub-group-size=25000"
-	fi
 
 	gnome2_src_compile
 }
