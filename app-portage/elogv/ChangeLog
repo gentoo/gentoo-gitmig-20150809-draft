@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/elogv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.57 2009/08/25 14:56:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/ChangeLog,v 1.58 2009/08/26 14:51:50 armin76 Exp $
+
+  25 Aug 2009; Raúl Porcel <armin76@gentoo.org> elogv-0.7.4.ebuild:
+  sparc stable wrt #28260
 
   25 Aug 2009; Christian Faulhammer <fauli@gentoo.org> elogv-0.7.4.ebuild:
   stable x86, bug 282609
