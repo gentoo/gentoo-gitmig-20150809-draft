@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpepimc/libgpepimc-0.9.ebuild,v 1.3 2009/08/26 14:03:57 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libgpepimc/libgpepimc-0.9.ebuild,v 1.4 2009/08/26 16:04:16 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe autotools
@@ -10,7 +10,7 @@ DESCRIPTION="Common code for PIM applications of the GPE Palmtop Environment"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~arm ~amd64 ~x86"
-IUSE="${IUSE} doc"
+IUSE="doc"
 GPE_DOCS="ChangeLog"
 GPECONF="${GPECONF} $(use_enable doc gtk-doc)"
 
