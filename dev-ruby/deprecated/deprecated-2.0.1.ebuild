@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-2.0.1.ebuild,v 1.2 2009/08/26 22:01:00 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/deprecated-2.0.1.ebuild,v 1.3 2009/08/26 22:44:52 a3li Exp $
 
 EAPI="2"
 inherit ruby
@@ -22,11 +22,12 @@ RDEPEND="dev-lang/ruby"
 src_test() {
 	for rb in $USE_RUBY; do
 		ebegin "Testing for ${rb}"
+		[ -x ${rb} ] || continue
 		${rb} setup.rb test || die "test failed"
 		eend $?
 	done
 }
 
 src_install() {
-	ruby setup.rb install --prefix="${D}"
+	ruby setup.rb install --prefix="${D}" || die "setup.rb install failed"
 }
