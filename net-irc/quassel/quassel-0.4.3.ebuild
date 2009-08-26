@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.0-r1.ebuild,v 1.2 2009/03/03 11:41:45 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.4.3.ebuild,v 1.1 2009/08/26 14:35:21 scarabeus Exp $
 
 EAPI="2"
 
@@ -21,9 +21,9 @@ for l in ${LANGS}; do
 done
 
 RDEPEND="
-	x11-libs/qt-core:4
 	dbus? ( x11-libs/qt-dbus:4 )
 	monolithic? (
+		dev-db/sqlite[threadsafe]
 		x11-libs/qt-sql:4[sqlite]
 		x11-libs/qt-script:4
 		x11-libs/qt-gui:4
@@ -33,6 +33,7 @@ RDEPEND="
 	)
 	!monolithic? (
 		server? (
+			dev-db/sqlite[threadsafe]
 			x11-libs/qt-sql:4[sqlite]
 			x11-libs/qt-script:4
 		)
@@ -43,13 +44,9 @@ RDEPEND="
 			webkit? ( x11-libs/qt-webkit:4 )
 		)
 	)
-	ssl? (
-		dev-libs/openssl
-		x11-libs/qt-core:4[ssl]
-	)
+	ssl? ( x11-libs/qt-core:4[ssl] )
 	"
-DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.6"
+DEPEND="${RDEPEND}"
 
 DOCS="AUTHORS ChangeLog README"
 
@@ -62,8 +59,6 @@ pkg_setup() {
 }
 
 src_configure() {
-	epatch "${FILESDIR}/${P}-no-webkit.patch"
-
 	local MY_LANGUAGES=""
 	for i in ${LINGUAS}; do
 		MY_LANGUAGES="${i},${MY_LANGUAGES}"
@@ -93,6 +88,9 @@ src_install() {
 		newinitd "${FILESDIR}"/quasselcore-2.init quasselcore || die "newinitd failed"
 		newconfd "${FILESDIR}"/quasselcore-2.conf quasselcore || die "newconfd failed"
 
+		insinto /etc/logrotate.d
+		newins "${FILESDIR}/quassel.logrotate" quassel
+
 		insinto /usr/share/doc/${PF}
 		doins "${S}"/scripts/manageusers.py || die "installing manageusers.py failed"
 	fi
@@ -102,14 +100,14 @@ pkg_postinst() {
 	if use server ; then
 		ewarn
 		ewarn "In order to use the quassel init script you must set the"
-		ewarn "QUASSEL_USER variable in /etc/conf.d/quasselcore to your username."
+		ewarn "QUASSEL_USER variable in ${ROOT%/}/etc/conf.d/quasselcore to your username."
 		ewarn "Note: This is the user who runs the quasselcore and is independent"
 		ewarn "from the users you set up in the quasselclient."
 		elog
 		elog "Adding more than one user or changing username/password is not"
 		elog "possible via the quasselclient yet. If you need to do these things"
 		elog "you have to use the manageusers.py script, which has been installed in"
-		elog "/usr/share/doc/${PF}".
+		elog "${ROOT%/}/usr/share/doc/${PF}".
 		elog "http://bugs.quassel-irc.org/wiki/quassel-irc/Manage_core_users provides"
 		elog "some information on using the script."
 		elog "To be sure nothing bad will happen you need to stop the quasselcore"

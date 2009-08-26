@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.52 2009/05/30 12:21:08 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.53 2009/08/26 14:35:21 scarabeus Exp $
+
+*quassel-0.4.3 (26 Aug 2009)
+
+  26 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -quassel-0.4.0-r1.ebuild, -quassel-0.4.0-r2.ebuild,
+  -files/quassel-0.4.0-no-webkit.patch, -quassel-0.4.2.ebuild,
+  +quassel-0.4.3.ebuild:
+  Version bump. Remove old.
 
   30 May 2009; Pielmeier Daniel <billie@gentoo.org> metadata.xml:
   Update email in metadata
