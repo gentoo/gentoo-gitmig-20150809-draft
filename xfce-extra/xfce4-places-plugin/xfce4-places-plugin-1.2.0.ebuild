@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0.ebuild,v 1.1 2009/08/25 07:47:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-places-plugin/xfce4-places-plugin-1.2.0.ebuild,v 1.2 2009/08/26 03:20:13 darkside Exp $
 
 EAPI=2
 inherit xfconf
 
 DESCRIPTION="Places menu plug-in for panel, like GNOME's"
-HOMEPAGE="http://www.xfce.org/"
+HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-places-plugin"
 SRC_URI="mirror://xfce/src/panel-plugins/${PN}/1.2/${P}.tar.bz2"
 
 LICENSE="GPL-2"
