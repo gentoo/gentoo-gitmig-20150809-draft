@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.36 2009/08/09 13:43:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.37 2009/08/26 22:17:15 a3li Exp $
+
+*ruby-dbi-0.4.2 (26 Aug 2009)
+
+  26 Aug 2009; Alex Legler <a3li@gentoo.org> +ruby-dbi-0.4.2.ebuild:
+  Version bump. Now with modular database drivers. Dropped keywords due to
+  the introduction of dev-ruby/deprecated as a new dependency.
 
   09 Aug 2009; Hans de Graaff <graaff@gentoo.org> -ruby-dbi-0.1.1.ebuild:
   Remove old version.
