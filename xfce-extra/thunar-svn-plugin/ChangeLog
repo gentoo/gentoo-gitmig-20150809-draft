@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/thunar-svn-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn-plugin/ChangeLog,v 1.1 2009/08/23 02:19:01 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/thunar-svn-plugin/ChangeLog,v 1.2 2009/08/26 10:09:14 fauli Exp $
+
+  26 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  thunar-svn-plugin-0.0.3-r2.ebuild:
+  stable x86, bug 281376
 
 *thunar-svn-plugin-0.0.3-r2 (23 Aug 2009)
 
