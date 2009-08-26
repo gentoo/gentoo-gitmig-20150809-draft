@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.8.0.ebuild,v 1.1 2009/06/28 08:54:16 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagstamon/nagstamon-0.8.2.ebuild,v 1.1 2009/08/26 16:27:54 dertobi123 Exp $
 
 EAPI="2"
 
@@ -9,8 +9,8 @@ inherit eutils python
 MY_P=${P/-/_}
 
 DESCRIPTION="Nagstamon is a Nagios status monitor for a systray and displays a realtime status of a Nagios box."
-HOMEPAGE="http://nagstamon.wiki.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
+HOMEPAGE="http://nagstamon.sourceforge.net"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -30,13 +30,14 @@ src_prepare() {
 }
 
 src_install() {
+	cd "${S}/Nagstamon/"
 	exeinto $(python_get_sitedir)/${PN}
-	doexe nagstamon.py
+	doexe nagstamon
 	doexe nagstamonActions.py
 	doexe nagstamonConfig.py
 	doexe nagstamonGUI.py
 	doexe nagstamonObjects.py
-	dosym $(python_get_sitedir)/${PN}/${PN}.py /usr/bin/${PN}
+	dosym $(python_get_sitedir)/${PN}/${PN} /usr/bin/${PN}
 
 	dodir /usr/share/${PN}/resources
 	insinto /usr/share/${PN}/resources
