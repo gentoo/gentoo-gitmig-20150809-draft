@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.32 2009/08/05 02:25:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.33 2009/08/26 14:59:14 armin76 Exp $
+
+  25 Aug 2009; Raúl Porcel <armin76@gentoo.org> filelight-1.0-r1.ebuild:
+  sparc stable wrt #278150
 
   05 Aug 2009; Jeroen Roovers <jer@gentoo.org> filelight-1.0-r1.ebuild:
   Stable for HPPA (bug #278150).
