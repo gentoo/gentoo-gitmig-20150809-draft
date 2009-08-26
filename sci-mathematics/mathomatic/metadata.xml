@@ -11,7 +11,4 @@
     algebraic equations, perform polynomial and complex arithmetic,
     etc.
   </longdescription>
-  <use>
-    <flag name='secure'>Create an extra secure version, with no I/O.</flag>
-  </use>
 </pkgmetadata>
