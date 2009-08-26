@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/libeventdb-0.90.ebuild,v 1.5 2009/07/16 00:43:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/libeventdb/libeventdb-0.90.ebuild,v 1.6 2009/08/26 15:43:00 miknix Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 
@@ -22,7 +22,8 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${DEPEND}
 	${RDEPEND}
-	doc? ( >=dev-util/gtk-doc-1.2 )"
+	doc? ( >=dev-util/gtk-doc-1.2 )
+	dev-util/gtk-doc-am"
 
 src_unpack() {
 	gpe_src_unpack "$@"
