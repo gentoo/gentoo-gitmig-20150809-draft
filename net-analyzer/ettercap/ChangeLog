@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.72 2009/08/09 12:55:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.73 2009/08/26 09:09:38 klausman Exp $
+
+  26 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  ettercap-0.7.3-r3.ebuild:
+  Stable on alpha, bug #277296
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> ettercap-0.7.3-r3.ebuild:
   ppc stable #277296

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r3.ebuild,v 1.7 2009/08/09 12:55:07 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.3-r3.ebuild,v 1.8 2009/08/26 09:09:38 klausman Exp $
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
 # happy with it (as for the 0.6.b version), so let's set it to "0.7.0".
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="debug gtk ncurses ssl"
 
 RDEPEND=">=net-libs/libnet-1.1.2.1-r1
