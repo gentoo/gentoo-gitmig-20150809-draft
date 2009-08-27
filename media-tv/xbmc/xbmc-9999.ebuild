@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.28 2009/08/27 02:35:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.29 2009/08/27 09:51:05 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -41,15 +41,20 @@ RDEPEND="opengl? ( virtual/opengl )
 	dev-libs/libpcre
 	dev-libs/lzo
 	>=dev-python/pysqlite-2
+	media-libs/a52dec
 	media-libs/alsa-lib
 	media-libs/faac
+	media-libs/flac
 	media-libs/fontconfig
 	media-libs/freetype
 	media-libs/glew
 	media-libs/jasper
 	media-libs/libass
+	media-libs/libdca
 	media-libs/libmad
 	media-libs/libmms
+	media-libs/libmpcdec
+	media-libs/libmpeg2
 	media-libs/libogg
 	media-libs/libsamplerate
 	media-libs/libsdl[alsa,audio,video,X]
@@ -59,7 +64,9 @@ RDEPEND="opengl? ( virtual/opengl )
 	media-libs/sdl-mixer
 	media-libs/sdl-sound
 	media-sound/wavpack
+	media-video/ffmpeg
 	net-misc/curl
+	net-fs/samba
 	sys-apps/dbus
 	sys-apps/hal
 	sys-apps/pmount
@@ -69,6 +76,7 @@ RDEPEND="opengl? ( virtual/opengl )
 	x11-libs/libXinerama
 	x11-libs/libXrandr
 	x11-libs/libXrender"
+# media-libs/faad2 we use internal one for now
 DEPEND="${RDEPEND}
 	x11-proto/xineramaproto
 	dev-util/cmake
@@ -90,6 +98,12 @@ src_unpack() {
 src_prepare() {
 	# Tweak autotool timestamps to avoid regeneration
 	find . -type f -print0 | xargs -0 touch -r configure
+
+	# use internal faad2 as mp4ff is dead and xbmc hasnt
+	# switched to libmp4v2 yet
+	sed -i \
+		-e '/use_external_libfaad/s:use_external_libraries:FOOOO:' \
+		configure || die
 
 	# Fix XBMC's final version string showing as "exported"
 	# instead of the SVN revision number.

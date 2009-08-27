@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.23 2009/08/27 02:35:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.24 2009/08/27 09:51:05 vapier Exp $
+
+  27 Aug 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Force internal faad2 for now #278400. Pull in more deps #279062 #281078.
 
   27 Aug 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Drop unzip step since upstream has integrated it #282739 by Jan
