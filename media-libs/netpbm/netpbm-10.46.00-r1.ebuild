@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.46.00-r1.ebuild,v 1.1 2009/08/22 12:56:52 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.46.00-r1.ebuild,v 1.2 2009/08/27 10:03:54 vapier Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -90,7 +90,7 @@ src_unpack() {
 	# avoid ugly depend.mk warnings
 	touch $(find . -name Makefile | sed s:Makefile:depend.mk:g)
 
-	cat config.mk.in /dev/stdin >> config.mk <<-EOF
+	cat config.mk.in /dev/stdin >> config.mk <<-EOF || die
 	# Misc crap
 	BUILD_FIASCO = N
 	SYMLINK = ln -sf
