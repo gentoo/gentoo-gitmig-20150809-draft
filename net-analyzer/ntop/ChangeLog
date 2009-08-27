@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ntop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.82 2009/08/12 21:49:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ChangeLog,v 1.83 2009/08/27 17:10:19 jer Exp $
+
+  27 Aug 2009; Jeroen Roovers <jer@gentoo.org> ntop-3.3.10-r1.ebuild:
+  Stable for HPPA (bug #282063).
 
   12 Aug 2009; Mike Frysinger <vapier@gentoo.org>
   files/ntop-update-geoip-db:
