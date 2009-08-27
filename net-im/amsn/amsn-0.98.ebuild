@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.ebuild,v 1.1 2009/08/27 22:56:42 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/amsn-0.98.ebuild,v 1.2 2009/08/27 23:05:57 tester Exp $
 
 EAPI=2
 
@@ -38,6 +38,10 @@ RDEPEND="${DEPEND}
 	>=media-libs/gst-plugins-bad-0.10.13
 	>=media-plugins/gst-plugins-ffmpeg-0.10.7
 	media-video/ffmpeg[encode]"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-noautoupdate.patch"
+}
 
 src_configure() {
 	econf $(use_enable debug) || die "configure script failed"
