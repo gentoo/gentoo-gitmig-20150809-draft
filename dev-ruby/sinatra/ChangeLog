@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sinatra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.1 2009/08/22 22:43:33 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sinatra/ChangeLog,v 1.2 2009/08/27 08:39:47 a3li Exp $
+
+  27 Aug 2009; Alex Legler <a3li@gentoo.org> sinatra-0.9.4.ebuild:
+  Keywording ~x86. Also, thanks to CS Shyam Sundar <csshyamsundar@gmail.com>
+  in bug 280020 for his ebuild that I somehow managed to overlook while
+  adding this to the tree.
 
 *sinatra-0.9.4 (22 Aug 2009)
 
