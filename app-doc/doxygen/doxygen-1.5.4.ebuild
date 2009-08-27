@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.4.ebuild,v 1.17 2009/05/30 08:19:53 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.5.4.ebuild,v 1.18 2009/08/27 07:16:43 nerdboy Exp $
 
 EAPI=1
 
@@ -19,7 +19,9 @@ RDEPEND="qt3? ( x11-libs/qt:3 )
 	latex? ( app-text/texlive-core
 		dev-texlive/texlive-latexrecommended
 		dev-texlive/texlive-genericrecommended
-		dev-texlive/texlive-fontsrecommended )
+		dev-texlive/texlive-fontsrecommended
+		dev-texlive/texlive-fontsextra
+		dev-texlive/texlive-latexextra )
 	dev-lang/python
 	virtual/libiconv
 	virtual/ghostscript
