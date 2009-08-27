@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.6.1.1.ebuild,v 1.1 2009/08/27 21:16:25 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.6.1.1.ebuild,v 1.2 2009/08/27 21:24:07 loki_val Exp $
 
 EAPI=2
 
@@ -48,6 +48,7 @@ SCROLLKEEPER_UPDATE=0
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.6.0.0-sandbox-violation.patch"
+	epatch "${FILESDIR}/${PN}-0.6.1.1-parallel-build.patch"
 	sed  -r -i -e 's:-D[A-Z]+_DISABLE_DEPRECATED::g' \
 		lib/libfspot/Makefile.am
 	eautoreconf
