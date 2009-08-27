@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/exaile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.60 2009/08/23 14:23:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.61 2009/08/27 19:32:13 ssuominen Exp $
+
+*exaile-0.3.0 (27 Aug 2009)
+
+  27 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> +exaile-0.3.0.ebuild,
+  +files/exaile-0.3.0-Makefile.patch, +files/exaile-0.3.0-Makefile-2.patch:
+  Version bump.
 
 *exaile-0.3.0_alpha3-r1 (23 Aug 2009)
 
