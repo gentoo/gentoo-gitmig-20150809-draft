@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.4 2009/08/27 12:38:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/snns-4.2-r8.ebuild,v 1.5 2009/08/27 13:02:54 phosphan Exp $
 
 inherit eutils python multilib
 
@@ -12,20 +12,22 @@ MYPYTHONPATCH="PythonFunctionSupport-20050210.patch"
 DESCRIPTION="Stuttgart Neural Network Simulator"
 HOMEPAGE="http://www-ra.informatik.uni-tuebingen.de/SNNS/"
 SRC_URI="http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.tar.gz
-	http://download.berlios.de/snns-dev/${MYPATCH}.patch.gz
+	mirror://berlios/snns-dev/${MYPATCH}.patch.gz
 	doc? ( http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/${MY_P}.Manual.pdf )
-	python? ( http://download.berlios.de/snns-dev/${MYPYTHONEXT}.tar.gz
-			  http://download.berlios.de/snns-dev/${MYPYTHONPATCH}.gz )"
+	python? ( mirror://berlios/snns-dev/${MYPYTHONEXT}.tar.gz
+			  mirror://berlios/snns-dev/${MYPYTHONPATCH}.gz )"
 
 LICENSE="SNNS-${PV}"
 KEYWORDS="~amd64 ~ppc x86"
 SLOT="0"
 IUSE="X doc python"
 
-DEPEND="X? ( x11-proto/xproto
-	x11-libs/Xaw3d )
-	>=sys-apps/sed-4
+RDEPEND="X? ( x11-libs/Xaw3d )
 	python? ( >=dev-lang/python-2.3 )"
+
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4
+	X? ( x11-proto/xproto )"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -76,7 +78,7 @@ src_install() {
 		dobin $file
 	done
 
-	mv ${D}/usr/bin/netperf ${D}/usr/bin/snns-netperf
+	mv "${D}/usr/bin/netperf" "${D}/usr/bin/snns-netperf"
 
 	if use X; then
 		newbin xgui/sources/xgui snns
