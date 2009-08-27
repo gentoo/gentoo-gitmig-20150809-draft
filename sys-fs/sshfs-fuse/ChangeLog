@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/sshfs-fuse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.44 2009/07/06 19:14:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/sshfs-fuse/ChangeLog,v 1.45 2009/08/27 12:36:37 fauli Exp $
+
+  27 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  sshfs-fuse-2.2.ebuild:
+  stable x86, bug 256975
 
 *sshfs-fuse-2.2 (06 Jul 2009)
 
