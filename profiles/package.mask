@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10369 2009/08/26 18:05:01 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10370 2009/08/27 14:30:25 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Christian Faulhammer <fauli@gentoo.org> (27 Aug 2009)
+# Release candidate
+=dev-tex/bzr-2.0_rc1
 
 # Ulrich Mueller <ulm@gentoo.org> (25 Aug 2009)
 # Included with GNU Emacs (since version 21 at least).
