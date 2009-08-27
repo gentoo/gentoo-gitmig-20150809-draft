@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.2-r2.ebuild,v 1.9 2009/02/16 16:57:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.4.2-r2.ebuild,v 1.10 2009/08/27 08:57:51 vapier Exp $
 
 inherit eutils toolchain-funcs linux-info
 
@@ -52,19 +52,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libxt_iprange.c-build.patch
 	epatch "${FILESDIR}"/${P}-hashlimit.patch #254496
 
-	local check base=${PORTAGE_CONFIGROOT}/etc/portage/patches
-	for check in {${CATEGORY}/${PF},${CATEGORY}/${P},${CATEGORY}/${PN}}; do
-		EPATCH_SOURCE=${base}/${CTARGET}/${check}
-		[[ -r ${EPATCH_SOURCE} ]] || EPATCH_SOURCE=${base}/${CHOST}/${check}
-		[[ -r ${EPATCH_SOURCE} ]] || EPATCH_SOURCE=${base}/${check}
-		if [[ -d ${EPATCH_SOURCE} ]] ; then
-			EPATCH_SUFFIX="patch"
-			EPATCH_FORCE="yes" \
-			EPATCH_MULTI_MSG="Applying user patches from ${EPATCH_SOURCE} ..." \
-			epatch
-			break
-		fi
-	done
+	epatch_user
 
 	if use l7filter ; then
 		cp "${WORKDIR}/${L7_P}/iptables-1.4.1.1-for-kernel-2.6.20forward"/* extensions \
