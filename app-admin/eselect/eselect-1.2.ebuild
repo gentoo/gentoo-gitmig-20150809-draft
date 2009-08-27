@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.1.2.ebuild,v 1.1 2009/06/27 08:57:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.ebuild,v 1.1 2009/08/27 11:52:13 ulm Exp $
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -19,7 +19,8 @@ RDEPEND="sys-apps/sed
 	)"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
-RDEPEND="${RDEPEND}
+RDEPEND="!app-admin/eselect-news
+	${RDEPEND}
 	sys-apps/file
 	sys-libs/ncurses"
 
@@ -41,7 +42,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README TODO doc/*.txt
 	use doc && dohtml *.html doc/*
 
-	# needed by news-tng module
+	# needed by news module
 	keepdir /var/lib/gentoo/news
 
 	# we don't use bash-completion.eclass since eselect
