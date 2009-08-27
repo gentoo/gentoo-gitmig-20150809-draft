@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.22 2009/07/27 01:49:56 wormo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.23 2009/08/27 02:35:49 vapier Exp $
+
+  27 Aug 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
+  Drop unzip step since upstream has integrated it #282739 by Jan
+  Vansteenkiste.
 
   27 Jul 2009; Stephanie Lockwood-Childs <wormo@gentoo.org>
   xbmc-9.04.ebuild, xbmc-9999.ebuild:
