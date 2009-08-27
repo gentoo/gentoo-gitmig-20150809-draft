@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/snns
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.14 2009/08/26 18:36:00 phosphan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.15 2009/08/27 12:38:41 fauli Exp $
+
+  27 Aug 2009; Christian Faulhammer <fauli@gentoo.org> snns-4.2-r8.ebuild:
+  stable x86, bug 248322
 
   26 Aug 2009; Patrick Kursawe <phosphan@gentoo.org> +snns-4.2-r8.ebuild:
   Renaming netperf to snns-netperf to avoid file collision with
