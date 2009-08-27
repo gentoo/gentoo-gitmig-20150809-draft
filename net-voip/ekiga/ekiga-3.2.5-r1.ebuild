@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r1.ebuild,v 1.1 2009/08/26 21:28:00 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r1.ebuild,v 1.2 2009/08/27 08:45:54 volkmar Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ RDEPEND=">=dev-libs/glib-2.8.0:2
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.21.3:0.10 )
 	kde? ( kontact? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} ) )
 	ldap? ( dev-libs/cyrus-sasl:2
-		net-nds/openldap )
+		>=net-nds/openldap-2.3.43-r1 )
 	libnotify? ( x11-libs/libnotify
 		debug? ( >=x11-libs/libnotify-0.4.5 ) )
 	shm? ( x11-libs/libXext )
@@ -62,6 +62,7 @@ DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
 # opal[sip] should be opal[sip?], upstream bug 577248
 # libnotify-0.4.4 bug with +debug, upstream bug 583719
 # +doc is not installing dev doc (doxygen)
+# forcing openldap version to >=2.3.43-r1 to prevent bug 189817
 
 # UPSTREAM:
 # contact ekiga team to be sure intltool and gettext are not nls deps

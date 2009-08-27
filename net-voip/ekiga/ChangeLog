@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.8 2009/08/26 21:28:00 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.9 2009/08/27 08:45:54 volkmar Exp $
+
+  27 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> ekiga-3.2.5-r1.ebuild:
+  Change openldap dep version to prevent bug 189817
 
 *ekiga-3.2.5-r1 (26 Aug 2009)
 
