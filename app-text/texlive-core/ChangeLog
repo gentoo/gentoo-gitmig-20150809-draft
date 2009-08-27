@@ -1,6 +1,12 @@
 # ChangeLog for app-text/texlive-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.109 2009/08/19 08:09:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/ChangeLog,v 1.110 2009/08/27 07:48:19 aballier Exp $
+
+*texlive-core-2008-r7 (27 Aug 2009)
+
+  27 Aug 2009; Alexis Ballier <aballier@gentoo.org>
+  +texlive-core-2008-r7.ebuild:
+  Add upstream fix for bibtex crash, bug #264598
 
   19 Aug 2009; Alexis Ballier <aballier@gentoo.org>
   texlive-core-2008-r5.ebuild, texlive-core-2008-r6.ebuild:
