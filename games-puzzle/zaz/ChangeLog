@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/zaz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.1 2009/08/26 05:50:27 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/zaz/ChangeLog,v 1.2 2009/08/27 09:41:59 nyhm Exp $
+
+  27 Aug 2009; Tristan Heaven <nyhm@gentoo.org> zaz-0.2.8.ebuild:
+  Add ~amd64 keyword
 
 *zaz-0.2.8 (26 Aug 2009)
 
