@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.136 2009/08/25 13:38:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.137 2009/08/27 00:10:16 a3li Exp $
+
+  27 Aug 2009; Alex Legler <a3li@gentoo.org> neon-0.28.6.ebuild:
+  amd64 stable, security bug 281950
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org> neon-0.28.6.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #281950
