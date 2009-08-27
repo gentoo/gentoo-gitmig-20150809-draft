@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4760 2009/08/26 15:27:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4761 2009/08/27 19:07:47 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -248,7 +248,6 @@ app-emulation/mol:pci - Experimental PCI proxy support
 app-emulation/mol:sheep - Support for the sheep net driver
 app-emulation/open-vm-tools:doc - Generate API documantation
 app-emulation/open-vm-tools:fuse - Build vmblock-fuse in favor of FUSE based blocking mechanism for DnD
-app-emulation/open-vm-tools:gtkmm - Enable gtkmm support
 app-emulation/open-vm-tools:unity - Enable host unity support
 app-emulation/pearpc:jit - Use the JITC-x86 CPU
 app-emulation/point2play:emerald - For people who are in the Transgaming Emerald Club
