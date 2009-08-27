@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1_beta3.ebuild,v 1.1 2009/08/27 09:33:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libtheora/libtheora-1.1_beta3.ebuild,v 1.2 2009/08/27 16:49:13 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils flag-o-matic
@@ -27,7 +27,8 @@ VARTEXFONTS=${T}/fonts
 S=${WORKDIR}/${P/_}
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.0_beta2-flags.patch
+	epatch "${FILESDIR}"/${PN}-1.0_beta2-flags.patch \
+		"${FILESDIR}"/${P}-theora_disable_encode.patch
 	AT_M4DIR="m4" eautoreconf
 }
 
