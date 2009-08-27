@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.632 2009/08/21 05:46:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.633 2009/08/27 06:07:10 vapier Exp $
+
+  27 Aug 2009; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_compile.eblit:
+  Force all linker tests to true for cross headers #282442 by Jack Byer.
 
   21 Aug 2009; Mike Frysinger <vapier@gentoo.org>
   files/eblits/pkg_setup.eblit:
