@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.2.ebuild,v 1.3 2009/04/25 16:05:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-extra/compiz-plugins-extra-0.8.2.ebuild,v 1.4 2009/08/27 11:00:42 ikelos Exp $
 
 EAPI="2"
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.35
 	>=dev-util/pkgconfig-0.19
 	>=sys-devel/gettext-0.15
-	x11-libs/cairo[glitz]
+	x11-libs/cairo
 	gnome? ( gnome-base/gconf )
 "
 
