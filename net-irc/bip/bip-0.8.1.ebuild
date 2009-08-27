@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.1.ebuild,v 1.1 2009/07/31 18:51:29 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.1.ebuild,v 1.2 2009/08/27 18:44:57 a3li Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	# configure broken: --disable-oidentd enables it, too
-	epatch "${FILESDIR}/${P}-configure-oidentd.patch"
+	epatch "${FILESDIR}/${PN}-configure-oidentd.patch"
 
 	eautoreconf
 }

@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.0.ebuild,v 1.1 2009/03/23 15:58:15 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bip/bip-0.8.2.ebuild,v 1.1 2009/08/27 18:44:57 a3li Exp $
 
 EAPI="2"
+
+inherit autotools
 
 DESCRIPTION="Multiuser IRC proxy with ssl support"
 HOMEPAGE="http://bip.t1r.net/"
@@ -19,15 +21,18 @@ RDEPEND="${DEPEND}
 	app-editors/gvim ) )
 	oidentd? ( >=net-misc/oidentd-2.0 )"
 
-src_configure() {
+src_prepare() {
 	# configure broken: --disable-oidentd enables it, too
-	local my_conf
-	use oidentd && my_conf="--enable-oidentd"
+	epatch "${FILESDIR}/${PN}-configure-oidentd.patch"
 
+	eautoreconf
+}
+
+src_configure() {
 	econf \
 		$(use_enable ssl openssl)\
 		$(use_enable debug)\
-		${my_conf}
+		$(use_enable oidentd)
 }
 
 src_compile() {
