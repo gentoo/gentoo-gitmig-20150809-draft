@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-2.0.ebuild,v 1.4 2007/08/13 21:23:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/oinkmaster/oinkmaster-2.0.ebuild,v 1.5 2009/08/27 17:23:38 armin76 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://oinkmaster.sf.net/"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE="X"
 
 DEPEND=""
