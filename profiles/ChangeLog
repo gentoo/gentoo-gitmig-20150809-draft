@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3189 2009/08/27 14:30:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3190 2009/08/27 15:28:31 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Masking app-emulation/parallels-workstation for QA removal.
 
   27 Aug 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   mask RC1 of dev-util/bzr-2.0 for testing
