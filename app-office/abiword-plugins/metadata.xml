@@ -12,6 +12,6 @@
   <flag name='ots'>Enable Text Summarizer plugin</flag>
   <flag name='thesaurus'>Enable thesaurus support</flag>
   <flag name='wordperfect'>Enable wordperfect file support via
-    <pkg>app-text/libwpdlibwpd</pkg></flag>
+    <pkg>app-text/libwpd</pkg></flag>
 </use>
 </pkgmetadata>
