@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.28.ebuild,v 1.2 2009/08/26 21:57:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.28.ebuild,v 1.3 2009/08/27 11:41:32 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss png samba scanner ssl win64 +X xcomposite xinerama xml"
+IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss png samba scanner ssl test win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -117,6 +117,7 @@ src_configure() {
 		$(use_with png) \
 		$(use_with scanner sane) \
 		$(use_with ssl openssl) \
+		$(use_enable test tests) \
 		$(use_enable win64) \
 		$(use_with X x) \
 		$(use_with xcomposite) \

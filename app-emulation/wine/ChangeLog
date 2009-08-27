@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.273 2009/08/26 21:57:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.274 2009/08/27 11:41:32 vapier Exp $
+
+  27 Aug 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.28.ebuild,
+  wine-9999.ebuild:
+  Only build tests when USE=test by Andrew Church #248103 by Rafał Muzyło.
 
   26 Aug 2009; Mike Frysinger <vapier@gentoo.org> wine-1.0.ebuild,
   wine-1.0.1.ebuild, wine-1.1.0.ebuild, wine-1.1.1.ebuild,
