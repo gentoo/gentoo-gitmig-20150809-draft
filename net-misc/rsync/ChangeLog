@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.189 2009/05/29 19:59:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.190 2009/08/27 08:51:28 vapier Exp $
+
+  27 Aug 2009; Mike Frysinger <vapier@gentoo.org> rsync-3.0.5.ebuild,
+  rsync-3.0.6.ebuild:
+  Move to common epatch code.
 
   29 May 2009; Diego E. Pettenò <flameeyes@gentoo.org> rsync-3.0.5.ebuild,
   rsync-3.0.6.ebuild:
