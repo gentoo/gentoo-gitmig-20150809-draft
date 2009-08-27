@@ -6,9 +6,9 @@ diff -ur libtheora-1.1beta3.orig/lib/Makefile.am libtheora-1.1beta3/lib/Makefile
  	x86_vc
  
 +if THEORA_DISABLE_ENCODE
- lib_LTLIBRARIES = libtheoradec.la libtheoraenc.la libtheora.la
+ lib_LTLIBRARIES = libtheoradec.la libtheora.la
 +else
-+lib_LTLIBRARIES = libtheoradec.la libtheora.la
++lib_LTLIBRARIES = libtheoradec.la libtheoraenc.la libtheora.la
 +endif
  
  if THEORA_DISABLE_ENCODE
