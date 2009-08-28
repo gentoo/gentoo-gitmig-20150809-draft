@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.424 2009/08/21 14:31:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.425 2009/08/28 16:37:40 williamh Exp $
 
 # Keep them sorted
 
@@ -404,3 +404,4 @@ yahoo - Enable Yahoo Messenger IM protocol support
 yaz - Adds in optional support for the Z39.50 Protocol for Information Retrieval (YAZ)
 zeroconf - Support for DNS Service Discovery (DNS-SD)
 zlib - Adds support for zlib (de)compression
+zsh-completion - Enable zsh completion support
