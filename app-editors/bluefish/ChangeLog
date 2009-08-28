@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/bluefish
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.62 2009/02/22 11:42:01 hanno Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.63 2009/08/28 08:53:46 scarabeus Exp $
+
+*bluefish-1.3.6 (28 Aug 2009)
+
+  28 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> -bluefish-1.0.ebuild,
+  -bluefish-1.1.6.ebuild, -bluefish-1.3.2.ebuild, +bluefish-1.3.6.ebuild:
+  Version bump. Remove old. Per bug #262212 and #282893.
 
 *bluefish-1.3.2 (22 Feb 2009)
 

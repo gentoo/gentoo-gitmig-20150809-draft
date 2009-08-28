@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.1.6.ebuild,v 1.1 2008/10/26 19:35:09 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.3.6.ebuild,v 1.1 2009/08/28 08:53:46 scarabeus Exp $
+
+EAPI="2"
 
 inherit eutils fdo-mime
 
@@ -16,40 +18,35 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 
-RDEPEND=">=x11-libs/gtk+-2
+RDEPEND="
 	dev-libs/libpcre
-	spell? ( app-text/aspell )"
+	x11-libs/gtk+:2
+	spell? ( app-text/enchant[aspell] )"
 
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig
-	>=dev-libs/glib-2
-	x11-libs/pango
-	gnome-base/gnome-vfs
+	app-text/enchant[aspell]
+	dev-libs/glib:2
 	dev-libs/libxml2
-	nls? ( sys-devel/gettext )
-	gnome? ( gnome-base/libgnomeui )
+	dev-util/pkgconfig
+	x11-libs/pango
+	gnome? ( gnome-extra/gucharmap )
+	nls? ( sys-devel/gettext dev-util/intltool )
 	python? ( dev-lang/python )"
 
 S="${WORKDIR}/${MY_P}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	sed -i -e 's/-s -m 755/-m 755/g' src/Makefile.in
-}
-
-src_compile() {
-	econf --disable-update-databases \
+src_configure() {
+	econf \
+		--disable-dependency-tracking \
+		--disable-update-databases \
 		--disable-xml-catalog-update \
 		$(use_enable nls) \
-		$(use_enable python) \
-		$(use_enable gnome libgnomeui) || die
-	emake || die
+		$(use_enable spell spell-check) \
+		$(use_enable python)
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
 
 pkg_postinst() {
