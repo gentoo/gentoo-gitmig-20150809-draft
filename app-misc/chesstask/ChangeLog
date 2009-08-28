@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/chesstask
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.15 2009/05/30 06:58:10 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/chesstask/ChangeLog,v 1.16 2009/08/28 23:29:44 vostorga Exp $
+
+  28 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -files/Makefile-1.3.diff:
+  Cleaning out unused patch
 
   30 May 2009; Ulrich Mueller <ulm@gentoo.org> chesstask-2.0.ebuild:
   Remove app-text/tetex from dependencies, bug 227443. Add explicit RDEPEND.
