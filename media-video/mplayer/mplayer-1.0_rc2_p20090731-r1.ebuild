@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731-r1.ebuild,v 1.3 2009/08/19 16:46:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090731-r1.ebuild,v 1.4 2009/08/28 19:12:05 klausman Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -144,7 +144,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~x86 ~x86-fbsd"
 
 pkg_setup() {
 	if use gmplayer; then
