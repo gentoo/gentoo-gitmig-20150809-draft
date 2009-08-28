@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r4.ebuild,v 1.12 2009/06/23 19:25:02 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r4.ebuild,v 1.13 2009/08/28 14:29:46 betelgeuse Exp $
+
+EAPI="2"
 
 # Must be before x-modular eclass is inherited
 # This is enabled due to modified Makefile.am from the patches
@@ -16,7 +18,7 @@ IUSE="hal minimal pam"
 
 RDEPEND="x11-apps/xauth
 	x11-libs/libX11
-	hal? ( sys-auth/consolekit )"
+	hal? ( sys-auth/consolekit sys-apps/dbus[X] )"
 DEPEND="${RDEPEND}"
 PDEPEND="!minimal? ( x11-wm/twm
 				x11-apps/xclock
@@ -30,16 +32,9 @@ PATCHES=( "${FILESDIR}"/nolisten-tcp-and-black-background.patch
 
 pkg_setup() {
 	CONFIGURE_OPTIONS="$(use_with hal consolekit)"
-	if use hal; then
-		if ! built_with_use sys-apps/dbus X ; then
-			eerror "You MUST build sys-apps/dbus with the X USE flag enabled."
-			die "You MUST build sys-apps/dbus with the X USE flag enabled."
-		fi
-	fi
 }
 
-src_unpack() {
-	x-modular_unpack_source
+src_prepare() {
 	x-modular_patch_source
 
 	sed -i -e "s:^XINITDIR.*:XINITDIR = \$(sysconfdir)/X11/xinit:g" "${S}/Makefile.am"
