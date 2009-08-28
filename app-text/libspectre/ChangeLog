@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libspectre
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.23 2008/12/16 00:06:25 tgurr Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.24 2009/08/28 12:17:04 klausman Exp $
+
+  28 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  libspectre-0.2.2.ebuild:
+  Stable on alpha, bug #256176
 
 *libspectre-0.2.2 (16 Dec 2008)
 
