@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3193 2009/08/28 08:36:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3194 2009/08/28 08:55:03 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask media-libs/rte for removal as it's orphaned library and ships a
+  modified copy of FFmpeg.
 
   28 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask media-libs/mpeg-lib for removal as it's orphaned library.

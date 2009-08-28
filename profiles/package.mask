@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10374 2009/08/28 08:36:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10375 2009/08/28 08:55:03 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Aug 2009)
+# Orphaned library with modified copy of old FFmpeg.
+# Masked for removal.
+media-libs/rte
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Aug 2009)
 # Orphaned libraries. Both install only a static archive
