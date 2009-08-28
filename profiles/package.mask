@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10375 2009/08/28 08:55:03 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10376 2009/08/28 20:21:47 volkmar Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -89,10 +89,6 @@ dev-tex/mpm
 sys-apps/einit
 sys-apps/einit-modules-scheme
 sys-apps/einit-modules-xml
-
-# Mounir Lamouri <volkmar@gentoo.org> (24 Aug 2009)
-# Masking testing version of mozilla-weave
->=www-plugins/mozilla-weave-0.6_pre2
 
 # Robert Piasek <dagger@gentoo.org> (24 Aug 2009)
 # Development snapshots of NetworkManager. Masked

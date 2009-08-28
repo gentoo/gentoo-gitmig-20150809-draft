@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3195 2009/08/28 16:37:40 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3196 2009/08/28 20:21:47 volkmar Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> package.mask:
+  Removing mask for mozilla-weave
 
   28 Aug 2009; William Hubbs <williamh@gentoo.org> use.desc:
   New global use flag "zsh-completion".
