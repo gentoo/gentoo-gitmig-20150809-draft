@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.7 2009/08/04 16:35:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.8 2009/08/28 15:59:55 klausman Exp $
+
+  28 Aug 2009; Tobias Klausmann <klausman@gentoo.org> libnut-661.ebuild:
+  Keyworded on alpha, bug #279831
 
   04 Aug 2009; Jeroen Roovers <jer@gentoo.org> libnut-661.ebuild:
   Marked ~hppa (bug #279831).
