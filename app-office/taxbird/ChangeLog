@@ -1,6 +1,10 @@
 # ChangeLog for app-office/taxbird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.16 2009/01/22 09:13:05 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/taxbird/ChangeLog,v 1.17 2009/08/28 13:43:05 betelgeuse Exp $
+
+  28 Aug 2009; Petteri Räty <betelgeuse@gentoo.org> -taxbird-0.10.ebuild,
+  -taxbird-0.11.ebuild:
+  Remove old versions.
 
 *taxbird-0.12 (22 Jan 2009)
 
