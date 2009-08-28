@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10372 2009/08/27 22:04:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10373 2009/08/28 08:31:15 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Aug 2009)
+# Orphaned library. Should be version bumped to 1.5,
+# but nothing is using this so it isn't worth it.
+# Masked for removal.
+media-libs/loadpng
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (27 Aug 2009)
 #  on behalf of QA team
