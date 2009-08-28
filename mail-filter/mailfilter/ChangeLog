@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/mailfilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.27 2009/08/23 10:05:47 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/mailfilter/ChangeLog,v 1.28 2009/08/28 12:05:57 armin76 Exp $
+
+  28 Aug 2009; Raúl Porcel <armin76@gentoo.org> mailfilter-0.8.2.ebuild:
+  sparc stable wrt #281559
 
   23 Aug 2009; nixnut <nixnut@gentoo.org> mailfilter-0.8.2.ebuild:
   ppc stable #281559
