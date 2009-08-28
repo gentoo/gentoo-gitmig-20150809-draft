@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20090723.ebuild,v 1.1 2009/07/23 22:51:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus/ibus-1.2.0.20090828.ebuild,v 1.1 2009/08/28 15:38:28 matsuu Exp $
 
 EAPI="1"
-inherit autotools eutils multilib python
+inherit eutils multilib python
 
 DESCRIPTION="Intelligent Input Bus for Linux / Unix OS"
 HOMEPAGE="http://code.google.com/p/ibus/"
@@ -12,7 +12,6 @@ SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-#IUSE="doc nls qt4"
 IUSE="doc nls"
 
 RDEPEND=">=dev-libs/glib-2.18
@@ -33,10 +32,6 @@ RDEPEND="${RDEPEND}
 	dev-python/pygtk
 	>=dev-python/dbus-python-0.83
 	dev-python/pyxdg"
-#	qt4? (
-#		>=x11-libs/qt-core-4.4:4
-#		>=x11-libs/qt-dbus-4.4:4
-#	)
 
 pkg_setup() {
 	# An arch specific config directory is used on multilib systems
@@ -49,17 +44,12 @@ src_unpack() {
 	cd "${S}"
 	mv py-compile py-compile.orig || die
 	ln -s "$(type -P true)" py-compile || die
-	sed -i -e '/QMAKE/s/$/ "CONFIG+=nostrip"/' client/qt4/Makefile.am || die
-	eautomake
 }
 
 src_compile() {
-	# qt4-immodule won't work
-	# http://code.google.com/p/ibus/issues/detail?id=341
 	econf \
 		$(use_enable doc gtk-doc) \
 		$(use_enable nls) || die
-#		$(use_enable qt4 qt4-immodule)
 	emake || die
 }
 
@@ -70,8 +60,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	local qt_im_module="xim"
-#	use qt4 && qt_im_module="ibus"
 
 	elog "To use ibus, you should:"
 	elog "1. Get input engines from sunrise overlay."
@@ -87,7 +75,7 @@ pkg_postinst() {
 	elog
 	elog "   export XMODIFIERS=\"@im=ibus\""
 	elog "   export GTK_IM_MODULE=\"ibus\""
-	elog "   export QT_IM_MODULE=\"${qt_im_module}\""
+	elog "   export QT_IM_MODULE=\"xim\""
 	elog "   ibus-daemon -d -x"
 
 	[ "${ROOT}" = "/" -a -x /usr/bin/gtk-query-immodules-2.0 ] && \
