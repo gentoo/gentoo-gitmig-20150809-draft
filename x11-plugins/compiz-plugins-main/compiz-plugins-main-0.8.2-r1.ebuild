@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.2.ebuild,v 1.3 2009/04/25 16:05:26 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/compiz-plugins-main/compiz-plugins-main-0.8.2-r1.ebuild,v 1.1 2009/08/28 20:16:01 mrpouet Exp $
 
 EAPI="2"
 
-inherit eutils
+inherit eutils gnome2-utils
 
 DESCRIPTION="Compiz Fusion Window Decorator Plugins"
 HOMEPAGE="http://www.compiz.org/"
@@ -21,7 +21,7 @@ RDEPEND="
 	media-libs/jpeg
 	x11-libs/cairo
 	~x11-libs/compiz-bcop-${PV}
-	~x11-wm/compiz-${PV}
+	~x11-wm/compiz-${PV}[gnome?]
 "
 
 DEPEND="${RDEPEND}
@@ -36,9 +36,16 @@ src_prepare() {
 }
 
 src_configure() {
-	econf $(use_enable gnome gconf) || die "econf failed"
+	econf $(use_enable gnome schemas) || die "econf failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
+}
+pkg_preinst() {
+	use gnome && gnome2_gconf_savelist
+}
+
+pkg_postinst() {
+	use gnome && gnome2_gconf_install
 }
