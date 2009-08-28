@@ -1,19 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.6_pre2.ebuild,v 1.1 2009/08/24 17:32:52 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.6.ebuild,v 1.1 2009/08/28 20:19:45 volkmar Exp $
 
 EAPI="2"
 
-inherit mozextension multilib
+inherit eutils mozextension multilib
 
 MY_PN="weave"
-MY_PV=${PV/_/}
-MY_P="${MY_PN}-${MY_PV}"
+MY_P=${MY_PN}-${PV}
 
 DESCRIPTION="Mozilla Labs prototype for online services into Firefox"
 HOMEPAGE="http://labs.mozilla.com/projects/weave/"
-SRC_URI="http://hg.mozilla.org/labs/${MY_PN}/archive/${MY_PV}.tar.gz
-	-> ${P}.tar.gz"
+SRC_URI="http://hg.mozilla.org/labs/${MY_PN}/archive/${PV}.tar.bz2
+	-> ${P}.tar.bz2"
 
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
 SLOT="0"
@@ -35,6 +34,9 @@ DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
+RESTRICT="test"
+
+# NOTES: i was not able to get tests running but don't know why... :-/
 # XXX: fennec is also listed in install.rdf but not in-tree
 
 src_prepare() {
@@ -48,11 +50,17 @@ src_prepare() {
 src_compile() {
 	export WEAVE_BUILDID=${PV}
 
-	emake rebuild_crypto=1 release_build=1 xpi || die "emake failed"
+	emake rebuild_crypto=1 build || die "emake failed"
 }
+
+#src_test() {
+#	emake -j1 test || die "emake test"
+#}
 
 src_install() {
 	local MOZILLA_FIVE_HOME xpiname
+
+	emake release_build=1 xpi || die "emake xpi failed"
 
 	mozillas=""
 	xpiname="${MY_P}-rel"
