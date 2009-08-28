@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.17.ebuild,v 1.1 2009/03/25 23:00:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.17.ebuild,v 1.2 2009/08/28 21:48:01 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils versionator
 
@@ -29,7 +31,7 @@ RDEPEND="=net-misc/nxclient-3.3*
 	x11-libs/libXpm
 	x11-apps/xrdb
 	rdesktop? ( net-misc/rdesktop )
-	vnc? ( || ( net-misc/vnc net-misc/tightvnc ) )"
+	vnc? ( || ( net-misc/vnc[server] net-misc/tightvnc[server] ) )"
 
 S=${WORKDIR}/NX
 
@@ -38,24 +40,8 @@ pkg_preinst()
 	enewuser nx -1 -1 /usr/NX/home/nx
 }
 
-pkg_setup() {
-	if use vnc; then
-		if has_version net-misc/vnc && ! built_with_use net-misc/vnc server;
-		then
-			die "net-misc/vnc needs to be built with USE=\"server\" for VNC support"
-		fi
-
-		if has_version net-misc/tightvnc && ! built_with_use net-misc/tightvnc server;
-		then
-			die "net-misc/tightvnc needs to be built with USE=\"server\" for VNC support"
-		fi
-	fi
-}
-
-src_unpack()
+src_prepare()
 {
-	unpack ${A}
-	cd "${S}"
 	epatch "${FILESDIR}"/nxnode-3.0.0-setup.patch
 }
 
