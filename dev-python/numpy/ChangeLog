@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numpy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.92 2009/08/26 10:04:01 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numpy/ChangeLog,v 1.93 2009/08/28 17:49:10 armin76 Exp $
+
+  28 Aug 2009; Raúl Porcel <armin76@gentoo.org> numpy-1.3.0.ebuild:
+  arm/ia64/s390/sh stable wrt #277354
 
   26 Aug 2009; Tobias Klausmann <klausman@gentoo.org> numpy-1.3.0.ebuild:
   Stable on alpha, bug #277354
