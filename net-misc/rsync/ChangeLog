@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.190 2009/08/27 08:51:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.191 2009/08/28 00:21:57 tanderson Exp $
+
+  27 Aug 2009; Thomas Anderson <tanderson@gentoo.org> rsync-3.0.6.ebuild:
+  stable amd64, bug 282880
 
   27 Aug 2009; Mike Frysinger <vapier@gentoo.org> rsync-3.0.5.ebuild,
   rsync-3.0.6.ebuild:
