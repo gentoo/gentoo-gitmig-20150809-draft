@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.43 2009/08/24 21:27:25 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.44 2009/08/28 09:15:00 fauli Exp $
+
+  28 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  buildbot-0.7.11_p3.ebuild:
+  stable x86, security bug 282855
 
 *buildbot-0.7.11_p3 (24 Aug 2009)
 
