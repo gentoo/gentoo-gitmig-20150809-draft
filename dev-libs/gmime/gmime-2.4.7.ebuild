@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.7.ebuild,v 1.1 2009/05/16 12:29:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.4.7.ebuild,v 1.2 2009/08/28 12:21:22 klausman Exp $
 
 inherit gnome2 eutils mono libtool
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="2.4"
 LICENSE="LGPL-2.1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc mono"
 
 RDEPEND=">=dev-libs/glib-2.12
