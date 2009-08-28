@@ -1,6 +1,10 @@
 # ChangeLog for app-xemacs/cedet-common
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cedet-common/ChangeLog,v 1.1 2009/03/20 06:50:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/cedet-common/ChangeLog,v 1.2 2009/08/28 12:48:38 klausman Exp $
+
+  28 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  cedet-common-1.01.ebuild:
+  Keyworded on alpha, bug #278914
 
 *cedet-common-1.01 (20 Mar 2009)
 
