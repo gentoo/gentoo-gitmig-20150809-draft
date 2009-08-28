@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ipkg-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.12 2009/06/17 13:26:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.13 2009/08/28 22:29:55 vostorga Exp $
+
+  28 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -files/ipkg-utils-1.7-build_fixes.patch:
+  Cleaning out unused patch
 
   17 Jun 2009; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Reassign to maintainer-needed. Change e-mail address (bug #274504).
