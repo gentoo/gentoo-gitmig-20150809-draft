@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-qtlibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.45 2009/06/06 22:18:51 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/ChangeLog,v 1.46 2009/08/28 13:35:01 betelgeuse Exp $
+
+  28 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
+  emul-linux-x86-qtlibs-20071210.ebuild,
+  emul-linux-x86-qtlibs-20081109.ebuild:
+  Migrate to EAPI 2 in order to remove built_with_use usage.
 
   06 Jun 2009; Jeremy Olexa <darkside@gentoo.org>
   -emul-linux-x86-qtlibs-3.4.4-r5.ebuild,

@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20071210.ebuild,v 1.2 2007/12/11 21:45:47 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-qtlibs/emul-linux-x86-qtlibs-20071210.ebuild,v 1.3 2009/08/28 13:35:01 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils emul-linux-x86
 
@@ -9,19 +11,8 @@ KEYWORDS="-* amd64"
 
 DEPEND=""
 RDEPEND=">=app-emulation/emul-linux-x86-baselibs-20071114
-		>=app-emulation/emul-linux-x86-soundlibs-20071114
+		>=app-emulation/emul-linux-x86-soundlibs-20071114[arts]
 		>=app-emulation/emul-linux-x86-xlibs-20071114"
-
-pkg_setup() {
-	if ! built_with_use app-emulation/emul-linux-x86-soundlibs arts; then
-		eerror
-		eerror "\t ${PN} requires arts support in app-emulation/emul-linux-x86-soundlibs."
-		eerror "\t Please compile app-emulation/emul-linux-x86-soundlibs with USE=arts "
-		eerror "\t enabled and then re-merge this package."
-		eerror
-		die "app-emulation/emul-linux-x86-soundlibs must have arts useflag turned on"
-	fi
-}
 
 src_unpack() {
 	emul-linux-x86_src_unpack
