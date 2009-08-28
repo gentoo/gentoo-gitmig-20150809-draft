@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.3.ebuild,v 1.4 2008/05/21 15:53:11 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/tinyerp-server/tinyerp-server-4.0.3.ebuild,v 1.5 2009/08/28 13:57:17 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils distutils
 
@@ -20,24 +22,14 @@ DEPEND=">=virtual/postgresql-server-7.4
 	media-gfx/pydot
 	=dev-python/psycopg-1*
 	dev-libs/libxml2
-	dev-libs/libxslt
+	dev-libs/libxslt[python]
 	dev-python/pychart"
 
 TINYERP_USER=terp
 TINYERP_GROUP=terp
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-setup.patch
-}
-
-pkg_setup() {
-	if ! built_with_use dev-libs/libxslt python ; then
-		eerror "dev-libs/libxslt must be built with python"
-		die "${PN} requires dev-libs/libxslt with USE=python"
-	fi
 }
 
 src_install() {
