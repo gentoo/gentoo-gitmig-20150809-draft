@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/librvp/librvp-0.9.6.ebuild,v 1.5 2008/10/14 01:29:13 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/librvp/librvp-0.9.6.ebuild,v 1.6 2009/08/28 15:23:00 vostorga Exp $
+
+EAPI="2"
 
 inherit multilib
 
@@ -13,20 +15,16 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="net-im/pidgin"
+RDEPEND="net-im/pidgin[gtk]"
 DEPEND="dev-util/pkgconfig
 	${RDEPEND}"
 
-src_compile() {
-
+src_configure() {
 	econf --with-gaim-plugin-dir=/usr/$(get_libdir)/pidgin \
-		--with-gaim-data-dir=/usr/share/pixmaps/pidgin \
-		|| die "configure failed"
-
-	emake || die "make failure"
+		--with-gaim-data-dir=/usr/share/pixmaps/pidgin
 }
 
 src_install() {
 	make install DESTDIR="${D}" || die "install failure"
-	dodoc AUTHORS ChangeLog INSTALL NEWS README rvp_protocol.txt
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 }
