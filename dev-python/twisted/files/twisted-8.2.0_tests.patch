@@ -1,15 +1,13 @@
-diff -uNr TwistedCore-8.2.0.orig/twisted/python/test/test_release.py TwistedCore-8.2.0/twisted/python/test/test_release.py
---- TwistedCore-8.2.0.orig/twisted/python/test/test_release.py	2009-07-16 04:54:40.000000000 +0000
-+++ TwistedCore-8.2.0/twisted/python/test/test_release.py	2009-07-16 04:55:00.000000000 +0000
+--- twisted/python/test/test_release.py
++++ twisted/python/test/test_release.py
 @@ -1919,4 +1919,4 @@
      BookBuilderTests.skip = skipMessage
      DocBuilderTestCase.skip = skipMessage
      ManBuilderTestCase.skip = skipMessage
 -    DistributionBuilderTests.skip = skipMessage
 +    DistributionBuilderTest.skip = skipMessage
-diff -uNr TwistedCore-8.2.0.orig/twisted/python/test/test_util.py TwistedCore-8.2.0/twisted/python/test/test_util.py
---- TwistedCore-8.2.0.orig/twisted/python/test/test_util.py	2009-07-16 04:54:40.000000000 +0000
-+++ TwistedCore-8.2.0/twisted/python/test/test_util.py	2009-07-16 05:19:15.000000000 +0000
+--- twisted/python/test/test_util.py
++++ twisted/python/test/test_util.py
 @@ -18,7 +18,7 @@
  from twisted.internet.defer import Deferred
  from twisted.internet.error import ProcessDone
@@ -247,3 +245,44 @@ diff -uNr TwistedCore-8.2.0.orig/twisted/python/test/test_util.py TwistedCore-8.
 +#        self._testUIDGIDSwitch(1, 1, 2, 1, [0, 2, 0, 1], [])
 +#        self._testUIDGIDSwitch(1, 1, 1, 2, [0, 1, 0, 1], [2, 1])
 +#        self._testUIDGIDSwitch(1, 1, 2, 2, [0, 2, 0, 1], [2, 1])
+--- twisted/trial/test/test_util.py
++++ twisted/trial/test/test_util.py
+@@ -209,22 +209,22 @@
+         return d.addCallback(check)
+ 
+ 
+-    def test_stripFlags(self):
+-        """
+-        If the C{stripFlags} option is passed to C{runSequentially} then the
+-        SUCCESS / FAILURE flags are stripped from the output. Instead, the
+-        Deferred fires a flat list of results containing only the results and
+-        failures.
+-        """
+-        d = util._runSequentially([lambda: self.fail('foo'), lambda: 'bar'],
+-                                  stripFlags=True)
+-        def check(results):
+-            [fail, result] = results
+-            fail.trap(self.failureException)
+-            self.assertEqual(fail.getErrorMessage(), 'foo')
+-            self.assertEqual(result, 'bar')
+-        return d.addCallback(check)
+-    test_stripFlags.todo = "YAGNI"
++#    def test_stripFlags(self):
++#        """
++#        If the C{stripFlags} option is passed to C{runSequentially} then the
++#        SUCCESS / FAILURE flags are stripped from the output. Instead, the
++#        Deferred fires a flat list of results containing only the results and
++#        failures.
++#        """
++#        d = util._runSequentially([lambda: self.fail('foo'), lambda: 'bar'],
++#                                  stripFlags=True)
++#        def check(results):
++#            [fail, result] = results
++#            fail.trap(self.failureException)
++#            self.assertEqual(fail.getErrorMessage(), 'foo')
++#            self.assertEqual(result, 'bar')
++#        return d.addCallback(check)
++#    test_stripFlags.todo = "YAGNI"
+ 
+ 
+ 
