@@ -1,6 +1,3 @@
-
-;;; yasnippet site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
 (autoload 'yas/initialize "yasnippet" "Do necessary initialization.")
 (autoload 'yas/load-directory "yasnippet"
