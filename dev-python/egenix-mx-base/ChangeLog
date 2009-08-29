@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.42 2009/08/28 14:58:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.43 2009/08/29 18:36:13 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> egenix-mx-base-3.1.1.ebuild:
+  ppc stable #280376
 
   28 Aug 2009; Raúl Porcel <armin76@gentoo.org>
   egenix-mx-base-3.1.1.ebuild:
