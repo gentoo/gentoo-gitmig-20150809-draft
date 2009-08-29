@@ -17,6 +17,5 @@
     <flag name="qa">Enable QA tools</flag>
     <flag name="ruby-bindings">Enable Ruby bindings.</flag>
     <flag name="visibility">Enable visibility support (g++ &gt;=4.1)</flag>
-    <flag name="zsh-completion">Enable zsh completion support</flag>
   </use>
 </pkgmetadata>

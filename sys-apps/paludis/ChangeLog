@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/paludis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.138 2009/08/19 19:42:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/paludis/ChangeLog,v 1.139 2009/08/29 00:11:34 williamh Exp $
+
+  29 Aug 2009; William Hubbs <williamh@gentoo.org> metadata.xml:
+  New global use flag 'zsh-completion'.
 
   19 Aug 2009; Ulrich Mueller <ulm@gentoo.org> paludis-0.36.0.ebuild,
   paludis-0.36.1.ebuild, paludis-0.38.0.ebuild, paludis-0.38.1.ebuild,
