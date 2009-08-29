@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/autotest-rails
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.7 2009/08/26 14:57:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/autotest-rails/ChangeLog,v 1.8 2009/08/29 18:44:26 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> autotest-rails-4.1.0.ebuild:
+  ppc stable #280665
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org> autotest-rails-4.1.0.ebuild:
   ia64 stable wrt #280665
