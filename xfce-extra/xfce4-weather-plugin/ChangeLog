@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-weather-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.4 2009/08/26 13:11:40 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/ChangeLog,v 1.5 2009/08/29 17:27:30 armin76 Exp $
+
+  29 Aug 2009; Raúl Porcel <armin76@gentoo.org>
+  xfce4-weather-plugin-0.7.3.ebuild:
+  alpha/arm/ia64/sparc stable wrt #282711
 
   26 Aug 2009; Jeroen Roovers <jer@gentoo.org>
   xfce4-weather-plugin-0.7.3.ebuild:
