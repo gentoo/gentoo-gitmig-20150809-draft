@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.4_rc2.ebuild,v 1.1 2009/08/29 19:18:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.4_rc2.ebuild,v 1.2 2009/08/29 19:25:04 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -18,7 +18,7 @@ IUSE="alsa oss jack lash ladspa flac"
 RDEPEND="jack? ( media-sound/jack-audio-connection-kit )
 	alsa? ( media-libs/alsa-lib )
 	lash? ( media-sound/lash )
-	flac? ( media-libs/flac )
+	flac? ( media-libs/flac[cxx] )
 	ladspa? ( media-libs/liblrdf )
 	app-arch/libarchive
 	x11-libs/qt-core:4
