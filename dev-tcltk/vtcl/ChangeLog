@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/vtcl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.7 2009/08/18 07:25:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/vtcl/ChangeLog,v 1.8 2009/08/29 19:21:03 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> vtcl-1.6.0-r1.ebuild:
+  ppc stable #281410
 
   18 Aug 2009; Christian Faulhammer <fauli@gentoo.org> vtcl-1.6.0-r1.ebuild:
   stable x86, bug 281410
