@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_rc4570.ebuild,v 1.2 2009/08/29 04:32:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_rc4570.ebuild,v 1.3 2009/08/29 04:37:29 jer Exp $
 
 EAPI="2"
 
@@ -138,7 +138,6 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-gentoo.patch"
 	epatch "${FILESDIR}/${PN}-simplify-desktop.patch"
 	epatch "${FILESDIR}/${PN}-freedesktop.patch"
-	epatch "${FILESDIR}/${PN}-java.patch"
 
 	# bug #181300:
 	if use elibc_FreeBSD; then
