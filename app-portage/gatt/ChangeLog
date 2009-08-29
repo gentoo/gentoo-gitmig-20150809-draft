@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gatt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.45 2009/08/29 12:17:08 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gatt/ChangeLog,v 1.46 2009/08/29 19:49:36 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> gatt-0.6.4.ebuild:
+  ppc stable #281870
 
   29 Aug 2009; Thomas Anderson <tanderson@gentoo.org> gatt-0.6.4.ebuild:
   stable amd64, bug 281870
