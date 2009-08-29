@@ -1,6 +1,9 @@
 # ChangeLog for games-board/qgo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.36 2009/07/31 22:53:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/ChangeLog,v 1.37 2009/08/29 18:07:09 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> qgo-1.5.4_p3.ebuild:
+  ppc stable #275841
 
   31 Jul 2009; Jeremy Olexa <darkside@gentoo.org> qgo-1.5.4_p3.ebuild:
   amd64 stable, bug 275841

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p3.ebuild,v 1.5 2009/07/31 22:53:15 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-1.5.4_p3.ebuild,v 1.6 2009/08/29 18:07:09 nixnut Exp $
 
 EAPI=2
 inherit eutils qt3 games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qgo/${P/_p/-r}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-3.3:3"
