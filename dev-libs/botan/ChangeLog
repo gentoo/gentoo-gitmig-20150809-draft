@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/botan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.43 2009/08/17 20:33:21 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/botan/ChangeLog,v 1.44 2009/08/29 19:48:04 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> botan-1.8.4.ebuild:
+  ppc stable #281841
 
 *botan-1.8.6 (17 Aug 2009)
 
