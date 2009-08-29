@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/freedroidrpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.21 2009/06/30 21:23:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/freedroidrpg/ChangeLog,v 1.22 2009/08/29 18:10:39 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> freedroidrpg-0.12.1-r1.ebuild:
+  ppc stable #275893
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   freedroidrpg-0.12.1-r1.ebuild:
