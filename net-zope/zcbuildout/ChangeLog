@@ -1,6 +1,13 @@
 # ChangeLog for net-zope/zcbuildout
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zcbuildout/ChangeLog,v 1.2 2009/06/04 14:48:39 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zcbuildout/ChangeLog,v 1.3 2009/08/29 20:22:34 arfrever Exp $
+
+*zcbuildout-1.4.1 (29 Aug 2009)
+
+  29 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -zcbuildout-1.1.1.ebuild, +zcbuildout-1.4.1.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS. Add missing run-time dependency on
+  dev-python/setuptools.
 
 *zcbuildout-1.2.1 (04 Jun 2009)
 
