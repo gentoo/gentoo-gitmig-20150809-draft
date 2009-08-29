@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.3 2009/08/18 07:11:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/blt/blt-2.4z-r5.ebuild,v 1.4 2009/08/29 19:19:49 nixnut Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -13,7 +13,7 @@ DESCRIPTION="BLT is an extension to the Tk toolkit adding new widgets, geometry 
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ppc ~ppc64 ~sparc x86"
 
 DEPEND=">=dev-lang/tk-8.0
 	x11-libs/libX11"
