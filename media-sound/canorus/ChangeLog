@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/canorus
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/canorus/ChangeLog,v 1.1 2009/08/29 12:10:08 ssuominen Exp $
+
+*canorus-0.7_p1002 (29 Aug 2009)
+
+  29 Aug 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +files/0.7_p1002-desktop_entry.patch, +canorus-0.7_p1002.ebuild,
+  +files/0.7_p1002-sandbox.patch:
+  Initial commit wrt #157501, thanks to multiple committers.
+
