@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/smuxi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.2 2009/04/05 21:20:02 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/smuxi/ChangeLog,v 1.3 2009/08/29 20:57:06 loki_val Exp $
+
+*smuxi-0.6.4 (29 Aug 2009)
+
+  29 Aug 2009; Peter Alfredsen <loki_val@gentoo.org> +smuxi-0.6.4.ebuild:
+  Bump
 
   05 Apr 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/smuxi-0.6.3-infinite-loop.patch, smuxi-0.6.3.ebuild:
