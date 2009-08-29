@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libspectre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.24 2009/08/28 12:17:04 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libspectre/ChangeLog,v 1.25 2009/08/29 17:42:18 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> libspectre-0.2.2.ebuild:
+  ppc stable #256176
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   libspectre-0.2.2.ebuild:
