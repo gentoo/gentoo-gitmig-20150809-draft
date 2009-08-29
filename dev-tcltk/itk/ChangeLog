@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/itk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.16 2009/08/24 18:28:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itk/ChangeLog,v 1.17 2009/08/29 19:16:54 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> itk-3.3.1_pre20090417.ebuild:
+  ppc stable #281440
 
   24 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   itk-3.3.1_pre20090417.ebuild:
