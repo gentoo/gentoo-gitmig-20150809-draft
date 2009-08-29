@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.177 2009/08/23 02:21:21 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.178 2009/08/29 15:45:59 scarabeus Exp $
+
+  29 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.8.ebuild:
+  Drop dep on libstdc++-v3. No longer needed. By bug #282128. Thanks to
+  [Ernico] for confirming on x86.
 
   23 Aug 2009; William Hubbs <williamh@gentoo.org> ati-drivers-8.593.ebuild,
   ati-drivers-9.8.ebuild:
