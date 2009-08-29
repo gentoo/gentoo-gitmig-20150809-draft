@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblqr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.3 2009/08/26 14:17:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.4 2009/08/29 16:56:15 klausman Exp $
+
+  29 Aug 2009; Tobias Klausmann <klausman@gentoo.org> liblqr-0.4.1.ebuild:
+  Keyworded on alpha, bug #281573
 
   26 Aug 2009; Jeroen Roovers <jer@gentoo.org> liblqr-0.4.1.ebuild:
   Marked ~hppa (bug #281573).
