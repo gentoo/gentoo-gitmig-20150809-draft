@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Simple/Config-Simple-4.59.ebuild,v 1.3 2008/07/15 17:03:55 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Simple/Config-Simple-4.59.ebuild,v 1.4 2009/08/29 12:56:13 tanderson Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~sherzodr/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ia64 ~ppc ~ppc64 sparc x86"
+KEYWORDS="amd64 ia64 ~ppc ~ppc64 sparc x86"
 IUSE=""
 
 SRC_TEST="do"
