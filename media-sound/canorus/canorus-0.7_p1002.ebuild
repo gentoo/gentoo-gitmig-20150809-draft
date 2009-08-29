@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/canorus/canorus-0.7_p1002.ebuild,v 1.1 2009/08/29 12:10:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/canorus/canorus-0.7_p1002.ebuild,v 1.2 2009/08/29 12:30:43 ssuominen Exp $
 
 EAPI=2
 CMAKE_IN_SOURCE_BUILD=1
@@ -18,6 +18,9 @@ KEYWORDS="~amd64"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.5
+	sys-libs/zlib
+	media-libs/alsa-lib
+	>=x11-libs/qt-svg-4.4:4
 	>=x11-libs/qt-core-4.4:4
 	>=x11-libs/qt-assistant-4.4:4"
 DEPEND="${RDEPEND}
