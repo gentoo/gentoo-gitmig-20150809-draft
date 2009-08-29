@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.7 2009/08/02 13:52:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.1.4-r1.ebuild,v 1.8 2009/08/29 17:31:20 nixnut Exp $
 
 inherit autotools eutils fortran flag-o-matic multilib portability
 
@@ -22,7 +22,7 @@ RDEPEND="${DEPEND}
 	!crypt? ( net-misc/netkit-rsh )"
 
 SLOT="6"
-KEYWORDS="amd64 ~hppa ~ia64 ~ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
 LICENSE="lam-mpi"
 
 src_unpack() {
