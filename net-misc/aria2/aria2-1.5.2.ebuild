@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.3.3.ebuild,v 1.1 2009/05/10 15:23:14 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aria2/aria2-1.5.2.ebuild,v 1.1 2009/08/29 18:18:32 dev-zero Exp $
 
 EAPI="2"
 
@@ -57,14 +57,13 @@ src_configure() {
 		$(use_with sqlite sqlite3) \
 		$(use_enable bittorrent) \
 		$(use_with ares libcares) \
-		${myconf} \
-		|| die "econf failed"
+		${myconf}
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	rm -rf "${D}/usr/share/doc/aria2c"
+	rm -rf "${D}/usr/share/doc/aria2"
 	dodoc ChangeLog README AUTHORS NEWS
 	dohtml README.html doc/aria2c.1.html
 }
