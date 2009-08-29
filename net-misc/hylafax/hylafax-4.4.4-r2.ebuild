@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.5 2009/01/27 22:55:17 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.4.4-r2.ebuild,v 1.6 2009/08/29 18:22:54 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils multilib pam toolchain-funcs
 
@@ -16,12 +18,12 @@ IUSE="jbig pam mgetty html"
 
 DEPEND=">=sys-libs/zlib-1.1.4
 	virtual/ghostscript
-	>=media-libs/tiff-3.8.2
+	>=media-libs/tiff-3.8.2[jbig?]
 	media-libs/jpeg
 	jbig? ( media-libs/jbigkit )
 	sys-apps/gawk
 	pam? ( virtual/pam )
-	mgetty? ( net-dialup/mgetty )"
+	mgetty? ( net-dialup/mgetty[-fax] )"
 
 RDEPEND="${DEPEND}
 	net-mail/metamail
@@ -29,29 +31,7 @@ RDEPEND="${DEPEND}
 
 export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc /usr/lib/fax"
 
-pkg_setup() {
-	if use mgetty; then
-	    if built_with_use net-dialup/mgetty fax; then
-		eerror "net-dialup/mgetty must be installed without USE=fax"
-		die "merge net-dialup/mgetty without USE=fax"
-	    fi
-	fi
-
-	if use jbig; then
-	    einfo       "Checking for tiff compiled with jbig support..."
-	    if built_with_use media-libs/tiff jbig; then
-		einfo "Found jbig support; continuing..."
-	    else
-		ewarn "Tiff (media-libs/tiff) must be compiled with jbig support."
-		einfo "Please re-emerge tiff with the jbig USE flag or disable it."
-		die "Tiff not merged with jbig USE flag"
-	    fi
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# force it not to strip binaries
 	for dir in etc util faxalter faxcover faxd faxmail faxrm faxstat \
 	    hfaxd sendfax sendpage ; do
@@ -60,7 +40,7 @@ src_unpack() {
 	done
 }
 
-src_compile() {
+src_configure() {
 	# gcc standard C++ header changes
 	if [ $(gcc-major-version) -eq 4 ] && [ $(gcc-minor-version) -ge 3 ] ; then
 	    sed -i -e 's:"new.h":<new>:g' configure util/Types.h || die "sed failed"
@@ -119,7 +99,9 @@ src_compile() {
 
 	# eval required for quoting in ${my_conf} to work properly, better way?
 	eval ./configure --nointeractive ${my_conf} || die "./configure failed"
+}
 
+src_compile() {
 	emake -j1 || die "emake failed"
 }
 
@@ -130,7 +112,7 @@ src_install() {
 	fperms 0600 /var/spool/fax
 	dodir /usr/share/doc/${P}/html
 
-	make \
+	emake \
 		BIN=${D}/usr/bin \
 		SBIN=${D}/usr/sbin \
 		LIBDIR=${D}/usr/$(get_libdir) \
