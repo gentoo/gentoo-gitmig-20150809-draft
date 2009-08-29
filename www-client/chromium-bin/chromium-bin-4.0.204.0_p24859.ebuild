@@ -1,12 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.14 2009/08/29 22:15:13 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.204.0_p24859.ebuild,v 1.1 2009/08/29 22:15:13 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
 
+# Latest revision id can be found at
+# http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST
+MY_PV="${PV/[0-9.]*\_p}"
+
 DESCRIPTION="Open-source version of Google Chrome web browser"
 HOMEPAGE="http://code.google.com/chromium/"
+SRC_URI="x86? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/${MY_PV}/chrome-linux.zip -> ${PN}-x86-${MY_PV}.zip )
+	amd64? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux-64/${MY_PV}/chrome-linux.zip -> ${PN}-amd64-${MY_PV}.zip )"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
@@ -31,17 +37,6 @@ QA_TEXTRELS="opt/chromium.org/chrome-linux/libavcodec.so.52
 QA_PRESTRIPPED="opt/chromium.org/chrome-linux/libavcodec.so.52
 	opt/chromium.org/chrome-linux/libavformat.so.52
 	opt/chromium.org/chrome-linux/libavutil.so.50"
-
-src_unpack() {
-	LV=`curl --silent http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST`
-	elog "Installing/updating to version ${LV}"
-	if use amd64; then
-		arch_path="-64"
-	fi
-	wget -c "http://build.chromium.org/buildbot/snapshots/chromium-rel-linux${arch_path}/${LV}/chrome-linux.zip" -O "${T}"/${PN}-${LV}.zip
-	unzip -qo "${T}"/${PN}-${LV}.zip || die "Unpack failed"
-	chmod -fR a+rX,u+w,g-w,o-w chrome-linux/
-}
 
 src_install() {
 	declare CHROMIUM_HOME=/opt/chromium.org
