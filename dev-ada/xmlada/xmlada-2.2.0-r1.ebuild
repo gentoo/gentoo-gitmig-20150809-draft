@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0-r1.ebuild,v 1.5 2008/05/06 11:49:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/xmlada-2.2.0-r1.ebuild,v 1.6 2009/08/29 21:49:37 flameeyes Exp $
 
 inherit gnat versionator
 
@@ -49,7 +49,8 @@ lib_compile()
 
 # NOTE: we are using $1 - the passed gnat profile name
 lib_install() {
-	make PREFIX="${DL}" install || die "install failed"
+	# bug #283160
+	emake -j1 PREFIX="${DL}" install || die "install failed"
 
 	pushd "${DL}"
 		# fix xmlada-config hardsets locations and move it to proper location

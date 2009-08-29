@@ -1,6 +1,10 @@
 # ChangeLog for dev-ada/xmlada
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.27 2008/05/06 11:49:35 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/xmlada/ChangeLog,v 1.28 2009/08/29 21:49:37 flameeyes Exp $
+
+  29 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  xmlada-2.2.0-r1.ebuild:
+  Use -j1 for install (bug #283160).
 
   06 May 2008; George Shapovalov <george@gentoo.org> xmlada-2.2.0.ebuild,
   xmlada-2.2.0-r1.ebuild:
