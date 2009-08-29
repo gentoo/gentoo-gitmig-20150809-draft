@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/augeas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.10 2009/08/27 12:40:25 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/augeas/ChangeLog,v 1.11 2009/08/29 17:47:46 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> augeas-0.5.2.ebuild:
+  ppc stable #282759
 
   27 Aug 2009; Christian Faulhammer <fauli@gentoo.org> augeas-0.5.2.ebuild:
   stable x86, bug 282759
