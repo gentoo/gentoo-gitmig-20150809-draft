@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10.ebuild,v 1.5 2009/08/29 11:30:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10.ebuild,v 1.6 2009/08/29 19:18:31 nixnut Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -10,7 +10,7 @@ SRC_URI="https://fedorahosted.org/releases/n/e/newt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="gpm tcl nls"
 
 RDEPEND="=sys-libs/slang-2*

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.49 2009/08/29 11:30:40 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.50 2009/08/29 19:18:31 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> newt-0.52.10.ebuild:
+  ppc stable #281402
 
   29 Aug 2009; Tobias Klausmann <klausman@gentoo.org> newt-0.52.10.ebuild:
   Stable on alpha, bug #281402
