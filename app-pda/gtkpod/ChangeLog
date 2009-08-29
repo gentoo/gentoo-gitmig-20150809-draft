@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/gtkpod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.76 2009/08/15 08:42:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/ChangeLog,v 1.77 2009/08/29 18:50:26 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> gtkpod-0.99.14_p20090710.ebuild:
+  ppc stable #280792
 
   15 Aug 2009; Markus Meier <maekke@gentoo.org>
   gtkpod-0.99.14_p20090710.ebuild:
