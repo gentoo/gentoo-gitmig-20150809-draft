@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.2.ebuild,v 1.3 2009/04/25 16:06:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/compiz-0.8.2-r3.ebuild,v 1.1 2009/08/29 12:28:11 mrpouet Exp $
 
 EAPI="2"
 
-inherit autotools eutils gnome2-utils multilib
+inherit autotools eutils gnome2-utils
 
 DESCRIPTION="3D composite and windowmanager"
 HOMEPAGE="http://www.compiz.org/"
@@ -13,13 +13,12 @@ SRC_URI="http://releases.compiz.org/${PV}/${P}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
-IUSE="+cairo dbus fuse gnome gtk kde kde4 +svg"
+IUSE="+cairo dbus fuse gnome gtk kde kde3 +svg"
 
 DEPEND="
 	dev-libs/glib:2
 	dev-libs/libxml2
 	dev-libs/libxslt
-	>=media-libs/glitz-0.5.6
 	media-libs/libpng
 	>=media-libs/mesa-6.5.1-r1
 	>=x11-base/xorg-server-1.1.1-r1
@@ -49,16 +48,16 @@ DEPEND="
 		x11-libs/pango
 	)
 	kde? (
+		|| (
+			>=kde-base/kwin-4.2.0
+			kde-base/kwin:live
+		)
+	)
+	kde3? (
 		|| ( kde-base/kwin:3.5
 			kde-base/kdebase:3.5
 		)
 		dev-libs/dbus-qt3-old
-	)
-	kde4? (
-		|| (
-			kde-base/kwin:4.2
-			kde-base/kwin:live
-		)
 	)
 	svg? (
 		>=gnome-base/librsvg-2.14.0:2
@@ -77,19 +76,20 @@ DEPEND="${DEPEND}
 
 src_prepare() {
 
-	use gnome || {
-		epatch "${FILESDIR}"/${PN}-no-gconf.patch
-		ln -s /usr/share/aclocal/gconf-2.m4 acinclude.m4
+	echo "gtk/gnome/compiz-wm.desktop.in" >> "${S}/po/POTFILES.skip"
+	echo "metadata/core.xml.in" >> "${S}/po/POTFILES.skip"
 
-		# required to apply the above patch
-		intltoolize --copy --force || die "intltoolize failed"
-		eautoreconf || die "eautoreconf failed"
-	}
+	# Missing gconf flags, fix bug #282807
+	epatch "${FILESDIR}"/${P}-gtk-gnome-missing-gconf-flags.patch
+
+	if ! use gnome; then
+		epatch "${FILESDIR}"/${PN}-no-gconf.patch
+	fi
+	eautoreconf
 }
 
 src_configure() {
-	econf \
-		--disable-gnome-keybindings \
+	econf --disable-gnome-keybindings \
 		--enable-librsvg \
 		--with-default-plugins \
 		$(use_enable cairo annotate) \
@@ -100,9 +100,8 @@ src_configure() {
 		$(use_enable gnome gconf) \
 		$(use_enable gnome metacity) \
 		$(use_enable gtk) \
-		$(use_enable kde) \
-		$(use_enable kde4) \
-		|| die "econf failed"
+		$(use_enable kde kde4) \
+		$(use_enable kde3 kde)
 }
 
 src_install() {
@@ -112,25 +111,32 @@ src_install() {
 	dobin "${FILESDIR}/compiz-manager" || die "dobin failed"
 
 	# Add the full-path to lspci
-	sed -i "s#lspci#/usr/sbin/lspci#" "${D}/usr/bin/compiz-manager"
+	sed -i "s#lspci#/usr/sbin/lspci#" "${D}/usr/bin/compiz-manager" || die "sed 1 failed"
 
 	# Fix the hardcoded lib paths
-	sed -i "s#/lib/#/$(get_libdir)/#g" "${D}/usr/bin/compiz-manager"
+	sed -i "s#/lib/#/$(get_libdir)/#g" "${D}/usr/bin/compiz-manager" || die "sed 2 failed"
 
 	# Create gentoo's config file
-	dodir /etc/xdg/compiz
+	dodir /etc/xdg/compiz || die "dodir failed"
 
 	cat <<- EOF > "${D}/etc/xdg/compiz/compiz-manager"
 	COMPIZ_BIN_PATH="/usr/bin/"
 	PLUGIN_PATH="/usr/$(get_libdir)/compiz/"
-	LIBGL_NVIDIA="/usr/$(get_libdir)/opengl/xorg-x11/libGL.so.1.2"
-	LIBGL_FGLRX="/usr/$(get_libdir)/opengl/xorg-x11/libGL.so.1.2"
+	LIBGL_NVIDIA="/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.so.1.2"
+	LIBGL_FGLRX="/usr/$(get_libdir)/opengl/xorg-x11/lib/libGL.so.1.2"
 	KWIN="$(type -p kwin)"
 	METACITY="$(type -p metacity)"
 	SKIP_CHECKS="yes"
 	EOF
 
 	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+
+	insinto "/usr/share/applications"
+	doins "${FILESDIR}/compiz.desktop" || die "Failed to install compiz.desktop"
+}
+
+pkg_preinst() {
+	use gnome && gnome2_gconf_savelist
 }
 
 pkg_postinst() {

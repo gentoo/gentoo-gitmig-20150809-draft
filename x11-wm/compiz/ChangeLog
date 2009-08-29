@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/compiz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.43 2009/06/12 03:09:39 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/compiz/ChangeLog,v 1.44 2009/08/29 12:28:11 mrpouet Exp $
+
+*compiz-0.8.2-r3 (29 Aug 2009)
+
+  29 Aug 2009; Romain Perier <mrpouet@gentoo.org>
+  -compiz-0.6.2-r1.ebuild, -compiz-0.8.2.ebuild, -compiz-0.8.2-r1.ebuild,
+  -compiz-0.8.2-r2.ebuild, +compiz-0.8.2-r3.ebuild,
+  +files/compiz-0.8.2-gtk-gnome-missing-gconf-flags.patch, files/compiz-manager,
+  metadata.xml:
+  Fix libGL.so.1.2 path in compiz-manager (bug #274762), update KDE4
+  dependencies (bug #277016), fix missing gconf flags in gnome plugin (bug
+  #282807), fix QA warnings, Drop old revisions.
 
 *compiz-0.8.2-r2 (12 Jun 2009)
 
