@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.203 2009/07/11 00:08:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.204 2009/08/29 18:09:00 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> lirc-0.8.5.ebuild:
+  ppc stable #275872
 
   11 Jul 2009; <chainsaw@gentoo.org> lirc-0.8.5.ebuild:
   Marked stable on AMD64 for bug #275872; compile-tested on a dual Opteron

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.5.ebuild,v 1.4 2009/07/11 00:08:13 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.5.ebuild,v 1.5 2009/08/29 18:09:00 nixnut Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -17,7 +17,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ppc ~ppc64 x86"
 IUSE="debug doc X hardware-carrier transmitter"
 
 S="${WORKDIR}/${MY_P}"
