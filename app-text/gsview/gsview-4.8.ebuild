@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.12 2007/10/12 16:28:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/gsview-4.8.ebuild,v 1.13 2009/08/29 22:07:12 flameeyes Exp $
 
 inherit eutils
 
@@ -36,7 +36,8 @@ src_compile() {
 	sed -i -e "s:GSVIEW_DOCPATH:\"/usr/share/doc/${PF}/html/\":" srcunx/gvx.c
 
 	## run Makefile
-	make || die "Error compiling files."
+	# bug #283165
+	emake -j1 || die "Error compiling files."
 }
 
 src_install() {

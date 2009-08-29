@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gsview
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.29 2007/10/10 19:31:52 genstef Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gsview/ChangeLog,v 1.30 2009/08/29 22:07:12 flameeyes Exp $
+
+  29 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org> gsview-4.8.ebuild:
+  Use emake -j1 (bug #283165).
 
   10 Oct 2007; Stefan Schweizer <genstef@gentoo.org> gsview-4.8.ebuild:
   Add desktop entry for bug 188582 thanks to Daniel Pielmeier
