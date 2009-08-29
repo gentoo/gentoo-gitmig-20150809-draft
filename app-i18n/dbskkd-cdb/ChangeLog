@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.19 2009/08/29 17:15:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.20 2009/08/29 17:17:07 klausman Exp $
+
+  29 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  dbskkd-cdb-2.00.ebuild:
+  Stable on alpha, bug #281579
 
   29 Aug 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
   Keyworded on alpha, bug #281579
