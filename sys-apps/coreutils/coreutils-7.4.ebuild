@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.4.ebuild,v 1.7 2009/08/19 16:54:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-7.4.ebuild,v 1.8 2009/08/29 19:44:46 nixnut Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.gz
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86"
 IUSE="acl caps gmp nls selinux static vanilla xattr"
 
 RDEPEND="caps? ( sys-libs/libcap )
