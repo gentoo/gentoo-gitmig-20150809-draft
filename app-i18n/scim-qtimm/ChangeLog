@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/scim-qtimm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.49 2009/08/15 13:21:02 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/ChangeLog,v 1.50 2009/08/29 18:21:45 klausman Exp $
+
+  29 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  scim-qtimm-0.9.4-r1.ebuild:
+  Stable on alpha, bug #281583
 
   15 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
   scim-qtimm-0.9.4-r1.ebuild:
