@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.122 2009/05/18 03:21:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/ChangeLog,v 1.123 2009/08/29 19:52:14 arfrever Exp $
+
+  29 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  wxpython-2.8.10.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS. Add missing dependency on dev-python/setuptools.
 
 *wxpython-2.8.10.1 (18 May 2009)
 

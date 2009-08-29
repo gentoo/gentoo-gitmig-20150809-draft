@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.1 2009/05/18 03:21:16 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.2 2009/08/29 19:52:14 arfrever Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit alternatives eutils multilib python wxwidgets flag-o-matic fdo-mime
+inherit alternatives eutils fdo-mime flag-o-matic multilib python wxwidgets
 
 MY_P="${P/wxpython-/wxPython-src-}"
 
@@ -19,9 +20,10 @@ SRC_URI="mirror://sourceforge/wxpython/${MY_P}.tar.bz2
 LICENSE="wxWinLL-3"
 SLOT="2.8"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
-IUSE="cairo opengl doc examples"
+IUSE="cairo doc examples opengl"
 
 RDEPEND="
+	dev-python/setuptools
 	>=x11-libs/wxGTK-${PV}:2.8[opengl?]
 	>=dev-lang/python-2.4
 	>=x11-libs/gtk+-2.4
@@ -36,7 +38,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/${MY_P}/wxPython/"
+RESTRICT_PYTHON_ABIS="3*"
+
+S="${WORKDIR}/${MY_P}/wxPython"
 DOC_S="${WORKDIR}/wxPython-${PV}"
 
 src_prepare() {
@@ -55,6 +59,8 @@ src_prepare() {
 		cd "${DOC_S}"
 		epatch "${FILESDIR}"/${PN}-${SLOT}-wxversion-demo.patch
 	fi
+
+	python_copy_sources
 }
 
 src_configure() {
@@ -63,36 +69,45 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 
 	use opengl \
-		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
-		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
+		&& mypyconf+=" BUILD_GLCANVAS=1" \
+		|| mypyconf+=" BUILD_GLCANVAS=0"
 
-	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
-	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
+	mypyconf+=" WX_CONFIG=${WX_CONFIG}"
+	mypyconf+=" WXPORT=gtk2 UNICODE=1"
 }
 
 src_compile() {
-	python setup.py ${mypyconf} build || die "setup.py build failed"
+	building() {
+		"$(PYTHON)" setup.py ${mypyconf} build
+	}
+	python_execute_function -s building
 }
 
 src_install() {
 	local mypyconf
-	python_version
-	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
 
-	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
+	mypyconf+=" WX_CONFIG=${WX_CONFIG}"
 	use opengl \
-		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
-		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
+		&& mypyconf+=" BUILD_GLCANVAS=1" \
+		|| mypyconf+=" BUILD_GLCANVAS=0"
 
-	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
+	mypyconf+=" WXPORT=gtk2 UNICODE=1"
 
-	python setup.py ${mypyconf} install --root="${D}" \
-		--install-purelib ${site_pkgs} || die "setup.py install failed"
+	installation() {
+		"$(PYTHON)" setup.py ${mypyconf} install --root="${D}" --install-purelib $(python_get_sitedir)
+	}
+	python_execute_function -s installation
 
 	# Collision protection.
-	for file in "${D}"/usr/bin/* "${D}"/${site_pkgs}/wx{version.*,.pth}; do
+	for file in "${D}"/usr/bin/*; do
 		mv "${file}" "${file}-${SLOT}"
 	done
+	rename_files() {
+		for file in "${D}$(python_get_sitedir)/"wx{version.*,.pth}; do
+			mv "${file}" "${file}-${SLOT}"
+		done
+	}
+	python_execute_function -q rename_files
 
 	dodoc "${S}"/docs/{CHANGES,PyManual,README,wxPackage,wxPythonManual}.txt
 
@@ -118,16 +133,15 @@ src_install() {
 }
 
 pkg_postinst() {
-	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
-
-	python_mod_optimize ${site_pkgs}
-
 	fdo-mime_desktop_database_update
 
-	alternatives_auto_makesym \
-		"${site_pkgs}/wx.pth" "${site_pkgs}/wx.pth-[0-9].[0-9]"
-	alternatives_auto_makesym \
-		"${site_pkgs}/wxversion.py" "${site_pkgs}/wxversion.py-[0-9].[0-9]"
+	create_symlinks() {
+		alternatives_auto_makesym "$(python_get_sitedir)/wx.pth" "$(python_get_sitedir)/wx.pth-[0-9].[0-9]"
+		alternatives_auto_makesym "$(python_get_sitedir)/wxversion.py" "$(python_get_sitedir)/wxversion.py-[0-9].[0-9]"
+	}
+	python_execute_function --action-message 'Updating symlinks with Python ${PYTHON_ABI}' create_symlinks
+
+	python_mod_optimize wx-${SLOT}-gtk2-unicode wxversion.py
 
 	echo
 	elog "Gentoo uses the Multi-version method for SLOT'ing."
@@ -160,12 +174,11 @@ pkg_postinst() {
 pkg_postrm() {
 	python_mod_cleanup
 
-	local site_pkgs=/usr/$(get_libdir)/python${PYVER}/site-packages
-
 	fdo-mime_desktop_database_update
 
-	alternatives_auto_makesym \
-		"${site_pkgs}/wx.pth" "${site_pkgs}/wx.pth-[0-9].[0-9]"
-	alternatives_auto_makesym \
-		"${site_pkgs}/wxversion.py" "${site_pkgs}/wxversion.py-[0-9].[0-9]"
+	create_symlinks() {
+		alternatives_auto_makesym "$(python_get_sitedir)/wx.pth" "$(python_get_sitedir)/wx.pth-[0-9].[0-9]"
+		alternatives_auto_makesym "$(python_get_sitedir)/wxversion.py" "$(python_get_sitedir)/wxversion.py-[0-9].[0-9]"
+	}
+	python_execute_function --action-message 'Updating symlinks with Python ${PYTHON_ABI}' create_symlinks
 }
