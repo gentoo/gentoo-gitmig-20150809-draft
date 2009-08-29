@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/dbskkd-cdb
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.18 2009/02/15 04:27:35 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.19 2009/08/29 17:15:45 klausman Exp $
+
+  29 Aug 2009; Tobias Klausmann <klausman@gentoo.org> ChangeLog:
+  Keyworded on alpha, bug #281579
 
 *dbskkd-cdb-2.00 (15 Feb 2009)
 
