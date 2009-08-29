@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_intercept/asterisk-app_intercept-20060120.ebuild,v 1.1 2006/05/06 15:23:37 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-app_intercept/asterisk-app_intercept-20060120.ebuild,v 1.2 2009/08/29 17:39:48 robbat2 Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.netdomination.org/pub/asterisk/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=net-misc/asterisk-1.2.0
 	!=net-misc/asterisk-1.0*"
