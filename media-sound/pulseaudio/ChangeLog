@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.146 2009/08/25 10:24:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.147 2009/08/29 16:54:02 flameeyes Exp $
+
+  29 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.16_rc6.ebuild, pulseaudio-0.9.16_rc6-r51.ebuild:
+  Add an ipv6 USE flag to disable support for IPv6.
 
   25 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.16_rc6.ebuild, pulseaudio-0.9.16_rc6-r51.ebuild:
