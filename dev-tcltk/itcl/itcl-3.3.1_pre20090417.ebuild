@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417.ebuild,v 1.3 2009/08/29 10:57:35 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.3.1_pre20090417.ebuild,v 1.4 2009/08/29 19:14:14 nixnut Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="alpha ~amd64 ~ia64 ppc ~sparc x86"
 
 DEPEND="dev-lang/tcl"
 
