@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.192 2009/08/28 11:59:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.193 2009/08/29 17:15:23 jer Exp $
+
+  29 Aug 2009; Jeroen Roovers <jer@gentoo.org> rsync-3.0.6.ebuild:
+  Stable for HPPA (bug #282880).
 
   28 Aug 2009; Raúl Porcel <armin76@gentoo.org> rsync-3.0.6.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc/x86 stable wrt #282880
