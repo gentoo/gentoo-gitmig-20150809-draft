@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r3.ebuild,v 1.2 2009/08/16 12:03:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/moc/moc-2.5.0_alpha3-r3.ebuild,v 1.3 2009/08/29 19:34:00 nixnut Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.daper.net/pub/soft/${PN}/unstable/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ppc ~ppc64 ~sparc x86"
 IUSE="alsa aac jack mad musepack vorbis flac wavpack sndfile modplug timidity sid ffmpeg speex libsamplerate curl debug"
 
 RDEPEND="media-libs/libao
