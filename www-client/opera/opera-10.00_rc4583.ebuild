@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_rc4570.ebuild,v 1.2 2009/08/29 04:32:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00_rc4583.ebuild,v 1.1 2009/08/29 04:32:00 jer Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.opera.com/"
 
 SLOT="0"
 LICENSE="OPERA-10.00"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 
 RESTRICT="mirror strip test"
 QA_DT_HASH="opt/${PN}/.*"
@@ -29,7 +29,7 @@ O_U="http://snapshot.opera.com/unix/snapshot-${PV/*_rc}/"
 
 # 1) Please check for missing (qt3/qt-static) builds
 # 2) and only then update the build number manually
-OPERABUILD="4570"
+OPERABUILD="4583"
 
 if [ "${PV/*_rc}" = "${OPERABUILD}" ]; then
 	O_P="${P/_rc*/}-${OPERABUILD}"
@@ -54,6 +54,7 @@ SRC_URI="
 			)
 		)
 	)
+	ppc? ( ${O_U}ppc-linux/${O_P}.gcc4-shared-qt3.ppc.tar.bz2 )
 	x86? (
 		qt-static? ( ${O_U}intel-linux/${O_P}.gcc4-bundled-qt4.i386.tar.bz2 )
 		!qt-static? (
@@ -96,6 +97,7 @@ RDEPEND="
 			)
 		)
 	)
+	ppc? ( =x11-libs/qt-3*[-immqt] )
 	x86? (
 		qt-static? ( media-libs/nas )
 		!qt-static? (
