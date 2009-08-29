@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sud
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/ChangeLog,v 1.8 2009/07/29 20:17:43 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sud/ChangeLog,v 1.9 2009/08/29 11:47:35 lu_zero Exp $
+
+  29 Aug 2009; Luca Barbato <lu_zero@gentoo.org> sud-1.3.ebuild:
+  Fix parallel install, thanks to Kevin Pyle for providing the fix in bug
+  #277406
 
   29 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> sud-1.3.ebuild:
   Use -j1 for install (bug #277406).
