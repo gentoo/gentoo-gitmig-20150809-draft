@@ -6,8 +6,5 @@
 		<name>Daniel Gryniewicz</name>
 	</maintainer>
 	<herd>freedesktop</herd>
-	<use>
-		<flag name="zsh-completion">Install zsh command completion.</flag>
-	</use>
 </pkgmetadata>
 
