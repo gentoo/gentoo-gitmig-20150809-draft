@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.66 2009/08/28 16:08:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.67 2009/08/29 02:15:24 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -233,7 +233,7 @@ python_execute_function() {
 				separate_build_dirs="1"
 				;;
 			-*)
-				die "${FUNCNAME}(): Unrecognized option $1"
+				die "${FUNCNAME}(): Unrecognized option '$1'"
 				;;
 			*)
 				break
@@ -248,12 +248,16 @@ python_execute_function() {
 		fi
 		function="$1"
 		shift
+
+		if [[ -z "$(type -t "${function}")" ]]; then
+			die "${FUNCNAME}(): '${function}' function isn't defined"
+		fi
 	else
 		if [[ "$#" -ne "0" ]]; then
-			die "${FUNCNAME}(): --default-function option and function name cannot be specified simultaneously"
+			die "${FUNCNAME}(): '--default-function' option and function name cannot be specified simultaneously"
 		fi
 		if has "${EAPI:-0}" 0 1; then
-			die "${FUNCNAME}(): --default-function option cannot be used in this EAPI"
+			die "${FUNCNAME}(): '--default-function' option cannot be used in this EAPI"
 		fi
 
 		if [[ "${EBUILD_PHASE}" == "configure" ]]; then
@@ -392,7 +396,7 @@ python_execute_function() {
 # @DESCRIPTION:
 # Makes sure PYTHON_USE_WITH or PYTHON_USE_WITH_OR listed use flags
 # are respected. Only exported if one of those variables is set.
-if ! has ${EAPI:-0} 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR} ]]; then
+if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR} ]]; then
 	python_pkg_setup_fail() {
 		eerror "${1}"
 		die "${1}"
@@ -442,6 +446,23 @@ if ! has ${EAPI:-0} 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR} 
 	fi
 	DEPEND="${PYTHON_USE_WITH_ATOM}"
 	RDEPEND="${PYTHON_USE_WITH_ATOM}"
+fi
+
+# @ECLASS-VARIABLE: PYTHON_DEFINE_DEFAULT_FUNCTIONS
+# @DESCRIPTION:
+# Set this to define default functions for the following ebuild phases:
+# src_prepare, src_configure, src_compile, src_test, src_install.
+if ! has "${EAPI:-0}" 0 1 && [[ -n "${PYTHON_DEFINE_DEFAULT_FUNCTIONS}" ]]; then
+	python_src_prepare() {
+		python_copy_sources
+	}
+
+	for python_default_function in src_configure src_compile src_test src_install; do
+		eval "python_${python_default_function}() { python_execute_function -d -s; }"
+	done
+	unset python_default_function
+
+	EXPORT_FUNCTIONS src_prepare src_configure src_compile src_test src_install
 fi
 
 # @FUNCTION: python_disable_pyc
