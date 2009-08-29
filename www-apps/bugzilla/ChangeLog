@@ -1,6 +1,22 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.130 2009/06/26 17:00:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.131 2009/08/29 09:34:26 scarabeus Exp $
+
+*bugzilla-3.4.1 (29 Aug 2009)
+*bugzilla-3.2.4 (29 Aug 2009)
+*bugzilla-3.0.8 (29 Aug 2009)
+*bugzilla-2.22.7 (29 Aug 2009)
+
+  29 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/3.4/bugzilla.cron.daily, +bugzilla-2.22.7.ebuild,
+  -bugzilla-3.2.ebuild, +files/3.4/bugzilla.cron.tab,
+  +bugzilla-3.0.8.ebuild, -bugzilla-3.2.3.ebuild,
+  +files/3.4/postinstall-en.txt, +bugzilla-3.2.4.ebuild,
+  +files/3.4/reconfig, +bugzilla-3.4.1.ebuild:
+  New minor version bump to 3.4.1. Bump 3.2 series to 3.2.4 and remove old.
+  Bump old 3.0 and 3.22 to their respective latest versions with simple
+  renaming of the current stable version.
+  Note: this is non-maintainer commit.
 
   26 Jun 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   bugzilla-3.2.3.ebuild:

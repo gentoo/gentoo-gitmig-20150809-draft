@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.2.3.ebuild,v 1.2 2009/06/26 17:00:11 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.1.ebuild,v 1.1 2009/08/29 09:34:27 scarabeus Exp $
 
 EAPI="2"
 
 inherit webapp depend.apache versionator eutils
 
-MY_PB=3.0
+MY_PB=$(get_version_component_range 1-2)
 
 DESCRIPTION="Bugzilla is the Bug-Tracking System from the Mozilla project"
 SRC_URI="http://ftp.mozilla.org/pub/mozilla.org/webtools/${P}.tar.gz"
@@ -21,15 +21,20 @@ RDEPEND="
 	virtual/httpd-cgi
 	>=dev-lang/perl-5.8.8
 
-	>=dev-perl/DBI-1.50
+	>=dev-perl/DBI-1.601
+	>=dev-perl/DateTime-0.50
+	>=dev-perl/DateTime-Locale-0.43
+	>=dev-perl/URI-1.38
 	>=dev-perl/Email-MIME-1.861
+	>=dev-perl/Email-MIME-Encodings-1.313
 	>=dev-perl/Email-MIME-Modifier-1.442
 	>=dev-perl/Email-Send-2.190
-	>=dev-perl/MIME-tools-5.417
-	>=dev-perl/Template-Toolkit-2.19
+	>=dev-perl/MIME-tools-5.427
+	>=dev-perl/Template-Toolkit-2.22
 	>=dev-perl/TimeDate-1.16
 	>=virtual/perl-CGI-3.29
-	>=virtual/perl-File-Spec-3.25
+	>=virtual/perl-Digest-SHA-5.46
+	>=virtual/perl-File-Spec-3.27.01
 	>=virtual/perl-MIME-Base64-3.07
 
 	mysql? ( >=dev-perl/DBD-mysql-4.00.5 )
@@ -38,18 +43,18 @@ RDEPEND="
 
 	modperl? (
 		>=dev-perl/Apache-DBI-1.06
-		=www-apache/mod_perl-2*
+		www-apache/mod_perl:1
 	)
 
 	extras? (
 		dev-perl/Authen-SASL
-		>=dev-perl/Chart-2.3
+		>=dev-perl/Chart-2.4.1
 		dev-perl/Email-MIME-Attachment-Stripper
 		dev-perl/Email-Reply
 		>=dev-perl/GD-2.35
 		dev-perl/GDGraph
 		dev-perl/GDTextUtil
-		>=dev-perl/HTML-Parser-3.56
+		>=dev-perl/HTML-Parser-3.60
 		dev-perl/HTML-Scrubber
 		dev-perl/libwww-perl
 		>=dev-perl/PatchReader-0.9.5
@@ -57,26 +62,20 @@ RDEPEND="
 		dev-perl/SOAP-Lite
 		dev-perl/Template-GD
 		dev-perl/XML-Twig
+		media-gfx/imagemagick[perl]
 	)
 "
-
+# from extras we miss:
+# TheSchwartz   (Any)   Mail Queueing
+# Daemon::Generic   (Any)   Mail Queueing
 want_apache modperl
 
 pkg_setup() {
 	depend.apache_pkg_setup modperl
 	webapp_pkg_setup
-
-	if use extras ; then
-		if ! has_version media-gfx/imagemagick || ! built_with_use media-gfx/imagemagick perl ; then
-			elog "Consider installing media-gfx/imagemagick with USE=\"perl\""
-			elog "to convert BMP attachments to PNG"
-		fi
-	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	ecvs_clean
 }
 
