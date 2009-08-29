@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.0.0.ebuild,v 1.2 2009/04/15 23:21:32 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-4.0.0.ebuild,v 1.3 2009/08/29 21:41:01 flameeyes Exp $
 
 inherit multilib elisp-common
 
@@ -43,7 +43,8 @@ src_compile() {
 RESTRICT=test
 
 src_install() {
-	emake ${OPTIONS} DESTDIR="${D}" install || die
+	# bug #283158
+	emake -j1 ${OPTIONS} DESTDIR="${D}" install || die
 
 	rm "${D}"/usr/share/doc/${P}/LICENSE
 	dodoc NEWS
