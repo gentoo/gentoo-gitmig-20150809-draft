@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkTheme
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.19 2009/08/29 11:04:11 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.20 2009/08/29 19:11:30 nixnut Exp $
+
+  29 Aug 2009; nixnut <nixnut@gentoo.org> tkTheme-1.0-r1.ebuild:
+  ppc stable #281394
 
   29 Aug 2009; Tobias Klausmann <klausman@gentoo.org> tkTheme-1.0-r1.ebuild:
   Stable on alpha, bug #281394
