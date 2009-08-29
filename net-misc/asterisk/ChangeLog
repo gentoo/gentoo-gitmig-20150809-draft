@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.206 2009/08/27 14:02:17 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.207 2009/08/29 22:53:20 chainsaw Exp $
+
+*asterisk-1.6.1.5 (29 Aug 2009)
+
+  29 Aug 2009; <chainsaw@gentoo.org> +asterisk-1.6.1.5.ebuild:
+  Version bump. The first full non-security release since 1.6.1.2; two of
+  our patches now appear to be upstream.
 
 *asterisk-1.6.1.4 (27 Aug 2009)
 
