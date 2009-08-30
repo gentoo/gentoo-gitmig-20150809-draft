@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.4.1.ebuild,v 1.5 2009/07/29 22:22:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-2.4.1.ebuild,v 1.6 2009/08/30 09:12:54 kolmodin Exp $
 
 CABAL_FEATURES="bin lib"
 # don't enable profiling as the 'ghc' package is not built with profiling
@@ -17,7 +17,7 @@ SRC_URI="http://hackage.haskell.org/packages/archive/${PN}/${PV}/${P}.tar.gz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 # haddock-2.4.1 also deps on the upgradeable package dev-haskell/filepath.
