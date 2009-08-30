@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.67 2009/08/30 16:31:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.68 2009/08/30 20:47:57 tanderson Exp $
+
+  30 Aug 2009; Thomas Anderson <tanderson@gentoo.org>
+  mlterm-2.9.4-r4.ebuild:
+  stable amd64, bug 282924
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> mlterm-2.9.4-r4.ebuild:
   ppc stable #282924
