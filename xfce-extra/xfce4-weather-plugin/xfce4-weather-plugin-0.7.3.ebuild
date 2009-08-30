@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/xfce4-weather-plugin-0.7.3.ebuild,v 1.5 2009/08/29 17:27:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-weather-plugin/xfce4-weather-plugin-0.7.3.ebuild,v 1.6 2009/08/30 16:18:55 nixnut Exp $
 
 EINTLTOOLIZE=yes
 EAUTORECONF=yes
@@ -13,7 +13,7 @@ SRC_URI="mirror://xfce/src/panel-plugins/${PN}-plugin/0.7/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE="debug"
 
 RDEPEND=">=xfce-base/xfce4-panel-4.3.99.1
