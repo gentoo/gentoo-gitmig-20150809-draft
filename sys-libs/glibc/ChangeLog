@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.635 2009/08/29 21:21:48 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.636 2009/08/30 18:53:19 klausman Exp $
+
+  30 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  glibc-2.9_p20081201-r3.ebuild:
+  Stable on alpha, bug #283188
 
 *glibc-2.9_p20081201-r3 (28 Aug 2009)
 
