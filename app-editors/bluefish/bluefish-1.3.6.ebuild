@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.3.6.ebuild,v 1.1 2009/08/28 08:53:46 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-1.3.6.ebuild,v 1.2 2009/08/30 09:14:30 scarabeus Exp $
 
 EAPI="2"
 
@@ -24,7 +24,6 @@ RDEPEND="
 	spell? ( app-text/enchant[aspell] )"
 
 DEPEND="${RDEPEND}
-	app-text/enchant[aspell]
 	dev-libs/glib:2
 	dev-libs/libxml2
 	dev-util/pkgconfig
