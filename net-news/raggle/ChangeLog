@@ -1,6 +1,10 @@
 # ChangeLog for net-news/raggle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.12 2009/08/20 08:14:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.13 2009/08/30 14:53:39 klausman Exp $
+
+  30 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
+  raggle-0.4.4-r1.ebuild:
+  Stable on alpha, bug #282075
 
 *raggle-0.4.4-r1 (20 Aug 2009)
 
