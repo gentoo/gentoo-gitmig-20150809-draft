@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/dircproxy
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.25 2009/03/08 03:10:26 dragonheart Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.26 2009/08/30 13:24:36 vostorga Exp $
+
+*dircproxy-1.2.0_rc1 (30 Aug 2009)
+
+  30 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> -dircproxy-1.2.0_beta2-r1.ebuild,
+  +dircproxy-1.2.0_rc1.ebuild, -files/1.2.0-CVE-2007-5226.patch:
+  Version bump to 1.2.0_rc1 bug #269200, cleaning out beta
 
   08 Mar 2009; Daniel Black <dragonheart@gentoo.org>
   dircproxy-1.0.5-r1.ebuild, dircproxy-1.1.0-r2.ebuild,
