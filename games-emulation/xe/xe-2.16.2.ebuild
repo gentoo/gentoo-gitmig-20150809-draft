@@ -1,17 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.1 2009/07/14 06:29:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xe/xe-2.16.2.ebuild,v 1.2 2009/08/30 11:05:39 nyhm Exp $
 
 EAPI=2
 inherit games
 
 DESCRIPTION="a multi system emulator for many console and handheld video game systems"
 HOMEPAGE="http://www.xe-emulator.com/"
-SRC_URI="http://www.xe-emulator.com/files/${PN}-x86-32-bin.${PV}.tar.bz2"
+SRC_URI="amd64? ( http://www.xe-emulator.com/files/${PN}-x86-64-bin.${PV}.tar.bz2 )
+	x86? ( http://www.xe-emulator.com/files/${PN}-x86-32-bin.${PV}.tar.bz2 )"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
 
@@ -24,7 +25,10 @@ RDEPEND="x11-libs/libXv
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-S=${WORKDIR}/${PN}-x86
+src_unpack() {
+	unpack ${A}
+	mv -v * ${P} || die
+}
 
 src_prepare() {
 	sed -i \
