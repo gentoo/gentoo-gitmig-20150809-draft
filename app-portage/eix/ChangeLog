@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.299 2009/08/30 15:52:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.300 2009/08/30 15:55:42 klausman Exp $
+
+  30 Aug 2009; Tobias Klausmann <klausman@gentoo.org> eix-0.17.0.ebuild:
+  Stable on alpha, bug #282379
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> eix-0.17.0.ebuild:
   ppc stable #282379
