@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.2.ebuild,v 1.3 2009/08/29 19:28:51 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/numactl-2.0.2.ebuild,v 1.4 2009/08/30 20:46:25 tanderson Exp $
 
 inherit eutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://oss.sgi.com/www/projects/libnuma/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="perl"
 
 RDEPEND="perl? ( dev-lang/perl )"
