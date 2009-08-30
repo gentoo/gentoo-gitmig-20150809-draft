@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/stomper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.1 2009/04/19 12:25:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.2 2009/08/30 00:29:34 arfrever Exp $
+
+  30 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  stomper-0.2.2.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *stomper-0.2.2 (19 Apr 2009)
 
