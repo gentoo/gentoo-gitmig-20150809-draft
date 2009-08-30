@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.86 2009/08/29 19:55:46 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.87 2009/08/30 14:50:08 klausman Exp $
+
+  30 Aug 2009; Tobias Klausmann <klausman@gentoo.org> DateTime-0.50.ebuild:
+  Stable on alpha, bug #281970
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> DateTime-0.50.ebuild:
   ppc stable #281970
