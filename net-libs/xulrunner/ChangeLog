@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/xulrunner
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.242 2009/08/26 15:43:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/ChangeLog,v 1.243 2009/08/30 14:50:18 anarchy Exp $
+
+*xulrunner-1.9.1.2-r2 (30 Aug 2009)
+
+  30 Aug 2009; Jory A. Pratt <anarchy@gentoo.org> -xulrunner-1.9.1.2.ebuild,
+  -xulrunner-1.9.1.2-r1.ebuild, +xulrunner-1.9.1.2-r2.ebuild:
+  remove sqlite dep until segfault fixed
 
   26 Aug 2009; Raúl Porcel <armin76@gentoo.org> xulrunner-1.9.0.13.ebuild:
   1.9.0.13 needs nss-3.12.3

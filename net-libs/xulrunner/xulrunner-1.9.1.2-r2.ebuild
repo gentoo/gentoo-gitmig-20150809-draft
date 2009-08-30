@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.2.ebuild,v 1.3 2009/08/25 13:55:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.2-r2.ebuild,v 1.1 2009/08/30 14:50:18 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -11,30 +11,30 @@ MY_PV="${PV/_beta/b}" # Handle betas
 MY_PV="${PV/_/}" # Handle rc1, rc2 etc
 MY_PV="${MY_PV/1.9.1.2/3.5.2}"
 MAJ_PV="${PV/_*/}"
-PATCH="${PN}-${MAJ_PV}-patches-0.2"
+PATCH="${PN}-${MAJ_PV}-patches-0.3"
 
 DESCRIPTION="Mozilla runtime package that can be used to bootstrap XUL+XPCOM applications"
 HOMEPAGE="http://developer.mozilla.org/en/docs/XULRunner"
 SRC_URI="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/${MY_PV}/source/firefox-${MY_PV}-source.tar.bz2
-	http://dev.gentooexperimental.org/~anarchy/dist/${PATCH}.tar.bz2"
+	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
 
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 -sparc ~x86"
 SLOT="1.9"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="+alsa debug hardened python" # qt-experimental
+IUSE="+alsa debug python" # qt-experimental
 
 #	qt-experimental? (
 #		x11-libs/qt-gui
 #		x11-libs/qt-core )
 
 # nspr-4.8 due to BMO #499144
+# Disable sqlite temporarily  	>=dev-db/sqlite-3.6.7
 RDEPEND="java? ( >=virtual/jre-1.4 )
 	>=dev-lang/python-2.3[threads]
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.3
 	>=dev-libs/nspr-4.8
 	alsa? ( media-libs/alsa-lib )
-	>=dev-db/sqlite-3.6.7
 	>=app-text/hunspell-1.2
 	>=media-libs/lcms-1.17
 	>=x11-libs/cairo-1.8.8[X]
@@ -127,7 +127,7 @@ src_configure() {
 	# Use system libraries
 	mozconfig_annotate '' --enable-system-cairo
 	mozconfig_annotate '' --enable-system-hunspell
-	mozconfig_annotate '' --enable-system-sqlite
+	# mozconfig_annotate '' --enable-system-sqlite
 	mozconfig_annotate '' --with-system-nspr
 	mozconfig_annotate '' --with-system-nss
 	mozconfig_annotate '' --enable-system-lcms
@@ -166,11 +166,6 @@ src_configure() {
 		mozconfig_annotate 'debug' --enable-debugger-info-modules
 	fi
 
-	# Bug #278698
-	if use hardened ; then
-		mozconfig_annotate 'hardened' --disable-jemalloc
-	fi
-
 	# Finalize and report settings
 	mozconfig_final
 
@@ -203,10 +198,10 @@ src_install() {
 	SDKDIR="/usr/$(get_libdir)/${PN}-devel-${MAJ_PV}/sdk"
 
 	dodir /usr/bin
-	dosym "${MOZLIBDIR}/xulrunner" "/usr/bin/xulrunner-${MAJ_PV}"
+	dosym "${MOZLIBDIR}/xulrunner" "/usr/bin/xulrunner-${MAJ_PV}" || die
 
 	# Install python modules
-	dosym "${MOZLIBDIR}/python/xpcom" "/$(python_get_sitedir)/xpcom"
+	dosym "${MOZLIBDIR}/python/xpcom" "/$(python_get_sitedir)/xpcom" || die
 
 	# env.d file for ld search path
 	dodir /etc/env.d
