@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.2 2009/08/26 22:46:47 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ruby-dbi-0.4.2.ebuild,v 1.3 2009/08/30 09:47:01 a3li Exp $
 
 inherit "ruby"
 
@@ -32,8 +32,8 @@ USE_RUBY="ruby18 ruby19"
 
 src_test() {
 	for rb in $USE_RUBY; do
+		[ -n "$(type -p ${rb})" ] || continue
 		ebegin "Testing for ${rb}"
-		[ -x ${rb} ] || continue
 		${rb} setup.rb test || die "test failed"
 		eend $?
 	done

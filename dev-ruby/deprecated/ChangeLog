@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/deprecated
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.3 2009/08/26 22:44:52 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deprecated/ChangeLog,v 1.4 2009/08/30 09:49:02 a3li Exp $
+
+  30 Aug 2009; Alex Legler <a3li@gentoo.org> deprecated-2.0.1.ebuild:
+  Fix testing.
 
   26 Aug 2009; Alex Legler <a3li@gentoo.org> deprecated-2.0.1.ebuild:
   Dying a little more, ignoring not installed ruby versions when testing.
