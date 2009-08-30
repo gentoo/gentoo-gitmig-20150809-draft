@@ -1,6 +1,9 @@
 # ChangeLog for net-news/newsbeuter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.20 2009/08/18 21:56:26 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/newsbeuter/ChangeLog,v 1.21 2009/08/30 12:25:25 tanderson Exp $
+
+  30 Aug 2009; Thomas Anderson <tanderson@gentoo.org> newsbeuter-2.0.ebuild:
+  stable amd64, bug 281352
 
   18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   newsbeuter-2.0.ebuild:
