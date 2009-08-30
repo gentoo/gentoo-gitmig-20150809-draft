@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.6.4.0.ebuild,v 1.1 2007/09/04 05:27:17 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/wxpython-docs-2.6.4.0.ebuild,v 1.2 2009/08/30 17:05:44 dirtyepic Exp $
 
 inherit eutils
 
@@ -27,12 +27,12 @@ src_unpack() {
 
 src_install() {
 	dodir /usr/share/doc/${DOCDIR}/docs
-	cp -R ${WORKDIR}/${DOCDIR}/docs/* ${D}/usr/share/doc/${DOCDIR}/docs/
+	cp -R "${WORKDIR}"/${DOCDIR}/docs/* "${D}"/usr/share/doc/${DOCDIR}/docs/
 	dodir /usr/share/doc/${DOCDIR}/demo
 	dodir /usr/share/doc/${DOCDIR}/samples
-	cp -R ${WORKDIR}/${DOCDIR}/demo/* ${D}/usr/share/doc/${DOCDIR}/demo/
-	cp -R ${WORKDIR}/${DOCDIR}/samples/* ${D}/usr/share/doc/${DOCDIR}/samples/
-	mv ${D}/usr/share/doc/${DOCDIR} ${D}/usr/share/doc/${PF}
+	cp -R "${WORKDIR}"/${DOCDIR}/demo/* "${D}"/usr/share/doc/${DOCDIR}/demo/
+	cp -R "${WORKDIR}"/${DOCDIR}/samples/* "${D}"/usr/share/doc/${DOCDIR}/samples/
+	mv "${D}"/usr/share/doc/${DOCDIR} "${D}"/usr/share/doc/${PF}
 }
 
 pkg_postinst() {
