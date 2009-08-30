@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/emacspeak
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.37 2009/08/29 19:22:43 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/emacspeak/ChangeLog,v 1.38 2009/08/30 02:11:54 williamh Exp $
+
+*emacspeak-9999 (30 Aug 2009)
+
+  30 Aug 2009; William Hubbs <williamh@gentoo.org> +emacspeak-9999.ebuild:
+  added live ebuild for testing.
 
   29 Aug 2009; William Hubbs <williamh@gentoo.org> -emacspeak-29.0.ebuild:
   removed old version
