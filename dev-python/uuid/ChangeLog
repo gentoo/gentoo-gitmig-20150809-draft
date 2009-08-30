@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/uuid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/uuid/ChangeLog,v 1.1 2009/04/19 12:28:43 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/uuid/ChangeLog,v 1.2 2009/08/30 00:42:13 arfrever Exp $
+
+  30 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  uuid-1.30.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *uuid-1.30 (19 Apr 2009)
 
