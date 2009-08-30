@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.0_alpha1.ebuild,v 1.1 2008/03/01 15:45:01 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.0_alpha1.ebuild,v 1.2 2009/08/30 21:47:08 arfrever Exp $
 
-inherit distutils
+inherit distutils eutils
 
 MY_P="SimpleParse-${PV/_alpha/a}"
 
@@ -33,6 +33,8 @@ src_unpack() {
 		setup.py || die "sed failed"
 
 	rm {examples,tests}/__init__.py
+
+	epatch "${FILESDIR}/${P}-python-2.6.patch"
 }
 
 src_install() {
