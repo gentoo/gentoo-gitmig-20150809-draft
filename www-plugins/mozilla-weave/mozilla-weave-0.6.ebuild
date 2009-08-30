@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.6.ebuild,v 1.1 2009/08/28 20:19:45 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/mozilla-weave-0.6.ebuild,v 1.2 2009/08/30 10:36:50 volkmar Exp $
 
 EAPI="2"
 
@@ -36,8 +36,11 @@ S=${WORKDIR}/${MY_P}
 
 RESTRICT="test"
 
-# NOTES: i was not able to get tests running but don't know why... :-/
 # XXX: fennec is also listed in install.rdf but not in-tree
+
+# TODO:
+# make tests working
+# parallel compilation isssues
 
 src_prepare() {
 	# remove compiled files
@@ -50,7 +53,7 @@ src_prepare() {
 src_compile() {
 	export WEAVE_BUILDID=${PV}
 
-	emake rebuild_crypto=1 build || die "emake failed"
+	emake -j1 rebuild_crypto=1 build || die "emake failed"
 }
 
 #src_test() {
