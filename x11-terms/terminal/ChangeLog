@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.29 2009/08/29 18:33:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminal/ChangeLog,v 1.30 2009/08/30 16:20:34 nixnut Exp $
+
+  30 Aug 2009; nixnut <nixnut@gentoo.org> terminal-0.4.0.ebuild:
+  ppc stable #282698
 
   29 Aug 2009; Raúl Porcel <armin76@gentoo.org> terminal-0.4.0.ebuild:
   alpha/arm/ia64/sparc stable wrt #282698
