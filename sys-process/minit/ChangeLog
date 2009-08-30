@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/minit
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.7 2007/01/05 02:30:44 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/minit/ChangeLog,v 1.8 2009/08/30 17:39:54 vostorga Exp $
+
+  30 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> minit-0.10.ebuild,
+  +files/minit-0.10-fixes.diff, metadata.xml:
+  Adding Andreas Wiese <aw@instandbesetzt.net> and myself as maintainers
+  Fixing build , bugs #248443 and #270144 , patch thanks to Andreas Wiese
 
 *minit-0.10 (05 Jan 2007)
 

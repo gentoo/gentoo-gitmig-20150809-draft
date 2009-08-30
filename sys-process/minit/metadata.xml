@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>no-herd</herd>
-<maintainer>
-  <email>maintainer-needed@gentoo.org</email>
-</maintainer>
+		<herd>no-herd</herd>
+		<maintainer>
+			<email>vostorga@gentoo.org</email>
+			<name>Víctor Ostorga</name>
+		</maintainer>
+		<maintainer>
+			<email>aw-gentoo@instandbesetzt.net</email>
+			<name>Andreas Wiese</name>
+		</maintainer>
 <longdescription>
 minit - a small yet feature-complete init
 
