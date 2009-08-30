@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-volstatus-icon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.15 2009/08/29 17:23:37 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-volstatus-icon/ChangeLog,v 1.16 2009/08/30 16:10:48 nixnut Exp $
+
+  30 Aug 2009; nixnut <nixnut@gentoo.org>
+  xfce4-volstatus-icon-0.1.0-r1.ebuild:
+  ppc stable #282668
 
   29 Aug 2009; Raúl Porcel <armin76@gentoo.org>
   xfce4-volstatus-icon-0.1.0-r1.ebuild:
