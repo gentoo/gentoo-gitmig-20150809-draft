@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.13.ebuild,v 1.5 2009/04/01 00:47:27 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.13.ebuild,v 1.6 2009/08/30 21:44:23 nerdboy Exp $
 
-inherit eutils toolchain-funcs versionator
+inherit eutils flag-o-matic multilib toolchain-funcs versionator
 
 MY_P="${PN}_$(replace_all_version_separators '_')"
-S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="DUMA (Detect Unintended Memory Access) is a memory debugging library."
 HOMEPAGE="http://duma.sourceforge.net/"
@@ -20,6 +19,8 @@ IUSE="examples"
 DEPEND="virtual/libc"
 RDEPEND="${DEPEND}
 	app-shells/bash"
+
+S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	#DUMA_OPTIONS="-DDUMA_LIB_NO_LEAKDETECTION"
@@ -44,11 +45,14 @@ src_unpack(){
 }
 
 src_compile(){
+	replace-flags O? O0
+	append-flags -Wall -Wextra -U_FORTIFY_SOURCE
+	tc-export AR CC CXX LD RANLIB
+
 	use amd64 && export DUMA_ALIGNMENT=16
-	# append-flags doesn't work here (stupid static makefile) and neither
-	# does distcc :(
-	make CFLAGS="${DUMA_OPTIONS} ${CFLAGS}" CC=$(tc-getCC) \
-	    || die "make failed"
+
+	make CPPFLAGS="${DUMA_OPTIONS}" reconfig || die "make reconfig failed"
+	emake CFLAGS="${CFLAGS}" CC=$(tc-getCC) || die "make failed"
 }
 
 src_test() {
