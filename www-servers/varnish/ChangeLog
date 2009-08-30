@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/varnish
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.25 2009/07/12 12:04:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/ChangeLog,v 1.26 2009/08/30 06:28:07 hollow Exp $
+
+  30 Aug 2009; Benedikt Böhm <hollow@gentoo.org> varnish-2.0.4-r1.ebuild,
+  files/varnishd.initd:
+  make HTTP_HDR_MAX_VAL configurable in case broken webapps set more than 32
+  headers; only start varnishncsa logging if desired
 
 *varnish-2.0.4-r1 (12 Jul 2009)
 

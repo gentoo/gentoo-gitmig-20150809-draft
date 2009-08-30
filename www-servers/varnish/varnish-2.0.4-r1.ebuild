@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4-r1.ebuild,v 1.1 2009/07/12 12:04:06 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/varnish/varnish-2.0.4-r1.ebuild,v 1.2 2009/08/30 06:28:07 hollow Exp $
 
 EAPI="2"
 
@@ -17,9 +17,13 @@ IUSE=""
 #varnish compiles stuff at run time
 RDEPEND="sys-devel/gcc"
 
+HTTP_HDR_MAX_VAL=${HTTP_HDR_MAX_VAL:-32}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-link-order.patch
 	epatch "${FILESDIR}"/${P}-virtual-ncsa.patch
+	sed -e "s/#define HTTP_HDR_MAX_VAL .*/#define HTTP_HDR_MAX_VAL ${HTTP_HDR_MAX_VAL}/" \
+		-i bin/varnishd/cache.h
 	eautoreconf
 }
 
