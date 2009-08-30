@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10380 2009/08/30 11:18:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10381 2009/08/30 14:01:15 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,19 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
+#  on behalf of QA team
+#
+# Old version of synce framework; 0.13 and 0.14 are in the
+# tree and don't need these packages. synce-rra was just
+# fixed after almost an year (at least) of build failure.
+#
+# Removal on 2009-10-29
+<app-pda/synce-0.10
+app-pda/synce-rra
+app-pda/synce-kde
+app-pda/synce-multisync_plugin
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
 #  on behalf of QA team
