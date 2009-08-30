@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.67 2009/06/29 20:49:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.68 2009/08/30 07:35:29 mrness Exp $
+
+  30 Aug 2009; Alin Năstac <mrness@gentoo.org>
+  -files/openswan-2.4.14-deprecated-ldap.patch,
+  -files/openswan-2.4.14-gentoo-fixed.patch,
+  -files/openswan-2.4.14-getline.patch,
+  -files/openswan-2.6.21-gentoo-fixed.patch, -openswan-2.4.14.ebuild,
+  -openswan-2.6.21.ebuild:
+  Expunge exploitable versions from the tree (#275233).
 
   29 Jun 2009; Markus Meier <maekke@gentoo.org> openswan-2.4.15.ebuild:
   amd64 stable, bug #275233
