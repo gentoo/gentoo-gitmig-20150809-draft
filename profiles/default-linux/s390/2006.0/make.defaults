@@ -1,2 +1,0 @@
-STAGE1_USE="nptl nptlonly unicode"
-USE="nptl nptlonly unicode"
