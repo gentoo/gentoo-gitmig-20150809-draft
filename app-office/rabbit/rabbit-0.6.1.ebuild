@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-0.5.0.ebuild,v 1.1 2006/12/18 00:08:53 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/rabbit/rabbit-0.6.1.ebuild,v 1.1 2009/08/30 06:41:32 graaff Exp $
 
 inherit ruby elisp-common eutils
 
@@ -10,13 +10,14 @@ SRC_URI="http://www.cozmixng.org/~kou/download/${P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="nls gs gnome-print migemo tgif enscript emacs"
 
 DEPEND="virtual/ruby
 	emacs? ( virtual/emacs )"
 RDEPEND="${DEPEND}
 	dev-ruby/ruby-gnome2
+	>=dev-ruby/ruby-gdkpixbuf2-0.15.0
 	dev-ruby/rdtool
 	nls? ( dev-ruby/ruby-gettext )
 	gs? ( virtual/ghostscript )
@@ -32,6 +33,10 @@ src_compile() {
 		cd "${S}/misc/emacs"
 		elisp-compile rabbit-mode.el
 	fi
+}
+
+src_test() {
+	test/run-test.rb
 }
 
 src_install() {
