@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.3.0.ebuild,v 1.1 2009/05/22 16:17:57 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.6.0.ebuild,v 1.1 2009/08/30 09:08:26 scarabeus Exp $
 
 EAPI="2"
 
-KDE_MINIMAL="4.2"
 OPENGL_REQUIRED="optional"
-KDE_LINGUAS="ar be ca cs da de el es et fr ga gl hi is it ja km lt lv ms nb nds nl
+KDE_LINGUAS="ar be ca cs da de el es et fi fr ga gl hi hne is it ja km lt lv ms nb nds nl
 nn oc pa pl pt pt_BR ro ru se sk sv th tr uk zn_CN"
 inherit kde4-base
 
@@ -19,7 +18,7 @@ SRC_URI="mirror://sourceforge/kipi/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="cdr calendar debug +imagemagick ipod mjpeg redeyes scanner"
-SLOT="2"
+SLOT="4"
 
 DEPEND="
 	>=dev-libs/expat-2.0.1
@@ -49,20 +48,6 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${MY_P}"
 
 src_configure() {
-	# This Plugin hard depends on libksane, deactivate it if use flag scanner is
-	# not set.
-	if ! use scanner; then
-		sed -i \
-			-e '/acquireimages/ s:^:#DONOTCOMPILE :' \
-			"${S}"/CMakeLists.txt || die "Sed deactivating scanner support failed."
-	fi
-
-	# Fix linking
-	sed -i \
-		-e '/KDE4_KDEUI_LIBS/ c\\${KDE4_KIO_LIBS}'\
-		"${S}"/common/libkipiplugins/CMakeLists.txt \
-		|| die "Sed fixing kipi linking failed."
-
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with calendar KdepimLibs)
 		$(cmake-utils_use_with opengl OpenGL)

@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.58 2009/08/16 11:14:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.59 2009/08/30 09:08:26 scarabeus Exp $
+
+*kipi-plugins-0.6.0 (30 Aug 2009)
+
+  30 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -kipi-plugins-0.3.0.ebuild, -kipi-plugins-0.4.0.ebuild,
+  -kipi-plugins-0.5.0.ebuild, +kipi-plugins-0.6.0.ebuild:
+  Version bump. Remove old. Slotmove.
 
   16 Aug 2009; Raúl Porcel <armin76@gentoo.org> kipi-plugins-0.1.7.ebuild:
   sparc stable wrt #270950
