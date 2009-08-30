@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.149 2009/08/29 19:58:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.150 2009/08/30 14:57:26 klausman Exp $
+
+  30 Aug 2009; Tobias Klausmann <klausman@gentoo.org> sysstat-9.0.4.ebuild:
+  Stable on alpha, bug #282102
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> sysstat-9.0.4.ebuild:
   ppc stable #282102
