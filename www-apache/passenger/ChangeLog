@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.14 2009/07/04 08:00:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.15 2009/08/30 06:55:56 graaff Exp $
+
+  30 Aug 2009; Hans de Graaff <graaff@gentoo.org> -passenger-2.2.2.ebuild:
+  Remove old version.
 
   04 Jul 2009; Hans de Graaff <graaff@gentoo.org> passenger-2.2.4.ebuild:
   Remove doxygen dependency because the doxygen docs are already
