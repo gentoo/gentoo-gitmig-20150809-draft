@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.84 2009/08/30 16:23:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.85 2009/08/30 16:46:01 mrpouet Exp $
+
+*gphoto2-2.4.7 (30 Aug 2009)
+
+  30 Aug 2009; Romain Perier <mrpouet@gentoo.org>
+  +gphoto2-2.4.7.ebuild:
+  Version bump, add support for largefiles, various bugfixes, new cmdline
+  options, updates translations
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> gphoto2-2.4.5.ebuild:
   ppc stable #282849
