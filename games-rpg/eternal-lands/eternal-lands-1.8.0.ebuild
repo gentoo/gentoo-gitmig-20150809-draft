@@ -1,13 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.8.0.ebuild,v 1.3 2009/01/29 04:27:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.8.0.ebuild,v 1.4 2009/08/30 20:26:17 rich0 Exp $
 
 EAPI=2
-inherit cvs eutils flag-o-matic games
+inherit eutils flag-o-matic games
 
 DESCRIPTION="An online MMORPG written in C and SDL"
 HOMEPAGE="http://www.eternal-lands.com"
-SRC_URI="mirror://gentoo/eternal-lands.png"
+SRC_URI="mirror://gentoo/elc_1.8.0.tar.bz2
+	mirror://gentoo/eternal-lands.png"
+
 
 LICENSE="eternal_lands"
 SLOT="0"
@@ -37,21 +39,24 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen
 		media-gfx/graphviz )"
 
-ECVS_SERVER="cvs.elc.berlios.de:/cvsroot/elc"
-ECVS_MODULE="elc"
-ECVS_USER="anonymous"
+#ECVS_SERVER="cvs.elc.berlios.de:/cvsroot/elc"
+#ECVS_MODULE="elc"
+#ECVS_USER="anonymous"
 #ECVS_LOCALNAME="elc"
-ECVS_PASS=""
-ECVS_CVS_OPTIONS="-dP -z3"
-ECVS_BRANCH="elc_1_8_0"
+#ECVS_PASS=""
+#ECVS_CVS_OPTIONS="-dP -z3"
+#ECVS_BRANCH="elc_1_8_0"
 
-S="${WORKDIR}/${ECVS_MODULE}"
+#S="${WORKDIR}/${ECVS_MODULE}"
+S="${WORKDIR}/elc"
 
 src_unpack() {
-	cvs_src_unpack
+#	cvs_src_unpack
 	OPTIONS="-DDATA_DIR="\\\\\"${GAMES_DATADIR}/${PN}/\\\\\"""
 	S_CLIENT="${WORKDIR}/elc"
 	BROWSER="firefox"
+	unpack ${A}
+	cd "${S}"
 }
 
 src_prepare() {
@@ -78,11 +83,6 @@ src_prepare() {
 	use kernel_linux || sed -i \
 		-e 's/^CFLAGS=.*/& -DBSD/' \
 		Makefile.linux || die "sed failed"
-
-	# Gah (anybody know why this is here?)
-#	sed -i \
-#		-e 's/CXX=g++/CXX=gcc/' \
-#		Makefile.linux || die "sed failed"
 
 	# Finally, update the server
 	sed -i -e '/#server_address =/ s/.*/#server_address = game.eternal-lands.com/' \
