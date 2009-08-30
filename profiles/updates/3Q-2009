@@ -43,3 +43,4 @@ move xfce-extra/xfce4-wavelan xfce-extra/xfce4-wavelan-plugin
 move xfce-extra/xfce4-mailwatch xfce-extra/xfce4-mailwatch-plugin
 move xfce-extra/xfce4-weather xfce-extra/xfce4-weather-plugin
 move xfce-extra/xfce4-modemlights xfce-extra/xfce4-modemlights-plugin
+slotmove >=media-plugins/kipi-plugins-0.3.0 2 4
