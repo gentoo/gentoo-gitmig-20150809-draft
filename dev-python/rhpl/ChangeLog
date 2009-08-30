@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rhpl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.11 2009/08/24 18:23:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rhpl/ChangeLog,v 1.12 2009/08/30 15:54:27 nixnut Exp $
+
+  30 Aug 2009; nixnut <nixnut@gentoo.org> rhpl-0.213.ebuild:
+  ppc stable #282380
 
   24 Aug 2009; Christian Faulhammer <fauli@gentoo.org> rhpl-0.213.ebuild:
   stable x86, bug 282380
