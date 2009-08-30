@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.2 2009/08/29 19:52:14 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython/wxpython-2.8.10.1.ebuild,v 1.3 2009/08/30 17:09:43 dirtyepic Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -69,11 +69,11 @@ src_configure() {
 	append-flags -fno-strict-aliasing
 
 	use opengl \
-		&& mypyconf+=" BUILD_GLCANVAS=1" \
-		|| mypyconf+=" BUILD_GLCANVAS=0"
+		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
+		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
 
-	mypyconf+=" WX_CONFIG=${WX_CONFIG}"
-	mypyconf+=" WXPORT=gtk2 UNICODE=1"
+	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
+	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
 }
 
 src_compile() {
@@ -86,12 +86,12 @@ src_compile() {
 src_install() {
 	local mypyconf
 
-	mypyconf+=" WX_CONFIG=${WX_CONFIG}"
+	mypyconf="${mypyconf} WX_CONFIG=${WX_CONFIG}"
 	use opengl \
-		&& mypyconf+=" BUILD_GLCANVAS=1" \
-		|| mypyconf+=" BUILD_GLCANVAS=0"
+		&& mypyconf="${mypyconf} BUILD_GLCANVAS=1" \
+		|| mypyconf="${mypyconf} BUILD_GLCANVAS=0"
 
-	mypyconf+=" WXPORT=gtk2 UNICODE=1"
+	mypyconf="${mypyconf} WXPORT=gtk2 UNICODE=1"
 
 	installation() {
 		"$(PYTHON)" setup.py ${mypyconf} install --root="${D}" --install-purelib $(python_get_sitedir)
