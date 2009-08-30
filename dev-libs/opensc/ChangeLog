@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.73 2009/07/29 14:00:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.74 2009/08/30 16:37:32 nixnut Exp $
+
+  30 Aug 2009; nixnut <nixnut@gentoo.org> opensc-0.11.9.ebuild:
+  ppc stable #283061
 
 *opensc-0.11.9 (29 Jul 2009)
 
