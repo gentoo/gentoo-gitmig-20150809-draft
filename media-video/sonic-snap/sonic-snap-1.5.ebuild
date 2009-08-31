@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.8 2009/02/19 06:19:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.9 2009/08/31 22:29:46 ikelos Exp $
 
 EAPI="1"
 inherit eutils linux-info
@@ -25,7 +25,7 @@ DEPEND="x11-libs/fltk:1.1
 	x11-libs/libXext
 	x11-libs/libXft"
 
-CONFIG_CHECK="USB_SN9C102"
+CONFIG_CHECK="~USB_SN9C102"
 ERROR_USB_SN9C102="Please make sure the SN9C1xx PC Camera Controller driver is \
 enabled, under V4L USB devices, as a module in your kernel."
 
@@ -51,9 +51,7 @@ src_install() {
 pkg_postinst() {
 
 	ewarn
-	elog "This application has found the sn9c10x driver (sn9c102.ko)"
-	elog "enabled in the USB section of your kernel config.  Also,"
-	elog "this driver is V4L v2 only, so V4L v1 apps will not work."
+	elog "This driver is V4L v2 only, so V4L v1 apps will not work."
 	elog "Finally, only a few image sensors are supported, eg, PAS106B"
 	elog "so (check dmesg or /var/log/messages for USB device info when"
 	elog "you plug the cam in)."
