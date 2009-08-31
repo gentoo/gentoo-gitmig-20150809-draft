@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.7.ebuild,v 1.7 2009/08/02 15:53:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.5.7.ebuild,v 1.8 2009/08/31 18:19:51 ranger Exp $
 
 # NOTE: this ebuild is a regular ebuild without mailer-config support!
 # Comment lines below "regular ebuild" and uncomment lines below "mailer-config support"
@@ -11,7 +11,7 @@ inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic pam
 # mailer-config support
 #inherit eutils multilib ssl-cert toolchain-funcs flag-o-matic mailer pam
 
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ~ppc64 s390 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd"
 
 # regular ebuild
 IUSE="cdb dovecot-sasl hardened ipv6 ldap mailwrapper mbox mysql nis pam postgres sasl selinux ssl vda"
