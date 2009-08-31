@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnokii
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.98 2009/08/26 21:09:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/ChangeLog,v 1.99 2009/08/31 22:08:39 ikelos Exp $
+
+  31 Aug 2009; Mike Auty <ikelos@gentoo.org> gnokii-0.6.27-r2.ebuild,
+  gnokii-0.6.27-r4.ebuild, gnokii-9999.ebuild:
+  Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
 
   26 Aug 2009; Alin Năstac <mrness@gentoo.org> gnokii-0.6.27-r2.ebuild,
   gnokii-0.6.27-r4.ebuild, gnokii-9999.ebuild:

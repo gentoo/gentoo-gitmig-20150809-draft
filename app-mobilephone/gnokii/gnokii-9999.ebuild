@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.3 2009/08/26 21:09:33 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnokii/gnokii-9999.ebuild,v 1.4 2009/08/31 22:08:39 ikelos Exp $
 
 EAPI=2
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	dev-util/intltool"
 
-CONFIG_CHECK="UNIX98_PTYS"
+CONFIG_CHECK="~UNIX98_PTYS"
 
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
