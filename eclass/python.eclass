@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.68 2009/08/31 00:07:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.69 2009/08/31 23:58:28 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -131,7 +131,7 @@ validate_PYTHON_ABIS() {
 		local ABI support_ABI supported_PYTHON_ABIS= restricted_ABI
 		PYTHON_ABI_SUPPORTED_VALUES="2.4 2.5 2.6 2.7 3.0 3.1 3.2"
 
-		if declare -p | grep "^declare -x USE_PYTHON=" > /dev/null; then
+		if [[ "$(declare -p USE_PYTHON 2>/dev/null)" == "declare -x USE_PYTHON="* ]]; then
 			if [[ -z "${USE_PYTHON}" ]]; then
 				die "USE_PYTHON variable is empty"
 			fi
@@ -363,14 +363,21 @@ python_execute_function() {
 				failure_message="${action} failed with Python ${PYTHON_ABI} in ${function}() function"
 			fi
 
-			if [[ "${nonfatal}" == "1" ]] || has "${PYTHON_ABI}" ${FAILURE_TOLERANT_PYTHON_ABIS}; then
-				local ABI enabled_PYTHON_ABIS
+			if [[ "${nonfatal}" == "1" ]]; then
+				if [[ "${quiet}" == "0" ]]; then
+					ewarn "${RED}${failure_message}${NORMAL}"
+				fi
+			elif has "${PYTHON_ABI}" ${FAILURE_TOLERANT_PYTHON_ABIS}; then
+				local ABI enabled_PYTHON_ABIS=
 				for ABI in ${PYTHON_ABIS}; do
 					[[ "${ABI}" != "${PYTHON_ABI}" ]] && enabled_PYTHON_ABIS+=" ${ABI}"
 				done
 				export PYTHON_ABIS="${enabled_PYTHON_ABIS# }"
 				if [[ "${quiet}" == "0" ]]; then
 					ewarn "${RED}${failure_message}${NORMAL}"
+				fi
+				if [[ -z "${PYTHON_ABIS}" ]]; then
+					die "${function}() function failed with all enabled versions of Python"
 				fi
 			else
 				die "${failure_message}"
