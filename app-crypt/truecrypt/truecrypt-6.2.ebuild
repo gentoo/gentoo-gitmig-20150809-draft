@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.4 2009/05/21 17:39:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/truecrypt/truecrypt-6.2.ebuild,v 1.5 2009/08/31 21:53:26 ikelos Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ pkg_nofetch() {
 }
 
 pkg_setup() {
-	local CONFIG_CHECK="BLK_DEV_DM DM_CRYPT FUSE_FS CRYPTO"
+	local CONFIG_CHECK="~BLK_DEV_DM ~DM_CRYPT ~FUSE_FS ~CRYPTO"
 	linux-info_pkg_setup
 
 	local WX_GTK_VER="2.8"
