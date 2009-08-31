@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0-r1.ebuild,v 1.3 2009/03/03 16:48:58 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-utils/ivtv-utils-1.3.0-r1.ebuild,v 1.4 2009/08/31 22:19:10 ikelos Exp $
 
 inherit eutils linux-mod
 
@@ -27,8 +27,8 @@ pkg_setup() {
 
 	MODULE_NAMES="saa717x(extra:${S}/i2c-drivers)"
 	BUILD_TARGETS="all"
-	CONFIG_CHECK="EXPERIMENTAL KMOD HAS_IOMEM FW_LOADER I2C I2C_ALGOBIT
-		VIDEO_DEV VIDEO_CAPTURE_DRIVERS VIDEO_V4L1 VIDEO_V4L2 VIDEO_IVTV"
+	CONFIG_CHECK="~EXPERIMENTAL ~KMOD ~HAS_IOMEM ~FW_LOADER ~I2C ~I2C_ALGOBIT
+		~VIDEO_DEV ~VIDEO_CAPTURE_DRIVERS ~VIDEO_V4L1 ~VIDEO_V4L2 ~VIDEO_IVTV"
 
 	if ! ( kernel_is ge 2 6 26 ); then
 		eerror "This package is only for the fully in-kernel"
