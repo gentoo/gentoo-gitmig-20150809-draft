@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.4.ebuild,v 1.3 2009/08/09 13:01:52 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/sensors-applet/sensors-applet-2.2.4.ebuild,v 1.4 2009/08/31 21:03:20 eva Exp $
 
 EAPI="2"
 
@@ -32,6 +32,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12
+	>=app-text/scrollkeeper-0.3.14
 	>=app-text/gnome-doc-utils-0.3.2
 	dev-util/intltool"
 
@@ -42,5 +43,6 @@ pkg_setup() {
 		$(use_with nvidia)
 		$(use_with lm_sensors libsensors)
 		$(use_enable libnotify)
+		--disable-scrollkeeper
 		--disable-static"
 }
