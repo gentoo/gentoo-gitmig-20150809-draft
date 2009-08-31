@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.9 2009/04/16 12:39:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.3.0.ebuild,v 1.10 2009/08/31 19:27:14 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -15,9 +15,17 @@ IUSE="cdinstall"
 RESTRICT="mirror strip"
 PROPERTIES="interactive"
 
-RDEPEND="sys-libs/glibc
-	virtual/opengl
-	amd64? ( app-emulation/emul-linux-x86-xlibs
+RDEPEND="
+	sys-libs/glibc
+	sys-devel/gcc
+	x86? (
+		virtual/opengl
+		virtual/glu
+		media-libs/libsdl
+		media-libs/libvorbis )
+	amd64? (
+		app-emulation/emul-linux-x86-xlibs
+		app-emulation/emul-linux-x86-medialibs
 		app-emulation/emul-linux-x86-compat )"
 
 S=${WORKDIR}
@@ -33,14 +41,14 @@ src_unpack() {
 src_install() {
 	insinto "${dir}"/lib
 	exeinto "${dir}"/lib
+
 	doins lib/{language,patch}.dat
-	doexe lib/lib{SDL-1.2,ogg,vorbis}.so.0 lib/lib{gcc_s.so.1,vorbisfile.so.3} \
-		lib/darwinia.bin.x86 lib/open-www.sh || die "copying libs/executables"
+	doexe lib/darwinia.bin.x86 lib/open-www.sh || die "copying executables"
 
 	exeinto "${dir}"
 	doexe bin/Linux/x86/darwinia || die "couldn't do exe"
 
-	if use cdinstall; then
+	if use cdinstall ; then
 		doins "${CDROM_ROOT}"/gamefiles/{main,sounds}.dat \
 			|| die "couldn't copy data files"
 	fi
@@ -49,7 +57,7 @@ src_install() {
 	newicon darwinian.png darwinia.png
 
 	games_make_wrapper darwinia ./darwinia "${dir}" "${dir}"
-	make_desktop_entry darwinia "Darwinia" darwinia
+	make_desktop_entry darwinia "Darwinia"
 	prepgamesdirs
 }
 
