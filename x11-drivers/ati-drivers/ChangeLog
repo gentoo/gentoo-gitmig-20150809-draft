@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.178 2009/08/29 15:45:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.179 2009/08/31 11:29:55 scarabeus Exp $
+
+  31 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.8.ebuild:
+  Add new in-kernel check for LOCKDEP. Per bug #283301. Thx to loki_val for
+  the patch.
 
   29 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.8.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.9 2009/08/29 15:45:59 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.10 2009/08/31 11:29:55 scarabeus Exp $
 
 EAPI="2"
 
@@ -126,6 +126,20 @@ _check_kernel_config() {
 		eerror "        [*] Message Signaled Interrupts (MSI and MSI-X)"
 		eerror "in the kernel config."
 		die "CONFIG_PCI_MSI disabled"
+	fi
+
+	if linux_chkconfig_present LOCKDEP; then
+		eerror "You've enabled LOCKDEP -- lock tracking -- in the kernel."
+		eerror "Unfortunately, this option exports the symbol lock_acquire as GPL-only."
+		eerror "This prevents ${P} from compiling with an error like this:"
+		eerror "FATAL: modpost: GPL-incompatible module fglrx.ko uses GPL-only symbol 'lock_acquire'"
+		eerror "Please make sure the following options have been unset:"
+		eerror "    Kernel hacking  --->"
+		eerror "        [ ] Lock debugging: detect incorrect freeing of live locks"
+		eerror "        [ ] Lock debugging: prove locking correctness"
+		eerror "        [ ] Lock usage statistics"
+		eerror "in 'menuconfig'"
+		die "LOCKDEP enabled"
 	fi
 }
 
