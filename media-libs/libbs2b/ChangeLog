@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbs2b
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.12 2009/08/28 13:34:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbs2b/ChangeLog,v 1.13 2009/08/31 17:24:25 ranger Exp $
+
+  31 Aug 2009; Brent Baude <ranger@gentoo.org> libbs2b-3.1.0.ebuild:
+  Marking libbs2b-3.1.0 ppc64 for bug 279238
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org> libbs2b-3.1.0.ebuild:
   Stable on alpha, bug #279238
