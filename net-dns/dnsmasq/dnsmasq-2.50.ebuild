@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.47.ebuild,v 1.1 2009/03/30 04:14:34 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.50.ebuild,v 1.1 2009/08/31 22:13:15 a3li Exp $
+
+EAPI=2
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -9,12 +11,11 @@ MY_PV="${PV/_/}"
 DESCRIPTION="Small forwarding DNS server"
 HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
 SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${MY_P}.tar.lzma"
-#SRC_URI="http://www.thekelleys.org.uk/dnsmasq/release-candidates/${MY_P}.tar.lzma"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="dbus ipv6 nls tftp"
+IUSE="dbus +dhcp ipv6 nls tftp"
 
 RDEPEND="dbus? ( sys-apps/dbus )
 	nls? ( sys-devel/gettext )"
@@ -24,20 +25,21 @@ DEPEND="${RDEPEND}
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i '/^AWK/s:nawk:gawk:' Makefile #214865
+
 	# dnsmasq on FreeBSD wants the config file in a silly location, this fixes
-	epatch "${FILESDIR}/${P}-fbsd-config.patch"
+	epatch "${FILESDIR}/${PN}-2.47-fbsd-config.patch"
+}
+
+src_configure() {
+	use tftp || append-flags -DNO_TFTP
+	use dhcp || append-flags -DNO_DHCP
+	use ipv6 || append-flags -DNO_IPV6
+	use dbus && sed -i '$ a #define HAVE_DBUS' src/config.h
 }
 
 src_compile() {
-	use tftp || append-flags -DNO_TFTP
-	use ipv6 || append-flags -DNO_IPV6
-	use dbus && sed -i '$ a #define HAVE_DBUS' src/config.h
-
 	emake \
 		PREFIX=/usr \
 		CC="$(tc-getCC)" \
