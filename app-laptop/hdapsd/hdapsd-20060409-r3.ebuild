@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409-r3.ebuild,v 1.1 2008/10/20 08:45:26 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/hdapsd-20060409-r3.ebuild,v 1.2 2009/08/31 22:02:20 ikelos Exp $
 
 inherit eutils linux-info
 
@@ -28,7 +28,7 @@ src_compile() {
 	# by the package.
 
 	if ! has_version app-laptop/tp_smapi || ! built_with_use app-laptop/tp_smapi hdaps; then
-		CONFIG_CHECK="SENSORS_HDAPS"
+		CONFIG_CHECK="~SENSORS_HDAPS"
 		ERROR_SENSORS_HDAPS="${P} requires support for HDAPS (CONFIG_SENSORS_HDAPS)"
 		linux-info_pkg_setup
 	fi
