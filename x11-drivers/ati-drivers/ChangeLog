@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.179 2009/08/31 11:29:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.180 2009/08/31 12:02:18 scarabeus Exp $
+
+  31 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.8.ebuild:
+  Adjust ACPI checks in ebuild. Per bug #254513.
 
   31 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.8.ebuild:

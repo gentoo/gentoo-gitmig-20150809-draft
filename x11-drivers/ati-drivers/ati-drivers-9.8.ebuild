@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.10 2009/08/31 11:29:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.11 2009/08/31 12:02:18 scarabeus Exp $
 
 EAPI="2"
 
@@ -107,6 +107,17 @@ _check_kernel_config() {
 		ewarn "Direct rendering will not work."
 	fi
 
+	if ! linux_chkconfig_present ACPI; then
+		eerror "${P} requires the ACPI support in the kernel"
+		eerror "Please enable it:"
+		eerror "    CONFIG_ACPI=y"
+		eerror "in /usr/src/linux/.config or"
+		eerror "    Power management and ACPI options --->"
+		eerror "        [*] Power Management support"
+		eerror "in the 'menuconfig'"
+		die "CONFIG_ACPI disabled"
+	fi
+
 	if ! linux_chkconfig_present MAGIC_SYSRQ; then
 		eerror "${P} requires the magic SysRq keys in the kernel."
 		eerror "Please enable it:"
@@ -115,6 +126,7 @@ _check_kernel_config() {
 		eerror "    Kernel hacking  --->"
 		eerror "        [*] Magic SysRq key"
 		eerror "in the 'menuconfig'"
+		die "CONFIG_MAGIC_SYSRQ disabled"
 	fi
 
 	if ! linux_chkconfig_present PCI_MSI; then
