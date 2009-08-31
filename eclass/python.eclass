@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.67 2009/08/29 02:15:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.68 2009/08/31 00:07:37 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -130,28 +130,41 @@ validate_PYTHON_ABIS() {
 	if [[ -z "${PYTHON_ABIS}" ]] && has "${EAPI:-0}" 0 1 2 3; then
 		local ABI support_ABI supported_PYTHON_ABIS= restricted_ABI
 		PYTHON_ABI_SUPPORTED_VALUES="2.4 2.5 2.6 2.7 3.0 3.1 3.2"
-		for ABI in ${USE_PYTHON}; do
-			if ! has "${ABI}" ${PYTHON_ABI_SUPPORTED_VALUES}; then
-				ewarn "Ignoring unsupported Python ABI '${ABI}'"
-				continue
+
+		if declare -p | grep "^declare -x USE_PYTHON=" > /dev/null; then
+			if [[ -z "${USE_PYTHON}" ]]; then
+				die "USE_PYTHON variable is empty"
 			fi
-			support_ABI="1"
-			if [[ -z "${IGNORE_RESTRICT_PYTHON_ABIS}" ]]; then
+
+			for ABI in ${USE_PYTHON}; do
+				if ! has "${ABI}" ${PYTHON_ABI_SUPPORTED_VALUES}; then
+					die "USE_PYTHON variable contains invalid value '${ABI}'"
+				fi
+				support_ABI="1"
 				for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
 					if python -c "from fnmatch import fnmatch; exit(not fnmatch('${ABI}', '${restricted_ABI}'))"; then
 						support_ABI="0"
 						break
 					fi
 				done
-			fi
-			[[ "${support_ABI}" == "1" ]] && supported_PYTHON_ABIS+=" ${ABI}"
-		done
-		export PYTHON_ABIS="${supported_PYTHON_ABIS# }"
-	fi
+				[[ "${support_ABI}" == "1" ]] && supported_PYTHON_ABIS+=" ${ABI}"
+			done
+			export PYTHON_ABIS="${supported_PYTHON_ABIS# }"
 
-	if [[ -z "${PYTHON_ABIS//[${IFS}]/}" ]]; then
-		python_version
-		export PYTHON_ABIS="${PYVER}"
+			if [[ -z "${PYTHON_ABIS//[${IFS}]/}" ]]; then
+				die "USE_PYTHON variable doesn't enable any Python version supported by ${CATEGORY}/${PF}"
+			fi
+		else
+			local restricted_ABI
+			python_version
+
+			for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
+				if python -c "from fnmatch import fnmatch; exit(not fnmatch('${PYVER}', '${restricted_ABI}'))"; then
+					die "Active Python version isn't supported by ${CATEGORY}/${PF}"
+				fi
+			done
+			export PYTHON_ABIS="${PYVER}"
+		fi
 	fi
 
 	# Ensure that EPYTHON variable is respected.
