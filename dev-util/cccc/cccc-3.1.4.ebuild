@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/cccc-3.1.4.ebuild,v 1.2 2006/06/30 10:42:50 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cccc/cccc-3.1.4.ebuild,v 1.3 2009/08/31 16:24:04 vostorga Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,14 +14,25 @@ KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
+RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	sed -i -e "/^CFLAGS/s|=|+=|" pccts/antlr/makefile
+	sed -i -e "/^CFLAGS/s|=|+=|" pccts/dlg/makefile
+	sed -i -e "/^CFLAGS/s|=|+=|" \
+			-e "/^LDFLAGS/s|=|+=|" cccc/posixgcc.mak
+}
 
 src_compile() {
-	make CCC=$(tc-getCXX) LD=$(tc-getCXX) pccts cccc || die
+	emake CCC=$(tc-getCXX) LD=$(tc-getCXX) pccts || die "pccts failed"
+	emake CCC=$(tc-getCXX) LD=$(tc-getCXX) cccc || die "cccc failed"
 }
 
 src_install() {
 	dodoc readme.txt changes.txt
 	cd install
 	dodir /usr
-	make -f install.mak INSTDIR="${D}"/usr/bin || die
+	make -f install.mak INSTDIR="${D}"/usr/bin || die "install failed"
 }
