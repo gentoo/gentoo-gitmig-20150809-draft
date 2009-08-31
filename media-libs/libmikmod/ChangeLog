@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.60 2009/08/26 16:47:29 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.61 2009/08/31 19:26:50 ranger Exp $
+
+  31 Aug 2009; Brent Baude <ranger@gentoo.org> libmikmod-3.1.11-r5.ebuild:
+  stable ppc64, bug 278857
 
   26 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   libmikmod-3.1.11-r5.ebuild:
