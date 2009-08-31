@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.2.ebuild,v 1.1 2007/11/02 20:34:08 lcars Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.2.ebuild,v 1.2 2009/08/31 18:13:38 mrness Exp $
 
 inherit eutils
 
@@ -53,6 +53,8 @@ src_unpack() {
 	use nis && confENVDEF="${confENVDEF} -DNIS"
 	use sockets && confENVDEF="${confENVDEF} -DSOCKETMAP"
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
+		-e "/@@confLDOPTS@@/d" \
+		-e "/@@confCC@@/d" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
 		-e "s/@@confLIBS@@/${confLIBS}/" \
