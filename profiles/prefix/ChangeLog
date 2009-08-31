@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.67 2009/08/27 12:12:40 grobian Exp $
+# $Id: ChangeLog,v 1.68 2009/08/31 08:41:57 grobian Exp $
+
+  31 Aug 2009; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.6/package.mask, package.mask:
+  unmask readline-6 in prefix, as gx86 is stabling it
 
   27 Aug 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   unmask Portage again, it should have bug #282854 fixed now
