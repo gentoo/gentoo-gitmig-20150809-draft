@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.8.ebuild,v 1.9 2009/08/21 21:45:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.9-r1.ebuild,v 1.1 2009/08/31 16:09:30 tester Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer meanwhile"
 IUSE="${IUSE} networkmanager nls perl silc tcl tk spell qq gadu"
 IUSE="${IUSE} +gtk sasl ncurses groupwise prediction zephyr" # mono"
@@ -82,6 +82,10 @@ pkg_setup() {
 		elog "will be built."
 		einfo
 	fi
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/pidgin-2.5.9-xmpp-old-ssl.patch"
 }
 
 src_configure() {
