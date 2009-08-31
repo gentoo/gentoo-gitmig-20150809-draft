@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.75 2009/08/30 16:36:09 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.76 2009/08/31 00:55:44 ranger Exp $
+
+  31 Aug 2009; Brent Baude <ranger@gentoo.org> openct-0.6.17.ebuild:
+  Marking openct-0.6.17 ppc64 for bug 283061
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> openct-0.6.17.ebuild:
   ppc stable #283061
