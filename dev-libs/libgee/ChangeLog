@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgee
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.3 2009/08/02 21:26:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgee/ChangeLog,v 1.4 2009/08/31 21:23:21 eva Exp $
+
+*libgee-0.3.0 (31 Aug 2009)
+
+  31 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> +libgee-0.3.0.ebuild:
+  Version bump.
 
 *libgee-0.2.0 (02 Aug 2009)
 
