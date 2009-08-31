@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/engine_pkcs11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.26 2009/08/25 17:15:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engine_pkcs11/ChangeLog,v 1.27 2009/08/31 00:51:07 ranger Exp $
+
+  31 Aug 2009; Brent Baude <ranger@gentoo.org> engine_pkcs11-0.1.6.ebuild:
+  Marking engine_pkcs11-0.1.6 ppc64 for bug 279370
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org> engine_pkcs11-0.1.6.ebuild:
   ia64/sparc stable wrt #279370
