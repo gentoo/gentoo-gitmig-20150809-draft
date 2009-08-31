@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/opencore-amr-0.1.1.ebuild,v 1.5 2009/08/28 18:17:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/opencore-amr-0.1.1.ebuild,v 1.6 2009/08/31 18:12:56 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND=""

@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencore-amr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.5 2009/08/28 18:17:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.6 2009/08/31 18:12:56 ranger Exp $
+
+  31 Aug 2009; Brent Baude <ranger@gentoo.org> opencore-amr-0.1.1.ebuild:
+  Marking opencore-amr-0.1.1 ~ppc64 for bug 280281
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   opencore-amr-0.1.1.ebuild:
