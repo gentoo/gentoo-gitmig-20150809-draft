@@ -31,7 +31,7 @@ diff -Nru mgetty-1.1.36.orig/Makefile mgetty-1.1.36/Makefile
 @@ -362,9 +362,7 @@
  # subdirectories...
  
- subdirs:
+ subdirs: sedscript
 -	cd g3 ;    $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS) -I.." "LDFLAGS=$(LDFLAGS)" "LIBS=$(LIBS)" all
  	cd tools ; $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS) -I.." "LDFLAGS=$(LDFLAGS)" "LIBS=$(LIBS)" all
 -	cd fax ;   $(MAKE) "CC=$(CC)" "CFLAGS=$(CFLAGS) -I.." "LDFLAGS=$(LDFLAGS)" "LIBS=$(LIBS)" "FAX_SPOOL_OUT=$(FAX_SPOOL_OUT)" "FAX_OUT_USER=$(FAX_OUT_USER)" "CONFDIR=$(CONFDIR)" all
@@ -66,15 +66,15 @@ diff -Nru mgetty-1.1.36.orig/Makefile mgetty-1.1.36/Makefile
 -# fax spool directories
 -#
 -	test -d $(spool) || \
--		( mkdir $(spool) && chmod 755 $(spool) )
+-		( ./mkidirs $(spool) && chmod 755 $(spool) )
 -	test -d $(FAX_SPOOL) || \
--		( mkdir $(FAX_SPOOL) && \
+-		( ./mkidirs $(FAX_SPOOL) && \
 -		  chown $(FAX_OUT_USER) $(FAX_SPOOL) && \
 -		  chmod 755 $(FAX_SPOOL) )
 -	test -d $(FAX_SPOOL_IN) || \
--		( mkdir $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
+-		( ./mkidirs $(FAX_SPOOL_IN) && chmod 755 $(FAX_SPOOL_IN) )
 -	test -d $(FAX_SPOOL_OUT) || \
--		  mkdir $(FAX_SPOOL_OUT)
+-		  ./mkidirs $(FAX_SPOOL_OUT)
 -	chown $(FAX_OUT_USER) $(FAX_SPOOL_OUT)
 -	chmod 755 $(FAX_SPOOL_OUT)
 -#

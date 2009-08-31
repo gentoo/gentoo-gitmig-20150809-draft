@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.97 2009/08/22 08:51:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.98 2009/08/31 18:41:35 mrness Exp $
+
+  31 Aug 2009; Alin Năstac <mrness@gentoo.org>
+  files/mgetty-1.1.36-nofax.patch, files/mgetty-1.1.36-qa-fixes.patch:
+  Fix broken nofax.patch and yet another parallelization bug in the main
+  Makefile (#282674).
 
   22 Aug 2009; Alin Năstac <mrness@gentoo.org>
   files/mgetty-1.1.36-qa-fixes.patch, mgetty-1.1.36-r3.ebuild:
