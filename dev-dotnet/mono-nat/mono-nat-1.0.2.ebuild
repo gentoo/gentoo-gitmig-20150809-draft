@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.0.ebuild,v 1.4 2009/05/06 00:06:49 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono-nat/mono-nat-1.0.2.ebuild,v 1.1 2009/08/31 14:48:37 loki_val Exp $
 
 EAPI=2
 
@@ -10,18 +10,19 @@ MY_PN=Mono.Nat
 
 DESCRIPTION="Mono.Nat is a C# library used for automatic port forwarding, using either uPnP or nat-pmp."
 HOMEPAGE="http://projects.qnetp.net/projects/show/mono-nat"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="http://projects.qnetp.net/attachments/download/22/${P}.tar.gz
+	mirror://gentoo/mono.snk.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 RDEPEND=">=dev-lang/mono-2.0.1"
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.23"
 
 src_compile() {
-	emake -j1 ASSEMBLY_COMPILER_COMMAND="/usr/bin/gmcs -keyfile:${FILESDIR}/mono.snk"
+	emake -j1 ASSEMBLY_COMPILER_COMMAND="/usr/bin/gmcs -keyfile:${WORKDIR}/mono.snk"
 }
 
 src_install() {
