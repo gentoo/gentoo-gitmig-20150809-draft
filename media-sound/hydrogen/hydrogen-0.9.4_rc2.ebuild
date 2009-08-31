@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.4_rc2.ebuild,v 1.2 2009/08/29 19:25:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/hydrogen-0.9.4_rc2.ebuild,v 1.3 2009/08/31 10:56:23 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/_/-}
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Advanced Drum Machine"
 HOMEPAGE="http://www.hydrogen-music.org/"
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${MY_P}
 
 src_compile() {
+	export QTDIR="/usr/$(get_libdir)"
 	local myconf="prefix=/usr libarchive=1"
 	use oss || myconf="${myconf} oss=0"
 	use alsa || myconf="${myconf} alsa=0"
