@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.11 2009/08/31 12:02:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.12 2009/08/31 18:22:47 scarabeus Exp $
 
 EAPI="2"
 
@@ -43,29 +43,39 @@ S="${WORKDIR}"
 
 # QA Silencing
 QA_TEXTRELS="
-usr/lib*/opengl/ati/lib/libGL.so.1.2
-usr/lib*/libatiadlxx.so
-usr/lib*/xorg/modules/glesx.so
-usr/lib*/libaticaldd.so
-usr/lib*/dri/fglrx_dri.so
+	usr/lib*/opengl/ati/lib/libGL.so.1.2
+	usr/lib*/libatiadlxx.so
+	usr/lib*/xorg/modules/glesx.so
+	usr/lib*/libaticaldd.so
+	usr/lib*/dri/fglrx_dri.so
 "
 
 QA_EXECSTACK="
-opt/bin/atiode
-opt/bin/amdcccle
-usr/lib*/opengl/ati/lib/libGL.so.1.2
-usr/lib*/dri/fglrx_dri.so
+	opt/bin/atiode
+	opt/bin/amdcccle
+	usr/lib*/opengl/ati/lib/libGL.so.1.2
+	usr/lib*/dri/fglrx_dri.so
 "
 
-QA_WX_LOAD="usr/lib/opengl/ati/lib/libGL.so.1.2"
+QA_WX_LOAD="
+	usr/lib*/opengl/ati/lib/libGL.so.1.2
+	usr/lib*/dri/fglrx_dri.so
+"
 
 QA_PRESTRIPPED="
-usr/lib*/libXvBAW.so.1.0
-usr/lib*/opengl/ati/lib/libGL.so.1.2
-usr/lib*/xorg/modules/glesx.so
-usr/lib*/libAMDXvBA.so.1.0
-usr/lib*/libaticaldd.so
-usr/lib*/dri/fglrx_dri.so
+	usr/lib\(32\|64\)\?/libXvBAW.so.1.0
+	usr/lib\(32\|64\)\?/opengl/ati/lib/libGL.so.1.2
+	usr/lib\(32\|64\)\?/xorg/modules/glesx.so
+	usr/lib\(32\|64\)\?/libAMDXvBA.so.1.0
+	usr/lib\(32\|64\)\?/libaticaldd.so
+	usr/lib\(32\|64\)\?/dri/fglrx_dri.so
+"
+
+QA_SONAME="
+	usr/lib\(32\|64\)\?/libatiadlxx.so
+	usr/lib\(32\|64\)\?/libaticalcl.so
+	usr/lib\(32\|64\)\?/libaticaldd.so
+	usr/lib\(32\|64\)\?/libaticalrt.so
 "
 
 _check_kernel_config() {
