@@ -1,19 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.10.ebuild,v 1.1 2009/05/03 09:26:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/acpid/acpid-1.0.10_p4.ebuild,v 1.1 2009/08/31 22:29:13 loki_val Exp $
 
 inherit toolchain-funcs
 
-MY_P="${P}-netlink2"
+MY_P="${P%_p*}-netlink${PV#*_p}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface"
 HOMEPAGE="http://acpid.sourceforge.net"
-SRC_URI="http://tedfelix.com/linux/${MY_P}.tar.bz2"
+SRC_URI="http://tedfelix.com/linux/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-ppc ~ia64 ~alpha ~amd64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 -ppc ~x86"
 IUSE=""
 
 DEPEND="sys-apps/sed"
@@ -26,10 +26,14 @@ src_unpack() {
 
 src_compile() {
 	emake CC="$(tc-getCC)" INSTPREFIX="${D}" || die "emake failed"
+	emake -C kacpimon CFLAGS="${CFLAGS} -fno-strict-aliasing" CC="$(tc-getCC)" INSTPREFIX="${D}" || die "emake failed"
 }
 
 src_install() {
 	emake INSTPREFIX="${D}" install || die "emake install failed"
+
+	dobin kacpimon/kacpimon || die "kacpimon failed to install"
+	newdoc kacpimon/README README-KACPIMON
 
 	exeinto /etc/acpi
 	newexe "${FILESDIR}"/${PN}-1.0.6-default.sh default.sh || die
@@ -42,13 +46,13 @@ src_install() {
 	newconfd "${FILESDIR}"/${PN}-1.0.6-conf.d acpid || die
 
 	docinto examples
-	dodoc samples/{acpi_handler.sh,sample.conf}
+	dodoc samples/{acpi_handler.sh,sample.conf} || die
 
 	docinto examples/battery
-	dodoc samples/battery/*
+	dodoc samples/battery/* || die
 
 	docinto examples/panasonic
-	dodoc samples/panasonic/*
+	dodoc samples/panasonic/* || die
 }
 
 pkg_postinst() {
