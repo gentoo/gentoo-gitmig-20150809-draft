@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.18.2-r1.ebuild,v 1.1 2009/08/31 19:09:29 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-2.18.2-r1.ebuild,v 1.2 2009/08/31 20:16:07 mrpouet Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -37,5 +37,6 @@ src_prepare() {
 	# Don't use liblua embedded version, use system lib instead
 	# fix bug #255773, import from upstream bug #593674
 	epatch "${FILESDIR}"/${P}-system-lua.patch
+	intltoolize --automake --copy --force || die "intltoolize failed"
 	eautoreconf
 }
