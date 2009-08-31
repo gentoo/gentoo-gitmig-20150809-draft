@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.279 2009/08/28 19:08:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.280 2009/08/31 15:45:43 chainsaw Exp $
+
+*alsa-utils-1.0.21 (31 Aug 2009)
+
+  31 Aug 2009; <chainsaw@gentoo.org> +alsa-utils-1.0.21.ebuild,
+  +files/alsa-utils-1.0.21-init_default.patch,
+  +files/alsa-utils-1.0.21-modprobe.d.patch:
+  Version bump, removes several deprecated functions. Besides that, mostly
+  bug fixes and new drivers.
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   alsa-utils-1.0.20-r5.ebuild:
