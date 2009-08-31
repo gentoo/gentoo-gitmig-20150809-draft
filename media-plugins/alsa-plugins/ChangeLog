@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.111 2009/08/29 18:41:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.112 2009/08/31 16:00:41 chainsaw Exp $
+
+*alsa-plugins-1.0.21 (31 Aug 2009)
+
+  31 Aug 2009; <chainsaw@gentoo.org>
+  files/alsa-plugins-1.0.20-automagic.patch, +alsa-plugins-1.0.21.ebuild,
+  +files/alsa-plugins-1.0.21-automagic.patch:
+  Version bump, removes several deprecated functions. Besides that, mostly
+  bug fixes and new drivers.
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> alsa-plugins-1.0.20.ebuild:
   ppc stable #280464
