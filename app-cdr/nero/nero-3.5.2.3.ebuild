@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.2.3.ebuild,v 1.4 2009/05/21 22:02:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-3.5.2.3.ebuild,v 1.5 2009/08/31 21:49:52 ikelos Exp $
 
 EAPI=2
 inherit eutils fdo-mime rpm multilib gnome2-utils linux-mod
@@ -22,7 +22,7 @@ DEPEND=""
 
 PROPERTIES="interactive"
 RESTRICT="strip mirror test"
-CONFIG_CHECK="CHR_DEV_SG"
+CONFIG_CHECK="~CHR_DEV_SG"
 QA_TEXTRELS="opt/nero/$(get_libdir)/nero/*"
 QA_EXECSTACK="opt/nero/$(get_libdir)/nero/*"
 S=${WORKDIR}
