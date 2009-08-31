@@ -1,6 +1,12 @@
 # ChangeLog for gnome-extra/nautilus-open-terminal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.36 2009/08/05 22:34:50 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nautilus-open-terminal/ChangeLog,v 1.37 2009/08/31 19:49:04 eva Exp $
+
+*nautilus-open-terminal-0.17 (31 Aug 2009)
+
+  31 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +nautilus-open-terminal-0.17.ebuild:
+  Version bump. Fix ssh with non-standard port.
 
 *nautilus-open-terminal-0.16 (05 Aug 2009)
 
