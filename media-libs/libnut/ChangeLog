@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.8 2009/08/28 15:59:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.9 2009/08/31 18:20:32 ranger Exp $
+
+  31 Aug 2009; Brent Baude <ranger@gentoo.org> libnut-661.ebuild:
+  Marking libnut-661 ~ppc64 for bug 279831
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org> libnut-661.ebuild:
   Keyworded on alpha, bug #279831
