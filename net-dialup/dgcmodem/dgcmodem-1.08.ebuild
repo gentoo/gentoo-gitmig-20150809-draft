@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/dgcmodem-1.08.ebuild,v 1.1 2008/10/18 08:26:17 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/dgcmodem/dgcmodem-1.08.ebuild,v 1.2 2009/08/31 22:34:09 ikelos Exp $
 
 inherit linux-info
 
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-CONFIG_CHECK="USB_ACM"
+CONFIG_CHECK="~USB_ACM"
 ERROR_USB_ACM="${PN} requires USB modem (CDC ACM) support in your kernel (module name: USB_ACM)".
 
 src_compile() {

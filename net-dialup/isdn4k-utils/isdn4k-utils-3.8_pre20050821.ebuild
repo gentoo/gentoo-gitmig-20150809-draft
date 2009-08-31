@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.11 2007/11/14 15:30:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.12 2009/08/31 22:37:56 ikelos Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -60,12 +60,12 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	# check kernel config
-	CONFIG_CHECK="ISDN ISDN_I4L"
+	CONFIG_CHECK="~ISDN ~ISDN_I4L"
 	if use ipppd; then
-		CONFIG_CHECK="${CONFIG_CHECK} ISDN_PPP"
-		use activefilter && CONFIG_CHECK="${CONFIG_CHECK} IPPP_FILTER"
+		CONFIG_CHECK="${CONFIG_CHECK} ~ISDN_PPP"
+		use activefilter && CONFIG_CHECK="${CONFIG_CHECK} ~IPPP_FILTER"
 	fi
-	use eurofile && CONFIG_CHECK="${CONFIG_CHECK} X25 ISDN_X25"
+	use eurofile && CONFIG_CHECK="${CONFIG_CHECK} ~X25 ~ISDN_X25"
 	# linux-info_pkg_setup  -> disabled until I have a better solution
 
 	# Get country code from I4L_CC variable

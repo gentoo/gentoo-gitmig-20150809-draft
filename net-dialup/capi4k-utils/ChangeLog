@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/capi4k-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.64 2009/07/12 18:17:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/ChangeLog,v 1.65 2009/08/31 22:32:26 ikelos Exp $
+
+  31 Aug 2009; Mike Auty <ikelos@gentoo.org>
+  capi4k-utils-20050718-r3.ebuild:
+  Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
 
   12 Jul 2009; Mark Loeser <halcy0n@gentoo.org>
   capi4k-utils-20050718-r3.ebuild:
