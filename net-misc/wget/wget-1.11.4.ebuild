@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.11.4.ebuild,v 1.6 2009/08/31 00:33:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/wget-1.11.4.ebuild,v 1.7 2009/08/31 16:23:20 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/wget/${P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh ~sparc ~sparc-fbsd x86 ~x86-fbsd"
 IUSE="debug ipv6 nls ssl static"
 
 RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )"
