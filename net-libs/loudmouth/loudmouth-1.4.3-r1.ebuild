@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.2 2009/07/06 03:36:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.3 2009/08/31 21:38:05 tester Exp $
 
 inherit autotools gnome2
 
@@ -60,6 +60,11 @@ src_unpack() {
 	# Drop stanzas when failing to convert them to LmMessages
 	# From debian..
 	epatch "${FILESDIR}/${P}-drop-stanzas-on-fail.patch"
+
+	# Don't check for sync dns problems when using asyncns [#33]
+	# From debian..
+	epatch "${FILESDIR}/${P}-async-fix.patch"
+	
 
 	eautoreconf
 }

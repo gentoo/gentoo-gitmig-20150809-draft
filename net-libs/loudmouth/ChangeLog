@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/loudmouth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.89 2009/07/05 17:13:31 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/ChangeLog,v 1.90 2009/08/31 21:38:05 tester Exp $
+
+  31 Aug 2009; Olivier Crête <tester@gentoo.org> loudmouth-1.4.3-r1.ebuild,
+  +files/loudmouth-1.4.3-async-fix.patch:
+  Import anopatch for asyncns crash from debian
 
 *loudmouth-1.4.3-r1 (05 Jul 2009)
 
