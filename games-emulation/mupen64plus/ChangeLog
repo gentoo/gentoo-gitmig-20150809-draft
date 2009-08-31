@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mupen64plus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.1 2009/08/28 07:50:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/ChangeLog,v 1.2 2009/08/31 21:49:20 nyhm Exp $
+
+  31 Aug 2009; Tristan Heaven <nyhm@gentoo.org>
+  files/mupen64plus-1.5-flags.patch:
+  Don't remove -fno-strict-aliasing from default CFLAGS; respect CC/CXX
 
 *mupen64plus-1.5 (28 Aug 2009)
 

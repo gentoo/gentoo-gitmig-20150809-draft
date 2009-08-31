@@ -1,9 +1,15 @@
-diff -dupr Mupen64Plus-1-5-src.orig/pre.mk Mupen64Plus-1-5-src/pre.mk
---- Mupen64Plus-1-5-src.orig/pre.mk	2009-08-01 17:27:41.415292353 +0200
-+++ Mupen64Plus-1-5-src/pre.mk	2009-08-01 17:32:29.038293121 +0200
-@@ -151,10 +151,10 @@ CC      = gcc
- CXX     = g++
- LD      = g++
+--- pre.mk
++++ pre.mk
+@@ -147,14 +147,14 @@
+ endif
+ 
+ # set base program pointers and flags
+-CC      = gcc
+-CXX     = g++
+-LD      = g++
++CC      ?= gcc
++CXX     ?= g++
++LD      = $(CXX)
  ifeq ($(OS),LINUX)
 -STRIP	= strip -s
 +STRIP	= true
@@ -14,11 +20,12 @@ diff -dupr Mupen64Plus-1-5-src.orig/pre.mk Mupen64Plus-1-5-src/pre.mk
  endif
  RM      = rm
  RM_F    = rm -f
-@@ -185,19 +185,10 @@ else 
+@@ -185,19 +185,11 @@
  endif
  
  # set base CFLAGS and LDFLAGS
 -CFLAGS += -pipe -O3 -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing
++CFLAGS += -fno-strict-aliasing
  CORE_LDFLAGS += -lz -lm -lpng -lfreetype -ldl
  
  # set special flags per-system
@@ -34,7 +41,7 @@ diff -dupr Mupen64Plus-1-5-src.orig/pre.mk Mupen64Plus-1-5-src/pre.mk
    # tweak flags for 32-bit build on 64-bit system
    ifeq ($(ARCH), 64BITS_32)
      CFLAGS += -m32
-@@ -205,7 +196,7 @@ ifeq ($(CPU), X86)
+@@ -205,7 +197,7 @@
    endif
  endif
  ifeq ($(CPU), PPC)
