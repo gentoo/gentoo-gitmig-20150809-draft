@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/unetbootin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.18 2009/08/07 15:24:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/unetbootin/ChangeLog,v 1.19 2009/08/31 14:09:01 fauli Exp $
+
+  31 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
+  unetbootin-356.ebuild:
+  stable x86, bug 280253
 
   07 Aug 2009; <chainsaw@gentoo.org> unetbootin-356.ebuild:
   Marked stable on AMD64 as requested by Jeroen Roovers <jer@gentoo.org> in
