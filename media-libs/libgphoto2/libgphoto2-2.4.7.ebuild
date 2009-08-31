@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.7.ebuild,v 1.1 2009/08/30 14:58:33 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.4.7.ebuild,v 1.2 2009/08/31 12:43:54 mrpouet Exp $
 
 # TODO
 # 1. Track upstream bug --disable-docs does not work.
@@ -107,7 +107,7 @@ src_configure() {
 		$(use_with bonjour) \
 		$(use_with hal) \
 		$(use_enable nls) \
-		$(use_with exif libexif) \
+		$(use_with exif libexif auto) \
 		--with-drivers=${cameras} \
 		--with-doc-dir=/usr/share/doc/${PF} \
 		--with-html-dir=/usr/share/doc/${PF}/html \
