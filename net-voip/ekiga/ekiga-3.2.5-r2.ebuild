@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r1.ebuild,v 1.2 2009/08/27 08:45:54 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r2.ebuild,v 1.1 2009/08/31 17:36:14 volkmar Exp $
 
 EAPI="2"
 
@@ -17,8 +17,8 @@ HOMEPAGE="http://www.ekiga.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="avahi dbus debug doc eds gconf gnome gstreamer +h323 kde kontact ldap
-libnotify mmx nls +shm +sip static v4l xcap xv"
+IUSE="avahi dbus debug doc eds gconf gnome gstreamer h323 kde kontact ldap
+libnotify mmx nls +shm static v4l xcap xv"
 
 RDEPEND=">=dev-libs/glib-2.8.0:2
 	dev-libs/libsigc++:2
@@ -37,7 +37,7 @@ RDEPEND=">=dev-libs/glib-2.8.0:2
 	gstreamer? ( >=media-libs/gst-plugins-base-0.10.21.3:0.10 )
 	kde? ( kontact? ( >=kde-base/kdepimlibs-${KDE_MINIMAL} ) )
 	ldap? ( dev-libs/cyrus-sasl:2
-		>=net-nds/openldap-2.3.43-r1 )
+		net-nds/openldap )
 	libnotify? ( x11-libs/libnotify
 		debug? ( >=x11-libs/libnotify-0.4.5 ) )
 	shm? ( x11-libs/libXext )
@@ -59,10 +59,8 @@ DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
 # TODO: gnome2 eclass add --[dis|en]able-gtk-doc wich throws a QA warning
 #	a patch has been submitted, see bug 262491
 # ptlib/opal needed features are not checked by ekiga, upstream bug 577249
-# opal[sip] should be opal[sip?], upstream bug 577248
 # libnotify-0.4.4 bug with +debug, upstream bug 583719
 # +doc is not installing dev doc (doxygen)
-# forcing openldap version to >=2.3.43-r1 to prevent bug 189817
 
 # UPSTREAM:
 # contact ekiga team to be sure intltool and gettext are not nls deps
@@ -70,13 +68,6 @@ DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
 pkg_setup() {
 	if use kde; then
 		kde4-base_pkg_setup
-	fi
-
-	if ! use h323 && ! use sip; then
-		eerror "You have disabled h323 and sip USE flags."
-		eerror "At least one of these USE flags needs to be enabled."
-		eerror "Please, enable h323 and/or sip and re-emerge ${PN}."
-		die "At least sip or h323 need to be enabled."
 	fi
 
 	if use kontact && ! use kde; then
@@ -129,15 +120,6 @@ src_prepare() {
 	# remove call to gconftool-2 --shutdown, upstream bug 555976
 	# gnome-2 eclass is reloading schemas with SIGHUP
 	sed -i -e '/gconftool-2 --shutdown/d' Makefile.in || die "sed failed"
-
-	# SIP is automatically enabled with opal[sip], want it to be a user choice
-	# upstream bug 575832
-	if ! use sip; then
-		sed -i -e "s/SIP=\"yes\"/SIP=\"no\"/" configure || die "sed failed"
-		sed -i -e \
-			"s:SIP=\`\$PKG_CONFIG --variable=OPAL_SIP opal\`:SIP=\"no\":" \
-			configure || die "sed failed"
-	fi
 
 	# H323 is automatically enabled with opal[h323], want it to be a user choice
 	# upstream bug 575833

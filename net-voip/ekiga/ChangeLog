@@ -1,6 +1,13 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.9 2009/08/27 08:45:54 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.10 2009/08/31 17:36:14 volkmar Exp $
+
+*ekiga-3.2.5-r2 (31 Aug 2009)
+
+  31 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> metadata.xml,
+	-ekiga-3.2.5-r1.ebuild, +ekiga-3.2.5-r2.ebuild:
+  Removing sip from USE flags and h323 is no longer default enabled, bug 282862
+	Reverting last commit.
 
   27 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> ekiga-3.2.5-r1.ebuild:
   Change openldap dep version to prevent bug 189817
