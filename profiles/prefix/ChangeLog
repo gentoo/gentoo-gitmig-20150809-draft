@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.68 2009/08/31 08:41:57 grobian Exp $
+# $Id: ChangeLog,v 1.69 2009/08/31 20:05:34 grobian Exp $
+
+  31 Aug 2009; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/package.use.mask:
+  unmask aqua USE-flag for python, now it seems I sorted all outstanding
+  issues
 
   31 Aug 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.6/package.mask, package.mask:
