@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0.ebuild,v 1.1 2009/09/01 19:26:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.1.0.ebuild,v 1.2 2009/09/01 21:16:43 ribosome Exp $
 
 inherit eutils
 
@@ -85,6 +85,11 @@ src_install() {
 	dosym /usr/share/EMBOSS/doc/programs /usr/share/doc/${PF}/programs || die
 	dosym /usr/share/EMBOSS/doc/tutorials /usr/share/doc/${PF}/tutorials || die
 	dosym /usr/share/EMBOSS/doc/html /usr/share/doc/${PF}/html || die
+
+	# Remove frestdist documentation conflicting with the EMBASSY philypnew
+	# package.
+	rm "${D}"/usr/share/EMBOSS/doc/programs/text/frestdist.txt || \
+			die "Failed to remove duplicated documentation."
 
 	# Remove useless dummy files from the image.
 	rm "${D}"/usr/share/EMBOSS/data/{AAINDEX,PRINTS,PROSITE,REBASE}/dummyfile \
