@@ -1,0 +1,10 @@
+# ChangeLog for games-util/linux-wbfs-manager
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/ChangeLog,v 1.1 2009/09/01 18:21:32 vapier Exp $
+
+*linux-wbfs-manager-0.1.10 (01 Sep 2009)
+
+  01 Sep 2009; Mike Frysinger <vapier@gentoo.org>
+  +linux-wbfs-manager-0.1.10.ebuild, +metadata.xml:
+  Initial version by me.
+
