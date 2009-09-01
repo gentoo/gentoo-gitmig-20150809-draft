@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/amtterm
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/amtterm/ChangeLog,v 1.1 2009/09/01 11:54:52 patrick Exp $
+
+*amtterm-1.2 (01 Sep 2009)
+
+  01 Sep 2009; Patrick Lauer <patrick@gentoo.org> +amtterm-1.2.ebuild,
+  +metadata.xml:
+  Initial ebuild for amtterm. Some automagic deps, and the X / GUI bits
+  aren't built yet. Ebuild by Patrick Lauer.
+
