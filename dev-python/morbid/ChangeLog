@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/morbid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.3 2009/08/30 16:31:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.4 2009/09/01 07:32:10 patrick Exp $
+
+*morbid-0.8.7.3 (01 Sep 2009)
+
+  01 Sep 2009; Patrick Lauer <patrick@gentoo.org> +morbid-0.8.7.3.ebuild:
+  Bump to 0.8.7.3, fixes #283209. Adding missing twisted-web dependency.
 
   30 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   morbid-0.8.7.2.ebuild:
