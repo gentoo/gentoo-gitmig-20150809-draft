@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00.ebuild,v 1.1 2009/09/01 09:36:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00.ebuild,v 1.2 2009/09/01 13:52:48 jer Exp $
 
 EAPI="2"
 
@@ -26,7 +26,6 @@ for MY_LINGUA in ${MY_LINGUAS}; do
 done
 
 O_U="mirror://opera/linux/1000/final/en/"
-O_U="ftp://ftp.opera.com/pub/opera/linux/1000/final/en/"
 
 SRC_URI="
 	amd64? (

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.383 2009/09/01 10:38:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.384 2009/09/01 13:52:48 jer Exp $
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00.ebuild:
+  Switch to mirror://opera now that mirrors should have synced.
 
   01 Sep 2009; Jeroen Roovers <jer@gentoo.org> -opera-10.00_pre4537.ebuild,
   -opera-10.00_pre4538.ebuild, -opera-10.00_pre4546.ebuild,
