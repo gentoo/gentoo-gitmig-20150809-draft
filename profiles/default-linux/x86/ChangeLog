@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.152 2009/08/26 09:22:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/ChangeLog,v 1.153 2009/09/01 09:02:24 fauli Exp $
+
+  01 Sep 2009; Christian Faulhammer <fauli@gentoo.org> deprecated:
+  various people on the fora had problems with the switch due to an old
+  Portage
 
   26 Aug 2009; Christian Faulhammer <fauli@gentoo.org> +deprecated:
   deprecate root profile
