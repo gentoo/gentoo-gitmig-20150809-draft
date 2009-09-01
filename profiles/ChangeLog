@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3207 2009/09/01 14:21:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3208 2009/09/01 17:54:26 a3li Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Sep 2009; Alex Legler <a3li@gentoo.org> package.mask:
+  Masking TinyERP for security bug 283434.
 
   01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
   Mask KDE 4.3.1, mask will be removed as soon as its release is announced
