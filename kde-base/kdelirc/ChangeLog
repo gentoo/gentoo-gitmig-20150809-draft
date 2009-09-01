@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.77 2009/09/01 15:11:33 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelirc/ChangeLog,v 1.78 2009/09/01 21:46:18 wired Exp $
+
+  01 Sep 2009; Alex Alexander <wired@gentoo.org> kdelirc-4.3.1.ebuild:
+  fixed collision with kscd
 
 *kdelirc-4.3.1 (01 Sep 2009)
 
