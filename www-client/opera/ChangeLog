@@ -1,6 +1,13 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.381 2009/08/29 17:11:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.382 2009/09/01 09:36:37 jer Exp $
+
+*opera-10.00 (01 Sep 2009)
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> +opera-10.00.ebuild:
+  Version bump
+  <http://my.opera.com/community/blog/2009/08/25/the-adventures-of-odd-even>
+  .
 
   29 Aug 2009; Jeroen Roovers <jer@gentoo.org> opera-10.10_pre4563.ebuild,
   opera-10.10_pre4566.ebuild, +files/opera-localepath.patch:
