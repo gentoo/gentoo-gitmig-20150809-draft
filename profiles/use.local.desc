@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4774 2009/08/31 17:47:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4775 2009/09/01 08:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2389,6 +2389,7 @@ net-mail/gnubiff:password - Enable save passwords to connect mail servers in use
 net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
 net-mail/lbdb:abook - Enables app-misc/abook support
 net-mail/lbdb:finger - Enables finger support
+net-mail/libpst:dii - enable dii support
 net-mail/qmailadmin:maildrop - Filter spam using maildrop
 net-mail/qpopper:apop - Enables the pop.auth file in /etc/pop.auth
 net-mail/qpopper:drac - Enables DRAC support
