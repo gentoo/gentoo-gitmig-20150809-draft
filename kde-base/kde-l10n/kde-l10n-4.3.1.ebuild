@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.3.1.ebuild,v 1.1 2009/09/01 15:10:23 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-l10n/kde-l10n-4.3.1.ebuild,v 1.2 2009/09/01 18:31:58 tampakrap Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="+handbook"
 
 MY_LANGS="ar bg bn_IN ca cs csb da de el en_GB es et eu fi fr ga gl gu he hi
-	hne hu is it ja kk km kn ko ku lt lv mai mk ml mr nb nds nl nn pa pl pt
+	hne hr hu is it ja kk km kn ko ku lt lv mai mk ml mr nb nds nl nn pa pl pt
 	pt_BR ro ru sk sl sr sv tg th tr uk wa zh_CN zh_TW"
 
 URI_BASE="${SRC_URI/-${PV}.tar.bz2/}"
