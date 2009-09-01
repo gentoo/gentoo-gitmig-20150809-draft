@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3205 2009/09/01 13:51:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3206 2009/09/01 13:56:01 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
+  Remove opera-9.27 after more than a year.
 
   01 Sep 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera mask now 10.00 is final.
