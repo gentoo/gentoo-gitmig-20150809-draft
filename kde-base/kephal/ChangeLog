@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kephal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.16 2009/08/04 04:33:18 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kephal/ChangeLog,v 1.17 2009/09/01 15:23:26 tampakrap Exp $
+
+*kephal-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kephal-4.3.1.ebuild:
+  Version bump
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)

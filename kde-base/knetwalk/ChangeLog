@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/knetwalk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.51 2009/08/04 00:46:36 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knetwalk/ChangeLog,v 1.52 2009/09/01 15:40:57 tampakrap Exp $
+
+*knetwalk-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +knetwalk-4.3.1.ebuild:
+  Version bump
 
 *knetwalk-4.3.0 (04 Aug 2009)
 

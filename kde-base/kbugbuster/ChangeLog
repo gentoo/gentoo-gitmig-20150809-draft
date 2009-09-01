@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kbugbuster
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.113 2009/08/03 23:58:28 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kbugbuster/ChangeLog,v 1.114 2009/09/01 14:54:05 tampakrap Exp $
+
+*kbugbuster-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kbugbuster-4.3.1.ebuild:
+  Version bump
 
 *kbugbuster-4.3.0 (03 Aug 2009)
 

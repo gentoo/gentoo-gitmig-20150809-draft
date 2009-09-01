@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.118 2009/08/04 00:26:23 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdf/ChangeLog,v 1.119 2009/09/01 15:20:42 tampakrap Exp $
+
+*kdf-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org> +kdf-4.3.1.ebuild:
+  Version bump
 
 *kdf-4.3.0 (04 Aug 2009)
 

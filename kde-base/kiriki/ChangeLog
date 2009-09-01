@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kiriki
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kiriki/ChangeLog,v 1.30 2009/08/04 00:38:04 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kiriki/ChangeLog,v 1.31 2009/09/01 15:32:34 tampakrap Exp $
+
+*kiriki-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kiriki-4.3.1.ebuild:
+  Version bump
 
 *kiriki-4.3.0 (04 Aug 2009)
 

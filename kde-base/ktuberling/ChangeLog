@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/ktuberling
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.120 2009/08/04 01:11:45 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktuberling/ChangeLog,v 1.121 2009/09/01 16:05:52 tampakrap Exp $
+
+*ktuberling-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +ktuberling-4.3.1.ebuild:
+  Version bump
 
 *ktuberling-4.3.0 (04 Aug 2009)
 

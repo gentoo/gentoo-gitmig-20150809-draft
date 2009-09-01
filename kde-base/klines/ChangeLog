@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/klines
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.121 2009/08/04 00:40:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klines/ChangeLog,v 1.122 2009/09/01 15:35:01 tampakrap Exp $
+
+*klines-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +klines-4.3.1.ebuild:
+  Version bump
 
 *klines-4.3.0 (04 Aug 2009)
 

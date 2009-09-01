@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeadmin-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.128 2009/08/04 12:29:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin-meta/ChangeLog,v 1.129 2009/09/01 14:59:29 tampakrap Exp $
+
+*kdeadmin-meta-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kdeadmin-meta-4.3.1.ebuild:
+  Version bump
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> kdeadmin-meta-4.3.0.ebuild:
   re-added printing deps

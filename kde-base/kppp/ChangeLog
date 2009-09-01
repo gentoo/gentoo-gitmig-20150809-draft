@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kppp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.123 2009/08/04 00:55:42 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kppp/ChangeLog,v 1.124 2009/09/01 15:50:21 tampakrap Exp $
+
+*kppp-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org> +kppp-4.3.1.ebuild:
+  Version bump
 
 *kppp-4.3.0 (04 Aug 2009)
 

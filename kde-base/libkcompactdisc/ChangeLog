@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/libkcompactdisc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.29 2009/08/04 01:18:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkcompactdisc/ChangeLog,v 1.30 2009/09/01 16:12:36 tampakrap Exp $
+
+*libkcompactdisc-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +libkcompactdisc-4.3.1.ebuild:
+  Version bump
 
 *libkcompactdisc-4.3.0 (04 Aug 2009)
 

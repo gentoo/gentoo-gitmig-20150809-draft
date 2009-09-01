@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kspaceduel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.120 2009/08/04 01:03:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kspaceduel/ChangeLog,v 1.121 2009/09/01 15:58:07 tampakrap Exp $
+
+*kspaceduel-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kspaceduel-4.3.1.ebuild:
+  Version bump
 
 *kspaceduel-4.3.0 (04 Aug 2009)
 

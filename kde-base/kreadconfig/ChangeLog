@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kreadconfig
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.100 2009/08/04 04:38:29 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kreadconfig/ChangeLog,v 1.101 2009/09/01 15:51:36 tampakrap Exp $
+
+*kreadconfig-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kreadconfig-4.3.1.ebuild:
+  Version bump
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)

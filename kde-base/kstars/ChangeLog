@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.131 2009/08/04 04:39:50 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.132 2009/09/01 15:59:20 tampakrap Exp $
+
+*kstars-4.3.1 (01 Sep 2009)
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org>
+  +kstars-4.3.1.ebuild:
+  Version bump
 
   04 Aug 2009; Alex Alexander <wired@gentoo.org> ChangeLog:
   manifest update (upstream tarball changed)
