@@ -1,10 +1,11 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.11 2009/08/16 22:06:53 remi Exp $
+# # $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/use.mask,v 1.12 2009/09/01 15:06:37 jer Exp $
 # DON'T TOUCH THIS FILE. Instead, file a bug and assign it to <hppa@gentoo.org>.
 
 # Jeroen Roovers <jer@gentoo.org> (4 Aug 2009)
-# net-misc/wicd is not currently supported (bug #280312)
+# net-misc/wicd and sys-power/pm-utils are currently not supported (bug #280312)
 wicd
+pm-utils
 
 # Unmask the flag which corresponds to ARCH.
 -hppa

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.32 2009/08/16 22:06:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.33 2009/09/01 15:06:37 jer Exp $
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> use.mask:
+  sys-power/pm-utils is currently not supported (bug #280312).
 
   16 Aug 2009; Rémi Cardona <remi@gentoo.org> use.mask:
   drop last traces of i810
