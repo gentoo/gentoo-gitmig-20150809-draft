@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.303 2009/08/13 15:11:32 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.304 2009/09/01 16:02:40 beandog Exp $
+
+*alsa-driver-1.0.21 (01 Sep 2009)
+
+  01 Sep 2009; Steve Dibb <beandog@gentoo.org> +alsa-driver-1.0.21.ebuild:
+  Version bump
 
   13 Aug 2009; Steve Dibb <beandog@gentoo.org> alsa-driver-9999.ebuild:
   Add missing cards, bug 269167
