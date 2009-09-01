@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/embassy-vienna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-vienna/ChangeLog,v 1.5 2009/09/01 18:41:06 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-vienna/ChangeLog,v 1.6 2009/09/01 21:52:15 ribosome Exp $
+
+*embassy-vienna-1.7.2-r1 (01 Sep 2009)
+
+  01 Sep 2009; Olivier Fisette <ribosome@gentoo.org>
+  +embassy-vienna-1.7.2-r1.ebuild:
+  Updated version for EMBASSY 6.1.0.
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org>
   embassy-vienna-1.7.2.ebuild:

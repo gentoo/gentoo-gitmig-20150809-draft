@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/embassy-topo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-topo/ChangeLog,v 1.26 2009/09/01 18:39:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-topo/ChangeLog,v 1.27 2009/09/01 21:51:02 ribosome Exp $
+
+*embassy-topo-1.0.0-r6 (01 Sep 2009)
+
+  01 Sep 2009; Olivier Fisette <ribosome@gentoo.org>
+  +embassy-topo-1.0.0-r6.ebuild:
+  Updated version for EMBASSY 6.1.0.
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org>
   embassy-topo-1.0.0-r5.ebuild:
