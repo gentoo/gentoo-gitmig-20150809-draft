@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/xen-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.51 2009/08/19 15:06:58 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/ChangeLog,v 1.52 2009/09/01 09:56:36 wschlich Exp $
+
+*xen-tools-3.4.1-r1 (01 Sep 2009)
+
+  01 Sep 2009; Wolfram Schlich <wschlich@gentoo.org> +files/xend.initd-r1,
+  +files/xendomains.initd-r1, +xen-tools-3.4.1-r1.ebuild:
+  fix bugs 248771, 248797, 248917
 
   19 Aug 2009; Patrick Lauer <patrick@gentoo.org> xen-tools-3.4.1.ebuild:
   Changing python dep (use=ssl) for #279917
