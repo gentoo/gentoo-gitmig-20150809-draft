@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/vtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.53 2009/07/18 03:33:23 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/ChangeLog,v 1.54 2009/09/01 01:56:50 markusle Exp $
+
+  01 Sep 2009; Markus Dittrich <markusle@gentoo.org> vtk-5.4.2.ebuild:
+  Added missing dependency on qt-opengl (fixes bug #283181).
 
 *vtk-5.4.2 (17 Jul 2009)
 

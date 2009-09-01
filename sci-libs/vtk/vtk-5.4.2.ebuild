@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.1 2009/07/18 03:33:23 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/vtk/vtk-5.4.2.ebuild,v 1.2 2009/09/01 01:56:50 markusle Exp $
 
 EAPI="2"
 inherit distutils eutils flag-o-matic toolchain-funcs versionator java-pkg-opt-2 python qt3 qt4
@@ -30,6 +30,7 @@ RDEPEND="mpi? ( || (
 	java? ( >=virtual/jre-1.5 )
 	!qt4? ( qt3? ( >=x11-libs/qt-3.3.4:3 ) )
 	qt4? ( x11-libs/qt-core:4
+			x11-libs/qt-opengl:4
 			x11-libs/qt-gui:4 )
 	examples? ( x11-libs/qt-core:4[qt3support]
 			x11-libs/qt-gui:4[qt3support] )
