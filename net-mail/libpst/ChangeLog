@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.17 2009/06/22 09:46:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.18 2009/09/01 08:31:18 patrick Exp $
+
+*libpst-0.6.41 (01 Sep 2009)
+
+  01 Sep 2009; Patrick Lauer <patrick@gentoo.org> +libpst-0.6.41.ebuild,
+  metadata.xml:
+  Bump to 0.6.41, many nice cleanups by RB. Finally enables python again.
+  Closes #282726
 
   22 Jun 2009; Patrick Lauer <patrick@gentoo.org> -libpst-0.3.4.ebuild,
   -libpst-0.4.1-r1.ebuild, -libpst-0.5.1.ebuild, -libpst-0.5.3.ebuild:
