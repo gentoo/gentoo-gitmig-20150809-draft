@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.61 2009/09/01 13:31:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.62 2009/09/01 16:24:25 jer Exp $
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> gst-python-0.10.15-r1.ebuild:
+  Marked ~hppa too.
 
   01 Sep 2009; Jeroen Roovers <jer@gentoo.org> gst-python-0.10.16.ebuild:
   Marked ~hppa (bug #282989).
