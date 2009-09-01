@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/squirrelsh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/ChangeLog,v 1.1 2009/03/20 04:17:08 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/squirrelsh/ChangeLog,v 1.2 2009/09/01 06:40:15 fauli Exp $
+
+  01 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  squirrelsh-1.2.3.ebuild:
+  add ~x86, bug 280334
 
 *squirrelsh-1.2.3 (20 Mar 2009)
 
