@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/embassy-domalign
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domalign/ChangeLog,v 1.18 2009/09/01 21:23:02 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-domalign/ChangeLog,v 1.19 2009/09/01 22:01:43 ribosome Exp $
+
+  01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> metadata.xml:
+  Giving up maintainership of this package.
 
 *embassy-domalign-0.1.0-r4 (01 Sep 2009)
 
