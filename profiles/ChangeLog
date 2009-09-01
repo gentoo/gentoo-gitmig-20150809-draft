@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3206 2009/09/01 13:56:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3207 2009/09/01 14:21:09 tampakrap Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org> package.mask:
+  Mask KDE 4.3.1, mask will be removed as soon as its release is announced
+  in kde.org
 
   01 Sep 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Remove opera-9.27 after more than a year.
