@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/squeak-basicimage
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.9 2008/06/09 17:58:06 araujo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/ChangeLog,v 1.10 2009/09/01 10:11:35 patrick Exp $
+
+  01 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  squeak-basicimage-3.10.ebuild:
+  Adding ~amd64 keyword
 
 *squeak-basicimage-3.10 (09 Jun 2008)
 

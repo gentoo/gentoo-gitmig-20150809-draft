@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.10.ebuild,v 1.1 2008/06/09 17:58:06 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak-basicimage/squeak-basicimage-3.10.ebuild,v 1.2 2009/09/01 10:11:35 patrick Exp $
 
 MY_P="Squeak${PV}-7159"
 DESCRIPTION="Squeak basic image file"
@@ -10,7 +10,7 @@ SRC_URI="http://ftp.squeak.org/${PV}/${MY_P}-basic.zip
 
 LICENSE="Apple"
 SLOT="3.10"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 PROVIDE="virtual/squeak-image"
 
