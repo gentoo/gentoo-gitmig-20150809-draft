@@ -16,6 +16,8 @@ configure different types of notifications for pre-defined events.
 <use>
 	<flag name='agent'>Enable zabbix agent (for to-be-monitored machines)</flag>
 	<flag name='frontend'>Enable zabbix web frontend</flag>
+	<flag name='proxy'>Enable proxy support</flag>
+	<flag name='openipmi'>Enable openipmi things</flag>
 	<flag name='server'>Enable zabbix server</flag>
 </use>
 </pkgmetadata>
