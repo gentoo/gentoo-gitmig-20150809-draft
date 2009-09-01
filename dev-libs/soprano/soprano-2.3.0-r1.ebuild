@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.2.4.ebuild,v 1.1 2009/06/28 23:08:40 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.0-r1.ebuild,v 1.1 2009/09/01 18:18:14 tampakrap Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="LGPL-2"
 KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 SLOT="0"
-IUSE="+clucene +dbus debug doc elibc_FreeBSD java +raptor +redland"
+IUSE="+clucene +dbus debug doc elibc_FreeBSD +java +raptor redland"
 
 COMMON_DEPEND="
 	x11-libs/qt-core:4
@@ -27,21 +27,39 @@ COMMON_DEPEND="
 	)
 	java? ( >=virtual/jdk-1.6.0 )
 "
+
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
 "
-RDEPEND="${COMMON_DEPEND}"
+RDEPEND="${COMMON_DEPEND}
+"
 
 CMAKE_IN_SOURCE_BUILD="1"
 
 pkg_setup() {
 	java-pkg-opt-2_pkg_setup
-	echo
-	if ! use redland && ! use java; then
-		ewarn "You explicitly disabled default soprano backend and haven't chosen other one."
-		ewarn "Applications using soprano may need at least one backend functional."
-		ewarn "If you experience any problems, enable any of those USE flags:"
-		ewarn "redland, java"
+
+	if [[ ${PV} = *9999* && -z $I_KNOW_WHAT_I_AM_DOING ]]; then
+		echo
+		ewarn "WARNING! This is an experimental ebuild of ${PN} SVN tree. Use at your own risk."
+		ewarn "Do _NOT_ file bugs at bugs.gentoo.org because of this ebuild!"
+		echo
+	fi
+
+	if ! use java; then
+		if ! use redland; then
+			echo
+			ewarn "You explicitly disabled default soprano backend and haven't chosen other one."
+			ewarn "Applications using soprano may need at least one backend functional."
+			ewarn "If you experience any problems, enable any of those USE flags:"
+			ewarn "java (recommended), redland"
+			echo
+		else
+			echo
+			ewarn "You selected redland as default backend for soprano."
+			ewarn "Be advised that it's known to be broken (bug #275326)."
+			echo
+		fi
 	fi
 }
 
@@ -51,7 +69,7 @@ src_prepare() {
 
 src_configure() {
 	# Fix for missing pthread.h linking
-	# NOTE: temporarely fix until a better cmake files patch will be provided.
+	# NOTE: temporarily fix until a better cmake files patch will be provided.
 	use elibc_FreeBSD && append-ldflags "-lpthread"
 
 	mycmakeargs="${mycmakeargs}
