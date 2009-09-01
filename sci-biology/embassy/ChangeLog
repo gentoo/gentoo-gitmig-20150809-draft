@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/embassy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.30 2009/09/01 18:44:17 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy/ChangeLog,v 1.31 2009/09/01 21:54:15 ribosome Exp $
+
+*embassy-6.1.0 (01 Sep 2009)
+
+  01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> +embassy-6.1.0.ebuild:
+  New meta-package for EMBASSY packages building against EMBOSS 6.1.0.
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org> embassy-6.0.1.ebuild:
   Stabilised on amd64 and x86.
