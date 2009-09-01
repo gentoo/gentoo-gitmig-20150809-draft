@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/embassy-phylipnew
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylipnew/ChangeLog,v 1.9 2009/09/01 18:35:48 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-phylipnew/ChangeLog,v 1.10 2009/09/01 21:41:31 ribosome Exp $
+
+*embassy-phylipnew-3.68 (01 Sep 2009)
+
+  01 Sep 2009; Olivier Fisette <ribosome@gentoo.org>
+  +embassy-phylipnew-3.68.ebuild:
+  Updated version for EMBASSY 6.1.0.
 
   01 Sep 2009; Olivier Fisette <ribosome@gentoo.org>
   embassy-phylipnew-3.67.ebuild:
