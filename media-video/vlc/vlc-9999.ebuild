@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.37 2009/08/21 10:29:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.38 2009/09/01 08:50:59 aballier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="68"
+PATCHLEVEL="72"
 M4_TARBALL_VERSION="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
@@ -51,7 +51,7 @@ IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc139
 	+gcrypt ggi gnome gnutls hal httpd id3tag ieee1394 jack kate libass libcaca
 	libnotify libproxy libsysfs libtiger libv4l2 lirc live lua matroska mmx
 	modplug mp3 mpeg mtp musepack ncurses nsplugin ogg opengl optimisememory oss
-	pda png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
+	png projectm pulseaudio pvr +qt4 remoteosd rtsp run-as-root samba
 	schroedinger sdl sdl-image seamonkey shine shout skins speex sse stream
 	svg svga taglib theora truetype twolame upnp v4l v4l2 vcdinfo vcdx vlm
 	vorbis win32codecs wma-fixed X x264 xcb xml xosd xv zvbi"
@@ -118,7 +118,6 @@ RDEPEND="
 			!seamonkey? ( >=net-libs/xulrunner-1.8 )
 		)
 		ogg? ( media-libs/libogg )
-		pda? ( x11-libs/gtk+:2 )
 		png? ( media-libs/libpng sys-libs/zlib )
 		projectm? ( media-libs/libprojectm )
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
@@ -312,7 +311,6 @@ src_configure() {
 		$(use_enable opengl glx) $(use_enable opengl) \
 		$(use_enable optimisememory optimize-memory) \
 		$(use_enable oss) \
-		$(use_enable pda) \
 		$(use_enable png) \
 		--disable-portaudio \
 		$(use_enable projectm) \
