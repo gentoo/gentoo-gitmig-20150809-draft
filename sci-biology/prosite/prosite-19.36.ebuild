@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.36.ebuild,v 1.6 2006/11/20 20:56:17 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prosite/prosite-19.36.ebuild,v 1.7 2009/09/01 19:12:52 ribosome Exp $
 
 DESCRIPTION="A protein families and domains database"
 LICENSE="swiss-prot"
@@ -13,7 +13,9 @@ SLOT="0"
 IUSE="emboss minimal"
 KEYWORDS="amd64 ppc ppc64 ~sparc x86"
 
-DEPEND="emboss? ( >=sci-biology/emboss-3.0.0 )"
+DEPEND="emboss? ( sci-biology/emboss )"
+
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	if use emboss; then
