@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/motor
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.14 2008/12/23 17:46:51 mpagano Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.15 2009/09/01 17:27:29 jer Exp $
+
+*motor-3.4.0-r3 (01 Sep 2009)
+
+  01 Sep 2009; Jeroen Roovers <jer@gentoo.org> +motor-3.4.0-r3.ebuild:
+  Respect CC, CXX (bug #244012).
 
 *motor-3.4.0-r2 (23 Dec 2008)
 
