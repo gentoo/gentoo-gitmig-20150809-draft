@@ -11,8 +11,6 @@
   <name>René Neumann</name>
 </maintainer>
 <use>
-  <flag name='etc-proposals'>Use <pkg>app-portage/etc-proposals</pkg> for
-    updating CONFIG_PROTECTed stuff</flag>
   <flag name='userpriv'>Allow emerge processes as normal user</flag>
 </use>
 </pkgmetadata>
