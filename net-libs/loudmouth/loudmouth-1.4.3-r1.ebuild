@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.3 2009/08/31 21:38:05 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/loudmouth/loudmouth-1.4.3-r1.ebuild,v 1.4 2009/09/02 16:46:59 mr_bones_ Exp $
 
 inherit autotools gnome2
 
@@ -64,7 +64,6 @@ src_unpack() {
 	# Don't check for sync dns problems when using asyncns [#33]
 	# From debian..
 	epatch "${FILESDIR}/${P}-async-fix.patch"
-	
 
 	eautoreconf
 }
