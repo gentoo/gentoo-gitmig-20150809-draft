@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.134 2009/09/01 15:46:05 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.135 2009/09/02 17:37:12 wired Exp $
+
+*konsole-4.3.1-r1 (02 Sep 2009)
+
+  02 Sep 2009; Alex Alexander <wired@gentoo.org> +konsole-4.3.1-r1.ebuild,
+  +files/konsole-4.3.1-kpart-backport-fix.patch:
+  backported kpart fix, http://bugs.kde.org/show_bug.cgi?id=186745
 
 *konsole-4.3.1 (01 Sep 2009)
 
