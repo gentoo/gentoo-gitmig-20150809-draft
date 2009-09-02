@@ -1,6 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.4 2009/08/17 08:59:30 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.5 2009/09/02 16:26:04 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (02 Sep 2009)
+# Assertion failed: ent->fts_info == FTS_NSOK || state.type != 0, file
+# ftsfind.c, line 477, function consider_visiting
+=sys-apps/findutils-4.5.5
 
 # Fabian Groffen <grobian@gentoo.org> (17 Aug 2009)
 # breaks at runtime for e.g. autotools, bug #269430

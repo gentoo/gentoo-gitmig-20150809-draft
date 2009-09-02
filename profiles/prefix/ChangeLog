@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.73 2009/09/02 15:32:33 mduft Exp $
+# $Id: ChangeLog,v 1.74 2009/09/02 16:26:04 grobian Exp $
+
+  02 Sep 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  mask findutils-4.5.5 on Solaris, as it dies with asserts all the time
 
   02 Sep 2009; Markus Duft <mduft@gentoo.org>
   windows/interix/3.5/package.mask:
