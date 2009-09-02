@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/normalizemime
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/normalizemime/ChangeLog,v 1.8 2008/06/15 11:47:49 dertobi123 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/normalizemime/ChangeLog,v 1.9 2009/09/02 08:56:53 vapier Exp $
+
+  02 Sep 2009; Mike Frysinger <vapier@gentoo.org> normalizemime-1.19.ebuild:
+  Stabilize as this version works with gcc-4.3.
 
 *normalizemime-1.19 (15 Jun 2008)
 
