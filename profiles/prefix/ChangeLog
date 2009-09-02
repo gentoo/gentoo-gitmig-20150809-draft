@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.72 2009/09/02 12:51:57 mduft Exp $
+# $Id: ChangeLog,v 1.73 2009/09/02 15:32:33 mduft Exp $
+
+  02 Sep 2009; Markus Duft <mduft@gentoo.org>
+  windows/interix/3.5/package.mask:
+  masked the latest portage on interix 3 where it seems to cause problems
+  with encoding stuff
 
   02 Sep 2009; Markus Duft <mduft@gentoo.org> windows/interix/use.mask:
   re-enabled xcb use flag on interix, since i fixed libxcb
