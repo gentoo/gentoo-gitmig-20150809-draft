@@ -1,6 +1,13 @@
 # ChangeLog for app-portage/portpeek
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.36 2009/08/17 13:26:40 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portpeek/ChangeLog,v 1.37 2009/09/02 12:23:37 mpagano Exp $
+
+*portpeek-1.9.12 (02 Sep 2009)
+
+  02 Sep 2009; Mike Pagano <mpagano@gentoo.org> -portpeek-1.9.11.ebuild,
+  +portpeek-1.9.12.ebuild:
+  Fix for tilde masked packages that were being incorrectly marked as non
+  masked. Removal of broken old version
 
 *portpeek-1.9.11 (17 Aug 2009)
 
