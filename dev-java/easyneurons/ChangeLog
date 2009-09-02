@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/easyneurons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/ChangeLog,v 1.1 2009/07/06 20:34:51 ali_bush Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/ChangeLog,v 1.2 2009/09/02 07:42:36 fauli Exp $
+
+  02 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  easyneurons-2.2.ebuild:
+  stable x86, bug 280654
 
   06 Jul 2009; Alistair Bush <ali_bush@gentoo.org> +easyneurons-2.2.ebuild,
   +metadata.xml:
