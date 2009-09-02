@@ -3,6 +3,7 @@
 <pkgmetadata>
   <herd>games</herd>
   <use>
+    <flag name="angelscript">Enable AngelScript support</flag>
     <flag name="irc">Enable IRC support</flag>
   </use>
 </pkgmetadata>
