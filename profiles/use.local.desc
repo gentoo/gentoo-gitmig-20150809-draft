@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4778 2009/09/02 15:07:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4779 2009/09/02 16:27:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -485,7 +485,6 @@ app-portage/eix:tools - Create separate binary for script helper tools (currentl
 app-portage/gatt:libpaludis - Do some dependency resolution by using a sys-apps/paludis interface
 app-portage/layman:git - Support dev-util/git based overlays
 app-portage/pfl:network-cron - Adds a cron job which does a weekly submit of the package database
-app-portage/portato:etc-proposals - Use app-portage/etc-proposals for updating CONFIG_PROTECTed stuff
 app-portage/portato:userpriv - Allow emerge processes as normal user
 app-shells/bash:bashlogger - Log ALL commands typed into bash; should ONLY be used in restricted environments such as honeypots
 app-shells/bash:net - Enable /dev/tcp/host/port redirection
