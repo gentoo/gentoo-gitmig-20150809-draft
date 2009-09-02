@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4777 2009/09/02 10:47:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4778 2009/09/02 15:07:41 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -585,7 +585,6 @@ dev-db/sqlite:soundex - Enable the soundex function to compute soundex encodings
 dev-db/sqlite:threadsafe - Enable thread safe operation of sqlite
 dev-dotnet/libgdiplus:pango - Use pango instead of cairo to render text.
 dev-dotnet/nant:bootstrap - Bootstrap nant by using pre-built ndoc binaries.
-dev-dotnet/xsp:debug - Enable tracing messages (RECOMMENDED)
 dev-embedded/openocd:ftd2xx - Enable support for USB FTDI chips via dev-embedded/libftd2xx
 dev-embedded/openocd:ftdi - Enable support for USB FTDI chips via dev-embedded/libftdi
 dev-embedded/openocd:parport - Enable support for parport JTAG devices
