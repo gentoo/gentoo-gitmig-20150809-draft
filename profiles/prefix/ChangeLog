@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.74 2009/09/02 16:26:04 grobian Exp $
+# $Id: ChangeLog,v 1.75 2009/09/02 18:29:51 jmbsvicetto Exp $
+
+  02 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Masking >= KDE-4.3 for this arch to prevent tree breakage following
+  the global unmask of KDE-4.3 (bug #280312).
 
   02 Sep 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
