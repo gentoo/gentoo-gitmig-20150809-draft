@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebindings-csharp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.4 2009/09/01 15:07:32 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-csharp/ChangeLog,v 1.5 2009/09/02 10:41:46 wired Exp $
+
+  02 Sep 2009; Alex Alexander <wired@gentoo.org>
+  kdebindings-csharp-4.3.1.ebuild,
+  files/kdebindings-csharp-build-fixes.patch:
+  added plasma use, fixed -webkit build fail
 
 *kdebindings-csharp-4.3.1 (01 Sep 2009)
 
