@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3215 2009/09/02 19:39:13 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3216 2009/09/02 20:23:37 billie Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Sep 2009; Pielmeier Daniel <billie@gentoo.org> package.mask:
+  Adjust package.mask for media-tv/linuxtv-dvb-firmware.
 
   02 Sep 2009; Andreas Proschofsky <suka@gentoo.org> desc/linguas.desc:
   Add Burmese locale
