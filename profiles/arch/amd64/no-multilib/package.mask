@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.46 2009/08/24 16:02:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.47 2009/09/02 20:23:07 nyhm Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -139,8 +139,6 @@ games-fps/ut2003
 games-fps/ut2003-demo
 games-fps/ut2004-demo
 games-puzzle/hoh-bin
-<games-puzzle/world-of-goo-demo-1.41
-<games-puzzle/world-of-goo-1.41
 games-roguelike/adom
 games-rpg/nwmouse
 games-rpg/nwmovies

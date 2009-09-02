@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.51 2009/08/16 22:06:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.52 2009/09/02 20:23:07 nyhm Exp $
+
+  02 Sep 2009; Tristan Heaven <nyhm@gentoo.org> no-multilib/package.mask:
+  Remove old games-puzzle/world-of-goo{,-demo} versions
 
   16 Aug 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
   drop last traces of i810
