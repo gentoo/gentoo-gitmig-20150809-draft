@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10391 2009/09/02 16:01:01 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10392 2009/09/02 16:10:33 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1258,11 +1258,6 @@ net-wireless/rt2570
 # mongoose bug: 173888
 # Removed in ~60 days by treecleaners
 www-servers/shttpd
-
-# Jeremy Olexa <darkside@gentoo.org> (11 Jul 2009)
-# Removed in 60 days by treecleaners, old glib, last release in 2005, no Gentoo
-# maintainer. bug 248391
-sys-apps/lkcp
 
 # Jeremy Olexa <darkside@gentoo.org> (11 Jul 2009)
 # Removed in ~60 days by treecleaners. Nothing uses it. Upstream doesn't care
