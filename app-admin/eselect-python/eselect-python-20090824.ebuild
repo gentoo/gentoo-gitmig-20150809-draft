@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090824.ebuild,v 1.1 2009/08/24 21:09:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090824.ebuild,v 1.2 2009/09/02 17:28:57 arfrever Exp $
 
 EAPI="2"
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 DESCRIPTION="Eselect module for management of multiple Python versions"
 HOMEPAGE="http://www.gentoo.org"
@@ -23,6 +23,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-old-glibc.patch"
 	./autogen.sh || die "autogen.sh failed"
 }
 
