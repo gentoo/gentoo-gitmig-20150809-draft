@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.10.ebuild,v 1.1 2009/09/01 18:21:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.10.ebuild,v 1.2 2009/09/02 11:38:02 vapier Exp $
 
 EAPI="2"
 
 inherit toolchain-funcs
 
 DESCRIPTION="WBFS manager for Linux using GTK+"
-HOMEPAGE="http://code.google.com/p/linux-wbfs-manage/"
+HOMEPAGE="http://code.google.com/p/linux-wbfs-manager/"
 SRC_URI="http://linux-wbfs-manager.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
