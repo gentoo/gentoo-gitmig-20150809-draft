@@ -1,6 +1,15 @@
 # ChangeLog for media-tv/linuxtv-dvb-firmware
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.21 2007/11/27 10:39:37 zzam Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/ChangeLog,v 1.22 2009/09/02 20:49:58 billie Exp $
+
+*linuxtv-dvb-firmware-2009.07.06 (02 Sep 2009)
+
+  02 Sep 2009; Pielmeier Daniel <billie@gentoo.org>
+  +files/get_dvb_firmware-2009.07.06,
+  +linuxtv-dvb-firmware-2009.07.06.ebuild:
+  Version bump. Use a more recent get_dvb_firmware script from
+  git.kernel.org. Add more firmwares. Should fix bugs #181908, #225047,
+  #225233, #245813, #260737 and #275667.
 
   27 Nov 2007; Matthias Schwarzott <zzam@gentoo.org>
   linuxtv-dvb-firmware-1.ebuild, linuxtv-dvb-firmware-2006.11.13.ebuild,
