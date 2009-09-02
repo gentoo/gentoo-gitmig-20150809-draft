@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10392 2009/09/02 16:10:33 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10393 2009/09/02 16:24:38 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1369,11 +1369,6 @@ app-i18n/jmcce
 # Fails to build, no interest in fixing, old bugs. removed in 60 days.
 # bug 247945
 net-dialup/ivam2
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# binpkg that installs into /usr, no Gentoo maintainer, QA removal in 60 days
-# unless someone properly packages this one. bug 240768
-net-dns/dns2go
 
 # Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
 # Broken, non-relevant, old. Removal in 60 days. bug 177920
