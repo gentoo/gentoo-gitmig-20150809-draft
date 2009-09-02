@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4776 2009/09/01 13:47:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4777 2009/09/02 10:47:57 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1170,6 +1170,7 @@ kde-base/kdeartwork-kscreensaver:eigen - Enable various aritmethic screensavers 
 kde-base/kdebase:logitech-mouse - Build the Control Center module to configure logitech mice
 kde-base/kdebindings-csharp:akonadi - Compile bindings for kde-base/akonadi.
 kde-base/kdebindings-csharp:phonon - Compile bindings for media-sound/phonon.
+kde-base/kdebindings-csharp:plasma - Compile bindings for kde's plasma.
 kde-base/kdebindings-csharp:qscintilla - Compile bindings for x11-libs/qscintilla.
 kde-base/kdebindings-csharp:webkit - Compile bindings for x11-libs/webkit.
 kde-base/kdeedu:kig-scripting - Support Python scripting in kig
