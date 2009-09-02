@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.20.0.ebuild,v 1.2 2009/08/22 22:43:56 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/evolution-sharp/evolution-sharp-0.20.0.ebuild,v 1.3 2009/09/02 20:57:09 loki_val Exp $
 
 EAPI=2
 
-inherit mono gnome.org eutils
+inherit mono gnome.org eutils autotools
 
 DESCRIPTION="Mono bindings for Evolution"
 HOMEPAGE="http://www.gnome.org/projects/beagle"
@@ -14,8 +14,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-#Does not build with <eds-2.24.0 - http://bugzilla.gnome.org/show_bug.cgi?id=563301
-
+# Does not build with <eds-2.24.0
+# http://bugzilla.gnome.org/show_bug.cgi?id=563301
 RDEPEND="
 	|| (
 		=gnome-extra/evolution-data-server-2.26*
@@ -25,17 +25,29 @@ RDEPEND="
 	>=dev-dotnet/glib-sharp-2.12
 	>=dev-lang/mono-2"
 DEPEND="${RDEPEND}
-	>=dev-dotnet/gtk-sharp-2.12
 	userland_GNU? ( >=sys-apps/findutils-4.4.0 )
 	>=dev-dotnet/gtk-sharp-gapi-2.12
 	dev-util/pkgconfig"
+
+src_prepare() {
+	#Workaround for upstream Nazi version requirements.
+	sed -i \
+		-e 's:2.27.4:2.29.0:' \
+		configure.in || die "Sed failed"
+	epatch "${FILESDIR}/${PN}-0.21.1-gtk-sharp-dropped.patch"
+	eautoreconf
+}
 
 src_configure() {
 	econf --disable-static
 }
 
 src_compile() {
-	emake CSC=gmcs || die
+	emake CSC=/usr/bin/gmcs || die
+}
+
+src_test() {
+	emake CSC=/usr/bin/gmcs check||die
 }
 
 src_install() {
