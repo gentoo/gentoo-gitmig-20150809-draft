@@ -1,1 +1,0 @@
-CONFIG_PROTECT="GLROOT/etc GLROOT/ftp-data"
