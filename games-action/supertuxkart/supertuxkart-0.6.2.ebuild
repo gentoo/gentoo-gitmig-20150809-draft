@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.2.ebuild,v 1.1 2009/09/02 03:01:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/supertuxkart-0.6.2.ebuild,v 1.2 2009/09/02 13:21:28 nyhm Exp $
 
 EAPI=2
 inherit autotools eutils games
@@ -26,6 +26,7 @@ DEPEND=">=media-libs/plib-1.8.4
 	media-libs/libsdl[X,video,audio,joystick]"
 
 src_prepare() {
+	esvn_clean
 	sed -i \
 		-e '/ENETTREE/d' \
 		-e '/src\/enet\/Makefile/d' \
