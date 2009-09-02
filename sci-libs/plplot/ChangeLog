@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.22 2009/08/25 02:59:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.23 2009/09/02 14:28:54 markusle Exp $
+
+  02 Sep 2009; Markus Dittrich <markusle@gentoo.org> plplot-5.9.4.ebuild,
+  +files/plplot-5.9.4-pdf-driver.patch:
+  Fixed error due to missing pdf.rc reference file (see #282688).
 
 *plplot-5.9.4 (25 Aug 2009)
 

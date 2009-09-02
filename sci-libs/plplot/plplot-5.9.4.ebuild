@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.4.ebuild,v 1.1 2009/08/25 02:59:51 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.9.4.ebuild,v 1.2 2009/09/02 14:28:54 markusle Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -66,6 +66,9 @@ src_prepare() {
 	# path for python independent of python version
 	epatch "${FILESDIR}"/${PN}-5.9.0-python.patch
 
+	# we're missing the proper reference file pdf.rc
+	epatch "${FILESDIR}"/${P}-pdf-driver.patch
+
 	# remove license
 	sed -i -e '/COPYING.LIB/d' CMakeLists.txt || die
 
@@ -91,7 +94,6 @@ src_prepare() {
 
 src_configure() {
 	# see http://www.miscdebris.net/plplot_wiki/index.php?title=CMake_options_for_PLplot
-
 	cmake-utils_pld() { _use_me_now PLD "$@" ; }
 
 	mycmakeargs="
