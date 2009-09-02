@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libkate
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.33 2009/07/22 18:06:52 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkate/ChangeLog,v 1.34 2009/09/02 07:14:36 aballier Exp $
+
+*libkate-0.3.5 (02 Sep 2009)
+
+  02 Sep 2009; Alexis Ballier <aballier@gentoo.org> +libkate-0.3.5.ebuild:
+  version bump
 
   22 Jul 2009; <solar@gentoo.org> libkate-0.3.4.ebuild:
   - keyword ~arm for vlc
