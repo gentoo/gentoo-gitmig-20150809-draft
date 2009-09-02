@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.59 2009/06/30 05:59:32 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.60 2009/09/02 14:47:49 loki_val Exp $
+
+  02 Sep 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -mod_mono-2.2-r1.ebuild, -mod_mono-2.2.9999.ebuild, -mod_mono-2.4.ebuild:
+  Drop old
 
 *mod_mono-2.4.2 (30 Jun 2009)
 
