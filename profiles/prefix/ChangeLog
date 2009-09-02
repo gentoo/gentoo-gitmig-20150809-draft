@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.70 2009/09/02 09:00:28 mduft Exp $
+# $Id: ChangeLog,v 1.71 2009/09/02 12:21:53 grobian Exp $
+
+  02 Sep 2009; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/package.mask:
+  Mask media-libs/freeglut-2.6.0_rc1 on Darwin, since it doesn't compile
 
   02 Sep 2009; Markus Duft <mduft@gentoo.org> windows/interix/use.mask:
   masked xcb use flag for ~x86-interix, since libxcb works only partially
