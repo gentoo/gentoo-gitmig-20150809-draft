@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/world-of-goo-demo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/ChangeLog,v 1.2 2009/07/06 10:32:08 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/world-of-goo-demo/ChangeLog,v 1.3 2009/09/02 20:11:32 nyhm Exp $
+
+  02 Sep 2009; Tristan Heaven <nyhm@gentoo.org>
+  world-of-goo-demo-1.41.ebuild:
+  Stable on amd64/x86
 
 *world-of-goo-demo-1.41 (06 Jul 2009)
 
