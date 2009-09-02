@@ -1,6 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.1 2009/06/06 03:54:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.use.mask,v 1.2 2009/09/02 19:52:16 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (02 Sep 2009)
+# these don't work, proxying for darkside
+xfce-base/xfce-settings keyboard
+xfce-base/xfce4-meta session
 
 # Jeremy Olexa <darkside@gentoo.org> (13 Feb 2009)
 # Can't make USE=ssl to work, bad build system. bug 256699

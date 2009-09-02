@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.75 2009/09/02 18:29:51 jmbsvicetto Exp $
+# $Id: ChangeLog,v 1.76 2009/09/02 19:52:16 grobian Exp $
+
+  02 Sep 2009; Fabian Groffen <grobian@gentoo.org> package.mask,
+  package.use.mask:
+  unmask some xfce packages and only mask offending USE-flags, since
+  darkside made it all work again
 
   02 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
