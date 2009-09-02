@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.4 2009/08/19 15:44:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/use.mask,v 1.5 2009/09/02 09:00:28 mduft Exp $
 
 # Re-add Interix libc
 -elibc_Interix
@@ -90,4 +90,5 @@ qt4
 # libtiff only static, so avoid this!
 tiff
 timidity
-
+# xcb doesn't seem to work correctly, at least if libX11 uses it.
+xcb
