@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/pxp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.18 2009/08/19 08:19:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.19 2009/09/02 07:21:47 fauli Exp $
+
+  02 Sep 2009; Christian Faulhammer <fauli@gentoo.org> pxp-1.2.1.ebuild:
+  stable x86, bug 280418
 
   19 Aug 2009; Alexis Ballier <aballier@gentoo.org> pxp-1.2.1.ebuild:
   dont try to dodoc non existing doc, spotted by Markus Meier
