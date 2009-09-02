@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.48 2009/08/28 14:27:56 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.49 2009/09/02 02:13:31 vadimk Exp $
+
+  02 Sep 2009; Vadim Kuznetsov vadimk@gentoo.org
+  -files/patches/vmmon/050_all_kernel-2.6.29.patch,
+  -files/patches/vmnet/040_all_kernel-2.6.29.patch:
+  revert previous commit. Bug 273173
 
   28 Aug 2009; Vadim Kuznetsov vadimk@gentoo.org
   +files/patches/vmmon/050_all_kernel-2.6.29.patch,
