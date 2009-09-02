@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.41 2009/07/22 22:25:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.42 2009/09/02 19:39:14 suka Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -98,6 +98,7 @@ mr - Marathi locale
 mr_IN - Marathi locale for India
 ms - Malay locale
 mt - Maltese locale
+my - Burmese locale
 nb - Norwegian (Bokmal) locale
 nb_NO - Norwegian (Bokmal) locale for Norway
 nds - Low Saxon locale
