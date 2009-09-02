@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.33 2009/09/01 15:06:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.34 2009/09/02 18:12:10 jmbsvicetto Exp $
+
+  02 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Masking >= KDE-4.3 for this arch (hppa) to prevent tree breakage following
+  the global unmask of KDE-4.3 (bug #280312).
 
   01 Sep 2009; Jeroen Roovers <jer@gentoo.org> use.mask:
   sys-power/pm-utils is currently not supported (bug #280312).
