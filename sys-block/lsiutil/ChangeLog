@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/lsiutil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/ChangeLog,v 1.4 2009/05/07 13:09:57 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/lsiutil/ChangeLog,v 1.5 2009/09/02 02:09:22 robbat2 Exp $
+
+  02 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> lsiutil-1.60-r1.ebuild:
+  Cleanup ebuild slightly, and add linux-headers dep to avoid compile
+  failures due to uint64_t.
 
 *lsiutil-1.60-r1 (07 May 2009)
 
