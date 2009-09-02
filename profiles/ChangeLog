@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3217 2009/09/02 20:27:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3218 2009/09/02 20:47:35 billie Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Sep 2009; Pielmeier Daniel <billie@gentoo.org> desc/dvb_cards.desc:
+  Add back old entries for dvb_cards_desc until the old ebuilds are removed.
 
   02 Sep 2009; Pielmeier Daniel <billie@gentoo.org> desc/dvb_cards.desc:
   Update dvb_cards.desc.
