@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>gnome</herd>
-  <maintainer>
-    <email>jokey@gentoo.org</email>
-    <name>Markus Ullmann</name>
-  </maintainer>
   <use>
     <flag name="coverage">enable code coverage support</flag>
     <flag name="pango">Use pango as fontbackend instead of freetype</flag>

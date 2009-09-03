@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.44 2009/07/27 20:21:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.45 2009/09/03 22:14:44 mrpouet Exp $
+
+  03 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  metadata.xml:
+  Drop jokey from maintainers (after have been authorized by himself).
 
   27 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   webkit-gtk-1.1.10.ebuild:
