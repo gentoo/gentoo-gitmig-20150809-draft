@@ -1,10 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.10.1.ebuild,v 1.1 2009/09/03 13:59:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-poppler/python-poppler-0.10.1.ebuild,v 1.2 2009/09/03 19:26:55 arfrever Exp $
 
-EAPI=2
+EAPI="2"
 
-inherit libtool
+NEED_PYTHON="2.6"
+PYTHON_DEFINE_DEFAULT_FUNCTIONS="1"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit libtool python
 
 DESCRIPTION="Python bindings to the Poppler PDF library."
 SRC_URI="http://launchpad.net/poppler-python/trunk/development/+download/pypoppler-${PV}.tar.gz"
@@ -12,7 +16,7 @@ HOMEPAGE="http://launchpad.net/poppler-python"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
 S="${WORKDIR}/pypoppler-${PV}"
@@ -23,12 +27,15 @@ RDEPEND=">=virtual/poppler-glib-0.10.0
 	>=dev-python/pycairo-1.8.4"
 DEPEND="${RDEPEND}"
 
+RESTRICT_PYTHON_ABIS="2.4 2.5 3*"
+
 src_prepare() {
 	elibtoolize
+	python_copy_sources
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
+	python_src_install
 	find "${D}" -name '*.la' -type f -exec rm -f '{}' ';' || die "Removing .la files failed"
 	dodoc NEWS
 	if use examples; then
