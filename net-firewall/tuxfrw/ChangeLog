@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/tuxfrw
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.12 2007/05/12 14:45:44 cedk Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.13 2009/09/03 12:07:25 ikelos Exp $
+
+  03 Sep 2009; Mike Auty <ikelos@gentoo.org> tuxfrw-2.61.ebuild,
+  tuxfrw-2.62.ebuild:
+  Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
 
 *tuxfrw-2.62 (12 May 2007)
 

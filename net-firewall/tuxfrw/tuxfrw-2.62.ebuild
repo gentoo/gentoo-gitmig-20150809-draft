@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.62.ebuild,v 1.2 2007/07/13 07:21:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/tuxfrw-2.62.ebuild,v 1.3 2009/09/03 12:07:25 ikelos Exp $
 
 inherit eutils linux-info
 
@@ -25,11 +25,11 @@ pkg_setup() {
 		die "Kernel version not supported"
 	fi
 
-	CONFIG_CHECK="NETFILTER IP_NF_TARGET_REDIRECT"
-	CONFIG_CHECK="${CONFIG_CHECK} IP_NF_IPTABLES IP_NF_MATCH_TOS IP_NF_FILTER"
-	CONFIG_CHECK="${CONFIG_CHECK} IP_NF_TARGET_REJECT IP_NF_TARGET_REJECT"
-	CONFIG_CHECK="${CONFIG_CHECK} IP_NF_TARGET_LOG IP_NF_MANGLE"
-	CONFIG_CHECK="${CONFIG_CHECK} IP_NF_TARGET_MASQUERADE"
+	CONFIG_CHECK="~NETFILTER ~IP_NF_TARGET_REDIRECT"
+	CONFIG_CHECK="${CONFIG_CHECK} ~IP_NF_IPTABLES ~IP_NF_MATCH_TOS ~IP_NF_FILTER"
+	CONFIG_CHECK="${CONFIG_CHECK} ~IP_NF_TARGET_REJECT ~IP_NF_TARGET_REJECT"
+	CONFIG_CHECK="${CONFIG_CHECK} ~IP_NF_TARGET_LOG ~IP_NF_MANGLE"
+	CONFIG_CHECK="${CONFIG_CHECK} ~IP_NF_TARGET_MASQUERADE"
 
 	if kernel_is lt 2 6 20; then
 		CONFIG_CHECK="${CONFIG_CHECK} IP_NF_CONNTRACK IP_NF_FTP IP_NF_NAT IP_NF_NAT_FTP"
