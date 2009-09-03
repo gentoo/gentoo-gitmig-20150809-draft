@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.76 2009/09/02 19:52:16 grobian Exp $
+# $Id: ChangeLog,v 1.77 2009/09/03 18:51:47 grobian Exp $
+
+  03 Sep 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  Mask mc-4.7.0_pre2, as it insists on doing linux vfs (ext2 undel) stuff
 
   02 Sep 2009; Fabian Groffen <grobian@gentoo.org> package.mask,
   package.use.mask:
