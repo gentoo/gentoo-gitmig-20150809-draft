@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.1.ebuild,v 1.1 2009/06/29 21:33:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.2.1.ebuild,v 1.2 2009/09/03 20:01:49 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/sed/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="acl nls static"
+IUSE="acl nls selinux static"
 
 RDEPEND="nls? ( virtual/libintl )
 	acl? ( virtual/acl )"
@@ -50,6 +50,7 @@ src_compile() {
 		bindir=/usr/bin
 	fi
 
+	use selinux || export ac_cv_{search_setfilecon,header_selinux_{context,selinux}_h}=no
 	use static && append-ldflags -static
 	econf \
 		--bindir=${bindir} \
