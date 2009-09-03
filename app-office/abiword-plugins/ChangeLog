@@ -1,6 +1,12 @@
 # ChangeLog for app-office/abiword-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.65 2009/08/27 20:10:50 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword-plugins/ChangeLog,v 1.66 2009/09/03 20:41:18 mrpouet Exp $
+
+  03 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  abiword-plugins-2.6.8.ebuild:
+  Fix bug #283053, missing $(use_with wordperfect) in src_configure() which
+  caused wordprefect plugin to be installed if libwpd was installed, even
+  with USE="-wordperfect".
 
   27 Aug 2009; Peter Volkov <pva@gentoo.org> metadata.xml:
   Fixed typo: app-text/libwpdlibwpd -> app-text/libwpd.
