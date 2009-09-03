@@ -1,0 +1,96 @@
+diff -ru zaz-0.2.9-orig/Makefile.am zaz-0.2.9/Makefile.am
+--- zaz-0.2.9-orig/Makefile.am	2009-08-25 18:54:22.000000000 -0400
++++ zaz-0.2.9/Makefile.am	2009-09-03 17:31:50.712703375 -0400
+@@ -4,22 +4,7 @@
+ 
+ SUBDIRS = po src data extra
+ 
+-zazdocdir = ${prefix}/doc/zaz
+-zazdoc_DATA = \
+-	README\
+-	COPYING\
+-	AUTHORS\
+-	ChangeLog\
+-	INSTALL\
+-	NEWS
+-
+-
+ EXTRA_DIST = config.rpath m4/ChangeLog  $(zazdoc_DATA) \
+ 	$(shared_data_DATA) \
+ 	zaz.anjuta\
+ 	win32.zip
+-
+-# Remove doc directory on uninstall
+-uninstall-local:
+-	-rm -r $(zazdocdir)
+-
+diff -ru zaz-0.2.9-orig/data/Makefile.am zaz-0.2.9/data/Makefile.am
+--- zaz-0.2.9-orig/data/Makefile.am	2009-08-26 13:23:59.000000000 -0400
++++ zaz-0.2.9/data/Makefile.am	2009-09-03 17:32:28.137067302 -0400
+@@ -24,7 +24,6 @@
+ 	mus2.ogg\
+ 	mus3.ogg\
+ 	mus4.ogg\
+-	mus5.ogg\
+ 	pull.ogg\
+ 	push.ogg\
+ 	ouch.ogg\
+@@ -36,7 +35,6 @@
+ 	extralife.ogg\
+ 	timebonus.wav\
+ 	menu.lvl\
+-	levels.list\
+ 	level1.lvl\
+ 	level1.png\
+ 	level1_thumb.png\
+diff -ru zaz-0.2.9-orig/extra/Makefile.am zaz-0.2.9/extra/Makefile.am
+--- zaz-0.2.9-orig/extra/Makefile.am	2009-08-25 18:53:11.000000000 -0400
++++ zaz-0.2.9/extra/Makefile.am	2009-09-03 17:31:50.712703375 -0400
+@@ -1,7 +1,7 @@
+-pkgdesktopdatadir = $(datadir)/applications
++pkgdesktopdatadir = /usr/share/applications
+ pkgdesktopdata_DATA = zaz.desktop
+ 
+-pkgpixmapdatadir = $(datadir)/pixmaps
++pkgpixmapdatadir = /usr/share/pixmaps
+ pkgpixmapdata_DATA = zaz.xpm
+ 
+ EXTRA_DIST = \
+diff -ru zaz-0.2.9-orig/extra/zaz.desktop zaz-0.2.9/extra/zaz.desktop
+--- zaz-0.2.9-orig/extra/zaz.desktop	2009-08-25 18:53:11.000000000 -0400
++++ zaz-0.2.9/extra/zaz.desktop	2009-09-03 17:31:50.713702277 -0400
+@@ -1,11 +1,10 @@
+ [Desktop Entry]
+ Version=1.0
+ Type=Application
+-Encoding=UTF-8
+ Name=Zaz
+ Comment=Zaz ain't Z***
+ TryExec=zaz
+ Exec=zaz
+ Categories=Game;LogicGame;
+-Icon=zaz.xpm
++Icon=zaz
+ MimeType=
+diff -ru zaz-0.2.9-orig/src/Makefile.am zaz-0.2.9/src/Makefile.am
+--- zaz-0.2.9-orig/src/Makefile.am	2009-08-25 18:57:27.000000000 -0400
++++ zaz-0.2.9/src/Makefile.am	2009-09-03 17:31:50.713702277 -0400
+@@ -3,8 +3,7 @@
+ ## Created by Anjuta
+ 
+ AM_CPPFLAGS = \
+-	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
+-	-DPACKAGE_SRC_DIR=\""$(srcdir)"\" \
++	-DPACKAGE_LOCALE_DIR=\""/usr/share/locale"\" \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\"\
+ 	-I/usr/include/freetype2
+ 
+@@ -14,7 +13,7 @@
+ 
+ 
+ datadir = @datadir@
+-localedir = $(datadir)/locale
++localedir = /usr/share/locale
+ DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
+ 
+ bin_PROGRAMS = zaz
