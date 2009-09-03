@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.29 2009/08/04 14:04:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.30 2009/09/03 01:04:56 williamh Exp $
+
+  03 Sep 2009; William Hubbs <williamh@gentoo.org> -epos-2.5.23-r1.ebuild,
+  -files/epos-2.5.35-destdir.patch, -files/epos-2.5.35-sysportaudio.patch,
+  -files/epos, -files/epos-waveform.patch:
+  removed old version
 
   04 Aug 2009; Jeroen Roovers <jer@gentoo.org> epos-2.5.37-r1.ebuild:
   Marked ~hppa (bug #280312).
