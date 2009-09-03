@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.478 2009/09/03 15:24:08 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.479 2009/09/03 15:29:16 suka Exp $
+
+  03 Sep 2009; Andreas Proschofsky <suka@gentoo.org>
+  files/gentoo-3.1.1.diff:
+  Fix qt4-detection, see bug #280344
 
   02 Sep 2009; Andreas Proschofsky <suka@gentoo.org>
   -files/buildfix-mono-2-2.diff, -openoffice-3.0.1.ebuild,
