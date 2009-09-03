@@ -1,0 +1,11 @@
+--- scotch-5.1.6.dfsg.orig/src/libscotch/library_graph_io_mmkt_f.c	2008-03-14 18:15:59.000000000 +0000
++++ scotch-5.1.6.dfsg/src/libscotch/library_graph_io_mmkt_f.c	2008-07-21 15:12:48.000000000 +0000
+@@ -121,7 +121,7 @@
+ */
+ 
+ FORTRAN (                                             \
+-SCOTCHFGRAPHGEOMSAVEMMKT, scotchfgraphgeomsavechac, ( \
++SCOTCHFGRAPHGEOMSAVEMMKT, scotchfgraphgeomsavemmkt, ( \
+ const SCOTCH_Graph * const  grafptr,                  \
+ const SCOTCH_Geom * const   geomptr,                  \
+ const int * const           filegrfptr,               \
