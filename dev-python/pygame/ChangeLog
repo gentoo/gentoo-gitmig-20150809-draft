@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pygame
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.61 2009/07/15 02:00:12 neurogeek Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.62 2009/09/03 12:28:09 patrick Exp $
+
+*pygame-1.9.1 (03 Sep 2009)
+
+  03 Sep 2009; Patrick Lauer <patrick@gentoo.org> +pygame-1.9.1.ebuild,
+  +files/config.patch:
+  Bump to 1.9.1. Small patch by Lorenz Quack. Fixes #280445
 
   15 Jul 2009; Jesus Rivero <neurogeek@gentoo.org>
   +files/pygame-1.8.1_icon_path.patch, pygame-1.8.1-r1.ebuild:
