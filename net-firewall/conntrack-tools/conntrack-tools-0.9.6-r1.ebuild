@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.6-r1.ebuild,v 1.8 2008/11/27 18:55:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/conntrack-tools-0.9.6-r1.ebuild,v 1.9 2009/09/03 11:48:22 ikelos Exp $
 
 inherit linux-info
 
@@ -35,12 +35,12 @@ pkg_setup() {
 
 	#netfilter core team has changed some option names with kernel 2.6.20
 	if kernel_is lt 2 6 20 ; then
-		CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
+		CONFIG_CHECK="~IP_NF_CONNTRACK_NETLINK"
 	else
-		CONFIG_CHECK="NF_CT_NETLINK"
+		CONFIG_CHECK="~NF_CT_NETLINK"
 	fi
-	CONFIG_CHECK="${CONFIG_CHECK} NF_CONNTRACK NF_CONNTRACK_IPV4
-		NETFILTER_NETLINK NF_CONNTRACK_EVENTS"
+	CONFIG_CHECK="${CONFIG_CHECK} ~NF_CONNTRACK ~NF_CONNTRACK_IPV4
+		~NETFILTER_NETLINK ~NF_CONNTRACK_EVENTS"
 
 	check_extra_config
 }
