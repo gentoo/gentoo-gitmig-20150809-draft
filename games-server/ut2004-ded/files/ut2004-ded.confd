@@ -1,0 +1,6 @@
+# User and group the server should run as
+UT2004_DED_USER="@USER@"
+UT2004_DED_GROUP="@GROUP@"
+
+# Any extra options you want to pass to the server
+UT2004_DED_OPTS="DM-Deck17 -nohomedir -ini=Default.ini -log=/dev/null"

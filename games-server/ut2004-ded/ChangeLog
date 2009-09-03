@@ -1,6 +1,12 @@
 # ChangeLog for games-server/ut2004-ded
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.21 2007/04/28 16:06:50 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.22 2009/09/03 12:37:38 nyhm Exp $
+
+*ut2004-ded-3369.3 (03 Sep 2009)
+
+  03 Sep 2009; Tristan Heaven <nyhm@gentoo.org> +files/ut2004-ded.confd,
+  +ut2004-ded-3369.3.ebuild, +files/ut2004-ded.initd:
+  Apply patch to fix remote DOS, bug #239557; new init script, bug #161019
 
   28 Apr 2007; Torsten Veller <tove@gentoo.org> ut2004-ded-3369.ebuild:
   Use newinitd

@@ -1,0 +1,23 @@
+#!/sbin/runscript
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/files/ut2004-ded.initd,v 1.1 2009/09/03 12:37:39 nyhm Exp $
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting ut2004-ded"
+	start-stop-daemon --start --quiet --background \
+		--chuid ${UT2004_DED_USER}:${UT2004_DED_GROUP} \
+		--chdir "@DIR@" --exec "@DIR@/ucc-bin" -- \
+		server ${UT2004_DED_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ut2004-ded"
+	start-stop-daemon --stop --quiet --exec "@DIR@/ucc-bin"
+	eend $?
+}
