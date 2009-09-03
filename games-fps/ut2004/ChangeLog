@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.64 2009/02/05 16:56:21 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.65 2009/09/03 13:35:31 nyhm Exp $
+
+*ut2004-3369.3 (03 Sep 2009)
+
+  03 Sep 2009; Tristan Heaven <nyhm@gentoo.org> +ut2004-3369.3.ebuild:
+  Apply patch to fix remote DoS in the dedicated server, bug #239557
 
   05 Feb 2009; Michael Sterrett <mr_bones_@gentoo.org>
   ut2004-3369-r4.ebuild:
