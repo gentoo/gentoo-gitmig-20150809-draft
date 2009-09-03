@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.13.ebuild,v 1.6 2009/02/16 18:52:34 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.3.14-r3.ebuild,v 1.1 2009/09/03 17:53:46 dertobi123 Exp $
 
-inherit autotools eutils ssl-cert fixheadtails pam
+EAPI=1
+
+inherit autotools db-use eutils flag-o-matic ssl-cert fixheadtails pam multilib
 
 MY_P=${P/_/}
 
@@ -13,8 +15,8 @@ LIBWRAP_PATCH_VER="2.2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 hppa ppc ppc64 sparc x86"
-IUSE="drac idled kerberos kolab nntp pam replication snmp ssl tcpd"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86"
+IUSE="idled kerberos kolab nntp pam replication +sieve snmp ssl tcpd"
 
 PROVIDE="virtual/imapd"
 RDEPEND=">=sys-libs/db-3.2
@@ -27,9 +29,8 @@ RDEPEND=">=sys-libs/db-3.2
 	snmp? ( >=net-analyzer/net-snmp-5.2.2-r1 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
-	drac? ( >=mail-client/drac-1.12-r1 )
-	nntp? ( !net-nntp/leafnode )
-	kolab? ( net-nds/openldap )"
+	kolab? ( net-nds/openldap )
+	nntp? ( !net-nntp/leafnode )"
 
 DEPEND="$RDEPEND
 	sys-devel/libtool
@@ -106,11 +107,8 @@ src_unpack() {
 	# Fix prestripped binaries
 	epatch "${FILESDIR}/${PN}-strip.patch"
 
-	if use drac ; then
-			 epatch "${S}/contrib/drac_auth.patch"
-	fi
+	epatch "${FILESDIR}/${P}-bug283596.patch"
 
-	# KOLAB support
 	if use kolab ; then
 		EPATCH_SOURCE="${FILESDIR}/kolab/${PV}" EPATCH_SUFFIX="patch" \
 		EPATCH_FORCE="yes" epatch
@@ -134,6 +132,14 @@ src_unpack() {
 		-e "s:master:cyrusmaster:g" \
 		man/cyrusmaster.8 || die "sed failed"
 
+	# Remove unwanted m4 files
+	rm "cmulocal/ax_path_bdb.m4" || die "Failed to remove cmulocal/ax_path_bdb.m4"
+
+	# Add db-4.7 support
+	epatch "${FILESDIR}/${P}-add-db47-support.patch"
+	# Fix RPATH issues
+	epatch "${FILESDIR}/${P}-fix-db-rpath.patch"
+
 	# Recreate configure.
 	WANT_AUTOCONF="2.5"
 	AT_M4DIR="cmulocal" eautoreconf
@@ -142,7 +148,8 @@ src_unpack() {
 	sed -i -e "s:lrpm:lrpm -lrpmio -lrpmdb:" configure || die "sed failed"
 
 	if use kolab ; then
-		sed -i -e "s/{LIB_SASL}/{LIB_SASL} -lldap -llber /" configure || die "sed failed"
+		sed -i -e "s/{LIB_SASL}/{LIB_SASL} -lldap -llber /" configure || die
+		"sed failed"
 	fi
 }
 
@@ -153,32 +160,25 @@ src_compile() {
 	myconf="${myconf} $(use_with tcpd libwrap)"
 	myconf="${myconf} $(use_enable kerberos gssapi) $(use_enable kerberos krb5afspts)"
 	myconf="${myconf} $(use_enable idled)"
-	myconf="${myconf} $(use_enable nntp nntp)"
+	myconf="${myconf} $(use_enable nntp)"
 	myconf="${myconf} $(use_enable replication)"
 
-	if use drac; then
-		myconf="${myconf} --with-drac=/usr/$(get_libdir)"
-	else
-		myconf="${myconf} --without-drac"
-	fi
-
 	if use kerberos; then
-		myconf="${myconf} --with-auth=krb5"
+		myconf="${myconf} --with-krb=$(krb5-config --prefix) --with-krbdes=no"
 	else
-		myconf="${myconf} --with-auth=unix"
+		myconf="${myconf} --with-krb=no"
 	fi
 
 	econf \
 		--enable-murder \
 		--enable-listext \
 		--enable-netscapehack \
-		--with-extraident=Gentoo \
-		--with-service-path=/usr/lib/cyrus \
+		--with-service-path=/usr/$(get_libdir)/cyrus \
 		--with-cyrus-user=cyrus \
 		--with-cyrus-group=mail \
 		--with-com_err=yes \
 		--without-perl \
-		--disable-cyradm \
+		--with-bdb=$(db_libname) \
 		${myconf} || die "econf failed"
 
 	# needed for parallel make. Bug #72352.
@@ -191,8 +191,16 @@ src_compile() {
 }
 
 src_install() {
+	local SUBDIRS
+
+	if use sieve; then
+		SUBDIRS="master imap imtest timsieved notifyd sieve"
+	else
+		SUBDIRS="master imap imtest"
+	fi
+
 	dodir /usr/bin /usr/lib
-	for subdir in master imap imtest timsieved notifyd sieve; do
+	for subdir in ${SUBDIRS}; do
 		make -C "${subdir}" DESTDIR="${D}" install || die "make install failed"
 	done
 
