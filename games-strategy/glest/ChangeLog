@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/glest
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.23 2009/07/11 00:36:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/ChangeLog,v 1.24 2009/09/03 15:53:50 nyhm Exp $
+
+  03 Sep 2009; Tristan Heaven <nyhm@gentoo.org> glest-3.2.2.ebuild,
+  +files/glest-3.2.2-glibc210.patch:
+  Fix building with glibc-2.10
 
 *glest-3.2.2 (11 Jul 2009)
 

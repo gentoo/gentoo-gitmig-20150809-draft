@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.1 2009/07/11 00:36:39 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glest/glest-3.2.2.ebuild,v 1.2 2009/09/03 15:53:50 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -33,7 +33,9 @@ S=${WORKDIR}/${PN}-source-${PV}
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${P}-{gentoo,xerces-c}.patch
+		"${FILESDIR}"/${P}-gentoo.patch \
+		"${FILESDIR}"/${P}-xerces-c.patch \
+		"${FILESDIR}"/${P}-glibc210.patch
 
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
