@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.142 2009/09/03 17:53:46 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.143 2009/09/03 20:19:18 dertobi123 Exp $
+
+  03 Sep 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  cyrus-imapd-2.3.14-r3.ebuild, +files/cyrus-imapd-2.3.14-bug283596-2.patch,
+  -files/cyrus-imapd-2.3.14-bug283596.patch:
+  Fix patch
 
 *cyrus-imapd-2.3.14-r3 (03 Sep 2009)
 
