@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/dnstop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.28 2009/09/03 06:55:16 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnstop/ChangeLog,v 1.29 2009/09/03 14:08:26 rajiv Exp $
+
+  03 Sep 2009; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  -dnstop-20080502.ebuild:
+  cleanup.
 
   03 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   dnstop-20090128.ebuild:
