@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3220 2009/09/03 10:55:39 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3221 2009/09/03 14:44:06 darkside Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Sep 2009; Jeremy Olexa <darkside@gentoo.org> thirdpartymirrors:
+  Remove www.cs-us.xfce.org because it only mirrors the main xfce release,
+  not plugins. Remove p0llux.be because it doesn't have any xfce on it.
+  Rename mocha.xfce.org to archive.xfce.org
 
   03 Sep 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
   UnMask KDE 4.2.4
