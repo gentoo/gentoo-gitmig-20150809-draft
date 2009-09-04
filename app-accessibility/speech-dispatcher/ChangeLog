@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/speech-dispatcher
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.42 2009/09/04 08:55:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/ChangeLog,v 1.43 2009/09/04 13:34:47 williamh Exp $
+
+  04 Sep 2009; William Hubbs <williamh@gentoo.org>
+  speech-dispatcher-0.6.7.ebuild, -speech-dispatcher-0.6.7-r1.ebuild:
+  Applied glibc patch to 0.6.7 and removed unnecessary revbump. This is a
+  build-time patch, so the rev bump was not needed.
 
 *speech-dispatcher-0.6.7-r1 (04 Sep 2009)
 
