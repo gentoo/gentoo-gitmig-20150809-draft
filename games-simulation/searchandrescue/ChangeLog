@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/searchandrescue
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.16 2009/03/18 22:37:49 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/ChangeLog,v 1.17 2009/09/04 07:25:00 tupone Exp $
+
+  04 Sep 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/searchandrescue-0.8.2-gcc441.patch,
+  searchandrescue-0.8.2-r1.ebuild:
+  Fix build with gcc-4.4.1 Bug #283451 by Steffen Schaumburg
 
   18 Mar 2009; Brent Baude <ranger@gentoo.org>
   searchandrescue-0.8.2-r1.ebuild:
