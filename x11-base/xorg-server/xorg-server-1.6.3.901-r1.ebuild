@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.3.901-r1.ebuild,v 1.1 2009/09/04 23:22:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.3.901-r1.ebuild,v 1.2 2009/09/04 23:51:31 remi Exp $
 
 EAPI="2"
 
@@ -9,19 +9,16 @@ EAPI="2"
 
 inherit x-modular multilib versionator
 
-# keithp put this one in archive/ instead of releases/ for unknown reasons
-BASE_INDIVIDUAL_URI="http://xorg.freedesktop.org/archive/individual"
-SRC_URI="${SRC_URI}
-	${BASE_INDIVIDUAL_URI}/${MODULE}/${P}.tar.bz2"
+SRC_URI="${SRC_URI}"
 #	mirror://gentoo/${P}-gentoo-patches-01.tar.bz2
 
 OPENGL_DIR="xorg-x11"
 
 DESCRIPTION="X.Org X servers"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
+
 IUSE_SERVERS="dmx kdrive xorg"
-IUSE="${IUSE_SERVERS}
-	tslib hal ipv6 minimal nptl sdl"
+IUSE="${IUSE_SERVERS} tslib hal ipv6 minimal nptl sdl"
 RDEPEND="hal? ( sys-apps/hal )
 	tslib? ( >=x11-libs/tslib-1.0 x11-proto/xcalibrateproto )
 	dev-libs/openssl

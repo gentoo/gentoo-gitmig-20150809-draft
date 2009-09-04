@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.441 2009/09/04 23:22:45 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.442 2009/09/04 23:51:31 remi Exp $
+
+  04 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  xorg-server-1.6.3.901-r1.ebuild:
+  small clean ups in ebuild, sync up with -9999 from x11 overlay
 
 *xorg-server-1.6.3.901-r1 (04 Sep 2009)
 
