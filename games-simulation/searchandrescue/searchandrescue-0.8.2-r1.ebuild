@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2-r1.ebuild,v 1.5 2009/09/04 07:25:00 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/searchandrescue/searchandrescue-0.8.2-r1.ebuild,v 1.6 2009/09/04 08:24:32 tupone Exp $
 
 EAPI=2
 inherit eutils games
@@ -40,7 +40,8 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc33.patch \
 		"${FILESDIR}"/${P}-gcc41.patch \
 		"${FILESDIR}"/${P}-gcc412.patch \
-		"${FILESDIR}"/${P}-gcc441.patch
+		"${FILESDIR}"/${P}-gcc441.patch \
+		"${FILESDIR}"/${P}-makejs.patch
 	bunzip2 sar/man/${MY_PN}.6.bz2
 	sed -i \
 		-e '/FeatureCFLAGS.*march/s:=.*:=:g' sar/platforms.ini \
@@ -63,10 +64,6 @@ src_configure() {
 		--prefix="${GAMES_PREFIX}" \
 		${myconf} \
 		|| die
-}
-
-src_compile() {
-	emake -j1 || die "emake failed"
 }
 
 src_install() {
