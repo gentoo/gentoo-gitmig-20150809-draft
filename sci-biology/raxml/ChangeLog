@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/raxml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/ChangeLog,v 1.1 2009/09/04 03:04:43 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/ChangeLog,v 1.2 2009/09/04 19:12:50 weaver Exp $
+
+*raxml-7.2.2 (04 Sep 2009)
+
+  04 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +raxml-7.2.2.ebuild:
+  Version bump (but no mpi support in 7.2.2)
 
 *raxml-7.0.4 (03 Sep 2009)
 
