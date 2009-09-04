@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xvt
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.14 2008/03/27 01:50:15 rbu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.15 2009/09/04 13:59:09 jer Exp $
+
+*xvt-2.1-r2 (04 Sep 2009)
+
+  04 Sep 2009; Jeroen Roovers <jer@gentoo.org> +xvt-2.1-r2.ebuild,
+  +files/xvt-int-main.patch, +files/xvt-makefile.patch:
+  Turn seds into patches. Respect CFLAGS (bug #241554), CC.
 
   27 Mar 2008; Robert Buchholz <rbu@gentoo.org> xvt-2.1-r1.ebuild:
   adding ~amd64
