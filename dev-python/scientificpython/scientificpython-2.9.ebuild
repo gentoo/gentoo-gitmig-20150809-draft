@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.6.1.ebuild,v 1.2 2009/07/29 20:28:07 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scientificpython/scientificpython-2.9.ebuild,v 1.1 2009/09/04 17:04:51 patrick Exp $
 
 MY_PN=ScientificPython
-DV=1034 # hardcoded download version
+DV=2372 # hardcoded download version
 
 inherit eutils distutils
 
@@ -16,23 +16,18 @@ KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 
 IUSE="mpi doc"
 
-DEPEND=">=dev-python/numeric-23.8
-	>=sci-libs/netcdf-3.0
+DEPEND="dev-python/numpy
+	sci-libs/netcdf
 	mpi? ( virtual/mpi )"
 
-S="${WORKDIR}/${MY_PN}-2.6"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-mpi.patch
-}
+S="${WORKDIR}/${MY_PN}-${PV}.0"
 
 src_compile() {
 	distutils_src_compile
 	if use mpi; then
 		cd Src/MPI
-		"${python}" compile.py || die "compile mpi failed"
+		PYTHONPATH=$(ls -d "${S}"/build/lib*) \
+			"${python}" compile.py || die "compile mpi failed"
 	fi
 }
 
