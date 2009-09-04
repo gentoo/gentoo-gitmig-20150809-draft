@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.52 2009/09/04 17:46:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.53 2009/09/04 20:13:05 arfrever Exp $
+
+  04 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  reportlab-2.3.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
   04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -reportlab-1.20.ebuild,
   -reportlab-2.2.ebuild:
