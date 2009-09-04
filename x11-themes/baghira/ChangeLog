@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/baghira
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.55 2008/02/19 13:38:04 ingmar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/baghira/ChangeLog,v 1.56 2009/09/04 08:24:10 ssuominen Exp $
+
+  04 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  baghira-0.8.ebuild, +files/baghira-0.8-glibc-2.10.patch:
+  Fix building with GLIBC 2.10+ wrt #273274, thanks to Petr Behan.
 
   19 Feb 2008; Ingmar Vanhassel <ingmar@gentoo.org> baghira-0.7.ebuild,
   baghira-0.8.ebuild:
