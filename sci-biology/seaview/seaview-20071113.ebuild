@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.4 2008/11/14 19:31:29 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.5 2009/09/04 09:22:53 ssuominen Exp $
 
-EAPI="1"
-
-inherit toolchain-funcs multilib
+EAPI=1
+inherit eutils toolchain-funcs multilib
 
 DESCRIPTION="A graphical multiple sequence alignment editor"
 HOMEPAGE="http://pbil.univ-lyon1.fr/software/seaview.html"
@@ -44,6 +43,8 @@ src_unpack() {
 		-e "s:^#HELP_NOT_IN_PATH:HELP_NOT_IN_PATH:" \
 		-e "s:bge/mgouy:usr/share:" \
 		Makefile || die "sed Makefile failed"
+
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 }
 
 src_install() {
