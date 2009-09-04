@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mwcollect
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.17 2008/12/24 02:36:41 mpagano Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mwcollect/ChangeLog,v 1.18 2009/09/04 23:24:25 vostorga Exp $
+
+  04 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -mwcollect-2.1.2.ebuild, -mwcollect-3.0.4.ebuild:
+  Cleaning out old ebuild
 
 *mwcollect-3.0.4-r1 (24 Dec 2008)
 
