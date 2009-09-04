@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5_rc1.ebuild,v 1.1 2009/08/26 18:06:01 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.5_rc1.ebuild,v 1.2 2009/09/04 20:06:38 billie Exp $
 
 EAPI="2"
 
@@ -60,6 +60,10 @@ pkg_setup() {
 		eerror "the quasselclient (USE=X) or the quasselcore (USE=server)."
 		die "monolithic, server and X flag unset."
 	fi
+}
+
+src_prepare() {
+	epatch "$FILESDIR/${P}-identity.cpp.patch"
 }
 
 src_configure() {
