@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10404 2009/09/04 10:51:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10405 2009/09/04 16:18:40 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1095,11 +1095,6 @@ media-libs/freeimage
 # Peter Volkov <pva@gentoo.org> (26 May 2009)
 # Force people to downgrade and use better version
 =net-libs/libssh-0.11
-
-# Michael Sterrett <mr_bones_@gentoo.org> (25 May 2009)
-# Masked for testing.
-=app-admin/syslog-ng-3.0.2
-=app-admin/syslog-ng-3.0.4
 
 # Peter Volkov <pva@gentoo.org> (17 May 2009)
 # Masked development/git sources
