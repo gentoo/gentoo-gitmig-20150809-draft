@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.0.ebuild,v 1.1 2009/05/11 13:56:42 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.6.ebuild,v 1.1 2009/09/04 11:51:31 chainsaw Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -169,22 +169,14 @@ src_unpack() {
 	epatch "${FILESDIR}"/1.6.1/${PN}-1.6.1-uclibc.patch  || die "patch failed"
 
 	#
-	# try to tame the custom build system a little so make likes it better
-	# patch credit: Diego E. 'Flameeyes' Pettenò <flameeyes@entoo.org>
-	#
-	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-parallelmake.patch || die "patch failed"
-
-	#
-	# do not try to pass libraries in ldflags but use libs properly
-	# keeps NET-SNMP configure test from failing horribly on --as-needed
-	# http://bugs.digium.com/view.php?id=14671
-	#
-	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-toolcheck-libs-not-ldflags.patch || die "patch failed"
-
-	#
 	# link UW-IMAP with Kerberos5 if necessary
 	#
 	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1-imap-kerberos.patch || die "patch failed"
+
+	#
+	# compensate for non-standard LUA header paths in Gentoo
+	#
+	epatch "${FILESDIR}"/1.6.1/asterisk-1.6.1.6-lua-includes.patch || die "patch failed"
 
 	AT_M4DIR=autoconf eautoreconf
 
@@ -352,7 +344,7 @@ src_install() {
 	keepdir /var/spool/asterisk/{system,tmp,meetme,monitor,dictate,voicemail}
 	keepdir /var/log/asterisk/{cdr-csv,cdr-custom}
 
-	newinitd "${FILESDIR}"/1.6.0/asterisk.rc6 asterisk
+	newinitd "${FILESDIR}"/1.6.1/asterisk.rc6 asterisk
 	newconfd "${FILESDIR}"/1.6.0/asterisk.confd asterisk
 
 	# some people like to keep the sources around for custom patching
