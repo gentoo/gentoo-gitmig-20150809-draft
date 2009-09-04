@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.440 2009/08/26 13:55:25 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.441 2009/09/04 23:22:45 remi Exp $
+
+*xorg-server-1.6.3.901-r1 (04 Sep 2009)
+
+  04 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  +xorg-server-1.6.3.901-r1.ebuild,
+  +files/1.6.3.901-0001-dix-append-built-ins-to-the-font-path-in-SetDefaultF
+  .patch:
+  add a patch to fix bug #278487, split drivers into x11-base/xorg-drivers
 
   26 Aug 2009; Rémi Cardona <remi@gentoo.org>
   -xorg-server-1.6.2.901.ebuild:
