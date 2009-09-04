@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.33-r1.ebuild,v 1.1 2009/08/04 17:29:04 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.2.35.ebuild,v 1.1 2009/09/04 13:06:59 chainsaw Exp $
 
 EAPI=2
 inherit eutils multilib toolchain-funcs
@@ -171,6 +171,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}/1.2.0/${PN}-1.2.21.1-h323-dumb-makefile.diff"
+	epatch "${FILESDIR}/1.2.0/${P}-lpc10-prototypes.diff"
 
 	#
 	# uclibc patch
@@ -281,7 +282,7 @@ src_install() {
 	newconfd "${FILESDIR}"/1.2.0/asterisk.confd asterisk
 
 	# install standard docs...
-	dodoc BUGS CREDITS ChangeLog HARDWARE README README.fpm
+	dodoc BUGS CREDITS ChangeLog HARDWARE README
 	dodoc SECURITY doc/CODING-GUIDELINES doc/linkedlists.README UPGRADE.txt
 	dodoc doc/README.*
 	dodoc doc/*.txt

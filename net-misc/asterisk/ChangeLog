@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.208 2009/09/04 11:51:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.209 2009/09/04 13:06:59 chainsaw Exp $
+
+*asterisk-1.2.35 (04 Sep 2009)
+
+  04 Sep 2009; <chainsaw@gentoo.org> -asterisk-1.2.33.ebuild,
+  -asterisk-1.2.33-r1.ebuild, +asterisk-1.2.35.ebuild,
+  +files/1.2.0/asterisk-1.2.35-lpc10-prototypes.diff:
+  Version bump, security fix for IAX2 denial of service (AST-2009-006). Set
+  missing define for the LPC10 codec so prototypes are compiled in. Removed
+  non-stable vulnerable 1.2 series ebuilds.
 
 *asterisk-1.6.1.6 (04 Sep 2009)
 
