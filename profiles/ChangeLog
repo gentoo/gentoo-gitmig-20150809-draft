@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3225 2009/09/04 10:51:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3226 2009/09/04 15:11:51 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  arch/amd64/no-multilib/package.mask:
+  ati-drivers-9.8 works on no-multilib profile. So unmask them.
 
   04 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Removed ksubtitleripper, ufo, fex and lurker from tree.
