@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10405 2009/09/04 16:18:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10406 2009/09/04 19:06:22 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -981,11 +981,6 @@ net-misc/netgo
 #
 # Removal on 2009-09-07
 sci-visualization/qmatplot
-
-# Ulrich Mueller <ulm@gentoo.org> (06 Jul 2009)
-# Masked for removal in 60 days. Last upstream version is from 2003.
-# Distfile is gone. Long obsolete with current Emacs versions. Bug 276702.
-app-emacs/mule-ucs
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
 #  on behalf of QA Team
