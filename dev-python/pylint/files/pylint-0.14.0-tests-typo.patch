@@ -1,5 +1,0 @@
---- test/messages/func_w0702.txt	2006-05-07 00:31:55.000000000 +0300
-+++ test/messages/func_w0702.txt	2008-03-21 08:09:44.138931778 +0200
-@@ -1 +1 @@
--W: 10: No exception's type specified
-+W: 10: No exception type(s) specified
