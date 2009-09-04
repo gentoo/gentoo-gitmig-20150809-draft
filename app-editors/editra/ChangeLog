@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/editra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.5 2009/08/21 21:33:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/editra/ChangeLog,v 1.6 2009/09/04 00:56:36 dirtyepic Exp $
+
+*editra-0.5.05 (04 Sep 2009)
+
+  04 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> -editra-0.4.75.ebuild,
+  -editra-0.4.88.ebuild, +editra-0.5.05.ebuild:
+  Version bump. Fixes data loss bug, updating highly recommended.
 
 *editra-0.5.0 (21 Aug 2009)
 
