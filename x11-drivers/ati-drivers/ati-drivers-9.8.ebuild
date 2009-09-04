@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.13 2009/09/04 13:50:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.14 2009/09/04 15:02:00 scarabeus Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Ati precompiled drivers for r600 (HD Series) and newer chipsets"
 HOMEPAGE="http://www.ati.com"
 ATI_URL="https://a248.e.akamai.net/f/674/9206/0/www2.ati.com/drivers/linux/"
 SRC_URI="${ATI_URL}/ati-driver-installer-${PV/./-}-x86.x86_64.run"
-IUSE="acpi debug +modules multilib"
+IUSE="debug +modules multilib"
 
 LICENSE="AMD GPL-2 QPL-1.0 as-is"
 KEYWORDS="~amd64 ~x86"
@@ -20,14 +20,12 @@ RDEPEND="
 	!x11-drivers/ati-drivers:0
 	!x11-apps/ati-drivers-extra
 	>=app-admin/eselect-opengl-1.0.7
+	sys-power/acpid
+	x11-apps/xauth
 	>=x11-base/xorg-server-1.5.3-r7
 	x11-libs/libXinerama
 	x11-libs/libXrandr
-	acpi? (
-		sys-power/acpid
-		x11-apps/xauth
-	)
-	amd64? ( multilib? ( app-emulation/emul-linux-x86-xlibs ) )
+	multilib? ( app-emulation/emul-linux-x86-xlibs )
 "
 
 DEPEND="${RDEPEND}
@@ -231,21 +229,20 @@ src_prepare() {
 		"${ARCH_DIR}"/usr/X11R6/${PKG_LIBDIR}/libfglrx_gamma* \
 		|| die "bin rm failed"
 
-	if use acpi; then
-		sed -i \
-			-e "s:/var/lib/xdm/authdir/authfiles/:/var/run/xauth/:" \
-			-e "s:/var/lib/gdm/:/var/gdm/:" \
-			"${S}/common/etc/ati/authatieventsd.sh" \
-			|| die "sed failed."
+	# ACPI fixups
+	sed -i \
+		-e "s:/var/lib/xdm/authdir/authfiles/:/var/run/xauth/:" \
+		-e "s:/var/lib/gdm/:/var/gdm/:" \
+		"${S}/common/etc/ati/authatieventsd.sh" \
+		|| die "sed failed."
 
-		# Since "who" is in coreutils, we're using that one instead of "finger".
-		sed -i -e 's:finger:who:' \
-			"${S}/common/usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh" \
-			|| die "Replacing 'finger' with 'who' failed."
-		# Adjust paths in the script from /usr/X11R6/bin/ to /opt/bin/ and
-		# add function to detect default state.
-		epatch "${FILESDIR}"/ati-powermode-opt-path-2.patch || die "Failed to epatch powermode-opt-path-2.patch"
-	fi
+	# Since "who" is in coreutils, we're using that one instead of "finger".
+	sed -i -e 's:finger:who:' \
+		"${S}/common/usr/share/doc/fglrx/examples/etc/acpi/ati-powermode.sh" \
+		|| die "Replacing 'finger' with 'who' failed."
+	# Adjust paths in the script from /usr/X11R6/bin/ to /opt/bin/ and
+	# add function to detect default state.
+	epatch "${FILESDIR}"/ati-powermode-opt-path-2.patch || die "Failed to epatch powermode-opt-path-2.patch"
 
 	cd "${MODULE_DIR}"
 	ln -s "${ARCH_DIR}"/lib/modules/fglrx/build_mod/libfglrx_ip.a.GCC$(gcc-major-version) \
@@ -370,9 +367,7 @@ src_install() {
 	# Arch-specific files.
 	# (s)bin.
 	into /opt
-	if use acpi; then
-		dosbin "${ARCH_DIR}"/usr/sbin/atieventsd || die
-	fi
+	dosbin "${ARCH_DIR}"/usr/sbin/atieventsd || die
 	# We cleaned out the compilable stuff in src_unpack
 	dobin "${ARCH_DIR}"/usr/X11R6/bin/* || die
 
@@ -390,10 +385,8 @@ src_install() {
 	insinto /etc/ati
 	# Everything except for the authatieventsd.sh script.
 	doins common/etc/ati/{logo*,control,atiogl.xml,signature,amdpcsdb.default}
-	if use acpi; then
-		insopts -m0755
-		doins common/etc/ati/authatieventsd.sh || die
-	fi
+	insopts -m0755
+	doins common/etc/ati/authatieventsd.sh || die
 
 	# include.
 	insinto /usr
@@ -416,18 +409,16 @@ src_install() {
 	# doc.
 	dohtml -r common/usr/share/doc/fglrx || die
 
-	if use acpi; then
-		doman common/usr/share/man/man8/atieventsd.8 || die
+	doman common/usr/share/man/man8/atieventsd.8 || die
 
-		pushd common/usr/share/doc/fglrx/examples/etc/acpi > /dev/null
+	pushd common/usr/share/doc/fglrx/examples/etc/acpi > /dev/null
 
-		exeinto /etc/acpi
-		doexe ati-powermode.sh || die
-		insinto /etc/acpi/events
-		doins events/* || die
+	exeinto /etc/acpi
+	doexe ati-powermode.sh || die
+	insinto /etc/acpi/events
+	doins events/* || die
 
-		popd > /dev/null
-	fi
+	popd > /dev/null
 
 	# Done with the "source" tree. Install tools we rebuilt:
 	dobin extra/fgl_glxgears/fgl_glxgears || die
@@ -441,12 +432,10 @@ src_install() {
 	newdoc extra/programs/fglrx_gamma/README README.fglrx_gamma || die
 
 	# Gentoo-specific stuff:
-	if use acpi; then
-		newinitd "${FILESDIR}"/atieventsd.init atieventsd \
-			|| die "Failed to install atieventsd.init.d"
-		echo 'ATIEVENTSDOPTS=""' > "${T}"/atieventsd.conf
-		newconfd "${T}"/atieventsd.conf atieventsd || die
-	fi
+	newinitd "${FILESDIR}"/atieventsd.init atieventsd \
+		|| die "Failed to install atieventsd.init.d"
+	echo 'ATIEVENTSDOPTS=""' > "${T}"/atieventsd.conf
+	newconfd "${T}"/atieventsd.conf atieventsd || die
 }
 
 src_install-libs() {
