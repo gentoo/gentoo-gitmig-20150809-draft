@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.18.1.ebuild,v 1.1 2009/09/04 20:15:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/pylint-0.18.1.ebuild,v 1.2 2009/09/04 22:59:31 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,8 +20,13 @@ DEPEND=">=dev-python/logilab-common-0.38
 	>=dev-python/astng-0.19.0"
 RDEPEND="${DEPEND}
 	dev-lang/python[tk?]"
+RESTRICT_PYTHON_ABIS="3.*"
 
-RESTRICT_PYTHON_ABIS="3*"
+src_prepare() {
+	distutils_src_prepare
+
+	epatch "${FILESDIR}/${P}-utils.py.patch"
+}
 
 src_test() {
 	testing() {
@@ -74,6 +79,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	distutils_pkg_postinst
+
 	if ! built_with_use dev-lang/python tk; then
 		ewarn "dev-lang/python has been built without tk support,"
 		ewarn "${PN}-gui doesn't work without Tkinter so if you really need it"
