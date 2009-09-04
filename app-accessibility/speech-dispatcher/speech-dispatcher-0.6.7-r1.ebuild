@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.3 2009/09/04 08:55:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7-r1.ebuild,v 1.1 2009/09/04 08:55:08 ssuominen Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.freebsoft.org/pub/projects/speechd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="alsa flite nas pulseaudio python"
 
 RDEPEND="dev-libs/dotconf
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	sed -i -e 's/\(SUBDIRS.*\)python/\1/' src/Makefile.in || die
 }
 
