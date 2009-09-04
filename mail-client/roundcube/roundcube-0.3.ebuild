@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.2.1.ebuild,v 1.1 2009/04/13 08:27:00 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.ebuild,v 1.1 2009/09/04 17:56:21 hollow Exp $
 
 MY_PN="${PN}mail"
-MY_P="${MY_PN}-${PV}"
+MY_P="${MY_PN}-${PV}-stable"
 
 inherit eutils webapp depend.php depend.apache
 
@@ -26,7 +26,7 @@ need_php_httpd
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	local flags="crypt iconv imap pcre session unicode"
+	local flags="crypt iconv imap pcre session unicode spl"
 	use ldap && flags="${flags} ldap"
 	use ssl && flags="${flags} ssl"
 	use spell && flags="${flags} curl spell"
