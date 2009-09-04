@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.5.0_rc1.ebuild,v 1.1 2009/05/17 10:28:24 sbriesen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xmpppy/xmpppy-0.5.0_rc1.ebuild,v 1.2 2009/09/04 14:57:26 patrick Exp $
 
 inherit eutils distutils
 
@@ -20,6 +20,9 @@ RDEPEND="${DEPEND}
 		dev-python/dnspython
 		dev-python/pydns
 	)"
+DEPEND="${DEPEND}
+	dev-python/setuptools"
+
 
 S="${WORKDIR}/${MY_P}"
 
