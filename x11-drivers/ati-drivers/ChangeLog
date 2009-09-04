@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.181 2009/08/31 18:22:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.182 2009/09/04 13:50:42 scarabeus Exp $
+
+  03 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-9.8.ebuild:
+  Add preinst function. Fixes left behind fglrx.ko.
 
   31 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.8.ebuild:

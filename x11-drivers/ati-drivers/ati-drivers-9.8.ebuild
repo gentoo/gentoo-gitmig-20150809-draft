@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.12 2009/08/31 18:22:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.8.ebuild,v 1.13 2009/09/04 13:50:42 scarabeus Exp $
 
 EAPI="2"
 
@@ -533,6 +533,10 @@ pkg_postinst() {
 
 	use modules && linux-mod_pkg_postinst
 	"${ROOT}"/usr/bin/eselect opengl set --use-old ati
+}
+
+pkg_preinst() {
+	use modules && linux-mod_pkg_preinst
 }
 
 pkg_prerm() {
