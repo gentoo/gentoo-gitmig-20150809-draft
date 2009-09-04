@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/tlslite
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.6 2008/01/05 22:00:33 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/tlslite/ChangeLog,v 1.7 2009/09/04 15:37:58 patrick Exp $
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -tlslite-0.3.8.ebuild:
+  Remove old
 
 *tlslite-0.3.8-r1 (05 Jan 2008)
 
