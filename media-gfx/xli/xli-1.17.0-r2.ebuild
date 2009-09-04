@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r2.ebuild,v 1.15 2008/01/15 18:33:24 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0-r2.ebuild,v 1.16 2009/09/04 12:21:48 ssuominen Exp $
 
 inherit alternatives eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 RDEPEND="x11-libs/libXext
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/libpng-1.0.5
-	>=media-libs/jpeg-6b-r2
+	=media-libs/jpeg-6b*
 	app-arch/bzip2"
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
@@ -28,8 +28,7 @@ S=${WORKDIR}/${PN}-${SNAPSHOT}
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
+	cd "${S}"
 
 	sed -i Imakefile \
 		-e "/^DEFINES =/s/$/ -DHAVE_GUNZIP -DHAVE_BUNZIP2 /" \
@@ -49,8 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	xmkmf || die "xmkmf failed."
-
+	xmkmf || die
 	emake CDEBUGFLAGS="${CFLAGS}" || die
 }
 
@@ -65,7 +63,7 @@ src_install() {
 	#dosym /usr/bin/xli /usr/bin/xsetbg
 
 	insinto /etc/X11/app-defaults
-	newins ${FILESDIR}/Xli.ad Xli || die
+	newins "${FILESDIR}"/Xli.ad Xli || die
 	fperms a+r /etc/X11/app-defaults/Xli
 }
 
