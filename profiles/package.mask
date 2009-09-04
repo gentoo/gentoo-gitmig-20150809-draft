@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10403 2009/09/04 09:42:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10404 2009/09/04 10:51:40 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -262,16 +262,6 @@ net-irc/quirc
 # Masked for removal for bug 280820.
 media-plugins/gmpc-lyricwiki
 
-# Samuli Suominen <ssuominen@gentoo.org> (10 Aug 2009)
-# Doesn't compile wrt #277660. Doesn't install wrt #211336.
-# Masked for removal.
-net-mail/lurker
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Aug 2009)
-# Orphaned library which doesn't compile wrt #278071.
-# Masked for removal.
-media-libs/ufo
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (10 Aug 2009)
 #  on behalf of QA team
 #
@@ -469,15 +459,6 @@ dev-dotnet/monouml
 #
 # Removal on 2009-10-08
 app-text/omegat
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build with _FORTIFY_SOURCE=2 (bug #264094) and
-# gcc 4.4 (bug #280824). Upstream disappeared.
-#
-# Removal on 2009-10-08
-net-fs/fex
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
@@ -704,10 +685,6 @@ dev-lisp/cl-ansi-tests-cvs
 # Masked by treecleaners for removal. Doesn't compile wrt #215252.
 net-im/naim
 net-im/naim-modules
-
-# Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
-# Masked by treecleaners for removal. Doesn't compile wrt #277673.
-media-video/ksubtitleripper
 
 # Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
 # Masked by treecleaners for removal. Doesn't compile wrt #223115.
