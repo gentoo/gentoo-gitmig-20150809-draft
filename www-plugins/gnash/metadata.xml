@@ -2,12 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-  <maintainer>
-    <email>genstef@gentoo.org</email>
-    <name>Stefan Schweizer</name>
-  </maintainer>
-  <use>
-	  <flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering
-		  Engine library</flag>
-  </use>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+		<name>Default assignee for orphaned packages</name>
+	</maintainer>
+	<use>
+		<flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering
+		Engine library</flag>
+	</use>
 </pkgmetadata>
