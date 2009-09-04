@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/storm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.4 2009/02/15 14:42:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.5 2009/09/04 15:45:46 patrick Exp $
+
+*storm-0.15 (04 Sep 2009)
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -storm-0.12.ebuild,
+  -storm-0.13.ebuild, +storm-0.15.ebuild:
+  Bump to 0.15. Remove old
 
 *storm-0.14 (15 Feb 2009)
 
