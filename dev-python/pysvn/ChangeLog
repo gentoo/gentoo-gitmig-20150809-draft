@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pysvn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.2 2009/06/21 10:32:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/ChangeLog,v 1.3 2009/09/04 18:43:35 patrick Exp $
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pysvn-1.6.3-r1.ebuild:
+  Remove old
 
 *pysvn-1.7.0 (21 Jun 2009)
 
