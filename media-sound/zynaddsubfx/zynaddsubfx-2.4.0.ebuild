@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.0.ebuild,v 1.1 2009/08/10 07:28:00 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.4.0.ebuild,v 1.2 2009/09/04 07:56:16 aballier Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -42,6 +42,7 @@ src_prepare() {
 		-i "${S}/ExternalPrograms/Controller/Makefile" || die
 	epatch "${FILESDIR}/${P}-string.patch"
 	epatch "${FILESDIR}/${P}-ldflags.patch"
+	epatch "${FILESDIR}/${P}-nullmidiin.patch"
 }
 
 use_echo_yesno() {
