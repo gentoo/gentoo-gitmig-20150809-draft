@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10400 2009/09/04 00:45:46 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10401 2009/09/04 02:19:50 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -959,29 +959,11 @@ dev-ruby/misen
 dev-ruby/dpklib
 
 # Jeremy Olexa <darkside@gentoo.org> (11 Jul 2009)
-# * last gentoo bumps in 2007
-# * some are stable, some are not
-# * remote root security issues
-# * external kernel module
-# * modules are moved into kernel
-# * upstream abandoned external modules
-# * do not compile against 2.6.22/24 or later
-# Removed by treecleaners in 60 days, bug 277232
-net-wireless/rt2400
-net-wireless/rt2500
-net-wireless/rt2570
-
-# Jeremy Olexa <darkside@gentoo.org> (11 Jul 2009)
 # QA removal, ebuild needs work, SSL support is dlopened instead of more
 # favorable ways. Project dead, now called mongoose instead. removal bug: 248484
 # mongoose bug: 173888
 # Removed in ~60 days by treecleaners
 www-servers/shttpd
-
-# Jeremy Olexa <darkside@gentoo.org> (11 Jul 2009)
-# Removed in ~60 days by treecleaners. Nothing uses it. Upstream doesn't care
-# about it, unmaintained. Comment on bug 246960
-app-text/dgs
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
 #  on behalf of QA Team
@@ -1075,37 +1057,6 @@ sys-fs/clvm
 # setup, not in tree).
 # Pending release of new versions of enigmail/seahorse.
 >=app-crypt/gnupg-2.0.12
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Security issue, dead upstream. Removal in 60 days, bug 273105
-media-gfx/megapov
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Fails to build on a stable system (glibc-2.8). Removed in 60 days. bug 249299
-app-i18n/jmcce
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Fails to build, no interest in fixing, old bugs. removed in 60 days.
-# bug 247945
-net-dialup/ivam2
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Broken, non-relevant, old. Removal in 60 days. bug 177920
-net-wireless/zd1211
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Broken, old, before 2.6.20 kernels. Removal in 60 days. bug 180008
-net-wireless/rtl8187
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Currently broken, security issue, no maintainer, 3rd party kernel module.
-# Removal in 60 days, bug 183085
-net-wireless/ralink-rt61
-
-# Jeremy Olexa <darkside@gentoo.org> (3 Jul 2009)
-# Currently broken, 3rd party kernel module, no maintainer to keep it updated.
-# Removal in 60 days, bug 190718
-net-wireless/rt61
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
 # koffice monolithic masked, latest koffice version
