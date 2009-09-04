@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.2.ebuild,v 1.1 2009/09/04 19:12:50 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/raxml/raxml-7.2.2.ebuild,v 1.2 2009/09/04 19:30:55 weaver Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 IUSE="+threads"
 KEYWORDS="~amd64 ~x86"
 
-# errors compiling mpi for version 7.2.2. mpi is enabled by adding -DPARALLEL to CFLAGS
+# mpi is not supported in version 7.2.2. mpi is enabled by adding -DPARALLEL to CFLAGS
 DEPEND="" # mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
@@ -28,11 +28,15 @@ src_prepare() {
 }
 
 src_compile() {
-	emake -f Makefile.SSE3.gcc || die
-	if use threads; then emake -f Makefile.SSE3.PTHREADS.gcc clean && emake -f Makefile.SSE3.PTHREADS.gcc || die; fi
+	emake -f Makefile.gcc || die
+	emake -f Makefile.SSE3.gcc clean && emake -f Makefile.SSE3.gcc || die
+	if use threads; then
+		emake -f Makefile.PTHREADS.gcc clean && emake -f Makefile.PTHREADS.gcc || die
+		emake -f Makefile.SSE3.PTHREADS.gcc clean && emake -f Makefile.SSE3.PTHREADS.gcc || die
+	fi
 }
 
 src_install() {
-	dobin raxmlHPC-SSE3 || die
-	if use threads; then dobin raxmlHPC-PTHREADS-SSE3 || die; fi
+	dobin raxmlHPC raxmlHPC-SSE3 || die
+	if use threads; then dobin raxmlHPC-PTHREADS raxmlHPC-PTHREADS-SSE3 || die; fi
 }
