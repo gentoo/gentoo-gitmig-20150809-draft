@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10401 2009/09/04 02:19:50 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10402 2009/09/04 08:38:50 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -508,15 +508,6 @@ dev-java/rjava
 # Removal on 2009-10-08
 sci-chemistry/maid
 
-# Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2009)
-# Doesn't compile wrt #274116. Masked for removal.
-www-client/ochusha
-
-# Samuli Suominen <ssuominen@gentoo.org> (09 Aug 2009)
-# Internal copies of faad2 and mpeg4ip. Doesn't compile
-# wrt #277801. Masked by treecleaners.
-media-sound/aacgain
-
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
 #
@@ -737,14 +728,6 @@ net-misc/cgterm
 # Masked by treecleaners for removal. Doesn't compile wrt #239588.
 app-misc/nomadii-utils
 
-# Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
-# Masked by treecleaners for removal. Doesn't compile wrt #273274.
-x11-themes/baghira
-
-# Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
-# Masked by treecleaners for removal. Doesn't compile wrt #274215.
-x11-misc/stripclub
-
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
 =dev-tcltk/tcl-debug-2.0
@@ -840,16 +823,6 @@ gnome-extra/gnome-art
 # Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
 # Masked for removal. Upstream renamed to Clozure CL which can be found in lisp overlay.
 dev-lisp/openmcl
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (29 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to build with glibc 2.10 (bug #276240), and with _FORTIFY_SOURCE
-# (bug #274379), bundles libSDL and libSDL_Image (bug #252513). Ebuild
-# needs an overhaul for QA standards.
-#
-# Removal on 2009-09-29
-x11-misc/xnc
 
 # Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
 # Masked for increasingly many problems. Upstream is flaky and hasn't released since 2005.
