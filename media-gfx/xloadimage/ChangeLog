@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/xloadimage
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.42 2008/11/17 21:12:46 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/ChangeLog,v 1.43 2009/09/04 11:14:38 ssuominen Exp $
+
+*xloadimage-4.1-r10 (04 Sep 2009)
+
+  04 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +xloadimage-4.1-r10.ebuild:
+  Stop using internal ecompress function.
 
   17 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   files/xloadimage-4.1-unaligned-access.patch:
