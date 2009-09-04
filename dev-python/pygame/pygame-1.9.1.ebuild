@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.1 2009/09/03 12:28:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/pygame-1.9.1.ebuild,v 1.2 2009/09/04 04:47:23 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils multilib eutils
+inherit distutils eutils multilib
 
 DESCRIPTION="python bindings to sdl and other libs that facilitate game production"
 HOMEPAGE="http://www.pygame.org/"
@@ -21,24 +22,40 @@ RDEPEND=">=media-libs/libsdl-1.2.5[X?]
 	>=media-libs/sdl-mixer-1.2.4
 	dev-python/numpy
 	>=media-libs/smpeg-0.4.4-r1"
-DEPEND="${RDEPEND}
-	dev-python/setuptools"
+DEPEND="${RDEPEND}"
 
-S=${WORKDIR}/${P}release
+S="${WORKDIR}/${P}release"
+
+DOCS="WHATSNEW"
 
 src_prepare() {
+	distutils_src_prepare
 	epatch "${FILESDIR}/config.patch"
 }
 
-src_compile() {
+src_configure() {
 	python config.py -auto
 	sed -i -e 's:X11R6/lib:lib64:g' Setup
 	use X || sed -i -e 's:scrap :#scrap :' Setup
-	distutils_src_compile
+}
+
+src_test() {
+	# Skip tests that depend on DISPLAY being set. Bug #223055.
+	SKIP_TESTS="display_test image__save_gl_surface_test movie_test"
+
+	local test
+	for test in ${SKIP_TESTS}; do
+		einfo "Removing test: ${test}"
+		rm -fr "${S}/test/${test}.py"
+	done
+
+	testing() {
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" run_tests.py
+	}
+	python_execute_function testing
 }
 
 src_install() {
-	DOCS=WHATSNEW
 	distutils_src_install
 
 	if use doc; then
@@ -47,19 +64,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r "${S}/examples"
 	fi
-}
-
-src_test() {
-	python_version
-
-	#Skip tests that depend on DISPLAY being set. Bug #223055
-	SKIP_TESTS="display_test image__save_gl_surface_test movie_test"
-
-	for test_ in $SKIP_TESTS
-	do
-		einfo "Removing test: ${test_}"
-		rm -rf "${S}/test/${test_}.py"
-	done
-
-	PYTHONPATH="$(ls -d build/lib.*)" "${python}" run_tests.py || die "tests failed"
 }
