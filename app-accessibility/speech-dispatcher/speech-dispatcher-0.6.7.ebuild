@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.4 2009/09/04 13:34:47 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.5 2009/09/04 13:54:51 williamh Exp $
 
 inherit eutils
 
@@ -27,7 +27,6 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
 	sed -i -e 's/\(SUBDIRS.*\)python/\1/' src/Makefile.in || die
 }
 
