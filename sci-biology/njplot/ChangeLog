@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/njplot
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.9 2007/07/22 07:30:55 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/njplot/ChangeLog,v 1.10 2009/09/04 17:22:15 weaver Exp $
+
+*njplot-2.3 (04 Sep 2009)
+
+  04 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> metadata.xml,
+  +njplot-2.3.ebuild, -njplot-20050109.ebuild:
+  Version bump, clean up, fix bug 248338, take maintainership
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>;
   njplot-20050109.ebuild:
