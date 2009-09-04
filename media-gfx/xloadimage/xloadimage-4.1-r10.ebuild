@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r10.ebuild,v 1.1 2009/09/04 11:14:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xloadimage/xloadimage-4.1-r10.ebuild,v 1.2 2009/09/04 11:36:08 ssuominen Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -63,8 +63,12 @@ src_install() {
 	insinto /etc/X11
 	doins xloadimagerc || die
 
-	newman xloadimage.man xloadimage.1
-	newman uufilter.man uufilter.1
+	newman xloadimage.man xloadimage.1 || die
+	newman uufilter.man uufilter.1 || die
+
+	echo ".so man1/xloadimage.1" > "${T}"/xsetbg.1
+	doman "${T}"/xsetbg.1 || die
+	newman "${T}"/xsetbg.1 xview.1 || die
 
 	dodoc README
 }
