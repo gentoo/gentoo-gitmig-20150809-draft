@@ -1,6 +1,9 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.7a.ebuild,v 1.1 2007/09/10 05:19:01 mjolnir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyasn1/pyasn1-0.0.9a.ebuild,v 1.1 2009/09/04 19:31:06 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -15,17 +18,20 @@ IUSE=""
 
 DEPEND=""
 RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="CHANGES"
+
+src_test() {
+	testing() {
+		PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" test/suite.py
+	}
+	python_execute_function testing
+}
 
 src_install() {
 	distutils_src_install
 	dohtml doc/*
 	insinto /usr/share/doc/${PF}
 	doins -r examples
-}
-
-src_test() {
-	export PYTHONPATH="${PYTHONPATH}:${S}/build/lib"
-	python test/suite.py || die "tests failed"
 }
