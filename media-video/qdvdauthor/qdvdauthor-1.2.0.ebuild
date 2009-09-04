@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-1.2.0.ebuild,v 1.2 2008/07/27 21:54:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qdvdauthor/qdvdauthor-1.2.0.ebuild,v 1.3 2009/09/04 16:34:07 billie Exp $
 
 EAPI=1
 
@@ -94,7 +94,7 @@ src_install() {
 		insinto /usr/share/qdvdauthor/plugins/${i}
 		doins qdvdauthor/plugins/${i}/*.{jpg,png}
 		cp -dp qdvdauthor/plugins/plugins/lib${i}.so* \
-			${D}usr/share/qdvdauthor/plugins/
+			"${D}"usr/share/qdvdauthor/plugins/
 	done
 
 	domenu qdvdauthor.desktop
