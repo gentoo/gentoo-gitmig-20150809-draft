@@ -1,12 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/setupdocs-1.0.1.ebuild,v 1.3 2009/05/30 09:03:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setupdocs/setupdocs-1.0.3.ebuild,v 1.1 2009/09/04 16:53:28 patrick Exp $
 
 inherit distutils
 
+MY_PN="SetupDocs"
+MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="setuptools plugin to automate building of docs from ReST source"
-HOMEPAGE="http://pypi.python.org/pypi/setupdocs"
-SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
+HOMEPAGE="http://pypi.python.org/pypi/SetupDocs"
+SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE=""
 SLOT="0"
@@ -18,3 +21,5 @@ DEPEND="dev-python/setuptools
 RDEPEND=">=dev-python/sphinx-0.5.1
 	virtual/latex-base
 	|| ( dev-texlive/texlive-latexextra app-text/ptex )"
+
+S="${WORKDIR}/${MY_P}"
