@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygoocanvas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.14 2009/05/13 08:22:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygoocanvas/ChangeLog,v 1.15 2009/09/04 20:24:07 patrick Exp $
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  -pygoocanvas-0.10.0.ebuild, -pygoocanvas-0.13.1.ebuild,
+  -pygoocanvas-0.14.0.ebuild:
+  Remove old
 
   13 May 2009; Samuli Suominen <ssuominen@gentoo.org>
   pygoocanvas-0.14.1.ebuild:

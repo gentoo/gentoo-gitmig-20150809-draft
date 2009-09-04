@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygsl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.9 2009/04/06 14:39:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/ChangeLog,v 1.10 2009/09/04 20:20:56 patrick Exp $
+
+  04 Sep 2009; Patrick Lauer <patrick@gentoo.org> -pygsl-0.9.3.ebuild:
+  Remove old
 
   06 Apr 2009; Brent Baude <ranger@gentoo.org> pygsl-0.9.4.ebuild:
   Marking pygsl-0.9.4 ~ppc for bug 215830
