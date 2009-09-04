@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.1.ebuild,v 1.1 2009/09/01 14:41:28 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.1.ebuild,v 1.2 2009/09/04 16:25:23 scarabeus Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ DEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=kde-base/kdelibs-${PV}:${SLOT}[kdeprefix=,semantic-desktop?]
+	>=kde-base/kdepimlibs-${PV}:${SLOT}[kdeprefix=]
 	x11-misc/shared-mime-info
 "
 # @since 4.3 - blocks kdemaildir - no longer provided (it's in akonadi now)
