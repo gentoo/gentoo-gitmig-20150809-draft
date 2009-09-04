@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.17 2009/06/01 00:38:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.18 2009/09/04 05:10:49 arfrever Exp $
+
+  04 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyro-3.9.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *pyro-3.9.1 (01 Jun 2009)
 
