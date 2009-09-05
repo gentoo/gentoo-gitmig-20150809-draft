@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.156 2009/08/10 15:11:12 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.157 2009/09/05 00:28:24 ranger Exp $
+
+  05 Sep 2009; Brent Baude <ranger@gentoo.org> fvwm-2.5.27.ebuild:
+  Marking fvwm-2.5.27 ppc64 for bug 266937
 
   10 Aug 2009; Tobias Klausmann <klausman@gentoo.org> fvwm-2.5.27.ebuild:
   Stable on alpha, bug #266937
