@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.11 2009/05/26 17:47:32 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/libapreq2/libapreq2-2.08-r2.ebuild,v 1.12 2009/09/05 08:49:49 tove Exp $
 
 inherit apache-module perl-module multilib
 
@@ -54,7 +54,7 @@ src_compile() {
 src_install() {
 	apache-module_src_install
 
-	make DESTDIR="${D}" install || die "make install failed"
+	make DESTDIR="${D}" INSTALLDIRS=vendor install || die "make install failed"
 	doman docs/man/man3/*.3
 
 	fixlocalpod
