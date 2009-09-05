@@ -1,18 +1,16 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9.ebuild,v 1.7 2009/04/04 14:52:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/beagle-0.3.9-r2.ebuild,v 1.1 2009/09/05 11:21:33 loki_val Exp $
 
 EAPI=2
 
-inherit base gnome.org eutils autotools mono mozextension
+inherit base gnome.org eutils mono mozextension autotools
 
 DESCRIPTION="Search tool that ransacks your personal information space to find whatever you're looking for"
 HOMEPAGE="http://www.beagle-project.org/"
-SRC_URI="${SRC_URI}
-	mirror://gentoo/${PN}-0.3.8-patches.tar.lzma"
 LICENSE="MIT Apache-1.1"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="avahi chm debug doc epiphany eds firefox +galago gtk +pdf +inotify +ole thunderbird +google  +xscreensaver"
 
 #See bug 248331 for blocker reason.
@@ -33,7 +31,7 @@ RDEPEND="!!sci-libs/beagle
 		>=dev-dotnet/glade-sharp-2.12.6
 		>=dev-dotnet/gnome-sharp-2.24.0
 		>=dev-dotnet/gnomevfs-sharp-2.24.0
-		dev-libs/gmime:2.4[mono]
+		dev-libs/gmime:0[mono]
 		x11-misc/xdg-utils
 		>=x11-libs/gtk+-2.14.0
 		>=dev-libs/atk-1.22.0
@@ -42,7 +40,7 @@ RDEPEND="!!sci-libs/beagle
 		>=dev-dotnet/evolution-sharp-0.18.1
 		>=dev-dotnet/gconf-sharp-2.24.0
 		>=dev-dotnet/glib-sharp-2.12.6
-		dev-libs/gmime:2.4[mono]
+		dev-libs/gmime:0[mono]
 	)
 	ole? (
 		>=app-text/wv-1.2.3
@@ -52,7 +50,7 @@ RDEPEND="!!sci-libs/beagle
 
 	x11-misc/shared-mime-info
 	>=dev-dotnet/glib-sharp-2.12.6
-	dev-libs/gmime:2.4[mono]
+	dev-libs/gmime:0[mono]
 	chm? ( dev-libs/chmlib )
 	pdf? ( >=virtual/poppler-utils-0.8 )
 	galago? ( >=dev-dotnet/galago-sharp-0.5.0 )
@@ -92,21 +90,21 @@ pkg_setup() {
 			eerror "You have enabled the thunderbird use flag. This use-flag depends on the inotify use-flag."
 			eerror "Please enable the inotify use-flag also."
 			eerror "See http://bugs.gentoo.org/263781 for more information."
-			die "Please enable inotify use-flag."
+			die "Please enable the inotify use-flag."
 		fi
 	fi
 }
 
 src_prepare() {
-	epatch "${WORKDIR}/patches/${PN}-0.3.8-gmime-2.4.patch"
-
 	#Fix bug 248703
 	sed -i  -e 's:VALID_EPIPHANY_VERSIONS=":VALID_EPIPHANY_VERSIONS="2.26 2.25 2.24 :' \
-		configure.in || die "epiphany sed failed"
+		configure || die "epiphany sed failed"
 
 	#Fix bugs.gnome.org/556243
 	sed -i	-e "s:libgnome-desktop-2.so.2:libgnome-desktop-2.so:" \
 		search/Beagle.Search.exe.config || die "gnome-desktop sed failed"
+	#Fix bug 283740
+	epatch "${FILESDIR}/${P}-firefox-3.5.patch"
 	eautoreconf
 }
 

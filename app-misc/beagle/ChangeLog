@@ -1,6 +1,18 @@
 # ChangeLog for app-misc/beagle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.101 2009/06/01 16:24:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/beagle/ChangeLog,v 1.102 2009/09/05 11:21:33 loki_val Exp $
+
+*beagle-0.3.9-r2 (05 Sep 2009)
+
+  05 Sep 2009; Peter Alfredsen <loki_val@gentoo.org>
+  -files/beagle-0.2.7-crawltweek.patch,
+  -files/beagle-0.2.18-mono-1.9.1.patch,
+  -files/beagle-0.3.7-evo-sharp.patch, -beagle-0.3.9.ebuild,
+  beagle-0.3.9-r1.ebuild, +beagle-0.3.9-r2.ebuild,
+  +files/beagle-0.3.9-firefox-3.5.patch:
+  Backport patch from upstream to fix bug 283740, problems with firefox
+  extension and >=firefox-3.5 in 0.3.9-r2. Restrict 0.3.9-r1 to older
+  versions of firefox. Clean out old patches.
 
   01 Jun 2009; nixnut <nixnut@gentoo.org> beagle-0.3.9-r1.ebuild:
   ppc stable #269875
