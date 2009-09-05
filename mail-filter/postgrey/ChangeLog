@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/postgrey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.59 2009/08/26 15:47:08 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/postgrey/ChangeLog,v 1.60 2009/09/05 00:11:24 ranger Exp $
+
+  05 Sep 2009; Brent Baude <ranger@gentoo.org> postgrey-1.32.ebuild:
+  Marking postgrey-1.32 ppc64 for bug 278702
 
   26 Aug 2009; Tobias Klausmann <klausman@gentoo.org> postgrey-1.32.ebuild:
   Stable on alpha, bug #278702
