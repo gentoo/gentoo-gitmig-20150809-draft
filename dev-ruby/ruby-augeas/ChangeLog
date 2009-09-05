@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-augeas
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.7 2009/08/29 17:49:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ChangeLog,v 1.8 2009/09/05 22:18:35 maekke Exp $
+
+  05 Sep 2009; Markus Meier <maekke@gentoo.org> ruby-augeas-0.2.0.ebuild:
+  amd64 stable, bug #270432
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> ruby-augeas-0.2.0.ebuild:
   ppc stable #282759
