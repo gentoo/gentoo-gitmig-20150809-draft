@@ -1,24 +1,27 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.0.2.ebuild,v 1.2 2009/01/15 11:20:43 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enable/enable-3.2.0.ebuild,v 1.1 2009/09/05 22:31:52 arfrever Exp $
 
-EAPI=2
-inherit eutils distutils
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit distutils eutils
 
 MY_PN="Enable"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Enthought Tool Suite drawing and interaction GUI objects"
 HOMEPAGE="http://code.enthought.com/projects/enable"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="examples test"
+IUSE="examples"
+#IUSE="examples test"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
 RDEPEND=">=dev-python/numpy-1.1
 	dev-python/reportlab
-	dev-python/traitsgui
+	>=dev-python/traitsgui-3.1.0
 	>=media-libs/freetype-2
 	virtual/glu
 	x11-libs/libX11"
@@ -29,24 +32,30 @@ DEPEND="dev-python/setuptools
 	virtual/glu
 	x11-libs/libX11
 	dev-lang/swig
-	dev-python/pyrex
-	test? ( >=dev-python/nose-0.10.3
-			dev-python/enthoughtbase
-			dev-python/traitsgui[wxwindows] )"
-
-#tests need X
-RESTRICT=test
+	dev-python/pyrex"
+RESTRICT_PYTHON_ABIS="3.*"
+# tests need X with wxpython
+#	test? ( >=dev-python/nose-0.10.3
+#			>=dev-python/enthoughtbase-3.0.3
+#			>=dev-python/traitsgui[wxwindows]-3.1.0 )"
+RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
+
 PYTHON_MODNAME="enthought"
 
+DOCS="CHANGELOG.txt"
+
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-nofreetype.patch
+	epatch "${FILESDIR}/${PN}-3.0.2-nofreetype.patch"
 	sed -i -e "/self.run_command('build_docs')/d" setup.py || die
 }
 
 src_test() {
-	PYTHONPATH=$(dir -d build/lib*) ${python} setup.py test || die "tests failed"
+	testing() {
+		PYTHONPATH="$(dir -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+	}
+	python_execute_function testing
 }
 
 src_install() {
