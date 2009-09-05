@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0-r1.ebuild,v 1.4 2009/09/01 14:17:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sary-ruby/sary-ruby-1.2.0-r1.ebuild,v 1.5 2009/09/05 19:02:47 ranger Exp $
 
 inherit eutils ruby
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sary.sourceforge.net/"
 SRC_URI="http://sary.sourceforge.net/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~ppc ppc64 ~sparc ~x86"
 SLOT="0"
 USE_RUBY="ruby18"
 
