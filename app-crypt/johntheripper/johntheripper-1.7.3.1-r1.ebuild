@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.1-r1.ebuild,v 1.1 2009/09/03 12:36:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.7.3.1-r1.ebuild,v 1.2 2009/09/05 15:23:30 arfrever Exp $
 
 EAPI=1
 inherit eutils flag-o-matic toolchain-funcs pax-utils
@@ -97,7 +97,7 @@ src_compile() {
 	use mpi && CPP=mpicxx CC=mpicc AS=mpicc LD=mpicc
 	emake -C src/\
 		CPP=${CPP} CC=${CC} AS=${AS} LD=${LD} \
-		CFLAGS="-c -Wall ${CFLAGS} -DJOHN_SYSTEMWIDE -DJOHN_SYSTEMWIDE_HOME=\"\\\"${ROOT}/etc/john\\\"\" -DJOHN_SYSTEMWIDE_EXEC=\"\\\"${ROOT}/usr/libexec/john\\\"\"" \
+		CFLAGS="-c -Wall ${CFLAGS} -DJOHN_SYSTEMWIDE -DJOHN_SYSTEMWIDE_HOME=\"\\\"/etc/john\\\"\" -DJOHN_SYSTEMWIDE_EXEC=\"\\\"/usr/libexec/john\\\"\"" \
 		LDFLAGS="${LDFLAGS}" \
 		OPT_NORMAL="" \
 		$(get_target) \
