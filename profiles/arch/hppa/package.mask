@@ -1,6 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.7 2009/09/02 18:12:10 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.8 2009/09/05 21:55:37 jmbsvicetto Exp $
+
+# Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (5 Sep 2009)
+# Masking KDE-4.3 deps (bug #280312).
+>=dev-python/pycups-1.9.46                       
+>=app-admin/system-config-printer-common-1.1.3   
+app-misc/hal-cups-utils
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (2 Sep 2009)
 # Masking >= KDE-4.3 for this arch to prevent tree breakage following
