@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-ldap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.36 2009/08/30 19:41:41 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-ldap/ChangeLog,v 1.37 2009/09/05 19:06:36 ranger Exp $
+
+  05 Sep 2009; Brent Baude <ranger@gentoo.org> ruby-ldap-0.9.9.ebuild:
+  Marking ruby-ldap-0.9.9 ~ppc64 for bug 283019
 
   30 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   ruby-ldap-0.9.9.ebuild:
