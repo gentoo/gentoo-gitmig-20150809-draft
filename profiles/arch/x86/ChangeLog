@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.22 2009/08/16 22:07:20 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.23 2009/09/05 22:14:54 jmbsvicetto Exp $
+
+  05 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Dropped the KDE-4.3 unmask from package.mask now that the mask has been
+  dropped from base/package.mask.
 
   16 Aug 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
   drop last traces of i810
