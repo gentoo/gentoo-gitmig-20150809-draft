@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.6.0.ebuild,v 1.7 2009/07/27 17:16:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-2.6.0.ebuild,v 1.8 2009/09/05 18:39:06 ranger Exp $
 
 inherit autotools eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sylpheed.sraoss.jp/"
 SRC_URI="http://sylpheed.sraoss.jp/${PN}/v${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="alpha amd64 hppa ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 SLOT="0"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.4
