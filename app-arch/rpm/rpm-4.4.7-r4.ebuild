@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.1 2008/05/20 07:44:25 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.4.7-r4.ebuild,v 1.2 2009/09/05 13:26:49 tove Exp $
 
 inherit eutils autotools distutils perl-module flag-o-matic
 
@@ -76,7 +76,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" INSTALLDIRS=vendor install || die "emake install failed"
 
 	mv "${D}"/bin/rpm "${D}"/usr/bin
 	rmdir "${D}"/bin
