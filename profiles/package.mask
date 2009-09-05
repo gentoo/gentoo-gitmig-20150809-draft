@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10407 2009/09/04 20:17:09 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10408 2009/09/05 17:57:54 mrpouet Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -31,10 +31,10 @@
 
 #--- END OF EXAMPLES ---
 
-# Rémi Cardona <remi@gentoo.org> (04 Sep 2009)
-# Masked for removal in 60 days, old and unmaintained in Gentoo
-# Uses removed VIDEO_CARDS flag (see bug #282981)
-www-plugins/gnash
+# Romain Perier <mrpouet@gentoo.org> (05 Sep 2009)
+# Masked because too old, contains a lot of QA warnings/errors
+# The last one has a lot of changes.
+=www-plugins/gnash-0.8.4
 
 # Samuli Suominen <ssuominen@gentoo.org> (04 Sep 2009)
 # Masked for removal by treecleaners wrt #248609. This has
