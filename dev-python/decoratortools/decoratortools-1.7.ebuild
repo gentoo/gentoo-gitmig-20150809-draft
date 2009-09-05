@@ -1,6 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/decoratortools-1.7.ebuild,v 1.1 2009/09/05 13:56:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/decoratortools/decoratortools-1.7.ebuild,v 1.2 2009/09/05 18:55:52 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -19,9 +22,15 @@ IUSE=""
 DEPEND="app-arch/unzip
 	>=dev-python/setuptools-0.6_rc6"
 RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
+PYTHON_MODNAME="peak"
+
 src_test() {
-	"${python}" setup.py test || die "Test failed."
+	testing() {
+		"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+	}
+	python_execute_function testing
 }
