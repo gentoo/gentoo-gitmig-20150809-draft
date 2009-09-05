@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/snns
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.17 2009/08/29 17:36:20 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/snns/ChangeLog,v 1.18 2009/09/05 21:31:32 maekke Exp $
+
+  05 Sep 2009; Markus Meier <maekke@gentoo.org> snns-4.2-r8.ebuild:
+  amd64 stable, bug #248322
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> snns-4.2-r8.ebuild:
   ppc stable #248322
