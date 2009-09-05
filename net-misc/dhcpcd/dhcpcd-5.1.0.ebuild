@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.1.0.ebuild,v 1.1 2009/09/05 01:12:54 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-5.1.0.ebuild,v 1.2 2009/09/05 13:28:45 darkside Exp $
 
 EAPI=1
 
@@ -41,7 +41,8 @@ src_unpack() {
 src_compile() {
 	local hooks="--with-hook=ntp.conf"
 	use elibc_glibc && hooks="${hooks} --with-hook=yp.conf"
-	econf --prefix= --libexecdir=/lib/dhcpcd --dbdir=/var/lib/dhcpcd ${hooks}
+	econf --prefix= --libexecdir=/lib/dhcpcd --dbdir=/var/lib/dhcpcd \
+		--localstatedir=/var ${hooks}
 	emake || die
 }
 
