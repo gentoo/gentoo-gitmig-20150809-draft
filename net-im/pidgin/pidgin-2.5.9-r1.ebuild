@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.9-r1.ebuild,v 1.4 2009/09/02 18:29:00 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/pidgin/pidgin-2.5.9-r1.ebuild,v 1.5 2009/09/05 00:20:24 ranger Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="bonjour dbus debug doc eds gadu gnutls +gstreamer meanwhile"
 IUSE="${IUSE} networkmanager nls perl silc tcl tk spell qq gadu"
 IUSE="${IUSE} +gtk sasl ncurses groupwise prediction zephyr" # mono"
