@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.4.ebuild,v 1.2 2009/05/06 20:38:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.4.ebuild,v 1.3 2009/09/05 17:51:10 mrpouet Exp $
 
 EAPI=1
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="+agg -cairo dbus -fbcon -ffmpeg +gstreamer +gtk +kde +nsplugin -opengl -qt3 -sdl video_cards_i810"
+IUSE="+agg -cairo dbus -fbcon -ffmpeg +gstreamer +gtk +kde +nsplugin -opengl -qt3 -sdl video_cards_intel"
 
 RDEPEND="
 	agg? ( >=x11-libs/agg-2.5 )
@@ -74,7 +74,6 @@ RDEPEND="
 	x11-libs/libXt
 	x11-proto/xproto
 	dbus? ( sys-apps/dbus )
-	sys-devel/libtool
 	"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

@@ -3,11 +3,12 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 	<maintainer>
-		<email>maintainer-needed@gentoo.org</email>
-		<name>Default assignee for orphaned packages</name>
+	  <email>mrpouet@gentoo.org</email>
+	  <name>Romain Perier</name>
 	</maintainer>
 	<use>
-		<flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering
-		Engine library</flag>
+	  <flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering Engine library</flag>
+	  <flag name='neon'>Add support for <pkg>media-plugins/gst-plugins-neon</pkg> if gstreamer is enabled</flag>
+	  <flag name='cygnal'>nable building of the cygnal server</flag>
 	</use>
 </pkgmetadata>
