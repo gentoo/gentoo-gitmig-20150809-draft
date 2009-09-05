@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20090203.ebuild,v 1.1 2009/03/09 21:32:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gnuconfig/gnuconfig-20090203.ebuild,v 1.2 2009/09/05 00:27:55 vapier Exp $
 
 inherit eutils
 if [[ ${PV} == "99999999" ]] ; then
@@ -8,7 +8,7 @@ if [[ ${PV} == "99999999" ]] ; then
 	inherit git
 else
 	SRC_URI="mirror://gentoo/${P}.tar.bz2"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+	KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
 fi
 
 DESCRIPTION="Updated config.sub and config.guess file from GNU"
