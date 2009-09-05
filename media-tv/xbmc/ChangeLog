@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.24 2009/08/27 09:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.25 2009/09/05 15:02:11 vapier Exp $
+
+*xbmc-9.04.1 (05 Sep 2009)
+
+  05 Sep 2009; Mike Frysinger <vapier@gentoo.org> +xbmc-9.04.1.ebuild:
+  Version bump #283608 by zehner.
 
   27 Aug 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Force internal faad2 for now #278400. Pull in more deps #279062 #281078.
