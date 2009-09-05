@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-18.1.03.ebuild,v 1.6 2009/02/17 08:08:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-18.1.03.ebuild,v 1.7 2009/09/05 23:40:01 ulm Exp $
 
-inherit eutils versionator
+inherit eutils
 
-MY_PV=$(replace_version_separator 1 '-')
-MY_P=${PN}-${MY_PV}
+MY_P=${PN}-${PV/./-}
 DESCRIPTION="The GNU Emacs Lisp Reference Manual"
 HOMEPAGE="http://www.gnu.org/software/emacs/manual/"
 SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${MY_P}.tar.gz"

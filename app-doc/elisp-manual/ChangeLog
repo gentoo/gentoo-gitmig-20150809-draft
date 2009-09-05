@@ -1,6 +1,16 @@
 # ChangeLog for app-doc/elisp-manual
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.14 2009/02/17 08:08:10 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.15 2009/09/05 23:40:01 ulm Exp $
+
+*elisp-manual-23.3.0 (05 Sep 2009)
+*elisp-manual-22.2.9 (05 Sep 2009)
+
+  05 Sep 2009; Ulrich Mueller <ulm@gentoo.org> elisp-manual-18.1.03.ebuild,
+  elisp-manual-21.2.8-r2.ebuild, +elisp-manual-22.2.9.ebuild,
+  +files/elisp-manual-22.2.9-direntry.patch, +elisp-manual-23.3.0.ebuild,
+  +files/elisp-manual-23.3.0-direntry.patch:
+  Add stand-alone manual for Emacs 22 and 23. Don't use versionator.eclass,
+  it has no advantage here.
 
   17 Feb 2009; Ulrich Mueller <ulm@gentoo.org> elisp-manual-18.1.03.ebuild,
   elisp-manual-21.2.8-r2.ebuild:
@@ -99,7 +109,7 @@
   adding s390 keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *elisp-manual-21.2.8 (23 Aug 2002)
 
   23 Aug 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
