@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrelltop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.31 2009/08/25 17:07:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrelltop/ChangeLog,v 1.32 2009/09/05 22:35:12 maekke Exp $
+
+  05 Sep 2009; Markus Meier <maekke@gentoo.org> gkrelltop-2.2.11.ebuild:
+  amd64 stable, bug #271463
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org> gkrelltop-2.2.11.ebuild:
   sparc stable wrt #271463
