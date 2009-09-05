@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.59 2009/08/12 02:24:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.60 2009/09/05 16:45:35 arfrever Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -24,20 +24,13 @@ case "${EAPI:-0}" in
 		;;
 esac
 
-# @ECLASS-VARIABLE: PYTHON_SLOT_VERSION
+DEPEND="virtual/python"
+RDEPEND="${DEPEND}"
+python="python"
+
+# @ECLASS-VARIABLE: DISTUTILS_GLOBAL_OPTIONS
 # @DESCRIPTION:
-# This helps make it possible to add extensions to python slots.
-# Normally only a -py21- ebuild would set PYTHON_SLOT_VERSION.
-if [ "${PYTHON_SLOT_VERSION}" = "2.1" ] ; then
-	DEPEND="=dev-lang/python-2.1*"
-	python="python2.1"
-elif [ "${PYTHON_SLOT_VERSION}" = "2.3" ] ; then
-	DEPEND="=dev-lang/python-2.3*"
-	python="python2.3"
-else
-	DEPEND="virtual/python"
-	python="python"
-fi
+# Global options passed to setup.py.
 
 # @ECLASS-VARIABLE: DOCS
 # @DESCRIPTION:
@@ -81,13 +74,13 @@ distutils_src_compile() {
 
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
 		building() {
-			echo "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" "$@"
-			"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" "$@"
+			echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" "$@"
+			"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" "$@"
 		}
 		python_execute_function building "$@"
 	else
-		echo ${python} setup.py build "$@"
-		${python} setup.py build "$@" || die "Building failed"
+		echo ${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build "$@"
+		${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build "$@" || die "Building failed"
 	fi
 }
 
@@ -115,8 +108,8 @@ distutils_src_install() {
 			pylibdir="$("$(PYTHON)" -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
 			[[ -n "${pylibdir}" ]] && dodir "${pylibdir}"
 
-			echo "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
-			"$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
+			echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
+			"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
 		}
 		python_execute_function installation "$@"
 	else
@@ -127,8 +120,8 @@ distutils_src_install() {
 		pylibdir="$(${python} -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
 		[[ -n "${pylibdir}" ]] && dodir "${pylibdir}"
 
-		echo ${python} setup.py install --root="${D}" --no-compile "$@"
-		${python} setup.py install --root="${D}" --no-compile "$@" || die "Installation failed"
+		echo ${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" install --root="${D}" --no-compile "$@"
+		${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" install --root="${D}" --no-compile "$@" || die "Installation failed"
 	fi
 
 	DDOCS="CHANGELOG KNOWN_BUGS MAINTAINERS PKG-INFO CONTRIBUTORS TODO NEWS"
