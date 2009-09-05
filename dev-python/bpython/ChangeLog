@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.8 2009/07/27 06:06:28 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.9 2009/09/05 13:20:28 patrick Exp $
+
+  05 Sep 2009; Patrick Lauer <patrick@gentoo.org> -bpython-0.9.3.ebuild:
+  Remove old
 
 *bpython-0.9.4 (27 Jul 2009)
 
