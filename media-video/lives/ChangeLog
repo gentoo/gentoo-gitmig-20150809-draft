@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lives
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.27 2008/06/13 21:14:05 yngwin Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/ChangeLog,v 1.28 2009/09/05 15:22:35 lu_zero Exp $
+
+*lives-1.0.0 (05 Sep 2009)
+
+  05 Sep 2009; Luca Barbato <lu_zero@gentoo.org> +lives-1.0.0.ebuild:
+  Version Bump
 
 *lives-0.9.8.12 (13 Jun 2008)
 
