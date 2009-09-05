@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/coverage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.9 2009/09/05 13:47:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coverage/ChangeLog,v 1.10 2009/09/05 18:37:05 arfrever Exp $
+
+  05 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  coverage-3.0.1.ebuild:
+  Set SUPPORT_PYTHON_ABIS.
 
 *coverage-3.0.1 (05 Sep 2009)
 
