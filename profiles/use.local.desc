@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4783 2009/09/04 18:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4784 2009/09/05 14:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1399,6 +1399,8 @@ media-fonts/terminus-font:ru-g - Changes view of Russian letter 'ge' (see homepa
 media-fonts/terminus-font:ru-i - Changes view of Russian letter 'i' - not like Latin u, but like "mirrored" N (see homepage)
 media-fonts/terminus-font:ru-k - Changes view of Russian letter 'k' (see homepage)
 media-fonts/terminus-font:width - Wider versions of some font elements
+media-gfx/album:plugins - Install optional plugins
+media-gfx/album:themes - Install optional themes
 media-gfx/asymptote:boehm-gc -  Enables using the Boehm-Demers-Weiser conservative garbage collector 
 media-gfx/asymptote:sigsegv -  Enables using dev-libs/libsigsegv 
 media-gfx/blender:blender-game -  Adds game engine support to blender 
