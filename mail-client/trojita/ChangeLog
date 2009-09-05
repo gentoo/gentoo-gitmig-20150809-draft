@@ -1,0 +1,15 @@
+# ChangeLog for mail-client/trojita
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/ChangeLog,v 1.1 2009/09/05 21:41:21 scarabeus Exp $
+
+  05 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> +trojita-9999.ebuild,
+  +metadata.xml:
+  Move from net-mail to mail-client.
+
+*trojita-9999 (05 Sep 2009)
+
+  05 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> +trojita-9999.ebuild,
+  +metadata.xml:
+  Initial commit. I am proxying it for jkt. All credit for ebuild goes for
+  him. Per bug #283372.
+
