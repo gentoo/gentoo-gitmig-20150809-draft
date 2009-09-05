@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/amatch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.10 2009/07/14 17:54:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amatch/ChangeLog,v 1.11 2009/09/05 19:00:42 ranger Exp $
+
+  05 Sep 2009; Brent Baude <ranger@gentoo.org> amatch-0.2.3.ebuild:
+  Marking amatch-0.2.3 ppc64 for bug 282368
 
 *amatch-0.2.3 (14 Jul 2009)
 
