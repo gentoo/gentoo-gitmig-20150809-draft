@@ -1,0 +1,10 @@
+# ChangeLog for app-text/unpaper
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/unpaper/ChangeLog,v 1.1 2009/09/05 10:59:15 flameeyes Exp $
+
+*unpaper-0.3 (05 Sep 2009)
+
+  05 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> +unpaper-0.3.ebuild,
+  +metadata.xml:
+  Initial import of unpaper; ebuild from my overlay; closes bug #172958.
+
