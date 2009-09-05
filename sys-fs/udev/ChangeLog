@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.484 2009/09/01 09:39:09 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.485 2009/09/05 13:54:10 zzam Exp $
+
+*udev-145-r1 (05 Sep 2009)
+
+  05 Sep 2009; Matthias Schwarzott <zzam@gentoo.org> +udev-145-r1.ebuild:
+  Add message that one may need to re-emerge hal, bug #275974. Add checks
+  about needed kernel options. Use linux-mod.eclass for that, bug #281312
+  and bug #281338.
 
   01 Sep 2009; Matthias Schwarzott <zzam@gentoo.org> udev-145.ebuild:
   Move glibc to be in DEPEND and RDEPEND.
