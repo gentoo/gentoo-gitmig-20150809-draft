@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.42 2009/09/02 19:39:14 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.43 2009/09/05 07:21:18 mrness Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -141,6 +141,7 @@ ss - Swati locale
 st - Southern Sotho locale
 sv - Swedish locale
 sv_SE - Swedish locale for Sweden
+sw - Swahili locale
 sw_TZ - Swahili locale for Tanzania
 ta - Tamil locale
 ta_IN - Tamil locale
