@@ -131,7 +131,6 @@ done
 # Change the current directory to the location of the script
 cd "`dirname \"$REALPATH\"`"
 REALDIR="`pwd`"
-
 # If the PIDDIR is relative, set its value relative to the full REALPATH to avoid problems if
 #  the working directory is later changed.
 FIRST_CHAR="`echo $PIDDIR | cut -c1,1`"

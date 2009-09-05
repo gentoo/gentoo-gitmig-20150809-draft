@@ -1,6 +1,15 @@
 # ChangeLog for net-p2p/freenet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.68 2009/08/22 14:50:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.69 2009/09/05 22:57:48 tommy Exp $
+
+*freenet-0.7.5_p1233 (05 Sep 2009)
+
+  05 Sep 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  -freenet-0.7.5_p1229.ebuild, -freenet-0.7.5_p1232.ebuild,
+  +freenet-0.7.5_p1233.ebuild, freenet-9999.ebuild, files/run.sh-20090501,
+  files/ext.patch:
+  Version bump, remove old, move to tarballs as requested by QA team (fixes
+  bug 282248)
 
 *freenet-0.7.5_p1232 (22 Aug 2009)
 

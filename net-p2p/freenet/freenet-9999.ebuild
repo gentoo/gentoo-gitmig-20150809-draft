@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.4 2009/08/17 17:23:58 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-9999.ebuild,v 1.5 2009/09/05 22:57:48 tommy Exp $
 
 EAPI="1"
-DATE=20090413
+DATE=20090904
 
 EGIT_REPO_URI="git://github.com/freenet/fred-official.git"
 EGIT_PROJECT="freenet/fred-official"
