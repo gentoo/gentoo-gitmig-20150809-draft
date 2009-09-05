@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/traitsbackendqt-3.2.0.ebuild,v 1.1 2009/09/05 21:23:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traitsbackendqt/traitsbackendqt-3.2.0.ebuild,v 1.2 2009/09/05 22:48:38 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -24,6 +24,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 PYTHON_MODNAME="enthought"
+DOCS="CHANGELOG.txt"
 
 src_install() {
 	find "${S}" -name \*LICENSE.txt -delete
