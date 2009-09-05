@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/grass
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.69 2009/08/02 18:50:17 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/ChangeLog,v 1.70 2009/09/05 02:09:59 nerdboy Exp $
+
+  04 Sep 2009; Steve Arnold <nerdboy@gentoo.org> grass-6.3.0.ebuild:
+  Updated to use postgresql virtual and verified it bvilds correctly from 
+  libpq-8.0 all the way through postgres-8.3.7 (which means it can go 
+  stable now). Yee-haw!  Also tested importing a bunch of old vector data
+  using both postgres and sqlite with no issues (since it now defaults to
+  requiring a dull SQL backend).
 
   02 Aug 2009; Steve Arnold <nerdboy@gentoo.org> grass-6.3.0.ebuild:
   Updated desktop file and description (set terminal=false).
@@ -8,7 +15,7 @@
   08 Jun 2009; Steve Arnold <nerdboy@gentoo.org>
   +files/grass-6.3.0-gcc44.patch, grass-6.3.0.ebuild:
   Updated with additional C++ include for bug #270916 (thanks to   	 
-  Jiří Moravec <qjim@volny.cz> for the patch).  I still don't have
+  Jiri Moravec <qjim@volny.cz> for the patch).  I still don't have
   gcc 4.4 yet, but the benign nature of the patch and building with
   gcc 4.3.3 should suffice.
 

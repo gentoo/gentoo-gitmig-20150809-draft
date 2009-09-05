@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.8 2009/08/02 18:50:17 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/grass/grass-6.3.0.ebuild,v 1.9 2009/09/05 02:09:59 nerdboy Exp $
 
 inherit eutils distutils fdo-mime versionator wxwidgets
 
@@ -39,7 +39,10 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	opengl? ( virtual/opengl )
 	motif? ( x11-libs/openmotif )
 	png? ( >=media-libs/libpng-1.2.2 )
-	postgres? ( >=dev-db/postgresql-base-8.3 )
+	postgres? ( || (
+		>=virtual/postgresql-base-8.0
+		>=virtual/postgresql-server-8.0 )
+	)
 	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )
 	sqlite? ( dev-db/sqlite )
@@ -127,6 +130,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+	addpredict /var/cache/fontconfig
 	# wxwindows needs python (see bug #237495)
 	use wxwindows && distutils_python_version
 
@@ -292,6 +296,6 @@ generate_files() {
 	Path=
 	Icon=grass_icon.png
 	Categories=Science;Education;
-	Terminal=true
+	Terminal=false
 	EOF
 }
