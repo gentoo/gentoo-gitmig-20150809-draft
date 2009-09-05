@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.9-r1.ebuild,v 1.4 2009/08/29 19:46:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mcabber/mcabber-0.9.9-r1.ebuild,v 1.5 2009/09/05 00:09:43 ranger Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://mcabber.com/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~mips ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~mips ppc ppc64 ~sparc x86"
 
 IUSE="crypt otr spell ssl"
 
