@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.7 2009/09/03 19:32:17 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.8 2009/09/05 16:12:59 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (03 Sep 2009)
 # fails to compile, error: ‘struct msghdr’ has no member named ‘msg_controllen’
@@ -9,7 +9,7 @@
 # Fabian Groffen <grobian@gentoo.org> (03 Sep 2009)
 # insists on doing Linux stuff
 =app-misc/mc-4.7.0_pre1
-=app-misc/mc-4.7.0_pre2
+~app-misc/mc-4.7.0_pre2
 
 # Fabian Groffen <grobian@gentoo.org> (02 Sep 2009)
 # Assertion failed: ent->fts_info == FTS_NSOK || state.type != 0, file

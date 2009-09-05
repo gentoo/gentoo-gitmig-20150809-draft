@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.79 2009/09/05 12:25:10 grobian Exp $
+# $Id: ChangeLog,v 1.80 2009/09/05 16:12:58 grobian Exp $
+
+  05 Sep 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/package.mask:
+  extend mc mask to revisions
 
   05 Sep 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.4/ppc/package.mask:
