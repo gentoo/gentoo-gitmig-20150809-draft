@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.87 2009/08/29 07:08:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.88 2009/09/05 13:21:29 graaff Exp $
+
+  05 Sep 2009; Hans de Graaff <graaff@gentoo.org>
+  mail-notification-5.4-r1.ebuild:
+  Simplify gmime dependency with SLOT dependencies to avoid pulling in gmime
+  without using it. Thanks for Yoann Pannier in #282921 for the suggestion.
 
   29 Aug 2009; Hans de Graaff <graaff@gentoo.org>
   -mail-notification-5.4.ebuild:

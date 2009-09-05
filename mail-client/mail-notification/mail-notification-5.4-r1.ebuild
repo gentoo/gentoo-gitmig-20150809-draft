@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.6 2009/06/03 08:19:54 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.7 2009/09/05 13:21:29 graaff Exp $
+
+EAPI=1
 
 inherit gnome2 multilib flag-o-matic toolchain-funcs
 
@@ -27,8 +29,7 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	>=gnome-base/libgnomeui-2.14
 	>=gnome-base/libglade-2.0
 	dev-libs/dbus-glib
-	>=dev-libs/gmime-2.2.7
-	=dev-libs/gmime-2.2*
+	>=dev-libs/gmime-2.2.7:0
 	>=x11-libs/libnotify-0.4.1
 	pop? ( gnome-base/gnome-keyring )
 	imap? ( gnome-base/gnome-keyring )
