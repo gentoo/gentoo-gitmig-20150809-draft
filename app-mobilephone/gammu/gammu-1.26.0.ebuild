@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.26.0.ebuild,v 1.1 2009/09/05 06:19:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.26.0.ebuild,v 1.2 2009/09/05 07:23:02 mrness Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 # sys-devel/gettext is needed for creating .mo files
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv zh_CN zh_TW"
+MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv sw zh_CN zh_TW"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_prepare() {
