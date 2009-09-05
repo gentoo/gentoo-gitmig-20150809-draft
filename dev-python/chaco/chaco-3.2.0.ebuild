@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.2.0.ebuild,v 1.1 2009/09/05 23:23:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/chaco/chaco-3.2.0.ebuild,v 1.2 2009/09/05 23:26:11 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,8 @@ DESCRIPTION="Interactive plotting toolkit"
 HOMEPAGE="http://code.enthought.com/projects/chaco"
 SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples test"
+IUSE="doc examples"
+#IUSE="doc examples test"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
@@ -29,7 +30,7 @@ DEPEND="dev-python/setuptools
 #			>=dev-python/enable-3.2.0
 #			>=dev-python/enthoughtbase-3.0.3 )"
 RESTRICT_PYTHON_ABIS="3.*"
-#RESTRICT="test"
+RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
