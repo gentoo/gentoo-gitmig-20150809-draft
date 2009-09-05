@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.6.ebuild,v 1.1 2009/08/23 10:38:04 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-2.1.6.ebuild,v 1.2 2009/09/05 06:04:40 mrness Exp $
 
 EAPI="2"
 
@@ -50,6 +50,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-ssl.patch"
 	epatch "${FILESDIR}/${P}-qafixes.patch"
 	epatch "${FILESDIR}/${P}-pkglibdir.patch"
+	epatch "${FILESDIR}/${P}-nothreads.patch"
 
 	# kill modules we don't use
 	if ! use ssl; then
