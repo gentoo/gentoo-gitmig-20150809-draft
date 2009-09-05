@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/tw_cli
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.28 2009/06/09 07:01:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.29 2009/09/05 02:07:05 robbat2 Exp $
+
+  05 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.5.2.ebuild:
+  Stabilizing, vouching for this myself, as I actively use it on my
+  machines.
 
   09 Jun 2009; Robin H. Johnson <robbat2@gentoo.org> tw_cli-9.5.2.ebuild:
   As per bug 60690, comment 106

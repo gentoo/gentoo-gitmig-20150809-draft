@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.2.ebuild,v 1.2 2009/06/09 07:01:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.2.ebuild,v 1.3 2009/09/05 02:07:05 robbat2 Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
 LICENSE="3ware"
 SLOT="0"
 # binary packages
-KEYWORDS="-* ~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="-* amd64 x86 ~x86-fbsd"
 IUSE=""
 # stripping seems to break this sometimes
 RESTRICT="strip"
