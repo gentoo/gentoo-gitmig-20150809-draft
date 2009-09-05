@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.1 2009/09/05 13:54:10 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.2 2009/09/05 20:01:05 robbat2 Exp $
 
 EAPI="1"
 
@@ -50,7 +50,7 @@ if [[ ${PV} == "9999" ]]; then
 fi
 
 # required kernel options
-CONFIG_CHECK="INOTIFY INOTIFY_USER SIGNALFD !SYSFS_DEPRECATED !SYSFS_DEPRECATED_V2"
+CONFIG_CHECK="~INOTIFY ~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
