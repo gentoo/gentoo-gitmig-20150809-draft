@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.29 2009/08/27 09:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/xbmc-9999.ebuild,v 1.30 2009/09/05 15:05:52 vapier Exp $
 
 # XXX: be nice to split out packages that come bundled and use the
 #      system libraries ...
@@ -14,7 +14,7 @@ ESVN_REPO_URI=${XBMC_ESVN_REPO_URI:-http://xbmc.svn.sourceforge.net/svnroot/xbmc
 ESVN_PROJECT=${ESVN_REPO_URI##*/svnroot/}
 ESVN_PROJECT=${ESVN_PROJECT%/XBMC}
 if [[ ${PV} == "9999" ]] ; then
-	inherit subversion
+	inherit subversion autotools
 	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/XBMC-${PV}.src.tar.gz"
@@ -85,10 +85,12 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	if [[ ${PV} == "9999" ]] ; then
 		subversion_src_unpack
+		cd "${S}"
+		eautoreconf
 	else
 		unpack ${A}
+		cd "${S}"
 	fi
-	cd "${S}"
 
 	# Fix case sensitivity
 	mv media/Fonts/{a,A}rial.ttf
