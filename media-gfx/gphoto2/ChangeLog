@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.88 2009/08/31 21:20:28 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.89 2009/09/05 18:08:39 mrpouet Exp $
+
+  05 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  gphoto2-2.4.7.ebuild:
+  Fix QA notice per bug #283311, replace $(use_with exif) by $(use_with exif
+  libexif auto).
 
   31 Aug 2009; Gilles Dartiguelongue <eva@gentoo.org> gphoto2-2.4.5.ebuild,
   gphoto2-2.4.7.ebuild:
