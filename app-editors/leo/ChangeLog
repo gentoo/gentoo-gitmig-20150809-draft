@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/leo
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.11 2008/10/26 23:12:29 hawking Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.12 2009/09/05 15:45:51 arfrever Exp $
+
+*leo-4.6.3 (05 Sep 2009)
+
+  05 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +leo-4.6.3.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
 *leo-4.4.7-r1 (26 Oct 2008)
 
