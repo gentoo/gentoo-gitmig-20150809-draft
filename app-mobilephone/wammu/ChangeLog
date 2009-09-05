@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/wammu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.38 2009/05/10 10:18:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/ChangeLog,v 1.39 2009/09/05 06:25:41 mrness Exp $
+
+  05 Sep 2009; Alin Năstac <mrness@gentoo.org> wammu-0.30.1.ebuild:
+  Update gammu dependency atom (#283671).
 
 *wammu-0.30.1 (10 May 2009)
 

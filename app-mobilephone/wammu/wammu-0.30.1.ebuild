@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.30.1.ebuild,v 1.1 2009/05/10 10:18:59 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/wammu/wammu-0.30.1.ebuild,v 1.2 2009/09/05 06:25:41 mrness Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="bluetooth"
 
-RDEPEND=">=app-mobilephone/gammu-1.24.0
+RDEPEND=">=app-mobilephone/gammu-1.25.0[python]
 	>=dev-python/wxpython-2.8
 	bluetooth? (
 		|| (
