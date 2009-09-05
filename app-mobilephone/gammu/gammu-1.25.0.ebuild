@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.25.0.ebuild,v 1.1 2009/08/16 08:05:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.25.0.ebuild,v 1.2 2009/09/05 06:19:02 mrness Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="http://dl.cihar.com/gammu/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="curl debug bluetooth irda mysql postgres dbi nls usb"
+IUSE="curl debug bluetooth irda mysql postgres dbi nls python usb"
 
 RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
 	curl? ( net-misc/curl )
@@ -61,13 +61,16 @@ src_configure() {
 		$(cmake-utils_use_with irda IRDA) \
 		$(cmake-utils_use_with curl CURL) \
 		$(cmake-utils_use_with usb USB) \
+		$(cmake-utils_use_with python PYTHON) \
 		$(cmake-utils_use_with mysql MySQL) \
 		$(cmake-utils_use_with postgres Postgres) \
 		$(cmake-utils_use_with dbi LibDBI) \
 		$(cmake-utils_use_with nls GettextLibs) \
 		$(cmake-utils_use_with nls Iconv) \
-		-DBUILD_SHARED_LIBS=ON -DINSTALL_DOC_DIR=share/doc/${PF} \
-		-DBUILD_PYTHON=/usr/bin/python"
+		-DBUILD_SHARED_LIBS=ON -DINSTALL_DOC_DIR=share/doc/${PF}"
+	if use python; then
+		mycmakeargs="${mycmakearg} -DBUILD_PYTHON=/usr/bin/python"
+	fi
 	cmake-utils_src_configure
 }
 
