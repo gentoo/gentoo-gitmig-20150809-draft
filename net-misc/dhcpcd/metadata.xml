@@ -3,11 +3,9 @@
 <pkgmetadata>
   <herd>base-system</herd>
   <maintainer>
-  	<email>welp@gentoo.org</email>
-	<name>Peter Weller</name>
+  	<email>darkside@gentoo.org</email>
+	<name>Jeremy Olexa</name>
   </maintainer>
-  <longdescription>A fully featured, yet light weight RFC2131 compliant DHCP client</longdescription>
-  <longdescription lang="ja">DHCP クライアントです。</longdescription>
   <use>
     <flag name="compat">Enable commandline compability with dhcpcd-3.x</flag>
   </use>
