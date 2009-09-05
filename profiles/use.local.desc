@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4784 2009/09/05 14:47:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4785 2009/09/05 18:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3125,6 +3125,8 @@ www-misc/xxv:themes - Enable more themes via x11-themes/xxv-skins
 www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin
 www-plugins/adobe-flash:64bit - For amd64-multilib, installs the native 64-bit plugin
 www-plugins/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
+www-plugins/gnash:cygnal - nable building of the cygnal server
+www-plugins/gnash:neon - Add support for media-plugins/gst-plugins-neon if gstreamer is enabled
 www-plugins/mplayerplug-in:divx - Divx Playback Support
 www-plugins/mplayerplug-in:gmedia - Google Media Playback Support
 www-plugins/mplayerplug-in:realmedia - Real Media Playback Support
