@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.1.ebuild,v 1.4 2009/08/11 19:41:42 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ginac-1.5.1.ebuild,v 1.5 2009/09/05 23:33:15 maekke Exp $
 
 EAPI=2
 inherit eutils
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.ginac.de/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="doc"
 
 RDEPEND=">=sci-libs/cln-1.2.2"
