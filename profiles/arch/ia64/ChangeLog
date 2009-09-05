@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.44 2009/09/02 18:19:28 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.45 2009/09/05 22:02:40 jmbsvicetto Exp $
+
+  05 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Added missing KDE-4.3 deps mask for this arch to fix tree breakage (bug
+  #280312).
 
   02 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   +package.mask:
