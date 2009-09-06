@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.46 2009/09/06 00:59:48 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.47 2009/09/06 02:08:13 jmbsvicetto Exp $
+
+  06 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  package.mask:
+  Removed akonadi-server package.mask entry now that version 1.1.2 was
+  restored and the keywords for the newer versions dropped (bug 280312).
 
   06 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
