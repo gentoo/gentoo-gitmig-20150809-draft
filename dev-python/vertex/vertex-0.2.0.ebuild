@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.2.0.ebuild,v 1.2 2008/04/03 21:47:28 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/vertex-0.2.0.ebuild,v 1.3 2009/09/06 20:28:44 idl0r Exp $
 
 inherit distutils eutils
 
@@ -18,6 +18,7 @@ DEPEND=">=dev-lang/python-2.4
 	>=dev-python/pyopenssl-0.6
 	>=dev-libs/openssl-0.9.7
 	>=dev-python/epsilon-0.5.0"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/Vertex-${PV}"
 

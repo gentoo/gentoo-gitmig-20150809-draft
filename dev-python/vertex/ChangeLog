@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/vertex
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.9 2008/04/03 21:47:28 lordvan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/vertex/ChangeLog,v 1.10 2009/09/06 20:28:44 idl0r Exp $
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/vertex-0.1-tests-2.2-compat.patch, vertex-0.2.0.ebuild:
+  Remove unused patch. Fix repoman complains.
 
   03 Apr 2008; Thomas Raschbacher <lordvan@gentoo.org> vertex-0.2.0.ebuild:
   added ~amd64 arch
