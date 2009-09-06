@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.21.ebuild,v 1.1 2009/09/01 16:02:40 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.21.ebuild,v 1.2 2009/09/06 21:14:48 robbat2 Exp $
 
-inherit autotools linux-mod flag-o-matic eutils multilib linux-info
+inherit autotools linux-mod flag-o-matic eutils multilib
 
 MY_P="${P/_rc/rc}"
 S="${WORKDIR}/${MY_P}"
