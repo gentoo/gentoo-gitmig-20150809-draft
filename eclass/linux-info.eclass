@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.65 2009/09/06 23:16:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.66 2009/09/06 23:24:49 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -557,6 +557,21 @@ get_running_version() {
 	return 0
 }
 
+# This next function is named with the eclass prefix to avoid conflicts with
+# some old versionator-like eclass functions.
+
+# @FUNCTION: linux-info_get_any_version
+# @DESCRIPTION:
+# This attempts to find the version of the sources, and otherwise falls back to
+# the version of the running kernel.
+linux-info_get_any_version() {
+	get_version 
+	if [[ $rc -ne 0 ]]; then
+		ewarn "Unable to calculate Linux Kernel version for build, attempting to use running version"
+		get_running_version 
+	fi
+}
+
 
 # ebuild check functions
 # ---------------------------------------
@@ -807,11 +822,7 @@ check_zlibinflate() {
 # Force a get_version() call when inherited from linux-mod.eclass and then check if the kernel is configured
 # to support the options specified in CONFIG_CHECK (if not null)
 linux-info_pkg_setup() {
-	get_version 
-	if [[ $rc -ne 0 ]]; then
-		ewarn "Unable to calculate Linux Kernel version for build, attempting to use running version"
-		get_running_version 
-	fi
+	linux-info_get_any_version
 
 	if kernel_is 2 4; then
 		if [ "$( gcc-major-version )" -eq "4" ] ; then
