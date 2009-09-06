@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.77 2009/08/28 17:15:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.78 2009/09/06 21:36:03 idl0r Exp $
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/pygobject-2.14.0-libffi-magic.patch:
+  Remove unused patch.
 
 *pygobject-2.18.0-r2 (28 Aug 2009)
 
