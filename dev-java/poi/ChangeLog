@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/poi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.52 2009/07/19 13:38:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/poi/ChangeLog,v 1.53 2009/09/06 16:39:55 ranger Exp $
+
+  06 Sep 2009; Brent Baude <ranger@gentoo.org> poi-3.2.ebuild:
+  Marking poi-3.2 ppc64 for bug 274052
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> poi-3.2.ebuild:
   ppc stable #274052
