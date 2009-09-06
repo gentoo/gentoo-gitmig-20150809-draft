@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.16 2007/07/22 07:45:06 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.17 2009/09/06 21:32:04 idl0r Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -21,12 +21,13 @@ DEPEND="virtual/python
 	x11-libs/libXi
 	x11-libs/libXmu
 	virtual/opengl"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/config.diff
-	epatch ${FILESDIR}/${P}-fix_togl.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/config.diff
+	epatch "${FILESDIR}"/${P}-fix_togl.patch
 
 	sed -e 's/self\.NUMERIC/self.HAS_NUMERIC/' -i setup/dist.py
 
