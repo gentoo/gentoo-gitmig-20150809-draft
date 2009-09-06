@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.69 2009/09/06 23:40:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.70 2009/09/06 23:41:42 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -626,7 +626,7 @@ check_extra_config() {
 	local	soft_errors_count=0 hard_errors_count=0 config_required=0
 
 	# if we haven't determined the version yet, we need to
-	linux-mod_get_any_version
+	linux-info_get_any_version
 
 	# Determine if we really need a .config. The only time when we don't need
 	# one is when all of the CONFIG_CHECK options are prefixed with "~".
