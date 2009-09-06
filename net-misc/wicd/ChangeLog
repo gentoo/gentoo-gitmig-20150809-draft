@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.53 2009/08/30 15:58:28 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.54 2009/09/06 06:02:55 darkside Exp $
+
+*wicd-1.6.2.2 (06 Sep 2009)
+
+  06 Sep 2009; Jeremy Olexa <darkside@gentoo.org> +wicd-1.6.2.2.ebuild:
+  Version bump, bug fixes for hidden networks mainly
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> wicd-1.6.2.ebuild:
   ppc stable #282382
