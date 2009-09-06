@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.486 2009/09/05 20:01:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.487 2009/09/06 09:26:34 robbat2 Exp $
+
+  06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> udev-145-r1.ebuild:
+  Fix bug #283760 with extended kernel versions.
 
   05 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> udev-145-r1.ebuild:
   Make the CONFIG_CHECK checks non-fatal. As udev WILL build without them,

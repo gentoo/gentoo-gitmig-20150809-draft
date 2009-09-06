@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.2 2009/09/05 20:01:05 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.3 2009/09/06 09:26:34 robbat2 Exp $
 
 EAPI="1"
 
@@ -86,7 +86,9 @@ pkg_setup() {
 	fi
 
 	echo
-	udev_check_KV
+	# We don't care about the secondary revision of the kernel.
+	# 2.6.30.4 -> 2.6.30 is all we check
+	KV_PATCH="${KV_PATCH%.*}" udev_check_KV
 	case "$?" in
 		2)	einfo "Your kernel version (${KV_FULL}) is new enough to run ${P} reliable." ;;
 		1)	ewarn "Your kernel version (${KV_FULL}) is new enough to run ${P},"
