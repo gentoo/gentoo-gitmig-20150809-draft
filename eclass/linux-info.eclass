@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.62 2009/09/06 22:54:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.63 2009/09/06 23:04:37 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -397,6 +397,9 @@ get_localversion() {
 	echo ${x}
 }
 
+# internal variable, so we know to only print the warning once
+get_version_warning_done=
+
 # @FUNCTION: get_version
 # @DESCRIPTION:
 # It gets the version of the kernel inside KERNEL_DIR and populates the KV_FULL variable
@@ -419,31 +422,40 @@ get_version() {
 	unset KV_DIR
 
 	# KV_DIR will contain the full path to the sources directory we should use
+	[ -z "${get_version_warning_done}" ] && \
 	qeinfo "Determining the location of the kernel source code"
 	[ -h "${KERNEL_DIR}" ] && KV_DIR="$(readlink -f ${KERNEL_DIR})"
 	[ -d "${KERNEL_DIR}" ] && KV_DIR="${KERNEL_DIR}"
 
 	if [ -z "${KV_DIR}" ]
 	then
-		qeerror "Unable to find kernel sources at ${KERNEL_DIR}"
-		qeinfo "This package requires Linux sources."
-		if [ "${KERNEL_DIR}" == "/usr/src/linux" ] ; then
-			qeinfo "Please make sure that ${KERNEL_DIR} points at your running kernel, "
-			qeinfo "(or the kernel you wish to build against)."
-			qeinfo "Alternatively, set the KERNEL_DIR environment variable to the kernel sources location"
-		else
-			qeinfo "Please ensure that the KERNEL_DIR environment variable points at full Linux sources of the kernel you wish to compile against."
+		if [ -z "${get_version_warning_done}" ]; then
+			get_version_warning_done=1
+			qeerror "Unable to find kernel sources at ${KERNEL_DIR}"
+			#qeinfo "This package requires Linux sources."
+			if [ "${KERNEL_DIR}" == "/usr/src/linux" ] ; then
+				qeinfo "Please make sure that ${KERNEL_DIR} points at your running kernel, "
+				qeinfo "(or the kernel you wish to build against)."
+				qeinfo "Alternatively, set the KERNEL_DIR environment variable to the kernel sources location"
+			else
+				qeinfo "Please ensure that the KERNEL_DIR environment variable points at full Linux sources of the kernel you wish to compile against."
+			fi
 		fi
 		return 1
 	fi
 
-	qeinfo "Found kernel source directory:"
-	qeinfo "    ${KV_DIR}"
+	if [ -z "${get_version_warning_done}" ]; then
+		qeinfo "Found kernel source directory:"
+		qeinfo "    ${KV_DIR}"
+	fi
 
 	if [ ! -s "${KV_DIR}/Makefile" ]
 	then
-		qeerror "Could not find a Makefile in the kernel source directory."
-		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
+		if [ -z "${get_version_warning_done}" ]; then
+			get_version_warning_done=1
+			qeerror "Could not find a Makefile in the kernel source directory."
+			qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources"
+		fi
 		return 1
 	fi
 
@@ -467,8 +479,11 @@ get_version() {
 
 	if [ -z "${KV_MAJOR}" -o -z "${KV_MINOR}" -o -z "${KV_PATCH}" ]
 	then
-		qeerror "Could not detect kernel version."
-		qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources."
+		if [ -z "${get_version_warning_done}" ]; then
+			get_version_warning_done=1
+			qeerror "Could not detect kernel version."
+			qeerror "Please ensure that ${KERNEL_DIR} points to a complete set of Linux sources."
+		fi
 		return 1
 	fi
 
