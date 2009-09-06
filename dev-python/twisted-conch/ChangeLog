@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/twisted-conch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.41 2009/06/17 20:10:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-conch/ChangeLog,v 1.42 2009/09/06 21:02:31 idl0r Exp $
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/twisted-conch-0.5.0-root-skip.patch,
+  -files/twisted-conch-0.6.0-root-skip.patch,
+  -files/twisted-conch-0.7.0-python-2.5-compat.patch,
+  twisted-conch-8.1.0.ebuild, twisted-conch-8.2.0.ebuild:
+  Remove unused patch. Fix repoman complains.
 
   17 Jun 2009; Jeroen Roovers <jer@gentoo.org> twisted-conch-8.1.0.ebuild:
   Stable for HPPA (bug #270122).
