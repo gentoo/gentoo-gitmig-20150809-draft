@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.43 2009/07/06 10:35:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.44 2009/09/06 16:32:49 ranger Exp $
+
+  06 Sep 2009; Brent Baude <ranger@gentoo.org> python-mode-5.1.0.ebuild:
+  Marking python-mode-5.1.0 ppc64 for bug 272474
 
   06 Jul 2009; Jeroen Roovers <jer@gentoo.org> python-mode-5.1.0.ebuild:
   Stable for HPPA (bug #272474).
