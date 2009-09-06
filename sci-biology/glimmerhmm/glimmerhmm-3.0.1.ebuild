@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1.ebuild,v 1.3 2009/03/19 15:12:35 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmerhmm/glimmerhmm-3.0.1.ebuild,v 1.4 2009/09/06 05:00:38 darkside Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.cbcb.umd.edu/pub/software/glimmerhmm/${MY_P}-${PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND=""
 RDEPEND=""
