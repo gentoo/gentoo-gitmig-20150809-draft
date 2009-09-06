@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.63 2009/09/06 23:04:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.64 2009/09/06 23:12:29 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -202,7 +202,7 @@ getfilevar_noexec() {
 
 	[ -z "${1}" ] && ERROR=1
 	[ ! -f "${2}" ] && ERROR=1
-	[ "${2#.gz}" != "${2}" ] && mycat='zcat'
+	[ "${2%.gz}" != "${2}" ] && mycat='zcat'
 
 	if [ "${ERROR}" = 1 ]
 	then
@@ -625,7 +625,8 @@ check_extra_config() {
 		# code later will cause a failure due to missing .config.
 		if ! linux_config_exists; then
 			ewarn "Unable to check for the following kernel config options due"
-			ewarn "to absence of any configured kernel sources:"
+			ewarn "to absence of any configured kernel sources or compiled"
+			ewarn "config:"
 			for config in ${CONFIG_CHECK}; do
 				ewarn " - ${config#\~}"
 			done
@@ -633,7 +634,7 @@ check_extra_config() {
 			return 0
 		fi
 	else
-		require_configured_kernel
+		[ -n "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
 	fi
 
 	einfo "Checking for suitable kernel configuration options..."
