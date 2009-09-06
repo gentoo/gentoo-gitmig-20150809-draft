@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.64 2009/09/06 23:12:29 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.65 2009/09/06 23:16:37 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -110,8 +110,11 @@ inherit toolchain-funcs versionator
 
 EXPORT_FUNCTIONS pkg_setup
 
-DEPEND="kernel_linux? ( virtual/linux-sources )"
+DEPEND=""
 RDEPEND=""
+
+[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && \
+DEPEND="kernel_linux? ( virtual/linux-sources )"
 
 # Overwritable environment Var's
 # ---------------------------------------
