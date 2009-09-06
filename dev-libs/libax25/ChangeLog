@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libax25
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.10 2008/08/03 16:08:22 kingtaco Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.11 2009/09/06 18:03:03 idl0r Exp $
+
+*libax25-0.0.11-r2 (06 Sep 2009)
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -libax25-0.0.11-r1.ebuild, +libax25-0.0.11-r2.ebuild,
+  -files/axports.gentoo:
+  Remove unused patch. Fix repoman complains.
 
   03 Aug 2008; Mike Doty <kingtaco@gentoo.org> libax25-0.0.11-r1.ebuild:
   keywording ~amd64
