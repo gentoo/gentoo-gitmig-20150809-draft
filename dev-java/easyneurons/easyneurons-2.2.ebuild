@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/easyneurons-2.2.ebuild,v 1.3 2009/09/02 07:42:36 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easyneurons/easyneurons-2.2.ebuild,v 1.4 2009/09/06 08:46:08 maekke Exp $
 
 JAVA_PKG_IUSE="source"
 EAPI="2"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/neuroph/neuroph_${PV}_nb.zip"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 
