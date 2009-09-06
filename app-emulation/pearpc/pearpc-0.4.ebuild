@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.12 2009/05/15 21:44:09 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.4.ebuild,v 1.13 2009/09/06 21:18:20 robbat2 Exp $
 
-inherit eutils flag-o-matic linux-info linux-mod
+inherit eutils flag-o-matic linux-mod
 
 DESCRIPTION="PowerPC Architecture Emulator"
 HOMEPAGE="http://pearpc.sourceforge.net/"
