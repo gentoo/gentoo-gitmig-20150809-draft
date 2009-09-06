@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/infernal-1.0.ebuild,v 1.2 2009/08/20 15:22:31 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/infernal-1.0.ebuild,v 1.3 2009/09/06 05:03:25 darkside Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://selab.janelia.org/pub/software/${PN}/${P}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 IUSE="mpi"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND="mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
