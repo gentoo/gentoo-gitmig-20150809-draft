@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.53 2009/09/05 22:16:58 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.54 2009/09/06 23:52:14 darkside Exp $
+
+  06 Sep 2009; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
+  Mask wine[mp3] because there are no 32bit libraries provided at the
+  moment, bug 283860
 
   05 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   ChangeLog:
