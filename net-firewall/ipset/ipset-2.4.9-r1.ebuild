@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.9-r1.ebuild,v 1.1 2009/03/03 13:15:52 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipset/ipset-2.4.9-r1.ebuild,v 1.2 2009/09/06 21:15:43 robbat2 Exp $
 
-inherit eutils versionator toolchain-funcs linux-mod linux-info
+inherit eutils versionator toolchain-funcs linux-mod
 
 DESCRIPTION="IPset tool for iptables, successor to ippool."
 HOMEPAGE="http://ipset.netfilter.org/"
