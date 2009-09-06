@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/culmus-latex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/culmus-latex/ChangeLog,v 1.13 2009/08/23 15:44:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/culmus-latex/ChangeLog,v 1.14 2009/09/06 20:46:07 ranger Exp $
+
+  06 Sep 2009; Brent Baude <ranger@gentoo.org> culmus-latex-0.7.ebuild:
+  Marking culmus-latex-0.7 ppc64 stable for bug 276990
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> culmus-latex-0.7.ebuild:
   amd64 stable, bug 276990. Compile tested only
