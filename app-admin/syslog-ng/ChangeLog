@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.215 2009/08/08 07:51:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.216 2009/09/06 16:27:49 mr_bones_ Exp $
+
+  06 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  syslog-ng-3.0.4.ebuild:
+  test suite is fairly broken unless run on upstream's development platform
+  (bug #283717)
+
 
 *syslog-ng-3.0.4 (08 Aug 2009)
 
