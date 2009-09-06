@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/rpm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.103 2009/09/05 13:26:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.104 2009/09/06 19:27:42 idl0r Exp $
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/rpm-4.0.4-gentoo-uclibc.patch, -files/rpm-4.0.4-sandbox.patch,
+  rpm-4.4.6-r6.ebuild, rpm-4.4.7-r1.ebuild, rpm-4.4.7-r2.ebuild,
+  rpm-4.4.7-r4.ebuild, -files/rpm-4.4.7-config.rpath.patch:
+  Remove unused patches. Fix repoman complains.
 
   05 Sep 2009; Torsten Veller <tove@gentoo.org> rpm-4.4.6-r6.ebuild,
   rpm-4.4.7-r1.ebuild, rpm-4.4.7-r2.ebuild, rpm-4.4.7-r4.ebuild,
