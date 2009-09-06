@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.27 2009/08/19 21:19:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.28 2009/09/06 14:51:19 mrpouet Exp $
+
+# Romain Perier <mrpouet@gentoo.org> (06 Sep 2009)
+# depends on >=kde-base/kdebase-startkde-4.2
+www-plugins/gnash kde
 
 # Raúl Porcel <armin76@gentoo.org> (09 Jun 2009)
 # Needs qt-assistant
