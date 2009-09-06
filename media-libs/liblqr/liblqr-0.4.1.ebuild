@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/liblqr-0.4.1.ebuild,v 1.4 2009/08/29 16:56:15 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/liblqr-0.4.1.ebuild,v 1.5 2009/09/06 23:48:37 ranger Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://liblqr.wikidot.com/local--files/en:download-page/${PN}-1-${PV}.t
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~x86 ~x86-fbsd"
 IUSE="doc"
 
 RDEPEND="dev-libs/glib"
