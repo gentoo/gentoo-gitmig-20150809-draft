@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r2.ebuild,v 1.2 2009/05/17 10:35:11 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.5-r2.ebuild,v 1.3 2009/09/06 19:17:45 idl0r Exp $
 
 inherit eutils elisp-common
 
-DESCRIPTION="A command-line accounting tool that provides double-entry accounting with a minimum of frills, and yet with a maximum of expressiveness and flexibility."
+DESCRIPTIONS="A double-entry accounting system with a command-line reporting interface"
 HOMEPAGE="http://wiki.github.com/jwiegley/ledger"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -20,6 +20,7 @@ DEPEND="dev-libs/gmp
 	xml? ( dev-libs/expat )
 	emacs? ( virtual/emacs )
 	gnuplot? ( sci-visualization/gnuplot )"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50${PN}-gentoo.el
 
@@ -29,8 +30,7 @@ src_compile() {
 		$(use_enable xml) \
 		$(use_enable ofx) \
 		$(use_enable debug) \
-		$(use_with	 emacs lispdir "${D}${SITELISP}/${PN}") \
-		|| die "Configure failed!"
+		$(use_with	 emacs lispdir "${D}${SITELISP}/${PN}")
 
 	emake || die "Make failed!"
 }
@@ -42,7 +42,7 @@ src_install() {
 	## One script uses vi, the outher the Finance perl module
 	## Did not add more use flags though
 	insinto /usr/share/${P}
-	doins scripts/entry scripts/getquote scripts/bal scripts/bal-huquq
+	doins scripts/entry scripts/getquote scripts/bal scripts/bal-huquq || die
 
 	einstall || die "Installation failed!"
 
@@ -56,7 +56,7 @@ src_install() {
 
 	if use gnuplot; then
 		mv scripts/report ledger-report
-		dobin ledger-report
+		dobin ledger-report || die
 	fi
 }
 
