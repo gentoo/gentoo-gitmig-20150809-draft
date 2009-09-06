@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.03.09.ebuild,v 1.2 2009/02/10 22:47:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd-kernel/gnbd-kernel-2.03.09.ebuild,v 1.3 2009/09/06 21:17:39 robbat2 Exp $
 
-inherit eutils linux-mod linux-info versionator
+inherit eutils linux-mod versionator
 
 CLUSTER_RELEASE="${PV}"
 MY_P="cluster-${CLUSTER_RELEASE}"
