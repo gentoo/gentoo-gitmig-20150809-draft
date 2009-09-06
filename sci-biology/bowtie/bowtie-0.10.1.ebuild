@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/bowtie-0.10.1.ebuild,v 1.1 2009/07/27 20:25:54 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bowtie/bowtie-0.10.1.ebuild,v 1.2 2009/09/06 05:02:29 darkside Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/bowtie-bio/${P}-src.zip"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND="app-arch/unzip"
 RDEPEND=""
