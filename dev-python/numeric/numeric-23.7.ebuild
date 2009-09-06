@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.7.ebuild,v 1.17 2006/07/05 05:25:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-23.7.ebuild,v 1.18 2009/09/06 22:40:48 idl0r Exp $
 
 inherit distutils eutils
 
@@ -18,6 +18,7 @@ IUSE=""
 
 # 2.1 gave sandbox violations see #21
 DEPEND=">=dev-lang/python-2.2"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
