@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.5 2008/10/23 02:05:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/longrun-0.9-r3.ebuild,v 1.6 2009/09/06 21:33:44 robbat2 Exp $
 
 inherit eutils linux-info toolchain-funcs
 
@@ -22,7 +22,7 @@ DEPEND=""
 
 S=${WORKDIR}/${PN}
 
-CONFIG_CHECK="X86_MSR X86_CPUID"
+CONFIG_CHECK="~X86_MSR ~X86_CPUID"
 
 ERROR_X86_MSR="
 Longrun needs a MSR device to function. Please select
@@ -38,7 +38,7 @@ build directly into the kernel or as a module.
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-	cd ${S}
+	cd "${S}"
 	epatch "${DISTDIR}/${DEBIAN_PATCH}"
 	epatch "${FILESDIR}/${PV}-makefile_cflags.patch"
 }

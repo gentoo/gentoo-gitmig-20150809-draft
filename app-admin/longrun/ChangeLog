@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/longrun
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.18 2008/10/23 02:05:45 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/longrun/ChangeLog,v 1.19 2009/09/06 21:33:44 robbat2 Exp $
+
+  06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> longrun-0.9-r3.ebuild:
+  Linux-info cleanup (bug #283320): make more CONFIG_CHECK non-fatal.
 
   23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   files/0.9-makefile_cflags.patch, longrun-0.9-r3.ebuild:
