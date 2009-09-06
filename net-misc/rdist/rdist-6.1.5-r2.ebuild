@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5-r2.ebuild,v 1.2 2008/01/24 14:21:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5-r2.ebuild,v 1.3 2009/09/06 16:33:11 idl0r Exp $
+
+inherit eutils
 
 DESCRIPTION="Remote software distribution system"
 HOMEPAGE="http://www.magnicomp.com/rdist/rdist.shtml"
@@ -36,7 +38,7 @@ src_unpack() {
 	sed -i -e '/^%type/ s/,//g' -e 's/= {/{/g' src/gram.y || die "fixup of gram.y failed"
 
 	# use mkstemp(3) instead of mktemp(3)
-	epatch "${FILESDIR}/rdist_mkstemp.patch"
+	epatch "${FILESDIR}/${P}-mkstemp.patch"
 }
 
 src_compile() {
@@ -45,11 +47,11 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/bin /usr/share/man/man{1,8}
-	make install \
+	dodir /usr/bin /usr/share/man/man{1,8} || die
+	emake install \
 		BIN_GROUP=root \
 		BIN_DIR="${D}/usr/bin" || die "make install failed"
-	make install.man \
+	emake install.man \
 		MAN_GROUP=root \
 		MAN_1_DIR=${D}/usr/share/man/man1 MAN_8_DIR=${D}/usr/share/man/man8 \
 		|| die "make install.man failed"
