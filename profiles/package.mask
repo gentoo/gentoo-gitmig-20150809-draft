@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10412 2009/09/06 12:41:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10413 2009/09/06 18:20:01 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -414,16 +414,6 @@ dev-tinyos/tos-apps
 # Mirror restricted and distfile isn't available anymore.
 # Bug 280879. Masked for removal.
 dev-lang/realbasic
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to build depending on CFLAGS (bug #239860), lacks
-# a Gentoo maintainer, upstream arrived at version 2.13
-# (and then seems to have abandoned it in 2007).
-#
-# Removal on 2009-10-08
-app-admin/killproc
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
