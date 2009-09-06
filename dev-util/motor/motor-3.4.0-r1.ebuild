@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/motor-3.4.0-r1.ebuild,v 1.4 2007/11/13 21:57:08 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/motor-3.4.0-r1.ebuild,v 1.5 2009/09/06 17:09:22 idl0r Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="ppc x86"
 IUSE="nls"
 
-DEPEND=">=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.2"
+DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {

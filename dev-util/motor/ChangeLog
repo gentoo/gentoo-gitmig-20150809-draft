@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/motor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.15 2009/09/01 17:27:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/motor/ChangeLog,v 1.16 2009/09/06 17:09:22 idl0r Exp $
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/motor-3.3.0-gcc34-2.patch, -files/motor-3.3.0-gcc34.patch,
+  motor-3.4.0-r1.ebuild, motor-3.4.0-r2.ebuild, motor-3.4.0-r3.ebuild:
+  Remove unused patches and assign RDEPEND.
 
 *motor-3.4.0-r3 (01 Sep 2009)
 
