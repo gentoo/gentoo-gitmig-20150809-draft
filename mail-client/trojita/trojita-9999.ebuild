@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.1 2009/09/05 21:41:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/trojita/trojita-9999.ebuild,v 1.2 2009/09/06 15:17:38 wired Exp $
 
 EAPI=1
 
@@ -18,7 +18,7 @@ KEYWORDS=""
 IUSE="debug test"
 
 RDEPEND="
-	>=x11-libx/qt-gui-4.5.0:4
+	>=x11-libs/qt-gui-4.5.0:4
 	>=x11-libs/qt-webkit-4.5.0:4
 "
 DEPEND="${RDEPEND}
