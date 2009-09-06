@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.306 2009/09/06 09:33:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.307 2009/09/06 10:10:29 aballier Exp $
+
+  06 Sep 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999-r1.ebuild:
+  Use ffmpeg.org svn repo and add PV conditionals so that we can make
+  snapshots by simply copying -9999
 
   06 Sep 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999-r1.ebuild:
   Correctly detect cpu by upstream checks when march=native is used, bug

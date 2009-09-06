@@ -1,16 +1,26 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.17 2009/09/06 09:33:37 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-9999-r1.ebuild,v 1.18 2009/09/06 10:10:29 aballier Exp $
 
 EAPI=2
+SCM=""
+if [ "${PV#9999}" != "${PV}" ] ; then
+	SCM=subversion
+	ESVN_REPO_URI="svn://svn.ffmpeg.org/ffmpeg/trunk"
+fi
 
-ESVN_REPO_URI="svn://svn.mplayerhq.hu/ffmpeg/trunk"
+inherit eutils flag-o-matic multilib toolchain-funcs ${SCM}
 
-inherit eutils flag-o-matic multilib toolchain-funcs subversion
-
-DESCRIPTION="Complete solution to record, convert and stream audio and video.
-Includes libavcodec. live svn"
+DESCRIPTION="Complete solution to record, convert and stream audio and video. Includes libavcodec."
 HOMEPAGE="http://ffmpeg.org/"
+if [ "${PV#9999}" != "${PV}" ] ; then
+	SRC_URI=""
+elif [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+else # Release
+	SRC_URI="http://ffmpeg.org/releases/${P}.tar.bz2"
+fi
+FFMPEG_REVISION="${PV#*_p}"
 
 LICENSE="GPL-3"
 SLOT="0"
@@ -65,6 +75,8 @@ src_prepare() {
 		# Set SVN version manually
 		subversion_wc_info
 		sed -i s/UNKNOWN/SVN-r${ESVN_WC_REVISION}/ "${S}/version.sh"
+	elif [ "${PV%_p*}" != "${PV}" ] ; then # Snapshot
+		sed -i s/UNKNOWN/SVN-r${FFMPEG_REVISION}/ "${S}/version.sh"
 	fi
 }
 
