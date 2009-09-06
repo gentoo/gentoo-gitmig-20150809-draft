@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.2_p6750.ebuild,v 1.2 2009/07/08 15:19:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/metasploit-3.2_p6750.ebuild,v 1.3 2009/09/06 15:37:47 maekke Exp $
 
 MY_P=${PN/metasploit/framework}-${PV}
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://www.metasploit.org/"
 
 LICENSE="BSD"
 SLOT="3.2"
-KEYWORDS="~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="gtk sqlite postgres"
 
 # Note we use bundled gems (see data/msfweb/vendor/rails/) as upstream voted for
