@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.1.ebuild,v 1.4 2008/10/24 20:47:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/recorder/recorder-1.4.1.ebuild,v 1.5 2009/09/06 17:50:35 ssuominen Exp $
 
 inherit fdo-mime
 
@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}
 	sys-apps/coreutils
 	virtual/cdrtools
 	dvdr? ( app-cdr/dvd+rw-tools )
-	mp3? ( virtual/mpg123 )
+	mp3? ( media-sound/mpg123 )
 	ogg? ( media-sound/vorbis-tools )
 	vcd? ( app-cdr/cdrdao
 		media-video/vcdimager )"

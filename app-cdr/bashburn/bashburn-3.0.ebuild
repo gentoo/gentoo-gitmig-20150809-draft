@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-3.0.ebuild,v 1.1 2009/03/04 18:46:55 lack Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/bashburn/bashburn-3.0.ebuild,v 1.2 2009/09/06 17:47:26 ssuominen Exp $
 
 EAPI=2
 MY_P=BashBurn-${PV}
@@ -15,11 +15,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="dvdr"
 
-RDEPEND="virtual/libc
-	virtual/cdrtools
+RDEPEND="virtual/cdrtools
 	app-cdr/cdrdao
 	dvdr? ( app-cdr/dvd+rw-tools )
-	virtual/mpg123
+	media-sound/mpg123
 	media-sound/lame
 	media-sound/vorbis-tools
 	media-sound/normalize

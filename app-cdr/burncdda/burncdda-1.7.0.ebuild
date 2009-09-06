@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.7.0.ebuild,v 1.3 2008/02/14 21:35:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burncdda/burncdda-1.7.0.ebuild,v 1.4 2009/09/06 17:49:08 ssuominen Exp $
 
 DESCRIPTION="Console app for copying burning audio cds"
 SLOT="0"
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ppc ~sparc x86"
 DEPEND="dev-util/dialog
 	app-cdr/cdrdao
 	virtual/cdrtools
-	mp3? ( virtual/mpg123
+	mp3? ( media-sound/mpg123
 		media-sound/mp3_check )
 	vorbis? ( media-sound/vorbis-tools )
 	flac? ( media-libs/flac )
