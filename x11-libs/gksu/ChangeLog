@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.55 2009/08/19 16:33:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.56 2009/09/06 20:59:19 ranger Exp $
+
+  06 Sep 2009; Brent Baude <ranger@gentoo.org> gksu-2.0.2.ebuild:
+  Marking gksu-2.0.2 ppc64 for bug 278443
 
   19 Aug 2009; Jeroen Roovers <jer@gentoo.org> gksu-2.0.2.ebuild:
   Stable for HPPA (bug #278443).
