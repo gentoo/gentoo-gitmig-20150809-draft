@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/latex2rtf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.31 2009/08/23 15:46:38 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2rtf/ChangeLog,v 1.32 2009/09/06 20:49:03 ranger Exp $
+
+  06 Sep 2009; Brent Baude <ranger@gentoo.org> latex2rtf-1.9.19.ebuild:
+  Marking latex2rtf-1.9.19 ppc64 for bug 276990
 
   23 Aug 2009; Jeremy Olexa <darkside@gentoo.org> latex2rtf-1.9.19.ebuild:
   amd64 stable, bug 276990. Tested with app-office/lyx-1.6.3
