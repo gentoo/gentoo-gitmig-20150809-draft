@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/mybashburn-1.0.2.ebuild,v 1.4 2008/12/30 23:15:27 tsunam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/mybashburn-1.0.2.ebuild,v 1.5 2009/09/06 18:00:58 ssuominen Exp $
 
 DESCRIPTION="Command-line burning interface of data and music CDs and DVDs"
 HOMEPAGE="http://mybashburn.sourceforge.net/"
@@ -18,7 +18,7 @@ RDEPEND="dev-util/dialog
 	virtual/eject
 	dvdr? ( app-cdr/dvd+rw-tools )
 	mp3? ( media-sound/lame
-		virtual/mpg123 )
+		media-sound/mpg123 )
 	flac? ( media-libs/flac )
 	vorbis? ( media-sound/vorbis-tools )
 	normalize? ( media-sound/normalize )"
