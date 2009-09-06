@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/dejavu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.139 2009/08/30 19:50:14 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/dejavu/ChangeLog,v 1.140 2009/09/06 04:28:13 darkside Exp $
+
+  06 Sep 2009; Jeremy Olexa <darkside@gentoo.org> dejavu-2.29.ebuild:
+  amd64 stable, bug 283193. Compile tested only
 
   30 Aug 2009; Tobias Klausmann <klausman@gentoo.org> dejavu-2.29.ebuild:
   Stable on alpha, bug #283193
