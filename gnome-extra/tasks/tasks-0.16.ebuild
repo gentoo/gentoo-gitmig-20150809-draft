@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.16.ebuild,v 1.1 2009/09/06 10:20:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/tasks/tasks-0.16.ebuild,v 1.2 2009/09/06 10:24:07 eva Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -31,8 +31,3 @@ DOCS="AUTHORS ChangeLog INSTALL NEWS README"
 pkg_setup() {
 	G2CONF="${G2CONF} --with-unique --enable-gtk"
 }
-
-#src_prepare() {
-#	# Add missing config.h, bug #277115
-#	epatch "${FILESDIR}/${P}-configh.patch"
-#}
