@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.29.ebuild,v 1.1 2009/09/06 06:23:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.29.ebuild,v 1.2 2009/09/06 14:42:35 vapier Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss png samba scanner ssl test win64 +X xcomposite xinerama xml"
+IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap mp3 nas ncurses +opengl oss png samba scanner ssl test win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -54,6 +54,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
 	lcms? ( media-libs/lcms )
+	mp3? ( virtual/mpg123 )
 	samba? ( >=net-fs/samba-3.0.25 )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
@@ -110,6 +111,7 @@ src_configure() {
 		$(use_with jpeg) \
 		$(use_with lcms cms) \
 		$(use_with ldap) \
+		$(use_with mp3 mpg123) \
 		$(use_with nas) \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
