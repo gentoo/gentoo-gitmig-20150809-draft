@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10413 2009/09/06 18:20:01 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10414 2009/09/06 19:19:41 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -588,15 +588,6 @@ net-analyzer/trafd
 #
 # Removal on 2009-10-08
 media-libs/libmovtar
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
-#  on behalf of QA team
-#
-# Missing Gentoo maintainers; fails to build since at least
-# October 2008 (bug #247065).
-#
-# Removal on 2009-10-08
-dev-libs/libredblack
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team

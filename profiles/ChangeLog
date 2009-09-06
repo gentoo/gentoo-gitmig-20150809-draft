@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3233 2009/09/06 18:20:00 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3234 2009/09/06 19:19:41 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Unmasking dev-libs/libredblack . ~arch ebuild fixed
 
   06 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Unmasking app-admin/killproc. All bugs have been fixed,n fixed, updated to
