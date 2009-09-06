@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/libtranslate-0.99.ebuild,v 1.4 2008/05/05 15:07:37 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/libtranslate-0.99.ebuild,v 1.5 2009/09/06 21:54:44 vostorga Exp $
 
 EAPI=1
 
-inherit eutils
+inherit eutils autotools
 
 DESCRIPTION="Library for translating text and web pages between natural languages."
 HOMEPAGE="http://www.nongnu.org/libtranslate"
@@ -19,11 +19,12 @@ IUSE=""
 RESTRICT="test"
 
 RDEPEND=">=dev-libs/glib-2.4
-	net-libs/libsoup:2.2
+	net-libs/libsoup:2.4
 	>=dev-libs/libxml2-2
 	>=app-text/talkfilters-2.3.4-r1"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	dev-util/intltool"
 
 src_unpack() {
 	unpack ${A}
@@ -32,7 +33,12 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-charsetparse.diff \
 		"${FILESDIR}"/${P}-condfix.diff \
 		"${FILESDIR}"/${P}-int64.diff \
-		"${FILESDIR}"/${P}-man-page.diff
+		"${FILESDIR}"/${P}-man-page.diff \
+		"${FILESDIR}"/${P}-libsoup24.diff
+
+	einfo "Running intltoolize --force --copy --automake"
+	intltoolize --force --copy --automake || die "intltoolize failed"
+	AT_M4DIR="${S}/m4" eautoreconf
 }
 
 src_install() {

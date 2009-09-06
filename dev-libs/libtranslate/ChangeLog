@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libtranslate
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/ChangeLog,v 1.6 2008/05/05 15:07:37 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtranslate/ChangeLog,v 1.7 2009/09/06 21:54:44 vostorga Exp $
+
+  06 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
+  libtranslate-0.99.ebuild, +files/libtranslate-0.99-libsoup24.diff:
+  Adding patch to build against net-libs/libsoup:2.4
 
   05 May 2008; Samuli Suominen <drac@gentoo.org> libtranslate-0.99.ebuild:
   Move pkgconfig to DEPEND wrt #217278.
