@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/noarp
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/ChangeLog,v 1.10 2007/04/26 07:31:17 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/noarp/ChangeLog,v 1.11 2009/09/06 21:16:04 robbat2 Exp $
+
+  06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> noarp-1.2.3-r1.ebuild,
+  noarp-2.0.2.ebuild:
+  Cleaning up for linux-info work: inherit linux-mod implies inherit
+  linux-info.
 
   26 Apr 2007; Donnie Berkholz <dberkholz@gentoo.org>; metadata.xml:
   Update for cluster herd split to hp-cluster and ha-cluster.
