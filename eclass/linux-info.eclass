@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.61 2009/08/30 22:37:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.62 2009/09/06 22:54:58 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -13,10 +13,14 @@
 # @BLURB: eclass used for accessing kernel related information
 # @DESCRIPTION:
 # This eclass is used as a central eclass for accessing kernel
-# related information for sources already installed.
+# related information for source or binary already installed.
 # It is vital for linux-mod.eclass to function correctly, and is split
 # out so that any ebuild behaviour "templates" are abstracted out
 # using additional eclasses.
+#
+# "kernel config" in this file means:
+# The .config of the currently installed sources is used as the first
+# preference, with a fall-back to bundled config (/proc/config.gz) if available.
 
 # A Couple of env vars are available to effect usage of this eclass
 # These are as follows:
@@ -38,7 +42,15 @@
 #
 #   e.g.: CONFIG_CHECK="!MTRR"
 #
-# To simply warn about a missing option, prepend a '~'.
+# To simply warn about a missing option, prepend a '~'. 
+# It may be combined with '!'.
+#
+# In general, most checks should be non-fatal. The only time fatal checks should
+# be used is for building kernel modules or cases that a compile will fail
+# without the option.
+#
+# This is to allow usage of binary kernels, and minimal systems without kernel
+# sources.
 
 # @ECLASS-VARIABLE: ERROR_<CFG>
 # @DESCRIPTION:
@@ -88,6 +100,10 @@
 # @DESCRIPTION:
 # A read-only variable. It's a string containing the kernel object directory, will be KV_DIR unless
 # KBUILD_OUTPUT is used. This should be used for referencing .config.
+
+# @ECLASS-VARIABLE: I_KNOW_WHAT_I_AM_DOING
+# @DESCRIPTION:
+# Temporary variable for the migration to making linux-info non-fatal.
 
 # And to ensure all the weirdness with crosscompile
 inherit toolchain-funcs versionator
@@ -180,11 +196,13 @@ local	ERROR basefname basedname myARCH="${ARCH}"
 # This is done with sed matching an expression only. If the variable is defined,
 # you will run into problems. See getfilevar for those cases.
 getfilevar_noexec() {
-local	ERROR basefname basedname myARCH="${ARCH}"
+	local	ERROR basefname basedname mycat myARCH="${ARCH}"
 	ERROR=0
+	mycat='cat'
 
 	[ -z "${1}" ] && ERROR=1
 	[ ! -f "${2}" ] && ERROR=1
+	[ "${2#.gz}" != "${2}" ] && mycat='zcat'
 
 	if [ "${ERROR}" = 1 ]
 	then
@@ -192,23 +210,42 @@ local	ERROR basefname basedname myARCH="${ARCH}"
 		eerror "getfilevar_noexec requires 2 variables, with the second a valid file."
 		eerror "   getfilevar_noexec <VARIABLE> <CONFIGFILE>"
 	else
+		${mycat} "${2}" | \
 		sed -n \
 		-e "/^[[:space:]]*${1}[[:space:]]*=[[:space:]]*\(.*\)\$/{ 
 			s,^[^=]*[[:space:]]*=[[:space:]]*,,g ;
 			s,[[:space:]]*\$,,g ;
 			p
-		}" \
-		"${2}"
+		}"
 	fi
 }
 
+
+# @FUNCTION: linux_config_src_exists
+# @RETURN: true or false
+# @DESCRIPTION:
+# It returns true if .config exists in a build directory otherwise false
+linux_config_src_exists() {
+	[ -s "${KV_OUT_DIR}/.config" ]
+}
+
+# @FUNCTION: linux_config_bin_exists
+# @RETURN: true or false
+# @DESCRIPTION:
+# It returns true if .config exists in /proc, otherwise false
+linux_config_bin_exists() {
+	[ -s "/proc/config.gz" ]
+}
 
 # @FUNCTION: linux_config_exists
 # @RETURN: true or false
 # @DESCRIPTION:
 # It returns true if .config exists otherwise false
+#
+# This function MUST be checked before using any of the linux_chkconfig_*
+# functions.
 linux_config_exists() {
-	[ -s "${KV_OUT_DIR}/.config" ]
+	linux_config_src_exists || linux_config_bin_exists
 }
 
 # @FUNCTION: require_configured_kernel
@@ -216,7 +253,7 @@ linux_config_exists() {
 # This function verifies that the current kernel is configured (it checks against the existence of .config)
 # otherwise it dies.
 require_configured_kernel() {
-	if ! linux_config_exists; then
+	if ! linux_config_src_exists; then
 		qeerror "Could not find a usable .config in the kernel source directory."
 		qeerror "Please ensure that ${KERNEL_DIR} points to a configured set of Linux sources."
 		qeerror "If you are using KBUILD_OUTPUT, please set the environment var so that"
@@ -230,10 +267,15 @@ require_configured_kernel() {
 # @RETURN: true or false
 # @DESCRIPTION:
 # It checks that CONFIG_<option>=y or CONFIG_<option>=m is present in the current kernel .config
+# If linux_config_exists returns false, the results of this are UNDEFINED. You
+# MUST call linux_config_exists first.
 linux_chkconfig_present() {
 local	RESULT
-	require_configured_kernel
-	RESULT="$(getfilevar_noexec CONFIG_${1} ${KV_OUT_DIR}/.config)"
+	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
+	local config
+	config="${KV_OUT_DIR}/.config"
+	[ ! -f "${config}" ] && config="/proc/config.gz"
+	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"
 	[ "${RESULT}" = "m" -o "${RESULT}" = "y" ] && return 0 || return 1
 }
 
@@ -242,10 +284,15 @@ local	RESULT
 # @RETURN: true or false
 # @DESCRIPTION:
 # It checks that CONFIG_<option>=m is present in the current kernel .config
+# If linux_config_exists returns false, the results of this are UNDEFINED. You
+# MUST call linux_config_exists first.
 linux_chkconfig_module() {
 local	RESULT
-	require_configured_kernel
-	RESULT="$(getfilevar_noexec CONFIG_${1} ${KV_OUT_DIR}/.config)"
+	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
+	local config
+	config="${KV_OUT_DIR}/.config"
+	[ ! -f "${config}" ] && config="/proc/config.gz"
+	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"
 	[ "${RESULT}" = "m" ] && return 0 || return 1
 }
 
@@ -254,10 +301,15 @@ local	RESULT
 # @RETURN: true or false
 # @DESCRIPTION:
 # It checks that CONFIG_<option>=y is present in the current kernel .config
+# If linux_config_exists returns false, the results of this are UNDEFINED. You
+# MUST call linux_config_exists first.
 linux_chkconfig_builtin() {
 local	RESULT
-	require_configured_kernel
-	RESULT="$(getfilevar_noexec CONFIG_${1} ${KV_OUT_DIR}/.config)"
+	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
+	local config
+	config="${KV_OUT_DIR}/.config"
+	[ ! -f "${config}" ] && config="/proc/config.gz"
+	RESULT="$(getfilevar_noexec CONFIG_${1} "${config}")"
 	[ "${RESULT}" = "y" ] && return 0 || return 1
 }
 
@@ -266,9 +318,14 @@ local	RESULT
 # @RETURN: CONFIG_<option>
 # @DESCRIPTION:
 # It prints the CONFIG_<option> value of the current kernel .config (it requires a configured kernel).
+# If linux_config_exists returns false, the results of this are UNDEFINED. You
+# MUST call linux_config_exists first.
 linux_chkconfig_string() {
-	require_configured_kernel
-	getfilevar_noexec "CONFIG_${1}" "${KV_OUT_DIR}/.config"
+	[ -z "${I_KNOW_WHAT_I_AM_DOING}" ] && require_configured_kernel
+	local config
+	config="${KV_OUT_DIR}/.config"
+	[ ! -f "${config}" ] && config="/proc/config.gz"
+	getfilevar_noexec "CONFIG_${1}" "${config}"
 }
 
 # Versioning Functions
@@ -731,7 +788,11 @@ check_zlibinflate() {
 # Force a get_version() call when inherited from linux-mod.eclass and then check if the kernel is configured
 # to support the options specified in CONFIG_CHECK (if not null)
 linux-info_pkg_setup() {
-	get_version || die "Unable to calculate Linux Kernel version"
+	get_version 
+	if [[ $rc -ne 0 ]]; then
+		ewarn "Unable to calculate Linux Kernel version for build, attempting to use running version"
+		get_running_version 
+	fi
 
 	if kernel_is 2 4; then
 		if [ "$( gcc-major-version )" -eq "4" ] ; then
