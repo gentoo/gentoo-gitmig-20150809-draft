@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10411 2009/09/06 12:09:33 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10412 2009/09/06 12:41:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (06 Sep 2009)
+# Gem Hunters was never ported to >= Kyra 2.1.0. Both old Kyra
+# and Gem Hunters also suffer from toolchain porting issues.
+games-puzzle/gemhun
+dev-games/kyra
 
 # Alexis Ballier <aballier@gentoo.org> (06 Sep 2009)
 # New snapshot, a couple of packages fail to build against this version
