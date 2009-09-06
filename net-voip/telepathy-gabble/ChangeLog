@@ -1,6 +1,10 @@
 # ChangeLog for net-voip/telepathy-gabble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.51 2009/09/03 21:01:39 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-gabble/ChangeLog,v 1.52 2009/09/06 11:31:38 eva Exp $
+
+  06 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  telepathy-gabble-0.8.2.ebuild:
+  Fix installation of multiple documentation directories.
 
 *telepathy-gabble-0.8.2 (03 Sep 2009)
 
