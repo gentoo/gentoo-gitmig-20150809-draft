@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.43.ebuild,v 1.2 2009/09/02 07:31:31 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.43.ebuild,v 1.3 2009/09/06 08:37:44 maekke Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ DESCRIPTION="Building, finding and using wxWidgets binaries"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="~amd64 ~ia64 x86"
+KEYWORDS="amd64 ~ia64 x86"
 IUSE="unicode"
 
 SRC_TEST="do"
