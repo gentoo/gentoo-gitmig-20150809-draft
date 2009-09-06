@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxpython-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.27 2009/08/30 17:05:44 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxpython-docs/ChangeLog,v 1.28 2009/09/06 20:00:47 idl0r Exp $
+
+  06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
+  -files/wxpython-docs-2.6.0.0-writable.patch:
+  Remove unused patch.
 
   30 Aug 2009; Ryan Hill <dirtyepic@gentoo.org>
   -wxpython-docs-2.6.0.0-r1.ebuild, wxpython-docs-2.6.4.0.ebuild:
