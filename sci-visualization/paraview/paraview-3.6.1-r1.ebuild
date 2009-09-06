@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1-r1.ebuild,v 1.1 2009/07/30 14:13:04 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-3.6.1-r1.ebuild,v 1.2 2009/09/06 16:25:07 arfrever Exp $
 
 EAPI="2"
 
@@ -41,8 +41,6 @@ RDEPEND="hdf5? ( sci-libs/hdf5 )
 	sci-libs/netcdf
 	x11-libs/libXmu"
 
-# NOTE: vtk and paraview currently don't get along well
-# (#279264, #212947) hence we need to block it
 DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )
 		>=dev-util/cmake-2.6.4"
