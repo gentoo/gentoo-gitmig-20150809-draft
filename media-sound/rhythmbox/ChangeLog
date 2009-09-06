@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.157 2009/08/24 22:05:35 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.158 2009/09/06 11:43:41 eva Exp $
+
+*rhythmbox-0.12.4 (06 Sep 2009)
+
+  06 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +rhythmbox-0.12.4.ebuild, metadata.xml:
+  Version bump. New Gudev code replacing hal for hardware detection, build
+  and crash fixes. Translation updates.
 
   24 Aug 2009; Romain Perier <mrpouet@gentoo.org>
   rhythmbox-0.12.3-r2.ebuild:
