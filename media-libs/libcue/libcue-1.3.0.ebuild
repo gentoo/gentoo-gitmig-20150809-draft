@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/libcue-1.3.0.ebuild,v 1.10 2009/08/16 14:23:04 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcue/libcue-1.3.0.ebuild,v 1.11 2009/09/06 16:15:28 ranger Exp $
 
 EAPI=2
 DESCRIPTION="CUE Sheet Parser Library"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ppc ~ppc64 sh sparc x86"
+KEYWORDS="amd64 arm hppa ppc ppc64 sh sparc x86"
 IUSE=""
 
 RDEPEND=""
