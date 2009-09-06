@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.6 2009/09/06 19:35:28 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.7 2009/09/06 20:32:06 williamh Exp $
 
 EAPI="2"
 
@@ -28,7 +28,6 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	sed -i -e 's/\(SUBDIRS.*\)python/\1/' src/Makefile.in
-	epatch "${FILESDIR}"/${P}-getline-ss.patch
 }
 
 src_configure() {
