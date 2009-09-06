@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.66 2009/09/06 23:24:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.67 2009/09/06 23:31:47 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -566,7 +566,7 @@ get_running_version() {
 # the version of the running kernel.
 linux-info_get_any_version() {
 	get_version 
-	if [[ $rc -ne 0 ]]; then
+	if [[ $? -ne 0 ]]; then
 		ewarn "Unable to calculate Linux Kernel version for build, attempting to use running version"
 		get_running_version 
 	fi
