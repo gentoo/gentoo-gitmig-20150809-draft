@@ -1,39 +1,41 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.1.0.ebuild,v 1.3 2009/03/27 10:55:03 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.1 2009/09/06 16:18:09 arfrever Exp $
 
-EAPI=2
-inherit eutils distutils
+EAPI="2"
+
+inherit distutils eutils
 
 MY_PN="Mayavi"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="VTK based scientific data visualizer"
 HOMEPAGE="http://code.enthought.com/projects/mayavi"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples qt4 wxwindows"
+IUSE="doc examples qt4"
 SLOT="2"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
-RDEPEND="dev-python/apptools
-	dev-python/enthoughtbase
-	dev-python/envisagecore
-	dev-python/envisageplugins
-	dev-python/traitsgui
+RDEPEND=">=dev-python/apptools-3.3.0
+	>=dev-python/enthoughtbase-3.0.3
+	>=dev-python/envisagecore-3.1.1
+	>=dev-python/envisageplugins-3.1.1
+	>=dev-python/traitsgui-3.1.0
 	dev-python/configobj
 	dev-python/ipython
 	>=dev-python/numpy-1.1
 	>=sci-libs/vtk-5[python]
-	qt4? ( dev-python/PyQt4[opengl] )
-	wxwindows? ( dev-python/wxpython:2.8[opengl] )
-	!wxwindows? ( !qt4? ( dev-python/wxpython:2.8[opengl] ) )"
+	dev-python/wxpython:2.8[opengl]
+	qt4? ( dev-python/PyQt4[X,opengl] )"
 
 DEPEND="dev-python/setuptools
 	>=dev-python/numpy-1.1
 	>=sci-libs/vtk-5[python]"
-# doc needs X display
-#	doc? ( dev-python/setupdocs )"
+# doc and test need X display
+#	doc? ( dev-python/setupdocs )
+#	test? ( >=dev-python/nose-0.10.3 )
+RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
 
@@ -42,9 +44,10 @@ PYTHON_MODNAME="enthought"
 src_prepare() {
 	# remove docs and mlab which needs a display
 	sed -i \
-		-e "/self.run_command('build_docs')/d" \
-		-e "/self.run_command('mlab_ref')/d" \
+		-e "s/self.run_command('build_docs')/pass/" \
+		-e "/self.run_command('gen_docs')/d" \
 		setup.py || die
+#		-e "/self.run_command('mlab_ref')/d" \
 }
 
 src_compile() {
@@ -53,6 +56,10 @@ src_compile() {
 	#	${python} setup.py build_docs --formats=html,pdf \
 	#		|| die "doc building failed"
 	#fi
+}
+
+src_test() {
+	PYTHONPATH="$(ls -d build/lib*)" "${python}" setup.py test || die "tests failed"
 }
 
 src_install() {

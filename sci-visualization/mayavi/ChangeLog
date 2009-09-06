@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.10 2009/08/12 18:17:52 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.11 2009/09/06 16:18:09 arfrever Exp $
+
+*mayavi-3.3.0 (06 Sep 2009)
+
+  06 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -mayavi-3.1.0.ebuild, +mayavi-3.3.0.ebuild:
+  Version bump.
 
   12 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> mayavi-3.2.0.ebuild:
   Removed wxwindows flag, since it is mandatory even with qt
