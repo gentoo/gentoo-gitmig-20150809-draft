@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.7.ebuild,v 1.7 2009/08/16 11:14:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-0.1.7.ebuild,v 1.8 2009/09/06 17:48:10 ssuominen Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ RDEPEND="${DEPEND}
 		>=media-gfx/imagemagick-6.2.4
 		>=media-video/mjpegtools-1.6.0
 		media-sound/vorbis-tools
-		virtual/mpg123"
+		media-sound/mpg123"
 
 need-kde 3.5
 
