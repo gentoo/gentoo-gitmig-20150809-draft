@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.1 2009/09/06 16:18:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.2 2009/09/06 17:37:00 arfrever Exp $
 
 EAPI="2"
 
@@ -47,7 +47,6 @@ src_prepare() {
 		-e "s/self.run_command('build_docs')/pass/" \
 		-e "/self.run_command('gen_docs')/d" \
 		setup.py || die
-#		-e "/self.run_command('mlab_ref')/d" \
 }
 
 src_compile() {
