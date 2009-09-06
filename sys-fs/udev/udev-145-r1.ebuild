@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.4 2009/09/06 09:32:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.5 2009/09/06 12:41:53 zzam Exp $
 
 EAPI="1"
 
@@ -37,7 +37,8 @@ DEPEND="${COMMON_DEPEND}
 
 RDEPEND="${COMMON_DEPEND}
 	!sys-apps/coldplug
-	!<sys-fs/device-mapper-1.02.19-r1
+	!<sys-fs/lvm2-2.02.45
+	!sys-fs/device-mapper
 	>=sys-apps/baselayout-1.12.5"
 
 if [[ ${PV} == "9999" ]]; then
@@ -50,7 +51,7 @@ if [[ ${PV} == "9999" ]]; then
 fi
 
 # required kernel options
-CONFIG_CHECK="~INOTIFY ~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
+CONFIG_CHECK="~INOTIFY_USER ~SIGNALFD ~!SYSFS_DEPRECATED ~!SYSFS_DEPRECATED_V2"
 
 # We need the lib/rcscripts/addon support
 PROVIDE="virtual/dev-manager"
@@ -188,13 +189,19 @@ src_install() {
 
 	into /
 	emake DESTDIR="${D}" install || die "make install failed"
+	# without this code, multilib-strict is angry
 	if [[ "$(get_libdir)" != "lib" ]]; then
-		# we can not just rename /lib to /lib64, because
-		# make install creates /lib64 and /lib
-		# without this code, multilib-strict is angry
-		mkdir -p "${D}/$(get_libdir)"
-		mv "${D}"/lib/* "${D}/$(get_libdir)/"
-		rmdir "${D}"/lib
+		# check if this code is needed, bug #281338
+		if [[ -d "${D}/lib" ]]; then
+			# we can not just rename /lib to /lib64, because
+			# make install creates /lib64 and /lib
+			einfo "Moving lib to $(get_libdir)"
+			mkdir -p "${D}/$(get_libdir)"
+			mv "${D}"/lib/* "${D}/$(get_libdir)/"
+			rmdir "${D}"/lib
+		else
+			einfo "There is no ${D}/lib, move code can be deleted."
+		fi
 	fi
 
 	exeinto "${udev_libexec_dir}"

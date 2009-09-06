@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.488 2009/09/06 09:32:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.489 2009/09/06 12:41:53 zzam Exp $
+
+  06 Sep 2009; Matthias Schwarzott <zzam@gentoo.org> udev-145-r1.ebuild:
+  Only execute the lib->lib64 move code if it is really needed, bug #281338.
+  Only test for INOTIFY_USER, bug #283763. Block older lvm2 versions and all
+  device-mapper versions, as the included udev-rules are too old and still
+  using vol_id, bug #283727.
 
   06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> udev-145-r1.ebuild:
   Missed one check.
