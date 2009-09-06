@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r4.ebuild,v 1.4 2009/07/27 19:31:11 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/driftnet-0.1.6-r4.ebuild,v 1.5 2009/09/06 17:58:32 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -62,14 +62,4 @@ src_install () {
 	chown root:wheel "${D}/usr/bin/driftnet"
 	chmod 750 "${D}/usr/bin/driftnet"
 	chmod u+s "${D}/usr/bin/driftnet"
-}
-
-pkg_postinst() {
-	if ! has_version 'virtual/mpg123' ; then
-		elog
-		elog "In case you want driftnet to be able to play"
-		elog "audio files found on the streams, you need to do:"
-		elog " # emerge mpg123"
-		elog
-	fi
 }
