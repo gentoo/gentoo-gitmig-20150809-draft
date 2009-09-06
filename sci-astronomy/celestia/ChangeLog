@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/celestia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.52 2009/08/13 00:38:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/celestia/ChangeLog,v 1.53 2009/09/06 18:24:05 bicatali Exp $
+
+  06 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  celestia-1.6.0.ebuild, +files/celestia-1.6.0-kde-3.5.patch:
+  Fixed when kde 3 when kde4 is installed, thanks to johannis, closing bug
+  #282829
 
   13 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org>
   celestia-1.6.0.ebuild, -files/celestia-1.6.0-as-needed.patch:
