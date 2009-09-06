@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.39.ebuild,v 1.1 2008/10/20 08:35:22 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/tp_smapi-0.39.ebuild,v 1.2 2009/09/06 21:13:35 robbat2 Exp $
 
-inherit linux-mod linux-info
+inherit linux-mod
 
 DESCRIPTION="IBM ThinkPad SMAPI BIOS driver"
 HOMEPAGE="http://tpctl.sourceforge.net/"
