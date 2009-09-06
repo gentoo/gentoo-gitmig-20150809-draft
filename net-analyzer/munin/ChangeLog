@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.28 2009/08/30 16:42:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.29 2009/09/06 16:59:47 maekke Exp $
+
+  06 Sep 2009; Markus Meier <maekke@gentoo.org> munin-1.3.4-r2.ebuild:
+  amd64/x86 stable, bug #282852
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> munin-1.3.4-r2.ebuild:
   ppc stable #282852
