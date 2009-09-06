@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.3 2009/09/06 09:26:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r1.ebuild,v 1.4 2009/09/06 09:32:46 robbat2 Exp $
 
 EAPI="1"
 
@@ -101,7 +101,7 @@ pkg_setup() {
 
 	KV_FULL_SRC=${KV_FULL}
 	get_running_version
-	udev_check_KV
+	KV_PATCH="${KV_PATCH%.*}" udev_check_KV
 	if [[ "$?" = "0" ]]; then
 		eerror
 		eerror "udev cannot be restarted after emerging,"
