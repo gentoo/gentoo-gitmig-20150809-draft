@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libhx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.14 2009/05/08 22:03:14 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhx/ChangeLog,v 1.15 2009/09/06 21:17:20 patrick Exp $
+
+*libhx-3.0.1 (06 Sep 2009)
+
+  06 Sep 2009; Patrick Lauer <patrick@gentoo.org> +libhx-3.0.1.ebuild:
+  Bump to 3.0.1, fixes #283872
 
   08 May 2009; Hanno Boeck <hanno@gentoo.org> libhx-2.7.ebuild:
   Don't install pdf doc twice, resolves #267696.
