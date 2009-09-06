@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11-r5.ebuild,v 1.6 2009/08/03 13:24:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp32ogg/mp32ogg-0.11-r5.ebuild,v 1.7 2009/09/06 17:54:34 ssuominen Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 sparc x86"
 IUSE=""
 
-RDEPEND="virtual/mpg123
+RDEPEND="media-sound/mpg123
 	dev-perl/MP3-Info
 	dev-perl/String-ShellQuote
 	media-sound/vorbis-tools"

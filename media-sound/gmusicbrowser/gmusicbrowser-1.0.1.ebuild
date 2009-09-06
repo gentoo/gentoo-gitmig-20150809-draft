@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.0.1.ebuild,v 1.1 2009/02/27 13:11:57 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gmusicbrowser/gmusicbrowser-1.0.1.ebuild,v 1.2 2009/09/06 17:57:15 ssuominen Exp $
 
 inherit fdo-mime
 
@@ -24,7 +24,8 @@ RDEPEND=">=dev-lang/perl-5.8
 	)
 	mplayer? ( media-video/mplayer )
 	!gstreamer? ( !mplayer? (
-		virtual/mpg123
+		media-sound/mpg123
+		media-sound/mpg321
 		media-sound/vorbis-tools
 		media-sound/flac123
 		media-sound/alsa-utils

@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.14 2009/08/14 08:24:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.82.ebuild,v 1.15 2009/09/06 17:53:40 ssuominen Exp $
 
 inherit gnome2 eutils
 
@@ -19,7 +19,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 	mad? ( media-sound/madplay )
 	vorbis? ( media-libs/libvorbis )
 	sox? ( media-sound/sox
-		virtual/mpg123 )
+		media-sound/mpg123 )
 	>=x11-libs/gtk+-2.2
 	>=dev-libs/glib-2.2
 	x11-libs/libXi

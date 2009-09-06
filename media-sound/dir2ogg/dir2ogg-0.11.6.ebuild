@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.6.ebuild,v 1.3 2009/06/14 14:54:00 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/dir2ogg-0.11.6.ebuild,v 1.4 2009/09/06 17:56:11 ssuominen Exp $
 
 inherit versionator
 
@@ -23,7 +23,8 @@ RDEPEND="dev-lang/python
 	aac? ( media-libs/faad2 media-video/mplayer )
 	cdparanoia? ( media-sound/cdparanoia )
 	mp3? ( || ( media-sound/lame
-		virtual/mpg123
+		media-sound/mpg123
+		media-sound/mpg321
 		media-video/mplayer ) )
 	wma? ( media-video/mplayer )"
 
