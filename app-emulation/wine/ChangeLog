@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.277 2009/09/06 14:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.278 2009/09/06 16:01:01 vapier Exp $
+
+  06 Sep 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.29.ebuild:
+  Use media-sound/mpg123 as we need the library as pointed out by Samuli
+  Suominen.
 
   06 Sep 2009; Mike Frysinger <vapier@gentoo.org> wine-1.1.27.ebuild,
   wine-1.1.28.ebuild, wine-1.1.29.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.29.ebuild,v 1.3 2009/09/06 14:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-1.1.29.ebuild,v 1.4 2009/09/06 16:01:01 vapier Exp $
 
 EAPI="2"
 
@@ -55,7 +55,7 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
 	lcms? ( media-libs/lcms )
-	mp3? ( virtual/mpg123 )
+	mp3? ( media-sound/mpg123 )
 	samba? ( >=net-fs/samba-3.0.25 )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
