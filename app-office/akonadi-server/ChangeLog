@@ -1,6 +1,13 @@
 # ChangeLog for app-office/akonadi-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.19 2009/09/01 17:29:10 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/akonadi-server/ChangeLog,v 1.20 2009/09/06 01:58:44 jmbsvicetto Exp $
+
+  06 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +akonadi-server-1.1.2.ebuild, akonadi-server-1.2.0.ebuild,
+  akonadi-server-1.2.1.ebuild:
+  Restored akonadi-server-1.1.2 to fix the breakage for alpha and ia64 and
+  droppped keywords for alpha and ia64 for akonadi-server-1.2.{0,1} given
+  the missing keywords for dev-libs/soprano dep.
 
 *akonadi-server-1.2.1 (01 Sep 2009)
 
