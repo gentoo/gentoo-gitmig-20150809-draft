@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/clustalw-2.0.11.ebuild,v 1.1 2009/04/28 23:57:43 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/clustalw/clustalw-2.0.11.ebuild,v 1.2 2009/09/06 05:01:43 darkside Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.clustal.org/download/current/${P}.tar.gz"
 
 LICENSE="clustalw"
 SLOT="2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 ~x86"
 IUSE=""
 
 src_install() {
