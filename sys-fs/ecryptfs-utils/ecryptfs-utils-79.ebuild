@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-75.ebuild,v 1.1 2009/05/02 18:30:04 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-79.ebuild,v 1.1 2009/09/06 00:30:56 arfrever Exp $
 
 EAPI="2"
 
-inherit eutils pam
+inherit flag-o-matic pam
 
 DESCRIPTION="eCryptfs userspace utilities"
 HOMEPAGE="http://launchpad.net/ecryptfs"
@@ -32,8 +32,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9.0
 	python? ( dev-lang/swig )"
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-fix_warnings.patch"
+pkg_setup() {
+	append-flags -D_FILE_OFFSET_BITS=64
 }
 
 src_configure() {
