@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.67 2009/09/06 23:31:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.68 2009/09/06 23:36:04 robbat2 Exp $
 #
 # Original author: John Mylchreest <johnm@gentoo.org>
 # Maintainer: kernel-misc@gentoo.org
@@ -358,12 +358,12 @@ kernel_is() {
 	local operator test value x=0 y=0 z=0
 
 	case ${1} in
-	  lt) operator="-lt"; shift;;
-	  gt) operator="-gt"; shift;;
-	  le) operator="-le"; shift;;
-	  ge) operator="-ge"; shift;;
-	  eq) operator="-eq"; shift;;
-	   *) operator="-eq";;
+	  -lt|lt) operator="-lt"; shift;;
+	  -gt|gt) operator="-gt"; shift;;
+	  -le|le) operator="-le"; shift;;
+	  -ge|ge) operator="-ge"; shift;;
+	  -eq|eq) operator="-eq"; shift;;
+	       *) operator="-eq";;
 	esac
 
 	for x in ${@}; do
