@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.1 2009/09/05 17:51:10 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.2 2009/09/06 14:55:35 mrpouet Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gnu/${PN}/${PV}/${P}.tar.bz2"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="agg cairo cygnal doc +ffmpeg gnome gstreamer gtk kde neon +nls nsplugin +opengl +sdl +speex video_cards_intel +zlib"
+IUSE="agg cairo cygnal doc +ffmpeg gnome gstreamer gtk kde +nls nsplugin +opengl +sdl +speex video_cards_intel +zlib"
 
 RDEPEND=">=dev-libs/boost-1.35.0
 	dev-libs/expat
@@ -43,8 +43,6 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	media-plugins/gst-plugins-ffmpeg
 	media-plugins/gst-plugins-mad
 	media-plugins/gst-plugins-meta
-	gnome? ( media-plugins/gst-plugins-gnomevfs )
-	neon? ( >=media-plugins/gst-plugins-neon-0.10.7 )
 	)
 	gtk? (
 	x11-libs/gtk+:2
@@ -61,7 +59,8 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+	gnome? ( app-text/rarian )"
 
 # For the inherit of kde4-base
 CMAKE_IN_TREE_BUILD=1
@@ -187,14 +186,12 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README || die "dodoc failed"
 }
 pkg_postinst() {
-	if use !ffmpeg && use !gstreamer || use gstreamer && ( use !gnome && use !neon ); then
+	if use !ffmpeg && use !gstreamer || use gstreamer && ( ! use gnome ); then
 		ewarn ""
 		ewarn "Gnash was built without a media handler and or http handler !"
 		ewarn ""
 		ewarn "If you want Gnash to support video then you will need to"
 		ewarn "rebuild Gnash with either the ffmpeg or gstreamer use flags set."
-		ewarn "If you use gstreamer you will also need to set one of"
-		ewarn "the two http handler use flags: gnome or neon."
 		ewarn ""
 	fi
 	ewarn "${PN} is still in heavy development"

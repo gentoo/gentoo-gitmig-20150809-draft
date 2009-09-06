@@ -8,7 +8,6 @@
 	</maintainer>
 	<use>
 	  <flag name='agg'>Rendering based on the Anti-Grain Geometry Rendering Engine library</flag>
-	  <flag name='neon'>Add support for <pkg>media-plugins/gst-plugins-neon</pkg> if gstreamer is enabled</flag>
-	  <flag name='cygnal'>nable building of the cygnal server</flag>
+	  <flag name='cygnal'>Enable building of the cygnal server</flag>
 	</use>
 </pkgmetadata>
