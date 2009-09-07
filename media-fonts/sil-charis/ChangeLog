@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-charis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-charis/ChangeLog,v 1.4 2009/06/28 11:31:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-charis/ChangeLog,v 1.5 2009/09/07 17:56:44 ranger Exp $
+
+  07 Sep 2009; Brent Baude <ranger@gentoo.org> sil-charis-4.106.ebuild:
+  Marking sil-charis-4.106 ppc64 for bug 283913
 
 *sil-charis-4.106 (28 Jun 2009)
 
