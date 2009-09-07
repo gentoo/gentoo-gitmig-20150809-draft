@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/thaifonts-scalable-0.4.10.ebuild,v 1.5 2009/08/02 10:26:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/thaifonts-scalable-0.4.10.ebuild,v 1.6 2009/09/07 21:47:32 dirtyepic Exp $
 
 inherit font
 
@@ -24,12 +24,11 @@ FONT_CONF=(	"${FONT_S}/etc/fonts/conf.avail/65-ttf-thai-tlwg.conf"
 		"${FONT_S}/etc/fonts/conf.avail/90-ttf-thai-tlwg-synthetic.conf" )
 
 pkg_postinst() {
-	elog "This font package comes with config files for fontconfig."
-	elog "To enable basic support for this font, do:"
-	elog "eselect fontconfig enable 65-ttf-thai-tlwg.conf"
-	elog "To make this font emulate the thai font of windows, do:"
-	elog "eselect fontconfig enable 90-ttf-thai-tlwg-synthetic.conf"
 	font_pkg_postinst
+	echo
+	elog "  65-ttf-thai-tlwg.conf enables basic support."
+	elog "  90-ttf-thai-tlwg-synthetic.conf emulates the Thai font of Windows."
+	echo
 }
 
 DOCS=""
