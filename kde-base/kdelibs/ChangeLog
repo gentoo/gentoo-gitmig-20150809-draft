@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.621 2009/09/01 18:55:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.622 2009/09/07 02:34:08 jmbsvicetto Exp $
+
+  07 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdelibs-4.3.1.ebuild:
+  Synced ebuild from the kde-testing overlay - thanks to Maciej Mrozowski
+  (reavertm).
+  [kde-base/kdelibs] Fixed bug 283700 (shared-mime-info version).
 
   01 Sep 2009; Alex Alexander <wired@gentoo.org>
   +files/dist/01_gentoo_set_xdg_menu_prefix.patch,
