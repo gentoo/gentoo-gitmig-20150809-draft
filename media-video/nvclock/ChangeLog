@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.36 2009/07/28 17:15:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.37 2009/09/07 18:21:38 jer Exp $
+
+*nvclock-0.8_beta4-r4 (07 Sep 2009)
+
+  07 Sep 2009; Jeroen Roovers <jer@gentoo.org> +nvclock-0.8_beta4-r4.ebuild:
+  No need for virtual/libc. Fix trivial spelling error. Make sure
+  --enable-nvcontrol is only set when either toolkit is in USE (bug
+  #265804).
 
   28 Jul 2009; Jeroen Roovers <jer@gentoo.org> -nvclock-0.8_beta2.ebuild,
   -nvclock-0.8_beta4.ebuild, -nvclock-0.8_beta4-r2.ebuild:
