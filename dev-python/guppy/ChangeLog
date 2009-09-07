@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/guppy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.9 2009/09/06 22:51:55 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/guppy/ChangeLog,v 1.10 2009/09/07 19:45:37 patrick Exp $
+
+*guppy-0.1.9 (07 Sep 2009)
+
+  07 Sep 2009; Patrick Lauer <patrick@gentoo.org> +guppy-0.1.9.ebuild:
+  Bump
 
   06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
   -files/guppy-0.1.3-skip-tests.patch:
