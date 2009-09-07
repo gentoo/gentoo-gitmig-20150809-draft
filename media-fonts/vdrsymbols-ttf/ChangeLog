@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/vdrsymbols-ttf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/ChangeLog,v 1.4 2009/04/27 15:22:00 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/ChangeLog,v 1.5 2009/09/07 19:36:17 dirtyepic Exp $
+
+  07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
+  -vdrsymbols-ttf-20080411.ebuild, vdrsymbols-ttf-20080905.ebuild:
+  Stable amd64, remove old.
 
   27 Apr 2009; Matthias Schwarzott <zzam@gentoo.org>
   vdrsymbols-ttf-20080905.ebuild:
