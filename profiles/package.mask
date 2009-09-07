@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10417 2009/09/07 10:59:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10418 2009/09/07 12:02:44 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -970,22 +970,6 @@ net-misc/sambasentinel
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
 #  on behalf of QA Team
 #
-# Multiple QA issues, unmaintained, see bug #252017
-#
-# Removal on 2009-09-07
-net-misc/netgo
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
-#  on behalf of QA Team
-#
-# Multiple QA issues, unmaintained, see bug #248384
-#
-# Removal on 2009-09-07
-sci-visualization/qmatplot
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
-#  on behalf of QA Team
-#
 # openais: Multiple issues, not installable on stable glibc
 # systems. ha-cluster team seems to be MIA, as well as wschlich who's
 # listed as maintainer.
@@ -1034,14 +1018,6 @@ app-office/koffice
 # broken opengl support, forces gcc's objc for no reason
 # masked until fixed (see bug #274092)
 =media-libs/tiff-3.8.2-r6
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (22 Jun 2009)
-# Unusable with kernel >= 2.6.24, pointess.
-#
-# Tracking with bug #199011.
-#
-# Pending removal 22 August 2009
-sys-apps/realtime-lsm
 
 # Romain Perier <mrpouet@gentoo.org> (20 Jun 2009)
 # A lot of changes into sources code
