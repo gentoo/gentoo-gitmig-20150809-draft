@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.24.ebuild,v 1.1 2009/03/31 21:26:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg2theora/ffmpeg2theora-0.24.ebuild,v 1.2 2009/09/07 09:06:29 hanno Exp $
 
 EAPI="2"
 
@@ -16,8 +16,8 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="
-	|| ( <media-video/ffmpeg-9999[vhook]
-		>=media-video/ffmpeg-9999 )
+	|| ( <media-video/ffmpeg-0.5_p19787[vhook]
+		>=media-video/ffmpeg-0.5_p19787 )
 	>=media-libs/libvorbis-1.1
 	>=media-libs/libogg-1.1
 	>=media-libs/libtheora-1.0_beta1[encode]
