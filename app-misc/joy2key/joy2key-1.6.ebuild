@@ -1,9 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.ebuild,v 1.23 2007/07/22 09:55:12 omp Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.ebuild,v 1.24 2009/09/07 15:44:52 vostorga Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -17,6 +14,7 @@ KEYWORDS="x86 amd64"
 IUSE="X"
 
 DEPEND="X? ( x11-libs/libX11 )"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -40,5 +38,5 @@ src_compile() {
 src_install() {
 	dobin joy2key
 	doman joy2key.1
-	dodoc README joy2keyrc.sample AUTHORS NEWS TODO
+	dodoc README joy2keyrc.sample rawscancodes AUTHORS NEWS TODO
 }

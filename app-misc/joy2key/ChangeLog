@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/joy2key
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.18 2008/05/14 11:12:02 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/ChangeLog,v 1.19 2009/09/07 15:44:52 vostorga Exp $
+
+  07 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> joy2key-1.6.ebuild,
+  joy2key-1.6.1.ebuild, joy2key-1.6.3.ebuild:
+  Adding rawscancodes to documentation, bug 283460 , fixing repoman warnings
 
 *joy2key-1.6.3 (14 May 2008)
 

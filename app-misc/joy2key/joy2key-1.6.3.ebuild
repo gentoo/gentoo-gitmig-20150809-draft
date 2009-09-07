@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.3.ebuild,v 1.2 2008/05/14 11:53:51 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joy2key/joy2key-1.6.3.ebuild,v 1.3 2009/09/07 15:44:52 vostorga Exp $
 
 DESCRIPTION="An application that translates joystick events to keyboard events"
 HOMEPAGE="http://sourceforge.net/projects/joy2key"
@@ -23,5 +23,5 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog joy2keyrc.sample README TODO
+	dodoc AUTHORS ChangeLog joy2keyrc.sample rawscancodes README TODO
 }
