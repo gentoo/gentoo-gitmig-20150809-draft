@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.5.0.ebuild,v 1.1 2009/08/29 22:05:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/httplib2-0.5.0.ebuild,v 1.2 2009/09/07 02:31:42 arfrever Exp $
 
 EAPI="2"
 
@@ -22,9 +22,10 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
+DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES="1"
+
 src_prepare() {
 	distutils_src_prepare
-	python_copy_sources
 
 	local dir
 	for dir in "${WORKDIR}/${P}-3"*; do
@@ -35,20 +36,8 @@ src_prepare() {
 	done
 }
 
-src_compile() {
-	building() {
-		echo "$(PYTHON)" setup.py build
-		"$(PYTHON)" setup.py build
-	}
-	python_execute_function -s building
-}
-
 src_install() {
-	installation() {
-		"$(PYTHON)" setup.py install --root="${D}" --no-compile
-	}
-	python_execute_function -s installation
-
+	distutils_src_install
 	dodoc README
 	newdoc "${WORKDIR}/${PN}-python3-${PV}/README" README-python3
 }
