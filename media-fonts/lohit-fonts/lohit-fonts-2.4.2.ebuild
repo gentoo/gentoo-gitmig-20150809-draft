@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/lohit-fonts-2.3.1.ebuild,v 1.1 2008/09/24 20:35:58 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/lohit-fonts-2.4.2.ebuild,v 1.1 2009/09/07 20:38:27 dirtyepic Exp $
 
 inherit font
 
@@ -11,16 +11,18 @@ FONT_SUFFIX="ttf"
 DESCRIPTION="The Lohit family of Indic fonts"
 HOMEPAGE="https://fedorahosted.org/lohit"
 LICENSE="GPL-2"
-SRC_URI="http://rbhalera.fedorapeople.org/released/lohit/${P}.tar.gz"
+SRC_URI="https://fedorahosted.org/releases/l/o/lohit/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
-DOCS="AUTHORS ChangeLog"
+DOCS="AUTHORS ChangeLog README"
 
 RESTRICT="test binchecks"
 
-src_compile() {
+src_install() {
+	FONT_CONF=( $(find "${FONT_S}" -name *.conf -print) )
 	find "${S}" -name "*.ttf" -exec cp "{}" . \;
+	font_src_install
 }
