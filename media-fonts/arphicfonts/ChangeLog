@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/arphicfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.47 2009/09/07 01:17:41 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arphicfonts/ChangeLog,v 1.48 2009/09/07 17:55:32 ranger Exp $
+
+  07 Sep 2009; Brent Baude <ranger@gentoo.org>
+  arphicfonts-0.2.20080216.1.ebuild:
+  Marking arphicfonts-0.2.20080216.1 ppc64 for bug 283909
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> -arphicfonts-0.1-r2.ebuild:
   Remove old.
