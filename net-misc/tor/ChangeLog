@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.179 2009/08/17 19:42:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.180 2009/09/07 11:23:31 fauli Exp $
+
+  07 Sep 2009; Christian Faulhammer <fauli@gentoo.org> files/tor.initd-r4:
+  respect CONFFILE variable in start calls, reported by Iome <frodone AT
+  gmail DOT com> in bug 283524
 
 *tor-0.2.1.19-r1 (17 Aug 2009)
 
