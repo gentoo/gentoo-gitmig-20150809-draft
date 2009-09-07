@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3237 2009/09/07 12:02:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3238 2009/09/07 15:17:38 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Unmasking net-misc/cgterm. All bugs have been fixed
 
   07 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Remove masks from packages gone from portage.
