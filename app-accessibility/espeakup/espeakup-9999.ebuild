@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.1 2009/07/22 01:36:32 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/espeakup-9999.ebuild,v 1.2 2009/09/07 23:31:32 williamh Exp $
 
 EGIT_REPO_URI="git://github.com/williamh/espeakup.git"
 inherit git
@@ -23,7 +23,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed."
+	emake DESTDIR="${D}" PREFIX=/usr install || die "Install failed."
 	dodoc README ToDo
 	newconfd "${FILESDIR}"/espeakup.confd espeakup
 	newinitd "${FILESDIR}"/espeakup.rc espeakup

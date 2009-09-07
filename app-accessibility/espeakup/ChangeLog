@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/espeakup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.14 2009/08/07 05:57:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/espeakup/ChangeLog,v 1.15 2009/09/07 23:31:32 williamh Exp $
+
+  07 Sep 2009; William Hubbs <williamh@gentoo.org> espeakup-9999.ebuild:
+  Updated prefix setting in the live ebuild.
 
   07 Aug 2009; William Hubbs <williamh@gentoo.org> -espeakup-0.60.ebuild:
   removed old version
