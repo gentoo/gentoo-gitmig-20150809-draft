@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.210 2009/09/04 17:06:31 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.211 2009/09/07 18:40:45 klausman Exp $
+
+  07 Sep 2009; Tobias Klausmann <klausman@gentoo.org>
+  asterisk-1.2.35.ebuild:
+  Stable on alpha, bug #283624
 
   04 Sep 2009; Alex Legler <a3li@gentoo.org> asterisk-1.2.35.ebuild:
   amd64 stable. Tested with USE="curl h323 pri speex ssl". Security Bug
