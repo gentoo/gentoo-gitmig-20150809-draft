@@ -1,6 +1,13 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.82 2009/09/07 09:37:51 grobian Exp $
+# $Id: ChangeLog,v 1.83 2009/09/07 18:48:21 grobian Exp $
+
+  07 Sep 2009; Fabian Groffen <grobian@gentoo.org>
+  +darwin/macos/10.6/x86/make.defaults, +darwin/macos/10.6/x86/package.mask,
+  +darwin/macos/10.6/x86/package.use.force,
+  +darwin/macos/10.6/x86/package.use.mask, +darwin/macos/10.6/x86/parent,
+  +darwin/macos/10.6/x86/use.mask:
+  Add 32-bits Intel profile for Snow Leopard
 
   07 Sep 2009; Fabian Groffen <grobian@gentoo.org>
   sunos/solaris/package.mask:
