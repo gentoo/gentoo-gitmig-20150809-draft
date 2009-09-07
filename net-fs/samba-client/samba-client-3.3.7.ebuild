@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.3.7.ebuild,v 1.1 2009/08/17 17:34:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.3.7.ebuild,v 1.2 2009/09/07 23:18:22 vostorga Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ DEPEND="!<net-fs/samba-3.3
 		zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )
 		caps? ( sys-libs/libcap )
 		cups? ( net-print/cups )
+		debug? ( dev-libs/dmalloc )
 		ldap? ( net-nds/openldap )
 		syslog? ( virtual/logger )
 		net-fs/samba-libs[caps?,cups?,ldap?,syslog?,winbind?]
