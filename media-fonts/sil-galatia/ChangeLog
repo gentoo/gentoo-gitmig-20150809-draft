@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-galatia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-galatia/ChangeLog,v 1.4 2009/09/07 02:16:00 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-galatia/ChangeLog,v 1.5 2009/09/07 17:57:18 ranger Exp $
+
+  07 Sep 2009; Brent Baude <ranger@gentoo.org> sil-galatia-2.01.ebuild:
+  Marking sil-galatia-2.01 ppc64 for bug 283918
 
 *sil-galatia-2.1 (07 Sep 2009)
 
