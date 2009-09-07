@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.183 2009/09/04 15:02:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.184 2009/09/07 11:36:41 scarabeus Exp $
+
+*ati-drivers-8.660 (07 Sep 2009)
+
+  07 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +ati-drivers-8.660.ebuild:
+  Add ati-drivers-8.660. Which should be 9.10 beta release. First pass,
+  require testing.
 
   04 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-9.8.ebuild:
