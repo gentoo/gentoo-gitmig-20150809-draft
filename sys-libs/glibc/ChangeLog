@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.639 2009/09/07 03:23:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.640 2009/09/07 04:24:18 vapier Exp $
+
+  07 Sep 2009; Mike Frysinger <vapier@gentoo.org>
+  glibc-2.9_p20081201-r3.ebuild, glibc-2.10.1.ebuild:
+  Block sys-kernel/ps3-sources as it has custom patches which breaks glibc
+  #271367 by Jean-Francis Roy.
 
   07 Sep 2009; Mike Frysinger <vapier@gentoo.org> glibc-2.10.1.ebuild:
   Include glibc ports addon again #283239 by Raúl Porcel.
