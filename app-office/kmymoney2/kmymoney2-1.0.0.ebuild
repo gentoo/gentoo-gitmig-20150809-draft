@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-1.0.0.ebuild,v 1.1 2009/08/19 16:10:48 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kmymoney2/kmymoney2-1.0.0.ebuild,v 1.2 2009/09/07 12:21:05 scarabeus Exp $
 
 EAPI="2"
 inherit kde
@@ -26,7 +26,10 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-util/cppunit-1.8.0 )"
 
 RDEPEND="${COMMON_DEPEND}
-	crypt? ( app-crypt/gnupg )"
+	crypt? (
+		app-crypt/gnupg
+		app-crypt/pinentry
+	)"
 
 need-kde 3.5
 
