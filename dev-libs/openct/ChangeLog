@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.77 2009/09/07 19:40:32 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.78 2009/09/07 21:12:20 maekke Exp $
+
+  07 Sep 2009; Markus Meier <maekke@gentoo.org> openct-0.6.17.ebuild:
+  amd64/x86 stable, bug #283061
 
   07 Sep 2009; Tobias Klausmann <klausman@gentoo.org> openct-0.6.17.ebuild:
   Stable on alpha, bug #283061
