@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.11 2009/08/29 23:15:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.12 2009/09/07 20:44:42 patrick Exp $
+
+*ply-3.3 (07 Sep 2009)
+
+  07 Sep 2009; Patrick Lauer <patrick@gentoo.org> +ply-3.3.ebuild:
+  Bump
 
 *ply-3.2 (29 Aug 2009)
 
