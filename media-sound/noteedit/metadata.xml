@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>sound</herd>
-  <use>
-    <flag name="kmid">Use KDE's kmid to play sound</flag>
-    <flag name="tse3">Use tse3 library to play/export sound</flag>
-  </use>
-</pkgmetadata>
