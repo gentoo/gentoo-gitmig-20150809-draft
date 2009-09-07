@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MooseX-Types-DateTime-ButMaintained
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-ButMaintained/ChangeLog,v 1.5 2009/08/25 19:05:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-ButMaintained/ChangeLog,v 1.6 2009/09/07 08:46:32 tove Exp $
+
+  07 Sep 2009; Torsten Veller <tove@gentoo.org>
+  -MooseX-Types-DateTime-ButMaintained-0.06.ebuild,
+  -MooseX-Types-DateTime-ButMaintained-0.08.ebuild:
+  Cleanup
 
 *MooseX-Types-DateTime-ButMaintained-0.09 (25 Aug 2009)
 

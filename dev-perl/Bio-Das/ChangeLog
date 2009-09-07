@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Bio-Das
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.24 2009/09/05 11:13:21 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Das/ChangeLog,v 1.25 2009/09/07 09:25:51 tove Exp $
+
+  07 Sep 2009; Torsten Veller <tove@gentoo.org> -Bio-Das-1.10.ebuild,
+  -Bio-Das-1.11.ebuild, -Bio-Das-1.12.ebuild:
+  Cleanup
 
 *Bio-Das-1.14 (05 Sep 2009)
 

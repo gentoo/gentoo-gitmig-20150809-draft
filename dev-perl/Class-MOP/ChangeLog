@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-MOP
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.23 2009/08/15 13:09:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-MOP/ChangeLog,v 1.24 2009/09/07 09:22:38 tove Exp $
+
+  07 Sep 2009; Torsten Veller <tove@gentoo.org> -Class-MOP-0.89.ebuild,
+  -Class-MOP-0.90.ebuild, -Class-MOP-0.91.ebuild:
+  Cleanup
 
 *Class-MOP-0.92 (15 Aug 2009)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Graph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.54 2009/06/11 19:28:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Graph/ChangeLog,v 1.55 2009/09/07 09:06:14 tove Exp $
+
+  07 Sep 2009; Torsten Veller <tove@gentoo.org> -Graph-0.84.ebuild:
+  Cleanup
 
   11 Jun 2009; Markus Meier <maekke@gentoo.org> Graph-0.91.ebuild:
   amd64 stable, bug #270589
