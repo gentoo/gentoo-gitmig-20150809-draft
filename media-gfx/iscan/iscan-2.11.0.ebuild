@@ -1,9 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.5 2009/08/14 00:05:08 vostorga Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.11.0.ebuild,v 1.6 2009/09/07 11:58:46 ssuominen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic autotools rpm
 
@@ -89,7 +86,7 @@ QA_TEXTRELS="
 	usr/lib/iscan/libesint41.so.2.0.0
 	usr/lib/iscan/libesint52.so.2.0.0"
 
-DEPEND="media-gfx/sane-backends
+RDEPEND="media-gfx/sane-backends
 	media-libs/libpng
 	media-libs/jpeg
 	>=sys-fs/udev-103
@@ -101,6 +98,7 @@ DEPEND="media-gfx/sane-backends
 			gimp? ( media-gfx/gimp )
 		)
 	)"
+DEPEND="${RDEPEND}"
 
 snapscan_firmware() {
 	local i
