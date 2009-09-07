@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.7.ebuild,v 1.1 2009/08/17 17:35:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.7.ebuild,v 1.2 2009/09/07 23:25:09 vostorga Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ DEPEND="!<net-fs/samba-3.3
 	zeroconf? ( !avahi? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) ) )
 	caps? ( sys-libs/libcap )
 	cups? ( net-print/cups )
+	debug? ( dev-libs/dmalloc )
 	ldap? ( net-nds/openldap )
 	syslog? ( virtual/logger )
 	net-fs/samba-libs[caps?,cluster?,cups?,ldap?,syslog?,winbind?]"
@@ -175,9 +176,9 @@ src_install() {
 
 	diropts -m0755
 	keepdir /var/{cache,log}/samba
-    keepdir /var/lib/samba/{netlogon,profiles}
-    keepdir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC,X64,IA64,COLOR}
-    keepdir /usr/$(get_libdir)/samba/{auth,pdb,rpc,idmap,nss_info,gpext}
+	keepdir /var/lib/samba/{netlogon,profiles}
+	keepdir /var/lib/samba/printers/{W32X86,WIN40,W32ALPHA,W32MIPS,W32PPC,X64,IA64,COLOR}
+	keepdir /usr/$(get_libdir)/samba/{auth,pdb,rpc,idmap,nss_info,gpext}
 
 	newconfd "${CONFDIR}/samba.confd" samba
 	newinitd "${CONFDIR}/samba.initd" samba
