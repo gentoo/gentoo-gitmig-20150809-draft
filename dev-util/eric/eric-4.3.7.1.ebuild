@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.5.ebuild,v 1.1 2009/07/12 10:08:16 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eric/eric-4.3.7.1.ebuild,v 1.1 2009/09/07 06:51:18 arfrever Exp $
 
 EAPI="2"
-NEED_PYTHON=2.4
-inherit python eutils
+NEED_PYTHON="2.4"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit eutils python
 
 MY_PN=${PN}4
 MY_P=${MY_PN}-${PV}
@@ -28,6 +30,8 @@ DEPEND="dev-python/PyQt4[svg,webkit,X]
 	>=dev-python/qscintilla-python-2.2[qt4]"
 RDEPEND="${DEPEND}"
 
+RESTRICT_PYTHON_ABIS="3*"
+
 S=${WORKDIR}/${MY_P}
 
 LANGS="cs de es fr ru tr"
@@ -35,19 +39,24 @@ LANGS="cs de es fr ru tr"
 python_version
 
 src_prepare() {
-	epatch "${FILESDIR}"/4.2.3-no-interactive.patch
+	epatch "${FILESDIR}/4.2.3-no-interactive.patch"
 }
 
 src_install() {
 	# Change qt dir to be located in ${D}
-	dodir /usr/share/qt4/
-	${python} install.py \
-		-z \
-		-b "/usr/bin" \
-		-i "${D}" \
-		-d "/usr/$(get_libdir)/python${PYVER}/site-packages" \
-		-c || die "python install.py failed"
+	dodir /usr/share/qt4
 
+	installation() {
+		"$(PYTHON)" install.py \
+			-z \
+			-b "/usr/bin" \
+			-i "${D}" \
+			-d "$(python_get_sitedir)" \
+			-c
+	}
+	python_execute_function installation
+
+	python_version
 	make_desktop_entry "eric4 --nosplash" \
 			eric4 \
 			"/usr/$(get_libdir)/python${PYVER}/site-packages/eric4/icons/default/eric.png" \
@@ -55,18 +64,19 @@ src_install() {
 }
 
 pkg_postinst() {
-	python_version
-	python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages/eric4{,plugins}
+	python_mod_optimize eric4{,config.py,plugins}
+
+	elog
 	elog "If you want to use eric4 with mod_python, have a look at"
 	elog "\"${ROOT}usr/$(get_libdir)/python${PYVER}/site-packages/eric4/patch_modpython.py\"."
 	elog
-	elog "The following packages will give eric extended functionality."
-	elog
-	elog "dev-python/pylint"
-	elog "dev-python/pysvn            (in sunrise overlay atm)"
+	elog "The following packages will give eric extended functionality:"
+	elog "  dev-python/pylint"
+	elog "  dev-python/pysvn"
 	elog
 	elog "This version has a plugin interface with plugin-autofetch from"
 	elog "the App itself. You may want to check those as well."
+	elog
 }
 
 pkg_postrm() {
