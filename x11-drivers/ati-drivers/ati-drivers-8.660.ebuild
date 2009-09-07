@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.660.ebuild,v 1.1 2009/09/07 11:36:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-8.660.ebuild,v 1.2 2009/09/07 11:38:10 scarabeus Exp $
 
 EAPI="2"
 
@@ -101,8 +101,8 @@ _check_kernel_config() {
 	fi
 
 	# kernel hook checking up latest allowed version
-	if kernel_is ge 2 6 31; then
-		eerror "Kernels newer then 2.6.30 are not supported by this driver"
+	if kernel_is ge 2 6 32; then
+		eerror "Kernels newer then 2.6.31 are not supported by this driver"
 		die "Downgrade your kernel"
 	fi
 
