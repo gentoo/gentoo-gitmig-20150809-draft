@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.7.1.ebuild,v 1.1 2009/07/26 15:49:06 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tint2/tint2-0.7.1.ebuild,v 1.2 2009/09/07 21:19:29 maekke Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="http://tint2.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="battery examples"
 
 RDEPEND="dev-libs/glib:2
