@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kstars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.132 2009/09/01 15:59:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kstars/ChangeLog,v 1.133 2009/09/07 11:08:00 scarabeus Exp $
+
+  07 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> kstars-4.3.1.ebuild,
+  metadata.xml:
+  Enable indi useflag now when we have libindi up-to-date in main tree.
 
 *kstars-4.3.1 (01 Sep 2009)
 
