@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.3 2009/07/02 19:28:06 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/icaclient/icaclient-11.0-r2.ebuild,v 1.4 2009/09/07 19:12:19 fauli Exp $
 
 inherit eutils multilib rpm
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.citrix.com/"
 # There is no direct download link from upstream, see pkg_nofetch()
 SRC_URI="ICAClient-11.0-1.i386.rpm"
 
-LICENSE="as-is"
+LICENSE="icaclient"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE="linguas_de linguas_ja"
