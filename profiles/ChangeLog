@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3234 2009/09/06 19:19:41 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3235 2009/09/07 07:24:33 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask FFmpeg snapshot.
 
   06 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Unmasking dev-libs/libredblack . ~arch ebuild fixed

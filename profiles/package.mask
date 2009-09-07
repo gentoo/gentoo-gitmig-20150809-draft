@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10415 2009/09/07 04:40:02 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10416 2009/09/07 07:24:33 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -36,10 +36,6 @@
 # and Gem Hunters also suffer from toolchain porting issues.
 games-puzzle/gemhun
 dev-games/kyra
-
-# Alexis Ballier <aballier@gentoo.org> (06 Sep 2009)
-# New snapshot, a couple of packages fail to build against this version
->=media-video/ffmpeg-0.5_p1
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (05 Sep 2009)
 # Replaced by net-zope/generator. Masked for deletion in 30 days.
