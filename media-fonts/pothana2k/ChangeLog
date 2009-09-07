@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/pothana2k
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.5 2008/06/23 06:58:38 wormo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pothana2k/ChangeLog,v 1.6 2009/09/07 21:33:45 dirtyepic Exp $
+
+  07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> pothana2k-2006-r1.ebuild:
+  Drop pkg_postinst message, handled by eclass now.
 
   23 Jun 2008; Stephanie Lockwood-Childs <wormo@gentoo.org>
   pothana2k-2006-r1.ebuild:

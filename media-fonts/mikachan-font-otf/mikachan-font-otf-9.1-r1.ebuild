@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/mikachan-font-otf-9.1-r1.ebuild,v 1.1 2009/02/21 13:49:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/mikachan-font-otf-9.1-r1.ebuild,v 1.2 2009/09/07 21:26:32 dirtyepic Exp $
 
 inherit font
 
@@ -21,13 +21,3 @@ FONT_S="${WORKDIR}/${P}"
 RESTRICT="strip binchecks"
 
 FONT_CONF=( "${FILESDIR}/60-mikachan_o.conf" )
-
-pkg_postinst() {
-	font_pkg_postinst
-
-	echo
-	elog "To use mikachan otf instead of the default font for sans, serif and"
-	elog "monospace, use:"
-	elog "   eselect fontconfig enable 60-mikachan_o.conf"
-	echo
-}
