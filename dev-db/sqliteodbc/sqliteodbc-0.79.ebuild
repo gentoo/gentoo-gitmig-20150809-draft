@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.79.ebuild,v 1.4 2009/07/13 23:04:29 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqliteodbc/sqliteodbc-0.79.ebuild,v 1.5 2009/09/07 22:23:26 arfrever Exp $
 
 inherit eutils autotools
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ch-werner.de/sqliteodbc/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="sqlite3 static"
+IUSE="sqlite static"
 
 DEPEND="
 	>=dev-db/sqlite-2.8.16
@@ -19,7 +19,7 @@ DEPEND="
 		>=dev-db/unixODBC-2.2
 		>=dev-db/libiodbc-3.5
 	)
-	sqlite3? ( >=dev-db/sqlite-3.5 )"
+	sqlite? ( >=dev-db/sqlite-3.5 )"
 RDEPEND=""
 
 src_unpack() {
