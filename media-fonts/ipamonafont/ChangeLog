@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ipamonafont
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.18 2009/02/07 14:41:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ipamonafont/ChangeLog,v 1.19 2009/09/07 01:46:06 dirtyepic Exp $
+
+  07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> -ipamonafont-1.0.3.ebuild,
+  -ipamonafont-1.0.5.ebuild:
+  Remove old.
 
   07 Feb 2009; Raúl Porcel <armin76@gentoo.org> ipamonafont-1.0.8.ebuild:
   arm/ia64/s390/sh stable wrt #253501
