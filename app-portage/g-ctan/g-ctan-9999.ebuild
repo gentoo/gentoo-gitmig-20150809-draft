@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-9999.ebuild,v 1.1 2009/09/02 16:41:07 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-9999.ebuild,v 1.2 2009/09/07 20:01:01 fauli Exp $
 
 EAPI=2
 
@@ -22,13 +22,5 @@ RDEPEND="app-arch/lzma-utils[-nocxx]
 	>=dev-libs/libpcre-0.7.6"
 
 src_install() {
-	dobin g-ctan
-
-	insinto /etc/g-ctan
-	doins g-ctan.conf
-
-	insinto /usr/share/g-ctan
-	doins modules/*
-
-	keepdir /var/cache/g-ctan/
+	emake DESTDIR="${D}" install
 }
