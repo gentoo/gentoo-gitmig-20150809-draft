@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.60 2009/09/05 16:45:35 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.61 2009/09/07 02:34:10 arfrever Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -27,6 +27,10 @@ esac
 DEPEND="virtual/python"
 RDEPEND="${DEPEND}"
 python="python"
+
+# @ECLASS-VARIABLE: DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES
+# @DESCRIPTION:
+# Set this to use separate source directories for each enabled version of Python.
 
 # @ECLASS-VARIABLE: DISTUTILS_GLOBAL_OPTIONS
 # @DESCRIPTION:
@@ -58,10 +62,18 @@ distutils_src_prepare() {
 		die "${FUNCNAME}() can be used only in src_prepare() phase"
 	fi
 
-	# remove ez_setup stuff to prevent packages
-	# from installing setuptools on their own
-	rm -rf ez_setup*
-	echo "def use_setuptools(*args, **kwargs): pass" > ez_setup.py
+	# Delete ez_setup files to prevent packages from installing
+	# setuptools on their own.
+	local ez_setup_py_existence
+	[[ -f ez_setup.py ]] && ez_setup_py_existence="1"
+	rm -fr ez_setup*
+	if [[ "${ez_setup_py_existence}" == "1" ]]; then
+		echo "def use_setuptools(*args, **kwargs): pass" > ez_setup.py
+	fi
+
+	if [[ -n "${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES}" ]]; then
+		python_copy_sources
+	fi
 }
 
 # @FUNCTION: distutils_src_compile
@@ -73,11 +85,19 @@ distutils_src_compile() {
 	fi
 
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-		building() {
-			echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" "$@"
-			"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" "$@"
-		}
-		python_execute_function building "$@"
+		if [[ -n "${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES}" ]]; then
+			building() {
+				echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build "$@"
+				"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build "$@"
+			}
+			python_execute_function -s building "$@"
+		else
+			building() {
+				echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" "$@"
+				"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" "$@"
+			}
+			python_execute_function building "$@"
+		fi
 	else
 		echo ${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build "$@"
 		${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build "$@" || die "Building failed"
@@ -100,18 +120,33 @@ distutils_src_install() {
 	python_need_rebuild
 
 	if ! has "${EAPI:-0}" 0 1 2 || [[ -n "${SUPPORT_PYTHON_ABIS}" ]]; then
-		installation() {
-			# need this for python-2.5 + setuptools in cases where
-			# a package uses distutils but does not install anything
-			# in site-packages. (eg. dev-java/java-config-2.x)
-			# - liquidx (14/08/2006)
-			pylibdir="$("$(PYTHON)" -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
-			[[ -n "${pylibdir}" ]] && dodir "${pylibdir}"
+		if [[ -n "${DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES}" ]]; then
+			installation() {
+				# need this for python-2.5 + setuptools in cases where
+				# a package uses distutils but does not install anything
+				# in site-packages. (eg. dev-java/java-config-2.x)
+				# - liquidx (14/08/2006)
+				pylibdir="$("$(PYTHON)" -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
+				[[ -n "${pylibdir}" ]] && dodir "${pylibdir}"
 
-			echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
-			"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
-		}
-		python_execute_function installation "$@"
+				echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" install --root="${D}" --no-compile "$@"
+				"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" install --root="${D}" --no-compile "$@"
+			}
+			python_execute_function -s installation "$@"
+		else
+			installation() {
+				# need this for python-2.5 + setuptools in cases where
+				# a package uses distutils but does not install anything
+				# in site-packages. (eg. dev-java/java-config-2.x)
+				# - liquidx (14/08/2006)
+				pylibdir="$("$(PYTHON)" -c 'from distutils.sysconfig import get_python_lib; print(get_python_lib())')"
+				[[ -n "${pylibdir}" ]] && dodir "${pylibdir}"
+
+				echo "$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
+				"$(PYTHON)" setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" build -b "build-${PYTHON_ABI}" install --root="${D}" --no-compile "$@"
+			}
+			python_execute_function installation "$@"
+		fi
 	else
 		# need this for python-2.5 + setuptools in cases where
 		# a package uses distutils but does not install anything
