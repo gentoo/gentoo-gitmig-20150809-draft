@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1-r3.ebuild,v 1.5 2009/07/08 20:44:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/awesome/awesome-3.2.1-r3.ebuild,v 1.6 2009/09/07 17:14:58 matsuu Exp $
 
 EAPI="2"
 inherit cmake-utils eutils
@@ -56,7 +56,6 @@ RDEPEND="${RDEPEND}
 		( media-gfx/imagemagick x11-apps/xwininfo )
 		media-gfx/xv
 		x11-misc/xsri
-		media-gfx/xli
 		x11-apps/xsetroot
 	)"
 #		media-gfx/qiv (media-gfx/pqiv doesn't work)
