@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.56.ebuild,v 1.1 2008/02/06 19:50:30 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ipy-0.56.ebuild,v 1.2 2009/09/07 21:18:01 maekke Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://cheeseshop.python.org/packages/source/I/IPy/${MY_P}.tar.gz"
 HOMEPAGE="http://software.inl.fr/trac/trac.cgi/wiki/IPy"
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
 IUSE="examples"
 
 S="${WORKDIR}/${MY_P}"

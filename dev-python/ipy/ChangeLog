@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.13 2009/09/06 22:49:52 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipy/ChangeLog,v 1.14 2009/09/07 21:18:01 maekke Exp $
+
+  07 Sep 2009; Markus Meier <maekke@gentoo.org> ipy-0.56.ebuild:
+  amd64/x86 stable, bug #283080
 
   06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
   -files/ipy-0.51-nosetuptools.diff:
