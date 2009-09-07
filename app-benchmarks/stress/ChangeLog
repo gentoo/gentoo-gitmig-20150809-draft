@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/stress
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.35 2009/05/17 18:33:17 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/stress/ChangeLog,v 1.36 2009/09/07 13:38:07 armin76 Exp $
+
+  07 Sep 2009; Raúl Porcel <armin76@gentoo.org> stress-1.0.0.ebuild:
+  Add ~arm wrt #282197
 
   17 May 2009; Tiago Cunha <tcunha@gentoo.org> stress-1.0.0.ebuild:
   - Use the patch from bug 261720 which:
