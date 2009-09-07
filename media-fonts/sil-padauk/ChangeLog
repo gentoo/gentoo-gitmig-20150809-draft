@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-padauk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.8 2009/03/20 13:49:24 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-padauk/ChangeLog,v 1.9 2009/09/07 02:25:28 dirtyepic Exp $
+
+  07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> -sil-padauk-2.1.ebuild:
+  Remove old.
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
