@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.17.ebuild,v 1.2 2009/08/28 21:48:01 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/nxnode-3.3.0.17.ebuild,v 1.3 2009/09/07 21:16:46 maekke Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="amd64? ( http://64.34.161.181/download/${MAJOR_PV}/Linux/nxnode-${FULL_
 
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* amd64 x86"
 IUSE="rdesktop vnc"
 RESTRICT="strip"
 
