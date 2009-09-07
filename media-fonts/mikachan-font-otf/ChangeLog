@@ -1,9 +1,6 @@
 # ChangeLog for media-fonts/mikachan-font-otf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.19 2009/09/07 21:29:13 dirtyepic Exp $
-
-  07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> ChangeLog:
-  Drop pkg_postinst message, handled by eclass now.
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-otf/ChangeLog,v 1.20 2009/09/07 21:34:39 dirtyepic Exp $
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
   mikachan-font-otf-9.1-r1.ebuild:
