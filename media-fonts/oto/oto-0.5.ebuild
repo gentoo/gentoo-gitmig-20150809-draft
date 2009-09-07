@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/oto-0.5.ebuild,v 1.1 2008/09/24 20:48:44 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/oto/oto-0.5.ebuild,v 1.2 2009/09/07 20:15:35 dirtyepic Exp $
 
 DESCRIPTION="Open Type Organizer"
 HOMEPAGE="http://sourceforge.net/projects/oto/"
@@ -11,15 +11,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
+RDEPEND=""
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
-src_install() {
-	make DESTDIR=${D} install || die
-
-	dodoc AUTHORS ChangeLog INSTALL NEWS README
-}
+DOCS=( AUTHORS ChangeLog INSTALL NEWS README )
