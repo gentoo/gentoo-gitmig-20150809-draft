@@ -1,48 +1,53 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.0.1.ebuild,v 1.1 2009/01/15 10:27:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/etsdevtools/etsdevtools-3.0.3.ebuild,v 1.1 2009/09/07 02:56:41 arfrever Exp $
 
-EAPI=2
+EAPI="2"
+
+NEED_PYTHON="2.5"
+SUPPORT_PYTHON_ABIS="1"
+
 inherit distutils
 
 MY_PN="ETSDevTools"
 MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Enthought Tool Suite to support Python development"
 HOMEPAGE="http://code.enthought.com/projects/ets_dev_tools.php"
-SRC_URI="http://pypi.python.org/packages/source/${MY_PN:0:1}/${MY_PN}/${MY_P}.tar.gz"
+SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples test wxwindows"
+IUSE="doc examples test wxwidgets"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 LICENSE="BSD"
 
 RDEPEND=">=dev-python/numpy-1.1
 	dev-python/docutils
-	dev-python/celementtree
-	dev-python/elementtree
-	dev-python/traitsgui
-	dev-python/nose
+	>=dev-python/traitsgui-3.1.0
+	>=dev-python/nose-0.10.3
 	dev-python/pyro
 	dev-python/reportlab
 	dev-python/testoob
 	x11-libs/libXtst
-	wxwindows? ( dev-python/wxpython )"
-
+	wxwidgets? ( dev-python/wxpython:2.8 )"
 DEPEND="dev-python/setuptools
 	>=dev-python/numpy-1.1
 	x11-libs/libXtst
 	test? ( >=dev-python/nose-0.10.3 )"
+RESTRICT_PYTHON_ABIS="2.4 3.*"
 
 S="${WORKDIR}/${MY_P}"
 
 PYTHON_MODNAME="enthought"
 
 src_prepare() {
-	sed -i -e "/self.run_command('build_docs')/d" setup.py || die
+	sed -e "s/self.run_command('build_docs')/pass/" -i setup.py || die
 }
 
 src_test() {
-	PYTHONPATH=$(dir -d build/lib*) ${python} setup.py test || die "tests failed"
+	testing() {
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+	}
+	python_execute_function testing
 }
 
 src_install() {
