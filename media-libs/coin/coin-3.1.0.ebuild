@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.1 2009/08/12 05:16:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/coin-3.1.0.ebuild,v 1.2 2009/09/07 01:26:27 vostorga Exp $
 
 EAPI=2
+
+inherit eutils
 
 MY_P=${P/c/C}
 S="${WORKDIR}/${MY_P}"
@@ -32,6 +34,10 @@ RDEPEND="media-libs/fontconfig
 DEPEND="${RDEPEND}
 		doc? ( app-doc/doxygen )
 		dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-javascript.patch"
+}
 
 src_configure() {
 	econf \

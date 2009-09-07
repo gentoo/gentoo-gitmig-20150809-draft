@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/coin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.25 2009/08/12 05:16:07 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.26 2009/09/07 01:26:27 vostorga Exp $
+
+  07 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> coin-3.1.0.ebuild,
+  +files/coin-3.1.0-javascript.patch:
+  Fixing javascript headers, patch thanks to Arttu Valo <arttuv69@gmail.com>
+  bug #281383
 
 *coin-3.1.0 (12 Aug 2009)
 
