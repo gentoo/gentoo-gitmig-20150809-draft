@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.155 2009/08/26 16:47:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.156 2009/09/07 05:10:50 mr_bones_ Exp $
+
+*wesnoth-1.6.5 (07 Sep 2009)
+
+  07 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +wesnoth-1.6.5.ebuild:
+  version bump
 
   26 Aug 2009; Raúl Porcel <armin76@gentoo.org> wesnoth-1.6.4.ebuild:
   sparc stable wrt #278981
