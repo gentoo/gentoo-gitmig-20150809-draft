@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.103.ebuild,v 1.8 2009/09/05 15:40:15 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus/culmus-0.103.ebuild,v 1.9 2009/09/07 21:15:29 dirtyepic Exp $
 
 inherit font
 
@@ -31,10 +31,4 @@ src_unpack() {
 	mv *.afm *.pfa "${S}"/
 	cd "${S}"
 	mv culmus.conf 65-culmus.conf
-}
-
-pkg_postinst() {
-	elog "This font contains support for fontconfig, which may make"
-	elog "it render more smoothly. To enable it, do:"
-	elog "eselect fontconfig enable 65-culmus.conf"
 }
