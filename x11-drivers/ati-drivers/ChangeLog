@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.185 2009/09/07 11:38:10 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.186 2009/09/07 12:50:16 scarabeus Exp $
+
+  07 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  ati-drivers-8.660.ebuild:
+  Fix slashing around FOLDER_PREFIX variable.
 
   07 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   ati-drivers-8.660.ebuild:
