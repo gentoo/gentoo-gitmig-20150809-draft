@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.3.1.ebuild,v 1.2 2009/08/25 11:16:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.3.1.ebuild,v 1.3 2009/09/07 15:20:50 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc +dpms +plugins"
 
-RDEPEND=">=dev-libs/dbus-glib-0.70
+COMMON_DEPEND=">=dev-libs/dbus-glib-0.70
 	>=dev-libs/glib-2.16:2
 	>=gnome-base/libglade-2
 	>=sys-apps/hal-0.5.6
@@ -25,7 +25,9 @@ RDEPEND=">=dev-libs/dbus-glib-0.70
 	>=xfce-base/xfconf-4.6
 	plugins? ( >=xfce-base/xfce4-panel-4.6 )
 	dpms? ( x11-libs/libXext )"
-DEPEND="${RDEPEND}
+RDEPEND="${COMMON_DEPEND}
+	gnome-base/librsvg"
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	sys-devel/gettext
