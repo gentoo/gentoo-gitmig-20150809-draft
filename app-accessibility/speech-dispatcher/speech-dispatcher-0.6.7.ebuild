@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.7 2009/09/06 20:32:06 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.8 2009/09/07 19:34:48 williamh Exp $
 
 EAPI="2"
 
-inherit eutils flag-o-matic
+inherit autotools eutils
 
 DESCRIPTION="speech-dispatcher speech synthesis interface"
 HOMEPAGE="http://www.freebsoft.org/speechd"
@@ -27,19 +27,22 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-getline.patch
+	epatch "${FILESDIR}"/${P}-gnu-src-modules.patch
+	eautoreconf
 	sed -i -e 's/\(SUBDIRS.*\)python/\1/' src/Makefile.in
 }
 
 src_configure() {
 	econf \
 	$(use_with alsa) \
+	$(use_with espeak) \
 	$(use_with flite) \
 	$(use_with pulseaudio pulse) \
 	$(use_with nas) || die "configure failed"
 }
 
 src_compile() {
-	append-cppflags -D_GNU_SOURCE
 	make all || die "make failed"
 }
 
