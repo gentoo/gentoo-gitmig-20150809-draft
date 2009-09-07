@@ -1,6 +1,13 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.31 2009/09/01 16:25:23 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.32 2009/09/07 02:25:27 jmbsvicetto Exp $
+
+  07 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  plasma-workspace-4.3.1.ebuild:
+  Synced ebuild from the kde-testing overlay - thanks to Maciej Mrozowski
+  (reavertm).
+  [kde-base/plasma-workspace] Fixed bug 283738 (missing dependency on
+  plasma-runtime.
 
 *plasma-workspace-4.3.1 (01 Sep 2009)
 
