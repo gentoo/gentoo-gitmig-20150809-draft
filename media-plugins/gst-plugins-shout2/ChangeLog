@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-shout2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.40 2009/08/23 05:54:53 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-shout2/ChangeLog,v 1.41 2009/09/07 05:21:50 tester Exp $
+
+*gst-plugins-shout2-0.10.16 (07 Sep 2009)
+
+  07 Sep 2009; Olivier Crête <tester@gentoo.org>
+  +gst-plugins-shout2-0.10.16.ebuild:
+  Version bump
 
 *gst-plugins-shout2-0.10.15 (23 Aug 2009)
 
