@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/himerge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.39 2009/07/17 15:44:10 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/himerge/ChangeLog,v 1.40 2009/09/07 01:22:24 araujo Exp $
+
+  07 Sep 2009; Luis F. Araujo <araujo@gentoo.org>
+  himerge-0.30.36.2-r1.ebuild, himerge-0.30.37.ebuild:
+  Hard dependency on gtk2hs-0.9.12.1
 
   17 Jul 2009; Luis F. Araujo <araujo@gentoo.org> -himerge-0.30.36.ebuild,
   himerge-0.30.37.ebuild:
