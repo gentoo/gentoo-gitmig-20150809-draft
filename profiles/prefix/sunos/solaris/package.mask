@@ -1,6 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.8 2009/09/05 16:12:59 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.9 2009/09/07 09:37:51 grobian Exp $
+
+# Fabian Groffen <grobian@gentoo.org> (07 Sep 2009)
+# pty.c:(.text+0xe1): undefined reference to `Panic'
+=sys-libs/readline-6.0*
 
 # Fabian Groffen <grobian@gentoo.org> (03 Sep 2009)
 # fails to compile, error: ‘struct msghdr’ has no member named ‘msg_controllen’
