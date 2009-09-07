@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.3.7.ebuild,v 1.1 2009/08/17 17:34:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.3.7.ebuild,v 1.2 2009/09/07 23:11:29 vostorga Exp $
 
 EAPI="2"
 
@@ -22,6 +22,7 @@ DEPEND="dev-libs/popt
 	caps? ( sys-libs/libcap )
 	cluster? ( dev-db/ctdb )
 	cups? ( net-print/cups )
+	debug? ( dev-libs/dmalloc )
 	ldap? ( net-nds/openldap )
 	pam? ( virtual/pam
 		winbind? ( dev-libs/iniparser ) )
