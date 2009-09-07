@@ -1,30 +1,41 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.1_rc2-r3.ebuild,v 1.5 2008/07/16 16:00:28 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.2a.ebuild,v 1.1 2009/09/07 16:46:32 voyageur Exp $
 
-inherit eutils flag-o-matic toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs autotools
 
-KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 
-IUSE="acl authfile clamav hardened ifsession ipv6 ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
+IUSE="acl authfile ban case clamav deflate hardened ifsession ipv6 kerberos ldap mysql ncurses nls noauthunix opensslcrypt pam postgres radius rewrite selinux shaper sitemisc softquota ssl tcpd vroot xinetd"
 
-SHAPER_VER="0.6.2"
-VROOT_VER="0.7.2"
+CASE_VER="0.3"
+CLAMAV_VER="0.11rc"
+DEFLATE_VER="0.3.3"
+MODGSS_VER="1.3.2"
+SHAPER_VER="0.6.5"
+VROOT_VER="0.8.3"
 
 DESCRIPTION="An advanced and very configurable FTP server."
+
 SRC_URI="ftp://ftp.proftpd.org/distrib/source/${P/_/}.tar.bz2
-		clamav? ( http://www.uglyboxindustries.com/mod_clamav_new.c http://www.uglyboxindustries.com/mod_clamav_new.html )
+		case? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-case-${CASE_VER}.tar.gz )
+		clamav? ( https://secure.thrallingpenguin.com/redmine/attachments/download/1/mod_clamav-${CLAMAV_VER}.tar.gz )
+		deflate? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-deflate-${DEFLATE_VER}.tar.gz )
+		kerberos? ( mirror://sourceforge/gssmod/mod_gss-${MODGSS_VER}.tar.gz )
 		shaper? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-shaper-${SHAPER_VER}.tar.gz )
 		vroot? ( http://www.castaglia.org/${PN}/modules/${PN}-mod-vroot-${VROOT_VER}.tar.gz )"
+
 HOMEPAGE="http://www.proftpd.org/
 		http://www.castaglia.org/proftpd/
-		http://www.uglyboxindustries.com/open-source.php"
+		http://www.thrallingpenguin.com/resources/mod_clamav.htm
+		http://gssmod.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 		clamav? ( app-antivirus/clamav )
+		kerberos? ( || ( <app-crypt/mit-krb5-1.7 app-crypt/heimdal ) )
 		ldap? ( >=net-nds/openldap-1.2.11 )
 		mysql? ( virtual/mysql )
 		ncurses? ( sys-libs/ncurses )
@@ -50,27 +61,44 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${P/_/}.tar.bz2
-
 	cd "${S}"
 
-	# Fix bugs #164612, #167003, #175082, #178866 and #181712
-	epatch "${FILESDIR}/${P}-bug164612.patch"
-	epatch "${FILESDIR}/${P}-bug167003.patch"
-	epatch "${FILESDIR}/${P}-bug175082.patch"
-	epatch "${FILESDIR}/${P}-bug178866.patch"
-	epatch "${FILESDIR}/${P}-bug181712.patch"
+	# Fix parallel build (committed upstream in 1.3.3rc1)
+	epatch "${FILESDIR}"/${PN}-1.3.2-parallel-build.patch
+	# Fix mysql include when both backends are enabled
+	epatch "${FILESDIR}"/${PN}-1.3.2-mysql-include.patch
+	# Do not use bundled libltdl when compiling mod_dso
+	epatch "${FILESDIR}"/${PN}-1.3.2-system-libltdl.patch
 
 	# Fix stripping of files
 	sed -e "s| @INSTALL_STRIP@||g" -i Make*
 
-	if use shaper ; then
-		unpack ${PN}-mod-shaper-${SHAPER_VER}.tar.gz
-		cp -f mod_shaper/mod_shaper.c contrib/
+	if use case ; then
+		unpack ${PN}-mod-case-${CASE_VER}.tar.gz
+		cp -f mod_case/mod_case.c contrib/
+		cp -f mod_case/mod_case.html doc/
 	fi
 
 	if use clamav ; then
-		cp -f "${DISTDIR}/mod_clamav_new.c" contrib/mod_clamav.c
-		cp -f "${DISTDIR}/mod_clamav_new.html" doc/mod_clamav.html
+		unpack mod_clamav-${CLAMAV_VER}.tar.gz
+		cp -f mod_clamav-${CLAMAV_VER}/mod_clamav.* contrib/
+		epatch mod_clamav-${CLAMAV_VER}/${PN}.patch
+	fi
+
+	if use deflate ; then
+		unpack ${PN}-mod-deflate-${DEFLATE_VER}.tar.gz
+		cp -f mod_deflate/mod_deflate.c contrib/
+		cp -f mod_deflate/mod_deflate.html doc/
+	fi
+
+	if use kerberos ; then
+		unpack mod_gss-${MODGSS_VER}.tar.gz
+	fi
+
+	if use shaper ; then
+		unpack ${PN}-mod-shaper-${SHAPER_VER}.tar.gz
+		cp -f mod_shaper/mod_shaper.c contrib/
+		cp -f mod_shaper/mod_shaper.html doc/
 	fi
 
 	if use vroot ; then
@@ -78,15 +106,27 @@ src_unpack() {
 		cp -f mod_vroot/mod_vroot.c contrib/
 		cp -f mod_vroot/mod_vroot.html doc/
 	fi
+
+	# Fix bug #221275
+	# extract custom PR_ macros from aclocal.m4 to acinclude.m4
+	# and delete the provided aclocal.m4 before running autoreconf
+	einfo "Extract custom m4 macros from aclocal.m4 ..."
+	sed -e '/libtool\.m4/q' aclocal.m4 > acinclude.m4
+	rm -f aclocal.m4
+
+	eautoreconf
 }
 
 src_compile() {
 	addpredict /etc/krb5.conf
-	local modules myconf
+	local modules myconf mylibs
 
-	modules="mod_ratio:mod_readme"
+	modules="mod_ratio:mod_readme:mod_ctrls_admin"
 	use acl && modules="${modules}:mod_facl"
+	use ban && modules="${modules}:mod_ban"
+	use case && modules="${modules}:mod_case"
 	use clamav && modules="${modules}:mod_clamav"
+	use deflate && modules="${modules}:mod_deflate"
 	use pam && modules="${modules}:mod_auth_pam"
 	use radius && modules="${modules}:mod_radius"
 	use rewrite && modules="${modules}:mod_rewrite"
@@ -101,39 +141,37 @@ src_compile() {
 
 	if use ldap ; then
 		modules="${modules}:mod_ldap"
-		append-ldflags "-lresolv"
+		mylibs="${mylibs} -lresolv"
+		use ssl && CFLAGS="${CFLAGS} -DUSE_LDAP_TLS"
 	fi
 
 	if use opensslcrypt ; then
-		append-ldflags "-lcrypto"
 		myconf="${myconf} --enable-openssl --with-includes=/usr/include/openssl"
+		mylibs="${mylibs} -lcrypto"
 		CFLAGS="${CFLAGS} -DHAVE_OPENSSL"
 	fi
 
-	if use nls ; then
-		myconf="${myconf} --enable-nls"
-	fi
+	use nls && myconf="${myconf} --enable-nls"
 
-	if use mysql && use postgres ; then
-		ewarn "ProFTPD only supports either the MySQL or PostgreSQL modules."
-		ewarn "Presently this ebuild defaults to mysql. If you would like to"
-		ewarn "change the default behaviour, merge ProFTPD with:"
-		ewarn "USE='-mysql postgres' emerge proftpd"
-		epause 5
-	fi
-
-	if use mysql ; then
-		modules="${modules}:mod_sql:mod_sql_mysql"
-		myconf="${myconf} --with-includes=/usr/include/mysql"
-	elif use postgres ; then
-		modules="${modules}:mod_sql:mod_sql_postgres"
-		myconf="${myconf} --with-includes=/usr/include/postgresql"
+	if use mysql || use postgres ; then
+		modules="${modules}:mod_sql"
+		if use mysql ; then
+			modules="${modules}:mod_sql_mysql"
+			myconf="${myconf} --with-includes=/usr/include/mysql"
+		fi
+		if use postgres ; then
+			modules="${modules}:mod_sql_postgres"
+			myconf="${myconf} --with-includes=/usr/include/postgresql"
+		fi
 	fi
 
 	if use softquota ; then
 		modules="${modules}:mod_quotatab"
 		if use mysql || use postgres ; then
 			modules="${modules}:mod_quotatab_sql"
+		fi
+		if use radius ; then
+			modules="${modules}:mod_quotatab_radius"
 		fi
 		if use ldap ; then
 			modules="${modules}:mod_quotatab_file:mod_quotatab_ldap"
@@ -156,7 +194,24 @@ src_compile() {
 		myconf="${myconf} --enable-auth-unix"
 	fi
 
-	econf \
+	if use kerberos ; then
+		cd "${S}"/mod_gss-${MODGSS_VER}
+		# Generate source files for installed virtual/krb5 provider
+		if has_version app-crypt/mit-krb5; then
+			econf --enable-mit
+		else
+			econf --enable-heimdal
+		fi
+		cd "${S}"
+		# copy the generated files
+		cp -f mod_gss-${MODGSS_VER}/mod_gss.c contrib/
+		cp -f mod_gss-${MODGSS_VER}/mod_gss.h include/
+		cp -f mod_gss-${MODGSS_VER}/mod_auth_gss.c contrib/
+
+		myconf="${myconf} --enable-dso  --with-shared=mod_gss:mod_auth_gss"
+	fi
+
+	LIBS="${mylibs}" econf \
 		--sbindir=/usr/sbin \
 		--localstatedir=/var/run \
 		--sysconfdir=/etc/proftpd \
@@ -174,8 +229,6 @@ src_compile() {
 }
 
 src_install() {
-	# Note rundir needs to be specified to avoid sandbox violation
-	# on initial install. See Make.rules
 	emake DESTDIR="${D}" install || die "emake install failed"
 
 	keepdir /var/run/proftpd
@@ -184,8 +237,7 @@ src_install() {
 		COPYING CREDITS ChangeLog NEWS README* \
 		doc/license.txt
 	dohtml doc/*.html
-
-	use shaper && dohtml mod_shaper/mod_shaper.html
+	dohtml doc/howto/*.html
 
 	docinto rfc
 	dodoc doc/rfc/*.txt
@@ -210,6 +262,12 @@ pkg_postinst() {
 	ewarn "With the introduction of net-ftp/ftpbase the ftp user is now ftp."
 	ewarn "Remember to change that in the configuration file."
 	ewarn
+	if use mysql && use postgres ; then
+		ewarn "ProFTPD has been build with the MySQL and PostgreSQL modules."
+		ewarn "You can use the 'SQLBackend' directive to specify the used SQL"
+		ewarn "backend. Without this directive the default backend is MySQL."
+		ewarn
+	fi
 	if use clamav ; then
 		ewarn "mod_clamav was updated to a new version, which uses Clamd"
 		ewarn "only for virus scanning, so you'll have to set Clamd up"
