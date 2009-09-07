@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0.ebuild,v 1.1 2009/08/27 19:32:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0.ebuild,v 1.2 2009/09/07 12:42:31 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime multilib python
@@ -25,9 +25,8 @@ RDEPEND="dev-python/dbus-python
 	libsexy? ( dev-python/sexy-python )
 	hal? ( sys-apps/hal )
 	cddb? ( dev-python/cddb-py )"
-DEPEND="doc? ( dev-python/sphinx )
-	nls? ( dev-util/intltool
-		sys-devel/gettext )"
+DEPEND="nls? ( dev-util/intltool
+	sys-devel/gettext )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-Makefile.patch \
@@ -36,27 +35,18 @@ src_prepare() {
 
 src_compile() {
 	if use nls; then
-		emake locale || die "emake translations failed"
-	fi
-	if use doc; then
-		cd doc
-		emake html || die "emake html failed"
+		emake locale || die
 	fi
 }
 
 src_install() {
 	local _no_locale
-
 	use nls || _no_locale=_no_locale
 
 	emake PREFIX="/usr" LIBINSTALLDIR="/$(get_libdir)" DESTDIR="${D}" \
-		install${_no_locale} || die "emake install failed"
+		install${_no_locale} || die
 
-	dodoc README || die "dodoc failed"
-
-	if use doc; then
-		dohtml -r doc/_build/html/* || die "dohtml failed"
-	fi
+	dodoc README
 
 	insinto /usr/share/exaile/data
 	doins -r data/migrations || die "doins failed"
