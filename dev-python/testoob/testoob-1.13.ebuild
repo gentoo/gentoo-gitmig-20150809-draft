@@ -1,8 +1,11 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.13.ebuild,v 1.1 2006/12/04 19:03:40 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/testoob-1.13.ebuild,v 1.2 2009/09/07 02:50:12 arfrever Exp $
 
-inherit distutils eutils
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
+
+inherit distutils
 
 DESCRIPTION="Advanced Python testing framework"
 HOMEPAGE="http://testoob.sourceforge.net/"
@@ -13,16 +16,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~sparc ~x86"
 IUSE="pdf threads"
 
-DEPEND="virtual/python"
-RDEPEND="${DEPEND}
-	dev-python/4suite
+DEPEND=""
+RDEPEND="dev-python/4suite
 	pdf? ( dev-python/reportlab )
 	threads? ( dev-python/twisted )"
+RESTRICT_PYTHON_ABIS="3.*"
 
 DOCS="docs/*"
 
 src_test() {
-	distutils_python_version
-	PATH="src/testoob:${PATH}" PYTHONPATH="src" \
-		"${python}" tests/alltests.py || die "alltests.py failed"
+	testing() {
+		PATH="build-${PYTHON_ABI}/scripts-${PYTHON_ABI}:${PATH}" PYTHONPATH="build-${PYTHON_ABI}/lib" "$(PYTHON)" tests/alltests.py
+	}
+	python_execute_function testing
 }
