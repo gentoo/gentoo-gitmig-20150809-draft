@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gst-plugins-wavpack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-wavpack/ChangeLog,v 1.17 2009/08/05 04:55:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-wavpack/ChangeLog,v 1.18 2009/09/08 02:19:02 leio Exp $
+
+*gst-plugins-wavpack-0.10.15 (08 Sep 2009)
+
+  08 Sep 2009; Mart Raudsepp <leio@gentoo.org>
+  +gst-plugins-wavpack-0.10.15.ebuild:
+  Version bump. Adds preset interface
 
   05 Aug 2009; Mart Raudsepp <leio@gentoo.org>
   -gst-plugins-wavpack-0.10.8.ebuild, -gst-plugins-wavpack-0.10.11.ebuild:
