@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.7.0.ebuild,v 1.3 2009/09/08 06:36:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/openmsx/openmsx-0.7.2.ebuild,v 1.1 2009/09/08 06:36:46 mr_bones_ Exp $
 
 EAPI=2
-inherit toolchain-funcs games
+inherit games
 
 DESCRIPTION="MSX emulator that aims for perfection"
 HOMEPAGE="http://openmsx.sourceforge.net/"
@@ -25,7 +25,10 @@ DEPEND="dev-lang/tcl
 	jack? ( media-sound/jack-audio-connection-kit )"
 
 src_prepare() {
-	sed -i '/LINK_FLAGS+=/s/-s//' build/main.mk || die "sed failed"
+	sed -i \
+		-e '/LINK_FLAGS+=/s/-s//' \
+		build/main.mk \
+		|| die "sed failed"
 	sed -i \
 		-e "/DISABLED/s:$:$(use jack || echo JACK):" \
 		-e '/SYMLINK/s:true:false:' \
@@ -36,7 +39,6 @@ src_prepare() {
 
 src_compile() {
 	emake \
-		CXX="$(tc-getCXX)" \
 		CXXFLAGS="${CXXFLAGS}" \
 		INSTALL_SHARE_DIR="${GAMES_DATADIR}"/${PN} \
 		|| die "emake failed"
@@ -48,6 +50,6 @@ src_install() {
 		INSTALL_SHARE_DIR="${D}${GAMES_DATADIR}"/${PN} \
 		INSTALL_DOC_DIR="${D}"/usr/share/doc/${PF} \
 		install || die "emake install failed"
-	dodoc AUTHORS ChangeLog README
+	dodoc ChangeLog README
 	prepgamesdirs
 }
