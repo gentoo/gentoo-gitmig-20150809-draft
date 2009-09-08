@@ -1,0 +1,2 @@
+hardened/linux/amd64/10.0/desktop
+# Use eselect profile to switch into 10.0 profile.
