@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10419 2009/09/07 15:17:38 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10420 2009/09/08 06:40:28 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -673,7 +673,6 @@ dev-lisp/cl-yaclml-darcs
 media-tv/v4l-dvb-hg
 dev-embedded/sdcc-svn
 ~sys-fs/yaffs-utils-9999
-games-emulation/dosbox-cvs
 net-irc/irssi-svn
 ~sys-fs/yaffs2-utils-9999
 ~app-doc/repodoc-9999
