@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.2 2009/07/05 20:53:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.3 2009/09/08 17:20:20 ikelos Exp $
 
 EAPI="2"
 
@@ -61,7 +61,7 @@ RDEPEND="${DEPEND}
 		)
 	)"
 
-CONFIG_CHECK="PARPORT PPDEV"
+CONFIG_CHECK="~PARPORT ~PPDEV"
 ERROR_PARPORT="Please make sure parallel port support is enabled in your kernel (PARPORT and PPDEV)."
 
 pkg_setup() {
