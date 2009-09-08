@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libnfnetlink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.28 2009/07/26 18:55:14 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/ChangeLog,v 1.29 2009/09/08 17:03:42 ikelos Exp $
+
+  08 Sep 2009; Mike Auty <ikelos@gentoo.org> libnfnetlink-0.0.25.ebuild,
+  libnfnetlink-0.0.30.ebuild, libnfnetlink-0.0.33.ebuild,
+  libnfnetlink-0.0.38.ebuild, libnfnetlink-0.0.39.ebuild,
+  libnfnetlink-0.0.40.ebuild, libnfnetlink-0.0.41.ebuild,
+  libnfnetlink-1.0.0.ebuild:
+  Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
 
 *libnfnetlink-1.0.0 (26 Jul 2009)
 

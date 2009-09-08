@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-0.0.30.ebuild,v 1.6 2008/02/07 14:36:37 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfnetlink/libnfnetlink-0.0.30.ebuild,v 1.7 2009/09/08 17:03:42 ikelos Exp $
 
 inherit linux-info
 
@@ -25,9 +25,9 @@ pkg_setup() {
 
 	#netfilter core team has changed some option names with kernel 2.6.20
 	if kernel_is lt 2 6 20 ; then
-		CONFIG_CHECK="IP_NF_CONNTRACK_NETLINK"
+		CONFIG_CHECK="~IP_NF_CONNTRACK_NETLINK"
 	else
-		CONFIG_CHECK="NF_CT_NETLINK"
+		CONFIG_CHECK="~NF_CT_NETLINK"
 		ERROR_NF_CT_NETLINK="CONFIG_NF_CT_NETLINK:\t is not set when it should be. You can activate it in the Core Netfilter Configuration"
 	fi
 
