@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-ctan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.4 2009/09/08 17:54:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.5 2009/09/08 17:59:06 fauli Exp $
+
+  08 Sep 2009; Christian Faulhammer <fauli@gentoo.org> g-ctan-9999.ebuild:
+  depend on TeXLive 2008
 
   08 Sep 2009; Christian Faulhammer <fauli@gentoo.org> g-ctan-9999.ebuild:
   allow xz-utils along lzma-utils
