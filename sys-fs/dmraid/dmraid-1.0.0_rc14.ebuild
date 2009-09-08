@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc14.ebuild,v 1.3 2008/02/25 23:39:55 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc14.ebuild,v 1.4 2009/09/08 14:17:37 ssuominen Exp $
 
 inherit linux-info flag-o-matic
 
@@ -16,7 +16,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="static selinux"
 
-DEPEND="sys-fs/device-mapper
+DEPEND="|| ( >=sys-fs/lvm2-2.02.45
+		sys-fs/device-mapper )
 	selinux? ( sys-libs/libselinux
 		   sys-libs/libsepol )"
 S=${WORKDIR}/${PN}/${MY_PV}
