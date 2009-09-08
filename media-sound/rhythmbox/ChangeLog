@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.158 2009/09/06 11:43:41 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.159 2009/09/08 06:33:21 eva Exp $
+
+  08 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  rhythmbox-0.12.4.ebuild:
+  Fix a typo in udev flag activation, bug #284037.
 
 *rhythmbox-0.12.4 (06 Sep 2009)
 
