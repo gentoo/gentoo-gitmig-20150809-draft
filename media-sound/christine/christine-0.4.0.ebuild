@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.4.0.ebuild,v 1.1 2009/07/21 15:24:55 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/christine/christine-0.4.0.ebuild,v 1.2 2009/09/08 11:43:25 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils multilib python
@@ -20,7 +20,8 @@ RDEPEND="readline? ( sys-libs/readline )
 	dev-python/gconf-python
 	dev-python/gst-python:0.10
 	media-plugins/gst-plugins-meta:0.10
-	media-libs/mutagen"
+	media-libs/mutagen
+	>=dev-lang/python-2.5[sqlite]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext
