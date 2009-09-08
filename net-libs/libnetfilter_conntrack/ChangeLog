@@ -1,6 +1,21 @@
 # ChangeLog for net-libs/libnetfilter_conntrack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.28 2009/07/26 19:02:29 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_conntrack/ChangeLog,v 1.29 2009/09/08 16:50:56 ikelos Exp $
+
+  08 Sep 2009; Mike Auty <ikelos@gentoo.org>
+  libnetfilter_conntrack-0.0.50.ebuild,
+  libnetfilter_conntrack-0.0.75.ebuild,
+  libnetfilter_conntrack-0.0.80.ebuild,
+  libnetfilter_conntrack-0.0.81.ebuild,
+  libnetfilter_conntrack-0.0.82.ebuild,
+  libnetfilter_conntrack-0.0.89.ebuild,
+  libnetfilter_conntrack-0.0.94.ebuild,
+  libnetfilter_conntrack-0.0.96.ebuild,
+  libnetfilter_conntrack-0.0.97.ebuild,
+  libnetfilter_conntrack-0.0.98.ebuild,
+  libnetfilter_conntrack-0.0.99.ebuild,
+  libnetfilter_conntrack-0.0.100.ebuild:
+  Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
 
 *libnetfilter_conntrack-0.0.100 (26 Jul 2009)
 

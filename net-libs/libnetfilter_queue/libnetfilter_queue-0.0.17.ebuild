@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-0.0.17.ebuild,v 1.1 2009/05/26 00:22:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnetfilter_queue/libnetfilter_queue-0.0.17.ebuild,v 1.2 2009/09/08 16:58:19 ikelos Exp $
 
 inherit linux-info
 
@@ -18,7 +18,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig"
 RDEPEND=${COMMON_DEPEND}
 
-CONFIG_CHECK="NETFILTER_NETLINK_QUEUE"
+CONFIG_CHECK="~NETFILTER_NETLINK_QUEUE"
 
 pkg_setup() {
 	linux-info_pkg_setup
