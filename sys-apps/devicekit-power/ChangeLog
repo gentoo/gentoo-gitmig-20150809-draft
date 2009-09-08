@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/devicekit-power
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.1 2009/08/08 22:29:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/ChangeLog,v 1.2 2009/09/08 18:37:48 ikelos Exp $
+
+  08 Sep 2009; Mike Auty <ikelos@gentoo.org> devicekit-power-009.ebuild:
+  Making CONFIG_CHECK non-fatal for userland ebuilds, see bug 283320.
 
 *devicekit-power-009 (08 Aug 2009)
 

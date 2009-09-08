@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-009.ebuild,v 1.1 2009/08/08 22:29:30 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit-power/devicekit-power-009.ebuild,v 1.2 2009/09/08 18:37:48 ikelos Exp $
 
 EAPI="2"
 
@@ -36,7 +36,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 
 function check_battery() {
 	# check sysfs power interface, bug #263959
-	local CONFIG_CHECK="ACPI_SYSFS_POWER"
+	local CONFIG_CHECK="~ACPI_SYSFS_POWER"
 	check_extra_config
 }
 

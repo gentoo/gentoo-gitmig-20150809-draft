@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/pcmcia-cs-cis-3.2.8-r1.ebuild,v 1.5 2007/02/10 06:45:43 steev Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-cis/pcmcia-cs-cis-3.2.8-r1.ebuild,v 1.6 2009/09/08 18:42:38 ikelos Exp $
 
 inherit linux-info
 
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="|| ( >=sys-fs/udev-096 >=sys-apps/hotplug-20040920 )
 		!sys-apps/pcmcia-cs"
 
-CONFIG_CHECK="PCMCIA_LOAD_CIS"
+CONFIG_CHECK="~PCMCIA_LOAD_CIS"
 ERROR_PCMCIA_LOAD_CIS="${P} requires support for loading CIS updates from userspace (CONFIG_PCMCIA_LOAD_CIS)"
 
 src_compile () {
