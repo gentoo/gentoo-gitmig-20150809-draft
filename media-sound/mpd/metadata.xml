@@ -7,7 +7,7 @@
 	<name>Christoph Mende</name>
   </maintainer>
   <use>
-	<flag name="cdio">Use libcdio for CD support</flag>
+	<flag name="cdio">Use libcdio for ISO9660 parsing support</flag>
 	<flag name="cue">Support CUE Sheet Parser Library</flag>
 	<flag name="curl">Support for web stream listening</flag>
 	<flag name="fifo">Support writing audio to a FIFO</flag>
