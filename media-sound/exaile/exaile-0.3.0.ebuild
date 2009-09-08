@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0.ebuild,v 1.2 2009/09/07 12:42:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/exaile-0.3.0.ebuild,v 1.3 2009/09/08 11:42:49 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime multilib python
@@ -12,7 +12,7 @@ SRC_URI="http://www.launchpad.net/${PN}/${PV}/${PV}/+download/${P}.tar.gz"
 LICENSE="GPL-2 GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="cddb doc hal libnotify +libsexy nls"
+IUSE="cddb hal libnotify +libsexy nls"
 
 RDEPEND="dev-python/dbus-python
 	>=media-libs/mutagen-1.10
