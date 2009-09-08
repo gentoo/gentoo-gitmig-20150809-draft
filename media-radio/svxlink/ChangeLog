@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/svxlink
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.9 2009/07/24 09:58:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/svxlink/ChangeLog,v 1.10 2009/09/08 23:25:10 vostorga Exp $
+
+*svxlink-090426 (08 Sep 2009)
+
+  08 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> +svxlink-090426.ebuild,
+  +files/svxlink-090426-gcc44.patch:
+  Version bump to 090426 , patch thanks to Thomas Beierlein <tb@forth-ev.de>
+  bug 279699
 
   24 Jul 2009; Mounir Lamouri <volkmar@gentoo.org>
   -svxlink-080102-r1.ebuild:
