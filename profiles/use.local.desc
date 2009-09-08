@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4795 2009/09/08 15:47:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4796 2009/09/08 16:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2167,14 +2167,21 @@ net-ftp/ftpcube:sftp - Enable sftp connection support
 net-ftp/proftpd:authfile - Enable support for the auth-file module
 net-ftp/proftpd:ban - Enable support for the mod_ban module
 net-ftp/proftpd:case - Enable support for the mod_case module
+net-ftp/proftpd:ctrls - Enable support for the mod_ctrls and mod_ctrls_admin modules
 net-ftp/proftpd:deflate - Enable support for the mod_deflate module
+net-ftp/proftpd:exec - Enable support for the mod_exec module. WARNING: this could be a security risk
+net-ftp/proftpd:ident - Enable support for the mod_ident module
 net-ftp/proftpd:ifsession - Enable support for the ifsession module
 net-ftp/proftpd:noauthunix - Disable support for the auth-unix module
 net-ftp/proftpd:opensslcrypt - Enable support for OpenSSL crypto
+net-ftp/proftpd:ratio - Enable support for the mod_ratio module
+net-ftp/proftpd:readme - Enable support for the mod_readme module
 net-ftp/proftpd:rewrite - Enable support for the rewrite module
+net-ftp/proftpd:sftp - Enable support for the mod_sftp module and optionally mod_sftp_sql and mod_sftp_pam if matching USE flags are enabled
 net-ftp/proftpd:shaper - Enable support for the mod_shaper module
 net-ftp/proftpd:sitemisc - Enable support for the sitemisc module
 net-ftp/proftpd:softquota - Enable support for the quotatab module
+net-ftp/proftpd:trace - Build with trace support. Should not be enabled on production servers
 net-ftp/proftpd:vroot - Enable support for the virtual root module
 net-ftp/pure-ftpd:anondel - Permit anonymous to delete files
 net-ftp/pure-ftpd:anonperm - Permit anonymous to change file permissions
