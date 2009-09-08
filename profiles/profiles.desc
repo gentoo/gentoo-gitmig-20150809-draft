@@ -213,11 +213,12 @@ x86		selinux/v2refpolicy/x86/server			dev
 #x86		uclibc/x86/hardened/2.4				dev
 
 # hardened multiarch profiles
-amd64		hardened/linux/amd64/10.0			stable
-amd64		hardened/linux/amd64/10.0/no-multilib		dev
-ppc		hardened/linux/powerpc/ppc32/10.0		dev
-ppc64		hardened/linux/powerpc/ppc64/10.0		dev
-x86		hardened/linux/x86/10.0				stable
+amd64		hardened/linux/amd64/10.0				stable
+amd64		hardened/linux/amd64/10.0/no-multilib			dev
+ppc		hardened/linux/powerpc/ppc32/10.0			dev
+ppc		hardened/linux/powerpc/ppc64/10.0/32bit-userland	dev
+ppc64		hardened/linux/powerpc/ppc64/10.0/64bit-userland	dev
+x86		hardened/linux/x86/10.0					stable
 
 # These are Gentoo Prefix profiles, maintained by the Prefix team
 
