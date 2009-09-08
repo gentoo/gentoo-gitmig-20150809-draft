@@ -241,7 +241,7 @@ x86		selinux/v2refpolicy/x86/server			dev
 
 # hardened multiarch profiles
 amd64		hardened/linux/amd64/10.0			stable
-amd64		hardened/linux/amd64/10.0/no-multilib		stable
+amd64		hardened/linux/amd64/10.0/no-multilib		dev
 ppc		hardened/linux/powerpc/ppc32/10.0		dev
 ppc64		hardened/linux/powerpc/ppc64/10.0		dev
 x86		hardened/linux/x86/10.0				stable
