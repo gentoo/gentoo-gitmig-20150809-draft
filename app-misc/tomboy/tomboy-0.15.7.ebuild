@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.15.6.ebuild,v 1.1 2009/08/27 23:53:01 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.15.7.ebuild,v 1.1 2009/09/08 11:03:07 loki_val Exp $
 
 EAPI=2
 
