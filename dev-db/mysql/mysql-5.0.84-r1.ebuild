@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.84-r1.ebuild,v 1.1 2009/09/08 05:32:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-5.0.84-r1.ebuild,v 1.2 2009/09/08 12:49:03 robbat2 Exp $
 
-MY_EXTRAS_VER="20090904-0939Z"
+MY_EXTRAS_VER="20090908-1245Z"
 EAPI=2
 
 inherit toolchain-funcs mysql
