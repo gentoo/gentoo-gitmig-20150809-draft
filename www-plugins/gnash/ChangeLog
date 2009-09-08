@@ -1,6 +1,13 @@
 # ChangeLog for www-plugins/gnash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.5 2009/09/06 14:55:35 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/ChangeLog,v 1.6 2009/09/08 21:20:23 mrpouet Exp $
+
+  08 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  gnash-0.8.5.ebuild, +files/gnash-0.8.5-klash.patch,
+  +files/gnash-0.8.5-moc-qt4.patch:
+  Fix kde4 headers detection, moc and uic checks, Import patch from Linux
+  Alt to fix klash support, many thanks to Chi-Thanh Christopher Nguyen
+  <chithanh@cs.tu-berlin.de>.
 
   06 Sep 2009; Romain Perier (mrpouet) <mrpouet@gentoo.org>
   gnash-0.8.5.ebuild, metadata.xml:

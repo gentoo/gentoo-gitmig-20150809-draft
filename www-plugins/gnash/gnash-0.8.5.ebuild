@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.2 2009/09/06 14:55:35 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.3 2009/09/08 21:20:23 mrpouet Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -98,6 +98,16 @@ src_prepare() {
 	# Defines $(XPIDL) correctly using sdkdir variable from libxul.pc
 	epatch "${FILESDIR}"/${P}-xpidl-sdkdir.patch
 
+	# Resurect patch from bug #230287
+	epatch "${FILESDIR}"/${PN}-0.8.3-boost-dynamic-link.patch
+
+	# Adapted from Alt Linux to fix klash support properly
+	epatch "${FILESDIR}"/${P}-klash.patch
+
+	# Make gnash find moc and uic properly, upstream bug #25758,
+	# gentoo bug #283905
+	epatch "${FILESDIR}"/${P}-moc-qt4.patch
+
 	# Conflict headers with npapi.h from mozilla-sdk embedded stuffs and libxul-unstable header
 	# in case where xpcom (implicitly added with gtk) is enabled, we use the system header
 	if use gtk; then
@@ -115,12 +125,10 @@ src_configure() {
 	# Set kde and konqueror plugin directories.
 	if use kde; then
 		myconf="${myconf}
-			--with-qt4-incl=/usr/include/qt4
-			--with-qt4-lib=/usr/$(get_libdir)/qt4
 			--with-kde4-incl=${KDEDIR}/include
 			--with-kde4-configdir=${KDEDIR}/share/config
 			--with-kde4-prefix=${KDEDIR}
-			--with-kde4-lib=${KDEDIR}/$(get_libdir)/kde4
+			--with-kde4-lib=${KDEDIR}/$(get_libdir)
 			--with-kde-appsdatadir=${KDEDIR}/share/apps/klash
 			--with-kde4-servicesdir=${KDEDIR}/share/services"
 		 fi
@@ -177,8 +185,9 @@ src_install() {
 
 	# Install kde konqueror plugin.
 	if use kde; then
-		cd "${S}/plugin/klash4"
+		pushd "${S}/plugin/klash4" >& /dev/null
 		emake DESTDIR="${D}" install-plugin || die "install kde plugins failed"
+		popd >& /dev/null
 	fi
 	# Create a symlink in /usr/$(get_libdir)/nsbrowser/plugins to the nsplugin install directory.
 	use nsplugin && inst_plugin /opt/netscape/plugins/libgnashplugin.so \
