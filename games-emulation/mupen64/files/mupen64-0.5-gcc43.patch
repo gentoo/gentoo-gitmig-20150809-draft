@@ -1,0 +1,76 @@
+--- r4300/interupt.c.old	2009-09-08 09:16:14.000000000 +0200
++++ r4300/interupt.c	2009-09-08 09:16:33.000000000 +0200
+@@ -428,7 +428,7 @@
+ 	PIF_RAMb[0x3F] = 0x0;
+ 	remove_interupt_event();
+ 	MI_register.mi_intr_reg |= 0x02;
+-	si_register.si_status |= 0x1000;
++	si_register._si_status |= 0x1000;
+ 	if (MI_register.mi_intr_reg & MI_register.mi_intr_mask_reg)
+ 	  Cause = (Cause | 0x400) & 0xFFFFFF83;
+ 	else
+--- memory/memory.c.old	2009-09-08 09:45:28.000000000 +0200
++++ memory/memory.c	2009-09-08 09:45:47.000000000 +0200
+@@ -833,13 +833,13 @@
+    si_register.si_dram_addr = 0;
+    si_register.si_pif_addr_rd64b = 0;
+    si_register.si_pif_addr_wr64b = 0;
+-   si_register.si_status = 0;
++   si_register._si_status = 0;
+    readsi[0x0] = &si_register.si_dram_addr;
+    readsi[0x4] = &si_register.si_pif_addr_rd64b;
+    readsi[0x8] = &trash;
+    readsi[0x10] = &si_register.si_pif_addr_wr64b;
+    readsi[0x14] = &trash;
+-   readsi[0x18] = &si_register.si_status;
++   readsi[0x18] = &si_register._si_status;
+    
+    for (i=0x1c; i<0x10000; i++) readsi[i] = &trash;
+    for (i=0x481; i<0x800; i++)
+@@ -3306,7 +3306,7 @@
+ 	break;
+       case 0x18:
+ 	MI_register.mi_intr_reg &= 0xFFFFFFFD;
+-	si_register.si_status &= ~0x1000;
++	si_register._si_status &= ~0x1000;
+ 	check_interupt();
+ 	return;
+ 	break;
+@@ -3348,7 +3348,7 @@
+       case 0x1a:
+       case 0x1b:
+ 	MI_register.mi_intr_reg &= 0xFFFFFFFD;
+-	si_register.si_status &= ~0x1000;
++	si_register._si_status &= ~0x1000;
+ 	check_interupt();
+ 	return;
+ 	break;
+@@ -3382,7 +3382,7 @@
+       case 0x18:
+       case 0x1a:
+ 	MI_register.mi_intr_reg &= 0xFFFFFFFD;
+-	si_register.si_status &= ~0x1000;
++	si_register._si_status &= ~0x1000;
+ 	check_interupt();
+ 	return;
+ 	break;
+@@ -3406,7 +3406,7 @@
+ 	break;
+       case 0x18:
+ 	MI_register.mi_intr_reg &= 0xFFFFFFFD;
+-	si_register.si_status &= ~0x1000;
++	si_register._si_status &= ~0x1000;
+ 	check_interupt();
+ 	return;
+ 	break;
+--- memory/memory.h.old	2009-09-08 09:45:33.000000000 +0200
++++ memory/memory.h	2009-09-08 09:46:14.000000000 +0200
+@@ -233,7 +233,7 @@
+    unsigned long si_dram_addr;
+    unsigned long si_pif_addr_rd64b;
+    unsigned long si_pif_addr_wr64b;
+-   unsigned long si_status;
++   unsigned long _si_status;
+ } SI_register;
+ 
+ extern RDRAM_register rdram_register;
