@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.1.ebuild,v 1.1 2009/08/29 09:34:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/bugzilla-3.4.1.ebuild,v 1.2 2009/09/08 11:01:15 robbat2 Exp $
 
 EAPI="2"
 
@@ -24,6 +24,7 @@ RDEPEND="
 	>=dev-perl/DBI-1.601
 	>=dev-perl/DateTime-0.50
 	>=dev-perl/DateTime-Locale-0.43
+	>=dev-perl/DateTime-TimeZone-0.71
 	>=dev-perl/URI-1.38
 	>=dev-perl/Email-MIME-1.861
 	>=dev-perl/Email-MIME-Encodings-1.313
