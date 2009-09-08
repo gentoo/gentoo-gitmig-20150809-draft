@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-9999.ebuild,v 1.3 2009/09/08 06:31:40 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-9999.ebuild,v 1.4 2009/09/08 17:54:21 fauli Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 DEPEND=""
-RDEPEND="app-arch/lzma-utils[-nocxx]
+RDEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils[-nocxx] )
 	>=dev-libs/libpcre-0.7.6"
 
 src_install() {
