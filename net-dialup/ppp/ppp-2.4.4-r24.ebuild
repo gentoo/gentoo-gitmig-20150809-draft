@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r24.ebuild,v 1.2 2009/08/16 09:06:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.4-r24.ebuild,v 1.3 2009/09/08 12:39:01 robbat2 Exp $
 
 EAPI="2"
 
@@ -231,7 +231,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if get_version ; then
+	if linux-info_get_any_version ; then
 		echo
 		ewarn "If the following test report contains a missing kernel configuration option that you need,"
 		ewarn "you should reconfigure and rebuild your kernel before running pppd."
