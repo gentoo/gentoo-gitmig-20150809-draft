@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.39 2009/09/06 23:52:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.40 2009/09/08 13:16:21 darkside Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -20,7 +20,8 @@
 
 # Jeremy Olexa <darkside@gentoo.org> (06 Sep 2009)
 # Mask wine[mp3] because it fails to build. bug 283860
-app-emulation/wine mp3
+# Mask wine[gsm] because it fails to build. bug 283875
+app-emulation/wine gsm mp3
 
 # Dawid Węgliński <cla@gentoo.org>                                       
 # Mask amarok2 useflag for net-im/kadu
