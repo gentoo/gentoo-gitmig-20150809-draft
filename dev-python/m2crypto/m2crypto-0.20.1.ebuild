@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.1.ebuild,v 1.1 2009/09/07 19:55:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.20.1.ebuild,v 1.2 2009/09/08 02:19:30 arfrever Exp $
 
 EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils multilib portability
 
@@ -22,29 +23,31 @@ DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3.25
 	doc? ( dev-python/epydoc )
 	dev-python/setuptools"
+RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="${MY_PN}"
 
 S="${WORKDIR}/${MY_PN}-${PV}"
 
+DOCS="CHANGES"
+
+src_test() {
+	testing() {
+		PYTHONPATH="$(ls -d build-${PYTHON_ABI}/lib*)" "$(PYTHON)" setup.py build -b "build-${PYTHON_ABI}" test
+	}
+	python_execute_function testing
+}
+
 src_install() {
-	DOCS="CHANGES INSTALL"
 	distutils_src_install
 
 	if use doc; then
 		cd "${S}/demo"
 		treecopy . "${D}/usr/share/doc/${PF}/example"
 
-		einfo "Generating API docs as requested..."
+		einfo "Generating API documentation..."
 		cd "${S}/doc"
-		distutils_python_version
-		export PYTHONPATH="${PYTHONPATH}:${D}/usr/$(get_libdir)/python${PYVER}/site-packages"
-		einfo "${PYTHONPATH}"
-		epydoc --html --output=api --name=M2Crypto M2Crypto
+		PYTHONPATH="${PYTHONPATH}:${D}$(python_get_sitedir)" epydoc --html --output=api --name=M2Crypto M2Crypto
 	fi
 	dohtml -r *
-}
-
-src_test() {
-	"${python}" setup.py test || die "test failed"
 }
