@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.110 2009/09/06 20:50:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.111 2009/09/08 22:22:37 nixphoeni Exp $
+
+  08 Sep 2009; Joe Sapp <nixphoeni@gentoo.org>
+  -gdesklets-core-0.36.1.ebuild:
+  Removed non-revised 0.36.1 in favor of -r2 now that all arches are stable
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org>
   gdesklets-core-0.36.1-r2.ebuild:
