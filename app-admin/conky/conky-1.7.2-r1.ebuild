@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2_rc3.ebuild,v 1.1 2009/08/13 16:06:51 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/conky-1.7.2-r1.ebuild,v 1.1 2009/09/08 16:29:26 billie Exp $
 
 EAPI="2"
 
@@ -13,8 +13,9 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-3 BSD LGPL-2.1 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alsa apcupsd audacious debug hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
-# currently removed openmp
+IUSE="alsa apcupsd audacious curl debug hddtemp imlib iostats lua lua-cairo lua-imlib math moc mpd nano-syntax nvidia +portmon rss thinkpad truetype vim-syntax weather-metar weather-xoap wifi X"
+# currently removed openmp, see
+# http://git.omp.am/?p=conky.git;a=commit;h=670e9a0eb15ed3bc384ae0154d3c09de691e390c
 
 DEPEND_COMMON="
 	X? (
@@ -29,6 +30,7 @@ DEPEND_COMMON="
 	)
 	alsa? ( media-libs/alsa-lib )
 	audacious? ( >=media-sound/audacious-1.5 )
+	curl? ( net-misc/curl )
 	portmon? ( dev-libs/glib )
 	lua? ( >=dev-lang/lua-5.1 )
 	rss? ( dev-libs/libxml2 net-misc/curl dev-libs/glib )
@@ -54,9 +56,14 @@ src_configure() {
 	local myconf
 	if use X; then
 		myconf="--enable-x11 --enable-double-buffer --enable-xdamage"
-		myconf="${myconf} --enable-own-window $(use_enable truetype xft)"
+		myconf="${myconf} --enable-own-window"
+		myconf="${myconf} $(use_enable imlib imlib2) $(use_enable lua-cairo)"
+		myconf="${myconf} $(use_enable lua-imlib lua-imlib2)"
+		myconf="${myconf}  $(use_enable nvidia) $(use_enable truetype xft)"
 	else
 		myconf="--disable-x11 --disable-own-window"
+		myconf="--disable-imlib --disable-lua-cairo --disable-lua-imlib"
+		myconf="--disable-nvidia --disable-xft"
 	fi
 
 	econf \
@@ -64,18 +71,15 @@ src_configure() {
 		$(use_enable alsa) \
 		$(use_enable apcupsd) \
 		$(use_enable audacious) \
+		$(use_enable curl) \
 		$(use_enable debug) \
 		$(use_enable hddtemp) \
-		$(use_enable imlib imlib2) \
 		$(use_enable iostats) \
 		$(use_enable lua) \
-		$(use_enable lua-cairo) \
-		$(use_enable lua-imlib lua-imlib2) \
 		$(use_enable thinkpad ibm) \
 		$(use_enable math) \
 		$(use_enable moc) \
 		$(use_enable mpd) \
-		$(use_enable nvidia) \
 		$(use_enable portmon) \
 		$(use_enable rss) \
 		$(use_enable weather-metar) \

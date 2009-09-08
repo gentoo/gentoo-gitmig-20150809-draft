@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.118 2009/08/28 22:55:38 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.119 2009/09/08 16:29:26 billie Exp $
+
+*conky-1.7.2-r1 (08 Sep 2009)
+
+  08 Sep 2009; Pielmeier Daniel <billie@gentoo.org> -conky-1.7.2_rc2.ebuild,
+  -conky-1.7.2_rc3.ebuild, +conky-1.7.2-r1.ebuild:
+  Revision bump. Add curl use flag, thanks to jlec for pointing this out on
+  IRC. Rework configure. Remove old.
 
 *conky-1.7.2 (28 Aug 2009)
 
