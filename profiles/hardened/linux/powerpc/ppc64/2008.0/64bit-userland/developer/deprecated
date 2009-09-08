@@ -1,0 +1,2 @@
+hardened/linux/powerpc/ppc64/10.0/64bit-userland/developer
+# Use eselect profile to switch into 10.0 profile.
