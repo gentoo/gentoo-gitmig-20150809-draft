@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.5.ebuild,v 1.3 2008/04/21 18:28:23 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.5.ebuild,v 1.4 2009/09/08 18:09:17 ikelos Exp $
 
 inherit linux-info
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-CONFIG_CHECK="INOTIFY"
+CONFIG_CHECK="~INOTIFY"
 
 src_install() {
 	make prefix="${D}/usr" install || die "install failed"

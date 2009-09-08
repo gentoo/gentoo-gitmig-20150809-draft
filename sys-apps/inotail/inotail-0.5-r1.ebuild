@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.5-r1.ebuild,v 1.1 2009/02/09 17:09:19 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inotail/inotail-0.5-r1.ebuild,v 1.2 2009/09/08 18:09:17 ikelos Exp $
 
 inherit linux-info toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 DEPEND=""
 RDEPEND=""
 
-CONFIG_CHECK="INOTIFY"
+CONFIG_CHECK="~INOTIFY"
 
 src_unpack() {
 	unpack ${A}
