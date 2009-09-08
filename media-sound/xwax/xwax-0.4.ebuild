@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.4.ebuild,v 1.6 2009/06/07 04:46:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.4.ebuild,v 1.7 2009/09/08 12:14:03 nixphoeni Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -25,7 +25,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-fonts.patch"
 	# Remove the 'CFLAGS += -Wall -03' line from Makefile
 	# Add LDFLAGS to Makefile
-	sed -i -e 's:^CFLAGS:#CFLAGS:' \
+	sed -i -e 's:\(^CFLAGS.*\)-O[0-9]\(.*\):\1\2:' \
 		-e 's:\($(CC) .* $(DEVICE_LIBS)\):\1 $(LDFLAGS):' \
 		Makefile || die "sed failed"
 }

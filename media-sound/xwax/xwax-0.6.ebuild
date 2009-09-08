@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.6.ebuild,v 1.1 2009/09/08 00:29:54 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xwax/xwax-0.6.ebuild,v 1.2 2009/09/08 12:14:03 nixphoeni Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -22,10 +22,10 @@ RDEPEND="media-libs/libsdl
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	# Remove the forced optimization from 'CFLAGS' and the 'LDFLAGS' line
-	# from Makefile
-	sed -i -e 's:^CFLAGS.*:CFLAGS += -MMD:' \
-		-e 's:^LDFLAGS:#LDFLAGS:' \
+	# Remove the forced optimization from 'CFLAGS' and 'LDFLAGS' in
+	# the Makefile
+	sed -i -e 's:\(^CFLAGS.*\)-O[0-9]\(.*\):\1\2:' \
+		-e 's:\(^LDFLAGS.*\)-O[0-9]\(.*\):\1\2:' \
 		Makefile || die "sed failed"
 }
 
