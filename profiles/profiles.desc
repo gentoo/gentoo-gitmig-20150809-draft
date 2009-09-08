@@ -7,9 +7,6 @@
 #arch		profile_directory				status
 
 # Alpha Profiles
-#alpha		default-linux/alpha/2007.0			stable
-#alpha		default-linux/alpha/2007.0/desktop		stable
-#alpha		default-linux/alpha/2007.0/server		stable
 alpha		default/linux/alpha/2008.0			stable
 alpha		default/linux/alpha/2008.0/desktop		stable
 alpha		default/linux/alpha/2008.0/developer		stable
@@ -32,7 +29,6 @@ amd64           default/linux/amd64/10.0/no-multilib            dev
 amd64           default/linux/amd64/10.0/server                 stable
 
 # ARM Profiles
-#arm		default-linux/arm/2004.3			dev
 arm		default/linux/arm/2008.0			dev
 arm		default/linux/arm/2008.0/desktop		dev
 arm		default/linux/arm/2008.0/developer		dev
@@ -53,9 +49,6 @@ hppa            default/linux/hppa/10.0/developer               dev
 hppa            default/linux/hppa/10.0/server                  dev
 
 # IA64 Profiles
-#ia64		default-linux/ia64/2007.0			stable
-#ia64		default-linux/ia64/2007.0/desktop		dev
-#ia64		default-linux/ia64/2007.0/server		dev
 ia64		default/linux/ia64/2008.0			stable
 ia64		default/linux/ia64/2008.0/desktop		stable
 ia64		default/linux/ia64/2008.0/developer		stable
@@ -66,7 +59,6 @@ ia64            default/linux/ia64/10.0/developer               stable
 ia64            default/linux/ia64/10.0/server                  stable
 
 # M68K Profiles
-m68k		default-linux/m68k				dev
 m68k		default/linux/m68k/2008.0			dev
 m68k		default/linux/m68k/2008.0/desktop		dev
 m68k		default/linux/m68k/2008.0/developer		dev
@@ -106,16 +98,6 @@ mips            default/linux/mips/10.0/developer               dev
 mips            default/linux/mips/10.0/server                  dev
 
 # PPC32 Profiles
-#ppc		default-linux/ppc/ppc32/2007.0			stable
-#ppc		default-linux/ppc/ppc32/2007.0/desktop		stable
-#ppc		default-linux/ppc/ppc32/2007.0/G3		stable
-#ppc		default-linux/ppc/ppc32/2007.0/G3/Pegasos	stable
-#ppc		default-linux/ppc/ppc32/2007.0/G4		stable
-#ppc		default-linux/ppc/ppc32/2007.0/G4/Pegasos	stable
-#ppc		default-linux/ppc/ppc32/2007.0/desktop/G3	stable
-#ppc		default-linux/ppc/ppc32/2007.0/desktop/G3/Pegasos	stable
-#ppc		default-linux/ppc/ppc32/2007.0/desktop/G4	stable
-#ppc		default-linux/ppc/ppc32/2007.0/desktop/G4/Pegasos	stable
 ppc		default/linux/powerpc/ppc32/2008.0		stable
 ppc		default/linux/powerpc/ppc32/2008.0/desktop	stable
 ppc		default/linux/powerpc/ppc32/2008.0/developer	stable
@@ -126,8 +108,6 @@ ppc             default/linux/powerpc/ppc32/10.0/developer      stable
 ppc             default/linux/powerpc/ppc32/10.0/server         dev
 
 # PPC64 Profiles
-#ppc		default-linux/ppc/ppc64/2007.0/32bit-userland	dev
-#ppc64		default-linux/ppc/ppc64/2007.0/64bit-userland	dev
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/desktop	stable
 ppc		default/linux/powerpc/ppc64/2008.0/32bit-userland/developer	stable
@@ -162,11 +142,6 @@ sh              default/linux/sh/10.0/developer                 dev
 sh              default/linux/sh/10.0/server                    dev
 
 # SPARC Profiles
-#sparc		default-linux/sparc/sparc32/2006.1		dev
-#sparc		default-linux/sparc/sparc32/2006.1/2.4		dev
-#sparc		default-linux/sparc/sparc64/2007.0		stable
-#sparc		default-linux/sparc/sparc64/2007.0/desktop	stable
-#sparc		default-linux/sparc/sparc64/2007.0/server	stable
 sparc		default/linux/sparc/2008.0			stable
 sparc		default/linux/sparc/2008.0/desktop		stable
 sparc		default/linux/sparc/2008.0/developer		stable
@@ -177,8 +152,6 @@ sparc           default/linux/sparc/10.0/developer              stable
 sparc           default/linux/sparc/10.0/server                 stable
 
 # x86 Profiles
-#x86		default-linux/x86/2007.0			stable
-#x86		default-linux/x86/2007.0/desktop		stable
 x86		default/linux/x86/2008.0			stable
 x86		default/linux/x86/2008.0/desktop		stable
 x86		default/linux/x86/2008.0/developer		stable
