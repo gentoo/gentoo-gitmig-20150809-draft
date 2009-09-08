@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.8 2009/08/19 18:33:54 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.2.13.ebuild,v 1.9 2009/09/08 18:15:26 nyhm Exp $
 
 EAPI="2"
 
@@ -25,11 +25,15 @@ RDEPEND="${DEPEND}
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python-2.6.patch"
+}
+
+src_configure() {
 	python_version
 	tc-export CC
 	econf --datadir=/usr/$(get_libdir)/python${PYVER}/site-packages || \
 	die "econf failed"
 }
+
 src_compile() {
 	emake CFLAGS="-Wall ${CFLAGS}" || die "emake failed"
 }
