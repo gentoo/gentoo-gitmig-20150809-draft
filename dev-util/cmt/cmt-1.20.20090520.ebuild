@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20080222.ebuild,v 1.2 2008/10/13 22:09:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmt/cmt-1.20.20090520.ebuild,v 1.1 2009/09/09 23:06:25 bicatali Exp $
 
-inherit elisp-common toolchain-funcs versionator
+EAPI=2
+inherit eutils elisp-common toolchain-funcs versionator
 
 CPV=($(get_version_components ${PV}))
 CMT_PV=v${CPV[0]}r${CPV[1]}p${CPV[2]}
@@ -22,16 +23,20 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/CMT/${CMT_PV}"
 
-src_compile() {
+src_configure() {
 	cd "${S}"/mgr
 	./INSTALL
 	source setup.sh
+}
+
+src_compile() {
+	cd "${S}"/mgr
 	emake -j1 \
 		cpp="$(tc-getCXX)" \
 		cppflags="${CXXFLAGS}" \
-		|| die "make failed"
+		|| die "emake failed"
 
-	sed -i -e "s:${WORKDIR}:/usr/$(get_libdir):g" setup.*sh
+	sed -i -e "s:${WORKDIR}:/usr/$(get_libdir):g" setup.*sh || die
 	cd "${S}"
 	mv src/demo .
 	rm -f ${CMTBIN}/*.o
@@ -44,7 +49,7 @@ src_compile() {
 src_install() {
 	CMTDIR=/usr/$(get_libdir)/CMT/${CMT_PV}
 	dodir ${CMTDIR}
-	cp -pPR mgr src ${CMTBIN} "${D}"/${CMTDIR}
+	cp -pPR mgr src ${CMTBIN} "${D}"/${CMTDIR} || die
 	dodir /usr/bin
 	dosym ${CMTDIR}/${CMTBIN}/cmt.exe /usr/bin/cmt
 
