@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/qjson
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.1 2009/08/05 12:12:21 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qjson/ChangeLog,v 1.2 2009/09/09 20:33:56 wired Exp $
+
+*qjson-0.6.1 (09 Sep 2009)
+
+  09 Sep 2009; Alex Alexander <wired@gentoo.org> +qjson-0.6.1.ebuild:
+  version bump
 
 *qjson-0.6.0 (05 Aug 2009)
 
