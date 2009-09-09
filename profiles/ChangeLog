@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3244 2009/09/09 13:06:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3245 2009/09/09 15:52:29 zmedico Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2009; Zac Medico <zmedico@gentoo.org> license_groups:
+  Bug #283862 - Add MIT to the GPL-COMPATIBLE group. Thanks to Arne
+  Babenhauserheide <arne_bab@web.de>.
 
   09 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
   Cleanup removed packages — did I last rite monouml twice?
