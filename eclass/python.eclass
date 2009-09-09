@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.70 2009/09/05 17:30:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.71 2009/09/09 04:16:58 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -68,7 +68,7 @@ python_version() {
 }
 
 # @FUNCTION: PYTHON
-# @USAGE: [-a|--absolute-path] <Python_ABI="${PYTHON_ABI}">
+# @USAGE: [-a|--absolute-path] [--] <Python_ABI="${PYTHON_ABI}">
 # @DESCRIPTION:
 # Get Python interpreter filename for specified Python ABI. If Python_ABI argument
 # is ommitted, then PYTHON_ABI environment variable must be set and is used.
@@ -79,6 +79,9 @@ PYTHON() {
 		case "$1" in
 			-a|--absolute-path)
 				absolute_path="1"
+				;;
+			--)
+				break
 				;;
 			-*)
 				die "${FUNCNAME}(): Unrecognized option $1"
@@ -167,9 +170,14 @@ validate_PYTHON_ABIS() {
 		fi
 	fi
 
-	# Ensure that EPYTHON variable is respected.
 	local PYTHON_ABI
 	for PYTHON_ABI in ${PYTHON_ABIS}; do
+		# Ensure that appropriate Python version is installed.
+		if ! has_version "dev-lang/python:${PYTHON_ABI}"; then
+			die "dev-lang/python:${PYTHON_ABI} isn't installed"
+		fi
+
+		# Ensure that EPYTHON variable is respected.
 		if [[ "$(EPYTHON="$(PYTHON)" python -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')" != "${PYTHON_ABI}" ]]; then
 			die "'python' doesn't respect EPYTHON variable"
 		fi
@@ -177,11 +185,29 @@ validate_PYTHON_ABIS() {
 }
 
 # @FUNCTION: python_copy_sources
-# @USAGE: [directory]
+# @USAGE: [--no-link] [--] [directory]
 # @DESCRIPTION:
 # Copy unpacked sources of given package for each Python ABI.
 python_copy_sources() {
-	local dir dirs=() PYTHON_ABI
+	local dir dirs=() no_link="0" PYTHON_ABI
+
+	while (($#)); do
+		case "$1" in
+			--no-link)
+				no_link="1"
+				;;
+			--)
+				break
+				;;
+			-*)
+				die "${FUNCNAME}(): Unrecognized option '$1'"
+				;;
+			*)
+				break
+				;;
+		esac
+		shift
+	done
 
 	if [[ "$#" -eq "0" ]]; then
 		if [[ "${WORKDIR}" == "${S}" ]]; then
@@ -195,7 +221,11 @@ python_copy_sources() {
 	validate_PYTHON_ABIS
 	for PYTHON_ABI in ${PYTHON_ABIS}; do
 		for dir in "${dirs[@]}"; do
-			cp -lpr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
+			if [[ "${no_link}" == "1" ]]; then
+				cp -pr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
+			else
+				cp -lpr "${dir}" "${dir}-${PYTHON_ABI}" > /dev/null || die "Copying of sources failed"
+			fi
 		done
 	done
 }
@@ -216,7 +246,7 @@ python_set_build_dir_symlink() {
 }
 
 # @FUNCTION: python_execute_function
-# @USAGE: [--action-message message] [-d|--default-function] [--failure-message message] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] <function> [arguments]
+# @USAGE: [--action-message message] [-d|--default-function] [--failure-message message] [--nonfatal] [-q|--quiet] [-s|--separate-build-dirs] [--] <function> [arguments]
 # @DESCRIPTION:
 # Execute specified function for each value of PYTHON_ABIS, optionally passing additional
 # arguments. The specified function can use PYTHON_ABI and BUILDDIR variables.
@@ -244,6 +274,9 @@ python_execute_function() {
 				;;
 			-s|--separate-build-dirs)
 				separate_build_dirs="1"
+				;;
+			--)
+				break
 				;;
 			-*)
 				die "${FUNCNAME}(): Unrecognized option '$1'"
