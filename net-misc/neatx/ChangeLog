@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/neatx
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.1 2009/09/09 11:30:04 voyageur Exp $
+
+*neatx-0.3.1_p43 (09 Sep 2009)
+
+  09 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +neatx-0.3.1_p43.ebuild, +metadata.xml:
+  Initial commit from the NX overlay, ebuild by ikelos and me
+
