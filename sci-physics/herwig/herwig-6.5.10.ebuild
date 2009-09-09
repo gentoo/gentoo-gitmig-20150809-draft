@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.10.ebuild,v 1.1 2009/04/17 17:55:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/herwig/herwig-6.5.10.ebuild,v 1.2 2009/09/09 22:03:13 bicatali Exp $
 
 EAPI=2
-inherit versionator
+inherit versionator autotools
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
