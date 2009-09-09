@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/xpa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/ChangeLog,v 1.4 2009/01/09 22:41:48 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xpa/ChangeLog,v 1.5 2009/09/09 05:44:27 bicatali Exp $
+
+*xpa-2.1.10 (09 Sep 2009)
+
+  09 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> +xpa-2.1.10.ebuild,
+  metadata.xml:
+  Version bump, and added no-herd
 
   09 Jan 2009; Joseph Jezak <josejx@gentoo.org> xpa-2.1.8.ebuild:
   Marked ~ppc for bug #253299.
