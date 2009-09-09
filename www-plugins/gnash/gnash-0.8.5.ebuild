@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.4 2009/09/09 10:17:48 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.5 2009/09/09 10:35:30 mrpouet Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -56,7 +56,8 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	sdl? ( media-libs/libsdl[X] )
 	nsplugin? ( net-libs/xulrunner:1.9 )
 	speex? ( media-libs/speex[ogg] )
-	zlib? ( sys-libs/zlib )"
+	zlib? ( sys-libs/zlib )
+	>=sys-devel/libtool-2.2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
@@ -97,6 +98,10 @@ src_prepare() {
 
 	# Defines $(XPIDL) correctly using sdkdir variable from libxul.pc
 	epatch "${FILESDIR}"/${P}-xpidl-sdkdir.patch
+
+	# Use pkgconfig to determine XPCOM_IDL_DIR instead of non-portable construct.
+	# Fixes building against xulrunner-1.9.0, bug #284073.
+	epatch "${FILESDIR}"/${P}-xpcom-idldir.patch
 
 	# Resurect patch from bug #230287
 	epatch "${FILESDIR}"/${PN}-0.8.3-boost-dynamic-link.patch
