@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.316.ebuild,v 1.1 2009/09/09 18:05:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pike/pike-7.8.316.ebuild,v 1.2 2009/09/09 21:21:35 mr_bones_ Exp $
 
 EAPI="2"
 DESCRIPTION="Pike programming language and runtime"
@@ -10,7 +10,7 @@ SRC_URI="http://pike.ida.liu.se/pub/pike/all/${PV}/Pike-v${PV}.tar.gz"
 LICENSE="GPL-2 LGPL-2.1 MPL-1.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="bzip2 debug doc fftw gdbm glut gnome gtk hardened java jpeg kerberos mysql odbc opengl pcre pdf scanner sdl sqlite svg tiff truetype zlib"
+IUSE="bzip2 debug doc fftw gdbm glut gnome gtk hardened java jpeg kerberos mysql odbc opengl pcre pdf scanner sdl sqlite svg test tiff truetype zlib"
 
 DEPEND="<dev-libs/nettle-2
 	dev-libs/gmp
