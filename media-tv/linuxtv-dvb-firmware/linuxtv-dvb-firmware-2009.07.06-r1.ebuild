@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.07.06-r1.ebuild,v 1.1 2009/09/09 20:14:42 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.07.06-r1.ebuild,v 1.2 2009/09/09 21:41:04 billie Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -77,7 +77,7 @@ FW_FILES=(
 	"dvb-usb-vp702x-01.fw"
 	"dvb-usb-vp7045-01.fw"
 	"dvb-usb-wt220u-01.fw"
-	"dvb-dibusb-5.0.0.11.fw"
+	"dvb-usb-dibusb-5.0.0.11.fw"
 	"dvb-fe-or51211.fw"
 	"dvb-fe-or51132-qam.fw"
 	"dvb-fe-or51132-vsb.fw"
@@ -299,7 +299,6 @@ src_unpack() {
 	fi
 
 	use dvb_cards_mpc718 && mv Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip "Yuan MPC718 TV Tuner Card 2.13.10.1016.zip"
-	use dvb_cards_dibusb-usb1 && mv dvb-usb-dibusb-5.0.0.11.fw dvb-dibusb-5.0.0.11.fw
 	use dvb_cards_ttpci && mv dvb-ttpci-01.fw-fc2624 dvb-ttpci-01.fw
 
 	SCRIPT_V=${PV}
