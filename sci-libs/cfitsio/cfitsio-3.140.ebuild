@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.140.ebuild,v 1.1 2009/03/19 22:43:53 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/cfitsio-3.140.ebuild,v 1.2 2009/09/09 06:09:45 bicatali Exp $
 
 EAPI=2
-inherit eutils fortran autotools
+inherit eutils autotools
 
 DESCRIPTION="C and Fortran library for manipulating FITS files"
 HOMEPAGE="http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html"
@@ -19,13 +19,6 @@ RDEPEND=""
 
 S="${WORKDIR}/${PN}"
 
-pkg_setup() {
-	if use fortran; then
-		FORTRAN="gfortran g77 ifc"
-		fortran_pkg_setup
-	fi
-}
-
 src_prepare() {
 	# avoid internal cfortran
 	if use fortran; then
@@ -33,6 +26,7 @@ src_prepare() {
 			-e 's:"cfortran.h":<cfortran.h>:' \
 			f77_wrap.h || die "sed fortran failed"
 		mv cfortran.h cfortran.h.disabled
+		ln -s /usr/include/cfortran.h .
 	fi
 	epatch "${FILESDIR}"/${P}-autotools.patch
 	epatch "${FILESDIR}"/${P}-missing-include.patch
