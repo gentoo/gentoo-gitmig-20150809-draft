@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10426 2009/09/09 19:30:38 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10427 2009/09/09 21:00:02 loki_val Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1032,30 +1032,6 @@ media-libs/freeimage
 # Mike Pagano <mpagano@gentoo.org> (13 May 2009)
 # Masked for testing of ~ (tilde) unmasked packages
 >=app-portage/portpeek-1.8
-
-# Peter Alfredsen <loki_val@gentoo.org> (12 May 2009)
-# Masked because of API changes. Development version.
-#
-# Packages known to break:
-# app-text/xpdf
-# dev-tex/pdftex
-# dev-tex/luatex
-#
-# Highlights:
-# Colour management support
-# PNG support for pdftohtml
-# Annotations support got better
-=app-text/poppler-utils-0.11*
-=dev-libs/poppler-qt3-0.11*
-=dev-libs/poppler-qt4-0.11*
-=dev-libs/poppler-0.11*
-=dev-libs/poppler-glib-0.11*
-=virtual/poppler-utils-0.11*
-=virtual/poppler-qt3-0.11*
-=virtual/poppler-qt4-0.11*
-=virtual/poppler-0.11*
-=virtual/poppler-glib-0.11*
-=app-text/xpdf-3.02-r3
 
 # Lennart Kolmodin <kolmodin@gentoo.org> (10 May 2009)
 # Mark the haskell-platform, depends on other things masked for testing.
