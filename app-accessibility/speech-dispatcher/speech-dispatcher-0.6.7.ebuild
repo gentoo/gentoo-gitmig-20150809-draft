@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.8 2009/09/07 19:34:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/speech-dispatcher-0.6.7.ebuild,v 1.9 2009/09/09 13:56:12 williamh Exp $
 
 EAPI="2"
 
@@ -8,7 +8,8 @@ inherit autotools eutils
 
 DESCRIPTION="speech-dispatcher speech synthesis interface"
 HOMEPAGE="http://www.freebsoft.org/speechd"
-SRC_URI="http://www.freebsoft.org/pub/projects/speechd/${P}.tar.gz"
+SRC_URI="http://www.freebsoft.org/pub/projects/speechd/${P}.tar.gz
+	mirror://gentoo/${P}-patches.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -27,8 +28,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-getline.patch
-	epatch "${FILESDIR}"/${P}-gnu-src-modules.patch
+	EPATCH_SUFFIX="patch" epatch
 	eautoreconf
 	sed -i -e 's/\(SUBDIRS.*\)python/\1/' src/Makefile.in
 }
