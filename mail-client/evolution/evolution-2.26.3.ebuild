@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.3.ebuild,v 1.3 2009/08/26 01:17:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.26.3.ebuild,v 1.4 2009/09/09 19:34:01 mrpouet Exp $
 
 EAPI="2"
 
@@ -16,6 +16,8 @@ IUSE="crypt dbus hal kerberos krb4 ldap mono networkmanager nntp pda profile pyt
 # pst
 
 # Pango dependency required to avoid font rendering problems
+# We need a graphical pinentry frontend to be able to ask for the GPG
+# password from inside evolution, bug 160302
 RDEPEND=">=dev-libs/glib-2.18
 	>=x11-libs/gtk+-2.14
 	>=gnome-extra/evolution-data-server-2.26.3
@@ -45,7 +47,10 @@ RDEPEND=">=dev-libs/glib-2.18
 	kerberos? ( virtual/krb5 )
 	krb4? ( app-crypt/mit-krb5[krb4] )
 	>=gnome-base/orbit-2.9.8
-	crypt? ( || ( >=app-crypt/gnupg-2.0.1-r2 =app-crypt/gnupg-1.4* ) )
+	crypt? ( || (
+				  ( >=app-crypt/gnupg-2.0.1-r2
+					|| ( app-crypt/pinentry[gtk] app-crypt/pinentry[qt3] ) )
+				  =app-crypt/gnupg-1.4* ) )
 	ldap? ( >=net-nds/openldap-2 )
 	mono? ( >=dev-lang/mono-1 )
 	python? ( >=dev-lang/python-2.4 )
@@ -89,14 +94,6 @@ pkg_setup() {
 		$(use_with ldap openldap)
 		$(use_with kerberos krb5 /usr)
 		$(use_with krb4 krb4 /usr)"
-
-	# We need a graphical pinentry frontend to be able to ask for the GPG
-	# password from inside evolution, bug 160302
-	if use crypt && has_version '>=app-crypt/gnupg-2.0.1-r2'; then
-		if ! built_with_use -o app-crypt/pinentry gtk qt3; then
-			die "You must build app-crypt/pinentry with GTK or QT3 support"
-		fi
-	fi
 
 	# dang - I've changed this to do --enable-plugins=experimental.  This will
 	# autodetect new-mail-notify and exchange, but that cannot be helped for the
