@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.0_alpha1.ebuild,v 1.3 2009/09/07 20:15:23 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/simpleparse-2.1.0_alpha1.ebuild,v 1.4 2009/09/09 20:32:04 maekke Exp $
 
 inherit distutils eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://simpleparse.sourceforge.net"
 SRC_URI="mirror://sourceforge/simpleparse/${MY_P}.zip"
 LICENSE="as-is eGenixPublic-1.1"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 ~ia64 ~ppc ~sparc x86"
 IUSE="doc examples"
 
 RDEPEND=""
