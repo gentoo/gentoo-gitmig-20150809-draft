@@ -1,13 +1,14 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.2 2008/05/23 19:06:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/fann/fann-2.1.0_beta.ebuild,v 1.3 2009/09/09 20:35:37 bicatali Exp $
 
-inherit eutils python
+EAPI=2
+inherit eutils python autotools
 
 MY_P=${P/_/}
 DESCRIPTION="Fast Artificial Neural Network Library"
 HOMEPAGE="http://leenissen.dk/fann/"
-SRC_URI="mirror://sourceforge/fann/${MY_P}.zip"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.zip"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -20,16 +21,16 @@ DEPEND="${RDEPEND}
 	app-arch/unzip"
 
 S="${WORKDIR}/${P/_beta/}"
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-python.patch
 	epatch "${FILESDIR}"/${P}-benchmark.patch
 	epatch "${FILESDIR}"/${P}-examples.patch
+	epatch "${FILESDIR}"/${P}-asneeded.patch
+	eautoreconf
 }
 
 src_compile() {
-	econf || die "econf failed"
 	emake || die "emake failed"
 	if use python; then
 		cd "${S}"/python
@@ -52,10 +53,10 @@ src_test() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die "emake install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO || die "dodoc failed"
+	dodoc AUTHORS ChangeLog NEWS README TODO
 
 	if use doc; then
-		dodoc doc/*.txt || die "failed to install docs"
+		dodoc doc/*.txt
 		insinto /usr/share/doc/${PF}
 		doins doc/fann_en.pdf || die "failed to install reference manual"
 		doins -r examples || die "failed to install examples"
