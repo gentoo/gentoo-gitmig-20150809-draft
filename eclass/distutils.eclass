@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.61 2009/09/07 02:34:10 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.62 2009/09/09 19:26:00 arfrever Exp $
 
 # @ECLASS: distutils.eclass
 # @MAINTAINER:
@@ -24,8 +24,10 @@ case "${EAPI:-0}" in
 		;;
 esac
 
-DEPEND="virtual/python"
-RDEPEND="${DEPEND}"
+if [[ -z "${DISTUTILS_DISABLE_PYTHON_DEPENDENCY}" ]]; then
+	DEPEND="virtual/python"
+	RDEPEND="${DEPEND}"
+fi
 python="python"
 
 # @ECLASS-VARIABLE: DISTUTILS_USE_SEPARATE_SOURCE_DIRECTORIES
@@ -159,15 +161,17 @@ distutils_src_install() {
 		${python} setup.py "${DISTUTILS_GLOBAL_OPTIONS[@]}" install --root="${D}" --no-compile "$@" || die "Installation failed"
 	fi
 
-	DDOCS="CHANGELOG KNOWN_BUGS MAINTAINERS PKG-INFO CONTRIBUTORS TODO NEWS"
-	DDOCS="${DDOCS} Change* MANIFEST* README* AUTHORS"
+	local default_docs
+	default_docs="AUTHORS Change* CHANGELOG CONTRIBUTORS KNOWN_BUGS MAINTAINERS MANIFEST* NEWS PKG-INFO README* TODO"
 
 	local doc
-	for doc in ${DDOCS}; do
-		[[ -s "$doc" ]] && dodoc $doc
+	for doc in ${default_docs}; do
+		[[ -s "${doc}" ]] && dodoc "${doc}"
 	done
 
-	[[ -n "${DOCS}" ]] && dodoc ${DOCS}
+	if [[ -n "${DOCS}" ]]; then
+		dodoc ${DOCS} || die "dodoc failed"
+	fi
 }
 
 # @FUNCTION: distutils_pkg_postrm
