@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.1 2009/08/01 20:30:29 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/gentoolkit-dev-9999.ebuild,v 1.2 2009/09/09 16:50:27 idl0r Exp $
+
+EAPI="2"
 
 inherit subversion
 
@@ -13,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-lang/python"
+DEPEND="dev-lang/python[xml]"
 RDEPEND="${DEPEND}
 	sys-apps/portage
 	dev-lang/perl"
