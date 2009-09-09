@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>tcltk</herd>
+<maintainer>
+  <email>mescalinum@gentoo.org</email>
+</maintainer>
+<longdescription>
+Missing/extra/wrong brackets are a common problem when creating a tcl/tk program (at least for me anyway). tclCheck is a VERY SIMPLE C program that carries out a sanity check for brackets and their nesting. Why a C program? The original was a tcl program but it was simply too slow when run on large files.
+
+tcl's rules for nesting and bracketing are pretty bizarre and are very context dependent, so tclCheck takes a rather conservative view and will flag things that may not in fact be errors. This generally occurs inside strings, so that ":-(" throws up an error on the (. If you want to shut tclCheck up put a \ in front of any troublesome characters. The program does try to recognise when it might be inside in a comment as people do seem to write things like :
+
+# 1) blah blah blah
+
+If you want to turn off this behaviour invoke tclCheck with the -c flag.
+
+Simple bracket matching is not all that useful for finding a missing bracket, so tclCheck provides two other flags that might help you track them down. The -s outputs onto stout a line numbered skeleton of the program. That is it outputs only leading whitespace on lines and any brackets that they may contain. Lines with no brackets will not be listed. The -m option provides the extra facility that where brackets pair up directly they will not be printed either, so the listing will only contain those brackets which are not matched on the line on which they occur. Note that the -sm picture may not be quite right where " " pairs occur next to each other. Even further compression of the output will be obtained by using or adding the -l flag which will remove nested lines which pair up. Using the -j flag is similar to -l but ignores any indentation scheme which might work better for you.
+
+tclCheck will now pop its bracket stack to find a match with } > ] > ). If you do not want this to happen specify the -g flag.
+
+The -i flag turns off error messages that begin "Inside a string". The -q option will generate output only when it detects a problem (except if any if the -jlms flags are set - the skeleton is always printed).
+
+tclCheck checks all the files passed on the command line or the standard input if this is empty. Messages about potential problems are sent to the standard output.
+
+I have run tclCheck over some of the larger packages in the archive and it seems to behave in a sensible manner. In fact it finds what appear to me to be errors in some of them. You may need to try various combinations of flags to locate particular errors. tclCheck is most definitely geared towards the way that I format programs and so it works well for me (particularly the -lms options). You may have a different style and if I can include this in some way let me know.
+
+Thanks to Hans Stoop (hast@wmt.nl) for the stack popping code (which I messed up but have now fixed....)
+</longdescription>
+</pkgmetadata>
