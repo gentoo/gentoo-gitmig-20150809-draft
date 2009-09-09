@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okular
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.39 2009/09/01 16:23:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okular/ChangeLog,v 1.40 2009/09/09 05:07:00 abcd Exp $
+
+  09 Sep 2009; Jonathan Callen <abcd@gentoo.org> okular-4.3.0.ebuild,
+  okular-4.3.1.ebuild:
+  Revert change of dep for djvu to djview4, app-text/djvu was correct. This
+  fixes bug #276353.
 
 *okular-4.3.1 (01 Sep 2009)
 
