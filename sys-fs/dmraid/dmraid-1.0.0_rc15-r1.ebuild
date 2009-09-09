@@ -1,25 +1,26 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc14.ebuild,v 1.5 2009/09/09 21:02:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/dmraid-1.0.0_rc15-r1.ebuild,v 1.1 2009/09/09 21:02:11 tommy Exp $
 
 inherit linux-info flag-o-matic
 
 MY_PV=${PV/_/.}
-MY_P=${PN}-${MY_PV}
 
 DESCRIPTION="Device-mapper RAID tool and library"
 HOMEPAGE="http://people.redhat.com/~heinzm/sw/dmraid/"
-SRC_URI="http://people.redhat.com/~heinzm/sw/dmraid/src/old/${MY_P}.tar.bz2"
+SRC_URI="http://people.redhat.com/~heinzm/sw/dmraid/src/${PN}-${MY_PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static selinux"
 
 DEPEND="|| ( >=sys-fs/lvm2-2.02.45
 		sys-fs/device-mapper )
 	selinux? ( sys-libs/libselinux
 		   sys-libs/libsepol )"
+RDEPEND="${DEPEND}"
+
 S=${WORKDIR}/${PN}/${MY_PV}
 
 pkg_setup() {
@@ -37,21 +38,22 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/dmraid-destdir-fix.patch
+	epatch "${FILESDIR}/${PN}-destdir-fix.patch"
+	epatch "${FILESDIR}/${P}-devsk-isw.patch"
+	epatch "${FILESDIR}/${P}-undo-p-rename.patch"
 }
 
 src_compile() {
 	econf \
 		$(use_enable static static_link) \
 		$(use_enable selinux libselinux) \
-		$(use_enable selinux libsepol) \
-		|| die "econf failed"
+		$(use_enable selinux libsepol)
 	emake -j1 || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc CHANGELOG README TODO KNOWN_BUGS doc/*
+	dodoc CHANGELOG README TODO KNOWN_BUGS doc/* || die "dodoc failed"
 }
 
 pkg_postinst() {
@@ -59,14 +61,14 @@ pkg_postinst() {
 	einfo " "
 	einfo "Genkernel will generate the kernel and the initrd with a statically "
 	einfo "linked dmraid binary (its own version which may not be the same as this version):"
-	einfo "emerge -av sys-kernel/genkernel"
-	einfo "genkernel --dmraid --udev all"
+	einfo "  emerge -av sys-kernel/genkernel"
+	einfo "  genkernel --dmraid --udev all"
 	einfo " "
 	einfo "If you would rather use this version of DMRAID with Genkernel, copy the distfile"
 	einfo "from your distdir to '/usr/share/genkernel/pkg/' and update the following"
 	einfo "in /etc/genkernel.conf:"
-	einfo "DMRAID_VER=\"${MY_PV/_/.}\""
-	einfo "DMRAID_SRCTAR=\"\${GK_SHARE}/pkg/${A}\""
+	einfo "  DMRAID_VER=\"${MY_PV/_/.}\""
+	einfo "  DMRAID_SRCTAR=\"\${GK_SHARE}/pkg/${A}\""
 	einfo " "
 	ewarn "DMRAID should be safe to use, but no warranties can be given"
 	einfo " "
