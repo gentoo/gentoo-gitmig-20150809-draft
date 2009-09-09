@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/eyeos-1.8.7.0.ebuild,v 1.1 2009/09/09 09:16:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/eyeos-1.8.7.0.ebuild,v 1.2 2009/09/09 09:38:27 voyageur Exp $
 
 inherit depend.php versionator webapp eutils
 
@@ -12,7 +12,7 @@ else
 	SRC_URI="mirror://sourceforge/eyeos/eyeOS_$(get_version_component_range 1-4)-$(get_version_component_range 5).zip"
 fi
 
-LICENSE="GPL-3"
+LICENSE="AGPL-3"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
