@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3243 2009/09/09 11:42:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3244 2009/09/09 13:06:23 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Cleanup removed packages — did I last rite monouml twice?
 
   09 Sep 2009; Torsten Veller <tove@gentoo.org> package.mask:
   Mask dev-perl/Convert-UUlib-1.30 (#283797)

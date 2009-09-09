@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10424 2009/09/09 12:08:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10425 2009/09/09 13:06:23 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -463,15 +463,6 @@ net-misc/slidentd
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
 #
-# Fails to build (bug #274384); upstream doesn't look
-# extremely active.
-#
-# Removal on 2009-10-08
-dev-dotnet/monouml
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
-#  on behalf of QA team
-#
 # Builds wrong bytecode version (bug #264290) and bundles
 # both jars and libhunspell (bug #258358).
 #
@@ -920,51 +911,12 @@ dev-ruby/dpklib
 # Removed in ~60 days by treecleaners
 www-servers/shttpd
 
-# Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to build; dead upstream as far as I can see.
-#
-# Removal scheduled for 2009-09-09
-# bug #274384
-dev-dotnet/monouml
-
 # Víctor Ostorga <vostorga@gentoo.org> (9 Jul 2009)
 # Fails to build, dead upstream. 
 #
 # Removal scheduled for 2009-09-09
 # bug #227721
 x11-misc/e-fancylauncher
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to build; mirror-restricted; unmaintained in Gentoo (but
-# active upstream); not used by anything in-tree.
-#
-# Removal scheduled for 2009-09-09
-# bug #277214
-x11-libs/ViewKlass
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
-#  on behalf of QA Team
-#
-# Doesn't build with GCC 4 or later; dead upstream (broken HOMEPAGE
-# link too); never bumped.
-#
-# Removal scheduled for 2009-09-09
-# bug #277153
-net-p2p/entropy_rsa
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (9 Jul 2009)
-#  on behalf of QA Team
-#
-# Still uses gtk 1.2, fails to build, fails with --as-needed,
-# unmaintained
-#
-# Removal scheduled for 2009-09-09
-# Bug #240286
-net-misc/sambasentinel
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
 #  on behalf of QA Team
