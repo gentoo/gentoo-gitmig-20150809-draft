@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/conky
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.119 2009/09/08 16:29:26 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/conky/ChangeLog,v 1.120 2009/09/09 21:16:42 billie Exp $
+
+*conky-1.7.2-r2 (09 Sep 2009)
+
+  09 Sep 2009; Pielmeier Daniel <billie@gentoo.org> +conky-1.7.2-r2.ebuild,
+  metadata.xml:
+  Revision bump. Add eve use flag thanks to c0nv1ct on IRC for pointing me
+  to it. Add missing dependencies.
 
 *conky-1.7.2-r1 (08 Sep 2009)
 
