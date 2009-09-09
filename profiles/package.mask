@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10422 2009/09/08 15:40:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10423 2009/09/09 11:42:44 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (09 Sep 2009)
+# Convert-UUlib-1.30 break amavisd-new (#283797)
+=dev-perl/Convert-UUlib-1.30
 
 # Jeremy Olexa <darkside@gentoo.org> (08 Sep 2009)
 # Masked until lzma/xz-utils issue is sorted out, bug 279871
