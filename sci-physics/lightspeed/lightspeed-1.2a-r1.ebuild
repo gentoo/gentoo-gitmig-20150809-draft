@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.8 2008/12/14 23:50:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lightspeed/lightspeed-1.2a-r1.ebuild,v 1.9 2009/09/09 21:38:48 bicatali Exp $
 
+EAPI=2
 inherit eutils
 
 DEB_PATCH="${PN}_${PV}-7"
@@ -21,7 +22,7 @@ for i in ${LANGS}; do
 	IUSE="${IUSE} linguas_${i}"
 done
 
-DEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 	x11-libs/gtkglext
 	x11-libs/gtkglarea
 	>=x11-libs/gtk+-2
@@ -29,18 +30,23 @@ DEPEND="virtual/opengl
 	media-libs/tiff
 	truetype? ( media-libs/ftgl )"
 
+DEPEND="${RDEPEND}
+	dev-util/pkgconfig"
+
 S2="${WORKDIR}/objects"
 
-src_unpack() {
-	unpack ${A}
-	epatch ${DEB_PATCH}.diff
+src_prepare() {
+	epatch "${WORKDIR}/${DEB_PATCH}.diff"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-gtk=2 \
 		$(use_enable nls) \
 		$(use_with truetype ftgl)
+}
+
+src_compile() {
 	emake || die "emake failed"
 	for i in ${LANGS}; do
 		use linguas_${i} && emake ${i}.gmo
