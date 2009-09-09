@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/stalonetray
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.7 2008/09/10 11:15:56 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/stalonetray/ChangeLog,v 1.8 2009/09/09 20:36:43 maekke Exp $
+
+  09 Sep 2009; Markus Meier <maekke@gentoo.org> stalonetray-0.7.6.ebuild:
+  amd64/x86 stable, bug #283381
 
   10 Sep 2008; Santiago M. Mola <coldwind@gentoo.org> metadata.xml:
   desktop-dock takes this as per lucass retirement.
