@@ -1,12 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/files/dovecot.init-r2,v 1.1 2008/11/03 17:22:59 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/files/dovecot.init-r2,v 1.2 2009/09/10 17:24:33 patrick Exp $
 
 opts="reload"
 
 depend() {
 	need localmount net
+	before postfix
 	after bootmisc ldap mysql ntp-client ntpd postgresql saslauthd slapd 
 	use logger
 }
