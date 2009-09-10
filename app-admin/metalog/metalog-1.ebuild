@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-1.ebuild,v 1.1 2009/03/15 11:04:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/metalog-1.ebuild,v 1.2 2009/09/10 15:53:49 ssuominen Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 RDEPEND=">=dev-libs/libpcre-3.4"
 DEPEND="${RDEPEND}
-	app-arch/lzma-utils"
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 PROVIDE="virtual/logger"
 
 src_unpack() {
