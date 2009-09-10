@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/eyeos-1.8.7.0.ebuild,v 1.2 2009/09/09 09:38:27 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/eyeos/eyeos-1.8.7.0.ebuild,v 1.3 2009/09/10 07:53:05 voyageur Exp $
 
 inherit depend.php versionator webapp eutils
 
 DESCRIPTION="AJAX web-based desktop environment"
-HOMEPAGE="http://wwwwww.eyeos.org"
+HOMEPAGE="http://www.eyeos.org"
 if [[ $(get_version_component_count) < 5 ]]; then
 	SRC_URI="mirror://sourceforge/eyeos/eyeOS_$(get_version_component_range 1-4).zip"
 else
