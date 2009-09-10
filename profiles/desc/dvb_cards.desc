@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dvb_cards.desc,v 1.7 2009/09/02 20:47:37 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/dvb_cards.desc,v 1.8 2009/09/10 18:33:33 billie Exp $
 
 # This file contains descriptions of DVB_CARDS USE_EXPAND flags.
 
@@ -9,13 +9,12 @@
 
 af9005 - DVB_CARDS setting to add support for the afatech af9005 USB1.1 DVB-T Demodulator (Various NoName devices, Terratec Xinergy XE rev.1)
 bcm3510 - DVB_CARDS setting to add support for the Broadcom BCM3510 ATSC demodulator (Air2PC)
-dibusb-usb1 - DVB_CARDS setting to add support for the dibcom design USB1.1 DVB-T-device (Twinhan, KWorld, Hama, Artec, Compro)
-dibusb-usb2 - DVB_CARDS setting to add support for the dibcom design USB2 DVB-T-device (Grand, LiteOn, YUAN, Typhoon)
 cx18 - DVB_CARDS setting to add support for the Conexant cx23418 chip (Hauppauge HVR1600)
 cx231xx - DVB_CARDS setting to add support for Conexant cx231xx USB Devices
 cx23885 - DVB_CARDS setting to add support for the Conexant cx23885 chip (DViCO FusionHDTV5 Express, Hauppauge WinTV HVR1250 HVR1500 HVR1800 HVR1800lp)
+dibusb-usb1 - DVB_CARDS setting to add support for the dibcom design USB1.1 DVB-T-device (Twinhan, KWorld, Hama, Artec, Compro)
+dibusb-usb2 - DVB_CARDS setting to add support for the dibcom design USB2 DVB-T-device (Grand, LiteOn, YUAN, Typhoon)
 mpc718 - DVB_CARDS setting to add support for the MT352 DVB-T demodulator initialization sequence for Yuan MPC718 cards for use by the cx18 driver.
-nxt2002 - DVB_CARDS setting to add support for the nxt2002 ATSC Demodulator (Air2PC, Kworld)
 nxt200x - DVB_CARDS setting to add support for the nxt200x ATSC Demodulator (Air2PC, Kworld, Aver, ATI)
 opera1 - DVB_CARDS setting to add support for the opera1 USB DVB-S-device (Opera DVB-S1 USB-Box)
 or51132 - DVB_CARDS setting to add support for the or51132 Demodulator (pcHDTV)
@@ -23,7 +22,6 @@ or51211 - DVB_CARDS setting to add support for the or51211 DVB-T Demodulator (Ya
 pvrusb2 - DVB_CARDS setting to add support for Conexant cx2584x chips (PVR150, PVR500, Yuan PG600/Diamond PVR-550) 
 sp8870 - DVB_CARDS setting to add support for the sp8870 chip (T Nexus-T premium rev1.2)
 sp887x - DVB_CARDS setting to add support for the sp887x chip (Avermedia DVB-T 761)
-tda1004x - DVB_CARDS setting to add support for the tda1004x DVB-T Demodulator (Hauppauge/TT Nova-T, TT Nova-USB-T)
 tda10045 - DVB_CARDS setting to add support for the tda10045 DVB-T Demodulator (Hauppauge/TT Nova-T, TT Nova-USB-T)
 tda10046 - DVB_CARDS setting to add support for the tda10046 DVB-T Demodulator (Hauppauge/TT Nova-T, TT Nova-USB-T)
 tda10046lifeview - DVB_CARDS setting to add support for the tda10046 DVB-T Demodulator (Lifeview cards)
