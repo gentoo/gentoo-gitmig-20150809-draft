@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.148 2009/09/10 18:45:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.149 2009/09/10 19:17:17 flameeyes Exp $
+
+  10 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pulseaudio-0.9.15-r51.ebuild:
+  Remove 0.9.15-r51: the -r51 is for OpenRC, while -r2 is a stable target.
+  If you want the OpenRC-enabled version, just use 0.9.16-r51.
 
 *pulseaudio-0.9.16-r51 (10 Sep 2009)
 *pulseaudio-0.9.16 (10 Sep 2009)
