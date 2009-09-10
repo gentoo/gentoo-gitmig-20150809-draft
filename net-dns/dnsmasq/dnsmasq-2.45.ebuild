@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.45.ebuild,v 1.8 2008/11/05 00:37:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.45.ebuild,v 1.9 2009/09/10 15:38:54 ssuominen Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="dbus? ( sys-apps/dbus )
 	nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND}
-	app-arch/lzma-utils"
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
