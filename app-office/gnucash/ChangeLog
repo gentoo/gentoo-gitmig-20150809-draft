@@ -1,6 +1,10 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.198 2009/09/06 19:23:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.199 2009/09/10 15:59:05 ssuominen Exp $
+
+  10 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> gnucash-2.2.9.ebuild,
+  gnucash-2.2.9-r1.ebuild:
+  Fix lzma-utils vs. xz-utils deps.
 
   06 Sep 2009; Torsten Veller <tove@gentoo.org> -gnucash-2.3.2.ebuild:
   Cleanup
