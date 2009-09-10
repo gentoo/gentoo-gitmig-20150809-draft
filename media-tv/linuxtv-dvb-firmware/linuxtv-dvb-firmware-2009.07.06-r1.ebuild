@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.07.06-r1.ebuild,v 1.2 2009/09/09 21:41:04 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.07.06-r1.ebuild,v 1.3 2009/09/10 17:56:50 billie Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -239,7 +239,6 @@ DEPEND="${DEPEND}
 install_dvb_card() {
 	if [[ -z ${DVB_CARDS} ]]; then
 		# install (almost) all firmware files
-
 		# do not install this one due to conflicting filenames
 		[[ "${1}" != "tda10046lifeview" ]]
 	else
@@ -258,11 +257,14 @@ pkg_setup() {
 		eerror
 		eerror "But beware that you cannot enable tda10046 and"
 		eerror "tda10046lifeview at the same time."
-		eerror
 	fi
 
 	if [[ -z ${DVB_CARDS} ]]; then
+		elog
 		elog "DVB_CARDS is not set, installing all available firmware files."
+		elog "To save bandwidth please consider setting the DVB_CARDS variable"
+		elog "in ${ROOT%/}/etc/make.conf. This way only the firmwares you own"
+		elog "the hardware will be installed."
 	fi
 	# according to http://devmanual.gentoo.org/general-concepts/use-flags/index.html
 	# we should not die here. However, there is no sensible fallback choice to make
@@ -272,25 +274,29 @@ pkg_setup() {
 		eerror "You cannot have both tda10046 and tda10046lifeview in DVB_CARDS"
 		eerror "because of colliding firmware filenames (dvb-fe-tda10046.fw)."
 		eerror "Sorry."
-		eerror
 		die "Conflicting values for DVB_CARDS set."
 	fi
+	elog
 	elog "List of possible card-names to use for DVB_CARDS:"
 	echo ${FW_USE_FLAGS[*]}| tr ' ' '\n' | sort | uniq | fmt \
 	| while read line; do
 		elog "   ${line}"
 	done
+	elog
 	elog "If you need another firmware file and want it included create a bug"
 	elog "at bugs.gentoo.org."
-	elog "If some firmware sources are not fetchable anymore please also report"
-	elog "a bug. If there is no alternative source or an update to the firmware"
-	elog "available we have to remove it from this ebuild and you are on your own."
+	elog "In case some firmware sources are not fetchable please try again at"
+	elog "a later time and if it still does not fetch report a bug. If there"
+	elog "is no alternative source or an update to the firmware available we"
+	elog "have to remove it from the ebuild and you are on your own."
 }
 
 src_unpack() {
+	local distfile
+
 	# link all downloaded files to ${S}
-	for f in ${A}; do
-		[[ -L ${f} ]] || ln -s ${DISTDIR}/${f} ${f}
+	for distfile in ${A}; do
+		[[ -L ${distfile} ]] || ln -s ${DISTDIR}/${distfile} ${distfile}
 	done
 
 	# unpack firmware-packet
@@ -298,13 +304,17 @@ src_unpack() {
 		unpack ${PACKET_NAME}
 	fi
 
-	use dvb_cards_mpc718 && mv Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip "Yuan MPC718 TV Tuner Card 2.13.10.1016.zip"
-	use dvb_cards_ttpci && mv dvb-ttpci-01.fw-fc2624 dvb-ttpci-01.fw
+	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_mpc718 ; then
+		mv Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip "Yuan MPC718 TV Tuner Card 2.13.10.1016.zip"
+	fi
+	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_ttpci ; then
+		mv dvb-ttpci-01.fw-fc2624 dvb-ttpci-01.fw
+	fi
 
-	SCRIPT_V=${PV}
+	local script_v=${PV}
 
 	# Adjust temp-dir of get_dvb_firmware
-	sed "${FILESDIR}"/get_dvb_firmware-${SCRIPT_V} \
+	sed "${FILESDIR}"/get_dvb_firmware-${script_v} \
 		-e "s#/tmp#${T}#g" > get_dvb_firmware
 	chmod a+x get_dvb_firmware
 
@@ -326,9 +336,9 @@ src_install() {
 
 	for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do
 		if install_dvb_card ${FW_USE_FLAGS[CARD]}; then
-			local FILE=${FW_FILES[CARD]}
-			[[ -f ${FILE} ]] || die "File ${FILE} does not exist!"
-			doins ${FILE}
+			local file=${FW_FILES[CARD]}
+			[[ -f ${file} ]] || die "File ${file} does not exist!"
+			doins ${file}
 		fi
 	done
 }
