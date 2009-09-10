@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/desklet-ImageSlideShow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/ChangeLog,v 1.1 2009/04/28 01:15:12 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/ChangeLog,v 1.2 2009/09/10 02:19:55 nixphoeni Exp $
+
+*desklet-ImageSlideShow-0.8-r1 (10 Sep 2009)
+
+  10 Sep 2009; Joe Sapp <nixphoeni@gentoo.org>
+  -desklet-ImageSlideShow-0.8.ebuild, +desklet-ImageSlideShow-0.8-r1.ebuild,
+  +files/ImageSlideShow-0.8-cache-dir.patch:
+  Patched to try to fix bug #271777. Thanks to Peter GAAL for all his work
+  on it.
 
 *desklet-ImageSlideShow-0.8 (28 Apr 2009)
 

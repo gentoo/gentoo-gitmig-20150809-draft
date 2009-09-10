@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/desklet-ImageSlideShow-0.8.ebuild,v 1.1 2009/04/28 01:15:12 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-ImageSlideShow/desklet-ImageSlideShow-0.8-r1.ebuild,v 1.1 2009/09/10 02:19:55 nixphoeni Exp $
 
 DESKLET_NAME="${PN#desklet-}"
 
@@ -15,3 +15,8 @@ IUSE=""
 
 RDEPEND="${RDEPEND} dev-python/imaging"
 DOCS="MANIFEST README"
+
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${DESKLET_NAME}-${PV}-cache-dir.patch"
+}
