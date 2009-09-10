@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.6 2009/09/10 17:12:23 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.7 2009/09/10 19:22:21 mrpouet Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -124,7 +124,7 @@ src_prepare() {
 }
 src_configure() {
 	local myconf
-	local gui="sdl"
+	local gui
 	# Set nsplugin install directory.
 	use nsplugin && myconf="${myconf} --with-npapi-plugindir=/opt/netscape/plugins"
 	# Set kde and konqueror plugin directories.
@@ -157,6 +157,10 @@ src_configure() {
 	use gtk && gui=",gtk"
 	use kde && gui="${gui},kde4"
 	use sdl && gui="${gui},sdl"
+
+	if [ -z "$gui" ]; then
+		gui="sdl"
+	fi
 	# Strip extra comma from gui.
 	gui=$( echo $gui|sed -e 's/,//' )
 	econf \
