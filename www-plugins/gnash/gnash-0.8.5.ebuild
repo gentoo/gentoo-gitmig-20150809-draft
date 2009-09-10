@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.5 2009/09/09 10:35:30 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.6 2009/09/10 17:12:23 mrpouet Exp $
 
 EAPI="2"
 KDE_REQUIRED="optional"
@@ -182,6 +182,13 @@ src_configure() {
 		$(use_enable zlib z) \
 		--enable-gui=${gui} \
 		${myconf}
+}
+src_test() {
+	local log=testsuite-results.txt
+	cd testsuite
+	emake check || die "make check failed"
+	./anaylse-results.sh > $log || die "results analyze failed"
+	cat $log
 }
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
