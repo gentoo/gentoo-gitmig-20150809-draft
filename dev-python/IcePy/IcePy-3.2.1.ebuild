@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/IcePy-3.2.1.ebuild,v 1.5 2008/01/17 14:08:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/IcePy/IcePy-3.2.1.ebuild,v 1.6 2009/09/10 00:32:30 patrick Exp $
+
+EAPI="2"
 
 inherit eutils python multilib
 
@@ -15,10 +17,7 @@ IUSE="test debug"
 
 DEPEND="~dev-cpp/Ice-3.2.1"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	python_version
 
 	# Store the PYTHON_VERSION in a variable so the Makefile knows which one to use
@@ -26,6 +25,7 @@ src_unpack() {
 
 	MAKE_RULES="${S}/config/Make.rules"
 	epatch "${FILESDIR}/icepy-${PV}-makefile.patch"
+	epatch "${FILESDIR}/IcePy-${PV}-python-2.6.diff"
 
 	if use amd64; then
 		sed -i -e "s:^#LP64:LP64:g" "${MAKE_RULES}" || die "Failed to set lib64 directory"
