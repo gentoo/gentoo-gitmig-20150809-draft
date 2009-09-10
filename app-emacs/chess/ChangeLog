@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/chess
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.28 2009/03/29 21:23:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.29 2009/09/10 13:07:37 ulm Exp $
+
+*chess-2.0_beta6-r2 (10 Sep 2009)
+
+  10 Sep 2009; Ulrich Mueller <ulm@gentoo.org> chess-2.0_beta6-r1.ebuild,
+  +chess-2.0_beta6-r2.ebuild, +files/50chess-gentoo-2.0_beta6.el,
+  files/50chess-gentoo.el:
+  Install sounds and pixmaps for pieces under SITEETC.
 
   29 Mar 2009; Ulrich Mueller <ulm@gentoo.org> chess-2.0_beta6-r1.ebuild:
   Use autopatch feature of elisp.eclass.

@@ -23,8 +23,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.pgn\\'" . chess-pgn-mode))
 
-(setq chess-images-directory "@SITEETC@/pieces/xboard")
-(setq chess-sound-directory "@SITEETC@/sounds")
+(setq chess-images-directory "/usr/share/pixmaps/chess/xboard")
+(setq chess-sound-directory "/usr/share/sounds/chess")
 
 ;; Change the order of the engine preference list to coincide with the order
 ;; of our dependencies: games-board/gnuchess, crafty, phalanx, and sjeng.
