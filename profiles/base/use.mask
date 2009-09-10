@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.80 2009/08/01 15:24:18 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.81 2009/09/10 12:03:43 scarabeus Exp $
 
 # profile specific USE flags
 # Don't put hardened in here.
@@ -56,6 +56,7 @@ yellownet
 video_cards_geode
 video_cards_vermilion
 video_cards_xgi
+video_cards_voodoo
 
 # not needed on non-sparc systems
 video_cards_sunbw2

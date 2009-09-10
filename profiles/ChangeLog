@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3247 2009/09/09 21:00:02 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3248 2009/09/10 12:03:42 scarabeus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  arch/x86/package.use.mask, base/package.use.mask, base/use.mask:
+  Mask quakeforge useflag video_cards_voodoo everywhere expect x86.
 
   09 Sep 2009; Peter Alfredsen <loki_val@gentoo.org> package.mask:
   Remove poppler-0.11* mask. 0.12.0 is in-tree.
