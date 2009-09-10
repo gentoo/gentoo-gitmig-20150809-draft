@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.245 2009/09/08 12:39:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.246 2009/09/10 18:08:19 robbat2 Exp $
+
+  10 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> ppp-2.4.4-r23.ebuild,
+  ppp-2.4.4-r24.ebuild:
+  Change the config check to avoid triggering it during catalyst autobuild
+  for the meantime.
 
   08 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> ppp-2.4.4-r23.ebuild,
   ppp-2.4.4-r24.ebuild:
