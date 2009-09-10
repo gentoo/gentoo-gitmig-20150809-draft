@@ -1,7 +1,4 @@
-
-;;; vm site-lisp configuration
-
 (add-to-list 'load-path "@SITELISP@")
-(setq vm-toolbar-pixmap-directory "/usr/share/pixmaps/vm")
-(setq vm-image-directory "/usr/share/pixmaps/vm")
+(setq vm-toolbar-pixmap-directory "@SITEETC@")
+(setq vm-image-directory "@SITEETC@")
 (require 'vm-autoloads)
