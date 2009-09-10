@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.3.ebuild,v 1.2 2009/09/04 20:13:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-2.3.ebuild,v 1.3 2009/09/10 02:55:37 arfrever Exp $
 
 EAPI="2"
 NEED_PYTHON="2.4"
@@ -36,8 +36,26 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-2.2_qa_msg.patch"
 }
 
+src_compile() {
+	distutils_src_compile
+
+	documentation_built="0"
+	build_documentation() {
+		[[ "${documentation_built}" == "1" ]] && return
+
+		# One of tests already builds documentation.
+		if use doc && ! use test; then
+			cd docs
+			PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib*)" "$(PYTHON)" genAll.py || die "genAll.py failed"
+		fi
+
+		documentation_build="1"
+	}
+	python_execute_function -q build_documentation
+	unset documentation_built
+}
+
 src_test() {
-	einfo "Tests could take some time. Please be patient."
 	testing() {
 		"$(PYTHON)" setup.py tests-preinstall
 	}
@@ -48,6 +66,9 @@ src_install() {
 	distutils_src_install
 
 	if use doc; then
+		# docs/reference/reportlab-reference.pdf is identical with docs/reportlab-reference.pdf
+		rm -f docs/reference/reportlab-reference.pdf
+
 		insinto /usr/share/doc/${PF}
 		doins -r docs/*
 	fi

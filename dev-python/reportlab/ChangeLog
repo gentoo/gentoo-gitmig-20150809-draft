@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.53 2009/09/04 20:13:05 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.54 2009/09/10 02:55:36 arfrever Exp $
+
+  10 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  reportlab-2.3.ebuild:
+  Build documentation (bug #278994).
 
   04 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   reportlab-2.3.ebuild:
