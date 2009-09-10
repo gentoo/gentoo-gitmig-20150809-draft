@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.3.ebuild,v 1.1 2009/09/10 18:43:01 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.3.ebuild,v 1.2 2009/09/10 23:44:49 weaver Exp $
 
 EAPI="2"
 
@@ -31,6 +31,8 @@ PATCHES=(
 src_prepare() {
 	base_src_prepare
 	sed -i 's/ getline/ v_getline/' Readseq/ureadseq.c || die
+	sed -i '1 i #include <cstdio>' RNAforester/src/rnafuncs.cpp || die
+
 	eautoreconf
 	(cd RNAforester; eautoreconf)
 }
