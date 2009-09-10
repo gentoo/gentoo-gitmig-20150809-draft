@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r2.ebuild,v 1.1 2009/08/31 17:36:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r2.ebuild,v 1.2 2009/09/10 17:00:34 volkmar Exp $
 
 EAPI="2"
 
@@ -136,6 +136,14 @@ src_prepare() {
 	if ! use v4l; then
 		sed -i -e "s/V4L=\"enabled\"/V4L=\"disabled\"/" configure \
 			|| die "sed failed"
+	fi
+
+	# compatibility with kdeprefix, fix bug 283033
+	if use kde; then
+		sed -i -e "s:\tKDE_CFLAGS=\(.*\):\tKDE_CFLAGS=\"\1 -I${KDEDIR}/include\":" \
+			configure || die "sed failed"
+		sed -i -e "s:\(KDE_LIBS=.*\)\(-lkdeui\):\1-L${KDEDIR}/$(get_libdir) \2:" \
+			configure || die "sed failed"
 	fi
 }
 
