@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.18 2009/09/10 12:03:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.19 2009/09/10 12:08:26 scarabeus Exp $
 
 # This file requires >=portage-2.1.1
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (10 Sep 2009)
 # quakeforge has video_cards_voodoo enabled only for x86
-games-fps/quakeforge -video_cards_voodoo
+games-fps/quakeforge -video_cards_tdfx
 
 # Raúl Porcel <armin76@gentoo.org> (02 Dec 2008)
 media-libs/realcodecs win32codecs
