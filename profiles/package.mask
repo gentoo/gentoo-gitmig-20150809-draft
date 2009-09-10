@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10428 2009/09/10 13:51:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10429 2009/09/10 15:42:38 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -44,10 +44,6 @@ dev-lang/nemerle
 # Torsten Veller <tove@gentoo.org> (09 Sep 2009)
 # Convert-UUlib-1.30 breaks amavisd-new (#283797)
 =dev-perl/Convert-UUlib-1.30
-
-# Jeremy Olexa <darkside@gentoo.org> (08 Sep 2009)
-# Masked until lzma/xz-utils issue is sorted out, bug 279871
-=app-portage/eix-0.17.1
 
 # Samuli Suominen <ssuominen@gentoo.org> (06 Sep 2009)
 # Gem Hunters was never ported to >= Kyra 2.1.0. Both old Kyra
@@ -776,11 +772,6 @@ media-tv/ktvschedule
 # Replaced by gecko-mediaplayer, see bug #273121.
 # Masked for removal in 60 days.
 www-plugins/mplayerplug-in
-
-# Samuli Suominen <ssuominen@gentoo.org> (30 Jul 2009)
-# Masked for removal wrt bug #276758. Upstream moved to developing Canorus,
-# see bug #157501. Or try media-sound/musescore as replacement.
-media-sound/noteedit
 
 # Mounir Lamouri <volkmar@gentoo.org> (30 Jul 2009)
 # Masked for removal in 60 days.
