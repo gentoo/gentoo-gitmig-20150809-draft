@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/libmxmlplus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/ChangeLog,v 1.7 2009/04/19 20:23:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/ChangeLog,v 1.8 2009/09/10 16:02:04 ssuominen Exp $
+
+  10 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  libmxmlplus-0.9.2_p20080323.ebuild, libmxmlplus-0.9.2_p20080323-r1.ebuild:
+  Fix lzma-utils vs. xz-utils deps.
 
 *libmxmlplus-0.9.2_p20080323-r1 (19 Apr 2009)
 

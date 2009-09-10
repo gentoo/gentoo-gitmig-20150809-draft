@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/libmxmlplus-0.9.2_p20080323-r1.ebuild,v 1.1 2009/04/19 20:23:11 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libmxmlplus/libmxmlplus-0.9.2_p20080323-r1.ebuild,v 1.2 2009/09/10 16:02:04 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-doc/doxygen )
-	app-arch/lzma-utils"
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 RDEPEND=""
 
 src_unpack()
