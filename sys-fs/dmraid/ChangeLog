@@ -1,11 +1,14 @@
 # ChangeLog for sys-fs/dmraid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.19 2009/09/09 21:02:11 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dmraid/ChangeLog,v 1.20 2009/09/10 16:42:57 tommy Exp $
 
-  08 Sep 2009; Ian Stakenvicius <ian@aerobiology.ca>
-  dmraid-1.0.0_rc14.ebuild, +dmraid-1.0.0_rc15-r1.ebuild,
+  10 Sep 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   +files/dmraid-1.0.0_rc15-devsk-isw.patch,
   +files/dmraid-1.0.0_rc15-undo-p-rename.patch:
+  Add missing patches
+
+  08 Sep 2009; Ian Stakenvicius <ian@aerobiology.ca>
+  dmraid-1.0.0_rc14.ebuild, +dmraid-1.0.0_rc15-r1.ebuild:
   Updated SRC_URI for rc14, bumped rc15 to -r1 (for ~ppc) to apply patches to
   fix bug #275566 and bug #275451
 
