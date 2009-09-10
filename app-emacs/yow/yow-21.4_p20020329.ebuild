@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.6 2009/09/10 20:35:34 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yow/yow-21.4_p20020329.ebuild,v 1.7 2009/09/10 22:38:08 ulm Exp $
 
 inherit elisp
 
@@ -37,5 +37,5 @@ pkg_postinst() {
 	elog
 	elog "  (define-key-after menu-bar-games-menu [yow]"
 	elog "    '(menu-item \"Random Quotation\" yow"
-	elog "                :help \"Display a random Zippy quotation\")"
+	elog "                :help \"Display a random Zippy quotation\"))"
 }
