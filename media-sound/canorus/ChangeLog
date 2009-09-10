@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/canorus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/canorus/ChangeLog,v 1.1 2009/08/29 12:10:08 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/canorus/ChangeLog,v 1.2 2009/09/10 23:00:52 nyhm Exp $
+
+  10 Sep 2009; Tristan Heaven <nyhm@gentoo.org> canorus-0.7_p1002.ebuild:
+  Add ~x86 keyword
 
 *canorus-0.7_p1002 (29 Aug 2009)
 
