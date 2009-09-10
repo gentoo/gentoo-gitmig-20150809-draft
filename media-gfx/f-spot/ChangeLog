@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/f-spot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.41 2009/08/27 21:24:07 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/ChangeLog,v 1.42 2009/09/10 12:25:55 flameeyes Exp $
+
+*f-spot-0.6.1.1-r1 (10 Sep 2009)
+
+  10 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +f-spot-0.6.1.1-r1.ebuild,
+  +files/f-spot-0.6.1.1-use-system-flickrnet.patch, metadata.xml:
+  Fix flickr exporter (bug #283398 and more) by building against the system
+  copy of flickrnet.
 
   27 Aug 2009; Peter Alfredsen <loki_val@gentoo.org> f-spot-0.6.1.1.ebuild,
   +files/f-spot-0.6.1.1-parallel-build.patch:
