@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Digest-SHA
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.5 2008/12/08 16:42:15 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Digest-SHA/ChangeLog,v 1.6 2009/09/10 08:35:50 fauli Exp $
+
+  10 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  Digest-SHA-5.47.ebuild:
+  stable x86, bug 284068
 
   08 Dec 2008; Raúl Porcel <armin76@gentoo.org> Digest-SHA-5.46.ebuild:
   alpha stable
