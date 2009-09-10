@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10429 2009/09/10 15:42:38 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10430 2009/09/10 18:08:19 billie Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -172,15 +172,6 @@ app-emulation/parallels-workstation
 # Last stand-alone release in 2006; cannot be compiled with Emacs 23.
 # Masked for removal in 30 days, bug 282662.
 app-emacs/cc-mode
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (25 Aug 2009)
-#  on behalf of QA team
-#
-# Fails to fetch since June 2007 (bug #181908), that's over
-# two years ago.
-#
-# Removal on 2009-10-24
-<=media-tv/linuxtv-dvb-firmware-2007.04.13
 
 # Steve Arnold <nerdboy@gentoo.org> (24 Aug 2009)
 # Masking due to random package failures on large builds; it mostly works,
