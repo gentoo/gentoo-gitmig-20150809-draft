@@ -19,10 +19,4 @@
 	(Shapiro and Zhang 1990). Finally, we provide an algorithm to design
 	sequences with a predefined structure (inverse folding).
 </longdescription>
-<use>
-  <flag name='no-readseq'>Do not include the modified version of Don Gilbert's
-    readseq program</flag>
-  <flag name='no-utils'>Do not include sequence format conversion and
-    representation utilities</flag>
-</use>
 </pkgmetadata>

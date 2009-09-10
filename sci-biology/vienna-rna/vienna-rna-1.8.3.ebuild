@@ -1,15 +1,15 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.7.0.ebuild,v 1.1 2008/05/01 13:13:57 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.8.3.ebuild,v 1.1 2009/09/10 18:43:01 weaver Exp $
 
-inherit toolchain-funcs multilib eutils versionator
+EAPI="2"
 
-MY_PV=$(get_version_component_range 1-2)
+inherit toolchain-funcs multilib autotools perl-module
 
 DESCRIPTION="The Vienna RNA Package - RNA secondary structure prediction and comparison"
 LICENSE="vienna-rna"
 HOMEPAGE="http://www.tbi.univie.ac.at/~ivo/RNA"
-SRC_URI="http://www.tbi.univie.ac.at/~ivo/RNA/ViennaRNA-${MY_PV}.tar.gz"
+SRC_URI="http://www.tbi.univie.ac.at/~ivo/RNA/ViennaRNA-${PV}.tar.gz"
 
 SLOT="0"
 IUSE=""
@@ -17,28 +17,43 @@ KEYWORDS="~amd64 ~x86 ~ppc"
 
 DEPEND="dev-lang/perl
 	media-libs/gd"
+RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/ViennaRNA-${MY_PV}"
+S="${WORKDIR}/ViennaRNA-${PV}"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-1.6.5-c-fixes.patch
+PATCHES=(
+	"${FILESDIR}"/${PN}-1.6.5-c-fixes.patch
+	"${FILESDIR}"/${PN}-1.7.2-LDFLAGS.patch
+	"${FILESDIR}"/${P}-gcc4.3.patch
+	"${FILESDIR}"/${P}-disable-gd.patch
+)
+
+src_prepare() {
+	base_src_prepare
+	sed -i 's/ getline/ v_getline/' Readseq/ureadseq.c || die
+	eautoreconf
+	(cd RNAforester; eautoreconf)
 }
 
-src_compile() {
+src_configure() {
 	econf --with-cluster || die "Configuration failed."
 	sed -e "s:LIBDIR = /usr/lib:LIBDIR = ${D}/usr/$(get_libdir):" \
 		-e "s:INCDIR = /usr/include:INCDIR = ${D}/usr/include:" \
 		-i RNAforester/g2-0.70/Makefile \
 			|| die "Failed patching RNAForester build system."
-	emake || die "Compilation failed."
-
-	cd "${S}"/Readseq
 	sed -e "s:CC=cc:CC=$(tc-getCC):" -e "s:CFLAGS=:CFLAGS=${CFLAGS}:" \
-		-i Makefile || die "Failed patching readseq Makefile."
-	make || die "Failed to compile readseq."
+		-i Readseq/Makefile || die "Failed patching readseq Makefile."
+}
+
+src_compile() {
+	emake || die "Compilation failed."
+	emake -C Readseq || die "Failed to compile readseq."
 	# TODO: Add (optional?) support for the NCBI toolkit.
+}
+
+src_test() {
+	cd "${S}"/Perl && emake check || die "Perl tests failed"
+	cd "${S}"/Readseq && emake test || die "Readseq tests failed"
 }
 
 src_install() {
@@ -52,4 +67,7 @@ src_install() {
 	newdoc Readseq/Readme README.readseq && \
 		newdoc Readseq/Formats Formats.readseq \
 		|| die "Installing readseq Readme failed."
+
+	# remove perlocal.pod to avoid file collisions (see #240358)
+	fixlocalpod || die "Failed to remove perlocal.pod"
 }
