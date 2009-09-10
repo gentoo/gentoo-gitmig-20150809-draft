@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.14_p20090710.ebuild,v 1.5 2009/08/29 18:50:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gtkpod/gtkpod-0.99.14_p20090710.ebuild,v 1.6 2009/09/10 15:13:03 ssuominen Exp $
 
 EAPI=2
-inherit autotools
+inherit autotools eutils
 
 DESCRIPTION="GUI for iPod using GTK2"
 HOMEPAGE="http://gtkpod.sourceforge.net/"
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 		sys-devel/gettext )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-libmp4v2.patch
 	eautoreconf
 }
 
