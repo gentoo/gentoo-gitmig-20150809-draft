@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/fabric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.4 2009/09/03 07:39:15 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fabric/ChangeLog,v 1.5 2009/09/10 22:10:17 arfrever Exp $
+
+*fabric-0.9_beta1 (10 Sep 2009)
+
+  10 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -fabric-0.1.0.ebuild, -fabric-0.1.1.ebuild, +fabric-0.9_beta1.ebuild,
+  -fabric-0.9a_p3.ebuild:
+  Version bump. Set SUPPORT_PYTHON_ABIS.
 
   03 Sep 2009; Zac Medico <zmedico@gentoo.org> fabric-0.9a_p3.ebuild:
   Snapshots are generated on-the-fly and checksums vary, so only download
