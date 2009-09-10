@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/kicad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.39 2009/05/07 15:54:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/ChangeLog,v 1.40 2009/09/10 15:35:52 ssuominen Exp $
+
+  10 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kicad-20090320.1666.ebuild, kicad-20090320.1666-r1.ebuild:
+  Fix xz-utils vs. lzma-utils deps.
 
 *kicad-20090320.1666-r1 (07 May 2009)
 

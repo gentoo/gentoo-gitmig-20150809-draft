@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r1.ebuild,v 1.1 2009/05/07 15:54:31 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/kicad/kicad-20090320.1666-r1.ebuild,v 1.2 2009/09/10 15:35:52 ssuominen Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -26,7 +26,7 @@ CDEPEND=">=dev-util/cmake-2.6.0
 	x11-libs/wxGTK:2.8[X,opengl]
 	sys-libs/zlib"
 DEPEND="${CDEPEND}
-	app-arch/lzma-utils"
+	|| ( app-arch/xz-utils app-arch/lzma-utils )"
 RDEPEND="${CDEPEND}
 	python? ( dev-lang/python )"
 
