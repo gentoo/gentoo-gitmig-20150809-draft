@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.4.ebuild,v 1.1 2009/09/10 17:18:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.4.ebuild,v 1.2 2009/09/10 17:45:31 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -127,7 +127,7 @@ src_install () {
 	newinitd "${FILESDIR}"/dovecot.init-r2 dovecot
 
 	rm -rf "${D}"/usr/share/doc/dovecot
-	use doc && dodoc AUTHORS NEWS README TODO dovecot-example.conf doc/dovecot-{db,dict-sql}-example.conf doc/{securecoding,auth-protocol,documentation}.txt doc/dovecot-openssl.cnf 
+	use doc && dodoc AUTHORS NEWS README TODO dovecot-example.conf doc/dovecot-{db,dict-sql}-example.conf doc/{securecoding,auth-protocol,documentation}.txt doc/dovecot-openssl.cnf
 
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....
@@ -200,7 +200,7 @@ src_install () {
 	keepdir /var/run/dovecot/login
 	fowners root:dovecot /var/run/dovecot/login
 	fperms 0750 /var/run/dovecot/login
-	
+
 	ewarn "If you are upgrading from Dovecot 1.1, read "
 	ewarn " http://wiki.dovecot.org/Upgrading/1.2"
 	if use sieve; then
