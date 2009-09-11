@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.500 2009/09/01 08:50:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.501 2009/09/11 13:40:53 aballier Exp $
+
+  11 Sep 2009; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  update live useflag description, by Michael
+  <gen.8.madblock@spamgourmet.com>, bug #283890
 
   01 Sep 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   update patchset for latest upstream changes, remove pda useflag as its

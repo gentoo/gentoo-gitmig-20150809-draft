@@ -25,7 +25,7 @@
 		from various video formats to standard ones, needed to use v4l2 devices
 		with strange formats).</flag>
     <flag name="libtiger">Enables Ogg Kate subtitles rendering using libtiger.</flag>
-    <flag name="live">Enables LIVE.com support.</flag>
+    <flag name="live">Enables live555 streaming media support (client support for rtsp).</flag>
     <flag name="optimisememory">Enable optimisation for memory rather than performance.</flag>
     <flag name="pda">Builds a GTK+ interface suitable for PDA devices.</flag>
     <flag name="projectm">Enables the projectM visualization plugin.</flag>
