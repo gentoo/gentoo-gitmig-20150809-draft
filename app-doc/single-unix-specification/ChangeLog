@@ -1,6 +1,12 @@
 # ChangeLog for app-doc/single-unix-specification
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.6 2007/07/15 20:00:37 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.7 2009/09/11 19:29:14 patrick Exp $
+
+*single-unix-specification-4 (11 Sep 2009)
+
+  11 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +single-unix-specification-4.ebuild:
+  Bump, fixes #284032. Thanks to Constantin Baranov.
 
   15 Jul 2007; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Take maintainership.
