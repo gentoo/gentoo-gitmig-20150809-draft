@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-2.0.7.ebuild,v 1.1 2009/03/01 00:36:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/rdd/rdd-2.0.7.ebuild,v 1.2 2009/09/11 11:22:05 flameeyes Exp $
 
 inherit autotools
 
@@ -16,7 +16,7 @@ SLOT="0"
 DEPEND="gtk? (	>=x11-libs/gtk+-2
 		>=gnome-base/libglade-2 )"
 
-RDEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
