@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.41 2009/08/27 11:41:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-9999.ebuild,v 1.42 2009/09/11 07:59:11 scarabeus Exp $
 
 EAPI="2"
 
-inherit multilib
+inherit multilib eutils
 
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://source.winehq.org/git/wine.git"
@@ -18,7 +18,7 @@ else
 	S=${WORKDIR}/${MY_P}
 fi
 
-GV="0.9.1"
+GV="1.0.0-x86"
 DESCRIPTION="free implementation of Windows(tm) on Unix"
 HOMEPAGE="http://www.winehq.org/"
 SRC_URI="${SRC_URI}
@@ -26,7 +26,7 @@ SRC_URI="${SRC_URI}
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-IUSE="alsa cups dbus esd +gecko gnutls hal jack jpeg lcms ldap nas ncurses +opengl oss png samba scanner ssl test win64 +X xcomposite xinerama xml"
+IUSE="alsa cups dbus esd +gecko gnutls gsm hal jack jpeg lcms ldap mp3 nas ncurses +opengl oss png samba scanner ssl test win64 +X xcomposite xinerama xml"
 RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
@@ -51,9 +51,11 @@ RDEPEND=">=media-libs/freetype-2.0.0
 	nas? ( media-libs/nas )
 	cups? ( net-print/cups )
 	opengl? ( virtual/opengl )
+	gsm? ( media-sound/gsm )
 	jpeg? ( media-libs/jpeg )
 	ldap? ( net-nds/openldap )
 	lcms? ( media-libs/lcms )
+	mp3? ( media-sound/mpg123 )
 	samba? ( >=net-fs/samba-3.0.25 )
 	xml? ( dev-libs/libxml2 dev-libs/libxslt )
 	scanner? ( media-gfx/sane-backends )
@@ -86,6 +88,7 @@ src_unpack() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-1.1.15-winegcc.patch #260726
 	epatch_user #282735
 	sed -i '/^UPDATE_DESKTOP_DATABASE/s:=.*:=true:' tools/Makefile.in || die
 	sed -i '/^MimeType/d' tools/wine.desktop || die #117785
@@ -104,11 +107,13 @@ src_configure() {
 		$(use_with cups) \
 		$(use_with esd) \
 		$(use_with gnutls) \
+		$(use_with gsm) \
 		$(! use dbus && echo --without-hal || use_with hal) \
 		$(use_with jack) \
 		$(use_with jpeg) \
 		$(use_with lcms cms) \
 		$(use_with ldap) \
+		$(use_with mp3 mpg123) \
 		$(use_with nas) \
 		$(use_with ncurses curses) \
 		$(use_with opengl) \
