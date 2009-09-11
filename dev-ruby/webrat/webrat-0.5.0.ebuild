@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.5.0.ebuild,v 1.1 2009/08/22 18:35:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webrat/webrat-0.5.0.ebuild,v 1.2 2009/09/11 11:26:01 flameeyes Exp $
 
 inherit gems
 
@@ -15,4 +15,4 @@ IUSE=""
 USE_RUBY="ruby18"
 
 RDEPEND=">=dev-ruby/nokogiri-1.2.0"
-DEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
