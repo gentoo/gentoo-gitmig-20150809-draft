@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.0.0_rc1.ebuild,v 1.1 2009/09/10 16:59:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/scummvm-1.0.0_rc1.ebuild,v 1.2 2009/09/11 21:54:52 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -51,7 +51,7 @@ src_configure() {
 
 	( use vorbis || use ogg ) \
 		&& myconf="${myconf} --enable-vorbis" \
-		|| myconf="${myconf} --disable-vorbis --disable-mpeg2"
+		|| myconf="${myconf} --disable-vorbis"
 
 	# bug #137547
 	use fluidsynth || myconf="${myconf} --disable-fluidsynth"
