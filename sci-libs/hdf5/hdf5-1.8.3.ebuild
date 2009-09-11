@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3.ebuild,v 1.2 2009/08/24 14:13:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3.ebuild,v 1.3 2009/09/11 02:29:30 bicatali Exp $
 
 EAPI=2
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -52,6 +52,7 @@ src_prepare() {
 }
 
 src_configure() {
+	filter_flags -
 	# threadsafe incompatible with many options
 	local myconf="--disable-threadsafe"
 	use threads && ! use fortran && ! use cxx && ! use mpi \

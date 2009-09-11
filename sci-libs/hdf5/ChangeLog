@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.35 2009/08/24 14:13:28 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.36 2009/09/11 02:29:30 bicatali Exp $
+
+  11 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf5-1.8.3.ebuild,
+  files/hdf5-1.8.3-as-needed.patch:
+  More as-needed fixes, thanks to Kacper Kowalik closing bug #284518
 
   24 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf5-1.8.3.ebuild:
   Replaced use-based dependency for virtual by atom based ones. Thanks
