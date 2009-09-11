@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-contacts/gpe-contacts-0.49.ebuild,v 1.1 2009/07/15 02:22:08 miknix Exp $
+# $Header: /var/cvsroot/gentoo-x86/gpe-base/gpe-contacts/gpe-contacts-0.49.ebuild,v 1.2 2009/09/11 11:28:13 flameeyes Exp $
 
 GPE_TARBALL_SUFFIX="bz2"
 inherit gpe autotools
@@ -15,7 +15,7 @@ IUSE="${IUSE} dbus"
 GPE_DOCS="ChangeLog"
 GPECONF="${GPECONF} $(use_enable dbus)"
 
-RDEPEND=${RDEPEND}"
+RDEPEND="${RDEPEND}
 	gpe-base/libgpewidget
 	gpe-base/libgpevtype
 	gpe-base/libgpepimc
