@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/smbldap-tools
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.32 2008/08/08 21:35:40 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/ChangeLog,v 1.33 2009/09/11 11:32:37 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  smbldap-tools-0.9.4-r1.ebuild, smbldap-tools-0.9.5.ebuild:
+  Fix DEPEND/RDEPEND assignment.
 
   08 Aug 2008; Markus Meier <maekke@gentoo.org>
   smbldap-tools-0.9.4-r1.ebuild:

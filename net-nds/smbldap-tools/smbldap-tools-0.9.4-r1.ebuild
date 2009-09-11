@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.4-r1.ebuild,v 1.8 2008/12/07 12:18:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/smbldap-tools/smbldap-tools-0.9.4-r1.ebuild,v 1.9 2009/09/11 11:32:37 flameeyes Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="net-nds/openldap
 	dev-perl/Digest-SHA1
 	dev-perl/Unicode-MapUTF8
 	dev-perl/IO-Socket-SSL"
-DEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	mkdir man
