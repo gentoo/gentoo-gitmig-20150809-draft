@@ -1,0 +1,50 @@
+#!/sbin/runscript
+
+depend() {
+	need localmount
+	after net netmount
+}
+
+recover_sessions() {
+	einfo "Recovering schroot sessions"
+	eindent
+	local chroot
+	local chroots="$(schroot --all-sessions --list --quiet)"
+	if [ -n "${chroots}" ]; then
+		for chroot in ${chroots}; do
+			ebegin "$chroot"
+			schroot --chroot=$chroot --recover-session
+			eend $?
+		done
+	else
+		einfo "(none)"
+	fi
+	eoutdent
+	einfo "...done"
+}
+
+end_sessions() {
+	einfo "Ending schroot sessions"
+	eindent
+	local chroot
+	local chroots="$(schroot --all-sessions --list --quiet)"
+	if [ -n "${chroots}" ]; then
+		for chroot in ${chroots}; do
+			ebegin "$chroot"
+			schroot --chroot=$chroot --recover-session
+			eend $?
+		done
+	else
+		einfo "(none)"
+	fi
+	eoutdent
+	einfo "...done"
+}
+
+start() {
+	if [ "${SESSIONS_RECOVER}" = "end" ]; then
+		end_sessions
+	else
+		recover_sessions
+	fi
+}
