@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/libmsn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.6 2009/05/11 18:55:51 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmsn/ChangeLog,v 1.7 2009/09/11 07:37:00 scarabeus Exp $
+
+*libmsn-4.0_beta8 (11 Sep 2009)
+
+  11 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libmsn-4.0_beta4.ebuild, -libmsn-4.0_beta5.ebuild,
+  +libmsn-4.0_beta8.ebuild:
+  Version bump. Remove old. Per bug #284292.
 
 *libmsn-4.0_beta5 (11 May 2009)
 
