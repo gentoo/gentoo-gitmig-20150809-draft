@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/openswan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.68 2009/08/30 07:35:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/ChangeLog,v 1.69 2009/09/11 18:46:36 mrness Exp $
+
+*openswan-2.6.23 (11 Sep 2009)
+*openswan-2.4.15-r1 (11 Sep 2009)
+
+  11 Sep 2009; Alin Năstac <mrness@gentoo.org>
+  +files/openswan-2.4-allow-ms-bad-proposal.patch,
+  +files/openswan-2.6.23-gentoo.patch,
+  +files/openswan-2.6-allow-ms-bad-proposal.patch, metadata.xml,
+  +openswan-2.4.15-r1.ebuild, +openswan-2.6.23.ebuild:
+  Version bump. Correct ipsec.conf and ipsec.secrets paths in openswan-2.4
+  documentation (#284235). Add ms-bad-proposal USE flag and patch (#284240).
 
   30 Aug 2009; Alin Năstac <mrness@gentoo.org>
   -files/openswan-2.4.14-deprecated-ldap.patch,

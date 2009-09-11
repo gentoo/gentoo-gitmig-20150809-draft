@@ -18,5 +18,7 @@ growing frustrated with the politics surrounding the FreeS/WAN project.</longdes
     <flag name="weak-algorithms">Include weak algorithms (DH1)</flag>
     <flag name="nocrypto-algorithms">Include algorithms that don't even encrypt
     (1DES)</flag>
+    <flag name="ms-bad-proposal">Allow bad IP address proposal offered by an
+    Microsoft L2TP/IPSec servers</flag>
   </use>
 </pkgmetadata>
