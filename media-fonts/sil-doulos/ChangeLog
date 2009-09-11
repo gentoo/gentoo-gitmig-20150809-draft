@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/sil-doulos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-doulos/ChangeLog,v 1.5 2009/09/07 17:56:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/sil-doulos/ChangeLog,v 1.6 2009/09/11 21:38:08 maekke Exp $
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org> sil-doulos-4.104.ebuild:
+  amd64/x86 stable, bug #283915
 
   07 Sep 2009; Brent Baude <ranger@gentoo.org> sil-doulos-4.104.ebuild:
   Marking sil-doulos-4.104 ppc64 for bug 283915
