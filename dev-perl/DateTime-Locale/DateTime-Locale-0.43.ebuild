@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.43.ebuild,v 1.2 2009/09/10 08:42:46 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/DateTime-Locale-0.43.ebuild,v 1.3 2009/09/11 16:02:04 armin76 Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ DESCRIPTION="Localization support for DateTime"
 
 LICENSE="|| ( Artistic GPL-2 ) unicode"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha ~amd64 ia64 ~ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND="dev-perl/Params-Validate
