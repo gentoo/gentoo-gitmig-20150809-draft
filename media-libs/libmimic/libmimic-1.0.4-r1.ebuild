@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/libmimic-1.0.4-r1.ebuild,v 1.1 2009/02/16 18:42:31 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmimic/libmimic-1.0.4-r1.ebuild,v 1.2 2009/09/11 21:54:33 volkmar Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/farsight/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND="dev-libs/glib:2"
