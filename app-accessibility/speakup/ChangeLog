@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/speakup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.35 2009/09/11 02:48:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speakup/ChangeLog,v 1.36 2009/09/11 03:10:27 williamh Exp $
+
+  11 Sep 2009; William Hubbs <williamh@gentoo.org> -speakup-3.1.1.ebuild,
+  -speakup-3.1.2.ebuild:
+  removed old versions
 
   11 Sep 2009; Jeremy Olexa <darkside@gentoo.org> speakup-3.1.3.ebuild:
   amd64 stable, bug 282054. Compile tested only due to environment
