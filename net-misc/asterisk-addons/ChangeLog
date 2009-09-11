@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/asterisk-addons
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.15 2009/05/01 15:43:59 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-addons/ChangeLog,v 1.16 2009/09/11 16:39:52 chainsaw Exp $
+
+*asterisk-addons-1.6.1.1 (11 Sep 2009)
+
+  11 Sep 2009; <chainsaw@gentoo.org> +asterisk-addons-1.6.1.1.ebuild,
+  +files/asterisk-addons-1.6.1.1-parallel-make.diff,
+  +files/asterisk-addons-1.6.1.1-uclibc.diff:
+  Version bump, closes bug #267366 by Cédric Caron.
 
 *asterisk-addons-1.2.9 (01 May 2009)
 
