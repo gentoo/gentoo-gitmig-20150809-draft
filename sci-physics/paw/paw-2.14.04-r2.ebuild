@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.11 2009/05/05 19:48:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/paw-2.14.04-r2.ebuild,v 1.12 2009/09/11 02:19:51 bicatali Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs
@@ -18,7 +18,7 @@ SRC_URI="mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 
 KEYWORDS="amd64 ~hppa sparc x86"
 SLOT="0"
-IUSE=""
+IUSE="static"
 
 RDEPEND="sci-physics/cernlib
 	x11-libs/libXaw
@@ -35,7 +35,7 @@ S="${WORKDIR}/${DEB_PN}-${DEB_PV}.orig"
 
 src_prepare() {
 	cd "${WORKDIR}"
-	epatch "${WORKDIR}/${DEB_P}-${DEB_PR}.diff"
+	epatch "${WORKDIR}"/${DEB_P}-${DEB_PR}.diff
 	cd "${S}"
 	cp debian/add-ons/Makefile .
 	export DEB_BUILD_OPTIONS="$(tc-getFC) nostrip nocheck"
@@ -50,7 +50,8 @@ src_prepare() {
 
 	einfo "Applying Debian patches"
 	emake -j1 patch || die "applying patch failed"
-
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+	epatch "${FILESDIR}"/${P}-missing-headers.patch
 	# since we depend on cfortran, do not use the one from cernlib
 	rm -f src/include/cfortran/cfortran.h
 }

@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.13 2009/05/05 19:48:23 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.14 2009/09/11 02:19:50 bicatali Exp $
+
+  11 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  paw-2.14.04-r2.ebuild, +files/paw-2.14.04-glibc-2.10.patch,
+  +files/paw-2.14.04-missing-headers.patch:
+  Fixed glibc bug #275020, thanks Andrew Savchenko, and add missing header
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org>
   paw-2.14.04-r2.ebuild:
