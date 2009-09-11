@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.0.ebuild,v 1.1 2009/06/02 19:03:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.2.0.ebuild,v 1.2 2009/09/11 07:36:58 zmedico Exp $
 
 EAPI="1"
 
@@ -19,9 +19,8 @@ IUSE="ipv6 kerberos +nfsv3 +nfsv4 tcpd"
 # files, and nfs-utils doesn't build against heimdal either,
 # so don't depend on virtual/krb.
 # (04 Feb 2005 agriffis)
-RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
+DEPEND_COMMON="tcpd? ( sys-apps/tcp-wrappers )
 	sys-libs/e2fsprogs-libs
-	!net-nds/portmap
 	net-nds/rpcbind
 	net-libs/libtirpc
 	nfsv4? (
@@ -33,8 +32,9 @@ RDEPEND="tcpd? ( sys-apps/tcp-wrappers )
 			app-crypt/mit-krb5
 		)
 	)"
+RDEPEND="${DEPEND_COMMON} !net-nds/portmap"
 # util-linux dep is to prevent man-page collision
-DEPEND="${RDEPEND}
+DEPEND="${DEPEND_COMMON}
 	>=sys-apps/util-linux-2.12r-r7"
 
 src_unpack() {
