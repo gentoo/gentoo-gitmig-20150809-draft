@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/pidgin-rhythmbox
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.6 2007/08/28 16:24:55 nixnut Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/pidgin-rhythmbox/ChangeLog,v 1.7 2009/09/11 11:35:36 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pidgin-rhythmbox-2.0.ebuild:
+  Fix DEPEND/RDEPEND assignment.
 
   28 Aug 2007; nixnut <nixnut@gentoo.org> pidgin-rhythmbox-2.0.ebuild:
   Stable on ppc wrt bug 189781
