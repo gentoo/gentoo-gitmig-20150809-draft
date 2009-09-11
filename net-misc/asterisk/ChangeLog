@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.212 2009/09/08 08:59:53 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.213 2009/09/11 16:57:56 chainsaw Exp $
+
+  11 Sep 2009; <chainsaw@gentoo.org>
+  -files/1.6.0/asterisk-1.6.0.6-autoconf-263.patch,
+  -files/1.6.0/asterisk-1.6.0.6-imap-kerberos.patch,
+  -files/1.6.0/asterisk-1.6.0.6-parallelmake.patch,
+  -files/1.6.0/asterisk-1.6.0.6-toolcheck-libs-not-ldflags.patch,
+  -files/1.6.0/asterisk-1.6.0-gsm-pic.patch,
+  -files/1.6.0/asterisk-1.6.0-uclibc.patch,
+  -files/1.6.0/asterisk-1.6.0-var_rundir.patch,
+  -files/1.6.1/asterisk-1.6.1-parallelmake.patch, -files/1.6.0/asterisk.rc6,
+  -files/1.6.1/asterisk-1.6.1-toolcheck-libs-not-ldflags.patch:
+  Remove unused patches.
 
   08 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   asterisk-1.2.35.ebuild:
