@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.5.9_p6.ebuild,v 1.4 2009/08/30 15:51:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/narray-0.5.9_p6.ebuild,v 1.5 2009/09/11 21:31:57 tcunha Exp $
 
 MY_P=${P/_/}
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://rubyforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 hppa ~ia64 ~mips ~ppc ~ppc64 sparc ~x86"
 
 USE_RUBY="ruby18"
 IUSE=""

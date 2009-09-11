@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/narray
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.34 2009/08/30 15:51:33 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/narray/ChangeLog,v 1.35 2009/09/11 21:31:57 tcunha Exp $
+
+  11 Sep 2009; Tiago Cunha <tcunha@gentoo.org> narray-0.5.9_p6.ebuild:
+  stable sparc, bug 282373
 
   30 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   narray-0.5.9_p6.ebuild:
