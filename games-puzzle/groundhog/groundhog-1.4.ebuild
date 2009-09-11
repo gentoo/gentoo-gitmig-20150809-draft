@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.21 2008/10/14 18:20:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.22 2009/09/11 00:25:45 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils autotools games
 
 DEB_VER="9"
@@ -15,15 +16,15 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE="nls"
 
-RDEPEND="=x11-libs/gtk+-2*
+RDEPEND="x11-libs/gtk+:2
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
-src_unpack() {
-	unpack ${A}
-	epatch "${WORKDIR}"/groundhog_${PV}-${DEB_VER}.diff
+src_prepare() {
+	cd "${WORKDIR}"
+	epatch groundhog_${PV}-${DEB_VER}.diff
 	cd "${S}"
 	epatch $(sed -e 's:^:debian/patches/:' debian/patches/series)
 	AT_M4DIR="m4" eautoreconf
@@ -32,9 +33,12 @@ src_unpack() {
 		|| die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	egamesconf $(use_enable nls) || die
-	emake CXXFLAGS="${CXXFLAGS}" || die "emake failed"
+}
+
+src_compile() {
+	emake -j1 || die
 }
 
 src_install() {
