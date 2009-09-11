@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-0.9.8.ebuild,v 1.2 2009/08/10 22:01:15 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-0.9.8.ebuild,v 1.3 2009/09/11 22:18:54 volkmar Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="gps"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 MAKEOPTS="${MAKEOPTS} -j1"
 
 RDEPEND=">=x11-libs/gtk+-2.2.0
