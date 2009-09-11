@@ -1,0 +1,11 @@
+# ChangeLog for games-puzzle/jag
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/jag/ChangeLog,v 1.1 2009/09/11 19:07:06 mr_bones_ Exp $
+
+*jag-0.2.5 (11 Sep 2009)
+
+  11 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +jag-0.2.5.ebuild,
+  +metadata.xml:
+  initial commit - ebuilds submitted by Samuli Suominen and Azamat H.
+  Hackimov via bug #283224
+
