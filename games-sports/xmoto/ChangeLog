@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.38 2009/09/09 15:43:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.39 2009/09/11 22:04:53 mr_bones_ Exp $
+
+  11 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> xmoto-0.5.2.ebuild,
+  +files/xmoto-0.5.2-64bit.patch:
+  Add patch for building on 64bit from Franz Fellner (bug #284464)
 
 *xmoto-0.5.2 (09 Sep 2009)
 

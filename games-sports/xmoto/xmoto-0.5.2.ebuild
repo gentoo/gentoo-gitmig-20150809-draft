@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.2.ebuild,v 1.1 2009/09/09 15:43:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/xmoto-0.5.2.ebuild,v 1.2 2009/09/11 22:04:53 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -45,6 +45,7 @@ src_prepare() {
 		-e '/^gettextsrcdir/s:=.*:= @localedir@/gettext/po:' \
 		po/Makefile.in.in \
 		|| die "sed failed"
+	epatch "${FILESDIR}"/${P}-64bit.patch
 }
 
 src_configure() {
