@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.3.ebuild,v 1.1 2007/09/25 20:22:27 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-5.1.3.ebuild,v 1.2 2009/09/11 11:24:44 flameeyes Exp $
 
 inherit eutils versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -14,7 +14,7 @@ SLOT="0"
 IUSE="boost"
 
 DEPEND="boost? ( dev-libs/boost )"
-RDEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}

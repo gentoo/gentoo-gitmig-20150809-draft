@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/STLport
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.71 2009/03/02 20:07:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/ChangeLog,v 1.72 2009/09/11 11:24:44 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  STLport-5.1.2.ebuild, STLport-5.1.3.ebuild, STLport-5.1.5.ebuild:
+  Fix DEPEND/RDEPEND assignment.
 
   02 Mar 2009; Brent Baude <ranger@gentoo.org> STLport-5.1.5.ebuild:
   Marking STLport-5.1.5 ppc64 for bug 240608; fails same tests as current stable
