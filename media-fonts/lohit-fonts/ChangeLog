@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lohit-fonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/ChangeLog,v 1.18 2009/09/07 20:38:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/ChangeLog,v 1.19 2009/09/11 21:49:26 maekke Exp $
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org> lohit-fonts-2.3.8.ebuild:
+  amd64/x86 stable, bug #284024
 
 *lohit-fonts-2.4.2 (07 Sep 2009)
 
