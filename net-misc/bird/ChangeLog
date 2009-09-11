@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.5 2009/08/24 12:22:41 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.6 2009/09/11 14:01:52 chainsaw Exp $
+
+*bird-1.1.3 (11 Sep 2009)
+
+  11 Sep 2009; <chainsaw@gentoo.org> +files/1.1.3-nostrip.patch,
+  +files/initd-v4-bird-1.1.3, +files/initd-v6-bird-1.1.3,
+  +bird-1.1.3.ebuild:
+  Version bump, contains a core bugfix and corrects AS2->AS4 conversions.
 
 *bird-1.1.2 (24 Aug 2009)
 
