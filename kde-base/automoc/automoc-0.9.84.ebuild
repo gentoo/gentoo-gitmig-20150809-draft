@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.84.ebuild,v 1.6 2009/04/14 23:02:29 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/automoc/automoc-0.9.84.ebuild,v 1.7 2009/09/11 11:29:15 flameeyes Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="x11-libs/qt-core:4"
-RDEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}4-${PV}"
 
