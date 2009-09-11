@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jakarta-slide-webdavclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/ChangeLog,v 1.9 2009/03/24 18:44:06 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jakarta-slide-webdavclient/ChangeLog,v 1.10 2009/09/11 22:14:13 maekke Exp $
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org>
+  jakarta-slide-webdavclient-2.1-r3.ebuild:
+  amd64/x86 stable, bug #284310
 
   24 Mar 2009; Petteri Räty <betelgeuse@gentoo.org>
   -jakarta-slide-webdavclient-2.1-r2.ebuild:
