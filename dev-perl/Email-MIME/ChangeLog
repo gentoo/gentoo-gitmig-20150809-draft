@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-MIME
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.25 2009/09/10 08:47:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME/ChangeLog,v 1.26 2009/09/11 16:03:34 armin76 Exp $
+
+  11 Sep 2009; Raúl Porcel <armin76@gentoo.org> Email-MIME-1.863.ebuild:
+  alpha/ia64/sparc stable wrt #284059
 
   10 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   Email-MIME-1.863.ebuild:
