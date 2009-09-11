@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.27-r1.ebuild,v 1.1 2009/09/11 20:51:58 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.27-r1.ebuild,v 1.2 2009/09/11 23:40:04 darkside Exp $
 
 EAPI=2
 
@@ -164,7 +164,7 @@ src_install() {
 	rm -f "${D}/usr/bin/fvwm-convert-2.6" \
 		"${D}/usr/share/man/man1/fvwm-convert-2.6.1"
 
-	dodir /etc/X11/Sessions/${PN}
+	dodir /etc/X11/Sessions
 	echo "/usr/bin/fvwm" > "${D}/etc/X11/Sessions/${PN}" || die
 	fperms a+x /etc/X11/Sessions/${PN} || die
 
