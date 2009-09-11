@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/farsight2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.10 2009/09/07 05:36:14 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farsight2/ChangeLog,v 1.11 2009/09/11 19:57:09 tester Exp $
+
+  11 Sep 2009; Olivier Crête <tester@gentoo.org> farsight2-0.0.14.ebuild,
+  farsight2-0.0.15.ebuild:
+  Depend on a version of gst-plugins-good/bad that has gstrtpbin
 
 *farsight2-0.0.15 (07 Sep 2009)
 
