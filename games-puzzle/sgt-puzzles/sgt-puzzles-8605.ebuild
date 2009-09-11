@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-8605.ebuild,v 1.1 2009/08/18 09:52:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-8605.ebuild,v 1.2 2009/09/11 12:02:01 tupone Exp $
 
 EAPI="2"
 
@@ -29,9 +29,9 @@ DEPEND="${RDEPEND}
 	doc? ( >=app-doc/halibut-1.0 )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	./mkfiles.pl
 	sed -i \
-		-e '1iPKG_CONFIG ?= pkg-config' \
-		-e '/^GTK_CONFIG/s:=.*:= $(PKG_CONFIG) gtk+-2.0:' \
 		-e 's:= -O2 -Wall -Werror -ansi -pedantic -g:+= $(CPPFLAGS):' \
 		-e '/LDFLAGS/s:=:=$(LDFLAGS) :' \
 		Makefile || die

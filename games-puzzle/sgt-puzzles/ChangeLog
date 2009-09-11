@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/sgt-puzzles
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.1 2009/08/18 09:52:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.2 2009/09/11 12:02:01 tupone Exp $
+
+  11 Sep 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/sgt-puzzles-8605-gentoo.patch, sgt-puzzles-8605.ebuild:
+  Fix --as-needed as reported by Bug #281990 by James Rowe <jnrowe@gmail.com>
 
 *sgt-puzzles-99999999 (18 Aug 2009)
 *sgt-puzzles-8605 (18 Aug 2009)
