@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/cgterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cgterm/ChangeLog,v 1.5 2009/09/07 15:11:55 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cgterm/ChangeLog,v 1.6 2009/09/11 17:41:46 patrick Exp $
+
+  11 Sep 2009; Patrick Lauer <patrick@gentoo.org> cgterm-1.6.ebuild:
+  Add ~amd64 keyword, fixes #281187
 
   07 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> cgterm-1.6.ebuild,
   +files/cgterm-1.6-QA.patch:
