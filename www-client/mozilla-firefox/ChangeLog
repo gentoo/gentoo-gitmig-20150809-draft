@@ -1,6 +1,10 @@
 # ChangeLog for www-client/mozilla-firefox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.548 2009/09/11 12:52:38 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/ChangeLog,v 1.549 2009/09/11 16:29:59 armin76 Exp $
+
+  11 Sep 2009; Raúl Porcel <armin76@gentoo.org>
+  mozilla-firefox-3.0.14.ebuild:
+  alpha/arm/ia64/sparc stable wrt #284439
 
 *mozilla-firefox-3.5.3 (11 Sep 2009)
 
