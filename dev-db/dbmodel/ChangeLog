@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/dbmodel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/ChangeLog,v 1.1 2009/06/30 22:11:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/ChangeLog,v 1.2 2009/09/11 11:23:14 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  dbmodel-0.2.0.ebuild:
+  Fix DEPEND/RDEPEND assignment.
 
 *dbmodel-0.2.0 (30 Jun 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/dbmodel-0.2.0.ebuild,v 1.1 2009/06/30 22:11:21 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/dbmodel-0.2.0.ebuild,v 1.2 2009/09/11 11:23:14 flameeyes Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="x11-libs/qt-gui:4[debug?]"
-RDEPEND="${RDEPEND}"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	eqmake4 ${PN}.pro PREFIX=/usr
