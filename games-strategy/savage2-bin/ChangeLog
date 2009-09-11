@@ -1,0 +1,11 @@
+# ChangeLog for games-strategy/savage2-bin
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/ChangeLog,v 1.1 2009/09/11 21:14:31 mr_bones_ Exp $
+
+*savage2-bin-2.1.0 (11 Sep 2009)
+
+  11 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +savage2-bin-2.1.0.ebuild, +metadata.xml:
+  initial commit - ebuilds submitted by Anton Romanov, Robert Szczesiak, and
+  jon R-B via bug #218518
+
