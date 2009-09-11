@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/droid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.12 2009/09/07 17:55:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/droid/ChangeLog,v 1.13 2009/09/11 21:36:00 maekke Exp $
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org> droid-112_p1.ebuild:
+  amd64/x86 stable, bug #283910
 
   07 Sep 2009; Brent Baude <ranger@gentoo.org> droid-112_p1.ebuild:
   Marking droid-112_p1 ppc64 for bug 283910
