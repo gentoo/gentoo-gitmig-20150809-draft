@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.9 2009/06/02 22:59:48 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/k3guitune/k3guitune-1.01.ebuild,v 1.10 2009/09/11 11:31:07 flameeyes Exp $
 
 EAPI=2
 ARTS_REQUIRED=never
@@ -19,7 +19,7 @@ IUSE="+alsa oss jack"
 RDEPEND="sci-libs/fftw:3.0
 	alsa? ( media-libs/alsa-lib )
 	jack? ( media-libs/bio2jack )"
-DEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 need-kde 3.5
 
