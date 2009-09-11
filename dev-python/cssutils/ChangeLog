@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cssutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.6 2009/09/05 13:49:12 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/ChangeLog,v 1.7 2009/09/11 12:48:53 arfrever Exp $
+
+  11 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  cssutils-0.9.6_beta5.ebuild:
+  Add "test" USE flag.
 
   05 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -cssutils-0.9.6_alpha4.ebuild, -cssutils-0.9.6_beta4.ebuild:
