@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/minimock
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/minimock/ChangeLog,v 1.1 2009/09/11 12:45:07 arfrever Exp $
+
+*minimock-1.2.5 (11 Sep 2009)
+
+  11 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +minimock-1.2.5.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
