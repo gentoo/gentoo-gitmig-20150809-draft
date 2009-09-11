@@ -1,6 +1,10 @@
 # ChangeLog for sys-block/tapecat
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.5 2007/12/16 13:48:34 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tapecat/ChangeLog,v 1.6 2009/09/11 11:34:31 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  tapecat-1.0.0.ebuild:
+  Fix DEPEND/RDEPEND assignment.
 
   16 Dec 2007; Markus Meier <maekke@gentoo.org> tapecat-1.0.0.ebuild:
   x86 stable, bug #202251
