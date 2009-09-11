@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.1 2009/08/25 18:50:14 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.2 2009/09/11 15:28:23 volkmar Exp $
 
 EAPI="2"
 
@@ -81,8 +81,8 @@ pkg_setup() {
 	fi
 
 	if use x264-static && ! use x264; then
-		conditional_use_error_msg "x264-static" "x264"
-		use_error=true
+		ewarn "You have enabled x264-static but x264 is disabled."
+		ewarn "x264-static is going to be useless if x264 is not enabled."
 	fi
 
 	if ${use_error}; then
