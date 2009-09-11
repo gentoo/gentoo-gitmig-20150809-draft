@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/xml-im-exporter-1.1-r1.ebuild,v 1.2 2007/06/03 22:25:44 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/xml-im-exporter-1.1-r1.ebuild,v 1.3 2009/09/11 22:13:18 maekke Exp $
 
 JAVA_PKG_IUSE="doc source"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}${PV}.tgz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=">=virtual/jdk-1.4
 	dev-java/ant-core"

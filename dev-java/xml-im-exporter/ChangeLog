@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xml-im-exporter
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.6 2007/06/03 22:25:44 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-im-exporter/ChangeLog,v 1.7 2009/09/11 22:13:18 maekke Exp $
+
+  11 Sep 2009; Markus Meier <maekke@gentoo.org>
+  xml-im-exporter-1.1-r1.ebuild:
+  amd64/x86 stable, bug #284309
 
   03 Jun 2007; Petteri Räty <betelgeuse@gentoo.org> metadata.xml,
   xml-im-exporter-1.1-r1.ebuild:
