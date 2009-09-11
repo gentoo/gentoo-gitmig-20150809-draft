@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.2 2009/09/11 15:28:23 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.3 2009/09/11 22:25:01 volkmar Exp $
 
 EAPI="2"
 
@@ -15,8 +15,8 @@ LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+audio capi debug dns doc dtmf examples fax ffmpeg h224 h281 h323 iax ipv6
-ivr ixj java ldap lid +plugins rfc4175 sbc sip sipim srtp ssl stats swig theora
-+video vpb vxml wav x264 x264-static xml"
+ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig theora +video
+vpb vxml wav x264 x264-static xml"
 
 RDEPEND=">=net-libs/ptlib-2.0.0[stun,url,debug=,audio?,dns?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
@@ -51,6 +51,7 @@ DEPEND="${RDEPEND}
 # OPALDIR should not be used anymore but if a package still need it, create it
 
 # TODO:
+# remove h281, maybe sipim and dns
 # force or merge some non-plugin USE flags wo/ deps ?
 # celt is not in the tree and should be added
 
@@ -69,11 +70,6 @@ pkg_setup() {
 	fi
 
 	# stop emerge if a conditional use flag is not respected
-
-	if use rfc4175 && ! use video; then
-		conditional_use_error_msg "rfc4175" "video"
-		use_error=true
-	fi
 
 	if use h281 && ! use h224; then
 		conditional_use_error_msg "h281" "h224"
@@ -213,12 +209,11 @@ src_configure() {
 		$(use_enable java) \
 		$(use_enable lid) \
 		$(use_enable plugins) \
-		$(use_enable rfc4175) \
 		$(use_enable sbc) \
 		$(use_enable sip) \
 		$(use_enable sipim) \
 		$(use_enable stats statistics) \
-		$(use_enable video) \
+		$(use_enable video) $(use_enable video rfc4175) \
 		$(use_enable vpb) \
 		$(use_enable x264 h264) \
 		$(use_enable x264-static x264-link-static) \
