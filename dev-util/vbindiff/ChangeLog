@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/vbindiff
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.7 2008/06/30 15:23:15 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vbindiff/ChangeLog,v 1.8 2009/09/11 21:35:20 patrick Exp $
+
+*vbindiff-3.0_beta4 (11 Sep 2009)
+
+  11 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +vbindiff-3.0_beta4.ebuild:
+  Bump
 
 *vbindiff-3.0_beta3 (30 Jun 2008)
 
