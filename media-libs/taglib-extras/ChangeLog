@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/taglib-extras
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.5 2009/08/10 15:27:54 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.6 2009/09/11 01:24:42 jmbsvicetto Exp $
+
+*taglib-extras-0.1.7 (11 Sep 2009)
+
+  11 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +taglib-extras-0.1.7.ebuild:
+  [taglib-extras] Bumped to version 0.1.7.
 
 *taglib-extras-0.1.6 (10 Aug 2009)
 
