@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4806 2009/09/11 19:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4807 2009/09/11 22:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2349,7 +2349,6 @@ net-libs/opal:lid - Enable Line Interface Device
 net-libs/opal:noaudio - Disable audio codecs
 net-libs/opal:novideo - Disable video codecs
 net-libs/opal:plugins - Enable plugins support
-net-libs/opal:rfc4175 - Enable RTP Payload Format for Uncompressed Video 
 net-libs/opal:sbc - Enable the Bluetooth low-complexity, SubBand Codec 
 net-libs/opal:sip - Enable Session Initiation Protocol
 net-libs/opal:sipim - Enable SIP Instant Messages session
