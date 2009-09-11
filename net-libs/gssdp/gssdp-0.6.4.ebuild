@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.6.4.ebuild,v 1.2 2009/09/01 13:25:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gssdp/gssdp-0.6.4.ebuild,v 1.3 2009/09/11 21:01:10 volkmar Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ SRC_URI="http://gupnp.org/sources/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="X"
 
 RDEPEND=">=dev-libs/glib-2.18:2
