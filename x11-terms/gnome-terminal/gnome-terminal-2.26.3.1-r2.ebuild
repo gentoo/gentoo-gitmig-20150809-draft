@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r1.ebuild,v 1.2 2009/09/06 12:57:38 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.26.3.1-r2.ebuild,v 1.1 2009/09/11 15:52:36 nirbheek Exp $
 
 inherit eutils gnome2
 
@@ -44,6 +44,10 @@ src_unpack() {
 	# If we're logged in root on the first tab, don't open a new tab
 	# in user on /, fix bug #269318, import from upstream bug #565328.
 	epatch "${FILESDIR}"/${P}-cwd-on-new-tab.patch
+
+	# Fix bug 268846 -- gnome-terminal errors out if it can't find the gconf
+	# daemon. Patch is from upstream git repository, included in 2.28
+	epatch "${FILESDIR}"/${P}-partial-fix-dbus-error.patch
 
 	# patch gnome terminal to report as GNOME rather than xterm
 	# This needs to resolve a few bugs (#120294,)
