@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgadmin3
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.40 2008/07/18 08:11:51 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.41 2009/09/11 20:38:53 patrick Exp $
+
+*pgadmin3-1.10.0 (11 Sep 2009)
+
+  11 Sep 2009; Patrick Lauer <patrick@gentoo.org> +pgadmin3-1.10.0.ebuild:
+  Bump, fixes #276770
 
   18 Jul 2008; Alexis Ballier <aballier@gentoo.org> pgadmin3-1.8.4.ebuild:
   keyword ~x86-fbsd thanks to Henning Schild <henning@wh9.tu-dresden.de>,
