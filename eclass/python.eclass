@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.71 2009/09/09 04:16:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.72 2009/09/11 19:55:05 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -251,7 +251,7 @@ python_set_build_dir_symlink() {
 # Execute specified function for each value of PYTHON_ABIS, optionally passing additional
 # arguments. The specified function can use PYTHON_ABI and BUILDDIR variables.
 python_execute_function() {
-	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function nonfatal="0" PYTHON_ABI quiet="0" separate_build_dirs="0"
+	local action action_message action_message_template= default_function="0" failure_message failure_message_template= function nonfatal="0" previous_directory_stack_length PYTHON_ABI quiet="0" separate_build_dirs="0"
 
 	while (($#)); do
 		case "$1" in
@@ -383,6 +383,8 @@ python_execute_function() {
 			export BUILDDIR="${S}"
 		fi
 
+		previous_directory_stack_length="${#DIRSTACK[@]}"
+
 		if ! has "${EAPI}" 0 1 2 && has "${PYTHON_ABI}" ${FAILURE_TOLERANT_PYTHON_ABIS}; then
 			EPYTHON="$(PYTHON)" nonfatal "${function}" "$@"
 		else
@@ -418,6 +420,14 @@ python_execute_function() {
 				die "${failure_message}"
 			fi
 		fi
+
+		if [[ "${#DIRSTACK[@]}" -lt "${previous_directory_stack_length}" ]]; then
+			die "Directory stack decreased illegally"
+		fi
+
+		while [[ "${#DIRSTACK[@]}" -gt "${previous_directory_stack_length}" ]]; do
+			popd > /dev/null || die "popd failed"
+		done
 
 		if [[ "${separate_build_dirs}" == "1" ]]; then
 			popd > /dev/null || die "popd failed"
