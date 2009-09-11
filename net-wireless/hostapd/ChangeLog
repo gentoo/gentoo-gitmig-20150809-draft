@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.102 2009/05/24 18:34:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.103 2009/09/11 11:15:17 flameeyes Exp $
+
+  11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  hostapd-0.6.8.ebuild, hostapd-0.6.9.ebuild:
+  Fix RDEPEND assignment that nilled the runtime dependencies.
 
   24 May 2009; Markus Meier <maekke@gentoo.org> hostapd-0.6.9.ebuild:
   amd64/x86 stable, bug #270148
