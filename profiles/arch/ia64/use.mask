@@ -57,6 +57,7 @@ fits
 ktts
 libburn
 topal
+indi
 
 # Stuff that doesn't compile on ia64
 chicken
