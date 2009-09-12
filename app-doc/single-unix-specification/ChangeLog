@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/single-unix-specification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.7 2009/09/11 19:29:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/single-unix-specification/ChangeLog,v 1.8 2009/09/12 01:43:11 dirtyepic Exp $
+
+*single-unix-specification-4-r1 (12 Sep 2009)
+
+  12 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
+  -single-unix-specification-4.ebuild,
+  +single-unix-specification-4-r1.ebuild:
+  Move to new SLOT. Fix license.
 
 *single-unix-specification-4 (11 Sep 2009)
 
