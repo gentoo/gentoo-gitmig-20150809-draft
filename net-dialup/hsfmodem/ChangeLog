@@ -1,6 +1,18 @@
 # ChangeLog for net-dialup/hsfmodem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.56 2009/09/06 15:03:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsfmodem/ChangeLog,v 1.57 2009/09/12 04:48:47 mrness Exp $
+
+  12 Sep 2009; Alin Năstac <mrness@gentoo.org>
+  -files/hsfmodem-7.68.00.09-gentoo.patch,
+  -files/hsfmodem-7.68.00.12-gentoo.patch,
+  -files/hsfmodem-7.68.00.13-gentoo.patch,
+  -files/hsfmodem-7.68.00.14-gentoo.patch,
+  -files/hsfmodem-7.80.02.01-gentoo.patch,
+  -files/hsfmodem-7.80.02.03-gentoo.patch, -hsfmodem-7.68.00.09.ebuild,
+  -hsfmodem-7.68.00.12.ebuild, -hsfmodem-7.68.00.13.ebuild,
+  -hsfmodem-7.68.00.14.ebuild, -hsfmodem-7.80.02.01.ebuild,
+  -hsfmodem-7.80.02.03.ebuild:
+  Remove old versions.
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> hsfmodem-7.80.02.04.ebuild:
   amd64/x86 stable, bug #282166
