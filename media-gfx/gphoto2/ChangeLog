@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.90 2009/09/06 16:56:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.91 2009/09/12 12:59:43 betelgeuse Exp $
+
+  12 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> -gphoto2-2.4.4.ebuild:
+  Remove old ebuild with built_with_use call.
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> gphoto2-2.4.5.ebuild:
   amd64/x86 stable, bug #282849
@@ -323,7 +326,7 @@
   new ebuild introduced to bugzilla by  
   Robert Davis <rdavis@uniformcompany.com>
 
-*gphoto2-2.0-r1 (01 April 2002)
+*gphoto2-2.0-r1 (01 Apr 2002)
 
   19 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> gphoto2-2.0-r1.ebuild :
 
@@ -336,13 +339,13 @@ unmasking the glib-2.0.1 packages
   01 April 2002; Spider <spider@gentoo.org>
   move to gphoto2
 
-*gphoto-2.0-r1 (16 March 2002)
+*gphoto-2.0-r1 (16 Mar 2002)
 
   16 March 2002; M.Schlemmer <azarah@gentoo.org> :
 
   Libtoolize gphoto to properly fix the compile/missing libraries.
 
-*gphoto-2.0 (11 March 2002)
+*gphoto-2.0 (11 Mar 2002)
 
 *gphoto-2.0_beta3 (1 Feb 2002)
 
