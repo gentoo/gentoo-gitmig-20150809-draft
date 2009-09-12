@@ -10,7 +10,6 @@
 		<flag name="audio">Enable audio support</flag>
 		<flag name="capi">Enable CAPI support</flag>
 		<flag name="celt">Enable CELT ultra-low delay audio codec</flag>
-		<flag name="dns">Enable DNS resolver support</flag>
 		<flag name="dtmf">Enable DTMF encoding/decoding support</flag>
 		<flag name="fax">Enable T.38 FAX protocol</flag>
 		<flag name="h224">Enable H.224 real time control protocol</flag>

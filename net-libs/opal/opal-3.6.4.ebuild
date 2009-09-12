@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.3 2009/09/11 22:25:01 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4.ebuild,v 1.4 2009/09/12 20:46:11 volkmar Exp $
 
 EAPI="2"
 
@@ -14,11 +14,11 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="+audio capi debug dns doc dtmf examples fax ffmpeg h224 h281 h323 iax ipv6
-ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig theora +video
-vpb vxml wav x264 x264-static xml"
+IUSE="+audio capi debug doc dtmf examples fax ffmpeg h224 h281 h323 iax ipv6 ivr
+ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig theora +video vpb
+vxml wav x264 x264-static xml"
 
-RDEPEND=">=net-libs/ptlib-2.0.0[stun,url,debug=,audio?,dns?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.0.0[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
@@ -42,18 +42,13 @@ DEPEND="${RDEPEND}
 
 # NOTES:
 # ffmpeg[encode] is for h263 and mpeg4
-# ssl, xml, vxml, ipv6, dtmf, ldap, audio, wav, dns and video are use flags
+# ssl, xml, vxml, ipv6, dtmf, ldap, audio, wav, and video are use flags
 #   herited from ptlib: feature is enabled if ptlib has enabled it
 #   however, disabling it if ptlib has it looks hard (coz of buildopts.h)
 #   forcing ptlib to disable it for opal is not a solution too
 #   atm, accepting the "auto-feature" looks like a good solution
 #   (asn is used for fax and config _only_ for examples)
 # OPALDIR should not be used anymore but if a package still need it, create it
-
-# TODO:
-# remove h281, maybe sipim and dns
-# force or merge some non-plugin USE flags wo/ deps ?
-# celt is not in the tree and should be added
 
 conditional_use_error_msg() {
 	eerror "To enable ${1} USE flag, you need ${2} USE flag to be enabled"

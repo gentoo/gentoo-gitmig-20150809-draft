@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4-r1.ebuild,v 1.1 2009/09/12 13:59:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.4-r1.ebuild,v 1.2 2009/09/12 20:46:11 volkmar Exp $
 
 EAPI="2"
 
@@ -14,11 +14,11 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+audio capi celt debug dns doc dtmf examples fax ffmpeg h224 h281 h323 iax
+IUSE="+audio capi celt debug doc dtmf examples fax ffmpeg h224 h281 h323 iax
 ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig theora
 +video vpb vxml wav x264 x264-static xml"
 
-RDEPEND=">=net-libs/ptlib-2.0.0[stun,url,debug=,audio?,dns?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
+RDEPEND=">=net-libs/ptlib-2.0.0[stun,debug=,audio?,dtmf?,ipv6?,ldap?,ssl?,video?,vxml?,wav?,xml?]
 	>=media-libs/speex-1.2_beta
 	fax? ( net-libs/ptlib[asn] )
 	h323? ( net-libs/ptlib[asn] )
@@ -43,16 +43,13 @@ DEPEND="${RDEPEND}
 
 # NOTES:
 # ffmpeg[encode] is for h263 and mpeg4
-# ssl, xml, vxml, ipv6, dtmf, ldap, audio, wav, dns and video are use flags
+# ssl, xml, vxml, ipv6, dtmf, ldap, audio, wav, and video are use flags
 #   herited from ptlib: feature is enabled if ptlib has enabled it
 #   however, disabling it if ptlib has it looks hard (coz of buildopts.h)
 #   forcing ptlib to disable it for opal is not a solution too
 #   atm, accepting the "auto-feature" looks like a good solution
 #   (asn is used for fax and config _only_ for examples)
 # OPALDIR should not be used anymore but if a package still need it, create it
-
-# TODO:
-# update "audio dns dtmf vxml wav" flags after ptlib update
 
 pkg_setup() {
 	# need >=gcc-3
