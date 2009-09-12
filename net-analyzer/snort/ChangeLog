@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.152 2009/08/17 16:18:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.153 2009/09/12 03:01:27 vostorga Exp $
+
+  12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -files/snort-2.6.1.1-libnet.patch, -files/snort-2.6.1.2-libdir.patch,
+  -files/snort-2.6.1.2-react.patch, -files/snort-2.6.1.4-libdnet-ip6.patch,
+  -files/snort-2.6.1.4-server_stats.patch,
+  -files/snort-2.8.3.1-libnet.patch, -files/snort.rc7, -files/snort.rc8,
+  -files/spo_database_fix.patch:
+  Cleaning out unused files
 
   17 Aug 2009; Patrick Lauer <patrick@gentoo.org> snort-2.8.4.1.ebuild:
   Small typo fix, closes #279926
