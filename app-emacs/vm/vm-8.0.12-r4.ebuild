@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12-r3.ebuild,v 1.1 2009/09/10 08:32:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-8.0.12-r4.ebuild,v 1.1 2009/09/12 10:58:18 ulm Exp $
 
 inherit elisp eutils
 
@@ -25,15 +25,12 @@ src_unpack() {
 
 	epatch "${FILESDIR}/${P}-autoload-vm-pine.patch" #246185
 	epatch "${FILESDIR}/${P}-supercite-yank.patch" #256886
+	epatch "${FILESDIR}/${P}-folder-corruption.patch" #284668
 
 	if ! use bbdb; then
 		elog "Excluding vm-pcrisis.el since the \"bbdb\" USE flag is not set."
 		epatch "${FILESDIR}/vm-8.0-no-pcrisis.patch"
 	fi
-
-	# fix vm-version, bug 235563
-	#sed -i -e "/^(defvar vm-version /s/nil/\"${PV}\"/" lisp/vm-version.el \
-	#	|| die "sed failed"
 }
 
 src_compile() {
