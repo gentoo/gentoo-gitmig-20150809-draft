@@ -1,6 +1,11 @@
 # ChangeLog for net-im/qtwitter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.13 2009/08/08 17:42:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.14 2009/09/12 10:07:24 wired Exp $
+
+*qtwitter-0.9.0 (12 Sep 2009)
+
+  12 Sep 2009; Alex Alexander <wired@gentoo.org> +qtwitter-0.9.0.ebuild:
+  version bump
 
 *qtwitter-0.8.3 (08 Aug 2009)
 
