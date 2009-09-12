@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.31 2009/09/12 15:59:49 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.32 2009/09/12 16:08:42 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -72,6 +72,8 @@ bittorrent-external
 ktts
 redland
 raptor
+fits
+indi
 
 # Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
 # both x11-libs/qt-phonon and media-sound/phonon are unkeyworded
