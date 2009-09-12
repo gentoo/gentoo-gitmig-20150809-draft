@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4.ebuild,v 1.2 2009/08/26 12:48:05 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4.ebuild,v 1.3 2009/09/12 20:22:53 volkmar Exp $
 
 EAPI="2"
 
@@ -15,12 +15,12 @@ LICENSE="MPL-1.0"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 # default enabled are features from 'minsize', the most used according to ptlib
-IUSE="alsa +asn +audio config-file debug dns doc dtmf esd examples ffmpeg ftp
-+http http-forms http-server ieee1394 ipv6 jabber ldap mail pipechan odbc oss
-pch qos remote sasl sdl serial shmvideo snmp soap socks ssl +stun telnet tts
-+url v4l v4l2 +video video-file vxml wav xml xmlrpc"
+IUSE="alsa +asn +audio debug doc dtmf esd examples ffmpeg ftp http ieee1394 ipv6
+jabber ldap mail odbc oss pch qos remote sasl sdl serial shmvideo snmp soap
+socks ssl +stun telnet tts v4l v4l2 +video vxml wav xml xmlrpc"
 
-COMMON_DEP="audio? ( alsa? ( media-libs/alsa-lib )
+CDEPEND="
+	audio? ( alsa? ( media-libs/alsa-lib )
 		esd? ( media-sound/esound ) )
 	ldap? ( net-nds/openldap )
 	odbc? ( dev-db/unixODBC )
@@ -33,9 +33,9 @@ COMMON_DEP="audio? ( alsa? ( media-libs/alsa-lib )
 				sys-libs/libraw1394 )
 		v4l2? ( media-libs/libv4l ) )
 	xml? ( dev-libs/expat )"
-RDEPEND="${COMMON_DEP}
+RDEPEND="${CDEPEND}
 	ffmpeg? ( media-video/ffmpeg )"
-DEPEND="${COMMON_DEP}
+DEPEND="${CDEPEND}
 	dev-util/pkgconfig
 	sys-devel/bison
 	sys-devel/flex
@@ -53,111 +53,65 @@ DEPEND="${COMMON_DEP}
 # TODO:
 # manage in a better way the conditional use flags (with eapi-3 ?)
 
-conditional_use_error_msg() {
-	eerror "To enable ${1} USE flag, you need ${2} USE flag to be enabled"
-	eerror "Please, enable ${2} or disable ${1}"
+conditional_use_warn_msg() {
+	ewarn "To enable ${1} USE flag, you need ${2} USE flag to be enabled"
+	ewarn "Please, enable ${2} or disable ${1}"
 }
 
 pkg_setup() {
-	local use_error=false
+	local use_warn=false
 
-	# stop emerge if a conditional use flag is not respected
-
-	if ! use video; then
-		if use sdl; then
-			conditional_use_error_msg "sdl" "video"
-			use_error=true
-		fi
-		if use video-file; then
-			conditional_use_error_msg "video-file" "video"
-			use_error=true
-		fi
+	if use sdl && ! use video; then
+		conditional_use_warn_msg "sdl" "video"
+		use_warn=true
 	fi
 
 	if use jabber && ! use xml; then
-		conditional_use_error_msg "jabber" "xml"
-		use_error=true
-	fi
-
-	if use ldap && ! use dns; then
-		conditional_use_error_msg "ldap" "dns"
-		use_error=true
-	fi
-
-	if use ffmpeg && ! use pipechan; then
-		conditional_use_error_msg "ffmpeg" "pipechan"
-		use_error=true
-	fi
-
-	if use http && ! use url; then
-		conditional_use_error_msg "http" "url"
-		use_error=true
-	fi
-
-	if use http-forms; then
-		if ! use http; then
-			conditional_use_error_msg "http-forms" "http"
-			use_error=true
-		fi
-		if ! use config-file; then
-			conditional_use_error_msg "http-forms" "config-file"
-			use_error=true
-		fi
-	fi
-
-	if use http-server && ! use http-forms; then
-		conditional_use_error_msg "http-server" "http-forms"
-		use_error=true
+		conditional_use_warn_msg "jabber" "xml"
+		use_warn=true
 	fi
 
 	if use vxml; then
 		if ! use xml; then
-			conditional_use_error_msg "vxml" "xml"
-			use_error=true
+			conditional_use_warn_msg "vxml" "xml"
+			use_warn=true
 		fi
 		if ! use http; then
-			conditional_use_error_msg "vxml" "http"
-			use_error=true
+			conditional_use_warn_msg "vxml" "http"
+			use_warn=true
 		fi
 	fi
 
 	if use xmlrpc; then
 		if ! use xml; then
-			conditional_use_error_msg "xmlrpc" "xml"
-			use_error=true
+			conditional_use_warn_msg "xmlrpc" "xml"
+			use_warn=true
 		fi
 		# configure script tells it needs http but it fails, see bug 277385
 		# the bug has been reported at upstream bug 2820814
-		if ! use http-server; then
-			conditional_use_error_msg "xmlrpc" "http-server"
-			use_error=true
+		if ! use http; then
+			conditional_use_warn_msg "xmlrpc" "http"
+			use_warn=true
 		fi
 	fi
 
 	if use soap; then
 		if ! use xml; then
-			conditional_use_error_msg "soap" "xml"
-			use_error=true
+			conditional_use_warn_msg "soap" "xml"
+			use_warn=true
 		fi
 		# fix bug 280850, see upstream bug 2844915
-		if ! use http-server; then # this means http and http-forms
-			conditional_use_error_msg "soap" "http-server"
-			use_error=true
+		if ! use http; then
+			conditional_use_warn_msg "soap" "http"
+			use_warn=true
 		fi
 	fi
 
-	# fix bug 277617, upstream bug 2820953
-	if use remote; then
-		if ! use config-file; then
-			conditional_use_error_msg "remote" "config-file"
-			use_error=true
-		fi
-	fi
-
-	if ${use_error}; then
+	if ${use_warn}; then
 		echo
-		eerror "Please look at previous messages and re-emerge ${PN} accordingly."
-		die "conditional USE flags error"
+		ewarn "Please look at previous messages and re-emerge accordingly if needed."
+		ebeep
+		epause 5
 	fi
 }
 
@@ -188,6 +142,7 @@ src_configure() {
 	# appshare, vfw: only for windows
 	# samples: no need to build samples
 	# avc: disabled, bug 276514, upstream bug 2821744
+	# pipechan, configfile, resolver, url: force enabling
 	econf ${myconf} \
 		--disable-minsize \
 		--disable-openh323 \
@@ -201,21 +156,23 @@ src_configure() {
 		--disable-vfw \
 		--disable-samples \
 		--disable-avc \
+		--enable-configfile \
+		--enable-pipechan \
+		--enable-resolver \
+		--enable-url \
 		$(use_enable audio) \
 		$(use_enable alsa) \
 		$(use_enable asn) \
-		$(use_enable config-file configfile) \
 		$(use_enable debug exceptions) \
 		$(use_enable debug memcheck) \
 		$(use_enable debug tracing) \
-		$(use_enable dns resolver) \
 		$(use_enable dtmf) \
 		$(use_enable esd) \
 		$(use_enable ffmpeg ffvdev) \
 		$(use_enable ftp) \
 		$(use_enable http) \
-		$(use_enable http-forms httpforms) \
-		$(use_enable http-server httpsvc) \
+		$(use_enable http httpforms) \
+		$(use_enable http httpsvc) \
 		$(use_enable ieee1394 dc) \
 		$(use_enable ipv6) \
 		$(use_enable jabber) \
@@ -224,7 +181,6 @@ src_configure() {
 		$(use_enable odbc) \
 		$(use_enable oss) \
 		$(use_enable pch) \
-		$(use_enable pipechan) \
 		$(use_enable qos) \
 		$(use_enable remote remconn) \
 		$(use_enable sasl) \
@@ -238,11 +194,9 @@ src_configure() {
 		$(use_enable stun) \
 		$(use_enable telnet) \
 		$(use_enable tts) \
-		$(use_enable url) \
 		$(use_enable v4l) \
 		$(use_enable v4l2) \
-		$(use_enable video) \
-		$(use_enable video-file vidfile) \
+		$(use_enable video) $(use_enable video vidfile) \
 		$(use_enable vxml) \
 		$(use_enable wav wavfile) \
 		$(use_enable xml expat) \

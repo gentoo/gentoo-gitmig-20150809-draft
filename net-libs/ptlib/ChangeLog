@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.9 2009/08/26 12:48:05 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.10 2009/09/12 20:22:53 volkmar Exp $
+
+  12 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> ptlib-2.6.4.ebuild,
+  metadata.xml:
+  Remove dns, url, pipechan and config-file USE flags (force auto-enabled).
+	Fix bug 276475
+  Remove remaining patch.
 
   26 Aug 2009; Mounir Lamouri <volkmar@gentoo.org> ptlib-2.6.4.ebuild:
   soap need http-server, fix bug 280850
