@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46193.ebuild,v 1.2 2009/07/24 15:09:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p46193.ebuild,v 1.3 2009/09/12 22:42:02 eva Exp $
 
-EAPI=2
+EAPI="2"
 
 AT_M4DIR=./autotools
 WX_GTK_VER="2.8"
@@ -67,8 +67,7 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable xslt) \
 		$(use_enable coverage) \
-		${myconf} \
-		|| die "configure failed"
+		${myconf}
 }
 
 src_compile() {
@@ -76,14 +75,22 @@ src_compile() {
 
 	if use wxwidgets ; then
 		# Upstream without further comment
-		cd ${S}
+		cd "${S}"
 		cp DerivedSources/JSDataGridC*.{cpp,h} WebCore/bindings/js || die "copy failed"
 
-		cd ${S}/WebKitTools/wx
+		cd "${S}"/WebKitTools/wx
 		./build-wxwebkit || die "wxwebkit build failed"
 	fi
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
+}
+
+pkg_postinst() {
+	if use gstreamer; then
+	    ewarn
+	    ewarn "If ${PN} doesn't play some video format, please check your"
+	    ewarn "USE flags on media-plugins/gst-plugins-meta"
+	fi
 }

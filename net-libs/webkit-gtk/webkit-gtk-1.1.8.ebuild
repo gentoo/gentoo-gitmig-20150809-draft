@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.4 2009/06/03 17:29:12 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.8.ebuild,v 1.5 2009/09/12 22:42:02 eva Exp $
 
 EAPI="2"
 
@@ -44,6 +44,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	dev-util/gperf
 	dev-util/pkgconfig
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.10 )"
 
 S="${WORKDIR}/${MY_P}"
@@ -85,4 +86,12 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
 	dodoc WebKit/gtk/{NEWS,ChangeLog} || die "dodoc failed"
+}
+
+pkg_postinst() {
+	if use gstreamer; then
+	    ewarn
+	    ewarn "If ${PN} doesn't play some video format, please check your"
+	    ewarn "USE flags on media-plugins/gst-plugins-meta"
+	fi
 }

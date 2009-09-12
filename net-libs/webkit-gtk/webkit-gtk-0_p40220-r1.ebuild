@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p40220-r1.ebuild,v 1.4 2009/06/28 11:58:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-0_p40220-r1.ebuild,v 1.5 2009/09/12 22:42:02 eva Exp $
 
 inherit autotools flag-o-matic eutils
 
@@ -61,12 +61,19 @@ src_compile() {
 		$(use_enable debug) \
 		$(use_enable xslt) \
 		$(use_enable coverage) \
-		${myconf} \
-		|| die "configure failed"
+		${myconf}
 
 	emake || die "emake failed"
 }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
+}
+
+pkg_postinst() {
+	if use gstreamer; then
+	    ewarn
+	    ewarn "If ${PN} doesn't play some video format, please check your"
+	    ewarn "USE flags on media-plugins/gst-plugins-meta"
+	fi
 }
