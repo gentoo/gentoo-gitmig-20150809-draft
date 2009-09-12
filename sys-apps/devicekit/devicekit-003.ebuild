@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit/devicekit-003.ebuild,v 1.1 2009/08/08 22:05:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/devicekit/devicekit-003.ebuild,v 1.2 2009/09/12 10:09:15 eva Exp $
 
+EAPI="1"
 GCONF_DEBUG="no"
 
 inherit gnome2
@@ -24,6 +25,8 @@ RDEPEND=">=dev-libs/glib-2.12
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-libs/libxslt
+	app-text/docbook-xsl-stylesheets
+	app-text/docbook-xml-dtd:4.1.2
 	doc? ( >=dev-util/gtk-doc-1.3 )
 "
 
