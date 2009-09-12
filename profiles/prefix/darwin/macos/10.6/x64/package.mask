@@ -1,8 +1,4 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.6/x64/package.mask,v 1.1 2009/08/17 09:46:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/macos/10.6/x64/package.mask,v 1.2 2009/09/12 14:22:37 grobian Exp $
 
-# Fabian Groffen <grobian@gentoo.org> (01 Jun 2009)
-# On 64-bits Darwin we need this binutils-apple, as it's the only one
-# which compiles
--=sys-devel/binutils-apple-3.1.2-r1
