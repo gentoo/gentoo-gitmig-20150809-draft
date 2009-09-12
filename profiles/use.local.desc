@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4807 2009/09/11 22:27:44 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4808 2009/09/12 06:47:40 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2076,7 +2076,6 @@ net-dialup/capi4k-utils:fax - Install capi-fax demo programs
 net-dialup/capi4k-utils:pppd - Installs pppdcapiplugin modules
 net-dialup/freeradius:edirectory - Enables Novell eDirectory integration
 net-dialup/freeradius:frascend - Enables Ascend binary mode
-net-dialup/freeradius:frnothreads - Disables thread support
 net-dialup/freeradius:frxp - Enables experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support (enables freeradius to specify source address correctly in multi-homed setups)
 net-dialup/freeradius-client:scp - Add service type hints derived from username prefix
