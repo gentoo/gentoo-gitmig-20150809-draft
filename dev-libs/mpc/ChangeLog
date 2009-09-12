@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.7 2009/09/11 00:18:45 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.8 2009/09/12 10:11:00 maekke Exp $
+
+  12 Sep 2009; Markus Meier <maekke@gentoo.org> mpc-0.7.ebuild:
+  add ~arm, bug #279851
 
 *mpc-0.7 (11 Sep 2009)
 
