@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4-r1.ebuild,v 1.1 2009/09/12 20:51:57 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ptlib-2.6.4-r1.ebuild,v 1.2 2009/09/12 21:47:20 volkmar Exp $
 
 EAPI="2"
 
@@ -123,6 +123,9 @@ src_prepare() {
 		rm -f samples/*/*.dsp
 		rm -f samples/*/*.dsw
 	fi
+
+	# bug 283675, upstream bug 2857750
+	epatch "${FILESDIR}"/${P}-vxml-ptones.patch
 }
 
 src_configure() {

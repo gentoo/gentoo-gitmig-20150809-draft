@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.11 2009/09/12 20:51:57 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.12 2009/09/12 21:47:20 volkmar Exp $
+
+  12 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> ptlib-2.6.4-r1.ebuild,
+  +files/ptlib-2.6.4-vxml-ptones.patch:
+  Add dtmf.cxx when compiling vxml.cxx. Fix bug 283675
 
 *ptlib-2.6.4-r1 (12 Sep 2009)
 
