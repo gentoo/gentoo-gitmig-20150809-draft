@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.51 2009/09/11 22:25:01 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.52 2009/09/12 13:59:38 volkmar Exp $
+
+  12 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> +opal-3.6.4.ebuild,
+  metadata.xml:
+  Warn instead of dying when USE="h281 -h224". Bug 276475.
+  Add celt flag/dependency, lost alpha keyword.
 
   11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> opal-3.6.4.ebuild,
   metadata.xml:
