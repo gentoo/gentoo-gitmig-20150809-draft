@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.16.ebuild,v 1.8 2009/07/23 06:57:45 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.0.19.ebuild,v 1.1 2009/09/12 06:34:48 mrness Exp $
 
 EAPI="2"
 
@@ -20,12 +20,12 @@ SRC_URI="http://www.squid-cache.org/Versions/v${S_PMV}/${S_PV}/${S_PP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="caps pam ldap samba sasl kerberos nis radius ssl snmp selinux icap-client logrotate \
 	mysql postgres sqlite \
 	zero-penalty-hit \
 	pf-transparent ipf-transparent kqueue \
-	elibc_uclibc kernel_linux epoll"
+	elibc_uclibc kernel_linux +epoll"
 
 DEPEND="caps? ( >=sys-libs/libcap-2.16 )
 	pam? ( virtual/pam )

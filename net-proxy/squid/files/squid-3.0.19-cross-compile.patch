@@ -1,6 +1,6 @@
-diff -Nru squid-3.0.STABLE16.orig/configure.in squid-3.0.STABLE16/configure.in
---- squid-3.0.STABLE16.orig/configure.in	2009-06-16 00:56:47.000000000 +0200
-+++ squid-3.0.STABLE16/configure.in	2009-06-16 00:57:59.000000000 +0200
+diff -Nru squid-3.0.STABLE19.orig/configure.in squid-3.0.STABLE19/configure.in
+--- squid-3.0.STABLE19.orig/configure.in	2009-09-12 07:25:41.000000000 +0200
++++ squid-3.0.STABLE19/configure.in	2009-09-12 07:25:57.000000000 +0200
 @@ -1895,6 +1895,10 @@
  	;;
  esac
@@ -12,9 +12,9 @@ diff -Nru squid-3.0.STABLE16.orig/configure.in squid-3.0.STABLE16/configure.in
  dnl Check for programs
  AC_PROG_CPP
  AC_PROG_INSTALL
-diff -Nru squid-3.0.STABLE16.orig/src/Makefile.am squid-3.0.STABLE16/src/Makefile.am
---- squid-3.0.STABLE16.orig/src/Makefile.am	2009-06-16 00:56:47.000000000 +0200
-+++ squid-3.0.STABLE16/src/Makefile.am	2009-06-16 00:57:59.000000000 +0200
+diff -Nru squid-3.0.STABLE19.orig/src/Makefile.am squid-3.0.STABLE19/src/Makefile.am
+--- squid-3.0.STABLE19.orig/src/Makefile.am	2009-09-12 07:25:41.000000000 +0200
++++ squid-3.0.STABLE19/src/Makefile.am	2009-09-12 07:25:57.000000000 +0200
 @@ -1011,6 +1011,8 @@
  
  DEFS = @DEFS@ -DDEFAULT_CONFIG_FILE=\"$(DEFAULT_CONFIG_FILE)\"

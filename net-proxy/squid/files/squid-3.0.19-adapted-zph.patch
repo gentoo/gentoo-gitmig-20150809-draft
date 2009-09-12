@@ -1,6 +1,6 @@
-diff -Nru squid-3.0.STABLE16.orig/src/cf.data.pre squid-3.0.STABLE16/src/cf.data.pre
---- squid-3.0.STABLE16.orig/src/cf.data.pre	2009-06-16 01:05:01.000000000 +0200
-+++ squid-3.0.STABLE16/src/cf.data.pre	2009-06-16 01:05:34.000000000 +0200
+diff -Nru squid-3.0.STABLE19.orig/src/cf.data.pre squid-3.0.STABLE19/src/cf.data.pre
+--- squid-3.0.STABLE19.orig/src/cf.data.pre	2009-09-12 07:25:41.000000000 +0200
++++ squid-3.0.STABLE19/src/cf.data.pre	2009-09-12 07:26:48.000000000 +0200
 @@ -1133,6 +1133,60 @@
  	making the request.
  DOC_END
@@ -62,9 +62,9 @@ diff -Nru squid-3.0.STABLE16.orig/src/cf.data.pre squid-3.0.STABLE16/src/cf.data
  NAME: tcp_outgoing_address
  TYPE: acl_address
  DEFAULT: none
-diff -Nru squid-3.0.STABLE16.orig/src/client_side_reply.cc squid-3.0.STABLE16/src/client_side_reply.cc
---- squid-3.0.STABLE16.orig/src/client_side_reply.cc	2009-06-15 09:31:30.000000000 +0200
-+++ squid-3.0.STABLE16/src/client_side_reply.cc	2009-06-16 01:05:34.000000000 +0200
+diff -Nru squid-3.0.STABLE19.orig/src/client_side_reply.cc squid-3.0.STABLE19/src/client_side_reply.cc
+--- squid-3.0.STABLE19.orig/src/client_side_reply.cc	2009-09-06 13:29:37.000000000 +0200
++++ squid-3.0.STABLE19/src/client_side_reply.cc	2009-09-12 07:26:48.000000000 +0200
 @@ -48,6 +48,7 @@
  #include "ESI.h"
  #endif
@@ -73,7 +73,7 @@ diff -Nru squid-3.0.STABLE16.orig/src/client_side_reply.cc squid-3.0.STABLE16/sr
  #include "ACLChecklist.h"
  #include "ACL.h"
  #if DELAY_POOLS
-@@ -1550,6 +1551,11 @@
+@@ -1549,6 +1550,11 @@
          /* guarantee nothing has been sent yet! */
          assert(http->out.size == 0);
          assert(http->out.offset == 0);
@@ -110,9 +110,9 @@ diff -Nru squid-3.0.STABLE16.orig/src/client_side_reply.cc squid-3.0.STABLE16/sr
  
      if (buf != result.data) {
          /* we've got to copy some data */
-diff -Nru squid-3.0.STABLE16.orig/src/fde.h squid-3.0.STABLE16/src/fde.h
---- squid-3.0.STABLE16.orig/src/fde.h	2009-06-15 09:31:31.000000000 +0200
-+++ squid-3.0.STABLE16/src/fde.h	2009-06-16 01:05:34.000000000 +0200
+diff -Nru squid-3.0.STABLE19.orig/src/fde.h squid-3.0.STABLE19/src/fde.h
+--- squid-3.0.STABLE19.orig/src/fde.h	2009-09-06 13:29:38.000000000 +0200
++++ squid-3.0.STABLE19/src/fde.h	2009-09-12 07:26:48.000000000 +0200
 @@ -106,7 +106,7 @@
          long handle;
      } win32;
@@ -122,10 +122,10 @@ diff -Nru squid-3.0.STABLE16.orig/src/fde.h squid-3.0.STABLE16/src/fde.h
  };
  
  #endif /* SQUID_FDE_H */
-diff -Nru squid-3.0.STABLE16.orig/src/forward.cc squid-3.0.STABLE16/src/forward.cc
---- squid-3.0.STABLE16.orig/src/forward.cc	2009-06-15 09:31:31.000000000 +0200
-+++ squid-3.0.STABLE16/src/forward.cc	2009-06-16 01:05:34.000000000 +0200
-@@ -965,6 +965,52 @@
+diff -Nru squid-3.0.STABLE19.orig/src/forward.cc squid-3.0.STABLE19/src/forward.cc
+--- squid-3.0.STABLE19.orig/src/forward.cc	2009-09-06 13:29:38.000000000 +0200
++++ squid-3.0.STABLE19/src/forward.cc	2009-09-12 07:26:48.000000000 +0200
+@@ -965,6 +965,57 @@
  
      netdbPingSite(request->host);
  
@@ -158,7 +158,12 @@ diff -Nru squid-3.0.STABLE16.orig/src/forward.cc squid-3.0.STABLE16/src/forward.
 +	
 +	              if (o->cmsg_level == SOL_IP && o->cmsg_type == IP_TOS)
 +	              {
-+	            	  clientFde->upstreamTOS = (unsigned char)(*(int*)CMSG_DATA(o));
++	            	  union {
++			     unsigned char *pchar;
++			     int  *pint;
++			  } data;
++			  data.pchar = CMSG_DATA(o);
++	            	  clientFde->upstreamTOS = (unsigned char)*data.pint;
 +	            	  break;
 +	              }
 +	              p += CMSG_LEN(o->cmsg_len);
@@ -178,9 +183,9 @@ diff -Nru squid-3.0.STABLE16.orig/src/forward.cc squid-3.0.STABLE16/src/forward.
      if (servers && (p = servers->_peer)) {
          p->stats.fetches++;
          request->peer_login = p->login;
-diff -Nru squid-3.0.STABLE16.orig/src/structs.h squid-3.0.STABLE16/src/structs.h
---- squid-3.0.STABLE16.orig/src/structs.h	2009-06-15 09:31:32.000000000 +0200
-+++ squid-3.0.STABLE16/src/structs.h	2009-06-16 01:05:34.000000000 +0200
+diff -Nru squid-3.0.STABLE19.orig/src/structs.h squid-3.0.STABLE19/src/structs.h
+--- squid-3.0.STABLE19.orig/src/structs.h	2009-09-06 13:29:38.000000000 +0200
++++ squid-3.0.STABLE19/src/structs.h	2009-09-12 07:26:48.000000000 +0200
 @@ -554,6 +554,8 @@
          int emailErrData;
          int httpd_suppress_version_string;
