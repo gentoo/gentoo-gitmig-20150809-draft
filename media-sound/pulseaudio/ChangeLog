@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.149 2009/09/10 19:17:17 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.150 2009/09/12 13:46:18 nirbheek Exp $
+
+*pulseaudio-0.9.9-r55 (12 Sep 2009)
+
+  12 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  +pulseaudio-0.9.9-r55.ebuild:
+  Add 0.9.9-r55 without bluetooth support for quick stabilization. Bluetooth
+  didn't really work with this version, and this is blocking bluez-4
+  stabilization -- bug 284661 . If you want bluetooth, you should use the
+  -r54 version or keyword a newer version.
 
   10 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -pulseaudio-0.9.15-r51.ebuild:
