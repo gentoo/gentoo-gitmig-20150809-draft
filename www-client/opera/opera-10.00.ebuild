@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00.ebuild,v 1.4 2009/09/11 19:38:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.00.ebuild,v 1.5 2009/09/12 16:19:56 jer Exp $
 
 EAPI="2"
 
@@ -207,12 +207,11 @@ pkg_postinst() {
 	elog "directory for the language you want and [Open] the .lng file."
 
 	elog
-	elog "To use the spellchecker (USE=spell) for languages other than English, do:"
-	elog " emerge app-dicts/myspell-[your language]"
+	elog "To use the spellchecker for languages other than English, do:"
 	elog " mkdir \${HOME}/.opera/dictionaries"
 	elog " cd \${HOME}/.opera/dictionaries"
 	elog " ln -s /usr/share/myspell/*.{aff,dic} ."
-	elog "A future release of Opera 10 should remedy this inconvenience."
+	elog "A future release of Opera should remedy this inconvenience."
 
 	if use elibc_FreeBSD; then
 		elog

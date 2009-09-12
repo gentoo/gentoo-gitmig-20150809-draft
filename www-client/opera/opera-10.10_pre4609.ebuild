@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10_pre4609.ebuild,v 1.1 2009/09/10 15:17:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/opera-10.10_pre4609.ebuild,v 1.2 2009/09/12 16:19:56 jer Exp $
 
 EAPI="2"
 
@@ -217,8 +217,7 @@ pkg_postinst() {
 	elog "directory for the language you want and [Open] the .lng file."
 
 	elog
-	elog "To use the spellchecker (USE=spell) for languages other than English, do:"
-	elog " emerge app-dicts/myspell-[your language]"
+	elog "To use the spellchecker for languages other than English, do:"
 	elog " mkdir \${HOME}/.opera/dictionaries"
 	elog " cd \${HOME}/.opera/dictionaries"
 	elog " ln -s /usr/share/myspell/*.{aff,dic} ."
