@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/hal-cups-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/ChangeLog,v 1.1 2009/08/04 12:01:41 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hal-cups-utils/ChangeLog,v 1.2 2009/09/12 10:30:05 armin76 Exp $
+
+  12 Sep 2009; Raúl Porcel <armin76@gentoo.org>
+  hal-cups-utils-0.6.19.ebuild:
+  Add ~alpha/~ia64 wrt #280312
 
 *hal-cups-utils-0.6.19 (04 Aug 2009)
 
