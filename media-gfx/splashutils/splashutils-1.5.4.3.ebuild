@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.14 2009/05/31 14:19:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/splashutils-1.5.4.3.ebuild,v 1.15 2009/09/12 12:28:27 betelgeuse Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit autotools eutils multilib toolchain-funcs
 
@@ -60,9 +60,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	mv "${WORKDIR}"/{libpng-${V_PNG},jpeg-${V_JPEG},zlib-${V_ZLIB},freetype-${V_FT}} "${S}/libs"
 	# We need to delete the Makefile and let it be rebuilt when splashutils
 	# is being configured. Either that, or we end up with a segfaulting kernel
@@ -72,7 +70,8 @@ src_unpack() {
 	cd "${S}"
 	ln -sf "${S}/src" "${WORKDIR}/core"
 
-	if ! tc-is-cross-compiler && built_with_use sys-devel/gcc vanilla; then
+	if ! tc-is-cross-compiler && \
+	   has_version "sys-devel/gcc:$(gcc-version)[vanilla]" ; then
 		ewarn "Your GCC was built with the 'vanilla' flag set. If you can't compile"
 		ewarn "splashutils, you're on your own, as this configuration is not supported."
 	else
@@ -102,7 +101,7 @@ src_unpack() {
 	eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	tc-export CC
 	cd "${SM}"
 	emake CC="${CC}" LIB=$(get_libdir) STRIP=true || die "failed to build miscsplashutils"
@@ -120,7 +119,9 @@ src_compile() {
 		--with-lpng-src=${LPNGSRC} \
 		--with-zlib-src=${ZLIBSRC} \
 		--with-essential-libdir=/$(get_libdir) || die "failed to configure splashutils"
+}
 
+src_compile() {
 	emake CC="${CC}" STRIP="true" || die "failed to build splashutils"
 
 	if has_version ">=sys-apps/baselayout-1.13.99"; then
