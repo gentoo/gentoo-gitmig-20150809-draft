@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/renameutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/ChangeLog,v 1.9 2009/03/08 20:33:13 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/renameutils/ChangeLog,v 1.10 2009/09/12 03:36:59 vostorga Exp $
+
+  12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -files/renameutils-0.8.1-build.patch:
+  Cleaning out unused patch
 
 *renameutils-0.10.0 (08 Mar 2009)
 
