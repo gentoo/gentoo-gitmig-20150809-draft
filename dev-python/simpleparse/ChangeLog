@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simpleparse
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.18 2009/09/09 20:32:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simpleparse/ChangeLog,v 1.19 2009/09/12 18:14:48 armin76 Exp $
+
+  12 Sep 2009; Raúl Porcel <armin76@gentoo.org>
+  simpleparse-2.1.0_alpha1.ebuild:
+  ia64/sparc stable wrt #283286
 
   09 Sep 2009; Markus Meier <maekke@gentoo.org>
   simpleparse-2.1.0_alpha1.ebuild:
