@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gringotts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.32 2008/11/04 01:27:16 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/ChangeLog,v 1.33 2009/09/12 09:52:58 eva Exp $
+
+*gringotts-1.2.10 (12 Sep 2009)
+
+  12 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gringotts-1.2.8-r1.ebuild, -gringotts-1.2.8-r2.ebuild,
+  +gringotts-1.2.10.ebuild, +files/gringotts-1.2.10-desktop.patch,
+  +files/gringotts-1.2.10-no-strip.patch:
+  Version bump, bug #275619.
 
   04 Nov 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml, gringotts-1.2.8-r1.ebuild, gringotts-1.2.8-r2.ebuild:
