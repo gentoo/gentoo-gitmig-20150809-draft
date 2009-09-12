@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.39 2009/06/02 17:09:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.40 2009/09/12 12:58:48 betelgeuse Exp $
+
+  12 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
+  -kphotoalbum-3.1.0.ebuild, -kphotoalbum-3.1.1-r1.ebuild:
+  Remove ebuilds with built_with_use calls.
 
   02 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   kphotoalbum-3.1.1-r3.ebuild:
