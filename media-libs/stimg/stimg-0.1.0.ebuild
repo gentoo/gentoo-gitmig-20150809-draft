@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.8 2009/09/12 12:22:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/stimg/stimg-0.1.0.ebuild,v 1.9 2009/09/12 12:26:32 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
 
 DESCRIPTION="Simple and tiny image loading library"
-HOMEPAGE="http:///homepage3.nifty.com/slokar/fb/"
+HOMEPAGE="http://homepage3.nifty.com/slokar/fb/"
 SRC_URI="http://homepage3.nifty.com/slokar/stimg/${P}.tar.gz"
 
 LICENSE="as-is LGPL-2"
