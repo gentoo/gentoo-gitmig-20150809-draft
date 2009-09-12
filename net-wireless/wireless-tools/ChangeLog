@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.136 2009/09/11 13:13:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.137 2009/09/12 23:30:12 flameeyes Exp $
+
+  12 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  wireless-tools-29.ebuild, wireless-tools-30_pre7.ebuild:
+  Use the correct sed (word boundary), closes bug #284682.
 
   11 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   wireless-tools-29.ebuild, wireless-tools-30_pre7.ebuild:

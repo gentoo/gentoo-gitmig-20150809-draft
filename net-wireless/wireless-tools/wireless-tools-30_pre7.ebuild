@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-30_pre7.ebuild,v 1.2 2009/09/11 13:13:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-30_pre7.ebuild,v 1.3 2009/09/12 23:30:12 flameeyes Exp $
 
 inherit toolchain-funcs multilib
 
@@ -32,7 +32,7 @@ src_unpack() {
 		-e "s:^\(INSTALL_MAN= \$(PREFIX)\)/man:\1/share/man:" \
 		-e "s:^\(INSTALL_LIB= \$(PREFIX)\)/lib:\1/$(get_libdir)/:" \
 		-e "s:^\(BUILD_STATIC = y\):#\1:" \
-		-e '/\$(CC)/s:-Wl,-s::' \
+		-e '/\$(CC)/s:-Wl,-s\>::' \
 		"${S}"/Makefile || die
 }
 
