@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/up-imapproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.24 2009/09/12 13:56:11 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/up-imapproxy/ChangeLog,v 1.25 2009/09/12 14:12:56 vostorga Exp $
+
+  12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> +files/imapproxyd.8,
+  +files/pimpstat.8:
+  Reverting deleletion of files, they are used in ebuild
 
   12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> -files/imapproxyd.8,
   -files/pimpstat.8:
