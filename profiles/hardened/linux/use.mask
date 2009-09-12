@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.7 2009/09/12 00:21:46 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/use.mask,v 1.8 2009/09/12 02:42:32 gengor Exp $
 
 -hardened
 
@@ -8,11 +8,6 @@ emul-linux-x86
 
 # supported only by gcc-4, unmask when it's stable wrt #217927
 raw
-
-# nvidia-drivers are masked, this has to be too
-video_cards_nvidia
-nvidia
-vdpau
 
 # tcc is x86-only
 tcc

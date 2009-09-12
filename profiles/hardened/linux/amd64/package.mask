@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/x86/package.mask,v 1.5 2009/09/12 02:42:34 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.mask,v 1.1 2009/09/12 02:42:33 gengor Exp $
 
 # These packages do more harm than good on hardened.
 # Users with nVidia GPUs must use the OSS "nouveau" or "nv" Xorg drivers.
