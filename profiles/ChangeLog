@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3255 2009/09/11 14:15:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3256 2009/09/12 15:27:17 vostorga Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
+  Removing x11-misc/e-fancylauncher since it's gone from tree
 
   11 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask app-mobilephone/x70talk for removal.
