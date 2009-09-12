@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/solidautoeject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solidautoeject/ChangeLog,v 1.5 2009/09/01 16:28:31 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solidautoeject/ChangeLog,v 1.6 2009/09/12 10:36:14 armin76 Exp $
+
+  12 Sep 2009; Raúl Porcel <armin76@gentoo.org>
+  solidautoeject-4.3.0.ebuild, solidautoeject-4.3.1.ebuild:
+  Add ~alpha/~ia64 wrt #280312
 
 *solidautoeject-4.3.1 (01 Sep 2009)
 

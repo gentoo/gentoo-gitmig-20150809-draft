@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/thumbnailers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.4 2009/09/01 16:32:00 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/thumbnailers/ChangeLog,v 1.5 2009/09/12 10:33:50 armin76 Exp $
+
+  12 Sep 2009; Raúl Porcel <armin76@gentoo.org> thumbnailers-4.3.0.ebuild,
+  thumbnailers-4.3.1.ebuild:
+  Add ~alpha/~ia64 wrt #280312
 
 *thumbnailers-4.3.1 (01 Sep 2009)
 
