@@ -9,7 +9,6 @@
   <use>
     <flag name="extra">Enable GtkExtra support</flag>
     <flag name="glade">Enable libglade support</flag>
-    <flag name="html">Enable GtkHTML2 support</flag>
     <flag name="libsexy">Enable libsexy support</flag>
     <flag name="mozembed">Enable GtkMozembed support</flag>
     <flag name="scintilla">Enable Scintilla support</flag>
