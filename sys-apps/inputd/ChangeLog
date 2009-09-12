@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/inputd
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.22 2007/10/30 07:29:46 killerfox Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/inputd/ChangeLog,v 1.23 2009/09/12 03:30:05 vostorga Exp $
+
+  12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
+  -files/inputd-0.0.4-r1.diff:
+  Cleaning out unused patch
 
   30 Oct 2007; René Nussbaumer <killerfox@gentoo.org> inputd-0.0.8.ebuild,
   inputd-0.1.1.ebuild:
