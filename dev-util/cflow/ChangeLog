@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cflow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/ChangeLog,v 1.9 2009/02/02 20:45:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/ChangeLog,v 1.10 2009/09/12 01:13:22 patrick Exp $
+
+*cflow-1.3 (12 Sep 2009)
+
+  12 Sep 2009; Patrick Lauer <patrick@gentoo.org> +cflow-1.3.ebuild:
+  Bump
 
 *cflow-1.2-r2 (02 Feb 2009)
 
