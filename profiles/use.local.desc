@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4808 2009/09/12 06:47:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4809 2009/09/12 14:08:27 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2335,6 +2335,7 @@ net-libs/libvncserver:nobackchannel - disable backchannel support
 net-libs/loudmouth:asyncns - Use libasyncns for asynchronous name resolution.
 net-libs/opal:audio - Enable audio support
 net-libs/opal:capi - Enable CAPI support
+net-libs/opal:celt - Enable CELT ultra-low delay audio codec
 net-libs/opal:dns - Enable DNS resolver support
 net-libs/opal:dtmf - Enable DTMF encoding/decoding support
 net-libs/opal:fax - Enable T.38 FAX protocol
