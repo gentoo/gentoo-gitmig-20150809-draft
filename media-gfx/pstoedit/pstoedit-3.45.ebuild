@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.14 2009/07/20 10:56:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.15 2009/09/12 12:17:12 betelgeuse Exp $
+
+EAPI="2"
 
 inherit base eutils
 
@@ -20,23 +22,11 @@ DEPEND="media-libs/libpng
 		virtual/ghostscript
 		media-libs/gd
 		emf? ( >=media-libs/libemf-1.0.3 )
-		imagemagick? ( media-gfx/imagemagick )
+		imagemagick? ( media-gfx/imagemagick[-nocxx] )
 		plotutils? ( media-libs/plotutils )"
 #flash? ( >=media-libs/ming-0.3 )
 
-pkg_setup() {
-	if use imagemagick && built_with_use media-gfx/imagemagick nocxx; then
-		eerror 'pstoedit with USE "imagemagick" requires media-gfx/imagemagick'
-		eerror 'built with C++ bindings. Please recompile imagemagick with'
-		eerror 'USE "-nocxx"'
-		echo
-		die 'missing imagemagick C++ header file Magick++.h'
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# Fails due to imagemagick having 'long long' in its headers (at least in
 	# 6.3.9.8).
 	sed -i -e "s/-pedantic //" configure
@@ -44,12 +34,14 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-gcc-4.4.patch"
 }
 
-src_compile() {
+src_configure() {
 	#$(use_with flash swf)
 	# --without-swf for bug https://bugs.gentoo.org/show_bug.cgi?id=137204
 	econf $(use_with emf) --without-swf $(use_with imagemagick magick) \
 		  $(use_with plotutils libplot) || die 'econf failed'
+}
 
+src_compile() {
 	# bug #278417
 	emake -j1 || die 'compilation failed'
 }
