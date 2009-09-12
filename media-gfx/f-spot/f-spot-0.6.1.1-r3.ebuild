@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.6.1.1-r1.ebuild,v 1.1 2009/09/10 12:25:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/f-spot/f-spot-0.6.1.1-r3.ebuild,v 1.1 2009/09/12 23:25:10 flameeyes Exp $
 
 EAPI=2
 
-inherit gnome2 mono eutils autotools
+GENTOO_PATCHLEVEL=1
+
+inherit gnome2 mono eutils autotools multilib
 
 DESCRIPTION="Personal photo management application for the gnome desktop"
 HOMEPAGE="http://f-spot.org"
@@ -43,19 +45,20 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
 
+SRC_URI="${SRC_URI}
+	mirror://gentoo/${P}-gentoo-${GENTOO_PATCHLEVEL}.tar.bz2"
+
 DOCS="AUTHORS ChangeLog MAINTAINERS NEWS README"
 
 SCROLLKEEPER_UPDATE=0
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-0.6.0.0-sandbox-violation.patch"
-	epatch "${FILESDIR}/${PN}-0.6.1.1-parallel-build.patch"
 	sed  -r -i -e 's:-D[A-Z]+_DISABLE_DEPRECATED::g' \
 		lib/libfspot/Makefile.am
 
-	if use flickr; then
-		epatch "${FILESDIR}/${P}-use-system-flickrnet.patch"
-	else
+	epatch "${WORKDIR}/${P}-patches/"*
+
+	if ! use flickr; then
 		sed -i -e '/FlickrExport/d' extensions/Exporters/Makefile.am || die
 	fi
 
@@ -63,7 +66,8 @@ src_prepare() {
 }
 
 src_configure() {
-	gnome2_src_configure --disable-static --disable-scrollkeeper
+	gnome2_src_configure --disable-static --disable-scrollkeeper \
+		--with-flickrnet=/usr/$(get_libdir)/mono/FlickrNet/FlickrNet.dll
 }
 
 src_install() {
