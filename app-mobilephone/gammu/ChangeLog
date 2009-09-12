@@ -1,6 +1,12 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.72 2009/09/05 06:19:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.73 2009/09/12 05:03:36 mrness Exp $
+
+*gammu-1.26.1 (12 Sep 2009)
+
+  12 Sep 2009; Alin Năstac <mrness@gentoo.org>
+  +files/gammu-skip-locktest.patch, +gammu-1.26.1.ebuild:
+  Version bump (#284176).
 
 *gammu-1.26.0 (05 Sep 2009)
 
