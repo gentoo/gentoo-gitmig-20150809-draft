@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-0.99.1.ebuild,v 1.2 2008/07/04 07:49:28 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-raw-thumbnailer/gnome-raw-thumbnailer-0.99.1.ebuild,v 1.3 2009/09/12 13:06:33 betelgeuse Exp $
 
+EAPI="2"
 GCONF_DEBUG=no
 
 inherit autotools eutils gnome2
@@ -17,7 +18,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="media-libs/libopenraw
+RDEPEND="media-libs/libopenraw[gtk]
 	>=x11-libs/gtk+-2
 	gnome-base/gnome-vfs"
 DEPEND="${RDEPEND}
@@ -30,17 +31,8 @@ S=${WORKDIR}/${MY_P}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-pkg_setup() {
-	local fail="Re-emerge media-libs/libopenraw with USE gtk."
-
-	if ! built_with_use media-libs/libopenraw gtk; then
-		eerror "${fail}"
-		die "${fail}"
-	fi
-}
-
-src_unpack() {
-	gnome2_src_unpack
+src_prepare() {
+	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-drop-libgsf.patch
 	eautoreconf
 	intltoolize -f || die "intltoolize failed."
