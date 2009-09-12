@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libknotificationitem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.3 2009/09/01 16:16:12 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.4 2009/09/12 10:05:00 armin76 Exp $
+
+  12 Sep 2009; Raúl Porcel <armin76@gentoo.org>
+  libknotificationitem-4.3.1.ebuild:
+  Add ~alpha/~ia64 wrt #280312
 
 *libknotificationitem-4.3.1 (01 Sep 2009)
 
