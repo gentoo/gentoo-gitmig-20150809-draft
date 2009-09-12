@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.30 2009/09/12 10:11:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.31 2009/09/12 15:59:49 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -38,6 +38,7 @@ cpufreq
 dell
 dmi
 laptop
+pm-utils
 
 # Stuff that doesn't work on alpha, or not tested
 avi
