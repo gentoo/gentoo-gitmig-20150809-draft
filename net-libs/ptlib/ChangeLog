@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.10 2009/09/12 20:22:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.11 2009/09/12 20:51:57 volkmar Exp $
+
+*ptlib-2.6.4-r1 (12 Sep 2009)
+
+  12 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> -ptlib-2.6.4.ebuild,
+  +ptlib-2.6.4-r1.ebuild:
+  Actually, maybe a rev bump is needed.
 
   12 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> ptlib-2.6.4.ebuild,
   metadata.xml:
