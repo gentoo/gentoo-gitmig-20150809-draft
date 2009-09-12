@@ -1,12 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.4 2009/09/05 16:42:32 grobian Exp $
-# $Id: package.mask,v 1.4 2009/09/05 16:42:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/darwin/package.mask,v 1.5 2009/09/12 14:13:49 grobian Exp $
+# $Id: package.mask,v 1.5 2009/09/12 14:13:49 grobian Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (05 Sep 2009)
 # These are Snow Leopard releases and still a Work In Progress (tm)
 ~sys-devel/gcc-apple-4.2.1_p5646
-~sys-devel/binutils-apple-3.2
 
 # Fabian Groffen <grobian@gentoo.org> (30 Jun 2009)
 # platform.h:81: error: conflicting types for ‘setmode’

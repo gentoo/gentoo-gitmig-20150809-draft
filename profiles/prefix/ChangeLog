@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.86 2009/09/12 09:13:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.87 2009/09/12 14:13:48 grobian Exp $
+
+  12 Sep 2009; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Unmask binutils-apple-3.2, it is 64-bits clean/safe and compiles since we
+  just use an older ld64 :(
 
   12 Sep 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.6/x86/make.defaults:
