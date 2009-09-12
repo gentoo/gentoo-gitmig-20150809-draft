@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.84 2009/08/29 17:37:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/ChangeLog,v 1.85 2009/09/12 16:37:24 a3li Exp $
+
+  12 Sep 2009; Alex Legler <a3li@gentoo.org> -horde-3.1.9.ebuild,
+  -horde-3.2.2.ebuild:
+  Non-maintainer commit: Removing vulnerable ebuilds, GLSA 200909-14.
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> horde-3.3.4.ebuild:
   ppc stable #256125

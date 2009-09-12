@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/horde-passwd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.24 2009/08/29 18:16:12 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-passwd/ChangeLog,v 1.25 2009/09/12 16:41:51 a3li Exp $
+
+  12 Sep 2009; Alex Legler <a3li@gentoo.org> -horde-passwd-3.0.ebuild,
+  -horde-passwd-3.0.1.ebuild:
+  Non-maintainer commit: Removing vulnerable ebuilds, GLSA 200909-14.
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> horde-passwd-3.1.1.ebuild:
   ppc stable #277294
