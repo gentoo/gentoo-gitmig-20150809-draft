@@ -1,9 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.45 2009/09/12 16:08:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.46 2009/09/12 16:13:56 armin76 Exp $
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org> use.mask:
-  Use.mask redland and raptor, pm-utils, indi, fits
+  Use.mask redland and raptor, pm-utils, indi, fits, wicd
 
   06 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:

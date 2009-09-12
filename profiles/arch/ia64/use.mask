@@ -59,6 +59,7 @@ libburn
 topal
 indi
 flite
+wicd
 
 # Stuff that doesn't compile on ia64
 chicken
