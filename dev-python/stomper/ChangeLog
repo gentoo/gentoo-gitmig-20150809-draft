@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/stomper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.4 2009/08/30 11:59:52 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stomper/ChangeLog,v 1.5 2009/09/12 10:20:29 fauli Exp $
+
+  12 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  stomper-0.2.2-r1.ebuild:
+  stable x86, bug 281571
 
 *stomper-0.2.2-r1 (30 Aug 2009)
 

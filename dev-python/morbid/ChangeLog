@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/morbid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.4 2009/09/01 07:32:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/morbid/ChangeLog,v 1.5 2009/09/12 10:22:20 fauli Exp $
+
+  12 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  morbid-0.8.7.3.ebuild:
+  stable x86, bug 281571
 
 *morbid-0.8.7.3 (01 Sep 2009)
 
