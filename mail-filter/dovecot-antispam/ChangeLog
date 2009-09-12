@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dovecot-antispam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.14 2009/09/12 12:58:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dovecot-antispam/ChangeLog,v 1.15 2009/09/12 13:10:28 patrick Exp $
+
+*dovecot-antispam-1.2 (12 Sep 2009)
+
+  12 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/dovecot-antispam-dovecot1.2-compilefix.patch,
+  +dovecot-antispam-1.2.ebuild:
+  Bump to 1.2. Fixes compilation issues with dovecot-1.2. Thanks to Oliver
+  Sucker and Dennis Schridde for the patch. Closes #276111
 
   12 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   dovecot-antispam-1.1.ebuild:
