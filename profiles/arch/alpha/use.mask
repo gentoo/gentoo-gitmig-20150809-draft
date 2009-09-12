@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.29 2009/08/19 21:19:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/use.mask,v 1.30 2009/09/12 10:11:16 armin76 Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -alpha
@@ -69,6 +69,8 @@ tunepimp
 captury
 bittorrent-external
 ktts
+redland
+raptor
 
 # Ben de Groot <yngwin@gentoo.org> 11 Feb 2009
 # both x11-libs/qt-phonon and media-sound/phonon are unkeyworded
