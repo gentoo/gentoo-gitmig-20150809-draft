@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.1_p20090824.ebuild,v 1.1 2009/08/24 13:16:39 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.7.1_p20090824-r1.ebuild,v 1.1 2009/09/12 20:24:49 dagger Exp $
 
 EAPI=2
 inherit gnome2 eutils versionator
@@ -42,6 +42,10 @@ DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
 # USE_DESTDIR="1"
 
 S=${WORKDIR}/${MY_P}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-0.7.1-confchanges.patch"
+}
 
 pkg_setup () {
 	G2CONF="${G2CONF} \
