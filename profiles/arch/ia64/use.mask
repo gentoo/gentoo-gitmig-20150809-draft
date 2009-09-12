@@ -58,6 +58,7 @@ ktts
 libburn
 topal
 indi
+flite
 
 # Stuff that doesn't compile on ia64
 chicken
