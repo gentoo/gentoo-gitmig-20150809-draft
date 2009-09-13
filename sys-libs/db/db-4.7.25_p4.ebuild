@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.2 2009/07/05 19:52:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.3 2009/09/13 18:03:19 robbat2 Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -77,6 +77,8 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=''
+
 	# compilation with -O0 fails on amd64, see bug #171231
 	if use amd64; then
 		replace-flags -O0 -O2
@@ -96,6 +98,14 @@ src_compile() {
 	if use userland_GNU ; then
 		append-ldflags -Wl,--default-symver
 	fi
+	
+	# Bug #270851: test needs TCL support
+	if use tcl || use test ; then
+		myconf="${myconf} --enable-tcl"
+		myconf="${myconf} --with-tcl=/usr/$(get_libdir)"
+	else
+		myconf="${myconf} --disable-tcl"
+	fi
 
 	cd "${S}"
 	ECONF_SOURCE="${S}"/../dist \
@@ -109,8 +119,7 @@ src_compile() {
 		$(use amd64 && echo --with-mutex=x86/gcc-assembly) \
 		$(use_enable !nocxx cxx) \
 		$(use_enable java) \
-		$(use_enable tcl) \
-		$(use tcl && echo --with-tcl=/usr/$(get_libdir)) \
+		${myconf} \
 		$(use_enable test) \
 		"$@"
 
