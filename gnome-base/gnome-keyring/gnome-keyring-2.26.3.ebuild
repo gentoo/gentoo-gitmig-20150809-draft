@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.26.3.ebuild,v 1.1 2009/07/19 18:34:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/gnome-keyring-2.26.3.ebuild,v 1.2 2009/09/13 21:33:35 flameeyes Exp $
 
 EAPI="2"
 
-inherit gnome2 pam virtualx eutils
+inherit gnome2 pam virtualx eutils autotools
 
 DESCRIPTION="Password and keyring managing daemon"
 HOMEPAGE="http://www.gnome.org/"
@@ -50,10 +50,14 @@ src_prepare() {
 
 	# Remove silly CFLAGS
 	sed 's:CFLAGS="$CFLAGS -Werror:CFLAGS="$CFLAGS:' \
-		-i configure.in configure || die "sed failed"
+		-i configure.in || die "sed failed"
 
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in || die "sed failed"
+
+	epatch "${FILESDIR}"/${P}-parallel-tests.patch
+
+	eautoreconf
 }
 
 src_test() {
