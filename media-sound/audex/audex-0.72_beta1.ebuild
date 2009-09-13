@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.71_beta5.ebuild,v 1.1 2009/06/29 23:20:35 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audex/audex-0.72_beta1.ebuild,v 1.1 2009/09/13 09:40:27 tgurr Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="cs de nl pt_BR"
+KDE_LINGUAS="cs de it nl pt_BR ru"
 inherit kde4-base
 
 MY_PV=${PV/_beta/b}
