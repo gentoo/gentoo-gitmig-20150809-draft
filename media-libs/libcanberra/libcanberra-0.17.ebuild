@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.16.ebuild,v 1.1 2009/09/13 18:11:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/libcanberra-0.17.ebuild,v 1.1 2009/09/13 18:25:37 flameeyes Exp $
 
 EAPI="1"
 
