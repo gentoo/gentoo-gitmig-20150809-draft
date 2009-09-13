@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.9.ebuild,v 1.1 2009/09/13 18:30:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/pavucontrol-0.9.9.ebuild,v 1.2 2009/09/13 22:09:59 tester Exp $
 
 EAPI=2
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86 ~x86-fbsd"
 IUSE="nls"
 
-RDEPEND="dev-cpp/gtkmm:2.4
+RDEPEND=">=dev-cpp/gtkmm-2.16:2.4
 	dev-cpp/libglademm:2.4
 	dev-libs/libsigc++:2
 	>=x11-libs/gtk+-2.16:2

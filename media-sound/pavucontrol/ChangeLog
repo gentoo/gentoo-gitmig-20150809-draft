@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.25 2009/09/13 18:30:12 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.26 2009/09/13 22:09:59 tester Exp $
+
+  13 Sep 2009; Olivier Crête <tester@gentoo.org> pavucontrol-0.9.9.ebuild:
+  Needs gtkmm 2.16 to build
 
 *pavucontrol-0.9.9 (13 Sep 2009)
 
