@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/muine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.55 2009/09/11 21:39:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.56 2009/09/13 20:17:20 loki_val Exp $
+
+*muine-0.8.11 (13 Sep 2009)
+
+  13 Sep 2009; Peter Alfredsen <loki_val@gentoo.org> +muine-0.8.11.ebuild:
+  Bump.
 
   11 Sep 2009; Markus Meier <maekke@gentoo.org> muine-0.8.10-r1.ebuild:
   amd64/x86 stable, bug #283739
