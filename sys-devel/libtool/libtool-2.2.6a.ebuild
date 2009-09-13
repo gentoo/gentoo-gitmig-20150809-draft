@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.6 2009/09/13 14:38:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.7 2009/09/13 15:41:49 flameeyes Exp $
 
 LIBTOOLIZE="true" #225559
 inherit eutils autotools
@@ -27,6 +27,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	epatch "${FILESDIR}"/${PV}/${P}-gnuinfo.patch #249168
+	epatch "${FILESDIR}"/${PV}/${P}-tests-locale.patch #249168
 
 	if ! use vanilla ; then
 		epunt_cxx

@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.144 2009/09/13 14:46:53 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.145 2009/09/13 15:41:49 flameeyes Exp $
+
+  13 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  libtool-2.2.6a.ebuild, +files/2.2.6a/libtool-2.2.6a-tests-locale.patch:
+  Add backport from upstream to skip over localisation test (#37) when
+  German locale is unavailable; this also fixes the other test failure (#73)
+  since that was just a recursion over the rest of the tests. Solves the
+  blocking issues from bug #257399.
 
   13 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> libtool-9999.ebuild:
   Fix dependencies from current GIT.
