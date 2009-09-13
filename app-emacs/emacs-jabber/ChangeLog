@@ -1,6 +1,11 @@
 # ChangeLog for app-emacs/emacs-jabber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.19 2009/09/13 15:21:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-jabber/ChangeLog,v 1.20 2009/09/13 17:37:25 ulm Exp $
+
+  13 Sep 2009; Ulrich Mueller <ulm@gentoo.org> emacs-jabber-0.8.0.ebuild:
+  Drop dependency on virtual/flim, as it is not needed at build time and
+  optional at run time. Use elisp_src_{compile,install} functions. Add an elog
+  message to pkg_postinst.
 
 *emacs-jabber-0.8.0 (13 Sep 2009)
 
