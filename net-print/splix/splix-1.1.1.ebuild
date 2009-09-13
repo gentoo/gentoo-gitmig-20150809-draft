@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-1.1.1.ebuild,v 1.3 2008/03/02 15:11:28 philantrop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/splix-1.1.1.ebuild,v 1.4 2009/09/13 10:35:07 tgurr Exp $
 
 inherit eutils toolchain-funcs
 
@@ -15,9 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="net-print/cups
-	net-print/cupsddk
-	media-libs/jbigkit"
+DEPEND="media-libs/jbigkit
+	|| ( >=net-print/cups-1.4.0 net-print/cupsddk )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

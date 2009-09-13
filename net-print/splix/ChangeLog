@@ -1,6 +1,10 @@
 # ChangeLog for net-print/splix
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.13 2008/03/02 15:11:28 philantrop Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/splix/ChangeLog,v 1.14 2009/09/13 10:35:07 tgurr Exp $
+
+  13 Sep 2009; Timo Gurr <tgurr@gentoo.org> splix-1.1.0.ebuild,
+  splix-1.1.1.ebuild:
+  Prepare for cups-1.4.
 
   02 Mar 2008; Wulf C. Krueger <philantrop@gentoo.org> splix-1.1.1.ebuild:
   Marked stable on amd64 as per bug 198691.
