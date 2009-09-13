@@ -1,0 +1,21 @@
+From 556bdc76c0723a97b57966fbd193bd0c1841904f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Diego=20Elio=20'Flameeyes'=20Petten=C3=B2?= <flameeyes@gmail.com>
+Date: Sun, 13 Sep 2009 20:25:35 +0200
+Subject: [PATCH] Add missing source file to POTFILES.in.
+
+---
+ po/POTFILES.in |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/po/POTFILES.in b/po/POTFILES.in
+index 1fa8bc9..23b3af3 100644
+--- a/po/POTFILES.in
++++ b/po/POTFILES.in
+@@ -10,3 +10,4 @@ src/sinkinputwidget.cc
+ src/sinkwidget.cc
+ src/sourceoutputwidget.cc
+ src/sourcewidget.cc
++src/streamwidget.cc
+-- 
+1.6.4.2
+
