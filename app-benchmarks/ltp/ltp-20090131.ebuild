@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20090131.ebuild,v 1.1 2009/02/28 18:53:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ltp-20090131.ebuild,v 1.2 2009/09/13 22:21:06 patrick Exp $
 
 inherit eutils portability flag-o-matic
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-# add "dialog" here if ltpmenu is enabled
-DEPEND="virtual/libc"
+# add "dialog" to depends if ltpmenu is enabled
 
 src_unpack() {
 	unpack ${A}

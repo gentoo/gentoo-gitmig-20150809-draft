@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/tiobench
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.15 2008/10/26 12:42:34 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/tiobench/ChangeLog,v 1.16 2009/09/13 22:22:21 patrick Exp $
+
+  13 Sep 2009; Patrick Lauer <patrick@gentoo.org> tiobench-0.3.3-r2.ebuild:
+  Removing virtual/libc deps
 
   26 Oct 2008; Sven Wegener <swegener@gentoo.org> tiobench-0.3.3-r2.ebuild:
   Fix direct use of gcc, bug #243526.

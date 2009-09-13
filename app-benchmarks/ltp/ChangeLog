@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/ltp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.16 2009/04/30 17:26:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/ltp/ChangeLog,v 1.17 2009/09/13 22:21:06 patrick Exp $
+
+  13 Sep 2009; Patrick Lauer <patrick@gentoo.org> ltp-20090131.ebuild:
+  Removing virtual/libc deps
 
   30 Apr 2009; Patrick Lauer <patrick@gentoo.org> -ltp-20081031.ebuild,
   -ltp-20081231.ebuild:

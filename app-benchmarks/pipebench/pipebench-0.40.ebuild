@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/pipebench-0.40.ebuild,v 1.11 2008/03/28 22:59:40 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/pipebench/pipebench-0.40.ebuild,v 1.12 2009/09/13 22:21:30 patrick Exp $
 
 DESCRIPTION="Measures the speed of stdin/stdout communication"
 HOMEPAGE="http://www.habets.pp.se/synscan/programs.php?prog=pipebench"
@@ -10,8 +10,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc ppc64 x86"
 IUSE=""
-
-DEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
