@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22.11.ebuild,v 1.2 2009/05/26 16:34:22 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/secondlife-bin/secondlife-bin-1.22.11.ebuild,v 1.3 2009/09/13 13:10:45 ssuominen Exp $
 
 inherit eutils multilib games
 
@@ -38,6 +38,7 @@ RDEPEND="sys-libs/glibc
 	sys-libs/zlib
 	virtual/glu
 	virtual/opengl
+	x86? ( || ( media-libs/jpeg-compat <media-libs/jpeg-7 ) )
 	amd64? (
 		app-emulation/emul-linux-x86-sdl
 		app-emulation/emul-linux-x86-gtklibs
