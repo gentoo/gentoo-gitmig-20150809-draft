@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3256 2009/09/12 15:27:17 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3257 2009/09/13 07:58:11 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  -releases/2008.0/package.mask:
+  unmask libxcb-1.4 in 2008.0 profiles, drop now useless package.mask
 
   12 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> package.mask:
   Removing x11-misc/e-fancylauncher since it's gone from tree
