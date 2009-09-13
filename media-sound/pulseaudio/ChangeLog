@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.151 2009/09/12 22:48:03 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.152 2009/09/13 10:46:13 flameeyes Exp $
+
+*pulseaudio-0.9.16-r52 (13 Sep 2009)
+
+  13 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -pulseaudio-0.9.16-r51.ebuild, +pulseaudio-0.9.16-r52.ebuild,
+  files/pulseaudio.init.d-4:
+  Fix init script to depend on udev when using udev, not hal. Thanks to
+  Alexander E. Patrakov for reporting (bug #284735).
 
   12 Sep 2009; Olivier Crête <tester@gentoo.org>
   pulseaudio-0.9.9-r55.ebuild:
