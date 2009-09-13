@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.8 2009/05/24 10:07:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.9 2009/09/13 14:11:54 maekke Exp $
 
-EAPI="1"
+EAPI="2"
 WX_GTK_VER="2.8"
 
-inherit cmake-utils eutils wxwidgets
+inherit cmake-utils wxwidgets
 
 DESCRIPTION="GUI for the creation & processing of panoramic images"
 HOMEPAGE="http://hugin.sf.net"
@@ -17,7 +17,7 @@ IUSE="+sift"
 
 DEPEND="
 	app-arch/zip
-	>=dev-libs/boost-1.30.0
+	|| ( >=dev-libs/boost-1.34 =dev-libs/boost-1.33*[threads] )
 	>=media-gfx/enblend-3.0_p20080807
 	media-gfx/exiv2
 	media-libs/jpeg
@@ -30,21 +30,8 @@ DEPEND="
 	sift? ( media-gfx/autopano-sift-C )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}-0.7.0"
 DOCS="AUTHORS README TODO"
-
-pkg_setup() {
-	if ! built_with_use --missing true dev-libs/boost threads ; then
-		local msg="Build dev-libs/boost with USE=threads"
-		eerror "$msg"
-		die "$msg"
-	fi
-	wxwidgets_pkg_setup
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/${PN}-0.7.0_rc2-as-needed.patch
-	epatch "${FILESDIR}"/${P}-gcc44.patch
-}
+PATCHES=(
+	"${FILESDIR}"/${PN}-0.7.0_rc2-as-needed.patch
+	"${FILESDIR}"/${P}-gcc44.patch
+)

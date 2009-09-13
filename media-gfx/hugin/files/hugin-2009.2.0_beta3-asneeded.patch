@@ -1,0 +1,9 @@
+diff -ru hugin-2009.2.0.orig/src/hugin_base/CMakeLists.txt hugin-2009.2.0/src/hugin_base/CMakeLists.txt
+--- hugin-2009.2.0.orig/src/hugin_base/CMakeLists.txt	2009-09-12 17:08:56.000000000 +0200
++++ hugin-2009.2.0/src/hugin_base/CMakeLists.txt	2009-09-12 17:10:22.000000000 +0200
+@@ -69,4 +69,4 @@
+ 
+ add_subdirectory(test)
+ 
+-TARGET_LINK_LIBRARIES(huginbase huginlevmar huginvigraimpex ${Boost_LIBRARIES} ${EXIV2_LIBRARIES} ${PANO_LIBRARIES} ${TIFF_LIBRARIES} ${LAPACK_LIBRARIES})
++TARGET_LINK_LIBRARIES(huginbase huginlevmar huginvigraimpex ${Boost_LIBRARIES} ${EXIV2_LIBRARIES} ${PANO_LIBRARIES} ${TIFF_LIBRARIES} ${LAPACK_LIBRARIES} ${GLEW_LIBRARIES} ${OPENGL_LIBRARIES})
