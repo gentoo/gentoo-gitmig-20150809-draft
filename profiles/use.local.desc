@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4812 2009/09/12 21:47:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4813 2009/09/13 14:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -928,7 +928,6 @@ dev-util/astyle:libs - builds and installs both shared and static library interf
 dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
 dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
-dev-util/buildbot:web - Add a web interface ("waterfall" page).
 dev-util/bzr:sftp - Enable sftp support
 dev-util/catalyst:ccache - Enables ccache support
 dev-util/cmake:python3 - Enable experimental support for Python 3
