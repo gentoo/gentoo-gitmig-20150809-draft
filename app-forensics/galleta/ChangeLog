@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/galleta
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.4 2007/02/08 22:02:45 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.5 2009/09/13 22:34:17 patrick Exp $
+
+  13 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  galleta-20040505_p1.ebuild:
+  Remove virtual/libc deps
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

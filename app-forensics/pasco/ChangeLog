@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/pasco
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/ChangeLog,v 1.4 2007/02/08 22:04:39 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/pasco/ChangeLog,v 1.5 2009/09/13 22:35:53 patrick Exp $
+
+  13 Sep 2009; Patrick Lauer <patrick@gentoo.org> pasco-20040505_p1.ebuild:
+  Remove virtual/libc deps
 
   08 Feb 2007; Diego Pettenò <flameeyes@gentoo.org> ChangeLog:
   Regenerate digest in Manifest2 format.

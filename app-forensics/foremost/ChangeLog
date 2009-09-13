@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/foremost
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.14 2009/01/08 20:11:23 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/ChangeLog,v 1.15 2009/09/13 22:33:55 patrick Exp $
+
+  13 Sep 2009; Patrick Lauer <patrick@gentoo.org> foremost-0.69.ebuild,
+  foremost-1.5.5.ebuild:
+  Remove virtual/libc deps
 
   08 Jan 2009; Patrick Lauer <patrick@gentoo.org> -foremost-1.0.ebuild,
   -foremost-1.4.ebuild, -foremost-1.5.ebuild, -foremost-1.5.3.ebuild:

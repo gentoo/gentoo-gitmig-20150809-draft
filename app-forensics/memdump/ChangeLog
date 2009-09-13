@@ -1,6 +1,10 @@
 # ChangeLog for app-forensics/memdump
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.7 2009/01/04 23:45:43 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/memdump/ChangeLog,v 1.8 2009/09/13 22:35:31 patrick Exp $
+
+  13 Sep 2009; Patrick Lauer <patrick@gentoo.org> memdump-1.0.ebuild,
+  memdump-1.0.1.ebuild:
+  Remove virtual/libc deps
 
 *memdump-1.0.1 (04 Jan 2009)
 

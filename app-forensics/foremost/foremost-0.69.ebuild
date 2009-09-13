@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-0.69.ebuild,v 1.3 2004/12/14 13:48:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/foremost/foremost-0.69.ebuild,v 1.4 2009/09/13 22:33:55 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -12,8 +12,6 @@ KEYWORDS="x86 ppc"
 IUSE=""
 LICENSE="public-domain"
 SLOT="0"
-
-RDEPEND="virtual/libc"
 
 src_compile() {
 	emake CC_OPTS="${CFLAGS}" CC="$(tc-getCC)" || die "emake failed"

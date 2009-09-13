@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/airt/airt-0.4.ebuild,v 1.3 2007/07/15 03:01:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/airt/airt-0.4.ebuild,v 1.4 2009/09/13 22:33:08 patrick Exp $
 
 inherit linux-mod toolchain-funcs
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 -*"
 IUSE=""
 S=${WORKDIR}/${PN}
-DEPEND="virtual/libc"
 
 MODULE_NAMES="sock_hunter(:) process_hunter(:) mod_hunter(:) modumper(:${S}/mod_dumper)"
 BUILD_PARAMS="KDIR=${KERNEL_DIR}"
