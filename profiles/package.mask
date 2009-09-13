@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10440 2009/09/13 14:27:46 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10441 2009/09/13 18:16:50 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -981,12 +981,6 @@ app-office/koffice
 # broken opengl support, forces gcc's objc for no reason
 # masked until fixed (see bug #274092)
 =media-libs/tiff-3.8.2-r6
-
-# Romain Perier <mrpouet@gentoo.org> (20 Jun 2009)
-# A lot of changes into sources code
-# (re-structured, modules renamed and so on)
-# It may break some packages.
-=sys-auth/policykit-0.92
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (14 Jun 2009)
 # Masked for removal in 30 days. Old and dead by upstream.
