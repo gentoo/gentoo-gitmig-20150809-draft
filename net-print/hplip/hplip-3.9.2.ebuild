@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.2.ebuild,v 1.5 2009/09/08 17:20:20 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.2.ebuild,v 1.6 2009/09/13 10:28:40 tgurr Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND="!net-print/hpijs
 	!minimal? (
 		net-print/cups
 		virtual/libusb:0
-		cupsddk? ( net-print/cupsddk )
+		cupsddk? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
 		dbus? ( sys-apps/dbus )
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		snmp? (

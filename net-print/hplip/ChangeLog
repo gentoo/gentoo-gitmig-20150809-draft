@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.123 2009/09/08 17:20:20 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.124 2009/09/13 10:28:40 tgurr Exp $
+
+  13 Sep 2009; Timo Gurr <tgurr@gentoo.org> hplip-2.8.6b.ebuild,
+  hplip-2.8.7.ebuild, hplip-3.9.2.ebuild, hplip-3.9.4b.ebuild,
+  hplip-3.9.4b-r1.ebuild:
+  Prepare for cups-1.4.
 
   08 Sep 2009; Mike Auty <ikelos@gentoo.org> hplip-2.8.6b.ebuild,
   hplip-2.8.7.ebuild, hplip-3.9.2.ebuild, hplip-3.9.4b.ebuild,
