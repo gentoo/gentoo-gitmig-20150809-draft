@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.6 2009/02/23 16:01:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ldaptor-0.0.43.ebuild,v 1.7 2009/09/13 14:08:30 arfrever Exp $
 
 inherit distutils
 
@@ -29,6 +29,7 @@ DEPEND=">=dev-python/twisted-2
 		app-text/docbook-xsl-stylesheets
 	)
 	samba? ( dev-python/pycrypto )"
+RDEPEND="${DEPEND}"
 
 DOCS="README TODO ldaptor.schema"
 
@@ -76,9 +77,5 @@ src_install() {
 }
 
 src_test() {
-	local trialopts
-	if ! has_version ">=dev-python/twisted-2.1"; then
-		trialopts=-R
-	fi
-	PYTHONPATH=. trial ${trialopts} ldaptor || die "test failed"
+	PYTHONPATH=. trial ldaptor || die "test failed"
 }
