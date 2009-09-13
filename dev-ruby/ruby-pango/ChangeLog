@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.43 2009/09/13 06:45:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.44 2009/09/13 13:22:33 flameeyes Exp $
+
+  13 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  ruby-pango-0.19.1.ebuild:
+  Don't enable ruby 1.9 support (doesn't work with ruby-gnome2 yet).
 
 *ruby-pango-0.19.1 (13 Sep 2009)
 
