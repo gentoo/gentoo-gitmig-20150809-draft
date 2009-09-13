@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.0_pre20090808.ebuild,v 1.1 2009/08/13 00:51:16 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mumble/mumble-1.2.0_pre20090911.ebuild,v 1.1 2009/09/13 12:16:52 tgurr Exp $
 
 EAPI="2"
 
 inherit eutils multilib qt4
 
-GIT_REV="c7cffd"
-MY_P="mumble-${PV/_pre20090808}~200908081144-${GIT_REV}"
+GIT_REV="402695"
+MY_P="mumble-${PV/_pre20090911}~200909111826-${GIT_REV}"
 
 DESCRIPTION="Mumble is an open source, low-latency, high quality voice chat software."
 HOMEPAGE="http://mumble.sourceforge.net/"
@@ -20,7 +20,7 @@ IUSE="+alsa +dbus debug g15 oss pch portaudio pulseaudio speech zeroconf"
 
 RDEPEND="dev-libs/boost
 	dev-libs/openssl
-	>=dev-libs/protobuf-2.1.0
+	>=dev-libs/protobuf-2.2.0
 	>=media-libs/celt-0.6.1
 	>=media-libs/libsndfile-1.0.20
 	>=media-libs/speex-1.2_rc1
@@ -37,7 +37,7 @@ RDEPEND="dev-libs/boost
 	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( media-sound/pulseaudio )
 	speech? ( app-accessibility/speech-dispatcher )
-	zeroconf? ( || ( net-dns/avahi net-misc/mDNSResponder ) )"
+	zeroconf? ( || ( net-dns/avahi[mdnsresponder-compat] net-misc/mDNSResponder ) )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
@@ -86,20 +86,20 @@ src_install() {
 	dobin "${dir}"/mumble || die "Installing mumble binary failed."
 	dobin scripts/mumble-overlay || die "Installing overlay script failed."
 
-	dolib.so "${dir}"/lib*.so* || die "Installing mumble libraries failed."
-
 	insinto /usr/share/services
 	doins scripts/mumble.protocol || die "Installing mumble.protocol file failed."
 
 	domenu scripts/mumble.desktop || die "Installing menu entry failed."
 
-	newicon icons/mumble.64x64.png mumble.png || die "Installing icon failed."
+	insinto /usr/share/icons/hicolor/scalable/apps
+	doins icons/mumble.svg || die "Installing icon failed."
 
 	doman man/mumble-overlay.1 || die "Installing mumble-overlay manpage failed."
 	doman man/mumble.1 || die "Installing mumble manpage failed."
 
 	insopts -o root -g root -m 0755
 	insinto "/usr/$(get_libdir)/mumble"
+	doins "${dir}"/lib*.so* || die "Installing plugins failed."
 	doins "${dir}"/plugins/lib*.so* || die "Installing plugins failed."
 }
 
