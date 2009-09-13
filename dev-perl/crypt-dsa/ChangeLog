@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/crypt-dsa
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.21 2009/06/03 15:15:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.22 2009/09/13 07:43:26 tove Exp $
+
+*crypt-dsa-1.16 (13 Sep 2009)
+
+  13 Sep 2009; Torsten Veller <tove@gentoo.org> +crypt-dsa-1.16.ebuild:
+  Version bump
 
   03 Jun 2009; Torsten Veller <tove@gentoo.org> -crypt-dsa-0.13.ebuild:
   Cleanup
