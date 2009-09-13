@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r2.ebuild,v 1.3 2009/08/07 23:41:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r2.ebuild,v 1.4 2009/09/13 17:29:24 flameeyes Exp $
 
 EAPI=2
 
@@ -72,6 +72,13 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}/${P}-bsd.patch"
 	epatch "${FILESDIR}/${P}-CVE-2009-1894.patch"
+
+	# The mix and resampler tests are broken in this release, because
+	# they weren't updated for the 24-bit sample support; they are
+	# fixed in 0.9.16 but I don't think it's worth backporting the
+	# fixes. — flameeyes
+	sed -i -e '/\(mix\|resampler\)-test/d' src/Makefile.am || die
+
 	eautoreconf
 	elibtoolize
 }
