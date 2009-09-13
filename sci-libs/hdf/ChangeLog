@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.12 2009/05/11 07:15:32 nerdboy Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.13 2009/09/13 16:52:01 bicatali Exp $
+
+  13 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf-4.2_p4.ebuild:
+  Fixed a call to configure for szip (thanks Kacper Kowalik), and fixed a
+  test for fortran on am64 and added a path to run the tests properly
 
   11 May 2009; Steve Arnold <nerdboy@gentoo.org> hdf-4.2.0-r4.ebuild:
   Updated build config for gfortran and ferret.

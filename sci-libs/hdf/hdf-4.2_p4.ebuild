@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.1 2009/04/16 20:24:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.2 2009/09/13 16:52:01 bicatali Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs autotools flag-o-matic
@@ -49,12 +49,12 @@ src_configure() {
 		--enable-production \
 		$(use_enable fortran) \
 		$(use_enable netcdf) \
-		$(use_with szip szlib) \
+		$(use_with szip szlib /usr) \
 		F77="$(tc-getFC)"
 }
 
 src_test() {
-	LD_LIBRARY_PATH="${S}"/mfhdf/libsrc/.libs:${LD_LIBRARY_PATH} \
+	LD_LIBRARY_PATH="${S}"/mfhdf/libsrc/.libs:"${S}"/hdf/src/.libs:${LD_LIBRARY_PATH} \
 		emake -j1 check || die "emake check failed"
 }
 
