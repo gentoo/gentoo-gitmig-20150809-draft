@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.3.ebuild,v 1.1 2009/09/11 12:51:12 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.3.ebuild,v 1.2 2009/09/13 11:58:05 nirbheek Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -10,7 +10,7 @@ inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib java-p
 MY_PV="${PV/_beta/b}" # Handle betas
 MY_PV="${PV/_/}" # Handle rc1, rc2 etc
 MY_PV="${MY_PV/1.9.1.3/3.5.3}"
-MAJ_PV="${PV/_*/}"
+MAJ_PV="1.9.1" # from mozilla-* branch name
 PATCH="${PN}-1.9.1.2-patches-0.3"
 
 DESCRIPTION="Mozilla runtime package that can be used to bootstrap XUL+XPCOM applications"
@@ -44,7 +44,7 @@ DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}
 	dev-util/pkgconfig"
 
-S="${WORKDIR}/mozilla-1.9.1"
+S="${WORKDIR}/mozilla-${MAJ_PV}"
 
 # Needed by src_compile() and src_install().
 # Would do in pkg_setup but that loses the export attribute, they
