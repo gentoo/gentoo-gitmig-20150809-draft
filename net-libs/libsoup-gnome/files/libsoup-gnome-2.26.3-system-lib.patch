@@ -1,6 +1,6 @@
-From d69e946ce40477f2a3627bd3043ba31657b36342 Mon Sep 17 00:00:00 2001
+From d760a92ed2ab93e64aca889cd6bbc8b1ffecc63b Mon Sep 17 00:00:00 2001
 From: Romain Perier <mrpouet@gentoo.org>
-Date: Sat, 12 Sep 2009 15:55:02 +0200
+Date: Sun, 13 Sep 2009 16:20:10 +0200
 Subject: [PATCH] Add --with-libsoup-system option in order to be able to build gnome plugin without libsoup library
 
 ---
@@ -10,7 +10,7 @@ Subject: [PATCH] Add --with-libsoup-system option in order to be able to build g
  3 files changed, 62 insertions(+), 34 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
-index 6c7dc3c..7c45a64 100644
+index 6c7dc3c..7c95031 100644
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -1,7 +1,11 @@
@@ -18,10 +18,10 @@ index 6c7dc3c..7c45a64 100644
  AUTOMAKE_OPTIONS = 1.6
  
 -SUBDIRS = libsoup tests docs
-+SUBDIRS = libsoup docs
++SUBDIRS = libsoup
 +
 +if BUILD_LIBSOUP
-+SUBDIRS += tests
++SUBDIRS += tests docs
 +endif
  
  EXTRA_DIST =			\

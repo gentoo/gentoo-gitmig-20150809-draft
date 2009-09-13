@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.1 2009/09/13 10:25:55 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.2 2009/09/13 14:35:59 mrpouet Exp $
+
+  13 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  files/libsoup-gnome-2.26.3-system-lib.patch:
+  Fix bug #284760 and #284755 by adding docs subdirectory conditionnally
+  only when libsoup embedded lib is built (API docs was exactly the
+  same, and already installed by libsoup).
 
 *libsoup-gnome-2.26.3 (13 Sep 2009)
 
