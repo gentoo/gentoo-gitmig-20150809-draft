@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gammu
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.73 2009/09/12 05:03:36 mrness Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.74 2009/09/13 14:47:38 arfrever Exp $
+
+  13 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gammu-1.25.0.ebuild:
+  Delete "usb" USE flag in 1.25.0 to avoid delaying of stabilization.
 
 *gammu-1.26.1 (12 Sep 2009)
 
