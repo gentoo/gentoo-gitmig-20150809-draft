@@ -1,6 +1,12 @@
 # ChangeLog for dev-php5/php-gtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.16 2009/09/12 21:35:59 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/php-gtk/ChangeLog,v 1.17 2009/09/13 10:20:21 eva Exp $
+
+*php-gtk-2.0.1-r1 (13 Sep 2009)
+
+  13 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +php-gtk-2.0.1-r1.ebuild, +files/php-gtk-2.0.1-gtkhtml314.patch:
+  Re-add gtkhtml support, thanks to Yaakov S. suggested patch, bug #280961.
 
   12 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org> php-gtk-2.0.0.ebuild,
   php-gtk-2.0.1.ebuild, metadata.xml:
