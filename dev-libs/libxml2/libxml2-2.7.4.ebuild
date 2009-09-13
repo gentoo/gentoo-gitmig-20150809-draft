@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.3.ebuild,v 1.9 2009/03/18 18:06:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.7.4.ebuild,v 1.1 2009/09/13 23:05:48 eva Exp $
+
+EAPI="2"
 
 inherit libtool flag-o-matic eutils python
 
@@ -9,7 +11,7 @@ HOMEPAGE="http://www.xmlsoft.org/"
 
 LICENSE="MIT"
 SLOT="2"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug doc examples ipv6 python readline test"
 
 XSTS_HOME="http://www.w3.org/XML/2004/xml-schema-test-suite"
@@ -24,7 +26,7 @@ SRC_URI="ftp://xmlsoft.org/${PN}/${P}.tar.gz
 		${XSTS_HOME}/${XSTS_NAME_2}/${XSTS_TARBALL_2} )"
 
 RDEPEND="sys-libs/zlib
-	python?   ( dev-lang/python )
+	python? ( dev-lang/python )
 	readline? ( sys-libs/readline )"
 
 DEPEND="${RDEPEND}
@@ -42,11 +44,13 @@ src_unpack() {
 			"${S}"/xstc/ \
 			|| die "Failed to install test tarballs"
 	fi
+}
 
+src_prepare() {
 	epunt_cxx
 }
 
-src_compile() {
+src_configure() {
 	# USE zlib support breaks gnome2
 	# (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).
@@ -57,11 +61,14 @@ src_compile() {
 	# --with-mem-debug causes unusual segmentation faults (bug #105120).
 
 	local myconf="--with-zlib \
+		--with-html-subdir=${PF}/html \
+		--docdir=/usr/share/doc/${PF} \
 		$(use_with debug run-debug)  \
 		$(use_with python)           \
 		$(use_with readline)         \
 		$(use_with readline history) \
-		$(use_enable ipv6)"
+		$(use_enable ipv6) \
+		PYTHON_SITE_PACKAGES=$(python_get_sitedir)"
 
 	# Please do not remove, as else we get references to PORTAGE_TMPDIR
 	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
@@ -70,47 +77,44 @@ src_compile() {
 	# filter seemingly problematic CFLAGS (#26320)
 	filter-flags -fprefetch-loop-arrays -funroll-loops
 
-	econf $myconf || die "Configuration failed"
-
-	# Patching the Makefiles to respect get_libdir
-	# Fixes BUG #86766, please keep this.
-	# Danny van Dyk <kugelfang@gentoo.org> 2005/03/26
-	for x in $(find "${S}" -name "Makefile") ; do
-		sed \
-			-e "s|^\(PYTHON_SITE_PACKAGES\ =\ \/usr\/\).*\(\/python.*\)|\1$(get_libdir)\2|g" \
-			-i ${x} \
-			|| die "sed failed"
-	done
-
-	emake || die "Compilation failed"
+	econf $myconf
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Installation failed"
+	emake DESTDIR="${D}" \
+		EXAMPLES_DIR=/usr/share/doc/${PF}/examples \
+		docsdir=/usr/share/doc/${PF}/python \
+		exampledir=/usr/share/doc/${PF}/python/examples \
+		install || die "Installation failed"
 
-	dodoc AUTHORS ChangeLog Copyright NEWS README* TODO*
+	rm "${D}"/usr/share/doc/${P}/{AUTHORS,ChangeLog,Copyright,NEWS,README*,TODO*}
+	dodoc AUTHORS ChangeLog Copyright NEWS README* TODO* || die "dodoc failed"
+
+	if ! use python; then
+		rm -rf "${D}"/usr/share/doc/${PF}/python
+		rm -rf "${D}"/usr/share/doc/${PN}-python-${PV}
+	fi
 
 	if ! use doc; then
 		rm -rf "${D}"/usr/share/gtk-doc
-		rm -rf "${D}"/usr/share/doc/${P}/html
+		rm -rf "${D}"/usr/share/doc/${PF}/html
 	fi
 
 	if ! use examples; then
-		rm -rf "${D}/usr/share/doc/${P}/examples"
-		rm -rf "${D}/usr/share/doc/${PN}-python-${PV}/examples"
+		rm -rf "${D}/usr/share/doc/${PF}/examples"
+		rm -rf "${D}/usr/share/doc/${PF}/python/examples"
 	fi
 }
 
 pkg_postinst() {
 	if use python; then
-		python_version
 		python_need_rebuild
-		python_mod_optimize /usr/$(get_libdir)/python${PYVER}/site-packages
+		python_mod_optimize $(python_get_sitedir)
 	fi
 
 	# We don't want to do the xmlcatalog during stage1, as xmlcatalog will not
 	# be in / and stage1 builds to ROOT=/tmp/stage1root. This fixes bug #208887.
-	if [[ "${ROOT}" != "/" ]]
+	if [ "${ROOT}" != "/" ]
 	then
 		elog "Skipping XML catalog creation for stage building (bug #208887)."
 	else
