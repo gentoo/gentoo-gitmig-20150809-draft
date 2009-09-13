@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.7 2009/09/13 15:41:49 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.8 2009/09/13 22:50:01 flameeyes Exp $
 
 LIBTOOLIZE="true" #225559
-inherit eutils autotools
+inherit eutils autotools flag-o-matic
 
 DESCRIPTION="A shared library tool for developers"
 HOMEPAGE="http://www.gnu.org/software/libtool/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.lzma"
 LICENSE="GPL-2"
 SLOT="1.5"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
-IUSE="vanilla"
+IUSE="vanilla test"
 
 RDEPEND="sys-devel/gnuconfig
 	>=sys-devel/autoconf-2.60
@@ -22,6 +22,16 @@ DEPEND="${RDEPEND}
 	sys-apps/help2man"
 
 S=${WORKDIR}/${P%a}
+
+pkg_setup() {
+	if use test && ! has_version '>sys-devel/binutils-2.19.51'; then
+		einfo "Disabling --as-needed, since you got older binutils and you asked"
+		einfo "to run tests. With the stricter (older) --as-needed behaviour"
+		einfo "you'd be seeing a test failure in test #63; this has been fixed"
+		einfo "in the newer version of binutils."
+		append-ldflags -Wl,--no-as-needed
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
