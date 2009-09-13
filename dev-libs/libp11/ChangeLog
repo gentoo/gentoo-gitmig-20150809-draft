@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.42 2009/08/31 00:49:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.43 2009/09/13 17:38:58 armin76 Exp $
+
+  13 Sep 2009; Raúl Porcel <armin76@gentoo.org> libp11-0.2.6.ebuild:
+  ia64/sparc/x86 stable wrt #282327
 
   31 Aug 2009; Brent Baude <ranger@gentoo.org> libp11-0.2.6.ebuild:
   Marking libp11-0.2.6 ppc64 for bug 282327
