@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.246 2009/07/18 19:17:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.247 2009/09/13 17:55:07 tester Exp $
+
+  13 Sep 2009; Olivier Crête <tester@gentoo.org> ChangeLog:
+  Stable on amd64, bug #284795
 
   18 Jul 2009; Raúl Porcel <armin76@gentoo.org> totem-2.26.2.ebuild,
   totem-2.26.3.ebuild:
