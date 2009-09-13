@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxdg-basedir
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.16 2009/09/12 10:15:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/ChangeLog,v 1.17 2009/09/13 09:25:46 matsuu Exp $
+
+  13 Sep 2009; MATSUU Takuto <matsuu@gentoo.org> metadata.xml:
+  maintainership takeover.
 
 *libxdg-basedir-1.0.2 (12 Sep 2009)
 
