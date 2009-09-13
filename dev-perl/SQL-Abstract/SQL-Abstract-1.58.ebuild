@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.58.ebuild,v 1.1 2009/09/05 09:09:03 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract/SQL-Abstract-1.58.ebuild,v 1.2 2009/09/13 14:58:23 armin76 Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Generate SQL from Perl data structures"
 
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="test"
 
 RDEPEND="dev-perl/Test-Deep"
