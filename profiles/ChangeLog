@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3257 2009/09/13 07:58:11 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3258 2009/09/13 14:05:46 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Sep 2009; Markus Meier <maekke@gentoo.org> package.mask:
+  mask hugin for testing
 
   13 Sep 2009; Rémi Cardona <remi@gentoo.org>
   -releases/2008.0/package.mask:
