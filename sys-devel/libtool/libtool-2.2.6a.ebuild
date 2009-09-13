@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.5 2009/09/08 17:51:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.6 2009/09/13 14:38:02 flameeyes Exp $
 
 LIBTOOLIZE="true" #225559
 inherit eutils autotools
@@ -33,9 +33,9 @@ src_unpack() {
 		cd libltdl/m4
 		epatch "${FILESDIR}"/1.5.20/${PN}-1.5.20-use-linux-version-in-fbsd.patch #109105
 		cd ..
-		eautoreconf
+		AT_NOELIBTOOLIZE=yes eautoreconf
 		cd ..
-		eautoreconf
+		AT_NOELIBTOOLIZE=yes eautoreconf
 	fi
 
 	# the libtool script uses bash code in it and at configure time, tries
