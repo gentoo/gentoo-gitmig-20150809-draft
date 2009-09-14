@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.9 2007/04/06 20:32:39 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.5.5-r5.ebuild,v 1.10 2009/09/14 20:14:21 robbat2 Exp $
 
 WANT_AUTOMAKE="latest"
 WANT_AUTOCONF="latest"
@@ -19,7 +19,7 @@ IUSE="debug gtk ncurses nls"
 #EVMS uses libuuid from e2fsprogs
 RDEPEND="virtual/libc
 	sys-fs/e2fsprogs
-	sys-fs/device-mapper
+	|| ( >=sys-fs/lvm2-2.02.45 sys-fs/device-mapper )
 	>=sys-apps/baselayout-1.9.4-r6
 	gtk? ( =x11-libs/gtk+-1*
 		=dev-libs/glib-1* )
