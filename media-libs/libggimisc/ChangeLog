@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libggimisc
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggimisc/ChangeLog,v 1.1 2008/01/10 19:44:48 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggimisc/ChangeLog,v 1.2 2009/09/14 21:27:15 maekke Exp $
+
+  14 Sep 2009; Markus Meier <maekke@gentoo.org> libggimisc-2.2.2.ebuild:
+  amd64 stable, bug #284383
 
 *libggimisc-2.2.2 (10 Jan 2008)
 
