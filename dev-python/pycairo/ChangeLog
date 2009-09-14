@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.72 2009/09/10 03:24:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.73 2009/09/14 02:21:29 arfrever Exp $
+
+  14 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pycairo-1.8.8.ebuild:
+  Don't enable "svg" USE flag by IUSE (bug #284833).
 
   10 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pycairo-1.8.8.ebuild:
