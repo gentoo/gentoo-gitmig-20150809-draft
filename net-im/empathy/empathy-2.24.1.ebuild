@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.24.1.ebuild,v 1.4 2009/01/07 17:17:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.24.1.ebuild,v 1.5 2009/09/14 21:26:40 tester Exp $
 
 inherit gnome2
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.51
 	applet? ( >=gnome-base/gnome-panel-2.10 )
 	>=net-libs/telepathy-glib-0.7.7
 	>=net-im/telepathy-mission-control-4.61
+	=net-im/telepathy-mission-control-4*
 	dev-libs/libxml2
 	>=gnome-extra/evolution-data-server-1.2
 	spell? (

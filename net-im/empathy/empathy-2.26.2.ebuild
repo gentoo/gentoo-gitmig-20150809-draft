@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.26.2.ebuild,v 1.3 2009/07/05 08:42:20 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/empathy-2.26.2.ebuild,v 1.4 2009/09/14 21:26:40 tester Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ RDEPEND=">=dev-libs/glib-2.16.0
 	>=gnome-extra/evolution-data-server-1.2
 	>=net-libs/telepathy-glib-0.7.23
 	>=net-im/telepathy-mission-control-4.61
+	=net-im/telepathy-mission-control-4*
 	media-libs/libcanberra[gtk]
 	>=x11-libs/libnotify-0.4.4
 
