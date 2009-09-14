@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.1.4.ebuild,v 1.1 2009/09/11 23:58:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqbanking/aqbanking-4.1.4.ebuild,v 1.2 2009/09/14 12:23:46 hanno Exp $
 
 EAPI="2"
 
-inherit kde-functions eutils
+inherit kde-functions
 
 DESCRIPTION="Generic Online Banking Interface"
 HOMEPAGE="http://www.aquamaniac.de/aqbanking/"
