@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.0.16.ebuild,v 1.1 2009/09/14 23:24:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.0.16.ebuild,v 1.2 2009/09/14 23:34:43 arfrever Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ MY_P="${PN}-core-${PV}"
 
 DESCRIPTION="Xapian Probabilistic Information Retrieval library"
 HOMEPAGE="http://www.xapian.org/"
-SRC_URI="http://www.oligarchy.co.uk/xapian/${PV}/${MY_P}.tar.gz"
+SRC_URI="http://oligarchy.co.uk/xapian/${PV}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
