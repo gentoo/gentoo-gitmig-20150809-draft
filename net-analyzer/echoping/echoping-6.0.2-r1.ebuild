@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.2 2009/07/29 03:23:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.3 2009/09/14 22:26:17 arfrever Exp $
 
 EAPI="2"
 
@@ -16,20 +16,25 @@ KEYWORDS="~amd64 ~x86"
 IUSE="gnutls http icp idn priority smtp ssl tos postgres ldap"
 RESTRICT="test"
 
-DEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
+RDEPEND="gnutls? ( >=net-libs/gnutls-1.0.17 )
 	ssl? ( >=dev-libs/openssl-0.9.7d )
 	idn? ( net-dns/libidn )
 	postgres? ( virtual/postgresql-base )
 	ldap? ( net-nds/openldap )"
+DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2"
 
 src_prepare() {
 	# bug 279525:
 	epatch "${FILESDIR}/${P}-gnutls.patch"
+
+	rm -f ltmain.sh
+	cp /usr/share/libtool/config/ltmain.sh .
 	local i
 	for i in . plugins/ plugins/*/; do
-		cd "${i}"
+		pushd "${i}" > /dev/null
 		eautoreconf
-		cd "${S}"
+		popd > /dev/null
 	done
 }
 
