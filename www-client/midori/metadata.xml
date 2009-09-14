@@ -2,11 +2,9 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>xfce</herd>
-<maintainer>
-  <email>chainsaw@gentoo.org</email>
-  <name>Tony Vroon</name>
-</maintainer>
 <use>
+	<flag name="html">Install HTML documentation</flag>
 	<flag name="soup">Use Soup (<pkg>net-libs/libsoup</pkg>) as HTTP backend instead of curl(<pkg>net-misc/curl</pkg>), if you want better gnome integration for URL processing</flag>
+	<flag name="unique">Optional libunique support</flag>
 </use>
 </pkgmetadata>
