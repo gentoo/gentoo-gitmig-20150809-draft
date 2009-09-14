@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10443 2009/09/14 12:23:48 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10444 2009/09/14 15:28:02 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1641,6 +1641,7 @@ games-roguelike/slashem
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
 # masked pending unresolved security issues #122407
+# use games-arcade/kobodeluxe instead.
 games-arcade/xkobo
 
 # Tavis Ormandy <taviso@gentoo.org> (21 Mar 2006)
