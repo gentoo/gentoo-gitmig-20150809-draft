@@ -1,8 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.4.14.ebuild,v 1.2 2007/02/13 14:23:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/nginx-0.5.38.ebuild,v 1.1 2009/09/14 19:40:21 voxus Exp $
 
-inherit eutils
+inherit eutils ssl-cert
 
 DESCRIPTION="Robust, small and high performance http and reverse proxy server"
 
@@ -10,8 +10,8 @@ HOMEPAGE="http://sysoev.ru/nginx/"
 SRC_URI="http://sysoev.ru/nginx/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
-IUSE="debug fastcgi imap pcre perl threads ssl zlib"
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="debug fastcgi flv imap pcre perl ssl status sub webdav zlib"
 
 DEPEND="dev-lang/perl
 	pcre? ( >=dev-libs/libpcre-4.2 )
@@ -19,19 +19,29 @@ DEPEND="dev-lang/perl
 	zlib? ( sys-libs/zlib )
 	perl? ( >=dev-lang/perl-5.8 )"
 
+pkg_setup() {
+	ebegin "Creating nginx user and group"
+	enewgroup nginx
+	enewuser nginx -1 -1 /dev/null nginx
+	eend ${?}
+}
+
 src_compile() {
 	local myconf
 
-	if use threads; then
-		einfo
-		ewarn "threads support is experimental at the moment"
-		ewarn "do not use it on production systems - you've been warned"
-		einfo
-		myconf="${myconf} --with-threads"
-	fi
+	# threads support is broken atm.
+	#
+	# if use threads; then
+	# 	einfo
+	# 	ewarn "threads support is experimental at the moment"
+	# 	ewarn "do not use it on production systems - you've been warned"
+	# 	einfo
+	# 	myconf="${myconf} --with-threads"
+	# fi
 
 	use fastcgi	|| myconf="${myconf} --without-http_fastcgi_module"
 	use fastcgi	&& myconf="${myconf} --with-http_realip_module"
+	use flv		&& myconf="${myconf} --with-http_flv_module"
 	use zlib	|| myconf="${myconf} --without-http_gzip_module"
 	use pcre	|| {
 		myconf="${myconf} --without-pcre --without-http_rewrite_module"
@@ -40,6 +50,9 @@ src_compile() {
 	use ssl		&& myconf="${myconf} --with-http_ssl_module"
 	use imap	&& myconf="${myconf} --with-imap" # pop3/imap4 proxy support
 	use perl	&& myconf="${myconf} --with-http_perl_module"
+	use status	&& myconf="${myconf} --with-http_stub_status_module"
+	use webdav	&& myconf="${myconf} --with-http_dav_module"
+	use sub		&& myconf="${myconf} --with-http_sub_module"
 
 	./configure \
 		--prefix=/usr \
@@ -60,20 +73,30 @@ src_install() {
 	keepdir /var/log/${PN} /var/tmp/${PN}/{client,proxy,fastcgi}
 
 	dosbin objs/nginx
-	cp ${FILESDIR}/nginx-r1 ${T}/nginx
-	doinitd ${T}/nginx
+	cp "${FILESDIR}"/nginx-r1 "${T}"/nginx
+	doinitd "${T}"/nginx
 
-	rm conf/nginx.conf
-	cp ${FILESDIR}/nginx.conf-r2 ${T}/nginx.conf
+	cp "${FILESDIR}"/nginx.conf-r4 conf/nginx.conf
 
-	dodir /etc/${PN}
-	insinto /etc/${PN}
-	doins conf/* ${T}/nginx.conf
+	dodir "${ROOT}"/etc/${PN}
+	insinto "${ROOT}"/etc/${PN}
+	doins conf/*
 
 	dodoc CHANGES{,.ru} LICENSE README
 
 	use perl && {
-		cd ${S}/objs/src/http/modules/perl/
-		make DESTDIR=${D} install || die "failed to install perl stuff"
+		cd "${S}"/objs/src/http/modules/perl/
+		einstall DESTDIR="${D}"|| die "failed to install perl stuff"
+	}
+}
+
+pkg_postinst() {
+	use ssl && {
+		if [ ! -f "${ROOT}"/etc/ssl/${PN}/${PN}.key ]; then
+			dodir "${ROOT}"/etc/ssl/${PN}
+			insinto "${ROOT}"etc/ssl/${PN}/
+			insopts -m0644 -o nginx -g nginx
+			install_cert /etc/ssl/nginx/nginx
+		fi
 	}
 }
