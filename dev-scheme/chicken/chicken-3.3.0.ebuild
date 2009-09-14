@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-3.3.0.ebuild,v 1.5 2009/04/18 13:11:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/chicken/chicken-3.3.0.ebuild,v 1.6 2009/09/14 06:36:11 araujo Exp $
 
 inherit multilib elisp-common
 
@@ -16,6 +16,7 @@ IUSE="emacs"
 DEPEND=">=dev-libs/libpcre-7.6
 		sys-apps/texinfo
 		emacs? ( virtual/emacs )"
+RDEPEND="${DEPEND}"
 
 SITEFILE=50hen-gentoo.el
 
