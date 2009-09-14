@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-rustrad
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-rustrad/ChangeLog,v 1.1 2009/09/14 23:27:50 matsuu Exp $
+
+*ibus-table-rustrad-1.2.0.20090907 (14 Sep 2009)
+
+  14 Sep 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-rustrad-1.2.0.20090907.ebuild, +metadata.xml:
+  Initial import.
+
