@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/fluidsynth-dssi-1.0.0.ebuild,v 1.1 2009/01/10 13:36:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fluidsynth-dssi/fluidsynth-dssi-1.0.0.ebuild,v 1.2 2009/09/14 21:16:33 maekke Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/dssi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 RDEPEND=">=media-libs/dssi-0.9.0
 	>=x11-libs/gtk+-2
