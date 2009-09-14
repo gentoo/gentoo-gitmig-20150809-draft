@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.26.3.ebuild,v 1.1 2009/07/06 16:52:35 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-2.26.3.ebuild,v 1.2 2009/09/14 20:26:37 eva Exp $
 
-inherit eutils gnome2
+EAPI="2"
+
+inherit gnome2
 
 DESCRIPTION="The Eye of GNOME image viewer"
 HOMEPAGE="http://www.gnome.org/projects/eog/"
@@ -58,12 +60,12 @@ pkg_setup() {
 pkg_postinst() {
 	gnome2_pkg_postinst
 
-	if ! built_with_use =x11-libs/gtk+-2* jpeg; then
+	if ! has_version x11-libs/gtk+:2[jpeg]; then
 		ewarn "For JPEG file support to work, x11-libs/gtk+ must be rebuilt"
 		ewarn "with the 'jpeg' USE flag enabled."
 	fi
 
-	if ! built_with_use =x11-libs/gtk+-2* tiff; then
+	if ! has_version x11-libs/gtk+:2[tiff]; then
 		ewarn "For TIFF file support to work, x11-libs/gtk+ must be rebuilt"
 		ewarn "with the 'tiff' USE flag enabled."
 	fi
