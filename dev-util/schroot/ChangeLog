@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/schroot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.3 2009/09/14 04:58:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/ChangeLog,v 1.4 2009/09/14 08:35:25 abcd Exp $
+
+  14 Sep 2009; Jonathan Callen <abcd@gentoo.org> schroot-1.2.3-r1.ebuild:
+  Fix build error with FEATURES=-test (bug 284773). Thanks to Andy Kittner
+  <andkit@gmx.de>. Also add RDEPEND on debianutils.
 
 *schroot-1.2.3-r1 (14 Sep 2009)
 

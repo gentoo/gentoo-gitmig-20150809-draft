@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r1.ebuild,v 1.1 2009/09/14 04:58:10 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r1.ebuild,v 1.2 2009/09/14 08:35:25 abcd Exp $
 
 EAPI="2"
 
@@ -26,6 +26,7 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=dev-util/cppunit-1.10.0 )
 "
 RDEPEND="${COMMON_DEPEND}
+	sys-apps/debianutils
 	dchroot? ( !dev-util/dchroot )
 	nls? ( virtual/libintl )
 "
@@ -42,12 +43,12 @@ src_prepare() {
 	if use test; then
 		# Fix bug where aclocal doesn't find cppunit.m4 from the system...
 		ln -s /usr/share/aclocal/cppunit.m4 m4/
-		export AT_M4DIR=m4
 	else
 		# Don't depend on cppunit unless we are testing
-		sed -i '/AM_PATH_CPPUNIT/d' configure.ac
+		sed -i '/AM_PATH_CPPUNIT/s/^.*$/:/' configure.ac
 	fi
 
+	export AT_M4DIR=m4
 	eautoreconf
 }
 
