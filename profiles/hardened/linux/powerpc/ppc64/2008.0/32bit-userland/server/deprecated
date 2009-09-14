@@ -1,2 +1,7 @@
-hardened/linux/powerpc/ppc64/10.0/32bit-userland/server
-# Use eselect profile to switch into 10.0 profile.
+hardened/linux/powerpc/ppc64/10.0/32bit-userland
+# Check 'eselect profile list'.
+# Find the number that corresponds with the hardened/linux/powerpc/ppc64/10.0/32bit-userland profile.
+# Use 'eselect profile set <number>' to set a new /etc/make.profile symlink.
+#
+# Reference: http://www.gentoo.org/doc/en/gentoo-upgrading.xml
+# See: "General instructions" in Section 3. "Profile updating instructions"
