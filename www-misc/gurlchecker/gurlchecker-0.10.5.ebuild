@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.5.ebuild,v 1.1 2009/08/24 21:48:34 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/gurlchecker-0.10.5.ebuild,v 1.2 2009/09/14 21:06:22 fauli Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -12,7 +12,7 @@ HOMEPAGE="http://gurlchecker.labs.libre-entreprise.org/"
 SRC_URI="http://labs.libre-entreprise.org/frs/download.php/737/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~hppa ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc x86"
 SLOT="0"
 IUSE="clamav doc gnutls tidy"
 
