@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.55 2009/09/08 13:16:21 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.56 2009/09/14 06:08:26 nyhm Exp $
+
+  14 Sep 2009; Tristan Heaven <nyhm@gentoo.org> no-multilib/package.mask:
+  Mask games-strategy/defcon-demo
 
   08 Sep 2009; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
   Mask wine[gsm] because there are no 32bit libraries provided at the
