@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.208.0_p25708.ebuild,v 1.1 2009/09/09 08:40:07 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.208.0_p25708.ebuild,v 1.2 2009/09/14 09:02:10 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -37,6 +37,13 @@ QA_TEXTRELS="opt/chromium.org/chrome-linux/libavcodec.so.52
 QA_PRESTRIPPED="opt/chromium.org/chrome-linux/libavcodec.so.52
 	opt/chromium.org/chrome-linux/libavformat.so.52
 	opt/chromium.org/chrome-linux/libavutil.so.50"
+
+pkg_setup() {
+	# Built with SSE2 enabled, so will fail on older processors
+	if ! grep -q sse2 /proc/cpuinfo; then
+		die "This binary requires SSE2 support, it will not work on older processors"
+	fi
+}
 
 src_install() {
 	declare CHROMIUM_HOME=/opt/chromium.org

@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.24 2009/09/10 08:53:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.25 2009/09/14 09:02:10 voyageur Exp $
+
+*chromium-bin-4.0.209.0_p26097 (14 Sep 2009)
+
+  14 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.207.0_p25440.ebuild,
+  chromium-bin-4.0.208.0_p25708.ebuild,
+  +chromium-bin-4.0.209.0_p26097.ebuild, chromium-bin-9999.ebuild:
+  Version bump, test if processor supports SSE2, bug #284227
 
   10 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-bin-9999.ebuild:
