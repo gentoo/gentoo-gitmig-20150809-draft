@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.15.10.ebuild,v 1.1 2009/08/08 02:20:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/telepathy-python/telepathy-python-0.15.11.ebuild,v 1.1 2009/09/14 21:17:34 tester Exp $
 
 inherit distutils
 
