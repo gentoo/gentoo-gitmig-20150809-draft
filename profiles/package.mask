@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10446 2009/09/14 18:14:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10447 2009/09/14 20:13:30 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (14 Sep 2009)
+# dev-python/xapwrap is no longer maintained and fails to build (bug #184264).
+# Masked for deletion in 30 days.
+dev-python/xapwrap
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (14 Sep 2009)
 #  on behalf of QA team
