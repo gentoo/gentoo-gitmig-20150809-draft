@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.0.ebuild,v 1.1 2009/09/13 19:29:39 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.0.ebuild,v 1.2 2009/09/14 01:14:47 mr_bones_ Exp $
 
 EAPI="1"
 
@@ -19,7 +19,6 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 #	mirror://gentoo/${PATCH}.tar.bz2
 #	http://dev.gentoo.org/~armin76/dist/${PATCH}.tar.bz2
-
 
 LICENSE="GPL-2"
 SLOT="0"
