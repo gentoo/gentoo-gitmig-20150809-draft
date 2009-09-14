@@ -1,6 +1,11 @@
 # ChangeLog for games-emulation/stella
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.42 2009/08/17 20:34:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/stella/ChangeLog,v 1.43 2009/09/14 01:07:47 mr_bones_ Exp $
+
+*stella-3.0 (14 Sep 2009)
+
+  14 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +stella-3.0.ebuild:
+  version bump
 
   17 Aug 2009; Christian Faulhammer <fauli@gentoo.org> stella-2.8.4.ebuild:
   stable x86, bug 279546
