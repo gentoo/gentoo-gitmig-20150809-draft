@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3.ebuild,v 1.2 2009/09/11 08:33:30 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.2.3-r1.ebuild,v 1.1 2009/09/14 04:58:10 abcd Exp $
 
 EAPI="2"
 
@@ -32,6 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 
 PATCHES=(
 	"${FILESDIR}/${P}-autotools.patch"
+	"${FILESDIR}/${P}-pam.patch"
 	"${FILESDIR}/${P}-tests.patch"
 )
 
