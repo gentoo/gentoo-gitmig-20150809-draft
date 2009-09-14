@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.7 2009/03/22 17:31:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cadaver/cadaver-0.23.2.ebuild,v 1.8 2009/09/14 02:27:08 arfrever Exp $
 
 inherit autotools eutils
 
@@ -23,7 +23,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-disable-nls.patch"
 
 	rm -fr lib/{expat,intl,neon}
-	sed -e "/NE_REQUIRE_VERSIONS/s/28/& 29/" \
+	sed -e "/NE_REQUIRE_VERSIONS/s/28/& 29 30/" \
 		-e "s:lib/neon/Makefile lib/intl/Makefile ::" -i configure.ac
 	sed -e "s/^\(SUBDIRS.*=\).*/\1/" -i Makefile.in
 	AT_M4DIR="m4 m4/neon" eautoreconf
