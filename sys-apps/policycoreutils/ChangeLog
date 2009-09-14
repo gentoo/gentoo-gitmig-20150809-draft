@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.74 2009/08/02 01:56:27 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.75 2009/09/14 18:25:54 pebenito Exp $
+
+  14 Sep 2009; Chris PeBenito <pebenito@gentoo.org>
+  policycoreutils-2.0.69.ebuild:
+  Fix libsemanage DEP.
 
   02 Aug 2009; Chris PeBenito <pebenito@gentoo.org>
   policycoreutils-2.0.55.ebuild, policycoreutils-2.0.69.ebuild:
