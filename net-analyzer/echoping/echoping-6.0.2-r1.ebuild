@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.3 2009/09/14 22:26:17 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/echoping-6.0.2-r1.ebuild,v 1.4 2009/09/14 23:05:13 arfrever Exp $
 
 EAPI="2"
 
@@ -27,6 +27,8 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	# bug 279525:
 	epatch "${FILESDIR}/${P}-gnutls.patch"
+
+	epatch "${FILESDIR}/${P}-fix_implicit_declarations.patch"
 
 	rm -f ltmain.sh
 	cp /usr/share/libtool/config/ltmain.sh .
