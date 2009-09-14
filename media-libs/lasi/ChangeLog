@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lasi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.8 2009/05/30 23:27:31 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lasi/ChangeLog,v 1.9 2009/09/14 21:18:02 maekke Exp $
+
+  14 Sep 2009; Markus Meier <maekke@gentoo.org> lasi-1.1.0-r1.ebuild:
+  amd64/x86 stable, bug #283965
 
   30 May 2009; Tiago Cunha <tcunha@gentoo.org> lasi-1.1.0-r1.ebuild:
   keyworded ~arch for sparc, bug 265013
