@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.4.2.ebuild,v 1.1 2009/09/14 21:13:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.2.4.2.ebuild,v 1.2 2009/09/14 21:24:54 eva Exp $
 
 EAPI="2"
 
@@ -25,15 +25,9 @@ src_prepare() {
 		sed -i 's|^\(SUBDIRS =.*\)tests\(.*\)$|\1\2|' Makefile.in || \
 			die "sed tests failed"
 	fi
-
-	# fix image paths
-#	if use doc ; then
-#		sed -i 's|../../images/||g' docs/reference/html/*.html || \
-#			die "sed failed"
-#	fi
 }
 
-src_compile() {
+src_configure() {
 	filter-flags -fno-exceptions
 
 	local myconf="$myconf $(use_enable doc documentation)"
@@ -43,7 +37,6 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "make install failed."
-	#rm -fr "${D}"/usr/share
 	dodoc AUTHORS ChangeLog README NEWS TODO || die "dodoc failed"
 
 	if use doc ; then
