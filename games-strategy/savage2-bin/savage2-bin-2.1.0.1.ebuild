@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.ebuild,v 1.1 2009/09/11 21:14:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1.ebuild,v 1.1 2009/09/14 02:05:39 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -31,7 +31,8 @@ QA_EXECSTACK="
 	${GAMES_PREFIX_OPT:1}/savage2/libs/libcurl.so.4
 	${GAMES_PREFIX_OPT:1}/savage2/savage2_update.bin"
 
-RDEPEND="virtual/opengl"
+RDEPEND="virtual/opengl
+	|| ( media-libs/jpeg-compat <media-libs/jpeg-7 )"
 DEPEND="app-arch/unzip"
 
 S=${WORKDIR}
