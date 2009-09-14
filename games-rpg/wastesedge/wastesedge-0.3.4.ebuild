@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.7 2008/02/29 19:34:55 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.4.ebuild,v 1.8 2009/09/14 01:08:33 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="role playing game to showcase the adonthell engine"
@@ -21,14 +22,12 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	doc? ( >=app-doc/doxygen-1.2 )"
 
-src_compile(){
+src_configure(){
 	egamesconf \
 		--disable-dependency-tracking \
 		$(use_enable nls) \
 		$(use_enable doc) \
-		--with-adonthell-binary="${GAMES_BINDIR}/adonthell" \
-		|| die
-	emake || die "emake failed"
+		--with-adonthell-binary="${GAMES_BINDIR}/adonthell"
 }
 
 src_install(){
