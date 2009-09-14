@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.7.ebuild,v 1.1 2009/03/27 11:55:59 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dap/dap-2.2.6.7.ebuild,v 1.2 2009/09/14 02:45:56 bicatali Exp $
 
+EAPI=2
 inherit eutils distutils
 
 DESCRIPTION="Data Access Protocol client and server"
@@ -24,8 +25,9 @@ DEPEND="${RDEPEND}
 
 DOCS="docs/bugs docs/Changelog docs/history"
 
-src_install() {
-	distutils_src_install
-	sed -i -e '1idap' \
-		"${D}"/usr/$(get_libdir)/python*/site-packages/dap-*.egg-info/namespace_packages.txt || die
+src_prepare() {
+	sed -i \
+		-e "s/'dap.plugins'/'dap','dap.plugins'/" \
+		setup.py  || die
 }
+
