@@ -1,6 +1,13 @@
 # ChangeLog for sci-physics/bullet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.7 2009/06/24 04:59:04 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/bullet/ChangeLog,v 1.8 2009/09/14 01:53:05 bicatali Exp $
+
+*bullet-2.75 (14 Sep 2009)
+
+  14 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> +bullet-2.75.ebuild:
+  Version bump, and switching to cmake. Libraries have names with first
+  letter upcase. Removed threads flag since only use (an autodetected) for
+  PS3
 
   24 Jun 2009; Sébastien Fabbro <bicatali@gentoo.org> bullet-2.74.ebuild,
   +files/bullet-2.74-missing-header.patch:
