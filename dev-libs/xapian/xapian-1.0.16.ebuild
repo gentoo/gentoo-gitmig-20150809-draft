@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.0.10.ebuild,v 1.3 2009/05/01 20:33:44 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/xapian-1.0.16.ebuild,v 1.1 2009/09/14 23:24:00 arfrever Exp $
+
+EAPI="2"
 
 MY_P="${PN}-core-${PV}"
 
@@ -13,15 +15,15 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND="sys-devel/libtool"
+DEPEND=""
 RDEPEND=""
 
 S="${WORKDIR}/${MY_P}"
 
 src_install () {
-	emake DESTDIR="${D}" install || die
+	emake DESTDIR="${D}" install || die "emake install failed"
 
-	mv "${D}/usr/share/doc/xapian-core" "${D}/usr/share/doc/${PF}"
+	mv "${D}usr/share/doc/xapian-core" "${D}usr/share/doc/${PF}"
 
 	dodoc AUTHORS HACKING PLATFORMS README NEWS || die "dodoc failed"
 }
