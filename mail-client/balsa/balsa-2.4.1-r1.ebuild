@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.1-r1.ebuild,v 1.1 2009/09/14 21:00:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.1-r1.ebuild,v 1.2 2009/09/14 21:22:50 eva Exp $
 
 EAPI="2"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Email client for GNOME"
 HOMEPAGE="http://pawsa.fedorapeople.org/balsa/"
