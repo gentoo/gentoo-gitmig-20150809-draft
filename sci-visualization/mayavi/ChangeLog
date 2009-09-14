@@ -1,6 +1,11 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.11 2009/09/06 16:18:09 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.12 2009/09/14 09:17:11 grozin Exp $
+
+  14 Sep 2009; Andrey Grozin <grozin@gentoo.org> mayavi-3.3.0.ebuild,
+  +files/mayavi-3.3.0-nodocs.patch:
+  Documentation generation requires X, so docs are cached on Gentoo mirrors.
+  Closing bug #284080.
 
 *mayavi-3.3.0 (06 Sep 2009)
 

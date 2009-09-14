@@ -1,21 +1,23 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.2 2009/09/06 17:37:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/mayavi-3.3.0.ebuild,v 1.3 2009/09/14 09:17:11 grozin Exp $
 
 EAPI="2"
-
 inherit distutils eutils
+
+DESCRIPTION="VTK based scientific data visualizer"
+LICENSE="BSD"
+SLOT="2"
+KEYWORDS="~amd64 ~x86"
+IUSE="doc qt4"
 
 MY_PN="Mayavi"
 MY_P="${MY_PN}-${PV}"
-DESCRIPTION="VTK based scientific data visualizer"
-HOMEPAGE="http://code.enthought.com/projects/mayavi"
-SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
-IUSE="doc examples qt4"
-SLOT="2"
-KEYWORDS="~amd64 ~x86"
-LICENSE="BSD"
+HOMEPAGE="http://code.enthought.com/projects/${PN}/"
+
+SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz
+	doc? ( mirror://gentoo/${PN}-docs-${PV}.tar.bz2 )"
 
 RDEPEND=">=dev-python/apptools-3.3.0
 	>=dev-python/enthoughtbase-3.0.3
@@ -32,47 +34,29 @@ RDEPEND=">=dev-python/apptools-3.3.0
 DEPEND="dev-python/setuptools
 	>=dev-python/numpy-1.1
 	>=sci-libs/vtk-5[python]"
-# doc and test need X display
-#	doc? ( dev-python/setupdocs )
-#	test? ( >=dev-python/nose-0.10.3 )
-RESTRICT="test"
 
-S="${WORKDIR}/${MY_P}"
+# tests require X
+RESTRICT=test
 
-PYTHON_MODNAME="enthought"
+S="${WORKDIR}"/${MY_P}
+PYTHON_MODNAME=enthought
 
 src_prepare() {
-	# remove docs and mlab which needs a display
-	sed -i \
-		-e "s/self.run_command('build_docs')/pass/" \
-		-e "/self.run_command('gen_docs')/d" \
-		setup.py || die
-}
-
-src_compile() {
-	distutils_src_compile
-	#if use doc; then
-	#	${python} setup.py build_docs --formats=html,pdf \
-	#		|| die "doc building failed"
-	#fi
-}
-
-src_test() {
-	PYTHONPATH="$(ls -d build/lib*)" "${python}" setup.py test || die "tests failed"
+	# documentation generation requires X
+	epatch "${FILESDIR}"/${P}-nodocs.patch
 }
 
 src_install() {
 	find "${S}" -name \*LICENSE\*.txt -delete
 	distutils_src_install
 	dodoc docs/*.txt
-	insinto /usr/share/doc/${PF}
 	if use doc; then
-		#doins -r build/docs/html build/docs/latex/*/* || die
-		doins docs/pdf/*.pdf docs/pdf/*/*.pdf || die
-	fi
-	if use examples; then
-		doins -r examples || die
+		dohtml -A txt,py,inv -r "${WORKDIR}"/html/*
 	fi
 	newicon enthought/mayavi/core/ui/images/m2.png mayavi2.png
 	make_desktop_entry mayavi2 "Mayavi2 2D/3D Scientific Visualization" mayavi2
+}
+
+src_test() {
+	PYTHONPATH="$(ls -d build/lib*)" "${python}" setup.py test || die "tests failed"
 }
