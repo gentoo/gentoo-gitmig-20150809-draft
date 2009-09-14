@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/syslinux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.46 2009/06/27 17:42:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/syslinux/ChangeLog,v 1.47 2009/09/14 10:49:54 ssuominen Exp $
+
+*syslinux-3.82-r1 (14 Sep 2009)
+
+  14 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +syslinux-3.82-r1.ebuild:
+  Install utilities (by likewhoa).
 
 *syslinux-3.82 (27 Jun 2009)
 
