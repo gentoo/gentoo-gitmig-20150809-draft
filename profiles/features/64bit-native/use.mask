@@ -1,3 +1,7 @@
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/features/64bit-native/use.mask,v 1.6 2009/09/15 18:23:00 ssuominen Exp $
+
 # USE flags masked because providing packages require a 32-bit ABI
 
 # 2007/08/29 Christoph Mende <angelos@gentoo.org>
@@ -19,7 +23,3 @@ multilib
 # 2009/05/11 Doug Goldstein <cardoe@gentoo.org>
 # Mask 32bit since this will always require emulation packages
 32bit
-
-# 2009/10/01 Samuli Suominen <ssuominen@gentoo.org>
-# Untested on no-multilib
-video_cards_fglrx
