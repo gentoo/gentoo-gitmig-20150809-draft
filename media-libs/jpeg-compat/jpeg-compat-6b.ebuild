@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/jpeg-compat-6b.ebuild,v 1.1 2009/08/22 12:54:01 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/jpeg-compat-6b.ebuild,v 1.2 2009/09/15 17:00:39 ssuominen Exp $
 
 EAPI=2
 inherit eutils libtool multilib toolchain-funcs
@@ -41,5 +41,11 @@ src_configure() {
 
 src_install() {
 	exeinto /usr/$(get_libdir)
-	doexe .libs/libjpeg.so.62* || die "doexe failed"
+	doexe .libs/libjpeg.so.62 || die
+}
+
+pkg_preinst() {
+	if [ "${ROOT}"usr/$(get_libdir)/libjpeg.so.62.0.0 ]; then
+		rm -f "${ROOT}"usr/$(get_libdir)/libjpeg.so.62.0.0
+	fi
 }
