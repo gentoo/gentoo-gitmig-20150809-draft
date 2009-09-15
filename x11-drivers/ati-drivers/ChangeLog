@@ -1,6 +1,6 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.192 2009/09/15 18:54:27 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.193 2009/09/15 19:00:39 ssuominen Exp $
 
 *ati-drivers-9.9-r2 (15 Sep 2009)
 
@@ -13,7 +13,7 @@
   -files/kernel/9.7-smp.patch, -ati-drivers-9.8.ebuild,
   +ati-drivers-9.9-r2.ebuild, -files/kernel/9.7-x86_32b.patch,
   -ati-drivers-9.9-r1.ebuild:
-  Apply patch for 2.6.31 per bug #284549. Thx to Jan Psota for the work.
+  Apply patch for 2.6.31 per bug #284549. Thanks to Jan Psota for the work.
 
 *ati-drivers-9.9-r1 (15 Sep 2009)
 
