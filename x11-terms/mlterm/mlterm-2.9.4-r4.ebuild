@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.4-r4.ebuild,v 1.4 2009/09/05 15:26:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.9.4-r4.ebuild,v 1.5 2009/09/15 01:24:19 jer Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/mlterm/${P}.tar.gz
 	http://shinh.skr.jp/dat_dir/${P}_256.patch"
 
 SLOT="0"
-KEYWORDS="amd64 ~hppa ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 hppa ppc ppc64 ~sparc ~x86"
 LICENSE="BSD"
 
 RDEPEND="virtual/utempter

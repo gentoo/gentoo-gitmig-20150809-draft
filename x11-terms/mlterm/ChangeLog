@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/mlterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.69 2009/09/05 15:26:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/ChangeLog,v 1.70 2009/09/15 01:24:19 jer Exp $
+
+  15 Sep 2009; Jeroen Roovers <jer@gentoo.org> mlterm-2.9.4-r4.ebuild:
+  Stable for HPPA (bug #282924).
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> mlterm-2.9.4-r4.ebuild:
   Marking mlterm-2.9.4-r4 ppc64 for bug 282924
