@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.36 2009/09/11 02:29:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.37 2009/09/15 06:40:44 nerdboy Exp $
+
+*hdf5-1.8.3-r1 (15 Sep 2009)
+
+  15 Sep 2009; Steve Arnold <nerdboy@gentoo.org> -hdf5-1.8.3.ebuild,
+  +hdf5-1.8.3-r1.ebuild:
+  Updated to install the shared libs correctly.  This allows other packages
+  that link against hdf5 to actually build...
 
   11 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf5-1.8.3.ebuild,
   files/hdf5-1.8.3-as-needed.patch:

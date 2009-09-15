@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3.ebuild,v 1.3 2009/09/11 02:29:30 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3-r1.ebuild,v 1.1 2009/09/15 06:40:44 nerdboy Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic
@@ -49,6 +49,11 @@ src_prepare() {
 		-e 's:$(docdir)/hdf5:$(docdir):' \
 		$(find . -name Makefile.am) || die
 	eautoreconf
+
+	# need to install the shared libs or other things fail
+	# see below for  --enable-shared (the default is *not* yes)
+	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in \
+	    || die "sed h5cc.in failed"
 }
 
 src_configure() {
@@ -70,6 +75,7 @@ src_configure() {
 		--enable-production \
 		--enable-strict-format-checks \
 		--enable-deprecated-symbols \
+		--enable-shared --with-pic \
 		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
 		$(use_with szip szlib) \
