@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-wu/ibus-table-wu-1.2.0.20090831.ebuild,v 1.1 2009/09/15 15:41:39 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-wu/ibus-table-wu-1.2.0.20090831.ebuild,v 1.2 2009/09/15 15:51:19 matsuu Exp $
 
 EAPI="2"
 
-DESCRIPTION="The CNS11643 tables for IBus-Table"
+DESCRIPTION="The Wu table for IBus-Table"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
 
