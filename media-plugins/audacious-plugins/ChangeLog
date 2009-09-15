@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/audacious-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.136 2009/09/02 15:44:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/ChangeLog,v 1.137 2009/09/15 23:20:56 chainsaw Exp $
+
+*audacious-plugins-2.2_alpha1 (15 Sep 2009)
+
+  15 Sep 2009; <chainsaw@gentoo.org> +audacious-plugins-2.2_alpha1.ebuild:
+  Version bump to (masked) alpha. This now supports using FFMPEG audio
+  decoders, bringing you support for quite a few additional formats.
 
   02 Sep 2009; Jeroen Roovers <jer@gentoo.org>
   audacious-plugins-2.1-r1.ebuild:
