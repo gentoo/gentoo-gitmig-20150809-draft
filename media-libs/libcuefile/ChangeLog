@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.7 2009/08/31 18:29:58 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.8 2009/09/15 01:47:28 jer Exp $
+
+  15 Sep 2009; Jeroen Roovers <jer@gentoo.org> libcuefile-444.ebuild:
+  Stable for HPPA (bug #284781).
 
   31 Aug 2009; Brent Baude <ranger@gentoo.org> libcuefile-444.ebuild:
   Marking libcuefile-444 ~ppc64 for bug 279069
