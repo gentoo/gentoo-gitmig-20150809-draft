@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Simple
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.40 2009/09/14 21:31:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.41 2009/09/15 17:11:41 josejx Exp $
+
+  15 Sep 2009; Joseph Jezak <josejx@gentoo.org> Email-Simple-2.005.ebuild:
+  Marked ppc stable for bug #284069.
 
   14 Sep 2009; Tom Gall <tgall@gentoo.org> mail-Simple-2.005.ebuild:
   stable on ppc64, bug #284069
