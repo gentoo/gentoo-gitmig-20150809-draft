@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.4.ebuild,v 1.4 2009/08/01 06:34:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/qjackctl-0.3.4.ebuild,v 1.5 2009/09/15 15:18:14 ssuominen Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ RDEPEND="alsa? ( media-libs/alsa-lib )
 			x11-libs/qt-core:4
 			x11-libs/qt-gui:4
 		) =x11-libs/qt-4.3*:4 )
-	media-sound/jack-audio-connection-kit"
+	>=media-sound/jack-audio-connection-kit-0.109.2"
 DEPEND="${RDEPEND}"
 
 src_prepare() {
