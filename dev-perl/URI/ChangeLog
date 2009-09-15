@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.66 2009/07/26 20:24:46 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.67 2009/09/15 02:25:57 tgall Exp $
+
+  14 Sep 2009, Tom Gall <tgall@gentoo.org> URI-1.38.ebuild:
+  stable on ppc64, bug #278039
 
   26 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org> URI-1.38.ebuild:
   Stable on amd64, bug 278039.
