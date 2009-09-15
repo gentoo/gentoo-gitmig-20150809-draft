@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.8 2008/06/17 23:42:56 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/nedit-5.5-r1.ebuild,v 1.9 2009/09/15 02:51:23 vostorga Exp $
 
 inherit eutils toolchain-funcs
 
@@ -25,6 +25,7 @@ src_unpack() {
 	cd "${S}"
 	epatch "${FILESDIR}/${P}-argbvisuals.patch"
 	epatch "${FILESDIR}/${P}-motif23.patch"
+	epatch "${FILESDIR}/${P}-off-by-one.patch"
 	sed -i -e "s:-Wl,-Bstatic::" makefiles/Makefile.linux
 	sed -i -e "s:CFLAGS=-O:CFLAGS=${CFLAGS}:" makefiles/Makefile.linux
 	sed -i -e 's:"/bin/csh":"/bin/sh":' source/preferences.c

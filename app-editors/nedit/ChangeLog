@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nedit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.53 2008/06/17 23:42:56 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.54 2009/09/15 02:51:23 vostorga Exp $
+
+  15 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> nedit-5.5-r1.ebuild,
+  +files/nedit-5.5-off-by-one.patch:
+  Fixing off by one error in regularExp.c . Patch thanks to Evan Teran
+  <eteran@alum.rit.edu> bug 284965
 
   17 Jun 2008; Jeremy Olexa <darkside@gentoo.org> nedit-5.5-r1.ebuild:
   Add missing libXpm dep, bug #227951
