@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.288 2009/09/13 18:03:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.289 2009/09/15 18:51:30 arfrever Exp $
+
+  15 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  db-4.2.52_p5-r1.ebuild, db-4.3.29_p1-r1.ebuild, db-4.4.20_p4-r1.ebuild,
+  db-4.5.20_p2-r1.ebuild, db-4.6.21_p4.ebuild, db-4.7.25_p4.ebuild:
+  Use more standard date format in DB_VERSION_STRING.
 
   13 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> db-4.7.25_p4.ebuild:
   Bug #270851: with FEATURES=test USE=-tcl, we need to include Tcl anyway so

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.4 2009/09/15 02:45:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.5 2009/09/15 18:51:30 arfrever Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -49,6 +49,8 @@ src_unpack() {
 	# use the includes from the prefix
 	epatch "${FILESDIR}"/"${PN}"-4.6-jni-check-prefix-first.patch
 	epatch "${FILESDIR}"/"${PN}"-4.3-listen-to-java-options.patch
+
+	sed -e "/^DB_RELEASE_DATE=/s/%B %e, %Y/%Y-%m-%d/" -i dist/RELEASE
 
 	# Include the SLOT for Java JAR files
 	# This supersedes the unused jarlocation patches.
