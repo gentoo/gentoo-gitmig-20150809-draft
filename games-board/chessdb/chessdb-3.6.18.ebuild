@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/chessdb-3.6.18.ebuild,v 1.3 2008/04/06 00:02:53 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/chessdb/chessdb-3.6.18.ebuild,v 1.4 2009/09/15 17:41:26 mr_bones_ Exp $
 
+EAPI=2
 inherit toolchain-funcs eutils games
 
 MY_PN=ChessDB
@@ -23,9 +24,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
@@ -33,7 +32,7 @@ src_unpack() {
 		tcl/start.tcl || die "sed failed"
 }
 
-src_compile() {
+src_configure() {
 	./configure \
 		BINDIR="${GAMES_BINDIR}" \
 		COMPILE="$(tc-getCXX)" \
@@ -45,8 +44,6 @@ src_compile() {
 		TBDIR="${GAMES_DATADIR}/${PN}/tablebases" \
 		MANDIR="/usr/share/man" \
 		WARNINGS="" || die "econf failed"
-
-	emake || die "emake failed"
 }
 
 src_install() {
