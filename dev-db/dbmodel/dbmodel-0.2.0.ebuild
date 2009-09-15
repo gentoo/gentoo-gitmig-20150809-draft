@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/dbmodel-0.2.0.ebuild,v 1.2 2009/09/11 11:23:14 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/dbmodel-0.2.0.ebuild,v 1.3 2009/09/15 20:51:53 spatz Exp $
 
 EAPI="2"
 
 inherit qt4
 
 DESCRIPTION="Qt4 tool for drawing entity-relational diagrams"
-HOMEPAGE="http://qt-apps.org/content/show.php/Database+Modeller?content=100376"
+HOMEPAGE="http://oxygene.sk/lukas/dbmodel/"
 SRC_URI="http://launchpad.net/dbmodel/trunk/0.2.0/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
