@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.68 2009/05/09 22:57:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.69 2009/09/15 19:41:02 robbat2 Exp $
+
+  15 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> klibc-1.5.15.ebuild:
+  Implement basic ARM support, thanks to the mv78100 board from Marvell.
 
 *klibc-1.5.15 (09 May 2009)
 

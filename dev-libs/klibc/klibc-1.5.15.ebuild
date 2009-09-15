@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.15.ebuild,v 1.1 2009/05/09 22:57:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.15.ebuild,v 1.2 2009/09/15 19:41:02 robbat2 Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -37,7 +37,7 @@ SRC_URI="
 	${KERNEL_URI}"
 
 LICENSE="|| ( GPL-2 LGPL-2 )"
-KEYWORDS="~amd64 -mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 -mips ~ppc ~sparc ~x86 ~arm"
 SLOT="0"
 IUSE="debug n32"
 
@@ -87,7 +87,7 @@ kernel_defconfig() {
 	case ${a} in
 		ppc64) echo ppc64_defconfig ;;
 		ppc) echo pmac32_defconfig ;;
-		arm*|sh*) die "TODO: Your arch is not supported by the klibc ebuild. Please suggest a defconfig in a bug." ;;
+		sh*) die "TODO: Your arch is not supported by the klibc ebuild. Please suggest a defconfig in a bug." ;;
 		*) echo defconfig ;;
 	esac
 }
@@ -136,6 +136,18 @@ src_compile() {
 
 	cd "${KS}"
 	emake ${defconfig} CC="${CC}" HOSTCC="${HOSTCC}" || die "No defconfig"
+	if [[ "${KLIBCARCH/arm}" != "${KLIBCARCH}" ]] && \
+	   [[ "${CHOST/eabi}" != "${CHOST}" ]]; then
+		# The delete and insert are seperate statements
+		# so that they are reliably used.
+		sed -i \
+		-e '/CONFIG_AEABI/d' \
+		-e '1iCONFIG_AEABI=y' \
+		-e '/CONFIG_OABI_COMPAT/d' \
+		-e '1iCONFIG_OABI_COMPAT=y' \
+		"${KS}"/.config \
+		"${S}"/defconfig
+	fi
 	emake prepare CC="${CC}" HOSTCC="${HOSTCC}" || die "Failed to prepare kernel sources for header usage"
 
 	cd "${S}"
