@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.333 2009/09/15 17:20:41 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.334 2009/09/15 22:57:38 fauli Exp $
+
+  15 Sep 2009; Christian Faulhammer <fauli@gentoo.org> emacs-23.1.ebuild:
+  x86 stable, bug 285063
 
   15 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   emacs-23.1.ebuild:
