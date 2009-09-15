@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.4 2009/09/07 23:25:09 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.5 2009/09/15 15:41:21 vostorga Exp $
+
+  15 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> files/3.3/smbusers:
+  Fixing syntax of smbusers file, patch thanks to Kraml Liu
+  <kraml.liu@gmail.com> bug 283571
 
   07 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   samba-server-3.3.7.ebuild:
