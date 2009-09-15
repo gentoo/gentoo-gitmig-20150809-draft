@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/ibus-table-erbi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-erbi/ChangeLog,v 1.8 2009/07/19 06:06:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-erbi/ChangeLog,v 1.9 2009/09/15 16:06:47 matsuu Exp $
+
+*ibus-table-erbi-1.2.0.20090901 (15 Sep 2009)
+
+  15 Sep 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-erbi-1.2.0.20090901.ebuild:
+  Version bumped.
 
 *ibus-table-erbi-1.2.0.20090717 (19 Jul 2009)
 
