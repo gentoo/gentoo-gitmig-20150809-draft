@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.200 2009/09/14 21:21:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.201 2009/09/15 22:19:16 maekke Exp $
+
+*graphviz-2.24.0-r1 (15 Sep 2009)
+
+  15 Sep 2009; Markus Meier <maekke@gentoo.org> -graphviz-2.24.0.ebuild,
+  +graphviz-2.24.0-r1.ebuild:
+  revision bump, remove false dep on media-libs/gd[-fontconfig], remove
+  broken ebuild
 
   14 Sep 2009; Markus Meier <maekke@gentoo.org> graphviz-2.24.0.ebuild:
   amd64/arm/x86 stable, bug #284689
