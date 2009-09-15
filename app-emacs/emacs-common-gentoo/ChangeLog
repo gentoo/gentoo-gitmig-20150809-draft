@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/emacs-common-gentoo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.17 2009/09/15 17:16:57 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/ChangeLog,v 1.18 2009/09/15 23:01:24 fauli Exp $
+
+  15 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  emacs-common-gentoo-1.2.ebuild:
+  x86 stable, bug 285063
 
   15 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   emacs-common-gentoo-1.2.ebuild:
