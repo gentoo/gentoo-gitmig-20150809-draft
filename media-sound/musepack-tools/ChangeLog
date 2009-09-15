@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.44 2009/08/31 18:30:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.45 2009/09/15 01:48:06 jer Exp $
+
+  15 Sep 2009; Jeroen Roovers <jer@gentoo.org> musepack-tools-444.ebuild:
+  Stable for HPPA (bug #284781).
 
   31 Aug 2009; Brent Baude <ranger@gentoo.org> musepack-tools-444.ebuild:
   Marking musepack-tools-444 ~ppc64 for bug 279069
