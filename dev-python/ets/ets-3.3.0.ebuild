@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-3.3.0.ebuild,v 1.1 2009/09/07 06:33:44 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ets/ets-3.3.0.ebuild,v 1.2 2009/09/15 05:12:29 arfrever Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-python/envisageplugins-3.1.1[examples?]
 	>=dev-python/etsdevtools-3.0.3[doc?,examples?]
 	>=dev-python/etsprojecttools-0.5.1
-	>=sci-visualization/mayavi-3.3.0:2[doc?,examples?]
+	>=sci-visualization/mayavi-3.3.0:2[doc?]
 	>=dev-python/scimath-3.0.4
 	>=dev-python/traits-3.2.0[doc?,examples?]
 	>=dev-python/traitsgui-3.1.0[doc?,examples?]"
