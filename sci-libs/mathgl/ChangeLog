@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/mathgl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.7 2009/08/31 16:18:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/ChangeLog,v 1.8 2009/09/15 04:37:30 grozin Exp $
+
+  15 Sep 2009; Andrey Grozin <grozin@gentoo.org> -mathgl-1.8.1.ebuild,
+  -files/mathgl-1.8.1-gcc43.patch, -files/mathgl-1.8.1-gcc44.patch,
+  mathgl-1.9.0.1.ebuild:
+  Fix libtool dependency (closing bug #284847, thanks to Kacper Kowalik
+  <xarthisius.kk@gmail.com>). Remove old version which does not compile with
+  hdf5-1.8 (closing bug #267628).
 
 *mathgl-1.9.0.1 (31 Aug 2009)
 

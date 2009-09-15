@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.9.0.1.ebuild,v 1.1 2009/08/31 16:18:51 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/mathgl/mathgl-1.9.0.1.ebuild,v 1.2 2009/09/15 04:37:30 grozin Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -28,6 +28,7 @@ RDEPEND="media-libs/libpng
 	qt4? ( x11-libs/qt-gui:4 )
 	wxwindows? ( x11-libs/wxGTK:2.8 )"
 DEPEND="${RDEPEND}
+	>=sys-devel/libtool-2.2.4
 	doc? ( app-text/texi2html virtual/texi2dvi )
 	python? ( dev-lang/swig )
 	octave? ( dev-lang/swig )"
