@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.9-r1.ebuild,v 1.1 2009/09/15 10:05:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-9.9-r2.ebuild,v 1.1 2009/09/15 18:36:14 scarabeus Exp $
 
 EAPI="2"
 
@@ -101,8 +101,8 @@ _check_kernel_config() {
 	fi
 
 	# kernel hook checking up latest allowed version
-	if kernel_is ge 2 6 31; then
-		eerror "Kernels newer then 2.6.30 are not supported by this driver"
+	if kernel_is ge 2 6 32; then
+		eerror "Kernels newer then 2.6.31 are not supported by this driver"
 		die "Downgrade your kernel"
 	fi
 
@@ -200,7 +200,7 @@ pkg_setup() {
 	elog "r600 chipset and newer."
 	elog "This represent the ATI Radeon HD series at this moment."
 	elog
-	elog "If your card is older then usage of ${CATEGORY}/xf86-video-ati"
+	elog "If your card is older one, usage of ${CATEGORY}/xf86-video-ati"
 	elog "as replacement is highly recommended. Rather than staying with"
 	elog "old versions of this driver."
 	elog "For migration informations please reffer to:"
@@ -232,6 +232,9 @@ src_prepare() {
 				|| die "Failed to enable debug output."
 		fi
 	fi
+
+	# Kernel patches
+	kernel_is ge 2 6 31 && epatch ${FILESDIR}/kernel/2.6.31-fglrx_find_task_by_vpid.patch
 
 	# These are the userspace utilities that we also have source for.
 	# We rebuild these later.
