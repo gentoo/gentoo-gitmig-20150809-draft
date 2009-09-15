@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/noscript-1.9.6.6.ebuild,v 1.3 2009/09/13 17:53:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/noscript/noscript-1.9.6.6.ebuild,v 1.4 2009/09/15 01:50:05 jer Exp $
 
 inherit mozextension multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://software.informaction.com/data/releases/${P}.xpi"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm ~hppa ia64 ~mips ppc ~ppc64 sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE=""
 
 RDEPEND="|| (
