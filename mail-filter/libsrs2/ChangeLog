@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/libsrs2
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.7 2007/03/19 13:15:05 kloeri Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs2/ChangeLog,v 1.8 2009/09/15 13:31:26 hanno Exp $
+
+  15 Sep 2009; Hanno Boeck <hanno@gentoo.org> libsrs2-1.0.18.ebuild:
+  Add ~amd64 keyword, fix RDEPEND, remove bogus elog/ewarn-messages,
+  cleanup.
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove pfeifer from metadata.xml due to retirement.
