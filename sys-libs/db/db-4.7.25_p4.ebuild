@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.3 2009/09/13 18:03:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.7.25_p4.ebuild,v 1.4 2009/09/15 02:45:12 mr_bones_ Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -98,7 +98,7 @@ src_compile() {
 	if use userland_GNU ; then
 		append-ldflags -Wl,--default-symver
 	fi
-	
+
 	# Bug #270851: test needs TCL support
 	if use tcl || use test ; then
 		myconf="${myconf} --enable-tcl"
