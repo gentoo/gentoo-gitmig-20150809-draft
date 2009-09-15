@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.38 2009/09/01 08:50:59 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.39 2009/09/15 21:24:03 aballier Exp $
 
 EAPI="2"
 
@@ -204,6 +204,7 @@ pkg_setup() {
 	vlc_use_needs fontconfig truetype
 	vlc_use_needs libv4l2 v4l2
 	vlc_use_needs libtiger kate
+	vlc_use_needs xv xcb
 	use cddb && use !cdda && use !cddax && ewarn "USE=cddb requires either cdda or cddax, cddb will be disabled."
 	if use qt4 || use skins ; then
 		qt4_pkg_setup
