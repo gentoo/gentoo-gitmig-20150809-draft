@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.1.ebuild,v 1.6 2009/08/25 06:01:44 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.1.ebuild,v 1.7 2009/09/15 21:01:35 aballier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ MY_PV="${MY_PV/-beta/-test}"
 MY_P="${PN}-${MY_PV}"
 VLC_SNAPSHOT_TIME="0013"
 
-PATCHLEVEL="71"
+PATCHLEVEL="73"
 M4_TARBALL_VERSION="1"
 DESCRIPTION="VLC media player - Video player and streamer"
 HOMEPAGE="http://www.videolan.org/vlc/"
@@ -151,7 +151,7 @@ RDEPEND="
 			opengl? ( virtual/opengl )
 		)
 		x264? ( media-libs/x264 )
-		xcb? ( >=x11-libs/libxcb-1.1.90.1 x11-libs/xcb-util )
+		xcb? ( x11-libs/libxcb x11-libs/xcb-util )
 		xml? ( dev-libs/libxml2 )
 		xosd? ( x11-libs/xosd )
 		zvbi? ( >=media-libs/zvbi-0.2.25 )
