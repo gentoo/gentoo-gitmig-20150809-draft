@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10451 2009/09/15 12:50:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10452 2009/09/15 13:11:41 patrick Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrick Lauer <patrick@gentoo.org> (15 Sep 2009)
+# Masking eselect-opengl-1.0.8 as it fails hard for lots of users
+=app-admin/eselect-opengl-1.0.8
+
 
 # Joe Sapp <nixphoeni@gentoo.org> (14 Sep 2009)
 # Package has new name (x11-plugins/desklet-WeeklyCalendar) to reflect
