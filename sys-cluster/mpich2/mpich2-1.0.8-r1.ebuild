@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8.ebuild,v 1.9 2009/07/05 14:45:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.8-r1.ebuild,v 1.1 2009/09/15 03:30:45 nerdboy Exp $
 
 EAPI=1
 inherit python eutils fortran autotools
@@ -11,7 +11,7 @@ SRC_URI="http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/${PV
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+cxx debug doc fortran pvfs2 threads romio mpi-threads"
 
 COMMON_DEPEND="dev-lang/perl
@@ -106,6 +106,19 @@ src_unpack() {
 	cat aclocal_mpd.m4 "${S}"/confdb/aclocal_subcfg.m4 > aclocal.m4
 	AT_M4DIR=${S}/confdb eautoreconf
 	popd >/dev/null
+
+	# Yes, we still need this to avoid unresolved symbols
+	# and related build errors (eg, with hdf5).
+	# TODO:  Should probably send these upstream too...
+	epatch "${FILESDIR}"/${PN}-1.0.6-shlib.patch
+	epatch "${FILESDIR}"/${PN}-1.0.6-makefile.patch
+	sed -i -e "s:-Lnerdboy::g" Makefile.in || die "sed failed"
+	if use pvfs2; then
+		sed -i -e "s:-laio:-laio -lpvfs2:g" Makefile.in \
+		    || die "sed pvfs2 failed"
+	else
+		epatch "${FILESDIR}"/${P}-no-pvfs2.patch
+	fi
 }
 
 src_compile() {

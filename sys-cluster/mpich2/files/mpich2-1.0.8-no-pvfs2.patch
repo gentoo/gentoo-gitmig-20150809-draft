@@ -1,0 +1,37 @@
+--- src/mpi/romio/configure.orig	2009-09-14 17:30:33.267403501 -0700
++++ src/mpi/romio/configure	2009-09-14 17:39:40.079654437 -0700
+@@ -2033,6 +2033,12 @@
+ # Check whether --with-pvfs2 was given.
+ if test "${with_pvfs2+set}" = set; then
+   withval=$with_pvfs2;
++  if test "x$withval" = "xno" ; then
++    without_pvfs2=yes
++    with_pvfs2=""
++  fi
++else
++  without_pvfs2=yes
+ fi
+ 
+ 
+@@ -7577,11 +7583,16 @@
+ 	if test -n "${with_pvfs2}" -o -n "${file_system_pvfs2}" ; then
+ 		# the user either told us where pvfs is or asked for it in
+ 		# --with-file-system (or both)
+-		CFLAGS="$CFLAGS $( $PVFS2_CONFIG --cflags)"
+-		LIBS="$LIBS $( $PVFS2_CONFIG --libs)"
+-		ROMIO_LIBLIST="$ROMIO_LIBLIST $LIBS"
+-		FILE_SYSTEM="pvfs2 $FILE_SYSTEM"
+-		file_system_pvfs2=1
++		if test "x$without_pvfs2" = "xyes" ; then
++			ROMIO_LIBLIST="$ROMIO_LIBLIST $LIBS"
++			file_system_pvfs2=0
++		else
++			CFLAGS="$CFLAGS $( $PVFS2_CONFIG --cflags)"
++			LIBS="$LIBS $( $PVFS2_CONFIG --libs)"
++			ROMIO_LIBLIST="$ROMIO_LIBLIST $LIBS"
++			FILE_SYSTEM="pvfs2 $FILE_SYSTEM"
++			file_system_pvfs2=1
++		fi
+ 	fi
+ fi
+ 

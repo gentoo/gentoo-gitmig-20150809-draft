@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.39 2009/07/05 14:45:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.40 2009/09/15 03:30:45 nerdboy Exp $
+
+*mpich2-1.0.8-r1 (15 Sep 2009)
+
+  15 Sep 2009; Steve Arnold <nerdboy@gentoo.org> -mpich2-1.0.8.ebuild,
+  +mpich2-1.0.8-r1.ebuild, +files/mpich2-1.0.8-no-pvfs2.patch:
+  Added back required patches needed for proper shared lib building.
+  (otherwise things like HDF5 barf with unresolved symbols)
 
   05 Jul 2009; Markus Meier <maekke@gentoo.org> mpich2-1.0.8.ebuild:
   amd64 stable, bug #266409
