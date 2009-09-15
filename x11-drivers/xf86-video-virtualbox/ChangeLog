@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-virtualbox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.16 2009/09/12 12:09:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-virtualbox/ChangeLog,v 1.17 2009/09/15 11:09:24 patrick Exp $
+
+  15 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  xf86-video-virtualbox-3.0.6.ebuild:
+  Adding mesa to deps, thanks to Gerd Troeger for reporting.
 
   12 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -xf86-video-virtualbox-2.1.4.ebuild, -xf86-video-virtualbox-2.2.0.ebuild,
