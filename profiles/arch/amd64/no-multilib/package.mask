@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.49 2009/09/14 06:08:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/no-multilib/package.mask,v 1.50 2009/09/15 18:09:16 ssuominen Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
@@ -200,7 +200,6 @@ www-client/mozilla-firefox-bin
 www-client/seamonkey-bin
 <www-plugins/adobe-flash-10.0.20.7_alpha
 www-plugins/nspluginwrapper
-x11-apps/ati-drivers-extra
 x11-misc/googleearth
 x11-misc/qcomicbook
 
