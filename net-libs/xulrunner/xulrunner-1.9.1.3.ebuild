@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.3.ebuild,v 1.2 2009/09/13 11:58:05 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/xulrunner/xulrunner-1.9.1.3.ebuild,v 1.3 2009/09/15 02:15:25 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -38,7 +38,8 @@ RDEPEND="java? ( >=virtual/jre-1.4 )
 	>=app-text/hunspell-1.2
 	>=media-libs/lcms-1.17
 	>=x11-libs/cairo-1.8.8[X]
-	x11-libs/pango[X]"
+	x11-libs/pango[X]
+	x11-libs/libXt"
 
 DEPEND="java? ( >=virtual/jdk-1.4 )
 	${RDEPEND}
