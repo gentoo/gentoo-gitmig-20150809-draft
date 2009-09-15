@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.4.ebuild,v 1.3 2009/09/15 18:37:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.4.ebuild,v 1.4 2009/09/15 20:14:56 anarchy Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -111,7 +111,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	ewarn "We have moved backed to upstreams soname."
+	ewarn "We have reverted back to using upstreams soname."
 	ewarn "If you find a binary that does not run please re-emerge"
 	ewarn "package to ensure it properly links."
 	elog
