@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.94 2009/09/06 08:50:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.95 2009/09/15 11:51:21 jer Exp $
+
+  15 Sep 2009; Jeroen Roovers <jer@gentoo.org> brltty-4.0.ebuild:
+  Stable for HPPA (bug #281126).
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> brltty-4.0.ebuild:
   amd64 stable, bug #281126
