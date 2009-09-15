@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10450 2009/09/15 01:16:06 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10451 2009/09/15 12:50:51 jer Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -924,7 +924,7 @@ app-admin/haskell-updater
 =x11-libs/libcompizconfig-0.8.2-r2
 
 # Markus Ullmann <jokey@gentoo.org> (21 Jul 2009)
-# mask until libsoap 2.27 or higher is in-tree
+# mask until libsoup 2.27 or higher is in-tree
 =net-libs/webkit-gtk-0_p46*
 
 # Romain Perier <mrpouet@gentoo.org> (21 Jul 2009)
