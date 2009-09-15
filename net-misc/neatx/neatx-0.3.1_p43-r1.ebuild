@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p43.ebuild,v 1.1 2009/09/09 11:30:04 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p43-r1.ebuild,v 1.1 2009/09/15 22:04:58 voyageur Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ RDEPEND="dev-python/pexpect
 	 app-portage/portage-utils
 	 media-fonts/font-misc-misc
 	 media-fonts/font-cursor-misc
-	 net-analyzer/netcat
+	 || ( net-analyze/gnu-netcat net-analyzer/netcat )
 	 net-misc/nx"
 
 S=${WORKDIR}/${PN}
@@ -37,11 +37,6 @@ src_prepare() {
 		-i lib/constants.py || die "constants.py sed failed"
 
 	eautoreconf
-
-	# This is for bug 215944, so .pyo/.pyc files don't get into the
-	# file system
-	mv "${S}"/autotools/py-compile "${S}"/autotools/py-compile.orig
-	ln -s $(type -P true) "${S}"/autotools/py-compile
 }
 
 pkg_setup () {
@@ -65,11 +60,18 @@ src_install() {
 
 	insinto /etc
 	newins doc/neatx.conf.example neatx.conf
+
+	# nc or netcat?
+	if has_version net-analyzer/gnu-netcat; then
+		nc_path="/usr/bin/netcat"
+	else
+		nc_path="/usr/bin/nc"
+	fi
 	cat >> "${D}"/etc/neatx.conf << EOF
 
-netcat-path = /usr/bin/netcat
-xserssion-path = /etc/X11/Sessions/Xsession
+netcat-path = ${nc_path}
 use-xsession = false
+start-gnome-command = /etc/X11/Sessions/Gnome
 EOF
 
 	insinto ${NX_HOME_DIR}/.ssh
