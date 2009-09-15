@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/indilib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.6 2009/09/07 11:03:07 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/indilib/ChangeLog,v 1.7 2009/09/15 08:39:44 scarabeus Exp $
+
+  15 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/0.6-multilib.patch, indilib-0.6.ebuild:
+  Fix mulitilib issues per bug #284929.
 
   07 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> indilib-0.6.ebuild,
   metadata.xml:
