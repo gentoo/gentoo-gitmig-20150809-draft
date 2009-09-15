@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba-client
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.4 2009/09/07 23:18:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.5 2009/09/15 01:45:03 vostorga Exp $
+
+  15 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> samba-client-3.3.7.ebuild:
+  Fixing missing dohtml and doman. Patch thanks to Jonathan Callen
+  <abcd@gentoo.org> bug 283454
 
   07 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
   samba-client-3.3.7.ebuild:

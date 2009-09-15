@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.3.7.ebuild,v 1.2 2009/09/07 23:18:22 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.3.7.ebuild,v 1.3 2009/09/15 01:45:03 vostorga Exp $
 
 EAPI="2"
 
@@ -170,27 +170,27 @@ src_compile() {
 src_install() {
 	into /
 	dosbin bin/mount.cifs bin/umount.cifs || die "u/mount.cifs not around"
-	doman ../docs/manpages/{u,}mount.cifs.8
-	dohtml ../docs/htmldocs/manpages/{u,}mount.cifs.8.html
+	doman ../docs/manpages/{u,}mount.cifs.8  || die "can't create man pages"
+	dohtml ../docs/htmldocs/manpages/{u,}mount.cifs.8.html || die "dohtml failed"
 
 	into /usr
 	if use ads ; then
 		dosbin bin/cifs.upcall || die "cifs.upcall not around"
-		doman ../docs/manpages/cifs.upcall.8
-		doman ../docs/htmldocs/cifs.upcall.8.html
+		doman ../docs/manpages/cifs.upcall.8 || die "doman failed"
+		dohtml ../docs/htmldocs/manpages/cifs.upcall.8.html || die "doman failed"
 	fi
 
 	if ! use minimal ; then
 		dobin ${BINPROGS} || die "not all bins around"
 		for prog in ${BINPROGS} ; do
-			doman ../docs/manpages/${prog/bin\/}*
-			dohtml ../docs/htmldocs/${prog/bin\/}*.html
+			doman ../docs/manpages/${prog/bin\/}* || die "doman failed"
+			dohtml ../docs/htmldocs/manpages/${prog/bin\/}*.html || die "dohtml failed"
 		done
 
 		if use cups ; then
 			dobin bin/smbspool || die "smbspool not around"
-			doman ../docs/manpages/smbspool.8
-			dohtml ../docs/htmldocs/smbspool.8.html
+			doman ../docs/manpages/smbspool.8 || die "doman failed"
+			dohtml ../docs/htmldocs/manpages/smbspool.8.html || die "dohtml failed"
 			dosym /usr/bin/smbspool $(cups-config --serverbin)/backend/smb
 		fi
 	fi
