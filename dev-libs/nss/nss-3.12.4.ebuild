@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.4.ebuild,v 1.2 2009/09/15 17:38:42 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.12.4.ebuild,v 1.3 2009/09/15 18:37:25 mr_bones_ Exp $
 
 inherit eutils flag-o-matic multilib toolchain-funcs
 
@@ -116,4 +116,3 @@ pkg_postinst() {
 	ewarn "package to ensure it properly links."
 	elog
 }
-
