@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10456 2009/09/15 15:45:26 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10457 2009/09/15 22:59:29 chainsaw Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
+# Alpha releases. Unmask at your own risk, bugs 
+# go upstream to http://jira.atheme.org/
+=media-sound/audacious-2.2_alpha*
+=media-plugins/audacious-plugins-2.2_alpha*
 
 # Joe Sapp <nixphoeni@gentoo.org> (14 Sep 2009)
 # Package has new name (x11-plugins/desklet-WeeklyCalendar) to reflect
