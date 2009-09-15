@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.2.ebuild,v 1.1 2009/09/13 20:38:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.2.1.ebuild,v 1.1 2009/09/15 01:06:49 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,17 +16,20 @@ SRC_URI="http://pypi.python.org/packages/source/J/${MY_PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 SLOT="0"
-IUSE="doc examples i18n"
+IUSE="doc examples i18n test"
 
 CDEPEND="dev-python/setuptools"
 DEPEND="${CDEPEND}
 	doc? ( >=dev-python/docutils-0.4
-		   >=dev-python/sphinx-0.3 )"
+		   >=dev-python/sphinx-0.3 )
+	test? ( dev-python/nose )"
 RDEPEND="${CDEPEND}
 	i18n? ( >=dev-python/Babel-0.9.3 )"
 RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
+
+DISTUTILS_GLOBAL_OPTIONS="--with-speedups"
 DOCS="CHANGES"
 
 src_compile(){
@@ -40,7 +43,9 @@ src_compile(){
 
 src_test(){
 	testing() {
-		PYTHONPATH="$build-${PYTHON_ABI}/lib" "$(PYTHON)" setup.py test
+		pushd tests > /dev/null
+		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" nosetests-${PYTHON_ABI} -v || return 1
+		popd > /dev/null
 	}
 	python_execute_function testing
 }
