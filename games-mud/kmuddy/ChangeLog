@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/kmuddy
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.22 2009/01/30 13:17:27 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/kmuddy/ChangeLog,v 1.23 2009/09/15 19:20:07 mr_bones_ Exp $
+
+  15 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> kmuddy-0.8.ebuild:
+  EAPI=2; build when kde4 is installed (bug #274737)
 
   30 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> kmuddy-0.8.ebuild:
   kludge building with kde-base/kdelibs-3.5.9 (bug #256907)
