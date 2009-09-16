@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.210.0_p26329.ebuild,v 1.2 2009/09/16 14:02:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26343.ebuild,v 1.1 2009/09/16 16:34:28 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -46,7 +46,7 @@ src_prepare() {
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
 
-	# Temporarly use this gyp_chromium instead of tools/gyp/ one
+	# New gyp_chromium to use, but not marked executable
 	chmod +x build/gyp_chromium
 }
 
@@ -78,7 +78,6 @@ EOF
 		myconf="${myconf} -Dno_strict_aliasing=1 -Dgcc_version=44"
 	fi
 
-	#tools/gyp/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die "gyp failed"
 	build/gyp_chromium -f make build/all.gyp ${myconf} --depth=. || die "gyp failed"
 }
 
