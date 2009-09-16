@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3273 2009/09/16 20:27:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3274 2009/09/16 21:35:47 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
+  Remove mask for removed intltool-0.40.6.
 
   16 Sep 2009; Ulrich Mueller <ulm@gentoo.org> arch/sparc-fbsd/use.mask,
   default-bsd/fbsd/6.2/sparc/use.mask:
