@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pywebkitgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.4 2009/08/30 22:32:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/ChangeLog,v 1.5 2009/09/16 01:14:54 arfrever Exp $
+
+  16 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pywebkitgtk-1.1.6-r1.ebuild:
+  Fix building with =sys-devel/libtool-1* (bug #284174).
 
 *pywebkitgtk-1.1.6-r1 (30 Aug 2009)
 

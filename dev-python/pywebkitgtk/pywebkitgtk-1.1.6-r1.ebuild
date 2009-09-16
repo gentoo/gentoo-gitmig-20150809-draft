@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.6-r1.ebuild,v 1.1 2009/08/30 22:32:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pywebkitgtk/pywebkitgtk-1.1.6-r1.ebuild,v 1.2 2009/09/16 01:14:54 arfrever Exp $
 
 EAPI="2"
 
@@ -32,7 +32,10 @@ RESTRICT_PYTHON_ABIS="3*"
 
 src_prepare() {
 	sed -e "s:libxslt,:libxslt, gthread-2.0:" -i configure.ac
+
+	rm -f m4/l*.m4
 	AT_M4DIR="m4" eautoreconf
+
 	python_src_prepare
 }
 
