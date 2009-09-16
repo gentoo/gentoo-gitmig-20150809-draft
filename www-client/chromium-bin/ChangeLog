@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.25 2009/09/14 09:02:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.26 2009/09/16 06:59:24 voyageur Exp $
+
+*chromium-bin-4.0.210.0_p26326 (16 Sep 2009)
+
+  16 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.208.0_p25708.ebuild,
+  +chromium-bin-4.0.210.0_p26326.ebuild:
+  Version bump, this fixes proprietary flash crashing the page on Gentoo:
+  the plugin does not like to run from a path with 'netscape' in it... See
+  http://code.google.com/p/chromium/issues/detail?id=20758
 
 *chromium-bin-4.0.209.0_p26097 (14 Sep 2009)
 
