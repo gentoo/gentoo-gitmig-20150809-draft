@@ -1,6 +1,13 @@
 # ChangeLog for media-video/qc-usb
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.32 2009/02/15 19:22:53 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/ChangeLog,v 1.33 2009/09/16 22:18:38 eva Exp $
+
+*qc-usb-0.6.6-r3 (16 Sep 2009)
+
+  16 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  +qc-usb-0.6.6-r3.ebuild, +files/qc-usb-0.6.6-kcompat-2.6.30.patch:
+  Version bump. Add patch for 2.6.30 compatibility, closes: #277046. Add die
+  calls where needed, make compilation respect a few variables.
 
 *qc-usb-0.6.6-r2 (15 Feb 2009)
 

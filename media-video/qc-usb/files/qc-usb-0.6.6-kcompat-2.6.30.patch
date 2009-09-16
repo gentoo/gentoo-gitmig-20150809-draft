@@ -1,0 +1,70 @@
+--- qc-driver.c.old	2009-09-13 11:34:38.048300181 -0400
++++ qc-driver.c	2009-09-13 11:38:10.329258334 -0400
+@@ -1000,7 +1000,9 @@
+ 		PRINTK(KERN_WARNING,"Could not register procfs file entry");
+ 		return -ENXIO;
+ 	}
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30)
+ 	entry->owner = THIS_MODULE;
++#endif
+ 	entry->data = qc;
+ 	entry->read_proc = qc_proc_read;
+ 	entry->write_proc = qc_proc_write;
+@@ -1038,7 +1040,9 @@
+ 			return -ENXIO;
+ 		}
+ 	}
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30)
+ 	qc_proc_entry->owner = THIS_MODULE;
++#endif
+ 	return 0;
+ }
+ /* }}} */
+@@ -2311,7 +2315,11 @@
+ /* }}} */
+ /* {{{ [fold] qc_v4l_open(struct video_device *dev, int flags) */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++static int qc_v4l_open(struct file *file)
++#else
+ static int qc_v4l_open(struct inode *inode, struct file *file)
++#endif
+ #else
+ static int qc_v4l_open(struct video_device *dev, int flags)
+ #endif
+@@ -2383,7 +2391,11 @@
+ /* }}} */
+ /* {{{ [fold] qc_v4l_close(struct video_device *dev) */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++static int qc_v4l_close(struct file *file)
++#else
+ static int qc_v4l_close(struct inode *inode, struct file *file)
++#endif
+ #else
+ static void qc_v4l_close(struct video_device *dev)
+ #endif
+@@ -2528,7 +2540,11 @@
+ /* }}} */
+ /* {{{ [fold] qc_v4l_ioctl(struct video_device *dev, unsigned int cmd, void *arg) */
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++static long qc_v4l_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
++#else
+ static int qc_v4l_ioctl(struct inode *inode, struct file *file, unsigned int cmd, unsigned long arg)
++#endif
+ #else
+ static int qc_v4l_ioctl(struct video_device *dev, unsigned int cmd, void *argp)
+ #endif
+@@ -3025,7 +3041,11 @@
+ 
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
+ static void qc_v4l_release(struct video_device *vfd) { }
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++static struct v4l2_file_operations qc_v4l_fops = {
++#else
+ static struct file_operations qc_v4l_fops = {
++#endif
+ 	owner:		THIS_MODULE,
+ 	open:		qc_v4l_open,
+ 	release:	qc_v4l_close,
