@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.93 2009/09/05 22:11:49 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.94 2009/09/16 13:28:32 scarabeus Exp $
+
+  16 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
+  Unmask policykit useflag on pulseaudio. Per irc request. Since the reason
+  for the mask is long gone.
 
   05 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   ChangeLog:
