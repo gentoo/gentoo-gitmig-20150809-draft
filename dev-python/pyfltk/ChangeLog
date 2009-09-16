@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyfltk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.12 2009/09/06 21:54:43 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfltk/ChangeLog,v 1.13 2009/09/16 18:07:44 fauli Exp $
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> pyfltk-1.1.4.ebuild:
+  stable x86, bug 284976
 
   06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
   -files/pyfltk-1.1.3-python25.patch:
