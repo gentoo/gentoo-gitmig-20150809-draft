@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.169 2009/09/10 09:01:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.170 2009/09/16 06:50:28 kolmodin Exp $
+
+  16 Sep 2009; Lennart Kolmodin <kolmodin@gentoo.org> ghc-6.10.4.ebuild,
+  +files/ghc-6.10.4-ppc64-always-minimal-toc.patch,
+  +files/ghc-6.10.4-propagate-hc-options-to-all-libraries.patch:
+  Add blocker on <haddock-2.4.2. Older versions will not work with this
+  version of ghc. We add the block in ghc rather than in haddock, as blocks
+  can't be trusted to be retroactive.
+
+  Also add ppc64 binary and patches,
+  work done by Sergei Trofimovich <slyfox@community.haskell.org>.
 
   10 Sep 2009; Christian Faulhammer <fauli@gentoo.org> ghc-6.8.2-r1.ebuild:
   stable x86/amd64, bug 283155

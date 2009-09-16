@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4.ebuild,v 1.3 2009/08/02 10:23:12 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.10.4.ebuild,v 1.4 2009/09/16 06:50:28 kolmodin Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -43,6 +43,7 @@ arch_binaries=""
 arch_binaries="$arch_binaries x86?   ( http://code.haskell.org/~ivanm/ghc-bin-${PV}-x86.tbz2 )"
 arch_binaries="$arch_binaries amd64? ( http://haskell.org/~kolmodin/ghc-bin-${PV}-amd64.tbz2 )"
 arch_binaries="$arch_binaries sparc? ( http://haskell.org/~duncan/ghc/ghc-bin-${PV}-sparc.tbz2 )"
+arch_binaries="$arch_binaries ppc64? ( http://code.haskell.org/~slyfox/ghc-ppc64/ghc-bin-${PV}-ppc64.tbz2 )"
 
 #arch_binaries="$arch_binaries alpha?   ( mirror://gentoo/ghc-bin-${PV}-alpha.tbz2 )"
 #arch_binaries="$arch_binaries amd64?   ( mirror://gentoo/ghc-bin-${PV}-amd64.tbz2 )"
@@ -56,7 +57,7 @@ SRC_URI="!binary? ( http://haskell.org/ghc/dist/${EXTRA_SRC_URI}/${P}-src.tar.bz
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~ppc64 ~x86"
 IUSE="binary doc ghcbootstrap"
 
 RDEPEND="
@@ -64,7 +65,9 @@ RDEPEND="
 	>=sys-devel/gcc-2.95.3
 	>=sys-devel/binutils-2.17
 	>=dev-lang/perl-5.6.1
-	>=dev-libs/gmp-4.1"
+	>=dev-libs/gmp-4.1
+	!<dev-haskell/haddock-2.4.2"
+# earlier versions than 2.4.2 of haddock only works with older ghc releases
 
 DEPEND="${RDEPEND}
 	ghcbootstrap? (	doc? (	~app-text/docbook-xml-dtd-4.2
@@ -124,6 +127,10 @@ ghc_setup_cflags() {
 	gcc-specs-pie && append-ghc-cflags compile link	-nopie
 	gcc-specs-ssp && append-ghc-cflags compile		-fno-stack-protector
 
+	# prevent from failind building unregisterised ghc:
+	# http://www.mail-archive.com/debian-bugs-dist@lists.debian.org/msg171602.html
+	use ppc64 && append-ghc-cflags compile -mminimal-toc
+
 	# We also add -Wa,--noexecstack to get ghc to generate .o files with
 	# non-exectable stack. This it a hack until ghc does it itself properly.
 	append-ghc-cflags assemble		"-Wa,--noexecstack"
@@ -169,6 +176,13 @@ src_unpack() {
 		sed -i -e 's/DO_NOT_INSTALL =/DO_NOT_INSTALL = haddock/' \
 			"${S}/utils/Makefile"
 
+		# Highly useful when you need to pass your HC opts to bootstrap libs
+		# Currently it is needed for ppc64 to build with broken compiler
+		epatch "${FILESDIR}/ghc-6.10.4-propagate-hc-options-to-all-libraries.patch"
+
+		# see ghc_setup_cflags()
+		use ppc64 && epatch "${FILESDIR}/ghc-6.10.4-ppc64-always-minimal-toc.patch"
+
 		# as we have changed the build system with the readline patch
 		eautoreconf
 	fi
@@ -188,20 +202,6 @@ src_compile() {
 		echo "SRC_HC_OPTS+=${GHC_CFLAGS}" >> mk/build.mk
 		echo "SRC_CC_OPTS+=${CFLAGS} -Wa,--noexecstack" >> mk/build.mk
 
-		# The settings that give you the fastest complete GHC build are these:
-		if use ghcquickbuild; then
-			echo "SRC_HC_OPTS     = -H64m -Onot -fasm" >> mk/build.mk
-			echo "GhcStage1HcOpts = -O -fasm" >> mk/build.mk
-			echo "GhcStage2HcOpts = -Onot -fasm" >> mk/build.mk
-			echo "GhcLibHcOpts    = -Onot -fasm" >> mk/build.mk
-			echo "GhcLibWays      =" >> mk/build.mk
-			echo "SplitObjs       = NO" >> mk/build.mk
-		fi
-		# However, note that the libraries are built without optimisation, so
-		# this build isn't very useful. The resulting compiler will be very
-		# slow. On a 4-core x86 machine using MAKEOPTS="-j10", this build was
-		# timed at less than 8 minutes.
-
 		# We can't depend on haddock except when bootstrapping when we
 		# must build docs and include them into the binary .tbz2 package
 		if use ghcbootstrap && use doc; then
@@ -219,6 +219,7 @@ src_compile() {
 
 		# GHC build system knows to build unregisterised on alpha and hppa,
 		# but we have to tell it to build unregisterised on some arches
+		# ppc64: EvilMangler currently does not understand some TOCs
 		if use alpha || use hppa || use ppc64; then
 			echo "GhcUnregisterised=YES" >> mk/build.mk
 			echo "GhcWithInterpreter=NO" >> mk/build.mk
