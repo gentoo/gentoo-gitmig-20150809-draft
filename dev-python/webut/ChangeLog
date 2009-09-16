@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.5 2009/02/23 15:56:52 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.6 2009/09/16 17:24:20 fauli Exp $
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> webut-0.1.0.2.ebuild:
+  stable x86, bug 284764
 
   23 Feb 2009; Joseph Jezak <josejx@gentoo.org> webut-0.1.0.2.ebuild:
   Marked ~ppc.
