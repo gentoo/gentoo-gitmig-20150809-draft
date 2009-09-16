@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.4-r1.ebuild,v 1.3 2009/04/04 15:48:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-2.24.4-r1.ebuild,v 1.4 2009/09/16 17:19:58 mrpouet Exp $
 
 inherit eutils gnome2 multilib python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://gnome.org/projects/totem/"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="bluetooth debug galago gnome lirc nautilus nsplugin nvtv python tracker"
 
@@ -91,7 +91,7 @@ pkg_setup() {
 	# Plugin configuration
 	G2CONF="${G2CONF}
 		BROWSER_PLUGIN_DIR=/usr/$(get_libdir)/nsbrowser/plugins
-	    PLUGINDIR=/usr/$(get_libdir)/totem/plugins"
+		PLUGINDIR=/usr/$(get_libdir)/totem/plugins"
 
 	local plugins="properties,thumbnail,screensaver,ontop,gromit,media-player-keys,skipto"
 	use bluetooth && plugins="${plugins},bemused"
