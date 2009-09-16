@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.27 2009/02/23 16:01:10 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.28 2009/09/16 17:26:13 fauli Exp $
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  ldaptor-0.0.43.ebuild:
+  stable x86, bug 284767
 
   23 Feb 2009; Joseph Jezak <josejx@gentoo.org> ldaptor-0.0.43.ebuild:
   Marked ~ppc for bug #211749.
