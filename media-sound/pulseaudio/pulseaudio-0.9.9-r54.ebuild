@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.9-r54.ebuild,v 1.3 2009/08/21 23:18:46 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.9-r54.ebuild,v 1.4 2009/09/16 20:52:09 scarabeus Exp $
 
 inherit eutils libtool autotools flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://0pointer.de/lennart/projects/${PN}/${P}.tar.gz"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86"
-IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit asyncns"
+IUSE="alsa avahi caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth asyncns"
 
 RDEPEND="X? ( x11-libs/libX11 )
 	caps? ( sys-libs/libcap )
@@ -37,7 +37,6 @@ RDEPEND="X? ( x11-libs/libX11 )
 		>=net-wireless/bluez-libs-3
 		>=sys-apps/dbus-1.0.0
 	)
-	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
 	=sys-devel/libtool-1.5*" # it's a valid RDEPEND, libltdl.so is used
 DEPEND="${RDEPEND}
@@ -103,7 +102,7 @@ src_compile() {
 		$(use_enable gnome gconf) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable bluetooth bluez) \
-		$(use_enable policykit polkit) \
+		--disable-polkit \
 		$(use_with caps) \
 		$(use_with X x) \
 		--disable-ltdl-install \

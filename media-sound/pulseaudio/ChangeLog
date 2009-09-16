@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.157 2009/09/15 16:36:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.158 2009/09/16 20:52:09 scarabeus Exp $
+
+  16 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  pulseaudio-0.9.9-r54.ebuild, pulseaudio-0.9.9-r55.ebuild,
+  pulseaudio-0.9.15-r2.ebuild:
+  Remove polkit from stable packages for now. Has stablereq too so current
+  testing will get the support :]
 
   15 Sep 2009; Olivier Crête <tester@gentoo.org>
   pulseaudio-0.9.15-r2.ebuild:

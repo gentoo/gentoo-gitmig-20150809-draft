@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r2.ebuild,v 1.7 2009/09/15 16:36:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r2.ebuild,v 1.8 2009/09/16 20:52:09 scarabeus Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/${P/_rc/-test}"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc x86"
-IUSE="+alsa avahi +caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit +asyncns +glib test"
+IUSE="+alsa avahi +caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth +asyncns +glib test"
 
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	caps? ( sys-libs/libcap )
@@ -43,7 +43,6 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 			 >=net-wireless/bluez-libs-3 )
 		>=sys-apps/dbus-1.0.0
 	)
-	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-libs/speex-1.2_beta
@@ -106,7 +105,7 @@ src_configure() {
 		$(use_enable gnome gconf) \
 		$(use_enable libsamplerate samplerate) \
 		$(use_enable bluetooth bluez) \
-		$(use_enable policykit polkit) \
+		--disable-polkit \
 		$(use_enable X x11) \
 		$(use_enable test default-build-tests) \
 		$(use_with caps) \
