@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/polyglot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.2 2009/08/19 05:51:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.3 2009/09/16 05:12:27 graaff Exp $
+
+*polyglot-0.2.9 (16 Sep 2009)
+
+  16 Sep 2009; Hans de Graaff <graaff@gentoo.org> +polyglot-0.2.9.ebuild:
+  Version bump: Use to_s on Pathname to support Ruby 1.9
 
 *polyglot-0.2.8 (19 Aug 2009)
 
