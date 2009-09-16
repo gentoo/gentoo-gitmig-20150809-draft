@@ -1,6 +1,10 @@
 # ChangeLog for app-text/bibus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.14 2009/09/09 02:56:21 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/ChangeLog,v 1.15 2009/09/16 01:30:54 markusle Exp $
+
+  16 Sep 2009; Markus Dittrich <markusle@gentoo.org> bibus-1.5_rc1.ebuild:
+  Made sqlite mandatory with the option to also install mysql 
+  (see bug #284229).
 
   09 Sep 2009; Markus Dittrich <markusle@gentoo.org> -bibus-1.4.3.2.ebuild,
   -files/bibus-1.4.3.2-install.patch:

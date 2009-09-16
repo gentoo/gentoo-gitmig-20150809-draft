@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5_rc1.ebuild,v 1.1 2009/09/09 02:50:29 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/bibus/bibus-1.5_rc1.ebuild,v 1.2 2009/09/16 01:30:54 markusle Exp $
 
 EAPI="2"
 
@@ -14,24 +14,16 @@ SRC_URI="mirror://sourceforge/${PN}-biblio/${PN}-${MY_PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="mysql sqlite"
+IUSE="mysql"
 # Most of this mess is designed to give the choice of sqlite or mysql
 # but prefer sqlite. We also need to default to sqlite if neither is requested.
 RDEPEND="virtual/ooo
 	=dev-python/wxpython-2.6*
-	sqlite? (
-		dev-python/pysqlite
-		dev-db/sqliteodbc
-	)
-	!sqlite? (
-		mysql? (
-			dev-python/mysql-python
-			dev-db/myodbc
-		)
-		!mysql? (
-			dev-python/pysqlite
-			dev-db/sqliteodbc
-		)
+	dev-python/pysqlite
+	dev-db/sqliteodbc
+	mysql? (
+		dev-python/mysql-python
+		dev-db/myodbc
 	)
 	dev-db/unixODBC"
 DEPEND="${RDEPEND}"
