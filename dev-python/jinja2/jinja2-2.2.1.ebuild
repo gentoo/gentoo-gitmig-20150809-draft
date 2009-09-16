@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.2.1.ebuild,v 1.1 2009/09/15 01:06:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/jinja2-2.2.1.ebuild,v 1.2 2009/09/16 04:56:03 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -29,7 +29,7 @@ RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
-DISTUTILS_GLOBAL_OPTIONS="--with-speedups"
+DISTUTILS_GLOBAL_OPTIONS=("--with-speedups")
 DOCS="CHANGES"
 
 src_compile(){
