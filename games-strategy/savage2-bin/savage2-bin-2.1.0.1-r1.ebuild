@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1-r1.ebuild,v 1.1 2009/09/16 13:56:03 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage2-bin/savage2-bin-2.1.0.1-r1.ebuild,v 1.2 2009/09/16 14:02:40 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -87,7 +87,8 @@ src_install() {
 	make_desktop_entry savage2-modelviewer "Savage 2: Model Viewer"
 
 	games_make_wrapper savage2-ded \
-		"./savage2.bin \"Set host_dedicatedServer true\"" "${dir}" "${dir}"
+		"./savage2.bin \"Set host_dedicatedServer true\"" "${dir}" \
+		"${dir}:${dir}/game"
 
 	prepgamesdirs
 }
