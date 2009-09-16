@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.2 2009/08/04 02:58:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.3 2009/09/16 04:53:01 arfrever Exp $
+
+  16 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  -markdown-2.0.ebuild:
+  Delete older ebuild.
 
 *markdown-2.0.1 (04 Aug 2009)
 
