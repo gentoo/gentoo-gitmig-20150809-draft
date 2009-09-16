@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.4.1.ebuild,v 1.1 2009/08/27 00:03:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.4.1.ebuild,v 1.2 2009/09/16 01:27:57 robbat2 Exp $
 
 EAPI=2
 
@@ -52,7 +52,11 @@ RDEPEND="${CDEPEND}
 			cvs? ( >=dev-util/cvsps-2.1 dev-perl/DBI dev-perl/DBD-SQLite )
 			subversion? ( dev-util/subversion[-dso] dev-perl/libwww-perl dev-perl/TermReadKey )
 			)
-	gtk?  ( >=dev-python/pygtk-2.8 dev-python/gtksourceview-python )"
+	gtk?
+	(
+		>=dev-python/pygtk-2.8 
+		|| ( dev-python/pygtksourceview:2  dev-python/gtksourceview-python )
+	)"
 
 DEPEND="${CDEPEND}"
 
