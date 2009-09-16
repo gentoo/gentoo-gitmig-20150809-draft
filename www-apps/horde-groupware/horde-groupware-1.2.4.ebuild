@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/horde-groupware-1.2.3.ebuild,v 1.1 2009/08/24 13:56:56 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/horde-groupware-1.2.4.ebuild,v 1.1 2009/09/16 14:38:43 a3li Exp $
 
 HORDE_PN="${PN}"
 

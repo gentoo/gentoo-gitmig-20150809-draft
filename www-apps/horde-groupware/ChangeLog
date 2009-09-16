@@ -1,6 +1,13 @@
 # ChangeLog for www-apps/horde-groupware
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/ChangeLog,v 1.8 2009/08/24 13:56:56 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-groupware/ChangeLog,v 1.9 2009/09/16 14:38:43 a3li Exp $
+
+*horde-groupware-1.2.4 (16 Sep 2009)
+
+  16 Sep 2009; Alex Legler <a3li@gentoo.org> -horde-groupware-1.2.3.ebuild,
+  +horde-groupware-1.2.4.ebuild:
+  Non-maintainer commit: Version bump for security bug 285052. Removing
+  vulnerable version.
 
 *horde-groupware-1.2.3 (24 Aug 2009)
 
