@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10459 2009/09/16 21:35:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10460 2009/09/16 21:39:01 eva Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Gilles Dartiguelongue <eva@gentoo.org> (16 Sep 2009)
+# Masking at-poke, unmainted and superseeded by 
+# app-accessibility/accerciser. bug #279304
+app-accessibility/at-poke
 
 # Tony Vroon <chainsaw@gentoo.org> (14 Sep 2009)
 # Alpha releases. Unmask at your own risk, bugs 
