@@ -1,6 +1,11 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1 2009/09/16 13:31:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.2 2009/09/16 14:02:41 voyageur Exp $
+
+  16 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +files/chromium-drop_sse2.patch, chromium-4.0.210.0_p26329.ebuild:
+  Forgot patch for x86 users, to prevent automatic enabling of
+  -march=pentium4 -msse2
 
 *chromium-4.0.210.0_p26329 (16 Sep 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.210.0_p26329.ebuild,v 1.1 2009/09/16 13:31:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.210.0_p26329.ebuild,v 1.2 2009/09/16 14:02:41 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -43,6 +43,8 @@ src_prepare() {
 
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
+	# Prevent automatic -march=pentium4 -msse2 enabling on x86
+	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
 
 	# Temporarly use this gyp_chromium instead of tools/gyp/ one
 	chmod +x build/gyp_chromium
