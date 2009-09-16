@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/shapelib
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.9 2008/01/04 17:47:08 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/shapelib/ChangeLog,v 1.10 2009/09/16 04:58:05 nerdboy Exp $
+
+  16 Sep 2009; Steve Arnold <nerdboy@gentoo.org> shapelib-1.2.10-r1.ebuild,
+  +files/fix-shapelib-test.diff, +files/stdlib_include_fix.patch:
+  Updated with test fix (patch provided by Thomas Beierlein) and QA fix 
+  for missing include file.
 
   04 Jan 2008; Sébastien Fabbro <bicatali@gentoo.org>
   shapelib-1.2.10-r1.ebuild:
