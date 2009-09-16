@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3.ebuild,v 1.1 2009/03/01 16:04:24 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3.ebuild,v 1.2 2009/09/16 20:16:50 mrness Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=none
 
-inherit eutils autotools flag-o-matic
+inherit eutils autotools flag-o-matic ssl-cert
 
 DESCRIPTION="Powerful SMS and WAP gateway"
 HOMEPAGE="http://www.kannel.org/"
@@ -39,10 +39,7 @@ pkg_setup() {
 	enewuser kannel -1 -1 /var/log/kannel kannel
 }
 
-src_unpack() {
-	unpack ${A}
-
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-custom-wap-ports.patch"
 	epatch "${FILESDIR}/${P}-nolex.patch" # flex is not used
 	epatch "${FILESDIR}/${P}-external-libuuid.patch"
@@ -94,4 +91,25 @@ src_install() {
 
 	newinitd "${FILESDIR}/kannel-initd" kannel
 	newconfd "${FILESDIR}/kannel-confd" kannel
+}
+
+pkg_postinst() {
+	if use ssl; then
+		elog "SSL certificate can be created by running"
+		elog "   emerge --config =${CATEGORY}/${PF}"
+	fi
+}
+
+pkg_config() {
+	if use ssl; then
+		if install_cert /etc/kannel/cert; then
+			chown kannel "${ROOT}"etc/kannel/cert.pem
+			einfo "For using this certificate, you have to add following line to your kannel.conf:"
+			einfo '   ssl-certkey-file = "/etc/kannel/cert.pem"'
+			einfo "You can safely remove cert.{key,crt,csr} files, these are not used by kannel."
+		fi
+	else
+		eerror "This phase exists only for creating kannel SSL certificate"
+		eerror "and ssl USE flag is disabled for this package!"
+	fi
 }
