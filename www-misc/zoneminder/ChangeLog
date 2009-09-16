@@ -1,10 +1,13 @@
 # ChangeLog for www-misc/zoneminder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.36 2009/08/03 11:19:59 gentoofan23 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/zoneminder/ChangeLog,v 1.37 2009/09/16 11:58:25 tanderson Exp $
+
+  16 Sep 2009; Thomas Anderson <tanderson@gentoo.org> metadata.xml:
+  Fix email address.
 
 *zoneminder-1.24.2 (03 Aug 2009)
 
-  03 Aug 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  03 Aug 2009; Thomas Anderson <tanderson@gentoo.org>
   +files/1.24.2/Makefile.am.patch, +zoneminder-1.24.2.ebuild,
   +files/1.24.2/db_upgrade_script_location.patch,
   +files/1.24.2/zm_create.sql.in.patch,
@@ -16,18 +19,18 @@
   metadata.xml:
   dev-perl/X10 was removed
 
-  08 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  08 Feb 2009; Thomas Anderson <tanderson@gentoo.org>
   zoneminder-1.23.3.ebuild:
   Fix empty directory installation.
 
-  08 Feb 2009; Thomas Anderson <gentoofan23@gentoo.org>
+  08 Feb 2009; Thomas Anderson <tanderson@gentoo.org>
   zoneminder-1.23.3.ebuild:
   Fix ROOT abuse, bug 258116
 
   26 Jan 2009; Peter Volkov <pva@gentoo.org> zoneminder-1.23.3.ebuild:
   Fixed perllocal.pod collision, bug #252862. Thank rinus for the report and fix.
 
-  01 Jan 2009; Thomas Anderson <gentoofan23@gentoo.org> files/init.d,
+  01 Jan 2009; Thomas Anderson <tanderson@gentoo.org> files/init.d,
   metadata.xml:
   Update init.d script to use mysql, add myself as a maintainer
 
