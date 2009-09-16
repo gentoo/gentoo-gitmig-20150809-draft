@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Probe-Perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.1 2009/09/15 07:41:45 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.2 2009/09/16 17:16:02 jer Exp $
+
+  16 Sep 2009; Jeroen Roovers <jer@gentoo.org> Probe-Perl-0.01.ebuild:
+  Marked ~hppa (bug #285057).
 
 *Probe-Perl-0.01 (15 Sep 2009)
 

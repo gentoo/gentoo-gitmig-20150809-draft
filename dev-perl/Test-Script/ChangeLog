@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Script
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.9 2009/09/15 07:43:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/ChangeLog,v 1.10 2009/09/16 17:16:36 jer Exp $
+
+  16 Sep 2009; Jeroen Roovers <jer@gentoo.org> Test-Script-1.05.ebuild:
+  Marked ~hppa (bug #285057).
 
 *Test-Script-1.05 (15 Sep 2009)
 
