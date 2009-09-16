@@ -1,6 +1,14 @@
 # ChangeLog for media-video/totem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.247 2009/09/13 17:55:07 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.248 2009/09/16 08:39:01 mrpouet Exp $
+
+*totem-2.26.3-r1 (16 Sep 2009)
+
+  16 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  +totem-2.26.3-r1.ebuild,
+  +files/totem-2.26.3-youtube-plugin-404-error.patch:
+  Fix youtube plugin, playing youtube videos resulted in 404 in
+  gst_soup_http_src_parse_status(), patch import from upstream bug #594320.
 
   13 Sep 2009; Olivier Crête <tester@gentoo.org> ChangeLog:
   Stable on amd64, bug #284795
