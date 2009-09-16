@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2_alpha1.ebuild,v 1.1 2009/09/15 23:20:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-plugins/audacious-plugins-2.2_alpha1.ebuild,v 1.2 2009/09/16 19:08:03 chainsaw Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,7 +38,6 @@ RDEPEND="app-arch/unzip
 	mtp? ( media-libs/libmtp )
 	projectm? ( >=media-libs/libprojectm-1.2.0
 		>=media-libs/libsdl-1.2.5 )
-	pulseaudio? ( >=media-sound/pulseaudio-0.9.3 )
 	scrobbler? ( net-misc/curl )
 	sdl? (	>=media-libs/libsdl-1.2.5 )
 	sid? ( >=media-libs/libsidplay-2.1.1-r2 )
@@ -47,8 +46,7 @@ RDEPEND="app-arch/unzip
 	tta? ( media-libs/libid3tag )
 	vorbis? ( >=media-libs/libvorbis-1.2.0
 		  >=media-libs/libogg-1.1.3 )
-	wavpack? ( >=media-sound/wavpack-4.41.0 )
-	wma? ( >=media-libs/libmms-0.3 )"
+	wavpack? ( >=media-sound/wavpack-4.41.0 )"
 
 DEPEND="${RDEPEND}
 	nls? ( dev-util/intltool )
@@ -99,7 +97,6 @@ src_compile() {
 		$(use_enable vorbis) \
 		$(use_enable vorbis filewriter_vorbis) \
 		$(use_enable wavpack) \
-		$(use_enable wma mms) \
 		$(use_enable icecast) \
 		|| die
 
