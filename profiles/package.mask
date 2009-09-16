@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10457 2009/09/15 22:59:29 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10458 2009/09/16 13:11:18 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -826,10 +826,6 @@ media-sound/alsa-driver
 #
 # Removal on 2009-09-30
 media-tv/ktvschedule
-
-# Samuli Suominen <ssuominen@gentoo.org> (30 Jul 2009)
-# Masked for testing.
-=sys-kernel/vanilla-sources-2.6.31_rc*
 
 # Samuli Suomienn <ssuominen@gentoo.org> (30 Jul 2009)
 # Needs =net-libs/xulrunner-1.8* to compile.
