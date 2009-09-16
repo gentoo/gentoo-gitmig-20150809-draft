@@ -1,6 +1,7 @@
---- Makefile.in.orig	2009-03-20 20:05:18.314466717 +0000
-+++ Makefile.in	2009-03-21 15:07:59.217879770 +0000
-@@ -77,7 +77,14 @@
+diff -Naur ast-5.1-0/Makefile.in ast-5.1-0.new/Makefile.in
+--- ast-5.1-0/Makefile.in	2009-03-04 14:46:43.000000000 -0500
++++ ast-5.1-0.new/Makefile.in	2009-09-15 23:26:24.000000000 -0400
+@@ -77,7 +77,15 @@
  	"$(DESTDIR)$(includedir)" "$(DESTDIR)$(includedir)"
  libLTLIBRARIES_INSTALL = $(INSTALL)
  LTLIBRARIES = $(lib_LTLIBRARIES)
@@ -11,12 +12,13 @@
 +    libast_grf_2.0.la \
 +    libast_grf_3.2.la \
 +    libast_pal.la \
-+    libast_wcslib.la
++    libast_wcslib.la \
++    -lm
 +
  am__objects_1 = libast_la-axis.lo libast_la-box.lo libast_la-c2f77.lo \
  	libast_la-channel.lo libast_la-circle.lo libast_la-cmpframe.lo \
  	libast_la-cmpmap.lo libast_la-cmpregion.lo \
-@@ -163,10 +170,10 @@
+@@ -163,10 +171,10 @@
  libast_pal_la_LIBADD =
  am_libast_pal_la_OBJECTS = libast_pal_la-pal.lo
  libast_pal_la_OBJECTS = $(am_libast_pal_la_OBJECTS)
@@ -29,7 +31,7 @@
  am_libast_pgplot3d_la_OBJECTS = libast_pgplot3d_la-grf3d_pgplot.lo
  libast_pgplot3d_la_OBJECTS = $(am_libast_pgplot3d_la_OBJECTS)
  libast_wcslib_la_LIBADD =
-@@ -682,7 +689,6 @@
+@@ -682,7 +690,6 @@
  nodist_include_HEADERS = ast.h AST_PAR
  include_MESSAGES = AST_ERR ast_err.h
  lib_LTLIBRARIES = \
@@ -37,7 +39,7 @@
      libast_err.la \
      libast_ems.la \
      libast_drama.la \
-@@ -692,11 +698,12 @@
+@@ -692,11 +699,12 @@
      libast_pgplot.la \
      libast_pgplot3d.la \
      libast_pal.la \
@@ -54,7 +56,7 @@
  
  # Make all library code position independent by default. This is handy for
  # creating shareable libraries from the static ones (Java JNI libraries). 
-@@ -813,7 +820,7 @@
+@@ -813,7 +821,7 @@
  #ast_test_LDADD = `ast_link`
  # Expand ast_link to avoid libast_pass2, which causes problems for Solaris
  ast_test_LDADD = libast.la libast_pal.la libast_grf_3.2.la libast_wcslib.la libast_grf_2.0.la libast_grf3d.la libast_err.la -lm
@@ -63,7 +65,7 @@
  all: $(BUILT_SOURCES) config.h
  	$(MAKE) $(AM_MAKEFLAGS) all-am
  
-@@ -2608,7 +2615,6 @@
+@@ -2608,7 +2616,6 @@
  	      echo "</files>"; \
  	      echo "</manifest>"; \
  	    ) >$$MF; \
@@ -71,7 +73,7 @@
  	  else \
  	    echo "Installation of component $(DESTDIR)$(STAR_MANIFEST_DIR)/$(PACKAGE) failed" >&2; \
  	  fi; \
-@@ -2762,14 +2768,14 @@
+@@ -2762,14 +2769,14 @@
  	$(mkdir_p) $(DESTDIR)$(libdir) 
  	cd $(DESTDIR)$(libdir); \
  	for f in `ls libast.*`; do \
