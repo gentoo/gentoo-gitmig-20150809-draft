@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3271 2009/09/16 13:11:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3272 2009/09/16 20:18:07 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  16 Sep 2009; Ulrich Mueller <ulm@gentoo.org>
+  arch/amd64/no-multilib/package.mask, features/64bit-native/package.mask:
+  Package mask =app-editors/emacs-18* in no-multilib profiles.
 
   16 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Remove =vanilla-sources-2.6.31_rc* mask because they've been removed from
