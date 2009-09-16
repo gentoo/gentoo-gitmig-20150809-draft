@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/viewvc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.34 2009/08/29 18:29:21 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewvc/ChangeLog,v 1.35 2009/09/16 17:01:56 fauli Exp $
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> viewvc-1.1.2.ebuild:
+  stable x86, security bug 281576
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> viewvc-1.1.1.ebuild:
   ppc stable #279402
