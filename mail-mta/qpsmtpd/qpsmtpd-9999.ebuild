@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.83_pre9999.ebuild,v 1.1 2009/07/31 08:06:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.1 2009/09/16 01:24:33 robbat2 Exp $
 
 EAPI=2
 
@@ -37,9 +37,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-0.40-badhelo_disconnect.patch
 	epatch "${FILESDIR}"/${PN}-0.40-badrcptto_allowrelay.patch
-	epatch "${FILESDIR}"/${PN}-0.40-clamd_conf.patch
+	epatch "${FILESDIR}"/${PN}-0.83-clamd_conf.patch
 }
 
 src_install() {
