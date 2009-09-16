@@ -1,6 +1,11 @@
 # ChangeLog for sci-astronomy/skycat
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.4 2008/11/05 21:53:39 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.5 2009/09/16 04:20:56 markusle Exp $
+
+  16 Sep 2009; Markus Dittrich <markusle@gentoo.org> skycat-3.0.2-r1.ebuild,
+  +files/skycat-3.0.2-glibc-2.10.patch, +files/skycat-3.0.2-tk8.5.patch:
+  Fixed building with tk-8.5 and glibc-2.10 (fixes bug #283265).
+  Thanks much to Kacper Kowalik for his patches.
 
 *skycat-3.0.2-r1 (05 Nov 2008)
 
