@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/echoping
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.21 2009/09/14 23:05:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/echoping/ChangeLog,v 1.22 2009/09/16 18:04:11 fauli Exp $
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  echoping-6.0.2-r1.ebuild:
+  stable x86, bug 281220
 
   15 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   echoping-6.0.2-r1.ebuild,
