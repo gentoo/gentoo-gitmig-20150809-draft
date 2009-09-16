@@ -1,6 +1,11 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.94 2009/09/16 13:28:32 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.95 2009/09/16 14:46:18 a3li Exp $
+
+  16 Sep 2009; Alex Legler <a3li@gentoo.org> package.use.mask:
+  Masking the "kolab" USE flag for >=www-apps/horde-webmail-1.2.4.
+  wrobel is currently away, package needs a bump for security bug 285052 and
+  I can't generate the patch.
 
   16 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> package.use.mask:
   Unmask policykit useflag on pulseaudio. Per irc request. Since the reason
