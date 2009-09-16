@@ -1,6 +1,6 @@
 # Copyright 2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.14 2009/08/19 21:19:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-bsd/fbsd/6.2/sparc/use.mask,v 1.15 2009/09/16 20:27:32 ulm Exp $
 
 acpi
 
@@ -13,6 +13,7 @@ valgrind
 
 # These should work one day
 cairo
+dbus
 gnome
 gnome-keyring
 gtk

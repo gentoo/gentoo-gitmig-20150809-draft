@@ -1,6 +1,6 @@
 # Copyright 2006-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.2 2009/08/19 21:19:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc-fbsd/use.mask,v 1.3 2009/09/16 20:27:31 ulm Exp $
 
 # Unmask the flag which corresponds to ARCH.
 -sparc-fbsd
@@ -16,6 +16,7 @@ valgrind
 
 # These should work one day
 cairo
+dbus
 gnome
 gnome-keyring
 gtk
