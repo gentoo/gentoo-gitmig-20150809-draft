@@ -9,9 +9,8 @@ RequireValidShell off
 AuthPAM off
 AuthPAMConfig ftp
 
-# Listen on the standard FTP port 21 and disable IPv6 support.
+# Listen on the standard FTP port 21.
 Port 21
-UseIPv6 off
 
 # New directories and files should not be group or world writable.
 Umask 022

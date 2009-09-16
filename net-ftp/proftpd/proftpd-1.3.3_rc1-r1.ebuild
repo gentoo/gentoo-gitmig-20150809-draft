@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc1.ebuild,v 1.1 2009/09/08 16:27:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc1-r1.ebuild,v 1.1 2009/09/16 20:15:58 voyageur Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -26,7 +26,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
-IUSE="acl authfile ban +caps case clamav ctrls deflate doc exec hardened ifsession +ident ipv6 kerberos ldap mysql ncurses nls pam postgres radius ratio readme rewrite selinux sftp shaper sitemisc softquota +ssl tcpd trace vroot xinetd"
+IUSE="acl authfile ban +caps case clamav +ctrls deflate doc exec hardened ifsession ident ipv6 kerberos ldap mysql ncurses nls pam postgres radius ratio readme rewrite selinux sftp shaper sitemisc softquota +ssl tcpd trace vroot xinetd"
 
 DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	caps? ( sys-libs/libcap )
@@ -35,10 +35,10 @@ DEPEND="acl? ( sys-apps/acl sys-apps/attr )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	ncurses? ( sys-libs/ncurses )
-	sftp? ( dev-libs/openssl )
-	ssl? ( dev-libs/openssl )
 	pam? ( virtual/pam )
 	postgres? ( virtual/postgresql-base )
+	sftp? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl )
 	tcpd? ( sys-apps/tcp-wrappers )
 	xinetd? ( virtual/inetd )"
 RDEPEND="${DEPEND}
@@ -51,6 +51,18 @@ __prepare_plugin() {
 	mv "${WORKDIR}"/$1/$1.c contrib
 	mv "${WORKDIR}"/$1/$1.html doc/contrib
 	rm -rf "${WORKDIR}"/$1
+}
+
+pkg_setup() {
+	if [ -f "${ROOT}"/var/run/proftpd.pid ] ; then
+		eerror "Your ProFTPD server is running. In order to install this update"
+		eerror "you have to stop the running server. If you are using ProFTPD in"
+		eerror "the standalone mode you can stop the server by executing:"
+		eerror "  /etc/init.d/proftpd stop"
+		eerror "If you are sure that ProFTPD is not running anymore you have to"
+		eerror "delete the /var/run/proftpd.pid file."
+		die "This update requires to stop the ProFTPD server!"
+	fi
 }
 
 src_prepare() {
@@ -81,7 +93,10 @@ src_configure() {
 	use ban && mymodules="${mymodules}:mod_ban"
 	use case && mymodules="${mymodules}:mod_case"
 	use clamav && mymodules="${mymodules}:mod_clamav"
-	use ctrls && mymodules="${mymodules}:mod_ctrls_admin"
+	if use ctrls || use shaper ; then
+		myconf="${myconf} --enable-ctrls"
+		mymodules="${mymodules}:mod_ctrls_admin"
+	fi
 	use deflate && mymodules="${mymodules}:mod_deflate"
 	use exec && mymodules="${mymodules}:mod_exec"
 	if use kerberos ; then
@@ -115,10 +130,9 @@ src_configure() {
 			mymodules="${mymodules}:mod_sql_postgres"
 		fi
 	fi
-	if use ssl || use sftp; then
+	if use sftp || use ssl ; then
 		CFLAGS="${CFLAGS} -DHAVE_OPENSSL"
-		myconf="${myconf} --with-includes=/usr/include/openssl"
-		myconf="${myconf} --enable-openssl"
+		myconf="${myconf} --enable-openssl --with-includes=/usr/include/openssl"
 		mylibs="${mylibs} -lcrypto"
 	fi
 	use radius && mymodules="${mymodules}:mod_radius"
@@ -151,7 +165,6 @@ src_configure() {
 	[ ! -z ${mymodules} ] && myconf="${myconf} --with-modules=${mymodules:1}"
 	LIBS="${mylibs}" econf --sbindir=/usr/sbin --localstatedir=/var/run/proftpd \
 		--sysconfdir=/etc/proftpd --enable-shadow --enable-autoshadow \
-		--enable-ctrls \
 		$(use_enable acl facl) \
 		$(use_enable authfile auth-file) \
 		$(use_enable caps cap) \
@@ -190,7 +203,7 @@ pkg_postinst() {
 		elog "You can use the 'SQLBackend' directive to specify the used SQL"
 		elog "backend. Without this directive the default backend is MySQL."
 	fi
-	if use exec; then
+	if use exec ; then
 		ewarn "You have enabled the mod_exec module. This can be a security risk,"
 		ewarn "as detailed in documentation:"
 		ewarn "Use of this module allows for such external programs to be executed, and also"
