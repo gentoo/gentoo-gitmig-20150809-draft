@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.3 2009/05/29 16:14:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.4 2009/09/16 18:42:39 ulm Exp $
 
 EAPI=2
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils toolchain-funcs flag-o-matic multilib
 
 DESCRIPTION="The extensible self-documenting text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs/"
@@ -14,12 +14,16 @@ SRC_URI="mirror://gnu/old-gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-1 GPL-2 BSD as-is"
 SLOT="18"
-KEYWORDS="x86"
+KEYWORDS="~amd64 x86"
 IUSE="X"
 
 RDEPEND="sys-libs/ncurses
 	>=app-admin/eselect-emacs-1.2
-	X? ( x11-libs/libX11[-xcb] )"
+	X? ( x11-libs/libX11[-xcb] )
+	amd64? (
+		app-emulation/emul-linux-x86-baselibs
+		X? ( app-emulation/emul-linux-x86-xlibs )
+	)"
 DEPEND="${RDEPEND}"
 
 MY_BASEDIR="/usr/share/emacs/${PV}"
@@ -31,11 +35,14 @@ src_prepare() {
 }
 
 src_configure() {
+	# Feel free to fix the sources to be 64 bit clean.
+	use amd64 && multilib_toolchain_setup x86
+
 	# autoconf? What's autoconf? We are living in 1992. ;-)
-	local arch
-	case ${ARCH} in
+	local arch=$(tc-arch)
+	case ${arch} in
 		x86)   arch=intel386 ;;
-		*)	   die "Architecture ${ARCH} not supported" ;;
+		*)	   die "Architecture ${arch} not supported" ;;
 	esac
 	local cmd="s/\"s-.*\.h\"/\"s-linux.h\"/;s/\"m-.*\.h\"/\"m-${arch}.h\"/"
 	use X && cmd="${cmd};s/.*\(#define HAVE_X_WINDOWS\).*/\1/"
@@ -47,6 +54,9 @@ src_configure() {
 		#define PATH_LOCK "${MY_LOCKDIR}/"
 		#define PATH_SUPERLOCK "${MY_LOCKDIR}/!!!SuperLock!!!"
 	END
+
+	sed -i -e "s:/usr/lib/\([^ ]*\).o:/usr/$(get_libdir)/\1.o:g" \
+		src/s-linux.h || die
 
 	# -O3 and -finline-functions cause segmentation faults at run time.
 	filter-flags -finline-functions
