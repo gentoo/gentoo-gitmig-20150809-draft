@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.49 2009/06/20 09:00:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.50 2009/09/16 21:35:13 mrness Exp $
+
+*pptpclient-1.7.2-r1 (16 Sep 2009)
+
+  16 Sep 2009; Alin Năstac <mrness@gentoo.org>
+  +files/pptpclient-1.7.2-ip-path.patch, -pptpclient-1.7.2.ebuild,
+  +pptpclient-1.7.2-r1.ebuild:
+  Fix wrong hardcoded path to ip utility (#284460).
 
 *pptpclient-1.7.2 (20 Jun 2009)
 

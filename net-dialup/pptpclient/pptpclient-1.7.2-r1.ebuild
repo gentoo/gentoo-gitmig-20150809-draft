@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2.ebuild,v 1.1 2009/06/20 09:00:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.7.2-r1.ebuild,v 1.1 2009/09/16 21:35:13 mrness Exp $
 
 EAPI="2"
 
@@ -19,7 +19,7 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
 IUSE="tk"
 
-DEPEND=">=net-dialup/ppp-2.4.2
+DEPEND="net-dialup/ppp
 	dev-lang/perl
 	tk? ( dev-perl/perl-tk )"
 RDEPEND="${DEPEND}"
@@ -30,6 +30,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-process-name.patch
+	epatch "${FILESDIR}"/${P}-ip-path.patch
 }
 
 src_compile() {
