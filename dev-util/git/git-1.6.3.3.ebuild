@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.3.3.ebuild,v 1.8 2009/09/16 01:27:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.3.3.ebuild,v 1.9 2009/09/16 01:37:24 robbat2 Exp $
 
 EAPI=2
 
@@ -293,7 +293,7 @@ src_test() {
 
 	cvs=0
 	use cvs && let cvs=$cvs+1
-	if ! has userpriv "${FEATURES}"; then
+	if [[ ${EUID} -eq 0 ]]; then
 		if [[ $cvs -eq 1 ]]; then
 			ewarn "Skipping CVS tests because CVS does not work as root!"
 			ewarn "You should retest with FEATURES=userpriv!"
