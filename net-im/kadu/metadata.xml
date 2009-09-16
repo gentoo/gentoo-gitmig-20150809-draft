@@ -16,6 +16,7 @@
 		<flag name="extramodules">Enables building of extra modules</flag>
 		<flag name="mail">Enables mail module</flag>
 		<flag name="powerkadu">Installs extra powerkadu modules</flag>
+		<flag name="phonon">Enable phonon audio plugin</flag>
 		<flag name="sms">Enables SMS sending plugin</flag>
 		<flag name="speech">Enables speech module</flag>
 		<flag name="vlc">Enables <pkg>media-video/vlc</pkg> media player support</flag>
