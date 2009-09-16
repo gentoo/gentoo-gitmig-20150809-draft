@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.6 2009/04/05 22:12:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.0.0.ebuild,v 1.7 2009/09/16 08:13:53 remi Exp $
 
 inherit toolchain-funcs eutils x-modular
 
@@ -20,10 +20,6 @@ DEPEND="${RDEPEND}
 src_install() {
 	DOCS="INSTALL NEWS TODO README"
 	x-modular_src_install
-
-	# Stupid new daemon, didn't work for me because of shm issues
-	newinitd "${FILESDIR}"/rc.init syndaemon
-	newconfd "${FILESDIR}"/rc.conf syndaemon
 
 	if use hal ; then
 		insinto /usr/share/hal/fdi/policy/10osvendor
