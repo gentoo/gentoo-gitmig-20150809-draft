@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.26 2009/09/14 21:06:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.27 2009/09/16 04:46:35 tester Exp $
+
+  16 Sep 2009; Olivier Crête <tester@gentoo.org> gurlchecker-0.10.5.ebuild:
+  Stable on amd64, bug #283800
 
   14 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   gurlchecker-0.10.5.ebuild:
