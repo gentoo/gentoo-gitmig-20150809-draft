@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/gtkglextmm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.18 2008/08/10 11:18:34 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkglextmm/ChangeLog,v 1.19 2009/09/16 21:05:02 eva Exp $
+
+  16 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -gtkglextmm-1.0.1.ebuild, -gtkglextmm-1.2.0.ebuild:
+  Clean up old revisions, closes: #226543.
 
   10 Aug 2008; Markus Meier <maekke@gentoo.org> gtkglextmm-1.2.0-r1.ebuild:
   x86 stable, bug #229709
