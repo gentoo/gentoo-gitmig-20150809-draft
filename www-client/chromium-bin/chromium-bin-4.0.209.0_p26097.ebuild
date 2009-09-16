@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.209.0_p26097.ebuild,v 1.1 2009/09/14 09:02:10 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.209.0_p26097.ebuild,v 1.2 2009/09/16 09:45:17 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -9,7 +9,7 @@ inherit eutils multilib
 # http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/LATEST
 MY_PV="${PV/[0-9.]*\_p}"
 
-DESCRIPTION="Open-source version of Google Chrome web browser"
+DESCRIPTION="Open-source version of Google Chrome web browser (binary version)"
 HOMEPAGE="http://code.google.com/chromium/"
 SRC_URI="x86? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux/${MY_PV}/chrome-linux.zip -> ${PN}-x86-${MY_PV}.zip )
 	amd64? ( http://build.chromium.org/buildbot/snapshots/chromium-rel-linux-64/${MY_PV}/chrome-linux.zip -> ${PN}-amd64-${MY_PV}.zip )"
