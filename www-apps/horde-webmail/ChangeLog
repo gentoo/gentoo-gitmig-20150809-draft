@@ -1,6 +1,15 @@
 # ChangeLog for www-apps/horde-webmail
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/ChangeLog,v 1.17 2008/10/30 14:38:40 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-webmail/ChangeLog,v 1.18 2009/09/16 15:00:44 a3li Exp $
+
+*horde-webmail-1.2.4 (16 Sep 2009)
+
+  16 Sep 2009; Alex Legler <a3li@gentoo.org> -horde-webmail-1.0.8.ebuild,
+  -horde-webmail-1.1.3.ebuild, -horde-webmail-1.2.ebuild,
+  +horde-webmail-1.2.4.ebuild:
+  Non-maintainer commit: Version bump for security bug 285052. Removing
+  vulnerable versions. Adding USE condition on the patch in SRC_URI. Fixing
+  homepage, closes bug 257694.
 
 *horde-webmail-1.2 (30 Oct 2008)
 
