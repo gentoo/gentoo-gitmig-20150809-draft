@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.9 2009/09/16 01:27:57 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.10 2009/09/16 02:00:19 mr_bones_ Exp $
 
 EAPI=2
 
@@ -54,7 +54,7 @@ RDEPEND="${CDEPEND}
 			)
 	gtk?
 	(
-		>=dev-python/pygtk-2.8 
+		>=dev-python/pygtk-2.8
 		|| ( dev-python/pygtksourceview:2  dev-python/gtksourceview-python )
 	)"
 
