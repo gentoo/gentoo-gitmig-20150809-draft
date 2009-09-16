@@ -19,7 +19,7 @@ case ":$PATH:" in
     ;;
 esac
 
-# Always use our versions of ffmpeg libs.
-export LD_LIBRARY_PATH="$PROGDIR/lib:$LD_LIBRARY_PATH"
+# Set the .desktop file name
+export CHROME_DESKTOP="chromium-chromium.desktop"
 
 exec "$PROGDIR/chrome" "$@"
