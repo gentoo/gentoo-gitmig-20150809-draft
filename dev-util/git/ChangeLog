@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.359 2009/09/16 01:37:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.360 2009/09/16 03:42:14 robbat2 Exp $
+
+  16 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> git-1.6.3.1.ebuild,
+  git-1.6.3.3.ebuild, git-1.6.3.4.ebuild, git-1.6.4.ebuild,
+  git-1.6.4.1.ebuild, git-1.6.4.2.ebuild, git-1.6.4.3.ebuild,
+  git-1.6.5_rc1.ebuild, git-9999.ebuild:
+  Bug #283732: Perl module should be installed to vendor_perl instead of
+  site_perl.
 
   16 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> git-1.6.3.1.ebuild,
   git-1.6.3.3.ebuild, git-1.6.3.4.ebuild, git-1.6.4.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5_rc1.ebuild,v 1.4 2009/09/16 02:00:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5_rc1.ebuild,v 1.5 2009/09/16 03:42:14 robbat2 Exp $
 
 EAPI=2
 
@@ -106,11 +106,17 @@ exportmakeopts() {
 		myopts="${myopts} NO_CURL=YesPlease"
 	fi
 
-	use iconv || myopts="${myopts} NO_ICONV=YesPlease"
-	use tk || myopts="${myopts} NO_TCLTK=YesPlease"
-	use perl || myopts="${myopts} NO_PERL=YesPlease"
-	use threads && myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease"
-	use subversion || myopts="${myopts} NO_SVN_TESTS=YesPlease"
+	use iconv \
+		|| myopts="${myopts} NO_ICONV=YesPlease"
+	use tk \
+		|| myopts="${myopts} NO_TCLTK=YesPlease"
+	use perl \
+		&& myopts="${myopts} INSTALLDIRS=vendor" \
+		|| myopts="${myopts} NO_PERL=YesPlease"
+	use threads \
+		&& myopts="${myopts} THREADED_DELTA_SEARCH=YesPlease"
+	use subversion \
+		|| myopts="${myopts} NO_SVN_TESTS=YesPlease"
 
 	export MY_MAKEOPTS="${myopts}"
 }
