@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.3 2009/09/14 02:21:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.4 2009/09/16 05:09:23 arfrever Exp $
 
 EAPI="2"
 
 NEED_PYTHON="2.6"
 SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils
+inherit distutils multilib
 
 DESCRIPTION="Python wrapper for cairo vector graphics library"
 HOMEPAGE="http://cairographics.org/pycairo/"
@@ -33,6 +33,8 @@ src_prepare() {
 	sed -i \
 		-e '/if test -n "$$dlist"; then/,/else :; fi/d' \
 		src/Makefile.in || die "sed in src/Makefile.in failed"
+
+	epatch "${FILESDIR}/${P}-pkgconfig_dir.patch"
 }
 
 src_configure() {
@@ -59,7 +61,7 @@ src_test() {
 }
 
 src_install() {
-	distutils_src_install
+	PKGCONFIG_DIR="/usr/$(get_libdir)/pkgconfig" distutils_src_install
 
 	if use doc; then
 		dohtml -r doc/.build/html/ || die "dohtml -r doc/.build/html/ failed"
