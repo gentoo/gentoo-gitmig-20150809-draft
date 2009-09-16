@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.108 2009/09/06 20:24:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.109 2009/09/16 17:50:44 fauli Exp $
+
+  16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> swt-3.4-r4.ebuild:
+  stable x86, bug 282159
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> swt-3.4-r4.ebuild:
   Marking swt-3.4-r4 ppc64 for bug 282159
