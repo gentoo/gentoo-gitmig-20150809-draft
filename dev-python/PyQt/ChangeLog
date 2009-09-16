@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.123 2009/09/16 17:21:59 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/ChangeLog,v 1.124 2009/09/16 19:08:45 neurogeek Exp $
+
+  16 Sep 2009; Jesus Rivero <neurogeek@gentoo.org> PyQt-3.18.1.ebuild:
+  Fixed RDEPEND (QScintilla)
 
   16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> PyQt-3.18.1.ebuild:
   stable x86, bug 284707
