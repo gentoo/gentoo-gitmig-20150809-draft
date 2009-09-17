@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.13 2009/08/25 16:09:18 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.14 2009/09/17 11:26:56 arfrever Exp $
+
+  17 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyalsaaudio-0.5.ebuild:
+  Update dependencies.
 
   25 Aug 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pyalsaaudio-0.5.ebuild:
