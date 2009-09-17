@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/nxserver-freeedition
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.40 2009/09/01 20:58:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/ChangeLog,v 1.41 2009/09/17 09:20:32 voyageur Exp $
+
+  17 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freeedition-3.3.0.27.ebuild:
+  Update pkg_postinst to match other NX servers, remove blocker as files do
+  not collide anymore for some time
 
 *nxserver-freeedition-3.3.0.27 (01 Sep 2009)
 

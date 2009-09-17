@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.3.0.27.ebuild,v 1.1 2009/09/01 20:58:12 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freeedition/nxserver-freeedition-3.3.0.27.ebuild,v 1.2 2009/09/17 09:20:32 voyageur Exp $
 
 inherit eutils versionator
 
@@ -17,9 +17,7 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="=net-misc/nxnode-3.3*
-	!net-misc/nxserver-freenx
-	!net-misc/nxserver-2xterminalserver"
+DEPEND="=net-misc/nxnode-3.3*"
 RDEPEND="${DEPEND}
 	media-fonts/font-misc-misc
 	media-fonts/font-cursor-misc
@@ -70,8 +68,17 @@ src_install()
 
 pkg_postinst ()
 {
-	usermod -s /usr/NX/bin/nxserver nx || die "Unable to set login shell of nx user!!"
-	usermod -d /usr/NX/home/nx nx || die "Unable to set home directory of nx user!!"
+	# Other NX servers ebuilds may have already created the nx account
+	# However they use different login shell/home directory paths
+	if [[ ${ROOT} == "/" ]]; then
+		usermod -s /usr/NX/bin/nxserver nx || die "Unable to set login shell of nx user!!"
+		usermod -d /usr/NX/home/nx nx || die "Unable to set home directory of nx user!!"
+	else
+		elog "If you had another NX server installed before, please make sure"
+		elog "the nx user account is correctly set to:"
+		elog " * login shell: /usr/NX/bin/nxserver"
+		elog " * home directory: /usr/NX/home/nx"
+	fi
 
 	# only run install when no configuration file is found
 	if [ -f /usr/NX/etc/server.cfg ]; then
@@ -80,6 +87,12 @@ pkg_postinst ()
 	else
 		einfo "Running NoMachine's setup script"
 		"${ROOT}"/usr/NX/scripts/setup/nxserver --install || die "Installation script failed"
+	fi
+
+	if ! built_with_use net-misc/openssh pam; then
+		elog ""
+		elog "net-misc/openssh was not built with PAM support"
+		elog "You will need to unlock the nx account by setting a password for it"
 	fi
 
 	elog "Remember to add nxserver to your default runlevel"
