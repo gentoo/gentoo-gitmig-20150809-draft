@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.19 2009/09/15 01:06:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.20 2009/09/17 20:57:29 volkmar Exp $
+
+  17 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> jinja2-2.2.1.ebuild:
+  Keywording for ppc. Bug 263948
 
 *jinja2-2.2.1 (15 Sep 2009)
 
