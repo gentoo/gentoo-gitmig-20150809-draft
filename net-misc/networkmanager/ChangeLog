@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.51 2009/08/24 13:11:44 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.52 2009/09/17 08:23:28 dagger Exp $
+
+  17 Sep 2009; Robert Piasek <dagger@gentoo.org>
+  networkmanager-0.7.1-r6.ebuild:
+  Added dev-util/gtk-doc-am as dep, as autoreconf needs it.
 
 *networkmanager-0.8.0_pre20090824 (24 Aug 2009)
 *networkmanager-0.7.1_p20090824 (24 Aug 2009)

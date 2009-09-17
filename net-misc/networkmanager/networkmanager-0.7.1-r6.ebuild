@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.2 2009/07/12 14:43:32 rbu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.3 2009/09/17 08:23:28 dagger Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -51,6 +51,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool
 	net-dialup/ppp
+	dev-util/gtk-doc-am
 	doc? ( >=dev-util/gtk-doc-1.8 )"
 
 #PDEPEND="modemmanager? ( >=net-misc/modemmanager-0.2 )"
