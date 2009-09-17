@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.0.0.ebuild,v 1.5 2009/06/26 18:41:53 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-2.1.0.ebuild,v 1.1 2009/09/17 16:10:12 dertobi123 Exp $
 
 EAPI=2
 
@@ -41,10 +41,6 @@ pkg_setup() {
 	fi
 }
 
-src_prepare() {
-	epatch "${FILESDIR}/${P}-gcc44.patch"
-}
-
 src_configure() {
 	# Need to fake out Qt or we'll get sandbox problems
 	REALHOME="$HOME"
@@ -52,9 +48,6 @@ src_configure() {
 	mkdir -p "$T"/fakehome/.qt
 	export HOME="$T/fakehome"
 	addwrite "${QTDIR}/etc/settings"
-
-	# Remove files generated with qt-4.4 moc
-	rm src/{moc_*.cpp,ui_*ui.h} || die "rm failed"
 
 	local myconf
 
