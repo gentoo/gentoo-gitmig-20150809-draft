@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.17 2009/09/16 09:45:17 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-9999.ebuild,v 1.18 2009/09/17 08:54:16 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
@@ -13,11 +13,12 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"
-RDEPEND="media-fonts/corefonts
+RDEPEND="gnome-base/gconf
+	media-fonts/corefonts
+	>=media-libs/alsa-lib-1.0.19
 	>=sys-devel/gcc-4.2
 	>=dev-libs/nspr-4.7
 	>=dev-libs/nss-3.12
-	gnome-base/gconf
 	x11-libs/pango"
 
 S=${WORKDIR}
