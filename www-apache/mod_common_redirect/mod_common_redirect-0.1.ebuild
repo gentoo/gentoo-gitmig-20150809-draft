@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_common_redirect/mod_common_redirect-0.1.ebuild,v 1.1 2009/08/01 14:15:58 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_common_redirect/mod_common_redirect-0.1.ebuild,v 1.2 2009/09/17 10:36:45 hollow Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://bb.xnull.de/projects/mod_common_redirect/dist/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
