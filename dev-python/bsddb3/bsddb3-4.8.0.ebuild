@@ -1,29 +1,33 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.7.5.ebuild,v 1.2 2009/05/24 18:26:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-4.8.0.ebuild,v 1.1 2009/09/17 19:38:01 arfrever Exp $
 
-EAPI="1"
+EAPI="2"
 
-NEED_PYTHON=2.5
+NEED_PYTHON="2.5"
+SUPPORT_PYTHON_ABIS="1"
 
-inherit distutils db-use multilib
+inherit db-use distutils multilib
 
-DESCRIPTION="Python bindings for BerkeleyDB"
+DESCRIPTION="Python bindings for Berkeley DB"
 HOMEPAGE="http://www.jcea.es/programacion/pybsddb.htm"
 SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~sparc ~x86"
 IUSE="doc"
 
 RDEPEND=">=sys-libs/db-4.6"
 DEPEND="${RDEPEND}
-	dev-python/setuptools
 	doc? ( dev-python/sphinx )"
+
+DOCS="TODO.txt"
 
 src_compile() {
 	local DB_VER
-	if has_version sys-libs/db:4.7; then
+	if has_version sys-libs/db:4.8; then
+		DB_VER="4.8"
+	elif has_version sys-libs/db:4.7; then
 		DB_VER="4.7"
 	else
 		DB_VER="4.6"
@@ -38,23 +42,25 @@ src_compile() {
 		"--berkeley-db-incdir=$(db_includedir ${DB_VER})" \
 		"--berkeley-db-libdir=/usr/$(get_libdir)"
 
-	if use doc ; then
+	if use doc; then
 		mkdir html
 		sphinx-build docs html || die "building docs failed"
 	fi
 }
 
-src_install() {
-	DOCS="TODO.txt"
-	distutils_src_install
-
-	distutils_python_version
-	rm -rf "${D}/usr/$(get_libdir)/python${PYVER}/site-packages/${PN}/tests"
-
-	use doc && dohtml -r html/*
+src_test() {
+	tests() {
+		rm -fr /tmp/z-Berkeley_DB
+		python_set_build_dir_symlink
+		"$(PYTHON)" test.py
+	}
+	python_execute_function tests
 }
 
-src_test() {
-	distutils_python_version
-	"${python}" test.py || die "tests failed"
+src_install() {
+	distutils_src_install
+
+	rm -fr "${D}"usr/lib*/python*/site-packages/${PN}/tests
+
+	use doc && dohtml -r html/*
 }
