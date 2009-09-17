@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/horde-turba-2.2.1.ebuild,v 1.1 2008/06/24 11:13:00 wrobel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-turba/horde-turba-2.3.2.ebuild,v 1.1 2009/09/17 17:06:15 a3li Exp $
 
 HORDE_PHP_FEATURES="-o mysql mysqli odbc postgres ldap"
 HORDE_MAJ="-h3"
