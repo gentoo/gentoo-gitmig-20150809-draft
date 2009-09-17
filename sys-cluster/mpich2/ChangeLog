@@ -1,6 +1,14 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.42 2009/09/15 16:25:16 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.43 2009/09/17 19:43:05 jsbronder Exp $
+
+*mpich2-1.1.1_p1 (17 Sep 2009)
+
+  17 Sep 2009; Justin Bronder <jsbronder@gentoo.org>
+  +files/0001-MPD_CONF_FILE-should-be-readable.patch,
+  +files/0002-mpd_conf_file-search-order.patch,
+  +files/0003-Fix-pkgconfig-for-mpich2-ch3.patch, +mpich2-1.1.1_p1.ebuild:
+  bump mpich2-1.1.1_p1, #203922
 
   15 Sep 2009; Justin Bronder <jsbronder@gentoo.org> +mpich2-1.0.8.ebuild:
   Adding mpich2-1.0.8 back to the tree.
