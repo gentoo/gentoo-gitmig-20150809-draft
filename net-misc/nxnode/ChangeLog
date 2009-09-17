@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.46 2009/09/07 21:16:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.47 2009/09/17 09:18:42 voyageur Exp $
+
+  17 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  nxnode-3.3.0.22.ebuild:
+  Fix vnc depend, as discussed in bug #262147 for freenx
 
   07 Sep 2009; Markus Meier <maekke@gentoo.org> nxnode-3.3.0.17.ebuild:
   amd64/x86 stable, bug #283075
