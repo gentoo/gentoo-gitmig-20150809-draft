@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/horde-kronolith
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.52 2008/10/30 13:26:40 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde-kronolith/ChangeLog,v 1.53 2009/09/17 17:11:54 a3li Exp $
+
+*horde-kronolith-2.3.2 (17 Sep 2009)
+
+  17 Sep 2009; Alex Legler <a3li@gentoo.org> -horde-kronolith-2.2.ebuild,
+  +horde-kronolith-2.3.2.ebuild:
+  Version bump, bug 268108. Cleaning an old version.
 
 *horde-kronolith-2.3 (30 Oct 2008)
 
