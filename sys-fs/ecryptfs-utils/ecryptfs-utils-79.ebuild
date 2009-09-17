@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-79.ebuild,v 1.1 2009/09/06 00:30:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ecryptfs-utils/ecryptfs-utils-79.ebuild,v 1.2 2009/09/17 13:58:51 arfrever Exp $
 
 EAPI="2"
 
@@ -13,13 +13,13 @@ SRC_URI="http://launchpad.net/ecryptfs/trunk/${PV}/+download/${PN}_${PV}.orig.ta
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="doc gpg gtk nss openssl pam pkcs11 python suid tpm"
+IUSE="doc gpg gtk openssl pam pkcs11 python suid tpm"
 
 RDEPEND=">=sys-apps/keyutils-1.0
 	>=dev-libs/libgcrypt-1.2.0
+	dev-libs/nss
 	gpg? ( app-crypt/gpgme )
 	gtk? ( x11-libs/gtk+ )
-	nss? ( dev-libs/nss )
 	openssl? ( >=dev-libs/openssl-0.9.7 )
 	pam? ( sys-libs/pam )
 	pkcs11? (
@@ -39,11 +39,11 @@ pkg_setup() {
 src_configure() {
 	econf \
 		--docdir="/usr/share/doc/${PF}" \
+		--enable-nss \
 		--with-pamdir=$(getpam_mod_dir) \
 		$(use_enable doc docs) \
 		$(use_enable gpg) \
 		$(use_enable gtk gui) \
-		$(use_enable nss) \
 		$(use_enable openssl) \
 		$(use_enable pam) \
 		$(use_enable pkcs11 pkcs11-helper) \
