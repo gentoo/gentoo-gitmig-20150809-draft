@@ -80,7 +80,8 @@ diff -Nru openswan-2.6.23.orig/programs/setup/Makefile openswan-2.6.23/programs/
  # this dance is because setup has to get installed as /etc/rc.d/init.d/ipsec
  # not as /etc/rc.d/init.d/setup.
 -PROGRAMDIR=$(RCDIR)
- PROGRAM=
+-PROGRAM=
++PROGRAM=setup
  EXTRA8MAN=setup.8
  
 @@ -29,32 +28,6 @@
@@ -116,6 +117,12 @@ diff -Nru openswan-2.6.23.orig/programs/setup/Makefile openswan-2.6.23/programs/
  
  #
  # $Log: not supported by cvs2svn $
+ # Revision 1.1  2009/09/11 18:46:35  mrness
+ # Version bump.
+ # Correct ipsec.conf and ipsec.secrets paths in openswan-2.4 documentation (#284235).
+ # Add ms-bad-proposal USE flag and patch (#284240).
+ # (Portage version: 2.1.6.13/cvs/Linux x86_64)
+ #
 diff -Nru openswan-2.6.23.orig/testing/utils/make-uml.sh openswan-2.6.23/testing/utils/make-uml.sh
 --- openswan-2.6.23.orig/testing/utils/make-uml.sh	2009-09-09 02:42:54.000000000 +0200
 +++ openswan-2.6.23/testing/utils/make-uml.sh	2009-09-11 19:20:37.000000000 +0200

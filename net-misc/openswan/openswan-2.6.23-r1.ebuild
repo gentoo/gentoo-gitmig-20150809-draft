@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.23.ebuild,v 1.1 2009/09/11 18:46:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openswan/openswan-2.6.23-r1.ebuild,v 1.1 2009/09/17 16:07:06 mrness Exp $
 
 EAPI="2"
 
