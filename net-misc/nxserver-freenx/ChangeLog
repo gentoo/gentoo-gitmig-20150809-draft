@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxserver-freenx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.64 2009/05/29 14:02:36 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/ChangeLog,v 1.65 2009/09/17 09:23:19 voyageur Exp $
+
+  17 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  nxserver-freenx-0.7.3_p104-r1.ebuild:
+  Remove blocker as files do not collide anymore for some time
 
   29 May 2009; Bernard Cafarelli <voyageur@gentoo.org>
   -nxserver-freenx-0.7.2-r2.ebuild, -nxserver-freenx-0.7.3_p102.ebuild:

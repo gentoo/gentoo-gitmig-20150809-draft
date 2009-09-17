@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r1.ebuild,v 1.1 2009/05/14 15:15:46 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-freenx/nxserver-freenx-0.7.3_p104-r1.ebuild,v 1.2 2009/09/17 09:23:19 voyageur Exp $
 
 EAPI=1
 
@@ -36,9 +36,7 @@ RDEPEND="dev-tcltk/expect
 					  x11-apps/xmessage ) )
 	rdesktop? ( net-misc/rdesktop )
 	vnc? ( x11-misc/x11vnc
-		   || ( net-misc/tightvnc net-misc/vnc ) )
-	!net-misc/nxserver-freeedition
-	!net-misc/nxserver-2xterminalserver"
+		   || ( net-misc/tightvnc net-misc/vnc ) )"
 
 S=${WORKDIR}/${MY_PN}
 
