@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3-r1.ebuild,v 1.1 2009/09/15 06:40:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3-r1.ebuild,v 1.2 2009/09/17 22:45:00 bicatali Exp $
 
 EAPI=2
-inherit eutils autotools flag-o-matic
+inherit eutils autotools
 
 DESCRIPTION="General purpose library and file format for storing scientific data"
 HOMEPAGE="http://www.hdfgroup.org/HDF5/"
@@ -49,15 +49,12 @@ src_prepare() {
 		-e 's:$(docdir)/hdf5:$(docdir):' \
 		$(find . -name Makefile.am) || die
 	eautoreconf
-
-	# need to install the shared libs or other things fail
-	# see below for  --enable-shared (the default is *not* yes)
+	# enable shared libs by default for h5cc config utility
 	sed -i -e "s/SHLIB:-no/SHLIB:-yes/g" tools/misc/h5cc.in \
-	    || die "sed h5cc.in failed"
+		|| die "sed h5cc.in failed"
 }
 
 src_configure() {
-	filter_flags -
 	# threadsafe incompatible with many options
 	local myconf="--disable-threadsafe"
 	use threads && ! use fortran && ! use cxx && ! use mpi \
@@ -75,7 +72,6 @@ src_configure() {
 		--enable-production \
 		--enable-strict-format-checks \
 		--enable-deprecated-symbols \
-		--enable-shared --with-pic \
 		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
 		$(use_with szip szlib) \

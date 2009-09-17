@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.37 2009/09/15 06:40:44 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.38 2009/09/17 22:45:00 bicatali Exp $
+
+  17 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf5-1.8.3-r1.ebuild:
+  Removed the forced PIC configure line which was compiling static libraries
+  with PIC
 
 *hdf5-1.8.3-r1 (15 Sep 2009)
 
