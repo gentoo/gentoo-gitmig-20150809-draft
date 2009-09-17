@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.14 2009/05/15 08:20:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.15 2009/09/17 19:56:53 aballier Exp $
+
+*liboggz-1.0.0 (17 Sep 2009)
+
+  17 Sep 2009; Alexis Ballier <aballier@gentoo.org> +liboggz-1.0.0.ebuild:
+  version bump, by Arseny Solokha <b0ntrict0r@yandex.ru>, bug #285344
 
 *liboggz-0.9.9 (15 May 2009)
 
