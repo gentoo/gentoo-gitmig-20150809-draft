@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_ftpd
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/ChangeLog,v 1.6 2008/08/23 04:34:28 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/ChangeLog,v 1.7 2009/09/17 06:37:54 hollow Exp $
+
+  17 Sep 2009; Benedikt Böhm <hollow@gentoo.org> mod_ftpd-0.14-r1.ebuild:
+  fix #260945
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc

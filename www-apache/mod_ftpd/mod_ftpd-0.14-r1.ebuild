@@ -1,16 +1,18 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/mod_ftpd-0.14-r1.ebuild,v 1.2 2008/01/31 18:51:38 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_ftpd/mod_ftpd-0.14-r1.ebuild,v 1.3 2009/09/17 06:37:54 hollow Exp $
+
+EAPI="2"
 
 inherit apache-module
-
-KEYWORDS="~amd64 ~ppc ~x86"
 
 DESCRIPTION="Apache2 module which provides an FTP server."
 HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_ftpd/"
 SRC_URI="http://www.outoforder.cc/downloads/${PN}/${P}.tar.bz2"
+
 LICENSE="Apache-2.0"
 SLOT="0"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dbi gdbm"
 
 DEPEND="dbi? ( dev-db/libdbi )
@@ -25,7 +27,11 @@ DOCFILES="docs/manual.html AUTHORS ChangeLog NOTICE README TODO"
 
 need_apache2_2
 
-src_compile() {
+src_prepare() {
+	sed -i -e 's/-Wc,-Werror//' Makefile.in providers/*/Makefile.in
+}
+
+src_configure() {
 	local providers="default fail"
 
 	use dbi && providers="dbi ${providers}"
@@ -35,5 +41,8 @@ src_compile() {
 		--with-apxs=${APXS} \
 		--enable-providers="${providers}" \
 		|| die "econf failed"
+	}
+
+src_compile() {
 	emake || die "emake failed"
 }
