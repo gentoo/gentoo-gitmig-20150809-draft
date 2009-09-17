@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-2.2.4.ebuild,v 1.3 2009/09/17 07:15:53 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/passenger-2.2.5.ebuild,v 1.1 2009/09/17 07:15:53 hollow Exp $
 
 inherit apache-module flag-o-matic ruby
 
@@ -33,7 +33,7 @@ pkg_setup() {
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${PV}-gentoo.patch
+	epatch "${FILESDIR}"/2.2.4-gentoo.patch
 	rm -f bin/passenger-install-apache2-module
 }
 
