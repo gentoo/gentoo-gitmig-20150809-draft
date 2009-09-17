@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.1.ebuild,v 1.1 2009/09/13 10:57:01 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.4.1.ebuild,v 1.2 2009/09/17 15:36:38 lack Exp $
 
 EAPI="2"
 
@@ -66,6 +66,7 @@ pkg_setup() {
 src_prepare() {
 	# create a missing symlink to allow https printing via IPP, bug #217293
 	epatch "${FILESDIR}/${PN}-1.4.0-backend-https.patch"
+	epatch "${FILESDIR}/${PN}-1.4.1-usb-function-decl.patch"
 }
 
 src_configure() {
