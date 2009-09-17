@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3.ebuild,v 1.2 2009/09/16 20:16:50 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3.ebuild,v 1.3 2009/09/17 05:34:16 mrness Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=none
@@ -102,11 +102,12 @@ pkg_postinst() {
 
 pkg_config() {
 	if use ssl; then
-		if install_cert /etc/kannel/cert; then
-			chown kannel "${ROOT}"etc/kannel/cert.pem
+		if install_cert /etc/ssl/kannel; then
+			chown kannel "${ROOT}"etc/ssl/kannel.{pem,key}
 			einfo "For using this certificate, you have to add following line to your kannel.conf:"
-			einfo '   ssl-certkey-file = "/etc/kannel/cert.pem"'
-			einfo "You can safely remove cert.{key,crt,csr} files, these are not used by kannel."
+			einfo '   ssl-client-certkey-file = "/etc/ssl/kannel.pem"'
+			einfo '   ssl-server-cert-file = "/etc/ssl/kannel.crt"'
+			einfo '   ssl-server-key-file = "/etc/ssl/kannel.key"'
 		fi
 	else
 		eerror "This phase exists only for creating kannel SSL certificate"
