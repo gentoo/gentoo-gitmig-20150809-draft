@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_auth_cookie_mysql2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/ChangeLog,v 1.7 2008/08/29 13:05:30 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_cookie_mysql2/ChangeLog,v 1.8 2009/09/17 10:24:22 hollow Exp $
+
+*mod_auth_cookie_mysql2-1.0 (17 Sep 2009)
+
+  17 Sep 2009; Benedikt Böhm <hollow@gentoo.org>
+  +mod_auth_cookie_mysql2-1.0.ebuild:
+  version bump wrt #278018
 
   29 Aug 2008; Benedikt Böhm <hollow@gentoo.org>
   files/55_mod_auth_cookie_mysql2.conf, mod_auth_cookie_mysql2-0.9a.ebuild:
