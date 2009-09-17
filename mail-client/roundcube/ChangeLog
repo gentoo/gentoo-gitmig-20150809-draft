@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.7 2009/09/12 10:35:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.8 2009/09/17 10:28:43 scarabeus Exp $
+
+  17 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> roundcube-0.3.ebuild:
+  Depend on php with correct useflags enabled when spell useflag is called.
 
   12 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   roundcube-0.2.2.ebuild:

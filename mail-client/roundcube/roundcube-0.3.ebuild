@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.ebuild,v 1.1 2009/09/04 17:56:21 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.ebuild,v 1.2 2009/09/17 10:28:43 scarabeus Exp $
+
+EAPI="2"
 
 MY_PN="${PN}mail"
 MY_P="${MY_PN}-${PV}-stable"
@@ -18,7 +20,10 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="ldap mysql postgres sqlite ssl spell"
 
 DEPEND=""
-RDEPEND="dev-php/PEAR-PEAR"
+RDEPEND="
+	spell? ( dev-lang/php[curl,spell] )
+	dev-php/PEAR-PEAR
+"
 
 need_httpd_cgi
 need_php_httpd
@@ -60,9 +65,7 @@ pkg_setup() {
 	webapp_pkg_setup
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	mv config/db.inc.php{.dist,}
 	mv config/main.inc.php{.dist,}
 }
