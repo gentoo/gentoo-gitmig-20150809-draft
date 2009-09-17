@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3275 2009/09/16 21:39:00 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3276 2009/09/17 16:33:55 matsuu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 Sep 2009; MATSUU Takuto <matsuu@gentoo.org> use.local.desc:
+  Drop ucs4 local USE flag for app-i18n/anthy.
 
   16 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Mask app-accessibility/at-poke per bug #279304.
