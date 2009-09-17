@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.135 2009/09/15 00:27:45 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.136 2009/09/17 16:30:22 williamh Exp $
+
+*xinit-1.0.8-r7 (17 Sep 2009)
+
+  17 Sep 2009; William Hubbs <williamh@gentoo.org> files/xdm-setup.initd-1,
+  -xinit-1.0.8-r6.ebuild, +xinit-1.0.8-r7.ebuild:
+  Another rev bump to make sure that xdm-setup runs after /etc/init.d is
+  writeable.
 
   15 Sep 2009; William Hubbs <williamh@gentoo.org> files/xdm.initd-3:
   Fixed dependency on x-setup; it should be xdm-setup.
