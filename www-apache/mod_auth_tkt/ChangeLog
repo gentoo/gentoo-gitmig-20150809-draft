@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_auth_tkt
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_tkt/ChangeLog,v 1.4 2008/06/01 10:45:45 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_tkt/ChangeLog,v 1.5 2009/09/17 07:45:27 hollow Exp $
+
+*mod_auth_tkt-2.1.0 (17 Sep 2009)
+
+  17 Sep 2009; Benedikt Böhm <hollow@gentoo.org>
+  mod_auth_tkt-2.0.0_rc2.ebuild, +mod_auth_tkt-2.1.0.ebuild:
+  version bump
 
   01 Jun 2008; Benedikt Böhm <hollow@gentoo.org>
   mod_auth_tkt-2.0.0_rc2.ebuild:

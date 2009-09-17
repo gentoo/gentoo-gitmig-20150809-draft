@@ -1,21 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_tkt/mod_auth_tkt-2.0.0_rc2.ebuild,v 1.4 2009/09/17 07:45:27 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_tkt/mod_auth_tkt-2.1.0.ebuild,v 1.1 2009/09/17 07:45:27 hollow Exp $
 
 # test suite is completely broken
 RESTRICT="test"
 
-inherit apache-module versionator
-
-MY_PV=$(delete_version_separator '_')
+inherit apache-module
 
 DESCRIPTION="Apache module for cookie based authentication"
 HOMEPAGE="http://www.openfusion.com.au/labs/mod_auth_tkt/"
-SRC_URI="http://www.openfusion.com.au/labs/dist/${PN}-${MY_PV}.tar.gz"
+SRC_URI="http://www.openfusion.com.au/labs/dist/${PN}/${P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
-LICENSE="as-is"
+LICENSE="Apache-2.0"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="dev-lang/perl"
@@ -25,8 +23,6 @@ APACHE2_MOD_CONF="10_${PN}"
 APACHE2_MOD_DEFINE="AUTH_TKT"
 
 DOCFILES="README"
-
-S="${WORKDIR}"/${PN}-${MY_PV}
 
 need_apache2_2
 
