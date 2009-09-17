@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/virtualbox-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.57 2009/09/12 12:14:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-bin/ChangeLog,v 1.58 2009/09/17 19:29:12 patrick Exp $
+
+*virtualbox-bin-3.0.6-r1 (17 Sep 2009)
+
+  17 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +virtualbox-bin-3.0.6-r1.ebuild:
+  Bump for #285228, fixes silent upstream tarball change madness. Thanks to
+  X-Drum for fixing and testing.
 
   12 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -virtualbox-bin-3.0.4.ebuild:
