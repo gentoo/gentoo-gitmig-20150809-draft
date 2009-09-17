@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pavucontrol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.26 2009/09/13 22:09:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pavucontrol/ChangeLog,v 1.27 2009/09/17 11:20:36 flameeyes Exp $
+
+  17 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pavucontrol-0.9.9.ebuild:
+  Bump pulseaudio requirement to 0.9.16 (bug #285244).
 
   13 Sep 2009; Olivier Crête <tester@gentoo.org> pavucontrol-0.9.9.ebuild:
   Needs gtkmm 2.16 to build
