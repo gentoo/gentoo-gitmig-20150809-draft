@@ -1,13 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-18.1.03.ebuild,v 1.7 2009/09/05 23:40:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-18.1.03.ebuild,v 1.8 2009/09/17 15:00:02 ulm Exp $
 
 inherit eutils
 
 MY_P=${PN}-${PV/./-}
 DESCRIPTION="The GNU Emacs Lisp Reference Manual"
 HOMEPAGE="http://www.gnu.org/software/emacs/manual/"
-SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.gnu.org/old-gnu/emacs/${MY_P}.tar.gz
+	mirror://gentoo/${P}-patches.tar.gz"
 
 LICENSE="as-is"
 SLOT="18"
@@ -21,8 +22,7 @@ src_unpack() {
 	cd "${S}"
 	# remove pre-made info files
 	rm -f elisp elisp-[0-9]*
-	epatch "${FILESDIR}/${P}-fix-texinfo.patch"
-	epatch "${FILESDIR}/${P}-direntry.patch"
+	EPATCH_SUFFIX=patch epatch
 }
 
 src_compile() {
