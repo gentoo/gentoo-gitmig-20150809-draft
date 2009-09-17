@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/firebird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.98 2009/08/13 17:38:10 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.99 2009/09/17 19:55:01 patrick Exp $
+
+*firebird-2.1.2.18118.0 (17 Sep 2009)
+
+  17 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  +firebird-2.1.2.18118.0.ebuild,
+  +files/firebird-2.1.2.18118.0-deps-flags-libs.patch,
+  +files/firebird-2.1.2.18118.0-gcc-icu-declare.patch:
+  Bump to 2.1.2, mostly fixes #264955. Thanks to Vladimir, John W. Higgins
+  and all the testers in the bug.
 
   13 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
   firebird-2.1.1.17910.0.ebuild,
