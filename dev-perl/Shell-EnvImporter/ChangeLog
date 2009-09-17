@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Shell-EnvImporter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Shell-EnvImporter/ChangeLog,v 1.21 2009/09/10 08:05:55 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Shell-EnvImporter/ChangeLog,v 1.22 2009/09/17 17:40:58 jer Exp $
+
+  17 Sep 2009; Jeroen Roovers <jer@gentoo.org>
+  Shell-EnvImporter-1.07.ebuild:
+  Stable for HPPA (bug #283969).
 
   10 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   Shell-EnvImporter-1.07.ebuild:
