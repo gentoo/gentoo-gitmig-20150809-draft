@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.4 2009/09/16 05:09:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.5 2009/09/17 10:54:35 arfrever Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ IUSE="doc examples svg"
 RDEPEND=">=x11-libs/cairo-1.8.8[svg=]"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	doc? ( dev-python/sphinx )"
+	doc? ( >=dev-python/sphinx-0.6 )"
 
 RESTRICT_PYTHON_ABIS="2.4 2.5 3*"
 
@@ -54,7 +54,7 @@ src_compile() {
 src_test() {
 	testing() {
 		pushd test > /dev/null
-		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" test.py || return 1
+		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" -c "import examples_test; examples_test.test_examples(); examples_test.test_snippets_png()" || return 1
 		popd > /dev/null
 	}
 	python_execute_function testing
@@ -68,6 +68,9 @@ src_install() {
 	fi
 
 	if use examples; then
+		# Delete files created by tests.
+		find examples{,/cairo_snippets/snippets} -maxdepth 1 -name "*.png" | xargs rm -f
+
 		insinto /usr/share/doc/${PF}/examples
 		doins -r examples/*
 		rm "${D}"/usr/share/doc/${PF}/examples/Makefile*
