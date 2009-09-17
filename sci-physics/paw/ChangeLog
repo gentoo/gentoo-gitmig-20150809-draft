@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.14 2009/09/11 02:19:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.15 2009/09/17 19:11:27 bicatali Exp $
+
+  17 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  paw-2.14.04-r2.ebuild:
+  Removed static flags which does not work and is just too much work for now
 
   11 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org>
   paw-2.14.04-r2.ebuild, +files/paw-2.14.04-glibc-2.10.patch,
