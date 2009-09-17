@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.1.1.ebuild,v 1.1 2009/09/15 20:21:58 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/pygments-1.1.1.ebuild,v 1.2 2009/09/17 12:26:06 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -26,28 +26,14 @@ RDEPEND=""
 S="${WORKDIR}/${MY_P}"
 DOCS="CHANGES"
 
-src_prepare() {
-	distutils_src_prepare
-
-	# Make lexer recognize ebuilds as bash input
-	sed -i \
-			-e "/\(BashLexer\|aliases\)/s/\('sh'\)/\1, 'ebuild', 'eclass'/" \
-			-e "/\(BashLexer\|filenames\)/s/\('\*\.sh'\)/\1, '*.ebuild', '*.eclass'/" \
-				${PN}/lexers/_mapping.py ${PN}/lexers/other.py ||\
-		die "sed failed."
-
-	# Our usual PYTHONPATH manipulation trick doesn't work, it will try to run
-	# tests on the installed version:
-	if use test; then
-		sed -e "s/import pygments/sys.path.insert(0, '.');import pygments/" -i tests/run.py || die "sed failed"
-	fi
-}
-
 src_test() {
 	testing() {
+		# A future version of dev-python/nose will support Python 3.
+		[[ "${PYTHON_ABI}" == 3* ]] && return
+
 		"$(PYTHON)" tests/run.py
 	}
-	python_execute_function --nonfatal testing
+	python_execute_function testing
 }
 
 src_install(){
