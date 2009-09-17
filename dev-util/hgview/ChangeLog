@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/hgview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/ChangeLog,v 1.1 2009/07/23 22:48:37 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hgview/ChangeLog,v 1.2 2009/09/17 17:39:58 spatz Exp $
+
+*hgview-1.0.1 (17 Sep 2009)
+
+  17 Sep 2009; Dror Levin <spatz@gentoo.org> +hgview-1.0.1.ebuild:
+  Version bump, bug 283709.
 
 *hgview-1.0.0 (23 Jul 2009)
 
