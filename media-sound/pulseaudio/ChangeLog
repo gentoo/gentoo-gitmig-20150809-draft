@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.158 2009/09/16 20:52:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.159 2009/09/17 01:26:12 flameeyes Exp $
+
+  17 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.17.ebuild, pulseaudio-0.9.17-r50.ebuild:
+  Bump dependencies (hal and libsndfile).
 
   16 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   pulseaudio-0.9.9-r54.ebuild, pulseaudio-0.9.9-r55.ebuild,

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.17.ebuild,v 1.1 2009/09/13 12:13:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.17.ebuild,v 1.2 2009/09/17 01:26:12 flameeyes Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	dbus? ( >=sys-apps/dbus-1.0.0 )
 	gnome? ( >=gnome-base/gconf-2.4.0 )
 	hal? (
-		>=sys-apps/hal-0.5.7
+		>=sys-apps/hal-0.5.11
 		>=sys-apps/dbus-1.0.0
 	)
 	app-admin/eselect-esd
@@ -48,7 +48,7 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	udev? ( >=sys-fs/udev-143[extras] )
 	>=media-libs/audiofile-0.2.6-r1
 	>=media-libs/speex-1.2_beta
-	>=media-libs/libsndfile-1.0.10
+	>=media-libs/libsndfile-1.0.20
 	>=dev-libs/liboil-0.3.6
 	sys-libs/gdbm
 	>=sys-devel/libtool-2.2.4" # it's a valid RDEPEND, libltdl.so is used
