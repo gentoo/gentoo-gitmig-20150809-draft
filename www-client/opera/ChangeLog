@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.392 2009/09/12 16:19:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.393 2009/09/17 15:35:47 jer Exp $
+
+  17 Sep 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00.ebuild,
+  opera-10.10_pre4594.ebuild, opera-10.10_pre4609.ebuild:
+  Opera 10 can download, install and select dictionaries entirely without
+  the use of external tools.
 
   12 Sep 2009; Jeroen Roovers <jer@gentoo.org> opera-10.00.ebuild,
   opera-10.10_pre4594.ebuild, opera-10.10_pre4609.ebuild:
