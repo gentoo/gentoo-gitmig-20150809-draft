@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/roundcube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.8 2009/09/17 10:28:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/ChangeLog,v 1.9 2009/09/17 14:46:36 hollow Exp $
+
+  17 Sep 2009; Benedikt Böhm <hollow@gentoo.org> roundcube-0.2.2.ebuild,
+  roundcube-0.3.ebuild:
+  stable on amd64; does not need php imap library
 
   17 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> roundcube-0.3.ebuild:
   Depend on php with correct useflags enabled when spell useflag is called.

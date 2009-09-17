@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.ebuild,v 1.2 2009/09/17 10:28:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/roundcube/roundcube-0.3.ebuild,v 1.3 2009/09/17 14:46:36 hollow Exp $
 
 EAPI="2"
 
@@ -31,7 +31,7 @@ need_php_httpd
 S=${WORKDIR}/${MY_P}
 
 pkg_setup() {
-	local flags="crypt iconv imap pcre session unicode spl"
+	local flags="crypt iconv pcre session unicode spl"
 	use ldap && flags="${flags} ldap"
 	use ssl && flags="${flags} ssl"
 	use spell && flags="${flags} curl spell"
