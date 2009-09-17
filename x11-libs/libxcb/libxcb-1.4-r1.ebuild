@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.4-r1.ebuild,v 1.1 2009/09/14 16:10:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxcb/libxcb-1.4-r1.ebuild,v 1.2 2009/09/17 06:14:10 remi Exp $
 
 EAPI="2"
 
@@ -44,9 +44,9 @@ pkg_preinst() {
 
 pkg_postinst() {
 	x-modular_pkg_postinst
-	preserve_old_lib_notify "${ROOT}"/usr/$(get_libdir)/libxcb-xlib.so.0.0.0
 
 	if [[ -e "${ROOT}"/usr/$(get_libdir)/libxcb-xlib.so.0.0.0 ]]; then
+		echo
 		ewarn "libxcb-xlib.so is no longer shipped by ${PN} but was kept on your system"
 		ewarn
 		ewarn "While your system will still work, emerging new packages or updates"
