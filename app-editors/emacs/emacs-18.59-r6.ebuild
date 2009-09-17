@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.4 2009/09/16 18:42:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-18.59-r6.ebuild,v 1.5 2009/09/17 16:04:13 ulm Exp $
 
 EAPI=2
 
@@ -35,12 +35,10 @@ src_prepare() {
 }
 
 src_configure() {
-	# Feel free to fix the sources to be 64 bit clean.
-	use amd64 && multilib_toolchain_setup x86
-
 	# autoconf? What's autoconf? We are living in 1992. ;-)
-	local arch=$(tc-arch)
-	case ${arch} in
+	local arch
+	case ${ARCH} in
+		amd64) arch=intel386; multilib_toolchain_setup x86 ;;
 		x86)   arch=intel386 ;;
 		*)	   die "Architecture ${arch} not supported" ;;
 	esac
