@@ -3,14 +3,8 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>spatz@psybear.com</email>
+    <email>spatz@gentoo.org</email>
     <name>Dror Levin</name>
-    <description>proxied maintainer</description>
-  </maintainer>
-  <maintainer>
-    <email>yngwin@gentoo.org</email>
-    <name>Ben de Groot</name>
-    <description>proxy</description>
   </maintainer>
   <use>
     <flag name='vim'>
