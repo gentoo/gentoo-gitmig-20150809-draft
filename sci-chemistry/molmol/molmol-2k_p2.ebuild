@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.12 2008/06/27 10:30:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/molmol-2k_p2.ebuild,v 1.13 2009/09/18 15:01:49 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs multilib
 
@@ -17,7 +19,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 DEPEND="x11-libs/openmotif
 	x11-libs/libXpm
-	media-libs/mesa
+	media-libs/mesa[motif]
 	media-libs/jpeg
 	media-libs/tiff
 	media-libs/libpng
@@ -29,15 +31,7 @@ S=${WORKDIR}
 
 MMDIR="/usr/$(get_libdir)/molmol"
 
-src_unpack() {
-	if ! built_with_use media-libs/mesa motif; then
-		msg="Build media-libs/mesa with USE=motif"
-		eerror "${msg}"
-		die "${msg}"
-	fi
-
-	unpack ${A}
-
+src_prepare() {
 	# Patch from http://pjf.net/science/molmol.html, where src.rpm is provided
 	epatch ${FILESDIR}/pjf_RH9_molmol2k2.diff
 
@@ -71,5 +65,5 @@ src_install() {
 	insinto ${MMDIR}
 	doins -r auxil help macros man setup tips || die
 
-	dodoc HISTORY README
+	dodoc HISTORY README || die
 }

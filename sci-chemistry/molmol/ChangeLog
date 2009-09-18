@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molmol
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.16 2008/06/27 10:30:13 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molmol/ChangeLog,v 1.17 2009/09/18 15:01:49 betelgeuse Exp $
+
+  18 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> molmol-2k_p2.ebuild:
+  Migrate to EAPI 2 in order to remove built_with_use usage.
 
   27 Jun 2008; Ulrich Mueller <ulm@gentoo.org> molmol-2k_p2.ebuild:
   Change dependency from virtual/motif to x11-libs/openmotif, bug 224749.
