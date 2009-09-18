@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-6.0.0.ebuild,v 1.7 2009/06/02 16:41:36 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ezmlm-idx-6.0.0.ebuild,v 1.8 2009/09/18 20:27:24 hollow Exp $
 
 EZMLM_P=ezmlm-0.53
 
@@ -13,7 +13,7 @@ SRC_URI="http://cr.yp.to/software/${EZMLM_P}.tar.gz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha ~amd64 hppa ~mips ppc sparc x86"
+KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 IUSE="mysql postgres"
 
 DEPEND="
