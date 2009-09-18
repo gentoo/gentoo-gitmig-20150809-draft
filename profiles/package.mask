@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10462 2009/09/18 15:32:37 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10463 2009/09/18 20:23:44 keri Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1280,10 +1280,6 @@ media-libs/realcodecs
 # Alin Năstac <mrness@gentoo.org> (21 Sep 2008)
 # Breaks L2TP connections (see http://bugs.xelerance.com/view.php?id=1004)
 =net-misc/openswan-2.6*
-
-# Keri Harris <keri@gentoo.org> (21 Sep 2008)
-# Development version
-=dev-lang/swi-prolog-5.7*
 
 # Doug Goldstein <cardoe@gentoo.org> (17 Sep 2008)
 # under development
