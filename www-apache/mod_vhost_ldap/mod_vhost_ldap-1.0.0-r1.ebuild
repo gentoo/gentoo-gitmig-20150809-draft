@@ -1,19 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0-r1.ebuild,v 1.3 2009/03/09 20:00:39 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_vhost_ldap/mod_vhost_ldap-1.0.0-r1.ebuild,v 1.4 2009/09/18 15:39:46 hollow Exp $
 
 EAPI="2"
 
 inherit eutils apache-module
 
-KEYWORDS="~amd64 ~x86"
-
 DESCRIPTION="An Apache2 module for storing and configuring virtual hosts from LDAP."
-HOMEPAGE="http://alioth.debian.org/projects/modvhostldap/"
+HOMEPAGE="http://modvhostldap.alioth.debian.org/"
 SRC_URI="http://alioth.debian.org/download.php/1422/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 APACHE2_MOD_CONF="99_${PN}"
