@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2.ebuild,v 1.2 2009/02/19 18:41:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/coq/coq-8.2.ebuild,v 1.3 2009/09/18 16:29:58 tove Exp $
 
 EAPI="2"
 
@@ -21,7 +21,7 @@ IUSE="norealanalysis gtk debug +ocamlopt doc"
 RDEPEND=">=dev-lang/ocaml-3.10[ocamlopt?]
 	>=dev-ml/camlp5-5.09[ocamlopt?]
 	gtk? ( >=dev-ml/lablgtk-2.10.1[ocamlopt?] )"
-DEPEND="${RDPEND}
+DEPEND="${RDEPEND}
 	doc? ( dev-tex/hevea virtual/latex-base )"
 
 S="${WORKDIR}/${P/_/}"
