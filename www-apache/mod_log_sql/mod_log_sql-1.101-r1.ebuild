@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/mod_log_sql-1.101-r1.ebuild,v 1.1 2008/03/13 16:11:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/mod_log_sql-1.101-r1.ebuild,v 1.2 2009/09/18 13:58:18 hollow Exp $
 
 inherit apache-module
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 
 DESCRIPTION="An Apache module for logging to an SQL (MySQL) database."
 HOMEPAGE="http://www.outoforder.cc/projects/apache/mod_log_sql/"

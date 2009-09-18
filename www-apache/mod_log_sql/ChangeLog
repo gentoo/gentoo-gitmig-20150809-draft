@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_log_sql
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.6 2008/08/23 04:35:22 cardoe Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_log_sql/ChangeLog,v 1.7 2009/09/18 13:58:18 hollow Exp $
+
+  18 Sep 2009; Benedikt Böhm <hollow@gentoo.org> -mod_log_sql-1.101.ebuild,
+  mod_log_sql-1.101-r1.ebuild:
+  stable on amd64 & x86; remove old ebuild
 
   23 Aug 2008; Doug Goldstein <cardoe@gentoo.org> metadata.xml:
   add GLEP 56 USE flag desc from use.local.desc
