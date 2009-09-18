@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7.ebuild,v 1.4 2009/08/11 13:59:47 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/vmd-1.8.7.ebuild,v 1.5 2009/09/18 14:32:58 betelgeuse Exp $
 
 EAPI="2"
 
@@ -17,11 +17,16 @@ IUSE=""
 
 RESTRICT="fetch"
 
+# currently, tk-8.5* with USE=truetype breaks some
+# tk apps such as Sequence Viewer or Timeline.
 DEPEND="x11-libs/libXft
 	virtual/opengl
 	x11-libs/fltk:1.1
 	>=dev-lang/tcl-8.4
-	>=dev-lang/tk-8.4
+	|| (
+		>=dev-lang/tk-8.5[-truetype]
+		=dev-lang/tk-8.4*
+	)
 	=dev-lang/python-2*
 	dev-lang/perl
 	dev-python/numpy
@@ -43,16 +48,6 @@ pkg_nofetch() {
 }
 
 src_prepare() {
-	# currently, tk-8.5* with USE=truetype breaks some
-	# tk apps such as Sequence Viewer or Timeline.
-	if has_version =dev-lang/tcl-8.5* && built_with_use dev-lang/tk truetype; then
-		echo
-		eerror "Error: Your tk was build with USE=\"truetype\" which"
-		eerror "will cause some of VMD's tk apps to not work properly"
-		eerror "(Sequence Viewer, Timeline, ..)."
-		die "Please emerge tk with USE=\"-truetype\"".
-	fi
-
 	# apply LINUX-arch patches to vmd configure
 	epatch "${FILESDIR}/${P}-config.patch"
 	epatch "${FILESDIR}/${P}-use-bash-startup.patch"

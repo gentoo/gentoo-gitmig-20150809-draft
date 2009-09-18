@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/vmd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.25 2009/08/11 13:59:47 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/vmd/ChangeLog,v 1.26 2009/09/18 14:32:58 betelgeuse Exp $
+
+  18 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> vmd-1.8.7.ebuild:
+  Remove built_with_use and use proper DEPEND atoms that work properly for
+  both tk 8.4 and 8.5 users.
 
   11 Aug 2009; Markus Dittrich <markusle@gentoo.org> vmd-1.8.7.ebuild,
   +files/vmd.desktop, +files/vmd.png:
