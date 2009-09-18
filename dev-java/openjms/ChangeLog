@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/openjms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.27 2009/06/19 09:57:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/openjms/ChangeLog,v 1.28 2009/09/18 05:13:43 ali_bush Exp $
+
+*openjms-0.7.6.1-r7 (18 Sep 2009)
+
+  18 Sep 2009; Alistair Bush <ali_bush@gentoo.org>
+  +openjms-0.7.6.1-r7.ebuild:
+  Bump openjms to allow files to be build with 1.5 or 1.4 vms.
 
   19 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   openjms-0.7.6.1-r6.ebuild:
