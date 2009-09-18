@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.1.ebuild,v 1.2 2009/08/08 17:25:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/gdal-1.6.1.ebuild,v 1.3 2009/09/18 18:48:22 betelgeuse Exp $
 
+EAPI="2"
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils perl-module ruby toolchain-funcs
 
@@ -37,7 +38,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 	postgres? ( virtual/postgresql-server )
 	|| (
 	    netcdf? ( sci-libs/netcdf )
-	    hdf? ( sci-libs/hdf )
+	    hdf? ( sci-libs/hdf[szip] )
 	)
 	|| (
 	    jpeg2k? ( media-libs/jasper )
@@ -66,10 +67,7 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	eaclocal
 	eautoconf
 
@@ -79,25 +77,14 @@ src_unpack() {
 	    "${FILESDIR}"/${PN}-1.6.0-swig-fix.patch \
 	    "${FILESDIR}"/${P}-ruby-make.patch
 
-	if useq hdf; then
-	    einfo	"Checking if HDF4 is compiled with szip..."
-	    if built_with_use sci-libs/hdf szip ; then
-		einfo	"Found HDF4 compiled with szip. Nice."
-	    else
-		ewarn 	"HDF4 (sci-libs/hdf) must be compiled with the szip USE flag!"
-		einfo 	"Please emerge hdf with szip USE flag and then emerge GDAL."
-		die 	"HDF4 not merged with szip use flag"
-	    fi
-
-	    if useq netcdf; then
+	if useq hdf && useq netcdf; then
 		ewarn "Netcdf and HDF4 are incompatible due to certain tools in"
 		ewarn "common; HDF5 is now the preferred choice for HDF data."
 		die "Please disable either the hdf or netcdf use flag."
-	    fi
 	fi
 }
 
-src_compile() {
+src_configure() {
 
 	distutils_python_version
 
@@ -140,7 +127,9 @@ src_compile() {
 	    GDALmake.opt.in || die "sed gdalmake.opt failed"
 
 	econf ${pkg_conf} ${use_conf} || die "econf failed"
+}
 
+src_compile() {
 	# parallel makes fail on the ogr stuff (C++, what can I say?)
 	# also failing with gcc4 in libcsf
 	emake -j1 || die "emake failed"
@@ -175,10 +164,10 @@ src_install() {
 	fi
 
 	# einstall causes sandbox violations on /usr/lib/libgdal.so
-	make DESTDIR="${D}" install \
+	emake DESTDIR="${D}" install \
 	    || die "make install failed"
 
-	dodoc Doxyfile HOWTO-RELEASE NEWS
+	dodoc Doxyfile HOWTO-RELEASE NEWS || die
 
 	if useq doc ; then
 	    dohtml html/* || die "install html failed"
