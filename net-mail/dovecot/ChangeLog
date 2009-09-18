@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.208 2009/09/11 18:37:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.209 2009/09/18 14:37:31 patrick Exp $
+
+  18 Sep 2009; Patrick Lauer <patrick@gentoo.org> dovecot-1.2.4.ebuild:
+  Improving suid behaviour, fixes #285108. Thanks to kiorky for the patch.
 
   11 Sep 2009; Patrick Lauer <patrick@gentoo.org> dovecot-1.2.4.ebuild:
   Fix useflag interdependency, closes #284622

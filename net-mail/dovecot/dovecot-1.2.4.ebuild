@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.4.ebuild,v 1.3 2009/09/11 18:37:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.4.ebuild,v 1.4 2009/09/18 14:37:31 patrick Exp $
 
 EAPI="2"
 
@@ -52,6 +52,10 @@ pkg_setup() {
 	# Add user and group for login process (same as for fedora/redhat)
 	enewgroup dovecot 97
 	enewuser dovecot 97 -1 /dev/null dovecot
+	# add "mail" group for suid'ing. Better security isolation.
+	if use suid; then
+		enewgroup mail
+	fi
 }
 
 src_prepare() {
@@ -125,7 +129,15 @@ src_compile() {
 src_install () {
 	emake DESTDIR="${D}" install || die "make install failed"
 
-	use suid && fperms u+s /usr/libexec/dovecot/deliver
+	# insecure:
+	#use suid && fperms u+s /usr/libexec/dovecot/deliver
+	#better:
+	if use suid;then
+		einfo "Changing perms to allow deliver to be suided"
+		fowners root:mail /usr/libexec/dovecot/deliver
+		fperms 4750 /usr/libexec/dovecot/deliver
+	fi
+
 
 	rm -f "${D}"/etc/dovecot/dovecot-{ldap,sql}-example.conf
 
