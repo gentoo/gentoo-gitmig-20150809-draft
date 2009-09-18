@@ -1,16 +1,16 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_layout/mod_layout-5.1.ebuild,v 1.1 2008/01/27 15:51:15 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_layout/mod_layout-5.1.ebuild,v 1.2 2009/09/18 13:35:18 hollow Exp $
 
 inherit apache-module
 
-KEYWORDS="~amd64 ~ppc ~x86"
-
 DESCRIPTION="An Apache2 module for adding custom headers and/or footers."
-HOMEPAGE="http://software.tangent.org/"
+HOMEPAGE="http://tangent.org/index.pl?node_id=362"
 SRC_URI="http://download.tangent.org/${P}.tar.gz"
+
 LICENSE="as-is"
 SLOT="2"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=""
