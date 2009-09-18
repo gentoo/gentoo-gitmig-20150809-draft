@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.15 2006/11/09 18:22:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/canna-2ch/canna-2ch-20030827.ebuild,v 1.16 2009/09/18 16:20:59 tove Exp $
 
 inherit cannadic eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="alpha ~amd64 ppc ppc64 sparc x86"
 IUSE="canna"
 
 DEPEND="canna? ( app-i18n/canna )"
-RDPEND=""
+RDEPEND=""
 # You cannot use 2ch.cbd as its name. Canna doesn't load dictionaries
 # if the name begins with number. (I don't know why ...)
 CANNADICS="2ch"
