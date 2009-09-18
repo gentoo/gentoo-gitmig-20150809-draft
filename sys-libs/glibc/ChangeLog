@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.641 2009/09/13 15:19:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.642 2009/09/18 15:15:06 flameeyes Exp $
+
+  18 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> glibc-2.10.1.ebuild,
+  files/eblits/src_install.eblit:
+  Bump patcheset; add patch for bug #284393 (compatibility with binutils
+  2.20 betas), and make nscd init script not use 'strings' at runtime (bug
+  #285308).
 
   13 Sep 2009; Markus Meier <maekke@gentoo.org>
   glibc-2.9_p20081201-r2.ebuild:
