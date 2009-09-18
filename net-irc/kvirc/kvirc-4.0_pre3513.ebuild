@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3330.ebuild,v 1.1 2009/07/11 03:34:49 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-4.0_pre3513.ebuild,v 1.1 2009/09/18 11:52:04 arfrever Exp $
 
 EAPI="2"
 
@@ -29,6 +29,7 @@ RDEPEND="
 	qt-webkit? ( >=x11-libs/qt-webkit-4.5 )
 	ssl? ( dev-libs/openssl )"
 DEPEND="${RDEPEND}
+	>=dev-util/cmake-2.6.4
 	nls? ( sys-devel/gettext )
 	doc? ( app-doc/doxygen )"
 RDEPEND="${RDEPEND}
@@ -85,4 +86,20 @@ src_install() {
 
 	elog "In order to keep KVIrc 4 and KVIrc3 working both side-by-side"
 	elog "man page for ${P} is under \"man kvirc4\""
+}
+
+pkg_preinst() {
+	if has_version "=${CATEGORY}/${PN}-4.0_pre3412"; then
+		log_location_change="1"
+	fi
+}
+
+pkg_postinst() {
+	if [[ "${log_location_change}" == "1" ]]; then
+		elog "Default location of logs has changed back from ~/log to ~/.config/KVIrc/log."
+		elog "You might want to run the following command to restore default location:"
+		elog "   sed -e \"/^stringLogsPath=/d\" -i ~/.config/KVIrc/config/main.kvc"
+		elog "You can also set location of logs in KVIrc configuration."
+		ebeep 12
+	fi
 }
