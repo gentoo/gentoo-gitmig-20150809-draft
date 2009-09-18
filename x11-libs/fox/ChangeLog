@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fox
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.136 2009/07/31 12:25:11 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/ChangeLog,v 1.137 2009/09/18 03:48:08 jer Exp $
+
+  18 Sep 2009; Jeroen Roovers <jer@gentoo.org> fox-1.6.36.ebuild:
+  Stable for HPPA (bug #276854).
 
   31 Jul 2009; <chainsaw@gentoo.org> fox-1.6.36.ebuild:
   Marked stable on AMD64 as requested by Jeroen Roovers <jer@gentoo.org> in
