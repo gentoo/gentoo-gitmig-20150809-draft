@@ -4,8 +4,13 @@
 <herd>no-herd</herd>
 	<maintainer>
 		<email>ian@aerobiology.ca</email>
-		<description>Indirectly maintaining through
-			genstef@gentoo.org</description>
+		<name>Ian Stakenvicius</name>
+			<description>Maintainer of ebuilds, assign bugs</description>
+	</maintainer>
+	<maintainer>
+		<email>tommy@gentoo.org</email>
+		<name>Thomas Sachau</name>
+			<description>Proxy committer, CC bugs</description>
 	</maintainer>
 	<longdescription>This software discovers, activates, deactivates and displays properties of software RAID sets eg: ATARAID and contained DOS partitions.</longdescription>
 </pkgmetadata>
