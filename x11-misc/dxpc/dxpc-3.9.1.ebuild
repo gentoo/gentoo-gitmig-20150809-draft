@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.9.1.ebuild,v 1.2 2007/07/22 03:04:09 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dxpc/dxpc-3.9.1.ebuild,v 1.3 2009/09/18 16:34:29 tove Exp $
 
 DESCRIPTION="an X protocol compressor designed to improve the speed of X11
 applications run over low-bandwidth links"
@@ -12,9 +12,9 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 
-DEPEND="x11-libs/libXt
+RDEPEND="x11-libs/libXt
 	>=dev-libs/lzo-2"
-DEPEMD="${RDEPEND}
+DEPEND="${RDEPEND}
 	x11-proto/xproto"
 
 src_install () {
