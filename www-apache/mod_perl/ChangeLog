@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.82 2009/07/22 14:04:15 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.83 2009/09/18 14:05:07 hollow Exp $
+
+  18 Sep 2009; Benedikt Böhm <hollow@gentoo.org> -mod_perl-2.0.3-r2.ebuild,
+  -mod_perl-2.0.4.ebuild, -files/RegistryCooker.patch:
+  remove old ebuilds
 
   22 Jul 2009; Joseph Jezak <josejx@gentoo.org> mod_perl-2.0.4-r1.ebuild:
   Marked ppc/ppc64 stable early for bug #266035.
