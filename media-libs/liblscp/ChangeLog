@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblscp
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/ChangeLog,v 1.9 2008/01/27 10:23:59 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblscp/ChangeLog,v 1.10 2009/09/18 23:22:12 maekke Exp $
+
+  18 Sep 2009; Markus Meier <maekke@gentoo.org> liblscp-0.5.5.ebuild:
+  amd64/x86 stable, bug #284427
 
   27 Jan 2008; Alexis Ballier <aballier@gentoo.org> -liblscp-0.3.0.ebuild,
   -liblscp-0.3.3.ebuild:
