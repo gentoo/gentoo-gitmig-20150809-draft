@@ -1,0 +1,11 @@
+# ChangeLog for www-apache/mod_musicindex
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_musicindex/ChangeLog,v 1.1 2009/09/18 15:57:59 hollow Exp $
+
+*mod_musicindex-1.2.5 (18 Sep 2009)
+
+  18 Sep 2009; Benedikt Böhm <hollow@gentoo.org>
+  +files/50_mod_musicindex.conf, +mod_musicindex-1.2.5.ebuild,
+  +metadata.xml:
+  initial ebuild wrt #223917
+
