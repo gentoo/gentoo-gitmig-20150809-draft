@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTML-TokeParser-Simple
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/ChangeLog,v 1.27 2008/11/18 15:06:26 tove Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/ChangeLog,v 1.28 2009/09/18 19:32:07 aballier Exp $
+
+  18 Sep 2009; Alexis Ballier <aballier@gentoo.org>
+  HTML-TokeParser-Simple-3.15.ebuild:
+  keyword ~ppc64, working fine on a PowerMac 970
 
   18 Nov 2008; Torsten Veller <tove@gentoo.org>
   HTML-TokeParser-Simple-3.15.ebuild:
