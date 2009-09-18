@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.7-r2.ebuild,v 1.5 2009/06/06 21:29:01 cla Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.7-r2.ebuild,v 1.6 2009/09/18 15:10:56 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils ssl-cert versionator multilib
 
@@ -19,28 +21,17 @@ IUSE="hub ipv6 ssl zlib curl prefixaq showlistmodes"
 
 RDEPEND="ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
-	curl? ( net-misc/curl )"
+	curl? ( net-misc/curl[ares,-ipv6] )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 S="${WORKDIR}/Unreal${PV}"
 
 pkg_setup() {
-	if use curl && ( ! built_with_use net-misc/curl ares || built_with_use net-misc/curl ipv6 )
-	then
-		eerror "You need net-misc/curl compiled with the ares USE flag to be able to use"
-		eerror "net-irc/unrealircd with the curl USE flag. Please note that ares support"
-		eerror "for net-misc/curl is incompatible with the ipv6 USE flag."
-		die "need net-misc/curl with ares support"
-	fi
-
 	enewuser unrealircd
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	sed -i \
 		-e "s:ircd\.pid:/var/run/unrealircd/ircd.pid:" \
 		-e "s:ircd\.log:/var/log/unrealircd/ircd.log:" \
@@ -49,7 +40,7 @@ src_unpack() {
 		include/config.h
 }
 
-src_compile() {
+src_configure() {
 	local myconf=""
 	use curl     && myconf="${myconf} --enable-libcurl=/usr"
 	use ipv6     && myconf="${myconf} --enable-inet6"
@@ -77,7 +68,9 @@ src_compile() {
 		-e "s:${D}::" \
 		include/setup.h \
 		ircdcron/ircdchk
+}
 
+src_compile() {
 	emake MAKE=make IRCDDIR=/etc/unrealircd || die "emake failed"
 }
 

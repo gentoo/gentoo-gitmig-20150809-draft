@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1.ebuild,v 1.3 2009/07/05 20:03:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1.ebuild,v 1.4 2009/09/18 15:15:01 betelgeuse Exp $
+
+EAPI="2"
 
 inherit gnome2 eutils toolchain-funcs
 
@@ -26,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.18.0
 	dbus? ( >=sys-apps/dbus-0.60 )
 	>=x11-libs/libsexy-0.1.11
 	libnotify? ( >=x11-libs/libnotify-0.3.2 )
-	sound? ( >=media-libs/libcanberra-0.3 )
+	sound? ( >=media-libs/libcanberra-0.3[gtk] )
 	x11-libs/libX11"
 
 DEPEND="${RDEPEND}
@@ -42,11 +44,6 @@ pkg_setup() {
 			$(gcc-major-version) -eq 4 && $(gcc-minor-version) -eq 1 && $(gcc-micro-version) -lt 3 ) ) ]]; then
 			ewarn "${P} requires >=sys-devel/gcc-4.1.3 to compile"
 			die "Please select >=sys-devel/gcc-4.1.3"
-	fi
-
-	if use sound && ! built_with_use media-libs/libcanberra gtk; then
-		eerror "You need to rebuild media-libs/libcanberra with gtk support."
-		die "Rebuild media-libs/libcanberra with USE='gtk'"
 	fi
 
 	# Per configure.ac, shm is disable because of upstream bug #565958
