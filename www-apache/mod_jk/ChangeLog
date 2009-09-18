@@ -1,6 +1,12 @@
 # ChangeLog for www-apache/mod_jk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.62 2009/06/07 12:40:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/ChangeLog,v 1.63 2009/09/18 13:31:37 hollow Exp $
+
+  18 Sep 2009; Benedikt Böhm <hollow@gentoo.org> files/88_mod_jk.conf,
+  -mod_jk-1.2.25.ebuild, -mod_jk-1.2.26-r1.ebuild,
+  -files/new/88_mod_jk.conf, -mod_jk-1.2.27.ebuild, -mod_jk-1.2.28.ebuild,
+  -files/new/jk-workers.properties:
+  remove old ebuilds
 
   07 Jun 2009; Markus Meier <maekke@gentoo.org> mod_jk-1.2.28-r1.ebuild:
   amd64/x86 stable, bug #272414
