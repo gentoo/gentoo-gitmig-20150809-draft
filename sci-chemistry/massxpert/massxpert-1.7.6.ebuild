@@ -1,24 +1,24 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.3 2008/07/20 14:22:03 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-1.7.6.ebuild,v 1.4 2009/09/18 20:59:44 wired Exp $
 
-EAPI=1
+EAPI=2
 
 inherit base eutils flag-o-matic cmake-utils
 
 DESCRIPTION="A software suite to predict/analyze mass spectrometric data on (bio)polymers."
 HOMEPAGE="http://massxpert.org/wiki/"
-SRC_URI="http://download.tuxfamily.org/massxpert/source/${PF}.tar.gz"
+SRC_URI="http://download.tuxfamily.org/massxpert/source/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-RDEPEND="|| (
-		( x11-libs/qt-gui:4 x11-libs/qt-svg:4 x11-libs/qt-xmlpatterns:4 x11-libs/qt-core:4 )
-		=x11-libs/qt-4.3*:4
-	)
+RDEPEND="
+	x11-libs/qt-gui[accessibility]
+	x11-libs/qt-svg
+	x11-libs/qt-xmlpatterns
 	x11-libs/libSM
 	x11-libs/libICE
 	x11-libs/libXi
@@ -37,30 +37,12 @@ RDEPEND="|| (
 	media-libs/nas
 	media-libs/libpng
 	dev-libs/libxml2"
-DEPEND="${RDEPEND}
-	>=dev-util/cmake-2.4.7"
+DEPEND="${RDEPEND}"
 
-S="${WORKDIR}/${P}"
+S="${WORKDIR}"/"${P}"
 CMAKE_IN_SOURCE_BUILD="true"
 
 PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
-
-pkg_setup() {
-	if has_version '=x11-libs/qt-4.3*'
-	then
-		if ! built_with_use '>x11-libs/qt-4.3' accessibility
-		then
-			eerror "qt-4 must be built with the accessibility USE flag."
-			die "qt-4 must be built with the accessibility USE flag.."
-		fi
-	else
-		if ! built_with_use '>x11-libs/qt-gui-4.4' accessibility
-		then
-			eerror "qt-gui must be built with the accessibility USE flag."
-			die "qt-gui must be built with the accessibility USE flag.."
-		fi
-	fi
-}
 
 src_compile() {
 	sed -i \
