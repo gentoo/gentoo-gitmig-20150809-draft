@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.113.ebuild,v 1.3 2008/06/03 02:07:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/sparky/sparky-3.113.ebuild,v 1.4 2009/09/18 14:50:12 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs multilib python
 
@@ -14,7 +16,7 @@ SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
 RESTRICT="mirror"
-RDEPEND="=dev-lang/python-2.4*
+RDEPEND="dev-lang/python:2.4[tk]
 	=dev-lang/tk-8.4*
 	app-shells/tcsh"
 DEPEND="${RDEPEND}
@@ -26,10 +28,6 @@ pkg_setup() {
 	# Install for specific pythons instead of whatever's newest.
 	python="/usr/bin/python2.4"
 	python_version
-
-	if ! built_with_use dev-lang/python tk; then
-		die "Rebuild python with USE=tk"
-	fi
 
 	arguments=( SPARKY="${S}" \
 		SPARKY_INSTALL_MAC="" \
@@ -49,10 +47,7 @@ pkg_setup() {
 	#	PYDIR="\$(SPARKY_INSTALL)/$(get_libdir)/python\$(PYTHON_VERSION)/site-packages" \
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}"/fix-install.patch
 
 	sed -i \
@@ -66,7 +61,7 @@ src_compile() {
 }
 
 src_install() {
-	make "${arguments[@]}" install || die "install failed"
+	emake "${arguments[@]}" install || die "install failed"
 	# Make internal help work
 	dosym ../../share/doc/sparky/manual /usr/lib/sparky/manual
 	# It returns a weird threading error message without this
