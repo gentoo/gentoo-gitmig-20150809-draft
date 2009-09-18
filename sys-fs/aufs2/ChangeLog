@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.7 2009/07/28 18:43:26 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.8 2009/09/18 15:12:29 tommy Exp $
+
+*aufs2-0_p20090916 (18 Sep 2009)
+
+  18 Sep 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +aufs2-0_p20090916.ebuild, +files/aufs2-0_p20090916-makefile.patch.bz2,
+  files/aufs2-standalone-28.patch, files/aufs2-standalone-29.patch,
+  files/aufs2-standalone-30.patch, +files/aufs2-standalone-31.patch:
+  Version bump, switch to tarball as requested in bug 282504
 
 *aufs2-0_p20090727 (28 Jul 2009)
 
