@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DateTime-Locale
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.65 2009/09/15 17:23:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Locale/ChangeLog,v 1.66 2009/09/18 17:32:56 tove Exp $
+
+  18 Sep 2009; Torsten Veller <tove@gentoo.org> DateTime-Locale-0.43.ebuild:
+  Stable on amd64 (#284062)
 
   15 Sep 2009; Joseph Jezak <josejx@gentoo.org> DateTime-Locale-0.43.ebuild:
   Marked ppc stable for bug #284062.
