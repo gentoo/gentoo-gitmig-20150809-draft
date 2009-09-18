@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Email-MIME-Encodings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Encodings/ChangeLog,v 1.20 2009/09/15 01:53:29 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-MIME-Encodings/ChangeLog,v 1.21 2009/09/18 17:22:47 tove Exp $
+
+  18 Sep 2009; Torsten Veller <tove@gentoo.org>
+  Email-MIME-Encodings-1.313.ebuild:
+  Stable on amd64 (#284064)
 
   14 Sep 2009; Tom Gall <tgall@gentoo.org> Email-MIME-Encodings-1.313.ebuild:
   stable on ppc64, bug #284064
