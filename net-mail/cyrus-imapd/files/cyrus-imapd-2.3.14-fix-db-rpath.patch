@@ -1,66 +1,27 @@
-diff -u -r cyrus-imapd-2.3.14-old/cmulocal/berkdb.m4 cyrus-imapd-2.3.14/cmulocal/berkdb.m4
---- cyrus-imapd-2.3.14-old/cmulocal/berkdb.m4	2009-07-09 17:12:12.000000000 +0000
-+++ cyrus-imapd-2.3.14/cmulocal/berkdb.m4	2009-07-09 16:54:53.000000000 +0000
-@@ -139,40 +139,6 @@
- 	  if test "X$RPATH" = "X"; then
- 		RPATH=""
- 	  fi
--	  case "${host}" in
--	    *-*-linux*)
--	      if test "X$RPATH" = "X"; then
--	        RPATH="-Wl,-rpath,${DB_LIB_DIR}"
--	      else 
--		RPATH="${RPATH}:${DB_LIB_DIR}"
--	      fi
--	      ;;
--	    *-*-hpux*)
--	      if test "X$RPATH" = "X"; then
--	        RPATH="-Wl,+b${DB_LIB_DIR}"
--	      else 
--		RPATH="${RPATH}:${DB_LIB_DIR}"
--	      fi
--	      ;;
--	    *-*-irix*)
--	      if test "X$RPATH" = "X"; then
--	        RPATH="-Wl,-rpath,${DB_LIB_DIR}"
--	      else 
--		RPATH="${RPATH}:${DB_LIB_DIR}"
--	      fi
--	      ;;
--	    *-*-solaris2*)
--	      if test "$ac_cv_prog_gcc" = yes; then
--		if test "X$RPATH" = "X"; then
--		  RPATH="-Wl,-R${DB_LIB_DIR}"
--		else 
--		  RPATH="${RPATH}:${DB_LIB_DIR}"
--		fi
--	      else
--	        RPATH="${RPATH} -R${DB_LIB_DIR}"
--	      fi
--	      ;;
--	  esac
- 	  AC_SUBST(RPATH)
- 	fi
- 	])
-@@ -205,12 +171,6 @@
- [
- 	BDB_SAVE_LDFLAGS=$LDFLAGS
+--- cyrus-imapd-2.3.14.old/cmulocal/cyrus.m4	2003-10-08 22:35:24.000000000 +0200
++++ cyrus-imapd-2.3.14/cmulocal/cyrus.m4	2009-09-18 04:32:41.000000000 +0200
+@@ -11,35 +11,12 @@
+ dnl (so the runpath for shared libraries is set).
+ AC_DEFUN([CMU_ADD_LIBPATH], [
+   # this is CMU ADD LIBPATH
+-  if test "$andrew_runpath_switch" = "none" ; then
+-	LDFLAGS="-L$1 ${LDFLAGS}"
+-  else
+-	LDFLAGS="-L$1 $andrew_runpath_switch$1 ${LDFLAGS}"
+-  fi
++	LDFLAGS="-L$1 ${LDFLAGS}"
+ ])
  
--	if test -d $with_bdb_lib; then
--	    CMU_ADD_LIBPATH_TO($with_bdb_lib, LDFLAGS)
--	    CMU_ADD_LIBPATH_TO($with_bdb_lib, BDB_LIBADD)
--	else
--	    BDB_LIBADD=""
--	fi
- 
- 	saved_LIBS=$LIBS
-         for dbname in ${with_bdb} db-4.7 db4.7 db47 db-4.6 db4.6 db46 db-4.5 db4.5 db45 db-4.4 db4.4 db44 db-4.3 db4.3 db43 db-4.2 db4.2 db42 db-4.1 db4.1 db41 db-4.0 db4.0 db-4 db40 db4 db-3.3 db3.3 db33 db-3.2 db3.2 db32 db-3.1 db3.1 db31 db-3 db30 db3 db
-diff -u -r cyrus-imapd-2.3.14-old/cmulocal/cyrus.m4 cyrus-imapd-2.3.14/cmulocal/cyrus.m4
---- cyrus-imapd-2.3.14-old/cmulocal/cyrus.m4	2003-10-08 20:35:24.000000000 +0000
-+++ cyrus-imapd-2.3.14/cmulocal/cyrus.m4	2009-07-09 16:54:53.000000000 +0000
-@@ -28,18 +28,3 @@
- 	$2="-L$1 ${$2} $andrew_runpath_switch$1"
-   fi
+ dnl add -L(1st arg), and possibly (runpath switch)(1st arg), to (2nd arg)
+ dnl (so the runpath for shared libraries is set).
+ AC_DEFUN([CMU_ADD_LIBPATH_TO], [
+   # this is CMU ADD LIBPATH TO
+-  if test "$andrew_runpath_switch" = "none" ; then
+-	$2="-L$1 ${$2}"
+-  else
+-	$2="-L$1 ${$2} $andrew_runpath_switch$1"
+-  fi
++	$2="-L$1 ${$2}"
  ])
 -
 -dnl runpath initialization
@@ -77,27 +38,3 @@ diff -u -r cyrus-imapd-2.3.14-old/cmulocal/cyrus.m4 cyrus-imapd-2.3.14/cmulocal/
 -    ])
 -  LDFLAGS="${SAVE_LDFLAGS}"
 -  ])])
-diff -u -r cyrus-imapd-2.3.14-old/configure.in cyrus-imapd-2.3.14/configure.in
---- cyrus-imapd-2.3.14-old/configure.in	2008-10-08 23:28:58.000000000 +0000
-+++ cyrus-imapd-2.3.14/configure.in	2009-07-09 17:18:49.000000000 +0000
-@@ -118,9 +118,6 @@
- CMU_C___ATTRIBUTE__
- CMU_C_FPIC
- 
--dnl check for -R, etc. switch
--CMU_GUESS_RUNPATH_SWITCH
--
- AC_CHECK_HEADERS(unistd.h sys/select.h sys/param.h stdarg.h)
- AC_REPLACE_FUNCS(memmove strcasecmp ftruncate strerror)
- AC_CHECK_FUNCS(strlcat strlcpy getgrouplist)
-@@ -205,10 +202,6 @@
-     supply the --with-bdb-libdir or --with-bdb-incdir configure options.])
-   fi
- 
--  if test "$with_bdb_lib" != "none"; then
--    CMU_ADD_LIBPATH($with_bdb_lib)
--  fi
--
-   BDB_INC=${BDB_INCADD}
-   BDB_LIB=${BDB_LIBADD}
-   AC_SUBST(BDB_INC)
