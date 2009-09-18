@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45.ebuild,v 1.15 2009/09/12 12:17:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/pstoedit-3.45-r1.ebuild,v 1.1 2009/09/18 22:47:33 dirtyepic Exp $
 
 EAPI="2"
 
@@ -30,6 +30,7 @@ src_prepare() {
 	# Fails due to imagemagick having 'long long' in its headers (at least in
 	# 6.3.9.8).
 	sed -i -e "s/-pedantic //" configure
+	epatch "${FILESDIR}"/${P}-am_path_pstoedit.patch # bug 175679 (fixed in	3.50)
 	epatch "${FILESDIR}/${P}-gcc-4.3.patch"
 	epatch "${FILESDIR}/${P}-gcc-4.4.patch"
 }

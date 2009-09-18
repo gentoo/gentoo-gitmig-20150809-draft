@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.57 2009/09/12 12:17:12 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.58 2009/09/18 22:47:33 dirtyepic Exp $
+
+*pstoedit-3.45-r1 (18 Sep 2009)
+
+  18 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> +pstoedit-3.45-r1.ebuild,
+  +files/pstoedit-3.45-am_path_pstoedit.patch:
+  Fix mangled m4, bug #175679, patch from Honza Macháček.
 
   12 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> pstoedit-3.45.ebuild:
   Migrate to EAPI 2 in order to nuke built_with_use.
