@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/fsam7400/fsam7400-0.5.1.ebuild,v 1.2 2007/08/29 18:59:00 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/fsam7400/fsam7400-0.5.1.ebuild,v 1.3 2009/09/18 16:28:23 tove Exp $
 
 inherit linux-mod eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 DEPEND=""
-REPEND=""
+RDEPEND=""
 
 BUILD_TARGETS="clean fsam7400.ko"
 MODULE_NAMES="fsam7400(net/wireless)"
