@@ -1,6 +1,9 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.26 2009/07/21 13:07:43 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/bsd/ChangeLog,v 1.27 2009/09/18 18:11:23 aballier Exp $
+
+  18 Sep 2009; Alexis Ballier <aballier@gentoo.org> use.mask:
+  mask udev useflag
 
   21 Jul 2009; Alexis Ballier <aballier@gentoo.org> fbsd/packages.build:
   add openssl to packages.build because libarchive needs it
