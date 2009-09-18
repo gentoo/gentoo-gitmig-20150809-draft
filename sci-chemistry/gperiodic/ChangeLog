@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/gperiodic
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.10 2009/01/02 20:01:16 cryos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/ChangeLog,v 1.11 2009/09/18 14:39:37 betelgeuse Exp $
+
+  18 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
+  gperiodic-2.0.10.ebuild:
+  Migrate to EAPI 2 in order to remove built_with_use usage.
 
   02 Jan 2009; Marcus D. Hanwell <cryos@gentoo.org> metadata.xml:
   Removed myself as maintainer.

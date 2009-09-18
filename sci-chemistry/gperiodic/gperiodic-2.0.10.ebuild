@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.3 2008/05/29 19:59:40 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.4 2009/09/18 14:39:37 betelgeuse Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs eutils
 
@@ -15,16 +17,11 @@ IUSE="nls"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	=x11-libs/gtk+-2*
+	x11-libs/cairo[X]
 	nls? ( sys-devel/gettext )"
 
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
-
-pkg_setup() {
-	if ! built_with_use x11-libs/cairo X; then
-		die "gperiodic needs x11-libs/cairo emerged with USE=\"X\""
-	fi
-}
 
 src_compile() {
 	# The author has removed "unnecessary automake/autoconf setup"
@@ -48,7 +45,7 @@ src_install() {
 	dodir /usr/share/pixmaps
 	dodir /usr/share/applications
 
-	make install || die "make install failed."
+	emake install || die "make install failed."
 
 	# Fix permissions
 	chmod 644 "${D}/usr/share/pixmaps/*"
@@ -59,6 +56,6 @@ src_install() {
 
 	# The man page seems to have been removed too.
 #	doman man/gperiodic.1
-	dodoc AUTHORS ChangeLog README NEWS
-	newdoc po/README README.translation
+	dodoc AUTHORS ChangeLog README NEWS || die
+	newdoc po/README README.translation || die
 }
