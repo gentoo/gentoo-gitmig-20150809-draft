@@ -1,0 +1,605 @@
+diff -urN OpenFOAM-1.6-src/bin/paraFoam OpenFOAM-1.6/bin/paraFoam
+--- OpenFOAM-1.6-src/bin/paraFoam	2009-01-08 21:19:14.000000000 +0100
++++ OpenFOAM-1.6/bin/paraFoam	2009-08-06 10:54:38.000000000 +0200
+@@ -1,133 +1,148 @@
+ #!/bin/sh
+-#------------------------------------------------------------------------------
+-# =========                 |
+-# \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+-#  \\    /   O peration     |
+-#   \\  /    A nd           | Copyright (C) 1991-2009 OpenCFD Ltd.
+-#    \\/     M anipulation  |
+-#-------------------------------------------------------------------------------
+-# License
+-#     This file is part of OpenFOAM.
+-#
+-#     OpenFOAM is free software; you can redistribute it and/or modify it
+-#     under the terms of the GNU General Public License as published by the
+-#     Free Software Foundation; either version 2 of the License, or (at your
+-#     option) any later version.
+-#
+-#     OpenFOAM is distributed in the hope that it will be useful, but WITHOUT
+-#     ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+-#     FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+-#     for more details.
+-#
+-#     You should have received a copy of the GNU General Public License
+-#     along with OpenFOAM; if not, write to the Free Software Foundation,
+-#     Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
++#
++# Copyright (c) 2008-2009 Takuya OSHIMA <oshima@eng.niigata-u.ac.jp>.
++# All rights reserved.
++#
++# Redistribution and use in source and binary forms, with or without
++# modification, are permitted provided that the following conditions are
++# met:
++#
++#  * Redistributions of source code must retain the above copyright
++#    notice, this list of conditions and the following disclaimer.
++#
++#  * Redistributions in binary form must reproduce the above copyright
++#    notice, this list of conditions and the following disclaimer in the
++#    documentation and/or other materials provided with the
++#    distribution.
++#
++#  * Neither the name of the author nor the names of any contributors
++#    may be used to endorse or promote products derived from this
++#    software without specific prior written permission.
++#
++# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
++# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
++# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
++# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS OR
++# CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
++# EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
++# PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
++# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
++# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
++# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
++# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ #
+ # Script
+-#     paraFoam
++#     pvFoam
+ #
+ # Description
+-#     start paraview with the OpenFOAM libraries
+-#
+-#------------------------------------------------------------------------------
+-usage() {
+-    while [ "$#" -ge 1 ]; do echo "$1"; shift; done
+-    cat<<USAGE
+-
+-usage: ${0##*/} [OPTION]
+-options:
+-  -case   dir    specify alternative case directory
+-  -region name   specify mesh region name
+-  -touch         only create the .OpenFOAM file
+-
+-* start paraview $ParaView_VERSION with the OpenFOAM libraries
++#     ParaView interface script for use with vtkPOpenFOAMReader.
+ 
+-USAGE
++# Adjust as necessary.
++# You might also want to set LD_LIBRARY_PATH or DYLD_LIBRARY_PATH.
++paraviewPath="`which paraview`"
++# or in full path like paraviewPath=/opt/ParaView3/bin/paraview
++
++if [ ! -x "${paraviewPath}" -o -d "${paraviewPath}" ]; then
++    # not using LINENO which is not supported by dash (yet)
++    echo "ParaView not found; set paraviewPath at line" `awk '/paraviewPath/{print FNR;exit 0}' $0` "of $0."
+     exit 1
+-}
++fi
+ 
+-unset regionName touchOnly
++ext=foam
++casePath=.
++script=${0##*/}
++background=yes
++trapCommand=trap
+ 
+-# parse options
+-while [ "$#" -gt 0 ]
++while [ $# -gt 0 ]
+ do
+     case "$1" in
+-    -h | -help)
+-        usage
+-        ;;
+-    -case)
+-        [ "$#" -ge 2 ] || usage "'$1' option requires an argument"
+-        cd "$2" 2>/dev/null || usage "directory does not exist:  '$2'"
+-        shift 2
+-        ;;
+-    -region)
+-        [ "$#" -ge 2 ] || usage "'$1' option requires an argument"
+-        regionName=$2
+-        shift 2
+-        ;;
+-    -touch)
+-        touchOnly=true
+-        shift
+-        ;;
+-    *)
+-        usage "unknown option/argument: '$*'"
+-        ;;
++	-case)
++	    if [ $# -lt 2 ]; then
++		echo "-case requires path specification"
++		exit 1
++	    fi
++	    shift
++	    casePath="$1"
++	    ;;
++	-clientServer|-cs)
++	    if [ $# -lt 2 ]; then
++		echo "-clientServer or -cs requires specification of the server resource name"
++		exit 1
++	    fi
++	    shift
++	    csResourceName="$1"
++	    ;;
++	-foreground|-fg)
++	    background=no
++	    ;;
++	-keepStub|-ks)
++	    trapCommand=:
++	    ;;
++	-help)
++	    echo "Usage: ${script} [-case <dir>] [-clientServer|-cs <server resource name>] [-foreground|-fg] [-keepStub|-ks] [-help]"
++	    exit 0
++	    ;;
+     esac
++    shift
+ done
+ 
+-# get a sensible caseName
+-caseName=${PWD##*/}
+-caseFile="$caseName.OpenFOAM"
+-fvControls="system"
+-
+-if [ -n "$regionName" ]
+-then
+-    caseFile="$caseName{$regionName}.OpenFOAM"
+-    fvControls="$fvControls/$regionName"
+-fi
+-
+-if [ -n "$touchOnly" ]
+-then
+-    touch "$caseFile"
+-    echo "created '$caseFile'"
+-    exit 0
++# cd to the case directory
++if ! cd "${casePath}" > /dev/null 2>&1; then
++    echo "Cannot change directory to \"${casePath}\"; exiting"
++    exit 1
+ fi
+ 
+-# parent directory for normal or parallel results
+-case "$caseName" in
+-    processor*) parentDir=".." ;;
+-    *)          parentDir="."  ;;
+-esac
+-
+-# check existence of essential files
+-for check in system/controlDict $fvControls/fvSchemes $fvControls/fvSolution
+-do
+-    [ -s "$parentDir/$check" ] || usage "file does not exist:  '$parentDir/$check'"
+-done
++caseName="${PWD##*/}"
+ 
++# see if caseName starts with controlDict or the case is in the root directory.
++if [ "${caseName#controlDict}" != "${caseName}" -o ! "${caseName}" ]; then
++    # Use case.foam as file name given to ParaView
++    caseName="case"
++fi
+ 
+-case "$ParaView_VERSION" in
+-2*)
+-    trap "rm -f paraFoam.pvs $caseFile 2>/dev/null; exit 0" EXIT TERM INT
+-    touch "$caseFile"
+-
+-    # since we are now in the cwd, %CASE% is '$PWD/$caseFile'
+-    sed -e s@%CASE%@$PWD/$caseFile@g \
+-        $WM_PROJECT_DIR/bin/tools/paraFoam.pvs > paraFoam.pvs
+-
+-    paraview paraFoam.pvs
+-    ;;
+-
+-*)
+-    # only create/remove caseFile if it didn't already exist
+-    [ -e $caseFile ] || {
+-        trap "rm -f $caseFile 2>/dev/null; exit 0" EXIT TERM INT
+-        touch "$caseFile"
+-        echo "created temporary '$caseFile'"
+-    }
++fileName="${caseName}.${ext}"
++if [ -e "${fileName}" ]; then
++    if [ ! -r "${fileName}" ]; then
++	echo "Stub ${fileName} exists but not readable; exiting"
++	exit 1
++    fi
++    trapCommand=:
++else
++    if ! touch "${fileName}" > /dev/null 2>&1; then
++	echo "Cannot create stub ${fileName}; exiting"
++	exit 1
++    fi
++fi
+ 
+-    paraview --data="$caseFile"
+-    ;;
++# set the locale where ParaView is run under to "C" so that the
++# interpretation of decimal points by the system routines are not
++# affected
++export LANG=C
++export LC_ALL=C
++
++# specify fileName with full path so that it can easily be accessed
++# later with File->Recent Files
++if [ "${background}" = "yes" ]; then
++    (
++	${trapCommand} "rm -f \"${fileName}\" ; exit 0" \
++	    EXIT HUP INT PIPE ALRM TERM USR1 USR2 ;
++	if [ "${csResourceName}" ]; then
++	    "${paraviewPath}" --data="${PWD}/${fileName}" \
++		--server="${csResourceName}"
++	else
++	    "${paraviewPath}" --data="${PWD}/${fileName}"
++	fi
++    ) &
++else
++    ${trapCommand} "rm -f \"${fileName}\" ; exit 0" \
++	EXIT HUP INT PIPE ALRM TERM USR1 USR2
++    if [ "${csResourceName}" ]; then
++	"${paraviewPath}" --data="${PWD}/${fileName}" \
++	    --server="${csResourceName}"
++    else
++	"${paraviewPath}" --data="${PWD}/${fileName}"
++    fi
++fi
+ 
+-esac
+ #------------------------------------------------------------------------------
+diff -urN OpenFOAM-1.6-src/etc/bashrc OpenFOAM-1.6/etc/bashrc
+--- OpenFOAM-1.6-src/etc/bashrc	2009-07-15 13:48:16.000000000 +0200
++++ OpenFOAM-1.6/etc/bashrc	2009-08-06 10:32:47.000000000 +0200
+@@ -43,9 +43,9 @@
+ #
+ # Location of FOAM installation
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-foamInstall=$HOME/$WM_PROJECT
++# foamInstall=$HOME/$WM_PROJECT
+ # foamInstall=~$WM_PROJECT
+-# foamInstall=/usr/local/$WM_PROJECT
++foamInstall=/usr/lib/$WM_PROJECT
+ # foamInstall=/opt/$WM_PROJECT
+ #
+ # END OF (NORMAL) USER EDITABLE PART
+@@ -73,7 +73,7 @@
+ 
+ # Location of third-party software
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-export WM_THIRD_PARTY_DIR=$WM_PROJECT_INST_DIR/ThirdParty-$WM_PROJECT_VERSION
++# export WM_THIRD_PARTY_DIR=$WM_PROJECT_INST_DIR/ThirdParty-$WM_PROJECT_VERSION
+ 
+ 
+ # Operating System/Platform
+@@ -232,14 +232,14 @@
+ 
+ 
+ _foamSource $WM_PROJECT_DIR/etc/settings.sh
+-_foamSource $WM_PROJECT_DIR/etc/aliases.sh
++# _foamSource $WM_PROJECT_DIR/etc/aliases.sh
+ 
+ 
+ # Source user setup files for optional packages
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ # _foamSource $WM_PROJECT_DIR/etc/apps/paraview/bashrc
+-_foamSource $WM_PROJECT_DIR/etc/apps/paraview3/bashrc
+-_foamSource $WM_PROJECT_DIR/etc/apps/ensight/bashrc
++# _foamSource $WM_PROJECT_DIR/etc/apps/paraview3/bashrc
++# _foamSource $WM_PROJECT_DIR/etc/apps/ensight/bashrc
+ 
+ 
+ # Clean environment paths again. Only remove duplicates
+diff -urN OpenFOAM-1.6-src/etc/cshrc OpenFOAM-1.6/etc/cshrc
+--- OpenFOAM-1.6-src/etc/cshrc	2009-07-15 13:48:16.000000000 +0200
++++ OpenFOAM-1.6/etc/cshrc	2009-08-06 10:42:58.000000000 +0200
+@@ -42,9 +42,9 @@
+ #
+ # Location of FOAM installation
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-set foamInstall = $HOME/$WM_PROJECT
++# set foamInstall = $HOME/$WM_PROJECT
+ # set foamInstall = ~$WM_PROJECT
+-# set foamInstall = /usr/local/$WM_PROJECT
++set foamInstall = /usr/lib/$WM_PROJECT
+ # set foamInstall = /opt/$WM_PROJECT
+ #
+ # END OF (NORMAL) USER EDITABLE PART
+@@ -67,7 +67,7 @@
+ 
+ # Location of third-party software
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-setenv WM_THIRD_PARTY_DIR $WM_PROJECT_INST_DIR/ThirdParty-$WM_PROJECT_VERSION
++# setenv WM_THIRD_PARTY_DIR $WM_PROJECT_INST_DIR/ThirdParty-$WM_PROJECT_VERSION
+ 
+ 
+ # Operating System/Platform
+@@ -230,12 +230,12 @@
+ alias _foamSource 'if ($?FOAM_VERBOSE && $?prompt) echo "Executing: \!*"; source \!*'
+ 
+ _foamSource $WM_PROJECT_DIR/etc/settings.csh
+-_foamSource $WM_PROJECT_DIR/etc/aliases.csh
++# _foamSource $WM_PROJECT_DIR/etc/aliases.csh
+ 
+ # Source user setup files for optional packages
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ # _foamSource $WM_PROJECT_DIR/etc/apps/paraview/cshrc
+-_foamSource $WM_PROJECT_DIR/etc/apps/paraview3/cshrc
++# _foamSource $WM_PROJECT_DIR/etc/apps/paraview3/cshrc
+ # _foamSource $WM_PROJECT_DIR/etc/apps/ensight/cshrc
+ 
+ 
+diff -urN OpenFOAM-1.6-src/etc/settings.csh OpenFOAM-1.6/etc/settings.csh
+--- OpenFOAM-1.6-src/etc/settings.csh	2009-07-23 18:31:28.000000000 +0200
++++ OpenFOAM-1.6/etc/settings.csh	2009-08-06 10:46:06.000000000 +0200
+@@ -37,27 +37,27 @@
+ alias _foamAddLib 'setenv LD_LIBRARY_PATH \!*\:${LD_LIBRARY_PATH}'
+ 
+ # location of the jobControl directory
+-setenv FOAM_JOB_DIR $WM_PROJECT_INST_DIR/jobControl
++setenv FOAM_JOB_DIR $HOME/$WM_PROJECT/jobControl
+ 
+ # wmake configuration
+ setenv WM_DIR $WM_PROJECT_DIR/wmake
+ setenv WM_LINK_LANGUAGE c++
+-setenv WM_OPTIONS $WM_ARCH$WM_COMPILER$WM_PRECISION_OPTION$WM_COMPILE_OPTION
++setenv WM_OPTIONS $WM_ARCH$WM_COMPILER
+ 
+ # base configuration
+ setenv FOAM_APP $WM_PROJECT_DIR/applications
+-setenv FOAM_APPBIN $WM_PROJECT_DIR/applications/bin/$WM_OPTIONS
++setenv FOAM_APPBIN $WM_PROJECT_DIR/applications/bin
+ setenv FOAM_LIB $WM_PROJECT_DIR/lib
+-setenv FOAM_LIBBIN $WM_PROJECT_DIR/lib/$WM_OPTIONS
++setenv FOAM_LIBBIN $WM_PROJECT_DIR/lib
+ setenv FOAM_SRC $WM_PROJECT_DIR/src
+ 
+ # shared site configuration - similar naming convention as ~OpenFOAM expansion
+-setenv FOAM_SITE_APPBIN $WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/bin/$WM_OPTIONS
+-setenv FOAM_SITE_LIBBIN $WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/lib/$WM_OPTIONS
++setenv FOAM_SITE_APPBIN $WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/bin
++setenv FOAM_SITE_LIBBIN $WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/lib
+ 
+ # user configuration
+-setenv FOAM_USER_APPBIN $WM_PROJECT_USER_DIR/applications/bin/$WM_OPTIONS
+-setenv FOAM_USER_LIBBIN $WM_PROJECT_USER_DIR/lib/$WM_OPTIONS
++setenv FOAM_USER_APPBIN $WM_PROJECT_USER_DIR/applications/bin
++setenv FOAM_USER_LIBBIN $WM_PROJECT_USER_DIR/lib
+ 
+ # convenience
+ setenv FOAM_TUTORIALS $WM_PROJECT_DIR/tutorials
+@@ -79,7 +79,7 @@
+ # Select compiler installation
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ # compilerInstall = OpenFOAM | System
+-set compilerInstall=OpenFOAM
++set compilerInstall=System
+ 
+ switch ("$compilerInstall")
+ case OpenFOAM:
+@@ -124,30 +124,30 @@
+ 
+ switch ("$WM_MPLIB")
+ case OPENMPI:
+-    set mpi_version=openmpi-1.3.3
+-    setenv MPI_HOME $WM_THIRD_PARTY_DIR/$mpi_version
+-    setenv MPI_ARCH_PATH $MPI_HOME/platforms/$WM_OPTIONS
++    set mpi_version=openmpi
++#     setenv MPI_HOME $WM_THIRD_PARTY_DIR/$mpi_version
++    setenv MPI_ARCH_PATH /usr
+ 
+     # Tell OpenMPI where to find its install directory
+     setenv OPAL_PREFIX $MPI_ARCH_PATH
+ 
+-    _foamAddPath $MPI_ARCH_PATH/bin
+-    _foamAddLib  $MPI_ARCH_PATH/lib
++#     _foamAddPath $MPI_ARCH_PATH/bin
++#     _foamAddLib  $MPI_ARCH_PATH/lib
+ 
+-    setenv FOAM_MPI_LIBBIN $FOAM_LIBBIN/$mpi_version
++    setenv FOAM_MPI_LIBBIN $FOAM_LIB/$mpi_version
+     unset mpi_version
+     breaksw
+ 
+ case MPICH:
+-    set mpi_version=mpich-1.2.4
+-    setenv MPI_HOME $WM_THIRD_PARTY_DIR/$mpi_version
+-    setenv MPI_ARCH_PATH $MPI_HOME/platforms/$WM_OPTIONS
++    set mpi_version=mpich
++#     setenv MPI_HOME $WM_THIRD_PARTY_DIR/$mpi_version
++    setenv MPI_ARCH_PATH /usr
+     setenv MPICH_ROOT $MPI_ARCH_PATH
+ 
+-    _foamAddPath $MPI_ARCH_PATH/bin
+-    _foamAddLib  $MPI_ARCH_PATH/lib
++#     _foamAddPath $MPI_ARCH_PATH/bin
++#     _foamAddLib  $MPI_ARCH_PATH/lib
+ 
+-    setenv FOAM_MPI_LIBBIN $FOAM_LIBBIN/$mpi_version
++    setenv FOAM_MPI_LIBBIN $FOAM_LIB/$mpi_version
+     unset mpi_version
+     breaksw
+ 
+diff -urN OpenFOAM-1.6-src/etc/settings.sh OpenFOAM-1.6/etc/settings.sh
+--- OpenFOAM-1.6-src/etc/settings.sh	2009-07-23 18:31:28.000000000 +0200
++++ OpenFOAM-1.6/etc/settings.sh	2009-08-06 10:38:07.000000000 +0200
+@@ -53,27 +53,27 @@
+ 
+ 
+ # location of the jobControl directory
+-export FOAM_JOB_DIR=$WM_PROJECT_INST_DIR/jobControl
++export FOAM_JOB_DIR=$HOME/$WM_PROJECT/jobControl
+ 
+ # wmake configuration
+ export WM_DIR=$WM_PROJECT_DIR/wmake
+ export WM_LINK_LANGUAGE=c++
+-export WM_OPTIONS=$WM_ARCH$WM_COMPILER$WM_PRECISION_OPTION$WM_COMPILE_OPTION
++export WM_OPTIONS=$WM_ARCH$WM_COMPILER
+ 
+ # base configuration
+ export FOAM_APP=$WM_PROJECT_DIR/applications
+-export FOAM_APPBIN=$WM_PROJECT_DIR/applications/bin/$WM_OPTIONS
++export FOAM_APPBIN=$WM_PROJECT_DIR/applications/bin
+ export FOAM_LIB=$WM_PROJECT_DIR/lib
+-export FOAM_LIBBIN=$WM_PROJECT_DIR/lib/$WM_OPTIONS
++export FOAM_LIBBIN=$WM_PROJECT_DIR/lib
+ export FOAM_SRC=$WM_PROJECT_DIR/src
+ 
+ # shared site configuration - similar naming convention as ~OpenFOAM expansion
+-export FOAM_SITE_APPBIN=$WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/bin/$WM_OPTIONS
+-export FOAM_SITE_LIBBIN=$WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/lib/$WM_OPTIONS
++export FOAM_SITE_APPBIN=$WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/bin
++export FOAM_SITE_LIBBIN=$WM_PROJECT_INST_DIR/site/$WM_PROJECT_VERSION/lib
+ 
+ # user configuration
+-export FOAM_USER_APPBIN=$WM_PROJECT_USER_DIR/applications/bin/$WM_OPTIONS
+-export FOAM_USER_LIBBIN=$WM_PROJECT_USER_DIR/lib/$WM_OPTIONS
++export FOAM_USER_APPBIN=$WM_PROJECT_USER_DIR/applications/bin
++export FOAM_USER_LIBBIN=$WM_PROJECT_USER_DIR/lib
+ 
+ # convenience
+ export FOAM_TUTORIALS=$WM_PROJECT_DIR/tutorials
+@@ -95,7 +95,7 @@
+ # Select compiler installation
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ # compilerInstall = OpenFOAM | System
+-compilerInstall=OpenFOAM
++compilerInstall=System
+ 
+ case "${compilerInstall:-OpenFOAM}" in
+ OpenFOAM)
+@@ -146,30 +146,30 @@
+ 
+ case "$WM_MPLIB" in
+ OPENMPI)
+-    mpi_version=openmpi-1.3.3
+-    export MPI_HOME=$WM_THIRD_PARTY_DIR/$mpi_version
+-    export MPI_ARCH_PATH=$MPI_HOME/platforms/$WM_OPTIONS
++    mpi_version=openmpi
++#     export MPI_HOME=$WM_THIRD_PARTY_DIR/$mpi_version
++    export MPI_ARCH_PATH=/usr
+ 
+     # Tell OpenMPI where to find its install directory
+     export OPAL_PREFIX=$MPI_ARCH_PATH
+ 
+-    _foamAddPath $MPI_ARCH_PATH/bin
+-    _foamAddLib  $MPI_ARCH_PATH/lib
++#     _foamAddPath $MPI_ARCH_PATH/bin
++#     _foamAddLib  $MPI_ARCH_PATH/lib
+ 
+-    export FOAM_MPI_LIBBIN=$FOAM_LIBBIN/$mpi_version
++    export FOAM_MPI_LIBBIN=$FOAM_LIB/$mpi_version
+     unset mpi_version
+     ;;
+ 
+ MPICH)
+-    mpi_version=mpich-1.2.4
+-    export MPI_HOME=$WM_THIRD_PARTY_DIR/$mpi_version
+-    export MPI_ARCH_PATH=$MPI_HOME/platforms/$WM_OPTIONS
++    mpi_version=mpich
++#     export MPI_HOME=$WM_THIRD_PARTY_DIR/$mpi_version
++    export MPI_ARCH_PATH=/usr
+     export MPICH_ROOT=$MPI_ARCH_PATH
+ 
+-    _foamAddPath $MPI_ARCH_PATH/bin
+-    _foamAddLib  $MPI_ARCH_PATH/lib
++#     _foamAddPath $MPI_ARCH_PATH/bin
++#     _foamAddLib  $MPI_ARCH_PATH/lib
+ 
+-    export FOAM_MPI_LIBBIN=$FOAM_LIBBIN/$mpi_version
++    export FOAM_MPI_LIBBIN=$FOAM_LIB/$mpi_version
+     unset mpi_version
+     ;;
+ 
+diff -urN OpenFOAM-1.6-src/src/decompositionMethods/decompositionMethods/Make/options OpenFOAM-1.6/src/decompositionMethods/decompositionMethods/Make/options
+--- OpenFOAM-1.6-src/src/decompositionMethods/decompositionMethods/Make/options	2009-04-24 08:56:28.000000000 +0200
++++ OpenFOAM-1.6/src/decompositionMethods/decompositionMethods/Make/options	2009-08-06 13:50:29.000000000 +0200
+@@ -1,8 +1,7 @@
+ EXE_INC = \
+-    -I$(WM_THIRD_PARTY_DIR)/scotch_5.1/src/libscotch/lnInclude \
+-    -I$(WM_THIRD_PARTY_DIR)/metis-5.0pre2/include
++    -I/usr/include/scotch \
++    -I/usr/include/metis
+ 
+ LIB_LIBS = \
+     -lscotch \
+-    -lmetis \
+-    -lGKlib
++    -lmetis
+diff -urN OpenFOAM-1.6-src/src/decompositionMethods/parMetisDecomp/Make/options OpenFOAM-1.6/src/decompositionMethods/parMetisDecomp/Make/options
+--- OpenFOAM-1.6-src/src/decompositionMethods/parMetisDecomp/Make/options	2009-04-02 15:00:31.000000000 +0200
++++ OpenFOAM-1.6/src/decompositionMethods/parMetisDecomp/Make/options	2009-08-06 11:00:53.000000000 +0200
+@@ -2,11 +2,11 @@
+ 
+ EXE_INC = \
+     $(PFLAGS) $(PINC) \
+-    -I$(WM_THIRD_PARTY_DIR)/ParMetis-3.1/ParMETISLib \
+-    -I$(WM_THIRD_PARTY_DIR)/ParMetis-3.1 \
++    -I/usr/include/parmetis \
++    -I/usr/include/metis \
+     -I../decompositionMethods/lnInclude
+ 
+ LIB_LIBS = \
+     -L$(FOAM_MPI_LIBBIN) \
+-    -lmetis-parmetis \
++    -lmetis \
+     -lparmetis
+diff -urN OpenFOAM-1.6-src/src/fvAgglomerationMethods/MGridGenGamgAgglomeration/Make/options OpenFOAM-1.6/src/fvAgglomerationMethods/MGridGenGamgAgglomeration/Make/options
+--- OpenFOAM-1.6-src/src/fvAgglomerationMethods/MGridGenGamgAgglomeration/Make/options	2009-07-03 11:54:30.000000000 +0200
++++ OpenFOAM-1.6/src/fvAgglomerationMethods/MGridGenGamgAgglomeration/Make/options	2009-08-06 11:02:21.000000000 +0200
+@@ -1,5 +1,3 @@
+-ParMGridGen = $(WM_THIRD_PARTY_DIR)/ParMGridGen-1.0
+-
+ TYPE_REAL=
+ #if defined(WM_SP)
+ TYPE_REAL=-DTYPE_REAL
+@@ -7,9 +5,9 @@
+ 
+ EXE_INC = \
+     -I$(LIB_SRC)/finiteVolume/lnInclude \
+-    -I$(ParMGridGen)/MGridGen/Lib/lnInclude \
+-    -I$(ParMGridGen)/MGridGen/IMlib/lnInclude \
++    -I/usr/include/mgridgen \
+     $(TYPE_REAL)
+ 
+ LIB_LIBS = \
++    -lIMlib \
+     -lMGridGen
+diff -urN OpenFOAM-1.6-src/wmake/Makefile OpenFOAM-1.6/wmake/Makefile
+--- OpenFOAM-1.6-src/wmake/Makefile	2009-07-21 20:06:59.000000000 +0200
++++ OpenFOAM-1.6/wmake/Makefile	2009-08-06 10:47:17.000000000 +0200
+@@ -58,7 +58,7 @@
+ 
+ LIB_SRC            = $(WM_PROJECT_DIR)/src
+ LIB_DIR            = $(WM_PROJECT_DIR)/lib
+-LIB_WM_OPTIONS_DIR = $(LIB_DIR)/$(WM_OPTIONS)
++LIB_WM_OPTIONS_DIR = $(LIB_DIR)
+ OBJECTS_DIR        = $(MAKE_DIR)/$(WM_OPTIONS)
+ CLASSES_DIR        = $(MAKE_DIR)/classes
+ 
+diff -urN OpenFOAM-1.6-src/bin/foamInstallationTest OpenFOAM-1.6/bin/foamInstallationTest
+--- OpenFOAM-1.6-src/bin/foamInstallationTest	2009-07-27 13:31:34.000000000 +0200
++++ OpenFOAM-1.6/bin/foamInstallationTest	2009-08-06 18:19:44.000000000 +0200
+@@ -383,7 +383,7 @@
+ 
+ 
+ checkOpenFOAMEnvironment() {
+-    [ -d "$WM_PROJECT_INST_DIR" ] && [ -d "$WM_THIRD_PARTY_DIR" ] || {
++    [ -d "$WM_PROJECT_INST_DIR" ] || {
+         echo ""
+         echo "FATAL ERROR: OpenFOAM environment not configured."
+         echo ""
