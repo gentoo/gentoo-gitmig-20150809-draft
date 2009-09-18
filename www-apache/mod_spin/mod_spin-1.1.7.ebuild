@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.7.ebuild,v 1.2 2008/01/31 19:27:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_spin/mod_spin-1.1.7.ebuild,v 1.3 2009/09/18 15:33:57 hollow Exp $
 
-inherit apache-module autotools
+inherit apache-module
 
 DESCRIPTION="A simple template language, with persistent session data tracking and SQL connection pooling"
 HOMEPAGE="http://rexursive.com/software/modspin"
@@ -21,6 +21,7 @@ DOCFILES="AUTHORS ChangeLog INSTALL NEWS README"
 DEPEND=">=sys-libs/db-4.2
 	dev-libs/libxml2
 	www-apache/libapreq2"
+RDEPEND="${DEPEND}"
 
 need_apache2
 
