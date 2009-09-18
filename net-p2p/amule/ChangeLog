@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/amule
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.144 2009/09/10 19:48:08 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/ChangeLog,v 1.145 2009/09/18 14:59:45 patrick Exp $
+
+*amule-2.2.6 (18 Sep 2009)
+
+  18 Sep 2009; Patrick Lauer <patrick@gentoo.org> +amule-2.2.6.ebuild:
+  Bump to 2.2.6, fixes #285464
 
   10 Sep 2009; Patrick Lauer <patrick@gentoo.org> amule-2.2.5.ebuild:
   Fixing cryptopp dep to avoid crashes, fixes #276515
