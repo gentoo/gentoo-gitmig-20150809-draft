@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/haml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.15 2009/08/26 23:23:20 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/ChangeLog,v 1.16 2009/09/18 05:56:00 graaff Exp $
+
+*haml-2.2.4 (18 Sep 2009)
+
+  18 Sep 2009; Hans de Graaff <graaff@gentoo.org> +haml-2.2.4.ebuild:
+  Version bump.
 
 *haml-2.2.3 (26 Aug 2009)
 
