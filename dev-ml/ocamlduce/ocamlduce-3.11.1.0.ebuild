@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.11.1.0.ebuild,v 1.1 2009/09/18 21:43:45 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlduce/ocamlduce-3.11.1.0.ebuild,v 1.2 2009/09/18 22:45:34 aballier Exp $
 
 EAPI="2"
 
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="+ocamlopt"
 
 DEPEND="~dev-lang/ocaml-${OCAML_VERSION}[ocamlopt?]
-	>=dev-ml/findlib-1.1.2"
+	>=dev-ml/findlib-1.2.4-r1"
 
 RDEPEND="${DEPEND}"
 
@@ -65,6 +65,5 @@ src_install() {
 	if use ocamlopt; then
 		emake -f Makefile.ocamlduce BINDIR="${D}/usr/bin" LIBDIR="${D}/usr/$(get_libdir)/ocaml" installopt || die
 	fi
-	dosym /usr/$(get_libdir)/ocaml/${PN} /usr/$(get_libdir)/ocaml/site-packages/${PN}
 	dodoc Changes README
 }
