@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.335 2009/09/16 18:42:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.336 2009/09/18 03:26:11 jer Exp $
+
+  18 Sep 2009; Jeroen Roovers <jer@gentoo.org> emacs-23.1.ebuild:
+  Stable for HPPA (bug #285063).
 
   16 Sep 2009; Ulrich Mueller <ulm@gentoo.org> emacs-18.59-r6.ebuild:
   Support 32 bit build on amd64. Add ~amd64 keyword, bug 166839.
