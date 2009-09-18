@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.32 2009/09/06 23:47:16 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.33 2009/09/18 23:17:26 dirtyepic Exp $
+
+*autotrace-0.31.1-r4 (18 Sep 2009)
+
+  18 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> +autotrace-0.31.1-r4.ebuild,
+  +files/autotrace-0.31.1-pkgconfig.patch:
+  Fix broken pkgconfig file, bug #283534 by Dominique Michel. Patch from
+  Alexandre Rostovtsev.
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> autotrace-0.31.1-r3.ebuild:
   Marking autotrace-0.31.1-r3 ~ppc64 for bug 281573
