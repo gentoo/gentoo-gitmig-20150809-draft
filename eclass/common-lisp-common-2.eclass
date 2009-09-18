@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common-2.eclass,v 1.2 2005/12/22 21:44:23 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common-2.eclass,v 1.3 2009/09/18 15:35:50 hkbst Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -19,7 +19,7 @@ CLSYSTEMROOT=/usr/share/common-lisp/systems/
 do-debian-credits() {
 	docinto debian
 	for i in copyright README.Debian changelog; do
-		test -f $i && dodoc ${S}/debian/${i}
+		test -f $i && dodoc "${S}"/debian/${i}
 	done
 	docinto .
 }
@@ -34,7 +34,7 @@ do-debian-credits() {
 impl-save-timestamp-hack() {
 	local impl=$1
 	dodir /usr/share/${impl}
-	tar cpjf ${D}/usr/share/${impl}/portage-timestamp-compensate -C ${D}/usr/$(get_libdir)/${impl} .
+	tar cpjf "${D}"/usr/share/${impl}/portage-timestamp-compensate -C "${D}"/usr/$(get_libdir)/${impl} .
 }
 
 impl-restore-timestamp-hack() {
