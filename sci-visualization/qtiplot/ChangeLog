@@ -1,6 +1,14 @@
 # ChangeLog for sci-visualization/qtiplot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.45 2009/07/29 04:13:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/ChangeLog,v 1.46 2009/09/18 18:40:01 bicatali Exp $
+
+*qtiplot-0.9.7.7-r1 (18 Sep 2009)
+
+  18 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  -qtiplot-0.9.7.7.ebuild, +qtiplot-0.9.7.7-r1.ebuild,
+  +files/qtiplot-0.9.7.7-sip.patch, files/qtiplot-0.9.7.7-syslibs.patch:
+  Fixed for more recent versions of sip, and re-introduced minigzip since it
+  is not distributed by zlib. Closing bug #274633
 
   29 Jul 2009; Ryan Hill <dirtyepic@gentoo.org> qtiplot-0.9.7.7.ebuild,
   +files/qtiplot-0.9.7.7-gcc44.patch:

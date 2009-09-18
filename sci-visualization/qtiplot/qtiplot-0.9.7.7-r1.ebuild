@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7.ebuild,v 1.5 2009/07/29 04:13:59 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/qtiplot/qtiplot-0.9.7.7-r1.ebuild,v 1.1 2009/09/18 18:40:01 bicatali Exp $
 
 EAPI=2
 inherit eutils qt4 fdo-mime python
@@ -34,7 +34,7 @@ CDEPEND=">=x11-libs/qwt-5.2
 
 DEPEND="${CDEPEND}
 	dev-util/pkgconfig
-	python? ( >=dev-python/sip-4.5.2 )
+	python? ( dev-python/sip )
 	doc? ( app-text/docbook-sgml-utils
 		   app-text/docbook-xml-dtd:4.2 )"
 
@@ -48,6 +48,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-syslibs.patch
 	epatch "${FILESDIR}"/${P}-docbuild.patch
 	epatch "${FILESDIR}"/${P}-gcc44.patch
+	has_version ">=dev-python/sip-4.8" && epatch "${FILESDIR}"/${P}-sip.patch
 
 	python_version
 	sed -i \

@@ -1,6 +1,6 @@
 diff -Nur qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pri qtiplot-0.9.7.7/3rdparty/qwtplot3d/qwtplot3d.pri
---- qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pri	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/3rdparty/qwtplot3d/qwtplot3d.pri	2009-04-14 09:25:58.000000000 +0100
+--- qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pri	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/3rdparty/qwtplot3d/qwtplot3d.pri	2009-09-18 19:29:12.000000000 +0100
 @@ -57,11 +57,11 @@
             ../3rdparty/qwtplot3d/include/qwt3d_multiplot.h
  
@@ -18,8 +18,8 @@ diff -Nur qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pri qtiplot-0.9.7.7/
  # zlib support for gl2ps
  zlib {
 diff -Nur qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pro qtiplot-0.9.7.7/3rdparty/qwtplot3d/qwtplot3d.pro
---- qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pro	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/3rdparty/qwtplot3d/qwtplot3d.pro	2009-04-13 19:19:12.000000000 +0100
+--- qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/3rdparty/qwtplot3d/qwtplot3d.pro	2009-09-18 19:29:12.000000000 +0100
 @@ -82,11 +82,10 @@
             include/qwt3d_multiplot.h
  
@@ -36,8 +36,8 @@ diff -Nur qtiplot-0.9.7.7.orig/3rdparty/qwtplot3d/qwtplot3d.pro qtiplot-0.9.7.7/
  # zlib support for gl2ps
  zlib {
 diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/explin/explin.pro qtiplot-0.9.7.7/fitPlugins/explin/explin.pro
---- qtiplot-0.9.7.7.orig/fitPlugins/explin/explin.pro	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/fitPlugins/explin/explin.pro	2009-04-13 19:32:36.000000000 +0100
+--- qtiplot-0.9.7.7.orig/fitPlugins/explin/explin.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/fitPlugins/explin/explin.pro	2009-09-18 19:29:12.000000000 +0100
 @@ -12,9 +12,8 @@
  DESTDIR           = ../
   
@@ -51,8 +51,8 @@ diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/explin/explin.pro qtiplot-0.9.7.7/fitP
  #dynamically link against GSL installed system-wide
  #unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
 diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/exp_saturation/exp_saturation.pro qtiplot-0.9.7.7/fitPlugins/exp_saturation/exp_saturation.pro
---- qtiplot-0.9.7.7.orig/fitPlugins/exp_saturation/exp_saturation.pro	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/fitPlugins/exp_saturation/exp_saturation.pro	2009-04-13 19:33:27.000000000 +0100
+--- qtiplot-0.9.7.7.orig/fitPlugins/exp_saturation/exp_saturation.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/fitPlugins/exp_saturation/exp_saturation.pro	2009-09-18 19:29:12.000000000 +0100
 @@ -12,9 +12,9 @@
  DESTDIR           = ../
   
@@ -67,16 +67,16 @@ diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/exp_saturation/exp_saturation.pro qtip
  #dynamically link against GSL installed system-wide
  #unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
 diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/fitPlugins.pro qtiplot-0.9.7.7/fitPlugins/fitPlugins.pro
---- qtiplot-0.9.7.7.orig/fitPlugins/fitPlugins.pro	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/fitPlugins/fitPlugins.pro	2009-04-13 19:34:21.000000000 +0100
+--- qtiplot-0.9.7.7.orig/fitPlugins/fitPlugins.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/fitPlugins/fitPlugins.pro	2009-09-18 19:29:12.000000000 +0100
 @@ -4,3 +4,4 @@
  	    exp_saturation \
  	    fitRational0 \
            fitRational1 
 +
 diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/fitRational0/fitRational0.pro qtiplot-0.9.7.7/fitPlugins/fitRational0/fitRational0.pro
---- qtiplot-0.9.7.7.orig/fitPlugins/fitRational0/fitRational0.pro	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/fitPlugins/fitRational0/fitRational0.pro	2009-04-13 19:34:49.000000000 +0100
+--- qtiplot-0.9.7.7.orig/fitPlugins/fitRational0/fitRational0.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/fitPlugins/fitRational0/fitRational0.pro	2009-09-18 19:29:12.000000000 +0100
 @@ -12,9 +12,9 @@
  DESTDIR           = ../
   
@@ -91,8 +91,8 @@ diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/fitRational0/fitRational0.pro qtiplot-
  #dynamically link against GSL installed system-wide
  #unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
 diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/fitRational1/fitRational1.pro qtiplot-0.9.7.7/fitPlugins/fitRational1/fitRational1.pro
---- qtiplot-0.9.7.7.orig/fitPlugins/fitRational1/fitRational1.pro	2009-04-13 17:42:29.000000000 +0100
-+++ qtiplot-0.9.7.7/fitPlugins/fitRational1/fitRational1.pro	2009-04-13 19:35:04.000000000 +0100
+--- qtiplot-0.9.7.7.orig/fitPlugins/fitRational1/fitRational1.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/fitPlugins/fitRational1/fitRational1.pro	2009-09-18 19:29:12.000000000 +0100
 @@ -12,9 +12,8 @@
  DESTDIR           = ../
   
@@ -106,8 +106,8 @@ diff -Nur qtiplot-0.9.7.7.orig/fitPlugins/fitRational1/fitRational1.pro qtiplot-
  #dynamically link against GSL installed system-wide
  #unix:LIBS += -L /usr/lib$${libsuff} -lgsl -lgslcblas
 diff -Nur qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro qtiplot-0.9.7.7/qtiplot/qtiplot.pro
---- qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro	2009-04-13 17:42:30.000000000 +0100
-+++ qtiplot-0.9.7.7/qtiplot/qtiplot.pro	2009-04-13 19:05:13.000000000 +0100
+--- qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/qtiplot/qtiplot.pro	2009-09-18 19:31:47.000000000 +0100
 @@ -21,7 +21,7 @@
  #CONFIG          += HAVE_EMF
  
@@ -117,7 +117,7 @@ diff -Nur qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro qtiplot-0.9.7.7/qtiplot/qtipl
  
  CONFIG          += release
  #CONFIG          += debug
-@@ -31,13 +31,12 @@
+@@ -31,13 +31,13 @@
  #!!! Warning: You must modify these paths according to your computer settings
  #############################################################################
  
@@ -127,7 +127,7 @@ diff -Nur qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro qtiplot-0.9.7.7/qtiplot/qtipl
 -INCLUDEPATH       += ../3rdparty/qwt/src
 -INCLUDEPATH       += ../3rdparty/liborigin
 -INCLUDEPATH       += ../3rdparty/gsl/include
--INCLUDEPATH       += ../3rdparty/zlib
+ INCLUDEPATH       += ../3rdparty/zlib
 -INCLUDEPATH       += ../3rdparty/boost_1_36_0
 +INCLUDEPATH       += /usr/include/qwt5
 +INCLUDEPATH       += /usr/include/liborigin2
@@ -136,7 +136,7 @@ diff -Nur qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro qtiplot-0.9.7.7/qtiplot/qtipl
  
  ##################### 3rd PARTY LIBRARIES SECTION ###########################
  #!!! Warning: You must modify these paths according to your computer settings
-@@ -46,12 +45,10 @@
+@@ -46,12 +46,10 @@
  ##################### Linux (Mac OS X) ######################################
  
  # statically link against libraries in 3rdparty
@@ -153,7 +153,7 @@ diff -Nur qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro qtiplot-0.9.7.7/qtiplot/qtipl
  
  # dynamically link against dependencies if they are installed system-wide
  #unix:LIBS         += -lmuparser
-@@ -213,8 +209,6 @@
+@@ -213,8 +211,6 @@
  
  contains(CONFIG, HAVE_LIBPNG){
  	DEFINES += GL2PS_HAVE_LIBPNG
@@ -163,8 +163,8 @@ diff -Nur qtiplot-0.9.7.7.orig/qtiplot/qtiplot.pro qtiplot-0.9.7.7/qtiplot/qtipl
  
  ###############################################################
 diff -Nur qtiplot-0.9.7.7.orig/qtiplot/src/origin/origin.pri qtiplot-0.9.7.7/qtiplot/src/origin/origin.pri
---- qtiplot-0.9.7.7.orig/qtiplot/src/origin/origin.pri	2009-04-13 17:42:30.000000000 +0100
-+++ qtiplot-0.9.7.7/qtiplot/src/origin/origin.pri	2009-04-13 19:17:43.000000000 +0100
+--- qtiplot-0.9.7.7.orig/qtiplot/src/origin/origin.pri	2009-09-18 18:16:33.000000000 +0100
++++ qtiplot-0.9.7.7/qtiplot/src/origin/origin.pri	2009-09-18 19:29:12.000000000 +0100
 @@ -4,14 +4,6 @@
  INCLUDEPATH += src/origin/
  
