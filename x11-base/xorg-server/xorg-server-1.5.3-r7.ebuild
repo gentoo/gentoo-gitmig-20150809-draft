@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r7.ebuild,v 1.4 2009/08/10 17:37:33 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.5.3-r7.ebuild,v 1.5 2009/09/19 22:40:28 remi Exp $
 
 # Must be before x-modular eclass is inherited
 SNAPSHOT="yes"
@@ -94,6 +94,7 @@ IUSE="${IUSE_VIDEO_CARDS}
 	hal ipv6 minimal nptl sdl"
 RDEPEND="hal? ( sys-apps/hal )
 	tslib? ( x11-libs/tslib x11-libs/libXCalibrate )
+	dev-libs/openssl
 	>=x11-libs/libXfont-1.3.3
 	>=x11-libs/xtrans-1.2.2
 	>=x11-libs/libXau-1.0.4
