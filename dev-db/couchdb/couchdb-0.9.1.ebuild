@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.9.1.ebuild,v 1.1 2009/08/02 13:47:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.9.1.ebuild,v 1.2 2009/09/19 11:25:56 maekke Exp $
 
 inherit eutils distutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://apache/couchdb/${PV}/apache-${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="test mirror" #72375
 
