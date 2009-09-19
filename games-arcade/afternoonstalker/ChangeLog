@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/afternoonstalker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.8 2009/03/02 06:57:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/afternoonstalker/ChangeLog,v 1.9 2009/09/19 10:30:00 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org>
+  afternoonstalker-1.1.2.ebuild:
+  x86 stable, bug #285133
 
 *afternoonstalker-1.1.2 (02 Mar 2009)
 
