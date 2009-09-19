@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.13 2009/09/19 17:41:52 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.14 2009/09/19 21:36:48 zzam Exp $
 
 EAPI="1"
 
@@ -130,10 +130,6 @@ src_unpack() {
 	cd "${S}"
 
 	# patches go here...
-
-	# allow cups to access usb_device nodes of printers, Bug #285166
-	epatch "${FILESDIR}"/udev-146-printer-usb_device-permission.diff
-
 	if ! use devfs-compat; then
 		# see Bug #269359
 		epatch "${FILESDIR}"/udev-141-remove-devfs-names.diff
