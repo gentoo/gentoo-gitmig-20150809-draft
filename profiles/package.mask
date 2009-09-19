@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10474 2009/09/19 14:56:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10475 2009/09/19 15:38:20 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -819,17 +819,6 @@ app-misc/nomadii-utils
 # Mask kde4 printing stuff
 <kde-base/printer-applet-4.3.0
 <kde-base/system-config-printer-kde-4.3.0
-
-# Rémi Cardona <remi@gentoo.org> (06 Aug 2009)
-# Big Xorg 1.3/1.4 mask. Masked for removal Real Soon Now (tm)
-# xf86-input-evtouch going out completely, switch to evdev
-=x11-base/xorg-server-1.3.0.0-r6
-=x11-base/xorg-server-1.4.2
-x11-drivers/xf86-input-evtouch
-<x11-drivers/xf86-input-keyboard-1.3.2
-<x11-drivers/xf86-input-mouse-1.4.0
-<media-libs/mesa-7.1
-=x11-drivers/nvidia-drivers-71.86.07
 
 # Samuli Suominen <ssuominen@gentoo.org> (03 Aug 2009)
 # USE gmplayer in mplayer is deprecated. Use smplayer or
