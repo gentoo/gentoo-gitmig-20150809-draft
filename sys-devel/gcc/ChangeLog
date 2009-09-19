@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.722 2009/09/02 17:06:36 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.723 2009/09/19 23:36:12 aballier Exp $
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> gcc-4.4.1.ebuild:
+  keyword ~x86-fbsd
 
   02 Sep 2009; Mark Loeser <halcy0n@gentoo.org> gcc-4.3.2-r4.ebuild:
   Bump patchset to include SH fix
