@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_fastcgi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.7 2009/07/21 09:40:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/ChangeLog,v 1.8 2009/09/19 11:17:04 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org>
+  mod_fastcgi-2.4.7_pre0811090952.ebuild:
+  amd64/x86 stable, bug #285090
 
 *mod_fastcgi-2.4.7_pre0811090952 (21 Jul 2009)
 

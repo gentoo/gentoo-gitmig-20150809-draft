@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.7_pre0811090952.ebuild,v 1.1 2009/07/21 09:40:38 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_fastcgi/mod_fastcgi-2.4.7_pre0811090952.ebuild,v 1.2 2009/09/19 11:17:04 maekke Exp $
 
 inherit apache-module eutils
 
@@ -10,7 +10,7 @@ DESCRIPTION="FastCGI is a open extension to CGI without the limitations of serve
 HOMEPAGE="http://fastcgi.com/"
 SRC_URI="http://www.fastcgi.com/dist/${MY_P}.tar.gz"
 
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="FastCGI"
 IUSE=""
