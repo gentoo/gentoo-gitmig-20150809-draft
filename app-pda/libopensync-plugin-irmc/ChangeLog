@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/libopensync-plugin-irmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.12 2009/09/19 16:25:31 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/libopensync-plugin-irmc/ChangeLog,v 1.13 2009/09/19 16:26:56 betelgeuse Exp $
+
+  19 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
+  libopensync-plugin-irmc-0.36.ebuild:
+  Turn on bluetooth by default so the ebuild doesn't fail with default
+  settings. Fixes bug #254724.
 
   19 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
   -libopensync-plugin-irmc-0.21.ebuild,
