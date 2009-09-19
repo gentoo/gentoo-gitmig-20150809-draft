@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kdenlive
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.45 2009/07/24 06:25:13 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kdenlive/ChangeLog,v 1.46 2009/09/19 10:35:34 aballier Exp $
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> -kdenlive-0.7.3.ebuild,
+  -kdenlive-0.7.4.ebuild:
+  remove old
 
   23 Jul 2009; Marcus D. Hanwell <cryos@gentoo.org> kdenlive-0.7.5.ebuild:
   Dependency fixes for bugs 252425 and 277365. Nepomuk is required, as is
