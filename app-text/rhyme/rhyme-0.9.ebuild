@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.12 2009/09/19 18:31:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.13 2009/09/19 20:52:58 mr_bones_ Exp $
 
 inherit toolchain-funcs
 
-# missing files ... 
+# missing files ...
 RESTRICT="test"
 
 DESCRIPTION="Console based Rhyming Dictionary"
