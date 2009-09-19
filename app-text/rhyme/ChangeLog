@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rhyme
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.12 2009/05/30 02:07:14 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/ChangeLog,v 1.13 2009/09/19 18:31:07 patrick Exp $
+
+  19 Sep 2009; Patrick Lauer <patrick@gentoo.org> rhyme-0.9.ebuild:
+  Restricting tests #277940 and adding ~amd64 keyword
 
   30 May 2009; Jeremy Olexa <darkside@gentoo.org> rhyme-0.9.ebuild:
   (non maintainer commit) Respect CC and QA fixes, bug 243744 by Espen Hustad
