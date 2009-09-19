@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p43-r1.ebuild,v 1.1 2009/09/15 22:04:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/neatx-0.3.1_p43-r1.ebuild,v 1.2 2009/09/19 22:32:45 voyageur Exp $
 
 EAPI="2"
 
@@ -23,7 +23,9 @@ RDEPEND="dev-python/pexpect
 	 app-portage/portage-utils
 	 media-fonts/font-misc-misc
 	 media-fonts/font-cursor-misc
-	 || ( net-analyze/gnu-netcat net-analyzer/netcat )
+	 || ( net-analyze/gnu-netcat
+	 	net-analyzer/netcat
+		net-analyzer/netcat6 )
 	 net-misc/nx"
 
 S=${WORKDIR}/${PN}
@@ -61,9 +63,11 @@ src_install() {
 	insinto /etc
 	newins doc/neatx.conf.example neatx.conf
 
-	# nc or netcat?
+	# nc or netcat6 or netcat?
 	if has_version net-analyzer/gnu-netcat; then
 		nc_path="/usr/bin/netcat"
+	elif has_version net-analyzer/netcat6; then
+		nc_path="/usr/bin/nc6"
 	else
 		nc_path="/usr/bin/nc"
 	fi

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/neatx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.2 2009/09/15 22:04:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neatx/ChangeLog,v 1.3 2009/09/19 22:32:45 voyageur Exp $
+
+  19 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  neatx-0.3.1_p43-r1.ebuild:
+  Allow netcat6 too (with nc_path pointing to nc6), bug #285358
 
 *neatx-0.3.1_p43-r1 (15 Sep 2009)
 
