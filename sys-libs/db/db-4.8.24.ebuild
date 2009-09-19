@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.24.ebuild,v 1.1 2009/09/18 22:26:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.8.24.ebuild,v 1.2 2009/09/19 23:48:01 robbat2 Exp $
 
 inherit eutils db flag-o-matic java-pkg-opt-2 autotools libtool
 
@@ -44,11 +44,12 @@ src_unpack() {
 	do
 		epatch "${DISTDIR}"/patch."${MY_PV}"."${i}"
 	done
-	epatch "${FILESDIR}"/"${PN}"-4.8-libtool.patch
+	epatch "${FILESDIR}"/${PN}-4.8-libtool.patch
+	epatch "${FILESDIR}"/${PN}-4.8.24-java-manifest-location.patch
 
 	# use the includes from the prefix
-	epatch "${FILESDIR}"/"${PN}"-4.6-jni-check-prefix-first.patch
-	epatch "${FILESDIR}"/"${PN}"-4.3-listen-to-java-options.patch
+	epatch "${FILESDIR}"/${PN}-4.6-jni-check-prefix-first.patch
+	epatch "${FILESDIR}"/${PN}-4.3-listen-to-java-options.patch
 
 	sed -e "/^DB_RELEASE_DATE=/s/%B %e, %Y/%Y-%m-%d/" -i dist/RELEASE
 
