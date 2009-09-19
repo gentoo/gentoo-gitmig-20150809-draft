@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/ddrescue
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.20 2009/09/19 04:38:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ddrescue/ChangeLog,v 1.21 2009/09/19 08:30:00 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> ddrescue-1.11.ebuild:
+  amd64/x86 stable, bug #284562
 
   19 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> ddrescue-1.11.ebuild:
   Adding ~arm support. Tested on mv78100.arm.dev.gentoo.org thanks to
