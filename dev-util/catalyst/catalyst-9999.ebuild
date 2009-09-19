@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.8 2009/09/19 19:31:04 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.9 2009/09/19 22:35:07 agaffney Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -19,8 +19,8 @@ else
 		http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 fi
 
-DESCRIPTION="release metatool used for creating Gentoo releases"
-HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
+DESCRIPTION="release metatool used for creating releases based on Gentoo Linux"
+HOMEPAGE="http://wolf31o2.org/projects/catalyst"
 
 LICENSE="GPL-2"
 SLOT="0"

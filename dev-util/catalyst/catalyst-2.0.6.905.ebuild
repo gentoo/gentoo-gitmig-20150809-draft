@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.905.ebuild,v 1.1 2009/07/07 17:27:53 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.6.905.ebuild,v 1.2 2009/09/19 22:35:07 agaffney Exp $
 
 inherit eutils multilib
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	http://wolf31o2.org/sources/${PN}/${P}.tar.bz2"
 
-DESCRIPTION="release metatool used for creating Gentoo releases"
-HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
+DESCRIPTION="release metatool used for creating releases based on Gentoo Linux"
+HOMEPAGE="http://wolf31o2.org/projects/catalyst"
 
 LICENSE="GPL-2"
 SLOT="0"
