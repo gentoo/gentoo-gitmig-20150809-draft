@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.2 2008/07/15 19:45:31 bluebird Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/sqlgrey-1.7.6.ebuild,v 1.3 2009/09/19 16:01:41 tove Exp $
 
 inherit eutils
 
@@ -25,7 +25,6 @@ DEPEND="$RDEPEND
 KEYWORDS="~amd64 ~sparc ~x86"
 
 pkg_setup() {
-	has_version dev-perl/IO-Multiplex || die "IO-Multiplex needed. Please emerge it or run g-cpan.pl IO::Multiplex"
 	enewgroup sqlgrey
 	enewuser sqlgrey -1 -1 /var/spool/sqlgrey sqlgrey
 }

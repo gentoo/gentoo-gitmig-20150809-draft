@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/sqlgrey
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.10 2008/07/15 19:45:31 bluebird Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/sqlgrey/ChangeLog,v 1.11 2009/09/19 16:01:41 tove Exp $
+
+  19 Sep 2009; Torsten Veller <tove@gentoo.org> sqlgrey-1.7.6.ebuild:
+  Remove the dev-perl/IO-Multiplex check from pkg_setup because
+  dev-perl/net-server now depends on dev-perl/IO-Multplex.
 
   15 Jul 2008; Friedrich Oslage <bluebird@gentoo.org> sqlgrey-1.7.6.ebuild:
   Add ~sparc keyword, requested by agaffney
