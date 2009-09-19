@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20090630.ebuild,v 1.1 2009/06/30 20:46:34 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-softdevice/vdr-softdevice-0.5.0.20090630.ebuild,v 1.2 2009/09/19 18:29:38 betelgeuse Exp $
 
-EAPI=1
+EAPI="2"
 
 inherit eutils vdr-plugin versionator
 
@@ -24,8 +24,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+xv fbcon directfb mmx mmxext xinerama"
 
+# converted from built_with_use that had this comment:
+# Check for ffmpeg relying on libtheora without pkg-config-file
+# Bug #142250
 RDEPEND=">=media-video/vdr-1.3.36
-	>=media-video/ffmpeg-0.4.9_pre1
+	|| (
+		>=media-video/ffmpeg-0.4.9_pre1[-theora]
+		(
+			>=media-video/ffmpeg-0.4.9_pre1[theora]
+			>=media-libs/libtheora-1.0_alpha4
+		)
+	)
 	directfb? (
 		dev-libs/DirectFB
 		dev-libs/DFB++
@@ -74,21 +83,9 @@ pkg_setup() {
 		0)	elog "SHM support will not be compiled." ;;
 		1)	elog "SHM support will be compiled." ;;
 	esac
-
-	# Check for ffmpeg relying on libtheora without pkg-config-file
-	# Bug #142250
-	if built_with_use media-video/ffmpeg theora	&& \
-		has_version "<media-libs/libtheora-1.0_alpha4"; then
-
-			eerror "This package will not work when using ffmpeg with"
-			eerror "USE=\"theora\" combined with media-libs/libtheora"
-			eerror "older than version 1.0_alpha4."
-			eerror "Please update to at least media-libs/libtheora-1.0_alpha4."
-			die "Please update to at least media-libs/libtheora-1.0_alpha4."
-	fi
 }
 
-src_compile() {
+src_configure() {
 	local MYOPTS=""
 	MYOPTS="${MYOPTS} --disable-vidix"
 	use xv || MYOPTS="${MYOPTS} --disable-xv"
@@ -105,8 +102,6 @@ src_compile() {
 	cd "${S}"
 	elog configure ${MYOPTS}
 	./configure ${MYOPTS} || die "configure failed"
-
-	vdr-plugin_src_compile
 }
 
 src_install() {
