@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/Data-UUID-1.202.ebuild,v 1.3 2009/09/18 18:32:43 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/Data-UUID-1.202.ebuild,v 1.4 2009/09/19 16:45:33 nixnut Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Perl extension for generating Globally/Universally Unique Identifie
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 RDEPEND="virtual/perl-Digest-MD5"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.32 2009/09/18 18:26:49 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.33 2009/09/19 16:39:18 nixnut Exp $
+
+  19 Sep 2009; nixnut <nixnut@gentoo.org> Mail-DKIM-0.36.ebuild:
+  ppc stable #283969
 
   18 Sep 2009; Torsten Veller <tove@gentoo.org> Mail-DKIM-0.36.ebuild:
   Stable on amd64 (#283969)
