@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/zh-kcfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.23 2009/09/19 09:19:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/zh-kcfonts/ChangeLog,v 1.24 2009/09/19 17:15:21 armin76 Exp $
+
+  19 Sep 2009; Raúl Porcel <armin76@gentoo.org> zh-kcfonts-1.05-r3.ebuild:
+  alpha/arm/ia64/s390/sh/sparc stable wrt #284721
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> zh-kcfonts-1.05-r3.ebuild:
   amd64/x86 stable, bug #284721
