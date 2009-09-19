@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.21.ebuild,v 1.1 2009/09/09 21:57:15 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/pythia-6.4.21.ebuild,v 1.2 2009/09/19 00:46:35 bicatali Exp $
 
 EAPI=2
-inherit fortran versionator autotools
+inherit versionator autotools
 
 MV=$(get_major_version)
 MY_PN=${PN}${MV}
