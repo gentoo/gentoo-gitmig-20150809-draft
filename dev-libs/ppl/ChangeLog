@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/ppl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.17 2009/08/01 05:02:43 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ppl/ChangeLog,v 1.18 2009/09/19 23:30:17 aballier Exp $
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> ppl-0.10.2.ebuild:
+  keyword ~x86-fbsd
 
   01 Aug 2009; Ryan Hill <dirtyepic@gentoo.org> metadata.xml:
   Add toolchain to metadata.xml
