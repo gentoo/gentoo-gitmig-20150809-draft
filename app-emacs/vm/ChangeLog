@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.68 2009/09/16 00:14:53 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.69 2009/09/19 08:27:43 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> vm-7.19-r4.ebuild:
+  amd64/x86 stable, bug #284462
 
   16 Sep 2009; Ulrich Mueller <ulm@gentoo.org> vm-8.0.12-r4.ebuild,
   +files/vm-8.0.12-emacs-23.patch:
