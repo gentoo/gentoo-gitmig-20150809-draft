@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.150 2009/09/19 13:59:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.151 2009/09/19 15:12:54 vapier Exp $
+
+  19 Sep 2009; Mike Frysinger <vapier@gentoo.org> libtool-2.2.6a.ebuild:
+  Manually preserve the old libtool library.
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> libtool-2.2.6a.ebuild:
   arm stable, bug #257399

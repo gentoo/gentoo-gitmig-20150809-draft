@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.12 2009/09/19 13:59:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-2.2.6a.ebuild,v 1.13 2009/09/19 15:12:54 vapier Exp $
 
 LIBTOOLIZE="true" #225559
 inherit eutils autotools flag-o-matic
@@ -69,4 +69,12 @@ src_install() {
 	for x in $(find "${D}" -name config.guess -o -name config.sub) ; do
 		rm -f "${x}" ; ln -sf /usr/share/gnuconfig/${x##*/} "${x}"
 	done
+}
+
+pkg_preinst() {
+	preserve_old_lib /usr/$(get_libdir)/libltdl.so.3
+}
+
+pkg_postinst() {
+	preserve_old_lib_notify /usr/$(get_libdir)/libltdl.so.3
 }
