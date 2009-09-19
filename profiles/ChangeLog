@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3291 2009/09/19 17:01:25 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3292 2009/09/19 19:01:27 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Sep 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  start a new package.mask entry for old X packages
 
   19 Sep 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add x11-proto/evieext to p.mask for xorg-server 1.7
