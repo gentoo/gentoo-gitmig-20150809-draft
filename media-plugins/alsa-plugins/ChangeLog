@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.113 2009/09/05 18:55:11 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.114 2009/09/19 13:55:50 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> alsa-plugins-1.0.20.ebuild:
+  arm stable, bug #280464
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> alsa-plugins-1.0.20.ebuild:
   Marking alsa-plugins-1.0.20 ppc64 stable for bug 280464
