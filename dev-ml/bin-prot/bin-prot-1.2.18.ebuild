@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/bin-prot-1.2.18.ebuild,v 1.1 2009/09/19 12:49:26 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/bin-prot-1.2.18.ebuild,v 1.2 2009/09/19 20:53:37 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -17,10 +17,10 @@ IUSE="doc test"
 S=${WORKDIR}/${P}/lib
 
 RDEPEND=">=dev-lang/ocaml-3.11[ocamlopt]
-		dev-ml/type-conv"		
+		dev-ml/type-conv"
 DEPEND="${RDEPEND}
 		test? ( dev-ml/ounit )
-		doc? ( virtual/latex-base )" 
+		doc? ( virtual/latex-base )"
 
 src_compile() {
 	emake -j1 CFLAGS="${CFLAGS}" || die
