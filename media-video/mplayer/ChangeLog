@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.675 2009/08/31 18:21:29 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.676 2009/09/19 16:12:25 beandog Exp $
+
+*mplayer-1.0_rc4_p20090919-r1 (19 Sep 2009)
+
+  19 Sep 2009; Steve Dibb <beandog@gentoo.org>
+  +mplayer-1.0_rc4_p20090919-r1.ebuild:
+  Snapshot version bump; Wrap all X dependencies under X use flag, bug
+  222627 (thanks to William Hubbs for major patch); Drop vesa support, bug
+  283246; Drop custom-cflags due to gcc-4 bug, filter flags, bug 269975
 
   31 Aug 2009; Brent Baude <ranger@gentoo.org>
   mplayer-1.0_rc2_p20090731-r1.ebuild:
