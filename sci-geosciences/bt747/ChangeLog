@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/bt747
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.2 2009/08/21 10:05:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.3 2009/09/19 08:32:03 swegener Exp $
+
+  19 Sep 2009; Sven Wegener <swegener@gentoo.org> bt747-1.68.25.ebuild:
+  Add ~amd64 keyword.
 
 *bt747-1.68.25 (21 Aug 2009)
 

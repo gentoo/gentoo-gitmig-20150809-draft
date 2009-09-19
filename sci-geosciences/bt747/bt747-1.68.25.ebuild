@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/bt747-1.68.25.ebuild,v 1.1 2009/08/21 10:05:04 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/bt747-1.68.25.ebuild,v 1.2 2009/09/19 08:32:03 swegener Exp $
 EAPI=2
 
 WANT_ANT_TASKS="ant-nodeps"
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}_full.zip"
 
 LICENSE="GPL-3"
 SLOT="1"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEP="dev-java/rxtx:2
