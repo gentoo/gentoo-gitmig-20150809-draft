@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/libnet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.26 2009/09/18 17:40:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/perl-core/libnet/ChangeLog,v 1.27 2009/09/19 16:17:07 nixnut Exp $
+
+  19 Sep 2009; nixnut <nixnut@gentoo.org> libnet-1.22.ebuild:
+  ppc stable #284390
 
   18 Sep 2009; Torsten Veller <tove@gentoo.org> libnet-1.22.ebuild:
   Stable on amd64 (#284390)
