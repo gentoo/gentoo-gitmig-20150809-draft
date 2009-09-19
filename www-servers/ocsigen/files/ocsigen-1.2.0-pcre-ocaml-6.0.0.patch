@@ -1,0 +1,31 @@
+From: Stephane Glondu <steph@glondu.net>
+Date: Sat, 13 Jun 2009 02:21:56 +0200
+Subject: [PATCH] Fix for pcre-ocaml 6.0.0
+
+Upstream notified.
+---
+ extensions/staticmod.ml |    4 ++--
+ 1 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/extensions/staticmod.ml b/extensions/staticmod.ml
+index d2250ae..aac17d5 100644
+--- a/extensions/staticmod.ml
++++ b/extensions/staticmod.ml
+@@ -188,14 +188,14 @@ let parse_config userconf : parse_config_aux = fun _ _ _ ->
+ 
+       | ("regexp", s)::l when opt.opt_regexp = None ->
+           let s = try Netstring_pcre.regexp ("^"^s^"$")
+-           with Pcre.BadPattern _ ->
++           with Pcre.Error (Pcre.BadPattern _) ->
+              bad_config ("Bad regexp \""^s^"\" in <static regexp=\"...\" />")
+           in
+           parse_attrs l { opt with opt_regexp = Some s }
+ 
+       | ("code", c)::l when opt.opt_code = None ->
+           let c = try Netstring_pcre.regexp ("^"^c^"$")
+-           with Pcre.BadPattern _ ->
++           with Pcre.Error (Pcre.BadPattern _) ->
+              bad_config ("Bad regexp \""^c^"\" in <static code=\"...\" />")
+           in
+           parse_attrs l { opt with opt_code = Some c }
+-- 

@@ -1,6 +1,13 @@
 # ChangeLog for www-servers/ocsigen
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.24 2008/09/25 13:24:50 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.25 2009/09/19 11:59:41 aballier Exp $
+
+*ocsigen-1.2.0 (19 Sep 2009)
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> +ocsigen-1.2.0.ebuild,
+  +files/ocsigen-1.2.0-pcre-ocaml-6.0.0.patch:
+  Version bump with a patch grabbed from debian to build against latest
+  pcre-ocaml
 
   25 Sep 2008; Alexis Ballier <aballier@gentoo.org> ocsigen-1.1.0.ebuild:
   keyword ~x86-fbsd
