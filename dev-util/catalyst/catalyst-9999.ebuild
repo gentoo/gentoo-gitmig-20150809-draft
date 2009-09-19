@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.7 2009/05/03 16:48:36 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-9999.ebuild,v 1.8 2009/09/19 19:31:04 agaffney Exp $
 
 # catalyst-9999         -> latest SVN
 # catalyst-9999.REV     -> use SVN REV
@@ -51,6 +51,12 @@ pkg_setup() {
 	einfo "them under /usr/share/doc/${PF}/examples"
 	einfo "and they are considered to be the authorative source of information"
 	einfo "on catalyst."
+	echo
+	ewarn "The git master branch (what you get with this -9999 ebuild) for catalyst"
+	ewarn "now contains the work-in-progress code for catalyst-3.x. Be aware that"
+	ewarn "it's very likely that it will not be in a working state at any given"
+	ewarn "point. Please do not file bugs until you have posted on the gentoo-catalyst"
+	ewarn "mailing list and we have asked you to do so."
 }
 
 src_unpack() {
@@ -66,7 +72,7 @@ src_install() {
 	insinto /usr/$(get_libdir)/${PN}
 	exeinto /usr/$(get_libdir)/${PN}
 	doexe catalyst || die "copying catalyst"
-	doins -r arch modules livecd || die "copying files"
+	doins -r modules files || die "copying files"
 	for x in targets/*; do
 		exeinto /usr/$(get_libdir)/${PN}/$x
 		doexe $x/* || die "copying ${x}"

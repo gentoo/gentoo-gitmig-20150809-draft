@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.210 2009/07/07 17:27:53 agaffney Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.211 2009/09/19 19:31:04 agaffney Exp $
+
+  19 Sep 2009; Andrew Gaffney <agaffney@gentoo.org> catalyst-9999.ebuild:
+  Update catalyst-9999 ebuild for cat3
 
 *catalyst-2.0.6.905 (07 Jul 2009)
 
