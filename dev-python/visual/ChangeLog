@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/visual
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.30 2009/09/06 20:16:17 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/visual/ChangeLog,v 1.31 2009/09/19 13:35:16 patrick Exp $
+
+*visual-5.12 (19 Sep 2009)
+
+  19 Sep 2009; Patrick Lauer <patrick@gentoo.org> +visual-5.12.ebuild:
+  Bump to 5.12, fixes #285032
 
   06 Sep 2009; Christian Ruppert <idl0r@gentoo.org>
   -files/visual-4_beta26-gcc43.patch:
