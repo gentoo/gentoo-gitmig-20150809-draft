@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.3-r1.ebuild,v 1.2 2009/08/22 22:37:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.3-r1.ebuild,v 1.3 2009/09/19 08:34:16 tove Exp $
 
 EAPI="2"
 
@@ -26,7 +26,7 @@ DEPEND="net-mail/mailbase
 	"
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
-	!mailwrapper? ( !virtual/mta )
+	!mailwrapper? ( !virtual/mta !net-mail/mailwrapper )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 PDEPEND="!mbox? ( mail-filter/procmail )"
 PROVIDE="virtual/mta"

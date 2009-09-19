@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.0.ebuild,v 1.13 2009/08/31 18:13:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.14.0.ebuild,v 1.14 2009/09/19 08:34:16 tove Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ DEPEND="net-mail/mailbase
 	"
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
-	!mailwrapper? ( !virtual/mta )
+	!mailwrapper? ( !virtual/mta !net-mail/mailwrapper )
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 PDEPEND="!mbox? ( mail-filter/procmail )"
 PROVIDE="virtual/mta"
