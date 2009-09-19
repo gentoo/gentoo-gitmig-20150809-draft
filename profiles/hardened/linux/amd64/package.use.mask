@@ -1,3 +1,12 @@
+# Copyright 1999-2009 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.10 2009/09/19 10:58:07 maekke Exp $
+
+# Markus Meier <maekke@gentoo.org> (19 Sep 2009)
+# Mask media-gfx/blender[openmp] as it needs
+# sys-devel/gcc[openmp] which isn't available yet
+media-gfx/blender openmp
+
 # Thomas Sachau <tommy@gentoo.org> (09 Mar 2009)
 # copy mask from arch/amd64
 # Mask dbus, hal, nas and scanner USE flags;
