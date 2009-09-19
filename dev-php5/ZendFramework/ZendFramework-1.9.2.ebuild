@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.7.7.ebuild,v 1.1 2009/03/29 08:52:04 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ZendFramework/ZendFramework-1.9.2.ebuild,v 1.1 2009/09/19 20:59:07 gurligebis Exp $
 
 PHP_LIB_NAME="Zend"
 
@@ -17,23 +17,38 @@ SRC_URI="!minimal? ( http://framework.zend.com/releases/${P}/${P}.tar.gz )
 		http://framework.zend.com/releases/${P}/${P}-manual-en.tar.gz )"
 LICENSE="BSD"
 SLOT="0"
-IUSE="doc examples minimal"
+IUSE="doc examples minimal cli"
 
 DEPEND=""
 RDEPEND=""
 need_php_by_category
 
+pkg_setup() {
+	if use cli ; then
+		require_php_with_use simplexml tokenizer
+	fi
+}
+
 src_unpack() {
+	unpack ${A}
+
 	if use minimal ; then
 		S="${WORKDIR}/${P}-minimal"
+		if use doc ; then
+			mv "${WORKDIR}/${P}/documentation" "${S}"
+		fi
 	fi
-
-	unpack ${A}
 
 	cd "${S}"
 }
 
 src_install() {
+	if use cli ; then
+		insinto /usr/bin
+		doins bin/zf.php
+		dobin bin/zf.sh
+		dosym /usr/bin/zf.sh /usr/bin/zf
+	fi
 	php-lib-r1_src_install library/Zend $(cd library/Zend ; find . -type f -print)
 
 	if use examples ; then
