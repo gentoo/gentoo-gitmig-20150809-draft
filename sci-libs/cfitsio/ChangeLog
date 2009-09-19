@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.32 2009/09/09 06:09:45 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.33 2009/09/19 13:21:38 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> cfitsio-3.140.ebuild:
+  amd64/x86 stable, bug #285500
 
   09 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> cfitsio-3.140.ebuild:
   Added cfortran.h link to use properly system one
