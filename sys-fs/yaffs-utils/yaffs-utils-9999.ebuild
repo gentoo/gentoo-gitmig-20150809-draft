@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs-utils/yaffs-utils-9999.ebuild,v 1.1 2006/07/31 05:25:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/yaffs-utils/yaffs-utils-9999.ebuild,v 1.2 2009/09/19 15:04:45 vapier Exp $
 
 ECVS_SERVER="cvs.aleph1.co.uk:/home/aleph1/cvs"
 ECVS_MODULE="yaffs"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.aleph1.co.uk/yaffs/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=""
