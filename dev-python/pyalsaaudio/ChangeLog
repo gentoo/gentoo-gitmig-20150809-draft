@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.15 2009/09/19 11:13:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.16 2009/09/19 14:00:21 arfrever Exp $
+
+  19 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pyalsaaudio-0.2.ebuild:
+  Fix dodoc (bug #285514).
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> pyalsaaudio-0.5.ebuild:
   amd64/x86 stable, bug #284990

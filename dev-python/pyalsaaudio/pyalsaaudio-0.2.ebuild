@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.2.ebuild,v 1.7 2009/05/31 13:29:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/pyalsaaudio-0.2.ebuild,v 1.8 2009/09/19 14:00:21 arfrever Exp $
 
 inherit distutils
 
@@ -15,7 +15,7 @@ IUSE=""
 
 DEPEND="media-libs/alsa-lib"
 
-DOCS="README CHANGES NEWS"
+DOCS="README CHANGES"
 
 src_install() {
 	distutils_src_install
