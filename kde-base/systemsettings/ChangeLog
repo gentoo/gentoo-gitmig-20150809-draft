@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/systemsettings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.41 2009/09/01 16:31:39 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/ChangeLog,v 1.42 2009/09/19 22:01:39 scarabeus Exp $
+
+  19 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/20_use_dejavu_as_default_font.patch, systemsettings-4.2.4.ebuild,
+  systemsettings-4.3.0.ebuild, systemsettings-4.3.1.ebuild:
+  Remove dep on the dejavu fonts.
 
 *systemsettings-4.3.1 (01 Sep 2009)
 

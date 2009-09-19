@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r4.ebuild,v 1.4 2009/08/13 12:11:28 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.2.4-r4.ebuild,v 1.5 2009/09/19 22:04:09 scarabeus Exp $
 
 EAPI="2"
 
@@ -112,7 +112,6 @@ PDEPEND="
 # upstream patches / dist patches
 PATCHES=(
 	"${FILESDIR}/dist/09_disable_debug_messages_if_not_explicitly_enabled.patch"
-	"${FILESDIR}/dist/20_use_dejavu_as_default_font.patch"
 	"${FILESDIR}/dist/23_solid_no_double_build.patch"
 	"${FILESDIR}/${PN}-${SLOT}-fixx11h.h.patch"
 	"${FILESDIR}/${PV}-fixPopupForPlasmaboard.patch"

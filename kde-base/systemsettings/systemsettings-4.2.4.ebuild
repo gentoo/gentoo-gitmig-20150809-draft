@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.4.ebuild,v 1.2 2009/07/19 22:52:53 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/systemsettings/systemsettings-4.2.4.ebuild,v 1.3 2009/09/19 22:01:39 scarabeus Exp $
 
 EAPI="2"
 
@@ -51,8 +51,6 @@ KMEXTRACTONLY="
 	libs/
 	plasma/
 "
-
-PATCHES=( "$FILESDIR/20_use_dejavu_as_default_font.patch" )
 
 src_unpack() {
 	if use handbook; then

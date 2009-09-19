@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.622 2009/09/07 02:34:08 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.623 2009/09/19 22:04:09 scarabeus Exp $
+
+  19 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/dist/20_use_dejavu_as_default_font.patch, kdelibs-4.2.4-r4.ebuild,
+  kdelibs-4.3.0.ebuild, kdelibs-4.3.1.ebuild:
+  Remove dep on the dejavu fonts.
 
   07 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdelibs-4.3.1.ebuild:
