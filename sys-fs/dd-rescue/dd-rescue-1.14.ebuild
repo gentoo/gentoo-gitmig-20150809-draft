@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/dd-rescue-1.14.ebuild,v 1.1 2007/09/30 02:23:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dd-rescue/dd-rescue-1.14.ebuild,v 1.2 2009/09/19 04:35:09 robbat2 Exp $
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -10,7 +10,7 @@ SRC_URI="http://www.garloff.de/kurt/linux/ddrescue/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
+KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86 ~arm"
 IUSE="static"
 
 RDEPEND=""

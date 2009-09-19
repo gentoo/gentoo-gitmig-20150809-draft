@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/multipath-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.25 2009/04/10 16:54:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/multipath-tools/ChangeLog,v 1.26 2009/09/19 04:47:49 robbat2 Exp $
+
+  19 Sep 2009; Robin H. Johnson <robbat2@gentoo.org>
+  multipath-tools-0.4.8.ebuild:
+  Adding ~arm support. Tested on mv78100.arm.dev.gentoo.org thanks to
+  Marvell.
 
   10 Apr 2009; Caleb Tennis <caleb@gentoo.org>
   multipath-tools-0.4.7-r1.ebuild, multipath-tools-0.4.7-r2.ebuild,
