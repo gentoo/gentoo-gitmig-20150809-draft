@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/papyon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.3 2009/09/14 21:18:19 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/papyon/ChangeLog,v 1.4 2009/09/19 17:08:15 tester Exp $
+
+  19 Sep 2009; Olivier Crête <tester@gentoo.org> papyon-0.4.2.ebuild:
+  Don't install stray file, bug #285527. Fix by Dirkjan Ochtman
+  <djc@gentoo.org>
 
 *papyon-0.4.2 (14 Sep 2009)
 
