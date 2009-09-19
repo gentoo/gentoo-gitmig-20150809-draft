@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.10.ebuild,v 1.1 2009/06/10 01:07:49 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/slashtime/slashtime-0.5.10.ebuild,v 1.2 2009/09/19 11:22:01 maekke Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="source"
@@ -13,7 +13,7 @@ SRC_URI="http://research.operationaldynamics.com/projects/${PN}/dist/${P}.tar.bz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 COMMON_DEP=">=dev-java/java-gnome-4.0.9:4.0"
