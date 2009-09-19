@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-2.5.ebuild,v 1.1 2009/06/27 16:47:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_wsgi/mod_wsgi-2.5.ebuild,v 1.2 2009/09/19 11:28:56 maekke Exp $
 
 inherit apache-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://modwsgi.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.4"
