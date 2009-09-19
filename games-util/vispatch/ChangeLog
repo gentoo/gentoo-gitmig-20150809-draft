@@ -1,6 +1,9 @@
 # ChangeLog for games-util/vispatch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/vispatch/ChangeLog,v 1.1 2009/08/16 22:39:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/vispatch/ChangeLog,v 1.2 2009/09/19 11:40:33 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> vispatch-1.4.5.ebuild:
+  amd64/x86 stable, bug #285388
 
 *vispatch-1.4.5 (16 Aug 2009)
 
