@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/adodb-py
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.24 2009/01/09 19:40:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/ChangeLog,v 1.25 2009/09/19 05:38:48 neurogeek Exp $
+
+  19 Sep 2009; Jesus Rivero <neurogeek@gentoo.org> adodb-py-2.00.ebuild,
+  adodb-py-2.20.ebuild, +files/adodb-py_sandbox_violation.patch:
+  Fixed access violation with both versions wrt bug #277863
 
   09 Jan 2009; Patrick Lauer <patrick@gentoo.org> -adodb-py-1.13.ebuild,
   -adodb-py-2.01.ebuild:

@@ -1,7 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.00.ebuild,v 1.6 2006/10/15 17:48:48 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/adodb-py/adodb-py-2.00.ebuild,v 1.7 2009/09/19 05:38:48 neurogeek Exp $
 
+EAPI="2"
 inherit distutils
 
 MY_P=${PN}${PV//./}
@@ -26,6 +27,9 @@ S="${WORKDIR}/${MY_P/py/}"
 
 DOCS="LICENSE.txt README.txt"
 
+src_prepare(){
+	epatch "${FILESDIR}/${PN}_sandbox_violation.patch"
+}
 src_install() {
 	distutils_src_install
 	dohtml adodb-py-docs.htm icons/*.gif
