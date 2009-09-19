@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3282 2009/09/19 08:24:01 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3283 2009/09/19 09:44:32 aballier Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> package.mask:
+  unleash ocaml 3.11 to ~arch
 
   19 Sep 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   move xorg-server 1.7 package mask from the x11 overlay
