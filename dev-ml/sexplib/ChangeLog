@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/sexplib
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.1 2009/09/19 12:33:03 aballier Exp $
+
+*sexplib-4.2.13 (19 Sep 2009)
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> +sexplib-4.2.13.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by Guillaume Horel <guillaume.horel@gmail.com>, bug
+  #281274
+
