@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/qimageblitz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.9 2009/06/18 10:22:12 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/qimageblitz/ChangeLog,v 1.10 2009/09/19 11:03:58 scarabeus Exp $
+
+  19 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  qimageblitz-0.0.4.ebuild:
+  Fix QA per bug #285536.
 
   18 Jun 2009; Alexis Ballier <aballier@gentoo.org>
   qimageblitz-0.0.4.ebuild:
