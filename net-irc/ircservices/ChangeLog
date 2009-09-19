@@ -1,6 +1,15 @@
 # ChangeLog for net-irc/ircservices
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.44 2009/08/10 17:22:36 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ChangeLog,v 1.45 2009/09/19 20:40:29 gurligebis Exp $
+
+*ircservices-5.1.17 (19 Sep 2009)
+
+  19 Sep 2009; Bjarke Istrup Pedersen <gurligebis@gentoo.org>
+  -ircservices-5.1.14.ebuild, -files/ircservices-5.1.14-fPIC.patch,
+  -files/ircservices-5.1.14-fPIC-configure.patch,
+  +ircservices-5.1.17.ebuild, +files/ircservices-5.1.17-fPIC.patch,
+  +files/ircservices-5.1.17-fPIC-configure.patch:
+  Bumping to 5.1.17
 
   10 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
   ircservices-5.0.63.ebuild, ircservices-5.1.14.ebuild:
