@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.8 2009/08/16 22:07:27 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.9 2009/09/19 23:34:10 aballier Exp $
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> package.use.mask:
+  use mask dev-libs/ppl[prolog]
 
   16 Aug 2009; Rémi Cardona <remi@gentoo.org> make.defaults:
   drop last traces of i810

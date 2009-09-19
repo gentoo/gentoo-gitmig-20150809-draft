@@ -14,3 +14,6 @@ x11-drivers/nvidia-drivers acpi
 # Gilles Dartiguelongue <eva@gentoo.org> (19 Oct 2007)
 # afs not keyworded
 >=gnome-base/gdm-2.20 afs
+
+# prolog doesn't build here
+dev-libs/ppl prolog
