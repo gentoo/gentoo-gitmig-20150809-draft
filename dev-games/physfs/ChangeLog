@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/physfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.24 2009/09/18 05:44:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/physfs/ChangeLog,v 1.25 2009/09/19 10:42:55 maekke Exp $
+
+  19 Sep 2009; Markus Meier <maekke@gentoo.org> physfs-2.0.0.ebuild:
+  amd64/x86 stable, bug #284979
 
   18 Sep 2009; Jeroen Roovers <jer@gentoo.org> physfs-2.0.0.ebuild:
   Stable for HPPA (bug #284979).
