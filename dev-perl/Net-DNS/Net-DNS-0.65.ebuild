@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.65.ebuild,v 1.1 2009/01/27 10:15:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-DNS/Net-DNS-0.65.ebuild,v 1.2 2009/09/19 09:33:57 tove Exp $
+
+EAPI=2
 
 MODULE_AUTHOR=OLAF
 inherit perl-module
@@ -23,5 +25,14 @@ DEPEND="${RDEPEND}
 		dev-perl/Test-Pod )"
 
 SRC_TEST="do"
-mydoc="TODO"
-myconf="--no-online-tests"
+
+src_prepare() {
+	perl-module_src_prepare
+	mydoc="TODO"
+	if use ipv6 ; then
+		myconf="--IPv6-tests"
+	else
+		myconf="--no-IPv6-tests"
+	fi
+	myconf="${myconf} --no-online-tests"
+}
