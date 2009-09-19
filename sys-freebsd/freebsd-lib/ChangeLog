@@ -1,6 +1,11 @@
 # ChangeLog for sys-freebsd/freebsd-lib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.75 2009/07/06 08:19:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/ChangeLog,v 1.76 2009/09/19 10:59:34 aballier Exp $
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org>
+  freebsd-lib-6.2-r4.ebuild, freebsd-lib-7.1-r4.ebuild,
+  freebsd-lib-7.2.ebuild:
+  remove nis useflag, python needs it anyway
 
   06 Jul 2009; Alexis Ballier <aballier@gentoo.org>
   -freebsd-lib-7.1-r3.ebuild:

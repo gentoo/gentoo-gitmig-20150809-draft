@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r4.ebuild,v 1.2 2009/01/08 17:39:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r4.ebuild,v 1.3 2009/09/19 10:59:34 aballier Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -8,7 +8,7 @@ DESCRIPTION="FreeBSD's base system libraries"
 SLOT="6.0"
 KEYWORDS="~sparc-fbsd ~x86-fbsd"
 
-IUSE="atm bluetooth ssl hesiod ipv6 kerberos nis gpib build bootstrap"
+IUSE="atm bluetooth ssl hesiod ipv6 kerberos gpib build bootstrap"
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
@@ -19,7 +19,7 @@ SRC_URI="mirror://gentoo/${LIB}.tar.bz2
 		mirror://gentoo/${LIBEXEC}.tar.bz2
 		mirror://gentoo/${ETC}.tar.bz2
 		mirror://gentoo/${INCLUDE}.tar.bz2
-		nis? ( mirror://gentoo/${USBIN}.tar.bz2 )
+		mirror://gentoo/${USBIN}.tar.bz2
 		build? (
 			mirror://gentoo/${SYS}.tar.bz2 )"
 
@@ -65,7 +65,6 @@ pkg_setup() {
 	use ssl || mymakeopts="${mymakeopts} NO_OPENSSL= NO_CRYPT= "
 	use ipv6 || mymakeopts="${mymakeopts} NO_INET6= "
 	use kerberos || mymakeopts="${mymakeopts} NO_KERBEROS= "
-	use nis || mymakeopts="${mymakeopts} NO_NIS= "
 	use gpib || mymakeopts="${mymakeopts} NO_GPIB= "
 
 	mymakeopts="${mymakeopts} NO_OPENSSH= NO_BIND= NO_SENDMAIL= NO_LIBC_R= NO_LIBPTHREAD="
