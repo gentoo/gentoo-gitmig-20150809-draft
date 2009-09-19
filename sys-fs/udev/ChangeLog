@@ -1,6 +1,16 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.490 2009/09/06 23:38:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.491 2009/09/19 17:41:52 zzam Exp $
+
+*udev-146 (19 Sep 2009)
+
+  19 Sep 2009; Matthias Schwarzott <zzam@gentoo.org> +files/blacklist-146,
+  +udev-146.ebuild, +files/udev-146-printer-usb_device-permission.diff,
+  udev-9999.ebuild, -files/udev-9999-disable-doc.diff:
+  Version bumped. Add permission for libusb printer devices for cups 1.4+,
+  add disabled blacklist entry for usblp, Bug #285166. Now require kernel
+  2.6.27 to be safe, Bug #281312. Sync with udev-9999 and no longer allow to
+  disable docs.
 
   06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> udev-145-r1.ebuild:
   Use proper kernel_is function to compare properly including the 4 argument
