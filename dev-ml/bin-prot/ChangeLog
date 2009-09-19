@@ -1,0 +1,11 @@
+# ChangeLog for dev-ml/bin-prot
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/bin-prot/ChangeLog,v 1.1 2009/09/19 12:49:26 aballier Exp $
+
+*bin-prot-1.2.18 (19 Sep 2009)
+
+  19 Sep 2009; Alexis Ballier <aballier@gentoo.org> +bin-prot-1.2.18.ebuild,
+  +metadata.xml:
+  Initial import, ebuild by Guillaume Horel <guillaume.horel@gmail.com>, bug
+  #281276
+
