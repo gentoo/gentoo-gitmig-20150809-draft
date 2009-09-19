@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4.ebuild,v 1.15 2009/08/03 11:41:13 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4.ebuild,v 1.16 2009/09/19 18:38:10 remi Exp $
 
 inherit eutils
 
@@ -188,12 +188,6 @@ RDEPEND="${RDEPEND}
 	>=media-fonts/font-alias-1.0.1
 	>=media-fonts/font-util-1.0.1
 	>=media-fonts/encodings-1.0.2
-	"
-
-# Documentation
-RDEPEND="${RDEPEND}
-	>=app-doc/xorg-sgml-doctools-1.2
-	>=app-doc/xorg-docs-1.4
 	"
 
 DEPEND="${RDEPEND}"

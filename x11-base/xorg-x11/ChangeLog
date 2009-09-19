@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.609 2009/06/23 21:34:10 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.610 2009/09/19 18:38:10 remi Exp $
+
+  19 Sep 2009; Rémi Cardona <remi@gentoo.org> xorg-x11-7.2.ebuild,
+  xorg-x11-7.3.ebuild, xorg-x11-7.4.ebuild:
+  drop dep on xorg-docs and xorg-sgml-doctools (see bug #274861)
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> xorg-x11-7.4.ebuild:
   Stable on alpha, finally
