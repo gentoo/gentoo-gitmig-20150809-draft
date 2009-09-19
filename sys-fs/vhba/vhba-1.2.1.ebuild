@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.2.1.ebuild,v 1.2 2009/09/06 21:18:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/vhba-1.2.1.ebuild,v 1.3 2009/09/19 11:18:45 dev-zero Exp $
 
 EAPI="2"
 
@@ -25,15 +25,14 @@ BUILD_TARGETS="all"
 pkg_setup() {
 	CONFIG_CHECK="~BLK_DEV_SR ~CHR_DEV_SG"
 	check_extra_config
-	BUILD_PARAMS="KERNELDIR=${KV_DIR}"
+	BUILD_PARAMS="KDIR=${KV_DIR}"
 	linux-mod_pkg_setup
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PV}-parallel_build.patch"
-	sed -i \
-		-e "s:/lib/modules/\$(KERNELRELEASE)/build:${KERNEL_DIR}:g" \
-		Makefile || die "sed failed"
+	epatch \
+		"${FILESDIR}/${PV}-parallel_build.patch" \
+		"${FILESDIR}/${PV}-kerneldir.patch"
 }
 
 src_install() {

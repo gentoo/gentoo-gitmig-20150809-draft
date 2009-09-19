@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/vhba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.11 2009/09/06 21:18:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/vhba/ChangeLog,v 1.12 2009/09/19 11:18:45 dev-zero Exp $
+
+  19 Sep 2009; Tiziano Müller <dev-zero@gentoo.org>
+  +files/1.2.1-kerneldir.patch, vhba-1.2.1.ebuild:
+  Force the kernel-dir to be KV_DIR (bug #233910, thanks to Ambroz Bizjak).
 
   06 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> vhba-1.0.0.ebuild,
   vhba-1.1.0.ebuild, vhba-1.2.1.ebuild:
