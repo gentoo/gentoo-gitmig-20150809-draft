@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4817 2009/09/17 16:33:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4818 2009/09/19 14:27:44 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3158,6 +3158,7 @@ www-servers/resin:admin - Enable Resin admin webapp
 www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
 www-servers/tomcat:admin - Enable Tomcat admin webapp
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
+x11-apps/xinit:consolekit -  Enable consolekit integration for the privileges detection. 
 x11-base/xorg-server:dmx - Build the Distributed Multiheaded X server
 x11-base/xorg-server:kdrive - Build the kdrive X servers
 x11-base/xorg-server:tslib - Build with tslib support for touchscreen devices
