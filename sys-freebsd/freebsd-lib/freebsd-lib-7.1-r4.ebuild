@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r4.ebuild,v 1.3 2009/09/19 10:59:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-7.1-r4.ebuild,v 1.4 2009/09/19 19:52:19 aballier Exp $
 
 EAPI=2
 
@@ -187,6 +187,9 @@ src_compile() {
 
 	# Don't use ssp until properly fixed
 	append-flags $(test-flags -fno-stack-protector -fno-stack-protector-all)
+
+	# Bug #270098
+	append-flags $(test-flags -fno-strict-aliasing)
 
 	strip-flags
 	if [ "${CTARGET}" != "${CHOST}" ]; then
