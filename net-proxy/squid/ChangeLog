@@ -1,6 +1,13 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.283 2009/09/12 06:34:47 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.284 2009/09/19 11:58:15 mrness Exp $
+
+*squid-3.1.0.13_beta-r2 (19 Sep 2009)
+
+  19 Sep 2009; Alin Năstac <mrness@gentoo.org>
+  -squid-3.1.0.13_beta-r1.ebuild, +squid-3.1.0.13_beta-r2.ebuild,
+  files/squid-3.1.0.13_beta-qafixes.patch:
+  Fix rpath security check failures reported by scanelf (#280639).
 
 *squid-3.0.19 (12 Sep 2009)
 

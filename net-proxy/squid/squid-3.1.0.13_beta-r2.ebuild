@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.13_beta-r1.ebuild,v 1.1 2009/08/22 12:57:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.1.0.13_beta-r2.ebuild,v 1.1 2009/09/19 11:58:15 mrness Exp $
 
 EAPI="2"
 
