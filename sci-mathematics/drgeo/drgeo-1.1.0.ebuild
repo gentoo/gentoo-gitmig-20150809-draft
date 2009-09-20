@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.5 2008/01/08 00:37:47 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/drgeo/drgeo-1.1.0.ebuild,v 1.6 2009/09/20 12:52:43 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -21,21 +23,16 @@ IUSE="nls"
 RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/libglade-2
 	>=dev-libs/libxml2-2
-	>=dev-scheme/guile-1.4"
+	|| (
+		>=dev-scheme/guile-1.8[deprecated]
+		=dev-scheme/guile-1.6*
+	)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-pkg_setup() {
-	if has_version =dev-scheme/guile-1.8*; then
-		built_with_use dev-scheme/guile deprecated \
-		|| die "guile must be built with deprecated use flag"
-	fi
-}
-
-src_compile() {
-	econf || die "econf failed."
-	emake || die "emake failed."
+src_configure() {
+	default
 	# Can't make the documentation as it depends on Hyperlatex which isn't
 	# yet in portage. Fortunately HTML is already compiled for us in the
 	# tarball and so can be installed. Just create the make install target.
