@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.425 2009/09/19 19:15:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.426 2009/09/20 10:45:44 leio Exp $
+
+  20 Sep 2009; Mart Raudsepp <leio@gentoo.org> -gtk+-2.16.1.ebuild,
+  -gtk+-2.16.5.ebuild, -gtk+-2.16.5-r1.ebuild:
+  Remove old
 
   19 Sep 2009; Olivier Crête <tester@gentoo.org> gtk+-2.16.6.ebuild:
   Stable on amd64, bug #285586
