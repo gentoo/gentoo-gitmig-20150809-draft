@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.6.ebuild,v 1.1 2009/08/08 00:31:11 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.6.ebuild,v 1.2 2009/09/20 22:35:02 pebenito Exp $
 
 inherit java-pkg-opt-2 autotools
 
@@ -50,8 +50,7 @@ RDEPEND=">=sys-libs/libsepol-2.0.37
 src_unpack() {
 	unpack ${A}
 
-	# fix libqpol include Makefile
-	sed -i -r -e '/polcap_query\.h/s/$/ \\/' "${S}/libqpol/include/qpol/Makefile.am"
+	epatch "${FILESDIR}/setools-3.3.6-headers.diff"
 	eautomake
 }
 
@@ -65,6 +64,10 @@ src_compile() {
 		$(use_enable X swig-tcl) \
 		$(use_enable X gui) \
 		$(use_enable debug)
+
+	# work around swig c99 issues.  it does not require
+	# c99 anyway.
+	sed -i -e 's/-std=gnu99//' "${S}/libseaudit/swig/python/Makefile"
 
 	emake || die
 }
