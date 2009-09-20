@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.69 2009/09/19 08:27:43 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.70 2009/09/20 16:12:10 tcunha Exp $
+
+  20 Sep 2009; Tiago Cunha <tcunha@gentoo.org> vm-7.19-r4.ebuild:
+  stable sparc, bug 284462
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> vm-7.19-r4.ebuild:
   amd64/x86 stable, bug #284462
