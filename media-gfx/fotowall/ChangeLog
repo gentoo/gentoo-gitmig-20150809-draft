@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fotowall
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.2 2009/07/25 11:16:12 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fotowall/ChangeLog,v 1.3 2009/09/20 17:55:19 spatz Exp $
+
+*fotowall-0.8.2 (20 Sep 2009)
+
+  20 Sep 2009; Dror Levin <spatz@gentoo.org> -fotowall-0.6.1.ebuild,
+  +fotowall-0.8.2.ebuild:
+  Version bump and remove old. Added USE flag for opengl acceleration
+  support. Fixes bug 285677.
 
 *fotowall-0.7.1 (25 Jul 2009)
 
