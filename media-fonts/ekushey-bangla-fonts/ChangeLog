@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/ekushey-bangla-fonts
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ekushey-bangla-fonts/ChangeLog,v 1.1 2008/06/05 14:00:42 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ekushey-bangla-fonts/ChangeLog,v 1.2 2009/09/20 02:53:43 dirtyepic Exp $
+
+  20 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
+  ekushey-bangla-fonts-20070420.ebuild:
+  Keyword ~amd64.
 
 *ekushey-bangla-fonts-20070420 (05 Jun 2008)
 
