@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.4 2009/09/20 07:27:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.5 2009/09/20 07:28:35 graaff Exp $
+
+  20 Sep 2009; Hans de Graaff <graaff@gentoo.org> -oauth-0.3.2.ebuild,
+  -oauth-0.3.4.ebuild:
+  Remove old versions.
 
 *oauth-0.3.6 (20 Sep 2009)
 
