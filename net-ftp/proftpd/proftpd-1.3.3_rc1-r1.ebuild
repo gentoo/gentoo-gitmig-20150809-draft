@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc1-r1.ebuild,v 1.1 2009/09/16 20:15:58 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc1-r1.ebuild,v 1.2 2009/09/20 09:01:31 voyageur Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -101,14 +101,14 @@ src_configure() {
 	use exec && mymodules="${mymodules}:mod_exec"
 	if use kerberos ; then
 		cd "${WORKDIR}"/mod_gss-${GSS_VER}
-		if has_version app-crypt/mit-krb5 ; then
+		if has_version <app-crypt/mit-krb5-1.7 ; then
 			econf --enable-mit
 		else
 			econf --enable-heimdal
 		fi
 		mv mod_{auth_gss,gss}.c "${S}"/contrib
 		mv mod_gss.h "${S}"/include
-		mv README.mod_{authgss,gss} "${S}"
+		mv README.mod_{auth_gss,gss} "${S}"
 		mv mod_gss.html "${S}"/doc/contrib
 		mv rfc{1509,2228}.txt "${S}"/doc/rfc
 		cd "${S}"
