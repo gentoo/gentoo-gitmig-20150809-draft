@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.1.ebuild,v 1.1 2009/08/22 22:40:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libmilter/libmilter-1.0.1-r1.ebuild,v 1.1 2009/09/20 08:28:21 mrness Exp $
 
 EAPI="2"
 
@@ -27,6 +27,7 @@ RDEPEND="${DEPEND}"
 S="${WORKDIR}/sendmail-${SENDMAIL_VER}"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${PN}-build-system.patch
 	epatch "${FILESDIR}"/${PN}-sharedlib.patch
 
 	local CC="$(tc-getCC)"
