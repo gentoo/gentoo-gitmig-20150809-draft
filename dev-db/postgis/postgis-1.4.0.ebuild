@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.4.0.ebuild,v 1.1 2009/09/19 13:48:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-1.4.0.ebuild,v 1.2 2009/09/20 22:21:12 patrick Exp $
 
 EAPI="1"
 
@@ -15,8 +15,8 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 
 RDEPEND=">=virtual/postgresql-server-8.2
-	sci-libs/geos
-	sci-libs/proj"
+	>=sci-libs/geos-3
+	>=sci-libs/proj-4.5.0"
 
 DEPEND="${RDEPEND}
 	doc? ( app-text/docbook-xsl-stylesheets )"

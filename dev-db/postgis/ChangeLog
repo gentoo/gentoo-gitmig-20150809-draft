@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.40 2009/09/19 13:48:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.41 2009/09/20 22:21:12 patrick Exp $
+
+  20 Sep 2009; Patrick Lauer <patrick@gentoo.org> postgis-1.4.0.ebuild:
+  Fixing deps, closes #285780
 
 *postgis-1.4.0 (19 Sep 2009)
 
