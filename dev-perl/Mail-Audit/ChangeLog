@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Mail-Audit
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.56 2008/09/30 06:14:32 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Audit/ChangeLog,v 1.57 2009/09/20 10:49:52 tove Exp $
+
+*Mail-Audit-2.224 (20 Sep 2009)
+
+  20 Sep 2009; Torsten Veller <tove@gentoo.org> +Mail-Audit-2.224.ebuild:
+  Version bump
 
 *Mail-Audit-2.223 (30 Sep 2008)
 
