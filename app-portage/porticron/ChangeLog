@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/porticron
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.17 2009/08/06 07:51:02 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/porticron/ChangeLog,v 1.18 2009/09/20 09:06:29 hollow Exp $
+
+  20 Sep 2009; Benedikt Böhm <hollow@gentoo.org> -porticron-0.4.ebuild,
+  porticron-0.5.ebuild:
+  stable on amd64 & x86
 
 *porticron-0.5 (06 Aug 2009)
 
