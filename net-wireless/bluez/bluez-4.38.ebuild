@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.38.ebuild,v 1.1 2009/05/04 19:52:57 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/bluez-4.38.ebuild,v 1.2 2009/09/20 19:34:34 nirbheek Exp $
 
 EAPI="2"
 
@@ -132,8 +132,8 @@ pkg_postinst() {
 	elog ""
 	elog "Since 3.0 bluez has changed the passkey handling to use a dbus based"
 	elog "API so please remember to update your /etc/bluetooth/hcid.conf."
-	elog "For a password agent, there is for example net-wireless/bluez-gnome"
-	elog "for gnome and net-wireless/kdebluetooth for kde."
+	elog "For a password agent, there are for example net-wireless/bluez-gnome"
+	elog "and net-wireless/gnome-bluetooth:2 for GNOME. For KDE, see bug 246381"
 	elog ""
 	elog "Since 3.10.1 we don't install the old style daemons any more but rely"
 	elog "on the new service architechture:"
