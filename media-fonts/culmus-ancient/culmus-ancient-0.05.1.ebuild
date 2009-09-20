@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus-ancient/culmus-ancient-0.05.1.ebuild,v 1.1 2009/03/01 09:35:55 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus-ancient/culmus-ancient-0.05.1.ebuild,v 1.2 2009/09/20 02:39:13 dirtyepic Exp $
 
 inherit font versionator
 
@@ -37,10 +37,4 @@ src_compile() {
 		make clean
 		make all || die "Failed to build fonts"
 	fi
-}
-
-pkg_postinst() {
-	elog "This font contains support for fontconfig, which may make"
-	elog "it render more smoothly. To enable it, do:"
-	elog "eselect fontconfig enable 65-culmus.conf"
 }
