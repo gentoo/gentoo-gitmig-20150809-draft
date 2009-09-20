@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.151 2009/09/19 15:12:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.152 2009/09/20 19:29:59 nixnut Exp $
+
+  20 Sep 2009; nixnut <nixnut@gentoo.org> libtool-2.2.6a.ebuild:
+  ppc stable #257399
 
   19 Sep 2009; Mike Frysinger <vapier@gentoo.org> libtool-2.2.6a.ebuild:
   Manually preserve the old libtool library.
