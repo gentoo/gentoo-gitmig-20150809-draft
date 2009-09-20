@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.155 2009/09/16 13:10:06 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.156 2009/09/20 20:46:06 anarchy Exp $
+
+*nss-3.12.4-r1 (20 Sep 2009)
+
+  20 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> +nss-3.12.4-r1.ebuild:
+  remove system zlib support, re-enable ECC export
 
   16 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> nss-3.12.4.ebuild:
   Make pkg_postinst() clearer on revdep-rebuild usage.
