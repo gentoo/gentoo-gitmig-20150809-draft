@@ -1,6 +1,6 @@
 diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
---- ipp2p-0.8.2.orig/ipt_ipp2p.c	2007-12-04 07:50:55.000000000 +0200
-+++ ipp2p-0.8.2/ipt_ipp2p.c	2007-12-04 07:50:43.000000000 +0200
+--- ipp2p-0.8.2.orig/ipt_ipp2p.c	2006-09-27 11:52:00.000000000 +0200
++++ ipp2p-0.8.2/ipt_ipp2p.c	2009-09-20 14:37:00.000000000 +0200
 @@ -2,9 +2,18 @@
  #include <linux/modversions.h>
  #endif
@@ -13,15 +13,15 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
 +#	define ipt_register_match xt_register_match
 +#	define ipt_unregister_match xt_unregister_match
 +#	define ipt_match xt_match
-+#else 
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,21) */
 +#	include <linux/netfilter_ipv4/ip_tables.h>
  //#include <linux/netfilter_ipv4/ipt_ipp2p.h>
-+#endif /* LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,21) */
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,21) */
 +
  #include "ipt_ipp2p.h"
  #include <net/tcp.h>
  #include <net/udp.h>
-@@ -725,7 +734,11 @@
+@@ -725,8 +734,15 @@
  };
  
  
@@ -31,29 +31,54 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  static int
 +#endif
  match(const struct sk_buff *skb,
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++      const struct xt_match_param *params
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30) */
        const struct net_device *in,
        const struct net_device *out,
-@@ -744,11 +757,19 @@
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
+@@ -734,21 +750,36 @@
+       const void *matchinfo,
+       int offset,
+       unsigned int myprotoff,
+-#else
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17) */
+       const void *matchinfo,
+       int offset,
+-#endif
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,17) */
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+       const void *hdr,
        u_int16_t datalen,
  #endif
  
+-      int *hotdrop)
+-{
 +#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
-+      bool *hotdrop)
-+#else
-       int *hotdrop)
-+#endif
- {
++      bool *hotdrop
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,22) */
++      int *hotdrop
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,22) */
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30) */
++)
++{
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++    const struct ipt_p2p_info *info = params->matchinfo;
++    const int offset = params->fragoff;
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30) */
      const struct ipt_p2p_info *info = matchinfo;
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30) */
      unsigned char  *haystack;
 +#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,22)
 +    struct iphdr *ip = ip_hdr(skb);
-+#else
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,22) */
      struct iphdr *ip = skb->nh.iph;
-+#endif
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,22) */
      int p2p_result = 0, i = 0;
  //    int head_len;
      int hlen = ntohs(ip->tot_len)-(ip->ihl*4);	/*hlen = packet-data length*/
-@@ -822,7 +843,11 @@
+@@ -822,8 +853,16 @@
  
  
  
@@ -61,21 +86,31 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
 +static bool
 +#else
  static int
+-checkentry(const char *tablename,
 +#endif
- checkentry(const char *tablename,
++checkentry(
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,30)
++           const struct xt_mtchk_param *params
++#else /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30) */
++           const char *tablename,
  #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
             const void *ip, 
-@@ -831,7 +856,9 @@
+            const struct xt_match *mymatch,
+@@ -831,8 +870,12 @@
             const struct ipt_ip *ip,
  #endif
  	   void *matchinfo,
 +#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,18)
  	   unsigned int matchsize,
+-	   unsigned int hook_mask)
 +#endif
- 	   unsigned int hook_mask)
++	   unsigned int hook_mask
++#endif /* LINUX_VERSION_CODE < KERNEL_VERSION(2,6,30) */
++)
  {
          /* Must specify -p tcp */
-@@ -843,15 +870,6 @@
+ /*    if (ip->proto != IPPROTO_TCP || (ip->invflags & IPT_INV_PROTO)) {
+@@ -843,15 +886,6 @@
  }
  									    
  
@@ -91,7 +126,7 @@ diff -Nru ipp2p-0.8.2.orig/ipt_ipp2p.c ipp2p-0.8.2/ipt_ipp2p.c
  static struct ipt_match ipp2p_match = { 
  #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
  	{ NULL, NULL }, 
-@@ -860,17 +878,16 @@
+@@ -860,17 +894,16 @@
  	&checkentry, 
  	NULL, 
  	THIS_MODULE

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r4.ebuild,v 1.9 2009/04/10 22:25:36 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipp2p/ipp2p-0.8.2-r5.ebuild,v 1.1 2009/09/20 12:58:23 mrness Exp $
 
 EAPI="2"
 
@@ -30,7 +30,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-kernel-2.6.22.patch
+	epatch "${FILESDIR}"/${P}-kernel-2.6.30.patch
 	convert_to_m Makefile
 
 	sed -i -e "s/^IPTABLES_VERSION/#IPTABLES_VERSION/" Makefile
