@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.503 2009/09/15 21:24:03 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.504 2009/09/20 09:59:52 aballier Exp $
+
+*vlc-1.0.2 (20 Sep 2009)
+
+  20 Sep 2009; Alexis Ballier <aballier@gentoo.org> +vlc-1.0.2.ebuild:
+  bump to 1.0.2
 
   15 Sep 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
   Warn if xv is requested but xcb is not enabled as xcb is the only xvideo
