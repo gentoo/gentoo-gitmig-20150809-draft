@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.313 2009/09/20 19:52:00 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.314 2009/09/20 21:56:27 maekke Exp $
+
+  20 Sep 2009; Markus Meier <maekke@gentoo.org> ffmpeg-0.5_p19928.ebuild:
+  add ~arm
 
   20 Sep 2009; Markus Meier <maekke@gentoo.org> ffmpeg-0.5_p19787.ebuild:
   add ~arm, bug #283953
