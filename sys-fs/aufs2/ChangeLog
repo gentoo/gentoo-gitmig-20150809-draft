@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/aufs2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.8 2009/09/18 15:12:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/ChangeLog,v 1.9 2009/09/20 20:37:55 tommy Exp $
+
+  20 Sep 2009; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  aufs2-0_p20090916.ebuild, +files/aufs2-base-28.patch,
+  +files/aufs2-base-29.patch, +files/aufs2-base-30.patch,
+  +files/aufs2-base-31.patch:
+  Fix bug 285658
 
 *aufs2-0_p20090916 (18 Sep 2009)
 

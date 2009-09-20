@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916.ebuild,v 1.1 2009/09/18 15:12:29 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/aufs2/aufs2-0_p20090916.ebuild,v 1.2 2009/09/20 20:37:55 tommy Exp $
 
 EAPI="2"
 
@@ -27,18 +27,21 @@ pkg_setup() {
 	kernel_is lt 2 6 27 && die "kernel too old"
 	kernel_is gt 2 6 31 && die "kernel too new"
 
-	if ! patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null; then
+	if ! ( patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null && \
+		patch -p1 --dry-run --force -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null ); then
 		if use kernel-patch; then
 			cd ${KV_DIR}
 			ewarn "Patching your kernel..."
 			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch >/dev/null
-			epatch "${FILESDIR}"/aufs2-standalone-${KV_PATCH}.patch
-			einfo "You need to compile your kernel with the applied patch"
-			einfo "to be able to load and use the aufs kernel module"
+			patch --no-backup-if-mismatch --force -p1 -R -d ${KV_DIR} < "${FILESDIR}"/aufs2-base-${KV_PATCH}.patch >/dev/null
+			epatch "${FILESDIR}"/aufs2-{base,standalone}-${KV_PATCH}.patch
+			elog "You need to compile your kernel with the applied patch"
+			elog "to be able to load and use the aufs kernel module"
 		else
 			eerror "You need to apply a patch to your kernel to compile and run the aufs2 module"
 			eerror "Either enable the kernel-patch useflag to do it with this ebuild"
-			eerror "or apply ${FILESDIR}/aufs2-standalone-${KV_PATCH}.patch by hand"
+			eerror "or apply ${FILESDIR}/aufs2-base-${KV_PATCH}.patch and"
+			eerror "${FILESDIR}/aufs2-standalone-${KV_PATCH}.patch by hand"
 			die "missing kernel patch, please apply it first"
 		fi
 	fi
