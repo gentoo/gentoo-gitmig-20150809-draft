@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.643 2009/09/20 02:25:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.644 2009/09/20 02:57:50 anarchy Exp $
+
+  20 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> glibc-2.10.1.ebuild,
+  +files/2.10/glibc-2.10-gentoo-chk_fail.c:
+  rename broken glibc-2.6-gentoo_chk_fail.c to glibc-2.10-gentoo_chk_fail.c
+  and update ebuild.
 
   20 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> glibc-2.10.1.ebuild,
   +files/2.10/glibc-2.10-hardened-configure-picdefault.patch,
