@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.7 2009/08/29 18:05:23 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/openobex-1.5.ebuild,v 1.8 2009/09/20 10:56:26 mrness Exp $
 
 EAPI="2"
+
+inherit eutils autotools
 
 DESCRIPTION="An implementation of the OBEX protocol used for transferring data to mobile devices"
 HOMEPAGE="http://sourceforge.net/projects/openobex/"
@@ -16,6 +18,11 @@ RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
 	usb? ( dev-libs/libusb:0 )"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-use-flags.patch
+	eautoreconf
+}
 
 src_configure() {
 	econf \
