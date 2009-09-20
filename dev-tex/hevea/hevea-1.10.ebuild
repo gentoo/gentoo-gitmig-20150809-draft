@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.10.ebuild,v 1.3 2008/04/06 19:35:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/hevea/hevea-1.10.ebuild,v 1.4 2009/09/20 15:46:49 aballier Exp $
+
+EAPI="2"
 
 inherit eutils multilib
-
-EAPI="1"
 
 IUSE="+ocamlopt"
 
@@ -16,16 +16,8 @@ LICENSE="QPL"
 SLOT="0"
 KEYWORDS="~amd64 ppc ~sparc x86"
 
-DEPEND=">=dev-lang/ocaml-3.07"
-
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
+DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	rm -f config.sh
