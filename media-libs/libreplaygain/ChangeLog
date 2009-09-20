@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libreplaygain
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.8 2009/09/15 01:47:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/ChangeLog,v 1.9 2009/09/20 22:13:23 maekke Exp $
+
+  20 Sep 2009; Markus Meier <maekke@gentoo.org> libreplaygain-444.ebuild:
+  amd64/x86 stable, bug #284781
 
   15 Sep 2009; Jeroen Roovers <jer@gentoo.org> libreplaygain-444.ebuild:
   Stable for HPPA (bug #284781).

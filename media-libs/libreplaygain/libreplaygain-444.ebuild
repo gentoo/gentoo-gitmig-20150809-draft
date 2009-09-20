@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-444.ebuild,v 1.12 2009/09/15 01:47:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libreplaygain/libreplaygain-444.ebuild,v 1.13 2009/09/20 22:13:23 maekke Exp $
 
 inherit cmake-utils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 PATCHES=( "${FILESDIR}/${P}-multilib.patch" )
