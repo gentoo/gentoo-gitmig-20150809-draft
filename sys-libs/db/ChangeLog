@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.291 2009/09/19 23:48:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.292 2009/09/20 19:52:44 robbat2 Exp $
+
+  20 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> db-4.2.52_p4-r2.ebuild,
+  db-4.2.52_p5.ebuild, db-4.2.52_p5-r1.ebuild, db-4.3.29-r2.ebuild,
+  db-4.3.29_p1.ebuild, db-4.3.29_p1-r1.ebuild, db-4.4.20_p4.ebuild,
+  db-4.4.20_p4-r1.ebuild, db-4.5.20_p2.ebuild, db-4.5.20_p2-r1.ebuild,
+  db-4.6.21_p4.ebuild, db-4.7.25_p3.ebuild, db-4.7.25_p4.ebuild,
+  db-4.8.24.ebuild:
+  berkeley_db_svc is not always built, and might be going away permanently
+  in db-4.8 series, but I suspect it might come back too, so just don't try
+  to rename it if it doesn't exist. Thanks to Sebastian Luettich
+  <selu@mediman.org>.
 
   19 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> db-4.8.24.ebuild,
   +files/db-4.8.24-java-manifest-location.patch:

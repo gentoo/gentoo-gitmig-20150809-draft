@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p4-r2.ebuild,v 1.17 2009/07/30 11:01:33 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.2.52_p4-r2.ebuild,v 1.18 2009/09/20 19:52:44 robbat2 Exp $
 
 inherit eutils gnuconfig db java-pkg-opt-2
 
@@ -113,6 +113,8 @@ src_install() {
 	db_src_install_usrlibcleanup
 
 	dodir /usr/sbin
+	# This file is not always built, and no longer exists as of db-4.8
+	[[ -f "${D}"/usr/bin/berkeley_db_svc ]] && \
 	mv "${D}"/usr/bin/berkeley_db_svc "${D}"/usr/sbin/berkeley_db42_svc
 
 	if use java; then
