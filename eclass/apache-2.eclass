@@ -1,6 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.17 2009/07/05 16:05:25 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.18 2009/09/20 08:37:23 hollow Exp $
+
+EAPI="2"
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -10,7 +12,7 @@
 # This eclass handles apache-2.x ebuild functions such as LoadModule generation
 # and inter-module dependency checking.
 
-inherit autotools confutils eutils flag-o-matic multilib
+inherit autotools eutils flag-o-matic multilib ssl-cert
 
 # ==============================================================================
 # INTERNAL VARIABLES
@@ -79,7 +81,7 @@ done
 
 DEPEND="dev-lang/perl
 	=dev-libs/apr-1*
-	=dev-libs/apr-util-1*
+	=dev-libs/apr-util-1*[ldap?]
 	dev-libs/libpcre
 	ldap? ( =net-nds/openldap-2* )
 	selinux? ( sec-policy/selinux-apache )
@@ -230,7 +232,6 @@ setup_modules() {
 	MY_CONF="--enable-so=static"
 
 	if use ldap ; then
-		confutils_use_depend_built_with_all ldap dev-libs/apr-util ldap
 		MY_CONF="${MY_CONF} --enable-authnz_ldap=${mod_type} --enable-ldap=${mod_type}"
 		MY_MODS="${MY_MODS} ldap authnz_ldap"
 	else
@@ -392,14 +393,11 @@ apache-2_pkg_setup() {
 	fi
 }
 
-# @FUNCTION: apache-2_src_unpack
+# @FUNCTION: apache-2_src_prepare
 # @DESCRIPTION:
 # This function applies patches, configures a custom file-system layout and
 # rebuilds the configure scripts.
-apache-2_src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+apache-2_src_prepare() {
 	# 03_all_gentoo-apache-tools.patch injects -Wl,-z,now, which is not a good
 	# idea for everyone
 	case ${CHOST} in
@@ -439,11 +437,11 @@ apache-2_src_unpack() {
 	AT_GNUCONF_UPDATE=yes AT_M4DIR=build eautoreconf
 }
 
-# @FUNCTION: apache-2_src_compile
+# @FUNCTION: apache-2_src_configure
 # @DESCRIPTION:
 # This function adds compiler flags and runs econf and emake based on MY_MPM and
 # MY_CONF
-apache-2_src_compile() {
+apache-2_src_configure() {
 	# Instead of filtering --as-needed (bug #128505), append --no-as-needed
 	# Thanks to Harald van Dijk
 	# ... but only on platforms that use a GNU linker!
@@ -477,8 +475,6 @@ apache-2_src_compile() {
 		${MY_CONF} || die "econf failed!"
 
 	sed -i -e 's:apache2\.conf:httpd.conf:' include/ap_config_auto.h
-
-	emake || die "emake failed"
 }
 
 # @FUNCTION: apache-2_src_install
@@ -501,10 +497,13 @@ apache-2_src_install() {
 	newins "${GENTOO_PATCHDIR}"/scripts/apache2-logrotate apache2
 
 	# generate a sane default APACHE2_OPTS
-	APACHE2_OPTS="-D DEFAULT_VHOST -D INFO -D LANGUAGE"
+	APACHE2_OPTS="-D DEFAULT_VHOST -D INFO"
 	use doc && APACHE2_OPTS="${APACHE2_OPTS} -D MANUAL"
 	use ssl && APACHE2_OPTS="${APACHE2_OPTS} -D SSL -D SSL_DEFAULT_VHOST"
 	use suexec && APACHE2_OPTS="${APACHE2_OPTS} -D SUEXEC"
+	if hasq negotiation ${APACHE2_MODULES} && use apache2_modules_negotiation; then
+		APACHE2_OPTS="${APACHE2_OPTS} -D LANGUAGE"
+	fi
 
 	sed -i -e "s:APACHE2_OPTS=\".*\":APACHE2_OPTS=\"${APACHE2_OPTS}\":" \
 		"${GENTOO_PATCHDIR}"/init/apache2.confd || die "sed failed"
@@ -523,10 +522,6 @@ apache-2_src_install() {
 	# provide legacy symlink for apxs, bug 177697
 	dosym /usr/sbin/apxs /usr/sbin/apxs2
 
-	# install some thirdparty scripts
-	exeinto /usr/sbin
-	use ssl && doexe "${GENTOO_PATCHDIR}"/scripts/gentestcrt.sh
-
 	# install some documentation
 	dodoc ABOUT_APACHE CHANGES LAYOUT README README.platforms VERSIONING
 	dodoc "${GENTOO_PATCHDIR}"/docs/*
@@ -539,10 +534,12 @@ apache-2_src_install() {
 		rm -Rf "${D}/usr/share/doc/${PF}/manual"
 	fi
 
-	# the default webroot gets stored in /usr/share/${PF}/webroot
-	ebegin "Installing default webroot to /usr/share/${PF}/webroot"
-	dodir /usr/share/${PF}
-	mv -f "${D}/var/www/localhost" "${D}/usr/share/${PF}/webroot"
+	# the default icons and error pages get stored in
+	# /usr/share/apache2/{error,icons}
+	dodir /usr/share/apache2
+	mv -f "${D}/var/www/localhost/error" "${D}/usr/share/apache2/error"
+	mv -f "${D}/var/www/localhost/icons" "${D}/usr/share/apache2/icons"
+	rm -rf "${D}/var/www/localhost/"
 	eend $?
 
 	# set some sane permissions for suexec
@@ -559,53 +556,31 @@ apache-2_src_install() {
 		fowners apache:apache ${i}
 		fperms 0755 ${i}
 	done
-
-	# we need /etc/apache2/ssl if USE=ssl
-	use ssl && keepdir /etc/apache2/ssl
 }
 
 # @FUNCTION: apache-2_pkg_postinst
 # @DESCRIPTION:
 # This function creates test certificates if SSL is enabled and installs the
-# default webroot to /var/www/localhost if it does not exist. We do this here
+# default index.html to /var/www/localhost if it does not exist. We do this here
 # because the default webroot is a copy of the files that exist elsewhere and we
 # don't want them to be managed/removed by portage when apache is upgraded.
 apache-2_pkg_postinst() {
-	einfo
-
-	if use ssl && [[ ! -e "${ROOT}/etc/apache2/ssl/server.crt" ]] ; then
-		cd "${ROOT}"/etc/apache2/ssl
-		einfo "Generating self-signed test certificate in ${ROOT}etc/apache2/ssl ..."
-		yes "" 2>/dev/null | \
-			"${ROOT}"/usr/sbin/gentestcrt.sh >/dev/null 2>&1 || \
-			die "gentestcrt.sh failed"
-		einfo
+	if use ssl && [[ ! -e "${ROOT}/etc/ssl/apache2/server.pem" ]]; then
+		SSL_ORGANIZATION="${SSL_ORGANIZATION:-Apache HTTP Server}"
+		install_cert /etc/ssl/apache2/server
+		ewarn
+		ewarn "The location of SSL certificates has changed. If you are"
+		ewarn "upgrading from ${CATEGORY}/${PN}-2.2.13 or earlier (or remerged"
+		ewarn "*any* apache version), you might want to move your old"
+		ewarn "certificates from /etc/apache2/ssl/ to /etc/ssl/apache2/ and"
+		ewarn "update your config files."
+		ewarn
 	fi
 
-	if [[ -e "${ROOT}/var/www/localhost" ]] ; then
-		elog "The default webroot has not been installed into"
-		elog "${ROOT}var/www/localhost because the directory already exists"
-		elog "and we do not want to overwrite any files you have put there."
-		elog
-		elog "If you would like to install the latest webroot, please run"
-		elog "emerge --config =${PF}"
-		elog
-	else
-		einfo "Installing default webroot to ${ROOT}var/www/localhost"
-		mkdir -p "${ROOT}"/var/www/localhost
-		cp -R "${ROOT}"/usr/share/${PF}/webroot/* "${ROOT}"/var/www/localhost/
-		einfo
+	if [[ ! -e "${ROOT}/var/www/localhost" ]] ; then
+		mkdir -p "${ROOT}/var/www/localhost/htdocs"
+		echo "<html><body><h1>It works!</h1></body></html>" > "${ROOT}/var/www/localhost/htdocs/index.html"
 	fi
 }
 
-# @FUNCTION: apache-2_pkg_config
-# @DESCRIPTION:
-# This function installs -- and overwrites -- the default webroot to
-# /var/www/localhost
-apache-2_pkg_config() {
-	einfo "Installing default webroot to ${ROOT}var/www/localhost"
-	mkdir -p "${ROOT}"/var/www/localhost
-	cp -R "${ROOT}"/usr/share/${PF}/webroot/* "${ROOT}"/var/www/localhost/
-}
-
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst pkg_config
+EXPORT_FUNCTIONS pkg_setup src_prepare src_configure src_install pkg_postinst
