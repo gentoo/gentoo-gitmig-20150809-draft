@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.642 2009/09/18 15:15:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.643 2009/09/20 02:25:19 anarchy Exp $
+
+  20 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> glibc-2.10.1.ebuild,
+  +files/2.10/glibc-2.10-hardened-configure-picdefault.patch,
+  +files/2.10/glibc-2.10-hardened-inittls-nosysenter.patch,
+  +files/2.10/glibc-2.10-hardened-ssp-compat.patch:
+  add updated hardened patches bug #270274, please leave mask in place for
+  hardened profile.
 
   18 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> glibc-2.10.1.ebuild,
   files/eblits/src_install.eblit:
