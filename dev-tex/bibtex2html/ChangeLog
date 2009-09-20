@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/bibtex2html
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.17 2009/09/20 13:39:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtex2html/ChangeLog,v 1.18 2009/09/20 15:49:27 aballier Exp $
+
+  20 Sep 2009; Alexis Ballier <aballier@gentoo.org> bibtex2html-1.94.ebuild:
+  keyword ~ppc64, working fine on a PowerMac 970
 
 *bibtex2html-1.94 (20 Sep 2009)
 
