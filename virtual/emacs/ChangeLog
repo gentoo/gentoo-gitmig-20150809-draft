@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.29 2009/09/18 03:25:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.30 2009/09/20 16:09:19 tcunha Exp $
+
+  20 Sep 2009; Tiago Cunha <tcunha@gentoo.org> emacs-23.ebuild:
+  stable sparc, bug 285063
 
   18 Sep 2009; Jeroen Roovers <jer@gentoo.org> emacs-23.ebuild:
   Stable for HPPA (bug #285063).
