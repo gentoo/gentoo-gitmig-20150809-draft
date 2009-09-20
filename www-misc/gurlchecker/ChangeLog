@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/gurlchecker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.28 2009/09/16 15:31:11 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/gurlchecker/ChangeLog,v 1.29 2009/09/20 19:37:47 nixnut Exp $
+
+  20 Sep 2009; nixnut <nixnut@gentoo.org> gurlchecker-0.10.5.ebuild:
+  ppc stable #283800
 
   16 Sep 2009; Jeroen Roovers <jer@gentoo.org> gurlchecker-0.10.5.ebuild:
   Stable for HPPA (bug #283800).
