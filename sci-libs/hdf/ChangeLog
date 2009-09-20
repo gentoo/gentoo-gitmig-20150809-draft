@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.14 2009/09/19 09:45:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.15 2009/09/20 18:42:29 nixnut Exp $
+
+  20 Sep 2009; nixnut <nixnut@gentoo.org> hdf-4.2_p4.ebuild:
+  ppc stable #284613
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> hdf-4.2_p4.ebuild:
   amd64/x86 stable, bug #284613

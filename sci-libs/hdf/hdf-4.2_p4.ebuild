@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.3 2009/09/19 09:45:08 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2_p4.ebuild,v 1.4 2009/09/20 18:42:29 nixnut Exp $
 
 EAPI=2
 inherit eutils toolchain-funcs autotools flag-o-matic
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.hdfgroup.org/HDF/HDF_Current/src/${MYP}.tar.gz
 	mirror://gentoo/${P}-patches.tar.bz2"
 
 LICENSE="NCSA-HDF"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="amd64 ppc x86"
 SLOT="0"
 IUSE="fortran netcdf szip"
 
