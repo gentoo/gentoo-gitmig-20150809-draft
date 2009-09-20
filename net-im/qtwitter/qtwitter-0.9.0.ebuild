@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.9.0.ebuild,v 1.1 2009/09/12 10:07:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/qtwitter-0.9.0.ebuild,v 1.2 2009/09/20 07:46:21 ayoy Exp $
 
 EAPI="2"
 
-inherit qt4
+inherit qt4 eutils
 
 DESCRIPTION="A Qt-based client for Twitter and Identi.ca"
 HOMEPAGE="http://www.qt-apps.org/content/show.php/qTwitter?content=99087"
@@ -59,6 +59,7 @@ src_prepare() {
 
 	if ! use oauth; then
 		sed -i '/DEFINES += OAUTH/d' ${PN}.pri || die "sed failed"
+		epatch "${FILESDIR}/${P}-no-oauth-fix.patch"
 	fi
 }
 

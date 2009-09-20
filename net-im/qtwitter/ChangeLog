@@ -1,6 +1,11 @@
 # ChangeLog for net-im/qtwitter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.14 2009/09/12 10:07:24 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qtwitter/ChangeLog,v 1.15 2009/09/20 07:46:21 ayoy Exp $
+
+  20 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> qtwitter-0.9.0.ebuild,
+  +files/qtwitter-0.9.0-no-oauth-fix.patch, metadata.xml:
+  Adding patch to fix compilation without OAuth support. Thanks to Dragon
+  Jake for reporting.
 
 *qtwitter-0.9.0 (12 Sep 2009)
 

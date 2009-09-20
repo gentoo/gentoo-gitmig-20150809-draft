@@ -6,13 +6,8 @@
 	<flag name="oauth">Enables authorization using OAuth for Twitter accounts</flag>
 </use>
 <maintainer>
-<email>hwoarang@gentoo.org</email>
-<name>Markos Chandras</name>
-</maintainer>
-<maintainer>
-<email>d@ayoy.net</email>
+<email>ayoy@gentoo.org</email>
 <name>Dominik Kapusta</name>
-<description>Upstream developer, proxy maintainer</description>
 </maintainer>
 <longdescription lang="en">
 </longdescription>
