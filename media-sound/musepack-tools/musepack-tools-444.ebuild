@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-444.ebuild,v 1.13 2009/09/15 01:48:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/musepack-tools-444.ebuild,v 1.14 2009/09/20 22:15:30 maekke Exp $
 
 inherit cmake-utils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="BSD LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 hppa ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ~ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=media-libs/libcuefile-${PV}
