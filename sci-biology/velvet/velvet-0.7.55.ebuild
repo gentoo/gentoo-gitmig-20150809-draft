@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-0.7.55.ebuild,v 1.2 2009/09/20 00:34:24 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/velvet/velvet-0.7.55.ebuild,v 1.3 2009/09/20 00:36:36 weaver Exp $
 
 EAPI="2"
 
@@ -46,8 +46,8 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo "To adjust the MAXKMERLENGTH or CATEGORIES parameters as described in the manual,"
-	einfo "please set the variables VELVET_MAXKMERLENGTH or VELVET_CATEGORIES in your"
-	einfo "environment or /etc/make.conf, then re-emerge the package. For example:"
-	einfo "	VELVET_MAXKMERLENGTH=NN emerge [options] velvet"
+	elog "To adjust the MAXKMERLENGTH or CATEGORIES parameters as described in the manual,"
+	elog "please set the variables VELVET_MAXKMERLENGTH or VELVET_CATEGORIES in your"
+	elog "environment or /etc/make.conf, then re-emerge the package. For example:"
+	elog "	VELVET_MAXKMERLENGTH=NN emerge [options] velvet"
 }
