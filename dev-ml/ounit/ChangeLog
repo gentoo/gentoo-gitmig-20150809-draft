@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.17 2009/08/14 17:51:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.18 2009/09/20 13:31:29 aballier Exp $
+
+  20 Sep 2009; Alexis Ballier <aballier@gentoo.org> -ounit-1.0.2.ebuild:
+  remove old
 
   14 Aug 2009; Markus Meier <maekke@gentoo.org> ounit-1.0.3.ebuild:
   amd64/x86 stable, bug #280416
