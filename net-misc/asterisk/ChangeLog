@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.213 2009/09/11 16:57:56 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.214 2009/09/20 19:21:09 nixnut Exp $
+
+  20 Sep 2009; nixnut <nixnut@gentoo.org> asterisk-1.2.35.ebuild:
+  ppc stable #283624
 
   11 Sep 2009; <chainsaw@gentoo.org>
   -files/1.6.0/asterisk-1.6.0.6-autoconf-263.patch,
