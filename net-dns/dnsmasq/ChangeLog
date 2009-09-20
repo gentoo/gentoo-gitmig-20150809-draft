@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.185 2009/09/20 18:53:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.186 2009/09/20 21:11:01 a3li Exp $
+
+  20 Sep 2009; Alex Legler <a3li@gentoo.org> -dnsmasq-2.45.ebuild:
+  Non-maintainer commit: Removing vulnerable ebuild, GLSA 200909-19
 
   20 Sep 2009; nixnut <nixnut@gentoo.org> dnsmasq-2.50.ebuild:
   ppc stable #282653
