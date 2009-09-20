@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activesupport
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.93 2009/09/19 17:17:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.94 2009/09/20 19:05:55 nixnut Exp $
+
+  20 Sep 2009; nixnut <nixnut@gentoo.org> activesupport-2.3.4.ebuild:
+  ppc stable #283396
 
   19 Sep 2009; Raúl Porcel <armin76@gentoo.org> activesupport-2.3.4.ebuild:
   ia64/sparc stable wrt #283396
