@@ -84,7 +84,6 @@ scanner
 madwifi
 libupnp
 zvbi
-kate
 v4l
 v4l2
 dvd
