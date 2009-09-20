@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10477 2009/09/19 19:01:27 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10478 2009/09/20 11:58:13 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Torsten Veller <tove@gentoo.org> (20 Sep 2009)
+# Add perl-5.10 masks (#280724)
+~dev-lang/perl-5.10.1
+~sys-devel/libperl-5.10.1
+=app-admin/perl-cleaner-2*
 
 # Rémi Cardona <remi@gentoo.org> (19 Sep 2009)
 # Old useless X packages, unmaintained
