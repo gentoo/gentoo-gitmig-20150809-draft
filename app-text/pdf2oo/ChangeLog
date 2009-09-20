@@ -1,0 +1,16 @@
+# ChangeLog for app-text/pdf2oo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2oo/ChangeLog,v 1.1 2009/09/20 04:21:25 darkside Exp $
+
+  20 Sep 2009; Jeremy Olexa <darkside@gentoo.org> +pdf2oo-20090715.ebuild,
+  +metadata.xml:
+  Initial commit, original ebuild by Mike Pagano in the sunrise overlay, bug
+  143919
+
+*pdf2oo-20090715 (20 Sep 2009)
+
+  20 Sep 2009; Jeremy Olexa <darkside@gentoo.org> +pdf2oo-20090715.ebuild,
+  +metadata.xml:
+  Initial commit, original ebuild by Mike Pagano in the sunrise overlay, bug
+  143919
+
