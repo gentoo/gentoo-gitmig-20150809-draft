@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/mail-notification
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.88 2009/09/05 13:21:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/ChangeLog,v 1.89 2009/09/20 13:53:45 graaff Exp $
+
+  20 Sep 2009; Hans de Graaff <graaff@gentoo.org>
+  mail-notification-5.4-r1.ebuild:
+  Drop obsolete eel dependency, which got dropped in version 5.1. Thanks to
+  Francisco Vázquez in #285566.
 
   05 Sep 2009; Hans de Graaff <graaff@gentoo.org>
   mail-notification-5.4-r1.ebuild:

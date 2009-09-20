@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.7 2009/09/05 13:21:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mail-notification/mail-notification-5.4-r1.ebuild,v 1.8 2009/09/20 13:53:45 graaff Exp $
 
 EAPI=1
 
@@ -24,7 +24,6 @@ RDEPEND=">=x11-libs/gtk+-2.12
 	>=dev-libs/glib-2.14
 	>=gnome-base/gconf-2.4.0
 	>=gnome-base/gnome-panel-2.6
-	>=gnome-base/eel-2.6
 	>=gnome-base/gconf-2.6
 	>=gnome-base/libgnomeui-2.14
 	>=gnome-base/libglade-2.0
