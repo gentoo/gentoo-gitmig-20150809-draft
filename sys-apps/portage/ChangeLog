@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.628 2009/08/24 06:21:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.629 2009/09/20 00:17:30 zmedico Exp $
+
+*portage-2.2_rc41 (19 Sep 2009)
+
+  19 Sep 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc41.ebuild:
+  2.2_rc41 bump. This fixes bug #257660 (repoman misses files in cvs commits),
+  bug #278729 (handle USE deps better inside ||), bug #281834 (disallow
+  variable names containing hyphen), bug #282808 (intermittent KeyError in
+  _poll_loop), bug #283223 (UnicodeEncodeError with sqlite cache), bug #283292
+  (repoman fails with sudo), bug #283357 (add gperf to RDEPEND.suspect),
+  bug #283358 (remove references to GRP_STAGE23_USE), bug #283513 (don't allow
+  -n with -e), and bug #283795 (confusing message about unsatisifed deps of
+  virtual package).
 
 *portage-2.2_rc40 (24 Aug 2009)
 
