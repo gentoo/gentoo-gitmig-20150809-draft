@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.13 2009/09/20 19:34:34 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez/ChangeLog,v 1.14 2009/09/20 20:01:04 nirbheek Exp $
+
+*bluez-4.39-r2 (20 Sep 2009)
+
+  20 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org> +bluez-4.39-r2.ebuild:
+  Add IUSE=consolekit to control pambase dep. Give all rights to users in
+  plugdev only if we're not using ConsoleKit. Also, use +consolekit
+  (upstream defaults)
 
   20 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org> bluez-4.28.ebuild,
   bluez-4.38.ebuild, bluez-4.39.ebuild, bluez-4.39-r1.ebuild:
