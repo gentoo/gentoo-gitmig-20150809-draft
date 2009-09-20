@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.16.6.ebuild,v 1.2 2009/09/19 19:15:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.16.6.ebuild,v 1.3 2009/09/20 23:08:01 leio Exp $
 
 EAPI="2"
 
@@ -71,6 +71,9 @@ src_prepare() {
 	# Fix blured images when using jpeg7 in gdk-pixbuf, upstream
 	# bug #588740, gentoo bug #282744.
 	epatch "${FILESDIR}/${PN}-2.16.5-jpeg-backward-compatibility.patch"
+
+	# Fix pltcheck.sh test, bug 285698
+	epatch "${FILESDIR}/${P}-fix-pltcheck-test.patch"
 
 	# -O3 and company cause random crashes in applications. Bug #133469
 	replace-flags -O3 -O2
