@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.642 2009/09/18 17:31:32 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.643 2009/09/20 19:41:10 nixnut Exp $
+
+  20 Sep 2009; nixnut <nixnut@gentoo.org> gentoo-sources-2.6.30-r5.ebuild:
+  ppc stable #283928
 
   18 Sep 2009; Mike Pagano <mpagano@gentoo.org>
   gentoo-sources-2.6.26-r4.ebuild:
