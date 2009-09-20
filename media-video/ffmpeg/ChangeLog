@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.311 2009/09/15 07:24:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.312 2009/09/20 16:16:23 aballier Exp $
+
+*ffmpeg-0.5_p19928 (20 Sep 2009)
+
+  20 Sep 2009; Alexis Ballier <aballier@gentoo.org>
+  +ffmpeg-0.5_p19928.ebuild:
+  bump a new snapshot
 
   15 Sep 2009; Alexis Ballier <aballier@gentoo.org> ffmpeg-0.5-r1.ebuild:
   Fix dependencies on x264 for 0.5, it doesn't detect the latest version,
