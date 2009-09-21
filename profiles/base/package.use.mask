@@ -1,9 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.89 2009/09/16 14:46:18 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.90 2009/09/21 23:54:10 nirbheek Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (22 Sep 2009)
+# Broken with KDE4, mask for now
+>=app-office/openoffice-3.1.1 kde
 
 # Alex Legler <a3li@gentoo.org> (16 Sep 2009)
 # Maintainer of the kolab patch is not available (wrobel).

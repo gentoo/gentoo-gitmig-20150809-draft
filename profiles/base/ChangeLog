@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.95 2009/09/16 14:46:18 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.96 2009/09/21 23:54:10 nirbheek Exp $
+
+  21 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org> package.use.mask:
+  Mask '=app-office/openoffice-3.1.1 kde' since it's broken with KDE4
 
   16 Sep 2009; Alex Legler <a3li@gentoo.org> package.use.mask:
   Masking the "kolab" USE flag for >=www-apps/horde-webmail-1.2.4.
