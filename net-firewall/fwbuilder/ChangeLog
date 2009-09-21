@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/fwbuilder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.87 2009/09/01 10:40:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/ChangeLog,v 1.88 2009/09/21 20:51:48 a3li Exp $
+
+  21 Sep 2009; Alex Legler <a3li@gentoo.org> -fwbuilder-3.0.4.ebuild,
+  -fwbuilder-3.0.5.ebuild:
+  Removing unneeded vulnerable ebuilds, bug 285861
 
 *fwbuilder-3.0.6 (01 Sep 2009)
 
