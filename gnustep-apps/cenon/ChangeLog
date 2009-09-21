@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/cenon
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.7 2008/03/08 13:24:41 coldwind Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cenon/ChangeLog,v 1.8 2009/09/21 14:45:00 voyageur Exp $
+
+*cenon-3.90 (21 Sep 2009)
+
+  21 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org> +cenon-3.90.ebuild,
+  +files/cenon-3.90-install.patch:
+  Version bump, closes bug #279775
 
   08 Mar 2008; Santiago M. Mola <coldwind@gentoo.org> cenon-3.82.ebuild:
   amd64 stable wrt bug #207381
