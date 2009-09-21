@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.62 2009/08/16 09:39:18 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.63 2009/09/21 18:32:55 tgall Exp $
+
+  21 Sep 2009; Tom Gall <tgall@gentoo.org> BerkeleyDB-0.39.ebuild:
+  stable on ppc64, bug #278089
 
   16 Aug 2009; Torsten Veller <tove@gentoo.org> -files/Gentoo-config.diff:
   Remove unused patch
