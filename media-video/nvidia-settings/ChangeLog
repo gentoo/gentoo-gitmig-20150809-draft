@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-settings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.71 2009/09/02 21:49:51 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-settings/ChangeLog,v 1.72 2009/09/21 11:23:20 wired Exp $
+
+*nvidia-settings-190.32 (21 Sep 2009)
+
+  21 Sep 2009; Alex Alexander <wired@gentoo.org>
+  +nvidia-settings-190.32.ebuild:
+  version bump, beta 190.32
 
 *nvidia-settings-190.25 (02 Sep 2009)
 
