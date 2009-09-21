@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.54 2009/09/09 23:56:08 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.55 2009/09/21 11:30:16 robbat2 Exp $
+
+*lucene-2.4.1 (21 Sep 2009)
+
+  21 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> +lucene-2.4.1.ebuild:
+  Version bump.
 
   09 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> lucene-2.4.0.ebuild:
   Bug #270712: Fix build with non-Sun javac.
