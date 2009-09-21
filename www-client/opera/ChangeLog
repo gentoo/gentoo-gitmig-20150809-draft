@@ -1,6 +1,11 @@
 # ChangeLog for www-client/opera
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.395 2009/09/21 08:28:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera/ChangeLog,v 1.396 2009/09/21 08:31:03 jer Exp $
+
+  21 Sep 2009; Jeroen Roovers <jer@gentoo.org>
+  -files/opera-9.21-pluginpath.patch,
+  -files/opera-9.23-pluginpath-fbsd.patch:
+  Remove unused patches.
 
   21 Sep 2009; Jeroen Roovers <jer@gentoo.org>
   -files/opera-9.50-pluginpath.patch,
