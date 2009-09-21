@@ -1,6 +1,15 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.74 2009/09/13 14:47:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.75 2009/09/21 04:38:37 mrness Exp $
+
+*gammu-1.26.1-r1 (21 Sep 2009)
+*gammu-1.25.0-r1 (21 Sep 2009)
+
+  21 Sep 2009; Alin Năstac <mrness@gentoo.org> -gammu-1.25.0.ebuild,
+  +gammu-1.25.0-r1.ebuild, -gammu-1.26.0.ebuild,
+  -files/gammu-1.26.0-skip-locktest.patch, -gammu-1.26.1.ebuild,
+  +gammu-1.26.1-r1.ebuild:
+  Fix typo in src_configure (#283672).
 
   13 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gammu-1.25.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.26.0.ebuild,v 1.2 2009/09/05 07:23:02 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/gammu-1.25.0-r1.ebuild,v 1.1 2009/09/21 04:38:37 mrness Exp $
 
 EAPI="2"
 
@@ -13,11 +13,10 @@ SRC_URI="http://dl.cihar.com/gammu/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="curl debug bluetooth irda mysql postgres dbi nls python usb"
+IUSE="curl debug bluetooth irda mysql postgres dbi nls python"
 
 RDEPEND="bluetooth? ( || ( net-wireless/bluez net-wireless/bluez-libs ) )
 	curl? ( net-misc/curl )
-	usb? ( dev-libs/libusb:1 )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-server )
 	dbi? ( >=dev-db/libdbi-0.8.3 )
@@ -32,7 +31,7 @@ DEPEND="${RDEPEND}
 # sys-devel/gettext is needed for creating .mo files
 # Supported languages and translated documentation
 # Be sure all languages are prefixed with a single space!
-MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv sw zh_CN zh_TW"
+MY_AVAILABLE_LINGUAS=" af bg ca cs da de el es et fi fr gl he hu id it ko nl pl pt_BR ru sk sv zh_CN zh_TW"
 IUSE="${IUSE} ${MY_AVAILABLE_LINGUAS// / linguas_}"
 
 src_prepare() {
@@ -60,7 +59,6 @@ src_configure() {
 	local mycmakeargs="$(cmake-utils_use_with bluetooth Bluez) \
 		$(cmake-utils_use_with irda IRDA) \
 		$(cmake-utils_use_with curl CURL) \
-		$(cmake-utils_use_with usb USB) \
 		$(cmake-utils_use_with python PYTHON) \
 		$(cmake-utils_use_with mysql MySQL) \
 		$(cmake-utils_use_with postgres Postgres) \
@@ -69,7 +67,7 @@ src_configure() {
 		$(cmake-utils_use_with nls Iconv) \
 		-DBUILD_SHARED_LIBS=ON -DINSTALL_DOC_DIR=share/doc/${PF}"
 	if use python; then
-		mycmakeargs="${mycmakearg} -DBUILD_PYTHON=/usr/bin/python"
+		mycmakeargs="${mycmakeargs} -DBUILD_PYTHON=/usr/bin/python"
 	fi
 	cmake-utils_src_configure
 }
