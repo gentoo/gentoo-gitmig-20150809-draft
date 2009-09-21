@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r7.ebuild,v 1.3 2009/09/19 20:54:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r7.ebuild,v 1.4 2009/09/21 07:53:47 scarabeus Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ PATCHES=( "${FILESDIR}"/nolisten-tcp-and-black-background.patch
 	"${FILESDIR}"/xinit-1.0.4-console-kit.patch )
 
 pkg_setup() {
-	CONFIGURE_OPTIONS="$(use_with hal consolekit)"
+	CONFIGURE_OPTIONS="$(use_with consolekit)"
 }
 
 src_prepare() {
