@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10480 2009/09/21 03:10:35 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10481 2009/09/21 10:44:28 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -645,16 +645,6 @@ sci-chemistry/maid
 #
 # Removal on 2009-10-08
 net-misc/bo2k_console
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
-#  on behalf of QA team
-#
-# Multiple failures (a new one for each tinderbox type,
-# bug #249290 and #26073), accesses kernel sources badly
-# (bug #241956), uses -Werror (bug #260870).
-#
-# Removal on 2009-10-08
-app-crypt/tpm-emulator
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
