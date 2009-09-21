@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyopengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.36 2009/09/12 22:10:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/ChangeLog,v 1.37 2009/09/21 22:08:47 maekke Exp $
+
+  21 Sep 2009; Markus Meier <maekke@gentoo.org> pyopengl-3.0.0.ebuild:
+  arm stable, bug #271976
 
 *pyopengl-3.0.1_alpha4 (13 Sep 2009)
 
