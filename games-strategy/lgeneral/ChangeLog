@@ -1,6 +1,15 @@
 # ChangeLog for games-strategy/lgeneral
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.26 2009/02/12 09:13:08 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lgeneral/ChangeLog,v 1.27 2009/09/21 04:43:00 mr_bones_ Exp $
+
+*lgeneral-1.2_beta13 (21 Sep 2009)
+
+  21 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +lgeneral-1.2_beta13.ebuild, +files/lgeneral-1.2_beta13-64bit.patch,
+  +files/lgeneral-1.2_beta13-as-needed.patch,
+  +files/lgeneral-1.2_beta13-build.patch,
+  +files/lgeneral-1.2_beta13-gentoo-path.patch:
+  version bump; ebuild submitted by Mr. Anderson via bug #248241
 
   12 Feb 2009; Alfredo Tupone <tupone@gentoo.org>
   +files/lgeneral-1.2_beta12-as-needed.patch, lgeneral-1.2_beta12-r1.ebuild:
