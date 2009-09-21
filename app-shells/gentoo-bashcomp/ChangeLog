@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.36 2009/09/21 18:46:30 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.37 2009/09/21 18:54:09 darkside Exp $
+
+  21 Sep 2009; Jeremy Olexa <darkside@gentoo.org>
+  -gentoo-bashcomp-20090222.ebuild:
+  remove old
 
   21 Sep 2009; Tom Gall <tgall@gentoo.org> 
   gentoo-bashcomp-20090613.ebuild:
