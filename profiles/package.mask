@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10482 2009/09/21 11:42:56 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10483 2009/09/21 13:23:08 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (21 Sep 2009)
+# No >= bluez 4 support #279384, build failures #269757 #233007 #203959 #202905
+# Abandoned upstream, masked for removal in 30 days
+# Replacement: app-pda/multisync-gui (using libopensync)
+app-pda/multisync
 
 # Jesus Rivero <neurogeek@gentoo.org> (20 Sep 2009)
 # Masked for removal in 30 days.
