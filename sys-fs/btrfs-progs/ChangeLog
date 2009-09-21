@@ -1,6 +1,6 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.22 2009/09/21 15:57:42 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.23 2009/09/21 16:07:24 lavajoe Exp $
 
 *btrfs-progs-0.19 (21 Sep 2009)
 
@@ -9,7 +9,7 @@
   btrfs-progs-0.18-r1.ebuild, +btrfs-progs-0.19.ebuild,
   +files/btrfs-progs-0.19-convert-remove-used-space-update.patch,
   btrfs-progs-9999.ebuild:
-  New version 0.19 (bug #278066); fix hard-coded "gcc" and "make"
+  New version 0.19 (bug #278066); fix hard-coded "gcc" and "make" (bug #259961)
 
 *btrfs-progs-0.18-r1 (14 Jun 2009)
 
