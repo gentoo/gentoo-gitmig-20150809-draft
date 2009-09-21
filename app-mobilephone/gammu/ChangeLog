@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/gammu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.75 2009/09/21 04:38:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gammu/ChangeLog,v 1.76 2009/09/21 21:49:13 maekke Exp $
+
+  21 Sep 2009; Markus Meier <maekke@gentoo.org> gammu-1.25.0-r1.ebuild:
+  amd64/x86 stable, bug #283672
 
 *gammu-1.26.1-r1 (21 Sep 2009)
 *gammu-1.25.0-r1 (21 Sep 2009)
