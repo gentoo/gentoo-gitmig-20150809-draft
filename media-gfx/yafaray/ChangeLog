@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/yafaray
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/yafaray/ChangeLog,v 1.1 2009/09/21 15:55:39 maekke Exp $
+
+*yafaray-0.1.1 (21 Sep 2009)
+
+  21 Sep 2009; Markus Meier <maekke@gentoo.org> +yafaray-0.1.1.ebuild,
+  +metadata.xml:
+  initial import of yafaray, ebuild by me, bug #273738
+
