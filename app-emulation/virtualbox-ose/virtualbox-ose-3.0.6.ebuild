@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.0.6.ebuild,v 1.1 2009/09/10 20:06:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.0.6.ebuild,v 1.2 2009/09/21 23:45:21 fauli Exp $
 
 EAPI=2
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.virtualbox.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="+additions alsa +hal headless pulseaudio +opengl python +qt4 sdk vboxwebsrv"
 
 RDEPEND="!app-emulation/virtualbox-bin

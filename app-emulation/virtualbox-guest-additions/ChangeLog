@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.18 2009/09/12 12:14:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.19 2009/09/21 23:38:03 fauli Exp $
+
+  21 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  virtualbox-guest-additions-3.0.6.ebuild:
+  stable x86, bug 285451
 
   12 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   -virtualbox-guest-additions-3.0.4.ebuild:
