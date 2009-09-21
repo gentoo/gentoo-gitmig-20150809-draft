@@ -1,0 +1,12 @@
+# ChangeLog for dev-java/jebl
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jebl/ChangeLog,v 1.1 2009/09/21 00:35:25 weaver Exp $
+
+*jebl-9999 (20 Sep 2009)
+*jebl-0.5.3 (20 Sep 2009)
+
+  20 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +jebl-0.5.3.ebuild, +jebl-9999.ebuild:
+  New package, dependency of sci-biology/beast-mcmc, import from java overlay,
+  ebuild written by me
+
