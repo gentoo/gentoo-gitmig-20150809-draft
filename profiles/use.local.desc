@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4821 2009/09/21 00:12:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4822 2009/09/21 02:52:31 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2116,7 +2116,6 @@ net-dns/djbdns:multipleip - Enables multi-IP patch
 net-dns/djbdns:roundrobin - Enables round robin patch
 net-dns/djbdns:semanticfix - Makes tinydns=data handle more semantic errors
 net-dns/dnsmasq:dhcp - Enable support for reading ISC DHCPd lease files
-net-dns/dnsmasq:isc - Enable support for reading ISC DHCPd lease files
 net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting
 net-dns/maradns:authonly - Allows one to build only authoritative DNS server
 net-dns/pdns:opendbx - Enable the OpenDBX backend
