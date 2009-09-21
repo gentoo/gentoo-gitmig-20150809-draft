@@ -1,11 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/simpleagenda-0.37.ebuild,v 1.1 2008/11/03 11:44:09 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/simpleagenda/simpleagenda-0.39.ebuild,v 1.1 2009/09/21 15:41:04 voyageur Exp $
 
-inherit eutils gnustep-2
+EAPI=2
+inherit autotools gnustep-2
 
 MY_PN=SimpleAgenda
-DESCRIPTION="a simple calender and agenda application"
+DESCRIPTION="a simple calendar and agenda application"
 HOMEPAGE="http://coyote.octets.fr/pub/gnustep/"
 SRC_URI="http://coyote.octets.fr/pub/gnustep/${MY_PN}-${PV}.tar.gz"
 
@@ -19,3 +20,8 @@ DEPEND="dev-libs/libical
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${MY_PN}-${PV}
+
+src_prepare() {
+	sed -e "s/${MY_PN}/${MY_PN}-${PV}/" -i configure.ac || die "sed failed"
+	eautoreconf
+}
