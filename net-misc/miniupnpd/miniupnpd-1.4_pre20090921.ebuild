@@ -1,12 +1,15 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.3-r1.ebuild,v 1.1 2009/05/21 19:27:25 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/miniupnpd/miniupnpd-1.4_pre20090921.ebuild,v 1.1 2009/09/21 17:46:39 gurligebis Exp $
 
 EAPI=2
 inherit eutils linux-info toolchain-funcs
 
+MY_PV=20090921
+S="${WORKDIR}/${PN}-${MY_PV}"
+
 DESCRIPTION="MiniUPnP IGD Daemon"
-SRC_URI="http://miniupnp.free.fr/files/${P}.tar.gz"
+SRC_URI="http://miniupnp.free.fr/files/${PN}-${MY_PV}.tar.gz"
 HOMEPAGE="http://miniupnp.free.fr/"
 
 LICENSE="miniupnpd"
@@ -19,11 +22,9 @@ RDEPEND=">=net-firewall/iptables-1.4.3
 DEPEND="${RDEPEND}"
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-20090516.diff"
-
 	mv Makefile.linux Makefile
-	epatch "${FILESDIR}/${P}-iptables_path.diff"
-	epatch "${FILESDIR}/${P}-Makefile_fix.diff"
+	epatch "${FILESDIR}/${PN}-1.3-iptables_path.diff"
+	epatch "${FILESDIR}/${PN}-1.3-Makefile_fix.diff"
 	sed -i -e "s#^CFLAGS = #CFLAGS = -I${KV_OUT_DIR}/include #" Makefile
 	emake config.h
 }
@@ -35,8 +36,8 @@ src_compile() {
 src_install () {
 	einstall PREFIX="${D}" STRIP="true" || die "einstall failed"
 
-	newinitd "${FILESDIR}"/${P}-init.d ${PN}
-	newconfd "${FILESDIR}"/${P}-conf.d ${PN}
+	newinitd "${FILESDIR}"/${PN}-1.3-init.d ${PN}
+	newconfd "${FILESDIR}"/${PN}-1.3-conf.d ${PN}
 }
 
 pkg_postinst() {
