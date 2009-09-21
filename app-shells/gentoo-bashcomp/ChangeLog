@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.35 2009/08/09 13:27:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.36 2009/09/21 18:46:30 tgall Exp $
+
+  21 Sep 2009; Tom Gall <tgall@gentoo.org> 
+  gentoo-bashcomp-20090613.ebuild:
+  stable on ppc64, bug #278441
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> gentoo-bashcomp-20090613.ebuild:
   ppc stable #278441
