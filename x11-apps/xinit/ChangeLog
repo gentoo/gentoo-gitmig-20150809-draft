@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.138 2009/09/21 07:53:47 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.139 2009/09/21 08:00:33 scarabeus Exp $
+
+*xinit-1.0.8-r8 (21 Sep 2009)
+
+  21 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +xinit-1.0.8-r8.ebuild:
+  Revbump the xinint for the last commit so automagicness is fixed even for
+  those whom already compiled the thing.
 
   21 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   xinit-1.0.8-r7.ebuild:
