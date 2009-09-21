@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.29 2008/03/03 23:30:12 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.30 2009/09/21 09:39:08 robbat2 Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -42,3 +42,7 @@ VIDEO_CARDS="dummy fbdev v4l"
 # on glibc system you cannot turn it off
 USE="${USE} iconv"
 
+# 2009/09/21 Robin H. Johnson <robbat2@gentoo.org>
+# http://archives.gentoo.org/gentoo-dev/msg_dc705dc2c1a45e18a85aa62e8fb17009.xml
+# Build kernel modules from linux-mod by default:
+USE="${USE} modules"
