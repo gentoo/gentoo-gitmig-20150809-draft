@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/culmus-ancient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus-ancient/ChangeLog,v 1.2 2009/09/20 02:39:13 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/culmus-ancient/ChangeLog,v 1.3 2009/09/21 21:55:54 maekke Exp $
+
+  21 Sep 2009; Markus Meier <maekke@gentoo.org>
+  culmus-ancient-0.05.1.ebuild:
+  amd64/x86 stable, bug #285560
 
   20 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
   culmus-ancient-0.05.1.ebuild:
