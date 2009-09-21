@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.1.ebuild,v 1.2 2009/09/04 16:25:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/akonadi-4.3.1.ebuild,v 1.3 2009/09/21 14:23:25 ayoy Exp $
 
 EAPI="2"
 
@@ -84,6 +84,11 @@ src_test() {
 	sed -i -e '/kresmigrationtest/ s/^/#DO_NOT_RUN_TEST /' \
 		"${S}"/migration/kres/tests/CMakeLists.txt || \
 		die "sed to disable kresmigrationtest failed."
+	sed -i -e 's/QTEST_KDEMAIN(\(.*\), GUI)/QTEST_KDEMAIN_CORE(\1)/' \
+		"${S}"/akonadi_next/tests/descendantentitiesproxymodeltest.cpp \
+		"${S}"/akonadi_next/tests/selectionproxymodeltest.cpp || \
+		die "sed to fix descendantentitiesproxymodeltest and \
+			 selectionproxymodeltest failed."
 
 	${eclass}_src_test
 }

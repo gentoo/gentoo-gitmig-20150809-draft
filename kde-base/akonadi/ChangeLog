@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/akonadi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.30 2009/09/04 16:25:23 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/akonadi/ChangeLog,v 1.31 2009/09/21 14:23:25 ayoy Exp $
+
+  21 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> akonadi-4.3.1.ebuild:
+  Fixed failing tests by removing X server dependency where unnecessary
 
   04 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> akonadi-4.3.1.ebuild:
   Move the dep fix from overlay to tree.
