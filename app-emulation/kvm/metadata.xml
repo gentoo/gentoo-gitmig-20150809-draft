@@ -3,10 +3,6 @@
 <pkgmetadata>
 	<herd>none</herd>
 	<maintainer>
-		<email>dang@gentoo.org</email>
-		<name>Daniel Gryniewicz</name>
-	</maintainer>
-	<maintainer>
 		<email>cardoe@gentoo.org</email>
 		<name>Doug Goldstein</name>
 	</maintainer>

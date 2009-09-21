@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/kvm-kmod
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.4 2009/07/27 13:57:06 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/kvm-kmod/ChangeLog,v 1.5 2009/09/21 14:59:42 dang Exp $
+
+  21 Sep 2009; Daniel Gryniewicz <dang@gentoo.org> metadata.xml:
+  Remove myself as maintainer
 
 *kvm-kmod-88-r1 (27 Jul 2009)
 
