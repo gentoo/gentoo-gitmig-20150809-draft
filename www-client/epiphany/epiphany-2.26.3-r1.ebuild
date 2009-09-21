@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r1.ebuild,v 1.1 2009/08/02 10:12:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-2.26.3-r1.ebuild,v 1.2 2009/09/21 00:58:33 leio Exp $
 
 EAPI="2"
 
@@ -61,9 +61,6 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	# Fix compilation with xulrunner 1.9.1, bug #263990
-	epatch "${FILESDIR}/${PN}-2.26.0-xulrunner191.patch"
-
 	# Fix libcanberra automagic support, bug #266232
 	epatch "${FILESDIR}/${PN}-2.26.1-automagic-libcanberra.patch"
 
@@ -83,6 +80,8 @@ src_prepare() {
 src_install() {
 	gnome2_src_install
 
-	# Drop useless .la file
+	# All .la files are for plugins or extensions that are dlopened.
+	# Upstream should pass *_la_LIBTOOLFLAGS = --tag=disable-static to drop them instead
+	# but gecko is a dead branch for them, so do it ourselves:
 	find "${D}" -name '*.la' -delete
 }

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.213 2009/08/02 10:12:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.214 2009/09/21 00:58:33 leio Exp $
+
+  21 Sep 2009; Mart Raudsepp <leio@gentoo.org> epiphany-2.26.3-r1.ebuild:
+  QA: Remove by now unnecessary patch from this revision
 
 *epiphany-2.26.3-r1 (02 Aug 2009)
 
