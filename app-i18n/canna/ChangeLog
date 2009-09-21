@@ -1,6 +1,15 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.57 2009/07/30 16:52:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.58 2009/09/21 02:55:21 matsuu Exp $
+
+*canna-3.7_p3-r1 (21 Sep 2009)
+
+  21 Sep 2009; MATSUU Takuto <matsuu@gentoo.org> +canna-3.7_p3-r1.ebuild,
+  +files/canna-3.7_p3-strip.patch, +files/canna-3.7_p3.confd,
+  +files/canna-3.7_p3.initd:
+  Fixed initscript bashisms, bug #191941.
+  Fixed pre-stripped files, bug #248723.
+  Added -j1 to emake, bug #279706.
 
   30 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org> canna-3.7_p3.ebuild:
   Use -j1 for install bug #279706.
