@@ -1,13 +1,13 @@
-From d760a92ed2ab93e64aca889cd6bbc8b1ffecc63b Mon Sep 17 00:00:00 2001
+From fb722121885312ad49ed70a247287f26d045e54a Mon Sep 17 00:00:00 2001
 From: Romain Perier <mrpouet@gentoo.org>
-Date: Sun, 13 Sep 2009 16:20:10 +0200
+Date: Sun, 20 Sep 2009 14:36:00 +0200
 Subject: [PATCH] Add --with-libsoup-system option in order to be able to build gnome plugin without libsoup library
 
 ---
  Makefile.am         |   13 ++++++++---
- configure.in        |   53 +++++++++++++++++++++++++++-----------------------
- libsoup/Makefile.am |   30 +++++++++++++++++++++++-----
- 3 files changed, 62 insertions(+), 34 deletions(-)
+ configure.in        |   57 ++++++++++++++++++++++++++++----------------------
+ libsoup/Makefile.am |   30 +++++++++++++++++++++-----
+ 3 files changed, 65 insertions(+), 35 deletions(-)
 
 diff --git a/Makefile.am b/Makefile.am
 index 6c7dc3c..7c95031 100644
@@ -41,7 +41,7 @@ index 6c7dc3c..7c95031 100644
  pkgconfig_DATA += libsoup-gnome-2.4.pc
  endif
 diff --git a/configure.in b/configure.in
-index 902eae6..04b088d 100644
+index 902eae6..76c6a1f 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -78,7 +78,13 @@ AC_FUNC_ALLOCA
@@ -122,6 +122,17 @@ index 902eae6..04b088d 100644
  
  dnl *********************
  dnl *** GNOME support ***
+@@ -183,7 +188,9 @@ AM_CONDITIONAL(BUILD_LIBSOUP_GNOME, test $with_gnome != no)
+ 
+ if test $with_gnome != no; then
+ 	AC_DEFINE(HAVE_GNOME, 1, [Defined if GNOME support is enabled])
+-
++	if test $with_libsoup_system != no; then
++	   PKG_CHECK_MODULES(LIBSOUP, libsoup-$SOUP_API_VERSION = $VERSION)
++	fi
+ 	PKG_CHECK_MODULES(LIBPROXY, libproxy-1.0, :, [AC_MSG_ERROR(dnl
+ [Could not find libproxy:
+ 
 diff --git a/libsoup/Makefile.am b/libsoup/Makefile.am
 index 949f243..a599c40 100644
 --- a/libsoup/Makefile.am
@@ -202,5 +213,5 @@ index 949f243..a599c40 100644
  	soup-cookie-jar-sqlite.c	\
  	soup-gnome-features.c		\
 -- 
-1.6.4.2
+1.6.5.rc1
 

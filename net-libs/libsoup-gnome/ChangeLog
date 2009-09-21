@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.2 2009/09/13 14:35:59 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.3 2009/09/21 12:17:43 mrpouet Exp $
+
+*libsoup-gnome-2.26.3-r1 (21 Sep 2009)
+
+  21 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  -libsoup-gnome-2.26.3.ebuild, +libsoup-gnome-2.26.3-r1.ebuild,
+  files/libsoup-gnome-2.26.3-system-lib.patch:
+  Fix patch which skipped link relationship to libsoup-2.4.so (found using
+  --no-undefined LDFLAG), remove old revision.
 
   13 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   files/libsoup-gnome-2.26.3-system-lib.patch:
