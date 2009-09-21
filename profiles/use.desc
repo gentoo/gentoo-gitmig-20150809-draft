@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.425 2009/08/28 16:37:40 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.426 2009/09/21 05:42:59 robbat2 Exp $
 
 # Keep them sorted
 
@@ -221,6 +221,7 @@ mng - Adds support for libmng (MNG images)
 modplug - Adds libmodplug support
 mono - Build Mono bindings to support dotnet type stuff
 motif - Adds support for the Motif toolkit
+modules - Build the kernel modules
 mozilla - Adds support for the Mozilla web-browser
 mp3 - Add support for reading mp3 files
 mp4 - Support for MP4 container format
