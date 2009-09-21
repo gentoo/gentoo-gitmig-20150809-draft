@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4823 2009/09/21 15:27:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4824 2009/09/21 15:47:45 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3120,7 +3120,6 @@ www-client/mozilla-firefox:xforms - XForms is a standard to split up XHTML into 
 www-client/mozilla-firefox-bin:restrict-javascript - Pull in x11-plugins/noscript extension to disable javascript globally, putting the user fully in control of the sites he/she visits
 www-client/opera:ia32 - Install 32-bit binaries instead of 64-bit binaries
 www-client/opera:qt-static - Install binaries statically linked to Qt
-www-client/opera:qt3-static - Install binaries statically linked to Qt 3
 www-client/seamonkey:mozdevelop - Enable features for web developers (e.g. Venkman)
 www-client/seamonkey:moznocompose - Disable building of mozilla's HTML editor component
 www-client/seamonkey:moznoirc - Disable building of mozilla's IRC client
