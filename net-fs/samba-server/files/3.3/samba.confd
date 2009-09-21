@@ -13,12 +13,12 @@ my_service_POST=""
 #----------------------------------------------------------------------------
 smbd_start_options="-D"
 smbd_start="start-stop-daemon --start --exec /usr/sbin/smbd -- ${smbd_start_options}"
-smbd_stop="start-stop-daemon --stop --pidfile /var/run/smbd.pid"
+smbd_stop="start-stop-daemon --stop --pidfile /var/run/samba/smbd.pid"
 smbd_reload="killall -HUP smbd"
 
 nmbd_start_options="-D"
 nmbd_start="start-stop-daemon --start --exec /usr/sbin/nmbd -- ${nmbd_start_options}"
-nmbd_stop="start-stop-daemon --stop --pidfile /var/run/nmbd.pid"
+nmbd_stop="start-stop-daemon --stop --pidfile /var/run/samba/nmbd.pid"
 nmbd_reload="killall -HUP nmbd"
 
 winbind_start_options=""
