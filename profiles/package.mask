@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10481 2009/09/21 10:44:28 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10482 2009/09/21 11:42:56 lavajoe Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1354,9 +1354,8 @@ net-irc/bitchx
 =dev-java/mx4j-3.0.2
 
 # Joe Peterson <lavajoe@gentoo.org> (09 Jun 2008)
-# Live ebuilds too volatile for normal use.
-# User's who need to test these should unmask explicitly.
-=sys-fs/btrfs-9999
+# Live ebuild too volatile for normal use.
+# Users who need to test this should unmask explicitly.
 =sys-fs/btrfs-progs-9999
 
 # Rémi Cardona <remi@gentoo.org> (27 May 2008)
