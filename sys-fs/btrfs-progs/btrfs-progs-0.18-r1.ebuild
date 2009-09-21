@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.18-r1.ebuild,v 1.1 2009/06/14 15:46:16 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-0.18-r1.ebuild,v 1.2 2009/09/21 15:57:42 lavajoe Exp $
 
 inherit eutils
 
@@ -26,6 +26,10 @@ src_unpack() {
 
 	# Apply hot fixes
 	#epatch "${FILESDIR}/${P}-hotfix.patch"
+
+	# Fix hardcoded "gcc" and "make"
+	sed -i -e 's:gcc $(CFLAGS):$(CC) $(CFLAGS):' Makefile
+	sed -i -e 's:make:$(MAKE):' Makefile
 }
 
 src_compile() {

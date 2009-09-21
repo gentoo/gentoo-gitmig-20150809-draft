@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.10 2009/06/14 15:46:16 lavajoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.11 2009/09/21 15:57:41 lavajoe Exp $
 
 inherit eutils git
 
@@ -23,9 +23,20 @@ RDEPEND="${DEPEND}"
 EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/mason/btrfs-progs-unstable.git"
 EGIT_BRANCH="master"
 
+src_unpack() {
+	git_src_unpack
+	cd "${S}"
+
+	# Fix hardcoded "gcc" and "make"
+	sed -i -e 's:gcc $(CFLAGS):$(CC) $(CFLAGS):' Makefile
+	sed -i -e 's:make:$(MAKE):' Makefile
+}
+
 src_compile() {
 	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 		all || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
+		btrfstune btrfs-image || die
 	if use acl; then
 		emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
 			convert || die
@@ -51,7 +62,7 @@ src_install() {
 	fi
 
 	if use debug-utils; then
-		newsbin debug-tree btrfs-debug-tree
+		dobin btrfs-debug-tree
 	else
 		ewarn "Note: btrfs-debug-tree not installed (requires debug-utils USE flag)"
 	fi
@@ -66,6 +77,7 @@ src_install() {
 	fi
 
 	dodoc INSTALL
+	emake prefix="${D}/usr/share" install-man
 }
 
 pkg_postinst() {
