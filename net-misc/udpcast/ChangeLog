@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/udpcast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.16 2009/09/17 20:47:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.17 2009/09/21 19:56:29 patrick Exp $
+
+*udpcast-20090920 (21 Sep 2009)
+
+  21 Sep 2009; Patrick Lauer <patrick@gentoo.org> -udpcast-20090830.ebuild,
+  -udpcast-20090912.ebuild, +udpcast-20090920.ebuild:
+  Bump to 20090920, fixes a bug introduced in the older 2009 versions that
+  promptly get removed. Thanks to John Eisenman for finding the bug,
+  communicating with upstream and notifying me of the new release.
 
 *udpcast-20090912 (17 Sep 2009)
 

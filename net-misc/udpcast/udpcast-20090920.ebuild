@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/udpcast-20090830.ebuild,v 1.1 2009/09/12 09:08:30 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/udpcast-20090920.ebuild,v 1.1 2009/09/21 19:56:29 patrick Exp $
 
 DESCRIPTION="Multicast file transfer tool"
 HOMEPAGE="http://udpcast.linux.lu/"
