@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/indicator-applet-0.2.0.ebuild,v 1.1 2009/09/21 16:13:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/indicator-applet-0.2.0.ebuild,v 1.2 2009/09/21 16:15:49 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
@@ -10,7 +10,7 @@ DESCRIPTION="A small applet to display information from various applications con
 HOMEPAGE="http://launchpad.net/indicator-applet/"
 SRC_URI="http://launchpad.net/${PN}/0.2/0.2/+download/${P}.tar.gz"
 
-LICENSE="GPL-3 LGPL-2.1 LGPL-3"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="nls"
