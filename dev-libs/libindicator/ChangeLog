@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/libindicator
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.1 2009/09/21 16:00:55 ssuominen Exp $
+
+*libindicator-0.2.0 (21 Sep 2009)
+
+  21 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +libindicator-0.2.0.ebuild:
+  Initial commit. Used by gnome-extra/indicator-applet and
+  xfce-extra/xfce4-indicator-plugin.
+
