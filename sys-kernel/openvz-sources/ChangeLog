@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.114 2009/07/22 05:54:03 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.115 2009/09/22 19:30:19 pva Exp $
+
+  22 Sep 2009; Peter Volkov <pva@gentoo.org>
+  -openvz-sources-2.6.18.028.056.1.ebuild,
+  -files/openvz-sources-2.6.18.028.056.1-3ware.patch,
+  -files/openvz-sources-2.6.18.028.056.1-CONFIG_SECCOMP-build.patch,
+  -files/openvz-sources-2.6.18.028.056.1-utimensat.patch,
+  -files/openvz-sources-2.6.18.028.057.2-fix-CIFS-build.patch,
+  -files/openvz-sources-2.6.18.028.057.2-missed-PATH_MAX-sumversion.c.patch,
+  -files/openvz-sources-2.6.18.028.057.2-qouta-compat-build.patch,
+  -files/openvz-sources-2.6.18.028.057.2-utimenstat.patch,
+  -files/openvz-sources-2.6.18.028.059.6-proper-utimensat.patch,
+  -openvz-sources-2.6.18.028.062.3.ebuild,
+  -openvz-sources-2.6.24.009.1-r2.ebuild,
+  -openvz-sources-2.6.27.2.1-r1.ebuild:
+  Remove old kernels, which are _really old_ and affected by bug #279260,
+  thank Daniel Robbins for report.
 
   22 Jul 2009; Peter Volkov <pva@gentoo.org>
   openvz-sources-2.6.27.2.1-r2.ebuild,
