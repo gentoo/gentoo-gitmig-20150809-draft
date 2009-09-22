@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/infernal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.3 2009/09/06 05:03:25 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/infernal/ChangeLog,v 1.4 2009/09/22 13:05:32 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> infernal-1.0.ebuild:
+  x86 stable, bug #282114
 
   06 Sep 2009; Jeremy Olexa <darkside@gentoo.org> infernal-1.0.ebuild:
   amd64 stable, bug 282114
