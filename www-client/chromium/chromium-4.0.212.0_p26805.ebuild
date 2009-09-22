@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26343.ebuild,v 1.2 2009/09/22 12:08:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26805.ebuild,v 1.1 2009/09/22 15:46:22 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -16,6 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
+	>=dev-libs/libevent-1.4.7
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.2
@@ -43,11 +44,10 @@ src_prepare() {
 
 	# Changing this in ~/include.gypi does not work
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
-	# Prevent automatic -march=pentium4 -msse2 enabling on x86
+	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-
-	# New gyp_chromium to use, but not marked executable
-	chmod +x build/gyp_chromium
+	# Use system libevent, http://crbug.com/22208
+	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
 }
 
 src_configure() {
@@ -64,9 +64,9 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_bzip2=1 -Duse_system_zlib=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1 -Dlinux_use_tcmalloc=1"
+	local myconf="-Duse_system_bzip2=1 -Duse_system_zlib=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1 -Dlinux_use_tcmalloc=1"
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
-	# Others still bundled: icu (not possible?), hunspell, libevent
+	# Others still bundled: icu (not possible?), hunspell
 
 	# Sandbox paths
 	myconf="${myconf} -Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox -Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
@@ -115,6 +115,7 @@ src_install() {
 	doins -r out/Release/themes
 
 	# Chromium looks for these in its folder
+	# See media_posix.cc and base_paths_linux.cc
 	dosym /usr/$(get_libdir)/libavcodec.so.52 ${CHROMIUM_HOME}
 	dosym /usr/$(get_libdir)/libavformat.so.52 ${CHROMIUM_HOME}
 	dosym /usr/$(get_libdir)/libavutil.so.50 ${CHROMIUM_HOME}
