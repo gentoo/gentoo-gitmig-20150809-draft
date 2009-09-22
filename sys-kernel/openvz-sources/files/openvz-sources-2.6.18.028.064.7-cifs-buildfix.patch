@@ -1,0 +1,667 @@
+028stab062.3 -- buildfix
+
+The number of issues during move up to 028stab062.3
+
+1) There is no f_path.dentry in file struct. Use f_dentry former.
+2) IOMMU_HELPER depends on a widen number of vars.
+3) PDAudioCF sound card is plainly broken. Mark it that.
+4) Xen PV-ON-HVM is broken as well if base Xen support is not
+   enabled. Don't turn on XEN_PV_ON_HVM config option without
+   Xen support in general.
+5) ACPI_PROCESSOR config should be built in. Not module.
+6) There is no zero_user_page but zero_user function.
+
+Closes http://bugzilla.openvz.org/show_bug.cgi?id=1279
+
+Signed-off-by: Cyrill Gorcunov <gorcunov@openvz.org>
+---
+ arch/x86_64/Kconfig                           |    2 
+ fs/cifs/cifsfs.c                              |    6 -
+ fs/cifs/fcntl.c                               |    4 -
+ fs/cifs/file.c                                |   86 +++++++++++++-------------
+ fs/cifs/readdir.c                             |   28 ++++----
+ fs/ntfs/aops.c                                |    2 
+ fs/ntfs/compress.c                            |    2 
+ samples/tracepoints/tracepoint-probe-sample.c |    6 -
+ sound/oss/dmasound/dmasound_core.c            |    4 -
+ sound/oss/msnd_pinnacle.c                     |    4 -
+ sound/oss/soundcard.c                         |    8 +-
+ sound/pcmcia/Kconfig                          |    2 
+ sound/sound_firmware.c                        |    2 
+ 13 files changed, 78 insertions(+), 78 deletions(-)
+
+Index: linux-2.6.18-openvz/arch/x86_64/Kconfig
+=====================================================================
+--- linux-2.6.18-openvz.orig/arch/x86_64/Kconfig
++++ linux-2.6.18-openvz/arch/x86_64/Kconfig
+@@ -532,7 +532,7 @@ config AMD_IOMMU
+ config IOMMU_HELPER
+ 	bool "IOMMU Helper functions"
+ 	default n
+-	depends on (AMD_IOMMU || GART_IOMMU)
++	depends on (CALGARY_IOMMU || GART_IOMMU || SWIOTLB || AMD_IOMMU)
+ 
+ # need this always selected by IOMMU for the VIA workaround
+ config SWIOTLB
+Index: linux-2.6.18-openvz/fs/cifs/cifsfs.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/fs/cifs/cifsfs.c
++++ linux-2.6.18-openvz/fs/cifs/cifsfs.c
+@@ -674,7 +674,7 @@ cifs_get_sb(struct file_system_type *fs_
+ static ssize_t cifs_file_aio_write(struct kiocb *iocb, const struct iovec *iov,
+ 				   unsigned long nr_segs, loff_t pos)
+ {
+-	struct inode *inode = iocb->ki_filp->f_path.dentry->d_inode;
++	struct inode *inode = iocb->ki_filp->f_dentry->d_inode;
+ 	ssize_t written;
+ 
+ 	written = generic_file_aio_write(iocb, iov, nr_segs, pos);
+@@ -714,9 +714,9 @@ static loff_t cifs_llseek(struct file *f
+ 		   way so we must seek to end on non-oplocked files by
+ 		   setting the revalidate time to zero */
+ #if LINUX_VERSION_CODE > KERNEL_VERSION(2, 6, 19)
+-		CIFS_I(file->f_path.dentry->d_inode)->time = 0;
++		CIFS_I(file->f_dentry->d_inode)->time = 0;
+ 
+-		retval = cifs_revalidate(file->f_path.dentry);
++		retval = cifs_revalidate(file->f_dentry);
+ #else
+ 		if(file->f_dentry->d_inode)
+ 			CIFS_I(file->f_dentry->d_inode)->time = 0;
+Index: linux-2.6.18-openvz/fs/cifs/fcntl.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/fs/cifs/fcntl.c
++++ linux-2.6.18-openvz/fs/cifs/fcntl.c
+@@ -85,10 +85,10 @@ int cifs_dir_notify(struct file *file, u
+ 
+ 	full_path = build_path_from_dentry(file->f_dentry);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ 	pTcon = cifs_sb->tcon;
+ 
+-	full_path = build_path_from_dentry(file->f_path.dentry);
++	full_path = build_path_from_dentry(file->f_dentry);
+ #endif
+ 
+ 	if (full_path == NULL) {
+Index: linux-2.6.18-openvz/fs/cifs/file.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/fs/cifs/file.c
++++ linux-2.6.18-openvz/fs/cifs/file.c
+@@ -153,12 +153,12 @@ static inline int cifs_open_inode_helper
+ 	} else {
+ 		if (file->f_dentry->d_inode->i_mapping) {
+ #else
+-	if (timespec_equal(&file->f_path.dentry->d_inode->i_mtime, &temp) &&
+-			   (file->f_path.dentry->d_inode->i_size ==
++	if (timespec_equal(&file->f_dentry->d_inode->i_mtime, &temp) &&
++			   (file->f_dentry->d_inode->i_size ==
+ 			    (loff_t)le64_to_cpu(buf->EndOfFile))) {
+ 		cFYI(1, ("inode unchanged on server"));
+ 	} else {
+-		if (file->f_path.dentry->d_inode->i_mapping) {
++		if (file->f_dentry->d_inode->i_mapping) {
+ #endif
+ 		/* BB no need to lock inode until after invalidate
+ 		   since namei code should already have it locked? */
+@@ -171,7 +171,7 @@ static inline int cifs_open_inode_helper
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 		invalidate_remote_inode(file->f_dentry->d_inode);
+ #else			 
+-		invalidate_remote_inode(file->f_path.dentry->d_inode);
++		invalidate_remote_inode(file->f_dentry->d_inode);
+ #endif
+ 	}
+ 
+@@ -180,14 +180,14 @@ client_can_cache:
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 		rc = cifs_get_inode_info_unix(&file->f_dentry->d_inode,
+ #else	
+-		rc = cifs_get_inode_info_unix(&file->f_path.dentry->d_inode,
++		rc = cifs_get_inode_info_unix(&file->f_dentry->d_inode,
+ #endif
+ 			full_path, inode->i_sb, xid);
+ 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 		rc = cifs_get_inode_info(&file->f_dentry->d_inode,
+ #else
+-		rc = cifs_get_inode_info(&file->f_path.dentry->d_inode,
++		rc = cifs_get_inode_info(&file->f_dentry->d_inode,
+ #endif
+ 			full_path, buf, inode->i_sb, xid, NULL);
+ 
+@@ -199,7 +199,7 @@ client_can_cache:
+ 			 file->f_dentry->d_inode));
+ #else
+ 		cFYI(1, ("Exclusive Oplock granted on inode %p",
+-			 file->f_path.dentry->d_inode));
++			 file->f_dentry->d_inode));
+ #endif
+ 	} else if ((*oplock & 0xF) == OPLOCK_READ)
+ 		pCifsInode->clientCanCacheRead = true;
+@@ -232,7 +232,7 @@ int cifs_open(struct inode *inode, struc
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 		pCifsInode = CIFS_I(file->f_dentry->d_inode);
+ #else
+-		pCifsInode = CIFS_I(file->f_path.dentry->d_inode);
++		pCifsInode = CIFS_I(file->f_dentry->d_inode);
+ #endif
+ 		read_lock(&GlobalSMBSeslock);
+ 		list_for_each(tmp, &pCifsInode->openFileList) {
+@@ -264,7 +264,7 @@ int cifs_open(struct inode *inode, struc
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	full_path = build_path_from_dentry(file->f_dentry);
+ #else
+-	full_path = build_path_from_dentry(file->f_path.dentry);
++	full_path = build_path_from_dentry(file->f_dentry);
+ #endif
+ 	if (full_path == NULL) {
+ 		FreeXid(xid);
+@@ -353,7 +353,7 @@ int cifs_open(struct inode *inode, struc
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	pCifsInode = CIFS_I(file->f_dentry->d_inode);
+ #else
+-	pCifsInode = CIFS_I(file->f_path.dentry->d_inode);
++	pCifsInode = CIFS_I(file->f_dentry->d_inode);
+ #endif
+ 	if (pCifsInode) {
+ 		rc = cifs_open_inode_helper(inode, file, pCifsInode,
+@@ -453,14 +453,14 @@ static int cifs_reopen_file(struct file 
+    and we can never tell if the caller already has the rename_sem */
+ 	full_path = build_path_from_dentry(file->f_dentry);
+ #else
+-	if (file->f_path.dentry == NULL) {
++	if (file->f_dentry == NULL) {
+ 		cERROR(1, ("no valid name if dentry freed"));
+ 		dump_stack();
+ 		rc = -EBADF;
+ 		goto reopen_error_exit;
+ 	}
+ 
+-	inode = file->f_path.dentry->d_inode;
++	inode = file->f_dentry->d_inode;
+ 	if (inode == NULL) {
+ 		cERROR(1, ("inode not valid"));
+ 		dump_stack();
+@@ -475,7 +475,7 @@ static int cifs_reopen_file(struct file 
+    those that already have the rename sem can end up causing writepage
+    to get called and if the server was down that means we end up here,
+    and we can never tell if the caller already has the rename_sem */
+-	full_path = build_path_from_dentry(file->f_path.dentry);
++	full_path = build_path_from_dentry(file->f_dentry);
+ #endif
+ 	if (full_path == NULL) {
+ 		rc = -ENOMEM;
+@@ -543,7 +543,7 @@ reopen_error_exit:
+ 					file->f_dentry->d_inode));
+ #else
+ 				cFYI(1, ("Exclusive Oplock granted on inode %p",
+-					 file->f_path.dentry->d_inode));
++					 file->f_dentry->d_inode));
+ #endif
+ 			} else if ((oplock & 0xF) == OPLOCK_READ) {
+ 				pCifsInode->clientCanCacheRead = true;
+@@ -673,7 +673,7 @@ int cifs_closedir(struct inode *inode, s
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 			CIFS_SB(file->f_dentry->d_sb);
+ #else
+-			CIFS_SB(file->f_path.dentry->d_sb);
++			CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 
+ 		pTcon = cifs_sb->tcon;
+@@ -785,7 +785,7 @@ int cifs_lock(struct file *file, int cmd
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 	pTcon = cifs_sb->tcon;
+ 
+@@ -922,14 +922,14 @@ ssize_t cifs_user_write(struct file *fil
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 
+ 	pTcon = cifs_sb->tcon;
+ 
+ 	/* cFYI(1,
+ 	   (" write %d bytes to offset %lld of %s", write_size,
+-	   *poffset, file->f_path.dentry->d_name.name)); */
++	   *poffset, file->f_dentry->d_name.name)); */
+ 
+ 	if (file->private_data == NULL)
+ 		return -EBADF;
+@@ -944,7 +944,7 @@ ssize_t cifs_user_write(struct file *fil
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	if (*poffset > file->f_dentry->d_inode->i_size)
+ #else
+-	if (*poffset > file->f_path.dentry->d_inode->i_size)
++	if (*poffset > file->f_dentry->d_inode->i_size)
+ #endif
+ 		long_op = CIFS_VLONG_OP; /* writes past EOF can be slow */
+ 	else
+@@ -1017,19 +1017,19 @@ ssize_t cifs_user_write(struct file *fil
+ 		}
+ 		mark_inode_dirty_sync(file->f_dentry->d_inode);
+ #else
+-	if ((file->f_path.dentry) && (file->f_path.dentry->d_inode)) {
+-		struct inode *inode = file->f_path.dentry->d_inode;
++	if ((file->f_dentry) && (file->f_dentry->d_inode)) {
++		struct inode *inode = file->f_dentry->d_inode;
+ /* Do not update local mtime - server will set its actual value on write
+  *		inode->i_ctime = inode->i_mtime =
+  * 			current_fs_time(inode->i_sb);*/
+ 		if (total_written > 0) {
+ 			spin_lock(&inode->i_lock);
+-			if (*poffset > file->f_path.dentry->d_inode->i_size)
+-				i_size_write(file->f_path.dentry->d_inode,
++			if (*poffset > file->f_dentry->d_inode->i_size)
++				i_size_write(file->f_dentry->d_inode,
+ 					*poffset);
+ 			spin_unlock(&inode->i_lock);
+ 		}
+-		mark_inode_dirty_sync(file->f_path.dentry->d_inode);
++		mark_inode_dirty_sync(file->f_dentry->d_inode);
+ #endif
+ 	}
+ 	FreeXid(xid);
+@@ -1063,12 +1063,12 @@ static ssize_t cifs_write(struct file *f
+ 
+ 	if (*poffset > file->f_dentry->d_inode->i_size)
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ 
+ 	pTcon = cifs_sb->tcon;
+ 
+ 	cFYI(1, ("write %zd bytes to offset %lld of %s", write_size,
+-	   *poffset, file->f_path.dentry->d_name.name));
++	   *poffset, file->f_dentry->d_name.name));
+ 
+ 	if (file->private_data == NULL)
+ 		return -EBADF;
+@@ -1076,7 +1076,7 @@ static ssize_t cifs_write(struct file *f
+ 
+ 	xid = GetXid();
+ 
+-	if (*poffset > file->f_path.dentry->d_inode->i_size)
++	if (*poffset > file->f_dentry->d_inode->i_size)
+ #endif	
+ 		long_op = CIFS_VLONG_OP; /* writes past EOF take long time */
+ 	else
+@@ -1167,18 +1167,18 @@ static ssize_t cifs_write(struct file *f
+ 		}
+ 		mark_inode_dirty_sync(file->f_dentry->d_inode);
+ #else
+-	if ((file->f_path.dentry) && (file->f_path.dentry->d_inode)) {
++	if ((file->f_dentry) && (file->f_dentry->d_inode)) {
+ /*BB We could make this contingent on superblock ATIME flag too */
+-/*		file->f_path.dentry->d_inode->i_ctime =
+-		file->f_path.dentry->d_inode->i_mtime = CURRENT_TIME;*/
++/*		file->f_dentry->d_inode->i_ctime =
++		file->f_dentry->d_inode->i_mtime = CURRENT_TIME;*/
+ 		if (total_written > 0) {
+-			spin_lock(&file->f_path.dentry->d_inode->i_lock);
+-			if (*poffset > file->f_path.dentry->d_inode->i_size)
+-				i_size_write(file->f_path.dentry->d_inode,
++			spin_lock(&file->f_dentry->d_inode->i_lock);
++			if (*poffset > file->f_dentry->d_inode->i_size)
++				i_size_write(file->f_dentry->d_inode,
+ 					     *poffset);
+-			spin_unlock(&file->f_path.dentry->d_inode->i_lock);
++			spin_unlock(&file->f_dentry->d_inode->i_lock);
+ 		}
+-		mark_inode_dirty_sync(file->f_path.dentry->d_inode);
++		mark_inode_dirty_sync(file->f_dentry->d_inode);
+ #endif
+ 	}
+ 	FreeXid(xid);
+@@ -1695,7 +1695,7 @@ int cifs_fsync(struct file *file, struct
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	struct inode *inode = file->f_dentry->d_inode;
+ #else
+-	struct inode *inode = file->f_path.dentry->d_inode;
++	struct inode *inode = file->f_dentry->d_inode;
+ #endif
+ 
+ 	xid = GetXid();
+@@ -1753,7 +1753,7 @@ int cifs_flush(struct file *file)
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	struct inode *inode = file->f_dentry->d_inode;
+ #else
+-	struct inode *inode = file->f_path.dentry->d_inode;
++	struct inode *inode = file->f_dentry->d_inode;
+ #endif
+ 	int rc = 0;
+ 
+@@ -1797,7 +1797,7 @@ ssize_t cifs_user_read(struct file *file
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 	pTcon = cifs_sb->tcon;
+ 
+@@ -1881,7 +1881,7 @@ static ssize_t cifs_read(struct file *fi
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 	pTcon = cifs_sb->tcon;
+ 
+@@ -1941,7 +1941,7 @@ int cifs_file_mmap(struct file *file, st
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	struct dentry *dentry = file->f_dentry;
+ #else
+-	struct dentry *dentry = file->f_path.dentry;
++	struct dentry *dentry = file->f_dentry;
+ #endif
+ 	int rc, xid;
+ 
+@@ -2031,7 +2031,7 @@ static int cifs_readpages(struct file *f
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 	pTcon = cifs_sb->tcon;
+ 
+@@ -2174,8 +2174,8 @@ static int cifs_readpage_worker(struct f
+ 	file->f_dentry->d_inode->i_atime =
+ 		current_fs_time(file->f_dentry->d_inode->i_sb);
+ #else
+-	file->f_path.dentry->d_inode->i_atime =
+-		current_fs_time(file->f_path.dentry->d_inode->i_sb);
++	file->f_dentry->d_inode->i_atime =
++		current_fs_time(file->f_dentry->d_inode->i_sb);
+ #endif
+ 
+ 	if (PAGE_CACHE_SIZE > rc)
+Index: linux-2.6.18-openvz/fs/cifs/readdir.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/fs/cifs/readdir.c
++++ linux-2.6.18-openvz/fs/cifs/readdir.c
+@@ -82,25 +82,25 @@ static int construct_dentry(struct qstr 
+ 		if (*ptmp_inode == NULL) {
+ 			*ptmp_inode = new_inode(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ 	pTcon = cifs_sb->tcon;
+ 
+ 	qstring->hash = full_name_hash(qstring->name, qstring->len);
+-	tmp_dentry = d_lookup(file->f_path.dentry, qstring);
++	tmp_dentry = d_lookup(file->f_dentry, qstring);
+ 	if (tmp_dentry) {
+ 		cFYI(0, ("existing dentry with inode 0x%p",
+ 			 tmp_dentry->d_inode));
+ 		*ptmp_inode = tmp_dentry->d_inode;
+ /* BB overwrite old name? i.e. tmp_dentry->d_name and tmp_dentry->d_name.len??*/
+ 		if (*ptmp_inode == NULL) {
+-			*ptmp_inode = new_inode(file->f_path.dentry->d_sb);
++			*ptmp_inode = new_inode(file->f_dentry->d_sb);
+ #endif
+ 			if (*ptmp_inode == NULL)
+ 				return rc;
+ 			rc = 1;
+ 		}
+ #if LINUX_VERSION_CODE > KERNEL_VERSION(2, 6, 19)
+-		if (file->f_path.dentry->d_sb->s_flags & MS_NOATIME)
++		if (file->f_dentry->d_sb->s_flags & MS_NOATIME)
+ #else
+ 		if (file->f_dentry->d_sb->s_flags & MS_NOATIME)
+ #endif
+@@ -109,7 +109,7 @@ static int construct_dentry(struct qstr 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 		tmp_dentry = d_alloc(file->f_dentry, qstring);
+ #else
+-		tmp_dentry = d_alloc(file->f_path.dentry, qstring);
++		tmp_dentry = d_alloc(file->f_dentry, qstring);
+ #endif
+ 		if (tmp_dentry == NULL) {
+ 			cERROR(1, ("Failed allocating dentry"));
+@@ -119,7 +119,7 @@ static int construct_dentry(struct qstr 
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 		*ptmp_inode = new_inode(file->f_dentry->d_sb);
+ #else
+-		*ptmp_inode = new_inode(file->f_path.dentry->d_sb);
++		*ptmp_inode = new_inode(file->f_dentry->d_sb);
+ #endif
+ 		if (pTcon->nocase)
+ 			tmp_dentry->d_op = &cifs_ci_dentry_ops;
+@@ -128,7 +128,7 @@ static int construct_dentry(struct qstr 
+ 		if (*ptmp_inode == NULL)
+ 			return rc;
+ #if LINUX_VERSION_CODE > KERNEL_VERSION(2, 6, 19)
+-		if (file->f_path.dentry->d_sb->s_flags & MS_NOATIME)
++		if (file->f_dentry->d_sb->s_flags & MS_NOATIME)
+ #else
+ 		if (file->f_dentry->d_sb->s_flags & MS_NOATIME)
+ #endif
+@@ -514,7 +514,7 @@ static int initiate_cifs_search(const in
+ 
+ 	full_path = build_path_from_dentry(file->f_dentry);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ 	if (cifs_sb == NULL)
+ 		return -EINVAL;
+ 
+@@ -522,7 +522,7 @@ static int initiate_cifs_search(const in
+ 	if (pTcon == NULL)
+ 		return -EINVAL;
+ 
+-	full_path = build_path_from_dentry(file->f_path.dentry);
++	full_path = build_path_from_dentry(file->f_dentry);
+ #endif
+ 
+ 	if (full_path == NULL)
+@@ -691,7 +691,7 @@ static int is_dir_changed(struct file *f
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	struct inode *inode = file->f_dentry->d_inode;
+ #else
+-	struct inode *inode = file->f_path.dentry->d_inode;
++	struct inode *inode = file->f_dentry->d_inode;
+ #endif
+ 	struct cifsInodeInfo *cifsInfo = CIFS_I(inode);
+ 
+@@ -924,7 +924,7 @@ static int cifs_filldir(char *pfindEntry
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2, 6, 20)
+ 	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ #endif
+ 
+ 	qstring.name = scratch_buf;
+@@ -1083,7 +1083,7 @@ int cifs_readdir(struct file *file, void
+ 		if (filldir(direntry, "..", 2, file->f_pos,
+ 		     file->f_dentry->d_parent->d_inode->i_ino, DT_DIR) < 0) {
+ #else
+-	cifs_sb = CIFS_SB(file->f_path.dentry->d_sb);
++	cifs_sb = CIFS_SB(file->f_dentry->d_sb);
+ 	pTcon = cifs_sb->tcon;
+ 	if (pTcon == NULL)
+ 		return -EINVAL;
+@@ -1091,7 +1091,7 @@ int cifs_readdir(struct file *file, void
+ 	switch ((int) file->f_pos) {
+ 	case 0:
+ 		if (filldir(direntry, ".", 1, file->f_pos,
+-		     file->f_path.dentry->d_inode->i_ino, DT_DIR) < 0) {
++		     file->f_dentry->d_inode->i_ino, DT_DIR) < 0) {
+ 			cERROR(1, ("Filldir for current dir failed"));
+ 			rc = -ENOMEM;
+ 			break;
+@@ -1099,7 +1099,7 @@ int cifs_readdir(struct file *file, void
+ 		file->f_pos++;
+ 	case 1:
+ 		if (filldir(direntry, "..", 2, file->f_pos,
+-		     file->f_path.dentry->d_parent->d_inode->i_ino, DT_DIR) < 0) {
++		     file->f_dentry->d_parent->d_inode->i_ino, DT_DIR) < 0) {
+ #endif
+ 			cERROR(1, ("Filldir for parent dir failed"));
+ 			rc = -ENOMEM;
+Index: linux-2.6.18-openvz/fs/ntfs/aops.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/fs/ntfs/aops.c
++++ linux-2.6.18-openvz/fs/ntfs/aops.c
+@@ -415,7 +415,7 @@ retry_readpage:
+ 	/* Is the page fully outside i_size? (truncate in progress) */
+ 	if (unlikely(page->index >= (i_size + PAGE_CACHE_SIZE - 1) >>
+ 			PAGE_CACHE_SHIFT)) {
+-		zero_user_page(page, 0, PAGE_CACHE_SIZE, KM_USER0);
++		zero_user(page, 0, PAGE_CACHE_SIZE);
+ 		ntfs_debug("Read outside i_size - truncated?");
+ 		goto done;
+ 	}
+Index: linux-2.6.18-openvz/fs/ntfs/compress.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/fs/ntfs/compress.c
++++ linux-2.6.18-openvz/fs/ntfs/compress.c
+@@ -565,7 +565,7 @@ int ntfs_read_compressed_block(struct pa
+ 	if (xpage >= max_page) {
+ 		kfree(bhs);
+ 		kfree(pages);
+-		zero_user_page(page, 0, PAGE_CACHE_SIZE, KM_USER0);
++		zero_user(page, 0, PAGE_CACHE_SIZE);
+ 		ntfs_debug("Compressed read outside i_size - truncated?");
+ 		SetPageUptodate(page);
+ 		unlock_page(page);
+Index: linux-2.6.18-openvz/samples/tracepoints/tracepoint-probe-sample.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/samples/tracepoints/tracepoint-probe-sample.c
++++ linux-2.6.18-openvz/samples/tracepoints/tracepoint-probe-sample.c
+@@ -16,10 +16,10 @@
+ static void probe_subsys_event(struct inode *inode, struct file *file)
+ {
+ 	path_get(&file->f_path);
+-	dget(file->f_path.dentry);
++	dget(file->f_dentry);
+ 	printk(KERN_INFO "Event is encountered with filename %s\n",
+-		file->f_path.dentry->d_name.name);
+-	dput(file->f_path.dentry);
++		file->f_dentry->d_name.name);
++	dput(file->f_dentry);
+ 	path_put(&file->f_path);
+ }
+ 
+Index: linux-2.6.18-openvz/sound/oss/dmasound/dmasound_core.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/sound/oss/dmasound/dmasound_core.c
++++ linux-2.6.18-openvz/sound/oss/dmasound/dmasound_core.c
+@@ -1051,7 +1051,7 @@ static int sq_release(struct inode *inod
+ 
+ 	if (file->f_mode & FMODE_WRITE) {
+ 		if (write_sq.busy)
+-			rc = sq_fsync(file, file->f_path.dentry);
++			rc = sq_fsync(file, file->f_dentry);
+ 
+ 		sq_reset_output() ; /* make sure dma is stopped and all is quiet */
+ 		write_sq_release_buffers();
+@@ -1217,7 +1217,7 @@ static int sq_ioctl(struct inode *inode,
+ 		if ((file->f_mode & FMODE_READ) && dmasound.mach.record)
+ 			sq_reset_input() ;
+ 		if (file->f_mode & FMODE_WRITE) {
+-			result = sq_fsync(file, file->f_path.dentry);
++			result = sq_fsync(file, file->f_dentry);
+ 			sq_reset_output() ;
+ 		}
+ 		/* if we are the shared resource owner then release them */
+Index: linux-2.6.18-openvz/sound/oss/msnd_pinnacle.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/sound/oss/msnd_pinnacle.c
++++ linux-2.6.18-openvz/sound/oss/msnd_pinnacle.c
+@@ -1007,7 +1007,7 @@ static int dsp_write(const char __user *
+ 
+ static ssize_t dev_read(struct file *file, char __user *buf, size_t count, loff_t *off)
+ {
+-	int minor = iminor(file->f_path.dentry->d_inode);
++	int minor = iminor(file->f_dentry->d_inode);
+ 	if (minor == dev.dsp_minor)
+ 		return dsp_read(buf, count);
+ 	else
+@@ -1016,7 +1016,7 @@ static ssize_t dev_read(struct file *fil
+ 
+ static ssize_t dev_write(struct file *file, const char __user *buf, size_t count, loff_t *off)
+ {
+-	int minor = iminor(file->f_path.dentry->d_inode);
++	int minor = iminor(file->f_dentry->d_inode);
+ 	if (minor == dev.dsp_minor)
+ 		return dsp_write(buf, count);
+ 	else
+Index: linux-2.6.18-openvz/sound/oss/soundcard.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/sound/oss/soundcard.c
++++ linux-2.6.18-openvz/sound/oss/soundcard.c
+@@ -142,7 +142,7 @@ static int get_mixer_levels(void __user 
+ 
+ static ssize_t sound_read(struct file *file, char __user *buf, size_t count, loff_t *ppos)
+ {
+-	int dev = iminor(file->f_path.dentry->d_inode);
++	int dev = iminor(file->f_dentry->d_inode);
+ 	int ret = -EINVAL;
+ 
+ 	/*
+@@ -175,7 +175,7 @@ static ssize_t sound_read(struct file *f
+ 
+ static ssize_t sound_write(struct file *file, const char __user *buf, size_t count, loff_t *ppos)
+ {
+-	int dev = iminor(file->f_path.dentry->d_inode);
++	int dev = iminor(file->f_dentry->d_inode);
+ 	int ret = -EINVAL;
+ 	
+ 	lock_kernel();
+@@ -394,7 +394,7 @@ static int sound_ioctl(struct inode *ino
+ 
+ static unsigned int sound_poll(struct file *file, poll_table * wait)
+ {
+-	struct inode *inode = file->f_path.dentry->d_inode;
++	struct inode *inode = file->f_dentry->d_inode;
+ 	int dev = iminor(inode);
+ 
+ 	DEB(printk("sound_poll(dev=%d)\n", dev));
+@@ -419,7 +419,7 @@ static int sound_mmap(struct file *file,
+ 	int dev_class;
+ 	unsigned long size;
+ 	struct dma_buffparms *dmap = NULL;
+-	int dev = iminor(file->f_path.dentry->d_inode);
++	int dev = iminor(file->f_dentry->d_inode);
+ 
+ 	dev_class = dev & 0x0f;
+ 	dev >>= 4;
+Index: linux-2.6.18-openvz/sound/pcmcia/Kconfig
+=====================================================================
+--- linux-2.6.18-openvz.orig/sound/pcmcia/Kconfig
++++ linux-2.6.18-openvz/sound/pcmcia/Kconfig
+@@ -16,7 +16,7 @@ config SND_VXPOCKET
+ 
+ config SND_PDAUDIOCF
+ 	tristate "Sound Core PDAudioCF"
+-	depends on SND && PCMCIA
++	depends on BROKEN && SND && PCMCIA
+ 	select SND_PCM
+ 	help
+ 	  Say Y here to include support for Sound Core PDAudioCF
+Index: linux-2.6.18-openvz/sound/sound_firmware.c
+=====================================================================
+--- linux-2.6.18-openvz.orig/sound/sound_firmware.c
++++ linux-2.6.18-openvz/sound/sound_firmware.c
+@@ -19,7 +19,7 @@ static int do_mod_firmware_load(const ch
+ 		printk(KERN_INFO "Unable to load '%s'.\n", fn);
+ 		return 0;
+ 	}
+-	l = filp->f_path.dentry->d_inode->i_size;
++	l = filp->f_dentry->d_inode->i_size;
+ 	if (l <= 0 || l > 131072)
+ 	{
+ 		printk(KERN_INFO "Invalid firmware '%s'\n", fn);

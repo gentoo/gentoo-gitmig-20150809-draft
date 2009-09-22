@@ -1,0 +1,26 @@
+diff -urN linux-2.6.18-openvz-028.062.3/arch/x86_64/ia32/ia32entry.S linux-2.6.18-openvz-028.062.3-ia32entryfix/arch/x86_64/ia32/ia32entry.S
+--- linux-2.6.18-openvz-028.062.3/arch/x86_64/ia32/ia32entry.S	2009-06-28 22:48:31.000000000 -0600
++++ linux-2.6.18-openvz-028.062.3-ia32entryfix/arch/x86_64/ia32/ia32entry.S	2009-09-21 21:15:09.000000000 -0600
+@@ -329,9 +329,9 @@
+ 	orl   $TS_COMPAT,threadinfo_status(%r10)
+ 	testl $(_TIF_SYSCALL_TRACE|_TIF_SYSCALL_AUDIT|_TIF_SECCOMP),threadinfo_flags(%r10)
+ 	jnz ia32_tracesys
+-ia32_do_syscall:	
+ 	cmpl $(IA32_NR_syscalls-1),%eax
+-	ja  int_ret_from_sys_call	/* ia32_tracesys has set RAX(%rsp) */
++	ja ia32_badsys
++ia32_do_call:
+ 	IA32_ARG_FIXUP
+ 	call *ia32_sys_call_table(,%rax,8) # xxx: rip relative
+ ia32_sysret:
+@@ -345,7 +345,9 @@
+ 	call syscall_trace_enter
+ 	LOAD_ARGS32 ARGOFFSET  /* reload args from stack in case ptrace changed it */
+ 	RESTORE_REST
+-	jmp ia32_do_syscall
++	cmpl $(IA32_NR_syscalls-1),%eax
++	ja int_ret_from_sys_call	/* ia32_tracesys has set RAX(%rsp) */
++	jmp ia32_do_call
+ END(ia32_syscall)
+ 
+ ia32_badsys:

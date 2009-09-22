@@ -1,6 +1,17 @@
 # ChangeLog for sys-kernel/openvz-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.115 2009/09/22 19:30:19 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openvz-sources/ChangeLog,v 1.116 2009/09/22 23:54:18 pva Exp $
+
+*openvz-sources-2.6.18.028.064.7 (22 Sep 2009)
+
+  22 Sep 2009; Peter Volkov <pva@gentoo.org>
+  +openvz-sources-2.6.18.028.064.7.ebuild,
+  +files/openvz-sources-2.6.18.028.064.7-bridgemac.patch,
+  +files/openvz-sources-2.6.18.028.064.7-cifs-buildfix.patch,
+  +files/openvz-sources-2.6.18.028.064.7-syscall.patch:
+  Put back RHEL5 based kernel as users still use it, bug #279260 (starting
+  with comment 45) and bug #285998. Thanks Jeff Mitchell as this's all his
+  work.
 
   22 Sep 2009; Peter Volkov <pva@gentoo.org>
   -openvz-sources-2.6.18.028.056.1.ebuild,
