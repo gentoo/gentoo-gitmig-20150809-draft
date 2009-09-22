@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.54 2009/09/06 06:02:55 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.55 2009/09/22 13:47:46 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> wicd-1.6.2.ebuild:
+  x86 stable, bug #282382
 
 *wicd-1.6.2.2 (06 Sep 2009)
 
