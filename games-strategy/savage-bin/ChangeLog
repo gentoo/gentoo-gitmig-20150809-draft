@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/savage-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.9 2009/09/13 13:39:04 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/savage-bin/ChangeLog,v 1.10 2009/09/22 11:49:11 nyhm Exp $
+
+  22 Sep 2009; Tristan Heaven <nyhm@gentoo.org> savage-bin-2.00e.ebuild:
+  Depend on app-arch/unzip for unpacking
 
   13 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
   savage-bin-2.00e.ebuild:
