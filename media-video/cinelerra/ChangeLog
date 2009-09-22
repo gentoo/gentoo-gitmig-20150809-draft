@@ -1,6 +1,10 @@
 # ChangeLog for media-video/cinelerra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.36 2009/09/09 10:04:48 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cinelerra/ChangeLog,v 1.37 2009/09/22 06:02:40 aballier Exp $
+
+  22 Sep 2009; Alexis Ballier <aballier@gentoo.org>
+  -cinelerra-20080717.ebuild, -files/cinelerra-ffmpeg.patch:
+  remove old
 
   09 Sep 2009; Alexis Ballier <aballier@gentoo.org>
   +files/cinelerra-pkgconfig-x264.patch, cinelerra-20090210.ebuild:
