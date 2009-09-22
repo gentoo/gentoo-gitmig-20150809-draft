@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liboggz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.16 2009/09/18 23:18:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liboggz/ChangeLog,v 1.17 2009/09/22 07:56:00 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> liboggz-1.0.0.ebuild:
+  add ~arm
 
   18 Sep 2009; Markus Meier <maekke@gentoo.org> liboggz-0.9.9.ebuild:
   amd64/x86 stable, bug #284443
