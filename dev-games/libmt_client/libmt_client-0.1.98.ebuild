@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/libmt_client-0.1.98.ebuild,v 1.7 2005/01/01 18:01:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libmt_client/libmt_client-0.1.98.ebuild,v 1.8 2009/09/22 18:51:24 mr_bones_ Exp $
 
 DESCRIPTION="backend library for the maitretarot clients"
 HOMEPAGE="http://www.nongnu.org/maitretarot/"
@@ -16,6 +16,6 @@ DEPEND="=dev-libs/glib-2*
 	dev-games/libmaitretarot"
 
 src_install() {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR="${D}" || die
 	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ps2-packer-0.4.4.ebuild,v 1.4 2009/03/31 06:34:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ps2-packer/ps2-packer-0.4.4.ebuild,v 1.5 2009/09/22 18:54:02 mr_bones_ Exp $
 
 inherit games
 
@@ -41,11 +41,11 @@ S=${WORKDIR}
 
 src_install() {
 	rm -f COPYING
-	insinto ${GAMES_PREFIX_OPT}/${PN}
+	insinto "${GAMES_PREFIX_OPT}"/${PN}
 	doins -r README.txt stub || die "doins"
-	exeinto ${GAMES_PREFIX_OPT}/${PN}
+	exeinto "${GAMES_PREFIX_OPT}"/${PN}
 	doexe *.so ps2-packer || die "doexe"
 
-	dodir ${GAMES_PREFIX_OPT}/bin
-	dosym ${GAMES_PREFIX_OPT}/{${PN},bin}/ps2-packer
+	dodir "${GAMES_PREFIX_OPT}"/bin
+	dosym "${GAMES_PREFIX_OPT}"/{${PN},bin}/ps2-packer
 }
