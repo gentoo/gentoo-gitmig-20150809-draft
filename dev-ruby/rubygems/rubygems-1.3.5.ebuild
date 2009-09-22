@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.5.ebuild,v 1.4 2009/09/20 18:59:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-1.3.5.ebuild,v 1.5 2009/09/22 05:18:49 tgall Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ RESTRICT="test"
 # change the filename on the end, it still downloads the same file.
 SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
-KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ~ppc64 ~s390 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ia64 ~mips ppc ppc64 ~s390 sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE="doc server"
 DEPEND="=dev-lang/ruby-1.8*"
