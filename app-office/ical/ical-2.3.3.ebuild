@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.3.3.ebuild,v 1.3 2009/08/18 07:38:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ical-2.3.3.ebuild,v 1.4 2009/09/22 13:24:11 maekke Exp $
 
 inherit autotools eutils multilib
 
@@ -10,7 +10,7 @@ SRC_URI="http://annexia.org/_file/${P}.tar.gz"
 
 LICENSE="as-is GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 RESTRICT="test"
 
