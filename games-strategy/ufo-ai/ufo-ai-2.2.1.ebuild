@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.2 2009/08/10 00:35:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.2.1.ebuild,v 1.3 2009/09/22 19:43:02 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils autotools games
+inherit eutils games
 
 MY_P="${P/o-a/oa}"
 
