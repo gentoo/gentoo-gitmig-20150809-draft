@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/x48
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.16 2008/10/13 18:51:39 bangert Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/x48/ChangeLog,v 1.17 2009/09/22 17:56:44 vostorga Exp $
+
+*x48-0.6.1 (22 Sep 2009)
+
+  22 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> +x48-0.6.1.ebuild:
+  Version bump to 0.6.1 , ebuild thanks to po.valles <nibheis@gmail.com>
+  bug 285926
 
   13 Oct 2008; Thilo Bangert <bangert@gentoo.org> x48-0.4.3.ebuild,
   x48-0.4.3-r1.ebuild:
