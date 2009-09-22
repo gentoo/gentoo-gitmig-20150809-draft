@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession-edit/lxsession-edit-0.1.1.ebuild,v 1.6 2009/08/27 15:01:03 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxsession-edit/lxsession-edit-0.1.1.ebuild,v 1.7 2009/09/22 15:47:45 vostorga Exp $
 
 EAPI="1"
 
@@ -15,12 +15,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-CDEPEND="dev-libs/glib:2
+COMMON_DEPEND="dev-libs/glib:2
 	x11-libs/gtk+:2"
-RDEPEND="${CDEPEND}
+RDEPEND="${COMMON_DEPEND}
 	lxde-base/lxde-common
 	lxde-base/lxsession"
-DEPEND="${CDEPEND}
+DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext
 	dev-util/intltool
 	dev-util/pkgconfig"
