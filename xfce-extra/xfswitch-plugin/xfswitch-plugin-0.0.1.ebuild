@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfswitch-plugin/xfswitch-plugin-0.0.1.ebuild,v 1.2 2009/09/20 16:26:32 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfswitch-plugin/xfswitch-plugin-0.0.1.ebuild,v 1.3 2009/09/22 15:18:15 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -14,13 +14,13 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug"
 
-CDEPEND="x11-libs/gtk+:2
-	xfce-base/libxfce4util
-	xfce-base/libxfcegui4
-	xfce-base/xfce4-panel"
-RDEPEND="${CDEPEND}
+COMMON_DEPEND=">=x11-libs/gtk+-2.12:2
+	>=xfce-base/libxfce4util-4.4
+	>=xfce-base/libxfcegui4-4.4
+	>=xfce-base/xfce4-panel-4.4"
+RDEPEND="${COMMON_DEPEND}
 	gnome-base/gdm"
-DEPEND="${CDEPEND}
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
 	dev-util/intltool"
 
