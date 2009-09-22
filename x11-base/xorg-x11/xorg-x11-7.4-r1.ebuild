@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4-r1.ebuild,v 1.1 2009/09/21 15:28:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-7.4-r1.ebuild,v 1.2 2009/09/22 07:02:17 remi Exp $
 
 EAPI="2"
 
@@ -121,7 +121,19 @@ RDEPEND="${RDEPEND}
 
 DEPEND="${RDEPEND}"
 
+pkg_preinst() {
+	# Save xorg.conf because of bug #278268
+	if [[ -f "${ROOT}etc/X11/xorg.conf" ]]; then
+		cp "${ROOT}etc/X11/xorg.conf" "${T}"
+	fi
+}
+
 pkg_postinst() {
+	# Restore saved xorg.conf
+	if [[ -f "${T}/xorg.conf" ]]; then
+		cp "${T}/xorg.conf" "${ROOT}etc/X11/xorg.conf"
+	fi
+
 	elog
 	elog "Please note that the xcursors are in ${ROOT}usr/share/cursors/${PN}."
 	elog "Any custom cursor sets should be placed in that directory."
