@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.19 2009/04/14 07:29:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/tribes2/tribes2-25034.ebuild,v 1.20 2009/09/22 18:57:22 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -43,10 +43,10 @@ src_unpack() {
 src_install() {
 	einfo "Copying files... this may take a while..."
 	exeinto "${dir}"
-	doexe ${CDROM_ROOT}/bin/x86/glibc-2.1/{t2launch,tribes2,tribes2.dynamic,tribes2d,tribes2d-restart.sh,tribes2d.dynamic} || die "doexe failed"
+	doexe "${CDROM_ROOT}"/bin/x86/glibc-2.1/{t2launch,tribes2,tribes2.dynamic,tribes2d,tribes2d-restart.sh,tribes2d.dynamic} || die "doexe failed"
 
 	insinto "${dir}"
-	doins ${CDROM_ROOT}/{README,README.tribes2d,Tribes2_Manual.pdf,console_start.cs,kver.pub} ${Ddir} || die "copy failed"
+	doins "${CDROM_ROOT}"/{README,README.tribes2d,Tribes2_Manual.pdf,console_start.cs,kver.pub} "${Ddir}" || die "copy failed"
 
 	# Video card profiles
 	# TODO: move this to src_unpack where it belongs.
@@ -64,7 +64,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find "${Ddir}" -exec touch '{}' \;
 
-	newicon ${CDROM_ROOT}/icon.xpm tribes2.xpm
+	newicon "${CDROM_ROOT}"/icon.xpm tribes2.xpm
 	games_make_wrapper t2launch ./t2launch "${dir}" "${dir}"
 	make_desktop_entry t2launch "Tribes 2" tribes2
 
