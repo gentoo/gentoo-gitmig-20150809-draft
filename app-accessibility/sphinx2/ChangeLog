@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/sphinx2
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.17 2009/04/01 17:52:38 williamh Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/sphinx2/ChangeLog,v 1.18 2009/09/22 15:46:02 williamh Exp $
+
+  22 Sep 2009; William Hubbs <williamh@gentoo.org> sphinx2-0.6.ebuild,
+  +files/sphinx2-0.6-as-needed.patch:
+  Fixed --as-needed issues for bug #246719.
+  Thanks to xarthisius.kk@gmail.com for the patch.
 
   01 Apr 2009; William Hubbs <williamh@gentoo.org> -sphinx2-0.4.ebuild:
   Removed old version.
