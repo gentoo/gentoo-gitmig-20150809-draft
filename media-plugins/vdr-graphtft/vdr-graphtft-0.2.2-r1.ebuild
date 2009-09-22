@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.2.2-r1.ebuild,v 1.3 2009/07/24 18:15:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/vdr-graphtft-0.2.2-r1.ebuild,v 1.4 2009/09/22 05:22:04 aballier Exp $
 
 EAPI="2"
 
@@ -30,7 +30,8 @@ RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}_gentoo.diff"
 	"${FILESDIR}/${P}-gcc44.patch"
-	"${FILESDIR}/${P}-glibc210.patch" )
+	"${FILESDIR}/${P}-glibc210.patch"
+	"${FILESDIR}/${P}-avutil50.patch" )
 
 extpatch_v_check() {
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/vdr-graphtft
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.16 2009/07/24 18:15:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-graphtft/ChangeLog,v 1.17 2009/09/22 05:22:04 aballier Exp $
+
+  22 Sep 2009; Alexis Ballier <aballier@gentoo.org>
+  vdr-graphtft-0.2.2-r1.ebuild, +files/vdr-graphtft-0.2.2-avutil50.patch:
+  fix build with latest ffmpeg, bug #278947
 
   24 Jul 2009; Samuli Suominen <ssuominen@gentoo.org>
   vdr-graphtft-0.2.2-r1.ebuild, +files/vdr-graphtft-0.2.2-gcc44.patch,
