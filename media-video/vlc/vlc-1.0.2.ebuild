@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.2.ebuild,v 1.3 2009/09/22 02:08:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.2.ebuild,v 1.4 2009/09/22 07:50:47 maekke Exp $
 
 EAPI="2"
 
@@ -45,7 +45,7 @@ SRC_URI="${SRC_URI}
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~arm ~ppc ~ppc64 x86 ~x86-fbsd"
 IUSE="a52 aac aalib alsa altivec atmo avahi bidi cdda cddax cddb cdio dbus dc1394
 	debug dirac directfb dts dvb dvd elibc_glibc fbcon fluidsynth +ffmpeg flac fontconfig
 	+gcrypt ggi gnome gnutls hal httpd id3tag ieee1394 jack kate libass libcaca
