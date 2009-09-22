@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.25.ebuild,v 1.3 2009/01/09 15:06:36 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.28.ebuild,v 1.1 2009/09/22 03:38:37 darkside Exp $
+
+EAPI=2
 
 inherit eutils flag-o-matic
 
@@ -11,64 +13,71 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2"
 LICENSE="GPL-2 FVWM"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="bidi debug doc gtk imlib nls perl png readline rplay stroke svg tk truetype vanilla xinerama"
+IUSE="bidi debug doc gtk gtk2-perl imlib netpbm nls perl png readline rplay stroke svg tk truetype vanilla xinerama lock"
 
-RDEPEND="dev-lang/perl
+COMMON_DEPEND="
 	sys-libs/zlib
+	x11-libs/libICE
+	x11-libs/libSM
+	x11-libs/libX11
+	x11-libs/libXau
+	x11-libs/libxcb
+	x11-libs/libXcursor
+	x11-libs/libXdmcp
+	x11-libs/libXext
+	x11-libs/libXfixes
 	x11-libs/libXpm
-	x11-libs/libXft
+	x11-libs/libXrandr
+	x11-libs/libXrender
 	bidi? ( dev-libs/fribidi )
 	gtk? (
 		=x11-libs/gtk+-1.2*
-		imlib? ( media-libs/imlib )
-	)
-	perl? ( tk? (
-			dev-lang/tk
-			dev-perl/perl-tk
-			>=dev-perl/X11-Protocol-0.56
-		)
+		imlib? ( media-libs/imlib[gtk] )
 	)
 	png? ( media-libs/libpng )
 	readline? (
 		sys-libs/ncurses
 		sys-libs/readline
 	)
-	rplay? ( media-sound/rplay )
 	stroke? ( dev-libs/libstroke )
 	svg? ( gnome-base/librsvg )
 	truetype? (
 		media-libs/fontconfig
 		x11-libs/libXft
 	)
+	xinerama? (
+		x11-proto/xineramaproto
+		x11-libs/libXinerama
+	)"
+
+RDEPEND="${COMMON_DEPEND}
+	dev-lang/perl
+	gtk2-perl? ( dev-perl/gtk2-perl )
+	perl? ( tk? (
+			dev-lang/tk
+			dev-perl/perl-tk
+			>=dev-perl/X11-Protocol-0.56
+		)
+	)
+	rplay? ( media-sound/rplay )
+	lock? ( x11-misc/xlockmore )
 	userland_GNU? ( sys-apps/debianutils )
-	xinerama? ( x11-libs/libXinerama )"
-# XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
-# XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
-# XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
-DEPEND="${RDEPEND}
-	dev-libs/libxslt
+	!x86-fbsd? ( netpbm? ( media-libs/netpbm ) )"
+
+DEPEND="${COMMON_DEPEND}
 	dev-util/pkgconfig
-	x11-libs/libXrandr
-	x11-proto/xextproto
-	x11-proto/xproto
 	doc? ( dev-libs/libxslt )
-	xinerama? ( x11-proto/xineramaproto )"
+	x11-proto/xextproto
+	x11-proto/xproto"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	if ! use vanilla; then
-		cd "${S}"
-
 		# Enables fast translucent menus; patch from fvwm-user mailing list.
-		epatch "${FILESDIR}/fvwm-2.5.23-translucent-menus.diff"
-
-		# A Gentoo-specific compatibility patch.
-		epatch "${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff"
+		epatch "${FILESDIR}/${PN}-2.5.27-translucent-menus.diff"
 	fi
 }
 
-src_compile() {
+src_configure() {
 	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm --enable-package-subdirs --without-gnome"
 
 	# Non-upstream email where bugs should be sent; used in fvwm-bug.
@@ -106,32 +115,37 @@ src_compile() {
 		$(use_enable svg rsvg) \
 		$(use_enable truetype xft) \
 		$(use_enable xinerama) \
-		|| die "econf failed"
-
-	emake || die "emake failed"
+		|| die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
+
+	# These are always removed, because gentoo doesn't have anymore
+	# a dev-perl/gtk-perl package, so, these modules are pointless.
+	rm -f "${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm"
+	find "${D}" -name '*FvwmGtkDebug*' -exec rm -f '{}' \; 2>/dev/null
+
+	if ! use lock; then
+		find "${D}" -name '*fvwm-menu-xlock' -exec rm -f '{}' \; 2>/dev/null
+	fi
 
 	if use perl; then
-		local toolkits="gtk tcltk"
-
 		if ! use tk; then
 			rm -f "${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm"
-			toolkits=${toolkits/tcltk/}
+			if ! use gtk2-perl; then # no tk and no gtk2 bindings
+				rm -f "${D}/usr/share/fvwm/perllib/FVWM/Module/Toolkit.pm"
+				find "${D}/usr/share/fvwm/perllib" -depth -type d -exec rmdir '{}' \; 2>/dev/null
+			fi
 		fi
 
-		if ! use gtk; then
-			rm -f "${D}/usr/share/fvwm/perllib/FVWM/Module/"Gtk{,2}.pm
-			toolkits=${toolkits/gtk/}
-		fi
-
-		if ! test "${toolkits// /}"; then
-			rm -f "${D}/usr/share/fvwm/perllib/FVWM/Module/Toolkit.pm"
-			find "${D}/usr/share/fvwm/perllib" -depth -type d -exec rmdir {} \; 2>/dev/null
+		# Now, the Gtk2.pm file, it will require dev-perl/gtk2-perl
+		# so it implies gtk2 as well. That's why we need another use flag.
+		if ! use gtk2-perl; then
+			rm -f "${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm"
 		fi
 	else
+		# Completely wipe it if ! use perl
 		rm -rf "${D}/usr/bin/fvwm-perllib" \
 			"${D}/usr/share/man/man1/fvwm-perllib.1"
 	fi
@@ -147,12 +161,14 @@ src_install() {
 	rm -f "${D}/usr/bin/fvwm-convert-2.6" \
 		"${D}/usr/share/man/man1/fvwm-convert-2.6.1"
 
-	echo "/usr/bin/fvwm" > "${D}/etc/X11/Sessions/${PN}"
+	dodir /etc/X11/Sessions
+	echo "/usr/bin/fvwm" > "${D}/etc/X11/Sessions/${PN}" || die
+	fperms a+x /etc/X11/Sessions/${PN} || die
 
 	dodoc AUTHORS ChangeLog NEWS README \
 		docs/{ANNOUNCE,BUGS,COMMANDS,CONVENTIONS} \
 		docs/{DEVELOPERS,error_codes,FAQ,TODO,fvwm.lsm}
 
 	# README file for translucent menus patch.
-	use vanilla || dodoc "${FILESDIR}/README.translucency"
+	use vanilla || dodoc "${FILESDIR}"/README.translucency
 }
