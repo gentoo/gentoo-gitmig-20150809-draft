@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20090919-r1.ebuild,v 1.1 2009/09/19 16:12:25 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20090919-r1.ebuild,v 1.2 2009/09/22 05:14:04 darkside Exp $
 
 EAPI=2
 inherit eutils flag-o-matic multilib
@@ -435,8 +435,8 @@ src_configure() {
 			myconf="${myconf} --disable-xv --disable-xvmc"
 		fi
 	else
-		myconf="${myconf} --disable-dga1 --disable dga2 --disable dxr3 \
-			--disable ggi --disable-gl --disable-vdpau --disable-vidix \
+		myconf="${myconf} --disable-dga1 --disable-dga2 --disable-dxr3 \
+			--disable-ggi --disable-gl --disable-vdpau --disable-vidix \
 			--disable-vidix-pcidb --disable-xinerama --disable-xss \
 			--disable-xv --disable-xvmc"
 	fi
