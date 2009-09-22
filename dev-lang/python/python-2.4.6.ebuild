@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.13 2009/08/30 21:34:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.14 2009/09/22 13:39:28 arfrever Exp $
 
 # NOTE about python-portage interactions :
 # - Do not add a pkg_setup() check for a certain version of portage
@@ -11,7 +11,7 @@ EAPI="1"
 
 inherit autotools eutils flag-o-matic multilib python toolchain-funcs versionator
 
-# We need this so that we don't depends on python.eclass
+# We need this so that we don't depend on python.eclass.
 PYVER_MAJOR=$(get_major_version)
 PYVER_MINOR=$(get_version_component_range 2)
 PYVER="${PYVER_MAJOR}.${PYVER_MINOR}"
@@ -29,18 +29,24 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.4"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 ncurses readline ssl +threads tk ucs2 wininst +xml"
+IUSE="-berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 ncurses readline ssl +threads tk ucs2 wininst +xml"
 
-# Can't be compiled against db-4.5 Bug #179377
 DEPEND=">=app-admin/eselect-python-20080925
 		>=sys-libs/zlib-1.1.3
 		!build? (
-			tk? ( >=dev-lang/tk-8.0 )
-			ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
-			berkdb? ( || ( sys-libs/db:4.4  sys-libs/db:4.3 ) )
-			gdbm? ( sys-libs/gdbm )
-			ssl? ( dev-libs/openssl )
+			berkdb? ( || (
+				sys-libs/db:4.4
+				sys-libs/db:4.3
+				sys-libs/db:4.2
+			) )
 			doc? ( dev-python/python-docs:${SLOT} )
+			gdbm? ( sys-libs/gdbm )
+			ncurses? (
+				>=sys-libs/ncurses-5.2
+				readline? ( >=sys-libs/readline-4.1 )
+			)
+			ssl? ( dev-libs/openssl )
+			tk? ( >=dev-lang/tk-8.0 )
 			xml? ( dev-libs/expat )
 		)"
 
@@ -51,6 +57,15 @@ RDEPEND="${DEPEND} build? ( !dev-python/pycrypto )"
 PDEPEND="${DEPEND} app-admin/python-updater"
 
 PROVIDE="virtual/python"
+
+pkg_setup() {
+	if use berkdb; then
+		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python. It has"
+		ewarn "been additionally removed in Python 3. You should use external, still maintained \"bsddb3\""
+		ewarn "module provided by dev-python/bsddb3 which supports both Python 2 and Python 3."
+		ebeep 6
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
