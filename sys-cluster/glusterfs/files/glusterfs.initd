@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/files/glusterfs.initd,v 1.1 2009/09/22 19:47:25 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/files/glusterfs.initd,v 1.2 2009/09/22 20:01:14 alexxy Exp $
 
 if [[ "${SVCNAME}" != "glusterfs" ]]
 then
@@ -21,7 +21,7 @@ eval 'GLUSTERFS_OPTS="${'${GLUSTERFS_NAME}'_opts}"'
 eval 'GLUSTERFS_MOUNTPOINT="${'${GLUSTERFS_NAME}'_mountpoint}"'
 
 depend() {
-	need net openib net.ib0
+	need net 
 	[[ -n "${GLUSTERFS_MOUNTPOINT}" ]] && need fuse
 	use dns
 	after firewall ntp-client ntpd
