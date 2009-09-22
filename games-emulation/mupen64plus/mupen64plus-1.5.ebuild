@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5.ebuild,v 1.1 2009/08/28 07:50:00 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64plus/mupen64plus-1.5.ebuild,v 1.2 2009/09/22 19:54:06 nyhm Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://mupen64plus.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+gtk libsamplerate lirc qt4 sse"
 
 # GTK+ is currently required by plugins even if no GUI support is enabled
@@ -49,7 +49,7 @@ pkg_setup() {
 src_prepare() {
 	# unbundle bzip2
 	epatch "${FILESDIR}"/${P}-unbundle-bzip2.patch
-	# XXX: try to unbundle more?
+	# XXX: try to unbundle more
 
 	# fix compilation with gcc4.4
 	epatch "${FILESDIR}"/${P}-glide64-gcc44.patch
@@ -72,6 +72,10 @@ src_prepare() {
 }
 
 get_opts() {
+	if use amd64 || use x86 ; then
+		echo -n "CPU=X86 ARCH=64BITS$(use x86 && echo -n _32) "
+	fi
+
 	use libsamplerate || echo -n "NO_RESAMP=1 "
 	use lirc && echo -n "LIRC=1 "
 	use sse || echo -n "NO_ASM=1 "
@@ -87,6 +91,7 @@ get_opts() {
 }
 
 src_compile() {
+	use x86 && use sse && append-flags -fomit-frame-pointer
 	emake $(get_opts) all || die "make failed"
 }
 
