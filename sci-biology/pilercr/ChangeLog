@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/pilercr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/pilercr/ChangeLog,v 1.5 2009/09/06 04:34:58 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/pilercr/ChangeLog,v 1.6 2009/09/22 14:12:49 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> pilercr-1.0.ebuild:
+  x86 stable, bug #283685
 
   06 Sep 2009; Jeremy Olexa <darkside@gentoo.org> pilercr-1.0.ebuild:
   amd64 stable, bug 283685. As requested, compile tested only due to
