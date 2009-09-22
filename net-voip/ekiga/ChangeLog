@@ -1,6 +1,9 @@
 # ChangeLog for net-voip/ekiga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.11 2009/09/10 17:00:34 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ChangeLog,v 1.12 2009/09/22 21:59:22 volkmar Exp $
+
+  22 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> ekiga-3.2.5-r2.ebuild:
+  Warn instead of dying when USE="kontact -kde". Fix bug 282862
 
   10 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> ekiga-3.2.5-r2.ebuild:
   Compatibility with kdeprefix. Fix bug 283033

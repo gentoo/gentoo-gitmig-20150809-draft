@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r2.ebuild,v 1.2 2009/09/10 17:00:34 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/ekiga/ekiga-3.2.5-r2.ebuild,v 1.3 2009/09/22 21:59:22 volkmar Exp $
 
 EAPI="2"
 
@@ -66,14 +66,16 @@ DOCS="AUTHORS ChangeLog FAQ MAINTAINERS NEWS README TODO"
 # contact ekiga team to be sure intltool and gettext are not nls deps
 
 pkg_setup() {
+	forceconf=""
+
 	if use kde; then
 		kde4-base_pkg_setup
 	fi
 
 	if use kontact && ! use kde; then
-		eerror "To enable kontact USE flag, you need kde USE flag to be enabled"
-		eerror "Please, enable kde or disable kontact and re-emerge ${PN}."
-		die "You need to enable kde or disable kontact."
+		ewarn "To enable kontact USE flag, you need kde USE flag to be enabled."
+		ewarn "If you need kontact support, please, re-emerge with kde enabled."
+		forceconf="${forceconf} --disable-kab"
 	fi
 
 	# update scrollkeeper database if doc has been enabled
@@ -111,7 +113,8 @@ pkg_setup() {
 		$(use_enable shm)
 		$(use_enable static static-libs)
 		$(use_enable xcap)
-		$(use_enable xv)"
+		$(use_enable xv)
+		${forceconf}"
 }
 
 src_prepare() {
