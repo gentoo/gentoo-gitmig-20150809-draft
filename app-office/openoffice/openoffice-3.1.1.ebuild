@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.6 2009/09/20 13:49:28 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.7 2009/09/22 13:01:26 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -243,7 +243,7 @@ src_prepare() {
 	cp -f "${FILESDIR}/base64.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/xulrunner-1.9.1.diff" "${S}/patches/hotfixes" || die
 	cp -f "${FILESDIR}/boost-undefined-references.diff" "${S}/patches/hotfixes" || die
-	cp -f "${FILESDIR}/dbfix.diff" "${S}/patches/hotfixes" || die
+	cp -f "${FILESDIR}/kde4-configure2.diff" "${S}/patches/hotfixes" || die
 
 	#Use flag checks
 	if use java ; then
@@ -304,7 +304,7 @@ src_prepare() {
 
 src_configure() {
 
-	use kde && export KDEDIR="${KDEDIR}"
+	use kde && export KDE4DIR="${KDEDIR}"
 
 	# Use multiprocessing by default now, it gets tested by upstream
 	export JOBS=$(echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/")
