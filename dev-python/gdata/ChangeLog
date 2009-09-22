@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.32 2009/09/01 01:06:38 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.33 2009/09/22 19:33:45 arfrever Exp $
+
+  22 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  gdata-2.0.1.ebuild, gdata-2.0.1-r1.ebuild, gdata-2.0.2.ebuild,
+  +files/gdata-2.0.2-fix_tests.patch:
+  Fix tests on big endian architectures (bug #280365).
 
 *gdata-2.0.2 (01 Sep 2009)
 
