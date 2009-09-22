@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.13 2009/06/30 21:00:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.16.1-r1.ebuild,v 1.14 2009/09/22 22:00:59 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs games
 
@@ -14,7 +14,7 @@ SRC_URI="http://icculus.org/quake2/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~sparc x86 ~x86-fbsd"
+KEYWORDS="~ppc ~sparc x86 ~x86-fbsd"
 IUSE="aalib alsa arts cdinstall dedicated demo ipv6 joystick opengl qmax rogue sdl svga X xatrix"
 
 UIDEPEND="aalib? ( media-libs/aalib )

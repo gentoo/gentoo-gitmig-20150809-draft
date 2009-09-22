@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake2-icculus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.33 2009/06/30 21:00:04 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/ChangeLog,v 1.34 2009/09/22 22:00:59 mr_bones_ Exp $
+
+  22 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  quake2-icculus-0.16.1.ebuild, quake2-icculus-0.16.1-r1.ebuild:
+  dropped the amd64 keywords since it's reported to not build properly (bug
+  #275507)
 
   30 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   quake2-icculus-0.16.1-r1.ebuild:
