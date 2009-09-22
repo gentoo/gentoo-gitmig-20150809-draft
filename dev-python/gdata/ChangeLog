@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.33 2009/09/22 19:33:45 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.34 2009/09/22 20:00:16 jer Exp $
+
+  22 Sep 2009; Jeroen Roovers <jer@gentoo.org> gdata-2.0.0.ebuild:
+  Stable for HPPA (bug #277347).
 
   22 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   gdata-2.0.1.ebuild, gdata-2.0.1-r1.ebuild, gdata-2.0.2.ebuild,
