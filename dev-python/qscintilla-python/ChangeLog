@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.39 2009/09/16 20:50:07 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.40 2009/09/22 00:25:47 fauli Exp $
+
+  22 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  qscintilla-python-2.4.ebuild:
+  stable x86, bug 284707
 
   16 Sep 2009; Jesus Rivero <neurogeek@gentoo.org>
   qscintilla-python-2.4.ebuild:
