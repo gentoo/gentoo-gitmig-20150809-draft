@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.51 2009/09/05 15:14:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.52 2009/09/22 14:59:44 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> newt-0.52.10.ebuild:
+  amd64 stable, bug #281402
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> newt-0.52.10.ebuild:
   Marking newt-0.52.10 ppc64 for bug 281402
