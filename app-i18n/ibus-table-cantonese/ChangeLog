@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/ibus-table-cantonese
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ibus-table-cantonese/ChangeLog,v 1.1 2009/09/21 23:58:48 matsuu Exp $
+
+*ibus-table-cantonese-1.2.0.20090824 (21 Sep 2009)
+
+  21 Sep 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ibus-table-cantonese-1.2.0.20090824.ebuild, +metadata.xml:
+  Initial import.
+
