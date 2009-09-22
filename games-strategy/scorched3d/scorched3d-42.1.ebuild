@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-42.1.ebuild,v 1.3 2009/09/19 12:27:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-42.1.ebuild,v 1.4 2009/09/22 21:59:07 mr_bones_ Exp $
 
 EAPI=2
 WX_GTK_VER=2.8
@@ -36,9 +36,7 @@ DEPEND="media-libs/libsdl
 S=${WORKDIR}/scorched
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-fixups.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
+	epatch "${FILESDIR}"/${P}-*.patch
 	eautoreconf
 }
 
