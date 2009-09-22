@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/xcircuit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.41 2009/08/18 07:15:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.42 2009/09/22 13:05:05 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> xcircuit-3.4.30.ebuild:
+  amd64 stable, bug #281405
 
   18 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   xcircuit-3.4.30.ebuild:
