@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.63 2009/08/09 11:15:04 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.64 2009/09/22 11:00:41 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> sptk-3.5.8.14-r1.ebuild:
+  amd64/x86 stable, bug #285892
 
   09 Aug 2009; Ilya A. Volynets-Evenbakh <iluxa@gentoo.org>
   -sptk-2.3.28.ebuild:
