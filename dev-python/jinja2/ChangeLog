@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/jinja2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.21 2009/09/21 14:14:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jinja2/ChangeLog,v 1.22 2009/09/22 16:33:32 arfrever Exp $
+
+  22 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  jinja2-2.2.1.ebuild:
+  Update dependencies (bug #285939).
 
   21 Sep 2009; Tom Gall <tgall@gentoo.org> jinja2-2.2.1.ebuild, 
   jinja2-2.1.1-r1.ebuild:
