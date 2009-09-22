@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrdao
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.140 2009/08/09 12:48:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/ChangeLog,v 1.141 2009/09/22 07:15:59 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> cdrdao-1.2.3_rc2.ebuild:
+  arm stable, bug #276776
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> cdrdao-1.2.3_rc2.ebuild:
   ppc stable #276776
