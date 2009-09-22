@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/claws-mail-gtkhtml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.63 2009/09/06 20:39:25 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail-gtkhtml/ChangeLog,v 1.64 2009/09/22 01:00:53 fauli Exp $
+
+  22 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  -claws-mail-gtkhtml-0.22.ebuild, -claws-mail-gtkhtml-0.23.ebuild:
+  clean up
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org>
   claws-mail-gtkhtml-0.24.ebuild:
