@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4826 2009/09/21 22:47:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4827 2009/09/22 16:47:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3134,10 +3134,6 @@ www-plugins/adobe-flash:32bit - For amd64-multilib, installs the 32-bit plugin
 www-plugins/adobe-flash:64bit - For amd64-multilib, installs the native 64-bit plugin
 www-plugins/gnash:agg - Rendering based on the Anti-Grain Geometry Rendering Engine library
 www-plugins/gnash:cygnal - Enable building of the cygnal server
-www-plugins/mplayerplug-in:divx - Divx Playback Support
-www-plugins/mplayerplug-in:gmedia - Google Media Playback Support
-www-plugins/mplayerplug-in:realmedia - Real Media Playback Support
-www-plugins/mplayerplug-in:wmp - Windows Media Playback Support
 www-servers/apache:peruser_dc - Enable support for the dc branch of peruser. EXPERIMENTAL!
 www-servers/apache:sni - Enable TLS Server Name Indication (SNI) - EXPERIMENTAL!
 www-servers/apache:suexec - Install suexec with apache
