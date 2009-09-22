@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.9 2009/05/06 20:59:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/abuse/abuse-0.7.1.ebuild,v 1.10 2009/09/22 18:54:40 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -29,7 +29,7 @@ src_unpack() {
 	use levels && cp -rf "${WORKDIR}"/abuse-frabs-2.11/{addon,art,levels,lisp,music,netlevel,register} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-frabs-2.11/
 	use demo && cp -rf "${WORKDIR}"/abuse-lib-2.00.orig/unpacked/{addon,art,levels,lisp,abuse.lsp} "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-lib-2.00.orig/
 	use sounds && cp -rf "${WORKDIR}"/abuse-sfx-2.00.orig/sfx "${WORKDIR}" && rm -rf "${WORKDIR}"/abuse-sfx-2.00.orig/
-	cd ${S}
+	cd "${S}"
 	# fix bug #231822
 	sed -i \
 		-e "s:/var/games/abuse:${GAMES_DATADIR}/${PN}:" \
