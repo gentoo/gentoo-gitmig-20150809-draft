@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.16 2008/05/19 19:48:35 dev-zero Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.17 2009/09/22 08:16:15 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> pypgsql-2.5.1.ebuild:
+  amd64/x86 stable, bug #285737
 
   19 May 2008; Tiziano Müller <dev-zero@gentoo.org> pypgsql-2.4.ebuild,
   pypgsql-2.5.1.ebuild:
