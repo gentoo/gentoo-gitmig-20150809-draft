@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/swt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.109 2009/09/16 17:50:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/swt/ChangeLog,v 1.110 2009/09/22 17:43:40 mrpouet Exp $
+
+  22 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  swt-3.4-r4.ebuild:
+  Stable for amd64 per bug #282159.
 
   16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> swt-3.4-r4.ebuild:
   stable x86, bug 282159
