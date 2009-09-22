@@ -1,12 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ffmpeg-php-0.6.0.ebuild,v 1.1 2008/12/11 20:30:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php5/ffmpeg-php/ffmpeg-php-0.6.0.ebuild,v 1.2 2009/09/22 04:44:18 aballier Exp $
 
 PHP_EXT_NAME="ffmpeg"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 
-inherit depend.php php-ext-source-r1
+inherit depend.php php-ext-source-r1 eutils
 
 KEYWORDS="~amd64 ~x86"
 
@@ -24,6 +24,12 @@ need_php_by_category
 
 pkg_setup() {
 	require_gd
+}
+
+src_unpack() {
+	php-ext-source-r1_src_unpack
+	cd "${S}"
+	epatch "${FILESDIR}/${P}-avutil50.patch"
 }
 
 src_install() {
