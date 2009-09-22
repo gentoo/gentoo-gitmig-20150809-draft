@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26343.ebuild,v 1.1 2009/09/16 16:34:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26343.ebuild,v 1.2 2009/09/22 12:08:57 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -65,7 +65,7 @@ EOF
 
 	# Configuration options (system libraries)
 	local myconf="-Duse_system_bzip2=1 -Duse_system_zlib=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1 -Dlinux_use_tcmalloc=1"
-	# -Duse_system_sqlite=1 : chromium added initUnixFile() and fillInUnixFile() functions
+	# -Duse_system_sqlite=1 : http://crbug.com/22208
 	# Others still bundled: icu (not possible?), hunspell, libevent
 
 	# Sandbox paths
@@ -124,5 +124,5 @@ src_install() {
 
 	newicon out/Release/product_logo_48.png ${PN}-browser.png
 	dosym ${CHROMIUM_HOME}/chromium-launcher.sh /usr/bin/chromium
-	make_desktop_entry chromium "Chromium" ${PN}-browser.png "Network;WebBrowser"
+	make_desktop_entry chromium "Chromium" ${PN}-browser "Network;WebBrowser"
 }

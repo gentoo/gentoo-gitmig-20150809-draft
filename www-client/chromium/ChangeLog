@@ -1,6 +1,10 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.4 2009/09/16 23:29:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.5 2009/09/22 12:08:57 voyageur Exp $
+
+  22 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  chromium-4.0.212.0_p26343.ebuild:
+  Fix .desktop entry as reported by nightmorph in bug #285922
 
   16 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
   files/chromium-launcher.sh:
