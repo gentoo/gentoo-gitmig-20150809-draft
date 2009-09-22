@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/suite3270
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.33 2009/09/12 17:34:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/suite3270/ChangeLog,v 1.34 2009/09/22 13:11:35 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> suite3270-3.3.9_p12.ebuild:
+  amd64 stable, bug #281408
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org> suite3270-3.3.9_p12.ebuild:
   sparc/s390 stable wrt #281408
