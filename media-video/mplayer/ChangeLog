@@ -1,10 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.677 2009/09/22 05:14:04 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.678 2009/09/22 05:15:09 darkside Exp $
 
   22 Sep 2009; Jeremy Olexa <darkside@gentoo.org>
   mplayer-1.0_rc4_p20090919-r1.ebuild:
-  Fix configure call, just a typo in the ebuild
+  Fix configure call, just a typo in the ebuild. bug 285894
 
 *mplayer-1.0_rc4_p20090919-r1 (19 Sep 2009)
 
