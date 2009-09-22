@@ -1,6 +1,6 @@
-# Copyright 2003-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.10.ebuild,v 1.2 2008/12/17 06:28:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-osdpip/vdr-osdpip-0.0.10.ebuild,v 1.3 2009/09/22 05:28:32 aballier Exp $
 
 inherit vdr-plugin
 
@@ -19,6 +19,7 @@ DEPEND=">=media-video/vdr-1.4.0
 	"
 
 #PATCHES=("${FILESDIR}/${P}-vdr-1.5.0.diff")
+PATCHES=( "${FILESDIR}/${P}-avutil50.patch" )
 
 src_unpack() {
 	vdr-plugin_src_unpack
