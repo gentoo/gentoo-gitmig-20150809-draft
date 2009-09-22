@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/sgb
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.7 2008/09/03 09:53:30 opfer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.8 2009/09/22 02:02:10 robbat2 Exp $
+
+  22 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> sgb-20030623.ebuild,
+  +files/sgb-20030623-destdir.patch,
+  +files/sgb-20030623-parallel-make-fix.patch:
+  Cleanup of build process for bug #248373.
 
   03 Sep 2008; Christian Faulhammer <opfer@gentoo.org> sgb-20030623.ebuild:
   extend dependency to allow virtual/tex-base and quote variables

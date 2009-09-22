@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.6 2008/09/03 09:53:30 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.7 2009/09/22 02:02:10 robbat2 Exp $
+
+inherit eutils
 
 DESCRIPTION="Stanford GraphBase"
 HOMEPAGE="ftp://labrea.stanford.edu/pub/sgb/"
@@ -10,34 +12,47 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 DEPEND="|| ( >=dev-util/cweb-3.00 virtual/tex-base )"
+S="${WORKDIR}"
 
 src_unpack() {
-	cd "${S}"
 	unpack ${A}
-	echo >>Makefile
-	echo 'demos: $(DEMOS)' >>Makefile
+	epatch "${FILESDIR}"/sgb-20030623-parallel-make-fix.patch
+	epatch "${FILESDIR}"/sgb-20030623-destdir.patch
 }
 
 src_compile() {
-	emake SGBDIR=/usr/share/${PN} \
+	emake \
+	CFLAGS="${CFLAGS}" \
+	SGBDIR=/usr/share/${PN} \
 	INCLUDEDIR=/usr/include/sgb \
-	LIBDIR=/usr/lib \
+	LIBDIR=/usr/$(get_libdir) \
 	BINDIR=/usr/bin \
-	CWEBINPUTS=/usr/share/${PN}/cweb \
-	CFLAGS="${CFLAGS}" tests lib demos
+	CFLAGS="${CFLAGS}" \
+	lib demos tests || die "Failed to build"
+	#CWEBINPUTS=/usr/share/${PN}/cweb \
+	#LDFLAGS="${LDFLAGS}" \
 }
 
 src_install() {
 	dodir /usr/share/${PN} /usr/include/sgb /usr/lib /usr/bin /usr/share/${PN}/cweb
-	emake SGBDIR="${D}"/usr/share/${PN} \
-	INCLUDEDIR="${D}"/usr/include/sgb \
-	LIBDIR="${D}"/usr/lib \
-	BINDIR="${D}"/usr/bin \
-	CWEBINPUTS="${D}"/usr/share/${PN}/cweb \
-	CFLAGS="${CFLAGS}" install installdata installdemos
+	emake \
+	DESTDIR="${D}" \
+	SGBDIR=/usr/share/${PN} \
+	INCLUDEDIR=/usr/include/sgb \
+	LIBDIR=/usr/$(get_libdir) \
+	BINDIR=/usr/bin \
+	CFLAGS="${CFLAGS}" \
+	LDFLAGS="${LDFLAGS}" \
+	CWEBINPUTS=/usr/share/${PN}/cweb \
+	install \
+	|| die "Failed to install"
+
 	# we don't need no makefile
 	rm "${D}"/usr/include/sgb/Makefile
 
 	dodoc ERRATA README
+}
 
+src_test() {
+	emake tests
 }
