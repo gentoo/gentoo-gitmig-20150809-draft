@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/qterm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.32 2009/03/20 13:49:50 hwoarang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/ChangeLog,v 1.33 2009/09/22 19:02:10 patrick Exp $
+
+  22 Sep 2009; Patrick Lauer <patrick@gentoo.org> qterm-0.5.2-r2.ebuild,
+  +files/qterm-0.5.2-include.patch:
+  Fixing compile failure, thanks to Ian Whyman. Closes #276185
 
   20 Mar 2009; Markos Chandras <hwoarang@gentoo.org> -qterm-0.5.2.ebuild,
   -qterm-0.5.2-r1.ebuild:

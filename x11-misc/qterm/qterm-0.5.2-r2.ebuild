@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.2-r2.ebuild,v 1.2 2009/01/21 22:19:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qterm/qterm-0.5.2-r2.ebuild,v 1.3 2009/09/22 19:02:10 patrick Exp $
 
 EAPI="1"
 inherit cmake-utils eutils
@@ -28,6 +28,9 @@ src_unpack() {
 	# bug #225117
 	epatch "${FILESDIR}/${P}-as-needed.patch"
 	sed -i -e '/^Exec/s/qterm/QTerm/' src/qterm.desktop.in || die
+	# bug 276185
+	epatch "${FILESDIR}/${P}-include.patch"
+
 
 	# fix the broken language files
 	lrelease src/po/qterm_ch*.ts || die
