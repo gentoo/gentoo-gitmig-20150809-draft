@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.8.ebuild,v 1.1 2009/03/12 05:17:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/gnugo-3.8.ebuild,v 1.2 2009/09/22 08:09:31 maekke Exp $
 
 EAPI=2
 inherit games
@@ -11,7 +11,7 @@ SRC_URI="http://match.stanford.edu/gnugo/archive/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha amd64 ~ppc x86"
 IUSE="readline"
 
 DEPEND="readline? ( sys-libs/readline >=sys-libs/ncurses-5.2-r3 )"
