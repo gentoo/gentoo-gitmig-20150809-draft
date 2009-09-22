@@ -1,6 +1,9 @@
 # ChangeLog for net-news/raggle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.13 2009/08/30 14:53:39 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/raggle/ChangeLog,v 1.14 2009/09/22 11:31:49 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> raggle-0.4.4-r1.ebuild:
+  x86 stable, bug #282075
 
   30 Aug 2009; Tobias Klausmann <klausman@gentoo.org>
   raggle-0.4.4-r1.ebuild:
