@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-wpactrl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.6 2009/08/30 15:57:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-wpactrl/ChangeLog,v 1.7 2009/09/22 13:46:20 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org>
+  python-wpactrl-20081102.ebuild:
+  x86 stable, bug #282382
 
   30 Aug 2009; nixnut <nixnut@gentoo.org> python-wpactrl-20081102.ebuild:
   ppc stable #282382
