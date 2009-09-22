@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10484 2009/09/21 18:30:56 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10485 2009/09/22 08:50:34 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -66,7 +66,9 @@ net-libs/libunicall
 =app-admin/perl-cleaner-2*
 
 # Rémi Cardona <remi@gentoo.org> (19 Sep 2009)
-# Old useless X packages, unmaintained
+# Outdated and useless X doc packages
+# Masked for removal in 30 days
+app-doc/opengl-manpages
 app-doc/xorg-sgml-doctools
 app-doc/xorg-docs
 
