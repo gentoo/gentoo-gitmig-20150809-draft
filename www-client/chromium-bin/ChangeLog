@@ -1,6 +1,15 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.28 2009/09/17 08:54:16 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.29 2009/09/22 12:04:33 voyageur Exp $
+
+*chromium-bin-4.0.212.0_p26800 (22 Sep 2009)
+
+  22 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.209.0_p26097.ebuild,
+  chromium-bin-4.0.210.0_p26326.ebuild,
+  +chromium-bin-4.0.212.0_p26800.ebuild, chromium-bin-9999.ebuild:
+  Version bump, also fix .desktop entry as reported by nightmorph in bug
+  #285922
 
   17 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
   chromium-bin-4.0.209.0_p26097.ebuild,
