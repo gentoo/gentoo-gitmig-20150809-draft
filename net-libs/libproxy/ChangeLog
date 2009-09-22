@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.18 2009/06/30 09:30:04 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.19 2009/09/22 02:05:36 fauli Exp $
+
+  22 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  libproxy-0.2.3-r2.ebuild:
+  stable x86, security bug 285370
 
   29 Jun 2009; Mart Raudsepp <leio@gentoo.org>
   -files/libproxy-0.2.3-fix-mozjs-cflags.patch:
