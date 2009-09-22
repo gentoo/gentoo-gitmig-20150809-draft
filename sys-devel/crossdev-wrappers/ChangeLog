@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/crossdev-wrappers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/ChangeLog,v 1.6 2009/06/16 20:47:20 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/ChangeLog,v 1.7 2009/09/22 20:37:18 solar Exp $
+
+*crossdev-wrappers-20090922 (22 Sep 2009)
+
+  22 Sep 2009; <solar@gentoo.org> -crossdev-wrappers-20081027.ebuild,
+  +crossdev-wrappers-20090922.ebuild:
+  - version bump. Make --root-deps=rdeps default. Can be overwrote via just
+  --root-deps
 
 *crossdev-wrappers-20090616 (16 Jun 2009)
 

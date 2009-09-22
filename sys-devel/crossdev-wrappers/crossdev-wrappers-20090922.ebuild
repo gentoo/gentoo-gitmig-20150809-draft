@@ -1,6 +1,6 @@
 # Copyright 2008-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-20081027.ebuild,v 1.3 2009/03/09 16:45:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev-wrappers/crossdev-wrappers-20090922.ebuild,v 1.1 2009/09/22 20:37:18 solar Exp $
 
 inherit toolchain-funcs eutils
 
