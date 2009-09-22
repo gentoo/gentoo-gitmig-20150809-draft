@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/jpgalleg-2.5.ebuild,v 1.1 2007/03/08 19:33:49 anant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/jpgalleg-2.5.ebuild,v 1.2 2009/09/22 14:13:42 maekke Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.ecplusplus.com/index.php?page=projects&pid=1"
 SRC_URI="http://www.ecplusplus.com/files/${PN}-${PV}.tar.gz"
 
 LICENSE="ZLIB"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 IUSE=""
 
