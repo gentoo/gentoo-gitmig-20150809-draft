@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.61 2009/09/20 10:56:26 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.62 2009/09/22 07:57:53 maekke Exp $
+
+  22 Sep 2009; Markus Meier <maekke@gentoo.org> openobex-1.5.ebuild:
+  arm stable, bug #274854
 
   20 Sep 2009; Alin Năstac <mrness@gentoo.org> openobex-1.5.ebuild,
   +files/openobex-1.5-use-flags.patch:
