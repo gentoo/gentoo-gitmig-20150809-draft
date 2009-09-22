@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jebl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jebl/ChangeLog,v 1.1 2009/09/21 00:35:25 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jebl/ChangeLog,v 1.2 2009/09/22 13:11:04 weaver Exp $
+
+*jebl-2009.09.22 (22 Sep 2009)
+
+  22 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +jebl-2009.09.22.ebuild:
+  Add snapshot required for sci-biology/beast-mcmc
 
 *jebl-9999 (20 Sep 2009)
 *jebl-0.5.3 (20 Sep 2009)
