@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.6.9_beta.ebuild,v 1.1 2009/03/06 19:37:17 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ziproxy-2.7.1.ebuild,v 1.1 2009/09/22 15:51:58 mrness Exp $
 
 EAPI="2"
 
@@ -8,11 +8,11 @@ inherit eutils
 
 DESCRIPTION="A forwarding, non-caching, compressing web proxy server"
 HOMEPAGE="http://ziproxy.sourceforge.net/"
-SRC_URI="mirror://sourceforge/${PN}/${P/beta/BETA}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="jpeg2k xinetd"
 
 DEPEND="media-libs/giflib
@@ -23,19 +23,15 @@ DEPEND="media-libs/giflib
 RDEPEND="${DEPEND}
 	xinetd? ( virtual/inetd )"
 
-S="${WORKDIR}/${P/beta/BETA}"
-
 pkg_setup() {
 	enewgroup ziproxy
 	enewuser ziproxy -1 -1 -1 ziproxy
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# fix sample config file
 	sed -i -e "s:/var/ziproxy/:/var/lib/ziproxy/:g" \
+		-e "s:%j-%Y.log:/var/log/ziproxy/%j-%Y.log:g" \
 		etc/ziproxy/ziproxy.conf
 
 	# fix sample xinetd config
@@ -45,7 +41,7 @@ src_unpack() {
 }
 
 src_configure() {
-	local myconf="--with-cfgfile=/etc/ziproxy/ziproxy.conf"  # --enable-testprogs
+	local myconf="--with-cfgfile=/etc/ziproxy/ziproxy.conf"
 	use jpeg2k && myconf="${myconf} --with-jasper"  # use_with doesn't work
 	econf ${myconf} || die "econf failed"
 }
@@ -56,7 +52,6 @@ src_install() {
 	dodir /usr/sbin
 	mv -f "${D}usr/bin/ziproxy" "${D}usr/sbin/ziproxy"
 
-	newbin stats.awk ${PN}_stats.awk
 	dobin src/tools/ziproxy_genhtml_stats.sh
 
 	newinitd "${FILESDIR}/${PN}.initd" ${PN}

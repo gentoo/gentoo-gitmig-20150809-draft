@@ -1,6 +1,12 @@
 # ChangeLog for net-proxy/ziproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.21 2009/05/09 09:02:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ziproxy/ChangeLog,v 1.22 2009/09/22 15:51:58 mrness Exp $
+
+*ziproxy-2.7.1 (22 Sep 2009)
+
+  22 Sep 2009; Alin Năstac <mrness@gentoo.org> -ziproxy-2.5.2.ebuild,
+  -ziproxy-2.6.9_beta.ebuild, +ziproxy-2.7.1.ebuild:
+  Version bump and ~ppc keyword addition (#285878).
 
 *ziproxy-2.7.0 (09 May 2009)
 
