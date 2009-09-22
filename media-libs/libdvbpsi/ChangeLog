@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libdvbpsi
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.34 2008/09/14 22:52:23 solar Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/ChangeLog,v 1.35 2009/09/22 01:42:49 fauli Exp $
+
+  22 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  libdvbpsi-0.1.6.ebuild:
+  stable x86, security bug 285370
 
   14 Sep 2008; <solar@gentoo.org> libdvbpsi-0.1.5.ebuild,
   libdvbpsi-0.1.6.ebuild:
