@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10487 2009/09/22 16:39:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10488 2009/09/22 18:32:14 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -544,11 +544,6 @@ dev-tinyos/tos-make
 dev-tinyos/tos-scripts
 dev-tinyos/tos-uisp
 dev-tinyos/tos-apps
-
-# Samuli Suominen <ssuominen@gentoo.org> (10 Aug 2009)
-# Mirror restricted and distfile isn't available anymore.
-# Bug 280879. Masked for removal.
-dev-lang/realbasic
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
 #  on behalf of QA team
