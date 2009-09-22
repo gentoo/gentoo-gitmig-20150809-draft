@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-chips
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.31 2009/04/15 15:52:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.32 2009/09/22 13:00:59 remi Exp $
+
+  22 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  -xf86-video-chips-1.1.1.ebuild, -xf86-video-chips-1.2.0.ebuild:
+  drop old ebuilds
 
   15 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   xf86-video-chips-1.2.1.ebuild:
