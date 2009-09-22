@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.9.8.ebuild,v 1.1 2009/08/14 09:32:30 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-2.9.8.ebuild,v 1.2 2009/09/22 04:22:20 aballier Exp $
 
 EAPI="1"
 inherit eutils wxwidgets flag-o-matic qt4 autotools
@@ -52,7 +52,7 @@ src_compile() {
 		$(use_with flac) \
 		$(use_enable qt4 qt) \
 		${myconf} \
-		|| die "./configure died"
+		--with-boost-regex=boost_regex
 
 	# Don't run strip while installing stuff, leave to portage the job.
 	emake STRIP="true" || die "make failed"
