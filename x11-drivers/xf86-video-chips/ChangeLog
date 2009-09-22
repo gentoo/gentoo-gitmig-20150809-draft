@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-chips
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.32 2009/09/22 13:00:59 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.33 2009/09/22 14:12:58 remi Exp $
+
+*xf86-video-chips-1.2.2 (22 Sep 2009)
+
+  22 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  xf86-video-chips-1.2.1.ebuild, +xf86-video-chips-1.2.2.ebuild:
+  bump to 1.2.2, add missing IUSE
 
   22 Sep 2009; Rémi Cardona <remi@gentoo.org>
   -xf86-video-chips-1.1.1.ebuild, -xf86-video-chips-1.2.0.ebuild:
