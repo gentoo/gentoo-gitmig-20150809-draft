@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-ast
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.7 2009/08/04 08:44:03 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-ast/ChangeLog,v 1.8 2009/09/22 12:44:31 remi Exp $
+
+  22 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  -xf86-video-ast-0.85.0.ebuild:
+  drop old ebuilds
 
 *xf86-video-ast-0.89.9 (04 Aug 2009)
 
