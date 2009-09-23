@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/webut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.6 2009/09/16 17:24:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/ChangeLog,v 1.7 2009/09/23 18:27:48 armin76 Exp $
+
+  23 Sep 2009; Raúl Porcel <armin76@gentoo.org> webut-0.1.0.2.ebuild:
+  alpha/ia64 stable wrt #284764
 
   16 Sep 2009; Christian Faulhammer <fauli@gentoo.org> webut-0.1.0.2.ebuild:
   stable x86, bug 284764
