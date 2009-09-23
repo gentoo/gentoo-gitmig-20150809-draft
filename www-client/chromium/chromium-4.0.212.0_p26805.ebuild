@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26805.ebuild,v 1.1 2009/09/22 15:46:22 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26805.ebuild,v 1.2 2009/09/23 12:46:03 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -48,6 +48,9 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
 	# Use system libevent, http://crbug.com/22208
 	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
+
+	# Display correct svn revision in about box
+	echo "${PV/[0-9.]*\_p}" > build/LASTCHANGE.in || die "setting revision failed"
 }
 
 src_configure() {
@@ -113,6 +116,8 @@ src_install() {
 	doins -r out/Release/locales
 	doins -r out/Release/resources
 	doins -r out/Release/themes
+
+	newman out/Release/chromium-browser.1 chrome.1
 
 	# Chromium looks for these in its folder
 	# See media_posix.cc and base_paths_linux.cc
