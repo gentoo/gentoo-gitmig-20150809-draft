@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.21.ebuild,v 1.5 2008/01/25 23:03:22 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/twoftpd/twoftpd-1.21.ebuild,v 1.6 2009/09/23 18:37:33 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,12 +13,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/libc
-		>=dev-libs/bglibs-1.026
-		>=net-libs/cvm-0.32"
+DEPEND=">=dev-libs/bglibs-1.026
+	>=net-libs/cvm-0.32"
 RDEPEND="sys-apps/ucspi-tcp
-		sys-process/daemontools
-		>=net-libs/cvm-0.32"
+	sys-process/daemontools
+	>=net-libs/cvm-0.32"
 
 src_compile() {
 	echo "/usr/sbin" > conf-bin
