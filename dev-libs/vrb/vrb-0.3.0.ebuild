@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.14 2009/08/06 02:11:05 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vrb/vrb-0.3.0.ebuild,v 1.15 2009/09/23 16:55:26 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
