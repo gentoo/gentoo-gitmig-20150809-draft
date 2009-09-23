@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.5 2008/01/25 21:10:17 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailfront/mailfront-0.98.ebuild,v 1.6 2009/09/23 19:07:41 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,16 +13,14 @@ SLOT="0"
 KEYWORDS="~ppc ~sparc x86"
 IUSE=""
 
-DEPEND="
-	virtual/libc
-	>=dev-libs/bglibs-1.022
+DEPEND=">=dev-libs/bglibs-1.022
 	>=net-libs/cvm-0.71
-"
+	"
 RDEPEND="
 	${DEPEND}
 	virtual/qmail
 	net-libs/cvm
-"
+	"
 
 src_compile() {
 	echo "/usr/include/bglibs/" > conf-bgincs

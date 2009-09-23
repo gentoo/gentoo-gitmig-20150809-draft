@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/email
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.26 2009/03/20 17:09:40 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/email/ChangeLog,v 1.27 2009/09/23 19:05:51 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> email-2.5.0.ebuild,
+  email-3.0.5.ebuild, email-3.1.2.ebuild:
+  Remove virtual/libc
 
   20 Mar 2009; Ioannis Aslanidis <iaslanidis@gentoo.org> email-3.0.5.ebuild:
   Filtered out --as-needed LDFLAG from this version as the latest one fixes it

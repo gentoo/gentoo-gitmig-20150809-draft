@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.13 2009/07/07 12:26:30 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/qmail-autoresponder-0.96.2.ebuild,v 1.14 2009/09/23 19:09:37 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,9 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86"
 IUSE="mysql"
 
-DEPEND="virtual/libc
-		>=dev-libs/bglibs-1.019-r1
-		mysql? ( virtual/mysql )"
+DEPEND=">=dev-libs/bglibs-1.019-r1
+	mysql? ( virtual/mysql )"
 RDEPEND="
 	${DEPEND}
 	virtual/qmail

@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.12 2005/05/01 18:05:38 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/safecat/safecat-1.11.ebuild,v 1.13 2009/09/23 19:12:45 patrick Exp $
 
 inherit fixheadtails eutils toolchain-funcs
 
@@ -10,10 +10,9 @@ DESCRIPTION="Safecat implements qmail's maildir algorithm, copying standard inpu
 HOMEPAGE="http://budney.homeunix.net:8080/users/budney/linux/software/safecat/"
 SRC_URI="http://budney.homeunix.net:8080/users/budney/linux/software/${PN}/${P}.tar.gz"
 
-DEPEND="virtual/libc
-	sys-apps/groff"
+DEPEND="sys-apps/groff"
+RDEPEND=""
 
-RDEPEND="virtual/libc"
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ~sparc x86"

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/isync
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.11 2008/02/23 12:26:27 ticho Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/ChangeLog,v 1.12 2009/09/23 19:06:55 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> isync-1.0.2.ebuild,
+  isync-1.0.3.ebuild, isync-1.0.4.ebuild:
+  Remove virtual/libc
 
 *isync-1.0.4 (23 Feb 2008)
 

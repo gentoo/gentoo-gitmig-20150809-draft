@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.9 2008/03/15 23:20:08 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vimap/vimap-2002c-r3.ebuild,v 1.10 2009/09/23 19:15:26 patrick Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,7 +24,6 @@ RDEPEND=">=net-mail/mailbase-0.00-r8"
 DEPEND="
 	${RDEPEND}
 	!virtual/imap-c-client
-	virtual/libc
 	>=sys-libs/pam-0.72
 	ssl? ( dev-libs/openssl )"
 

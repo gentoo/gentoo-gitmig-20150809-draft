@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/vm-pop3d
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.18 2007/04/22 09:15:56 ticho Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.19 2009/09/23 19:15:49 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> vm-pop3d-1.1.6-r1.ebuild,
+  vm-pop3d-1.1.6-r2.ebuild:
+  Remove virtual/libc
 
   22 Apr 2007; Andrej Kacian <ticho@gentoo.org> vm-pop3d-1.1.6-r1.ebuild:
   Use newinitd and newconfd. Bug #174266.

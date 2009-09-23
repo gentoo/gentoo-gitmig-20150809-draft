@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.4.ebuild,v 1.1 2008/02/23 12:26:27 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/isync/isync-1.0.4.ebuild,v 1.2 2009/09/23 19:06:55 patrick Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="ssl"
 
-DEPEND="virtual/libc
-	>=sys-libs/db-4.2
+DEPEND=">=sys-libs/db-4.2
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_compile () {

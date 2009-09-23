@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/dot-forward
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.25 2008/04/06 17:08:19 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/ChangeLog,v 1.26 2009/09/23 19:05:29 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  dot-forward-0.71-r2.ebuild:
+  Remove virtual/libc
 
 *dot-forward-0.71-r3 (06 Apr 2008)
 

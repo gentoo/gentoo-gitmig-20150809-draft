@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.10 2007/06/26 02:30:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mess822/mess822-0.58-r1.ebuild,v 1.11 2009/09/23 19:08:27 patrick Exp $
 
 inherit multilib
 
@@ -13,8 +13,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE=""
 LICENSE="as-is"
 
-DEPEND="virtual/libc
-		>=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}

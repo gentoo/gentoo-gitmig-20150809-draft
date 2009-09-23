@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r2.ebuild,v 1.9 2006/10/21 19:45:47 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r2.ebuild,v 1.10 2009/09/23 19:05:29 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -16,7 +16,7 @@ IUSE=""
 # See bug 97850
 RESTRICT="test"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${P}.tar.gz

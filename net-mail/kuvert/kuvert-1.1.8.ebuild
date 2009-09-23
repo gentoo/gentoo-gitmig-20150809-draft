@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.5 2005/01/03 22:55:04 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.6 2009/09/23 19:07:18 patrick Exp $
 
 inherit eutils
 
@@ -22,8 +22,7 @@ DEPEND=">=app-crypt/gnupg-1.0.6
 	dev-perl/MIME-tools
 	dev-perl/TermReadKey
 	dev-lang/perl
-	virtual/mta
-	virtual/libc"
+	virtual/mta"
 
 src_unpack() {
 	unpack ${A}

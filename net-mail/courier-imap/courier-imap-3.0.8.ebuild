@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.28 2008/07/16 16:19:48 chtekk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.29 2009/09/23 19:05:02 patrick Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ IUSE="fam berkdb gdbm debug ipv6 ldap mysql nls pam postgres selinux"
 #userpriv breaks linking against vpopmail
 RESTRICT="userpriv"
 
-RDEPEND="virtual/libc
-	>=dev-libs/openssl-0.9.6
+RDEPEND=">=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
 	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )

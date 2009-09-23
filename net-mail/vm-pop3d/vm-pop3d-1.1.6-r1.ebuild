@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6-r1.ebuild,v 1.5 2007/04/22 09:15:56 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6-r1.ebuild,v 1.6 2009/09/23 19:15:49 patrick Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc"
 IUSE="pam debug"
 
-DEPEND="virtual/libc
-	pam? (
+DEPEND="pam? (
 		sys-libs/pam
 		>=net-mail/mailbase-0.00-r8
 	)"
