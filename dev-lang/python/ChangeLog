@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.417 2009/09/23 13:42:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.418 2009/09/23 15:29:49 arfrever Exp $
+
+  23 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  python-2.4.6.ebuild, python-2.5.4-r3.ebuild, python-2.6.2-r2.ebuild:
+  Fix handling of USE="-berkdb".
 
   23 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   python-2.4.6.ebuild, python-2.5.4-r3.ebuild, python-2.6.2-r2.ebuild,
