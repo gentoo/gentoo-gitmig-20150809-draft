@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.4.6.ebuild,v 1.1 2008/07/23 15:47:28 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/zabbix-1.4.6.ebuild,v 1.2 2009/09/23 18:26:56 patrick Exp $
 
 inherit eutils flag-o-matic webapp depend.php
 
@@ -12,8 +12,7 @@ SLOT="0"
 WEBAPP_MANUAL_SLOT="yes"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="agent curl frontend jabber ldap mysql oracle postgres server snmp sqlite3"
-DEPEND="virtual/libc
-	snmp? ( net-analyzer/net-snmp )
+DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? (
 		net-nds/openldap
 		=dev-libs/cyrus-sasl-2*

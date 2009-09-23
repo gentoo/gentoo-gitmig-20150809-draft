@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/barnyard
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.21 2009/03/01 19:35:21 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/ChangeLog,v 1.22 2009/09/23 18:17:22 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> barnyard-0.2.0-r1.ebuild:
+  Remove virtual/libc
 
   01 Mar 2009; Patrick Lauer <patrick@gentoo.org> barnyard-0.2.0-r2.ebuild:
   Adding ~amd64 keyword

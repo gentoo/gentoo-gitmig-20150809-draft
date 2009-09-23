@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.10-r1.ebuild,v 1.7 2009/07/31 22:27:30 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute-nanog/traceroute-nanog-6.3.10-r1.ebuild,v 1.8 2009/09/23 18:24:47 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S="${S}.orig"
 

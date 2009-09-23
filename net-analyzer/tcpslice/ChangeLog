@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/tcpslice
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.16 2007/09/06 18:39:12 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.17 2009/09/23 18:24:24 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  tcpslice-1.2_alpha2.ebuild:
+  Remove virtual/libc
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org>
   -tcpslice-1.1_alpha3.ebuild:

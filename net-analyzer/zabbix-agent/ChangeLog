@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/zabbix-agent
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.11 2007/04/28 17:41:46 swegener Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-agent/ChangeLog,v 1.12 2009/09/23 18:26:02 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> zabbix-agent-1.1.ebuild,
+  zabbix-agent-1.1-r1.ebuild, zabbix-agent-1.1.6.ebuild,
+  zabbix-agent-1.1.7.ebuild:
+  Remove virtual/libc
 
   28 Apr 2007; Sven Wegener <swegener@gentoo.org> zabbix-agent-1.0.ebuild,
   zabbix-agent-1.1_alpha7.ebuild:

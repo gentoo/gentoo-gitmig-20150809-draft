@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/portmon
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.13 2007/09/06 17:49:16 jokey Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portmon/ChangeLog,v 1.14 2009/09/23 18:23:33 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> portmon-2.0.ebuild:
+  Remove virtual/libc
 
   06 Sep 2007; Markus Ullmann <jokey@gentoo.org> -portmon-1.9.ebuild:
   Cleanup

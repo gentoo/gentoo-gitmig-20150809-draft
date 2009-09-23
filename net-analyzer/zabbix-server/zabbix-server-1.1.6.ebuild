@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.7 2008/05/19 20:15:37 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix-server/zabbix-server-1.1.6.ebuild,v 1.8 2009/09/23 18:26:29 patrick Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="ldap mysql oracle postgres snmp"
-DEPEND="virtual/libc
-	snmp? ( net-analyzer/net-snmp )
+DEPEND="snmp? ( net-analyzer/net-snmp )
 	ldap? ( net-nds/openldap )
 	mysql? ( virtual/mysql )
 	postgres? ( virtual/postgresql-base )"

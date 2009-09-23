@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.11 2009/09/01 13:38:46 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.12 2009/09/23 18:26:56 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> zabbix-1.4.6.ebuild,
+  zabbix-1.6.5.ebuild:
+  Remove virtual/libc
 
 *zabbix-1.6.5 (01 Sep 2009)
 

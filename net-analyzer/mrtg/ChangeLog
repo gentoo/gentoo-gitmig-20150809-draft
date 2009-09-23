@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/mrtg
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.97 2008/08/23 17:42:59 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.98 2009/09/23 18:21:16 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mrtg-2.15.2.ebuild,
+  mrtg-2.16.1.ebuild, mrtg-2.16.2.ebuild:
+  Remove virtual/libc
 
   23 Aug 2008; Markus Meier <maekke@gentoo.org> mrtg-2.16.2.ebuild:
   amd64 stable, bug #234733

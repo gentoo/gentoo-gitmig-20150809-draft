@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.2.ebuild,v 1.6 2008/08/23 17:42:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.16.2.ebuild,v 1.7 2009/09/23 18:21:16 patrick Exp $
 
 DESCRIPTION="A tool to monitor the traffic load on network-links"
 HOMEPAGE="http://oss.oetiker.ch/mrtg/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	dev-lang/perl
+DEPEND="dev-lang/perl
 	>=media-libs/gd-1.8.4"
 
 src_install () {
