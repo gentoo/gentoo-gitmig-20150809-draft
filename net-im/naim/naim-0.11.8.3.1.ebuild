@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.3.1.ebuild,v 1.4 2009/09/23 08:32:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.3.1.ebuild,v 1.5 2009/09/23 08:42:06 ssuominen Exp $
 
 EAPI=2
 
@@ -18,6 +18,8 @@ RESTRICT="test"
 DEPEND=">=sys-libs/ncurses-5.2
 	screen? ( app-misc/screen )"
 RDEPEND="${DEPEND}"
+
+MAKEOPTS="${MAKEOPTS} -j1"
 
 src_prepare() {
 	# Alter makefile so firetalk-int.h is installed
