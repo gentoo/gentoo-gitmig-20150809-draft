@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/as11-1.0.ebuild,v 1.7 2009/08/04 21:39:45 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/as11/as11-1.0.ebuild,v 1.8 2009/09/23 17:40:06 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -15,7 +15,7 @@ IUSE=""
 
 S=${WORKDIR}/${PN}
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND=""
 
 src_compile() {

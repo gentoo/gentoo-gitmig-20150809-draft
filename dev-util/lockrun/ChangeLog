@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/lockrun
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/ChangeLog,v 1.5 2009/04/11 09:41:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/ChangeLog,v 1.6 2009/09/23 17:46:25 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> lockrun-2.ebuild:
+  Remove virtual/libc
 
   11 Apr 2009; Benedikt Böhm <hollow@gentoo.org> lockrun-2.ebuild:
   stable on x86 wrt #265452

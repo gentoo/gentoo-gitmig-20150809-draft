@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ald/ald-0.1.7.ebuild,v 1.3 2007/07/12 01:05:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ald/ald-0.1.7.ebuild,v 1.4 2009/09/23 17:39:22 patrick Exp $
 
 DESCRIPTION="Assembly Language Debugger - a tool for debugging executable programs at the assembly level"
 HOMEPAGE="http://ald.sourceforge.net/"
@@ -10,8 +10,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="ncurses"
 DEPEND="ncurses? ( sys-libs/ncurses )"
-RDEPEND="virtual/libc
-	ncurses? ( sys-libs/ncurses )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf $(use_enable ncurses curses) || die

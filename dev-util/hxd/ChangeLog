@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/hxd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.10 2009/08/23 04:31:47 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/hxd/ChangeLog,v 1.11 2009/09/23 17:45:18 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> hxd-0.70.ebuild,
+  hxd-0.70.02.ebuild:
+  Remove virtual/libc
 
 *hxd-0.70.02 (23 Aug 2009)
 

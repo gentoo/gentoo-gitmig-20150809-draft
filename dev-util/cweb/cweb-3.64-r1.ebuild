@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64-r1.ebuild,v 1.1 2009/09/01 17:50:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.64-r1.ebuild,v 1.2 2009/09/23 17:43:43 patrick Exp $
 
 EAPI="2"
 
@@ -16,8 +16,7 @@ LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	!app-text/tetex
+DEPEND="!app-text/tetex
 	!app-text/texlive-core
 	!app-text/ptex"
 

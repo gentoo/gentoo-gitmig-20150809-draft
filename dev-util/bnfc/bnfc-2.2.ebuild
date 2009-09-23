@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.2.ebuild,v 1.6 2009/08/01 12:56:44 kolmodin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bnfc/bnfc-2.2.ebuild,v 1.7 2009/09/23 17:40:59 patrick Exp $
 
 inherit base ghc-package eutils
 
@@ -18,7 +18,7 @@ IUSE="doc"
 DEPEND=">=dev-lang/ghc-6.2
 	doc? ( virtual/latex-base )"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 S="${WORKDIR}/${MY_PN}_${PV}"
 

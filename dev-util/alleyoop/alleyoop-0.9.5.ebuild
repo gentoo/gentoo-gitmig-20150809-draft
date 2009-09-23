@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.5.ebuild,v 1.1 2009/04/25 20:05:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/alleyoop/alleyoop-0.9.5.ebuild,v 1.2 2009/09/23 17:39:45 patrick Exp $
 
 inherit gnome2 eutils
 
@@ -18,8 +18,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libglade-2.2
 	sys-devel/binutils
-	>=dev-util/valgrind-2.4
-	virtual/libc"
+	>=dev-util/valgrind-2.4"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

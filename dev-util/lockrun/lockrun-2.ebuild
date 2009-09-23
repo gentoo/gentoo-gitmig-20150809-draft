@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/lockrun-2.ebuild,v 1.5 2009/04/11 09:41:12 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/lockrun/lockrun-2.ebuild,v 1.6 2009/09/23 17:46:25 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE=""
 
 RESTRICT="test"
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}"

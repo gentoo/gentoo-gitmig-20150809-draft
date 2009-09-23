@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.8.ebuild,v 1.2 2008/06/05 03:04:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.5.8.ebuild,v 1.3 2009/09/23 17:44:31 patrick Exp $
 
 inherit eutils toolchain-funcs versionator
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="examples"
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}
 	app-shells/bash"
 

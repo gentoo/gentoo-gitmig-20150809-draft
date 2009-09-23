@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.4 2008/06/05 03:04:58 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/duma/duma-2.4.27.ebuild,v 1.5 2009/09/23 17:44:31 patrick Exp $
 
 inherit eutils versionator multilib toolchain-funcs
 # flag-o-matic
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="${DEPEND}
 	app-shells/bash"
 
