@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.1.ebuild,v 1.6 2009/08/22 23:01:50 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.1.ebuild,v 1.7 2009/09/23 15:06:09 patrick Exp $
 
 inherit pax-utils
 
@@ -13,8 +13,7 @@ SRC_URI="http://download.bitdefender.com/unices/old/linux/free/bitdefender-conso
 
 DEPEND="app-arch/tar
 	app-arch/gzip"
-RDEPEND="virtual/libc
-	amd64? (
+RDEPEND="amd64? (
 		>=app-emulation/emul-linux-x86-baselibs-1.0
 		app-emulation/emul-linux-x86-compat )
 	x86? ( ~virtual/libstdc++-3.3 )"
