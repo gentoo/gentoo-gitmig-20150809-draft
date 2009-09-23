@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1-r2.ebuild,v 1.4 2009/05/16 09:24:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/logitech-applet/logitech-applet-0.4_pre1-r2.ebuild,v 1.5 2009/09/23 16:04:45 patrick Exp $
 
 inherit eutils
 
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	=virtual/libusb-0*"
+DEPEND="=virtual/libusb-0*"
 
 S="${WORKDIR}/${MY_P}"
 

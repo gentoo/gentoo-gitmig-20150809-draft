@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.2.0.ebuild,v 1.8 2007/01/28 05:08:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/digitemp-3.2.0.ebuild,v 1.9 2009/09/23 16:01:58 patrick Exp $
 
 DESCRIPTION="Temperature logging and reporting using Dallas Semiconductor's iButtons and 1-Wire protocol"
 HOMEPAGE="http://www.digitemp.com http://www.ibutton.com"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	# default is to compile to the ds9097u. local use flag takes care of

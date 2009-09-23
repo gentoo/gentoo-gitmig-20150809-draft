@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/countrycodes
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.19 2008/03/26 18:41:28 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/countrycodes/ChangeLog,v 1.20 2009/09/23 16:00:20 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> countrycodes-1.0.5.ebuild:
+  Remove virtual/libc
 
   26 Mar 2008; Raúl Porcel <armin76@gentoo.org> countrycodes-1.0.5.ebuild:
   Add ~ia64

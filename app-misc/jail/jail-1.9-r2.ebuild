@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.9 2008/12/30 20:05:20 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r2.ebuild,v 1.10 2009/09/23 16:03:58 patrick Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
+DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-lang/perl
 	dev-util/strace"
 

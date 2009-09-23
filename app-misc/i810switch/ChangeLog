@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/i810switch
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.19 2008/11/09 14:20:07 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/i810switch/ChangeLog,v 1.20 2009/09/23 16:03:09 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> i810switch-0.6.5.ebuild:
+  Remove virtual/libc
 
   09 Nov 2008; Markus Meier <maekke@gentoo.org> i810switch-0.6.5-r2.ebuild:
   x86 stable, bug #244372

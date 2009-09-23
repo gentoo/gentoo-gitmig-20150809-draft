@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/digitemp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.15 2008/07/31 16:06:03 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/digitemp/ChangeLog,v 1.16 2009/09/23 16:01:58 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> digitemp-3.2.0.ebuild:
+  Remove virtual/libc
 
   31 Jul 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
