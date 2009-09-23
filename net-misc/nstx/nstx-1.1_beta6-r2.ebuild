@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.4 2008/08/23 17:52:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nstx/nstx-1.1_beta6-r2.ebuild,v 1.5 2009/09/23 19:42:03 patrick Exp $
 
 inherit versionator toolchain-funcs eutils
 
@@ -13,7 +13,7 @@ DESCRIPTION="IP over DNS tunnel"
 SRC_URI="http://dereference.de/nstx/${MY_P}.tgz
 		mirror://debian/pool/main/${PN:0:1}/${PN}/${DEBIAN_A}"
 HOMEPAGE="http://dereference.de/nstx/"
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="virtual/os-headers
 		${RDEPEND}"
 KEYWORDS="~amd64 x86"

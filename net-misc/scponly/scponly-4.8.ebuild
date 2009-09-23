@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8.ebuild,v 1.5 2008/01/22 10:18:21 welp Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8.ebuild,v 1.6 2009/09/23 19:44:01 patrick Exp $
 
 inherit eutils multilib
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 ~mips ppc sparc x86"
 IUSE="rsync subversion"
 
-DEPEND="virtual/libc
-	net-misc/openssh
+DEPEND="net-misc/openssh
 	rsync? ( net-misc/rsync )
 	subversion? ( dev-util/subversion )"
 

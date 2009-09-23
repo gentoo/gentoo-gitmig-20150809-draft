@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.12 2008/07/07 01:33:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/vconfig-1.9.ebuild,v 1.13 2009/09/23 19:47:33 patrick Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,8 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm hppa ~ppc ~ppc64 sparc x86"
 IUSE="static"
-#DEPEND="virtual/libc virtual/os-headers"
-#RDEPEND="!static? ( virtual/libc )"
 
 src_compile() {
 	use static && appened-ldflags -static

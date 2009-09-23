@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/tiers
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.12 2009/02/15 21:46:04 loki_val Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tiers/ChangeLog,v 1.13 2009/09/23 19:46:16 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> tiers-1.1.ebuild:
+  Remove virtual/libc
 
   15 Feb 2009; Peter Alfredsen <loki_val@gentoo.org>
   +files/tiers-1.1-gcc43.patch, tiers-1.1.ebuild:

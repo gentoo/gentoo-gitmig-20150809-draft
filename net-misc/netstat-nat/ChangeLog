@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netstat-nat
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.31 2008/02/28 16:50:16 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netstat-nat/ChangeLog,v 1.32 2009/09/23 19:41:41 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> netstat-nat-1.4.7.ebuild:
+  Remove virtual/libc
 
   28 Feb 2008; Ferris McCormick <fmccor@gentoo.org>
   netstat-nat-1.4.9.ebuild:

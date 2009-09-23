@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r3.ebuild,v 1.7 2009/04/12 20:48:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0-r3.ebuild,v 1.8 2009/09/23 19:37:48 patrick Exp $
 
 inherit toolchain-funcs eutils
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="sys-devel/gcc
 		>=sys-kernel/linux-headers-2.4.22
 		${RDEPEND}"

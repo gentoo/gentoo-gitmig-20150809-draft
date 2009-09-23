@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/valve/valve-1.0.ebuild,v 1.2 2006/09/30 01:31:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/valve/valve-1.0.ebuild,v 1.3 2009/09/23 19:47:04 patrick Exp $
 
 DESCRIPTION="copies data while enforcing a specified maximum transfer rate"
 HOMEPAGE="http://www.fourmilab.ch/webtools/valve/"
@@ -10,7 +10,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	econf || die "econf failed"

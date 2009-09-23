@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netkit-rusers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.5 2008/10/29 11:09:24 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rusers/ChangeLog,v 1.6 2009/09/23 19:40:07 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> netkit-rusers-0.17.ebuild:
+  Remove virtual/libc
 
   29 Oct 2008; Diego Pettenò <flameeyes@gentoo.org>
   netkit-rusers-0.17.ebuild:

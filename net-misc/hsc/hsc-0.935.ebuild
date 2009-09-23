@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.935.ebuild,v 1.4 2005/09/22 10:11:32 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hsc/hsc-0.935.ebuild,v 1.5 2009/09/23 19:37:23 patrick Exp $
 
 DESCRIPTION="An HTML preprocessor using ML syntax"
 HOMEPAGE="http://www.linguistik.uni-erlangen.de/~msbethke/software.html"
@@ -12,7 +12,7 @@ KEYWORDS="x86 ~ppc ~amd64"
 
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	make || die

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.51.ebuild,v 1.6 2007/11/04 19:45:58 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.51.ebuild,v 1.7 2009/09/23 19:38:57 patrick Exp $
 
 inherit fixheadtails
 
@@ -14,7 +14,7 @@ KEYWORDS="amd64 hppa ppc sparc x86"
 
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.1.ebuild,v 1.9 2008/01/25 20:20:21 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.1.ebuild,v 1.10 2009/09/23 19:37:00 patrick Exp $
 
 IUSE=""
 DESCRIPTION="High Level Firewall Language"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 KEYWORDS="~ppc sparc x86"
 SLOT="0"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	sed -i -e 's:${datadir}/hlfl:${datadir}:' configure

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/scponly
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.44 2009/08/28 21:29:35 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/ChangeLog,v 1.45 2009/09/23 19:44:01 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> scponly-4.8.ebuild,
+  scponly-4.8-r3.ebuild:
+  Remove virtual/libc
 
   28 Aug 2009; Petteri Räty <betelgeuse@gentoo.org> -scponly-4.8-r1.ebuild,
   -scponly-4.8-r2.ebuild:

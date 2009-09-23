@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.6.ebuild,v 1.1 2009/09/04 11:51:31 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.6.1.6.ebuild,v 1.2 2009/09/23 19:33:31 patrick Exp $
 
 EAPI=1
 inherit eutils autotools
@@ -16,8 +16,7 @@ KEYWORDS="~amd64 ~x86"
 
 IUSE="alsa +caps curl dahdi debug freetds h323 iconv imap jabber ldap keepsrc misdn newt nosamples odbc oss postgres radius snmp span speex ssl sqlite static vorbis"
 
-RDEPEND="virtual/libc
-	sys-libs/ncurses
+RDEPEND="sys-libs/ncurses
 	dev-libs/popt
 	sys-libs/zlib
 	alsa? ( media-libs/alsa-lib )

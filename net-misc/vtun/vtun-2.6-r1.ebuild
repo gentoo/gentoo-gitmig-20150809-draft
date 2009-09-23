@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.6 2007/07/05 17:22:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/vtun-2.6-r1.ebuild,v 1.7 2009/09/23 19:48:27 patrick Exp $
 
 inherit eutils
 
@@ -16,14 +16,12 @@ SLOT="0"
 
 # NOTE: you also need the tun/tap driver compiled into your kernel
 #		to do tun/tap tunneling
-DEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.3
+DEPEND=">=sys-libs/zlib-1.1.3
 	>=dev-libs/lzo-2
 	sys-devel/bison
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
-RDEPEND="virtual/libc
-	>=sys-libs/zlib-1.1.3
+RDEPEND=">=sys-libs/zlib-1.1.3
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
 src_unpack() {

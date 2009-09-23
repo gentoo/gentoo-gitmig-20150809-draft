@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.3.ebuild,v 1.1 2007/09/20 19:01:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bopm/bopm-3.1.3.ebuild,v 1.2 2009/09/23 19:34:42 patrick Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="~alpha ~ppc ~x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-apps/sed"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/pipes-1.16.ebuild,v 1.6 2004/09/03 14:01:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/pipes-1.16.ebuild,v 1.7 2009/09/23 19:42:48 patrick Exp $
 
 DESCRIPTION="Very versatile TCP pipes"
 HOMEPAGE="http://bisqwit.iki.fi/source/pipes.html"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 s390 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

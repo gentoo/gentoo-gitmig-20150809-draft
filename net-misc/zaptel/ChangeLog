@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.118 2009/07/28 14:52:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.119 2009/09/23 19:50:10 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> zaptel-1.2.18.ebuild,
+  zaptel-1.2.18-r1.ebuild, zaptel-1.2.24.ebuild, zaptel-1.2.26-r1.ebuild,
+  zaptel-1.2.27-r1.ebuild:
+  Remove virtual/libc
 
   28 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   zaptel-1.2.27-r1.ebuild:

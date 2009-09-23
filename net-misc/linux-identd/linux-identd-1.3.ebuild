@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3.ebuild,v 1.12 2006/09/08 18:06:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/linux-identd-1.3.ebuild,v 1.13 2009/09/23 19:39:45 patrick Exp $
 
 IUSE="xinetd"
 DESCRIPTION="A real IDENT daemon for linux."
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha ~hppa ~mips ia64 ~amd64"
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="xinetd? ( sys-apps/xinetd )"
 
 src_compile() {

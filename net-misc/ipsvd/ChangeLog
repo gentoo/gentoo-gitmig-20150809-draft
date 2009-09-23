@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ipsvd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.5 2009/01/27 20:23:46 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsvd/ChangeLog,v 1.6 2009/09/23 19:38:32 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ipsvd-0.13.0.ebuild,
+  ipsvd-1.0.0.ebuild:
+  Remove virtual/libc
 
 *ipsvd-1.0.0 (27 Jan 2009)
 

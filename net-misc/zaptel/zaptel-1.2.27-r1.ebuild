@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27-r1.ebuild,v 1.3 2009/07/28 14:52:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/zaptel-1.2.27-r1.ebuild,v 1.4 2009/09/23 19:50:10 patrick Exp $
 
 inherit toolchain-funcs eutils linux-mod flag-o-matic multilib
 
@@ -27,8 +27,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="amd64 ~ppc x86"
 
-RDEPEND="virtual/libc
-	dev-libs/libusb
+RDEPEND="dev-libs/libusb
 	>=dev-libs/newt-0.50.0
 	astribank? ( dev-lang/perl )"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r3.ebuild,v 1.1 2009/06/07 23:42:50 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/scponly/scponly-4.8-r3.ebuild,v 1.2 2009/09/23 19:44:01 patrick Exp $
 
 EAPI="1"
 inherit eutils multilib toolchain-funcs
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~mips ~ppc ~sparc ~x86"
 IUSE="+sftp scp winscp gftp rsync unison subversion wildcards quota passwd logging"
 
-RDEPEND="virtual/libc
-	sys-apps/sed
+RDEPEND="sys-apps/sed
 	net-misc/openssh
 	quota? ( sys-fs/quota )
 	!mips? ( passwd? ( sys-apps/shadow ) )

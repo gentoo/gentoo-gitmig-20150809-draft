@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/puf/puf-0.93.2a.ebuild,v 1.3 2004/07/01 21:45:49 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/puf/puf-0.93.2a.ebuild,v 1.4 2009/09/23 19:43:10 patrick Exp $
 
 DESCRIPTION="A download tool for UNIX-like systems."
 SRC_URI="mirror://sourceforge/puf/${P}.tar.gz"
 HOMEPAGE="http://puf.sourceforge.net/"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 IUSE=""
 SLOT="0"

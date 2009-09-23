@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/adjtimex
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.21 2008/09/14 05:03:58 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/adjtimex/ChangeLog,v 1.22 2009/09/23 19:32:56 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> adjtimex-1.16.ebuild,
+  adjtimex-1.16-r1.ebuild, adjtimex-1.20.ebuild, adjtimex-1.20-r1.ebuild,
+  adjtimex-1.20-r2.ebuild:
+  Remove virtual/libc
 
   14 Sep 2008; Robin H. Johnson <robbat2@gentoo.org> files/adjtimex.init:
   adjtimex init should run before ntp starts up, so that the tick/freq is
