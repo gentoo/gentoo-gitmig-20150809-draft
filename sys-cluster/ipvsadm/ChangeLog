@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/ipvsadm
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.37 2008/03/01 18:31:44 angelos Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ChangeLog,v 1.38 2009/09/23 20:40:53 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ipvsadm-1.21-r1.ebuild:
+  Remove virtual/libc
 
   01 Mar 2008; Christoph Mende <angelos@gentoo.org> ipvsadm-1.24.ebuild:
   Stable on amd64

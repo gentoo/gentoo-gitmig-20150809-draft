@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4.ebuild,v 1.12 2008/03/11 14:34:41 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-7.0.4.ebuild,v 1.13 2009/09/23 20:41:24 patrick Exp $
 
 IUSE="crypt"
 
@@ -11,7 +11,7 @@ DESCRIPTION="the LAM MPI parallel computing environment"
 SRC_URI="http://www.lam-mpi.org/download/files/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.lam-mpi.org"
 
-DEPEND="virtual/libc"
+DEPEND=""
 # we need ssh if we want to use it instead of rsh
 RDEPEND="${DEPEND}
 	crypt? ( net-misc/openssh )

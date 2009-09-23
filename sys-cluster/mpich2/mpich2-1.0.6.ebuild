@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.7 2008/09/03 07:33:41 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/mpich2-1.0.6.ebuild,v 1.8 2009/09/23 20:42:10 patrick Exp $
 
 WANT_AUTOCONF="2.5"
 inherit autotools distutils eutils flag-o-matic fortran java-pkg-2
@@ -19,8 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="crypt cxx debug doc fast fortran mpe mpe-sdk pvfs2 threads"
 
-DEPEND="virtual/libc
-	sys-devel/libtool
+DEPEND="sys-devel/libtool
 	dev-lang/perl
 	>=dev-lang/python-2.3
 	>=dev-libs/libaio-0.3.106

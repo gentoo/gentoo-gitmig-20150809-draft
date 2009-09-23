@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.6 2006/04/15 16:00:05 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/feedbackd-master/feedbackd-master-0.4.ebuild,v 1.7 2009/09/23 20:40:27 patrick Exp $
 
 inherit eutils
 
@@ -9,8 +9,7 @@ dynamic feedback of server health."
 
 HOMEPAGE="http://ozlabs.org/~jk/projects/feedbackd/"
 LICENSE="GPL-2"
-DEPEND="virtual/libc
-	dev-libs/libxml2
+DEPEND="dev-libs/libxml2
 	>=sys-cluster/ipvsadm-1.24
 	dev-lang/perl"
 
