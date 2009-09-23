@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-4.0.0.0.ebuild,v 1.1 2009/09/18 21:39:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/nero-4.0.0.0.ebuild,v 1.2 2009/09/23 12:39:27 ssuominen Exp $
 
 EAPI=2
 inherit eutils fdo-mime rpm multilib gnome2-utils linux-mod
@@ -67,6 +67,7 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
 	gnome2_icon_cache_update
+	nero --perform-post-installation
 
 	elog "Technical support for NeroLINUX is provided by CDFreaks"
 	elog "Linux forum at http://club.cdfreaks.com/forumdisplay.php?f=104"

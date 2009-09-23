@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/nero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.46 2009/09/18 21:39:26 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/nero/ChangeLog,v 1.47 2009/09/23 12:39:27 ssuominen Exp $
+
+  23 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> nero-4.0.0.0.ebuild:
+  Execute nero --perform-post-installation in pkg_postinst wrt #285803,
+  thanks to churchmice <firefoxelectric at gmail.com>.
 
 *nero-4.0.0.0 (18 Sep 2009)
 
