@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/pcf2bdf-1.04-r1.ebuild,v 1.6 2009/07/06 21:49:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/pcf2bdf/pcf2bdf-1.04-r1.ebuild,v 1.7 2009/09/23 15:06:18 ssuominen Exp $
 
 inherit toolchain-funcs eutils
 
@@ -11,16 +11,13 @@ SRC_URI="http://www.tsg.ne.jp/GANA/S/pcf2bdf/${P}.tgz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="alpha ~amd64 arm hppa ia64 ~ppc s390 sh sparc x86 ~x86-fbsd"
-
 IUSE=""
 
-DEPEND="virtual/libc"
 S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-
+	cd "${S}"
 	epatch "${FILESDIR}"/${P}-64bit.patch
 	epatch "${FILESDIR}"/${P}-gzip.patch
 }
@@ -30,8 +27,8 @@ src_compile() {
 }
 
 src_install() {
-	make -f Makefile.gcc \
-		PREFIX=${D}/usr \
-		MANPATH=${D}/usr/share/man/man1 \
+	emake -f Makefile.gcc \
+		PREFIX="${D}/usr" \
+		MANPATH="${D}/usr/share/man/man1" \
 		install || die
 }
