@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.ebuild,v 1.10 2005/11/29 02:55:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.5.ebuild,v 1.11 2009/09/23 15:09:29 patrick Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ppc sparc x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
