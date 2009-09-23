@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.1.0.ebuild,v 1.7 2004/07/27 17:27:18 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/iip-1.1.0.ebuild,v 1.8 2009/09/23 18:43:56 patrick Exp $
 
 DESCRIPTION="Proxy server for encrypted anonymous IRC-like network"
 HOMEPAGE="http://www.invisiblenet.net/iip/"
@@ -12,7 +12,7 @@ IUSE=""
 
 S="${WORKDIR}/${P}/src"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 

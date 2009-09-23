@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ngircd
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.50 2009/01/25 14:15:16 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.51 2009/09/23 18:44:41 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ngircd-0.12.1.ebuild,
+  ngircd-13.ebuild:
+  Remove virtual/libc
 
 *ngircd-13 (25 Jan 2009)
 

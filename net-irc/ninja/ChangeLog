@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ninja
-# Copyright 2003-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.19 2009/05/31 23:42:19 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ChangeLog,v 1.20 2009/09/23 18:45:04 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ninja-1.5.9_pre14.ebuild:
+  Remove virtual/libc
 
   31 May 2009; Brent Baude <ranger@gentoo.org> ninja-1.5.9_pre14.ebuild:
   Marking ninja-1.5.9_pre14 ~ppc64 for bug 269147

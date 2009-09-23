@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/iip
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.11 2009/04/03 15:44:28 patrick Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.12 2009/09/23 18:43:56 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> iip-1.1.0.ebuild,
+  iip-1.2.ebuild:
+  Remove virtual/libc
 
   03 Apr 2009; Patrick Lauer <patrick@gentoo.org>
   +files/iip_open_mode.patch, iip-1.2.ebuild:

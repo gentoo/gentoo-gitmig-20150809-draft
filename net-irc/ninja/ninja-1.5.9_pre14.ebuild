@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre14.ebuild,v 1.4 2009/05/31 23:42:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ninja/ninja-1.5.9_pre14.ebuild,v 1.5 2009/09/23 18:45:04 patrick Exp $
 
 S=${WORKDIR}/${P/_*/}
 
@@ -14,8 +14,7 @@ IUSE="ncurses ipv6 ssl"
 
 RESTRICT="test"
 
-DEPEND="virtual/libc
-	ncurses? ( sys-libs/ncurses )
+DEPEND="ncurses? ( sys-libs/ncurses )
 	ssl?  ( dev-libs/openssl )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
