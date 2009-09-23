@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/spicctrl-1.9.ebuild,v 1.1 2006/02/09 22:14:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/spicctrl/spicctrl-1.9.ebuild,v 1.2 2009/09/23 15:45:10 patrick Exp $
 
 DESCRIPTION="tool for the sonypi-Device (found in Sony Vaio Notebooks)"
 HOMEPAGE="http://www.popies.net/sonypi/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 -ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
