@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.23 2008/12/02 02:56:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.24 2009/09/23 17:40:47 patrick Exp $
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 hppa ppc sparc x86 ~x86-fbsd"
 IUSE="X qt3"
 
-RDEPEND="virtual/libc
-	>=sys-libs/ncurses-5.2-r5
+RDEPEND=">=sys-libs/ncurses-5.2-r5
 	X? (
 		x11-libs/libXaw
 		x11-libs/libXpm
