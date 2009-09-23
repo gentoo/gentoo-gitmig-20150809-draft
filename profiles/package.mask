@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10491 2009/09/23 10:01:35 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10492 2009/09/23 10:31:28 fauli Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -289,11 +289,6 @@ sys-process/acctail
 #
 # Removal on 2009-10-26
 app-emulation/parallels-workstation
-
-# Christian Faulhammer <fauli@gentoo.org> (27 Aug 2009)
-# Release candidate
-~dev-util/bzr-2.0_rc1
-~dev-util/bzrtools-2.0.0
 
 # Ulrich Mueller <ulm@gentoo.org> (25 Aug 2009)
 # Included with GNU Emacs (since version 21 at least).
