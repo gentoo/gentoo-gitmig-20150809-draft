@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4828 2009/09/22 19:47:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4829 2009/09/23 16:07:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2811,6 +2811,7 @@ sci-misc/nco:udunits - Add sci-libs/udunits files support
 sci-misc/ncview:udunits - Add sci-libs/udunits files support
 sci-physics/cernlib-montecarlo:herwig - Build Herwig internal event generator, newer version available in sci-physics/herwig
 sci-physics/clhep:exceptions - Enable zoom exceptions for user intervention
+sci-physics/geant:aida - Add support for Abstract Interfaces for Data Analysis 
 sci-physics/geant:athena - Enable the MIT Athena (x11-libs/libXaw) widget set (default is Motif)
 sci-physics/geant:data - Add a lot of standard physics data files for geant4
 sci-physics/geant:dawn - Add support for media-gfx/dawn (3D postscript rendering)
