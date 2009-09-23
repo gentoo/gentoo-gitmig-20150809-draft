@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.25 2007/05/12 02:23:32 dsd Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.26 2009/09/23 20:48:03 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> ksymoops-2.4.9.ebuild:
+  Remove virtual/libc
 
   12 May 2007; Daniel Drake <dsd@gentoo.org> metadata.xml:
   Move from kernel to kernel-misc herd
