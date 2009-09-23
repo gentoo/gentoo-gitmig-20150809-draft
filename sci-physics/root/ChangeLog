@@ -1,6 +1,6 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.54 2009/09/23 23:47:18 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.55 2009/09/23 23:54:57 bicatali Exp $
 
 *root-5.22.00-r3 (23 Sep 2009)
 
@@ -15,7 +15,7 @@
   Removed fortran eclass, relying on toolchain eclass. Closing bug #275978,
   bug #280197, bug #280869. Removed older versions, including ancient
   root-3.x which was the only one ppc stable, but just too buggy on all
-  arches, and unsupported.
+  arches, and unsupported. Thanks to Andrew Savchenko for his contributions.
 
   19 Jul 2009; Jeremy Olexa <darkside@gentoo.org> root-5.22.00-r2.ebuild:
   amd64 stable, bug 275997
