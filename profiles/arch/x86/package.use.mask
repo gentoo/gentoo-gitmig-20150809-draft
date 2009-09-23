@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.19 2009/09/10 12:08:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.20 2009/09/23 10:42:11 elvanor Exp $
 
 # This file requires >=portage-2.1.1
+
+# Jean-Noël Rivasseau <elvanor@gentoo.org> (23 Sep 2009)
+# X use flag only for amd64/x86, bug 285951.
+media-gfx/iscan -X
 
 # Tomáš Chvátal <scarabeus@gentoo.org> (10 Sep 2009)
 # quakeforge has video_cards_voodoo enabled only for x86
