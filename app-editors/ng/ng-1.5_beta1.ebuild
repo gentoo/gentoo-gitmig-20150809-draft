@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.11 2007/10/10 07:12:42 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ng/ng-1.5_beta1.ebuild,v 1.12 2009/09/23 15:23:44 patrick Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86"
 IUSE="canna"
 
-RDEPEND="virtual/libc
-	>=sys-libs/ncurses-5.0
+RDEPEND=">=sys-libs/ncurses-5.0
 	canna? ( app-i18n/canna )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4.0"

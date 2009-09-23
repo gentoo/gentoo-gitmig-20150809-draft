@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/le
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.21 2009/09/10 15:57:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/le/ChangeLog,v 1.22 2009/09/23 15:22:55 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> le-1.13.4.ebuild,
+  le-1.13.7.ebuild, le-1.14.2.ebuild:
+  Remove virtual/libc
 
   10 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> le-1.14.2.ebuild:
   Fix lzma-utils vs. xz-utils deps.
