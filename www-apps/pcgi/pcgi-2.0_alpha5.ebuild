@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/pcgi/pcgi-2.0_alpha5.ebuild,v 1.4 2005/08/23 19:35:23 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/pcgi/pcgi-2.0_alpha5.ebuild,v 1.5 2009/09/23 21:06:49 patrick Exp $
 
 # this package is ONLY available inside the Zope tarball!!!
 ZOPE_PV=2.6.1
@@ -23,10 +23,8 @@ LICENSE="ZPL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="${DEPEND}
-		virtual/libc"
+DEPEND="${DEPEND}"
 RDEPEND="${RDEPEND}
-	virtual/libc
 	virtual/python"
 
 src_compile() {
