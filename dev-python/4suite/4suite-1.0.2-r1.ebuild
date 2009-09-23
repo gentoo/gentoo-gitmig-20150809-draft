@@ -1,10 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.7 2008/06/22 15:54:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/4suite/4suite-1.0.2-r1.ebuild,v 1.8 2009/09/23 17:51:25 arfrever Exp $
 
-inherit distutils eutils multilib
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
-MY_P=4Suite-XML-${PV}
+inherit distutils eutils
+
+MY_P="4Suite-XML-${PV}"
 
 DESCRIPTION="Python tools for XML processing and object-databases."
 SRC_URI="mirror://sourceforge/foursuite/${MY_P}.tar.bz2"
@@ -16,37 +19,36 @@ IUSE="doc"
 
 DEPEND=">=dev-python/pyxml-0.8.4"
 RDEPEND="${DEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="Ft"
 DOCS="docs/*.txt"
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-amd64_python2.5.patch"
 	epatch "${FILESDIR}/${P}-config.patch"
+
+	if ! use doc; then
+		sed -e "/'build_docs'/d" -i Ft/Lib/DistExt/Build.py || die "sed failed"
+	fi
+	distutils_src_prepare
 }
 
-src_compile() {
-	if ! use doc ; then
-		sed -i -e "/'build_docs'/d" \
-			Ft/Lib/DistExt/Build.py || die "sed failed"
-	fi
-	distutils_python_version
-	"${python}" setup.py config \
-		--prefix=/usr \
-		--docdir=/usr/share/doc/${PF} \
-		--datadir=/usr/share/${PN} \
-		--libdir=/usr/$(get_libdir)/python${PYVER}/site-packages || die "setup.py config failed"
-
-	distutils_src_compile
+src_configure() {
+	configuration() {
+		"$(PYTHON)" setup.py config \
+			--prefix=/usr \
+			--docdir=/usr/share/doc/${PF} \
+			--datadir=/usr/share/${PN} \
+			--libdir="$(python_get_sitedir)" || die "setup.py config failed with Python ${PYTHON_ABI}"
+	}
+	python_execute_function configuration
 }
 
 src_install() {
-	rm -r test profile
-	distutils_src_install \
-		$(use_with doc docs) \
-		--install-lib="/usr/$(get_libdir)/python${PYVER}/site-packages"
+	rm -fr profile test
+	distutils_src_install $(use_with doc docs)
+	rm -fr "${D}"usr/$(get_libdir)/python*/site-packages/{profiles,tests}
 }
