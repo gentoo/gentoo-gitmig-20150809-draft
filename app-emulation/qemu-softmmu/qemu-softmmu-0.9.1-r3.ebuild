@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.1-r3.ebuild,v 1.5 2009/03/12 11:48:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu-softmmu/qemu-softmmu-0.9.1-r3.ebuild,v 1.6 2009/09/23 15:35:55 patrick Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -14,8 +14,7 @@ KEYWORDS="-alpha amd64 ppc -sparc x86"
 IUSE="sdl kqemu gnutls alsa"
 RESTRICT="test"
 
-DEPEND="virtual/libc
-	sys-libs/zlib
+DEPEND="sys-libs/zlib
 	sdl? ( media-libs/libsdl )
 	!<=app-emulation/qemu-0.7.0
 	kqemu? ( >=app-emulation/kqemu-1.3.0_pre10 )
