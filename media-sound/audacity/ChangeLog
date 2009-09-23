@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/audacity
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.130 2009/09/22 11:02:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.131 2009/09/23 18:48:02 aballier Exp $
+
+  23 Sep 2009; Alexis Ballier <aballier@gentoo.org> audacity-1.3.9.ebuild,
+  +files/audacity-1.3.9-noflac.patch:
+  Fix build without flac, bug #285567. Thanks to Richard Ash for the patch.
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> audacity-1.3.8.ebuild:
   amd64/x86 stable, bug #285898

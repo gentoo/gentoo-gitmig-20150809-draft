@@ -1,0 +1,49 @@
+Index: m4/audacity_checklib_libflac.m4
+===================================================================
+RCS file: /cvsroot/audacity/audacity-src/m4/audacity_checklib_libflac.m4,v
+retrieving revision 1.2
+diff -u -r1.2 audacity_checklib_libflac.m4
+--- m4/audacity_checklib_libflac.m4	20 Jan 2009 21:23:58 -0000	1.2
++++ m4/audacity_checklib_libflac.m4	16 Sep 2009 20:15:47 -0000
+@@ -2,7 +2,7 @@
+ dnl
+ dnl Please increment the serial number below whenever you alter this macro
+ dnl for the benefit of automatic macro update systems
+-# audacity_checklib_libflac.m4 serial 1
++# audacity_checklib_libflac.m4 serial 2
+ 
+ AC_DEFUN([AUDACITY_CHECKLIB_LIBFLAC], [
+ 
+@@ -33,6 +33,8 @@
+       LIBFLAC_SYSTEM_AVAILABLE="yes"
+       LIBFLAC_SYSTEM_LIBS="-lFLAC++ -lFLAC"
+       LIBFLAC_SYSTEM_CPPSYMBOLS="USE_LIBFLAC"
++      # this file shouldn't be built at if no libflac is available
++      LIBFLAC_SYSTEM_OPTOBJS="ondemand/ODDecodeFlacTask.o"
+       AC_MSG_NOTICE([FLAC libraries are available as system libraries])
+    else
+       LIBFLAC_SYSTEM_AVAILABLE="no"
+@@ -58,6 +60,8 @@
+       LIBFLAC_LOCAL_CXXFLAGS="$LIBFLAC_LOCAL_CXXFLAGS -I\$(top_srcdir)/lib-src/libflac/include"
+ 
+       LIBFLAC_LOCAL_CPPSYMBOLS="USE_LIBFLAC"
++      # this file shouldn't be built at if no libflac is available
++      LIBFLAC_LOCAL_OPTOBJS="ondemand/ODDecodeFlacTask.o"
+       LIBFLAC_LOCAL_CONFIG_SUBDIRS="lib-src/libflac"
+ 	
+       AC_MSG_NOTICE([FLAC libraries are available in this source tree])
+Index: src/Makefile.in
+===================================================================
+RCS file: /cvsroot/audacity/audacity-src/src/Makefile.in,v
+retrieving revision 1.167
+diff -u -r1.167 Makefile.in
+--- src/Makefile.in	17 Aug 2009 18:32:24 -0000	1.167
++++ src/Makefile.in	16 Sep 2009 20:15:47 -0000
+@@ -194,7 +194,6 @@
+ 	import/ImportRaw.o \
+ 	import/RawAudioGuess.o \
+ 	ondemand/ODComputeSummaryTask.o \
+-	ondemand/ODDecodeFlacTask.o \
+ 	ondemand/ODDecodeTask.o \
+ 	ondemand/ODManager.o \
+ 	ondemand/ODTask.o \
