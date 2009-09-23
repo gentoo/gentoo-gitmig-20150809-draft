@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/balsa
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.12 2007/01/10 18:56:47 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/balsa/ChangeLog,v 1.13 2009/09/23 19:59:23 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> balsa-3.5.ebuild:
+  Remove virtual/libc
 
   10 Jan 2007; Piotr Jaroszyński <peper@gentoo.org> Manifest:
   Fix Manifest.

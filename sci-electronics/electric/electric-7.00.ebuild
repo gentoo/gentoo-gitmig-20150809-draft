@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.13 2008/07/27 22:24:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/electric-7.00.ebuild,v 1.14 2009/09/23 20:00:10 patrick Exp $
 
 EAPI=1
 
@@ -16,8 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
-DEPEND="virtual/libc
-	!qt3? ( x11-libs/openmotif )
+DEPEND="!qt3? ( x11-libs/openmotif )
 	qt3? ( x11-libs/qt:3 )"
 
 src_unpack() {

@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/electric
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.30 2008/07/27 22:24:39 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/electric/ChangeLog,v 1.31 2009/09/23 20:00:10 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> electric-7.00.ebuild:
+  Remove virtual/libc
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> electric-7.00.ebuild:
   QA: Get rid of deprecated qt_min_version().
