@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.13 2008/04/12 17:58:27 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.5.2.ebuild,v 1.14 2009/09/23 20:08:48 patrick Exp $
 
 inherit eutils fortran
 
@@ -17,22 +17,21 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~ppc"
 IUSE="X debug doc fortran itcl java jpeg octave png python tk jadetex truetype"
 
-RDEPEND="virtual/libc
-		 dev-lang/perl
-		 python? ( dev-python/numeric )
-		 java? ( virtual/jre )
-		 jadetex? ( app-text/jadetex )
-		 octave? ( sci-mathematics/octave )
-		 jpeg? ( media-libs/gd )
-		 png? ( media-libs/gd )
-		 truetype? ( media-libs/freetype )
-		 X? ( x11-libs/libX11
-				x11-libs/libXau
-				x11-libs/libXdmcp
-				tk? ( dev-lang/tk
-						itcl? ( dev-tcltk/itcl )
-						)
-			   )"
+RDEPEND=" dev-lang/perl
+	 python? ( dev-python/numeric )
+	 java? ( virtual/jre )
+	 jadetex? ( app-text/jadetex )
+	 octave? ( sci-mathematics/octave )
+	 jpeg? ( media-libs/gd )
+	 png? ( media-libs/gd )
+	 truetype? ( media-libs/freetype )
+	 X? ( x11-libs/libX11
+		x11-libs/libXau
+		x11-libs/libXdmcp
+		tk? ( dev-lang/tk
+			itcl? ( dev-tcltk/itcl )
+			)
+		)"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

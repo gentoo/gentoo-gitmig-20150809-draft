@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/gaul-devel
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.8 2008/02/09 16:29:09 drac Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gaul-devel/ChangeLog,v 1.9 2009/09/23 20:06:52 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  gaul-devel-0.1849-r1.ebuild:
+  Remove virtual/libc
 
   09 Feb 2008; Samuli Suominen <drac@gentoo.org>
   -files/gaul-devel-0.1849-slang2-config.patch, gaul-devel-0.1849-r1.ebuild:

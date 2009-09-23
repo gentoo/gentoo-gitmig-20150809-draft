@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.11 2008/06/22 11:35:43 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.6.6.ebuild,v 1.12 2009/09/23 20:11:51 patrick Exp $
 
 inherit eutils fixheadtails flag-o-matic fortran toolchain-funcs
 
@@ -19,7 +19,6 @@ DEPEND="mpi? ( >=sys-cluster/mpich2-1.0.6
 	ssl? ( dev-libs/openssl )
 	szip? ( sci-libs/szip )
 	zlib? ( sys-libs/zlib )
-	threads? ( virtual/libc )
 	sys-apps/coreutils
 	sys-apps/which
 	sys-process/time"

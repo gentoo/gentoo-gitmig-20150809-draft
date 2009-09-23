@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cfitsio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.34 2009/09/22 15:30:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cfitsio/ChangeLog,v 1.35 2009/09/23 20:06:29 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> cfitsio-2.510-r1.ebuild:
+  Remove virtual/libc
 
   22 Sep 2009; Jeroen Roovers <jer@gentoo.org> cfitsio-3.140.ebuild:
   Stable for HPPA (bug #285500).
