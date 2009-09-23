@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3300 2009/09/22 18:32:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3301 2009/09/23 08:47:26 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask net-im/naim because it builds again and removed net-im/naim-modules
+  from tree since it's obsolete.
 
   22 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Unmask dev-lang/realbasic because Viacheslav Kaloshin is now maintaining

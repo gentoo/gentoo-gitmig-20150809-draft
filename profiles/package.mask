@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10488 2009/09/22 18:32:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10489 2009/09/23 08:47:26 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -788,11 +788,6 @@ net-irc/irssi-svn
 ~net-wireless/wpa_supplicant-9999
 net-misc/netcomics-cvs
 dev-lisp/cl-ansi-tests-cvs
-
-# Samuli Suominen <ssuominen@gentoo.org> (08 Aug 2009)
-# Masked by treecleaners for removal. Doesn't compile wrt #215252.
-net-im/naim
-net-im/naim-modules
 
 # Federico Ferri <mescalinum@gentoo.org> (08 Aug 2009)
 # Doesn't build with Tcl 8.5, has several bugs open
