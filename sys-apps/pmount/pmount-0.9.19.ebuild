@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.19.ebuild,v 1.3 2009/04/22 22:44:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/pmount-0.9.19.ebuild,v 1.4 2009/09/23 20:23:26 mrpouet Exp $
 
 EAPI="2"
 
@@ -12,18 +12,17 @@ SRC_URI="http://alioth.debian.org/frs/download.php/2867/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="crypt hal"
 
 RDEPEND="hal? ( >=sys-apps/dbus-0.33 >=sys-apps/hal-0.5.2 )
 	crypt? ( >=sys-fs/cryptsetup-1.0.5 )"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.40"
-
-# FIXME: Testsuite fails.
-RESTRICT="test"
-
-PATCHES=("${FILESDIR}/${P}-ext4-support.patch")
+PATCHES=(
+	"${FILESDIR}/${P}-ext4-support.patch"
+	"${FILESDIR}/${P}-testsuite-missing-dir.patch"
+)
 
 pkg_setup() {
 	enewgroup plugdev
@@ -31,6 +30,15 @@ pkg_setup() {
 
 src_configure() {
 	econf $(use_enable hal)
+}
+
+src_test() {
+	local testdir=${S}/tests/check_fstab
+
+	ln -s $testdir/a $testdir/b && ln -s $testdir/d $testdir/c && \
+		ln -s $testdir/c $testdir/e \
+		|| die "Unable to create fake symlinks required for testsuite"
+	emake check || die "testsuite failed"
 }
 
 src_install () {
