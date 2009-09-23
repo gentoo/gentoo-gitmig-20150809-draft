@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16.ebuild,v 1.1 2008/10/01 16:36:55 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhid/libhid-0.2.16-r1.ebuild,v 1.1 2009/09/23 23:53:21 matsuu Exp $
 
+EAPI="1"
 DESCRIPTION="Provides a generic and flexible way to access and interact with USB HID devices"
 HOMEPAGE="http://libhid.alioth.debian.org/"
 SRC_URI="http://beta.magicaltux.net/${P}.tar.gz"
@@ -11,7 +12,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug doc python"
 
-RDEPEND="dev-libs/libusb"
+RDEPEND="virtual/libusb:0"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	python? (
