@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-1.00.ebuild,v 1.4 2005/07/30 20:48:45 killerfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nbsmtp/nbsmtp-1.00.ebuild,v 1.5 2009/09/23 18:06:28 patrick Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="alpha ~amd64 hppa ppc sparc x86"
 LICENSE="GPL-2"
 IUSE="ssl ipv6 debug"
 
-DEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 PROVIDE="virtual/mta"
 
