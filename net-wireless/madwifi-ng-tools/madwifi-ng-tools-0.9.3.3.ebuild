@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.3.ebuild,v 1.5 2008/11/15 16:30:30 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/madwifi-ng-tools/madwifi-ng-tools-0.9.3.3.ebuild,v 1.6 2009/09/23 19:52:48 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86"
 
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="!net-wireless/madwifi-old-tools
 		${DEPEND}"
 
