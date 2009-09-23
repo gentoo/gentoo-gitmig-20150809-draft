@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doc++
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.26 2009/03/20 16:33:54 jmbsvicetto Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.27 2009/09/23 15:19:13 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> doc++-3.4.10-r3.ebuild:
+  Remove virtual/libc
 
   20 Mar 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   metadata.xml:
