@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.63 2009/08/31 22:37:56 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.64 2009/09/23 18:09:44 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  isdn4k-utils-3.8_pre20050821.ebuild, isdn4k-utils-3.9_pre20060124.ebuild,
+  isdn4k-utils-3.11_pre20071003.ebuild:
+  Remove virtual/libc
 
   31 Aug 2009; Mike Auty <ikelos@gentoo.org>
   isdn4k-utils-3.8_pre20050821.ebuild:

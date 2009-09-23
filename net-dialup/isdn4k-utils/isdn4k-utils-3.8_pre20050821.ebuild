@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.12 2009/08/31 22:37:56 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.8_pre20050821.ebuild,v 1.13 2009/09/23 18:09:44 patrick Exp $
 
 inherit eutils multilib gnuconfig linux-info
 
@@ -25,7 +25,6 @@ SLOT="0"
 # postgres? ( dev-db/postgresql )
 
 DEPEND="virtual/linux-sources
-	virtual/libc
 	sys-libs/ncurses
 	sys-libs/gdbm
 	dev-lang/tcl

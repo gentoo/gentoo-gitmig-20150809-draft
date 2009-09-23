@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.11_pre20071003.ebuild,v 1.1 2007/11/14 15:30:57 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.11_pre20071003.ebuild,v 1.2 2009/09/23 18:09:44 patrick Exp $
 
 WANT_AUTOCONF="2.1"
 WANT_AUTOMAKE="none"
@@ -27,7 +27,6 @@ SLOT="0"
 # postgres? ( dev-db/postgresql )
 
 DEPEND="virtual/linux-sources
-	virtual/libc
 	sys-libs/ncurses
 	sys-libs/gdbm
 	dev-lang/tcl
