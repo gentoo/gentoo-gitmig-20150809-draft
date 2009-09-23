@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.1 2009/09/21 15:09:10 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.2 2009/09/23 10:43:24 elvanor Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic rpm
+inherit eutils toolchain-funcs flag-o-matic
 
 SRC_REV="6"  # revision used by upstream
 
@@ -30,36 +30,26 @@ SRC_URI="http://linux.avasys.jp/drivers/iscan/${PV}/${PN}_${PV}-${SRC_REV}.tar.g
 LICENSE="GPL-2 AVASYS"
 SLOT="0"
 
-IUSE="X gimp jpeg unicode png tiff"
+IUSE="X gimp jpeg png tiff unicode"
 IUSE_LINGUAS="de es fr it ja ko nl pt zh_CN zh_TW"
 
 for X in ${IUSE_LINGUAS}; do IUSE="${IUSE} linguas_${X}"; done
 
 QA_TEXTRELS="usr/$(get_libdir)/iscan/lib*"
 
-CDEPEND="media-gfx/sane-backends
+RDEPEND="media-gfx/sane-backends
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
 	tiff? ( media-libs/tiff )
 	>=sys-fs/udev-103
 	>=dev-libs/libusb-0.1.12
-	x86? (
-		X? (
-			sys-devel/gettext
-			>=x11-libs/gtk+-2.0
-			gimp? ( media-gfx/gimp )
-		)
-	)
-	amd64? (
-		X? (
-			sys-devel/gettext
-			>=x11-libs/gtk+-2.0
-			gimp? ( media-gfx/gimp )
-		)
+	X? (
+		>=x11-libs/gtk+-2.0
+		gimp? ( media-gfx/gimp )
 	)"
 
-RDEPEND="${CDEPEND}"
-DEPEND="${CDEPEND}"
+DEPEND="${RDEPEND}
+	X? ( sys-devel/gettext )"
 
 usermap_to_udev() {
 	echo '# udev rules file for iscan devices (udev >= 0.98)'
@@ -140,17 +130,18 @@ src_prepare() {
 			-e 's:^\([[:space:]]*\)po[[:space:]]*\\:\1\\:g' Makefile*
 		sed -i -e 's:iscan.1::g' doc/Makefile*
 	fi
+
+	#eautoreconf
 }
 
-src_compile() {
+src_configure() {
 	append-flags -D_GNU_SOURCE  # needed for 'strndup'
 	# hint: dirty hack, look into 'configure.ac' for 'PACKAGE_CXX_ABI'
 	CXX="g++" econf \
 		$(use_enable jpeg) \
 		$(use_enable png) \
 		$(use_enable tiff) \
-		--with-pic \
-		--disable-static \
+		--with-pic --disable-static \
 		$(if (( use x86 || use amd64) && use X ); then
 			 echo $(use_enable gimp) \
 			 --enable-frontend
@@ -158,7 +149,6 @@ src_compile() {
 			 --disable-frontend
 		fi) \
 		|| die "econf failed"
-	emake || die "emake failed"
 }
 
 src_install() {
