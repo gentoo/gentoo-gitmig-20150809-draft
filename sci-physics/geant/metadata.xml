@@ -19,7 +19,9 @@
     rendering)</flag>
   <flag name='gdml'>Enable geometry markup language for xml</flag>
   <flag name='geant3'>Add compatibility for geant321 to geant4</flag>
-  <flag name='global'>Produce a huge global library instead of small ones</flag>
+  <flag name='global'>Produce a huge global library instead of small
+  ones</flag>
+  <flag name='aida'>Add support for Abstract Interfaces for Data Analysis </flag>
   <flag name='openinventor'>Add support for <pkg>media-libs/openinventor</pkg>
     SGI toolkit</flag>
   <flag name='raytracerx'>Enable raytracing for physics events</flag>

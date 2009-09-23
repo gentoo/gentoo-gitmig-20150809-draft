@@ -1,23 +1,23 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.1_p03.ebuild,v 1.2 2008/11/24 16:54:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.1 2009/09/23 16:06:00 bicatali Exp $
 
-EAPI="1"
+EAPI=2
 
-inherit eutils fortran multilib versionator toolchain-funcs
+inherit eutils versionator toolchain-funcs
 
 PV1=$(get_version_component_range 1 ${PV})
 PV2=$(get_version_component_range 2 ${PV})
 PV3=$(get_version_component_range 3 ${PV})
 MY_P=${PN}$(replace_version_separator 3 .)
 
-DESCRIPTION="CERN's detector description and simulation Tool"
+DESCRIPTION="Toolkit for simulation of passage of particles through matter"
 HOMEPAGE="http://geant4.cern.ch/"
 
 SRC_COM="http://geant4.web.cern.ch/geant4/support/source"
 SRC_URI="${SRC_COM}/${MY_P}.tar.gz"
-GEANT4_DATA="G4NDL.3.12
-	G4EMLOW.5.1
+GEANT4_DATA="G4NDL.3.13
+	G4EMLOW.6.2
 	G4RadioactiveDecay.3.2
 	PhotonEvaporation.2.0
 	G4ABLA.3.0"
@@ -28,37 +28,43 @@ done
 LICENSE="geant4"
 SLOT="4"
 KEYWORDS="~amd64 ~hppa ~sparc ~x86"
-IUSE="athena +data dawn debug examples gdml geant3 global minimal +motif
-	+opengl openinventor +raytracerx static +vrml zlib"
+IUSE="aida athena +data dawn debug examples gdml geant3 global minimal +motif
+	+opengl openinventor qt4 +raytracerx static +vrml zlib"
 
-DEPEND="sci-physics/clhep
+RDEPEND=">=sci-physics/clhep-2.0.4.2
 	motif? ( x11-libs/openmotif )
 	athena? ( x11-libs/libXaw )
-	openinventor? ( media-libs/openinventor )
+	qt4? ( || ( x11-libs/qt:4 x11-libs/qt-gui ) )
+	openinventor? ( >=media-libs/openinventor-2.1.5.10-r3 )
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
 	opengl? ( virtual/opengl
-			  athena? ( x11-libs/Xaw3d ) )
+			  athena? ( x11-libs/Xaw3d )
+			  qt4? ( || ( x11-libs/qt:4[opengl] x11-libs/qt-opengl ) ) )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
-	dawn? ( media-gfx/dawn )"
+	dawn? ( media-gfx/dawn )
+	zlib? ( sys-libs/zlib )"
+
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	FORTRAN="gfortran g77 ifc"
-	use geant3 && fortran_pkg_setup
 	eval unset ${!G4*}
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	# fix bad zlib dependency
+	epatch "${FILESDIR}"/${PN}-4.9.2-zlib.patch
 
 	# propagate user's flags.
+	sed -i -e 's/-o/$(LDFLAGS) -o/g' source/GNUmakefile || die
 	sed -i \
-		-e "/CXXFLAGS[[:space:]]*.=[[:space:]]-O2/s:=.*:= ${CXXFLAGS}:" \
-		-e "/FCFLAGS[[:space:]]*.=[[:space:]]-O2/s:=.*:= ${FFLAGS:--O2}:" \
-		-e "/CCFLAGS[[:space:]]*.=[[:space:]]-O2/s:=.*:= ${CFLAGS}:" \
+		-e "/CXXFLAGS.*=.*-O2/s:=.*:= ${CXXFLAGS}:" \
+		-e "/FCFLAGS.*=.*-O2/s:=.*:= ${FFLAGS:--O2}:" \
+		-e "/CCFLAGS.*=.*-O2/s:=.*:= ${CFLAGS}:" \
+		-e "s:-Wl,-soname:${LDFLAGS} -Wl,-soname:g" \
+		-e "s/libq\*/lib\[q,Q\]t*/g" \
 		config/sys/Linux*gmk || die "flag substitution failed"
 
 	# fix forced lib directory
@@ -73,6 +79,9 @@ src_unpack() {
 		config/common.gmk || die "sed common.gmk failed"
 	sed -i \
 		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
+		config/moc.gmk || die "sed moc.gmk failed"
+	sed -i \
+		-e 's:$(G4LIB)/$(G4SYSTEM):$(G4TMP):g' \
 		-e 's:$(G4BIN)/$(G4SYSTEM):$(G4TMP):g' \
 		-e 's:$(G4TMP)/$(G4SYSTEM):$(G4TMP):g' \
 		source/GNUmakefile || die "sed GNUmakefile failed"
@@ -81,7 +90,7 @@ src_unpack() {
 		config/globlib.gmk || die "sed globlib.gmk failed"
 }
 
-src_compile() {
+src_configure() {
 	export GEANT4_DIR="/usr/share/${PN}${PV1}"
 	# where to put compiled libraries;
 	# we set env var G4LIB in src_install()
@@ -92,6 +101,7 @@ src_compile() {
 	[[ $(tc-getCXX) = ic*c ]] && export G4SYSTEM=Linux-icc \
 							  || export G4SYSTEM=Linux-g++
 	export G4INSTALL="${S}"
+	export G4WORKDIR="${S}"
 	export G4INCLUDE="${D}/usr/include/${PN}"
 	export CLHEP_BASE_DIR=/usr
 
@@ -102,18 +112,25 @@ src_compile() {
 
 	use motif               && export G4UI_BUILD_XM_SESSION=y
 	use athena              && export G4UI_BUILD_XAW_SESSION=y
-
+	if use qt4; then
+		export G4UI_BUILD_QT_SESSION=y
+		export QTLIBS="-L/usr/$(get_libdir)/qt4 -lQtCore -lQtGui"
+		export QTFLAGS="-I/usr/include/qt4 -I/usr/include/qt4/Qt"
+		use opengl && \
+			export GLQTLIBS="${QTLIBS} -lQtOpenGL"
+		#export QTFLAGS="${QTFLAGS} -I/usr/include/qt4/QtOpenGL"
+	fi
 	use dawn                && export G4VIS_BUILD_DAWN_DRIVER=y
 	use raytracerx          && export G4VIS_BUILD_RAYTRACERX_DRIVER=y
 	use openinventor        && export G4VIS_BUILD_OI_DRIVER=y
 	use opengl              && export G4VIS_BUILD_OPENGLX_DRIVER=y
 	use opengl && use motif && export G4VIS_BUILD_OPENGLXM_DRIVER=y
-
+	use gdml                && export G4LIB_BUILD_GDML=y
 	use geant3              && export G4LIB_BUILD_G3TOG4=y
 	use zlib                && export G4LIB_USE_ZLIB=y
 	use vrml                && export G4VIS_BUILD_VRML_DRIVER=y \
 							&& export G4VIS_BUILD_VRMLFILE_DRIVER=y
-
+	use aida                && export G4ANALYSIS_USE=y
 	use data                && export G4DATA="${GEANT4_DIR}/data"
 	use debug               && export G4DEBUG=y || export G4OPTIMIZE=y
 
@@ -123,17 +140,23 @@ src_compile() {
 	# if shared libs are built, the script will also build static libs
 	# with pic flags
 	# avoid that by building it twice and removing temporary objects
-	cd "${S}/source/"
 	export G4LIB_BUILD_SHARED=y
+}
+
+src_compile() {
+	cd "${S}/source/"
+	einfo "Building shared library"
 	emake || die "Building shared geant failed"
 
 	if use global; then
 		export G4LIB_USE_GRANULAR=y
+		einfo "Building granular libraries"
 		emake global || die "Building global libraries failed"
 		emake || die "Rebuilding shared geant failed"
 	fi
 
 	if use static; then
+		einfo "Building static libraries"
 		rm -rf tmp
 		export G4LIB_BUILD_STATIC=y ; unset G4LIB_BUILD_SHARED
 		emake || die "Building static geant failed"
@@ -155,11 +178,14 @@ g4_create_env_script() {
 	EOF
 
 	# detailed data file locations
-	if $(use data); then
-		export G4LEVELGAMMADATA="${G4DATA}/PhotonEvaporation2.0"
-		export G4RADIOACTIVEDATA="${G4DATA}/RadioactiveDecay3.2"
-		export G4LEDATA="${G4DATA}/G4EMLOW5.1"
-		export G4NEUTRONHPCROSSSECTIONS="${G4DATA}/G4NDL3.12"
+	if use data; then
+		G4LEVELGAMMADATA="${G4DATA}/$(basename ${WORKDIR}/PhotonEvaporation*)"
+		G4RADIOACTIVEDATA="${G4DATA}/$(basename ${WORKDIR}/RadioactiveDecay*)"
+		G4LEDATA="${G4DATA}/$(basename ${WORKDIR}/G4EMLOW*)"
+		G4ABLADATA="${G4DATA}/$(basename ${WORKDIR}/G4ABLA*)"
+		G4NEUTRONHPCROSSSECTIONS="${G4DATA}/$(basename ${WORKDIR}/G4NDL*)"
+		export G4LEVELGAMMADATA G4RADIOACTIVEDATA G4LEDATA \
+			G4ABLADATA G4NEUTRONHPCROSSSECTIONS
 	fi
 
 	# read env variables defined upto now
@@ -180,8 +206,10 @@ src_install() {
 	# but install libraries and Geant library tool manually
 	einfo "Installing Geant4 libraries"
 	insinto ${GEANT4_LIBDIR}
+	insopts -m0755
 	doins tmp/*.so || die
 	doins tmp/libname.map || die
+	insopts -m0644
 	if use static; then
 		doins tmp/*.a || die
 	fi
@@ -214,10 +242,7 @@ src_install() {
 		dodoc ReleaseNotes/Patch${mypv}-*.txt
 
 	use examples && doins -r examples
-
-	# TODO: g4py will probably need a split ebuild since it seems to
-	#       rely on on geant4 existence.
-	# TODO: momo with momo or java flag, and check java stuff
+	# TODO: * momo with momo or java flag, and check java stuff
 }
 
 pkg_postinst() {
