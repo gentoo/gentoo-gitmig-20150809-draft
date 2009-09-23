@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hedgehog/hedgehog-2.0.0.ebuild,v 1.1 2005/03/13 09:53:00 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/hedgehog/hedgehog-2.0.0.ebuild,v 1.2 2009/09/23 17:16:51 patrick Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1 BSD"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 # Documentation can't be built until weblint-perl and html2ps are added to
 # portage.
