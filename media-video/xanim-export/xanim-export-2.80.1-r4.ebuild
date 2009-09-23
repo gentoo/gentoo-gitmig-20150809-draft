@@ -1,10 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.6 2007/07/22 08:31:42 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim-export/xanim-export-2.80.1-r4.ebuild,v 1.7 2009/09/23 14:35:46 ssuominen Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
-strip-flags -finline-functions
-replace-flags -O3 -O2
 
 _XA_CYUV_sparc=xa1.0_cyuv_sparcELF.o
 _XA_CVID_sparc=xa2.0_cvid_sparcELF.o
@@ -64,12 +62,10 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-	>=media-libs/jpeg-6b
+RDEPEND=">=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	x11-libs/libXext
 	x11-libs/libXt"
-
 DEPEND="${RDEPEND}
 	app-arch/ncompress
 	x11-proto/xextproto
