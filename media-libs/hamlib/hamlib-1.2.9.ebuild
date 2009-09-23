@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.9.ebuild,v 1.5 2009/08/29 18:14:26 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.9.ebuild,v 1.6 2009/09/23 15:15:55 ssuominen Exp $
 
 inherit autotools eutils multilib
 
@@ -15,12 +15,10 @@ IUSE="doc python tcl"
 
 RESTRICT="test"
 
-RDEPEND="virtual/libc
-	=virtual/libusb-0*
+RDEPEND="=virtual/libusb-0*
 	python? ( dev-lang/python
 		dev-lang/tcl )
 	tcl? ( dev-lang/tcl )"
-
 DEPEND=" ${RDEPEND}
 	dev-util/pkgconfig
 	dev-lang/swig
