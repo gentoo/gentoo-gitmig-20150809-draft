@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.5 2008/06/04 03:40:46 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.1-r2.ebuild,v 1.6 2009/09/23 16:52:13 patrick Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,8 +15,7 @@ KEYWORDS="~x86 ~ppc"
 
 IUSE="doc"
 
-RDEPEND="virtual/libc
-	sci-libs/buddy
+RDEPEND="sci-libs/buddy
 	dev-libs/libtecla
 	>=dev-libs/gmp-4.1.3"
 

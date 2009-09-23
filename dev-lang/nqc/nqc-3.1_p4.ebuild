@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.2 2007/01/31 14:32:38 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/nqc-3.1_p4.ebuild,v 1.3 2009/09/23 16:52:35 patrick Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ LICENSE="MPL-1.0"
 KEYWORDS="~x86 ~amd64"
 IUSE="usb"
 
-DEPEND="virtual/libc
-	usb? ( dev-libs/legousbtower )"
+DEPEND="usb? ( dev-libs/legousbtower )"
 
 src_compile()
 {

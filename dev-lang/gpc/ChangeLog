@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gpc
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.24 2008/12/27 14:12:42 george Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/ChangeLog,v 1.25 2009/09/23 16:51:06 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> gpc-20051104.ebuild,
+  gpc-20070904.ebuild:
+  Remove virtual/libc
 
   27 Dec 2008; George Shapovalov <george@gentoo.org> gpc-20070904.ebuild:
   fixed toolchain issue (#243872)

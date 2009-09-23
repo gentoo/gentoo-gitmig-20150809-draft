@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/inform-6.21.4.ebuild,v 1.9 2005/05/04 18:06:29 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/inform-6.21.4.ebuild,v 1.10 2009/09/23 16:51:52 patrick Exp $
 
 MY_PV=6.21
 LIB_V=610
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86 amd64 ~sparc ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}

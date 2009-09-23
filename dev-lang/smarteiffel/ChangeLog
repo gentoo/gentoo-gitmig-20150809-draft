@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/smarteiffel
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.25 2008/08/23 05:44:07 jer Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/ChangeLog,v 1.26 2009/09/23 16:52:59 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> smarteiffel-1.0.ebuild,
+  smarteiffel-1.1.ebuild:
+  Remove virtual/libc
 
   23 Aug 2008; Jeroen Roovers <jer@gentoo.org> metadata.xml:
   Add GLEP 56 USE flag descriptions.
