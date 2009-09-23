@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.89 2009/09/17 17:30:52 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.90 2009/09/23 11:37:25 mduft Exp $
+
+  23 Sep 2009; Markus Duft <mduft@gentoo.org> package.mask:
+  masked some stuff that requires perl 5.10 which is not there yet
 
   17 Sep 2009; Fabian Groffen <grobian@gentoo.org>
   darwin/macos/10.6/x86/make.defaults:
