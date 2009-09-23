@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/disktype-9.ebuild,v 1.10 2008/10/27 06:00:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/disktype-9.ebuild,v 1.11 2009/09/23 20:30:12 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="amd64 arm ppc sh sparc x86"
 
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die

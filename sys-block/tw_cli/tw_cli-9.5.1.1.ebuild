@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.1.1.ebuild,v 1.1 2009/04/12 21:54:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.5.1.1.ebuild,v 1.2 2009/09/23 20:33:29 patrick Exp $
 
 DESCRIPTION="3ware SATA+PATA RAID controller Command Line Interface tool"
 HOMEPAGE="http://www.3ware.com/kb/article.aspx?id=14847"
@@ -13,7 +13,7 @@ IUSE=""
 RESTRICT="fetch strip mirror"
 # binary packages
 DEPEND=""
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 # Upstream has _FUN_ naming these
 # We are mostly prepared for the FreeBSD binaries at this point

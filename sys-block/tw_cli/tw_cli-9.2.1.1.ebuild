@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.2.1.1.ebuild,v 1.2 2007/07/02 15:29:58 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/tw_cli-9.2.1.1.ebuild,v 1.3 2009/09/23 20:33:29 patrick Exp $
 
 #set
 DESCRIPTION="3ware Command Line Interface Tool"
@@ -14,7 +14,7 @@ IUSE=""
 RESTRICT="fetch strip mirror"
 # binary packages
 DEPEND=""
-RDEPEND="virtual/libc"
+RDEPEND=""
 #DOWNLOAD_URL_BASE="http://www.3ware.com/support/download_${PV}.asp?SNO="
 #DOWNLOAD_URL="x86? (   ${DOWNLOAD_URL_BASE}499 )
 #			  amd64? ( ${DOWNLOAD_URL_BASE}501 )"
