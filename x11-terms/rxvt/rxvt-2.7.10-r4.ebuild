@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r4.ebuild,v 1.6 2008/05/05 13:49:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10-r4.ebuild,v 1.7 2009/09/23 15:02:37 ssuominen Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc ppc64 sparc x86"
 IUSE="motif cjk xgetdefault linuxkeys"
 
-RDEPEND="virtual/libc
-	x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	x11-libs/libXpm
 	x11-libs/libXext
 	motif? ( x11-libs/openmotif )"
@@ -42,7 +41,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local term
 	if [ -n "${RXVT_TERM}" ] ; then
 		term="${RXVT_TERM}"
@@ -78,7 +76,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall mandir="${D}"/usr/share/man/man1 || die
 
 	cd "${S}"/doc
@@ -87,7 +84,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	einfo
 	einfo "If you want to change default TERM variable other than rxvt,"
 	einfo "set RXVT_TERM environment variable and then emerge rxvt."

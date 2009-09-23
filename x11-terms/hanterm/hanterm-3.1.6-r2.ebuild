@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.24 2009/05/05 10:56:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.25 2009/09/23 15:01:50 ssuominen Exp $
 
 IUSE=""
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 LICENSE="X11"
 
-DEPEND="virtual/libc
-	x11-libs/libXmu
+DEPEND="x11-libs/libXmu
 	x11-libs/libICE
 	x11-libs/libXaw
 	>=x11-libs/Xaw3d-1.5"
