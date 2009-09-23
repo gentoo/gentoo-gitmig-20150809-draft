@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.10 2009/07/20 12:53:04 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/bcron/bcron-0.09.ebuild,v 1.11 2009/09/23 21:06:51 patrick Exp $
 
 CRON_SYSTEM_CRONTAB="yes"
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=dev-libs/bglibs-1.031"
+DEPEND=">=dev-libs/bglibs-1.031"
 RDEPEND="!virtual/cron
 	>=sys-process/cronbase-0.3.2
 	virtual/mta
