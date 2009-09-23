@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/safestr
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.8 2007/03/19 01:00:30 kloeri Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/safestr/ChangeLog,v 1.9 2009/09/23 17:26:20 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> safestr-1.0.2.ebuild,
+  safestr-1.0.3.ebuild:
+  Remove virtual/libc
 
   19 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> metadata.xml:
   Remove ka0ttic from metadata.xml due to retirement.

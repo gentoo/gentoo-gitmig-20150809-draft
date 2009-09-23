@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/phlib/phlib-1.20.ebuild,v 1.5 2008/10/21 14:07:00 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/phlib/phlib-1.20.ebuild,v 1.6 2009/09/23 17:25:41 patrick Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86"
 
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}

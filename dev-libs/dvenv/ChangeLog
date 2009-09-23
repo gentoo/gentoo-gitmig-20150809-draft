@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvenv
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvenv/ChangeLog,v 1.13 2009/03/29 20:16:12 pvdabeel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvenv/ChangeLog,v 1.14 2009/09/23 17:18:58 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> dvenv-0.2.2.ebuild:
+  Remove virtual/libc
 
   30 Mar 2009; Pieter Van den Abeele <pvdabeel@gentoo.org> Changelog, dv-env-0.2.2.ebuild:
   Update Header

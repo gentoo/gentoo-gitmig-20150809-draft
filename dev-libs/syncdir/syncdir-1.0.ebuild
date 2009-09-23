@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0.ebuild,v 1.12 2009/07/29 22:51:43 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0.ebuild,v 1.13 2009/09/23 17:26:40 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 src_compile() {
 	emake CC="$(tc-getCC)" || die "compile problem"

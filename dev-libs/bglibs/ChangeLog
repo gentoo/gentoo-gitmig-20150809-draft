@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/bglibs
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.48 2008/11/07 11:01:56 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/ChangeLog,v 1.49 2009/09/23 17:16:03 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> bglibs-1.041.ebuild,
+  bglibs-1.104.ebuild:
+  Remove virtual/libc
 
   07 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> -bglibs-1.001.ebuild,
   -bglibs-1.009.ebuild, -bglibs-1.009-r1.ebuild, -bglibs-1.011.ebuild,

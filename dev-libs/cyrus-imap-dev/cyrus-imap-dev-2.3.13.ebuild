@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.13.ebuild,v 1.6 2009/01/07 15:17:48 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/cyrus-imap-dev-2.3.13.ebuild,v 1.7 2009/09/23 17:17:50 patrick Exp $
 
 inherit eutils autotools
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="afs kerberos snmp ssl tcpd"
 
-RDEPEND="virtual/libc
-	>=sys-libs/db-3.2
+RDEPEND=">=sys-libs/db-3.2
 	>=dev-libs/cyrus-sasl-2.1.12
 	afs? ( >=net-fs/openafs-1.2.2 )
 	kerberos? ( >=app-crypt/mit-krb5-1.2.6 )

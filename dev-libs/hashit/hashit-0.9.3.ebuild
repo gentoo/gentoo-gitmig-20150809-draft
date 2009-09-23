@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/hashit-0.9.3.ebuild,v 1.5 2005/05/04 20:48:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hashit/hashit-0.9.3.ebuild,v 1.6 2009/09/23 17:20:19 patrick Exp $
 
 DESCRIPTION="Hashit is a library of generic hash tables that supports different collision handling methods with one common interface. Both data and keys can be of any type. It is small and easy to use."
 HOMEPAGE="http://www.pleyades.net/david/projects/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}

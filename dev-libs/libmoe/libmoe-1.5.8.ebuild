@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.8.ebuild,v 1.4 2005/04/09 20:57:10 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/libmoe-1.5.8.ebuild,v 1.5 2009/09/23 17:23:01 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc -alpha"
 IUSE=""
 
-DEPEND="virtual/libc
-	dev-lang/perl"
+DEPEND="dev-lang/perl"
 
 src_compile() {
 	emake CF="${CFLAGS} -I." \

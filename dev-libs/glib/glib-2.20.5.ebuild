@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.5.ebuild,v 1.3 2009/09/22 11:09:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.20.5.ebuild,v 1.4 2009/09/23 17:19:54 patrick Exp $
 
 EAPI="2"
 
@@ -14,8 +14,7 @@ SLOT="2"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="debug doc fam hardened selinux xattr"
 
-RDEPEND="virtual/libc
-	virtual/libiconv
+RDEPEND="virtual/libiconv
 	xattr? ( sys-apps/attr )
 	fam? ( virtual/fam )"
 DEPEND="${RDEPEND}

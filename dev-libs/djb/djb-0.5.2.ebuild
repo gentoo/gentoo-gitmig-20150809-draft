@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/djb-0.5.2.ebuild,v 1.6 2005/05/30 18:24:46 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/djb-0.5.2.ebuild,v 1.7 2009/09/23 17:18:13 patrick Exp $
 
 inherit toolchain-funcs fixheadtails
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}/${PN}
 

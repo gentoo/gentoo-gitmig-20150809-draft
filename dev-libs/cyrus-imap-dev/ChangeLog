@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-imap-dev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.60 2009/07/19 18:18:57 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-imap-dev/ChangeLog,v 1.61 2009/09/23 17:17:50 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  cyrus-imap-dev-2.3.13.ebuild, cyrus-imap-dev-2.3.14.ebuild:
+  Remove virtual/libc
 
   19 Jul 2009; nixnut <nixnut@gentoo.org> cyrus-imap-dev-2.3.14.ebuild:
   ppc stable #271800

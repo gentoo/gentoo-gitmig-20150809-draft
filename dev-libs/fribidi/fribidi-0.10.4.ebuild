@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.26 2009/04/05 20:59:37 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fribidi/fribidi-0.10.4.ebuild,v 1.27 2009/09/23 17:19:23 patrick Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ~sh sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}

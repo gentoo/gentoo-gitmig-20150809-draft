@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.1.ebuild,v 1.4 2008/11/17 11:29:17 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.1.ebuild,v 1.5 2009/09/23 17:24:10 patrick Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 
 IUSE=""
-DEPEND="virtual/libc
-		sys-libs/ncurses"
+DEPEND="sys-libs/ncurses"
 
 S=${WORKDIR}/libtecla
 

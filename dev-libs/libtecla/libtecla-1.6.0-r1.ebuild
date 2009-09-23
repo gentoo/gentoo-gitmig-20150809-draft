@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.0-r1.ebuild,v 1.3 2008/06/03 13:10:03 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtecla/libtecla-1.6.0-r1.ebuild,v 1.4 2009/09/23 17:24:10 patrick Exp $
 
 DESCRIPTION="Tecla command-line editing library"
 HOMEPAGE="http://www.astro.caltech.edu/~mcs/tecla/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}/libtecla
 

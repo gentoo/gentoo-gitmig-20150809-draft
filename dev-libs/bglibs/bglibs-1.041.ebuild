@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.041.ebuild,v 1.9 2008/11/07 11:01:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.041.ebuild,v 1.10 2009/09/23 17:16:03 patrick Exp $
 
 inherit fixheadtails toolchain-funcs multilib
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 hppa ~mips ppc sparc x86 ~ppc64"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}

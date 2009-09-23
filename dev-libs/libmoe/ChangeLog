@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libmoe
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.18 2008/11/19 00:06:07 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmoe/ChangeLog,v 1.19 2009/09/23 17:23:01 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libmoe-1.5.8.ebuild,
+  libmoe-1.5.8-r1.ebuild:
+  Remove virtual/libc
 
 *libmoe-1.5.8-r2 (19 Nov 2008)
 

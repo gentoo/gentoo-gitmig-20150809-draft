@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.104.ebuild,v 1.2 2008/11/07 11:01:56 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.104.ebuild,v 1.3 2009/09/23 17:16:03 patrick Exp $
 
 inherit toolchain-funcs eutils multilib
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_unpack() {
 	unpack ${A}
