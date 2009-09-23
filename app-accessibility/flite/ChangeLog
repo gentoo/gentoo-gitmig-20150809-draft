@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/flite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.26 2009/04/01 18:57:37 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/flite/ChangeLog,v 1.27 2009/09/23 14:50:40 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> flite-1.2-r1.ebuild:
+  Removing virtual/libc depends
 
   01 Apr 2009; William Hubbs <williamh@gentoo.org> flite-1.3.ebuild:
   Stable on x86
