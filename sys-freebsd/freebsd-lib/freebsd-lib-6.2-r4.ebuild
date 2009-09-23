@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r4.ebuild,v 1.4 2009/09/19 19:52:19 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-6.2-r4.ebuild,v 1.5 2009/09/23 20:44:21 patrick Exp $
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -33,8 +33,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		=sys-freebsd/freebsd-sources-${RV}*
 		!bootstrap? ( app-arch/bzip2 )"
 
-	PROVIDE="virtual/libc
-		virtual/os-headers"
+	PROVIDE="virtual/os-headers"
 
 else
 	SRC_URI="${SRC_URI}
