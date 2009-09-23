@@ -1,15 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r1.ebuild,v 1.3 2009/05/05 14:44:15 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-5.22.00-r3.ebuild,v 1.1 2009/09/23 23:47:18 bicatali Exp $
 
 EAPI=2
-inherit versionator eutils qt4 fortran elisp-common fdo-mime toolchain-funcs
+inherit versionator eutils qt4 elisp-common fdo-mime toolchain-funcs
 
-#DOC_PV=$(get_major_version)_$(get_version_component_range 2)
-DOC_PV=5_21
+DOC_PV=$(get_major_version)_$(get_version_component_range 2)
 ROOFIT_DOC_PV=2.91-33
 TMVA_DOC_PV=4
-PATCH_PV=p02
+PATCH_PV=p04
 
 DESCRIPTION="C++ data analysis framework and interpreter from CERN"
 SRC_URI="ftp://root.cern.ch/${PN}/${PN}_v${PV}.source.tar.gz
@@ -30,7 +29,7 @@ IUSE="afs cern cint7 clarens doc emacs examples fftw geant4 kerberos ldap
 
 # libafterimage ignored, to check every version
 # see https://savannah.cern.ch/bugs/?func=detailitem&item_id=30944
-#	|| ( >=media-libs/libafterimage-1.15 x11-wm/afterstep )
+#	|| ( >=media-libs/libafterimage-1.18 x11-wm/afterstep )
 CDEPEND=">=dev-lang/cfortran-4.4-r2
 	dev-libs/libpcre
 	>=media-libs/ftgl-2.1.3_rc5
@@ -85,18 +84,12 @@ pkg_setup() {
 	elog "For example, for SRP, you would set: "
 	elog "EXTRA_ECONF=\"--enable-srp --with-srp-libdir=/usr/$(get_libdir)\""
 	elog
-	if use cern; then
-		FORTRAN="gfortran g77 ifc"
-		fortran_pkg_setup
-	else
-		unset F77
-	fi
 	enewgroup rootd
 	enewuser rootd -1 -1 /var/spool/rootd rootd
 
-	if use openmp &&
-		[[ $(tc-getCC)$ == *gcc* ]] &&
-		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] ||
+	if use openmp && \
+		[[ $(tc-getCC)$ == *gcc* ]] && \
+		( [[ $(gcc-major-version)$(gcc-minor-version) -lt 42 ]] || \
 			! built_with_use sys-devel/gcc openmp ); then
 		ewarn "You are using gcc and OpenMP is available with gcc >= 4.2"
 		ewarn "If you want to build this package with OpenMP, abort now,"
@@ -106,17 +99,28 @@ pkg_setup() {
 		export USE_OPENMP=1
 		use math && export USE_PARALLEL_MINUIT2=1
 	fi
+	if use cint7 && \
+		[[ $(tc-getCXX)$ == *g++* ]] && \
+		[[ $(gcc-major-version)$(gcc-minor-version) -ge 44 ]]; then
+		ewarn "cint7 cannot be compiled with g++ >= 4.4."
+		ewarn "If you want to build this package with CINT7"
+		ewarn "switch to an older gcc version or another compiler"
+		die "cint7 incompatible with gcc>4"
+	fi
 }
 
 src_prepare() {
-
-	epatch "${WORKDIR}"/${P}-svn28086.patch
+	epatch "${WORKDIR}"/${P}-gcc44.patch
+	epatch "${WORKDIR}"/${P}-kerberos-1.7.patch
+	epatch "${WORKDIR}"/${P}-svn29990.patch
 	epatch "${WORKDIR}"/${P}-cint7-libdir.patch
 	epatch "${WORKDIR}"/${P}-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-as-needed.patch
 	epatch "${WORKDIR}"/${P}-xrootd-shared.patch
 	epatch "${WORKDIR}"/${P}-xrootd-prop-flags.patch
 	epatch "${WORKDIR}"/${P}-configure-paths.patch
+	epatch "${WORKDIR}"/${P}-configure-sandbox.patch
+	epatch "${WORKDIR}"/${P}-g4root-flags.patch
 
 	# use system cfortran
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc
@@ -150,7 +154,7 @@ src_configure() {
 	./configure \
 		--with-cc=$(tc-getCC) \
 		--with-cxx=$(tc-getCXX) \
-		--with-f77=${FORTRANC} \
+		--with-f77=$(tc-getF77) \
 		--fail-on-missing \
 		--prefix=/usr \
 		--libdir=/usr/$(get_libdir)/${PN} \
