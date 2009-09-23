@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.78 2008/12/07 23:56:27 fauli Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.79 2009/09/23 18:48:24 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libetpan-0.57.ebuild:
+  Remove virtual/libc
 
   07 Dec 2008; Christian Faulhammer <fauli@gentoo.org>
   -libetpan-0.54.ebuild, -libetpan-0.56.ebuild:

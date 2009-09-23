@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.13 2008/05/21 18:56:43 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.76.ebuild,v 1.14 2009/09/23 18:47:36 patrick Exp $
 
 inherit toolchain-funcs eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="ppc sparc x86"
 IUSE="mysql postgres test"
 
-RDEPEND="virtual/libc
-		dev-db/cdb"
+RDEPEND="dev-db/cdb"
 DEPEND="${RDEPEND}
 		>=dev-libs/bglibs-1.041
 		mysql? ( virtual/mysql )

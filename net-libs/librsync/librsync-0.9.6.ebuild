@@ -1,12 +1,12 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/librsync-0.9.6.ebuild,v 1.9 2005/01/22 21:10:18 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/librsync/librsync-0.9.6.ebuild,v 1.10 2009/09/23 18:50:06 patrick Exp $
 
 DESCRIPTION="Flexible remote checksum-based differencing"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://librsync.sf.net/"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 SLOT="0"
 LICENSE="LGPL-2.1"

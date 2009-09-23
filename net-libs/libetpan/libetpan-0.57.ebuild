@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.57.ebuild,v 1.7 2008/12/02 21:19:18 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/libetpan-0.57.ebuild,v 1.8 2009/09/23 18:48:24 patrick Exp $
 
 DESCRIPTION="A portable, efficient middleware for different kinds of mail access."
 HOMEPAGE="http://libetpan.sourceforge.net"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86 ~x86-fbsd"
 IUSE="berkdb debug gnutls ipv6 liblockfile sasl ssl"
 
-DEPEND="virtual/libc
-	berkdb? ( sys-libs/db )
+DEPEND="berkdb? ( sys-libs/db )
 	gnutls? ( net-libs/gnutls )
 	!gnutls? ( ssl? ( dev-libs/openssl ) )
 	sasl? ( dev-libs/cyrus-sasl )
