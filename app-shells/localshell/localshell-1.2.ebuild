@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.2.ebuild,v 1.7 2009/01/09 02:33:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.2.ebuild,v 1.8 2009/09/23 16:16:56 patrick Exp $
 
 inherit base
 
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 #RDEPEND=""
 
 PATCHES=( "${FILESDIR}/${P}+gcc-4.3.patch" )

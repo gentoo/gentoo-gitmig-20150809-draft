@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.1.ebuild,v 1.4 2009/01/09 02:33:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/localshell/localshell-1.1.ebuild,v 1.5 2009/09/23 16:16:56 patrick Exp $
 
 DESCRIPTION="Localshell allows per-user/group local control of shell execution."
 HOMEPAGE="http://oss.orbis-terrarum.net/localshell/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
 IUSE=""
-DEPEND="virtual/libc"
+DEPEND=""
 #RDEPEND=""
 
 src_compile() {
