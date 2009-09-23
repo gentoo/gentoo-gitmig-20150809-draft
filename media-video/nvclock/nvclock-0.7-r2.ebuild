@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r2.ebuild,v 1.4 2009/07/13 15:06:21 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.7-r2.ebuild,v 1.5 2009/09/23 14:38:48 ssuominen Exp $
 
 inherit eutils
 
@@ -15,8 +15,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="gtk qt3"
 
-RDEPEND="virtual/libc
-	gtk? ( =x11-libs/gtk+-2* )
+RDEPEND="gtk? ( =x11-libs/gtk+-2* )
 	qt3? ( =x11-libs/qt-3* )"
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"

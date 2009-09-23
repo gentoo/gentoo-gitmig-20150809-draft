@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.9 2009/08/31 22:29:46 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sonic-snap/sonic-snap-1.5.ebuild,v 1.10 2009/09/23 14:36:35 ssuominen Exp $
 
 EAPI="1"
 inherit eutils linux-info
@@ -17,7 +17,6 @@ IUSE="mpeg"
 DEPEND="x11-libs/fltk:1.1
 	mpeg? ( >=media-libs/libfame-0.9.1 )
 	sys-libs/zlib
-	virtual/libc
 	x11-libs/libXdmcp
 	x11-libs/libXau
 	x11-libs/libXrender

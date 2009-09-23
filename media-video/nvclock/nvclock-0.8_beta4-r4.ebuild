@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.2 2009/09/11 21:52:29 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.8_beta4-r4.ebuild,v 1.3 2009/09/23 14:38:48 ssuominen Exp $
 
 EAPI="2"
 
@@ -17,8 +17,7 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc x86"
 IUSE="gtk qt3"
 
-RDEPEND="virtual/libc
-	gtk? ( =x11-libs/gtk+-2* )
+RDEPEND="gtk? ( =x11-libs/gtk+-2* )
 	qt3? ( =x11-libs/qt-3* )"
 
 src_prepare() {
