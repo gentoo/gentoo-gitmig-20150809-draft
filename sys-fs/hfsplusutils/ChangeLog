@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/hfsplusutils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.13 2008/12/19 02:51:10 gentoofan23 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/hfsplusutils/ChangeLog,v 1.14 2009/09/23 20:50:43 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  hfsplusutils-1.0.4-r1.ebuild:
+  Remove virtual/libc
 
   19 Dec 2008; Thomas Anderson <gentoofan23@gentoo.org>
   hfsplusutils-1.0.4-r1.ebuild:

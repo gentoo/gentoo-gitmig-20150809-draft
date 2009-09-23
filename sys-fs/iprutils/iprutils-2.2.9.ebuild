@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.2.9.ebuild,v 1.2 2008/10/20 20:12:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/iprutils/iprutils-2.2.9.ebuild,v 1.3 2009/09/23 20:51:28 patrick Exp $
 
 inherit eutils
 
@@ -14,11 +14,10 @@ LICENSE="IPL-1"
 KEYWORDS="ppc ppc64"
 IUSE=""
 
-DEPEND="virtual/libc
-		>=sys-libs/ncurses-5.4-r5
-		>=sys-apps/pciutils-2.1.11-r1
-		>=sys-fs/sysfsutils-1.3.0
-		|| ( >=sys-fs/udev-096 sys-apps/hotplug )"
+DEPEND=">=sys-libs/ncurses-5.4-r5
+	>=sys-apps/pciutils-2.1.11-r1
+	>=sys-fs/sysfsutils-1.3.0
+	|| ( >=sys-fs/udev-096 sys-apps/hotplug )"
 
 RDEPEND="${DEPEND}
 	virtual/logger"
