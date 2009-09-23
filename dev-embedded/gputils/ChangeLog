@@ -1,6 +1,10 @@
 # ChangeLog for dev-embedded/gputils
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.36 2008/06/03 08:35:02 calchan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gputils/ChangeLog,v 1.37 2009/09/23 16:39:33 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> gputils-0.12.4.ebuild,
+  gputils-0.13.3.ebuild:
+  Remove virtual/libc
 
 *gputils-0.13.6-r1 (03 Jun 2008)
 

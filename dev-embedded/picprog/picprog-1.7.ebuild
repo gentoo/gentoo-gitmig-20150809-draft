@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/picprog-1.7.ebuild,v 1.6 2005/01/01 17:55:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picprog/picprog-1.7.ebuild,v 1.7 2009/09/23 16:40:52 patrick Exp $
 
 DESCRIPTION="a pic16xxx series microcontroller programmer software for the simple serial port device"
 HOMEPAGE="http://www.iki.fi/hyvatti/pic/picprog.html"
@@ -12,9 +12,8 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND="sys-devel/gcc
-	virtual/libc
 	sys-apps/coreutils"
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 src_compile() {
 	emake CXXFLAGS="${CXXFLAGS}" || die

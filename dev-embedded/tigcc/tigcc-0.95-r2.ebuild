@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95-r2.ebuild,v 1.7 2007/07/15 03:57:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.95-r2.ebuild,v 1.8 2009/09/23 16:41:22 patrick Exp $
 
 inherit eutils
 
@@ -31,11 +31,10 @@ KEYWORDS="amd64 ppc x86"
 #KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
-RDEPEND="virtual/libc
-		>=sys-devel/binutils-2.14.90.0.6-r1
-		>=sys-devel/bison-1.875"
+RDEPEND=">=sys-devel/binutils-2.14.90.0.6-r1
+	>=sys-devel/bison-1.875"
 DEPEND="${RDEPEND}
-		app-arch/unzip"
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${A}
