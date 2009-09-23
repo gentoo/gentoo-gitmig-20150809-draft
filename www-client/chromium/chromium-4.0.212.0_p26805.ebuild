@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26805.ebuild,v 1.2 2009/09/23 12:46:03 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-4.0.212.0_p26805.ebuild,v 1.3 2009/09/23 22:26:10 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -16,7 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-arch/bzip2
-	>=dev-libs/libevent-1.4.7
 	dev-libs/libxml2
 	dev-libs/libxslt
 	>=dev-libs/nss-3.12.2
@@ -28,6 +27,7 @@ RDEPEND="app-arch/bzip2
 	>=media-video/ffmpeg-0.5_p19787
 	sys-libs/zlib
 	>=x11-libs/gtk+-2.14.7"
+#	>=dev-libs/libevent-1.4.13
 #	dev-db/sqlite:3
 DEPEND="${RDEPEND}
 	>=dev-util/gperf-3.0.3
@@ -46,7 +46,7 @@ src_prepare() {
 	sed -i "s/'-Werror'/''/" build/common.gypi || die "Werror sed failed"
 	# Prevent automatic -march=pentium4 -msse2 enabling on x86, http://crbug.com/9007
 	epatch "${FILESDIR}"/${PN}-drop_sse2.patch
-	# Use system libevent, http://crbug.com/22208
+	# Add configuration flag to use system libevent
 	epatch "${FILESDIR}"/${PN}-use_system_libevent.patch
 
 	# Display correct svn revision in about box
@@ -67,9 +67,10 @@ EOF
 	export HOME="${S}"
 
 	# Configuration options (system libraries)
-	local myconf="-Duse_system_bzip2=1 -Duse_system_zlib=1 -Duse_system_libevent=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1 -Dlinux_use_tcmalloc=1"
+	local myconf="-Duse_system_bzip2=1 -Duse_system_zlib=1 -Duse_system_libjpeg=1 -Duse_system_libpng=1 -Duse_system_libxml=1 -Duse_system_libxslt=1 -Duse_system_ffmpeg=1 -Dlinux_use_tcmalloc=1"
+	# -Duse_system_libevent=1: http://crbug.com/22140
 	# -Duse_system_sqlite=1 : http://crbug.com/22208
-	# Others still bundled: icu (not possible?), hunspell
+	# Others still bundled: icu (not possible?), hunspell (changes required for sandbox support)
 
 	# Sandbox paths
 	myconf="${myconf} -Dlinux_sandbox_path=${CHROMIUM_HOME}/chrome_sandbox -Dlinux_sandbox_chrome_path=${CHROMIUM_HOME}/chrome"
