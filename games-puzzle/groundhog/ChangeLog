@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/groundhog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/ChangeLog,v 1.15 2009/09/11 00:25:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/ChangeLog,v 1.16 2009/09/23 10:20:02 tupone Exp $
+
+  23 Sep 2009; Alfredo Tupone <tupone@gentoo.org> groundhog-1.4.ebuild:
+  Fix build with LINGUAS="sv" Bug #247439 by flameeyes@gentoo.org
 
   11 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> groundhog-1.4.ebuild:
   EAPI=2

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.22 2009/09/11 00:25:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.23 2009/09/23 10:20:02 tupone Exp $
 
 EAPI=2
 inherit eutils autotools games
@@ -26,6 +26,9 @@ src_prepare() {
 	cd "${WORKDIR}"
 	epatch groundhog_${PV}-${DEB_VER}.diff
 	cd "${S}"
+	sed -e "s:groundhog-1.4/::" -i \
+		debian/patches/sv.po.patch \
+		|| die "sed failed"
 	epatch $(sed -e 's:^:debian/patches/:' debian/patches/series)
 	AT_M4DIR="m4" eautoreconf
 	sed -i 's:$(localedir):/usr/share/locale:' \
@@ -35,10 +38,6 @@ src_prepare() {
 
 src_configure() {
 	egamesconf $(use_enable nls) || die
-}
-
-src_compile() {
-	emake -j1 || die
 }
 
 src_install() {
