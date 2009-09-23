@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.2.3-r1.ebuild,v 1.1 2009/08/30 09:14:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ncurses-ruby-1.2.3-r2.ebuild,v 1.1 2009/09/23 18:23:34 a3li Exp $
 
 inherit ruby
 
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
 end
 EOF
 
-		insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["vendorlibdir"]' | sed -e 's:vendor_ruby:gems:')/specifications
+		insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]' | sed -e 's:site_ruby:gems:')/specifications
 		doins "${T}"/ncurses-${PV}.gemspec || die "Unable to install fake gemspec"
 }
 

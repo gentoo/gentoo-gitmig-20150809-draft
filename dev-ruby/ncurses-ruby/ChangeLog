@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.38 2009/09/06 16:28:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.39 2009/09/23 18:23:34 a3li Exp $
+
+*ncurses-ruby-1.2.3-r2 (23 Sep 2009)
+
+  23 Sep 2009; Alex Legler <a3li@gentoo.org> -ncurses-ruby-1.2.3-r1.ebuild,
+  +ncurses-ruby-1.2.3-r2.ebuild:
+  s/vendorlibdir/sitelibdir/ in the fake gemspec for 1.8.6 compatibility.
+  Thanks to Sebastian Pipping (sping) for reporting this.
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> ncurses-ruby-1.2.3.ebuild:
   amd64/x86 stable, bug #282596
