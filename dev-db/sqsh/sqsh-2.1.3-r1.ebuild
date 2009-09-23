@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.3-r1.ebuild,v 1.4 2007/07/22 10:01:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/sqsh-2.1.3-r1.ebuild,v 1.5 2009/09/23 16:35:03 patrick Exp $
 
 inherit eutils
 
@@ -22,8 +22,7 @@ DEPEND="dev-db/freetds
 		x11-libs/libXext
 		x11-libs/libXmu
 		x11-libs/libX11 )
-	motif? ( x11-libs/openmotif )
-	virtual/libc"
+	motif? ( x11-libs/openmotif )"
 
 src_unpack() {
 	unpack ${A}; cd ${S}

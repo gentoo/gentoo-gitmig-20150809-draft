@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.3.ebuild,v 1.18 2009/02/24 17:45:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.3.ebuild,v 1.19 2009/09/23 16:33:36 patrick Exp $
 
 inherit eutils autotools multilib
 
@@ -8,7 +8,7 @@ DESCRIPTION="libdbi implements a database-independent abstraction layer in C, si
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://libdbi.sourceforge.net/"
 LICENSE="LGPL-2.1"
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND=">=sys-apps/sed-4
 		dev-util/pkgconfig
 		doc? ( app-text/openjade )

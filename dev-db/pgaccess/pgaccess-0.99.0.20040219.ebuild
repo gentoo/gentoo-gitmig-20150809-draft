@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219.ebuild,v 1.8 2009/08/18 06:19:09 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/pgaccess-0.99.0.20040219.ebuild,v 1.9 2009/09/23 16:34:40 patrick Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 
 S=${WORKDIR}/${MY_P}
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 RDEPEND=">=dev-lang/tcl-8.3.4
 	>=dev-lang/tk-8.3.4
