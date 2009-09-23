@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.7 2009/09/23 21:15:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r10.ebuild,v 1.8 2009/09/23 22:04:09 patrick Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,7 @@ RESTRICT="strip" # we'll handle stripping ourself #46186
 DEPEND="virtual/os-headers
 	nls? ( sys-devel/gettext )"
 RDEPEND=""
+PROVIDE="virtual/libc"
 
 do_filter_flags() {
 	# Over-zealous CFLAGS can often cause problems.  What may work for one

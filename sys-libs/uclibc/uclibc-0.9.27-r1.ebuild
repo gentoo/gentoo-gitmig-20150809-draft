@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.37 2009/09/23 21:18:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27-r1.ebuild,v 1.38 2009/09/23 22:07:37 patrick Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -44,6 +44,7 @@ IUSE="build debug elibc_uclibc hardened ipv6 minimal nls pregen userlocales word
 RESTRICT="strip"
 
 RDEPEND=""
+PROVIDE="elibc_uclibc? ( virtual/libc )"
 if [[ ${CTARGET} == ${CHOST} ]] ; then
 	DEPEND="virtual/os-headers app-misc/pax-utils"
 else
