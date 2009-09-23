@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0_rc1-r1.ebuild,v 1.13 2006/01/26 23:14:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/libsrs_alt/libsrs_alt-1.0_rc1-r1.ebuild,v 1.14 2009/09/23 17:55:04 patrick Exp $
 
 MY_PV=${PV%_rc*}
 MY_RC=${PV#*_rc}
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND=""
 
 src_compile() {

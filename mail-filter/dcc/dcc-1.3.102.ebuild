@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.102.ebuild,v 1.1 2009/04/23 16:11:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dcc/dcc-1.3.102.ebuild,v 1.2 2009/09/23 17:52:47 patrick Exp $
 
 inherit flag-o-matic
 
@@ -16,8 +16,7 @@ IUSE="ipv6 rrdtool milter"
 RDEPEND="dev-lang/perl
 	rrdtool? ( net-analyzer/rrdtool )
 	|| ( net-misc/wget www-client/fetch net-misc/curl net-ftp/ftp )
-	milter? ( mail-filter/libmilter )
-	virtual/libc"
+	milter? ( mail-filter/libmilter )"
 DEPEND="sys-apps/sed
 	sys-devel/gcc
 	${RDEPEND}"

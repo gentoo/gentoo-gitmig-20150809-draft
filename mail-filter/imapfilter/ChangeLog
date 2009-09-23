@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/imapfilter
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.28 2008/06/19 16:13:05 dertobi123 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/imapfilter/ChangeLog,v 1.29 2009/09/23 17:53:33 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> imapfilter-2.0.10.ebuild:
+  Remove virtual/libc
 
   19 Jun 2008; Tobias Scherbaum <dertobi123@gentoo.org>
   -files/imapfilter-1.0.patch, -imapfilter-1.1.1.ebuild,
