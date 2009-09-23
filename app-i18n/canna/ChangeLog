@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.58 2009/09/21 02:55:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.59 2009/09/23 15:40:30 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> canna-3.7_p2.ebuild,
+  canna-3.7_p3.ebuild:
+  Remove virtual/libc
 
 *canna-3.7_p3-r1 (21 Sep 2009)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.12 2008/09/09 15:03:44 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xsim/xsim-0.3.9.4-r2.ebuild,v 1.13 2009/09/23 15:42:40 patrick Exp $
 
 EAPI="1"
 inherit kde-functions eutils
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="kde"
 
-DEPEND="virtual/libc
-	>=sys-libs/db-3
+DEPEND=">=sys-libs/db-3
 	>=sys-apps/sed-4
 	kde? ( kde-base/kdelibs:3.5 )"
 

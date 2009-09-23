@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.18 2007/07/22 09:06:19 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7_p2.ebuild,v 1.19 2009/09/23 15:40:30 patrick Exp $
 
 inherit cannadic eutils multilib
 
@@ -15,12 +15,11 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ppc ppc64 sparc x86"
 IUSE="doc"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4
+DEPEND=">=sys-apps/sed-4
 	x11-misc/gccmakedep
 	x11-misc/imake
 	doc? ( app-text/ptex )"
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 S="${WORKDIR}/${MY_P/_/}"
 
