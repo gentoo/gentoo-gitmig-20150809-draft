@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0-r1.ebuild,v 1.7 2008/05/21 18:53:56 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mydns/mydns-1.1.0-r1.ebuild,v 1.8 2009/09/23 18:29:56 patrick Exp $
 
 inherit eutils
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ~hppa ia64 ~ppc sparc x86"
 IUSE="debug nls postgres ssl static zlib"
 
-RDEPEND="virtual/libc
-	ssl? ( dev-libs/openssl )
+RDEPEND="ssl? ( dev-libs/openssl )
 	zlib? ( sys-libs/zlib )
 	postgres? ( virtual/postgresql-server )
 	!postgres? ( virtual/mysql )"

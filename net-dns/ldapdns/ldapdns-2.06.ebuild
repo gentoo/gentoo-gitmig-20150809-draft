@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.5 2007/05/06 08:56:52 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldapdns/ldapdns-2.06.ebuild,v 1.6 2009/09/23 18:29:28 patrick Exp $
 
 inherit eutils
 
@@ -12,8 +12,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=net-nds/openldap-2"
+DEPEND=">=net-nds/openldap-2"
 RDEPEND="${DEPEND}
 	>=sys-process/daemontools-0.70
 	sys-apps/ucspi-tcp"

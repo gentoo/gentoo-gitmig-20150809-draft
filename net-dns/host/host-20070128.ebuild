@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128.ebuild,v 1.6 2008/05/13 13:41:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/host/host-20070128.ebuild,v 1.7 2009/09/23 18:29:05 patrick Exp $
 
 inherit eutils toolchain-funcs multilib
 
@@ -15,7 +15,7 @@ IUSE="debug"
 
 RESTRICT="test"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
