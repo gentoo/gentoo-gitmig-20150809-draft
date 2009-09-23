@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-multisync_plugin/synce-multisync_plugin-0.8.9.ebuild,v 1.5 2005/01/01 15:49:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-multisync_plugin/synce-multisync_plugin-0.8.9.ebuild,v 1.6 2009/09/23 16:13:59 patrick Exp $
 
 DESCRIPTION="Multisync plugin to synchronize Windows CE devices with computers running GNU/Linux, like MS ActiveSync."
 HOMEPAGE="http://sourceforge.net/projects/synce/"
@@ -11,8 +11,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	>=dev-libs/check-0.8.2
+DEPEND=">=dev-libs/check-0.8.2
 	>=app-pda/synce-libsynce-0.8.9
 	>=app-pda/synce-rra-0.8.9
 	>=app-pda/multisync-0.81"

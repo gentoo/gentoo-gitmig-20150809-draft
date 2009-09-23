@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/synce-multisync_plugin
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-multisync_plugin/ChangeLog,v 1.15 2008/04/21 17:01:16 phreak Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/synce-multisync_plugin/ChangeLog,v 1.16 2009/09/23 16:13:59 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  synce-multisync_plugin-0.8.2.ebuild,
+  synce-multisync_plugin-0.8.2-r1.ebuild,
+  synce-multisync_plugin-0.8.9.ebuild:
+  Remove virtual/libc
 
   21 Apr 2008; Christian Heim <phreak@gentoo.org> metadata.xml:
   Fix up metadata.xml. If there's no maintainer for the package, the metadata
