@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.14 2009/07/08 01:44:18 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/octave-2.1.69.ebuild,v 1.15 2009/09/23 20:11:50 patrick Exp $
 
 inherit flag-o-matic fortran
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 ppc ~sparc x86"
 IUSE="emacs static readline zlib latex hdf5 mpi blas"
 
-DEPEND="virtual/libc
-	>=sys-libs/ncurses-5.2-r3
+DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sci-visualization/gnuplot-3.7.1-r3
 	>=sci-libs/fftw-2.1.3
 	>=dev-util/gperf-2.7.2

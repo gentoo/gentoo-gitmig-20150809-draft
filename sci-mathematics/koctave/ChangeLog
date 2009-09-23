@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/koctave
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.14 2008/10/12 11:54:21 markusle Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/koctave/ChangeLog,v 1.15 2009/09/23 20:10:55 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> koctave-0.65-r1.ebuild:
+  Remove virtual/libc
 
   12 Oct 2008; Markus Dittrich <markusle@gentoo.org> koctave-0.65-r1.ebuild:
   Added slot dependencies for kde-3.5 to make sure we don't pull in kde-4.

@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.8.ebuild,v 1.5 2006/02/13 02:04:48 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/glpk-4.8.ebuild,v 1.6 2009/09/23 20:10:31 patrick Exp $
 
 DESCRIPTION="GNU Linear Programming Kit"
 LICENSE="GPL-2"
@@ -12,9 +12,8 @@ IUSE="doc"
 KEYWORDS="amd64 ppc x86"
 
 DEPEND=">=sys-devel/gcc-3.2
-		virtual/libc
 		doc? ( virtual/ghostscript )"
-RDEPEND="virtual/libc"
+RDEPEND=""
 
 src_compile() {
 	LIBS="${LIBS} -lm" econf --enable-shared || die
