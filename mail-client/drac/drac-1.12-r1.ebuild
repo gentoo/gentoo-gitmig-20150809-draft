@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.13 2007/04/28 18:01:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12-r1.ebuild,v 1.14 2009/09/23 17:54:04 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc hppa ~amd64 ppc64"
 IUSE="debug"
 
-DEPEND="virtual/libc
-	virtual/mta
+DEPEND="virtual/mta
 	>=sys-libs/db-3.2.9
 	>=sys-apps/sed-4"
 RDEPEND="${DEPEND}

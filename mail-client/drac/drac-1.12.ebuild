@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12.ebuild,v 1.7 2005/02/19 11:25:39 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/drac/drac-1.12.ebuild,v 1.8 2009/09/23 17:54:04 patrick Exp $
 
 inherit eutils toolchain-funcs
 
@@ -13,8 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="debug"
 
-DEPEND="virtual/libc
-	sys-libs/db
+DEPEND="sys-libs/db
 	>=mail-mta/sendmail-8.9"
 
 S=${WORKDIR}

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.1-r1.ebuild,v 1.6 2008/12/09 03:53:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nmh/nmh-1.1-r1.ebuild,v 1.7 2009/09/23 17:54:29 patrick Exp $
 
 inherit eutils
 DESCRIPTION="New MH mail reader"
@@ -12,8 +12,7 @@ LICENSE="as-is"
 KEYWORDS="~amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc
-	=sys-libs/db-1.85*
+DEPEND="=sys-libs/db-1.85*
 	>=sys-libs/ncurses-5.2"
 
 S=${WORKDIR}/${PN}
