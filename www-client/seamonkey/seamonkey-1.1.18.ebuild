@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.18.ebuild,v 1.1 2009/09/22 03:25:22 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-1.1.18.ebuild,v 1.2 2009/09/23 12:20:19 anarchy Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -64,6 +64,9 @@ src_unpack() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"/patch
+
+		# Fix crash without -fno-strict-aliasing, bug 265642
+	epatch "${FILESDIR}/${PN}-1.1.17-fix-fno-strict-aliasing.patch"
 
 	# Unpack the enigmail plugin
 	if use crypt && ! use moznomail; then
