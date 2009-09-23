@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.3.1.ebuild,v 1.5 2009/09/23 08:42:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.8.3.2.ebuild,v 1.1 2009/09/23 09:43:57 ssuominen Exp $
 
 EAPI=2
 
@@ -13,23 +13,14 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug screen"
 
-RESTRICT="test"
-
-DEPEND=">=sys-libs/ncurses-5.2
+RDEPEND="sys-libs/ncurses
 	screen? ( app-misc/screen )"
-RDEPEND="${DEPEND}"
+DEPEND="${RDEPEND}"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 
-src_prepare() {
-	# Alter makefile so firetalk-int.h is installed
-	sed -i 's/include_HEADERS = firetalk.h/include_HEADERS = firetalk.h firetalk-int.h/' \
-		libfiretalk/Makefile.am \
-		libfiretalk/Makefile.in || die
-}
-
 src_configure() {
-	local myconf=""
+	local myconf="--disable-dnsupdate"
 
 	use debug && myconf="${myconf} --enable-debug"
 	use screen && myconf="${myconf} --enable-detach"
@@ -41,5 +32,5 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	dodoc AUTHORS FAQ BUGS README NEWS ChangeLog doc/*.hlp
+	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README doc/*.hlp
 }
