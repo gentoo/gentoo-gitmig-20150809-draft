@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/mergelog
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.9 2009/07/05 20:05:12 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/mergelog/ChangeLog,v 1.10 2009/09/23 21:09:16 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mergelog-4.5.ebuild:
+  Remove virtual/libc
 
   05 Jul 2009; Benedikt Böhm <hollow@gentoo.org>
   +files/mergelog-4.5-asneeded.patch, mergelog-4.5.ebuild,
