@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/jpeg-compat-6b-r1.ebuild,v 1.1 2009/09/16 19:02:30 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/jpeg-compat-6b-r1.ebuild,v 1.2 2009/09/23 04:29:04 vapier Exp $
 
 EAPI=2
 inherit eutils libtool multilib toolchain-funcs
@@ -23,6 +23,15 @@ DEPEND="${RDEPEND}
 	!<media-libs/jpeg-7"
 
 S=${WORKDIR}/${P/-compat}
+
+pkg_setup() {
+	if ! has_version media-libs/jpeg-compat ; then
+		if [[ -e ${ROOT}/usr/$(get_libdir)/libjpeg.so.62 ]] ; then
+			elog "Removing libjpeg.so.62 manually from media-libs/jpeg"
+			rm -f "${ROOT}/usr/$(get_libdir)/libjpeg.so.62"
+		fi
+	fi
+}
 
 src_prepare() {
 	EPATCH_SUFFIX="patch" epatch "${WORKDIR}"/patch
