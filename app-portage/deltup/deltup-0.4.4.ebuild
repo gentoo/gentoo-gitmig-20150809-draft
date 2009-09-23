@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.7 2009/08/02 15:42:25 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/deltup-0.4.4.ebuild,v 1.8 2009/09/23 16:15:16 patrick Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -16,8 +16,7 @@ IUSE=""
 
 DEPEND="dev-libs/openssl
 	sys-libs/zlib
-	>=app-arch/bzip2-1.0.0
-	virtual/libc"
+	>=app-arch/bzip2-1.0.0"
 RDEPEND="${DEPEND}
 	|| ( dev-util/bdelta =dev-util/xdelta-1* )
 	>=app-arch/bzip2-1.0.4"
