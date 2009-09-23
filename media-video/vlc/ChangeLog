@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.507 2009/09/22 07:50:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.508 2009/09/23 21:47:21 aballier Exp $
+
+  23 Sep 2009; Alexis Ballier <aballier@gentoo.org> vlc-9999.ebuild:
+  bump x264 requirements
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> vlc-1.0.2.ebuild:
   amd64 stable, bug #285370
