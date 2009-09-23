@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.14.ebuild,v 1.17 2008/12/16 20:27:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.9.14.ebuild,v 1.18 2009/09/23 16:32:47 patrick Exp $
 
 DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 HOMEPAGE="http://www.dict.org/"
@@ -11,7 +11,7 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ~hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	econf \

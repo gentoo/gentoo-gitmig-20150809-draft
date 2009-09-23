@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c.ebuild,v 1.6 2008/12/17 15:28:04 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cmigemo/cmigemo-1.3c.ebuild,v 1.7 2009/09/23 16:31:00 patrick Exp $
 
 inherit eutils
 
@@ -13,11 +13,9 @@ SLOT="0"
 KEYWORDS="x86 alpha ppc"	# development branch
 IUSE="emacs"
 
-DEPEND="virtual/libc
-	app-i18n/qkc
+DEPEND="app-i18n/qkc
 	app-dicts/migemo-dict"
-RDEPEND="virtual/libc
-	app-dicts/migemo-dict
+RDEPEND="app-dicts/migemo-dict
 	emacs? ( >=app-text/migemo-0.40-r1 )"
 
 src_unpack() {

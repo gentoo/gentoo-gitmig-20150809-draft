@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.2.ebuild,v 1.10 2007/07/22 10:24:50 omp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspresent/pspresent-1.2.ebuild,v 1.11 2009/09/23 16:37:22 patrick Exp $
 
 IUSE="xinerama"
 
@@ -8,8 +8,7 @@ DESCRIPTION="A tool to display full-screen PostScript presentations."
 SRC_URI="http://www.cse.unsw.edu.au/~matthewc/pspresent/${P}.tar.gz"
 HOMEPAGE="http://www.cse.unsw.edu.au/~matthewc/pspresent/"
 
-RDEPEND="virtual/libc
-	x11-libs/libX11
+RDEPEND="x11-libs/libX11
 	xinerama? ( x11-libs/libXinerama )
 	virtual/ghostscript"
 DEPEND="${RDEPEND}

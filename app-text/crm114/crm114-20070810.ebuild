@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.4 2008/10/26 19:46:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/crm114/crm114-20070810.ebuild,v 1.5 2009/09/23 16:31:45 patrick Exp $
 
 inherit eutils
 IUSE="nls static normalizemime mew mimencode test"
@@ -18,7 +18,6 @@ KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 TREVERS="0.7.5"
 
 DEPEND=">=sys-apps/sed-4
-	virtual/libc
 	normalizemime? ( mail-filter/normalizemime )
 	mew? ( app-emacs/mew )
 	mimencode? ( net-mail/metamail )

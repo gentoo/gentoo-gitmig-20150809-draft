@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.21 2006/05/08 05:19:55 tcort Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7-r2.ebuild,v 1.22 2009/09/23 16:38:12 patrick Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 RDEPEND="sys-apps/diffutils"
 
 src_unpack() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.15.ebuild,v 1.6 2007/06/03 16:17:27 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ocrad-0.15.ebuild,v 1.7 2009/09/23 16:36:58 patrick Exp $
 
 inherit toolchain-funcs eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ppc ~ppc64 sparc ~x86"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 	# econf doesn't work (unrecognized option --host)

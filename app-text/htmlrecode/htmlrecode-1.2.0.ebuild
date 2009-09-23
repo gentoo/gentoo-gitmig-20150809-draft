@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/htmlrecode-1.2.0.ebuild,v 1.5 2007/07/12 04:37:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlrecode/htmlrecode-1.2.0.ebuild,v 1.6 2009/09/23 16:35:46 patrick Exp $
 
 DESCRIPTION="Recodes HTML file using a new character set"
 HOMEPAGE="http://bisqwit.iki.fi/source/htmlrecode.html"
@@ -10,9 +10,8 @@ KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/libc
-	>=sys-apps/sed-4"
-RDEPEND="virtual/libc"
+DEPEND=">=sys-apps/sed-4"
+RDEPEND=""
 
 IUSE=""
 

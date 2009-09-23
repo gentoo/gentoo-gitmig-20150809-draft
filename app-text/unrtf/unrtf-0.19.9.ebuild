@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.9.ebuild,v 1.1 2006/02/17 01:35:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/unrtf/unrtf-0.19.9.ebuild,v 1.2 2009/09/23 16:41:58 patrick Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~s390 ~x86 ~sparc"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {

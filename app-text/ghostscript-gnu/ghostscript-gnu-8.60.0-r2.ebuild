@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0-r2.ebuild,v 1.3 2009/05/26 06:07:23 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gnu/ghostscript-gnu-8.60.0-r2.ebuild,v 1.4 2009/09/23 16:34:05 patrick Exp $
 
 WANT_AUTOMAKE=1.9
 
@@ -20,8 +20,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="X cups cjk gtk jpeg2k"
 
-DEP="virtual/libc
-	>=media-libs/jpeg-6b
+DEP=">=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.5
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/tiff-3.7

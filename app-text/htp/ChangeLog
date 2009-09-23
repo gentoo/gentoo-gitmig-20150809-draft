@@ -1,6 +1,10 @@
 # ChangeLog for app-text/htp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htp/ChangeLog,v 1.9 2008/10/11 20:05:24 wrobel Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/htp/ChangeLog,v 1.10 2009/09/23 16:36:34 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> htp-1.15.ebuild,
+  htp-1.16.ebuild:
+  Remove virtual/libc
 
   11 Oct 2008; Gunnar Wrobel <wrobel@gentoo.org> +files/strip.patch,
   htp-1.16.ebuild:
