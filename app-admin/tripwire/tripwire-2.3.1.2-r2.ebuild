@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.13 2008/06/18 02:57:18 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r2.ebuild,v 1.14 2009/09/23 15:02:59 patrick Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -17,15 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc x86 ~x86-fbsd"
 IUSE="ssl"
 
-DEPEND="virtual/libc
-		sys-devel/automake
-		sys-devel/autoconf
-		dev-util/patchutils
-		ssl? ( dev-libs/openssl )"
-RDEPEND="virtual/libc
-		virtual/cron
-		virtual/mta
-		ssl? ( dev-libs/openssl )"
+DEPEND="sys-devel/automake
+	sys-devel/autoconf
+	dev-util/patchutils
+	ssl? ( dev-libs/openssl )"
+RDEPEND="virtual/cron
+	virtual/mta
+	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/tripwire-${TW_VER}
 

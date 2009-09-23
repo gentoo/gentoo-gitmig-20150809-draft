@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/radmind
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.9 2009/08/03 22:40:44 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.10 2009/09/23 15:02:14 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> radmind-1.7.1-r1.ebuild:
+  Remove virtual/libc
 
   03 Aug 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   radmind-1.7.1-r1.ebuild:

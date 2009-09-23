@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.10 2008/12/31 03:42:12 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4-r1.ebuild,v 1.11 2009/09/23 15:02:36 patrick Exp $
 
 inherit toolchain-funcs
 
@@ -13,10 +13,8 @@ SLOT="0"
 KEYWORDS="-amd64 ppc sparc x86"
 IUSE=""
 
-RDEPEND="virtual/libc
-		virtual/mailx"
-DEPEND="virtual/libc
-	sys-apps/sed
+RDEPEND="virtual/mailx"
+DEPEND="sys-apps/sed
 	sys-devel/gcc
 	sys-devel/autoconf"
 
