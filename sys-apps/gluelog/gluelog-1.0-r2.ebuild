@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r2.ebuild,v 1.15 2004/06/30 02:35:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r2.ebuild,v 1.16 2009/09/23 20:23:53 patrick Exp $
 
 DESCRIPTION="Pipe and socket fittings for the system and kernel logs"
 HOMEPAGE="http://www.linuxuser.co.za/projects.php3"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}
 

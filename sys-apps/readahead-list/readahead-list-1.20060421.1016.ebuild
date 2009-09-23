@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-1.20060421.1016.ebuild,v 1.6 2008/09/26 14:56:40 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/readahead-list-1.20060421.1016.ebuild,v 1.7 2009/09/23 20:26:00 patrick Exp $
 
 inherit base
 
@@ -14,7 +14,7 @@ IUSE="doc"
 
 # I'm not entirely certain about this
 # need to check if other libc variants provide readahead(2)
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 		virtual/os-headers"
 

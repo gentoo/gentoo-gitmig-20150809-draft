@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/syscriptor/syscriptor-1.5.12.ebuild,v 1.11 2007/06/07 11:31:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/syscriptor/syscriptor-1.5.12.ebuild,v 1.12 2009/09/23 20:27:13 patrick Exp $
 
 DESCRIPTION="Program that displays information about your hardware"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -11,7 +11,7 @@ SLOT="0"
 
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 src_compile() {
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20081013.ebuild,v 1.1 2009/04/04 08:52:38 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fxload/fxload-20081013.ebuild,v 1.2 2009/09/23 20:23:29 patrick Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE=""
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 	sys-kernel/linux-headers"
 

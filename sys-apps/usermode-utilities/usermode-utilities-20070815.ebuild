@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20070815.ebuild,v 1.8 2009/05/15 20:58:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usermode-utilities/usermode-utilities-20070815.ebuild,v 1.9 2009/09/23 20:28:36 patrick Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ KEYWORDS="-* amd64 x86"
 IUSE=""
 
 RDEPEND="sys-fs/fuse"
-DEPEND="${RDEPEND}
-	virtual/libc"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}"/tools-${PV}
 
