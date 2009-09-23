@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.17 2007/05/06 10:36:37 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.18 2009/09/23 18:36:15 patrick Exp $
 
 inherit eutils
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~ppc x86"
 IUSE="ssl"
 
-DEPEND="virtual/libc
-	>=dev-libs/gmp-4.1
+DEPEND=">=dev-libs/gmp-4.1
 	>=net-fs/nfs-utils-0.3.3
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 RDEPEND="${DEPEND}

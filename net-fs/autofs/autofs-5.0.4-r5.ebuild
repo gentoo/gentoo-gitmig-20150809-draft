@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.1 2009/06/14 10:46:26 stefaan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-5.0.4-r5.ebuild,v 1.2 2009/09/23 18:35:30 patrick Exp $
 
 inherit eutils multilib autotools
 
@@ -74,10 +74,9 @@ SRC_URI="${SRC_URI_BASE}/${P}.tar.bz2"
 for i in ${PATCH_LIST} ; do
 	SRC_URI="${SRC_URI} ${SRC_URI_BASE}/${i}"
 done ;
-DEPEND="virtual/libc
-		ldap? ( >=net-nds/openldap-2.0 )
-		sasl? ( virtual/krb5 )"
-			# currently, sasl code assumes the presence of kerberosV
+DEPEND="ldap? ( >=net-nds/openldap-2.0 )
+	sasl? ( virtual/krb5 )"
+	# currently, sasl code assumes the presence of kerberosV
 RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="GPL-2"

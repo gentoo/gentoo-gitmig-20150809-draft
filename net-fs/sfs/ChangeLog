@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/sfs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.17 2007/06/23 22:54:14 dirtyepic Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/ChangeLog,v 1.18 2009/09/23 18:36:15 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> sfs-0.7.2.ebuild:
+  Remove virtual/libc
 
   23 Jun 2007; Ryan Hill <dirtyepic@gentoo.org>
   sfs-0.8.0_pre20070512.ebuild:
