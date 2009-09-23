@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.4.ebuild,v 1.2 2009/06/28 17:10:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/icecream/icecream-0.9.4.ebuild,v 1.3 2009/09/23 20:41:51 patrick Exp $
 
 inherit autotools eutils flag-o-matic
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
 IUSE="doc"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND="${RDEPEND}
 		doc? ( =kde-base/kdelibs-3.5* )"
 
