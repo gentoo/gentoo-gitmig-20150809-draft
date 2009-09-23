@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.64 2009/08/21 09:16:53 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.65 2009/09/23 15:09:49 remi Exp $
+
+  23 Sep 2009; Rémi Cardona <remi@gentoo.org> xfs-1.1.0-r1.ebuild:
+  add missing RDEPs (fixes bug #278877)
 
   21 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> files/xfs.start:
   Fix initscript to be sh compilant. Per bug #238552.

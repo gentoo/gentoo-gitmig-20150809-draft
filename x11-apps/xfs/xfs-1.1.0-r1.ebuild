@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.1.0-r1.ebuild,v 1.1 2009/06/28 17:56:55 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/xfs-1.1.0-r1.ebuild,v 1.2 2009/09/23 15:09:49 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -15,7 +15,10 @@ IUSE="doc ipv6 syslog xinetd"
 RDEPEND="x11-libs/libFS
 	x11-libs/libXfont
 	syslog? ( virtual/logger )
-	xinetd? ( virtual/inetd )"
+	xinetd? ( virtual/inetd )
+	x11-apps/mkfontdir
+	x11-apps/mkfontscale
+	x11-apps/ttmkfdir"
 DEPEND="${RDEPEND}
 	x11-proto/fontsproto
 	doc? ( dev-tex/xmltex )"
