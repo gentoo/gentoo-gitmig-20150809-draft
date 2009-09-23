@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.8-r2.ebuild,v 1.1 2009/04/29 08:43:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/electricsheep/electricsheep-2.6.8-r2.ebuild,v 1.2 2009/09/23 14:43:40 ssuominen Exp $
 
 inherit eutils flag-o-matic kde-functions autotools
 
@@ -20,9 +20,7 @@ RDEPEND="x11-libs/libXv
 	media-libs/jpeg
 	media-libs/libpng
 	media-libs/libsdl
-	virtual/libc
 	sys-libs/zlib"
-
 DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-libs/libXt
