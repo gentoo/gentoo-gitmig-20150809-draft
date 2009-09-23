@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/csindex
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.6 2007/03/13 00:12:46 nattfodd Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/csindex/ChangeLog,v 1.7 2009/09/23 17:24:26 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> csindex-2.11c.ebuild:
+  Remove virtual/libc
 
   12 Mar 2007; Alexandre Buisse <nattfodd@gentoo.org> metadata.xml:
   Replaced text-markup by tex as maintaining herd (text-markup split).
