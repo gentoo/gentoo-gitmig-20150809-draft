@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.1 2009/09/22 18:53:50 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.2 2009/09/23 13:42:36 arfrever Exp $
 
 EAPI="2"
 
@@ -42,6 +42,7 @@ RDEPEND=">=app-admin/eselect-python-20080925
 DEPEND="${RDEPEND}
 		!m68k? ( !mips? ( !sparc-fbsd? ( !x86-fbsd? ( dev-util/pkgconfig ) ) ) )"
 PDEPEND="${RDEPEND} app-admin/python-updater"
+RDEPEND+=" app-misc/mime-types"
 
 PROVIDE="virtual/python"
 
