@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-2008.1.ebuild,v 1.1 2009/09/21 23:32:03 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/g-ctan-2008.1-r1.ebuild,v 1.1 2009/09/23 10:29:54 fauli Exp $
 
 EAPI=2
+
+inherit eutils
 
 DESCRIPTION="Generate and install ebuilds from the TeXLive package manager"
 HOMEPAGE="http://launchpad.net/g-ctan"
@@ -17,6 +19,10 @@ DEPEND=""
 RDEPEND="~app-text/texlive-2008
 	|| ( app-arch/xz-utils app-arch/lzma-utils[-nocxx] )
 	>=dev-libs/libpcre-0.7.6"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-fix-overlay-detection.patch
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die

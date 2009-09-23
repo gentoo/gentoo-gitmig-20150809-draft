@@ -1,0 +1,13 @@
+=== modified file 'modules/ebuild'
+--- modules/ebuild	2009-09-14 21:41:25 +0000
++++ modules/ebuild	2009-09-23 10:09:51 +0000
+@@ -48,7 +48,7 @@
+ # Manifest generation.
+ prepare_ebuild() {
+     # Make sure that set_up() (for PV variable) has been called before.
+-    if ! [[ $(portageq portdir_overlay | grep "${G_OVERLAY_DIR%%/}.") ]]
++    if ! [[ $(portageq portdir_overlay | grep "${G_OVERLAY_DIR%%/}") ]]
+     then
+ 	failure "Configured location ${G_OVERLAY_DIR} is not found in"
+ 	failure "PORTDIR_OVERLAY variable in /etc/make.conf.  Please"
+
