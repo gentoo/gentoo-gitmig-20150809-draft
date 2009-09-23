@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/vov-2.0.0.ebuild,v 1.2 2008/05/22 21:44:49 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vov/vov-2.0.0.ebuild,v 1.3 2009/09/23 15:34:35 patrick Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="debug gprof"
 
-RDEPEND="virtual/libc"
+RDEPEND=""
 DEPEND=">=sys-devel/flex-2.5.33-r3
 	>=sys-apps/sed-4.1.5"
 

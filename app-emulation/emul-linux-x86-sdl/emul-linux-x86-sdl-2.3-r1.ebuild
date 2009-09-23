@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-2.3-r1.ebuild,v 1.3 2007/07/02 13:56:30 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/emul-linux-x86-sdl-2.3-r1.ebuild,v 1.4 2009/09/23 15:33:16 patrick Exp $
 
 DESCRIPTION="32bit SDL emulation for amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -13,8 +13,7 @@ KEYWORDS="-* amd64"
 IUSE=""
 RESTRICT="strip"
 
-DEPEND="virtual/libc
-	>=app-emulation/emul-linux-x86-soundlibs-2.5-r1
+DEPEND=">=app-emulation/emul-linux-x86-soundlibs-2.5-r1
 	>=app-emulation/emul-linux-x86-xlibs-7.0-r6"
 
 S=${WORKDIR}

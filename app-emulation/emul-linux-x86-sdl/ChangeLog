@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/emul-linux-x86-sdl
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.32 2008/12/21 13:53:59 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-sdl/ChangeLog,v 1.33 2009/09/23 15:33:16 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
+  emul-linux-x86-sdl-2.3.ebuild, emul-linux-x86-sdl-2.3-r1.ebuild:
+  Remove virtual/libc
 
   21 Dec 2008; Markus Meier <maekke@gentoo.org>
   emul-linux-x86-sdl-20080316.ebuild:
