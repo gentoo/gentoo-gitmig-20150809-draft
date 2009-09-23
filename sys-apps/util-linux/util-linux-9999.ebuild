@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.10 2009/07/26 16:58:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.11 2009/09/23 17:04:01 vapier Exp $
 
 EAPI="2"
 
@@ -25,13 +25,14 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="crypt loop-aes nls old-linux selinux slang uclibc unicode"
+IUSE="crypt loop-aes nls old-linux perl selinux slang uclibc unicode"
 
 RDEPEND="!sys-process/schedutils
 	!sys-apps/setarch
 	>=sys-libs/ncurses-5.2-r2
 	!<sys-libs/e2fsprogs-libs-1.41.8
 	!<sys-fs/e2fsprogs-1.41.8
+	perl? ( dev-lang/perl )
 	selinux? ( sys-libs/libselinux )
 	slang? ( sys-libs/slang )"
 DEPEND="${RDEPEND}
@@ -77,6 +78,11 @@ src_configure() {
 src_install() {
 	emake install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS NEWS README* TODO docs/*
+
+	if ! use perl ; then #284093
+		rm "${D}"/usr/bin/chkdupexe || die
+		rm "${D}"/usr/share/man/man1/chkdupexe.1 || die
+	fi
 
 	# need the libs in /
 	gen_usr_ldscript -a blkid uuid
