@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.6.2-r1.ebuild,v 1.9 2008/01/10 10:06:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.6.2-r1.ebuild,v 1.10 2009/09/23 02:41:50 beandog Exp $
 
 inherit depend.php
 
@@ -28,7 +28,12 @@ IUSE=""
 # we depend on a recent sandbox version to mitigate problems users
 # have been experiencing
 DEPEND="dev-lang/php
-	>=sys-apps/sandbox-1.2.17"
+	>=sys-apps/sandbox-1.2.17
+	!dev-php/pear
+	!dev-php/PEAR-Archive_Tar
+	!dev-php/PEAR-Console_Getopt
+	!dev-php/PEAR-Structures_Graph
+	!dev-php/PEAR-XML_RPC"
 RDEPEND="dev-lang/php"
 
 S=${WORKDIR}
