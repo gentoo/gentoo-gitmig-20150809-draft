@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.2.ebuild,v 1.3 2009/08/23 19:23:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xfburn/xfburn-0.4.2.ebuild,v 1.4 2009/09/23 11:57:27 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -12,7 +12,7 @@ SRC_URI="http://archive.xfce.org/src/apps/${PN}/0.4/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="+dbus debug +gstreamer hal thunar"
+IUSE="+dbus debug gstreamer hal thunar"
 
 RDEPEND=">=dev-libs/libburn-0.4.2
 	>=dev-libs/libisofs-0.6.2
