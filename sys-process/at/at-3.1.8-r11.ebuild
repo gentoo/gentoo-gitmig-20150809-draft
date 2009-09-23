@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.9 2009/09/23 21:06:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/at/at-3.1.8-r11.ebuild,v 1.10 2009/09/23 21:28:54 patrick Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,8 +15,7 @@ IUSE=""
 
 DEPEND="virtual/mta
 	>=sys-devel/flex-2.5.4a"
-RDEPEND="virtual/libc
-	virtual/mta
+RDEPEND="virtual/mta
 	virtual/logger"
 
 pkg_setup() {
