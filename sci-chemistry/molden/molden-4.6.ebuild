@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.6.ebuild,v 1.3 2007/07/30 12:22:49 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molden/molden-4.6.ebuild,v 1.4 2009/09/23 19:55:12 patrick Exp $
 
 inherit eutils toolchain-funcs flag-o-matic fortran
 
@@ -17,8 +17,7 @@ IUSE="opengl"
 RDEPEND="opengl? ( virtual/glut
 	virtual/opengl )
 	x11-libs/libXmu"
-DEPEND="${RDEPEND}
-	virtual/libc"
+DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 

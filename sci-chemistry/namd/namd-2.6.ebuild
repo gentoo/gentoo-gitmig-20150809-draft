@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.6.ebuild,v 1.3 2009/06/08 02:39:18 je_fro Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/namd/namd-2.6.ebuild,v 1.4 2009/09/23 19:55:56 patrick Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -20,7 +20,6 @@ IUSE=""
 RESTRICT="fetch"
 
 DEPEND="app-shells/tcsh
-	virtual/libc
 	=sys-cluster/charm-5.9
 	=sci-libs/fftw-2*
 	=dev-lang/tcl-8.4*"
