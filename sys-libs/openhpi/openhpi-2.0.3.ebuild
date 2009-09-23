@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.0.3.ebuild,v 1.2 2005/05/05 22:58:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/openhpi/openhpi-2.0.3.ebuild,v 1.3 2009/09/23 21:17:57 patrick Exp $
 
 inherit flag-o-matic
 
@@ -12,13 +12,12 @@ LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE="snmp examples"
-RDEPEND="virtual/libc
-		>=sys-fs/sysfsutils-1.0
-		>=sys-libs/openipmi-0.26
-		<sys-libs/openipmi-1.4
-		snmp? ( >=net-analyzer/net-snmp-5.07 )"
+RDEPEND=">=sys-fs/sysfsutils-1.0
+	>=sys-libs/openipmi-0.26
+	<sys-libs/openipmi-1.4
+	snmp? ( >=net-analyzer/net-snmp-5.07 )"
 DEPEND="${RDEPEND}
-		virtual/os-headers"
+	virtual/os-headers"
 
 src_compile() {
 	local myconf

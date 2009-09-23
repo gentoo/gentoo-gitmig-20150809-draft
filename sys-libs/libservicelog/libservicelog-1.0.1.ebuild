@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/libservicelog-1.0.1.ebuild,v 1.4 2009/06/20 23:33:38 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/libservicelog-1.0.1.ebuild,v 1.5 2009/09/23 21:17:12 patrick Exp $
 
 inherit eutils autotools
 
@@ -13,8 +13,7 @@ LICENSE="IPL-1"
 KEYWORDS="ppc ~ppc64"
 IUSE=""
 
-DEPEND="virtual/libc
-dev-db/sqlite"
+DEPEND="dev-db/sqlite"
 
 RDEPEND="${DEPEND}
 	virtual/logger"

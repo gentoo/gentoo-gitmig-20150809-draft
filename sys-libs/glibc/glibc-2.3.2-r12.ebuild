@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.25 2009/01/26 18:41:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r12.ebuild,v 1.26 2009/09/23 21:15:38 patrick Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -51,7 +51,6 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nls? ( sys-devel/gettext )"
 RDEPEND="nls? ( sys-devel/gettext )"
 PDEPEND="ppc? ( >=sys-kernel/linux-headers-2.4.22 )"
-PROVIDE="virtual/libc"
 
 # Try to get a kernel source tree with version equal or greater
 # than $1.  We basically just try a few default locations.  The

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.0.32.ebuild,v 1.2 2009/07/22 13:26:16 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/libsepol-2.0.32.ebuild,v 1.3 2009/09/23 21:16:53 patrick Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 # tests are not meant to be run outside of the
 # full SELinux userland repo

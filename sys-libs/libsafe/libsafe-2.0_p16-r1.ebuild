@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.4 2006/09/22 05:29:57 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/libsafe-2.0_p16-r1.ebuild,v 1.5 2009/09/23 21:16:32 patrick Exp $
 
 inherit flag-o-matic toolchain-funcs multilib
 
@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="prelude"
 
-DEPEND="virtual/libc
-	prelude? ( dev-libs/libprelude )"
+DEPEND="prelude? ( dev-libs/libprelude )"
 
 S=${WORKDIR}/${MY_P}
 

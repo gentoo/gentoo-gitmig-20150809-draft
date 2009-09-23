@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r8.ebuild,v 1.2 2009/08/25 08:50:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.28.3-r8.ebuild,v 1.3 2009/09/23 21:18:50 patrick Exp $
 
 #ESVN_REPO_URI="svn://uclibc.org/trunk/uClibc"
 #inherit subversion
@@ -43,7 +43,6 @@ IUSE="build elibc_uclibc uclibc-compat debug hardened iconv ipv6 minimal nls pre
 RESTRICT="strip"
 
 RDEPEND=""
-PROVIDE="elibc_uclibc? ( virtual/libc )"
 if [[ ${CTARGET} == ${CHOST} ]] ; then
 	DEPEND="virtual/os-headers app-misc/pax-utils"
 else

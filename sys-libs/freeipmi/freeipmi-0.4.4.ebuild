@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.4.4.ebuild,v 1.1 2007/09/23 05:38:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.4.4.ebuild,v 1.2 2009/09/23 21:14:36 patrick Exp $
 
 inherit flag-o-matic
 
@@ -11,12 +11,11 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
-RDEPEND="virtual/libc
-		dev-scheme/guile
-		dev-libs/libgcrypt"
+RDEPEND="dev-scheme/guile
+	dev-libs/libgcrypt"
 DEPEND="${RDEPEND}
-		virtual/os-headers
-		sys-apps/sed"
+	virtual/os-headers
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${A}

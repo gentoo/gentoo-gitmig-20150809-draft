@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsafe
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.9 2008/11/24 04:10:22 matsuu Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsafe/ChangeLog,v 1.10 2009/09/23 21:16:32 patrick Exp $
+
+  23 Sep 2009; Patrick Lauer <patrick@gentoo.org> libsafe-2.0_p16-r1.ebuild:
+  Remove virtual/libc
 
 *libsafe-2.0_p16-r2 (24 Nov 2008)
 
