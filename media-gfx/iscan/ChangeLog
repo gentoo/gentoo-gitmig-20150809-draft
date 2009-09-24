@@ -1,6 +1,21 @@
 # ChangeLog for media-gfx/iscan
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.33 2009/09/21 15:09:10 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/ChangeLog,v 1.34 2009/09/24 22:03:07 flameeyes Exp $
+
+  24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> iscan-2.21.0.ebuild,
+  +files/iscan-2.21.0-drop-ltdl.patch,
+  +files/iscan-2.21.0-fix-g++-test.patch,
+  +files/iscan-2.21.0-noinst-stuff.patch:
+  Further cleanup ebuild; add patch to fix building with libtool-2; avoid
+  the silly hack with CXX variable; remove arch-conditionals in the ebuild
+  code as well (any other arch wanting to keyword will have to mask the USE
+  flags); disable forced PIC; remove unicode USE flag (Gentoo policy wants
+  stuff installed in UTF-8 always); use emake for install; make png, jpeg
+  and tiff USE flag only respond with X USE flag enabled (this will also
+  have to be masked for other arches) avoid sedding the Makefiles, since
+  they are already fixed upstream; avoid using the .png extension for the
+  icon in the .desktop file; rebuild autotools properly; restrict tests
+  since they are silly upstream as well.
 
 *iscan-2.21.0 (21 Sep 2009)
 

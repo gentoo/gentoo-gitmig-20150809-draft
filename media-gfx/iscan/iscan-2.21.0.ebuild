@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.2 2009/09/23 10:43:24 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.3 2009/09/24 22:03:07 flameeyes Exp $
 
 EAPI="2"
 
-inherit eutils toolchain-funcs flag-o-matic
+inherit eutils flag-o-matic autotools
 
 SRC_REV="6"  # revision used by upstream
 
@@ -30,22 +30,25 @@ SRC_URI="http://linux.avasys.jp/drivers/iscan/${PV}/${PN}_${PV}-${SRC_REV}.tar.g
 LICENSE="GPL-2 AVASYS"
 SLOT="0"
 
-IUSE="X gimp jpeg png tiff unicode"
+IUSE="X gimp jpeg png tiff"
 IUSE_LINGUAS="de es fr it ja ko nl pt zh_CN zh_TW"
 
 for X in ${IUSE_LINGUAS}; do IUSE="${IUSE} linguas_${X}"; done
 
 QA_TEXTRELS="usr/$(get_libdir)/iscan/lib*"
 
+# Upstream ships broken sanity test
+RESTRICT=test
+
 RDEPEND="media-gfx/sane-backends
-	png? ( media-libs/libpng )
-	jpeg? ( media-libs/jpeg )
-	tiff? ( media-libs/tiff )
 	>=sys-fs/udev-103
 	>=dev-libs/libusb-0.1.12
 	X? (
 		>=x11-libs/gtk+-2.0
 		gimp? ( media-gfx/gimp )
+		png? ( media-libs/libpng )
+		jpeg? ( media-libs/jpeg )
+		tiff? ( media-libs/tiff )
 	)"
 
 DEPEND="${RDEPEND}
@@ -82,7 +85,7 @@ usermap_to_udev() {
 				# Exchange with hold buffer
 				x
 
-	    			# Create udev command string
+					# Create udev command string
 				s|^:usbid[[:space:]]*"0x\([[:xdigit:]]\+\)"[[:space:]]*"0x\([[:xdigit:]]\+\)".*|ATTRS{idVendor}=="\1", ATTRS{idProduct}=="\2", MODE="0660", GROUP="scanner"|
 
 				# Print (udev command string)
@@ -96,7 +99,7 @@ usermap_to_udev() {
 }
 
 pkg_setup() {
-	if ! ( ( use x86 || use amd64 ) && ( use X || use gimp ) ); then
+	if use X || use gimp; then
 		ewarn
 		ewarn "The iscan application needs CSS x86/amd64-only"
 		ewarn "libs and thus can't be built currently.  You"
@@ -112,7 +115,7 @@ src_prepare() {
 	local i
 
 	# convert japanese docs to UTF-8
-	if use unicode && use linguas_ja; then
+	if use linguas_ja; then
 		for i in {NEWS,README}.ja non-free/*.ja.txt; do
 			if [ -f "${i}" ]; then
 				echo ">>> Converting ${i} to UTF-8"
@@ -121,45 +124,46 @@ src_prepare() {
 		done
 	fi
 
-	# disable iscan frontend + non-free modules
-	if ! ( ( use x86 || use amd64) && use X ); then
+	# disable checks for gtk+
+	if ! use X; then
 		sed -i -e "s:PKG_CHECK_MODULES(GTK,.*):AC_DEFINE([HAVE_GTK_2], 0):g" \
 			-e "s:\(PKG_CHECK_MODULES(GDK_IMLIB,.*)\):#\1:g" configure.ac
-		sed -i -e 's:^\([[:space:]]*\)frontend[[:space:]]*\\:\1\\:g' \
-			-e 's:^\([[:space:]]*\)non-free[[:space:]]*\\:\1\\:g' \
-			-e 's:^\([[:space:]]*\)po[[:space:]]*\\:\1\\:g' Makefile*
-		sed -i -e 's:iscan.1::g' doc/Makefile*
 	fi
 
-	#eautoreconf
+	epatch "${FILESDIR}"/${P}-drop-ltdl.patch
+	epatch "${FILESDIR}"/${P}-fix-g++-test.patch
+	epatch "${FILESDIR}"/${P}-noinst-stuff.patch
+
+	eautoreconf
 }
 
 src_configure() {
 	append-flags -D_GNU_SOURCE  # needed for 'strndup'
-	# hint: dirty hack, look into 'configure.ac' for 'PACKAGE_CXX_ABI'
-	CXX="g++" econf \
-		$(use_enable jpeg) \
-		$(use_enable png) \
-		$(use_enable tiff) \
-		--with-pic --disable-static \
-		$(if (( use x86 || use amd64) && use X ); then
-			 echo $(use_enable gimp) \
-			 --enable-frontend
-		    else
-			 --disable-frontend
-		fi) \
-		|| die "econf failed"
+	local myconf
+
+	if use X; then
+		myconf="--enable-frontend
+			$(use_enable gimp)
+			$(use_enable jpeg)
+			$(use_enable png)
+			$(use_enable tiff)"
+	else
+		myconf="--disable-frontend --disable-gimp
+			--disable-jpeg --disable-png --disable-tiff"
+	fi
+
+	econf --disable-static ${myconf}
 }
 
 src_install() {
 	local MY_LIB="/usr/$(get_libdir)"
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 
 	# install docs
 	dodoc AUTHORS NEWS README doc/epkowa.desc
 	use linguas_ja && dodoc NEWS.ja README.ja
 
-	# remove 'make-udev-rules', we use our own stuff below
+	# remove
 	rm -f "${D}usr/lib/iscan/make-udev-rules"
 
 	# install USB hotplug stuff
@@ -177,7 +181,7 @@ src_install() {
 	doins backend/epkowa.conf
 
 	# link iscan so it is seen as a plugin in gimp
-	if ( ( use x86 || use amd64 ) && use X && use gimp ); then
+	if use X && use gimp; then
 		local plugindir
 		if [ -x /usr/bin/gimptool ]; then
 			plugindir="$(gimptool --gimpplugindir)/plug-ins"
@@ -191,8 +195,8 @@ src_install() {
 	fi
 
 	# install desktop entry
-	if ( use x86 || use amd64 ) && use X; then
-		make_desktop_entry iscan "Image Scan! for Linux ${PV}" scanner.png
+	if use X; then
+		make_desktop_entry iscan "Image Scan! for Linux ${PV}" scanner
 	fi
 }
 
