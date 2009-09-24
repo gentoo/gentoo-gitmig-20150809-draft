@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/hdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.16 2009/09/21 01:57:48 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/ChangeLog,v 1.17 2009/09/24 00:19:12 bicatali Exp $
+
+  24 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf-4.2_p4.ebuild:
+  Renaming the bncdump and ncgen binaries to avoid conflict with netcdf even
+  with USE=-netcdf, closing bug #286141
 
   21 Sep 2009; Sébastien Fabbro <bicatali@gentoo.org> -hdf-4.2.0-r4.ebuild,
   -files/hdf-4.2.0-shared-libs.patch:
