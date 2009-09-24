@@ -3,6 +3,7 @@
 <pkgmetadata>
     <herd>no-herd</herd>
     <maintainer>
-        <email>killerfox@gentoo.org</email>
+        <email>ramereth@gentoo.org</email>
+		<description>Lance Albertson</description>
     </maintainer>
 </pkgmetadata>
