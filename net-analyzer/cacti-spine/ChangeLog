@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cacti-spine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.12 2009/08/24 16:14:01 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.13 2009/09/24 18:54:22 ramereth Exp $
+
+  24 Sep 2009; Lance Albertson <ramereth@gentoo.org>
+  cacti-spine-0.8.7e.ebuild:
+  Stable 0.8.7e on amd64/x86
 
 *cacti-spine-0.8.7e (24 Aug 2009)
 
