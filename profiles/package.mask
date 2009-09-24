@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10498 2009/09/24 13:22:23 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10499 2009/09/24 18:48:35 ramereth Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -1159,11 +1159,6 @@ net-misc/dahdi-tools
 # Masked while we switch to sci-chemistry/gchemutils
 # which now provides this package.
 sci-chemistry/gchempaint
-
-# René Nussbaumer <killerfox@gentoo.org> (10 Feb 2009)
-# I gave away maintainership a while ago nobody took it on. Prepare for remove.
-app-emulation/ganeti
-app-emulation/ganeti-instance-debian-etch
 
 # Ben de Groot <yngwin@gentoo.org> (1 Feb 2009)
 # Masked because it's broken in current form. Several issues, see
