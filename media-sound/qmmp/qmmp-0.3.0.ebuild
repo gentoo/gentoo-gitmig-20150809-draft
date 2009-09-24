@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.3.0.ebuild,v 1.6 2009/09/20 22:08:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/qmmp-0.3.0.ebuild,v 1.7 2009/09/24 07:11:41 ssuominen Exp $
 
 EAPI="2"
 
@@ -13,8 +13,7 @@ SRC_URI="http://qmmp.ylsoftware.com/files/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="aac +alsa +dbus bs2b ffmpeg flac jack libsamplerate +mad modplug musepack oss
-projectm pulseaudio scrobbler sndfile +vorbis wavpack"
+IUSE="aac +alsa +dbus bs2b ffmpeg flac jack libsamplerate +mad modplug musepack oss projectm pulseaudio scrobbler sndfile +vorbis wavpack"
 
 RDEPEND="x11-libs/qt-gui:4
 	media-libs/taglib
@@ -25,8 +24,7 @@ RDEPEND="x11-libs/qt-gui:4
 	flac? ( media-libs/flac )
 	libsamplerate? ( media-libs/libsamplerate )
 	mad? ( media-libs/libmad )
-	musepack? ( || ( >=media-sound/musepack-tools-444
-		media-libs/libmpcdec ) )
+	musepack? ( >=media-sound/musepack-tools-444 )
 	modplug? ( >=media-libs/libmodplug-0.8.4 )
 	vorbis? ( media-libs/libvorbis
 		media-libs/libogg )
