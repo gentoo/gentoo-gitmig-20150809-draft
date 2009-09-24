@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.4.0-r1.ebuild,v 1.2 2009/05/24 16:17:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pdb2pqr/pdb2pqr-1.4.0-r1.ebuild,v 1.3 2009/09/24 23:43:11 markusle Exp $
 
 inherit eutils fortran multilib flag-o-matic distutils python
 
@@ -43,8 +43,6 @@ src_compile() {
 		econf \
 		$(use_with opal) || \
 		die "econf failed"
-#die
-#		$(use_with opal)="http://ws.nbcr.net/opal/services/pdb2pqr_1.4.0" || \
 	emake || die "emake failed"
 }
 
@@ -55,9 +53,7 @@ src_test() {
 }
 
 src_install() {
-#	emake -j1 PREFIX="${D}"/$(python_get_sitedir)/${PN} install || die
 	dodir $(python_get_sitedir)/${PN}
-#	emake -j1 DESTDIR="${D}"/$(python_get_sitedir)/${PN}  install || die
 	emake -j1 DESTDIR="${D}$(python_get_sitedir)/${PN}" PREFIX=""  install || die
 
 	if use doc; then

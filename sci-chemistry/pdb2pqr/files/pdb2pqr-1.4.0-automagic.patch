@@ -1,5 +1,6 @@
---- configure.ac	2009-04-02 16:53:56.000000000 +0200
-+++ configure.ac.new	2009-04-22 11:41:28.000000000 +0200
+diff -Naur pdb2pqr-1.4.0/configure.ac pdb2pqr-1.4.0.new/configure.ac
+--- pdb2pqr-1.4.0/configure.ac	2009-04-02 10:53:56.000000000 -0400
++++ pdb2pqr-1.4.0.new/configure.ac	2009-09-24 19:36:47.000000000 -0400
 @@ -255,38 +255,6 @@
  
    # Test for Numeric install
@@ -39,7 +40,14 @@
  
    # If failed, test for numpy
    AC_MSG_CHECKING([whether you defined numpy])
-@@ -463,23 +431,8 @@
+@@ -457,29 +425,14 @@
+   HAVE_PDB2PQR_OPAL=1
+ fi
+ 
+-if test "$PDB2PQR_OPAL_URL" != ""; then 
++if test "$PDB2PQR_OPAL_URL" != "no"; then 
+   HAVE_PDB2PQR_OPAL=1
+   if test -d $PY_PREFIX/lib/python$PY_VERSION/site-packages/ZSI ; then
      echo ZSI is installed
    else
      #  need to install ZSI
@@ -65,8 +73,9 @@
    fi
  fi  
  
---- pdb2pka/NEWligand_topology.py	2007-10-12 21:52:40.000000000 +0200
-+++ pdb2pka/NEWligand_topology.py.new	2009-04-22 17:01:11.000000000 +0200
+diff -Naur pdb2pqr-1.4.0/pdb2pka/NEWligand_topology.py pdb2pqr-1.4.0.new/pdb2pka/NEWligand_topology.py
+--- pdb2pqr-1.4.0/pdb2pka/NEWligand_topology.py	2007-10-12 15:52:40.000000000 -0400
++++ pdb2pqr-1.4.0.new/pdb2pka/NEWligand_topology.py	2009-09-24 19:36:07.000000000 -0400
 @@ -3,10 +3,7 @@
  # PC 2005/09/23
  # Get ligand topologies
@@ -79,8 +88,9 @@
      
  from sets import Set
  from ligandclean.trial_templates import *
---- pdb2pka/ligand_topology.py	2008-06-13 16:15:38.000000000 +0200
-+++ pdb2pka/ligand_topology.py.new	2009-04-22 17:02:59.000000000 +0200
+diff -Naur pdb2pqr-1.4.0/pdb2pka/ligand_topology.py pdb2pqr-1.4.0.new/pdb2pka/ligand_topology.py
+--- pdb2pqr-1.4.0/pdb2pka/ligand_topology.py	2008-06-13 10:15:38.000000000 -0400
++++ pdb2pqr-1.4.0.new/pdb2pka/ligand_topology.py	2009-09-24 19:36:07.000000000 -0400
 @@ -3,10 +3,7 @@
  # PC 2005/09/23
  # Get ligand topologies
