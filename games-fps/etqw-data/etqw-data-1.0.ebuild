@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/etqw-data-1.0.ebuild,v 1.2 2009/04/14 07:27:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/etqw-data/etqw-data-1.0.ebuild,v 1.3 2009/09/24 17:20:34 nyhm Exp $
 
 inherit eutils games
 
@@ -18,12 +18,10 @@ S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
 
-src_unpack() {
-	cdrom_get_cds Setup/Data/base/DEU:Setup/Data/base/POL:Setup/Data/base
-}
-
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/etqw
+
+	cdrom_get_cds Setup/Data/base/DEU:Setup/Data/base/POL:Setup/Data/base
 
 	cd "${CDROM_ROOT}"/Setup/Data/base
 	insinto "${dir}"/base
