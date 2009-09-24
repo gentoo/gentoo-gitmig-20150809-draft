@@ -1,7 +1,8 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.8 2008/06/17 01:47:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/ivan/ivan-0.50.ebuild,v 1.9 2009/09/24 03:58:16 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils flag-o-matic games
 
 DESCRIPTION="Rogue-like game with SDL graphics"
@@ -15,19 +16,14 @@ IUSE=""
 
 DEPEND="media-libs/libsdl"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch \
-		"${FILESDIR}"/${P}-gcc41.patch \
-		"${FILESDIR}"/${P}-install.patch \
-		"${FILESDIR}"/${P}-gcc43.patch
-}
+PATCHES=( 
+	"${FILESDIR}"/${P}-gcc41.patch
+	"${FILESDIR}"/${P}-install.patch
+	"${FILESDIR}"/${P}-gcc43.patch )
 
-src_compile() {
+src_configure() {
 	replace-flags -O? -O0 #bug #113627
-	egamesconf || die
-	emake || die "emake failed"
+	egamesconf
 }
 
 src_install() {
