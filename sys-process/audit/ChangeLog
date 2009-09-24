@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.54 2009/08/28 14:06:34 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.55 2009/09/24 04:10:24 darkside Exp $
+
+  24 Sep 2009; Jeremy Olexa <darkside@gentoo.org> -audit-1.6.8.ebuild:
+  remove vuln version wrt bug 271746
 
   28 Aug 2009; Tobias Klausmann <klausman@gentoo.org> audit-1.7.3.ebuild:
   Keyworded on alpha, bug #279595
