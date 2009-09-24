@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-3,v 1.4 2009/09/23 16:03:07 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/files/xdm.initd-3,v 1.5 2009/09/24 17:07:56 williamh Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #
@@ -127,9 +127,9 @@ start() {
 	local EXE= NAME= PIDFILE=
 	setup_dm
 	
-	if [ -f /etc/init.d/.noxdm ] ; then
-		einfo "Skipping ${EXE}, /etc/init.d/.noxdm found"
-		rm /.noxdm
+	if [ -f /etc/init.d/.noxdm -o -f /tmp/.noxdm ] ; then
+		einfo "Skipping ${EXE}, /etc/init.d/.noxdm or /tmp/.noxdm found"
+		rm /etc/init.d/.noxdm /tmp/.noxdm
 		return 0
 	fi
 	
