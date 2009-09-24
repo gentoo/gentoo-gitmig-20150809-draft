@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10494 2009/09/23 21:30:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10495 2009/09/24 00:03:44 bicatali Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sebastien Fabbro <bicatali@gentoo.org> (23 Sep 2009)
+# Masked for more testing, especially with cint7, afs and xrootd
+# on amd64 with gcc-4.4. See bug #280925
+=sci-physics/root-5.24.00
 
 # Alexis Ballier <aballier@gentoo.org> (23 Sep 2009)
 # API changes
