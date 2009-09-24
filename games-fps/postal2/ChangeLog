@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/postal2
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/ChangeLog,v 1.6 2008/06/04 00:13:42 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/ChangeLog,v 1.7 2009/09/24 19:41:30 nyhm Exp $
+
+*postal2-1409.2-r1 (24 Sep 2009)
+
+  24 Sep 2009; Tristan Heaven <nyhm@gentoo.org> +postal2-1409.2-r1.ebuild:
+  Use system libraries instead of the bundled ones
 
   04 Jun 2008; Tristan Heaven <nyhm@gentoo.org> postal2-1409.2.ebuild:
   Remove unneeded dependencies
