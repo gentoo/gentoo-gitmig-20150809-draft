@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/Test-Script-1.06.ebuild,v 1.2 2009/09/22 05:13:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Script/Test-Script-1.06.ebuild,v 1.3 2009/09/24 18:20:30 armin76 Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit perl-module
 DESCRIPTION="Cross-platform basic tests for scripts"
 
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE=""
 
 RDEPEND="virtual/perl-File-Spec
