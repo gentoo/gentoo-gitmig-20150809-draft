@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.2 2009/09/23 13:42:36 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1-r1.ebuild,v 1.3 2009/09/24 14:31:26 arfrever Exp $
 
 EAPI="2"
 
@@ -38,11 +38,11 @@ RDEPEND=">=app-admin/eselect-python-20080925
 			doc? ( dev-python/python-docs:${SLOT} )
 			xml? ( >=dev-libs/expat-2 )
 		)
-		!m68k? ( !mips? ( !sparc-fbsd? ( !x86-fbsd? ( virtual/libffi ) ) ) )"
+		!m68k? ( !mips? ( !sparc-fbsd? ( virtual/libffi ) ) )"
 DEPEND="${RDEPEND}
-		!m68k? ( !mips? ( !sparc-fbsd? ( !x86-fbsd? ( dev-util/pkgconfig ) ) ) )"
+		!m68k? ( !mips? ( !sparc-fbsd? ( dev-util/pkgconfig ) ) )"
 PDEPEND="${RDEPEND} app-admin/python-updater"
-RDEPEND+=" app-misc/mime-types"
+RDEPEND+=" !build? ( app-misc/mime-types )"
 
 PROVIDE="virtual/python"
 
@@ -149,7 +149,7 @@ src_configure() {
 	fi
 	dbmliborder="${dbmliborder#:}"
 
-	if ! use m68k && ! use mips && ! use sparc-fbsd && ! use x86-fbsd; then
+	if ! use m68k && ! use mips && ! use sparc-fbsd; then
 		myconf+=" --with-system-ffi"
 	fi
 
