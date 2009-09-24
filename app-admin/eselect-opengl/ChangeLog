@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/eselect-opengl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.49 2009/09/15 13:53:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-opengl/ChangeLog,v 1.50 2009/09/24 06:10:34 remi Exp $
+
+  24 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  eselect-opengl-1.0.8-r1.ebuild:
+  lower eselect dep to 1.1 (see bug #286090)
 
 *eselect-opengl-1.0.8-r1 (15 Sep 2009)
 
