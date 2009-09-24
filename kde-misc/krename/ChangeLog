@@ -1,6 +1,13 @@
 # ChangeLog for kde-misc/krename
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.49 2009/06/01 18:07:43 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/ChangeLog,v 1.50 2009/09/24 14:47:18 scarabeus Exp $
+
+*krename-4.0.0 (24 Sep 2009)
+
+  24 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/4.0.0-fix_automagicness.patch, -krename-3.9.3.ebuild,
+  +files/4.0.0-fix_taglib_support.patch, +krename-4.0.0.ebuild:
+  Version bump. Remove old.
 
 *krename-3.9.3 (01 Jun 2009)
 
