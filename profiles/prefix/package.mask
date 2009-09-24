@@ -1,5 +1,5 @@
 ####################################################################
-# $Id: package.mask,v 1.35 2009/09/23 11:37:25 mduft Exp $
+# $Id: package.mask,v 1.36 2009/09/24 17:20:29 grobian Exp $
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked.  This file is for
 # Prefix profiles only!
@@ -31,6 +31,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+
+# Fabian Groffen <grobian@gentoo.org> (24 Sep 2009)
+# Masking because it complains too much about shebangs, and because it
+# eats /etc/init.d/functions.sh
+=sys-apps/portage-2.2.00.14277
 
 # Markus Duft <mduft@gentoo.org> (23 Sep 2009)
 # Masking perls File-Spec-3.30, since it requires perl-5.10.1,
