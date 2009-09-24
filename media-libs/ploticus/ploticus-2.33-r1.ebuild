@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.33-r1.ebuild,v 1.4 2008/09/20 21:50:59 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ploticus/ploticus-2.33-r1.ebuild,v 1.5 2009/09/24 15:48:51 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -15,22 +17,13 @@ SLOT=0
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gd flash nls cpulimit svg svgz truetype X"
 DEPEND="media-libs/libpng
-	gd? ( >=media-libs/gd-1.84 media-libs/jpeg )
+	gd? ( >=media-libs/gd-1.84[jpeg,png] media-libs/jpeg )
 	flash? ( =media-libs/ming-0.2a )
 	truetype? ( =media-libs/freetype-2* )
 	X? ( x11-libs/libX11 )
 	!dev-lang/swi-prolog"
 
-pkg_setup() {
-	if use gd;
-	then
-		if ! built_with_use media-libs/gd jpeg || ! built_with_use media-libs/gd png; then
-			die "media-libs/gd needs to be build with USE=\"png jpeg\""
-		fi
-	fi
-}
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	# Fixes a problem with NOX11.
 	# Changes the install directory and comments all flash and gd-related
 	# options. (These options will be selectively uncommented later.)
@@ -125,7 +118,7 @@ src_test() {
 }
 
 src_install() {
-	dodoc README
+	dodoc README || die
 	cd ${S}/src
 	mkdir -p ${D}usr/bin
 	if useq gd; then
