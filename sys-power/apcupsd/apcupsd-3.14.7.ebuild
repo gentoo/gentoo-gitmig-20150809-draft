@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.2 2009/08/08 14:11:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/apcupsd-3.14.7.ebuild,v 1.3 2009/09/24 22:38:38 flameeyes Exp $
 
 WEBAPP_MANUAL_SLOT="yes"
 WEBAPP_OPTIONAL="yes"
@@ -96,6 +96,12 @@ src_install() {
 	if has_version sys-apps/openrc; then
 		newinitd "${FILESDIR}/${PN}.powerfail.init" "${PN}".powerfail || die "newinitd failed"
 	fi
+
+	# Without this it'll crash at startup. When merging in ROOT= this
+	# won't be created by default, so we want to make sure we got it!
+	keepdir /var/lock
+	fowners root:uucp /var/lock
+	fperms 0775 /var/lock
 }
 
 pkg_postinst() {

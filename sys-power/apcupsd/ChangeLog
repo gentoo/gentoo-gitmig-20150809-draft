@@ -1,6 +1,10 @@
 # ChangeLog for sys-power/apcupsd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.55 2009/08/31 14:16:28 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/apcupsd/ChangeLog,v 1.56 2009/09/24 22:38:38 flameeyes Exp $
+
+  24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  apcupsd-3.14.7.ebuild:
+  Create /var/lock if it's not present already.
 
   31 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   apcupsd-3.14.6.ebuild:
