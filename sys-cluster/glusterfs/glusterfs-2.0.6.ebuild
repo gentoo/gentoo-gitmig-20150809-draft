@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.6.ebuild,v 1.2 2009/09/23 07:42:38 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/glusterfs/glusterfs-2.0.6.ebuild,v 1.3 2009/09/24 16:51:56 alexxy Exp $
 
 EAPI="2"
 
@@ -14,12 +14,11 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="emacs +fuse static vim-syntax"
-#IUSE="berkdb emacs +fuse infiniband static vim-syntax"
+#IUSE="emacs +fuse infiniband static vim-syntax"
 
-DEPEND="berkdb? ( >=sys-libs/db-4.6.21 )
-	emacs? ( virtual/emacs )
-	fuse? ( >=sys-fs/fuse-2.7.0 )"
-#	infiniband? ( sys-cluster/libibverbs )
+DEPEND="emacs? ( virtual/emacs )
+		fuse? ( >=sys-fs/fuse-2.7.0 )"
+#		infiniband? ( sys-cluster/libibverbs )
 RDEPEND="${DEPEND}
 		!net-fs/glusterfs"
 
