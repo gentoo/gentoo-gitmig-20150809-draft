@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.156 2009/09/20 20:46:06 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.157 2009/09/24 23:35:09 anarchy Exp $
+
+*nss-3.12.4-r2 (24 Sep 2009)
+
+  24 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> -nss-3.12.4.ebuild,
+  -nss-3.12.4-r1.ebuild, +nss-3.12.4-r2.ebuild:
+  re-enable libz system support, this was drop'd due to many upstream bugs
+  reporting libz issues. These were system configure errors.
 
 *nss-3.12.4-r1 (20 Sep 2009)
 
