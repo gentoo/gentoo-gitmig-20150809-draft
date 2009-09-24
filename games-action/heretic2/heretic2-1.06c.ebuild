@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.5 2009/04/14 07:24:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c.ebuild,v 1.6 2009/09/24 16:17:57 nyhm Exp $
 
 inherit eutils multilib games
 
@@ -21,7 +21,11 @@ QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/${PN}/base/*.so"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="virtual/opengl
-	amd64? ( app-emulation/emul-linux-x86-xlibs )"
+	amd64? ( app-emulation/emul-linux-x86-xlibs )
+	x86? (
+		x11-libs/libX11
+		x11-libs/libXext
+	)"
 
 S=${WORKDIR}
 
@@ -39,6 +43,8 @@ src_unpack() {
 }
 
 src_install() {
+	has_multilib_profile && ABI=x86
+
 	local dir=${GAMES_PREFIX_OPT}/${PN}
 
 	cd "${CDROM_ROOT}"
@@ -67,7 +73,7 @@ src_install() {
 
 	rmdir gl_drivers
 	sed -i \
-		"128i set gl_driver \"/usr/$(ABI=x86 get_libdir)/libGL.so\"" \
+		"128i set gl_driver \"/usr/$(get_libdir)/libGL.so\"" \
 		base/default.cfg \
 		|| die "sed failed"
 
