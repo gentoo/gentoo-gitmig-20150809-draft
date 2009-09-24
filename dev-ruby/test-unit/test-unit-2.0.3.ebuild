@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.3.ebuild,v 1.1 2009/07/19 08:55:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-2.0.3.ebuild,v 1.2 2009/09/24 14:03:40 armin76 Exp $
 
 inherit ruby
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://rubyforge/${PN}/${P}.tgz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~sparc ~x86 ~x86-fbsd"
 IUSE="doc"
 
 DEPEND="

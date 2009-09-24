@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.8 2009/07/19 08:55:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.9 2009/09/24 14:03:40 armin76 Exp $
+
+  24 Sep 2009; Raúl Porcel <armin76@gentoo.org> test-unit-2.0.3.ebuild:
+  Add ~ia64/~sparc wrt #283229
 
 *test-unit-2.0.3 (19 Jul 2009)
 
