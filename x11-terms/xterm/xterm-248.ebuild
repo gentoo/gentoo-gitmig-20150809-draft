@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-248.ebuild,v 1.1 2009/09/24 08:02:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-248.ebuild,v 1.2 2009/09/24 08:07:56 ssuominen Exp $
 
 EAPI=2
 inherit multilib
@@ -51,7 +51,6 @@ src_configure() {
 		--enable-i18n \
 		--enable-load-vt-fonts \
 		--enable-logging \
-		--enable-tcap-query \
 		$(use_enable toolbar) \
 		$(use_enable unicode mini-luit) \
 		$(use_enable unicode luit) \
