@@ -1,0 +1,22 @@
+Index: src/ogmrip-main.c
+===================================================================
+--- src/ogmrip-main.c	(révision 1788)
++++ src/ogmrip-main.c	(copie de travail)
+@@ -1012,9 +1012,15 @@
+     return NULL;
+   }
+ 
++  profile = ogmrip_options_dialog_get_active_profile (OGMRIP_OPTIONS_DIALOG (data->options_dialog));
++  if (!profile)
++  {
++    g_set_error (error, OGMDVD_DISC_ERROR, OGMDVD_DISC_ERROR_UNKNOWN, "<b>%s</b>\n\n%s", 
++        _("No available profile"), _("You must create at least one profile before you can encode."));
++    return NULL;
++  }
++
+   encoding = ogmrip_encoding_new (title, OGMRIP_DEFAULT_FILE_NAME ".avi");
+-
+-  profile = ogmrip_options_dialog_get_active_profile (OGMRIP_OPTIONS_DIALOG (data->options_dialog));
+   ogmrip_encoding_set_profile (encoding, profile);
+ 
+   ogmrip_encoding_set_label (encoding, gtk_entry_get_text (GTK_ENTRY (data->title_entry)));
