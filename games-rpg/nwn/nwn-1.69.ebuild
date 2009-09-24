@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69.ebuild,v 1.2 2008/08/13 19:09:26 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/nwn-1.69.ebuild,v 1.3 2009/09/24 16:21:07 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils games
 
@@ -23,7 +25,14 @@ RESTRICT="mirror strip"
 
 QA_DT_HASH="/opt/nwn/en/nwserver /opt/nwn/en/nwmain /opt/nwn/lib/libSDL-1.2.so.0.11.2 /opt/nwn/lib/libelf.so.1"
 
-RDEPEND=">=games-rpg/nwn-data-1.29-r3
+NWN_DATA=">=games-rpg/nwn-data-1.29-r3[sou?,hou?"
+
+# ${P} requires games-rpg/nwn-data emerged with at least LINGUAS=en or none at all
+RDEPEND="
+	|| (
+		${NWN_DATA},linguas_en]
+		${NWN_DATA},-linguas_fr,-linguas_de,-linguas_es,-linguas_it]
+	)
 	virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	!<games-rpg/nwmouse-0.1-r1
@@ -42,38 +51,6 @@ S=${WORKDIR}/nwn
 GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
-
-die_from_busted_nwn-data() {
-	local use=$*
-	ewarn "You must emerge games-rpg/nwn-data with USE=$use. You can fix this"
-	ewarn "by doing the following:"
-	echo
-	elog "mkdir -p /etc/portage"
-	elog "echo 'games-rpg/nwn-data $use' >> /etc/portage/package.use"
-	elog "emerge --oneshot games-rpg/nwn-data"
-	die "nwn-data requires USE=$use"
-}
-
-pkg_setup() {
-	games_pkg_setup
-	if use sou
-	then
-		built_with_use games-rpg/nwn-data sou || die_from_busted_nwn-data sou
-	fi
-	if use hou
-	then
-		built_with_use games-rpg/nwn-data hou || die_from_busted_nwn-data hou
-	fi
-
-	if ! built_with_use games-rpg/nwn-data linguas_en && \
-		( built_with_use games-rpg/nwn-data linguas_fr \
-		|| built_with_use games-rpg/nwn-data linguas_de \
-		|| built_with_use games-rpg/nwn-data linguas_es \
-		|| built_with_use games-rpg/nwn-data linguas_it )
-	then
-		die "${P} requires games-rpg/nwn-data emerged with at least LINGUAS=en or none at all"
-	fi
-}
 
 src_unpack() {
 	mkdir -p "${S}"/en

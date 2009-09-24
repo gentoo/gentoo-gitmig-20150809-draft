@@ -1,6 +1,9 @@
 # ChangeLog for games-rpg/nwn
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.70 2008/08/13 19:09:26 calchan Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.71 2009/09/24 16:21:07 betelgeuse Exp $
+
+  24 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> nwn-1.69.ebuild:
+  Migrate to EAPI 2 in order to nuke built_with_use.
 
   13 Aug 2008; Denis Dupeyron <calchan@gentoo.org> nwn-1.69.ebuild:
   Fixed LINGUAS issue, thanks to Michael Sterrett. Fixed QA warnings.
