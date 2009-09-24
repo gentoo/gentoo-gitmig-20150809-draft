@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.56 2009/09/24 07:17:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.57 2009/09/24 08:51:38 fauli Exp $
+
+  24 Sep 2009; Christian Faulhammer <fauli@gentoo.org> lucene-2.4.0.ebuild,
+  lucene-2.4.1.ebuild:
+  unquote A variable
 
   24 Sep 2009; Christian Faulhammer <fauli@gentoo.org> lucene-2.3.2.ebuild:
   stable x86, security bug 283370
