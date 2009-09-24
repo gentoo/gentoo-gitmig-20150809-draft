@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.12 2009/01/30 05:38:12 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xgammon/xgammon-0.98.ebuild,v 1.13 2009/09/24 20:46:30 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils
 
 DESCRIPTION="very nice backgammon game for X"
@@ -20,21 +21,21 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}/${P}a
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch \
 		"${FILESDIR}/${P}-broken.patch" \
 		"${FILESDIR}/${P}-config.patch" \
 		"${FILESDIR}/gcc33.patch"
 }
 
-src_compile() {
+src_configure() {
 	xmkmf || die "xmkmf died"
+}
+
+src_compile() {
 	env PATH=".:${PATH}" emake || die "emake failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 }
