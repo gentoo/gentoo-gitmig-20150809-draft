@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.678 2009/09/22 05:15:09 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.679 2009/09/24 14:25:02 armin76 Exp $
+
+  24 Sep 2009; Raúl Porcel <armin76@gentoo.org>
+  mplayer-1.0_rc2_p20090731-r1.ebuild, mplayer-1.0_rc4_p20090919-r1.ebuild:
+  Re-add ~ia64 wrt #280281
 
   22 Sep 2009; Jeremy Olexa <darkside@gentoo.org>
   mplayer-1.0_rc4_p20090919-r1.ebuild:
