@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/dbd-pg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/ChangeLog,v 1.1 2009/08/26 22:52:32 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dbd-pg/ChangeLog,v 1.2 2009/09/24 14:13:11 armin76 Exp $
+
+  24 Sep 2009; Raúl Porcel <armin76@gentoo.org> dbd-pg-0.3.8.ebuild:
+  Add ~ia64/~sparc wrt #283229
 
 *dbd-pg-0.3.8 (26 Aug 2009)
 
