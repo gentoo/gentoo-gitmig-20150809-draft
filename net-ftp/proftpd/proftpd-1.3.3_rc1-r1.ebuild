@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc1-r1.ebuild,v 1.2 2009/09/20 09:01:31 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.3.3_rc1-r1.ebuild,v 1.3 2009/09/24 15:42:20 voyageur Exp $
 
 EAPI="2"
 inherit autotools eutils
@@ -74,6 +74,9 @@ src_prepare() {
 	fi
 	use deflate && __prepare_plugin mod_deflate
 	use vroot && __prepare_plugin mod_vroot
+	# Bug #284853 when using heimdal
+	use kerberos && sed -i -e "s/krb5_principal2principalname/_\0/" \
+		"${WORKDIR}"/mod_gss-${GSS_VER}/mod_auth_gss.c.in
 
 	# Fix MySQL includes
 	sed -i -e "s/<mysql.h>/<mysql\/mysql.h>/g" contrib/mod_sql_mysql.c
