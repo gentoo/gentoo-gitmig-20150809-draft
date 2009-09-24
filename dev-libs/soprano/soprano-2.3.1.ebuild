@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.0-r1.ebuild,v 1.2 2009/09/12 10:13:15 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1.ebuild,v 1.1 2009/09/24 17:51:55 scarabeus Exp $
 
 EAPI="2"
 
@@ -64,6 +64,12 @@ pkg_setup() {
 }
 
 src_prepare() {
+	# Temporarily disable raptor serializer automagic
+	if ! use redland; then
+		sed -e '/set(BUILD_RAPTOR_SERIALIZER TRUE)/d' \
+			-i CMakeLists.txt || die "failed to disable raptor serializer"
+	fi
+
 	base_src_prepare
 }
 
