@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.151 2009/08/15 21:18:23 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.152 2009/09/24 15:50:25 ayoy Exp $
+
+*avidemux-2.5.1-r1 (24 Sep 2009)
+
+  24 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> +avidemux-2.5.1-r1.ebuild,
+  metadata.xml:
+  Version bump, dropping ~ppc keyword due to opencore-amr not keyworded yet
+  for ppc (bug #283839).
 
   15 Aug 2009; Ben de Groot <yngwin@gentoo.org> -avidemux-2.4.3.ebuild:
   Remove old
