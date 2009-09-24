@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene-analyzers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.5 2008/10/03 21:13:10 caster Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.6 2009/09/24 07:49:28 fauli Exp $
+
+  24 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  lucene-analyzers-2.3.2.ebuild:
+  stable x86, security bug 283370
 
 *lucene-analyzers-2.3.2 (03 Oct 2008)
 
