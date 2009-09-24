@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.15.5.ebuild,v 1.2 2009/02/04 15:39:31 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gens/gens-2.15.5.ebuild,v 1.3 2009/09/24 21:21:53 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils flag-o-matic games
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="virtual/opengl
 	>=media-libs/libsdl-1.2
-	>=x11-libs/gtk+-2.4"
+	x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	>=dev-lang/nasm-0.98"
 
