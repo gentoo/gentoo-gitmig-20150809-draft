@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b.ebuild,v 1.7 2009/09/13 10:28:40 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8.ebuild,v 1.1 2009/09/24 19:55:40 flameeyes Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
-IUSE="cupsddk dbus doc fax gtk minimal parport policykit ppds qt3 qt4 scanner snmp"
+IUSE="+cups cupsddk dbus doc fax gtk minimal parport policykit ppds qt3 qt4 scanner snmp"
 
 # Note : libusb-compat untested (calchan 20090516)
 
@@ -23,27 +23,26 @@ DEPEND="!net-print/hpijs
 	>=dev-lang/python-2.4.4[threads]
 	virtual/ghostscript
 	media-libs/jpeg
-	>=net-print/foomatic-filters-3.0.20080507[cups]
 	!minimal? (
 		net-print/cups
 		virtual/libusb:0
-		cupsddk? ( || ( >=net-print/cups-1.4.0 net-print/cupsddk ) )
-		dbus? (
-			sys-apps/dbus
-			dev-python/dbus-python
-			dev-python/pygobject
+		cupsddk? (
+			foomatic? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
+			|| ( >=net-print/cups-1.4.0 net-print/cupsddk )
+		)
+		ppds? (
+			foomatic? ( >=net-print/foomatic-filters-3.0.20080507[cups] )
 		)
 		scanner? ( >=media-gfx/sane-backends-1.0.19-r1 )
 		snmp? (
 			net-analyzer/net-snmp
 			dev-libs/openssl
 		)
-		policykit? ( sys-auth/policykit )
 	)"
 
 RDEPEND="${DEPEND}
 	!minimal? (
-		!<sys-fs/udev-114
+		kernel_linux? ( >=sys-fs/udev-114 )
 		scanner? (
 			dev-python/imaging
 			dev-python/reportlab
@@ -53,11 +52,21 @@ RDEPEND="${DEPEND}
 		fax? (
 			dev-python/reportlab
 		)
-		qt4? ( !qt3? (
-			dev-python/PyQt4[X]
-		) )
-		qt3? (
+		qt3? ( !qt4? (
 			dev-python/PyQt
+		) )
+		qt4? (
+			dev-python/PyQt4[X]
+		)
+		dbus? (
+			sys-apps/dbus
+			dev-python/dbus-python
+			dev-python/pygobject
+		)
+		policykit? (
+			sys-auth/policykit
+			dev-python/pygobject
+			dev-python/dbus-python
 		)
 	)"
 
@@ -69,10 +78,10 @@ pkg_setup() {
 
 	use scanner && ! use gtk && ewarn "You need USE=gtk for the scanner GUI."
 
-	if ! use ppds && ! use cupsddk; then
+	if ! use ppds && ! use cupsddk && ! use cups; then
 		ewarn "Installing neither static (USE=-ppds) nor dynamic (USE=-cupsddk) PPD files,"
-		ewarn "which is probably not what you want. You will almost certainly not be able to "
-		ewarn "print (recommended: USE=\"cupsddk -ppds\")."
+		ewarn "nor hpcups driver (USE=-cups) which is probably not what you want."
+		ewarn "You will almost certainly not be able to print (recommended: USE=\"cups -cupsddk -ppds\")."
 	fi
 
 	if use minimal ; then
@@ -95,17 +104,14 @@ src_prepare() {
 		-e "s:file('/etc/issue', 'r').read():'Gentoo':" \
 		installer/core_install.py || die "sed core_install.py"
 
-	# Replace udev rules, see bug #197726.
-	rm data/rules/55-hpmud.rules
-	cp "${FILESDIR}"/70-hpmud.rules data/rules
-	sed -i -e "s/55-hpmud.rules/70-hpmud.rules/g" Makefile.* */*.html || die "sed failed"
-
 	# SYSFS deprecated - https://bugs.launchpad.net/hplip/+bug/346390
 	sed -i -e "s/SYSFS/ATTRS/g" -e "s/sysfs/attrs/g" data/rules/56-hpmud_support.rules || die "sed failed"
 
-	# plugins check
-	mv data/rules/56-hpmud_support.rules data/rules/71-hpmud_support.rules
-	sed -i -e "s/56-hpmud_support.rules/71-hpmud_support.rules/g" Makefile.* */*.html || die "sed failed"
+	# Replace udev rules, see bug #197726.
+	mv data/rules/40-hplip.rules data/rules/70-hplip.rules || die
+	sed -i \
+		-e "s/40-hplip.rules/70-hplip.rules/g" \
+		Makefile.am */*.html || die "sed failed"
 
 	sed -i \
 		-e s:/usr/lib/cups/driver:$(cups-config --serverbin)/driver:g \
@@ -134,12 +140,12 @@ src_prepare() {
 			hplip-systray.desktop.in || die "sed failed"
 	fi
 
-	epatch "${FILESDIR}"/${PN}-3.9.4+glibc-2.10.patch
-
 	eautoreconf
 }
 
 src_configure() {
+	local myconf
+
 	if use qt3 || use qt4 ; then
 		local gui_build="--enable-gui-build"
 		if use qt4; then
@@ -151,20 +157,35 @@ src_configure() {
 		local gui_build="--disable-gui-build"
 	fi
 
+	if use cupsddk; then
+		myconf="${myconf} $(use_enable foomatic foomatic-drv-install)"
+	else
+		myconf="${myconf} --disable-foomatic-drv-install"
+	fi
+
+	if use ppds; then
+		myconf="${myconf} $(use_enable foomatic foomatic-ppd-install)"
+	else
+		myconf="${myconf} --disable-foomatic-ppd-install"
+	fi
+
 	econf \
 		--disable-dependency-tracking \
 		--disable-cups11-build \
 		--with-cupsbackenddir=$(cups-config --serverbin)/backend \
 		--with-cupsfilterdir=$(cups-config --serverbin)/filter \
 		--disable-foomatic-rip-hplip-install \
+		--enable-udev-acl-rules \
+		${myconf} \
 		${gui_build} \
 		$(use_enable doc doc-build) \
-		$(use_enable cupsddk foomatic-drv-install) \
+		$(use_enable cups hpcups-install) \
+		$(use_enable ppds cups-ppd-install) \
+		$(use_enable cupsddk cups-drv-install) \
 		$(use_enable dbus dbus-build) \
 		$(use_enable fax fax-build) \
 		$(use_enable minimal hpijs-only-build) \
 		$(use_enable parport pp-build) \
-		$(use_enable ppds foomatic-ppd-install) \
 		$(use_enable scanner scan-build) \
 		$(use_enable snmp network-build) \
 		$(use_enable policykit policykit)
@@ -186,6 +207,10 @@ src_install() {
 		insinto /usr/kde/3.5/share/autostart
 		doins hplip-systray.desktop
 	fi
+
+	pushd doc
+	dohtml -r *
+	popd
 }
 
 pkg_preinst() {

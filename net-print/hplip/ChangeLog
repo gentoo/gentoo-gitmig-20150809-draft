@@ -1,6 +1,14 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.124 2009/09/13 10:28:40 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.125 2009/09/24 19:55:40 flameeyes Exp $
+
+*hplip-3.9.8 (24 Sep 2009)
+
+  24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> -hplip-2.8.7.ebuild,
+  -hplip-3.9.2.ebuild, -hplip-3.9.4b.ebuild, hplip-3.9.4b-r1.ebuild,
+  +hplip-3.9.8.ebuild, metadata.xml:
+  Version bump, thanks to Oldrich Jedlicka in bug #275682. Fix bug #285840,
+  thanks to Fabio Erculiani. Remove older versions, also closes bug #270354.
 
   13 Sep 2009; Timo Gurr <tgurr@gentoo.org> hplip-2.8.6b.ebuild,
   hplip-2.8.7.ebuild, hplip-3.9.2.ebuild, hplip-3.9.4b.ebuild,

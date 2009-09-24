@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.4 2009/09/13 10:28:40 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.4b-r1.ebuild,v 1.5 2009/09/24 19:55:40 flameeyes Exp $
 
 EAPI="2"
 
@@ -38,7 +38,6 @@ DEPEND="!net-print/hpijs
 			net-analyzer/net-snmp
 			dev-libs/openssl
 		)
-		policykit? ( sys-auth/policykit )
 	)"
 
 RDEPEND="${DEPEND}
@@ -58,6 +57,11 @@ RDEPEND="${DEPEND}
 		) )
 		qt4? (
 			dev-python/PyQt4[X]
+		)
+		policykit? (
+			sys-auth/policykit
+			dev-python/pygobject
+			dev-python/dbus-python
 		)
 	)"
 

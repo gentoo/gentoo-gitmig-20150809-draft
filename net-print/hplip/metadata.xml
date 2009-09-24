@@ -33,6 +33,9 @@
     <flag name='snmp'>Add support for <pkg>net-analyzer/net-snmp</pkg> 
     which enables this driver to work over networks (both for server and 
     client)</flag>
+    <flag name="cups">
+      Build the hpcups driver for cups.
+    </flag>
   </use>
 
 </pkgmetadata>
