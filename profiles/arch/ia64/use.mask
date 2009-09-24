@@ -60,6 +60,8 @@ topal
 indi
 flite
 wicd
+opencore-amr
+nut
 
 # Stuff that doesn't compile on ia64
 chicken
