@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10496 2009/09/24 00:09:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10497 2009/09/24 09:28:38 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Rémi Cardona <remi@gentoo.org> (24 Sep 2009)
+# Both require xorg-server's libxf86config library which is busted
+# and they both have no maintainer. See bug #222683
+# Masked for removal in 30 days
+dev-python/pyxf86config
+dev-python/rhpxl
 
 # Sebastien Fabbro <bicatali@gentoo.org> (23 Sep 2009)
 # Masked for more testing, especially with cint7, afs and xrootd
