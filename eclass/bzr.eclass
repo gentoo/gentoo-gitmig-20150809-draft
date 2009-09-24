@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.4 2009/09/24 07:19:41 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/bzr.eclass,v 1.5 2009/09/24 08:11:45 fauli Exp $
 #
 # @ECLASS: bzr.eclass
 # @MAINTAINER:
@@ -142,7 +142,7 @@ bzr_initial_fetch() {
 bzr_update() {
 	local repository="${1}";
 
-	if [[ -n "${EBZR_OFFLINE"} ]]; then
+	if [[ -n "${EBZR_OFFLINE}" ]]; then
 		einfo "skipping bzr update -->"
 		einfo "   repository: ${repository}"
 	else
