@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/xf86dga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.27 2009/07/07 01:37:18 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.28 2009/09/24 07:39:44 remi Exp $
+
+  24 Sep 2009; Rémi Cardona <remi@gentoo.org> xf86dga-1.0.2.ebuild,
+  +files/xf86dga-1.0.2-fix-deps.patch:
+  remove useless deps on libXt, libXaw and libXmu (fixes bug #227895)
 
   07 Jul 2009; Jeroen Roovers <jer@gentoo.org> xf86dga-1.0.2.ebuild:
   Stable for HPPA too.
