@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-dbi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.39 2009/08/30 09:47:01 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-dbi/ChangeLog,v 1.40 2009/09/24 14:11:11 armin76 Exp $
+
+  24 Sep 2009; Raúl Porcel <armin76@gentoo.org> ruby-dbi-0.4.2.ebuild:
+  Add ~ia64/~sparc wrt #283229
 
   30 Aug 2009; Alex Legler <a3li@gentoo.org> ruby-dbi-0.4.2.ebuild:
   Fix testing.
