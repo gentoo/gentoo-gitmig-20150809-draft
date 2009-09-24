@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1.ebuild,v 1.5 2009/09/20 13:32:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1.ebuild,v 1.6 2009/09/24 22:10:06 flameeyes Exp $
 
-inherit eutils pam confutils
+inherit eutils pam confutils autotools
 
 MY_P=${P/_/}
 MY_P=${MY_P/beta/b}
@@ -97,8 +97,9 @@ src_unpack() {
 	# prevent binaries from being stripped.
 	sed -i 's/\($(INSTALL).*\) -s \(.*[(sudo|visudo)]\)/\1 \2/g' Makefile.in
 
-	# remove useless c++ checks
-	epunt_cxx
+	epatch "${FILESDIR}"/${MY_P}-securepath.patch
+
+	eautoconf
 }
 
 src_compile() {

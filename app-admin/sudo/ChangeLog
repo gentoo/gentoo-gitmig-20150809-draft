@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.188 2009/09/20 13:32:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.189 2009/09/24 22:10:06 flameeyes Exp $
+
+  24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  sudo-1.7.2_p1.ebuild, +files/sudo-1.7.2p1-securepath.patch:
+  Add a patch to update secure_path description in sudoers man page by
+  default.
 
   20 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> sudo-1.7.2_p1.ebuild:
   Stable on ppc. Bug 284089
