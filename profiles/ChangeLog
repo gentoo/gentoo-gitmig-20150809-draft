@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3309 2009/09/24 09:28:38 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3310 2009/09/24 13:22:23 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  24 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask xfdesktop-4.6.1-r1 temporarily because there's issues with icon
+  positioning.
 
   24 Sep 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add dev-python/pyxf86config and dev-python/rhpxl to p.mask
