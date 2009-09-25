@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.88 2009/08/06 22:21:16 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.89 2009/09/25 05:17:39 zmedico Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -52,7 +52,7 @@ v_echo() {
 	env "$@"
 }
 
-cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.88 2009/08/06 22:21:16 zmedico Exp $"
+cvsver="$Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.89 2009/09/25 05:17:39 zmedico Exp $"
 cvsver=${cvsver##*,v }
 cvsver=${cvsver%%Exp*}
 cvsyear=${cvsver#* }
@@ -254,7 +254,7 @@ done
 # parents.  So we now call portage to read the aggregate profile and store
 # that into a variable.
 
-eval $(pycmd 'import portage; print [str(x) for x in portage.settings.packages];' |
+eval $(pycmd 'import portage, sys; sys.stdout.write(str([str(x) for x in portage.settings.packages]));' |
 sed 's/[][,]//g; s/\*//g' | tr ' ' '\n' | while read p; do n=${p##*/}; n=${n%\'};
 n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 
@@ -302,7 +302,7 @@ export ENV_EXPORTS="GENTOO_MIRRORS PORTDIR DISTDIR PKGDIR PORTAGE_TMPDIR
 	CFLAGS CHOST CXXFLAGS MAKEOPTS ACCEPT_KEYWORDS PROXY HTTP_PROXY
 	FTP_PROXY FEATURES STAGE1_USE"
 
-eval $(python -c 'import portage,os,string;	print "\n".join(["export %s=\"%s\"; [[ -z \"%s\" ]] || einfo %s=\\\"%s\\\";" % (k, portage.settings[k], portage.settings[k], k, portage.settings[k]) for k in os.getenv("ENV_EXPORTS").split()])')
+eval $(python -c 'import portage, os, sys; sys.stdout.write("".join(["export %s=\"%s\"; [[ -z \"%s\" ]] || einfo %s=\\\"%s\\\";\n" % (k, portage.settings[k], portage.settings[k], k, portage.settings[k]) for k in os.getenv("ENV_EXPORTS").split()]))')
 unset ENV_EXPORTS
 
 echo -------------------------------------------------------------------------------
