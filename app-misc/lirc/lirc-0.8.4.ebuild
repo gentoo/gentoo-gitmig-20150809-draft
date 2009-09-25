@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4.ebuild,v 1.6 2009/03/18 07:18:10 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.4.ebuild,v 1.7 2009/09/25 10:20:22 flameeyes Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -243,7 +243,7 @@ src_unpack() {
 	edos2unix contrib/lirc.rules
 
 	# Apply patches needed for some special device-types
-	epatch "${FILESDIR}"/${P}-imon-pad2keys.patch
+	epatch "${FILESDIR}"/${PN}-0.8.3-imon-pad2keys.patch
 	use lirc_devices_audio || epatch "${FILESDIR}"/lirc-0.8.4-portaudio_check.patch
 	use lirc_devices_remote_wonder_plus && epatch "${FILESDIR}"/lirc-0.8.3_pre1-remotewonderplus.patch
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.205 2009/09/23 14:45:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.206 2009/09/25 10:20:22 flameeyes Exp $
+
+  25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> lirc-0.8.4.ebuild,
+  -files/lirc-0.8.4-imon-pad2keys.patch, lirc-0.8.4a.ebuild:
+  Remove duplicate patch.
 
 *lirc-0.8.6 (23 Sep 2009)
 
