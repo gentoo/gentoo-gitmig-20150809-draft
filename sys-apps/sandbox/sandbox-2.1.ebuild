@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.1.ebuild,v 1.2 2009/09/08 17:49:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sandbox/sandbox-2.1.ebuild,v 1.3 2009/09/25 13:19:23 tommy Exp $
 
 #
 # don't monkey with this ebuild unless contacting portage devs.
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/${P}.tar.lzma
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd -x86-fbsd"
-IUSE=""
+IUSE="multilib"
 
 DEPEND="|| ( app-arch/xz-utils app-arch/lzma-utils )
 	>=app-misc/pax-utils-0.1.19" #265376
@@ -31,15 +31,17 @@ sandbox_death_notice() {
 	ewarn "FEATURES=-sandbox emerge sandbox"
 }
 
+sb_get_install_abis() { use multilib && get_install_abis || echo $ABI ; }
+
 src_compile() {
 	filter-lfs-flags #90228
 
 	local OABI=${ABI}
-	for ABI in $(get_install_abis) ; do
+	for ABI in $(sb_get_install_abis) ; do
 		mkdir "${WORKDIR}/build-${ABI}"
 		cd "${WORKDIR}/build-${ABI}"
 
-		multilib_toolchain_setup ${ABI}
+		use multilib && multilib_toolchain_setup ${ABI}
 
 		einfo "Configuring sandbox for ABI=${ABI}..."
 		ECONF_SOURCE="../${P}/" \
@@ -52,7 +54,7 @@ src_compile() {
 
 src_test() {
 	local OABI=${ABI}
-	for ABI in $(get_install_abis) ; do
+	for ABI in $(sb_get_install_abis) ; do
 		cd "${WORKDIR}/build-${ABI}"
 		einfo "Checking sandbox for ABI=${ABI}..."
 		emake check || die "make check failed for ${ABI}"
@@ -62,7 +64,7 @@ src_test() {
 
 src_install() {
 	local OABI=${ABI}
-	for ABI in $(get_install_abis) ; do
+	for ABI in $(sb_get_install_abis) ; do
 		cd "${WORKDIR}/build-${ABI}"
 		einfo "Installing sandbox for ABI=${ABI}..."
 		emake DESTDIR="${D}" install || die "make install failed for ${ABI}"
