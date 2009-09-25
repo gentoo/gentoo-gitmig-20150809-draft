@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/klibc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.70 2009/09/16 09:01:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/ChangeLog,v 1.71 2009/09/25 10:34:14 flameeyes Exp $
+
+  25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> klibc-1.5.8.ebuild,
+  klibc-1.5.11.ebuild, klibc-1.5.12.ebuild, klibc-1.5.12-r1.ebuild,
+  klibc-1.5.15.ebuild, klibc-1.5.15-r1.ebuild,
+  -files/klibc-1.5-nostrip.patch:
+  Remove 1 byte-sized patch (and ebuild reference to that).
 
 *klibc-1.5.15-r1 (16 Sep 2009)
 

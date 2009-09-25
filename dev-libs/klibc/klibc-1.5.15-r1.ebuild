@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.15-r1.ebuild,v 1.1 2009/09/16 09:01:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/klibc/klibc-1.5.15-r1.ebuild,v 1.2 2009/09/25 10:34:14 flameeyes Exp $
 
 # Robin H. Johnson <robbat2@gentoo.org>, 12 Nov 2007:
 # This still needs major work.
@@ -90,9 +90,6 @@ src_unpack() {
 
 	# Fixes for sparc and ppc
 	epatch "${FILESDIR}"/${PN}-1.5-sigaction.patch
-
-	# Prevent klibc from prestripping stuff
-#	epatch "${FILESDIR}"/${P}-nostrip.patch
 
 	# Fix the asm-ppc vs. asm-powerpc issue, bug #196521
 	epatch "${FILESDIR}"/${PN}-1.5.11-klibcasmarch.patch
