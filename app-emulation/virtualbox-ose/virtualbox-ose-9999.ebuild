@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.6 2009/04/18 16:25:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.7 2009/09/25 23:59:40 patrick Exp $
 
 EAPI=1
 
@@ -22,11 +22,13 @@ RDEPEND="!app-emulation/virtualbox-bin
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
 	dev-libs/xerces-c
+	sys-libs/libcap
 	!headless? (
 		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
 		x11-libs/libXcursor
 		media-libs/libsdl
-		x11-libs/libXt )"
+		x11-libs/libXt 
+		media-libs/mesa )"
 DEPEND="${RDEPEND}
 	>dev-util/kbuild-0.1.5
 	>=dev-lang/yasm-0.6.2
@@ -67,8 +69,7 @@ src_compile() {
 
 	local myconf
 	# Don't build vboxdrv kernel module, disable deprecated qt3 support
-	myconf="--disable-kmods --disable-qt3"
-
+	myconf="--disable-kmods"
 	if ! use pulseaudio; then
 			myconf="${myconf} --disable-pulse"
 	fi
