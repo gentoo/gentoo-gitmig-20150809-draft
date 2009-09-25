@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.1.ebuild,v 1.4 2009/07/19 00:12:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-2.1.ebuild,v 1.5 2009/09/25 18:11:52 spock Exp $
 
 inherit eutils
 
@@ -13,6 +13,8 @@ SRC_URI="amd64? ( ${BASE_URI}/cudatoolkit_2.1_linux64_suse11.0.run )
 
 LICENSE="NVIDIA"
 SLOT="0"
+
+# This version should never become a stable candidate due to bug #266568.
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
