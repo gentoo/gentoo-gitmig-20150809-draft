@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/musca
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.1 2009/09/25 06:29:02 jer Exp $
+
+*musca-0.9.23 (25 Sep 2009)
+
+  25 Sep 2009; Jeroen Roovers <jer@gentoo.org> +musca-0.9.23.ebuild,
+  +files/musca-0.9.23-flags.patch, +metadata.xml:
+  Initial commit.
+
