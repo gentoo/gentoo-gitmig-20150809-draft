@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.371 2009/09/25 10:41:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.372 2009/09/25 18:15:44 ranger Exp $
+
+  25 Sep 2009; Brent Baude <ranger@gentoo.org> samba-3.0.36.ebuild:
+  Marking samba-3.0.36 ppc64 for bug 275236
 
   25 Sep 2009; Markus Meier <maekke@gentoo.org> samba-3.0.36.ebuild:
   amd64 stable, bug #275236
