@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/twm-1.0.4.ebuild,v 1.10 2009/08/03 10:13:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/twm-1.0.4.ebuild,v 1.11 2009/09/25 20:50:10 remi Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -15,4 +15,6 @@ IUSE=""
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
 	x11-libs/libXmu"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	sys-devel/flex
+	sys-devel/bison"

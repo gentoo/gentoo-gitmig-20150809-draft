@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/twm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.43 2009/05/15 15:16:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/twm/ChangeLog,v 1.44 2009/09/25 20:50:10 remi Exp $
+
+  25 Sep 2009; Rémi Cardona <remi@gentoo.org> twm-1.0.4.ebuild:
+  add missing flex and bison deps (fixes bug #221419)
 
   15 May 2009; Raúl Porcel <armin76@gentoo.org> twm-1.0.4.ebuild:
   arm/s390 stable
