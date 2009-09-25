@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.16.ebuild,v 1.3 2009/05/04 11:52:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/mime-types-1.16-r1.ebuild,v 1.1 2009/09/25 07:28:06 a3li Exp $
 
 inherit ruby
 
@@ -43,6 +43,6 @@ src_install() {
 
 	dodoc History.txt Install.txt README.txt || die "dodoc failed"
 
-	insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["vendorlibdir"]' | sed -e 's:vendor_ruby:gems:')/specifications
+	insinto $(${RUBY} -r rbconfig -e 'print Config::CONFIG["sitelibdir"]' | sed -e 's:site_ruby:gems:')/specifications
 	newins ${PN}.gemspec ${P}.gemspec || die "Unable to install fake gemspec"
 }

@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.6 2009/05/04 11:52:16 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.7 2009/09/25 07:28:06 a3li Exp $
+
+*mime-types-1.16-r1 (25 Sep 2009)
+
+  25 Sep 2009; Alex Legler <a3li@gentoo.org> -mime-types-1.16.ebuild,
+  +mime-types-1.16-r1.ebuild:
+  s/vendorlibdir/sitelibdir/ for 1.8.6 compatibility. Thanks to Sebastian
+  Pipping for reporting this.
 
   04 May 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   mime-types-1.16.ebuild:
