@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/pnetlib
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.43 2009/01/04 23:00:13 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/ChangeLog,v 1.44 2009/09/25 10:26:27 flameeyes Exp $
+
+  25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/0.7.0-resgen.patch, pnetlib-0.7.4.ebuild,
+  -files/0.8.0-resgen.patch, pnetlib-0.8.0.ebuild:
+  Remove duplicate patches.
 
   04 Jan 2009; Ulrich Mueller <ulm@gentoo.org> pnetlib-0.6.12.ebuild,
   pnetlib-0.7.4.ebuild, pnetlib-0.8.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.8.0.ebuild,v 1.3 2009/01/04 23:00:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetlib/pnetlib-0.8.0.ebuild,v 1.4 2009/09/25 10:26:27 flameeyes Exp $
 
 inherit autotools eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 	cd ${S}
 
 	# patch configure.in to detect renamed resgen.pnet ; bug #39369
-	epatch ${FILESDIR}/0.8.0-resgen.patch
+	epatch "${FILESDIR}"/0.6.12-resgen.patch
 
 	eautoreconf || die "eautoreconf failed"
 }
