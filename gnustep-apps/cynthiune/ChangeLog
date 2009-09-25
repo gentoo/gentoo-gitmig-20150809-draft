@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/cynthiune
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.22 2009/08/16 11:55:11 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/cynthiune/ChangeLog,v 1.23 2009/09/25 11:16:54 maekke Exp $
+
+  25 Sep 2009; Markus Meier <maekke@gentoo.org> cynthiune-0.9.5-r4.ebuild:
+  amd64 stable, bug #281600
 
   16 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   cynthiune-0.9.5-r4.ebuild:
