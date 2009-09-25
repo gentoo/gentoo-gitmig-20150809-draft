@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.6 2009/08/30 21:34:13 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-3.1.1.ebuild,v 1.7 2009/09/25 17:20:04 zmedico Exp $
 
 EAPI="2"
 
@@ -215,7 +215,7 @@ src_install() {
 	sed -e "s:^OPT=.*:OPT=-DNDEBUG:" -i "${D}usr/$(get_libdir)/python${PYVER}/config/Makefile"
 
 	if use build; then
-		rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{email,encodings,sqlite3,test,tkinter}
+		rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{email,sqlite3,test,tkinter}
 	else
 		use elibc_uclibc && rm -fr "${D}usr/$(get_libdir)/python${PYVER}/test"
 		use sqlite || rm -fr "${D}usr/$(get_libdir)/python${PYVER}/"{sqlite3,test/test_sqlite*}
