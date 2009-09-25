@@ -1,6 +1,15 @@
 # ChangeLog for sci-astronomy/skycat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.5 2009/09/16 04:20:56 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/skycat/ChangeLog,v 1.6 2009/09/25 03:19:55 markusle Exp $
+
+*skycat-3.0.2-r2 (25 Sep 2009)
+
+  25 Sep 2009; Markus Dittrich <markusle@gentoo.org>
+  +skycat-3.0.2-r2.ebuild, +files/skycat-3.0.2-systemlibs.patch
+  +files/skycat-3.0.2-makefile-qa.patch:
+  Link against libwcs and cfitsio systemlibs instead of included ones
+  (fixes bug #253273). Also added a patch to fix parallel make and
+  multiple QA issues.
 
   16 Sep 2009; Markus Dittrich <markusle@gentoo.org> skycat-3.0.2-r1.ebuild,
   +files/skycat-3.0.2-glibc-2.10.patch, +files/skycat-3.0.2-tk8.5.patch:
