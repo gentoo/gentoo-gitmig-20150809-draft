@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10499 2009/09/24 18:48:35 ramereth Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10500 2009/09/25 01:33:52 anarchy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
+# Much testing needed, not ready for mainline by any means.
+>=www-client/seamonkey-2.0_beta2
 
 # Samuli Suominen <ssuominen@gentoo.org> (24 Sep 2009)
 # Bad patch or problems with latest xfce4-dev-tools
