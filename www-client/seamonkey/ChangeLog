@@ -1,6 +1,12 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.195 2009/09/23 12:20:19 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.196 2009/09/25 01:35:11 anarchy Exp $
+
+*seamonkey-2.0_beta2 (25 Sep 2009)
+
+  25 Sep 2009; Jory A. Pratt <anarchy@gentoo.org>
+  +seamonkey-2.0_beta2.ebuild, metadata.xml:
+  add 2.0_beta2 to tree with p.mask for testing.
 
   23 Sep 2009; Jory A. Pratt <anarchy@gentoo.org> seamonkey-1.1.18.ebuild:
   add seamonkey-1.1.17-fix-fno-strict-aliasing.patch to 1.1.18

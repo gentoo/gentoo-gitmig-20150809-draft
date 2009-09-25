@@ -14,5 +14,7 @@
 	<flag name='moznoroaming'>sroaming extension support</flag>
 	<flag name='xforms'>XForms is a standard to split up XHTML into XForms,
 		instance data, and user interface</flag>
+	<flag name='custom-optimization'>Fine-tune custom compiler
+		optimizations</flag>
 </use>
 </pkgmetadata>
