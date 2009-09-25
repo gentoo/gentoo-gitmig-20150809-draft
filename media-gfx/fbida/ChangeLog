@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.58 2009/02/20 18:09:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.59 2009/09/25 17:57:07 spock Exp $
+
+*fbida-2.07-r1 (25 Sep 2009)
+
+  25 Sep 2009; Michał Januszewski <spock@gentoo.org> +fbida-2.07-r1.ebuild:
+  Fix bug #284753.
 
   20 Feb 2009; Raúl Porcel <armin76@gentoo.org> fbida-2.07.ebuild:
   arm/sh stable wrt #242596
