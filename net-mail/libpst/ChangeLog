@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/libpst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.18 2009/09/01 08:31:18 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/ChangeLog,v 1.19 2009/09/25 14:55:20 ranger Exp $
+
+  25 Sep 2009; Brent Baude <ranger@gentoo.org> libpst-0.6.41.ebuild:
+  Marking libpst-0.6.41 ~ppc64 for bug 271000
 
 *libpst-0.6.41 (01 Sep 2009)
 
