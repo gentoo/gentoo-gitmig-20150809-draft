@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.00.ebuild,v 1.1 2009/09/25 16:13:48 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-4.00.ebuild,v 1.2 2009/09/25 17:38:37 mr_bones_ Exp $
 
 QA_PRESTRIPPED=/boot/memtest86plus/memtest
 
@@ -24,7 +24,7 @@ src_unpack() {
 	cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-4.00-hardcoded_cc.patch
-	
+
 	# Merged upstream
 	#epatch "${FILESDIR}"/${PN}-1.70-gnu_hash.patch
 
