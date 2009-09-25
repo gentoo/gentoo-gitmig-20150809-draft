@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.147 2009/09/25 10:42:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.148 2009/09/25 18:06:43 ranger Exp $
+
+  25 Sep 2009; Brent Baude <ranger@gentoo.org> cyrus-imapd-2.3.14-r3.ebuild:
+  Marking cyrus-imapd-2.3.14-r3 ppc64 for bug 283596
 
   25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/cyrus-imapd-parallel.patch, -files/kolab/2.3.13/Logging.patch,
