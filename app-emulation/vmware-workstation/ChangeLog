@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.210 2009/08/25 11:36:19 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.211 2009/09/25 10:38:14 maekke Exp $
+
+  25 Sep 2009; Markus Meier <maekke@gentoo.org>
+  vmware-workstation-6.5.3.185404.ebuild:
+  amd64 stable, bug #282213
 
   25 Aug 2009; Christian Faulhammer <fauli@gentoo.org>
   vmware-workstation-6.5.3.185404.ebuild:

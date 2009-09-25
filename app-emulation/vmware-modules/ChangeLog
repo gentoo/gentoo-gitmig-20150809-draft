@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/vmware-modules
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.50 2009/09/22 17:56:21 vadimk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-modules/ChangeLog,v 1.51 2009/09/25 10:35:55 maekke Exp $
+
+  25 Sep 2009; Markus Meier <maekke@gentoo.org>
+  vmware-modules-1.0.0.25.ebuild:
+  amd64 stable, bug #282213
 
 *vmware-modules-1.0.0.24-r1 (22 Sep 2009)
 
