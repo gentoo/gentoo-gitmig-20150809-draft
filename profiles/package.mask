@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10500 2009/09/25 01:33:52 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10501 2009/09/25 18:24:19 nerdboy Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Steve Arnold <nerdboy@gentoo.org> (25 Sep 2009)
+# Masking only this version due to eigen breakage; fixed in 1.6.1 but
+# we probably don't want this version being pulled from anywhere...
+=app-doc/doxygen-1.6.0
 
 # Jory A. Pratt <anarchy@gentoo.org> (24 Sep 2009)
 # Much testing needed, not ready for mainline by any means.
@@ -315,12 +320,6 @@ sys-process/acctail
 #
 # Removal on 2009-10-26
 app-emulation/parallels-workstation
-
-# Steve Arnold <nerdboy@gentoo.org> (24 Aug 2009)
-# Masking due to random package failures on large builds; it mostly works,
-# but it breaks on eigen (see bug #282598) yet solves a couple of other
-# problems with older versions.
->=app-doc/doxygen-1.6.0
 
 # Christian Faulhammer <fauli@gentoo.org> (24 Aug 2009)
 # Has bundled security-vulnerable expat library, see bug 250049
