@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.259 2009/09/24 03:53:27 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.260 2009/09/25 13:12:57 darkside Exp $
+
+*dhcpcd-4.0.15 (25 Sep 2009)
+
+  25 Sep 2009; Jeremy Olexa <darkside@gentoo.org> +dhcpcd-4.0.15.ebuild:
+  Minor version bump to fix bug 285505 and bug 277095
 
 *dhcpcd-5.1.1 (24 Sep 2009)
 
