@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.202 2009/09/19 16:02:15 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.203 2009/09/25 14:42:23 ranger Exp $
+
+  25 Sep 2009; Brent Baude <ranger@gentoo.org> hdparm-9.20.ebuild:
+  Marking hdparm-9.20 ppc64 for bug 284386
 
   19 Sep 2009; nixnut <nixnut@gentoo.org> hdparm-9.20.ebuild:
   ppc stable #284386
