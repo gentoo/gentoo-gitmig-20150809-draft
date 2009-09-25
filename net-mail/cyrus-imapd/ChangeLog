@@ -1,6 +1,16 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.146 2009/09/19 15:18:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.147 2009/09/25 10:42:39 flameeyes Exp $
+
+  25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -files/cyrus-imapd-parallel.patch, -files/kolab/2.3.13/Logging.patch,
+  -files/kolab/2.3.13/annotations2.patch,
+  -files/kolab/2.3.13/folder-names.patch,
+  -files/kolab/2.3.13/cyrus-imap-admin-2.3.13-kolab-annotations.patch,
+  -files/kolab/2.3.13/groups.patch,
+  -files/kolab/2.3.13/timsieved_starttls-sendcaps.patch,
+  -files/kolab/2.3.13/uid.patch:
+  Remove orphan patches.
 
   19 Sep 2009; Jeroen Roovers <jer@gentoo.org> cyrus-imapd-2.3.14-r3.ebuild:
   Stable for HPPA (bug #283596).
