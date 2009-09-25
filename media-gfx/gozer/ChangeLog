@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gozer
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.12 2007/07/22 09:57:42 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gozer/ChangeLog,v 1.13 2009/09/25 16:17:54 jer Exp $
+
+  25 Sep 2009; Jeroen Roovers <jer@gentoo.org> gozer-0.7-r1.ebuild:
+  Fix HOMEPAGE.
 
   22 Jul 2007; Donnie Berkholz <dberkholz@gentoo.org>; gozer-0.7-r1.ebuild:
   Drop virtual/x11 references.
