@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Clipboard
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.3 2009/09/18 19:47:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Clipboard/ChangeLog,v 1.4 2009/09/25 17:14:41 volkmar Exp $
+
+  24 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> Clipboard-0.09.ebuild:
+  Keywording for ppc. Bug 285496
 
   18 Sep 2009; Alexis Ballier <aballier@gentoo.org> Clipboard-0.09.ebuild:
   keyword ~ppc64, working fine on a PowerMac 970
