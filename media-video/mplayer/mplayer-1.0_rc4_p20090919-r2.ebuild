@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20090919-r1.ebuild,v 1.3 2009/09/24 14:25:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc4_p20090919-r2.ebuild,v 1.1 2009/09/25 16:46:09 beandog Exp $
 
 EAPI=2
-inherit eutils flag-o-matic multilib
+inherit eutils flag-o-matic multilib toolchain-funcs
 
-MPLAYER_REVISION=SVN-r29463
+MPLAYER_REVISION=SVN-r29699
 
 IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +ass
 bidi bindist bl +cddb +cdio cdparanoia cpudetection
@@ -48,9 +48,7 @@ RDEPEND="sys-libs/ncurses
 			)
 	)
 	aalib? ( media-libs/aalib )
-	alsa? ( media-libs/alsa-lib
-		sdl? ( media-libs/libsdl[alsa] )
-	)
+	alsa? ( media-libs/alsa-lib )
 	opencore-amr? ( media-libs/opencore-amr )
 	openal? ( media-libs/openal )
 	bidi? ( dev-libs/fribidi )
@@ -82,7 +80,6 @@ RDEPEND="sys-libs/ncurses
 	mng? ( media-libs/libmng )
 	nas? ( media-libs/nas )
 	nut? ( >=media-libs/libnut-661 )
-	oss? ( sdl? ( media-libs/libsdl[oss] ) )
 	png? ( media-libs/libpng )
 	pnm? ( media-libs/netpbm )
 	pulseaudio? ( media-sound/pulseaudio )
@@ -91,6 +88,7 @@ RDEPEND="sys-libs/ncurses
 		app-arch/rar ) )
 	samba? ( net-fs/samba )
 	schroedinger? ( media-libs/schroedinger )
+	sdl? ( media-libs/libsdl )
 	speex? ( media-libs/speex )
 	svga? ( media-libs/svgalib )
 	theora? ( media-libs/libtheora )
@@ -109,9 +107,7 @@ RDEPEND="sys-libs/ncurses
 			x11-libs/libXext
 			x11-libs/libXi
 			x11-libs/gtk+:2 )
-		opengl? ( virtual/opengl
-			sdl? ( media-libs/libsdl[opengl] ) )
-		sdl? ( media-libs/libsdl[X] )
+		opengl? ( virtual/opengl )
 		truetype? ( media-libs/freetype:2
 			media-libs/fontconfig )
 		video_cards_nvidia? (
@@ -126,7 +122,6 @@ RDEPEND="sys-libs/ncurses
 		xv? ( x11-libs/libXv
 			x11-libs/libXxf86vm
 			x11-libs/libXext
-			sdl? ( media-libs/libsdl[xv] )
 			xvmc? ( x11-libs/libXvMC ) )
 	)"
 
@@ -490,7 +485,9 @@ src_configure() {
 	# This version of MPlayer will segfault on Matroska playback
 	# w/gcc-4.4.1.  Remove in the future, prefer to keep upstream's
 	# optimizations.
-	replace-flags -O* -O2
+	if [ $(gcc-major-version) = 4 ] && [ $(gcc-minor-version) -gt 3 ]; then
+		replace-flags -O* -O2
+	fi
 	filter-flags -fPIC -fPIE
 	append-flags -D__STDC_LIMIT_MACROS
 	if use x86 || use x86-fbsd; then

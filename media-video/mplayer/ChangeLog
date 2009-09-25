@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.679 2009/09/24 14:25:02 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.680 2009/09/25 16:46:09 beandog Exp $
+
+*mplayer-1.0_rc4_p20090919-r2 (25 Sep 2009)
+
+  25 Sep 2009; Steve Dibb <beandog@gentoo.org>
+  +mplayer-1.0_rc4_p20090919-r2.ebuild:
+  Only use replace-flags on gcc-4.4+; fix svn revision; less strict on sdl
+  use flag
 
   24 Sep 2009; Raúl Porcel <armin76@gentoo.org>
   mplayer-1.0_rc2_p20090731-r1.ebuild, mplayer-1.0_rc4_p20090919-r1.ebuild:
