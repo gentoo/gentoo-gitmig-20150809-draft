@@ -1,8 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.7 2009/09/10 19:22:21 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.5.ebuild,v 1.8 2009/09/25 08:28:21 scarabeus Exp $
 
 EAPI="2"
+WANT_CMAKE="false"
 KDE_REQUIRED="optional"
 AT_M4DIR="cygnal"
 
@@ -62,9 +63,6 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )
 	gnome? ( app-text/rarian )"
-
-# For the inherit of kde4-base
-CMAKE_IN_TREE_BUILD=1
 
 pkg_setup() {
 	if ! ( use agg || use cairo || use opengl ); then
