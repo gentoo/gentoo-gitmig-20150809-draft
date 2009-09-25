@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-solvers/openfoam-solvers-1.5_p20090311.ebuild,v 1.2 2009/06/13 10:20:25 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-solvers/openfoam-solvers-1.5_p20090311.ebuild,v 1.3 2009/09/25 09:31:34 flameeyes Exp $
 
 EAPI="2"
 
@@ -14,7 +14,8 @@ DESCRIPTION="OpenFOAM - solvers"
 HOMEPAGE="http://www.opencfd.co.uk/openfoam/"
 SRC_URI="mirror://sourceforge/foam/${MY_P}.General.gtgz -> ${MY_P}.General.tgz
 	http://omploader.org/vMWRlMQ/${MY_PN}-git-${PVR}.patch
-	http://omploader.org/vMWRlMA/${MY_P}-svn.patch"
+	http://omploader.org/vMWRlMA/${MY_P}-svn.patch
+	mirror://gentoo/${MY_P}-compile-2.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.5"
@@ -38,7 +39,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${MY_P}-compile.patch
+	epatch "${DISTDIR}"/${MY_P}-compile-2.patch.bz2
 	epatch "${DISTDIR}"/${MY_P}-svn.patch
 	epatch "${DISTDIR}"/${MY_PN}-git-${PVR}.patch
 	epatch "${FILESDIR}"/${MY_P}-ggi.patch
