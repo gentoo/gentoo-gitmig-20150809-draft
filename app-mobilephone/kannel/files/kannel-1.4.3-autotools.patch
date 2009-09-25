@@ -1,6 +1,17 @@
 diff -Nru gateway-1.4.3.orig/configure.in gateway-1.4.3/configure.in
 --- gateway-1.4.3.orig/configure.in	2009-01-12 16:47:01.000000000 +0000
 +++ gateway-1.4.3/configure.in	2009-03-01 14:18:51.000000000 +0000
+@@ -95,8 +95,9 @@
+ AC_SUBST(PKGADD_VENDOR)
+ 
+ dnl Target installation directory for documentation
++PACKAGE=kannel
+ AC_SUBST(docdir)
+-docdir='${prefix}/share/doc/kannel'
++AC_SUBST(PACKAGE)
+ 
+ dnl Checks system type.
+ AC_CONFIG_SECTION([Running system checks])
 @@ -112,7 +112,6 @@
  AC_PROG_INSTALL
  AC_PROG_RANLIB

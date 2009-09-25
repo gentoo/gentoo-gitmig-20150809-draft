@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3.ebuild,v 1.3 2009/09/17 05:34:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/kannel-1.4.3-r1.ebuild,v 1.1 2009/09/25 01:20:07 mrness Exp $
 
 EAPI="2"
 WANT_AUTOMAKE=none
@@ -16,21 +16,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="ssl mysql sqlite postgres pcre doc debug pam"
 
+RESTRICT="test" # some tests fail with "address already in use"
+
 RDEPEND="sys-libs/e2fsprogs-libs
-	>=dev-libs/libxml2-2.6.26
-	>=dev-lang/perl-5.8.8
-	>=sys-libs/zlib-1.2.3
-	ssl? ( >=dev-libs/openssl-0.9.8d )
+	dev-libs/libxml2
+	dev-lang/perl
+	sys-libs/zlib
+	ssl? ( dev-libs/openssl )
 	mysql? ( virtual/mysql )
-	sqlite? ( >=dev-db/sqlite-3.2.1 )
+	sqlite? ( dev-db/sqlite:3 )
 	postgres? ( virtual/postgresql-server )
 	pcre? ( dev-libs/libpcre )
-	doc? ( media-gfx/transfig
-		app-text/jadetex
-		app-text/docbook-dsssl-stylesheets )
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
-	>=sys-devel/bison-2.2"
+	>=sys-devel/bison-2.2
+	doc? ( media-gfx/transfig
+		app-text/jadetex
+		app-text/docbook-dsssl-stylesheets
+		app-text/docbook-sgml-dtd:3.1 )"
 
 S="${WORKDIR}/gateway-${PV}"
 
@@ -41,7 +44,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-custom-wap-ports.patch"
-	epatch "${FILESDIR}/${P}-nolex.patch" # flex is not used
+	epatch "${FILESDIR}/${P}-autotools.patch"
 	epatch "${FILESDIR}/${P}-external-libuuid.patch"
 
 	#by default, use current directory for logging
@@ -52,7 +55,7 @@ src_prepare() {
 
 src_configure() {
 	append-flags -fno-strict-aliasing # some code breaks strict aliasing
-	econf --docdir=/usr/share/doc/${P} \
+	econf --docdir=/usr/share/doc/${PF} \
 		--enable-localtime \
 		--disable-start-stop-daemon \
 		--without-sqlite2 \
@@ -67,9 +70,10 @@ src_configure() {
 		|| die "econf failed"
 }
 
-src_test() {
-	emake check || die "make check failed"
-}
+# phase disabled by RESTRICT
+# src_test() {
+# 	emake check || die "emake check failed"
+# }
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
@@ -83,14 +87,14 @@ src_install() {
 	dodir /etc/kannel
 	insinto /etc/kannel
 	newins doc/examples/kannel.conf kannel.conf.sample
-	newins doc/examples/modems.conf modems.conf.sample
-	use mysql && newins doc/examples/dlr-mysql.conf dlr-mysql.conf.sample
+
+	local f
+	for f in bearerbox smsbox wapbox; do
+		newinitd "${FILESDIR}/kannel-$f.initd" kannel-$f
+	done
 
 	diropts -g kannel -m0770
-	keepdir /var/log/kannel
-
-	newinitd "${FILESDIR}/kannel-initd" kannel
-	newconfd "${FILESDIR}/kannel-confd" kannel
+	keepdir /var/log/kannel /var/run/kannel
 }
 
 pkg_postinst() {

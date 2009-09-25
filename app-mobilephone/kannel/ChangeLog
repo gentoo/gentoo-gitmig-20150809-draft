@@ -1,6 +1,15 @@
 # ChangeLog for app-mobilephone/kannel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.20 2009/09/17 05:34:16 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/kannel/ChangeLog,v 1.21 2009/09/25 01:20:07 mrness Exp $
+
+*kannel-1.4.3-r1 (25 Sep 2009)
+
+  25 Sep 2009; Alin Năstac <mrness@gentoo.org> -kannel-1.4.3.ebuild,
+  +kannel-1.4.3-r1.ebuild, +files/kannel-1.4.3-autotools.patch,
+  -files/kannel-1.4.3-nolex.patch, +files/kannel-bearerbox.initd,
+  +files/kannel-smsbox.initd, +files/kannel-wapbox.initd:
+  Correct doc dependencies and split init script in 3:
+  kannel-{bearerbox,smsbox,wapbox} (#285246).
 
   17 Sep 2009; Alin Năstac <mrness@gentoo.org> kannel-1.4.3.ebuild:
   Install certificate in /etc/ssl and correct info messages (#285152).
