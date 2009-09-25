@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/DFBPoint-0.7.2.ebuild,v 1.14 2009/07/29 23:42:12 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/DFBPoint-0.7.2.ebuild,v 1.15 2009/09/25 15:55:36 jer Exp $
 
 DESCRIPTION="DFBPoint is presentation program based on DirectFB"
-HOMEPAGE="http://www.directfb.org/dfbpoint.xml"
+HOMEPAGE="http://www.directfb.org/index.php?path=Projects%2FDFBPoint"
 SRC_URI="http://www.directfb.org/download/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"

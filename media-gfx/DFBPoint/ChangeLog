@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/DFBPoint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.15 2009/07/29 23:42:12 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/DFBPoint/ChangeLog,v 1.16 2009/09/25 15:55:36 jer Exp $
+
+  25 Sep 2009; Jeroen Roovers <jer@gentoo.org> DFBPoint-0.7.2.ebuild:
+  Fix HOMEPAGE.
 
   29 Jul 2009; Víctor Ostorga <vostorga@gentoo.org> DFBPoint-0.7.2.ebuild:
   Fixing DEPENDS and RDEPENDS, closes bug #232420
