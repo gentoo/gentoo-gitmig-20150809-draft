@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-src/openfoam-src-1.6.ebuild,v 1.1 2009/09/18 09:12:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-src/openfoam-src-1.6.ebuild,v 1.2 2009/09/25 09:30:00 flameeyes Exp $
 
 EAPI="2"
 
@@ -12,7 +12,8 @@ MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="OpenFOAM - sources"
 HOMEPAGE="http://www.opencfd.co.uk/openfoam/"
-SRC_URI="mirror://sourceforge/foam/${MY_P}.General.gtgz -> ${MY_P}.General.tgz"
+SRC_URI="mirror://sourceforge/foam/${MY_P}.General.gtgz -> ${MY_P}.General.tgz
+	mirror://gentoo/${MY_P}-compile.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.6"
@@ -26,7 +27,7 @@ S=${WORKDIR}/${MY_P}
 INSDIR="/usr/$(get_libdir)/${MY_PN}/${MY_P}"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${MY_P}-compile.patch
+	epatch "${DISTDIR}"/${MY_P}-compile.patch.bz2
 }
 
 src_install() {

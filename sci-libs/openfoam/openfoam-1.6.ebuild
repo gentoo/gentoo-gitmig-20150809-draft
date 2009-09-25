@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-1.6.ebuild,v 1.1 2009/09/18 09:11:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam/openfoam-1.6.ebuild,v 1.2 2009/09/25 09:28:54 flameeyes Exp $
 
 EAPI="2"
 
@@ -12,7 +12,8 @@ MY_P="${MY_PN}-${MY_PV}"
 
 DESCRIPTION="Open Field Operation and Manipulation - CFD Simulation Toolbox"
 HOMEPAGE="http://www.opencfd.co.uk/openfoam/"
-SRC_URI="mirror://sourceforge/foam/${MY_P}.General.gtgz -> ${MY_P}.General.tgz"
+SRC_URI="mirror://sourceforge/foam/${MY_P}.General.gtgz -> ${MY_P}.General.tgz
+	mirror://gentoo/${MY_P}-compile.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.6"
@@ -53,7 +54,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${MY_P}-compile.patch
+	epatch "${WORKDIR}"/${MY_P}-compile.patch
 	epatch "${FILESDIR}"/${MY_P}_gcc4.4.patch
 }
 

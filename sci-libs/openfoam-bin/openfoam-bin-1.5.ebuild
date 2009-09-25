@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-bin/openfoam-bin-1.5.ebuild,v 1.1 2009/04/25 16:12:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/openfoam-bin/openfoam-bin-1.5.ebuild,v 1.2 2009/09/25 09:29:15 flameeyes Exp $
 
 inherit eutils versionator multilib toolchain-funcs
 
@@ -12,7 +12,8 @@ DESCRIPTION="Open Field Operation and Manipulation - CFD Simulation Toolbox"
 HOMEPAGE="http://www.opencfd.co.uk/openfoam/"
 SRC_URI="mirror://sourceforge/foam/${MY_P}.General.gtgz
 	x86? ( mirror://sourceforge/foam/${MY_P}.linuxGccDPOpt.gtgz )
-	amd64? ( mirror://sourceforge/foam/${MY_P}.linux64GccDPOpt.gtgz )"
+	amd64? ( mirror://sourceforge/foam/${MY_P}.linux64GccDPOpt.gtgz )
+	mirror://gentoo/${MY_P}-compile-1.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="1.5"
@@ -56,7 +57,7 @@ src_unpack() {
 	unpack ./${MY_P}.binary.tgz
 
 	cd "${S}"
-	epatch "${FILESDIR}"/${MY_P}-compile.patch
+	epatch "${DISTDIR}"/${MY_P}-compile-1.patch.bz2
 }
 
 src_compile() {
