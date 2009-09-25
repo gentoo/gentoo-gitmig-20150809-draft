@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.46 2009/09/12 09:35:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.47 2009/09/25 14:50:13 ranger Exp $
+
+  25 Sep 2009; Brent Baude <ranger@gentoo.org> vlgothic-20090811.ebuild:
+  Marking vlgothic-20090811 ppc64 for bug 284011
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org> vlgothic-20090811.ebuild:
   alpha/ia64/sparc stable wrt #284011
