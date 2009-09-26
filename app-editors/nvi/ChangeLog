@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.71 2009/06/07 23:57:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.72 2009/09/26 08:47:51 truedfx Exp $
+
+*nvi-1.81.6-r3 (26 Sep 2009)
+
+  26 Sep 2009; Harald van Dĳk <truedfx@gentoo.org> -nvi-1.81.6.ebuild,
+  -nvi-1.81.6-r1.ebuild, +nvi-1.81.6-r3.ebuild, +files/nvi-1.81.6-db.patch:
+  Don't try to build against db 4.8 (#286352 by Max Kresch), plus make page
+  size always a multiple of 2 as required by db; remove older versions
 
   07 Jun 2009; Jeroen Roovers <jer@gentoo.org> nvi-1.81.6-r2.ebuild:
   Stable for HPPA (bug #271937).
