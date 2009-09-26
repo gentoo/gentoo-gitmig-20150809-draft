@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.46 2009/09/06 15:37:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.47 2009/09/26 22:56:04 volkmar Exp $
+
+  25 Sep 2009; Mounir Lamouri <volkmar@gentoo.org>
+  metasploit-3.2_p6750.ebuild:
+  Stable for ppc. Bug 282353
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> metasploit-3.2_p6750.ebuild:
   amd64/x86 stable, bug #282353
