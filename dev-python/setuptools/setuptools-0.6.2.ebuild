@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.2.ebuild,v 1.1 2009/09/26 20:33:29 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.2.ebuild,v 1.2 2009/09/26 20:35:15 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -37,9 +37,7 @@ src_prepare() {
 	# Remove tests that access the network (bugs #198312, #191117)
 	rm setuptools/tests/test_packageindex.py
 
-	###sed -e "s/additional_tests/_&/" -i setuptools/tests/__init__.py || die "sed setuptools/tests/__init__.py failed"
 	epatch "${FILESDIR}/distribute-${PV}-provide_setuptools.patch"
-	###epatch "${FILESDIR}/distribute-${PV}-USER_SITE.patch"
 
 	sed -e "s/0\.6c9/${PV}/" -i distribute_setup.py distribute_setup_dev.py docs/{easy_install.txt,pkg_resources.txt,setuptools.txt} || die "Fixing of versions failed"
 }
