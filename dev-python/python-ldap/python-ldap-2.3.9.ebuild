@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.4 2009/09/22 20:48:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-ldap/python-ldap-2.3.9.ebuild,v 1.5 2009/09/26 13:39:37 ranger Exp $
 
 EAPI="2"
 
@@ -17,7 +17,7 @@ SRC_URI="http://pypi.python.org/packages/source/p/python-ldap/${P}.tar.gz
 HOMEPAGE="http://python-ldap.sourceforge.net/"
 SLOT="0"
 LICENSE="PYTHON"
-KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 hppa ~ia64 ~ppc ppc64 ~sparc x86"
 IUSE="doc examples sasl ssl"
 
 RDEPEND=">=net-nds/openldap-2.3
