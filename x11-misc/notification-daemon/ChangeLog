@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.63 2009/09/25 14:53:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.64 2009/09/26 10:13:33 mrpouet Exp $
+
+  26 Sep 2009; Romain Perier <mrpouet@gentoo.org>
+  notification-daemon-0.4.0-r1.ebuild:
+  Stable for amd64 per bug #278447.
 
   25 Sep 2009; Brent Baude <ranger@gentoo.org>
   notification-daemon-0.4.0-r1.ebuild:
