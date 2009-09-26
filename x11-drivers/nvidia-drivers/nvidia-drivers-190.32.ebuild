@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.32.ebuild,v 1.1 2009/09/21 11:22:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.32.ebuild,v 1.2 2009/09/26 18:48:10 spock Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -69,6 +69,7 @@ QA_EXECSTACK_x86="usr/lib/opengl/nvidia/lib/libGL.so.${PV}
 QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib32/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/xorg/modules/drivers/nvidia_drv.so
+	usr/lib64/libnvcompiler.so.${PV}
 	usr/lib64/libXvMCNVIDIA.so.${PV}
 	usr/lib64/opengl/nvidia/tls/libnvidia-tls.so.${PV}
 	usr/lib64/opengl/nvidia/no-tls/libnvidia-tls.so.${PV}
@@ -76,6 +77,7 @@ QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
 	usr/lib64/opengl/nvidia/extensions/libglx.so
+	usr/bin/nvidia-smi
 	usr/bin/nvidia-xconfig
 	usr/lib64/libXvMCNVIDIA.a:NVXVMC.o"
 
@@ -89,6 +91,8 @@ QA_WX_LOAD_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libGL.so.${PV}
 	usr/lib64/opengl/nvidia/extensions/libglx.so"
+
+QA_SONAME_amd64="usr/lib64/libnvcompiler.so.${PV}"
 
 # we really should have QA_DT_HASH_x86 and QA_DT_HASH_amd64 but Portage
 # does not support it. bug #271416
@@ -193,10 +197,12 @@ pkg_setup() {
 		NV_DOC="${S}/doc"
 		NV_EXEC="${S}/obj"
 		NV_SRC="${S}/src"
+		NV_MAN="${S}/x11/man"
 	elif use kernel_linux; then
 		NV_DOC="${S}/usr/share/doc"
 		NV_EXEC="${S}/usr/bin"
 		NV_SRC="${S}/usr/src/nv"
+		NV_MAN="${S}/usr/share/man/man1"
 	else
 		die "Could not determine proper NVIDIA package"
 	fi
@@ -302,7 +308,7 @@ src_install() {
 	is_final_abi || return 0
 
 	# Documentation
-	dodoc "${NV_DOC}"/{XF86Config.sample,Copyrights}
+	dodoc "${NV_DOC}"/XF86Config.sample
 	dohtml "${NV_DOC}"/html/*
 	if use x86-fbsd; then
 		dodoc "${NV_DOC}/README"
@@ -312,9 +318,17 @@ src_install() {
 		dodoc "${NV_DOC}/NVIDIA_Changelog"
 	fi
 
+	if use kernel_linux; then
+		doman "${NV_MAN}/nvidia-smi.1.gz"
+	fi
+	doman "${NV_MAN}/nvidia-xconfig.1.gz"
+
 	# Helper Apps
 	dobin ${NV_EXEC}/nvidia-xconfig || die
 	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
+	if use kernel_linux; then
+		dobin ${NV_EXEC}/nvidia-smi || die
+	fi
 }
 
 # Install nvidia library:
@@ -458,6 +472,22 @@ src_install-libs() {
 			dosym lib${vdpaulib}.so.${PV} /usr/${inslibdir}/lib${vdpaulib}.so.1
 			dosym lib${vdpaulib}.so.1 /usr/${inslibdir}/lib${vdpaulib}.so
 		done
+	fi
+
+	# OpenCL
+	# NOTE: This isn't currently available in the publicly released drivers.
+	if [[ -f usr/${pkglibdir}/libOpenCL.so.1.0.0 ]]; then
+		dodir /usr/include/CL
+		insinto /usr/include/CL
+		doins usr/include/CL/*.h
+
+		dolib.so usr/${pkglibdir}/libnvcompiler.so.${PV}
+		dosym libnvcompiler.so.${PV} /usr/${inslibdir}/libnvcompiler.so.1
+		dosym libnvcompiler.so.1 /usr/${inslibdir}/libnvcompiler.so
+
+		dolib.so usr/${pkglibdir}/libOpenCL.so.1.0.0
+		dosym libOpenCL.so.1.0.0 /usr/${inslibdir}/libOpenCL.so.1
+		dosym libOpenCL.so.1 /usr/${inslibdir}/libOpenCL.so
 	fi
 }
 

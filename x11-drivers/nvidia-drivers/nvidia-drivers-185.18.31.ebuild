@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.31.ebuild,v 1.3 2009/08/03 03:58:20 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-185.18.31.ebuild,v 1.4 2009/09/26 18:48:10 spock Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -77,6 +77,7 @@ QA_EXECSTACK_amd64="usr/lib32/opengl/nvidia/lib/libGLcore.so.${PV}
 	usr/lib64/opengl/nvidia/lib/libnvidia-cfg.so.${PV}
 	usr/lib64/opengl/nvidia/extensions/libglx.so
 	usr/bin/nvidia-xconfig
+	usr/bin/nvidia-smi
 	usr/lib64/libXvMCNVIDIA.a:NVXVMC.o"
 
 QA_WX_LOAD_x86="usr/lib/opengl/nvidia/lib/libGLcore.so.${PV}
@@ -210,10 +211,12 @@ pkg_setup() {
 		NV_DOC="${S}/doc"
 		NV_EXEC="${S}/obj"
 		NV_SRC="${S}/src"
+		NV_MAN="${S}/x11/man"
 	elif use kernel_linux; then
 		NV_DOC="${S}/usr/share/doc"
 		NV_EXEC="${S}/usr/bin"
 		NV_SRC="${S}/usr/src/nv"
+		NV_MAN="${S}/usr/share/man/man1"
 	else
 		die "Could not determine proper NVIDIA package"
 	fi
@@ -319,7 +322,7 @@ src_install() {
 	is_final_abi || return 0
 
 	# Documentation
-	dodoc "${NV_DOC}"/{XF86Config.sample,Copyrights}
+	dodoc "${NV_DOC}"/XF86Config.sample
 	dohtml "${NV_DOC}"/html/*
 	if use x86-fbsd; then
 		dodoc "${NV_DOC}/README"
@@ -329,9 +332,17 @@ src_install() {
 		dodoc "${NV_DOC}/NVIDIA_Changelog"
 	fi
 
+	if use kernel_linux; then
+		doman "${NV_MAN}/nvidia-smi.1.gz"
+	fi
+	doman "${NV_MAN}/nvidia-xconfig.1.gz"
+
 	# Helper Apps
 	dobin ${NV_EXEC}/nvidia-xconfig || die
 	dobin ${NV_EXEC}/nvidia-bug-report.sh || die
+	if use kernel_linux; then
+		dobin ${NV_EXEC}/nvidia-smi || die
+	fi
 }
 
 # Install nvidia library:

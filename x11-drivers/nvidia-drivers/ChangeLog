@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.171 2009/09/21 11:22:30 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.172 2009/09/26 18:48:10 spock Exp $
+
+  26 Sep 2009; Michał Januszewski <spock@gentoo.org>
+  nvidia-drivers-185.18.31.ebuild, nvidia-drivers-190.32.ebuild:
+  Fix bug #281895 (install manual pages). Also install the nvidia-smi tool
+  and prepare support for OpenCL (note that the current drivers do NOT
+  support OpenCL).
 
 *nvidia-drivers-190.32 (21 Sep 2009)
 
