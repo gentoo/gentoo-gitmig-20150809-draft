@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.3 2009/06/26 18:52:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.4 2009/09/26 19:33:39 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> ctdb-1.0.73.ebuild:
+  Marking ctdb-1.0.73 ~ppc64 for bug 285952
 
   26 Jun 2009; Patrick Lauer <patrick@gentoo.org> ctdb-1.0.73.ebuild:
   Adding ~x86 keyword
