@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/metasploit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.47 2009/09/26 22:56:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/metasploit/ChangeLog,v 1.48 2009/09/26 23:05:40 a3li Exp $
+
+  26 Sep 2009; Alex Legler <a3li@gentoo.org>
+  -metasploit-3.1_p5699-r1.ebuild:
+  Removing old ebuild that depends on rails-1, bug 282353.
 
   25 Sep 2009; Mounir Lamouri <volkmar@gentoo.org>
   metasploit-3.2_p6750.ebuild:
