@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/wesnoth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.156 2009/09/07 05:10:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/wesnoth/ChangeLog,v 1.157 2009/09/26 22:36:36 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> wesnoth-1.6.4.ebuild:
+  Marking wesnoth-1.6.4 ppc64 for bug 278981
 
 *wesnoth-1.6.5 (07 Sep 2009)
 
