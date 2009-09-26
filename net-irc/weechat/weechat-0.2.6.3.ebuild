@@ -1,14 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.2.6.1.ebuild,v 1.5 2009/09/26 20:33:34 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-0.2.6.3.ebuild,v 1.1 2009/09/26 20:33:34 graaff Exp $
 
 DESCRIPTION="Portable and multi-interface IRC client."
-HOMEPAGE="http://www.weechat.org/"
-SRC_URI="http://www.weechat.org/files/src/${P}.tar.bz2"
+HOMEPAGE="http://weechat.flashtux.org/"
+SRC_URI="http://weechat.flashtux.org/download/${P}.tar.bz2"
 LICENSE="GPL-3"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="debug perl python ruby ssl lua spell"
 
 DEPEND="sys-libs/ncurses
@@ -23,6 +23,11 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	# The qt and gtk frontends are not usable, so they're disabled
+
+	# this is a hack but solves the issue from bug #248030 (wrong
+	# dblatex being picked up) — flameeyes
+	export ac_cv_prog_DBLATEX_FOUND=no
+
 	econf \
 		--enable-ncurses \
 		--disable-qt \
