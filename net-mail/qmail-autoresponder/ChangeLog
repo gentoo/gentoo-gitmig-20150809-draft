@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/qmail-autoresponder
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.34 2009/09/23 19:09:37 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-autoresponder/ChangeLog,v 1.35 2009/09/26 21:32:08 bangert Exp $
+
+*qmail-autoresponder-0.97-r1 (26 Sep 2009)
+
+  26 Sep 2009; Thilo Bangert <bangert@gentoo.org>
+  +qmail-autoresponder-0.97-r1.ebuild,
+  +files/qmail-autoresponder-0.97-remove-mysql.h.diff:
+  fix building with no mysql installed - found by Tobias Klausmann - bug
+  #276912
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   qmail-autoresponder-0.96.2.ebuild, qmail-autoresponder-0.97.ebuild:
