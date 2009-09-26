@@ -1,6 +1,10 @@
 # ChangeLog for net-im/tleenx2
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/ChangeLog,v 1.15 2008/12/11 15:04:49 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/ChangeLog,v 1.16 2009/09/26 12:15:48 spock Exp $
+
+  26 Sep 2009; Michał Januszewski <spock@gentoo.org>
+  tleenx2-20060309.ebuild, +files/tleenx2-20060309-asneeded-fix.patch:
+  Fix bug #278242.
 
   11 Dec 2008; Michał Januszewski <spock@gentoo.org>
   +files/tleenx2-20060309-configure.in.patch, tleenx2-20060309.ebuild:
