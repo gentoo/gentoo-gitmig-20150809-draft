@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc42.ebuild,v 1.1 2009/09/26 03:44:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc42.ebuild,v 1.2 2009/09/26 19:26:03 arfrever Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -13,9 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 PROVIDE="virtual/portage"
 SLOT="0"
-IUSE="build doc epydoc selinux linguas_pl"
+IUSE="build doc epydoc linguas_pl python3 selinux"
 
-python_dep=">=dev-lang/python-2.6"
+python_dep="python3? ( =dev-lang/python-3* )
+	!python3? ( >=dev-lang/python-2.6 )"
 
 # the pysqlite blocker is for bug #282760
 DEPEND="${python_dep}
@@ -80,10 +81,13 @@ src_prepare() {
 	einfo "Setting portage.VERSION to ${PVR} ..."
 	sed -i "s/^VERSION=.*/VERSION=\"${PVR}\"/" pym/portage/__init__.py || \
 		die "Failed to patch portage.VERSION"
+
+	if use python3; then
+		sed -e '1s/\(^#!.*\)python\(.*$\)/\1python3\2/' -i $(find -perm /111 -type f) || die "Conversion of shebangs failed"
+	fi
 }
 
 src_compile() {
-
 	if use doc; then
 		cd "${S}"/doc
 		touch fragment/date

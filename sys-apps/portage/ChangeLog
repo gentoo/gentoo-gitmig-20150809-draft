@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.630 2009/09/26 03:44:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.631 2009/09/26 19:26:03 arfrever Exp $
+
+  26 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  portage-2.2_rc42.ebuild, metadata.xml:
+  Add "python3" USE flag.
 
 *portage-2.2_rc42 (26 Sep 2009)
 
