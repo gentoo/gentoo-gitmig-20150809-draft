@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/gromacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.42 2009/08/28 23:51:46 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gromacs/ChangeLog,v 1.43 2009/09/26 19:49:46 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> gromacs-4.0.4.ebuild:
+  Marking gromacs-4.0.4 ppc64 for bug 260995
 
   28 Aug 2009; William Hubbs <williamh@gentoo.org> metadata.xml:
   new global use flag "zsh-completion"
