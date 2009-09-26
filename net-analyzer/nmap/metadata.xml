@@ -5,12 +5,4 @@
 <maintainer>
   <email>spock@gentoo.org</email>
 </maintainer>
-<use>
-	<flag name="bundled-libs">
-		Use the liblua library bundled with nmap instead of the system one.
-		This doesn't affect the other libraries because the bundled libpcre
-		and libpcap are the same as the system libraries, and the bundled
-		libdnet is incompatible with the version available in the tree.
-	</flag>
-</use>
 </pkgmetadata>
