@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r7.ebuild,v 1.8 2009/01/08 06:18:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ftp-0.17-r7.ebuild,v 1.9 2009/09/26 09:13:32 flameeyes Exp $
+
+PATCHLEVEL=1
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -8,7 +10,8 @@ MY_P=netkit-${P}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Standard Linux FTP client"
 HOMEPAGE="http://www.hcs.harvard.edu/~dholland/computers/netkit.html"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${MY_P}.tar.gz
+	mirror://gentoo/${MY_P}-patches-${PATCHLEVEL}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
@@ -23,18 +26,9 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}"/${MY_P}-ssl-0.2.patch
-	epatch "${FILESDIR}"/${MY_P}-ipv6.patch #47507
-	epatch "${FILESDIR}"/${MY_P}-dont-strcpy-overlapping.patch #104311
-	epatch "${FILESDIR}"/${MY_P}-acct.patch #fedora
-	epatch "${FILESDIR}"/${MY_P}-locale.patch #fedora
-	epatch "${FILESDIR}"/${MY_P}-runique_mget.patch #fedora
-	epatch "${FILESDIR}"/${MY_P}-security.patch #fedora
-	epatch "${FILESDIR}"/${MY_P}-segv.patch #fedora
-	epatch "${FILESDIR}"/${MY_P}-custom-cflags.patch
-	epatch "${FILESDIR}"/${MY_P}-sigseg.patch #fedora, #199206
-	epatch "${FILESDIR}"/${MY_P}-arg_max.patch #fedora, #226513
-	epatch "${FILESDIR}"/${MY_P}-CPPFLAGS.patch #234599
+	EPATCH_DIR="${WORKDIR}"/patch \
+		EPATCH_SUFFIX="patch" \
+		epatch
 	append-lfs-flags #101038
 }
 

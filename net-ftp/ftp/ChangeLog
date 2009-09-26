@@ -1,6 +1,17 @@
 # ChangeLog for net-ftp/ftp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.35 2009/01/08 06:18:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftp/ChangeLog,v 1.36 2009/09/26 09:13:32 flameeyes Exp $
+
+  26 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> -ftp-0.17-r6.ebuild,
+  ftp-0.17-r7.ebuild, -files/netkit-ftp-0.17-CPPFLAGS.patch,
+  -files/netkit-ftp-0.17-acct.patch, -files/netkit-ftp-0.17-arg_max.patch,
+  -files/netkit-ftp-0.17-custom-cflags.patch,
+  -files/netkit-ftp-0.17-dont-strcpy-overlapping.patch,
+  -files/netkit-ftp-0.17-ipv6.patch, -files/netkit-ftp-0.17-locale.patch,
+  -files/netkit-ftp-0.17-runique_mget.patch,
+  -files/netkit-ftp-0.17-security.patch, -files/netkit-ftp-0.17-segv.patch,
+  -files/netkit-ftp-0.17-sigseg.patch, -files/netkit-ftp-0.17-ssl-0.2.patch:
+  Move patches on a patchset on mirrors.
 
   08 Jan 2009; Mike Frysinger <vapier@gentoo.org> ftp-0.17-r7.ebuild:
   Mark amd64 stable.
