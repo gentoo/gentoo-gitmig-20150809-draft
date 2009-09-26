@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5493.ebuild,v 1.1 2009/06/21 10:27:55 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-4.0.1_p5493.ebuild,v 1.2 2009/09/26 18:15:18 grobian Exp $
 
 ETYPE="gcc-compiler"
 
@@ -19,7 +19,7 @@ else
 	SLOT="40"
 fi
 
-KEYWORDS="~ppc-macos ~x86-macos"
+KEYWORDS="~ppc-macos ~x64-macos ~x86-macos"
 
 IUSE="nls objc objc++ nocxx"
 
