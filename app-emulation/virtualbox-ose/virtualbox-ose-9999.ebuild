@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.7 2009/09/25 23:59:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.8 2009/09/26 06:37:51 mr_bones_ Exp $
 
 EAPI=1
 
@@ -27,7 +27,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
 		x11-libs/libXcursor
 		media-libs/libsdl
-		x11-libs/libXt 
+		x11-libs/libXt
 		media-libs/mesa )"
 DEPEND="${RDEPEND}
 	>dev-util/kbuild-0.1.5
