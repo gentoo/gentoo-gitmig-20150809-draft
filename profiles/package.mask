@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10501 2009/09/25 18:24:19 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10502 2009/09/26 19:43:21 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -337,18 +337,6 @@ sys-apps/einit-modules-xml
 # for testing.
 >=net-misc/networkmanager-0.8.0_pre20090824
 >=gnome-extra/nm-applet-0.8.0_pre20090824
-
-# Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
-# devel-logger is now bundled with ruby 1.8. The standalone version
-# is only suited for ruby 1.6, which has gone from our tree a long
-# time ago. devel-logger will follow in 30 days.
-dev-ruby/devel-logger
-
-# Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
-# ruby-amazon uses the obsolete v3 protocol which has been shut
-# down by Amazon on 2008-03-31, and upstream indicates that they
-# will not continue development on it.
-dev-ruby/ruby-amazon
 
 # Hans de Graaff <graaff@gentoo.org> (22 Aug 2009)
 # These Rails versions are no longer supported upstream
