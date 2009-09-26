@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4838 2009/09/26 17:07:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4839 2009/09/26 17:27:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -292,6 +292,7 @@ app-emulation/virtualbox-ose:headless - Build without any graphic frontend
 app-emulation/virtualbox-ose:sdk - Enable building of SDK
 app-emulation/virtualbox-ose:vboxwebsrv - Build and install the VirtualBox webservice
 app-emulation/vov:gprof - build with profiling support
+app-emulation/wine:capi - Enable ISDN support via CAPI
 app-emulation/wine:gecko - Add support for the Gecko engine when using iexplore
 app-emulation/wine:samba - Add support for NTLM auth. see http://wiki.winehq.org/NtlmAuthSetupGuide and http://wiki.winehq.org/NtlmSigningAndSealing
 app-emulation/wine:win64 - Build a 64bit version of Wine (won't run Win32 binaries)
