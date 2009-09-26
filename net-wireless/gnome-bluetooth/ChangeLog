@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/gnome-bluetooth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.55 2009/09/05 21:01:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/ChangeLog,v 1.56 2009/09/26 16:33:27 nirbheek Exp $
+
+*gnome-bluetooth-2.28.0 (26 Sep 2009)
+
+  26 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
+  -gnome-bluetooth-2.27.90.ebuild, +gnome-bluetooth-2.28.0.ebuild:
+  Bump to 2.28.0 -- crasher fix + pairing fix + translation updates
 
 *gnome-bluetooth-2.27.90 (05 Sep 2009)
 

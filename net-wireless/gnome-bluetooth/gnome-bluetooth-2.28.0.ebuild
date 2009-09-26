@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.27.90.ebuild,v 1.1 2009/09/05 21:01:55 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.0.ebuild,v 1.1 2009/09/26 16:33:27 nirbheek Exp $
 
 EAPI="2"
 
@@ -18,7 +18,6 @@ COMMON_DEPEND=">=dev-libs/glib-2.16
 	>=x11-libs/libnotify-0.4.3
 	>=gnome-base/gconf-2.6
 	>=dev-libs/dbus-glib-0.74
-	>=sys-apps/hal-0.5.8
 	dev-libs/libunique"
 DEPEND="${COMMON_DEPEND}
 	!!net-wireless/bluez-gnome
