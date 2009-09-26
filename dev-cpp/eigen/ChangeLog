@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/eigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.17 2009/08/22 21:55:17 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/eigen/ChangeLog,v 1.18 2009/09/26 00:18:02 patrick Exp $
+
+*eigen-2.0.6 (26 Sep 2009)
+
+  26 Sep 2009; Patrick Lauer <patrick@gentoo.org> +eigen-2.0.6.ebuild:
+  Bump to 2.0.6, fixes #286462
 
   22 Aug 2009; Marcus D. Hanwell <cryos@gentoo.org> -eigen-2.0.2.ebuild,
   -eigen-2.0.3.ebuild:
