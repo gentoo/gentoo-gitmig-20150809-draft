@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.316 2009/09/24 14:26:34 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.317 2009/09/26 21:52:02 volkmar Exp $
+
+  25 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> ffmpeg-0.5_p19928.ebuild:
+  Keywording for ppc. Bug 283953
 
   24 Sep 2009; Raúl Porcel <armin76@gentoo.org> ffmpeg-0.5_p19787.ebuild,
   ffmpeg-0.5_p19928.ebuild:
