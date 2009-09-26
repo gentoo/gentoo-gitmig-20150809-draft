@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2-r1.ebuild,v 1.1 2009/09/24 19:41:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2-r1.ebuild,v 1.2 2009/09/26 11:32:35 nyhm Exp $
 
 EAPI=2
 inherit eutils multilib games
 
 DESCRIPTION="Postal 2: Share the Pain"
-HOMEPAGE="http://www.gopostal.com/"
+HOMEPAGE="http://www.linuxgamepublishing.com/info.php?id=postal2"
 SRC_URI="http://updatefiles.linuxgamepublishing.com/${PN}/${P/%?/1}.run
 	http://updatefiles.linuxgamepublishing.com/${PN}/${P}.run"
 
