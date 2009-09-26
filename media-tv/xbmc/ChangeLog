@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.26 2009/09/05 15:05:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.27 2009/09/26 11:45:58 vapier Exp $
+
+  26 Sep 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9.04.ebuild,
+  xbmc-9.04.1.ebuild, xbmc-9999.ebuild:
+  Update SVN paths as upstream has moved stuff around.
 
   05 Sep 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild:
   Generate autotools since upstream no longer includes them in svn #283722
