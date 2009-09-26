@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.47 2009/09/22 20:51:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.48 2009/09/26 13:42:50 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> egenix-mx-base-3.1.2.ebuild:
+  Marking egenix-mx-base-3.1.2 ppc64 for bug 285001
 
   22 Sep 2009; Jeroen Roovers <jer@gentoo.org> egenix-mx-base-3.1.2.ebuild:
   Stable for HPPA (bug #285001).
