@@ -1,12 +1,13 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.9 2008/11/15 18:27:08 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ipcad-3.7.ebuild,v 1.10 2009/09/26 08:55:28 flameeyes Exp $
 
 inherit eutils autotools
 
 DESCRIPTION="IP Cisco Accounting Daemon"
 HOMEPAGE="http://ipcad.sourceforge.net/"
-SRC_URI="mirror://sourceforge/ipcad/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ipcad/${P}.tar.gz
+	mirror://gentoo/${P}-20060828-cvs.patch.bz2"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
@@ -19,7 +20,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 
-	epatch "${FILESDIR}/${P}-20060828-cvs.patch"
+	epatch "${DISTDIR}/${P}-20060828-cvs.patch.bz2"
 	epatch "${FILESDIR}/${P}-linux-2.6.27.patch"
 	eautoreconf
 }

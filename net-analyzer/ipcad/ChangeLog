@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/ipcad
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.29 2008/11/15 18:27:08 pva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipcad/ChangeLog,v 1.30 2009/09/26 08:55:28 flameeyes Exp $
+
+  26 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> ipcad-3.7.ebuild,
+  -files/ipcad-3.7-20060828-cvs.patch:
+  Move big patch to mirrors.
 
   15 Nov 2008; Peter Volkov <pva@gentoo.org>
   +files/ipcad-3.7-linux-2.6.27.patch, ipcad-3.7.ebuild:
