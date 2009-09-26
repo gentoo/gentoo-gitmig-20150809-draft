@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.337 2009/09/20 16:07:24 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.338 2009/09/26 13:22:31 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> emacs-23.1.ebuild:
+  Marking emacs-23.1 ppc64 for bug 285063
 
   20 Sep 2009; Tiago Cunha <tcunha@gentoo.org> emacs-23.1.ebuild:
   stable sparc, bug 285063
