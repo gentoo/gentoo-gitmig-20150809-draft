@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/raptor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.68 2009/08/10 05:28:18 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/raptor/ChangeLog,v 1.69 2009/09/26 13:37:49 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> raptor-1.4.19.ebuild:
+  Marking raptor-1.4.19 ppc64 for bug 286193
 
 *raptor-1.4.19 (10 Aug 2009)
 
