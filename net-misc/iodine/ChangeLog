@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/iodine
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iodine/ChangeLog,v 1.1 2009/09/26 19:24:36 vostorga Exp $
+
+*iodine-0.5.2 (26 Sep 2009)
+
+  26 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> +iodine-0.5.2.ebuild,
+  +files/iodine-0.5.2-Makefile.patch, +files/iodined.conf,
+  +files/iodined.init, +metadata.xml:
+  Initial commit, ebuild thanks to Erik Ekman bug 173038
+
