@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.21 2009/09/09 22:58:27 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.22 2009/09/26 09:21:39 flameeyes Exp $
+
+  26 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  files/postgresql-8.3-server.patch:
+  Remove a probably-fluke .orig file in patch, reduces size from over 60K to
+  less than 10.
 
 *postgresql-server-8.0.22 (09 Sep 2009)
 
