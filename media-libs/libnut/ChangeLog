@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.9 2009/08/31 18:20:32 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.10 2009/09/26 21:36:44 volkmar Exp $
+
+  25 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> libnut-661.ebuild:
+  Keywording for ppc. Bug 279831
 
   31 Aug 2009; Brent Baude <ranger@gentoo.org> libnut-661.ebuild:
   Marking libnut-661 ~ppc64 for bug 279831
