@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencore-amr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.7 2009/09/20 19:50:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencore-amr/ChangeLog,v 1.8 2009/09/26 21:39:52 volkmar Exp $
+
+  25 Sep 2009; Mounir Lamouri <volkmar@gentoo.org>
+  opencore-amr-0.1.1.ebuild:
+  Keywording for ppc. Bug 283839
 
   20 Sep 2009; Markus Meier <maekke@gentoo.org> opencore-amr-0.1.1.ebuild:
   add ~arm, bug #283953
