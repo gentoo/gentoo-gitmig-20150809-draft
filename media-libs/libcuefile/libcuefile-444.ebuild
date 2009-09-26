@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-444.ebuild,v 1.10 2009/09/20 22:14:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/libcuefile-444.ebuild,v 1.11 2009/09/26 14:06:34 ranger Exp $
 
 inherit cmake-utils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha amd64 hppa ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 hppa ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 PATCHES=( "${FILESDIR}/${P}-multilib_and_shared.patch" )

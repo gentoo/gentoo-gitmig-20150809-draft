@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.9 2009/09/20 22:14:26 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.10 2009/09/26 14:06:34 ranger Exp $
+
+  26 Sep 2009; Brent Baude <ranger@gentoo.org> libcuefile-444.ebuild:
+  Marking libcuefile-444 ppc64 for bug 284781
 
   20 Sep 2009; Markus Meier <maekke@gentoo.org> libcuefile-444.ebuild:
   amd64/x86 stable, bug #284781
