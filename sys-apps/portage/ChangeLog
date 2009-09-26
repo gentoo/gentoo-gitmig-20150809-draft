@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.629 2009/09/20 00:17:30 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.630 2009/09/26 03:44:50 zmedico Exp $
+
+*portage-2.2_rc42 (26 Sep 2009)
+
+  26 Sep 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc42.ebuild:
+  2.2_rc42 bump. This fixes bug #285637 (NameError exception triggered by
+  invalid atom in config), bug #285767 (version range detection in package
+  deps), and bug #286118 (TypeError exception during global updates). This
+  release requires at least python-2.6 to be selected as the default
+  interpreter (see `eselect python --help`). Now python-3 is supported, but
+  at this time, many packages which use python will certainly fail to build
+  and/or run if python-3 is selected as the default interpreter.
 
 *portage-2.2_rc41 (19 Sep 2009)
 
