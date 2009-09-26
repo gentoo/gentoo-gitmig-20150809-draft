@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.32.ebuild,v 1.2 2009/09/26 18:48:10 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.32.ebuild,v 1.3 2009/09/26 19:11:52 spock Exp $
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -163,6 +163,21 @@ mtrr_check() {
 	fi
 }
 
+lockdep_check() {
+	if linux_chkconfig_present LOCKDEP; then
+		eerror "You've enabled LOCKDEP -- lock tracking -- in the kernel."
+		eerror "Unfortunately, this option exports the symbol 'lockdep_init_map' as GPL-only"
+		eerror "which will prevent ${P} from compiling."
+		eerror "Please make sure the following options have been unset:"
+		eerror "    Kernel hacking  --->"
+		eerror "        [ ] Lock debugging: detect incorrect freeing of live locks"
+		eerror "        [ ] Lock debugging: prove locking correctness"
+		eerror "        [ ] Lock usage statistics"
+		eerror "in 'menuconfig'"
+		die "LOCKDEP enabled"
+	fi
+}
+
 pkg_setup() {
 	# try to turn off distcc and ccache for people that have a problem with it
 	export DISTCC_DISABLE=1
@@ -179,6 +194,7 @@ pkg_setup() {
 		BUILD_PARAMS="IGNORE_CC_MISMATCH=yes V=1 SYSSRC=${KV_DIR} \
 		SYSOUT=${KV_OUT_DIR} HOST_CC=$(tc-getBUILD_CC)"
 		mtrr_check
+		lockdep_check
 	fi
 
 	# On BSD userland it wants real make command
