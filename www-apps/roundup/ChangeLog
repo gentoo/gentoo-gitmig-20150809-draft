@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/roundup
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.33 2009/05/30 13:30:12 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/ChangeLog,v 1.34 2009/09/27 10:46:13 a3li Exp $
+
+  27 Sep 2009; Alex Legler <a3li@gentoo.org> roundup-1.4.4-r1.ebuild,
+  roundup-1.4.6.ebuild, roundup-1.4.8.ebuild, roundup-1.4.8-r1.ebuild:
+  s/pkg_postnst/pkg_postinst/g. Fixes bug 280609 by Damien Gombault.
 
   30 May 2009; Brent Baude <ranger@gentoo.org> roundup-1.4.8-r1.ebuild:
   Marking roundup-1.4.8-r1 ppc for bug 262100

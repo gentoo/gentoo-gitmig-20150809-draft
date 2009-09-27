@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.8.ebuild,v 1.4 2009/05/25 20:02:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/roundup/roundup-1.4.8.ebuild,v 1.5 2009/09/27 10:46:13 a3li Exp $
 
 inherit eutils distutils
 
@@ -23,7 +23,7 @@ src_install() {
 	dobin "${FILESDIR}/roundup" || die
 }
 
-pkg_postnst() {
+pkg_postinst() {
 	ewarn
 	ewarn "As a non privileged user! (not root)"
 	ewarn "Run 'roundup-admin install' to set up a roundup instance"
