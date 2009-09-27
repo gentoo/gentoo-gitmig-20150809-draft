@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.20 2009/09/27 12:43:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.21 2009/09/27 20:13:54 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> ttf2pt1-3.4.4.ebuild:
+  ppc stable #286600
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> ttf2pt1-3.4.4.ebuild:
   amd64/x86 stable, bug #286600
