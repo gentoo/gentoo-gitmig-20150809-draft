@@ -1,6 +1,13 @@
 # ChangeLog for media-video/arista
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.1 2009/08/02 10:34:42 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/arista/ChangeLog,v 1.2 2009/09/27 22:31:02 ford_prefect Exp $
+
+*arista-0.9.3-r1 (27 Sep 2009)
+
+  27 Sep 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +arista-0.9.3-r1.ebuild:
+  Add xvid support by default (used by the Computer, PDA Generic, and DVD
+  profiles in Arista)
 
 *arista-0.9.3 (02 Aug 2009)
 
