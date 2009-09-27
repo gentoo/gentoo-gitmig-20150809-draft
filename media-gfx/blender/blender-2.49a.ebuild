@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49a.ebuild,v 1.7 2009/09/19 10:59:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49a.ebuild,v 1.8 2009/09/27 14:26:42 ranger Exp $
 
 EAPI=2
 
@@ -14,7 +14,7 @@ SRC_URI="http://download.blender.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="|| ( GPL-2 BL BSD )"
-KEYWORDS="amd64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="amd64 ~ppc ppc64 ~sparc x86"
 
 RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5[encode,theora] )
 	media-libs/jpeg
