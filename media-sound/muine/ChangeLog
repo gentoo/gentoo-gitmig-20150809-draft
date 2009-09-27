@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/muine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.56 2009/09/13 20:17:20 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muine/ChangeLog,v 1.57 2009/09/27 16:35:35 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> muine-0.8.10-r1.ebuild:
+  ppc stable #283739
 
 *muine-0.8.11 (13 Sep 2009)
 
