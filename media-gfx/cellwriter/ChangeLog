@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/cellwriter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/cellwriter/ChangeLog,v 1.4 2009/01/01 03:15:43 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/cellwriter/ChangeLog,v 1.5 2009/09/27 11:48:30 maekke Exp $
+
+  27 Sep 2009; Markus Meier <maekke@gentoo.org> cellwriter-1.3.4.ebuild:
+  amd64/x86 stable, bug #286277
 
   01 Jan 2009; MATSUU Takuto <matsuu@gentoo.org> -cellwriter-1.3.1.ebuild:
   Removed old version.
