@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10506 2009/09/27 12:37:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10507 2009/09/27 15:59:10 nirbheek Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Nirbheek Chauhan <nirbheek@gentoo.org> (27 Sep 2009)
+# File collision with bluez-utils[test-programs] -- bug 257826
+# Also blocks bluez-4 stabilization
+# Replacements: net-wireless/bluez{,-utils}[test-programs]
+net-wireless/bluez-hciemu
 
 # Ryan Hill <dirtyepic@gentoo.org> (26 Sep 2008)
 # Mask net-p2p/nicotine for removal on 20091026. (bug #286607)
