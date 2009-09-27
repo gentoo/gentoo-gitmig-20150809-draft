@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gmpc-shout
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-shout/ChangeLog,v 1.1 2009/03/13 12:08:33 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-shout/ChangeLog,v 1.2 2009/09/27 12:44:00 ssuominen Exp $
+
+*gmpc-shout-0.19.0 (27 Sep 2009)
+
+  27 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +gmpc-shout-0.19.0.ebuild:
+  Version bump.
 
 *gmpc-shout-0.18.0 (13 Mar 2009)
 
