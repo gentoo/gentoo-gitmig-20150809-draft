@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.181 2009/09/27 14:26:42 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.182 2009/09/27 18:18:57 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> blender-2.49a.ebuild:
+  ppc stable #284695
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org> blender-2.49a.ebuild:
   Marking blender-2.49a ppc64 for bug 284695
