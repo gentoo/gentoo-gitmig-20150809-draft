@@ -1,6 +1,10 @@
 # ChangeLog for app-text/xchm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.8 2009/05/16 22:10:38 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.9 2009/09/27 01:06:49 dirtyepic Exp $
+
+  27 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> xchm-1.15.ebuild,
+  xchm-1.16.ebuild:
+  Make sure wxGTK was built with USE=X, bug #285943 by Philipp Middendorf.
 
 *xchm-1.16 (16 May 2009)
 
