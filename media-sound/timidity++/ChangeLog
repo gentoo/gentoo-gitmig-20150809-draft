@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.126 2009/09/26 13:36:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.127 2009/09/27 19:38:59 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> timidity++-2.13.2-r11.ebuild:
+  ppc stable #285945
 
   26 Sep 2009; Brent Baude <ranger@gentoo.org> timidity++-2.13.2-r11.ebuild:
   Marking timidity++-2.13.2-r11 ppc64 for bug 285945
