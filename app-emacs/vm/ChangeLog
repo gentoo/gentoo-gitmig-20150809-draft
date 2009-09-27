@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/vm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.71 2009/09/22 14:05:43 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/ChangeLog,v 1.72 2009/09/27 17:42:54 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> vm-7.19-r4.ebuild:
+  ppc stable #284462
 
   22 Sep 2009; Raúl Porcel <armin76@gentoo.org> vm-7.19-r4.ebuild:
   alpha stable wrt #284462
