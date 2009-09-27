@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gnome-build
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.26 2009/08/19 16:48:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gnome-build/ChangeLog,v 1.27 2009/09/27 13:52:28 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> gnome-build-2.24.1.ebuild:
+  ppc stable #268359
 
   19 Aug 2009; Jeroen Roovers <jer@gentoo.org> gnome-build-2.24.1.ebuild:
   Stable for HPPA (bug #268359).

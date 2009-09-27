@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.32 2009/08/19 16:47:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.33 2009/09/27 13:49:24 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> gdl-2.24.0.ebuild:
+  ppc stable #268359
 
   19 Aug 2009; Jeroen Roovers <jer@gentoo.org> ChangeLog:
   Stable for HPPA (bug #268359).
