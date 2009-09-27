@@ -1,6 +1,10 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.32 2009/09/27 19:16:02 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.33 2009/09/27 20:21:00 ulm Exp $
+
+  27 Sep 2009; Ulrich Mueller <ulm@gentoo.org> emacs-21.ebuild,
+  emacs-22.ebuild, emacs-23.ebuild:
+  Change to slot dependencies and EAPI 2.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> emacs-23.ebuild:
   ppc stable #285063
