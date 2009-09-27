@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>mobile</herd>
-<maintainer>
-  <email>dirtyepic@gentoo.org</email>
-  <name>Ryan Hill</name>
-</maintainer>
 <use>
   <flag name='smapi'>Use extended ThinkPad battery info exported via SMAPI
     BIOS by <pkg>app-laptop/tp_smapi</pkg></flag>
