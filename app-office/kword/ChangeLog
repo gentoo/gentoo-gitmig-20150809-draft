@@ -1,6 +1,9 @@
 # ChangeLog for app-office/kword
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.131 2009/08/12 10:13:05 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/ChangeLog,v 1.132 2009/09/27 12:37:20 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> kword-1.6.3_p20090204.ebuild:
+  Marking kword-1.6.3_p20090204 ppc64 stable for bug 276008
 
   12 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kword-2.0.0.ebuild,
   -kword-2.0.1.ebuild:
