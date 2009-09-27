@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.26.2-r1.ebuild,v 1.2 2009/09/27 15:44:14 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/vino-2.26.2-r2.ebuild,v 1.1 2009/09/27 15:44:14 nirbheek Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
-IUSE="avahi crypt gnutls ipv6 jpeg gnome-keyring libnotify zlib"
+IUSE="avahi crypt gnutls ipv6 jpeg gnome-keyring libnotify networkmanager zlib"
 
 RDEPEND=">=dev-libs/glib-2.17
 	>=x11-libs/gtk+-2.13.1
@@ -31,6 +31,7 @@ RDEPEND=">=dev-libs/glib-2.17
 	crypt? ( >=dev-libs/libgcrypt-1.1.90 )
 	gnutls? ( >=net-libs/gnutls-1 )
 	jpeg? ( media-libs/jpeg )
+	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	zlib? ( sys-libs/zlib )"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
@@ -48,9 +49,9 @@ pkg_setup() {
 		$(use_with jpeg)
 		$(use_enable gnome-keyring)
 		$(use_enable libnotify)
+		$(use_enable networkmanager network-manager)
 		$(use_with zlib)
 		$(use_with zlib libz)
-		--disable-network-manager
 		--enable-libunique"
 }
 

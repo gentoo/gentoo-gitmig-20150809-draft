@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vino
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.126 2009/08/16 08:34:22 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vino/ChangeLog,v 1.127 2009/09/27 15:44:14 nirbheek Exp $
+
+*vino-2.26.2-r2 (27 Sep 2009)
+
+  27 Sep 2009; Nirbheek Chauhan <nirbheek@gentoo.org> vino-2.26.2-r1.ebuild,
+  +vino-2.26.2-r2.ebuild:
+  Remove networkmanager support from 2.26.2-r1 for stabilization since
+  networkmanager-0.7 is not going stable (2.24* doesn't have NM support).
+  Use 2.26.2-r2 for networkmanager support in ~arch
 
   16 Aug 2009; Mart Raudsepp <leio@gentoo.org>
   -files/vino-2.26.1-fbsd-fix.patch, -vino-2.26.2.ebuild:
