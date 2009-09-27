@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10508 2009/09/27 16:15:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10509 2009/09/27 18:34:43 leio Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -896,10 +896,6 @@ app-admin/haskell-updater
 # The attempts to unbundle iniparser from libcompizconfig are still
 # unsuccessful as it causes ccp to break
 =x11-libs/libcompizconfig-0.8.2-r2
-
-# Markus Ullmann <jokey@gentoo.org> (21 Jul 2009)
-# mask until libsoup 2.27 or higher is in-tree
-=net-libs/webkit-gtk-0_p46*
 
 # Romain Perier <mrpouet@gentoo.org> (21 Jul 2009)
 # Builds only with >=sys-apps/lm_sensors-3 which is masked
