@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r1.ebuild,v 1.8 2009/09/27 14:29:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.1.16.3-r1.ebuild,v 1.9 2009/09/27 15:08:58 nixnut Exp $
 
 EAPI=1
 
@@ -22,7 +22,7 @@ HOMEPAGE="http://xine.sourceforge.net"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="-aalib -libcaca -arts esd win32codecs nls +dvd +X directfb +vorbis +alsa
 gnome sdl speex +theora ipv6 altivec opengl aac -fbcon +xv xvmc
