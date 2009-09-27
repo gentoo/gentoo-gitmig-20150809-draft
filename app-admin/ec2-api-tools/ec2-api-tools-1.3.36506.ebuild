@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.3.36506.ebuild,v 1.1 2009/06/02 22:17:15 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-api-tools/ec2-api-tools-1.3.36506.ebuild,v 1.2 2009/09/27 12:36:32 maekke Exp $
 
 inherit versionator
 
@@ -15,7 +15,7 @@ S=${WORKDIR}/${PN}-${EC2_VERSION}-${EC2_PATCHLEVEL}
 
 LICENSE="Amazon"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND="virtual/jre"
