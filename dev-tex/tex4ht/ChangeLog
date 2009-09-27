@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.58 2009/09/26 19:35:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.59 2009/09/27 14:12:12 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> tex4ht-20090611_p1038.ebuild:
+  ppc stable #286622
 
   26 Sep 2009; Brent Baude <ranger@gentoo.org> tex4ht-20090513_p1511.ebuild:
   Marking tex4ht-20090513_p1511 ppc64 for bug 274741
