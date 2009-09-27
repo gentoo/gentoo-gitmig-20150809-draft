@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.74 2009/08/26 16:33:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.75 2009/09/27 14:34:39 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> ettercap-0.7.3-r3.ebuild:
+  Marking ettercap-0.7.3-r3 ppc64 for bug 277296
 
   26 Aug 2009; Raúl Porcel <armin76@gentoo.org> ettercap-0.7.3-r3.ebuild:
   arm/sparc stable wrt #277296
