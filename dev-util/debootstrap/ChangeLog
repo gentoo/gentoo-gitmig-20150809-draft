@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.100 2009/09/25 15:18:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.101 2009/09/27 16:39:56 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> debootstrap-1.0.15.ebuild:
+  ppc stable #283986
 
 *debootstrap-1.0.19 (25 Sep 2009)
 
