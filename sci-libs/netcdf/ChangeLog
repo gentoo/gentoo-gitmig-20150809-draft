@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.56 2009/09/15 01:04:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.57 2009/09/27 12:33:22 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> netcdf-3.6.3.ebuild:
+  Marking netcdf-3.6.3 ppc64 for bug 283715
 
   15 Sep 2009; Jeroen Roovers <jer@gentoo.org> netcdf-3.6.3.ebuild:
   Stable for HPPA (bug #283715).
