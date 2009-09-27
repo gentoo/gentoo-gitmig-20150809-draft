@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.3.1.ebuild,v 1.2 2009/08/09 14:19:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-haze/telepathy-haze-0.3.2.ebuild,v 1.1 2009/09/27 18:23:22 tester Exp $
 
 DESCRIPTION="Telepathy connection manager providing libpurple supported
 protocols."

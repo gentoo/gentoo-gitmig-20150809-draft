@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.3.8.ebuild,v 1.2 2009/04/19 01:24:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-salut/telepathy-salut-0.3.10.ebuild,v 1.1 2009/09/27 18:21:37 tester Exp $
 
 EAPI="2"
 
@@ -20,7 +20,7 @@ RDEPEND="dev-libs/libxml2
 	>=dev-libs/glib-2.16
 	>=sys-apps/dbus-1.1.0
 	>=dev-libs/dbus-glib-0.61
-	>=net-libs/telepathy-glib-0.7.23
+	>=net-libs/telepathy-glib-0.7.36
 	>=net-dns/avahi-0.6.22
 	net-libs/libsoup:2.4
 	ssl? ( dev-libs/openssl )"
@@ -33,16 +33,8 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-lang/python-2.4"
 
-src_prepare() {
-	base_src_prepare
-
-	# Disable a failing test, upstream bug #21272
-	sed 's#\(tcase_add_test (tc, test_tcp_listen);\)#/*\1*/#' \
-		-i lib/gibber/tests/check-gibber-listener.c || die "sed failed"
-}
-
 src_configure() {
-	econf $(use_enable ssl)
+	econf $(use_enable ssl) --docdir=/usr/share/doc/${PF}
 	# too much changes required: $(use_enable test avahi-tests)
 }
 
