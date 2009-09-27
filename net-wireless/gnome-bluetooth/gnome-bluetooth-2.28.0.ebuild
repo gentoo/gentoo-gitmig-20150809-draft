@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.0.ebuild,v 1.1 2009/09/26 16:33:27 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gnome-bluetooth/gnome-bluetooth-2.28.0.ebuild,v 1.2 2009/09/27 16:29:23 nirbheek Exp $
 
 EAPI="2"
 
@@ -21,9 +21,14 @@ COMMON_DEPEND=">=dev-libs/glib-2.16
 	dev-libs/libunique"
 DEPEND="${COMMON_DEPEND}
 	!!net-wireless/bluez-gnome
+	app-text/gnome-doc-utils
+	app-text/scrollkeeper
+	dev-libs/libxml2
+	dev-util/intltool
 	dev-util/pkgconfig
+	sys-devel/gettext
 	x11-proto/xproto
-	doc? ( app-text/gnome-doc-utils )"
+	doc? ( >=dev-util/gtk-doc-1.9 )"
 RDEPEND="${COMMON_DEPEND}
 	>=net-wireless/bluez-4.34
 	>=app-mobilephone/obex-data-server-0.4"
