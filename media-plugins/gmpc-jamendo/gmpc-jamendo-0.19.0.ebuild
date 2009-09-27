@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/gmpc-jamendo-0.18.0.ebuild,v 1.3 2009/06/30 08:23:50 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-jamendo/gmpc-jamendo-0.19.0.ebuild,v 1.1 2009/09/27 13:29:13 ssuominen Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE=""
+IUSE="nls"
 
 RDEPEND=">=media-sound/gmpc-${PV}
 	>=media-libs/libmpd-0.15.98
@@ -21,8 +21,16 @@ RDEPEND=">=media-sound/gmpc-${PV}
 	>=x11-libs/gtk+-2.4:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	dev-util/gob"
+	dev-util/gob
+	nls? ( dev-util/intltool
+		sys-devel/gettext )"
 
-src_install () {
-	emake DESTDIR="${D}" install || die "emake install failed"
+src_configure() {
+	econf \
+		$(use_enable nls) \
+		--disable-dependency-tracking
+}
+
+src_install() {
+	emake DESTDIR="${D}" install || die
 }
