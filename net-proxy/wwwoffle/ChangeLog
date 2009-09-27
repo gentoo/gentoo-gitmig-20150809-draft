@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/wwwoffle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.46 2009/09/06 15:54:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/wwwoffle/ChangeLog,v 1.47 2009/09/27 14:32:45 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> wwwoffle-2.9e.ebuild:
+  Marking wwwoffle-2.9e ppc64 for bug 282419
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> wwwoffle-2.9e.ebuild:
   amd64/x86 stable, bug #282419
