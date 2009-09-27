@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/brasero
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.79 2009/09/27 18:55:41 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/ChangeLog,v 1.80 2009/09/27 21:09:01 eva Exp $
+
+  27 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org>
+  -files/brasero-2.25.90-il8n.patch, -brasero-2.26.1-r2.ebuild,
+  -files/brasero-2.26.1-configure.patch, -brasero-2.26.2-r1.ebuild,
+  brasero-2.26.3.ebuild:
+  Clean up old revisions, move some deps around, update gst-plugins-meta
+  message.
 
   27 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   brasero-2.26.3.ebuild:
