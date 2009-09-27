@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/aquapfont
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.34 2009/09/27 12:32:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/aquapfont/ChangeLog,v 1.35 2009/09/27 15:02:49 volkmar Exp $
+
+  27 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> aquapfont-2.6-r2.ebuild:
+  Stable for ppc. Bug 286489
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> aquapfont-2.6-r2.ebuild:
   amd64/x86 stable, bug #286489
