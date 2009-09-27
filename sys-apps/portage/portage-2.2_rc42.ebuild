@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc42.ebuild,v 1.2 2009/09/26 19:26:03 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc42.ebuild,v 1.3 2009/09/27 18:56:33 arfrever Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -114,8 +114,10 @@ src_compile() {
 }
 
 src_test() {
-	./pym/portage/tests/runTests || \
-		die "test(s) failed"
+	./pym/portage/tests/runTests || die "test(s) failed"
+
+	# Workaround for bugs in test suite. Remove it in future ebuilds.
+	rm -fr pym/portage/tests/bin/root
 }
 
 src_install() {
