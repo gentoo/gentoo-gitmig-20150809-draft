@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10503 2009/09/26 23:25:13 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10504 2009/09/27 02:40:28 dirtyepic Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -871,15 +871,6 @@ net-im/silky
 #  http://dev.gentoo.org/~scarabeus/ati-mask-reason.txt
 <x11-drivers/ati-drivers-9.6
 x11-apps/ati-drivers-extra
-
-# Ryan Hill <dirtyepic@gentoo.org> (27 Jul 2009)
-# Masked for removal 20090927
-# - upstream dead since 2006
-# - invalid homepage
-# - many other typing tutors in the tree (ktouch, tuxtype, gtypist, klavaro)
-# - doesn't work with wxGTK-2.8
-# Bug #279431
-app-misc/tipptrainer
 
 # Michał Januszewski <spock@gentoo.org> (26 Jul 2009)
 # Mask for beta versions of the NVIDIA drivers.
