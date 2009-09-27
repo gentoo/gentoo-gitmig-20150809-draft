@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/obex-data-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.17 2009/06/20 21:52:06 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obex-data-server/ChangeLog,v 1.18 2009/09/27 03:56:26 tester Exp $
+
+  27 Sep 2009; Olivier Crête <tester@gentoo.org>
+  obex-data-server-0.4.4.ebuild:
+  Stable on amd64, bug #284661
 
   20 Jun 2009; Alin Năstac <mrness@gentoo.org>
   obex-data-server-0.4.4.ebuild:
