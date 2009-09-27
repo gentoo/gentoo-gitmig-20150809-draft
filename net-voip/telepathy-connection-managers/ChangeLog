@@ -1,0 +1,10 @@
+# ChangeLog for net-voip/telepathy-connection-managers
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/telepathy-connection-managers/ChangeLog,v 1.1 2009/09/27 17:59:37 tester Exp $
+
+*telepathy-connection-managers-1 (27 Sep 2009)
+
+  27 Sep 2009; Olivier Crête <tester@gentoo.org>
+  +telepathy-connection-managers-1.ebuild, +metadata.xml:
+  Add metapackage for the connection managers, bug #206073
+
