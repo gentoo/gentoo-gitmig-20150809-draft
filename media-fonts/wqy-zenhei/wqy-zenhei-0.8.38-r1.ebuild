@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/wqy-zenhei-0.8.38-r1.ebuild,v 1.3 2009/09/25 14:49:36 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/wqy-zenhei-0.8.38-r1.ebuild,v 1.4 2009/09/27 10:22:00 volkmar Exp $
 
 inherit font
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/wqy/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 # Only installs fonts
