@@ -30,3 +30,13 @@ diff -NrU5 libthrowable-1.1.0.orig/libthrowable/internal/posix_threads.h libthro
  namespace libthrowable {
  namespace internal {
  namespace posix {
+--- libthrowable-1.1.0.orig/tests/t_libthrowable.cc.old	2009-06-30 16:19:43.000000000 +0200
++++ libthrowable-1.1.0/tests/t_libthrowable.cc	2009-06-30 16:21:01.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include "libthrowable.h"
+ #include "libthrowable/internal/internal.h"
+ #include "libthrowable/streams.h"
++#include <cstdlib>
+ #include <iostream>
+ #include <sstream>
+ #ifdef HAVE_PTHREAD
