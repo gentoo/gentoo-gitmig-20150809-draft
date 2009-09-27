@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.3.ebuild,v 1.1 2009/07/07 16:48:15 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.3.ebuild,v 1.2 2009/09/27 18:55:41 mrpouet Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -13,33 +13,34 @@ HOMEPAGE="http://www.gnome.org/projects/brasero"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="beagle +cdr +libburn +totem +nautilus"
+IUSE="beagle +cdr css +libburn +totem +nautilus"
 
-RDEPEND=">=dev-libs/glib-2.16.5
+COMMON_DEPEND=">=dev-libs/glib-2.16.5
 	>=x11-libs/gtk+-2.14.0
 	>=media-libs/gstreamer-0.10.15
 	>=media-libs/gst-plugins-base-0.10.15
 	>=media-plugins/gst-plugins-ffmpeg-0.10
+	media-plugins/gst-plugins-meta
 	>=dev-libs/libxml2-2.6
 	sys-apps/hal
 	gnome-base/gvfs
 	>=app-cdr/cdrdao-1.2.2-r3
 	>=dev-libs/dbus-glib-0.7.2
-	media-libs/libdvdcss
 	>=app-cdr/dvd+rw-tools-7.1
 	cdr? ( virtual/cdrtools )
 	totem? ( >=dev-libs/totem-pl-parser-2.20 )
 	beagle? ( >=dev-libs/libbeagle-0.3.0 )
 	libburn? ( >=dev-libs/libburn-0.6.0
 		>=dev-libs/libisofs-0.6.12 )
-	nautilus? ( >=gnome-base/nautilus-2.24.2 )"
-DEPEND="${RDEPEND}
-	gnome-base/gnome-common
+	nautilus? ( >=gnome-base/nautilus-2.24.2 )
+	gnome-base/gconf"
+RDEPEND="${COMMOND_DEPEND}
+	css? ( media-libs/libdvdcss )"
+DEPEND="${COMMON_DEPEND}
 	app-text/gnome-doc-utils
 	dev-util/pkgconfig
 	sys-devel/gettext
-	dev-util/intltool
-	gnome-base/gconf"
+	dev-util/intltool"
 
 pkg_setup() {
 	G2CONF="${G2CONF}
@@ -62,14 +63,6 @@ src_prepare() {
 	# Fix intltoolize broken file, see upstream #577133
 	sed "s:'\^\$\$lang\$\$':\^\$\$lang\$\$:g" -i po/Makefile.in.in \
 		|| die "sed failed"
-}
-
-src_test() {
-	BLING=$LINGUAS
-	unset LINGUAS
-	emake check || die "emake check failed"
-	export LINGUAS=$BLING
-	unset BLING
 }
 
 pkg_postinst() {
