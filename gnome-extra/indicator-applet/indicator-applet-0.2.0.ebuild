@@ -1,9 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/indicator-applet-0.2.0.ebuild,v 1.2 2009/09/21 16:15:49 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/indicator-applet/indicator-applet-0.2.0.ebuild,v 1.3 2009/09/27 23:20:10 eva Exp $
 
-EAPI=2
-GCONF_DEBUG=no
+EAPI="2"
+GCONF_DEBUG="no"
+
 inherit gnome2
 
 DESCRIPTION="A small applet to display information from various applications consistently in the panel"
@@ -30,4 +31,13 @@ pkg_setup() {
 	G2CONF="$(use_enable nls)
 		--disable-dependency-tracking"
 	DOCS="AUTHORS"
+}
+
+src_prepare() {
+	gnome2_src_prepare
+
+	# Remove useless applet, bug #286143
+	sed 's/src-session//' -i Makefile.am Makefile.in || die "sed failed"
+	sed 's/GNOME_FastUserSwitchApplet.server.in//' \
+		-i data/Makefile.am data/Makefile.in || die "sed 2 failed"
 }
