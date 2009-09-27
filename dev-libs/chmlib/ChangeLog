@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/chmlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.11 2009/09/27 12:56:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/chmlib/ChangeLog,v 1.12 2009/09/27 14:20:45 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> chmlib-0.40.ebuild:
+  Marking chmlib-0.40 ppc64 for bug 286604
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> chmlib-0.40.ebuild:
   amd64/x86 stable, bug #286604
