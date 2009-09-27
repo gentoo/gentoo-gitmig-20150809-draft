@@ -1,11 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.16 2009/09/23 15:29:49 arfrever Exp $
-
-# NOTE about python-portage interactions :
-# - Do not add a pkg_setup() check for a certain version of portage
-#   in dev-lang/python. It _WILL_ stop people installing from
-#   Gentoo 1.4 images.
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.4.6.ebuild,v 1.17 2009/09/27 17:56:00 arfrever Exp $
 
 EAPI="1"
 
@@ -29,9 +24,9 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 LICENSE="PSF-2.2"
 SLOT="2.4"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="-berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 ncurses readline ssl +threads tk ucs2 wininst +xml"
+IUSE="-berkdb bootstrap build +cxx doc elibc_uclibc examples gdbm ipv6 +ncurses +readline ssl +threads tk ucs2 wininst +xml"
 
-DEPEND=">=app-admin/eselect-python-20080925
+RDEPEND=">=app-admin/eselect-python-20090606
 		>=sys-libs/zlib-1.1.3
 		!build? (
 			berkdb? ( || (
@@ -49,13 +44,9 @@ DEPEND=">=app-admin/eselect-python-20080925
 			tk? ( >=dev-lang/tk-8.0 )
 			xml? ( dev-libs/expat )
 		)"
-
-# NOTE: changed RDEPEND to PDEPEND to resolve bug 88777. - kloeri
-# NOTE: added blocker to enforce correct merge order for bug 88777. - zmedico
-
-RDEPEND="${DEPEND} build? ( !dev-python/pycrypto )
-		app-misc/mime-types"
-PDEPEND="${DEPEND} app-admin/python-updater"
+DEPEND="${RDEPEND}"
+RDEPEND+=" !build? ( app-misc/mime-types )"
+PDEPEND="app-admin/python-updater"
 
 PROVIDE="virtual/python"
 
@@ -143,8 +134,8 @@ src_configure() {
 	# doing. Enabling UCS2 support will break your existing python
 	# modules
 	use ucs2 \
-		&& myconf="${myconf} --enable-unicode=ucs2" \
-		|| myconf="${myconf} --enable-unicode=ucs4"
+		&& myconf+=" --enable-unicode=ucs2" \
+		|| myconf+=" --enable-unicode=ucs4"
 
 	filter-flags -malign-double
 
@@ -248,7 +239,7 @@ src_install() {
 
 	# Python 2.4 partially doesn't respect $(get_libdir).
 	if use build; then
-		rm -fr "${D}"usr/lib*/python${PYVER}/{bsddb,email,encodings,lib-tk,test}
+		rm -fr "${D}"usr/lib*/python${PYVER}/{bsddb,email,lib-tk,test}
 	else
 		use elibc_uclibc && rm -fr "${D}"usr/lib*/python${PYVER}/{bsddb/test,test}
 		use berkdb || rm -fr "${D}"usr/lib*/python${PYVER}/{bsddb,test/test_bsddb*}
@@ -273,7 +264,13 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2
+	local ignored_python_slots
+	[[ "$(eselect python show)" == "python2."* ]] && ignored_python_slots="--ignore 3.0 --ignore 3.1 --ignore 3.2"
+
+	# Create python2 symlink.
+	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2 > /dev/null
+
+	eselect python update ${ignored_python_slots}
 
 	python_mod_optimize -x "(site-packages|test)" /usr/lib/python${PYVER}
 	[[ "$(get_libdir)" != "lib" ]] && python_mod_optimize -x "(site-packages|test)" /usr/$(get_libdir)/python${PYVER}
@@ -283,7 +280,7 @@ pkg_postinst() {
 		ewarn "\e[1;31m************************************************************************\e[0m"
 		ewarn
 		ewarn "You have just upgraded from an older version of Python."
-		ewarn "You should run 'python-updater' to rebuild Python modules."
+		ewarn "You should run 'python-updater \${options}' to rebuild Python modules."
 		ewarn
 		ewarn "\e[1;31m************************************************************************\e[0m"
 		ewarn
@@ -292,7 +289,13 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2
+	local ignored_python_slots
+	[[ "$(eselect python show)" == "python2."* ]] && ignored_python_slots="--ignore 3.0 --ignore 3.1 --ignore 3.2"
+
+	# Create python2 symlink.
+	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2 > /dev/null
+
+	eselect python update ${ignored_python_slots}
 
 	python_mod_cleanup /usr/lib/python${PYVER}
 	[[ "$(get_libdir)" != "lib" ]] && python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
