@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libbtctl
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.48 2009/02/19 23:49:48 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.49 2009/09/27 03:51:51 tester Exp $
+
+  27 Sep 2009; Olivier Crête <tester@gentoo.org> libbtctl-0.11.1.ebuild:
+  Stable on amd64, bug #284661
 
 *libbtctl-0.11.1 (19 Feb 2009)
 
