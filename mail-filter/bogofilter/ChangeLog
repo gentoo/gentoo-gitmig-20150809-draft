@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.125 2009/09/27 14:31:28 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.126 2009/09/27 18:40:11 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> bogofilter-1.2.1.ebuild:
+  ppc stable #284900
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org> bogofilter-1.2.1.ebuild:
   Marking bogofilter-1.2.1 ppc64 for bug 284900
