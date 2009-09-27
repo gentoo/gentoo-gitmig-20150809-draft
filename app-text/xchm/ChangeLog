@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xchm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.10 2009/09/27 12:41:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xchm/ChangeLog,v 1.11 2009/09/27 20:00:09 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> xchm-1.16.ebuild:
+  ppc stable #286591
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> xchm-1.16.ebuild:
   amd64/x86 stable, bug #286591
