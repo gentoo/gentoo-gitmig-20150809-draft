@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/linuxfromscratch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.4 2009/09/27 06:10:09 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/linuxfromscratch/ChangeLog,v 1.5 2009/09/27 13:01:09 maekke Exp $
+
+  27 Sep 2009; Markus Meier <maekke@gentoo.org> linuxfromscratch-6.4.ebuild:
+  amd64/x86 stable, bug #286612
 
 *linuxfromscratch-6.5 (27 Sep 2009)
 
