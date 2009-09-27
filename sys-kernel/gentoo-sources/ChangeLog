@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.643 2009/09/20 19:41:10 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.644 2009/09/27 21:12:10 mpagano Exp $
+
+*gentoo-sources-2.6.31-r1 (27 Sep 2009)
+
+  27 Sep 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.31-r1.ebuild:
+  Gentoo sources version bump includes linxu patch 2.6.31.1 and a patch to
+  fix cc1 options to ensure -fPIC is not used when compiling
 
   20 Sep 2009; nixnut <nixnut@gentoo.org> gentoo-sources-2.6.30-r5.ebuild:
   ppc stable #283928
