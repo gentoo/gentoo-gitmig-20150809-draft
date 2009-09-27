@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/abs-guide
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.75 2009/09/27 12:47:09 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/abs-guide/ChangeLog,v 1.76 2009/09/27 20:03:15 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> abs-guide-6.0.ebuild:
+  ppc stable #286602
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> abs-guide-6.0.ebuild:
   amd64/x86 stable, bug #286602
