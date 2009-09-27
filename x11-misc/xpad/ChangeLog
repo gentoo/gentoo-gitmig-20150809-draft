@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.65 2009/09/27 11:10:25 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.66 2009/09/27 15:38:53 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> xpad-4.0.ebuild:
+  ppc stable #282313
 
   27 Sep 2009; Markus Meier <maekke@gentoo.org> xpad-4.0.ebuild:
   amd64/x86 stable, bug #282313
