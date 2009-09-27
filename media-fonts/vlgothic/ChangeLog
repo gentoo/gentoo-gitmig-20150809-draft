@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vlgothic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.47 2009/09/25 14:50:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vlgothic/ChangeLog,v 1.48 2009/09/27 10:32:39 volkmar Exp $
+
+  27 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> vlgothic-20090811.ebuild:
+  Stable for ppc. Fix bug 284011
 
   25 Sep 2009; Brent Baude <ranger@gentoo.org> vlgothic-20090811.ebuild:
   Marking vlgothic-20090811 ppc64 for bug 284011
