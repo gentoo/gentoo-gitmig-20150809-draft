@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/qscintilla-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.41 2009/09/22 07:30:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/qscintilla-python/ChangeLog,v 1.42 2009/09/27 18:27:32 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> qscintilla-python-2.4.ebuild:
+  ppc stable #284707
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org>
   qscintilla-python-2.4.ebuild:
