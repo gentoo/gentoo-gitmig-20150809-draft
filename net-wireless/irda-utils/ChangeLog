@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/irda-utils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.31 2009/09/19 08:29:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/irda-utils/ChangeLog,v 1.32 2009/09/27 17:48:06 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> irda-utils-0.9.18-r3.ebuild:
+  ppc stable #284570
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> irda-utils-0.9.18-r3.ebuild:
   amd64/x86 stable, bug #284570
