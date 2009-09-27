@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ical
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.22 2009/09/22 13:24:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ical/ChangeLog,v 1.23 2009/09/27 14:58:25 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> ical-2.3.3.ebuild:
+  ppc stable #281422
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> ical-2.3.3.ebuild:
   amd64 stable, bug #281422
