@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/eqe/eqe-1.3.0.ebuild,v 1.2 2008/09/03 06:41:49 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/eqe/eqe-1.3.0.ebuild,v 1.3 2009/09/27 12:16:56 maekke Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://rlehy.free.fr/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~ppc ~x86 ~amd64"
+KEYWORDS="amd64 ~ppc x86"
 
 IUSE=""
 DEPEND="dev-perl/gtk2-perl
