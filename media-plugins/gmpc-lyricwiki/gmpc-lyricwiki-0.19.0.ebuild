@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/gmpc-lyricwiki-0.19.0.ebuild,v 1.1 2009/09/27 12:33:43 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-lyricwiki/gmpc-lyricwiki-0.19.0.ebuild,v 1.2 2009/09/27 12:34:46 ssuominen Exp $
 
 EAPI=2
 
@@ -26,6 +26,6 @@ src_configure() {
 		--disable-dependency-tracking
 }
 
-src_install () {
+src_install() {
 	emake DESTDIR="${D}" install || die
 }
