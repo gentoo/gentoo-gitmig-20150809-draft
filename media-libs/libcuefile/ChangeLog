@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcuefile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.11 2009/09/27 17:50:30 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcuefile/ChangeLog,v 1.12 2009/09/27 17:54:01 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> libcuefile-444.ebuild:
+  ppc stable #284781
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> libcuefile-444.ebuild:
   ~ppc #279069
