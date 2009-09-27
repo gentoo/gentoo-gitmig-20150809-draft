@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.30 2009/09/05 23:33:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.31 2009/09/27 14:02:59 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> ginac-1.5.1.ebuild:
+  ppc stable #271396
 
   05 Sep 2009; Markus Meier <maekke@gentoo.org> ginac-1.5.1.ebuild:
   amd64 stable, bug #271396
