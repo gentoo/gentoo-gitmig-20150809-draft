@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlzip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.16 2009/06/21 12:43:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/ChangeLog,v 1.17 2009/09/27 19:32:02 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> camlzip-1.04.ebuild:
+  ppc stable #285691
 
 *camlzip-1.04 (21 Jun 2009)
 

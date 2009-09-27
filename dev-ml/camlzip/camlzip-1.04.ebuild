@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.04.ebuild,v 1.1 2009/06/21 12:43:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlzip/camlzip-1.04.ebuild,v 1.2 2009/09/27 19:32:02 nixnut Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ SRC_URI="http://caml.inria.fr/distrib/bazar-ocaml/${P}.tar.gz"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ppc ~x86 ~x86-fbsd"
 
 RDEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 		>=sys-libs/zlib-1.1.3"
