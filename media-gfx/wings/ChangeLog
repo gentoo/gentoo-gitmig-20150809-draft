@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/wings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.25 2009/06/27 11:55:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wings/ChangeLog,v 1.26 2009/09/27 18:16:47 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> wings-1.1.1.ebuild:
+  ppc stable #284691
 
 *wings-1.1.1 (27 Jun 2009)
 
