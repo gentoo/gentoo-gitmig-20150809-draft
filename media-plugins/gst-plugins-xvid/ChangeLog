@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/gst-plugins-xvid
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-xvid/ChangeLog,v 1.1 2009/09/27 21:53:06 ford_prefect Exp $
+
+*gst-plugins-xvid-0.10.14 (27 Sep 2009)
+
+  27 Sep 2009; Arun Raghavan <ford_prefect@gentoo.org>
+  +gst-plugins-xvid-0.10.14.ebuild, +metadata.xml:
+  Add support for the xviddec/xvidenc GStreamer elements from
+  gst-plugins-bad
+
