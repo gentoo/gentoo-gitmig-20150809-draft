@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.26.0.ebuild,v 1.5 2009/09/27 15:21:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/atk-1.26.0.ebuild,v 1.6 2009/09/27 23:13:02 eva Exp $
 
 inherit gnome2
 
 DESCRIPTION="GTK+ & GNOME Accessibility Toolkit"
-HOMEPAGE="http://developer.gnome.org/projects/gap/"
+HOMEPAGE="http://live.gnome.org/GAP/"
 
 LICENSE="LGPL-2"
 SLOT="0"

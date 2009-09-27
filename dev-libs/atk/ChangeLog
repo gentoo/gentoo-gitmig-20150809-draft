@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.181 2009/09/27 15:21:53 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.182 2009/09/27 23:13:02 eva Exp $
+
+  27 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org> -atk-1.20.0.ebuild,
+  -atk-1.22.0.ebuild, atk-1.24.0.ebuild, atk-1.26.0.ebuild:
+  Update homepage per bug #286281. Clean up old revisions.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> atk-1.26.0.ebuild:
   ppc stable #285586
