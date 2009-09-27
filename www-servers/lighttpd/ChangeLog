@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.203 2009/09/26 19:42:51 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.204 2009/09/27 07:11:28 bangert Exp $
+
+  27 Sep 2009; Thilo Bangert <bangert@gentoo.org> lighttpd-1.4.23.ebuild:
+  fix tests when running as user - bug #286134
 
   26 Sep 2009; Brent Baude <ranger@gentoo.org> lighttpd-1.4.23.ebuild:
   Marking lighttpd-1.4.23 ppc64 for bug 286134
