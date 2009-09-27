@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/xsp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.76 2009/09/19 15:13:19 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/xsp/ChangeLog,v 1.77 2009/09/27 16:54:03 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> xsp-2.4.2.ebuild:
+  ppc stable #284306
 
   19 Sep 2009; Markus Meier <maekke@gentoo.org> xsp-2.4.2.ebuild:
   amd64/x86 stable, bug #284306
