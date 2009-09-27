@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.19 2009/09/27 17:56:00 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.5.4-r3.ebuild,v 1.20 2009/09/27 18:33:37 arfrever Exp $
 
 EAPI="1"
 
@@ -268,7 +268,7 @@ pkg_preinst() {
 	fi
 }
 
-pkg_postinst() {
+eselect_python_update() {
 	local ignored_python_slots
 	[[ "$(eselect python show)" == "python2."* ]] && ignored_python_slots="--ignore 3.0 --ignore 3.1 --ignore 3.2"
 
@@ -276,6 +276,10 @@ pkg_postinst() {
 	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2 > /dev/null
 
 	eselect python update ${ignored_python_slots}
+}
+
+pkg_postinst() {
+	eselect_python_update
 
 	python_mod_optimize -x "(site-packages|test)" /usr/lib/python${PYVER}
 	[[ "$(get_libdir)" != "lib" ]] && python_mod_optimize -x "(site-packages|test)" /usr/$(get_libdir)/python${PYVER}
@@ -294,13 +298,7 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-	local ignored_python_slots
-	[[ "$(eselect python show)" == "python2."* ]] && ignored_python_slots="--ignore 3.0 --ignore 3.1 --ignore 3.2"
-
-	# Create python2 symlink.
-	eselect python update --ignore 3.0 --ignore 3.1 --ignore 3.2 > /dev/null
-
-	eselect python update ${ignored_python_slots}
+	eselect_python_update
 
 	python_mod_cleanup /usr/lib/python${PYVER}
 	[[ "$(get_libdir)" != "lib" ]] && python_mod_cleanup /usr/$(get_libdir)/python${PYVER}
