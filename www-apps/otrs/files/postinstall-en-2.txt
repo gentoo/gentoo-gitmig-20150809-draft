@@ -12,7 +12,7 @@ to your Apache options.
 
 3. Setup your database. Read /usr/share/doc/${PN}-${PVR}/README.database.bz2
 
-4. Read /usr/share/doc/${PN}-${PVR}/INSTALL.gz , pp. 9-12,
+4. Read the INSTALL file in /usr/share/doc/${PN}-${PVR}/, pp. 9-12,
 to finish the installation.
 
 If you are upgrading, read /usr/share/doc/${PN}-${PVR}/UPGRADING.bz2
