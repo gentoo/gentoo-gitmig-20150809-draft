@@ -1,0 +1,56 @@
+--- src/Makefile.am.old	2009-09-27 21:32:26.566057010 +0200
++++ src/Makefile.am	2009-09-27 21:33:33.564053846 +0200
+@@ -39,6 +39,8 @@ COMMONCODE = \
+ 	npp_gate.cpp \
+ 	npupp.h
+ 
++LIBS = $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS)
++
+ install_libexecdir = $(libdir)/mozilla/plugins
+ install_libexec_PROGRAMS = \
+ 	gecko-mediaplayer.so \
+@@ -52,7 +54,7 @@ gecko_mediaplayer_so_SOURCES = \
+ 	$(COMMONCODE)
+ 		
+ gecko_mediaplayer_so_CFLAGS = -fPIC 
+-gecko_mediaplayer_so_LDFLAGS = -shared $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS) -fPIC
++gecko_mediaplayer_so_LDFLAGS = -shared -fPIC
+ gecko_mediaplayer_so_LDADD = libgmlib/libgmlib.a
+ 
+ gecko_mediaplayer_qt_so_SOURCES = \
+@@ -60,7 +62,7 @@ gecko_mediaplayer_qt_so_SOURCES = \
+ 	$(COMMONCODE)
+ 	
+ gecko_mediaplayer_qt_so_CFLAGS = -fPIC 
+-gecko_mediaplayer_qt_so_LDFLAGS = -shared $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS) -fPIC 
++gecko_mediaplayer_qt_so_LDFLAGS = -shared -fPIC 
+ gecko_mediaplayer_qt_so_LDADD = libgmlib/libgmlib.a
+ 
+ gecko_mediaplayer_wmp_so_SOURCES = \
+@@ -68,7 +70,7 @@ gecko_mediaplayer_wmp_so_SOURCES = \
+ 	$(COMMONCODE)
+ 	
+ gecko_mediaplayer_wmp_so_CFLAGS = -fPIC 
+-gecko_mediaplayer_wmp_so_LDFLAGS = -shared $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS) -fPIC 
++gecko_mediaplayer_wmp_so_LDFLAGS = -shared -fPIC 
+ gecko_mediaplayer_wmp_so_LDADD = libgmlib/libgmlib.a
+ 
+ gecko_mediaplayer_dvx_so_SOURCES = \
+@@ -76,7 +78,7 @@ gecko_mediaplayer_dvx_so_SOURCES = \
+ 	$(COMMONCODE)
+ 	
+ gecko_mediaplayer_dvx_so_CFLAGS = -fPIC 
+-gecko_mediaplayer_dvx_so_LDFLAGS = -shared $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS) -fPIC
++gecko_mediaplayer_dvx_so_LDFLAGS = -shared -fPIC
+ gecko_mediaplayer_dvx_so_LDADD = libgmlib/libgmlib.a
+ 
+ gecko_mediaplayer_rm_so_SOURCES = \
+@@ -84,7 +86,7 @@ gecko_mediaplayer_rm_so_SOURCES = \
+ 	$(COMMONCODE)
+ 	
+ gecko_mediaplayer_rm_so_CFLAGS = -fPIC 
+-gecko_mediaplayer_rm_so_LDFLAGS = -shared $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS) -fPIC
++gecko_mediaplayer_rm_so_LDFLAGS = -shared -fPIC
+ gecko_mediaplayer_rm_so_LDADD = libgmlib/libgmlib.a
+ 
+ indent:

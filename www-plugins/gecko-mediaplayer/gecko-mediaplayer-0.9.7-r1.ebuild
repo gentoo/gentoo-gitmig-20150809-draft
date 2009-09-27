@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.7.ebuild,v 1.1 2009/08/29 17:01:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.7-r1.ebuild,v 1.1 2009/09/27 20:41:07 idl0r Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit gnome2 multilib
+inherit gnome2 multilib autotools eutils
 
 DESCRIPTION="A browser multimedia plugin using gnome-mplayer"
 HOMEPAGE="http://code.google.com/p/gecko-mediaplayer"
@@ -30,6 +30,11 @@ pkg_setup() {
 		$(use_with gnome gconf)
 		--with-gio"
 	DOCS="ChangeLog DOCS/tech/javascript.txt"
+}
+
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-as-needed.patch"
+	eautoreconf
 }
 
 src_install() {
