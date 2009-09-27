@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3316 2009/09/27 05:43:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3317 2009/09/27 12:37:09 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  27 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Unmask media-plugins/gmpc-lyricwiki because >= 0.19.0 is working.
 
   27 Sep 2009; Ryan Hill <dirtyepic@gentoo.org> package.mask:
   Mask net-p2p/nicotine for removal on 20091026. (bug #286607)
