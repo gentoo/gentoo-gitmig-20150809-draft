@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/claws-mail-themes
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/ChangeLog,v 1.6 2009/08/01 02:19:14 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/claws-mail-themes/ChangeLog,v 1.7 2009/09/27 14:30:58 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org>
+  claws-mail-themes-20090605.ebuild:
+  Marking claws-mail-themes-20090605 ppc64 for bug 276755
 
   01 Aug 2009; Jeremy Olexa <darkside@gentoo.org>
   claws-mail-themes-20090605.ebuild:
