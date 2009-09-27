@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/dbskkd-cdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.21 2009/09/06 14:38:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/dbskkd-cdb/ChangeLog,v 1.22 2009/09/27 15:00:07 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> dbskkd-cdb-2.00.ebuild:
+  ppc stable #281579
 
   06 Sep 2009; Markus Meier <maekke@gentoo.org> dbskkd-cdb-2.00.ebuild:
   amd64/x86 stable, bug #281579
