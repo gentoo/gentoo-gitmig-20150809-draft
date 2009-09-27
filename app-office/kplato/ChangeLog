@@ -1,6 +1,10 @@
 # ChangeLog for app-office/kplato
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.64 2009/08/12 10:15:42 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kplato/ChangeLog,v 1.65 2009/09/27 12:34:15 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org>
+  kplato-1.6.3_p20090204.ebuild:
+  Marking kplato-1.6.3_p20090204 ppc64 stable for bug 276008
 
   12 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> -kplato-2.0.0.ebuild,
   -kplato-2.0.1.ebuild:
