@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/liblqr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.5 2009/09/06 23:48:37 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/liblqr/ChangeLog,v 1.6 2009/09/27 13:26:03 maekke Exp $
+
+  27 Sep 2009; Markus Meier <maekke@gentoo.org> liblqr-0.4.1.ebuild:
+  add ~arm, bug #281573
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> liblqr-0.4.1.ebuild:
   Marking liblqr-0.4.1 ~ppc64 for bug 281573
