@@ -1,6 +1,9 @@
 # ChangeLog for app-office/krita
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.98 2009/08/12 10:14:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/krita/ChangeLog,v 1.99 2009/09/27 12:35:29 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> krita-1.6.3_p20090204.ebuild:
+  Marking krita-1.6.3_p20090204 ppc64 stable for bug 276008
 
   12 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> -krita-2.0.0.ebuild,
   -krita-2.0.1.ebuild:
