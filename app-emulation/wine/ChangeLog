@@ -1,13 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.280 2009/09/26 17:12:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.281 2009/09/27 06:58:14 vapier Exp $
 
 *wine-1.1.30 (26 Sep 2009)
 
   26 Sep 2009; Mike Frysinger <vapier@gentoo.org> +wine-1.1.30.ebuild,
   wine-9999.ebuild, metadata.xml:
   Version bump #286460 and add support for USE="capi fontconfig gphoto2
-  openal".
+  openal threads".
 
   11 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> wine-9999.ebuild:
   Sync live ebuild with latest snapshot. Fixes bug #284416. Non-maintainer
