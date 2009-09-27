@@ -1,6 +1,9 @@
 # ChangeLog for virtual/emacs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.31 2009/09/26 13:26:47 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/emacs/ChangeLog,v 1.32 2009/09/27 19:16:02 nixnut Exp $
+
+  27 Sep 2009; nixnut <nixnut@gentoo.org> emacs-23.ebuild:
+  ppc stable #285063
 
   26 Sep 2009; Brent Baude <ranger@gentoo.org> emacs-23.ebuild:
   Marking emacs-23 ppc64 for bug 285063
