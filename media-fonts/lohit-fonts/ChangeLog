@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/lohit-fonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/ChangeLog,v 1.21 2009/09/25 14:52:05 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/lohit-fonts/ChangeLog,v 1.22 2009/09/27 14:45:58 volkmar Exp $
+
+  27 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> lohit-fonts-2.3.8.ebuild:
+  Stable for ppc. Fix bug 284024
 
   25 Sep 2009; Brent Baude <ranger@gentoo.org> lohit-fonts-2.3.8.ebuild:
   Marking lohit-fonts-2.3.8 ppc64 for bug 284024
