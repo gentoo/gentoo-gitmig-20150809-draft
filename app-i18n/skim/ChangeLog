@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.75 2009/08/26 16:20:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.76 2009/09/27 12:38:22 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org> skim-1.4.5-r5.ebuild:
+  Marking skim-1.4.5-r5 ppc64 for bug 277353
 
   26 Aug 2009; Raúl Porcel <armin76@gentoo.org> skim-1.4.5-r5.ebuild:
   sparc stable wrt #277353
