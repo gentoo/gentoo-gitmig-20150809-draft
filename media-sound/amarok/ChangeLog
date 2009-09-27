@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.338 2009/08/29 18:53:37 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.339 2009/09/27 15:29:40 ranger Exp $
+
+  27 Sep 2009; Brent Baude <ranger@gentoo.org>
+  amarok-1.4.10_p20090130-r3.ebuild:
+  Marking amarok-1.4.10_p20090130-r3 ppc64 for bug 280797
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> amarok-1.4.10_p20090130-r3.ebuild:
   ppc stable #280797
