@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.7.0.ebuild,v 1.2 2008/12/27 12:55:39 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gpp/gpp-0.7.0.ebuild,v 1.3 2009/09/27 12:24:19 maekke Exp $
 
 inherit autotools eutils gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fogman.de/${PN}/${P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/libgnomeui-2
