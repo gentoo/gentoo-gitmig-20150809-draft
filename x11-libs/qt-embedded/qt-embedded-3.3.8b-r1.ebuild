@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8b.ebuild,v 1.3 2009/05/05 08:23:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.8b-r1.ebuild,v 1.1 2009/09/27 12:04:18 ayoy Exp $
+
+inherit eutils
 
 DESCRIPTION="Embedded Linux port of Qt"
 HOMEPAGE="http://www.qtsoftware.com/products/platform/qt-for-embedded-linux"
@@ -60,6 +62,9 @@ src_unpack() {
 
 	# avoid using -rpath
 	find mkspecs/ -name qmake.conf -exec sed -i -e "s:QMAKE_RPATH.*:QMAKE_RPATH =:" {} \;
+
+	# avoid stripping binaries that portage will strip for us
+	find mkspecs/ -maxdepth 2 -name qmake.conf -exec sed -i -e "s:QMAKE_STRIP .*:QMAKE_STRIP = echo:" {} \;
 
 	# patch to fix invalid type casts with gcc-4 on amd64 (bug 164113)
 	epatch "${FILESDIR}"/${PN}-3.3.8-castfix.patch

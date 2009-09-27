@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt-embedded
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.28 2009/04/27 20:01:06 hwoarang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.29 2009/09/27 12:04:18 ayoy Exp $
+
+*qt-embedded-3.3.8b-r1 (27 Sep 2009)
+
+  27 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> -qt-embedded-3.3.8b.ebuild,
+  +qt-embedded-3.3.8b-r1.ebuild:
+  Fixed pre-stripping files (bug #252088). Patch by Håvard Wall.
 
   27 Apr 2009; Markos Chandras <hwoarang@gentoo.org>
   -qt-embedded-3.3.8.ebuild:
