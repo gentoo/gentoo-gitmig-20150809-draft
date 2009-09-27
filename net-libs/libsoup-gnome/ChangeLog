@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.3 2009/09/21 12:17:43 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.4 2009/09/27 23:27:38 tester Exp $
+
+  27 Sep 2009; Olivier Crête <tester@gentoo.org>
+  libsoup-gnome-2.26.3-r1.ebuild:
+  amd64 stable
 
 *libsoup-gnome-2.26.3-r1 (21 Sep 2009)
 
