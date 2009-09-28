@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.204 2009/09/27 23:04:02 tanderson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.205 2009/09/28 09:14:41 tove Exp $
 
   27 Sep 2009; Thomas Anderson <tanderson@gentoo.org> hdparm-9.20.ebuild:
   stable amd64, tested on an AMD64 Turion X2 by myself and tested on an
@@ -53,7 +53,7 @@
   19 Jun 2009; Brent Baude <ranger@gentoo.org> hdparm-9.15.ebuild:
   stable ppc64, bug 273048
 
-  16 Jun 2009; RaÃºl Porcel <armin76@gentoo.org> hdparm-9.15.ebuild:
+  16 Jun 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.15.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #273048
 
   10 Jun 2009; Markus Meier <maekke@gentoo.org> hdparm-9.15.ebuild:
@@ -72,7 +72,7 @@
   08 Apr 2009; Mike Frysinger <vapier@gentoo.org> +hdparm-9.14.ebuild:
   Version bump.
 
-  30 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> hdparm-9.12.ebuild:
+  30 Mar 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.12.ebuild:
   alpha/arm/ia64/m68k/s390/sh/sparc stable wrt #263421
 
   25 Mar 2009; Joseph Jezak <josejx@gentoo.org> hdparm-9.12.ebuild:
@@ -92,7 +92,7 @@
   22 Mar 2009; Mike Frysinger <vapier@gentoo.org> +hdparm-9.13.ebuild:
   Version bump.
 
-  17 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> hdparm-9.10.ebuild:
+  17 Mar 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.10.ebuild:
   m68k stable wrt #260452, thanks to kolla for testing
 
   14 Mar 2009; nixnut <nixnut@gentoo.org> hdparm-9.10.ebuild:
@@ -104,7 +104,7 @@
   06 Mar 2009; Jeroen Roovers <jer@gentoo.org> hdparm-9.10.ebuild:
   Stable for HPPA (bug #260452).
 
-  01 Mar 2009; RaÃºl Porcel <armin76@gentoo.org> hdparm-9.10.ebuild:
+  01 Mar 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.10.ebuild:
   alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #260452
 
   27 Feb 2009; Brent Baude <ranger@gentoo.org> hdparm-9.10.ebuild:
@@ -120,7 +120,7 @@
   15 Feb 2009; Mike Frysinger <vapier@gentoo.org> +hdparm-9.11.ebuild:
   Version bump.
 
-  05 Feb 2009; RaÃºl Porcel <armin76@gentoo.org> hdparm-9.6.ebuild:
+  05 Feb 2009; Raúl Porcel <armin76@gentoo.org> hdparm-9.6.ebuild:
   ia64/sparc stable wrt #256371
 
   01 Feb 2009; Markus Meier <maekke@gentoo.org> hdparm-9.6.ebuild:
@@ -158,7 +158,7 @@
   09 Jan 2009; Mike Frysinger <vapier@gentoo.org> +hdparm-9.8.ebuild:
   Version bump.
 
-  23 Dec 2008; RaÃºl Porcel <armin76@gentoo.org> hdparm-9.3.ebuild:
+  23 Dec 2008; Raúl Porcel <armin76@gentoo.org> hdparm-9.3.ebuild:
   sparc stable wrt #250473
 
   22 Dec 2008; Mike Frysinger <vapier@gentoo.org> hdparm-9.3.ebuild:
@@ -223,7 +223,7 @@
   27 Aug 2008; Brent Baude <ranger@gentoo.org> hdparm-8.9.ebuild:
   stable ppc, bug 235926
 
-  27 Aug 2008; RaÃºl Porcel <armin76@gentoo.org> hdparm-8.9.ebuild:
+  27 Aug 2008; Raúl Porcel <armin76@gentoo.org> hdparm-8.9.ebuild:
   alpha/ia64/sparc/x86 stable
 
 *hdparm-8.9 (17 Jun 2008)
@@ -244,7 +244,7 @@
   02 Apr 2008; Tobias Klausmann <klausman@gentoo.org> hdparm-8.6.ebuild:
   Stable on alpha, bug #215068
 
-  01 Apr 2008; RaÃºl Porcel <armin76@gentoo.org> hdparm-8.6.ebuild:
+  01 Apr 2008; Raúl Porcel <armin76@gentoo.org> hdparm-8.6.ebuild:
   ia64/sparc stable wrt #215068
 
   29 Mar 2008; Brent Baude <ranger@gentoo.org> hdparm-8.6.ebuild:
@@ -302,7 +302,7 @@
   28 Sep 2007; nixnut <nixnut@gentoo.org> hdparm-7.7.ebuild:
   Stable on ppc wrt bug 194007
 
-  28 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-7.7.ebuild:
+  28 Sep 2007; Raúl Porcel <armin76@gentoo.org> hdparm-7.7.ebuild:
   alpha/ia64/sparc/x86 stable wrt #194007
 
   28 Sep 2007; Jeroen Roovers <jer@gentoo.org> hdparm-7.7.ebuild:
@@ -325,7 +325,7 @@
   24 Jul 2007; Steve Dibb <beandog@gentoo.org> hdparm-7.6.ebuild:
   amd64 stable, bug 186290
 
-  23 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-7.6.ebuild:
+  23 Jul 2007; Raúl Porcel <armin76@gentoo.org> hdparm-7.6.ebuild:
   alpha/ia64 stable wrt #186290
 
   23 Jul 2007; nixnut <nixnut@gentoo.org> hdparm-7.6.ebuild:
@@ -340,7 +340,7 @@
   23 Jul 2007; Christian Faulhammer <opfer@gentoo.org> hdparm-7.6.ebuild:
   stable x86, bug 186290
 
-  15 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-7.5.ebuild:
+  15 Jul 2007; Raúl Porcel <armin76@gentoo.org> hdparm-7.5.ebuild:
   ia64/x86 stable
 
 *hdparm-7.6 (20 Jun 2007)
@@ -354,7 +354,7 @@
   14 Jun 2007; Jeroen Roovers <jer@gentoo.org> hdparm-7.3.ebuild:
   Stable for HPPA (bug #181965).
 
-  14 Jun 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-7.3.ebuild:
+  14 Jun 2007; Raúl Porcel <armin76@gentoo.org> hdparm-7.3.ebuild:
   alpha/ia64/x86 stable wrt #181965
 
   14 Jun 2007; Gustavo Zacarias <gustavoz@gentoo.org> hdparm-7.3.ebuild:
@@ -374,7 +374,7 @@
   13 Jun 2007; Mike Frysinger <vapier@gentoo.org> +hdparm-7.5.ebuild:
   Version bump #181910 by Raul Porcel.
 
-  12 May 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-7.3.ebuild:
+  12 May 2007; Raúl Porcel <armin76@gentoo.org> hdparm-7.3.ebuild:
   Back to stable
 
 *hdparm-7.3 (12 May 2007)
@@ -385,10 +385,10 @@
   24 Apr 2007; Gustavo Zacarias <gustavoz@gentoo.org> hdparm-6.9-r1.ebuild:
   Stable on sparc
 
-  24 Apr 2007; Alexander FÃ¦rÃ¸y <eroyf@gentoo.org> hdparm-6.9-r1.ebuild:
+  24 Apr 2007; Alexander Færøy <eroyf@gentoo.org> hdparm-6.9-r1.ebuild:
   Stable on MIPS.
 
-  23 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-6.9-r1.ebuild:
+  23 Apr 2007; Raúl Porcel <armin76@gentoo.org> hdparm-6.9-r1.ebuild:
   ia64 + x86 stable
 
 *hdparm-6.9-r1 (13 Mar 2007)
@@ -397,13 +397,13 @@
   +hdparm-6.9-r1.ebuild:
   Init script no longer requires bash.
 
-  12 Mar 2007; Bryan Ãstergaard <kloeri@gentoo.org> hdparm-6.9.ebuild:
+  12 Mar 2007; Bryan Østergaard <kloeri@gentoo.org> hdparm-6.9.ebuild:
   Stable on Alpha, bug 170122.
 
   11 Mar 2007; Tony Vroon <chainsaw@gentoo.org> hdparm-6.9.ebuild:
   Stable on PPC64 for bug #170122. Tested on 64UL with GCC 4.1.2
 
-  11 Mar 2007; Olivier CrÃªte <tester@gentoo.org> hdparm-6.9.ebuild:
+  11 Mar 2007; Olivier Crête <tester@gentoo.org> hdparm-6.9.ebuild:
   Stable on amd64 per bug #170122
 
   10 Mar 2007; nixnut <nixnut@gentoo.org> hdparm-6.9.ebuild:
@@ -412,13 +412,13 @@
   09 Mar 2007; Jeroen Roovers <jer@gentoo.org> hdparm-6.9.ebuild:
   Stable for HPPA (bug #170122).
 
-  09 Mar 2007; RaÃºl Porcel <armin76@gentoo.org> hdparm-6.9.ebuild:
+  09 Mar 2007; Raúl Porcel <armin76@gentoo.org> hdparm-6.9.ebuild:
   x86 stable wrt bug 170122
 
-  09 Mar 2007; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> hdparm-6.9.ebuild:
+  09 Mar 2007; Alexander H. Færøy <eroyf@gentoo.org> hdparm-6.9.ebuild:
   Stable on MIPS; bug #170122
 
-  20 Feb 2007; Alexander H. FÃ¦rÃ¸y <eroyf@gentoo.org> hdparm-6.6.ebuild:
+  20 Feb 2007; Alexander H. Færøy <eroyf@gentoo.org> hdparm-6.6.ebuild:
   Stable on MIPS; bug #153892
 
   14 Feb 2007; Chris Gianelloni <wolf31o2@gentoo.org> hdparm-6.6.ebuild:
@@ -491,7 +491,7 @@
   29 Jun 2005; Joshua Kinard <kumba@gentoo.org> hdparm-5.9.ebuild:
   Marked stable on mips.
 
-  12 Jun 2005; Bryan Ãstergaard <kloeri@gentoo.org> hdparm-5.9.ebuild:
+  12 Jun 2005; Bryan Østergaard <kloeri@gentoo.org> hdparm-5.9.ebuild:
   Stable on alpha.
 
   06 Jun 2005; Markus Rothe <corsair@gentoo.org> hdparm-5.9.ebuild:
@@ -542,7 +542,7 @@
   01 Nov 2004; Joshua Kinard <kumba@gentoo.org> hdparm-5.7-r1.ebuild:
   Marked stable on mips.
 
-  02 Oct 2004; Bryan Ãstergaard <kloeri@gentoo.org> hdparm-5.7-r1.ebuild:
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> hdparm-5.7-r1.ebuild:
   Stable on alpha.
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> hdparm-5.7-r1.ebuild:
