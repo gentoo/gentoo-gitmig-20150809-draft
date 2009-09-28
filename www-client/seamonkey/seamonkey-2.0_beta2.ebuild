@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0_beta2.ebuild,v 1.1 2009/09/25 01:35:11 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0_beta2.ebuild,v 1.2 2009/09/28 03:56:21 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.seamonkey-project.org"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming sqlite"
+IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming sqlite restrict-javascript"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
@@ -57,7 +57,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	java? ( >=dev-java/java-config-0.2.0 )"
 
-PDEPEND="restrict-javascript? ( www-plugins/noscript )"
+PDEPEND="restrict-javascript? ( >=www-plugins/noscript-1.9.6.6 )"
 
 S="${WORKDIR}/comm-central"
 
