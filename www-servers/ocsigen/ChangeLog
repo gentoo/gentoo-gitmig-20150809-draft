@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/ocsigen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.25 2009/09/19 11:59:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/ocsigen/ChangeLog,v 1.26 2009/09/28 18:59:53 aballier Exp $
+
+  28 Sep 2009; Alexis Ballier <aballier@gentoo.org> -ocsigen-1.1.0.ebuild:
+  remove old
 
 *ocsigen-1.2.0 (19 Sep 2009)
 
