@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sgb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.8 2009/09/22 02:02:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.9 2009/09/28 21:53:29 robbat2 Exp $
+
+  28 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> sgb-20030623.ebuild:
+  Add amd64 keyword.
 
   22 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> sgb-20030623.ebuild,
   +files/sgb-20030623-destdir.patch,

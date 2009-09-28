@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.7 2009/09/22 02:02:10 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/sgb-20030623.ebuild,v 1.8 2009/09/28 21:53:29 robbat2 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://labrea.stanford.edu/pub/sgb/"
 SRC_URI="ftp://labrea.stanford.edu/pub/sgb/sgb-${PV:0:4}-${PV:4:2}-${PV:6:2}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~ppc x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 DEPEND="|| ( >=dev-util/cweb-3.00 virtual/tex-base )"
 S="${WORKDIR}"
