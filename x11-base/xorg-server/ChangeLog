@@ -1,6 +1,51 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.445 2009/09/19 22:40:28 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.446 2009/09/28 07:41:02 remi Exp $
+
+  28 Sep 2009; Rémi Cardona <remi@gentoo.org>
+  -files/1.2.0-fix-amd-cpu-detection.patch,
+  -files/1.3.0.0-fix-dual-head-screen-resolutions.patch,
+  -files/xorg-server-sam225bw-quirks.patch,
+  -files/xorg-x11-server-1.0.1-fpic-libxf86config.patch,
+  -files/xorg-server-1.4.0.90-automake-1.10.1-fixup.patch,
+  -files/xorg-xserver-1.4-cve-2008-1377.diff,
+  -files/xorg-xserver-1.4-cve-2008-1379.diff,
+  -files/xorg-xserver-1.4-cve-2008-2360.diff,
+  -files/xorg-xserver-1.4-cve-2008-2361.diff,
+  -files/xorg-xserver-1.4-cve-2008-2362.diff, -xorg-server-1.6.3.ebuild,
+  -files/1.3-0003-Fix-for-CVE-2007-6427-Xinput-extension-memory-corr.patch,
+  -files/1.2.0-properly-free-device-devprivates-memory-leak-fix.patch,
+  -files/1.3.0.0-fix-randr-resizing.patch,
+  -files/1.5.1/0001-only-build-dri2-when-DRI2-is-enabled.patch,
+  -xorg-server-1.6.3.901.ebuild, -xorg-server-1.6.3.901-r1.ebuild,
+  -files/1.3-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch,
+  -files/1.2.0-typo-fix.patch,
+  -files/1.2.0-zero-out-client-devprivates-on-allocation.patch,
+  -files/1.3.0.0-fix-xephyr-amd64-segfault.patch,
+  -files/1.3.0.0-fix-xkb-openoffice-hangs.patch,
+  -files/1.3.0.0-ramdac.patch, -files/1.3.0.0-use-proc-instead-of-sys.patch,
+  -files/1.3.0.0-xephyr_crash_at_exit.patch,
+  -files/1.3-alpha-build-fix.patch,
+  -files/1.4-0001-Fix-for-CVE-2007-5760-XFree86-Misc-extension-out-o.patch,
+  -files/1.4-0002-Fix-for-CVE-2007-6428-TOG-cup-extension-memory-cor.patch,
+  -files/1.4-0003-Fix-for-CVE-2007-6427-Xinput-extension-memory-corr.patch,
+  -files/1.4-0004-Fix-for-CVE-2007-6429-MIT-SHM-and-EVI-extensions-i.patch,
+  -files/1.4-0005-Fix-for-CVE-2008-0006-PCF-Font-parser-buffer-overf.patch,
+  -files/1.4-0006-Fix-for-CVE-2007-5958-File-existence-disclosure.patch,
+  -files/1.4-0007-CVE-2007-6429-Don-t-spuriously-reject-8bpp-shm-pix.patch,
+  -files/1.4-0008-CVE-2007-6429-Always-test-for-size-offset-wrapping.patch,
+  -files/1.4-0009-Don-t-break-grab-and-focus-state-for-a-window-when-r.patch
+  , -files/1.4-document-new-font-catalogs.patch,
+  -files/1.4-dont-hang-openoffice.patch, -files/1.4-fix-dmx-build.patch,
+  -files/1.4-fix-dmx-link.patch, -files/1.4-fix-xephyr-link.patch,
+  -files/1.4-fix-xprint-build.patch, -files/1.4-fix-xprint-link.patch,
+  -files/1.4-ia64.patch, -files/1.4.0.90-clean-generated-files.patch,
+  -files/1.5.2-fix-xvesa-with-new-kernels.patch,
+  -files/1.5.2-force-LC_ALL-C-when-running-awk.patch,
+  -files/1.5.3-builtin-fonts.patch,
+  -files/avoid-crash-on-minimized-xv-window.patch,
+  -files/use-composite-for-unequal-depths.patch, -files/xprint.init:
+  drop old ebuilds, prune ${FILESDIR}
 
   19 Sep 2009; Rémi Cardona <remi@gentoo.org> xorg-server-1.5.3-r6.ebuild,
   xorg-server-1.5.3-r7.ebuild:
