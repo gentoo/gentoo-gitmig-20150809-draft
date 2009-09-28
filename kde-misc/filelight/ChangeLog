@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/filelight
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.33 2009/08/26 14:59:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.34 2009/09/28 12:58:45 ssuominen Exp $
+
+*filelight-1.9_rc2 (28 Sep 2009)
+
+  28 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +filelight-1.9_rc2.ebuild:
+  Version bump (from kde-overlay).
 
   25 Aug 2009; Raúl Porcel <armin76@gentoo.org> filelight-1.0-r1.ebuild:
   sparc stable wrt #278150
