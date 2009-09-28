@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/facile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.15 2009/01/21 23:27:52 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/facile/ChangeLog,v 1.16 2009/09/28 16:31:52 betelgeuse Exp $
+
+  28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> facile-1.1.ebuild:
+  Migrate to EAPI 2 in order to nuke built_with_use.
 
   21 Jan 2009; Alexis Ballier <aballier@gentoo.org> facile-1.1.ebuild:
   keyword ~x86-fbsd
