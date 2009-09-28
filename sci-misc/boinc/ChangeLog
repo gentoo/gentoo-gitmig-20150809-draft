@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.70 2009/09/26 12:43:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.71 2009/09/28 10:26:55 scarabeus Exp $
+
+  28 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org> boinc-6.6.40.ebuild:
+  Enable optimalizations by default.
 
 *boinc-6.6.40 (26 Sep 2009)
 

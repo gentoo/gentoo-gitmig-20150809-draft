@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40.ebuild,v 1.2 2009/09/26 12:45:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40.ebuild,v 1.3 2009/09/28 10:26:55 scarabeus Exp $
 
 EAPI="2"
 
@@ -85,6 +85,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--enable-unicode \
 		--with-ssl \
+		--enable-optimize \
 		$(use_with X x) \
 		${wxconf} \
 		${conf}
