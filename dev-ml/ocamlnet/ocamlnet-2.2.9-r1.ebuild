@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.9-r1.ebuild,v 1.10 2008/09/25 12:20:24 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlnet/ocamlnet-2.2.9-r1.ebuild,v 1.11 2009/09/28 16:43:22 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils findlib
-
-EAPI="1"
 
 DESCRIPTION="Modules for OCaml application-level Internet protocols"
 HOMEPAGE="http://projects.camlcity.org/projects/ocamlnet.html"
@@ -22,26 +22,12 @@ RESTRICT="installsources"
 DEPEND=">=dev-ml/findlib-1.0
 		>=dev-ml/pcre-ocaml-5
 		>=dev-ml/camlp5-5.05
+		>=dev-lang/ocaml-3.10.2[tk?,ocamlopt?]
 		gtk? ( >=dev-ml/lablgtk-2 )
 		ssl? ( dev-ml/ocaml-ssl )"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	if use tk && ! built_with_use 'dev-lang/ocaml' tk ;
-		 then die "If you want to enable tcl/tk, you need to rebuild dev-lang/ocaml with the 'tk' USE flag";
-	fi
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/build_w_camlp5.dpatch"
 	epatch "${FILESDIR}/${P}-glibc28.patch"
 }
@@ -62,7 +48,7 @@ ocamlnet_use_enable() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	./configure \
 	    -bindir /usr/bin \
 		-datadir /usr/share/${PN} \
@@ -71,7 +57,9 @@ src_compile() {
 		$(ocamlnet_use_enable tk tcl) \
 		$(ocamlnet_use_with httpd nethttpd) \
 		|| die "Error : econf failed!"
+}
 
+src_compile() {
 	emake -j1 all || die "make failed"
 	if use ocamlopt; then
 		emake -j1 opt || die "make failed"

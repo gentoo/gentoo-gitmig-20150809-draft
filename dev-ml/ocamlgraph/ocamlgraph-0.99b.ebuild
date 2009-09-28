@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.99b.ebuild,v 1.4 2008/04/06 19:33:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ocamlgraph-0.99b.ebuild,v 1.5 2009/09/28 16:51:57 betelgeuse Exp $
+
+EAPI="2"
 
 inherit findlib eutils
-
-EAPI="1"
 
 DESCRIPTION="O'Caml Graph library"
 HOMEPAGE="http://www.lri.fr/~filliatr/ocamlgraph/"
@@ -12,33 +12,16 @@ SRC_URI="http://www.lri.fr/~filliatr/ftp/ocamlgraph/${P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ppc x86"
-DEPEND=">=dev-lang/ocaml-3.08
+DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 	doc? ( dev-tex/hevea dev-ml/ocamlweb )
-	gtk? ( dev-ml/lablgtk )"
+	gtk? ( dev-ml/lablgtk[gnomecanvas,ocamlopt?] )"
 IUSE="doc examples gtk +ocamlopt"
 
-ocamlgraph_need_use() {
-	if ! built_with_use --missing true $1 $2; then
-		eerror "In order to build ${PN} with your useflags you first need to build $1 with $2 useflag"
-		die "Please install $1 with $2 useflag"
-	fi
-}
-
-pkg_setup() {
-	use ocamlopt && ocamlgraph_need_use 'dev-lang/ocaml' ocamlopt
-	use gtk && ocamlgraph_need_use 'dev-ml/lablgtk' gnomecanvas
-	use ocamlopt && use gtk && ocamlgraph_need_use 'dev-ml/lablgtk' ocamlopt
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}-installfindlib.patch"
 }
 
 src_compile() {
-	econf
 	emake -j1 || die "failed to build"
 
 	if use doc;	then
@@ -60,7 +43,7 @@ src_install() {
 			newbin editor/editor.byte ocamlgraph_editor || die "failed to install ocamlgraph_editor"
 		fi
 	fi
-	dodoc README CREDITS FAQ CHANGES
+	dodoc README CREDITS FAQ CHANGES || die
 	if use doc; then
 		dohtml doc/*
 	fi

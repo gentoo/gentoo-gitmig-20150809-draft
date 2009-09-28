@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.3.ebuild,v 1.4 2008/09/25 12:22:51 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/cryptokit/cryptokit-1.3.ebuild,v 1.5 2009/09/28 16:47:43 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils findlib
-
-EAPI="1"
 
 DESCRIPTION="Cryptographic primitives library for Objective Caml"
 HOMEPAGE="http://cristal.inria.fr/~xleroy/software.html"
@@ -14,21 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 IUSE="doc +ocamlopt"
 
-DEPEND=">=dev-lang/ocaml-3.09
+DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 		>=sys-libs/zlib-1.1"
 
-pkg_setup() {
-	if use ocamlopt && ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "In order to build ${PN} with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -e "s/VERSION/${PV}/" "${FILESDIR}/META" >> META
 	epatch "${FILESDIR}/${PN}-gentoo.patch"
 }
@@ -42,7 +31,7 @@ src_compile() {
 
 src_install() {
 	findlib_src_install
-	dodoc Changes README
+	dodoc Changes README || die
 	use doc && dohtml doc/*.html doc/*.css
 }
 

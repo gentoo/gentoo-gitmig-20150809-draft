@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ocamlgraph
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.11 2008/04/06 19:42:21 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlgraph/ChangeLog,v 1.12 2009/09/28 16:51:57 betelgeuse Exp $
+
+  28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
+  ocamlgraph-0.99b.ebuild:
+  Migrate to EAPI 2 in order to nuke built_with_use.
 
   06 Apr 2008; Alexis Ballier <aballier@gentoo.org> -ocamlgraph-0.81.ebuild:
   remove old

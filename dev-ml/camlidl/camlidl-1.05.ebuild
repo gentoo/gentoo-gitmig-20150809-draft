@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/camlidl-1.05.ebuild,v 1.3 2009/04/15 04:55:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/camlidl-1.05.ebuild,v 1.4 2009/09/28 16:45:42 betelgeuse Exp $
+
+EAPI="2"
 
 inherit eutils toolchain-funcs
 
@@ -11,20 +13,9 @@ LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
-DEPEND=">=dev-lang/ocaml-3.07"
+DEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]"
 
-pkg_setup() {
-	if ! built_with_use --missing true dev-lang/ocaml ocamlopt; then
-		eerror "${PN} needs to be built with native code support from ocaml"
-		eerror "You first need to have a native code ocaml compiler."
-		eerror "You need to install dev-lang/ocaml with ocamlopt useflag on."
-		die "Please install ocaml with ocamlopt useflag"
-	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/tests.patch"
 	epatch "${FILESDIR}/includes.patch"
 }
@@ -54,5 +45,5 @@ src_install() {
 	emake BINDIR="${D}/usr/bin" OCAMLLIB="${D}${libdir}" install || die
 
 	# Documentation
-	dodoc README Changes
+	dodoc README Changes || die
 }
