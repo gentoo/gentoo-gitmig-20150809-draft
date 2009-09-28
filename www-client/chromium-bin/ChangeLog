@@ -1,6 +1,14 @@
 # ChangeLog for www-client/chromium-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.30 2009/09/24 21:38:15 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/ChangeLog,v 1.31 2009/09/28 13:13:15 voyageur Exp $
+
+*chromium-bin-4.0.219.4_p27359 (28 Sep 2009)
+
+  28 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  -chromium-bin-4.0.212.0_p26800.ebuild,
+  +chromium-bin-4.0.219.4_p27359.ebuild:
+  Version bump, this finally fixes the useless automatic recreation of
+  ~/Downloads
 
 *chromium-bin-4.0.219.0_p27123 (24 Sep 2009)
 

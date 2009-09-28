@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.212.0_p26800.ebuild,v 1.1 2009/09/22 12:04:33 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium-bin/chromium-bin-4.0.219.4_p27359.ebuild,v 1.1 2009/09/28 13:13:15 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib
