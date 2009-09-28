@@ -1,0 +1,43 @@
+#!/sbin/runscript
+# Copyright 2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/files/ekey-ulusbd.init,v 1.1 2009/09/28 18:29:36 flameeyes Exp $
+
+INSTANCE="${SVCNAME#*.}"
+if [ -z "${INSTANCE}" ] || [ "${SVCNAME}" = "ekey-ulusbd" ]; then
+	INSTANCE="ekey-ulusbd"
+fi
+
+depend() {
+	 use udev
+}
+
+start() {
+	if [ -z ${USB_BUS} ]; then
+		local devdir=$(fgrep -l 20df /sys/bus/usb/devices/*/idVendor \
+			| xargs -n1 dirname \
+			| xargs -I{} fgrep -l 0001 {}/idProduct \
+			| xargs -n1 dirname \
+			| xargs -I{} fgrep -l ${EKEY_SERIAL} {}/serial \
+			| xargs -n1 dirname)
+		USB_BUS=$(< ${devdir}/busnum)
+		USB_DEV=$(< ${devdir}/devnum)
+	fi
+
+	ebegin "Starting EntropyKey Userland USB Daemon"
+	start-stop-daemon \
+		--start --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/libexec/ekey-ulusbd -- \
+		-P "/var/run/${SVCNAME}.pid" \
+		-p "${SOCKET_PATH}" \
+		-b $(printf %03d ${USB_BUS}) -d $(printf %03d ${USB_DEV}) -D
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping EntropyKey daemon"
+	start-stop-daemon \
+		--stop --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/libexec/ekey-ulusbd
+	eend $?
+}
