@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdrm-poulsbo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm-poulsbo/ChangeLog,v 1.1 2009/09/13 20:09:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdrm-poulsbo/ChangeLog,v 1.2 2009/09/28 19:39:04 zmedico Exp $
+
+  28 Sep 2009; Zac Medico <zmedico@gentoo.org>
+  libdrm-poulsbo-2.3.0_p9.ebuild:
+  Bug #286015 - Avoid file collision with x11-libs/libdrm by passing
+  -includedir=/usr/include/psb to econf.
 
 *libdrm-poulsbo-2.3.0_p9 (13 Sep 2009)
 
