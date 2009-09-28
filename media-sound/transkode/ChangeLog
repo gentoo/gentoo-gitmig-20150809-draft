@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/transkode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.20 2009/06/28 12:21:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/transkode/ChangeLog,v 1.21 2009/09/28 19:06:46 ssuominen Exp $
+
+  28 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> transkode-0.7.ebuild:
+  Fix amarok's SLOT dep, thanks to Mr. Bones.
 
   28 Jun 2009; Markus Meier <maekke@gentoo.org> transkode-0.7-r2.ebuild:
   amd64/x86 stable, bug #274732
