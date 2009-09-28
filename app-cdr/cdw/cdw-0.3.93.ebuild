@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.3.93.ebuild,v 1.1 2009/09/20 07:30:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.3.93.ebuild,v 1.2 2009/09/28 14:53:09 mr_bones_ Exp $
 
 EAPI=2
 inherit autotools
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="virtual/cdrtools
 	app-cdr/dvd+rw-tools
-	dev-libs/libcdio
+	dev-libs/libcdio[-minimal]
 	sys-libs/ncurses[unicode]"
 
 S=${WORKDIR}/${MY_P}/cdw

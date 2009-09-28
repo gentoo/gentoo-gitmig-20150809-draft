@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdw
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.24 2009/09/20 07:30:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/ChangeLog,v 1.25 2009/09/28 14:53:09 mr_bones_ Exp $
+
+  28 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> cdw-0.3.93.ebuild:
+  Build fix from Arseny Solokha (bug #286720)
 
 *cdw-0.3.93 (20 Sep 2009)
 
