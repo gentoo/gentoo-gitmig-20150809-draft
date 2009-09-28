@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.133 2009/09/09 05:39:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.134 2009/09/28 17:56:23 klausman Exp $
+
+  28 Sep 2009; Tobias Klausmann <klausman@gentoo.org>
+  bugzilla-2.22.7.ebuild:
+  Stable on alpha, bug #258592
 
 *bugzilla-3.4.1-r1 (08 Sep 2009)
 
