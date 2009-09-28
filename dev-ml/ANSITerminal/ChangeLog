@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/ANSITerminal
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ANSITerminal/ChangeLog,v 1.1 2008/01/27 17:52:38 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ANSITerminal/ChangeLog,v 1.2 2009/09/28 16:21:37 betelgeuse Exp $
+
+  28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org>
+  ANSITerminal-0.3.ebuild:
+  Migrate to EAPI 2 in order to nuke built_with_use and add ~x86 keyword.
 
 *ANSITerminal-0.3 (27 Jan 2008)
 
