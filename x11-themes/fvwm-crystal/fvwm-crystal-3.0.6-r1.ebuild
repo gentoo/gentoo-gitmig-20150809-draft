@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.6-r1.ebuild,v 1.1 2009/06/26 20:04:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/fvwm-crystal-3.0.6-r1.ebuild,v 1.2 2009/09/28 22:50:47 vostorga Exp $
+
+EAPI="2"
 
 inherit eutils
 
@@ -15,11 +17,11 @@ RDEPEND=">=x11-wm/fvwm-2.5.13
 	dev-lang/python
 	media-gfx/imagemagick
 	|| ( x11-misc/stalonetray x11-misc/trayer )
-	|| ( x11-misc/habak x11-misc/hsetroot )"
+	|| ( x11-misc/habak x11-misc/hsetroot )
+	x11-apps/xwd
+	media-gfx/imagemagick[png]"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	find . -type d -name '.svn' -prune -exec rm -rf {} ';' || die
 	epatch "${FILESDIR}/fvwm-crystal.apps.patch"
 }

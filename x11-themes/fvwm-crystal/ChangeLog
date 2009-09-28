@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/fvwm-crystal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.59 2009/06/26 20:04:35 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-crystal/ChangeLog,v 1.60 2009/09/28 22:50:47 vostorga Exp $
+
+  28 Sep 2009; Víctor Ostorga <vostorga@gentoo.org>
+  fvwm-crystal-3.0.6-r1.ebuild:
+  Adding RDEPEND on x11-apps/xwd and media-gfx/imagemagick[png] , bug 282137
 
 *fvwm-crystal-3.0.6-r1 (26 Jun 2009)
 
