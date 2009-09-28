@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.116 2009/09/16 16:25:42 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/ChangeLog,v 1.117 2009/09/28 10:31:50 dertobi123 Exp $
+
+  28 Sep 2009; Tobias Scherbaum <dertobi123@gentoo.org>
+  -files/nagios-plugins-1.4.13-mysqlpass-917fcc7.patch,
+  -files/nagios-plugins-1.4.13-upslogout.patch, -files/CVE-2007-5623.patch:
+  Cleanup
 
 *nagios-plugins-1.4.14 (16 Sep 2009)
 
