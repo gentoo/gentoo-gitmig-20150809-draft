@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.446 2009/09/28 07:41:02 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.447 2009/09/28 08:18:37 remi Exp $
+
+*xorg-server-1.6.4 (28 Sep 2009)
+
+  28 Sep 2009; Rémi Cardona <remi@gentoo.org> +xorg-server-1.6.4.ebuild:
+  bump to 1.6.4
 
   28 Sep 2009; Rémi Cardona <remi@gentoo.org>
   -files/1.2.0-fix-amd-cpu-detection.patch,
