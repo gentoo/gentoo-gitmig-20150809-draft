@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/clockspeed
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.23 2008/11/16 21:00:58 maekke Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.24 2009/09/28 21:00:41 bangert Exp $
+
+  28 Sep 2009; Thilo Bangert <bangert@gentoo.org>
+  -clockspeed-0.62-r3.ebuild, -clockspeed-0.62-r4.ebuild,
+  +clockspeed-0.62-r6.ebuild, -files/leapsecs.dat.20060525:
+  remove old versions
+
+*clockspeed-0.62-r6 (28 Sep 2009)
+
+  28 Sep 2009; Thilo Bangert <bangert@gentoo.org>
+  +clockspeed-0.62-r6.ebuild:
+  EAPI 2 ebuild - fixes bug #241060 (CFLAGS ignored)
 
   16 Nov 2008; Markus Meier <maekke@gentoo.org> clockspeed-0.62-r5.ebuild:
   x86 stable, bug #246740
