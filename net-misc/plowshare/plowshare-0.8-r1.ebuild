@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.8.ebuild,v 1.1 2009/09/28 00:04:04 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.8-r1.ebuild,v 1.1 2009/09/28 19:50:39 volkmar Exp $
 
 EAPI="2"
 
@@ -59,7 +59,7 @@ src_install() {
 	doexe src/{download,upload}.sh || die "doexe failed"
 
 	dosym /usr/share/${PN}/download.sh /usr/bin/plowdown
-	dosym /usr/share/${PN}/upload.sh /usr/bin/plowdup
+	dosym /usr/share/${PN}/upload.sh /usr/bin/plowup
 
 	dodoc CHANGELOG README || die "dodoc failed"
 }
