@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.10.ebuild,v 1.4 2009/09/28 00:17:59 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-1.1.10.ebuild,v 1.5 2009/09/28 01:51:44 tester Exp $
 
 EAPI="2"
 
-inherit autotools eutils
+inherit autotools eutils virtualx
 
 MY_P="webkit-${PV}"
 DESCRIPTION="Open source web browser engine"
@@ -92,6 +92,10 @@ src_configure() {
 	fi
 
 	econf ${myconf}
+}
+
+src_test() {
+	Xemake -j1 check
 }
 
 src_install() {
