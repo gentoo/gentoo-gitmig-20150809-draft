@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ounit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.18 2009/09/20 13:31:29 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ounit/ChangeLog,v 1.19 2009/09/28 16:26:13 betelgeuse Exp $
+
+  28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> ounit-1.0.3.ebuild:
+  Migrate to EAPI 2 in order to nuke built_with_use.
 
   20 Sep 2009; Alexis Ballier <aballier@gentoo.org> -ounit-1.0.2.ebuild:
   remove old
