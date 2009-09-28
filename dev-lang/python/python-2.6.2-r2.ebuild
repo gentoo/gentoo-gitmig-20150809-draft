@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r2.ebuild,v 1.6 2009/09/27 18:33:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r2.ebuild,v 1.7 2009/09/28 14:27:53 arfrever Exp $
 
 EAPI="2"
 
@@ -110,7 +110,7 @@ src_prepare() {
 src_configure() {
 	# Disable extraneous modules with extra dependencies.
 	if use build; then
-		export PYTHON_DISABLE_MODULES="dbm bsddb gdbm _curses _curses_panel readline _sqlite3 _tkinter _elementtree pyexpat"
+		export PYTHON_DISABLE_MODULES="dbm _bsddb gdbm _curses _curses_panel readline _sqlite3 _tkinter _elementtree pyexpat"
 		export PYTHON_DISABLE_SSL="1"
 	else
 		# dbm module can be linked against berkdb or gdbm.
