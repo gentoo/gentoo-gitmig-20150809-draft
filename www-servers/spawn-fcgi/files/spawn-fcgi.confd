@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.confd,v 1.5 2009/07/03 21:17:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.confd,v 1.6 2009/09/28 08:38:02 bangert Exp $
 
 # DO NOT MODIFY THIS FILE DIRECTLY! CREATE A COPY AND MODIFY THAT INSTEAD!
 
@@ -53,6 +53,10 @@ FCGI_CHDIR=
 #
 FCGI_USER=
 FCGI_GROUP=
+
+# Additional options you might want to pass to spawn-fcgi
+#
+#FCGI_EXTRA_OPTIONS=
 
 # If your application requires additional environment variables, you may
 # specify them here. See PHP example below.

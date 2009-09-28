@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.10 2009/07/03 21:17:10 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/spawn-fcgi/files/spawn-fcgi.initd,v 1.11 2009/09/28 08:38:02 bangert Exp $
 
 PROGNAME=${SVCNAME#*.}
 SPAWNFCGI=/usr/bin/spawn-fcgi
@@ -71,6 +71,10 @@ start() {
 
 	if [ -n "${FCGI_GROUP}" ] && [ "${FCGI_GROUP}" != "root" ]; then
 		OPTIONS="${OPTIONS} -g ${FCGI_GROUP}"
+	fi
+
+	if [ -n "${FCGI_EXTRA_OPTIONS}" ]; then
+		OPTIONS="${OPTIONS} ${FCGI_EXTRA_OPTIONS}"
 	fi
 
 	unset E
