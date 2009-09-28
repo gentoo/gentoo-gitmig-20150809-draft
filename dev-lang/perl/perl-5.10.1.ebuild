@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.2 2009/09/28 15:58:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.3 2009/09/28 20:29:27 tove Exp $
 
 EAPI=2
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
-PATCH_VER=6
+PATCH_VER=7
 
 PERL_OLDVERSEN="5.10.0"
 
@@ -246,13 +246,13 @@ src_install() {
 	fi
 	make DESTDIR="${D}" ${installtarget} || die "Unable to make ${installtarget}"
 
-	rm "${D}"/usr/bin/perl
+	rm -f "${D}"/usr/bin/perl
 	ln -s perl${MY_PV} "${D}"/usr/bin/perl
 
 	dolib.so "${D}"/${coredir}/${LIBPERL} || die
 	dosym ${LIBPERL} /usr/$(get_libdir)/libperl$(get_libname ${SHORT_PV}) || die
 	dosym ${LIBPERL} /usr/$(get_libdir)/libperl$(get_libname) || die
-	rm "${D}"/${coredir}/${LIBPERL}
+	rm -f "${D}"/${coredir}/${LIBPERL}
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/${LIBPERL}
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname ${SHORT_PV})
 	dosym ../../../../../$(get_libdir)/${LIBPERL} ${coredir}/libperl$(get_libname)
@@ -331,7 +331,7 @@ pkg_postinst() {
 		for DIR in ${INC} ; do
 			if [[ -d "${ROOT}/${DIR}" ]] ; then
 				for file in $(find "${ROOT}/${DIR}" -name "*.ph" -type f ) ; do
-					rm "${ROOT}/${file}"
+					rm -f "${ROOT}/${file}"
 					einfo "<< ${file}"
 				done
 			fi
