@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.1 2009/09/27 08:37:12 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.10.1.ebuild,v 1.2 2009/09/28 15:58:28 tove Exp $
 
 EAPI=2
 
 inherit eutils alternatives flag-o-matic toolchain-funcs multilib
 
-PATCH_VER=5
+PATCH_VER=6
 
 PERL_OLDVERSEN="5.10.0"
 
