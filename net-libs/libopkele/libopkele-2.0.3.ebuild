@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/libopkele-2.0.3.ebuild,v 1.1 2009/09/17 08:18:19 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libopkele/libopkele-2.0.3.ebuild,v 1.2 2009/09/28 06:21:39 hollow Exp $
 
 DESCRIPTION="A C++ implementation of an OpenID decentralized identity system"
 HOMEPAGE="http://kin.klever.net/libopkele/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/libpcre
+RDEPEND="app-text/htmltidy
+	dev-libs/libpcre
 	dev-libs/openssl
 	net-misc/curl"
 DEPEND="${RDEPEND}
