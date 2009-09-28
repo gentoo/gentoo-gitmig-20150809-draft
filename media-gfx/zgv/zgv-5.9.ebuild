@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.9.ebuild,v 1.2 2006/06/01 01:02:18 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/zgv-5.9.ebuild,v 1.3 2009/09/28 15:55:19 vostorga Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A svgalib console image viewer"
 HOMEPAGE="http://www.svgalib.org/rus/zgv/"
@@ -19,31 +19,31 @@ DEPEND=">=media-libs/svgalib-1.4.2
 	>=media-libs/tiff-3.5.5
 	>=sys-libs/zlib-1.1.4
 	sys-apps/gawk"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 	sed -i "/^CFLAGS=/s:=.*:=${CFLAGS}:" config.mk
-	sed -i "s:4755:0755:" src/Makefile
-	sed -i -e 's:$(RM):echo:' src/Makefile
 	sed -i -e 's:$(RM):echo:' doc/Makefile
-	epatch ${FILESDIR}/zgv-5.9-cmyk-yccl-fix.diff
+	epatch "${FILESDIR}"/${P}-Makefile-QA.patch
+	epatch "${FILESDIR}"/zgv-5.9-cmyk-yccl-fix.diff
 }
 
 src_compile() {
-	emake || die
+	emake CC="$(tc-getCC)" || die
 }
 
 src_install() {
 	dodir /usr/bin /usr/share/info /usr/share/man/man1
-	make PREFIX=${D}/usr \
-		INFODIR=${D}/usr/share/info \
-		MANDIR=${D}/usr/share/man/man1 \
+	make PREFIX="${D}"/usr \
+		INFODIR="${D}"/usr/share/info \
+		MANDIR="${D}"/usr/share/man/man1 \
 		install || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* SECURITY TODO
+	dodoc AUTHORS ChangeLog INSTALL NEWS README* SECURITY TODO
 
 	# Fix info files
-	cd ${D}/usr/share/info
+	cd "${D}"/usr/share/info
 	rm dir*
 	mv zgv zgv.info
 	for i in 1 2 3 4 ; do

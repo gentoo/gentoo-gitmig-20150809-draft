@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/zgv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.16 2009/06/20 23:57:58 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zgv/ChangeLog,v 1.17 2009/09/28 15:55:19 vostorga Exp $
+
+  28 Sep 2009; Víctor Ostorga <vostorga@gentoo.org> zgv-5.9.ebuild,
+  +files/zgv-5.9-Makefile-QA.patch:
+  Fixing pre-stripped files bug #255870, Respecting CC variable, Respecting
+  LDFLAGS, Fixing repoman warnings
 
   20 Jun 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/zgv-5.7-gcc3.patch, -files/zgv-5.8-integer-overflow-fix.diff:
