@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r1.ebuild,v 1.2 2009/09/28 09:35:28 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r1.ebuild,v 1.3 2009/09/28 16:24:03 mr_bones_ Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -78,7 +78,7 @@ src_compile() {
 	use qt3 && export MOC="${QTDIR}"/bin/moc
 
 	local winopts=
-	if [[ ${CHOST} == *-winnt* ]]; then 
+	if [[ ${CHOST} == *-winnt* ]]; then
 		# disabling static libs, since ar on interix takes nearly
 		# one hour per library, thanks to mico's monster objects.
 		winopts="${winopts} --disable-threads --disable-static --enable-final"
