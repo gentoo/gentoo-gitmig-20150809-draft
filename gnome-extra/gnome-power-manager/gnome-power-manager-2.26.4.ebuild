@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.26.4.ebuild,v 1.1 2009/08/09 18:31:49 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.26.4.ebuild,v 1.2 2009/09/28 19:37:52 eva Exp $
 
 EAPI="2"
 
@@ -78,12 +78,6 @@ pkg_setup() {
 src_prepare() {
 	gnome2_src_prepare
 
-	if ! use doc; then
-		# Remove the docbook2man rules here since it's not handled by a proper
-		# parameter in configure.in.
-		sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' -i "${S}/man/Makefile.in" || die "sed 1 failed"
-	fi
-
 	# Drop debugger CFLAGS
 	sed -e 's:^CPPFLAGS="$CPPFLAGS -g"$::g' -i configure.ac \
 		|| die "sed 2 failed"
@@ -109,6 +103,13 @@ src_prepare() {
 	# Make it libtool-1 compatible
 	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
 	eautoreconf
+
+	if ! use doc; then
+		# Remove the docbook2man rules here since it's not handled by a proper
+		# parameter in configure.in.
+		sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' \
+			-i "${S}/man/Makefile.in" || die "sed 1 failed"
+	fi
 
 	# glibc splits this out, whereas other libc's do not tend to
 	use elibc_glibc || sed -e 's/-lresolv//' -i configure || die "sed 4 failed"

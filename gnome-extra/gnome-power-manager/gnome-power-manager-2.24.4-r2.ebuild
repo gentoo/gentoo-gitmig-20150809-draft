@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r2.ebuild,v 1.1 2009/05/02 18:26:31 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/gnome-power-manager-2.24.4-r2.ebuild,v 1.2 2009/09/28 19:37:52 eva Exp $
 
 inherit autotools eutils gnome2 virtualx
 
@@ -72,12 +72,6 @@ pkg_setup() {
 src_unpack() {
 	gnome2_src_unpack
 
-	if ! use doc; then
-		# Remove the docbook2man rules here since it's not handled by a proper
-		# parameter in configure.in.
-		sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' -i "${S}/man/Makefile.in" || die "sed 1 failed"
-	fi
-
 	# Fix cpufreq-regression bug #247614
 	epatch "${WORKDIR}/${P}-cpufreq-libhal-glib.patch"
 	epatch "${WORKDIR}/${P}-cpufreq-support.patch"
@@ -89,6 +83,13 @@ src_unpack() {
 	# Make it libtool-1 compatible
 	rm -v m4/lt* m4/libtool.m4 || die "removing libtool macros failed"
 	eautoreconf
+
+	if ! use doc; then
+		# Remove the docbook2man rules here since it's not handled by a proper
+		# parameter in configure.in.
+		sed -e 's:@HAVE_DOCBOOK2MAN_TRUE@.*::' \
+			-i "${S}/man/Makefile.in" || die "sed 1 failed"
+	fi
 
 	# glibc splits this out, whereas other libc's do not tend to
 	use elibc_glibc || sed -e 's/-lresolv//' -i configure || die "sed 2 failed"
