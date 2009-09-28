@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.18-r50.ebuild,v 1.1 2009/09/24 22:20:21 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.18-r50.ebuild,v 1.2 2009/09/28 11:26:03 flameeyes Exp $
 
 EAPI=2
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/${P/_rc/-test}"
 LICENSE="LGPL-2 GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86"
-IUSE="+alsa avahi +caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth policykit +asyncns +glib test doc +udev ipv6"
+IUSE="+alsa avahi +caps jack lirc oss tcpd X hal dbus libsamplerate gnome bluetooth +asyncns +glib test doc +udev ipv6"
 
 RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 	caps? ( sys-libs/libcap )
@@ -43,7 +43,6 @@ RDEPEND="X? ( x11-libs/libX11 x11-libs/libSM x11-libs/libICE x11-libs/libXtst )
 			 >=net-wireless/bluez-libs-3 )
 		>=sys-apps/dbus-1.0.0
 	)
-	policykit? ( sys-auth/policykit )
 	asyncns? ( net-libs/libasyncns )
 	udev? ( >=sys-fs/udev-143[extras] )
 	>=media-libs/audiofile-0.2.6-r1
