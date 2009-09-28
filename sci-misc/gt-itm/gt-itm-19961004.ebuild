@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/gt-itm-19961004.ebuild,v 1.2 2005/08/24 16:45:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gt-itm/gt-itm-19961004.ebuild,v 1.3 2009/09/28 22:00:09 robbat2 Exp $
 
 DESCRIPTION="A collection of routines to generate and analyze graphs using a wide variety of models for internetwork topology"
 HOMEPAGE="http://www.cc.gatech.edu/fac/Ellen.Zegura/graphs.html
@@ -10,7 +10,7 @@ SRC_URI="http://www.cc.gatech.edu/fac/Ellen.Zegura/gt-itm/gt-itm.tar.gz
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-util/sgb"
@@ -20,36 +20,36 @@ S2="${WORKDIR}/sgb2ns"
 src_unpack() {
 	unpack sgb2ns.tar.gz
 
-	mkdir ${S}
-	cd ${S}
+	mkdir "${S}"
+	cd "${S}"
 	unpack gt-itm.tar.gz
 
-	sed -r -e '/^[[:alnum:]]+\.o:/d' -e 's|LIBS = -lm -lgb.*|LIBS = -lm -lgb|' -i ${S}/src/Makefile
+	sed -r -e '/^[[:alnum:]]+\.o:/d' -e 's|LIBS = -lm -lgb.*|LIBS = -lm -lgb|' -i "${S}"/src/Makefile
 	sed -r -e '/^SYS = -DSYSV/d' -e 's|LIBS = -lm -lgb.*|LIBS = -lm -lgb|' -i ${S2}/Makefile  || die
 
-	rm -f ${S}/lib/*
+	rm -f "${S}"/lib/*
 
-	find ${S}/sample-graphs/ -perm +111 -type f -name 'Run*' \
+	find "${S}"/sample-graphs/ -perm +111 -type f -name 'Run*' \
 	| xargs -r -n1 sed -re 's|(\.\./)+bin/||g' -i || die
 
-	sed -e 's|sys/types.h|sys/param.h|' -i ${S}/src/geog.c
-	sed -e '162 s/connected $/connected \\/' -i ${S}/src/eval.c
+	sed -e 's|sys/types.h|sys/param.h|' -i "${S}"/src/geog.c
+	sed -e '162 s/connected $/connected \\/' -i "${S}"/src/eval.c
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 	emake CFLAGS="${CFLAGS} -I../include" || die
 
-	cd ${S2}
+	cd "${S2}"
 	emake CFLAGS="${CFLAGS} -I\$(IDIR) -L\$(LDIR)" || die
 }
 
 src_install() {
-	dobin ${S}/bin/*
-	dodoc ${S}/README ${S}/docs/*
-	cp -pPR ${S}/sample-graphs ${D}/usr/share/doc/${PF}
+	dobin "${S}"/bin/*
+	dodoc "${S}"/README "${S}"/docs/*
+	cp -pPR "${S}"/sample-graphs "${D}"/usr/share/doc/${PF}
 
-	cd ${S2}
+	cd "${S2}"
 	dodoc *.tcl *.gb
 	newdoc README README.sgb2ns
 
