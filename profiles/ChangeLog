@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3323 2009/09/28 16:23:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3324 2009/09/28 18:55:05 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
+  Mask spca drivers for removal wrt #159176 because they are supported by
+  in-kernel drivers.
 
   28 Sep 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   add xorg-server-1.6.4 to p.mask

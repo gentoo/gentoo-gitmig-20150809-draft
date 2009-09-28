@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10511 2009/09/28 16:23:30 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10512 2009/09/28 18:55:05 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,6 +35,13 @@
 # breaks xf86-video-intel, will be unmasked when the driver has a patch
 # see bug #286746
 =x11-base/xorg-server-1.6.4
+
+# Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2009)
+# Obsolete. Supported by in-kernel drivers. Masked for removal,
+# see bug 159176.
+media-video/gspca
+media-video/spca5xx
+media-video/gspcav1
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2009)
 # Obsolete. Supported by in-kernel drivers. Masked for removal,
@@ -1533,11 +1540,6 @@ games-rpg/openrpg
 >=net-analyzer/nessus-core-2.3.1
 >=net-analyzer/nessus-plugins-2.3.1
 >=net-analyzer/nessus-2.3.1
-
-# Mike Doty <kingtaco@gentoo.org> (24 Mar 2007)
-# Sorting out media-video/{spca5xx,gspca{,v1}} bug 159176
-media-video/spca5xx
-media-video/gspca
 
 # Stefan Cornelius <dercorny@gentoo.org> (7 Mar 2007)
 # Masking net-misc/xsupplicant due to security bug 154995
