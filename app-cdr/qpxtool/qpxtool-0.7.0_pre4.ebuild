@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.7.0_pre4.ebuild,v 1.1 2009/09/28 11:14:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/qpxtool/qpxtool-0.7.0_pre4.ebuild,v 1.2 2009/09/28 11:26:29 ssuominen Exp $
 
 EAPI=2
 inherit toolchain-funcs
@@ -22,8 +22,10 @@ DEPEND="${RDEPEND}"
 S=${WORKDIR}/${P/_}
 
 src_prepare() {
-	sed -i -e 's:/usr/local:/usr:g' configure \
-		lib/qpxscan/include/qpx_scan.h || die
+	sed \
+		-e 's:/usr/local:/usr:g' \
+		-e 's:__prefix/man:__prefix/share/man:g' \
+		-i configure lib/qpxscan/include/qpx_scan.h || die
 }
 
 src_configure() {
