@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10512 2009/09/28 18:55:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10513 2009/09/28 22:01:03 robbat2 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -639,19 +639,6 @@ sci-chemistry/maid
 #
 # Removal on 2009-10-08
 net-misc/bo2k_console
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (09 Aug 2009)
-#  on behalf of QA team
-#
-# dev-util/sgb: fails with parallel make, without stopping
-# ebuild (installing broken data).
-#
-# sci-misc/gt-itm: depend on sgb, fails to build because of
-# the bug above (bug #248373).
-#
-# Removal on 2009-10-08
-dev-util/sgb
-sci-misc/gt-itm
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (09 Aug 2009)
 # Masked for removal in 30 days due to security vulnerability (bug #280494).
