@@ -46,3 +46,4 @@ move xfce-extra/xfce4-modemlights xfce-extra/xfce4-modemlights-plugin
 slotmove >=media-plugins/kipi-plugins-0.3.0 2 4
 move net-mail/trojita mail-client/trojita
 move net-fs/glusterfs sys-cluster/glusterfs
+slotmove kde-misc/filelight 0 3.5
