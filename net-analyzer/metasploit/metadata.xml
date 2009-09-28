@@ -14,7 +14,4 @@
 		Framework was designed to facilitate research and experimentation with
 		new technologies.
 	</longdescription>
-	<use>
-		<flag name='httpd'>Enable web interface</flag>
-	</use>
 </pkgmetadata>
