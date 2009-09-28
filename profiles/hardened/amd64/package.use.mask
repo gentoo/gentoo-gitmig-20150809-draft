@@ -7,7 +7,7 @@ app-backup/backup-manager s3
 # Mask dbus, hal, nas and scanner USE flags;
 # Bug 203680
 # Mask GnuTLS (not available as 32-bit library)
-app-emulation/wine dbus hal ldap nas scanner gnutls
+app-emulation/wine dbus hal ldap nas scanner gnutls gphoto2
 
 # 2008/08/01 Jean-Noël Rivasseau <elvanor@gentoo.org>
 # Disabling gcj flag, no gcc-4.3.1 yet

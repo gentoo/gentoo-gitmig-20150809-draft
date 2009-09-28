@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.10 2009/09/19 10:58:07 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/amd64/package.use.mask,v 1.11 2009/09/28 02:09:07 flameeyes Exp $
 
 # Markus Meier <maekke@gentoo.org> (19 Sep 2009)
 # Mask media-gfx/blender[openmp] as it needs
@@ -12,7 +12,7 @@ media-gfx/blender openmp
 # Mask dbus, hal, nas and scanner USE flags;
 # Bug 203680
 # Mask GnuTLS (not available as 32-bit library)
-app-emulation/wine dbus hal ldap nas scanner gnutls
+app-emulation/wine dbus hal ldap nas scanner gnutls gphoto2
 
 # cuda dont work on hardended
 sci-misc/boinc cuda
