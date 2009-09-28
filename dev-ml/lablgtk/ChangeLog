@@ -1,6 +1,10 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.70 2009/09/26 13:03:47 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.71 2009/09/28 19:33:11 aballier Exp $
+
+  28 Sep 2009; Alexis Ballier <aballier@gentoo.org>
+  -lablgtk-2.12.0-r1.ebuild:
+  remove old
 
 *lablgtk-2.14.0 (26 Sep 2009)
 
