@@ -1,6 +1,11 @@
 # ChangeLog for media-video/pitivi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.18 2009/06/27 12:39:11 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.19 2009/09/28 10:47:34 hanno Exp $
+
+*pitivi-0.13.3 (28 Sep 2009)
+
+  28 Sep 2009; Hanno Boeck <hanno@gentoo.org> +pitivi-0.13.3.ebuild:
+  Version bump, disabled tests as they require x11.
 
   27 Jun 2009; Hanno Boeck <hanno@gentoo.org> pitivi-0.13.1.ebuild:
   Add librsvg dependency, fix #275344.
