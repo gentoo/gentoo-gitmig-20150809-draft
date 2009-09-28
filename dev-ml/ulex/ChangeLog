@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ulex
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.18 2008/06/07 21:30:47 aballier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.19 2009/09/28 16:20:47 betelgeuse Exp $
+
+  28 Sep 2009; Petteri Räty <betelgeuse@gentoo.org> ulex-1.1.ebuild:
+  Migrate to EAPI 2 in order to nuke built_with_use.
 
   07 Jun 2008; Alexis Ballier <aballier@gentoo.org> -ulex-0.8.ebuild,
   -ulex-1.0.ebuild:
@@ -45,6 +48,7 @@
   Use findlib eclass, move to stable.
 
 *ulex-0.5 (08 Aug 2004)
+*ulex-0.4 (08 Aug 2004)
 
   08 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> -ulex-0.2-r1.ebuild,
   -ulex-0.2.ebuild, +ulex-0.4.ebuild, +ulex-0.5.ebuild:
