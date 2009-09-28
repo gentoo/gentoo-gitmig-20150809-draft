@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/Image-Imlib2-2.02.ebuild,v 1.6 2009/01/11 13:47:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Image-Imlib2/Image-Imlib2-2.02.ebuild,v 1.7 2009/09/28 17:04:45 betelgeuse Exp $
 
+EAPI="2"
 MODULE_AUTHOR=LBROCARD
 inherit perl-module eutils
 
@@ -16,16 +17,10 @@ RDEPEND=">=media-libs/imlib2-1
 	dev-lang/perl"
 DEPEND="${RDEPEND}
 	>=virtual/perl-Module-Build-0.28
-	test? ( dev-perl/Test-Pod
-		dev-perl/Test-Pod-Coverage )"
+	test? (
+		dev-perl/Test-Pod
+		dev-perl/Test-Pod-Coverage
+		>=media-libs/imlib2-1[jpeg,png]
+	)"
 
 SRC_TEST=do
-
-src_test(){
-	if built_with_use media-libs/imlib2 jpeg png ; then
-		perl-module_src_test
-	else
-		ewarn "Skip tests:"
-		ewarn "To run tests install media-libs/imlib2 with jpeg and png support."
-	fi
-}
