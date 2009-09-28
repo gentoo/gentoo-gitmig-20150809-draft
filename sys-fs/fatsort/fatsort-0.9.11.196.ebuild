@@ -1,6 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.10.187.ebuild,v 1.2 2008/12/31 03:43:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fatsort/fatsort-0.9.11.196.ebuild,v 1.1 2009/09/28 16:59:52 billie Exp $
+
+EAPI="2"
 
 inherit toolchain-funcs versionator
 
@@ -17,19 +19,17 @@ IUSE=""
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i -e 's:/usr/local/sbin:/usr/sbin:g' src/Makefile || die "sed failed!"
 }
 
 src_compile() {
 	emake CC=$(tc-getCC) LD=$(tc-getCC) CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" \
-	DESTDIR="${D}" || die "compile failed"
+	DESTDIR="${D}" || die "emake failed"
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "emake install failed"
 	doman man/fatsort.8 || die "doman failed"
 	dodoc CHANGES README TODO || die "dodoc failed"
 }
