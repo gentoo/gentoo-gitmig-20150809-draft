@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.644 2009/09/27 21:12:10 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.645 2009/09/28 15:04:39 ranger Exp $
+
+  28 Sep 2009; Brent Baude <ranger@gentoo.org>
+  gentoo-sources-2.6.30-r5.ebuild:
+  Marking gentoo-sources-2.6.30-r5 ppc64 for bug 283928
 
 *gentoo-sources-2.6.31-r1 (27 Sep 2009)
 
