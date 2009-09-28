@@ -1,41 +1,33 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/jpgalleg-2.5.ebuild,v 1.2 2009/09/22 14:13:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/jpgalleg-2.5.ebuild,v 1.3 2009/09/28 12:25:04 ssuominen Exp $
 
-inherit eutils
-
-DESCRIPTION="The jpeg loading routines are able to load almost any JPG image
-file with Allegro."
+DESCRIPTION="The jpeg loading routines are able to load almost any JPG image file with Allegro"
 HOMEPAGE="http://www.ecplusplus.com/index.php?page=projects&pid=1"
-SRC_URI="http://www.ecplusplus.com/files/${PN}-${PV}.tar.gz"
+SRC_URI="http://www.ecplusplus.com/files/${P}.tar.gz"
 
 LICENSE="ZLIB"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
 IUSE=""
 
-DEPEND=">=media-libs/allegro-4.0.0"
-S="${WORKDIR}/${PN}-${PV}"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
+RDEPEND=">=media-libs/allegro-4"
+DEPEND="${RDEPEND}"
 
 src_compile() {
 	./fix.sh unix --quick
-	emake || die "emake failed"
+	emake || die
 }
 
 src_install() {
-	mkdir ${D}usr
-	mkdir ${D}usr/include
-	mkdir ${D}usr/lib
+	dodir /usr
+	dodir /usr/include
+	dodir /usr/lib
 
-	emake install INSTALL_BASE_PATH="${D}usr" || die "emake install failed"
+	emake install INSTALL_BASE_PATH="${D}usr" || die
 
 	dodoc readme.txt
 
-	insinto /usr/share/doc/${P}/examples
+	insinto /usr/share/doc/${PF}/examples
 	doins examples/*
 }
