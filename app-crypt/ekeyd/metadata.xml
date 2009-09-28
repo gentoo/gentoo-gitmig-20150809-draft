@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>flameeyes@gentoo.org</email>
+  </maintainer>
+  <use>
+    <flag name='usb'>
+      Build the libusb-based userland daemon for accessing the
+      entropykey (alternative to the CDC USB driver).
+    </flag>
+  </use>
+</pkgmetadata>

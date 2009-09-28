@@ -1,0 +1,32 @@
+#!/sbin/runscript
+# Copyright 2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/files/ekeyd.init,v 1.1 2009/09/28 10:59:07 flameeyes Exp $
+
+INSTANCE="${SVCNAME#*.}"
+if [ -z "${INSTANCE}" ] || [ "${SVCNAME}" = "ekeyd" ]; then
+	INSTANCE="ekeyd"
+fi
+
+depend() {
+	 use udev
+}
+
+start() {
+	ebegin "Starting EntropyKey daemon"
+	start-stop-daemon \
+		--start --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/sbin/ekeyd -- \
+		-f "/etc/entropykey/${INSTANCE}.conf" \
+		-p "/var/run/${SVCNAME}.pid"
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping EntropyKey daemon"
+	start-stop-daemon \
+		--stop --pidfile "/var/run/${SVCNAME}.pid" \
+		--exec /usr/sbin/ekeyd
+	eend $?
+}
+
