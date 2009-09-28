@@ -1,6 +1,12 @@
 # ChangeLog for media-fonts/mgopen
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/ChangeLog,v 1.2 2009/09/28 18:01:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mgopen/ChangeLog,v 1.3 2009/09/28 20:03:29 volkmar Exp $
+
+*mgopen-1.1 (28 Sep 2009)
+
+  28 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> +mgopen-1.1.ebuild:
+  Version bump, HOMEPAGE fix.
+  non-maintainer commit blessed by yngwin
 
   28 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> mgopen-1.0.ebuild:
   Keywording for ppc.
