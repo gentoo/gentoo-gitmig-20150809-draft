@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.153 2009/09/27 23:53:01 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.154 2009/09/28 02:10:41 tester Exp $
+
+  28 Sep 2009; Olivier Crête <tester@gentoo.org>
+  gnome-keyring-2.22.3-r2.ebuild:
+  amd64 stable, bug #271865
 
 *gnome-keyring-2.22.3-r2 (27 Sep 2009)
 
