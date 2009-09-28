@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.10 2009/09/08 16:21:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.mask,v 1.11 2009/09/28 15:48:55 haubi Exp $
 
 # Fabian Groffen <grobian@gentoo.org> (03 Sep 2009)
 # fails to compile, error: ‘struct msghdr’ has no member named ‘msg_controllen’
@@ -15,10 +15,6 @@
 # Assertion failed: ent->fts_info == FTS_NSOK || state.type != 0, file
 # ftsfind.c, line 477, function consider_visiting
 =sys-apps/findutils-4.5.5
-
-# Fabian Groffen <grobian@gentoo.org> (17 Aug 2009)
-# breaks at runtime for e.g. autotools, bug #269430
-=dev-lang/perl-5.8.8-r6
 
 # Fabian Groffen <grobian@gentoo.org> (28 Jun 2009)
 # undefined reference to `Rule::Cache::PR_PNGAuto'

@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.91 2009/09/24 17:20:29 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.92 2009/09/28 15:48:54 haubi Exp $
+
+  28 Sep 2009; Michael Haubenwallner <haubi@gentoo.org> irix/package.mask,
+  sunos/solaris/package.mask:
+  unmask perl-5.8.8-r6 as bug#269430 is fixed now
 
   24 Sep 2009; Fabian Groffen <grobian@gentoo.org> package.mask:
   Masked =sys-apps/portage-2.2.00.14277 because it eats
