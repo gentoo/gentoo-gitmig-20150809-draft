@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r1.ebuild,v 1.1 2009/09/09 06:34:16 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/mico/mico-2.3.13-r1.ebuild,v 1.2 2009/09/28 09:35:28 haubi Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.mico.org/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86 ~ppc-aix ~ia64-hpux ~amd64-linux ~x86-linux ~x86-winnt"
 IUSE="gtk postgres qt3 ssl tcl threads X"
 
 # doesn't compile:
@@ -41,6 +41,8 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-aix.patch
 	epatch "${FILESDIR}"/${P}-hpux.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch #280678
+
+	[[ ${CHOST} == *-winnt* ]] && epatch "${FILESDIR}"/${P}-winnt.patch.bz2
 
 	# cannot use big TOC (AIX only), gdb doesn't like it.
 	# This assumes that the compiler (or -wrapper) uses
@@ -75,6 +77,14 @@ src_compile() {
 	# moc is searched within PATH, not within QTDIR.
 	use qt3 && export MOC="${QTDIR}"/bin/moc
 
+	local winopts=
+	if [[ ${CHOST} == *-winnt* ]]; then 
+		# disabling static libs, since ar on interix takes nearly
+		# one hour per library, thanks to mico's monster objects.
+		winopts="${winopts} --disable-threads --disable-static --enable-final"
+		append-flags -D__STDC__
+	fi
+
 	# http://www.mico.org/pipermail/mico-devel/2009-April/010285.html
 	[[ ${CHOST} == *-hpux* ]] && append-cppflags -D_XOPEN_SOURCE_EXTENDED
 
@@ -88,18 +98,19 @@ src_compile() {
 		--with-tcl=$(use tcl && echo /usr) \
 		$(use_with X x /usr) \
 		--with-bluetooth='' \
-		--disable-wireless
+		--disable-wireless \
+		${winopts}
 
 	emake || die "make failed"
 }
 
 src_install() {
-	emake INSTDIR="${D}"/usr SHARED_INSTDIR="${D}"/usr install LDCONFIG=: || die "install failed"
+	emake INSTDIR="${D}${EPREFIX}"/usr SHARED_INSTDIR="${D}${EPREFIX}"/usr install LDCONFIG=: || die "install failed"
 
 	dodir /usr/share || die
-	mv "${D}"/usr/man "${D}"/usr/share || die
+	mv "${D}${EPREFIX}"/usr/man "${D}${EPREFIX}"/usr/share || die
 	dodir /usr/share/doc/${PF} || die
-	mv "${D}"/usr/doc "${D}"/usr/share/doc/${PF} || die
+	mv "${D}${EPREFIX}"/usr/doc "${D}${EPREFIX}"/usr/share/doc/${PF} || die
 
 	dodoc BUGS CHANGES* CONVERT FAQ README* ROADMAP TODO VERSION WTODO || die
 }
