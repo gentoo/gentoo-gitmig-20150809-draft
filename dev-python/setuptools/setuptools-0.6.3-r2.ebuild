@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.3-r2.ebuild,v 1.1 2009/09/29 18:42:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.3-r2.ebuild,v 1.2 2009/09/29 18:58:44 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -25,7 +25,7 @@ S="${WORKDIR}/distribute-${PV}"
 DOCS="README.txt docs/easy_install.txt docs/pkg_resources.txt docs/setuptools.txt"
 
 pkg_setup() {
-	# Older versions of Portage don't support !! dependencies correctly (bug # #270953).
+	# Older versions of Portage don't support !! dependencies correctly (bug #270953).
 	if has_version "<dev-python/setuptools-0.6.3-r2"; then
 		die "<dev-python/setuptools-0.6.3-r2 must be uninstalled before installation of newer versions to avoid silent errors"
 	fi
