@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.494 2009/09/26 14:04:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.495 2009/09/29 22:43:00 flameeyes Exp $
+
+  29 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> udev-146.ebuild:
+  Fix libusb dependency (it would fail configure otherwise).
 
   26 Sep 2009; Brent Baude <ranger@gentoo.org> udev-141.ebuild:
   Marking udev-141 ppc64 for bug 254616
