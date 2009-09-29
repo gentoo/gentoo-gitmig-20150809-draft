@@ -1,6 +1,12 @@
 # ChangeLog for media-video/spcaview
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.10 2007/07/13 22:04:15 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/spcaview/ChangeLog,v 1.11 2009/09/29 11:14:22 ssuominen Exp $
+
+*spcaview-20071224 (29 Sep 2009)
+
+  29 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +spcaview-20071224.ebuild, +files/spcaview-20071224-Makefile.patch:
+  Version bump.
 
   13 Jul 2007; Mike Frysinger <vapier@gentoo.org>
   +files/spcaview-20061208-build.patch, spcaview-20061208.ebuild:
