@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/fceux
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/ChangeLog,v 1.1 2009/09/29 03:20:26 mr_bones_ Exp $
+
+*fceux-2.1.1 (29 Sep 2009)
+
+  29 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +fceux-2.1.1.ebuild,
+  +metadata.xml:
+  initial commit - ebuild submitted by Denilson via bug #235860
+
