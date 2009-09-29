@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10514 2009/09/29 01:59:40 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10515 2009/09/29 12:50:04 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -827,15 +827,6 @@ media-tv/ktvschedule
 # Upstream's unactive since 2005. Do not support asterisk versions in tree.
 # bug 279383
 net-misc/asterisk-chan_bluetooth
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (29 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails to build with gcc 4.3 (bug #240614), 4.4 (bug #278432) and mixes
-# compiler flags (bug #199585).
-#
-# Removal on 2009-09-29
-media-video/mmsv2
 
 # Víctor Ostorga <vostorga@gentoo.org> (29 Jul 2009)
 # Masked for removal in 60 days. Latest release in 2005, 
