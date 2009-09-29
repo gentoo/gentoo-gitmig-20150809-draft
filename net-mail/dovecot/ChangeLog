@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.209 2009/09/18 14:37:31 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.210 2009/09/29 13:17:06 patrick Exp $
+
+  29 Sep 2009; Patrick Lauer <patrick@gentoo.org> dovecot-1.2.4.ebuild:
+  Default-enable maildir and other useflags. Fixes #286922
 
   18 Sep 2009; Patrick Lauer <patrick@gentoo.org> dovecot-1.2.4.ebuild:
   Improving suid behaviour, fixes #285108. Thanks to kiorky for the patch.
