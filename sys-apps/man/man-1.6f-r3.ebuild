@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r3.ebuild,v 1.12 2009/09/29 11:03:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r3.ebuild,v 1.13 2009/09/29 11:45:01 flameeyes Exp $
 
 inherit eutils toolchain-funcs
 
@@ -117,11 +117,11 @@ pkg_postinst() {
 		ewarn ${files}
 	fi
 
-	if has_version app-doc/heirloom-docutils; then
+	if has_version app-doc/heirloom-doctools; then
 		ewarn "Please note that the /etc/man.conf file installed will not"
 		ewarn "work with heirloom's nroff by default (yet)."
 		ewarn ""
-		ewarn "Check app-doc/heirloom-docutils elog messages for the proper"
+		ewarn "Check app-doc/heirloom-doctools elog messages for the proper"
 		ewarn "configuration."
 	fi
 }
