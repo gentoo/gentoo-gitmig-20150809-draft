@@ -1,6 +1,12 @@
 # ChangeLog for sci-misc/boinc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.72 2009/09/28 19:28:40 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.73 2009/09/29 17:45:00 scarabeus Exp $
+
+  29 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/6.6.40-as-needed.patch, -boinc-6.6.40.ebuild,
+  boinc-6.6.40-r1.ebuild:
+  Add new as-needed patch per bug #286771. Also fix elog informations per
+  bug #286905.
 
 *boinc-6.6.40-r1 (28 Sep 2009)
 

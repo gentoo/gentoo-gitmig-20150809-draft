@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40-r1.ebuild,v 1.1 2009/09/28 19:28:40 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40-r1.ebuild,v 1.2 2009/09/29 17:45:00 scarabeus Exp $
 
 EAPI="2"
 
@@ -88,6 +88,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		--enable-unicode \
 		--with-ssl \
+		--enable-optimize \
 		$(use_with X x) \
 		${wxconf} \
 		${conf}
@@ -124,8 +125,8 @@ pkg_setup() {
 
 pkg_postinst() {
 	echo
-	elog "You are using the source compiled version."
-	elog "The manager can be found at /usr/bin/${PN}_gui"
+	elog "You are using the source compiled version of ${PN}."
+	use X && elog "The graphical manager can be found at /usr/bin/${PN}mgr"
 	elog
 	elog "You need to attach to a project to do anything useful with ${PN}."
 	elog "You can do this by running /etc/init.d/${PN} attach"
@@ -133,13 +134,15 @@ pkg_postinst() {
 	elog "http://boinc.berkeley.edu/wiki/Anonymous_platform"
 	elog
 	# Add warning about the new password for the client, bug 121896.
-	elog "If you need to use the graphical client the password is in:"
-	elog "/var/lib/${PN}/gui_rpc_auth.cfg"
-	elog "Where /var/lib/ is default RUNTIMEDIR, that can be changed in:"
-	elog "/etc/conf.d/${PN}"
-	elog "You should change this to something more memorable (can be even blank)."
-	elog
-	elog "Remember to launch init script before using manager. Or changing the password."
+	if use X; then
+		elog "If you need to use the graphical manager the password is in:"
+		elog "/var/lib/${PN}/gui_rpc_auth.cfg"
+		elog "Where /var/lib/ is default RUNTIMEDIR, that can be changed in:"
+		elog "/etc/conf.d/${PN}"
+		elog "You should change this password to something more memorable (can be even blank)."
+		elog "Remember to launch init script before using manager. Or changing the password."
+		elog
+	fi
 	if use cuda; then
 		elog "To be able to use CUDA you should add boinc user to video group."
 		elog "To do so run as root:"
