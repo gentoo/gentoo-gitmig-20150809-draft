@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.0.ebuild,v 1.2 2009/06/25 06:09:58 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/vitables/vitables-2.0.ebuild,v 1.3 2009/09/29 15:19:50 spock Exp $
 
 EAPI="2"
 NEED_PYTHON="2.5"
@@ -27,7 +27,9 @@ src_prepare() {
 }
 
 src_install() {
-	distutils_src_install
+	dodir /usr/share/icons/hicolor/scalable/apps
+	dodir /usr/share/applications
+	XDG_DATA_DIRS="${D}/usr/share" distutils_src_install
 
 	if use examples; then
 		insinto /usr/share/doc/${P}/examples
