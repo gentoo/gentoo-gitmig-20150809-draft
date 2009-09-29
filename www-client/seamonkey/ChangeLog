@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.201 2009/09/29 17:20:18 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.202 2009/09/29 22:22:51 maekke Exp $
+
+  29 Sep 2009; Markus Meier <maekke@gentoo.org> seamonkey-1.1.18.ebuild:
+  amd64 stable, bug #286721
 
   29 Sep 2009; Raúl Porcel <armin76@gentoo.org> seamonkey-1.1.18.ebuild:
   alpha/arm/ia64/sparc stable wrt #286721
