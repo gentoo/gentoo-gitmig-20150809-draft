@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.9 2009/09/13 14:11:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.7.0.ebuild,v 1.10 2009/09/29 09:22:54 maekke Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -16,6 +16,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="+sift"
 
 DEPEND="
+	!!dev-util/cocom
 	app-arch/zip
 	|| ( >=dev-libs/boost-1.34 =dev-libs/boost-1.33*[threads] )
 	>=media-gfx/enblend-3.0_p20080807

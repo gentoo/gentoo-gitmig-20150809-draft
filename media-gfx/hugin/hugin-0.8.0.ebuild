@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.8.0.ebuild,v 1.2 2009/08/01 09:49:21 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/hugin/hugin-0.8.0.ebuild,v 1.3 2009/09/29 09:22:54 maekke Exp $
 
 EAPI="2"
 WX_GTK_VER="2.8"
@@ -17,7 +17,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 LANGS=" bg ca cs de en_GB es fr hu it ja ko nl pl pt_BR ru sk sl sv uk zh_CN zh_TW"
 IUSE="lapack +sift $(echo ${LANGS//\ /\ linguas_})"
 
-DEPEND="app-arch/zip
+DEPEND="
+	!!dev-util/cocom
+	app-arch/zip
 	>=dev-libs/boost-1.35.0-r5
 	>=media-gfx/enblend-3.0_p20080807
 	media-gfx/exiv2
