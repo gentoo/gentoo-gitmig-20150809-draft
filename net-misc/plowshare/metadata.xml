@@ -7,7 +7,6 @@
 		<name>Mounir Lamouri</name>
 	</maintainer>
 	<use>
-		<flag name="megaupload">Enable megaupload module</flag>
 		<flag name="view-captcha">View captcha with aview</flag>
 	</use>
 </pkgmetadata>

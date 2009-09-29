@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.8-r1.ebuild,v 1.1 2009/09/28 19:50:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-0.8-r2.ebuild,v 1.1 2009/09/29 18:15:27 volkmar Exp $
 
 EAPI="2"
 
@@ -10,13 +10,11 @@ SRC_URI="http://${PN}.googlecode.com/files/${P}.tgz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~ppc"
-IUSE="+javascript +megaupload view-captcha"
+KEYWORDS="~ppc ~x86"
+IUSE="+javascript view-captcha"
 
 RDEPEND="
 	javascript? ( dev-lang/spidermonkey )
-	megaupload? ( dev-lang/python
-		dev-python/imaging )
 	view-captcha? ( media-gfx/aview )
 	app-shells/bash
 	app-text/recode
@@ -30,11 +28,6 @@ DEPEND=""
 # dev-lang/spidermonkey is actually any javascript interpreter using /usr/bin/js
 
 src_prepare() {
-	if ! use megaupload; then
-		sed -i -e "s: megaupload::" src/upload.sh src/download.sh \
-			|| die "sed failed"
-		rm src/modules/megaupload.sh || die "rm failed"
-	fi
 	if ! use javascript; then
 		sed -i -e "s: mediafire::" src/upload.sh src/download.sh \
 			|| die "sed failed"
@@ -42,6 +35,9 @@ src_prepare() {
 			|| die "sed failed"
 		rm src/modules/{mediafire,zshare}.sh
 	fi
+
+	# removing extras/ as it's now deprecated
+	rm -r src/modules/extras/ || die "rm -r failed"
 }
 
 src_test() {
