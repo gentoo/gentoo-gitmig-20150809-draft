@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.18.2.ebuild,v 1.1 2009/08/07 14:20:44 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/nip2-7.18.2.ebuild,v 1.2 2009/09/29 10:27:45 maekke Exp $
 
 EAPI="2"
 inherit eutils autotools fdo-mime versionator
@@ -12,7 +12,7 @@ HOMEPAGE="http://vips.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="fftw gsl"
+IUSE="fftw gsl test"
 
 RDEPEND="
 	>=dev-libs/glib-2
@@ -22,10 +22,10 @@ RDEPEND="
 	>=x11-libs/gtk+-2.4.9
 	gsl? ( sci-libs/gsl )
 	fftw? ( sci-libs/fftw:3.0 )"
-
 DEPEND="${RDEPEND}
 	=sys-devel/bison-2.3*
-	sys-devel/flex"
+	sys-devel/flex
+	test? ( media-libs/vips[lcms] )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-7.16.4-fftw3-build.patch"
