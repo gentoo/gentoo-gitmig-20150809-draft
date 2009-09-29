@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4853 2009/09/29 20:07:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4854 2009/09/29 20:27:54 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3179,7 +3179,6 @@ www-servers/nginx:webdav - Enable webdav support
 www-servers/ocsigen:ocamlduce - Enables ocamlduce XML typechecking for generated web pages
 www-servers/pound:dynscaler - Enable dynamic rescaling of back-end priorities
 www-servers/resin:admin - Enable Resin admin webapp
-www-servers/shttpd:dmalloc - Enable debugging with the dmalloc library
 www-servers/tomcat:admin - Enable Tomcat admin webapp
 x11-apps/xdpyinfo:dmx - Builds support for Distributed Multiheaded X x11-base/xorg-server
 x11-apps/xinit:consolekit -  Enable consolekit integration for the privileges detection. 
