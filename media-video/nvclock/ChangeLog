@@ -1,6 +1,11 @@
 # ChangeLog for media-video/nvclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.39 2009/09/27 10:50:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/ChangeLog,v 1.40 2009/09/29 18:40:48 jer Exp $
+
+  29 Sep 2009; Jeroen Roovers <jer@gentoo.org> -nvclock-0.7-r2.ebuild,
+  -nvclock-0.8_beta4-r3.ebuild, -files/callbacks.patch,
+  -files/configure.in.diff, -files/nvclock-insecure-tmp.diff:
+  Remove old(bug #284017).
 
   27 Sep 2009; Mounir Lamouri <volkmar@gentoo.org>
   nvclock-0.8_beta4-r4.ebuild:
