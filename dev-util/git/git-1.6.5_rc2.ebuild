@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-9999.ebuild,v 1.12 2009/09/29 20:05:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/git-1.6.5_rc2.ebuild,v 1.1 2009/09/29 20:05:22 robbat2 Exp $
 
 EAPI=2
 
@@ -18,17 +18,16 @@ if [ "$PV" != "9999" ]; then
 	SRC_URI="mirror://kernel/software/scm/git/${MY_P}.tar.bz2
 			mirror://kernel/software/scm/git/${PN}-manpages-${DOC_VER}.tar.bz2
 			doc? ( mirror://kernel/software/scm/git/${PN}-htmldocs-${DOC_VER}.tar.bz2 )"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 else
 	SRC_URI=""
 	EGIT_BRANCH="master"
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/git/git.git"
 	# EGIT_REPO_URI="http://www.kernel.org/pub/scm/git/git.git"
-	KEYWORDS=""
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="+blksha1 +curl cgi +doc emacs gtk iconv +perl ppcsha1 tk +threads +webdav xinetd cvs +subversion"
 
 # Common to both DEPEND and RDEPEND
@@ -300,7 +299,7 @@ src_test() {
 
 	cvs=0
 	use cvs && let cvs=$cvs+1
-	if ! has userpriv "${FEATURES}"; then
+	if [[ ${EUID} -eq 0 ]]; then
 		if [[ $cvs -eq 1 ]]; then
 			ewarn "Skipping CVS tests because CVS does not work as root!"
 			ewarn "You should retest with FEATURES=userpriv!"
