@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd></herd>
+	<maintainer>
+		<email>ramereth@gentoo.org</email>
+		<name>Lance Albertson</name>
+	</maintainer>
+	<use>
+		<flag name="dmraid">Add support for dmraid devices, also known as
+		ATA-RAID, or Fake RAID.</flag>
+		<flag name="iscsi">Add support for iSCSI</flag>
+		<flag name="lvm">Add support for the Logical Volume Manager
+		sys-apps/lvm2</flag>
+		<flag name="nbd">Add support for network block devices</flag>
+		<flag name="nfs">Add support for NFS</flag>
+		<flag name="md">Add support for MD devices, also known as software raid devices</flag>
+	</use>
+	<longdescription lang="en">
+	Generic, modular initramfs generation tool that can be used across various
+	distributions.
+	</longdescription>
+</pkgmetadata>
+
