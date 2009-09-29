@@ -36,7 +36,6 @@
     </flag>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
     <flag name="glib">Enable glib eventloop support</flag>
-    <flag name="policykit">Enable support for PolicyKit framework.</flag>
     <flag name="doc">Build the doxygen-described API documentation.</flag>
   </use>
 </pkgmetadata>
