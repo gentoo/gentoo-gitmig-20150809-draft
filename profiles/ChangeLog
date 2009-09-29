@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3325 2009/09/28 22:01:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3326 2009/09/29 09:04:28 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> base/packages,
+  prefix/windows/winnt/packages, uclibc/packages:
+  Remove groff from the explicit system set; groff is *still* part of the
+  system set because both the man providers depend (both at build and
+  run-time) on it.
 
   28 Sep 2009; Robin H. Johnson <robbat2@gentoo.org> package.mask:
   sgb and gt-itm are fixed.

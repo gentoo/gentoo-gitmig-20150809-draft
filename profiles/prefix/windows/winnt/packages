@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/packages,v 1.1 2009/06/06 03:55:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/winnt/packages,v 1.2 2009/09/29 09:04:29 flameeyes Exp $
 
 # those are packages not available/required on winnt, since
 # winnt can be a child EPREFIX only, which tears it's DEPENDS
@@ -27,7 +27,6 @@
 -*app-arch/cpio
 -*sys-apps/coreutils
 -*sys-devel/make
--*sys-apps/groff
 -*sys-apps/findutils
 -*sys-devel/m4
 -*net-misc/wget

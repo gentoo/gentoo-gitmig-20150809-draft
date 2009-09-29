@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.44 2008/12/30 20:50:39 pchrist Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/packages,v 1.45 2009/09/29 09:04:29 flameeyes Exp $
 
 # Gentoo Base Profile
 
@@ -41,7 +41,6 @@
 *sys-apps/findutils
 *sys-apps/gawk
 *sys-apps/grep
-*sys-apps/groff
 *sys-apps/kbd
 *sys-apps/net-tools
 #*>=sys-apps/portage-2.0.51.22
