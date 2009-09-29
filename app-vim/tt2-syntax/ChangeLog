@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tt2-syntax
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.2 2008/10/04 01:33:06 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tt2-syntax/ChangeLog,v 1.3 2009/09/29 17:15:31 armin76 Exp $
+
+  29 Sep 2009; Raúl Porcel <armin76@gentoo.org> tt2-syntax-1.13.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #191500
 
   04 Oct 2008; Jeremy Olexa <darkside@gentoo.org> tt2-syntax-1.13.ebuild:
   add ~amd64 kw, bug #226149
