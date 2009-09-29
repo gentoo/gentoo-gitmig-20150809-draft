@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/files/ekey-ulusbd.init,v 1.1 2009/09/28 18:29:36 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/files/ekey-ulusbd.init,v 1.2 2009/09/29 12:03:21 flameeyes Exp $
 
 INSTANCE="${SVCNAME#*.}"
 if [ -z "${INSTANCE}" ] || [ "${SVCNAME}" = "ekey-ulusbd" ]; then
@@ -14,14 +14,13 @@ depend() {
 
 start() {
 	if [ -z ${USB_BUS} ]; then
-		local devdir=$(fgrep -l 20df /sys/bus/usb/devices/*/idVendor \
-			| xargs -n1 dirname \
-			| xargs -I{} fgrep -l 0001 {}/idProduct \
-			| xargs -n1 dirname \
-			| xargs -I{} fgrep -l ${EKEY_SERIAL} {}/serial \
-			| xargs -n1 dirname)
-		USB_BUS=$(< ${devdir}/busnum)
-		USB_DEV=$(< ${devdir}/devnum)
+		set -- $(lsusb -v -d 20df:0001 | \
+			egrep '(^Bus|iSerial)' | \
+			grep -B1 "${EKEY_SERIAL}" | \
+			head -n 1 | \
+			cut -c 5-7,15-18)
+		USB_BUS=$1
+		USB_DEV=$2
 	fi
 
 	ebegin "Starting EntropyKey Userland USB Daemon"

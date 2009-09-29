@@ -1,6 +1,17 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.2 2009/09/28 18:29:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.3 2009/09/29 12:03:20 flameeyes Exp $
+
+*ekeyd-1.0.5-r2 (29 Sep 2009)
+
+  29 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  -ekeyd-1.0.5-r1.ebuild, +ekeyd-1.0.5-r2.ebuild, files/ekey-ulusbd.conf,
+  files/ekey-ulusbd.init:
+  New revision, thanks to the comments from Rob Kendrick (upstream); the
+  init script now uses lsusb, and is only installed for non-Linux systems,
+  while the correct udev rules are installed on Linux. Add a check for the
+  CDC driver, and also add warnings about both the userland USB and CDC
+  options.
 
 *ekeyd-1.0.5-r1 (28 Sep 2009)
 
