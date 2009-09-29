@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.2.ebuild,v 1.9 2009/09/27 15:25:33 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgpod/libgpod-0.7.2.ebuild,v 1.10 2009/09/29 21:37:41 ssuominen Exp $
 
 EAPI=2
-
 inherit autotools eutils
 
 DESCRIPTION="Shared library to access the contents of an iPod"
@@ -30,7 +29,7 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt"
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-compile-without-hal.patch"
+	epatch "${FILESDIR}"/${P}-compile-without-hal.patch
 	eautoreconf
 }
 
@@ -39,10 +38,10 @@ src_configure() {
 		$(use_with hal) \
 		$(use_enable gtk gdk-pixbuf) \
 		$(use_enable python pygobject) \
-		$(use_with python) || die "configure failed"
+		$(use_with python)
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc README TROUBLESHOOTING AUTHORS NEWS README.SysInfo
 }
