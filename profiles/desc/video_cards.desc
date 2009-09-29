@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.15 2009/08/16 22:09:13 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/video_cards.desc,v 1.16 2009/09/29 22:07:21 vapier Exp $
 
 # This file contains descriptions of VIDEO_CARDS USE_EXPAND flags.
 
@@ -18,8 +18,8 @@ fbdev - VIDEO_CARDS setting to build driver for fbdev video cards
 fglrx - VIDEO_CARDS setting to build driver for fglrx video cards
 geode - VIDEO_CARDS setting to build driver for AMD Geode GX and LX video cards
 glint - VIDEO_CARDS setting to build driver for glint video cards
-i128 - VIDEO_CARDS setting to build driver for i128 video cards
-i740 - VIDEO_CARDS setting to build driver for i740 video cards
+i128 - VIDEO_CARDS setting to build driver for Number 9 I128 video cards
+i740 - VIDEO_CARDS setting to build driver for Intel i740 video cards
 impact - VIDEO_CARDS setting to build driver for impact video cards
 imstt - VIDEO_CARDS setting to build driver for imstt video cards
 intel - VIDEO_CARDS setting to build driver for Intel video cards
@@ -32,16 +32,16 @@ nouveau - VIDEO_CARDS setting to build reverse-engineered driver for nvidia card
 nsc - VIDEO_CARDS setting to build driver for nsc video cards
 nvidia - VIDEO_CARDS setting to build driver for nvidia video cards
 nv - VIDEO_CARDS setting to build driver for nv video cards
-r128 - VIDEO_CARDS setting to build driver for r128 video cards
-radeonhd - VIDEO_CARDS setting to build driver for radeon HD video cards (radeon also works)
-radeon - VIDEO_CARDS setting to build driver for radeon video cards
+r128 - VIDEO_CARDS setting to build driver for ATI r128 video cards
+radeonhd - VIDEO_CARDS setting to build driver for ATI radeon HD video cards (radeon also works)
+radeon - VIDEO_CARDS setting to build driver for ATI radeon video cards
 rendition - VIDEO_CARDS setting to build driver for rendition video cards
 s3 - VIDEO_CARDS setting to build driver for s3 video cards
 s3virge - VIDEO_CARDS setting to build driver for s3virge video cards
 savage - VIDEO_CARDS setting to build driver for savage video cards
 siliconmotion - VIDEO_CARDS setting to build driver for siliconmotion video cards
-sisusb - VIDEO_CARDS setting to build driver for sisusb video cards
-sis - VIDEO_CARDS setting to build driver for sis video cards
+sisusb - VIDEO_CARDS setting to build driver for SiS USB video cards
+sis - VIDEO_CARDS setting to build driver for SiS video cards
 sunbw2 - VIDEO_CARDS setting to build driver for sunbw2 video cards
 suncg14 - VIDEO_CARDS setting to build driver for suncg14 video cards
 suncg3 - VIDEO_CARDS setting to build driver for suncg3 video cards
