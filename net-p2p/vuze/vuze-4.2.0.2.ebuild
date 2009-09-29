@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.2.ebuild,v 1.3 2009/07/04 14:33:53 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.2.ebuild,v 1.4 2009/09/29 05:36:34 caster Exp $
 
 EAPI=2
 
@@ -8,9 +8,12 @@ JAVA_PKG_IUSE="source"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
+PATCHSET_VER="4.2.0.0"
+
 DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"
-SRC_URI="mirror://sourceforge/azureus/Vuze_${PV}_source.zip"
+SRC_URI="mirror://sourceforge/azureus/Vuze_${PV}_source.zip
+	mirror://gentoo/${PN}-${PATCHSET_VER}-gentoo-patches.tar.bz2"
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
@@ -44,8 +47,8 @@ src_unpack() {
 	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
 	cp "${FILESDIR}/build.xml" . || die "failed to copy build.xml"
 
-	epatch "${FILESDIR}/patches-4.2.0.0/0001-remove-osx-platform.patch"
-	epatch "${FILESDIR}/patches-4.2.0.0/0002-use-jdk-cipher-only.patch"
+	epatch "${S}/${PN}-${PATCHSET_VER}-gentoo-patches/0001-remove-osx-platform.patch"
+	epatch "${S}/${PN}-${PATCHSET_VER}-gentoo-patches/0002-use-jdk-cipher-only.patch"
 
 	### Removes OS X files and entries.
 	rm -rv "org/gudy/azureus2/platform/macosx" \

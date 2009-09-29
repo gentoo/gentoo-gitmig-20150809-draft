@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.3 2009/03/04 18:26:43 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-3.0.4.2-r1.ebuild,v 1.4 2009/09/29 05:36:34 caster Exp $
 
 ###
 ### @Todo The new Azureus gui requires swt built with embedded mozilla support,
@@ -19,9 +19,12 @@ JAVA_PKG_IUSE="source"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
+PATCHSET_VER="3.0.3.4"
+
 DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"
-SRC_URI="mirror://sourceforge/azureus/Azureus_${PV}_source.zip"
+SRC_URI="mirror://sourceforge/azureus/Azureus_${PV}_source.zip
+	mirror://gentoo/${PN}-${PATCHSET_VER}-gentoo-patches.tar.bz2"
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
@@ -52,7 +55,7 @@ src_unpack() {
 	unpack ${A}
 
 	### Patches Azureus to use bcprov,
-	EPATCH_SUFFIX="patch" epatch "${FILESDIR}/patches-3.0.3.4"
+	EPATCH_SUFFIX="patch" epatch "${S}/${PN}-${PATCHSET_VER}-gentoo-patches/"
 
 	### Remove an unit test we never run
 	rm -v ./org/gudy/azureus2/ui/console/multiuser/TestUserManager.java || die
@@ -92,7 +95,7 @@ src_install() {
 
 	java-pkg_dolauncher "${PN}" \
 		--main "org.gudy.azureus2.ui.common.Main" \
-		-pre "${FILESDIR}/${PN}-2.5.0.0-pre"      \
+		-pre "${FILESDIR}/${PN}-4.1.0.0-pre"      \
 		--java_args '-Dazureus.install.path=${HOME}/.azureus/ ${JAVA_OPTIONS}' \
 		--pkg_args '--ui=${UI}'
 	dosym vuze /usr/bin/azureus
@@ -100,7 +103,7 @@ src_install() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=204132
 	java-pkg_register-environment-variable MOZ_PLUGIN_PATH /usr/lib/nsbrowser/plugins
 
-	doicon "${FILESDIR}/vuze.png"
+	newicon "${S}"/org/gudy/azureus2/ui/icons/a32.png vuze.png
 	domenu "${FILESDIR}/vuze.desktop"
 
 	use source && java-pkg_dosrc "${S}"/{com,edu,org}

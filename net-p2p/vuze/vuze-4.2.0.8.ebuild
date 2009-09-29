@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.4.ebuild,v 1.1 2009/07/13 22:45:23 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/vuze/vuze-4.2.0.8.ebuild,v 1.1 2009/09/29 05:36:34 caster Exp $
 
 EAPI=2
 
@@ -8,9 +8,12 @@ JAVA_PKG_IUSE="source"
 
 inherit eutils fdo-mime java-pkg-2 java-ant-2
 
+PATCHSET_VER="4.2.0.8"
+
 DESCRIPTION="BitTorrent client in Java, formerly called Azureus"
 HOMEPAGE="http://www.vuze.com/"
-SRC_URI="mirror://sourceforge/azureus/Vuze_${PV}_source.zip"
+SRC_URI="mirror://sourceforge/azureus/Vuze_${PV}_source.zip
+	mirror://gentoo/${PN}-${PATCHSET_VER}-gentoo-patches.tar.bz2"
 LICENSE="GPL-2 BSD"
 
 SLOT="0"
@@ -24,7 +27,7 @@ RDEPEND="
 	>=dev-java/bcprov-1.35:0
 	>=dev-java/commons-cli-1.0:1
 	>=dev-java/log4j-1.2.8:0
-	>=dev-java/swt-3.4:3.4[cairo,xulrunner]
+	dev-java/swt:3.5[cairo,xulrunner]
 	!net-p2p/azureus-bin
 	>=virtual/jre-1.5"
 
@@ -41,14 +44,7 @@ src_unpack() {
 }
 
 java_prepare() {
-	# build.xml disappeared from 4.1.0.0 although it was there in 4.0.0.4
-	# hopefully that's just a packaging mistake
-	[[ -f build.xml ]] && die "upstream has build.xml again, don't overwrite"
-	cp "${FILESDIR}/build.xml" . || die "failed to copy build.xml"
-
-	epatch "${FILESDIR}/patches-4.2.0.0/0001-remove-osx-platform.patch"
-	epatch "${FILESDIR}/patches-4.2.0.0/0002-use-jdk-cipher-only.patch"
-	epatch "${FILESDIR}/patches-4.2.0.0/0003-disable-core-updater.patch"
+	EPATCH_FORCE="yes" EPATCH_SUFFIX="patch" epatch "${S}/${PN}-${PATCHSET_VER}-gentoo-patches/"
 
 	### Removes OS X files and entries.
 	rm -rv "org/gudy/azureus2/platform/macosx" \
@@ -71,7 +67,7 @@ java_prepare() {
 }
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="swt-3.4,bcprov,json-simple,log4j,commons-cli-1"
+EANT_GENTOO_CLASSPATH="swt-3.5,bcprov,json-simple,log4j,commons-cli-1"
 
 src_compile() {
 	local mem
