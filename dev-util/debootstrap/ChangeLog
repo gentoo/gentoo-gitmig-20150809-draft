@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/debootstrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.101 2009/09/27 16:39:56 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/debootstrap/ChangeLog,v 1.102 2009/09/29 19:11:58 klausman Exp $
+
+  29 Sep 2009; Tobias Klausmann <klausman@gentoo.org>
+  debootstrap-1.0.15.ebuild:
+  Stable on alpha, bug #283986
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> debootstrap-1.0.15.ebuild:
   ppc stable #283986
