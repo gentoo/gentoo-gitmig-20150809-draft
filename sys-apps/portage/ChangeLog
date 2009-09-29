@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.632 2009/09/27 18:56:33 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.633 2009/09/29 06:08:43 ulm Exp $
+
+  29 Sep 2009; Ulrich Mueller <ulm@gentoo.org> portage-2.2_rc33.ebuild,
+  portage-2.2_rc39.ebuild, portage-2.2_rc40.ebuild, portage-2.2_rc41.ebuild,
+  portage-2.2_rc42.ebuild:
+  Update dependency on eselect, bug 271447.
 
   27 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   portage-2.2_rc42.ebuild:
