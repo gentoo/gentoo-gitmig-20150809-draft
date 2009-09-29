@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.1 2009/09/25 15:38:05 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gnash/gnash-0.8.6.ebuild,v 1.2 2009/09/29 18:11:48 mrpouet Exp $
 
 EAPI="2"
 WANT_CMAKE="false"
@@ -29,6 +29,7 @@ RDEPEND=">=dev-libs/boost-1.35.0
 	x11-libs/libXmu
 	x11-libs/libXt
 	x11-libs/libXv
+	media-libs/giflib
 	x11-proto/xproto
 	agg? ( x11-libs/agg )
 	cairo? ( x11-libs/cairo )
