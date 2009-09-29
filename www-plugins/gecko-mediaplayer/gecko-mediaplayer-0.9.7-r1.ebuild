@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.7-r1.ebuild,v 1.1 2009/09/27 20:41:07 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.7-r1.ebuild,v 1.2 2009/09/29 16:39:26 idl0r Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit gnome2 multilib autotools eutils
+inherit gnome2 multilib
 
 DESCRIPTION="A browser multimedia plugin using gnome-mplayer"
 HOMEPAGE="http://code.google.com/p/gecko-mediaplayer"
@@ -33,8 +33,12 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-as-needed.patch"
-	eautoreconf
+	# Fix as-needed, bug 279419 and bug 286795.
+	# bug 279419 has been fixed by upstream in 0.9.8.
+	sed -i -r \
+		-e 's:(gecko_mediaplayer(_.+)?_so_LDFLAGS) = .*:\1 = -shared -fPIC:' \
+		-e 's:(gecko_mediaplayer(_.+)?_so_LDADD = .*):\1 $(GLIB_LIBS) $(DBUS_LIBS) $(GCONF_LIBS):' \
+		src/Makefile.in || die
 }
 
 src_install() {
