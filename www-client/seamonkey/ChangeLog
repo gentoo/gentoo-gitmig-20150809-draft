@@ -1,6 +1,9 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.199 2009/09/28 17:44:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.200 2009/09/29 00:23:09 jer Exp $
+
+  29 Sep 2009; Jeroen Roovers <jer@gentoo.org> seamonkey-1.1.18.ebuild:
+  Stable for HPPA (bug #286721).
 
   28 Sep 2009; Brent Baude <ranger@gentoo.org> seamonkey-1.1.18.ebuild:
   Marking seamonkey-1.1.18 ppc64 for bug 286721
