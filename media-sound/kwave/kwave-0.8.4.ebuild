@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.3.ebuild,v 1.1 2009/07/16 09:14:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.4.ebuild,v 1.1 2009/09/29 10:52:28 scarabeus Exp $
 
 EAPI=2
 # Note that kwave use really bad linguas code so we have to install them all.
@@ -9,7 +9,7 @@ inherit gnome2-utils kde4-base
 
 DESCRIPTION="Kwave is a sound editor for KDE."
 HOMEPAGE="http://kwave.sourceforge.net/"
-SRC_URI="mirror://sourceforge/kwave/${P}-2.tar.bz2"
+SRC_URI="mirror://sourceforge/kwave/${P}-1.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
