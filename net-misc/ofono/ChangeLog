@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ofono
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.3 2009/09/25 08:04:29 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ofono/ChangeLog,v 1.4 2009/09/29 09:54:18 dagger Exp $
+
+*ofono-0.6 (29 Sep 2009)
+
+  29 Sep 2009; Robert Piasek <dagger@gentoo.org> +ofono-0.6.ebuild:
+  Version bump. Fixes some problems on calypso modems
 
 *ofono-0.5 (25 Sep 2009)
 
