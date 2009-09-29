@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.6.ebuild,v 1.2 2009/09/29 17:42:38 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.6.ebuild,v 1.3 2009/09/29 18:03:39 volkmar Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/opalvoip/${P}.tar.bz2
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+audio capi celt debug doc dtmf examples fax ffmpeg h224 h281 h323 iax
 ipv6 ivr ixj java ldap lid +plugins sbc sip sipim srtp ssl stats swig theora
 +video vpb vxml wav x264 x264-static xml"
@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	# workaround for bug 282838
-	filter-flags "-fvisibility-inlines-hidden"
+	append-flags "-fno-visibility-inlines-hidden"
 
 	# need >=gcc-3
 	if [[ $(gcc-major-version) -lt 3 ]]; then

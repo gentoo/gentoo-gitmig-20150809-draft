@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.56 2009/09/29 17:51:30 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.57 2009/09/29 18:03:39 volkmar Exp $
+
+  29 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> opal-3.6.6.ebuild:
+  Changing filter-flags to append-flags after ssuominen advice.
 
   29 Sep 2009; Tobias Klausmann <klausman@gentoo.org> opal-3.6.4-r1.ebuild:
   Keyworded on alpha, bug #276355
