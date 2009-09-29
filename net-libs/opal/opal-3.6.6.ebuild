@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.6.ebuild,v 1.1 2009/09/26 13:57:09 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/opal-3.6.6.ebuild,v 1.2 2009/09/29 17:42:38 volkmar Exp $
 
 EAPI="2"
 
-inherit eutils autotools toolchain-funcs java-pkg-opt-2
+inherit eutils autotools toolchain-funcs java-pkg-opt-2 flag-o-matic
 
 DESCRIPTION="C++ class library normalising numerous telephony protocols"
 HOMEPAGE="http://www.opalvoip.org/"
@@ -52,6 +52,9 @@ DEPEND="${RDEPEND}
 # OPALDIR should not be used anymore but if a package still need it, create it
 
 pkg_setup() {
+	# workaround for bug 282838
+	filter-flags "-fvisibility-inlines-hidden"
+
 	# need >=gcc-3
 	if [[ $(gcc-major-version) -lt 3 ]]; then
 		eerror "You need to use gcc-3 at least."
