@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.18.2.ebuild,v 1.1 2009/08/07 14:19:40 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/vips/vips-7.18.2.ebuild,v 1.2 2009/09/29 10:24:44 maekke Exp $
 
 EAPI=2
 
@@ -17,12 +17,13 @@ HOMEPAGE="http://vips.sourceforge.net"
 LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="exif fftw imagemagick jpeg lcms openexr png python threads tiff zlib"
+IUSE="exif fftw imagemagick jpeg lcms openexr png python threads tiff"
 
 RDEPEND="
 	>=dev-libs/glib-2.6:2
-	dev-libs/liboil
+	>=dev-libs/liboil-0.3
 	dev-libs/libxml2
+	sys-libs/zlib
 	>=x11-libs/pango-1.8
 	fftw? ( sci-libs/fftw:3.0 )
 	imagemagick? ( >=media-gfx/imagemagick-5.0.0 )
@@ -32,9 +33,7 @@ RDEPEND="
 	exif? ( >=media-libs/libexif-0.6 )
 	tiff? ( media-libs/tiff )
 	jpeg? ( media-libs/jpeg )
-	png? ( media-libs/libpng )
-	zlib? ( sys-libs/zlib )"
-
+	png? ( media-libs/libpng )"
 DEPEND="${RDEPEND}"
 
 src_configure() {
@@ -43,12 +42,11 @@ src_configure() {
 		$(use_with lcms) \
 		$(use_with openexr OpenEXR) \
 		$(use_with exif libexif) \
-		$(use_with threads) \
+		$(use_enable threads) \
 		$(use_with imagemagick magick) \
 		$(use_with png) \
 		$(use_with tiff) \
 		$(use_with jpeg) \
-		$(use_with zlib) \
 		$(use_with python)
 }
 
