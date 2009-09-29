@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/gecko-mediaplayer
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.17 2009/09/29 16:59:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/ChangeLog,v 1.18 2009/09/29 17:33:26 ssuominen Exp $
+
+  29 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  gecko-mediaplayer-0.9.8.ebuild:
+  Force xulrunner usage to avoid breakage when seamonkey is installed.
 
 *gecko-mediaplayer-0.9.8 (29 Sep 2009)
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8.ebuild,v 1.1 2009/09/29 16:59:21 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/gecko-mediaplayer/gecko-mediaplayer-0.9.8.ebuild,v 1.2 2009/09/29 17:33:26 ssuominen Exp $
 
 EAPI=2
 GCONF_DEBUG=no
-inherit autotools eutils gnome2 multilib
+inherit autotools eutils flag-o-matic gnome2 multilib
 
 DESCRIPTION="A browser multimedia plugin using gnome-mplayer"
 HOMEPAGE="http://code.google.com/p/gecko-mediaplayer"
@@ -26,7 +26,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 pkg_setup() {
-	G2CONF="$(use_enable gnome schemas-install)
+	G2CONF="--disable-dependency-tracking
+		$(use_enable gnome schemas-install)
+		--with-xulrunner-sdk
 		$(use_with gnome gconf)
 		--with-gio"
 	DOCS="ChangeLog DOCS/tech/javascript.txt"
@@ -36,6 +38,11 @@ src_prepare() {
 	gnome2_src_prepare
 	epatch "${FILESDIR}"/${P}-asneeded.patch
 	AT_M4DIR=m4 eautoreconf
+}
+
+src_configure() {
+	append-flags "$(pkg-config --cflags-only-I libxul)"
+	gnome2_src_configure
 }
 
 src_install() {
