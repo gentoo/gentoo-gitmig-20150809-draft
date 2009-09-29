@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.0.ebuild,v 1.1 2009/09/29 09:33:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.0.ebuild,v 1.2 2009/09/29 17:40:23 hanno Exp $
 
 EAPI=1
 
@@ -26,6 +26,7 @@ DEPEND="${RDEPEND}"
 
 PATCHES=(
 	"${FILESDIR}"/${PV}-cmake.patch
+	"${FILESDIR}"/${P}-elif.patch
 )
 
 src_configure() {

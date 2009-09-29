@@ -1,6 +1,10 @@
 # ChangeLog for app-text/wv2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.55 2009/09/29 09:33:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.56 2009/09/29 17:40:23 hanno Exp $
+
+  29 Sep 2009; Hanno Boeck <hanno@gentoo.org> wv2-0.4.0.ebuild,
+  +files/wv2-0.4.0-elif.patch:
+  Fix for gcc 4.4.
 
 *wv2-0.4.0 (29 Sep 2009)
 
