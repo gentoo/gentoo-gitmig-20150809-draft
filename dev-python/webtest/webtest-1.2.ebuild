@@ -1,6 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.2.ebuild,v 1.1 2009/09/04 15:07:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-1.2.ebuild,v 1.2 2009/09/29 01:45:40 arfrever Exp $
+
+EAPI="2"
+
+NEED_PYTHON="2.5"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -10,14 +15,17 @@ MY_P="${MY_PN}-${PV}"
 DESCRIPTION="Helper to test WSGI applications"
 HOMEPAGE="http://pythonpaste.org/webtest/"
 SRC_URI="http://pypi.python.org/packages/source/W/${MY_PN}/${MY_P}.tar.gz"
+
 LICENSE="MIT"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE="doc examples"
-S="${WORKDIR}/${MY_P}"
+
 DEPEND="dev-python/setuptools"
-RDEPEND="|| ( >=dev-python/wsgiref-0.1.2 >=dev-lang/python-2.5.2-r4 )
-	>=dev-python/webob-0.9.2"
+RDEPEND=">=dev-python/webob-0.9.2"
+RESTRICT_PYTHON_ABIS="3.*"
+
+S="${WORKDIR}/${MY_P}"
 
 src_install() {
 	distutils_src_install
