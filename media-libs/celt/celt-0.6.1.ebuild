@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.6.1.ebuild,v 1.2 2009/09/12 12:58:30 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/celt-0.6.1.ebuild,v 1.3 2009/09/29 00:26:05 tgurr Exp $
 
 EAPI="2"
 
@@ -25,7 +25,7 @@ src_unpack() {
 }
 
 src_configure() {
-	econf $(use_with ogg)
+	econf $(use_with ogg ogg /usr)
 }
 
 src_install() {
