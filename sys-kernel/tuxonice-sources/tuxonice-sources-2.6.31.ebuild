@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.30-r5.ebuild,v 1.1 2009/08/14 18:44:31 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/tuxonice-sources/tuxonice-sources-2.6.31.ebuild,v 1.1 2009/09/29 21:38:35 nelchael Exp $
 
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="6"
+K_GENPATCHES_VER="2"
 
 inherit kernel-2
 detect_version
@@ -14,9 +14,9 @@ DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~dsd/genpatches/ http://www.tuxonice.net"
 IUSE=""
 
-TUXONICE_SNAPSHOT="20090620-v1"
+TUXONICE_SNAPSHOT="20090911-v1"
 TUXONICE_VERSION=""
-TUXONICE_TARGET="2.6.30"
+TUXONICE_TARGET="2.6.31"
 
 if [[ -n "${TUXONICE_SNAPSHOT}" ]]; then
 	TUXONICE_SRC="current-tuxonice-for-${TUXONICE_TARGET}.patch-${TUXONICE_SNAPSHOT}"
