@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.16.ebuild,v 1.1 2009/09/21 06:59:09 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gsynaptics/gsynaptics-0.9.16.ebuild,v 1.2 2009/09/29 15:34:34 pva Exp $
 
 GCONF_DEBUG="no"
 
@@ -60,10 +60,8 @@ pkg_postinst() {
 	ewarn "SHMConfig is real SECURITY nightmare. E.g. it allows anyone with access"
 	ewarn "to the system to click on arbitrary points of the screen."
 	ewarn "This is the reason for the deprecation of ${PN} (see homepage)."
-# gnome-extra/gpointing-device-settings is not working here, so it's not in the
-# tree. I've put it in overlay for now and contacted upstream...
-#	ewarn "Use gnome-extra/gpointing-device-settings instread as it uses XInput"
-#	ewarn "properties and doesn't need SHMConfig option to be set."
-#	ewarn "In gnome 2.28 gnome-mouse-properties will allow to configure touchpad"
-#	ewarn "settings (also trough XInput), so no additional software needed there."
+	ewarn "Use gnome-extra/gpointing-device-settings instread as it uses XInput"
+	ewarn "properties and doesn't need SHMConfig option to be set."
+	ewarn "In gnome 2.28 gnome-mouse-properties will allow to configure touchpad"
+	ewarn "settings (also trough XInput), so no additional software needed there."
 }
