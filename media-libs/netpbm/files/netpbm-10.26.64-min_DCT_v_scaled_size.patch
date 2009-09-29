@@ -1,0 +1,11 @@
+jpeg-7 compability
+
+--- netpbm-10.46.00/converter/ppm/ppmtompeg/jpeg.c
++++ netpbm-10.46.00/converter/ppm/ppmtompeg/jpeg.c
+@@ -470,5 +470,5 @@
+   buffer_height = 8;  /* could be 2, 4,8 rows high */
+ #else
+-  buffer_height = cinfo.max_v_samp_factor * cinfo.min_DCT_scaled_size;
++  buffer_height = cinfo.max_v_samp_factor * cinfo.min_DCT_v_scaled_size;
+ #endif
+   
