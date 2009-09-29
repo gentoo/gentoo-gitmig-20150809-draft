@@ -1,0 +1,10 @@
+# ChangeLog for games-emulation/gfceux
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gfceux/ChangeLog,v 1.1 2009/09/29 05:16:34 mr_bones_ Exp $
+
+*gfceux-2.1.1 (29 Sep 2009)
+
+  29 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> +gfceux-2.1.1.ebuild,
+  +files/gfceux-2.1.1-gentoo.patch, +metadata.xml:
+  intial commit
+
