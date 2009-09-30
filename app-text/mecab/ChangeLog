@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mecab
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.58 2009/08/16 08:36:11 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mecab/ChangeLog,v 1.59 2009/09/30 14:41:17 matsuu Exp $
+
+*mecab-0.98 (30 Sep 2009)
+
+  30 Sep 2009; MATSUU Takuto <matsuu@gentoo.org> +mecab-0.98.ebuild:
+  Version bumped.
 
   16 Aug 2009; Akinori Hattori <hattya@gentoo.org> -mecab-0.96.ebuild,
   -mecab-0.97.ebuild:
