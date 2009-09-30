@@ -1,6 +1,6 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.96 2009/09/30 10:57:42 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.97 2009/09/30 11:11:03 mduft Exp $
 
   30 Sep 2009; Michael Haubenwallner <haubi@gentoo.org>
   +sunos/solaris/package.use.mask:
@@ -10,6 +10,9 @@
   +bsd/package.use.mask, linux/package.use.mask, package.use.mask:
   p.use.mask x11-libs/libSM[uuid] for prefix, but keep it unmasked for linux
   and bsd (#230981)
+
+  30 Sep 2009; Markus Duft <mduft@gentoo.org> windows/winnt/package.mask:
+  mask current xproto on winnt, since the patches need some more massage.
 
   30 Sep 2009; Markus Duft <mduft@gentoo.org> windows/interix/package.mask:
   mask new coreutils on interix until patches are forward-ported
