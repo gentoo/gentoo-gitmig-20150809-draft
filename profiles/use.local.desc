@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4856 2009/09/30 09:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4857 2009/09/30 10:07:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3196,6 +3196,7 @@ x11-libs/fltk:games - Builds and installs some extra games
 x11-libs/fltk:noxft - Disables xft; use for non-english characters
 x11-libs/gtkdatabox:glade - Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget
 x11-libs/gtkmathview:t1lib - Enable media-libs/t1lib support
+x11-libs/libSM:uuid - Use UUID for session identification instead of IP address and system time. 
 x11-libs/libmatchbox:pango - Enable x11-libs/pango support
 x11-libs/libmatchbox:xsettings - Enable the use of xsettings for settings management
 x11-libs/libqxt:crypt -  Enable support for blowfish encryption using dev-libs/openssl 
