@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.29.1.ebuild,v 1.1 2009/06/30 02:37:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/tmw/tmw-0.0.29.1.ebuild,v 1.2 2009/09/30 19:50:14 nyhm Exp $
 
 EAPI=2
 inherit eutils games
@@ -18,7 +18,6 @@ IUSE="nls opengl"
 PATCHES=( "${FILESDIR}"/${P}-desktop.patch )
 
 RDEPEND=">=dev-games/physfs-1.0.0
-	opengl? ( virtual/opengl )
 	dev-libs/libxml2
 	media-libs/sdl-mixer[vorbis]
 	media-libs/sdl-image[png]
@@ -28,9 +27,12 @@ RDEPEND=">=dev-games/physfs-1.0.0
 	sys-libs/zlib
 	media-libs/libpng
 	media-fonts/dejavu
-	>=dev-games/guichan-0.8.1[sdl]"
+	>=dev-games/guichan-0.8.1[sdl]
+	nls? ( virtual/libintl )
+	opengl? ( virtual/opengl )"
 DEPEND="${RDEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
 	sed -i \
