@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.138 2009/09/30 08:55:52 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.139 2009/09/30 09:00:52 fauli Exp $
+
+  30 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
+  bugzilla-3.2.4.ebuild:
+  stable x86, security bug 258592
 
   30 Sep 2009; Christian Faulhammer <fauli@gentoo.org>
   bugzilla-3.0.8.ebuild:
