@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.4.ebuild,v 1.2 2009/04/06 14:39:59 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygsl/pygsl-0.9.4.ebuild,v 1.3 2009/09/30 18:55:08 bicatali Exp $
 
+EAPI=2
 inherit distutils
 
 DESCRIPTION="A Python interface for the GNU scientific library (gsl)."
@@ -16,6 +17,10 @@ IUSE="examples"
 DEPEND="sci-libs/gsl
 	dev-python/numpy"
 RDEPEND="${DEPEND}"
+
+src_prepare() {
+	has_version '>=sci-libs/gsl-1.13' && epatch "${FILESDIR}"/${P}-obsolete-units.patch
+}
 
 src_test() {
 	cd "${S}/tests"
