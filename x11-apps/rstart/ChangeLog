@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/rstart
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.17 2009/08/06 21:01:23 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/rstart/ChangeLog,v 1.18 2009/09/30 18:16:14 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> rstart-1.0.3.ebuild:
+  Keyword ~amd64 wrt #282290.
 
 *rstart-1.0.3 (06 Aug 2009)
 
