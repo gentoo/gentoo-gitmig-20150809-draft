@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.298 2009/09/29 21:25:15 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.299 2009/09/30 11:59:28 leio Exp $
+
+*hal-0.5.12_rc1-r8 (30 Sep 2009)
+
+  30 Sep 2009; Mart Raudsepp <leio@gentoo.org> hal-0.5.12_rc1-r7.ebuild,
+  +hal-0.5.12_rc1-r8.ebuild, hal-0.5.13-r2.ebuild:
+  Remove now unnecessary gnome-power-manager blocker, all revisions of it
+  that could file collide with hal are gone now and it included the 2.22
+  versions in the blocker, which was not necessary and is problematic with
+  HAL stabling but g-p-m staying at 2.22. This fixes bug 287037; Gracious
+  revbump to ensure amd64 stable users get the blocker fixed in VDB,
+  permission from mrpouet to keep the stable keyword
 
   29 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   hal-0.5.12_rc1-r7.ebuild:
