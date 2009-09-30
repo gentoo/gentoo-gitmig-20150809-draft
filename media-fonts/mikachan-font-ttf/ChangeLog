@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/mikachan-font-ttf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/ChangeLog,v 1.17 2009/09/07 21:35:27 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font-ttf/ChangeLog,v 1.18 2009/09/30 19:18:29 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  mikachan-font-ttf-8.9-r2.ebuild:
+  amd64 stable wrt #282290
 
   07 Sep 2009; Ryan Hill <dirtyepic@gentoo.org>
   mikachan-font-ttf-8.9-r2.ebuild:
