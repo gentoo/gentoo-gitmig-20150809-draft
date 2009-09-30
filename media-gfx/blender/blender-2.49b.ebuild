@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b.ebuild,v 1.1 2009/09/13 13:59:27 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.49b.ebuild,v 1.2 2009/09/30 21:32:43 maekke Exp $
 
 EAPI=2
 
@@ -24,8 +24,8 @@ RDEPEND="ffmpeg? ( >=media-video/ffmpeg-0.5[encode,theora] )
 	nls? ( >=media-libs/freetype-2.0
 		virtual/libintl
 		>=media-libs/ftgl-2.1 )
-	openal? ( >=media-libs/openal-1.6.372 )
-	>=media-libs/freealut-1.1.0-r1
+	openal? ( >=media-libs/openal-1.6.372
+		>=media-libs/freealut-1.1.0-r1 )
 	media-libs/openexr
 	media-libs/libpng
 	blender-game? ( >=media-libs/libsdl-1.2[joystick] )
