@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.21 2009/09/30 23:40:17 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.22 2009/09/30 23:58:42 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -126,8 +126,7 @@ games-mods_pkg_setup() {
 
 games-mods_src_unpack() {
 	# The first thing we do here is determine exactly what we're dealing with
-	for src_uri in ${A}
-	do
+	for src_uri in ${A} ; do
 		URI_SUFFIX="${src_uri##*.}"
 		case ${URI_SUFFIX##*.} in
 			bin|run)
@@ -145,13 +144,10 @@ games-mods_src_unpack() {
 	done
 
 	# This code should only be executed for Makeself archives
-	for tarball in ${MOD_TBZ2}
-	do
+	for tarball in ${MOD_TBZ2} ; do
 		mkdir -p "${S}"/unpack
-		for name in "${tarball}_${PV}-english" "${tarball}_${PV}" "${tarball}"
-		do
-			for ext in tar.bz2 tar.gz tbz2 tgz
-			do
+		for name in "${tarball}_${PV}-english" "${tarball}_${PV}" "${tarball}" ; do
+			for ext in tar.bz2 tar.gz tbz2 tgz ; do
 				if [[ -e "${name}.${ext}" ]] ; then
 					tar xf "${name}.${ext}" -C "${S}"/unpack \
 						|| die "uncompressing tarball"
@@ -183,8 +179,7 @@ games-mods_src_install() {
 	cd "${S}"
 
 	# If we have a README, install it
-	for readme in README*
-	do
+	for readme in README* ; do
 		if [[ -s "${readme}" ]] ; then
 			dodoc "${readme}" || die "dodoc failed"
 		fi
@@ -210,8 +205,7 @@ games-mods_src_install() {
 
 		# Set up command-line and desktop menu entries
 		if [[ -n "${MOD_BINS}" ]] ; then
-			for binary in ${MOD_BINS}
-			do
+			for binary in ${MOD_BINS} ; do
 				if [[ -n "${MOD_DIR}" ]] ; then
 					games_make_wrapper "${GAME_EXE}-${MOD_BINS}" \
 						"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
@@ -236,8 +230,7 @@ games-mods_src_install() {
 					if [[ "${bin_name}" == "${binary}" ]] ; then
 						bin_name=${MOD_NAME}
 					else
-						for tmp1 in ${bin_name}
-						do
+						for tmp1 in ${bin_name} ; do
 							tmp2=$(echo ${tmp1} | cut -b1 | tr [[:lower:]] \
 								[[:upper:]])
 							tmp3=$(echo ${tmp1} | cut -b2-)
@@ -302,8 +295,7 @@ games-mods_src_install() {
 			# directory structure and try to symlink everything to
 			# GAMES_PREFIX_OPT/GAME so it'll work.
 			directories=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type d -printf '%P ')
-			for i in ${directories}
-			do
+			for i in ${directories} ; do
 				if [[ -h "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]] ; then
 					# Skip this directory, and just run a symlink
 					dosym "${INS_DIR}"/${i} \
@@ -312,8 +304,7 @@ games-mods_src_install() {
 					dodir "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}
 					cd "${D}"/"${INS_DIR}"/${i}
 					files="$(find . -type f -printf '%P ')"
-					for j in ${files}
-					do
+					for j in ${files} ; do
 						if has_version ${CATEGORY}/${PN} ; then
 							dosym "${INS_DIR}"/${i}/${j} \
 								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
@@ -331,8 +322,7 @@ games-mods_src_install() {
 				fi
 			done
 			files=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type f -printf '%P ')
-			for i in ${files}
-			do
+			for i in ${files} ; do
 				# Why don´t we use symlinks? Because these use ./$bin when
 				# they run and that doesn't work if the binary is in
 				# GAMES_PREFIX_OPT but the mod is in GAMES_DATADIR.
@@ -393,8 +383,7 @@ games-mods_pkg_postinst() {
 	games_pkg_postinst
 	if default_client ; then
 		if [[ -n "${MOD_BINS}" ]] ; then
-			for binary in ${MOD_BINS}
-			do
+			for binary in ${MOD_BINS} ; do
 				elog "To play this mod run:"
 				elog " ${GAME_EXE}-${binary}"
 				echo
