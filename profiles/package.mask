@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10516 2009/09/29 13:28:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10517 2009/09/30 05:54:47 maekke Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -226,10 +226,6 @@ app-i18n/skk-jisyo-extra
 # Konstantin V. Arkhipov <voxus@gentoo.org> (13 Sep 2009)
 # Upstream no longer supports it, removal in 30 days.
 dev-php5/onphp-module
-
-# Markus Meier <maekke@gentoo.org> (13 Sep 2009)
-# masked for testing
->=media-gfx/hugin-2009.2.0_beta3
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (13 Sep 2009)
 # Masked to enforce upgrade which looks like downgrade.
