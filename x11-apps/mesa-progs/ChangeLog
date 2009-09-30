@@ -1,6 +1,10 @@
 # ChangeLog for x11-apps/mesa-progs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.64 2009/09/22 09:09:19 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mesa-progs/ChangeLog,v 1.65 2009/09/30 20:13:15 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  mesa-progs-7.5.1.ebuild:
+  amd64 stable wrt #282290
 
 *mesa-progs-7.5.1 (22 Sep 2009)
 
