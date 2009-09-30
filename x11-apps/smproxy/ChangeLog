@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/smproxy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.23 2009/07/07 01:31:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/smproxy/ChangeLog,v 1.24 2009/09/30 19:21:28 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> smproxy-1.0.2.ebuild:
+  amd64 stable wrt #282290
 
   07 Jul 2009; Jeroen Roovers <jer@gentoo.org> smproxy-1.0.2.ebuild:
   Stable for HPPA too.

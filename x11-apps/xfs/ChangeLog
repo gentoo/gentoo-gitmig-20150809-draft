@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xfs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.65 2009/09/23 15:09:49 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xfs/ChangeLog,v 1.66 2009/09/30 19:24:55 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> xfs-1.1.0-r1.ebuild:
+  amd64 stable wrt #282290
 
   23 Sep 2009; Rémi Cardona <remi@gentoo.org> xfs-1.1.0-r1.ebuild:
   add missing RDEPs (fixes bug #278877)
