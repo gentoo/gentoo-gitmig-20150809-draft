@@ -7,8 +7,10 @@
     <name>Ben de Groot</name>
   </maintainer>
   <use>
-    <flag name="aften">Enable A/52 (AC-3) audio encoder support</flag>
-    <flag name="amrnb">Enable Narrow Band Adaptive Multi-Rate Audio support</flag>
-    <flag name="opencore-amr">Enable Band Adaptive Multi-Rate format support</flag>
+    <flag name='aften'>Enable A/52 (AC-3) audio encoder support</flag>
+    <flag name='amr'>Enable Adaptive Multi-Rate format support through
+      <pkg>media-libs/opencore-amr</pkg></flag>
+	<flag name='amrnb'>Enables Adaptive Multi-Rate Audio support (Narrow Band)
+      through <pkg>media-libs/amrnb</pkg></flag>
   </use>
 </pkgmetadata>

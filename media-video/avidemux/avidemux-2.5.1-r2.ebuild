@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.1-r1.ebuild,v 1.2 2009/09/27 10:27:02 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.5.1-r2.ebuild,v 1.1 2009/09/30 14:40:11 yngwin Exp $
 
 EAPI="2"
 
@@ -15,8 +15,8 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
-IUSE="+aac +aften +alsa +dts esd jack libsamplerate +mp3 nls opencore-amr oss
+KEYWORDS="~amd64 ~ppc ~x86"
+IUSE="+aac +aften +alsa amr +dts esd jack libsamplerate +mp3 nls oss
 	pulseaudio +sdl +truetype +vorbis +x264 +xv +xvid gtk +qt4"
 
 RDEPEND="dev-libs/libxml2
@@ -24,7 +24,7 @@ RDEPEND="dev-libs/libxml2
 		media-libs/faad2 )
 	aften? ( media-libs/aften )
 	alsa? ( media-libs/alsa-lib )
-	opencore-amr? ( media-libs/opencore-amr )
+	amr? ( media-libs/opencore-amr )
 	dts? ( media-libs/libdca )
 	mp3? ( media-sound/lame )
 	esd? ( media-sound/esound )
@@ -36,7 +36,7 @@ RDEPEND="dev-libs/libxml2
 	truetype? ( media-libs/freetype:2
 		media-libs/fontconfig )
 	vorbis? ( media-libs/libvorbis )
-	x264? ( media-libs/x264 )
+	x264? ( <media-libs/x264-0.0.20090908 )
 	xv? ( x11-libs/libXv )
 	xvid? ( media-libs/xvid )
 	gtk? ( x11-libs/gtk+:2 )
@@ -119,8 +119,7 @@ src_configure() {
 	use dts || mycmakeargs="${mycmakeargs} -DLIBDCA=0"
 
 	# opencore
-	use opencore-amr || mycmakeargs="${mycmakeargs} -DOPENCORE_AMRNB=0
-	                                                -DOPENCORE_AMRWB=0"
+	use amr || mycmakeargs="${mycmakeargs} -DOPENCORE_AMRNB=0 -DOPENCORE_AMRWB=0"
 
 	# plugins/ADM_videoFilters
 	use truetype || mycmakeargs="${mycmakeargs} -DFREETYPE2=0 -DFONTCONFIG=0"

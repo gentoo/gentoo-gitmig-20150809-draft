@@ -1,6 +1,14 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.153 2009/09/27 10:27:02 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.154 2009/09/30 14:40:11 yngwin Exp $
+
+*avidemux-2.5.1-r2 (30 Sep 2009)
+
+  30 Sep 2009; Ben de Groot <yngwin@gentoo.org> avidemux-2.4.4-r2.ebuild,
+  -avidemux-2.5.0.ebuild, -avidemux-2.5.1-r1.ebuild,
+  +avidemux-2.5.1-r2.ebuild, metadata.xml:
+  Remove old, except stable. Cleanup wrt amr. Specify x264 dep to fix bug
+  286801. Re-adding ~ppc keyword.
 
   27 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> avidemux-2.5.0.ebuild,
   avidemux-2.5.1-r1.ebuild:
