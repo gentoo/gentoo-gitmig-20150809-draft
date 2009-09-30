@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre4.ebuild,v 1.5 2009/05/05 18:18:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xac/xac-0.6_pre4.ebuild,v 1.6 2009/09/30 15:52:20 josejx Exp $
 
-inherit toolchain-funcs
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Xorgautoconfig (xac) generates configuration files for X.org"
 HOMEPAGE="http://dev.gentoo.org/~josejx/xac.html"
@@ -22,6 +22,9 @@ src_unpack() {
 
 	### Replace /usr/lib/xac with libdir version
 	sed -i "s:/usr/lib/xac:/usr/$(get_libdir)/xac:" xac
+
+	### Fix the x86 bios call with newer glibc
+	epatch "${FILESDIR}/x86-biosfix.patch"
 
 	### Make setup.py executable
 	chmod +x "${S}/src/setup.py"
