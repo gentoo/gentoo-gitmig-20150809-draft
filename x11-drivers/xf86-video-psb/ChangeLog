@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/xf86-video-psb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-psb/ChangeLog,v 1.1 2009/09/13 20:11:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-psb/ChangeLog,v 1.2 2009/09/30 07:48:01 zmedico Exp $
+
+*xf86-video-psb-0.31.0_p14 (30 Sep 2009)
+
+  30 Sep 2009; Zac Medico <zmedico@gentoo.org>
+  +xf86-video-psb-0.31.0_p14.ebuild:
+  Bug #286753 - Version bump for compatibility with linux 2.6.31.
 
 *xf86-video-psb-0.31.0_p11 (13 Sep 2009)
 
