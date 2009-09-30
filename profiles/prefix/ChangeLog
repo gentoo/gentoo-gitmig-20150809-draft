@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.92 2009/09/28 15:48:54 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.93 2009/09/30 04:39:25 darkside Exp $
+
+  30 Sep 2009; Jeremy Olexa <darkside@gentoo.org> package.use.mask:
+  mask python[berkdb] due to build failure and the fact that it is going
+  away soon according to gx86 devs
 
   28 Sep 2009; Michael Haubenwallner <haubi@gentoo.org> irix/package.mask,
   sunos/solaris/package.mask:
