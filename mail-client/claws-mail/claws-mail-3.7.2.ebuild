@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.10 2009/09/06 20:38:34 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/claws-mail/claws-mail-3.7.2.ebuild,v 1.11 2009/09/30 09:04:19 fauli Exp $
 
 inherit eutils multilib
 
@@ -161,15 +161,6 @@ pkg_postinst() {
 			elog "    mail-client/${PN}-$x"
 		done
 		elog
-	fi
-	if [ -n "${RENAME_PLUGINS}${UPDATE_PLUGINS}" ]; then
-		elog
-		elog "You can use"
-		elog "    /bin/bash ${FILESDIR}/plugins-rebuild.sh"
-		elog "to automatically handle this."
-		elog
-		epause 5
-		ebeep 3
 	fi
 }
 
