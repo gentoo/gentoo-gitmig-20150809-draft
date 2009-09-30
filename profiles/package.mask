@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10517 2009/09/30 05:54:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10518 2009/09/30 15:16:00 flameeyes Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -814,14 +814,6 @@ app-text/gnomesword
 # Steve Dibb <beandog@gentoo.org> (31 Jul 2009)
 # Unsupported, but popular.  No plans for removal.
 media-sound/alsa-driver
-
-# Diego E. Pettenò <flameeyes@gentoo.org> (30 Jul 2009)
-#  on behalf of QA Team
-#
-# Fails reconfiguration, needs automake 1.6 (bug #259222)
-#
-# Removal on 2009-09-30
-media-tv/ktvschedule
 
 # Mounir Lamouri <volkmar@gentoo.org> (30 Jul 2009)
 # Masked for removal in 60 days.

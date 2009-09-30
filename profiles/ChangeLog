@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3330 2009/09/30 05:54:46 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3331 2009/09/30 15:16:00 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Remove ktvschedule masked, gone.
 
   30 Sep 2009; Markus Meier <maekke@gentoo.org> package.mask:
   unmask media-gfx/hugin as we have the final release in the tree
