@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi-otr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.4 2009/02/22 10:41:19 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-otr/ChangeLog,v 1.5 2009/09/30 14:32:30 cla Exp $
+
+  30 Sep 2009; Dawid Węgliński <cla@gentoo.org> irssi-otr-0.2.ebuild:
+  Stable on amd64 (bug #286871)
 
 *irssi-otr-0.3 (22 Feb 2009)
 
