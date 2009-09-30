@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.20 2009/09/30 20:27:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.21 2009/09/30 23:40:17 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -20,6 +20,7 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_install pkg_postinst
 # Set our default title, icon, and cli options
 case "${GAME}" in
 	"doom3")
+		RDEPEND="games-fps/doom3"
 		GAME_TITLE="Doom III"
 		DEFAULT_MOD_ICON="doom3"
 		SELECT_MOD="+set fs_game "
@@ -28,6 +29,7 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		;;
 	"enemy-territory")
+		RDEPEND="games-fps/enemy-territory"
 		GAME_TITLE="Enemy Territory"
 		DEFAULT_MOD_ICON="ET"
 		SELECT_MOD="+set fs_game "
@@ -36,6 +38,7 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		;;
 	"quake3")
+		RDEPEND="|| ( games-fps/quake3 games-fps/quake3-bin )"
 		GAME_TITLE="Quake III"
 		DEFAULT_MOD_ICON="quake3"
 		SELECT_MOD="+set fs_game "
@@ -44,6 +47,7 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		;;
 	"quake4")
+		RDEPEND="games-fps/quake4-bin"
 		GAME_TITLE="Quake IV"
 		DEFAULT_MOD_ICON="/usr/share/pixmaps/quake4.bmp"
 		SELECT_MOD="+set fs_game "
@@ -52,6 +56,7 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		;;
 	"ut2003")
+		RDEPEND="games-fps/ut2003"
 		GAME_TITLE="UT2003"
 		DEFAULT_MOD_ICON="ut2003"
 		SELECT_MOD="-mod="
@@ -60,6 +65,7 @@ case "${GAME}" in
 		DED_OPTIONS=""
 		;;
 	"ut2004")
+		RDEPEND="games-fps/ut2004"
 		GAME_TITLE="UT2004"
 		DEFAULT_MOD_ICON="ut2004"
 		SELECT_MOD="-mod="
@@ -83,7 +89,6 @@ IUSE="dedicated opengl"
 RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
-#RDEPEND="${CATEGORY}/${GAME}"
 
 S=${WORKDIR}
 
