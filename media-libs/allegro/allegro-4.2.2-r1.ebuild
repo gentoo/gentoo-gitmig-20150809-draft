@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.8 2009/04/15 07:58:04 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.2.2-r1.ebuild,v 1.9 2009/09/30 09:38:55 ssuominen Exp $
 
 EAPI=2
 inherit autotools multilib eutils
@@ -98,9 +98,4 @@ src_install() {
 	dodoc docs/rtf/*.rtf
 	docinto build
 	dodoc docs/build/*.txt
-}
-
-pkg_postinst() {
-	ewarn "Please run \"revdep-rebuild --library liballeg.so.4.2\""
-	ewarn "if you are upgrading allegro from 4.2.0."
 }
