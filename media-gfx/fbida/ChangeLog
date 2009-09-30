@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fbida
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.59 2009/09/25 17:57:07 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbida/ChangeLog,v 1.60 2009/09/30 11:10:19 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> fbida-2.07-r1.ebuild:
+  amd64 stable wrt #286688
 
 *fbida-2.07-r1 (25 Sep 2009)
 
