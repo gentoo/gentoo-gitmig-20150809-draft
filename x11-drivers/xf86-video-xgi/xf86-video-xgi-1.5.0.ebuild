@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-xgi/xf86-video-xgi-1.5.0.ebuild,v 1.5 2009/04/05 22:49:20 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-xgi/xf86-video-xgi-1.5.0.ebuild,v 1.6 2009/09/30 21:20:28 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -10,6 +10,8 @@ inherit x-modular
 
 DESCRIPTION="XGI video driver"
 KEYWORDS="ppc ppc64 x86"
+IUSE=""
+
 RDEPEND=">=x11-base/xorg-server-1.0.99"
 SRC_URI="${SRC_URI}
 		 mirror://gentoo/${P}-bigendian.patch"

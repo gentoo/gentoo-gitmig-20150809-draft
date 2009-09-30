@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/xf86-video-mach64-6.8.0.ebuild,v 1.9 2009/06/23 20:03:09 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/xf86-video-mach64-6.8.0.ebuild,v 1.10 2009/09/30 21:24:41 ssuominen Exp $
 
 # Must be before x-modular eclass is inherited
 #SNAPSHOT="yes"
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	dri? ( x11-proto/glproto
 			x11-proto/xf86driproto
 			>=x11-libs/libdrm-2 )"
-
-PATCHES=""
 
 pkg_setup() {
 	CONFIGURE_OPTIONS="$(use_enable dri)"
