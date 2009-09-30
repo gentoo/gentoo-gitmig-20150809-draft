@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.19 2009/06/04 23:27:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.20 2009/09/30 16:08:10 ayoy Exp $
+
+  30 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> hedgewars-0.9.9.ebuild:
+  Removed dependency on Qt metapackage
 
   04 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
   hedgewars-0.9.11.ebuild:
