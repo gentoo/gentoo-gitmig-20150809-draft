@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2-r1.ebuild,v 1.11 2009/05/28 16:07:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-5.0.2-r1.ebuild,v 1.12 2009/09/30 09:48:49 ssuominen Exp $
 
 inherit eutils flag-o-matic libtool toolchain-funcs
 
@@ -62,12 +62,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins *.pdf *.dvi
 	fi
-}
-
-pkg_postinst() {
-	ewarn
-	ewarn "You may have to rebuild other packages depending on t1lib."
-	ewarn "You may use revdep-rebuild (from app-portage/gentoolkit)"
-	ewarn "to do all necessary tricks."
-	ewarn
 }
