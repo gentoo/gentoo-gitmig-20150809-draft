@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sudo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.189 2009/09/24 22:10:06 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.190 2009/09/30 15:09:09 chainsaw Exp $
+
+  30 Sep 2009; <chainsaw@gentoo.org> sudo-1.7.2_p1.ebuild:
+  Marked stable on AMD64 as requested by Diego E. Flameeyes Pettenò
+  <flameeyes@gentoo.org> in bug #284089. Based on arch testing by Vitor
+  "noisebleed" Brandão in comment 5.
 
   24 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   sudo-1.7.2_p1.ebuild, +files/sudo-1.7.2p1-securepath.patch:
