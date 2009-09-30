@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4854 2009/09/29 20:27:54 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4855 2009/09/30 02:44:15 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -3281,6 +3281,7 @@ x11-wm/compiz:fuse - Enables support for the filesystem in userspace plugin thro
 x11-wm/compiz:kde3 - Compile the kde3 window decorator and add support for KDE3
 x11-wm/compiz-fusion:emerald - Install the x11-wm/emerald package.
 x11-wm/compiz-fusion:unsupported - Install the x11-plugins/compiz-fusion-plugins-unsupported package.
+x11-wm/enlightenment:pango - Enable pango font rendering
 x11-wm/enlightenment:xrandr - Enable support for the X xrandr extension
 x11-wm/fluxbox:disableslit - Disables the fluxbox slit (or dock)
 x11-wm/fluxbox:disabletoolbar - Disables the fluxbox toolbar
