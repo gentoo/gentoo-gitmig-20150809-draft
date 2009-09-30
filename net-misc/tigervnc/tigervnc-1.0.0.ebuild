@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.0.ebuild,v 1.2 2009/09/14 01:14:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/tigervnc-1.0.0.ebuild,v 1.3 2009/09/30 17:22:20 armin76 Exp $
 
 EAPI="1"
 
@@ -60,6 +60,7 @@ DEPEND="${RDEPEND}
 		x11-proto/dri2proto
 		x11-proto/fixesproto
 		x11-proto/fontsproto
+		x11-proto/glproto
 		x11-proto/randrproto
 		x11-proto/resourceproto
 		x11-proto/scrnsaverproto
@@ -72,7 +73,6 @@ DEPEND="${RDEPEND}
 		x11-proto/xf86driproto
 		x11-proto/xf86miscproto
 		x11-proto/xf86vidmodeproto
-		opengl? ( x11-proto/glproto )
 		>=media-libs/mesa-7.1
 		>=x11-proto/renderproto-0.9.3
 		x11-libs/libpciaccess
