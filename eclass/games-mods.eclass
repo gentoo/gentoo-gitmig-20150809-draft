@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.18 2009/08/02 07:29:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.19 2009/09/30 19:47:00 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -88,7 +88,6 @@ DEPEND="app-arch/unzip"
 S=${WORKDIR}
 
 dir=${GAMES_DATADIR}/${GAME}
-Ddir=${D}/${dir}
 
 default_client() {
 	if use opengl || ! use dedicated ; then
