@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.31.ebuild,v 1.1 2009/08/31 13:51:07 hkbst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-1.0.31.ebuild,v 1.2 2009/09/30 22:10:01 maekke Exp $
 
 EAPI=2
 
@@ -34,7 +34,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~ppc ~sparc ~x86"
 IUSE="ldb source +threads +unicode doc cobalt"
 
-DEPEND="doc? ( sys-apps/texinfo >=media-gfx/graphviz-2.20[png] )"
+DEPEND="doc? ( sys-apps/texinfo || ( >=media-gfx/graphviz-2.20[png] >=media-gfx/graphviz-2.24.0 ) )"
 RDEPEND="elibc_glibc? ( >=sys-libs/glibc-2.3 || ( <sys-libs/glibc-2.6[nptl] >=sys-libs/glibc-2.6 ) )"
 PDEPEND="dev-lisp/gentoo-init"
 
