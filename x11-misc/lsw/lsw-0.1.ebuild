@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/lsw-0.1.ebuild,v 1.2 2008/09/10 20:06:47 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lsw/lsw-0.1.ebuild,v 1.3 2009/09/30 04:58:32 jer Exp $
 
 inherit toolchain-funcs
 
@@ -26,6 +26,7 @@ src_unpack() {
 		Makefile || die "sed failed"
 
 	sed -i \
+		-e '/^CC/d' \
 		-e "s/CFLAGS = -Os/CFLAGS +=/" \
 		-e "s/LDFLAGS =/LDFLAGS +=/" \
 		config.mk || die "sed failed"
