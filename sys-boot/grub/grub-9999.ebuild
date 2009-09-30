@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.11 2009/07/05 04:17:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.12 2009/09/30 02:58:10 vapier Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -38,7 +38,6 @@ src_unpack() {
 	fi
 	cd "${S}"
 	epatch "${FILESDIR}"/${PN}-1.96-genkernel.patch #256335
-	sed -i 's:-Werror::' conf/*.rmk || die #269887
 
 	# autogen.sh does more than just run autotools
 	sed -i -e 's:^auto:eauto:' autogen.sh
@@ -50,6 +49,7 @@ src_compile() {
 	use static && append-ldflags -static
 
 	econf \
+		--disable-werror \
 		--sbindir=/sbin \
 		--bindir=/bin \
 		--libdir=/$(get_libdir) \
