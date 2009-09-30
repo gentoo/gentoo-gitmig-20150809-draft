@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/qcomicbook
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.23 2009/05/10 15:15:19 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/qcomicbook/ChangeLog,v 1.24 2009/09/30 23:23:37 yngwin Exp $
+
+*qcomicbook-0.4.4 (30 Sep 2009)
+
+  30 Sep 2009; Ben de Groot <yngwin@gentoo.org> +qcomicbook-0.4.4.ebuild:
+  Version bump
 
   10 May 2009; Ben de Groot <yngwin@gentoo.org> qcomicbook-0.4.0.ebuild,
   metadata.xml:
