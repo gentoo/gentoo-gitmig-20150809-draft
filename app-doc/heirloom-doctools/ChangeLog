@@ -1,6 +1,17 @@
 # ChangeLog for app-doc/heirloom-doctools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/heirloom-doctools/ChangeLog,v 1.1 2009/09/29 10:45:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/heirloom-doctools/ChangeLog,v 1.2 2009/09/30 00:22:49 flameeyes Exp $
+
+*heirloom-doctools-080407-r1 (30 Sep 2009)
+
+  30 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> files/080407.config,
+  -heirloom-doctools-080407.ebuild, +heirloom-doctools-080407-r1.ebuild:
+  Improvements: fix man pages installation, all of them, and symlinks; fix
+  man pages themselves, by changing the paths; install the datafiles in
+  /usr/share rather than /usr/libexec, and try to use a more organised tree;
+  rename ta and otfdump commands to avoid collisions (found by tinderbox);
+  add ~x86 keyword. The sed lines shold probably become a patchset to send
+  upstream, but I'm leaving this for another day.
 
 *heirloom-doctools-080407 (29 Sep 2009)
 
