@@ -1,8 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.7 2009/08/18 15:35:03 mduft Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/windows/interix/package.mask,v 1.8 2009/09/30 09:00:27 mduft Exp $
 
-# $Id: package.mask,v 1.7 2009/08/18 15:35:03 mduft Exp $
+# $Id: package.mask,v 1.8 2009/09/30 09:00:27 mduft Exp $
+
+# Markus Duft <mduft@gentoo.org> (30 Sep 2009)
+# needs some more love on interix, until it works again :(
+~sys-apps/coreutils-7.6
 
 # Markus Duft <mduft@gentoo.org> (18 Aug 2009)
 # xargs seems broken: Assertion failed: (bc_ctl.arg_max <= (ARG_MAX-2048)), file xargs.c, line 442.
