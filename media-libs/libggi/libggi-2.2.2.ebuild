@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.2.2.ebuild,v 1.12 2009/09/30 09:36:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/libggi-2.2.2.ebuild,v 1.13 2009/09/30 09:37:39 ssuominen Exp $
 
 DESCRIPTION="Fast and safe graphics and drivers for about any graphics card to the Linux kernel (sometimes)"
 HOMEPAGE="http://www.ggi-project.org"
@@ -50,11 +50,11 @@ src_compile() {
 		$(use_with X x) \
 		$(use_enable X x) \
 		${myconf}
-	emake || die "emake failed."
+	emake || die
 }
 
 src_install () {
-	emake DESTDIR=${D} install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 
 	dodoc ChangeLog* FAQ NEWS README
 	docinto txt
