@@ -1,8 +1,8 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/gibbs-1995.9.ebuild,v 1.2 2006/01/04 23:35:08 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/gibbs-1995.9.ebuild,v 1.3 2009/09/30 14:40:39 weaver Exp $
 
-DESCRIPTION="A Gibbs sampling algorithm for local alignment of subtle sequence signals in multiple protein sequences."
+DESCRIPTION="The Gibbs Motif Sampler identifies motifs, conserved regions, in DNA or protein sequences"
 
 HOMEPAGE="http://www.people.fas.harvard.edu/~junliu/index1.html"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fas.harvard.edu/~junliu/Software/${SRC_NAME}.tar"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS=""
 IUSE=""
 
 S="${WORKDIR}"/${SRC_NAME}/code
