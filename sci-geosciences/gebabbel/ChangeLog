@@ -1,6 +1,10 @@
 # ChangeLog for sci-geosciences/gebabbel
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.3 2008/07/27 01:18:49 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gebabbel/ChangeLog,v 1.4 2009/09/30 16:39:13 ayoy Exp $
+
+  30 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> gebabbel-0.3.ebuild:
+  Removed obsolete QT_BUILT_WITH_USE and the dependency on Qt metapackage,
+  switched to EAPI=2 and fixed to make repoman happy
 
   27 Jul 2008; Carsten Lohrke <carlo@gentoo.org> gebabbel-0.3.ebuild:
   Fix broken split Qt 4.4 dependencies, cf. bug 217161 comment 11.
