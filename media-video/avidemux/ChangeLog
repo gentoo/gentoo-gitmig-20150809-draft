@@ -1,6 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.154 2009/09/30 14:40:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.155 2009/09/30 18:44:08 yngwin Exp $
+
+*avidemux-2.5.1_p5359 (30 Sep 2009)
+
+  30 Sep 2009; Ben de Groot <yngwin@gentoo.org>
+  +avidemux-2.5.1_p5359.ebuild:
+  Adding snapshot from current 2.5 'gruntster' branch, which works with
+  newer x264 (bug 286801). Dropped a few patches which were applied upstream.
 
 *avidemux-2.5.1-r2 (30 Sep 2009)
 
