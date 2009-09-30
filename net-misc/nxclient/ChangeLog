@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/nxclient
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.78 2009/08/23 21:21:19 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxclient/ChangeLog,v 1.79 2009/09/30 22:45:11 voyageur Exp $
+
+*nxclient-3.4.0.5 (30 Sep 2009)
+
+  30 Sep 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +nxclient-3.4.0.5.ebuild:
+  3.4.0 version bump. This version brings new capabilities such as: support
+  for CUPS 1.4 printing system, better detection of system commands to run
+  KDE and Gnome sessions and the possibility of configuring the server to
+  allow run sessions as the root user, and bugfixes (nxagent crash, cut and
+  paste problems, text on the titlebar in rootless session, ...)
 
   23 Aug 2009; Bernard Cafarelli <voyageur@gentoo.org>
   nxclient-3.3.0.3.ebuild, nxclient-3.3.0.6.ebuild:
