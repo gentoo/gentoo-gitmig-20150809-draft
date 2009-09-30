@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.2.ebuild,v 1.7 2009/09/29 17:31:17 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.2.ebuild,v 1.8 2009/09/30 12:56:40 lxnay Exp $
 
 EAPI="2"
 
@@ -76,7 +76,6 @@ RDEPEND="
 		directfb? ( dev-libs/DirectFB )
 		dts? ( media-libs/libdca )
 		dvd? (	media-libs/libdvdread
-				media-libs/libdvdcss
 				>=media-libs/libdvdnav-0.1.9
 				media-libs/libdvdplay )
 		elibc_glibc? ( >=sys-libs/glibc-2.8 )
