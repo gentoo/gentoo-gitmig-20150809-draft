@@ -48,6 +48,7 @@ Enlightenment Features:
 * Graphical on-line help.
 </longdescription>
   <use>
+    <flag name="pango">Enable pango font rendering</flag>
     <flag name="xrandr">Enable support for the X xrandr extension</flag>
   </use>
 </pkgmetadata>
