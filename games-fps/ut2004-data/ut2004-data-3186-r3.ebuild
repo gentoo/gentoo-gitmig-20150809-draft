@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.13 2009/06/19 12:42:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-data/ut2004-data-3186-r3.ebuild,v 1.14 2009/09/30 00:58:31 nyhm Exp $
 
-inherit eutils games games-ut2k4mod
+inherit eutils games
 
 DESCRIPTION="Unreal Tournament 2004 - This is the data portion of UT2004"
 HOMEPAGE="http://www.unrealtournament2004.com/"
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 RESTRICT="strip"
 IUSE=""
-QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/ut2004/System/libSDL-1.2.so.0"
 
 DEPEND="games-util/uz2unpack"
 PDEPEND="games-fps/ut2004"
@@ -23,6 +22,38 @@ S=${WORKDIR}
 GAMES_LICENSE_CHECK="yes"
 dir=${GAMES_PREFIX_OPT}/ut2004
 Ddir=${D}/${dir}
+
+check_dvd() {
+	# The following is a nasty mess to determine if we are installing from
+	# a DVD or from multiple CDs.  Anyone feel free to submit patches to this
+	# to bugs.gentoo.org as I know it is a very ugly hack.
+
+	USE_DVD=
+	USE_ECE_DVD=
+	USE_MIDWAY_DVD=
+	USE_GERMAN_MIDWAY_DVD=
+
+	local r
+	for r in "${CD_ROOT}" "${CD_ROOT_1}" \
+		`mount | egrep -e '(iso|cdrom)' | awk '{print $3}'` ; do
+		if [[ -n "${r}" ]] ; then
+			einfo "Searching ${r}"
+			if [[ -e "${r}/AutoRunData/Unreal.ico" ]] \
+				&& [[ -e "${r}/Disk5/data6.cab" ]] ; then
+				USE_MIDWAY_DVD=1
+				USE_DVD=1
+			elif [[ -e "${r}/autorund/unreal.ico" ]] \
+				&& [[ -e "${r}/disk7/data8.cab" ]] ; then
+				USE_MIDWAY_DVD=1
+				USE_GERMAN_MIDWAY_DVD=1
+				USE_DVD=1
+			else
+				[[ -d "${r}/CD1" ]] && USE_DVD=1
+				[[ -d "${r}/CD7" ]] && USE_ECE_DVD=1
+			fi
+		fi
+	done
+}
 
 grabdirs() {
 	local d srcdir
