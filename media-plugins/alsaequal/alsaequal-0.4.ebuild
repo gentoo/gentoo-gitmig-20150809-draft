@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.4.ebuild,v 1.1 2009/08/15 20:06:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/alsaequal-0.4.ebuild,v 1.2 2009/09/30 08:40:41 fauli Exp $
 
 inherit multilib toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.thedigitalmachine.net/tools/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="media-libs/alsa-lib

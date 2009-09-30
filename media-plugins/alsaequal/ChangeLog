@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsaequal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/ChangeLog,v 1.1 2009/08/15 20:06:33 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsaequal/ChangeLog,v 1.2 2009/09/30 08:40:41 fauli Exp $
+
+  30 Sep 2009; Christian Faulhammer <fauli@gentoo.org> alsaequal-0.4.ebuild:
+  add ~x86, bug 285200
 
 *alsaequal-0.4 (15 Aug 2009)
 
