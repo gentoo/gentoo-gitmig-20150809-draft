@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.80.ebuild,v 1.5 2009/03/19 13:48:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-1.80.ebuild,v 1.6 2009/09/30 17:01:29 ayoy Exp $
 
 EAPI=1
 
@@ -33,7 +33,8 @@ IUSE=""
 
 COMMON_DEPEND="x11-libs/libX11
 	x11-libs/libXext
-	|| ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 )
+	x11-libs/qt-gui:4
+	x11-libs/qt-core:4
 	>=app-text/hunspell-1.2.4"
 
 RDEPEND="${COMMON_DEPEND}

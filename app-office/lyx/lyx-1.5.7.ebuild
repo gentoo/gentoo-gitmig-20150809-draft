@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.7.ebuild,v 1.5 2008/12/23 14:05:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.5.7.ebuild,v 1.6 2009/09/30 17:06:08 ayoy Exp $
 
 EAPI=1
 
@@ -25,7 +25,8 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="cups debug nls linguas_he latex"
 RESTRICT="test"
 
-RDEPEND="|| ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 )
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-core:4
 	x11-libs/libXrandr
 	x11-libs/libXcursor
 	x11-libs/libXrender

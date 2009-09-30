@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.176 2009/09/06 20:50:46 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.177 2009/09/30 17:06:08 ayoy Exp $
+
+  30 Sep 2009; Dominik Kapusta <ayoy@gentoo.org> lyx-1.5.7.ebuild,
+  lyx-1.6.2.ebuild, lyx-1.6.3.ebuild, lyx-1.6.4.ebuild:
+  Removed dependency on Qt metapackage
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> lyx-1.6.3.ebuild:
   Marking lyx-1.6.3 ppc64 for bug 276990
