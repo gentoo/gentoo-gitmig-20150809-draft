@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.8.5.ebuild,v 1.4 2008/02/04 16:23:32 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dzen/dzen-0.8.5.ebuild,v 1.5 2009/09/30 04:45:48 jer Exp $
 
 inherit toolchain-funcs multilib
 
@@ -28,8 +28,10 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	sed -e "s:/usr/local:/usr:g" \
-		-e "s:-Os:${CFLAGS}:g" \
-		-e "/CC/s:gcc:$(tc-getCC):" \
+		-e 's:-Os::g' \
+		-e "s:CFLAGS =:CFLAGS +=:g" \
+		-e '/^CC.*/d' \
+		-e 's:^LDFLAGS =:LDFLAGS +=:' \
 		-e "s:/usr/lib :/usr/$(get_libdir):" \
 		-i config.mk gadgets/config.mk || die "sed failed"
 	sed -i -e "/strip/d" Makefile gadgets/Makefile || die "sed failed"
@@ -46,6 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
+	tc-export CC
 	emake || die "emake failed"
 
 	if ! use minimal ; then
