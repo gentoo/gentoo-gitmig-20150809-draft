@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2.ebuild,v 1.14 2008/06/12 14:53:16 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/libgii-1.0.2.ebuild,v 1.15 2009/09/30 09:40:33 ssuominen Exp $
 
 inherit autotools eutils
 
@@ -29,17 +29,10 @@ src_unpack() {
 
 src_compile() {
 	econf $(use_with X x) $(use_enable X x) || die
-	emake || die "emake failed."
+	emake || die
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
+	emake DESTDIR="${D}" install || die
 	dodoc ChangeLog* FAQ NEWS README
-}
-
-pkg_postinst() {
-	elog
-	elog "Be noted that API has been changed, and you need to run"
-	elog "revdep-rebuild from gentoolkit to correct deps."
-	elog
 }
