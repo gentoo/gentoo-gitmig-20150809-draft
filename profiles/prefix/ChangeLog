@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.95 2009/09/30 10:19:52 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.96 2009/09/30 10:57:42 haubi Exp $
+
+  30 Sep 2009; Michael Haubenwallner <haubi@gentoo.org>
+  +sunos/solaris/package.use.mask:
+  x11-libs/libSM can use solaris-provided libuuid (#230981)
 
   30 Sep 2009; Michael Haubenwallner <haubi@gentoo.org>
   +bsd/package.use.mask, linux/package.use.mask, package.use.mask:
