@@ -1,6 +1,13 @@
 # ChangeLog for app-text/ptex
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.81 2008/10/31 21:08:57 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ptex/ChangeLog,v 1.82 2009/09/30 14:25:02 matsuu Exp $
+
+*ptex-3.1.10_p20090610 (30 Sep 2009)
+
+  30 Sep 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +ptex-3.1.10_p20090610.ebuild, +files/ptex-3.1.10_p20090610-gentoo.patch,
+  +files/ptex-3.1.10_p20090610-getline.patch, +files/CVE-2009-1284.patch:
+  Fixed #126092, #223793, #226877, #284825 and #282874.
 
   31 Oct 2008; Ulrich Mueller <ulm@gentoo.org> ptex-3.1.10_p20071203.ebuild,
   ptex-3.1.10_p20080128.ebuild, ptex-3.1.10_p20080414.ebuild:
