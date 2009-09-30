@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.11 2008/01/22 13:57:39 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.1-r2.ebuild,v 1.12 2009/09/30 22:12:59 ssuominen Exp $
 
 WANT_AUTOCONF=2.5
 WANT_AUTOMAKE=1.6
@@ -17,7 +17,7 @@ KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 RDEPEND="media-libs/jpeg
-	media-libs/imlib"
+	media-libs/imlib2"
 DEPEND="${RDEPEND}"
 
 src_unpack() {
