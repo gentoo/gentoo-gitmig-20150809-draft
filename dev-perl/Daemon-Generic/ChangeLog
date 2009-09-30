@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Daemon-Generic
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/ChangeLog,v 1.1 2009/09/08 11:38:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Daemon-Generic/ChangeLog,v 1.2 2009/09/30 16:37:32 armin76 Exp $
+
+  30 Sep 2009; Raúl Porcel <armin76@gentoo.org> Daemon-Generic-0.61.ebuild:
+  Add ~alpha/~ia64/~sparc wrt #284166
 
 *Daemon-Generic-0.61 (08 Sep 2009)
 
