@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.2.ebuild,v 1.1 2009/08/17 11:34:46 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-8.3.2.ebuild,v 1.2 2009/09/30 14:00:20 xmerlin Exp $
 
 inherit eutils versionator
 
@@ -23,6 +23,8 @@ SLOT="0"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+
+	epatch "${FILESDIR}"/drbd-8.3.2-bitsperlong.h.patch || die
 
 	# disable udev detect / installation
 	sed -i -e 's/install: install-most install-udev-rules/install: install-most/g' scripts/Makefile || die
