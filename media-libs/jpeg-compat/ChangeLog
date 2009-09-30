@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg-compat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.4 2009/09/23 04:29:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.5 2009/09/30 11:07:47 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  jpeg-compat-6b-r1.ebuild:
+  amd64 stable wrt #285598
 
   23 Sep 2009; Mike Frysinger <vapier@gentoo.org> jpeg-compat-6b-r1.ebuild:
   Trim libjpeg.so.62 automatically if it is being preserved for

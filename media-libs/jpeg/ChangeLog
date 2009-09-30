@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.79 2009/09/27 19:53:06 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.80 2009/09/30 11:05:59 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> jpeg-7.ebuild:
+  amd64 stable wrt #285598
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> jpeg-7.ebuild:
   ppc stable #285598
