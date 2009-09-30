@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.3-r1.ebuild,v 1.1 2009/02/27 14:56:55 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.5.ebuild,v 1.1 2009/09/30 19:48:59 bicatali Exp $
 
+EAPI=2
 inherit eutils distutils fdo-mime
 
 DESCRIPTION="Qt based scientific plotting package with good Postscript output"
@@ -15,12 +16,11 @@ LICENSE="GPL-2"
 
 DEPEND="dev-python/numpy"
 RDEPEND="${DEPEND}
-	dev-python/PyQt4
+	dev-python/PyQt4[X,svg]
 	fits? ( dev-python/pyfits )"
 
 src_install() {
 	distutils_src_install
-	dodoc Interface.txt
 	insinto /usr/share/doc/${PF}
 	if use examples; then
 		doins -r examples || die "examples install failed"
