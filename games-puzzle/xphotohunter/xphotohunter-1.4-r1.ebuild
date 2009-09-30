@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/xphotohunter-1.4-r1.ebuild,v 1.8 2009/01/26 01:19:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/xphotohunter/xphotohunter-1.4-r1.ebuild,v 1.9 2009/09/30 18:33:36 nyhm Exp $
 
 EAPI=2
-inherit eutils games toolchain-funcs
+inherit eutils toolchain-funcs games
 
 DESCRIPTION="Find the differences between two pictures."
 HOMEPAGE="http://micro.ee.nthu.edu.tw/~tomcat/Xphotohunter/main-english.html"
