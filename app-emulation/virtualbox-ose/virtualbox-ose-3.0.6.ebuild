@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.0.6.ebuild,v 1.2 2009/09/21 23:45:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-3.0.6.ebuild,v 1.3 2009/09/30 17:09:49 ayoy Exp $
 
 EAPI=2
 
@@ -30,7 +30,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	>=dev-libs/libxslt-1.1.19
 	net-misc/curl
 	!headless? (
-		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
+		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		opengl? ( virtual/opengl virtual/glut )
 		x11-libs/libXcursor
 		media-libs/libsdl[X,video]

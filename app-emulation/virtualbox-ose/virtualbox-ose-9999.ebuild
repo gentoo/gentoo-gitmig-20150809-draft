@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.8 2009/09/26 06:37:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.9 2009/09/30 17:09:49 ayoy Exp $
 
 EAPI=1
 
@@ -24,7 +24,7 @@ RDEPEND="!app-emulation/virtualbox-bin
 	dev-libs/xerces-c
 	sys-libs/libcap
 	!headless? (
-		qt4? ( || ( ( x11-libs/qt-gui x11-libs/qt-core ) =x11-libs/qt-4.3*:4 ) )
+		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
 		x11-libs/libXcursor
 		media-libs/libsdl
 		x11-libs/libXt

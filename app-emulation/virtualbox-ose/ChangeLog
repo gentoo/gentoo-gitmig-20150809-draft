@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-ose
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.27 2009/09/25 23:59:40 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/ChangeLog,v 1.28 2009/09/30 17:09:49 ayoy Exp $
+
+  30 Sep 2009; Dominik Kapusta <ayoy@gentoo.org>
+  virtualbox-ose-3.0.6.ebuild, virtualbox-ose-9999.ebuild:
+  Removed dependency on Qt metapackage
 
   25 Sep 2009; Patrick Lauer <patrick@gentoo.org>
   virtualbox-ose-9999.ebuild:
