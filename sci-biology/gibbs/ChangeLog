@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/gibbs
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/ChangeLog,v 1.4 2007/02/22 01:26:22 jokey Exp $
+# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/gibbs/ChangeLog,v 1.5 2009/09/30 00:09:21 weaver Exp $
+
+*gibbs-3.1 (29 Sep 2009)
+
+  29 Sep 2009; Andrey Kislyuk <weaver@gentoo.org> +gibbs-3.1.ebuild:
+  Version bump, rewrite ebuild (package rewritten)
 
   22 Feb 2007; Markus Ullmann <jokey@gentoo.org> ChangeLog:
   Redigest for Manifest2
