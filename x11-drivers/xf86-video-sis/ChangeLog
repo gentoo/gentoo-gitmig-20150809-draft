@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-video-sis
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.41 2009/08/21 06:43:38 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-sis/ChangeLog,v 1.42 2009/09/30 20:28:55 ssuominen Exp $
+
+  30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xf86-video-sis-0.10.2.ebuild:
+  amd64 stable wrt #282290
 
   21 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   xf86-video-sis-0.9.1-r1.ebuild, xf86-video-sis-0.9.3.ebuild,
