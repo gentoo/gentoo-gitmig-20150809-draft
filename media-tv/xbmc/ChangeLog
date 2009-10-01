@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/xbmc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.28 2009/09/26 12:13:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xbmc/ChangeLog,v 1.29 2009/10/01 16:24:28 vapier Exp $
+
+  01 Oct 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
+  -files/xbmc-9999-libass.patch:
+  Drop libass patch as upstream has fixed things.
 
   26 Sep 2009; Mike Frysinger <vapier@gentoo.org> xbmc-9999.ebuild,
   +files/xbmc-9999-libass.patch:
