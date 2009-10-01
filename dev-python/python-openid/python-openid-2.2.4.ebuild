@@ -1,8 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.1 2009/09/03 22:47:49 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-openid/python-openid-2.2.4.ebuild,v 1.2 2009/10/01 01:42:56 arfrever Exp $
 
-NEED_PYTHON=2.3
+EAPI="2"
+
+NEED_PYTHON="2.5"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils
 
@@ -15,22 +18,29 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc examples mysql postgres sqlite"
 
-RDEPEND="|| ( >=dev-lang/python-2.5 dev-python/elementtree )
-	|| ( >=dev-lang/python-2.5 dev-python/pycrypto )
-	sqlite? (
-		|| ( >=dev-lang/python-2.5 >=dev-python/pysqlite-2 )
-	)
+RDEPEND="mysql? ( >=dev-python/mysql-python-1.2.2 )
 	postgres? ( dev-python/psycopg )
-	mysql? ( >=dev-python/mysql-python-1.2.2 )"
+	sqlite? ( || ( dev-lang/python[sqlite] >=dev-python/pysqlite-2 ) )"
 DEPEND="${RDEPEND}"
+RESTRICT_PYTHON_ABIS="3.*"
 
 PYTHON_MODNAME="openid"
 
-src_unpack() {
-	distutils_src_unpack
+src_prepare() {
+	distutils_src_prepare
 
 	# Patch to fix confusion with localhost/127.0.0.1
-	epatch "${FILESDIR}"/${PN}-2.0.0-gentoo-test_fetchers.diff
+	epatch "${FILESDIR}/${PN}-2.0.0-gentoo-test_fetchers.diff"
+}
+
+src_test() {
+	# Remove test that requires running db server.
+	sed -e '/storetest/d' -i admin/runtests
+
+	testing() {
+		"$(PYTHON)" admin/runtests
+	}
+	python_execute_function testing
 }
 
 src_install() {
@@ -42,11 +52,4 @@ src_install() {
 		insinto /usr/share/doc/${PF}
 		doins -r examples
 	fi
-}
-
-src_test() {
-	#Remove test that requires running db server
-	sed -e '/storetest/d' -i admin/runtests
-
-	"${python}" admin/runtests || die "tests failed"
 }
