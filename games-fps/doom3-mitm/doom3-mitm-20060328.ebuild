@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.5 2009/07/24 20:14:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20060328.ebuild,v 1.6 2009/10/01 20:56:19 nyhm Exp $
 
 EAPI=2
 MOD_DESC="single-player map trilogy"
@@ -18,6 +18,8 @@ HOMEPAGE="http://www.makeittomorning.co.uk"
 SRC_URI="mirror://filefront/Doom_III/Resurrection_of_Evil/Maps/Single_Player/make_it_to_morning_${MY_PV}.zip"
 
 LICENSE="as-is"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
 
 RDEPEND="games-fps/doom3-roe
 	games-fps/doom3[roe]"

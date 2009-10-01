@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/doom3-dungeon-8.01.ebuild,v 1.6 2009/07/24 20:31:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-dungeon/doom3-dungeon-8.01.ebuild,v 1.7 2009/10/01 20:52:29 nyhm Exp $
 
 EAPI=2
 MOD_DESC="rogue-like 3D mod"
@@ -15,6 +15,8 @@ HOMEPAGE="http://dungeondoom.d3files.com/"
 SRC_URI="mirror://filefront/Doom_III/Hosted_Mods/Final_Releases/DungeonDOOM/${MOD_DIR}doom${MY_PV}xplinux.zip"
 
 LICENSE="as-is"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
 
 RDEPEND="games-fps/doom3-roe
 	games-fps/doom3[roe]"
