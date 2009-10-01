@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.79 2009/10/01 03:37:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.80 2009/10/01 17:22:22 vapier Exp $
+
+*usbutils-0.86-r1 (01 Oct 2009)
+
+  01 Oct 2009; Mike Frysinger <vapier@gentoo.org> +usbutils-0.86-r1.ebuild:
+  Fix install location of .pc file #287206 by Tiziano Müller.
 
 *usbutils-0.86 (01 Oct 2009)
 
