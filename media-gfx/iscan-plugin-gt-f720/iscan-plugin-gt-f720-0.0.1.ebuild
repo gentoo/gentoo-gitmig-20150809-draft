@@ -65,4 +65,3 @@ pkg_prerm() {
 
 	iscan-registry --remove interpreter usb 0x04b8 0x0131 "${MY_LIB}/esci/libesci-interpreter-gt-f720 /usr/share/esci/esfw8b.bin"
 }
-
