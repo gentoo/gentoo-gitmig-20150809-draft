@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.27 2009/10/01 16:18:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.28 2009/10/01 19:55:33 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -89,7 +89,6 @@ esac
 DESCRIPTION="${GAME_TITLE} ${MOD_NAME} - ${MOD_DESC}"
 
 SLOT="0"
-LICENSE="freedist"
 KEYWORDS="-* amd64 x86"
 IUSE="dedicated opengl"
 RESTRICT="mirror strip"
