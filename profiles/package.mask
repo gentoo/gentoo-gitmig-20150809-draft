@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10523 2009/10/01 13:28:57 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10524 2009/10/01 22:06:31 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (01 Oct 2009)
+# Doesn't work with newer openal.  Use games-action/openastromenace instead.
+games-action/astromenace-bin
 
 # Marcus D. Hanwell <cryos@gentoo.org> (01 Oct 2009)
 # Release candidates for the new CMake release
