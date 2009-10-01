@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/quake3-matrix-2.4_beta-r1.ebuild,v 1.2 2008/02/15 01:11:05 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-matrix/quake3-matrix-2.4_beta-r1.ebuild,v 1.3 2009/10/01 21:33:22 nyhm Exp $
 
 MOD_DESC="Matrix conversion mod"
 MOD_NAME="matrix"
@@ -13,15 +13,9 @@ HOMEPAGE="http://mods.moddb.com/3388/matrix-quake-3/"
 SRC_URI="matrix24.zip"
 
 LICENSE="freedist"
-RESTRICT="strip fetch"
-
 KEYWORDS="-* ~amd64 ~ppc ~x86"
-
-RDEPEND="ppc? ( games-fps/${GAME} )
-	!ppc? (
-		|| (
-			games-fps/${GAME}
-			games-fps/${GAME}-bin ) )"
+IUSE="dedicated opengl"
+RESTRICT="strip fetch"
 
 pkg_nofetch() {
 	einfo "Download the following files from FilePlanet and put them in"
