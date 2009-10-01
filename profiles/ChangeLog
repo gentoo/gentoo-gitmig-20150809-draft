@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3333 2009/10/01 11:17:56 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3334 2009/10/01 12:27:22 remi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Oct 2009; Rémi Cardona <remi@gentoo.org> package.mask:
+  update xorg-server package.mask entry
 
   01 Oct 2009; Torsten Veller <tove@gentoo.org> package.mask:
   Mask dev-perl/Gtk2-PodViewer, dev-perl/aww, dev-perl/perlsieve,
