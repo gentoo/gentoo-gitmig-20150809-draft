@@ -50,3 +50,4 @@ slotmove kde-misc/filelight 0 3.5
 move games-emulation/fceultra games-emulation/fceux
 move games-emulation/gfceu games-emulation/gfceux
 move xfce-extra/thunar-svn-plugin xfce-extra/thunar-vcs-plugin
+slotmove media-radio/qgrid 0 3.5
