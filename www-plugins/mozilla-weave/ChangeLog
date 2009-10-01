@@ -1,6 +1,10 @@
 # ChangeLog for www-plugins/mozilla-weave
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/ChangeLog,v 1.15 2009/10/01 17:06:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/mozilla-weave/ChangeLog,v 1.16 2009/10/01 17:09:29 volkmar Exp $
+
+  01 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  -mozilla-weave-0.2.104.ebuild, -mozilla-weave-0.5.1.ebuild:
+  Removing ebuilds not compatible anymore with official servers.
 
 *mozilla-weave-0.7 (01 Oct 2009)
 
