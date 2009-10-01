@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/uncrustify
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.1 2009/10/01 17:43:44 grobian Exp $
+
+*uncrustify-0.52 (01 Oct 2009)
+
+  01 Oct 2009; Fabian Groffen <grobian@gentoo.org> +uncrustify-0.52.ebuild,
+  +metadata.xml:
+  Initial version, ebuild by Nick Fortino and Mario Fetka, bug #208199
+
