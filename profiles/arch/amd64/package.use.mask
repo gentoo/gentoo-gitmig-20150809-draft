@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.44 2009/10/01 14:28:42 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.45 2009/10/01 15:26:34 ssuominen Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -104,8 +104,8 @@ net-misc/asterisk mmx
 x11-terms/eterm mmx
 media-tv/xawtv mmx
 
-# No need to mask these for recent mpg123 anymore.
-<media-sound/mpg123-1.8.1 mmx 3dnow 3dnowext sse
+# x86_64 opts are enabled with USE sse. so masking the rest
+media-sound/mpg123 mmx 3dnow 3dnowext
 
 # Oct 24th 2006; blubb@gentoo.org
 # bug 152646
