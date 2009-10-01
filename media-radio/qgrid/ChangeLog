@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/qgrid
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/qgrid/ChangeLog,v 1.4 2008/12/02 15:10:22 darkside Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/qgrid/ChangeLog,v 1.5 2009/10/01 16:54:18 ssuominen Exp $
+
+  01 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> qgrid-2.5.ebuild:
+  Change SLOT from 0 to 3.5 and ARTS_REQUIRED=never because it's deprecated.
 
   02 Dec 2008; Jeremy Olexa <darkside@gentoo.org> metadata.xml,
   qgrid-2.5.ebuild:
