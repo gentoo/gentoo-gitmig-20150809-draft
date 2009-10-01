@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3332 2009/09/30 15:55:07 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3333 2009/10/01 11:17:56 tove Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Oct 2009; Torsten Veller <tove@gentoo.org> package.mask:
+  Mask dev-perl/Gtk2-PodViewer, dev-perl/aww, dev-perl/perlsieve,
+  dev-perl/perlrapi, dev-perl/Gtk2-Html2 for removal
 
   30 Sep 2009; Joseph Jezak <josejx@gentoo.org> package.mask:
   Removed xac mask, bug was fixed.
