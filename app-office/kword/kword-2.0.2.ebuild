@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.0.2.ebuild,v 1.1 2009/08/12 10:01:34 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/kword/kword-2.0.2.ebuild,v 1.2 2009/10/01 15:23:06 scarabeus Exp $
 
 EAPI="2"
 
@@ -14,8 +14,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+wpd +wv2"
 
 DEPEND="
-	app-text/libwpd
-	app-text/wv2
+	wpd? ( app-text/libwpd )
+	wv2? ( =app-text/wv2-0.3* )
 "
 RDEPEND="${DEPEND}"
 
