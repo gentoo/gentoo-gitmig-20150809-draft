@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.1.ebuild,v 1.1 2009/10/01 13:38:52 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.1.ebuild,v 1.2 2009/10/01 13:45:02 darkside Exp $
 
 EAPI="2"
 
@@ -45,10 +45,7 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-
-	rm -rf ${D}/usr/share/doc/eix || die
-
-	dodoc AUTHORS ChangeLog doc/format.txt doc/xml-format.txt || die
+	prepalldocs
 }
 
 pkg_postinst() {
