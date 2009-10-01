@@ -1,30 +1,18 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.6.10.ebuild,v 1.3 2009/10/01 09:44:50 flameeyes Exp $
-
-WANT_AUTOMAKE=1.9
-
-inherit autotools
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.7.13.ebuild,v 1.1 2009/10/01 09:44:50 flameeyes Exp $
 
 DESCRIPTION="Provides Remote-Console and System Management Software as per IPMI v1.5/2.0"
 HOMEPAGE="http://www.gnu.org/software/freeipmi/"
-SRC_URI="ftp://ftp.zresearch.com/pub/${PN}/${PV}/${P}.tar.gz"
+SRC_URI="http://ftp.gluster.com/pub/${PN}/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug syslog"
 
 RDEPEND="dev-libs/libgcrypt"
 DEPEND="${RDEPEND}
 		virtual/os-headers"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}+glibc-2.8.patch"
-	AT_M4DIR="config" eautomake
-}
 
 src_compile() {
 	econf \
@@ -43,7 +31,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog* DISCLAIMER* NEWS README* TODO
 	dodoc doc/*.txt
 
-	rm "${D}"/usr/share/doc/${PF}/COPYING* "${D}"/usr/share/doc/${PF}/INSTALL
+	rm "${D}"/usr/share/doc/${PF}/{COPYING*,INSTALL}
 
 	keepdir \
 		/var/cache/ipmimonitoringsdrcache \

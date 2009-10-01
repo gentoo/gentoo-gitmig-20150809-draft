@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/freeipmi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.20 2009/09/23 21:14:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/ChangeLog,v 1.21 2009/10/01 09:44:50 flameeyes Exp $
+
+*freeipmi-0.7.13 (01 Oct 2009)
+
+  01 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  freeipmi-0.6.10.ebuild, +freeipmi-0.7.13.ebuild:
+  Version bump, fix 0.6.10 for the wrong rm as well.
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> freeipmi-0.4.4.ebuild:
   Remove virtual/libc
