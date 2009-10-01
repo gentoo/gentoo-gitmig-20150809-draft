@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.22 2009/09/30 23:58:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.23 2009/10/01 13:15:23 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -338,7 +338,6 @@ games-mods_src_install() {
 	fi
 
 	if use dedicated ; then
-		dodir "${GAMES_STATEDIR}"
 		if [[ -e ${FILESDIR}/server.cfg ]] ; then
 			insinto "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}
 			doins "${FILESDIR}"/server.cfg || die "Copying server config"
