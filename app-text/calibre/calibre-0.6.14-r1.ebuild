@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.14.ebuild,v 1.1 2009/10/01 02:19:34 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.14-r1.ebuild,v 1.1 2009/10/01 03:14:01 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -34,11 +34,7 @@ SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
 	>=sys-apps/help2man-1.36.4
-	>=dev-python/pyPdf-1.12
-	|| ( app-text/podofo >=app-text/pdftk-1.12 )
-	>=dev-python/cherrypy-3.0.2-r1
-	>=dev-python/cssutils-0.9.6_alpha4
-	>=dev-python/odfpy-0.7"
+	|| ( app-text/podofo >=app-text/pdftk-1.12 )"
 
 RDEPEND="$SHARED_DEPEND
 	>=dev-python/reportlab-2.1"
@@ -70,10 +66,14 @@ src_install() {
 
 	grep -rlZ "${D}" "${D}" | xargs -0 sed -e "s:${D}:/:g" -i ||
 		die "failed to fix harcoded \$D in paths"
-	sed -e "s:/usr/lib/calibre:$(python_get_sitedir):g" -i "${D}bin/"* ||
-		die "Failed to fix hardcoded /usr/lib/calibre paths"
 
-	# This code should fail once --bindir and --sharedir are fixed.
+	# This code may fail if behavior of --root, --bindir or
+	# --sharedir changes in the future.
+	dodir /usr/lib
+	mv "${D}lib/calibre" "${D}usr/lib/" ||
+		die "failed to move lib dir"
+	find "${D}"lib -type d -empty -delete
+
 	dodir /usr/bin
 	mv "${D}bin/"* "${D}usr/bin/" ||
 		die "failed to move bin dir"
@@ -83,10 +83,6 @@ src_install() {
 	mv "${D}share/"* "${D}usr/share/" ||
 		die "failed to move share dir"
 	find "${D}"share -type d -empty -delete
-
-	dodir $(python_get_sitedir)
-	mv "${D}lib/calibre/"* "${D}$(python_get_sitedir)"/ ||
-		die "failed to move python modules"
 
 	# The menu entries end up here due to '--mode user' being added to
 	# xdg-* options in src_prepare.
@@ -102,17 +98,6 @@ src_install() {
 	dobashcompletion "$D"etc/bash_completion.d/calibre
 	rm -r "${D}"etc/bash_completion.d
 	find "${D}"etc -type d -empty -delete
-
-	# Removing junk.
-	# Bundled python modules:     Module       | Package
-	#                             ----------------------------
-	#                             cherrypy     | cherrypy
-	#                             cssutils     | cssutils
-	#                             encutils     | cssutils
-	#                             odf          | odfpy
-	#                             pyPdf        | pyPdf
-	rm -r "${D}$(python_get_sitedir)/"{cherrypy,cssutils,encutils,odf,pyPdf}
-
 }
 
 pkg_postinst() {
