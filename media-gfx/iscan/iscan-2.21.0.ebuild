@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.3 2009/09/24 22:03:07 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iscan/iscan-2.21.0.ebuild,v 1.4 2009/10/01 08:14:22 elvanor Exp $
 
 EAPI="2"
 
@@ -38,7 +38,7 @@ for X in ${IUSE_LINGUAS}; do IUSE="${IUSE} linguas_${X}"; done
 QA_TEXTRELS="usr/$(get_libdir)/iscan/lib*"
 
 # Upstream ships broken sanity test
-RESTRICT=test
+RESTRICT="test"
 
 RDEPEND="media-gfx/sane-backends
 	>=sys-fs/udev-103
@@ -96,19 +96,6 @@ usermap_to_udev() {
 
 	echo
 	echo 'LABEL="iscan_rules_end"'
-}
-
-pkg_setup() {
-	if use X || use gimp; then
-		ewarn
-		ewarn "The iscan application needs CSS x86/amd64-only"
-		ewarn "libs and thus can't be built currently.  You"
-		ewarn "can still use 'xscanimage', 'xsane', or 'kooka'"
-		ewarn "with sane-epkowa backend.  But some low-end"
-		ewarn "scanners are also not supported, because they"
-		ewarn "need these x86/amd64 libs, too."
-		ewarn
-	fi
 }
 
 src_prepare() {
@@ -204,7 +191,7 @@ pkg_postinst() {
 	local i
 	local DLL_CONF="/etc/sane.d/dll.conf"
 	local EPKOWA_CONF="/etc/sane.d/epkowa.conf"
-	local SNAPSCAN_CONF="/etc/sane.d/snapscan.conf"
+
 	elog
 	if grep -q "^[ \t]*\<epkowa\>" ${DLL_CONF}; then
 		elog "Please edit ${EPKOWA_CONF} to suit your needs."
@@ -216,21 +203,4 @@ pkg_postinst() {
 		elog "A new entry 'epkowa' was added to ${DLL_CONF}"
 		elog "Please edit ${EPKOWA_CONF} to suit your needs."
 	fi
-	elog
-	elog "You can also use the 'snapscan' backend if you have a recent"
-	elog "sane-backend installation."
-	elog
-	if ! grep 2>/dev/null -q "/usr/share/iscan/.*\.bin" "${SNAPSCAN_CONF}"; then
-		snapscan_firmware "${SNAPSCAN_CONF}" > "${SNAPSCAN_CONF}~~~" \
-		&& mv -f "${SNAPSCAN_CONF}~~~" "${SNAPSCAN_CONF}" \
-		|| rm -f "${SNAPSCAN_CONF}~~~"
-		elog "The firmware entries were added to ${SNAPSCAN_CONF}"
-	else
-		elog "Please edit ${SNAPSCAN_CONF} to suit your needs."
-	fi
-	elog "Hint: not all models are supported by 'snapscan' yet!"
-	elog
-	elog "You can check which backend fits best for your scanner:"
-	elog "http://www.sane-project.org/cgi-bin/driver.pl?manu=Epson&bus=any"
-	elog
 }
