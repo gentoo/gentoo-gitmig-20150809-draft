@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.4-r2.ebuild,v 1.1 2009/07/28 16:30:34 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-2.6.4-r3.ebuild,v 1.1 2009/10/01 18:10:14 arfrever Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.cmake.org/files/v$(get_version_component_range 1-2)/${MY_P}.
 LICENSE="CMake"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
 SLOT="0"
-IUSE="emacs python3 qt4 vim-syntax"
+IUSE="emacs qt4 vim-syntax"
 
 DEPEND="
 	>=net-misc/curl-7.16.4
@@ -47,20 +47,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-FindPythonInterp.patch"
 	"${FILESDIR}/${P}-FindBoost.patch"
 )
-
-pkg_setup() {
-	if use python3; then
-		ewarn "Support for Python 3 is experimental."
-		ewarn "Please include patches in bug reports!"
-		ebeep 6
-	fi
-}
-
-src_prepare() {
-	base_src_prepare
-
-	use python3 && epatch "${FILESDIR}/${PN}-python-3.patch"
-}
 
 src_configure() {
 	local qt_arg par_arg
