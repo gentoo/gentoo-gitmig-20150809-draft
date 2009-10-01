@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/quake3-nsco-1.93-r1.ebuild,v 1.3 2009/07/07 23:06:50 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-nsco/quake3-nsco-1.93-r1.ebuild,v 1.4 2009/10/01 21:40:25 nyhm Exp $
 
 MOD_DESC="a US Navy Seals conversion mod"
 MOD_NAME="Navy Seals: Covert Operations"
@@ -14,6 +14,8 @@ SRC_URI="nsco_beta191a.zip
 	nsco_beta193upd.zip"
 
 LICENSE="freedist"
+KEYWORDS="amd64 ~ppc x86"
+IUSE="dedicated opengl"
 RESTRICT="strip mirror fetch"
 
 pkg_nofetch() {
