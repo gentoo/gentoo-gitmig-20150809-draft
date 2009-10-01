@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ut2004-crossfire-1.9.ebuild,v 1.2 2009/04/18 00:06:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ut2004-crossfire-1.9.ebuild,v 1.3 2009/10/01 22:23:33 nyhm Exp $
 
 MOD_NAME="Crossfire"
 MOD_DESC="Special Forces vs Terrorists"
@@ -22,10 +22,8 @@ SRC_URI="ftp://mirror1.to-crossfire.net/client/${OLD}.zip
 
 # See Help/EULA.txt
 LICENSE="free-noncomm"
-
 KEYWORDS="~amd64 ~x86"
-
-RDEPEND="${CATEGORY}/${GAME}"
+IUSE="dedicated opengl"
 
 src_unpack() {
 	mkdir ${OLD} ${UPD}
