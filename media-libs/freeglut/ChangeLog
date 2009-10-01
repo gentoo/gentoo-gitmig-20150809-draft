@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeglut
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.57 2009/09/30 19:38:18 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeglut/ChangeLog,v 1.58 2009/10/01 13:10:00 ssuominen Exp $
+
+  01 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  freeglut-2.6.0_rc1.ebuild:
+  Revert back to ~amd64 wrt #287229.
 
   30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
   freeglut-2.6.0_rc1.ebuild:
