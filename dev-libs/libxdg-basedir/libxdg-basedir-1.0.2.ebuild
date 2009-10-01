@@ -1,49 +1,46 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.0.2.ebuild,v 1.1 2009/09/12 10:15:42 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxdg-basedir/libxdg-basedir-1.0.2.ebuild,v 1.2 2009/10/01 09:14:09 ssuominen Exp $
 
+EAPI=2
 inherit libtool
 
 DESCRIPTION="Small library to access XDG Base Directories Specification paths"
 HOMEPAGE="http://n.ethz.ch/student/nevillm/download/libxdg-basedir/"
 SRC_URI="http://n.ethz.ch/student/nevillm/download/libxdg-basedir/${P}.tar.gz"
 
-IUSE="doc"
-SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+SLOT="0"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+IUSE="doc"
 
 RDEPEND=""
 DEPEND="doc? ( app-doc/doxygen )"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	elibtoolize
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		$(use_enable doc doxygen-html) \
-		|| die "econf failed"
+		$(use_enable doc doxygen-html)
+}
 
-	emake || die "emake failed"
+src_compile() {
+	emake || die
 
 	if use doc; then
-		emake doxygen-doc || die "emake doxygen-doc failed"
+		emake doxygen-doc || die
 	fi
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+	emake DESTDIR="${D}" install || die
 
 	if use doc; then
 		dohtml -r doc/html/*
 	fi
 
-	# Remove libtool archives, as the package has no dependencies,
-	# and should be used with pkg-config properly.
 	find "${D}" -name '*.la' -delete
 }
