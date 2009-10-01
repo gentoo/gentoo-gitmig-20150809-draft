@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/quake4-deltactf-1.1.ebuild,v 1.1 2007/09/15 19:07:46 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/quake4-deltactf-1.1.ebuild,v 1.2 2009/10/01 21:53:06 nyhm Exp $
 
 MOD_DESC="Delta Capture-The-Flag"
 MOD_NAME="Delta CTF"
@@ -26,5 +26,5 @@ SRC_URI="${TURKEY}/DeltaCTF_1.000.zip
 	${ACM}/DeltaCTF_1.100_Patch.zip"
 
 LICENSE="as-is"
-
-RDEPEND="games-fps/quake4-bin"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
