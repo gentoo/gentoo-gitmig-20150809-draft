@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/BerkeleyDB
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.63 2009/09/21 18:32:55 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/ChangeLog,v 1.64 2009/10/01 14:55:00 jer Exp $
+
+  01 Oct 2009; Jeroen Roovers <jer@gentoo.org> BerkeleyDB-0.39.ebuild:
+  Stable for HPPA (LuckyLuke).
 
   21 Sep 2009; Tom Gall <tgall@gentoo.org> BerkeleyDB-0.39.ebuild:
   stable on ppc64, bug #278089
