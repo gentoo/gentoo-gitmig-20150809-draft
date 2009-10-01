@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.85.ebuild,v 1.1 2009/08/22 13:50:59 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/asymptote/asymptote-1.87.ebuild,v 1.1 2009/10/01 06:47:18 grozin Exp $
 EAPI=2
 inherit eutils autotools elisp-common latex-package multilib python
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}
 TEXMF=/usr/share/texmf-site
 
 src_prepare() {
-	# Fixing fftwl, gsl, sigsegv enabling
+	# Fixing sigsegv enabling
 	epatch "${FILESDIR}/${P}-configure-ac.patch"
 	einfo "Patching configure.ac"
 	sed -e "s:Datadir/doc/asymptote:Datadir/doc/${PF}:" \
@@ -162,7 +162,6 @@ src_install() {
 	if use doc; then
 		cd doc
 		doinfo ${PN}.info*
-		dohtml ${PN}/*
 		cd FAQ
 		dodoc asy-faq.ascii
 		doinfo asy-faq.info
