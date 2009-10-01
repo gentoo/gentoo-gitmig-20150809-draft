@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-eventhorizon/doom3-eventhorizon-1.2.ebuild,v 1.2 2008/02/15 00:35:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-eventhorizon/doom3-eventhorizon-1.2.ebuild,v 1.3 2009/10/01 20:53:20 nyhm Exp $
 
 MOD_DESC="single-player mission based on the Event Horizon film"
 MOD_NAME="Event Horizon"
@@ -12,8 +12,8 @@ HOMEPAGE="http://doom3.filefront.com/file/Event_Horizon;57651"
 SRC_URI="mirror://filefront/Doom_III/Maps/Single_Player/event_horizon_${PV}.zip"
 
 LICENSE="as-is"
-
-RDEPEND="games-fps/doom3"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
 
 S=${WORKDIR}
 

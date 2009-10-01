@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-opencoop/doom3-opencoop-1.1.ebuild,v 1.2 2008/02/15 00:43:53 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-opencoop/doom3-opencoop-1.1.ebuild,v 1.3 2009/10/01 20:57:07 nyhm Exp $
 
 MOD_DESC="add coop support to Doom 3"
 MOD_NAME="Open Co-op"
@@ -18,8 +18,8 @@ SRC_URI="http://firedevil.de/downloads/mods/${MY_PN}/${MY_PN}${PV}.zip
 	http://www.firedevil.de/downloads/mods/${MY_PN}/oc_mappack1v${MAP_VER}.zip"
 
 LICENSE="as-is"
-
-RDEPEND="games-fps/doom3"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
 
 S=${WORKDIR}
 
