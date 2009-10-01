@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.149 2009/10/01 12:23:43 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.150 2009/10/01 14:34:30 remi Exp $
+
+  01 Oct 2009; Rémi Cardona <remi@gentoo.org> -files/xdm.initd-1,
+  -files/gentoo-startx-customization-1.0.4.patch, -files/xdm.start,
+  -files/xsession.env.d:
+  prune ${FILESDIR}
 
   01 Oct 2009; Rémi Cardona <remi@gentoo.org> -xinit-1.0.4.ebuild,
   -xinit-1.0.5-r1.ebuild, -xinit-1.0.5-r2.ebuild, -xinit-1.0.8.ebuild,
