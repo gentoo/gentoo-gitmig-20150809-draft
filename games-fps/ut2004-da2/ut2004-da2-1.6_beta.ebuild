@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ut2004-da2-1.6_beta.ebuild,v 1.3 2008/12/06 15:12:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-da2/ut2004-da2-1.6_beta.ebuild,v 1.4 2009/10/01 22:08:19 nyhm Exp $
 
 MOD_NAME="Defence Alliance 2"
 MOD_DIR="DA2"
@@ -19,8 +19,8 @@ SRC_URI="mirror://liflg/defence.alliance2_${MY_PV}-english.run"
 
 # See Help/readme.txt
 LICENSE="free-noncomm"
-
-RDEPEND="${CATEGORY}/${GAME}"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
 
 src_unpack() {
 	unpack_makeself
