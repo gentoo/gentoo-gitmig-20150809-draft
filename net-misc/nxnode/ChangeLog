@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/nxnode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.48 2009/09/30 22:45:41 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxnode/ChangeLog,v 1.49 2009/10/01 06:51:01 voyageur Exp $
+
+  01 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  nxnode-3.4.0.6.ebuild:
+  Fix dependency on nxclient, also drop blocker on freenx
 
 *nxnode-3.4.0.6 (30 Sep 2009)
 
