@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-alternatefire/quake3-alternatefire-2.0-r1.ebuild,v 1.2 2006/10/23 21:05:27 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-alternatefire/quake3-alternatefire-2.0-r1.ebuild,v 1.3 2009/10/01 21:16:48 nyhm Exp $
 
 MOD_DESC="adds unique new secondary attacks to weapons"
 MOD_NAME="Alternate Fire"
@@ -15,9 +15,4 @@ HOMEPAGE="http://www.planetquake.com/alternatefire/"
 LICENSE="freedist"
 
 KEYWORDS="-* ~amd64 ~ppc ~x86"
-
-RDEPEND="ppc? ( games-fps/${GAME} )
-	!ppc? (
-		|| (
-			games-fps/${GAME}
-			games-fps/${GAME}-bin ) )"
+IUSE="dedicated opengl"
