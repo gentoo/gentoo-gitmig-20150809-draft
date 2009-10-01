@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.24 2009/10/01 13:35:21 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.25 2009/10/01 14:05:04 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -27,6 +27,7 @@ case "${GAME}" in
 		GAME_EXE="doom3"
 		DED_EXE="doom3-ded"
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
+		DED_CFG_DIR=".doom3"
 		;;
 	"enemy-territory")
 		RDEPEND="games-fps/enemy-territory"
@@ -36,6 +37,7 @@ case "${GAME}" in
 		GAME_EXE="et"
 		DED_EXE="et-ded"
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
+		DED_CFG_DIR=".etwolf"
 		;;
 	"quake3")
 		RDEPEND="|| ( games-fps/quake3 games-fps/quake3-bin )"
@@ -45,6 +47,7 @@ case "${GAME}" in
 		GAME_EXE="quake3"
 		DED_EXE="quake3-ded"
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
+		DED_CFG_DIR=".q3a"
 		;;
 	"quake4")
 		RDEPEND="games-fps/quake4-bin"
@@ -54,6 +57,7 @@ case "${GAME}" in
 		GAME_EXE="quake4"
 		DED_EXE="quake4-ded"
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
+		DED_CFG_DIR=".quake4"
 		;;
 	"ut2003")
 		RDEPEND="games-fps/ut2003"
@@ -63,6 +67,7 @@ case "${GAME}" in
 		GAME_EXE="ut2003"
 		DED_EXE="ucc"
 		DED_OPTIONS=""
+		DED_CFG_DIR=""
 		;;
 	"ut2004")
 		RDEPEND="games-fps/ut2004"
@@ -72,6 +77,7 @@ case "${GAME}" in
 		GAME_EXE="ut2004"
 		DED_EXE="ucc"
 		DED_OPTIONS=""
+		DED_CFG_DIR=""
 		;;
 	*)
 		eerror "This game is either not supported or you must set the GAME"
@@ -338,31 +344,12 @@ games-mods_src_install() {
 	fi
 
 	if use dedicated ; then
-		if [[ -e ${FILESDIR}/server.cfg ]] ; then
+		if [[ -f ${FILESDIR}/server.cfg ]] ; then
 			insinto "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}
 			doins "${FILESDIR}"/server.cfg || die "Copying server config"
-			case ${GAME} in
-				doom3)
-					dodir "${GAMES_PREFIX}"/.doom3/${MOD_DIR}
-					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
-						"${GAMES_PREFIX}"/.doom3/${MOD_DIR}
-					;;
-				enemy-territory)
-					dodir "${GAMES_PREFIX}"/.etwolf/${MOD_DIR}
-					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
-						"${GAMES_PREFIX}"/.etwolf/${MOD_DIR}
-					;;
-				quake3)
-					dodir "${GAMES_PREFIX}"/.q3a/${MOD_DIR}
-					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
-						"${GAMES_PREFIX}"/.q3a/${MOD_DIR}
-					;;
-				quake4)
-					dodir "${GAMES_PREFIX}"/.quake4/${MOD_DIR}
-					dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
-						"${GAMES_PREFIX}"/.quake4/${MOD_DIR}
-					;;
-			esac
+			dodir "${GAMES_PREFIX}"/${DED_CFG_DIR}/${MOD_DIR}
+			dosym "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}/server.cfg \
+				"${GAMES_PREFIX}"/${DED_CFG_DIR}/${MOD_DIR}/server.cfg
 		fi
 		games-mods_make_ded_exec
 		newgamesbin "${T}"/${GAME_EXE}-${MOD_DIR}-ded.bin \
