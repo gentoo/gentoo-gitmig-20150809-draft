@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.58 2009/09/30 11:16:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.59 2009/10/01 14:28:42 ssuominen Exp $
+
+  01 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask app-emulation/wine[openal] wrt #286625.
 
   30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask app-emulation/wine[jpeg] wrt #283089.
