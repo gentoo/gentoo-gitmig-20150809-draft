@@ -1,6 +1,10 @@
 # ChangeLog for media-radio/ax25-apps
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.12 2009/09/07 19:00:15 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/ax25-apps/ChangeLog,v 1.13 2009/10/01 12:41:38 ssuominen Exp $
+
+  01 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ax25-apps-0.0.6-r1.ebuild:
+  amd64 stable wrt #287059
 
   07 Sep 2009; Patrick Lauer <patrick@gentoo.org> ax25-apps-0.0.6-r1.ebuild:
   Add ~amd64
