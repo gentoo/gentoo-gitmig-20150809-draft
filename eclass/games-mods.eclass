@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.26 2009/10/01 16:03:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.27 2009/10/01 16:18:22 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -399,7 +399,7 @@ depend() {
 start() {
 	ebegin "Starting ${GAME_TITLE} ${MOD_NAME} dedicated server"
 	start-stop-daemon --start --quiet --background --chuid \\
-		${GAMES_USER_DED}:games --env HOME="${GAMES_PREFIX}" --exec \\
+		${GAMES_USER_DED}:${GAMES_GROUP} --env HOME="${GAMES_PREFIX}" --exec \\
 		${GAMES_BINDIR}/${GAME_EXE}-${MOD_DIR}-ded -- \\
 		\${${GAME_EXE}_${MOD_DIR}_opts}
 	eend \$?
