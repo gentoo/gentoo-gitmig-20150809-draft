@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.24 2009/09/12 02:42:32 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.mask,v 1.25 2009/10/01 17:31:59 vapier Exp $
 
 # Hardened versions of gcc-4.0* through gcc-4.2* are not available.
 =sys-devel/gcc-4.0*
@@ -35,10 +35,3 @@ net-im/skysentials
 # around if you try it in a live system.
 # 2006-03-13 kevquinn
 =sys-libs/glibc-2.4*
-
-# Patch fails, mask for now. Bug #270274.
->=sys-libs/glibc-2.10
-
-# Requires >=sys-libs/glibc-2.10
-=x11-libs/fltk-1.1.9-r1
-=x11-libs/fltk-2.0_pre6786-r1
