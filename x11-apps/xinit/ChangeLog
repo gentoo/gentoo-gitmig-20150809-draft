@@ -1,6 +1,11 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.148 2009/09/29 17:34:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.149 2009/10/01 12:23:43 remi Exp $
+
+  01 Oct 2009; Rémi Cardona <remi@gentoo.org> -xinit-1.0.4.ebuild,
+  -xinit-1.0.5-r1.ebuild, -xinit-1.0.5-r2.ebuild, -xinit-1.0.8.ebuild,
+  -xinit-1.0.8-r2.ebuild, -xinit-1.0.8-r3.ebuild:
+  drop old ebuilds
 
   29 Sep 2009; Tobias Klausmann <klausman@gentoo.org> xinit-1.0.8-r8.ebuild:
   Stable on alpha, bug #156570
