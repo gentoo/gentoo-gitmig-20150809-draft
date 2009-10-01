@@ -1,6 +1,6 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r3.ebuild,v 1.2 2007/01/10 19:37:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r3.ebuild,v 1.3 2009/10/01 22:05:13 nyhm Exp $
 
 MOD_DESC="Editor's Choice Edition bonus pack"
 MOD_NAME="Editor's Choice Edition"
@@ -16,6 +16,8 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}
 	http://sonic-lux.net/data/mirror/ut2004/${MY_P}"
 
 LICENSE="ut2003"
+KEYWORDS="amd64 x86"
+IUSE="dedicated opengl"
 
 RDEPEND="games-fps/ut2004-data"
 
