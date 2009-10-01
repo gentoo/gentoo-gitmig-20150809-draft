@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r2.ebuild,v 1.8 2009/09/29 20:02:56 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r2.ebuild,v 1.9 2009/10/01 20:03:52 arfrever Exp $
 
 EAPI="2"
 
@@ -51,9 +51,9 @@ RDEPEND=">=app-admin/eselect-python-20090606
 			tk? ( >=dev-lang/tk-8.0 )
 			xml? ( >=dev-libs/expat-2 )
 		)
-		!m68k? ( !mips? ( !sparc-fbsd? ( virtual/libffi ) ) )"
+		!m68k? ( !sparc-fbsd? ( virtual/libffi ) )"
 DEPEND="${RDEPEND}
-		!m68k? ( !mips? ( !sparc-fbsd? ( dev-util/pkgconfig ) ) )"
+		!m68k? ( !sparc-fbsd? ( dev-util/pkgconfig ) )"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND="app-admin/python-updater"
 
@@ -70,7 +70,9 @@ pkg_setup() {
 
 src_prepare() {
 	# Ensure that internal copy of libffi isn't used.
-	rm -fr Modules/_ctypes/libffi*
+	if ! use m68k && ! use sparc-fbsd; then
+		rm -fr Modules/_ctypes/libffi*
+	fi
 
 	if tc-is-cross-compiler; then
 		epatch "${FILESDIR}/python-2.5-cross-printf.patch"
@@ -183,7 +185,7 @@ src_configure() {
 	# Please query BSD team before removing this!
 	append-ldflags "-L."
 
-	if ! use m68k && ! use mips && ! use sparc-fbsd; then
+	if ! use m68k && ! use sparc-fbsd; then
 		myconf+=" --with-system-ffi"
 	fi
 
