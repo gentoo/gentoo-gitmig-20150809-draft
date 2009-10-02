@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.5 2009/10/02 09:05:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tightvnc/tightvnc-1.3.10-r1.ebuild,v 1.6 2009/10/02 09:08:11 ssuominen Exp $
 
 inherit eutils toolchain-funcs java-pkg-opt-2
 
@@ -106,7 +106,7 @@ src_install() {
 		java-pkg_newjar "${WORKDIR}/vnc_javasrc/VncViewer.jar"
 		java-pkg_dolauncher "${PN}-java"
 		insinto /usr/share/${PN}/classes
-		doins ${WORKDIR}/vnc_javasrc/*.vnc || die
+		doins "${WORKDIR}"/vnc_javasrc/*.vnc || die
 		dosym /usr/share/${PN}/lib/${PN}.jar /usr/share/${PN}/classes/VncViewer.jar
 
 	fi
