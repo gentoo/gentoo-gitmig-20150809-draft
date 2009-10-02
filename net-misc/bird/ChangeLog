@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bird
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.6 2009/09/11 14:01:52 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.7 2009/10/02 11:52:08 chainsaw Exp $
+
+*bird-1.1.4 (02 Oct 2009)
+
+  02 Oct 2009; <chainsaw@gentoo.org> +files/1.1.4-nostrip.patch,
+  files/initd-v6-bird-1.1.3, +files/initd-v4-bird-1.1.4,
+  +files/initd-v6-bird-1.1.4, +bird-1.1.4.ebuild:
+  Version bump with minor bugfixes. Also adds passive BGP support.
 
 *bird-1.1.3 (11 Sep 2009)
 
