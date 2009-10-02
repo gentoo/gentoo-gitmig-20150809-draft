@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.98 2009/10/02 13:50:51 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.99 2009/10/02 15:46:55 haubi Exp $
+
+  02 Oct 2009; Michael Haubenwallner <haubi@gentoo.org>
+  +sunos/solaris/5.9/package.use.force:
+  app-admin/eselect-python still needs gnulib on solaris 9 for scandir, and
+  has IUSE=gnulib
 
   02 Oct 2009; Michael Haubenwallner <haubi@gentoo.org>
   sunos/solaris/package.use.mask:
