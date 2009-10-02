@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.496 2009/10/02 11:30:20 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.497 2009/10/02 11:40:26 zzam Exp $
+
+*udev-146-r1 (02 Oct 2009)
+*udev-145-r3 (02 Oct 2009)
+
+  02 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> +udev-145-r3.ebuild,
+  +udev-146-r1.ebuild:
+  Update patchset, add patchset for udev-146, fix ioctl issue on amd64, Bug
+  #286041.
 
   02 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> udev-145.ebuild,
   udev-145-r1.ebuild, udev-145-r2.ebuild, udev-146.ebuild, udev-9999.ebuild:
