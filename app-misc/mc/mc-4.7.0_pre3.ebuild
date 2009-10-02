@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre3.ebuild,v 1.1 2009/10/02 18:26:25 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre3.ebuild,v 1.2 2009/10/02 18:30:53 ssuominen Exp $
 
 EAPI=2
 MY_P=${P/_/-}
@@ -56,7 +56,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To enable exiting to latest working directory at exit,"
-	elog "put this to your ~/.bashrc:"
+	elog "To enable exiting to latest working directory,"
+	elog "put this into your ~/.bashrc:"
 	elog ". /usr/libexec/mc/mc.sh"
 }
