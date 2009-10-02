@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/taglib-extras
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.6 2009/09/11 01:24:42 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.7 2009/10/02 00:44:54 jmbsvicetto Exp $
+
+*taglib-extras-1.0.1 (02 Oct 2009)
+
+  02 Oct 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +taglib-extras-1.0.1.ebuild:
+  Bumped taglib-extras to version 1.0.1 from the kde-testing overlay. Thanks
+  to Maciej Mrozowski (reavertm).
 
 *taglib-extras-0.1.7 (11 Sep 2009)
 
