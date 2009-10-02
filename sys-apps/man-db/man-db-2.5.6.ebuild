@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.5.6.ebuild,v 1.1 2009/10/02 21:50:28 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/man-db-2.5.6.ebuild,v 1.2 2009/10/02 22:13:26 flameeyes Exp $
 
 EAPI=2
 
@@ -47,5 +47,5 @@ src_configure() {
 
 src_install() {
 	emake install DESTDIR="${D}" || die
-	dodoc README docs/{ChangeLog,HACKING,NEWS,TODO}
+	dodoc README ChangeLog NEWS docs/{HACKING,TODO} || die
 }
