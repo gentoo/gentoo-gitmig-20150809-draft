@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10524 2009/10/01 22:06:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10525 2009/10/02 13:12:12 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -72,9 +72,10 @@ media-plugins/flexplaylist
 dev-python/wsgiref
 
 # Rémi Cardona <remi@gentoo.org> (28 Sep 2009)
-# breaks nearly all X drivers, 1.6.5 should fix the issue when it comes out
-# see bug #286746
+# 1.6.4 breaks nearly all X drivers, see bug #286746
+# 1.6.4.901 is masked for testing, will be unmasked if deemed safe
 =x11-base/xorg-server-1.6.4
+=x11-base/xorg-server-1.6.4.901
 
 # Samuli Suominen <ssuominen@gentoo.org> (28 Sep 2009)
 # Obsolete. Supported by in-kernel drivers. Masked for removal,
