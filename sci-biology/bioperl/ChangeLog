@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.45 2009/10/02 00:14:09 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.46 2009/10/02 14:51:51 weaver Exp $
+
+  02 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> bioperl-1.6.1.ebuild:
+  Fix typo
 
   01 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> bioperl-1.6.1.ebuild:
   Fix typo

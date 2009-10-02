@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.1.ebuild,v 1.2 2009/10/02 00:14:09 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.1.ebuild,v 1.3 2009/10/02 14:51:51 weaver Exp $
 
 EAPI="2"
 
@@ -64,7 +64,7 @@ S="${WORKDIR}/BioPerl-${PV}"
 src_configure() {
 	sed -i -e '/add_post_install_script.*symlink_script.pl/d' \
 		-e "/'CPAN' *=> *1.81/d" \
-		-e "/'ExtUtils::Manifest' *=> *1.52/d" "${S}/Build.PL" || die
+		-e "/'ExtUtils::Manifest' *=> *'1.52'/d" "${S}/Build.PL" || die
 
 	if use minimal && use graphviz; then die "USE flags minimal and graphviz cannot be used together"; fi
 	perl-module_src_configure
