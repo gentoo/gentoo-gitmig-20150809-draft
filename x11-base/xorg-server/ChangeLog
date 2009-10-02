@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.448 2009/09/30 20:17:56 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.449 2009/10/02 14:10:00 remi Exp $
+
+  02 Oct 2009; Rémi Cardona <remi@gentoo.org>
+  +files/1.6.4-re-fix-DGA-removal.patch, xorg-server-1.6.4.ebuild:
+  add patch to fix crasher bug #286746
 
   30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
   xorg-server-1.6.3.901-r2.ebuild:

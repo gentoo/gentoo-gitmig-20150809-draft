@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.4.ebuild,v 1.1 2009/09/28 08:18:37 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.6.4.ebuild,v 1.2 2009/10/02 14:10:00 remi Exp $
 
 EAPI="2"
 
@@ -104,6 +104,7 @@ EPATCH_SUFFIX="patch"
 #	)
 
 PATCHES=(
+	"${FILESDIR}/1.6.4-re-fix-DGA-removal.patch"
 	"${UPSTREAMED_PATCHES[@]}"
 	)
 
