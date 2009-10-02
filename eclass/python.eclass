@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.74 2009/10/02 02:02:24 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.75 2009/10/02 17:32:23 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -127,10 +127,14 @@ validate_PYTHON_ABIS() {
 
 	# USE_${ABI_TYPE^^} and RESTRICT_${ABI_TYPE^^}_ABIS variables hopefully will be included in EAPI >= 4.
 	if [[ "$(declare -p PYTHON_ABIS 2> /dev/null)" != "declare -x PYTHON_ABIS="* ]] && has "${EAPI:-0}" 0 1 2 3; then
-		local ABI restricted_ABI support_ABI supported_PYTHON_ABIS=
+		local ABI python2_supported_versions python3_supported_versions restricted_ABI support_ABI supported_PYTHON_ABIS=
 		PYTHON_ABI_SUPPORTED_VALUES="2.4 2.5 2.6 2.7 3.0 3.1 3.2"
+		python2_supported_versions="2.4 2.5 2.6 2.7"
+		python3_supported_versions="3.0 3.1 3.2"
 
 		if [[ "$(declare -p USE_PYTHON 2> /dev/null)" == "declare -x USE_PYTHON="* ]]; then
+			local python2_enabled="0" python3_enabled="0"
+
 			if [[ -z "${USE_PYTHON}" ]]; then
 				die "USE_PYTHON variable is empty"
 			fi
@@ -139,6 +143,14 @@ validate_PYTHON_ABIS() {
 				if ! has "${ABI}" ${PYTHON_ABI_SUPPORTED_VALUES}; then
 					die "USE_PYTHON variable contains invalid value '${ABI}'"
 				fi
+
+				if has "${ABI}" ${python2_supported_versions}; then
+					python2_enabled="1"
+				fi
+				if has "${ABI}" ${python3_supported_versions}; then
+					python3_enabled="1"
+				fi
+
 				support_ABI="1"
 				for restricted_ABI in ${RESTRICT_PYTHON_ABIS}; do
 					if python -c "from fnmatch import fnmatch; exit(not fnmatch('${ABI}', '${restricted_ABI}'))"; then
@@ -153,8 +165,15 @@ validate_PYTHON_ABIS() {
 			if [[ -z "${PYTHON_ABIS//[${IFS}]/}" ]]; then
 				die "USE_PYTHON variable doesn't enable any version of Python supported by ${CATEGORY}/${PF}"
 			fi
+
+			if [[ "${python2_enabled}" == "0" ]]; then
+				ewarn "USE_PYTHON variable doesn't enable any version of Python 2. This configuration is unsupported."
+			fi
+			if [[ "${python3_enabled}" == "0" ]]; then
+				ewarn "USE_PYTHON variable doesn't enable any version of Python 3. This configuration is unsupported."
+			fi
 		else
-			local ABI python2_version= python2_supported_versions python3_version= python3_supported_versions restricted_ABI support_python_major_version
+			local python2_version= python3_version= support_python_major_version
 
 			if has_version "=dev-lang/python-2*"; then
 				if [[ "$(readlink /usr/bin/python2)" != "python2."* ]]; then
@@ -162,7 +181,6 @@ validate_PYTHON_ABIS() {
 				fi
 
 				python2_version="$(/usr/bin/python2 -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
-				python2_supported_versions="2.4 2.5 2.6 2.7"
 
 				for ABI in ${python2_supported_versions}; do
 					support_python_major_version="1"
@@ -190,7 +208,6 @@ validate_PYTHON_ABIS() {
 				fi
 
 				python3_version="$(/usr/bin/python3 -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
-				python3_supported_versions="3.0 3.1 3.2"
 
 				for ABI in ${python3_supported_versions}; do
 					support_python_major_version="1"
