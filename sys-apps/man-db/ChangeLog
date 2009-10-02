@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/man-db
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.8 2009/09/29 09:01:20 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-db/ChangeLog,v 1.9 2009/10/02 21:50:28 flameeyes Exp $
+
+*man-db-2.5.6 (02 Oct 2009)
+
+  02 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +man-db-2.5.6.ebuild, +files/man-db-2.5.6-fix-no-groff.patch:
+  Version bump, with a patch to work with heirloom-doctools… for the most
+  part. Note that man pages will not look as good as with sys-apps/man at
+  least.
 
   29 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org> man-db-2.5.3.ebuild,
   man-db-2.5.5.ebuild:
