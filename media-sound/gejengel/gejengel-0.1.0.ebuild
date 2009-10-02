@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.6 2009/10/02 14:04:35 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.7 2009/10/02 14:38:11 ssuominen Exp $
 
 EAPI=2
-inherit eutils
+inherit eutils multilib
 
 DESCRIPTION="Lightweight audio player"
 HOMEPAGE="http://code.google.com/p/gejengel"
@@ -35,7 +35,7 @@ DEPEND="${RDEPEND}
 src_configure() {
 	econf \
 		--disable-dependency-tracking \
-		--disable-static \
+		--disable-shared \
 		$(use_enable syslog logging) \
 		$(use_enable debug) \
 		$(use_enable openal) \
@@ -53,5 +53,5 @@ src_configure() {
 src_install() {
 	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS ChangeLog README TODO
-	find "${D}"/usr/$(get_libdir) -name '*.la' -delete
+	rm -f "${D}"/usr/$(get_libdir)/libgejengel.{a,la}
 }
