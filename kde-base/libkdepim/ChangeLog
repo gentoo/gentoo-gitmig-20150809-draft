@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/libkdepim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.129 2009/09/01 16:14:14 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libkdepim/ChangeLog,v 1.130 2009/10/02 23:18:15 jmbsvicetto Exp $
+
+*libkdepim-4.3.1-r1 (02 Oct 2009)
+
+  02 Oct 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +libkdepim-4.3.1-r1.ebuild, +files/libkdepim-4.3.1-ldap_crash.diff:
+  Moved updated kdm ebuild from kde-testing overlay to the tree - thanks to
+  Maciej Mrozowski (reavertm).
+  Added patch to supposedly fix LDAP crashes introduced in 4.3.1.
 
 *libkdepim-4.3.1 (01 Sep 2009)
 
