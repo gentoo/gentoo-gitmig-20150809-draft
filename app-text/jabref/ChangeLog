@@ -1,6 +1,12 @@
 # ChangeLog for app-text/jabref
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.79 2009/08/02 10:32:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref/ChangeLog,v 1.80 2009/10/02 20:30:13 caster Exp $
+
+*jabref-2.6_beta (02 Oct 2009)
+
+  02 Oct 2009; Vlastimil Babka <caster@gentoo.org> -jabref-2.4.2.ebuild,
+  +jabref-2.6_beta.ebuild:
+  Version bump. Add association to bib files to the .desktop entry.
 
   02 Aug 2009; Markus Meier <maekke@gentoo.org> jabref-2.5.ebuild:
   amd64/x86 stable, bug #279666
