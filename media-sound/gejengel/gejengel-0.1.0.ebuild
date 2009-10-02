@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.5 2009/08/13 20:43:32 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gejengel/gejengel-0.1.0.ebuild,v 1.6 2009/10/02 14:04:35 ssuominen Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit eutils
 
 DESCRIPTION="Lightweight audio player"
@@ -35,23 +34,24 @@ DEPEND="${RDEPEND}
 
 src_configure() {
 	econf \
-	--disable-dependency-tracking \
-	--disable-shared \
-	$(use_enable syslog logging) \
-	$(use_enable debug) \
-	$(use_enable openal) \
-	$(use_enable audioscrobbler lastfm) \
-	$(use_enable dbus) \
-	$(use_enable libnotify) \
-	$(use_enable mad) \
-	$(use_enable flac) \
-	$(use_enable ffmpeg) \
-	$(use_enable alsa) \
-	$(use_enable pulseaudio) \
-	--disable-unittests
+		--disable-dependency-tracking \
+		--disable-static \
+		$(use_enable syslog logging) \
+		$(use_enable debug) \
+		$(use_enable openal) \
+		$(use_enable audioscrobbler lastfm) \
+		$(use_enable dbus) \
+		$(use_enable libnotify) \
+		$(use_enable mad) \
+		$(use_enable flac) \
+		$(use_enable ffmpeg) \
+		$(use_enable alsa) \
+		$(use_enable pulseaudio) \
+		--disable-unittests
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed."
-	dodoc AUTHORS ChangeLog README TODO || die "dodoc failed"
+	emake DESTDIR="${D}" install || die
+	dodoc AUTHORS ChangeLog README TODO
+	find "${D}"/usr/$(get_libdir) -name '*.la' -delete
 }
