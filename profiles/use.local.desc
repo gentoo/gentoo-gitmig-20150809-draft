@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4859 2009/10/01 18:27:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4860 2009/10/02 00:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1535,6 +1535,7 @@ media-libs/swfdec:gstreamer - Enable media-libs/gstreamer to support various med
 media-libs/swfdec:gtk - Enable GTK+ convenience library while is necessary for all GTK+ apps using swfdec (gnome-extra/swfdec-gnome and www-plugins/swfdec-mozilla)
 media-libs/swfdec:oss - Use Open Sound System for audio output
 media-libs/swfdec:pulseaudio - Use media-sound/pulseaudio for audio output
+media-libs/taglib:static-libs - Build static libs
 media-libs/urt:gs - Add support for postscript
 media-libs/win32codecs:real - Installs the real video codecs
 media-libs/xine-lib:dxr3 -  Enable support for DXR3 mpeg accelleration cards. 
