@@ -1,10 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r2.ebuild,v 1.1 2009/09/23 14:10:37 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-145-r2.ebuild,v 1.2 2009/10/02 11:30:20 zzam Exp $
 
 EAPI="1"
 
 inherit eutils flag-o-matic multilib toolchain-funcs linux-info
+
+PATCHSET=${P}-gentoo-patchset
 
 if [[ ${PV} == "9999" ]]; then
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/hotplug/udev.git"
@@ -12,7 +14,7 @@ if [[ ${PV} == "9999" ]]; then
 	inherit git autotools
 else
 	SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2
-		mirror://gentoo/${P}-gentoo-patchset.tar.bz2"
+		mirror://gentoo/${PATCHSET}.tar.bz2"
 fi
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
 HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
@@ -26,7 +28,7 @@ COMMON_DEPEND="selinux? ( sys-libs/libselinux )
 	extras? (
 		sys-apps/acl
 		>=sys-apps/usbutils-0.82
-		dev-libs/libusb
+		virtual/libusb:0
 		sys-apps/pciutils
 		dev-libs/glib:2
 	)
@@ -133,9 +135,8 @@ src_unpack() {
 	# patches go here...
 
 	# backport some patches
-	EPATCH_SOURCE="${WORKDIR}/${P}-gentoo-patchset" EPATCH_SUFFIX="patch" \
+	EPATCH_SOURCE="${WORKDIR}/${PATCHSET}" EPATCH_SUFFIX="patch" \
 	        EPATCH_FORCE="yes" epatch
-	#epatch "${WORKDIR}/${P}-gentoo-patchset"/*.patch
 
 	if ! use devfs-compat; then
 		# see Bug #269359
