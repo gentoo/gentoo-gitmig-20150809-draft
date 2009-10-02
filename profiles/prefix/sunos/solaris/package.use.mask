@@ -1,7 +1,3 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.use.mask,v 1.1 2009/09/30 10:57:42 haubi Exp $
-
-# Michael Haubenwallner <haubi@gentoo.org> (30 Sep 2009)
-# solaris does have some libuuid (#230981).
-x11-libs/libSM -uuid
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/sunos/solaris/package.use.mask,v 1.2 2009/10/02 13:50:51 haubi Exp $
