@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-stopwatch-plugin/xfce4-stopwatch-plugin-0.2.0.ebuild,v 1.2 2009/08/24 14:13:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-stopwatch-plugin/xfce4-stopwatch-plugin-0.2.0.ebuild,v 1.3 2009/10/02 11:50:25 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
 
 DESCRIPTION="panel plugin that keeps track of elapsed time"
 HOMEPAGE="http://goodies.xfce.org/projects/panel-plugins/xfce4-stopwatch-plugin"
-SRC_URI="http://archive.xfce.org/src/panel-plugins/${PN}/0.2/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/panel-plugins/${PN}/0.2/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"

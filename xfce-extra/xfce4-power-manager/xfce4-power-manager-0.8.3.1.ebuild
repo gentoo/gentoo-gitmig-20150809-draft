@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.3.1.ebuild,v 1.3 2009/09/07 15:20:50 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-0.8.3.1.ebuild,v 1.4 2009/10/02 11:51:30 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
 
 DESCRIPTION="Power manager for Xfce4"
 HOMEPAGE="http://goodies.xfce.org/projects/applications/xfce4-power-manager"
-SRC_URI="http://archive.xfce.org/src/apps/${PN}/0.8/${P}.tar.bz2"
+SRC_URI="mirror://xfce/src/apps/${PN}/0.8/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
