@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.1 2009/10/01 11:51:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-9999.ebuild,v 1.2 2009/10/02 14:29:23 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs subversion
@@ -80,8 +80,11 @@ src_unpack() {
 }
 
 src_prepare() {
-	# Needed until we add back "rootdir=.", see below
-	for i in app webkit third_party/ffmpeg build/util base chrome v8/tools/gyp
+	# Needed until we add back "rootdir=${S}", see below
+	for i in app webkit third_party/ffmpeg build/util \
+		base chrome v8/tools/gyp \
+		native_client/src/trusted/validator_*/ \
+		native_client/src/trusted/service_runtime/arch/*/
 	do
 		ln -s "${S}"/out ${i}/out
 	done
@@ -130,7 +133,7 @@ src_compile() {
 	# Broken for "Argument list too long":
 	# http://code.google.com/p/chromium/issues/detail?id=19854
 	# http://code.google.com/p/gyp/issues/detail?id=71
-	# When this is fixed, remove the src_prepare
+	# When this is fixed, remove the src_prepare symlinks
 	# and add back "rootdir=${S}"
 	emake -r V=1 chrome chrome_sandbox BUILDTYPE=Release \
 		CC=$(tc-getCC) \
