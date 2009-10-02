@@ -1,12 +1,13 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.45 2009/10/02 15:04:23 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.46 2009/10/02 16:39:41 wired Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
 # Ben de Groot <yngwin@gentoo.org>,
 # Markos Chandras <hwoarang@gentoo.org>,
 # Caleb Tennis <caleb@gentoo.org>
+# Alex Alexander <wired@gentoo.org>
 # @BLURB: Eclass for Qt4 split ebuilds.
 # @DESCRIPTION:
 # This eclass contains various functions that are used when building Qt4
@@ -305,9 +306,9 @@ standard_configure_options() {
 		$([[ ${PN} == qt-xmlpatterns ]] || echo -no-exceptions)
 		-reduce-relocations -nomake examples -nomake demos"
 
-	# Make eclass 4.5.{1,2} ready
+	# Make eclass 4.5.x ready
 	case "${MY_PV}" in
-		4.5.1 | 4.5.2)
+		4.5.?)
 			myconf="${myconf} -opensource"
 			;;
 	esac
