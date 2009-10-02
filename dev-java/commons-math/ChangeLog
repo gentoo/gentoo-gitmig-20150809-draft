@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/commons-math
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-math/ChangeLog,v 1.1 2009/10/02 18:15:45 weaver Exp $
+
+*commons-math-2.0 (02 Oct 2009)
+*commons-math-1.2 (02 Oct 2009)
+
+  02 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +commons-math-1.2.ebuild, +commons-math-2.0.ebuild:
+  Import from Java overlay and rewrite
+
