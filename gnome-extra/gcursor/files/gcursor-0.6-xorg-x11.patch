@@ -1,6 +1,7 @@
-diff -ur gcursor-0.061/src/gcursor.c gcursor-0.061-patched/src/gcursor.c
---- gcursor-0.061/src/gcursor.c	2004-08-26 18:35:55.000000000 +0800
-+++ gcursor-0.061-patched/src/gcursor.c	2005-02-28 18:19:45.350300576 +0800
+Fix xcursors path, http://bugs.gentoo.org/83450
+
+--- gcursor-0.061/src/gcursor.c
++++ gcursor-0.061/src/gcursor.c
 @@ -32,6 +32,7 @@
  
  #warning move this into gconf
