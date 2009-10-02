@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.10.ebuild,v 1.1 2009/10/01 22:07:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/mod_security-2.5.10.ebuild,v 1.2 2009/10/02 10:46:58 flameeyes Exp $
 
 inherit apache-module autotools
 
@@ -34,6 +34,7 @@ src_unpack() {
 
 	cd "${S}"/apache2
 
+	epatch "${FILESDIR}"/${P}-broken-autotools.patch
 	epatch "${FILESDIR}"/${P}-as-needed.patch
 
 	eautoreconf

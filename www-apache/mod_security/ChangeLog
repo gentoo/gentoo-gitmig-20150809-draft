@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_security
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.28 2009/10/01 22:07:37 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_security/ChangeLog,v 1.29 2009/10/02 10:46:58 flameeyes Exp $
+
+  02 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  mod_security-2.5.10.ebuild,
+  +files/mod_security-2.5.10-broken-autotools.patch:
+  Ooops, fix the missing broken autotools correction.
 
 *mod_security-2.5.10 (01 Oct 2009)
 
