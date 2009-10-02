@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/gmpc-mdcover
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.26 2009/06/09 19:07:38 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gmpc-mdcover/ChangeLog,v 1.27 2009/10/02 10:36:08 ssuominen Exp $
+
+*gmpc-mdcover-0.19.0 (02 Oct 2009)
+
+  02 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  +gmpc-mdcover-0.19.0.ebuild:
+  Version bump wrt #287200, thanks to Nick Bowler for reporting.
 
   09 Jun 2009; Christian Faulhammer <fauli@gentoo.org>
   gmpc-mdcover-0.18.0.ebuild:
