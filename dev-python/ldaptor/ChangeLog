@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/ldaptor
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.29 2009/09/27 18:36:08 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldaptor/ChangeLog,v 1.30 2009/10/02 02:16:49 arfrever Exp $
+
+  02 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  ldaptor-0.0.43.ebuild:
+  Fix tests.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> ldaptor-0.0.43.ebuild:
   ppc stable #284767
