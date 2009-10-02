@@ -1,6 +1,11 @@
 # ChangeLog for sys-process/iotop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.16 2009/09/24 13:56:48 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/iotop/ChangeLog,v 1.17 2009/10/02 15:23:49 darkside Exp $
+
+*iotop-0.3.2 (02 Oct 2009)
+
+  02 Oct 2009; Jeremy Olexa <darkside@gentoo.org> +iotop-0.3.2.ebuild:
+  Version bump, small fixes: http://guichaz.free.fr/iotop/NEWS
 
   24 Sep 2009; Raúl Porcel <armin76@gentoo.org> iotop-0.3.1.ebuild:
   Add ~ia64 wrt #282973
