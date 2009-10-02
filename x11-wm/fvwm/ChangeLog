@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.163 2009/09/25 10:23:23 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.164 2009/10/02 17:29:14 armin76 Exp $
+
+  02 Oct 2009; Raúl Porcel <armin76@gentoo.org> fvwm-2.5.27-r1.ebuild:
+  ia64 stable wrt #266937
 
   25 Sep 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   -files/fvwm-2.5.23-translucent-menus.diff:
