@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.29 2009/10/01 22:36:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.30 2009/10/02 04:56:24 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -10,17 +10,18 @@
 # MOD_ICON - Custom icon for the mod, instead of the default
 # MOD_NAME - Creates a command-line wrapper and desktop icon for the mod
 # MOD_TBZ2 - File to extract within the Makeself archive
+# MOD_NO_DED - Set this non-empty if the mod doesn't have a server
 
 inherit eutils games
 
-EXPORT_FUNCTIONS pkg_setup src_unpack src_install pkg_postinst
+EXPORT_FUNCTIONS src_unpack src_install pkg_postinst
 
 [[ -z ${GAME} ]] && GAME=${PN%%-*}
 
 # Set our default title, icon, and cli options
-case "${GAME}" in
-	"doom3")
-		RDEPEND="games-fps/doom3"
+case ${GAME} in
+	doom3)
+		GAME_PKGS="games-fps/doom3"
 		GAME_TITLE="Doom 3"
 		DEFAULT_MOD_ICON="doom3"
 		SELECT_MOD="+set fs_game "
@@ -29,8 +30,8 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		DED_CFG_DIR=".doom3"
 		;;
-	"enemy-territory")
-		RDEPEND="games-fps/enemy-territory"
+	enemy-territory)
+		GAME_PKGS="games-fps/enemy-territory"
 		GAME_TITLE="Enemy Territory"
 		DEFAULT_MOD_ICON="ET"
 		SELECT_MOD="+set fs_game "
@@ -39,8 +40,8 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		DED_CFG_DIR=".etwolf"
 		;;
-	"quake3")
-		RDEPEND="|| ( games-fps/quake3 games-fps/quake3-bin )"
+	quake3)
+		GAME_PKGS="games-fps/quake3 games-fps/quake3-bin"
 		GAME_TITLE="Quake III"
 		DEFAULT_MOD_ICON="quake3"
 		SELECT_MOD="+set fs_game "
@@ -49,8 +50,8 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		DED_CFG_DIR=".q3a"
 		;;
-	"quake4")
-		RDEPEND="games-fps/quake4-bin"
+	quake4)
+		GAME_PKGS="games-fps/quake4-bin"
 		GAME_TITLE="Quake 4"
 		DEFAULT_MOD_ICON="/usr/share/pixmaps/quake4.bmp"
 		SELECT_MOD="+set fs_game "
@@ -59,8 +60,8 @@ case "${GAME}" in
 		DED_OPTIONS="+set dedicated 1 +exec server.cfg"
 		DED_CFG_DIR=".quake4"
 		;;
-	"ut2003")
-		RDEPEND="games-fps/ut2003"
+	ut2003)
+		GAME_PKGS="games-fps/ut2003"
 		GAME_TITLE="UT2003"
 		DEFAULT_MOD_ICON="ut2003"
 		SELECT_MOD="-mod="
@@ -69,8 +70,8 @@ case "${GAME}" in
 		DED_OPTIONS=""
 		DED_CFG_DIR=""
 		;;
-	"ut2004")
-		RDEPEND="games-fps/ut2004"
+	ut2004)
+		GAME_PKGS="games-fps/ut2004"
 		GAME_TITLE="UT2004"
 		DEFAULT_MOD_ICON="ut2004"
 		SELECT_MOD="-mod="
@@ -86,45 +87,54 @@ case "${GAME}" in
 		;;
 esac
 
+games-mods_get_rdepend() {
+	[[ $# -lt 1 ]] && die "${FUNCNAME}: need args"
+	[[ $# -gt 1 ]] && echo -n "|| ( "
+
+	case ${EAPI:-0} in
+		0|1) echo -n $@ ;;
+		2)
+			local pkg
+			for pkg in $@ ; do
+				if [[ -z ${MOD_NO_DED} ]] ; then
+					echo -n " ${pkg}[dedicated=,opengl=]"
+				else
+					echo -n " ${pkg}[opengl]"
+				fi
+			done
+			;;
+	esac
+
+	[[ $# -gt 1 ]] && echo -n " )"
+}
+
 DESCRIPTION="${GAME_TITLE} ${MOD_NAME} - ${MOD_DESC}"
 
 SLOT="0"
 RESTRICT="mirror strip"
 
 DEPEND="app-arch/unzip"
+RDEPEND="$(games-mods_get_rdepend ${GAME_PKGS})"
 
 S=${WORKDIR}
 
 dir=${GAMES_DATADIR}/${GAME}
 
-default_client() {
+games-mods_use_opengl() {
+	[[ -n ${MOD_NO_DED} ]] && return 0
+
 	if use opengl || ! use dedicated ; then
 		# Use opengl by default
 		return 0
 	fi
+
 	return 1
 }
 
-games-mods_pkg_setup() {
-	[[ -z "${MOD_NAME}" ]] && die "what is the name of this mod?"
+games-mods_use_dedicated() {
+	[[ -n ${MOD_NO_DED} ]] && return 1
 
-	games_pkg_setup
-
-	if has_version ${CATEGORY}/${GAME} ; then
-		if use dedicated && ! built_with_use ${CATEGORY}/${GAME} dedicated ; then
-			die "You must merge ${CATEGORY}/${GAME} with USE=dedicated!"
-		fi
-		if has_version ${CATEGORY}/${GAME}-bin ; then
-			if use dedicated && \
-			! built_with_use ${CATEGORY}/${GAME}-bin dedicated ; then
-				die "You must merge ${CATEGORY}/${GAME}-bin with USE=dedicated!"
-			fi
-		fi
-	elif has_version ${CATEGORY}/${GAME}-bin ; then
-		if use dedicated && ! built_with_use ${CATEGORY}/${GAME}-bin dedicated ; then
-			die "You must merge ${CATEGORY}/${GAME}-bin with USE=dedicated!"
-		fi
-	fi
+	use dedicated && return 0 || return 1
 }
 
 games-mods_src_unpack() {
@@ -188,7 +198,7 @@ games-mods_src_install() {
 		fi
 	done
 
-	if default_client ; then
+	if games-mods_use_opengl ; then
 		if [[ -n "${MOD_ICON}" ]] ; then
 			# Install custom icon
 			MOD_ICON_EXT=${MOD_ICON##*.}
@@ -340,7 +350,7 @@ games-mods_src_install() {
 		fi
 	fi
 
-	if use dedicated ; then
+	if games-mods_use_dedicated ; then
 		if [[ -f ${FILESDIR}/server.cfg ]] ; then
 			insinto "${GAMES_SYSCONFDIR}"/${GAME}/${MOD_DIR}
 			doins "${FILESDIR}"/server.cfg || die "Copying server config"
@@ -360,7 +370,7 @@ games-mods_src_install() {
 
 games-mods_pkg_postinst() {
 	games_pkg_postinst
-	if default_client ; then
+	if games-mods_use_opengl ; then
 		if [[ -n "${MOD_BINS}" ]] ; then
 			for binary in ${MOD_BINS} ; do
 				elog "To play this mod run:"
@@ -373,7 +383,7 @@ games-mods_pkg_postinst() {
 			echo
 		fi
 	fi
-	if use dedicated ; then
+	if games-mods_use_dedicated ; then
 		elog "To launch a dedicated server run:"
 		elog " ${GAME_EXE}-${MOD_DIR}-ded"
 		echo
