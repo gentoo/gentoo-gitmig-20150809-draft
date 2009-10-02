@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.1.ebuild,v 1.1 2009/10/01 18:39:08 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.1.ebuild,v 1.2 2009/10/02 00:14:09 weaver Exp $
 
 EAPI="2"
 
@@ -46,7 +46,7 @@ CDEPEND="dev-perl/Data-Stag
 		dev-perl/Convert-Binary-C
 		dev-perl/SVG-Graph
 	)
-	graphviz? ( dev-perl/GraphViz[perl] )
+	graphviz? ( dev-perl/GraphViz )
 	sqlite? ( dev-perl/DBD-SQLite )"
 DEPEND="virtual/perl-Module-Build
 	${CDEPEND}"
