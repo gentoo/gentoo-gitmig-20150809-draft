@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.175 2009/09/01 15:21:57 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/ChangeLog,v 1.176 2009/10/02 22:32:54 jmbsvicetto Exp $
+
+*kdm-4.3.1-r1 (02 Oct 2009)
+
+  02 Oct 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +kdm-4.3.1-r1.ebuild, +files/kdm-4-gentoo-xinitrc.d.patch, metadata.xml:
+  Moved updated kdm ebuild from kde-testing overlay to the tree - thanks to
+  Maciej Mrozowski (reavertm).
+  Added Fabio kdm patch to 4.3.1 version (invoke xinirc.d scripts).
 
 *kdm-4.3.1 (01 Sep 2009)
 
