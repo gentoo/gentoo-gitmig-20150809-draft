@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre1.ebuild,v 1.17 2009/09/26 13:38:17 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.7.0_pre1.ebuild,v 1.18 2009/10/02 18:26:25 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -14,7 +14,7 @@ SRC_URI="http://www.midnight-commander.org/downloads/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc x86 ~x86-fbsd"
-IUSE="chdir gpm nls samba +slang X"
+IUSE="gpm nls samba +slang X"
 
 RDEPEND=">=dev-libs/glib-2.6:2
 	gpm? ( sys-libs/gpm )
@@ -63,10 +63,11 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
-	dodoc AUTHORS NEWS README
+	dodoc AUTHORS README
+}
 
-	if use chdir; then
-		insinto /etc/profile.d
-		doins "${FILESDIR}"/mc-chdir.sh
-	fi
+pkg_postinst() {
+	elog "To enable exiting to latest working directory at exit,"
+	elog "put this to your ~/.bashrc:"
+	elog ". /usr/libexec/mc/mc.sh"
 }
