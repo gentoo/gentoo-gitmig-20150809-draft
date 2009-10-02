@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ncurses-ruby
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.40 2009/09/27 15:47:27 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ncurses-ruby/ChangeLog,v 1.41 2009/10/02 23:17:00 tcunha Exp $
+
+  02 Oct 2009; Tiago Cunha <tcunha@gentoo.org> ncurses-ruby-1.2.3.ebuild:
+  stable sparc, bug 282596
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> ncurses-ruby-1.2.3.ebuild:
   ppc stable #282596
