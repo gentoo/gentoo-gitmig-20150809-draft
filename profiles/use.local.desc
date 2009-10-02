@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4862 2009/10/02 18:28:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4863 2009/10/02 22:27:42 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -226,6 +226,9 @@ app-emulation/bochs:debugger - Enable the bochs debugger
 app-emulation/e-uae:capslib - Add CAPS library support
 app-emulation/e-uae:sdl-sound - Use media-libs/sdl-sound for audio output
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library app-emulation/libdsk
+app-emulation/ganeti:drbd - Enable DRBD support
+app-emulation/ganeti:kvm - Enable KVM support
+app-emulation/ganeti:xen - Enable Xen support
 app-emulation/kvm:alsa - Enable alsa output for sound emulation
 app-emulation/kvm:esd - Enable esound output for sound emulation
 app-emulation/kvm:gnutls - Enable TLS support for the VNC console server
