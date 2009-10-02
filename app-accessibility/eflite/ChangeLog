@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/eflite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.26 2009/10/01 20:00:59 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/ChangeLog,v 1.27 2009/10/02 23:37:10 williamh Exp $
+
+  02 Oct 2009; William Hubbs <williamh@gentoo.org> eflite-0.4.1.ebuild,
+  metadata.xml:
+  Added the 16k_voice use flag for bug #286769.
+  Thanks to Chris Brannon for the patch.
 
   01 Oct 2009; Steve Dibb <beandog@gentoo.org> eflite-0.4.1.ebuild:
   amd64 stable, bug 281478
