@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/audacious-xosd
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.13 2008/06/02 11:17:57 joker Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/audacious-xosd/ChangeLog,v 1.14 2009/10/02 22:56:31 maekke Exp $
+
+  02 Oct 2009; Markus Meier <maekke@gentoo.org> audacious-xosd-0.9.ebuild:
+  amd64/x86 stable, bug #286784
 
   02 Jun 2008; Christian Birchinger <joker@gentoo.org>
   audacious-xosd-0.9.ebuild:
