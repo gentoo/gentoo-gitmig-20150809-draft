@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3-r1.ebuild,v 1.3 2009/10/01 19:27:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/hdf5-1.8.3-r1.ebuild,v 1.4 2009/10/02 16:09:26 bicatali Exp $
 
 EAPI=2
 inherit eutils autotools
@@ -27,12 +27,13 @@ DEPEND="${RDEPEND}
 	sys-process/time"
 
 pkg_setup() {
-	if use mpi && use cxx; then
-		ewarn "Simultaneous mpi and cxx is not supported by ${PN}"
-		ewarn "Will disable cxx interface"
-	fi
-	if use mpi && use fortran; then
-		export FC=mpif90
+	if use mpi; then
+		if use cxx; then
+			ewarn "Simultaneous mpi and cxx is not supported by ${PN}"
+			ewarn "Will disable cxx interface"
+		fi
+		export CC=mpicc
+		use fortran && export FC=mpif90
 	fi
 }
 
@@ -72,6 +73,7 @@ src_configure() {
 		--enable-production \
 		--enable-strict-format-checks \
 		--enable-deprecated-symbols \
+		--enable-shared \
 		$(use_enable fortran) \
 		$(use_enable mpi parallel) \
 		$(use_with szip szlib) \

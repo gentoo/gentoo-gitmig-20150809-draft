@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/hdf5
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.40 2009/10/01 19:27:44 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf5/ChangeLog,v 1.41 2009/10/02 16:09:26 bicatali Exp $
+
+  02 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> hdf5-1.8.3-r1.ebuild,
+  files/hdf5-1.8.3-destdir.patch:
+  Set CC=mpicc when building with mpi enabled (bug #286353), added
+  --enabled-shared which was disabled with mpi enabled (bug #287124), and
+  added slashes in destdir patch
 
   01 Oct 2009; Tobias Klausmann <klausman@gentoo.org> hdf5-1.8.3-r1.ebuild:
   Keyworded on alpha, bug #285148

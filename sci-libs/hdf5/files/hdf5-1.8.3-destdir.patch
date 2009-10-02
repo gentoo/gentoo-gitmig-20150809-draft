@@ -5,7 +5,7 @@
  # How to create EXAMPLEDIR if it doesn't already exist
  $(EXAMPLEDIR):
 -	-$(top_srcdir)/bin/mkdirs $@
-+	-$(top_srcdir)/bin/mkdirs $(DESTDIR)$@
++	-$(top_srcdir)/bin/mkdirs $(DESTDIR)/$@
  
  # Install and uninstall rules.  We install the source files, not the
  # example programs themselves.
@@ -14,15 +14,15 @@
  	@for f in X $(INSTALL_FILES); do                                     \
  	  if test $$f != X; then                                             \
 -	    (set -x; $(INSTALL) $(srcdir)/$$f $(EXAMPLEDIR)/. || exit 1);\
-+	    (set -x; $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(EXAMPLEDIR)/. || exit 1);\
++	    (set -x; $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)/$(EXAMPLEDIR)/. || exit 1);\
  	  fi;                                                                \
  	done
  
  uninstall-examples:
 -	@if test -n "$(INSTALL_FILES)" -a -d $(EXAMPLEDIR); then                                 \
 -	  set -x; cd $(EXAMPLEDIR) && $(RM) $(INSTALL_FILES);              \
-+	@if test -n "$(INSTALL_FILES)" -a -d $(DESTDIR)$(EXAMPLEDIR); then                                 \
-+	  set -x; cd $(DESTDIR)$(EXAMPLEDIR) && $(RM) $(INSTALL_FILES);              \
++	@if test -n "$(INSTALL_FILES)" -a -d $(DESTDIR)/$(EXAMPLEDIR); then                                 \
++	  set -x; cd $(DESTDIR)/$(EXAMPLEDIR) && $(RM) $(INSTALL_FILES);              \
          fi
  
  installcheck-local:
