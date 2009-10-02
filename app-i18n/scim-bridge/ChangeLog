@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/scim-bridge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.27 2009/08/15 13:20:59 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-bridge/ChangeLog,v 1.28 2009/10/02 22:31:32 matsuu Exp $
+
+*scim-bridge-0.4.16-r1 (02 Oct 2009)
+
+  02 Oct 2009; MATSUU Takuto <matsuu@gentoo.org>
+  -scim-bridge-0.4.15-r3.ebuild, -scim-bridge-0.4.15.2.ebuild,
+  +scim-bridge-0.4.16-r1.ebuild:
+  Fixed --disable-*-module issue, bug #280887. Removed old versions.
 
   15 Aug 2009; Petteri Räty <betelgeuse@gentoo.org>
   scim-bridge-0.4.16.ebuild:
