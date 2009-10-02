@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.8.ebuild,v 1.18 2009/09/28 15:48:57 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/libffi-3.0.8.ebuild,v 1.19 2009/10/02 19:53:34 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -19,7 +19,8 @@ DEPEND="!<dev-libs/g-wrap-1.9.11
 	test? ( dev-util/dejagnu )"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-fbsd.patch
+	epatch "${FILESDIR}"/${P}-fbsd.patch \
+		"${FILESDIR}"/${P}-autoconf-2.64.patch
 	eautoreconf
 }
 
