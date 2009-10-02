@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xzgv
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.33 2008/02/29 03:42:31 ranger Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/ChangeLog,v 1.34 2009/10/02 22:51:33 maekke Exp $
+
+  02 Oct 2009; Markus Meier <maekke@gentoo.org> xzgv-0.9.ebuild:
+  amd64/x86 stable, bug #286755
 
   29 Feb 2008; Brent Baude <ranger@gentoo.org> xzgv-0.9.ebuild:
   Marking xzgv-0.9 ~ppc64 for bug 211488
