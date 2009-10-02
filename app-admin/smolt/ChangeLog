@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/smolt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.3 2009/04/22 20:22:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/smolt/ChangeLog,v 1.4 2009/10/02 20:09:32 sping Exp $
+
+*smolt-1.4 (02 Oct 2009)
+
+  02 Oct 2009; Sebastian Pipping <sping@gentoo.org> +smolt-1.4.ebuild,
+  +files/smolt-1.4-upstream-docdir.patch,
+  +files/smolt-1.4-upstream-fix-gzip-calls.patch, metadata.xml:
+  Bump to version 1.4 (now qt4, gtk before), upgrade to EAPI 2, fix license
+  (GPL 2 or later), add more ' die' stuff. First commit to the tree ever,
+  don't shoot me please :-)
 
   22 Apr 2009; Markus Meier <maekke@gentoo.org> smolt-1.2:
   add ~amd64, bug #264012

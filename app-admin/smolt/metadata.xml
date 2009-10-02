@@ -3,7 +3,10 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>bangert@gentoo.org</email>
+	<email>bangert@gentoo.org</email>
+</maintainer>
+<maintainer>
+	<email>sping@gentoo.org</email>
 </maintainer>
 <longdescription lang="en">
 Smolt is a basic hardware profiler. Its intended to be a profiler to get automated information from users. 
