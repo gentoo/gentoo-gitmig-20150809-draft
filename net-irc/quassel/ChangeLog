@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/quassel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.61 2009/10/02 13:48:41 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/ChangeLog,v 1.62 2009/10/02 18:57:29 scarabeus Exp $
+
+  02 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  quassel-0.5_rc2.ebuild, -files/quassel-0.5_rc1-identity.cpp.patch:
+  Fix epatch issue. People dont be lazy use PATCHES array. I missed this one
+  thanks to it.
 
 *quassel-0.5_rc2 (02 Oct 2009)
 
