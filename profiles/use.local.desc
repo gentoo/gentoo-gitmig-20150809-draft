@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4861 2009/10/02 01:27:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4862 2009/10/02 18:28:17 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -392,7 +392,6 @@ app-misc/lcdproc:seamless-hbars - Try to avoid gaps in horizontal bars
 app-misc/lirc:hardware-carrier - The transmitter device generates its clock signal in hardware
 app-misc/lirc:transmitter - Add transmitter support to some lirc-drivers (e.g. serial)
 app-misc/mc:7zip - Add support for 7zip archives
-app-misc/mc:chdir - Change to latest working directory at exit
 app-misc/mc:edit - Build mcedit application
 app-misc/note:general - Add support for ascii flatfile backend
 app-misc/note:text - Add support for text backend
