@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.515 2009/10/02 21:51:17 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.516 2009/10/02 22:29:38 aballier Exp $
+
+  02 Oct 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.9999.ebuild:
+  Remove x264 patch merged upstream
 
   02 Oct 2009; Alexis Ballier <aballier@gentoo.org> vlc-1.0.2.ebuild:
   Add a patch to fix kate build on big endian hosts, by Mounir Lamouri
