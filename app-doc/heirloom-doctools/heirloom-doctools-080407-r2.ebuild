@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/heirloom-doctools/heirloom-doctools-080407-r2.ebuild,v 1.1 2009/10/02 21:34:47 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/heirloom-doctools/heirloom-doctools-080407-r2.ebuild,v 1.2 2009/10/02 22:19:28 flameeyes Exp $
 
 EAPI=2
 
@@ -139,6 +139,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	local manpkg
+
 	if has_version sys-apps/man; then
 		elog "To make proper use of heirloom-doctools with sys-apps/man you"
 		elog "need to make sure that /etc/man.conf is configured properly with"
@@ -154,6 +156,7 @@ pkg_postinst() {
 		elog "PIC             /usr/bin/pic"
 		elog "VGRIND          /usr/bin/vgrind"
 		elog "GRAP            /usr/bin/grap"
+		manpkg=sys-apps/man
 	elif has_version sys-apps/man-db; then
 		elog "To make proper use of heirloom-doctools with sys-apps/man you"
 		elog "need to make sure that /etc/man_db.conf is configured properly with"
@@ -169,5 +172,14 @@ pkg_postinst() {
 		elog "DEFINE  refer   refer"
 		elog "DEFINE  grap    grap"
 		elog "DEFINE  pic     pic"
+		elog
+		ewarn "The compatibility between heirloom-doctools and man-db is pretty limited"
+		ewarn "you've been warned. Your man pages might look nothing like you were used"
+		ewarn "to."
+		manpkg=sys-apps/man-db
 	fi
+	elog ""
+	elog "If you just switched from sys-apps/groff, please make sure to rebuild the"
+	elog "${manpkg} package, since there are build-time conditionals on the nroff"
+	elog "implementation available."
 }
