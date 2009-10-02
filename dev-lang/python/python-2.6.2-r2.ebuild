@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r2.ebuild,v 1.9 2009/10/01 20:03:52 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.2-r2.ebuild,v 1.10 2009/10/02 04:46:17 arfrever Exp $
 
 EAPI="2"
 
-inherit autotools eutils flag-o-matic libtool multilib pax-utils python toolchain-funcs versionator
+inherit autotools eutils flag-o-matic multilib pax-utils python toolchain-funcs versionator
 
 # We need this so that we don't depend on python.eclass.
 PYVER_MAJOR=$(get_major_version)
@@ -23,7 +23,7 @@ SRC_URI="http://www.python.org/ftp/python/${PV}/${MY_P}.tar.bz2
 
 LICENSE="PSF-2.2"
 SLOT="2.6"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~sparc-fbsd ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlite ssl +threads tk ucs2 wininst +xml"
 
 # NOTE: dev-python/{elementtree,celementtree,pysqlite,ctypes}
@@ -31,6 +31,7 @@ IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlit
 
 RDEPEND=">=app-admin/eselect-python-20090606
 		>=sys-libs/zlib-1.1.3
+		virtual/libffi
 		!build? (
 			berkdb? ( || (
 				sys-libs/db:4.7
@@ -50,10 +51,9 @@ RDEPEND=">=app-admin/eselect-python-20090606
 			ssl? ( dev-libs/openssl )
 			tk? ( >=dev-lang/tk-8.0 )
 			xml? ( >=dev-libs/expat-2 )
-		)
-		!m68k? ( !sparc-fbsd? ( virtual/libffi ) )"
+		)"
 DEPEND="${RDEPEND}
-		!m68k? ( !sparc-fbsd? ( dev-util/pkgconfig ) )"
+		dev-util/pkgconfig"
 RDEPEND+=" !build? ( app-misc/mime-types )"
 PDEPEND="app-admin/python-updater"
 
@@ -70,9 +70,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Ensure that internal copy of libffi isn't used.
-	if ! use m68k && ! use sparc-fbsd; then
-		rm -fr Modules/_ctypes/libffi*
-	fi
+	rm -fr Modules/_ctypes/libffi*
 
 	if tc-is-cross-compiler; then
 		epatch "${FILESDIR}/python-2.5-cross-printf.patch"
@@ -145,15 +143,6 @@ src_configure() {
 
 	export OPT="${CFLAGS}"
 
-	local myconf
-
-	# Super-secret switch. Don't use this unless you know what you're
-	# doing. Enabling UCS2 support will break your existing python
-	# modules
-	use ucs2 \
-		&& myconf+=" --enable-unicode=ucs2" \
-		|| myconf+=" --enable-unicode=ucs4"
-
 	filter-flags -malign-double
 
 	[[ "${ARCH}" == "alpha" ]] && append-flags -fPIC
@@ -185,19 +174,16 @@ src_configure() {
 	# Please query BSD team before removing this!
 	append-ldflags "-L."
 
-	if ! use m68k && ! use sparc-fbsd; then
-		myconf+=" --with-system-ffi"
-	fi
-
 	econf \
 		--with-fpectl \
 		--enable-shared \
 		$(use_enable ipv6) \
 		$(use_with threads) \
+		$(use ucs2 && echo "--enable-unicode=ucs2" || echo "--enable-unicode=ucs4") \
 		--infodir='${prefix}'/share/info \
 		--mandir='${prefix}'/share/man \
 		--with-libc='' \
-		${myconf}
+		--with-system-ffi
 }
 
 src_test() {
