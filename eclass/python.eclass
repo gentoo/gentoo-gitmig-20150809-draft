@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.75 2009/10/02 17:32:23 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/python.eclass,v 1.76 2009/10/02 23:09:08 arfrever Exp $
 
 # @ECLASS: python.eclass
 # @MAINTAINER:
@@ -110,7 +110,7 @@ PYTHON() {
 
 # @FUNCTION: validate_PYTHON_ABIS
 # @DESCRIPTION:
-# Make sure PYTHON_ABIS variable has valid value.
+# Ensure that PYTHON_ABIS variable has valid value.
 validate_PYTHON_ABIS() {
 	# Ensure that some functions cannot be accidentally successfully used in EAPI <= 2 without setting SUPPORT_PYTHON_ABIS variable.
 	if has "${EAPI:-0}" 0 1 2 && [[ -z "${SUPPORT_PYTHON_ABIS}" ]]; then
@@ -173,7 +173,9 @@ validate_PYTHON_ABIS() {
 				ewarn "USE_PYTHON variable doesn't enable any version of Python 3. This configuration is unsupported."
 			fi
 		else
-			local python2_version= python3_version= support_python_major_version
+			local python_version python2_version= python3_version= support_python_major_version
+
+			python_version="$(/usr/bin/python -c 'from sys import version_info; print(".".join([str(x) for x in version_info[:2]]))')"
 
 			if has_version "=dev-lang/python-2*"; then
 				if [[ "$(readlink /usr/bin/python2)" != "python2."* ]]; then
@@ -227,6 +229,12 @@ validate_PYTHON_ABIS() {
 				else
 					python3_version=""
 				fi
+			fi
+
+			if ! has "${python_version}" "${python2_version}" "${python3_version}"; then
+				eerror "Python wrapper is configured incorrectly or /usr/bin/python2 or /usr/bin/python3 symlink"
+				eerror "is set incorrectly. Use \`eselect python\` to fix configuration."
+				die "Incorrect configuration of Python"
 			fi
 
 			PYTHON_ABIS="${python2_version} ${python3_version}"
@@ -557,6 +565,13 @@ if ! has "${EAPI:-0}" 0 1 && [[ -n ${PYTHON_USE_WITH} || -n ${PYTHON_USE_WITH_OR
 			else
 				python_version
 				pyatom="dev-lang/python:${PYVER}"
+			fi
+
+			# Workaround for older versions of Portage.
+			# has_version() calls portageq which is implemented in Python.
+			if has_version "=dev-lang/python-2*"; then
+				local EPYTHON
+				export EPYTHON="$(readlink /usr/bin/python2)"
 			fi
 
 			for use in ${PYTHON_USE_WITH}; do
