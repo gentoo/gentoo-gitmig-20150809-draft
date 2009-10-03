@@ -1,0 +1,10 @@
+# ChangeLog for app-text/podofo
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/podofo/ChangeLog,v 1.1 2009/10/03 20:58:06 zmedico Exp $
+
+*podofo-0.7.0 (03 Oct 2009)
+
+  03 Oct 2009; Zac Medico <zmedico@gentoo.org> +podofo-0.7.0.ebuild,
+  +metadata.xml:
+  Initial import, based off of ebuild from kde-testing overlay.
+
