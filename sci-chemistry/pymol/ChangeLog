@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/pymol
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.45 2009/09/09 21:51:57 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol/ChangeLog,v 1.46 2009/10/03 11:28:03 betelgeuse Exp $
+
+  03 Oct 2009; Petteri Räty <betelgeuse@gentoo.org> -pymol-1.1-r2.ebuild:
+  Remove old version with built_with_use. Fixes bug #285463.
 
   09 Sep 2009; Markus Meier <maekke@gentoo.org> pymol-1.2.1.ebuild:
   amd64/x86 stable, bug #283639
@@ -250,12 +253,12 @@
   new version, (#13531)
   removed -funroll-loops from CFLAGS
 
-*pymol-0.82 (17 July 2002)
+*pymol-0.82 (17 Jul 2002)
 
   19 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> pymol-0.82.ebuild :
   Updated to mirror://sourceforge in SRC_URI.
 
-  17 July 2002; George Shapovalov <george@gentoo.org> pymol-0.82.ebuild, files/digest-pymol-0.82, ChangeLog :
+  17 Jul 2002; George Shapovalov <george@gentoo.org> pymol-0.82.ebuild, files/digest-pymol-0.82, ChangeLog :
 
   Inital release,
   molecular visualization package
