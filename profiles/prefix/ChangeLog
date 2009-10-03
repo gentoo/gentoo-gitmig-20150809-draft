@@ -1,6 +1,10 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.99 2009/10/02 15:46:55 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.100 2009/10/03 19:18:10 grobian Exp $
+
+  03 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  sunos/solaris/5.10/x86/package.use.mask:
+  unmask netpbm:jpeg2k on Solaris, the issue has been fixed
 
   02 Oct 2009; Michael Haubenwallner <haubi@gentoo.org>
   +sunos/solaris/5.9/package.use.force:
