@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.14-r1.ebuild,v 1.1 2009/10/01 03:14:01 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.1 2009/10/03 21:08:37 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -34,7 +34,7 @@ SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
 	>=sys-apps/help2man-1.36.4
-	|| ( app-text/podofo >=app-text/pdftk-1.12 )"
+	app-text/podofo"
 
 RDEPEND="$SHARED_DEPEND
 	>=dev-python/reportlab-2.1"
@@ -66,6 +66,10 @@ src_install() {
 
 	grep -rlZ "${D}" "${D}" | xargs -0 sed -e "s:${D}:/:g" -i ||
 		die "failed to fix harcoded \$D in paths"
+
+	# Python modules are no longer installed in
+	# site-packages, so remove empty dirs.
+	find "${D}$(python_get_libdir)" -type d -empty -delete
 
 	# This code may fail if behavior of --root, --bindir or
 	# --sharedir changes in the future.

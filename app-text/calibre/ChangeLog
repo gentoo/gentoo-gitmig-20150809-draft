@@ -1,6 +1,13 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.50 2009/10/02 18:56:22 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.51 2009/10/03 21:08:37 zmedico Exp $
+
+*calibre-0.6.16-r1 (03 Oct 2009)
+
+  03 Oct 2009; Zac Medico <zmedico@gentoo.org> -calibre-0.6.14-r1.ebuild,
+  -calibre-0.6.16.ebuild, +calibre-0.6.16-r1.ebuild:
+  Revbump to add missing podofo dep for bug #287492. Also, remove old
+  ebuilds.
 
 *calibre-0.6.16 (02 Oct 2009)
 
