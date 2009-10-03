@@ -1,6 +1,6 @@
 # Copyright 2007-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.46 2009/10/02 16:39:41 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build.eclass,v 1.47 2009/10/03 19:29:04 ayoy Exp $
 
 # @ECLASS: qt4-build.eclass
 # @MAINTAINER:
@@ -326,7 +326,9 @@ build_directories() {
 		cd "${S}"/${x}
 		sed -i -e "s:\$\$\[QT_INSTALL_LIBS\]:/usr/$(get_libdir)/qt4:g" $(find "${S}" -name '*.pr[io]') "${S}"/mkspecs/common/linux.conf || die
 		"${S}"/bin/qmake "LIBS+=-L${QTLIBDIR}" "CONFIG+=nostrip" || die "qmake failed"
-		emake || die "emake failed"
+		emake CC="@echo compiling \$< && $(tc-getCC)" \
+			CXX="@echo compiling \$< && $(tc-getCXX)" \
+			LINK="@echo linking \$@ && $(tc-getCXX)" || die "emake failed"
 	done
 }
 
