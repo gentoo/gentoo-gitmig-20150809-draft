@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3339 2009/10/03 07:19:41 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3340 2009/10/03 11:02:48 flameeyes Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  03 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org> package.mask:
+  Mask stuff that forces Python-3 down the throat of users. Don't remove the
+  mask without discussion if you don't want to have QA on your track. Feel
+  free to add more stuff as needed though.
 
   03 Oct 2009; Rémi Cardona <remi@gentoo.org> package.mask:
   fix xorg-server 1.7 package.mask entry, stab scarabeus
