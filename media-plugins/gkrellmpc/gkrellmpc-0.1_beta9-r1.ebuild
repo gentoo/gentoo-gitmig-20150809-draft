@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/gkrellmpc-0.1_beta9-r1.ebuild,v 1.4 2009/07/16 19:48:07 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gkrellmpc/gkrellmpc-0.1_beta9-r1.ebuild,v 1.5 2009/10/03 10:02:16 ssuominen Exp $
 
 EAPI=2
 inherit eutils gkrellm-plugin toolchain-funcs
@@ -18,13 +18,17 @@ RDEPEND=">=app-admin/gkrellm-2
 	net-misc/curl"
 DEPEND="${RDEPEND}"
 
+# Will open gkrellm in X11 display
+RESTRICT="test"
+
 src_prepare() {
+	sed -i -e 's:gkrellm2 -p:gkrellm -p:' Makefile || die
 	use threads && epatch "${FILESDIR}"/${P}-mt.patch
 }
 
 src_compile() {
 	tc-export CC
-	emake || die "emake failed"
+	emake || die
 }
 
 pkg_postinst() {
