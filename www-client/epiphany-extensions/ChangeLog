@@ -1,6 +1,10 @@
 # ChangeLog for www-client/epiphany-extensions
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.115 2009/10/01 06:21:19 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany-extensions/ChangeLog,v 1.116 2009/10/03 14:21:09 klausman Exp $
+
+  03 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  epiphany-extensions-2.26.1.ebuild:
+  Stable on alpha, bug #282177
 
   01 Oct 2009; Nirbheek Chauhan <nirbheek@gentoo.org>
   epiphany-extensions-2.26.1.ebuild:
