@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.3.ebuild,v 1.2 2009/10/03 17:09:20 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.6.3.ebuild,v 1.3 2009/10/03 17:46:55 arfrever Exp $
 
 EAPI="2"
 
@@ -31,8 +31,8 @@ IUSE="-berkdb build doc elibc_uclibc examples gdbm ipv6 +ncurses +readline sqlit
 
 RDEPEND=">=app-admin/eselect-python-20090606
 		>=sys-libs/zlib-1.1.3
-		virtual/libintl
 		virtual/libffi
+		virtual/libintl
 		!build? (
 			berkdb? ( || (
 				sys-libs/db:4.7
@@ -56,8 +56,7 @@ RDEPEND=">=app-admin/eselect-python-20090606
 DEPEND="${RDEPEND}
 		dev-util/pkgconfig"
 RDEPEND+=" !build? ( app-misc/mime-types )"
-PDEPEND="app-admin/python-updater
-		=dev-lang/python-3*"
+PDEPEND="app-admin/python-updater"
 
 PROVIDE="virtual/python"
 
@@ -66,7 +65,10 @@ pkg_setup() {
 		ewarn "\"bsddb\" module is out-of-date and no longer maintained inside dev-lang/python. It has"
 		ewarn "been additionally removed in Python 3. You should use external, still maintained \"bsddb3\""
 		ewarn "module provided by dev-python/bsddb3 which supports both Python 2 and Python 3."
-		ebeep 6
+	fi
+
+	if ! has_version "=dev-lang/python-3*"; then
+		elog "It is highly recommended to additionally install Python 3, but without configuring Python wrapper to use Python 3."
 	fi
 }
 
