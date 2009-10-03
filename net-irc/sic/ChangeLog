@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/sic
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.4 2008/08/05 16:57:29 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/sic/ChangeLog,v 1.5 2009/10/03 09:57:09 maekke Exp $
+
+  03 Oct 2009; Markus Meier <maekke@gentoo.org> sic-1.0.ebuild:
+  amd64/x86 stable, bug #286872
 
 *sic-1.0 (05 Aug 2008)
 
