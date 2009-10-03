@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-tga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tga/ChangeLog,v 1.29 2009/06/23 19:53:55 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-tga/ChangeLog,v 1.30 2009/10/03 11:55:07 scarabeus Exp $
+
+*xf86-video-tga-1.2.1 (03 Oct 2009)
+
+  03 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -xf86-video-tga-1.1.0.ebuild, xf86-video-tga-1.2.0.ebuild,
+  +xf86-video-tga-1.2.1.ebuild:
+  Version bump. Remove old. Silence repoman.
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org>
   xf86-video-tga-1.2.0.ebuild:
