@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.300 2009/10/03 15:20:56 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/ChangeLog,v 1.301 2009/10/03 21:56:49 fauli Exp $
+
+  03 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  hal-0.5.12_rc1-r8.ebuild:
+  stable x86, bug 284742
 
   03 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
   hal-0.5.12_rc1-r8.ebuild, hal-0.5.13-r2.ebuild:
