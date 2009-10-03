@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.9 2009/09/30 17:47:26 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.69-r3.ebuild,v 1.10 2009/10/03 11:14:03 grobian Exp $
 
 inherit eutils toolchain-funcs multilib pam
 
@@ -70,7 +70,7 @@ src_unpack() {
 	sed -i "/SYSTEM_ALIASES_FILE/ s'SYSTEM_ALIASES_FILE'/etc/mail/aliases'" "${S}"/src/configure.default
 	cp "${S}"/src/configure.default "${S}"/src/configure.default.orig
 
-	# Includes Typo fix for bug 47106
+	# includes typo fix for bug #47106
 	sed -e "48i\CFLAGS=${CFLAGS}" \
 		-e "s:# AUTH_CRAM_MD5=yes:AUTH_CRAM_MD5=yes:" \
 		-e "s:# AUTH_PLAINTEXT=yes:AUTH_PLAINTEXT=yes:" \
@@ -117,11 +117,10 @@ src_unpack() {
 		cp ../exim_monitor/EDITME eximon.conf
 		sed -i "s:# EXIM_MONITOR=eximon.bin:EXIM_MONITOR=eximon.bin:" Makefile
 	fi
-	#These next two should resolve 37964
 	if use perl; then
 		sed -i "s:# EXIM_PERL=perl.o:EXIM_PERL=perl.o:" Makefile
 	fi
-	# mbox useflag renamed, see bug 110741
+	# mbox useflag renamed, see bug #110741
 	if use mbx; then
 		sed -i "s:# SUPPORT_MBX=yes:SUPPORT_MBX=yes:" Makefile
 	fi
@@ -143,10 +142,9 @@ src_unpack() {
 	fi
 	if use ipv6; then
 		echo "HAVE_IPV6=YES" >> Makefile
-		#To fix bug 41196
+		# to fix bug #41196
 		echo "IPV6_USE_INET_PTON=yes" >> Makefile
 	fi
-
 	if use dovecot-sasl; then
 		sed -i "s:# AUTH_DOVECOT=yes:AUTH_DOVECOT=yes:" Makefile
 	fi
@@ -155,14 +153,13 @@ src_unpack() {
 		sed -i "s:# RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:RADIUS_CONFIG_FILE=/etc/radiusclient/radiusclient.conf:" Makefile
 		sed -i "s:# RADIUS_LIB_TYPE=RADIUSCLIENT$:RADIUS_LIB_TYPE=RADIUSCLIENT:" Makefile
 	fi
-
 	if [[ -n ${myconf} ]] ; then
 		echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
 	fi
 
-	# Make iconv usage explicit
+	# make iconv usage explicit
 	echo "HAVE_ICONV=yes" >> Makefile
-	# If we use libiconv, now is the time to tell so
+	# if we use libiconv, now is the time to tell so
 	use !elibc_glibc && echo "EXTRALIBS_EXIM=-liconv" >> Makefile
 
 	cd "${S}"
@@ -239,7 +236,7 @@ src_unpack() {
 		LDFLAGS += -lcrypto -L${ROOT}/usr/$(get_libdir)/libdomainkeys -ldomainkeys" >> Local/Makefile
 	fi
 
-# Use the "native" interface to the DBM library
+	# use the "native" interface to the DBM library
 	echo "USE_DB=yes" >> "${S}"/Local/Makefile
 }
 
