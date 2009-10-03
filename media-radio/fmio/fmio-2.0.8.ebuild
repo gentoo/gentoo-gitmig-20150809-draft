@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/fmio/fmio-2.0.8.ebuild,v 1.2 2008/07/05 08:17:05 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/fmio/fmio-2.0.8.ebuild,v 1.3 2009/10/03 16:58:47 maekke Exp $
 
 inherit toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://jumbo.narod.ru/src/fmio/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="X linguas_ru"
 
 DEPEND="X? ( x11-libs/libX11
