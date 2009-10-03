@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r1.ebuild,v 1.2 2009/08/19 08:00:26 weaver Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools++/ncbi-tools++-2009.05.15-r1.ebuild,v 1.3 2009/10/03 03:45:56 weaver Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ MY_TAG="May_15_2009"
 MY_Y="${MY_TAG/*_/}"
 MY_P="ncbi_cxx--${MY_TAG}"
 
-DESCRIPTION="NCBI C++ Toolkit"
+DESCRIPTION="NCBI C++ Toolkit, including NCBI BLAST+"
 HOMEPAGE="http://www.ncbi.nlm.nih.gov/books/bv.fcgi?rid=toolkit"
 SRC_URI="ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/${MY_Y}/${MY_TAG}/${MY_P}.tar.gz"
 
