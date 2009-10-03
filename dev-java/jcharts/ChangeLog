@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcharts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/ChangeLog,v 1.7 2009/09/05 22:26:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcharts/ChangeLog,v 1.8 2009/10/03 20:30:14 caster Exp $
+
+  03 Oct 2009; Vlastimil Babka <caster@gentoo.org> -jcharts-0.7.5.ebuild:
+  Remove old.
 
   05 Sep 2009; Markus Meier <maekke@gentoo.org> jcharts-0.7.5-r1.ebuild:
   amd64 stable, bug #276535
