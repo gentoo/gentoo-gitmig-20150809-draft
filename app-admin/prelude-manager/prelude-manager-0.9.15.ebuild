@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.15.ebuild,v 1.3 2009/09/23 15:01:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-manager/prelude-manager-0.9.15.ebuild,v 1.4 2009/10/03 19:23:14 halcy0n Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils autotools
 
 DESCRIPTION="Prelude-IDS Manager"
 HOMEPAGE="http://www.prelude-ids.org/"
@@ -16,13 +16,22 @@ IUSE="debug xml dbx tcpwrapper"
 RDEPEND="!dev-libs/libprelude-cvs
 	!app-admin/prelude-manager-cvs
 	>=dev-libs/libprelude-0.9.5
-	dev-libs/openssl
+	net-libs/gnutls
 	xml? ( dev-libs/libxml2 )
 	dbx? ( dev-libs/libpreludedb )
 	tcpwrapper? ( sys-apps/tcp-wrappers )"
 
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	dev-util/pkgconfig"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+
+	epatch "${FILESDIR}"/prelude-manager-0.9.15-use-pkg-config.patch
+	eautoreconf
+}
 
 src_compile() {
 	local myconf
