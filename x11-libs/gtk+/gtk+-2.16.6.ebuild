@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.16.6.ebuild,v 1.7 2009/09/30 17:05:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.16.6.ebuild,v 1.8 2009/10/03 13:07:50 klausman Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~x86-fbsd"
 IUSE="cups debug doc jpeg jpeg2k tiff test vim-syntax xinerama"
 
 # FIXME: configure says >=xrandr-1.2.99 but remi tells me it's broken
