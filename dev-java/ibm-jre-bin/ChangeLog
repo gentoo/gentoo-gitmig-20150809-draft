@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jre-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.133 2009/10/03 15:37:38 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ChangeLog,v 1.134 2009/10/03 22:13:33 fauli Exp $
+
+  03 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  ibm-jre-bin-1.5.0.10.ebuild:
+  stable x86, security bug 287490
 
   03 Oct 2009; Brent Baude <ranger@gentoo.org> ibm-jre-bin-1.5.0.10.ebuild:
   Marking ibm-jre-bin-1.5.0.10 ppc64 for bug 287490
