@@ -1,37 +1,45 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.7 2008/03/12 16:14:42 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/silvercity/silvercity-0.9.7.ebuild,v 1.8 2009/10/03 05:09:11 arfrever Exp $
+
+EAPI="2"
+SUPPORT_PYTHON_ABIS="1"
 
 inherit distutils eutils python
 
+MY_PN="SilverCity"
+MY_P="${MY_PN}-${PV}"
+
 DESCRIPTION="A lexical analyser for many languages."
 HOMEPAGE="http://silvercity.sourceforge.net/"
-
-MY_P=${P/silvercity/SilverCity}
 SRC_URI="mirror://sourceforge/silvercity/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
 
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~ia64 ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
-DEPEND=">=dev-lang/python-2.3"
+DEPEND=""
+RDEPEND=""
+RESTRICT_PYTHON_ABIS="3.*"
+
+S="${WORKDIR}/${MY_P}"
+
+PYTHON_MODNAME="${MY_PN}"
 
 src_install() {
 	distutils_src_install
 
-	# remove useless documentation
-	rm ${D}/usr/share/doc/${P}/PKG-INFO.gz
+	# Remove useless documentation.
+	rm "${D}usr/share/doc/${P}/PKG-INFO"*
 
-	# fix permissions
-	python_version
-	chmod 644 ${D}/usr/$(get_libdir)/python${PYVER}/site-packages/SilverCity/default.css
+	# Fix permissions.
+	chmod 644 "${D}"usr/$(get_libdir)/python*/site-packages/SilverCity/default.css
 
-	# fix CR/LF issue
-	find ${D}/usr/bin -iname "*.py" -exec sed -e 's/\r$//' -i \{\} \;
+	# Fix CR/LF issue.
+	find "${D}usr/bin" -iname "*.py" -exec sed -e 's/\r$//' -i \{\} \;
 
-	# fix path
+	# Fix path.
 	dosed -i 's|#!/usr/home/sweetapp/bin/python|#!/usr/bin/env python|' \
 		/usr/bin/cgi-styler-form.py || die "dosed failed"
 }
