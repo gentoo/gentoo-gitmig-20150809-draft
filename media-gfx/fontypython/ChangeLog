@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fontypython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.6 2009/09/27 00:59:48 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.7 2009/10/03 07:22:56 dirtyepic Exp $
+
+*fontypython-0.4.2.2 (03 Oct 2009)
+
+  03 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> -fontypython-0.3.6.ebuild,
+  -fontypython-0.4.1.ebuild, +fontypython-0.4.2.2.ebuild:
+  Version bump, bug #287447 by Arfrever. Fixes collision with
+  dev-lang/fpc-ide, bug #286649 by Donald Wallace Rouse II.
 
 *fontypython-0.4.1 (27 Sep 2009)
 
