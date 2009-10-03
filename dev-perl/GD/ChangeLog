@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.83 2009/07/16 09:13:09 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.84 2009/10/03 09:39:21 maekke Exp $
+
+  03 Oct 2009; Markus Meier <maekke@gentoo.org> GD-2.44.ebuild:
+  amd64/x86 stable, bug #286799
 
   16 Jul 2009; Torsten Veller <tove@gentoo.org> -GD-2.41.ebuild,
   -GD-2.43.ebuild:
