@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.376 2009/10/02 13:54:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.377 2009/10/03 09:34:13 maekke Exp $
+
+  03 Oct 2009; Markus Meier <maekke@gentoo.org> samba-3.3.7.ebuild:
+  add ~arm, bug #285952
 
 *samba-3.3.8 (02 Oct 2009)
 *samba-3.2.15 (02 Oct 2009)
