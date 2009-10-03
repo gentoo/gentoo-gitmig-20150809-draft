@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-mirage/banshee-mirage-0.5.0.ebuild,v 1.2 2009/08/17 15:12:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/banshee-mirage/banshee-mirage-0.5.0.ebuild,v 1.3 2009/10/03 09:38:07 maekke Exp $
 
 EAPI=2
 
@@ -15,7 +15,7 @@ SRC_URI="http://hop.at/${MY_PN}/download/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=media-sound/banshee-1.4
