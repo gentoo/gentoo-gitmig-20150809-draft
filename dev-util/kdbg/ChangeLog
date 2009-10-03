@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.63 2009/10/03 19:19:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.64 2009/10/03 20:04:44 sping Exp $
+
+  03 Oct 2009; Sebastian Pipping <sping@gentoo.org> kdbg-2.1.0.ebuild,
+  +files/kdbg-2.1.0-move-kde-ldflags-up-front.patch:
+  Fix linking of 2.1.0 on KDE 4 (bug 244694), thanks to Theofilos Intzoglou
 
 *kdbg-2.2.0 (03 Oct 2009)
 

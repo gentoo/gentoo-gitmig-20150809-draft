@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.1.0.ebuild,v 1.6 2008/05/19 17:39:27 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.1.0.ebuild,v 1.7 2009/10/03 20:04:44 sping Exp $
 
 ARTS_REQUIRED="never"
 
@@ -19,4 +19,5 @@ RDEPEND=">=sys-devel/gdb-5.0"
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/kdbg-2.1.0-desktop-entry.diff"
+PATCHES=( "${FILESDIR}"/${PN}-2.1.0-desktop-entry.diff
+		"${FILESDIR}"/${PN}-2.1.0-move-kde-ldflags-up-front.patch )
