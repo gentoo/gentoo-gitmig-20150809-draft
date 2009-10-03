@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.130 2009/10/03 09:03:21 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.131 2009/10/03 15:31:28 ranger Exp $
+
+  03 Oct 2009; Brent Baude <ranger@gentoo.org> eselect-1.2.3.ebuild:
+  Marking eselect-1.2.3 ppc64 for bug 287135
 
   03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> eselect-1.2.3.ebuild:
   Stable for ppc, bug 287135
