@@ -1,6 +1,12 @@
 # ChangeLog for x11-apps/editres
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.29 2009/07/07 01:30:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/editres/ChangeLog,v 1.30 2009/10/03 11:16:58 scarabeus Exp $
+
+*editres-1.0.4 (03 Oct 2009)
+
+  03 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +editres-1.0.4.ebuild:
+  Version bump.
 
   07 Jul 2009; Jeroen Roovers <jer@gentoo.org> editres-1.0.3-r1.ebuild:
   Stable for HPPA too.
