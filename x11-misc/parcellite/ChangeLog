@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/parcellite
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.6 2009/03/21 21:48:00 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/parcellite/ChangeLog,v 1.7 2009/10/03 17:08:25 maekke Exp $
+
+  03 Oct 2009; Markus Meier <maekke@gentoo.org> parcellite-0.9.1.ebuild:
+  amd64/x86 stable, bug #287314
 
   21 Mar 2009; Krzysiek Pawlik <nelchael@gentoo.org> -parcellite-0.9.ebuild:
   Remove old versions.
