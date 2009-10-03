@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.78 2009/10/03 08:41:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.79 2009/10/03 09:26:32 maekke Exp $
+
+  03 Oct 2009; Markus Meier <maekke@gentoo.org> zip-3.0.ebuild:
+  amd64/arm/x86 stable, bug #287369
 
   03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> zip-3.0.ebuild:
   Stable for ppc, bug 287369
