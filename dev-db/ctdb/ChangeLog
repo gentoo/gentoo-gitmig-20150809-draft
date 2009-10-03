@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.5 2009/09/30 20:08:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.6 2009/10/03 09:28:44 maekke Exp $
+
+  03 Oct 2009; Markus Meier <maekke@gentoo.org> ctdb-1.0.73.ebuild:
+  add ~arm, bug #285952
 
   30 Sep 2009; Jeroen Roovers <jer@gentoo.org> ctdb-1.0.73.ebuild:
   Marked ~hppa (bug #285952).
