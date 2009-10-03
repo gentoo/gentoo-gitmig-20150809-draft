@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.23.ebuild,v 1.6 2009/09/27 19:44:16 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/lighttpd-1.4.23.ebuild,v 1.7 2009/10/03 18:53:27 klausman Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.lighttpd.net/download/${P}.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm ~hppa ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~sparc-fbsd ~x86-fbsd"
 IUSE="bzip2 doc fam fastcgi gdbm ipv6 ldap lua minimal memcache mysql pcre php rrdtool ssl test webdav xattr"
 
 RDEPEND="
