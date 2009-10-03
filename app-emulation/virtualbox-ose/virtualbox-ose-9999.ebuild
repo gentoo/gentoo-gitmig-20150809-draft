@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.9 2009/09/30 17:09:49 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-ose/virtualbox-ose-9999.ebuild,v 1.10 2009/10/03 17:09:57 patrick Exp $
 
 EAPI=1
 
@@ -22,9 +22,10 @@ RDEPEND="!app-emulation/virtualbox-bin
 	>=dev-libs/libxslt-1.1.19
 	dev-libs/xalan-c
 	dev-libs/xerces-c
+	net-misc/curl
 	sys-libs/libcap
 	!headless? (
-		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 )
+		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/qt-opengl:4 )
 		x11-libs/libXcursor
 		media-libs/libsdl
 		x11-libs/libXt
@@ -68,7 +69,7 @@ pkg_setup() {
 src_compile() {
 
 	local myconf
-	# Don't build vboxdrv kernel module, disable deprecated qt3 support
+	# Don't build vboxdrv kernel module
 	myconf="--disable-kmods"
 	if ! use pulseaudio; then
 			myconf="${myconf} --disable-pulse"
@@ -120,16 +121,11 @@ src_install() {
 	newexe "${FILESDIR}/${PN}-2-wrapper" "VBox" || die
 	fowners root:vboxusers /usr/lib/${PN}/VBox
 	fperms 0750 /usr/lib/${PN}/VBox
-	newexe "${S}"/src/VBox/Installer/linux/VBoxAddIF.sh "VBoxAddIF" || die
-	fowners root:vboxusers /usr/lib/${PN}/VBoxAddIF
-	fperms 0750 /usr/lib/${PN}/VBoxAddIF
 
 	dosym /usr/lib/${PN}/VBox /usr/bin/VBoxManage
 	dosym /usr/lib/${PN}/VBox /usr/bin/VBoxVRDP
 	dosym /usr/lib/${PN}/VBox /usr/bin/VBoxHeadless
 	dosym /usr/lib/${PN}/VBoxTunctl /usr/bin/VBoxTunctl
-	dosym /usr/lib/${PN}/VBoxAddIF /usr/bin/VBoxAddIF
-	dosym /usr/lib/${PN}/VBoxAddIF /usr/bin/VBoxDeleteIF
 
 	# install binaries and libraries
 	insinto /usr/lib/${PN}
