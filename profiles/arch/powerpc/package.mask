@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.7 2009/09/05 22:00:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.8 2009/10/03 13:08:45 volkmar Exp $
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (5 Sep 2009)
 # Masking KDE-4.3 deps (bug #280312).
@@ -290,5 +290,3 @@ app-misc/hal-cups-utils
 >=kde-base/kdetoys-meta-4.3
 >=kde-base/kdeutils-meta-4.3
 >=kde-base/kdewebdev-meta-4.3
-
-<sci-physics/root-5

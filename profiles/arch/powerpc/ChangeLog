@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.33 2009/09/05 22:00:01 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.34 2009/10/03 13:08:45 volkmar Exp $
+
+  03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> package.mask:
+  Removing outadated <sci-physics/root-5 in package.mask.
 
   05 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
