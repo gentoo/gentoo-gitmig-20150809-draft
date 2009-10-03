@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3_p5.ebuild,v 1.1 2009/02/23 00:56:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3_p5.ebuild,v 1.2 2009/10/03 23:38:24 vapier Exp $
 
 # This version is just for the ABI .4 library
 
@@ -36,11 +36,8 @@ SLOT="${PV:0:1}"
 KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86"
 IUSE=""
 
-# We must be certain that we have a bash that is linked
-# to its internal readline, else we may get problems.
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
-DEPEND="${RDEPEND}
-	>=app-shells/bash-2.05b-r2"
+DEPEND="${RDEPEND}"
 
 S=${WORKDIR}/${MY_P}
 
