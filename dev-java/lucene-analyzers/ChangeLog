@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/lucene-analyzers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.7 2009/09/26 13:44:19 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene-analyzers/ChangeLog,v 1.8 2009/10/03 12:41:29 volkmar Exp $
+
+  03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  lucene-analyzers-2.3.2.ebuild:
+  Stable for ppp, bug 283370
+  Tested by Trizt on IRC.
 
   26 Sep 2009; Tobias Heinlein <keytoaster@gentoo.org>
   lucene-analyzers-2.3.2.ebuild:
