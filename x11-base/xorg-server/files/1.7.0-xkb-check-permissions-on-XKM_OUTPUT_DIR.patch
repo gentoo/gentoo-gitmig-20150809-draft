@@ -1,0 +1,41 @@
+From 9bc7cbf9c02656982c2525836b5498993f708e02 Mon Sep 17 00:00:00 2001
+From: Nirbheek Chauhan <nirbheek@gentoo.org>
+Date: Tue, 29 Sep 2009 22:35:06 +0530
+Subject: [PATCH 01/10] xkb: check permissions on XKM_OUTPUT_DIR
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Checking just for root is insufficient since that does not guarantee write/read
+permissions in XKM_OUTPUT_DIR (for example with sandbox).
+
+Check if we can write a file, as well as read it later. Otherwise, invoke the
+fallback to /tmp
+
+Signed-off-by: Nirbheek Chauhan <nirbheek@gentoo.org>
+Signed-off-by: Rémi Cardona <remi@gentoo.org>
+Signed-off-by: Peter Hutterer <peter.hutterer@who-t.net>
+---
+ xkb/ddxLoad.c |    5 ++---
+ 1 files changed, 2 insertions(+), 3 deletions(-)
+
+diff --git a/xkb/ddxLoad.c b/xkb/ddxLoad.c
+index 6954dd1..ba8d50b 100644
+--- a/xkb/ddxLoad.c
++++ b/xkb/ddxLoad.c
+@@ -158,10 +158,9 @@ OutputDirectory(
+     size_t size)
+ {
+ #ifndef WIN32
+-    if (getuid() == 0 && (strlen(XKM_OUTPUT_DIR) < size))
++    /* Can we write an xkm and then open it too? */
++    if (access(XKM_OUTPUT_DIR, W_OK | X_OK) == 0 && (strlen(XKM_OUTPUT_DIR) < size))
+     {
+-	/* if server running as root it *may* be able to write */
+-	/* FIXME: check whether directory is writable at all */
+ 	(void) strcpy (outdir, XKM_OUTPUT_DIR);
+     } else
+ #else
+-- 
+1.6.5.rc1
+
