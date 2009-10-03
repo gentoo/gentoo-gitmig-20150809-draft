@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/ca-certificates
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.35 2009/07/20 12:00:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ChangeLog,v 1.36 2009/10/03 15:30:38 ranger Exp $
+
+  03 Oct 2009; Brent Baude <ranger@gentoo.org>
+  ca-certificates-20090709.ebuild:
+  Marking ca-certificates-20090709 ppc64 for bug 287409
 
 *ca-certificates-20090709 (20 Jul 2009)
 
