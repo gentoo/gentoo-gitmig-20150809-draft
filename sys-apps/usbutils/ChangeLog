@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.80 2009/10/01 17:22:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.81 2009/10/03 17:39:48 klausman Exp $
+
+  03 Oct 2009; Tobias Klausmann <klausman@gentoo.org> usbutils-0.82.ebuild:
+  Stable on alpha, bug #286074
 
 *usbutils-0.86-r1 (01 Oct 2009)
 
