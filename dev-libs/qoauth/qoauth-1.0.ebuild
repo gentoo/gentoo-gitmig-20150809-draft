@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.ebuild,v 1.1 2009/08/08 17:38:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qoauth/qoauth-1.0.ebuild,v 1.2 2009/10/03 14:32:14 ayoy Exp $
 
 EAPI="2"
 
@@ -28,6 +28,9 @@ src_prepare() {
 		   -e 's/^\#\(!macx\)/\1/' \
 		   -e "s!\(\$\${INSTALL_PREFIX}\)/lib!\1/$(get_libdir)!" \
 		src/src.pro || die "sed failed"
+
+	# remove _debug suffix - bug 287489
+	sed -i -e '/build_pass/,$d' src/src.pro || die "sed _debug suffix failed"
 
 	sed -i -e "s/\(.*\)lib$/\1$(get_libdir)/" src/pcfile.sh || die "sed failed"
 
