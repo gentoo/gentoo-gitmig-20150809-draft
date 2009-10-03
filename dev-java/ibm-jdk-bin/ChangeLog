@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/ibm-jdk-bin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.206 2009/09/06 20:04:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ChangeLog,v 1.207 2009/10/03 15:36:28 ranger Exp $
+
+  03 Oct 2009; Brent Baude <ranger@gentoo.org> ibm-jdk-bin-1.5.0.10.ebuild:
+  Marking ibm-jdk-bin-1.5.0.10 ppc64 for bug 287490
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> ibm-jdk-bin-1.6.0.5.ebuild:
   Marking ibm-jdk-bin-1.6.0.5 ppc64 for bug 278315
