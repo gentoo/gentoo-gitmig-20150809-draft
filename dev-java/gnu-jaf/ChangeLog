@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-jaf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.18 2007/04/06 23:00:03 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/ChangeLog,v 1.19 2009/10/03 20:48:42 caster Exp $
+
+  03 Oct 2009; Vlastimil Babka <caster@gentoo.org> gnu-jaf-1.0-r2.ebuild:
+  Change order of 1.4 and 1.5 deps.
 
   06 Apr 2007; Petteri Räty <betelgeuse@gentoo.org> -gnu-jaf-1.0-r1.ebuild:
   Mark stable on amd64 wrt bug #172304 and remove generation 1 ebuild.

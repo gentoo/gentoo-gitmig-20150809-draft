@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r2.ebuild,v 1.10 2007/04/06 23:00:03 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-jaf/gnu-jaf-1.0-r2.ebuild,v 1.11 2009/10/03 20:48:42 caster Exp $
 
 inherit java-pkg-2
 
@@ -16,7 +16,7 @@ IUSE="doc source"
 # doesn't like 1.6+ because of bundled javax.activation which it can't override
 # with own (endorsed standards?), and which doesn't have a particular exception
 # constructor gnu-jaf expects
-DEPEND="|| ( =virtual/jdk-1.4* =virtual/jdk-1.5* )
+DEPEND="|| ( =virtual/jdk-1.5* =virtual/jdk-1.4* )
 	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.4"
 
