@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.55 2009/09/27 19:33:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/ChangeLog,v 1.56 2009/10/03 15:42:44 klausman Exp $
+
+  03 Oct 2009; Tobias Klausmann <klausman@gentoo.org> lablgl-1.04.ebuild:
+  Stable on alpha, bug #285693
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> lablgl-1.04.ebuild:
   ppc stable #2856913
