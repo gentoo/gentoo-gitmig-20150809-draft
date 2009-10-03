@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/zip
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.77 2008/10/04 13:09:52 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/ChangeLog,v 1.78 2009/10/03 08:41:53 volkmar Exp $
+
+  03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> zip-3.0.ebuild:
+  Stable for ppc, bug 287369
 
   04 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> zip-3.0.ebuild:
   Add missing app-arch/unzip dependency to extract .zip sources.

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-3.0.ebuild,v 1.3 2008/10/04 13:09:52 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-3.0.ebuild,v 1.4 2009/10/03 08:41:53 volkmar Exp $
 
 inherit toolchain-funcs eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/infozip/${MY_P}.zip"
 
 LICENSE="Info-ZIP"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE="bzip2 crypt unicode"
 
 RDEPEND="bzip2? ( app-arch/bzip2 )"
