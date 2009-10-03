@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.ebuild,v 1.3 2009/08/30 00:08:20 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.10.ebuild,v 1.4 2009/10/03 09:55:52 maekke Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ SRC_URI="http://ipython.scipy.org/dist/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~x86"
+KEYWORDS="amd64 ~ia64 ~ppc ~ppc64 ~s390 x86"
 IUSE="doc emacs examples gnuplot readline smp test wxwidgets"
 
 CDEPEND="dev-python/pexpect
