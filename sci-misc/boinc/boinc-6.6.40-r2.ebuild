@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40-r1.ebuild,v 1.2 2009/09/29 17:45:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-6.6.40-r2.ebuild,v 1.1 2009/10/03 15:04:34 scarabeus Exp $
 
 EAPI="2"
 
