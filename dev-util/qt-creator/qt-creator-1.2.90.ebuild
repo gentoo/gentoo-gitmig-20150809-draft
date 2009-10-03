@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.2.90.ebuild,v 1.1 2009/10/03 16:44:30 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qt-creator/qt-creator-1.2.90.ebuild,v 1.2 2009/10/03 19:27:58 hwoarang Exp $
 
 EAPI="2"
 
@@ -37,7 +37,7 @@ RDEPEND="${DEPEND}
 PLUGINS="bookmarks bineditor cmake cvs debugger designer fakevim git perforce qtscript subversion"
 
 PATCHES=(
-	"${FILESDIR}/docs_gen.patch-${PV}"
+	"${FILESDIR}/docs_gen-${PV}.patch"
 )
 
 S="${WORKDIR}/${P}-src"
