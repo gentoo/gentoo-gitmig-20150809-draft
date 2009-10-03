@@ -1,6 +1,12 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.272 2009/09/30 19:35:09 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.273 2009/10/03 11:55:10 ssuominen Exp $
+
+*xterm-249 (03 Oct 2009)
+
+  03 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> +xterm-249.ebuild:
+  Version bump. RDEPEND media-fonts/font-misc-misc for default Fixed font to
+  avoid printed warning.
 
   30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> xterm-243.ebuild:
   amd64 stable wrt #282290
