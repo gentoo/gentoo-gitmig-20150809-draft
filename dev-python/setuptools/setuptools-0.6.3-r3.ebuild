@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.3-r3.ebuild,v 1.1 2009/10/02 16:51:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools/setuptools-0.6.3-r3.ebuild,v 1.2 2009/10/03 17:32:46 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -18,9 +18,7 @@ IUSE=""
 
 # Avoid silent errors during upgrade from older versions.
 DEPEND="!!<dev-python/setuptools-0.6.3-r2"
-# Ensure that dev-python/setuptools is installed by default for Python 2 and Python 3.
-RDEPEND="=dev-lang/python-2*
-		=dev-lang/python-3*"
+RDEPEND=""
 
 S="${WORKDIR}/distribute-${PV}"
 

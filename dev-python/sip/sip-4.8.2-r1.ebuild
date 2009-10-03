@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.8.2-r1.ebuild,v 1.1 2009/10/02 22:03:11 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sip/sip-4.8.2-r1.ebuild,v 1.2 2009/10/03 17:30:39 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -21,9 +21,7 @@ IUSE="debug doc"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND=""
-# Ensure that dev-python/sip is installed by default for Python 2 and Python 3.
-RDEPEND="=dev-lang/python-2*
-		=dev-lang/python-3*"
+RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-python-3.patch"
