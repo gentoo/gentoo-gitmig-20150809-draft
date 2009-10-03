@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.32 2009/06/22 17:57:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.33 2009/10/03 08:18:23 graaff Exp $
+
+*drivel-3.0.0 (03 Oct 2009)
+
+  03 Oct 2009; Hans de Graaff <graaff@gentoo.org> +drivel-3.0.0.ebuild:
+  Version bump: major update. Dropped use of deprecated gnome libraries.
+  Many bug fixes and minor enhancements.
 
 *drivel-2.0.4 (22 Jun 2009)
 
