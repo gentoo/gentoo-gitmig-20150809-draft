@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/lucene
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.58 2009/09/26 13:43:16 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/lucene/ChangeLog,v 1.59 2009/10/03 12:35:54 volkmar Exp $
+
+  03 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> lucene-2.3.2.ebuild:
+  Stable for ppp, bug 283370
+  Tested by Trizt on IRC.
 
   26 Sep 2009; Tobias Heinlein <keytoaster@gentoo.org> lucene-2.3.2.ebuild:
   amd64 stable, security bug #283370
