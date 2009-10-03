@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.3.1.ebuild,v 1.1 2009/05/17 17:29:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/freeverb3-2.3.1.ebuild,v 1.2 2009/10/03 03:18:59 sping Exp $
 
 EAPI=2
 inherit eutils
@@ -20,6 +20,10 @@ RDEPEND=">=sci-libs/fftw-3.0.1
 	jack? ( media-sound/jack-audio-connection-kit
 		media-libs/libsndfile )"
 DEPEND=${RDEPEND}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.3.1-plugin-api-v8-v10.patch
+}
 
 src_configure() {
 	econf \

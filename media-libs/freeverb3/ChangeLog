@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freeverb3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.2 2009/05/17 17:29:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freeverb3/ChangeLog,v 1.3 2009/10/03 03:18:59 sping Exp $
+
+  03 Oct 2009; Sebastian Pipping <sping@gentoo.org> freeverb3-2.3.1.ebuild,
+  +files/freeverb3-2.3.1-plugin-api-v8-v10.patch, metadata.xml:
+  Fix compile errors for use with Audacious 2.2_alpha1, un-proxy me :-)
 
 *freeverb3-2.3.1 (17 May 2009)
 

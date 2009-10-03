@@ -3,14 +3,8 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<maintainer>
-		<email>yngwin@gentoo.org</email>
-		<name>Ben de Groot</name>
-		<description>Proxy maintainer</description>
-	</maintainer>
-	<maintainer>
-		<email>webmaster@hartwork.org</email>
+		<email>sping@gentoo.org</email>
 		<name>Sebastian Pipping</name>
-		<description>The proxied maintainer</description>
 	</maintainer>
 	<use>
 		<flag name='audacious'>Build Audacious plugin</flag>
