@@ -1,6 +1,10 @@
 # ChangeLog for dev-cpp/sptk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.64 2009/09/22 11:00:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/sptk/ChangeLog,v 1.65 2009/10/03 21:34:19 scarabeus Exp $
+
+  03 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -sptk-3.5.7.13.ebuild:
+  Remove old not required ebuild in sake of cmake sanity.
 
   22 Sep 2009; Markus Meier <maekke@gentoo.org> sptk-3.5.8.14-r1.ebuild:
   amd64/x86 stable, bug #285892
