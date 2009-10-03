@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-22.2.9.ebuild,v 1.1 2009/09/05 23:40:01 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/elisp-manual-22.2.9.ebuild,v 1.2 2009/10/03 23:44:34 fauli Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.bz2"
 
 LICENSE="FDL-1.2"
 SLOT="22"
-KEYWORDS="~amd64 ~ppc ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ~s390 ~sparc x86"
 IUSE=""
 
 S="${WORKDIR}/${MY_P}"

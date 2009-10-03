@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/elisp-manual
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.18 2009/10/03 23:44:34 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/elisp-manual/ChangeLog,v 1.19 2009/10/03 23:48:23 fauli Exp $
+
+  03 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  elisp-manual-23.3.0.ebuild:
+  stable x86, bug 287460
 
   03 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   elisp-manual-22.2.9.ebuild:
