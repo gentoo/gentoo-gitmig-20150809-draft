@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r2.ebuild,v 1.12 2009/10/02 14:55:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.15-r2.ebuild,v 1.13 2009/10/04 14:58:47 ssuominen Exp $
 
 EAPI=2
 
@@ -86,7 +86,7 @@ src_configure() {
 	# To properly fix CVE-2008-0008
 	append-flags -UNDEBUG
 
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 
 	econf \
 		--enable-largefile \

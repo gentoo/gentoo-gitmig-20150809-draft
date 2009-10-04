@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.19.ebuild,v 1.1 2009/09/30 10:17:59 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/pulseaudio-0.9.19.ebuild,v 1.2 2009/10/04 14:58:47 ssuominen Exp $
 
 EAPI=2
 
@@ -84,7 +84,7 @@ src_prepare() {
 src_configure() {
 	# It's a binutils bug, once I can find time to fix that I'll add a
 	# proper dependency and fix this up. — flameeyes
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 
 	econf \
 		--enable-largefile \
