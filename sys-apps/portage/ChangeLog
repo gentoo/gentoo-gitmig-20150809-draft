@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.633 2009/09/29 06:08:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.634 2009/10/04 00:14:52 zmedico Exp $
+
+*portage-2.2_rc43 (03 Oct 2009)
+
+  03 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc43.ebuild:
+  2.2_rc43 bump. This fixes bug #285191 (remove repoman RDEPEND.implicit
+  check), bug #285832 (backtracking mask messages flood terminal),
+  bug #286475 (dispatch-conf AttributeError), bug #286522 (ebuild removed
+  during runtime gives poor error), bug #286682 (dispatch-conf TypeError
+  with python3), bug #286780 (elog mail fails with python3), and
+  bug #287333 (fix quirk in handling of KEYWORDS for installed packages).
 
   29 Sep 2009; Ulrich Mueller <ulm@gentoo.org> portage-2.2_rc33.ebuild,
   portage-2.2_rc39.ebuild, portage-2.2_rc40.ebuild, portage-2.2_rc41.ebuild,
