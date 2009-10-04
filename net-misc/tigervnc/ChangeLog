@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/tigervnc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.20 2009/09/30 17:22:20 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tigervnc/ChangeLog,v 1.21 2009/10/04 16:54:49 armin76 Exp $
+
+*tigervnc-1.0.0-r1 (04 Oct 2009)
+
+  04 Oct 2009; Raúl Porcel <armin76@gentoo.org> +tigervnc-1.0.0-r1.ebuild:
+  Revision bump to support xorg-server-1.6
 
   30 Sep 2009; Raúl Porcel <armin76@gentoo.org> tigervnc-1.0.0.ebuild:
   Add glproto dep as non-optional
