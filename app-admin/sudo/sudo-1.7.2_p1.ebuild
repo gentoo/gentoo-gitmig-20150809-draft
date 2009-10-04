@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1.ebuild,v 1.8 2009/09/30 16:43:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.7.2_p1.ebuild,v 1.9 2009/10/04 02:43:37 solar Exp $
 
 inherit eutils pam confutils autotools
 
@@ -156,7 +156,7 @@ src_compile() {
 	# XXX: --disable-path-info closes an info leak, but may be confusing.
 	# XXX: /bin/vi may not be available, make nano visudo's default.
 	econf --with-secure-path="${ROOTPATH}" \
-		--with-editor=/bin/nano \
+		--with-editor="${EDITOR:-/bin/nano}" \
 		--with-env-editor \
 		$(use_with offensive insults) \
 		$(use_with offensive all-insults) \
