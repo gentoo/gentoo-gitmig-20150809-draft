@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3345 2009/10/04 09:44:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3346 2009/10/04 10:03:30 wired Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2009; Alex Alexander <wired@gentoo.org> package.mask:
+  p.masking Qt 4.5.3 before adding it to the tree
 
   04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   targets/developer/make.defaults:
