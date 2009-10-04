@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-2.0.5.ebuild,v 1.1 2009/09/19 19:30:25 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/massxpert/massxpert-2.0.5.ebuild,v 1.2 2009/10/04 15:14:58 ssuominen Exp $
 
 EAPI="2"
 
@@ -40,7 +40,7 @@ src_prepare() {
 }
 
 src_configure() {
-	filter-ldflags -Wl,--as-needed --as-needed
+	append-ldflags $(no-as-needed)
 
 	mycmakeargs="
 		-DBUILD_PROGRAM=1
