@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.1.17910.0.ebuild,v 1.3 2009/08/13 17:38:10 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.1.17910.0.ebuild,v 1.4 2009/10/04 21:13:52 wormo Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -121,6 +121,9 @@ src_unpack() {
 	rm -rf "${S}"/extern/{editline,icu}
 
 	epatch "${FILESDIR}/${P}-gcc-icu-declare.patch"
+
+	# allow debug to use valgrind 3.4 (instead of obsolete valgrind 3.3)
+	epatch "${FILESDIR}/${PN}-update-valgrind.patch"
 
 	eautoreconf
 }

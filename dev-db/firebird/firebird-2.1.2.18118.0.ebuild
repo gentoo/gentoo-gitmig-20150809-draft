@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.2.18118.0.ebuild,v 1.1 2009/09/17 19:55:01 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-2.1.2.18118.0.ebuild,v 1.2 2009/10/04 21:13:52 wormo Exp $
 
 inherit flag-o-matic eutils autotools versionator
 
@@ -117,10 +117,13 @@ src_unpack() {
 		-e 's:ISQL :FBSQL :w /dev/stdout' \
 		src/msgs/messages2.sql | wc -l)" "6" "src/msgs/messages2.sql" # 6 lines
 
-    find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
-    rm -rf "${S}"/extern/{editline,icu}
+	find "${S}" -name \*.sh -print0 | xargs -0 chmod +x
+	rm -rf "${S}"/extern/{editline,icu}
 
-    epatch "${FILESDIR}/${P}-gcc-icu-declare.patch"
+	epatch "${FILESDIR}/${P}-gcc-icu-declare.patch"
+
+	# allow debug to use valgrind 3.4 (instead of obsolete valgrind 3.3)
+	epatch "${FILESDIR}/${PN}-update-valgrind.patch"
 
 	eautoreconf
 }
