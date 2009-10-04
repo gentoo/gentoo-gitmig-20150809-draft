@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3344 2009/10/04 00:18:19 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3345 2009/10/04 09:44:27 ssuominen Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  targets/developer/make.defaults:
+  Enable LD_AS_NEEDED="1" and FEATURES="test" by default wrt discussion in
+  -dev ML.
 
   04 Oct 2009; Mike Doty <kingtaco@gentoo.org> package.mask:
   p.mask emul-linux-x86-baselibs-20091003_rc1
