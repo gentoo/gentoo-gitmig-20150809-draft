@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.8 2009/09/27 18:34:45 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webut/webut-0.1.0.2.ebuild,v 1.9 2009/10/04 20:02:44 arfrever Exp $
 
 inherit distutils versionator
 
@@ -16,7 +16,7 @@ IUSE="examples"
 
 DEPEND=""
 RDEPEND=">=dev-python/twisted-2
-		>=net-zope/zopeinterface-3.0.1
+		>=net-zope/zope-interface-3.0.1
 		>=dev-python/nevow-0.9.18"
 
 S="${WORKDIR}/${PN}-$(get_version_component_range 1-2)"

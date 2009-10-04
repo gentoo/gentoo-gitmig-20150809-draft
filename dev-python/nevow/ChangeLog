@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/nevow
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.33 2009/09/27 18:33:48 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nevow/ChangeLog,v 1.34 2009/10/04 19:58:58 arfrever Exp $
+
+  04 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  nevow-0.9.33.ebuild:
+  net-zope/zopeinterface renamed to net-zope/zope-interface.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> nevow-0.9.33.ebuild:
   ppc stable #284765

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-8.2.0-r2.ebuild,v 1.1 2009/08/28 17:34:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-8.2.0-r2.ebuild,v 1.2 2009/10/04 20:01:14 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -19,7 +19,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 IUSE="crypt gtk serial"
 
 DEPEND=">=dev-lang/python-2.3
-	>=net-zope/zopeinterface-3.0.1
+	>=net-zope/zope-interface-3.0.1
 	serial? ( dev-python/pyserial )
 	crypt? ( >=dev-python/pyopenssl-0.5.1 )
 	gtk? ( >=dev-python/pygtk-1.99 )
