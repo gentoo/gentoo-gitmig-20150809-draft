@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/jpeg-compat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.5 2009/09/30 11:07:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.6 2009/10/04 21:56:55 ssuominen Exp $
+
+  04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  jpeg-compat-6b-r1.ebuild:
+  Remove ~sparc-fbsd keyword. There's no reverse deps (binary only pkgs)
+  needing it.
 
   30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org>
   jpeg-compat-6b-r1.ebuild:
