@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13-r1.ebuild,v 1.4 2009/06/29 21:25:55 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-0.13-r1.ebuild,v 1.5 2009/10/04 14:33:14 ssuominen Exp $
 
 EAPI="2"
 inherit eutils flag-o-matic
@@ -33,7 +33,7 @@ src_configure() {
 	append-ldflags -pthread
 
 	# fails with as-needed, bug 271818
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 
 	# use multi-threaded boost libs
 	local BOOST_LIBS="--with-boost-date-time=boost_date_time-mt \
