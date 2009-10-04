@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.7.2.ebuild,v 1.1 2009/03/02 17:50:17 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/gwenhywfar-3.7.2.ebuild,v 1.2 2009/10/04 14:28:27 ssuominen Exp $
 
 inherit flag-o-matic
 
-append-ldflags -Wl,--no-as-needed
 RESTRICT="test"
 
 DESCRIPTION="A multi-platform helper library for other libraries"
@@ -23,6 +22,7 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 
 src_compile() {
+	append-ldflags $(no-as-needed)
 	econf \
 		$(use_enable ssl) \
 		$(use_enable debug) \
