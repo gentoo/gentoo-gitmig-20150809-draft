@@ -1,0 +1,13 @@
+# ChangeLog for dev-db/ingres
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ChangeLog,v 1.1 2009/10/04 00:08:24 patrick Exp $
+
+*ingres-9.3.0.151 (04 Oct 2009)
+
+  04 Oct 2009; Patrick Lauer <patrick@gentoo.org> +files/9.3-Jamdefs.patch,
+  +ingres-9.3.0.151.ebuild, +files/9.3-bldenv.patch,
+  +files/9.3-sharelib.patch, +files/ingres-initd, +files/sql.patch,
+  +metadata.xml:
+  Initial import of Ingres-9.3. Closes #247895. Ebuild and patches by
+  Alexander Thiem
+
