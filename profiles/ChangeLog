@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3349 2009/10/04 18:32:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3350 2009/10/04 18:35:55 fauli Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  desc/lirc_devices.desc:
+  correct entry of iguanaIR and add ene0100 device
 
   04 Oct 2009; Christian Faulhammer <fauli@gentoo.org> package.mask:
   remove mask for app-misc/iguanaIR

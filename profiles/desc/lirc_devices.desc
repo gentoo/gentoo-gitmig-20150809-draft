@@ -1,6 +1,6 @@
 # Copyright 1999-2006 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lirc_devices.desc,v 1.11 2009/05/28 19:27:20 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/lirc_devices.desc,v 1.12 2009/10/04 18:35:56 fauli Exp $
 
 # This file contains descriptions of LIRC_DEVICES USE_EXPAND flags.
 
@@ -42,6 +42,7 @@ digimatrix - LIRC_DEVICES setting to add support for digimatrix receiver device
 dsp - LIRC_DEVICES setting to add support for dsp receiver device
 dvico - LIRC_DEVICES setting to add support for dvico receiver device
 ea65 - LIRC_DEVICES setting to add support for ea65 receiver device
+ene0100 - LIRC_DEVICES setting to add support for ene0100 receiver device
 exaudio - LIRC_DEVICES setting to add support for exaudio receiver device
 flyvideo - LIRC_DEVICES setting to add support for flyvideo receiver device
 ftdi - LIRC_DEVICES setting to add support for ftdi receiver device
@@ -51,7 +52,7 @@ hauppauge - LIRC_DEVICES setting to add support for hauppauge receiver device
 hercules_smarttv_stereo - LIRC_DEVICES setting to add support for hercules_smarttv_stereo receiver device
 i2cuser - LIRC_DEVICES setting to add support for i2cuser receiver device
 igorplugusb - LIRC_DEVICES setting to add support for igorplugusb receiver device
-iguana - LIRC_DEVICES setting to add support for iguana receiver device and software
+iguanaIR - LIRC_DEVICES setting to add support for iguanaIR receiver device and software
 imon - LIRC_DEVICES setting to add support for imon receiver device
 imon_24g - LIRC_DEVICES setting to add support for imon_24g receiver device
 imon_knob - LIRC_DEVICES setting to add support for imon_knob device
