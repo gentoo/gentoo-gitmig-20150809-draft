@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090824.ebuild,v 1.9 2009/09/20 13:08:22 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-python/eselect-python-20090824.ebuild,v 1.10 2009/10/04 01:56:58 arfrever Exp $
 
-EAPI="2"
+EAPI="1"
 
 inherit eutils flag-o-matic
 
@@ -23,7 +23,9 @@ pkg_setup() {
 	append-flags -fno-PIC -fno-PIE
 }
 
-src_prepare() {
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
 	epatch "${FILESDIR}/${P}-old-glibc.patch"
 	./autogen.sh || die "autogen.sh failed"
 }
