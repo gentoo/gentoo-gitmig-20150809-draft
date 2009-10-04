@@ -1,0 +1,10 @@
+# ChangeLog for sci-biology/arb
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/arb/ChangeLog,v 1.1 2009/10/04 00:25:29 weaver Exp $
+
+*arb-5.1 (03 Oct 2009)
+
+  03 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +arb-5.1.ebuild:
+  Import from Science overlay and version bump
+
