@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.11 2009/10/04 07:56:22 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-3.1.1.ebuild,v 1.12 2009/10/04 12:38:36 suka Exp $
 
 WANT_AUTOMAKE="1.9"
 EAPI="2"
@@ -68,7 +68,7 @@ HOMEPAGE="http://go-oo.org"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ppc x86 ~sparc"
 
 COMMON_DEPEND="!app-office/openoffice-bin
 	x11-libs/libXaw

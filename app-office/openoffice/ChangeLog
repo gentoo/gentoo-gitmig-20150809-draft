@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.489 2009/10/04 12:34:42 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.490 2009/10/04 12:38:36 suka Exp $
+
+  04 Oct 2009; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-3.1.1.ebuild:
+  Re-add ~sparc as kde4 is masked now
 
   04 Oct 2009; Andreas Proschofsky <suka@gentoo.org>
   -openoffice-3.0.0.ebuild, -files/gentoo-3.0.0.diff,
