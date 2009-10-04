@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20060606.ebuild,v 1.1 2007/05/06 15:56:43 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20060606.ebuild,v 1.2 2009/10/04 15:16:25 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="${DEPEND}
 	plotutils? ( media-libs/plotutils )"
 
 src_compile() {
-	filter-ldflags -Wl,--as-needed --as-needed
+	append-ldflags $(no-as-needed)
 	econf --disable-dependency-tracking || die "Configuration failed"
 	make || die "Compilation failed"
 }

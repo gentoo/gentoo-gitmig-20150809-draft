@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20051222.ebuild,v 1.4 2007/06/22 22:30:23 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/gwave-20051222.ebuild,v 1.5 2009/10/04 15:16:25 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	=x11-libs/guile-gtk-1.2*"
 
 src_compile() {
-	filter-ldflags -Wl,--as-needed --as-needed
+	append-ldflags $(no-as-needed)
 	econf || die "econf failed"
 	make || die "make failed"
 }
