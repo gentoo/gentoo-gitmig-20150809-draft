@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/lablgtk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.72 2009/10/02 23:26:01 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.73 2009/10/04 20:03:29 klausman Exp $
+
+  04 Oct 2009; Tobias Klausmann <klausman@gentoo.org> lablgtk-2.12.0.ebuild:
+  Stable on alpha, bug #286785
 
   02 Oct 2009; Markus Meier <maekke@gentoo.org> lablgtk-2.12.0.ebuild:
   amd64/x86 stable, bug #286785
