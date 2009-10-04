@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.14 2009/03/14 03:52:06 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox/matchbox-0.7.1.ebuild,v 1.15 2009/10/04 14:25:32 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -42,7 +42,7 @@ src_compile() {
 	use png || myconf="${myconf} --disable-png"
 	use debug && myconf="${myconf} --enable-debug"
 
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 
 	econf ${myconf} || die "Configuration failed"
 	emake || die "Make feiled"
