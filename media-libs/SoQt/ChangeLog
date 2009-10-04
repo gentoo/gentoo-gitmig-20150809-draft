@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/SoQt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.21 2009/08/23 19:02:15 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/SoQt/ChangeLog,v 1.22 2009/10/04 14:56:02 ssuominen Exp $
+
+  04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> SoQt-1.4.1.ebuild:
+  Replace -Wl,--no-as-needed with function from flag-o-matic eclass.
 
   23 Aug 2009; Víctor Ostorga <vostorga@gentoo.org> SoQt-1.4.1.ebuild,
   +files/SoQt-1.4.1-gcc44.patch:
