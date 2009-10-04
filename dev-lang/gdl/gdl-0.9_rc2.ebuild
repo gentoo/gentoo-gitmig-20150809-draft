@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc2.ebuild,v 1.1 2009/08/26 02:46:16 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9_rc2.ebuild,v 1.2 2009/10/04 14:42:21 ssuominen Exp $
 
 EAPI="2"
 
@@ -57,7 +57,7 @@ src_configure() {
 	# sorry, but even configure barfs with --as-needed
 	# when linking against imagemagick - have yet to
 	# figure out what the problem is
-	use imagemagick && append-ldflags -Wl,--no-as-needed
+	use imagemagick && append-ldflags $(no-as-needed)
 
 	# make sure we're hdf5-1.6 backward compatible
 	use hdf5 && append-flags -DH5_USE_16_API
