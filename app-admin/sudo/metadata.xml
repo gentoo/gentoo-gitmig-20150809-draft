@@ -3,7 +3,7 @@
 <pkgmetadata>
   <herd>no-herd</herd>
   <maintainer>
-    <email>flameeyes@gentoo.org</email>
+    <email>sudo@gentoo.org</email>
   </maintainer>
   <longdescription lang="en">
     Sudo (superuser do) allows a system administrator to give certain
