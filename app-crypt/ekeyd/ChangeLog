@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/ekeyd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.4 2009/09/29 20:29:02 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ekeyd/ChangeLog,v 1.5 2009/10/04 11:43:34 flameeyes Exp $
+
+*ekeyd-1.0.6-r1 (04 Oct 2009)
+
+  04 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org> -ekeyd-1.0.6.ebuild,
+  +ekeyd-1.0.6-r1.ebuild, files/ekey-ulusbd.init, files/ekeyd.init:
+  Revision bump to fix the init scripts, require localmount to be completed
+  before starting or ekeyd will not start. Also drop udev dependency on the
+  ekey-ulusbd init script since it's limited to non-Linux systems.
 
 *ekeyd-1.0.6 (29 Sep 2009)
 
