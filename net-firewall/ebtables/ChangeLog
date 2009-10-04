@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.28 2009/06/22 15:06:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.29 2009/10/04 14:35:44 ssuominen Exp $
+
+  04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  ebtables-2.0.8.2-r2.ebuild, ebtables-2.0.9.1.ebuild:
+  Replace -Wl,--no-as-needed with function from flag-o-matic eclass.
 
 *ebtables-2.0.9.1 (22 Jun 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.1.ebuild,v 1.1 2009/06/22 15:06:36 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ebtables-2.0.9.1.ebuild,v 1.2 2009/10/04 14:35:44 ssuominen Exp $
 
 inherit versionator eutils toolchain-funcs multilib flag-o-matic
 
@@ -39,7 +39,7 @@ src_unpack() {
 src_compile() {
 	# This package uses _init functions to initialise extensions. With
 	# --as-needed this will not work.
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 	emake || die "emake failed"
 }
 
