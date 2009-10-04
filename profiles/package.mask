@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10550 2009/10/04 18:32:22 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10551 2009/10/04 20:09:23 caster Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Vlastimil Babka <caster@gentoo.org> (04 Oct 2009)
+# Masked for removal in 30 days. Needs java 1.4 to build,
+# nothing uses it. Unless someone steps up and properly
+# bumps.
+dev-db/xindice
 
 # Mike Doty <kingtaco@gentoo.org> (04 Oct 2009)
 # alpha packages, kills puppies.
