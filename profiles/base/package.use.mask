@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.91 2009/09/23 10:42:11 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.92 2009/10/04 18:52:17 fauli Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -35,11 +35,6 @@ sci-mathematics/maxima gcl
 # Open source Java plugin development happens in IcedTea
 # these days.
 dev-java/gnu-classpath nsplugin
-
-# Thomas Anderson <gentoofan23@gentoo.org> (17 Jun 2009)
-# app-misc/iguanaIR is p.masked so lirc_devices_iguana
-# needs to get masked for app-misc/lirc.
-app-misc/lirc lirc_devices_iguana
 
 # Tristan Heaven <nyhm@gentoo.org> (12 Jun 2009)
 # media-libs/freeimage is masked for bug #269516

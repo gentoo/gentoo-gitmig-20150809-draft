@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.97 2009/09/23 10:42:11 elvanor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.98 2009/10/04 18:52:17 fauli Exp $
+
+  04 Oct 2009; Christian Faulhammer <fauli@gentoo.org> package.use.mask:
+  unmask lirc_devices_iguanaIR
 
   23 Sep 2009; Jean-Noël Rivasseau <elvanor@gentoo.org> package.use.mask:
   X use flag only for amd64/x86, bug 285951.
