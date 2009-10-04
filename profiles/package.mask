@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10547 2009/10/04 10:42:52 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10548 2009/10/04 11:14:55 scarabeus Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -213,7 +213,6 @@ media-libs/mlt++
 >=x11-libs/libXxf86dga-1.1
 >=x11-proto/bigreqsproto-1.1
 >=x11-proto/dmxproto-2.2.99
->=x11-proto/evieext-1.1
 >=x11-proto/inputproto-1.9.99
 >=x11-proto/recordproto-1.13.99.0
 >=x11-proto/scrnsaverproto-1.2.0
