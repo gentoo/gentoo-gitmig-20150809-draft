@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10543 2009/10/04 00:18:19 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10544 2009/10/04 00:46:48 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -314,33 +314,16 @@ dev-lang/nemerle
 # Convert-UUlib-1.30 breaks amavisd-new (#283797)
 =dev-perl/Convert-UUlib-1.30
 
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (05 Sep 2009)
-# Replaced by net-zope/generator. Masked for deletion in 30 days.
-dev-python/generator
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (05 Sep 2009)
-# Replaced by net-zope/validation. Masked for deletion in 30 days.
-dev-python/validation
-
 # Romain Perier <mrpouet@gentoo.org> (05 Sep 2009)
 # Masked because too old, contains a lot of QA warnings/errors
 # The last one has a lot of changes.
 =www-plugins/gnash-0.8.4
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (04 Sep 2009)
-# Replaced by dev-python/kaa-metadata. Masked for deletion in 30 days.
-dev-python/mmpython
 
 # Alex Legler <a3li@gentoo.org> (1 Sep 2009)
 # Masked for security, has no maintainer. Bug 283434.
 # Will be proposed for treecleaning if noone steps up in let's say two weeks.
 app-office/tinyerp-client
 app-office/tinyerp-server
-
-# Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (30 Aug 2009)
-# uuid module is included in Python >=2.5. Separate dev-python/uuid package
-# isn't needed (bug #283199). Masked for deletion in 30 days.
-dev-python/uuid
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (30 Aug 2009)
 #  on behalf of QA team
