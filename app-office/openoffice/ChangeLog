@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.488 2009/10/04 07:56:22 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.489 2009/10/04 12:34:42 suka Exp $
+
+  04 Oct 2009; Andreas Proschofsky <suka@gentoo.org>
+  -openoffice-3.0.0.ebuild, -files/gentoo-3.0.0.diff,
+  -files/fixsandbox.diff, -files/nojavanostax.diff:
+  Clean out old, security vulnerable version
 
   04 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> openoffice-3.1.1.ebuild:
   Stable for ppc, bug 283370
