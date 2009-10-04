@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvxml/dvxml-0.1.7.ebuild,v 1.1 2008/02/01 04:49:00 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvxml/dvxml-0.1.7.ebuild,v 1.2 2009/10/04 15:06:41 ssuominen Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 	sed -i 's/^\(SUBDIRS =.*\)doc\(.*\)$/\1\2/' Makefile.in || \
 		die "sed Makefile.in failed"
 
-	filter-ldflags -Wl,--as-needed
+	append-ldflags $(no-as-needed)
 }
 
 src_install() {
