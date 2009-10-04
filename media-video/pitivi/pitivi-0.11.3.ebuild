@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.3.ebuild,v 1.5 2009/05/03 17:36:25 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.11.3.ebuild,v 1.6 2009/10/04 20:04:39 arfrever Exp $
 
 inherit gnome2 python eutils
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-lang/python-2.5
 	>=dev-python/gconf-python-2.12
 	dev-python/pycairo
 	dev-python/pygoocanvas
-	net-zope/zopeinterface
+	net-zope/zope-interface
 
 	>=media-libs/gstreamer-0.10.13.1
 	>=dev-python/gst-python-0.10.6
