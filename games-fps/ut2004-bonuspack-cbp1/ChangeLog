@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-bonuspack-cbp1
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp1/ChangeLog,v 1.5 2008/07/28 16:46:39 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp1/ChangeLog,v 1.6 2009/10/04 13:26:41 nyhm Exp $
+
+  04 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  ut2004-bonuspack-cbp1-1-r1.ebuild:
+  EAPI=2; disable installation of init script and remove dedicated and
+  opengl USE flags
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
