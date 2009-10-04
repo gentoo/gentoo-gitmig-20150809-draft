@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zodb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.30 2009/08/17 14:52:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.31 2009/10/04 20:10:06 arfrever Exp $
+
+  04 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  zodb-3.3.1.ebuild, zodb-3.3.1-r1.ebuild, zodb-3.6.0.ebuild,
+  zodb-3.6.0-r1.ebuild:
+  net-zope/zopeinterface renamed to net-zope/zope-interface.
 
   17 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> zodb-3.3.1.ebuild,
   zodb-3.3.1-r1.ebuild, zodb-3.6.0.ebuild, zodb-3.6.0-r1.ebuild:
