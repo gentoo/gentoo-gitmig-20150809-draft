@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10544 2009/10/04 00:46:48 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10545 2009/10/04 00:51:07 arfrever Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -968,12 +968,6 @@ sys-cluster/gnbd-kernel
 sys-fs/gfs2
 sys-fs/gfs
 sys-fs/clvm
-
-# Robin H. Johnson <robbat2@gentoo.org> (4 Jul 2009)
-# Bug #275291 - New GnuPG release broke seahorse, enigmail, mutt (uncommon
-# setup, not in tree).
-# Pending release of new versions of enigmail/seahorse.
->=app-crypt/gnupg-2.0.12
 
 # Theo Chatzimichos <tampakrap@gentoo.org> (1 Jul 2009)
 # koffice monolithic masked, latest koffice version
