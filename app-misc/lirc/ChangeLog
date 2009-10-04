@@ -1,9 +1,24 @@
 # ChangeLog for app-misc/lirc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.208 2009/10/04 13:41:14 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.209 2009/10/04 18:48:28 fauli Exp $
+
+*lirc-0.8.6-r1 (04 Oct 2009)
+
+  04 Oct 2009; Christian Faulhammer <fauli@gentoo.org> +files/lircd-0.8.6,
+  -lirc-0.8.6.ebuild, +lirc-0.8.6-r1.ebuild:
+  Revision bump that will fix some new and some old issues:
+  * Merge mceusb and mceusb2 driver (bug 286269 by candrews AT integralblue
+  DOT com)
+  * New init.d file that will keep the old socket location so we don't break
+  all applications (thanks to Oldrich Jedlicka <oldium DOT pro AT seznam DOT
+  cz> in bug 286451)
+  * Add new ene0100 device
+  * Correct entry for iguanaIR device (bug 208785 by MasterC <MasterCLC AT
+  gmail DOT com>)
+  * Fix DEPEND and RDEPEND relations
 
   04 Oct 2009; Christian Faulhammer <fauli@gentoo.org> lirc-0.8.5.ebuild:
-  read stable keywords that have been accidentally removed
+  readd stable keywords that have been accidentally removed
 
   03 Oct 2009; Christian Faulhammer <fauli@gentoo.org> lirc-0.8.5.ebuild:
   Rework dependencies:

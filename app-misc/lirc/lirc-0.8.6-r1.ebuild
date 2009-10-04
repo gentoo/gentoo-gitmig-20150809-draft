@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.6.ebuild,v 1.1 2009/09/23 14:45:06 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.8.6-r1.ebuild,v 1.1 2009/10/04 18:48:28 fauli Exp $
 
 inherit eutils linux-mod flag-o-matic autotools
 
@@ -17,7 +17,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc X hardware-carrier transmitter"
 
 S="${WORKDIR}/${MY_P}"
@@ -41,16 +41,16 @@ IUSE_LIRC_DEVICES_DIRECT="
 	avermedia98 awlibusb bestbuy bestbuy2 breakoutbox
 	bte bw6130 caraca chronos commandir
 	cph06x creative creative_infracd
-	devinput digimatrix dsp dvico ea65
+	devinput digimatrix dsp dvico ea65 ene0100
 	exaudio flyvideo ftdi gvbctv5pci hauppauge
 	hauppauge_dvb hercules_smarttv_stereo i2cuser
-	igorplugusb iguana imon imon_24g imon_knob
+	igorplugusb iguanaIR imon imon_24g imon_knob
 	imon_lcd imon_pad imon_rsc irdeo irdeo_remote
 	irlink irman irreal it87 ite8709
 	knc_one kworld leadtek_0007 leadtek_0010
 	leadtek_pvr2000 livedrive_midi
 	livedrive_seq logitech macmini mceusb
-	mceusb2 mediafocusI mouseremote
+	mediafocusI mouseremote
 	mouseremote_ps2 mp3anywhere mplay nslu2
 	packard_bell parallel pcmak pcmak_usb
 	pctv pixelview_bt878 pixelview_pak
@@ -72,25 +72,23 @@ IUSE_LIRC_DEVICES="${IUSE_LIRC_DEVICES_DIRECT} ${IUSE_LIRC_DEVICES_SPECIAL}"
 #device-driver which use libusb
 LIBUSB_USED_BY_DEV="
 	all atilibusb awlibusb sasem igorplugusb imon imon_lcd imon_pad
-	imon_rsc streamzap mceusb mceusb2 xboxusb irlink commandir"
+	imon_rsc streamzap mceusb xboxusb irlink commandir"
 
 for dev in ${LIBUSB_USED_BY_DEV}; do
-	RDEPEND="${RDEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
+	DEPEND="${DEPEND} lirc_devices_${dev}? ( dev-libs/libusb )"
 done
 
-RDEPEND="${RDEPEND}
-	lirc_devices_ftdi? ( dev-embedded/libftdi )"
-
 # adding only compile-time depends
-DEPEND="${RDEPEND}
+DEPEND="${RDEPEND} ${DEPEND}
 	virtual/linux-sources
+	lirc_devices_ftdi? ( dev-embedded/libftdi )
 	lirc_devices_all? ( dev-embedded/libftdi )"
 
 # adding only run-time depends
 RDEPEND="${RDEPEND}
 	lirc_devices_usbirboy? ( app-misc/usbirboy )
 	lirc_devices_inputlirc? ( app-misc/inputlircd )
-	lirc_devices_iguana? ( app-misc/iguanaIR )"
+	lirc_devices_iguanaIR? ( app-misc/iguanaIR )"
 
 # add all devices to IUSE
 for dev in ${IUSE_LIRC_DEVICES}; do
@@ -123,6 +121,12 @@ add_device() {
 }
 
 pkg_setup() {
+
+	if use lirc_devices_mceusb2
+	then
+		ewarn "The mceusb2 driver has been merged into the mceusb."
+		ewarn "Please only use the latter now."
+	fi
 
 	ewarn "If your LIRC device requires modules, you'll need MODULE_UNLOAD"
 	ewarn "support in your kernel."
@@ -280,7 +284,7 @@ src_unpack() {
 src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 
-	newinitd "${FILESDIR}"/lircd-0.8.3 lircd
+	newinitd "${FILESDIR}"/lircd-0.8.6 lircd
 	newinitd "${FILESDIR}"/lircmd lircmd
 	newconfd "${FILESDIR}"/lircd.conf.2 lircd
 
@@ -298,41 +302,33 @@ src_install() {
 
 	insinto /usr/share/lirc/remotes
 	doins -r remotes/*
+
+	keepdir /var/run/lirc
 }
 
 pkg_preinst() {
 	linux-mod_pkg_preinst
 
 	local dir="${ROOT}/etc/modprobe.d"
-	if [[ -a ${dir}/lirc && ! -a ${dir}/lirc.conf ]]; then
+	if [[ -a "${dir}"/lirc && ! -a "${dir}"/lirc.conf ]]; then
 		elog "Renaming ${dir}/lirc to lirc.conf"
 		mv -f "${dir}/lirc" "${dir}/lirc.conf"
 	fi
 
 	# stop portage from deleting this file
-	if [[ -f ${ROOT}/etc/lircd.conf && ! -f ${D}/etc/lircd.conf ]]; then
-		cp "${ROOT}"/etc/lircd.conf "${D}"/etc/lircd.conf
+	if [[ -f "${ROOT}"/etc/lirc/lircd.conf && ! -f "${D}"/etc/lirc/lircd.conf ]]; then
+		cp "${ROOT}"/etc/lirc/lircd.conf "${D}"/etc/lirc/lircd.conf
 	fi
 }
 
 pkg_postinst() {
 	linux-mod_pkg_postinst
-	echo
-	elog "The lirc Linux Infrared Remote Control Package has been"
-	elog "merged, please read the documentation at http://www.lirc.org"
-	echo
+	ewarn
+	ewarn "The lirc_gpio driver will not work with Kernels 2.6.22+"
+	ewarn "You need to switch over to /dev/input/event? if you need gpio"
+	ewarn "This device can than then be used via lirc's dev/input driver."
+	ewarn
+	ewarn "The new default location for lircd.conf is inside of"
+	ewarn "/etc/lirc/ directory"
 
-	if kernel_is ge 2 6 22 ; then
-		# Bug #187418
-		ewarn
-		ewarn "The lirc_gpio driver will not work with Kernels 2.6.22+"
-		ewarn "You need to switch over to /dev/input/event? if you need gpio"
-		ewarn "This device can than then be used via lirc's dev/input driver."
-		ewarn
-	fi
-
-	elog
-	elog "lirc now uses normal config-protection for lircd.conf."
-	elog "If you need any other lircd.conf you may have a look at"
-	elog "the directory /usr/share/lirc/remotes"
 }
