@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.2 2009/10/04 15:19:01 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.3 2009/10/04 15:34:12 sping Exp $
+
+*uncrustify-9999 (04 Oct 2009)
+
+  04 Oct 2009; Sebastian Pipping <sping@gentoo.org> +uncrustify-9999.ebuild:
+  Add live ebuild from sunrise
 
 *uncrustify-0.53 (04 Oct 2009)
 
