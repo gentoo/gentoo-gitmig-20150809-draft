@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3343 2009/10/03 21:39:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3344 2009/10/04 00:18:19 kingtaco Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Oct 2009; Mike Doty <kingtaco@gentoo.org> package.mask:
+  p.mask emul-linux-x86-baselibs-20091003_rc1
 
   03 Oct 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   Last rites for dev-java/tagunit.
