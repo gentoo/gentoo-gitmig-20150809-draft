@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/gnu-classpath-inetlib
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.23 2007/05/26 22:45:41 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath-inetlib/ChangeLog,v 1.24 2009/10/04 13:59:12 caster Exp $
+
+*gnu-classpath-inetlib-1.1-r3 (04 Oct 2009)
+*gnu-classpath-inetlib-1.0-r3 (04 Oct 2009)
+
+  04 Oct 2009; Vlastimil Babka <caster@gentoo.org>
+  +gnu-classpath-inetlib-1.0-r3.ebuild,
+  +gnu-classpath-inetlib-1.1-r3.ebuild:
+  Revbump to remove jessie dependency, since it's not needed with 1.4+ JDKs.
 
   26 May 2007; Petteri Räty <betelgeuse@gentoo.org>
   gnu-classpath-inetlib-1.0-r2.ebuild, gnu-classpath-inetlib-1.1-r2.ebuild:
