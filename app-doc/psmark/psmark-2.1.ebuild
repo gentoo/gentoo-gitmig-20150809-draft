@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/psmark-2.1.ebuild,v 1.2 2009/09/23 15:19:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/psmark/psmark-2.1.ebuild,v 1.3 2009/10/04 19:14:37 vostorga Exp $
 
 inherit eutils toolchain-funcs
 
@@ -20,14 +20,19 @@ KEYWORDS="~x86"
 DEPEND=""
 RDEPEND="${DEPEND}"
 
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-string.patch
+	epatch "${FILESDIR}"/${P}-Makefile-QA.patch
+}
+
 src_compile() {
-	cd ${S}
-	epatch ${FILESDIR}/${P}-string.patch || die "epatch failed"
-	make CFLAGS="${CFLAGS}" || die "make failed"
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die "make failed"
 }
 
 src_install() {
-	dobin psmark
-	doman psmark.1
-	dodoc README CHANGELOG COPYING
+	dobin psmark || die "dobin failed"
+	doman psmark.1 || die "doman failed"
+	dodoc README CHANGELOG || die "dodoc failed"
 }
