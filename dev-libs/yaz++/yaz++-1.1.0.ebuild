@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz++/yaz++-1.1.0.ebuild,v 1.1 2008/04/21 19:11:56 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/yaz++/yaz++-1.1.0.ebuild,v 1.2 2009/10/04 14:43:52 ssuominen Exp $
 
 inherit eutils autotools flag-o-matic
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	append-ldflags -Wl,--no-as-needed # FIXME.
+	append-ldflags $(no-as-needed)
 	econf
 	emake || die "emake failed"
 }

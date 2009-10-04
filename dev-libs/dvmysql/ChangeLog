@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dvmysql
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.14 2008/11/16 16:29:09 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/ChangeLog,v 1.15 2009/10/04 14:46:11 ssuominen Exp $
+
+  04 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> dvmysql-1.0.2.ebuild:
+  Replace -Wl,--no-as-needed with function from flag-o-matic eclass.
 
   16 Nov 2008; Diego E. Pettenò <flameeyes@gentoo.org>
   dvmysql-1.0.2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/dvmysql-1.0.2.ebuild,v 1.2 2008/11/16 16:29:09 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvmysql/dvmysql-1.0.2.ebuild,v 1.3 2009/10/04 14:46:11 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -25,7 +25,7 @@ src_unpack() {
 		die "sed Makefile.in failed"
 
 	# Bug #247053
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 }
 
 src_install() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.8 2008/11/16 16:30:13 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dvutil/dvutil-0.15.5.ebuild,v 1.9 2009/10/04 14:47:56 ssuominen Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,7 +32,7 @@ src_compile() {
 	fi
 
 	# Bug #247088
-	append-ldflags -Wl,--no-as-needed
+	append-ldflags $(no-as-needed)
 
 	econf || die "econf failed"
 	emake || die "emake failed"
