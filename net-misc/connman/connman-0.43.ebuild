@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.39.ebuild,v 1.2 2009/08/25 19:28:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/connman/connman-0.43.ebuild,v 1.1 2009/10/05 12:22:24 dagger Exp $
 
 EAPI="2"
-
-inherit eutils autotools
 
 DESCRIPTION="Provides a daemon for managing internet connections"
 HOMEPAGE="http://connman.net"
@@ -30,14 +28,6 @@ RDEPEND=">=dev-libs/glib-2.16
 
 DEPEND="${RDEPEND}
 	doc? ( dev-util/gtk-doc )"
-
-src_prepare() {
-
-	cd "${S}"
-	# fixes parallel build
-	epatch "${FILESDIR}"/${P}-fix-parallel-build.patch
-	eautoreconf
-}
 
 src_configure() {
 	econf \
