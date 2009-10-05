@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.85 2009/10/04 20:07:21 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.86 2009/10/05 23:52:51 tcunha Exp $
+
+  06 Oct 2009; Tiago Cunha <tcunha@gentoo.org> GD-2.44.ebuild:
+  stable sparc, bug 286799
 
   04 Oct 2009; Tobias Klausmann <klausman@gentoo.org> GD-2.44.ebuild:
   Stable on alpha, bug #286799
