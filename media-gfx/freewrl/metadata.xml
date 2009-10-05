@@ -2,7 +2,14 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>no-herd</herd>
-<maintainer><email>hanno@gentoo.org</email></maintainer>
+<maintainer>
+	<email>patrick@gentoo.org</email>
+	<name>Patrick Lauer (proxy)</name>
+</maintainer>
+<maintainer>
+	<email>ian@aerobiology.ca</email>
+	<name>Ian Stakenvicius (proxy-maintainer)</name>
+</maintainer>
 <use> 
 	<flag name='libeai'>Build EAI C library</flag>
 	<flag name='spidermonkey'>Use spidermonkey instead of Firefox</flag>
