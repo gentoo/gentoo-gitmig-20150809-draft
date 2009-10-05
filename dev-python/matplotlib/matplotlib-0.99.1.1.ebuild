@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.1 2009/09/24 04:25:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.2 2009/10/05 21:51:00 volkmar Exp $
 
 WX_GTK_VER=2.8
 EAPI=2
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 IUSE="cairo doc excel examples fltk gtk latex qt3 qt4 traits tk wxwidgets"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="PYTHON BSD"
 
 CDEPEND=">=dev-python/numpy-1.1

@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/matplotlib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.70 2009/09/24 04:25:19 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/ChangeLog,v 1.71 2009/10/05 21:51:00 volkmar Exp $
+
+  05 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  matplotlib-0.98.5.3.ebuild, matplotlib-0.99.0.ebuild,
+  matplotlib-0.99.1.1.ebuild:
+  Re-Keywording for ppc, bug 280023
 
 *matplotlib-0.99.1.1 (24 Sep 2009)
 
