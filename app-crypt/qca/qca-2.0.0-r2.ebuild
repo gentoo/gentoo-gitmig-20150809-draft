@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.18 2009/04/26 15:32:25 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-2.0.0-r2.ebuild,v 1.19 2009/10/05 19:08:48 ayoy Exp $
 
-EAPI="1"
+EAPI="2"
 
 inherit eutils multilib qt4
 
@@ -17,31 +17,12 @@ IUSE="debug doc examples"
 RESTRICT="test"
 
 DEPEND="!<app-crypt/qca-1.0-r3
-	x11-libs/qt-core:4"
+	x11-libs/qt-core:4[debug?]"
 RDEPEND="${DEPEND}"
 
-pkg_setup() {
-	if use debug; then
-		if has_version "<x11-libs/qt-4.4.0_alpha1:4" && ! built_with_use x11-libs/qt:4 debug; then
-			eerror "You are trying to compile ${PN} with USE=\"debug\""
-			eerror "while x11-libs/qt:4 is built without this particular flag."
-			die "Rebuild x11-libs/qt:4 with USE=\"debug\"."
-		elif has_version "x11-libs/qt-core:4" && ! built_with_use x11-libs/qt-core:4 debug; then
-			eerror "You are trying to compile ${PN} with USE=\"debug\""
-			eerror "while x11-libs/qt-core:4 is built without this particular flag."
-			die "Rebuild x11-libs/qt-core:4 with USE=\"debug\"."
-		fi
-	fi
-}
+PATCHES=( "${FILESDIR}/${P}-debug-same-pkgconfig-file.patch" )
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
-	epatch "${FILESDIR}/${P}-debug-same-pkgconfig-file.patch"
-}
-
-src_compile() {
+src_configure() {
 	_libdir=$(get_libdir)
 	local myconf
 	if use debug; then
@@ -65,7 +46,6 @@ src_compile() {
 		|| die "configure failed"
 
 	eqmake4 ${PN}.pro
-	emake || die "emake failed"
 }
 
 src_install() {
