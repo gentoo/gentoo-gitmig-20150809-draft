@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libdmx
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdmx/ChangeLog,v 1.27 2006/10/01 17:10:29 dberkholz Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdmx/ChangeLog,v 1.28 2009/10/05 17:35:45 scarabeus Exp $
+
+*libdmx-1.1.0 (05 Oct 2009)
+
+  05 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> +libdmx-1.1.0.ebuild:
+  Version bump for xorg-server-1.7
 
   01 Oct 2006; Donnie Berkholz <dberkholz@gentoo.org>; libdmx-1.0.2.ebuild:
   libXext has a runtime dep on xextproto now, so we don't need to depend on it
