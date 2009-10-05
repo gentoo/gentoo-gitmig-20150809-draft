@@ -1,6 +1,9 @@
 # ChangeLog for net-im/kmess
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.47 2009/08/01 12:34:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kmess/ChangeLog,v 1.48 2009/10/05 10:54:11 hwoarang Exp $
+
+  05 Oct 2009; Markos Chandras <hwoarang@gentoo.org> -kmess-2.0_rc1.ebuild:
+  Remove old ebuild
 
 *kmess-2.0 (01 Aug 2009)
 
