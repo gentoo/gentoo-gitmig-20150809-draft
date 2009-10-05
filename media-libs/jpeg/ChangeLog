@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.82 2009/10/03 14:49:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.83 2009/10/05 21:07:19 maekke Exp $
+
+  05 Oct 2009; Markus Meier <maekke@gentoo.org> jpeg-7.ebuild:
+  x86 stable, bug #285598
 
   03 Oct 2009; Tobias Klausmann <klausman@gentoo.org> jpeg-7.ebuild:
   Stable on alpha, bug #285598
