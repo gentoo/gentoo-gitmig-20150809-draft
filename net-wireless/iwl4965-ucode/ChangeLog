@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/iwl4965-ucode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.19 2009/10/03 10:31:18 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/iwl4965-ucode/ChangeLog,v 1.20 2009/10/05 21:44:49 maekke Exp $
+
+  05 Oct 2009; Markus Meier <maekke@gentoo.org>
+  iwl4965-ucode-228.61.2.24.ebuild:
+  amd64/x86 stable, bug #287471
 
   03 Oct 2009; Peter Volkov <pva@gentoo.org>
   iwl4965-ucode-228.57.2.21.ebuild, iwl4965-ucode-228.57.2.23.ebuild,
