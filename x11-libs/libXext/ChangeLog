@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXext
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.60 2009/10/03 15:18:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXext/ChangeLog,v 1.61 2009/10/05 15:08:29 fauli Exp $
+
+  05 Oct 2009; Christian Faulhammer <fauli@gentoo.org> libXext-1.0.5.ebuild:
+  x86 stable, bug 282290
 
   03 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> libXext-1.1.ebuild:
   Fix header.
