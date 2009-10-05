@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.7 2009/09/07 01:17:13 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.8 2009/10/05 21:04:17 darkside Exp $
+
+  05 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  +files/exo-0.3.4-interix.patch, exo-0.3.102-r1.ebuild:
+  Port Gentoo Prefix ebuild to gentoo-x86
 
   07 Sep 2009; Brent Baude <ranger@gentoo.org> exo-0.3.102-r1.ebuild:
   Marking exo-0.3.102-r1 ppc64 for bug 282710

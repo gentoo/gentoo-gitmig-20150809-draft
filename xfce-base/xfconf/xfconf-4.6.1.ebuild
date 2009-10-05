@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1.ebuild,v 1.12 2009/08/02 10:16:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1.ebuild,v 1.13 2009/10/05 21:22:30 darkside Exp $
 
 EAPI=2
 inherit flag-o-matic xfconf
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.xfce.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux"
 IUSE="debug -perl profile"
 
 RDEPEND=">=dev-libs/dbus-glib-0.72
@@ -48,7 +48,9 @@ src_install() {
 	xfconf_src_install
 
 	if use perl; then
-		find "${D}" -type f -name perllocal.pod -delete
-		find "${D}" -depth -mindepth 1 -type d -empty -delete
+		# Prefix compat. In Gentoo Linux, defaults to ${D}
+		[[ -z ${ED} ]] && local ED=${D}
+		find "${ED}" -type f -name perllocal.pod -delete
+		find "${ED}" -depth -mindepth 1 -type d -empty -delete
 	fi
 }

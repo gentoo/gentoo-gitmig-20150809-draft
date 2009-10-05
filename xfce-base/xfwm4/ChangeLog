@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.138 2009/08/01 22:44:27 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.139 2009/10/05 21:26:06 darkside Exp $
+
+  05 Oct 2009; Jeremy Olexa <darkside@gentoo.org> xfwm4-4.6.1.ebuild:
+  Port Gentoo Prefix ebuild to gentoo-x86
 
   01 Aug 2009; Samuli Suominen <ssuominen@gentoo.org> xfwm4-4.6.1.ebuild:
   Use xfconf.eclass.
