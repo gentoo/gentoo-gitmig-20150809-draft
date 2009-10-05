@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/ut2004-bonuspack-cbp2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp2/ChangeLog,v 1.9 2009/10/04 14:18:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp2/ChangeLog,v 1.10 2009/10/05 17:05:11 nyhm Exp $
+
+*ut2004-bonuspack-cbp2-1-r2 (05 Oct 2009)
+
+  05 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  +ut2004-bonuspack-cbp2-1-r2.ebuild:
+  Use original zip files instead of third party installers; fix file
+  collision with ut2004-bonuspack-mega, bug #130036 by Paul Bredbury
 
   04 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
   ut2004-bonuspack-cbp2-1-r1.ebuild:
