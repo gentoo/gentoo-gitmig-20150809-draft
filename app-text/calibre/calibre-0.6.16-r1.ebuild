@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.1 2009/10/03 21:08:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.2 2009/10/05 07:48:36 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -59,9 +59,23 @@ src_prepare() {
 }
 
 src_install() {
+
+	# Bypass kbuildsycoca and update-mime-database in order to
+	# avoid sandbox violations if xdg-mime tries to call them.
+	cat - > "${T}/kbuildsycoca" <<-EOF
+	#!$BASH
+	exit 0
+	EOF
+
+	cp "${T}"/{kbuildsycoca,update-mime-database}
+	chmod +x "${T}"/{kbuildsycoca,update-mime-database}
+
 	# --bindir and --sharedir don't seem to work.
 	# Pass them in anyway so we'll know when they are fixed.
-	PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
+	# Unset DISPLAY in order to prevent xdg-mime from triggering a sandbox
+	# violation with kbuildsycoca as in bug #287067, comment #13.
+	export -n DISPLAY
+	PATH=${T}:${PATH} PYTHONPATH=${S}/src${PYTHONPATH:+:}${PYTHONPATH} \
 		distutils_src_install --bindir="${D}usr/bin" --sharedir="${D}usr/share"
 
 	grep -rlZ "${D}" "${D}" | xargs -0 sed -e "s:${D}:/:g" -i ||
