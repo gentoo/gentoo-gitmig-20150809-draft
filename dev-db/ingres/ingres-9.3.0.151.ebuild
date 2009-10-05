@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ingres-9.3.0.151.ebuild,v 1.1 2009/10/04 00:08:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ingres/ingres-9.3.0.151.ebuild,v 1.2 2009/10/05 03:15:54 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -10,9 +10,9 @@ inherit eutils flag-o-matic versionator
 KEYWORDS="~x86"
 SLOT="0"
 
-# Several Ingres instances can be installed with different 
+# Several Ingres instances can be installed with different
 # installation identifiers - default is II
-# This is not the same as slotting because we have 
+# This is not the same as slotting because we have
 # n installations of the same version which is not supported
 # by portage (e.g. portage doesn't know which one to unmerge)
 II_INSTALLATION=${II_INSTALLATION:-"II"}
