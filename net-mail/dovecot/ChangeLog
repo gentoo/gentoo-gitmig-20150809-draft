@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.211 2009/10/03 15:58:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.212 2009/10/05 14:10:24 patrick Exp $
+
+*dovecot-1.1.19 (05 Oct 2009)
+
+  05 Oct 2009; Patrick Lauer <patrick@gentoo.org> +dovecot-1.1.19.ebuild:
+  Bump for 1.1 series
 
   03 Oct 2009; Patrick Lauer <patrick@gentoo.org> dovecot-1.2.4.ebuild:
   Don't enable mbox by default
