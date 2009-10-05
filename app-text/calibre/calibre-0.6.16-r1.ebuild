@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.2 2009/10/05 07:48:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.3 2009/10/05 08:32:33 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -55,6 +55,11 @@ src_prepare() {
 		-e "s:xdg-mime install:xdg-mime install --mode user:" \
 		-e "s:old_udev = '/etc:old_udev = '${D}etc:" \
 		-i src/calibre/linux.py || die "sed'ing in the IMAGE path failed"
+
+	# Disable unnecessary privilege dropping for bug #287067.
+	sed -e "s:if os.geteuid() == 0:if False and os.geteuid() == 0:" \
+		-i setup/install.py || die "sed'ing in the IMAGE path failed"
+
 	distutils_src_prepare
 }
 
