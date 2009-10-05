@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5.ebuild,v 1.1 2009/09/02 19:29:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/warsow/warsow-0.5.ebuild,v 1.2 2009/10/05 17:46:44 mr_bones_ Exp $
 
 EAPI=2
-inherit eutils toolchain-funcs versionator games
+inherit flag-o-matic eutils toolchain-funcs versionator games
 
 MY_P=${PN}_${PV}
 DESCRIPTION="Multiplayer FPS based on the QFusion engine (evolved from Quake 2)"
@@ -50,6 +50,7 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${P}-build.patch \
 		"${FILESDIR}"/${P}-openal.patch
+	strip-flags
 }
 
 src_compile() {
