@@ -3,4 +3,9 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer><email>hanno@gentoo.org</email></maintainer>
+<use> 
+	<flag name='libeai'>Build EAI C library</flag>
+	<flag name='spidermonkey'>Use spidermonkey instead of Firefox</flag>
+</use>
+
 </pkgmetadata>
