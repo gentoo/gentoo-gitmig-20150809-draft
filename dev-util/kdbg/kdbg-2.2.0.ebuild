@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.2.0.ebuild,v 1.1 2009/10/03 19:19:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/kdbg-2.2.0.ebuild,v 1.2 2009/10/05 02:41:45 dirtyepic Exp $
 
 ARTS_REQUIRED="never"
 
@@ -18,3 +18,8 @@ IUSE=""
 RDEPEND=">=sys-devel/gdb-5.0"
 
 need-kde 3.5
+
+src_unpack() {
+	kde_src_unpack
+	epatch "${FILESDIR}"/${P}-glibc-2.10.patch
+}

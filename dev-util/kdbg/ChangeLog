@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdbg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.64 2009/10/03 20:04:44 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdbg/ChangeLog,v 1.65 2009/10/05 02:41:45 dirtyepic Exp $
+
+  05 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> kdbg-2.2.0.ebuild,
+  +files/kdbg-2.2.0-glibc-2.10.patch:
+  Fix building with glibc-2.10 again, bug #287633.
 
   03 Oct 2009; Sebastian Pipping <sping@gentoo.org> kdbg-2.1.0.ebuild,
   +files/kdbg-2.1.0-move-kde-ldflags-up-front.patch:
