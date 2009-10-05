@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10555 2009/10/05 13:03:11 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10556 2009/10/05 17:21:29 vostorga Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -915,12 +915,6 @@ media-sound/alsa-driver
 # bug 279383
 net-misc/asterisk-chan_bluetooth
 
-# Víctor Ostorga <vostorga@gentoo.org> (29 Jul 2009)
-# Masked for removal in 60 days. Latest release in 2005, 
-# upstream no longer maintains it , Gnome-Art NextGen is a replacement
-# bug 245145
-gnome-extra/gnome-art
-
 # Marijn Schouten <hkBst@gentoo.org> (29 Jul 2009)
 # Masked for removal. Upstream renamed to Clozure CL which can be found in lisp overlay.
 dev-lisp/openmcl
@@ -936,12 +930,6 @@ dev-lisp/gcl
 # is released.
 >=dev-util/nvidia-cuda-sdk-2.3
 >=dev-util/nvidia-cuda-toolkit-2.3
-
-# Jeremy Olexa <darkside@gentoo.org> (29 Jul 2009)
-# Masked for removal in 60 days. Depends on a vulnerable package that was
-# removed (=net-im/silc-toolkit-1.0).
-# Maybe can port to new silc-toolkit?? bug 279547
-net-im/silky
 
 # Jeremy Olexa <darkside@gentoo.org> (28 Jul 2009)
 # On behalf of Robin H. Johnson <robbat2@gentoo.org>.
@@ -1002,13 +990,6 @@ media-sound/teamspeak2-client-bin
 # Removal scheduled for 2009-08-13
 # bug #164016
 app-backup/bobs
-
-# Jeremy Olexa <darkside@gentoo.org> (11 Jul 2009)
-# QA removal, ebuild needs work, SSL support is dlopened instead of more
-# favorable ways. Project dead, now called mongoose instead. removal bug: 248484
-# mongoose bug: 173888
-# Removed in ~60 days by treecleaners
-www-servers/shttpd
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (6 Jul 2009)
 #  on behalf of QA Team
