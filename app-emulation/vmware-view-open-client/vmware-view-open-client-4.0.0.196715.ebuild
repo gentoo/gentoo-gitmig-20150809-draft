@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-3.1.0.169073.ebuild,v 1.1 2009/07/16 21:34:46 tgurr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-view-open-client/vmware-view-open-client-4.0.0.196715.ebuild,v 1.1 2009/10/05 22:39:45 tgurr Exp $
 
 EAPI="2"
 
