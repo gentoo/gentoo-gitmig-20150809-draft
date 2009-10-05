@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.613 2009/09/30 21:07:31 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.614 2009/10/05 12:25:25 fauli Exp $
+
+  05 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  xorg-x11-7.4-r1.ebuild:
+  x86 stable, bug 282290
 
   30 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> xorg-x11-7.4.ebuild,
   xorg-x11-7.4-r1.ebuild:
