@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2me-bin
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/ChangeLog,v 1.8 2007/08/27 10:40:32 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2me-bin/ChangeLog,v 1.9 2009/10/05 12:08:36 fauli Exp $
+
+  05 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
+  sun-j2me-bin-2.2-r3.ebuild:
+  stable x86, bug 284298
 
   27 Aug 2007; Petteri Räty <betelgeuse@gentoo.org>
   sun-j2me-bin-2.2-r3.ebuild:
