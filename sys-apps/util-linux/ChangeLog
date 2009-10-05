@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.279 2009/10/03 15:23:27 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.280 2009/10/05 09:32:20 ssuominen Exp $
+
+  05 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  util-linux-2.16.1.ebuild:
+  Update loop-aes patch wrt #284744 by Romain Perier.
 
   03 Oct 2009; Brent Baude <ranger@gentoo.org> util-linux-2.16.1.ebuild:
   Marking util-2.16.1 ppc64 for 284744
