@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/mock
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.1 2009/10/05 22:06:00 patrick Exp $
+
+*mock-0.6.0 (05 Oct 2009)
+
+  05 Oct 2009; Patrick Lauer <patrick@gentoo.org> +mock-0.6.0.ebuild,
+  +metadata.xml:
+  Initial import of mock. Closes #284741. Thanks to Almad and quantumsummers
+  for ebuild and testing.
+
