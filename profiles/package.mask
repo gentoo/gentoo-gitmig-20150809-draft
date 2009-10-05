@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10556 2009/10/05 17:21:29 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10557 2009/10/05 17:26:22 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (05 Oct 2009)
+# Masked for testing.
+=dev-libs/libffi-3.0.9_rc*
 
 # Bernard Cafarelli <voyageur@gentoo.org> (5 Oct 2009)
 # New ebuilds, mask rc versions for testing
