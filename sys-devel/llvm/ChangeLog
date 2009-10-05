@@ -1,0 +1,10 @@
+# ChangeLog for sys-devel/llvm
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.1 2009/10/05 13:10:54 voyageur Exp $
+
+*llvm-2.6_pre2 (05 Oct 2009)
+
+  05 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org>
+  +llvm-2.6_pre2.ebuild, +files/llvm-2.6-nohtmltargz.patch, +metadata.xml:
+  Initial commit, thanks everyone in bug #186279 and others
+
