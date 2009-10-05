@@ -1,6 +1,12 @@
 # ChangeLog for net-wireless/broadcom-sta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.14 2009/09/19 16:43:22 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/broadcom-sta/ChangeLog,v 1.15 2009/10/05 23:33:44 matsuu Exp $
+
+*broadcom-sta-5.10.91.9.3-r1 (05 Oct 2009)
+
+  05 Oct 2009; MATSUU Takuto <matsuu@gentoo.org>
+  +broadcom-sta-5.10.91.9.3-r1.ebuild:
+  Added COMPAT_NET_DEV_OPS to CONFIG_CHECK, bug #287083.
 
 *broadcom-sta-5.10.91.9.3 (19 Sep 2009)
 
