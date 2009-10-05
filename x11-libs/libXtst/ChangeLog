@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libXtst
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.50 2009/10/05 17:39:37 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXtst/ChangeLog,v 1.51 2009/10/05 17:41:36 scarabeus Exp $
+
+  05 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -libXtst-1.0.2.ebuild:
+  Remove old.
 
 *libXtst-1.1.0 (05 Oct 2009)
 
