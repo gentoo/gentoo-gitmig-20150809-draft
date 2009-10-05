@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.26.1.ebuild,v 1.2 2009/02/01 02:20:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.26.1.ebuild,v 1.3 2009/10/05 19:56:10 ayoy Exp $
 
 EAPI="2"
 
@@ -15,12 +15,9 @@ KEYWORDS="~amd64 ~x86"
 SLOT="0"
 IUSE=""
 
-DEPEND="
-	|| (
-	( x11-libs/qt-gui:4 x11-libs/qt-sql:4 )
-	>=x11-libs/qt-4.2:4 )"
-
-QT4_BUILT_WITH_USE_CHECK="sqlite3"
+DEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-sql:4[sqlite]"
+RDEPEND="${DEPEND}"
 
 src_configure() {
 	eqmake4 QDevelop.pro

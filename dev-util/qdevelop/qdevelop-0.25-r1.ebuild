@@ -1,8 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.5 2008/07/23 13:08:32 loki_val Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/qdevelop-0.25-r1.ebuild,v 1.6 2009/10/05 19:56:10 ayoy Exp $
 
-EAPI="1"
+EAPI="2"
+
 inherit base eutils qt4 toolchain-funcs
 
 DESCRIPTION="A development environment entirely dedicated to Qt4."
@@ -14,19 +15,18 @@ KEYWORDS="~amd64 x86"
 SLOT="0"
 IUSE=""
 
-RDEPEND="
-	|| ( ( x11-libs/qt-gui:4
-		x11-libs/qt-sql:4 )
-	>=x11-libs/qt-4.2:4 )"
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-sql:4[sqlite]"
 DEPEND="app-arch/unzip
-		${RDEPEND}"
-
-QT4_BUILT_WITH_USE_CHECK="sqlite3"
+	${RDEPEND}"
 
 PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
 
-src_compile() {
+src_configure() {
 	eqmake4 QDevelop.pro
+}
+
+src_compile() {
 	emake CXX=$(tc-getCXX) || die "emake failed"
 }
 

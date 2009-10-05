@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/qdevelop
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.7 2009/01/31 21:45:26 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qdevelop/ChangeLog,v 1.8 2009/10/05 19:56:10 ayoy Exp $
+
+  05 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> qdevelop-0.25-r1.ebuild,
+  qdevelop-0.26.1.ebuild:
+  Removed alternative dependency on Qt metapackage, switched to EAPI=2 for
+  0.25-r1 and fixed other minor issues
 
 *qdevelop-0.26.1 (31 Jan 2009)
 
