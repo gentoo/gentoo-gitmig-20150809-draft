@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10552 2009/10/04 22:43:19 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10553 2009/10/05 03:54:24 darkside Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,43 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# Dead project, missing deps, no maintainer. Removed in 60 days by treecleaners.
+# bug 205190
+sys-apps/qtparted
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# Obsolete and produces bad isos. Upstream recommends app-cdr/iat.
+# Removed in 60 days (or sooner based on lack of usefullness), bug 281149
+app-cdr/mdf2iso
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# QA standards are seriously missing on this package. It was marked stable
+# without applying a patch, even. No maintainer, remove in 60 days. bug 282388
+net-misc/rdist
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# Dead, broken software. Upstream themselves requested the removal from Gentoo.
+# bug 282820. Removed in 60 days.
+net-im/curphoo
+net-im/magnesium
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# Depends on gtk-1, orphaned library. Nothing uses it. Removed in 60 days. bug
+# 284494
+media-libs/SoGtk
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# Does not compile properly and hence does not install any of the tools it
+# offers. No maintainer. Removed in 60 days. bug 284623
+# (Depends on dev-libs/skalibs (below)
+sys-apps/minutils
+
+# Jeremy Olexa <darkside@gentoo.org> (5 Oct 2009)
+# QA!!? Installs to /package! No maintainer in Gentoo. Removed in 60 days.
+# bug 284618
+dev-libs/skalibs
 
 # Robin H. Johnson <robbat2@gentoo.org> (4 Jul 2009)
 # Bug #275291 - New GnuPG release broke seahorse, enigmail, mutt (uncommon
@@ -1140,6 +1177,8 @@ app-portage/udept
 # Jeremy Olexa <darkside@gentoo.org> (28 Mar 2009)
 # Upstream is very unresponsive and we had to guess at which kernel patch was
 # needed. May not work and/or may be harmful. You have been warned.
+# Jeremy Olexa <darkside@gentoo.org> (4 Oct 2009)
+# Removed in 30 days. Dead project, needs kernel patches. bug 257207
 sys-apps/sreadahead
 
 # Alex Legler <a3li@gentoo.org> (20 Mar 2009)
