@@ -1,6 +1,9 @@
 # ChangeLog for x11-drivers/xf86-video-chips
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.33 2009/09/22 14:12:58 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-chips/ChangeLog,v 1.34 2009/10/05 13:16:14 fauli Exp $
+
+  05 Oct 2009; Christian Faulhammer <fauli@gentoo.org> ChangeLog:
+  x86 stable, bug 282290
 
 *xf86-video-chips-1.2.2 (22 Sep 2009)
 
