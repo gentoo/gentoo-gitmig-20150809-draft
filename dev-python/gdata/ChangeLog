@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/gdata
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.35 2009/10/03 17:00:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdata/ChangeLog,v 1.36 2009/10/05 16:49:48 armin76 Exp $
+
+  05 Oct 2009; Raúl Porcel <armin76@gentoo.org> gdata-2.0.2.ebuild:
+  alpha/arm/ia64/sparc stable wrt #287194
 
   03 Oct 2009; Markus Meier <maekke@gentoo.org> gdata-2.0.2.ebuild:
   amd64/x86 stable, bug #287194
