@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/linkchecker
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.40 2009/06/29 22:55:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/linkchecker/ChangeLog,v 1.41 2009/10/05 17:54:56 grobian Exp $
+
+  05 Oct 2009; Fabian Groffen <grobian@gentoo.org> linkchecker-5.0.2.ebuild:
+  Marked ~ppc-macos and ~x64-solaris
 
 *linkchecker-5.0.2 (29 Jun 2009)
 
