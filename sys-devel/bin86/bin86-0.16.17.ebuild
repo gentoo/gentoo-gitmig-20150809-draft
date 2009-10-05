@@ -1,19 +1,17 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.17.ebuild,v 1.6 2008/02/27 20:50:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bin86/bin86-0.16.17.ebuild,v 1.7 2009/10/05 23:26:10 vapier Exp $
 
 inherit toolchain-funcs eutils
 
 DESCRIPTION="Assembler and loader used to create kernel bootsector"
-HOMEPAGE="http://homepage.ntlworld.com/robert.debath/"
-SRC_URI="http://homepage.ntlworld.com/robert.debath/dev86/${P}.tar.gz"
+HOMEPAGE="http://www.debath.co.uk/"
+SRC_URI="http://www.debath.co.uk/dev86/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
 IUSE=""
-
-RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
