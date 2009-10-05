@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-4.0-r1.ebuild,v 1.3 2009/04/06 11:36:00 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-4.0-r1.ebuild,v 1.4 2009/10/05 19:25:11 ayoy Exp $
 
 EAPI="2"
 NEED_KDE="none"
@@ -18,11 +18,9 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="kde"
 
 RDEPEND="dev-libs/chmlib
-	|| ( ( x11-libs/qt-dbus:4
-		x11-libs/qt-webkit:4 )
-		=x11-libs/qt-4.3*:4 )
-	!kde? ( || ( x11-libs/qt-gui:4
-		=x11-libs/qt-4.3*:4 ) )
+	x11-libs/qt-dbus:4
+	x11-libs/qt-webkit:4
+	!kde? ( x11-libs/qt-gui:4 )
 	kde? ( >=kde-base/kdelibs-4.1
 			!kde-base/okular[chm] )"
 DEPEND="${RDEPEND}
