@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/wally
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.16 2009/06/07 17:50:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/wally/ChangeLog,v 1.17 2009/10/05 15:46:16 tampakrap Exp $
+
+  05 Oct 2009; Theo Chatzimichos <tampakrap@gentoo.org> wally-2.0.3.ebuild:
+  Use kde4-base eclass in order to have better KDE intergration, also add
+  KDE_REQUIRED="optional"
 
   07 Jun 2009; Markos Chandras <hwoarang@gentoo.org> -wally-2.0.0.ebuild:
   Remove old ebuild
