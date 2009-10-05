@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.1.0.ebuild,v 1.1 2009/03/27 10:45:50 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/traits/traits-3.1.0.ebuild,v 1.2 2009/10/05 21:32:25 volkmar Exp $
 
 EAPI=2
 inherit distutils
@@ -13,7 +13,7 @@ SRC_URI="http://www.enthought.com/repo/ETS/${MY_P}.tar.gz"
 
 IUSE="doc examples test"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 LICENSE="BSD"
 
 RDEPEND=">=dev-python/numpy-1.1

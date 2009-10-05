@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/enthoughtbase
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.6 2009/09/05 20:57:15 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enthoughtbase/ChangeLog,v 1.7 2009/10/05 21:30:17 volkmar Exp $
+
+  05 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  enthoughtbase-3.0.3.ebuild:
+  Keywording for ppc, bug 280023
 
 *enthoughtbase-3.0.3 (05 Sep 2009)
 
