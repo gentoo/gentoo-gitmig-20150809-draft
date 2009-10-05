@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.17-r6.ebuild,v 1.1 2009/02/02 19:02:27 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/dev86/dev86-0.16.17-r6.ebuild,v 1.2 2009/10/05 23:43:07 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Bruce's C compiler - Simple C compiler to generate 8086 code"
-HOMEPAGE="http://www.cix.co.uk/~mayday"
-SRC_URI="http://www.cix.co.uk/~mayday/dev86/Dev86src-${PV}.tar.gz"
+HOMEPAGE="http://www.debath.co.uk/"
+SRC_URI="http://www.debath.co.uk/dev86/Dev86src-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,12 +28,14 @@ src_unpack() {
 			"${S}"/makefile.in
 	fi
 	cd "${S}"
-	epatch "${FILESDIR}/dev86-pic.patch"
+	epatch "${FILESDIR}"/dev86-pic.patch
 	epatch "${FILESDIR}"/${P}-fortify.patch
-	sed -i -e "s/-O2 -g/${CFLAGS}/" \
-		-e "s/INEXE=-m 755 -s/INEXE=-m 755/g" makefile.in
-	sed -i -e "s/INSTALL_OPTS=-m 755 -s/INSTALL_OPTS=-m 755/g" bin86/Makefile
-	sed -i -e "s/install -m 755 -s/install -m 755/g" dis88/Makefile
+	sed -i \
+		-e "s:-O2 -g:${CFLAGS} ${CPPFLAGS}:" \
+		-e '/INEXE=/s:-s::' \
+		makefile.in
+	sed -i -e '/INSTALL_OPTS=/s:-s::' bin86/Makefile
+	sed -i -e '/install -m 755 -s/s:-s::' dis88/Makefile
 }
 
 src_compile() {
@@ -49,12 +51,12 @@ src_compile() {
 }
 
 src_install() {
-	make install-all DIST="${D}" || die
-	dobin bootblocks/makeboot
+	emake -j1 install-all DIST="${D}" || die
+	dobin bootblocks/makeboot || die
 	# remove all the stuff supplied by bin86
 	cd "${D}"
-	rm usr/bin/{as,ld,nm,objdump,size}86
-	rm usr/man/man1/{as,ld}86.1
-	mkdir -p usr/share/man
-	mv usr/man usr/share/
+	rm usr/bin/{as,ld,nm,objdump,size}86 || die
+	rm usr/man/man1/{as,ld}86.1 || die
+	dodir /usr/share/man
+	mv usr/man usr/share/ || die
 }
