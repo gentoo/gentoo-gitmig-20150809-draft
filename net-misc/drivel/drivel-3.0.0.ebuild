@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.1 2009/10/03 08:18:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.2 2009/10/05 18:55:46 graaff Exp $
 
 inherit gnome2
 
@@ -36,7 +36,8 @@ G2CONF="${G2CONF} \
 	`use_with spell gtkspell` \
 	`use_with dbus` \
 	--disable-mime-update \
-	--disable-desktop-update
+	--disable-desktop-update \
+	--disable-error-on-warning \
 	--localstatedir=${D}/var"
 
 USE_DESTDIR="1"
