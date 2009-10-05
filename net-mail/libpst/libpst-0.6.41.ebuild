@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.41.ebuild,v 1.2 2009/09/25 14:55:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/libpst/libpst-0.6.41.ebuild,v 1.3 2009/10/05 15:53:14 armin76 Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.five-ten-sg.com/${PN}/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86"
 IUSE="debug dii python"
 
 RDEPEND="dii? ( media-gfx/imagemagick[png] )"
