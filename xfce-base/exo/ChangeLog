@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.8 2009/10/05 21:04:17 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.9 2009/10/06 21:31:14 ssuominen Exp $
+
+  06 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> exo-0.3.102-r1.ebuild:
+  Don't build static libs. Remove USE doc because documentation has been
+  prebuilt.
 
   05 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
   +files/exo-0.3.4-interix.patch, exo-0.3.102-r1.ebuild:
