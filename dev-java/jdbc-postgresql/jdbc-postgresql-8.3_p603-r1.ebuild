@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.3_p603-r1.ebuild,v 1.5 2008/06/24 22:46:15 ken69267 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/jdbc-postgresql-8.3_p603-r1.ebuild,v 1.6 2009/10/06 19:45:05 caster Exp $
 
 JAVA_PKG_IUSE="doc source"
 inherit java-pkg-2 java-ant-2
@@ -20,8 +20,8 @@ IUSE="java5 java6 test"
 
 DEPEND=">=dev-java/java-config-2.0.31
 	java6? ( =virtual/jdk-1.6* )
-	java5? ( =virtual/jdk-1.5* )
-	!java5? ( !java6? ( =virtual/jdk-1.4* ) )
+	!java6? ( java5? ( =virtual/jdk-1.5* ) )
+	!java6? ( !java5? ( =virtual/jdk-1.4* ) )
 	doc? (
 		dev-libs/libxslt
 		app-text/docbook-xsl-stylesheets
@@ -34,15 +34,15 @@ DEPEND=">=dev-java/java-config-2.0.31
 		virtual/postgresql-server
 	)"
 RDEPEND="java6? ( >=virtual/jre-1.6 )
-	java5? ( >=virtual/jre-1.5 )
-	!java5? ( !java6? ( >=virtual/jre-1.4 ) )"
+	!java6? ( java5? ( >=virtual/jre-1.5 ) )
+	!java6? ( !java5? ( >=virtual/jre-1.4 ) )"
 
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	if use java5 && use java6 ; then
-		eerror "You cannot use both 'java5' and 'java6' USE flags at the same time"
-		exit 1
+		ewarn "You enabled both 'java5' and 'java6' USE flags at the same time."
+		ewarn "The java6 flag takes precedence."
 	fi
 
 	java-pkg-2_pkg_setup

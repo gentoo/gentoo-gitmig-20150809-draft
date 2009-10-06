@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jdbc-postgresql
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.26 2009/10/03 21:12:51 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-postgresql/ChangeLog,v 1.27 2009/10/06 19:45:05 caster Exp $
+
+  06 Oct 2009; Vlastimil Babka <caster@gentoo.org>
+  jdbc-postgresql-8.3_p603-r1.ebuild, jdbc-postgresql-8.3_p604.ebuild:
+  Warn instead of error when both java5 and java6 are set. The java6 flag
+  takes precedence with correct jdk/jre deps.
 
 *jdbc-postgresql-8.3_p605 (03 Oct 2009)
 
