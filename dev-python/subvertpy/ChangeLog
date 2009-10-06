@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/subvertpy
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/subvertpy/ChangeLog,v 1.1 2009/10/06 19:37:37 pva Exp $
+
+*subvertpy-0.6.9 (06 Oct 2009)
+
+  06 Oct 2009; Peter Volkov <pva@gentoo.org> +subvertpy-0.6.9.ebuild,
+  +metadata.xml:
+  Initial import, ebuild initially from bazaar overlay. Fixes bug #270201,
+  thank Johan Bergström and Mark Lee.
+
