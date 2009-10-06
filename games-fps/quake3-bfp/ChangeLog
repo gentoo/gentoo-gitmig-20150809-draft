@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake3-bfp
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bfp/ChangeLog,v 1.4 2008/02/15 01:00:12 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bfp/ChangeLog,v 1.5 2009/10/06 22:47:01 nyhm Exp $
+
+  06 Oct 2009; Tristan Heaven <nyhm@gentoo.org> quake3-bfp-1.2-r1.ebuild:
+  EAPI=2; install icon
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org>
   quake3-bfp-1.2-r1.ebuild:
