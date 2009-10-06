@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r8.ebuild,v 1.8 2009/10/05 16:07:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/xinit-1.0.8-r8.ebuild,v 1.9 2009/10/06 20:42:58 williamh Exp $
 
 EAPI="2"
 
@@ -74,4 +74,7 @@ pkg_postinst() {
 	ewarn "Here's an example of setting it for the whole system:"
 	ewarn "    echo XSESSION=\"Gnome\" > /etc/env.d/90xsession"
 	ewarn "    env-update && source /etc/profile"
+	ewarn
+	ewarn "If you use the nox boot option to prevent x from starting on boot,"
+	ewarn "you should now use gentoo=nox."
 }
