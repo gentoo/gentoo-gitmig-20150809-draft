@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/qbzr
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/ChangeLog,v 1.15 2009/10/06 21:04:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/ChangeLog,v 1.16 2009/10/06 22:39:22 pva Exp $
+
+  06 Oct 2009; Peter Volkov <pva@gentoo.org> qbzr-0.14.3.ebuild,
+  +files/qbzr-0.14.3-has_dir.patch:
+  Fix TestLogGraphProvider tests.
 
 *qbzr-0.14.3 (06 Oct 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/qbzr-0.14.3.ebuild,v 1.1 2009/10/06 21:04:20 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbzr/qbzr-0.14.3.ebuild,v 1.2 2009/10/06 22:39:22 pva Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ inherit distutils versionator
 
 DESCRIPTION="Qt frontend for Bazaar"
 HOMEPAGE="https://launchpad.net/qbzr"
-SRC_URI="http://launchpad.net/qbzr/0.14/${PV}/+download/${P}.tar.gz"
+SRC_URI="http://launchpad.net/qbzr/$(get_version_component_range 1-2)/${PV}/+download/${PN}-${PV/.0}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,6 +28,11 @@ DOCS="AUTHORS.txt NEWS.txt README.txt TODO.txt"
 S=${WORKDIR}/${PN}
 
 PYTHON_MODNAME=bzrlib
+
+src_prepare() {
+	epatch "${FILESDIR}/${P}-has_dir.patch"
+	distutils_src_prepare
+}
 
 src_test() {
 	elog "It's impossible to run tests at this point. If you wish to run tests"
