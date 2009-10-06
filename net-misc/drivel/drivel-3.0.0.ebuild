@@ -1,8 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.2 2009/10/05 18:55:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/drivel-3.0.0.ebuild,v 1.3 2009/10/06 09:54:11 mrpouet Exp $
 
-inherit gnome2
+EAPI="2"
+
+inherit autotools eutils gnome2
 
 DESCRIPTION="Drivel is a desktop blogger with support for LiveJournal, Blogger,
 MoveableType, Wordpress and more."
@@ -29,15 +31,21 @@ DEPEND="${RDEPEND}
 	>=app-text/gnome-doc-utils-0.3.2
 	>=dev-util/intltool-0.21
 	>=app-text/scrollkeeper-0.3.5"
-
 DOCS="AUTHORS ChangeLog NEWS README TODO"
 
-G2CONF="${G2CONF} \
-	`use_with spell gtkspell` \
-	`use_with dbus` \
-	--disable-mime-update \
-	--disable-desktop-update \
-	--disable-error-on-warning \
-	--localstatedir=${D}/var"
+pkg_setup() {
+	G2CONF="${G2CONF}
+		$(use_with spell gtkspell)
+		$(use_with dbus)
+		--disable-mime-update
+		--disable-desktop-update
+		--disable-error-on-warning
+		--disable-compile-warnings
+		--localstatedir=${D}/var"
+}
+src_prepare() {
+	epatch "${FILESDIR}/${P}-compile-warnings.patch"
 
-USE_DESTDIR="1"
+	intltoolize --automake --copy --force || die "intltoolize failed"
+	eautoreconf
+}

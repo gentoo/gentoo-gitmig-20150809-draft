@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/drivel
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.34 2009/10/05 18:55:46 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/drivel/ChangeLog,v 1.35 2009/10/06 09:54:11 mrpouet Exp $
+
+  06 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  drivel-3.0.0.ebuild, +files/drivel-3.0.0-compile-warnings.patch:
+  Fix bug #287746, compile-warnings support was automagic, which forced
+  -Werror cflag to be used (and compilation to fail). Fix some QA.
 
   05 Oct 2009; Hans de Graaff <graaff@gentoo.org> drivel-3.0.0.ebuild:
   Do not error out on warnings, this should fix the build as reported in
