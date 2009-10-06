@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/freemat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.17 2009/08/07 17:07:14 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/freemat/ChangeLog,v 1.18 2009/10/06 17:37:16 ayoy Exp $
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> freemat-3.6.ebuild:
+  Removed alternative dependency on Qt metapackage
 
   07 Aug 2009; Sébastien Fabbro <bicatali@gentoo.org> freemat-3.6.ebuild:
   Added virtualx for testing on Xvfb and test use flags. Closing bug #280228
