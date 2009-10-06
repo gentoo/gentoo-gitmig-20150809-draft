@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qjackctl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.62 2009/10/01 21:37:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qjackctl/ChangeLog,v 1.63 2009/10/06 17:10:49 ayoy Exp $
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> qjackctl-0.3.2.ebuild,
+  qjackctl-0.3.4.ebuild:
+  Removed alternative dependency on Qt metapackage
 
 *qjackctl-0.3.5 (01 Oct 2009)
 

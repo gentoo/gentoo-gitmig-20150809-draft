@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/lmms
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.10 2009/08/13 07:07:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lmms/ChangeLog,v 1.11 2009/10/06 17:06:06 ayoy Exp $
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> lmms-0.4.5.ebuild:
+  Removed alternative dependency on Qt metapackage
 
 *lmms-0.4.5 (13 Aug 2009)
 
