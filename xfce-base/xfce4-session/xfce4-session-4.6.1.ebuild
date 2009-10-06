@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.1.ebuild,v 1.14 2009/10/05 21:16:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-session/xfce4-session-4.6.1.ebuild,v 1.15 2009/10/06 21:18:35 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic xfconf
@@ -32,6 +32,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
+		--disable-static
 		$(use_enable gnome)
 		$(use_enable gnome-keyring libgnome-keyring)
 		$(use_enable debug)
