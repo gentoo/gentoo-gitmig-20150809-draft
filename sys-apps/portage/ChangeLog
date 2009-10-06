@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.634 2009/10/04 00:14:52 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.635 2009/10/06 08:13:27 zmedico Exp $
+
+*portage-2.2_rc44 (06 Oct 2009)
+
+  06 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc44.ebuild:
+  2.2_rc44 bump. This makes the pkgsplit function backward compatible,
+  to fix breakage of epkginfo with 2.2_rc43. There's also a new
+  --accept-properties option for emerge which allows you to use
+  --accept-properties=-interactive in order to temporarily exclude
+  interactive updates.
 
 *portage-2.2_rc43 (03 Oct 2009)
 
