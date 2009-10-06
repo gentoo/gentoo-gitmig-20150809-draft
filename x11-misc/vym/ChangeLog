@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/vym
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.19 2009/04/10 13:21:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/vym/ChangeLog,v 1.20 2009/10/06 18:07:09 ayoy Exp $
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> vym-1.10.0-r1.ebuild:
+  Removed alternative dependency on Qt metapackage
 
 *vym-1.12.2 (10 Apr 2009)
 
