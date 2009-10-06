@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.1 2009/09/23 16:06:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.9.2_p02.ebuild,v 1.2 2009/10/06 17:41:33 ayoy Exp $
 
 EAPI=2
 
@@ -34,12 +34,12 @@ IUSE="aida athena +data dawn debug examples gdml geant3 global minimal +motif
 RDEPEND=">=sci-physics/clhep-2.0.4.2
 	motif? ( x11-libs/openmotif )
 	athena? ( x11-libs/libXaw )
-	qt4? ( || ( x11-libs/qt:4 x11-libs/qt-gui ) )
+	qt4? ( x11-libs/qt-gui:4 )
 	openinventor? ( >=media-libs/openinventor-2.1.5.10-r3 )
 	raytracerx? ( x11-libs/libX11 x11-libs/libXmu )
 	opengl? ( virtual/opengl
 			  athena? ( x11-libs/Xaw3d )
-			  qt4? ( || ( x11-libs/qt:4[opengl] x11-libs/qt-opengl ) ) )
+			  qt4? ( x11-libs/qt-opengl:4 ) )
 	gdml? ( dev-libs/xerces-c )
 	geant3? ( sci-physics/geant:3 )
 	dawn? ( media-gfx/dawn )

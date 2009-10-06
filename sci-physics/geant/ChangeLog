@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/geant
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.29 2009/09/23 16:06:00 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/ChangeLog,v 1.30 2009/10/06 17:41:33 ayoy Exp $
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> geant-4.9.2-r2.ebuild,
+  geant-4.9.2_p02.ebuild:
+  Removed alternative dependency on Qt metapackage
 
 *geant-4.9.2_p02 (23 Sep 2009)
 
