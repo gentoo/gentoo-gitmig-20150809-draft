@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.ebuild,v 1.1 2009/10/06 14:13:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mac/mac-3.99.4.5.ebuild,v 1.2 2009/10/06 16:41:37 ssuominen Exp $
 
 EAPI=2
 inherit eutils multilib versionator
@@ -21,6 +21,8 @@ DEPEND="sys-apps/sed
 	mmx? ( dev-lang/yasm )"
 
 S=${WORKDIR}/${MY_P}
+
+RESTRICT="mirror"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-gcc44.patch
