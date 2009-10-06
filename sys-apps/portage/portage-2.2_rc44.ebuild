@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc44.ebuild,v 1.1 2009/10/06 08:13:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc44.ebuild,v 1.2 2009/10/06 20:53:39 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="build doc epydoc linguas_pl python3 selinux"
 
 python_dep="python3? ( =dev-lang/python-3* )
-	!python3? ( >=dev-lang/python-2.6 )"
+	!python3? ( || ( ( >=dev-lang/python-2.6 <dev-lang/python-3 ) >=dev-lang/python-3 ) )"
 
 # the pysqlite blocker is for bug #282760
 DEPEND="${python_dep}

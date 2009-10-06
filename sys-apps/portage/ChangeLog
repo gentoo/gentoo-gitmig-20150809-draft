@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.635 2009/10/06 08:13:27 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.636 2009/10/06 20:53:39 zmedico Exp $
+
+  06 Oct 2009; Zac Medico <zmedico@gentoo.org> portage-2.2_rc44.ebuild:
+  Optimize python deps in order to avoid pulling in python3 when possible.
+  Thanks to Mart Raudsepp <leio@g.o> for the suggestion. This only works
+  if you have the fix from bug #285767 (>=portage-2.2_rc42).
 
 *portage-2.2_rc44 (06 Oct 2009)
 
