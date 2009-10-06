@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4874 2009/10/06 14:07:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4875 2009/10/06 20:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -695,9 +695,16 @@ dev-lang/gforth:force-reg - Enable a possibly unstable GCC flag for possibly lar
 dev-lang/ghc:binary - Install the binary version directly, rather than using it to build the source version.
 dev-lang/ghc:ghcbootstrap - Internal: Bootstrap GHC from an existing GHC installation.
 dev-lang/ghc:ghcmakebinary - Internal: Used while bootstrapping for making binaries, license related tweaking.
+dev-lang/icc:eclipse - Install the dev-util/eclipse-sdk plugins
+dev-lang/icc:idb - Install the Intel Debugger
+dev-lang/icc:ipp - Install the Intel Integrated Primitive
+dev-lang/icc:mkl - Install the Intel Math Kernel Library
 dev-lang/icon:iplsrc - install the icon programming library source
+dev-lang/idb:eclipse - Install the dev-util/eclipse-sdk plugins
 dev-lang/idb:icc - Use dev-lang/icc to install idb (default)
 dev-lang/idb:ifc - Use dev-lang/ifc to install idb
+dev-lang/ifc:idb - Install the Intel Debugger
+dev-lang/ifc:mkl - Install the Intel Math Kernel Library
 dev-lang/io:dbi - Enables dev-db/libdbi support
 dev-lang/lisaac:vim - install a syntax file for vim
 dev-lang/logtalk:fop - Support for generating pdf documentation using fop
