@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.89 2009/10/05 21:48:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.90 2009/10/06 17:30:39 armin76 Exp $
+
+  06 Oct 2009; Raúl Porcel <armin76@gentoo.org> amsn-0.97.2-r1.ebuild:
+  alpha stable wrt #287479
 
   05 Oct 2009; Markus Meier <maekke@gentoo.org> amsn-0.97.2-r1.ebuild:
   amd64/x86 stable, bug #287479
