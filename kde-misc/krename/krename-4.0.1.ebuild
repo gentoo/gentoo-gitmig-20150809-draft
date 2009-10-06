@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-4.0.0.ebuild,v 1.1 2009/09/24 14:47:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krename/krename-4.0.1.ebuild,v 1.1 2009/10/06 07:31:46 scarabeus Exp $
 
 EAPI="2"
 
@@ -23,8 +23,8 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 PATCHES=(
-	"${FILESDIR}/${PV}-fix_automagicness.patch"
-	"${FILESDIR}/${PV}-fix_taglib_support.patch"
+	"${FILESDIR}"/4.0.0-fix_automagicness.patch
+	"${FILESDIR}"/4.0.0-fix_taglib_support.patch
 )
 
 src_configure() {
