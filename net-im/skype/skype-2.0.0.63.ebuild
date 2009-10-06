@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.63.ebuild,v 1.8 2009/10/06 17:23:45 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-2.0.0.63.ebuild,v 1.9 2009/10/06 18:57:51 ayoy Exp $
 
-EAPI=1
+EAPI=2
 
 inherit eutils pax-utils qt4
 
@@ -40,7 +40,7 @@ DEPEND="amd64? ( >=app-emulation/emul-linux-x86-xlibs-1.2
 				x11-libs/libXrandr
 				x11-libs/libXrender
 				x11-libs/libX11 )
-		!qt-static? ( x11-libs/qt-gui:4
+		!qt-static? ( x11-libs/qt-gui:4[accessibility]
 				x11-libs/qt-dbus:4
 				x11-libs/libX11
 				x11-libs/libXau
@@ -50,7 +50,6 @@ RDEPEND="${DEPEND}"
 QA_EXECSTACK="opt/skype/skype"
 
 use qt-static && S="${WORKDIR}/${PN}_static-${PV}"
-use !qt-static && QT4_BUILT_WITH_USE_CHECK="guiaccessibility dbus"
 
 src_install() {
 	# remove mprotect() restrictions for PaX usage - see Bug 100507
