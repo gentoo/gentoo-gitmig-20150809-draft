@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.32 2009/10/06 12:59:07 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.33 2009/10/06 13:07:26 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -387,7 +387,7 @@ games-mods_pkg_postinst() {
 		elog " ${GAME_EXE}-${PN/${GAME}-}-ded"
 		echo
 		elog "To launch server at startup run:"
-		elog " rc-update add ${GAME_EXE}-${MOD_DIR}-ded default"
+		elog " rc-update add ${GAME_EXE}-${PN/${GAME}-}-ded default"
 		echo
 	fi
 }
