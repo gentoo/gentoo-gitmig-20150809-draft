@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.8 2009/06/25 18:59:07 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-0.6.4.ebuild,v 1.9 2009/10/06 17:34:11 ayoy Exp $
 
 EAPI="2"
 
@@ -39,13 +39,6 @@ S="${WORKDIR}/${P}/${PN}"
 pkg_setup() {
 	if use qt3 && use qt4; then
 		einfo "You have USE=\"qt3 qt4\" selected, defaulting to USE=\"qt4\""
-	fi
-
-	if use qt4 && has_version ">=x11-libs/qt-4.2.2" ; then
-		if ! built_with_use x11-libs/qt qt3support ; then
-			eerror ">=qt4.2.2 requires qt3support"
-			die "rebuild >=x11-libs/qt-4.2.2 with the qt3support USE flag"
-		fi
 	fi
 }
 
