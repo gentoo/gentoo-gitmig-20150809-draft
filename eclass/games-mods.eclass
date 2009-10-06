@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.33 2009/10/06 13:07:26 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.34 2009/10/06 13:37:42 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -75,7 +75,7 @@ case ${GAME} in
 		DEFAULT_MOD_ICON="ut2004"
 		SELECT_MOD="-mod="
 		GAME_EXE="ut2004"
-		DED_EXE="ucc"
+		DED_EXE="ut2004-ded"
 		DED_OPTIONS=""
 		DED_CFG_DIR=""
 		;;
