@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.4-r1.ebuild,v 1.1 2009/02/07 20:15:07 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.4-r1.ebuild,v 1.2 2009/10/06 17:54:59 ayoy Exp $
 
 EAPI=2
 inherit eutils qt4
@@ -14,14 +14,17 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="berkdb crypt debug doc sql web"
 
-RDEPEND="|| ( ( x11-libs/qt-gui:4
-		x11-libs/qt-script:4
-		berkdb? ( x11-libs/qt-sql:4 )
-		sql? ( x11-libs/qt-sql:4 ) )
-	=x11-libs/qt-4.3*:4[png] )
-	berkdb? ( sys-libs/db )
-	crypt? ( >=dev-libs/openssl-0.9.8
-		|| ( x11-libs/qt-core:4[ssl] =x11-libs/qt-4.3*:4[ssl] ) )
+RDEPEND="x11-libs/qt-gui:4
+	x11-libs/qt-script:4
+	sql? ( x11-libs/qt-sql:4 )
+	berkdb? (
+		sys-libs/db
+		x11-libs/qt-sql:4
+	)
+	crypt? (
+		>=dev-libs/openssl-0.9.8
+		x11-libs/qt-core:4[ssl]
+	)
 	web? ( >=dev-libs/fcgi-2.4 )"
 DEPEND="${DEPEND}
 	doc? ( app-doc/doxygen )"

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qwt
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.67 2009/04/07 18:18:00 bicatali Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qwt/ChangeLog,v 1.68 2009/10/06 18:02:08 ayoy Exp $
+
+  06 Oct 2009; Dominik Kapusta <ayoy@gentoo.org> qwt-5.0.2-r1.ebuild,
+  qwt-5.1.1.ebuild:
+  Removed alternative dependency on Qt metapackage
 
 *qwt-5.2.0 (07 Apr 2009)
 *qwt-5.1.2 (07 Apr 2009)
