@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.8.1.ebuild,v 1.8 2009/06/10 21:19:48 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.8.1.ebuild,v 1.9 2009/10/06 15:22:56 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -15,6 +15,7 @@ KEYWORDS="~amd64 ppc x86"
 IUSE=""
 
 RDEPEND="dev-python/twisted
+	dev-python/numeric
 	media-libs/sdl-mixer[mikmod]
 	dev-python/pygame"
 
