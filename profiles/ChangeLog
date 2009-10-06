@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3360 2009/10/05 17:26:22 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3361 2009/10/06 17:48:35 alexxy Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> package.mask:
+  Mask KDE 4.3.2
 
   05 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask release candidate of libffi for testing.
