@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.1_rc1.ebuild,v 1.1 2009/10/02 22:44:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autopano-sift-C/autopano-sift-C-2.5.1_rc2.ebuild,v 1.1 2009/10/06 22:56:37 maekke Exp $
 
 inherit cmake-utils versionator
 
