@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3-rally
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/ChangeLog,v 1.1 2006/10/26 14:02:28 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/ChangeLog,v 1.2 2009/10/06 23:07:16 nyhm Exp $
+
+*quake3-rally-1.33 (06 Oct 2009)
+
+  06 Oct 2009; Tristan Heaven <nyhm@gentoo.org> +quake3-rally-1.33.ebuild:
+  Version bump
 
 *quake3-rally-1.2 (26 Oct 2006)
 
