@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.6 2009/02/14 22:12:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/qtpfsgui/qtpfsgui-1.9.2-r1.ebuild,v 1.7 2009/10/06 18:09:25 ayoy Exp $
 
 EAPI="1"
 
@@ -27,8 +27,8 @@ DEPEND="
 	>=media-libs/openexr-1.2.2-r2
 	>=media-libs/tiff-3.8.2-r2
 	>=sci-libs/fftw-3.0.1-r2
-	|| ( ( x11-libs/qt-core:4 x11-libs/qt-gui:4 )
-		>=x11-libs/qt-4.2.3-r1 )"
+	x11-libs/qt-core:4
+	x11-libs/qt-gui:4"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
