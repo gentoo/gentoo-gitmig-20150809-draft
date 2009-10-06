@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.32.ebuild,v 1.4 2009/10/06 16:58:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-190.32.ebuild,v 1.5 2009/10/06 19:12:44 jer Exp $
 
 EAPI="2"
 
@@ -24,7 +24,6 @@ RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 COMMON="<x11-base/xorg-server-1.6.99
-	elibc_glibc? ( >=sys-libs/glibc-2.3[nptl] )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	!app-emulation/emul-linux-x86-nvidia
