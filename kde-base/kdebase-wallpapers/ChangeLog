@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-wallpapers
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.6 2009/09/12 10:37:57 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-wallpapers/ChangeLog,v 1.7 2009/10/06 16:03:46 josejx Exp $
+
+  06 Oct 2009; Joseph Jezak <josejx@gentoo.org>
+  kdebase-wallpapers-4.3.1.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org>
   kdebase-wallpapers-4.3.0.ebuild, kdebase-wallpapers-4.3.1.ebuild:

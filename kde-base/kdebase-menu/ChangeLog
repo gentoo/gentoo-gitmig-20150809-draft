@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase-menu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.6 2009/09/12 10:36:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.7 2009/10/06 16:03:00 josejx Exp $
+
+  06 Oct 2009; Joseph Jezak <josejx@gentoo.org> kdebase-menu-4.3.1.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org> kdebase-menu-4.3.0.ebuild,
   kdebase-menu-4.3.1.ebuild:
