@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rspec
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.49 2009/10/06 05:25:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec/ChangeLog,v 1.50 2009/10/06 05:34:01 graaff Exp $
+
+*rspec-1.2.9 (06 Oct 2009)
+
+  06 Oct 2009; Hans de Graaff <graaff@gentoo.org> +rspec-1.2.9.ebuild:
+  Version bump.
 
   06 Oct 2009; Hans de Graaff <graaff@gentoo.org> -rspec-1.1.12.ebuild,
   -rspec-1.2.6.ebuild, -rspec-1.2.7.ebuild:
