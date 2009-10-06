@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.3.2.ebuild,v 1.2 2009/10/06 21:00:55 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.3.1-r2.ebuild,v 1.1 2009/10/06 21:00:55 alexxy Exp $
 
 EAPI="2"
 
@@ -41,7 +41,7 @@ KMEXTRA="
 PATCHES=(
 	"${FILESDIR}/kdebase-4.0.2-pam-optional.patch"
 	"${FILESDIR}/${PN}-4-gentoo-xinitrc.d.patch"
-	"${FILESDIR}/${PN}-4.3.1-set-grub-default.patch"
+	"${FILESDIR}/${P}-set-grub-default.patch"
 )
 
 src_configure() {
