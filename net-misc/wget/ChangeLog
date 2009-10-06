@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.114 2009/10/06 22:30:44 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.115 2009/10/06 23:37:09 jer Exp $
+
+  06 Oct 2009; Jeroen Roovers <jer@gentoo.org> wget-1.12.ebuild:
+  Stable for HPPA (bug #286058).
 
   06 Oct 2009; Christian Faulhammer <fauli@gentoo.org> wget-1.12.ebuild:
   stable x86, security bug 286058
