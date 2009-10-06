@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/ipp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.7 2009/01/31 12:07:10 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ipp/ChangeLog,v 1.8 2009/10/06 20:51:51 bicatali Exp $
+
+*ipp-11.1.056 (06 Oct 2009)
+
+  06 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> +ipp-11.1.056.ebuild:
+  Version bump. Version numbering matched to dev-lang/icc since we now get
+  the ipp libraries from the icc professional edition, which simplifies
+  maintainership. This ebuild is now merely a wrapper and installs an
+  environment file.
 
   31 Jan 2009; Sébastien Fabbro <bicatali@gentoo.org> ipp-6.0.0.063.ebuild,
   ipp-6.0.1.071.ebuild:
