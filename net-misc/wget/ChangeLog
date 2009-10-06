@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.113 2009/09/26 18:07:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.114 2009/10/06 22:30:44 fauli Exp $
+
+  06 Oct 2009; Christian Faulhammer <fauli@gentoo.org> wget-1.12.ebuild:
+  stable x86, security bug 286058
 
   26 Sep 2009; Mike Frysinger <vapier@gentoo.org> wget-1.12.ebuild,
   +files/wget-1.12-debug-tests.patch:
