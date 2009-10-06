@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.11.ebuild,v 1.6 2009/08/02 20:59:54 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-96.43.11.ebuild,v 1.7 2009/10/06 16:58:13 jer Exp $
+
+EAPI="2"
 
 inherit eutils multilib versionator linux-mod flag-o-matic nvidia-driver
 
@@ -25,6 +27,7 @@ RESTRICT="strip"
 EMULTILIB_PKG="true"
 
 COMMON="<x11-base/xorg-server-1.6.99
+	elibc_glibc? ( >=sys-libs/glibc-2.3[nptl] )
 	multilib? ( app-emulation/emul-linux-x86-xlibs )
 	kernel_FreeBSD? ( !media-video/nvidia-freebsd )
 	!app-emulation/emul-linux-x86-nvidia
@@ -188,8 +191,10 @@ src_unpack() {
 	else
 		unpack ${A}
 	fi
+}
 
-	# Patches go below here, add brief description
+src_prepare() {
+	# Please add a brief description for every added patch
 	use x86-fbsd \
 		&& cd "${NV_DOC}" \
 		|| cd "${WORKDIR}/${NV_PACKAGE}"
@@ -455,9 +460,6 @@ want_tls() {
 			*) return 1 ;;
 		esac
 	fi
-
-	# If we've got nptl, we've got tls
-	built_with_use --missing true sys-libs/glibc nptl && return 0
 
 	# 2.3.5 turned off tls for linuxthreads glibc on i486 and i586
 	if use x86 && has_version '>=sys-libs/glibc-2.3.5' ; then
