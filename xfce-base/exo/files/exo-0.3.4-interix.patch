@@ -1,3 +1,6 @@
+http://bugzilla.xfce.org/show_bug.cgi?id=5825
+http://bugs.gentoo.org/show_bug.cgi?id=287820
+
 diff -ru -x '*.P[l]o' exo-0.3.4.orig/exo/exo-mount-point.c exo-0.3.4/exo/exo-mount-point.c
 --- exo-0.3.4.orig/exo/exo-mount-point.c	2008-03-13 08:08:55 +0100
 +++ exo-0.3.4/exo/exo-mount-point.c	2008-03-13 08:58:10 +0100
