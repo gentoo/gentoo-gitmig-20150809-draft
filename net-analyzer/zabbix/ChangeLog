@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.14 2009/10/05 15:55:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.15 2009/10/06 16:24:34 patrick Exp $
+
+*zabbix-1.6.6-r1 (06 Oct 2009)
+
+  06 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/1.6.6/init.d/zabbix-proxy, +zabbix-1.6.6-r1.ebuild,
+  files/1.6.6/zabbix_agentd.conf, files/1.6.6/zabbix_proxy.conf,
+  files/1.6.6/zabbix_server.conf:
+  Adding proxy init script #283970 and fixing log paths #283817. Thanks to
+  all the reporters and testers.
 
 *zabbix-1.6.6 (05 Oct 2009)
 
