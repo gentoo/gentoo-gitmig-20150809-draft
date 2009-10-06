@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.1-r1.ebuild,v 1.3 2009/08/23 16:17:16 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfcegui4/libxfcegui4-4.6.1-r1.ebuild,v 1.4 2009/10/06 21:35:49 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
+		--disable-static
 		$(use_enable startup-notification)
 		$(use_enable glade gladeui)
 		$(use_enable debug)"

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1.ebuild,v 1.13 2009/10/05 21:22:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.6.1.ebuild,v 1.14 2009/10/06 21:33:58 ssuominen Exp $
 
 EAPI=2
 inherit flag-o-matic xfconf
@@ -28,6 +28,7 @@ RESTRICT="test"
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
+		--disable-static
 		$(use_enable perl perl-bindings)
 		$(use_enable debug)
 		$(use_enable debug checks)"
