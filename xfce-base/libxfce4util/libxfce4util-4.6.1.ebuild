@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.6.1.ebuild,v 1.12 2009/10/05 21:06:20 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4util/libxfce4util-4.6.1.ebuild,v 1.13 2009/10/06 21:27:09 ssuominen Exp $
 
 EAPI=2
 inherit xfconf
@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 
 pkg_setup() {
 	XFCONF="--disable-dependency-tracking
+		--disable-static
 		$(use_enable debug)"
 	DOCS="AUTHORS ChangeLog NEWS README THANKS TODO"
 }

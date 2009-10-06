@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.1-r1.ebuild,v 1.3 2009/10/05 21:24:30 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.6.1-r1.ebuild,v 1.4 2009/10/06 21:24:18 ssuominen Exp $
 
 EAPI=2
 EAUTORECONF=yes
@@ -47,6 +47,7 @@ pkg_setup() {
 	XFCE_LOCALIZED_CONFIGS="/etc/xdg/xfce4/desktop/menu.xml
 		/etc/xdg/xfce4/desktop/xfce-registered-categories.xml"
 	XFCONF="--disable-dependency-tracking
+		--disable-static
 		$(use_enable thunar file-icons)
 		$(use_enable thunar thunarx)
 		$(use_enable thunar exo)
