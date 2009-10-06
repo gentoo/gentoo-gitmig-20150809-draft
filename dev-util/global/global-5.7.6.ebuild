@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.4.ebuild,v 1.1 2009/01/13 19:12:41 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/global/global-5.7.6.ebuild,v 1.1 2009/10/06 19:45:07 arfrever Exp $
 
 inherit elisp-common
 
@@ -16,16 +16,16 @@ IUSE="doc vim emacs"
 RDEPEND="vim? ( || ( app-editors/vim app-editors/gvim ) )
 	emacs? ( virtual/emacs )"
 DEPEND="${DEPEND}
-	doc? ( sys-apps/texinfo )"
+	doc? ( app-text/texi2html sys-apps/texinfo )"
 
 SITEFILE=50gtags-gentoo.el
 
 src_compile() {
-	econf || die "econf failed"
+	econf
 
 	if use doc; then
-		texi2pdf -q -o doc/global.pdf doc/global.txi
-		texi2html -o doc/global.html doc/global.txi
+		texi2pdf -q -o doc/global.pdf doc/global.texi
+		texi2html -o doc/global.html doc/global.texi
 	fi
 
 	if use emacs; then
@@ -39,7 +39,7 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	if use doc; then
 		dohtml doc/global.html
-		dodoc  doc/global.pdf
+		[[ -f doc/global.pdf ]] && dodoc doc/global.pdf
 	fi
 	dodoc AUTHORS FAQ NEWS README THANKS
 
