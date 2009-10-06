@@ -1,16 +1,22 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.151 2009/10/05 16:07:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.152 2009/10/06 16:44:39 williamh Exp $
 
-  05 Oct 2009; Raúl Porcel <armin76@gentoo.org> xinit-1.0.8-r8.ebuild:
+*xinit-1.0.8-r9 (06 Oct 2009)
+
+  06 Oct 2009; William Hubbs <williamh@gentoo.org> files/xdm-setup.initd-1,
+  +xinit-1.0.8-r9.ebuild, files/xdm.initd-3:
+  Moved .noxdm to /etc for security bug #287913.
+
+  05 Oct 2009; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.8-r8.ebuild:
   arm/ia64/s390/sh/sparc stable wrt #156570
 
-  01 Oct 2009; Rémi Cardona <remi@gentoo.org> -files/xdm.initd-1,
+  01 Oct 2009; RÃ©mi Cardona <remi@gentoo.org> -files/xdm.initd-1,
   -files/gentoo-startx-customization-1.0.4.patch, -files/xdm.start,
   -files/xsession.env.d:
   prune ${FILESDIR}
 
-  01 Oct 2009; Rémi Cardona <remi@gentoo.org> -xinit-1.0.4.ebuild,
+  01 Oct 2009; RÃ©mi Cardona <remi@gentoo.org> -xinit-1.0.4.ebuild,
   -xinit-1.0.5-r1.ebuild, -xinit-1.0.5-r2.ebuild, -xinit-1.0.8.ebuild,
   -xinit-1.0.8-r2.ebuild, -xinit-1.0.8-r3.ebuild:
   drop old ebuilds
@@ -46,28 +52,28 @@
   when .noxdm is touched so that it will not be restarted in later
   runlevels.
 
-  23 Sep 2009; Rémi Cardona <remi@gentoo.org> files/xdm-setup.initd-1,
+  23 Sep 2009; RÃ©mi Cardona <remi@gentoo.org> files/xdm-setup.initd-1,
   files/xdm.initd-3:
   touch the .noxdm file in / instead of /etc/init.d (partly fixes bug
   #285929
 
-  21 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  21 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   xinit-1.0.8-r8.ebuild:
   Remove not required dependencies (aka kill hal useflag). Per #g-dev
   discussion.
 
 *xinit-1.0.8-r8 (21 Sep 2009)
 
-  21 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  21 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   +xinit-1.0.8-r8.ebuild:
   Revbump the xinint for the last commit so automagicness is fixed even for
   those whom already compiled the thing.
 
-  21 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  21 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   xinit-1.0.8-r7.ebuild:
   Disable automagicness. Per bug #285741.
 
-  19 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  19 Sep 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org>
   xinit-1.0.8-r7.ebuild, metadata.xml:
   Adjust the hal/consolekit mess to be more sane.
 
@@ -97,10 +103,10 @@
   The xdm script now looks only for the file /etc/init.d/.noxdm
   to know when to skip starting X.
 
-  31 Aug 2009; Tomáš Chvátal <scarabeus@gentoo.org> files/xdm.initd-2:
+  31 Aug 2009; TomÃ¡Å¡ ChvÃ¡tal <scarabeus@gentoo.org> files/xdm.initd-2:
   Adjust xdm init script to die bit sane way. Per bug #207075.
 
-  28 Aug 2009; Petteri Räty <betelgeuse@gentoo.org> xinit-1.0.8-r4.ebuild:
+  28 Aug 2009; Petteri RÃ¤ty <betelgeuse@gentoo.org> xinit-1.0.8-r4.ebuild:
   Migrate to EAPI 2 in order to get rid of built_with_use.
 
   23 Jun 2009; Tobias Klausmann <klausman@gentoo.org> xinit-1.0.8-r4.ebuild:
@@ -109,7 +115,7 @@
   30 May 2009; Angelo Arrifano files/xdm.confd-1, files/xdm.initd-2:
   Add GPE (gpe-dm) support.
 
-  15 May 2009; Raúl Porcel <armin76@gentoo.org> xinit-1.0.8-r4.ebuild:
+  15 May 2009; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.8-r4.ebuild:
   arm/s390 stable
 
   05 May 2009; Christian Faulhammer <fauli@gentoo.org> xinit-1.0.4.ebuild,
@@ -125,7 +131,7 @@
   16 Apr 2009; Jeroen Roovers <jer@gentoo.org> xinit-1.0.8-r4.ebuild:
   Stable for HPPA (bug #251832).
 
-  15 Apr 2009; Raúl Porcel <armin76@gentoo.org> xinit-1.0.8-r4.ebuild:
+  15 Apr 2009; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.8-r4.ebuild:
   ia64/sh stable wrt #251832
 
   06 Apr 2009; Friedrich Oslage <bluebird@gentoo.org> xinit-1.0.8-r4.ebuild:
@@ -134,7 +140,7 @@
   05 Apr 2009; Markus Meier <maekke@gentoo.org> xinit-1.0.8-r4.ebuild:
   x86 stable, bug #251832
 
-  05 Apr 2009; Olivier Crête <tester@gentoo.org> xinit-1.0.8-r4.ebuild:
+  05 Apr 2009; Olivier CrÃªte <tester@gentoo.org> xinit-1.0.8-r4.ebuild:
   Stable on amd64, bug #251832
 
   03 Apr 2009; Brent Baude <ranger@gentoo.org> xinit-1.0.8-r4.ebuild:
@@ -197,7 +203,7 @@
   14 Dec 2007; nixnut <nixnut@gentoo.org> xinit-1.0.5-r1.ebuild:
   Stable on ppc wrt bug 201998
 
-  12 Dec 2007; Raúl Porcel <armin76@gentoo.org> xinit-1.0.5-r1.ebuild:
+  12 Dec 2007; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.5-r1.ebuild:
   alpha/ia64 stable wrt #201998
 
   12 Dec 2007; Ferris McCormick <fmccor@gentoo.org> xinit-1.0.5-r1.ebuild:
@@ -239,7 +245,7 @@
   10 Sep 2007; Jeroen Roovers <jer@gentoo.org> xinit-1.0.4.ebuild:
   Stable for HPPA (bug #191615).
 
-  09 Sep 2007; Raúl Porcel <armin76@gentoo.org> xinit-1.0.4.ebuild:
+  09 Sep 2007; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.4.ebuild:
   alpha/ia64 stable wrt #191615
 
   08 Sep 2007; Joseph Jezak <josejx@gentoo.org> xinit-1.0.4.ebuild:
@@ -266,7 +272,7 @@
   09 Jul 2007; Roy Marples <uberlord@gentoo.org> files/xdm.initd-1:
   The xdm init script is now after modules, #179032.
 
-  02 Jul 2007; Raúl Porcel <armin76@gentoo.org> xinit-1.0.3-r3.ebuild:
+  02 Jul 2007; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.3-r3.ebuild:
   alpha stable wrt #175465
 
   24 Jun 2007; Joshua Kinard <kumba@gentoo.org> xinit-1.0.3-r4.ebuild:
@@ -299,7 +305,7 @@
   Move logic operations out of [ ] tests, so we have consistent syntax of the
   code logic.
 
-  25 Apr 2007; Raúl Porcel <armin76@gentoo.org> xinit-1.0.3-r3.ebuild:
+  25 Apr 2007; RaÃºl Porcel <armin76@gentoo.org> xinit-1.0.3-r3.ebuild:
   Stable on ia64 wrt bug #175465
 
   25 Apr 2007; Markus Rothe <corsair@gentoo.org> xinit-1.0.3-r3.ebuild:
@@ -445,7 +451,7 @@
   11 May 2006; Donnie Berkholz <spyderous@gentoo.org>; files/xdm.start,
   -xinit-1.0.2-r3.ebuild, +xinit-1.0.2-r4.ebuild:
   (#133060) Also use hald, or it's possible to log in without the desktop
-  environment handling events (Tiziano Müller).
+  environment handling events (Tiziano MÃ¼ller).
 
   23 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; files/xdm.confd:
   (#131032) Also note that for dynamic VT, you need to remove the VT arg from
@@ -493,7 +499,7 @@
   04 Apr 2006; Donnie Berkholz <spyderous@gentoo.org>; +xinit-1.0.2.ebuild:
   Better portability among different /bin/sh'es.
 
-  31 Mar 2006; Diego Pettenò <flameeyes@gentoo.org> xinit-1.0.1.ebuild:
+  31 Mar 2006; Diego PettenÃ² <flameeyes@gentoo.org> xinit-1.0.1.ebuild:
   Add ~x86-fbsd keyword.
 
   23 Mar 2006; Donnie Berkholz <spyderous@gentoo.org>; files/chooser.sh:
@@ -559,7 +565,7 @@
   Bump for 7.0RC2.  Also add regenerated startx customization patch, which was
   probably around longer than I've been using Linux.
 
-  02 Nov 2005; Diego Pettenò <flameeyes@gentoo.org> xinit-0.99.2-r1.ebuild:
+  02 Nov 2005; Diego PettenÃ² <flameeyes@gentoo.org> xinit-0.99.2-r1.ebuild:
   If you use dopamd, inherit pam eclass.
 
   30 Oct 2005; Joshua Baergen <joshuabaergen@gentoo.org>
