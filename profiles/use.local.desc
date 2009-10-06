@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4870 2009/10/05 15:47:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4871 2009/10/06 02:52:35 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2658,6 +2658,8 @@ net-voip/telepathy-connection-managers:irc - Enable Internet Relay Chat (IRC) su
 net-voip/telepathy-connection-managers:jabber - Enable XMPP protocol handler (this is also Google Talk).
 net-voip/telepathy-connection-managers:sip - Enable SIP/SIMPLE messaging and calling.
 net-voip/telepathy-connection-managers:yahoo - Enable Yahoo! messaging support.
+net-voip/twinkle:ilbc - Enables use of ilbc (RFC3951) audio encoding
+net-voip/twinkle:zrtp - Enables use of secure rtp using the zrtp extension of GNU RTP stack developed by Phil Zimmermann 
 net-voip/yate:amrnb -  Enables Adaptive Multi-Rate Audio support (Narrow Band) 
 net-voip/yate:h323 - Build H.323 Channel plugin
 net-voip/yate:ilbc - Build ILBC codec plugin
