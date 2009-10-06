@@ -1,0 +1,9 @@
+# ChangeLog for media-video/parole
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.1 2009/10/06 23:23:28 ssuominen Exp $
+
+*parole-0.1.90 (06 Oct 2009)
+
+  06 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> +parole-0.1.90.ebuild:
+  Initial commit wrt #287914, thanks to Jeremy Olexa for reporting.
+
