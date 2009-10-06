@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/vidalia
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.10 2009/04/25 23:51:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vidalia/ChangeLog,v 1.11 2009/10/06 10:21:07 patrick Exp $
+
+*vidalia-0.1.15 (06 Oct 2009)
+
+  06 Oct 2009; Patrick Lauer <patrick@gentoo.org> +vidalia-0.1.15.ebuild:
+  Bump to 0.1.15, fix homepage and src_uri
 
 *vidalia-0.1.12 (25 Apr 2009)
 
