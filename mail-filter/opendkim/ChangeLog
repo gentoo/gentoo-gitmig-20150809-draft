@@ -1,0 +1,14 @@
+# ChangeLog for mail-filter/opendkim
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opendkim/ChangeLog,v 1.1 2009/10/06 09:10:43 dragonheart Exp $
+
+*opendkim-1.1.0 (06 Oct 2009)
+
+  06 Oct 2009; Daniel Black <dragonheart@gentoo.org> +opendkim-1.1.0.ebuild,
+  +files/opendkim-1.1.0-autoconf-automake.patch,
+  +files/opendkim-1.1.0-flockinclude.patch,
+  +files/opendkim-1.1.0-rep-querycache.patch,
+  +files/opendkim-1.1.0-vbr-booliscpp.patch, +files/opendkim.init,
+  +metadata.xml:
+  initial ebuild by me. Eray Aslan also requested this in bug #282488
+
