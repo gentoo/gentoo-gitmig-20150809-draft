@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-1.7.ebuild,v 1.1 2009/10/06 10:47:02 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/xkeyboard-config-1.7.ebuild,v 1.2 2009/10/06 10:58:16 remi Exp $
 
 EAPI="2"
 
@@ -34,19 +34,17 @@ src_prepare() {
 	fi
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		--with-xkb-base=/usr/share/X11/xkb \
 		--enable-compat-rules \
 		--disable-xkbcomp-symlink \
 		--with-xkb-rules-symlink=xorg \
 		|| die "configure failed"
-
-	emake || die "make failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	emake DESTDIR="${D}" install || die "install failed"
 	echo "CONFIG_PROTECT=\"/usr/share/X11/xkb\"" > "${T}"/10xkeyboard-config
 	doenvd "${T}"/10xkeyboard-config
 }

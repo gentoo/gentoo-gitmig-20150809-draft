@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xkeyboard-config
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.73 2009/10/06 10:47:02 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkeyboard-config/ChangeLog,v 1.74 2009/10/06 10:58:16 remi Exp $
+
+  06 Oct 2009; Rémi Cardona <remi@gentoo.org> xkeyboard-config-1.7.ebuild:
+  make the ebuild more EAPI=2-like
 
 *xkeyboard-config-1.7 (06 Oct 2009)
 
