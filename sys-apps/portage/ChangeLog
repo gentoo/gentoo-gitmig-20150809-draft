@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.637 2009/10/06 20:56:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.638 2009/10/06 21:26:33 zmedico Exp $
+
+  06 Oct 2009; Zac Medico <zmedico@gentoo.org> portage-2.2_rc44.ebuild:
+  Use has_version instead of built_with_use for python[ssl] check.
 
   06 Oct 2009; Zac Medico <zmedico@gentoo.org> -portage-2.2_rc39.ebuild,
   -portage-2.2_rc40.ebuild, -portage-2.2_rc43.ebuild:

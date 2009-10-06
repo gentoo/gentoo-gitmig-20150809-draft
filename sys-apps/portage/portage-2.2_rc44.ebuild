@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc44.ebuild,v 1.2 2009/10/06 20:53:39 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc44.ebuild,v 1.3 2009/10/06 21:26:33 zmedico Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -227,14 +227,12 @@ src_install() {
 
 pkg_preinst() {
 	if ! use build && ! has_version dev-python/pycrypto && \
-		has_version '>=dev-lang/python-2.5' ; then
-		if ! built_with_use '>=dev-lang/python-2.5' ssl ; then
-			ewarn "If you are an ebuild developer and you plan to commit ebuilds"
-			ewarn "with this system then please install dev-python/pycrypto or"
-			ewarn "enable the ssl USE flag for >=dev-lang/python-2.5 in order"
-			ewarn "to enable RMD160 hash support."
-			ewarn "See bug #198398 for more information."
-		fi
+		! has_version '>=dev-lang/python-2.6[ssl]' ; then
+		ewarn "If you are an ebuild developer and you plan to commit ebuilds"
+		ewarn "with this system then please install dev-python/pycrypto or"
+		ewarn "enable the ssl USE flag for >=dev-lang/python-2.6 in order"
+		ewarn "to enable RMD160 hash support."
+		ewarn "See bug #198398 for more information."
 	fi
 	if [ -f "${ROOT}/etc/make.globals" ]; then
 		rm "${ROOT}/etc/make.globals"
