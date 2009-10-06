@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/quake3-rally-1.33.ebuild,v 1.1 2009/10/06 23:07:16 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-rally/quake3-rally-1.33.ebuild,v 1.2 2009/10/06 23:12:42 nyhm Exp $
 
 EAPI=2
 
@@ -19,6 +19,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="dedicated opengl"
 
 DEPEND="app-arch/unrar"
+RDEPEND=""
 
 src_unpack() {
 	mkdir ${MOD_DIR}
