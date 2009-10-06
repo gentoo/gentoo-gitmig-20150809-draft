@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-kioslaves
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.118 2009/09/01 15:16:54 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-kioslaves/ChangeLog,v 1.119 2009/10/06 19:07:41 alexxy Exp $
+
+*kdesdk-kioslaves-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdesdk-kioslaves-4.3.2.ebuild:
+  Version bump
 
 *kdesdk-kioslaves-4.3.1 (01 Sep 2009)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/powerdevil
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.21 2009/09/16 05:39:52 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/powerdevil/ChangeLog,v 1.22 2009/10/06 20:38:10 alexxy Exp $
+
+*powerdevil-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +powerdevil-4.3.2.ebuild:
+  Version bump
 
   16 Sep 2009; Jonathan Callen <abcd@gentoo.org> -powerdevil-4.3.1.ebuild:
   Remove 4.3.1 (not -r1) due to unsolvable deps on some arches.

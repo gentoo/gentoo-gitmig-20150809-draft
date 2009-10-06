@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/okteta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.20 2009/09/01 16:22:38 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/okteta/ChangeLog,v 1.21 2009/10/06 20:34:17 alexxy Exp $
+
+*okteta-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +okteta-4.3.2.ebuild:
+  Version bump
 
 *okteta-4.3.1 (01 Sep 2009)
 

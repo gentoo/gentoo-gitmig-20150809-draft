@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.623 2009/09/19 22:04:09 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.624 2009/10/06 18:55:15 alexxy Exp $
+
+*kdelibs-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +kdelibs-4.3.2.ebuild:
+  Version bump
 
   19 Sep 2009; Tomáš Chvátal <scarabeus@gentoo.org>
   -files/dist/20_use_dejavu_as_default_font.patch, kdelibs-4.2.4-r4.ebuild,

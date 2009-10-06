@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeedu-meta
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.126 2009/09/01 15:08:20 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu-meta/ChangeLog,v 1.127 2009/10/06 18:48:54 alexxy Exp $
+
+*kdeedu-meta-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdeedu-meta-4.3.2.ebuild:
+  Version bump
 
 *kdeedu-meta-4.3.1 (01 Sep 2009)
 

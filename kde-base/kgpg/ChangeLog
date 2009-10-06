@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kgpg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.128 2009/09/01 15:28:31 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kgpg/ChangeLog,v 1.129 2009/10/06 19:30:38 alexxy Exp $
+
+*kgpg-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +kgpg-4.3.2.ebuild:
+  Version bump
 
 *kgpg-4.3.1 (01 Sep 2009)
 

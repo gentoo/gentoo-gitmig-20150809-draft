@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/dolphin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.41 2009/09/01 14:44:51 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dolphin/ChangeLog,v 1.42 2009/10/06 18:01:40 alexxy Exp $
+
+*dolphin-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +dolphin-4.3.2.ebuild:
+  Version bump
 
 *dolphin-4.3.1 (01 Sep 2009)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.40 2009/09/01 16:20:42 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.41 2009/10/06 20:32:04 alexxy Exp $
+
+*marble-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +marble-4.3.2.ebuild:
+  Version bump
 
 *marble-4.3.1 (01 Sep 2009)
 

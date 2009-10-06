@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdesdk-scripts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.110 2009/09/05 22:42:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesdk-scripts/ChangeLog,v 1.111 2009/10/06 19:10:10 alexxy Exp $
+
+*kdesdk-scripts-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  +kdesdk-scripts-4.3.2.ebuild:
+  Version bump
 
   05 Sep 2009; Markus Meier <maekke@gentoo.org>
   kdesdk-scripts-3.5.10-r1.ebuild:

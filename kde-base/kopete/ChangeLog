@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.212 2009/09/01 17:10:37 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.213 2009/10/06 19:54:20 alexxy Exp $
+
+*kopete-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +kopete-4.3.2.ebuild:
+  Version bump
 
   01 Sep 2009; Theo Chatzimichos <tampakrap@gentoo.org> kopete-4.3.1.ebuild:
   Remove kopete-facebook useflag and dep, still only available for overlay

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/konsole
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.135 2009/09/02 17:37:12 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsole/ChangeLog,v 1.136 2009/10/06 19:51:52 alexxy Exp $
+
+*konsole-4.3.2 (06 Oct 2009)
+
+  06 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> +konsole-4.3.2.ebuild:
+  Version bump
 
 *konsole-4.3.1-r1 (02 Sep 2009)
 
