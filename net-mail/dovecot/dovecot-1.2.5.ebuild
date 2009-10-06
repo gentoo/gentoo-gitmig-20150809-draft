@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.5.ebuild,v 1.1 2009/10/06 14:49:58 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.5.ebuild,v 1.2 2009/10/06 14:53:55 scarabeus Exp $
 
 EAPI="2"
 
@@ -95,7 +95,7 @@ src_configure() {
 		--with-storages="${storages}" \
 		--with-pic \
 		--enable-header-install \
-		${conf} \
+		${conf}
 
 	if use sieve; then
 		# The sieve plugin needs this file to be build to determine the plugin
