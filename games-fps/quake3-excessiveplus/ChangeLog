@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-excessiveplus
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-excessiveplus/ChangeLog,v 1.1 2006/10/26 14:14:34 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-excessiveplus/ChangeLog,v 1.2 2009/10/06 23:19:50 nyhm Exp $
+
+  06 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  quake3-excessiveplus-1.03.ebuild:
+  EAPI=2; remove useless files
 
 *quake3-excessiveplus-1.03 (26 Oct 2006)
 
