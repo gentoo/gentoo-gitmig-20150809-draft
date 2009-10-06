@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.4.ebuild,v 1.7 2009/10/03 15:58:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-1.2.5.ebuild,v 1.1 2009/10/06 14:49:58 scarabeus Exp $
 
 EAPI="2"
 
 inherit eutils versionator
 
-major_minor="$( get_version_component_range 1-2 "${PV}" )"
+major_minor="$( get_version_component_range 1-2 )"
 sieve_version="0.1.12"
 managesieve_version="0.11.9"
 SRC_URI="http://dovecot.org/releases/${major_minor}/${P}.tar.gz
@@ -66,11 +66,8 @@ src_configure() {
 	local conf=""
 
 	if use postgres || use mysql || use sqlite; then
-		conf="${conf} --with-sql=plugin"
+		conf="${conf} --with-sql"
 	fi
-
-	use ldap && conf="${conf} --with-ldap=plugin"
-	use kerberos && conf="${conf} --with-gssapi=plugin"
 
 	local storages=""
 	for storage in cydir dbox maildir mbox; do
@@ -85,6 +82,8 @@ src_configure() {
 		$( use_with berkdb db ) \
 		$( use_with bzip2 bzlib ) \
 		$( use_with caps libcap ) \
+		$( use_with kerberos gssapi ) \
+		$( use_with ldap ) \
 		$( use_with mysql ) \
 		$( use_with pam ) \
 		$( use_with postgres pgsql ) \
@@ -92,11 +91,11 @@ src_configure() {
 		$( use_with ssl ) \
 		$( use_with vpopmail ) \
 		$( use_with zlib ) \
+		$( use_with ldap) \
 		--with-storages="${storages}" \
 		--with-pic \
 		--enable-header-install \
 		${conf} \
-		|| die "configure failed"
 
 	if use sieve; then
 		# The sieve plugin needs this file to be build to determine the plugin
@@ -143,7 +142,14 @@ src_install () {
 	newinitd "${FILESDIR}"/dovecot.init-r2 dovecot
 
 	rm -rf "${D}"/usr/share/doc/dovecot
-	use doc && dodoc AUTHORS NEWS README TODO dovecot-example.conf doc/dovecot-{db,dict-sql}-example.conf doc/{securecoding,auth-protocol,documentation}.txt doc/dovecot-openssl.cnf
+
+	if use doc; then
+		dodoc AUTHORS NEWS README TODO dovecot-example.conf || die "basic dodoc failed"
+		dodoc doc/* || die "dodoc doc/ failed"
+		docinto wiki
+		dodoc doc/wiki/* || die "dodoc doc/wiki/ failed"
+
+	fi
 
 	# Create the dovecot.conf file from the dovecot-example.conf file that
 	# the dovecot folks nicely left for us....

@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.212 2009/10/05 14:10:24 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.213 2009/10/06 14:49:58 scarabeus Exp $
+
+*dovecot-1.2.5 (06 Oct 2009)
+
+  06 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -dovecot-1.2.4.ebuild, +dovecot-1.2.5.ebuild:
+  Version bump. Remove old. Fix bugs #285134 and #286368.
 
 *dovecot-1.1.19 (05 Oct 2009)
 
