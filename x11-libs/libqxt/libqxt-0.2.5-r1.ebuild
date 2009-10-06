@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5-r1.ebuild,v 1.2 2009/10/06 17:54:59 ayoy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libqxt/libqxt-0.2.5-r1.ebuild,v 1.3 2009/10/06 19:08:40 ayoy Exp $
 
 EAPI="1"
 inherit eutils qt4
@@ -21,8 +21,6 @@ DEPEND="x11-libs/qt-gui:4
 	ssl? ( >=dev-libs/openssl-0.9.8 )
 	fastcgi? ( >=dev-libs/fcgi-2.4 )"
 RDEPEND="${DEPEND}"
-
-QT4_BUILT_WITH_USE_CHECK="png ssl"
 
 src_compile() {
 	local myconf
