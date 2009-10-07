@@ -23,6 +23,7 @@
 	<flag name="webpresence">Show your status and some more informations on web.</flag>
 		<!-- PROTOCOLS -->
 	<flag name="bonjour">Enable Link-Local Messaging via the bonjour protocol.</flag>
+	<flag name="facebook">Enable Facebook support.</flag>
 	<flag name="gadu">Enable the Gadu protocol handler.</flag>
 	<flag name="groupwise">Enable the Groupwise protocol handler.</flag>
 	<flag name="irc">Enable the IRC protocol handler.</flag>
