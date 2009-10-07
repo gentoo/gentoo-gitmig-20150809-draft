@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.362 2009/10/03 16:25:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.363 2009/10/07 18:22:57 vapier Exp $
+
+  07 Oct 2009; Mike Frysinger <vapier@gentoo.org> openssh-5.2_p1-r2.ebuild,
+  openssh-5.2_p1-r3.ebuild, openssh-5.3_p1.ebuild:
+  Fix static_use_with handling when there is one option #287292 by Jaak
+  Ristioja.
 
   03 Oct 2009; Jeroen Roovers <jer@gentoo.org> openssh-5.2_p1-r3.ebuild:
   Stable for HPPA (bug #287292).

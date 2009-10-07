@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1-r2.ebuild,v 1.12 2009/08/13 06:30:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.2_p1-r2.ebuild,v 1.13 2009/10/07 18:22:57 vapier Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -130,8 +130,8 @@ static_use_with() {
 		# rebuild args so that we invert the first one (USE flag)
 		# but otherwise leave everything else working so we can
 		# just leverage use_with
-		[[ -z $1 ]] && flag="${flag} ${flag}"
 		shift
+		[[ -z $1 ]] && flag="${flag} ${flag}"
 		set -- !${flag} "$@"
 	fi
 	use_with "$@"
