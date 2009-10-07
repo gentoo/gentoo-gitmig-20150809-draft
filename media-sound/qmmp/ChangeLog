@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.16 2009/09/24 07:11:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.17 2009/10/07 00:05:29 sping Exp $
+
+  07 Oct 2009; Sebastian Pipping <sping@gentoo.org> metadata.xml:
+  Improve and sync bs2b use flag description
 
   24 Sep 2009; Samuli Suominen <ssuominen@gentoo.org> qmmp-0.3.0.ebuild:
   libmpcdec SV7 support is replaced by musepack-tools SV8 support.
