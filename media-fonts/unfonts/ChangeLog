@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.20 2009/09/06 09:06:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.21 2009/10/07 01:28:32 dirtyepic Exp $
+
+  07 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> -unfonts-1.0.ebuild,
+  -unfonts-1.0.2_pre080514.ebuild:
+  Remove old.
 
 *unfonts-1.0.2_pre080608-r1 (06 Sep 2009)
 
