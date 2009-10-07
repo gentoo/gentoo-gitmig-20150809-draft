@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-dbus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.36 2009/10/04 10:24:04 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-dbus/ChangeLog,v 1.37 2009/10/07 18:25:23 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> qt-dbus-4.5.2.ebuild:
+  ppc stable #286653
 
 *qt-dbus-4.5.3 (04 Oct 2009)
 

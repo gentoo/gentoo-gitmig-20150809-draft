@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-svg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.38 2009/10/04 10:25:33 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-svg/ChangeLog,v 1.39 2009/10/07 18:32:05 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> qt-svg-4.5.2.ebuild:
+  ppc stable #286653
 
 *qt-svg-4.5.3 (04 Oct 2009)
 
