@@ -1,0 +1,10 @@
+# ChangeLog for media-plugins/ladspa-bs2b
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/ladspa-bs2b/ChangeLog,v 1.1 2009/10/07 03:50:25 sping Exp $
+
+*ladspa-bs2b-0.9.1 (07 Oct 2009)
+
+  07 Oct 2009; Sebastian Pipping <sping@gentoo.org>
+  +ladspa-bs2b-0.9.1.ebuild, +metadata.xml:
+  Ebuild for 0.9.1 based on that by Hypnos <hypnos75@gmail.com> (bug 279850)
+
