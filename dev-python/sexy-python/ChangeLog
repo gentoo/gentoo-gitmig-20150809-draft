@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sexy-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.17 2009/08/29 02:18:37 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sexy-python/ChangeLog,v 1.18 2009/10/07 18:04:17 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> sexy-python-0.1.9-r1.ebuild:
+  ppc stable #287577
 
 *sexy-python-0.1.9-r1 (29 Aug 2009)
 
