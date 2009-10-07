@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/gwibber
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.4 2009/07/27 20:06:34 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwibber/ChangeLog,v 1.5 2009/10/07 14:56:19 volkmar Exp $
+
+  07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  gwibber-1.2.0_pre340.ebuild:
+  Keywording for ppc
 
   27 Jul 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   gwibber-1.2.0_pre340.ebuild:
