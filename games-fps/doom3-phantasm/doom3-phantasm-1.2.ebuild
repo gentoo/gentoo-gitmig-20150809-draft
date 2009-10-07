@@ -1,11 +1,12 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/doom3-phantasm-1.2.ebuild,v 1.3 2009/10/01 20:58:05 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-phantasm/doom3-phantasm-1.2.ebuild,v 1.4 2009/10/07 14:48:09 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="single-player short mod based on the Phantasm horror movies"
 MOD_NAME="Phantasm"
 MOD_DIR="phantasm"
-MOD_BINS="phantasm"
 
 inherit games games-mods
 
@@ -18,18 +19,13 @@ LICENSE="as-is"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 
-S=${WORKDIR}
-
-src_unpack() {
-	games-mods_src_unpack
-	cd "${S}"
-
+src_prepare() {
 	# Remove useless "_d3" from directory name
-	mv "${MOD_DIR}"* "${MOD_DIR}" || die
+	mv -f ${MOD_DIR}_d3 ${MOD_DIR} || die
 
 	# Oh no, a filename containing a space! Gives Portage the heebee-jeebies:
 	# * checking 8 files for package collisions
 	# existing file /usr/share/games/doom3/phantasm/
 	# phantasm_d3_1.2  readme.txt is not owned by this package
-	mv "${MOD_DIR}"/phantasm*.txt "${MOD_DIR}"/README.phantasm.txt || die
+	mv -f ${MOD_DIR}/phantasm*.txt ${MOD_DIR}/README.phantasm.txt || die
 }
