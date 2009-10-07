@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/pulseaudio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.170 2009/10/05 10:31:45 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pulseaudio/ChangeLog,v 1.171 2009/10/07 17:43:19 flameeyes Exp $
+
+  07 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  pulseaudio-0.9.19.ebuild, pulseaudio-0.9.19-r50.ebuild,
+  +files/pulseaudio-0.9.19-fweb.patch:
+  Fix build with -fweb compiler flag (bug #287391).
 
   05 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   pulseaudio-0.9.18.ebuild, pulseaudio-0.9.18-r50.ebuild,
