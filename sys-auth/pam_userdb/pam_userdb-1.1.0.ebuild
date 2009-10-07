@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-0.99.8.1.ebuild,v 1.6 2009/10/07 19:59:55 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_userdb/pam_userdb-1.1.0.ebuild,v 1.1 2009/10/07 19:59:55 flameeyes Exp $
 
 EAPI=1
 
@@ -9,7 +9,7 @@ inherit libtool multilib eutils pam toolchain-funcs flag-o-matic versionator
 # BDB is internalized to get a non-threaded lib for pam_userdb.so to
 # be built with.  The runtime-only dependency on BDB suggests the user
 # will use the system-installed db_load to create pam_userdb databases.
-BDB_VER="4.3.29"
+BDB_VER="4.6.21"
 
 MY_P="Linux-PAM-${PV}"
 
@@ -21,12 +21,12 @@ SRC_URI="mirror://kernel/linux/libs/pam/pre/library/${MY_P}.tar.bz2
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~m68k ~ppc ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="nls elibc_FreeBSD"
 
 RDEPEND="nls? ( virtual/libintl )
 	!<sys-libs/pam-0.99
-	>=sys-libs/pam-0.99.6.3-r1"
+	>=sys-libs/pam-1.1.0"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
 RDEPEND="${RDEPEND}
@@ -36,20 +36,12 @@ S="${WORKDIR}/${MY_P}"
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
 
 	elibtoolize
 }
 
 src_compile() {
 	local myconf
-
-	# don't build documentation as it doesn't seem to really work
-	export SGML2PS=no
-	export SGML2TXT=no
-	export SGML2HTML=no
-	export SGML2LATEX=no
-	export PS2PDF=no
 
 	if use hppa || use elibc_FreeBSD; then
 		myconf="${myconf} --disable-pie"
@@ -82,9 +74,6 @@ src_compile() {
 		--includedir="${S}/modules/pam_userdb" \
 		--libdir="${S}/modules/pam_userdb" || die "Bad BDB ./configure"
 
-	# XXX: hack out O_DIRECT support in db4 for now.
-	#	   (Done above now with --disable-o_direct now)
-
 	emake CC="$(tc-getCC)" || die "BDB build failed"
 	emake install || die
 
@@ -93,31 +82,34 @@ src_compile() {
 	cp -f "${S}"/modules/pam_userdb/libdb{,_pam}.a
 
 	# Make sure out static libs are used
-	append-flags -I "{S}/modules/pam_userdb"
-	append-ldflags -L "${S}/modules/pam_userdb"
+	append-flags -I"{S}/modules/pam_userdb"
+	append-ldflags -L"${S}/modules/pam_userdb"
 
 	cd "${S}"
 	econf \
 		$(use_enable nls) \
-		--enable-berkdb \
+		--enable-db \
 		--enable-securedir=/$(get_libdir)/security \
 		--enable-isadir=/$(get_libdir)/security \
 		--disable-dependency-tracking \
 		--disable-prelude \
-		--enable-docdir=/usr/share/doc/${PF} \
 		--with-db-uniquename=_pam \
 		${myconf} || die "econf failed"
 
-	cd "${S}/modules/pam_userdb"
-	emake || die "emake failed"
+	emake -C modules/pam_userdb || die "emake failed"
 }
 
 src_install() {
-	cd "${S}/modules/pam_userdb"
-	emake DESTDIR="${D}" install || die "make install failed"
+	emake -C modules/pam_userdb DESTDIR="${D}" install || die "make install failed"
 
 	dodoc "${S}/modules/pam_userdb/README"
 
 	# No, we don't really need .la files for PAM modules.
 	rm -f "${D}/$(get_libdir)/security/"*.la
+}
+
+pkg_postinst() {
+	elog "Since ${CATEGORY}/${PN}-1.1.0 the internal Berkeley DB version"
+	elog "used is ${BDB_VER}; if you're updating from an older version"
+	elog "you will have to dump and re-load the user database."
 }
