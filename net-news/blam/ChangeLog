@@ -1,6 +1,9 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.53 2009/07/08 20:56:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.54 2009/10/07 15:07:12 volkmar Exp $
+
+  07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> blam-1.8.6.ebuild:
+  Re-Keywording for ppc, bug 273251
 
   08 Jul 2009; Markus Meier <maekke@gentoo.org> blam-1.8.6.ebuild:
   amd64 stable, bug #273251
