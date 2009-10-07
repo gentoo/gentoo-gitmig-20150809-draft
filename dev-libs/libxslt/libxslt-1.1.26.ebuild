@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.1 2009/10/07 14:39:51 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.2 2009/10/07 15:31:58 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -21,7 +21,8 @@ DEPEND="${RDEPEND}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/libxslt.m4-${P}.patch \
-		"${FILESDIR}"/${PN}-1.1.23-parallel-install.patch
+		"${FILESDIR}"/${PN}-1.1.23-parallel-install.patch \
+		"${FILESDIR}"/${P}-undefined.patch
 	eautoreconf
 	epunt_cxx
 }
