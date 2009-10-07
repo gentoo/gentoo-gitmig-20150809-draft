@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.4 2009/09/18 14:39:37 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/gperiodic/gperiodic-2.0.10.ebuild,v 1.5 2009/10/07 20:40:43 maekke Exp $
 
 EAPI="2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="Periodic table application for Linux"
 SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
 HOMEPAGE="http://www.frantz.fi/software/gperiodic.php"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"
