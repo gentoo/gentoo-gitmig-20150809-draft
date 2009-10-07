@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.5 2009/09/04 09:22:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/seaview/seaview-20071113.ebuild,v 1.6 2009/10/07 18:36:07 weaver Exp $
 
 EAPI=1
 inherit eutils toolchain-funcs multilib
@@ -14,7 +14,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 LICENSE="public-domain"
 
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND="x11-libs/fltk:1.1
