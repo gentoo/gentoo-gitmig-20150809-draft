@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.14 2008/06/15 09:48:50 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.15 2009/10/07 17:25:09 mescalinum Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -49,6 +49,9 @@ src_unpack() {
 	fi
 
 	sed -i -e 's:0.52.1:0.52.2:g' "${S}"/configure || die
+
+	# bug 285854
+	epatch "${FILESDIR}"/newt-CVE-2009-2905.patch
 }
 
 src_compile() {
