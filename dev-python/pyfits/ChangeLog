@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyfits
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.10 2009/09/30 19:42:40 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyfits/ChangeLog,v 1.11 2009/10/07 20:11:49 arfrever Exp $
+
+  07 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +pyfits-2.2.1.ebuild:
+  Version bump.
 
 *pyfits-2.2 (30 Sep 2009)
 
