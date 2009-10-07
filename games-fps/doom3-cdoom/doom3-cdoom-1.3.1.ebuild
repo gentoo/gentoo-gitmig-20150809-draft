@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-cdoom/doom3-cdoom-1.3.1.ebuild,v 1.2 2009/10/01 20:49:48 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-cdoom/doom3-cdoom-1.3.1.ebuild,v 1.3 2009/10/07 15:29:46 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="Doom 1 conversion for Doom 3"
 MOD_NAME="Classic Doom"
@@ -23,9 +25,7 @@ pkg_nofetch() {
 	elog "and move it to ${DISTDIR}"
 }
 
-src_unpack() {
-	games-mods_src_unpack
-
-	cd "${MOD_DIR}" || die
-	rm -f *.{bat,url} cdoom_{dll,mac}.pk4 || die
+src_prepare() {
+	cd ${MOD_DIR} || die
+	rm -f *.{bat,url} cdoom_{dll,mac}.pk4
 }
