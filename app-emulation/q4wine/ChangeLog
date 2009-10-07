@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/q4wine
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.9 2009/10/07 08:11:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/ChangeLog,v 1.10 2009/10/07 11:28:14 hwoarang Exp $
+
+  07 Oct 2009; Markos Chandras <hwoarang@gentoo.org> q4wine-0.113-r1.ebuild:
+  Add x11-misc/xdg-utils on RDEPEND as suggested by upstream
 
   07 Oct 2009; Markos Chandras <hwoarang@gentoo.org> q4wine-0.113-r1.ebuild:
   Fix WORKDIR ( bug 287986 ). Thanks to Rodrigo Saboya and Jeroen Roovers
