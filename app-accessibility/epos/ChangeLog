@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/epos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.30 2009/09/03 01:04:56 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/epos/ChangeLog,v 1.31 2009/10/07 17:20:27 williamh Exp $
+
+  07 Oct 2009; William Hubbs <williamh@gentoo.org> epos-2.5.37-r1.ebuild:
+  x86 stable for bug 288079
 
   03 Sep 2009; William Hubbs <williamh@gentoo.org> -epos-2.5.23-r1.ebuild,
   -files/epos-2.5.35-destdir.patch, -files/epos-2.5.35-sysportaudio.patch,
