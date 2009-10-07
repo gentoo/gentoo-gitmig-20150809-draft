@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cheetah
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.48 2009/10/01 20:13:37 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/ChangeLog,v 1.49 2009/10/07 11:56:29 volkmar Exp $
+
+  07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> cheetah-2.2.2.ebuild:
+  Re-Keywording for ppc, bug 285153
 
   01 Oct 2009; Tobias Klausmann <klausman@gentoo.org> cheetah-2.2.2.ebuild:
   Keyworded on alpha, bug #285153
