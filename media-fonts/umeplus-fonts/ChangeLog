@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/umeplus-fonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/ChangeLog,v 1.2 2009/10/02 22:45:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/umeplus-fonts/ChangeLog,v 1.3 2009/10/07 21:00:05 maekke Exp $
+
+  07 Oct 2009; Markus Meier <maekke@gentoo.org>
+  umeplus-fonts-20090604.ebuild:
+  amd64/x86 stable, bug #286263
 
 *umeplus-fonts-20090918a (02 Oct 2009)
 
