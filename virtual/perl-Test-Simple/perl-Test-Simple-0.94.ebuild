@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/perl-Test-Simple-0.94.ebuild,v 1.1 2009/09/04 15:52:15 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test-Simple/perl-Test-Simple-0.94.ebuild,v 1.2 2009/10/07 10:00:05 tove Exp $
 
 DESCRIPTION="Virtual for Test-Simple"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -12,4 +12,4 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~spar
 IUSE=""
 
 DEPEND=""
-RDEPEND="|| ( ~dev-lang/perl-5.10.1 ~perl-core/Test-Simple-${PV} )"
+RDEPEND="~perl-core/Test-Simple-${PV}"
