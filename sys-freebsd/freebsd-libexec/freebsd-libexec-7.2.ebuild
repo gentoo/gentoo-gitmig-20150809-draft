@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-7.2.ebuild,v 1.2 2009/05/22 15:39:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-7.2.ebuild,v 1.3 2009/10/07 04:52:35 aballier Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${LIBEXEC}.tar.bz2
 	mirror://gentoo/${ETC}.tar.bz2
 	mirror://gentoo/${USBIN}.tar.bz2"
 
-RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[nis?]
+RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	pam? ( virtual/pam )"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
