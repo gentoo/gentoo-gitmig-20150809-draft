@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2.ebuild,v 1.16 2009/10/07 18:15:26 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.2-r1.ebuild,v 1.1 2009/10/07 18:15:26 mescalinum Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://fedora/development/source/SRPMS/${P}-${RPMREV}.src.rpm"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gpm tcl"
 
 RDEPEND=">=sys-libs/slang-1.4
@@ -49,6 +49,9 @@ src_unpack() {
 	fi
 
 	sed -i -e 's:0.52.1:0.52.2:g' "${S}"/configure || die
+
+	# bug 285854
+	epatch "${FILESDIR}"/newt-CVE-2009-2905.patch
 }
 
 src_compile() {

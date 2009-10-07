@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10.ebuild,v 1.11 2009/10/07 18:15:26 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/newt-0.52.10-r1.ebuild,v 1.1 2009/10/07 18:15:26 mescalinum Exp $
 
 inherit python toolchain-funcs eutils rpm
 
@@ -10,7 +10,7 @@ SRC_URI="https://fedorahosted.org/releases/n/e/newt/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ~ia64 ppc ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="gpm tcl nls"
 
 RDEPEND="=sys-libs/slang-2*
@@ -37,6 +37,9 @@ src_unpack() {
 	sed -i -e 's:-ltcl8.4:-ltcl8.5:g' "${S}"/Makefile.in
 
 	sed -i -e 's:instroot:DESTDIR:g' "${S}"/Makefile.in || die
+
+	# bug 285854
+	epatch "${FILESDIR}"/newt-CVE-2009-2905.patch
 }
 
 src_compile() {
