@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.12 2009/10/07 16:12:45 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libifp/libifp-1.0.0.2.ebuild,v 1.13 2009/10/07 16:16:51 ssuominen Exp $
 
 EAPI=2
 
@@ -42,15 +42,15 @@ src_install() {
 	# by moving examples to examples dir
 	if use examples; then
 	    insinto /usr/share/${PN}/examples
-	    doins ${S}/examples/simple.c ${S}/examples/ifpline.c
-	    mv ${D}/usr/bin/{simple,ifpline} ${D}/usr/share/${PN}/examples
+	    doins "${S}"/examples/simple.c "${S}"/examples/ifpline.c
+	    mv "${D}"/usr/bin/{simple,ifpline} "${D}"/usr/share/${PN}/examples
 	else
-	    rm -f ${D}/usr/bin/{simple,ifpline}
+	    rm -f "${D}"/usr/bin/{simple,ifpline}
 	fi
 
 	use doc && dodoc README ChangeLog TODO
 }
 
 pkg_postinst() {
-	elog "Install media-sound/libifp-module for kernel module."
+	elog "Install media-sound/libifp-module for kernel support."
 }
