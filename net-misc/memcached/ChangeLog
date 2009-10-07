@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/memcached
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.101 2009/10/01 17:56:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.102 2009/10/07 16:29:22 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> memcached-1.4.1.ebuild:
+  ppc stable #279386
 
   01 Oct 2009; Raúl Porcel <armin76@gentoo.org> memcached-1.4.1.ebuild:
   ia64/sparc stable wrt #279386
