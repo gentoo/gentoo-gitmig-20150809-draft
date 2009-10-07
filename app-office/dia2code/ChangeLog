@@ -1,6 +1,9 @@
 # ChangeLog for app-office/dia2code
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.14 2008/02/24 10:31:25 eva Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia2code/ChangeLog,v 1.15 2009/10/07 16:56:38 eva Exp $
+
+  07 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org> dia2code-0.8.3.ebuild:
+  Add die with messages.
 
 *dia2code-0.8.3 (24 Feb 2008)
 
