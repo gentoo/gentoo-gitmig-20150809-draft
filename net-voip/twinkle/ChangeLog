@@ -1,6 +1,9 @@
-# ChangeLog for net-im/twinkle
+# ChangeLog for net-voip/twinkle
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/twinkle/ChangeLog,v 1.1 2009/10/06 02:47:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/twinkle/ChangeLog,v 1.2 2009/10/07 21:51:38 maekke Exp $
+
+  07 Oct 2009; Markus Meier <maekke@gentoo.org> twinkle-1.4.2.ebuild:
+  amd64/x86 stable, bug #285683
 
   06 Oct 2009; Daniel Black <dragonheart@gentoo.org> twinkle-1.4.2.ebuild:
   drop kdehidden visibility so I can remove set-kdedir which was somehow
