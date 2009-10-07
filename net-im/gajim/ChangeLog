@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gajim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.79 2009/10/07 17:26:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/ChangeLog,v 1.80 2009/10/07 20:49:39 maekke Exp $
+
+  07 Oct 2009; Markus Meier <maekke@gentoo.org> gajim-0.12.1.ebuild:
+  amd64/x86 stable, bug #285663
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> gajim-0.12.1.ebuild:
   ppc stable #285663
