@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6_pre2.ebuild,v 1.2 2009/10/07 14:03:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6_pre2.ebuild,v 1.3 2009/10/07 15:16:59 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://llvm.org/prereleases/${PV/_pre*}/pre-release${PV/*_pre}/${PN}-${
 LICENSE="UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
-IUSE="alltargets debug llvm-gcc test"
+IUSE="alltargets debug llvm-gcc ocaml test"
 
 DEPEND="dev-lang/perl
 	>=sys-devel/make-3.79
@@ -24,6 +24,7 @@ DEPEND="dev-lang/perl
 	>=sys-devel/gcc-3.0
 	>=sys-devel/binutils-2.18
 	llvm-gcc? ( sys-devel/llvm-gcc )
+	ocaml? ( dev-lang/ocaml )
 	test? ( dev-util/dejagnu )"
 RDEPEND="dev-lang/perl"
 
@@ -83,7 +84,7 @@ src_prepare() {
 	# Fix docs installation
 	sed -e '/^NO_INSTALL_MANS/s/$/$(DST_MAN_DIR)tblgen.1 $(DST_MAN_DIR)llvmgcc.1 $(DST_MAN_DIR)llvmgxx.1/' \
 		-i docs/CommandGuide/Makefile || die "manpages sed failed"
-	epatch "${FILESDIR}"/${PN}-2.6-nohtmltargz.patch
+	epatch "${FILESDIR}"/${PN}-2.6-nodoctargz.patch
 
 	# Buggy test, http://llvm.org/bugs/show_bug.cgi?id=5047
 	rm test/DebugInfo/2009-01-15-dbg_declare.ll
@@ -134,6 +135,11 @@ src_configure() {
 		--with-llvmgcc=${LLVM_GCC_DRIVER} \
 		--with-llvmgxx=${LLVM_GPP_DRIVER}"
 
+	if use ocaml; then
+		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=ocaml"
+	else
+		CONF_FLAGS="${CONF_FLAGS} --enable-bindings=none"
+	fi
 	econf ${CONF_FLAGS} || die "econf failed"
 }
 

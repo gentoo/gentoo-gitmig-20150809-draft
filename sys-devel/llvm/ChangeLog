@@ -1,9 +1,14 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.2 2009/10/07 14:03:08 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.3 2009/10/07 15:16:59 voyageur Exp $
+
+  07 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.6_pre2.ebuild,
+  +files/llvm-2.6-nodoctargz.patch, -files/llvm-2.6-nohtmltargz.patch:
+  Add USE flag for ocaml bindings, complete doc patch to fix ocmal doc
+  failure, see bug #186279
 
   07 Oct 2009; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.6_pre2.ebuild:
-  Fix llvm-gcc location, work with 
+  Fix llvm-gcc location, work with ${ROOT}
 
 *llvm-2.6_pre2 (05 Oct 2009)
 
