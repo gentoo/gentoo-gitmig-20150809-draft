@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.0.2.ebuild,v 1.3 2009/10/06 18:03:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/markdown-2.0.2.ebuild,v 1.4 2009/10/07 11:53:35 volkmar Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/M/${MY_PN}/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~x86 ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~x86 ~ppc ~ppc-macos ~x86-macos"
 IUSE="pygments"
 
 DEPEND=""
