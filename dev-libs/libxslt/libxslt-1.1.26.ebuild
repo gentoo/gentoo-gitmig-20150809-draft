@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.2 2009/10/07 15:31:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.3 2009/10/07 15:46:01 ssuominen Exp $
 
 EAPI=2
 inherit autotools eutils
@@ -34,9 +34,7 @@ src_configure() {
 		--with-html-subdir=html \
 		$(use_with crypt crypto) \
 		$(use_with python) \
-		$(use_with debug) \
 		$(use_with debug mem-debug)
-
 }
 
 src_install() {
