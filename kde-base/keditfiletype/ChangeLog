@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/keditfiletype
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.7 2009/10/06 19:21:11 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/keditfiletype/ChangeLog,v 1.8 2009/10/07 02:21:55 josejx Exp $
+
+  07 Oct 2009; Joseph Jezak <josejx@gentoo.org> keditfiletype-4.3.1.ebuild,
+  keditfiletype-4.3.2.ebuild:
+  Marked ~ppc/~ppc64 for bug #280312.
 
 *keditfiletype-4.3.2 (06 Oct 2009)
 

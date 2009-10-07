@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/kfmclient-4.3.2.ebuild,v 1.1 2009/10/06 19:26:22 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kfmclient/kfmclient-4.3.2.ebuild,v 1.2 2009/10/07 02:23:51 josejx Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ KMMODULE="konqueror/client"
 inherit kde4-meta
 
 DESCRIPTION="KDE tool for opening URLs from the command line"
-KEYWORDS="~alpha ~amd64 ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="debug"
 
 # Moved from kde-base/konqueror in 4.3.0-r2, 4.3.65-r1, and 9999-r1, so ugly blockers...
