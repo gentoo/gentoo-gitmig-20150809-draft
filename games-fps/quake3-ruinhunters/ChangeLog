@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-ruinhunters
-# Copyright 2002-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/ChangeLog,v 1.6 2006/10/24 21:34:10 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/ChangeLog,v 1.7 2009/10/07 00:56:30 nyhm Exp $
+
+  07 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  quake3-ruinhunters-1.0a-r1.ebuild:
+  EAPI=2; fix unpack order
 
 *quake3-ruinhunters-1.0a-r1 (24 Oct 2006)
 
