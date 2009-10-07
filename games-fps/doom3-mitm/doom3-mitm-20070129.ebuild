@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20070129.ebuild,v 1.1 2009/10/07 20:40:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-mitm/doom3-mitm-20070129.ebuild,v 1.2 2009/10/07 20:46:53 nyhm Exp $
 
 EAPI=2
 
@@ -33,7 +33,6 @@ src_prepare() {
 }
 
 src_install() {
-	games-mods_src_install
 	games_make_wrapper ${PN} \
 		"doom3 +set fs_game_base d3xp +set fs_game mitm +map mitm"
 	make_desktop_entry ${PN} "Doom 3 - ${MOD_NAME} (1)" doom3
@@ -43,4 +42,5 @@ src_install() {
 			"doom3 +set fs_game_base d3xp +set fs_game mitm +map mitm${i}"
 		make_desktop_entry ${PN}${i} "Doom 3 - ${MOD_NAME} (${i})" doom3
 	done
+	games-mods_src_install
 }
