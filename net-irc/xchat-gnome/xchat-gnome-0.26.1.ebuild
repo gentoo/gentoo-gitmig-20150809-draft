@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1.ebuild,v 1.5 2009/09/29 20:52:23 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/xchat-gnome-0.26.1.ebuild,v 1.6 2009/10/07 17:31:42 nixnut Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://xchat-gnome.navi.cx/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="dbus ipv6 libnotify mmx nls perl python sound spell ssl tcl"
 
 RDEPEND=">=dev-libs/glib-2.18.0

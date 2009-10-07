@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/xchat-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.50 2009/09/29 20:52:23 mrpouet Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat-gnome/ChangeLog,v 1.51 2009/10/07 17:31:42 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> xchat-gnome-0.26.1.ebuild:
+  ppc stable #285477
 
   29 Sep 2009; Romain Perier <mrpouet@gentoo.org>
   xchat-gnome-0.26.1.ebuild:
