@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.3 2009/10/07 18:54:26 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.4 2009/10/07 18:56:54 bicatali Exp $
 
 EAPI=2
 
@@ -119,8 +119,8 @@ src_install() {
 		NLSPATH="${ROOT}${DESTINATION}/lib/locale/en_US/%N"
 		MANPATH="${ROOT}${DESTINATION}/man/en_US"
 	EOF
-	if [ ! -e  ${ROOT}etc/env.d/${envf} ] ||
-		[ -n "$(diff ${ROOT}etc/env.d/${envf} ./${envf})" ]; then
+	if [ ! -e  "${ROOT}"etc/env.d/${envf} ] ||
+		[ -n $(diff "${ROOT}"etc/env.d/${envf} ./${envf}) ]; then
 		doenvd ${envf} || die "doenvd ${envf} failed"
 	fi
 	[ -d ${DESTINATION}/idb ] && \
