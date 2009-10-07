@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6_pre2.ebuild,v 1.1 2009/10/05 13:10:54 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-2.6_pre2.ebuild,v 1.2 2009/10/07 14:03:08 voyageur Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs
@@ -118,7 +118,7 @@ src_configure() {
 	local LLVM_GCC_DIR=/dev/null
 	local LLVM_GCC_DRIVER=nope ; local LLVM_GPP_DRIVER=nope
 	if use llvm-gcc ; then
-		LLVM_GCC_DIR=$(find /usr/$(get_libdir)/llvm-gcc/ -mindepth 1 -maxdepth 1 2> /dev/null)
+		LLVM_GCC_DIR=$(ls -d ${ROOT}/usr/$(get_libdir)/llvm-gcc* 2> /dev/null)
 		LLVM_GCC_DRIVER=$(find ${LLVM_GCC_DIR} -name 'llvm*-gcc' 2> /dev/null)
 
 		if [[ -z ${LLVM_GCC_DRIVER} ]] ; then
