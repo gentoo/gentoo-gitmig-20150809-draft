@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/php
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.347 2009/10/07 15:58:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/ChangeLog,v 1.348 2009/10/07 16:24:01 chainsaw Exp $
+
+  07 Oct 2009; <chainsaw@gentoo.org> php-5.2.11.ebuild:
+  Marked stable on AMD64 as requested by Bernd Marienfeldt in security bug
+  #285434. Tested with USE="apache2 berkdb bzip2 calendar cgi cli crypt
+  ctype curl gd iconv imap ipv6 mhash mysql ncurses nls pcre pic posix
+  readline session snmp spl ssl threads tokenizer truetype unicode xml
+  xmlrpc zlib" serving www.linx.net on hardened AMD64 non-multilib system.
 
   07 Oct 2009; Raúl Porcel <armin76@gentoo.org> php-5.2.11.ebuild:
   alpha/arm/ia64/s390/sh/sparc stable wrt #285434
