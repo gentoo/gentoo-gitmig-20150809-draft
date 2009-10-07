@@ -1,6 +1,9 @@
 # ChangeLog for sys-process/psmisc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.84 2009/10/06 03:58:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.85 2009/10/07 16:08:32 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> psmisc-22.7.ebuild:
+  ppc stable #287739
 
   06 Oct 2009; Jeroen Roovers <jer@gentoo.org> psmisc-22.7.ebuild:
   Stable for HPPA (bug #287739).
