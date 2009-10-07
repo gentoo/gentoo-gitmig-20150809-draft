@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.31 2009/09/23 17:40:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.32 2009/10/07 07:43:39 tupone Exp $
+
+  07 Oct 2009; Tupone Alfredo <tupone@gentoo.org>
+  +files/nethack-3.4.3-gibc210.patch, nethack-3.4.3-r1.ebuild:
+  Fix build with glibc-2.10 Bug #286532 by Andrew Savchenko
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> nethack-3.4.3-r1.ebuild:
   Remove virtual/libc

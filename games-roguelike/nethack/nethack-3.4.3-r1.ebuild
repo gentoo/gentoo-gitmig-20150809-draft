@@ -1,6 +1,7 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.24 2009/09/23 17:40:47 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3-r1.ebuild,v 1.25 2009/10/07 07:43:39 tupone Exp $
+EAPI=2
 
 inherit eutils toolchain-funcs flag-o-matic games
 
@@ -31,20 +32,19 @@ DEPEND="${RDEPEND}
 
 HACKDIR="${GAMES_DATADIR}/${PN}"
 
-src_unpack() {
-	unpack ${A}
-
+src_prepare() {
 	# This copies the /sys/unix Makefile.*s to their correct places for
 	# seding and compiling.
-	cd "${S}/sys/unix"
+	cd "sys/unix"
 	source setup.sh || die
 
-	cd "${S}"
+	cd ../..
 	epatch \
 		"${FILESDIR}"/${PV}-gentoo-paths.patch \
 		"${FILESDIR}"/${PV}-default-options.patch \
 		"${FILESDIR}"/${PV}-bison.patch \
-		"${FILESDIR}"/${PV}-macos.patch
+		"${FILESDIR}"/${PV}-macos.patch \
+		"${FILESDIR}"/${P}-gibc210.patch
 
 	sed -i \
 		-e "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h \
