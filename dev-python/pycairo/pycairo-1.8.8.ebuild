@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.10 2009/10/01 18:14:22 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/pycairo-1.8.8.ebuild,v 1.11 2009/10/07 17:59:59 arfrever Exp $
 
 EAPI="2"
 
@@ -58,8 +58,10 @@ src_compile() {
 
 src_test() {
 	testing() {
+		cp src/__init__.py $(ls -d build-${PYTHON_ABI}/lib.*)/cairo
 		pushd test > /dev/null
-		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" -c "import examples_test; examples_test.test_examples(); examples_test.test_snippets_png()" || return 1
+		# examples_test.test_snippets_png() calls os.chdir().
+		PYTHONPATH="$(ls -d ../build-${PYTHON_ABI}/lib.*):../$(ls -d ../build-${PYTHON_ABI}/lib.*)" "$(PYTHON)" -c "import examples_test; examples_test.test_examples(); examples_test.test_snippets_png()" || return 1
 		popd > /dev/null
 	}
 	python_execute_function testing
