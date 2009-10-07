@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.3 2009/10/05 08:32:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-0.6.16-r1.ebuild,v 1.4 2009/10/07 22:47:20 zmedico Exp $
 
 EAPI=2
 NEED_PYTHON=2.6
@@ -23,7 +23,7 @@ IUSE=""
 SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/setuptools-0.6_rc5
 	>=dev-python/imaging-1.1.6
-	dev-libs/libusb:0
+	>=dev-libs/libusb-0.1.12:0
 	>=dev-python/PyQt4-4.5[X,svg,webkit]
 	>=dev-python/mechanize-0.1.11
 	>=media-gfx/imagemagick-6.3.5
@@ -33,6 +33,7 @@ SHARED_DEPEND=">=dev-lang/python-2.6[sqlite]
 	>=dev-python/python-dateutil-1.4.1
 	>=dev-python/beautifulsoup-3.0.5
 	>=dev-python/dnspython-1.6.0
+	>=virtual/poppler-0.12.0
 	>=sys-apps/help2man-1.36.4
 	app-text/podofo"
 

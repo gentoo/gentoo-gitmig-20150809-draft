@@ -1,6 +1,9 @@
 # ChangeLog for app-text/calibre
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.53 2009/10/05 08:32:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/ChangeLog,v 1.54 2009/10/07 22:47:20 zmedico Exp $
+
+  07 Oct 2009; Zac Medico <zmedico@gentoo.org> calibre-0.6.16-r1.ebuild:
+  Bug #287686 - Fix poppler and libusb deps.
 
   05 Oct 2009; Zac Medico <zmedico@gentoo.org> calibre-0.6.16-r1.ebuild:
   Bug #287067 - Disable unnecessary privilege dropping during src_install.
