@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.73 2009/08/02 00:31:55 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.74 2009/10/07 18:01:45 nixnut Exp $
+
+  07 Oct 2009; nixnut <nixnut@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
+  ppc stable #287562
 
 *pyrex-0.9.8.5-r1 (02 Aug 2009)
 
