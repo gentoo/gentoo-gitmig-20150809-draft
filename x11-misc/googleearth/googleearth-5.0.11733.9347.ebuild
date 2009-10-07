@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.0.11733.9347.ebuild,v 1.2 2009/06/22 21:47:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/googleearth-5.0.11733.9347.ebuild,v 1.3 2009/10/07 13:53:21 caster Exp $
 
 EAPI=2
 
@@ -10,7 +10,7 @@ DESCRIPTION="A 3D interface to the planet"
 HOMEPAGE="http://earth.google.com/"
 # no upstream versioning, version determined from help/about
 # incorrect digest means upstream bumped and thus needs version bump
-SRC_URI="http://dl.google.com/earth/client/current/GoogleEarthLinux.bin
+SRC_URI="http://dl.google.com/earth/client/advanced/previous/GoogleEarthLinux.bin
 			-> GoogleEarthLinux-${PV}.bin"
 
 LICENSE="googleearth MIT X11 SGI-B-1.1 openssl as-is ZLIB"
