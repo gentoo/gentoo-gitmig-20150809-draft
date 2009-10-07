@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.4 2009/10/07 18:56:54 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.5 2009/10/07 20:34:20 bicatali Exp $
 
 EAPI=2
 
@@ -95,6 +95,9 @@ src_prepare() {
 	[ -d ${DESTINATION}/mkl ]  && chmod 644 \
 		${DESTINATION}/mkl/tools/{environment,builder}/* \
 		${DESTINATION}/mkl/tools/plugins/*/*
+	# remove for collision (bug #288038)
+	has_version "~dev-lang/ifc-${PV}" && \
+		rm -f ${DESTINATION}/lib/*/locale/*/flexnet.cat
 }
 
 src_install() {
