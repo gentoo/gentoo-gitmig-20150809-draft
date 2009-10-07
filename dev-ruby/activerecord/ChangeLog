@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.113 2009/10/04 12:56:49 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.114 2009/10/07 18:59:00 maekke Exp $
+
+  07 Oct 2009; Markus Meier <maekke@gentoo.org> activerecord-2.2.3.ebuild:
+  amd64 stable, bug #283396
 
   04 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   activerecord-2.2.3.ebuild:

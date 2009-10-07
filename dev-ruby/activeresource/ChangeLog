@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activeresource
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.44 2009/10/04 12:54:02 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeresource/ChangeLog,v 1.45 2009/10/07 19:00:18 maekke Exp $
+
+  07 Oct 2009; Markus Meier <maekke@gentoo.org> activeresource-2.2.3.ebuild:
+  amd64 stable, bug #283396
 
   04 Oct 2009; Christian Faulhammer <fauli@gentoo.org>
   activeresource-2.2.3.ebuild:
