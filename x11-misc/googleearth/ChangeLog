@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/googleearth
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.48 2009/10/03 12:12:54 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/googleearth/ChangeLog,v 1.49 2009/10/07 13:48:10 caster Exp $
+
+  07 Oct 2009; Vlastimil Babka <caster@gentoo.org>
+  googleearth-5.1.3509.4636_beta.ebuild:
+  Depend on gcc-4.2+ and check that it's active in pkg_setup, ewarn
+  otherwise.
 
 *googleearth-5.1.3509.4636_beta (03 Oct 2009)
 
