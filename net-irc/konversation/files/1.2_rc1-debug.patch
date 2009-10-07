@@ -1,0 +1,13 @@
+Index: trunk/extragear/network/konversation/src/viewer/ircview.cpp
+===================================================================
+--- trunk/extragear/network/konversation/src/viewer/ircview.cpp	(revision 1032161)
++++ trunk/extragear/network/konversation/src/viewer/ircview.cpp	(revision 1032162)
+@@ -856,8 +856,6 @@
+ 
+     KTextBrowser::append(line);
+ 
+-    Q_ASSERT(document()->rootFrame()->childFrames().count() == 0); // no child frames, see SelectionPin
+-
+     QTextCursor formatCursor(document()->lastBlock());
+     QTextBlockFormat format = formatCursor.blockFormat();
+ 

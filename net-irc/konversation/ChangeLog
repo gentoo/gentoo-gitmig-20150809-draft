@@ -1,6 +1,18 @@
 # ChangeLog for net-irc/konversation
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.85 2009/10/04 09:41:26 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.86 2009/10/07 21:40:21 scarabeus Exp $
+
+*konversation-1.2_rc1-r1 (07 Oct 2009)
+
+  07 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +files/1.2_rc1-debug.patch, -files/konversation-1.0.1-crash.patch,
+  -files/konversation-1.0.1-konsolepanel.patch,
+  -files/konversation-1.0.1-media-script-vulnerability.patch,
+  -files/konversation-1.0.1-serverlist-compiz-workaround.patch,
+  -files/konversation-1.1-desktop-entry-fix.diff,
+  -konversation-1.2_alpha6.ebuild, -konversation-1.2_beta1.ebuild,
+  -konversation-1.2_rc1.ebuild, +konversation-1.2_rc1-r1.ebuild:
+  Cleanup and apply patch for debug build as recommended by upstream.
 
 *konversation-1.2_rc1 (04 Oct 2009)
 
