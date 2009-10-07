@@ -1,0 +1,50 @@
+--- setup.py
++++ setup.py
+@@ -28,33 +28,22 @@
+ # Pull in the tools we need.
+ import sys
+ 
+-if sys.hexversion < 0x03000000:
+-    # In Py 2.x, use setuptools.
+-    from ez_setup import use_setuptools
+-    use_setuptools()
+-    
+-    from setuptools import setup
+-    from distutils.core import Extension
++from ez_setup import use_setuptools
++use_setuptools()
+ 
+-    more_setup_args = dict(
+-        entry_points = {
+-            'console_scripts': [
+-                'coverage = coverage:main',
+-                ]
+-            },
+-        
+-        # We need to get HTML assets from our htmlfiles dir.
+-        zip_safe = False,
+-        )
+-else:
+-    # No setuptools yet for Py 3.x, so do without.
+-    from distutils.core import setup, Extension
++from setuptools import setup
++from distutils.core import Extension
++
++more_setup_args = dict(
++    entry_points = {
++        'console_scripts': [
++            'coverage = coverage:main',
++            ]
++        },
+ 
+-    more_setup_args = dict(
+-        scripts = [
+-            'scripts/coverage',
+-            ],
+-        )
++    # We need to get HTML assets from our htmlfiles dir.
++    zip_safe = False,
++    )
+ 
+ 
+ # Get or massage our metadata.
