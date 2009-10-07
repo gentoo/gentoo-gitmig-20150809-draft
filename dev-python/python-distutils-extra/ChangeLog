@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-distutils-extra
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.1 2009/07/13 23:31:57 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-distutils-extra/ChangeLog,v 1.2 2009/10/07 14:48:35 volkmar Exp $
+
+  07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org>
+  python-distutils-extra-1.92_pre67.ebuild:
+  Keywording for ppc
 
   13 Jul 2009; Jesus Rivero <neurogeek@gentoo.org> +metadata.xml:
   Initial commit

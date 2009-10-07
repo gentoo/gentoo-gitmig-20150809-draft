@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mako
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.6 2009/09/07 21:26:16 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mako/ChangeLog,v 1.7 2009/10/07 14:54:09 volkmar Exp $
+
+  07 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> mako-0.2.5.ebuild:
+  Keywording for ppc
 
 *mako-0.2.5 (07 Sep 2009)
 
