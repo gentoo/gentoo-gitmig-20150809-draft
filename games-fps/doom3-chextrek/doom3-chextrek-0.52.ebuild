@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.52.ebuild,v 1.3 2009/10/01 20:50:39 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-chextrek/doom3-chextrek-0.52.ebuild,v 1.4 2009/10/07 17:16:41 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="Green slimeballs mod for kids"
 MOD_NAME="Chex Trek: Beyond the Quest"
@@ -9,17 +11,13 @@ MOD_ICON="flem.ico"
 
 inherit games-mods
 
-MY_PV=${PV/./}
-
 HOMEPAGE="http://doom3.filefront.com/file/Chex_Trek_Beyond_the_Quest;82325"
-SRC_URI="chextrek_beta_${MY_PV}.zip"
+SRC_URI="chextrek_beta_${PV/.}.zip"
 
 LICENSE="as-is"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 RESTRICT="fetch"
-
-S=${WORKDIR}
 
 pkg_nofetch() {
 	elog "Please download ${SRC_URI} from:"
@@ -27,11 +25,8 @@ pkg_nofetch() {
 	elog "and move it to ${DISTDIR}"
 }
 
-src_unpack() {
-	games-mods_src_unpack
-
-	cd "${WORKDIR}"
-	mv -f chextrek_beta* "${MOD_DIR}" || die
+src_prepare() {
+	mv -f chextrek_beta* ${MOD_DIR} || die
 }
 
 pkg_postinst() {
