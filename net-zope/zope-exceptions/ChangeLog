@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-exceptions
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-exceptions/ChangeLog,v 1.1 2009/10/07 21:28:57 arfrever Exp $
+
+*zope-exceptions-3.5.2 (07 Oct 2009)
+
+  07 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-exceptions-3.5.2.ebuild, +metadata.xml:
+  Initial addition. Ebuild written by me.
+
