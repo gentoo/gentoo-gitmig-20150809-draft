@@ -1,6 +1,13 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.153 2009/10/06 20:42:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.154 2009/10/07 16:59:41 williamh Exp $
+
+*xinit-1.0.8-r10 (07 Oct 2009)
+
+  07 Oct 2009; William Hubbs <williamh@gentoo.org> -xinit-1.0.8-r9.ebuild,
+  +xinit-1.0.8-r10.ebuild, files/xdm.initd-3:
+  Another update for security bug #287913.
+  Now we only check for .noxdm in /etc.
 
   06 Oct 2009; William Hubbs <williamh@gentoo.org> xinit-1.0.8-r8.ebuild,
   xinit-1.0.8-r9.ebuild:
