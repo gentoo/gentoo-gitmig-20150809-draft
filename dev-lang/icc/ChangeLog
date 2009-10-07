@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.72 2009/10/06 20:33:05 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.73 2009/10/07 18:54:26 bicatali Exp $
+
+  07 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> icc-11.1.056.ebuild:
+  Install env file in case of absent older one
 
 *icc-11.1.056 (06 Oct 2009)
 
