@@ -1,6 +1,6 @@
-# Copyright 2008-2009 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.2.13.ebuild,v 1.1 2009/08/11 15:08:09 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/cppserv/cppserv-0.2.13.ebuild,v 1.2 2009/10/07 06:48:18 iluxa Exp $
 
 inherit eutils apache-module multilib
 
@@ -16,7 +16,7 @@ APACHE2_MOD_CONF="75_mod_cserv"
 APACHE2_MOD_DEFINE="CPPSERV"
 
 DEPEND="net-libs/socket++
-	>=dev-cpp/sptk-3.5.6
+	=dev-cpp/sptk-3.5*
 	>=www-servers/apache-2
 	>=dev-libs/apr-1.2
 	dev-libs/boost
