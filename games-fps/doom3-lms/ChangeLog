@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/doom3-lms
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.8 2008/02/15 00:38:34 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-lms/ChangeLog,v 1.9 2009/10/07 23:08:05 nyhm Exp $
+
+*doom3-lms-4 (07 Oct 2009)
+
+  07 Oct 2009; Tristan Heaven <nyhm@gentoo.org> +doom3-lms-4.ebuild:
+  Version bump
 
   15 Feb 2008; Chris Gianelloni <wolf31o2@gentoo.org> -doom3-lms-3.ebuild,
   doom3-lms-3-r1.ebuild:
