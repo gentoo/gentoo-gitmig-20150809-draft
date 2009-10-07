@@ -1,6 +1,17 @@
 # ChangeLog for sys-auth/pam_pkcs11
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.13 2009/06/12 14:57:31 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pam_pkcs11/ChangeLog,v 1.14 2009/10/07 13:02:25 flameeyes Exp $
+
+*pam_pkcs11-0.6.1-r1 (07 Oct 2009)
+
+  07 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +pam_pkcs11-0.6.1-r1.ebuild, +files/pam_pkcs11-0.6.1-properinstall.patch:
+  Revision bump of the pam_pkcs11 package: fix the install to avoid
+  installing static objects and .la files; fix the installed example
+  configuration files to have the correct path for multilib systems; install
+  the example files as default configuration files, install documentation in
+  the proper directory, move the make_hash_link.sh script out of path, add
+  some logs and a TODO list.
 
 *pam_pkcs11-0.6.1 (12 Jun 2009)
 
