@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.130 2009/07/05 22:06:04 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.131 2009/10/07 21:09:28 eva Exp $
+
+  07 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org libgda-4.1.0.ebuild:
+  Add missing gtk-doc-am dependency, bug #288045.
 
   05 Jul 2009; Alexis Ballier <aballier@gentoo.org> libgda-4.1.0.ebuild:
   keyword ~x86-fbsd
