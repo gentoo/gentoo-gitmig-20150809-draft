@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.6_beta5.ebuild,v 1.2 2009/09/11 12:48:53 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cssutils/cssutils-0.9.6.ebuild,v 1.1 2009/10/07 19:55:52 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -20,8 +20,7 @@ IUSE="test"
 RDEPEND=">=dev-python/setuptools-0.6_rc7-r1"
 DEPEND="${RDEPEND}
 	test? ( dev-python/minimock )"
-
-RESTRICT_PYTHON_ABIS="3*"
+RESTRICT_PYTHON_ABIS="3.*"
 
 S="${WORKDIR}/${MY_P}"
 
