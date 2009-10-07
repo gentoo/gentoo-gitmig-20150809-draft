@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/ja-ipafonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ChangeLog,v 1.17 2009/10/07 16:32:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/ja-ipafonts/ChangeLog,v 1.18 2009/10/07 20:54:14 maekke Exp $
+
+  07 Oct 2009; Markus Meier <maekke@gentoo.org> ja-ipafonts-003.01.ebuild:
+  amd64/arm/x86 stable, bug #286216
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> ja-ipafonts-003.01.ebuild:
   ppc stable #286216
