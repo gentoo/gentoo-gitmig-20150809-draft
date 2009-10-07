@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/slang
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.102 2009/10/07 16:37:55 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.103 2009/10/07 23:12:02 matsuu Exp $
+
+*slang-2.2.1 (07 Oct 2009)
+
+  07 Oct 2009; MATSUU Takuto <matsuu@gentoo.org> +slang-2.2.1.ebuild:
+  Version bumped, bug #288082.
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> slang-2.2.0.ebuild:
   ppc stable #287733
