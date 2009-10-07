@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-DKIM
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.34 2009/09/27 15:05:20 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-DKIM/ChangeLog,v 1.35 2009/10/07 23:06:05 tcunha Exp $
+
+  07 Oct 2009; Tiago Cunha <tcunha@gentoo.org> Mail-DKIM-0.36.ebuild:
+  stable sparc, bug 283969
 
   27 Sep 2009; Brent Baude <ranger@gentoo.org> Mail-DKIM-0.36.ebuild:
   Marking Mail-DKIM-0.36 ppc64 stable for bug 283969

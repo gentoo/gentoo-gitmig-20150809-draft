@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.117 2009/10/07 17:43:23 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.118 2009/10/07 22:40:20 tcunha Exp $
+
+  07 Oct 2009; Tiago Cunha <tcunha@gentoo.org> libwww-perl-5.831.ebuild:
+  stable sparc, bug 283969
 
 *libwww-perl-5.833 (07 Oct 2009)
 

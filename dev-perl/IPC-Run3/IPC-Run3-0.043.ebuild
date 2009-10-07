@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/IPC-Run3-0.043.ebuild,v 1.6 2009/10/03 04:22:59 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run3/IPC-Run3-0.043.ebuild,v 1.7 2009/10/07 23:09:20 tcunha Exp $
 
 EAPI=2
 
@@ -11,7 +11,7 @@ DESCRIPTION="Run a subprocess in batch mode (a la system)"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh sparc x86"
 IUSE="test"
 
 SRC_TEST="do"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Mason
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.90 2009/09/19 16:42:39 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Mason/ChangeLog,v 1.91 2009/10/07 23:14:50 tcunha Exp $
+
+  07 Oct 2009; Tiago Cunha <tcunha@gentoo.org> HTML-Mason-1.42.ebuild:
+  stable sparc, bug 283969
 
   19 Sep 2009; nixnut <nixnut@gentoo.org> HTML-Mason-1.42.ebuild:
   ppc stable #283969
