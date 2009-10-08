@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ifc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.51 2009/10/07 19:29:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ChangeLog,v 1.52 2009/10/08 03:46:22 bicatali Exp $
+
+  08 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> ifc-11.1.056.ebuild:
+  Changed to bash brackets
 
   07 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> ifc-11.1.056.ebuild:
   Install env file in case of absent older one, and remove a flex file to

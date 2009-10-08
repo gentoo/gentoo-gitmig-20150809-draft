@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.5 2009/10/07 20:34:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-11.1.056.ebuild,v 1.6 2009/10/08 03:48:20 bicatali Exp $
 
 EAPI=2
 
@@ -92,7 +92,7 @@ src_prepare() {
 		-e '/^UNTAG_CFG_FILES[[:space:]]*(/,/^}/p' \
 		pset/install_cc.sh > tag.sh || die
 	# fix world writeable files
-	[ -d ${DESTINATION}/mkl ]  && chmod 644 \
+	[[ -d ${DESTINATION}/mkl ]] && chmod 644 \
 		${DESTINATION}/mkl/tools/{environment,builder}/* \
 		${DESTINATION}/mkl/tools/plugins/*/*
 	# remove for collision (bug #288038)
@@ -122,11 +122,11 @@ src_install() {
 		NLSPATH="${ROOT}${DESTINATION}/lib/locale/en_US/%N"
 		MANPATH="${ROOT}${DESTINATION}/man/en_US"
 	EOF
-	if [ ! -e  "${ROOT}"etc/env.d/${envf} ] ||
-		[ -n $(diff "${ROOT}"etc/env.d/${envf} ./${envf}) ]; then
+	if [[ ! -e "${ROOT}"etc/env.d/${envf} ]] ||
+		[[ -n $(diff "${ROOT}"etc/env.d/${envf} ./${envf}) ]]; then
 		doenvd ${envf} || die "doenvd ${envf} failed"
 	fi
-	[ -d ${DESTINATION}/idb ] && \
+	[[ -d ${DESTINATION}/idb ]] && \
 		dosym ../../common/com.intel.debugger.help_1.0.0 \
 		${DESTINATION}/idb/gui/${IARCH}/plugins
 

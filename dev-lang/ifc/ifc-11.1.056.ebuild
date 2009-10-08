@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.056.ebuild,v 1.2 2009/10/07 19:29:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-11.1.056.ebuild,v 1.3 2009/10/08 03:46:22 bicatali Exp $
 
 EAPI=2
 
@@ -54,7 +54,6 @@ src_unpack() {
 		use mkl && built_with_use dev-lang/icc mkl && rm -f rpm/*mkl*.rpm
 	fi
 	for x in rpm/intel*.rpm; do
-		einfo "Extracting $(basename ${x})..."
 		rpm_unpack ./${x} || die "rpm_unpack ${x} failed"
 	done
 }
@@ -70,7 +69,7 @@ src_prepare() {
 		-e '/^UNTAG_CFG_FILES[[:space:]]*(/,/^}/p' \
 		pset/install_fc.sh > tag.sh || die
 	# fix world writeable files
-	[ -d ${DESTINATION}/mkl ]  && chmod 644 \
+	[[ -d ${DESTINATION}/mkl ]] && chmod 644 \
 		${DESTINATION}/mkl/tools/{environment,builder}/* \
 		${DESTINATION}/mkl/tools/plugins/*/*
 	# remove for collision (bug #288038)
@@ -100,11 +99,11 @@ src_install() {
 		NLSPATH="${ROOT}${DESTINATION}/lib/locale/en_US/%N"
 		MANPATH="${ROOT}${DESTINATION}/man/en_US"
 	EOF
-	if [ ! -e  "${ROOT}"etc/env.d/${envf} ] ||
-		[ -n $(diff "${ROOT}"etc/env.d/${envf} ./${envf}) ]; then
+	if [[ ! -e "${ROOT}etc/env.d/${envf}" ]] || \
+		[[ -n $(diff "${ROOT}"etc/env.d/${envf} ./${envf}) ]]; then
 		doenvd ${envf} || die "doenvd ${envf} failed"
 	fi
-	[ -d ${DESTINATION}/idb ] && \
+	[[ -d ${DESTINATION}/idb ]] && \
 		dosym ../../common/com.intel.debugger.help_1.0.0 \
 		${DESTINATION}/idb/gui/${IARCH}/plugins
 }

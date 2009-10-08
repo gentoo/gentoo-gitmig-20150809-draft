@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/icc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.75 2009/10/07 20:34:20 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.76 2009/10/08 03:48:20 bicatali Exp $
+
+  08 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> icc-11.1.056.ebuild:
+  Changed to bash brackets
 
   07 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org> icc-11.1.056.ebuild:
   Remove a flex file to avoid collision with icc (bug #288038)
