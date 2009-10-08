@@ -1,25 +1,29 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-inhell/doom3-inhell-1.1-r1.ebuild,v 1.4 2009/10/01 20:54:34 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doom3-inhell/doom3-inhell-1.1-r1.ebuild,v 1.5 2009/10/08 03:41:02 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="Ultimate Doom-inspired levels for Doom 3"
 MOD_NAME="In Hell"
 MOD_DIR="inhell"
 
-inherit versionator games games-mods
-
-MY_PV=$(replace_version_separator 1 '')
+inherit games games-mods
 
 HOMEPAGE="http://www.doomerland.de.vu/"
-SRC_URI="ftp://ftp.dvo.ru/pub/distfiles/in_hell_v${MY_PV}.zip"
+SRC_URI="in_hell_v${PV/.}.zip"
 
 LICENSE="as-is"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
+RESTRICT="fetch"
 
-S=${WORKDIR}
+pkg_nofetch() {
+	elog "Please download ${SRC_URI} from:"
+	elog "http://www.filefront.com/4631315"
+	elog "and move it to ${DISTDIR}"
+}
 
-src_unpack() {
-	games-mods_src_unpack
-	mv In_Hell ${MOD_DIR} || die
+src_prepare() {
+	mv -f In_Hell ${MOD_DIR} || die
 }
