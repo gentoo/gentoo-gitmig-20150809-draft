@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/enemy-territory-fortress
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.14 2009/04/07 17:12:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory-fortress/ChangeLog,v 1.15 2009/10/08 17:17:28 nyhm Exp $
+
+*enemy-territory-fortress-1.6-r3 (08 Oct 2009)
+
+  08 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  +enemy-territory-fortress-1.6-r3.ebuild:
+  Use newer liflg installer
 
   07 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   enemy-territory-fortress-1.6-r2.ebuild:
