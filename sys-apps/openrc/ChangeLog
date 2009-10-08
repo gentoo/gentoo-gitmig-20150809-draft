@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.76 2009/08/23 09:19:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.77 2009/10/08 16:31:27 billie Exp $
+
+*openrc-0.4.3-r4 (08 Oct 2009)
+
+  08 Oct 2009; Pielmeier Daniel <billie@gentoo.org> +openrc-0.4.3-r4.ebuild,
+  +files/openrc.logrotate:
+  Revision bump. Add support for logfile rotation. Closes bug #262035.
 
   23 Aug 2009; Mike Frysinger <vapier@gentoo.org> openrc-0.4.3-r3.ebuild,
   openrc-9999.ebuild:
