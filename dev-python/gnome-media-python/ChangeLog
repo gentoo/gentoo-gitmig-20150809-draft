@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-media-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.17 2009/05/10 21:41:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-media-python/ChangeLog,v 1.18 2009/10/08 03:19:39 tester Exp $
+
+  08 Oct 2009; Olivier Crête <tester@gentoo.org>
+  gnome-media-python-2.26.0.ebuild:
+  Stable on amd64, bug #281427
 
 *gnome-media-python-2.26.0 (10 May 2009)
 
