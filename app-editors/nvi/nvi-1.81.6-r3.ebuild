@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.1 2009/09/26 08:47:51 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/nvi-1.81.6-r3.ebuild,v 1.2 2009/10/08 19:54:16 truedfx Exp $
 
-inherit db-use eutils flag-o-matic
+inherit autotools db-use eutils flag-o-matic
 
 DBVERS="4.7 4.6 4.5 4.4 4.3 4.2"
 
@@ -33,13 +33,16 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
+	cd "${S}" || die
 	epatch "${FILESDIR}"/${P}-db44.patch
 	epatch "${FILESDIR}"/${P}-db.patch
-	chmod +x ../dist/findconfig
-
+	epatch "${FILESDIR}"/${P}-perl-as-needed.patch
+	cd ../dist || die
+	chmod +x findconfig || die
 	append-flags -I"$(db_includedir ${DBVERS})"
-	sed -i -e "s@-ldb@-l$(db_libname ${DBVERS})@" ../dist/configure
+	sed -i -e "s@-ldb@-l$(db_libname ${DBVERS})@" configure.in || die
+	rm -f configure || die
+	eautoreconf -Im4
 }
 
 src_compile() {

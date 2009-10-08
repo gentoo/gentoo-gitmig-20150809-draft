@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/nvi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.72 2009/09/26 08:47:51 truedfx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nvi/ChangeLog,v 1.73 2009/10/08 19:54:16 truedfx Exp $
+
+  06 Oct 2009; Harald van Dĳk <truedfx@gentoo.org> nvi-1.81.6-r3.ebuild,
+  +files/nvi-1.81.6-perl-as-needed.patch:
+  Fix build with perl and --as-needed, triggered by perl 5.10
 
 *nvi-1.81.6-r3 (26 Sep 2009)
 
