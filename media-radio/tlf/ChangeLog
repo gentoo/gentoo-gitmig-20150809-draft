@@ -1,6 +1,13 @@
 # ChangeLog for media-radio/tlf
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.16 2008/12/05 10:06:21 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.17 2009/10/08 16:22:32 vostorga Exp $
+
+*tlf-0.9.31.2-r1 (08 Oct 2009)
+
+  08 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
+  +tlf-0.9.31.2-r1.ebuild, +files/tlf-0.9.31.2-segfault-fix.patch:
+  Fixing segfault if called with 'tlf -n' patch thanks to Thomas Beierlein
+  <tb@forth-ev.de> bug 287640
 
   05 Dec 2008; Raúl Porcel <armin76@gentoo.org> tlf-0.9.31.2.ebuild:
   x86 stable wrt #249491
