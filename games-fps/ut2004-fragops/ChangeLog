@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/ut2004-fragops
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.9 2008/07/28 16:58:01 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-fragops/ChangeLog,v 1.10 2009/10/08 21:07:57 nyhm Exp $
+
+*ut2004-fragops-2.20 (08 Oct 2009)
+
+  08 Oct 2009; Tristan Heaven <nyhm@gentoo.org> +ut2004-fragops-2.20.ebuild:
+  Version bump, bug #191695
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
