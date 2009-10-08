@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.26.0-r1.ebuild,v 1.1 2009/09/12 11:38:18 nirbheek Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.26.0-r1.ebuild,v 1.2 2009/10/08 03:14:18 tester Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ronald.bitfreak.net/gnome-media.php"
 
 LICENSE="LGPL-2 GPL-2 FDL-1.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+sound esd gnomecd ipv6 pulseaudio"
 
 RDEPEND=">=dev-libs/glib-2.18.2:2
