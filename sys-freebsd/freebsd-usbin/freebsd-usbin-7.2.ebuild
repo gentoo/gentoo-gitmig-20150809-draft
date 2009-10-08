@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.2.ebuild,v 1.4 2009/10/08 07:54:30 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-7.2.ebuild,v 1.5 2009/10/08 09:05:27 aballier Exp $
 
 EAPI=2
 
@@ -31,6 +31,7 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?,netware?]
 	net-libs/libpcap"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
+	=sys-freebsd/freebsd-ubin-${RV}*
 	!build? ( =sys-freebsd/freebsd-sources-${RV}* )
 	sys-apps/texinfo
 	sys-devel/flex"
