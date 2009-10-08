@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.75 2009/10/08 19:54:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.76 2009/10/08 19:56:14 grobian Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -548,6 +548,26 @@ get_libname() {
 			esac
 		done
 	fi
+}
+
+# @FUNCTION: get_modname
+# @USAGE:
+# @DESCRIPTION:
+# Returns modulename with proper suffix {.so,.bundle,etc} for the current
+# platform identified by CHOST.
+#
+# Example:
+#     libfoo$(get_modname)
+#     Returns: libfoo.so (ELF) || libfoo.bundle (MACH) || ...
+get_modname() {
+	local modname
+	local ver=$1
+	case ${CHOST} in
+		*-darwin*)                modname="bundle";;
+		*)                        modname="so";;
+	esac
+
+	echo ".${modname}"
 }
 
 # This is for the toolchain to setup profile variables when pulling in
