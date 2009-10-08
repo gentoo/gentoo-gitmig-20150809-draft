@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.133 2009/10/05 23:22:05 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.134 2009/10/08 19:36:53 armin76 Exp $
+
+  08 Oct 2009; Raúl Porcel <armin76@gentoo.org> eselect-1.2.3.ebuild:
+  alpha/arm/ia64/m68k/s390/sh stable wrt #287135
 
   05 Oct 2009; Tiago Cunha <tcunha@gentoo.org> eselect-1.2.3.ebuild:
   stable sparc, bug 287135
