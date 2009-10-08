@@ -1,4 +1,0 @@
-# $Id: amd.net,v 1.1 2003/04/10 22:06:42 liquidx Exp $
-
-/defaults   fs:=${autodir}/${rhost}/root/${rfs};opts:=nodev
-*           rhost:=${key};type:=host;rfs:=/
