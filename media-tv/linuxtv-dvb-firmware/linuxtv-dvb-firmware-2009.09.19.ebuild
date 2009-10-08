@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.07.06.ebuild,v 1.1 2009/09/02 20:49:58 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb-firmware/linuxtv-dvb-firmware-2009.09.19.ebuild,v 1.1 2009/10/08 16:05:47 billie Exp $
 
 DESCRIPTION="Firmware files needed for operation of some dvb-devices"
 HOMEPAGE="http://www.linuxtv.org"
@@ -42,7 +42,6 @@ FW_USE_FLAGS=(
 	"usb-wt220u"
 	"usb-wt220u"
 	"usb-dib0700"
-	"usb-af9015"
 	"sp887x"
 	"af9005"
 	"cx231xx"
@@ -53,6 +52,7 @@ FW_USE_FLAGS=(
 	"cx23885"
 	"pvrusb2"
 	"usb-bluebird"
+	"tda10045"
 # get_dvb_firmware
 	"sp8870"
 	"tda10046"
@@ -65,6 +65,7 @@ FW_USE_FLAGS=(
 	"vp7041"
 	"nxt200x"
 	"mpc718"
+	"usb-af9015"
 )
 
 FW_FILES=(
@@ -76,7 +77,7 @@ FW_FILES=(
 	"dvb-usb-vp702x-01.fw"
 	"dvb-usb-vp7045-01.fw"
 	"dvb-usb-wt220u-01.fw"
-	"dvb-dibusb-5.0.0.11.fw"
+	"dvb-usb-dibusb-5.0.0.11.fw"
 	"dvb-fe-or51211.fw"
 	"dvb-fe-or51132-qam.fw"
 	"dvb-fe-or51132-vsb.fw"
@@ -86,7 +87,6 @@ FW_FILES=(
 	"dvb-usb-wt220u-02.fw"
 	"dvb-usb-wt220u-fc03.fw"
 	"dvb-usb-dib0700-1.20.fw"
-	"dvb-usb-af9015.fw"
 	"dvb-fe-sp887x.fw"
 	"af9005.fw"
 	"v4l-cx231xx-avcore-01.fw"
@@ -97,6 +97,7 @@ FW_FILES=(
 	"v4l-cx23885-enc.fw"
 	"v4l-cx25840.fw"
 	"dvb-usb-bluebird-01.fw"
+	"dvb-fe-tda10045.fw"
 # get_dvb_firmware
 	"dvb-fe-sp8870.fw"
 	"dvb-fe-tda10046.fw"
@@ -109,6 +110,7 @@ FW_FILES=(
 	"dvb-vp7041-2.422.fw"
 	"dvb-fe-nxt2004.fw"
 	"dvb-cx18-mpc718-mt352.fw"
+	"dvb-usb-af9015.fw"
 )
 
 FW_GET_PARAMETER=(
@@ -153,6 +155,7 @@ FW_GET_PARAMETER=(
 	"vp7041"
 	"nxt2004"
 	"mpc718"
+	"af9015"
 )
 
 FW_URLS=(
@@ -174,7 +177,6 @@ FW_URLS=(
 	"http://www.linuxtv.org/downloads/firmware/dvb-usb-wt220u-02.fw"
 	"http://home.arcor.de/efocht/dvb-usb-wt220u-fc03.fw"
 	"http://www.wi-bw.tfh-wildau.de/~pboettch/home/files/dvb-usb-dib0700-1.20.fw"
-	"http://www.otit.fi/~crope/v4l-dvb/af9015/af9015_firmware_cutter/firmware_files/4.95.0/dvb-usb-af9015.fw"
 	"http://peterdamen.com/dvb-fe-sp887x.fw"
 	"http://ventoso.org/luca/af9005/af9005.fw"
 	"http://linuxtv.org/downloads/firmware/v4l-cx231xx-avcore-01.fw"
@@ -185,6 +187,7 @@ FW_URLS=(
 	"http://linuxtv.org/downloads/firmware/v4l-cx23885-enc.fw"
 	"http://linuxtv.org/downloads/firmware/v4l-cx25840.fw"
 	"http://linuxtv.org/downloads/firmware/dvb-usb-bluebird-01.fw"
+	"http://www.fireburn.co.uk/dvb-fe-tda10045.fw"
 # get_dvb_firmware
 	"http://2.download.softwarepatch.pl/1619edb0dcb493dd5337b94a1f79c3f6/tt_Premium_217g.zip"
 	"http://www.tt-download.com/download/updates/219/TT_PCI_2.19h_28_11_2006.zip"
@@ -197,6 +200,7 @@ FW_URLS=(
 	"http://www.twinhan.com/files/AW/Software/TwinhanDTV2.608a.zip"
 	"http://www.avermedia-usa.com/support/Drivers/AVerTVHD_MCE_A180_Drv_v1.2.2.16.zip"
 	"ftp://ftp.work.acer-euro.com/desktop/aspire_idea510/vista/Drivers/Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip"
+	"http://www.ite.com.tw/EN/Services/download.ashx?file=57"
 )
 
 SRC_URI=""
@@ -235,7 +239,6 @@ DEPEND="${DEPEND}
 install_dvb_card() {
 	if [[ -z ${DVB_CARDS} ]]; then
 		# install (almost) all firmware files
-
 		# do not install this one due to conflicting filenames
 		[[ "${1}" != "tda10046lifeview" ]]
 	else
@@ -254,11 +257,14 @@ pkg_setup() {
 		eerror
 		eerror "But beware that you cannot enable tda10046 and"
 		eerror "tda10046lifeview at the same time."
-		eerror
 	fi
 
 	if [[ -z ${DVB_CARDS} ]]; then
+		elog
 		elog "DVB_CARDS is not set, installing all available firmware files."
+		elog "To save bandwidth please consider setting the DVB_CARDS variable"
+		elog "in ${ROOT%/}/etc/make.conf. This way only the firmwares you own"
+		elog "the hardware will be installed."
 	fi
 	# according to http://devmanual.gentoo.org/general-concepts/use-flags/index.html
 	# we should not die here. However, there is no sensible fallback choice to make
@@ -268,25 +274,29 @@ pkg_setup() {
 		eerror "You cannot have both tda10046 and tda10046lifeview in DVB_CARDS"
 		eerror "because of colliding firmware filenames (dvb-fe-tda10046.fw)."
 		eerror "Sorry."
-		eerror
 		die "Conflicting values for DVB_CARDS set."
 	fi
+	elog
 	elog "List of possible card-names to use for DVB_CARDS:"
 	echo ${FW_USE_FLAGS[*]}| tr ' ' '\n' | sort | uniq | fmt \
 	| while read line; do
 		elog "   ${line}"
 	done
+	elog
 	elog "If you need another firmware file and want it included create a bug"
 	elog "at bugs.gentoo.org."
-	elog "If some firmware sources are not fetchable anymore please also report"
-	elog "a bug. If there is no alternative source or an update to the firmware"
-	elog "available we have to remove it from this ebuild and you are on your own."
+	elog "In case some firmware sources are not fetchable please try again at"
+	elog "a later time and if it still does not fetch report a bug. If there"
+	elog "is no alternative source or an update to the firmware available we"
+	elog "have to remove it from the ebuild and you are on your own."
 }
 
 src_unpack() {
+	local distfile
+
 	# link all downloaded files to ${S}
-	for f in ${A}; do
-		[[ -L ${f} ]] || ln -s ${DISTDIR}/${f} ${f}
+	for distfile in ${A}; do
+		[[ -L ${distfile} ]] || ln -s ${DISTDIR}/${distfile} ${distfile}
 	done
 
 	# unpack firmware-packet
@@ -294,14 +304,17 @@ src_unpack() {
 		unpack ${PACKET_NAME}
 	fi
 
-	use dvb_cards_mpc718 && mv Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip "Yuan MPC718 TV Tuner Card 2.13.10.1016.zip"
-	use dvb_cards_dibusb-usb1 && mv dvb-usb-dibusb-5.0.0.11.fw dvb-dibusb-5.0.0.11.fw
-	use dvb_cards_ttpci && mv dvb-ttpci-01.fw-fc2624 dvb-ttpci-01.fw
+	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_mpc718 ; then
+		mv Yuan%20MPC718%20TV%20Tuner%20Card%202.13.10.1016.zip "Yuan MPC718 TV Tuner Card 2.13.10.1016.zip"
+	fi
+	if [[ -z ${DVB_CARDS} ]] || use dvb_cards_ttpci ; then
+		mv dvb-ttpci-01.fw-fc2624 dvb-ttpci-01.fw
+	fi
 
-	SCRIPT_V=${PV}
+	local script_v=${PV}
 
 	# Adjust temp-dir of get_dvb_firmware
-	sed "${FILESDIR}"/get_dvb_firmware-${SCRIPT_V} \
+	sed "${FILESDIR}"/get_dvb_firmware-${script_v} \
 		-e "s#/tmp#${T}#g" > get_dvb_firmware
 	chmod a+x get_dvb_firmware
 
@@ -323,9 +336,9 @@ src_install() {
 
 	for ((CARD=0; CARD < ${#FW_USE_FLAGS[*]}; CARD++)) do
 		if install_dvb_card ${FW_USE_FLAGS[CARD]}; then
-			local FILE=${FW_FILES[CARD]}
-			[[ -f ${FILE} ]] || die "File ${FILE} does not exist!"
-			doins ${FILE}
+			local file=${FW_FILES[CARD]}
+			[[ -f ${file} ]] || die "File ${file} does not exist!"
+			doins ${file}
 		fi
 	done
 }
