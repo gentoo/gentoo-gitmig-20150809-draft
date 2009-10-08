@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/mpich2
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.44 2009/09/23 20:42:10 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich2/ChangeLog,v 1.45 2009/10/08 18:06:21 jsbronder Exp $
+
+*mpich2-1.2 (08 Oct 2009)
+
+  08 Oct 2009; Justin Bronder <jsbronder@gentoo.org> +mpich2-1.2.ebuild:
+  Bump sys-cluster/mpich2-1.2
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mpich2-1.0.6.ebuild:
   Remove virtual/libc
