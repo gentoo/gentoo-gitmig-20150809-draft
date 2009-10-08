@@ -1,10 +1,14 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-1.0.ebuild,v 1.1 2009/07/20 22:15:41 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-1.0.ebuild,v 1.2 2009/10/08 16:45:30 hanno Exp $
+
+EAPI="2"
+
+inherit cmake-utils
 
 DESCRIPTION="A fast text editor supporting folding, syntax highlighting, etc."
 HOMEPAGE="http://efte.sourceforge.net"
-SRC_URI="http://downloads.sourceforge.net/${PN}/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,20 +23,12 @@ RDEPEND="sys-libs/ncurses
 		x11-libs/libXau
 		media-fonts/font-misc-misc
 	)"
-DEPEND="${RDEPEND}
-	dev-util/cmake"
+DEPEND="${RDEPEND}"
 
-src_compile() {
-	cmake \
+src_configure() {
+	local mycmakeargs="
 		-DCMAKE_BUILD_TYPE=Release \
-		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DBUILD_GPM=$(use gpm && echo ON || echo OFF) \
-		-DBUILD_X=$(use X && echo ON || echo OFF) \
-		./
-	emake || die "emake failed"
-
-}
-
-src_install() {
-	emake DESTDIR="${D}" install || die "emake install failed"
+		-DBUILD_X=$(use X && echo ON || echo OFF)"
+	cmake-utils_src_configure
 }
