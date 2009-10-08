@@ -1,19 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25.ebuild,v 1.1 2009/03/02 05:04:17 ford_prefect Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.25.ebuild,v 1.2 2009/10/08 02:57:05 tester Exp $
+
+EAPI="1"
 
 JAVA_PKG_OPT_USE="freetts"
 
 inherit java-pkg-opt-2 gnome2
-
-EAPI="1"
 
 DESCRIPTION="Simple general API for producing text-to-speech output"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="+espeak festival freetts"
 
 COMMON_DEPEND=">=gnome-base/orbit-2.3.94

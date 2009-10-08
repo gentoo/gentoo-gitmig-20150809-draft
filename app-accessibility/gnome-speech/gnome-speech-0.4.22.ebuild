@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.22.ebuild,v 1.8 2009/04/27 13:01:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.4.22.ebuild,v 1.9 2009/10/08 02:57:05 tester Exp $
+
+EAPI="1"
 
 JAVA_PKG_OPT_USE="freetts"
 
 inherit java-pkg-opt-2 gnome2
-
-EAPI="1"
 
 DESCRIPTION="Simple general API for producing text-to-speech output"
 HOMEPAGE="http://www.gnome.org/"
