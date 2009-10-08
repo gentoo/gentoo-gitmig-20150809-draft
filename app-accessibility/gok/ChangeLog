@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gok
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.123 2009/05/17 18:22:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/ChangeLog,v 1.124 2009/10/08 03:15:18 tester Exp $
+
+  08 Oct 2009; Olivier Crête <tester@gentoo.org> gok-2.26.0.ebuild:
+  Stable on amd64, bug #281427
 
   17 May 2009; Robin H. Johnson <robbat2@gentoo.org> gok-2.24.0.ebuild,
   gok-2.26.0.ebuild:

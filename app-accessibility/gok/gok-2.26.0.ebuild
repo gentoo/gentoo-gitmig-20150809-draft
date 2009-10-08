@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.26.0.ebuild,v 1.3 2009/05/17 18:22:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-2.26.0.ebuild,v 1.4 2009/10/08 03:15:18 tester Exp $
 
 EAPI=1
 inherit virtualx gnome2
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gok.ca/"
 
 LICENSE="LGPL-2"
 SLOT="1"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="accessibility doc usb"
 
 # accessibility will disappear with new xorg-server (1.6)
