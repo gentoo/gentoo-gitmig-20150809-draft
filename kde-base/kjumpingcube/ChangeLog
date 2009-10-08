@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kjumpingcube
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.123 2009/10/06 19:36:52 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjumpingcube/ChangeLog,v 1.124 2009/10/08 14:29:34 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kjumpingcube-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *kjumpingcube-4.3.2 (06 Oct 2009)
 

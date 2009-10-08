@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kwalletd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.18 2009/10/06 20:19:19 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kwalletd/ChangeLog,v 1.19 2009/10/08 15:00:05 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -kwalletd-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *kwalletd-4.3.2 (06 Oct 2009)
 

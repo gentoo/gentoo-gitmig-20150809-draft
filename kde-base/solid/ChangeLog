@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/solid
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.37 2009/10/06 20:40:18 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/ChangeLog,v 1.38 2009/10/08 15:16:54 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -solid-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *solid-4.3.2 (06 Oct 2009)
 

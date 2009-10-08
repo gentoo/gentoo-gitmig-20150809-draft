@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/klipper
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.127 2009/10/06 19:39:16 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/klipper/ChangeLog,v 1.128 2009/10/08 14:31:24 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -klipper-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *klipper-4.3.2 (06 Oct 2009)
 

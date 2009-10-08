@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase-menu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.8 2009/10/06 18:42:53 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-menu/ChangeLog,v 1.9 2009/10/08 14:03:50 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org>
+  -kdebase-menu-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *kdebase-menu-4.3.2 (06 Oct 2009)
 

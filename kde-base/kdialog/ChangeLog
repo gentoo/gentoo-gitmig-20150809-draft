@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.118 2009/10/06 19:16:29 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.119 2009/10/08 14:19:25 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdialog-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *kdialog-4.3.2 (06 Oct 2009)
 

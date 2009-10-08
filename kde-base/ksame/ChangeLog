@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.122 2009/10/06 20:01:54 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksame/ChangeLog,v 1.123 2009/10/08 14:47:40 alexxy Exp $
+
+  08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -ksame-4.3.0.ebuild:
+  Drop KDE 4.3.0
 
 *ksame-4.3.2 (06 Oct 2009)
 
