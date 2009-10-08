@@ -1,6 +1,52 @@
 # ChangeLog for sci-visualization/opendx
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.15 2008/09/14 11:25:38 spock Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/opendx/ChangeLog,v 1.16 2009/10/08 16:31:53 bicatali Exp $
+
+  08 Oct 2009; Sébastien Fabbro <bicatali@gentoo.org>
+  +opendx-4.4.4-r2.ebuild, files/opendx-4.4.4-concurrent-make-fix.patch,
+  +files/opendx-4.4.4-dx-errno.patch,
+  +files/opendx-4.4.4-gcc43-fedora.patch, +files/opendx-4.4.4-install.patch,
+  +files/opendx-4.4.4-open.patch, +files/opendx-4.4.4-szip.patch,
+  +files/opendx-4.4.4-xdg.patch, metadata.xml:
+  Import from the science overlay. Thanks François Bissey for his efforts.
+
+  14 Jun 2009; François Bissey <f.r.bissey@massey.ac.nz>
+  opendx-4.4.4-r2.ebuild, +files/opendx-4.4.4-szip.patch:
+  Patch configure.ac to make szip a proper configure option
+
+  12 May 2009; François Bissey <f.r.bissey@massey.ac.nz>
+  files/opendx-4.4.4-concurrent-make-fix.patch:
+  make sure the concurent make fix _always_ works.
+
+*opendx-4.4.4-r2 (11 May 2009)
+
+  11 May 2009; François Bissey <f.r.bissey@massey.ac.nz>
+  opendx-4.4.4-r1.ebuild, +opendx-4.4.4-r2.ebuild,
+  +files/opendx-4.4.4-install.patch, +files/opendx-4.4.4-xdg.patch:
+  small clean up in opendx-4.4.4-r1, in r2 new layout for the installation
+  and replaced call to netscape/lynx etc... with xdg-open
+
+  19 Apr 2009; François Bissey <f.r.bissey@massey.ac.nz>
+  +files/opendx-4.4.4-dx-errno.patch,
+  +files/opendx-4.4.4-gcc43-fedora.patch, +files/opendx-4.4.4-open.patch,
+  -files/dx-errno.patch, -files/dx-gcc43-fedora.patch, -files/dx-open.patch,
+  opendx-4.4.4-r1.ebuild:
+  rename patches to something nicer. some cleaning of the ebuild structure.
+  introduce the smp keyword and simplify greatly the associated logic.
+
+*opendx-4.4.4-r1 (17 Apr 2009)
+
+  17 Apr 2009; François Bissey <f.r.bissey@massey.ac.nz>
+  +files/20-opendx-revdep, +files/opendx-4.3.2-sys.h.patch,
+  +files/opendx-4.4.4-concurrent-make-fix.patch,
+  +files/opendx-4.4.4-libtool.patch, +files/dx-errno.patch,
+  +files/dx-gcc43-fedora.patch, +files/dx-open.patch,
+  +files/opendx-compressed-man.patch, +metadata.xml,
+  +opendx-4.4.4-r1.ebuild:
+  Initial import in the overlay from the main tree. *port to EAPI2 *updated
+  gcc43 patch to upstream/fedora level *added an upstream patch to fix bug
+  #261438 *added a fedora patch to solve a problem dx use all CPU after
+  exiting *updated the source url to a working one
 
   14 Sep 2008; Michał Januszewski <spock@gentoo.org>
   +files/opendx-4.4.4-concurrent-make-fix.patch, opendx-4.4.4.ebuild:
