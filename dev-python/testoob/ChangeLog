@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/testoob
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.17 2009/09/07 02:50:12 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/testoob/ChangeLog,v 1.18 2009/10/08 22:11:48 arfrever Exp $
+
+*testoob-1.15 (09 Oct 2009)
+
+  09 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +testoob-1.15.ebuild:
+  Version bump (bug #288134).
 
   07 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   testoob-1.13.ebuild:
