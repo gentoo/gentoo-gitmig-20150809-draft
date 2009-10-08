@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gconf-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.12 2009/05/10 21:47:43 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gconf-python/ChangeLog,v 1.13 2009/10/08 03:00:41 tester Exp $
+
+  08 Oct 2009; Olivier Crête <tester@gentoo.org>
+  gconf-python-2.26.1.ebuild:
+  Stable on amd64, bug #281427
 
 *gconf-python-2.26.1 (10 May 2009)
 
