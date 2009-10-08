@@ -1,6 +1,10 @@
 # ChangeLog for xfce-extra/xfce4-datetime-plugin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/ChangeLog,v 1.1 2009/08/25 12:32:41 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-datetime-plugin/ChangeLog,v 1.2 2009/10/08 17:31:15 darkside Exp $
+
+  08 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  xfce4-datetime-plugin-0.6.1.ebuild:
+  add prefix keywords - migrate from Gentoo Prefix
 
 *xfce4-datetime-plugin-0.6.1 (25 Aug 2009)
 
