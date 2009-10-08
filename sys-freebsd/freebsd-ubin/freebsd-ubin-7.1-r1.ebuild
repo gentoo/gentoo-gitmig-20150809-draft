@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-7.1-r1.ebuild,v 1.1 2009/05/18 17:10:35 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-ubin/freebsd-ubin-7.1-r1.ebuild,v 1.2 2009/10/08 08:00:32 aballier Exp $
 
 EAPI=2
 
@@ -18,7 +18,7 @@ SRC_URI="mirror://gentoo/${UBIN}.tar.bz2
 		mirror://gentoo/${INCLUDE}.tar.bz2
 		build? ( mirror://gentoo/${SYS}.tar.bz2 )"
 
-RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[nis?,usb?,bluetooth?]
+RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[usb?,bluetooth?]
 	ssl? ( dev-libs/openssl )
 	kerberos? ( virtual/krb5 )
 	virtual/pam
