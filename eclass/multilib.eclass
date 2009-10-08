@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.76 2009/10/08 19:56:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.77 2009/10/08 20:10:56 grobian Exp $
 
 # @ECLASS: multilib.eclass
 # @MAINTAINER:
@@ -477,24 +477,26 @@ create_ml_includes-makedestdirs() {
 	local dest=$1
 	shift
 	local basedirs=$@
+	[[ -z ${ED} ]] && local ED=${D}
 
 	dodir ${dest}
 
 	local basedir
 	for basedir in ${basedirs}; do
 		local dir
-		for dir in $(find "${D}"/${basedir} -type d); do
-			dodir ${dest}/${dir/${D}\/${basedir}/}
+		for dir in $(find "${ED}"/${basedir} -type d); do
+			dodir ${dest}/${dir/${ED}\/${basedir}/}
 		done
 	done
 }
 
 # Helper function for create_ml_includes
 create_ml_includes-allfiles() {
+	[[ -z ${ED} ]] && local ED=${D}
 	local basedir file
 	for basedir in "$@" ; do
-		for file in $(find "${D}"/${basedir} -type f); do
-			echo ${file/${D}\/${basedir}\//}
+		for file in $(find "${ED}"/${basedir} -type f); do
+			echo ${file/${ED}\/${basedir}\//}
 		done
 	done | sort | uniq
 }
