@@ -1,10 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.7-r1.ebuild,v 1.4 2009/10/03 09:32:35 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/samba-server-3.3.7-r1.ebuild,v 1.5 2009/10/08 18:21:30 vostorga Exp $
 
 EAPI="2"
 
-inherit pam confutils versionator multilib
+inherit pam confutils versionator multilib eutils
 
 MY_P="samba-${PV}"
 
@@ -67,6 +67,9 @@ src_prepare() {
 	sed -i \
 		-e '/^LINK_LIBNETAPI/d' \
 		configure || die "sed failed"
+
+	#Fixing crash in dns_register_smbd_reply
+	epatch "${CONFDIR}/${P}-dns-register.patch"
 }
 
 src_configure() {
