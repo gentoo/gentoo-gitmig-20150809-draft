@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.1.ebuild,v 1.1 2009/03/09 19:30:55 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kvpnc/kvpnc-0.9.3.ebuild,v 1.1 2009/10/08 20:59:36 scarabeus Exp $
 
 EAPI=2
 
@@ -13,13 +13,14 @@ SRC_URI="http://download.gna.org/kvpnc/${P}-kde4.tar.bz2
 	http://download.gna.org/kvpnc/${P}-kde4-locale.tar.bz2"
 
 LICENSE="GPL-2"
-SLOT="1" # kde4
+SLOT="4"
 KEYWORDS="~amd64 ~x86"
 IUSE="+crypt"
 
-DEPEND="!net-misc/kvpnc:0
+DEPEND="
 	sys-devel/gettext
-	crypt? ( dev-libs/libgcrypt )"
+	crypt? ( dev-libs/libgcrypt )
+"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${P}-kde4"
@@ -36,8 +37,9 @@ src_unpack() {
 src_prepare() {
 	kde4-base_src_prepare
 	# fix package version; how they can release such mess
+	# and they are doing it with each release
 	sed -i \
-		-e "s:0.9.0-svn:0.9.1:g" \
+		-e "s:0.9.2-svn:0.9.3:g" \
 		CMakeLists.txt || die "failed to fix PV"
 }
 
