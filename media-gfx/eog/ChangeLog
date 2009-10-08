@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.246 2009/09/14 20:26:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.247 2009/10/08 03:15:59 tester Exp $
+
+  08 Oct 2009; Olivier Crête <tester@gentoo.org> eog-2.26.3.ebuild:
+  Stable on amd64, bug #281427
 
   14 Sep 2009; Gilles Dartiguelongue <eva@gentoo.org> eog-2.26.3.ebuild:
   Drop use of built_with_use since it depends on VDB access, bug #284685.
