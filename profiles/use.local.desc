@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4882 2009/10/07 18:27:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4883 2009/10/08 09:07:46 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2112,11 +2112,6 @@ net-dialup/freeradius:frxp - Enables experimental modules
 net-dialup/freeradius:udpfromto - Compile in UDPFROMTO support (enables freeradius to specify source address correctly in multi-homed setups)
 net-dialup/freeradius-client:scp - Add service type hints derived from username prefix
 net-dialup/freeradius-client:shadow - Enable shadow password support
-net-dialup/isdn4k-utils:activefilter - Enable activefilter support for ipppd
-net-dialup/isdn4k-utils:eurofile - Support for EUROFILE Transfer Procotol
-net-dialup/isdn4k-utils:ipppd - Build the (ISDN) PPP daemon for synchronous PPP for ISDN connections
-net-dialup/isdn4k-utils:isdnlog - Install the isdn log system
-net-dialup/isdn4k-utils:mschap - Enable Microsoft chap authentication for ipppd
 net-dialup/mgetty:fax - Enables fax support
 net-dialup/mgetty:fidonet - Enables FidoNet support
 net-dialup/misdn:ecaggressive - Make the selected echo canceller a little more aggressive
