@@ -1,9 +1,0 @@
-#!/bin/sh
-
-AUTH_USERID=`id -u nobody`
-AUTH_GRPID=`id -g nobody`
-
-exec 2>&1
-exec env - /usr/bin/softlimit -d64000 -c0 -l0 -s64000 -a3000000 -o10 \
-/usr/bin/tcpserver -u$AUTH_USERID -g$AUTH_GRPID -c10 -DRHl0 \
-0 auth /usr/sbin/slidentd
