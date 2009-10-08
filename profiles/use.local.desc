@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4883 2009/10/08 09:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4884 2009/10/08 18:07:50 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -14,6 +14,15 @@
 # disallowed.
 # Test for commit block
 
+app-accessibility/brltty:api - build brltty's application program interface
+app-accessibility/brltty:beeper - support the console tone generator
+app-accessibility/brltty:contracted-braille - support in-line contracted braille
+app-accessibility/brltty:fm - support for the sound card synthesizer
+app-accessibility/brltty:learn-mode - support for interactive command learn mode
+app-accessibility/brltty:midi - support the musical instrument digital interface
+app-accessibility/brltty:pcm - support for sound card digital audio
+app-accessibility/brltty:pm - user customization of Papenmeier driver
+app-accessibility/brltty:speech - speech support
 app-accessibility/eflite:16k_voice - Use a higher-quality voice.
 app-accessibility/emacspeak:espeak - Adds support for the espeak tts engine
 app-accessibility/festival:mbrola - Adds support for mbrola voices
