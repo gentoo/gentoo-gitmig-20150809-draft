@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/glibmm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.133 2009/10/03 13:12:45 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/glibmm/ChangeLog,v 1.134 2009/10/08 21:55:06 maekke Exp $
+
+  08 Oct 2009; Markus Meier <maekke@gentoo.org> glibmm-2.20.1.ebuild:
+  arm stable, bug #285586
 
   03 Oct 2009; Tobias Klausmann <klausman@gentoo.org> glibmm-2.20.1.ebuild:
   Stable on alpha, bug #285586
