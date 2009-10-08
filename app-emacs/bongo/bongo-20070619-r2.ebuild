@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20070619-r2.ebuild,v 1.1 2009/07/05 09:29:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bongo/bongo-20070619-r2.ebuild,v 1.2 2009/10/08 22:31:38 ulm Exp $
 
 NEED_EMACS=22
 
@@ -28,6 +28,7 @@ RDEPEND="${DEPEND}
 
 S="${WORKDIR}/${PN}"
 DOCS="NEWS README"
+ELISP_TEXINFO="${PN}.texinfo"
 SITEFILE="50${PN}-gentoo.el"
 
 src_unpack() {
@@ -40,11 +41,6 @@ src_unpack() {
 	epatch "${FILESDIR}/${P}-fix-require.patch"
 }
 
-src_compile() {
-	elisp_src_compile
-	makeinfo bongo.texinfo || die "makeinfo failed"
-}
-
 src_install() {
 	elisp_src_install
 
@@ -54,6 +50,4 @@ src_install() {
 	if use taglib; then
 		dobin tree-from-tags.rb || die "dobin failed"
 	fi
-
-	doinfo bongo.info || die "doinfo failed"
 }
