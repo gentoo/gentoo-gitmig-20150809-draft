@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.3.ebuild,v 1.1 2009/07/19 09:21:51 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/orca/orca-2.26.3.ebuild,v 1.2 2009/10/08 03:28:24 tester Exp $
 
 inherit gnome2 python
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/orca/"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 # liblouis is not in portage yet
