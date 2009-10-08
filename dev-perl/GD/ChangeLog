@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.87 2009/10/07 17:38:32 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.88 2009/10/08 17:49:46 armin76 Exp $
+
+  08 Oct 2009; Raúl Porcel <armin76@gentoo.org> GD-2.44.ebuild:
+  ia64 stable wrt #286799
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> GD-2.44.ebuild:
   ppc stable #286799
