@@ -1,6 +1,12 @@
 # ChangeLog for media-video/projectx
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.32 2008/12/06 22:46:22 sbriesen Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/projectx/ChangeLog,v 1.33 2009/10/08 18:29:21 billie Exp $
+
+*projectx-0.90.4.00_p32 (08 Oct 2009)
+
+  08 Oct 2009; Pielmeier Daniel <billie@gentoo.org>
+  +projectx-0.90.4.00_p32.ebuild, metadata.xml:
+  Add a new snapshot. Add myself to maintainers.
 
 *projectx-0.90.4.00_p26 (06 Dec 2008)
 
