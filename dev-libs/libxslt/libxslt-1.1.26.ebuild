@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.4 2009/10/07 15:51:06 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/libxslt-1.1.26.ebuild,v 1.5 2009/10/08 11:42:49 ssuominen Exp $
 
 EAPI=2
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="XSLT libraries and tools"
 HOMEPAGE="http://www.xmlsoft.org/"
@@ -28,6 +28,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# libgcrypt is missing pkg-config file, so fixing cross-compile
+	# here. see bug 267503.
+	if tc-is-cross-compiler; then
+		export LIBGCRYPT_CONFIG="${SYSROOT}/usr/bin/libgcrypt-config"
+	fi
+
 	econf \
 		--disable-dependency-tracking \
 		--with-html-dir=/usr/share/doc/${PF} \
