@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Text-CSV
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.21 2009/09/07 07:55:48 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-CSV/ChangeLog,v 1.22 2009/10/08 19:10:00 tove Exp $
+
+*Text-CSV-1.14 (08 Oct 2009)
+
+  08 Oct 2009; Torsten Veller <tove@gentoo.org> +Text-CSV-1.14.ebuild:
+  Version bump
 
   07 Sep 2009; Torsten Veller <tove@gentoo.org> -Text-CSV-1.12.ebuild:
   Cleanup
