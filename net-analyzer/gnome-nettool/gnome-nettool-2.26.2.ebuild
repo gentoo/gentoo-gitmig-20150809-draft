@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.26.2.ebuild,v 1.2 2009/05/28 22:02:01 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-nettool/gnome-nettool-2.26.2.ebuild,v 1.3 2009/10/08 03:04:18 tester Exp $
 
 EAPI="2"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnome-network/"
 LICENSE="GPL-2"
 SLOT="0"
 # FIXME: Dropped ~x86-fbsd (see epatch below)
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 
 COMMON_DEPEND=">=x11-libs/gtk+-2.6.0:2
