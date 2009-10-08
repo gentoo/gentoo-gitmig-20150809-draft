@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/ut2004-troopers
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-troopers/ChangeLog,v 1.4 2008/09/04 00:58:25 nyhm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-troopers/ChangeLog,v 1.5 2009/10/08 19:52:20 nyhm Exp $
+
+  08 Oct 2009; Tristan Heaven <nyhm@gentoo.org> ut2004-troopers-6.0.ebuild:
+  EAPI=2; RESTRICT=fetch
 
 *ut2004-troopers-6.0 (04 Sep 2008)
 
