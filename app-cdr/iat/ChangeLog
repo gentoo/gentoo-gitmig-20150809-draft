@@ -1,6 +1,13 @@
 # ChangeLog for app-cdr/iat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/iat/ChangeLog,v 1.4 2009/10/08 19:03:17 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/iat/ChangeLog,v 1.5 2009/10/08 19:06:01 scarabeus Exp $
+
+*iat-0.1.7-r1 (08 Oct 2009)
+
+  08 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> -iat-0.1.7.ebuild,
+  +iat-0.1.7-r1.ebuild:
+  Revision bump for previous issue/commit, since people already might
+  installed the thing.
 
   08 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org> iat-0.1.7.ebuild:
   Install the header files into more safe location, to avoid issues. Per bug
