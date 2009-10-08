@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/quake4-deltactf
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/ChangeLog,v 1.1 2007/09/15 19:07:46 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/ChangeLog,v 1.2 2009/10/08 04:00:22 nyhm Exp $
+
+  08 Oct 2009; Tristan Heaven <nyhm@gentoo.org> quake4-deltactf-1.1.ebuild:
+  EAPI=2; update SRC_URI
 
 *quake4-deltactf-1.1 (15 Sep 2007)
 

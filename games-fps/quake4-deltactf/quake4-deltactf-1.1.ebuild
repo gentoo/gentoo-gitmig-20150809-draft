@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/quake4-deltactf-1.1.ebuild,v 1.2 2009/10/01 21:53:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-deltactf/quake4-deltactf-1.1.ebuild,v 1.3 2009/10/08 04:00:22 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="Delta Capture-The-Flag"
 MOD_NAME="Delta CTF"
@@ -9,22 +11,10 @@ MOD_ICON="deltactf.xpm"
 
 inherit games games-mods
 
-# Ensure it's quake4 rather than q4, until eclass is fixed
-GAME_EXE="quake4"
-DED_EXE="quake4-ded"
+HOMEPAGE="http://quake4.filefront.com/file/DeltaCTF_11_Patch;72609"
+SRC_URI="mirror://quakeunity/quake4/modifications/deltactf/DeltaCTF_1.000.zip
+	mirror://quakeunity/quake4/modifications/deltactf/DeltaCTF_1.100_Patch.zip"
 
-TURKEY="http://turkeyfiles.escapedturkey.net/quake4/deltactf"
-ACM="http://acmectf.com/downloads/Quake4/Mods"
-
-# deltactf.com seems dead, but should be the homepage
-HOMEPAGE="http://quake4.filefront.com/file/DeltaCTF_11_Patch;72609
-	http://www.deltactf.com"
-# Weird extra zeros in filenames
-SRC_URI="${TURKEY}/DeltaCTF_1.000.zip
-	${ACM}/DeltaCTF_1.000.zip
-	${TURKEY}/DeltaCTF_1.100_Patch.zip
-	${ACM}/DeltaCTF_1.100_Patch.zip"
-
-LICENSE="as-is"
+LICENSE="freedist"
 KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
