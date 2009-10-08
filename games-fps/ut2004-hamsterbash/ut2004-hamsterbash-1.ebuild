@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-hamsterbash/ut2004-hamsterbash-1.ebuild,v 1.2 2009/10/01 22:24:54 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-hamsterbash/ut2004-hamsterbash-1.ebuild,v 1.3 2009/10/08 18:33:16 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="Cute and violent hamster cage rampage mod"
 MOD_NAME="Hamster Bash"
@@ -16,6 +18,10 @@ KEYWORDS="~amd64 ~x86"
 IUSE="dedicated opengl"
 
 src_unpack() {
-	unzip "${DISTDIR}"/HamsterBashFinal.zip
-	mv -f HamsterBash ${MOD_DIR}
+	unzip "${DISTDIR}"/${A} # unpack fails
+}
+
+src_prepare() {
+	mv -f HamsterBash ${MOD_DIR} || die
+	rm -rf System
 }
