@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.183 2009/08/09 13:40:36 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.184 2009/10/08 18:27:18 pva Exp $
+
+*wireshark-1.2.2 (08 Oct 2009)
+
+  08 Oct 2009; Peter Volkov <pva@gentoo.org> -wireshark-1.0.8.ebuild,
+  +wireshark-1.2.2.ebuild:
+  Version bump, fixes security issue bug #285280, thank Alex Legler for
+  report. Dropped gtk IUSE default, bug #279849.
 
   09 Aug 2009; nixnut <nixnut@gentoo.org> wireshark-1.2.1.ebuild:
   ppc stable #278564
