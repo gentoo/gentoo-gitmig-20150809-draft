@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.0.ebuild,v 1.1 2009/06/21 10:32:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysvn/pysvn-1.7.0.ebuild,v 1.2 2009/10/08 20:26:20 grobian Exp $
 
-inherit eutils python toolchain-funcs
+inherit eutils multilib python toolchain-funcs
 
 DESCRIPTION="Object-oriented python bindings for subversion"
 HOMEPAGE="http://pysvn.tigris.org/"
@@ -10,7 +10,7 @@ SRC_URI="http://pysvn.barrys-emacs.org/source_kits/${P}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~ppc-macos"
 IUSE="doc examples"
 
 DEPEND="dev-util/subversion"
@@ -29,6 +29,7 @@ src_unpack() {
 	epatch "${FILESDIR}/skip-root-test.patch"
 
 	cd "${S}"
+	epatch "${FILESDIR}"/${P}-darwin-freebsd.patch
 
 	# since pysvn-1.6.3: These sources are not compatible with python =< 2.5
 	# run the backport command to fix
@@ -38,13 +39,17 @@ src_unpack() {
 	fi
 
 	# needed to generate the Makefile
-	python setup.py configure || die "configure failed"
+	python setup.py configure \
+		--apr-inc-dir="${EPREFIX}"/usr/include/apr-1 \
+		--svn-root-dir="${EPREFIX}"/usr \
+		|| die "configure failed"
 
 	# we want our CFLAGS as well
 	sed -e 's:^\(CCFLAGS=\)\(.*\):\1$(CFLAGS) \2:g' \
 		-e 's:^\(CCCFLAGS=\)\(.*\):\1$(CXXFLAGS) \2:g' \
 		-e "/^CCC=/s:g++:$(tc-getCXX):" \
 		-e "/^CC=/s:gcc:$(tc-getCC):" \
+		-e "/^LDSHARED=/s:g++:$(tc-getCXX):" \
 		-i Makefile \
 		|| die "sed failed in Makefile"
 }
@@ -62,7 +67,7 @@ src_install() {
 	cd pysvn/
 
 	exeinto ${sitedir}
-	doexe _pysvn*.so || die "doexe failed"
+	doexe _pysvn*$(get_modname) || die "doexe failed"
 	insinto ${sitedir}
 	doins __init__.py || die "doins failed"
 
