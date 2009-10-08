@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/deskbar-applet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.122 2009/10/08 03:27:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/deskbar-applet/ChangeLog,v 1.123 2009/10/08 03:33:30 tester Exp $
+
+*deskbar-applet-2.26.2-r1 (08 Oct 2009)
+
+  08 Oct 2009; Olivier Crête <tester@gentoo.org>
+  +deskbar-applet-2.26.2-r1.ebuild,
+  +files/deskbar-applet-2.26.2-double-label.patch:
+  Add patch for crash on opening preferences dialog
 
   08 Oct 2009; Olivier Crête <tester@gentoo.org>
   deskbar-applet-2.26.2.ebuild:
