@@ -1,1 +1,4 @@
 move net-im/twinkle net-voip/twinkle
+slotmove >=net-misc/kvpnc-0.9.1 1 4
+slotmove <net-misc/kvpnc-0.9.1 0 3.5
+
