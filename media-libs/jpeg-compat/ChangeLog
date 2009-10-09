@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg-compat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.7 2009/10/06 22:33:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.8 2009/10/09 09:31:20 ssuominen Exp $
+
+  09 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  jpeg-compat-6b-r1.ebuild, +files/jpeg-compat-6b-ldflags.patch:
+  Respect LDFLAGS wrt #285541, thanks to Davide Pesavento for reporting.
 
   06 Oct 2009; Markus Meier <maekke@gentoo.org> jpeg-compat-6b-r1.ebuild:
   x86 stable
