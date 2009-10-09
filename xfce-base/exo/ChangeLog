@@ -1,6 +1,14 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.9 2009/10/06 21:31:14 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.10 2009/10/09 15:11:49 darkside Exp $
+
+*exo-0.3.103 (09 Oct 2009)
+
+  09 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  files/exo-0.3.102-eject.patch, +exo-0.3.103.ebuild:
+  Version bump for bug fixes. http://releases.xfce.org/feeds/project/exo -
+  Dropped eject patch because it doesn't apply, complain to upstream:
+  http://bugzilla.xfce.org/show_bug.cgi?id=2968
 
   06 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> exo-0.3.102-r1.ebuild:
   Don't build static libs. Remove USE doc because documentation has been
