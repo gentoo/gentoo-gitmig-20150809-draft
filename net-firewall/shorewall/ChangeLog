@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/shorewall
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.169 2009/03/08 14:27:33 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.170 2009/10/09 12:22:43 pva Exp $
+
+*shorewall-4.4.2.1 (09 Oct 2009)
+
+  09 Oct 2009; Peter Volkov <pva@gentoo.org> +shorewall-4.4.2.1.ebuild,
+  +files/shorewall.initd:
+  Version bump, bug #281505, thank Vieri for this work and Conway S. Smith
+  for report.
 
   08 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> shorewall-3.4.8.ebuild:
   Migrate to EAPI 2.
