@@ -1,0 +1,23 @@
+make sure all the flags in question force i386 and disable SSP
+
+--- Makefile
++++ Makefile
+@@ -10,6 +10,5 @@
+ 
+-AS=as -32
+-CC=gcc
++ASFLAGS=-32
+ 
+-CFLAGS= -Wall -march=i486 -m32 -Os -fomit-frame-pointer -fno-builtin -ffreestanding -fPIC $(SMP_FL)
++CFLAGS= -Wall -march=i486 -m32 -O1 -fomit-frame-pointer -fno-builtin -ffreestanding -fPIC -fno-stack-protector $(SMP_FL)
+ 
+@@ -28,3 +27,3 @@
+ memtest_shared: $(OBJS) memtest_shared.lds Makefile
+-	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds \
++	$(LD) --warn-constructors --warn-common -static -T memtest_shared.lds -m elf_i386 \
+ 	-o $@ $(OBJS) && \
+@@ -55,3 +54,3 @@
+ test.o: test.c
+-	$(CC) -c -Wall -march=i486 -m32 -Os -fomit-frame-pointer -fno-builtin -ffreestanding test.c
++	$(CC) -c $(CFLAGS:-fPIC=) -o $@ $<
+ 
