@@ -1,6 +1,12 @@
 # ChangeLog for games-fps/ut2004-deathball
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-deathball/ChangeLog,v 1.5 2008/07/28 16:57:38 wolf31o2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-deathball/ChangeLog,v 1.6 2009/10/09 04:32:15 nyhm Exp $
+
+*ut2004-deathball-2.4w (09 Oct 2009)
+
+  09 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  +ut2004-deathball-2.4w.ebuild:
+  Version bump, bug #177997
 
   28 Jul 2008; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Removing myself from metadata.xml since I am retiring from the project.
