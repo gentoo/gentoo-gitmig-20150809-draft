@@ -1,6 +1,12 @@
 # ChangeLog for sci-visualization/paraview
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.41 2009/08/05 14:41:55 markusle Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/ChangeLog,v 1.42 2009/10/09 03:34:10 markusle Exp $
+
+  09 Oct 2009; Markus Dittrich <markusle@gentoo.org>
+  paraview-3.6.1-r1.ebuild:
+  Make sure to use the paraview provided OpenGl headers rather than
+  the system ones since newer OpenGL-3.2 stuff breaks vtk's header
+  parsing framework (fixes bug #287500).
 
   05 Aug 2009; Markus Dittrich <markusle@gentoo.org>
   -files/paraview-3.2.1-openmpi.patch, -paraview-3.3_pre20080514.ebuild,
