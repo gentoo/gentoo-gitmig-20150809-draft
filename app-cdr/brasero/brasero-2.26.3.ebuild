@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.3.ebuild,v 1.4 2009/10/08 03:26:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/brasero/brasero-2.26.3.ebuild,v 1.5 2009/10/09 13:36:40 ssuominen Exp $
 
 EAPI="2"
 GCONF_DEBUG="no"
@@ -33,7 +33,7 @@ COMMON_DEPEND=">=dev-libs/glib-2.16.5
 		>=dev-libs/libisofs-0.6.12 )
 	nautilus? ( >=gnome-base/nautilus-2.24.2 )
 	gnome-base/gconf"
-RDEPEND="${COMMOND_DEPEND}
+RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-meta
 	css? ( media-libs/libdvdcss )"
 DEPEND="${COMMON_DEPEND}
