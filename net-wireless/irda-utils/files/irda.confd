@@ -1,5 +1,5 @@
 # Set your startup settings for irattach, the IrDA-daemon, here.
-# please also look at /etc/modprobe.d/irda
+# please also look at /etc/modprobe.d/irda.conf
 
 # Set discovery mode which usually is a good idea for finding other devices.
 # If set 'yes' or 'no' irattach and sysctl are used to enable and disable
