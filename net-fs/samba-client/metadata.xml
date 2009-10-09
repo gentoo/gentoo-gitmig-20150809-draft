@@ -14,5 +14,6 @@ Samba is an Open Source/Free Software suite that provides seamless file and prin
 	<flag name="aio">Enable asynchronous IO support</flag>
 	<flag name="cluster">Enable support for clustering</flag>
 	<flag name="winbind">Enables support for the winbind auth daemon</flag>
+	<flag name="samba4">Enable experimental samba4 bits</flag>
 </use>
 </pkgmetadata>

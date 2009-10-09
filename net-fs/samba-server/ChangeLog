@@ -1,6 +1,20 @@
 # ChangeLog for net-fs/samba-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.13 2009/10/08 18:21:30 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.14 2009/10/09 17:21:33 patrick Exp $
+
+*samba-server-3.4.2 (09 Oct 2009)
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/samba-3.4.2-add-zlib-linking.patch, +files/3.4/samba.confd,
+  +files/samba-3.4.2-fix-samba4-automake.patch, +files/3.4/samba.initd,
+  +files/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch,
+  +files/3.4/smb.conf.default, +files/samba-3.4.2-lib.tevent.python.mk,
+  +files/3.4/smbusers, +files/samba-3.4.2-missing_includes.patch,
+  +files/3.4/swat.xinetd, +samba-server-3.4.2.ebuild,
+  +files/samba-3.4.2-upgrade-tevent-version.patch, +files/3.4/lmhosts,
+  metadata.xml:
+  Bump to 3.4.2. Many new useflags and features. Ebuilds based on
+  modifications by Marcel Greter, bug #231273
 
   08 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
   samba-server-3.3.7-r1.ebuild,

@@ -1,6 +1,21 @@
 # ChangeLog for net-fs/samba-libs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/ChangeLog,v 1.8 2009/10/03 09:30:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/ChangeLog,v 1.9 2009/10/09 17:21:09 patrick Exp $
+
+*samba-libs-3.4.2 (09 Oct 2009)
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +files/samba-3.4.2-add-zlib-linking.patch,
+  +files/samba-3.4.2-fix-samba4-automake.patch,
+  +files/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch,
+  +files/samba-3.4.2-lib.tevent.python.mk,
+  +files/samba-3.4.2-missing_includes.patch,
+  +files/samba-3.4.2-upgrade-tevent-version.patch,
+  +files/3.4/nsswitch.conf-winbind, +files/3.4/nsswitch.conf-wins,
+  +files/3.4/samba.pam, +files/3.4/system-auth-winbind.pam,
+  +samba-libs-3.4.2.ebuild, metadata.xml:
+  Bump to 3.4.2. Many new useflags and features. Ebuilds based on
+  modifications by Marcel Greter, bug #231273
 
   03 Oct 2009; Markus Meier <maekke@gentoo.org> samba-libs-3.3.7.ebuild:
   add ~arm, bug #285952

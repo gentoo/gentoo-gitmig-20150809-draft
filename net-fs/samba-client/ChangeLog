@@ -1,6 +1,18 @@
 # ChangeLog for net-fs/samba-client
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.9 2009/10/03 09:31:32 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.10 2009/10/09 17:20:45 patrick Exp $
+
+*samba-client-3.4.2 (09 Oct 2009)
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +samba-client-3.4.2.ebuild, +files/samba-3.4.2-add-zlib-linking.patch,
+  +files/samba-3.4.2-fix-samba4-automake.patch,
+  +files/samba-3.4.2-insert-AC_LD_VERSIONSCRIPT.patch,
+  +files/samba-3.4.2-lib.tevent.python.mk,
+  +files/samba-3.4.2-missing_includes.patch,
+  +files/samba-3.4.2-upgrade-tevent-version.patch, metadata.xml:
+  Bump to 3.4.2. Many new useflags and features. Ebuilds based on
+  modifications by Marcel Greter, bug #231273
 
   03 Oct 2009; Markus Meier <maekke@gentoo.org> samba-client-3.3.7.ebuild:
   add ~arm, bug #285952
