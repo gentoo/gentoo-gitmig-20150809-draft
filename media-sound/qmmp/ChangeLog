@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/qmmp
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.18 2009/10/07 11:42:31 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmmp/ChangeLog,v 1.19 2009/10/09 18:12:00 sping Exp $
+
+*qmmp-9999 (09 Oct 2009)
+
+  09 Oct 2009; Sebastian Pipping <sping@gentoo.org> qmmp-0.3.0-r1.ebuild,
+  +qmmp-9999.ebuild:
+  Add live ebuild and make 0.3.0-r1 and 9999 share all code, fix musepack
+  dependency
 
 *qmmp-0.3.0-r1 (07 Oct 2009)
 
