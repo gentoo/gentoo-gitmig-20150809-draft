@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.35 2009/10/09 02:20:18 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.36 2009/10/09 03:44:22 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -174,7 +174,7 @@ games-mods_src_unpack() {
 }
 
 games-mods_src_install() {
-	local readme MOD_ICON_EXT new_bin_name bin_name mod files directories i j
+	local readme MOD_ICON_EXT new_bin_name bin_name
 	INS_DIR=${dir}
 
 	# If we have a README, install it
@@ -285,59 +285,35 @@ games-mods_src_install() {
 		doins -r * || die "doins -r failed"
 	fi
 
-	# We are installing everything for these mods into ${INS_DIR}, which should
-	# be ${GAMES_DATADIR}/${GAME}/${MOD_DIR} in most cases, and symlinking it
-	# into ${GAMES_PREFIX_OPT}/${GAME}/${MOD_DIR} for each game.  This should
+	# We are installing everything for these mods into ${INS_DIR},
+	# ${GAMES_DATADIR}/${GAME} in most cases, and symlinking it
+	# into ${GAMES_PREFIX_OPT}/${GAME} for each game.  This should
 	# allow us to support both binary and source-based games easily.
-	if [[ -d "${GAMES_PREFIX_OPT}"/"${GAME}" ]] && \
-		[[ "${GAMES_PREFIX_OPT}" != "${GAMES_DATADIR}" ]] ; then
-		dodir "${GAMES_PREFIX_OPT}"/"${GAME}"
-		mod=$(echo "${INS_DIR}" | sed -e "s:${GAMES_DATADIR}/${GAME}::" -e "s:^/::" )
-		if [[ -z "${mod}" ]] ; then
-			# Our mod doesn't have its own directory.  We now traverse the
-			# directory structure and try to symlink everything to
-			# GAMES_PREFIX_OPT/GAME so it'll work.
-			directories=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type d -printf '%P ')
-			for i in ${directories} ; do
-				if [[ -h "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]] ; then
-					# Skip this directory, and just run a symlink
-					dosym "${INS_DIR}"/${i} \
-						"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
-				elif [[ -d "${GAMES_PREFIX_OPT}"/"${GAME}"/${i} ]] ; then
-					dodir "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}
-					cd "${D}"/"${INS_DIR}"/${i}
-					files="$(find . -type f -printf '%P ')"
-					for j in ${files} ; do
-						if has_version ${CATEGORY}/${PN} ; then
-							dosym "${INS_DIR}"/${i}/${j} \
-								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
-								|| die
-						elif [[ ! -e "${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} ]] ; then
-							dosym "${INS_DIR}"/${i}/${j} \
-								"${GAMES_PREFIX_OPT}"/"${GAME}"/${i}/${j} \
-								|| die
-						fi
-					done
+	if [[ ${GAMES_PREFIX_OPT} != ${GAMES_DATADIR} ]] ; then
+		pushd "${D}/${INS_DIR}" > /dev/null || die "pushd failed"
+		local i
+		for i in * ; do
+			if [[ -d ${i} ]] ; then
+				if [[ ${i} == ${MOD_DIR} ]] ; then
+					dosym "${INS_DIR}/${i}" \
+						"${GAMES_PREFIX_OPT}/${GAME}/${i}" \
+						|| die "dosym ${i} failed"
 				else
-					# Skip this directory, and just run a symlink
-					dosym "${INS_DIR}"/${i} \
-						"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
+					local f
+					while read f ; do
+						dosym "${INS_DIR}/${f}" \
+							"${GAMES_PREFIX_OPT}/${GAME}/${f}" \
+							|| die "dosym ${f} failed"
+					done < <(find "${i}" -type f)
 				fi
-			done
-			files=$(cd "${D}"/"${INS_DIR}";find . -maxdepth 1 -type f -printf '%P ')
-			for i in ${files} ; do
-				# Why don´t we use symlinks? Because these use ./$bin when
-				# they run and that doesn't work if the binary is in
-				# GAMES_PREFIX_OPT but the mod is in GAMES_DATADIR.
-				#	dosym "${INS_DIR}"/${i} \
-				#		"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
-					cp -a "${D}"/"${INS_DIR}"/${i} \
-						${D}/"${GAMES_PREFIX_OPT}"/"${GAME}"/${i} || die
-			done
-		elif [[ ! -f "${GAMES_PREFIX_OPT}"/"${GAME}"/${mod} ]] ; then
-			elog "Creating symlink for ${mod}"
-			dosym "${INS_DIR}" "${GAMES_PREFIX_OPT}"/"${GAME}" || die
-		fi
+			elif [[ -f ${i} ]] ; then
+				dosym "${INS_DIR}/${i}" "${GAMES_PREFIX_OPT}/${GAME}/${i}" \
+					|| die "dosym ${i} failed"
+			else
+				die "${i} shouldn't be there"
+			fi
+		done
+		popd > /dev/null || die "popd failed"
 	fi
 
 	if games-mods_use_dedicated ; then
