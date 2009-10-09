@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.229 2009/10/09 16:42:07 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.230 2009/10/09 21:32:10 vapier Exp $
+
+  09 Oct 2009; Mike Frysinger <vapier@gentoo.org> bash-4.0_p33.ebuild,
+  metadata.xml:
+  Add support by rpansky for USE=mem-scramble #286990.
 
   09 Oct 2009; Raúl Porcel <armin76@gentoo.org> bash-4.0_p28.ebuild:
   ia64/s390/sh stable wrt #270008
