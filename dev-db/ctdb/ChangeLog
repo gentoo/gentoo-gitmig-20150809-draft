@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/ctdb
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.6 2009/10/03 09:28:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/ctdb/ChangeLog,v 1.7 2009/10/09 22:49:10 patrick Exp $
+
+*ctdb-1.0.88 (09 Oct 2009)
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org> +ctdb-1.0.88.ebuild,
+  +files/ctdb-41.httpd_gentoo.patch, +files/ctdb-50.samba_gentoo.patch,
+  +files/ctdb.initd, +files/ctdb-functions.patch:
+  Bump to 1.0.88, thanks to John Simmonds for the patches and modified
+  ebuild. Closes #278695
 
   03 Oct 2009; Markus Meier <maekke@gentoo.org> ctdb-1.0.73.ebuild:
   add ~arm, bug #285952
