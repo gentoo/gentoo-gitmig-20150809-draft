@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.2 2009/06/23 15:21:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-9.1.ebuild,v 1.3 2009/10/09 14:09:16 pva Exp $
 
 EAPI="2"
 inherit confutils
@@ -74,21 +74,25 @@ src_install() {
 		rm -rf "${D}${READERDIR}"/Reader/intellinux
 	fi
 
-	# bug 152288
-	rm "${D}/${CMAPDIR}"/Identity-{V,H}
+	# collision with app-text/acroread, bug #152288
+	if use linguas_ja || use linguas_ko \
+			|| use linguas_zh_CN || use linguas_zh_TW; then
 
-	if use !linguas_ja ; then
-		rm "${D}/${CMAPDIR}"/{8*,9*,Add*,Adobe-J*,EUC*,Ext*,H,UCS2-9*,UniJ*,UniKS-UTF16*,V}
+		rm "${D}/${CMAPDIR}"/Identity-{V,H}
+
+		if use !linguas_ja ; then
+			rm "${D}/${CMAPDIR}"/{8*,9*,Add*,Adobe-J*,EUC*,Ext*,H,UCS2-9*,UniJ*,UniKS-UTF16*,V}
+		fi
+		#if use !linguas_ko ; then
+		#	rm "${D}/${CMAPDIR}"/{Adobe-Korea*,KSC*,UCS2-GBK*,UCS2-KSC*,UniKS*}
+		#fi
+		#if use !linguas_zh_CN ; then
+		#	rm "${D}/${CMAPDIR}"/{Adobe-GB*,GB*,UCS2-GB*,UniGB*}
+		#fi
+		#if use !linguas_zh_TW ; then
+		#	rm "${D}/${CMAPDIR}"/{Adobe-CNS*,B5*,CNS*,ET*,HK*,UCS2-B5*,UCS-ET*,UniCNS*}
+		#fi
 	fi
-	#if use !linguas_ko ; then
-	#	rm "${D}/${CMAPDIR}"/{Adobe-Korea*,KSC*,UCS2-GBK*,UCS2-KSC*,UniKS*}
-	#fi
-	#if use !linguas_zh_CN ; then
-	#	rm "${D}/${CMAPDIR}"/{Adobe-GB*,GB*,UCS2-GB*,UniGB*}
-	#fi
-	#if use !linguas_zh_TW ; then
-	#	rm "${D}/${CMAPDIR}"/{Adobe-CNS*,B5*,CNS*,ET*,HK*,UCS2-B5*,UCS-ET*,UniCNS*}
-	#fi
 
 	fowners -R -L --dereference 0:0 "${INSTALLDIR}"
 }
