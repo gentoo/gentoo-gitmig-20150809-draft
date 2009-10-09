@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.3.103.ebuild,v 1.1 2009/10/09 15:11:49 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/exo-0.3.103-r1.ebuild,v 1.1 2009/10/09 19:51:33 darkside Exp $
 
 EAPI=2
 inherit xfconf python multilib
@@ -32,7 +32,8 @@ pkg_setup() {
 		$(use_enable libnotify notifications)
 		$(use_enable python)"
 	DOCS="AUTHORS ChangeLog HACKING NEWS README THANKS TODO"
-	PATCHES=( "${FILESDIR}/${PN}-0.3.4-interix.patch" )
+	PATCHES=( "${FILESDIR}/${PN}-eject-upstream_patch.patch"
+		"${FILESDIR}/${PN}-0.3.4-interix.patch" )
 }
 
 src_prepare() {
