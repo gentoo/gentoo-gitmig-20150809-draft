@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/newt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.55 2009/10/07 18:15:26 mescalinum Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.56 2009/10/09 19:18:25 maekke Exp $
+
+  09 Oct 2009; Markus Meier <maekke@gentoo.org> newt-0.52.10-r1.ebuild:
+  amd64/arm/x86 stable, bug #285854
 
 *newt-0.52.10-r1 (07 Oct 2009)
 *newt-0.52.2-r1 (07 Oct 2009)
