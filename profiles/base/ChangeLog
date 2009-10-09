@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.98 2009/10/04 18:52:17 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.99 2009/10/09 17:39:52 ssuominen Exp $
+
+  09 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask app-misc/strigi log wrt #287697, Comment #12.
 
   04 Oct 2009; Christian Faulhammer <fauli@gentoo.org> package.use.mask:
   unmask lirc_devices_iguanaIR
