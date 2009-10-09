@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXt
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.56 2009/10/05 15:16:24 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXt/ChangeLog,v 1.57 2009/10/09 21:56:20 maekke Exp $
+
+  09 Oct 2009; Markus Meier <maekke@gentoo.org> libXt-1.0.6.ebuild:
+  arm stable, bug #282290
 
   05 Oct 2009; Christian Faulhammer <fauli@gentoo.org> libXt-1.0.6.ebuild:
   x86 stable, bug 282290

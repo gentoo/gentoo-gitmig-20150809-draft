@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libICE
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.55 2009/10/05 14:47:21 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libICE/ChangeLog,v 1.56 2009/10/09 21:39:12 maekke Exp $
+
+  09 Oct 2009; Markus Meier <maekke@gentoo.org> libICE-1.0.5.ebuild:
+  arm stable, bug #282290
 
   05 Oct 2009; Christian Faulhammer <fauli@gentoo.org> libICE-1.0.5.ebuild:
   x86 stable, bug 282290
