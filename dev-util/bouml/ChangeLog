@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/bouml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.38 2009/09/12 01:34:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bouml/ChangeLog,v 1.39 2009/10/09 16:30:12 vostorga Exp $
+
+*bouml-4.15 (09 Oct 2009)
+
+  09 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> +bouml-4.15.ebuild:
+  Version bump to 4.15, bug #288071
 
 *bouml-4.13.1 (12 Sep 2009)
 
