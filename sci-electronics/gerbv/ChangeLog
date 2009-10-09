@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gerbv
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.27 2009/10/05 21:35:03 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gerbv/ChangeLog,v 1.28 2009/10/09 00:02:58 patrick Exp $
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org> gerbv-2.3.0.ebuild:
+  Small cleanup to make repoman happy
 
 *gerbv-2.3.0 (05 Oct 2009)
 
