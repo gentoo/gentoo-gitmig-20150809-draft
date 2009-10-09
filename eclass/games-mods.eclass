@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.34 2009/10/06 13:37:42 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.35 2009/10/09 02:20:18 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -177,19 +177,6 @@ games-mods_src_install() {
 	local readme MOD_ICON_EXT new_bin_name bin_name mod files directories i j
 	INS_DIR=${dir}
 
-	# We check if we have a specific MOD_DIR listed
-	if [[ -n "${MOD_DIR}" ]] ; then
-		# Am installing into a new subdirectory of the game
-		if [[ -d "${S}"/unpack/"${MOD_DIR}" ]] ; then
-			INS_DIR=${dir}
-		elif [[ -d "${S}"/"${MOD_DIR}" ]] ; then
-			S=${WORKDIR}/${MOD_DIR}
-			INS_DIR=${dir}/${MOD_DIR}
-		fi
-	fi
-
-	cd "${S}"
-
 	# If we have a README, install it
 	for readme in README* ; do
 		if [[ -s "${readme}" ]] ; then
@@ -201,7 +188,11 @@ games-mods_src_install() {
 		if [[ -n "${MOD_ICON}" ]] ; then
 			# Install custom icon
 			MOD_ICON_EXT=${MOD_ICON##*.}
-			newicon "${MOD_ICON}" "${PN}.${MOD_ICON_EXT}"
+			if [[ -f ${MOD_ICON} ]] ; then
+				newicon "${MOD_ICON}" ${PN}.${MOD_ICON_EXT}
+			else
+				newicon ${MOD_DIR}/"${MOD_ICON}" ${PN}.${MOD_ICON_EXT}
+			fi
 			case ${MOD_ICON_EXT} in
 				bmp|ico)
 					MOD_ICON=/usr/share/pixmaps/${PN}.${MOD_ICON_EXT}
