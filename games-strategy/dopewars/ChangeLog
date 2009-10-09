@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/dopewars
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.21 2009/06/02 17:17:10 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dopewars/ChangeLog,v 1.22 2009/10/09 20:53:46 mr_bones_ Exp $
+
+*dopewars-1.5.12-r2 (09 Oct 2009)
+
+  09 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +dopewars-1.5.12-r2.ebuild, +files/dopewars-1.5.12-CVE-2009-3591.patch:
+  rev bump to get patch to fix Server DoS (bug #288295)
 
   02 Jun 2009; Michael Sterrett <mr_bones_@gentoo.org>
   dopewars-1.5.12-r1.ebuild:
