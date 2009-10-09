@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.9.1.ebuild,v 1.2 2009/09/19 11:25:56 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/couchdb/couchdb-0.9.1.ebuild,v 1.3 2009/10/09 22:35:19 patrick Exp $
+
+EAPI="2"
 
 inherit eutils distutils multilib
 
@@ -15,7 +17,7 @@ IUSE=""
 RESTRICT="test mirror" #72375
 
 RDEPEND="dev-libs/icu
-		dev-lang/erlang
+		dev-lang/erlang[ssl]
 		>=dev-libs/openssl-0.9.8j
 		>=net-misc/curl-7.18.2
 		dev-lang/spidermonkey"
@@ -29,10 +31,13 @@ pkg_setup() {
 	enewuser couchdb -1 /bin/bash /var/lib/couchdb couchdb
 }
 
-src_compile() {
+src_configure() {
 	./bootstrap
 	econf --with-erlang=/usr/lib/erlang/usr/include --prefix=/usr \
 		--localstatedir=/var || die "configure failed"
+}
+
+src_compile() {
 	emake || die "make failed"
 }
 
