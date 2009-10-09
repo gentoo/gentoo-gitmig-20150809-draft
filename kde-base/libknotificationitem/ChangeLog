@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/libknotificationitem
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.6 2009/10/08 15:05:34 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/libknotificationitem/ChangeLog,v 1.7 2009/10/09 17:06:48 scarabeus Exp $
+
+  09 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  libknotificationitem-4.3.2.ebuild:
+  Add back droped keywords.
 
   08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -libknotificationitem-4.3.0.ebuild:
