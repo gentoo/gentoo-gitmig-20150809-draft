@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-1.3.0.ebuild,v 1.1 2009/10/09 17:18:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-1.3.0.ebuild,v 1.2 2009/10/09 17:24:13 patrick Exp $
 
 EAPI="2"
 
 inherit confutils eutils
 
-DESCRIPTION="talloc"
+DESCRIPTION="Samba talloc library"
 HOMEPAGE="http://talloc.samba.org/"
 SRC_URI="http://samba.org/ftp/talloc/${P}.tar.gz"
 LICENSE="GPL-3"

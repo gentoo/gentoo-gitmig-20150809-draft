@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.1.5.ebuild,v 1.1 2009/10/09 17:18:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tdb/tdb-1.1.5.ebuild,v 1.2 2009/10/09 17:24:35 patrick Exp $
 
 EAPI="2"
 
 inherit confutils eutils
 
-DESCRIPTION="tdb"
+DESCRIPTION="Samba tdb"
 HOMEPAGE="http://tdb.samba.org/"
 SRC_URI="http://samba.org/ftp/tdb/${P}.tar.gz"
 LICENSE="GPL-3"

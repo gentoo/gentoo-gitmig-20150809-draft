@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.8.ebuild,v 1.1 2009/10/09 17:18:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.8.ebuild,v 1.2 2009/10/09 17:24:56 patrick Exp $
 
 EAPI="2"
 
 inherit confutils eutils
 
-DESCRIPTION="tevent"
+DESCRIPTION="Samba tevent library"
 HOMEPAGE="http://tevent.samba.org/"
 SRC_URI="http://samba.org/ftp/tevent/${P}.tar.gz"
 LICENSE="GPL-3"
