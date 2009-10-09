@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-9999.ebuild,v 1.52 2009/10/09 16:48:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/openrc-0.5.1.ebuild,v 1.1 2009/10/09 16:48:13 zzam Exp $
 
 EAPI="1"
 
@@ -68,7 +68,9 @@ src_unpack() {
 	fi
 	cd "${S}"
 	sed -i 's:0444:0644:' mk/sys.mk
-	epatch "${FILESDIR}"/9999/*.patch
+	epatch "${FILESDIR}"/0.5.1/0001-msg-style.patch
+	epatch "${FILESDIR}"/0.5.1/0002-useful-functions.patch
+	epatch "${FILESDIR}"/0.5.1/0003-KV.patch
 }
 
 src_compile() {
