@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.4.ebuild,v 1.1 2009/10/09 11:52:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.4.ebuild,v 1.2 2009/10/09 15:53:35 grobian Exp $
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd ~ppc-aix ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~ia64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc bash-completion"
 
 RDEPEND="sys-apps/sed
@@ -56,8 +56,11 @@ src_install() {
 pkg_postinst() {
 	# fowners in src_install doesn't work for the portage group:
 	# merging changes the group back to root
-	chgrp portage "${ROOT}/var/lib/gentoo/news" \
-		&& chmod g+w "${ROOT}/var/lib/gentoo/news"
+	if [[ ${UID} == 0 ]] ; then
+		[[ -z ${EROOT} ]] && local EROOT=${ROOT}
+		chgrp portage "${EROOT}/var/lib/gentoo/news" \
+			&& chmod g+w "${EROOT}/var/lib/gentoo/news"
+	fi
 
 	if use bash-completion ; then
 		elog "In case you have not yet enabled command-line completion"

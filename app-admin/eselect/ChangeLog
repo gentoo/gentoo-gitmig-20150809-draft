@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/eselect
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.135 2009/10/09 11:52:41 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/ChangeLog,v 1.136 2009/10/09 15:53:35 grobian Exp $
+
+  09 Oct 2009; Fabian Groffen <grobian@gentoo.org> eselect-1.2.4.ebuild:
+  Added Prefix keywords and fixed the ebuild for Prefix
 
 *eselect-1.2.4 (09 Oct 2009)
 
