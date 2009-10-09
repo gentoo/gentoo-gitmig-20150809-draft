@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-1.0.ebuild,v 1.2 2009/10/08 16:45:30 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/efte/efte-1.0.ebuild,v 1.3 2009/10/09 21:52:30 hanno Exp $
 
 EAPI="2"
 
@@ -27,8 +27,7 @@ DEPEND="${RDEPEND}"
 
 src_configure() {
 	local mycmakeargs="
-		-DCMAKE_BUILD_TYPE=Release \
-		-DBUILD_GPM=$(use gpm && echo ON || echo OFF) \
-		-DBUILD_X=$(use X && echo ON || echo OFF)"
+		$(cmake-utils_use_build gpm)
+		$(cmake-utils_use_build X)"
 	cmake-utils_src_configure
 }
