@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.0.ebuild,v 1.2 2009/09/29 17:40:23 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/wv2-0.4.1.ebuild,v 1.1 2009/10/09 15:50:01 scarabeus Exp $
 
 EAPI=1
 
@@ -25,8 +25,7 @@ RDEPEND=">=gnome-extra/libgsf-1.8
 DEPEND="${RDEPEND}"
 
 PATCHES=(
-	"${FILESDIR}"/${PV}-cmake.patch
-	"${FILESDIR}"/${P}-elif.patch
+	"${FILESDIR}"/0.4.0-cmake.patch
 )
 
 src_configure() {
@@ -38,5 +37,5 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	dodoc AUTHORS ChangeLog README RELEASE THANKS TODO
+	dodoc AUTHORS ChangeLog README RELEASE THANKS TODO || die "dodoc failed"
 }

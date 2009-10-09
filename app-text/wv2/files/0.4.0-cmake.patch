@@ -27,28 +27,3 @@ diff -urN wv2-0.4.0.old/CMakeLists.txt wv2-0.4.0/CMakeLists.txt
  
  #
  # Set cflags and ldflags
-diff -urN wv2-0.4.0.old/src/CMakeLists.txt wv2-0.4.0/src/CMakeLists.txt
---- wv2-0.4.0.old/src/CMakeLists.txt	2009-08-26 23:46:40.000000000 +0200
-+++ wv2-0.4.0/src/CMakeLists.txt	2009-09-29 11:20:05.000000000 +0200
-@@ -90,11 +90,11 @@
- INSTALL( TARGETS wv2
-     EXPORT wvWare
-     RUNTIME DESTINATION bin
--    LIBRARY DESTINATION lib
--    ARCHIVE DESTINATION lib/static
-+    LIBRARY DESTINATION lib${LIB_SUFFIX}
-+    ARCHIVE DESTINATION lib${LIB_SUFFIX}/static
- )
- 
--INSTALL( EXPORT wvWare DESTINATION lib/wvWare FILE wv2.cmake )
-+INSTALL( EXPORT wvWare DESTINATION lib${LIB_SUFFIX}/wvWare FILE wv2.cmake )
- 
- INSTALL( FILES ${wv2_HEADERS}
-   DESTINATION include/wv2
-@@ -103,5 +103,5 @@
- # libtool files are useless for Visual C++ and Borland C++
- IF( NOT MSVC AND NOT BORLAND )
-   INCLUDE( ${wvWare_SOURCE_DIR}/cmake/MacroCreateLibtoolFile.cmake )
--  CREATE_LIBTOOL_FILE( wv2 /lib )
-+  CREATE_LIBTOOL_FILE( wv2 /lib${LIB_SUFFIX} )
- ENDIF( NOT MSVC AND NOT BORLAND )
