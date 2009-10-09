@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xterm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.275 2009/10/05 16:08:57 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/ChangeLog,v 1.276 2009/10/09 22:09:44 maekke Exp $
+
+  09 Oct 2009; Markus Meier <maekke@gentoo.org> xterm-243.ebuild:
+  arm stable, bug #282290
 
   05 Oct 2009; Christian Faulhammer <fauli@gentoo.org> xterm-243.ebuild:
   x86 stable, bug 282290
