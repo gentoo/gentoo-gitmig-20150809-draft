@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.2_rc1-r1.ebuild,v 1.1 2009/10/07 21:40:21 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/konversation-1.2.ebuild,v 1.1 2009/10/09 12:11:34 scarabeus Exp $
 
 EAPI="2"
 
-KDE_LINGUAS="ar bg ca  cs da de el en_GB es et fr gl hu it ja nds nl pa pt pt_BR ru sv
-tr uk zh_CN zh_TW"
+KDE_LINGUAS="ar bg ca  cs da de el en_GB es et fr gl he hu it ja nds nl pa pt
+pt_BR ru sv tr uk zh_CN zh_TW"
 inherit kde4-base versionator
 
 MY_PV=$(replace_version_separator 2 '-')
@@ -13,7 +13,7 @@ MY_P="${PN}"-"${MY_PV}"
 
 DESCRIPTION="A user friendly IRC Client for KDE4"
 HOMEPAGE="http://konversation.kde.org"
-SRC_URI="mirror://kde/unstable/${PN}/${MY_PV}/src/${MY_P}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PN}/${MY_PV}/src/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
@@ -27,10 +27,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
-
-PATCHES=(
-	"${FILESDIR}"/${PV}-debug.patch
-)
 
 src_configure() {
 	mycmakeargs="$(cmake-utils_use_with crypt QCA2)"
