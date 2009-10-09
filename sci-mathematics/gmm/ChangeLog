@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/gmm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.6 2009/08/14 23:41:29 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gmm/ChangeLog,v 1.7 2009/10/09 18:28:50 ssuominen Exp $
+
+  09 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> gmm-3.1.ebuild:
+  amd64 stable wrt #287943
 
 *gmm-3.1 (14 Aug 2009)
 
