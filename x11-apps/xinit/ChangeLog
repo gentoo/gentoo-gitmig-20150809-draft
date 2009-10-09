@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xinit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.155 2009/10/08 06:08:16 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xinit/ChangeLog,v 1.156 2009/10/09 20:21:03 maekke Exp $
+
+  09 Oct 2009; Markus Meier <maekke@gentoo.org> xinit-1.0.8-r10.ebuild:
+  amd64/arm/x86 stable, bug #287913
 
 *xinit-1.0.8-r10 (07 Oct 2009)
 
