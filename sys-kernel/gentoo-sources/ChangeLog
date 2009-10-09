@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.646 2009/10/08 02:22:31 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.647 2009/10/09 01:13:46 mpagano Exp $
+
+*gentoo-sources-2.6.30-r8 (09 Oct 2009)
+
+  09 Oct 2009; Michael Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.30-r8.ebuild:
+  Linux patches 2.6.30.8 and 2.6.30.9. Patch cc1 options to ensure -fPIC is
+  not used when compiling.
 
 *gentoo-sources-2.6.31-r2 (08 Oct 2009)
 
