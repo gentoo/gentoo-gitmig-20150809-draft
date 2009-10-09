@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/libnova
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.6 2009/03/21 17:15:23 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libnova/ChangeLog,v 1.7 2009/10/09 20:41:41 ssuominen Exp $
+
+  09 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> libnova-0.12.3.ebuild:
+  amd64 stable wrt #288086
 
 *libnova-0.12.3 (21 Mar 2009)
 
