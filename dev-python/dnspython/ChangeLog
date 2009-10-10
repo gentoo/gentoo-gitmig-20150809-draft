@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dnspython
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.46 2009/09/08 20:14:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dnspython/ChangeLog,v 1.47 2009/10/10 15:30:59 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> dnspython-1.7.1.ebuild:
+  Merge from Prefix
 
   08 Sep 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   dnspython-1.7.1.ebuild:

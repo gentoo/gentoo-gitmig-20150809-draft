@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.1 2009/10/09 23:05:00 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/django-1.1.1.ebuild,v 1.2 2009/10/10 15:29:36 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://media.djangoproject.com/releases/${PV}/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="doc examples mysql postgres sqlite test"
 
 RDEPEND="dev-python/imaging
@@ -65,9 +65,10 @@ __EOF__
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_python_version
 	site_pkgs="$(python_get_sitedir)"
-	export PYTHONPATH="${PYTHONPATH}:${D}/${site_pkgs}"
+	export PYTHONPATH="${PYTHONPATH}:${ED}/${site_pkgs}"
 	dodir ${site_pkgs}
 
 	distutils_src_install
@@ -84,8 +85,8 @@ src_install() {
 		dohtml txt -r docs/_build/html/*
 	fi
 
-	insinto "${MY_HTDOCSDIR}"
-	doins -r "${D}/${site_pkgs}"/django/contrib/admin/media/*
+	insinto "${MY_HTDOCSDIR#${EPREFIX}}"
+	doins -r "${ED}/${site_pkgs}"/django/contrib/admin/media/*
 
 	#webapp_postinst_txt en "${WORKDIR}"/postinstall-en.txt
 	webapp_src_install
