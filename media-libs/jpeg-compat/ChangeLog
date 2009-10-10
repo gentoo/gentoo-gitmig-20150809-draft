@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/jpeg-compat
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.8 2009/10/09 09:31:20 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-compat/ChangeLog,v 1.9 2009/10/10 20:47:33 vapier Exp $
+
+  10 Oct 2009; Mike Frysinger <vapier@gentoo.org> jpeg-compat-6b-r1.ebuild:
+  Move jpeg blocker to RDEPEND as suggested by Zac Medico #288369 by
+  Vlastimil Babka.
 
   09 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   jpeg-compat-6b-r1.ebuild, +files/jpeg-compat-6b-ldflags.patch:
