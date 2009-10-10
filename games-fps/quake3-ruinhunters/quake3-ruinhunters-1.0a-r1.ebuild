@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/quake3-ruinhunters-1.0a-r1.ebuild,v 1.3 2009/10/07 00:56:30 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-ruinhunters/quake3-ruinhunters-1.0a-r1.ebuild,v 1.4 2009/10/10 17:29:39 nyhm Exp $
 
 EAPI=2
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://gentoo/ruin_hunters_v10.zip
 	http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/distfiles/ruin_hunters_v10.zip"
 
 LICENSE="freedist"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_unpack() {

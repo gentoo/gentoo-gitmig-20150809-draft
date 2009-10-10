@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/quake3-alliance
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-alliance/ChangeLog,v 1.4 2009/10/06 22:10:02 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-alliance/ChangeLog,v 1.5 2009/10/10 17:20:07 nyhm Exp $
+
+  10 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  quake3-alliance-3.3-r1.ebuild:
+  Stable on amd64/x86
 
   06 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
   quake3-alliance-3.3-r1.ebuild:

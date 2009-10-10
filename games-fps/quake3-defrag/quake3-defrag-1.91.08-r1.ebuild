@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/quake3-defrag-1.91.08-r1.ebuild,v 1.5 2009/10/07 00:14:24 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-defrag/quake3-defrag-1.91.08-r1.ebuild,v 1.6 2009/10/10 17:26:29 nyhm Exp $
 
 EAPI=2
 
@@ -26,7 +26,7 @@ SRC_URI="http://www.defrag.ru/files/defrag_${PV}.zip
 	http://www.german-defrag.de/files/defrag/defragpak11.zip"
 
 LICENSE="freedist"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dedicated opengl"
 
 src_unpack() {

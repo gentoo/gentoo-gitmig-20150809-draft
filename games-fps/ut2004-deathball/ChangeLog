@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2004-deathball
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-deathball/ChangeLog,v 1.6 2009/10/09 04:32:15 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-deathball/ChangeLog,v 1.7 2009/10/10 17:33:29 nyhm Exp $
+
+  10 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  ut2004-deathball-2.4w.ebuild:
+  Stable on amd64/x86
 
 *ut2004-deathball-2.4w (09 Oct 2009)
 

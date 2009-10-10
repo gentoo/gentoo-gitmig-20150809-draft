@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp2/ut2004-bonuspack-cbp2-1-r2.ebuild,v 1.1 2009/10/05 17:05:11 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-cbp2/ut2004-bonuspack-cbp2-1-r2.ebuild,v 1.2 2009/10/10 17:32:51 nyhm Exp $
 
 EAPI=2
 
@@ -16,7 +16,7 @@ SRC_URI="http://downloads.unrealadmin.org/UT2004/BonusPack/cbp2-volume1_zip.zip
 	http://www.i4games.eu/downloads/ut2k4/cbp2-volume2_zip.zip"
 
 LICENSE="freedist"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="games-fps/ut2004-bonuspack-cbp1
