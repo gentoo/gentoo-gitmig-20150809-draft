@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.19.1.ebuild,v 1.1 2009/09/04 22:34:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/astng-0.19.1.ebuild,v 1.2 2009/10/10 11:54:14 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/astng/logilab-${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-macos"
 IUSE="test"
 
 RDEPEND=">=dev-python/logilab-common-0.39.0"
@@ -50,7 +50,8 @@ src_install() {
 	distutils_src_install
 
 	deletion_of_unneeded_files() {
-		local sdir="${D}/$(python_get_sitedir)/logilab"
+		[[ -z ${ED} ]] && local ED=${D}
+		local sdir="${ED}/$(python_get_sitedir)/logilab"
 
 		# we need to remove this file because it collides with the one
 		# from logilab-common (which we depend on).
