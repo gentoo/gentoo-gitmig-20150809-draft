@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.45.0.ebuild,v 1.1 2009/09/04 22:29:22 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logilab-common/logilab-common-0.45.0.ebuild,v 1.2 2009/10/10 17:34:11 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.logilab.org/pub/common/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~ia64-linux ~x86-linux ~x86-macos"
 IUSE="test"
 
 DEPEND="test? ( dev-python/egenix-mx-base )"
@@ -79,10 +79,11 @@ src_test() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
 	doman doc/pytest.1 || die "doman failed"
 
 	# Remove unittests since they're just needed during build-time
-	rm -rf "${D}"usr/lib*/python*/site-packages/${PN/-//}/test || die
+	rm -rf "${ED}"usr/lib*/python*/site-packages/${PN/-//}/test || die
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.26.ebuild,v 1.1 2009/08/04 03:30:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/kiwi-1.9.26.ebuild,v 1.2 2009/10/10 17:26:06 grobian Exp $
 
 NEED_PYTHON="2.3"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://download.gnome.org/sources/${PN}/$(get_version_component_range 1
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-interix ~amd64-linux ~x86-linux"
 IUSE="examples"
 
 DEPEND="dev-python/pygtk"

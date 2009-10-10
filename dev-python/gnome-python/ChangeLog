@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.138 2009/10/08 03:26:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.139 2009/10/10 17:08:30 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  gnome-python-2.26.1.ebuild:
+  Merge from Prefix
 
   08 Oct 2009; Olivier Crête <tester@gentoo.org>
   gnome-python-2.26.1.ebuild:

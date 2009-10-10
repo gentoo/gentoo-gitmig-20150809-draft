@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/gnome-vfs-python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-vfs-python/ChangeLog,v 1.11 2009/10/08 02:58:26 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-vfs-python/ChangeLog,v 1.12 2009/10/10 17:12:47 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  gnome-vfs-python-2.26.1.ebuild:
+  Merge from Prefix
 
   08 Oct 2009; Olivier Crête <tester@gentoo.org>
   gnome-vfs-python-2.26.1.ebuild:

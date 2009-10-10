@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kiwi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.12 2009/08/04 03:30:06 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kiwi/ChangeLog,v 1.13 2009/10/10 17:26:06 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> kiwi-1.9.26.ebuild:
+  Merge from Prefix
 
 *kiwi-1.9.26 (04 Aug 2009)
 
