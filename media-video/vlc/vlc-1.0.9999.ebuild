@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.28 2009/10/02 22:29:38 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-1.0.9999.ebuild,v 1.29 2009/10/10 12:58:32 patrick Exp $
 
 EAPI="2"
 
@@ -123,7 +123,8 @@ RDEPEND="
 		pulseaudio? ( >=media-sound/pulseaudio-0.9.11 )
 		qt4? ( x11-libs/qt-gui:4 x11-libs/qt-core:4 x11-libs/libX11 )
 		remoteosd? ( >=dev-libs/libgcrypt-1.2.0 )
-		samba? ( net-fs/samba )
+		samba? ( || ( >=net-fs/samba-libs-3.4[smbclient]
+			 <net-fs/samba-3.4 ) )
 		schroedinger? ( >=media-libs/schroedinger-1.0.6 )
 		sdl? ( >=media-libs/libsdl-1.2.8
 			sdl-image? ( media-libs/sdl-image ) )
