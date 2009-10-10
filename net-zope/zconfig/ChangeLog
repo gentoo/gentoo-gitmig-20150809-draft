@@ -1,0 +1,11 @@
+# ChangeLog for net-zope/zconfig
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zconfig/ChangeLog,v 1.1 2009/10/10 15:37:32 arfrever Exp $
+
+*zconfig-2.7.1 (10 Oct 2009)
+
+  10 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zconfig-2.7.1.ebuild, +files/zconfig-2.7.1-fix_tests.patch,
+  +metadata.xml:
+  Initial addition (bug #191252). Ebuild rewritten by me.
+
