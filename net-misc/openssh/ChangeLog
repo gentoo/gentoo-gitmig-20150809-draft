@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.363 2009/10/07 18:22:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.364 2009/10/10 02:58:41 robbat2 Exp $
+
+*openssh-5.3_p1-r1 (10 Oct 2009)
+
+  10 Oct 2009; Robin H. Johnson <robbat2@gentoo.org>
+  +openssh-5.3_p1-r1.ebuild:
+  Ported the HPN and LPK patches to 5.3p1, mailed upstream as well.
 
   07 Oct 2009; Mike Frysinger <vapier@gentoo.org> openssh-5.2_p1-r2.ebuild,
   openssh-5.2_p1-r3.ebuild, openssh-5.3_p1.ebuild:
