@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ut2004-crossfire-1.93.ebuild,v 1.1 2009/10/06 15:46:01 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-crossfire/ut2004-crossfire-1.93.ebuild,v 1.2 2009/10/10 02:21:18 nyhm Exp $
 
 EAPI=2
 
@@ -26,6 +26,8 @@ src_unpack() {
 }
 
 src_prepare() {
+	rm -f *.{exe,reg,sh,tgz,txt}
+	rm -rf TOCInstaller.app stuff
 	cd ${MOD_DIR} || die
 	rm -f *.{bat,exe} Help/*.{exe,zip}
 }
