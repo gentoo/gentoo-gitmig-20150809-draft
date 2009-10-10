@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25.ebuild,v 1.1 2009/10/10 17:39:51 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ipvsadm/ipvsadm-1.25.ebuild,v 1.2 2009/10/10 17:40:20 robbat2 Exp $
 
 EAPI=2
 inherit linux-info toolchain-funcs eutils
@@ -41,7 +41,7 @@ src_compile() {
 src_install() {
 	into /
 	dosbin ipvsadm ipvsadm-save ipvsadm-restore || die
-	
+
 	into /usr
 	doman ipvsadm.8 ipvsadm-save.8 ipvsadm-restore.8 || die
 
