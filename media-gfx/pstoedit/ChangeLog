@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/pstoedit
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.58 2009/09/18 22:47:33 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pstoedit/ChangeLog,v 1.59 2009/10/10 08:04:27 dirtyepic Exp $
+
+*pstoedit-3.50 (10 Oct 2009)
+
+  10 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> +pstoedit-3.50.ebuild,
+  +files/pstoedit-3.50-parallel.patch,
+  +files/pstoedit-3.50-plugin-close.patch:
+  Version bump and fix parallel build (bug #278417).
 
 *pstoedit-3.45-r1 (18 Sep 2009)
 
