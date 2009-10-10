@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.21 2009/09/27 20:13:54 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.22 2009/10/10 15:24:52 armin76 Exp $
+
+  10 Oct 2009; Raúl Porcel <armin76@gentoo.org> ttf2pt1-3.4.4.ebuild:
+  sparc stable wrt #286600
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> ttf2pt1-3.4.4.ebuild:
   ppc stable #286600
