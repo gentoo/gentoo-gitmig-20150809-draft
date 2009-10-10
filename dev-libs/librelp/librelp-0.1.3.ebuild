@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/librelp-0.1.3.ebuild,v 1.3 2009/06/29 02:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librelp/librelp-0.1.3.ebuild,v 1.4 2009/10/10 16:26:35 armin76 Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.librelp.com/"
 SRC_URI="http://download.rsyslog.com/${PN}/${P}.tar.gz"
 LICENSE="GPL-3 doc? ( FDL-1.3 )"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~x86"
+KEYWORDS="~amd64 ~arm hppa ~x86"
 IUSE="debug doc"
 
 DEPEND=""
