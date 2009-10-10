@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.1.2.ebuild,v 1.2 2009/09/16 08:13:53 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/xf86-input-synaptics-1.2.0.ebuild,v 1.1 2009/10/10 08:04:53 scarabeus Exp $
 
 inherit toolchain-funcs eutils x-modular
 
@@ -9,17 +9,16 @@ HOMEPAGE="http://cgit.freedesktop.org/xorg/driver/xf86-input-synaptics/"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 LICENSE="MIT"
 IUSE="hal"
-RDEPEND="x11-libs/libXext
-	x11-libs/libXtst
+RDEPEND="
+	>=x11-base/xorg-server-1.7.0
+	>=x11-libs/libXext-1.1
+	>=x11-libs/libXtst-1.1
 	hal? ( sys-apps/hal )"
 DEPEND="${RDEPEND}
 	!x11-drivers/synaptics
-	x11-base/xorg-server
-	x11-proto/inputproto
+	>=x11-proto/inputproto-2.0
 	>=sys-apps/sed-4"
 
-# Needs to be rebuild when migrating to xorg-server 1.6 to enable properties
-# support
 src_install() {
 	DOCS="INSTALL NEWS TODO README"
 	x-modular_src_install
