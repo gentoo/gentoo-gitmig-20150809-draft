@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/unfonts
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.21 2009/10/07 01:28:32 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.22 2009/10/10 14:44:33 armin76 Exp $
+
+  10 Oct 2009; Raúl Porcel <armin76@gentoo.org>
+  unfonts-1.0.2_pre080608-r1.ebuild:
+  alpha/arm/ia64/s390/sh/sparc/x86 stable wrt #287988
 
   07 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> -unfonts-1.0.ebuild,
   -unfonts-1.0.2_pre080514.ebuild:
