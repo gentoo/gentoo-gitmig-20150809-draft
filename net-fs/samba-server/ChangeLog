@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/samba-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.15 2009/10/09 19:34:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-server/ChangeLog,v 1.16 2009/10/10 10:12:56 patrick Exp $
+
+  10 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  -samba-server-3.3.7-r1.ebuild:
+  Remove old
 
   09 Oct 2009; Patrick Lauer <patrick@gentoo.org> samba-server-3.4.2.ebuild:
   Fixing description
