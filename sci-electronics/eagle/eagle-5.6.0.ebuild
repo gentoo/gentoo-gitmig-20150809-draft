@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.6.0.ebuild,v 1.4 2009/08/02 14:42:38 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.6.0.ebuild,v 1.5 2009/10/10 16:25:01 ssuominen Exp $
 
 inherit eutils
 
@@ -23,6 +23,7 @@ RDEPEND="sys-libs/glibc
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
+	x86? ( || ( media-libs/jpeg-compat <media-libs/jpeg-7 ) )
 	amd64? ( app-emulation/emul-linux-x86-baselibs
 		 app-emulation/emul-linux-x86-xlibs )"
 
