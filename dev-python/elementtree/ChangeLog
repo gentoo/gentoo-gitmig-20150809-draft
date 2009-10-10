@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/elementtree
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.37 2009/04/06 18:05:48 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.38 2009/10/10 15:43:29 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  elementtree-1.2.6-r2.ebuild:
+  Merge from Prefix
 
   06 Apr 2009; Raúl Porcel <armin76@gentoo.org>
   elementtree-1.2.6-r2.ebuild:

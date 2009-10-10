@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1.ebuild,v 1.13 2009/10/03 05:33:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/epydoc-3.0.1.ebuild,v 1.14 2009/10/10 15:45:48 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="doc latex X"
 
 DEPEND=""
@@ -25,9 +25,10 @@ RDEPEND="dev-python/docutils
 RESTRICT_PYTHON_ABIS="3.*"
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
 	doman man/*
 	use doc && dohtml -r doc/*
-	use X || rm -f "${D}usr/bin/epydocgui"
+	use X || rm -f "${ED}usr/bin/epydocgui"
 }

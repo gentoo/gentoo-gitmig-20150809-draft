@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epydoc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.47 2009/10/03 05:33:08 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epydoc/ChangeLog,v 1.48 2009/10/10 15:45:48 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> epydoc-3.0.1.ebuild:
+  Merge from Prefix
 
   03 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   epydoc-2.1-r2.ebuild, epydoc-3.0.1.ebuild:
