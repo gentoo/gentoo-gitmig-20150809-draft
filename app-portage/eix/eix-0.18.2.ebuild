@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.1.ebuild,v 1.2 2009/10/01 13:45:02 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.18.2.ebuild,v 1.1 2009/10/10 23:53:30 darkside Exp $
 
 EAPI="2"
 
