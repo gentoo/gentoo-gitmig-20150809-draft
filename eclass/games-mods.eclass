@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.36 2009/10/09 03:44:22 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.37 2009/10/10 19:56:06 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
-# MOD_BINS - Name of the binary to run
 # MOD_DESC - Description for the mod
 # MOD_DIR - Subdirectory name for the mod, if applicable
 # MOD_ICON - Custom icon for the mod, instead of the default
@@ -95,7 +94,7 @@ games-mods_get_rdepend() {
 		2)
 			local pkg
 			for pkg in $@ ; do
-				if [[ -z ${MOD_BINS} && -z ${MOD_DIR} ]] ; then
+				if [[ -z ${MOD_DIR} ]] ; then
 					echo -n " ${pkg}"
 				else
 					echo -n " ${pkg}[dedicated=,opengl=]"
@@ -120,7 +119,7 @@ S=${WORKDIR}
 dir=${GAMES_DATADIR}/${GAME}
 
 games-mods_use_opengl() {
-	[[ -z ${MOD_BINS} && -z ${MOD_DIR} ]] && return 1
+	[[ -z ${MOD_DIR} ]] && return 1
 
 	if use opengl || ! use dedicated ; then
 		# Use opengl by default
@@ -131,7 +130,7 @@ games-mods_use_opengl() {
 }
 
 games-mods_use_dedicated() {
-	[[ -z ${MOD_BINS} && -z ${MOD_DIR} ]] && return 1
+	[[ -z ${MOD_DIR} ]] && return 1
 
 	use dedicated && return 0 || return 1
 }
@@ -207,50 +206,7 @@ games-mods_src_install() {
 		fi
 
 		# Set up command-line and desktop menu entries
-		if [[ -n "${MOD_BINS}" ]] ; then
-			for binary in ${MOD_BINS} ; do
-				if [[ -n "${MOD_DIR}" ]] ; then
-					games_make_wrapper "${GAME_EXE}-${MOD_BINS}" \
-						"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
-					make_desktop_entry "${GAME_EXE}-${MOD_BINS}" \
-						"${GAME_TITLE} - ${MOD_NAME}" "${MOD_ICON}"
-				elif [[ -e "${S}"/bin/"${binary}" ]] ; then
-					exeinto "${dir}"
-					newexe bin/${binary} ${GAME_EXE}-${binary} \
-						|| die "newexe failed"
-					new_bin_name=
-					bin_name=$(echo ${binary} | sed -e 's:[-_.]: :g')
-					# We want our wrapper to use the libraries/starting
-					# directory of our game.  If the game is in
-					# GAMES_PREFIX_OPT, then we want to start there.
-					if [[ -d "${GAMES_PREFIX_OPT}"/${GAME} ]] ; then
-						GAME_DIR="${GAMES_PREFIX_OPT}/${GAME}"
-					else
-						GAME_DIR="${dir}"
-					fi
-					games_make_wrapper "${GAME_EXE}-${binary}" \
-						./"${GAME_EXE}-${binary}" "${GAME_DIR}" "${GAME_DIR}"
-					if [[ "${bin_name}" == "${binary}" ]] ; then
-						bin_name=${MOD_NAME}
-					else
-						for tmp1 in ${bin_name} ; do
-							tmp2=$(echo ${tmp1} | cut -b1 | tr [[:lower:]] \
-								[[:upper:]])
-							tmp3=$(echo ${tmp1} | cut -b2-)
-							new_bin_name="${new_bin_name} ${tmp2}${tmp3}"
-						done
-						new_bin_name=$(echo ${new_bin_name} | cut -b1-)
-						bin_name="${MOD_NAME} (${new_bin_name})"
-					fi
-					make_desktop_entry "${GAME_EXE}-${binary}" \
-						"${GAME_TITLE} - ${bin_name}" "${MOD_ICON}"
-					# We remove the binary after we have installed it.
-					rm -f bin/${binary}
-				fi
-			done
-			# We don't want to leave the binary directory around
-			rm -rf bin
-		elif [[ -n "${MOD_DIR}" ]] ; then
+		if [[ -n ${MOD_DIR} ]] ; then
 			games_make_wrapper "${GAME_EXE}-${PN/${GAME}-}" \
 				"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
 			make_desktop_entry "${GAME_EXE}-${PN/${GAME}-}" \
@@ -337,13 +293,7 @@ games-mods_src_install() {
 games-mods_pkg_postinst() {
 	games_pkg_postinst
 	if games-mods_use_opengl ; then
-		if [[ -n "${MOD_BINS}" ]] ; then
-			for binary in ${MOD_BINS} ; do
-				elog "To play this mod run:"
-				elog " ${GAME_EXE}-${binary}"
-				echo
-			done
-		elif [[ -n "${MOD_DIR}" ]] ; then
+		if [[ -n ${MOD_DIR} ]] ; then
 			elog "To play this mod run:"
 			elog " ${GAME_EXE}-${PN/${GAME}-}"
 			echo
