@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.3 2009/09/17 08:23:28 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/networkmanager-0.7.1-r6.ebuild,v 1.4 2009/10/10 11:31:51 ssuominen Exp $
 
 EAPI="2"
 inherit eutils autotools
@@ -19,7 +19,7 @@ SRC_URI="mirror://gnome/sources/NetworkManager/0.7/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~arm ~amd64 ~ppc ~x86"
+KEYWORDS="~arm amd64 ~ppc ~x86"
 IUSE="avahi doc nss gnutls dhclient dhcpcd resolvconf connection-sharing"
 # modemmanager"
 
