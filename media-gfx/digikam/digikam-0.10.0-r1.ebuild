@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0-r1.ebuild,v 1.3 2009/06/10 11:21:14 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-0.10.0-r1.ebuild,v 1.4 2009/10/10 14:21:26 ssuominen Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.digikam.org/"
 SRC_URI="mirror://sourceforge/${PN}/${P/_/-}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 SLOT="4"
 IUSE="addressbook debug geolocation +gphoto2"
 

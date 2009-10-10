@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.140 2009/08/16 11:13:25 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.141 2009/10/10 14:21:26 ssuominen Exp $
+
+  10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  digikam-0.10.0-r1.ebuild:
+  amd64 stable wrt #288434
 
   16 Aug 2009; Raúl Porcel <armin76@gentoo.org> digikam-0.9.4.ebuild:
   sparc stable wrt #244230
