@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.3 2009/10/09 19:07:58 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/matplotlib/matplotlib-0.99.1.1.ebuild,v 1.4 2009/10/10 17:49:39 grobian Exp $
 
 WX_GTK_VER=2.8
 EAPI=2
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 IUSE="cairo doc excel examples fltk gtk latex qt3 qt4 traits tk wxwidgets"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 LICENSE="PYTHON BSD"
 
 CDEPEND=">=dev-python/numpy-1.1
@@ -78,6 +78,11 @@ src_prepare() {
 	# avoid to launch xv while building examples docs
 	epatch "${FILESDIR}"/${PN}-0.98.5.2-no-xv.patch
 
+	# removes hardcoded lib paths, should not break non-Prefix, more
+	# likely to fix it in case of multilib
+	epatch "${FILESDIR}"/${P}-prefix.patch
+	epatch "${FILESDIR}"/${PN}-0.99.0-freebsd7+.patch
+
 	# create setup.cfg (see setup.cfg.template for any changes)
 	cat > setup.cfg <<-EOF
 		[provide_packages]
@@ -113,8 +118,8 @@ src_prepare() {
 		|| die "sed setup.py for FHS failed"
 
 	sed -i \
-		-e "s:path =  get_data_path():path = '/etc/matplotlib':" \
-		-e "s:os.path.dirname(__file__):'/usr/share/${PN}':g"  \
+		-e "s:path =  get_data_path():path = '${EPREFIX}/etc/matplotlib':" \
+		-e "s:os.path.dirname(__file__):'${EPREFIX}/usr/share/${PN}':g"  \
 		lib/matplotlib/{__init__,config/cutils}.py \
 		|| die "sed init for FHS failed"
 
@@ -125,7 +130,7 @@ src_prepare() {
 		lib/matplotlib/mpl-data/fonts/ttf/{Vera*,cm*,*.TXT} \
 		|| die "removed internal copies failed"
 	python_version
-	ln -s /usr/share/python${PYVER}/CXX . || die
+	ln -s "${EPREFIX}"/usr/share/python${PYVER}/CXX . || die
 
 	# remove pyparsing only when upstream pyparsing included matplotlib
 	# fixes. See bug #260025
@@ -159,12 +164,13 @@ src_test() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
 	# respect FHS
 	dodir /usr/share/${PN}
-	mv "${D}"/usr/*/*/site-packages/${PN}/{mpl-data,backends/Matplotlib.nib} \
-		"${D}"/usr/share/${PN} || die "failed renaming"
+	mv "${ED}"/usr/*/*/site-packages/${PN}/{mpl-data,backends/Matplotlib.nib} \
+		"${ED}"/usr/share/${PN} || die "failed renaming"
 	insinto /etc/matplotlib
 	doins matplotlibrc matplotlib.conf \
 		|| die "installing config files failed"
