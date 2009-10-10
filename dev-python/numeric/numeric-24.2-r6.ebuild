@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.14 2009/04/13 11:38:12 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/numeric-24.2-r6.ebuild,v 1.15 2009/10/10 18:12:50 grobian Exp $
 
 NEED_PYTHON=2.3
 
@@ -19,7 +19,7 @@ DEPEND="${RDEPEND}
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc lapack"
 
 S="${WORKDIR}/${MY_P}"
@@ -49,6 +49,10 @@ src_unpack() {
 	[[ "${PYVER}" == 2.5 ]] && epatch "${FILESDIR}"/${P}-python25.patch
 	# fix for dotblas from uncommited cvs
 	epatch "${FILESDIR}"/${P}-dotblas.patch
+	# fix gettimeofday issue on NetBSD
+	epatch "${FILESDIR}"/${PN}-24.2.ranf.c.patch
+	# rename z_abs on interix3, since there is a name colission with the system math.h
+	epatch "${FILESDIR}"/${P}-interix3.patch
 
 	# adapt lapack/cblas support
 	if use lapack; then

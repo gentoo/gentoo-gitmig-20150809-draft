@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/numeric
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.47 2009/09/06 22:40:48 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numeric/ChangeLog,v 1.48 2009/10/10 18:12:50 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> numeric-24.2-r6.ebuild,
+  +files/numeric-24.2-interix3.patch, +files/numeric-24.2.ranf.c.patch:
+  Merge from Prefix
 
   06 Sep 2009; Christian Ruppert <idl0r@gentoo.org> numeric-23.7.ebuild,
   -files/numeric-24.2-lapack.patch:
