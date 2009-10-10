@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/ginac
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.31 2009/09/27 14:02:59 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/ginac/ChangeLog,v 1.32 2009/10/10 18:11:09 armin76 Exp $
+
+  10 Oct 2009; Raúl Porcel <armin76@gentoo.org> ginac-1.5.1.ebuild:
+  sparc stable wrt #271396
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> ginac-1.5.1.ebuild:
   ppc stable #271396
