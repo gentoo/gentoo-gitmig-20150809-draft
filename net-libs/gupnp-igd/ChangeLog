@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gupnp-igd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.3 2009/09/11 21:06:53 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp-igd/ChangeLog,v 1.4 2009/10/10 18:25:37 tester Exp $
+
+  10 Oct 2009; Olivier Crête <tester@gentoo.org> gupnp-igd-0.1.3.ebuild:
+  Require gupnp =0.12*, 0.13 breaks the API
 
   11 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> gupnp-igd-0.1.3.ebuild:
   Keywording for ppc. Bug 282263.
