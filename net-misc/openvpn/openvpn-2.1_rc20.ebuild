@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc20.ebuild,v 1.1 2009/10/10 23:30:15 cedk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-2.1_rc20.ebuild,v 1.2 2009/10/10 23:48:18 cedk Exp $
 
 inherit eutils multilib toolchain-funcs autotools
 
@@ -8,13 +8,16 @@ DESCRIPTION="OpenVPN is a robust and highly flexible tunneling application compa
 SRC_URI="http://openvpn.net/release/${P}.tar.gz
 		ipv6? (
 			http://cloud.github.com/downloads/jjo/openvpn-ipv6/openvpn-2.1_rc20-ipv6-0.4.9.patch.gz
+		)
+		eurephia? (
+			mirror://sourceforge/eurephia/${P}_eurephia.patch
 		)"
 HOMEPAGE="http://openvpn.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
-IUSE="examples iproute2 ipv6 minimal pam passwordsave selinux ssl static pkcs11 threads userland_BSD"
+IUSE="eurephia examples iproute2 ipv6 minimal pam passwordsave selinux ssl static pkcs11 threads userland_BSD"
 
 DEPEND=">=dev-libs/lzo-1.07
 	kernel_linux? (
@@ -43,6 +46,7 @@ src_unpack() {
 	epatch "${FILESDIR}/${PN}-2.1_rc13-peercred.patch"
 	epatch "${FILESDIR}"/openvpn-2.1_rc20-pkcs11.patch
 	use ipv6 && epatch "${WORKDIR}"/openvpn-2.1_rc20-ipv6-0.4.9.patch
+	use eurephia && epatch "${DISTDIR}/${P}_eurephia.patch"
 	sed -i \
 		-e "s/gcc \${CC_FLAGS}/\${CC} \${CFLAGS} -Wall/" \
 		-e "s/-shared/-shared \${LDFLAGS}/" \
@@ -170,5 +174,12 @@ pkg_postinst() {
 		einfo "This build contains IPv6-Patch from JuanJo Ciarlante."
 		einfo "For more information please visit:"
 		einfo "http://github.com/jjo/openvpn-ipv6"
+	fi
+
+	if use eurephia ; then
+		einfo ""
+		einfo "This build contains eurephia patch."
+		einfo "For more information please visit:"
+		einfo "http://www.eurephia.net/"
 	fi
 }
