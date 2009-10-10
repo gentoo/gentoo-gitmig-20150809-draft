@@ -1,6 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r3.ebuild,v 1.3 2009/10/01 22:05:13 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-bonuspack-ece/ut2004-bonuspack-ece-1-r3.ebuild,v 1.4 2009/10/10 23:58:30 nyhm Exp $
+
+EAPI=2
 
 MOD_DESC="Editor's Choice Edition bonus pack"
 MOD_NAME="Editor's Choice Edition"
@@ -8,7 +10,6 @@ MOD_NAME="Editor's Choice Edition"
 inherit games games-mods
 
 MY_P="ut2004megapack-linux.tar.bz2"
-
 HOMEPAGE="http://www.unrealtournament2004.com/"
 SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}
 	http://0day.icculus.org/ut2004/${MY_P}
@@ -17,21 +18,14 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/Missions/${MY_P}
 
 LICENSE="ut2003"
 KEYWORDS="amd64 x86"
-IUSE="dedicated opengl"
+IUSE=""
 
-RDEPEND="games-fps/ut2004-data"
+src_prepare() {
+	mv -f UT2004MegaPack/* . || die
+	rmdir UT2004MegaPack
 
-S=${WORKDIR}/UT2004MegaPack
-dir=${GAMES_PREFIX_OPT}/${GAME}
-Ddir=${D}/${dir}
+	rm -r Music Speech
 
-pkg_setup() {
-	games_pkg_setup
-}
-
-src_unpack() {
-	games-mods_src_unpack
-	cd "${S}"
 	# Remove megapack files which are not in ece
 	rm Animations/ONSNewTank-A.ukx
 	rm Help/ReadMePatch.int.txt
@@ -42,7 +36,8 @@ src_unpack() {
 	rm Maps/{AS*,CTF*,DM*}
 	rm Sounds/A_Announcer_BP2.uax
 	rm StaticMeshes/{JumpShipObjects.usx,Ty_RocketSMeshes.usx}
-	rm System/{A*,b*,B*,CacheRecords.ucl,*.det,*.est,*.frt,*.itt,*.kot}
+	rm System/{A*,b*,B*,CacheRecords.ucl}
+	rm System/{*.det,*.est,*.frt,*.itt,*.kot}
 	rm System/{CTF*,D*,Editor*,G*,I*,L*,ONS-Arc*,Onslaught.*,*.md5}
 	rm System/{u*,U*,V*,X*,Core.u,Engine.u,F*,*.ucl,Sk*}
 	rm Textures/{J*,j*,T*}
@@ -55,16 +50,4 @@ src_unpack() {
 	rm System/{Manifest.in{i,t},OnslaughtFull.int}
 	rm System/{Core.int,Engine.int,Setup.int,Window.int}
 	rm System/{OnslaughtFull.u,OnslaughtBP.u}
-}
-
-src_install() {
-	# Install Editor's Choice Edition
-	for n in {Animations,Help,Maps,Sounds,StaticMeshes,System,Textures}
-	do
-		dodir "${dir}"/${n}
-		cp -r "${S}"/${n}/* "${Ddir}"/${n} \
-			|| die "copying ${n} from Editor's Choice Edition"
-	done
-
-	prepgamesdirs
 }
