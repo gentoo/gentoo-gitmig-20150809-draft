@@ -1,37 +1,31 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre21-r6.ebuild,v 1.5 2009/10/10 10:07:27 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/vdr-burn/vdr-burn-0.1.0_pre22_p1.ebuild,v 1.1 2009/10/10 10:07:27 zzam Exp $
 
 EAPI="2"
 
 inherit vdr-plugin eutils
 
-MY_PV="${PV/_/-}"
-MY_P="${PN}-${MY_PV}"
+MY_P="${P/_/-}"
+MY_P="${MY_P/_p/-ff}"
 
-S="${WORKDIR}/burn-${MY_PV}"
+S="${WORKDIR}/${MY_P#vdr-}"
 
 DESCRIPTION="VDR: DVD Burn Plugin"
-HOMEPAGE="http://www.xeatre.de/community/burn"
-SRC_URI="http://www.magoa.net/linux/contrib/${MY_P}.tgz"
+HOMEPAGE="http://www.vdrportal.de/board/thread.php?threadid=87788"
+SRC_URI="http://firefly.vdr-developer.org/patches/${MY_P}.tgz"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="~amd64 ~x86"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="projectx"
 RESTRICT="test"
 
-PATCHES=("${FILESDIR}/${PV}/i18n.diff"
-	"${FILESDIR}/${PV}/menuburn.diff"
-	"${FILESDIR}/${PV}/menuitems.diff"
-	"${FILESDIR}/${PV}/${P}-gentoo.diff"
-	"${FILESDIR}/${PV}/${P}_setdefaults-V2.diff"
-	"${FILESDIR}/${PV}/requantfactor.diff"
-	"${FILESDIR}/${PV}/charset-vdr-1.5.diff"
-	"${FILESDIR}/${PV}/${P}-gcc43.patch"
-	"${FILESDIR}/${PV}/${P}-makefile.diff")
+PATCHES=("${FILESDIR}/vdr-burn-0.1.0_pre22_p1-makefile.diff"
+	"${FILESDIR}/vdr-burn-0.1.0_pre22_p1-gentoo.diff"
+	"${FILESDIR}/vdr-burn-0.1.0_pre22_setdefaults-V2.diff")
 
-DEPEND=">=media-video/vdr-1.4
+DEPEND=">=media-video/vdr-1.6
 		>=dev-libs/libcdio-0.71
 		>=dev-libs/boost-1.32.0
 		media-libs/gd[png,truetype,jpeg]"
