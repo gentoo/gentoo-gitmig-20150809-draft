@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.118 2009/08/29 19:00:43 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.119 2009/10/10 15:01:19 armin76 Exp $
+
+  10 Oct 2009; Raúl Porcel <armin76@gentoo.org> mailman-2.1.12.ebuild:
+  sparc stable wrt #280900
 
   29 Aug 2009; nixnut <nixnut@gentoo.org> mailman-2.1.12.ebuild:
   ppc stable #280900
