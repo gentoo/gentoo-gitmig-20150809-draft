@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.110 2009/10/09 06:22:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.111 2009/10/10 17:54:36 dirtyepic Exp $
+
+  10 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> fontforge-20090923.ebuild,
+  +files/fontforge-20090923-configure.patch:
+  Build fix for bug #288444 by Mikael Magnusson.
 
 *fontforge-20090923 (09 Oct 2009)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20090923.ebuild,v 1.1 2009/10/09 06:22:54 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20090923.ebuild,v 1.2 2009/10/10 17:54:36 dirtyepic Exp $
 
 # Some notes for maintainers this package:
 # 1. README-unix: freetype headers are required to make use of truetype debugger
@@ -15,7 +15,7 @@
 
 EAPI=2
 
-inherit eutils fdo-mime
+inherit autotools eutils fdo-mime
 
 HTDOCSV="20090914"
 CIDMAPV="20090121"
@@ -55,15 +55,16 @@ src_unpack() {
 		cd html
 		unpack fontforge_htdocs-${HTDOCSV}.tar.bz2
 	fi
-	cd "${S}"
-	epatch "${FILESDIR}/fontforge-desktop.patch"
 }
 
 src_prepare() {
+	epatch "${FILESDIR}"/fontforge-desktop.patch
+	epatch "${FILESDIR}"/${P}-configure.patch
 	if use doc; then
-		cd "${WORKDIR}/html/"
+		cd "${WORKDIR}"/html/
 		chmod -x *.html
 	fi
+	eautoconf
 }
 
 src_configure() {
