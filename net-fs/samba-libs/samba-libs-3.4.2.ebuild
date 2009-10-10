@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2.ebuild,v 1.1 2009/10/09 17:21:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2.ebuild,v 1.2 2009/10/10 22:51:34 patrick Exp $
 
 EAPI="2"
 
@@ -8,7 +8,7 @@ inherit pam confutils versionator multilib
 
 MY_P="samba-${PV}"
 
-DESCRIPTION="samba-libs"
+DESCRIPTION="Library bits of the samba network filesystem"
 HOMEPAGE="http://www.samba.org/"
 SRC_URI="mirror://samba/${MY_P}.tar.gz"
 LICENSE="GPL-3"

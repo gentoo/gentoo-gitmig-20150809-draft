@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/samba-client
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.11 2009/10/10 10:12:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/ChangeLog,v 1.12 2009/10/10 22:51:13 patrick Exp $
+
+  10 Oct 2009; Patrick Lauer <patrick@gentoo.org> samba-client-3.4.2.ebuild:
+  Fixing description
 
   10 Oct 2009; Patrick Lauer <patrick@gentoo.org>
   -samba-client-3.3.7.ebuild:
