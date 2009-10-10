@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.3.1.ebuild,v 1.1 2009/09/01 16:28:09 tampakrap Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/solid/solid-4.3.1.ebuild,v 1.2 2009/10/10 10:46:27 ssuominen Exp $
 
 EAPI="2"
 
@@ -9,7 +9,7 @@ CPPUNIT_REQUIRED="test"
 inherit kde4-meta
 
 DESCRIPTION="Solid: the KDE hardware library"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ~ppc ~ppc64 ~x86"
 IUSE="bluetooth debug networkmanager wicd"
 
 # solid/CMakeLists.txt has an add_subdirectory statement that depends on

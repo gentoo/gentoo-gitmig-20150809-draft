@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepimlibs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.39 2009/10/08 14:13:32 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepimlibs/ChangeLog,v 1.40 2009/10/10 09:14:54 ssuominen Exp $
+
+  10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kdepimlibs-4.3.1.ebuild:
+  amd64 stable wrt #287697
 
   08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -kdepimlibs-4.3.0.ebuild:
   Drop KDE 4.3.0

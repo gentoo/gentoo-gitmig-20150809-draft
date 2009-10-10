@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/juk
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.141 2009/10/08 13:44:43 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/juk/ChangeLog,v 1.142 2009/10/10 08:41:43 ssuominen Exp $
+
+  10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> juk-4.3.1.ebuild:
+  amd64 stable wrt #287697
 
   08 Oct 2009; Alexey Shvetsov <alexxy@gentoo.org> -juk-4.3.0.ebuild:
   Drop KDE 4.3.0
