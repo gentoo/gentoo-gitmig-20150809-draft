@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.10-r1.ebuild,v 1.1 2009/10/10 18:28:48 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.3.11.ebuild,v 1.1 2009/10/10 19:24:40 pva Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -61,7 +61,6 @@ src_unpack() {
 	disable_option FT_CONFIG_OPTION_OLD_INTERNALS
 
 	epatch "${FILESDIR}"/${PN}-2.3.2-enable-valid.patch
-	epatch "${FILESDIR}"/${P}-nprops-truncation.patch
 
 	if use utils; then
 		cd "${WORKDIR}"/ft2demos-${PV}
