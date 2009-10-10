@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr-svn/bzr-svn-1.0.0.ebuild,v 1.1 2009/10/06 19:46:37 pva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bzr-svn/bzr-svn-1.0.0.ebuild,v 1.2 2009/10/10 19:03:54 pva Exp $
 
 EAPI=2
 
@@ -21,9 +21,9 @@ IUSE=""
 # `grep bzr_compatible_versions info.py`, and minimum subvertpy version
 # via `grep subvertpy_minimum_version info.py`.
 DEPEND="
-	|| ( =dev-util/bzr-1.15*
-		=dev-util/bzr-1.16*
+	|| ( =dev-util/bzr-1.16*
 		=dev-util/bzr-1.17*
+		=dev-util/bzr-1.18*
 		=dev-util/bzr-2.0* )
 	>=dev-lang/python-2.5[sqlite]
 	>=dev-python/subvertpy-0.6.1"
