@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/formencode
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.18 2009/08/16 23:30:42 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/formencode/ChangeLog,v 1.19 2009/10/10 16:59:22 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> formencode-1.2.2.ebuild:
+  Merge from Prefix
 
 *formencode-1.2.2 (16 Aug 2009)
 

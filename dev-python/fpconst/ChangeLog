@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/fpconst
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.24 2009/03/14 17:36:27 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fpconst/ChangeLog,v 1.25 2009/10/10 17:00:37 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> fpconst-0.7.3.ebuild:
+  Merge from Prefix
 
   14 Mar 2009; Raúl Porcel <armin76@gentoo.org> fpconst-0.7.3.ebuild:
   Add ~arm/~s390/~sh wrt #172818
