@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3370 2009/10/10 17:57:43 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3371 2009/10/10 18:34:17 pva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Oct 2009; Peter Volkov <pva@gentoo.org> package.mask:
+  freetype-2.3.10 fixed. Unmasking...
 
   10 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> license_groups:
   Add PUEL license (VirtualBox) to EULA license group.
