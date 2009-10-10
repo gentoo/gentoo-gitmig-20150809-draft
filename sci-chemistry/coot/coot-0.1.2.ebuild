@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.1.2.ebuild,v 1.4 2009/02/11 05:35:13 dberkholz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/coot/coot-0.1.2.ebuild,v 1.5 2009/10/10 00:10:29 patrick Exp $
 
 inherit autotools
 
@@ -8,7 +8,7 @@ MY_PV=${PV/_pre/-pre-}
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Crystallographic Object-Oriented Toolkit for model building, completion and validation"
-HOMEPAGE="http://www.ysbl.york.ac.uk/~emsley/coot/"
+HOMEPAGE="http://www.biop.ox.ac.uk/coot/"
 RESTRICT="mirror"
 if [[ ${MY_PV} = *pre* ]]; then
 	SRC_URI="http://www.ysbl.york.ac.uk/~emsley/software/pre-release/${MY_P}.tar.gz"
