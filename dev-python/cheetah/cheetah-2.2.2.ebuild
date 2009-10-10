@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.2.2.ebuild,v 1.3 2009/10/07 11:56:29 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-2.2.2.ebuild,v 1.4 2009/10/10 12:33:28 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -16,7 +16,7 @@ SRC_URI="http://pypi.python.org/packages/source/${MY_P:0:1}/${MY_PN}/${MY_P}.tar
 
 LICENSE="PSF-2.2"
 IUSE=""
-KEYWORDS="~alpha ~amd64 ~ppc ~x86"
+KEYWORDS="~alpha ~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 SLOT="0"
 
 RDEPEND="dev-python/markdown"
@@ -43,6 +43,7 @@ src_test() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
-	rm -fr "${D}"usr/lib*/python*/site-packages/Cheetah/Tests
+	rm -fr "${ED}"usr/lib*/python*/site-packages/Cheetah/Tests
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cherrypy
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.34 2009/09/05 13:37:06 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.35 2009/10/10 12:36:34 grobian Exp $
+
+  10 Oct 2009; Fabian Groffen <grobian@gentoo.org> cherrypy-3.1.2.ebuild:
+  Merge from Prefix
 
   05 Sep 2009; Patrick Lauer <patrick@gentoo.org> -cherrypy-3.0.3.ebuild,
   -cherrypy-3.1.0.ebuild, -cherrypy-3.1.1.ebuild:
