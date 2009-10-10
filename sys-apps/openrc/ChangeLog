@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.78 2009/10/09 16:48:13 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.79 2009/10/10 09:17:01 zzam Exp $
+
+  10 Oct 2009; Matthias Schwarzott <zzam@gentoo.org> openrc-0.5.1.ebuild:
+  Fixed enabling unicode in rc.conf, thanks to polynomial-c, bug #288383.
 
 *openrc-0.5.1 (09 Oct 2009)
 
