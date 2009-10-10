@@ -1,0 +1,11 @@
+# ChangeLog for app-text/tokyodystopia
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tokyodystopia/ChangeLog,v 1.1 2009/10/10 00:00:15 patrick Exp $
+
+*tokyodystopia-0.9.13 (09 Oct 2009)
+
+  09 Oct 2009; Patrick Lauer <patrick@gentoo.org>
+  +tokyodystopia-0.9.13.ebuild, +metadata.xml:
+  Initial import of the tokyo dystopia fulltext search engine. Ebuild by me
+  based on tokyotyrant ebuild.
+
