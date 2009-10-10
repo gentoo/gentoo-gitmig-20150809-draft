@@ -1,6 +1,13 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.59 2009/08/30 09:08:26 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.60 2009/10/10 17:00:13 ssuominen Exp $
+
+*kipi-plugins-0.6.0-r1 (10 Oct 2009)
+
+  10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  kipi-plugins-0.6.0.ebuild, +kipi-plugins-0.6.0-r1.ebuild:
+  Revision bump to drop USE redeyes because media-libs/opencv is broken.
+  Mark -r0 stable for amd64.
 
 *kipi-plugins-0.6.0 (30 Aug 2009)
 
