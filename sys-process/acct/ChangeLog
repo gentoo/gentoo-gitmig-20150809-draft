@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/acct
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.14 2008/10/06 23:35:01 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/acct/ChangeLog,v 1.15 2009/10/10 16:18:22 vapier Exp $
+
+*acct-6.5.1 (10 Oct 2009)
+
+  10 Oct 2009; Mike Frysinger <vapier@gentoo.org> +acct-6.5.1.ebuild,
+  files/acct.rc6:
+  Version bump #288374 by Markus Gothe. Stop using full paths in init.d
+  script.
 
 *acct-6.3.5-r3 (06 Oct 2008)
 
