@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/paragui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.32 2009/08/06 00:07:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/paragui/ChangeLog,v 1.33 2009/10/10 15:08:40 armin76 Exp $
+
+  10 Oct 2009; Raúl Porcel <armin76@gentoo.org> paragui-1.1.8.ebuild:
+  sparc stable wrt #275747
 
   06 Aug 2009; Michael Sterrett <mr_bones_@gentoo.org> paragui-1.1.8.ebuild:
   EAPI=2
