@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10566 2009/10/10 08:00:30 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10567 2009/10/10 14:27:07 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -511,10 +511,6 @@ sys-apps/einit-modules-xml
 =dev-ruby/actionwebservice-1.2.6
 =dev-ruby/activesupport-1.4.4
 =dev-ruby/actionpack-1.13.6
-
-# Thomas Sachau <tommy@gentoo.org> (21 Aug 2009)
-# Mask alpha version of k3b
->=app-cdr/k3b-1.66.0_alpha2
 
 # Samuli Suominen <ssuominen@gentoo.org> (14 Aug 2009)
 # Unresolved building issues wrt bugs #276246, #117523 and #213804.
