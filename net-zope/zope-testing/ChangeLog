@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/zope-testing
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope-testing/ChangeLog,v 1.1 2009/10/10 16:23:14 arfrever Exp $
+
+*zope-testing-3.8.3 (10 Oct 2009)
+
+  10 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  +zope-testing-3.8.3.ebuild, +metadata.xml:
+  Initial import from python overlay (bug #191290).
+
