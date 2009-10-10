@@ -1,14 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.37 2009/10/10 19:56:06 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.38 2009/10/10 20:08:51 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
 # MOD_DESC - Description for the mod
+# MOD_NAME - Creates a command-line wrapper and desktop icon for the mod
 # MOD_DIR - Subdirectory name for the mod, if applicable
 # MOD_ICON - Custom icon for the mod, instead of the default
-# MOD_NAME - Creates a command-line wrapper and desktop icon for the mod
-# MOD_TBZ2 - File to extract within the Makeself archive
 
 inherit eutils games
 
@@ -154,21 +153,6 @@ games-mods_src_unpack() {
 		esac
 	done
 
-	# This code should only be executed for Makeself archives
-	for tarball in ${MOD_TBZ2} ; do
-		mkdir -p "${S}"/unpack
-		for name in "${tarball}_${PV}-english" "${tarball}_${PV}" "${tarball}" ; do
-			for ext in tar.bz2 tar.gz tbz2 tgz ; do
-				if [[ -e "${name}.${ext}" ]] ; then
-					tar xf "${name}.${ext}" -C "${S}"/unpack \
-						|| die "uncompressing tarball"
-					# Remove the tarball after we unpack it
-					rm -f "${name}.${ext}"
-				fi
-			done
-		done
-	done
-	# Since we remove all of these anyway, let's move it to the eclass
 	rm -f 3355_patch 3339_patch
 }
 
@@ -228,18 +212,9 @@ games-mods_src_install() {
 		fi
 	fi
 
-	# Copy our unpacked files, if it exists
-	if [[ -d "${S}"/unpack ]] ; then
-		insinto "${INS_DIR}"
-		doins -r "${S}"/unpack/* || die "copying files"
-		rm -rf "${S}"/unpack
-	fi
-
 	# We expect anything not wanted to have been deleted by the ebuild
-	if [[ ! -z $(ls "${S}"/* 2> /dev/null) ]] ; then
-		insinto "${INS_DIR}"
-		doins -r * || die "doins -r failed"
-	fi
+	insinto "${INS_DIR}"
+	doins -r * || die "doins -r failed"
 
 	# We are installing everything for these mods into ${INS_DIR},
 	# ${GAMES_DATADIR}/${GAME} in most cases, and symlinking it
