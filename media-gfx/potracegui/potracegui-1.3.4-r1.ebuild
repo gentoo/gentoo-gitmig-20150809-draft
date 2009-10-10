@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/potracegui-1.3.4-r1.ebuild,v 1.2 2009/02/10 16:18:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/potracegui-1.3.4-r1.ebuild,v 1.3 2009/10/10 18:58:39 pva Exp $
 
 ARTS_REQUIRED="never"
 
@@ -20,7 +20,7 @@ RDEPEND="media-gfx/autotrace
 	media-gfx/potrace"
 need-kde 3.5
 
-PATCHES=( "${FILESDIR}/${P}-gcc43.patch" )
+PATCHES=( "${FILESDIR}/${P}-gcc43.patch" "${FILESDIR}/${P}-kdelibs4-build.patch" )
 
 src_unpack() {
 	kde_src_unpack

@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/potracegui
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/ChangeLog,v 1.9 2009/02/10 01:36:46 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/potracegui/ChangeLog,v 1.10 2009/10/10 18:58:39 pva Exp $
+
+  10 Oct 2009; Peter Volkov <pva@gentoo.org> potracegui-1.3.4-r1.ebuild,
+  +files/potracegui-1.3.4-kdelibs4-build.patch:
+  Fixed build problem in case kdelibs4 is installed, bug #260643 thank Nico
+  R. for this fix.
 
 *potracegui-1.3.4-r1 (10 Feb 2009)
 
