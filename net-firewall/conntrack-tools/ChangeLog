@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/conntrack-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.33 2009/09/03 11:48:22 ikelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/conntrack-tools/ChangeLog,v 1.34 2009/10/10 22:13:34 cedk Exp $
+
+  10 Oct 2009; Cédric Krier <cedk@gentoo.org>
+  conntrack-tools-0.9.12.ebuild, conntrack-tools-0.9.13.ebuild:
+  Warn instead of die on CONFIG_CHECK for bug #283585
 
   03 Sep 2009; Mike Auty <ikelos@gentoo.org>
   conntrack-tools-0.9.6-r1.ebuild, conntrack-tools-0.9.9.ebuild,
