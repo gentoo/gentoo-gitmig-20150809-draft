@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.123 2009/08/03 17:53:50 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.124 2009/10/11 11:11:51 fordfrog Exp $
+
+*netbeans-6.8_alpha2 (11 Oct 2009)
+
+  11 Oct 2009; Miroslav Šulc <fordfrog@gentoo.org>
+  +files/6.8/nbbuild_build.xml.patch, +netbeans-6.8_alpha2.ebuild,
+  +files/6.8/nbbuild_templates_projectized.xml.patch:
+  added netbeans 6.8 milestone 2 ebuild. though this ebuild will not be
+  stabilized, i decided to put it into main tree because it is pretty stable
+  and solves some issues netbeans 6.7* has so it might help netbeans users
+  to overcome issues of netbeans 6.7*
 
 *netbeans-6.7.1 (03 Aug 2009)
 
