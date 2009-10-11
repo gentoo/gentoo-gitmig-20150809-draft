@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.25 2007/02/28 22:07:20 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-fchksum/python-fchksum-1.7.1.ebuild,v 1.26 2009/10/11 11:26:21 grobian Exp $
 
 # DON'T inherit distutils because it will cause a circular dependency with python
 #inherit distutils
@@ -11,7 +11,7 @@ SRC_URI="http://www.dakotacom.net/~donut/programs/fchksum/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 m68k mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd ~ppc-aix ~x86-freebsd ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE=""
 
 DEPEND="dev-lang/python
@@ -22,5 +22,6 @@ src_compile() {
 }
 
 src_install() {
-	python setup.py install --root="${D}" || die
+	[[ -z ${ED} ]] && local ED=${D}
+	python setup.py install --root="${ED}" || die
 }

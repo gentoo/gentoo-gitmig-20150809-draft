@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.130 2009/10/04 18:21:41 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-docs/ChangeLog,v 1.131 2009/10/11 11:22:18 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  python-docs-2.4.4-r1.ebuild, python-docs-2.5.4-r1.ebuild,
+  python-docs-2.6.2-r1.ebuild, python-docs-2.6.3.ebuild,
+  python-docs-3.1.1.ebuild:
+  Merge from Prefix
 
 *python-docs-2.6.3 (04 Oct 2009)
 

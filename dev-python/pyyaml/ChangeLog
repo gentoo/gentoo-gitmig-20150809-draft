@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyyaml
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.15 2009/09/05 19:06:56 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyyaml/ChangeLog,v 1.16 2009/10/11 11:33:04 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyyaml-3.09.ebuild:
+  Merge from Prefix
 
   05 Sep 2009; Brent Baude <ranger@gentoo.org> pyyaml-3.08.ebuild:
   Marking pyyaml-3.08 ppc64 for bug 277972

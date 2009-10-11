@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pytz
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.41 2009/10/01 03:54:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/ChangeLog,v 1.42 2009/10/11 11:29:19 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pytz-2009n.ebuild:
+  Merge from Prefix
 
 *pytz-2009n (01 Oct 2009)
 

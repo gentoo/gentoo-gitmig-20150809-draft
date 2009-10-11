@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2009n.ebuild,v 1.1 2009/10/01 03:54:51 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pytz/pytz-2009n.ebuild,v 1.2 2009/10/11 11:29:19 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -13,7 +13,7 @@ SRC_URI="http://pypi.python.org/packages/source/${PN:0:1}/${PN}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 RDEPEND="dev-python/setuptools
@@ -36,6 +36,7 @@ src_test() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
-	rm -fr "${D}"usr/lib*/python*/site-packages/pytz/zoneinfo
+	rm -fr "${ED}"usr/lib*/python*/site-packages/pytz/zoneinfo
 }
