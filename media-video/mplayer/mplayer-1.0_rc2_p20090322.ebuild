@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090322.ebuild,v 1.16 2009/08/03 20:39:26 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_rc2_p20090322.ebuild,v 1.17 2009/10/11 09:15:44 ssuominen Exp $
 
 EAPI="1"
 
@@ -8,12 +8,12 @@ inherit eutils flag-o-matic multilib
 
 MPLAYER_REVISION=29040
 
-IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +amrnb +amrwb arts +ass
+IUSE="3dnow 3dnowext +a52 +aac aalib +alsa altivec +ass
 bidi bindist bl +cddb +cdio cdparanoia -cpudetection -custom-cflags
 -custom-cpuopts debug dga +dirac directfb doc +dts +dv dvb +dvd +dvdnav dxr3
 +enca +encode esd +faac +faad fbcon ftp gif ggi -gtk +iconv ipv6 jack
 joystick jpeg kernel_linux ladspa libcaca lirc +live lzo mad md5sum +mmx
-mmxext mng +mp2 +mp3 musepack nas +nemesi +network openal +opengl oss png pnm
+mmxext mng +mp2 +mp3 nas +nemesi +network openal +opengl oss png pnm
 pulseaudio pvr +quicktime radio +rar +real +rtc -samba
 +schroedinger sdl +speex sse sse2 ssse3 svga teletext tga +theora +tremor
 +truetype +unicode v4l v4l2 vdpau vidix +vorbis -win32codecs +X +x264 xanim
@@ -50,9 +50,6 @@ RDEPEND="sys-libs/ncurses
 	)
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
-	amrnb? ( media-libs/amrnb )
-	amrwb? ( media-libs/amrwb )
-	arts? ( kde-base/arts )
 	ass? ( media-libs/freetype:2
 		media-libs/fontconfig )
 	openal? ( media-libs/openal )
@@ -90,7 +87,6 @@ RDEPEND="sys-libs/ncurses
 	lzo? ( >=dev-libs/lzo-2 )
 	mad? ( media-libs/libmad )
 	mng? ( media-libs/libmng )
-	musepack? ( >=media-libs/libmpcdec-1.2.2 )
 	nas? ( media-libs/nas )
 	opengl? ( virtual/opengl )
 	png? ( media-libs/libpng )
@@ -351,8 +347,9 @@ src_compile() {
 	myconf="${myconf} --disable-liba52"
 
 	use aac || myconf="${myconf} --disable-faad-internal"
-	use amrnb || myconf="${myconf} --disable-libamr_nb"
-	use amrwb || myconf="${myconf} --disable-libamr_wb"
+	myconf="${myconf} --disable-libamr_nb"
+	myconf="${myconf} --disable-libamr_wb"
+	myconf="${myconf} --disable-musepack"
 	use dirac || myconf="${myconf} --disable-libdirac-lavc"
 	use dts || myconf="${myconf} --disable-libdca"
 	use dv || myconf="${myconf} --disable-libdv"
@@ -363,7 +360,7 @@ src_compile() {
 	use schroedinger || myconf="${myconf} --disable-libschroedinger-lavc"
 	use xanim && myconf="${myconf} --xanimcodecsdir=/usr/lib/xanim/mods"
 	! use png && ! use gtk && myconf="${myconf} --disable-png"
-	for x in gif jpeg live mad mng musepack pnm speex tga theora xanim; do
+	for x in gif jpeg live mad mng pnm speex tga theora xanim; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
 	if use vorbis || use tremor; then
@@ -467,7 +464,8 @@ src_compile() {
 	#############
 	# Audio Output #
 	#############
-	for x in alsa arts esd jack ladspa nas openal; do
+	myconf="${myconf} --disable-arts"
+	for x in alsa esd jack ladspa nas openal; do
 		use ${x} || myconf="${myconf} --disable-${x}"
 	done
 	use pulseaudio || myconf="${myconf} --disable-pulse"
