@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.44 2009/09/27 16:15:28 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-gnome/ChangeLog,v 1.45 2009/10/11 16:21:37 maekke Exp $
+
+  11 Oct 2009; Markus Meier <maekke@gentoo.org> bluez-gnome-1.8.ebuild:
+  x86 stable, bug #284661
 
   27 Sep 2009; Olivier Crête <tester@gentoo.org> bluez-gnome-1.8.ebuild:
   Stable on amd64, bug #284661
