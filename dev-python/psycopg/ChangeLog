@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/psycopg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.85 2009/10/07 17:48:42 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg/ChangeLog,v 1.86 2009/10/11 09:20:18 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  +files/psycopg-2.0.9-round-solaris.patch, psycopg-2.0.12.ebuild:
+  Merge from Prefix
 
   07 Oct 2009; nixnut <nixnut@gentoo.org> psycopg-2.0.12.ebuild:
   ppc stable #286257
