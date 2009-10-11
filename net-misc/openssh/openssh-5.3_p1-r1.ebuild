@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.3_p1-r1.ebuild,v 1.2 2009/10/11 06:03:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.3_p1-r1.ebuild,v 1.3 2009/10/11 06:04:03 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -90,7 +90,7 @@ src_unpack() {
 	fi
 	if use X509 ; then
 		# Apply X509 patch
-		epatch "${DISTDIR}"/${X509_PATCH} 
+		epatch "${DISTDIR}"/${X509_PATCH}
 		# Apply glue so that HPN will still work after X509
 		epatch "${FILESDIR}"/${PN}-5.2_p1-x509-hpn-glue.patch
 	fi
