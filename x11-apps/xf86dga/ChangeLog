@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xf86dga
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.28 2009/09/24 07:39:44 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xf86dga/ChangeLog,v 1.29 2009/10/11 11:09:09 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> xf86dga-1.0.2.ebuild:
+  ppc stable #282290
 
   24 Sep 2009; Rémi Cardona <remi@gentoo.org> xf86dga-1.0.2.ebuild,
   +files/xf86dga-1.0.2-fix-deps.patch:
