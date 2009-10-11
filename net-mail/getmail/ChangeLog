@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/getmail
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.170 2009/10/02 22:53:36 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.171 2009/10/11 15:04:33 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> getmail-4.9.2.ebuild:
+  Use ED for Prefix compatability, marked ~ppc-macos and ~x64-solaris
 
   02 Oct 2009; Tiago Cunha <tcunha@gentoo.org> getmail-4.9.1.ebuild:
   stable sparc, bug 278891
