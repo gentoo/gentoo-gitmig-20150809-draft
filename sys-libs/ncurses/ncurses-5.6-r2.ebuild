@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.13 2009/06/20 13:22:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.6-r2.ebuild,v 1.14 2009/10/11 05:38:15 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -31,6 +31,7 @@ src_unpack() {
 }
 
 src_compile() {
+	export ac_cv_prog_AWK=gawk #259510
 	tc-export BUILD_CC
 
 	# Protect the user from themselves #115036
