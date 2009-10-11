@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.87 2009/07/11 13:31:41 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.88 2009/10/11 01:22:48 vapier Exp $
+
+*kbd-1.15.1 (11 Oct 2009)
+
+  11 Oct 2009; Mike Frysinger <vapier@gentoo.org> +kbd-1.15.1.ebuild:
+  Version bump.
 
   11 Jul 2009; Raúl Porcel <armin76@gentoo.org> kbd-1.15.ebuild:
   Revert to ~alpha, bug #259129
