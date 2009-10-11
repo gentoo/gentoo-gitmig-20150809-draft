@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.4 2009/09/27 03:58:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/obexftp-0.23-r1.ebuild,v 1.5 2009/10/11 16:20:46 maekke Exp $
 
 EAPI="2"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://dev.zuckschwerdt.org/openobex/wiki/ObexFtp"
 SRC_URI="mirror://sourceforge/openobex/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~hppa ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ~sparc x86"
 IUSE="bluetooth debug perl python ruby swig tcl"
 
 RDEPEND="dev-libs/openobex
