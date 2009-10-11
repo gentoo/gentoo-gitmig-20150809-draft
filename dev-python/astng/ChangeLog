@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/astng
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.26 2009/10/10 11:54:14 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/astng/ChangeLog,v 1.27 2009/10/11 20:12:15 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> astng-0.19.1.ebuild:
+  ppc stable #287944
 
   10 Oct 2009; Fabian Groffen <grobian@gentoo.org> astng-0.19.1.ebuild:
   Merge from Prefix
