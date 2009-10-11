@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.4.2.ebuild,v 1.2 2009/10/10 22:51:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-client/samba-client-3.4.2.ebuild,v 1.3 2009/10/11 20:23:09 dev-zero Exp $
 
 EAPI="2"
 
@@ -32,8 +32,7 @@ DEPEND="!<net-fs/samba-3.3
 		syslog? ( virtual/logger )
 		virtual/tdb
 		virtual/talloc
-		net-fs/samba-libs[caps?,cups?,ldap?,syslog?,winbind?,ads?,samba4?,netapi]
-	)"
+		~net-fs/samba-libs-${PV}[caps?,cups?,ldap?,syslog?,winbind?,ads?,samba4?,netapi] )"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}/source3"
