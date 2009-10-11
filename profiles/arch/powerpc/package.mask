@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.11 2009/10/11 19:31:25 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.12 2009/10/11 21:34:05 abcd Exp $
 
 # Jonathan Callen <abcd@gentoo.org> (11 Oct 2009)
 # Masking packges that dep on KDE-4.3 to prevent more tree breakage
@@ -11,7 +11,7 @@ kde-misc/konq-plugins
 >=kde-misc/krusader-2.0.0
 kde-misc/tellico
 >=kde-misc/yakuake-2.9.6
->=net-p2p/ktorrent-3
+>=net-p2p/ktorrent-3.2.4
 
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org> (5 Sep 2009)
 # Masking KDE-4.3 deps (bug #280312).
