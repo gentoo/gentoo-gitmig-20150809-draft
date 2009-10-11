@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.26.ebuild,v 1.1 2009/10/03 16:27:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-base/postgresql-base-7.4.26.ebuild,v 1.2 2009/10/11 09:05:24 patrick Exp $
 
 EAPI="1"
 
@@ -35,6 +35,7 @@ RDEPEND="kerberos? ( virtual/krb5 )
 	ssl? ( >=dev-libs/openssl-0.9.6-r1 )
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	>=app-admin/eselect-postgresql-0.3
+	virtual/libintl
 	!dev-db/postgresql-libs
 	!dev-db/postgresql-client
 	!dev-db/libpq
