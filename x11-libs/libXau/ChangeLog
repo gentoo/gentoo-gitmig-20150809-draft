@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libXau
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.65 2009/10/09 21:49:28 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXau/ChangeLog,v 1.66 2009/10/11 10:55:49 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> libXau-1.0.5.ebuild:
+  ppc stable #282290
 
   09 Oct 2009; Markus Meier <maekke@gentoo.org> libXau-1.0.5.ebuild:
   arm stable, bug #282290
