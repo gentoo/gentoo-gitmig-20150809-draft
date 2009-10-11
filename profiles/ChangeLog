@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3372 2009/10/11 09:04:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3373 2009/10/11 09:52:53 maekke Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Oct 2009; Markus Meier <maekke@gentoo.org> package.mask:
+  mask hugin and deps beta/rc versions for testing
 
   11 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.mask:
   Mask gst-plugins-amrnb and gst-plugins-amrwb wrt #252140.
