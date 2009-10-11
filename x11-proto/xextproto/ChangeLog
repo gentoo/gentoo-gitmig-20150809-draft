@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/xextproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.45 2009/10/09 21:53:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/xextproto/ChangeLog,v 1.46 2009/10/11 10:53:56 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> xextproto-7.0.5.ebuild:
+  ppc stable #282290
 
   09 Oct 2009; Markus Meier <maekke@gentoo.org> xextproto-7.0.5.ebuild:
   arm stable, bug #282290

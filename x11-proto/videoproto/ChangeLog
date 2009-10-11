@@ -1,6 +1,9 @@
 # ChangeLog for x11-proto/videoproto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.31 2009/10/09 22:08:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-proto/videoproto/ChangeLog,v 1.32 2009/10/11 10:48:43 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> videoproto-2.3.0.ebuild:
+  ppc stable #282290
 
   09 Oct 2009; Markus Meier <maekke@gentoo.org> videoproto-2.3.0.ebuild:
   arm stable, bug #282290
