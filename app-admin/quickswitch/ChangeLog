@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/quickswitch
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.25 2009/08/28 22:20:10 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.26 2009/10/11 23:45:38 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> quickswitch-1.05.ebuild:
+  QA fixes; remove useless dodoc LICENSE
 
   28 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
   -files/net.eth0-switchto.rc6:
