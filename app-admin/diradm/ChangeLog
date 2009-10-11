@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/diradm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.37 2009/03/09 21:14:53 betelgeuse Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.38 2009/10/11 22:39:52 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> diradm-2.9.3.ebuild,
+  diradm-2.9.5.ebuild, diradm-2.9.6.ebuild:
+  QA fixes; test? in RDEPEND
 
   09 Mar 2009; Petteri Räty <betelgeuse@gentoo.org> diradm-2.9.3.ebuild,
   diradm-2.9.6.ebuild:

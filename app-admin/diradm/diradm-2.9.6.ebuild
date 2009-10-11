@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.6.ebuild,v 1.2 2009/03/09 21:14:53 betelgeuse Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/diradm-2.9.6.ebuild,v 1.3 2009/10/11 22:39:52 halcy0n Exp $
 
 EAPI="2"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="samba irixpasswd automount test"
-DEPEND=">=net-nds/openldap-2.3
+RDEPEND=">=net-nds/openldap-2.3
 	sys-apps/gawk
 	sys-apps/coreutils
 	sys-apps/grep
@@ -27,7 +27,9 @@ DEPEND=">=net-nds/openldap-2.3
 	samba? (
 		dev-perl/Crypt-SmbHash
 		>=net-fs/samba-3.0.6
-	)
+	)"
+DEPEND="
+	${RDEPEND}
 	test? (
 		dev-perl/Crypt-SmbHash
 		>=net-fs/samba-3.0.6
