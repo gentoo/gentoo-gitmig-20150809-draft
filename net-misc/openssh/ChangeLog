@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.364 2009/10/10 02:58:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.365 2009/10/11 06:03:16 robbat2 Exp $
+
+  11 Oct 2009; Robin H. Johnson <robbat2@gentoo.org>
+  openssh-5.3_p1-r1.ebuild, +files/openssh-5.3_p1-pkcs11-hpn-glue.patch:
+  Bug #288498: Now we need a glue patch for pkcs11 and HPN together. Really
+  some of these patchsets need to go to upstream.
 
 *openssh-5.3_p1-r1 (10 Oct 2009)
 

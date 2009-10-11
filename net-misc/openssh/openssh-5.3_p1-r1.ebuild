@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.3_p1-r1.ebuild,v 1.1 2009/10/10 02:58:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-5.3_p1-r1.ebuild,v 1.2 2009/10/11 06:03:16 robbat2 Exp $
 
 inherit eutils flag-o-matic multilib autotools pam
 
@@ -80,10 +80,20 @@ src_unpack() {
 		cd "${WORKDIR}"
 		unpack "${PKCS11_PATCH}"
 		cd "${S}"
+		# This patch is included with X509, so exclude it if X509 is going to be
+		# applied.
+		use X509 && mv -f "${WORKDIR}"/*pkcs11*/1000_all_log.patch "${WORKDIR}"
+		# Now apply pkcs11
 		EPATCH_OPTS="-p1" epatch "${WORKDIR}"/*pkcs11*/{1,2,4}*
-		use X509 && EPATCH_OPTS="-R" epatch "${WORKDIR}"/*pkcs11*/1000_all_log.patch
+		# And some glue
+		epatch "${FILESDIR}"/${PN}-5.3_p1-pkcs11-hpn-glue.patch
 	fi
-	use X509 && epatch "${DISTDIR}"/${X509_PATCH} "${FILESDIR}"/${PN}-5.2_p1-x509-hpn-glue.patch
+	if use X509 ; then
+		# Apply X509 patch
+		epatch "${DISTDIR}"/${X509_PATCH} 
+		# Apply glue so that HPN will still work after X509
+		epatch "${FILESDIR}"/${PN}-5.2_p1-x509-hpn-glue.patch
+	fi
 	use smartcard && epatch "${FILESDIR}"/openssh-3.9_p1-opensc.patch
 	if ! use X509 ; then
 		if [[ -n ${LDAP_PATCH} ]] && use ldap ; then
