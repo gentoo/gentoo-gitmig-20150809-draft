@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libogg
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.57 2009/07/02 17:05:41 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.58 2009/10/11 20:05:30 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> libogg-1.1.4.ebuild:
+  ppc stable #288042
 
   02 Jul 2009; Alexis Ballier <aballier@gentoo.org> libogg-1.1.4.ebuild:
   add elog message about the .la file being removed, bug #275597
