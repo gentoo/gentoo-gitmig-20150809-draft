@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/cronolog-1.6.2-r3.ebuild,v 1.4 2008/09/20 08:49:53 dertobi123 Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/cronolog-1.6.2-r3.ebuild,v 1.5 2009/10/11 23:20:35 halcy0n Exp $
 
 inherit eutils autotools
 

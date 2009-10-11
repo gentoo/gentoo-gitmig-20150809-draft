@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/cronolog
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.25 2008/09/29 19:51:49 hollow Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cronolog/ChangeLog,v 1.26 2009/10/11 23:20:35 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> cronolog-1.6.2-r2.ebuild,
+  cronolog-1.6.2-r3.ebuild:
+  QA fixes; remove redundant settings for WANT_AUTOCONF and WANT_AUTOMAKE to
+  latest
 
   29 Sep 2008; Benedikt Böhm <hollow@gentoo.org>
   files/1.6.2-patches/cronolog-large-file-patch.txt,
