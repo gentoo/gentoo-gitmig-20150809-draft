@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r8.ebuild,v 1.9 2009/10/02 01:08:28 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.0.1-r8.ebuild,v 1.10 2009/10/11 09:42:42 grobian Exp $
 
 EAPI="2"
 NEED_PYTHON="2.5"
@@ -14,7 +14,7 @@ SRC_URI="http://www.amk.ca/files/python/crypto/${P}.tar.gz"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 s390 sh sparc ~sparc-fbsd x86 ~x86-fbsd ~ppc-aix ~ia64-hpux ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 IUSE="bindist gmp test"
 
 RDEPEND="gmp? ( dev-libs/gmp )"
@@ -34,6 +34,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-2.6_hashlib.patch
 	#ARC2 buffer overlow. Bug 258049
 	epatch "${FILESDIR}"/${P}-CVE-2009-0544.patch
+	epatch "${FILESDIR}"/${P}-caseimport.patch # for case insensitive filesystems
 }
 
 src_compile() {

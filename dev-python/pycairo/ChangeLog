@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.80 2009/10/07 17:59:59 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.81 2009/10/11 09:37:29 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pycairo-1.8.8.ebuild:
+  Merge from Prefix
 
   07 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   pycairo-1.8.8.ebuild:
