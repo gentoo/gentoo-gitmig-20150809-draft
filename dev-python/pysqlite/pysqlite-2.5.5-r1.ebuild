@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.5.5-r1.ebuild,v 1.4 2009/10/10 10:01:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysqlite/pysqlite-2.5.5-r1.ebuild,v 1.5 2009/10/11 11:02:35 grobian Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ DESCRIPTION="Python wrapper for the local database Sqlite"
 SRC_URI="http://oss.itsystementwicklung.de/download/pysqlite/${PV:0:3}/${PV}/pysqlite-${PV}.tar.gz"
 HOMEPAGE="http://pysqlite.org/"
 
-KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha amd64 ~hppa ~ia64 ppc ~ppc64 ~sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 LICENSE="pysqlite"
 SLOT="2"
 IUSE="examples"
@@ -37,12 +37,19 @@ src_prepare() {
 	# Correct encoding.
 	sed -i -e "s/\(coding: \)ISO-8859-1/\1utf-8/" \
 		pysqlite2/__init__.py pysqlite2/dbapi2.py || die "sed failed"
+	# setup.cfg has hardcoded non-prefix paths, kill them
+	cd "${S}"
+	sed -i \
+		-e '/^include_dirs=/d' \
+		-e '/^library_dirs=/d' \
+		setup.cfg
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 
-	rm -rf "${D}"/usr/pysqlite2-doc
+	rm -rf "${ED}"/usr/pysqlite2-doc
 
 	if use examples; then
 		insinto /usr/share/doc/${PF}

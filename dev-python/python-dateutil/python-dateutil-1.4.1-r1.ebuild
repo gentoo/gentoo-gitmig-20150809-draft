@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.4.1-r1.ebuild,v 1.1 2009/01/20 13:56:28 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/python-dateutil-1.4.1-r1.ebuild,v 1.2 2009/10/11 11:05:59 grobian Exp $
 
 EAPI=2
 NEED_PYTHON=2.3
@@ -12,7 +12,7 @@ SRC_URI="http://labix.org/download/python-dateutil/${P}.tar.gz"
 
 LICENSE="PSF-2.3"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
 DOCS="NEWS README"
@@ -34,8 +34,9 @@ src_test() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	distutils_src_install
 	insinto /usr/share/doc/${PF}/examples
 	doins example.py sandbox/*.py
-	rm -f "${D}"/usr/lib*/python*/site-packages/dateutil/zoneinfo/*.tar.*
+	rm -f "${ED}"/usr/lib*/python*/site-packages/dateutil/zoneinfo/*.tar.*
 }
