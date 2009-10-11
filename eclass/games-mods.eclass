@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.39 2009/10/11 00:05:40 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.40 2009/10/11 00:29:23 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -170,7 +170,7 @@ games-mods_src_install() {
 		# Set up command-line and desktop menu entries
 		if [[ -n ${MOD_DIR} ]] ; then
 			games_make_wrapper "${GAME_EXE}-${PN/${GAME}-}" \
-				"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}" "${dir}" "${dir}"
+				"${GAME_EXE} ${SELECT_MOD}${MOD_DIR}"
 			make_desktop_entry "${GAME_EXE}-${PN/${GAME}-}" \
 				"${GAME_TITLE} - ${MOD_NAME}" "${MOD_ICON}"
 			# Since only quake3 has both a binary and a source-based install,
@@ -179,8 +179,7 @@ games-mods_src_install() {
 				"quake3")
 					if has_version games-fps/quake3-bin ; then
 						games_make_wrapper "${GAME_EXE}-bin-${PN/${GAME}-}" \
-							"${GAME_EXE}-bin ${SELECT_MOD}${MOD_DIR}" \
-							"${dir}" "${dir}"
+							"${GAME_EXE}-bin ${SELECT_MOD}${MOD_DIR}"
 					fi
 					make_desktop_entry "${GAME_EXE}-bin-${PN/${GAME}-}" \
 						"${GAME_TITLE} - ${MOD_NAME} (binary)" \
