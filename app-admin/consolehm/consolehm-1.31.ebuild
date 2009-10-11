@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/consolehm/consolehm-1.31.ebuild,v 1.1 2007/01/12 15:23:09 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/consolehm/consolehm-1.31.ebuild,v 1.2 2009/10/11 23:13:32 halcy0n Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/${PN}"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PN}-gcc4.patch || die "patch failed"
+	epatch "${FILESDIR}"/${PN}-gcc4.patch || die "patch failed"
 	export CHMS="${S}/consolehm"
 	# The only 'SMBus' smb.h i've found is in a different place:
 	cd "${S}/consolehm"
@@ -40,7 +40,7 @@ src_compile() {
 src_install() {
 	dobin "${S}/consolehm/chm"
 	doman "${S}/consolehm/chm.8"
-	dodoc ${S}/CHANGELOG
-	dodoc ${S}/README
-	dodoc ${S}/TODO
+	dodoc "${S}"/CHANGELOG
+	dodoc "${S}"/README
+	dodoc "${S}"/TODO
 }
