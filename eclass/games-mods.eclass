@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.38 2009/10/10 20:08:51 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-mods.eclass,v 1.39 2009/10/11 00:05:40 nyhm Exp $
 
 # Variables to specify in an ebuild which uses this eclass:
 # GAME - (doom3, quake4 or ut2004, etc), unless ${PN} starts with e.g. "doom3-"
@@ -11,7 +11,7 @@
 
 inherit eutils games
 
-EXPORT_FUNCTIONS src_unpack src_install pkg_postinst
+EXPORT_FUNCTIONS src_install pkg_postinst
 
 [[ -z ${GAME} ]] && GAME=${PN%%-*}
 
@@ -132,28 +132,6 @@ games-mods_use_dedicated() {
 	[[ -z ${MOD_DIR} ]] && return 1
 
 	use dedicated && return 0 || return 1
-}
-
-games-mods_src_unpack() {
-	# The first thing we do here is determine exactly what we're dealing with
-	for src_uri in ${A} ; do
-		URI_SUFFIX="${src_uri##*.}"
-		case ${URI_SUFFIX##*.} in
-			bin|run)
-				# We have a Makeself archive, use unpack_makeself
-				unpack_makeself "${src_uri}"
-				# Since this is a Makeself archive, it has a lot of useless
-				# files (for us), so we delete them.
-				rm -rf setup.data setup.sh uninstall
-				;;
-			bz2|gz|Z|z|ZIP|zip)
-				# We have a normal tarball/zip file, use unpack
-				unpack "${src_uri}"
-				;;
-		esac
-	done
-
-	rm -f 3355_patch 3339_patch
 }
 
 games-mods_src_install() {
