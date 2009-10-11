@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4890 2009/10/11 00:07:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4891 2009/10/11 09:27:48 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -1869,8 +1869,6 @@ media-video/lives:libvisual - Enable libvisual support
 media-video/mjpegtools:yv12 - Enables support for the YV12 pixel format
 media-video/motiontrack:multiprocess - Enables multi-process support (SMP/cluster) for motiontrack programs
 media-video/mplayer:3dnowext - Enable 3dnowext cpu instructions
-media-video/mplayer:amrnb - Enables Adaptive Multi-Rate Audio support (Narrow Band)
-media-video/mplayer:amrwb - Enables Adaptive Multi-Rate Audio support (Wide Band)
 media-video/mplayer:ass - Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support
 media-video/mplayer:bl - Enables Blinkenlights support in mplayer
 media-video/mplayer:cdio - Use libcdio for CD support (instead of cdparanoia)
