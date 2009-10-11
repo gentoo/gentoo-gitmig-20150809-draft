@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/qtcurve-qt4
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.78 2009/10/09 19:38:50 nelchael Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtcurve-qt4/ChangeLog,v 1.79 2009/10/11 21:50:58 abcd Exp $
+
+  11 Oct 2009; Jonathan Callen <abcd@gentoo.org> qtcurve-qt4-0.64.2.ebuild,
+  qtcurve-qt4-0.67.0.ebuild, qtcurve-qt4-0.67.1.ebuild,
+  qtcurve-qt4-0.67.2.ebuild, qtcurve-qt4-0.67.5.ebuild,
+  qtcurve-qt4-0.68.0.ebuild, qtcurve-qt4-0.68.1.ebuild,
+  qtcurve-qt4-0.69.0.ebuild:
+  Set KDE dep to 4.2 to unbreak hppa/ppc/ppc64
 
 *qtcurve-qt4-0.69.0 (09 Oct 2009)
 
