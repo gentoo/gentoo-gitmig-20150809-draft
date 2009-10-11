@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0-r2.ebuild,v 1.2 2009/10/11 10:37:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0-r2.ebuild,v 1.3 2009/10/11 15:56:08 arfrever Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -85,25 +85,25 @@ src_test() {
 }
 
 src_install() {
-	[[ -z ${ED} ]] && local ED=${D}
+	[[ -z ${ED} ]] && local ED="${D}"
 	installation() {
 		gnome2_src_install
-		mv "${ED}$(python_get_sitedir)/pygtk.py" "${D}$(python_get_sitedir)/pygtk.py-2.0"
-		mv "${ED}$(python_get_sitedir)/pygtk.pth" "${D}$(python_get_sitedir)/pygtk.pth-2.0"
+		mv "${ED}$(python_get_sitedir)/pygtk.py" "${ED}$(python_get_sitedir)/pygtk.py-2.0"
+		mv "${ED}$(python_get_sitedir)/pygtk.pth" "${ED}$(python_get_sitedir)/pygtk.pth-2.0"
+
+		if [[ ${CHOST} == *-darwin* ]]; then
+			# Python on Darwin uses bundles.
+			mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/_gio.{so,bundle} || die
+			mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/unix.{so,bundle} || die
+			mv "${ED}"$(python_get_sitedir)/gtk-2.0/glib/_glib.{so,bundle} || die
+			mv "${ED}"$(python_get_sitedir)/gtk-2.0/gobject/_gobject.{so,bundle} || die
+		fi
 	}
 	python_execute_function -s installation
 
 	if use examples; then
 		insinto /usr/share/doc/${P}
 		doins -r examples
-	fi
-
-	if [[ ${CHOST} == *-darwin* ]] ; then
-		# our python expects a bundle
-		mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/_gio.{so,bundle} || die
-		mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/unix.{so,bundle} || die
-		mv "${ED}"$(python_get_sitedir)/gtk-2.0/glib/_glib.{so,bundle} || die
-		mv "${ED}"$(python_get_sitedir)/gtk-2.0/gobject/_gobject.{so,bundle} || die
 	fi
 }
 

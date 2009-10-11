@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.81 2009/10/11 10:37:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.82 2009/10/11 15:56:08 arfrever Exp $
+
+  11 Oct 2009; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
+  pygobject-2.18.0-r2.ebuild:
+  Use correct paths.
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   pygobject-2.18.0-r2.ebuild:
