@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1-r1.ebuild,v 1.1 2009/09/01 09:56:36 wschlich Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen-tools/xen-tools-3.4.1-r1.ebuild,v 1.2 2009/10/11 17:00:04 betelgeuse Exp $
 
 EAPI="2"
 
@@ -204,13 +204,13 @@ pkg_postinst() {
 		ewarn "This probablem may be resolved as of Xen 3.0.4, if not post in the bug."
 	fi
 
-	if ! built_with_use dev-lang/python ncurses; then
+	if ! has_version "dev-lang/python[ncurses]"; then
 		echo
 		ewarn "NB: Your dev-lang/python is built without USE=ncurses."
 		ewarn "Please rebuild python with USE=ncurses to make use of xenmon.py."
 	fi
 
-	if built_with_use sys-apps/iproute2 minimal; then
+	if has_version "sys-apps/iproute2[minimal]"; then
 		echo
 		ewarn "Your sys-apps/iproute2 is built with USE=minimal. Networking"
 		ewarn "will not work until you rebuild iproute2 without USE=minimal."
