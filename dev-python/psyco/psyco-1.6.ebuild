@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.6.ebuild,v 1.1 2008/03/08 08:30:45 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psyco/psyco-1.6.ebuild,v 1.2 2009/10/11 08:37:06 grobian Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://psyco.sourceforge.net/"
 SRC_URI="mirror://sourceforge/psyco/${P}-src.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~x86-linux"
 IUSE="examples"
 
 DEPEND=""

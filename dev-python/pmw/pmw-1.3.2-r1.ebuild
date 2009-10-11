@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r1.ebuild,v 1.1 2009/03/01 20:34:32 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-1.3.2-r1.ebuild,v 1.2 2009/10/11 08:35:17 grobian Exp $
 
 EAPI="2"
 PYTHON_MODNAME="Pmw"
@@ -14,7 +14,7 @@ HOMEPAGE="http://pmw.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~sparc ~x86 ~amd64-linux ~x86-linux"
 LICENSE="BSD"
 IUSE="doc examples"
 
