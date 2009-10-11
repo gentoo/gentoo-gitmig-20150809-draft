@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3375 2009/10/11 17:13:27 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3376 2009/10/11 17:34:32 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  11 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Mask old monolithic kde ebuilds for removal
 
   11 Oct 2009; Ulrich Mueller <ulm@gentoo.org> package.mask:
   Mask app-admin/eselect-news for removal.
