@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.186 2009/10/09 19:20:45 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.187 2009/10/11 15:03:33 klausman Exp $
+
+  11 Oct 2009; Tobias Klausmann <klausman@gentoo.org>
+  wireshark-1.2.2.ebuild:
+  Stable on alpha, bug #285280
 
   09 Oct 2009; Markus Meier <maekke@gentoo.org> wireshark-1.2.2.ebuild:
   x86 stable, bug #285280
