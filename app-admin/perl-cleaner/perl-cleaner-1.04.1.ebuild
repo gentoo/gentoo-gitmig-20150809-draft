@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-1.04.1.ebuild,v 1.7 2009/02/05 05:39:37 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/perl-cleaner/perl-cleaner-1.04.1.ebuild,v 1.8 2009/10/11 23:42:10 halcy0n Exp $
 
 DESCRIPTION="User land tool for cleaning up old perl installs"
 HOMEPAGE="http://www.gentoo.org/proj/en/perl/"
@@ -17,12 +17,12 @@ RDEPEND="dev-lang/perl"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 }
 
 src_install() {
 	dodir /usr/bin
-	cp ${S}/bin/perl-cleaner ${D}/usr/bin/
+	cp "${S}"/bin/perl-cleaner "${D}"/usr/bin/
 	dodir /usr/share/man/man1
 	doman man/perl-cleaner.1
 }

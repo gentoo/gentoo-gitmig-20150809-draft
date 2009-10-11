@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/profiler-1-r1.ebuild,v 1.4 2007/08/15 17:02:24 opfer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/profiler/profiler-1-r1.ebuild,v 1.5 2009/10/11 23:43:57 halcy0n Exp $
 
 inherit java-pkg-2
 
@@ -19,13 +19,13 @@ S=${WORKDIR}
 
 src_unpack() {
 
-	cp ${DISTDIR}/${A} ${S}/
+	cp "${DISTDIR}"/${A} "${S}"/
 
 }
 
 src_install() {
 
-	dobin ${FILESDIR}/profiler
+	dobin "${FILESDIR}"/profiler
 	java-pkg_dojar ${A}
 
 }

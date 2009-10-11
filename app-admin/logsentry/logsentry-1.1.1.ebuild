@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.27 2008/10/23 02:03:11 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/logsentry-1.1.1.ebuild,v 1.28 2009/10/11 23:35:09 halcy0n Exp $
 
 inherit toolchain-funcs
 
@@ -17,7 +17,7 @@ IUSE=""
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="virtual/mailx"
 
-S=${WORKDIR}/logcheck-${PV}
+S="${WORKDIR}"/logcheck-${PV}
 
 src_compile() {
 	einfo "compile and install mixed in the package makefile"
@@ -40,7 +40,7 @@ src_install() {
 	dodoc README* CHANGES CREDITS
 	dodoc systems/linux/README.*
 
-	cat << EOF > ${S}/logsentry.cron
+	cat << EOF > "${S}"/logsentry.cron
 #!/bin/sh
 #
 # Uncomment the following if you want

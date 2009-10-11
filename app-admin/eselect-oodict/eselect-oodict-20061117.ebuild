@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/eselect-oodict-20061117.ebuild,v 1.7 2007/10/06 07:30:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect-oodict/eselect-oodict-20061117.ebuild,v 1.8 2009/10/11 23:24:18 halcy0n Exp $
 
 DESCRIPTION="Manages configuration of dictionaries for OpenOffice.Org."
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,6 +16,6 @@ RDEPEND=">=app-admin/eselect-1.0.2"
 
 src_install() {
 	insinto /usr/share/eselect/modules
-	cp ${WORKDIR}/oodict.eselect-${PVR} ${T}/oodict.eselect
-	doins ${T}/oodict.eselect
+	cp "${WORKDIR}"/oodict.eselect-${PVR} "${T}"/oodict.eselect
+	doins "${T}"/oodict.eselect
 }

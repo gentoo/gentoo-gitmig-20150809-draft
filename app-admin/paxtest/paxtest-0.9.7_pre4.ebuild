@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.7_pre4.ebuild,v 1.3 2007/11/13 18:22:46 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.7_pre4.ebuild,v 1.4 2009/10/11 23:39:34 halcy0n Exp $
 
 inherit eutils multilib
 
@@ -25,13 +25,13 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	cp ${FILESDIR}/Makefile.psm5 ${S}/Makefile || die
-	sed -i 's:-O2:${CFLAGS}:' ${S}/Makefile
+	cd "${S}"
+	cp "${FILESDIR}"/Makefile.psm5 "${S}"/Makefile || die
+	sed -i 's:-O2:${CFLAGS}:' "${S}"/Makefile
 }
 
 src_compile() {
-	emake DESTDIR=${D} BINDIR=${D}/usr/bin RUNDIR=/usr/$(get_libdir)/paxtest || die
+	emake DESTDIR="${D}" BINDIR="${D}"/usr/bin RUNDIR=/usr/$(get_libdir)/paxtest || die
 }
 
 src_install() {

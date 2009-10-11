@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/logsentry
-# Copyright 2002-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.24 2008/10/23 02:03:11 flameeyes Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.25 2009/10/11 23:35:09 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> logsentry-1.1.1.ebuild:
+  QA fixes; unquoted variables
 
   23 Oct 2008; Diego Pettenò <flameeyes@gentoo.org> logsentry-1.1.1.ebuild:
   Respect CC.

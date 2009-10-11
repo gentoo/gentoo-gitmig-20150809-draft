@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/qpage-3.3.ebuild,v 1.4 2006/07/10 01:48:27 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/qpage/qpage-3.3.ebuild,v 1.5 2009/10/11 23:44:46 halcy0n Exp $
 
 inherit eutils
 
@@ -19,10 +19,10 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-fix-warning.patch
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	epatch "${FILESDIR}"/${P}-fix-warning.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.4 2007/01/24 14:19:18 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/gentoo-rsync-mirror-1.0-r5.ebuild,v 1.5 2009/10/11 23:28:51 halcy0n Exp $
 
 DESCRIPTION="Ebuild for setting up a Gentoo rsync mirror"
 HOMEPAGE="http://www.gentoo.org/doc/en/rsync.xml"
@@ -13,12 +13,12 @@ IUSE=""
 
 src_install() {
 	dodir /opt/gentoo-rsync
-	cp ${FILESDIR}/rsync-gentoo-portage.sh ${D}/opt/gentoo-rsync
-	cp ${FILESDIR}/rsynclogparse-extended.pl ${D}/opt/gentoo-rsync
+	cp "${FILESDIR}"/rsync-gentoo-portage.sh "${D}"/opt/gentoo-rsync
+	cp "${FILESDIR}"/rsynclogparse-extended.pl "${D}"/opt/gentoo-rsync
 	insinto etc/rsync
-	doins ${FILESDIR}/rsyncd.conf
-	doins ${FILESDIR}/rsyncd.motd
-	doins ${FILESDIR}/gentoo-mirror.conf
+	doins "${FILESDIR}"/rsyncd.conf
+	doins "${FILESDIR}"/rsyncd.motd
+	doins "${FILESDIR}"/gentoo-mirror.conf
 	dodir /opt/gentoo-rsync/portage
 }
 

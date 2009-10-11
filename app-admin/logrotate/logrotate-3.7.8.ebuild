@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.9 2009/07/02 19:36:10 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.10 2009/10/11 23:33:10 halcy0n Exp $
 
 EAPI="2"
 
@@ -26,10 +26,10 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	strip-flags
 
-	epatch ${FILESDIR}/${PN}-3.7.7-datehack.patch
-	epatch ${FILESDIR}/${PN}-3.7.7-ignore-hidden.patch
-	epatch ${FILESDIR}/${PN}-3.7.7-weekly.patch
-	epatch ${FILESDIR}/${PN}-3.7.7-fbsd.patch
+	epatch "${FILESDIR}"/${PN}-3.7.7-datehack.patch
+	epatch "${FILESDIR}"/${PN}-3.7.7-ignore-hidden.patch
+	epatch "${FILESDIR}"/${PN}-3.7.7-weekly.patch
+	epatch "${FILESDIR}"/${PN}-3.7.7-fbsd.patch
 }
 
 src_configure() {
@@ -51,10 +51,10 @@ src_install() {
 	dodoc examples/logrotate*
 
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/logrotate.cron
+	doexe "${FILESDIR}"/logrotate.cron
 
 	insinto /etc
-	doins ${FILESDIR}/logrotate.conf
+	doins "${FILESDIR}"/logrotate.conf
 
 	keepdir /etc/logrotate.d
 }

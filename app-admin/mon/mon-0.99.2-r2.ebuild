@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r2.ebuild,v 1.3 2007/04/28 17:05:28 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r2.ebuild,v 1.4 2009/10/11 23:36:13 halcy0n Exp $
 
 inherit toolchain-funcs
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-perl/Mon-0.9
 	>=dev-perl/Period-1.20-r2"
 
 src_compile() {
-	cd ${S}/mon.d
+	cd "${S}"/mon.d
 	make CC="$(tc-getCC) $CFLAGS" || die
 }
 
@@ -41,9 +41,9 @@ src_install() {
 	dodoc mon.lsm README TODO VERSION
 	docinto txt ; dodoc doc/README*
 	docinto etc ; dodoc etc/*
-	newdoc ${FILESDIR}/mon.cf mon.cf.sample
+	newdoc "${FILESDIR}"/mon.cf mon.cf.sample
 
-	newinitd ${FILESDIR}/mon.rc6 mon
+	newinitd "${FILESDIR}"/mon.rc6 mon
 	insinto /etc/mon
-	newins ${FILESDIR}/mon.cf mon.cf.sample
+	newins "${FILESDIR}"/mon.cf mon.cf.sample
 }

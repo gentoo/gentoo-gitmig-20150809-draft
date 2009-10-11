@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.1.ebuild,v 1.17 2007/01/11 20:46:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/newsyslog-1.1.ebuild,v 1.18 2009/10/11 23:37:08 halcy0n Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ RDEPEND="virtual/cron
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/newsyslog-html.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/newsyslog-html.patch
 }
 
 src_compile() {

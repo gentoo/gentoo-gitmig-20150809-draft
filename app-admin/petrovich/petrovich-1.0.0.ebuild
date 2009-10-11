@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.25 2006/02/11 20:59:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.26 2009/10/11 23:43:02 halcy0n Exp $
 
 inherit eutils
 
@@ -17,15 +17,15 @@ DEPEND="virtual/perl-Digest-MD5"
 
 src_unpack () {
 	unpack ${A}
-	cd ${WORKDIR}
-	epatch ${FILESDIR}/${PF}-gentoo.diff
+	cd "${WORKDIR}"
+	epatch "${FILESDIR}"/${PF}-gentoo.diff
 }
 
 src_install() {
 	dosbin petrovich.pl
 
 	insinto /etc
-	doins ${FILESDIR}/petrovich.conf
+	doins "${FILESDIR}"/petrovich.conf
 
 	dodir /var/db/petrovich
 

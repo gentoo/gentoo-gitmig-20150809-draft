@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.7.ebuild,v 1.3 2009/01/14 16:26:28 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.7.ebuild,v 1.4 2009/10/11 23:33:10 halcy0n Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${P}.tar.gz
 
-	cd ${S}
+	cd "${S}"
 
 	strip-flags
 
@@ -32,10 +32,10 @@ src_unpack() {
 		-e "/CVSROOT =/d" \
 		Makefile || die "sed failed"
 
-	epatch ${FILESDIR}/${P}-datehack.patch
-	epatch ${FILESDIR}/${P}-ignore-hidden.patch
-	epatch ${FILESDIR}/${P}-weekly.patch
-	epatch ${FILESDIR}/${P}-fbsd.patch
+	epatch "${FILESDIR}"/${P}-datehack.patch
+	epatch "${FILESDIR}"/${P}-ignore-hidden.patch
+	epatch "${FILESDIR}"/${P}-weekly.patch
+	epatch "${FILESDIR}"/${P}-fbsd.patch
 }
 
 src_compile() {
@@ -53,10 +53,10 @@ src_install() {
 	dodoc examples/logrotate*
 
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/logrotate.cron
+	doexe "${FILESDIR}"/logrotate.cron
 
 	insinto /etc
-	doins ${FILESDIR}/logrotate.conf
+	doins "${FILESDIR}"/logrotate.conf
 
 	keepdir /etc/logrotate.d
 }

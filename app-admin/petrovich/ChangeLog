@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/petrovich
-# Copyright 2002-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.13 2007/02/21 19:43:38 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.14 2009/10/11 23:43:03 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> petrovich-1.0.0.ebuild:
+  QA fixes; unquoted variables
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

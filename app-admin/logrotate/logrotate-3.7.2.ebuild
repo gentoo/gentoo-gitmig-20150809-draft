@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.16 2008/12/15 17:30:51 dang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.2.ebuild,v 1.17 2009/10/11 23:33:10 halcy0n Exp $
 
 inherit eutils toolchain-funcs flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${P}.tar.bz2
 
-	cd ${S}
+	cd "${S}"
 
 	strip-flags
 
@@ -48,10 +48,10 @@ src_install() {
 	dodoc examples/logrotate*
 
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/logrotate.cron
+	doexe "${FILESDIR}"/logrotate.cron
 
 	insinto /etc
-	doins ${FILESDIR}/logrotate.conf
+	doins "${FILESDIR}"/logrotate.conf
 
 	keepdir /etc/logrotate.d
 }
