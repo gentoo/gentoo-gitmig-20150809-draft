@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc45.ebuild,v 1.1 2009/10/11 00:35:09 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2_rc45.ebuild,v 1.2 2009/10/11 12:46:54 tommy Exp $
 
 # Require EAPI 2 since we now require at least python-2.6 (for python 3
 # syntax support) which also requires EAPI 2.
@@ -126,27 +126,26 @@ src_install() {
 
 	cd "${S}"/cnf
 	insinto /etc
-	doins etc-update.conf dispatch-conf.conf
+	doins etc-update.conf dispatch-conf.conf || die
 
-	dodir "${portage_share_config}"
 	insinto "${portage_share_config}"
-	doins "${S}/cnf/"{sets.conf,make.globals}
+	doins "${S}/cnf/"{sets.conf,make.globals} || die
 	if [ -f "make.conf.${ARCH}".diff ]; then
 		patch make.conf "make.conf.${ARCH}".diff || \
 			die "Failed to patch make.conf.example"
-		newins make.conf make.conf.example
+		newins make.conf make.conf.example || die
 	else
 		eerror ""
 		eerror "Portage does not have an arch-specific configuration for this arch."
 		eerror "Please notify the arch maintainer about this issue. Using generic."
 		eerror ""
-		newins make.conf make.conf.example
+		newins make.conf make.conf.example || die
 	fi
 
 	dosym ..${portage_share_config}/make.globals /etc/make.globals
 
 	insinto /etc/logrotate.d
-	doins "${S}"/cnf/logrotate.d/elog-save-summary
+	doins "${S}"/cnf/logrotate.d/elog-save-summary || die
 
 	# BSD and OSX need a sed wrapper so that find/xargs work properly
 	if use userland_GNU; then
@@ -156,7 +155,6 @@ src_install() {
 	local x symlinks
 	for x in $(find "$S"/bin -type d) ; do
 		x=${x#$S/}
-		dodir $portage_base/$x || die "dodir failed"
 		exeinto $portage_base/$x || die "exeinto failed"
 		cd "$S"/$x || die "cd failed"
 		doexe $(find . -mindepth 1 -maxdepth 1 -type f ! -type l) || \
@@ -169,7 +167,6 @@ src_install() {
 
 	for x in $(find "$S"/pym -type d) ; do
 		x=${x#$S/}
-		dodir $portage_base/$x || die "dodir failed"
 		insinto $portage_base/$x || die "insinto failed"
 		cd "$S"/$x || die "cd failed"
 		doins *.py || die "doins failed"
