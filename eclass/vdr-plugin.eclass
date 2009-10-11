@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.70 2009/10/08 08:12:50 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vdr-plugin.eclass,v 1.71 2009/10/11 11:49:05 maekke Exp $
 #
 # Author:
 #   Matthias Schwarzott <zzam@gentoo.org>
@@ -410,7 +410,7 @@ vdr-plugin_pkg_setup() {
 		fi
 		return
 	fi
-	
+
 	VDRVERSION=$(awk -F'"' '/define VDRVERSION/ {print $2}' "${VDR_INCLUDE_DIR}"/config.h)
 	APIVERSION=$(awk -F'"' '/define APIVERSION/ {print $2}' "${VDR_INCLUDE_DIR}"/config.h)
 	[[ -z ${APIVERSION} ]] && APIVERSION="${VDRVERSION}"
