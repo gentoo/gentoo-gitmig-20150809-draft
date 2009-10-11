@@ -7,8 +7,6 @@
   </maintainer>
   <use>
     <flag name="3dnowext">Enable 3dnowext cpu instructions</flag>
-    <flag name="amrnb">Enables Adaptive Multi-Rate Audio support (Narrow Band)</flag>
-    <flag name="amrwb">Enables Adaptive Multi-Rate Audio support (Wide Band)</flag>
     <flag name="ass">Internal SRT/SSA/ASS (SubRip / SubStation Alpha) subtitle support</flag>
     <flag name="bl">Enables Blinkenlights support in mplayer</flag>
     <flag name="cdio">Use libcdio for CD support (instead of cdparanoia)</flag>
