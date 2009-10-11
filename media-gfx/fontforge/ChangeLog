@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.111 2009/10/10 17:54:36 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.112 2009/10/11 19:48:25 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> fontforge-20090622.ebuild:
+  ppc stable #288261
 
   10 Oct 2009; Ryan Hill <dirtyepic@gentoo.org> fontforge-20090923.ebuild,
   +files/fontforge-20090923-configure.patch:
