@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.24.0.ebuild,v 1.9 2009/04/28 11:11:29 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/pyorbit-2.24.0.ebuild,v 1.10 2009/10/11 10:51:00 grobian Exp $
 
 inherit python gnome2 multilib
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm ~hppa ia64 ppc ppc64 sh sparc x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 RDEPEND=">=dev-lang/python-2.4
@@ -27,14 +27,15 @@ src_unpack() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	gnome2_src_install
 
 	python_version
-	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/CORBA.py \
-		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_CORBA.py
+	mv "${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/CORBA.py \
+		"${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_CORBA.py
 
-	mv "${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/PortableServer.py \
-		"${D}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_PortableServer.py
+	mv "${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/PortableServer.py \
+		"${ED}"/usr/$(get_libdir)/python${PYVER}/site-packages/pyorbit_PortableServer.py
 }
 
 pkg_postinst() {

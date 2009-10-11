@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0-r2.ebuild,v 1.1 2009/08/28 17:15:30 arfrever Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/pygobject-2.18.0-r2.ebuild,v 1.2 2009/10/11 10:37:08 grobian Exp $
 
 EAPI="2"
 SUPPORT_PYTHON_ABIS="1"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.pygtk.org/"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc examples libffi test"
 
 RDEPEND=">=dev-lang/python-2.4.4-r5
@@ -85,10 +85,11 @@ src_test() {
 }
 
 src_install() {
+	[[ -z ${ED} ]] && local ED=${D}
 	installation() {
 		gnome2_src_install
-		mv "${D}$(python_get_sitedir)/pygtk.py" "${D}$(python_get_sitedir)/pygtk.py-2.0"
-		mv "${D}$(python_get_sitedir)/pygtk.pth" "${D}$(python_get_sitedir)/pygtk.pth-2.0"
+		mv "${ED}$(python_get_sitedir)/pygtk.py" "${D}$(python_get_sitedir)/pygtk.py-2.0"
+		mv "${ED}$(python_get_sitedir)/pygtk.pth" "${D}$(python_get_sitedir)/pygtk.pth-2.0"
 	}
 	python_execute_function -s installation
 
@@ -97,6 +98,13 @@ src_install() {
 		doins -r examples
 	fi
 
+	if [[ ${CHOST} == *-darwin* ]] ; then
+		# our python expects a bundle
+		mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/_gio.{so,bundle} || die
+		mv "${ED}"$(python_get_sitedir)/gtk-2.0/gio/unix.{so,bundle} || die
+		mv "${ED}"$(python_get_sitedir)/gtk-2.0/glib/_glib.{so,bundle} || die
+		mv "${ED}"$(python_get_sitedir)/gtk-2.0/gobject/_gobject.{so,bundle} || die
+	fi
 }
 
 pkg_postinst() {

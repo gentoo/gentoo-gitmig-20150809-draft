@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyprotocols
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.18 2007/12/31 16:30:53 josejx Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyprotocols/ChangeLog,v 1.19 2009/10/11 10:54:18 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  pyprotocols-1.0_pre2306.ebuild:
+  Merge from Prefix
 
   31 Dec 2007; Joseph Jezak <josejx@gentoo.org> pyprotocols-0.9.3.ebuild,
   pyprotocols-1.0_pre2306.ebuild:

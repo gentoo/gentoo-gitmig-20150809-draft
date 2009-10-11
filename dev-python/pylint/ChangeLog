@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.52 2009/09/20 17:58:01 neurogeek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.53 2009/10/11 10:46:42 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pylint-0.18.1-r1.ebuild:
+  Merge from Prefix
 
 *pylint-0.18.1-r1 (20 Sep 2009)
 

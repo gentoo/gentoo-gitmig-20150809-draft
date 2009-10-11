@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.75 2009/10/10 09:59:15 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.76 2009/10/11 10:55:46 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
+  Merge from Prefix
 
   10 Oct 2009; Markus Meier <maekke@gentoo.org> pyrex-0.9.8.5-r1.ebuild:
   amd64/arm/x86 stable, bug #287562

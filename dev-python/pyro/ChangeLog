@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyro
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.21 2009/09/18 23:16:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyro/ChangeLog,v 1.22 2009/10/11 10:57:21 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyro-3.9.1.ebuild:
+  Merge from Prefix
 
   18 Sep 2009; Markus Meier <maekke@gentoo.org> pyro-3.9.1.ebuild:
   amd64 stable, bug #284997

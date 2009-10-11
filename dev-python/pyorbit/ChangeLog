@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyorbit
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.67 2009/04/28 11:11:29 armin76 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyorbit/ChangeLog,v 1.68 2009/10/11 10:51:00 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pyorbit-2.24.0.ebuild:
+  Merge from Prefix
 
   28 Apr 2009; Raúl Porcel <armin76@gentoo.org> pyorbit-2.24.0.ebuild:
   sh stable

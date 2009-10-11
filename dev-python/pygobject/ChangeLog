@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pygobject
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.80 2009/09/22 04:40:05 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygobject/ChangeLog,v 1.81 2009/10/11 10:37:08 grobian Exp $
+
+  11 Oct 2009; Fabian Groffen <grobian@gentoo.org>
+  pygobject-2.18.0-r2.ebuild:
+  Merge from Prefix
 
   21 Sep 2009; Tom Gall <tgall@gentoo.org> pygobject-2.18.0.ebuild:
   stable on ppc64, bug #277947
