@@ -1,6 +1,32 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.638 2009/10/06 21:26:33 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.639 2009/10/11 00:35:09 zmedico Exp $
+
+*portage-2.2_rc45 (10 Oct 2009)
+
+  10 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc45.ebuild:
+  2.2_rc45 bump. This fixes bug #265267 (temporarily exclude interactive
+  updates), bug #267468 (show binary package count in merge summary),
+  bug #270933 (make die message ask for build log and emerge --info),
+  bug #271551 (avoid 'ambiguous package' due to virtuals), bug #272000
+  (fix --keep-going to continue past broken manifests), bug #273099
+  (split-{e,}log features to separate logs into category directories),
+  bug #274497 (misc spelling fixes), bug #274870 (make repoman abort
+  for >= 60 KiB files), bug #287870 (short -r option for --resume),
+  and bug #287950 (--fail-clean option for tmpfs builds).
+
+*portage-2.1.7 (10 Oct 2009)
+
+  10 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.ebuild:
+  2.1.7 release. Bug #288499 tracks all bugs fixed since 2.1.6.x. New features
+  include ACCEPT_LICENSE, ACCEPT_PROPERTIES, and Python 3.0 support. Default
+  behavior for emerge commands has changed so that packages are only updated
+  when necessary. In order to ensure that all packages are updated when
+  possible, you must now specify the -u/--update option. See bug #275945 for
+  the rationale behind this change. If using python3, you may notice that some
+  types of program output which require a tty device (like the wget progress
+  bar) will be disabled. This is due to an upstream python issue:
+  http://bugs.python.org/issue5380. See bug #287648 for more information.
 
   06 Oct 2009; Zac Medico <zmedico@gentoo.org> portage-2.2_rc44.ebuild:
   Use has_version instead of built_with_use for python[ssl] check.
