@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r2.ebuild,v 1.6 2009/04/01 18:26:13 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speechd/speechd-0.56-r2.ebuild,v 1.7 2009/10/11 21:44:37 halcy0n Exp $
 
 inherit eutils
 
@@ -22,17 +22,17 @@ S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-catspeech-eof.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-catspeech-eof.patch
 }
 
 src_install() {
-	dobin ${S}/bin/speechd ${S}/bin/catspeech
+	dobin "${S}"/bin/speechd "${S}"/bin/catspeech
 	use esd && dosed 's,#\($use_esd\),\1,g' /usr/bin/speechd
 	insinto /etc
 	doins  speechd.sub speechdrc
-	newinitd ${FILESDIR}/speechd.rc speechd
-	doman ${S}/man/man1/*.1
+	newinitd "${FILESDIR}"/speechd.rc speechd
+	doman "${S}"/man/man1/*.1
 	dodoc README AUTHORS CHANGELOG TODO speechio.faq
 }
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/festival-freebsoft-utils
-# Copyright 2000-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.15 2008/03/24 23:48:14 fmccor Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/ChangeLog,v 1.16 2009/10/11 21:46:05 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
+  festival-freebsoft-utils-0.2.ebuild, festival-freebsoft-utils-0.4.ebuild,
+  festival-freebsoft-utils-0.6.ebuild:
+  QA fixes, unquoted variables
 
   24 Mar 2008; Ferris McCormick <fmccor@gentoo.org>
   festival-freebsoft-utils-0.6.ebuild:

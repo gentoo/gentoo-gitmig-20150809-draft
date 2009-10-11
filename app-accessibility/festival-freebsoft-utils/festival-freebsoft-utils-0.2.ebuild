@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/festival-freebsoft-utils-0.2.ebuild,v 1.6 2005/01/01 10:47:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-freebsoft-utils/festival-freebsoft-utils-0.2.ebuild,v 1.7 2009/10/11 21:46:05 halcy0n Exp $
 
 DESCRIPTION="a collection of Festival functions for speech-dispatcher"
 HOMEPAGE="http://www.freebsoft.org/festival-freebsoft-utils"
@@ -19,5 +19,5 @@ src_compile(){
 
 src_install() {
 	insinto /usr/lib/festival
-	doins ${S}/*.scm
+	doins "${S}"/*.scm
 }
