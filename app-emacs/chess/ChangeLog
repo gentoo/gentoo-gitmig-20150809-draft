@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/chess
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.29 2009/09/10 13:07:37 ulm Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/ChangeLog,v 1.30 2009/10/11 19:45:02 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> chess-2.0_beta6-r2.ebuild:
+  ppc stable #288395
 
 *chess-2.0_beta6-r2 (10 Sep 2009)
 
