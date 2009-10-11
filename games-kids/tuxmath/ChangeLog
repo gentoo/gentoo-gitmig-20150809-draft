@@ -1,6 +1,12 @@
 # ChangeLog for games-kids/tuxmath
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.10 2009/04/30 20:35:56 mr_bones_ Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmath/ChangeLog,v 1.11 2009/10/11 06:34:40 mr_bones_ Exp $
+
+*tuxmath-1.7.2 (11 Oct 2009)
+
+  11 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  +tuxmath-1.7.2.ebuild:
+  version bump - ebuild submitted by Jonathan via bug #210054
 
   30 Apr 2009; Michael Sterrett <mr_bones_@gentoo.org>
   tuxmath-20010907.ebuild:
