@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/opal
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.57 2009/09/29 18:03:39 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/opal/ChangeLog,v 1.58 2009/10/11 12:42:28 pauldv Exp $
+
+  11 Oct 2009; Paul de Vrieze <pauldv@gentoo.org> opal-3.6.6.ebuild:
+  Update version dependency for ptlib. Version 2.6.2 is certainly broken.
+  While this version is no longer in the tree people can still have it
+  installed. Set the minimal version to 2.6.4 as that is in the tree, and 
+  the actual required version is not clear.
 
   29 Sep 2009; Mounir Lamouri <volkmar@gentoo.org> opal-3.6.6.ebuild:
   Changing filter-flags to append-flags after ssuominen advice.
