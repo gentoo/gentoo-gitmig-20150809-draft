@@ -1,12 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.2.1.1.ebuild,v 1.2 2009/06/08 17:21:48 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/postfixadmin/postfixadmin-2.2.1.1.ebuild,v 1.3 2009/10/11 08:39:31 hollow Exp $
 
 inherit eutils webapp depend.php confutils
 
 DESCRIPTION="Web Based Management tool for Postfix style virtual domains and users."
 HOMEPAGE="http://high5.net/postfixadmin/"
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 RESTRICT="mirror"
 
 LICENSE="GPL-2"
@@ -26,8 +26,6 @@ pkg_setup() {
 	webapp_pkg_setup
 
 	confutils_require_any mysql postgres
-	confutils_use_depend_built_with_all mysql mail-mta/postfix mysql
-	confutils_use_depend_built_with_all postgres mail-mta/postfix postgres
 
 	if use mysql; then
 		enewgroup vacation
