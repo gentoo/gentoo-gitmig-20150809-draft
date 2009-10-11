@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.6 2009/07/06 10:23:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.6.0_p2-r2.ebuild,v 1.7 2009/10/11 19:04:35 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -32,10 +32,10 @@ EXT_DIR=${WORKDIR}/${EXT_P}/
 EXT_VDR_PV="${PV/_p/-}"
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
-HOMEPAGE="http://www.cadsoft.de/vdr/"
-SRC_URI="ftp://ftp.cadsoft.de/vdr/${MY_P}.tar.bz2
-	ftp://ftp.cadsoft.de/vdr/Developer/${MY_P}-1.diff
-	ftp://ftp.cadsoft.de/vdr/Developer/${MY_P}-2.diff
+HOMEPAGE="http://www.tvdr.de/"
+SRC_URI="ftp://ftp.tvdr.de/vdr/${MY_P}.tar.bz2
+	ftp://ftp.tvdr.de/vdr/Developer/${MY_P}-1.diff
+	ftp://ftp.tvdr.de/vdr/Developer/${MY_P}-2.diff
 	http://www.zulu-entertainment.de/files/patches/${EXT_P}.tar.bz2"
 
 KEYWORDS="~amd64 ~ppc ~x86"

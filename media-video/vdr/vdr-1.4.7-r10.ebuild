@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.11 2009/07/06 10:23:35 zzam Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.4.7-r10.ebuild,v 1.12 2009/10/11 19:04:35 zzam Exp $
 
 inherit eutils flag-o-matic multilib
 
@@ -21,8 +21,8 @@ EXT_DIR="${WORKDIR}/${EXT_P}/"
 #EXT_VDR_PV=1.5.3
 
 DESCRIPTION="Video Disk Recorder - turns a pc into a powerful set top box for DVB"
-HOMEPAGE="http://www.cadsoft.de/vdr/"
-SRC_URI="ftp://ftp.cadsoft.de/vdr/${P}.tar.bz2
+HOMEPAGE="http://www.tvdr.de/"
+SRC_URI="ftp://ftp.tvdr.de/vdr/${P}.tar.bz2
 	http://www.zulu-entertainment.de/files/patches/${EXT_P}.tar.bz2"
 
 #http://dev.gentoo.org/~zzam/extensions-patch/${EXT_P}.tar.bz2"
