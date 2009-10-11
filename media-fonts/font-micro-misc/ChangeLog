@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/font-micro-misc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-micro-misc/ChangeLog,v 1.26 2009/09/24 08:14:51 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/font-micro-misc/ChangeLog,v 1.27 2009/10/11 10:59:58 nixnut Exp $
+
+  11 Oct 2009; nixnut <nixnut@gentoo.org> font-micro-misc-1.0.0.ebuild:
+  ppc stable #282290
 
   24 Sep 2009; Rémi Cardona <remi@gentoo.org> font-micro-misc-1.0.0.ebuild:
   add missing IUSE
