@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/config_confd/config_confd-0.0.2.ebuild,v 1.3 2008/11/23 18:09:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/config_confd/config_confd-0.0.2.ebuild,v 1.4 2009/10/11 23:00:03 halcy0n Exp $
 
 DESCRIPTION="Configuration editor for the /etc/conf.d files"
 HOMEPAGE="http://www.damz.net/config_confd/"
@@ -15,5 +15,5 @@ RDEPEND=">=dev-util/libconf-0.39.21
 >=dev-perl/gtk2-fu-0.10"
 
 src_install() {
-	make install PREFIX=${D}/usr || die "make install failed"
+	make install PREFIX="${D}"/usr || die "make install failed"
 }
