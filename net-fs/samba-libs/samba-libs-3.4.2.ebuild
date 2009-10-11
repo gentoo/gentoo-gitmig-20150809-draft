@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2.ebuild,v 1.2 2009/10/10 22:51:34 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba-libs/samba-libs-3.4.2.ebuild,v 1.3 2009/10/11 11:11:06 patrick Exp $
 
 EAPI="2"
 
@@ -15,7 +15,7 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc64 ~x86"
 IUSE="samba4 ads aio caps cluster cups debug examples ldap pam syslog winbind
-	+tdb +talloc +netapi smbclient smbsharemodes addns tools"
+	+tdb +talloc +netapi +smbclient smbsharemodes addns tools"
 
 DEPEND="dev-libs/popt
 	virtual/libiconv
