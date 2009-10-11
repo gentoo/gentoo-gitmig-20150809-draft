@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.35 2009/09/05 21:55:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.36 2009/10/11 18:35:37 abcd Exp $
+
+  11 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Masking packges that dep on KDE-4.3 to prevent more tree breakage
 
   05 Sep 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   package.mask:
