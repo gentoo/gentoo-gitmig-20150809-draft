@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/cancd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.7 2009/01/14 05:27:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/ChangeLog,v 1.8 2009/10/11 22:52:49 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> cancd-0.1.0.ebuild:
+  QA fixes, unquoted variables
 
   14 Jan 2009; Mike Frysinger <vapier@gentoo.org>
   +files/cancd-0.1.0-build.patch, cancd-0.1.0-r1.ebuild:

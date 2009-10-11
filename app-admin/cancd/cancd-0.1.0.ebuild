@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0.ebuild,v 1.2 2007/01/04 21:31:45 beandog Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0.ebuild,v 1.3 2009/10/11 22:52:49 halcy0n Exp $
 
 DESCRIPTION="This is the CA NetConsole Daemon, a daemon to receive output from
 the Linux netconsole driver."
@@ -18,7 +18,7 @@ src_unpack() {
 		-e '/^CFLAGS/s,-g,,' \
 		-e '/^CFLAGS/s,-O2,,' \
 		-e '/rm cancd cancd.o/s,rm,rm -f,' \
-		${S}/Makefile
+		"${S}"/Makefile
 }
 
 src_compile() {
@@ -28,8 +28,8 @@ src_compile() {
 src_install() {
 	into /usr
 	dosbin cancd
-	newinitd ${FILESDIR}/cancd-init.d cancd
-	newconfd ${FILESDIR}/cancd-conf.d cancd
+	newinitd "${FILESDIR}"/cancd-init.d cancd
+	newconfd "${FILESDIR}"/cancd-conf.d cancd
 	keepdir /var/crash
 	fowners adm:nobody /var/crash
 	fperms 700 /var/crash
