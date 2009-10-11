@@ -1,8 +1,7 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.18 2008/01/11 00:08:02 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/gnome-system-tools-2.14.0.ebuild,v 1.19 2009/10/11 23:29:59 halcy0n Exp $
 
-WANT_AUTOCONF=latest
 WANT_AUTOMAKE=1.9
 inherit gnome2 eutils autotools
 

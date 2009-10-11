@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gnome-system-tools
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.83 2009/04/09 22:16:26 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gnome-system-tools/ChangeLog,v 1.84 2009/10/11 23:29:59 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org>
+  gnome-system-tools-2.14.0.ebuild:
+  QA fixes; remove unnecessary setting of WANT_AUTOCONF to latest
 
 *gnome-system-tools-2.22.2 (09 Apr 2009)
 
