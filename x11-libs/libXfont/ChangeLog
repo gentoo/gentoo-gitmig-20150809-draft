@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libXfont
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.113 2009/10/11 10:56:14 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libXfont/ChangeLog,v 1.114 2009/10/11 23:53:57 remi Exp $
+
+*libXfont-1.4.1 (11 Oct 2009)
+
+  11 Oct 2009; Rémi Cardona <remi@gentoo.org> +libXfont-1.4.1.ebuild:
+  bump to 1.4.1, sync with overlay
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> libXfont-1.4.0.ebuild:
   ppc stable #282290
