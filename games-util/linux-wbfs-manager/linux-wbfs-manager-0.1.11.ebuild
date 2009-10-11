@@ -1,9 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.11.ebuild,v 1.1 2009/09/05 04:06:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/linux-wbfs-manager/linux-wbfs-manager-0.1.11.ebuild,v 1.2 2009/10/11 21:38:19 mr_bones_ Exp $
 
-EAPI="2"
-
+EAPI=2
 inherit toolchain-funcs
 
 DESCRIPTION="WBFS manager for Linux using GTK+"
@@ -17,7 +16,6 @@ IUSE=""
 
 DEPEND="dev-libs/glib:2
 	gnome-base/libglade:2.0"
-RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/${PN}
 
