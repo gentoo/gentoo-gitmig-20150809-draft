@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/git
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.369 2009/10/11 17:28:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/git/ChangeLog,v 1.370 2009/10/11 22:28:17 robbat2 Exp $
+
+*git-1.6.5 (11 Oct 2009)
+
+  11 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> +git-1.6.5.ebuild,
+  git-9999.ebuild:
+  Version bump. Bug #287101: fix manpage formatting. Bug #287104: build
+  manpages as needed.
 
   11 Oct 2009; Tobias Klausmann <klausman@gentoo.org> git-1.6.4.4.ebuild:
   Stable on alpha, bug #287031
