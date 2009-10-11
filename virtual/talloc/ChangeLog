@@ -1,6 +1,10 @@
 # ChangeLog for virtual/talloc
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/talloc/ChangeLog,v 1.1 2009/10/09 17:19:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/talloc/ChangeLog,v 1.2 2009/10/11 20:16:21 dev-zero Exp $
+
+  11 Oct 2009; Tiziano Müller <dev-zero@gentoo.org> talloc-1.0.0.ebuild:
+  Added version to samba-libs dep (earlier samba-libs does not have a talloc
+  USE flag).
 
 *talloc-1.0.0 (09 Oct 2009)
 
