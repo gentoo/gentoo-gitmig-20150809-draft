@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Bio-Graphics
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Graphics/ChangeLog,v 1.1 2009/10/11 21:32:05 weaver Exp $
+
+*Bio-Graphics-1.982 (11 Oct 2009)
+
+  11 Oct 2009; Andrey Kislyuk <weaver@gentoo.org> +metadata.xml,
+  +Bio-Graphics-1.982.ebuild:
+  New package, dependency for sci-biology/gbrowse, ebuild written by me
+
