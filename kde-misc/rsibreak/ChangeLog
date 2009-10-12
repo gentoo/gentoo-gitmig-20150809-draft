@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/rsibreak
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.30 2008/11/01 07:35:35 robbat2 Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/ChangeLog,v 1.31 2009/10/12 07:23:34 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> rsibreak-0.7.0.ebuild:
+  QA fix: make PATCHES an array
 
   01 Nov 2008; Robin H. Johnson <robbat2@gentoo.org> Manifest:
   Fix manifest breakage.
