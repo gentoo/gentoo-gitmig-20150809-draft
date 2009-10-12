@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.39.ebuild,v 1.8 2009/10/01 14:55:00 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BerkeleyDB/BerkeleyDB-0.39.ebuild,v 1.9 2009/10/12 11:13:25 tove Exp $
 
 EAPI=2
 
@@ -22,9 +22,7 @@ DEPEND="${RDEPEND}
 
 SRC_TEST="do"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/Gentoo-config-0.26.diff
 	# on Gentoo/FreeBSD we cannot trust on the symlink /usr/include/db.h
 	# as for Gentoo/Linux, so we need to esplicitely declare the exact berkdb
