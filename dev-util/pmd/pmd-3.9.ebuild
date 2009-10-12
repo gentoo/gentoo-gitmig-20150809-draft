@@ -1,11 +1,11 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.9.ebuild,v 1.5 2007/10/06 15:08:00 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pmd/pmd-3.9.ebuild,v 1.6 2009/10/12 18:58:30 ssuominen Exp $
 
 JAVA_PKG_IUSE="doc source test"
 inherit java-pkg-2 java-ant-2
 
-DESCRIPTION="A Java source code analyzer. It finds unused variables, empty catch blocks, unnecessary object creation and so forth."
+DESCRIPTION="A Java source code analyzer."
 HOMEPAGE="http://pmd.sourceforge.net"
 SRC_URI="mirror://sourceforge/pmd/${PN}-src-${PV}.zip"
 
@@ -38,7 +38,7 @@ DEPEND="
 	${COMMON_DEPEND}"
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 
 	# We patch build.xml to include all jars in lib dir
 	cd "${S}"
@@ -67,9 +67,9 @@ src_install() {
 
 	# Create launchers and copy rulesets
 	java-pkg_dolauncher ${PN} --main net.sourceforge.pmd.PMD --java_args "-Xmx512m" \
-		-pre ${FILESDIR}/${P}-launcher-pre-commands
+		-pre "${FILESDIR}"/${P}-launcher-pre-commands
 	java-pkg_dolauncher ${PN}-designer --main net.sourceforge.pmd.util.designer.Designer
-	cp -r rulesets ${D}/usr/share/${PN}
+	cp -r rulesets "${D}"/usr/share/${PN}
 
 	use doc && java-pkg_dojavadoc docs/api
 	use source && java-pkg_dosrc src/*
