@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-1.112.ebuild,v 1.2 2005/04/16 00:40:23 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsweb/cvsweb-1.112.ebuild,v 1.3 2009/10/12 17:00:59 ssuominen Exp $
 
 DESCRIPTION="WWW interface to a CVS tree"
 HOMEPAGE="http://www.freebsd.org/projects/cvsweb.html"
@@ -18,7 +18,7 @@ S="${WORKDIR}/cvsweb"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	cd ${S}
+	cd "${S}"
 	local x
 	for x in cvsweb.cgi cvsweb.conf
 	do
@@ -28,7 +28,6 @@ src_unpack() {
 }
 
 src_install() {
-	cd ${S}
 	insinto /etc/apache/conf
 	doins cvsweb.conf
 	insinto /home/httpd/cgi-bin
