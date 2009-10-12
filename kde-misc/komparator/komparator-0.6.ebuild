@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komparator/komparator-0.6.ebuild,v 1.1 2007/08/27 15:50:03 keytoaster Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komparator/komparator-0.6.ebuild,v 1.2 2009/10/12 09:20:21 abcd Exp $
 
 inherit eutils kde
 
@@ -21,5 +21,5 @@ src_unpack() {
 	kde_src_unpack
 
 	# Fix the desktop file for compliance with the spec.
-	sed -i -e 's/%u %u/%U/' ${S}/src/${PN}.desktop
+	sed -i -e 's/%u %u/%U/' "${S}"/src/${PN}.desktop
 }

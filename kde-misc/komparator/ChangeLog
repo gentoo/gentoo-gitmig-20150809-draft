@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/komparator
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komparator/ChangeLog,v 1.5 2008/03/01 18:51:20 philantrop Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komparator/ChangeLog,v 1.6 2009/10/12 09:20:21 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> komparator-0.6.ebuild:
+  QA fix: unquoted variable
 
 *komparator-0.9 (01 Mar 2008)
 
