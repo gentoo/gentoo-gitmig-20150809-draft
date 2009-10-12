@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.44 2009/10/12 18:49:37 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/package.mask,v 1.45 2009/10/12 20:11:42 ssuominen Exp $
 
 # Vlastimil Babka <caster@gentoo.org> (12 Oct 2009)
 # Requires libstdc++ from >=gcc-4.3
@@ -11,6 +11,7 @@
 # Ryan Hill <dirtyepic@gentoo.org> (26 Sep 2009)
 # requires gcc-4
 >=dev-libs/elfutils-0.140
+>=dev-util/systemtap-1
 
 # Bernard Cafarelli <voyageur@gentoo.org> (25 Aug 2009)
 # Requires libstdc++ from >=gcc-4.2
