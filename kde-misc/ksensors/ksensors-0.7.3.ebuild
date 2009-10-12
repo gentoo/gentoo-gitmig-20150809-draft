@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.3.ebuild,v 1.7 2006/09/29 13:39:22 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.3.ebuild,v 1.8 2009/10/12 09:28:10 abcd Exp $
 
 inherit kde
 
@@ -22,6 +22,5 @@ need-kde 3
 src_unpack()
 {
 	kde_src_unpack
-	cd ${S}
-	rm -f config.cache
+	rm -f "${S}"/config.cache
 }

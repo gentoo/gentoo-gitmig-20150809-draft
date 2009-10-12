@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.3-r2.ebuild,v 1.1 2009/01/11 08:01:40 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ksensors-0.7.3-r2.ebuild,v 1.2 2009/10/12 09:28:10 abcd Exp $
 
 inherit kde
 
@@ -24,17 +24,17 @@ need-kde 3
 src_unpack() {
 	kde_src_unpack
 
-	cd ${WORKDIR}
+	cd "${WORKDIR}"
 
 	# Debian patchset, fixes bugs 120350, 171208, 173821, 232782
 	epatch ${PN}_${PV}-16.diff
 
 	# On Gentoo hddtemp resides in /usr/sbin which is not in the user's
 	# path. Thus, call hddtemp with full path.
-	use hddtemp && epatch ${FILESDIR}/${P}-hddtemp-path.patch
+	use hddtemp && epatch "${FILESDIR}/${P}-hddtemp-path.patch"
 
 	# User-contributed patch, fixes bug 116661
-	use ibmacpi && epatch ${FILESDIR}/${P}-ibm-acpi.patch
+	use ibmacpi && epatch "${FILESDIR}/${P}-ibm-acpi.patch"
 }
 
 src_install() {
@@ -48,10 +48,10 @@ src_install() {
 	doman debian/ksensors.1
 
 	# Remove obsolete menu entry
-	rm -fR ${D}/usr/share/applnk/
+	rm -fR "${D}/usr/share/applnk/"
 
 	insinto /usr/share/applications/kde
-	doins ${FILESDIR}/ksensors.desktop
+	doins "${FILESDIR}/ksensors.desktop"
 }
 
 pkg_postinst() {

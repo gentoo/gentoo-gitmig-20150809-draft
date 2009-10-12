@@ -1,6 +1,11 @@
 # ChangeLog for kde-misc/ksensors
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.16 2009/02/10 14:46:22 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/ksensors/ChangeLog,v 1.17 2009/10/12 09:28:10 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> ksensors-0.7.3.ebuild,
+  ksensors-0.7.3-r1.ebuild, ksensors-0.7.3-r2.ebuild,
+  files/ksensors.desktop:
+  QA fix: unquoted variable, .desktop file encoding
 
   10 Feb 2009; Carsten Lohrke <carlo@gentoo.org> ksensors-0.7.3-r3.ebuild:
   Spacing.
