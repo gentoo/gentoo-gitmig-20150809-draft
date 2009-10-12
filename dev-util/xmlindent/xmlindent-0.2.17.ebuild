@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/xmlindent-0.2.17.ebuild,v 1.3 2007/07/12 01:05:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xmlindent/xmlindent-0.2.17.ebuild,v 1.4 2009/10/12 20:08:46 ssuominen Exp $
 
 inherit eutils
 DESCRIPTION="XML Indent is an XML stream reformatter written in ANSI C, analogous to GNU indent."
