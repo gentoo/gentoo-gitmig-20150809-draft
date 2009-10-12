@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/vamos
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.9 2009/02/12 20:38:59 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/vamos/ChangeLog,v 1.10 2009/10/12 17:53:03 mr_bones_ Exp $
+
+*vamos-0.6.2 (12 Oct 2009)
+
+  12 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> -vamos-0.6.0.ebuild,
+  -files/vamos-0.6.0-as-needed.patch, -files/vamos-0.6.0-gcc43.patch,
+  +vamos-0.6.2.ebuild, +files/vamos-0.6.2-as-needed.patch:
+  version bump; clean old
 
   12 Feb 2009; Tupone Alfredo <tupone@gentoo.org>
   +files/vamos-0.5.5-as-needed.patch, +files/vamos-0.6.0-as-needed.patch,
