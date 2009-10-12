@@ -1,4 +1,4 @@
-# $Id: gdesklets-core-0.36.1-bash-completion,v 1.1 2009/06/01 12:03:14 nixphoeni Exp $
+# $Id: gdesklets-core-0.36.1-bash-completion,v 1.2 2009/10/12 18:51:57 nixphoeni Exp $
 # See http://devmanual.gentoo.org/tasks-reference/completion/index.html
 # Author: Joe Sapp
 
@@ -37,8 +37,8 @@ _gdesklets()
 	esac
 
 	if [[ ${COMP_CWORD} -eq 1 ]] ; then
-		local status="$(gdesklets status)"
-		if [[ "${status}" == *not* ]] ; then
+		local stat="$(gdesklets status)"
+		if [[ "${stat}" == *not* ]] ; then
 			opts="${opts} ${not_running_opts}"
 		else
 			opts="${opts} ${running_opts}"
