@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopperl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.61 2009/07/06 18:07:43 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopperl/ChangeLog,v 1.62 2009/10/12 19:54:27 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -dcopperl-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   06 Jul 2009; Brent Baude <ranger@gentoo.org> ChangeLog:
   Marking dcopperl-3.5.10 ppc64 stable for bug 271889

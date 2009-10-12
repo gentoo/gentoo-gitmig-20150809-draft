@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/fifteenapplet
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/fifteenapplet/ChangeLog,v 1.91 2009/07/12 09:54:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/fifteenapplet/ChangeLog,v 1.92 2009/10/12 19:57:27 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  -fifteenapplet-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   fifteenapplet-3.5.10.ebuild:

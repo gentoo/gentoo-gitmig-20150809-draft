@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdemultimedia-kfile-plugins
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kfile-plugins/ChangeLog,v 1.95 2009/07/12 10:15:31 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia-kfile-plugins/ChangeLog,v 1.96 2009/10/12 20:47:36 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  -kdemultimedia-kfile-plugins-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org>
   kdemultimedia-kfile-plugins-3.5.10.ebuild:

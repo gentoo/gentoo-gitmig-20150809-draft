@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kalyptus
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.70 2009/10/12 05:32:53 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kalyptus/ChangeLog,v 1.71 2009/10/12 20:01:17 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kalyptus-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kalyptus-3.5.9.ebuild,
   kalyptus-3.5.10.ebuild:
