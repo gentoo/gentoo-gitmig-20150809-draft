@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.4.ebuild,v 1.11 2008/09/20 14:26:35 coldwind Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/webcpp/webcpp-0.8.4.ebuild,v 1.12 2009/10/12 20:29:39 ssuominen Exp $
 
 inherit eutils
 
-DESCRIPTION="converts source code into HTML file using a customizable syntax highlighting engine and colour schemes"
+DESCRIPTION="converts source code into HTML using a customizable syntax highlight engine and colour schemes"
 HOMEPAGE="http://webcpp.sourceforge.net/"
 SRC_URI="mirror://sourceforge/webcpp/${P}-src.tar.gz"
 
