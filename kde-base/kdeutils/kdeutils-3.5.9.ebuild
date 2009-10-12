@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.9.ebuild,v 1.2 2008/03/07 00:40:10 dirtyepic Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/kdeutils-3.5.9.ebuild,v 1.3 2009/10/12 05:38:48 abcd Exp $
 
 EAPI="1"
 inherit kde-dist eutils
@@ -30,7 +30,7 @@ DEPEND="${BOTH_DEPEND}
 		x11-proto/xproto
 		virtual/os-headers"
 
-PATCHES="${FILESDIR}/superkaramba-3.5.7-network_sensor.patch"
+PATCHES=( "${FILESDIR}/superkaramba-3.5.7-network_sensor.patch" )
 EPATCH_EXCLUDE="klaptopdaemon-3.5-suspend2+xsession-errors.diff
 				klaptopdaemon-3.5-lock-and-hibernate.diff"
 

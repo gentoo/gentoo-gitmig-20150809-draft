@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/kweather-3.5.9.ebuild,v 1.8 2008/05/18 16:08:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kweather/kweather-3.5.9.ebuild,v 1.9 2009/10/12 05:44:11 abcd Exp $
 
 KMNAME=kdetoys
 EAPI="1"
@@ -12,4 +12,4 @@ IUSE="kdehiddenvisibility"
 
 DEPEND=""
 
-PATCHES="${FILESDIR}/${P}-gcc-4.3.patch"
+PATCHES=( "${FILESDIR}/${P}-gcc-4.3.patch" )

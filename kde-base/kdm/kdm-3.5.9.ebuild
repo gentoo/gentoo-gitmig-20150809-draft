@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.9.ebuild,v 1.7 2008/05/18 22:14:23 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.5.9.ebuild,v 1.8 2009/10/12 05:39:34 abcd Exp $
 
 KMNAME=kdebase
 EAPI="1"
@@ -26,8 +26,8 @@ RDEPEND="${DEPEND}
 	x11-apps/xmessage"
 PDEPEND=">=kde-base/kdesktop-${PV}:${SLOT}"
 
-PATCHES="${FILESDIR}/${PN}-3.5.7-bsd-shutdown.patch
-	${FILESDIR}/${P}-respect-cflags.patch"
+PATCHES=( "${FILESDIR}/${PN}-3.5.7-bsd-shutdown.patch"
+	"${FILESDIR}/${P}-respect-cflags.patch" )
 
 src_compile() {
 	local myconf="--with-x-binaries-dir=/usr/bin $(use_with pam)"

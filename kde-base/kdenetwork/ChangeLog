@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.299 2009/06/14 12:56:41 alexxy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.300 2009/10/12 05:36:35 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kdenetwork-3.5.9.ebuild:
+  Fix QA issues
 
   14 Jun 2009; Alexey Shvetsov <alexxy@gentoo.org>
   -files/kopete-3.5.5-enable-final-redefines.patch,

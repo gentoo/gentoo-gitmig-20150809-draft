@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ksirtet-3.5.10.ebuild,v 1.7 2009/07/12 12:04:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksirtet/ksirtet-3.5.10.ebuild,v 1.8 2009/10/12 05:43:39 abcd Exp $
 KMNAME=kdegames
 EAPI="1"
 inherit kde-meta
@@ -16,4 +16,4 @@ KMEXTRACTONLY=libkdegames
 KMCOMPILEONLY=libksirtet
 KMCOPYLIB="libkdegames libkdegames"
 
-PATCHES="${FILESDIR}/ksirtet-3.5.9-gcc-4.3.patch"
+PATCHES=( "${FILESDIR}/ksirtet-3.5.9-gcc-4.3.patch" )

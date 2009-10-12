@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.11 2009/02/05 01:33:14 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.5.9.ebuild,v 1.12 2009/10/12 05:34:25 abcd Exp $
 
 EAPI="1"
 WANT_AUTOMAKE="1.10"
 
-inherit autotools eutils kde
+inherit eutils kde
 
 DESCRIPTION="KDE internationalization package"
 HOMEPAGE="http://www.kde.org/"

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ksim-3.5.10.ebuild,v 1.7 2009/07/12 10:56:05 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ksim-3.5.10.ebuild,v 1.8 2009/10/12 05:43:12 abcd Exp $
 
 KMNAME=kdeutils
 EAPI="1"
@@ -13,7 +13,7 @@ IUSE="kdehiddenvisibility snmp"
 DEPEND="x11-libs/libXext
 	snmp? ( net-analyzer/net-snmp )"
 
-PATCHES="${FILESDIR}/${PN}-3.5.8-freebsd.patch"
+PATCHES=( "${FILESDIR}/${PN}-3.5.8-freebsd.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack

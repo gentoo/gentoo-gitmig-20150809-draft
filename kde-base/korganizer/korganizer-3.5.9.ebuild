@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.9.ebuild,v 1.9 2008/05/18 22:21:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-3.5.9.ebuild,v 1.10 2009/10/12 05:41:44 abcd Exp $
 
 KMNAME=kdepim
 EAPI="1"
@@ -55,7 +55,7 @@ KMEXTRA="
 	kdgantt
 	kontact/plugins/korganizer/" # We add here the kontact's plugin instead of compiling it with kontact because it needs a lot of korganizer deps.
 
-PATCHES="${FILESDIR}/${P}-kdeenablefinal.patch"
+PATCHES=( "${FILESDIR}/${P}-kdeenablefinal.patch" )
 
 src_unpack() {
 	kde-meta_src_unpack

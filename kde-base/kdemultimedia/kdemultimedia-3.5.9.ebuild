@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.9.ebuild,v 1.8 2008/05/18 21:42:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.5.9.ebuild,v 1.9 2009/10/12 05:36:02 abcd Exp $
 
 EAPI="1"
 inherit kde-dist flag-o-matic
@@ -35,8 +35,8 @@ RDEPEND="${DEPEND}
 DEPEND="${DEPEND}
 	dev-util/pkgconfig"
 
-PATCHES="${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch
-		${FILESDIR}/kdemultimedia-kioslaves-3.5.8-freebsd.patch"
+PATCHES=( "${FILESDIR}/kdemultimedia-3.5.5+flac-1.1.3.patch"
+		"${FILESDIR}/kdemultimedia-kioslaves-3.5.8-freebsd.patch" )
 
 pkg_setup() {
 	kde_pkg_setup

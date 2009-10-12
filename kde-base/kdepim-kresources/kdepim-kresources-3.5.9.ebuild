@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.9.ebuild,v 1.7 2008/05/18 22:13:05 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-kresources/kdepim-kresources-3.5.9.ebuild,v 1.8 2009/10/12 05:37:45 abcd Exp $
 
 KMNAME=kdepim
 KMMODULE=kresources
@@ -45,7 +45,7 @@ KMCOMPILEONLY="
 	libkcal/
 	kaddressbook/common/"
 
-PATCHES="${WORKDIR}/patches/kdepim-kresources-3.5_use-installed-kode.diff"
+PATCHES=( "${WORKDIR}/patches/kdepim-kresources-3.5_use-installed-kode.diff" )
 
 src_compile() {
 	export DO_NOT_COMPILE="knotes libkcal"

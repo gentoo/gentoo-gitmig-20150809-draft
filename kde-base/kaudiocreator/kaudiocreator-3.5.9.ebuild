@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.5.9.ebuild,v 1.7 2008/05/18 21:10:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kaudiocreator/kaudiocreator-3.5.9.ebuild,v 1.8 2009/10/12 05:33:24 abcd Exp $
 
 KMNAME=kdemultimedia
 EAPI="1"
@@ -24,7 +24,7 @@ KMEXTRACTONLY="libkcddb"
 KMCOMPILEONLY="kscd
 	libkcddb/"
 
-PATCHES="${FILESDIR}/kaudiocreator-3.5.6-arts.patch"
+PATCHES=( "${FILESDIR}/kaudiocreator-3.5.6-arts.patch" )
 
 src_compile () {
 	DO_NOT_COMPILE=libkcddb kde-meta_src_compile myconf configure

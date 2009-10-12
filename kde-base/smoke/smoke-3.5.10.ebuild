@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.10.ebuild,v 1.6 2009/07/12 09:48:56 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/smoke-3.5.10.ebuild,v 1.7 2009/10/12 05:45:35 abcd Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="kalyptus/"
@@ -21,7 +21,7 @@ DEPEND="dev-lang/perl
 				# is between a smoke compiled with and without qscintilla
 				# support. --danarmak
 
-PATCHES="${FILESDIR}/no-gtk-glib-check.diff"
+PATCHES=( "${FILESDIR}/no-gtk-glib-check.diff" )
 
 # enable-final works, but requires at least 1.5GB of RAM to complete without swapping,
 # so it's best to turn it off here. (I don't have that much RAM, so can't estimate
