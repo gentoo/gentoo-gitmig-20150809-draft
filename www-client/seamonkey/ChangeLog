@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.203 2009/10/03 16:11:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.204 2009/10/12 03:01:03 anarchy Exp $
+
+*seamonkey-2.0_rc1 (12 Oct 2009)
+
+  12 Oct 2009; Jory A. Pratt <anarchy@gentoo.org>
+  -seamonkey-2.0_beta2.ebuild, +seamonkey-2.0_rc1.ebuild:
+  update to rc1 thanks to Polynomial-C, also add back crypt useflag which
+  was drop'd for enigmail support
 
   03 Oct 2009; Joseph Jezak <josejx@gentoo.org> seamonkey-1.1.18.ebuild:
   Marked ppc stable for bug #286721.

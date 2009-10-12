@@ -1,18 +1,19 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0_beta2.ebuild,v 1.2 2009/09/28 03:56:21 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.0_rc1.ebuild,v 1.1 2009/10/12 03:01:03 anarchy Exp $
 
 EAPI="2"
 WANT_AUTOCONF="2.1"
 
-inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension
+inherit flag-o-matic toolchain-funcs eutils mozconfig-3 makeedit multilib fdo-mime autotools mozextension java-pkg-opt-2
 
 PATCH="${PN}-2.0-patches-0.1"
+EMVER="0.96.0"
 
-LANGS="be ca de en-US es-AR es-ES fr gl hu lt nb-NO pl pt-PT ru sk tr"
+LANGS="be ca cs de en-US es-AR es-ES fr gl hu lt nb-NO nl pl pt-PT ru sk tr"
 NOSHORTLANGS="es-AR"
 
-MY_PV="${PV/_beta/b}"
+MY_PV="${PV/_rc/rc}"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Seamonkey Web Browser"
@@ -21,11 +22,12 @@ HOMEPAGE="http://www.seamonkey-project.org"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 SLOT="0"
 LICENSE="|| ( MPL-1.1 GPL-2 LGPL-2.1 )"
-IUSE="java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming sqlite restrict-javascript"
+IUSE="+alsa +crypt java ldap mozdevelop moznocompose moznoirc moznomail moznoroaming sqlite restrict-javascript"
 
 REL_URI="http://releases.mozilla.org/pub/mozilla.org/${PN}/releases"
 SRC_URI="${REL_URI}/${MY_PV}/source/${MY_P}.source.tar.bz2
-	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2"
+	http://dev.gentoo.org/~anarchy/dist/${PATCH}.tar.bz2
+	crypt? ( !moznomail? ( http://www.mozilla-enigmail.org/download/source/enigmail-${EMVER}.tar.gz ) )"
 
 for X in ${LANGS} ; do
 	if [ "${X}" != "en" ] && [ "${X}" != "en-US" ]; then
@@ -47,17 +49,18 @@ RDEPEND="java? ( virtual/jre )
 	>=sys-devel/binutils-2.16.1
 	>=dev-libs/nss-3.12.2
 	>=dev-libs/nspr-4.8
-	media-libs/alsa-lib
-	sqlite? ( >=dev-db/sqlite-3.6.7 )
+	alsa? ( media-libs/alsa-lib )
+	sqlite? ( >=dev-db/sqlite-3.6.10 )
 	>=app-text/hunspell-1.2
 	x11-libs/cairo[X]
-	x11-libs/pango[X]"
+	x11-libs/pango[X]
+	crypt? ( !moznomail? ( >=app-crypt/gnupg-1.4 ) )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
-	java? ( >=dev-java/java-config-0.2.0 )"
+	java? ( >=virtual/jdk-1.4 )"
 
-PDEPEND="restrict-javascript? ( >=www-plugins/noscript-1.9.6.6 )"
+PDEPEND="restrict-javascript? ( www-plugins/noscript )"
 
 S="${WORKDIR}/comm-central"
 
@@ -103,6 +106,8 @@ src_unpack() {
 }
 
 pkg_setup() {
+	java-pkg-opt-2_pkg_setup
+
 	if use sqlite ; then
 		einfo
 		elog "You are enabling system sqlite. Do not file a bug with gentoo if you have"
@@ -115,10 +120,19 @@ pkg_setup() {
 }
 
 src_prepare() {
+	java-pkg-opt-2_src_prepare
+
 	# Apply our patches
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}"
+
+	if use crypt && ! use moznomail; then
+		mv "${WORKDIR}"/enigmail "${S}"/mailnews/extensions/enigmail
+		cd "${S}"/mailnews/extensions/enigmail || die
+		makemake2
+		cd "${S}"
+	fi
 
 	eautoreconf
 }
@@ -160,12 +174,6 @@ src_configure() {
 		fi
 	fi
 
-	if use sqlite ; then
-		mozconfig_annotate 'sqlite' --enable-system-sqlite
-	else
-		mozconfig_annotate '-sqlite' --enable-system-sqlite
-	fi
-
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --enable-application=suite
 	mozconfig_annotate 'broken' --disable-mochitest
@@ -182,8 +190,13 @@ src_configure() {
 	mozconfig_annotate '' --disable-installer
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
 
+	# Enable/Disable based on USE flags
+	mozconfig_use_enable alsa ogg
+	mozconfig_use_enable alsa wave
 	mozconfig_use_enable ldap
 	mozconfig_use_enable ldap ldap-experimental
+	mozconfig_use_enable sqlite system-sqlite
+	mozconfig_use_enable java javaxpcom
 
 	# Finalize and report settings
 	mozconfig_final
@@ -208,6 +221,11 @@ src_compile() {
 	# Should the build use multiprocessing? Not enabled by default, as it tends to break.
 	[ "${WANT_MP}" = "true" ] && jobs=${MAKEOPTS} || jobs="-j1"
 	emake ${jobs} || die
+
+	# Only build enigmail extension if conditions are met.
+	if use crypt && ! use moznomail; then
+		emake -C "${S}"/mailnews/extensions/enigmail || die "make enigmail failed"
+	fi
 }
 
 src_install() {
@@ -239,6 +257,17 @@ src_install() {
 	# Plugins dir
 	rm -rf "${D}"${MOZILLA_FIVE_HOME}/plugins || die "failed to remove existing plugins dir"
 	dosym ../nsbrowser/plugins "${MOZILLA_FIVE_HOME}"/plugins
+
+	# shiny new man page
+	doman "${S}"/suite/app/${PN}.1
+}
+
+pkg_preinst() {
+	declare MOZILLA_FIVE_HOME="${ROOT}/usr/$(get_libdir)/${PN}"
+
+	if [ -d ${MOZILLA_FIVE_HOME}/plugins ] ; then
+		rm ${MOZILLA_FIVE_HOME}/plugins -rf
+	fi
 }
 
 pkg_postinst() {
