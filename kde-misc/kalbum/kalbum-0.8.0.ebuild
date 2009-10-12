@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kalbum/kalbum-0.8.0.ebuild,v 1.4 2007/02/05 10:44:39 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kalbum/kalbum-0.8.0.ebuild,v 1.5 2009/10/12 08:52:07 abcd Exp $
 
 inherit kde
 
@@ -13,11 +13,3 @@ LICENSE="GPL-2"
 KEYWORDS="amd64 ppc sparc x86"
 
 need-kde 3
-
-src_install() {
-	kde_src_install
-
-	insopts -o root -g root -m 644
-	insinto /usr/share/mimelnk/application/
-	doins ${FILESDIR}/${P}/x-kalbum.desktop
-}
