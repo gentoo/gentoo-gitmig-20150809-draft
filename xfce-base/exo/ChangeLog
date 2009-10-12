@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/exo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.11 2009/10/09 19:51:33 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/exo/ChangeLog,v 1.12 2009/10/12 14:36:53 darkside Exp $
+
+*exo-0.3.104 (12 Oct 2009)
+
+  12 Oct 2009; Jeremy Olexa <darkside@gentoo.org> -exo-0.3.103-r1.ebuild,
+  +exo-0.3.104.ebuild:
+  Version bump, minor fixes include eject patch from upstream and typo fixes
 
 *exo-0.3.103-r1 (09 Oct 2009)
 
