@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.3.ebuild,v 1.1 2009/09/03 13:35:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3369.3-r1.ebuild,v 1.1 2009/10/12 00:54:03 nyhm Exp $
 
+EAPI=2
 inherit eutils multilib games
 
 MY_P="ut2004-lnxpatch${PV%.*}-2.tar.bz2"
@@ -15,35 +16,38 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/${MY_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="dedicated opengl"
 RESTRICT="mirror strip"
 PROPERTIES="interactive"
 
-RDEPEND=">=games-fps/ut2004-data-3186-r2
-	>=games-fps/ut2004-bonuspack-ece-1-r1
-	>=games-fps/ut2004-bonuspack-mega-1-r1
-	=virtual/libstdc++-3.3
+UIDEPEND="=virtual/libstdc++-3.3
+	virtual/opengl
 	x11-libs/libXext
 	x11-libs/libX11
 	x11-libs/libXau
 	x11-libs/libXdmcp
 	media-libs/libsdl
-	media-libs/openal
-	opengl? ( virtual/opengl )"
+	media-libs/openal"
+RDEPEND="sys-libs/glibc
+	games-fps/ut2004-data
+	games-fps/ut2004-bonuspack-ece
+	games-fps/ut2004-bonuspack-mega
+	dedicated? ( !games-server/ut2004-ded )
+	opengl? ( ${UIDEPEND} )
+	!dedicated? ( !opengl? ( ${UIDEPEND} ) )"
 DEPEND="app-arch/p7zip"
 
 S=${WORKDIR}/UT2004-Patch
+dir=${GAMES_PREFIX_OPT}/${PN}
 
 GAMES_CHECK_LICENSE="yes"
-dir=${GAMES_PREFIX_OPT}/${PN}
 
 # The executable pages are required #114733
 QA_EXECSTACK_x86="${dir:1}/System/ut2004-bin
 	${dir:1}/System/ucc-bin"
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cd "${S}"/System
 
 	# These files are owned by ut2004-bonuspack-mega
@@ -63,19 +67,32 @@ src_unpack() {
 	else
 		mv -f ucc-bin "${S}"/System/ || die
 	fi
+
+	if use dedicated && ! use opengl ; then
+		rm -f "${S}"/System/ut2004-bin
+	fi
 }
 
 src_install() {
 	insinto "${dir}"
 	doins -r * || die "doins failed"
-	fperms +x "${dir}"/System/{ucc-bin,ut2004-bin} || die
+	fperms +x "${dir}"/System/ucc-bin || die "fperms ucc-bin failed"
 
-	dosym /usr/$(get_libdir)/libopenal.so "${dir}"/System/openal.so || die
-	dosym /usr/$(get_libdir)/libSDL-1.2.so.0 "${dir}"/System/libSDL-1.2.so.0 \
-		|| die
+	if use opengl || ! use dedicated ; then
+		fperms +x "${dir}"/System/ut2004-bin || die "fperms ut2004-bin failed"
 
-	games_make_wrapper ut2004 ./ut2004 "${dir}" "${dir}"
-	make_desktop_entry ut2004 "Unreal Tournament 2004"
+		dosym /usr/$(get_libdir)/libopenal.so "${dir}"/System/openal.so \
+			|| die "dosym openal failed"
+		dosym /usr/$(get_libdir)/libSDL-1.2.so.0 "${dir}"/System/libSDL-1.2.so.0 \
+			|| die "dosym sdl failed"
+
+		games_make_wrapper ut2004 ./ut2004 "${dir}" "${dir}"
+		make_desktop_entry ut2004 "Unreal Tournament 2004"
+	fi
+
+	if use dedicated ; then
+		games_make_wrapper ut2004-ded "./ucc-bin server" "${dir}"/System
+	fi
 
 	prepgamesdirs
 }

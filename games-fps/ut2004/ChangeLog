@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.65 2009/09/03 13:35:31 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.66 2009/10/12 00:54:03 nyhm Exp $
+
+*ut2004-3369.3-r1 (12 Oct 2009)
+
+  12 Oct 2009; Tristan Heaven <nyhm@gentoo.org> -files/ut2004.xml,
+  -ut2004-3369-r4.ebuild, -ut2004-3369.3.ebuild, +ut2004-3369.3-r1.ebuild:
+  Install ut2004-ded wrapper when USE=dedicated for "ucc-bin server"; allow
+  installation of server only (with no client deps)
 
 *ut2004-3369.3 (03 Sep 2009)
 
