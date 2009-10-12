@@ -1,10 +1,10 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/csup-20060318.ebuild,v 1.6 2008/04/14 12:09:03 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/csup/csup-20060318.ebuild,v 1.7 2009/10/12 20:42:28 ssuominen Exp $
 
 inherit toolchain-funcs eutils
 
-DESCRIPTION="C-based rewrite of CVSup (software for distributing and updating collections of files accross a network)"
+DESCRIPTION="A rewrite of CVSup"
 HOMEPAGE="http://www.mu.org/~mux/csup.html"
 SRC_URI="http://mu.org/~mux/csup-snap-${PV}.tgz"
 
