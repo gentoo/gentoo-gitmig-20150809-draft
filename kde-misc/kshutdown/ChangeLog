@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kshutdown
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.20 2009/06/01 16:31:31 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kshutdown/ChangeLog,v 1.21 2009/10/12 08:36:05 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kshutdown-0.8.2.ebuild:
+  QA fix: copyright date
 
   01 Jun 2009; nixnut <nixnut@gentoo.org> kshutdown-1.0.ebuild:
   ppc stable #270536
