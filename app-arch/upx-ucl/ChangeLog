@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/upx-ucl
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.17 2009/08/03 00:02:55 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.18 2009/10/12 17:06:59 halcy0n Exp $
+
+  12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> upx-ucl-1.25-r1.ebuild,
+  upx-ucl-2.02.ebuild, upx-ucl-2.03.ebuild, upx-ucl-3.00.ebuild,
+  upx-ucl-3.02.ebuild, upx-ucl-3.03.ebuild:
+  QA fixes; unquoted variables and useless dodoc LICENSE
 
   02 Aug 2009; Víctor Ostorga <vostorga@gentoo.org>
   +files/upx-ucl-glibc210.patch, upx-ucl-3.00.ebuild, upx-ucl-3.02.ebuild,

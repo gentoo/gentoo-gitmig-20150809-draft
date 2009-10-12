@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-2.03.ebuild,v 1.1 2006/12/01 11:37:07 drizzt Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/upx-ucl-2.03.ebuild,v 1.2 2009/10/12 17:06:59 halcy0n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -30,7 +30,7 @@ src_compile() {
 src_install() {
 	newbin src/upx.out upx
 
-	dodoc BUGS LICENSE NEWS PROJECTS README* THANKS TODO doc/upx.doc doc/*.txt
+	dodoc BUGS NEWS PROJECTS README* THANKS TODO doc/upx.doc doc/*.txt
 	dohtml doc/upx.html
 	doman doc/upx.1
 }
