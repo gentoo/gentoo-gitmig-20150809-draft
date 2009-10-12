@@ -1,13 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.11 2009/10/11 21:34:04 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/package.mask,v 1.12 2009/10/12 09:50:34 abcd Exp $
 
 # Jonathan Callen <abcd@gentoo.org> (11 Oct 2009)
 # Masking packges that dep on KDE-4.3 to prevent more tree breakage
 # (bug #288601)
 >=dev-util/kdevelop-3.9
 dev-util/kdevplatform
->=kde-misc/filelight-1.9_rc
 >=kde-misc/yakuake-2.9.6
 >=net-p2p/ktorrent-3.2.4
 

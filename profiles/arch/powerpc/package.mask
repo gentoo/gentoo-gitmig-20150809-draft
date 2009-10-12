@@ -1,11 +1,10 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.12 2009/10/11 21:34:05 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.mask,v 1.13 2009/10/12 09:50:35 abcd Exp $
 
 # Jonathan Callen <abcd@gentoo.org> (11 Oct 2009)
 # Masking packges that dep on KDE-4.3 to prevent more tree breakage
 # (bug #288601)
->=kde-misc/filelight-1.9_rc
 >=kde-misc/kdiff3-0.9.95
 kde-misc/konq-plugins
 >=kde-misc/krusader-2.0.0
