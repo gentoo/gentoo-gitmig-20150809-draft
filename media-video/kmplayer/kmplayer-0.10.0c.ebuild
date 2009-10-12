@@ -1,13 +1,13 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c.ebuild,v 1.8 2009/05/14 13:23:18 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c.ebuild,v 1.9 2009/10/12 16:07:22 ssuominen Exp $
 
 inherit kde eutils
 
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="KMPlayer is a Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend for KDE."
+DESCRIPTION="KMPlayer is a Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend."
 HOMEPAGE="http://kmplayer.kde.org/"
 SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 
@@ -39,7 +39,7 @@ done
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${PN}-0.10.0-prtypes.patch"
+PATCHES=( "${FILESDIR}/${PN}-0.10.0-prtypes.patch" )
 
 pkg_setup() {
 	if ! use mplayer && ! use xine && ! use cairo && ! use gstreamer ; then

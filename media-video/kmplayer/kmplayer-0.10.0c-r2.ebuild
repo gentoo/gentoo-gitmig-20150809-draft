@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c-r2.ebuild,v 1.1 2009/05/28 12:44:48 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.10.0c-r2.ebuild,v 1.2 2009/10/12 16:07:22 ssuominen Exp $
 
 EAPI="2"
 
@@ -11,7 +11,7 @@ inherit kde eutils
 MY_P="${P/_/-}"
 S="${WORKDIR}/${MY_P}"
 
-DESCRIPTION="Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend for KDE."
+DESCRIPTION="KMPlayer is a Video player plugin for Konqueror and basic MPlayer/Xine/ffmpeg/ffserver/VDR frontend."
 HOMEPAGE="http://kmplayer.kde.org/"
 SRC_URI="http://kmplayer.kde.org/pkgs/${MY_P}.tar.bz2"
 
