@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ftnchek/ftnchek-3.3.1.ebuild,v 1.2 2006/12/09 09:57:18 masterdriverz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ftnchek/ftnchek-3.3.1.ebuild,v 1.3 2009/10/12 19:14:37 ssuominen Exp $
 
 DESCRIPTION="Static analyzer a la 'lint' for Fortran 77"
 HOMEPAGE="http://www.dsm.fordham.edu/~ftnchek/"
@@ -14,15 +14,15 @@ IUSE=""
 DEPEND=""
 
 src_unpack() {
-	unpack "${A}"
+	unpack ${A}
 	cd "${S}"
 	sed -i -e 's:-$(STRIP) $(bindir)/ftnchek$(EXE)::' Makefile.in || die 'sed failed'
 }
 
 src_install() {
-	einstall || die 'einstall failed'
-	dodoc FAQ INSTALL LICENSE PATCHES README ToDo
+	einstall || die
+	dodoc FAQ PATCHES README ToDo
 	dohtml html/*
 	dodir /usr/share/${PN}
-	cp -r test ${D}/usr/share/${PN}
+	cp -r test "${D}"/usr/share/${PN}
 }
