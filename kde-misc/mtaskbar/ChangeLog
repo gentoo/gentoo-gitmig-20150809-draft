@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/mtaskbar
-# Copyright 1999-2006 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/mtaskbar/ChangeLog,v 1.4 2006/11/04 18:04:57 kugelfang Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/mtaskbar/ChangeLog,v 1.5 2009/10/12 09:30:37 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> mtaskbar-0.7.ebuild:
+  QA fix: unquoted variable
 
   04 Nov 2006; Danny van Dyk <kugelfang@gentoo.org> mtaskbar-0.7.ebuild:
   Marked stable on amd64.
