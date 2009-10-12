@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.10 2009/10/11 23:33:10 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logrotate/logrotate-3.7.8.ebuild,v 1.11 2009/10/12 06:41:56 mr_bones_ Exp $
 
 EAPI="2"
 
@@ -26,10 +26,11 @@ DEPEND="${RDEPEND}
 src_prepare() {
 	strip-flags
 
-	epatch "${FILESDIR}"/${PN}-3.7.7-datehack.patch
-	epatch "${FILESDIR}"/${PN}-3.7.7-ignore-hidden.patch
-	epatch "${FILESDIR}"/${PN}-3.7.7-weekly.patch
-	epatch "${FILESDIR}"/${PN}-3.7.7-fbsd.patch
+	epatch \
+		"${FILESDIR}"/${PN}-3.7.7-datehack.patch \
+		"${FILESDIR}"/${PN}-3.7.7-ignore-hidden.patch \
+		"${FILESDIR}"/${PN}-3.7.7-weekly.patch \
+		"${FILESDIR}"/${PN}-3.7.7-fbsd.patch
 }
 
 src_configure() {
