@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.13 2009/07/10 15:36:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.14 2009/10/12 19:09:15 scarabeus Exp $
+
+*openscenegraph-2.8.2 (12 Oct 2009)
+
+  12 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  +openscenegraph-2.8.2.ebuild:
+  [QA] version bump. Makre src_configure play nicely with cmake-utils. Acked
+  by Mr_Bones_
 
   10 Jul 2009; Michael Sterrett <mr_bones_@gentoo.org>
   openscenegraph-2.8.0.ebuild:
