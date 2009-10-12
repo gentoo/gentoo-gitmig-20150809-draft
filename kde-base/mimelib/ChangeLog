@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/mimelib
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.114 2009/10/12 05:45:06 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/mimelib/ChangeLog,v 1.115 2009/10/12 23:12:46 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -mimelib-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> mimelib-3.5.9.ebuild,
   mimelib-3.5.10.ebuild:

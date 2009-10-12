@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/smoke
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.75 2009/10/12 05:45:35 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smoke/ChangeLog,v 1.76 2009/10/12 23:20:15 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -smoke-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> smoke-3.5.9.ebuild,
   smoke-3.5.10.ebuild:

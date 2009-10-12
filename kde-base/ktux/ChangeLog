@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktux
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.121 2009/10/10 10:20:05 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktux/ChangeLog,v 1.122 2009/10/12 22:45:20 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -ktux-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> ktux-4.3.1.ebuild:
   amd64 stable wrt #287697
