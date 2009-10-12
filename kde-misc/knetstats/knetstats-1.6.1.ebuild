@@ -1,10 +1,10 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/knetstats-1.6.1.ebuild,v 1.6 2007/09/27 13:16:25 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/knetstats-1.6.1.ebuild,v 1.7 2009/10/12 09:18:26 abcd Exp $
 
 inherit kde
 
-DESCRIPTION="A simple KDE network monitor that shows statistical information about any network interface in the system tray."
+DESCRIPTION="Simple KDE network monitor that shows statistics about any network interface in the system tray"
 HOMEPAGE="http://knetstats.sourceforge.net"
 SRC_URI="mirror://sourceforge/knetstats/${P}.tar.bz2"
 
@@ -29,6 +29,6 @@ src_unpack() {
 	for X in ${LANGS} ; do
 		use linguas_${X} && MAKE_LANGS="${MAKE_LANGS} ${X}"
 	done
-	rm -f ${S}/configure
+	rm -f "${S}"/configure
 	sed -i -e "s:SUBDIRS=.*:SUBDIRS=${MAKE_LANGS}:" Makefile.am
 }

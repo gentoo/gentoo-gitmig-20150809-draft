@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/knetstats
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/ChangeLog,v 1.8 2009/03/29 14:19:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/knetstats/ChangeLog,v 1.9 2009/10/12 09:18:26 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> knetstats-1.6.1.ebuild,
+  knetstats-1.6.2.ebuild:
+  QA fix: unquoted variable, shorter DESCRIPTION
 
 *knetstats-1.6.2 (29 Mar 2009)
 
