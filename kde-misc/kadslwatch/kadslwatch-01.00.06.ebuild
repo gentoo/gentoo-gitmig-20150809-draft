@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.06.ebuild,v 1.3 2006/09/28 11:32:23 deathwing00 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kadslwatch/kadslwatch-01.00.06.ebuild,v 1.4 2009/10/12 08:41:01 abcd Exp $
 
 inherit kde eutils
 
@@ -22,7 +22,7 @@ need-kde 3
 src_unpack() {
 	kde_src_unpack
 
-	use arts || epatch ${FILESDIR}/${P}-configure.patch
+	use arts || epatch "${FILESDIR}/${P}-configure.patch"
 }
 
 src_install() {
