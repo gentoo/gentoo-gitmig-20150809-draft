@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.2.ebuild,v 1.1 2009/10/12 19:26:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.2.ebuild,v 1.2 2009/10/12 19:42:46 robbat2 Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic
@@ -35,7 +35,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf `use_enable docs`
+	econf --disable-docs
+	# The xml2rfc tool to build the additional docs requires TCL :-(
+	# `use_enable doc docs`
 }
 
 src_compile() {
