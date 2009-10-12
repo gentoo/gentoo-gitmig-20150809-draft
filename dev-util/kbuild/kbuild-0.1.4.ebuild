@@ -1,12 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.4.ebuild,v 1.4 2008/10/28 18:11:02 jokey Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kbuild/kbuild-0.1.4.ebuild,v 1.5 2009/10/12 07:58:02 ssuominen Exp $
 
 EAPI=1
-
-WANT_AUTOMAKE=1.9
-
-inherit eutils autotools
+inherit eutils
 
 MY_P=kBuild-${PV}-src
 DESCRIPTION="A makefile framework for writing simple makefiles for complex tasks"
