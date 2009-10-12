@@ -1,13 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20070618.ebuild,v 1.2 2007/09/22 21:59:21 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20070618.ebuild,v 1.3 2009/10/12 08:00:40 ssuominen Exp $
 
-#
-# WARNING:
-#	If you are using gtk2.8 you need to upgrade to wxGTK-2.6.2
-#
-
-inherit eutils autotools wxwidgets
+inherit eutils wxwidgets
 
 #needed for wxwidgets.eclass
 WX_GTK_VER="2.6"
@@ -22,7 +17,6 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="unicode contrib debug"
 
 RDEPEND="=x11-libs/wxGTK-${WX_GTK_VER}*"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.7

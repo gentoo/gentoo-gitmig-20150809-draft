@@ -1,11 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20071215.ebuild,v 1.2 2008/01/30 23:39:21 jurek Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/codeblocks/codeblocks-1.0_pre20071215.ebuild,v 1.3 2009/10/12 08:00:40 ssuominen Exp $
 
-#needed for wxwidgets.eclass
 WX_GTK_VER="2.8"
-
-inherit eutils autotools wxwidgets
+inherit eutils wxwidgets
 
 DESCRIPTION="Code::Blocks - a free cross-platform C/C++ IDE"
 HOMEPAGE="http://www.codeblocks.org/"
@@ -17,7 +15,6 @@ KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
 IUSE="contrib debug"
 
 RDEPEND="=x11-libs/wxGTK-${WX_GTK_VER}*"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.5
 	>=sys-devel/automake-1.7
