@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.4.0.ebuild,v 1.8 2009/07/14 09:27:27 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.4.0.ebuild,v 1.9 2009/10/12 08:10:16 ssuominen Exp $
 
 IUSE="nls debug"
 
@@ -28,9 +28,6 @@ custom_cflags() {
 }
 
 src_compile() {
-
-	cd ${S}
-
 	local myconf=""
 
 	use debug \
@@ -49,5 +46,5 @@ src_compile() {
 
 src_install () {
 	einstall || die
-	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README TODO
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO
 }
