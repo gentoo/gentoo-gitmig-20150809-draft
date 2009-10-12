@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpercentage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.105 2009/07/12 10:49:50 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpercentage/ChangeLog,v 1.106 2009/10/12 22:05:51 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kpercentage-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org> kpercentage-3.5.10.ebuild:
   alpha/ia64/sparc stable wrt #271889

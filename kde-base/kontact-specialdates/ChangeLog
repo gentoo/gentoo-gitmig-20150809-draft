@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kontact-specialdates
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.116 2009/10/10 09:55:15 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kontact-specialdates/ChangeLog,v 1.117 2009/10/12 21:59:33 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  -kontact-specialdates-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   kontact-specialdates-4.3.1.ebuild:

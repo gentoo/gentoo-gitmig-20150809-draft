@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.107 2009/07/12 09:29:38 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.108 2009/10/12 22:36:38 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -ktnef-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Jul 2009; Raúl Porcel <armin76@gentoo.org> ktnef-3.5.10.ebuild:
   alpha/ia64/sparc stable wrt #271889

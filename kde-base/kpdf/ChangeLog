@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpdf
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.172 2009/10/10 18:21:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpdf/ChangeLog,v 1.173 2009/10/12 22:05:13 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kpdf-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   10 Oct 2009; Raúl Porcel <armin76@gentoo.org> kpdf-3.5.10-r1.ebuild:
   alpha/ia64/sparc stable

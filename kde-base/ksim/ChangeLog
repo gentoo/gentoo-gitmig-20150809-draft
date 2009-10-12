@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ksim
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.103 2009/10/12 05:43:12 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksim/ChangeLog,v 1.104 2009/10/12 22:19:56 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -ksim-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> ksim-3.5.9.ebuild,
   ksim-3.5.10.ebuild:

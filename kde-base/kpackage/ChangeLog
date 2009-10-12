@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kpackage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.59 2009/07/06 18:11:44 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kpackage/ChangeLog,v 1.60 2009/10/12 22:03:19 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kpackage-3.5.9.ebuild:
+  KDE 3.5.9 removal
 
   06 Jul 2009; Brent Baude <ranger@gentoo.org> kpackage-3.5.10.ebuild:
   Marking kpackage-3.5.10 ppc64 stable for bug 271889
