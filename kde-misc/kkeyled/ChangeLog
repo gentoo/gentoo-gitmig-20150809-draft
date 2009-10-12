@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kkeyled
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.11 2009/02/10 01:39:01 carlo Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kkeyled/ChangeLog,v 1.12 2009/10/12 07:30:37 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kkeyled-0.8.11-r1.ebuild:
+  QA fix: copyright date, leading spaces
 
 *kkeyled-0.8.11-r1 (10 Feb 2009)
 
