@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/pmount
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.71 2009/10/05 16:09:10 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmount/ChangeLog,v 1.72 2009/10/12 13:57:42 ssuominen Exp $
+
+*pmount-0.9.20 (12 Oct 2009)
+
+  12 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> +pmount-0.9.20.ebuild,
+  +files/pmount-0.9.20-ext4-support.patch:
+  Version bump.
 
   05 Oct 2009; Raúl Porcel <armin76@gentoo.org> pmount-0.9.19.ebuild:
   arm/ia64/sh/sparc stable wrt #281208
