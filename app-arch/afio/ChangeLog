@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/afio
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/ChangeLog,v 1.18 2009/09/23 15:09:29 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/ChangeLog,v 1.19 2009/10/12 16:30:48 halcy0n Exp $
+
+  12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> afio-2.4.7.ebuild,
+  afio-2.5.ebuild:
+  QA fixes; unquoted variables
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> afio-2.5.ebuild:
   Remove virtual/libc

@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.15.ebuild,v 1.6 2009/07/06 20:45:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/advancecomp/advancecomp-1.15.ebuild,v 1.7 2009/10/12 16:28:50 halcy0n Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 
 	# bzip2 support wont compile, here's a quick patch.
-	cd ${S}; epatch ${FILESDIR}/${PN}-1.13-bzip2-compile-plz-k-thx.diff
+	cd "${S}"; epatch "${FILESDIR}"/${PN}-1.13-bzip2-compile-plz-k-thx.diff
 }
 
 src_compile() {

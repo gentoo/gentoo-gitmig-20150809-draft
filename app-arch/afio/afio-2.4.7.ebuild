@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.4.7.ebuild,v 1.21 2005/01/01 11:40:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/afio/afio-2.4.7.ebuild,v 1.22 2009/10/12 16:30:48 halcy0n Exp $
 
 inherit eutils
 
@@ -17,8 +17,8 @@ DEPEND="app-arch/gzip"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/Makefile.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/Makefile.patch
 }
 
 src_compile() {
