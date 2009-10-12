@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.56 2009/09/06 20:59:19 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.57 2009/10/12 22:47:35 eva Exp $
+
+  13 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org -gksu-2.0.0.ebuild,
+  -gksu-2.0.0-r2.ebuild, -files/gksu-2.0.0-new-nautilus.patch:
+  Clean up old revisions.
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> gksu-2.0.2.ebuild:
   Marking gksu-2.0.2 ppc64 for bug 278443

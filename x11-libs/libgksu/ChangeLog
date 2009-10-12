@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libgksu
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.60 2009/09/06 20:58:06 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libgksu/ChangeLog,v 1.61 2009/10/12 22:45:54 eva Exp $
+
+  13 Oct 2009; Gilles Dartiguelongue <eva@gentoo.org -libgksu-2.0.5.ebuild:
+  Clean up old revisions.
 
   06 Sep 2009; Brent Baude <ranger@gentoo.org> libgksu-2.0.9.ebuild:
   Marking libgksu-2.0.9 ppc64 for bug 278443
