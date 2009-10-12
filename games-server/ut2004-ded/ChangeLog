@@ -1,6 +1,16 @@
 # ChangeLog for games-server/ut2004-ded
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.22 2009/09/03 12:37:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ChangeLog,v 1.23 2009/10/12 00:54:18 nyhm Exp $
+
+*ut2004-ded-3369.3-r1 (12 Oct 2009)
+
+  12 Oct 2009; Tristan Heaven <nyhm@gentoo.org> files/ut2004-ded.confd,
+  -ut2004-ded-3369.ebuild, files/ut2004-ded.initd,
+  -ut2004-ded-3369.3.ebuild, -files/ut2004-ded.rc,
+  +ut2004-ded-3369.3-r1.ebuild:
+  Install ut2004-ded wrapper for "ucc-bin server"; depend on
+  ut2004-bonuspack-{ece,mega} and remove files which are replaced by them to
+  prevent collisons; improve init script
 
 *ut2004-ded-3369.3 (03 Sep 2009)
 

@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.3.ebuild,v 1.1 2009/09/03 12:37:38 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/ut2004-ded/ut2004-ded-3369.3-r1.ebuild,v 1.1 2009/10/12 00:54:18 nyhm Exp $
 
+EAPI=2
 inherit games
 
 BONUSPACK_P="dedicatedserver3339-bonuspack.zip"
@@ -18,22 +19,24 @@ SRC_URI="mirror://3dgamers/unrealtourn2k4/${BONUSPACK_P}
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror strip"
 PROPERTIES="interactive"
 
 DEPEND="app-arch/unzip
 	app-arch/p7zip"
-RDEPEND="sys-libs/glibc"
+RDEPEND="sys-libs/glibc
+	!games-fps/ut2004[dedicated]
+	games-fps/ut2004-bonuspack-ece
+	games-fps/ut2004-bonuspack-mega"
 
 S=${WORKDIR}
 
 GAMES_CHECK_LICENSE="yes"
 dir=${GAMES_PREFIX_OPT}/${PN}
 
-src_unpack() {
-	unpack ${A}
+src_prepare() {
 	cp -rf UT2004-Patch/* . || die
 	rm -rf System/{ucc-bin*,ut2004-bin*,*.dll,*.exe} UT2004-Patch
 	if use amd64 ; then
@@ -42,10 +45,23 @@ src_unpack() {
 		mv -f ut2004-ucc-bin-09192008/ucc-bin System/ || die
 	fi
 	rm -rf ut2004-ucc-bin-09192008
+	# Owned by ut2004-bonuspack-ece
+	rm -f Animations/{MetalGuardAnim,ONSBPAnimations,NecrisAnim,MechaSkaarjAnims}.ukx
+	rm -f Help/BonusPackReadme.txt
+	rm -f Maps/{ONS-Adara,ONS-IslandHop,ONS-Tricky,ONS-Urban}.ut2
+	rm -f Sounds/{CicadaSnds,DistantBooms,ONSBPSounds}.uax
+	rm -f StaticMeshes/{HourAdara,BenMesh02,BenTropicalSM01,ONS-BPJW1,PC_UrbanStatic}.usx
+	rm -f System/{ONS-IslandHop,ONS-Tricky,ONS-Adara,ONS-Urban,OnslaughtBP}.int
+	rm -f System/xaplayersl3.upl
+	rm -f Textures/{ONSBPTextures,BonusParticles,HourAdaraTexor,BenTex02,BenTropical01,PC_UrbanTex,AW-2k4XP,ONSBP_DestroyedVehicles,UT2004ECEPlayerSkins,CicadaTex,Construction_S}.utx
+	# Owned by ut2004-bonuspack-mega
+	rm -f System/{Manifest.ini,Manifest.int,Packages.md5}
 }
 
 src_install() {
 	einfo "This will take a while... go get a pizza or something"
+
+	games_make_wrapper ${PN} "./ucc-bin server" "${dir}"/System
 
 	insinto "${dir}"
 	doins -r * || die "doins failed"
@@ -54,12 +70,13 @@ src_install() {
 	sed \
 		-e "s:@USER@:${GAMES_USER_DED}:" \
 		-e "s:@GROUP@:${GAMES_GROUP}:" \
+		-e "s:@HOME@:${GAMES_PREFIX}:" \
 		"${FILESDIR}"/${PN}.confd > "${T}"/${PN}.confd \
 		|| die "sed confd failed"
 	newconfd "${T}"/${PN}.confd ${PN} || die "newconfd failed"
 
 	sed \
-		-e "s:@DIR@:${dir}/System:g" \
+		-e "s:@DIR@:${GAMES_BINDIR}:g" \
 		"${FILESDIR}"/${PN}.initd > "${T}"/${PN}.initd \
 		|| die "sed initd failed"
 	newinitd "${T}"/${PN}.initd ${PN} || die "initd failed"
@@ -69,7 +86,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-	elog "The server can be started using the /etc/init.d/ut2004-ded script."
 	ewarn "You should take the time to edit the default server INI."
 	ewarn "Consult the INI Reference at http://unrealadmin.org/"
 	ewarn "for assistance in adjusting the following file:"
