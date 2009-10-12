@@ -1,6 +1,23 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.641 2009/10/11 17:02:42 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.642 2009/10/12 06:56:45 zmedico Exp $
+
+*portage-2.2_rc46 (12 Oct 2009)
+
+  12 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.2_rc46.ebuild:
+  2.2_rc46 bump. This fixes bug #288551 (odd portageq error message) and
+  bug #288616 (portage install dies erroneously complaining about python
+  version). This also has EPYTHON related fixes, to avoid potential
+  interaction with python.eclass.
+
+*portage-2.1.7.1 (12 Oct 2009)
+
+  12 Oct 2009; Zac Medico <zmedico@gentoo.org> +portage-2.1.7.1.ebuild:
+  2.1.7.1 bump. This fixes bug #288551 (odd portageq error message),
+  bug #288533 (fix world to include system again), and bug #288616
+  (portage install dies erroneously complaining about python version).
+  This also has EPYTHON related fixes, to avoid potential interaction
+  with python.eclass.
 
   11 Oct 2009; Ulrich Mueller <ulm@gentoo.org> portage-2.1.6.7.ebuild,
   portage-2.1.6.13.ebuild:
