@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.40.00.ebuild,v 1.8 2007/01/18 19:27:18 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/libconf/libconf-0.40.00.ebuild,v 1.9 2009/10/12 17:46:03 ssuominen Exp $
 
 IUSE="xml"
 
@@ -15,15 +15,15 @@ LICENSE="GPL-2"
 KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 
 DEPEND="dev-lang/perl
-dev-perl/DelimMatch
-xml? ( dev-perl/Data-DumpXML )"
+	dev-perl/DelimMatch
+	xml? ( dev-perl/Data-DumpXML )"
 
 src_compile() {
-	emake || die "make failed"
-	make test || die "make test failed"
+	emake || die
+	emake -j1 test || die
 }
 
 src_install() {
-	einstall PREFIX=${D}/usr
-	dodoc AUTHORS COPYING ChangeLog
+	einstall PREFIX="${D}/usr"
+	dodoc AUTHORS ChangeLog
 }
