@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kdnssd-avahi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.24 2009/06/22 14:14:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdnssd-avahi/ChangeLog,v 1.25 2009/10/12 07:09:16 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kdnssd-avahi-0.1.2.ebuild,
+  kdnssd-avahi-0.1.2-r1.ebuild:
+  QA fix: define IUSE
 
   22 Jun 2009; Jeroen Roovers <jer@gentoo.org> kdnssd-avahi-0.1.2-r1.ebuild:
   Stable for HPPA (bug #271889).
