@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.19 2008/06/09 02:43:07 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/stuffit/stuffit-5.2.0.611.ebuild,v 1.20 2009/10/12 16:47:21 halcy0n Exp $
 
 MY_P="stuffit520.611linux-i386"
 DESCRIPTION="Aladdin Software's StuffIt and StuffIt Expander"
@@ -14,7 +14,7 @@ IUSE=""
 DEPEND=""
 RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 INSTALLDIR="/opt/stuffit"
 RESTRICT="fetch strip"
 
@@ -53,7 +53,7 @@ src_install() {
 	# Also add the executables to the path
 	dodir /etc/env.d
 	echo -e "PATH=${INSTALLDIR}/bin\nROOTPATH=${INSTALLDIR}/bin" > \
-		${D}/etc/env.d/10stuffit
+		"${D}"/etc/env.d/10stuffit
 
 }
 

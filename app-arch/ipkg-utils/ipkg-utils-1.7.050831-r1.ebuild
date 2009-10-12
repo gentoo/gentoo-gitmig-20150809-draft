@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.050831-r1.ebuild,v 1.1 2007/10/13 01:11:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ipkg-utils-1.7.050831-r1.ebuild,v 1.2 2009/10/12 16:42:48 halcy0n Exp $
 
 inherit distutils eutils toolchain-funcs versionator
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 IUSE="minimal"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~x86"
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 
 RDEPEND="dev-lang/python
 	!minimal? (
@@ -24,7 +24,7 @@ RDEPEND="dev-lang/python
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-	unpack "${A}"; cd "${S}"
+	unpack ${A}; cd "${S}"
 
 	epatch "${FILESDIR}"/${PN}-tar_call_fixes.patch
 

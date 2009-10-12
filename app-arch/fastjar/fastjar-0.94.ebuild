@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/fastjar-0.94.ebuild,v 1.3 2007/03/11 20:51:02 nichoj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/fastjar/fastjar-0.94.ebuild,v 1.4 2009/10/12 16:39:16 halcy0n Exp $
 
 DESCRIPTION="A jar program written in C"
 HOMEPAGE="http://fastjar.sourceforge.net/"
@@ -16,6 +16,6 @@ RDEPEND=""
 DEPEND=""
 
 src_install() {
-	emake DESTDIR=${D} install || die "make install failed"
+	emake DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS CHANGES NEWS README || die
 }

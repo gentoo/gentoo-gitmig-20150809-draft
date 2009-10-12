@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/torrentzip-0.2-r1.ebuild,v 1.2 2008/06/04 18:02:29 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/torrentzip/torrentzip-0.2-r1.ebuild,v 1.3 2009/10/12 16:51:50 halcy0n Exp $
 
 inherit versionator eutils autotools
 
@@ -10,7 +10,7 @@ HOMEPAGE="https://sourceforge.net/projects/trrntzip"
 MY_PN=trrntzip
 MY_PV="$(replace_version_separator 1 '')"
 MY_P=${MY_PN}_v${MY_PV}
-S=${WORKDIR}/${MY_PN}
+S="${WORKDIR}"/${MY_PN}
 
 SRC_URI="mirror://sourceforge/trrntzip/${MY_P}_src.tar.gz"
 LICENSE="GPL-2"
@@ -23,9 +23,9 @@ S=${WORKDIR}/trrntzip
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/fix-perms.patch
+	epatch "${FILESDIR}"/fix-perms.patch
 
 	eautoreconf
 }

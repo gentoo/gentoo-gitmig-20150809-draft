@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.9b.ebuild,v 1.10 2009/09/23 15:10:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.9b.ebuild,v 1.11 2009/10/12 16:43:45 halcy0n Exp $
 
 inherit eutils toolchain-funcs
 
@@ -17,7 +17,7 @@ DEPEND=""
 
 src_unpack() {
 	unpack ${A} || die
-	cd ${S} || die
+	cd "${S}" || die
 	sed -i -e "s:-O2:${CFLAGS}:g" Makefile
 
 	# needed for linux kernels >=2.6.20

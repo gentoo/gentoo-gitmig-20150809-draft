@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.31 2009/09/23 15:10:20 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.32 2009/10/12 16:43:45 halcy0n Exp $
+
+  12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> mt-st-0.9b.ebuild:
+  QA fixes; unquoted variables
 
   23 Sep 2009; Patrick Lauer <patrick@gentoo.org> mt-st-0.9b.ebuild:
   Remove virtual/libc
