@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10575 2009/10/12 08:42:52 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10576 2009/10/12 17:05:56 remi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -326,7 +326,6 @@ media-libs/mlt++
 # xorg-server 1.7 packages, will be unmasked once 1.6 is stable
 =x11-base/xorg-drivers-1.7
 >=x11-base/xorg-server-1.7.0
->=x11-drivers/xf86-input-synaptics-1.2.0
 >=x11-libs/libX11-1.2.99.0
 >=x11-libs/libXext-1.0.99.0
 >=x11-libs/libXi-1.2.99.0
