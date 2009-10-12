@@ -1,11 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.12 2009/09/23 15:06:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1-r1.ebuild,v 1.13 2009/10/12 16:22:03 halcy0n Exp $
 
 inherit pax-utils
 
 MY_P=BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i586.run
-S=${WORKDIR}/i386
+S="${WORKDIR}"/i386
 
 DESCRIPTION="BitDefender console antivirus"
 HOMEPAGE="http://www.bitdefender.com/"
@@ -26,13 +26,13 @@ IUSE=""
 
 src_unpack () {
 	#Extract the tgz achive contained in MY_P
-	SKIP=`sed -n '/^\x1F/q;p' < ${DISTDIR}/${MY_P} | wc -c`
-	dd if=${DISTDIR}/${MY_P} ibs=1 skip=$SKIP 2> /dev/null | tar -xz || die "Failed to extract from archive"
+	SKIP=`sed -n '/^\x1F/q;p' < "${DISTDIR}"/${MY_P} | wc -c`
+	dd if="${DISTDIR}"/${MY_P} ibs=1 skip=$SKIP 2> /dev/null | tar -xz || die "Failed to extract from archive"
 }
 
 src_install ()
 {
-	cd ${S}
+	cd "${S}"
 
 	INSTALLDIR=/opt
 	QUARDIR=/var/bdc
