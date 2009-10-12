@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc-fbsd profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.11 2009/10/07 13:47:41 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/ChangeLog,v 1.12 2009/10/12 18:49:37 caster Exp $
+
+  12 Oct 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
+  P.mask >=dev-java/icedtea6-bin-1.6.1 due to gcc-4.3 dep
 
   07 Oct 2009; Vlastimil Babka <caster@gentoo.org> package.mask:
   Mask x11-misc/googleearth-5 due to gcc-4.2 dep
