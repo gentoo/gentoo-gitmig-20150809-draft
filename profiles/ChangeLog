@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3379 2009/10/12 19:27:31 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3380 2009/10/12 23:35:00 abcd Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
+  Drop temporary KDE 3.5.9 mask
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> package.mask:
   Temporarily mask the rest of KDE 3.5.9 so it can be removed
