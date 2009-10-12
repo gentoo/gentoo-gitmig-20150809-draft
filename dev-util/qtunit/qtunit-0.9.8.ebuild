@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.8.ebuild,v 1.9 2006/03/17 15:58:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qtunit/qtunit-0.9.8.ebuild,v 1.10 2009/10/12 08:30:30 ssuominen Exp $
 
 DESCRIPTION="Unit testing framework for c++"
 SRC_URI="http://www.uwyn.com/download/qtunit/${P}.tar.bz2"
@@ -22,9 +22,9 @@ export QMAKESPEC="linux-g++"
 src_compile() {
 	# Need to fake out Qt or we'll get sandbox problems, see Bug 45220
 	REALHOME="$HOME"
-	mkdir -p $T/fakehome/.kde
-	mkdir -p $T/fakehome/.qt
-	export HOME="$T/fakehome"
+	mkdir -p "${T}"/fakehome/.kde
+	mkdir -p "${T}"/fakehome/.qt
+	export HOME="${T}/fakehome"
 	addwrite "${QTDIR}/etc/settings"
 
 	${QTDIR}/bin/qmake QMAKE=${QTDIR}/bin/qmake qtunit.pro || die
@@ -42,9 +42,9 @@ src_install() {
 	dobin bin/texttestrunner
 
 	dodir /usr/include/qtunit
-	find src -name "*.h" -exec cp '{}' ${D}/usr/include/qtunit ';'
+	find src -name "*.h" -exec cp '{}' "${D}"/usr/include/qtunit ';'
 
-	dodoc ChangeLog INSTALL
+	dodoc ChangeLog
 
 	dohtml -r html
 
@@ -65,5 +65,5 @@ src_install() {
 
 	sed -e "s#<FILEPATH>#<FILEPATH>/usr/share/doc/${PF}/#" \
 		-e "s#<SOURCEPATH>#<SOURCEPATH>/usr/share/doc/${PF}/#" \
-		testproject.qpj > ${D}/usr/share/doc/${PF}/testproject.qpj
+		testproject.qpj > "${D}"/usr/share/doc/${PF}/testproject.qpj
 }
