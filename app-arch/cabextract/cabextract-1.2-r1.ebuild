@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.2-r1.ebuild,v 1.7 2009/05/30 16:54:58 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-1.2-r1.ebuild,v 1.8 2009/10/12 09:53:01 pva Exp $
+
+inherit autotools
 
 DESCRIPTION="Extracts files from Microsoft .cab files"
 HOMEPAGE="http://www.cabextract.org.uk/"
@@ -12,6 +14,12 @@ KEYWORDS="alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-
 IUSE="extra-tools"
 
 RDEPEND="extra-tools? ( dev-lang/perl )"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	eautoreconf # fixes bug #271592
+}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "emake failed"
