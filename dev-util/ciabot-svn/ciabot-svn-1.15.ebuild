@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ciabot-svn/ciabot-svn-1.15.ebuild,v 1.2 2007/03/05 03:28:30 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ciabot-svn/ciabot-svn-1.15.ebuild,v 1.3 2009/10/12 19:34:01 ssuominen Exp $
 
 inherit eutils
 
@@ -15,12 +15,12 @@ IUSE=""
 
 DEPEND="dev-lang/python"
 
-S="${WORKDIR}"
+S=${WORKDIR}
 
 src_install() {
 	dodir /etc/${PN}
 	insinto /etc/${PN}
-	doins ${FILESDIR}/config.py
+	doins "${FILESDIR}"/config.py
 
 	newbin ${P}.py ${PN} || die
 }
@@ -43,6 +43,5 @@ pkg_postinst() {
 	elog ""
 	elog "  /usr/bin/ciabot-svn \"\$REPOS\" \"\$REV\" \"ProjectName\" &"
 	echo
-	ebeep
 	epause
 }
