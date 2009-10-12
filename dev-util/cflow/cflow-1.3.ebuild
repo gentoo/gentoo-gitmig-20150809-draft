@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/cflow-1.3.ebuild,v 1.1 2009/09/12 01:13:23 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cflow/cflow-1.3.ebuild,v 1.2 2009/10/12 16:47:54 ssuominen Exp $
 
 EAPI="2"
 
@@ -25,12 +25,15 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2-info-direntry.patch"
 }
 
-src_compile() {
+src_configure() {
 	econf \
 		$(use_enable nls) \
 		$(use_enable debug) \
 		EMACS=no \
 		|| die "econf failed"
+}
+
+src_compile() {
 	emake || die "emake failed"
 
 	if use emacs; then
