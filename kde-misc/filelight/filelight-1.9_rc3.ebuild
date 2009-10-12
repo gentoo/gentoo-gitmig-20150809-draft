@@ -1,10 +1,11 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.9_rc3.ebuild,v 1.1 2009/10/10 20:40:50 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/filelight-1.9_rc3.ebuild,v 1.2 2009/10/12 09:48:32 abcd Exp $
 
 EAPI="2"
 
 KMNAME="playground/utils"
+KDE_MINIMAL="4.2"
 inherit kde4-base
 
 MY_P=${P/_/}
