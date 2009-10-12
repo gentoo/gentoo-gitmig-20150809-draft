@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.2.ebuild,v 1.2 2009/10/12 19:42:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/memcached-1.4.2.ebuild,v 1.3 2009/10/12 19:52:57 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils autotools flag-o-matic
@@ -26,7 +26,7 @@ S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.2.2-fbsd.patch"
-	# Handled different upstream	
+	# Handled different upstream
 	#epatch "${FILESDIR}/${PN}-1.3.3-gcc4-slab-fixup.patch"
 	epatch "${FILESDIR}/${PN}-1.4.0-fix-as-needed-linking.patch"
 	sed -i -e 's,-Werror,,g' configure.ac || die "sed failed"
