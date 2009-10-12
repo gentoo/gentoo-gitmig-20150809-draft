@@ -1,8 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.8 2008/05/10 15:29:22 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-2.2.0-r1.ebuild,v 1.9 2009/10/12 08:03:23 ssuominen Exp $
 
-inherit eutils gnome2 eutils autotools
+inherit eutils gnome2
 
 DESCRIPTION="A versatile IDE for GNOME"
 HOMEPAGE="http://www.anjuta.org"
