@@ -1,10 +1,9 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.5.ebuild,v 1.5 2008/04/12 19:57:54 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.5.ebuild,v 1.6 2009/10/12 07:55:16 ssuominen Exp $
 
+EAPI=1
 inherit eutils toolchain-funcs multilib
-
-EAPI="1"
 
 RESTRICT="installsources"
 EXTRAPV="-3"
