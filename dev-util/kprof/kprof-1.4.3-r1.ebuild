@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.3-r1.ebuild,v 1.8 2009/07/19 11:38:38 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kprof/kprof-1.4.3-r1.ebuild,v 1.9 2009/10/12 11:05:35 ssuominen Exp $
 
 inherit kde eutils
 
@@ -17,10 +17,10 @@ IUSE=""
 RDEPEND="media-gfx/graphviz"
 need-kde 3.5
 
-PATCHES="${FILESDIR}/${P}-debian7.diff
-		${FILESDIR}/${P}-gcc4.3.patch"
+PATCHES=( "${FILESDIR}/${P}-debian7.diff"
+	"${FILESDIR}/${P}-gcc4.3.patch" )
 
-S="${WORKDIR}/${PN}"
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	kde_src_unpack
@@ -31,5 +31,5 @@ src_unpack() {
 }
 
 src_install() {
-	MAKEOPTS="-j1" kde_src_install
+	MAKEOPTS="${MAKEOPTS} -j1" kde_src_install
 }
