@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/piozone-1.0-r2.ebuild,v 1.13 2008/11/23 09:07:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/piozone-1.0-r2.ebuild,v 1.14 2009/10/12 19:04:55 halcy0n Exp $
 
 inherit eutils
 
@@ -17,8 +17,8 @@ DEPEND="sys-devel/gcc"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff || die
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-gentoo.diff
 }
 
 src_compile() {

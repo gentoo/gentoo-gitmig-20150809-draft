@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.8.ebuild,v 1.10 2009/08/01 01:05:28 tcunha Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/httperf/httperf-0.8.ebuild,v 1.11 2009/10/12 19:03:10 halcy0n Exp $
 
 WANT_AUTOCONF="2.1"
 
@@ -20,9 +20,9 @@ RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-optional-ssl.diff
-	epatch ${FILESDIR}/${P}-respect-DESTDIR.diff
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-optional-ssl.diff
+	epatch "${FILESDIR}"/${P}-respect-DESTDIR.diff
 
 	eautoconf || die "autoconf failed"
 }

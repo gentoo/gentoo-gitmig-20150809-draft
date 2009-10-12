@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.7 2007/07/02 13:42:04 peper Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.8 2009/10/12 19:07:04 halcy0n Exp $
 
 DESCRIPTION="Java server benchmark utility"
 HOMEPAGE="http://www.volano.com/benchmarks.html"
@@ -26,21 +26,21 @@ src_unpack() {
 
 src_install() {
 	dodir /opt/${PN}
-	java -classpath ${DISTDIR} vmark2_5_0_9 -o ${D}/opt/${PN}
-	chmod 755 ${D}/opt/${PN}/*.sh
+	java -classpath "${DISTDIR}" vmark2_5_0_9 -o "${D}"/opt/${PN}
+	chmod 755 "${D}"/opt/${PN}/*.sh
 	sed -i -e "s#^host=.*#cd /opt/${PN}\nhost=`hostname`#" \
 		-e 's:"$java":java:g' \
 		-e 's:! -f: -z :' \
 		-e 's:-Sn:-n:' \
-		${D}/opt/${PN}/startup.sh
+		"${D}"/opt/${PN}/startup.sh
 
-	sed -i -e "s#^./startup.sh#/opt/${PN}/startup.sh#g" ${D}/opt/${PN}/*.sh
+	sed -i -e "s#^./startup.sh#/opt/${PN}/startup.sh#g" "${D}"/opt/${PN}/*.sh
 
 	# Set stack-size correctly for different arches
 	if [ "${ARCH}" == "amd64" ] ; then
-		sed -i -e 's:Xss96:Xss512:' ${D}/opt/${PN}/startup.sh
+		sed -i -e 's:Xss96:Xss512:' "${D}"/opt/${PN}/startup.sh
 	else
-		sed -i -e 's:Xss96:Xss128:' ${D}/opt/${PN}/startup.sh
+		sed -i -e 's:Xss96:Xss128:' "${D}"/opt/${PN}/startup.sh
 	fi
 
 	keepdir /opt/${PN}/logs

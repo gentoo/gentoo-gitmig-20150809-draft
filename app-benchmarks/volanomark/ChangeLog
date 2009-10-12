@@ -1,6 +1,9 @@
 # ChangeLog for app-benchmarks/volanomark
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/ChangeLog,v 1.8 2007/07/02 13:42:04 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/ChangeLog,v 1.9 2009/10/12 19:07:04 halcy0n Exp $
+
+  12 Oct 2009; Mark Loeser <halcy0n@gentoo.org> volanomark-2.5.0.9.ebuild:
+  QA fixes; unquoted variables
 
   02 Jul 2007; Piotr Jaroszyński <peper@gentoo.org>
   volanomark-2.5.0.9.ebuild:

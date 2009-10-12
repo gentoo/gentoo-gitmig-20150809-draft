@@ -1,6 +1,6 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6.ebuild,v 1.19 2006/12/06 19:57:41 eroyf Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie/bonnie-2.0.6.ebuild,v 1.20 2009/10/12 18:59:17 halcy0n Exp $
 
 inherit eutils
 
@@ -19,8 +19,8 @@ S=${WORKDIR}
 
 src_unpack() {
 	unpack ${A} || die
-	epatch ${FILESDIR}/bonnie_man.patch
-	epatch ${FILESDIR}/Makefile.patch
+	epatch "${FILESDIR}"/bonnie_man.patch
+	epatch "${FILESDIR}"/Makefile.patch
 }
 
 src_compile() {

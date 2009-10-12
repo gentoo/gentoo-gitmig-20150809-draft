@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r2.ebuild,v 1.4 2008/11/08 15:03:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart/bootchart-0.9-r2.ebuild,v 1.5 2009/10/12 19:00:52 halcy0n Exp $
 
 inherit multilib eutils java-pkg-opt-2 java-ant-2
 
@@ -63,7 +63,7 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README README.logger ChangeLog COPYING TODO
+	dodoc README README.logger ChangeLog TODO
 
 	# No need for this with baselayout-2
 	if has_version "<sys-apps/baselayout-2"; then
