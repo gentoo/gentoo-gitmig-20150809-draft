@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/kbfx-0.4.9.3.1-r1.ebuild,v 1.9 2008/05/27 01:01:53 halcy0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kbfx/kbfx-0.4.9.3.1-r1.ebuild,v 1.10 2009/10/12 09:04:42 abcd Exp $
 
 inherit kde eutils
 
@@ -22,7 +22,6 @@ DEPEND="${DEPEND}
 export DESTDIR=${D}
 
 src_compile() {
-	cd ${S}
 	cmake \
 		-DCMAKE_INSTALL_PREFIX:PATH=${KDEDIR} \
 		. || die "cmake (configure) failed"
