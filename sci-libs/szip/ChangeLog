@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/szip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.17 2009/09/20 18:41:34 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/szip/ChangeLog,v 1.18 2009/10/12 19:57:39 jer Exp $
+
+  12 Oct 2009; Jeroen Roovers <jer@gentoo.org> szip-2.1.ebuild:
+  Stable for HPPA (bug #245707).
 
   20 Sep 2009; nixnut <nixnut@gentoo.org> szip-2.1.ebuild:
   ppc stable #284613
