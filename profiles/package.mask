@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10574 2009/10/11 17:34:32 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10575 2009/10/12 08:42:52 tove Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -205,6 +205,10 @@ dev-perl/perlrapi
 # - replaced, dead, unneeded
 #   bug 281495 (01 Oct 2009)
 dev-perl/Gtk2-Html2
+# - added as dep for a package that never made it into the tree (#21549)
+#   nothing depends on it, broken, no releases for years 
+#   bug #280497 (12 Oct 2009)
+dev-perl/Net-FTPServer
 
 # Samuli Suominen <ssuominen@gentoo.org> (29 Sep 2009)
 # Doesn't compile and deps on arts. Masked for removal,
