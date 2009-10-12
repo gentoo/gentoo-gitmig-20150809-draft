@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/mcvs-1.0.10.ebuild,v 1.5 2004/06/25 02:39:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mcvs/mcvs-1.0.10.ebuild,v 1.6 2009/10/12 17:40:45 ssuominen Exp $
 
 inherit common-lisp-common eutils
 
@@ -29,5 +29,5 @@ src_install() {
 	doman debian/mcvs.5
 	dodoc ChangeLog QUICK-GUIDE RELEASE-NOTES TODO UPGRADE-EXISTING
 	do-debian-credits
-	cd code && ./install.sh /usr ${D}
+	cd code && ./install.sh /usr "${D}"
 }

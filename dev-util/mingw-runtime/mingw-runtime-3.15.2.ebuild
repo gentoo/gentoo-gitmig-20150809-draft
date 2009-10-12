@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.15.2.ebuild,v 1.1 2009/01/10 23:25:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw-runtime/mingw-runtime-3.15.2.ebuild,v 1.2 2009/10/12 17:38:04 ssuominen Exp $
 
 # This version does not work as the configure script expects the installed
 # cross-compiler to be able to link binaries ... except we haven't provided
@@ -70,8 +70,8 @@ src_install() {
 	else
 		local insdir
 		is_crosscompile \
-			&& insdir=${D}/usr/${CTARGET} \
-			|| insdir=${D}
+			&& insdir="${D}/usr/${CTARGET}" \
+			|| insdir="${D}"
 		emake install DESTDIR="${insdir}" || die
 		env -uRESTRICT CHOST=${CTARGET} prepallstrip
 		rm -rf "${insdir}"/usr/doc
