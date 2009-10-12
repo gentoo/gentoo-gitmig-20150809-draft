@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r15.ebuild,v 1.9 2008/02/23 16:52:34 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webalizer/webalizer-2.01.10-r15.ebuild,v 1.10 2009/10/12 00:03:10 halcy0n Exp $
 
 # uses webapp.eclass to create directories with right permissions
 # probably slight overkill but works well
@@ -11,7 +11,7 @@ WEBAPP_MANUAL_SLOT="yes"
 
 MY_PV=${PV/.10/-10}
 MY_P=${PN}-${MY_PV}
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}"/${MY_P}
 XTENDED_VER="RB17"
 XTENDED_URL="rb17"
 DESCRIPTION="Webserver log file analyzer"
@@ -52,15 +52,15 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	unpack ${A} ; cd "${S}"
 
 	if use geoip; then
-		epatch ${WORKDIR}/geolizer_${MY_PV}-patch/geolizer.patch || die
+		epatch "${WORKDIR}"/geolizer_${MY_PV}-patch/geolizer.patch || die
 		use xtended && elog "Xtended doesn't work with geolizer, skipping"
 	else
-		epatch ${FILESDIR}/${PN}-db4.2.patch || die
+		epatch "${FILESDIR}"/${PN}-db4.2.patch || die
 		if use xtended; then
-			epatch ${WORKDIR}/${PN}-${MY_PV}-${XTENDED_VER}-patch || die
+			epatch "${WORKDIR}"/${PN}-${MY_PV}-${XTENDED_VER}-patch || die
 		fi
 	fi
 
@@ -103,10 +103,10 @@ src_install() {
 	doman webalizer.1
 
 	insinto /etc
-	doins ${WORKDIR}/${PN}.conf
-	use apache2 && sed -i -e "s/apache/apache2/g" ${D}/etc/webalizer.conf
+	doins "${WORKDIR}"/${PN}.conf
+	use apache2 && sed -i -e "s/apache/apache2/g" "${D}"/etc/webalizer.conf
 
-	dodoc *README* CHANGES Copyright sample.conf ${FILESDIR}/apache.webalizer
+	dodoc *README* CHANGES Copyright sample.conf "${FILESDIR}"/apache.webalizer
 	webapp_src_install
 }
 

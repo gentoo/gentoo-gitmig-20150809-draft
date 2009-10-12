@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/socklog-2.0.2.ebuild,v 1.1 2005/04/12 01:06:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/socklog-2.0.2.ebuild,v 1.2 2009/10/11 23:53:33 halcy0n Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -18,11 +18,11 @@ RDEPEND="${DEPEND}
 	>=sys-process/runit-0.13.1"
 PROVIDE="virtual/logger"
 
-S=${WORKDIR}/admin/${P}
+S="${WORKDIR}"/admin/${P}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
 	use static && append-ldflags -static
 	echo "$(tc-getCC) ${CFLAGS}" > src/conf-cc

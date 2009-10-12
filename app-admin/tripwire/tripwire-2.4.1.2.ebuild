@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.1.2.ebuild,v 1.3 2009/09/23 15:02:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.4.1.2.ebuild,v 1.4 2009/10/11 23:59:13 halcy0n Exp $
 
 inherit eutils flag-o-matic autotools
 
@@ -25,21 +25,21 @@ RDEPEND="virtual/cron
 	virtual/mta
 	ssl? ( dev-libs/openssl )"
 
-S=${WORKDIR}/tripwire-${TW_VER}
+S="${WORKDIR}"/tripwire-${TW_VER}
 
 src_unpack() {
 	# unpack tripwire source tarball
 	unpack tripwire-${TW_VER}.tar.gz
 	unpack twpol.txt.gz
-	cd ${S}
+	cd "${S}"
 
 	# Paul Herman has been maintaining some updates to tripwire
 	# including autoconf support and portability fixes.
 	# http://www.frenchfries.net/paul/tripwire/
 	export EPATCH_OPTS="-F3 -l"
-	epatch ${FILESDIR}/tripwire-friend-classes.patch
-	epatch ${DISTDIR}/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
-	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch
+	epatch "${FILESDIR}"/tripwire-friend-classes.patch
+	epatch "${DISTDIR}"/tripwire-2.3.1-2-pherman-portability-0.9.diff.bz2
+	epatch "${FILESDIR}"/tripwire-2.3.0-50-rfc822.patch
 
 	eautoreconf || die "eautoreconf failed"
 }
@@ -52,7 +52,7 @@ src_compile() {
 	append-flags -DCONFIG_DIR='"\"/etc/tripwire\""' -fno-strict-aliasing
 
 		ebegin "	Preparing Directory"
-			mkdir ${S}/lib ${S}/bin || die
+			mkdir "${S}"/lib "${S}"/bin || die
 		eend
 	einfo "Done."
 	chmod +x configure
@@ -61,22 +61,22 @@ src_compile() {
 }
 
 src_install() {
-	dosbin ${S}/bin/{siggen,tripwire,twadmin,twprint}
-	doman ${S}/man/man{4/*.4,5/*.5,8/*.8}
+	dosbin "${S}"/bin/{siggen,tripwire,twadmin,twprint}
+	doman "${S}"/man/man{4/*.4,5/*.5,8/*.8}
 	dodir /etc/tripwire /var/lib/tripwire{,/report}
 	keepdir /var/lib/tripwire{,/report}
 
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/tripwire.cron
+	doexe "${FILESDIR}"/tripwire.cron
 
 	dodoc README Release_Notes ChangeLog policy/policyguide.txt TRADEMARK \
-		${FILESDIR}/tripwire.txt
+		"${FILESDIR}"/tripwire.txt
 
 	insinto /etc/tripwire
-	doins ${WORKDIR}/twpol.txt ${FILESDIR}/twcfg.txt
+	doins "${WORKDIR}"/twpol.txt "${FILESDIR}"/twcfg.txt
 
 	exeinto /etc/tripwire
-	doexe ${FILESDIR}/twinstall.sh
+	doexe "${FILESDIR}"/twinstall.sh
 
 	fperms 755 /etc/tripwire/twinstall.sh /etc/cron.daily/tripwire.cron
 }

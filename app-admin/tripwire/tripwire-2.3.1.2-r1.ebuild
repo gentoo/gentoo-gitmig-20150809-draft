@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.14 2009/09/23 15:02:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tripwire/tripwire-2.3.1.2-r1.ebuild,v 1.15 2009/10/11 23:59:13 halcy0n Exp $
 
 inherit eutils flag-o-matic
 
@@ -24,38 +24,38 @@ RDEPEND="virtual/cron
 	virtual/mta
 	dev-libs/openssl"
 
-S=${WORKDIR}/tripwire-${TW_VER}
+S="${WORKDIR}"/tripwire-${TW_VER}
 
 src_unpack() {
 	# unpack tripwire source tarball
 	unpack tripwire-${TW_VER}.tar.gz
 	unpack twpol.txt.gz
-	cd ${S}
+	cd "${S}"
 
 	# some patches ive collected/made for tripwire
 	# mostly from mandrake, some from other sources
-	epatch ${FILESDIR}/tripwire-2.3.0-50-rfc822.patch
-	epatch ${FILESDIR}/tripwire-2.3.1-2-fhs.patch
-	epatch ${FILESDIR}/tripwire-2.3.1-2-gcc-3.3.patch
-	epatch ${FILESDIR}/tripwire-2.3.1-gcc3.patch
-	epatch ${FILESDIR}/tripwire-jbj.patch
-	epatch ${FILESDIR}/tripwire-mkstemp.patch
+	epatch "${FILESDIR}"/tripwire-2.3.0-50-rfc822.patch
+	epatch "${FILESDIR}"/tripwire-2.3.1-2-fhs.patch
+	epatch "${FILESDIR}"/tripwire-2.3.1-2-gcc-3.3.patch
+	epatch "${FILESDIR}"/tripwire-2.3.1-gcc3.patch
+	epatch "${FILESDIR}"/tripwire-jbj.patch
+	epatch "${FILESDIR}"/tripwire-mkstemp.patch
 
 	# pull out the interesting debian patches
 	filterdiff  -i '*/man/man8/twadmin.8' -z  --strip=1	\
-		${DISTDIR}/tripwire_2.3.1.2-6.1.diff.gz > ${T}/debian-patch.diff
-	epatch ${T}/debian-patch.diff
+		"${DISTDIR}"/tripwire_2.3.1.2-6.1.diff.gz > "${T}"/debian-patch.diff
+	epatch "${T}"/debian-patch.diff
 
 	# cleanup ready for build
-	rm -rf ${S}/src/STLport*
-	touch ${S}/src/STLport_r ${S}/src/STLport_d
+	rm -rf "${S}"/src/STLport*
+	touch "${S}"/src/STLport_r "${S}"/src/STLport_d
 
 	# security fix, http://www.securityfocus.com/archive/1/365036
-	epatch ${FILESDIR}/tripwire-format-string-email-report.diff
+	epatch "${FILESDIR}"/tripwire-format-string-email-report.diff
 }
 
 src_compile() {
-	cd ${S}/src
+	cd "${S}"/src
 
 	# tripwire can be sensitive to compiler optimisation.
 	# see #32613, #45823, and others.
@@ -66,29 +66,29 @@ src_compile() {
 }
 
 src_install() {
-	dosbin ${S}/bin/*/{tripwire,twadmin,twprint} || die
+	dosbin "${S}"/bin/*/{tripwire,twadmin,twprint} || die
 
 	for i in {4,5,8}
 	do
-		cd ${S}/man/man${i}
+		cd "${S}"/man/man${i}
 		doman *.$i
-		cd ${S}
+		cd "${S}"
 	done
 
 	dodir /etc/tripwire
 	dodir /var/lib/tripwire/report
 
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/tripwire.cron
+	doexe "${FILESDIR}"/tripwire.cron
 
 	dodoc README Release_Notes ChangeLog policy/policyguide.txt TRADEMARK \
-		${WORKDIR}/tripwire.gif ${FILESDIR}/tripwire.txt
+		"${WORKDIR}"/tripwire.gif "${FILESDIR}"/tripwire.txt
 
 	insinto /etc/tripwire
-	doins ${WORKDIR}/twpol.txt ${FILESDIR}/twcfg.txt
+	doins "${WORKDIR}"/twpol.txt "${FILESDIR}"/twcfg.txt
 
 	exeinto /etc/tripwire
-	doexe ${FILESDIR}/twinstall.sh
+	doexe "${FILESDIR}"/twinstall.sh
 
 	fperms 755 /etc/tripwire/twinstall.sh /etc/cron.daily/tripwire.cron
 }

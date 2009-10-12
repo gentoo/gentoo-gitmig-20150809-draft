@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/socklog
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/ChangeLog,v 1.6 2007/02/21 19:46:05 peper Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/socklog/ChangeLog,v 1.7 2009/10/11 23:53:33 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> socklog-2.0.2.ebuild:
+  QA fixes; unquoted variables
 
   21 Feb 2007; Piotr Jaroszyński <peper@gentoo.org> ChangeLog:
   Transition to Manifest2.

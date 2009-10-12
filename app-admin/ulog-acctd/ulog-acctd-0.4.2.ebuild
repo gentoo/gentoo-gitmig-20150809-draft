@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.8 2007/01/24 15:06:07 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulog-acctd/ulog-acctd-0.4.2.ebuild,v 1.9 2009/10/12 00:01:00 halcy0n Exp $
 
 inherit eutils
 
@@ -15,18 +15,18 @@ IUSE=""
 
 DEPEND="net-firewall/iptables"
 
-S=${WORKDIR}/${P}.orig
+S="${WORKDIR}"/${P}.orig
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/src
-	epatch ${FILESDIR}/${P}-gcc2.patch
+	cd "${S}"/src
+	epatch "${FILESDIR}"/${P}-gcc2.patch
 }
 
 src_compile() {
-	cd ${S}/src || die "cannot change to src-directory"
+	cd "${S}"/src || die "cannot change to src-directory"
 	make || die "compile of pgm failed"
-	cd ${S}/doc || die "cannot change to doc-directory"
+	cd "${S}"/doc || die "cannot change to doc-directory"
 	make || die "compile of docu failed"
 }
 
@@ -47,7 +47,7 @@ src_install() {
 	dodoc contrib/ulog-acctd2mrtg/*
 
 	keepdir /var/log/ulog-acctd
-	doinitd ${FILESDIR}/init.d/ulog-acctd
+	doinitd "${FILESDIR}"/init.d/ulog-acctd
 }
 
 pkg_postinst() {

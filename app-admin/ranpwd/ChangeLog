@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ranpwd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.9 2009/09/24 13:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ChangeLog,v 1.10 2009/10/11 23:51:49 halcy0n Exp $
+
+  11 Oct 2009; Mark Loeser <halcy0n@gentoo.org> ranpwd-1.1.ebuild,
+  ranpwd-1.2.ebuild:
+  QA fixes; unquoted variables
 
   24 Sep 2009; Raúl Porcel <armin76@gentoo.org> ranpwd-1.2.ebuild:
   Add ~ia64 wrt #282944

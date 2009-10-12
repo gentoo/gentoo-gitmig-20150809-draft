@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ranpwd-1.2.ebuild,v 1.3 2009/09/24 13:58:09 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ranpwd/ranpwd-1.2.ebuild,v 1.4 2009/10/11 23:51:49 halcy0n Exp $
 
 DESCRIPTION="A program to generate random passwords using the in-kernel cryptographically secure random number generator.."
 HOMEPAGE="http://ftp.lug.ro/kernel/software/utils/admin/ranpwd/"
@@ -25,5 +25,5 @@ src_test() {
 }
 
 src_install() {
-	make INSTALLROOT=${D} install || die
+	make INSTALLROOT="${D}" install || die
 }
