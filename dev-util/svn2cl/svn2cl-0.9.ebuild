@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/svn2cl-0.9.ebuild,v 1.2 2008/11/15 12:08:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/svn2cl/svn2cl-0.9.ebuild,v 1.3 2009/10/12 08:18:58 ssuominen Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ src_unpack() {
 	cd "${S}"
 	# the wrapper script looks for the xsl files in the
 	# same directory as the script.
-	epatch ${FILESDIR}/0.9-wrapper.patch
+	epatch "${FILESDIR}"/0.9-wrapper.patch
 }
 
 src_install() {
