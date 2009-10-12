@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.7 2008/01/10 22:40:32 caster Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.2.0.ebuild,v 1.8 2009/10/12 18:55:23 ssuominen Exp $
 
 MY_PV="${PV//./_}"
 MY_PNB="Fujaba_${PV:0:1}"
@@ -23,7 +23,7 @@ DEPEND=">=virtual/jdk-1.4
 S=${WORKDIR}
 
 src_unpack () {
-	jar xf ${DISTDIR}/${A}
+	jar xf "${DISTDIR}"/${A}
 
 	cd 'C_/Dokumente und Einstellungen/Lothar/Eigene Dateien/Deployment/Fujaba 4.2.0/' || die "failed to enter die"
 
@@ -39,8 +39,8 @@ src_install() {
 	dodir /opt/${PN}
 	cd 'C_/Dokumente und Einstellungen/Lothar/Eigene Dateien/Deployment/Fujaba 4.2.0/' || die "failed to enter die"
 
-	cp -pPR . ${D}/opt/${PN} || die "failed to copy"
-	chmod -R 755 ${D}/opt/${PN}/
+	cp -pPR . "${D}"/opt/${PN} || die "failed to copy"
+	chmod -R 755 "${D}"/opt/${PN}/
 
 	echo "#!/bin/sh" > ${PN}
 	echo "cd /opt/${PN}/Deploymentdata" >> ${PN}
