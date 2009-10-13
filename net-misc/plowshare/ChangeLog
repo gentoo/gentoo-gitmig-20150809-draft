@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/plowshare
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.3 2009/09/29 18:15:27 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.4 2009/10/13 21:50:30 volkmar Exp $
+
+*plowshare-0.8.1 (13 Oct 2009)
+
+  13 Oct 2009; Mounir Lamouri <volkmar@gentoo.org> +plowshare-0.8.1.ebuild:
+  Version bump to 0.8.1
 
 *plowshare-0.8-r2 (29 Sep 2009)
 
