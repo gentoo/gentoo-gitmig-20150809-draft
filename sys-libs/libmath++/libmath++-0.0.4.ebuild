@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.10 2008/04/20 21:51:02 flameeyes Exp $
-
-WANT_AUTOMAKE="latest"
-WANT_AUTOCONF="latest"
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libmath++/libmath++-0.0.4.ebuild,v 1.11 2009/10/13 13:30:22 ssuominen Exp $
 
 inherit autotools
 
@@ -22,24 +19,23 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-
 	eautoreconf
 }
 
 src_compile() {
-	econf || die "configure failed"
-	emake || die "make filed"
+	econf
+	emake || die
 
-	if use doc ; then
+	if use doc; then
 		emake -C doc api-doc
 	fi
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "make install failed"
+	emake DESTDIR="${D}" install || die
 	dodoc AUTHORS README TODO
 
-	if use doc ; then
+	if use doc; then
 		dohtml -r "${S}"/doc/user-api/*
 	fi
 }
