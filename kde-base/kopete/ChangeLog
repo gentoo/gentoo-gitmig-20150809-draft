@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kopete
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.217 2009/10/12 22:00:49 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kopete/ChangeLog,v 1.218 2009/10/12 23:58:47 abcd Exp $
+
+  12 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/kopete-3.5.9-icq-protocol-change.patch, -kopete-3.5.10-r3.ebuild:
+  Clean out cruft
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kopete-3.5.9.ebuild,
   -kopete-3.5.9-r2.ebuild:
