@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygments
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.39 2009/10/11 10:30:41 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygments/ChangeLog,v 1.40 2009/10/13 17:22:34 grobian Exp $
+
+  13 Oct 2009; Fabian Groffen <grobian@gentoo.org> pygments-1.1.1.ebuild:
+  Marked ~x64-macos, bug #287289
 
   11 Oct 2009; Fabian Groffen <grobian@gentoo.org> pygments-1.1.1.ebuild:
   Merge from Prefix
