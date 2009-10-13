@@ -1,10 +1,11 @@
 # ChangeLog for kde-misc/styleclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.8 2009/10/13 19:14:19 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.9 2009/10/13 22:00:06 ssuominen Exp $
 
   13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
   styleclock-0.5.1.ebuild:
-  Missing media-libs/mesa dep wrt #205869.
+  Missing virtual/opengl and x11-libs/qt:3[opengl] depend wrt #205869
+  and #247705.
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> styleclock-0.5.1.ebuild:
   QA fix: define IUSE, shorten DESCRIPTION
