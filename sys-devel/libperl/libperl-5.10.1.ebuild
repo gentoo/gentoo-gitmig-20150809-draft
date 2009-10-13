@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.10.1.ebuild,v 1.3 2009/10/07 09:19:30 tove Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.10.1.ebuild,v 1.4 2009/10/13 01:49:03 jer Exp $
 
 inherit multilib
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS=""
+KEYWORDS="~hppa"
 IUSE=""
 
 PDEPEND=">=dev-lang/perl-5.10.1"
