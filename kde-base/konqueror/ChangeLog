@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/konqueror
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.155 2009/10/12 21:55:43 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konqueror/ChangeLog,v 1.156 2009/10/13 00:57:10 abcd Exp $
+
+  13 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/Gentoo_Bugzilla.desktop, -files/Gentoo_Forums.desktop:
+  Clean out old files
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -konqueror-3.5.9.ebuild:
   KDE 3.5.9 removal
