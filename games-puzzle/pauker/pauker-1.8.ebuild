@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8.ebuild,v 1.1 2009/10/11 23:29:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/pauker/pauker-1.8.ebuild,v 1.2 2009/10/13 19:33:23 caster Exp $
 
 EAPI=2
 JAVA_PKG_IUSE="doc source"
@@ -45,7 +45,8 @@ src_prepare() {
 
 src_compile() {
 	eant -Dfile.reference.BrowserLauncher2-1_3.jar="libs/BrowserLauncher2-1_3.jar" \
-		-Dlibs.swing-layout.classpath="libs/swing-layout.jar" jar $(use_doc javadoc)
+		-Dlibs.swing-layout.classpath="libs/swing-layout.jar" \
+		-Dplatforms.JDK_1.5.home="${JAVA_HOME}" jar $(use_doc javadoc)
 }
 
 #test depend on jemmy, a netbeans module.  so unless it is packaged separately
