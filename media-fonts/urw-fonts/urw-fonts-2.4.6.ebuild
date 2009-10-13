@@ -1,6 +1,26 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.4.6.ebuild,v 1.5 2009/09/27 10:39:10 volkmar Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/urw-fonts-2.4.6.ebuild,v 1.6 2009/10/13 11:17:43 pva Exp $
+
+# At some point URW++ released fonts under GPL license. After that they were took
+# and improved by Valek Filippov and this work was somehow related with AFPL...
+# At least it can be found on their svn server:
+# http://svn.ghostscript.com/ghostscript/trunk/urw-fonts/
+
+# Also, some time ago, sources where published on sf.net:
+# http://sourceforge.net/projects/gs-fonts/files/
+# At this point this package was published on a nuber of other sites
+# (gimp.org/cups.org) and media-fonts/gnu-gs-fonts-std was added to the tree.
+# But nobody use that old releases any mover and everybody syncs with
+# svn.ghostscript.com. The most recent tag there is:
+# http://svn.ghostscript.com/ghostscript/tags/urw-fonts-1.0.7pre44/
+
+# But note that version we have is different from upstream tag. This happened
+# because we started to use redhat versions and followed their versioning. It's
+# hard to say why they use such strange version since they also sync with
+# svn.ghostscript.com. Redhat's ChangeLog states:
+# Tue Jan 8 23:00:00 2008 Than Ngo 2.4-2
+#  - update to 1.0.7pre44
 
 inherit eutils rpm font versionator
 
