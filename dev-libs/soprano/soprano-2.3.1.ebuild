@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1.ebuild,v 1.2 2009/10/09 17:55:47 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/soprano/soprano-2.3.1.ebuild,v 1.3 2009/10/13 16:40:18 ssuominen Exp $
 
 EAPI="2"
 
@@ -76,7 +76,7 @@ src_prepare() {
 src_configure() {
 	# Fix for missing pthread.h linking
 	# NOTE: temporarily fix until a better cmake files patch will be provided.
-	use elibc_FreeBSD && append-ldflags "-lpthread"
+	use elibc_FreeBSD && append-flags -pthread
 
 	mycmakeargs="${mycmakeargs}
 		-DSOPRANO_BUILD_TESTS=OFF
