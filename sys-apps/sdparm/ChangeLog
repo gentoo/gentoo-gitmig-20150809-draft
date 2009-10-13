@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sdparm
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.51 2009/10/12 21:52:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sdparm/ChangeLog,v 1.52 2009/10/13 20:07:18 robbat2 Exp $
+
+  13 Oct 2009; Robin H. Johnson <robbat2@gentoo.org> sdparm-1.04.ebuild:
+  Bug 288797: <sg3_utils-1.28 and >=sdparm-1.04 have a conflict on a script
+  sas_disk_blink that moved to sdparm.
 
 *sdparm-1.04 (12 Oct 2009)
 
