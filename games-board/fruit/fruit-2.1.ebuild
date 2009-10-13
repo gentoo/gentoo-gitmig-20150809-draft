@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.4 2008/01/19 08:43:27 nyhm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/fruit/fruit-2.1.ebuild,v 1.5 2009/10/13 05:58:49 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils versionator games
 
 MY_PV=$(replace_all_version_separators '')
@@ -20,16 +21,14 @@ DEPEND="app-arch/unzip"
 
 S=${WORKDIR}/${MY_P}/src
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
 	sed -i \
 		-e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		option.cpp \
 		|| die "sed option.cpp failed"
 	sed -i \
-		-e '/^CXXFLAGS/d' \
+		-e '/^CXX/d' \
 		-e '/^LDFLAGS/d' \
 		Makefile \
 		|| die "sed Makefile failed"
