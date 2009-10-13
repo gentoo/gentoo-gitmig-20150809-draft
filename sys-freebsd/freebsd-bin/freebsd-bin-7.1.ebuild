@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-7.1.ebuild,v 1.1 2009/01/22 21:00:42 the_paya Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-bin/freebsd-bin-7.1.ebuild,v 1.2 2009/10/13 17:02:08 ulm Exp $
 
 inherit bsdmk freebsd
 
@@ -18,7 +18,7 @@ RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	dev-libs/libedit
 	sys-libs/ncurses
 	sys-apps/ed
-	!app-admin/realpath"
+	!app-misc/realpath"
 DEPEND="${RDEPEND}
 	=sys-freebsd/freebsd-mk-defs-${RV}*
 	>=sys-devel/flex-2.5.31-r2"
