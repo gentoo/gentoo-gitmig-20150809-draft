@@ -1,6 +1,14 @@
 # ChangeLog for kde-misc/kdiff3
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.40 2009/06/22 12:35:42 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdiff3/ChangeLog,v 1.41 2009/10/13 14:12:59 ssuominen Exp $
+
+  13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kdiff3-0.9.95.ebuild:
+  amd64 stable wrt #288883
+
+  13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kdiff3-0.9.95.ebuild,
+  +files/kdiff3-0.9.95-desktop-entry.patch:
+  Fix desktop entry wrt #270666, thanks to BT <amak79 at gmail.com> for
+  reporting.
 
   22 Jun 2009; Bernard Cafarelli <voyageur@gentoo.org> kdiff3-0.9.95.ebuild,
   metadata.xml:
