@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10581 2009/10/13 11:38:12 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10582 2009/10/13 11:47:43 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -279,12 +279,6 @@ media-libs/glut
 # net-misc/asterisk-app_rtxfax fails with >=media-libs/spandsp-0.0.3, bug 180318
 # Masked for removal in 30 days.
 net-misc/asterisk-app_rtxfax
-
-# Nirbheek Chauhan <nirbheek@gentoo.org> (21 Sep 2009)
-# No >= bluez 4 support #279384, build failures #269757 #233007 #203959 #202905
-# Abandoned upstream, masked for removal in 30 days
-# Replacement: app-pda/multisync-gui (using libopensync)
-app-pda/multisync
 
 # Jesus Rivero <neurogeek@gentoo.org> (20 Sep 2009)
 # Masked for removal in 30 days.
