@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdeutils
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.237 2009/10/12 05:38:48 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeutils/ChangeLog,v 1.238 2009/10/13 00:28:20 abcd Exp $
+
+  13 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kdeutils-3.5.9.ebuild:
+  Clean out old version
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> kdeutils-3.5.9.ebuild:
   Fix QA issues
