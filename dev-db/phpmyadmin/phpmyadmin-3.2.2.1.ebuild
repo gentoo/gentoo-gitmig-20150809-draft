@@ -1,6 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.2.0.1.ebuild,v 1.1 2009/08/01 12:45:19 a3li Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-3.2.2.1.ebuild,v 1.1 2009/10/13 16:41:09 a3li Exp $
+
+EAPI="2"
 
 inherit eutils webapp depend.php
 
@@ -16,6 +18,13 @@ KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=virtual/mysql-5.0"
+RDEPEND="
+	dev-lang/php[crypt,ctype,filter,pcre,session,spl,unicode]
+	|| (
+		dev-lang/php[mysqli]
+		dev-lang/php[mysql]
+	)
+"
 
 need_httpd_cgi
 need_php_httpd
@@ -24,27 +33,12 @@ S="${WORKDIR}"/${MY_P}
 
 pkg_setup() {
 	webapp_pkg_setup
-
-	if ! PHPCHECKNODIE="yes" require_php_with_use crypt ctype filter pcre session spl unicode \
-		|| ! PHPCHECKNODIE="yes" require_php_with_any_use mysql mysqli ; then
-		eerror
-		eerror "${PHP_PKG} needs to be re-installed with all of the following"
-		eerror "USE flags enabled:"
-		eerror
-		eerror "crypt ctype filter pcre session spl unicode"
-		eerror
-		eerror "as well as any of the following USE flags enabled:"
-		eerror
-		eerror "mysql or mysqli if using dev-lang/php-5"
-		eerror
-		die "Re-install ${PHP_PKG}"
-	fi
 }
 
 src_install() {
 	webapp_src_preinst
 
-	dodoc CREDITS Documentation.txt INSTALL README RELEASE-DATE-${MY_PV} TODO ChangeLog
+	dodoc CREDITS Documentation.txt INSTALL README RELEASE-DATE-${MY_PV} TODO ChangeLog || die
 	rm -f LICENSE CREDITS INSTALL README RELEASE-DATE-${MY_PV} TODO
 
 	insinto "${MY_HTDOCSDIR}"
