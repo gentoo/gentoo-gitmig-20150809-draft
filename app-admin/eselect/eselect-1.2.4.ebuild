@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.4.ebuild,v 1.3 2009/10/10 23:52:55 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/eselect/eselect-1.2.4.ebuild,v 1.4 2009/10/13 17:00:01 ulm Exp $
 
 DESCRIPTION="Gentoo's multi-purpose configuration and management tool"
 HOMEPAGE="http://www.gentoo.org/proj/en/eselect/"
@@ -15,7 +15,7 @@ RDEPEND="sys-apps/sed
 	|| (
 		sys-apps/coreutils
 		sys-freebsd/freebsd-bin
-		app-admin/realpath
+		app-misc/realpath
 	)"
 DEPEND="${RDEPEND}
 	doc? ( dev-python/docutils )"
