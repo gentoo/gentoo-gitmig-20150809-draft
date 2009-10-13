@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.3.ebuild,v 1.3 2009/10/08 03:01:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/xfce4-settings-4.6.3.ebuild,v 1.4 2009/10/13 15:28:43 darkside Exp $
 
 EAPI=2
 inherit xfconf
@@ -23,7 +23,7 @@ RDEPEND=">=dev-libs/glib-2.12:2
 	>=x11-libs/libXi-1
 	>=x11-libs/libXrandr-1.1
 	>=x11-libs/libwnck-2.12
-	>=x11-base/xorg-server-1.5.3
+	!prefix? ( >=x11-base/xorg-server-1.5.3 )
 	>=xfce-base/libxfce4util-4.6
 	>=xfce-base/libxfcegui4-4.6
 	>=xfce-base/xfconf-4.6
