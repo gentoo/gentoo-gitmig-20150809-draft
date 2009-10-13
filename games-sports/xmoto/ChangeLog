@@ -1,6 +1,10 @@
 # ChangeLog for games-sports/xmoto
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.39 2009/09/11 22:04:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/xmoto/ChangeLog,v 1.40 2009/10/13 05:08:42 mr_bones_ Exp $
+
+  13 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org>
+  -xmoto-0.5.0-r1.ebuild, xmoto-0.5.1.ebuild, xmoto-0.5.2.ebuild:
+  clean old; drop amd64 keywords (bug #279530)
 
   11 Sep 2009; Michael Sterrett <mr_bones_@gentoo.org> xmoto-0.5.2.ebuild,
   +files/xmoto-0.5.2-64bit.patch:
