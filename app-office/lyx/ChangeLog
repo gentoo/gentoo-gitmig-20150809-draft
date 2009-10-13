@@ -1,6 +1,9 @@
 # ChangeLog for app-office/lyx
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.180 2009/10/12 09:01:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.181 2009/10/13 22:59:47 rich0 Exp $
+
+  12 Oct 2009; Richard Freeman <rich0@gentoo.org> lyx-1.6.4.ebuild:
+  amd64 stable - 288215
 
   12 Oct 2009; Jeroen Roovers <jer@gentoo.org> lyx-1.6.4.ebuild:
   Stable for HPPA (bug #288215).
