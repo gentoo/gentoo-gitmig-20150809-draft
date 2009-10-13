@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.keywords,v 1.1 2009/10/09 16:39:11 gengor Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/linux/package.keywords,v 1.2 2009/10/13 23:02:35 gengor Exp $
 
-# Fails with gcc-3*. Return to stable when gcc-4* is stable. Bug #288263
->=app-office/openoffice-3.1.0 -amd64 ~amd64 -ppc ~ppc -x86 ~x86
+# Mark =sys-devel/gcc-4.3.4 stable on hardened, ahead of bug #288621.
+=sys-devel/gcc-4.3.4 amd64 ia64 ppc ppc64 x86
