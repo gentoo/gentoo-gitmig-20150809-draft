@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.4.4.ebuild,v 1.2 2009/09/23 21:14:36 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/freeipmi/freeipmi-0.4.4.ebuild,v 1.3 2009/10/13 13:52:12 ssuominen Exp $
 
 inherit flag-o-matic
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	sed 's,auth_type_t,output_type_t,' -i.orig \
-		${S}/ipmipower/src/ipmipower_output.c \
+		"${S}"/ipmipower/src/ipmipower_output.c \
 		|| die "Failed to fix ipmipower"
 }
 
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 	emake DESTDIR="${D}" docdir="/usr/share/doc/${PF}" install || die "emake install failed"
 	# INSTALL contains usage instructions!
-	dodoc AUTHORS COPYING.* ChangeLog* DISCLAIMER* NEWS README* TODO  INSTALL*
+	dodoc AUTHORS ChangeLog* DISCLAIMER* NEWS README* TODO INSTALL*
 	dodoc doc/*.txt
 	# normal GPL2
 	rm -f "${D}"/usr/share/doc/${PF}/COPYING

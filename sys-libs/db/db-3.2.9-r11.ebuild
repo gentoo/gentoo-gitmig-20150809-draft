@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.18 2009/07/30 11:01:33 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r11.ebuild,v 1.19 2009/10/13 13:53:47 ssuominen Exp $
 
 inherit gnuconfig libtool eutils db
 
@@ -139,7 +139,7 @@ src_install () {
 	chmod go+r *.la
 
 	cd "${S}"
-	dodoc README LICENSE
+	dodoc README
 
 	db_src_install_doc || die "db_src_install_doc failed!"
 
