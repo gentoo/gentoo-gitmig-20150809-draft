@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/styleclock
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.7 2009/10/12 07:14:42 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/styleclock/ChangeLog,v 1.8 2009/10/13 19:14:19 ssuominen Exp $
+
+  13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  styleclock-0.5.1.ebuild:
+  Missing media-libs/mesa dep wrt #205869.
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> styleclock-0.5.1.ebuild:
   QA fix: define IUSE, shorten DESCRIPTION
