@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4-settings
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.22 2009/10/13 15:28:43 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-settings/ChangeLog,v 1.23 2009/10/13 15:49:43 ssuominen Exp $
+
+  13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  xfce4-settings-4.6.3.ebuild:
+  Fix previous commit (and bug 262333) in a different way to avoid
+  xorg-server dep.
 
   13 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
   xfce4-settings-4.6.3.ebuild:
