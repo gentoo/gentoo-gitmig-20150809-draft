@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kplayer
-# Copyright 2002-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.38 2009/04/06 11:59:41 scarabeus Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/ChangeLog,v 1.39 2009/10/13 08:52:27 ssuominen Exp $
+
+  13 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> kplayer-0.7.ebuild:
+  amd64 stable wrt #288837
 
   06 Apr 2009; Tomas Chvatal <scarabeus@gentoo.org> kplayer-0.7.ebuild:
   Preparation for new eclass. Unprefixing misc apps.
