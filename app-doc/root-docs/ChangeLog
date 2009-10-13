@@ -1,6 +1,13 @@
 # ChangeLog for app-doc/root-docs
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.9 2009/09/15 19:43:01 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/ChangeLog,v 1.10 2009/10/13 17:41:57 vostorga Exp $
+
+*root-docs-5.25.02 (13 Oct 2009)
+
+  13 Oct 2009; Víctor Ostorga <vostorga@gentoo.org>
+  +root-docs-5.25.02.ebuild:
+  Version bump to 5.25.02, ebuild thanks to Andrew Savchenko
+  <bircoph@gmail.com> bug 288791
 
 *root-docs-5.24.00 (15 Sep 2009)
 
