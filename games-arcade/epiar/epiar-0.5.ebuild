@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5.ebuild,v 1.12 2007/08/02 15:50:34 uberlord Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/epiar-0.5.ebuild,v 1.13 2009/10/13 06:09:55 mr_bones_ Exp $
 
+EAPI=2
 inherit flag-o-matic eutils games
 
 DESCRIPTION="A space adventure/combat game"
@@ -13,8 +14,8 @@ SLOT="0"
 KEYWORDS="~ppc ~x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND="media-libs/libsdl
-	media-libs/sdl-image"
+RDEPEND="media-libs/libsdl[video]
+	media-libs/sdl-image[png]"
 DEPEND="${RDEPEND}
 	x11-libs/libX11
 	virtual/opengl
@@ -22,9 +23,7 @@ DEPEND="${RDEPEND}
 
 S=${WORKDIR}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -i \
 		-e "/^CFLAGS/s:-pg -g:${CFLAGS}:" \
 		Makefile.linux \

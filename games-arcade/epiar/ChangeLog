@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/epiar
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.11 2007/08/02 15:50:34 uberlord Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/epiar/ChangeLog,v 1.12 2009/10/13 06:09:55 mr_bones_ Exp $
+
+  13 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> epiar-0.5.ebuild:
+  EAPI=2
 
   02 Aug 2007; Roy Marples <uberlord@gentoo.org>
   +files/epiar-0.5-Makefile.linux.patch, epiar-0.5.ebuild:
