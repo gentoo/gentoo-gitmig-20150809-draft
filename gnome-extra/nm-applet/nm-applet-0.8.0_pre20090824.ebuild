@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.0_pre20090824.ebuild,v 1.2 2009/08/24 14:20:18 dagger Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/nm-applet-0.8.0_pre20090824.ebuild,v 1.3 2009/10/13 12:21:05 ssuominen Exp $
 
 EAPI=2
 inherit gnome2 eutils versionator
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	>=dev-util/intltool-0.35"
 
-DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README"
+DOCS="AUTHORS ChangeLog NEWS README"
 # USE_DESTDIR="1"
 
 S=${WORKDIR}/${MY_P}
