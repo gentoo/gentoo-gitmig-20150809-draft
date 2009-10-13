@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdialog
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.121 2009/10/12 21:03:29 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdialog/ChangeLog,v 1.122 2009/10/13 00:35:03 abcd Exp $
+
+  13 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  -files/kdialog-3.5.9-kdeeject-186028.patch:
+  Clean out old patches
 
   12 Oct 2009; Jonathan Callen <abcd@gentoo.org> -kdialog-3.5.9.ebuild,
   -kdialog-3.5.9-r1.ebuild:
