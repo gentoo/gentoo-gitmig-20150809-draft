@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10578 2009/10/12 23:35:00 abcd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10579 2009/10/13 06:39:08 aballier Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Alexis Ballier <aballier@gentoo.org> (13 Oct 2009)
+# Release candidate, breaks ocsigen.
+>=dev-ml/lwt-2.0.0_rc
 
 # Jonathan Callen <abcd@gentoo.org> (11 Oct 2009)
 # Old KDE 3.5.9 monolithic ebuilds.  Replaced by kde*-meta.
