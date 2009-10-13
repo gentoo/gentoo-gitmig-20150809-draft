@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.6.3.ebuild,v 1.4 2008/01/12 00:25:32 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kplayer/kplayer-0.6.3.ebuild,v 1.5 2009/10/13 08:54:42 ssuominen Exp $
 
 inherit kde
 
@@ -26,7 +26,7 @@ done
 
 need-kde 3.5
 
-PATCHES="${FILESDIR}/kplayer-0.6.3-desktop-entry.diff"
+PATCHES=( "${FILESDIR}/kplayer-0.6.3-desktop-entry.diff" )
 
 src_unpack () {
 	kde_src_unpack
