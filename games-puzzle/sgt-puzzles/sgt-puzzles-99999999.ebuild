@@ -1,10 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.1 2009/08/18 09:52:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/sgt-puzzles-99999999.ebuild,v 1.2 2009/10/13 06:46:52 mr_bones_ Exp $
 
-EAPI="2"
-
-inherit games eutils toolchain-funcs
+EAPI=2
+inherit eutils toolchain-funcs games
 if [[ ${PV} == "99999999" ]] ; then
 	ESVN_REPO_URI="svn://svn.tartarus.org/sgt/puzzles/trunk"
 	inherit subversion
