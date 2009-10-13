@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10580 2009/10/13 06:57:36 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10581 2009/10/13 11:38:12 ssuominen Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Samuli Suominen <ssuominen@gentoo.org> (13 Oct 2009)
+# No bluez-4 support. See bug 276455. Masked for removal.
+net-wireless/kdebluetooth
 
 # Jonathan Callen <abcd@gentoo.org> (11 Oct 2009)
 # Old KDE 3.5.9 monolithic ebuilds.  Replaced by kde*-meta.
@@ -212,11 +216,6 @@ dev-perl/Gtk2-Html2
 #   nothing depends on it, broken, no releases for years 
 #   bug #280497 (12 Oct 2009)
 dev-perl/Net-FTPServer
-
-# Samuli Suominen <ssuominen@gentoo.org> (29 Sep 2009)
-# Doesn't compile and deps on arts. Masked for removal,
-# see bug 286813.
-media-plugins/flexplaylist
 
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (29 Sep 2009)
 # wsgiref module is included in Python >=2.5. Masked for deletion in 30 days.
@@ -417,16 +416,6 @@ dev-php5/onphp-module
 # It is also incompatible with empathy <2.27.91
 >=net-im/telepathy-mission-control-5
 
-# Samuli Suominen <ssuominen@gentoo.org> (11 Sep 2009)
-# No >= bluez 4 support wrt #279382 or update from upstream available.
-# Masked for removal.
-app-mobilephone/x70talk
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Sep 2009)
-# Doesn't compile with >= 2.6.25 kernel, or support >= bluez 4.
-# Masked for removal. Bugs #244890 and #283735.
-net-wireless/bluez-bluefw
-
 # Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org> (10 Sep 2009)
 # Included in Python 2.6. Masked for deletion in 30 days.
 dev-python/ssl-py26
@@ -554,11 +543,6 @@ sys-apps/einit-modules-xml
 =dev-ruby/activesupport-1.4.4
 =dev-ruby/actionpack-1.13.6
 
-# Samuli Suominen <ssuominen@gentoo.org> (14 Aug 2009)
-# Unresolved building issues wrt bugs #276246, #117523 and #213804.
-# Masked for removal. Please comment on #276246 if you still need this.
-sys-libs/uclibc++
-
 # Timo Gurr <tgurr@gentoo.org> (13 Aug 2009)
 # Mask Mumble 1.2.0 snapshots for testing.
 =media-sound/mumble-1.2.0_pre*
@@ -567,13 +551,6 @@ sys-libs/uclibc++
 # Alex Alexander <wired@gentoo.org> (12 Aug 2009)
 # Masked beta versions for testing
 =net-p2p/ktorrent-3.3_beta*
-
-# Samuli Suominen <ssuominen@gentoo.org> (11 Aug 2009)
-# Segmentation faults. Doesn't compile with -Wl,--as-needed.
-# Doesn't pass configure with Autoconf 2.64. Bugs 281080,
-# 247823 and 281076. Masked for removal.
-media-sound/beast
-media-sound/beast-data
 
 # Diego E. Pettenò <flameeyes@gentoo.org> (11 Aug 2009)
 #  on behalf of QA team
