@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.4.ebuild,v 1.2 2009/10/13 17:16:24 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/kwave-0.8.4.ebuild,v 1.3 2009/10/13 17:29:03 ssuominen Exp $
 
 EAPI=2
 # Note that kwave use really bad linguas code so we have to install them all.
@@ -34,7 +34,7 @@ src_configure() {
 
 	# This option is available, but the build dies at compile phase.
 	# $(cmake-utils_use_with libsamplerate SAMPLERATE)
-	
+
 	mycmakeargs="${mycmakeargs}
 		$(cmake-utils_use_with alsa)
 		$(cmake-utils_use_with doc)
