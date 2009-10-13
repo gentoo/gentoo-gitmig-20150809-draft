@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libsoup-gnome
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.8 2009/10/06 17:15:13 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup-gnome/ChangeLog,v 1.9 2009/10/13 15:21:13 darkside Exp $
+
+  13 Oct 2009; Jeremy Olexa <darkside@gentoo.org>
+  libsoup-gnome-2.26.3-r1.ebuild:
+  Add ~amd64-linux keyword
 
   06 Oct 2009; Fabian Groffen <grobian@gentoo.org>
   libsoup-gnome-2.26.3-r1.ebuild:
