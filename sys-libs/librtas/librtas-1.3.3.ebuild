@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.3.ebuild,v 1.2 2008/04/21 19:54:50 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/librtas-1.3.3.ebuild,v 1.3 2009/10/13 13:42:16 ssuominen Exp $
 
 inherit eutils
 
@@ -15,11 +15,10 @@ IUSE=""
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/librtas-1.3.3-remove-doc.patch
+	epatch "${FILESDIR}"/librtas-1.3.3-remove-doc.patch
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "Compilation failed"
-	dodoc README COPYRIGHT
-
+	emake DESTDIR="${D}" install || die
+	dodoc README
 }

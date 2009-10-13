@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.9 2007/07/03 21:19:54 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/lib-compat-1.4.ebuild,v 1.10 2009/10/13 13:44:12 ssuominen Exp $
 
 DESCRIPTION="Compatibility C++ and libc5 and libc6 libraries for programs new and old"
 HOMEPAGE="http://www.gentoo.org/"
@@ -19,7 +19,7 @@ S=${WORKDIR}/${P}/${ARCH}
 src_unpack() {
 	unpack ${A}
 
-	cd ${S}
+	cd "${S}"
 	# Rather install this with the proper filename
 	mv -f libstdc++-libc6.2-2.so.3 libstdc++-3-libc6.2-2-2.10.0.so
 	# libstdc++-2-libc6.1-1-2.9.0.so provides this one ...
