@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/libtrash-2.2.ebuild,v 1.8 2009/09/23 21:17:35 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtrash/libtrash-2.2.ebuild,v 1.9 2009/10/13 13:33:07 ssuominen Exp $
 
 inherit eutils toolchain-funcs
 
@@ -18,21 +18,21 @@ DEPEND=">=sys-libs/glibc-2.3.2
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.patch
-	sed -i -e "/^INSTLIBDIR/s/lib/$(get_libdir)/" ${S}/src/Makefile || die
+	epatch "${FILESDIR}"/${P}-gentoo.patch
+	sed -i -e "/^INSTLIBDIR/s/lib/$(get_libdir)/" "${S}"/src/Makefile || die
 }
 
 src_compile() {
-	make CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
 	dodir /etc /usr/$(get_libdir)
-	make DESTDIR=${D} install || die
+	emake DESTDIR="${D}" install || die
 
 	dosbin cleanTrash/ct2.pl
 	exeinto /etc/cron.daily
-	doexe ${FILESDIR}/cleanTrash.cron
+	doexe "${FILESDIR}"/cleanTrash.cron
 
 	dodoc CHANGE.LOG README libtrash.conf TODO
 
