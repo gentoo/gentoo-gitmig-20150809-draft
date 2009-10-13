@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygame
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.66 2009/10/08 18:11:59 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygame/ChangeLog,v 1.67 2009/10/13 17:05:09 mr_bones_ Exp $
+
+  13 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> -pygame-1.7.1.ebuild,
+  -pygame-1.8.0.ebuild, -pygame-1.8.1-r1.ebuild,
+  -files/pygame-1.8.1_icon_path.patch:
+  clean out old ebuilds
 
   08 Oct 2009; Raúl Porcel <armin76@gentoo.org> pygame-1.9.1.ebuild:
   alpha/ia64/sparc stable wrt #287438
