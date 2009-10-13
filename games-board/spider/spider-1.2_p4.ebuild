@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/spider/spider-1.2_p4.ebuild,v 1.1 2009/02/16 19:39:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/spider/spider-1.2_p4.ebuild,v 1.2 2009/10/13 20:02:57 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games
@@ -31,6 +31,10 @@ S=${WORKDIR}/${MY_P/_/-}.orig
 
 src_prepare() {
 	epatch "${WORKDIR}"/${MY_P}-${DEB_V}.diff
+	sed -i \
+		-e '/MKDIRHIER/s:/X11::' \
+		*Imakefile \
+		|| die "sed failed"
 	rm Makefile
 }
 
