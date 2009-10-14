@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3385 2009/10/14 15:18:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.3386 2009/10/14 19:57:31 nyhm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  14 Oct 2009; Tristan Heaven <nyhm@gentoo.org>
+  arch/amd64/no-multilib/package.mask, arch/amd64/no-multilib/use.mask,
+  features/64bit-native/package.mask, features/64bit-native/use.mask:
+  Unmask games-fps/quake3-teamarena, bug #256588
 
   14 Oct 2009; Jeroen Roovers <jer@gentoo.org> package.mask:
   Tweak www-client/opera mask to exclude 10.10b1.
