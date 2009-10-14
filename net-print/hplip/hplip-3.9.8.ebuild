@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8.ebuild,v 1.1 2009/09/24 19:55:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8.ebuild,v 1.2 2009/10/14 18:03:04 billie Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 
-IUSE="+cups cupsddk dbus doc fax gtk minimal parport policykit ppds qt3 qt4 scanner snmp"
+IUSE="+cups cupsddk dbus doc fax +foomatic gtk minimal parport policykit ppds qt3 qt4 scanner snmp"
 
 # Note : libusb-compat untested (calchan 20090516)
 

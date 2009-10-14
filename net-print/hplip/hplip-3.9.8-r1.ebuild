@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r1.ebuild,v 1.1 2009/10/14 15:45:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.9.8-r1.ebuild,v 1.2 2009/10/14 18:03:04 billie Exp $
 
 EAPI="2"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 
-IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt3 qt4 scanner snmp static-ppds +foomatic"
+IUSE="doc fax gtk +hpcups hpijs libnotify minimal parport policykit qt3 qt4 scanner snmp static-ppds"
 
 # Note : libusb-compat untested (calchan 20090516)
 

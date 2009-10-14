@@ -1,6 +1,11 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.126 2009/10/14 15:45:05 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.127 2009/10/14 18:03:04 billie Exp $
+
+  14 Oct 2009; Pielmeier Daniel <billie@gentoo.org> hplip-3.9.8.ebuild,
+  hplip-3.9.8-r1.ebuild, metadata.xml:
+  USE foomatic should go into hplip-3.9.8 instead of hplip-3.9.8-r1. Add
+  myself to maintainers.
 
 *hplip-3.9.8-r1 (14 Oct 2009)
 
