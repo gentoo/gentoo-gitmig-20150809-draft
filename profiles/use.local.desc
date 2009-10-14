@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4895 2009/10/14 10:07:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.4896 2009/10/14 15:47:43 robbat2 Exp $
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 # Keep it sorted (use "LC_ALL=C sort -t: -k1,1 -k2 | LC_ALL=C sort -s -t/ -k1,1")
@@ -2649,7 +2649,10 @@ net-print/hplip:cupsddk - Add support for net-print/cupsddk which enables dynami
 net-print/hplip:dbus - Add support for sys-apps/dbus which enables better communications with your device (recommended)
 net-print/hplip:doc - Build documentation
 net-print/hplip:fax - Enable fax on multifunction devices which support it
+net-print/hplip:foomatic -  Build the IJS/foomatic driver for cups. 
 net-print/hplip:gtk - Enable GTK+ dependencies, currently only the scanner GUI with USE=scanner.
+net-print/hplip:hpcups -  Build the hpcups driver for cups (by HP). 
+net-print/hplip:hpijs -  Build the IJS driver for cups (Foomatic) 
 net-print/hplip:minimal - Only build internal hpijs driver (not recommended at all, make sure you know what you are doing)
 net-print/hplip:parport - Enable parallel port for devices which require it
 net-print/hplip:ppds - Use precompiled PPD files (obsolete, use cupsddk instead)
@@ -2657,6 +2660,7 @@ net-print/hplip:qt3 - Enable graphical interface using Qt 3; when both qt3 and q
 net-print/hplip:qt4 - Enable graphical interface using Qt 4; when both qt3 and qt4 USE flags are enabled then qt4 has priority over qt3
 net-print/hplip:scanner - Enable scanner on multifunction devices which support it 
 net-print/hplip:snmp - Add support for net-analyzer/net-snmp which enables this driver to work over networks (both for server and client)
+net-print/hplip:static-ppds -  Use statically-generated PPDs instead of Dynamic PPDs. This is deprecated, and this USE flag is thus suggested to stay turned off. 
 net-print/pkpgcounter:psyco - psyco python accelerator
 net-proxy/dansguardian:kaspersky - Adds support for Kaspersky AntiVirus software
 net-proxy/dansguardian:ntlm - Enable support for the NTLM auth plugin
