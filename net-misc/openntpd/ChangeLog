@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openntpd
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.42 2009/10/14 08:04:18 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/ChangeLog,v 1.43 2009/10/14 13:39:14 bangert Exp $
+
+  14 Oct 2009; Thilo Bangert <bangert@gentoo.org>
+  files/openntpd.rc-3.9_p1-r2:
+  use NTPD_HOME variable
 
 *openntpd-3.9_p1-r2 (14 Oct 2009)
 

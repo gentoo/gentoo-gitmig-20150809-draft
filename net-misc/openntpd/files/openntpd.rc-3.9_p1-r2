@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/files/openntpd.rc-3.9_p1-r2,v 1.1 2009/10/14 08:04:19 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/files/openntpd.rc-3.9_p1-r2,v 1.2 2009/10/14 13:39:15 bangert Exp $
 
 depend() {
 	need net
@@ -30,8 +30,8 @@ start() {
 	checkconfig || return $?
 
 	#prepare chroot
-	mkdir -p /var/lib/openntpd/chroot/etc/
-	cp /etc/localtime /var/lib/openntpd/chroot/etc
+	mkdir -p "${NTPD_HOME}/etc"
+	cp /etc/localtime "${NTPD_HOME}/etc"
 
 	ebegin "Starting ntpd"
 	start-stop-daemon --start --exec /usr/sbin/ntpd --name ntpd -- ${NTPD_OPTS}
