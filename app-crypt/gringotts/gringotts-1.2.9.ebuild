@@ -1,9 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.9.ebuild,v 1.5 2008/06/27 17:19:14 nixnut Exp $
-
-WANT_AUTOCONF="latest"
-WANT_AUTOMAKE="latest"
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.9.ebuild,v 1.6 2009/10/14 00:54:37 halcy0n Exp $
 
 inherit autotools eutils fdo-mime
 

@@ -1,11 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1.ebuild,v 1.2 2009/08/03 07:53:57 mueli Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-1.2.1.ebuild,v 1.3 2009/10/14 00:56:06 halcy0n Exp $
 
 EAPI=1
-
-WANT_AUTOMAKE=latest
-WANT_AUTOCONF=latest
 
 inherit autotools libtool eutils virtualx toolchain-funcs flag-o-matic
 
