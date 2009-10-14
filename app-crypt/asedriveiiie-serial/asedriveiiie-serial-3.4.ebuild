@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/asedriveiiie-serial-3.4.ebuild,v 1.7 2009/05/16 06:55:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-serial/asedriveiiie-serial-3.4.ebuild,v 1.8 2009/10/14 00:48:42 halcy0n Exp $
 
 DESCRIPTION="ASEDriveIIIe Serial Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -29,7 +29,6 @@ src_install() {
 
 	make install DESTDIR="${D}" || die
 
-	dodoc LICENSE
 	dodoc README
 
 	dodir "$(dirname "${conf}")"

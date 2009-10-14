@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/asekey
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.7 2009/05/16 07:30:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/ChangeLog,v 1.8 2009/10/14 00:49:50 halcy0n Exp $
+
+  14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> asekey-3.3.ebuild:
+  QA fixes; remove useless dodoc LICENSE
 
   16 May 2009; Robin H. Johnson <robbat2@gentoo.org> asekey-3.3.ebuild,
   asekey-3.4.ebuild:

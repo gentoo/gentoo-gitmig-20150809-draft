@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.3.ebuild,v 1.7 2009/05/16 07:30:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asekey/asekey-3.3.ebuild,v 1.8 2009/10/14 00:49:50 halcy0n Exp $
 
 DESCRIPTION="ASEKey USB SIM Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -30,7 +30,6 @@ src_install() {
 
 	emake install DESTDIR="${D}" || die
 
-	dodoc LICENSE
 	dodoc README
 
 	dodir "$(dirname "${conf}")"

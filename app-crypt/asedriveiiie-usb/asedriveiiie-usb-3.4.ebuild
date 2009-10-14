@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/asedriveiiie-usb-3.4.ebuild,v 1.6 2009/05/16 07:00:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/asedriveiiie-usb/asedriveiiie-usb-3.4.ebuild,v 1.7 2009/10/14 00:49:17 halcy0n Exp $
 
 DESCRIPTION="ASEDriveIIIe USB Card Reader"
 HOMEPAGE="http://www.athena-scs.com"
@@ -28,7 +28,6 @@ src_compile() {
 src_install() {
 	emake install DESTDIR="${D}" || die
 
-	dodoc LICENSE
 	dodoc README
 
 	elog "NOTICE:"
