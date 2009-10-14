@@ -12,7 +12,7 @@ checkconfig() {
 	return 1
     fi
 
-    if [[ ! -e /sys/block/${DISK}/queue/protect ]] ; then
+    if [[ ! -e /sys/block/${DISK}/queue/protect ]] && [[ ! -e /sys/block/${DISK}/device/unload_heads ]] ; then
 	eerror "No protect entry for ${DISK}!"
 	eerror "Make sure your kernel is patched with the blk_freeze patch"
 	return 1
