@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.3a.ebuild,v 1.1 2008/11/05 20:56:17 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/lightyears/lightyears-1.3a.ebuild,v 1.2 2009/10/14 23:41:08 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils python games
 
 DESCRIPTION="a single-player game with a science-fiction theme"
@@ -16,10 +17,7 @@ IUSE=""
 DEPEND="dev-lang/python
 	dev-python/pygame"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	epatch "${FILESDIR}/${P}"-gentoo.patch
 	sed -i \
 		-e "s:@GENTOO_LIBDIR@:$(games_get_libdir)/${PN}:" \
