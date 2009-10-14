@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.9.ebuild,v 1.3 2007/11/20 21:44:51 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/g-wrap-1.9.9.ebuild,v 1.4 2009/10/14 10:09:19 ssuominen Exp $
 
 inherit eutils autotools
 
@@ -16,7 +16,7 @@ IUSE=""
 # guile-lib for srfi-34, srfi-35
 DEPEND="dev-scheme/guile
 	=dev-libs/glib-2*
-	!=dev-libs/libffi-4*"
+	!dev-libs/libffi"
 #	dev-scheme/guile-lib"
 
 RDEPEND="${DEPEND}"

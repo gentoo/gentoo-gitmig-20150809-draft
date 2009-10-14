@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.73 2009/09/27 14:00:22 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.74 2009/10/14 10:09:19 ssuominen Exp $
+
+  14 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  g-wrap-1.9.6-r3.ebuild, g-wrap-1.9.8.ebuild, g-wrap-1.9.9.ebuild:
+  Add reverse blockers for dev-libs/libffi to avoid people breaking
+  dev-lang/python because of ld.so.conf conflict.
 
   27 Sep 2009; nixnut <nixnut@gentoo.org> g-wrap-1.9.11.ebuild:
   ppc stable #272675
