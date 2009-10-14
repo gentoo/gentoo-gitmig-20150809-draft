@@ -1,6 +1,9 @@
 # ChangeLog for games-mud/lyntin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/ChangeLog,v 1.9 2009/01/19 23:25:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/ChangeLog,v 1.10 2009/10/14 21:34:08 mr_bones_ Exp $
+
+  14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> lyntin-4.2.ebuild:
+  fix LICENSE
 
   19 Jan 2009; Michael Sterrett <mr_bones_@gentoo.org> lyntin-4.2.ebuild:
   EAPI=2; add use-based deps

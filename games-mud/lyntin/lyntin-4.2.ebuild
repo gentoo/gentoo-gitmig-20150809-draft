@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2.ebuild,v 1.2 2009/01/19 23:25:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/lyntin/lyntin-4.2.ebuild,v 1.3 2009/10/14 21:34:08 mr_bones_ Exp $
 
 EAPI=2
 inherit eutils games distutils
@@ -9,7 +9,7 @@ DESCRIPTION="tintin mud client clone implemented in Python"
 HOMEPAGE="http://lyntin.sourceforge.net/"
 SRC_URI="mirror://sourceforge/lyntin/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="tk"
