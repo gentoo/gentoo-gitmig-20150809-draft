@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.647 2009/10/09 01:13:46 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.648 2009/10/14 12:34:11 mpagano Exp $
+
+*gentoo-sources-2.6.31-r3 (14 Oct 2009)
+
+  14 Oct 2009; Mike Pagano <mpagano@gentoo.org>
+  +gentoo-sources-2.6.31-r3.ebuild:
+  Added patch to add new USB ID for KWorld PlusTV Dual DVB-T Stick and linux
+  patch version 2.6.31.4
 
 *gentoo-sources-2.6.30-r8 (09 Oct 2009)
 
