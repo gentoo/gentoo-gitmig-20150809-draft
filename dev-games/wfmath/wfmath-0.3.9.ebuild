@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/wfmath-0.3.9.ebuild,v 1.1 2009/06/05 12:49:29 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/wfmath/wfmath-0.3.9.ebuild,v 1.2 2009/10/14 04:46:40 mr_bones_ Exp $
 
+EAPI=2
 DESCRIPTION="Worldforge math library"
 HOMEPAGE="http://www.worldforge.org/dev/eng/libraries/wfmath"
 SRC_URI="mirror://sourceforge/worldforge/${P}.tar.bz2"
@@ -19,7 +19,7 @@ DEPEND="doc? ( app-doc/doxygen )
 src_compile() {
 	emake || die "emake failed"
 	if use doc; then
-		cd doc && emake doc || die "emake doc failed"
+		emake -C doc doc || die "emake doc failed"
 	fi
 }
 
