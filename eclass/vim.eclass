@@ -1,8 +1,9 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.175 2009/10/11 11:49:42 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.176 2009/10/14 01:29:49 lack Exp $
 
 # Authors:
+# 	Jim Ramsay <i.am@gentoo.org>
 # 	Ryan Phillips <rphillips@gentoo.org>
 # 	Seemant Kulleen <seemant@gentoo.org>
 # 	Aron Griffis <agriffis@gentoo.org>
@@ -754,6 +755,9 @@ vim_pkg_postinst() {
 	echo
 
 	if version_is_at_least 6.3.1 ; then
+		if [[ ${MY_PN} == "vim-core" ]] ; then
+			export BASH_COMPLETION_NAME="xxd"
+		fi
 		bash-completion_pkg_postinst
 	fi
 
