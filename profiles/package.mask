@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10583 2009/10/14 15:18:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.10584 2009/10/14 20:21:43 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,6 +30,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Michael Sterrett <mr_bones_@gentoo.org> (14 Oct 2009)
+# Requires aRTs and last released in 2007
+games-engines/kwest
 
 # Samuli Suominen <ssuominen@gentoo.org> (13 Oct 2009)
 # No bluez-4 support. See bug 276455. Masked for removal.
