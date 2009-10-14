@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.12 2009/09/30 02:58:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-9999.ebuild,v 1.13 2009/10/14 00:06:34 vapier Exp $
 
 inherit autotools mount-boot eutils flag-o-matic toolchain-funcs
 
@@ -73,6 +73,7 @@ src_install() {
 		sed -i s:grub-install:grub2-install: "${D}"/sbin/grub-install
 		mv "${D}"/sbin/grub{,2}-install || die
 		mv "${D}"/usr/share/man/man8/grub{,2}-install.8 || die
+		mv "${D}"/usr/share/info/grub{,2}.info || die
 	fi
 }
 
