@@ -1,7 +1,8 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.35.ebuild,v 1.5 2008/02/29 19:53:15 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/gamepick/gamepick-0.35.ebuild,v 1.6 2009/10/14 19:31:47 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 DESCRIPTION="Launch opengl games with custom graphic settings"
@@ -13,19 +14,20 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND="=x11-libs/gtk+-2*"
+RDEPEND="x11-libs/gtk+:2"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
+	sed -i \
+		-e "s:/etc:${GAMES_SYSCONFDIR}:" \
+		src/gamepick.h \
+		|| die "sed failed"
 
-	sed -i "s:/etc:${GAMES_SYSCONFDIR}:" src/gamepick.h \
-		|| die "sed gamepick.h failed"
-
-	sed -i 's/-O2//' src/Makefile.in \
-		|| die "sed Makefile.in failed"
+	sed -i \
+		-e 's/-O2//' \
+		src/Makefile.in \
+		|| die "sed failed"
 }
 
 src_install() {
@@ -35,7 +37,7 @@ src_install() {
 	touch "${D}/${GAMES_SYSCONFDIR}"/${PN}.conf
 
 	newicon gamepick-48x48.xpm ${PN}.xpm
-	make_desktop_entry ${PN} ${PN} ${PN}
+	make_desktop_entry ${PN} ${PN}
 
 	dodoc AUTHORS ChangeLog README
 	prepgamesdirs
