@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.102 2009/10/10 12:06:44 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.103 2009/10/14 09:59:55 ssuominen Exp $
+
+  14 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
+  Mask sys-devel/gcc[libffi] to avoid conflict with dev-libs/libffi in
+  ld.so.conf.
 
   10 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> package.use.mask:
   Mask USE google-gadgets for plasma-workspace wrt #287697. Only available
