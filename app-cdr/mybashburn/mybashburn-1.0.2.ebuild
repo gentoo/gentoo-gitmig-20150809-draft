@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/mybashburn-1.0.2.ebuild,v 1.5 2009/09/06 18:00:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/mybashburn/mybashburn-1.0.2.ebuild,v 1.6 2009/10/14 00:46:52 halcy0n Exp $
 
 DESCRIPTION="Command-line burning interface of data and music CDs and DVDs"
 HOMEPAGE="http://mybashburn.sourceforge.net/"
@@ -26,7 +26,7 @@ RDEPEND="dev-util/dialog
 RESTRICT="test"
 
 src_compile() {
-	sed -i 's/\/usr/usr/' ${S}/Makefile
+	sed -i 's/\/usr/usr/' "${S}"/Makefile
 }
 
 src_install() {
