@@ -1,7 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ascal/ascal-0.1.1.ebuild,v 1.4 2009/01/18 20:38:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ascal/ascal-0.1.1.ebuild,v 1.5 2009/10/14 20:14:49 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="A game similar to Draughts but with some really cool enhancements"
@@ -19,9 +20,7 @@ RDEPEND="dev-cpp/libgnomecanvasmm
 DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-install.patch \
 		"${FILESDIR}"/${P}-gcc43.patch
 	eautoreconf
