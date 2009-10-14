@@ -4,3 +4,4 @@ slotmove <net-misc/kvpnc-0.9.1 0 3.5
 move net-zope/zcbuildout net-zope/zc-buildout
 move app-admin/realpath app-misc/realpath
 slotmove kde-misc/ksystemlog 0 3.5
+slotmove kde-misc/rsibreak 0 3.5
