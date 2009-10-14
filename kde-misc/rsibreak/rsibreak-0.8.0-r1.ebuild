@@ -1,6 +1,6 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.8.0.ebuild,v 1.8 2007/12/21 12:39:18 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/rsibreak/rsibreak-0.8.0-r1.ebuild,v 1.1 2009/10/14 14:41:46 ssuominen Exp $
 
 USE_KEG_PACKAGING="1"
 
@@ -17,7 +17,7 @@ SRC_URI="http://www.rsibreak.org/images/e/e0/${MY_P}.tar.bz2"
 HOMEPAGE="http://www.rsibreak.org/"
 
 LICENSE="GPL-2"
-SLOT="0"
+SLOT="3.5"
 
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 
@@ -28,7 +28,6 @@ S="${WORKDIR}/${PN}-${PV/_rc/-rc}"
 RDEPEND="x11-libs/libXext
 		x11-libs/libX11
 		x11-libs/libXScrnSaver"
-
 DEPEND="${RDEPEND}
 		x11-proto/scrnsaverproto"
 
