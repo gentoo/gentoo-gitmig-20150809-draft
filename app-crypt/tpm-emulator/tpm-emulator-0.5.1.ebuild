@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.1.ebuild,v 1.1 2009/09/21 10:40:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-emulator/tpm-emulator-0.5.1.ebuild,v 1.2 2009/10/14 01:01:50 halcy0n Exp $
 
 EAPI=2
 inherit toolchain-funcs linux-mod eutils
@@ -31,8 +31,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	cd "${S}"
-
 	sed -i 's/LDFLAGS :=/override LDFLAGS +=/g' tpmd/Makefile
 	sed -i 's#/var/tpm#/var/run/tpm#g' tpmd/tpmd.c tddl/tddl.c tpmd_dev/tpmd_dev.c
 
