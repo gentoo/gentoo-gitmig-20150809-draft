@@ -1,8 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.6 2009/06/08 10:45:13 tupone Exp $
-EAPI=2
+# $Header: /var/cvsroot/gentoo-x86/games-action/xpilot-ng/xpilot-ng-4.7.2-r1.ebuild,v 1.7 2009/10/14 04:44:46 mr_bones_ Exp $
 
+EAPI=2
 inherit python eutils multilib games
 
 DESCRIPTION="Improvement of the multiplayer space game XPilot"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xpilot/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="openal sdl"
 
 RDEPEND="x11-libs/libX11
@@ -20,7 +20,7 @@ RDEPEND="x11-libs/libX11
 	x11-libs/libSM
 	dev-libs/expat
 	openal? ( media-libs/openal )
-	=dev-python/wxpython-2.6*
+	dev-python/wxpython:2.6
 	sdl? (
 		virtual/opengl
 		media-libs/libsdl
@@ -46,8 +46,7 @@ src_configure() {
 		--disable-dependency-tracking \
 		$(use_enable sdl sdl-client) \
 		$(use_enable sdl sdl-gameloop) \
-		$(use_enable openal sound) \
-		|| die
+		$(use_enable openal sound)
 }
 
 src_install() {
