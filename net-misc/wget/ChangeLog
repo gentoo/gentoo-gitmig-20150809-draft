@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.117 2009/10/07 19:08:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.118 2009/10/14 01:26:56 vapier Exp $
+
+  14 Oct 2009; Mike Frysinger <vapier@gentoo.org>
+  files/wget-1.12-debug-tests.patch:
+  Update debug test patch to cover USE=idn #288156 by Paolo Pedroni and info
+  from Kent Fredric.
 
   07 Oct 2009; Markus Meier <maekke@gentoo.org> wget-1.12.ebuild:
   amd64 stable, bug #286058
