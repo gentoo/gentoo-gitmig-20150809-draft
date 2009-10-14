@@ -1,6 +1,13 @@
 # ChangeLog for sys-block/gparted
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.71 2009/08/25 20:10:30 fauli Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/ChangeLog,v 1.72 2009/10/14 18:11:20 mrpouet Exp $
+
+*gparted-0.4.7 (14 Oct 2009)
+
+  14 Oct 2009; Romain Perier <mrpouet@gentoo.org>
+  +gparted-0.4.7.ebuild, +files/gparted-0.4.7-realpath-symlink-device.patch:
+  Version bump. Import patch from upstream bug #582687 in order to resolve
+  realpath for symlinks devices.
 
   25 Aug 2009; Christian Faulhammer <fauli@gentoo.org> gparted-0.4.5.ebuild:
   stable x86, bug 280080
