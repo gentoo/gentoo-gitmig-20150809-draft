@@ -1,9 +1,9 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.7.4_rc1.ebuild,v 1.2 2009/10/14 07:16:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdstyler/dvdstyler-1.7.4.ebuild,v 1.1 2009/10/14 07:16:49 dragonheart Exp $
 
 EAPI=2
-inherit autotools wxwidgets
+inherit autotools wxwidgets eutils
 
 MY_P=${PN/dvds/DVDS}-${PV/_}
 
@@ -35,7 +35,7 @@ PDEPEND=">=app-cdr/dvdisaster-0.71.0"
 S=${WORKDIR}/${MY_P}
 
 src_prepare() {
-	sed -e "/SUBDIRS/s:docs::" -i Makefile.am || die
+	epatch "${FILESDIR}"/${P}-autoconf.patch
 	eautoreconf
 }
 
@@ -43,6 +43,7 @@ src_configure() {
 	export WX_GTK_VER="2.8"
 	need-wxwidgets gtk2
 	econf \
+	 	--docdir=/usr/share/doc/${PF} \
 		$(use_enable debug) \
 		--disable-dependency-tracking \
 		--with-wx-config="${WX_CONFIG}"
@@ -50,6 +51,6 @@ src_configure() {
 
 src_install() {
 	emake DESTDIR="${D}" install || die
-	rm -rf "${D}"/usr/share/doc/${PN}
-	dodoc AUTHORS ChangeLog README TODO
+	#rm -rf "${D}"/usr/share/doc/${PN}
+	#dodoc AUTHORS ChangeLog README TODO
 }
