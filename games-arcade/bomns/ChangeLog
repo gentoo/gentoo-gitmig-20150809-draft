@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/bomns
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.4 2007/04/09 21:49:41 welp Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/bomns/ChangeLog,v 1.5 2009/10/14 20:12:09 mr_bones_ Exp $
+
+*bomns-0.99.2 (14 Oct 2009)
+
+  14 Oct 2009; Michael Sterrett <mr_bones_@gentoo.org> +bomns-0.99.2.ebuild:
+  version bump
 
   09 Apr 2007; Peter Weller <welp@gentoo.org> bomns-0.99.1.ebuild:
   Keyworded ~x86-fbsd wrt bug 173405
