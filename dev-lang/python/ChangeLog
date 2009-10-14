@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.425 2009/10/14 04:13:28 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.426 2009/10/14 09:27:58 ssuominen Exp $
+
+  14 Oct 2009; Samuli Suominen <ssuominen@gentoo.org>
+  python-3.1.1-r1.ebuild:
+  Keyword ~sparc-fbsd wrt #287383.
 
   14 Oct 2009; Alexis Ballier <aballier@gentoo.org> python-2.6.3.ebuild:
   keyword ~sparc-fbsd
