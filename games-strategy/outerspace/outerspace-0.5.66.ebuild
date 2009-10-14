@@ -1,7 +1,8 @@
 # Copyright 1999-2007 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/outerspace-0.5.66.ebuild,v 1.1 2007/11/27 05:02:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/outerspace/outerspace-0.5.66.ebuild,v 1.2 2009/10/14 19:34:51 mr_bones_ Exp $
 
+EAPI=2
 inherit eutils games
 
 MY_PN=${PN/outerspace/OuterSpace}
@@ -20,9 +21,7 @@ RDEPEND=">=dev-python/pygame-1.7
 
 S=${WORKDIR}/${MY_P}
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	sed -e "s:@GENTOO_DATADIR@:${GAMES_DATADIR}/${PN}:" \
 		-e "s:@GENTOO_LIBDIR@:$(games_get_libdir)/${PN}:" \
 		"${FILESDIR}"/${PN} > ${PN} \
