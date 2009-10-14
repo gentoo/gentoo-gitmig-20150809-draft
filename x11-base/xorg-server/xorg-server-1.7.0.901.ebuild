@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.0.ebuild,v 1.1 2009/10/03 16:05:24 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/xorg-server-1.7.0.901.ebuild,v 1.1 2009/10/14 12:22:54 scarabeus Exp $
 
 EAPI="2"
 
@@ -121,8 +121,6 @@ EPATCH_SUFFIX="patch"
 # These have been sent upstream
 UPSTREAMED_PATCHES=(
 	#"${WORKDIR}/patches/"
-	# Merged for 1.7.1
-	"${FILESDIR}/${PV}-xkb-check-permissions-on-XKM_OUTPUT_DIR.patch"
 	)
 
 PATCHES=(

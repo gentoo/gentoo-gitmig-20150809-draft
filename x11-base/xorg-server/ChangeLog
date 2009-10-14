@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.454 2009/10/12 08:19:07 remi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.455 2009/10/14 12:22:54 scarabeus Exp $
+
+*xorg-server-1.7.0.901 (14 Oct 2009)
+
+  14 Oct 2009; Tomáš Chvátal <scarabeus@gentoo.org>
+  -files/1.7.0-xkb-check-permissions-on-XKM_OUTPUT_DIR.patch,
+  -xorg-server-1.7.0.ebuild, +xorg-server-1.7.0.901.ebuild:
+  Version bup xorg-server 1.7. Remove old one.
 
 *xorg-server-1.6.5 (12 Oct 2009)
 
