@@ -1,7 +1,8 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/camato/camato-0.7.4.ebuild,v 1.2 2007/11/03 08:18:09 drac Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/camato/camato-0.7.4.ebuild,v 1.3 2009/10/14 19:43:59 mr_bones_ Exp $
 
+EAPI=2
 inherit versionator games
 
 MY_PV=$(replace_all_version_separators _)
@@ -16,11 +17,10 @@ IUSE=""
 
 DEPEND="dev-ruby/ruby-gtk2"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	rm -f Makefile
-	sed -i "s:/usr/share:${GAMES_DATADIR}:" \
+	sed -i \
+		-e "s:/usr/share:${GAMES_DATADIR}:" \
 		${PN} || die "sed failed"
 }
 
