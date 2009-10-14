@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.11 2009/08/08 22:19:53 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/mini_httpd/mini_httpd-1.19.ebuild,v 1.12 2009/10/14 12:02:59 bangert Exp $
 
 inherit eutils toolchain-funcs
 
@@ -47,18 +47,18 @@ src_compile() {
 	if ! use ipv6; then
 		sed -i 's@#define USE_IPV6@#undef USE_IPV6@' mini_httpd.c
 	fi
-	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS}" LDFLAGS="${LDFLAGS}" || die
+	emake CC="$(tc-getCC)" CFLAGS="${CFLAGS} \${CDEFS}" LDFLAGS="${LDFLAGS}" || die
 }
 
 src_install() {
 	make install || die
-	mv ${D}/usr/sbin/{,mini_}htpasswd
-	mv ${D}/usr/share/man/man1/{,mini_}htpasswd.1
+	mv "${D}"/usr/sbin/{,mini_}htpasswd
+	mv "${D}"/usr/share/man/man1/{,mini_}htpasswd.1
 
 	newinitd "${FILESDIR}"/mini_httpd.init mini_httpd
 	newconfd "${FILESDIR}"/mini_httpd.confd-${PV} mini_httpd
 	dodoc README
-	newdoc ${FILESDIR}/mini_httpd.conf.sample-${PV} mini_httpd.conf.sample
+	newdoc "${FILESDIR}"/mini_httpd.conf.sample-${PV} mini_httpd.conf.sample
 }
 
 pkg_postinst() {
