@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/xwininfo
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.37 2009/10/11 11:08:04 nixnut Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xwininfo/ChangeLog,v 1.38 2009/10/14 11:45:57 remi Exp $
+
+  14 Oct 2009; Rémi Cardona <remi@gentoo.org> -xwininfo-1.0.2.ebuild:
+  drop old ebuilds
 
   11 Oct 2009; nixnut <nixnut@gentoo.org> ChangeLog:
   ppc stable #282290
