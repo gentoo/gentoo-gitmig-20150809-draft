@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql-server
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.27 2009/10/13 15:24:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql-server/ChangeLog,v 1.28 2009/10/14 00:23:47 jer Exp $
+
+  14 Oct 2009; Jeroen Roovers <jer@gentoo.org>
+  postgresql-server-7.4.26.ebuild, +files/postgresql-7.4-hppa.patch:
+  Readd hppa patch. Marked ~hppa (bug #285475).
 
   13 Oct 2009; Jeroen Roovers <jer@gentoo.org>
   postgresql-server-8.4.1.ebuild:
