@@ -1,23 +1,25 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/nuvola-1.0-r1.ebuild,v 1.12 2006/11/28 00:28:32 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/nuvola-1.0-r1.ebuild,v 1.13 2009/10/14 17:15:03 ssuominen Exp $
 
-DESCRIPTION="Nuvola SVG icon theme."
-SRC_URI="http://www.icon-king.com/files/${P}.tar.gz"
+DESCRIPTION="Nuvola SVG icon theme"
 HOMEPAGE="http://www.kde-look.org/content/show.php?content=5358"
-LICENSE="LGPL-2"
+SRC_URI="http://www.icon-king.com/files/${P}.tar.gz"
 
-IUSE=""
-KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+LICENSE="LGPL-2"
 SLOT="0"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+IUSE=""
 
 RESTRICT="strip binchecks"
 
-S="${WORKDIR}"
+DEPEND="!=kde-base/kdeartwork-iconthemes-4*"
 
-src_install(){
+S=${WORKDIR}
+
+src_install() {
 	cd nuvola
-	dodoc thanks.to readme.txt author license.txt
+	dodoc thanks.to readme.txt author
 	rm thanks.to thanks.to~ readme.txt author license.txt
 
 	cd "${S}"
