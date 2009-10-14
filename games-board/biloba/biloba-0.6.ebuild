@@ -1,11 +1,12 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.6.ebuild,v 1.1 2009/01/04 02:05:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/biloba/biloba-0.6.ebuild,v 1.2 2009/10/14 15:53:13 mr_bones_ Exp $
 
+EAPI=2
 inherit autotools eutils games
 
 DESCRIPTION="a board game, up to 4 players, with AI and network."
-HOMEPAGE="http://perso.wanadoo.fr/biloba/"
+HOMEPAGE="http://biloba.sourceforge.net/"
 SRC_URI="mirror://sourceforge/biloba/${P}.tar.gz"
 
 LICENSE="GPL-2"
@@ -13,14 +14,11 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="media-libs/libsdl
-	media-libs/sdl-image
+DEPEND="media-libs/libsdl[X,video,audio]
+	media-libs/sdl-image[png]
 	media-libs/sdl-mixer"
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-
+src_prepare() {
 	# X11 headers are checked but not used, everything is done through SDL
 	epatch \
 		"${FILESDIR}"/${P}-not-windows.patch \
