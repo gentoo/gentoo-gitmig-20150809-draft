@@ -1,10 +1,8 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.4.5.ebuild,v 1.1 2009/07/07 12:58:16 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/pound-2.4.5-r1.ebuild,v 1.1 2009/10/14 08:23:54 bangert Exp $
 
 EAPI="2"
-
-inherit flag-o-matic
 
 MY_P="${P/p/P}"
 DESCRIPTION="A http/https reverse-proxy and load-balancer."
@@ -14,18 +12,16 @@ HOMEPAGE="http://www.apsis.ch/pound/"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~hppa ~mips ~ppc ~sparc ~x86"
-IUSE="ssl dynscaler static"
+IUSE="dynscaler"
 
-DEPEND="ssl? ( dev-libs/openssl )"
+DEPEND="dev-libs/libpcre
+	dev-libs/openssl"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
 
 src_configure() {
-	use static && append-ldflags -static
-
 	econf \
-		$(use_with ssl) \
 		$(use_enable dynscaler) \
 		|| die "configure failed"
 }
