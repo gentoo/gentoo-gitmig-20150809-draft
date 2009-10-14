@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/libftdi
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.42 2009/05/12 22:21:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/libftdi/ChangeLog,v 1.43 2009/10/14 02:28:42 vapier Exp $
+
+  14 Oct 2009; Mike Frysinger <vapier@gentoo.org> libftdi-0.16.ebuild:
+  Switch to virtual/libusb:0 #270039 #281176.
 
 *libftdi-0.16 (12 May 2009)
 
