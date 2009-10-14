@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.28 2009/09/06 21:34:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/cryptoapi-2.4.7.0.ebuild,v 1.29 2009/10/14 00:51:45 halcy0n Exp $
 
 inherit linux-mod
 
@@ -26,7 +26,7 @@ src_compile() {
 	# rphillips - Fixes #19006
 	# econf --enable-iv-mode-sector
 	econf || die "econf failed"
-	cd ${S}/api
+	cd "${S}"/api
 	sed -i -e "s:-DMODVERSIONS:-DMODVERSIONS -DEXPORT_SYMTAB:g" \
 		Makefile
 	cd ..
@@ -36,8 +36,8 @@ src_compile() {
 }
 
 src_install() {
-	dodir ${D}/lib/modules/${KV}/misc
-	make MODLIB=${D}/lib/modules/${KV}/misc install || die
+	dodir "${D}"/lib/modules/${KV}/misc
+	make MODLIB="${D}"/lib/modules/${KV}/misc install || die
 
 	dodoc AUTHORS ChangeLog INSTALL LICENSE.crypto
 	dodoc NEWS README* TODO doc/* doc/utils/*

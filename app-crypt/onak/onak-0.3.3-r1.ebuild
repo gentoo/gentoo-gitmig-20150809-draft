@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/onak-0.3.3-r1.ebuild,v 1.2 2008/05/21 15:49:17 dev-zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/onak/onak-0.3.3-r1.ebuild,v 1.3 2009/10/14 00:57:02 halcy0n Exp $
 
 DESCRIPTION="onak is an OpenPGP keyserver"
 HOMEPAGE="http://www.earth.li/projectpurple/progs/onak.html"
@@ -45,5 +45,5 @@ src_install() {
 		-e 's,^db_dir /var/lib/lib/onak,db_dir /var/lib/onak,g' \
 		-e 's,^logfile /var/lib/log/onak.log,logfile /var/log/onak.log,g' \
 		-e 's,^max_last 1,max_last 0,g' \
-		${D}/etc/onak.conf
+		"${D}"/etc/onak.conf
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r3.ebuild,v 1.14 2008/03/09 21:45:19 ricmm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca-tls/qca-tls-1.0-r3.ebuild,v 1.15 2009/10/14 00:57:52 halcy0n Exp $
 
 inherit eutils
 
@@ -19,9 +19,9 @@ DEPEND=">=app-crypt/qca-1.0
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/qca-pathfix.patch
-	epatch ${FILESDIR}/qca-openssl-0.9.8.patch
+	cd "${S}"
+	epatch "${FILESDIR}"/qca-pathfix.patch
+	epatch "${FILESDIR}"/qca-openssl-0.9.8.patch
 }
 
 src_compile() {

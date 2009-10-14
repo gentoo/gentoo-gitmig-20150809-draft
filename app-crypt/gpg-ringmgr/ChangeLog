@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpg-ringmgr
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.12 2007/01/11 21:00:55 vapier Exp $
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-ringmgr/ChangeLog,v 1.13 2009/10/14 00:53:35 halcy0n Exp $
+
+  14 Oct 2009; Mark Loeser <halcy0n@gentoo.org> gpg-ringmgr-1.12.ebuild:
+  QA fixes; unquoted variables
 
   11 Jan 2007; Mike Frysinger <vapier@gentoo.org> gpg-ringmgr-1.12.ebuild:
   Remove pointless call to prepalldocs.
