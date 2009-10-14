@@ -1,6 +1,13 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.125 2009/09/24 19:55:40 flameeyes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.126 2009/10/14 15:45:05 flameeyes Exp $
+
+*hplip-3.9.8-r1 (14 Oct 2009)
+
+  14 Oct 2009; Diego E. Pettenò <flameeyes@gentoo.org>
+  +hplip-3.9.8-r1.ebuild, metadata.xml:
+  Add missing foomatic USE flag in IUSE for old version; new ebuild by
+  Daniel Pielmeier (billie), see bug #287005.
 
 *hplip-3.9.8 (24 Sep 2009)
 
