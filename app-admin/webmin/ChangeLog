@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webmin
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.181 2009/10/14 13:31:57 vostorga Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/ChangeLog,v 1.182 2009/10/14 22:27:25 vostorga Exp $
+
+  14 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> webmin-1.490.ebuild:
+  Fixing sandbox violation with device-mapper, bug 249904
 
   14 Oct 2009; Víctor Ostorga <vostorga@gentoo.org> -webmin-1.400-r1.ebuild,
   -webmin-1.441.ebuild, -webmin-1.470.ebuild, -webmin-1.480.ebuild:
