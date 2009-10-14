@@ -1,6 +1,15 @@
 # ChangeLog for net-print/hplip
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.127 2009/10/14 18:03:04 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/ChangeLog,v 1.128 2009/10/14 22:05:24 billie Exp $
+
+*hplip-3.9.8-r2 (14 Oct 2009)
+
+  14 Oct 2009; Pielmeier Daniel <billie@gentoo.org> +hplip-3.9.8-r2.ebuild,
+  metadata.xml:
+  Revision bump. Replacing udev rules shouldn't be necessary anymore. New
+  udev-acl use flag which installs 40-hplip.rules only if udev with acl
+  support is available else 55-hpmud.rules is installed. Use minmal does not
+  install files below libdir anymore.
 
   14 Oct 2009; Pielmeier Daniel <billie@gentoo.org> hplip-3.9.8.ebuild,
   hplip-3.9.8-r1.ebuild, metadata.xml:
