@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/system-config-printer-common
 # Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.3 2009/09/12 10:29:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer-common/ChangeLog,v 1.4 2009/10/14 13:21:23 abcd Exp $
+
+*system-config-printer-common-1.1.13 (14 Oct 2009)
+
+  14 Oct 2009; Jonathan Callen <abcd@gentoo.org>
+  +system-config-printer-common-1.1.13.ebuild,
+  +files/system-config-printer-common-1.1.13-split.patch:
+  Version bump
 
   12 Sep 2009; Raúl Porcel <armin76@gentoo.org>
   system-config-printer-common-1.1.8.ebuild,
